@@ -123,6 +123,14 @@ const config: Config = {
           },
         ]
       : []),
+    // OpenAI ChatKit CDN (for Study Mode)
+    {
+      tagName: "script",
+      attributes: {
+        src: "https://cdn.platform.openai.com/deployments/chatkit/chatkit.js",
+        async: "true",
+      },
+    },
     // Google Fonts: Inter (UI/Body), JetBrains Mono (Code)
     {
       tagName: "link",
