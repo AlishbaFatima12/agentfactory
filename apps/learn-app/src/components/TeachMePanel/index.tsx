@@ -79,7 +79,6 @@ function SuggestionText({ suggestions, visible }: { suggestions: string[]; visib
 function ChatKitWrapper({ lessonPath, chatKey }: { lessonPath: string; chatKey: number }) {
   const apiUrl = useMemo(() => getChatKitUrl(lessonPath), [lessonPath]);
   const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [messageCount, setMessageCount] = useState(0);
 
   const chatkit = useChatKit({
     api: {
@@ -89,16 +88,12 @@ function ChatKitWrapper({ lessonPath, chatKey }: { lessonPath: string; chatKey: 
     composer: {
       attachments: { enabled: false },
     },
-    onThreadMessagesUpdated: () => {
-      // Increment counter to trigger suggestion refresh
-      setMessageCount(prev => prev + 1);
-    },
   });
 
-  // Fetch suggestions on mount and after each response
+  // Fetch suggestions on mount and when chat resets
   useEffect(() => {
     fetchSuggestions(lessonPath).then(setSuggestions);
-  }, [lessonPath, messageCount, chatKey]);
+  }, [lessonPath, chatKey]);
 
   return (
     <div className={styles.chatWrapper}>
