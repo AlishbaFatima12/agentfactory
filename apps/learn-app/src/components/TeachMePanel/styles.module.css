@@ -1,5 +1,5 @@
 /**
- * TeachMePanel Styles - Official ChatKit Integration
+ * TeachMePanel Styles - AI Tutor Integration
  */
 
 /* Overlay */
@@ -74,6 +74,42 @@
   font-weight: 600;
 }
 
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.newChatButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: 1px solid #d1d5db;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #374151;
+  transition: all 0.2s;
+}
+
+.newChatButton:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+[data-theme='dark'] .newChatButton {
+  border-color: #4b5563;
+  color: #e8e8ed;
+}
+
+[data-theme='dark'] .newChatButton:hover {
+  background: #2d2f3a;
+  border-color: #6b7280;
+}
+
 .closeButton {
   background: transparent;
   border: none;
@@ -94,60 +130,49 @@
   color: #e8e8ed;
 }
 
-/* Mode Toggle */
-.modeToggle {
-  display: flex;
-  padding: 12px 20px;
-  gap: 8px;
-  background: #f1f3f4;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-[data-theme='dark'] .modeToggle {
-  background: #1e1f2a;
-  border-bottom-color: #2d2f3a;
-}
-
-.modeButton {
+/* Chat Wrapper */
+.chatWrapper {
   flex: 1;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  background: transparent;
-  color: #6c757d;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
 }
 
-.modeButton:hover {
-  background: #e9ecef;
-}
-
-[data-theme='dark'] .modeButton:hover {
-  background: #2d2f3a;
-}
-
-.modeButton.active {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  color: white;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
-}
-
-/* Mode Description */
-.modeDescription {
-  padding: 10px 20px;
-  font-size: 13px;
-  color: #6c757d;
+/* Suggestion Text - at bottom */
+.suggestionText {
+  padding: 12px 16px;
   background: #f8f9fa;
-  border-bottom: 1px solid #e5e7eb;
+  border-top: 1px solid #e5e7eb;
+  flex-shrink: 0;
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
 }
 
-[data-theme='dark'] .modeDescription {
-  background: #16171f;
+[data-theme='dark'] .suggestionText {
+  background: #1e1f2a;
+  border-top-color: #2d2f3a;
   color: #9ca3af;
-  border-bottom-color: #2d2f3a;
+}
+
+.suggestionLabel {
+  font-weight: 600;
+  color: #374151;
+  margin-right: 6px;
+}
+
+[data-theme='dark'] .suggestionLabel {
+  color: #e8e8ed;
+}
+
+.suggestionItem {
+  font-style: italic;
+  color: #6366f1;
+}
+
+[data-theme='dark'] .suggestionItem {
+  color: #a5b4fc;
 }
 
 /* ChatKit Container */
