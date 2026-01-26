@@ -64,6 +64,9 @@ importers:
       '@monaco-editor/react':
         specifier: ^4.6.0
         version: 4.7.0(monaco-editor@0.55.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@openai/chatkit-react':
+        specifier: ^1.4.3
+        version: 1.4.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@radix-ui/react-avatar':
         specifier: ^1.1.11
         version: 1.1.11(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -3126,6 +3129,15 @@ packages:
 
   '@nx/workspace@22.3.3':
     resolution: {integrity: sha512-A7Qd1Yi/hp/VPvig6tV+JmlYVSA4WhckNkP1giYZoESpGLxRlpwINpd5ii3oafOlglUdEZ8AiS3X+RUg9QmCAQ==}
+
+  '@openai/chatkit-react@1.4.3':
+    resolution: {integrity: sha512-Y/isbMh2CSFTtg2oL7FbmsfAnGGS6PDESQkjH9AJ42/TNGxAF53FIZM19PmrhdUq2QLkEzAf6adQ+pu8GO0Yhw==}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+
+  '@openai/chatkit@1.5.0':
+    resolution: {integrity: sha512-F9G91ZNq7bmDsoP4ToDWmv1FMZx2bLZ6WHf+YsKvQ8uw+PBRdkaRGG4WlalnnRl0ekQLhVB1kNjsWcQJpzalUg==}
 
   '@opentelemetry/api@1.9.0':
     resolution: {integrity: sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==}
@@ -15091,6 +15103,14 @@ snapshots:
       - '@swc-node/register'
       - '@swc/core'
       - debug
+
+  '@openai/chatkit-react@1.4.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      '@openai/chatkit': 1.5.0
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+
+  '@openai/chatkit@1.5.0': {}
 
   '@opentelemetry/api@1.9.0': {}
 
