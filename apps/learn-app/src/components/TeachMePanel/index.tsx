@@ -22,10 +22,23 @@ const CHATKIT_API_BASE = typeof window !== 'undefined' && window.location.hostna
 // Domain key for local development (register production key in OpenAI dashboard)
 const CHATKIT_API_DOMAIN_KEY = 'domain_pk_localhost_dev';
 
-// Build URL with lesson path
-function getChatKitUrl(lessonPath: string): string {
+// Generate or retrieve a persistent user ID for this browser
+function getUserId(): string {
+  if (typeof window === 'undefined') return 'anonymous';
+
+  let userId = localStorage.getItem('study_mode_user_id');
+  if (!userId) {
+    userId = `user_${Math.random().toString(36).substring(2, 15)}`;
+    localStorage.setItem('study_mode_user_id', userId);
+  }
+  return userId;
+}
+
+// Build URL with lesson path and user ID
+function getChatKitUrl(lessonPath: string, userId: string): string {
   const params = new URLSearchParams();
   params.set('mode', 'teach');
+  params.set('user_id', userId);
   if (lessonPath) {
     params.set('lesson_path', lessonPath);
   }
@@ -74,10 +87,11 @@ function SuggestionText({ suggestions, visible }: { suggestions: string[]; visib
 }
 
 /**
- * Inner ChatKit wrapper
+ * Inner ChatKit wrapper with user context
  */
 function ChatKitWrapper({ lessonPath, chatKey }: { lessonPath: string; chatKey: number }) {
-  const apiUrl = useMemo(() => getChatKitUrl(lessonPath), [lessonPath]);
+  const userId = useMemo(() => getUserId(), []);
+  const apiUrl = useMemo(() => getChatKitUrl(lessonPath, userId), [lessonPath, userId]);
   const [suggestions, setSuggestions] = useState<string[]>([]);
 
   const chatkit = useChatKit({

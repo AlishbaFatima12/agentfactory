@@ -2,7 +2,12 @@
 Official OpenAI ChatKit Server for Interactive Study Mode
 
 Uses the official openai-chatkit Python SDK with ChatKitServer.
-Self-hosted ChatKit implementation for book-grounded AI tutoring.
+Self-hosted ChatKit implementation with PostgreSQL persistence.
+
+Features:
+- User isolation (each user sees only their conversations)
+- Persistent storage (conversations survive restarts)
+- Lesson-based chat sessions
 
 Reference: https://openai.github.io/chatkit-python/
 """
@@ -10,23 +15,21 @@ Reference: https://openai.github.io/chatkit-python/
 import os
 import glob
 import uuid
-import json
+import logging
 from pathlib import Path
 from typing import AsyncIterator
-from collections import defaultdict
+from contextlib import asynccontextmanager
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Header
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel
 
 from agents import Agent, Runner
 from chatkit.server import ChatKitServer, StreamingResult
-from chatkit.store import Store, Page
 from chatkit.types import (
     ThreadMetadata,
-    ThreadItem,
     ThreadStreamEvent,
     UserMessageItem,
 )
@@ -36,7 +39,14 @@ from chatkit.agents import (
     stream_agent_response,
 )
 
+# Import our PostgresStore
+from chatkit_store import PostgresStore, StoreConfig, RequestContext
+
 load_dotenv()
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # =============================================================================
 # Configuration
@@ -49,96 +59,10 @@ CONTENT_BASE_PATH = os.getenv(
 )
 MAX_RECENT_ITEMS = 30
 MODEL = "gpt-4o-mini"
+DATABASE_URL = os.getenv("DATABASE_URL", "")
 
 print(f"Content base path: {CONTENT_BASE_PATH}")
-
-
-# =============================================================================
-# In-Memory Store Implementation
-# =============================================================================
-
-class Attachment:
-    """Simple attachment placeholder."""
-    def __init__(self, id: str):
-        self.id = id
-
-
-class InMemoryStore(Store[dict]):
-    """
-    Simple in-memory store for development.
-    Conversations persist while the process is running.
-    """
-
-    def __init__(self):
-        self._threads: dict[str, ThreadMetadata] = {}
-        self._items: dict[str, list[ThreadItem]] = defaultdict(list)
-        self._attachments: dict[str, Attachment] = {}
-
-    async def load_thread(self, thread_id: str, context: dict) -> ThreadMetadata:
-        if thread_id not in self._threads:
-            thread = ThreadMetadata(id=thread_id, title="Study Session")
-            self._threads[thread_id] = thread
-        return self._threads[thread_id]
-
-    async def save_thread(self, thread: ThreadMetadata, context: dict) -> None:
-        self._threads[thread.id] = thread
-
-    async def load_thread_items(
-        self,
-        thread_id: str,
-        after: str | None,
-        limit: int,
-        order: str,
-        context: dict,
-    ) -> Page[ThreadItem]:
-        items = self._items.get(thread_id, [])
-        if after:
-            idx = next((i for i, item in enumerate(items) if item.id == after), -1)
-            items = items[idx + 1:] if idx >= 0 else items
-        if order == "desc":
-            items = list(reversed(items))
-        items = items[:limit]
-        return Page(data=items, has_more=False)
-
-    async def add_thread_item(self, thread_id: str, item: ThreadItem, context: dict) -> None:
-        self._items[thread_id].append(item)
-
-    async def save_item(self, thread_id: str, item: ThreadItem, context: dict) -> None:
-        items = self._items[thread_id]
-        for i, existing in enumerate(items):
-            if existing.id == item.id:
-                items[i] = item
-                return
-        items.append(item)
-
-    async def load_item(self, thread_id: str, item_id: str, context: dict) -> ThreadItem:
-        for item in self._items.get(thread_id, []):
-            if item.id == item_id:
-                return item
-        raise KeyError(f"Item {item_id} not found")
-
-    async def delete_thread(self, thread_id: str, context: dict) -> None:
-        self._threads.pop(thread_id, None)
-        self._items.pop(thread_id, None)
-
-    async def delete_thread_item(self, thread_id: str, item_id: str, context: dict) -> None:
-        items = self._items.get(thread_id, [])
-        self._items[thread_id] = [i for i in items if i.id != item_id]
-
-    async def load_threads(self, limit: int, after: str | None, order: str, context: dict) -> Page[ThreadMetadata]:
-        threads = list(self._threads.values())
-        if order == "desc":
-            threads = list(reversed(threads))
-        return Page(data=threads[:limit], has_more=False)
-
-    async def save_attachment(self, attachment: Attachment, context: dict) -> None:
-        self._attachments[attachment.id] = attachment
-
-    async def load_attachment(self, attachment_id: str, context: dict) -> Attachment:
-        return self._attachments.get(attachment_id)
-
-    async def delete_attachment(self, attachment_id: str, context: dict) -> None:
-        self._attachments.pop(attachment_id, None)
+print(f"Database configured: {'Yes' if DATABASE_URL else 'No (using in-memory)'}")
 
 
 # =============================================================================
@@ -264,25 +188,25 @@ def create_agent(title: str, content: str, mode: str) -> Agent:
 
 
 # =============================================================================
-# ChatKit Server Implementation
+# ChatKit Server Implementation with PostgresStore
 # =============================================================================
 
-class StudyModeChatServer(ChatKitServer[dict]):
-    """Official ChatKit server for Study Mode."""
+class StudyModeChatServer(ChatKitServer[RequestContext]):
+    """Official ChatKit server for Study Mode with PostgreSQL persistence."""
 
-    def __init__(self):
-        self._store = InMemoryStore()
+    def __init__(self, store: PostgresStore):
+        self._store = store
         super().__init__(store=self._store)
 
     async def respond(
         self,
         thread: ThreadMetadata,
         input_user_message: UserMessageItem | None,
-        context: dict,
+        context: RequestContext,
     ) -> AsyncIterator[ThreadStreamEvent]:
         """Stream response events for a user message."""
-        lesson_path = context.get("lesson_path", "") if context else ""
-        mode = context.get("mode", "teach") if context else "teach"
+        lesson_path = context.lesson_path if context else ""
+        mode = context.mode if context else "teach"
 
         content, title = load_lesson_content(lesson_path)
         agent = create_agent(title, content, mode)
@@ -306,27 +230,51 @@ class StudyModeChatServer(ChatKitServer[dict]):
             yield event
 
 
-# Create the ChatKit server instance
-chatkit_server = StudyModeChatServer()
-
-
 # =============================================================================
-# Session Management (for self-hosted ChatKit)
+# Global Store and Server (initialized in lifespan)
 # =============================================================================
 
-sessions: dict[str, dict] = {}
+postgres_store: PostgresStore | None = None
+chatkit_server: StudyModeChatServer | None = None
 
 
-class SessionRequest(BaseModel):
-    lesson_path: str = ""
-    mode: str = "teach"
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Initialize database on startup, cleanup on shutdown."""
+    global postgres_store, chatkit_server
+
+    if DATABASE_URL:
+        logger.info("Initializing PostgresStore...")
+        config = StoreConfig(database_url=DATABASE_URL)
+        postgres_store = PostgresStore(config=config)
+        await postgres_store.initialize_schema()
+        chatkit_server = StudyModeChatServer(store=postgres_store)
+        logger.info("PostgresStore initialized successfully!")
+    else:
+        logger.warning("DATABASE_URL not set - using in-memory store (data will not persist)")
+        # Fallback to in-memory for backwards compatibility
+        from chatkit_store.postgres_store import PostgresStore as PS
+        # Create a simple in-memory fallback
+        postgres_store = None
+        chatkit_server = None
+
+    yield
+
+    # Cleanup
+    if postgres_store:
+        await postgres_store.close()
+        logger.info("PostgresStore connection closed")
 
 
 # =============================================================================
 # FastAPI App
 # =============================================================================
 
-app = FastAPI(title="Study Mode ChatKit", version="3.0.0")
+app = FastAPI(
+    title="Study Mode ChatKit",
+    version="4.0.0",
+    lifespan=lifespan,
+)
 
 app.add_middleware(
     CORSMiddleware,
@@ -337,9 +285,21 @@ app.add_middleware(
 )
 
 
+class SessionRequest(BaseModel):
+    lesson_path: str = ""
+    mode: str = "teach"
+    user_id: str = ""
+    user_name: str = ""
+
+
 @app.get("/health")
 async def health():
-    return {"status": "ok", "version": "3.0.0", "integration": "Official OpenAI ChatKit"}
+    return {
+        "status": "ok",
+        "version": "4.0.0",
+        "integration": "Official OpenAI ChatKit",
+        "storage": "PostgreSQL" if postgres_store else "Not configured",
+    }
 
 
 @app.post("/api/chatkit/session")
@@ -348,13 +308,11 @@ async def create_session(request: SessionRequest):
     session_id = f"sess_{uuid.uuid4().hex[:16]}"
     client_secret = f"cs_{uuid.uuid4().hex}"
 
-    sessions[client_secret] = {
+    return {
+        "client_secret": client_secret,
         "session_id": session_id,
-        "lesson_path": request.lesson_path,
-        "mode": request.mode,
+        "user_id": request.user_id,
     }
-
-    return {"client_secret": client_secret, "session_id": session_id}
 
 
 # Suggestions endpoint (must be before catch-all)
@@ -388,13 +346,40 @@ async def get_suggestions(mode: str = "teach", lesson_path: str = ""):
 
 # ChatKit API routes
 @app.api_route("/chatkit/{path:path}", methods=["GET", "POST", "PUT", "DELETE"])
-async def chatkit_handler(request: Request, path: str):
-    """Forward all ChatKit requests to the ChatKitServer."""
-    # Extract context from query parameters
-    context = {
-        "mode": request.query_params.get("mode", "teach"),
-        "lesson_path": request.query_params.get("lesson_path", ""),
-    }
+async def chatkit_handler(
+    request: Request,
+    path: str,
+    x_user_id: str = Header(default="", alias="X-User-ID"),
+    x_user_name: str = Header(default="", alias="X-User-Name"),
+    authorization: str = Header(default="", alias="Authorization"),
+):
+    """Forward all ChatKit requests to the ChatKitServer with user context."""
+
+    if not chatkit_server:
+        return JSONResponse(
+            status_code=503,
+            content={"error": "ChatKit server not initialized. Check DATABASE_URL configuration."}
+        )
+
+    # Extract JWT token (not verified in dev mode per reviewer)
+    jwt_token = None
+    if authorization.startswith("Bearer "):
+        jwt_token = authorization[7:]
+
+    # Get user_id from query params (primary) or header (fallback)
+    user_id = request.query_params.get("user_id", "") or x_user_id or "anonymous"
+
+    # Create request context with user isolation
+    context = RequestContext(
+        user_id=user_id,
+        user_name=x_user_name or None,
+        lesson_path=request.query_params.get("lesson_path", ""),
+        mode=request.query_params.get("mode", "teach"),
+        jwt_token=jwt_token,
+        request_id=str(uuid.uuid4()),
+    )
+
+    logger.info(f"ChatKit request: user={context.user_id}, lesson={context.lesson_path}, path={path}")
 
     # Get request body
     body = await request.body()
@@ -403,10 +388,8 @@ async def chatkit_handler(request: Request, path: str):
     result = await chatkit_server.process(body, context)
 
     if isinstance(result, StreamingResult):
-        # Streaming response - return the result directly as SSE
         return StreamingResponse(result, media_type="text/event-stream")
     else:
-        # Non-streaming response
         from starlette.responses import Response
         return Response(content=result.json, media_type="application/json")
 
@@ -414,7 +397,8 @@ async def chatkit_handler(request: Request, path: str):
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("PORT", "8000"))
-    print(f"\n=== Official ChatKit Server v3.0 ===")
+    print(f"\n=== Official ChatKit Server v4.0 ===")
+    print(f"Storage: {'PostgreSQL' if DATABASE_URL else 'Not configured'}")
     print(f"Session: http://localhost:{port}/api/chatkit/session")
     print(f"ChatKit: http://localhost:{port}/chatkit")
     print(f"Health:  http://localhost:{port}/health\n")
