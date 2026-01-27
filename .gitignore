@@ -58,3 +58,6 @@ cloud-books/
 .git/cursor
 assessments/
 local/api/chatkit-server/.env
+
+# Study Mode API secrets
+apps/study-mode-api/.env
