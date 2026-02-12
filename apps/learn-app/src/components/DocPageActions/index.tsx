@@ -221,11 +221,48 @@ const StudyModeIcon = () => (
     strokeLinejoin="round"
     aria-hidden="true"
   >
-    {/* Graduation cap - symbolizes learning/study */}
-    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-    <path d="M6 12v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5" />
+    {/* Open book icon - symbolizes learning/teaching */}
+    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
     {/* Small sparkle - AI element */}
-    <circle cx="20" cy="6" r="1.5" fill="currentColor" stroke="none" />
+    <circle cx="20" cy="5" r="1.5" fill="currentColor" stroke="none" />
+  </svg>
+);
+
+const TeachingAidIcon = () => (
+  <svg
+    className="doc-actions-icon"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+    <path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5" />
+  </svg>
+);
+
+const AskModeIcon = () => (
+  <svg
+    className="doc-actions-icon"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+    <line x1="12" y1="17" x2="12.01" y2="17" />
   </svg>
 );
 
@@ -316,11 +353,17 @@ const Tooltip = ({
 // MAIN COMPONENT
 // ============================================================================
 
-export function DocPageActions() {
+interface DocPageActionsProps {
+  onOpenTeachingGuide?: () => void;
+}
+
+export function DocPageActions({
+  onOpenTeachingGuide,
+}: DocPageActionsProps = {}) {
   const doc = useDoc();
   const { siteConfig } = useDocusaurusContext();
   const { session, isLoading: authLoading } = useAuth();
-  const { openPanel } = useStudyMode();
+  const { openPanel, setMode } = useStudyMode();
   const [copied, setCopied] = useState(false);
   const [downloaded, setDownloaded] = useState(false);
   const [chapterDownloading, setChapterDownloading] = useState(false);
@@ -782,16 +825,53 @@ export function DocPageActions() {
 
   return (
     <div className="doc-page-actions" role="toolbar" aria-label="Page actions">
-      {/* Study Mode Button - Only shown on lesson pages for logged-in users */}
-      {isLessonPage && isLoggedIn && (
-        <Tooltip content="AI-powered Socratic learning" position="bottom">
+      {/* Study Mode Button - Shown on all lesson pages, gated action for non-logged-in */}
+      {isLessonPage && (
+        <Tooltip
+          content={
+            isLoggedIn
+              ? "AI-powered Socratic learning"
+              : "Sign in to access Teach Me mode"
+          }
+          position="bottom"
+        >
           <button
-            className="doc-page-actions-study-mode"
-            onClick={openPanel}
-            aria-label="Open Study Mode"
+            className={`doc-page-actions-study-mode ${!isLoggedIn ? "doc-page-actions-study-mode--locked" : ""}`}
+            onClick={isLoggedIn ? openPanel : handleLoginRedirect}
+            aria-label={
+              isLoggedIn ? "Open Teach Me" : "Sign in for Teach Me Access"
+            }
           >
-            <StudyModeIcon />
-            <span>Study Mode</span>
+            {isLoggedIn ? <StudyModeIcon /> : <LockIcon />}
+            <span>Teach Me</span>
+          </button>
+        </Tooltip>
+      )}
+
+      {/* Ask Mode Button - Opens panel in ask mode */}
+      {isLessonPage && (
+        <Tooltip
+          content={
+            isLoggedIn ? "Ask about this lesson" : "Sign in to ask questions"
+          }
+          position="bottom"
+        >
+          <button
+            className={`doc-page-actions-ask-mode ${!isLoggedIn ? "doc-page-actions-ask-mode--locked" : ""}`}
+            onClick={() => {
+              if (isLoggedIn) {
+                setMode("ask");
+                openPanel();
+              } else {
+                handleLoginRedirect();
+              }
+            }}
+            aria-label={
+              isLoggedIn ? "Open Ask Mode" : "Sign in for Ask Mode Access"
+            }
+          >
+            {isLoggedIn ? <AskModeIcon /> : <LockIcon />}
+            <span>Ask</span>
           </button>
         </Tooltip>
       )}
@@ -800,14 +880,14 @@ export function DocPageActions() {
       <div
         className={`doc-page-actions-split ${copied ? "doc-page-actions-split--success" : ""}`}
       >
-        {/* Primary Action: Copy Markdown */}
+        {/* Primary Action: Copy Markdown (icon only) */}
         <Tooltip
           content={copied ? "Copied!" : "Copy as Markdown"}
           shortcut={copied ? undefined : `${modKey}+⇧+C`}
           position="bottom"
         >
           <button
-            className={`doc-page-actions-main ${copied ? "doc-page-actions-main--success" : ""}`}
+            className={`doc-page-actions-main doc-page-actions-main--icon-only ${copied ? "doc-page-actions-main--success" : ""}`}
             onClick={handleCopyMarkdown}
             aria-label={
               copied ? "Copied to clipboard" : "Copy page as Markdown"
@@ -816,9 +896,6 @@ export function DocPageActions() {
           >
             <span className="doc-actions-icon-wrapper">
               {copied ? <CheckIcon /> : <CopyIcon />}
-            </span>
-            <span className="doc-page-actions-label">
-              {copied ? "Copied!" : "Copy"}
             </span>
           </button>
         </Tooltip>
@@ -896,6 +973,23 @@ export function DocPageActions() {
               <ShareIcon />
               <span>Share</span>
             </DropdownMenuItem>
+            {onOpenTeachingGuide && (
+              <>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem
+                  onClick={isLoggedIn ? onOpenTeachingGuide : handleLoginRedirect}
+                  className={!isLoggedIn ? "doc-actions-item--locked" : ""}
+                >
+                  {isLoggedIn ? <TeachingAidIcon /> : <LockIcon />}
+                  <span>Teaching Aid</span>
+                  {!isLoggedIn && (
+                    <span className="doc-actions-chapter-meta">
+                      <LockIcon /> Sign in
+                    </span>
+                  )}
+                </DropdownMenuItem>
+              </>
+            )}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

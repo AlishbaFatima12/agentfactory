@@ -17,8 +17,10 @@ import { ChatKit, useChatKit } from "@openai/chatkit-react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useStudyMode } from "../../contexts/StudyModeContext";
 import { useAuth } from "../../contexts/AuthContext";
+import { useUserDisplayName } from "../../hooks/useUserDisplayName";
+import { getOAuthAuthorizationUrl } from "@/lib/auth-client";
 import { Sheet, SheetContent, SheetClose } from "@/components/ui/sheet";
-import { X } from "lucide-react";
+import { X, Lock } from "lucide-react";
 import styles from "./styles.module.css";
 
 // Fallback user ID for anonymous users (not logged in)
@@ -36,22 +38,26 @@ function getAnonymousUserId(): string {
 // Chat mode type
 type ChatMode = "teach" | "ask";
 
-// Build URL with lesson path, user info, and mode
+// Build URL with lesson path, user info, and optional selected context
+// Mode is now handled per-message via ChatKit's composer.models picker
 function getChatKitUrl(
   apiBase: string,
   lessonPath: string,
   userId: string,
-  mode: ChatMode = "teach",
   userName?: string,
+  selectedContext?: string,
 ): string {
   const params = new URLSearchParams();
-  params.set("mode", mode);
   params.set("user_id", userId);
   if (userName) {
     params.set("user_name", userName);
   }
   if (lessonPath) {
     params.set("lesson_path", lessonPath);
+  }
+  if (selectedContext) {
+    // Send context to backend so it knows what user selected
+    params.set("selected_text", selectedContext);
   }
   return `${apiBase}/chatkit?${params.toString()}`;
 }
@@ -70,7 +76,9 @@ function ChatKitWrapper({
   domainKey,
   mode = "teach",
   initialMessage,
+  selectedContext,
   onSendMessage,
+  onInitialMessageSent,
 }: {
   lessonPath: string;
   lessonTitle: string;
@@ -78,7 +86,9 @@ function ChatKitWrapper({
   domainKey: string;
   mode?: ChatMode;
   initialMessage?: string;
+  selectedContext?: string;
   onSendMessage?: (sendFn: (text: string) => Promise<void>) => void;
+  onInitialMessageSent?: () => void;
 }) {
   const { session } = useAuth();
 
@@ -90,40 +100,26 @@ function ChatKitWrapper({
     return getAnonymousUserId();
   }, [session?.user?.id]);
 
-  // Get user's display name from auth context
-  const userName = useMemo(() => {
-    if (session?.user?.name) {
-      return session.user.name;
-    }
-    if (session?.user?.email) {
-      return session.user.email.split("@")[0];
-    }
-    return undefined;
-  }, [session?.user?.name, session?.user?.email]);
+  // Get user's display name from shared hook
+  const userName = useUserDisplayName();
 
   const apiUrl = useMemo(
-    () => getChatKitUrl(apiBase, lessonPath, userId, mode, userName),
-    [apiBase, lessonPath, userId, mode, userName],
+    () =>
+      getChatKitUrl(
+        apiBase,
+        lessonPath,
+        userId,
+        userName,
+        selectedContext,
+      ),
+    [apiBase, lessonPath, userId, userName, selectedContext],
   );
 
   // Custom fetch that injects Authorization header with JWT token
   // Must use ID token (JWT format) not access token (may be opaque)
   const authenticatedFetch = useCallback(
     async (input: RequestInfo | URL, options?: RequestInit) => {
-      // Priority: ID token from localStorage (JWT format required by backend)
       const token = localStorage.getItem("ainative_id_token");
-
-      // Debug logging - ALWAYS log to see what's happening
-      console.log("[TeachMePanel] ===== authenticatedFetch called =====");
-      console.log("[TeachMePanel] ainative_id_token:", token ? "EXISTS" : "NULL/MISSING");
-      console.log("[TeachMePanel] ainative_access_token:", localStorage.getItem("ainative_access_token") ? "EXISTS" : "NULL/MISSING");
-      if (token) {
-        console.log("[TeachMePanel] Token preview:", token.substring(0, 50) + "...");
-        console.log("[TeachMePanel] Token parts (should be 3):", token.split(".").length);
-      } else {
-        console.log("[TeachMePanel] WARNING: No ID token found! User may not be logged in properly.");
-      }
-      console.log("[TeachMePanel] Options headers from ChatKit:", options?.headers);
 
       const response = await fetch(input, {
         ...options,
@@ -135,7 +131,6 @@ function ChatKitWrapper({
         },
       });
 
-      console.log("[TeachMePanel] Response status:", response.status);
       return response;
     },
     [userId, userName],
@@ -148,57 +143,85 @@ function ChatKitWrapper({
       fetch: authenticatedFetch,
     },
     composer: {
-      placeholder:
-        mode === "teach"
+      placeholder: selectedContext
+        ? "Type your question about the selected text..."
+        : mode === "teach"
           ? "Ask me anything about this lesson..."
           : "Ask a quick question...",
       attachments: { enabled: false },
+      // Model picker for mode selection - appears as dropdown in composer
+      // Backend reads selected mode from inference_options.model
+      // Set default based on which button user clicked (mode prop)
+      models: [
+        {
+          id: "teach",
+          label: "Teach Me",
+          description: "Socratic tutoring with questions to check understanding",
+          default: mode === "teach",
+        },
+        {
+          id: "ask",
+          label: "Quick Ask",
+          description: "Direct answers without follow-up questions",
+          default: mode === "ask",
+        },
+      ],
     },
     startScreen: {
       greeting:
         mode === "teach"
           ? `Let's explore ${lessonTitle}`
-          : `Quick answers about ${lessonTitle}`,
+          : selectedContext
+            ? `Ask about your selection`
+            : `Quick answers about ${lessonTitle}`,
       prompts:
         mode === "teach"
           ? [
-              {
-                icon: "circle-question",
-                label: "What should I understand?",
-                prompt:
-                  "What are the key things I should understand from this lesson? Ask me questions to check my understanding.",
-              },
-              {
-                icon: "lightbulb",
-                label: "Walk me through it",
-                prompt:
-                  "Walk me through the main concept step by step. Pause to ask if I understand before moving on.",
-              },
-              {
-                icon: "circle-question",
-                label: "Help me think about this",
-                prompt:
-                  "Help me think through this topic. What questions should I be asking myself?",
-              },
-              {
-                icon: "lightbulb",
-                label: "Quiz me",
-                prompt:
-                  "Quiz me on this topic to test my understanding. Ask one question at a time.",
-              },
-            ]
+            {
+              icon: "circle-question",
+              label: "What should I understand?",
+              prompt: selectedContext
+                ? `Regarding this text: "${selectedContext.slice(0, 200)}"\n\nWhat are the key things I should understand from this? Ask me questions to check my understanding.`
+                : "What are the key things I should understand from this lesson? Ask me questions to check my understanding.",
+            },
+            {
+              icon: "lightbulb",
+              label: "Walk me through it",
+              prompt: selectedContext
+                ? `Regarding this text: "${selectedContext.slice(0, 200)}"\n\nWalk me through this step by step. Pause to ask if I understand before moving on.`
+                : "Walk me through the main concept step by step. Pause to ask if I understand before moving on.",
+            },
+            {
+              icon: "circle-question",
+              label: "Help me think about this",
+              prompt: selectedContext
+                ? `Regarding this text: "${selectedContext.slice(0, 200)}"\n\nHelp me think through this. What questions should I be asking myself?`
+                : "Help me think through this topic. What questions should I be asking myself?",
+            },
+            {
+              icon: "lightbulb",
+              label: "Quiz me",
+              prompt: selectedContext
+                ? `Regarding this text: "${selectedContext.slice(0, 200)}"\n\nQuiz me on this to test my understanding. Ask one question at a time.`
+                : "Quiz me on this topic to test my understanding. Ask one question at a time.",
+            },
+          ]
           : [
-              {
-                icon: "circle-question",
-                label: "Quick summary",
-                prompt: "Give me a quick summary in 2-3 sentences",
-              },
-              {
-                icon: "lightbulb",
-                label: "Define this",
-                prompt: "Define this concept briefly",
-              },
-            ],
+            {
+              icon: "circle-question",
+              label: "Quick summary",
+              prompt: selectedContext
+                ? "Summarize the highlighted text in 2-3 sentences."
+                : "Give me a quick summary in 2-3 sentences",
+            },
+            {
+              icon: "lightbulb",
+              label: "Define this concept",
+              prompt: selectedContext
+                ? "Define the highlighted text briefly."
+                : "Define this concept briefly",
+            },
+          ],
     },
   });
 
@@ -211,13 +234,19 @@ function ChatKitWrapper({
     }
   }, [onSendMessage, sendUserMessage]);
 
-  // Send initial message if provided (for Ask feature)
-  // Note: initialMessage is cleared by parent after sending via onInitialMessageSent callback
+  // Send initial message if provided (for Ask feature or auto-start teach mode)
+  // Calls onInitialMessageSent callback to clear the message after sending
   useEffect(() => {
     if (initialMessage && sendUserMessage) {
-      sendUserMessage({ text: initialMessage, newThread: true });
+      sendUserMessage({ text: initialMessage, newThread: true }).then(() => {
+        if (onInitialMessageSent) {
+          onInitialMessageSent();
+        }
+      });
     }
-  }, [initialMessage, sendUserMessage]);
+  }, [initialMessage, sendUserMessage, onInitialMessageSent]);
+
+  // Users type "A" or "B" to answer - this is handled by the chat input
 
   return (
     <div className={styles.chatWrapper}>
@@ -228,11 +257,14 @@ function ChatKitWrapper({
 
 export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
   const { siteConfig } = useDocusaurusContext();
-  const { isOpen, closePanel, openPanel } = useStudyMode();
+  const { isOpen, closePanel, openPanel, mode, setMode } = useStudyMode();
   const { session } = useAuth();
   const [chatKey, setChatKey] = useState(0);
-  const [mode, setMode] = useState<ChatMode>("teach");
+  // Mode is now managed by context (useStudyMode)
   const [initialMessage, setInitialMessage] = useState<string | undefined>();
+
+  // Selected context - text user selected before clicking Ask
+  const [selectedContext, setSelectedContext] = useState<string | undefined>();
 
   // Text selection state for Ask feature
   const [selectedText, setSelectedText] = useState("");
@@ -241,8 +273,27 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
     y: number;
   } | null>(null);
 
-  // Auth check - only show for logged-in users
+  // Auth check
   const isLoggedIn = !!session?.user;
+
+  // Auth config for login redirect
+  const authUrl = siteConfig.customFields?.authUrl as string | undefined;
+  const oauthClientId = siteConfig.customFields?.oauthClientId as string | undefined;
+
+  // Login redirect handler for non-logged-in users
+  const handleLoginRedirect = useCallback(async () => {
+    try {
+      const returnUrl = window.location.href;
+      localStorage.setItem("auth_return_url", returnUrl);
+      const loginUrl = await getOAuthAuthorizationUrl(undefined, {
+        authUrl,
+        clientId: oauthClientId,
+      });
+      window.location.href = loginUrl;
+    } catch (err) {
+      console.error("Failed to redirect to login:", err);
+    }
+  }, [authUrl, oauthClientId]);
 
   // Get Study Mode API URL from Docusaurus config
   const studyModeApiUrl =
@@ -265,6 +316,23 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
       .replace(/\b\w/g, (c) => c.toUpperCase());
   }, [lessonPath]);
 
+  // Track if we've auto-started teach mode for this chat session
+  const [hasAutoStarted, setHasAutoStarted] = useState(false);
+
+  // Auto-start Socratic conversation when panel opens in teach mode
+  // Backend auto-deletes the trigger so AI greeting appears first
+  useEffect(() => {
+    if (isOpen && mode === "teach" && !initialMessage && !hasAutoStarted) {
+      setInitialMessage("\u200B"); // Zero-width space trigger
+      setHasAutoStarted(true);
+    }
+  }, [isOpen, mode, initialMessage, hasAutoStarted]);
+
+  // Reset auto-start flag when chat key changes (new chat) or mode changes
+  useEffect(() => {
+    setHasAutoStarted(false);
+  }, [chatKey]);
+
   // Handle text selection for Ask feature
   const handleSelection = useCallback(() => {
     const selection = window.getSelection();
@@ -275,8 +343,8 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
     }
 
     const text = selection.toString().trim();
-    if (text.length > 0 && text.length < 500) {
-      // Limit selection length
+    if (text.length > 0 && text.length < 5000) {
+      // Allow longer selections (up to ~5000 chars / several paragraphs)
       setSelectedText(text);
       const range = selection.getRangeAt(0);
       const rect = range.getBoundingClientRect();
@@ -301,28 +369,34 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
     };
   }, [handleSelection]);
 
-  // Handle Ask button click - opens panel in ask mode with selected text
+  // Handle Ask button click - auto-send selected text as message
   const handleAskSelectedText = useCallback(() => {
     if (!selectedText) return;
 
-    const question = `Can you explain this from "${lessonTitle}":\n\n"${selectedText}"`;
+    // Pass context to backend URL and auto-send as user message
+    setSelectedContext(selectedText);
     setMode("ask");
-    setInitialMessage(question);
-    setChatKey((prev) => prev + 1); // Reset chat with new message
-    openPanel(); // Open the panel
+    setInitialMessage(selectedText);
+    setChatKey((prev) => prev + 1);
+    openPanel();
 
-    // Clear selection
+    // Clear text selection
     setSelectedText("");
     setSelectionPosition(null);
     window.getSelection()?.removeAllRanges();
-  }, [selectedText, lessonTitle, openPanel]);
+  }, [selectedText, openPanel]);
+
+  // Clear selected context
+  const handleClearContext = useCallback(() => {
+    setSelectedContext(undefined);
+  }, []);
 
   return (
     <>
-      {/* Floating Ask button appears when text is selected (logged-in only) */}
-      {isLoggedIn && selectedText && selectionPosition && !isOpen && (
+      {/* Floating Ask button appears when text is selected - shows for all users */}
+      {selectedText && selectionPosition && !isOpen && (
         <div
-          className={styles.askButton}
+          className={`${styles.askButton} ${!isLoggedIn ? styles.askButtonLocked : ""}`}
           style={{
             position: "absolute",
             left: `${selectionPosition.x}px`,
@@ -330,8 +404,10 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
             transform: "translateX(-50%) translateY(-100%)",
             zIndex: 9999,
           }}
-          onClick={handleAskSelectedText}
+          onClick={isLoggedIn ? handleAskSelectedText : handleLoginRedirect}
+          title={isLoggedIn ? "Ask about this text" : "Sign in to ask"}
         >
+          {!isLoggedIn && <Lock className="h-3 w-3" />}
           <span>Ask</span>
         </div>
       )}
@@ -341,8 +417,9 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
         onOpenChange={(open) => {
           if (!open) {
             closePanel();
-            // Clear initialMessage when panel closes to prevent re-sending on next open
+            // Clear state when panel closes
             setInitialMessage(undefined);
+            setSelectedContext(undefined);
             // Reset to teach mode as default
             setMode("teach");
           }
@@ -359,7 +436,7 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
             <span className="sr-only">Close</span>
           </SheetClose>
 
-          {/* ChatKit Component - no header, full height */}
+          {/* ChatKit Component - full height */}
           <div className={styles.chatContainer}>
             <ChatKitWrapper
               key={`${lessonPath}-${chatKey}-${mode}`}
@@ -369,7 +446,28 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
               domainKey={chatkitDomainKey}
               mode={mode}
               initialMessage={initialMessage}
+              onInitialMessageSent={() => setInitialMessage(undefined)}
+              selectedContext={selectedContext}
             />
+
+            {/* Context chip — positioned at bottom, above input area */}
+            {selectedContext && (
+              <div className={styles.contextChip}>
+                <div className={styles.contextLabel}>Asking about</div>
+                <div className={styles.contextText}>
+                  {selectedContext.length > 100
+                    ? selectedContext.slice(0, 100) + "…"
+                    : selectedContext}
+                </div>
+                <button
+                  className={styles.contextDismiss}
+                  onClick={handleClearContext}
+                  aria-label="Clear context"
+                >
+                  <X className="h-3.5 w-3.5" />
+                </button>
+              </div>
+            )}
           </div>
         </SheetContent>
       </Sheet>
