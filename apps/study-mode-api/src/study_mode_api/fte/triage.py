@@ -16,16 +16,18 @@ Future agents could include:
 import os
 from typing import TYPE_CHECKING
 
-from agents import Agent, ModelSettings
-from openai.types.shared import Reasoning
+from agents import Agent, OpenAIChatCompletionsModel
+from openai import AsyncOpenAI
 
 from .state import AgentState
 
 if TYPE_CHECKING:
     pass
 
-# Model configuration
-MODEL = os.getenv("STUDY_MODE_MODEL", "gpt-5-nano-2025-08-07")
+# Model configuration - use Chat Completions API for speed (no reasoning overhead)
+MODEL_NAME = os.getenv("STUDY_MODE_MODEL", "gpt-5-nano-2025-08-07")
+_openai_client = AsyncOpenAI()
+_model = OpenAIChatCompletionsModel(model=MODEL_NAME, openai_client=_openai_client)
 
 # Context limits for content truncation
 TEACH_CONTENT_LIMIT = 8000
@@ -172,8 +174,7 @@ def create_agent(
     return Agent(
         name=f"study_tutor_{mode}",
         instructions=instructions,
-        model=MODEL,
-        model_settings=ModelSettings(reasoning=Reasoning(effort="minimal")),
+        model=_model,  # Chat Completions API (fast, no reasoning overhead)
     )
 
 
