@@ -172,13 +172,20 @@ async def chatkit_endpoint(request: Request):
                     },
                 )
 
-        # Add query params to metadata (for lesson_path, mode, etc.)
+        # Add query params to metadata (for lesson_path, user_name, etc.)
+        # Mode is handled per-message via ChatKit's inference_options.model
         metadata.update({
             "lesson_path": request.query_params.get("lesson_path", ""),
-            "mode": request.query_params.get("mode", "teach"),
-            "user_name": request.headers.get("X-User-Name")
+            "user_name": user_name
+            or request.headers.get("X-User-Name")
             or request.query_params.get("user_name"),
+            "selected_text": request.query_params.get("selected_text"),
         })
+
+        # Store auth header for downstream services (metering API)
+        auth_header = request.headers.get("Authorization")
+        if auth_header:
+            metadata["auth_token"] = auth_header
 
         logger.info(
             f"[ChatKit] user={user_id}, lesson={metadata.get('lesson_path')}"

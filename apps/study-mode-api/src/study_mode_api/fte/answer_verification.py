@@ -35,8 +35,9 @@ async def extract_and_store_correct_answer(
     """
     Extract correct answer marker from response and store in Redis.
 
-    If no marker is found, deletes any stale answer from previous questions
-    to prevent incorrect verification of subsequent answers.
+    If no marker is found, the existing stored answer is preserved.
+    This allows verification to work even if AI's follow-up response
+    doesn't include a marker (user can still answer previous question).
 
     Args:
         thread_id: The thread ID to associate the answer with
@@ -51,13 +52,9 @@ async def extract_and_store_correct_answer(
     match = CORRECT_ANSWER_PATTERN.search(response_text)
     if not match:
         logger.debug("[AnswerVerify] No correct answer marker found in response")
-        # Delete stale answer to prevent incorrect verification
-        if redis:
-            try:
-                await redis.delete(key)
-                logger.debug(f"[AnswerVerify] Deleted stale answer for {thread_id}")
-            except Exception as e:
-                logger.warning(f"[AnswerVerify] Failed to delete stale answer: {e}")
+        # DON'T delete stored answer - keep it for verification
+        # This fixes bug where AI's follow-up response without marker
+        # would delete the previous question's answer, causing "unknown" verification
         return None
 
     correct_answer = match.group(1).upper()
