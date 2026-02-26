@@ -27,9 +27,7 @@ from .chatkit_store import CachedPostgresStore, PostgresStore, RequestContext
 from .fte.answer_verification import (
     detect_special_request,
     extract_and_store_correct_answer,
-    normalize_answer,
     strip_answer_marker,
-    verify_student_answer,
 )
 from .metering import create_metering_hooks
 from .services.content_loader import load_lesson_content
@@ -427,8 +425,49 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             f"state={state}"
         )
 
-        # 2. Build context — that's ALL the server does
-        # Note: chunks from get_lesson_chunks are already dicts OR objects
+        # 1.5 Blended Teaching v7.1 - Image Strategy
+        # - Phase 0: No image (warm greeting, ask about role/expertise)
+        # - Phase 1: DALL-E personalized to their world (after we know who they are)
+        # - Phase 2+: Unsplash concept images via tool calls
+        open_image_url = ""
+        current_phase = state.get("current_phase", "phase_0")
+
+        # Generate DALL-E image only in Phase 1 (after we learned their world in Phase 0)
+        if current_phase == "phase_1":
+            try:
+                from openai import AsyncOpenAI
+                import os
+
+                openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+                # Personalize based on student profile from Phase 0
+                student_world = state.get("student_world", "technology")
+                student_role = state.get("student_role", "professional")
+
+                dalle_prompt = (
+                    f"Educational illustration for '{title}'. "
+                    f"Scene in {student_world} industry, relevant to a {student_role}. "
+                    f"Modern, clean, professional style showing AI/automation. "
+                    f"Blue and purple color scheme. No text on image."
+                )
+
+                logger.info(f"[ChatKit] v3: Phase 1 DALL-E: {title} for {student_role} in {student_world}")
+
+                response = await openai_client.images.generate(
+                    model="dall-e-3",
+                    prompt=dalle_prompt,
+                    size="1792x1024",
+                    quality="standard",
+                    n=1,
+                )
+
+                open_image_url = response.data[0].url
+                logger.info(f"[ChatKit] v3: DALL-E generated: {open_image_url[:60]}...")
+
+            except Exception as e:
+                logger.warning(f"[ChatKit] v3: DALL-E failed: {e}")
+
+        # 2. Build context for Blended Teaching v7.1
         teach_ctx = TeachContext(
             lesson_title=title,
             chunks=[
@@ -438,12 +477,41 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 for c in chunks
             ],
             current_chunk_index=state.get("concept_index", 0),
-            attempt_count=state.get("attempt_count", 0),
-            max_attempts=3,
             total_chunks=len(chunks),
             is_first_message=is_first_message,
             thread_id=thread.id,
             user_name=user_name or "",
+            open_image_url=open_image_url,
+
+            # Blended Teaching v7.1 - 5 Phase State
+            current_phase=state.get("current_phase", "phase_0"),
+
+            # Student Profile (from Phase 0)
+            student_role=state.get("student_role", ""),
+            student_level=state.get("student_level", "novice"),
+            student_world=state.get("student_world", ""),
+
+            # PHM Integration - Learner Type & Approach
+            learner_type=state.get("learner_type", "intermediate"),
+            current_approach=state.get("current_approach", "socratic"),
+            confusion_streak=state.get("confusion_streak", 0),
+            fallback_triggered=state.get("fallback_triggered", False),
+
+            # Scenario (from Phase 1)
+            opening_scenario=state.get("opening_scenario", ""),
+            scenario_question=state.get("scenario_question", ""),
+
+            # Concept tracking
+            discovered_concepts=state.get("discovered_concepts", []),
+            pending_concepts=state.get("pending_concepts", []),
+            key_concepts=state.get("key_concepts", []),
+
+            # Turn tracking
+            conversation_turns=state.get("conversation_turns", 0),
+            chunk_turns=state.get("chunk_turns", 0),
+
+            # Mastery gate
+            mastery_check_done=state.get("mastery_check_done", False),
         )
 
         # 3. Create and run agent — no branching, no script selection
@@ -469,54 +537,32 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 hooks=metering_hooks,
             )
 
-            # Stream response with marker stripping
-            full_response = ""
+            # Stream response directly (no marker stripping needed - conversational mode)
             async for event in stream_agent_response(agent_context, result):
-                # Strip marker from streaming deltas
-                if isinstance(event, ThreadItemUpdatedEvent):
-                    update = event.update
-                    if isinstance(update, AssistantMessageContentPartTextDelta):
-                        full_response += update.delta
-                        cleaned = strip_answer_marker(update.delta)
-                        if cleaned:
-                            event = ThreadItemUpdatedEvent(
-                                item_id=event.item_id,
-                                update=AssistantMessageContentPartTextDelta(
-                                    content_index=update.content_index,
-                                    delta=cleaned,
-                                ),
-                            )
-                        else:
-                            continue  # Skip empty deltas
-
-                # Strip marker from final content
-                elif isinstance(event, ThreadItemDoneEvent):
-                    item = event.item
-                    if isinstance(item, AssistantMessageItem):
-                        new_content = []
-                        for content_item in item.content:
-                            if hasattr(content_item, "text"):
-                                cleaned_text = strip_answer_marker(content_item.text)
-                                new_content.append(
-                                    AssistantMessageContent(
-                                        text=cleaned_text,
-                                        annotations=getattr(
-                                            content_item, "annotations", []
-                                        ),
-                                    )
-                                )
-                            else:
-                                new_content.append(content_item)
-
-                        item = AssistantMessageItem(
-                            id=item.id,
-                            thread_id=item.thread_id,
-                            created_at=item.created_at,
-                            content=new_content,
-                        )
-                        event = ThreadItemDoneEvent(item=item)
-
                 yield event
+
+            # Save updated teaching state after response
+            new_state = {
+                "concept_index": teach_ctx.current_chunk_index,
+                "current_phase": teach_ctx.current_phase,
+                "discovered_concepts": teach_ctx.discovered_concepts,
+                "conversation_turns": teach_ctx.conversation_turns + 1,
+                "lesson_path": lesson_path,
+                "status": "complete" if teach_ctx.is_complete else "teaching",
+                # Student profile
+                "student_role": teach_ctx.student_role,
+                "student_level": teach_ctx.student_level,
+                "student_world": teach_ctx.student_world,
+                # PHM Integration
+                "learner_type": teach_ctx.learner_type,
+                "current_approach": teach_ctx.current_approach,
+                "confusion_streak": teach_ctx.confusion_streak,
+                "fallback_triggered": teach_ctx.fallback_triggered,
+                # Phase 1 scenario
+                "opening_scenario": teach_ctx.opening_scenario,
+                "scenario_question": teach_ctx.scenario_question,
+            }
+            await save_session_state(thread.id, new_state)
 
         except HTTPException as http_err:
             if http_err.status_code == 402:
@@ -543,17 +589,31 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 await metering_hooks.release_on_error(agent_context)
             raise
 
-        # 4. Save updated state after run
+        # 4. Save updated state after run (including student profile)
         await save_session_state(thread.id, {
             "concept_index": teach_ctx.current_chunk_index,
-            "attempt_count": teach_ctx.attempt_count,
+            "current_phase": teach_ctx.current_phase,
+            "discovered_concepts": teach_ctx.discovered_concepts,
+            "conversation_turns": teach_ctx.conversation_turns,
             "lesson_path": lesson_path,
             "status": "complete" if teach_ctx.is_complete else "teaching",
+            # Student profile (persists across turns)
+            "student_role": teach_ctx.student_role,
+            "student_level": teach_ctx.student_level,
+            "student_world": teach_ctx.student_world,
+            # PHM Integration (persists across turns)
+            "learner_type": teach_ctx.learner_type,
+            "current_approach": teach_ctx.current_approach,
+            "confusion_streak": teach_ctx.confusion_streak,
+            "fallback_triggered": teach_ctx.fallback_triggered,
+            # Phase 1 scenario (for narrative thread)
+            "opening_scenario": teach_ctx.opening_scenario,
+            "scenario_question": teach_ctx.scenario_question,
         })
 
         logger.info(
             f"[ChatKit] v3: Done. chunk={teach_ctx.current_chunk_index}, "
-            f"attempts={teach_ctx.attempt_count}"
+            f"phase={teach_ctx.current_phase}, turns={teach_ctx.conversation_turns}"
         )
 
     async def respond(
@@ -596,21 +656,6 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             special_request = detect_special_request(user_text)
             if special_request:
                 logger.info(f"[ChatKit] Special request detected: {special_request}")
-
-            # If not a special request, try to extract A/B answer
-            if not special_request:
-                # Enhanced parsing: extract A/B even from partial answers
-                # "I think A because..." → "A"
-                normalized = normalize_answer(user_text)
-                if normalized:
-                    verification_result = await verify_student_answer(thread.id, user_text)
-                    if verification_result == "correct":
-                        logger.info("[ChatKit] Answer verified as CORRECT")
-                    elif verification_result == "incorrect":
-                        logger.info("[ChatKit] Answer verified as INCORRECT")
-                    else:
-                        logger.warning("[ChatKit] Could not verify answer (no stored answer)")
-                        verification_result = None  # Ensure it's None for unknown
 
             # Get metadata from context
             lesson_path = context.metadata.get("lesson_path", "")
