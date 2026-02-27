@@ -2,8 +2,20 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
-  // CORS is now handled by middleware.ts for dynamic origin checking
-  // This allows multiple origins to be configured via ALLOWED_ORIGINS env var
+  // CORS headers for API routes (middleware removed due to Turbopack bug)
+  async headers() {
+    return [
+      {
+        source: "/api/:path*",
+        headers: [
+          { key: "Access-Control-Allow-Credentials", value: "true" },
+          { key: "Access-Control-Allow-Origin", value: "http://localhost:3000" },
+          { key: "Access-Control-Allow-Methods", value: "GET,POST,PUT,DELETE,OPTIONS" },
+          { key: "Access-Control-Allow-Headers", value: "Content-Type, Authorization, X-Requested-With" },
+        ],
+      },
+    ];
+  },
 
   // Turbopack configuration (Next.js 16+)
   turbopack: {
