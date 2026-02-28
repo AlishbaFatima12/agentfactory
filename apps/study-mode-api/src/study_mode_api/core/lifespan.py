@@ -67,7 +67,7 @@ async def lifespan(app: FastAPI):
         try:
             from ..chatkit_store import CachedPostgresStore, StoreConfig
 
-            config = StoreConfig()
+            config = StoreConfig()  # type: ignore[call-arg]  # pydantic-settings loads from env
             logger.info(f"[DB] URL: {config.database_url[:40]}...")
 
             _postgres_store = CachedPostgresStore(

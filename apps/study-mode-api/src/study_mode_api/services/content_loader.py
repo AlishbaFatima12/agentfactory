@@ -136,9 +136,10 @@ async def get_cached_content(lesson_path: str) -> dict | None:
 
     if cached_data:
         import json
+        from typing import Any
 
         try:
-            result = json.loads(cached_data)
+            result: dict[str, Any] = json.loads(cached_data)
             result["cached"] = True
             return result
         except Exception:

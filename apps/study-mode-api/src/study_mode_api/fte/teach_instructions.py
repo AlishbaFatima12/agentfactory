@@ -61,7 +61,7 @@ HOWEVER, you CAN and SHOULD:
 ## STATE
 - Concept: {chunk['title']}
 - Progress: {tc.current_chunk_index + 1}/{tc.total_chunks}
-- Attempts: {tc.attempt_count}/{tc.max_attempts}
+- Turns: {tc.conversation_turns}
 - First message: {tc.is_first_message}
 - Student name: {tc.user_name or "Student"}
 - Greeting to use: "{greeting}"
