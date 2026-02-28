@@ -132,7 +132,7 @@ async def verify_jwt(token: str) -> dict[str, Any]:
             payload.get("sub"),
             payload.get("email"),
         )
-        return payload
+        return payload  # type: ignore[no-any-return]
 
     except JWTError as e:
         logger.error("[AUTH] JWT verification failed: %s", e)

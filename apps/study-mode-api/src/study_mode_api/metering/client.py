@@ -100,7 +100,7 @@ class MeteringClient:
             )
 
             if response.status_code == 200:
-                return response.json()
+                return response.json()  # type: ignore[no-any-return]
             elif response.status_code == 402:
                 # v5: Payment required - insufficient balance
                 body = response.json()
@@ -216,7 +216,7 @@ class MeteringClient:
             )
 
             if response.status_code == 200:
-                return response.json()
+                return response.json()  # type: ignore[no-any-return]
             else:
                 logger.error(
                     f"[Metering] Deduct failed: status={response.status_code}, "
@@ -272,7 +272,7 @@ class MeteringClient:
             )
 
             if response.status_code == 200:
-                return response.json()
+                return response.json()  # type: ignore[no-any-return]
             else:
                 logger.warning(
                     f"[Metering] Release failed: status={response.status_code}, "

@@ -123,8 +123,8 @@ async def chatkit_endpoint(request: Request):
             )
 
         # Verify JWT signature using JWKS
-        payload = await verify_jwt(token)
-        user = CurrentUser(payload)
+        jwt_payload = await verify_jwt(token)
+        user = CurrentUser(jwt_payload)
         user_id = user.id
         user_name = user.name or user.email
         logger.info(f"[AUTH] JWT verified: user_id={user_id}")
@@ -163,7 +163,7 @@ async def chatkit_endpoint(request: Request):
                 f"[RateLimit] user={user_id}, current={rate_info.get('current')}, "
                 f"limit={rate_info.get('limit')}, remaining={rate_info.get('remaining')}"
             )
-            if rate_info["remaining"] < 0:
+            if int(rate_info["remaining"]) < 0:
                 raise HTTPException(
                     status_code=429,
                     detail={
@@ -235,7 +235,12 @@ async def chatkit_endpoint(request: Request):
 @app.get("/health")
 async def health_check(request: Request):
     """Health check endpoint with database and Redis status."""
-    status = {"status": "healthy", "version": "5.1.0", "services": {}}
+    from typing import Any
+    status: dict[str, Any] = {
+        "status": "healthy",
+        "version": "5.1.0",
+        "services": {},
+    }
 
     # Check PostgreSQL
     postgres_store = getattr(request.app.state, "postgres_store", None)
@@ -259,7 +264,7 @@ async def health_check(request: Request):
     redis_client = get_redis()
     if redis_client:
         try:
-            await redis_client.ping()
+            await redis_client.ping()  # type: ignore[misc]  # redis.ping() is awaitable
             status["services"]["redis"] = "ok"
         except Exception as e:
             status["services"]["redis"] = f"error: {str(e)}"

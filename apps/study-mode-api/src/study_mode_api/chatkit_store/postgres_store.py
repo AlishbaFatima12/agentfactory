@@ -74,7 +74,7 @@ class PostgresStore(Store[RequestContext]):
             self.config = config
             self.engine = self._create_engine(config)
         else:
-            self.config = StoreConfig()
+            self.config = StoreConfig()  # type: ignore[call-arg]  # pydantic-settings loads from env
             self.engine = self._create_engine(self.config)
 
         self.session_factory = async_sessionmaker(
@@ -426,7 +426,7 @@ class PostgresStore(Store[RequestContext]):
                 )
                 await session.commit()
 
-                if result.rowcount == 0:
+                if result.rowcount == 0:  # type: ignore[attr-defined]  # SQLAlchemy Result has rowcount
                     raise NotFoundError(f"Item {item.id} not found in thread {thread_id}")
             except NotFoundError:
                 raise

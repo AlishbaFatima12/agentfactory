@@ -166,7 +166,7 @@ class CachedPostgresStore(PostgresStore):
             value = await self.redis.get(key)
             if value:
                 logger.debug(f"Cache HIT: {key}")
-                return json.loads(value)
+                return json.loads(value)  # type: ignore[no-any-return]
             logger.debug(f"Cache MISS: {key}")
             return None
         except Exception as e:

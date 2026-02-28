@@ -68,7 +68,7 @@ async def start_redis() -> None:
                 redis.exceptions.ClusterError,
             ],
         )
-        await _aredis.ping()
+        await _aredis.ping()  # type: ignore[misc]  # redis.ping() is awaitable
         logger.info("[Redis] Connected successfully!")
     except redis.exceptions.ConnectionError as e:
         logger.error("[Redis] Connection FAILED: %s", e)
@@ -120,7 +120,7 @@ async def safe_redis_get(cache_key: str) -> str | None:
         if not _aredis:
             return None
         logger.debug("Attempting to get cache for key=%s", cache_key)
-        return await _aredis.get(cache_key)
+        return await _aredis.get(cache_key)  # type: ignore[no-any-return]
     except Exception as e:
         logger.error("Failed to get cache for key=%s: %s", cache_key, e)
         return None
