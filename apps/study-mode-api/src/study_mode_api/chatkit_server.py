@@ -350,8 +350,9 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                     n=1,
                 )
 
-                open_image_url = response.data[0].url
-                logger.info(f"[ChatKit] v3: DALL-E generated: {open_image_url[:60]}...")
+                if response.data and response.data[0].url:
+                    open_image_url = response.data[0].url
+                    logger.info(f"[ChatKit] v3: DALL-E generated: {open_image_url[:60]}...")
 
             except Exception as e:
                 logger.warning(f"[ChatKit] v3: DALL-E failed: {e}")
@@ -449,8 +450,8 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                                 img_title = teach_ctx.lesson_title
                                 image_md = f"![{img_title}]({img_url})\n\n"
                                 for content_item in update.content:
-                                    if hasattr(content_item, 'text') and content_item.text:
-                                        content_item.text = image_md + content_item.text
+                                    if hasattr(content_item, 'text') and content_item.text:  # type: ignore[union-attr]
+                                        content_item.text = image_md + content_item.text  # type: ignore[union-attr]
                                         image_injected = True
                                         teach_ctx.open_image_url = ""  # Clear
                                         break
