@@ -1,189 +1,98 @@
-"""Blended Teaching Agent v7.2 - Hybrid Architecture with Handoffs.
+"""Guided Learning Agent v9 - Minimal Architecture.
 
-Architecture:
-- OnboardingAgent: Phase 0 only (fast, lightweight)
-- BeginnerTeacher: Scaffolded learning (GPT-4o-mini for speed)
-- IntermediateTeacher: Socratic + Case-based
-- AdvancedTeacher: Elaborative interrogation
+Backend is lightweight. LLM is intelligent.
 
-Guardrails:
-- No repeat questions about discovered concepts
-- No internal instruction leaks
-- Path-aware (no profession for everyday/direct)
+Flow:
+1. Phase 0: Onboarding (get student profile)
+2. Phase 2: Teaching (natural concept progression)
 
-Speed optimizations:
-- GPT-4o-mini for beginners (faster responses)
-- Unsplash for images (instant vs DALL-E's 10s)
-- Focused instructions per teacher (no giant conditionals)
+No complex phases. No mastery gates. Let Claude/Gemini handle it.
 """
 
 import logging
 import os
-import httpx
 
 from agents import (
     Agent,
     RunContextWrapper,
     function_tool,
-    handoff,
 )
-from openai import AsyncOpenAI
+from agents.extensions.models.litellm_model import LitellmModel
 
 from .teach_context import TeachContext
-from .guardrails import validate_output, fix_leaked_instructions
 from .specialized_teachers import (
     get_teacher_instructions,
     get_onboarding_instructions,
-    BEGINNER_TEACHER_INSTRUCTIONS,
-    INTERMEDIATE_TEACHER_INSTRUCTIONS,
-    ADVANCED_TEACHER_INSTRUCTIONS,
 )
 
 logger = logging.getLogger(__name__)
 
-# OpenAI client for DALL-E (used sparingly)
-_openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# =============================================================================
+# MODEL CONFIGURATION
+# =============================================================================
 
-# Unsplash API for fast images
-UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY", "R9g7beim3nk5q4sZacHBrW1KvEHIEiJ1fuvfKKG5l2w")
+_gemini_model = LitellmModel(
+    model="gemini/gemini-2.5-flash",
+    api_key=os.getenv("GEMINI_API_KEY"),
+)
 
-# Model configurations
-MODEL_FAST = "gpt-5-mini"    # For all learner types
-MODEL_STANDARD = "gpt-5-mini"  # Keep consistent model
+MODEL = _gemini_model
 
 
 # =============================================================================
-# OUTPUT GUARDRAIL WRAPPER
-# =============================================================================
-
-def apply_guardrails(ctx: RunContextWrapper[TeachContext], output: str) -> str:
-    """Apply guardrails to agent output and fix issues if possible."""
-    tc = ctx.context
-
-    result = validate_output(
-        output=output,
-        discovered_concepts=tc.discovered_concepts,
-        personalization_path=tc.personalization_path,
-        ai_experience_asked=tc.ai_experience_asked,
-        current_asking_concept=tc.current_asking_concept,
-    )
-
-    if not result.is_valid:
-        logger.warning(f"[{tc.thread_id}] Guardrail issues: {result.issues}")
-        # Attempt to fix leaked instructions
-        fixed = fix_leaked_instructions(output)
-        if fixed != output:
-            logger.info(f"[{tc.thread_id}] Fixed leaked instructions")
-            return fixed
-
-    return output
-
-
-# =============================================================================
-# QUICK START: Combined path + level selection (from UI picker)
+# PHASE 0 TOOLS: Onboarding
 # =============================================================================
 
 @function_tool
 async def quick_start(
     ctx: RunContextWrapper[TeachContext],
     path: str,
-    learner_type: str,
-    profession: str = "",
+    level: str,
+    world: str,
 ) -> str:
-    """Quick start teaching - skip Phase 0 questions when UI provides selections.
-
-    Call this when the frontend PersonalizationPicker provides both path and AI experience.
-    This skips the back-and-forth questions and goes directly to Phase 1.
+    """Initialize teaching session with student profile from UI picker.
 
     Args:
-        path: "work", "passion", "everyday", or "direct"
-        learner_type: "beginner", "intermediate", or "advanced"
-        profession: Optional profession for work/passion paths (can be empty)
+        path: Personalization path ("work", "passion", "everyday", "direct")
+        level: Experience level ("beginner", "intermediate", "advanced")
+        world: Their field/interest for analogies
     """
     tc = ctx.context
     thread_id = tc.thread_id
 
-    # Guard: Only in phase_0
-    if tc.current_phase != "phase_0":
-        return f"Already past phase_0. Current: {tc.current_phase}. Continue with current phase."
+    # GUARD: If already in phase_2, don't reset - just continue teaching
+    if tc.current_phase == "phase_2":
+        logger.info(f"[{thread_id}] quick_start called but already in phase_2 - ignoring")
+        return "Already teaching. Continue with the current concept. Do NOT restart."
 
-    logger.info(f"[{thread_id}] quick_start({path}, {learner_type}, {profession})")
+    logger.info(f"[{thread_id}] quick_start({path}, {level}, {world})")
 
-    # Set personalization
-    tc.personalization_path = path.lower()
+    # Set profile
+    tc.personalization_path = path
+    tc.learner_type = level
+    tc.student_world = world
+    tc.student_role = world
+
+    # Skip to teaching phase
+    tc.current_phase = "phase_2"
     tc.ai_experience_asked = True
     tc.ai_experience_answered = True
 
-    # Set profile based on path
-    if path in ["everyday", "direct"]:
-        role = "learner"
-        world = path
-        level = "novice" if learner_type == "beginner" else learner_type
+    # Build context intro
+    if path == "everyday":
+        context_intro = "I'll use everyday examples like cooking and driving"
+    elif path == "direct":
+        context_intro = "I'll teach directly without extra analogies"
     else:
-        role = profession if profession else "professional"
-        world = profession if profession else path
-        level = "novice" if learner_type == "beginner" else learner_type
+        context_intro = f"I'll connect everything to your experience in {world}"
 
-    tc.student_role = role
-    tc.student_level = level
-    tc.student_world = world
+    return f"""Profile set! Starting lesson.
 
-    # Set PHM learner type and approach
-    tc.learner_type = learner_type
-    if learner_type == "beginner":
-        tc.current_approach = "scaffolded"
-    elif learner_type == "advanced":
-        tc.current_approach = "elaborative"
-    else:
-        tc.current_approach = "socratic"
+Context: {context_intro}
+Level: {level}
 
-    tc.current_phase = "phase_1"
+Now ask a guiding question about the first concept, related to {world}."""
 
-    # Generate DALL-E image for Phase 1
-    image_markdown = ""
-    try:
-        prompt = (
-            f"Vibrant educational illustration for '{tc.lesson_title}'. "
-            f"Scene in {world} context, modern and inspiring. "
-            f"Digital art, dynamic composition. "
-            f"AI empowering people. Blue/purple accents. No text."
-        )
-
-        logger.info(f"[{thread_id}] Generating DALL-E image...")
-        response = await _openai_client.images.generate(
-            model="dall-e-3",
-            prompt=prompt,
-            size="1792x1024",
-            quality="standard",
-            n=1,
-        )
-
-        image_url = response.data[0].url
-        tc.open_image_url = image_url
-        image_markdown = f"![{tc.lesson_title}]({image_url})"
-        logger.info(f"[{thread_id}] DALL-E done")
-
-    except Exception as e:
-        logger.warning(f"[{thread_id}] DALL-E failed: {e}")
-
-    # Return with explicit instruction to include image
-    return f"""✓ Quick start: {path} | {learner_type}
-✓ Phase: 1 (Case-Based Hook)
-
-YOUR RESPONSE MUST START WITH THIS EXACT IMAGE MARKDOWN (copy it exactly):
-{image_markdown}
-
-THEN write a 2-3 sentence scenario about building an AI assistant for their {world} work.
-End with ONE focused question.
-
-IMPORTANT: The image markdown above MUST be the FIRST LINE of your response to the user.
-
-After writing your scenario, call record_scenario()."""
-
-
-# =============================================================================
-# PHASE 0: RECORD PERSONALIZATION PATH
-# =============================================================================
 
 @function_tool
 async def record_personalization_choice(
@@ -192,776 +101,274 @@ async def record_personalization_choice(
 ) -> str:
     """Record which personalization path the user chose.
 
-    Call this IMMEDIATELY when user chooses work/passion/everyday/direct.
-    This prevents asking wrong follow-up questions.
-
     Args:
         path: "work", "passion", "everyday", or "direct"
     """
     tc = ctx.context
-    tc.personalization_path = path.lower()
 
+    # GUARD: If already in phase_2, don't use onboarding tools
+    if tc.current_phase == "phase_2":
+        return "Already teaching. Continue with the current concept. Do NOT restart."
+
+    tc.personalization_path = path
     logger.info(f"[{tc.thread_id}] Personalization path: {path}")
 
-    # Return what to do next based on path
-    if path in ["everyday", "direct"]:
-        tc.ai_experience_asked = True  # Mark that we're about to ask
-        return f"""✓ Path recorded: {path}
-
-NEXT STEP: Ask ONLY about AI experience. DO NOT ask about profession!
-Example: "What's your AI experience? 🟢 Built/used AI | 🟡 Heard of them | 🔴 Completely new"
-
-After they answer → call set_student_profile() → handoff to teacher."""
+    if path in ("everyday", "direct"):
+        return "Path recorded. Now ask ONLY about AI experience level."
     else:
-        return f"""✓ Path recorded: {path}
+        return "Path recorded. Now ask about their field AND AI experience."
 
-NEXT STEP: Ask about BOTH profession AND AI experience in ONE message.
-After they answer → call set_student_profile() → handoff to teacher."""
-
-
-# =============================================================================
-# PHASE 0 → PHASE 1: SET STUDENT PROFILE (Triggers Handoff)
-# =============================================================================
 
 @function_tool
 async def set_student_profile(
     ctx: RunContextWrapper[TeachContext],
     role: str,
-    level: str,
     world: str,
-    learner_type: str = "intermediate",
+    learner_type: str,
 ) -> str:
-    """Set student profile and prepare for handoff to specialized teacher.
-
-    Call this after student tells you their role/expertise.
-    This determines which teacher agent handles the rest of the lesson.
+    """Set the student profile and transition to teaching.
 
     Args:
-        role: Their role (developer, teacher, startup founder, learner, general)
-        level: novice, intermediate, or advanced
-        world: Their field (software, education, healthcare, general, everyday, direct)
-        learner_type: beginner, intermediate, or advanced (based on AI experience)
+        role: What the student does
+        world: Their field for analogies
+        learner_type: "beginner", "intermediate", or "advanced"
     """
     tc = ctx.context
-    thread_id = tc.thread_id
 
-    # Guard: Only in phase_0
-    if tc.current_phase != "phase_0":
-        return f"Already past phase_0. Current: {tc.current_phase}. Continue with current phase."
+    # GUARD: If already in phase_2, don't reset
+    if tc.current_phase == "phase_2":
+        return "Already teaching. Continue with the current concept. Do NOT restart."
 
-    logger.info(f"[{thread_id}] set_student_profile({role}, {level}, {world}, learner_type={learner_type})")
-
-    # Set profile
     tc.student_role = role
-    tc.student_level = level
     tc.student_world = world
-
-    # Set PHM learner type and approach
     tc.learner_type = learner_type
-    if learner_type == "beginner":
-        tc.current_approach = "scaffolded"
-    elif learner_type == "advanced":
-        tc.current_approach = "elaborative"
-    else:
-        tc.current_approach = "socratic"
-
-    tc.current_phase = "phase_1"
-
-    # Generate DALL-E image for Phase 1 (personalized)
-    image_markdown = ""
-    try:
-        prompt = (
-            f"Vibrant educational illustration for '{tc.lesson_title}'. "
-            f"Scene in {world} industry, relevant to a {role}. "
-            f"Modern digital art, dynamic composition, inspiring. "
-            f"AI empowering professionals. Blue/purple accents. No text."
-        )
-
-        logger.info(f"[{thread_id}] Generating DALL-E image...")
-        response = await _openai_client.images.generate(
-            model="dall-e-3",
-            prompt=prompt,
-            size="1792x1024",
-            quality="standard",
-            n=1,
-        )
-
-        image_url = response.data[0].url
-        tc.open_image_url = image_url
-        image_markdown = f"![{tc.lesson_title}]({image_url})"
-        logger.info(f"[{thread_id}] DALL-E done: {image_url[:50]}...")
-
-    except Exception as e:
-        logger.warning(f"[{thread_id}] DALL-E failed: {e}")
-
-    # Determine which teacher to hand off to
-    teacher_name = {
-        "beginner": "BeginnerTeacher",
-        "intermediate": "IntermediateTeacher",
-        "advanced": "AdvancedTeacher",
-    }.get(learner_type, "IntermediateTeacher")
-
-    return f"""✓ Profile set: {role} | {level} | {world} | {learner_type}
-✓ Phase: 1 (Case-Based Hook)
-✓ Teacher: {teacher_name}
-
-{image_markdown}
-
-NOW START YOUR SCENARIO:
-Start with the image above (if available), then write a 2-3 sentence scenario about building an AI assistant for their {world} work. End with ONE question.
-
-After writing your scenario, call record_scenario()."""
-
-
-# =============================================================================
-# PHASE 1 → PHASE 2: RECORD SCENARIO
-# =============================================================================
-
-@function_tool
-async def record_scenario(
-    ctx: RunContextWrapper[TeachContext],
-    scenario: str,
-    question: str,
-) -> str:
-    """Record the Phase 1 scenario and move to Phase 2.
-
-    Call this AFTER you've shown the scenario to the student.
-
-    Args:
-        scenario: Brief description of your scenario (1 sentence)
-        question: The question you asked
-    """
-    tc = ctx.context
-    thread_id = tc.thread_id
-
-    # Guard: Only in phase_1
-    if tc.current_phase != "phase_1":
-        return f"Wrong phase for record_scenario. Current: {tc.current_phase}"
-
-    logger.info(f"[{thread_id}] record_scenario recorded")
-
-    tc.opening_scenario = scenario
-    tc.scenario_question = question
     tc.current_phase = "phase_2"
 
-    return f"""✓ Scenario saved
-✓ Phase: 2 (Socratic Discovery)
+    logger.info(f"[{tc.thread_id}] Profile set: {role} in {world}, {learner_type}")
 
-WAIT for student's answer to your question.
-When they answer, use Validate → Name → Push pattern."""
+    return f"""Profile complete! Now begin teaching.
+
+Student: {role} in {world}
+Level: {learner_type}
+
+Start with a guiding question about the first concept."""
 
 
 # =============================================================================
-# PHASE 2: RECORD CONCEPT DISCOVERY
+# CONCEPT EXTRACTION (Pre-process, not in prompt)
 # =============================================================================
 
-@function_tool
-async def record_discovery(
-    ctx: RunContextWrapper[TeachContext],
-    concept: str,
-    student_insight: str,
-) -> str:
-    """Record that student discovered a concept.
+def extract_key_concepts(chunk_content: str, chunk_title: str) -> list[str]:
+    """Extract 3-5 key concepts from chunk content.
 
-    Call this when they demonstrate understanding (even if not exact terminology).
-
-    Args:
-        concept: Formal name (Spec, Skills, Subagent, MCP, Feedback Loop)
-        student_insight: How they expressed it
+    Simple extraction based on common patterns.
     """
-    tc = ctx.context
-    thread_id = tc.thread_id
+    # Common Agent Factory concepts
+    common_concepts = [
+        "Intent", "Skills", "MCP", "Spec", "Agent", "Tools",
+        "Orchestration", "Outcomes", "Natural Language",
+    ]
 
-    logger.info(f"[{thread_id}] record_discovery({concept})")
+    # Check which concepts appear in the content
+    content_lower = chunk_content.lower()
+    found = []
 
-    # Normalize concept name
-    concept_normalized = concept.strip().title()
+    for concept in common_concepts:
+        if concept.lower() in content_lower:
+            found.append(concept)
 
-    # Check if already discovered
-    if concept_normalized in tc.discovered_concepts:
-        return f"'{concept}' already discovered! Move to next concept. Discovered: {', '.join(tc.discovered_concepts)}"
+    # Limit to 5 concepts
+    if found:
+        return found[:5]
 
-    tc.discovered_concepts.append(concept_normalized)
-    tc.conversation_turns += 1
-    tc.chunk_turns += 1
-    tc.confusion_streak = 0  # Reset on successful discovery
-
-    total = len(tc.discovered_concepts)
-
-    # Micro-summary reminder
-    summary_hint = ""
-    if total > 0 and total % 3 == 0:
-        summary_hint = f"\n\nYou've covered {total} concepts. Give a quick recap before continuing."
-
-    return f"""✓ Discovered: {concept_normalized}
-✓ Total: {total}
-✓ All discovered: {', '.join(tc.discovered_concepts)}{summary_hint}
-
-NEXT: Move to the next concept that is NOT in the discovered list."""
+    # Fallback: use chunk title words
+    return [chunk_title.split()[0]] if chunk_title else ["the topic"]
 
 
 # =============================================================================
-# CONFUSION TRACKING (3-Strike System)
-# =============================================================================
-
-@function_tool
-async def record_confusion(
-    ctx: RunContextWrapper[TeachContext],
-) -> str:
-    """Record that student showed confusion. Triggers fallback after 3 strikes.
-
-    Call when student says "I don't know", seems confused, or gives wrong answer.
-    """
-    tc = ctx.context
-    thread_id = tc.thread_id
-
-    tc.confusion_streak += 1
-    logger.info(f"[{thread_id}] Confusion streak: {tc.confusion_streak}")
-
-    if tc.confusion_streak >= 3:
-        tc.fallback_triggered = True
-        return """⚠️ 3-STRIKE FALLBACK TRIGGERED!
-
-STOP Socratic questioning. Switch to DIRECT INSTRUCTION:
-1. Say: "Let me try a different approach - I'll explain this step by step."
-2. Teach the concept directly with a concrete example
-3. Use simple YES/NO verification
-4. After 2 correct answers, can try gentle Socratic again"""
-
-    return f"""Confusion recorded ({tc.confusion_streak}/3).
-
-After 3 strikes, fallback to direct instruction.
-For now: simplify your question or give a hint."""
-
-
-# =============================================================================
-# PHASE ADVANCEMENT
-# =============================================================================
-
-@function_tool
-async def advance_phase(
-    ctx: RunContextWrapper[TeachContext],
-) -> str:
-    """Move to the next teaching phase.
-
-    Flow: phase_0 → phase_1 → phase_2 → mastery_gate → phase_3 → phase_4
-    """
-    tc = ctx.context
-    thread_id = tc.thread_id
-    current = tc.current_phase
-    discovered = len(tc.discovered_concepts)
-
-    # Guard: Can't skip phase_2 without discoveries
-    if current == "phase_2" and discovered < 3:
-        return f"""Cannot advance yet!
-
-Only {discovered} concepts discovered (need 3+).
-Stay in Phase 2: Ask more Socratic questions, call record_discovery() when they get it."""
-
-    # Phase flow
-    flow = {
-        "phase_0": "phase_1",
-        "phase_1": "phase_2",
-        "phase_2": "mastery_gate",
-        "mastery_gate": "phase_3",
-        "phase_3": "phase_4",
-        "phase_4": "complete",
-    }
-
-    new_phase = flow.get(current, "phase_0")
-    tc.current_phase = new_phase
-
-    logger.info(f"[{thread_id}] Phase: {current} → {new_phase}")
-
-    guidance = {
-        "phase_1": "Create a scenario in their world.",
-        "phase_2": "Begin Socratic discovery. Validate → Name → Push.",
-        "mastery_gate": "Ask them to recall the concepts before moving on.",
-        "phase_3": "Fill gaps, resolve scenario, give transfer prompt.",
-        "phase_4": "Cognitive reset, structured recall, closing.",
-        "complete": "Lesson complete!",
-    }
-
-    return f"✓ Phase: {new_phase}\n→ {guidance.get(new_phase, '')}"
-
-
-@function_tool
-async def advance_to_next_chunk(
-    ctx: RunContextWrapper[TeachContext],
-) -> str:
-    """Move to next chunk/topic in the lesson.
-
-    Call when current chunk is covered and ready for next topic,
-    or when lesson is complete.
-    """
-    tc = ctx.context
-    thread_id = tc.thread_id
-
-    tc.current_chunk_index += 1
-    tc.chunk_turns = 0
-
-    if tc.current_chunk_index >= tc.total_chunks:
-        tc.current_phase = "mastery_gate"
-        logger.info(f"[{thread_id}] All chunks done → mastery_gate")
-        return """✓ All chunks covered!
-
-Move to MASTERY GATE:
-"Can you name the core elements we've covered and explain each briefly?" """
-
-    chunk = tc.current_chunk
-    title = chunk.get('title', 'Next Topic') if chunk else 'Next Topic'
-    logger.info(f"[{thread_id}] → Next chunk: {title}")
-
-    return f"✓ Next chunk: {title}\nContinue Socratic discovery, tie to previous concepts."
-
-
-# =============================================================================
-# UTILITIES
-# =============================================================================
-
-@function_tool
-async def get_teaching_status(
-    ctx: RunContextWrapper[TeachContext],
-) -> str:
-    """Get current teaching status."""
-    tc = ctx.context
-    chunk = tc.current_chunk
-    chunk_title = chunk.get('title', 'N/A') if chunk else 'Complete'
-    discovered = ", ".join(tc.discovered_concepts) if tc.discovered_concepts else "None"
-
-    return f"""STATUS:
-- Phase: {tc.current_phase}
-- Student: {tc.student_role} ({tc.student_level}) in {tc.student_world}
-- Learner Type: {tc.learner_type}
-- Approach: {tc.current_approach}
-- Chunk: {tc.current_chunk_index + 1}/{tc.total_chunks} ({chunk_title})
-- Discovered: {discovered}
-- Turns: {tc.conversation_turns}
-- Confusion Streak: {tc.confusion_streak}/3
-- Fallback Active: {tc.fallback_triggered}"""
-
-
-@function_tool
-async def get_instant_image(
-    ctx: RunContextWrapper[TeachContext],
-    concept: str,
-) -> str:
-    """Get an Unsplash image to illustrate a concept.
-
-    Use sparingly to make concepts visual and memorable.
-
-    IMPORTANT: Pass ONLY the concept name, NOT custom search terms!
-    Correct: "Spec", "Skills", "MCP", "Feedback Loops"
-    Wrong: "craftsman tools", "network connection"
-
-    Args:
-        concept: The exact concept name (Spec, Skills, MCP, Feedback Loops, etc.)
-    """
-    thread_id = ctx.context.thread_id
-
-    # Topic-specific keyword mapping
-    keywords = {
-        "spec": "blueprint document planning",
-        "specification": "blueprint document planning",
-        "specs": "blueprint document planning",
-        "skill": "tools capabilities professional",
-        "skills": "tools capabilities professional",
-        "mcp": "network connection digital",
-        "model context protocol": "network connection digital",
-        "protocol": "network connection digital",
-        "feedback": "cycle improvement growth",
-        "feedback loop": "cycle improvement learning",
-        "feedback loops": "cycle improvement learning",
-        "loop": "cycle continuous",
-        "subagent": "team collaboration",
-        "orchestration": "conductor orchestra teamwork",
-        "agent": "robot assistant AI",
-        "ai": "artificial intelligence technology",
-        "congratulations": "celebration success trophy",
-        "success": "celebration winner achievement",
-    }
-
-    # Find best match
-    concept_lower = concept.lower()
-    search = keywords.get(concept_lower)
-    if not search:
-        for key, value in keywords.items():
-            if key in concept_lower or concept_lower in key:
-                search = value
-                break
-    if not search:
-        search = f"{concept} technology professional"
-
-    try:
-        async with httpx.AsyncClient() as client:
-            response = await client.get(
-                "https://api.unsplash.com/photos/random",
-                params={"query": search, "orientation": "landscape"},
-                headers={"Authorization": f"Client-ID {UNSPLASH_ACCESS_KEY}"},
-                timeout=5.0,
-            )
-
-            if response.status_code == 200:
-                url = response.json().get("urls", {}).get("regular", "")
-                if url:
-                    logger.info(f"[{thread_id}] Unsplash image: {url[:50]}...")
-                    return f"![{concept}]({url})"
-
-    except Exception as e:
-        logger.error(f"[{thread_id}] Unsplash error: {e}")
-
-    return ""
-
-
-# =============================================================================
-# DYNAMIC INSTRUCTIONS GENERATOR
+# DYNAMIC INSTRUCTIONS (Minimal - ~50 lines)
 # =============================================================================
 
 def create_dynamic_instructions(tc: TeachContext) -> str:
-    """Generate context-aware instructions based on current state."""
+    """Create minimal, focused instructions for the LLM.
 
-    # Phase 0 - Onboarding
+    Under 60 lines. No giant rule blocks. Let the LLM be intelligent.
+    """
+    # Phase 0: Onboarding
     if tc.current_phase == "phase_0":
-        name = tc.user_name.title() if tc.user_name else ""
-        greeting = f"Hey {name}! " if name else "Hey there! "
+        return get_onboarding_instructions()
 
-        if tc.is_first_message:
-            return f"""You are a warm, friendly AI tutor starting a teaching session.
+    # Phase 2: Teaching
+    # Get level-specific style
+    teacher_style = get_teacher_instructions(tc.learner_type)
 
-FIRST CHECK: Is the user message "QUICK_START:path:level" or "QUICK_START:path:level:profession"?
-- If message starts with "QUICK_START:" → Parse it and call quick_start(path, learner_type, profession)
-- Example: "QUICK_START:everyday:beginner" → call quick_start("everyday", "beginner")
-- Example: "QUICK_START:work:advanced:teacher" → call quick_start("work", "advanced", "teacher")
-- Example: "QUICK_START:passion:beginner:photography" → call quick_start("passion", "beginner", "photography")
+    # Get current concept based on turns
+    current_concept = tc.current_concept
+    concepts_list = ", ".join(tc.key_concepts[:5]) if tc.key_concepts else "the lesson"
 
-If NOT a QUICK_START message, GIVE THESE OPTIONS:
-{greeting}Ready to dive into **{tc.lesson_title}**?
+    # Get lesson content for accurate definitions
+    chunk = tc.current_chunk
+    chunk_content = chunk.get("content", "")[:2000] if chunk else ""  # First 2000 chars
 
-How would you like me to make this relevant to you?
+    return f"""You are a WARM, engaging tutor running a natural Guided Learning session.
 
-🎯 **Connect to my work** - I'll use examples from your profession
-❤️ **Connect to my passion** - I'll use examples from what you love
-🏠 **Everyday examples** - cooking, driving, daily life stuff
-⚡ **Just teach me directly** - no analogies, get to the point
+## LESSON INFO
+Title: {tc.lesson_title}
+Student: {tc.student_role} in {tc.student_world}
+Experience: {tc.learner_type}
+Concepts: {concepts_list}
+Current focus: **{current_concept}** (Turn {tc.conversation_turns})
 
-Just pick one!
-
-RULES:
-- Keep it WARM and inviting
-- Don't call any tools yet - wait for their response"""
-
-        else:
-            path = tc.personalization_path
-            return f"""Student is responding. Current state:
-- Path: {path or "NOT SET"}
-- AI experience asked: {tc.ai_experience_asked}
-
-FIRST CHECK: Is the message "QUICK_START:path:level" or "QUICK_START:path:level:profession"?
-- If yes → call quick_start(path, learner_type, profession) immediately
-
-IF path is empty: Call record_personalization_choice() with their choice.
-
-IF path is "everyday" or "direct": Ask ONLY about AI experience. NEVER ask about profession!
-
-IF path is "work" or "passion": Ask about both field and AI experience.
-
-After they answer AI experience → call set_student_profile()"""
-
-    # Get learner-specific instructions
-    base_instructions = get_teacher_instructions(tc.learner_type, tc.fallback_triggered)
-
-    # Add phase-specific context
-    phase_context = ""
-    if tc.current_phase == "phase_1":
-        image_instruction = ""
-        if tc.open_image_url:
-            image_instruction = f"""
-IMAGE: Include this image at the START of your response:
-![Image]({tc.open_image_url})
-
-Start your response with the image markdown, then write your scenario."""
-
-        chunk = tc.chunks[tc.current_chunk_index] if tc.current_chunk_index < len(tc.chunks) else None
-        chunk_title = chunk.get('title', tc.lesson_title) if chunk else tc.lesson_title
-        chunk_content = chunk.get('content', '')[:500] if chunk else ""
-
-        phase_context = f"""
-## PHASE 1: CASE-BASED HOOK (PHM Strategy)
-
-LESSON: {tc.lesson_title}
-CURRENT CHUNK: {chunk_title}
-Student: {tc.student_role} in {tc.student_world} | Level: {tc.student_level}
-{image_instruction}
-
-CONTENT TO TEACH:
+## LESSON CONTENT (MANDATORY - Use for ALL definitions and facts)
 {chunk_content}
 
-YOUR TASK:
-1. Start with the image markdown (REQUIRED)
-2. Create a 2-3 sentence scenario connecting {tc.student_world} to the lesson concepts
-3. The scenario MUST relate to: {chunk_title}
-4. End with ONE question that leads them to discover the first concept
+**CRITICAL:** You MUST use the definitions from the LESSON CONTENT above.
+- MCP = Model Context Protocol (connects to external sources/platforms)
+- Never make up or guess definitions
+- If unsure, refer back to the lesson content above
+- Quote from lesson content when explaining concepts
 
-STAY ON TOPIC: Only discuss concepts from this lesson. No tangents.
+## TEACHING APPROACH: SCENARIO-BASED
 
-After writing, call record_scenario()."""
+Create vivid scenarios from **{tc.student_world}**:
+- "Imagine you're in your classroom and a student asks..."
+- "Picture this: You're planning tomorrow's lesson and..."
+- "Think about when you're grading papers and..."
 
-    elif tc.current_phase == "phase_2":
-        discovered = ", ".join(tc.discovered_concepts) if tc.discovered_concepts else "None"
-        chunk = tc.chunks[tc.current_chunk_index] if tc.current_chunk_index < len(tc.chunks) else None
-        chunk_title = chunk.get('title', tc.lesson_title) if chunk else tc.lesson_title
-        chunk_content = chunk.get('content', '')[:1500] if chunk else ""
+Make abstract concepts feel REAL through their daily experience.
 
-        # Extract concepts from chunk - use chunk's concepts if provided, otherwise extract from content
-        chunk_concepts = chunk.get('concepts', []) if chunk else []
-        if not chunk_concepts and chunk_content:
-            # Extract concepts from numbered lists in content (e.g., "1. Spec - description")
-            import re
-            lines = chunk_content.split('\n')
-            for line in lines:
-                # Match patterns like "1. Concept Name - description" or "- **Concept** - desc"
-                # Captures everything before the dash that separates concept from description
-                match = re.match(r'^\s*(?:\d+\.|[-*]|\#{1,3})\s*\**([A-Z][a-zA-Z0-9\s\-]+?)\**\s*[-–—:]\s*[A-Z]', line)
-                if match:
-                    concept = match.group(1).strip().rstrip('-').strip()
-                    if concept and 2 < len(concept) < 40:  # Reasonable concept name length
-                        chunk_concepts.append(concept)
+## CORE RULES (Every response)
 
-        # Store in context for tracking
-        if chunk_concepts and not tc.key_concepts:
-            tc.key_concepts = chunk_concepts
+**FIRST turn on a new concept (Turn 0):**
+- Do NOT mention the concept name (don't say "Intent", "Skills", etc.)
+- Do NOT explain what the concept is
+- ONLY ask a scenario-based guiding question from their world
+- Let THEM discover the concept through their answer
 
-        # Use extracted concepts or fall back to key_concepts from context
-        all_concepts = chunk_concepts if chunk_concepts else tc.key_concepts if tc.key_concepts else []
-        remaining = [c for c in all_concepts if c not in tc.discovered_concepts]
-        next_concept = remaining[0] if remaining else None
+Example FIRST response:
+"Picture this: You're planning tomorrow's lesson. What's the very first thing you need to decide before choosing activities or materials?"
+(Notice: NO mention of "Intent" - let them discover it!)
 
-        # Build concepts list for display
-        concepts_display = "\n".join([f"- {c}" for c in all_concepts]) if all_concepts else "- (extract from lesson content)"
+**Subsequent turns (Turn 1+):**
+1. Quote their answer: "You said '[their words]'"
+2. Validate warmly: "Exactly! That's the key!"
+3. NOW reveal the concept name: "In AI terms, that's called Intent"
+4. Ask the NEXT guiding question
+5. STOP (max 4-5 sentences)
 
-        phase_context = f"""
-## PHASE 2: SOCRATIC DISCOVERY (PHM Strategy)
+**CRITICAL: CONCEPT NAME REVEAL TIMING**
+- Turn 0: Ask question WITHOUT naming concept
+- Turn 1: After they answer, THEN reveal "That's called [Concept]!"
+- BAD: "We're starting with Intent. What do you think Intent means?"
+- GOOD: "What do you decide first when planning a lesson?" (wait for answer) → "Exactly! That's what we call Intent!"
 
-LESSON: {tc.lesson_title}
-CURRENT CHUNK: {chunk_title}
-Student: {tc.student_role} in {tc.student_world}
+## WARMTH REQUIREMENTS
 
-CONCEPTS TO TEACH IN THIS CHUNK:
-{concepts_display}
+- Use contractions (you're, that's, let's, we'll)
+- Celebrate their insights genuinely
+- Be encouraging, not robotic
+- Sound like a supportive friend, not a textbook
 
-DISCOVERED SO FAR: {discovered}
-REMAINING: {', '.join(remaining) if remaining else 'None'}
-NEXT TO TEACH: **{next_concept}**
-Confusion streak: {tc.confusion_streak}/3
-{'⚠️ FALLBACK ACTIVE - Switch to direct explanation!' if tc.fallback_triggered else ''}
+## DISCOVERY HANDLING (CRITICAL - MUST FOLLOW)
 
-YOUR SCENARIO: {tc.opening_scenario}
+If student mentions ANY concept keyword (Intent, Skills, MCP, Spec, Agent, etc.):
+1. IMMEDIATELY validate: "Yes! MCP - that's exactly it!"
+2. Explain what it means: "MCP stands for Model Context Protocol - it connects to external sources"
+3. Celebrate their discovery: "You just nailed it!"
+4. Move to the NEXT concept
 
-## ⚠️ ABSOLUTE FIRST STEP - CHECK USER'S ANSWER! ⚠️
+Example:
+- Student says: "mcp"
+- GOOD response: "Yes! MCP - Model Context Protocol! That's the universal connector that lets agents talk to external tools. Great catch! Now, thinking about your teaching..."
+- BAD response: (ignores "mcp" and asks another question)
 
-CURRENT CONCEPT TO TEACH: **{next_concept}**
+NEVER ignore when student says a concept keyword. ALWAYS validate immediately.
 
-BEFORE doing ANYTHING else, check if user's message answers the question:
+## TRANSITION STYLE
 
-1. Did they say "{next_concept}" or words related to it? → CORRECT!
-2. Did they show ANY understanding of what you asked? → CORRECT!
-3. Did they attempt an answer (even partially right)? → GIVE CREDIT!
+Transitions must feel like momentum, not correction.
 
-IF USER IS CORRECT:
-→ Say "Exactly - **{next_concept}**!" (ONE sentence max)
-→ CALL record_discovery("{next_concept}") IMMEDIATELY
-→ Ask about the NEXT concept right away
-→ DO NOT explain the concept they just got right!
+GOOD: "Yes — that leads directly into...", "Exactly! And that connects to...", "You've just stepped into the next layer..."
+BAD: "But first...", "Let's clarify something else...", "Before that..."
 
-IF USER IS WRONG OR CONFUSED:
-→ Then and only then, give a hint or explanation
-→ Keep it short, let them try again
+## ANALOGY STYLE
 
-HOW TO DETECT A CORRECT ANSWER:
-- User says the concept name (or close variation)
-- User describes what the concept does
-- User uses synonyms or related terms
-- User shows they understand even in their own words
-→ All of these = CORRECT! Record it and move on.
+Connect ALL examples to **{tc.student_world}** through scenarios.
+NEVER use unrelated everyday examples (cooking, driving) unless their world IS "everyday".
 
-NEVER:
-- Explain a concept they just got right
-- Ask "Got it?" or "Does that make sense?" or "Make sense?"
-- Re-teach something they already understood
-- Keep talking after they answered correctly
+## EDGE CASE HANDLING (Stay engaging in ALL situations)
 
-TEACHING STRATEGY (only if user hasn't answered yet):
-1. Connect {next_concept} to their {tc.student_world} context
-2. Ask ONE Socratic question about {next_concept}
-3. When they answer, validate and name the concept with **bold**
-4. IMMEDIATELY call record_discovery("{next_concept}") - DON'T ASK ANOTHER QUESTION!
+**"I don't know" / "Guide me" / "Help":**
+- Give a HINT with a scenario from their world
+- Break concept into smaller piece
+- "No worries! Think about when you [scenario]..."
+- NEVER restart. Stay on current concept.
 
-ACCEPTANCE DETECTION - When user says ANY of these, they UNDERSTAND:
-- "got it", "I got it", "got that"
-- "yes", "yeah", "yep", "I understand"
-- "makes sense", "that makes sense"
-- "I see", "oh I see", "okay"
-- "cool", "good", "great", "thanks"
-→ When you hear these: CALL record_discovery("{next_concept}") IMMEDIATELY
-→ Then move to NEXT concept - don't re-explain the same one!
+**Short responses ("ok", "yes", "hmm", "sure"):**
+- Treat as acknowledgment, keep momentum
+- "Great! Building on that..." and continue teaching
+- Don't ask "do you understand?" - assume they do
 
-CONCEPT DETECTION - When user shows understanding of ANY concept:
-- Listen for keywords related to the concept you're teaching
-- When they express the idea (even in their own words), that's understanding!
-- IMMEDIATELY call record_discovery() with the concept name
-- Don't wait for exact terminology - understanding matters more than words
+**Wrong answer:**
+- Find the kernel of truth: "I see where you're going with that..."
+- Gently redirect: "Let's think about it this way..."
+- Never say "that's wrong" - reframe positively
 
-**CURRENT CONCEPT: {next_concept}**
-When student shows they understand {next_concept}, call record_discovery("{next_concept}") immediately!
+**Student asks a question back:**
+- Answer briefly (1-2 sentences)
+- Connect answer to current concept
+- Return to guided discovery
 
-IF USER SAYS "help me", "guide me", "I don't know", "not sure":
-→ STOP asking questions completely!
-→ GIVE them the answer directly: "Let me explain - a **{next_concept}** is..."
-→ Use a simple {tc.student_world} example
-→ END with a statement, NOT a question
-→ Then call record_discovery("{next_concept}") and MOVE ON
+**Student skips ahead / mentions future concept:**
+- Acknowledge: "Yes! You're already thinking ahead!"
+- Bridge: "That's exactly where we're headed. First though..."
+- Or if ready, transition forward
 
-LESSON CONTENT:
-{chunk_content}
+**Student seems confused:**
+- Simplify with a concrete scenario
+- Use fill-in-the-blank: "So it's like a ___ for your ___"
+- Never restart from beginning
 
-RULES:
-- STAY ON THIS LESSON only
-- ONE concept at a time
-- SHORT responses (3-4 sentences)
-- When user asks for help → GIVE the answer, don't ask more questions
-- Reference their {tc.student_world} in examples
-- NEVER say "you're thinking like a builder" or similar praise that doesn't match what they said
-- CRITICAL: After explaining {next_concept} and getting acceptance, CALL record_discovery() FIRST, then teach next concept
-- NEVER ask about the same concept twice - if you already explained it, record it and move on!"""
+**Off-topic response:**
+- Acknowledge briefly, redirect warmly
+- "Interesting point! Now back to our topic..."
 
-    elif tc.current_phase == "mastery_gate":
-        discovered = ", ".join(tc.discovered_concepts)
-        # Use key_concepts from context (populated in phase_2) or extract from chunk
-        chunk = tc.chunks[tc.current_chunk_index] if tc.current_chunk_index < len(tc.chunks) else None
-        chunk_title = chunk.get('title', tc.lesson_title) if chunk else tc.lesson_title
+**Student wants to go faster:**
+- Pick up pace, less scaffolding
+- Move to next concept sooner
 
-        # Get all concepts for this chunk
-        all_concepts = tc.key_concepts if tc.key_concepts else []
-        if not all_concepts and chunk:
-            # Try to get from chunk's concepts field
-            all_concepts = chunk.get('concepts', [])
+**Student disagrees:**
+- Validate their perspective
+- Offer the lesson's view as "another way to think about it"
 
-        missing = [c for c in all_concepts if c not in tc.discovered_concepts]
-        missing_str = ", ".join(missing) if missing else "None"
+**Typos or grammatical errors (CRITICAL):**
+- ALWAYS infer the CORRECT meaning from context
+- Use surrounding words to determine intent:
+  - "online prpblems" in teaching context → "online platforms"
+  - "lectre" → "lecture"
+  - "vidoes" → "videos"
+  - "assgnment" → "assignment"
+- When a word doesn't make sense, ask yourself: "What word would make sense here?"
+- Quote the CORRECTED version in your response, showing you understood
+- Example: If they say "i use vidoes and online prpblems", respond with: "Using videos and online platforms is a great approach!"
+- NEVER misinterpret typos as different words
+- NEVER repeat their mistake - show the correct understanding
 
-        phase_context = f"""
-## MASTERY GATE (PHM Checkpoint)
+NEVER restart the lesson. ALWAYS move forward. ALWAYS stay warm and engaging.
 
-LESSON: {tc.lesson_title}
-CHUNK: {chunk_title}
-Student: {tc.student_role} in {tc.student_world}
+## FORBIDDEN
 
-CONCEPTS DISCOVERED: {discovered}
-CONCEPTS STILL MISSING: {missing_str}
+- Never be cold or robotic
+- Never reset or go backwards
+- Never re-introduce the lesson mid-conversation
+- NEVER ask "what's your profession?" or "what field are you in?" - profile is ALREADY SET
+- NEVER ask about their background or experience level - it's ALREADY KNOWN
+- Never say "let's start over" or "let me explain again"
+- Never ask yes/no questions
+- Never lecture or give long explanations
 
-## MASTERY GATE RULES - FOLLOW EXACTLY!
-
-**CASE 1: Missing concepts exist ({missing_str})**
-If student hasn't discovered all concepts yet:
-1. DON'T ask "can you name the concepts"
-2. Instead, TEACH the missing concept directly:
-   - "One more thing - **{missing[0] if missing else 'done'}** is about [explanation]"
-3. Call record_discovery("{missing[0] if missing else ''}")
-4. Then check if more missing → teach those too
-5. When ALL concepts discovered → call advance_phase()
-
-**CASE 2: All concepts discovered**
-If ALL concepts from this lesson are discovered ({', '.join(all_concepts) if all_concepts else 'check discovered list'}):
-1. Say: "Great! You've covered all the core concepts."
-2. Call advance_phase() IMMEDIATELY
-3. Don't ask for recall - just move forward
-
-**CASE 3: User says concepts in their recall**
-If user mentions any concept from the lesson in their response:
-- Listen for keywords related to each concept
-- If they mention a concept not yet discovered → record_discovery() for it
-- Concepts to listen for: {', '.join(all_concepts) if all_concepts else 'extracted from lesson'}
-
-**CRITICAL**:
-- If ALL concepts discovered → advance_phase() NOW
-- Max 2 questions in mastery_gate, then GIVE answers and advance
-- NEVER loop asking the same "quick check" question!
-
-STAY ON LESSON: Only ask about concepts from THIS lesson."""
-
-    elif tc.current_phase == "phase_3":
-        discovered = ", ".join(tc.discovered_concepts)
-        chunk = tc.chunks[tc.current_chunk_index] if tc.current_chunk_index < len(tc.chunks) else None
-        chunk_title = chunk.get('title', tc.lesson_title) if chunk else tc.lesson_title
-        chunk_content = chunk.get('content', '')[:800] if chunk else ""
-
-        phase_context = f"""
-## PHASE 3: SYNTHESIS & TRANSFER (PHM Strategy)
-
-LESSON: {tc.lesson_title}
-CHUNK: {chunk_title}
-Student: {tc.student_role} in {tc.student_world}
-CONCEPTS LEARNED: {discovered}
-
-OPENING SCENARIO: {tc.opening_scenario}
-
-YOUR TASK:
-1. RESOLVE the opening scenario: "Now let's see how this applies to your {tc.student_world} scenario..."
-2. Show how ALL concepts ({discovered}) work together
-3. Give ONE new scenario in their {tc.student_world} field: "Imagine you're building..."
-
-LESSON CONTENT:
-{chunk_content}
-
-KEEP IT FOCUSED:
-- Connect everything back to the original scenario
-- Show practical application in {tc.student_world}
-- One clear transfer example
-
-After giving transfer prompt → call advance_phase()"""
-
-    elif tc.current_phase == "phase_4":
-        discovered = ", ".join(tc.discovered_concepts) if tc.discovered_concepts else "None"
-        chunk = tc.chunks[tc.current_chunk_index] if tc.current_chunk_index < len(tc.chunks) else None
-        chunk_title = chunk.get('title', tc.lesson_title) if chunk else tc.lesson_title
-
-        phase_context = f"""
-## PHASE 4: RETRIEVAL PRACTICE (PHM Final Step)
-
-LESSON: {tc.lesson_title}
-CHUNK: {chunk_title}
-Student: {tc.student_role} in {tc.student_world}
-CONCEPTS: {discovered}
-
-RETRIEVAL SEQUENCE:
-1. COGNITIVE RESET: Brief personal question ("Quick break - how are you finding this so far?")
-2. STRUCTURED RECALL: "Without scrolling, can you explain {discovered} in your own words?"
-3. VALIDATE: Acknowledge what they got right, gently correct gaps
-4. CLOSE:
-   - Summarize what they learned about {chunk_title}
-   - Connect back to their {tc.student_world} work
-   - Preview what's next (if more chunks)
-
-STAY FOCUSED ON THIS LESSON:
-- Only test concepts from {chunk_title}
-- Reference their {tc.student_world} context
-- Keep it encouraging but honest
-
-After closing → call advance_to_next_chunk()"""
-
-    return f"""{base_instructions}
-
-{phase_context}
-
-## CRITICAL RULES - FOLLOW EXACTLY
-1. STAY ON LESSON: Only teach concepts from "{tc.lesson_title}" - NO tangents
-2. USE THEIR CONTEXT: Reference {tc.student_world} in every response
-3. SHORT RESPONSES: 3-5 sentences max
-4. ONE CONCEPT AT A TIME: Don't overwhelm
-5. CALL TOOLS: record_discovery() when they understand, advance_phase() to move forward
-6. NO META-QUESTIONS: Never ask about difficulty/preferences/learning style
-7. NO INTERNAL LEAKS: Never mention "Phase 1", "mastery_gate", etc.
-8. SOCRATIC METHOD: Ask questions, don't lecture (unless fallback triggered)
+## TONE
+{teacher_style}
 """
 
 
@@ -970,98 +377,30 @@ After closing → call advance_to_next_chunk()"""
 # =============================================================================
 
 def create_teach_agent() -> Agent:
-    """Create the Blended Teaching v7.2 agent with hybrid architecture."""
+    """Create the simplified teaching agent."""
 
-    def dynamic_instructions(ctx: RunContextWrapper[TeachContext], agent: Agent) -> str:
-        """Generate instructions dynamically based on context."""
+    def dynamic_instructions(
+        ctx: RunContextWrapper[TeachContext],
+        agent: Agent,
+    ) -> str:
         tc = ctx.context
-        return create_dynamic_instructions(tc)
+        instructions = create_dynamic_instructions(tc)
+        logger.info(
+            f"[TeachAgent] Instructions: {len(instructions)} chars, "
+            f"phase={tc.current_phase}, turns={tc.conversation_turns}"
+        )
+        return instructions
+
+    # All tools for the main agent
+    tools = [
+        quick_start,
+        record_personalization_choice,
+        set_student_profile,
+    ]
 
     return Agent(
-        name="BlendedTutor",
-        model=MODEL_STANDARD,  # Default to standard, overridden per learner type
+        name="GuidedLearningTeacher",
+        model=MODEL,
         instructions=dynamic_instructions,
-        tools=[
-            quick_start,  # Combined path + level from UI picker
-            record_personalization_choice,
-            set_student_profile,
-            record_scenario,
-            record_discovery,
-            record_confusion,
-            advance_phase,
-            advance_to_next_chunk,
-            get_teaching_status,
-            get_instant_image,
-        ],
-    )
-
-
-# =============================================================================
-# SPECIALIZED AGENT FACTORIES (for future handoff implementation)
-# =============================================================================
-
-def create_onboarding_agent() -> Agent:
-    """Create lightweight onboarding agent for Phase 0 only."""
-    return Agent(
-        name="OnboardingAgent",
-        model=MODEL_FAST,
-        instructions=get_onboarding_instructions(),
-        tools=[
-            record_personalization_choice,
-            set_student_profile,
-        ],
-    )
-
-
-def create_beginner_teacher() -> Agent:
-    """Create beginner teacher (fast model, scaffolded learning)."""
-    return Agent(
-        name="BeginnerTeacher",
-        model=MODEL_FAST,
-        instructions=BEGINNER_TEACHER_INSTRUCTIONS,
-        tools=[
-            record_scenario,
-            record_discovery,
-            record_confusion,
-            advance_phase,
-            advance_to_next_chunk,
-            get_teaching_status,
-            get_instant_image,
-        ],
-    )
-
-
-def create_intermediate_teacher() -> Agent:
-    """Create intermediate teacher (standard model, Socratic method)."""
-    return Agent(
-        name="IntermediateTeacher",
-        model=MODEL_STANDARD,
-        instructions=INTERMEDIATE_TEACHER_INSTRUCTIONS,
-        tools=[
-            record_scenario,
-            record_discovery,
-            record_confusion,
-            advance_phase,
-            advance_to_next_chunk,
-            get_teaching_status,
-            get_instant_image,
-        ],
-    )
-
-
-def create_advanced_teacher() -> Agent:
-    """Create advanced teacher (standard model, elaborative interrogation)."""
-    return Agent(
-        name="AdvancedTeacher",
-        model=MODEL_STANDARD,
-        instructions=ADVANCED_TEACHER_INSTRUCTIONS,
-        tools=[
-            record_scenario,
-            record_discovery,
-            record_confusion,
-            advance_phase,
-            advance_to_next_chunk,
-            get_teaching_status,
-            get_instant_image,
-        ],
+        tools=tools,
     )
