@@ -471,7 +471,8 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             # Guardrails removed - simplified Guided Learning agent
 
             # Save updated teaching state after response (simplified v9)
-            new_state = {
+            from .services.session_state import TeachSessionState
+            new_state: TeachSessionState = {
                 "concept_index": teach_ctx.current_chunk_index,
                 "current_phase": teach_ctx.current_phase,
                 "lesson_path": lesson_path,
@@ -494,7 +495,9 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
         except HTTPException as http_err:
             if http_err.status_code == 402:
                 # Handle metering error gracefully
-                detail = http_err.detail if isinstance(http_err.detail, dict) else {}
+                detail: dict[str, int] = (
+                    http_err.detail if isinstance(http_err.detail, dict) else {}
+                )
                 available_usd = detail.get("available_balance", 0) / 10000
                 required_usd = detail.get("required", 0) / 10000
                 error_text = (
@@ -762,7 +765,10 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             except HTTPException as http_err:
                 # Handle metering 402 specially - show user-friendly message
                 if http_err.status_code == 402:
-                    detail = http_err.detail if isinstance(http_err.detail, dict) else {}
+                    from typing import Any
+                    detail: dict[str, Any] = (
+                        http_err.detail if isinstance(http_err.detail, dict) else {}
+                    )
                     # v5 format: error_code, balance, available_balance, required, is_expired
                     error_code = detail.get("error_code", "INSUFFICIENT_BALANCE")
                     balance = detail.get("balance", 0)

@@ -25,8 +25,12 @@ SESSION_KEY_PREFIX = "teach:session:"
 SESSION_TTL_SECONDS = 60 * 60 * 24  # 24 hours
 
 
-class TeachSessionState(TypedDict):
-    """Session state for chunked teaching."""
+class TeachSessionState(TypedDict, total=False):
+    """Session state for chunked teaching.
+
+    Uses total=False to allow optional keys for backwards compatibility.
+    """
+    # Core teaching state
     concept_index: int  # Which chunk we're on (0-indexed)
     attempt_count: int  # Attempts at current question
     last_question: str | None  # The question we asked
@@ -36,10 +40,30 @@ class TeachSessionState(TypedDict):
     total_chunks: int  # Total number of chunks in lesson
     lesson_path: str  # For validation
 
+    # Phase tracking (Guided Learning v9)
+    current_phase: str  # "phase_0" | "phase_2"
+
+    # Student profile
+    student_role: str  # What they do
+    student_world: str  # Their field for analogies
+    learner_type: str  # "beginner" | "intermediate" | "advanced"
+
+    # Personalization
+    personalization_path: str  # "everyday" | "direct" | "work" | "passion"
+    ai_experience_asked: bool
+    ai_experience_answered: bool
+    profile_complete: bool  # True if profile is already set via QUICK_START
+
+    # Teaching state
+    key_concepts: list[str]  # Key concepts extracted from chunk
+    discovered_concepts: list[str]  # Concepts student has discovered
+    conversation_turns: int  # Number of conversation turns
+
 
 def create_initial_state(lesson_path: str, total_chunks: int) -> TeachSessionState:
     """Create initial session state for a new lesson."""
     return {
+        # Core teaching state
         "concept_index": 0,
         "attempt_count": 0,
         "last_question": None,
@@ -48,6 +72,21 @@ def create_initial_state(lesson_path: str, total_chunks: int) -> TeachSessionSta
         "status": "teaching",
         "total_chunks": total_chunks,
         "lesson_path": lesson_path,
+        # Phase tracking
+        "current_phase": "phase_0",
+        # Student profile
+        "student_role": "",
+        "student_world": "",
+        "learner_type": "intermediate",
+        # Personalization
+        "personalization_path": "",
+        "ai_experience_asked": False,
+        "ai_experience_answered": False,
+        "profile_complete": False,
+        # Teaching state
+        "key_concepts": [],
+        "discovered_concepts": [],
+        "conversation_turns": 0,
     }
 
 
