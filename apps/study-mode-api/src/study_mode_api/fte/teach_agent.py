@@ -1,482 +1,411 @@
-"""Agent-native teaching mode with function tools and guardrails.
+"""Guided Learning Agent v9 - Minimal Architecture.
 
-This module implements the reviewer's suggested architecture:
-- 4 function tools for agent autonomy
-- 1 output guardrail for marker enforcement
-- 1 agent creation function
+Backend is lightweight. LLM is intelligent.
 
-Per reviewer: agent has full autonomy, server has zero branching.
+Flow:
+1. Phase 0: Onboarding (get student profile)
+2. Phase 2: Teaching (natural concept progression)
+
+No complex phases. No mastery gates. Let Claude/Gemini handle it.
 """
 
 import logging
-import re
+import os
 
 from agents import (
     Agent,
-    GuardrailFunctionOutput,
     RunContextWrapper,
     function_tool,
-    output_guardrail,
 )
+from agents.extensions.models.litellm_model import LitellmModel
 
-from .answer_verification import normalize_answer
+from .specialized_teachers import (
+    get_onboarding_instructions,
+    get_teacher_instructions,
+)
 from .teach_context import TeachContext
-from .teach_instructions import teach_instructions
 
 logger = logging.getLogger(__name__)
 
-# Redis key patterns
-ANSWER_KEY = "teach:correct_answer:{thread_id}"
+# =============================================================================
+# MODEL CONFIGURATION
+# =============================================================================
+
+_gemini_model = LitellmModel(
+    model="gemini/gemini-2.5-flash",
+    api_key=os.getenv("GEMINI_API_KEY"),
+)
+
+MODEL = _gemini_model
 
 
 # =============================================================================
-# FUNCTION TOOLS (Exactly 4 per reviewer)
+# PHASE 0 TOOLS: Onboarding
 # =============================================================================
-
 
 @function_tool
-async def verify_answer(
+async def quick_start(
     ctx: RunContextWrapper[TeachContext],
-    answer: str,
+    path: str,
+    level: str,
+    world: str,
 ) -> str:
-    """
-    Deterministic check against Redis-stored correct answer.
+    """Initialize teaching session with student profile from UI picker.
 
     Args:
-        answer: Student's answer ("A", "B", or variations like "I think A")
-
-    Returns:
-        "CORRECT", "INCORRECT", or "UNKNOWN"
+        path: Personalization path ("work", "passion", "everyday", "direct")
+        level: Experience level ("beginner", "intermediate", "advanced")
+        world: Their field/interest for analogies
     """
-    from api_infra.core.redis_cache import get_redis
+    tc = ctx.context
+    thread_id = tc.thread_id
 
-    thread_id = ctx.context.thread_id
-    logger.info(f"[{thread_id}] verify_answer({answer})")
+    # GUARD: If already in phase_2, don't reset - just continue teaching
+    if tc.current_phase == "phase_2":
+        logger.info(f"[{thread_id}] quick_start called but already in phase_2 - ignoring")
+        return "Already teaching. Continue with the current concept. Do NOT restart."
 
-    redis = get_redis()
-    if not redis:
-        logger.warning(f"[{thread_id}] Redis unavailable")
-        return "UNKNOWN"
+    logger.info(f"[{thread_id}] quick_start({path}, {level}, {world})")
 
-    # Normalize answer
-    normalized = normalize_answer(answer)
-    if not normalized:
-        logger.warning(f"[{thread_id}] Could not normalize: {answer}")
-        return "UNKNOWN"
+    # Set profile
+    tc.personalization_path = path
+    tc.learner_type = level
+    tc.student_world = world
+    tc.student_role = world
 
-    # Get stored answer
-    key = ANSWER_KEY.format(thread_id=thread_id)
-    try:
-        stored = await redis.get(key)
-    except Exception as e:
-        logger.error(f"[{thread_id}] Redis error: {e}")
-        return "UNKNOWN"
+    # Skip to teaching phase
+    tc.current_phase = "phase_2"
+    tc.ai_experience_asked = True
+    tc.ai_experience_answered = True
 
-    if not stored:
-        logger.warning(f"[{thread_id}] No stored answer")
-        return "UNKNOWN"
+    # Build context intro
+    if path == "everyday":
+        context_intro = "I'll use everyday examples like cooking and driving"
+    elif path == "direct":
+        context_intro = "I'll teach directly without extra analogies"
+    else:
+        context_intro = f"I'll connect everything to your experience in {world}"
 
-    stored_str = stored.decode("utf-8") if isinstance(stored, bytes) else stored
+    return f"""Profile set! Starting lesson.
 
-    if normalized == stored_str:
-        logger.info(f"[{thread_id}] -> CORRECT")
-        return "CORRECT"
+Context: {context_intro}
+Level: {level}
 
-    logger.info(f"[{thread_id}] -> INCORRECT ({normalized} != {stored_str})")
-    return "INCORRECT"
+Now ask a guiding question about the first concept, related to {world}."""
 
 
 @function_tool
-async def advance_to_next_chunk(
+async def record_personalization_choice(
     ctx: RunContextWrapper[TeachContext],
+    path: str,
 ) -> str:
-    """
-    Move to next concept. Agent calls this after correct answer or max attempts.
-    For single-chunk lessons, agent tracks progress via conversation history.
-
-    Returns:
-        Next chunk content as string, or "LESSON_COMPLETE"
-    """
-    thread_id = ctx.context.thread_id
-    logger.info(f"[{thread_id}] advance_to_next_chunk()")
-
-    ctx.context.current_chunk_index += 1
-    ctx.context.attempt_count = 0
-
-    if ctx.context.current_chunk_index >= ctx.context.total_chunks:
-        logger.info(f"[{thread_id}] -> LESSON_COMPLETE")
-        return "LESSON_COMPLETE"
-
-    chunk = ctx.context.current_chunk
-    logger.info(f"[{thread_id}] -> NEXT_CHUNK: {chunk['title']}")
-    return f"NEXT_CHUNK: {chunk['title']}\n\n{chunk['content']}"
-
-
-@function_tool
-async def record_incorrect_attempt(
-    ctx: RunContextWrapper[TeachContext],
-) -> str:
-    """
-    Track failed attempt. Agent calls this after incorrect answer.
-
-    Returns:
-        "MAX_ATTEMPTS_REACHED" or current attempt status
-    """
-    thread_id = ctx.context.thread_id
-    logger.info(f"[{thread_id}] record_incorrect_attempt()")
-
-    ctx.context.attempt_count += 1
-
-    if ctx.context.attempt_count >= ctx.context.max_attempts:
-        logger.info(f"[{thread_id}] -> MAX_ATTEMPTS_REACHED")
-        return "MAX_ATTEMPTS_REACHED"
-
-    result = f"ATTEMPT_{ctx.context.attempt_count}_OF_{ctx.context.max_attempts}"
-    logger.info(f"[{thread_id}] -> {result}")
-    return result
-
-
-@function_tool
-async def store_correct_answer(
-    ctx: RunContextWrapper[TeachContext],
-    correct_option: str,
-) -> str:
-    """
-    Store which option is correct. Agent MUST call after asking every question.
+    """Record which personalization path the user chose.
 
     Args:
-        correct_option: "A" or "B"
-
-    Returns:
-        "STORED" or error message
+        path: "work", "passion", "everyday", or "direct"
     """
-    from api_infra.core.redis_cache import get_redis
+    tc = ctx.context
 
-    thread_id = ctx.context.thread_id
-    logger.info(f"[{thread_id}] store_correct_answer({correct_option})")
+    # GUARD: If already in phase_2, don't use onboarding tools
+    if tc.current_phase == "phase_2":
+        return "Already teaching. Continue with the current concept. Do NOT restart."
 
-    if correct_option not in ("A", "B"):
-        logger.error(f"[{thread_id}] Invalid option: {correct_option}")
-        return "ERROR: Must be A or B"
+    tc.personalization_path = path
+    logger.info(f"[{tc.thread_id}] Personalization path: {path}")
 
-    redis = get_redis()
-    if not redis:
-        logger.warning(f"[{thread_id}] Redis unavailable")
-        return "ERROR: Redis unavailable"
-
-    key = ANSWER_KEY.format(thread_id=thread_id)
-    try:
-        await redis.set(key, correct_option, ex=3600)  # 1 hour TTL
-        logger.info(f"[{thread_id}] -> STORED")
-        return "STORED"
-    except Exception as e:
-        logger.error(f"[{thread_id}] Redis error: {e}")
-        return f"ERROR: {e}"
+    if path in ("everyday", "direct"):
+        return "Path recorded. Now ask ONLY about AI experience level."
+    else:
+        return "Path recorded. Now ask about their field AND AI experience."
 
 
-# =============================================================================
-# HELPER FUNCTIONS
-# =============================================================================
-
-
-# =============================================================================
-# OUTPUT GUARDRAILS
-# =============================================================================
-
-
-def _extract_options(output: str) -> tuple[str, str] | None:
-    """Extract option A and B text from output."""
-    # Multiple patterns to handle different formats:
-    # - **A)** text
-    # - A) text
-    # - **A:** text
-
-    # Try to find option A - look for A) or A:** followed by text until B) or newlines
-    pattern_a = re.search(
-        r'(?:\*\*)?A\)?(?:\*\*)?\s*[:\)]?\s*(.+?)(?=(?:\*\*)?B\)?(?:\*\*)?|\n\n|\n\*|$)',
-        output, re.DOTALL | re.IGNORECASE
-    )
-
-    # Try to find option B - look for B) or B:** followed by text until end markers
-    pattern_b = re.search(
-        r'(?:\*\*)?B\)?(?:\*\*)?\s*[:\)]?\s*(.+?)(?=\n\n|\*Type|<!--|Type [AB]|$)',
-        output, re.DOTALL | re.IGNORECASE
-    )
-
-    if pattern_a and pattern_b:
-        opt_a = pattern_a.group(1).strip()
-        opt_b = pattern_b.group(1).strip()
-        # Clean up any remaining markdown
-        opt_a = re.sub(r'\*+', '', opt_a).strip()
-        opt_b = re.sub(r'\*+', '', opt_b).strip()
-        if opt_a and opt_b:
-            return opt_a, opt_b
-
-    return None
-
-
-def _extract_marker(output: str) -> str | None:
-    """Extract the correct answer from <!--CORRECT:X--> marker."""
-    match = re.search(r'<!--CORRECT:([AB])-->', output)
-    return match.group(1) if match else None
-
-
-def _score_option_relevance(option_text: str, lesson_content: str) -> float:
-    """
-    Score how relevant an option is to the lesson content.
-    Higher score = more relevant = likely correct answer.
-
-    Uses multiple signals:
-    1. Word overlap with lesson content (weighted by word importance)
-    2. Phrase matching (multi-word sequences)
-    3. Negative patterns (absurd claims, contradictions)
-    4. Linguistic cues (hedging language in wrong answers)
-    """
-    option_lower = option_text.lower()
-    lesson_lower = lesson_content.lower()
-    score = 0.0
-
-    # === 1. WORD OVERLAP (core signal) ===
-    # Common words to filter out (expanded list)
-    common_words = {
-        'the', 'and', 'for', 'are', 'but', 'not', 'you', 'all', 'can', 'had',
-        'her', 'was', 'one', 'our', 'out', 'has', 'have', 'been', 'will', 'more',
-        'when', 'who', 'oil', 'its', 'say', 'she', 'two', 'way', 'could', 'people',
-        'than', 'first', 'water', 'been', 'call', 'would', 'about', 'this', 'that',
-        'with', 'from', 'they', 'which', 'their', 'what', 'there', 'make', 'because',
-        'just', 'like', 'only', 'into', 'over', 'such', 'through', 'also', 'back',
-        'after', 'most', 'even', 'being', 'where', 'between', 'both', 'under',
-        'some', 'then', 'these', 'them', 'each', 'other', 'same', 'those', 'very',
-    }
-
-    # Extract meaningful words from option
-    option_words = set(word for word in re.findall(r'\b[a-z]{4,}\b', option_lower)
-                       if word not in common_words)
-
-    # Extract meaningful words from lesson
-    lesson_words = set(word for word in re.findall(r'\b[a-z]{4,}\b', lesson_lower)
-                       if word not in common_words)
-
-    # Calculate overlap - words that appear in both
-    overlap = option_words & lesson_words
-    score += len(overlap) * 1.5
-
-    # Extra boost for longer/technical words (likely key concepts)
-    for word in overlap:
-        if len(word) >= 7:  # Longer words are more significant
-            score += 1.0
-        if len(word) >= 10:  # Very long words are key concepts
-            score += 1.5
-
-    # === 2. PHRASE MATCHING (strong signal) ===
-    # Extract 2-3 word phrases from lesson
-    lesson_bigrams = re.findall(r'\b([a-z]{4,}\s+[a-z]{4,})\b', lesson_lower)
-    lesson_trigrams = re.findall(r'\b([a-z]{4,}\s+[a-z]{4,}\s+[a-z]{4,})\b', lesson_lower)
-
-    # Phrase match is strong evidence
-    for phrase in set(lesson_bigrams):
-        if phrase in option_lower:
-            score += 3.0
-
-    for phrase in set(lesson_trigrams):
-        if phrase in option_lower:
-            score += 5.0
-
-    # === 3. NEGATIVE PATTERNS (wrong answer indicators) ===
-
-    # Absurd/impossible claims
-    absurd_patterns = [
-        r'\b(?:banned|illegal|prohibited|forbidden)\b',
-        r'\bregulations?\s+(?:will|would|must)\b',
-        r'\bgovernment\s+(?:will|would|must)\b',
-        r'\b(?:always|never|impossible|guaranteed)\b',  # Extreme language
-        r'\breplac(?:e|ing|ed)\s+(?:all|every)\s+human',  # Extreme AI claims
-    ]
-
-    for pattern in absurd_patterns:
-        if re.search(pattern, option_lower):
-            score -= 15.0
-
-    # Contradiction patterns - "not X" where X is key concept
-    # Extract key verbs/nouns from lesson for dynamic negation detection
-    lesson_key_words = [w for w in lesson_words if len(w) >= 5][:20]  # Top key words
-
-    for key_word in lesson_key_words:
-        # Check if option negates a key concept
-        negation_pattern = (
-            rf"\b(?:not|don't|doesn't|won't|cannot|can't)"
-            rf"\s+(?:\w+\s+)?{key_word}"
-        )
-        if re.search(negation_pattern, option_lower):
-            score -= 10.0
-
-    # Generic negation of action verbs
-    generic_negations = [
-        r'\bnot\s+(?:build|creat|develop|implement|use|learn|apply)\w*',
-        r'\b(?:without|instead\s+of|rather\s+than)\s+(?:build|creat|develop|implement|use|learn)\w*',
-    ]
-
-    for pattern in generic_negations:
-        if re.search(pattern, option_lower):
-            score -= 8.0
-
-    # === 4. LINGUISTIC CUES ===
-
-    # Hedging language often appears in wrong answers
-    hedging = [
-        r'\bmight\s+sometimes\b',
-        r'\bcould\s+potentially\b',
-        r'\bpossibly\s+(?:could|might|may)\b',
-        r'\bsometimes\s+(?:can|may|might)\b',
-    ]
-
-    for pattern in hedging:
-        if re.search(pattern, option_lower):
-            score -= 3.0
-
-    # === 5. OUT-OF-SCOPE DETECTION ===
-    # Words in option but NOT in lesson at all (suspicious)
-    out_of_scope = option_words - lesson_words
-    # Penalize slightly if option has many words not in lesson
-    if len(option_words) > 0:
-        out_of_scope_ratio = len(out_of_scope) / len(option_words)
-        if out_of_scope_ratio > 0.7:  # More than 70% of words not in lesson
-            score -= 5.0
-
-    return score
-
-
-@output_guardrail
-async def ensure_answer_marker(
+@function_tool
+async def set_student_profile(
     ctx: RunContextWrapper[TeachContext],
-    agent: Agent,
-    output: str,
-) -> GuardrailFunctionOutput:
+    role: str,
+    world: str,
+    learner_type: str,
+) -> str:
+    """Set the student profile and transition to teaching.
+
+    Args:
+        role: What the student does
+        world: Their field for analogies
+        learner_type: "beginner", "intermediate", or "advanced"
     """
-    Reject output that has A/B question but missing <!--CORRECT:X--> marker.
+    tc = ctx.context
 
-    Simple check per reviewer's specification.
+    # GUARD: If already in phase_2, don't reset
+    if tc.current_phase == "phase_2":
+        return "Already teaching. Continue with the current concept. Do NOT restart."
+
+    tc.student_role = role
+    tc.student_world = world
+    tc.learner_type = learner_type
+    tc.current_phase = "phase_2"
+
+    logger.info(f"[{tc.thread_id}] Profile set: {role} in {world}, {learner_type}")
+
+    return f"""Profile complete! Now begin teaching.
+
+Student: {role} in {world}
+Level: {learner_type}
+
+Start with a guiding question about the first concept."""
+
+
+# =============================================================================
+# CONCEPT EXTRACTION (Pre-process, not in prompt)
+# =============================================================================
+
+def extract_key_concepts(chunk_content: str, chunk_title: str) -> list[str]:
+    """Extract 3-5 key concepts from chunk content.
+
+    Simple extraction based on common patterns.
     """
-    has_question = "A)" in output and "B)" in output
-    has_marker = "<!--CORRECT:" in output
+    # Common Agent Factory concepts
+    common_concepts = [
+        "Intent", "Skills", "MCP", "Spec", "Agent", "Tools",
+        "Orchestration", "Outcomes", "Natural Language",
+    ]
 
-    if has_question and not has_marker:
-        logger.warning(f"[{ctx.context.thread_id}] Guardrail triggered: missing marker")
-        return GuardrailFunctionOutput(output_info=None, tripwire_triggered=True)
+    # Check which concepts appear in the content
+    content_lower = chunk_content.lower()
+    found = []
 
-    return GuardrailFunctionOutput(output_info=None, tripwire_triggered=False)
+    for concept in common_concepts:
+        if concept.lower() in content_lower:
+            found.append(concept)
+
+    # Limit to 5 concepts
+    if found:
+        return found[:5]
+
+    # Fallback: use chunk title words
+    return [chunk_title.split()[0]] if chunk_title else ["the topic"]
 
 
-@output_guardrail
-async def validate_correct_answer(
-    ctx: RunContextWrapper[TeachContext],
-    agent: Agent,
-    output: str,
-) -> GuardrailFunctionOutput:
+# =============================================================================
+# DYNAMIC INSTRUCTIONS (Minimal - ~50 lines)
+# =============================================================================
+
+def create_dynamic_instructions(tc: TeachContext) -> str:
+    """Create minimal, focused instructions for the LLM.
+
+    Under 60 lines. No giant rule blocks. Let the LLM be intelligent.
     """
-    Validate that the marked correct answer actually matches the lesson content.
+    # Phase 0: Onboarding
+    if tc.current_phase == "phase_0":
+        return get_onboarding_instructions()
 
-    This catches cases where the LLM puts correct content in option A but marks B as correct.
-    Instead of rejecting (which causes errors in streaming), we FIX the stored answer.
-    """
-    from api_infra.core.redis_cache import get_redis
+    # Phase 2: Teaching
+    # Get level-specific style
+    teacher_style = get_teacher_instructions(tc.learner_type)
 
-    # Only validate if this is a question (has options)
-    if "A)" not in output or "B)" not in output:
-        return GuardrailFunctionOutput(output_info=None, tripwire_triggered=False)
+    # Get current concept based on turns
+    current_concept = tc.current_concept
+    concepts_list = ", ".join(tc.key_concepts[:5]) if tc.key_concepts else "the lesson"
 
-    # Extract options and marker
-    options = _extract_options(output)
-    marker = _extract_marker(output)
+    # Get lesson content for accurate definitions
+    chunk = tc.current_chunk
+    chunk_content = chunk.get("content", "")[:2000] if chunk else ""  # First 2000 chars
 
-    if not options or not marker:
-        # Can't validate, let other guardrails handle
-        return GuardrailFunctionOutput(output_info=None, tripwire_triggered=False)
+    return f"""You are a WARM, engaging tutor running a natural Guided Learning session.
 
-    option_a, option_b = options
+## LESSON INFO
+Title: {tc.lesson_title}
+Student: {tc.student_role} in {tc.student_world}
+Experience: {tc.learner_type}
+Concepts: {concepts_list}
+Current focus: **{current_concept}** (Turn {tc.conversation_turns})
 
-    # Get lesson content from context
-    chunk = ctx.context.current_chunk
-    if not chunk:
-        return GuardrailFunctionOutput(output_info=None, tripwire_triggered=False)
+## LESSON CONTENT (MANDATORY - Use for ALL definitions and facts)
+{chunk_content}
 
-    lesson_content = chunk.get('content', '')
+**CRITICAL:** You MUST use the definitions from the LESSON CONTENT above.
+- MCP = Model Context Protocol (connects to external sources/platforms)
+- Never make up or guess definitions
+- If unsure, refer back to the lesson content above
+- Quote from lesson content when explaining concepts
 
-    # Score each option's relevance to lesson content
-    score_a = _score_option_relevance(option_a, lesson_content)
-    score_b = _score_option_relevance(option_b, lesson_content)
+## TEACHING APPROACH: SCENARIO-BASED
 
-    logger.info(
-        f"[{ctx.context.thread_id}] Answer validation: "
-        f"A={score_a:.1f}, B={score_b:.1f}, marker={marker}"
-    )
+Create vivid scenarios from **{tc.student_world}**:
+- "Imagine you're in your classroom and a student asks..."
+- "Picture this: You're planning tomorrow's lesson and..."
+- "Think about when you're grading papers and..."
 
-    # CONSERVATIVE OVERRIDE: Only override when one option is CLEARLY absurd
-    # This prevents false positives where both options are reasonable
-    # Condition: One option must be very negative (< -10) AND the other must be positive
-    expected_correct = None
+Make abstract concepts feel REAL through their daily experience.
 
-    if score_a < -10 and score_b > 0:
-        # A is absurd, B should be correct
-        expected_correct = "B"
-    elif score_b < -10 and score_a > 0:
-        # B is absurd, A should be correct
-        expected_correct = "A"
+## CORE RULES (Every response)
 
-    if expected_correct is None:
-        # No clear absurd answer detected - trust the model
-        logger.info(
-            f"[{ctx.context.thread_id}] No absurd answer detected "
-            f"(A={score_a:.1f}, B={score_b:.1f}), trusting model"
-        )
-        return GuardrailFunctionOutput(output_info=None, tripwire_triggered=False)
+**FIRST turn on a new concept (Turn 0):**
+- Do NOT mention the concept name (don't say "Intent", "Skills", etc.)
+- Do NOT explain what the concept is
+- ONLY ask a scenario-based guiding question from their world
+- Let THEM discover the concept through their answer
 
-    # Check if marker matches expected
-    if marker != expected_correct:
-        logger.warning(
-            f"[{ctx.context.thread_id}] ANSWER MISMATCH DETECTED! "
-            f"Marker says {marker} but content analysis says {expected_correct}. "
-            f"A({score_a:.1f}): '{option_a[:50]}...' | "
-            f"B({score_b:.1f}): '{option_b[:50]}...' "
-            f"FIXING: Overwriting Redis with correct answer {expected_correct}"
-        )
+Example FIRST response:
+"Picture this: You're planning tomorrow's lesson. What's the very first thing
+you need to decide before choosing activities or materials?"
+(Notice: NO mention of "Intent" - let them discover it!)
 
-        # FIX the stored answer instead of rejecting
-        redis = get_redis()
-        if redis:
-            key = ANSWER_KEY.format(thread_id=ctx.context.thread_id)
-            try:
-                await redis.set(key, expected_correct, ex=3600)
-                logger.info(f"[{ctx.context.thread_id}] Answer CORRECTED to {expected_correct}")
-            except Exception as e:
-                logger.error(f"[{ctx.context.thread_id}] Failed to correct answer: {e}")
+**Subsequent turns (Turn 1+):**
+1. Quote their answer: "You said '[their words]'"
+2. Validate warmly: "Exactly! That's the key!"
+3. NOW reveal the concept name: "In AI terms, that's called Intent"
+4. Ask the NEXT guiding question
+5. STOP (max 4-5 sentences)
 
-        # Don't trigger tripwire - we fixed it
-        return GuardrailFunctionOutput(output_info=None, tripwire_triggered=False)
+**CRITICAL: CONCEPT NAME REVEAL TIMING**
+- Turn 0: Ask question WITHOUT naming concept
+- Turn 1: After they answer, THEN reveal "That's called [Concept]!"
+- BAD: "We're starting with Intent. What do you think Intent means?"
+- GOOD: "What do you decide first when planning a lesson?" (wait) →
+  "Exactly! That's what we call Intent!"
 
-    logger.info(f"[{ctx.context.thread_id}] Answer validation PASSED: {marker} is correct")
-    return GuardrailFunctionOutput(output_info=None, tripwire_triggered=False)
+## WARMTH REQUIREMENTS
+
+- Use contractions (you're, that's, let's, we'll)
+- Celebrate their insights genuinely
+- Be encouraging, not robotic
+- Sound like a supportive friend, not a textbook
+
+## DISCOVERY HANDLING (CRITICAL - MUST FOLLOW)
+
+If student mentions ANY concept keyword (Intent, Skills, MCP, Spec, Agent, etc.):
+1. IMMEDIATELY validate: "Yes! MCP - that's exactly it!"
+2. Explain what it means: "MCP stands for Model Context Protocol - it connects to external sources"
+3. Celebrate their discovery: "You just nailed it!"
+4. Move to the NEXT concept
+
+Example:
+- Student says: "mcp"
+- GOOD: "Yes! MCP - Model Context Protocol! That's the universal connector
+  that lets agents talk to external tools. Great catch!"
+- BAD: (ignores "mcp" and asks another question)
+
+NEVER ignore when student says a concept keyword. ALWAYS validate immediately.
+
+## TRANSITION STYLE
+
+Transitions must feel like momentum, not correction.
+
+GOOD: "Yes — that leads directly into...", "Exactly! And that connects to...",
+  "You've just stepped into the next layer..."
+BAD: "But first...", "Let's clarify something else...", "Before that..."
+
+## ANALOGY STYLE
+
+Connect ALL examples to **{tc.student_world}** through scenarios.
+NEVER use unrelated everyday examples (cooking, driving) unless their world IS "everyday".
+
+## EDGE CASE HANDLING (Stay engaging in ALL situations)
+
+**"I don't know" / "Guide me" / "Help":**
+- Give a HINT with a scenario from their world
+- Break concept into smaller piece
+- "No worries! Think about when you [scenario]..."
+- NEVER restart. Stay on current concept.
+
+**Short responses ("ok", "yes", "hmm", "sure"):**
+- Treat as acknowledgment, keep momentum
+- "Great! Building on that..." and continue teaching
+- Don't ask "do you understand?" - assume they do
+
+**Wrong answer:**
+- Find the kernel of truth: "I see where you're going with that..."
+- Gently redirect: "Let's think about it this way..."
+- Never say "that's wrong" - reframe positively
+
+**Student asks a question back:**
+- Answer briefly (1-2 sentences)
+- Connect answer to current concept
+- Return to guided discovery
+
+**Student skips ahead / mentions future concept:**
+- Acknowledge: "Yes! You're already thinking ahead!"
+- Bridge: "That's exactly where we're headed. First though..."
+- Or if ready, transition forward
+
+**Student seems confused:**
+- Simplify with a concrete scenario
+- Use fill-in-the-blank: "So it's like a ___ for your ___"
+- Never restart from beginning
+
+**Off-topic response:**
+- Acknowledge briefly, redirect warmly
+- "Interesting point! Now back to our topic..."
+
+**Student wants to go faster:**
+- Pick up pace, less scaffolding
+- Move to next concept sooner
+
+**Student disagrees:**
+- Validate their perspective
+- Offer the lesson's view as "another way to think about it"
+
+**Typos or grammatical errors (CRITICAL):**
+- ALWAYS infer the CORRECT meaning from context
+- Use surrounding words to determine intent:
+  - "online prpblems" in teaching context → "online platforms"
+  - "lectre" → "lecture"
+  - "vidoes" → "videos"
+  - "assgnment" → "assignment"
+- When a word doesn't make sense, ask yourself: "What word would make sense here?"
+- Quote the CORRECTED version in your response, showing you understood
+- Example: "i use vidoes and online prpblems" →
+  "Using videos and online platforms is a great approach!"
+- NEVER misinterpret typos as different words
+- NEVER repeat their mistake - show the correct understanding
+
+NEVER restart the lesson. ALWAYS move forward. ALWAYS stay warm and engaging.
+
+## FORBIDDEN
+
+- Never be cold or robotic
+- Never reset or go backwards
+- Never re-introduce the lesson mid-conversation
+- NEVER ask "what's your profession?" or "what field are you in?" - profile is ALREADY SET
+- NEVER ask about their background or experience level - it's ALREADY KNOWN
+- Never say "let's start over" or "let me explain again"
+- Never ask yes/no questions
+- Never lecture or give long explanations
+
+## TONE
+{teacher_style}
+"""
 
 
 # =============================================================================
 # AGENT CREATION
 # =============================================================================
 
-
 def create_teach_agent() -> Agent:
-    """Create the Socratic teaching agent with tools and guardrails."""
+    """Create the simplified teaching agent."""
+
+    def dynamic_instructions(
+        ctx: RunContextWrapper[TeachContext],
+        agent: Agent,
+    ) -> str:
+        tc = ctx.context
+        instructions = create_dynamic_instructions(tc)
+        logger.info(
+            f"[TeachAgent] Instructions: {len(instructions)} chars, "
+            f"phase={tc.current_phase}, turns={tc.conversation_turns}"
+        )
+        return instructions
+
+    # All tools for the main agent
+    tools = [
+        quick_start,
+        record_personalization_choice,
+        set_student_profile,
+    ]
+
     return Agent(
-        name="SocraticTutor",
-        model="gpt-5-mini",
-        instructions=teach_instructions,  # Dynamic callable
-        tools=[
-            verify_answer,
-            advance_to_next_chunk,
-            record_incorrect_attempt,
-            store_correct_answer,
-        ],
-        output_guardrails=[
-            ensure_answer_marker,      # Check marker exists
-            validate_correct_answer,   # Validate marker matches content
-        ],
+        name="GuidedLearningTeacher",
+        model=MODEL,
+        instructions=dynamic_instructions,
+        tools=tools,
     )

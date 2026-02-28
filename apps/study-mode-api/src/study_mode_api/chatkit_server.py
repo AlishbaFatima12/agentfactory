@@ -2,14 +2,27 @@
 
 from __future__ import annotations
 
-import logging
-from collections.abc import AsyncIterator
-from datetime import datetime
+# Load environment variables first, before any imports that need them
+from pathlib import Path
 
-from agents import Runner, RunResultStreaming
-from chatkit.agents import AgentContext, simple_to_agent_input, stream_agent_response
-from chatkit.server import ChatKitServer
-from chatkit.types import (
+from dotenv import load_dotenv
+
+# Load from study-mode-api/.env (parent of src/)
+_env_path = Path(__file__).parent.parent.parent / ".env"
+load_dotenv(_env_path)
+
+import logging  # noqa: E402
+from collections.abc import AsyncIterator  # noqa: E402
+from datetime import datetime  # noqa: E402
+
+from agents import Runner, RunResultStreaming  # noqa: E402
+from chatkit.agents import (  # noqa: E402
+    AgentContext,
+    simple_to_agent_input,
+    stream_agent_response,
+)
+from chatkit.server import ChatKitServer  # noqa: E402
+from chatkit.types import (  # noqa: E402
     AssistantMessageContent,
     AssistantMessageContentPartTextDelta,
     AssistantMessageItem,
@@ -21,18 +34,31 @@ from chatkit.types import (
     UserMessageItem,
     UserMessageTextContent,
 )
-from fastapi import HTTPException
+from fastapi import HTTPException  # noqa: E402
 
-from .chatkit_store import CachedPostgresStore, PostgresStore, RequestContext
-from .fte.answer_verification import (
-    extract_and_store_correct_answer,
-    strip_answer_marker,
+from .chatkit_store import (  # noqa: E402
+    CachedPostgresStore,
+    PostgresStore,
+    RequestContext,
 )
-from .metering import create_metering_hooks
-from .services.content_loader import load_lesson_content
-from .services.lesson_chunker import get_lesson_chunks
+from .fte.answer_verification import detect_special_request  # noqa: E402
+from .metering import create_metering_hooks  # noqa: E402
+from .services.content_loader import load_lesson_content  # noqa: E402
+from .services.lesson_chunker import get_lesson_chunks  # noqa: E402
+
+# Constants for legacy code (kept for backwards compatibility, not used in agent-native mode)
+MAX_ATTEMPTS = 3
+
+# Enable chunked mode for faster responses
+USE_CHUNKED_MODE = True
+
+# Enable agent-native mode (v3) - reviewer's architecture
+# When True: uses dynamic instructions + function tools + zero branching
+# When False: uses v2 chunked mode with server-side state machine
+USE_AGENT_NATIVE_TEACH = True
 
 logger = logging.getLogger(__name__)
+logger.info(f"[ChatKit] USE_AGENT_NATIVE_TEACH = {USE_AGENT_NATIVE_TEACH}")
 
 # Fake ID constant from agents SDK (used by OpenAIChatCompletionsModel)
 # When using Chat Completions API, the SDK returns this placeholder ID
@@ -115,29 +141,17 @@ async def _stream_with_real_ids(
     verification_result: str | None = None,
 ) -> AsyncIterator[ThreadStreamEvent]:
     """
-    Wrapper around stream_agent_response that:
+    Simplified wrapper around stream_agent_response that:
     1. Replaces fake IDs with real ones
-    2. Strips the <!--CORRECT:X--> marker from responses (including streaming deltas)
-    3. Extracts and stores the correct answer for verification
-    4. POST-PROCESSES feedback to ensure correct/incorrect matches server verification
+    2. Logs full response for debugging
 
-    When using OpenAIChatCompletionsModel (for non-OpenAI providers like DeepSeek),
-    the SDK returns "__fake_id__" for all message IDs. This causes duplicate key
-    errors when saving to the database.
-
-    This wrapper detects fake IDs and replaces them with store-generated IDs.
+    Removed complex marker buffering that may have caused truncation.
     """
     # Track ID mapping for this stream: fake_id -> real_id
     id_map: dict[str, str] = {}
-    # Collect full response text for answer extraction
+    # Collect full response text for logging
     full_response_text = ""
-    # Buffer for potential partial marker at end of delta
-    # The marker is <!--CORRECT:X--> (max 17 chars)
-    marker_buffer = ""
-    # Track if we've processed the first text chunk (for feedback correction)
-    first_chunk_processed = False
-    # Buffer to collect enough text to check feedback
-    feedback_buffer = ""
+    chunk_count = 0
 
     async for event in stream_agent_response(context, result):
         # Handle ThreadItemAddedEvent - replace fake ID
@@ -161,177 +175,21 @@ async def _stream_with_real_ids(
                     )
                     event = ThreadItemAddedEvent(item=item)
 
-        # Handle ThreadItemUpdatedEvent - strip markers from streaming deltas
+        # Handle ThreadItemUpdatedEvent - pass through directly (no buffering)
         elif isinstance(event, ThreadItemUpdatedEvent):
             update = event.update
             if isinstance(update, AssistantMessageContentPartTextDelta):
-                # Combine buffer with new delta
-                combined = marker_buffer + update.delta
+                chunk_count += 1
                 full_response_text += update.delta
+                # Log every 10 chunks to track progress
+                if chunk_count % 10 == 0:
+                    total_chars = len(full_response_text)
+                    logger.debug(f"[ChatKit] Chunk {chunk_count}, total: {total_chars}")
 
-                # Strip any complete markers
-                cleaned = strip_answer_marker(combined)
-
-                # Check if text ends with potential partial marker
-                # The marker starts with '<' and is max 17 chars
-                partial_start = -1
-                for i in range(min(17, len(cleaned)), 0, -1):
-                    suffix = cleaned[-i:]
-                    if suffix.startswith("<") and "<!--CORRECT:".startswith(
-                        suffix[: len("<!--CORRECT:")]
-                    ):
-                        partial_start = len(cleaned) - i
-                        break
-
-                if partial_start >= 0:
-                    # Buffer potential partial marker, emit rest
-                    marker_buffer = cleaned[partial_start:]
-                    emit_text = cleaned[:partial_start]
-                else:
-                    # No partial marker, emit all
-                    marker_buffer = ""
-                    emit_text = cleaned
-
-                # POST-PROCESS FEEDBACK: Ensure correct/incorrect matches verification
-                # Buffer first ~50 chars to check if feedback is correct
-                if verification_result and not first_chunk_processed:
-                    feedback_buffer += emit_text
-                    if len(feedback_buffer) >= 50:
-                        first_chunk_processed = True
-                        # Check if LLM gave wrong feedback
-                        lower_buf = feedback_buffer.lower()
-                        if verification_result == "correct":
-                            # Should say "Correct" but might say "Not quite"
-                            if "not quite" in lower_buf or lower_buf.startswith("not"):
-                                # WRONG feedback - prepend correct one
-                                logger.warning(
-                                    "[ChatKit] LLM said 'Not quite' for CORRECT answer - fixing"
-                                )
-                                emit_text = "Correct! " + feedback_buffer.lstrip()
-                                # Remove "Not quite." if present
-                                emit_text = emit_text.replace("Not quite.", "")
-                                emit_text = emit_text.replace("Not quite", "")
-                                emit_text = emit_text.strip()
-                                if not emit_text.startswith("Correct"):
-                                    emit_text = "Correct! " + emit_text
-                            else:
-                                emit_text = feedback_buffer  # Use buffered text
-                        elif verification_result == "incorrect":
-                            # Should say "Not quite" but might say "Correct"
-                            if "correct" in lower_buf[:20] and "not" not in lower_buf[:30]:
-                                # WRONG feedback - prepend correct one
-                                logger.warning(
-                                    "[ChatKit] LLM said 'Correct' for INCORRECT answer - fixing"
-                                )
-                                # Remove "Correct" and prepend "Not quite."
-                                emit_text = feedback_buffer
-                                words_to_remove = [
-                                    "Correct!", "Correct.", "Correct",
-                                    "That's right!", "That's right."
-                                ]
-                                for word in words_to_remove:
-                                    emit_text = emit_text.replace(word, "")
-                                emit_text = "Not quite. " + emit_text.strip()
-                            else:
-                                emit_text = feedback_buffer  # Use buffered text
-                    else:
-                        # Not enough buffered yet, skip this event
-                        continue
-
-                # Only yield if there's text to emit
-                if emit_text:
-                    event = ThreadItemUpdatedEvent(
-                        item_id=event.item_id,
-                        update=AssistantMessageContentPartTextDelta(
-                            content_index=update.content_index,
-                            delta=emit_text,
-                        ),
-                    )
-                else:
-                    # Skip this event - text is buffered
-                    continue
-
-        # Handle ThreadItemDoneEvent - use mapped ID and strip answer marker
+        # Handle ThreadItemDoneEvent - use mapped ID
         elif isinstance(event, ThreadItemDoneEvent):
-            # Flush any remaining feedback buffer that didn't reach 50 chars
-            # (e.g., short responses like "Correct! Well done.")
-            if feedback_buffer and not first_chunk_processed:
-                first_chunk_processed = True
-                emit_text = feedback_buffer
-                # Apply same feedback correction logic
-                lower_buf = feedback_buffer.lower()
-                if verification_result == "correct":
-                    if "not quite" in lower_buf or lower_buf.startswith("not"):
-                        logger.warning(
-                            "[ChatKit] LLM said 'Not quite' for CORRECT answer - fixing (flush)"
-                        )
-                        emit_text = "Correct! " + feedback_buffer.lstrip()
-                        emit_text = emit_text.replace("Not quite.", "")
-                        emit_text = emit_text.replace("Not quite", "")
-                        emit_text = emit_text.strip()
-                        if not emit_text.startswith("Correct"):
-                            emit_text = "Correct! " + emit_text
-                elif verification_result == "incorrect":
-                    if "correct" in lower_buf[:20] and "not" not in lower_buf[:30]:
-                        logger.warning(
-                            "[ChatKit] LLM said 'Correct' for INCORRECT answer - fixing (flush)"
-                        )
-                        for w in ["Correct!", "Correct.", "Correct",
-                                  "That's right!", "That's right."]:
-                            emit_text = emit_text.replace(w, "")
-                        emit_text = "Not quite. " + emit_text.strip()
-                feedback_buffer = ""
-                if emit_text:
-                    yield ThreadItemUpdatedEvent(
-                        item_id=event.item.id if hasattr(event.item, "id") else "",
-                        update=AssistantMessageContentPartTextDelta(
-                            content_index=0,
-                            delta=emit_text,
-                        ),
-                    )
-
             item = event.item
             if isinstance(item, AssistantMessageItem):
-                # Collect text and strip only the hidden marker from content
-                # Keep the A/B options as plain text (styled via CSS)
-                new_content = []
-                for content_item in item.content:
-                    if hasattr(content_item, "text"):
-                        original_text = content_item.text
-                        # Only strip the hidden <!--CORRECT:X--> marker
-                        cleaned_text = strip_answer_marker(original_text)
-
-                        # POST-PROCESS: Fix wrong feedback in final text too.
-                        # NOTE: This correction also runs during streaming (above).
-                        # Both operate on independent copies -- streaming corrects
-                        # live deltas for real-time display; this corrects the SDK's
-                        # accumulated item.content for the persisted message.
-                        # They do NOT compound.
-                        if verification_result:
-                            lower_text = cleaned_text.lower()[:60]
-                            if verification_result == "correct":
-                                if "not quite" in lower_text:
-                                    logger.info("[ChatKit] Fixing 'Not quite' in final text")
-                                    cleaned_text = cleaned_text.replace("Not quite.", "")
-                                    cleaned_text = cleaned_text.replace("Not quite", "")
-                                    cleaned_text = "Correct! " + cleaned_text.strip()
-                            elif verification_result == "incorrect":
-                                if "correct" in lower_text[:20] and "not" not in lower_text[:30]:
-                                    logger.info("[ChatKit] Fixing 'Correct' in final text")
-                                    for w in ["Correct!", "Correct.", "Correct",
-                                              "That's right!", "That's right."]:
-                                        cleaned_text = cleaned_text.replace(w, "")
-                                    cleaned_text = "Not quite. " + cleaned_text.strip()
-
-                        new_content.append(
-                            AssistantMessageContent(
-                                text=cleaned_text,
-                                annotations=getattr(content_item, "annotations", []),
-                            )
-                        )
-                    else:
-                        new_content.append(content_item)
-
                 # Get the real ID
                 real_id = item.id
                 if item.id == FAKE_RESPONSES_ID:
@@ -340,17 +198,22 @@ async def _stream_with_real_ids(
                     )
                     logger.debug(f"[ChatKit] Using real ID for done event: {real_id}")
 
-                # Create new item with cleaned content
+                # Create new item with real ID (no other modifications)
                 item = AssistantMessageItem(
                     id=real_id,
                     thread_id=item.thread_id,
                     created_at=item.created_at,
-                    content=new_content,
+                    content=item.content,
                 )
                 event = ThreadItemDoneEvent(item=item)
 
-                # Extract and store correct answer for verification
-                await extract_and_store_correct_answer(thread_id, full_response_text)
+            # Log final response stats
+            resp_len = len(full_response_text)
+            end_snippet = full_response_text[-50:] if resp_len > 50 else full_response_text
+            logger.info(
+                f"[ChatKit] Stream complete: {chunk_count} chunks, "
+                f"{resp_len} chars, ends with: '...{end_snippet}'"
+            )
 
         yield event
 
@@ -368,58 +231,6 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
         """Initialize the ChatKit server with PostgreSQL store."""
         super().__init__(store)
         logger.info("[ChatKit] StudyModeChatKitServer initialized")
-
-    async def _stream_with_marker_stripping(
-        self,
-        agent_context: AgentContext,
-        result: RunResultStreaming,
-    ) -> AsyncIterator[ThreadStreamEvent]:
-        """Stream agent response, stripping <!--CORRECT:X--> markers from output."""
-        async for event in stream_agent_response(agent_context, result):
-            # Strip marker from streaming deltas
-            if isinstance(event, ThreadItemUpdatedEvent):
-                update = event.update
-                if isinstance(update, AssistantMessageContentPartTextDelta):
-                    cleaned = strip_answer_marker(update.delta)
-                    if cleaned:
-                        event = ThreadItemUpdatedEvent(
-                            item_id=event.item_id,
-                            update=AssistantMessageContentPartTextDelta(
-                                content_index=update.content_index,
-                                delta=cleaned,
-                            ),
-                        )
-                    else:
-                        continue  # Skip empty deltas
-
-            # Strip marker from final content
-            elif isinstance(event, ThreadItemDoneEvent):
-                item = event.item
-                if isinstance(item, AssistantMessageItem):
-                    new_content = []
-                    for content_item in item.content:
-                        if hasattr(content_item, "text"):
-                            cleaned_text = strip_answer_marker(content_item.text)
-                            new_content.append(
-                                AssistantMessageContent(
-                                    text=cleaned_text,
-                                    annotations=getattr(
-                                        content_item, "annotations", []
-                                    ),
-                                )
-                            )
-                        else:
-                            new_content.append(content_item)
-
-                    item = AssistantMessageItem(
-                        id=item.id,
-                        thread_id=item.thread_id,
-                        created_at=item.created_at,
-                        content=new_content,
-                    )
-                    event = ThreadItemDoneEvent(item=item)
-
-            yield event
 
     async def handle_teach_mode_v3(
         self,
@@ -449,7 +260,7 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
         from .fte.teach_context import TeachContext
         from .services.session_state import get_session_state, save_session_state
 
-        logger.debug(f"[ChatKit] Teach mode for thread {thread.id}")
+        logger.info(f"[ChatKit] AGENT-NATIVE MODE (v3) for thread {thread.id}")
 
         # 1. Load content and state
         content_data = await load_lesson_content(lesson_path)
@@ -459,14 +270,110 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
         chunks = await get_lesson_chunks(lesson_path, content, title)
         state = await get_session_state(thread.id) or {}
 
-        logger.debug(
+        logger.info(
             f"[ChatKit] v3: title='{title}', chunks={len(chunks)}, "
             f"state={state}"
         )
 
-        # 2. Build context — that's ALL the server does
-        # Note: chunks from get_lesson_chunks are already dicts OR objects
+        # 1.5a QUICK_START: Parse personalization from UI picker
+        # Format: QUICK_START:path:level:profession (profession optional)
+        if user_text.startswith("QUICK_START:"):
+            parts = user_text.split(":")
+            if len(parts) >= 3:
+                qs_path = parts[1]  # work, passion, everyday, direct
+                qs_level = parts[2]  # beginner, intermediate, advanced
+                # Get profession from parts[3], or use sensible defaults
+                qs_world = parts[3] if len(parts) > 3 and parts[3].strip() else (
+                    "everyday life" if qs_path == "everyday" else
+                    "technical concepts" if qs_path == "direct" else
+                    "professional work"  # Better default for work/passion paths
+                )
+
+                # Pre-populate state - skip onboarding entirely
+                state["current_phase"] = "phase_2"
+                state["personalization_path"] = qs_path
+                state["learner_type"] = qs_level
+                state["student_world"] = qs_world
+                state["student_role"] = qs_world
+                state["ai_experience_asked"] = True
+                state["ai_experience_answered"] = True
+                # Mark that profile is already complete - DO NOT ask again
+                state["profile_complete"] = True
+
+                logger.info(
+                    f"[ChatKit] v3: QUICK_START: path={qs_path}, "
+                    f"level={qs_level}, world={qs_world}"
+                )
+
+                # Replace with start prompt - profile already complete
+                user_text = (
+                    "Start teaching directly. My profile is already set. "
+                    "Do not ask about my profession or field."
+                )
+
+        # 1.5b Blended Teaching v7.1 - Image Strategy
+        # - Phase 0: No image (warm greeting, ask about role/expertise)
+        # - Phase 1: DALL-E personalized to their world (after we know who they are)
+        # - Phase 2+: Unsplash concept images via tool calls
+        open_image_url = ""
+        current_phase = state.get("current_phase", "phase_0")
+
+        # Generate DALL-E image only in Phase 1 (after we learned their world in Phase 0)
+        if current_phase == "phase_1":
+            try:
+                import os
+
+                from openai import AsyncOpenAI
+
+                openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+                # Personalize based on student profile from Phase 0
+                student_world = state.get("student_world", "technology")
+                student_role = state.get("student_role", "professional")
+
+                dalle_prompt = (
+                    f"Educational illustration for '{title}'. "
+                    f"Scene in {student_world} industry, relevant to a {student_role}. "
+                    f"Modern, clean, professional style showing AI/automation. "
+                    f"Blue and purple color scheme. No text on image."
+                )
+
+                logger.info(
+                    f"[ChatKit] v3: Phase 1 DALL-E: {title} for {student_role} in {student_world}"
+                )
+
+                response = await openai_client.images.generate(
+                    model="dall-e-3",
+                    prompt=dalle_prompt,
+                    size="1792x1024",
+                    quality="standard",
+                    n=1,
+                )
+
+                open_image_url = response.data[0].url
+                logger.info(f"[ChatKit] v3: DALL-E generated: {open_image_url[:60]}...")
+
+            except Exception as e:
+                logger.warning(f"[ChatKit] v3: DALL-E failed: {e}")
+
+        # 2. Build context for Guided Learning v9 (simplified)
+        from .fte.teach_agent import extract_key_concepts
+
+        # Pre-extract key concepts from first chunk
+        first_chunk = chunks[0] if chunks else None
+        if isinstance(first_chunk, dict):
+            chunk_content = first_chunk.get("content", "")
+            chunk_title = first_chunk.get("title", "")
+        elif first_chunk:
+            chunk_content = first_chunk.content
+            chunk_title = first_chunk.title
+        else:
+            chunk_content = ""
+            chunk_title = ""
+        key_concepts = state.get("key_concepts") or extract_key_concepts(chunk_content, chunk_title)
+
         teach_ctx = TeachContext(
+            # Core lesson data
             lesson_title=title,
             chunks=[
                 {"index": c["index"] if isinstance(c, dict) else c.index,
@@ -475,12 +382,26 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 for c in chunks
             ],
             current_chunk_index=state.get("concept_index", 0),
-            attempt_count=state.get("attempt_count", 0),
-            max_attempts=3,
             total_chunks=len(chunks),
             is_first_message=is_first_message,
             thread_id=thread.id,
             user_name=user_name or "",
+
+            # Student Profile
+            current_phase=state.get("current_phase", "phase_0"),
+            student_role=state.get("student_role", ""),
+            student_world=state.get("student_world", ""),
+            learner_type=state.get("learner_type", "intermediate"),
+
+            # Personalization
+            personalization_path=state.get("personalization_path", ""),
+            ai_experience_asked=state.get("ai_experience_asked", False),
+            ai_experience_answered=state.get("ai_experience_answered", False),
+
+            # Teaching state (minimal)
+            key_concepts=key_concepts,
+            discovered_concepts=state.get("discovered_concepts", []),
+            conversation_turns=state.get("conversation_turns", 0),
         )
 
         # 3. Create and run agent — no branching, no script selection
@@ -496,7 +417,7 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
         # Create metering hooks
         metering_hooks = create_metering_hooks()
 
-        logger.debug(f"[ChatKit] v3: Running agent for thread {thread.id}")
+        logger.info(f"[ChatKit] v3: Running agent for thread {thread.id}")
 
         try:
             result = Runner.run_streamed(
@@ -506,10 +427,69 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 hooks=metering_hooks,
             )
 
-            async for event in self._stream_with_marker_stripping(
-                agent_context, result
-            ):
-                yield event
+            # Stream response with image injection if available
+            image_injected = False
+            full_response_text = ""  # Collect for guardrail validation
+
+            try:
+                async for event in _stream_with_real_ids(agent_context, result, thread.id):
+                    # Collect text for guardrail validation
+                    if isinstance(event, ThreadItemUpdatedEvent):
+                        update = event.update
+                        if isinstance(update, AssistantMessageContentPartTextDelta):
+                            full_response_text += update.delta
+
+                    # Inject pending image at the start of first text content
+                    if not image_injected and teach_ctx.open_image_url:
+                        if isinstance(event, ThreadItemUpdatedEvent):
+                            update = event.update
+                            if hasattr(update, 'content') and update.content:
+                                # Prepend image markdown to first text delta
+                                img_url = teach_ctx.open_image_url
+                                img_title = teach_ctx.lesson_title
+                                image_md = f"![{img_title}]({img_url})\n\n"
+                                for content_item in update.content:
+                                    if hasattr(content_item, 'text') and content_item.text:
+                                        content_item.text = image_md + content_item.text
+                                        image_injected = True
+                                        teach_ctx.open_image_url = ""  # Clear
+                                        break
+                    yield event
+
+            except Exception as stream_err:
+                # Log the actual error from Gemini for debugging
+                error_str = str(stream_err)
+                logger.error(f"[ChatKit] Stream error: {type(stream_err).__name__}: {error_str}")
+
+                # Check for specific Gemini API errors
+                if "400" in error_str or "INVALID_ARGUMENT" in error_str:
+                    logger.error("[ChatKit] Gemini 400 error - possibly tool call format issue")
+
+                # Re-raise to be handled by outer exception handler
+                raise
+
+            # Guardrails removed - simplified Guided Learning agent
+
+            # Save updated teaching state after response (simplified v9)
+            new_state = {
+                "concept_index": teach_ctx.current_chunk_index,
+                "current_phase": teach_ctx.current_phase,
+                "lesson_path": lesson_path,
+                "status": "complete" if teach_ctx.is_complete else "teaching",
+                # Student profile
+                "student_role": teach_ctx.student_role,
+                "student_world": teach_ctx.student_world,
+                "learner_type": teach_ctx.learner_type,
+                # Personalization
+                "personalization_path": teach_ctx.personalization_path,
+                "ai_experience_asked": teach_ctx.ai_experience_asked,
+                "ai_experience_answered": teach_ctx.ai_experience_answered,
+                # Teaching state
+                "key_concepts": teach_ctx.key_concepts,
+                "discovered_concepts": teach_ctx.discovered_concepts,
+                "conversation_turns": teach_ctx.conversation_turns + 1,  # Increment!
+            }
+            await save_session_state(thread.id, new_state)
 
         except HTTPException as http_err:
             if http_err.status_code == 402:
@@ -536,17 +516,12 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 await metering_hooks.release_on_error(agent_context)
             raise
 
-        # 4. Save updated state after run
-        await save_session_state(thread.id, {
-            "concept_index": teach_ctx.current_chunk_index,
-            "attempt_count": teach_ctx.attempt_count,
-            "lesson_path": lesson_path,
-            "status": "complete" if teach_ctx.is_complete else "teaching",
-        })
+        # 4. Final state already saved in try block with incremented turns
+        # No duplicate save needed - removed to prevent overwriting increment
 
         logger.info(
             f"[ChatKit] v3: Done. chunk={teach_ctx.current_chunk_index}, "
-            f"attempts={teach_ctx.attempt_count}"
+            f"phase={teach_ctx.current_phase}, turns={teach_ctx.conversation_turns}"
         )
 
     async def respond(
@@ -579,6 +554,16 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             if not user_text:
                 logger.warning("[ChatKit] Empty user message")
                 return
+
+            # ANSWER VERIFICATION (Script v2): Handle A/B answers and special requests
+            # The verification result is passed to create_agent() to select the right prompt
+            verification_result = None
+            special_request = None
+
+            # First check for special requests (hint, skip, option_confusion)
+            special_request = detect_special_request(user_text)
+            if special_request:
+                logger.info(f"[ChatKit] Special request detected: {special_request}")
 
             # Get metadata from context
             lesson_path = context.metadata.get("lesson_path", "")
@@ -635,14 +620,19 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 for item in items
             )
             is_first_message = not has_assistant_response
-            logger.debug(
+            logger.info(
                 f"[ChatKit] items={len(items)}, types={item_types}, "
                 f"has_assistant={has_assistant_response}, is_first={is_first_message}"
             )
 
-            # TEACH MODE: Agent-native architecture with function tools
-            if mode == "teach":
-                logger.debug("[ChatKit] Routing to teach mode (agent-native)")
+            # AGENT-NATIVE MODE (v3): Use new architecture for teach mode
+            # Per reviewer: zero branching, agent has full autonomy
+            logger.info(
+                f"[ChatKit] MODE CHECK: USE_AGENT_NATIVE_TEACH="
+                f"{USE_AGENT_NATIVE_TEACH}, mode='{mode}'"
+            )
+            if USE_AGENT_NATIVE_TEACH and mode == "teach":
+                logger.info("[ChatKit] >>> ROUTING TO AGENT-NATIVE MODE (v3) <<<")
 
                 # Set thread title for new threads
                 if is_first_message:
@@ -674,9 +664,10 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 return  # Exit early, v3 handles everything
 
             # ASK MODE: Use ask_agent with DeepSeek for direct answers
+            # Store lesson data in metadata for ask_agent's dynamic instructions
             from .fte.ask_agent import ask_agent
 
-            logger.debug("[ChatKit] Routing to ask mode (DeepSeek)")
+            logger.info("[ChatKit] >>> ROUTING TO ASK MODE (DeepSeek) <<<")
             context.metadata["lesson_title"] = title
             context.metadata["lesson_content"] = content
             context.metadata["is_first_message"] = is_first_message
@@ -687,14 +678,52 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
 
             # Set thread title from first user message (if new thread)
             if is_first_message and "title" not in context.metadata:
+                # If message is a trigger (empty/short), use lesson title instead
                 if _is_trigger_message(user_text):
-                    context.metadata["title"] = f"📚 {title}"
+                    context.metadata["title"] = f"📚 {title}"  # Use lesson title
                 else:
                     context.metadata["title"] = _generate_thread_title(user_text)
+                logger.info(f"[ChatKit] Generated title: {context.metadata['title']}")
+                # Save thread again with the generated title (base class saved with default)
                 await self.store.save_thread(thread, context)
 
             # Convert to agent input format
             input_items = await simple_to_agent_input(items)
+
+            # INJECT VERIFICATION: Add explicit verification to last message
+            # This ensures LLM sees "[CORRECT]" or "[INCORRECT]" and can't ignore it
+            if verification_result and input_items and isinstance(input_items, list):
+                logger.info(f"[ChatKit] Injecting verification '{verification_result}' into input")
+                # Find the last user message and annotate it
+                injected = False
+                for i in range(len(input_items) - 1, -1, -1):
+                    item = input_items[i]
+                    item_type = type(item).__name__
+                    has_role = hasattr(item, "role")
+                    logger.debug(f"[ChatKit] Item {i}: type={item_type}, has_role={has_role}")
+                    if hasattr(item, "role") and item.role == "user":
+                        if verification_result == "correct":
+                            # Prepend strong verification message
+                            original = item.content if hasattr(item, "content") else str(item)
+                            item.content = (
+                                f"[SERVER VERIFIED: CORRECT ✓]\n"
+                                f"Student answer: {original}\n"
+                                f"[YOU MUST SAY 'Correct!' - DO NOT SAY 'Not quite']"
+                            )
+                            logger.info("[ChatKit] Injected CORRECT verification")
+                            injected = True
+                        elif verification_result == "incorrect":
+                            original = item.content if hasattr(item, "content") else str(item)
+                            item.content = (
+                                f"[SERVER VERIFIED: WRONG ✗]\n"
+                                f"Student answer: {original}\n"
+                                f"[YOU MUST SAY 'Not quite.' - DO NOT SAY 'Correct']"
+                            )
+                            logger.info("[ChatKit] Injected INCORRECT verification")
+                            injected = True
+                        break
+                if not injected:
+                    logger.warning("[ChatKit] Failed to inject - no user message found")
 
             # Fallback: if input_items is empty (race condition), use current user message
             if not input_items:
@@ -727,7 +756,7 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             # Wrap in try/except to release metering reservation on error
             try:
                 async for event in _stream_with_real_ids(
-                    agent_context, result, thread.id
+                    agent_context, result, thread.id, verification_result
                 ):
                     yield event
             except HTTPException as http_err:

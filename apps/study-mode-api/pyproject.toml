@@ -16,6 +16,7 @@ dependencies = [
     "python-dotenv>=1.0.0",
     "openai-agents>=0.0.9",
     "openai-chatkit>=1.6.0",
+    "litellm>=1.55.0",
     "redis>=5.0.0",
     "psycopg[binary]>=3.3.2",
 ]
