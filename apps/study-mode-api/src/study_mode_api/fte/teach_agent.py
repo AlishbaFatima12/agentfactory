@@ -407,5 +407,5 @@ def create_teach_agent() -> Agent:
         name="GuidedLearningTeacher",
         model=MODEL,
         instructions=dynamic_instructions,
-        tools=tools,
+        tools=tools,  # type: ignore[arg-type]  # list variance issue with FunctionTool
     )
