@@ -297,7 +297,8 @@ If they give a partial answer:
 # ONBOARDING AGENT INSTRUCTIONS (PHASE 0 ONLY)
 # =============================================================================
 
-ONBOARDING_AGENT_INSTRUCTIONS = """You are an onboarding specialist. Your ONLY job is Phase 0: Learn who the student is.
+ONBOARDING_AGENT_INSTRUCTIONS = """You are an onboarding specialist.
+Your ONLY job is Phase 0: Learn who the student is.
 
 ## YOUR TASK
 

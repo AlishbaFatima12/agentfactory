@@ -3,22 +3,26 @@
 from __future__ import annotations
 
 # Load environment variables first, before any imports that need them
-import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 # Load from study-mode-api/.env (parent of src/)
 _env_path = Path(__file__).parent.parent.parent / ".env"
 load_dotenv(_env_path)
 
-import logging
-from collections.abc import AsyncIterator
-from datetime import datetime
+import logging  # noqa: E402
+from collections.abc import AsyncIterator  # noqa: E402
+from datetime import datetime  # noqa: E402
 
-from agents import Runner, RunResultStreaming
-from chatkit.agents import AgentContext, simple_to_agent_input, stream_agent_response
-from chatkit.server import ChatKitServer
-from chatkit.types import (
+from agents import Runner, RunResultStreaming  # noqa: E402
+from chatkit.agents import (  # noqa: E402
+    AgentContext,
+    simple_to_agent_input,
+    stream_agent_response,
+)
+from chatkit.server import ChatKitServer  # noqa: E402
+from chatkit.types import (  # noqa: E402
     AssistantMessageContent,
     AssistantMessageContentPartTextDelta,
     AssistantMessageItem,
@@ -30,18 +34,17 @@ from chatkit.types import (
     UserMessageItem,
     UserMessageTextContent,
 )
-from fastapi import HTTPException
+from fastapi import HTTPException  # noqa: E402
 
-from .chatkit_store import CachedPostgresStore, PostgresStore, RequestContext
-from .fte.answer_verification import (
-    detect_special_request,
-    extract_and_store_correct_answer,
-    strip_answer_marker,
+from .chatkit_store import (  # noqa: E402
+    CachedPostgresStore,
+    PostgresStore,
+    RequestContext,
 )
-# Guardrails removed - simplified agent
-from .metering import create_metering_hooks
-from .services.content_loader import load_lesson_content
-from .services.lesson_chunker import get_lesson_chunks
+from .fte.answer_verification import detect_special_request  # noqa: E402
+from .metering import create_metering_hooks  # noqa: E402
+from .services.content_loader import load_lesson_content  # noqa: E402
+from .services.lesson_chunker import get_lesson_chunks  # noqa: E402
 
 # Constants for legacy code (kept for backwards compatibility, not used in agent-native mode)
 MAX_ATTEMPTS = 3
@@ -180,7 +183,8 @@ async def _stream_with_real_ids(
                 full_response_text += update.delta
                 # Log every 10 chunks to track progress
                 if chunk_count % 10 == 0:
-                    logger.debug(f"[ChatKit] Chunk {chunk_count}, total chars: {len(full_response_text)}")
+                    total_chars = len(full_response_text)
+                    logger.debug(f"[ChatKit] Chunk {chunk_count}, total: {total_chars}")
 
         # Handle ThreadItemDoneEvent - use mapped ID
         elif isinstance(event, ThreadItemDoneEvent):
@@ -204,10 +208,11 @@ async def _stream_with_real_ids(
                 event = ThreadItemDoneEvent(item=item)
 
             # Log final response stats
+            resp_len = len(full_response_text)
+            end_snippet = full_response_text[-50:] if resp_len > 50 else full_response_text
             logger.info(
                 f"[ChatKit] Stream complete: {chunk_count} chunks, "
-                f"{len(full_response_text)} chars, ends with: '...{full_response_text[-50:]}'"
-                if len(full_response_text) > 50 else f"[ChatKit] Stream complete: {chunk_count} chunks, {len(full_response_text)} chars"
+                f"{resp_len} chars, ends with: '...{end_snippet}'"
             )
 
         yield event
@@ -295,10 +300,16 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 # Mark that profile is already complete - DO NOT ask again
                 state["profile_complete"] = True
 
-                logger.info(f"[ChatKit] v3: QUICK_START parsed: path={qs_path}, level={qs_level}, world={qs_world}")
+                logger.info(
+                    f"[ChatKit] v3: QUICK_START: path={qs_path}, "
+                    f"level={qs_level}, world={qs_world}"
+                )
 
-                # Replace message with simple start prompt that tells agent NOT to ask about profession
-                user_text = "Start teaching directly. My profile is already set. Do not ask about my profession or field."
+                # Replace with start prompt - profile already complete
+                user_text = (
+                    "Start teaching directly. My profile is already set. "
+                    "Do not ask about my profession or field."
+                )
 
         # 1.5b Blended Teaching v7.1 - Image Strategy
         # - Phase 0: No image (warm greeting, ask about role/expertise)
@@ -310,8 +321,9 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
         # Generate DALL-E image only in Phase 1 (after we learned their world in Phase 0)
         if current_phase == "phase_1":
             try:
-                from openai import AsyncOpenAI
                 import os
+
+                from openai import AsyncOpenAI
 
                 openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -326,7 +338,9 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                     f"Blue and purple color scheme. No text on image."
                 )
 
-                logger.info(f"[ChatKit] v3: Phase 1 DALL-E: {title} for {student_role} in {student_world}")
+                logger.info(
+                    f"[ChatKit] v3: Phase 1 DALL-E: {title} for {student_role} in {student_world}"
+                )
 
                 response = await openai_client.images.generate(
                     model="dall-e-3",
@@ -347,8 +361,15 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
 
         # Pre-extract key concepts from first chunk
         first_chunk = chunks[0] if chunks else None
-        chunk_content = first_chunk.get("content", "") if isinstance(first_chunk, dict) else (first_chunk.content if first_chunk else "")
-        chunk_title = first_chunk.get("title", "") if isinstance(first_chunk, dict) else (first_chunk.title if first_chunk else "")
+        if isinstance(first_chunk, dict):
+            chunk_content = first_chunk.get("content", "")
+            chunk_title = first_chunk.get("title", "")
+        elif first_chunk:
+            chunk_content = first_chunk.content
+            chunk_title = first_chunk.title
+        else:
+            chunk_content = ""
+            chunk_title = ""
         key_concepts = state.get("key_concepts") or extract_key_concepts(chunk_content, chunk_title)
 
         teach_ctx = TeachContext(
@@ -424,12 +445,14 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                             update = event.update
                             if hasattr(update, 'content') and update.content:
                                 # Prepend image markdown to first text delta
-                                image_md = f"![{teach_ctx.lesson_title}]({teach_ctx.open_image_url})\n\n"
+                                img_url = teach_ctx.open_image_url
+                                img_title = teach_ctx.lesson_title
+                                image_md = f"![{img_title}]({img_url})\n\n"
                                 for content_item in update.content:
                                     if hasattr(content_item, 'text') and content_item.text:
                                         content_item.text = image_md + content_item.text
                                         image_injected = True
-                                        teach_ctx.open_image_url = ""  # Clear to prevent re-injection
+                                        teach_ctx.open_image_url = ""  # Clear
                                         break
                     yield event
 
@@ -440,7 +463,7 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
 
                 # Check for specific Gemini API errors
                 if "400" in error_str or "INVALID_ARGUMENT" in error_str:
-                    logger.error(f"[ChatKit] Gemini 400 error - possibly tool call format issue")
+                    logger.error("[ChatKit] Gemini 400 error - possibly tool call format issue")
 
                 # Re-raise to be handled by outer exception handler
                 raise

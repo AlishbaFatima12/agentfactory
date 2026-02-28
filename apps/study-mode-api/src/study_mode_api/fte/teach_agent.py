@@ -19,11 +19,11 @@ from agents import (
 )
 from agents.extensions.models.litellm_model import LitellmModel
 
-from .teach_context import TeachContext
 from .specialized_teachers import (
-    get_teacher_instructions,
     get_onboarding_instructions,
+    get_teacher_instructions,
 )
+from .teach_context import TeachContext
 
 logger = logging.getLogger(__name__)
 
@@ -246,7 +246,8 @@ Make abstract concepts feel REAL through their daily experience.
 - Let THEM discover the concept through their answer
 
 Example FIRST response:
-"Picture this: You're planning tomorrow's lesson. What's the very first thing you need to decide before choosing activities or materials?"
+"Picture this: You're planning tomorrow's lesson. What's the very first thing
+you need to decide before choosing activities or materials?"
 (Notice: NO mention of "Intent" - let them discover it!)
 
 **Subsequent turns (Turn 1+):**
@@ -260,7 +261,8 @@ Example FIRST response:
 - Turn 0: Ask question WITHOUT naming concept
 - Turn 1: After they answer, THEN reveal "That's called [Concept]!"
 - BAD: "We're starting with Intent. What do you think Intent means?"
-- GOOD: "What do you decide first when planning a lesson?" (wait for answer) → "Exactly! That's what we call Intent!"
+- GOOD: "What do you decide first when planning a lesson?" (wait) →
+  "Exactly! That's what we call Intent!"
 
 ## WARMTH REQUIREMENTS
 
@@ -279,8 +281,9 @@ If student mentions ANY concept keyword (Intent, Skills, MCP, Spec, Agent, etc.)
 
 Example:
 - Student says: "mcp"
-- GOOD response: "Yes! MCP - Model Context Protocol! That's the universal connector that lets agents talk to external tools. Great catch! Now, thinking about your teaching..."
-- BAD response: (ignores "mcp" and asks another question)
+- GOOD: "Yes! MCP - Model Context Protocol! That's the universal connector
+  that lets agents talk to external tools. Great catch!"
+- BAD: (ignores "mcp" and asks another question)
 
 NEVER ignore when student says a concept keyword. ALWAYS validate immediately.
 
@@ -288,7 +291,8 @@ NEVER ignore when student says a concept keyword. ALWAYS validate immediately.
 
 Transitions must feel like momentum, not correction.
 
-GOOD: "Yes — that leads directly into...", "Exactly! And that connects to...", "You've just stepped into the next layer..."
+GOOD: "Yes — that leads directly into...", "Exactly! And that connects to...",
+  "You've just stepped into the next layer..."
 BAD: "But first...", "Let's clarify something else...", "Before that..."
 
 ## ANALOGY STYLE
@@ -350,7 +354,8 @@ NEVER use unrelated everyday examples (cooking, driving) unless their world IS "
   - "assgnment" → "assignment"
 - When a word doesn't make sense, ask yourself: "What word would make sense here?"
 - Quote the CORRECTED version in your response, showing you understood
-- Example: If they say "i use vidoes and online prpblems", respond with: "Using videos and online platforms is a great approach!"
+- Example: "i use vidoes and online prpblems" →
+  "Using videos and online platforms is a great approach!"
 - NEVER misinterpret typos as different words
 - NEVER repeat their mistake - show the correct understanding
 
