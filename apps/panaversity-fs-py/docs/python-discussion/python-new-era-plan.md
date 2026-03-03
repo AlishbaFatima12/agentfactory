@@ -1,6 +1,6 @@
 # Python for the New AI Era: Course Architecture Plan
 
-**Version:** 2.9
+**Version:** 2.10
 **Status:** Draft
 **Date:** 2026-02-24
 **Branch:** `learn-python`
@@ -89,15 +89,15 @@ Every Python feature follows this 5-step progression:
 Student specification ability increases across phases:
 
 ```
-Phase 1 (Ch 1-3):    Read + Understand          ← "I can read AI output"
-Phase 2 (Ch 4-7):    Specify with types          ← "I can tell AI what shape data has"
-Phase 3 (Ch 8-11):   Specify with tests          ← "I can define what correct means"
-Phase 4 (Ch 12-13):  Debug + master TDG          ← "I can debug AI output and drive TDG independently"
+Phase 1 (Ch 1-3):    Read & Explore              ← "I can understand what AI generates"
+Phase 2 (Ch 4-7):    Specify with types          ← "I can tell AI precisely what to build"
+Phase 3 (Ch 8-11):   Specify with tests          ← "I can define correct and prove it"
+Phase 4 (Ch 12-13):  Debug & Master TDG          ← "I can diagnose failures and drive TDG without scaffolding"
 Phase 5 (Ch 14-17):  Design object models        ← "I can design systems for AI to implement"
-Phase 6 (Ch 18-20):  Architect components        ← "I can spec real-world features via TDG"
-Phase 7 (Ch 21-22):  Build CLI + async tools     ← "I can build production tools via TDG"
-Phase 8 (Ch 23-24):  Ship production systems     ← "I can ship secure, tested software via TDG"
-Phase 9 (Ch 25-26):  Full system architecture    ← "I can architect and deliver via TDG"
+Phase 6 (Ch 18-20):  Build production features   ← "I can specify and verify production-grade Python features"
+Phase 7 (Ch 21-22):  Deploy tools + async APIs   ← "I can build and ship production tools and async APIs"
+Phase 8 (Ch 23-24):  Harden & Secure             ← "I can harden, secure, and ship production-grade software"
+Phase 9 (Ch 25-26):  Full system architecture    ← "I can architect and deliver complete, production-grade systems"
 ```
 
 By Phase 6, students have seen every Python feature 50+ times in AI output. Specifying it precisely for AI feels natural, not forced.
@@ -206,7 +206,7 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ---
 
-### Phase 1: The Workbench (Read + Verify)
+### Phase 1: The Workbench (Read & Explore)
 
 > Student role: **Reader** — "I can understand what AI generates"
 
@@ -443,9 +443,9 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ---
 
-### Phase 4: Debugging and TDG Independence (Debug + Master)
+### Phase 4: Debugging and TDG Independence (Debug & Master)
 
-> Student role: **Debugger** — "I can debug AI output and drive TDG independently"
+> Student role: **Debugger** — "I can diagnose failures and drive TDG without scaffolding"
 
 **Why a debugging checkpoint?**: By Phase 3, students can write tests and verify code. But when AI output fails, they need to diagnose WHY. This phase teaches debugging as a systematic skill and consolidates TDG into an independent practice. Without this checkpoint, students hit a wall in Phase 5 (OOP) where AI errors are harder to trace.
 
@@ -496,7 +496,7 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ### Phase 5: OOP — The Python Object Model (Model)
 
-> Student role: **Modeler** — "I can design objects that model real domains"
+> Student role: **Modeler** — "I can design systems for AI to implement"
 
 **Why OOP gets its own phase**: Python is fundamentally object-oriented — everything is an object. Understanding the object model unlocks the language. But we teach it AFTER testing AND debugging mastery, so students can verify and debug every OOP concept they learn.
 
@@ -669,9 +669,9 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ---
 
-### Phase 6: Real-World Python (Architect + TDG)
+### Phase 6: Real-World Python (Build)
 
-> Student role: **Practitioner** — "I can spec real-world features via TDG"
+> Student role: **Practitioner** — "I can specify and verify production-grade Python features"
 
 Students already learned file processing and PostgreSQL in Part 2 — directing Claude Code to handle file operations, building a Budget Tracker with SQLAlchemy and Neon PostgreSQL, and managing Git workflows. That knowledge carries forward. Phase 6 builds on it by teaching the typed Python code underneath — the code that Claude Code was generating on their behalf — using TDG to specify, generate, and verify every layer.
 
@@ -765,9 +765,9 @@ Students already learned file processing and PostgreSQL in Part 2 — directing 
 
 ---
 
-### Phase 7: CLI and Concurrency (Build)
+### Phase 7: CLI and Concurrency (Deploy)
 
-> Student role: **Tool Builder** — "I can build production CLI tools and async programs"
+> Student role: **Tool Builder** — "I can build and ship production tools and async APIs"
 
 #### Chapter 21: Unix-Style CLI Tools
 
@@ -832,9 +832,9 @@ Students already learned file processing and PostgreSQL in Part 2 — directing 
 
 ---
 
-### Phase 8: Production Systems (Ship + Secure)
+### Phase 8: Production Systems (Harden & Secure)
 
-> Student role: **Shipping Engineer** — "I can ship secure, tested, production-grade software"
+> Student role: **Shipping Engineer** — "I can harden, secure, and ship production-grade software"
 
 Students already understand version control and CI concepts from Part 2 — they learned Git workflows, branching, PRs, and reviewing AI-generated code. Phase 8 builds on that foundation by teaching the professional engineering practices underneath: automated CI pipelines, structured logging, security auditing, and the complete verification pyramid.
 
@@ -956,15 +956,15 @@ Students already understand version control and CI concepts from Part 2 — they
 ## 8. The Student Journey Summary
 
 ```
-Ch 1-3:    READER         → "I can read and understand AI-generated typed Python"
-Ch 4-7:    SPECIFIER      → "I can tell AI precisely what to build using types"
-Ch 8-11:   VERIFIER       → "I can prove code is correct with tests"
-Ch 12-13:  DEBUGGER       → "I can debug AI output and drive TDG independently"
-Ch 14-17:  MODELER        → "I can design object models for AI to implement"
-Ch 18-20:  PRACTITIONER   → "I can spec real-world features via TDG"
-Ch 21-22:  TOOL BUILDER   → "I can build production CLI tools and async programs"
-Ch 23-24:  SHIP ENGINEER  → "I can ship secure, tested, production-grade software"
-Ch 25-26:  ARCHITECT      → "I can architect and deliver complete systems via TDG"
+Ch 1-3:    READER         → "I can understand what AI generates"
+Ch 4-7:    SPECIFIER      → "I can tell AI precisely what to build"
+Ch 8-11:   VERIFIER       → "I can define correct and prove it"
+Ch 12-13:  DEBUGGER       → "I can diagnose failures and drive TDG without scaffolding"
+Ch 14-17:  MODELER        → "I can design systems for AI to implement"
+Ch 18-20:  PRACTITIONER   → "I can specify and verify production-grade Python features"
+Ch 21-22:  TOOL BUILDER   → "I can build and ship production tools and async APIs"
+Ch 23-24:  SHIP ENGINEER  → "I can harden, secure, and ship production-grade software"
+Ch 25-26:  ARCHITECT      → "I can architect and deliver complete, production-grade systems"
 ```
 
 ---
@@ -1554,3 +1554,4 @@ smartnotes/
 | 2.7 | 2026-02-20 | Folded SQL and FastAPI from standalone chapters into existing chapters per teacher directive. Ch 16 now includes PostgreSQL introduction (was separate Ch 18). Ch 20 (Concurrency) now includes FastAPI introduction (was separate Ch 22). Reduced from 25 to 23 chapters. Renumbered all cross-references: old Ch 19→18, 20→19, 21→20, 23→21, 24-25→22-23. Updated SmartNotes project phases, stack references, Syntax Cards count, exercise thread, and all section cross-references. Full SQL and FastAPI coverage deferred to later parts of the book. |
 | 2.8 | 2026-02-24 | Major restructuring from 23 chapters/7 phases to 26 chapters/9 phases. Added Phase 4: Debugging + TDG Mastery (Ch 12-13) — debugging checkpoint between testing and OOP. Split old Phase 6 into Phase 7 (CLI + Concurrency) and Phase 8 (CI/CD + Security). Added Ch 24: Security Review for AI-Generated Code (OWASP, bandit, security-focused TDG). Added Ch 25: When Not to Use AI (judgment, AI dependency prevention). Old Ch 10 (TDG Mastery) replaced with Ch 10 (Iterating on AI Output) and moved full TDG mastery to new Ch 13 in Phase 4. Renumbered OOP chapters (12-15 → 14-17), real-world chapters (16-18 → 18-20), production chapters (19-21 → 21-23). Kept axioms at start (Ch 14 already exists) — no duplicate axioms chapter. Updated all cross-references. |
 | 2.9 | 2026-02-24 | Aligned plan with Part 4 README changes. Updated workflow diagram to `Requirements → Types → Failing Tests → Generate → Verify & Iterate → Ship`. Added human/AI responsibility table showing who leads each step. Added Part 2 bridge acknowledgments to Phase 6 (file processing, PostgreSQL already covered in Part 2) and Phase 8 (Git workflows, CI concepts already covered in Part 2). |
+| 2.10 | 2026-02-24 | Synchronized all phase titles, role quotes, Specification Sophistication Gradient, and Student Journey Summary with the published Part 4 README. Phase titles now match README: Phase 1 "Read & Explore", Phase 4 "Debug & Master", Phase 6 "Build", Phase 7 "Deploy", Phase 8 "Harden & Secure". All 9 role quotes now identical between plan and README. |
