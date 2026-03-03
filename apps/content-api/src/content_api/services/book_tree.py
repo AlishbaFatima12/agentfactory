@@ -2,6 +2,9 @@
 
 Single API call to get all files, then builds a hierarchy of Parts > Chapters > Lessons.
 Cached in Redis with key "book_tree:v1" (no TTL, invalidated by admin endpoint / CI on git push).
+
+Some parts organise chapters into sections (Part > Section > Chapter > Lesson).
+SECTIONED_PARTS lists those parts so the builder can extract the correct chapter slug.
 """
 
 import json
@@ -9,6 +12,7 @@ import logging
 import re
 
 import httpx
+
 from api_infra.core.redis_cache import get_redis, safe_redis_get
 
 from ..config import settings
@@ -23,6 +27,10 @@ logger = logging.getLogger(__name__)
 
 CACHE_KEY = "book_tree:v1"
 DOCS_PREFIX = "apps/learn-app/docs/"
+
+# Parts that organise chapters into section folders (Part > Section > Chapter > Lesson).
+# Other parts use Part > Chapter > [SubSection] > Lesson where sub-sections are transparent.
+SECTIONED_PARTS: set[str] = {"03-Business-Domain-Agent-Workflows"}
 
 
 def slug_to_title(slug: str) -> str:
@@ -74,8 +82,20 @@ async def build_book_tree() -> BookTreeResponse:
             continue
 
         part_slug = segments[0]
-        chapter_slug = segments[1] if len(segments) >= 3 else None
         filename = segments[-1]
+
+        # Determine chapter and (optional) section based on part structure.
+        # Sectioned parts: Part > Section > Chapter > Lesson (4+ segments)
+        # Other parts:     Part > Chapter > [SubSection] > Lesson (3+ segments)
+        if part_slug in SECTIONED_PARTS and len(segments) >= 4:
+            section_slug = segments[1]
+            chapter_slug = segments[2]
+        elif len(segments) >= 3:
+            section_slug = None
+            chapter_slug = segments[1]
+        else:
+            section_slug = None
+            chapter_slug = None
 
         # Only process .md/.mdx files (not directories)
         if not (filename.endswith(".md") or filename.endswith(".mdx")):
@@ -99,6 +119,8 @@ async def build_book_tree() -> BookTreeResponse:
             chapter = ChapterMeta(
                 slug=chapter_slug,
                 title=slug_to_title(chapter_slug),
+                section_slug=section_slug,
+                section_title=slug_to_title(section_slug) if section_slug else None,
             )
             part.chapters.append(chapter)
 

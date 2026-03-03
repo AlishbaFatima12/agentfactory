@@ -61,7 +61,7 @@ Section I establishes the conceptual and technical foundations that every subseq
 
 #### Chapter 14: The Enterprise Agentic Landscape ✅
 
-**[→ Read Chapter 14](/docs/Business-Domain-Agent-Workflows/enterprise-agentic-landscape)**
+**[→ Read Chapter 14](/docs/Business-Domain-Agent-Workflows/foundations/enterprise-agentic-landscape)**
 
 Maps the strategic landscape of enterprise AI in 2025 — vendor ecosystems, deployment patterns, and the build vs. buy vs. configure decision framework. Introduces the Cowork platform within the broader agent ecosystem, the four monetisation models that govern how domain agents create financial value, and the Organisational AI Maturity Model that tells you which organisations are genuinely ready to deploy.
 
@@ -71,7 +71,7 @@ Maps the strategic landscape of enterprise AI in 2025 — vendor ecosystems, dep
 
 #### Chapter 15: The Enterprise Agent Blueprint ✅
 
-**[→ Read Chapter 15](/docs/Business-Domain-Agent-Workflows/enterprise-agent-blueprint)**
+**[→ Read Chapter 15](/docs/Business-Domain-Agent-Workflows/foundations/enterprise-agent-blueprint)**
 
 A repeatable 7-step design methodology for building enterprise-grade domain agents that perform reliably under production conditions. Explains the relationship between the SKILL.md file, the config.yaml metadata layer, and MCP connector scripts — and who is responsible for each layer.
 
@@ -81,7 +81,7 @@ A repeatable 7-step design methodology for building enterprise-grade domain agen
 
 #### Chapter 16: The Knowledge Extraction Method ✅
 
-**[→ Read Chapter 16](/docs/Business-Domain-Agent-Workflows/the-knowledge-extraction-method)**
+**[→ Read Chapter 16](/docs/Business-Domain-Agent-Workflows/foundations/the-knowledge-extraction-method)**
 
 The methodology chapter for the entire curriculum. Describes how to transform the tacit knowledge locked in expert practitioners' heads — and in institutional documents — into the SKILL.md files that make domain agents genuinely useful. Every domain chapter in Sections II through VII applies this method.
 
@@ -103,7 +103,7 @@ The section builds systematically. Chapter 17 establishes the foundational finan
 
 #### Chapter 17: Finance Domain Agents ✅
 
-**[→ Read Chapter 17](/docs/Business-Domain-Agent-Workflows/finance-domain-agents)**
+**[→ Read Chapter 17](/docs/Business-Domain-Agent-Workflows/office-of-the-cfo/finance-domain-agents)**
 
 Builds the foundational finance agent covering financial statement analysis, DCF valuation, variance analysis, and FP&A workflows. The only chapter in Part 3 that demonstrates both a Cowork implementation and an OpenAI Frontier implementation side by side — because the finance vertical is where both platforms compete most directly.
 
@@ -115,7 +115,7 @@ Builds the foundational finance agent covering financial statement analysis, DCF
 
 #### Chapter 18: Intent-Driven Financial Architecture (IDFA) ✅
 
-**[→ Read Chapter 18](/docs/Business-Domain-Agent-Workflows/intent-driven-financial-architecture)**
+**[→ Read Chapter 18](/docs/Business-Domain-Agent-Workflows/office-of-the-cfo/intent-driven-financial-architecture)**
 
 Extends the foundational finance agent into a methodology for building AI systems that reason about strategic intent, not just data retrieval. The CFO co-pilot — a persistent agent that knows the company's financial history and can connect financial data to business narrative automatically.
 

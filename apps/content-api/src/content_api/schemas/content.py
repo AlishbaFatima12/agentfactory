@@ -20,6 +20,8 @@ class ChapterMeta(BaseModel):
 
     slug: str
     title: str
+    section_slug: str | None = None
+    section_title: str | None = None
     lessons: list[LessonMeta] = Field(default_factory=list)
 
 
