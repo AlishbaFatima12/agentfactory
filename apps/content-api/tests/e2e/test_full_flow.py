@@ -99,7 +99,7 @@ class TestBookTree:
 
         assert resp.status_code == 200
         data = resp.json()
-        assert len(data["parts"]) == 2
+        assert len(data["parts"]) == 3
         assert data["total_lessons"] > 0
         assert data["total_chapters"] > 0
 
@@ -118,11 +118,25 @@ class TestBookTree:
         ch1 = part1["chapters"][0]
         assert ch1["slug"] == "01-intro"
         assert len(ch1["lessons"]) == 2
+        assert ch1["section_slug"] is None
 
         # Part 2: Advanced with 1 chapter
         part2 = data["parts"][1]
         assert part2["slug"] == "02-Advanced"
         assert len(part2["chapters"]) == 1
+
+        # Part 3: Sectioned part with chapters inside section folder
+        part3 = data["parts"][2]
+        assert part3["slug"] == "03-Business-Domain-Agent-Workflows"
+        assert len(part3["chapters"]) == 2
+        ch14 = part3["chapters"][0]
+        assert ch14["slug"] == "14-enterprise-agentic-landscape"
+        assert ch14["section_slug"] == "01-foundations"
+        assert ch14["section_title"] == "Foundations"
+        assert len(ch14["lessons"]) == 2
+        # Section-level README must NOT appear as a phantom chapter
+        section_slugs = [c["slug"] for c in part3["chapters"]]
+        assert "01-foundations" not in section_slugs
 
     async def test_tree_is_cached_in_redis(self, client, make_token, fake_redis_client):
         """Second tree request should hit Redis cache, not GitHub."""
@@ -388,8 +402,12 @@ class TestIdempotency:
         await client.get("/api/v1/content/lesson", params=params, headers=auth_header(token_b))
 
         # Both should have separate idempotency keys (uses full lesson_path)
-        key_a = await fake_redis_client.get("content-access:user-A:01-Foundations/01-intro/01-welcome")
-        key_b = await fake_redis_client.get("content-access:user-B:01-Foundations/01-intro/01-welcome")
+        key_a = await fake_redis_client.get(
+            "content-access:user-A:01-Foundations/01-intro/01-welcome"
+        )
+        key_b = await fake_redis_client.get(
+            "content-access:user-B:01-Foundations/01-intro/01-welcome"
+        )
         assert key_a == "1"
         assert key_b == "1"
 
@@ -559,7 +577,7 @@ class TestRateLimiting:
 
         async def fake_evalsha(sha, numkeys, *args):
             call_count["n"] += 1
-            limit = int(args[1])   # ARGV[1] = limit
+            limit = int(args[1])  # ARGV[1] = limit
             window = int(args[2])  # ARGV[2] = window_ms
             current = call_count["n"]
             # Return [current, window, ttl] — ttl > 0 means over-limit
@@ -573,7 +591,7 @@ class TestRateLimiting:
         # Make 10 requests (at the limit for content_tree)
         for i in range(10):
             resp = await client.get("/api/v1/content/tree", headers=headers)
-            assert resp.status_code == 200, f"Request {i+1} failed with {resp.status_code}"
+            assert resp.status_code == 200, f"Request {i + 1} failed with {resp.status_code}"
 
         # 11th request should be rate limited
         resp = await client.get("/api/v1/content/tree", headers=headers)

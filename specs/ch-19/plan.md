@@ -3,7 +3,7 @@
 **Part**: 3 (Business Domain Agent Workflows)
 **Position**: 6th chapter in Part 3 (follows Ch 14-18)
 **Chapter number**: 19 (global)
-**Filesystem path**: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/19-ai-transformation-ca-cpa-practice/`
+**Filesystem path**: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/19-ai-transformation-ca-cpa-practice/`
 **Governing artifact**: `specs/ch-19/governing-artifact.md`
 **Source data**: `specs/ch-19/Impact of AI on CA Practice Areas - CA Domains AI Impact.csv`
 **Lessons**: 16 (including README and chapter quiz)

@@ -37,7 +37,27 @@ Pedagogical approach: YAML frontmatter with Bloom's taxonomy objectives, CEFR A1
 
 ## Part 3: Business Domain Agent Workflows
 
-- Content coming soon — enterprise domain agent chapters (Ch 14–24)
+### Section I — Foundations
+- [Chapter 14: The Enterprise Agentic Landscape](https://agentfactory.panaversity.org/docs/Business-Domain-Agent-Workflows/enterprise-agentic-landscape): Enterprise AI maturity model, build vs. buy framework, deployment patterns
+- [Chapter 15: The Enterprise Agent Blueprint](https://agentfactory.panaversity.org/docs/Business-Domain-Agent-Workflows/enterprise-agent-blueprint): 7-step design methodology for production-grade domain agents
+- [Chapter 16: The Knowledge Extraction Method](https://agentfactory.panaversity.org/docs/Business-Domain-Agent-Workflows/the-knowledge-extraction-method): Extracting tacit knowledge into SKILL.md files
+
+### Section II — Office of the CFO
+- [Chapter 17: Finance Domain Agents](https://agentfactory.panaversity.org/docs/Business-Domain-Agent-Workflows/finance-domain-agents): Financial statement analysis, DCF valuation, FP&A workflows
+- [Chapter 18: Intent-Driven Financial Architecture](https://agentfactory.panaversity.org/docs/Business-Domain-Agent-Workflows/intent-driven-financial-architecture): CFO co-pilot, strategic financial synthesis
+- [Chapter 19: AI Transformation of CA/CPA Practice](https://agentfactory.panaversity.org/docs/Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice): Audit, tax, advisory AI agents for accounting firms
+- [Chapter 20: Islamic Finance Domain Agents](https://agentfactory.panaversity.org/docs/Business-Domain-Agent-Workflows/islamic-finance-domain-agents): Sharia-compliant financial agents
+
+### Sections II–VII — Planned
+- Chapter 21: Banking-Specific AI — IFRS 9 ECL, Basel III/IV, and AML/KYC (Section II — Office of the CFO)
+- Chapter 22: Sales, RevOps & Marketing (Section III — The Growth Engine)
+- Chapter 23: Supply Chain & Procurement (Section IV — Product & Value Chain)
+- Chapter 24: Product Management (Section IV — Product & Value Chain)
+- Chapter 25: People & Organisational Operations / HR (Section V — People & Efficiency)
+- Chapter 26: Operations (Section V — People & Efficiency)
+- Chapter 27: Productivity & The Agentic Office (Section V — People & Efficiency)
+- Chapter 28: Legal Operations and Compliance (Section VI — Legal & Compliance)
+- Chapter 29: The Intrapreneurship Agent (Section VII — The Innovation Lab)
 
 ## Part 4: Coding for Problem Solving
 
