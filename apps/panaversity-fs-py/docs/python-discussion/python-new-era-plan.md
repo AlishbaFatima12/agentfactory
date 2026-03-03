@@ -1,6 +1,6 @@
 # Python for the New AI Era: Course Architecture Plan
 
-**Version:** 2.8
+**Version:** 2.9
 **Status:** Draft
 **Date:** 2026-02-24
 **Branch:** `learn-python`
@@ -44,8 +44,19 @@ This course inverts that order.
 
 ```
 OLD:  Write syntax → Build things → Maybe test → Ship
-NEW:  Read code → Specify with types → Write tests → Prompt AI → Verify → Iterate → Ship
+NEW:  Requirements → Types → Failing Tests → Generate → Verify & Iterate → Ship
 ```
+
+AI is present at every step. What changes is who is driving:
+
+| Step | Who leads | AI role |
+|------|-----------|---------|
+| Requirements | Human | Assists: spots gaps, challenges assumptions |
+| Types | Human | Assists: suggests models, validates design |
+| Failing Tests | Human | Assists: suggests cases you missed |
+| Generate | AI | Leads: produces full implementation |
+| Verify & Iterate | Human | Assists: explains tracebacks, refines output |
+| Ship | Human | Assists: security review, changelog |
 
 ---
 
@@ -662,6 +673,8 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 > Student role: **Practitioner** — "I can spec real-world features via TDG"
 
+Students already learned file processing and PostgreSQL in Part 2 — directing Claude Code to handle file operations, building a Budget Tracker with SQLAlchemy and Neon PostgreSQL, and managing Git workflows. That knowledge carries forward. Phase 6 builds on it by teaching the typed Python code underneath — the code that Claude Code was generating on their behalf — using TDG to specify, generate, and verify every layer.
+
 #### Chapter 18: Files, Data Processing, and PostgreSQL Introduction
 
 **Goal**: Student can read, process, and persist real-world data — from flat files to relational databases.
@@ -822,6 +835,8 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 ### Phase 8: Production Systems (Ship + Secure)
 
 > Student role: **Shipping Engineer** — "I can ship secure, tested, production-grade software"
+
+Students already understand version control and CI concepts from Part 2 — they learned Git workflows, branching, PRs, and reviewing AI-generated code. Phase 8 builds on that foundation by teaching the professional engineering practices underneath: automated CI pipelines, structured logging, security auditing, and the complete verification pyramid.
 
 #### Chapter 23: CI/CD, Git Workflows, and Observability
 
@@ -1538,3 +1553,4 @@ smartnotes/
 | 2.6 | 2026-02-17 | AI-first philosophy applied throughout entire plan. Steps 4-5 of learning progression now explicitly done WITH AI. Renamed "Writing Gradient" to "Specification Sophistication Gradient". All chapter "Student writes/reads" lines replaced with "Student does/AI role" format reflecting TDG workflow. Phase 5 role renamed from "Writer" to "Practitioner". Exercise Type 5 "Build It" reframed from "no AI" to "full TDG ownership". "Build It Rule" rewritten. Student Journey Summary updated. |
 | 2.7 | 2026-02-20 | Folded SQL and FastAPI from standalone chapters into existing chapters per teacher directive. Ch 16 now includes PostgreSQL introduction (was separate Ch 18). Ch 20 (Concurrency) now includes FastAPI introduction (was separate Ch 22). Reduced from 25 to 23 chapters. Renumbered all cross-references: old Ch 19→18, 20→19, 21→20, 23→21, 24-25→22-23. Updated SmartNotes project phases, stack references, Syntax Cards count, exercise thread, and all section cross-references. Full SQL and FastAPI coverage deferred to later parts of the book. |
 | 2.8 | 2026-02-24 | Major restructuring from 23 chapters/7 phases to 26 chapters/9 phases. Added Phase 4: Debugging + TDG Mastery (Ch 12-13) — debugging checkpoint between testing and OOP. Split old Phase 6 into Phase 7 (CLI + Concurrency) and Phase 8 (CI/CD + Security). Added Ch 24: Security Review for AI-Generated Code (OWASP, bandit, security-focused TDG). Added Ch 25: When Not to Use AI (judgment, AI dependency prevention). Old Ch 10 (TDG Mastery) replaced with Ch 10 (Iterating on AI Output) and moved full TDG mastery to new Ch 13 in Phase 4. Renumbered OOP chapters (12-15 → 14-17), real-world chapters (16-18 → 18-20), production chapters (19-21 → 21-23). Kept axioms at start (Ch 14 already exists) — no duplicate axioms chapter. Updated all cross-references. |
+| 2.9 | 2026-02-24 | Aligned plan with Part 4 README changes. Updated workflow diagram to `Requirements → Types → Failing Tests → Generate → Verify & Iterate → Ship`. Added human/AI responsibility table showing who leads each step. Added Part 2 bridge acknowledgments to Phase 6 (file processing, PostgreSQL already covered in Part 2) and Phase 8 (Git workflows, CI concepts already covered in Part 2). |
