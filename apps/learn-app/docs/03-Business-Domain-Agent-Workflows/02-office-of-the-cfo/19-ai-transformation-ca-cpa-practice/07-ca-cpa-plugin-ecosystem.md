@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/ca-cpa-plugin-ecosystem
 sidebar_position: 7
 title: "The CA/CPA Plugin Ecosystem"
 description: "Deploy the two-layer Cowork plugin stack for CA/CPA practice — knowledge-work-plugins/finance for core accounting workflows and financial-services-plugins for investment-facing work — with hands-on installation, SOX compliance automation, and a full month-end close exercise"

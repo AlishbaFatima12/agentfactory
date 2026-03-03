@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/configuration-and-integration-layers
 sidebar_position: 3
 title: "The Plugin Infrastructure"
 description: "Understand how plugin.json, .mcp.json, and settings.json form the infrastructure layer of a Cowork plugin — the components that developers and IT maintain so that your SKILL.md has the environment and data connections it needs to operate"

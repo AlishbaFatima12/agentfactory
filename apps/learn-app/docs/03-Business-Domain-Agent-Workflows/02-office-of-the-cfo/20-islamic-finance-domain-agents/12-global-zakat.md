@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/global-zakat
 sidebar_position: 12
 title: "Global Zakat Accounting"
 description: "Compare zakat calculation methodologies across four jurisdictions — ZATCA equity-based formula (Saudi Arabia), AAOIFI/Hanafi liquid assets formula, Malaysia voluntary zakat, and Pakistan Zakat and Ushr deduction-at-source — and build a global zakat SKILL.md that routes the correct formula by jurisdiction"

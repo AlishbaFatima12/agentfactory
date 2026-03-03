@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/the-idfa-skill
 sidebar_position: 9
 title: "The IDFA Skill"
 description: "Install the IDFA plugin — a portable Agent Skill following the agentskills.io standard — in Claude Code, GitHub Copilot, VS Code, Codex, and any skills-compatible agent, transforming agent behaviour so every financial model interaction automatically applies all four guardrails"

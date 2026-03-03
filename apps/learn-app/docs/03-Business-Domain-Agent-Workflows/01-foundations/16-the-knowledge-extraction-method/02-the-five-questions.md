@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/the-five-questions
 sidebar_position: 2
 title: "The Five Questions — Expert Interview Framework"
 description: "Learn the five structured interview questions that reliably surface tacit professional knowledge — decision-making logic, exceptions and edge cases, and escalation conditions — with credit analyst examples for each"

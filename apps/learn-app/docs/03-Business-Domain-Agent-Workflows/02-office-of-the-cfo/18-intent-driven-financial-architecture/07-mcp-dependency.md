@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/mcp-dependency
 sidebar_position: 7
 title: "MCP Dependency — Guardrail 4"
 description: "Learn why a Finance Domain Agent must never calculate internally — it writes assumptions via MCP, Excel calculates deterministically, and the agent reads back results that are mathematically certain"

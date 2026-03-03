@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/chapter-summary
 sidebar_position: 10
 title: "Chapter Summary"
 description: "Synthesise the enterprise agent blueprint into a connected architecture: from the plugin package structure and the PQP Framework, through the context hierarchy and governance layer, to the marketplace and what makes the SKILL.md the most critical component you will author in Chapter 16."

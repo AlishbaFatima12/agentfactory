@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/your-extension-roadmap
 sidebar_position: 12
 title: "Your Extension Roadmap and Chapter Summary"
 description: "Prioritise which of the eleven enterprise extensions to build first using a structured framework, design your organisation's extension roadmap, and synthesise the full chapter — from Claude in Excel through Cowork plugins to enterprise extensions"

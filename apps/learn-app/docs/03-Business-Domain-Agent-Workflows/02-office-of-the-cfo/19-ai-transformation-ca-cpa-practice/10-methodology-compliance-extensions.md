@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/methodology-compliance-extensions
 sidebar_position: 10
 title: "Building Methodology and Compliance Extensions"
 description: "Build three domain extensions that encode audit methodology standards, client-specific entity knowledge, and regulatory compliance calendars — completing the five-extension architecture that transforms generic finance plugins into a practice-ready CA/CPA agent"

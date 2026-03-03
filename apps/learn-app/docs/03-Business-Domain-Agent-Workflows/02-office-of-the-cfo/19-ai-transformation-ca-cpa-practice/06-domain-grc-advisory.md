@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/domain-grc-advisory
 sidebar_position: 6
 title: "Domain 5 -- Governance, Risk and Compliance Advisory"
 description: "Explore how AI transforms GRC advisory -- the CA/CPA domain where professional judgment is most resilient -- from periodic manual testing to continuous AI-monitored controls, while the advisory layer above monitoring becomes the defining professional skill"

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/the-problem-that-no-platform-solves
 sidebar_position: 1
 title: "The Problem That No Platform Solves"
 description: "Understand why tacit professional knowledge resists articulation and why no platform, model improvement, or prompt engineering technique can produce a genuinely useful domain agent without a structured extraction methodology"

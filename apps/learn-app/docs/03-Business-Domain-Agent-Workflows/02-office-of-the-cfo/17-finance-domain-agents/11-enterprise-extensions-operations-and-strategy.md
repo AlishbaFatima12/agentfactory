@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/enterprise-extensions-operations-and-strategy
 sidebar_position: 11
 title: "Enterprise Extensions: Operations and Strategy"
 description: "Apply the Knowledge Extraction Method to seven enterprise finance domains — treasury, tax, FP&A, M&A integration, ESG reporting, fund administration, and insurance — by identifying the institutional knowledge each requires and writing the SKILL.md instructions that encode it"

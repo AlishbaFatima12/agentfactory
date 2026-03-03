@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/the-most-consequential-ai-transformation
 sidebar_position: 1
 title: "The Most Consequential AI Transformation"
 description: "Why the CA/CPA profession faces the most consequential AI transformation in professional services — three structural reasons, the Gen-AI vs Agentic AI distinction, and a five-domain impact map that structures the entire chapter"

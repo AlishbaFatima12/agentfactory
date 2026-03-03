@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/murabaha
 sidebar_position: 4
 title: "Murabaha — Cost-Plus Financing Across Jurisdictions"
 description: "Master the murabaha four-step journal entry sequence, compare AAOIFI FAS 2 and MFRS/IFRS 9 treatments, and build dual-framework income schedules that demonstrate how the same numbers produce different labels across jurisdictions"

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/mcp-connector-ecosystem
 sidebar_position: 6
 title: "The MCP Connector Ecosystem"
 description: "Survey the verified MCP connector ecosystem across Anthropic's official enterprise plugins, understand connector scoping and access controls, and learn the process for commissioning custom connectors when marketplace options do not exist"

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/agent-skills-pattern-in-practice
 sidebar_position: 5
 title: "The PQP Framework in Practice"
 description: "Walk through a complete, annotated SKILL.md for a financial research agent and identify the quality signals that distinguish a production-ready specification from an amateur one"

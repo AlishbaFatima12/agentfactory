@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/what-a-plugin-actually-is
 sidebar_position: 1
 title: "What a Plugin Actually Is"
 description: "Understand the three layers of a Cowork plugin — the generic format, knowledge-work specialisation, and enterprise readiness evaluation — plus the transparency property that makes domain agents deployable in regulated industries"

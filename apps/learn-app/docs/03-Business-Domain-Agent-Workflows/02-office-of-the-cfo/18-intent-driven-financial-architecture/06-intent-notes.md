@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/intent-notes
 sidebar_position: 6
 title: "Intent Notes — Guardrail 3"
 description: "Learn how to create audit-ready Intent Notes — the permanent documentation attached to every AI-generated formula that records the business intent, the verified LaTeX expression, and the Named Range dependencies, ensuring institutional memory survives staff turnover and model updates"

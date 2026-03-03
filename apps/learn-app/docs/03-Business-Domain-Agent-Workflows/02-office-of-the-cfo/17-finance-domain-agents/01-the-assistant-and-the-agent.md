@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/the-assistant-and-the-agent
 sidebar_position: 1
 title: "The Assistant and the Agent"
 description: "Understand the architectural distinction between Claude in Excel (an AI assistant embedded in one workbook) and Cowork with Excel (an AI agent orchestrating across applications), and why Excel is the starting point for finance domain agents"

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/domain-management-accounting
 sidebar_position: 5
 title: "Domain 4 -- Management Accounting and Financial Management"
 description: "Explore how AI transforms the internal finance function -- FP&A, performance management, and treasury -- shifting CA/CPA professionals from model maintenance to strategic business partnering, with direct connections to the IDFA methodology from Chapter 18"

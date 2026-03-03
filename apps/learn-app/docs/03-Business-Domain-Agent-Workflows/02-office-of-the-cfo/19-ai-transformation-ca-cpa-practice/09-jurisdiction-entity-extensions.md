@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/jurisdiction-entity-extensions
 sidebar_position: 9
 title: "Building Jurisdiction and Entity Extensions"
 description: "Build two domain extensions that transform generic finance plugins into jurisdiction-aware, entity-specific agents — encoding tax rules, filing deadlines, chart of accounts structures, and documentation requirements as standing SKILL.md instructions"

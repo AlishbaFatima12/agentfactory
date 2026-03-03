@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/chapter-quiz
 sidebar_position: 12
 title: "Chapter 18: Intent-Driven Financial Architecture Quiz"
 ---

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/hands-on-exercise
 sidebar_position: 9
 title: "Hands-On Exercise — First Extraction and SKILL.md Draft"
 description: "Apply the full Knowledge Extraction Method to your own professional domain: conduct a structured interview, write a first-draft SKILL.md, design validation scenarios, score the results, and perform targeted rewrites that surface the gap between tacit knowledge and written instruction"

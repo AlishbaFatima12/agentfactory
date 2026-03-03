@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/plugin-architecture
 sidebar_position: 3
 title: "The Plugin Architecture — Router, Product Skills, Jurisdiction Overlays"
 description: "Walk through the three-layer skill architecture that makes jurisdiction-aware Islamic finance agents possible — the global router, product skill files, and jurisdiction overlays — and understand the transferable multi-jurisdiction pattern"

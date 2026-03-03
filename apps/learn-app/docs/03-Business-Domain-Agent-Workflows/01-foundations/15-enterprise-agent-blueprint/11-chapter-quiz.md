@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/chapter-quiz
 sidebar_position: 11
 title: "Chapter 15: The Enterprise Agent Blueprint Quiz"
 ---

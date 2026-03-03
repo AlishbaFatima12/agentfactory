@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/management-accounting-grc-practice-lab
 sidebar_position: 14
 title: "Management Accounting & GRC Practice Lab"
 description: "Four advanced exercises applying AI agents to management accounting and governance, risk and compliance — build a rolling cash flow forecast, automate board pack production, construct an enterprise risk register, and deploy automated regulatory compliance monitoring"

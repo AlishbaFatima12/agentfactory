@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/two-platforms-one-paradigm
 sidebar_position: 4
 title: "Two Platforms, One Paradigm"
 description: "Compare Anthropic Cowork and OpenAI Frontier architectures, understand their deployment models, and apply a decision framework for choosing the right platform for your organisation"

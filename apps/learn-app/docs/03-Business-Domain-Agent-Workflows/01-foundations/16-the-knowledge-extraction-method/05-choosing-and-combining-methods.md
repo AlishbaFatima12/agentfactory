@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/choosing-and-combining-methods
 sidebar_position: 5
 title: "Choosing and Combining Methods"
 description: "Learn which domains are primarily Method A, which are primarily Method B, and how to apply both methods with a reconciliation step when expert judgement and documented standards conflict"

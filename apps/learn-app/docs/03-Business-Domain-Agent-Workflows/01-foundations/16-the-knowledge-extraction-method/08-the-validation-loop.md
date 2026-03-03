@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/the-validation-loop
 sidebar_position: 8
 title: "The Validation Loop — From Draft to Production"
 description: "Learn how to interpret failure patterns from scenario testing, perform targeted SKILL.md rewrites without regression, enter shadow mode at the 95% threshold, and manage the graduated transition from shadow operation to autonomous deployment"

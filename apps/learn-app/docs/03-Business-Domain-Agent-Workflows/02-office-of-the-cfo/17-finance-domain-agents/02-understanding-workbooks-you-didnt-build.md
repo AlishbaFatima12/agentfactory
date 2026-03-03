@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/understanding-workbooks-you-didnt-build
 sidebar_position: 2
 title: "Understanding Workbooks You Didn't Build"
 description: "Learn to use Claude in Excel to trace formula dependency chains, map inherited model logic with cell-level citations, and comprehend financial workbooks in minutes rather than hours"

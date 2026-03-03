@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/chapter-summary
 sidebar_position: 10
 title: "Chapter Summary"
 description: "Synthesise the Knowledge Extraction Method into a connected methodology: from the articulation gap through dual extraction methods, SKILL.md translation, validation scenario design, the validation loop, and shadow mode deployment — ready for the domain-specific chapters that follow"

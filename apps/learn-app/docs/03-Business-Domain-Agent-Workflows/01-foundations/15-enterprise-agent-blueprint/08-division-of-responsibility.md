@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/division-of-responsibility
 sidebar_position: 8
 title: "The Division of Responsibility"
 description: "Map the three-way ownership model — knowledge worker owns SKILL.md, IT owns connectors, administrator owns governance — and apply it to diagnose problems and assign accountability in a deployed Cowork plugin"

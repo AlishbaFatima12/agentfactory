@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/the-intelligence-layer-skill-md
 sidebar_position: 2
 title: "The Intelligence Layer — SKILL.md"
 description: "Understand the three sections of the SKILL.md file — Persona, Questions, and Principles — and explain why each section matters functionally for producing a reliable, domain-specific agent"

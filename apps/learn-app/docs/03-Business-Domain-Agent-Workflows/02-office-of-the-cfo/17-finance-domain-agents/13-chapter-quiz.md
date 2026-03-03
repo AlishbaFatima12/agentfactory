@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/chapter-quiz
 sidebar_position: 13
 title: "Chapter 17: Finance Domain Agents Quiz"
 ---

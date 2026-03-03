@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/governance-layer
 sidebar_position: 7
 title: "The Governance Layer"
 description: "Understand how governance works in a Cowork plugin through four mechanisms: IAM-integrated permissions, audit logging and compliance capabilities, shadow mode with this book's recommended deployment protocol, and human-in-the-loop gates where human judgment is non-negotiable"

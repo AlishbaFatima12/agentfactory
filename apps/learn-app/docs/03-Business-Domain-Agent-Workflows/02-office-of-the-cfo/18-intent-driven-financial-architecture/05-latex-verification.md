@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/latex-verification
 sidebar_position: 5
 title: "LaTeX Verification -- Guardrail 2"
 description: "Learn to verify complex financial formulas (WACC, NPV, Terminal Value, IRR) in LaTeX notation before committing them to a model -- catching errors invisible in Excel's coordinate form by making mathematical structure human-readable"

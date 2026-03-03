@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/domain-accounting-financial-reporting
 sidebar_position: 2
 title: "Domain 1 — Accounting and Financial Reporting"
 description: "How AI is transforming the highest-impact CA/CPA domain — from Gen-AI capabilities in statement drafting and accounting research to agentic autonomous reporting and transaction recording agents, with real-world deployments and a hands-on month-end close exercise"

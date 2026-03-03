@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/assurance-practice-lab
 sidebar_position: 13
 title: "Assurance Practice Lab"
 description: "Three advanced exercises applying AI agents to assurance services — build a full external audit programme, deploy continuous fraud detection monitoring, and produce an internal audit report from working papers"

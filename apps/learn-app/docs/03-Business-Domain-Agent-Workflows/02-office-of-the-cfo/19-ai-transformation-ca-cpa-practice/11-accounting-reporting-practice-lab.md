@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/accounting-reporting-practice-lab
 sidebar_position: 11
 title: "Accounting & Reporting Practice Lab"
 description: "Build four complete Cowork workflows for accounting and financial reporting — autonomous bookkeeping from source documents, IFRS financial statements with full disclosure, scheduled month-end close automation, and multi-entity consolidation with intercompany elimination"

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/the-document-extraction-framework
 sidebar_position: 4
 title: "The Document Extraction Framework"
 description: "Learn the three-pass document extraction process — explicit rule extraction, contradiction mapping, and gap identification — that converts institutional documents into SKILL.md instructions while surfacing the problems naive extraction misses"

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/organisational-ai-maturity-model
 sidebar_position: 6
 title: "Organisational AI Maturity Model"
 description: "Assess any organisation's AI readiness using the five-level Organisational AI Maturity Model and determine the appropriate intervention for each level"

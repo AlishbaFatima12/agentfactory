@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/tax-advisory-practice-lab
 sidebar_position: 12
 title: "Tax & Advisory Practice Lab"
 description: "Build three complete Cowork workflows for tax and advisory practice — corporate tax computation under Pakistan's ITO 2001, M&A financial due diligence with DCF and comparable company analysis, and restructuring scenario modelling across three creditor recovery scenarios"

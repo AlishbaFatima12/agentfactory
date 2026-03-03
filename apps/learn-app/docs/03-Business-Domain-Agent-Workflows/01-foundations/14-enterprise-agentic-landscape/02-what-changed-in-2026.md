@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/what-changed-in-2026
 sidebar_position: 2
 title: "What Changed in 2026"
 description: "Understand the architectural platform shift that put knowledge workers -- not developers -- in the position of designing and deploying domain-specific AI agents"

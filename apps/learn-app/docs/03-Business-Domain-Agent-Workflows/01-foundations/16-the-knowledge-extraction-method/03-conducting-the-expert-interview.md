@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/conducting-the-expert-interview
 sidebar_position: 3
 title: "Conducting the Expert Interview"
 description: "Learn how to brief the domain expert, take notes that capture specific rather than generic knowledge, follow the conversation where the expert's experience leads, and write the north star summary that anchors the first SKILL.md draft"

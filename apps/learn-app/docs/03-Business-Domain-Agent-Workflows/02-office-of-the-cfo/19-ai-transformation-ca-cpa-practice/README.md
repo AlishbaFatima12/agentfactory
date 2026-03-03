@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice
 sidebar_position: 19
 title: "Chapter 19: AI Transformation of CA/CPA Practice Areas"
 description: "Map the five CA/CPA practice domains against the Gen-AI and Agentic AI spectrum, deploy Cowork plugins for accounting, tax, audit, management accounting, and GRC workflows, and build domain-specific agent extensions that encode your jurisdiction's professional requirements into production-ready SKILL.md files"

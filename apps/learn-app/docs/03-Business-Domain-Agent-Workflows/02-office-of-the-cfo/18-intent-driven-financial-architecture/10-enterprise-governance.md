@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/enterprise-governance
 sidebar_position: 10
 title: "Enterprise Governance"
 description: "Design the organisational controls that the IDFA plugin cannot enforce — accountability, tracking, approval workflows, and compliance metrics — using four governance artefacts that turn plugin-enforced technical guardrails into enterprise-wide financial model governance"
