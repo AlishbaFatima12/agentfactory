@@ -104,5 +104,18 @@ def sample_github_tree_response():
             {"path": "apps/learn-app/docs/02-Advanced/01-deep/02-topic.mdx", "type": "blob"},
             {"path": "other/file.md", "type": "blob"},
             {"path": "apps/learn-app/docs/01-Foundations/01-intro", "type": "tree"},
+            # Sectioned part: Part > Section > Chapter > Lesson
+            {
+                "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/14-enterprise-agentic-landscape/01-origin-story.md",
+                "type": "blob",
+            },
+            {
+                "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/14-enterprise-agentic-landscape/02-building-blocks.md",
+                "type": "blob",
+            },
+            {
+                "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/01-cowork-plugin.md",
+                "type": "blob",
+            },
         ],
     }

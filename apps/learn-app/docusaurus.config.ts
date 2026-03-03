@@ -349,6 +349,44 @@ const config: Config = {
     ],
   ],
   plugins: [
+    // Client-side redirects for old flat chapter URLs → new sectioned URLs
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          // Section I: Foundations (Ch 14-16)
+          {
+            from: "/docs/Business-Domain-Agent-Workflows/enterprise-agentic-landscape",
+            to: "/docs/Business-Domain-Agent-Workflows/foundations/enterprise-agentic-landscape",
+          },
+          {
+            from: "/docs/Business-Domain-Agent-Workflows/enterprise-agent-blueprint",
+            to: "/docs/Business-Domain-Agent-Workflows/foundations/enterprise-agent-blueprint",
+          },
+          {
+            from: "/docs/Business-Domain-Agent-Workflows/the-knowledge-extraction-method",
+            to: "/docs/Business-Domain-Agent-Workflows/foundations/the-knowledge-extraction-method",
+          },
+          // Section II: Office of the CFO (Ch 17-20)
+          {
+            from: "/docs/Business-Domain-Agent-Workflows/finance-domain-agents",
+            to: "/docs/Business-Domain-Agent-Workflows/office-of-the-cfo/finance-domain-agents",
+          },
+          {
+            from: "/docs/Business-Domain-Agent-Workflows/intent-driven-financial-architecture",
+            to: "/docs/Business-Domain-Agent-Workflows/office-of-the-cfo/intent-driven-financial-architecture",
+          },
+          {
+            from: "/docs/Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice",
+            to: "/docs/Business-Domain-Agent-Workflows/office-of-the-cfo/ai-transformation-ca-cpa-practice",
+          },
+          {
+            from: "/docs/Business-Domain-Agent-Workflows/islamic-finance-domain-agents",
+            to: "/docs/Business-Domain-Agent-Workflows/office-of-the-cfo/islamic-finance-domain-agents",
+          },
+        ],
+      },
+    ],
     "../../libs/docusaurus/plugin-og-image",
     "../../libs/docusaurus/plugin-structured-data",
     // Summaries Plugin - Makes .summary.md content available via useGlobalData()
