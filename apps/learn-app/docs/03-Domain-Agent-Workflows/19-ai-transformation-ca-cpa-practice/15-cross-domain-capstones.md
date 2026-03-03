@@ -109,7 +109,6 @@ teaching_guide:
       expected_response: "The critical professional judgment is in Step 8 — evaluating whether identified misstatements, individually and in aggregate, are material to the financial statements. This determines the audit opinion. The AI agent can compile misstatements, calculate their aggregate effect, and draft the opinion language in ISA 700 format. But the decision about whether the accounts are 'true and fair' — and the professional liability that attaches to signing that opinion — belongs to the CA/CPA."
 ---
 
-import Flashcards from '@site/src/components/Flashcards';
 
 # Cross-Domain Capstones
 
@@ -542,7 +541,6 @@ cannot replace.
 
 **What you are learning:** The professional judgment boundary is not abstract — it is specific to each workflow. By analysing your own exercise output, you map exactly where AI execution ends and professional responsibility begins. The critical insight is that professional liability attaches to judgment decisions, not execution steps. Understanding this boundary is how you articulate your value proposition in an AI-augmented practice.
 
-<Flashcards />
 
 ---
 

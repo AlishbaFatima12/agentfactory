@@ -118,7 +118,6 @@ teaching_guide:
       expected_response: "The unrealised profit elimination in closing inventory. It requires understanding the IFRS 10 principle that all traces of intra-group profit must be eliminated until goods are sold to a third party — not just applying a formula."
 ---
 
-import Flashcards from '@site/src/components/Flashcards';
 
 # Accounting & Reporting Practice Lab
 
@@ -653,7 +652,6 @@ elimination specifically, explain:
 
 **What you are learning:** Consolidation verification requires you to think beyond the mechanics of the current period. The unrealised profit elimination reverses the following year — meaning a consolidation error in one period compounds in the next. Understanding this temporal dimension is what separates a CA/CPA reviewing consolidated statements from a bookkeeper applying rules to a single period.
 
-<Flashcards />
 
 ---
 

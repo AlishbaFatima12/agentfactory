@@ -100,7 +100,6 @@ teaching_guide:
       expected_response: "Global instructions persist across all sessions, ensuring every workflow reflects your jurisdiction, currency, reporting standards, and practice conventions without repeating them. This prevents inconsistency and saves time."
 ---
 
-import Flashcards from '@site/src/components/Flashcards';
 
 # Cowork Workflows for CA/CPA Practice
 
@@ -327,7 +326,6 @@ available on my platform?
 
 **What you are learning:** Cross-app workflows are powerful but have platform constraints. Designing the workflow before implementing it reveals whether your deliverable can be produced in a single orchestrated session or requires manual handoffs. The fallback question is practical — not every practitioner has the required platform configuration, and knowing the manual alternative ensures you are never blocked.
 
-<Flashcards />
 
 ---
 

@@ -677,6 +677,7 @@ skills:
 | Code without Output       | No evidence claim works                   | Add `**Output:**` after every code block |
 | 12 concepts for A2        | Cognitive overload                        | Split lesson or move to B1               |
 | "Tell AI to do X"         | Passive tool paradigm                     | Show bidirectional dialogue              |
+| `import` from `@site/src/components/` | Components don't exist, breaks Docusaurus build | NEVER add MDX imports for Flashcards, Quiz, or other non-existent components. Flashcards are YAML sidecar files (`.flashcards.yaml`), not React components. |
 
 ---
 

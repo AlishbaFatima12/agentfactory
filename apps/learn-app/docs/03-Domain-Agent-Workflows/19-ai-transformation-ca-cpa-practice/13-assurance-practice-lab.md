@@ -329,7 +329,6 @@ to a board that expects clear, direct communication.
 
 **What you are learning:** Forming an audit opinion is the highest-value professional judgment in internal audit. The agent can summarise findings and draft language — but the opinion itself requires weighing the severity of findings against the adequacy of management responses and the organisation's risk appetite. This prompt helps you practise the judgment that distinguishes a competent auditor from a mechanical report writer.
 
-<Flashcards />
 
 ---
 

@@ -304,7 +304,6 @@ Give me a 90-day development plan.
 
 **What you are learning:** The practitioner implications section of this lesson is abstract until you apply it to your own career. By mapping your current tasks against the automation categories and building a personal development plan, you convert domain knowledge into career strategy — the most valuable output of this entire chapter.
 
-<Flashcards />
 
 ---
 
