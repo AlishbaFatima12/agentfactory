@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint
 sidebar_position: 15
 title: "Chapter 15: The Enterprise Agent Blueprint"
 description: "Understand the anatomy of a Cowork plugin — SKILL.md files, the plugin package structure, MCP connectors, the governance layer, ownership model, and marketplace that make enterprise agent deployment possible"

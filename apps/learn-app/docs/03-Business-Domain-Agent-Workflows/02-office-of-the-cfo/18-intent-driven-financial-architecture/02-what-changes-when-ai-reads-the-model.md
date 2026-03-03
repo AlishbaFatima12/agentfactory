@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/what-changes-when-ai-reads-the-model
 sidebar_position: 2
 title: "What Changes When AI Reads the Model"
 description: "Discover the core distinction between Coordinate-First and Logic-First financial modelling by comparing how Claude analyses the same Gross Profit formula written two ways — coordinate references versus Named Ranges — and why the quality gap in AI analysis translates directly into a business capability gap"

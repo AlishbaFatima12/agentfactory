@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/malaysia-sukuk
 sidebar_position: 8
 title: "Malaysia Sukuk — The World's Largest Market"
 description: "Explore Malaysia's dominance of the global sukuk market, apply MFRS 9 and IAS 32 to sukuk musharakah issuance, examine the SRI Sukuk Framework for green and sustainable sukuk, and complete a comprehensive Tenaga Nasional Berhad corporate sukuk exercise"

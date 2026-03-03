@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/full-practice-deployment-reflection
 sidebar_position: 16
 title: "Full Practice Deployment and Reflection"
 description: "Build and deploy the complete AI-augmented CA/CPA practice — install all plugins, configure jurisdiction-specific global instructions, validate every domain workflow, schedule month-end automation, run cross-domain integration, document the deployment, stress-test with edge cases, and answer the five questions that define your professional future"

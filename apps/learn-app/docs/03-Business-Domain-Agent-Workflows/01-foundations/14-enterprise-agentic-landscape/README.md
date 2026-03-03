@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape
 sidebar_position: 14
 title: "Chapter 14: The Enterprise Agentic Landscape"
 description: "Understand why enterprise AI stalled, what changed in 2026, and why knowledge workers — not developers — are the central figures in the enterprise agentic era"

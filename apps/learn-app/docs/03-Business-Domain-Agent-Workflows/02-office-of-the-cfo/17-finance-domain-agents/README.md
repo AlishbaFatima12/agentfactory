@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents
 sidebar_position: 17
 title: "Chapter 17: Finance Domain Agents"
 description: "Learn to deploy Claude as a financial analysis assistant inside Excel, orchestrate multi-application finance workflows through Cowork plugins, and build enterprise extensions that encode your organisation's specific financial expertise into production-ready SKILL.md files"

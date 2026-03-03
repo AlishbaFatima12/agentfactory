@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/cross-border-consolidation
 sidebar_position: 15
 title: "Cross-Border Islamic Banking Group — Consolidation"
 description: "Navigate the consolidation challenge facing every Islamic banking group operating across AAOIFI and IFRS jurisdictions — reclassifying IAH funds, eliminating intra-group murabaha, resolving transfer pricing for mudarib fees, and producing dual-framework group financial statements"

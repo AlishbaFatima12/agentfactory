@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/four-monetisation-models
 sidebar_position: 5
 title: "Four Monetisation Models"
 description: "Understand the four ways domain agents create and capture value -- Success Fee, Subscription, License, and Marketplace -- with pricing benchmarks and domain-specific guidance"

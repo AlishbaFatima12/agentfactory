@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/sukuk
 sidebar_position: 6
 title: "Sukuk — Global Islamic Capital Markets"
 description: "Master sukuk accounting from both issuer and investor perspectives, apply the SPPI test to distinguish debt-like and equity-like sukuk, and build multi-jurisdiction accounting for a GCC sukuk issuance across four investor jurisdictions"

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/chapter-quiz
 sidebar_position: 11
 title: "Chapter 16: The Knowledge Extraction Method Quiz"
 ---

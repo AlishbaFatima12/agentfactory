@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/named-range-priority
 sidebar_position: 4
 title: "Named Range Priority — Guardrail 1"
 description: "Build the GP Waterfall Calculation layer using zero coordinate references — every formula reads as a plain-English business rule that survives row insertions, team handovers, and AI interpretation without a single cell click"

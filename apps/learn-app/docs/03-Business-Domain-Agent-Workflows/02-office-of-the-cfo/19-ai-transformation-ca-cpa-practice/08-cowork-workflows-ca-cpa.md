@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/cowork-workflows-ca-cpa
 sidebar_position: 8
 title: "Cowork Workflows for CA/CPA Practice"
 description: "Walk through a complete month-end close as a Cowork workflow — from automated morning reconciliations through management accounts to board-ready presentations — then set up cross-app orchestration and global instructions for your CA/CPA practice"

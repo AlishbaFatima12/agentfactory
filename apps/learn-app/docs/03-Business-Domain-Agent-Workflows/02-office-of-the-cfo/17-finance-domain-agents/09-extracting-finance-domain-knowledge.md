@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/extracting-finance-domain-knowledge
 sidebar_position: 9
 title: "Extracting Finance Domain Knowledge"
 description: "Apply the Knowledge Extraction Method from Chapter 16 to a CFO's monthly close judgment, walking through the Five Questions with finance-specific examples and producing a first-draft SKILL.md for firm-specific close workflows"

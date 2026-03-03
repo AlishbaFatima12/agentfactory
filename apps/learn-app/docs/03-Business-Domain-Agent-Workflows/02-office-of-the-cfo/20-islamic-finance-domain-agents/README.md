@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents
 sidebar_position: 20
 title: "Chapter 20: Islamic Finance Domain Agents"
 description: "Build jurisdiction-aware AI agents for global Islamic finance using a router, product skill, and jurisdiction overlay architecture that handles AAOIFI, IFRS, and local standards across 20 jurisdictions — ensuring the same transaction produces the correct accounting output under every framework"

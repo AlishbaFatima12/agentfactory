@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/agent-skills-market-analysis
 sidebar_position: 4
 title: "The Six Agent Skills: Market Analysis"
 description: "Learn to use the Comparable Company Analysis and Discounted Cash Flow Agent Skills in Claude in Excel -- building professional comps workbooks and DCF models through structured prompts, live market data, and sensitivity analysis"

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/uk-islamic-banking
 sidebar_position: 10
 title: "UK Islamic Banking — IFRS, PRA/FCA, and HMRC"
 description: "Examine the UK as the leading Western Islamic finance centre, apply IFRS 9 substance-over-form analysis to diminishing musharaka home finance, explain HMRC tax equivalence under Finance Act 2005, and complete an Al Rayan Bank exercise covering DM accounting, tax characterisation, construction finance, and PRA regulatory capital"

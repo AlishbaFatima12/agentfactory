@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/the-financial-services-plugin-suite
 sidebar_position: 7
 title: "The Financial Services Plugin Suite"
 description: "Navigate the financial-services-plugins ecosystem — 41 skills, 38 commands, 11 MCP integrations across 7 plugins — understanding the mandatory install order, shared MCP architecture, and end-to-end workflows for investment banking, equity research, private equity, and wealth management"

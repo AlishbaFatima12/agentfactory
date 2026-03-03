@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/the-five-capabilities
 sidebar_position: 11
 title: "The Five Capabilities — Capstone"
 description: "Formally validate all five Finance Domain Agent capabilities — Intent Synthesis, Deterministic What-If, Logic De-compilation, Strategic Goal-Seeking, and Stochastic Simulation — on the GP Waterfall model built throughout the chapter, extended with OpEx and EBITDA"

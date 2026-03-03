@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/domain-tax-non-assurance-advisory
 sidebar_position: 3
 title: "Domain 2 — Tax and Non-Assurance Advisory"
 description: "Analyse the bifurcation of tax practice into highly automatable compliance work and judgment-intensive advisory work, explore Gen-AI and agentic AI capabilities for tax research, computation, due diligence, and restructuring, and build a tax research workflow using AI"

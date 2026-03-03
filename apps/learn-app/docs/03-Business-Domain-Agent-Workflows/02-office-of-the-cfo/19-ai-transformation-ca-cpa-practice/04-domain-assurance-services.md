@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/domain-assurance-services
 sidebar_position: 4
 title: "Domain 3 — Assurance Services"
 description: "Examine how AI transforms assurance services from sampling-based audit to population-level testing, explore Gen-AI and agentic capabilities for audit documentation, contract analysis, risk identification, and continuous monitoring, and build an AI-assisted audit risk assessment"

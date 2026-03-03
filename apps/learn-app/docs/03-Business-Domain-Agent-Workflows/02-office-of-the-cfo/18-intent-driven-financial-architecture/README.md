@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture
 sidebar_position: 18
 title: "Chapter 18: Intent-Driven Financial Architecture"
 description: "Learn the Intent-Driven Financial Architecture (IDFA) — Panaversity original research that replaces coordinate-based formulas with Named Range business rules, making every financial model human-readable, AI-operable, and mathematically audit-proof through four deterministic guardrails and five Finance Domain Agent capabilities"

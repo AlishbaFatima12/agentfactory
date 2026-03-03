@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/retrofitting-existing-models
 sidebar_position: 8
 title: "Retrofitting Existing Models"
 description: "Convert legacy coordinate-based financial models to IDFA compliance using a systematic five-phase process — inspect, identify inputs, order dependencies, rewrite formulas one at a time, and validate that every output matches the original"

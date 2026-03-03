@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/knowledge-worker-at-the-centre
 sidebar_position: 3
 title: "Knowledge Worker at the Centre"
 description: "Distinguish between AI displacement and AI amplification, understand why deep domain expertise creates a defensible moat, and see how encoding knowledge into a SKILL.md file is the core mechanism of Part 3"

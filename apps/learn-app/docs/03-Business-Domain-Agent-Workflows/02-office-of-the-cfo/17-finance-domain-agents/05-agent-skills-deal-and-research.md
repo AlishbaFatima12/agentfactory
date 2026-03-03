@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/agent-skills-deal-and-research
 sidebar_position: 5
 title: "The Six Agent Skills: Deal and Research"
 description: "Learn to use the four deal-focused and research-focused Agent Skills — Due Diligence Data Pack, Company Teaser, Earnings Analysis, and Initiating Coverage Report — and understand the non-negotiable boundaries of AI-assisted financial analysis"

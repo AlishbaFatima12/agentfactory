@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/nigeria-sovereign-sukuk
 sidebar_position: 11
 title: "Nigeria Sovereign Sukuk — African Infrastructure Finance"
 description: "Examine Nigeria as Africa's most active sovereign sukuk issuer, apply IFRS to sovereign sukuk from issuer, investor, and contractor perspectives, explore the CBN Non-Interest Banking Framework, and complete a comprehensive FGN sovereign sukuk exercise demonstrating that Islamic finance structures only affect parties to the Shariah contract"

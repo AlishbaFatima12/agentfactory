@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method
 sidebar_position: 16
 title: "Chapter 16: The Knowledge Extraction Method"
 description: "Learn the structured methodology for surfacing tacit professional knowledge from expert heads and institutional documents, translating it into production-ready SKILL.md files, and validating through scenario testing and shadow mode deployment"

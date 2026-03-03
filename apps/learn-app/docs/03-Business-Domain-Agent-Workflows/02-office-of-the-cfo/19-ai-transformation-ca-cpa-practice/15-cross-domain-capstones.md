@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/cross-domain-capstones
 sidebar_position: 15
 title: "Cross-Domain Capstones"
 description: "Integrate all five CA/CPA practice domains in two capstone exercises — a full new client onboarding workflow and a three-session annual audit cycle from planning through to the audit opinion"

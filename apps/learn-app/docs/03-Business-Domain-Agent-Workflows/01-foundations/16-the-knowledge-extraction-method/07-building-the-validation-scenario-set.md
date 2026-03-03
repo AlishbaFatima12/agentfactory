@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/building-the-validation-scenario-set
 sidebar_position: 7
 title: "Building the Validation Scenario Set"
 description: "Learn how to design a validation scenario set with four categories — standard, edge, adversarial, and high-stakes — at defined proportions, and score outputs on accuracy, calibration, and boundary compliance to determine when a SKILL.md is ready for shadow mode"

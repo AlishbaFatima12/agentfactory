@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/chapter-quiz
 sidebar_position: 10
 title: "Chapter 14: The Enterprise Agentic Landscape Quiz"
 ---

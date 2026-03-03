@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/three-level-context-system
 sidebar_position: 4
 title: "The Three-Level Context System"
 description: "Understand how enterprise platforms enforce context hierarchies through platform, organisation, and plugin levels — and apply the diagnostic sequence to identify why a SKILL.md instruction may not be honoured"

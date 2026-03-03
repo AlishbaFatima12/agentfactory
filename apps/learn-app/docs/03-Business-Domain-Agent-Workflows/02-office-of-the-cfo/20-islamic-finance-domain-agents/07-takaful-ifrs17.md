@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/takaful-ifrs17
 sidebar_position: 7
 title: "Takaful and IFRS 17 — Islamic Insurance"
 description: "Master the takaful operating model, resolve the fundamental IFRS 17 question of who is the insurer in a wakala model, account for qard hasan obligations, and build takaful financial statements across Malaysia, UAE, and UK jurisdictions"

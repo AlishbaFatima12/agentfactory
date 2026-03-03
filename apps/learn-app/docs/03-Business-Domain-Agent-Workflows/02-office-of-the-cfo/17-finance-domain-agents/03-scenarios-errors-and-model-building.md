@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/scenarios-errors-and-model-building
 sidebar_position: 3
 title: "Scenarios, Errors, and Model Building"
 description: "Learn to test financial scenarios without destroying base cases, diagnose and fix Excel formula errors from symptom to source, and commission complete model structures from plain-language descriptions using Claude in Excel"

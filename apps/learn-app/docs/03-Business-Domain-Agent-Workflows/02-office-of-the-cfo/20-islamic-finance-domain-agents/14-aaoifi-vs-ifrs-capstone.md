@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/aaoifi-vs-ifrs-capstone
 sidebar_position: 14
 title: "AAOIFI vs IFRS — Full Financial Statements"
 description: "Build complete AAOIFI financial statements for a Bahraini Islamic bank, reconcile the five most material AAOIFI/IFRS differences with USD impact, produce IFRS financial statements from reconciling adjustments, compare key ratios under both frameworks, and draft an auditor's risk assessment for framework tension"

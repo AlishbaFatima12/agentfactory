@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/the-seven-domains
 sidebar_position: 7
 title: "The Seven Domains"
 description: "Explore the seven professional domains where domain expertise is hardest to encode and where Cowork's connector infrastructure makes production deployment practical: Finance, Legal, Sales, HR, Healthcare, Architecture, and Technical Documentation."

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/ijarah-imb
 sidebar_position: 5
 title: "Ijarah and IMB — Four-Jurisdiction Lease Accounting"
 description: "Master ijarah and ijarah muntahia bittamleek accounting across AAOIFI FAS 32 and IFRS 16, analyse the fundamental balance sheet divergence between frameworks, and build cross-jurisdiction lease schedules for Bahrain, Malaysia, UAE, and UK"

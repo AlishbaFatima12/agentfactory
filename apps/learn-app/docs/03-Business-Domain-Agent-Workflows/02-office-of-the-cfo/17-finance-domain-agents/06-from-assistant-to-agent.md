@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/from-assistant-to-agent
 sidebar_position: 6
 title: "From Assistant to Agent: Cowork Finance Plugins"
 description: "Learn how the architecture shifts from Claude in Excel as an embedded assistant to Cowork as an orchestrating agent, explore the knowledge-work-plugins/finance plugin with its five commands and six skills, and understand the category placeholder system that separates workflow knowledge from connector configuration"

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/cowork-plugin-marketplace
 sidebar_position: 9
 title: "The Cowork Plugin Marketplace"
 description: "Understand how the Cowork Plugin Marketplace distributes domain expertise through vertical skill packs and connector packages, and assess whether your own knowledge qualifies as publishable"
@@ -165,7 +166,7 @@ Non-transferable knowledge is knowledge that only has value in the context of yo
 
 The IP distinction is not complicated, but it requires honest self-assessment. The easiest test: could a practitioner at a competitor organisation, using only publicly available information and general professional training, arrive at the same knowledge independently? If yes, it is transferable. If the knowledge depends on access to your clients, your cases, your systems, or your internal documents to make sense, it is not transferable.
 
-This test also connects directly to the marketplace economics covered in [Chapter 14 Lesson 5](/docs/Business-Domain-Agent-Workflows/foundations/enterprise-agentic-landscape/four-monetisation-models). The Marketplace model is most economically attractive for domain expertise that is valuable across many organisations but not dependent on any single organisation's proprietary context. Revenue per subscriber runs in the range of hundreds of pounds per month. Marginal cost of each additional subscriber is effectively zero. The economic case is strong — but only for knowledge that genuinely qualifies.
+This test also connects directly to the marketplace economics covered in [Chapter 14 Lesson 5](/docs/Business-Domain-Agent-Workflows/enterprise-agentic-landscape/four-monetisation-models). The Marketplace model is most economically attractive for domain expertise that is valuable across many organisations but not dependent on any single organisation's proprietary context. Revenue per subscriber runs in the range of hundreds of pounds per month. Marginal cost of each additional subscriber is effectively zero. The economic case is strong — but only for knowledge that genuinely qualifies.
 
 ## Skill Packs Versus Connector Packages: A Summary
 

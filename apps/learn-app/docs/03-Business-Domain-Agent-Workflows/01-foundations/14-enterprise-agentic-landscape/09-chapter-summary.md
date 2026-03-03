@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/chapter-summary
 sidebar_position: 9
 title: "Chapter Summary"
 description: "Synthesise the enterprise agentic landscape frameworks into a connected decision system: from diagnosing why enterprise AI stalled, through platform selection, monetisation, maturity assessment, and domain mapping, to preparing your first deployment conversation."

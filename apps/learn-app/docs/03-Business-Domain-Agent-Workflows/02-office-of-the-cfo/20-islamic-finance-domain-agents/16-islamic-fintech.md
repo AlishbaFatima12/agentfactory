@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/islamic-fintech
 sidebar_position: 16
 title: "Islamic Fintech — Accounting for New Structures"
 description: "Examine how Islamic fintech is scaling faster than standard-setters can respond — digital murabaha platforms, Shariah-compliant robo-advisers, P2P Islamic lending, and green impact sukuk — and develop accounting positions for structures the frameworks have not yet addressed"

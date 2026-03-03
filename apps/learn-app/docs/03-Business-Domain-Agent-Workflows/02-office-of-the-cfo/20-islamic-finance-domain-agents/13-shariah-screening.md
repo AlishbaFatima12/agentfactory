@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/shariah-screening
 sidebar_position: 13
 title: "Shariah Portfolio Screening — Global Standards"
 description: "Apply four competing Shariah equity screening methodologies — SC Malaysia, Tadawul, AAOIFI Standard 21, and MSCI Islamic — to a global portfolio, calculate purification obligations from quarterly dividends, analyze screening divergence where the same company passes one methodology but fails another, and build a quarterly Cowork screening workflow"

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/the-coordinate-trap
 sidebar_position: 1
 title: "The Coordinate Trap"
 description: "Understand Formula Rot — the four symptoms of coordinate-based financial models that cause silent breakage, logic diffusion, audit burden, and AI opacity — and why forty years of spreadsheet design created a foundation that works against both human auditors and AI agents"

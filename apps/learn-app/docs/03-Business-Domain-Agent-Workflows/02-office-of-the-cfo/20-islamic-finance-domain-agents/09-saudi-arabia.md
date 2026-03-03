@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/saudi-arabia
 sidebar_position: 9
 title: "Saudi Arabia — Vision 2030, ZATCA Zakat, and Al Rajhi"
 description: "Examine Saudi Arabia's IFRS framework with KSA-specific rules, compute ZATCA zakat using the equity-based formula, benchmark against Al Rajhi Bank's IFRS presentation standards, and complete a comprehensive Alinma Bank accounting review exercise"

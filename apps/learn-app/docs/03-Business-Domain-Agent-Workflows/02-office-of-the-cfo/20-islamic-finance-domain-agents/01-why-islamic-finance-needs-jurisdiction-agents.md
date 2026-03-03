@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/why-islamic-finance-needs-jurisdiction-agents
 sidebar_position: 1
 title: "Why Islamic Finance Needs Jurisdiction-Aware Agents"
 description: "Why a $4.5 trillion global industry spanning 80+ countries and three accounting regimes demands AI agents that know which jurisdiction they are operating in before producing a single accounting entry"

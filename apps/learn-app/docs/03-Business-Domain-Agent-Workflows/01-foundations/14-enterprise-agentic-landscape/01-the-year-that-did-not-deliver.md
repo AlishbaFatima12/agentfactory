@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/the-year-that-did-not-deliver
 sidebar_position: 1
 title: "The Year That Did Not Deliver"
 description: "Understand why enterprise AI adoption stalled in 2024-2025, identify the Pilot Trap pattern, and recognise the structural knowledge transfer gap between domain experts and system builders"

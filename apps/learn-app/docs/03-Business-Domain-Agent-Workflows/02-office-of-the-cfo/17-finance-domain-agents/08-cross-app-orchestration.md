@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/cross-app-orchestration
 sidebar_position: 8
 title: "Cross-App Orchestration"
 description: "Learn how cross-app orchestration connects Excel analysis to PowerPoint deliverables in a single workflow, why structural consistency eliminates copy-paste disconnection risk, and what distinguishes an AI agent from an AI assistant at the architectural level"

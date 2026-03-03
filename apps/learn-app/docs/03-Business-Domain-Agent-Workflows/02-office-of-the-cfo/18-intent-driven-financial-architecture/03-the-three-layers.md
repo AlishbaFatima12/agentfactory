@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/the-three-layers
 sidebar_position: 3
 title: "The Three Layers"
 description: "Learn to structure any financial model using IDFA's three layers — Assumptions, Calculations, and Output — with Named Range isolation that makes every formula readable, auditable, and AI-operable"

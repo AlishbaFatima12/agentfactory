@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/full-skill-library-capstone
 sidebar_position: 17
 title: "Full Islamic Finance Agent — SKILL.md Library Build"
 description: "Deploy the complete 25-file Islamic finance SKILL.md library — 12 product skills and 13 jurisdiction overlays — with the global routing skill, scheduled tasks, a multi-jurisdiction test suite, and the agent capability statement that draws the line between agent execution and SSB judgment"

@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/finance-domain-agents/enterprise-extensions-risk-and-compliance
 sidebar_position: 10
 title: "Enterprise Extensions — Risk and Compliance"
 description: "Design SKILL.md extensions for credit risk frameworks, regulatory reporting automation, investment policy statement compliance, and portfolio attribution — encoding institutional knowledge that generic plugins cannot provide"

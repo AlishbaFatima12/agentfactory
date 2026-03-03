@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/global-standards-map
 sidebar_position: 2
 title: "The Global Standards Map — Three Regimes, One Transaction"
 description: "A 20-jurisdiction reference map of Islamic finance accounting standards, four-jurisdiction murabaha comparison, and the three accounting regimes that every jurisdiction-aware agent must route through"

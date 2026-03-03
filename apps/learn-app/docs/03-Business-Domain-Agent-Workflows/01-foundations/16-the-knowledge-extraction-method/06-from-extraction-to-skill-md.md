@@ -1,4 +1,5 @@
 ---
+slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/from-extraction-to-skill-md
 sidebar_position: 6
 title: "From Extraction to SKILL.md"
 description: "Learn how to translate extraction outputs into a production-quality SKILL.md — writing a Persona using three extraction-focused questions that address Chapter 15's four structural elements, a Questions section with equal precision on scope and out-of-scope, and Principles that are specific and testable rather than vague"
