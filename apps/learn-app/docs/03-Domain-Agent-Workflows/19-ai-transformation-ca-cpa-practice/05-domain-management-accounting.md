@@ -103,7 +103,6 @@ teaching_guide:
       expected_response: "An autonomous FP&A agent collects financial data from source systems, updates the rolling forecast model, identifies significant variances, generates explanatory commentary, and distributes the management reporting pack. It does not challenge management's assumptions, stress-test strategic plans, or make business partnering recommendations -- those judgment tasks remain with the finance professional."
 ---
 
-import Flashcards from '@site/src/components/Flashcards';
 
 # Domain 4 -- Management Accounting and Financial Management
 
@@ -295,7 +294,6 @@ shift from model maintenance to business partnering.
 
 **What you are learning:** The professional shift in management accounting is not theoretical -- it is a measurable reallocation of time. By mapping your own work against the automation spectrum, you identify which parts of your current role face displacement and which become more valuable. This is the same analysis the domain overview presents at the profession level, applied to your specific context.
 
-<Flashcards />
 
 ---
 

@@ -232,7 +232,6 @@ oversight checkpoint you would require before deployment.
 
 **What you are learning:** The Gen-AI vs Agentic AI distinction is not binary — it is a spectrum with clear markers. By classifying real tasks and designing oversight checkpoints, you build the judgment framework you will apply throughout every domain lesson in this chapter.
 
-<Flashcards />
 
 ---
 

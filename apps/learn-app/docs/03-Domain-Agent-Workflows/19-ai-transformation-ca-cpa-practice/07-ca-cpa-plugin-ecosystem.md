@@ -104,7 +104,6 @@ teaching_guide:
       expected_response: "Layer 1 (knowledge-work-plugins/finance) covers core accounting workflows — journal entries, reconciliations, financial statements, variance analysis, and SOX testing. Layer 2 (financial-services-plugins) extends into investment-facing work — financial analysis, equity research, private equity, and wealth management."
 ---
 
-import Flashcards from '@site/src/components/Flashcards';
 
 # The CA/CPA Plugin Ecosystem
 
@@ -308,7 +307,6 @@ For each service:
 
 **What you are learning:** A plugin stack is not one-size-fits-all. The combination of plugins, commands, and global instructions should match your firm's service lines. Planning the stack before installing forces you to think about your practice as a system of workflows rather than a collection of tasks — the same shift from tactical to strategic that separates a practitioner from a practice leader.
 
-<Flashcards />
 
 ---
 

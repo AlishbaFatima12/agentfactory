@@ -383,7 +383,6 @@ first, and why?
 
 **What you are learning:** Compliance risk prioritisation requires weighing financial penalties, reputational damage, and personal liability for officers. By ranking actual compliance failures by overall severity rather than chronological order, you develop the judgment to present compliance status to the Audit Committee in a way that focuses their attention on what matters most — not what happened most recently.
 
-<Flashcards />
 
 ---
 

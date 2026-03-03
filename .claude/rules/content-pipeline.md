@@ -143,6 +143,20 @@ See the YAML Frontmatter section above. Every field is required.
 - All adoption numbers verified
 - All quotes verified
 
+## MDX Import Rules (CRITICAL)
+
+**NEVER add `import` statements for components that don't exist in `apps/learn-app/src/components/`.**
+
+Known non-existent components (DO NOT IMPORT):
+- `@site/src/components/Flashcards` — Flashcards are `.flashcards.yaml` sidecar files, NOT React components
+- `@site/src/components/Quiz` — Quizzes are generated via `/quiz-generator` skill, NOT imported components
+
+**Rule**: Before adding ANY `import` from `@site/src/components/`, verify the component exists: `ls apps/learn-app/src/components/`. If it doesn't exist, DO NOT import it. Invalid imports break the Docusaurus build.
+
+**Incident**: Ch 19 (2026-03-03) — 10 files shipped with phantom Flashcards/Quiz imports, broke Vercel production build.
+
+---
+
 ## Fact-Checking (Mandatory)
 
 ### Chapter 2 Incident (2025-12-26)

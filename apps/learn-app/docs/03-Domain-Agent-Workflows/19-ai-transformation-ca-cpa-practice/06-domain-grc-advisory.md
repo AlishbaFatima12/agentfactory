@@ -103,7 +103,6 @@ teaching_guide:
       expected_response: "The monitoring agent sits primarily in the second line (oversight functions) -- it monitors whether the first line (operational management) is managing risk effectively by checking transactions, process executions, and system events against the control framework. It can also support the third line (independent assurance) by providing continuous data for internal audit. The agent does not sit in the first line because it does not own or manage operational risk -- it monitors and reports on it."
 ---
 
-import Flashcards from '@site/src/components/Flashcards';
 
 # Domain 5 -- Governance, Risk and Compliance Advisory
 
@@ -298,7 +297,6 @@ concrete professional skills like "monitoring programme design" or
 
 **What you are learning:** GRC is described as the domain where advisory judgment is most resilient -- but resilience is not automatic. By mapping your specific role against the automation spectrum, you identify which parts of your current work face displacement (manual testing, routine reporting) and which new skills you need to develop (monitoring programme design, agent governance, threshold calibration) to remain valuable in the continuous monitoring model.
 
-<Flashcards />
 
 ---
 

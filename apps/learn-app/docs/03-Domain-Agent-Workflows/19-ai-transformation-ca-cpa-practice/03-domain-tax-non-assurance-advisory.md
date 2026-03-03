@@ -102,7 +102,6 @@ teaching_guide:
       expected_response: "Gen-AI capability: tax research — the AI synthesises tax law, case law, and rulings to answer a specific technical question and produce a structured memo. Agentic capability: autonomous tax compliance agent — the agent executes the full return preparation process (extracting data, applying rules, computing liability, preparing the return) with the human role limited to review and sign-off. The difference is that Gen-AI assists a specific task within a human workflow, while the agentic system executes the full workflow autonomously."
 ---
 
-import Flashcards from '@site/src/components/Flashcards';
 
 # Domain 2 — Tax and Non-Assurance Advisory
 
@@ -280,7 +279,6 @@ as the firm's current annual revenue for calculations.
 
 **What you are learning:** The strategic implications of AI in tax practice extend beyond individual tasks. By modelling firm-level scenarios, you develop the commercial judgment that senior practitioners need — understanding not just which tasks AI can handle, but how automation reshapes the business model of professional services firms. This is the kind of analysis that AI assists but cannot make alone, because it requires understanding the firm's competitive position, client relationships, and market dynamics.
 
-<Flashcards />
 
 ---
 

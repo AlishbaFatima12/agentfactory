@@ -104,7 +104,6 @@ teaching_guide:
       expected_response: "An autonomous audit agent executes audit procedures — extracting data, running analytical procedures, testing reconciliations, selecting and testing samples, documenting results — and produces a draft audit file for senior review. It automates the execution of a traditional annual audit. A continuous audit agent monitors financial transactions in real time, flagging anomalies and potential misstatements as they occur throughout the year, rather than examining them retrospectively after year-end. The autonomous agent changes how audit is done; the continuous agent changes when audit is done."
 ---
 
-import Flashcards from '@site/src/components/Flashcards';
 
 # Domain 3 — Assurance Services
 
@@ -294,7 +293,6 @@ Present the analysis with a recommendation.
 
 **What you are learning:** The commercial implications of AI in audit extend beyond efficiency. By modelling the economics at firm level — including the competitive dynamics of first-mover advantage — you develop the strategic judgment that partners and senior managers need. The competitive scenario in point 4 is particularly important: it shows why adopting continuous monitoring is not optional for firms that want to maintain market position.
 
-<Flashcards />
 
 ---
 

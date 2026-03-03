@@ -393,7 +393,6 @@ handle — then write an additional instruction to cover that case.
 
 **What you are learning:** Chart of accounts extensions must be comprehensive enough to eliminate manual recoding but not so exhaustive that they become unmaintainable. By drafting five mappings, two documentation rules, and one restricted account — then immediately stress-testing for edge cases — you learn the practical balance between coverage and complexity that makes extensions sustainable in real practice.
 
-<Flashcards />
 
 ---
 
