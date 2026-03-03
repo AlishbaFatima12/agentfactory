@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-title: "Part 3: Domain Agent Workflows — Building for the Enterprise"
+title: "Part 3: Business Domain Agent Workflows — Building for the Enterprise"
 ---
 
-# Part 3: Domain Agent Workflows — Building for the Enterprise
+# Part 3: Business Domain Agent Workflows — Building for the Enterprise
 
 ## Introduction & Overview
 
@@ -133,4 +133,4 @@ Let's begin.
 
 ---
 
-*Part 3 begins with Chapter 14: The Enterprise Agentic Landscape.*
+_Part 3 begins with Chapter 14: The Enterprise Agentic Landscape._

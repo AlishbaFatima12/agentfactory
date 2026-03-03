@@ -1,4 +1,4 @@
-# Part 3: Domain-Agent-Workflows — Context Notes for Chapter 18
+# Part 3: Business-Domain-Agent-Workflows — Context Notes for Chapter 18
 
 **Source**: Full read of all 43 lessons across chapters 14-17 (Part 3).
 **Date**: 2026-03-02
@@ -8,7 +8,7 @@
 
 ## Part 3 Overview
 
-**Path**: `apps/learn-app/docs/03-Domain-Agent-Workflows/`
+**Path**: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/`
 **Chapters**: 14-17 (4 chapters, ~43 lessons, all draft status)
 **Theme**: Enterprise AI deployment — from strategic landscape to domain-specific application
 

@@ -4,7 +4,7 @@
 
 ## Overview
 
-Chapter 17 is the first domain chapter in Part 3 (Domain Agent Workflows). It teaches finance professionals to use Claude in Excel, Cowork finance plugins, and to build enterprise extensions via SKILL.md authoring.
+Chapter 17 is the first domain chapter in Part 3 (Business Domain Agent Workflows). It teaches finance professionals to use Claude in Excel, Cowork finance plugins, and to build enterprise extensions via SKILL.md authoring.
 
 ## Source Materials
 
