@@ -125,15 +125,18 @@ class TestBookTree:
         assert part2["slug"] == "02-Advanced"
         assert len(part2["chapters"]) == 1
 
-        # Part 3: Sectioned part with chapter inside section folder
+        # Part 3: Sectioned part with chapters inside section folder
         part3 = data["parts"][2]
         assert part3["slug"] == "03-Business-Domain-Agent-Workflows"
-        assert len(part3["chapters"]) == 1
+        assert len(part3["chapters"]) == 2
         ch14 = part3["chapters"][0]
         assert ch14["slug"] == "14-enterprise-agentic-landscape"
         assert ch14["section_slug"] == "01-foundations"
         assert ch14["section_title"] == "Foundations"
         assert len(ch14["lessons"]) == 2
+        # Section-level README must NOT appear as a phantom chapter
+        section_slugs = [c["slug"] for c in part3["chapters"]]
+        assert "01-foundations" not in section_slugs
 
     async def test_tree_is_cached_in_redis(self, client, make_token, fake_redis_client):
         """Second tree request should hit Redis cache, not GitHub."""

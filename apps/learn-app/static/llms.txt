@@ -48,13 +48,16 @@ Pedagogical approach: YAML frontmatter with Bloom's taxonomy objectives, CEFR A1
 - [Chapter 19: AI Transformation of CA/CPA Practice](https://agentfactory.panaversity.org/docs/Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice): Audit, tax, advisory AI agents for accounting firms
 - [Chapter 20: Islamic Finance Domain Agents](https://agentfactory.panaversity.org/docs/Business-Domain-Agent-Workflows/islamic-finance-domain-agents): Sharia-compliant financial agents
 
-### Sections III–VII — Planned
-- Chapter 21: AI-Based Financial Advisory (Section II)
-- Chapter 22: Sales & Marketing Agents (Section III — The Growth Engine)
-- Chapters 23–24: Architecture & Supply Chain Agents (Section IV — Product & Value Chain)
-- Chapters 25–27: HR, Operations & Customer Support Agents (Section V — People & Efficiency)
-- Chapter 28: Legal Agents (Section VI — Legal & Compliance)
-- Chapter 29: Innovation Agents (Section VII — The Innovation Lab)
+### Sections II–VII — Planned
+- Chapter 21: Banking-Specific AI — IFRS 9 ECL, Basel III/IV, and AML/KYC (Section II — Office of the CFO)
+- Chapter 22: Sales, RevOps & Marketing (Section III — The Growth Engine)
+- Chapter 23: Supply Chain & Procurement (Section IV — Product & Value Chain)
+- Chapter 24: Product Management (Section IV — Product & Value Chain)
+- Chapter 25: People & Organisational Operations / HR (Section V — People & Efficiency)
+- Chapter 26: Operations (Section V — People & Efficiency)
+- Chapter 27: Productivity & The Agentic Office (Section V — People & Efficiency)
+- Chapter 28: Legal Operations and Compliance (Section VI — Legal & Compliance)
+- Chapter 29: The Intrapreneurship Agent (Section VII — The Innovation Lab)
 
 ## Part 4: Coding for Problem Solving
 

@@ -201,13 +201,26 @@ GITHUB_TREE_RESPONSE = {
             "path": "apps/learn-app/docs/02-Advanced/01-deep-dive/02-topic-b.mdx",
             "type": "blob",
         },
-        # Sectioned part: Part > Section > Chapter > Lesson
+        # Sectioned part: _category_.json signals section folders
+        {
+            "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/_category_.json",
+            "type": "blob",
+        },
         {
             "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/14-enterprise-agentic-landscape/01-origin-story.md",
             "type": "blob",
         },
         {
             "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/14-enterprise-agentic-landscape/02-building-blocks.md",
+            "type": "blob",
+        },
+        {
+            "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/01-cowork-plugin.md",
+            "type": "blob",
+        },
+        # Section-level files (must NOT create phantom chapters)
+        {
+            "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/README.md",
             "type": "blob",
         },
     ],
