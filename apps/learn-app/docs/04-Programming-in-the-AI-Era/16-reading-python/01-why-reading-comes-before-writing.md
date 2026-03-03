@@ -72,6 +72,18 @@ James's mistake was not using AI. His mistake was trusting output he could not r
 
 ---
 
+## How AI Generates Code
+
+You have watched AI produce Python in seconds. But what is actually happening when it generates those fifty lines? Understanding the answer explains why reading is non-negotiable.
+
+An AI coding assistant does not understand Python the way you will. It has been trained on billions of lines of existing code and text, learning statistical patterns -- which tokens tend to follow which other tokens. When you ask it to "write a function that calculates the average of a list," it predicts the most likely sequence of characters based on patterns it has seen in its training data. The result often looks correct because that pattern is common and well-represented.
+
+But "most likely next token" is not the same as "correct." The AI does not run the code in its head. It does not ask itself "does this handle an empty list?" or "will this return the right type?" It produces the statistically probable answer, not the verified one. A student who has read one thousand function signatures and traced two hundred expressions will catch errors that the AI itself cannot catch -- because the AI never checked in the first place.
+
+This is the deeper reason reading matters. The discipline stack from Chapter 15 automates part of the verification -- Pyright checks types, ruff checks style, pytest checks behavior. But none of them check whether the code does what *you* intended. That verification is your unique contribution, and it starts with reading.
+
+---
+
 ## Reading Is Not Passive
 
 When most people hear "read code," they picture scanning. Eyes move across lines, words register vaguely, and the reader reaches the end with a general impression but no precise understanding. That is not reading. That is skimming.
