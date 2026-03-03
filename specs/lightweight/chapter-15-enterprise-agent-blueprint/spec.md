@@ -4,7 +4,7 @@
 **Part:** 3 (Business Domain Agent Workflows)
 **Preceding Chapter:** 14 — The Enterprise Agentic Landscape
 **Following Chapter:** 16 — The Knowledge Extraction Method
-**Target Path:** `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/`
+**Target Path:** `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/`
 **Governing Artifact:** Provided by user — full chapter prose (~8,500 words)
 
 ---
@@ -274,13 +274,13 @@ A lesson that defines a Cowork plugin precisely — not marketing, but architect
 **Input context:**
 
 - Read `CLAUDE.md` and `.claude/rules/content-pipeline.md` for format requirements
-- Read `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/14-enterprise-agentic-landscape/01-the-year-that-did-not-deliver.md` as format reference
+- Read `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/14-enterprise-agentic-landscape/01-the-year-that-did-not-deliver.md` as format reference
 - Read governing artifact "What a Plugin Actually Is" section as source text
 - Read Chapter 14 L04 (`04-two-platforms-one-paradigm.md`) lines covering SKILL.md/config.yaml/connectors to avoid re-explanation
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/01-what-a-plugin-actually-is.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/01-what-a-plugin-actually-is.md`
 - Format: Markdown with full YAML frontmatter
 - Length: ~1,200-1,500 words (prose content)
 
@@ -322,7 +322,7 @@ A lesson covering the SKILL.md as the intelligence layer of a Cowork plugin. Tea
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/02-the-intelligence-layer-skill-md.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/02-the-intelligence-layer-skill-md.md`
 - Length: ~2,000-2,500 words
 
 ---
@@ -359,7 +359,7 @@ A lesson combining config.yaml (Component Two) and connector scripts (Component 
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/03-configuration-and-integration-layers.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/03-configuration-and-integration-layers.md`
 - Length: ~1,800-2,200 words
 
 ---
@@ -391,7 +391,7 @@ A lesson cataloguing the production MCP connector ecosystem and the process for 
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/06-mcp-connector-ecosystem.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/06-mcp-connector-ecosystem.md`
 - Length: ~1,800-2,200 words
 
 ---
@@ -427,7 +427,7 @@ A lesson explaining Cowork's three-level context hierarchy: Platform (Anthropic,
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/04-three-level-context-system.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/04-three-level-context-system.md`
 - Length: ~1,200-1,500 words
 
 ---
@@ -459,7 +459,7 @@ A lesson presenting a complete, annotated SKILL.md for a financial research agen
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/05-agent-skills-pattern-in-practice.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/05-agent-skills-pattern-in-practice.md`
 - Length: ~2,200-2,800 words
 
 ---
@@ -492,7 +492,7 @@ A lesson covering the four governance mechanisms: permissions and access control
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/07-governance-layer.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/07-governance-layer.md`
 - Length: ~2,000-2,500 words
 
 ---
@@ -524,7 +524,7 @@ A lesson establishing the three-way ownership model: knowledge worker → SKILL.
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/08-division-of-responsibility.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/08-division-of-responsibility.md`
 - Length: ~1,200-1,500 words
 
 ---
@@ -555,7 +555,7 @@ A lesson on the marketplace: vertical skill packs (domain-specific SKILL.md temp
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/09-cowork-plugin-marketplace.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/09-cowork-plugin-marketplace.md`
 - Length: ~1,200-1,500 words
 
 ---
@@ -580,7 +580,7 @@ A synthesis lesson that traces the full architecture: plugin definition → thre
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/10-chapter-summary.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/10-chapter-summary.md`
 - Length: ~800-1,200 words
 
 ---
@@ -603,7 +603,7 @@ Chapter README following the exact format of Chapter 14's README.md. Include: ti
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/README.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/README.md`
 
 ---
 
@@ -626,7 +626,7 @@ Chapter README following the exact format of Chapter 14's README.md. Include: ti
 
 **Output:**
 
-- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/11-chapter-quiz.md`
+- File: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/11-chapter-quiz.md`
 
 ---
 

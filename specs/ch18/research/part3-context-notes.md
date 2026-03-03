@@ -16,6 +16,8 @@
 
 ## Ch14: The Enterprise Agentic Landscape (9 lessons + quiz)
 
+**Path**: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/14-enterprise-agentic-landscape/`
+
 ### Arc
 
 Why enterprise AI stalled (2024-25 "Pilot Trap") → what changed in 2026 (platform shift) → knowledge worker as central figure → Cowork vs Frontier decision framework → monetisation models → maturity model → seven domains → deployment conversations
@@ -32,7 +34,7 @@ Why enterprise AI stalled (2024-25 "Pilot Trap") → what changed in 2026 (platf
 
 ### Domain Chapter References (from L07)
 
-- Ch17-18: Finance and Banking
+- Ch17-18: Finance and Banking (in `02-office-of-the-cfo`)
 - Ch19: Legal and Compliance
 - Ch20: Sales and Revenue
 - Ch21: HR and Operations
@@ -49,6 +51,8 @@ Why enterprise AI stalled (2024-25 "Pilot Trap") → what changed in 2026 (platf
 ---
 
 ## Ch15: The Enterprise Agent Blueprint (10 lessons + quiz)
+
+**Path**: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/`
 
 ### Arc
 
@@ -90,6 +94,8 @@ plugin-name/
 ---
 
 ## Ch16: The Knowledge Extraction Method (9 lessons + exercise + quiz)
+
+**Path**: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/16-the-knowledge-extraction-method/`
 
 ### Arc
 
@@ -134,6 +140,8 @@ Credit analyst throughout — consistent and coherent across all lessons
 ---
 
 ## Ch17: Finance Domain Agents (12 lessons + quiz)
+
+**Path**: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/17-finance-domain-agents/`
 
 ### Arc
 

@@ -2,7 +2,7 @@
 
 **Date**: 2026-02-27
 **Manager Agent**: Phase 1 — Gap Analysis
-**Chapter Path**: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/14-enterprise-agentic-landscape/`
+**Chapter Path**: `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/14-enterprise-agentic-landscape/`
 **Spec Source**: Inline chapter spec provided by user
 
 ---
@@ -256,7 +256,7 @@
 
 - **Spec requires**: Chapter 14 closes with "Chapter 15 describes what that agent looks like from the inside. Chapter 15 opens the blueprint."
 - **Current draft**: Lesson 08 ends with "Chapter 15 opens the blueprint." Lesson 09 ends with "Chapter 15 gives you the technical architecture that makes deployment real."
-- **Note**: Chapter 15 (`03-Business-Domain-Agent-Workflows/15-enterprise-agent-blueprint/`) does NOT exist yet in the filesystem. This is a forward reference to content that has not been written.
+- **Note**: Chapter 15 (`03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/`) does NOT exist yet in the filesystem. This is a forward reference to content that has not been written.
 - **Assessment**: ⚠️ Forward reference is planted but target chapter doesn't exist yet. Not a Chapter 14 problem per se.
 
 ### Forward References to Chapters 17-24

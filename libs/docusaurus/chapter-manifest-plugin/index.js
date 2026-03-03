@@ -74,6 +74,23 @@ function segmentToTitle(segment) {
 
 const normalizeToDocId = require("../shared/normalizeToDocId");
 
+/**
+ * Auto-detect parts that use section folders (Part > Section > Chapter > Lesson).
+ * A section folder is identified by a _category_.json at depth 2 inside a part,
+ * matching the Python auto-detection in content-api/services/book_tree.py.
+ */
+function detectSectionedParts(docsDir) {
+  const categoryFiles = glob.sync("*/*/_category_.json", {
+    cwd: docsDir,
+    absolute: false,
+  });
+  const parts = new Set();
+  for (const f of categoryFiles) {
+    parts.add(f.split("/")[0]);
+  }
+  return parts;
+}
+
 module.exports = function chapterManifestPlugin(context, options) {
   const { docsPath = "docs" } = options;
 
@@ -82,6 +99,7 @@ module.exports = function chapterManifestPlugin(context, options) {
 
     async loadContent() {
       const docsDir = path.join(context.siteDir, docsPath);
+      const sectionedParts = detectSectionedParts(docsDir);
       const chapters = {};
       const docToChapter = {};
 
@@ -113,7 +131,18 @@ module.exports = function chapterManifestPlugin(context, options) {
           }
 
           const partSegment = segments[0]; // e.g., "02-AI-Tool-Landscape"
-          const chapterSegment = segments[1]; // e.g., "05-claude-code-features-and-workflows"
+
+          // Sectioned parts: Part > Section > Chapter > Lesson (4+ segments)
+          // Other parts:     Part > Chapter > Lesson (3+ segments)
+          let chapterSegment;
+          if (sectionedParts.has(partSegment) && segments.length >= 4) {
+            chapterSegment = segments[2]; // e.g., "14-enterprise-agentic-landscape"
+          } else if (sectionedParts.has(partSegment)) {
+            // Section-level files (e.g., Section/README.md) — skip
+            continue;
+          } else {
+            chapterSegment = segments[1]; // e.g., "05-claude-code-features-and-workflows"
+          }
 
           // Create chapter key (preserves numeric prefixes for sorting)
           const chapterKey = `${partSegment}/${chapterSegment}`;

@@ -4,7 +4,7 @@
 **Part:** 3 (Business Domain Agent Workflows)
 **Preceding Chapter:** 15 — The Enterprise Agent Blueprint
 **Following Chapter:** 17 — Finance Domain Agents
-**Target Path:** `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/16-the-knowledge-extraction-method/`
+**Target Path:** `apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/16-the-knowledge-extraction-method/`
 **Governing Artifact:** Provided by user — full chapter prose (~8,000 words)
 
 ---
