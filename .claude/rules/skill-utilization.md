@@ -60,6 +60,7 @@ Research:
 
 Creation:
 - /skill-validator              → Validate skill quality
+- /companion-repo               → Create & publish chapter companion repos with downloadable zips
 ```
 
 ## Skill Invocation Rule
