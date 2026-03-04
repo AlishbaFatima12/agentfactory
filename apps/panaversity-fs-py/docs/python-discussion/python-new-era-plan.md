@@ -141,6 +141,42 @@ Each chapter includes:
 - **"If you're new to programming" callouts**: Extra explanation of fundamentals
 - **"If you've coded before" callouts**: What's different in this approach
 
+### Dual-Track Callout Directive (Chapter Author Rule)
+
+Every lesson must include Docusaurus admonition callouts wherever terminology or concepts may confuse one audience. These are not optional polish — they are structural requirements for serving both tracks.
+
+**Format** (Docusaurus admonition syntax):
+
+```markdown
+:::note If you're new to programming
+A **virtual environment** is like a private toolbox for one project. The tools
+in one toolbox do not interfere with tools in another. You never need to manage
+this toolbox yourself -- uv creates it and keeps it organized automatically.
+:::
+
+:::note If you've coded before
+You may know Python as "dynamically typed." This course adds static type
+annotations checked by pyright in strict mode. The annotations are not optional
+documentation -- they are required guardrails. If you have written Python
+without types, the workflow here will feel different by design.
+:::
+```
+
+**When to add callouts:**
+
+| Trigger | Beginner callout | Experienced callout |
+|---------|-----------------|---------------------|
+| New terminology (e.g., "virtual environment", "type annotation", "assertion") | Plain-English analogy explaining the concept | Skip — they already know it |
+| Concept that contradicts prior experience (e.g., "types are required", "tests before code") | Skip — they have no prior experience to conflict with | Explain what is different and why |
+| Tool or workflow unfamiliar to both (e.g., TDG, PRIMM, uv) | Simple analogy | How it compares to tools/workflows they already know |
+| Complex code example with multiple new concepts | Break down each piece in plain English | Highlight what is Python-specific vs general programming |
+
+**Rules:**
+- At least one callout of each type per chapter (more in early phases, fewer in later phases)
+- Callouts should be 2-4 sentences — concise, not mini-lessons
+- Place callouts immediately after the concept they explain, not at the end of a section
+- Never let a technical term appear for the first time without either an inline explanation or a beginner callout
+
 ---
 
 ## 5. The Python Feature Map (Two Reference Books → Our Framing)
@@ -219,6 +255,17 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 ---
 
 ## 7. Chapter Plan (26 Chapters, 9 Phases)
+
+### Onboarding Directive: Phase 1 Must Handle True Beginners
+
+Part 4 serves students who have completed Parts 1-3 (AI prompting, file processing, version control) but have **never written code**. The leap from "I can prompt Claude Code" to "I can write a failing pytest test" is real.
+
+**Phase 1 chapters (Ch 1-3) must:**
+
+1. **Show every command with expected output.** Never say "install uv" without showing the exact terminal command and what success looks like. Include common errors and fixes (wrong PATH, permission denied, Windows vs Mac differences).
+2. **Explain every tool before using it.** Before running `uv run pytest`, explain what pytest is and why it exists — in one sentence, not a lecture. A beginner callout can expand for those who need more.
+3. **Never assume terminal fluency beyond Parts 1-3.** Students can `cd`, `ls`, and run commands. They cannot debug environment issues, resolve PATH conflicts, or interpret cryptic error messages without guidance.
+4. **Make the first TDG cycle (Ch 3) feel small.** The student writes 5 lines (a type signature + 2 assertions). AI writes 20. The ratio should feel empowering, not intimidating. Frame it as: "You already know how to tell AI what you want. Now you are telling it with types and tests instead of English."
 
 ---
 
