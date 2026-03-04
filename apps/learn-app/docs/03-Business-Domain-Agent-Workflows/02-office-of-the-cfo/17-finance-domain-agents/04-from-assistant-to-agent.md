@@ -80,7 +80,7 @@ teaching_guide:
   session_group: 2
   session_title: "The Cowork Architecture"
   key_points:
-    - "Claude in Excel has native workbook access; Cowork uses connectors to reach multiple applications -- the shift is from embedded assistant to orchestrating agent"
+    - "Claude in Excel has native workbook access via its sidebar; Cowork has built-in file skills for Office formats and uses connectors only for enterprise systems (ERP, data warehouse) -- the shift is from embedded assistant to orchestrating agent"
     - "Skills fire passively when contextually relevant; commands are explicitly invoked -- the combination produces specialist behaviour, not just tool access"
     - "The category placeholder system (~~erp, ~~data warehouse) is an architectural insight: plugins describe workflows, IT configures connections"
     - "The month-end close workflow demonstrates how commands and skills work together across multiple days, with the close-management skill providing continuous context"
@@ -92,11 +92,11 @@ teaching_guide:
     - "Why does the plugin use ~~erp instead of 'NetSuite'? What does this tell you about who the plugin is designed for?"
     - "If you were a controller starting a month-end close, which would you interact with first -- a command or a skill? Why?"
   teaching_tips:
-    - "The architecture shift is the most important concept: Claude in Excel has native access to the open workbook. Cowork uses connectors to reach across applications. The difference is scope -- embedded assistant vs orchestrating agent -- not a shared connector set."
+    - "The architecture shift is the most important concept: Claude in Excel has native access to the open workbook via its sidebar. Cowork has built-in file skills for Excel and PowerPoint, and uses connectors only for enterprise systems. The difference is scope -- embedded assistant vs orchestrating agent."
     - "The month-end close walkthrough is the anchor example. Walk through it day by day, showing how commands produce outputs and skills provide context."
   assessment_checks:
     - question: "What changes when Claude operates through Cowork instead of inside Excel?"
-      expected_response: "The scope of what Claude can do. In Excel, Claude works as an embedded assistant within one workbook with native access. Through Cowork, Claude uses connectors to orchestrate across multiple applications -- carrying context from Excel to PowerPoint, querying enterprise systems, and executing multi-step workflows."
+      expected_response: "The scope of what Claude can do. In Excel, Claude works as an embedded assistant within one workbook via its sidebar. Through Cowork, Claude has built-in file skills for Office formats and uses connectors for enterprise systems -- it can carry context from Excel to PowerPoint, query data warehouses, and execute multi-step workflows."
     - question: "What is the difference between a skill and a command in a Cowork plugin?"
       expected_response: "A command is explicitly invoked by typing /command-name and triggers a specific workflow. A skill fires automatically in the background whenever Claude judges it contextually relevant. Commands are what you call; skills are what Claude draws on."
     - question: "Why does CONNECTORS.md use ~~erp instead of naming a specific product?"
@@ -113,10 +113,10 @@ This lesson requires the **Claude desktop app** with **Cowork** enabled. Cowork 
 1. **Install the Claude desktop app** if you have not already — download it from [claude.ai/download](https://claude.ai/download) for macOS or Windows.
 2. **Switch to the Cowork tab.** Open the Claude desktop app and select the **Cowork** tab. If you do not see it, your plan may not include Cowork — check your subscription at [claude.ai/settings](https://claude.ai/settings).
 3. **Install the finance plugin.** In the Cowork sidebar, click **Customize** → **Browse plugins**, find the **Finance** plugin (`knowledge-work-plugins/finance`), and click **Install**. The plugin bundles skills, slash commands, and connector definitions into a single package — the workflows are ready to use immediately.
-4. **Enable connectors for live data.** From the same **Customize** menu, select **Connectors** to browse and enable data integrations (such as your ERP, data warehouse, or office suite). The plugin references connector categories like `~~erp` and `~~data warehouse` in its workflows — once you enable the matching connector, those workflows pull data automatically. Some connectors require a separate subscription or API key from the provider. For enterprise deployments, your IT team can pre-provision connectors across the organisation through the admin console.
+4. **Enable connectors for enterprise data (optional).** Cowork can read and create Excel, PowerPoint, Word, and PDF files directly through built-in file skills — no connectors needed for these. From the **Customize** menu, select **Connectors** only if your workflows need to reach enterprise systems like your ERP or data warehouse. The plugin references connector categories like `~~erp` and `~~data warehouse` — once you enable the matching connector, those workflows pull data automatically. Some connectors require a separate subscription or API key from the provider. For enterprise deployments, your IT team can pre-provision connectors through the admin console.
    :::
 
-This lesson crosses that boundary. When Claude operates through the Cowork platform, it is not embedded in Excel the way a sidebar is embedded in a workbook. It is an agent that can act across applications, carry context from one tool to another, and execute multi-step workflows that span the entire production process of a financial deliverable. Claude in Excel has native access to the open workbook -- no connectors needed. Cowork uses connectors to reach across applications. The most significant change is scope: from analysing within one workbook to orchestrating across many tools.
+This lesson crosses that boundary. When Claude operates through the Cowork platform, it is not embedded in Excel the way a sidebar is embedded in a workbook. It is an agent that can act across applications, carry context from one tool to another, and execute multi-step workflows that span the entire production process of a financial deliverable. Claude in Excel has native access to the open workbook through a sidebar. Cowork has built-in file skills for Excel, PowerPoint, Word, and PDF -- it can read and create these files directly without connectors. Connectors are needed only when workflows reach enterprise systems like data warehouses, ERPs, or BI platforms. The most significant change is scope: from analysing within one workbook to orchestrating across many tools and data sources.
 
 ## The Architecture Shift: From One Tool to Many
 
@@ -124,7 +124,7 @@ The distinction between an embedded assistant and an orchestrating agent is a sc
 
 Claude in Excel handles the first step well. It can reconcile accounts, generate statements, and analyse variances inside the workbook. But when the controller closes Excel and opens PowerPoint, Claude's context resets. The analysis that took fifteen minutes to produce must be manually carried forward.
 
-Cowork treats these transitions as steps in a single workflow rather than as separate tasks. The controller specifies the outcome -- a formatted management deck with variance commentary based on the March close -- and Claude manages the sequence. Where Claude in Excel had native access to one workbook, Cowork uses connectors to reach Excel, PowerPoint, the data warehouse, and email -- feeding an orchestrated workflow that spans multiple deliverables.
+Cowork treats these transitions as steps in a single workflow rather than as separate tasks. The controller specifies the outcome -- a formatted management deck with variance commentary based on the March close -- and Claude manages the sequence. Where Claude in Excel had native access to one workbook through its sidebar, Cowork can read and create Excel and PowerPoint files directly through built-in file skills, and uses connectors to reach enterprise systems like the data warehouse and email -- feeding an orchestrated workflow that spans multiple deliverables.
 
 > **What Is Cross-App Orchestration?**
 >
