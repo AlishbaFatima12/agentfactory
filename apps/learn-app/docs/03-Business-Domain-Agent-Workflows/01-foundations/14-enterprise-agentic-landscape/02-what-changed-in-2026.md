@@ -213,6 +213,8 @@ patterns do you see in early adoption decisions?
 **What you're learning:** How to evaluate enterprise technology shifts using analyst commentary and adoption signals rather than vendor marketing. This research skill is essential for any knowledge worker making technology recommendations within their organisation.
 
 
+
+
 ## Flashcards Study Aid
 
 <Flashcards />

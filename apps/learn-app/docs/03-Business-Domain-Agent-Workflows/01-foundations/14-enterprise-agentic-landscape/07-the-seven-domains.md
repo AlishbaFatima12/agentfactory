@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/the-seven-domains
 sidebar_position: 7
 title: "The Seven Domains"
-description: "Explore the seven professional domains where domain expertise is hardest to encode and where Cowork's connector infrastructure makes production deployment practical: Finance, Legal, Sales, HR, Healthcare, Architecture, and Technical Documentation."
+description: "Explore the seven enterprise deployment domains where domain expertise is hardest to encode and where connector infrastructure makes production deployment practical: Finance, Sales & Marketing, Supply Chain, Product Management, People & Operations, Legal & Compliance, and Innovation."
 keywords:
   - enterprise domains
   - domain expertise
@@ -11,9 +11,9 @@ keywords:
   - legal agents
   - sales agents
   - HR agents
-  - healthcare operations
-  - architecture engineering
-  - technical documentation
+  - supply chain agents
+  - product management agents
+  - intrapreneurship agents
 chapter: 14
 lesson: 7
 duration_minutes: 35
@@ -80,31 +80,31 @@ teaching_guide:
     - "The methodology transfers across domains -- the chapter-by-chapter deep dives apply the same deployment framework to different expertise types"
   misconceptions:
     - "Students think these are the ONLY domains where AI agents work -- these are the clearest cases with current infrastructure, not the complete list"
-    - "Students assume Healthcare means clinical diagnosis -- the chapter explicitly covers operations, NOT clinical decision support"
     - "Students think they need to match exactly one domain -- many professionals span two or three domains"
+    - "Students assume Finance means only spreadsheets -- the CFO office covers five chapters from foundational analysis through banking regulation"
   discussion_prompts:
     - "Which domain is closest to your day-to-day work, and what institutional knowledge do you hold that a new hire would take months to acquire?"
     - "Can you think of a domain NOT on this list where the same institutional knowledge lock-in problem exists?"
   teaching_tips:
     - "Use the domain table as a quick-reference anchor -- project it and let students self-identify before reading the detailed profiles"
-    - "Healthcare is the domain most likely to generate questions about scope -- emphasise the 'operations, not clinical' boundary early"
+    - "The Finance section (five chapters) is the largest -- emphasise that it covers everything from FP&A to Islamic finance to AML compliance"
     - "Ask students to name ONE piece of institutional knowledge from their own work that is currently undocumented -- this makes the abstract concept concrete"
   assessment_checks:
     - question: "Why were these seven domains selected over other possible domains?"
-      expected_response: "They represent the clearest cases where domain expertise is both highly specific and difficult to encode, and where Cowork's connector infrastructure supports production deployment today"
+      expected_response: "They represent the clearest cases where domain expertise is both highly specific and difficult to encode, and where connector infrastructure supports production deployment today"
     - question: "What problem do all seven domains share?"
       expected_response: "Valuable institutional knowledge locked inside individual professionals, unavailable to the organisation as a whole"
 ---
 
 # The Seven Domains
 
-In the previous lesson, you assessed your organisation's readiness using the five-level maturity model. Now you need to know where to apply that readiness. Part 3 of this book is organised around seven professional domains, and each one represents a specific type of expertise that is currently locked inside individual professionals. Understanding these domains tells you where the deployment opportunities are -- and which chapter to prioritise when you are ready to build.
+In the previous lesson, you assessed your organisation's readiness using the five-level maturity model. Now you need to know where to apply that readiness. Part 3 of this book is organised around seven enterprise deployment domains, and each one represents a specific type of expertise that is currently locked inside individual professionals. Understanding these domains tells you where the deployment opportunities are -- and which section to prioritise when you are ready to build.
 
 These seven were not chosen to be comprehensive. They were chosen because they represent the clearest cases where three conditions converge: the domain expertise is highly specific, encoding that expertise is currently difficult, and the connector infrastructure exists to make production deployment practical. They are also the domains where professionals most consistently identify the same underlying problem: institutional knowledge that is valuable to the organisation but unavailable beyond the individual who holds it.
 
 ## The Common Problem: Institutional Knowledge Lock-In
 
-Before examining each domain individually, it is worth understanding what they share. Every organisation has knowledge that exists only in the heads of its most experienced people. When the senior analyst retires, when the lead architect changes firms, when the top sales performer leaves -- the organisation loses not just a person but a body of judgment, pattern recognition, and contextual understanding that was never documented.
+Before examining each domain individually, it is worth understanding what they share. Every organisation has knowledge that exists only in the heads of its most experienced people. When the senior analyst retires, when the lead counsel changes firms, when the top sales performer leaves -- the organisation loses not just a person but a body of judgment, pattern recognition, and contextual understanding that was never documented.
 
 This is institutional knowledge lock-in. It is not a technology problem. It is a knowledge transfer problem. The analyst's understanding of which data sources to trust under which conditions. The lawyer's sense of which clause patterns are genuinely dangerous in which jurisdictions. The HR director's memory of which policy exceptions are routinely granted and why. None of this is written down. All of it is valuable.
 
@@ -112,54 +112,68 @@ The seven domains that follow are where this problem is most acute -- and where 
 
 ## The Seven Domains
 
-| Domain                       | Chapter | Core Expertise at Risk                                                   |
-| ---------------------------- | ------- | ------------------------------------------------------------------------ |
-| Finance and Banking          | 17-18   | Analyst judgment on data trust, risk calibration, regulatory materiality |
-| Legal and Compliance         | 19      | Clause pattern recognition, jurisdictional risk assessment               |
-| Sales and Revenue            | 20      | Qualification heuristics, signal recognition, outreach personalisation   |
-| HR and Operations            | 21      | Policy intent, exception logic, human context behind processes           |
-| Healthcare Operations        | 22      | Prior authorisation research, compliance monitoring, documentation       |
-| Architecture and Engineering | 23      | Spatial reasoning, coordination logic, clash detection judgment          |
-| Technical Documentation      | 24      | Specification completeness standards, requirements review patterns       |
+| Domain                             | Section                     | Chapters | Core Expertise at Risk                                                                                           |
+| ---------------------------------- | --------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------- |
+| Finance and Banking                | II -- Office of the CFO     | 17--21   | Analyst judgment on data trust, risk calibration, regulatory materiality, Shariah compliance, banking regulation |
+| Sales, RevOps & Marketing          | III -- The Growth Engine    | 22       | Qualification heuristics, signal recognition, outreach personalisation, campaign optimisation                    |
+| Supply Chain & Procurement         | IV -- Product & Value Chain | 23       | Vendor judgment, three-way match expertise, logistics optimisation, demand forecasting                           |
+| Product Management                 | IV -- Product & Value Chain | 24       | Discovery-to-delivery synthesis, roadmap prioritisation, user research pattern recognition                       |
+| People & Organisational Operations | V -- People & Efficiency    | 25--27   | Policy intent, exception logic, process documentation, institutional memory, cross-agent integration             |
+| Legal & Compliance                 | VI -- Legal & Compliance    | 28       | Clause pattern recognition, jurisdictional risk assessment, contract lifecycle management                        |
+| Innovation & Intrapreneurship      | VII -- The Innovation Lab   | 29       | Lean methodology judgment, hypothesis design, venture creation with AI acceleration                              |
 
 ### Finance and Banking
 
-Corporate FP&A, investment research, credit analysis, regulatory reporting, and banking operations. The expertise at risk here is not the ability to run a financial model -- any competent analyst can do that. The expertise at risk is the senior analyst's understanding of which data sources to trust under which conditions, the banker's calibration for which risk signals actually predict credit events versus which are noise, and the CFO's judgment about which regulatory requirements are material versus which are compliance theatre.
+Five chapters -- the largest section in Part 3. The expertise at risk here is not the ability to run a financial model -- any competent analyst can do that. The expertise at risk is the senior analyst's understanding of which data sources to trust under which conditions, the banker's calibration for which risk signals actually predict credit events versus which are noise, and the CFO's judgment about which regulatory requirements are material versus which are compliance theatre.
+
+Chapter 17 builds the foundational finance agent for FP&A and valuation. Chapter 18 extends it into intent-driven financial architecture -- agents that reason about strategic intent, not just data retrieval. Chapter 19 deploys across the full range of CA and CPA practice areas: audit, tax, advisory, and client service. Chapter 20 provides the most comprehensive treatment of Islamic finance AI in any curriculum -- 26 SKILL.md files across seven jurisdiction overlays covering Murabaha, Ijarah, Sukuk, Takaful, and Zakat. Chapter 21 addresses banking-specific regulation: IFRS 9 expected credit loss models, Basel III/IV capital adequacy, and AML/KYC financial crime prevention.
 
 A new analyst joining a finance team can learn the tools in weeks. Learning which numbers to believe takes years.
 
-### Legal and Compliance
+### Sales, RevOps & Marketing
 
-Contract review and drafting, regulatory compliance monitoring, jurisdiction-specific risk assessment, and legal operations. The expertise at risk is the experienced lawyer's understanding of which clause patterns are genuinely dangerous in which contexts. A standard non-compete clause might be enforceable in one jurisdiction and meaningless in another. A data processing agreement might be compliant in Europe and insufficient in California. The senior lawyer carries this jurisdictional map in their head.
+Lead qualification, pipeline management, outreach personalisation, CRM data enrichment, and campaign performance analysis. The expertise at risk is the top performer's qualification logic: the signals, heuristics, and pattern recognitions that distinguish a prospect worth pursuing from one that will consume resources without converting. Every sales team has someone who "just knows" which leads are real. That knowledge is the deployment target.
 
-### Sales and Revenue
+Chapter 22 builds agents that scale this judgment across the entire go-to-market organisation -- from prospecting and ICP matching through pipeline forecasting to cross-channel campaign optimisation and revenue attribution.
 
-Lead qualification, pipeline management, outreach personalisation, and CRM data hygiene. The expertise at risk is the top performer's qualification logic: the signals, heuristics, and pattern recognitions that distinguish a prospect worth pursuing from one that will consume resources without converting. Every sales team has someone who "just knows" which leads are real. That knowledge is the deployment target.
+### Supply Chain & Procurement
 
-### HR and Operations
+End-to-end supply chain management -- from vendor selection and purchase order management to invoice reconciliation and logistics optimisation. The expertise at risk is the experienced procurement manager's understanding of which suppliers are reliable under which conditions, how to structure a three-way match for complex multi-line POs, and which demand signals from the sales pipeline actually predict inventory requirements versus which are noise.
 
-Onboarding, policy Q&A, institutional memory management, and process documentation. The expertise at risk is the HR director's understanding of the intent behind policies, the exceptions routinely granted, and the human context that formal documentation never captures. When someone asks "Can I work from another country for three months?" the written policy says no. The experienced HR professional knows that the answer is actually "yes, if you follow this informal process that has worked for the last four cases."
+Chapter 23 deploys agents across vendor management, automated RFQ processing, duty and compliance, and demand forecasting that integrates sales pipeline data with inventory planning.
 
-### Healthcare Operations
+### Product Management
 
-Prior authorisation research, patient communication workflows, compliance monitoring, and clinical documentation support. This domain comes with an explicit boundary: **NOT clinical decision support or diagnosis.** The governance requirements for clinical decisions are different in kind from operational decisions, and the deployment frameworks in this book are designed for operations.
+Discovery to delivery -- from user research synthesis through feature specification to roadmap prioritisation and stakeholder communication. The expertise at risk is the senior product manager's ability to synthesise customer feedback, technical constraints, business priorities, and market signals into a coherent decision about what to build next. That synthesis is the most valuable thing a product manager does, and it is the hardest to transfer.
 
-The expertise at risk is the experienced administrator's knowledge of which prior authorisation pathways are likely to succeed, which documentation patterns satisfy compliance reviewers, and which communication approaches reduce patient friction.
+Chapter 24 builds agents that transform product management from reactive coordination into proactive strategic capability -- using frameworks like RICE and WSJF for priority scoring, automating user research thematic analysis, and generating sprint updates and release notes.
 
-### Architecture and Engineering
+### People & Organisational Operations
 
-BIM coordination, Revit queries, coordination reports, clash detection, and RFI generation. This domain uses a custom MCP server for Revit model interaction. The expertise at risk is the lead architect's spatial reasoning and coordination logic -- the ability to look at a building information model and identify clashes that the software flags as warnings but experience says are critical problems, or clashes that the software misses entirely because they require understanding construction sequence.
+Three chapters covering the infrastructure that determines whether an organisation can execute consistently at scale. The expertise at risk spans three layers: the HR director's understanding of the intent behind policies and the exceptions routinely granted (Chapter 25), the operations leader's knowledge of which processes actually run the business versus which are documented but ignored (Chapter 26), and the integration layer that connects all domain agents into a coherent agentic office (Chapter 27).
 
-### Technical Documentation and Specification
+When someone asks "Can I work from another country for three months?" the written policy says no. The experienced HR professional knows that the answer is actually "yes, if you follow this informal process that has worked for the last four cases." That gap between written policy and institutional practice is the knowledge at risk.
 
-PRD authoring, specification drafting, and requirements review. The expertise at risk is the senior technical writer's understanding of what constitutes a complete specification. Not complete in the sense of "all sections filled in," but complete in the sense of "a developer reading this will not need to come back with questions." That distinction between structural completeness and functional completeness is the knowledge that takes years to develop.
+Chapter 27 is the integration chapter -- it connects the domain agents from Chapters 17 through 26 into a workplace AI layer that knows your organisation's people, projects, terminology, and priorities.
+
+### Legal & Compliance
+
+Contract lifecycle management, legal operations, regulatory compliance monitoring, jurisdiction-specific risk assessment, and IP protection. The expertise at risk is the experienced lawyer's understanding of which clause patterns are genuinely dangerous in which contexts. A standard non-compete clause might be enforceable in one jurisdiction and meaningless in another. A data processing agreement might be compliant in Europe and insufficient in California. The senior lawyer carries this jurisdictional map in their head.
+
+Chapter 28 gives significant treatment to Legal Operations Agents -- the emerging practice of deploying AI specifically within legal department workflows. The governance principle in this domain is non-negotiable: certain decisions must always involve a qualified attorney regardless of how accurate an agent becomes.
+
+### Innovation & Intrapreneurship
+
+The culmination of Part 3. Chapter 29 asks what happens when the capability to build, deploy, and govern domain-specific AI agents is applied not to optimising an existing enterprise, but to creating a new one. It combines Lean Startup methodology, Design Thinking, and Agile with AI-accelerated execution -- for both the intrapreneur within a large enterprise and the founder building from scratch.
+
+The expertise at risk is the experienced venture builder's judgment about which hypotheses to test, which MVPs to build, and which market signals indicate a genuine opportunity versus a mirage. Chapter 29 draws on domain agents from across the entire curriculum and shows how an AI-native startup is structurally different from a traditional one.
 
 ## Cross-Domain Methodology Transfer
 
 Although each domain has unique expertise types, the deployment methodology is the same across all seven. Every domain deployment follows the same pattern:
 
 1. **Identify** the institutional knowledge at risk
-2. **Encode** that knowledge into agent instructions
+2. **Encode** that knowledge into agent instructions (SKILL.md files)
 3. **Connect** the agent to domain-specific data sources via connectors
 4. **Deploy** with appropriate governance for the domain's risk profile
 5. **Validate** against the expertise of the professional whose knowledge was encoded
@@ -168,11 +182,11 @@ This is why Part 3 can address seven different domains with a consistent framewo
 
 ## Finding Your Domain
 
-Most professionals reading this chapter will recognise their work in one or two of these domains immediately. Some will find themselves at the intersection of multiple domains -- an architect who also writes technical specifications, a compliance officer who also manages HR policy, a sales leader who also handles financial reporting.
+Most professionals reading this chapter will recognise their work in one or two of these domains immediately. Some will find themselves at the intersection of multiple domains -- a compliance officer who also manages HR policy, a sales leader who also handles financial reporting, a product manager who also runs procurement processes.
 
-If your work does not map neatly to any single domain, that is normal. The domain chapters (17-24) are designed to be read selectively. Read the one closest to your expertise first. The deployment patterns you learn there will transfer to any adjacent domain.
+If your work does not map neatly to any single domain, that is normal. The domain sections (Chapters 17--29) are designed to be read selectively. Read the section closest to your expertise first. The deployment patterns you learn there will transfer to any adjacent domain.
 
-If your work falls entirely outside these seven domains, the frameworks still apply. The maturity model, the monetisation models, the platform comparison -- all of these are domain-agnostic. The seven domain chapters simply provide the most detailed deployment guides for the domains where the infrastructure is most mature.
+If your work falls entirely outside these seven domains, the frameworks still apply. The maturity model, the monetisation models, the platform comparison -- all of these are domain-agnostic. The seven domain sections simply provide the most detailed deployment guides for the domains where the infrastructure is most mature.
 
 ## Try With AI
 
@@ -182,11 +196,12 @@ Use these prompts in Anthropic Cowork or your preferred AI assistant to explore 
 
 ```
 I work in [YOUR ROLE AND INDUSTRY]. Based on the seven enterprise AI
-domains (Finance, Legal, Sales, HR, Healthcare Operations,
-Architecture/Engineering, Technical Documentation), which domain or
-combination of domains best matches my work? Identify three specific
-pieces of institutional knowledge I likely hold that would be valuable
-to encode into an agent.
+deployment domains (Finance & Banking, Sales & Marketing, Supply Chain
+& Procurement, Product Management, People & Operations, Legal &
+Compliance, Innovation & Intrapreneurship), which domain or combination
+of domains best matches my work? Identify three specific pieces of
+institutional knowledge I likely hold that would be valuable to encode
+into an agent.
 ```
 
 **What you're learning:** How to map your own professional expertise to the domain framework. The AI will help you identify knowledge you carry unconsciously -- the judgment calls and pattern recognitions you make automatically that a new colleague would take months to develop.
@@ -195,26 +210,14 @@ to encode into an agent.
 
 ```
 Compare the institutional knowledge at risk in Finance and Banking
-versus Sales and Revenue. What makes the knowledge different in type,
-and what makes the deployment challenge similar? Use specific examples
-of judgment calls that an experienced professional makes but a new
-hire cannot.
+versus Legal and Compliance. Both involve regulatory expertise, but
+what makes the knowledge different in type? Use specific examples of
+judgment calls that an experienced professional makes in each domain
+but a new hire cannot. Then explain why the deployment methodology
+remains the same despite these differences.
 ```
 
 **What you're learning:** How to distinguish between domain-specific expertise types while recognising the common deployment methodology. This analysis builds your ability to evaluate any domain through the institutional knowledge lens.
-
-### Prompt 3: Domain Research
-
-```
-I want to understand the Healthcare Operations domain boundary better.
-Why does this book explicitly exclude clinical decision support from
-the healthcare domain chapter? What governance differences make
-operational healthcare AI deployable with standard frameworks while
-clinical AI requires fundamentally different approaches? Give me
-specific regulatory examples.
-```
-
-**What you're learning:** How governance requirements shape deployment boundaries. Understanding why certain types of expertise are deployable with current frameworks and others require fundamentally different approaches is critical for scoping any enterprise AI initiative.
 
 ## Flashcards Study Aid
 

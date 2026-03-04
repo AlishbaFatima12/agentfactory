@@ -153,7 +153,7 @@ A deployment conversation that uses these frameworks follows a natural sequence:
 2. **Identify** -- Ask the knowledge question. Whose expertise? In what form? For whom? Under what constraints?
 3. **Frame** -- Match the value proposition to the stakeholder. Use the monetisation model that resonates with their role and concerns.
 4. **Position** -- Place the deployment on the platform landscape. Cowork for team-level, knowledge-worker-led deployment. Frontier for enterprise-wide, executive-sponsored transformation.
-5. **Scope** -- Map to the appropriate domain profile. Use the domain chapter (17-24) as the deployment guide.
+5. **Scope** -- Map to the appropriate domain profile. Use the domain sections (Chapters 17--29) as the deployment guide.
 
 This sequence works whether you are proposing a deployment to your own organisation, pitching a consulting engagement, or evaluating a vendor's claims. The frameworks are the same. The conversation changes based on your role in it.
 
@@ -182,8 +182,9 @@ education, pilot proposal, governance plan, or something else?
 
 ```
 Compare how you would frame the value of a domain agent to a CFO
-versus a sales leader. The domain is [choose: finance, legal, sales,
-HR, healthcare, architecture, or technical documentation]. For each
+versus a sales leader. The domain is [choose: finance, sales &
+marketing, supply chain, product management, people & operations,
+legal & compliance, or innovation]. For each
 stakeholder, identify: which monetisation model to lead with, what
 metrics to highlight, and what objection to prepare for. Explain why
 the same deployment requires different conversations.

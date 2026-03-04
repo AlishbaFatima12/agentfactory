@@ -285,6 +285,8 @@ the curve?
 
 **What you're learning:** You are positioning your own organisation within your industry's maturity landscape. This helps you set realistic expectations and identify competitive advantages available at your current level.
 
+
+
 ## Flashcards Study Aid
 
 <Flashcards />

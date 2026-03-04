@@ -207,6 +207,8 @@ additional factors specific to this industry?
 **What you're learning:** How to validate a conceptual framework against real-world evidence. Research skills are essential for knowledge workers evaluating enterprise AI -- you need to distinguish between vendor claims and deployment reality.
 
 
+
+
 ## Flashcards Study Aid
 
 <Flashcards />

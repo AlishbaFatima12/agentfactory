@@ -197,6 +197,8 @@ platforms directly?
 **What you're learning:** How to distinguish between vendor-driven AI adoption (which often stalls in the Pilot Trap) and expert-driven adoption (which tends to produce deployed, operational agents). This pattern recognition skill will serve you throughout the rest of the book.
 
 
+
+
 ## Flashcards Study Aid
 
 <Flashcards />

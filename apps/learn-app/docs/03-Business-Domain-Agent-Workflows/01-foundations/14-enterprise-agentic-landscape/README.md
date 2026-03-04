@@ -9,7 +9,7 @@ version: 1.0
 status: draft
 slides:
   source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-14/enterprise-agentic-blueprint.pdf"
-  title: "The Enterprise Agentic Blueprint"
+  title: "The Enterprise Agentic Landscape"
   height: 700
 ---
 
@@ -37,18 +37,18 @@ By the end of this chapter, you will be able to:
 
 ## Lesson Flow
 
-| Lesson                                          | Title                            | Duration | What You'll Walk Away With                                                         |
-| ----------------------------------------------- | -------------------------------- | -------- | ---------------------------------------------------------------------------------- |
-| [L01](./01-the-year-that-did-not-deliver.md)    | The Year That Did Not Deliver    | 25 min   | Understanding of why enterprise AI stalled and the structural "Pilot Trap"         |
-| [L02](./02-what-changed-in-2026.md)             | What Changed in 2026             | 25 min   | Knowledge of the platform shift that unlocked enterprise agent deployment          |
-| [L03](./03-knowledge-worker-at-the-centre.md)   | Knowledge Worker at the Centre   | 20 min   | Clarity on why domain experts are central, not peripheral, to enterprise AI        |
-| [L04](./04-two-platforms-one-paradigm.md)       | Two Platforms, One Paradigm      | 30 min   | Cowork vs Frontier comparison and a decision framework for choosing between them   |
-| [L05](./05-four-monetisation-models.md)         | Four Monetisation Models         | 35 min   | Success Fee, Subscription, License, and Marketplace models with pricing benchmarks |
-| [L06](./06-organisational-ai-maturity-model.md) | Organisational AI Maturity Model | 30 min   | Five-level maturity framework to assess any organisation's readiness               |
-| [L07](./07-the-seven-domains.md)                | The Seven Domains                | 35 min   | Profiles of Finance, Legal, Sales, HR, Healthcare, Architecture, and Tech Docs     |
-| [L08](./08-starting-the-conversation.md)        | Starting the Conversation        | 20 min   | How to use these frameworks in real deployment conversations                       |
-| [L09](./09-chapter-summary.md)                  | Chapter Summary                  | 15 min   | Synthesis of the full strategic landscape                                          |
-| [Quiz](./10-chapter-quiz.md)                    | Chapter Quiz                     | 50 min   | 50 questions covering all nine lessons                                             |
+| Lesson                                          | Title                            | Duration | What You'll Walk Away With                                                                          |
+| ----------------------------------------------- | -------------------------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| [L01](./01-the-year-that-did-not-deliver.md)    | The Year That Did Not Deliver    | 25 min   | Understanding of why enterprise AI stalled and the structural "Pilot Trap"                          |
+| [L02](./02-what-changed-in-2026.md)             | What Changed in 2026             | 25 min   | Knowledge of the platform shift that unlocked enterprise agent deployment                           |
+| [L03](./03-knowledge-worker-at-the-centre.md)   | Knowledge Worker at the Centre   | 20 min   | Clarity on why domain experts are central, not peripheral, to enterprise AI                         |
+| [L04](./04-two-platforms-one-paradigm.md)       | Two Platforms, One Paradigm      | 30 min   | Cowork vs Frontier comparison and a decision framework for choosing between them                    |
+| [L05](./05-four-monetisation-models.md)         | Four Monetisation Models         | 35 min   | Success Fee, Subscription, License, and Marketplace models with pricing benchmarks                  |
+| [L06](./06-organisational-ai-maturity-model.md) | Organisational AI Maturity Model | 30 min   | Five-level maturity framework to assess any organisation's readiness                                |
+| [L07](./07-the-seven-domains.md)                | The Seven Domains                | 35 min   | Profiles of Finance, Sales & Marketing, Supply Chain, Product Mgmt, People & Ops, Legal, Innovation |
+| [L08](./08-starting-the-conversation.md)        | Starting the Conversation        | 20 min   | How to use these frameworks in real deployment conversations                                        |
+| [L09](./09-chapter-summary.md)                  | Chapter Summary                  | 15 min   | Synthesis of the full strategic landscape                                                           |
+| [Quiz](./10-chapter-quiz.md)                    | Chapter Quiz                     | 50 min   | 50 questions covering all nine lessons                                                              |
 
 ## Chapter Contract
 
