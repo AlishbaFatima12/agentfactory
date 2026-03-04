@@ -23,5 +23,5 @@ This lesson provides a structured prioritisation framework for selecting which o
 
 ### Connections
 
-- **Builds on**: Lessons 10-11 (enterprise extension areas), Lesson 9 (knowledge extraction applied to finance), Chapter 16 (the Knowledge Extraction Method)
+- **Builds on**: Lessons 9-10 (enterprise extension areas), Lesson 8 (knowledge extraction applied to finance), Chapter 16 (the Knowledge Extraction Method)
 - **Leads to**: Chapter 18 (Legal and Compliance Domain Agents) applies the same methodology to a different domain with stricter governance requirements

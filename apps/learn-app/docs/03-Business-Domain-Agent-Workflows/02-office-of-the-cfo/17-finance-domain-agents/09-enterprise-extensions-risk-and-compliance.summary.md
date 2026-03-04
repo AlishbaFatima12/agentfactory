@@ -25,5 +25,5 @@ Enterprise extensions close the gap between generic finance plugins and institut
 
 ### Connections
 
-- **Builds on**: Chapter 16's Knowledge Extraction Method (Persona-Questions-Principles structure for SKILL.md writing), Lessons 5-9 (generic finance plugin workflows that extensions layer on top of)
-- **Leads to**: Lesson 11 (chapter summary), and the practical deployment of enterprise extensions in the reader's own organisation
+- **Builds on**: Chapter 16's Knowledge Extraction Method (Persona-Questions-Principles structure for SKILL.md writing), Lessons 4-8 (generic finance plugin workflows that extensions layer on top of)
+- **Leads to**: Lesson 10 (operations and strategy extensions), and the practical deployment of enterprise extensions in the reader's own organisation
