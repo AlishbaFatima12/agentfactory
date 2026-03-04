@@ -377,8 +377,6 @@ This is *variable reassignment*. Python does not keep a history of old values. I
 A **stale-value error** means using a variable's first value after it has been reassigned to a new one -- like using `bonus = 5` on a line where `bonus` is actually `10`. This is the single most common prediction error for beginners and it does not go away by "trying harder." The error happens because your brain is doing its job -- it takes shortcuts to save effort. The fix is mechanical: draw the table, fill it row by row, and never calculate from memory. The table makes the error impossible because every value is written down.
 :::
 
-Trace tables make reassignment visible. Without them, your brain silently uses the first value it saw. With them, every value change is written down, row by row, impossible to miss.
-
 **When to use a trace table**: Any time a code block has more than three lines and at least one variable that changes. If every variable is set once and never modified, you can trace in your head (like Lesson 1). The moment a variable appears on the left side of `=` for a second time, draw the table.
 
 ---
