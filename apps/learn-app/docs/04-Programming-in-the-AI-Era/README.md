@@ -53,6 +53,16 @@ These six steps are not sequential phases you hand off and forget. They are a lo
 
 The key insight: you never start from a blank page, and you never accept output blindly. You start with a requirement and end with a passing test suite. Everything in between is a collaboration -- but the specification and the verification are yours.
 
+:::note If you're new to programming
+Some of these terms may be unfamiliar. Here is what they mean in plain English:
+- **Types** are labels that describe what kind of data something is -- text, a whole number, a decimal, true/false. You will learn these in Chapter 16.
+- **A test** is a short piece of code that checks whether another piece of code does what you expect. Think of it as a checklist: "If I give it 100 and 15%, I should get 115."
+- **A failing test** is a test you write *before* the code exists. It fails because there is nothing to check yet. Then AI writes the code to make it pass. That is the core idea of TDG.
+- **pytest** is the tool that runs your tests automatically and tells you which passed and which failed.
+
+You do not need to memorize any of this now. Each term gets its own lesson with step-by-step explanations.
+:::
+
 ## What "Writing Code" Means Now
 
 In the old model, writing code meant typing implementation -- functions, loops, conditionals -- from scratch. That skill still has value, but it is no longer the primary bottleneck or the primary skill.
@@ -90,6 +100,21 @@ def total_with_tax(price: float, tax_rate: float) -> float:
 
 You wrote five lines. AI wrote one. The five lines you wrote -- the signature and the tests -- are the specification. The one line AI wrote is the implementation. If the tests pass, the code is correct. If they fail, you debug and iterate. That is the entire cycle.
 
+:::note If you're new to programming
+The code above may look like a foreign language right now. That is completely normal. Here is what it says in plain English:
+
+1. You tell the computer: "I need a calculation that takes a price and a tax rate and gives me the total."
+2. You write two checks: "If the price is 100 and tax is 15%, the answer should be 115" and "If the price is 0, the answer should be 0."
+3. You ask AI to write the actual calculation.
+4. You run your checks. If they pass, the calculation is correct.
+
+That is all TDG is -- describe what you want, write checks, let AI do the math, verify the answer. You will learn the syntax piece by piece starting in Chapter 16. By the time you reach Chapter 17 (Your First TDG Cycle), every line in this example will make sense.
+:::
+
+:::note If you've coded before
+If this reminds you of Test-Driven Development (TDD), you are right -- TDG is TDD with AI in the generation step. The difference: in TDD, you write the failing test and then write the implementation yourself. In TDG, you write the failing test and AI writes the implementation. Your job shifts from typing code to specifying precisely enough that AI gets it right on the first pass -- and verifying that it did.
+:::
+
 ## What You Need to Be Able to Do This
 
 TDG requires a skill that the old model treated as optional: reading code fluently.
@@ -109,6 +134,10 @@ Every Python feature in Part 4 follows a five-step progression that builds from 
 5. **Build it** -- You specify types and tests with AI assistance, prompt AI to implement, and verify the output
 
 Steps 1--3 build your reading fluency. Steps 4--5 are the TDG cycle. By the end of Part 4, steps 4--5 feel as natural as steps 1--3 do now.
+
+:::note If you're new to programming
+Notice that you *see* and *read* before you are asked to *do* anything. This is deliberate. You will not be thrown into writing tests or specifying types without first understanding what they look like and how they work. Every new concept is shown to you, explained, and practiced through prediction exercises before you use it yourself.
+:::
 
 ## The Nine Phases
 
