@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-04
+- docs: move SmartNotes before Nine Phases + replace capstone with QuizForge ([#812](https://github.com/panaversity/agentfactory/pull/812))
+
+### 2026-03-04
 - docs: renumber Part 4 chapters, emphasize SDD + Claude Code ([#811](https://github.com/panaversity/agentfactory/pull/811))
 
 ### 2026-03-04
