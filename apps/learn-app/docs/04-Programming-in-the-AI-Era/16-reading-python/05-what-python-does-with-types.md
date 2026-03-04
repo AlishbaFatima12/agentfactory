@@ -14,7 +14,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Computational Thinking"
-    measurable_at_this_level: "Student can explain that Python does not enforce type annotations at runtime, that annotations are metadata stored in __annotations__, and that external tools like Pyright perform static analysis to catch type mismatches before execution"
+    measurable_at_this_level: "Student can explain that Python does not enforce type annotations at runtime, that annotations are metadata stored in a hidden record, and that external tools like Pyright perform static analysis to catch type mismatches before execution"
 
   - name: "Pyright Error Reading"
     proficiency_level: "A1"
@@ -41,7 +41,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 4
-  assessment: "4 concepts (runtime ignores annotations, __annotations__ metadata, static analysis catches errors before execution, five Pyright error categories) within A2 limit of 7"
+  assessment: "4 concepts (runtime ignores annotations, annotations stored as metadata, static analysis catches errors before execution, five Pyright error categories) within A2 limit of 7"
 
 differentiation:
   extension_for_advanced: "Explore Pyright's full rule list at github.com/microsoft/pyright and categorize which rules apply to argument types, return types, assignment types, and None safety"
@@ -50,7 +50,7 @@ differentiation:
 
 # What Python Does (and Doesn't Do) with Types
 
-In Lesson 4, you learned to read function signatures as contracts -- parameter types, return types, and default values. You can now look at `def search_notes(query: str, max_results: int = 10) -> list[str]:` and know exactly what goes in and what comes out without reading the body. But there is a question those signatures raise: does Python actually enforce those contracts? If a function says it takes a `str`, what happens when someone passes an `int`?
+In Lesson 4, you learned to read function signatures as contracts -- parameter types, return types, and default values. You can now look at `def format_note_title(raw_title: str, uppercase: bool = False) -> str:` and know exactly what goes in and what comes out without reading the body. But there is a question those signatures raise: does Python actually enforce those contracts? If a function says it takes a `str`, what happens when someone passes an `int`?
 
 James decides to test this. He writes a variable with a type annotation, then immediately reassigns it to the wrong type:
 
@@ -81,7 +81,7 @@ main.py:2:7 - error: Type "str" is not assignable to declared type "int"
 
 ## The Surprising Truth: Python Ignores Types
 
-Python is a dynamically typed language. When you write `age: int = 25`, Python stores two things: the value `25` in the variable `age`, and the annotation `int` in a special dictionary called `__annotations__`. But Python never looks at that dictionary when running your code. It never checks whether the value matches the annotation.
+Python is a dynamically typed language. When you write `age: int = 25`, Python stores two things: the value `25` in the variable `age`, and the annotation `int` in a hidden record called `__annotations__`. But Python never looks at that record when running your code. It never checks whether the value matches the annotation.
 
 Watch what happens with a function:
 
@@ -105,8 +105,8 @@ This is true for every type annotation in Python:
 
 | What You Write | What Python Does at Runtime |
 |----------------|----------------------------|
-| `age: int = 25` | Stores `25` in `age`. Stores `int` in `__annotations__`. Never checks. |
-| `def greet(name: str)` | Defines the function. Stores `str` in `__annotations__`. Never checks callers. |
+| `age: int = 25` | Stores `25` in `age`. Stores `int` in a hidden record. Never checks. |
+| `def greet(name: str)` | Defines the function. Stores `str` in a hidden record. Never checks callers. |
 | `-> str` | Records the return type. Never verifies the actual return value. |
 | `count: int = "zero"` | Stores `"zero"` in `count`. No error. |
 
@@ -122,7 +122,7 @@ If Python ignores annotations, why write them? Three reasons.
 
 **Types enable tools to catch bugs.** Pyright reads your annotations and traces every function call, every assignment, and every return value. It reports mismatches before you run the program. A bug that would crash at 2 AM in production becomes a red underline at 2 PM while you are still editing.
 
-**Types make AI-generated code reviewable.** When AI generates a function with `def process(data: list[str]) -> dict[str, int]:`, you can verify the contract -- what goes in and what comes out -- without reading the implementation. The signature tells you the shape of the data. You check the shape first, then verify the logic.
+**Types make AI-generated code reviewable.** When AI generates a function with `def calculate_total(price: float, quantity: int) -> float:`, you can verify the contract -- what goes in and what comes out -- without reading the implementation. The signature tells you the shape of the data. You check the shape first, then verify the logic.
 
 ---
 
@@ -201,23 +201,21 @@ The variable says `int`. The value is `str`. Python stores it anyway. Pyright fl
 Not all code paths in a function return a value.
 
 ```python
-def classify(score: int) -> str:
-    if score >= 90:
-        return "A"
-    elif score >= 80:
-        return "B"
-    # What if score < 80? No return!
+def pass_or_fail(score: int) -> str:
+    if score >= 50:
+        return "pass"
+    # What if score < 50? No return!
 ```
 
 **Pyright output:**
 
 ```
-main.py:1:29 - error: Function with declared type of "str" must
+main.py:1:34 - error: Function with declared type of "str" must
   return value on all code paths
   Missing return statement (reportReturnType)
 ```
 
-If `score` is 70, the function reaches the end without returning anything. Python returns `None` silently. Pyright tells you a code path is missing.
+If `score` is 30, the function reaches the end without returning anything. Python returns `None` silently. Pyright tells you a code path is missing.
 
 ### Category 5: None Safety
 
@@ -413,7 +411,7 @@ Explain when each fix is appropriate.
 
 ## Key Takeaways
 
-1. **Python does not enforce type annotations at runtime.** You can write `age: int = 25` and then assign `age = "hello"` -- Python will not complain. Annotations are metadata stored in `__annotations__`, not enforcement rules.
+1. **Python does not enforce type annotations at runtime.** You can write `age: int = 25` and then assign `age = "hello"` -- Python will not complain. Annotations are metadata that Python stores but never checks.
 
 2. **Types exist for humans and tools, not for Python.** Annotations document what data a function expects (for humans reading the code), enable static analysis (for Pyright to catch bugs), and make AI-generated code reviewable (verify the contract without reading the body).
 

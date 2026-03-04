@@ -12,7 +12,7 @@ keywords:
     "AI agent",
     "Excel add-in",
     "financial modelling",
-    "MCP connectors",
+    "data connectors",
     "Agent Skills",
     "cross-app orchestration",
   ]
@@ -49,10 +49,10 @@ learning_objectives:
     bloom_level: "Understand"
     assessment_method: "Student can describe both architectures and explain the scope difference (single workbook vs multi-application) without confusing their capabilities"
 
-  - objective: "Describe the two layers of Claude in Excel — general workbook intelligence and the pre-built Agent Skills — and identify the role of MCP connectors in both Claude in Excel and Cowork"
+  - objective: "Describe the two layers of Claude in Excel — general workbook intelligence and the pre-built Agent Skills — and identify the role of data connectors in both Claude in Excel and Cowork"
     proficiency_level: "A2"
     bloom_level: "Understand"
-    assessment_method: "Student can list the two layers, name at least three Agent Skills, and explain that the same MCP connectors serve both environments with different scope"
+    assessment_method: "Student can list the two layers, name at least three Agent Skills, and explain that the same data connectors serve both environments with different scope"
 
   - objective: "Navigate the chapter structure and identify which part addresses their professional context — Claude in Excel for modelling work, Cowork for cross-app workflows, or enterprise extensions for custom deployments"
     proficiency_level: "A2"
@@ -64,7 +64,7 @@ cognitive_load:
   concepts_list:
     - "Assistant vs agent architecture (embedded in one app vs orchestrating across apps)"
     - "Claude in Excel's two layers (general workbook intelligence and pre-built Agent Skills)"
-    - "MCP connectors as a shared ecosystem serving both environments at different scope"
+    - "Data connectors as a shared ecosystem serving both environments at different scope"
     - "The chapter's three-part structure mapping to different professional needs"
   assessment: "4 concepts at A2 level — within the 5-7 cognitive limit for this tier. Students enter from Chapter 16 with a clear understanding of SKILL.md architecture and the Knowledge Extraction Method; this lesson shifts to a new domain (finance) and a new platform distinction (assistant vs agent)."
 
@@ -78,11 +78,11 @@ teaching_guide:
   session_title: "The Platform Distinction"
   key_points:
     - "Excel is the operating system of the financial profession — every domain agent chapter begins with the platform, and in finance, that platform is Excel"
-    - "Claude in Excel is an AI assistant embedded in one workbook; Cowork with Excel is an AI agent that orchestrates across multiple applications — same MCP connectors, different scope"
+    - "Claude in Excel is an AI assistant embedded in one workbook; Cowork with Excel is an AI agent that orchestrates across multiple applications — same data connectors, different scope"
     - "The pre-built Agent Skills in Claude in Excel are purpose-designed financial workflows that produce industry-standard deliverables and can incorporate market data when configured with appropriate connectors"
     - "The chapter is structured in three parts: the embedded assistant, the orchestrating agent platform, and enterprise extensions — each serves a different professional context"
   misconceptions:
-    - "Students may assume Claude in Excel and Cowork use separate connector ecosystems — in reality, any MCP connector configured in Claude settings works in both environments; the difference is scope (one workbook vs cross-app)"
+    - "Students may assume Claude in Excel and Cowork use separate connector ecosystems — in reality, any data connector configured in Claude settings works in both environments; the difference is scope (one workbook vs cross-app)"
     - "Students may think Claude in Excel requires the Cowork platform — it is a standalone Microsoft add-in that works independently"
     - "Students may confuse the Agent Skills with general chat — the Agent Skills are purpose-built financial workflows, not general conversational features"
   discussion_prompts:
@@ -94,11 +94,11 @@ teaching_guide:
     - "The security note is essential for finance professionals — prompt injection in spreadsheets from untrusted sources is a real operational risk, not a theoretical concern"
   assessment_checks:
     - question: "What is the difference between Claude in Excel and Cowork with Excel?"
-      expected_response: "Claude in Excel is an AI assistant embedded directly in a workbook — it reads, analyses, and modifies one spreadsheet at a time. Cowork with Excel is an AI agent that orchestrates across multiple applications — Excel is one stop in a multi-step workflow that can include PowerPoint, Word, and other tools. They share the same MCP connectors but operate at different scope."
+      expected_response: "Claude in Excel is an AI assistant embedded directly in a workbook — it reads, analyses, and modifies one spreadsheet at a time. Cowork with Excel is an AI agent that orchestrates across multiple applications — Excel is one stop in a multi-step workflow that can include PowerPoint, Word, and other tools. They share the same data connectors but operate at different scope."
     - question: "What are the two layers of Claude in Excel?"
       expected_response: "Layer 1 is general workbook intelligence — Claude reads all sheets, formulas, and data to answer questions, trace dependencies, test scenarios, and debug errors. Layer 2 is the pre-built Agent Skills — specialist financial workflows that produce professionally structured deliverables like DCF models, comparable company analyses, and 3-statement models."
-    - question: "Do Claude in Excel and Cowork use different MCP connectors?"
-      expected_response: "No. Any MCP connector configured in your Claude settings works in both environments. The difference is scope: Claude in Excel uses connectors to serve analysis within one workbook, while Cowork uses the same connectors to serve multi-application workflows."
+    - question: "Do Claude in Excel and Cowork use different data connectors?"
+      expected_response: "No. Any data connector configured in your Claude settings works in both environments. The difference is scope: Claude in Excel uses connectors to serve analysis within one workbook, while Cowork uses the same connectors to serve multi-application workflows."
 ---
 
 # The Assistant and the Agent
@@ -127,13 +127,13 @@ The shorthand: Claude in Excel is a _deep companion_ for financial modelling wor
 | **Architecture**               | AI assistant embedded in one application                                                                                                      | AI agent orchestrating across applications            |
 | **Scope**                      | One workbook at a time                                                                                                                        | Multiple applications (Excel, PowerPoint, Word)       |
 | **Pre-built financial skills** | 11 Agent Skills including comps, DCF, 3-statement models, due diligence packs, earnings analyses, initiating coverage, and presentation tools | Domain plugins with bundled skills and slash commands |
-| **MCP connectors**             | Any connector configured in your Claude settings                                                                                              | Same connectors, applied across multi-app workflows   |
+| **Data connectors**            | Any connector configured in your Claude settings                                                                                              | Same connectors, applied across multi-app workflows   |
 | **Cross-app capability**       | Excel only                                                                                                                                    | Excel to PowerPoint orchestration (research preview)  |
 | **Who it is for**              | Financial analysts doing modelling work directly in Excel                                                                                     | Enterprise teams running agent workflows across tools |
 | **Plan requirement**           | Pro, Max, Team, Enterprise (beta)                                                                                                             | Team and Enterprise                                   |
 | **Requires Cowork?**           | No                                                                                                                                            | Yes                                                   |
 
-One detail in this table deserves emphasis. Claude in Excel and Cowork do not maintain separate connector ecosystems. Any MCP connector you configure in your Claude settings — S&P Global, FactSet, PitchBook, Morningstar, Daloopa, LSEG, or any other — works in both environments automatically. The difference is not _which_ connectors are available. The difference is _scope_: Claude in Excel uses those connectors to serve analysis within one workbook; Cowork uses the same connectors to serve workflows that span multiple applications.
+One detail in this table deserves emphasis. Claude in Excel and Cowork do not maintain separate connector ecosystems. Any data connector you configure in your Claude settings — S&P Global, FactSet, PitchBook, Morningstar, Daloopa, LSEG, or any other — works in both environments automatically. The difference is not _which_ connectors are available. The difference is _scope_: Claude in Excel uses those connectors to serve analysis within one workbook; Cowork uses the same connectors to serve workflows that span multiple applications.
 
 This is a useful mental model beyond finance. In any domain, the question is not "which AI tool has the most features?" but "does my workflow live inside one application or across several?" The answer determines whether you need an embedded assistant or an orchestrating agent.
 
@@ -157,7 +157,7 @@ Claude in Excel operates at two distinct layers. Understanding the difference he
 10. **PPT Template Creator** — presentation templates following industry formatting conventions
 11. **Presentation Quality Checker** — reviews and validates presentation deliverables
 
-When connecting to external data sources such as FactSet, Capital IQ, or Daloopa, these skills can incorporate live data into your workbooks. The specific data connectors available depend on your organisation's MCP connector configuration.
+When connecting to external data sources such as FactSet, Capital IQ, or Daloopa, these skills can incorporate live data into your workbooks. The specific data connectors available depend on your organisation's connector configuration.
 
 :::note Agent Skills Availability
 
@@ -171,7 +171,7 @@ This chapter is structured in three parts, each serving a different professional
 
 **Part One: Claude in Excel — The Embedded Assistant.** Covers general workbook intelligence (understanding models you did not build, scenario testing, error debugging) and the pre-built Agent Skills for financial analysis. This is where most finance professionals will spend their initial time. If you work directly in Excel building models and analysing data, Part One gives you immediately applicable skills.
 
-**Part Two: Cowork Finance Plugins — The Orchestrating Agent.** Covers the Cowork platform's finance capabilities — the corporate finance plugin, the financial services plugin suite, MCP connectors, and cross-app orchestration from Excel to PowerPoint. This part matters when your deliverables span multiple applications and your workflow involves carrying analysis from a spreadsheet into a presentation, memo, or report.
+**Part Two: Cowork Finance Plugins — The Orchestrating Agent.** Covers the Cowork platform's finance capabilities — the corporate finance plugin, the financial services plugin suite, data connectors, and cross-app orchestration from Excel to PowerPoint. This part matters when your deliverables span multiple applications and your workflow involves carrying analysis from a spreadsheet into a presentation, memo, or report.
 
 **Part Three: Enterprise Extensions.** Covers how to extend the pre-built capabilities with custom SKILL.md files for your firm's specific needs — applying the Knowledge Extraction Method from Chapter 16 to finance domain expertise. This part connects everything: the platform capabilities from Parts One and Two, the extraction methodology from Chapter 16, and the agent architecture from Chapter 15.
 
@@ -280,15 +280,15 @@ Then suggest which two Agent Skills I should learn first and why.
 ### Prompt 3: Connector Scope Analysis
 
 ```
-Explain the MCP connector architecture that Claude in Excel and
+Explain the data connector architecture that Claude in Excel and
 Cowork share. Specifically:
 
-1. What are MCP connectors and what do they provide?
+1. What are data connectors and what do they provide?
 2. Why do the same connectors work in both Claude in Excel and Cowork?
 3. What changes between the two environments — if the connectors are
    the same, what is actually different?
-4. Give me a concrete example: if I have S&P Global configured as an
-   MCP connector, describe what I can do with it in Claude in Excel
+4. Give me a concrete example: if I have S&P Global configured as a
+   data connector, describe what I can do with it in Claude in Excel
    versus what I can do with it in Cowork.
 
 Use language appropriate for a finance professional who understands

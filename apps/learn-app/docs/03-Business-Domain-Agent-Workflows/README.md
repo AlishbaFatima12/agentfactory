@@ -19,6 +19,38 @@ This part has a deliberately narrow focus: **enterprise business workflows**. No
 
 The central commitment of Part 3 is that domain expertise is the scarce resource, not technical capability. The AI infrastructure is built. The Cowork platform is configured. The MCP connectors exist. What makes an agent in the CFO's office genuinely valuable is not the model — it is the twenty years of financial judgment encoded in its SKILL.md. That knowledge belongs to the professional, not the platform. Part 3 teaches professionals to deploy it.
 
+### **Who it’s perfect for**
+
+This part is highly cross-functional. It intentionally bridges the gap between technical engineering and corporate operations. 
+
+Here is a breakdown of exactly who should read this part and why:
+
+#### 1. Subject Matter Experts & Domain Professionals (The "Knowledge Holders")
+*   **Who they are:** Chartered Accountants, Certified Public Accountants, Certified Management Accountants, Corporate Lawyers, Supply Chain Managers, HR Directors, MLROs (Money Laundering Reporting Officers), and Compliance Officers.
+*   **Why they should read it:** The part explicitly states that *their* domain expertise is the scarce resource, not the AI technology. This part acts as a guide for them to translate their years of tacit, hard-earned professional judgment into structured `SKILL.md` libraries. It teaches them how to supervise AI rather than fear being replaced by it, using the "AI Executes, Professionals Judge" framework.
+
+### 2. AI Engineers & Software Developers (The "Builders")
+*   **Who they are:** Full-stack developers, AI engineers, and platform architects.
+*   **Why they should read it:** Developers often fall into the trap of building "cool but useless" toy applications. This part forces developers to grow up and think like enterprise architects. It teaches them that in the real world, accuracy, compliance, audit trails, Agent Skills, and Model Context Protocol (MCP) data connectors matter more than raw LLM capabilities. It is their blueprint for building software that highly regulated companies will actually buy and deploy.
+
+### 3. Enterprise Executives & Business Leaders (The "Decision Makers")
+*   **Who they are:** CIOs, CTOs, COOs, CFOs, and Transformation Directors.
+*   **Why they should read it:** Leaders are currently struggling with *how* to deploy AI safely without causing massive legal or financial liabilities. The **Governance Escalation Framework** outlined in this part is exactly what the C-suite needs. It provides a strategic roadmap for transforming their company into an "Agentic Enterprise" systematically—starting with rigorous financial controls before expanding to sales and operations.
+
+### 4. AI Product Managers & Solutions Architects (The "Translators")
+*   **Who they are:** The professionals sitting between the developers and the business stakeholders, designing the AI workflows.
+*   **Why they should read it:** They need to understand how to map a massive enterprise function (like Contract Lifecycle Management or IFRS 9 assessments) into discrete, automated agent skills and workflows. It gives them a perfect architectural template to plan sprints, gather requirements, and define where the "human-in-the-loop" handoffs must occur.
+
+#### 5. Banking & Islamic Finance experts — credit officers, Shariah advisors, and Islamic banking teams.
+
+#### 6. Senior leaders in Sales/RevOps, Supply Chain, HR/Operations, Product Management & Innovation who want to turn their playbooks and judgment into scalable AI agents
+
+#### 7. If you want to productise your expertise into reusable agents (via SKILL.md libraries and Cowork plugins) without becoming a coder
+
+#### Summary
+If **Part 1 and 2** of an AI curriculum are for the *coders*, **Part 3** is for the **builders of the modern enterprise**. Anyone involved in the strategy, development, compliance, or management of enterprise-grade AI should consider this required reading.
+
+
 ---
 
 ### The Governing Principle: AI Executes, Professionals Judge

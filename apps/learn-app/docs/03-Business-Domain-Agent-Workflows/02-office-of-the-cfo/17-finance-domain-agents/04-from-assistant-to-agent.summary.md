@@ -1,25 +1,27 @@
 ### Core Concept
 
-The shift from Claude in Excel to Cowork is a scope expansion, not a technology change. The same MCP connectors serve both contexts -- inside Excel, Claude analyses within one workbook; through Cowork, Claude orchestrates across multiple applications, carrying context from Excel to PowerPoint to email. The finance plugin packages this orchestration capability into five explicit commands and six passive skills that together support multi-day workflows like the month-end close.
+The shift from Claude in Excel to Cowork is a scope expansion. Claude in Excel analyses within one workbook; Cowork orchestrates across multiple applications. The `knowledge-work-plugins/finance` plugin packages this orchestration into five explicit commands (`/reconciliation`, `/journal-entry`, `/variance-analysis`, `/income-statement`, `/sox-testing`) and six passive skills that together support multi-day workflows like the month-end close.
 
 ### Key Mental Models
 
-- **Skills vs Commands**: Commands (/reconciliation, /journal-entry) are explicitly invoked and trigger specific workflows. Skills (close-management, variance-analysis) fire automatically in the background whenever Claude judges them contextually relevant. The combination produces specialist behaviour -- commands for control, skills for consistency.
-- **Category Placeholder System**: The plugin uses ~~erp, ~~data warehouse, ~~analytics as placeholders rather than naming specific products. This separates workflow knowledge (SKILL.md, owned by the knowledge worker) from connector configuration (.mcp.json, owned by IT). The same plugin works with NetSuite or SAP without modifying a single workflow definition.
-- **Plugin Architecture**: Every plugin follows a standard directory structure -- plugin.json (manifest), .mcp.json (connectors), CONNECTORS.md (documentation), commands/ (explicit workflows), skills/ (passive knowledge). Understanding this structure is prerequisite for customising or extending plugins.
-- **Month-End Close as Orchestration**: The close workflow spans multiple days and multiple commands, with the close-management skill providing continuous context. Each command builds on the previous day's output, and the skill contextualises every interaction within the close timeline.
+- **Skills vs Commands**: Commands are explicitly invoked and trigger specific workflows. Skills fire automatically in the background whenever Claude judges them contextually relevant. The combination produces specialist behaviour -- commands for control, skills for consistency.
+- **Category Placeholder System**: The plugin uses `~~erp`, `~~data warehouse`, `~~analytics` instead of naming specific products. This separates workflow knowledge (SKILL.md, owned by the knowledge worker) from connector configuration (.mcp.json, owned by IT).
+- **Reconciliation → Journal Entry Pair**: `/reconciliation` finds problems; `/journal-entry` fixes them. Running them in sequence is the core close workflow. The close-management skill contextualises each output against the close timeline.
+- **Variance Decomposition**: Revenue variances split into volume, price, and mix. Operating expense variances split into volume-driven and rate-driven. Cross-referencing `/variance-analysis` with `/income-statement` builds the management narrative.
 
 ### Critical Patterns
 
-- The connector narrative is one ecosystem, not two: Claude in Excel and Cowork share the same MCP connectors, with the difference being orchestration scope
-- The category placeholder system (~~erp) is Chapter 15's division of responsibility made concrete: knowledge workers own workflows, IT owns connections
-- Passive skills like close-management add value by contextualising every interaction, not just responding to explicit commands
+- **Full close workflow**: Day 1 close-management skill → Day 3 `/reconciliation` → Day 4 `/journal-entry` → Day 5 `/variance-analysis` → Day 6 `/income-statement` → SOX season `/sox-testing`. Each command produces a deliverable that feeds the next phase.
+- Reconciliation identifies discrepancies; journal entries create the correcting entries with proper documentation
+- The close-management skill provides continuous context across all close interactions, not just when explicitly invoked
+- SOX workpapers are frameworks, not conclusions — the plugin generates the testing structure, but a qualified auditor executes the tests and documents the conclusions
+- The category placeholder system (~~erp) is Chapter 15's division of responsibility made concrete
 
 ### Common Mistakes
 
-- Thinking Cowork has different connectors from Claude in Excel (they share the same MCP connector set)
 - Confusing skills (passive, auto-triggered) with commands (active, explicitly invoked)
 - Assuming the plugin requires specific enterprise software (the placeholder system is tool-agnostic by design)
+- Treating reconciliation as a standalone task rather than pairing it with journal entries for corrections
 
 ### Connections
 

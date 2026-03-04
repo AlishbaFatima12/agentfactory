@@ -5,7 +5,7 @@ This lesson provides a structured prioritisation framework for selecting which o
 ### Key Mental Models
 
 - **Prioritisation as Sequencing, Not Selection**: All eleven extensions may eventually matter. The framework determines order, not inclusion. Run three in parallel in the first quarter: highest-volume workflow, highest-risk compliance area, and most at-risk knowledge.
-- **Same Connectors, Different Scope**: Claude in Excel and Cowork share the same MCP connector ecosystem. The difference is scope — single-workbook assistant vs multi-application agent — not infrastructure. Enterprise extensions add institutional knowledge on top of both layers through SKILL.md files.
+- **Same Connectors, Different Scope**: Claude in Excel and Cowork share the same data connector ecosystem. The difference is scope — single-workbook assistant vs multi-application agent — not infrastructure. Enterprise extensions add institutional knowledge on top of both layers through SKILL.md files.
 - **Regulatory Override Rule**: An extension addressing compliance requirements moves to the front of the queue regardless of its composite score, because non-compliance is a risk cost, not a friction cost.
 - **Knowledge Extraction as the Bridge**: The methodology from Chapter 16 is what converts each generic extension area into an organisation-specific SKILL.md. The extension roadmap is the input; the Knowledge Extraction Method is the process; the validated SKILL.md is the output.
 
@@ -17,7 +17,7 @@ This lesson provides a structured prioritisation framework for selecting which o
 
 ### Common Mistakes
 
-- Treating Claude in Excel and Cowork as separate connector ecosystems — they share the same MCP connectors at different scope
+- Treating Claude in Excel and Cowork as separate connector ecosystems — they share the same data connectors at different scope
 - Attempting to build all eleven extensions simultaneously instead of sequencing based on evidence
 - Underestimating the data availability criterion — extensions fail when data sources are inaccessible, not when pain is low
 

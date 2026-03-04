@@ -32,8 +32,8 @@ cards:
 
   - id: "ch17-11-same-connectors-005"
     front: "What does 'same connectors, different scope' mean in the chapter's architecture?"
-    back: "Claude in Excel and Cowork share the same MCP connector ecosystem. The difference is scope, not infrastructure: Claude in Excel uses connectors at workbook scope (embedded assistant), while Cowork uses the same connectors at multi-application scope (orchestrating agent). Enterprise extensions add institutional knowledge on top of both."
-    tags: ["MCP-connectors", "scope", "architecture"]
+    back: "Claude in Excel and Cowork share the same data connector ecosystem. The difference is scope, not infrastructure: Claude in Excel uses connectors at workbook scope (embedded assistant), while Cowork uses the same connectors at multi-application scope (orchestrating agent). Enterprise extensions add institutional knowledge on top of both."
+    tags: ["data-connectors", "scope", "architecture"]
     difficulty: "intermediate"
     why: "Tests whether students understand the unifying architectural insight rather than treating the three parts as separate systems"
 

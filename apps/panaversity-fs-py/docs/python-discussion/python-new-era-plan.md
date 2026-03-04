@@ -1,6 +1,6 @@
 # Python for the New AI Era: Course Architecture Plan
 
-**Version:** 2.10
+**Version:** 2.11
 **Status:** Draft
 **Date:** 2026-02-24
 **Branch:** `learn-python`
@@ -89,7 +89,7 @@ Every Python feature follows this 5-step progression:
 Student specification ability increases across phases:
 
 ```
-Phase 1 (Ch 1-3):    Read & Explore              ← "I can understand what AI generates"
+Phase 1 (Ch 1-3):    Read & Explore (PRIMM)      ← "I can read, predict, and verify what AI generates"
 Phase 2 (Ch 4-7):    Specify with types          ← "I can tell AI precisely what to build"
 Phase 3 (Ch 8-11):   Specify with tests          ← "I can define correct and prove it"
 Phase 4 (Ch 12-13):  Debug & Master TDG          ← "I can diagnose failures and drive TDG without scaffolding"
@@ -101,6 +101,38 @@ Phase 9 (Ch 25-26):  Full system architecture    ← "I can architect and delive
 ```
 
 By Phase 6, students have seen every Python feature 50+ times in AI output. Specifying it precisely for AI feels natural, not forced.
+
+### Pacing and Cognitive Load: The TDG Anchor Rule
+
+The scope of Part 4 is ambitious — from basic types in Phase 1 to async APIs and CI/CD pipelines in Phases 7-8. Without deliberate scaffolding, beginners will feel overwhelmed by the sudden influx of architectural concepts in later phases.
+
+**The rule**: Phase 4 (TDG Mastery) is the anchor. After Phase 4, the TDG method never changes — only the problem domain grows. Every chapter from Phase 5 onward must open by connecting the new material back to the TDG cycle the student already owns:
+
+| Phase | New domain | TDG connection the chapter must make explicit |
+|-------|-----------|----------------------------------------------|
+| 5 | Objects and classes | "Same cycle, but now you specify class interfaces instead of function signatures" |
+| 6 | Files, databases, packages | "Same cycle, but now your tests verify I/O boundaries and data persistence" |
+| 7 | CLI tools, async/await, FastAPI | "Same cycle, but now your tests invoke CLI commands and async endpoints" |
+| 8 | CI/CD, security | "Same cycle, but now the pipeline runs your tests on every commit" |
+| 9 | Full system architecture | "Same cycle at system scale — the SmartNotes capstone is one large TDG loop" |
+
+**Chapter author directive**: Each chapter in Phases 5-9 must include a short "bridge paragraph" in its opening that says, in effect: "You already know the TDG cycle. This chapter applies it to [new domain]. The method is the same — specify with types, write failing tests, generate, verify. The only thing that changes is what you are specifying." This prevents the cognitive cliff where students feel they are learning an entirely new approach when they are actually applying the same one to bigger problems.
+
+### The PRIMM Recall Directive
+
+PRIMM (Predict-Run-Investigate-Modify-Make) is introduced in Chapter 2 as the method for reading code. Every Phase 2+ chapter introduces new Python features that students encounter for the first time. A lightweight callout at the start of each chapter reinforces the PRIMM habit:
+
+**Chapter author directive**: Each chapter in Phases 2-4 must include a `:::tip` callout in its opening section (after the narrative hook, before the first teaching section) that says, in effect:
+
+```markdown
+:::tip Reading New Code? Use PRIMM
+When you encounter new Python syntax in this chapter, use the PRIMM method from Chapter 2:
+**Predict** what the code does before running it. **Run** it to check your prediction.
+**Investigate** any surprises. This works for every new concept you'll meet here.
+:::
+```
+
+By Phase 5, students will have internalized the method and the callout can be dropped or reduced to a single sentence. The goal is to make PRIMM a reflex, not a lesson to revisit.
 
 ---
 
@@ -125,6 +157,42 @@ Each chapter includes:
 - **"If you're new to programming" callouts**: Extra explanation of fundamentals
 - **"If you've coded before" callouts**: What's different in this approach
 
+### Dual-Track Callout Directive (Chapter Author Rule)
+
+Every lesson must include Docusaurus admonition callouts wherever terminology or concepts may confuse one audience. These are not optional polish — they are structural requirements for serving both tracks.
+
+**Format** (Docusaurus admonition syntax):
+
+```markdown
+:::note If you're new to programming
+A **virtual environment** is like a private toolbox for one project. The tools
+in one toolbox do not interfere with tools in another. You never need to manage
+this toolbox yourself -- uv creates it and keeps it organized automatically.
+:::
+
+:::note If you've coded before
+You may know Python as "dynamically typed." This course adds static type
+annotations checked by pyright in strict mode. The annotations are not optional
+documentation -- they are required guardrails. If you have written Python
+without types, the workflow here will feel different by design.
+:::
+```
+
+**When to add callouts:**
+
+| Trigger | Beginner callout | Experienced callout |
+|---------|-----------------|---------------------|
+| New terminology (e.g., "virtual environment", "type annotation", "assertion") | Plain-English analogy explaining the concept | Skip — they already know it |
+| Concept that contradicts prior experience (e.g., "types are required", "tests before code") | Skip — they have no prior experience to conflict with | Explain what is different and why |
+| Tool or workflow unfamiliar to both (e.g., TDG, PRIMM, uv) | Simple analogy | How it compares to tools/workflows they already know |
+| Complex code example with multiple new concepts | Break down each piece in plain English | Highlight what is Python-specific vs general programming |
+
+**Rules:**
+- At least one callout of each type per chapter (more in early phases, fewer in later phases)
+- Callouts should be 2-4 sentences — concise, not mini-lessons
+- Place callouts immediately after the concept they explain, not at the end of a section
+- Never let a technical term appear for the first time without either an inline explanation or a beginner callout
+
 ---
 
 ## 5. The Python Feature Map (Two Reference Books → Our Framing)
@@ -136,7 +204,7 @@ All traditional Python features are taught. The **framing changes**, not the con
 | Matthes Chapter | Traditional Framing | Our Framing | Our Chapter |
 |---|---|---|---|
 | Ch 1: Getting Started | Install Python, run a script | The professional workbench: uv, pyright, ruff, pytest | Ch 1 |
-| Ch 2: Variables & Types | Variables store data | Reading AI output: what `name: str = "Zia"` means | Ch 2, 4 |
+| Ch 2: Variables & Types | Variables store data | PRIMM method + reading types/expressions (variables only, no functions) | Ch 2, 4 |
 | Ch 3: Lists | Lists store sequences | Typed collections: what `list[str]` tells us about data | Ch 5 |
 | Ch 4: Working with Lists | Looping through lists | Iteration: how AI processes every item | Ch 8 |
 | Ch 5: If Statements | Conditional execution | Branch logic: predicting which path code takes | Ch 8 |
@@ -204,6 +272,17 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ## 7. Chapter Plan (26 Chapters, 9 Phases)
 
+### Onboarding Directive: Phase 1 Must Handle True Beginners
+
+Part 4 serves students who have completed Parts 1-3 (AI prompting, file processing, version control) but have **never written code**. The leap from "I can prompt Claude Code" to "I can write a failing pytest test" is real.
+
+**Phase 1 chapters (Ch 1-3) must:**
+
+1. **Show every command with expected output.** Never say "install uv" without showing the exact terminal command and what success looks like. Include common errors and fixes (wrong PATH, permission denied, Windows vs Mac differences).
+2. **Explain every tool before using it.** Before running `uv run pytest`, explain what pytest is and why it exists — in one sentence, not a lecture. A beginner callout can expand for those who need more.
+3. **Never assume terminal fluency beyond Parts 1-3.** Students can `cd`, `ls`, and run commands. They cannot debug environment issues, resolve PATH conflicts, or interpret cryptic error messages without guidance.
+4. **Make the first TDG cycle (Ch 3) feel small.** The student writes 5 lines (a type signature + 2 assertions). AI writes 20. The ratio should feel empowering, not intimidating. Frame it as: "You already know how to tell AI what you want. Now you are telling it with types and tests instead of English."
+
 ---
 
 ### Phase 1: The Workbench (Read & Explore)
@@ -227,22 +306,41 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ---
 
-#### Chapter 2: Reading Python
+#### Chapter 2: Reading Python (The PRIMM Method)
 
-**Goal**: Student can read typed Python, predict behavior, and spot errors.
+**Goal**: Student learns the PRIMM method for reading code and applies it to simple typed Python — variables, types, arithmetic, and print only. No functions, no collections, no imports.
 
-- What is typed Python? (types as documentation for humans AND machines)
-- Primitive types: `str`, `int`, `float`, `bool`
-- Variables as labeled containers with type annotations
-- Reading expressions: `total: int = price * quantity`
-- Reading function signatures: `def greet(name: str) -> str:`
-- Predicting output: "What will this print?" exercises
-- Spotting type errors: "This function returns `str` but we need `int`"
-- How AI generates Python (demystifying the process)
-- Python's dynamic typing vs our typed discipline (Lutz Ch 6 reframed)
+**Design decision**: This chapter is standalone (not merged into Ch 1). It gives students a *taste* of Python through reading, not writing. It teaches the method (PRIMM) and the minimum Python needed to practice that method. Phase 2 covers every Python feature in depth — Chapter 2 does NOT attempt to teach Python comprehensively.
 
-**Student does**: Predicts output, annotates code, traces execution
+**What students CAN use** (taught in Ch 1 or introduced here):
+- Variables with type annotations: `name: str = "Zia"`
+- Four primitive types: `str`, `int`, `float`, `bool`
+- Arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`
+- String concatenation (`+`), repetition (`*`), f-strings
+- Boolean logic: `and`, `or`, `not`, comparisons
+- `print()` for output
+- Operator precedence (PEMDAS + Python extensions)
+
+**What students CANNOT use yet** (deferred to Phase 2+):
+- Functions (`def`, parameters, return, signatures)
+- Collections (`list`, `dict`, `tuple`, `set`)
+- Imports and modules
+- String methods (`.upper()`, `.split()`, etc.)
+- Control flow (`if/elif/else`, `for`, `while`)
+- Classes and dataclasses
+
+**Lessons**:
+
+1. **The PRIMM Method — Predict, Run, Investigate**: Introduces the formal method for reading code. Students practice Predict-Run-Investigate on 4 short code blocks (2-4 lines each) using only variables, types, and arithmetic. Establishes the habit: predict before running.
+
+2. **Trace Tables — When Your Brain Takes Shortcuts**: Teaches trace tables as the formal tool for tracking variable state line by line. Students build trace tables for 4-6 line blocks with variable reassignment. Catches the most common prediction error (using old variable values after reassignment).
+
+3. **Your First Code Review — Catching a Bug**: Capstone lesson. Students read a 15-20 line SmartNotes excerpt (variables, arithmetic, print only — no functions). They apply PRIMM and trace tables to find a deliberate type mismatch bug. Connects to Pyright: the tool catches what the student just found manually.
+
+**Student does**: Predicts output using PRIMM, builds trace tables, performs a mini code review
 **AI role**: Generates typed Python samples; student reads, predicts, and explains
+
+**Transition to Ch 3**: "You can read Python. You can predict what it does. You can even find bugs. In Chapter 3, you flip the script — instead of reading someone else's code, you write a specification and AI generates code for you. Then you verify it using the reading skills you just learned."
 
 ---
 

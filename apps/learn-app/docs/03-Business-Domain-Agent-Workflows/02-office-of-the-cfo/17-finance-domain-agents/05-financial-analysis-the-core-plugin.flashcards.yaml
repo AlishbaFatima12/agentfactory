@@ -1,22 +1,16 @@
 deck:
   id: "ch17-05-financial-analysis-core-plugin"
   title: "Financial Analysis: The Core Plugin"
-  description: "Key concepts from the financial-analysis core plugin lesson -- shared-core architecture, MCP connectors, eight commands, WACC, EV, LTM, and LBO fundamentals"
-  tags: ["financial-analysis", "core-plugin", "MCP-connectors", "WACC", "DCF", "LBO", "comps", "enterprise-value"]
-  version: 1
+  description: "Key concepts from the financial-analysis core plugin lesson -- install and verify, eight commands, data connectors, WACC, EV, LTM, LBO, comps/DCF interpretation, and verification discipline"
+  tags: ["financial-analysis", "core-plugin", "connectors", "WACC", "DCF", "LBO", "comps", "enterprise-value"]
+  version: 2
 
 cards:
   - id: "ch17-05-01"
     front: "Why must the financial-analysis core plugin be installed before any add-on in the financial-services-plugins suite?"
-    back: "Because all 11 MCP data connectors are centralised in the core plugin. Add-on plugins inherit these connections -- without the core, add-ons have no data sources to work with."
-    tags: ["architecture", "install-order", "MCP"]
+    back: "Because all eleven data connectors are centralised in the core plugin. Add-on plugins inherit these connections -- without the core, add-ons have no data sources to work with."
+    tags: ["architecture", "install-order"]
     difficulty: "basic"
-
-  - id: "ch17-05-02"
-    front: "How many MCP data connectors does the core plugin provide? Name any four."
-    back: "11 connectors. Examples: Daloopa (financial model data), Morningstar (equity research), S&P Global (Capital IQ data), FactSet (market data), Moody's (credit ratings), MT Newswires (financial news), Aiera (earnings transcripts), LSEG (market data), PitchBook (private company data), Chronograph (private markets monitoring), Egnyte (document management)."
-    tags: ["MCP", "data-connectors", "core-plugin"]
-    difficulty: "intermediate"
 
   - id: "ch17-05-03"
     front: "What is the WACC formula, and why does a 1 percentage point increase in WACC significantly affect DCF output?"
@@ -50,7 +44,7 @@ cards:
 
   - id: "ch17-05-08"
     front: "What is the difference between commands and skills in the core plugin?"
-    back: "Commands are explicitly invoked by typing /command-name and trigger a specific workflow. Skills fire automatically in the background when Claude detects relevant context. Commands are what you call; skills are what Claude draws on. For example, /comps produces a comps workbook when invoked, while the comps-analysis skill applies professional conventions automatically whenever comps-related context appears."
+    back: "Commands are explicitly invoked by typing /command-name and trigger a specific workflow. Skills fire automatically in the background when Claude detects relevant context. For example, /comps produces a comps workbook when invoked, while the comps-analysis skill applies professional conventions automatically whenever comps-related context appears."
     tags: ["commands", "skills", "architecture"]
     difficulty: "basic"
 
@@ -60,8 +54,14 @@ cards:
     tags: ["comps", "Excel", "conventions"]
     difficulty: "basic"
 
-  - id: "ch17-05-10"
-    front: "Name the five end-to-end workflow patterns the financial-services-plugins suite supports."
-    back: "Research to Report (equity-research + core), Spreadsheet Analysis (core), Financial Modelling (core + equity-research), Deal Materials (investment-banking + core), and Portfolio to Presentation (private-equity + core)."
-    tags: ["workflows", "plugin-suite", "architecture"]
+  - id: "ch17-05-convergence-011"
+    front: "Why should you compare comps and DCF valuations, and what does divergence tell you?"
+    back: "Two methodologies should converge. Comps reflect current market sentiment (what peers trade at). DCF reflects projected cash flows (what you think the company is worth). When they diverge, the gap reveals different assumptions -- the professional skill is explaining the gap, not ignoring it."
+    tags: ["comps", "DCF", "valuation-comparison"]
+    difficulty: "intermediate"
+
+  - id: "ch17-05-verification-012"
+    front: "Why are /debug-model and /check-deck described as 'production discipline' rather than optional tools?"
+    back: "/debug-model catches formula errors (circular references, broken links, balance sheet imbalances) before they reach a client. /check-deck catches number inconsistencies between slides before they reach a committee. Building the habit of running verification after every model change separates reliable output from risky output."
+    tags: ["debug-model", "check-deck", "verification"]
     difficulty: "intermediate"
