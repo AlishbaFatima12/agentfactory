@@ -153,9 +153,9 @@ Notice that you *see* and *read* before you are asked to *do* anything. This is 
 
 ## The SmartNotes Project
 
-**SmartNotes is a Personal AI Knowledge Base** -- a command-line and API-driven application for capturing, organizing, searching, and summarizing your notes using AI. Think of it as your own note-taking tool that understands what you wrote: you save notes in Markdown, tag and categorize them, search by meaning (not just keywords), and ask the AI to summarize or connect ideas across notes. By v1.0, SmartNotes has a typed Python core, a `smartnotes` CLI tool, a FastAPI async API, PostgreSQL persistence, AI-powered semantic search via the Anthropic SDK, and a GitHub Actions CI pipeline that verifies every commit.
+**SmartNotes is a Personal AI Knowledge Base** -- a command-line and API-driven application for capturing, organizing, searching, and summarizing your notes using AI. Think of it as your own note-taking tool that understands what you wrote: you save notes in Markdown, tag and categorize them, search by meaning (not just keywords), and ask the AI to summarize or connect ideas across notes. By the end of Phase 8, SmartNotes has a typed Python core, a `smartnotes` CLI tool, a FastAPI async API, PostgreSQL persistence, AI-powered semantic search via the Anthropic SDK, and a GitHub Actions CI pipeline that verifies every commit.
 
-You do not build nine throwaway exercises. You build SmartNotes once and grow it across all nine phases. Each phase adds a layer using the SDD workflow: you write the specification (types + tests), prompt Claude Code to generate the implementation, and verify the output. The project is the vehicle; TDG is the method.
+You do not build nine throwaway exercises. You build SmartNotes once and grow it across Phases 1 through 8. Each phase adds a layer using the SDD workflow: you write the specification (types + tests), prompt Claude Code to generate the implementation, and verify the output. The project is the vehicle; TDG is the method. Phase 9 is different -- you build a completely new project from scratch to prove you can do it without scaffolding.
 
 | Phase | What You Add to SmartNotes | Skills You Practice |
 |-------|---------------------------|---------------------|
@@ -167,9 +167,8 @@ You do not build nine throwaway exercises. You build SmartNotes once and grow it
 | 6 | PostgreSQL persistence, file import/export, proper package structure | I/O testing, repository pattern, module architecture |
 | 7 | `smartnotes` CLI tool + FastAPI async API with AI integration | CLI testing, async/await, Pydantic request/response models |
 | 8 | GitHub Actions CI pipeline + security audit report | Automated verification, OWASP review of AI-generated code |
-| 9 | AI-powered semantic search, auto-tagging, summarization | Full SDD at production scale -- the complete TDG cycle end-to-end |
 
-Each phase produces a working version. By the end, you have one polished, portfolio-grade project that demonstrates every skill from Part 4 -- not nine disconnected toy programs.
+Each phase produces a working version of SmartNotes. By the end of Phase 8, you have a polished, portfolio-grade project that demonstrates every skill you have learned. Then Phase 9 proves you can do it again -- on a brand-new project, from scratch, without guidance.
 
 ## The Nine Phases
 
@@ -179,7 +178,7 @@ Part 4 is organized into nine phases. Each phase gives you a new capability, and
 
 > Your role: **Reader** -- "I can understand what AI generates"
 
-Before you can specify, you must be able to read. Phase 1 builds that foundation -- and introduces **SmartNotes**, the Personal AI Knowledge Base you will build across all nine phases (see [The SmartNotes Project](#the-smartnotes-project) below).
+Before you can specify, you must be able to read. Phase 1 builds that foundation -- and introduces **SmartNotes**, the Personal AI Knowledge Base you will build across Phases 1 through 8 (see [The SmartNotes Project](#the-smartnotes-project) above).
 
 **The Development Environment** installs the five-tool discipline stack -- uv, pyright, ruff, pytest, and Git. This is not busywork. Every tool has a job in the TDG cycle: pyright catches type errors before Claude Code generates code against wrong contracts; ruff enforces consistency; pytest is how you verify. By the end of this chapter, your SmartNotes project has a passing linter, a passing type checker, a passing test suite, and a clean Git history -- before you have written a single line of Python logic.
 
@@ -468,13 +467,74 @@ def search_notes_secure(query: str) -> list[Note]:
 
 > Your role: **Architect** -- "I can architect and deliver complete, production-grade systems"
 
-Phase 9 is proof. Not proof to an instructor -- proof to yourself, and proof to anyone who reads your code, that you can take a requirement from nothing to a deployed, tested, secured, AI-powered application.
+Phase 9 is proof. Not proof to an instructor -- proof to yourself. SmartNotes was guided: each phase told you what to build next. Now you build something entirely new from a blank specification, using every skill from Phases 1-8, with no scaffolding.
 
 **When Not to Use AI** develops the judgment that separates effective AI collaboration from dependency. You learn the AI assistance spectrum from fully manual to fully generated, recognize when manual coding is faster than prompting, identify the warning signs of over-reliance -- inability to read your own codebase, inability to debug without re-prompting, inability to estimate scope -- and practice the professional balance. AI is a tool. Like every tool, knowing when not to use it is as important as knowing how.
 
-**SmartNotes Capstone** completes **SmartNotes v1.0** -- the Personal AI Knowledge Base you have been building since Phase 1, now fully integrated with AI-powered features. Every skill from every phase appears: Markdown requirement specifications, typed data models with dataclasses and Pydantic, full object-oriented design with inheritance, composition, and protocols, PostgreSQL persistence, typed function composition, async/await for SDK and API calls, a `smartnotes` CLI tool, a FastAPI async API, AI integration via the Anthropic SDK for semantic search and auto-summarization, a pytest suite with 80%+ coverage, a security audit report, a GitHub Actions CI pipeline, and structured logging.
+**QuizForge Capstone** -- you build **QuizForge**, an AI-Powered Quiz Generator, entirely from scratch. Feed it any text -- your notes, a chapter, documentation -- and QuizForge generates quiz questions, tracks your scores over time, identifies weak topics, and adapts difficulty automatically. Every skill from every phase appears in a single new project: typed data models (`Question`, `Quiz`, `Score`, `Topic`) with dataclasses and Pydantic, full object-oriented design with a `QuestionBank`, `QuizEngine`, `ScoreTracker`, and `DifficultyAdapter`, PostgreSQL persistence for questions and performance history, a `quizforge` CLI tool, a FastAPI async API, AI integration via the Anthropic SDK for question generation and quality scoring, a pytest suite with 80%+ coverage, a security audit, and a GitHub Actions CI pipeline.
 
-**Deliverables**: Specification documents, type definitions, object model diagram, passing test suites, AI-generated and human-verified implementation, security audit, green CI pipeline, and a deployed SmartNotes application with CLI, API, and AI features. One polished, portfolio-grade project that demonstrates the complete TDG cycle at production scale.
+The difference from SmartNotes: nobody tells you what to build in each step. You receive the project requirements, and you drive the entire SDD/TDG cycle -- research, specification, types, tests, generation, verification, debugging, iteration -- from start to finish. QuizForge proves you can do it alone.
+
+**Example -- What you do in Phase 9:**
+
+```python
+# You start from a blank project. You write the specification:
+
+@dataclass
+class Question:
+    text: str
+    choices: list[str]
+    correct_index: int
+    topic: str
+    difficulty: int  # 1-5
+
+class QuizEngine:
+    def generate_quiz(self, text: str, num_questions: int = 10) -> Quiz:
+        """AI reads the text and generates questions with distractors."""
+        ...  # You specify the interface. AI implements.
+
+    def score(self, quiz: Quiz, answers: list[int]) -> Score:
+        """Score the quiz and update the student's topic weakness map."""
+        ...
+
+    def adapt_difficulty(self, history: list[Score]) -> int:
+        """Raise difficulty on strong topics, lower it on weak ones."""
+        ...
+
+# You write failing tests FIRST:
+def test_generated_questions_match_source_material():
+    engine = QuizEngine(ai_client=mock_client)
+    quiz = engine.generate_quiz("Python uses indentation for blocks.", num_questions=3)
+    assert len(quiz.questions) == 3
+    assert all(q.topic != "" for q in quiz.questions)
+
+# Then you prompt Claude Code: "Implement QuizEngine to pass these tests."
+# You verify. You debug. You iterate. No guidance. Just the method.
+```
+
+```bash
+# The CLI tool you ship:
+$ quizforge generate chapter-32.md --questions 15
+Generated 15 questions from "Chapter 32: Reading Python"
+
+$ quizforge take
+Question 1/15: What does `x: int = 5` mean in Python?
+  a) x is always 5
+  b) x is an integer variable set to 5  ← you answer
+  c) x cannot be changed
+  d) x is a string
+Correct! ✓
+
+$ quizforge stats
+Topics:          Strong    Weak
+  Type annotations  92%
+  Trace tables               45%  ← needs review
+  PRIMM method      78%
+
+Overall: 72% (15 quizzes taken)
+```
+
+**Deliverables**: SDD specification documents, type definitions, object model diagram, passing test suites, AI-generated and human-verified implementation, security audit, green CI pipeline, and a deployed QuizForge application with CLI, API, and AI features. You finish Part 4 with two portfolio-grade projects -- SmartNotes (guided) and QuizForge (independent) -- proving you can drive the complete TDG cycle at production scale.
 
 ## What You Will Be Able To Do
 
@@ -495,7 +555,7 @@ By the end of Part 4, you will be able to:
 
 After completing Part 4, continue to **Part 5: Building Custom Agents** where you apply your Python skills and axiom-grounded thinking to build production AI agents with SDKs like OpenAI Agents SDK, Google ADK, and the Anthropic SDK. The async patterns you mastered in Phase 7, the typed interfaces you designed in Phase 5, the security review skills from Phase 8, and the testing discipline you built in Phase 3 feed directly into agent development.
 
-The transformation of software development is underway. You are not just learning a language. You are learning to direct and verify the AI systems that write it. SmartNotes v1.0 is the proof that you can.
+The transformation of software development is underway. You are not just learning a language. You are learning to direct and verify the AI systems that write it. SmartNotes and QuizForge are the proof that you can.
 
 ## Key Terms (60-Second Glossary)
 
