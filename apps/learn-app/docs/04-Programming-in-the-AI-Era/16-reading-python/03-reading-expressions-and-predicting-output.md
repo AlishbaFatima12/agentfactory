@@ -41,10 +41,10 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 5
-  assessment: "5 concepts (arithmetic operators with division subtlety, operator precedence, string operations, boolean short-circuit logic, trace tables) within A2 limit of 7"
+  assessment: "5 concepts (arithmetic operators with division subtlety, operator precedence, string expressions including f-strings, boolean short-circuit logic, trace tables) within A2 limit of 7"
 
 differentiation:
-  extension_for_advanced: "Explore Python's math module for precision-sensitive calculations, and investigate how the decimal module handles 0.1 + 0.2 correctly"
+  extension_for_advanced: "Explore how Python's round() behaves with different halfway values (0.5, 1.5, 2.5, 3.5). Predict each result, then verify. Research why 'banker's rounding' reduces cumulative bias in large datasets."
   remedial_for_struggling: "Focus on arithmetic operators only. Practice predicting single-operator expressions before combining operators. Build trace tables for 2-line blocks before attempting 4-line blocks"
 ---
 
@@ -178,7 +178,7 @@ Work through it step by step: `2 ** 2` = `4` (exponentiation first), `8 / 4` = `
 
 ## String Operations
 
-Strings have their own set of operators and methods. Here are the ones you will encounter most when reading Python code.
+Strings have their own operators for combining text.
 
 **Concatenation** joins two strings with `+`:
 
@@ -204,34 +204,6 @@ divider: str = "-" * 20
 --------------------
 ```
 
-**Indexing** retrieves a single character. Indices start at `0`. Negative indices count from the end:
-
-```python
-word: str = "Python"
-first: str = word[0]
-last: str = word[-1]
-```
-
-**Output:**
-
-```
-P
-n
-```
-
-**Slicing** extracts a range of characters. The syntax is `s[start:stop]` where `start` is included and `stop` is excluded:
-
-```python
-word: str = "Python"
-middle: str = word[1:4]
-```
-
-**Output:**
-
-```
-yth
-```
-
 **F-strings** embed expressions inside strings:
 
 ```python
@@ -245,16 +217,6 @@ message: str = f"{name} is {age} years old"
 ```
 Zia is 25 years old
 ```
-
-**Common string methods** you will see in code:
-
-| Method | What It Does | Example | Result |
-|--------|-------------|---------|--------|
-| `.upper()` | All uppercase | `"hello".upper()` | `"HELLO"` |
-| `.lower()` | All lowercase | `"Hello".lower()` | `"hello"` |
-| `.strip()` | Remove whitespace from both ends | `"  hi  ".strip()` | `"hi"` |
-| `.split(",")` | Split into a list | `"a,b,c".split(",")` | `["a", "b", "c"]` |
-| `"-".join(["a","b"])` | Join a list into a string | `"-".join(["a","b"])` | `"a-b"` |
 
 ## Boolean Logic
 
@@ -371,8 +333,8 @@ result: int = 3 + 2 ** 3 - 4 * 2
 Predict each result:
 
 ```python
-"abc"[1]
-"hello"[1:3]
+"ha" * 3
+"Hello" + ", " + "World"
 f"Score: {80 + 15}"
 0 or "" or "found"
 5 and 3 and 0
