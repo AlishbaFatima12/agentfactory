@@ -1,6 +1,6 @@
 # Python for the New AI Era: Course Architecture Plan
 
-**Version:** 2.11
+**Version:** 2.12
 **Status:** Draft
 **Date:** 2026-02-24
 **Branch:** `learn-python`
@@ -116,7 +116,7 @@ The scope of Part 4 is ambitious — from basic types in Phase 1 to async APIs a
 | 6 | Files, databases, packages | "Same cycle, but now your tests verify I/O boundaries and data persistence" |
 | 7 | CLI tools, async/await, FastAPI | "Same cycle, but now your tests invoke CLI commands and async endpoints" |
 | 8 | CI/CD, security | "Same cycle, but now the pipeline runs your tests on every commit" |
-| 9 | Full system architecture | "Same cycle at system scale — the SmartNotes capstone is one large TDG loop" |
+| 9 | Full system architecture | "Same cycle at system scale — QuizForge is a brand-new project proving you can drive TDG from scratch" |
 
 **Chapter author directive**: Each chapter in Phases 5-9 must include a short "bridge paragraph" in its opening that says, in effect: "You already know the TDG cycle. This chapter applies it to [new domain]. The method is the same — specify with types, write failing tests, generate, verify. The only thing that changes is what you are specifying." This prevents the cognitive cliff where students feel they are learning an entirely new approach when they are actually applying the same one to bigger problems.
 
@@ -1026,37 +1026,40 @@ Students already understand version control and CI concepts from Part 2 — they
 
 ---
 
-#### Chapter 26: SmartNotes Capstone — AI-Powered Application
+#### Chapter 26: QuizForge Capstone — AI-Powered Quiz Generator
 
-**Goal**: Student builds a complete, production-grade application using everything learned.
+**Goal**: Student builds a complete, production-grade application **from scratch** using everything learned — proving they can drive the full SDD/TDG cycle independently, without the SmartNotes scaffolding.
 
-**Project**: **SmartNotes** — the Personal AI Knowledge Base the student has been building since Phase 1, now fully integrated.
+**Project**: **QuizForge** — an AI-Powered Quiz Generator. Feed it any text (notes, chapters, documentation) and it generates quiz questions, tracks scores over time, identifies weak topics, and adapts difficulty automatically. This is a **new project**, not a continuation of SmartNotes. The student starts from a blank specification.
 
 | Component | Technologies | Chapters Applied |
 |---|---|---|
-| Problem Specification | Markdown, requirements | Ch 2, 3, 13 |
-| Data Models | Dataclasses, Pydantic, Classes | Ch 6, 14-15 |
-| Object Design | Inheritance, composition, protocols | Ch 15-17 |
-| Data Layer | PostgreSQL, repository pattern | Ch 18 |
-| Business Logic | Typed functions, composition | Ch 7, 20 |
-| Concurrency | async/await for API + SDK calls | Ch 22 |
-| CLI Interface | `smartnotes` CLI tool | Ch 21 |
+| Problem Specification | Markdown, requirements, SDD workflow | Ch 2, 3, 13 |
+| Data Models | `Question`, `Quiz`, `Score`, `Topic` — dataclasses + Pydantic | Ch 6, 14-15 |
+| Object Design | `QuestionBank`, `QuizEngine`, `ScoreTracker`, `DifficultyAdapter` | Ch 15-17 |
+| Data Layer | PostgreSQL — questions + performance history | Ch 18 |
+| Business Logic | Typed functions, difficulty adaptation, scoring | Ch 7, 20 |
+| Concurrency | async/await for AI SDK calls | Ch 22 |
+| CLI Interface | `quizforge` CLI tool | Ch 21 |
 | API Service | FastAPI (async) | Ch 22 |
-| AI Integration | Anthropic SDK (async) — semantic search, summaries | Ch 13, 22 |
+| AI Integration | Anthropic SDK — question generation, quality scoring | Ch 13, 22 |
 | Test Suite | pytest (80%+ coverage) | Ch 9, 13 |
 | CI Pipeline | GitHub Actions | Ch 23 |
 | Security Review | OWASP checklist, `bandit` | Ch 24 |
 | Observability | Structured logging | Ch 23 |
 
+**Key difference from SmartNotes**: Nobody tells the student what to build in each step. They receive the project requirements and drive the entire cycle — research, specification, types, tests, generation, verification, debugging, iteration — from start to finish.
+
 **Deliverables**:
-- Specification documents (Markdown)
+- SDD specification documents (Markdown)
 - Type definitions (dataclasses + Pydantic + classes)
 - Object model diagram (class relationships)
 - Test suites (passing, 80%+ coverage)
 - Implementation (AI-generated, student-reviewed)
 - Security audit report (student-conducted)
 - CI pipeline (green)
-- Deployed SmartNotes application with CLI + API + AI features
+- Deployed QuizForge application with CLI + API + AI features
+- **Two portfolio-grade projects**: SmartNotes (guided, Phases 1-8) + QuizForge (independent, Phase 9)
 
 ---
 
@@ -1582,20 +1585,20 @@ Students don't build nine throwaway projects. They build **one real application*
 
 ---
 
-#### Phase 9: Integrate & Polish (Ch 25-26) — "SmartNotes v1.0: Complete"
+#### Phase 9: Capstone — Prove (Ch 25-26) — "QuizForge: Built From Scratch"
 
-**Student role**: Architect — design and build complete systems
+**Student role**: Architect — design and build complete systems independently
 
 **What students build**:
-- Judgment about when to use AI vs write manually for SmartNotes features
-- Full AI-powered features: semantic search, auto-tagging, note summarization, related notes suggestions
-- Complete specification → implementation → verification cycle for a new feature
-- Performance optimization and refactoring
-- Documentation and deployment
+- Judgment about when to use AI vs write manually (Ch 25)
+- **QuizForge** — a brand-new AI-Powered Quiz Generator, built entirely from scratch without SmartNotes scaffolding (Ch 26)
+- Full SDD/TDG cycle driven independently: requirements → specification → types → tests → generation → verification → debugging → iteration
+- `quizforge` CLI tool + FastAPI async API + AI-powered question generation via Anthropic SDK
+- PostgreSQL persistence, 80%+ test coverage, CI pipeline, security audit
 
-**Deliverable**: Production-grade SmartNotes v1.0 — a portfolio-ready application demonstrating every skill in the course
+**Deliverable**: Production-grade QuizForge application — plus SmartNotes from Phases 1-8 — giving the student two portfolio-ready projects demonstrating every skill in the course
 
-### The SmartNotes Stack (Final)
+### The SmartNotes Stack (Phases 1-8)
 
 ```
 smartnotes/
@@ -1613,15 +1616,35 @@ smartnotes/
 └── README.md               # Project documentation
 ```
 
+### The QuizForge Stack (Phase 9 — Built From Scratch)
+
+```
+quizforge/
+├── pyproject.toml          # uv project
+├── src/quizforge/
+│   ├── models/             # Question, Quiz, Score, Topic
+│   ├── engine/             # QuizEngine, DifficultyAdapter
+│   ├── bank/               # QuestionBank, ScoreTracker
+│   ├── ai/                 # Anthropic SDK — question generation, quality scoring
+│   ├── storage/            # PostgreSQL — questions + performance history
+│   ├── api/                # FastAPI routes
+│   └── cli/                # quizforge CLI tool
+├── tests/                  # pytest suite, 80%+ coverage
+├── .github/workflows/      # CI pipeline
+├── security/               # Security audit report
+└── README.md               # Project documentation
+```
+
 ### Why This Works
 
-| Concern | How SmartNotes Addresses It |
+| Concern | How the Two-Project Approach Addresses It |
 |---|---|
-| "Exercises feel disconnected" | Every exercise adds to the same project |
+| "Exercises feel disconnected" | Phases 1-8: every exercise adds to SmartNotes |
 | "I never finish anything" | Each phase has a working, shippable version |
-| "Portfolio is empty" | One polished project > nine toy exercises |
-| "AI features feel bolted on" | Semantic search and summarization are core features |
-| "OOP feels abstract" | Notes, tags, collections ARE the domain objects |
+| "Can I do it alone?" | Phase 9: QuizForge from scratch proves independence |
+| "Portfolio is empty" | Two polished projects > nine toy exercises |
+| "AI features feel bolted on" | Both projects have AI as core feature |
+| "OOP feels abstract" | Notes, tags, questions, quizzes ARE the domain objects |
 | "Testing feels pointless" | Tests protect YOUR knowledge base from regressions |
 | "Security feels theoretical" | Students audit their own code for real vulnerabilities |
 | "I'm too dependent on AI" | Ch 26 explicitly teaches when NOT to use AI |
@@ -1662,3 +1685,5 @@ smartnotes/
 | 2.8 | 2026-02-24 | Major restructuring from 23 chapters/7 phases to 26 chapters/9 phases. Added Phase 4: Debugging + TDG Mastery (Ch 12-13) — debugging checkpoint between testing and OOP. Split old Phase 6 into Phase 7 (CLI + Concurrency) and Phase 8 (CI/CD + Security). Added Ch 24: Security Review for AI-Generated Code (OWASP, bandit, security-focused TDG). Added Ch 25: When Not to Use AI (judgment, AI dependency prevention). Old Ch 10 (TDG Mastery) replaced with Ch 10 (Iterating on AI Output) and moved full TDG mastery to new Ch 13 in Phase 4. Renumbered OOP chapters (12-15 → 14-17), real-world chapters (16-18 → 18-20), production chapters (19-21 → 21-23). Kept axioms at start (Ch 14 already exists) — no duplicate axioms chapter. Updated all cross-references. |
 | 2.9 | 2026-02-24 | Aligned plan with Part 4 README changes. Updated workflow diagram to `Requirements → Types → Failing Tests → Generate → Verify & Iterate → Ship`. Added human/AI responsibility table showing who leads each step. Added Part 2 bridge acknowledgments to Phase 6 (file processing, PostgreSQL already covered in Part 2) and Phase 8 (Git workflows, CI concepts already covered in Part 2). |
 | 2.10 | 2026-02-24 | Synchronized all phase titles, role quotes, Specification Sophistication Gradient, and Student Journey Summary with the published Part 4 README. Phase titles now match README: Phase 1 "Read & Explore", Phase 4 "Debug & Master", Phase 6 "Build", Phase 7 "Deploy", Phase 8 "Harden & Secure". All 9 role quotes now identical between plan and README. |
+| 2.11 | 2026-03-04 | Added Claude Code + SDD emphasis throughout (Sections 1-3, 6-7). Chapter 5 as required prerequisite. INPUT/OUTPUT teaching model. |
+| 2.12 | 2026-03-05 | Replaced Phase 9 SmartNotes capstone with QuizForge — an AI-Powered Quiz Generator built from scratch. SmartNotes now runs Phases 1-8 (guided); Phase 9 is QuizForge (independent). Added QuizForge stack diagram. Updated "Why This Works" table for two-project approach. Students finish with two portfolio-grade projects. |
