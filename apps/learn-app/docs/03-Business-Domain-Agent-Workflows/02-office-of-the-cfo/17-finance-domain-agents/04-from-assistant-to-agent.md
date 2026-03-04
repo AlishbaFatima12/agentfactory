@@ -108,20 +108,13 @@ teaching_guide:
 In Lessons 1 through 3, you worked inside a single Excel workbook. Claude read your formulas, traced dependencies, tested scenarios, and built model structures from plain-language descriptions -- all within the boundary of one spreadsheet. You close the workbook and the context disappears. You finish the analysis and move to PowerPoint, but that transition is yours to make. Claude cannot follow you.
 
 :::caution Prerequisites: Cowork Access
-This lesson requires the **Claude desktop app** with **Cowork** enabled. Cowork is available on **Team and Enterprise plans**.
+This lesson requires the **Claude desktop app** with **Cowork** enabled. Cowork is available on **Pro, Max, Team, and Enterprise plans**.
 
 1. **Install the Claude desktop app** if you have not already — download it from [claude.ai/download](https://claude.ai/download) for macOS or Windows.
-2. **Verify Cowork access.** Open the Claude desktop app and confirm that you see the Cowork interface (the ability to work across applications). If you only see the chat interface, your plan may not include Cowork — check your subscription at [claude.ai/settings](https://claude.ai/settings).
-3. **Install the finance plugin.** In the Claude desktop app, run:
-
-```
-claude plugin install finance@knowledge-work-plugins
-```
-
-Or install from `claude.com/plugins` by searching for "knowledge-work-plugins/finance."
-
-You do not need to configure MCP connectors for this lesson — the exercises use the plugin's built-in workflows. Connector configuration (linking to your organisation's ERP, data warehouse, and email) is handled by IT when deploying to production.
-:::
+2. **Switch to the Cowork tab.** Open the Claude desktop app and select the **Cowork** tab. If you do not see it, your plan may not include Cowork — check your subscription at [claude.ai/settings](https://claude.ai/settings).
+3. **Install the finance plugin.** In the Cowork sidebar, click **Customize** → **Browse plugins**, find the finance plugin (`knowledge-work-plugins/finance`), and click **Install**. The plugin bundles skills, slash commands, connectors, and sub-agents into a single package — no separate configuration needed.
+4. **Adding connectors is just as simple.** From the same **Customize** menu, select **Connectors** to browse and enable data integrations (such as market data providers or internal systems). For enterprise deployments, your IT team can pre-provision plugins and connectors across the organisation through the admin console.
+   :::
 
 This lesson crosses that boundary. When Claude operates through the Cowork platform, it is not embedded in Excel the way a sidebar is embedded in a workbook. It is an agent that can act across applications, carry context from one tool to another, and execute multi-step workflows that span the entire production process of a financial deliverable. The most significant change is not the tools Claude can access -- the same MCP connectors you configured for Claude in Excel work in Cowork automatically. The change is what Claude can do with them: orchestrate across applications rather than analyse within one.
 
