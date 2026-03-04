@@ -60,6 +60,18 @@ By the end of this chapter, you should be able to answer these five questions:
 4. How would you apply the Knowledge Extraction Method (Chapter 16) to encode a senior practitioner's judgment about audit materiality or tax advisory into a SKILL.md extension?
 5. Where is the boundary between AI execution and professional judgment in each of the five domains — what work can an agent do autonomously, and what requires a qualified practitioner's sign-off?
 
+## Companion Repository
+
+The SKILL.md extensions, exercise data, workflow recipes, and reference materials for this chapter are available in the companion repository: [**panaversity/ca-cpa-domain-agents**](https://github.com/panaversity/ca-cpa-domain-agents)
+
+Downloads (from the [latest release](https://github.com/panaversity/ca-cpa-domain-agents/releases/latest)):
+
+- `ca-cpa-exercise-data.zip` — Trial balances, entity profiles, source documents, and working paper templates for Exercises 1-23
+- `ca-cpa-skills-only.zip` — The five domain SKILL.md extensions (jurisdiction tax, chart of accounts, audit methodology, client entity, compliance calendar)
+- `ca-cpa-workflow-recipes.zip` — Scheduled task configurations for recurring workflows
+- `ca-cpa-references.zip` — Jurisdiction-specific regulatory references
+- `ca-cpa-domain-agents-full.zip` — Everything in one package (Exercise 24)
+
 ## After Chapter 19
 
 When you finish this chapter, your perspective shifts:

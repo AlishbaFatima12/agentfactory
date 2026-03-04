@@ -61,9 +61,17 @@ By the end of this chapter, you should be able to answer these five questions:
 
 ## Companion Repository
 
-The skill files, exercise data, workflow recipes, and reference materials for this chapter are available in the companion repository: **panaversity/islamic-finance-domain-agents**
+The skill files, exercise data, workflow recipes, and reference materials for this chapter are available in the companion repository: [**panaversity/islamic-finance-domain-agents**](https://github.com/panaversity/islamic-finance-domain-agents)
 
-Contents:
+Downloads (from the [latest release](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest)):
+
+- `islamic-finance-domain-agents-exercise-data.zip` — Scenario data and Excel templates for Exercises 1-14
+- `islamic-finance-domain-agents-skills-only.zip` — 12 product skills, 13 jurisdiction overlays, and the global router
+- `islamic-finance-domain-agents-workflow-recipes.zip` — Scheduled task configurations (daily, monthly, quarterly, annual)
+- `islamic-finance-domain-agents-references.zip` — Global Standards Map, AAOIFI FAS reference table
+- `islamic-finance-domain-agents-full.zip` — Everything in one package (Exercise 14 capstone)
+
+Repository contents:
 
 - `skills/products/` — 12 product SKILL.md files (murabaha, ijarah, sukuk, takaful, zakat, and more)
 - `skills/jurisdictions/` — 13 jurisdiction overlay SKILL.md files (Bahrain, Malaysia, Saudi, UAE, UK, and more)
