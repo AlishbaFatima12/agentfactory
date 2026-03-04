@@ -186,20 +186,6 @@ Before you can specify, you must be able to read. Phase 1 builds that foundation
 
 **Your First TDG Cycle** closes Phase 1 by giving you the complete loop for the first time: define a requirement, write a type signature, write one failing test, prompt AI to implement, run pytest, verify green. AI assists at every step -- helping you spot gaps in your requirement, validating your type signature, suggesting edge cases for your test. Five lines of specification produce twenty lines of working implementation. This is the ratio that defines the rest of the course.
 
-**Example -- What you do in Phase 1:**
-
-```python
-# AI generates this code. Your job: predict the output before running it.
-title: str = "My First Note"
-word_count: int = 42
-is_published: bool = False
-
-print(f"{title} has {word_count} words")
-print(f"Published: {is_published}")
-
-# What will this print? Predict first, then run to check.
-```
-
 ### Phase 2: Types as the Language of Intent -- Specify
 
 > Your role: **Specifier** -- "I can tell AI precisely what to build"
@@ -213,25 +199,6 @@ AI output is only as good as your specification. Phase 2 teaches you to specify 
 **Data Models** introduces `@dataclass` and Pydantic `BaseModel` as specification tools. You model real domains -- Order, Customer, Product -- with typed data structures. Dataclasses handle internal data; Pydantic validates external boundaries. AI assists by suggesting fields you may have missed and validating that your model captures your domain correctly. This chapter bridges to full OOP in Phase 5 -- dataclasses are simplified classes, and understanding them first makes classes intuitive later.
 
 **Functions as Contracts** reframes every function signature as a binding agreement between you and AI. `def add_note(title: str, content: str) -> Note` is not a header -- it is a specification. You learn type annotations on parameters and return values, default values, `*args` and `**kwargs`, pure functions, composition, scope, first-class functions, and docstrings as specification prose. TDG exercises have you writing signatures with AI validating your contracts, then prompting AI to implement the body and verifying it passes.
-
-**Example -- What you do in Phase 2:**
-
-```python
-from dataclasses import dataclass
-
-# YOU write this specification (the types):
-@dataclass
-class Note:
-    title: str
-    content: str
-    tags: list[str]
-
-def add_note(title: str, content: str, tags: list[str] = []) -> Note:
-    """Create a new note with the given title, content, and tags."""
-    ...  # AI implements this part
-
-# Your types tell AI exactly what to build. No guessing.
-```
 
 ### Phase 3: Tests as Specification -- Verify
 
@@ -247,34 +214,6 @@ A type signature tells AI what shape the code should have. A test tells AI what 
 
 **Error Handling and Exceptions** teaches you to anticipate and specify failure paths. `try/except/else/finally`, the built-in exception hierarchy, raising and chaining exceptions, custom exception classes, context managers, and Pydantic validators for boundary data. You write error-path tests before prompting AI to implement the handling -- `pytest.raises` becomes as natural as `assert`. AI assists by suggesting exception hierarchies and reviewing your error coverage.
 
-**Example -- What you do in Phase 3:**
-
-```python
-# YOU describe what you want to test. AI helps you write the test code.
-# Your prompt: "Write a test that checks if search finds notes by title"
-
-def test_search_finds_matching_notes():
-    collection = NoteCollection()
-    collection.add(Note("Python Tips", "Learn typing"))
-    collection.add(Note("Recipe", "Make pasta"))
-
-    results = collection.search("Python")
-
-    assert len(results) == 1
-    assert results[0].title == "Python Tips"
-
-def test_search_returns_empty_when_no_match():
-    collection = NoteCollection()
-    collection.add(Note("Python Tips", "Learn typing"))
-
-    results = collection.search("JavaScript")
-
-    assert results == []
-
-# You specify WHAT to test. AI helps write the test code.
-# Then AI implements the actual search() function to pass these tests.
-```
-
 ### Phase 4: Debugging and TDG Independence -- Debug & Master
 
 > Your role: **Debugger** -- "I can diagnose failures and drive TDG without scaffolding"
@@ -284,25 +223,6 @@ Phase 4 is the checkpoint between guided learning and independent practice. When
 **Debugging AI-Generated Code** teaches you to read tracebacks as diagnostic information rather than error messages to paste back into the prompt. You learn `print()` debugging and `breakpoint()` strategically, recognize the common failure patterns of AI-generated code -- off-by-one errors, wrong scope, missed edge cases, misunderstood types -- and follow the debugging loop: reproduce, isolate, identify, fix, verify. AI assists by explaining tracebacks, suggesting hypotheses, and generating fixes -- but you make the judgment call on whether the fix is correct. You develop the discipline of knowing when to re-prompt AI versus fix the code manually.
 
 **TDG Mastery** brings the entire cycle together as an independent practice you drive without scaffolding. Starting from a problem statement, you define requirements, specify with types, write comprehensive tests covering happy paths and edge cases, prompt AI effectively with full context, review output critically against your specification, debug failures systematically, and iterate until the full verification stack -- linter, type checker, test suite -- passes green. AI is a collaborator throughout, but you set the direction. This is the chapter where you stop following instructions and start owning the process.
-
-**Example -- What you do in Phase 4:**
-
-```python
-# AI generated this code, but your test is failing. Find the bug!
-
-def count_words(text: str) -> int:
-    """Count the number of words in the text."""
-    words = text.split(" ")
-    return len(words)
-
-# Your test:
-def test_count_words_handles_multiple_spaces():
-    result = count_words("hello   world")  # Three spaces between words
-    assert result == 2  # FAILS! Returns 4 instead of 2
-
-# The bug: split(" ") creates empty strings for extra spaces.
-# Fix: use split() with no argument (splits on any whitespace).
-```
 
 ### Phase 5: OOP -- The Python Object Model -- Model
 
@@ -317,33 +237,6 @@ Phase 5 teaches object-oriented programming after testing and debugging mastery 
 **Special Methods and the Python Object Model** reveals how Python objects work at the protocol level. `__repr__`, `__str__`, `__eq__`, `__lt__`, `__len__`, `__getitem__`, `__iter__`, `__next__`, `__bool__`, `__hash__`, and the context manager protocol. You specify special method behavior through tests -- assert that two identical `Note` objects are equal, assert that a `NoteCollection` is iterable -- then AI implements Pythonic objects that satisfy your specifications.
 
 **Decorators, Properties, and Advanced Patterns** covers `@staticmethod`, `@classmethod`, `@property`, custom decorators, decorator arguments, `Protocol` for structural subtyping, and dependency injection. You architect the patterns and write the interface tests. AI implements. You verify. The full advanced OOP toolkit, taught the same way as everything else in Part 4 -- specification first, generation second, verification third.
-
-**Example -- What you do in Phase 5:**
-
-```python
-# YOU design the class interface. AI implements the behavior.
-
-class Note:
-    def __init__(self, title: str, content: str) -> None:
-        self.title = title
-        self.content = content
-        self.tags: list[str] = []
-
-    def add_tag(self, tag: str) -> None:
-        """Add a tag if not already present."""
-        ...  # AI implements
-
-    def word_count(self) -> int:
-        """Return the number of words in the content."""
-        ...  # AI implements
-
-    def __eq__(self, other: object) -> bool:
-        """Two notes are equal if they have the same title."""
-        ...  # AI implements
-
-# You write tests that define what "add_tag" and "__eq__" should do.
-# AI writes the code. You verify it passes.
-```
 
 ### Phase 6: Real-World Python -- Build
 
@@ -361,33 +254,6 @@ You already learned file processing and PostgreSQL in Part 2 -- directing Claude
 
 **Comprehensions, Generators, and Functional Patterns.** List, dict, and set comprehensions, generator expressions for memory efficiency, `yield` and lazy evaluation, `map()`, `filter()`, `sorted()`, lambda functions, `functools`, and `itertools`. You specify transformation pipelines with typed inputs and outputs, write tests asserting correctness and performance characteristics, and compare multiple AI-generated implementations -- evaluating each for correctness, readability, and efficiency. AI assists by generating alternatives; you choose and verify.
 
-**Example -- What you do in Phase 6:**
-
-```python
-# YOU specify the file processing interface. AI implements it.
-
-from pathlib import Path
-import json
-
-def save_notes_to_json(notes: list[Note], filepath: Path) -> None:
-    """Save all notes to a JSON file."""
-    ...  # AI implements
-
-def load_notes_from_json(filepath: Path) -> list[Note]:
-    """Load notes from a JSON file. Raise FileNotFoundError if missing."""
-    ...  # AI implements
-
-# Your test specifies the exact behavior:
-def test_save_and_load_roundtrip(tmp_path: Path):
-    notes = [Note("Test", "Content")]
-    filepath = tmp_path / "notes.json"
-
-    save_notes_to_json(notes, filepath)
-    loaded = load_notes_from_json(filepath)
-
-    assert loaded[0].title == "Test"
-```
-
 ### Phase 7: CLI and Concurrency -- Deploy
 
 > Your role: **Tool Builder** -- "I can build and ship production tools and async APIs"
@@ -397,38 +263,6 @@ Phase 7 crosses the line from working code to real software that other people us
 **Unix-Style CLI Tools** teaches professional command-line applications: `stdin`/`stdout`/`stderr`, argument parsing with `argparse` or `typer`, exit codes, composable pipelines, environment variables, and packaging. You design the CLI interface first -- specifying every command, flag, and output format -- and write integration tests that invoke the CLI as a subprocess and assert on stdout, stderr, and exit codes. AI implements the handlers. You verify that the tool behaves exactly as specified.
 
 **Concurrency, async/await, and FastAPI** teaches concurrent execution because the real world does not wait -- APIs, databases, and file I/O all block, and blocking code does not scale. Threading basics and the GIL, `async def` and `await`, the event loop, `asyncio.gather()`, async context managers, and the decision framework for when async is the right tool. You then put async to work with FastAPI -- typed API endpoints with Pydantic request/response models, async handlers, dependency injection, and `TestClient` testing. This matters because FastAPI is async, agent SDKs are async, and MCP is async. Everything you build in Part 5 depends on the fluency you develop here.
-
-**Example -- What you do in Phase 7:**
-
-```bash
-# Your CLI tool in action:
-$ smartnotes add "Python Tips" --tags learning,python
-Note created: Python Tips (id: abc123)
-
-$ smartnotes search "python"
-Found 1 note:
-  - Python Tips [learning, python]
-
-$ smartnotes export --format json --output backup.json
-Exported 1 note to backup.json
-```
-
-```python
-# The FastAPI endpoint you build:
-from fastapi import FastAPI
-from pydantic import BaseModel
-
-app = FastAPI()
-
-class NoteCreate(BaseModel):
-    title: str
-    content: str
-    tags: list[str] = []
-
-@app.post("/notes")
-async def create_note(note: NoteCreate) -> Note:
-    ...  # AI implements, you verify with TestClient
-```
 
 ### Phase 8: Production Systems -- Harden & Secure
 
@@ -442,27 +276,6 @@ You already understand version control and CI concepts from Part 2 -- you learne
 
 **Security Review for AI-Generated Code** addresses the most important gap in AI-assisted development: AI optimizes for functionality, not security. You learn the OWASP Top 10 for Python -- SQL injection, command injection, path traversal, insecure deserialization, hardcoded secrets -- and build a systematic security review checklist you apply to every AI-generated module. `bandit` and `pip audit` become part of your TDG cycle. You add security tests to your pytest suites: tests that assert parameterized queries are used, that secrets are never hardcoded, that file paths are validated. This chapter makes you the human firewall that catches what AI consistently misses -- because AI has no incentive to be secure, only to pass your tests.
 
-**Example -- What you do in Phase 8:**
-
-```python
-# AI generated this database code. Can you spot the security flaw?
-
-def search_notes(query: str) -> list[Note]:
-    sql = f"SELECT * FROM notes WHERE title LIKE '%{query}%'"  # DANGER!
-    cursor.execute(sql)
-    return cursor.fetchall()
-
-# The bug: SQL injection! A user could input: ' OR '1'='1
-# Fix: Use parameterized queries:
-
-def search_notes_secure(query: str) -> list[Note]:
-    sql = "SELECT * FROM notes WHERE title LIKE %s"
-    cursor.execute(sql, (f"%{query}%",))  # Safe!
-    return cursor.fetchall()
-
-# You write tests that PROVE the code is secure.
-```
-
 ### Phase 9: Capstone -- Prove
 
 > Your role: **Architect** -- "I can architect and deliver complete, production-grade systems"
@@ -474,65 +287,6 @@ Phase 9 is proof. Not proof to an instructor -- proof to yourself. SmartNotes wa
 **QuizForge Capstone** -- you build **QuizForge**, an AI-Powered Quiz Generator, entirely from scratch. Feed it any text -- your notes, a chapter, documentation -- and QuizForge generates quiz questions, tracks your scores over time, identifies weak topics, and adapts difficulty automatically. Every skill from every phase appears in a single new project: typed data models (`Question`, `Quiz`, `Score`, `Topic`) with dataclasses and Pydantic, full object-oriented design with a `QuestionBank`, `QuizEngine`, `ScoreTracker`, and `DifficultyAdapter`, PostgreSQL persistence for questions and performance history, a `quizforge` CLI tool, a FastAPI async API, AI integration via the OpenAI Agents SDK or Anthropic SDK for question generation and quality scoring, a pytest suite with 80%+ coverage, a security audit, and a GitHub Actions CI pipeline.
 
 The difference from SmartNotes: nobody tells you what to build in each step. You receive the project requirements, and you drive the entire SDD/TDG cycle -- research, specification, types, tests, generation, verification, debugging, iteration -- from start to finish. QuizForge proves you can do it alone.
-
-**Example -- What you do in Phase 9:**
-
-```python
-# You start from a blank project. You write the specification:
-
-@dataclass
-class Question:
-    text: str
-    choices: list[str]
-    correct_index: int
-    topic: str
-    difficulty: int  # 1-5
-
-class QuizEngine:
-    def generate_quiz(self, text: str, num_questions: int = 10) -> Quiz:
-        """AI reads the text and generates questions with distractors."""
-        ...  # You specify the interface. AI implements.
-
-    def score(self, quiz: Quiz, answers: list[int]) -> Score:
-        """Score the quiz and update the student's topic weakness map."""
-        ...
-
-    def adapt_difficulty(self, history: list[Score]) -> int:
-        """Raise difficulty on strong topics, lower it on weak ones."""
-        ...
-
-# You write failing tests FIRST:
-def test_generated_questions_match_source_material():
-    engine = QuizEngine(ai_client=mock_client)
-    quiz = engine.generate_quiz("Python uses indentation for blocks.", num_questions=3)
-    assert len(quiz.questions) == 3
-    assert all(q.topic != "" for q in quiz.questions)
-
-# Then you prompt Claude Code: "Implement QuizEngine to pass these tests."
-# You verify. You debug. You iterate. No guidance. Just the method.
-```
-
-```bash
-# The CLI tool you ship:
-$ quizforge generate chapter-32.md --questions 15
-Generated 15 questions from "Chapter 32: Reading Python"
-
-$ quizforge take
-Question 1/15: What does `x: int = 5` mean in Python?
-  a) x is always 5
-  b) x is an integer variable set to 5  ← you answer
-  c) x cannot be changed
-  d) x is a string
-Correct! ✓
-
-$ quizforge stats
-Topics:          Strong    Weak
-  Type annotations  92%
-  Trace tables               45%  ← needs review
-  PRIMM method      78%
-
-Overall: 72% (15 quizzes taken)
-```
 
 **Deliverables**: SDD specification documents, type definitions, object model diagram, passing test suites, AI-generated and human-verified implementation, security audit, green CI pipeline, and a deployed QuizForge application with CLI, API, and AI features. You finish Part 4 with two portfolio-grade projects -- SmartNotes (guided) and QuizForge (independent) -- proving you can drive the complete TDG cycle at production scale.
 
