@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/finance-domain-agents/your-extension-roadmap
-sidebar_position: 12
+sidebar_position: 11
 title: "Your Extension Roadmap and Chapter Summary"
 description: "Prioritise which of the eleven enterprise extensions to build first using a structured framework, design your organisation's extension roadmap, and synthesise the full chapter — from Claude in Excel through Cowork plugins to enterprise extensions"
 keywords:
@@ -19,7 +19,7 @@ keywords:
     "extension prioritisation",
   ]
 chapter: 17
-lesson: 12
+lesson: 11
 duration_minutes: 25
 
 # HIDDEN SKILLS METADATA
@@ -104,7 +104,7 @@ teaching_guide:
 
 # Your Extension Roadmap and Chapter Summary
 
-In Lesson 11, you explored the remaining enterprise extensions — treasury, FP&A, M&A integration, and the rest. You now have eleven extension areas covering the full landscape of institutional financial knowledge. The question is no longer what to build. It is what to build first.
+In Lesson 10, you explored the remaining enterprise extensions — treasury, FP&A, M&A integration, and the rest. You now have eleven extension areas covering the full landscape of institutional financial knowledge. The question is no longer what to build. It is what to build first.
 
 This lesson gives you a structured way to answer that question, then synthesises the full chapter into the architecture that connects Claude in Excel, Cowork, and enterprise extensions as three layers of the same system.
 
@@ -183,15 +183,15 @@ This chapter covered three progressively broader layers of Claude's capabilities
 
 ### Part One: Claude in Excel — The Embedded Assistant
 
-Lessons 1 through 5 taught you to use Claude as an assistant embedded in a single workbook. You learned four general capabilities — model comprehension, scenario testing, error debugging, and model building — and six pre-built Agent Skills: Comparable Company Analysis, Discounted Cash Flow Model, Due Diligence Data Pack, Company Teaser, Earnings Analysis, and Initiating Coverage Report. Each Agent Skill connects to live market data through MCP connectors configured in your Claude settings (such as S&P Global, PitchBook, and Morningstar) and produces a professionally structured financial deliverable. The key insight from Part One: Claude in Excel is a deep companion for financial modelling work — it reads your workbook, reasons about your formulas, and builds within the context of your specific model.
+Lessons 1 through 3 taught you to use Claude as an assistant embedded in a single workbook. You learned four general capabilities — model comprehension, scenario testing, error debugging, and model building — and the pre-built Agent Skills including 3-Statement Financial Modelling, Comparable Company Analysis, Discounted Cash Flow Model, Due Diligence Data Pack, Earnings Analysis, Initiating Coverage Report, and presentation tools. These Agent Skills can incorporate market data through MCP connectors configured in your Claude settings (such as S&P Global, PitchBook, and Morningstar) and produce professionally structured financial deliverables. The key insight from Part One: Claude in Excel is a deep companion for financial modelling work — it reads your workbook, reasons about your formulas, and builds within the context of your specific model.
 
 ### Part Two: Cowork — The Orchestrating Agent
 
-Lessons 6 through 8 shifted from assistant to agent. You learned the architectural difference: Cowork operates across applications, carrying context from Excel analysis through to PowerPoint presentation in a single orchestrated workflow. The finance plugins — the knowledge-work finance plugin for corporate finance teams and the financial-services plugin suite for investment professionals — provide domain-specific commands and passive skills. The Cowork data connectors (Daloopa, FactSet, Moody's, LSEG, S&P Global, PitchBook, Chronograph, MT Newswires, Aiera, Morningstar, Egnyte) are configured by IT through the Cowork platform. The key insight from Part Two: Cowork is a workflow orchestrator that treats Excel as one node in a larger automated process.
+Lessons 4 through 7 shifted from assistant to agent. You learned the architectural difference: Cowork operates across applications, carrying context from Excel analysis through to PowerPoint presentation in a single orchestrated workflow. The finance plugins — the knowledge-work finance plugin for corporate finance teams and the financial-services plugin suite for investment professionals — provide domain-specific commands and passive skills. The Cowork data connectors (Daloopa, FactSet, Moody's, LSEG, S&P Global, PitchBook, Chronograph, MT Newswires, Aiera, Morningstar, Egnyte) are configured by IT through the Cowork platform. The key insight from Part Two: Cowork is a workflow orchestrator that treats Excel as one node in a larger automated process.
 
 ### Part Three: Enterprise Extensions — Making Generic Plugins Yours
 
-Lessons 9 through 12 applied the Knowledge Extraction Method from Chapter 16 to the finance domain. You learned to extract domain-specific knowledge through expert interviews, translate it into SKILL.md instructions, and validate those instructions against domain-specific scenarios. The eleven enterprise extension areas — credit risk, regulatory reporting, treasury, FP&A, M&A integration, IPS compliance, sector-specific valuation, board and IR packs, multi-entity consolidation, credit portfolio monitoring, and the Finance Business Partner persona — represent the institutional knowledge that generic plugins cannot provide. The key insight from Part Three: the Knowledge Extraction Method does not change across domains; what changes is the professional knowledge it surfaces.
+Lessons 8 through 11 applied the Knowledge Extraction Method from Chapter 16 to the finance domain. You learned to extract domain-specific knowledge through expert interviews, translate it into SKILL.md instructions, and validate those instructions against domain-specific scenarios. The eleven enterprise extension areas — credit risk, regulatory reporting, treasury, FP&A, M&A integration, IPS compliance, sector-specific valuation, board and IR packs, multi-entity consolidation, credit portfolio monitoring, and the Finance Business Partner persona — represent the institutional knowledge that generic plugins cannot provide. The key insight from Part Three: the Knowledge Extraction Method does not change across domains; what changes is the professional knowledge it surfaces.
 
 ### The Unifying Architecture
 
@@ -201,7 +201,7 @@ Same connectors. Different scope. Your knowledge on top.
 
 ## What Comes Next
 
-Every tool you used in this chapter — Claude in Excel, the Cowork finance plugins, the six Agent Skills, the MCP connectors — operated on an assumption that went unexamined: that the spreadsheets those tools read are designed the way spreadsheets have always been designed. Cell addresses encode the logic. Formulas reference coordinates. The model's meaning lives in the analyst's head, not in the workbook.
+Every tool you used in this chapter — Claude in Excel, the Cowork finance plugins, the Agent Skills, the MCP connectors — operated on an assumption that went unexamined: that the spreadsheets those tools read are designed the way spreadsheets have always been designed. Cell addresses encode the logic. Formulas reference coordinates. The model's meaning lives in the analyst's head, not in the workbook.
 
 What if that foundation is the bottleneck?
 
@@ -288,4 +288,4 @@ Help me see why architecture transforms the tools I already have.
 
 ---
 
-Continue to [Chapter Quiz](./13-chapter-quiz.md)
+Continue to [Chapter Quiz](./12-chapter-quiz.md)

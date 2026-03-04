@@ -23,5 +23,5 @@ The shift from Claude in Excel to Cowork is a scope expansion, not a technology 
 
 ### Connections
 
-- **Builds on**: Lessons 1-5 established Claude in Excel capabilities within a single workbook; this lesson expands to multi-app orchestration through Cowork
-- **Leads to**: Lesson 7 introduces the financial-services-plugins suite (investment professional workflows), building on the plugin architecture concepts established here
+- **Builds on**: Lessons 1-3 established Claude in Excel capabilities within a single workbook; this lesson expands to multi-app orchestration through Cowork
+- **Leads to**: Lesson 5 introduces the financial-services-plugins core plugin (investment professional workflows), building on the plugin architecture concepts established here

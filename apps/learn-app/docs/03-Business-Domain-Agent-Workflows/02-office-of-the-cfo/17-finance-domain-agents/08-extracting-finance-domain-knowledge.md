@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/finance-domain-agents/extracting-finance-domain-knowledge
-sidebar_position: 9
+sidebar_position: 8
 title: "Extracting Finance Domain Knowledge"
 description: "Apply the Knowledge Extraction Method from Chapter 16 to a CFO's monthly close judgment, walking through the Five Questions with finance-specific examples and producing a first-draft SKILL.md for firm-specific close workflows"
 keywords:
@@ -20,7 +20,7 @@ keywords:
     "enterprise extensions",
   ]
 chapter: 17
-lesson: 9
+lesson: 8
 duration_minutes: 30
 
 # HIDDEN SKILLS METADATA
@@ -106,7 +106,7 @@ teaching_guide:
 
 # Extracting Finance Domain Knowledge
 
-In Lesson 6, you installed the `knowledge-work-plugins/finance` plugin and saw what a generic finance agent can do: standard close workflows, industry-standard variance analysis, and templated management reporting. Now you will see what it cannot do — and why the gap matters.
+In Lesson 4, you installed the `knowledge-work-plugins/finance` plugin and saw what a generic finance agent can do: standard close workflows, industry-standard variance analysis, and templated management reporting. Now you will see what it cannot do — and why the gap matters.
 
 The generic plugin applies the same materiality thresholds to every company. It uses textbook variance analysis that treats a five percent deviation in revenue the same way it treats a five percent deviation in a dormant travel expense account. It produces management bridges in a standard format that may not match the format your CFO presents to the board. The plugin is useful. It is not yours.
 
@@ -311,4 +311,4 @@ question would surface the missing specificity.
 
 ---
 
-Continue to [Lesson 10: Enterprise Extensions — Risk and Compliance →](./10-enterprise-extensions-risk-and-compliance.md)
+Continue to [Lesson 9: Enterprise Extensions — Risk and Compliance →](./09-enterprise-extensions-risk-and-compliance.md)

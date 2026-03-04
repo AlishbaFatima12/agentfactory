@@ -22,5 +22,5 @@ The Knowledge Extraction Method from Chapter 16 applied to a CFO's monthly close
 
 ### Connections
 
-- **Builds on**: Chapter 16 Lessons 2-6 provided the Five Questions, interview technique, and SKILL.md writing method; Lesson 6 of this chapter introduced the generic finance plugin whose limitations this lesson addresses
-- **Leads to**: Lessons 10-11 extend the extraction pattern to eleven enterprise areas (credit risk, regulatory reporting, treasury, FP&A, and more), each following the same Five Questions → extraction → SKILL.md pipeline
+- **Builds on**: Chapter 16 Lessons 2-6 provided the Five Questions, interview technique, and SKILL.md writing method; Lesson 4 of this chapter introduced the generic finance plugin whose limitations this lesson addresses
+- **Leads to**: Lessons 9-10 extend the extraction pattern to eleven enterprise areas (credit risk, regulatory reporting, treasury, FP&A, and more), each following the same Five Questions → extraction → SKILL.md pipeline

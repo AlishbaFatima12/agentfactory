@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/finance-domain-agents/enterprise-extensions-risk-and-compliance
-sidebar_position: 10
+sidebar_position: 9
 title: "Enterprise Extensions — Risk and Compliance"
 description: "Design SKILL.md extensions for credit risk frameworks, regulatory reporting automation, investment policy statement compliance, and portfolio attribution — encoding institutional knowledge that generic plugins cannot provide"
 keywords:
@@ -19,7 +19,7 @@ keywords:
     "risk framework",
   ]
 chapter: 17
-lesson: 10
+lesson: 9
 duration_minutes: 35
 
 # HIDDEN SKILLS METADATA
@@ -107,13 +107,13 @@ teaching_guide:
 
 # Enterprise Extensions — Risk and Compliance
 
-In Lessons 1 through 9, you learned how Claude in Excel and Cowork's finance plugins handle standard financial workflows: model comprehension, scenario testing, comparable company analysis, and domain-specific commands for investment banking, equity research, private equity, and wealth management. These generic plugins compute ratios correctly, build structurally sound models, and produce professionally formatted deliverables. What they do not encode is what makes your firm's analysis distinctive — the sector-specific leverage thresholds your credit officers apply, the regulatory return formats your compliance team files, the IPS constraints your wealth advisors must verify before every recommendation.
+In Lessons 1 through 8, you learned how Claude in Excel and Cowork's finance plugins handle standard financial workflows: model comprehension, scenario testing, comparable company analysis, and domain-specific commands for investment banking, equity research, private equity, and wealth management. These generic plugins compute ratios correctly, build structurally sound models, and produce professionally formatted deliverables. What they do not encode is what makes your firm's analysis distinctive — the sector-specific leverage thresholds your credit officers apply, the regulatory return formats your compliance team files, the IPS constraints your wealth advisors must verify before every recommendation.
 
 This lesson covers four enterprise extensions that address the most common gaps between generic plugin capability and institutional need. Each follows the same pattern you learned in Chapter 16: identify what the generic plugin lacks, then write SKILL.md instructions using the Persona-Questions-Principles structure to close that gap. The extensions covered here — credit risk, regulatory reporting, IPS compliance, and portfolio attribution — represent the highest-impact areas where institutional knowledge encoded as SKILL.md instructions creates measurable operational value.
 
 ## What Enterprise Extensions Are
 
-The generic plugins in Lessons 5 through 9 cover workflows common across financial organisations. They do not encode what makes your firm's analysis distinctive. Enterprise extensions address these gaps. Each extension layers on top of a generic plugin, adding institutional specificity to the generic foundation.
+The generic plugins in Lessons 4 through 8 cover workflows common across financial organisations. They do not encode what makes your firm's analysis distinctive. Enterprise extensions address these gaps. Each extension layers on top of a generic plugin, adding institutional specificity to the generic foundation.
 
 Every extension follows the same structure:
 
@@ -387,4 +387,4 @@ Fixed Income: 30%, Alternatives: 15%, Unhedged FX: 10%]
 
 ---
 
-Continue to [Lesson 11: Enterprise Extensions — Operations and Strategy →](./11-enterprise-extensions-operations-and-strategy.md)
+Continue to [Lesson 10: Enterprise Extensions — Operations and Strategy →](./10-enterprise-extensions-operations-and-strategy.md)
