@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-04
+- docs: add beginner-friendly examples to Part 4 phase descriptions ([#810](https://github.com/panaversity/agentfactory/pull/810))
+
+### 2026-03-04
 - docs: rewrite Part 4 overview with TDG workflow and review feedback ([#804](https://github.com/panaversity/agentfactory/pull/804))
 
 ### 2026-03-04
