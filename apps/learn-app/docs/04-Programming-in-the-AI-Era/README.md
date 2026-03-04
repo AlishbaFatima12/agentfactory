@@ -48,7 +48,30 @@ In the new model, writing code means three things:
 
 3. **Verifying output critically.** AI optimizes for plausibility, not correctness. Your tests are the only reliable signal. When they fail, you diagnose why -- you do not re-prompt blindly. When they pass, you review for security and edge cases the tests may have missed.
 
-This is Test-Driven Generation (TDG) -- the method that defines programming in the AI era.
+This is Test-Driven Generation (TDG) -- the method that defines programming in the AI era. Here is what it looks like in practice:
+
+```python
+# 1. REQUIREMENT
+# "I need a function that calculates total price with tax"
+
+# 2. YOUR TYPE SIGNATURE (the specification)
+def total_with_tax(price: float, tax_rate: float) -> float: ...
+
+# 3. YOUR FAILING TEST (the definition of "correct")
+def test_total_with_tax():
+    assert total_with_tax(100.0, 0.15) == 115.0
+    assert total_with_tax(0.0, 0.15) == 0.0
+
+# 4. PROMPT AI: "Implement total_with_tax to pass these tests"
+
+# 5. AI GENERATES
+def total_with_tax(price: float, tax_rate: float) -> float:
+    return round(price * (1 + tax_rate), 2)
+
+# 6. VERIFY: pytest → 2 passed ✓
+```
+
+You wrote five lines. AI wrote one. The five lines you wrote -- the signature and the tests -- are the specification. The one line AI wrote is the implementation. If the tests pass, the code is correct. If they fail, you debug and iterate. That is the entire cycle.
 
 ## What You Need to Be Able to Do This
 
