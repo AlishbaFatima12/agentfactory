@@ -131,43 +131,29 @@ The `references/` directory contains the extended reference guide — enterprise
 
 ## Installation Paths
 
+### Cowork (Primary Path)
+
+If you use Claude through the **Cowork** tab in the Claude desktop app:
+
+1. Open the **Cowork** tab
+2. Click **Customize** in the left sidebar
+3. Click **Browse plugins**, find the IDFA plugin (`panaversity/idfa-financial-architect`), and click **Install**
+4. The IDFA skill auto-activates in all Cowork sessions when you mention financial models
+
+Plugins in Cowork are saved locally to your machine. For team-wide deployment, your IT team can pre-provision plugins across the organisation through the admin console — see Lesson 10 on governance.
+
+You can also upload the plugin directly from the [GitHub repo](https://github.com/panaversity/idfa-financial-architect) using the **Customize** menu's upload option.
+
 ### Claude Code (CLI)
 
-Claude Code distributes plugins through **marketplaces** — catalogs of plugins that you add once, then install individual plugins from. The IDFA plugin repo serves as its own marketplace:
-
-**Step 1 — Add the marketplace** (one-time setup):
-
-```
-/plugin marketplace add panaversity/idfa-financial-architect
-```
-
-This registers the Panaversity IDFA marketplace with your Claude Code installation. No plugin is installed yet — you have added the catalog.
-
-**Step 2 — Install the plugin:**
-
-```
-/plugin install idfa-financial-architect@panaversity-idfa
-```
-
-Claude Code downloads the plugin, registers the skill, and makes it available in every session. When a conversation mentions financial models, named ranges, or any trigger phrase listed in the skill, Claude activates the IDFA methodology automatically. The skill is namespaced as `idfa-financial-architect:financial-architect` but you do not need to invoke it manually — it auto-activates based on the conversation context.
-
-**For local testing** (clone the repo and load directly):
+If you use Claude Code in the terminal, clone the plugin repo and load it directly:
 
 ```bash
 git clone https://github.com/panaversity/idfa-financial-architect.git
 claude --plugin-dir ./idfa-financial-architect
 ```
 
-### Cowork (Claude.ai)
-
-If you use Claude through the Cowork tab on [claude.ai](https://claude.ai):
-
-1. Open the **Cowork** tab
-2. Click **Customize** in the left sidebar
-3. Click **Browse plugins** or upload the plugin directly from the [GitHub repo](https://github.com/panaversity/idfa-financial-architect)
-4. The IDFA skill auto-activates in all Cowork sessions when you mention financial models
-
-Plugins in Cowork are saved locally to your machine. For team-wide deployment, see Lesson 10 on governance.
+Claude Code reads the SKILL.md file and makes it available in every session. When a conversation mentions financial models, named ranges, or any trigger phrase listed in the skill, Claude activates the IDFA methodology automatically.
 
 ### Other Agents (GitHub Copilot, VS Code, Codex, Cursor)
 
@@ -284,7 +270,7 @@ This also connects back to Chapter 15, where you learned the plugin architecture
 
 :::tip Setup
 
-Open a Claude Code session (or Cowork) where you have installed the IDFA plugin. In Claude Code: `/plugin marketplace add panaversity/idfa-financial-architect` then `/plugin install idfa-financial-architect@panaversity-idfa`. In Cowork: install via **Customize → Browse plugins**. Start a fresh session so the skill is loaded.
+Open a Cowork session (or Claude Code) where you have installed the IDFA plugin. In Cowork: install via **Customize → Browse plugins → Install**. In Claude Code: `git clone https://github.com/panaversity/idfa-financial-architect.git` then `claude --plugin-dir ./idfa-financial-architect`. Start a fresh session so the skill is loaded.
 
 :::
 
