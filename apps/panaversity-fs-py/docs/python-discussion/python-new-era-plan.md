@@ -16,11 +16,13 @@ Traditional Python education teaches **bottom-up**: syntax first, verification l
 - *Python Crash Course* (Matthes, 2023) — teaches features through projects, testing arrives at Chapter 11
 - *Learning Python* (Lutz, 2025) — 1,270 pages of deep Python, OOP starts at Chapter 26 (page 687)
 
-This course inverts that order.
+This course inverts that order. **Claude Code is the primary development tool throughout Part 4**, and **[Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development) is a required prerequisite.** Students must understand the four-phase SDD workflow — Research, Specification, Refinement, Implementation — before entering Part 4. SDD provides the methodology; Part 4 applies it to Python.
 
-**Our approach**: Teach reading and verification first. "Writing" means specifying (types + tests) and verifying AI output — never typing implementation from a blank page.
+**The core teaching model**: The INPUT is Spec-Driven Development with Claude Code — students write specifications (types + tests) and prompt Claude Code to generate implementations. The OUTPUT is verifying and testing — students run pyright, pytest, and ruff to prove the generated code is correct. Students never type implementation from a blank page. They specify, generate, and verify.
 
-**Core belief**: A student who can read typed Python, write precise test specifications, and drive AI to correct implementations is more valuable in 2026 than one who memorized list comprehension syntax.
+**Our approach**: Teach reading and verification first. "Writing" means specifying (types + tests) and prompting Claude Code to implement — never typing implementation from a blank page.
+
+**Core belief**: A student who can read typed Python, write precise test specifications, and drive Claude Code through the SDD workflow to correct implementations is more valuable in 2026 than one who memorized list comprehension syntax.
 
 ---
 
@@ -31,14 +33,14 @@ This course inverts that order.
 | Dimension | Old Way (Matthes / Lutz) | New Way (AI Era) |
 |---|---|---|
 | **Starts with** | `print("Hello World")` | `uv init` + `pyproject.toml` |
-| **Core skill** | Memorize syntax | Define specifications |
+| **Core skill** | Memorize syntax | Define specifications via SDD with Claude Code |
 | **Testing** | Chapter 11 (afterthought) | Chapter 3 (foundational) |
 | **Types** | Optional / "dynamic typing interlude" | Non-negotiable from line 1 |
 | **OOP** | Part VI, 7 chapters of theory-first | Integrated: dataclasses early, full OOP after testing mastery |
-| **Code authoring** | Student writes everything | Student specifies (types + tests), AI implements, student verifies |
+| **Code authoring** | Student writes everything | Student specifies (types + tests) via SDD, Claude Code implements, student verifies |
 | **First project** | Alien invasion game | Typed CLI tool with CI pipeline |
 | **"Done" means** | It runs | Types pass, tests pass, CI green |
-| **Entry point** | Writing from blank page | Reading AI-generated output |
+| **Entry point** | Writing from blank page | Reading Claude Code-generated output |
 
 ### The Inversion
 
@@ -47,7 +49,7 @@ OLD:  Write syntax → Build things → Maybe test → Ship
 NEW:  Requirements → Types → Failing Tests → Generate → Verify & Iterate → Ship
 ```
 
-AI is present at every step. What changes is who is driving:
+Claude Code (the AI coding agent from Chapter 5's SDD workflow) is present at every step. What changes is who is driving:
 
 | Step | Who leads | AI role |
 |------|-----------|---------|
@@ -82,7 +84,7 @@ Every Python feature follows this 5-step progression:
 5. BUILD it   → Student specifies (types + tests) → prompts AI to implement → verifies and iterates (TDG cycle)
 ```
 
-**Critical principle**: Steps 4 and 5 are done WITH AI, not manually. The student's job is to **specify and verify**, never to write implementation from a blank page. "Writing" in the AI era means defining types, writing test specifications, prompting AI, and verifying output.
+**Critical principle**: Steps 4 and 5 are done WITH Claude Code using the SDD workflow from Chapter 5, not manually. The student's job is to **specify and verify**, never to write implementation from a blank page. "Writing" in the AI era means defining types, writing test specifications, prompting Claude Code via SDD, and verifying output. The INPUT is always a specification (types + tests); the OUTPUT is always verification (pyright + pytest + ruff).
 
 ### The Specification Sophistication Gradient
 
@@ -236,10 +238,15 @@ All traditional Python features are taught. The **framing changes**, not the con
 
 ## 6. The Technology Stack
 
+### The Primary Development Tool
+
+**Claude Code** is the AI coding agent used throughout Part 4. Students learned the SDD workflow with Claude Code in [Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development). In Part 4, that workflow becomes concrete: specifications are types and tests, Claude Code generates the implementation, and the discipline stack (below) verifies the output. The student's INPUT is always a specification delivered through SDD; the OUTPUT is always verification via types, tests, and linting.
+
 ### Non-Negotiable Tools (Every Chapter)
 
 | Layer | Tool | Purpose |
 |---|---|---|
+| **AI Coding Agent** | Claude Code | SDD workflow: generates implementations from specifications (Chapter 5 prerequisite) |
 | **Package Manager** | uv | Fast, reproducible environment management |
 | **Static Types** | Pyright (strict mode) | Catch type errors at edit time |
 | **Runtime Validation** | Pydantic v2 | Validate data at boundaries |
@@ -276,12 +283,14 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 Part 4 serves students who have completed Parts 1-3 (AI prompting, file processing, version control) but have **never written code**. The leap from "I can prompt Claude Code" to "I can write a failing pytest test" is real.
 
+**Required prerequisite**: [Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development). Students must understand the four-phase SDD workflow (Research → Specification → Refinement → Implementation) and Claude Code's native capabilities (Memory, Subagents, Tasks, Hooks) before entering Part 4. TDG is SDD applied to Python — specifications become types + tests, Claude Code generates the implementation, and the discipline stack verifies the output. Without Chapter 5, students lack the methodology that Part 4 assumes.
+
 **Phase 1 chapters (Ch 1-3) must:**
 
 1. **Show every command with expected output.** Never say "install uv" without showing the exact terminal command and what success looks like. Include common errors and fixes (wrong PATH, permission denied, Windows vs Mac differences).
 2. **Explain every tool before using it.** Before running `uv run pytest`, explain what pytest is and why it exists — in one sentence, not a lecture. A beginner callout can expand for those who need more.
 3. **Never assume terminal fluency beyond Parts 1-3.** Students can `cd`, `ls`, and run commands. They cannot debug environment issues, resolve PATH conflicts, or interpret cryptic error messages without guidance.
-4. **Make the first TDG cycle (Ch 3) feel small.** The student writes 5 lines (a type signature + 2 assertions). AI writes 20. The ratio should feel empowering, not intimidating. Frame it as: "You already know how to tell AI what you want. Now you are telling it with types and tests instead of English."
+4. **Make the first TDG cycle (Ch 3) feel small.** The student writes 5 lines (a type signature + 2 assertions). Claude Code writes 20. The ratio should feel empowering, not intimidating. Frame it as: "You already know how to tell Claude Code what you want via SDD. Now you are telling it with types and tests instead of English."
 
 ---
 
@@ -1151,7 +1160,7 @@ Ch 22 (Phase 7): FastAPI dependency injection → OOP applied to async services 
 | *Python Crash Course* (Matthes, 2023) | Reference for traditional Python feature coverage (beginner-friendly) |
 | *Learning Python* (Lutz, 2025) | Reference for deep OOP, object model, advanced patterns (1,270 pages) |
 | *The Lindy-AI Software Manifesto* v2.0 | Philosophical foundation and axioms |
-| Chapter 14: Ten Axioms of Agentic Development | Bridge chapter connecting principles to practice (start of Part 4) |
+| Chapter 30: Ten Axioms of Agentic Development | Bridge chapter connecting principles to practice (start of Part 4) |
 | Python 3.12+ documentation | Language reference |
 | Pyright documentation | Type checking rules |
 | pytest documentation | Testing patterns |
@@ -1633,7 +1642,7 @@ smartnotes/
 - [x] ~~Security chapter for AI-generated code?~~ → Resolved: Yes, Ch 24. OWASP-focused review of AI output, security testing, `bandit` tooling.
 - [x] ~~"When Not to Use AI" chapter?~~ → Resolved: Yes, Ch 25. Judgment about AI assistance spectrum, preventing AI dependency.
 - [x] ~~Split Production Systems phase?~~ → Resolved: Yes. Phase 7 (CLI + Concurrency) and Phase 8 (CI/CD + Security) — separate building from shipping.
-- [x] ~~Axioms at start vs end?~~ → Resolved: Keep at start. Chapter 14 (Ten Axioms) already exists and serves as the bridge from Part 3 into Part 4. No duplicate needed.
+- [x] ~~Axioms at start vs end?~~ → Resolved: Keep at start. Chapter 30 (Ten Axioms) already exists and serves as the bridge from Part 3 into Part 4. No duplicate needed.
 
 ---
 
