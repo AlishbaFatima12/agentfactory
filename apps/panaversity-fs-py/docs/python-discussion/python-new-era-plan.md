@@ -1042,7 +1042,7 @@ Students already understand version control and CI concepts from Part 2 — they
 | Concurrency | async/await for AI SDK calls | Ch 22 |
 | CLI Interface | `quizforge` CLI tool | Ch 21 |
 | API Service | FastAPI (async) | Ch 22 |
-| AI Integration | Anthropic SDK — question generation, quality scoring | Ch 13, 22 |
+| AI Integration | OpenAI Agents SDK or Anthropic SDK — question generation, quality scoring | Ch 13, 22 |
 | Test Suite | pytest (80%+ coverage) | Ch 9, 13 |
 | CI Pipeline | GitHub Actions | Ch 23 |
 | Security Review | OWASP checklist, `bandit` | Ch 24 |
@@ -1593,7 +1593,7 @@ Students don't build nine throwaway projects. They build **one real application*
 - Judgment about when to use AI vs write manually (Ch 25)
 - **QuizForge** — a brand-new AI-Powered Quiz Generator, built entirely from scratch without SmartNotes scaffolding (Ch 26)
 - Full SDD/TDG cycle driven independently: requirements → specification → types → tests → generation → verification → debugging → iteration
-- `quizforge` CLI tool + FastAPI async API + AI-powered question generation via Anthropic SDK
+- `quizforge` CLI tool + FastAPI async API + AI-powered question generation via OpenAI Agents SDK or Anthropic SDK
 - PostgreSQL persistence, 80%+ test coverage, CI pipeline, security audit
 
 **Deliverable**: Production-grade QuizForge application — plus SmartNotes from Phases 1-8 — giving the student two portfolio-ready projects demonstrating every skill in the course
@@ -1625,7 +1625,7 @@ quizforge/
 │   ├── models/             # Question, Quiz, Score, Topic
 │   ├── engine/             # QuizEngine, DifficultyAdapter
 │   ├── bank/               # QuestionBank, ScoreTracker
-│   ├── ai/                 # Anthropic SDK — question generation, quality scoring
+│   ├── ai/                 # OpenAI Agents SDK or Anthropic SDK — question generation, quality scoring
 │   ├── storage/            # PostgreSQL — questions + performance history
 │   ├── api/                # FastAPI routes
 │   └── cli/                # quizforge CLI tool
