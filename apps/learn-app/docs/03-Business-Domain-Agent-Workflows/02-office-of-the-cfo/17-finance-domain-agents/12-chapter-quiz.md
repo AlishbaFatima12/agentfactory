@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/finance-domain-agents/chapter-quiz
-sidebar_position: 13
+sidebar_position: 12
 title: "Chapter 17: Finance Domain Agents Quiz"
 ---
 
@@ -104,8 +104,8 @@ options: [
 "The analyst should report the error to Anthropic's support team for correction"
 ],
 correctOption: 0,
-explanation: "Lesson 4 identifies peer group evaluation as a professional skill that the analyst must apply to any comps output. The Agent Skill selects peers based on available data, but the analyst's contextual knowledge — understanding business models, competitive dynamics, and market positioning — is what determines whether a peer is genuinely comparable. Option B skips the professional judgement step. Option C avoids the issue. Option D treats a judgement call as a software bug.",
-source: "Lesson 4: Agent Skills — Market Analysis"
+explanation: "Lesson 5 identifies peer group evaluation as a professional skill that the analyst must apply to any comps output. The Agent Skill selects peers based on available data, but the analyst's contextual knowledge — understanding business models, competitive dynamics, and market positioning — is what determines whether a peer is genuinely comparable. Option B skips the professional judgement step. Option C avoids the issue. Option D treats a judgement call as a software bug.",
+source: "Lesson 5: Financial Analysis — The Core Plugin"
 },
 {
 question: "A junior analyst asks: 'What is enterprise value and how does it differ from market capitalisation?' According to the chapter's concept explanation, which formula is correct?",
@@ -116,8 +116,8 @@ options: [
 "Enterprise Value = Total Assets − Total Liabilities — it represents the book value of the company"
 ],
 correctOption: 0,
-explanation: "Lesson 4 defines enterprise value as Market Cap + Debt − Cash. The intuition is that if you buy a company, you pay the market cap (equity price), assume its debt obligations (adding debt), but receive its cash (subtracting cash). Option B reverses the debt and cash signs. Option C confuses enterprise value with a P/E-based metric. Option D describes book value, which is an accounting concept, not a market valuation.",
-source: "Lesson 4: Agent Skills — Market Analysis"
+explanation: "Lesson 5 defines enterprise value as Market Cap + Debt − Cash. The intuition is that if you buy a company, you pay the market cap (equity price), assume its debt obligations (adding debt), but receive its cash (subtracting cash). Option B reverses the debt and cash signs. Option C confuses enterprise value with a P/E-based metric. Option D describes book value, which is an accounting concept, not a market valuation.",
+source: "Lesson 5: Financial Analysis — The Core Plugin"
 },
 {
 question: "The DCF Agent Skill produces a valuation with a sensitivity table. The chapter describes this table as the most important output of the entire DCF analysis. Why?",
@@ -128,8 +128,8 @@ options: [
 "Because Claude cannot produce a single valuation number accurately enough to be useful"
 ],
 correctOption: 0,
-explanation: "Lesson 4 explains that a single DCF number implies a precision that does not exist. The sensitivity table varies WACC and terminal growth rate across plausible ranges, showing how the valuation changes with different assumptions. This reveals which assumptions drive the most value variation, allowing the analyst to focus diligence on those inputs. Option B invents a regulatory requirement. Option C underestimates client sophistication. Option D mischaracterises Claude's capabilities.",
-source: "Lesson 4: Agent Skills — Market Analysis"
+explanation: "Lesson 5 explains that a single DCF number implies a precision that does not exist. The sensitivity table varies WACC and terminal growth rate across plausible ranges, showing how the valuation changes with different assumptions. This reveals which assumptions drive the most value variation, allowing the analyst to focus diligence on those inputs. Option B invents a regulatory requirement. Option C underestimates client sophistication. Option D mischaracterises Claude's capabilities.",
+source: "Lesson 5: Financial Analysis — The Core Plugin"
 },
 {
 question: "During a due diligence review, the Due Diligence Data Pack Agent Skill flags three red flags in a target company's financials. Which of the following is identified in the chapter as a genuine due diligence red flag?",
@@ -140,8 +140,8 @@ options: [
 "The company having more than five board members, which suggests excessive governance overhead"
 ],
 correctOption: 0,
-explanation: "Lesson 5 identifies expanding DSO as a red flag because it suggests the company is recognising revenue but having difficulty collecting the associated cash. This pattern can indicate aggressive revenue recognition or deteriorating customer creditworthiness. Option B misidentifies growth as a red flag. Option C and D are not financial red flags relevant to due diligence.",
-source: "Lesson 5: Agent Skills — Deal and Research"
+explanation: "Lesson 6 identifies expanding DSO as a red flag because it suggests the company is recognising revenue but having difficulty collecting the associated cash. This pattern can indicate aggressive revenue recognition or deteriorating customer creditworthiness. Option B misidentifies growth as a red flag. Option C and D are not financial red flags relevant to due diligence.",
+source: "Lesson 6: Domain Plugins — From Deals to Portfolios"
 },
 {
 question: "The chapter identifies four non-negotiable boundaries when using Claude's finance Agent Skills. A colleague says: 'Claude validated our investment thesis, so we can proceed with the acquisition.' Which boundary does this violate?",
@@ -152,8 +152,8 @@ options: [
 "Claude's analysis is only valid for public companies, not private acquisition targets"
 ],
 correctOption: 0,
-explanation: "Lesson 5 establishes four non-negotiable boundaries, the first being that Claude does not provide investment advice. Treating Claude's output as validation of an investment thesis conflates analysis with advice. Claude generates structured analysis; the professional applies judgement and bears responsibility for the decision. Option B invents a technical limitation. Option C invents a validation requirement. Option D incorrectly restricts Claude's scope.",
-source: "Lesson 5: Agent Skills — Deal and Research"
+explanation: "Lesson 6 establishes four non-negotiable boundaries, the first being that Claude does not provide investment advice. Treating Claude's output as validation of an investment thesis conflates analysis with advice. Claude generates structured analysis; the professional applies judgement and bears responsibility for the decision. Option B invents a technical limitation. Option C invents a validation requirement. Option D incorrectly restricts Claude's scope.",
+source: "Lesson 6: Domain Plugins — From Deals to Portfolios"
 },
 {
 question: "A security-conscious IT manager asks about risks of using Claude in Excel with spreadsheets from external sources. The chapter includes a specific security warning. What does it say?",
@@ -176,8 +176,8 @@ options: [
 "Skills are free features and commands are premium features that require additional licensing"
 ],
 correctOption: 0,
-explanation: "Lesson 6 establishes the architectural distinction between skills (passive, auto-triggered by context) and commands (active, explicitly invoked). Skills activate when Cowork detects relevant context — for example, audit-support activating when compliance-related content is being processed. Commands must be explicitly called — for example, /journal-entry to generate a specific deliverable. Option B invents a permission hierarchy. Option C invents a processing distinction. Option D invents a pricing model.",
-source: "Lesson 6: From Assistant to Agent"
+explanation: "Lesson 4 establishes the architectural distinction between skills (passive, auto-triggered by context) and commands (active, explicitly invoked). Skills activate when Cowork detects relevant context — for example, audit-support activating when compliance-related content is being processed. Commands must be explicitly called — for example, /journal-entry to generate a specific deliverable. Option B invents a permission hierarchy. Option C invents a processing distinction. Option D invents a pricing model.",
+source: "Lesson 4: From Assistant to Agent"
 },
 {
 question: "The knowledge-work-plugins/finance plugin includes category placeholders like ~~erp and ~~data warehouse in its MCP configuration. A new Cowork user asks what these placeholders mean. What is the correct explanation?",
@@ -188,8 +188,8 @@ options: [
 "They are security classifications that restrict which users can access each connector"
 ],
 correctOption: 0,
-explanation: "Lesson 6 explains that category placeholders like ~~erp and ~~data warehouse are architecture-agnostic connection points. The plugin defines what data it needs (ERP transactions, warehouse queries), and the IT team maps these to the organisation's specific systems during deployment. This allows the same plugin to work across different technology stacks. Option B misidentifies them as error codes. Option C treats them as future features. Option D confuses data connectivity with security classification.",
-source: "Lesson 6: From Assistant to Agent"
+explanation: "Lesson 4 explains that category placeholders like ~~erp and ~~data warehouse are architecture-agnostic connection points. The plugin defines what data it needs (ERP transactions, warehouse queries), and the IT team maps these to the organisation's specific systems during deployment. This allows the same plugin to work across different technology stacks. Option B misidentifies them as error codes. Option C treats them as future features. Option D confuses data connectivity with security classification.",
+source: "Lesson 4: From Assistant to Agent"
 },
 {
 question: "A corporate finance team uses the knowledge-work-plugins/finance plugin for month-end close. The chapter describes a six-day workflow. On Day 1, the team runs /journal-entry. What happens on Day 2?",
@@ -200,8 +200,8 @@ options: [
 "The team prepares the variance analysis comparing actuals to budget"
 ],
 correctOption: 0,
-explanation: "Lesson 6 describes the month-end close workflow sequentially: Day 1 is journal entries, Day 2 is reconciliation. The reconciliation skill activates passively to match entries against source systems, and the /reconciliation command is used for items requiring formal investigation. Option B (income statement) occurs on Day 3. Option C (SOX testing) occurs on Day 5. Option D (variance analysis) occurs on Day 4.",
-source: "Lesson 6: From Assistant to Agent"
+explanation: "Lesson 4 describes the month-end close workflow sequentially: Day 1 is journal entries, Day 2 is reconciliation. The reconciliation skill activates passively to match entries against source systems, and the /reconciliation command is used for items requiring formal investigation. Option B (income statement) occurs on Day 3. Option C (SOX testing) occurs on Day 5. Option D (variance analysis) occurs on Day 4.",
+source: "Lesson 4: From Assistant to Agent"
 },
 {
 question: "The financial-services-plugins suite is described as having a specific scale. How many skills, commands, and MCP connector families does the full suite include?",
@@ -212,8 +212,8 @@ options: [
 "15 skills, 15 commands, and 5 MCP connector families"
 ],
 correctOption: 0,
-explanation: "Lesson 7 states that the financial-services-plugins suite includes 41 skills, 38 commands, and 11 MCP connector families across the core plugin and its add-ons. This represents a substantial professional toolkit. Option B describes the smaller knowledge-work-plugins/finance plugin. Option C and D invent numbers not stated in the chapter.",
-source: "Lesson 7: The Financial-Services Plugin Suite"
+explanation: "Lesson 5 states that the financial-services-plugins suite includes 41 skills, 38 commands, and 11 MCP connector families across the core plugin and its add-ons. This represents a substantial professional toolkit. Option B describes the smaller knowledge-work-plugins/finance plugin. Option C and D invent numbers not stated in the chapter.",
+source: "Lesson 5: Financial Analysis — The Core Plugin"
 },
 {
 question: "A new Cowork deployment team installs the investment-banking add-on plugin before installing the core financial-analysis plugin. The system does not function correctly. Why?",
@@ -224,8 +224,8 @@ options: [
 "Add-on plugins must be installed alphabetically to avoid naming conflicts"
 ],
 correctOption: 0,
-explanation: "Lesson 7 explicitly states that the core financial-analysis plugin must be installed first (mandatory install order). Add-on plugins (investment-banking, equity-research, private-equity, wealth-management) depend on the base skills, commands, and MCP connectors provided by the core. Installing add-ons without the core creates unresolved dependencies. Option B invents a platform restriction. Option C invents a licence limitation. Option D invents an alphabetical requirement.",
-source: "Lesson 7: The Financial-Services Plugin Suite"
+explanation: "Lesson 5 explicitly states that the core financial-analysis plugin must be installed first (mandatory install order). Add-on plugins (investment-banking, equity-research, private-equity, wealth-management) depend on the base skills, commands, and MCP connectors provided by the core. Installing add-ons without the core creates unresolved dependencies. Option B invents a platform restriction. Option C invents a licence limitation. Option D invents an alphabetical requirement.",
+source: "Lesson 5: Financial Analysis — The Core Plugin"
 },
 {
 question: "A leveraged buyout (LBO) model is described in the chapter. What is the core question an LBO model answers?",
@@ -236,8 +236,8 @@ options: [
 "Whether a company's existing debt should be refinanced at current market rates"
 ],
 correctOption: 0,
-explanation: "Lesson 7 explains that an LBO model tests whether a leveraged acquisition is financially viable. The model structures the acquisition with a combination of debt and equity, projects the company's cash flows to service the debt, and calculates the return at exit. The core question is whether the debt can be serviced and the return justifies the risk. Option B describes stock analysis. Option C describes equity issuance. Option D describes debt refinancing.",
-source: "Lesson 7: The Financial-Services Plugin Suite"
+explanation: "Lesson 5 explains that an LBO model tests whether a leveraged acquisition is financially viable. The model structures the acquisition with a combination of debt and equity, projects the company's cash flows to service the debt, and calculates the return at exit. The core question is whether the debt can be serviced and the return justifies the risk. Option B describes stock analysis. Option C describes equity issuance. Option D describes debt refinancing.",
+source: "Lesson 5: Financial Analysis — The Core Plugin"
 },
 {
 question: "A deal team uses Cowork to build a client presentation. The agent pulls analysis from Excel, structures it in PowerPoint, and produces a complete deck in a single workflow. The chapter identifies a key advantage of this approach over manual deck-building. What is it?",
@@ -248,8 +248,8 @@ options: [
 "The presentation includes interactive elements that static PowerPoint cannot"
 ],
 correctOption: 0,
-explanation: "Lesson 8 identifies structural consistency as the key advantage of cross-app orchestration. When an agent carries context from Excel analysis through to PowerPoint presentation in a single pass, every element reflects the same data state. Manual deck-building introduces disconnection risk — numbers can change in the model after they have been pasted into slides, creating inconsistencies. Option B is about formatting, not consistency. Option C focuses on speed rather than the architectural advantage. Option D invents interactive capabilities.",
-source: "Lesson 8: Cross-App Orchestration"
+explanation: "Lesson 7 identifies structural consistency as the key advantage of cross-app orchestration. When an agent carries context from Excel analysis through to PowerPoint presentation in a single pass, every element reflects the same data state. Manual deck-building introduces disconnection risk — numbers can change in the model after they have been pasted into slides, creating inconsistencies. Option B is about formatting, not consistency. Option C focuses on speed rather than the architectural advantage. Option D invents interactive capabilities.",
+source: "Lesson 7: Cross-App Orchestration"
 },
 {
 question: "The chapter warns about 'disconnection risk' in manually built presentations. What exactly is this risk?",
@@ -260,8 +260,8 @@ options: [
 "The Excel model and PowerPoint file are stored in different folders, making version control difficult"
 ],
 correctOption: 0,
-explanation: "Lesson 8 defines disconnection risk as the specific danger that arises when model data is manually copied into a presentation: if the model is updated after the copy, the presentation contains stale data that the audience cannot distinguish from current data. The risk is invisible — the numbers look authoritative but may be wrong. Option B, C, and D describe IT infrastructure issues, not the analytical consistency problem the chapter addresses.",
-source: "Lesson 8: Cross-App Orchestration"
+explanation: "Lesson 7 defines disconnection risk as the specific danger that arises when model data is manually copied into a presentation: if the model is updated after the copy, the presentation contains stale data that the audience cannot distinguish from current data. The risk is invisible — the numbers look authoritative but may be wrong. Option B, C, and D describe IT infrastructure issues, not the analytical consistency problem the chapter addresses.",
+source: "Lesson 7: Cross-App Orchestration"
 },
 {
 question: "An investment bank wants to use Cowork's cross-app orchestration capabilities. According to the chapter, what plan level is required and what is the current availability status?",
@@ -272,11 +272,11 @@ options: [
 "Cross-app orchestration is a future roadmap feature not yet available on any plan"
 ],
 correctOption: 0,
-explanation: "Lesson 8 states that cross-app orchestration is available on Cowork Team and Enterprise plans and is currently in research preview. This means the feature works but may change before general availability. Option B incorrectly claims free-tier availability and full release. Option C invents a minimum seat requirement. Option D incorrectly states the feature is not yet available.",
-source: "Lesson 8: Cross-App Orchestration"
+explanation: "Lesson 7 states that cross-app orchestration is available on Cowork Team and Enterprise plans and is currently in research preview. This means the feature works but may change before general availability. Option B incorrectly claims free-tier availability and full release. Option C invents a minimum seat requirement. Option D incorrectly states the feature is not yet available.",
+source: "Lesson 7: Cross-App Orchestration"
 },
 {
-question: "A consulting firm wants to apply the Knowledge Extraction Method (KEM) to their finance practice. Lesson 9 adapts the Five Questions from Chapter 16 to a finance context. What is the first question, and why is it adapted differently for finance?",
+question: "A consulting firm wants to apply the Knowledge Extraction Method (KEM) to their finance practice. Lesson 8 adapts the Five Questions from Chapter 16 to a finance context. What is the first question, and why is it adapted differently for finance?",
 options: [
 "'Walk me through your most recent monthly close from start to finish' — it is adapted to finance because monthly close is the recurring, high-stakes workflow that surfaces the most tacit knowledge about an institution's specific accounting practices",
 "'What financial software do you use?' — technology inventory comes first because the SKILL.md needs to reference specific tools",
@@ -284,8 +284,8 @@ options: [
 "'How many people are on your finance team?' — headcount determines the scope of the extraction"
 ],
 correctOption: 0,
-explanation: "Lesson 9 adapts Question 1 to 'Walk me through your most recent monthly close' because the monthly close is the most recurring, comprehensive financial workflow. It touches every aspect of the accounting process and surfaces tacit knowledge about how the institution handles its specific complexities. Option B focuses on tools rather than knowledge. Option C jumps to risk without establishing the workflow context. Option D is an operational question irrelevant to knowledge extraction.",
-source: "Lesson 9: Extracting Finance Domain Knowledge"
+explanation: "Lesson 8 adapts Question 1 to 'Walk me through your most recent monthly close' because the monthly close is the most recurring, comprehensive financial workflow. It touches every aspect of the accounting process and surfaces tacit knowledge about how the institution handles its specific complexities. Option B focuses on tools rather than knowledge. Option C jumps to risk without establishing the workflow context. Option D is an operational question irrelevant to knowledge extraction.",
+source: "Lesson 8: Extracting Finance Domain Knowledge"
 },
 {
 question: "During a KEM interview with a CFO, the interviewer asks about variance analysis. The CFO explains that a 3% variance on a $500,000 line item is immaterial but a 3% variance on a $50 million line item triggers investigation. What type of knowledge does this illustrate?",
@@ -296,8 +296,8 @@ options: [
 "Statistical knowledge about variance analysis that could be found in any finance textbook"
 ],
 correctOption: 0,
-explanation: "Lesson 9 uses variance analysis as the primary example of firm-specific versus generic knowledge. Generic knowledge says 'investigate material variances.' Firm-specific knowledge says 'a 3% variance on this line item is immaterial but the same percentage on that line item requires CFO review.' These thresholds and escalation rules are institutional knowledge that the KEM extracts. Option B misidentifies firm-specific thresholds as generic. Option C attributes institutional practice to regulation. Option D confuses applied judgement with textbook theory.",
-source: "Lesson 9: Extracting Finance Domain Knowledge"
+explanation: "Lesson 8 uses variance analysis as the primary example of firm-specific versus generic knowledge. Generic knowledge says 'investigate material variances.' Firm-specific knowledge says 'a 3% variance on this line item is immaterial but the same percentage on that line item requires CFO review.' These thresholds and escalation rules are institutional knowledge that the KEM extracts. Option B misidentifies firm-specific thresholds as generic. Option C attributes institutional practice to regulation. Option D confuses applied judgement with textbook theory.",
+source: "Lesson 8: Extracting Finance Domain Knowledge"
 },
 {
 question: "The KEM interview produces a draft SKILL.md for a finance domain agent. The chapter shows the structure of this draft. What are the three main sections of the SKILL.md that the extraction produces?",
@@ -308,8 +308,8 @@ options: [
 "Setup, Execution, and Validation — following the software deployment lifecycle"
 ],
 correctOption: 0,
-explanation: "Lesson 9 shows that the KEM extraction produces a SKILL.md with three sections: Persona (defining the agent's identity and expertise boundaries), Questions (defining what the agent asks about and what falls outside its scope), and Principles (encoding the specific rules that capture the expert's tacit knowledge). Option B applies generic document structure. Option C describes a data pipeline. Option D describes software deployment.",
-source: "Lesson 9: Extracting Finance Domain Knowledge"
+explanation: "Lesson 8 shows that the KEM extraction produces a SKILL.md with three sections: Persona (defining the agent's identity and expertise boundaries), Questions (defining what the agent asks about and what falls outside its scope), and Principles (encoding the specific rules that capture the expert's tacit knowledge). Option B applies generic document structure. Option C describes a data pipeline. Option D describes software deployment.",
+source: "Lesson 8: Extracting Finance Domain Knowledge"
 },
 {
 question: "One of the Principles extracted during the KEM interview states: 'If a subsidiary closes its books more than two business days after the group deadline, escalate to the Group Controller before adjusting the consolidation.' What makes this a well-formed Principle?",
@@ -320,8 +320,8 @@ options: [
 "It references a specific person by name rather than by role"
 ],
 correctOption: 0,
-explanation: "Lesson 9 emphasises that SKILL.md Principles must be testable. This Principle succeeds because it has a concrete trigger condition (subsidiary more than two business days late), a specific required action (escalate to Group Controller), and a sequence constraint (escalation before adjustment). An agent can evaluate each element against available data. Option B confuses quality with formality. Option C misidentifies firm-specificity as universality. Option D is incorrect — the Principle uses a role (Group Controller), which is appropriate.",
-source: "Lesson 9: Extracting Finance Domain Knowledge"
+explanation: "Lesson 8 emphasises that SKILL.md Principles must be testable. This Principle succeeds because it has a concrete trigger condition (subsidiary more than two business days late), a specific required action (escalate to Group Controller), and a sequence constraint (escalation before adjustment). An agent can evaluate each element against available data. Option B confuses quality with formality. Option C misidentifies firm-specificity as universality. Option D is incorrect — the Principle uses a role (Group Controller), which is appropriate.",
+source: "Lesson 8: Extracting Finance Domain Knowledge"
 },
 {
 question: "Enterprise extensions in the chapter follow a three-step pattern. A compliance officer wants to build a regulatory reporting extension. What are the three steps?",
@@ -332,8 +332,8 @@ options: [
 "Build the data warehouse, train the machine learning model, and deploy to production"
 ],
 correctOption: 0,
-explanation: "Lessons 10 and 11 establish a three-step pattern for enterprise extensions: (1) identify the specific gap between generic plugin output and what the institution needs, (2) write SKILL.md instructions that encode the institution's specific practices and knowledge, and (3) add governance gates that enforce boundaries and escalation rules. Option B describes software procurement, not knowledge encoding. Option C describes regulatory engagement. Option D describes a data engineering pipeline.",
-source: "Lesson 10: Enterprise Extensions — Risk and Compliance"
+explanation: "Lessons 9 and 10 establish a three-step pattern for enterprise extensions: (1) identify the specific gap between generic plugin output and what the institution needs, (2) write SKILL.md instructions that encode the institution's specific practices and knowledge, and (3) add governance gates that enforce boundaries and escalation rules. Option B describes software procurement, not knowledge encoding. Option C describes regulatory engagement. Option D describes a data engineering pipeline.",
+source: "Lesson 9: Enterprise Extensions — Risk and Compliance"
 },
 {
 question: "The credit risk classification extension addresses a specific problem with generic credit risk plugins. What is that problem?",
@@ -344,8 +344,8 @@ options: [
 "Generic plugins produce credit ratings that conflict with regulatory requirements"
 ],
 correctOption: 0,
-explanation: "Lesson 10 explains that generic credit risk plugins apply standard external rating methodologies, but institutions develop proprietary internal rating models with specific criteria, thresholds, and override rules. The enterprise extension encodes these institution-specific elements so the agent classifies credits the way the institution's credit committee does. Option B incorrectly claims generic plugins cannot do credit analysis. Option C focuses on performance. Option D conflates internal and regulatory rating systems.",
-source: "Lesson 10: Enterprise Extensions — Risk and Compliance"
+explanation: "Lesson 9 explains that generic credit risk plugins apply standard external rating methodologies, but institutions develop proprietary internal rating models with specific criteria, thresholds, and override rules. The enterprise extension encodes these institution-specific elements so the agent classifies credits the way the institution's credit committee does. Option B incorrectly claims generic plugins cannot do credit analysis. Option C focuses on performance. Option D conflates internal and regulatory rating systems.",
+source: "Lesson 9: Enterprise Extensions — Risk and Compliance"
 },
 {
 question: "The IPS compliance extension uses a specific verification sequence when checking whether a portfolio complies with an Investment Policy Statement. What is the correct order?",
@@ -356,8 +356,8 @@ options: [
 "The order depends on the size of the portfolio — larger portfolios start with liquidity, smaller ones start with hard caps"
 ],
 correctOption: 0,
-explanation: "Lesson 10 specifies the IPS verification sequence: hard caps → concentration targets → screening exclusions → liquidity. The sequence matters because hard caps are absolute constraints — if a portfolio violates a hard cap, no amount of compliance on other dimensions makes it acceptable. Checking hard caps first prevents wasted effort and ensures the most critical constraints are satisfied before moving to softer ones. Option B inverts the priority. Option C loses the sequential logic. Option D invents a portfolio-size dependency.",
-source: "Lesson 10: Enterprise Extensions — Risk and Compliance"
+explanation: "Lesson 9 specifies the IPS verification sequence: hard caps → concentration targets → screening exclusions → liquidity. The sequence matters because hard caps are absolute constraints — if a portfolio violates a hard cap, no amount of compliance on other dimensions makes it acceptable. Checking hard caps first prevents wasted effort and ensures the most critical constraints are satisfied before moving to softer ones. Option B inverts the priority. Option C loses the sequential logic. Option D invents a portfolio-size dependency.",
+source: "Lesson 9: Enterprise Extensions — Risk and Compliance"
 },
 {
 question: "The portfolio attribution extension uses the Brinson model. What are the three effects that the Brinson attribution decomposes performance into?",
@@ -368,11 +368,11 @@ options: [
 "Market effect, currency effect, and timing effect — the three external factors affecting portfolio returns"
 ],
 correctOption: 0,
-explanation: "Lesson 10 explains the Brinson attribution model as decomposing portfolio performance into three effects: allocation (the impact of sector weight decisions), selection (the impact of security choices within sectors), and interaction (the combined effect that is not captured by either allocation or selection alone). Option B uses risk terminology, not attribution terminology. Option C describes equity return drivers. Option D lists external factors, not the Brinson decomposition.",
-source: "Lesson 10: Enterprise Extensions — Risk and Compliance"
+explanation: "Lesson 9 explains the Brinson attribution model as decomposing portfolio performance into three effects: allocation (the impact of sector weight decisions), selection (the impact of security choices within sectors), and interaction (the combined effect that is not captured by either allocation or selection alone). Option B uses risk terminology, not attribution terminology. Option C describes equity return drivers. Option D lists external factors, not the Brinson decomposition.",
+source: "Lesson 9: Enterprise Extensions — Risk and Compliance"
 },
 {
-question: "The treasury management extension described in Lesson 11 addresses cash flow forecasting. What approach does the chapter identify as distinguishing firm-specific treasury management from generic cash management?",
+question: "The treasury management extension described in Lesson 10 addresses cash flow forecasting. What approach does the chapter identify as distinguishing firm-specific treasury management from generic cash management?",
 options: [
 "Encoding the institution's specific cash flow patterns, counterparty relationships, and liquidity buffer requirements — generic tools forecast based on historical averages, while the extension incorporates the treasurer's knowledge of seasonal patterns, covenant constraints, and counterparty risk thresholds",
 "Using a more powerful AI model for treasury calculations",
@@ -380,8 +380,8 @@ options: [
 "Automating all treasury decisions without human oversight"
 ],
 correctOption: 0,
-explanation: "Lesson 11 explains that the treasury extension encodes institution-specific knowledge: the treasurer's understanding of seasonal cash flow patterns, covenant constraints, counterparty risk thresholds, and liquidity buffer requirements. Generic tools produce forecasts based on historical averages; the extension adds the contextual judgement that makes forecasts actionable for a specific institution. Option B conflates model capability with domain knowledge. Option C focuses on connectivity rather than knowledge. Option D removes the human oversight that the chapter emphasises.",
-source: "Lesson 11: Enterprise Extensions — Operations and Strategy"
+explanation: "Lesson 10 explains that the treasury extension encodes institution-specific knowledge: the treasurer's understanding of seasonal cash flow patterns, covenant constraints, counterparty risk thresholds, and liquidity buffer requirements. Generic tools produce forecasts based on historical averages; the extension adds the contextual judgement that makes forecasts actionable for a specific institution. Option B conflates model capability with domain knowledge. Option C focuses on connectivity rather than knowledge. Option D removes the human oversight that the chapter emphasises.",
+source: "Lesson 10: Enterprise Extensions — Operations and Strategy"
 },
 {
 question: "The FP&A (Financial Planning and Analysis) extension uses a specific forecasting methodology that the chapter distinguishes from simple trend extrapolation. What is this methodology?",
@@ -392,8 +392,8 @@ options: [
 "Zero-based budgeting — rebuilding every budget from scratch each period"
 ],
 correctOption: 0,
-explanation: "Lesson 11 identifies driver-based forecasting (volume, price, mix decomposition) as the methodology that the FP&A extension uses. This approach decomposes projections into operational drivers rather than extrapolating aggregate trends, allowing the team to test specific assumptions about what is driving financial performance. Option B describes a statistical technique, not the chapter's methodology. Option C is the generic approach the chapter contrasts against. Option D is a budgeting methodology, not a forecasting one.",
-source: "Lesson 11: Enterprise Extensions — Operations and Strategy"
+explanation: "Lesson 10 identifies driver-based forecasting (volume, price, mix decomposition) as the methodology that the FP&A extension uses. This approach decomposes projections into operational drivers rather than extrapolating aggregate trends, allowing the team to test specific assumptions about what is driving financial performance. Option B describes a statistical technique, not the chapter's methodology. Option C is the generic approach the chapter contrasts against. Option D is a budgeting methodology, not a forecasting one.",
+source: "Lesson 10: Enterprise Extensions — Operations and Strategy"
 },
 {
 question: "The M&A integration PMO extension addresses post-merger integration. What specific problem does this extension solve that generic project management tools cannot?",
@@ -404,8 +404,8 @@ options: [
 "It generates regulatory filings required for merger completion"
 ],
 correctOption: 0,
-explanation: "Lesson 11 explains that the M&A integration PMO extension encodes institutional knowledge from prior acquisitions: specific integration sequencing, system migration dependencies, and synergy realisation milestones that are learned through experience. Generic project management tools provide templates; the extension provides the institution's specific playbook. Option B focuses on aesthetics. Option C removes human oversight. Option D confuses post-merger integration with regulatory filing.",
-source: "Lesson 11: Enterprise Extensions — Operations and Strategy"
+explanation: "Lesson 10 explains that the M&A integration PMO extension encodes institutional knowledge from prior acquisitions: specific integration sequencing, system migration dependencies, and synergy realisation milestones that are learned through experience. Generic project management tools provide templates; the extension provides the institution's specific playbook. Option B focuses on aesthetics. Option C removes human oversight. Option D confuses post-merger integration with regulatory filing.",
+source: "Lesson 10: Enterprise Extensions — Operations and Strategy"
 },
 {
 question: "The ESG reporting extension must handle two specific regulatory frameworks mentioned in the chapter. What are they?",
@@ -416,11 +416,11 @@ options: [
 "IFRS and US GAAP — accounting standards for financial reporting"
 ],
 correctOption: 0,
-explanation: "Lesson 11 identifies CSRD and ISSB as the two ESG regulatory frameworks the extension must handle. Each framework has different disclosure requirements, and the extension must map the institution's ESG data to each framework's specific format. Option B lists unrelated regulatory frameworks. Option C lists capital adequacy frameworks. Option D lists accounting standards, not ESG frameworks.",
-source: "Lesson 11: Enterprise Extensions — Operations and Strategy"
+explanation: "Lesson 10 identifies CSRD and ISSB as the two ESG regulatory frameworks the extension must handle. Each framework has different disclosure requirements, and the extension must map the institution's ESG data to each framework's specific format. Option B lists unrelated regulatory frameworks. Option C lists capital adequacy frameworks. Option D lists accounting standards, not ESG frameworks.",
+source: "Lesson 10: Enterprise Extensions — Operations and Strategy"
 },
 {
-question: "The extension prioritisation framework in Lesson 12 uses four criteria to rank extension candidates. A team scores an extension as: Frequency: High, Pain: High, Data Availability: Low, Expertise Availability: High. Should this extension be prioritised for immediate implementation?",
+question: "The extension prioritisation framework in Lesson 11 uses four criteria to rank extension candidates. A team scores an extension as: Frequency: High, Pain: High, Data Availability: Low, Expertise Availability: High. Should this extension be prioritised for immediate implementation?",
 options: [
 "No — despite high frequency, pain, and expertise scores, the low data availability means the extension cannot function until the data prerequisite is resolved; data availability is a blocking constraint regardless of how appealing the other scores are",
 "Yes — three out of four criteria are high, giving it a strong composite score",
@@ -428,8 +428,8 @@ options: [
 "It depends on whether the extension has regulatory exposure, which overrides all other criteria"
 ],
 correctOption: 0,
-explanation: "Lesson 12 emphasises that data availability is a blocking constraint. An extension without accessible data sources cannot be built regardless of how high it scores on other criteria. The team should resolve the data prerequisite first, then sequence the extension based on its composite score. Option B ignores the blocking nature of data availability. Option C incorrectly prioritises pain alone. Option D, while partially correct about regulatory override, does not address the data availability blocker.",
-source: "Lesson 12: Your Extension Roadmap and Chapter Summary"
+explanation: "Lesson 11 emphasises that data availability is a blocking constraint. An extension without accessible data sources cannot be built regardless of how high it scores on other criteria. The team should resolve the data prerequisite first, then sequence the extension based on its composite score. Option B ignores the blocking nature of data availability. Option C incorrectly prioritises pain alone. Option D, while partially correct about regulatory override, does not address the data availability blocker.",
+source: "Lesson 11: Your Extension Roadmap and Chapter Summary"
 },
 {
 question: "The prioritisation framework includes an override rule that supersedes the composite scoring. What is this rule?",
@@ -440,11 +440,11 @@ options: [
 "Extensions that encode knowledge from retiring employees always take precedence"
 ],
 correctOption: 0,
-explanation: "Lesson 12 states that regulatory exposure overrides the arithmetic of the composite score. Extensions addressing compliance requirements (regulatory reporting, IPS compliance, credit risk classification) move to the front because non-compliance carries risk costs — potential fines, sanctions, or operational restrictions — that exceed the friction costs measured by the other criteria. Option B prioritises by authority rather than risk. Option C prioritises by cost rather than risk. Option D, while knowledge risk is important, is not identified as an override rule.",
-source: "Lesson 12: Your Extension Roadmap and Chapter Summary"
+explanation: "Lesson 11 states that regulatory exposure overrides the arithmetic of the composite score. Extensions addressing compliance requirements (regulatory reporting, IPS compliance, credit risk classification) move to the front because non-compliance carries risk costs — potential fines, sanctions, or operational restrictions — that exceed the friction costs measured by the other criteria. Option B prioritises by authority rather than risk. Option C prioritises by cost rather than risk. Option D, while knowledge risk is important, is not identified as an override rule.",
+source: "Lesson 11: Your Extension Roadmap and Chapter Summary"
 },
 {
-question: "Lesson 12 recommends running three extensions in parallel during the first quarter rather than sequencing them one at a time. What is the rationale?",
+question: "Lesson 11 recommends running three extensions in parallel during the first quarter rather than sequencing them one at a time. What is the rationale?",
 options: [
 "The three extensions target different concerns — highest-volume workflow, highest-risk compliance area, and most at-risk knowledge — so they do not compete for the same resources and running them in parallel produces institutional value faster than sequential execution",
 "Three extensions is the maximum number the Cowork platform can support simultaneously",
@@ -452,8 +452,8 @@ options: [
 "The regulatory deadline requires all three to be completed within the same quarter"
 ],
 correctOption: 0,
-explanation: "Lesson 12 explains that the three recommended parallel extensions address different concerns (volume, compliance risk, knowledge risk) and therefore draw on different resources. Because they do not compete, parallel execution is feasible and produces value faster. Option B invents a platform limitation. Option C ignores the resource-dependency reasoning. Option D invents a regulatory deadline.",
-source: "Lesson 12: Your Extension Roadmap and Chapter Summary"
+explanation: "Lesson 11 explains that the three recommended parallel extensions address different concerns (volume, compliance risk, knowledge risk) and therefore draw on different resources. Because they do not compete, parallel execution is feasible and produces value faster. Option B invents a platform limitation. Option C ignores the resource-dependency reasoning. Option D invents a regulatory deadline.",
+source: "Lesson 11: Your Extension Roadmap and Chapter Summary"
 },
 {
 question: "The chapter summary describes a 'unifying architecture' across the three parts of Chapter 17. A colleague says: 'Claude in Excel, Cowork, and enterprise extensions are three separate products.' How does the chapter correct this?",
@@ -464,8 +464,8 @@ options: [
 "They are three versions of the same product released in chronological order"
 ],
 correctOption: 0,
-explanation: "Lesson 12's chapter summary explicitly corrects the misconception that the three parts are separate systems. They are layers of the same architecture sharing the same MCP connector ecosystem. The difference is scope: Claude in Excel operates within one workbook, Cowork operates across applications, and enterprise extensions add organisational knowledge on top of both through SKILL.md files. Option B is the exact misconception being corrected. Option C invents a shared-UI claim. Option D incorrectly implies versioning.",
-source: "Lesson 12: Your Extension Roadmap and Chapter Summary"
+explanation: "Lesson 11's chapter summary explicitly corrects the misconception that the three parts are separate systems. They are layers of the same architecture sharing the same MCP connector ecosystem. The difference is scope: Claude in Excel operates within one workbook, Cowork operates across applications, and enterprise extensions add organisational knowledge on top of both through SKILL.md files. Option B is the exact misconception being corrected. Option C invents a shared-UI claim. Option D incorrectly implies versioning.",
+source: "Lesson 11: Your Extension Roadmap and Chapter Summary"
 },
 {
 question: "The chapter's concluding architectural insight is captured in a three-part phrase. What is it?",
@@ -476,19 +476,19 @@ options: [
 "'Data in. Analysis out. Decision made.' — expressing the workflow from input to output"
 ],
 correctOption: 0,
-explanation: "Lesson 12 concludes with the phrase 'Same connectors. Different scope. Your knowledge on top.' This captures the chapter's architectural insight: the MCP connector ecosystem is shared (same connectors), what changes is whether you operate within one workbook or across applications (different scope), and enterprise extensions add your organisation's specific knowledge (your knowledge on top). Option B, C, and D are invented phrases not from the chapter.",
-source: "Lesson 12: Your Extension Roadmap and Chapter Summary"
+explanation: "Lesson 11 concludes with the phrase 'Same connectors. Different scope. Your knowledge on top.' This captures the chapter's architectural insight: the MCP connector ecosystem is shared (same connectors), what changes is whether you operate within one workbook or across applications (different scope), and enterprise extensions add your organisation's specific knowledge (your knowledge on top). Option B, C, and D are invented phrases not from the chapter.",
+source: "Lesson 11: Your Extension Roadmap and Chapter Summary"
 },
 {
-question: "The chapter lists six pre-built Agent Skills for Claude in Excel. A new user asks which Agent Skills are available. Which list is correct?",
+question: "The chapter lists pre-built Agent Skills for Claude in Excel. A new user asks which of the following is an actual Agent Skill. Which list contains only real Agent Skills?",
 options: [
-"Comparable Company Analysis, Discounted Cash Flow Model, Due Diligence Data Pack, Company Teaser, Earnings Analysis, and Initiating Coverage Report",
-"Balance Sheet Analysis, Income Statement Review, Cash Flow Forecast, Ratio Calculator, Trend Analysis, and Benchmark Comparison",
-"Credit Risk Assessment, Regulatory Compliance Check, Portfolio Optimisation, Risk Scoring, Stress Testing, and Capital Adequacy",
-"Market Research, Competitive Analysis, Industry Overview, SWOT Analysis, Porter's Five Forces, and PESTEL Analysis"
+"3-Statement Financial Modelling, Comparable Company Analysis, Discounted Cash Flow Model, Due Diligence Data Pack, and Earnings Analysis",
+"Balance Sheet Analysis, Income Statement Review, Cash Flow Forecast, Ratio Calculator, and Trend Analysis",
+"Credit Risk Assessment, Regulatory Compliance Check, Portfolio Optimisation, Risk Scoring, and Stress Testing",
+"Market Research, Competitive Analysis, SWOT Analysis, Porter's Five Forces, and PESTEL Analysis"
 ],
 correctOption: 0,
-explanation: "Lesson 1 lists the six pre-built Agent Skills as Comparable Company Analysis, Discounted Cash Flow Model, Due Diligence Data Pack, Company Teaser, Earnings Analysis, and Initiating Coverage Report. These represent Layer 2 capabilities that connect to live market data through MCP connectors. Option B, C, and D list plausible but incorrect skill sets not described in the chapter.",
+explanation: "Lesson 1 lists the pre-built Agent Skills including 3-Statement Financial Modelling, Comparable Company Analysis, Discounted Cash Flow Model, Due Diligence Data Pack, Earnings Analysis, Initiating Coverage Report, and others. These represent Layer 2 capabilities. Options B, C, and D list plausible but incorrect skill sets not described in the chapter.",
 source: "Lesson 1: The Assistant and the Agent"
 },
 {
@@ -500,8 +500,8 @@ options: [
 "The terminal value — the value of the company beyond the explicit forecast period"
 ],
 correctOption: 0,
-explanation: "Lesson 4 explains that CAPM calculates the cost of equity component of WACC. The formula adds a risk premium (beta times the market risk premium) to the risk-free rate, producing the return that equity investors require to compensate for the company's systematic risk. Option B describes a different WACC component. Option C describes capital structure optimisation. Option D describes a different DCF element.",
-source: "Lesson 4: Agent Skills — Market Analysis"
+explanation: "Lesson 5 explains that CAPM calculates the cost of equity component of WACC. The formula adds a risk premium (beta times the market risk premium) to the risk-free rate, producing the return that equity investors require to compensate for the company's systematic risk. Option B describes a different WACC component. Option C describes capital structure optimisation. Option D describes a different DCF element.",
+source: "Lesson 5: Financial Analysis — The Core Plugin"
 },
 {
 question: "An analyst uses the Earnings Analysis Agent Skill to review a company's quarterly results. The skill compares reported earnings to consensus estimates. What does the chapter identify as the key analytical output beyond the simple beat/miss determination?",
@@ -512,8 +512,8 @@ options: [
 "A comparison of the company's earnings to every competitor in its industry"
 ],
 correctOption: 0,
-explanation: "Lesson 5 explains that the Earnings Analysis skill goes beyond simple beat/miss to analyse the pattern over multiple quarters. Consistent small beats may indicate conservative guidance management; consistent misses may signal fundamental deterioration. The pattern provides more analytical value than any single quarter's result. Option B focuses on a single data point. Option C violates the chapter's boundary against investment advice. Option D overstates the comparative scope.",
-source: "Lesson 5: Agent Skills — Deal and Research"
+explanation: "Lesson 6 explains that the Earnings Analysis skill goes beyond simple beat/miss to analyse the pattern over multiple quarters. Consistent small beats may indicate conservative guidance management; consistent misses may signal fundamental deterioration. The pattern provides more analytical value than any single quarter's result. Option B focuses on a single data point. Option C violates the chapter's boundary against investment advice. Option D overstates the comparative scope.",
+source: "Lesson 6: Domain Plugins — From Deals to Portfolios"
 },
 {
 question: "A private equity firm is evaluating which add-on plugin to install for their Cowork deployment. They primarily build LBO models, conduct portfolio company monitoring, and prepare fund reports. Which add-on plugin is most relevant?",
@@ -524,8 +524,8 @@ options: [
 "The wealth-management add-on plugin — because PE firms manage assets on behalf of limited partners"
 ],
 correctOption: 0,
-explanation: "Lesson 7 describes four add-on plugins, each targeting a specific segment: investment-banking, equity-research, private-equity, and wealth-management. The private-equity add-on is designed for the workflows described — LBO analysis, portfolio monitoring, and fund reporting. Option B is relevant for advisory work but not PE-specific workflows. Option C focuses on research coverage. Option D targets individual wealth management, not institutional PE.",
-source: "Lesson 7: The Financial-Services Plugin Suite"
+explanation: "Lesson 6 describes four add-on plugins, each targeting a specific segment: investment-banking, equity-research, private-equity, and wealth-management. The private-equity add-on is designed for the workflows described — LBO analysis, portfolio monitoring, and fund reporting. Option B is relevant for advisory work but not PE-specific workflows. Option C focuses on research coverage. Option D targets individual wealth management, not institutional PE.",
+source: "Lesson 6: Domain Plugins — From Deals to Portfolios"
 },
 {
 question: "During a KEM interview, the CFO describes how dormant accounts are handled: 'If an account shows no activity for 90 days, reclassify it as dormant and move the balance to a suspense ledger.' This is translated into a SKILL.md Principle. Why is the 90-day threshold important?",
@@ -536,8 +536,8 @@ options: [
 "Because the CFO personally prefers 90 days and the number has no institutional significance"
 ],
 correctOption: 0,
-explanation: "Lesson 9 uses the dormant account example to illustrate firm-specific knowledge. The 90-day threshold is this institution's specific rule — not a universal standard. Other institutions may use different thresholds. Encoding the exact number in the SKILL.md ensures the agent applies the correct institutional rule rather than a generic assumption. Option B incorrectly claims universality. Option C invents a technical limitation. Option D dismisses institutional significance.",
-source: "Lesson 9: Extracting Finance Domain Knowledge"
+explanation: "Lesson 8 uses the dormant account example to illustrate firm-specific knowledge. The 90-day threshold is this institution's specific rule — not a universal standard. Other institutions may use different thresholds. Encoding the exact number in the SKILL.md ensures the agent applies the correct institutional rule rather than a generic assumption. Option B incorrectly claims universality. Option C invents a technical limitation. Option D dismisses institutional significance.",
+source: "Lesson 8: Extracting Finance Domain Knowledge"
 },
 {
 question: "Claude in Excel offers two model options: Sonnet 4.6 and Opus 4.6. The chapter provides guidance on when to use each. What is the recommended approach?",
@@ -552,7 +552,7 @@ explanation: "Lesson 1 recommends starting with Sonnet 4.6 for routine tasks and
 source: "Lesson 1: The Assistant and the Agent"
 },
 {
-question: "The tax provision extension described in Lesson 11 must handle a specific accounting standard. Which standard governs tax provision accounting in the chapter's discussion?",
+question: "The tax provision extension described in Lesson 10 must handle a specific accounting standard. Which standard governs tax provision accounting in the chapter's discussion?",
 options: [
 "ASC 740 — the US accounting standard for income taxes that governs how companies calculate, recognise, and disclose tax provisions in their financial statements",
 "IFRS 16 — the international standard for lease accounting",
@@ -560,11 +560,11 @@ options: [
 "SOX Section 404 — the internal controls over financial reporting requirement"
 ],
 correctOption: 0,
-explanation: "Lesson 11 identifies ASC 740 as the accounting standard governing tax provision calculations. The tax provision extension must encode institution-specific application of ASC 740, including how the company calculates deferred tax assets and liabilities, applies valuation allowances, and handles uncertain tax positions. Option B governs leases. Option C governs revenue recognition. Option D governs internal controls, not tax accounting.",
-source: "Lesson 11: Enterprise Extensions — Operations and Strategy"
+explanation: "Lesson 10 identifies ASC 740 as the accounting standard governing tax provision calculations. The tax provision extension must encode institution-specific application of ASC 740, including how the company calculates deferred tax assets and liabilities, applies valuation allowances, and handles uncertain tax positions. Option B governs leases. Option C governs revenue recognition. Option D governs internal controls, not tax accounting.",
+source: "Lesson 10: Enterprise Extensions — Operations and Strategy"
 },
 {
-question: "The fund administration extension mentioned in Lesson 11 centres on a specific calculation. What is this calculation, and why does it require firm-specific knowledge?",
+question: "The fund administration extension mentioned in Lesson 10 centres on a specific calculation. What is this calculation, and why does it require firm-specific knowledge?",
 options: [
 "NAV (Net Asset Value) calculation — each fund has specific rules for valuing illiquid positions, allocating expenses, and handling side pockets that generic tools cannot apply without institutional knowledge",
 "IRR (Internal Rate of Return) calculation — a standard formula that any financial calculator can perform",
@@ -572,11 +572,11 @@ options: [
 "AUM (Assets Under Management) calculation — a simple aggregation of portfolio values"
 ],
 correctOption: 0,
-explanation: "Lesson 11 describes NAV calculation as the core of the fund administration extension. NAV requires firm-specific knowledge because each fund has specific rules for valuing illiquid positions, allocating expenses across share classes, and handling side pockets or special situations. Generic tools apply standard valuation methods; the extension encodes the fund's specific NAV policies. Option B is a standard calculation. Option C and D do not require the same level of institutional specificity.",
-source: "Lesson 11: Enterprise Extensions — Operations and Strategy"
+explanation: "Lesson 10 describes NAV calculation as the core of the fund administration extension. NAV requires firm-specific knowledge because each fund has specific rules for valuing illiquid positions, allocating expenses across share classes, and handling side pockets or special situations. Generic tools apply standard valuation methods; the extension encodes the fund's specific NAV policies. Option B is a standard calculation. Option C and D do not require the same level of institutional specificity.",
+source: "Lesson 10: Enterprise Extensions — Operations and Strategy"
 },
 {
-question: "Lesson 11 introduces three prioritisation dimensions for selecting enterprise extensions before the formal four-criteria framework in Lesson 12. What are these three dimensions?",
+question: "Lesson 10 introduces three prioritisation dimensions for selecting enterprise extensions before the formal four-criteria framework in Lesson 11. What are these three dimensions?",
 options: [
 "Operational pain (which workflows cause the most friction), knowledge risk (which expertise might leave the organisation), and regulatory exposure (which areas carry compliance consequences)",
 "Cost (cheapest to build), speed (fastest to deploy), and visibility (most impressive to management)",
@@ -584,8 +584,8 @@ options: [
 "Technical complexity, data volume, and integration difficulty"
 ],
 correctOption: 0,
-explanation: "Lesson 11 introduces operational pain, knowledge risk, and regulatory exposure as the three dimensions for initial prioritisation before Lesson 12's full four-criteria framework. These dimensions reflect different types of institutional value: reducing friction, preserving expertise, and managing compliance risk. Option B prioritises by convenience rather than value. Option C and D use dimensions not identified in the chapter.",
-source: "Lesson 11: Enterprise Extensions — Operations and Strategy"
+explanation: "Lesson 10 introduces operational pain, knowledge risk, and regulatory exposure as the three dimensions for initial prioritisation before Lesson 11's full four-criteria framework. These dimensions reflect different types of institutional value: reducing friction, preserving expertise, and managing compliance risk. Option B prioritises by convenience rather than value. Option C and D use dimensions not identified in the chapter.",
+source: "Lesson 10: Enterprise Extensions — Operations and Strategy"
 },
 {
 question: "A credit analyst's SKILL.md Principle states: 'If the aging distribution shows more than 15% of receivables past 90 days, flag the credit for enhanced monitoring regardless of the overall DSO.' Why is this Principle valuable?",
@@ -596,11 +596,11 @@ options: [
 "Because aging distributions are only available in the institution's proprietary system"
 ],
 correctOption: 0,
-explanation: "Lesson 9 uses this type of Principle to illustrate how firm-specific knowledge creates value. The 15% threshold and the aging distribution focus are institutional decisions — other institutions may use different thresholds or different metrics. A generic tool would rely on overall DSO, potentially missing that a small number of large, old receivables create concentrated risk even when the average looks acceptable. Option B incorrectly claims universality. Option C misidentifies the Principle as exclusive. Option D confuses data availability with analytical specificity.",
-source: "Lesson 9: Extracting Finance Domain Knowledge"
+explanation: "Lesson 8 uses this type of Principle to illustrate how firm-specific knowledge creates value. The 15% threshold and the aging distribution focus are institutional decisions — other institutions may use different thresholds or different metrics. A generic tool would rely on overall DSO, potentially missing that a small number of large, old receivables create concentrated risk even when the average looks acceptable. Option B incorrectly claims universality. Option C misidentifies the Principle as exclusive. Option D confuses data availability with analytical specificity.",
+source: "Lesson 8: Extracting Finance Domain Knowledge"
 },
 {
-question: "The chapter describes the Knowledge Extraction Method as transferring directly to subsequent domain chapters. According to Lesson 12, what transfers and what changes?",
+question: "The chapter describes the Knowledge Extraction Method as transferring directly to subsequent domain chapters. According to Lesson 11, what transfers and what changes?",
 options: [
 "The methodology transfers — the same five interview questions, document extraction framework, and validation loop apply in every domain — but the professional context changes, surfacing different tacit knowledge, different governance requirements, and different domain-specific judgements",
 "Nothing transfers — each domain chapter introduces a completely new methodology",
@@ -608,8 +608,8 @@ options: [
 "The methodology transfers but requires a different AI model for each domain"
 ],
 correctOption: 0,
-explanation: "Lesson 12 explicitly states that the KEM methodology is domain-agnostic: the same five questions, the same document extraction, and the same validation loop transfer to every domain chapter. What changes is the professional knowledge the method surfaces — legal domain agents require different expertise than finance domain agents, but the extraction process is identical. Option B incorrectly claims no transfer. Option C partially transfers. Option D invents a model requirement.",
-source: "Lesson 12: Your Extension Roadmap and Chapter Summary"
+explanation: "Lesson 11 explicitly states that the KEM methodology is domain-agnostic: the same five questions, the same document extraction, and the same validation loop transfer to every domain chapter. What changes is the professional knowledge the method surfaces — legal domain agents require different expertise than finance domain agents, but the extraction process is identical. Option B incorrectly claims no transfer. Option C partially transfers. Option D invents a model requirement.",
+source: "Lesson 11: Your Extension Roadmap and Chapter Summary"
 }
 ]}
 />

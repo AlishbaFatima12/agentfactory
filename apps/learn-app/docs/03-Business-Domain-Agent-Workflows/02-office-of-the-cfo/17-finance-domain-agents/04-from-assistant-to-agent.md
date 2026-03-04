@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/finance-domain-agents/from-assistant-to-agent
-sidebar_position: 6
+sidebar_position: 4
 title: "From Assistant to Agent: Cowork Finance Plugins"
 description: "Learn how the architecture shifts from Claude in Excel as an embedded assistant to Cowork as an orchestrating agent, explore the knowledge-work-plugins/finance plugin with its five commands and six skills, and understand the category placeholder system that separates workflow knowledge from connector configuration"
 keywords:
@@ -19,7 +19,7 @@ keywords:
     "GL reconciliation",
   ]
 chapter: 17
-lesson: 6
+lesson: 4
 duration_minutes: 30
 
 # HIDDEN SKILLS METADATA
@@ -105,7 +105,7 @@ teaching_guide:
 
 # From Assistant to Agent: Cowork Finance Plugins
 
-In Lessons 1 through 5, you worked inside a single Excel workbook. Claude read your formulas, traced dependencies, tested scenarios, and ran the six Agent Skills -- all within the boundary of one spreadsheet. You close the workbook and the context disappears. You finish the analysis and move to PowerPoint, but that transition is yours to make. Claude cannot follow you.
+In Lessons 1 through 3, you worked inside a single Excel workbook. Claude read your formulas, traced dependencies, tested scenarios, and built model structures from plain-language descriptions -- all within the boundary of one spreadsheet. You close the workbook and the context disappears. You finish the analysis and move to PowerPoint, but that transition is yours to make. Claude cannot follow you.
 
 This lesson crosses that boundary. When Claude operates through the Cowork platform, it is not embedded in Excel the way a sidebar is embedded in a workbook. It is an agent that can act across applications, carry context from one tool to another, and execute multi-step workflows that span the entire production process of a financial deliverable. The most significant change is not the tools Claude can access -- the same MCP connectors you configured for Claude in Excel work in Cowork automatically. The change is what Claude can do with them: orchestrate across applications rather than analyse within one.
 
@@ -331,4 +331,4 @@ For each day:
 
 ---
 
-Continue to [Lesson 7: The Financial Services Plugin Suite -->](./07-the-financial-services-plugin-suite.md)
+Continue to [Lesson 5: Financial Analysis — The Core Plugin →](./05-financial-analysis-the-core-plugin.md)

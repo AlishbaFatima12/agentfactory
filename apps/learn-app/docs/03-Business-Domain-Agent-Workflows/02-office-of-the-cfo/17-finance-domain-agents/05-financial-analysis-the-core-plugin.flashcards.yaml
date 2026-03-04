@@ -1,0 +1,65 @@
+deck:
+  id: "ch17-05-financial-analysis-core-plugin"
+  name: "Financial Analysis: The Core Plugin"
+  description: "Key concepts from the financial-analysis core plugin lesson -- shared-core architecture, MCP connectors, eight commands, WACC, EV, LTM, and LBO fundamentals"
+
+cards:
+  - id: "ch17-05-01"
+    front: "Why must the financial-analysis core plugin be installed before any add-on in the financial-services-plugins suite?"
+    back: "Because all 11 MCP data connectors are centralised in the core plugin. Add-on plugins inherit these connections -- without the core, add-ons have no data sources to work with."
+    tags: ["architecture", "install-order", "MCP"]
+    difficulty: "basic"
+
+  - id: "ch17-05-02"
+    front: "How many MCP data connectors does the core plugin provide? Name any four."
+    back: "11 connectors. Examples: Daloopa (financial model data), Morningstar (equity research), S&P Global (Capital IQ data), FactSet (market data), Moody's (credit ratings), MT Newswires (financial news), Aiera (earnings transcripts), LSEG (market data), PitchBook (private company data), Chronograph (private markets monitoring), Egnyte (document management)."
+    tags: ["MCP", "data-connectors", "core-plugin"]
+    difficulty: "intermediate"
+
+  - id: "ch17-05-03"
+    front: "What is the WACC formula, and why does a 1 percentage point increase in WACC significantly affect DCF output?"
+    back: "WACC = (E/V x Cost of Equity) + (D/V x Cost of Debt x (1 - Tax Rate)). A 1 percentage point increase in WACC typically reduces DCF equity value by 10-20% because WACC is the discount rate applied to all future cash flows -- small changes compound across every projection year and the terminal value."
+    tags: ["WACC", "DCF", "valuation"]
+    difficulty: "intermediate"
+
+  - id: "ch17-05-04"
+    front: "What is Enterprise Value (EV) and why is it used instead of market capitalisation in comparable company analysis?"
+    back: "EV = Market Cap + Total Debt + Preferred Stock + Minority Interest - Cash. EV is capital-structure-neutral -- two companies with identical operations but different debt levels have different market caps but similar EVs. Using EV allows fair comparison between differently leveraged businesses."
+    tags: ["EV", "enterprise-value", "comps"]
+    difficulty: "basic"
+
+  - id: "ch17-05-05"
+    front: "What does LTM stand for and how is it calculated?"
+    back: "LTM = Last (or Trailing) Twelve Months. Calculated as: Most Recent Annual Period + Most Recent Partial Period - Prior Year Comparable Partial Period. Used in comps so all companies are compared on the same timeframe regardless of fiscal year end."
+    tags: ["LTM", "comps", "financial-data"]
+    difficulty: "basic"
+
+  - id: "ch17-05-06"
+    front: "What are the key metrics in an LBO model and what are their typical targets?"
+    back: "Entry multiple (EV/EBITDA at purchase), exit multiple (EV/EBITDA at sale), IRR (annualised equity return, target 20-25%), and MOIC (total proceeds divided by equity invested, target 3-5x over 5 years). Debt typically funds 50-70% of the acquisition."
+    tags: ["LBO", "private-equity", "returns"]
+    difficulty: "intermediate"
+
+  - id: "ch17-05-07"
+    front: "Name the eight core plugin commands and briefly describe what each produces."
+    back: "/comps (comparable company analysis workbook), /dcf (DCF model with sensitivity tables), /lbo (leveraged buyout model), /3-statements (linked three-statement financial model), /competitive-analysis (market positioning analysis), /debug-model (financial model error report), /check-deck (pitch deck consistency review), /ppt-template (register firm's branded PowerPoint template)."
+    tags: ["commands", "core-plugin", "financial-modelling"]
+    difficulty: "intermediate"
+
+  - id: "ch17-05-08"
+    front: "What is the difference between commands and skills in the core plugin?"
+    back: "Commands are explicitly invoked by typing /command-name and trigger a specific workflow. Skills fire automatically in the background when Claude detects relevant context. Commands are what you call; skills are what Claude draws on. For example, /comps produces a comps workbook when invoked, while the comps-analysis skill applies professional conventions automatically whenever comps-related context appears."
+    tags: ["commands", "skills", "architecture"]
+    difficulty: "basic"
+
+  - id: "ch17-05-09"
+    front: "What colour-coding convention does the /comps command use in its Excel output?"
+    back: "Blue cells for manually adjustable inputs, black cells for formulas, and green cells for output values (the multiples table and summary statistics). This follows the Wall Street professional convention for financial workbooks."
+    tags: ["comps", "Excel", "conventions"]
+    difficulty: "basic"
+
+  - id: "ch17-05-10"
+    front: "Name the five end-to-end workflow patterns the financial-services-plugins suite supports."
+    back: "Research to Report (equity-research + core), Spreadsheet Analysis (core), Financial Modelling (core + equity-research), Deal Materials (investment-banking + core), and Portfolio to Presentation (private-equity + core)."
+    tags: ["workflows", "plugin-suite", "architecture"]
+    difficulty: "intermediate"

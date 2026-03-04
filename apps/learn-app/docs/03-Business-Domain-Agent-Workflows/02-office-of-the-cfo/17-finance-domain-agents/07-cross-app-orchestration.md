@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/finance-domain-agents/cross-app-orchestration
-sidebar_position: 8
+sidebar_position: 7
 title: "Cross-App Orchestration"
 description: "Learn how cross-app orchestration connects Excel analysis to PowerPoint deliverables in a single workflow, why structural consistency eliminates copy-paste disconnection risk, and what distinguishes an AI agent from an AI assistant at the architectural level"
 keywords:
@@ -17,7 +17,7 @@ keywords:
     "copy-paste risk",
   ]
 chapter: 17
-lesson: 8
+lesson: 7
 duration_minutes: 25
 
 # HIDDEN SKILLS METADATA
@@ -132,10 +132,10 @@ When you copy numbers from an Excel model to a PowerPoint slide manually, you in
 
 When Cowork orchestrates the Excel-to-PowerPoint workflow, the PowerPoint is produced from the model in a single pass. There is no copy-paste step. The numbers in the deck correspond to the model as it stood when the agent produced the output. If you need to revise, you run the workflow again and get a new deck. Consistency is structural rather than dependent on the analyst remembering to update every reference.
 
-| Workflow Type | Consistency Model | Revision Handling | Error Mode |
-| --- | --- | --- | --- |
-| Manual copy-paste | Dependent on analyst memory | Must update every reference manually | Silent stale data |
-| Cross-app orchestration | Structural (single-pass) | Re-run workflow produces fresh output | None for data transfer |
+| Workflow Type           | Consistency Model           | Revision Handling                     | Error Mode             |
+| ----------------------- | --------------------------- | ------------------------------------- | ---------------------- |
+| Manual copy-paste       | Dependent on analyst memory | Must update every reference manually  | Silent stale data      |
+| Cross-app orchestration | Structural (single-pass)    | Re-run workflow produces fresh output | None for data transfer |
 
 This is what it means for an AI to act as an agent rather than an assistant. An assistant helps you do the task — it might suggest what to put on the slide, but you still copy the numbers. An agent executes the workflow — it carries the numbers from the model to the deck without you switching applications or transferring anything.
 
@@ -244,4 +244,4 @@ was restructured," "a column header was renamed"].
 
 ---
 
-Continue to [Lesson 9: Extracting Finance Domain Knowledge →](./09-extracting-finance-domain-knowledge.md)
+Continue to [Lesson 8: Extracting Finance Domain Knowledge →](./08-extracting-finance-domain-knowledge.md)
