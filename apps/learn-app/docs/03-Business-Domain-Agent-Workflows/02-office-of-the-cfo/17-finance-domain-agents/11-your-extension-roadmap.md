@@ -14,7 +14,7 @@ keywords:
     "enterprise extensions",
     "SKILL.md",
     "Knowledge Extraction Method",
-    "MCP connectors",
+    "data connectors",
     "Agent Skills",
     "extension prioritisation",
   ]
@@ -43,7 +43,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Digital Literacy"
-    measurable_at_this_level: "Student can trace the chapter's progression from embedded assistant through orchestrating agent to enterprise extensions, and explain why the same MCP connectors serve both environments at different scope"
+    measurable_at_this_level: "Student can trace the chapter's progression from embedded assistant through orchestrating agent to enterprise extensions, and explain why the same data connectors serve both environments at different scope"
 
 learning_objectives:
   - objective: "Evaluate extension candidates using four prioritisation criteria and rank them for implementation sequencing"
@@ -56,7 +56,7 @@ learning_objectives:
     bloom_level: "Create"
     assessment_method: "Student produces a written roadmap with one-sentence value propositions, named interview targets, listed data sources, and a priority ranking for three extensions"
 
-  - objective: "Explain the chapter's three-part architecture — embedded assistant, orchestrating agent, and enterprise extensions — and describe how the same MCP connector ecosystem serves all three at different scope"
+  - objective: "Explain the chapter's three-part architecture — embedded assistant, orchestrating agent, and enterprise extensions — and describe how the same data connector ecosystem serves all three at different scope"
     proficiency_level: "B1"
     bloom_level: "Understand"
     assessment_method: "Student can trace the progression from single-workbook assistant through multi-app orchestration to domain-specific extensions without conflating the three layers or treating them as separate ecosystems"
@@ -81,7 +81,7 @@ teaching_guide:
   key_points:
     - "Prioritisation is about sequencing, not selecting — all eleven extensions may eventually matter, but building three in the first quarter is the practical starting point"
     - "The four criteria are not equally weighted: regulatory exposure overrides other criteria when compliance is at stake"
-    - "The chapter's central architectural insight is that the same MCP connectors serve Claude in Excel and Cowork at different scope — assistant in one workbook vs agent across applications"
+    - "The chapter's central architectural insight is that the same data connectors serve Claude in Excel and Cowork at different scope — assistant in one workbook vs agent across applications"
     - "The Knowledge Extraction Method from Chapter 16 is what converts each generic extension area into an organisation-specific SKILL.md"
   misconceptions:
     - "Students may think the three parts of the chapter (Claude in Excel, Cowork, enterprise extensions) are separate systems — they are layers of the same architecture sharing the same connector ecosystem"
@@ -97,7 +97,7 @@ teaching_guide:
     - question: "What are the four criteria for prioritising enterprise extensions?"
       expected_response: "Frequency of use (how often the workflow runs), current pain level (how much friction the generic plugin creates), data availability (whether the data sources the extension needs are accessible), and expertise availability (whether you can reach the domain expert whose knowledge the extension encodes)."
     - question: "What is the architectural relationship between Claude in Excel and Cowork?"
-      expected_response: "They share the same MCP connector ecosystem but operate at different scope. Claude in Excel is an embedded assistant working within a single workbook. Cowork is an orchestrating agent working across multiple applications. The same connectors serve both — the difference is scope, not infrastructure."
+      expected_response: "They share the same data connector ecosystem but operate at different scope. Claude in Excel is an embedded assistant working within a single workbook. Cowork is an orchestrating agent working across multiple applications. The same connectors serve both — the difference is scope, not infrastructure."
     - question: "Why does the chapter recommend running three extensions in parallel in the first quarter rather than sequencing them?"
       expected_response: "Because the three extensions target different concerns — highest-volume workflow, highest-risk compliance area, and most at-risk knowledge — so they do not compete for the same resources. Running them in parallel produces institutional value faster than waiting for one to finish before starting the next."
 ---
@@ -183,7 +183,7 @@ This chapter covered three progressively broader layers of Claude's capabilities
 
 ### Part One: Claude in Excel — The Embedded Assistant
 
-Lessons 1 through 3 taught you to use Claude as an assistant embedded in a single workbook. You learned four general capabilities — model comprehension, scenario testing, error debugging, and model building — and the pre-built Agent Skills including 3-Statement Financial Modelling, Comparable Company Analysis, Discounted Cash Flow Model, Due Diligence Data Pack, Earnings Analysis, Initiating Coverage Report, and presentation tools. These Agent Skills can incorporate market data through MCP connectors configured in your Claude settings (such as S&P Global, PitchBook, and Morningstar) and produce professionally structured financial deliverables. The key insight from Part One: Claude in Excel is a deep companion for financial modelling work — it reads your workbook, reasons about your formulas, and builds within the context of your specific model.
+Lessons 1 through 3 taught you to use Claude as an assistant embedded in a single workbook. You learned four general capabilities — model comprehension, scenario testing, error debugging, and model building — and the pre-built Agent Skills including 3-Statement Financial Modelling, Comparable Company Analysis, Discounted Cash Flow Model, Due Diligence Data Pack, Earnings Analysis, Initiating Coverage Report, and presentation tools. These Agent Skills can incorporate market data through data connectors configured in your Claude settings (such as S&P Global, PitchBook, and Morningstar) and produce professionally structured financial deliverables. The key insight from Part One: Claude in Excel is a deep companion for financial modelling work — it reads your workbook, reasons about your formulas, and builds within the context of your specific model.
 
 ### Part Two: Cowork — The Orchestrating Agent
 
@@ -195,19 +195,19 @@ Lessons 8 through 11 applied the Knowledge Extraction Method from Chapter 16 to 
 
 ### The Unifying Architecture
 
-The three parts are not separate systems. They are layers of the same architecture sharing the same MCP connector ecosystem. Claude in Excel uses connectors at workbook scope. Cowork uses the same connectors at multi-application scope. Enterprise extensions add your organisation's knowledge on top of both layers through SKILL.md files that encode the judgment, conventions, and escalation rules that make a generic capability specific to your institution.
+The three parts are not separate systems. They are layers of the same architecture sharing the same data connector ecosystem. Claude in Excel uses connectors at workbook scope. Cowork uses the same connectors at multi-application scope. Enterprise extensions add your organisation's knowledge on top of both layers through SKILL.md files that encode the judgment, conventions, and escalation rules that make a generic capability specific to your institution.
 
 Same connectors. Different scope. Your knowledge on top.
 
 ## What Comes Next
 
-Every tool you used in this chapter — Claude in Excel, the Cowork finance plugins, the Agent Skills, the MCP connectors — operated on an assumption that went unexamined: that the spreadsheets those tools read are designed the way spreadsheets have always been designed. Cell addresses encode the logic. Formulas reference coordinates. The model's meaning lives in the analyst's head, not in the workbook.
+Every tool you used in this chapter — Claude in Excel, the Cowork finance plugins, the Agent Skills, the data connectors — operated on an assumption that went unexamined: that the spreadsheets those tools read are designed the way spreadsheets have always been designed. Cell addresses encode the logic. Formulas reference coordinates. The model's meaning lives in the analyst's head, not in the workbook.
 
 What if that foundation is the bottleneck?
 
 Chapter 18 introduces the **Intent-Driven Financial Architecture (IDFA)** — Panaversity original research that replaces coordinate-based formulas with Named Range business rules, making every model human-readable, AI-operable, and mathematically audit-proof. IDFA does not replace the tools from Chapter 17. It transforms the foundation those tools operate on — and the result is a categorical improvement in what your finance domain agents can do.
 
-The same Claude in Excel. The same MCP connectors. A fundamentally different architecture underneath. That is what changes everything.
+The same Claude in Excel. The same data connectors. A fundamentally different architecture underneath. That is what changes everything.
 
 ## Try With AI
 
@@ -248,7 +248,7 @@ layers of the same system, not three separate tools. Cover:
    SKILL.md files encode institutional knowledge
 
 Focus on the relationship between the layers — especially why the same
-MCP connectors serve both Claude in Excel and Cowork, and what
+data connectors serve both Claude in Excel and Cowork, and what
 "same connectors, different scope" means architecturally.
 
 Then explain how the Knowledge Extraction Method (Chapter 16) connects
@@ -261,7 +261,7 @@ to the enterprise extension layer.
 
 ```
 I have just completed Chapter 17 on Finance Domain Agents — Claude in
-Excel, Cowork plugins, MCP connectors, and enterprise extensions.
+Excel, Cowork plugins, data connectors, and enterprise extensions.
 
 Chapter 18 introduces the Intent-Driven Financial Architecture (IDFA),
 which replaces coordinate-based formulas with Named Range business rules.

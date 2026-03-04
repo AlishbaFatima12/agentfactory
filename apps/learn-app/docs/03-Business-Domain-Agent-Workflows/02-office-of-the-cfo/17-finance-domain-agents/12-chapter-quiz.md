@@ -14,13 +14,13 @@ questions={[
 {
 question: "A junior analyst asks: 'What is the difference between Claude in Excel and Cowork? They both use AI for finance.' A senior colleague who has completed Chapter 17 gives a precise architectural answer. Which response is correct?",
 options: [
-"Claude in Excel is an embedded assistant operating within a single workbook; Cowork is an orchestrating agent operating across multiple applications — they share the same MCP connector ecosystem but operate at different scope",
+"Claude in Excel is an embedded assistant operating within a single workbook; Cowork is an orchestrating agent operating across multiple applications — they share the same data connector ecosystem but operate at different scope",
 "Claude in Excel is a free tool while Cowork is a paid enterprise product with different underlying technology",
 "Claude in Excel handles spreadsheets and Cowork handles presentations — they are separate products with separate connectors",
 "Cowork is a newer version of Claude in Excel that replaces it with more features"
 ],
 correctOption: 0,
-explanation: "Lesson 1 establishes the core architectural distinction: Claude in Excel is an embedded assistant that works within a single workbook, while Cowork is an orchestrating agent that works across multiple applications. The critical insight is that they share the same MCP connector ecosystem — the difference is scope, not infrastructure. Option B is wrong because the distinction is architectural, not pricing-based. Option C incorrectly separates them into different product categories. Option D is wrong because Cowork does not replace Claude in Excel; they are complementary layers.",
+explanation: "Lesson 1 establishes the core architectural distinction: Claude in Excel is an embedded assistant that works within a single workbook, while Cowork is an orchestrating agent that works across multiple applications. The critical insight is that they share the same data connector ecosystem — the difference is scope, not infrastructure. Option B is wrong because the distinction is architectural, not pricing-based. Option C incorrectly separates them into different product categories. Option D is wrong because Cowork does not replace Claude in Excel; they are complementary layers.",
 source: "Lesson 1: The Assistant and the Agent"
 },
 {
@@ -29,7 +29,7 @@ options: [
 "Incorrect — Claude in Excel is available on Pro, Max, Team, and Enterprise (beta) plans",
 "Correct — Claude in Excel requires Max or higher because of the computational demands of financial modelling",
 "Incorrect — Claude in Excel is available on all plans including the free tier",
-"Correct — only Enterprise plans include Claude in Excel because it requires MCP connectors"
+"Correct — only Enterprise plans include Claude in Excel because it requires data connectors"
 ],
 correctOption: 0,
 explanation: "Lesson 1 explicitly states that Claude in Excel is available on Pro, Max, Team, and Enterprise (beta) plans. The team member's claim is incorrect because Pro is sufficient. Option B invents a computational requirement that does not exist. Option C is wrong because the free tier is not listed. Option D incorrectly restricts availability to Enterprise only.",
@@ -89,7 +89,7 @@ options: [
 "The quality of the specification — a vague description produces a generic model, while a precise specification with assumptions, time horizon, and key drivers produces a model that reflects the analyst's professional judgement",
 "The size of the Claude model used — Opus 4.6 produces better models than Sonnet 4.6",
 "The complexity of the Excel workbook — simpler workbooks produce more accurate models",
-"The number of data sources connected through MCP connectors"
+"The number of data sources connected through data connectors"
 ],
 correctOption: 0,
 explanation: "Lesson 3 establishes that specification quality equals model quality. A vague request like 'build me a DCF' produces a generic template, while a detailed specification that includes assumptions, time horizons, key drivers, and output requirements produces a model aligned to the analyst's professional judgement. Option B oversimplifies model selection. Option C confuses workbook complexity with specification quality. Option D conflates data connectivity with model design.",
@@ -159,7 +159,7 @@ source: "Lesson 6: Domain Plugins — From Deals to Portfolios"
 question: "A security-conscious IT manager asks about risks of using Claude in Excel with spreadsheets from external sources. The chapter includes a specific security warning. What does it say?",
 options: [
 "Spreadsheets from untrusted sources could contain prompt injection attacks — malicious instructions hidden in cell values, named ranges, or conditional formatting rules that attempt to manipulate Claude's behaviour when it reads the workbook",
-"External spreadsheets may contain macros that conflict with Claude's MCP connectors",
+"External spreadsheets may contain macros that conflict with Claude's data connectors",
 "Claude cannot read spreadsheets from external sources due to file format compatibility issues",
 "The only risk is data leakage — Claude might send the spreadsheet contents to external servers"
 ],
@@ -180,10 +180,10 @@ explanation: "Lesson 4 establishes the architectural distinction between skills 
 source: "Lesson 4: From Assistant to Agent"
 },
 {
-question: "The knowledge-work-plugins/finance plugin includes category placeholders like ~~erp and ~~data warehouse in its MCP configuration. A new Cowork user asks what these placeholders mean. What is the correct explanation?",
+question: "The knowledge-work-plugins/finance plugin includes category placeholders like ~~erp and ~~data warehouse in its connector configuration. A new Cowork user asks what these placeholders mean. What is the correct explanation?",
 options: [
 "They are connection points where an organisation's IT team configures the specific systems — ~~erp becomes SAP, Oracle, or NetSuite depending on the institution; ~~data warehouse becomes Snowflake, BigQuery, or Redshift — making the plugin architecture-agnostic",
-"They are error codes indicating that the MCP connectors failed to load properly",
+"They are error codes indicating that the data connectors failed to load properly",
 "They are placeholder names for future features that Anthropic has not yet developed",
 "They are security classifications that restrict which users can access each connector"
 ],
@@ -204,27 +204,27 @@ explanation: "Lesson 4 describes the month-end close workflow sequentially: Day 
 source: "Lesson 4: From Assistant to Agent"
 },
 {
-question: "The financial-services-plugins suite is described as having a specific scale. How many skills, commands, and MCP connector families does the full suite include?",
+question: "The financial-services-plugins suite is described as having a specific scale. How many skills, commands, and data connector families does the full suite include?",
 options: [
-"41 skills, 38 commands, and 11 MCP connector families",
-"6 skills, 5 commands, and 3 MCP connector families",
-"100 skills, 50 commands, and 20 MCP connector families",
-"15 skills, 15 commands, and 5 MCP connector families"
+"41 skills, 38 commands, and 11 data connector families",
+"6 skills, 5 commands, and 3 data connector families",
+"100 skills, 50 commands, and 20 data connector families",
+"15 skills, 15 commands, and 5 data connector families"
 ],
 correctOption: 0,
-explanation: "Lesson 5 states that the financial-services-plugins suite includes 41 skills, 38 commands, and 11 MCP connector families across the core plugin and its add-ons. This represents a substantial professional toolkit. Option B describes the smaller knowledge-work-plugins/finance plugin. Option C and D invent numbers not stated in the chapter.",
+explanation: "Lesson 5 states that the financial-services-plugins suite includes 41 skills, 38 commands, and 11 data connector families across the core plugin and its add-ons. This represents a substantial professional toolkit. Option B describes the smaller knowledge-work-plugins/finance plugin. Option C and D invent numbers not stated in the chapter.",
 source: "Lesson 5: Financial Analysis — The Core Plugin"
 },
 {
 question: "A new Cowork deployment team installs the investment-banking add-on plugin before installing the core financial-analysis plugin. The system does not function correctly. Why?",
 options: [
-"The chapter specifies a mandatory install order: the core financial-analysis plugin must be installed first because add-on plugins depend on its base skills, commands, and MCP connectors — installing add-ons first creates unresolved dependencies",
+"The chapter specifies a mandatory install order: the core financial-analysis plugin must be installed first because add-on plugins depend on its base skills, commands, and data connectors — installing add-ons first creates unresolved dependencies",
 "The investment-banking plugin is incompatible with Cowork and can only be used in Claude in Excel",
 "The team's Cowork licence does not include investment banking features",
 "Add-on plugins must be installed alphabetically to avoid naming conflicts"
 ],
 correctOption: 0,
-explanation: "Lesson 5 explicitly states that the core financial-analysis plugin must be installed first (mandatory install order). Add-on plugins (investment-banking, equity-research, private-equity, wealth-management) depend on the base skills, commands, and MCP connectors provided by the core. Installing add-ons without the core creates unresolved dependencies. Option B invents a platform restriction. Option C invents a licence limitation. Option D invents an alphabetical requirement.",
+explanation: "Lesson 5 explicitly states that the core financial-analysis plugin must be installed first (mandatory install order). Add-on plugins (investment-banking, equity-research, private-equity, wealth-management) depend on the base skills, commands, and data connectors provided by the core. Installing add-ons without the core creates unresolved dependencies. Option B invents a platform restriction. Option C invents a licence limitation. Option D invents an alphabetical requirement.",
 source: "Lesson 5: Financial Analysis — The Core Plugin"
 },
 {
@@ -376,7 +376,7 @@ question: "The treasury management extension described in Lesson 10 addresses ca
 options: [
 "Encoding the institution's specific cash flow patterns, counterparty relationships, and liquidity buffer requirements — generic tools forecast based on historical averages, while the extension incorporates the treasurer's knowledge of seasonal patterns, covenant constraints, and counterparty risk thresholds",
 "Using a more powerful AI model for treasury calculations",
-"Connecting to more bank accounts through additional MCP connectors",
+"Connecting to more bank accounts through additional data connectors",
 "Automating all treasury decisions without human oversight"
 ],
 correctOption: 0,
@@ -458,25 +458,25 @@ source: "Lesson 11: Your Extension Roadmap and Chapter Summary"
 {
 question: "The chapter summary describes a 'unifying architecture' across the three parts of Chapter 17. A colleague says: 'Claude in Excel, Cowork, and enterprise extensions are three separate products.' How does the chapter correct this?",
 options: [
-"They are three layers of the same architecture sharing the same MCP connector ecosystem — Claude in Excel uses connectors at workbook scope, Cowork uses the same connectors at multi-application scope, and enterprise extensions add institutional knowledge on top of both layers through SKILL.md files",
+"They are three layers of the same architecture sharing the same data connector ecosystem — Claude in Excel uses connectors at workbook scope, Cowork uses the same connectors at multi-application scope, and enterprise extensions add institutional knowledge on top of both layers through SKILL.md files",
 "They are three separate products that happen to be made by the same company",
 "They share the same user interface but have different backend architectures",
 "They are three versions of the same product released in chronological order"
 ],
 correctOption: 0,
-explanation: "Lesson 11's chapter summary explicitly corrects the misconception that the three parts are separate systems. They are layers of the same architecture sharing the same MCP connector ecosystem. The difference is scope: Claude in Excel operates within one workbook, Cowork operates across applications, and enterprise extensions add organisational knowledge on top of both through SKILL.md files. Option B is the exact misconception being corrected. Option C invents a shared-UI claim. Option D incorrectly implies versioning.",
+explanation: "Lesson 11's chapter summary explicitly corrects the misconception that the three parts are separate systems. They are layers of the same architecture sharing the same data connector ecosystem. The difference is scope: Claude in Excel operates within one workbook, Cowork operates across applications, and enterprise extensions add organisational knowledge on top of both through SKILL.md files. Option B is the exact misconception being corrected. Option C invents a shared-UI claim. Option D incorrectly implies versioning.",
 source: "Lesson 11: Your Extension Roadmap and Chapter Summary"
 },
 {
 question: "The chapter's concluding architectural insight is captured in a three-part phrase. What is it?",
 options: [
-"'Same connectors. Different scope. Your knowledge on top.' — expressing that MCP connectors are shared across environments, scope differentiates Claude in Excel from Cowork, and enterprise extensions add institutional knowledge",
+"'Same connectors. Different scope. Your knowledge on top.' — expressing that data connectors are shared across environments, scope differentiates Claude in Excel from Cowork, and enterprise extensions add institutional knowledge",
 "'Build once. Deploy everywhere. Scale infinitely.' — expressing the platform's technical scalability",
 "'Learn. Apply. Extend.' — expressing the chapter's pedagogical structure",
 "'Data in. Analysis out. Decision made.' — expressing the workflow from input to output"
 ],
 correctOption: 0,
-explanation: "Lesson 11 concludes with the phrase 'Same connectors. Different scope. Your knowledge on top.' This captures the chapter's architectural insight: the MCP connector ecosystem is shared (same connectors), what changes is whether you operate within one workbook or across applications (different scope), and enterprise extensions add your organisation's specific knowledge (your knowledge on top). Option B, C, and D are invented phrases not from the chapter.",
+explanation: "Lesson 11 concludes with the phrase 'Same connectors. Different scope. Your knowledge on top.' This captures the chapter's architectural insight: the data connector ecosystem is shared (same connectors), what changes is whether you operate within one workbook or across applications (different scope), and enterprise extensions add your organisation's specific knowledge (your knowledge on top). Option B, C, and D are invented phrases not from the chapter.",
 source: "Lesson 11: Your Extension Roadmap and Chapter Summary"
 },
 {

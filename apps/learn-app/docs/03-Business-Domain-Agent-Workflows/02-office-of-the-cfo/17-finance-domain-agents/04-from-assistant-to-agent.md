@@ -72,7 +72,7 @@ cognitive_load:
   assessment: "5 concepts at B1 level -- within the 7-10 cognitive limit for this tier. Students have spent five lessons working inside Excel; this lesson introduces the Cowork layer as a scope expansion, not a replacement. The concepts build on each other: architecture shift sets up plugin structure, plugin structure introduces skills vs commands, commands drive the workflow example."
 
 differentiation:
-  extension_for_advanced: "Read the actual CONNECTORS.md on GitHub (github.com/anthropics/knowledge-work-plugins/blob/main/finance/CONNECTORS.md). Map each ~~category placeholder to the specific MCP servers your organisation uses or could use. For each category that is 'not pre-configured,' research whether an MCP server exists (hint: NetSuite's does). Draft a configuration plan showing which connectors IT would need to set up for full automation of your close workflow."
+  extension_for_advanced: "Read the actual CONNECTORS.md on GitHub (github.com/anthropics/knowledge-work-plugins/blob/main/finance/CONNECTORS.md). Map each ~~category placeholder to the specific connector servers your organisation uses or could use. For each category that is 'not pre-configured,' research whether an connector server exists (hint: NetSuite's does). Draft a configuration plan showing which connectors IT would need to set up for full automation of your close workflow."
   remedial_for_struggling: "Focus on the skills vs commands distinction only. Pick one command (/reconciliation) and one skill (close-management). Describe in your own words: when does each one activate? What does each one produce? If you can explain that difference clearly, you have the core concept of this lesson."
 
 teaching_guide:

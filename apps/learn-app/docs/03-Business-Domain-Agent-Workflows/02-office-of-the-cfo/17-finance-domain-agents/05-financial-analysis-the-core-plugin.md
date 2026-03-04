@@ -8,7 +8,7 @@ keywords:
     "financial-analysis",
     "financial-services-plugins",
     "core plugin",
-    "MCP connectors",
+    "data connectors",
     "comps",
     "DCF",
     "LBO",
@@ -32,14 +32,14 @@ skills:
     category: "Technical"
     bloom_level: "Understand"
     digcomp_area: "Digital Literacy"
-    measurable_at_this_level: "Student can describe the shared-core architecture of the financial-services-plugins suite, explain why all MCP connectors are centralised in the core plugin, and state the mandatory install order"
+    measurable_at_this_level: "Student can describe the shared-core architecture of the financial-services-plugins suite, explain why all data connectors are centralised in the core plugin, and state the mandatory install order"
 
   - name: "Map Financial Modelling Commands to Professional Deliverables"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can identify the correct core plugin command for a given financial modelling task, describe the deliverable it produces, and explain which MCP data sources feed the analysis"
+    measurable_at_this_level: "Student can identify the correct core plugin command for a given financial modelling task, describe the deliverable it produces, and explain which data sources feed the analysis"
 
   - name: "Interpret Core Plugin Output for Decision Support"
     proficiency_level: "B1"
@@ -52,7 +52,7 @@ learning_objectives:
   - objective: "Explain the shared-core architecture of the financial-services-plugins suite and apply the mandatory install order when configuring the ecosystem"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student can describe why all MCP connectors live in the core plugin, explain what happens if an add-on is installed without the core, and write the correct install sequence for a given combination of plugins"
+    assessment_method: "Student can describe why all data connectors live in the core plugin, explain what happens if an add-on is installed without the core, and write the correct install sequence for a given combination of plugins"
 
   - objective: "Identify the correct core plugin command for a given financial modelling task and describe the professional deliverable it produces"
     proficiency_level: "B1"
@@ -68,7 +68,7 @@ cognitive_load:
   new_concepts: 6
   concepts_list:
     - "Shared-core plugin architecture with mandatory install order"
-    - "11 MCP data connectors centralised in the core plugin"
+    - "11 data connectors centralised in the core plugin"
     - "Five end-to-end workflow patterns spanning the suite"
     - "Eight core commands and the deliverables they produce"
     - "Nine passive skills and when they activate"
@@ -84,26 +84,26 @@ teaching_guide:
   session_group: 2
   session_title: "The Investment Professional Suite"
   key_points:
-    - "All MCP connectors are centralised in the core plugin -- configure once, share across all add-ons"
+    - "All data connectors are centralised in the core plugin -- configure once, share across all add-ons"
     - "Install order is mandatory: core first, then function-specific add-ons. Add-ons inherit the core's shared connectors"
     - "The eight commands produce professional-grade financial deliverables as working Excel files with live formulas"
     - "The nine skills fire passively -- Claude applies professional financial conventions automatically without being told"
   misconceptions:
-    - "Students may think each plugin in the suite has its own data connections -- all 11 MCP connectors live in the core plugin and are shared automatically"
+    - "Students may think each plugin in the suite has its own data connections -- all 11 data connectors live in the core plugin and are shared automatically"
     - "Students may confuse the core plugin commands with the Claude in Excel Agent Skills introduced in L01 -- the core plugin commands run in Cowork across applications, not inside a single workbook"
     - "Students may assume the plugin outputs are final deliverables -- they are structured drafts that require professional review and judgment"
   discussion_prompts:
-    - "Why does the architecture centralise all MCP connectors in the core plugin rather than letting each add-on manage its own? What would go wrong with the alternative design?"
+    - "Why does the architecture centralise all data connectors in the core plugin rather than letting each add-on manage its own? What would go wrong with the alternative design?"
     - "Which of the eight core commands would save you the most time in your current role? What would you still need to do manually after the command runs?"
   teaching_tips:
-    - "Walk through the MCP connector table first -- students need to see the breadth of data sources before understanding individual commands"
+    - "Walk through the data connector table first -- students need to see the breadth of data sources before understanding individual commands"
     - "Use the comps scenario as the anchor example. Students already understand comps from L04's Claude in Excel context -- showing the same analysis through a Cowork command reinforces the assistant-to-agent progression"
   assessment_checks:
     - question: "Why must the core plugin be installed before any add-on?"
-      expected_response: "Because all 11 MCP data connectors are centralised in the core plugin. Add-on plugins inherit these connections -- without the core, add-ons have no data sources to work with."
+      expected_response: "Because all 11 data connectors are centralised in the core plugin. Add-on plugins inherit these connections -- without the core, add-ons have no data sources to work with."
     - question: "What is the difference between /comps in the core plugin and the Comps Agent Skill in Claude in Excel?"
       expected_response: "They produce similar analyses but operate at different scope. The Agent Skill runs inside a single Excel workbook. The /comps command runs through Cowork and can feed its output into multi-application workflows -- sending the comps analysis to a PowerPoint deck or an IC memo."
-    - question: "Name three of the 11 MCP data connectors in the core plugin."
+    - question: "Name three of the 11 data connectors in the core plugin."
       expected_response: "Any three from: Daloopa, Morningstar, S&P Global, FactSet, Moody's, MT Newswires, Aiera, LSEG, PitchBook, Chronograph, Egnyte."
 ---
 
