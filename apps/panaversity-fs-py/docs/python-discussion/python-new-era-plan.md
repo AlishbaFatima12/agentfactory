@@ -1,6 +1,6 @@
 # Python for the New AI Era: Course Architecture Plan
 
-**Version:** 2.10
+**Version:** 2.11
 **Status:** Draft
 **Date:** 2026-02-24
 **Branch:** `learn-python`
@@ -89,7 +89,7 @@ Every Python feature follows this 5-step progression:
 Student specification ability increases across phases:
 
 ```
-Phase 1 (Ch 1-3):    Read & Explore              ← "I can understand what AI generates"
+Phase 1 (Ch 1-3):    Read & Explore (PRIMM)      ← "I can read, predict, and verify what AI generates"
 Phase 2 (Ch 4-7):    Specify with types          ← "I can tell AI precisely what to build"
 Phase 3 (Ch 8-11):   Specify with tests          ← "I can define correct and prove it"
 Phase 4 (Ch 12-13):  Debug & Master TDG          ← "I can diagnose failures and drive TDG without scaffolding"
@@ -117,6 +117,22 @@ The scope of Part 4 is ambitious — from basic types in Phase 1 to async APIs a
 | 9 | Full system architecture | "Same cycle at system scale — the SmartNotes capstone is one large TDG loop" |
 
 **Chapter author directive**: Each chapter in Phases 5-9 must include a short "bridge paragraph" in its opening that says, in effect: "You already know the TDG cycle. This chapter applies it to [new domain]. The method is the same — specify with types, write failing tests, generate, verify. The only thing that changes is what you are specifying." This prevents the cognitive cliff where students feel they are learning an entirely new approach when they are actually applying the same one to bigger problems.
+
+### The PRIMM Recall Directive
+
+PRIMM (Predict-Run-Investigate-Modify-Make) is introduced in Chapter 2 as the method for reading code. Every Phase 2+ chapter introduces new Python features that students encounter for the first time. A lightweight callout at the start of each chapter reinforces the PRIMM habit:
+
+**Chapter author directive**: Each chapter in Phases 2-4 must include a `:::tip` callout in its opening section (after the narrative hook, before the first teaching section) that says, in effect:
+
+```markdown
+:::tip Reading New Code? Use PRIMM
+When you encounter new Python syntax in this chapter, use the PRIMM method from Chapter 2:
+**Predict** what the code does before running it. **Run** it to check your prediction.
+**Investigate** any surprises. This works for every new concept you'll meet here.
+:::
+```
+
+By Phase 5, students will have internalized the method and the callout can be dropped or reduced to a single sentence. The goal is to make PRIMM a reflex, not a lesson to revisit.
 
 ---
 
@@ -188,7 +204,7 @@ All traditional Python features are taught. The **framing changes**, not the con
 | Matthes Chapter | Traditional Framing | Our Framing | Our Chapter |
 |---|---|---|---|
 | Ch 1: Getting Started | Install Python, run a script | The professional workbench: uv, pyright, ruff, pytest | Ch 1 |
-| Ch 2: Variables & Types | Variables store data | Reading AI output: what `name: str = "Zia"` means | Ch 2, 4 |
+| Ch 2: Variables & Types | Variables store data | PRIMM method + reading types/expressions (variables only, no functions) | Ch 2, 4 |
 | Ch 3: Lists | Lists store sequences | Typed collections: what `list[str]` tells us about data | Ch 5 |
 | Ch 4: Working with Lists | Looping through lists | Iteration: how AI processes every item | Ch 8 |
 | Ch 5: If Statements | Conditional execution | Branch logic: predicting which path code takes | Ch 8 |
@@ -290,22 +306,41 @@ Part 4 serves students who have completed Parts 1-3 (AI prompting, file processi
 
 ---
 
-#### Chapter 2: Reading Python
+#### Chapter 2: Reading Python (The PRIMM Method)
 
-**Goal**: Student can read typed Python, predict behavior, and spot errors.
+**Goal**: Student learns the PRIMM method for reading code and applies it to simple typed Python — variables, types, arithmetic, and print only. No functions, no collections, no imports.
 
-- What is typed Python? (types as documentation for humans AND machines)
-- Primitive types: `str`, `int`, `float`, `bool`
-- Variables as labeled containers with type annotations
-- Reading expressions: `total: int = price * quantity`
-- Reading function signatures: `def greet(name: str) -> str:`
-- Predicting output: "What will this print?" exercises
-- Spotting type errors: "This function returns `str` but we need `int`"
-- How AI generates Python (demystifying the process)
-- Python's dynamic typing vs our typed discipline (Lutz Ch 6 reframed)
+**Design decision**: This chapter is standalone (not merged into Ch 1). It gives students a *taste* of Python through reading, not writing. It teaches the method (PRIMM) and the minimum Python needed to practice that method. Phase 2 covers every Python feature in depth — Chapter 2 does NOT attempt to teach Python comprehensively.
 
-**Student does**: Predicts output, annotates code, traces execution
+**What students CAN use** (taught in Ch 1 or introduced here):
+- Variables with type annotations: `name: str = "Zia"`
+- Four primitive types: `str`, `int`, `float`, `bool`
+- Arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`
+- String concatenation (`+`), repetition (`*`), f-strings
+- Boolean logic: `and`, `or`, `not`, comparisons
+- `print()` for output
+- Operator precedence (PEMDAS + Python extensions)
+
+**What students CANNOT use yet** (deferred to Phase 2+):
+- Functions (`def`, parameters, return, signatures)
+- Collections (`list`, `dict`, `tuple`, `set`)
+- Imports and modules
+- String methods (`.upper()`, `.split()`, etc.)
+- Control flow (`if/elif/else`, `for`, `while`)
+- Classes and dataclasses
+
+**Lessons**:
+
+1. **The PRIMM Method — Predict, Run, Investigate**: Introduces the formal method for reading code. Students practice Predict-Run-Investigate on 4 short code blocks (2-4 lines each) using only variables, types, and arithmetic. Establishes the habit: predict before running.
+
+2. **Trace Tables — When Your Brain Takes Shortcuts**: Teaches trace tables as the formal tool for tracking variable state line by line. Students build trace tables for 4-6 line blocks with variable reassignment. Catches the most common prediction error (using old variable values after reassignment).
+
+3. **Your First Code Review — Catching a Bug**: Capstone lesson. Students read a 15-20 line SmartNotes excerpt (variables, arithmetic, print only — no functions). They apply PRIMM and trace tables to find a deliberate type mismatch bug. Connects to Pyright: the tool catches what the student just found manually.
+
+**Student does**: Predicts output using PRIMM, builds trace tables, performs a mini code review
 **AI role**: Generates typed Python samples; student reads, predicts, and explains
+
+**Transition to Ch 3**: "You can read Python. You can predict what it does. You can even find bugs. In Chapter 3, you flip the script — instead of reading someone else's code, you write a specification and AI generates code for you. Then you verify it using the reading skills you just learned."
 
 ---
 
