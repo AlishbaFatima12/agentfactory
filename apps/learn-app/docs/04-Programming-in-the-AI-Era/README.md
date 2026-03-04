@@ -111,6 +111,8 @@ The code above may look like a foreign language right now. That is completely no
 That is all TDG is -- describe what you want, write checks, let AI do the math, verify the answer. You will learn the syntax piece by piece starting in Chapter 16. By the time you reach Chapter 17 (Your First TDG Cycle), every line in this example will make sense.
 :::
 
+&nbsp;
+
 :::note If you've coded before
 If this reminds you of Test-Driven Development (TDD), you are right -- TDG is TDD with AI in the generation step. The difference: in TDD, you write the failing test and then write the implementation yourself. In TDG, you write the failing test and AI writes the implementation. Your job shifts from typing code to specifying precisely enough that AI gets it right on the first pass -- and verifying that it did.
 :::
