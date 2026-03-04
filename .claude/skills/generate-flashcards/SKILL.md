@@ -343,6 +343,10 @@ Card IDs must be globally unique across all decks in the book. Use the **full `d
 ```yaml
 deck:
   id: "ch05-reusable-skills" # Globally unique deck ID
+  title: "Reusable Skills"
+  description: "Key concepts from the reusable skills lesson"
+  tags: ["skills", "reusability"]
+  version: 1
 
 cards:
   - id: "ch05-reusable-skills-001" # Full deck ID + sequence
