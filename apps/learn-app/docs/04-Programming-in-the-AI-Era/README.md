@@ -13,7 +13,24 @@ Traditional Python education teaches bottom-up: syntax first, verification last.
 
 AI eliminated that bottleneck. Tools like Claude Code, Cursor, and GitHub Copilot generate hundreds of lines of working code in seconds. The mechanical act of writing code is no longer the human's job. But someone must still define what the code should do, and someone must verify that it does it correctly. The AI handles the middle. You handle everything that matters.
 
+The data confirms this shift. GitClear's 2025 analysis of 211 million lines of code from Google, Microsoft, Meta, and enterprise repositories found that code duplication quadrupled after widespread AI adoption, while refactoring dropped from 25% to under 10% of changes. Code generated fast, but revised just as fast -- 7.9% of newly added lines required changes within two weeks, up from 5.5% before AI tools. Separately, Qodo's State of AI Code Quality report found that 76% of developers using AI assistants fall into what researchers call the "red zone" -- frequent hallucinations paired with low confidence in shipping. The teams that escaped this pattern shared one trait: they used AI for testing and review, not just generation, and their confidence in code quality jumped from 27% to 61%. Speed without verification produces churn. Speed with verification produces software.
+
 This part inverts the traditional order. You learn to read before you write. You learn types before syntax. You learn testing before building. And you learn it all through a single method that defines programming in the AI era: **Test-Driven Generation (TDG)**.
+
+## Before You Begin
+
+Part 4 assumes no programming experience -- you do not need to have written code before. But it does assume you have completed Parts 1-3 of this book. Here is what you should be comfortable with before starting:
+
+- **You can use a terminal.** You can open a terminal, navigate directories, and run commands. Part 2 (Linux Mastery, Chapter 11) covered this.
+- **You can prompt an AI assistant.** You can write a clear request to Claude Code or a similar tool and evaluate whether the response is useful. Parts 1-2 practiced this throughout.
+- **You understand version control basics.** You know what `git add`, `git commit`, and `git push` do, even if you are not fluent. Chapter 12 (Version Control) covered this.
+- **You have used Claude Code to build something.** You directed AI to create a working project -- file processing, data extraction, or a budget tracker. Parts 2-3 did this.
+
+If any of these feel unfamiliar, revisit the relevant chapter before continuing. Part 4 builds on these foundations -- it does not repeat them.
+
+:::note If you've never written a line of code
+That is exactly who Phase 1 is designed for. Chapter 15 walks you through every installation step with exact commands and expected output. Chapter 16 teaches you to read Python from scratch -- no prior syntax knowledge required. You will not be asked to write code until you can read it confidently. The course meets you where you are.
+:::
 
 ## The New Workflow
 
