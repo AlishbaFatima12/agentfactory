@@ -79,8 +79,8 @@ cards:
     why: What risks arise when an agent encodes the informal exceptions without the judgment about when those exceptions are appropriate?
 
   - id: ch14-07-seven-domains-009
-    front: What role does Chapter 27 (Productivity and The Agentic Office) play in the People and Operations section?
-    back: It is the integration chapter that connects all domain agents from Chapters 17 through 26 into a coherent agentic office -- a workplace AI layer that knows the organisation's people, projects, terminology, and priorities.
+    front: What role does Chapter 28 (Productivity and The Agentic Office) play in the People and Efficiency section?
+    back: It is the integration chapter that connects all domain agents from Chapters 17 through 27 into a coherent agentic office -- a workplace AI layer that knows the organisation's people, projects, terminology, and priorities.
     tags:
       - agentic-office
       - integration

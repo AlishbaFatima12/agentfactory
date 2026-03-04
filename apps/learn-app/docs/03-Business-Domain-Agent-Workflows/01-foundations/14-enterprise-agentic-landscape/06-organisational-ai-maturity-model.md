@@ -200,7 +200,7 @@ This is where platform commitment and build-versus-buy decisions become relevant
 - Where to invest in custom development versus marketplace solutions
 - How to balance agent capability against governance requirements
 
-The cross-vertical portfolio strategy in Chapter 25 is addressed primarily to Level 4 organisations. The build-versus-buy decision for SKILL.md development -- whether to invest in internal knowledge extraction capability or engage an external services provider -- becomes relevant at this level.
+The cross-vertical portfolio strategy in Chapter 26 is addressed primarily to Level 4 organisations. The build-versus-buy decision for SKILL.md development -- whether to invest in internal knowledge extraction capability or engage an external services provider -- becomes relevant at this level.
 
 ## Level 5: Transformation
 

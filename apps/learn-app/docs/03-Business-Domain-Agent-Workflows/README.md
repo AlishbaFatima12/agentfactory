@@ -15,7 +15,7 @@ The first two parts of this book built the Agent Factory: the paradigm shift fro
 
 Part 3 is where those agents go to work.
 
-This part has a deliberately narrow focus: **enterprise business workflows**. Not AI in general, not consumer applications, not research prototypes — but the specific functions that run a real organisation: finance, legal, sales, supply chain, product management, human resources, operations, and innovation. Each chapter deploys AI agents into one of these functions with the same discipline that the rest of this book applies to technical systems: real domain knowledge, production-ready configurations, jurisdiction-aware SKILL.md libraries, and exercises that produce deployable outputs — not proofs of concept.
+This part has a deliberately narrow focus: **enterprise business workflows**. Not AI in general, not consumer applications, not research prototypes — but the specific functions that run a real organisation: finance, legal, sales, supply chain, product management, human resources, operations, productivity, and innovation. Each chapter deploys AI agents into one of these functions with the same discipline that the rest of this book applies to technical systems: real domain knowledge, production-ready configurations, jurisdiction-aware SKILL.md libraries, and exercises that produce deployable outputs — not proofs of concept.
 
 The central commitment of Part 3 is that domain expertise is the scarce resource, not technical capability. The AI infrastructure is built. The Cowork platform is configured. The MCP connectors exist. What makes an agent in the CFO's office genuinely valuable is not the model — it is the twenty years of financial judgment encoded in its SKILL.md. That knowledge belongs to the professional, not the platform. Part 3 teaches professionals to deploy it.
 
@@ -39,7 +39,7 @@ Every chapter in Part 3 encodes this principle in the SKILL.md files it produces
 
 Every chapter in Part 3 ends with at least one deployable artefact. Not a prototype. Not a demonstration. A production-ready agent configuration — with a validated SKILL.md library, a defined escalation framework, a Cowork plugin setup, and exercises whose outputs a practitioner can take directly into their organisation.
 
-The artefacts vary by domain. In Section II (The Office of the CFO), you will build a complete banking AI plugin stack covering IFRS 9, Basel III/IV, and AML across seven jurisdictions — 23 production-ready SKILL.md files you can deploy immediately. In Section III (The Growth Engine), you will build sales and marketing agents that encode the judgment of your top performers and scale it across the team. In Section VI (Legal & Compliance), you will build a contract lifecycle management agent and Legal Ops workflows that transform the legal function from a bottleneck into a business enabler.
+The artefacts vary by domain. In Section II (The Office of the CFO), you will build a complete banking AI plugin stack covering IFRS 9, Basel III/IV, and AML across seven jurisdictions — 23 production-ready SKILL.md files you can deploy immediately. In Section III (Legal & Compliance), you will build a contract lifecycle management agent and Legal Ops workflows that transform the legal function from a bottleneck into a business enabler. In Section IV (The Growth Engine), you will build sales and marketing agents that encode the judgment of your top performers and scale it across the team.
 
 In every case, the hands-on work is scoped to sessions you can complete in a day. The goal is proof: by the end of each chapter, you will have direct personal evidence that an agent encoding your domain expertise is not a theoretical possibility. It is something you have built, tested against realistic scenarios, and validated against professional standards.
 
@@ -47,7 +47,7 @@ In every case, the hands-on work is scoped to sessions you can complete in a day
 
 ### How This Part Is Organised
 
-Part 3 spans **sixteen chapters across seven sections**. The sections follow the value creation architecture of a functioning enterprise: you need foundational methodology before building domain agents (Section I); financial controls must be right before anything else can be trusted (Section II); growth depends on sales and marketing at scale (Section III); your value chain determines whether growth can be delivered (Sections IV); your people and operations sustain the pace (Section V); legal and compliance set the guardrails (Section VI); and innovation renews the organisation (Section VII).
+Part 3 spans **sixteen chapters across seven sections**. The sections follow the value creation architecture of a functioning enterprise: you need foundational methodology before building domain agents (Section I); financial controls must be right before anything else can be trusted (Section II); legal and compliance set the guardrails early (Section III); growth depends on sales and marketing at scale (Section IV); your value chain determines whether growth can be delivered (Section V); your people, operations, and productivity sustain the pace (Section VI); and innovation renews the organisation (Section VII).
 
 ---
 
@@ -160,103 +160,17 @@ Full-treatment banking AI across the three regulatory pillars that determine whe
 
 ---
 
-## Section III — The Growth Engine
+## Section III — Legal & Compliance
 
-### Chapter 22: Scaling the Judgment of Your Top 1% Across the Entire Organisation
+### Chapter 22: The Guardrails That Make Enterprise AI Deployment Safe and Defensible
 
-Section III addresses the function that determines whether an enterprise grows or stagnates: go-to-market execution. Sales and marketing are domains where AI leverage is exceptionally high, because the core activities — identifying the right prospects, crafting the right message, analysing campaign performance — are pattern-recognition and personalisation tasks at which large language models excel.
+Section III addresses the function that sets the boundaries within which all enterprise AI operates: legal and compliance. This section is positioned immediately after the financial controls of Section II deliberately — legal is an enabling function, not just a constraint. Enterprises that can execute legal processes faster move faster. Enterprises with more effective compliance AI can operate in more jurisdictions with greater confidence.
 
-The central insight of this section is a reframing: AI does not replace salespeople or marketers. It democratises the capabilities of the best ones. The intuition that a top 1% sales performer has about which prospects are ready, which messages land, and which objections signal genuine interest — that judgment, encoded in a SKILL.md library, can scale across the entire team.
-
----
-
-#### Chapter 22: Sales & Revenue Operations (RevOps) and Marketing 📋 _Planned_
-
-Builds AI agents that scale the judgment of top performers across the entire sales and marketing organisation — from prospecting through pipeline management to campaign optimisation.
-
-**Key topics:** Prospecting agents — ICP matching, lead scoring, account prioritisation · CRM enrichment — automatic contact data, company research, intent signals · Personalised outreach ghostwriting based on prospect's communication style and history · Campaign planning, content creation, and cross-channel performance analysis · RevOps intelligence — pipeline forecasting, churn prediction, revenue attribution
-
-**Plugin:** `sales@knowledge-work-plugins` + `marketing@knowledge-work-plugins`
+Chapter 22 gives significant treatment to **Legal Operations Agents** — the emerging practice of deploying AI agents specifically within legal department workflows. Legal Ops Agents manage contract lifecycles, route documents for review, flag non-standard clauses, monitor regulatory changes, and maintain the compliance calendar. They transform the legal function from a bottleneck into a business enabler.
 
 ---
 
-## Section IV — The Product & Value Chain
-
-### Chapters 23–24: Bridging Physical Operations and Digital Record-Keeping
-
-Section IV covers the two domains that connect customer demand to product delivery: supply chain and product management. Chapter 23 addresses the fundamental challenge of operational AI — data lives in multiple systems, decisions must be made in near-real-time, and the cost of error hits the P&L immediately. Chapter 24 addresses the product manager's core challenge: synthesising customer feedback, technical constraints, business priorities, and market signals into decisions about what to build next.
-
----
-
-#### Chapter 23: Supply Chain & Procurement 📋 _Planned_
-
-Deploys AI agents across the end-to-end supply chain — from vendor selection and purchase order management to invoice reconciliation and logistics optimisation.
-
-**Key topics:** Vendor management agents — supplier risk scoring, performance monitoring, relationship history · Purchase order and invoice reconciliation — three-way match automation at scale · Logistics optimisation — route planning, carrier selection, duty and compliance · Demand forecasting integrating sales pipeline data with inventory planning · Supplier communication — automated RFQ, PO acknowledgement, dispute resolution
-
-**Plugin:** `operations@knowledge-work-plugins`
-
----
-
-#### Chapter 24: Product Management 📋 _Planned_
-
-Builds AI agents that transform product management from a reactive coordination function into a proactive strategic capability — from discovery through to stakeholder communication.
-
-**Key topics:** Feature specification writing — user story generation from discovery notes · Roadmap planning — priority scoring using RICE, WSJF, and custom frameworks · User research synthesis — thematic analysis of interviews, surveys, support tickets · Stakeholder communication — automated sprint updates, release notes, executive summaries · Market and competitive intelligence — continuous monitoring and synthesis
-
-**Plugin:** `product-management@knowledge-work-plugins`
-
----
-
-## Section V — People & Efficiency
-
-### Chapters 25–27: Preserving Institutional Memory and Building the Agentic Office
-
-Section V addresses the infrastructure that determines whether an organisation can execute consistently at scale: its people systems, its operational processes, and the productivity environment in which all knowledge work happens. Three chapters with distinct but complementary purposes — HR builds the knowledge layer, Operations builds the process layer, and Productivity integrates them into a coherent agentic office.
-
----
-
-#### Chapter 25: People & Organisational Operations (HR) 📋 _Planned_
-
-Builds AI agents that preserve institutional memory, accelerate onboarding, and automate the administrative overhead of human resource management — without losing the human dimension of people operations.
-
-**Key topics:** Employee onboarding agents — personalised 30-60-90 day plans, document collection, system access · Policy synthesis — converting policy libraries into searchable, conversational knowledge bases · Talent matching — internal mobility, skills gap analysis, succession planning · Internal knowledge base agents — answering HR questions without ticket queues · Performance review automation — template generation, sentiment analysis, calibration support
-
-**Plugin:** `human-resources@knowledge-work-plugins`
-
----
-
-#### Chapter 26: Operations 📋 _Planned_
-
-Builds AI agents that make operational processes visible, documented, optimised, and compliant — transforming operations from a reactive function into a continuous improvement engine.
-
-**Key topics:** Process documentation agents — turning interviews into SOPs and workflow diagrams · Vendor management — contract tracking, renewal alerts, performance dashboards · Change management — impact assessment, communication planning, rollout monitoring · Compliance tracking — policy adherence, audit preparation, regulatory calendar management · Operational KPI monitoring — exception alerting when metrics breach thresholds
-
-**Plugin:** `operations@knowledge-work-plugins`
-
----
-
-#### Chapter 27: Productivity & The Agentic Office 📋 _Planned_
-
-The integration chapter. Builds the workplace AI layer that knows your organisation's people, projects, terminology, and priorities — and connects all the domain agents from Chapters 17–26 into a coherent agentic office environment. This is the chapter where the domain agents stop being point solutions and start working as a system.
-
-**Key topics:** Task management agents — priority scoring, deadline tracking, meeting follow-up extraction · Workplace memory — persistent context about projects, decisions, and relationships · The agentic daily briefing · Visual dashboard — project status, team capacity, and risk indicators · Cross-domain orchestration — how the domain agents from Chapters 17–26 work together
-
-**Plugin:** `productivity@knowledge-work-plugins`
-
----
-
-## Section VI — Legal & Compliance
-
-### Chapter 28: The Guardrails That Make Enterprise AI Deployment Safe and Defensible
-
-Section VI addresses the function that sets the boundaries within which all enterprise AI operates: legal and compliance. This section is positioned after the operational chapters deliberately — legal is an enabling function, not just a constraint. Enterprises that can execute legal processes faster move faster. Enterprises with more effective compliance AI can operate in more jurisdictions with greater confidence.
-
-Chapter 28 gives significant treatment to **Legal Operations Agents** — the emerging practice of deploying AI agents specifically within legal department workflows. Legal Ops Agents manage contract lifecycles, route documents for review, flag non-standard clauses, monitor regulatory changes, and maintain the compliance calendar. They transform the legal function from a bottleneck into a business enabler.
-
----
-
-#### Chapter 28: Legal Operations and Compliance 📋 _Planned_
+#### Chapter 22: Legal Operations and Compliance 📋 _Planned_
 
 Builds AI agents that transform the legal function — from contract lifecycle management through IP protection to regulatory compliance monitoring. The governance principle in this chapter is non-negotiable: certain decisions must always involve a qualified attorney regardless of how accurate an agent becomes.
 
@@ -266,17 +180,103 @@ Builds AI agents that transform the legal function — from contract lifecycle m
 
 ---
 
+## Section IV — The Growth Engine
+
+### Chapter 23: Scaling the Judgment of Your Top 1% Across the Entire Organisation
+
+Section IV addresses the function that determines whether an enterprise grows or stagnates: go-to-market execution. Sales and marketing are domains where AI leverage is exceptionally high, because the core activities — identifying the right prospects, crafting the right message, analysing campaign performance — are pattern-recognition and personalisation tasks at which large language models excel.
+
+The central insight of this section is a reframing: AI does not replace salespeople or marketers. It democratises the capabilities of the best ones. The intuition that a top 1% sales performer has about which prospects are ready, which messages land, and which objections signal genuine interest — that judgment, encoded in a SKILL.md library, can scale across the entire team.
+
+---
+
+#### Chapter 23: Sales & Revenue Operations (RevOps) and Marketing 📋 _Planned_
+
+Builds AI agents that scale the judgment of top performers across the entire sales and marketing organisation — from prospecting through pipeline management to campaign optimisation.
+
+**Key topics:** Prospecting agents — ICP matching, lead scoring, account prioritisation · CRM enrichment — automatic contact data, company research, intent signals · Personalised outreach ghostwriting based on prospect's communication style and history · Campaign planning, content creation, and cross-channel performance analysis · RevOps intelligence — pipeline forecasting, churn prediction, revenue attribution
+
+**Plugin:** `sales@knowledge-work-plugins` + `marketing@knowledge-work-plugins`
+
+---
+
+## Section V — The Product & Value Chain
+
+### Chapters 24–25: Bridging Physical Operations and Digital Record-Keeping
+
+Section V covers the two domains that connect customer demand to product delivery: supply chain and product management. Chapter 24 addresses the fundamental challenge of operational AI — data lives in multiple systems, decisions must be made in near-real-time, and the cost of error hits the P&L immediately. Chapter 25 addresses the product manager's core challenge: synthesising customer feedback, technical constraints, business priorities, and market signals into decisions about what to build next.
+
+---
+
+#### Chapter 24: Supply Chain & Procurement 📋 _Planned_
+
+Deploys AI agents across the end-to-end supply chain — from vendor selection and purchase order management to invoice reconciliation and logistics optimisation.
+
+**Key topics:** Vendor management agents — supplier risk scoring, performance monitoring, relationship history · Purchase order and invoice reconciliation — three-way match automation at scale · Logistics optimisation — route planning, carrier selection, duty and compliance · Demand forecasting integrating sales pipeline data with inventory planning · Supplier communication — automated RFQ, PO acknowledgement, dispute resolution
+
+**Plugin:** `operations@knowledge-work-plugins`
+
+---
+
+#### Chapter 25: Product Management 📋 _Planned_
+
+Builds AI agents that transform product management from a reactive coordination function into a proactive strategic capability — from discovery through to stakeholder communication.
+
+**Key topics:** Feature specification writing — user story generation from discovery notes · Roadmap planning — priority scoring using RICE, WSJF, and custom frameworks · User research synthesis — thematic analysis of interviews, surveys, support tickets · Stakeholder communication — automated sprint updates, release notes, executive summaries · Market and competitive intelligence — continuous monitoring and synthesis
+
+**Plugin:** `product-management@knowledge-work-plugins`
+
+---
+
+## Section VI — People & Efficiency
+
+### Chapters 26–28: Preserving Institutional Memory and Building the Agentic Office
+
+Section VI addresses the infrastructure that determines whether an organisation can execute consistently at scale: its people systems, its operational processes, and the productivity environment in which all knowledge work happens. Three chapters with distinct but complementary purposes — HR builds the knowledge layer, Operations builds the process layer, and Productivity integrates them into a coherent agentic office.
+
+---
+
+#### Chapter 26: People & Organisational Operations (HR) 📋 _Planned_
+
+Builds AI agents that preserve institutional memory, accelerate onboarding, and automate the administrative overhead of human resource management — without losing the human dimension of people operations.
+
+**Key topics:** Employee onboarding agents — personalised 30-60-90 day plans, document collection, system access · Policy synthesis — converting policy libraries into searchable, conversational knowledge bases · Talent matching — internal mobility, skills gap analysis, succession planning · Internal knowledge base agents — answering HR questions without ticket queues · Performance review automation — template generation, sentiment analysis, calibration support
+
+**Plugin:** `human-resources@knowledge-work-plugins`
+
+---
+
+#### Chapter 27: Operations 📋 _Planned_
+
+Builds AI agents that make operational processes visible, documented, optimised, and compliant — transforming operations from a reactive function into a continuous improvement engine.
+
+**Key topics:** Process documentation agents — turning interviews into SOPs and workflow diagrams · Vendor management — contract tracking, renewal alerts, performance dashboards · Change management — impact assessment, communication planning, rollout monitoring · Compliance tracking — policy adherence, audit preparation, regulatory calendar management · Operational KPI monitoring — exception alerting when metrics breach thresholds
+
+**Plugin:** `operations@knowledge-work-plugins`
+
+---
+
+#### Chapter 28: Productivity & The Agentic Office 📋 _Planned_
+
+The integration chapter. Builds the workplace AI layer that knows your organisation's people, projects, terminology, and priorities — and connects all the domain agents from Chapters 17–27 into a coherent agentic office environment. This is the chapter where the domain agents stop being point solutions and start working as a system.
+
+**Key topics:** Task management agents — priority scoring, deadline tracking, meeting follow-up extraction · Workplace memory — persistent context about projects, decisions, and relationships · The agentic daily briefing · Visual dashboard — project status, team capacity, and risk indicators · Cross-domain orchestration — how the domain agents from Chapters 17–27 work together
+
+**Plugin:** `productivity@knowledge-work-plugins`
+
+---
+
 ## Section VII — The Innovation Lab
 
 ### Chapter 29: Where Mastery of Enterprise AI Becomes the Foundation for Building New Ventures
 
-Section VII is the culmination of Part 3. The student who has completed Chapters 14 through 28 can build, deploy, and govern domain-specific AI agents across every major enterprise function. Chapter 29 asks a different question: what happens when that capability is applied not to optimising an existing enterprise, but to creating a new one?
+Section VII is the culmination of Part 3. The student who has completed Chapters 14 through 28 can build, deploy, and govern domain-specific AI agents across every major enterprise function. Chapter 29 asks a different question: what happens when that capability is applied not to optimising an existing enterprise, but to creating a new one? The chapter draws on domain agents from across the entire curriculum and shows how an AI-native startup is structurally different from a traditional one.
 
 ---
 
 #### Chapter 29: The Intrapreneurship Agent: Lean Methodology for Enterprise Innovation 📋 _Planned_
 
-Combines Lean Startup, Design Thinking, and Agile with AI-accelerated execution — for both the intrapreneur within a large enterprise and the founder building from scratch. The chapter draws on domain agents from across the entire curriculum and shows how an AI-native startup is structurally different from a traditional one.
+Combines Lean Startup, Design Thinking, and Agile with AI-accelerated execution — for both the intrapreneur within a large enterprise and the founder building from scratch.
 
 **Key topics:** Lean Startup AI agents — hypothesis generation, MVP specification, experiment design · Design Thinking agents — user research synthesis, persona building, journey mapping · Agile AI agents — backlog generation, sprint planning, retrospective synthesis · Business plan writing — AI-assisted financial modelling, market sizing, competitive analysis · Investor pitch preparation — narrative structuring, financial summary, Q&A preparation · Funding strategy — grant identification, investor targeting, pitch iteration
 
@@ -296,13 +296,13 @@ Combines Lean Startup, Design Thinking, and Agile with AI-accelerated execution 
 | 19  | AI Transformation of CA/CPA Practice Areas | II — Office of the CFO     | ✅ Complete    |
 | 20  | Islamic Finance Domain Agents              | II — Office of the CFO     | ✅ Complete    |
 | 21  | Banking-Specific AI                        | II — Office of the CFO     | 🔄 In Progress |
-| 22  | Sales, RevOps & Marketing                  | III — The Growth Engine    | 📋 Planned     |
-| 23  | Supply Chain & Procurement                 | IV — Product & Value Chain | 📋 Planned     |
-| 24  | Product Management                         | IV — Product & Value Chain | 📋 Planned     |
-| 25  | People & Organisational Operations (HR)    | V — People & Efficiency    | 📋 Planned     |
-| 26  | Operations                                 | V — People & Efficiency    | 📋 Planned     |
-| 27  | Productivity & The Agentic Office          | V — People & Efficiency    | 📋 Planned     |
-| 28  | Legal Operations and Compliance            | VI — Legal & Compliance    | 📋 Planned     |
+| 22  | Legal Operations and Compliance            | III — Legal & Compliance   | 📋 Planned     |
+| 23  | Sales, RevOps & Marketing                  | IV — The Growth Engine     | 📋 Planned     |
+| 24  | Supply Chain & Procurement                 | V — Product & Value Chain  | 📋 Planned     |
+| 25  | Product Management                         | V — Product & Value Chain  | 📋 Planned     |
+| 26  | People & Organisational Operations (HR)    | VI — People & Efficiency   | 📋 Planned     |
+| 27  | Operations                                 | VI — People & Efficiency   | 📋 Planned     |
+| 28  | Productivity & The Agentic Office          | VI — People & Efficiency   | 📋 Planned     |
 | 29  | The Intrapreneurship Agent                 | VII — Innovation Lab       | 📋 Planned     |
 
 ---
@@ -315,7 +315,7 @@ Three threads run through all sixteen chapters and give Part 3 its coherence:
 
 **Thread 2 — The Governance Escalation Framework.** Every chapter encodes a precise boundary between what the agent executes and what the professional decides. The credit officer makes the SICR staging call. The MLRO makes the SAR filing decision. The attorney decides the negotiation strategy. The auditor signs the closing opinion. Part 3 systematically builds the professional judgment to know where that boundary is in every domain — which is ultimately more valuable than any individual agent configuration.
 
-**Thread 3 — The Integration Architecture.** The seven sections are designed to work together. Financial data from Chapter 17 feeds the Chapter 21 banking compliance agent. Customer intelligence from Chapter 22 feeds the Chapter 24 product roadmap agent. The HR knowledge base from Chapter 25 feeds the Chapter 27 workplace memory layer. Chapter 29 draws on all of them. Chapter 27 — the Agentic Office — is the integration chapter that makes domain agents work as a coherent system rather than isolated point solutions.
+**Thread 3 — The Integration Architecture.** The seven sections are designed to work together. Financial data from Chapter 17 feeds the Chapter 21 banking compliance agent. Customer intelligence from Chapter 23 feeds the Chapter 25 product roadmap agent. The HR knowledge base from Chapter 26 feeds the Chapter 28 workplace memory layer. Chapter 29 draws on all of them. Chapter 28 — the Agentic Office — is the integration chapter that makes domain agents work as a coherent system rather than isolated point solutions.
 
 ---
 

@@ -528,15 +528,15 @@ explanation: "The deployment methodology is consistent across all seven domains:
 source: "Lesson 7: The Seven Domains"
 },
 {
-question: "What role does Chapter 27 (Productivity and The Agentic Office) play within the People and Organisational Operations section?",
+question: "What role does Chapter 28 (Productivity and The Agentic Office) play within the People and Efficiency section?",
 options: [
 "It teaches how to install and configure productivity software like Slack and Teams",
-"It is the integration chapter that connects all domain agents from Chapters 17 through 26 into a coherent agentic office — a workplace AI layer that knows the organisation's people, projects, and priorities",
+"It is the integration chapter that connects all domain agents from Chapters 17 through 27 into a coherent agentic office — a workplace AI layer that knows the organisation's people, projects, and priorities",
 "It provides a standalone personal productivity system unrelated to other domain agents",
 "It focuses exclusively on calendar management and meeting scheduling automation"
 ],
 correctOption: 1,
-explanation: "Chapter 27 is explicitly described as the integration chapter — it connects the domain agents from Chapters 17 through 26 into a workplace AI layer that knows the organisation's people, projects, terminology, and priorities. This is where domain agents stop being isolated point solutions and start working as a system. Option A describes IT setup, not domain expertise. Option C misses the integration purpose. Option D is far too narrow.",
+explanation: "Chapter 28 is explicitly described as the integration chapter — it connects the domain agents from Chapters 17 through 27 into a workplace AI layer that knows the organisation's people, projects, terminology, and priorities. This is where domain agents stop being isolated point solutions and start working as a system. Option A describes IT setup, not domain expertise. Option C misses the integration purpose. Option D is far too narrow.",
 source: "Lesson 7: The Seven Domains"
 },
 {

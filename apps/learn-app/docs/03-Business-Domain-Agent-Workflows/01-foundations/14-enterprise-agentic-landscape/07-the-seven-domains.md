@@ -134,33 +134,33 @@ A new analyst joining a finance team can learn the tools in weeks. Learning whic
 
 Lead qualification, pipeline management, outreach personalisation, CRM data enrichment, and campaign performance analysis. The expertise at risk is the top performer's qualification logic: the signals, heuristics, and pattern recognitions that distinguish a prospect worth pursuing from one that will consume resources without converting. Every sales team has someone who "just knows" which leads are real. That knowledge is the deployment target.
 
-Chapter 22 builds agents that scale this judgment across the entire go-to-market organisation -- from prospecting and ICP matching through pipeline forecasting to cross-channel campaign optimisation and revenue attribution.
+Chapter 23 builds agents that scale this judgment across the entire go-to-market organisation -- from prospecting and ICP matching through pipeline forecasting to cross-channel campaign optimisation and revenue attribution.
 
 ### Supply Chain & Procurement
 
 End-to-end supply chain management -- from vendor selection and purchase order management to invoice reconciliation and logistics optimisation. The expertise at risk is the experienced procurement manager's understanding of which suppliers are reliable under which conditions, how to structure a three-way match for complex multi-line POs, and which demand signals from the sales pipeline actually predict inventory requirements versus which are noise.
 
-Chapter 23 deploys agents across vendor management, automated RFQ processing, duty and compliance, and demand forecasting that integrates sales pipeline data with inventory planning.
+Chapter 24 deploys agents across vendor management, automated RFQ processing, duty and compliance, and demand forecasting that integrates sales pipeline data with inventory planning.
 
 ### Product Management
 
 Discovery to delivery -- from user research synthesis through feature specification to roadmap prioritisation and stakeholder communication. The expertise at risk is the senior product manager's ability to synthesise customer feedback, technical constraints, business priorities, and market signals into a coherent decision about what to build next. That synthesis is the most valuable thing a product manager does, and it is the hardest to transfer.
 
-Chapter 24 builds agents that transform product management from reactive coordination into proactive strategic capability -- using frameworks like RICE and WSJF for priority scoring, automating user research thematic analysis, and generating sprint updates and release notes.
+Chapter 25 builds agents that transform product management from reactive coordination into proactive strategic capability -- using frameworks like RICE and WSJF for priority scoring, automating user research thematic analysis, and generating sprint updates and release notes.
 
 ### People & Organisational Operations
 
-Three chapters covering the infrastructure that determines whether an organisation can execute consistently at scale. The expertise at risk spans three layers: the HR director's understanding of the intent behind policies and the exceptions routinely granted (Chapter 25), the operations leader's knowledge of which processes actually run the business versus which are documented but ignored (Chapter 26), and the integration layer that connects all domain agents into a coherent agentic office (Chapter 27).
+Three chapters covering the infrastructure that determines whether an organisation can execute consistently at scale. The expertise at risk spans three layers: the HR director's understanding of the intent behind policies and the exceptions routinely granted (Chapter 26), the operations leader's knowledge of which processes actually run the business versus which are documented but ignored (Chapter 27), and the integration layer that connects all domain agents into a coherent agentic office (Chapter 28).
 
 When someone asks "Can I work from another country for three months?" the written policy says no. The experienced HR professional knows that the answer is actually "yes, if you follow this informal process that has worked for the last four cases." That gap between written policy and institutional practice is the knowledge at risk.
 
-Chapter 27 is the integration chapter -- it connects the domain agents from Chapters 17 through 26 into a workplace AI layer that knows your organisation's people, projects, terminology, and priorities.
+Chapter 28 is the integration chapter -- it connects the domain agents from Chapters 17 through 27 into a workplace AI layer that knows your organisation's people, projects, terminology, and priorities.
 
 ### Legal & Compliance
 
 Contract lifecycle management, legal operations, regulatory compliance monitoring, jurisdiction-specific risk assessment, and IP protection. The expertise at risk is the experienced lawyer's understanding of which clause patterns are genuinely dangerous in which contexts. A standard non-compete clause might be enforceable in one jurisdiction and meaningless in another. A data processing agreement might be compliant in Europe and insufficient in California. The senior lawyer carries this jurisdictional map in their head.
 
-Chapter 28 gives significant treatment to Legal Operations Agents -- the emerging practice of deploying AI specifically within legal department workflows. The governance principle in this domain is non-negotiable: certain decisions must always involve a qualified attorney regardless of how accurate an agent becomes.
+Chapter 22 gives significant treatment to Legal Operations Agents -- the emerging practice of deploying AI specifically within legal department workflows. The governance principle in this domain is non-negotiable: certain decisions must always involve a qualified attorney regardless of how accurate an agent becomes.
 
 ### Innovation & Intrapreneurship
 
