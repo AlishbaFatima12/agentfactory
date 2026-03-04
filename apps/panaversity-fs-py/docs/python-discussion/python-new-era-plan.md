@@ -102,6 +102,22 @@ Phase 9 (Ch 25-26):  Full system architecture    ← "I can architect and delive
 
 By Phase 6, students have seen every Python feature 50+ times in AI output. Specifying it precisely for AI feels natural, not forced.
 
+### Pacing and Cognitive Load: The TDG Anchor Rule
+
+The scope of Part 4 is ambitious — from basic types in Phase 1 to async APIs and CI/CD pipelines in Phases 7-8. Without deliberate scaffolding, beginners will feel overwhelmed by the sudden influx of architectural concepts in later phases.
+
+**The rule**: Phase 4 (TDG Mastery) is the anchor. After Phase 4, the TDG method never changes — only the problem domain grows. Every chapter from Phase 5 onward must open by connecting the new material back to the TDG cycle the student already owns:
+
+| Phase | New domain | TDG connection the chapter must make explicit |
+|-------|-----------|----------------------------------------------|
+| 5 | Objects and classes | "Same cycle, but now you specify class interfaces instead of function signatures" |
+| 6 | Files, databases, packages | "Same cycle, but now your tests verify I/O boundaries and data persistence" |
+| 7 | CLI tools, async/await, FastAPI | "Same cycle, but now your tests invoke CLI commands and async endpoints" |
+| 8 | CI/CD, security | "Same cycle, but now the pipeline runs your tests on every commit" |
+| 9 | Full system architecture | "Same cycle at system scale — the SmartNotes capstone is one large TDG loop" |
+
+**Chapter author directive**: Each chapter in Phases 5-9 must include a short "bridge paragraph" in its opening that says, in effect: "You already know the TDG cycle. This chapter applies it to [new domain]. The method is the same — specify with types, write failing tests, generate, verify. The only thing that changes is what you are specifying." This prevents the cognitive cliff where students feel they are learning an entirely new approach when they are actually applying the same one to bigger problems.
+
 ---
 
 ## 4. Target Audience
