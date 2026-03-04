@@ -17,6 +17,10 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-04
+
+- docs: restructure ch17 Finance Domain Agents — plugin-based architecture ([#808](https://github.com/panaversity/agentfactory/pull/808))
+
 ### 2026-03-03
 
 - feat: Part 3 section folders with content-API tree support ([#806](https://github.com/panaversity/agentfactory/pull/806))
