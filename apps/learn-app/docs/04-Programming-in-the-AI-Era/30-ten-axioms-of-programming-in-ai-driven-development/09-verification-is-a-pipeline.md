@@ -3,7 +3,7 @@ sidebar_position: 9
 title: "Axiom IX: Verification is a Pipeline"
 description: "CI/CD automates verification of all changes — linting, types, tests, security — every time, without exception. If the pipeline fails, the code doesn't ship."
 keywords: ["CI/CD", "GitHub Actions", "continuous integration", "verification pipeline", "Makefile", "automated testing", "linting", "type checking", "security audit"]
-chapter: 14
+chapter: 30
 lesson: 9
 duration_minutes: 25
 

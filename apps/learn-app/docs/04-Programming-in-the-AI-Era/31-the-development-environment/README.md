@@ -1,7 +1,7 @@
 ---
-sidebar_position: 15
-title: "Chapter 15: The Development Environment"
-description: "Install and configure the five-tool Python discipline stack -- uv, pyright, ruff, pytest, and Git -- each connected to an axiom from Chapter 14."
+sidebar_position: 31
+title: "Chapter 31: The Development Environment"
+description: "Install and configure the five-tool Python discipline stack -- uv, pyright, ruff, pytest, and Git -- each connected to an axiom from Chapter 30."
 keywords:
   [
     "uv",
@@ -21,7 +21,7 @@ keywords:
   ]
 ---
 
-# Chapter 15: The Development Environment
+# Chapter 31: The Development Environment
 
 James opens his laptop, creates a file called `app.py`, writes a function, and runs it. It works. He pushes the file to a shared folder. Emma pulls it down on her machine and nothing works -- wrong Python version, missing library, different operating system assumptions baked into every line. James stares at the error messages. "But it ran fine on my computer."
 
@@ -31,7 +31,7 @@ This is the difference between writing code and building software. Before you wr
 
 ## Why the Discipline Stack Matters in the AI Era
 
-In Chapter 14, you learned that AI generates code fast -- but speed without verification is dangerous. The ten axioms gave you the principles: specify what you want, verify what you get. This chapter gives you the tools that make verification automatic.
+In Chapter 30, you learned that AI generates code fast -- but speed without verification is dangerous. The ten axioms gave you the principles: specify what you want, verify what you get. This chapter gives you the tools that make verification automatic.
 
 Claude Code can produce fifty lines of Python in seconds. Without the discipline stack, you have no way to check those fifty lines. Did the AI use the right types? Are there unused imports? Does the code do what you asked? You cannot answer those questions by reading alone -- not reliably, not at the speed Claude Code generates code. The five tools in this chapter answer them for you, automatically, every time.
 
@@ -62,7 +62,7 @@ Lessons 4 through 6 include Python code that uses features you have not learned 
 
 ## The Axiom Connections
 
-Each tool in the discipline stack maps directly to an axiom you learned in Chapter 14. These are not abstract connections -- each tool is the concrete enforcement mechanism for its axiom.
+Each tool in the discipline stack maps directly to an axiom you learned in Chapter 30. These are not abstract connections -- each tool is the concrete enforcement mechanism for its axiom.
 
 | Tool | Axiom | Why It Matters |
 |------|-------|----------------|
@@ -86,5 +86,5 @@ Each tool in the discipline stack maps directly to an axiom you learned in Chapt
 
 ## Prerequisites
 
-- **Chapter 14: Ten Axioms of Programming in AI-Driven Development** -- This chapter assumes familiarity with all ten axioms. Each lesson references specific axioms by number and name.
+- **Chapter 30: Ten Axioms of Programming in AI-Driven Development** -- This chapter assumes familiarity with all ten axioms. Each lesson references specific axioms by number and name.
 - **[Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development)** -- You must understand the SDD workflow (Research → Specification → Refinement → Implementation) and why specifications come before code. The discipline stack you install here is the verification layer for the SDD methodology you learned in Chapter 5. Claude Code is your primary development tool throughout Part 4.

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 11
-title: "Chapter 14: Ten Axioms Quiz"
+title: "Chapter 30: Ten Axioms Quiz"
 proficiency_level: B1
 layer: 2
 estimated_time: "30 mins"
@@ -8,12 +8,12 @@ chapter_type: Concept
 running_example_id: ten-axioms-quiz
 ---
 
-# Chapter 14: Ten Axioms of Agentic Development Quiz
+# Chapter 30: Ten Axioms of Agentic Development Quiz
 
 Test your understanding of the ten axioms that govern effective agentic software development — from shell orchestration through production observability. These questions follow James's journey building an order management system, the same running example from the chapter lessons.
 
 <Quiz
-  title="Chapter 14: Ten Axioms of Agentic Development Assessment"
+  title="Chapter 30: Ten Axioms of Agentic Development Assessment"
   questions={[
     {
       question: "James has an 80-line bash script that fetches order data from an API, transforms it with jq, filters results with grep, and writes output to a file. The script has nested if-else blocks for error handling and retry logic. Emma reviews it and says it needs restructuring. What should James do?",

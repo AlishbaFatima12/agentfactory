@@ -18,7 +18,7 @@ keywords:
     "verification",
     "static analysis",
   ]
-chapter: 16
+chapter: 32
 lesson: 3
 duration_minutes: 30
 
@@ -219,7 +219,7 @@ The trace table makes the problem visible. Row 12 shows `bonus_points` holding a
 
 ## Step 2: Run
 
-Now run the buggy code. Pyright is a *static type checker* -- it reads your code *without running it* and checks whether the types make sense. You installed it in Chapter 15 as part of your discipline stack. Run Pyright first, then Python:
+Now run the buggy code. Pyright is a *static type checker* -- it reads your code *without running it* and checks whether the types make sense. You installed it in Chapter 31 as part of your discipline stack. Run Pyright first, then Python:
 
 ```
 $ uv run pyright main.py
@@ -505,4 +505,4 @@ catches and what only a human reviewer would catch.
 
 ## Looking Ahead
 
-You can read Python. You can predict what code does line by line, trace variable changes through reassignment, and catch bugs -- both the type mismatches that crash programs and the logic errors that produce wrong answers silently. In Chapter 17, the direction reverses. Instead of reading code someone else wrote, you will describe what you want in a specification and let AI generate the code. Then you will verify that code using the PRIMM method and trace tables you built here. Reading does not stop when writing begins -- it becomes the verification step in every cycle of AI-assisted development.
+You can read Python. You can predict what code does line by line, trace variable changes through reassignment, and catch bugs -- both the type mismatches that crash programs and the logic errors that produce wrong answers silently. In Chapter 33, the direction reverses. Instead of reading code someone else wrote, you will describe what you want in a specification and let AI generate the code. Then you will verify that code using the PRIMM method and trace tables you built here. Reading does not stop when writing begins -- it becomes the verification step in every cycle of AI-assisted development.
