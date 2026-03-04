@@ -1,6 +1,6 @@
 ### Core Concept
 
-The financial-services-plugins suite extends its core plugin with four function-specific add-on plugins -- investment-banking, equity-research, private-equity, and wealth-management -- plus two partner-built plugins from LSEG and S&P Global. Each add-on requires the core plugin to be installed first, inheriting its 11 MCP data connectors and financial modelling commands. The add-ons encode domain-specific professional conventions: the investment banking plugin knows M&A deal lifecycle documents, the equity research plugin knows post-earnings note formats, the private equity plugin knows IC memo structure, and the wealth management plugin knows client review workflows.
+The financial-services-plugins suite extends its core plugin with four function-specific add-on plugins -- investment-banking, equity-research, private-equity, and wealth-management -- plus two partner-built plugins from LSEG and S&P Global. Each add-on requires the core plugin to be installed first, inheriting its 11 data connectors and financial modelling commands. The add-ons encode domain-specific professional conventions: the investment banking plugin knows M&A deal lifecycle documents, the equity research plugin knows post-earnings note formats, the private equity plugin knows IC memo structure, and the wealth management plugin knows client review workflows.
 
 ### Key Concepts
 

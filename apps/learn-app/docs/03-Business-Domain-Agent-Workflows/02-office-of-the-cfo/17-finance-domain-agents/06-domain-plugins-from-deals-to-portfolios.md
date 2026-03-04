@@ -17,7 +17,7 @@ keywords:
     "IC memo",
     "due diligence",
     "earnings analysis",
-    "MCP connectors",
+    "data connectors",
     "Cowork plugins",
     "tax-loss harvesting",
     "plugin customisation",
@@ -50,10 +50,10 @@ skills:
     measurable_at_this_level: "Student can define M&A teaser, IC memo, due diligence, earnings consensus, and initiating coverage in professional context, and explain how each concept maps to a plugin command or workflow"
 
 learning_objectives:
-  - objective: "Map professional finance workflows across four domains to the correct add-on plugin and its commands, explaining the data flow from MCP connectors to deliverable"
+  - objective: "Map professional finance workflows across four domains to the correct add-on plugin and its commands, explaining the data flow from data connectors to deliverable"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Given a finance task description (e.g., 'prepare a buyer list for a sell-side mandate'), student can identify the plugin (investment-banking), the command (/buyer-list), and the MCP providers that supply the data (PitchBook)"
+    assessment_method: "Given a finance task description (e.g., 'prepare a buyer list for a sell-side mandate'), student can identify the plugin (investment-banking), the command (/buyer-list), and the data providers that supply the data (PitchBook)"
 
   - objective: "Identify which customisation dimension applies to a firm-specific requirement and describe the file-level change needed"
     proficiency_level: "B1"
@@ -86,13 +86,13 @@ teaching_guide:
   session_group: 3
   session_title: "Domain Plugin Workflows"
   key_points:
-    - "All add-on plugins require the core plugin (financial-analysis) to be installed first -- they inherit its MCP connectors and financial modelling commands"
+    - "All add-on plugins require the core plugin (financial-analysis) to be installed first -- they inherit its data connectors and financial modelling commands"
     - "Each add-on targets a specific finance function with commands and skills tailored to that domain's professional conventions"
     - "The plugins produce structured drafts, not finished deliverables -- professional judgment on thesis, risk, and recommendation remains human work"
     - "Partner plugins (LSEG, S&P Global) bring proprietary data that extends capability beyond what public sources provide"
     - "Customisation happens across five dimensions: connectors, firm context, templates, workflows, and new plugins"
   misconceptions:
-    - "Students may think each plugin has its own data connections -- all MCP connectors are centralised in the core plugin and shared automatically"
+    - "Students may think each plugin has its own data connections -- all data connectors are centralised in the core plugin and shared automatically"
     - "Students may assume the IC memo plugin writes the investment recommendation -- it structures the document and populates data, but the thesis and recommendation require professional judgment"
     - "Students may treat plugin outputs as final -- every deliverable requires review by a qualified professional before client or committee use"
   discussion_prompts:
@@ -104,7 +104,7 @@ teaching_guide:
     - "Emphasise the non-negotiable boundaries section -- students must understand that Claude produces analytical frameworks, not advice"
   assessment_checks:
     - question: "Why must the core plugin be installed before any add-on?"
-      expected_response: "Because all 11 MCP data connectors are centralised in the core plugin. Add-ons inherit these connections. Without the core, add-ons have no data sources."
+      expected_response: "Because all 11 data connectors are centralised in the core plugin. Add-ons inherit these connections. Without the core, add-ons have no data sources."
     - question: "What is the difference between a teaser and a CIM in an M&A process?"
       expected_response: "A teaser is anonymous -- it describes the business without naming it to generate initial buyer interest. A CIM is the full confidential document shared after the buyer signs an NDA. The teaser comes first; the CIM comes after interest is confirmed."
     - question: "Name the five dimensions for customising the plugins for your firm."
@@ -163,7 +163,7 @@ Exercises 1–4 are in Lessons 2 and 3 (Claude in Excel). Exercises 5–7 are in
 
 **Time:** 30 minutes. **Requires:** Cowork with the investment-banking plugin installed (financial-analysis core first).
 
-1. Choose a publicly listed company in a sector you know. Run `/one-pager [company]`. Review the output: is the business description accurate? Are the financials current? Note which data came from MCP providers and which required manual input.
+1. Choose a publicly listed company in a sector you know. Run `/one-pager [company]`. Review the output: is the business description accurate? Are the financials current? Note which data came from data providers and which required manual input.
 
 2. Draft a buyer list: _"Identify likely strategic acquirers and financial buyers for [company]. Strategic: companies in adjacent industries with acquisition history and balance sheet capacity. Financial: PE firms with relevant sector thesis and fund size appropriate for this company's EV."_
 
@@ -181,7 +181,7 @@ The equity-research plugin targets sell-side equity research workflows -- from d
 
 **Skills (9):** catalyst-calendar, earnings-analysis, earnings-preview, idea-generation, initiating-coverage, model-update, morning-note, sector-overview, thesis-tracker
 
-The `/earnings [company] [quarter]` command runs the full post-earnings workflow. It pulls actual results from connected MCP providers, compares against consensus estimates, identifies beats and misses by line item, updates the financial model, and produces a structured note ready for institutional clients. The `/initiate [company]` command produces the foundation of an initiating coverage report -- investment thesis (bull/base/bear), business description, financial model, valuation (comps and DCF), key risks, and price target. The `/morning-note` command synthesises overnight news from MT Newswires and earnings call transcripts from Aiera into a daily briefing. The `/thesis` command tracks key assumptions over time and flags when events challenge them.
+The `/earnings [company] [quarter]` command runs the full post-earnings workflow. It pulls actual results from connected data providers, compares against consensus estimates, identifies beats and misses by line item, updates the financial model, and produces a structured note ready for institutional clients. The `/initiate [company]` command produces the foundation of an initiating coverage report -- investment thesis (bull/base/bear), business description, financial model, valuation (comps and DCF), key risks, and price target. The `/morning-note` command synthesises overnight news from MT Newswires and earnings call transcripts from Aiera into a daily briefing. The `/thesis` command tracks key assumptions over time and flags when events challenge them.
 
 :::info What Is a Sell-Side vs. Buy-Side Analyst?
 Sell-side analysts work for investment banks and brokerage firms. They publish equity research reports with buy/hold/sell ratings and price targets for institutional investor clients. Buy-side analysts work for institutional investors -- asset managers, hedge funds, pension funds -- and analyse to support their own firm's investment decisions.
@@ -335,7 +335,7 @@ Map the data flow across these three steps:
 3. Run /one-pager to compile the summary (core plugin)
 
 For each step:
-- What MCP providers supply the underlying data?
+- What data providers supply the underlying data?
 - What output from step N becomes input context for step N+1?
 - Where might format mismatches cause problems?
 - What would the final deliverable look like if all three
