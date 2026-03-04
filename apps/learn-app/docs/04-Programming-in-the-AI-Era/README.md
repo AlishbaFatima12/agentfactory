@@ -151,6 +151,26 @@ Steps 1--3 build your reading fluency. Steps 4--5 are the TDG cycle. By the end 
 Notice that you *see* and *read* before you are asked to *do* anything. This is deliberate. You will not be thrown into writing tests or specifying types without first understanding what they look like and how they work. Every new concept is shown to you, explained, and practiced through prediction exercises before you use it yourself.
 :::
 
+## The SmartNotes Project
+
+**SmartNotes is a Personal AI Knowledge Base** -- a command-line and API-driven application for capturing, organizing, searching, and summarizing your notes using AI. Think of it as your own note-taking tool that understands what you wrote: you save notes in Markdown, tag and categorize them, search by meaning (not just keywords), and ask the AI to summarize or connect ideas across notes. By v1.0, SmartNotes has a typed Python core, a `smartnotes` CLI tool, a FastAPI async API, PostgreSQL persistence, AI-powered semantic search via the Anthropic SDK, and a GitHub Actions CI pipeline that verifies every commit.
+
+You do not build nine throwaway exercises. You build SmartNotes once and grow it across all nine phases. Each phase adds a layer using the SDD workflow: you write the specification (types + tests), prompt Claude Code to generate the implementation, and verify the output. The project is the vehicle; TDG is the method.
+
+| Phase | What You Add to SmartNotes | Skills You Practice |
+|-------|---------------------------|---------------------|
+| 1 | Read and annotate a pre-built prototype (~200 lines) | PRIMM reading method, tool setup, first code review |
+| 2 | Typed data models (`Note`, `Tag`, `Collection`), typed functions, typed collections | Type annotations as specification language |
+| 3 | Control flow logic + 30 passing tests covering the core domain | pytest as specification, TDG verification loop |
+| 4 | Debug planted bugs, drive a full TDG cycle independently | Traceback reading, systematic debugging |
+| 5 | Full object model with behavior, inheritance, protocols, decorators | OOP design, class interface specifications |
+| 6 | PostgreSQL persistence, file import/export, proper package structure | I/O testing, repository pattern, module architecture |
+| 7 | `smartnotes` CLI tool + FastAPI async API with AI integration | CLI testing, async/await, Pydantic request/response models |
+| 8 | GitHub Actions CI pipeline + security audit report | Automated verification, OWASP review of AI-generated code |
+| 9 | AI-powered semantic search, auto-tagging, summarization | Full SDD at production scale -- the complete TDG cycle end-to-end |
+
+Each phase produces a working version. By the end, you have one polished, portfolio-grade project that demonstrates every skill from Part 4 -- not nine disconnected toy programs.
+
 ## The Nine Phases
 
 Part 4 is organized into nine phases. Each phase gives you a new capability, and your role evolves from passive reader to full system architect. The TDG cycle runs through every phase -- what changes is how much of it you own and how deeply you can specify.
@@ -455,26 +475,6 @@ Phase 9 is proof. Not proof to an instructor -- proof to yourself, and proof to 
 **SmartNotes Capstone** completes **SmartNotes v1.0** -- the Personal AI Knowledge Base you have been building since Phase 1, now fully integrated with AI-powered features. Every skill from every phase appears: Markdown requirement specifications, typed data models with dataclasses and Pydantic, full object-oriented design with inheritance, composition, and protocols, PostgreSQL persistence, typed function composition, async/await for SDK and API calls, a `smartnotes` CLI tool, a FastAPI async API, AI integration via the Anthropic SDK for semantic search and auto-summarization, a pytest suite with 80%+ coverage, a security audit report, a GitHub Actions CI pipeline, and structured logging.
 
 **Deliverables**: Specification documents, type definitions, object model diagram, passing test suites, AI-generated and human-verified implementation, security audit, green CI pipeline, and a deployed SmartNotes application with CLI, API, and AI features. One polished, portfolio-grade project that demonstrates the complete TDG cycle at production scale.
-
-## The SmartNotes Project
-
-**SmartNotes is a Personal AI Knowledge Base** -- a command-line and API-driven application for capturing, organizing, searching, and summarizing your notes using AI. Think of it as your own note-taking tool that understands what you wrote: you save notes in Markdown, tag and categorize them, search by meaning (not just keywords), and ask the AI to summarize or connect ideas across notes. By v1.0, SmartNotes has a typed Python core, a `smartnotes` CLI tool, a FastAPI async API, PostgreSQL persistence, AI-powered semantic search via the Anthropic SDK, and a GitHub Actions CI pipeline that verifies every commit.
-
-You do not build nine throwaway exercises. You build SmartNotes once and grow it across all nine phases. Each phase adds a layer using the SDD workflow: you write the specification (types + tests), prompt Claude Code to generate the implementation, and verify the output. The project is the vehicle; TDG is the method.
-
-| Phase | What You Add to SmartNotes | Skills You Practice |
-|-------|---------------------------|---------------------|
-| 1 | Read and annotate a pre-built prototype (~200 lines) | PRIMM reading method, tool setup, first code review |
-| 2 | Typed data models (`Note`, `Tag`, `Collection`), typed functions, typed collections | Type annotations as specification language |
-| 3 | Control flow logic + 30 passing tests covering the core domain | pytest as specification, TDG verification loop |
-| 4 | Debug planted bugs, drive a full TDG cycle independently | Traceback reading, systematic debugging |
-| 5 | Full object model with behavior, inheritance, protocols, decorators | OOP design, class interface specifications |
-| 6 | PostgreSQL persistence, file import/export, proper package structure | I/O testing, repository pattern, module architecture |
-| 7 | `smartnotes` CLI tool + FastAPI async API with AI integration | CLI testing, async/await, Pydantic request/response models |
-| 8 | GitHub Actions CI pipeline + security audit report | Automated verification, OWASP review of AI-generated code |
-| 9 | AI-powered semantic search, auto-tagging, summarization | Full SDD at production scale -- the complete TDG cycle end-to-end |
-
-Each phase produces a working version. By the end, you have one polished, portfolio-grade project that demonstrates every skill from Part 4 -- not nine disconnected toy programs.
 
 ## What You Will Be Able To Do
 
