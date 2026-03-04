@@ -27,7 +27,7 @@ learning_objectives:
   - objective: "Read function parameters and return types from a typed signature"
     proficiency_level: "A2"
     bloom_level: "Understand"
-    assessment_method: "Given a function signature like def search_notes(query: str, max_results: int = 10) -> list[str]:, student identifies each parameter name, its type, any default value, and the return type -- then states the contract in one sentence"
+    assessment_method: "Given a function signature like def format_note_title(raw_title: str, uppercase: bool = False) -> str:, student identifies each parameter name, its type, any default value, and the return type -- then states the contract in one sentence"
 
   - objective: "Distinguish print from return and predict what a function call produces"
     proficiency_level: "A1"
@@ -52,7 +52,7 @@ differentiation:
 
 In Lesson 3, you traced expressions and predicted output by following Python's evaluation rules. You tracked variables through trace tables and learned to catch traps like `round(2.5)` returning `2` and `-3 ** 2` evaluating to `-9`. Now you step up from expressions to functions -- but you are not going to read function bodies yet. You are going to read function signatures, the single line that tells you everything a function promises before you look at a single line of its implementation.
 
-James finds a SmartNotes function in the codebase: `def search_notes(query: str, max_results: int = 10) -> list[str]:`. He has not read the body. Emma asks: "What does it take? What does it give back?" James studies the signature. "It takes a search query as text... and gives back a list of strings... with a maximum of 10 results by default." Emma nods. "You just read the contract. The signature told you everything you need to know to call this function correctly -- without reading a single line of implementation."
+James finds a SmartNotes function in the codebase: `def format_note_title(raw_title: str, uppercase: bool = False) -> str:`. He has not read the body. Emma asks: "What does it take? What does it give back?" James studies the signature. "It takes a title as text... and a flag for uppercase that defaults to False... and gives back a string." Emma nods. "You just read the contract. The signature told you everything you need to know to call this function correctly -- without reading a single line of implementation."
 
 That is the power of a typed signature. It is a contract between the function and everyone who calls it: here is what I need, here is what I promise to give back.
 
@@ -138,10 +138,10 @@ The `= 0` after `b: int` means `b` has a **default value** of `0`. If you call `
 Default values are visible in the signature. You do not need to read the body to know they exist. Here is the SmartNotes function James read:
 
 ```python
-def search_notes(query: str, max_results: int = 10) -> list[str]:
+def format_note_title(raw_title: str, uppercase: bool = False) -> str:
 ```
 
-Two parameters: `query` is required (no default), and `max_results` defaults to `10`. A caller can write `search_notes("meeting")` and get up to 10 results, or `search_notes("meeting", 5)` to limit it to 5.
+Two parameters: `raw_title` is required (no default), and `uppercase` defaults to `False`. A caller can write `format_note_title("meeting notes")` and get the default formatting, or `format_note_title("meeting notes", True)` to request uppercase.
 
 **Read and Predict:** Given this signature:
 
@@ -163,7 +163,7 @@ The return type appears after the `->` arrow. It tells you what kind of value th
 |-------------|---------|-------------------|
 | `-> str` | Returns text | `def greet(name: str) -> str:` |
 | `-> int` | Returns a whole number | `def count_words(text: str) -> int:` |
-| `-> float` | Returns a decimal number | `def average(nums: list[int]) -> float:` |
+| `-> float` | Returns a decimal number | `def divide(a: int, b: int) -> float:` |
 | `-> bool` | Returns `True` or `False` | `def is_empty(text: str) -> bool:` |
 | `-> None` | Returns nothing useful | `def print_greeting(name: str) -> None:` |
 | `-> str \| None` | Might return text, might return nothing | `def find_note(id: int) -> str \| None:` |
@@ -306,12 +306,11 @@ x = show_total(3, 4)
 This function signature says it returns an `int`. Read the body. What is wrong?
 
 ```python
-def count_words(text: str) -> int:
-    words = text.split()
-    return f"{len(words)} words"
+def calculate_total(price: float, quantity: int) -> int:
+    return price * quantity
 ```
 
-**Answer:** The signature promises `-> int`, but the body returns `f"{len(words)} words"` -- a string. This is a return type mismatch. The function should either return `len(words)` (an `int`, matching the signature) or change the signature to `-> str`. Pyright would flag this: "Type 'str' is not assignable to declared type 'int'."
+**Answer:** The signature promises `-> int`, but `price * quantity` multiplies a `float` by an `int`, which gives a `float` (for example, `9.99 * 3` is `29.97`). This is a return type mismatch. The function should either change the return type to `-> float` or convert the result with `int(price * quantity)`. Pyright would flag this: "Type 'float' is not assignable to declared type 'int'."
 
 ---
 
@@ -360,11 +359,10 @@ Write a function called format_currency with three parameters:
 - decimals (int, default 2)
 
 Show the function signature with type annotations.
-Then show 4 different ways to call it:
+Then show 3 different ways to call it:
 1. All three arguments provided
 2. Only amount provided (both defaults used)
 3. Amount and currency provided (decimals defaults)
-4. Amount and decimals provided using a keyword argument
 
 For each call, show the output and explain which parameters
 used their default values.

@@ -47,11 +47,11 @@ differentiation:
 
 # Types as Labels — str, int, float, bool
 
-In Chapter 15, James installed the discipline stack and created SmartNotes with `uv init`. Now he opens the SmartNotes `main.py` and sees something new. The function definition reads `def main() -> str:`. James points at the arrow. "What does `-> str` mean?"
+In Chapter 15, James installed the discipline stack and created SmartNotes with `uv init`. Now he opens the SmartNotes `main.py` and sees something new. The first line reads `app_name: str = "SmartNotes"`. James points at the colon. "What does `: str` mean?"
 
-Emma does not rush to answer. She picks up a glass jar from the shelf, the kind with a screw-on lid. It has a label on the front: **SUGAR**. She holds it up. "Before you open this jar, what is inside?" James shrugs. "Sugar. The label says so." Emma nods. "That is exactly what `-> str` does. It is a label. It tells you this function returns text. You know what is inside before you run the code."
+Emma does not rush to answer. She picks up a glass jar from the shelf, the kind with a screw-on lid. It has a label on the front: **SUGAR**. She holds it up. "Before you open this jar, what is inside?" James shrugs. "Sugar. The label says so." Emma nods. "That is exactly what `: str` does. It is a label. It tells you this variable holds text. You know what is inside before you run the code."
 
-James looks at the screen again. `-> str` no longer looks cryptic. It is a label on a jar.
+James looks at the screen again. `: str` no longer looks cryptic. It is a label on a jar.
 
 ---
 
@@ -114,19 +114,6 @@ result = 42
 
 ```
 Read as: "result will hold an int. It gets assigned 42 on the next line."
-```
-
-**Form 3: Function return annotation**
-
-```python
-def main() -> str:
-    return "Hello from SmartNotes!"
-```
-
-**Output:**
-
-```
-Read as: "main takes no arguments and returns a str."
 ```
 
 Every annotation answers the same question: **what type is inside this jar?**
@@ -251,43 +238,34 @@ The rule is simple: **empty or zero means falsy; anything else means truthy.**
 
 ## Before vs After: Typed vs Untyped
 
-Here is the same function written without types, then with types.
+Here are the same variables written without types, then with types.
 
 **Without types:**
 
 ```python
-def process(data):
-    total = 0
-    for item in data:
-        total += item
-    return total
+name = "Zia"
+age = 25
+price = 9.99
+active = True
 ```
 
-What is `data`? A list of numbers? A list of strings? A tuple? You cannot tell from the code. You would have to read every line of the body, find where `process` is called, and trace the argument back to its source.
+What is `price`? An integer or a decimal? What is `active`? Could it be a string like `"yes"`? You cannot tell from the code alone. You have to look at the values and guess.
 
 **With types:**
 
 ```python
-def process(data: list[int]) -> int:
-    total: int = 0
-    for item in data:
-        total += item
-    return total
+name: str = "Zia"
+age: int = 25
+price: float = 9.99
+active: bool = True
 ```
 
-**Output:**
+Now every variable answers two questions at a glance:
 
-```
-Read as: "process takes a list of ints and returns an int."
-```
+1. What type is it? The label after the colon tells you.
+2. What value does it hold? The value after the equals sign tells you.
 
-The typed version answers three questions without reading the body:
-
-1. What goes in? A `list[int]`.
-2. What comes out? An `int`.
-3. What is the function's purpose? Summing a list of integers.
-
-Types are documentation that the machine also reads. Pyright uses these annotations to catch bugs before you run the code. You will see exactly how in Lesson 5.
+No guessing. No tracing. The labels make the code self-documenting. Pyright uses these annotations to catch bugs before you run the code — if you accidentally write `age: int = "twenty-five"`, Pyright flags the mismatch immediately. You will see exactly how in Lesson 5.
 
 ---
 
@@ -340,15 +318,13 @@ Predict first. Answers: `100`, **ValueError**, `7.0`, `"False"`, `True` (space i
 
 ### Spot the Bug
 
-This function says it returns an `int`, but something is wrong. Find the bug.
+The annotation says `int`, but something is wrong. Find the mismatch.
 
 ```python
-def count_words(text: str) -> int:
-    words: list[str] = text.split()
-    return str(len(words))
+count: int = str(5)
 ```
 
-The annotation promises `-> int`, but `str(len(words))` returns a `str`. The fix: remove the `str()` call and return `len(words)` directly. Pyright would flag this as a return type mismatch.
+The annotation promises `int`, but `str(5)` converts `5` to the text `"5"` — a `str`, not an `int`. The label says one thing, the value is another. Pyright would flag this mismatch immediately. The fix: either change the annotation to `str` or remove the `str()` call.
 
 ---
 
@@ -398,7 +374,7 @@ returns str | None and explain when it returns None.
 
 4. **Type conversions have traps.** `int("3.14")` raises an error. `bool("0")` is `True`. Memorize the falsy list: `False`, `0`, `0.0`, `""`, `None`, `[]`, `{}`.
 
-5. **Types make code readable.** A function annotated `def process(data: list[int]) -> int:` tells you what goes in and what comes out — no body reading required.
+5. **Types make code readable.** A variable annotated `price: float = 9.99` tells you exactly what it holds — no guessing required. In Lesson 4, you will see how types label entire operations, not just single values.
 
 ---
 

@@ -17,7 +17,7 @@ keywords:
     "IC memo",
     "due diligence",
     "earnings analysis",
-    "MCP connectors",
+    "data connectors",
     "Cowork plugins",
     "tax-loss harvesting",
     "plugin customisation",
@@ -50,10 +50,10 @@ skills:
     measurable_at_this_level: "Student can define M&A teaser, IC memo, due diligence, earnings consensus, and initiating coverage in professional context, and explain how each concept maps to a plugin command or workflow"
 
 learning_objectives:
-  - objective: "Map professional finance workflows across four domains to the correct add-on plugin and its commands, explaining the data flow from MCP connectors to deliverable"
+  - objective: "Map professional finance workflows across four domains to the correct add-on plugin and its commands, explaining the data flow from data connectors to deliverable"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Given a finance task description (e.g., 'prepare a buyer list for a sell-side mandate'), student can identify the plugin (investment-banking), the command (/buyer-list), and the MCP providers that supply the data (PitchBook)"
+    assessment_method: "Given a finance task description (e.g., 'prepare a buyer list for a sell-side mandate'), student can identify the plugin (investment-banking), the command (/buyer-list), and the data providers that supply the data (PitchBook)"
 
   - objective: "Identify which customisation dimension applies to a firm-specific requirement and describe the file-level change needed"
     proficiency_level: "B1"
@@ -86,13 +86,13 @@ teaching_guide:
   session_group: 3
   session_title: "Domain Plugin Workflows"
   key_points:
-    - "All add-on plugins require the core plugin (financial-analysis) to be installed first -- they inherit its MCP connectors and financial modelling commands"
+    - "All add-on plugins require the core plugin (financial-analysis) to be installed first -- they inherit its data connectors and financial modelling commands"
     - "Each add-on targets a specific finance function with commands and skills tailored to that domain's professional conventions"
     - "The plugins produce structured drafts, not finished deliverables -- professional judgment on thesis, risk, and recommendation remains human work"
     - "Partner plugins (LSEG, S&P Global) bring proprietary data that extends capability beyond what public sources provide"
     - "Customisation happens across five dimensions: connectors, firm context, templates, workflows, and new plugins"
   misconceptions:
-    - "Students may think each plugin has its own data connections -- all MCP connectors are centralised in the core plugin and shared automatically"
+    - "Students may think each plugin has its own data connections -- all data connectors are centralised in the core plugin and shared automatically"
     - "Students may assume the IC memo plugin writes the investment recommendation -- it structures the document and populates data, but the thesis and recommendation require professional judgment"
     - "Students may treat plugin outputs as final -- every deliverable requires review by a qualified professional before client or committee use"
   discussion_prompts:
@@ -104,7 +104,7 @@ teaching_guide:
     - "Emphasise the non-negotiable boundaries section -- students must understand that Claude produces analytical frameworks, not advice"
   assessment_checks:
     - question: "Why must the core plugin be installed before any add-on?"
-      expected_response: "Because all 11 MCP data connectors are centralised in the core plugin. Add-ons inherit these connections. Without the core, add-ons have no data sources."
+      expected_response: "Because all 11 data connectors are centralised in the core plugin. Add-ons inherit these connections. Without the core, add-ons have no data sources."
     - question: "What is the difference between a teaser and a CIM in an M&A process?"
       expected_response: "A teaser is anonymous -- it describes the business without naming it to generate initial buyer interest. A CIM is the full confidential document shared after the buyer signs an NDA. The teaser comes first; the CIM comes after interest is confirmed."
     - question: "Name the five dimensions for customising the plugins for your firm."
@@ -113,11 +113,29 @@ teaching_guide:
 
 # Domain Plugins: From Deals to Portfolios
 
-In Lesson 5, you explored the core plugin -- the foundation of the `anthropics/financial-services-plugins` suite. That core provides the shared MCP connectors, the financial modelling commands (`/comps`, `/dcf`, `/lbo`), and the architecture that every other plugin in the suite depends on. Now you will see what gets built on top of that foundation: four function-specific add-on plugins for investment banking, equity research, private equity, and wealth management, plus two partner-built plugins from LSEG and S&P Global that bring proprietary data into the ecosystem.
+In Lesson 5, you explored the core plugin -- the foundation of the `anthropics/financial-services-plugins` suite. That core provides the shared connectors, the financial modelling commands (`/comps`, `/dcf`, `/lbo`), and the architecture that every other plugin in the suite depends on. Now you will see what gets built on top of that foundation: four function-specific add-on plugins for investment banking, equity research, private equity, and wealth management, plus two partner-built plugins from LSEG and S&P Global that bring proprietary data into the ecosystem.
 
 Each add-on plugin targets a specific finance function with commands and skills designed around that domain's professional conventions. The investment banking plugin knows how to draft a teaser, build a buyer list, and track a deal process. The equity research plugin knows how to produce a post-earnings note, maintain a thesis, and format an initiating coverage report. These are not general-purpose tools -- they encode the workflows, terminology, and document structures that professionals in each function expect to see.
 
-Every add-on requires the core plugin to be installed first. The add-ons inherit the core's MCP connectors and financial modelling commands. Install order matters: core first, then whichever add-ons match your function.
+Every add-on requires the core plugin to be installed first. The add-ons inherit the core's connectors and financial modelling commands. Install order matters: core first, then whichever add-ons match your function.
+
+## Install the Domain Plugins
+
+If you have not already installed the core plugin from Lesson 5, do that first (including adding the GitHub marketplace). Then install whichever add-ons match your function:
+
+1. In the Cowork sidebar, click **Customize** → **Browse plugins** → **Personal**.
+2. The `financial-services-plugins` marketplace you added in Lesson 5 shows the available add-ons. Install **Investment Banking**, **Equity Research**, **Private Equity**, or **Wealth Management** -- whichever matches your function.
+
+You do not need all four. Install the one that matches your domain, or install all four to explore the exercises below.
+
+### Which Plugin Do I Need?
+
+| If your work involves...                                    | Install this plugin | Key commands                                              |
+| ----------------------------------------------------------- | ------------------- | --------------------------------------------------------- |
+| M&A advisory, deal processes, pitch books                   | investment-banking  | `/teaser`, `/cim`, `/buyer-list`, `/one-pager`            |
+| Equity coverage, earnings analysis, research notes          | equity-research     | `/earnings`, `/initiate`, `/thesis`, `/morning-note`      |
+| Deal sourcing, diligence, IC memos, portfolio monitoring    | private-equity      | `/source`, `/ic-memo`, `/returns`, `/dd-checklist`        |
+| Client reporting, financial planning, portfolio rebalancing | wealth-management   | `/client-review`, `/financial-plan`, `/rebalance`, `/tlh` |
 
 ## Plugin 1: investment-banking
 
@@ -137,11 +155,15 @@ A teaser (or "blind profile") is the first document a buyer receives in an M&A p
 A well-written teaser generates 15-25 NDA signings from a targeted buyer list. The skill is selectivity: saying enough to generate interest without revealing the identity or giving away negotiating leverage.
 :::
 
-### Exercise A: Investment Banking Workflow
+:::note Exercise Numbering
+Exercises 1–4 are in Lessons 2 and 3 (Claude in Excel). Exercises 5–7 are in Lesson 4 (corporate finance plugin). Exercises 8–9 are in Lesson 5 (core financial analysis plugin). This lesson continues with Exercise 10.
+:::
+
+### Exercise 10: Investment Banking Workflow
 
 **Time:** 30 minutes. **Requires:** Cowork with the investment-banking plugin installed (financial-analysis core first).
 
-1. Choose a publicly listed company in a sector you know. Run `/one-pager [company]`. Review the output: is the business description accurate? Are the financials current? Note which data came from MCP providers and which required manual input.
+1. Choose a publicly listed company in a sector you know. Run `/one-pager [company]`. Review the output: is the business description accurate? Are the financials current? Note which data came from data providers and which required manual input.
 
 2. Draft a buyer list: _"Identify likely strategic acquirers and financial buyers for [company]. Strategic: companies in adjacent industries with acquisition history and balance sheet capacity. Financial: PE firms with relevant sector thesis and fund size appropriate for this company's EV."_
 
@@ -159,7 +181,7 @@ The equity-research plugin targets sell-side equity research workflows -- from d
 
 **Skills (9):** catalyst-calendar, earnings-analysis, earnings-preview, idea-generation, initiating-coverage, model-update, morning-note, sector-overview, thesis-tracker
 
-The `/earnings [company] [quarter]` command runs the full post-earnings workflow. It pulls actual results from connected MCP providers, compares against consensus estimates, identifies beats and misses by line item, updates the financial model, and produces a structured note ready for institutional clients. The `/initiate [company]` command produces the foundation of an initiating coverage report -- investment thesis (bull/base/bear), business description, financial model, valuation (comps and DCF), key risks, and price target. The `/morning-note` command synthesises overnight news from MT Newswires and earnings call transcripts from Aiera into a daily briefing. The `/thesis` command tracks key assumptions over time and flags when events challenge them.
+The `/earnings [company] [quarter]` command runs the full post-earnings workflow. It pulls actual results from connected data providers, compares against consensus estimates, identifies beats and misses by line item, updates the financial model, and produces a structured note ready for institutional clients. The `/initiate [company]` command produces the foundation of an initiating coverage report -- investment thesis (bull/base/bear), business description, financial model, valuation (comps and DCF), key risks, and price target. The `/morning-note` command synthesises overnight news from MT Newswires and earnings call transcripts from Aiera into a daily briefing. The `/thesis` command tracks key assumptions over time and flags when events challenge them.
 
 :::info What Is a Sell-Side vs. Buy-Side Analyst?
 Sell-side analysts work for investment banks and brokerage firms. They publish equity research reports with buy/hold/sell ratings and price targets for institutional investor clients. Buy-side analysts work for institutional investors -- asset managers, hedge funds, pension funds -- and analyse to support their own firm's investment decisions.
@@ -179,7 +201,7 @@ An initiating coverage report is a 25-50 page research document that introduces 
 Initiating coverage is how research franchises are built. The analyst's job: supply the non-consensus insight -- the view that differs from what the market already believes and explains why the stock is mispriced.
 :::
 
-### Exercise B: Equity Research Workflow
+### Exercise 11: Equity Research Workflow
 
 **Time:** 35 minutes. **Requires:** Cowork with the equity-research plugin installed.
 
@@ -219,7 +241,7 @@ Key QoE adjustments: add back genuinely one-time costs (litigation settlement, r
 The `/dd-checklist` command generates the structured workstreams; the analyst provides the judgment on what the findings mean for the investment thesis.
 :::
 
-### Exercise C: Private Equity Workflow
+### Exercise 12: Private Equity Workflow
 
 **Time:** 40 minutes. **Requires:** Cowork with the private-equity plugin installed. PitchBook access needed for sourcing; IC memo can use manually provided data.
 
@@ -245,7 +267,7 @@ The wealth-management plugin handles the adviser's client-facing workflow -- fro
 
 The `/client-review` command produces a pre-meeting brief: performance summary, allocation drift from IPS targets, recent market news relevant to the client's holdings, tax-loss harvesting opportunities, and suggested agenda items. `/financial-plan` runs goal-based analysis -- retirement projections, college funding, estate planning -- with scenario modelling across market conditions. `/rebalance` identifies drift from target allocation, recommends trades, and checks IPS constraints before any trade is proposed. `/client-report` generates quarterly and annual performance reports in the adviser's branded template. `/tlh` identifies positions with unrealised losses, runs offset analysis, and checks wash-sale rule compliance.
 
-### Exercise D: Wealth Management Workflow
+### Exercise 13: Wealth Management Workflow
 
 **Time:** 30 minutes. **Requires:** Cowork with the wealth-management plugin installed. Can use hypothetical client data.
 
@@ -255,9 +277,11 @@ The `/client-review` command produces a pre-meeting brief: performance summary, 
 
 3. Test constraints: _"Which positions in a standard 60/30/10 allocation would violate the ESG constraint? What replacements maintain sector allocation while satisfying the constraint?"_
 
-4. Prepare the meeting: _"Draft a pre-meeting note for a quarterly review. Include performance context, three topics to raise proactively, and two questions to check whether objectives have changed."_
+4. Run `/client-review` for your hypothetical client. Review the pre-meeting brief: does it include a performance summary, allocation drift from target, and suggested agenda items? Then ask: _"Add three topics to raise proactively and two questions to check whether the client's objectives have changed."_
 
 5. Handle the concern: _"The client wants to move 20% to cash due to volatility. How do I respond without being dismissive -- and what must I document for fiduciary compliance?"_
+
+6. Test the passive skill: without using any command, type _"My client just inherited $300K. How should we think about integrating this into the portfolio?"_ The financial-plan skill should activate automatically, framing the question around the client's existing goals and constraints without being explicitly invoked.
 
 **The key learning:** Wealth management is relationship management with analytical backing. The plugin handles the data assembly and compliance checks; the adviser provides the judgment, empathy, and fiduciary responsibility that no plugin can replicate.
 
@@ -265,17 +289,9 @@ The `/client-review` command produces a pre-meeting brief: performance summary, 
 
 Two additional plugins are built and maintained by data partners, bringing proprietary data directly into Claude workflows.
 
-**LSEG Plugin** -- prices bonds, analyses yield curves, evaluates FX carry trades, values options, and builds macro dashboards using LSEG financial data. Eight commands covering fixed income, FX, equities, and macro analysis.
+**LSEG Plugin** -- prices bonds, analyses yield curves, evaluates FX carry trades, values options, and builds macro dashboards using LSEG financial data. Eight commands covering fixed income, FX, equities, and macro analysis. To install, find **LSEG** in the `financial-services-plugins` marketplace you added in Lesson 5 and click **Install**. Requires an active LSEG data subscription.
 
-```bash
-claude plugin install lseg@financial-services-plugins
-```
-
-**S&P Global Plugin** -- generates company tearsheets, earnings previews, and funding digests powered by S&P Capital IQ data. Supports multiple audience types: equity research, IB/M&A, corporate development, and sales.
-
-```bash
-claude plugin install spglobal@financial-services-plugins
-```
+**S&P Global Plugin** -- generates company tearsheets, earnings previews, and funding digests powered by S&P Capital IQ data. Supports multiple audience types: equity research, IB/M&A, corporate development, and sales. To install, find **S&P Global** in the same marketplace and click **Install**. Requires an active S&P Capital IQ subscription.
 
 ## Making the Plugins Yours
 
@@ -319,7 +335,7 @@ Map the data flow across these three steps:
 3. Run /one-pager to compile the summary (core plugin)
 
 For each step:
-- What MCP providers supply the underlying data?
+- What data providers supply the underlying data?
 - What output from step N becomes input context for step N+1?
 - Where might format mismatches cause problems?
 - What would the final deliverable look like if all three

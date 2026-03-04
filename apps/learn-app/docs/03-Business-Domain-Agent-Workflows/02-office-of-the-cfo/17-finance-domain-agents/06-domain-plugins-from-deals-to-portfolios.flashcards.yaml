@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch17-06-addon-architecture-001"
     front: "Why must the core plugin (financial-analysis) be installed before any add-on plugin?"
-    back: "All 11 MCP data connectors are centralised in the core plugin. Add-on plugins inherit these connections automatically. Without the core, add-ons have no data sources to work with. The core also provides shared financial modelling commands (/comps, /dcf, /lbo) that add-ons build upon."
+    back: "All 11 data connectors are centralised in the core plugin. Add-on plugins inherit these connections automatically. Without the core, add-ons have no data sources to work with. The core also provides shared financial modelling commands (/comps, /dcf, /lbo) that add-ons build upon."
     tags: ["core-plugin", "install-order", "architecture"]
     difficulty: "basic"
 

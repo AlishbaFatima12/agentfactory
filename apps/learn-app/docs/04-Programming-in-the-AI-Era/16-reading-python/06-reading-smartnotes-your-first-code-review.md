@@ -76,7 +76,30 @@ When reviewing any Python function, follow these four steps in order. Each step 
 | 3. **Body** | The implementation logic line by line | How does it accomplish the contract? |
 | 4. **Edge Cases** | Empty inputs, None values, unexpected data | What happens when input is unusual? |
 
-The signature is the most important step. Before you read a single line of the body, the signature tells you the function's contract. A function that takes `list[Note]` and returns `dict[str, int]` is a counting function -- you know this before reading the implementation.
+The signature is the most important step. Before you read a single line of the body, the signature tells you the function's contract. A function that takes a collection of notes and returns a count for each tag is a counting function -- you know this before reading the implementation.
+
+---
+
+## New Concepts in This Review
+
+The SmartNotes module below uses several Python features you have not seen yet. This is intentional — in the real world, you will often read code that contains unfamiliar syntax. The goal is not to master each feature right now, but to read past it using what you already know. Here is a brief guide to each new piece:
+
+| New Syntax | What It Means | Example |
+|------------|---------------|---------|
+| `from dataclasses import dataclass` | Brings a tool (`dataclass`) from Python's standard library into this file | Like adding a tool to your workbench |
+| `@dataclass` | A decorator — tells Python to auto-generate setup code for the class below it | Saves you from writing repetitive boilerplate |
+| `class Note:` | Defines a new type called `Note` that bundles related data together | Like creating a new kind of labeled jar that holds multiple values |
+| `list[Note]` | A collection of `Note` objects — like a shelf of jars | `[Note(...), Note(...)]` |
+| `dict[str, int]` | A lookup table mapping text labels to numbers | `{"python": 3, "types": 2}` |
+| `for note in notes:` | A loop — repeats the indented code once for each item in the collection | Processes each note one at a time |
+| `if ... in ...:` | Checks whether a value exists inside a collection or string | `"python" in "python types"` is `True` |
+| `.append(item)` | Adds an item to the end of a list | Grows the list by one element |
+| `.lower()` / `.title()` | String methods that change capitalization | `"Hello".lower()` gives `"hello"` |
+| `.split()` / `" ".join(...)` | Breaks a string into pieces / joins pieces back together | `"a b".split()` gives `["a", "b"]` |
+| `len(...)` | Returns how many items are in a collection or characters in a string | `len([1, 2, 3])` gives `3` |
+| `"""..."""` | A docstring — a description of what the function does, placed right after `def` | Documentation for humans and tools |
+
+You do not need to memorize these. Use this table as a reference while you read the module below. By the end of this lesson, you will have seen each one in context — and context is where understanding begins.
 
 ---
 
@@ -161,7 +184,7 @@ def main() -> None:
     print(f"\nTag counts: {tag_counts}")
 ```
 
-The `@dataclass` decorator on `Note` is new. For now, read it as: "Python automatically creates an `__init__` method that accepts `title`, `body`, and `tags` as arguments." You do not need to understand how `@dataclass` works internally. You only need to know that `Note(title="...", body="...", tags=[...])` creates a Note with those three fields.
+As the New Concepts table above explains, `@dataclass` tells Python to auto-generate setup code for the `Note` class. You do not need to understand how it works internally. You only need to know that `Note(title="...", body="...", tags=[...])` creates a Note with those three fields — title (text), body (text), and tags (a list of text labels).
 
 ---
 
@@ -377,19 +400,10 @@ bool(0)          # False
 bool("")         # False
 bool("hello")    # True
 
-# === f-string Formatting ===
-f"Hi, {name}!"           # String interpolation
-f"{price:.2f}"           # Two decimal places
-
-# === String Methods ===
-"hello".upper()          # "HELLO"
-"hello".lower()          # "hello"
-"  hi  ".strip()         # "hi"
-"a,b,c".split(",")      # ["a", "b", "c"]
-"-".join(["a","b","c"])  # "a-b-c"
-"hello"[0]               # "h"
-"hello"[-1]              # "o"
-"hello"[1:4]             # "ell"
+# === String Expressions ===
+"Hello" + " " + "World"  # Concatenation: "Hello World"
+"-" * 20                  # Repetition: "--------------------"
+f"Hi, {name}!"           # f-string interpolation
 
 # === Arithmetic Operators ===
 7 / 2            # 3.5  (always float)
@@ -407,15 +421,14 @@ x == y           # Equal
 x != y           # Not equal
 0 < x < 10       # Chained comparison
 
-# === Dataclass (preview) ===
-from dataclasses import dataclass
-
-@dataclass
-class Note:
-    title: str
-    body: str
-    tags: list[str]
-# Creates Note(title="...", body="...", tags=[...]) automatically
+# === Capstone Preview (from Lesson 6) ===
+# These appear in the SmartNotes code review:
+# from dataclasses import dataclass  — import a tool
+# @dataclass                         — auto-generate setup code
+# class Note:                        — define a new type
+# for item in collection:            — loop through items
+# if value in text:                  — check membership
+# list[str], dict[str, int]          — collection types
 ```
 
 ---

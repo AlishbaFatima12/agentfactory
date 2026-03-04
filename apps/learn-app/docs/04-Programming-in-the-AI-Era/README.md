@@ -13,7 +13,24 @@ Traditional Python education teaches bottom-up: syntax first, verification last.
 
 AI eliminated that bottleneck. Tools like Claude Code, Cursor, and GitHub Copilot generate hundreds of lines of working code in seconds. The mechanical act of writing code is no longer the human's job. But someone must still define what the code should do, and someone must verify that it does it correctly. The AI handles the middle. You handle everything that matters.
 
+The data confirms this shift. GitClear's 2025 analysis of 211 million lines of code from Google, Microsoft, Meta, and enterprise repositories found that code duplication quadrupled after widespread AI adoption, while refactoring dropped from 25% to under 10% of changes. Code generated fast, but revised just as fast -- 7.9% of newly added lines required changes within two weeks, up from 5.5% before AI tools. Separately, Qodo's State of AI Code Quality report found that 76% of developers using AI assistants fall into what researchers call the "red zone" -- frequent hallucinations paired with low confidence in shipping. The teams that escaped this pattern shared one trait: they used AI for testing and review, not just generation, and their confidence in code quality jumped from 27% to 61%. Speed without verification produces churn. Speed with verification produces software.
+
 This part inverts the traditional order. You learn to read before you write. You learn types before syntax. You learn testing before building. And you learn it all through a single method that defines programming in the AI era: **Test-Driven Generation (TDG)**.
+
+## Before You Begin
+
+Part 4 assumes no programming experience -- you do not need to have written code before. But it does assume you have completed Parts 1-3 of this book. Here is what you should be comfortable with before starting:
+
+- **You can use a terminal.** You can open a terminal, navigate directories, and run commands. Part 2 (Linux Mastery, Chapter 11) covered this.
+- **You can prompt an AI assistant.** You can write a clear request to Claude Code or a similar tool and evaluate whether the response is useful. Parts 1-2 practiced this throughout.
+- **You understand version control basics.** You know what `git add`, `git commit`, and `git push` do, even if you are not fluent. Chapter 12 (Version Control) covered this.
+- **You have used Claude Code to build something.** You directed AI to create a working project -- file processing, data extraction, or a budget tracker. Parts 2-3 did this.
+
+If any of these feel unfamiliar, revisit the relevant chapter before continuing. Part 4 builds on these foundations -- it does not repeat them.
+
+:::note If you've never written a line of code
+That is exactly who Phase 1 is designed for. Chapter 15 walks you through every installation step with exact commands and expected output. Chapter 16 teaches you to read Python from scratch -- no prior syntax knowledge required. You will not be asked to write code until you can read it confidently. The course meets you where you are.
+:::
 
 ## The New Workflow
 
@@ -36,6 +53,16 @@ These six steps are not sequential phases you hand off and forget. They are a lo
 
 The key insight: you never start from a blank page, and you never accept output blindly. You start with a requirement and end with a passing test suite. Everything in between is a collaboration -- but the specification and the verification are yours.
 
+:::note If you're new to programming
+Some of these terms may be unfamiliar. Here is what they mean in plain English:
+- **Types** are labels that describe what kind of data something is -- text, a whole number, a decimal, true/false. You will learn these in Chapter 16.
+- **A test** is a short piece of code that checks whether another piece of code does what you expect. Think of it as a checklist: "If I give it 100 and 15%, I should get 115."
+- **A failing test** is a test you write *before* the code exists. It fails because there is nothing to check yet. Then AI writes the code to make it pass. That is the core idea of TDG.
+- **pytest** is the tool that runs your tests automatically and tells you which passed and which failed.
+
+You do not need to memorize any of this now. Each term gets its own lesson with step-by-step explanations.
+:::
+
 ## What "Writing Code" Means Now
 
 In the old model, writing code meant typing implementation -- functions, loops, conditionals -- from scratch. That skill still has value, but it is no longer the primary bottleneck or the primary skill.
@@ -48,7 +75,45 @@ In the new model, writing code means three things:
 
 3. **Verifying output critically.** AI optimizes for plausibility, not correctness. Your tests are the only reliable signal. When they fail, you diagnose why -- you do not re-prompt blindly. When they pass, you review for security and edge cases the tests may have missed.
 
-This is Test-Driven Generation (TDG) -- the method that defines programming in the AI era.
+This is Test-Driven Generation (TDG) -- the method that defines programming in the AI era. Here is what it looks like in practice:
+
+```python
+# 1. REQUIREMENT
+# "I need a function that calculates total price with tax"
+
+# 2. YOUR TYPE SIGNATURE (the specification)
+def total_with_tax(price: float, tax_rate: float) -> float: ...
+
+# 3. YOUR FAILING TEST (the definition of "correct")
+def test_total_with_tax():
+    assert total_with_tax(100.0, 0.15) == 115.0
+    assert total_with_tax(0.0, 0.15) == 0.0
+
+# 4. PROMPT AI: "Implement total_with_tax to pass these tests"
+
+# 5. AI GENERATES
+def total_with_tax(price: float, tax_rate: float) -> float:
+    return round(price * (1 + tax_rate), 2)
+
+# 6. VERIFY: pytest → 2 passed ✓
+```
+
+You wrote five lines. AI wrote one. The five lines you wrote -- the signature and the tests -- are the specification. The one line AI wrote is the implementation. If the tests pass, the code is correct. If they fail, you debug and iterate. That is the entire cycle.
+
+:::note If you're new to programming
+The code above may look like a foreign language right now. That is completely normal. Here is what it says in plain English:
+
+1. You tell the computer: "I need a calculation that takes a price and a tax rate and gives me the total."
+2. You write two checks: "If the price is 100 and tax is 15%, the answer should be 115" and "If the price is 0, the answer should be 0."
+3. You ask AI to write the actual calculation.
+4. You run your checks. If they pass, the calculation is correct.
+
+That is all TDG is -- describe what you want, write checks, let AI do the math, verify the answer. You will learn the syntax piece by piece starting in Chapter 16. By the time you reach Chapter 17 (Your First TDG Cycle), every line in this example will make sense.
+:::
+
+:::note If you've coded before
+If this reminds you of Test-Driven Development (TDD), you are right -- TDG is TDD with AI in the generation step. The difference: in TDD, you write the failing test and then write the implementation yourself. In TDG, you write the failing test and AI writes the implementation. Your job shifts from typing code to specifying precisely enough that AI gets it right on the first pass -- and verifying that it did.
+:::
 
 ## What You Need to Be Able to Do This
 
@@ -69,6 +134,10 @@ Every Python feature in Part 4 follows a five-step progression that builds from 
 5. **Build it** -- You specify types and tests with AI assistance, prompt AI to implement, and verify the output
 
 Steps 1--3 build your reading fluency. Steps 4--5 are the TDG cycle. By the end of Part 4, steps 4--5 feel as natural as steps 1--3 do now.
+
+:::note If you're new to programming
+Notice that you *see* and *read* before you are asked to *do* anything. This is deliberate. You will not be thrown into writing tests or specifying types without first understanding what they look like and how they work. Every new concept is shown to you, explained, and practiced through prediction exercises before you use it yourself.
+:::
 
 ## The Nine Phases
 
@@ -226,5 +295,27 @@ By the end of Part 4, you will be able to:
 After completing Part 4, continue to **Part 5: Building Custom Agents** where you apply your Python skills and axiom-grounded thinking to build production AI agents with SDKs like OpenAI Agents SDK, Google ADK, and the Anthropic SDK. The async patterns you mastered in Phase 7, the typed interfaces you designed in Phase 5, the security review skills from Phase 8, and the testing discipline you built in Phase 3 feed directly into agent development.
 
 The transformation of software development is underway. You are not just learning a language. You are learning to direct and verify the AI systems that write it. SmartNotes v1.0 is the proof that you can.
+
+## Key Terms (60-Second Glossary)
+
+Refer back to this table whenever a term feels unfamiliar. You do not need to memorize anything now -- each term gets its own lesson with step-by-step explanation.
+
+| Term | Plain English |
+|------|--------------|
+| **Python** | A programming language -- the one you are learning in this part |
+| **Type** | A label that says what kind of data something is: text, whole number, decimal, or true/false |
+| **Type annotation** | A note in code that declares a variable's type, like `age: int = 25` (the `: int` part is the annotation) |
+| **Variable** | A named container that holds a value -- like a labeled jar |
+| **Function** | A reusable block of code with a name. You give it inputs, it gives you an output |
+| **Function signature** | The first line of a function that declares its name, inputs, and output type -- the contract |
+| **Test** | A short piece of code that checks whether another piece of code does what you expect |
+| **pytest** | The tool that runs your tests automatically and reports which passed and which failed |
+| **Pyright** | A tool that checks your type annotations and catches type mismatches before you run the code |
+| **Ruff** | A tool that checks code style and formatting -- like a spell-checker for code |
+| **uv** | The package manager that installs Python and your project's tools |
+| **Git** | A tool that tracks every change you make to your code, so you can undo mistakes and collaborate |
+| **TDG** | Test-Driven Generation -- write a specification (types + tests), let AI generate the code, then verify |
+| **PRIMM** | Predict-Run-Investigate -- a method for reading code by predicting what it does before running it |
+| **AI assistant** | A tool like Claude Code that generates, explains, and reviews code based on your instructions |
 
 Let's begin.

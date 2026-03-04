@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-04
+- docs: rewrite Part 4 overview with TDG workflow and review feedback ([#804](https://github.com/panaversity/agentfactory/pull/804))
+
+### 2026-03-04
 - docs: fix plugin install instructions and companion repo links in ch18-20 ([#809](https://github.com/panaversity/agentfactory/pull/809))
 
 ### 2026-03-04

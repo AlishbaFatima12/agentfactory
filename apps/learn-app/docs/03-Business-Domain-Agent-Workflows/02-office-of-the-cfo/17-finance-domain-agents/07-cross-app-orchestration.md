@@ -141,12 +141,12 @@ This is what it means for an AI to act as an agent rather than an assistant. An 
 
 :::caution Access Note
 
-Exercise 11 below requires a Cowork Team or Enterprise subscription with the financial-analysis plugin and PowerPoint add-in enabled. If you are on a Claude Max plan or your organisation has not yet deployed Cowork, you cannot run this exercise as written.
+Exercise 14 below requires a Cowork Team or Enterprise subscription with the financial-analysis plugin and PowerPoint add-in enabled. If you are on a Claude Max plan or your organisation has not yet deployed Cowork, you cannot run this exercise as written.
 
 **Alternative for Max-plan users:** Complete steps 1 and 2 using Claude in Excel alone (install the financial-services-plugins via Claude Code if available), then manually copy the three data points to a PowerPoint slide. Compare the time and error risk of that manual approach to what steps 3-4 describe. That comparison IS the lesson this exercise teaches.
 :::
 
-## Exercise 11: Cross-App Orchestration
+## Exercise 14: Cross-App Orchestration
 
 **What you need:** Cowork Team or Enterprise with the financial-analysis plugin installed and PowerPoint add-in access.
 
