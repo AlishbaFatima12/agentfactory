@@ -9,7 +9,7 @@ If AI can write code, why should you learn programming?
 
 It is the most common question in 2026. And the answer is counterintuitive: programming has become **more important, not less** -- but what programming means has fundamentally changed.
 
-Traditional Python education teaches bottom-up: syntax first, verification last. *Python Crash Course* teaches features through projects, with testing arriving at Chapter 11. *Learning Python* devotes 1,270 pages to deep Python, with OOP starting at page 687. Both assume the bottleneck is producing code -- typing functions, loops, and classes from a blank page.
+Traditional Python education teaches bottom-up: syntax first, verification last. [Python Crash Course](https://www.oreilly.com/library/view/python-crash-course/9781098156664/) teaches features through projects, with testing arriving at Chapter 11. [Learning Python](https://www.oreilly.com/library/view/learning-python-5th/9781449355722/) devotes 1,270 pages to deep Python, with OOP starting at page 687. Both assume the bottleneck is producing code -- typing functions, loops, and classes from a blank page.
 
 AI eliminated that bottleneck. Claude Code generates hundreds of lines of working code in seconds. The mechanical act of writing code is no longer the human's job. But someone must still define what the code should do, and someone must verify that it does it correctly. The AI handles the middle. You handle everything that matters.
 
