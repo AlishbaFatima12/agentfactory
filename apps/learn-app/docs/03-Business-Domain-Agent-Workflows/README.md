@@ -41,6 +41,10 @@ Here is a breakdown of exactly who should read this part and why:
 *   **Who they are:** The professionals sitting between the developers and the business stakeholders, designing the AI workflows.
 *   **Why they should read it:** They need to understand how to map a massive enterprise function (like Contract Lifecycle Management or IFRS 9 assessments) into discrete, automated agent skills and workflows. It gives them a perfect architectural template to plan sprints, gather requirements, and define where the "human-in-the-loop" handoffs must occur.
 
+#### 5. Banking & Islamic Finance experts — credit officers, Shariah advisors, and Islamic banking teams.
+
+#### 6. Senior leaders in Sales/RevOps, Supply Chain, HR/Operations, Product Management & Innovation who want to turn their playbooks and judgment into scalable AI agents
+
 #### Summary
 If **Part 1 and 2** of an AI curriculum are for the *coders*, **Part 3** is for the **builders of the modern enterprise**. Anyone involved in the strategy, development, compliance, or management of enterprise-grade AI should consider this required reading.
 
