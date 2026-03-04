@@ -46,10 +46,10 @@ skills:
     measurable_at_this_level: "Student can explain the category placeholder system (~~erp, ~~data warehouse) and articulate why this design separates workflow knowledge from connector configuration, connecting it to Chapter 15's division of responsibility between knowledge workers and IT"
 
 learning_objectives:
-  - objective: "Explain the architectural difference between Claude as an embedded assistant in one application and Claude as an orchestrating agent across multiple applications, identifying why the same MCP connectors serve both contexts with different scope"
+  - objective: "Explain the architectural difference between Claude as an embedded assistant with native workbook access and Claude as an orchestrating agent that uses MCP connectors to reach across multiple applications"
     proficiency_level: "B1"
     bloom_level: "Understand"
-    assessment_method: "Student can describe the assistant-to-agent shift without conflating connectors with capabilities, and can explain what changes (orchestration scope) and what stays the same (the MCP connector set)"
+    assessment_method: "Student can describe the assistant-to-agent shift, explaining that Claude in Excel has native workbook access while Cowork uses MCP connectors for cross-app orchestration, and can articulate what changes (scope and connector usage) when moving from one to the other"
 
   - objective: "Describe the knowledge-work-plugins/finance plugin structure, distinguishing between its five commands (explicitly invoked) and six skills (passively activated), and explain how they combine to support a multi-day month-end close workflow"
     proficiency_level: "B1"
@@ -80,23 +80,23 @@ teaching_guide:
   session_group: 2
   session_title: "The Cowork Architecture"
   key_points:
-    - "The same MCP connectors work in both Claude in Excel and Cowork -- the difference is scope (single workbook vs multi-app orchestration), not the connector set"
+    - "Claude in Excel has native workbook access; Cowork uses MCP connectors to reach multiple applications -- the shift is from embedded assistant to orchestrating agent"
     - "Skills fire passively when contextually relevant; commands are explicitly invoked -- the combination produces specialist behaviour, not just tool access"
     - "The category placeholder system (~~erp, ~~data warehouse) is an architectural insight: plugins describe workflows, IT configures connections"
     - "The month-end close workflow demonstrates how commands and skills work together across multiple days, with the close-management skill providing continuous context"
   misconceptions:
-    - "Students may think Cowork has a different set of connectors from Claude in Excel -- it does not. The same MCP connectors work in both contexts."
+    - "Students may think Cowork connectors are pre-configured -- they are not. Connectors must be separately enabled and some require provider API keys or subscriptions."
     - "Students may confuse skills with commands -- skills are passive (Claude applies them automatically), commands are active (you type them explicitly)"
     - "Students may think the plugin requires specific ERP software -- the category placeholder system is tool-agnostic by design"
   discussion_prompts:
     - "Why does the plugin use ~~erp instead of 'NetSuite'? What does this tell you about who the plugin is designed for?"
     - "If you were a controller starting a month-end close, which would you interact with first -- a command or a skill? Why?"
   teaching_tips:
-    - "The connector narrative is the most important correction: students must understand that Claude in Excel and Cowork share the same MCP connectors. The difference is what Claude can DO with them -- single-workbook analysis vs multi-app orchestration."
+    - "The architecture shift is the most important concept: Claude in Excel has native access to the open workbook. Cowork uses MCP connectors to reach across applications. The difference is scope -- embedded assistant vs orchestrating agent -- not a shared connector set."
     - "The month-end close walkthrough is the anchor example. Walk through it day by day, showing how commands produce outputs and skills provide context."
   assessment_checks:
     - question: "What changes when Claude operates through Cowork instead of inside Excel?"
-      expected_response: "The scope of what Claude can do with the same connectors. In Excel, Claude works within one workbook. Through Cowork, Claude can orchestrate across multiple applications -- carrying context from Excel to PowerPoint, querying enterprise systems, and executing multi-step workflows."
+      expected_response: "The scope of what Claude can do. In Excel, Claude works as an embedded assistant within one workbook with native access. Through Cowork, Claude uses MCP connectors to orchestrate across multiple applications -- carrying context from Excel to PowerPoint, querying enterprise systems, and executing multi-step workflows."
     - question: "What is the difference between a skill and a command in a Cowork plugin?"
       expected_response: "A command is explicitly invoked by typing /command-name and triggers a specific workflow. A skill fires automatically in the background whenever Claude judges it contextually relevant. Commands are what you call; skills are what Claude draws on."
     - question: "Why does CONNECTORS.md use ~~erp instead of naming a specific product?"
@@ -116,7 +116,7 @@ This lesson requires the **Claude desktop app** with **Cowork** enabled. Cowork 
 4. **Enable connectors for live data.** From the same **Customize** menu, select **Connectors** to browse and enable data integrations (such as your ERP, data warehouse, or office suite). The plugin references connector categories like `~~erp` and `~~data warehouse` in its workflows — once you enable the matching connector, those workflows pull data automatically. Some connectors require a separate subscription or API key from the provider. For enterprise deployments, your IT team can pre-provision connectors across the organisation through the admin console.
    :::
 
-This lesson crosses that boundary. When Claude operates through the Cowork platform, it is not embedded in Excel the way a sidebar is embedded in a workbook. It is an agent that can act across applications, carry context from one tool to another, and execute multi-step workflows that span the entire production process of a financial deliverable. The most significant change is not the tools Claude can access -- the same MCP connectors you configured for Claude in Excel work in Cowork automatically. The change is what Claude can do with them: orchestrate across applications rather than analyse within one.
+This lesson crosses that boundary. When Claude operates through the Cowork platform, it is not embedded in Excel the way a sidebar is embedded in a workbook. It is an agent that can act across applications, carry context from one tool to another, and execute multi-step workflows that span the entire production process of a financial deliverable. Claude in Excel has native access to the open workbook -- no connectors needed. Cowork uses MCP connectors to reach across applications. The most significant change is scope: from analysing within one workbook to orchestrating across many tools.
 
 ## The Architecture Shift: From One Tool to Many
 
@@ -124,7 +124,7 @@ The distinction between an embedded assistant and an orchestrating agent is a sc
 
 Claude in Excel handles the first step well. It can reconcile accounts, generate statements, and analyse variances inside the workbook. But when the controller closes Excel and opens PowerPoint, Claude's context resets. The analysis that took fifteen minutes to produce must be manually carried forward.
 
-Cowork treats these transitions as steps in a single workflow rather than as separate tasks. The controller specifies the outcome -- a formatted management deck with variance commentary based on the March close -- and Claude manages the sequence. The same MCP connectors that pulled the trial balance data in Excel now serve a broader purpose: they feed an orchestrated workflow that spans multiple deliverables.
+Cowork treats these transitions as steps in a single workflow rather than as separate tasks. The controller specifies the outcome -- a formatted management deck with variance commentary based on the March close -- and Claude manages the sequence. Where Claude in Excel had native access to one workbook, Cowork uses MCP connectors to reach Excel, PowerPoint, the data warehouse, and email -- feeding an orchestrated workflow that spans multiple deliverables.
 
 > **What Is Cross-App Orchestration?**
 >
