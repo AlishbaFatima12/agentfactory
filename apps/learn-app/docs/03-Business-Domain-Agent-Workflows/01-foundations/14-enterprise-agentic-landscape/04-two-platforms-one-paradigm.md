@@ -199,7 +199,7 @@ When choosing a platform, ask three questions:
 
 For most Part 3 readers, **Cowork is the starting point**. You have domain expertise concentrated in your team. You have a team-level budget. You want results in weeks, not quarters. All hands-on exercises in this book use Cowork.
 
-This does not mean Frontier is irrelevant to you. Understanding Frontier helps you recognise when your organisation is ready for enterprise-wide deployment -- and positions you to lead that conversation when the time comes. The platform decision is revisited in Chapter 25 for readers who are advising organisations on longer-term architecture choices.
+This does not mean Frontier is irrelevant to you. Understanding Frontier helps you recognise when your organisation is ready for enterprise-wide deployment -- and positions you to lead that conversation when the time comes. The platform decision is revisited in Chapter 26 for readers who are advising organisations on longer-term architecture choices.
 
 ## Try With AI
 
