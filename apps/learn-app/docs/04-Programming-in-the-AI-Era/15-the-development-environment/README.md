@@ -33,7 +33,9 @@ This is the difference between writing code and building software. Before you wr
 
 In Chapter 14, you learned that AI generates code fast -- but speed without verification is dangerous. The ten axioms gave you the principles: specify what you want, verify what you get. This chapter gives you the tools that make verification automatic.
 
-An AI assistant can produce fifty lines of Python in seconds. Without the discipline stack, you have no way to check those fifty lines. Did the AI use the right types? Are there unused imports? Does the code do what you asked? You cannot answer those questions by reading alone -- not reliably, not at the speed AI generates code. The five tools in this chapter answer them for you, automatically, every time.
+Claude Code can produce fifty lines of Python in seconds. Without the discipline stack, you have no way to check those fifty lines. Did the AI use the right types? Are there unused imports? Does the code do what you asked? You cannot answer those questions by reading alone -- not reliably, not at the speed Claude Code generates code. The five tools in this chapter answer them for you, automatically, every time.
+
+In Chapter 5, you learned Spec-Driven Development (SDD) -- the methodology for turning specifications into reliable implementations using Claude Code. The discipline stack is what makes SDD work for Python. Pyright enforces your type specifications. pytest verifies your test specifications. ruff keeps the generated code clean. Git tracks every change. Together, these tools form the verification layer that sits between your specification and Claude Code's output.
 
 ## What You Will Learn
 
@@ -85,3 +87,4 @@ Each tool in the discipline stack maps directly to an axiom you learned in Chapt
 ## Prerequisites
 
 - **Chapter 14: Ten Axioms of Programming in AI-Driven Development** -- This chapter assumes familiarity with all ten axioms. Each lesson references specific axioms by number and name.
+- **[Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development)** -- You must understand the SDD workflow (Research → Specification → Refinement → Implementation) and why specifications come before code. The discipline stack you install here is the verification layer for the SDD methodology you learned in Chapter 5. Claude Code is your primary development tool throughout Part 4.
