@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-04
+- docs: renumber Part 4 chapters, emphasize SDD + Claude Code ([#811](https://github.com/panaversity/agentfactory/pull/811))
+
+### 2026-03-04
 - docs: add beginner-friendly examples to Part 4 phase descriptions ([#810](https://github.com/panaversity/agentfactory/pull/810))
 
 ### 2026-03-04
