@@ -1,8 +1,8 @@
 deck:
   id: "ch17-01-the-assistant-and-the-agent"
   title: "The Assistant and the Agent"
-  description: "The architectural distinction between Claude in Excel (embedded assistant) and Cowork with Excel (orchestrating agent), the two layers of Claude in Excel, and MCP connector scope."
-  tags: ["claude-in-excel", "cowork", "finance-domain", "assistant-vs-agent", "MCP-connectors", "agent-skills"]
+  description: "The architectural distinction between Claude in Excel (embedded assistant) and Cowork with Excel (orchestrating agent), the two layers of Claude in Excel, and data connector scope."
+  tags: ["claude-in-excel", "cowork", "finance-domain", "assistant-vs-agent", "data-connectors", "agent-skills"]
   version: 1
 
 cards:
@@ -20,7 +20,7 @@ cards:
 
   - id: "ch17-01-core-distinction-003"
     front: "What is the core architectural distinction between Claude in Excel and Cowork with Excel?"
-    back: "Claude in Excel is an AI assistant embedded in one application (single-workbook scope). Cowork with Excel is an AI agent orchestrating across multiple applications (multi-app scope). They share the same MCP connectors — the difference is scope, not capability."
+    back: "Claude in Excel is an AI assistant embedded in one application (single-workbook scope). Cowork with Excel is an AI agent orchestrating across multiple applications (multi-app scope). They share the same data connectors — the difference is scope, not capability."
     tags: ["assistant-vs-agent", "architecture"]
     difficulty: "basic"
 
@@ -37,9 +37,9 @@ cards:
     difficulty: "intermediate"
 
   - id: "ch17-01-connectors-shared-006"
-    front: "Do Claude in Excel and Cowork use separate MCP connector ecosystems?"
-    back: "They share a single MCP connector ecosystem. Any connector configured in your Claude settings works in both environments automatically. The difference is scope: Claude in Excel uses connectors to serve analysis within one workbook, while Cowork uses the same connectors to serve workflows spanning multiple applications."
-    tags: ["MCP-connectors", "shared-ecosystem"]
+    front: "Do Claude in Excel and Cowork use separate data connector ecosystems?"
+    back: "They share a single data connector ecosystem. Any connector configured in your Claude settings works in both environments automatically. The difference is scope: Claude in Excel uses connectors to serve analysis within one workbook, while Cowork uses the same connectors to serve workflows spanning multiple applications."
+    tags: ["data-connectors", "shared-ecosystem"]
     difficulty: "intermediate"
     why: "Tests whether student understands the corrected connector narrative — same connectors, different scope"
 
@@ -64,6 +64,6 @@ cards:
 
   - id: "ch17-01-chapter-structure-010"
     front: "What are the three parts of Chapter 17 and what does each cover?"
-    back: "Part One covers Claude in Excel (the embedded assistant — general workbook intelligence and pre-built Agent Skills). Part Two covers Cowork finance plugins (the orchestrating agent — domain plugins, MCP connectors, cross-app orchestration). Part Three covers enterprise extensions (custom SKILL.md files applying the Knowledge Extraction Method from Chapter 16)."
+    back: "Part One covers Claude in Excel (the embedded assistant — general workbook intelligence and pre-built Agent Skills). Part Two covers Cowork finance plugins (the orchestrating agent — domain plugins, data connectors, cross-app orchestration). Part Three covers enterprise extensions (custom SKILL.md files applying the Knowledge Extraction Method from Chapter 16)."
     tags: ["chapter-structure", "roadmap"]
     difficulty: "basic"

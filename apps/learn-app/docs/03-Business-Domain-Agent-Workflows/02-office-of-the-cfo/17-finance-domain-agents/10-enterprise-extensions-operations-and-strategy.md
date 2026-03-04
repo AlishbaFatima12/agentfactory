@@ -161,7 +161,7 @@ The variance analysis command calculates variances. It does not know your planni
 - **Seasonal adjustment factors:** Which lines have known seasonal patterns, the adjustment factor for each, and the reasoning so the agent can explain seasonality in narrative form rather than treating it as an unexplained variance
 - **Forward-looking statement standards:** The standard disclaimer language required on documents containing forecasts
 
-### Exercise 13: FP&A SKILL.md
+### Exercise 16: FP&A SKILL.md
 
 **What you need:** 30 minutes. Your organisation's most recent budget-vs-actual report, or the practice model from Exercise 4.
 
@@ -229,7 +229,7 @@ Fund administration is a domain where precision is contractual. The net asset va
 - **Investor reporting requirements:** The content, format, and cadence of investor statements — quarterly NAV statements, annual audited financials, capital account statements, K-1 tax reporting (US), and ad hoc investor requests
 - **Regulatory filings:** Form PF (US), AIFMD Annex IV (EU), or equivalent filings in your jurisdiction — the data points required, the calculation methodology, and the filing deadlines
 
-### Exercise 14: Fund Admin SKILL.md
+### Exercise 17: Fund Admin SKILL.md
 
 **What you need:** 30 minutes. Your fund's offering memorandum or partnership agreement, or a sample LPA.
 

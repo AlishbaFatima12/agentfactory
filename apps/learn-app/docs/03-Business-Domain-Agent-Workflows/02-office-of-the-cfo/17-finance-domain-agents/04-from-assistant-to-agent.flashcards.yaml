@@ -1,21 +1,15 @@
 deck:
   id: "ch17-04-from-assistant-to-agent"
   title: "From Assistant to Agent: Cowork Finance Plugins"
-  description: "The architecture shift from embedded assistant to orchestrating agent, the knowledge-work-plugins/finance plugin structure, skills vs commands, category placeholders, and month-end close workflow."
-  tags: ["cowork", "finance-plugin", "skills-vs-commands", "category-placeholders", "month-end-close", "orchestration"]
-  version: 1
+  description: "The architecture shift from embedded assistant to orchestrating agent, the knowledge-work-plugins/finance plugin commands, skills vs commands, category placeholders, and hands-on reconciliation and variance analysis workflows."
+  tags: ["cowork", "finance-plugin", "skills-vs-commands", "category-placeholders", "reconciliation", "variance-analysis"]
+  version: 2
 
 cards:
   - id: "ch17-04-architecture-shift-001"
     front: "What is the key difference between Claude in Excel and Claude through Cowork?"
-    back: "Scope, not technology. Claude in Excel works within one workbook -- analysis, formulas, Agent Skills all bounded by the spreadsheet. Cowork enables Claude to orchestrate across multiple applications, carrying context from Excel to PowerPoint to email. The same MCP connectors serve both contexts."
+    back: "Scope, not technology. Claude in Excel works within one workbook -- analysis, formulas, Agent Skills all bounded by the spreadsheet. Cowork enables Claude to orchestrate across multiple applications, carrying context from Excel to PowerPoint to email."
     tags: ["architecture-shift", "scope"]
-    difficulty: "basic"
-
-  - id: "ch17-04-same-connectors-002"
-    front: "Do Claude in Excel and Cowork use different MCP connectors?"
-    back: "They share the same MCP connector set. Any connector configured in Claude settings works in both contexts automatically. The difference is what Claude can do with them: single-workbook analysis (Excel) vs multi-app orchestration (Cowork)."
-    tags: ["connectors", "mcp", "common-mistake"]
     difficulty: "basic"
 
   - id: "ch17-04-skills-vs-commands-003"
@@ -24,35 +18,22 @@ cards:
     tags: ["skills", "commands", "plugin-architecture"]
     difficulty: "basic"
 
-  - id: "ch17-04-close-management-skill-004"
-    front: "What makes the close-management skill particularly valuable as a passive skill?"
-    back: "It activates whenever you are in a close context -- even for general questions about account balances -- and applies the close checklist lens automatically. It flags whether items are resolved, whether they need resolution before a specific close day, and who owns them. It provides continuous context rather than waiting to be invoked."
-    tags: ["close-management", "passive-skill"]
-    difficulty: "intermediate"
-
-  - id: "ch17-04-plugin-structure-005"
-    front: "What are the five components of the knowledge-work-plugins/finance directory structure?"
-    back: "1. .claude-plugin/plugin.json (manifest: name, description, version)\n2. .mcp.json (tool connections / data sources)\n3. CONNECTORS.md (documentation of connected tools)\n4. commands/ (5 slash command .md files you invoke explicitly)\n5. skills/ (6 skill directories with SKILL.md files Claude draws on automatically)"
-    tags: ["plugin-structure", "directory-layout"]
-    difficulty: "basic"
-
   - id: "ch17-04-five-commands-006"
     front: "What are the five commands in the knowledge-work-plugins/finance plugin?"
-    back: "1. /journal-entry [type] [period] -- generate journal entries with debits, credits, and rationale\n2. /reconciliation [account] [period] -- compare GL to source of truth, categorise differences\n3. /income-statement [period-type] [period] -- management P&L with variance flagging\n4. /variance-analysis [area] [period-vs-period] -- decompose variances into volume, price, mix\n5. /sox-testing [process] [period] -- SOX 404 control testing workpapers"
+    back: "1. /reconciliation [account] [period] -- compare GL to source of truth, categorise differences\n2. /journal-entry [type] [period] -- generate journal entries with debits, credits, and rationale\n3. /variance-analysis [area] [period-vs-period] -- decompose variances into volume, price, mix\n4. /income-statement [period-type] [period] -- management P&L with variance flagging\n5. /sox-testing [process] [period] -- SOX 404 control testing workpapers"
     tags: ["five-commands", "finance-plugin"]
+    difficulty: "intermediate"
+
+  - id: "ch17-04-recon-je-pair-011"
+    front: "How do /reconciliation and /journal-entry work as a pair in the close workflow?"
+    back: "/reconciliation identifies discrepancies between the GL and source of truth, categorising each as timing difference, in-transit, error, or requiring investigation. /journal-entry then creates correcting entries for items categorised as errors. Reconciliation finds problems; journal entries fix them."
+    tags: ["reconciliation", "journal-entry", "close-workflow"]
     difficulty: "intermediate"
 
   - id: "ch17-04-category-placeholders-007"
     front: "What is the category placeholder system (~~erp, ~~data warehouse) and why does the plugin use it?"
-    back: "Category placeholders are tool-agnostic references in workflow definitions. The plugin says 'pull data from ~~erp' instead of 'pull data from NetSuite.' This separates workflow knowledge (owned by the knowledge worker) from connector configuration (owned by IT). The same plugin works with NetSuite or SAP without modifying any SKILL.md or command file -- IT just configures .mcp.json to point ~~erp at the right MCP server."
+    back: "Category placeholders are tool-agnostic references in workflow definitions. The plugin says 'pull data from ~~erp' instead of 'pull data from NetSuite.' This separates workflow knowledge (owned by the knowledge worker) from connector configuration (owned by IT). The same plugin works with NetSuite or SAP without modifying any SKILL.md or command file."
     tags: ["category-placeholders", "tool-agnostic", "separation-of-concerns"]
-    difficulty: "intermediate"
-    why: "Tests understanding of the architectural insight: workflows are product-agnostic, connections are product-specific"
-
-  - id: "ch17-04-division-of-responsibility-008"
-    front: "How does the category placeholder system connect to Chapter 15's division of responsibility?"
-    back: "Chapter 15 established that the knowledge worker owns the SKILL.md (workflow definitions) and IT owns the infrastructure. The category placeholder system makes this concrete: SKILL.md files and commands use ~~erp and ~~data warehouse to describe workflows. IT configures .mcp.json to map these placeholders to specific products. Neither modifies the other's work."
-    tags: ["division-of-responsibility", "ch15-connection"]
     difficulty: "intermediate"
 
   - id: "ch17-04-gl-reconciliation-009"
@@ -61,8 +42,26 @@ cards:
     tags: ["gl-reconciliation", "reconciling-items"]
     difficulty: "intermediate"
 
-  - id: "ch17-04-month-end-sequence-010"
-    front: "In the month-end close workflow example, what command would you use on Day 5 and why?"
-    back: "/variance-analysis revenue 2025-Q1 vs budget. By Day 5, reconciliations and journal entries are complete. The variance analysis decomposes the difference between actual and budget into volume, price, and mix components, producing CFO-ready narratives. The close-management skill simultaneously checks this step off the close checklist and confirms readiness for Day 6's income statement."
-    tags: ["month-end-close", "workflow-sequence"]
+  - id: "ch17-04-variance-decomp-012"
+    front: "What three drivers does /variance-analysis decompose revenue variances into?"
+    back: "Volume (units sold vs planned), price (average selling price vs planned), and mix (product/segment distribution vs planned). Operating expense variances split differently: into volume-driven and rate-driven components."
+    tags: ["variance-analysis", "revenue-drivers"]
+    difficulty: "intermediate"
+
+  - id: "ch17-04-close-management-skill-004"
+    front: "What makes the close-management skill particularly valuable as a passive skill?"
+    back: "It activates whenever you are in a close context -- even for general questions about account balances -- and applies the close checklist lens automatically. It flags whether items are resolved, whether they need resolution before a specific close day, and who owns them. It provides continuous context rather than waiting to be invoked."
+    tags: ["close-management", "passive-skill"]
+    difficulty: "intermediate"
+
+  - id: "ch17-04-sox-testing-013"
+    front: "What does /sox-testing produce, and why is it described as a framework rather than a conclusion?"
+    back: "/sox-testing generates a SOX 404 control testing workpaper: control description, testing methodology, sample selection criteria, test steps, and spaces for test results and exceptions. It is a framework because the plugin builds the testing structure, but a qualified auditor must execute the tests, document conclusions, and sign off. The plugin cannot substitute for professional judgment on control effectiveness."
+    tags: ["sox-testing", "control-testing", "compliance"]
+    difficulty: "intermediate"
+
+  - id: "ch17-04-cross-reference-014"
+    front: "Why should you run both /variance-analysis and /income-statement and cross-reference the outputs?"
+    back: "They are complementary views of the same data. The variance analysis explains WHY numbers moved (volume, price, mix decomposition). The income statement shows WHAT moved (line-by-line P&L). Cross-referencing builds the management narrative that the CFO deck requires."
+    tags: ["variance-analysis", "income-statement", "management-narrative"]
     difficulty: "intermediate"

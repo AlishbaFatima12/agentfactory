@@ -20,5 +20,5 @@ The financial-services-plugins suite extends its core plugin with four function-
 
 ### Connections
 
-- **Builds on**: Lesson 5 established the core plugin with its shared MCP connectors and financial modelling commands; this lesson explores the four add-on plugins and two partner plugins built on that foundation
+- **Builds on**: Lesson 5 established the core plugin with its shared connectors and financial modelling commands; this lesson explores the four add-on plugins and two partner plugins built on that foundation
 - **Leads to**: Lesson 7 covers cross-app orchestration -- how these plugins work together across Excel, PowerPoint, and connected enterprise systems
