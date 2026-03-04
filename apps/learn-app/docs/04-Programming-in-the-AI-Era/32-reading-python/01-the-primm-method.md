@@ -135,6 +135,27 @@ This chapter focuses on the first three stages. They form a tight loop: predict,
 
 ---
 
+## Reading Python: What You'll See
+
+Every code block in this lesson uses the same four building blocks. Knowing what they are turns your predictions from random guesses into informed reasoning.
+
+**Variables** are named containers. `greeting = "Hello"` stores the text `Hello` in a container called `greeting`. You choose the name; Python remembers the value.
+
+**Type annotations** are the `: str`, `: int`, `: float`, `: bool` labels after variable names. They tell you what kind of data the variable holds -- like labels on kitchen jars. They do not change what the code does. They make code easier to read.
+
+| Type    | What It Holds      | Example              |
+|---------|--------------------|----------------------|
+| `str`   | Text (a "string")  | `"Hello"`, `"3.14"` |
+| `int`   | Whole number        | `7`, `-2`, `0`       |
+| `float` | Decimal number      | `3.14`, `0.5`        |
+| `bool`  | True or False       | `True`, `False`      |
+
+**`print()`** displays whatever is inside the parentheses on your screen. Every block ends with `print()` so you can check your prediction against the actual output.
+
+With these four pieces -- variables, type annotations, types, and `print()` -- you can read every block that follows.
+
+---
+
 ## Your First Four Predictions
 
 Time to practice. For each block, you will ask your AI assistant to generate a short Python snippet, read what it produces, predict the output, and then run the code. This mirrors real AI-driven development: the AI writes, you read and verify.
@@ -150,6 +171,8 @@ $ uv run python main.py
 ---
 
 ### Block 1: String Concatenation
+
+**What's new here:** When you use `+` between strings, Python joins them end to end -- this is called concatenation, not addition. Characters inside quotes (including commas and spaces) appear exactly as written in the output.
 
 Open Claude Code in your SmartNotes project and type this prompt:
 
@@ -175,10 +198,6 @@ $ uv run python main.py
 Hello, James!
 ```
 
-:::note If you have never seen `: str` before
-The `: str` after each variable name is called a **type annotation**. It tells you (and tools like pyright) what kind of data the variable holds. `str` means "string" -- a piece of text. Type annotations do not change what the code does. They are labels that make code easier to read. Think of them like labels on kitchen jars: the label says "Sugar" so you know what is inside without tasting it.
-:::
-
 **Investigate**: The `+` operator joins strings end to end. `greeting` holds `"Hello"`, then `+` attaches `", "`, then `name` attaches `"James"`, then `+` attaches `"!"`. If your prediction matched, your mental model of string concatenation is working. If you predicted something like `Hello James!` (missing the comma and space), look again at the second piece: `", "` -- the comma and space are inside the quotes, so they are part of the string.
 
 Notice what just happened: the AI generated the code, but *you* did the thinking. You read it, predicted the output, and checked whether your understanding was correct. That is the core loop of this chapter.
@@ -186,6 +205,8 @@ Notice what just happened: the AI generated the code, but *you* did the thinking
 ---
 
 ### Block 2: Floor Division
+
+**What's new here:** Python has two division operators. A single `/` gives the full decimal result (`10 / 3` produces `3.3333...`). A double `//` is **floor division** -- it divides and drops everything after the decimal point, giving a whole number. Watch which operator the code uses.
 
 Ask Claude Code:
 
@@ -215,15 +236,13 @@ $ uv run python main.py
 In Python, `//` always floors toward negative infinity, not toward zero. For positive numbers, this is the same as truncation. For negative numbers, `-7 // 2` gives `-4`, not `-3`. This distinction matters when you encounter negative values later in the course.
 :::
 
-:::note If you are wondering why two symbols
-Python uses two different division operators. A single `/` gives you the full decimal result: `10 / 3` produces `3.3333...`. The double `//` is called **floor division** -- it divides and drops everything after the decimal point, giving you a whole number. The type annotation `: int` on the result is a clue -- integers cannot have decimals.
-:::
-
 **Investigate**: If you predicted `3.33` or `3.3333`, you were thinking of regular division (`/`). Floor division (`//`) always rounds down to the nearest whole number. The AI generated code using `//` specifically. Part of reading code is noticing which operator was used -- a single character changes the result entirely.
 
 ---
 
 ### Block 3: F-Strings and Arithmetic
+
+**What's new here:** An `f` before the opening quote makes an **f-string** (formatted string). Inside an f-string, anything between `{` and `}` gets replaced with that variable's value. Without the `f`, Python prints the literal text `{total}` instead of the number. Also note: multiplying a `float` by an `int` produces a `float`.
 
 Ask Claude Code:
 
@@ -250,10 +269,6 @@ $ uv run python main.py
 Total: $89.97
 ```
 
-:::note If you are wondering what the `f` does
-The `f` before the opening quote makes this an **f-string** (formatted string literal). Inside an f-string, anything between `{` and `}` is evaluated as Python code and replaced with its result. So `{total}` becomes `89.97`. Without the `f`, Python would print the literal text `{total}` instead of the number. The `$` is just a regular character -- Python does not treat it as special.
-:::
-
 **Investigate**: Three things happen in this block. First, `price * quantity` multiplies a float by an integer -- Python handles this automatically, producing a float. Second, the f-string evaluates `{total}` and inserts the value. Third, the `$` appears in the output as-is.
 
 If you predicted `Total: $89.97000000000001`, your instinct about floating-point precision was technically sound. Python's `float` type sometimes produces tiny rounding artifacts. In this case, `29.99 * 3` happens to produce exactly `89.97`, but similar calculations can surprise you with extra decimals.
@@ -261,6 +276,8 @@ If you predicted `Total: $89.97000000000001`, your instinct about floating-point
 ---
 
 ### Block 4: Boolean Logic
+
+**What's new here:** Comparisons like `>` (greater than) produce a boolean result: either `True` or `False`. The `and` operator combines two booleans and returns `True` only when *both* sides are `True`. If either side is `False`, the result is `False`.
 
 Ask Claude Code:
 
@@ -287,10 +304,6 @@ print(feels_bad)
 $ uv run python main.py
 True
 ```
-
-:::note If you have never seen True and False in code
-`True` and `False` are Python's **boolean values**. A boolean is a value that can only be one of two things: true or false. The type annotation `: bool` tells you a variable holds a boolean. Comparisons like `temperature > 30` produce a boolean result: either `True` (yes, 35 is greater than 30) or `False`. The `and` operator combines two booleans and returns `True` only when *both* sides are `True`.
-:::
 
 :::tip If you have used other programming languages
 Python capitalizes its boolean values: `True` and `False`, not `true` and `false`. If you predicted lowercase, that is a common expectation from JavaScript, Java, or C-family languages. Also, `print()` displays the word `True`, not the number `1`, even though Python treats `True` as equivalent to `1` internally.
