@@ -296,4 +296,26 @@ After completing Part 4, continue to **Part 5: Building Custom Agents** where yo
 
 The transformation of software development is underway. You are not just learning a language. You are learning to direct and verify the AI systems that write it. SmartNotes v1.0 is the proof that you can.
 
+## Key Terms (60-Second Glossary)
+
+Refer back to this table whenever a term feels unfamiliar. You do not need to memorize anything now -- each term gets its own lesson with step-by-step explanation.
+
+| Term | Plain English |
+|------|--------------|
+| **Python** | A programming language -- the one you are learning in this part |
+| **Type** | A label that says what kind of data something is: text, whole number, decimal, or true/false |
+| **Type annotation** | A note in code that declares a variable's type, like `age: int = 25` (the `: int` part is the annotation) |
+| **Variable** | A named container that holds a value -- like a labeled jar |
+| **Function** | A reusable block of code with a name. You give it inputs, it gives you an output |
+| **Function signature** | The first line of a function that declares its name, inputs, and output type -- the contract |
+| **Test** | A short piece of code that checks whether another piece of code does what you expect |
+| **pytest** | The tool that runs your tests automatically and reports which passed and which failed |
+| **Pyright** | A tool that checks your type annotations and catches type mismatches before you run the code |
+| **Ruff** | A tool that checks code style and formatting -- like a spell-checker for code |
+| **uv** | The package manager that installs Python and your project's tools |
+| **Git** | A tool that tracks every change you make to your code, so you can undo mistakes and collaborate |
+| **TDG** | Test-Driven Generation -- write a specification (types + tests), let AI generate the code, then verify |
+| **PRIMM** | Predict-Run-Investigate -- a method for reading code by predicting what it does before running it |
+| **AI assistant** | A tool like Claude Code that generates, explains, and reviews code based on your instructions |
+
 Let's begin.
