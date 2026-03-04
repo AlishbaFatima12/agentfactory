@@ -1,7 +1,9 @@
 deck:
   id: "ch17-05-financial-analysis-core-plugin"
-  name: "Financial Analysis: The Core Plugin"
+  title: "Financial Analysis: The Core Plugin"
   description: "Key concepts from the financial-analysis core plugin lesson -- shared-core architecture, MCP connectors, eight commands, WACC, EV, LTM, and LBO fundamentals"
+  tags: ["financial-analysis", "core-plugin", "MCP-connectors", "WACC", "DCF", "LBO", "comps", "enterprise-value"]
+  version: 1
 
 cards:
   - id: "ch17-05-01"
