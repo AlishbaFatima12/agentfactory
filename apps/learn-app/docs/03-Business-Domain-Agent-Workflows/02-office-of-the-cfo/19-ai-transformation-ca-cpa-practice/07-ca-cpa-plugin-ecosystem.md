@@ -105,7 +105,6 @@ teaching_guide:
       expected_response: "Layer 1 (knowledge-work-plugins/finance) covers core accounting workflows — journal entries, reconciliations, financial statements, variance analysis, and SOX testing. Layer 2 (financial-services-plugins) extends into investment-facing work — financial analysis, equity research, private equity, and wealth management."
 ---
 
-
 # The CA/CPA Plugin Ecosystem
 
 > _"The best tools disappear into the workflow. You stop thinking about the tool and start thinking about the work."_
@@ -127,20 +126,24 @@ Cowork operates through four core mechanisms that distinguish it from standard c
 | **Scheduled tasks**          | Execute tasks automatically on a schedule                                                          | The reconciliation check that runs every morning, the compliance deadline monitor that runs weekly                        |
 | **Plugin ecosystem**         | Bundle domain knowledge, data connectors, slash commands, and sub-agents into installable packages | The finance plugins give Cowork deep CA/CPA domain knowledge that generic AI tools lack                                   |
 
+:::caution Prerequisites: Cowork Access
+This lesson requires the **Claude desktop app** with **Cowork** enabled. Cowork is available on **Pro, Max, Team, and Enterprise plans**.
+
+1. **Install the Claude desktop app** if you have not already — download it from [claude.ai/download](https://claude.ai/download) for macOS or Windows.
+2. **Switch to the Cowork tab.** Open the Claude desktop app and select the **Cowork** tab. If you do not see it, your plan may not include Cowork — check your subscription at [claude.ai/settings](https://claude.ai/settings).
+3. **Install the plugins** using the instructions in the Layer 1 and Layer 2 sections below.
+   :::
+
 The practical difference is significant. A standard conversation can help draft a tax research memo. Cowork can take a folder of client documents, extract the relevant financial data, conduct the research, cross-reference the applicable provisions, produce the memo, and save it to the client file — as a single orchestrated workflow.
 
 ## Layer 1: knowledge-work-plugins/finance
 
 The knowledge-work finance plugin is designed for corporate finance and accounting teams. Its commands directly address the core workflows of Domains 1 and 4 from this chapter — Accounting & Financial Reporting and Management Accounting.
 
-**Installation:**
-
-```bash
-claude plugin install finance@knowledge-work-plugins
-```
+**Installation:** In the Cowork sidebar, click **Customize** → **Browse plugins**, find `knowledge-work-plugins/finance`, and click **Install**. The plugin bundles all five commands below plus their supporting skills — no separate configuration needed.
 
 :::warning Plugin Availability
-Plugin commands and installation steps shown here reflect the current Cowork ecosystem. Check the plugin repository for the latest version before installing. Command names, syntax, and available features may change as the ecosystem evolves.
+Plugin commands shown here reflect the current Cowork ecosystem. Check the plugin browser for the latest version before installing. Command names, syntax, and available features may change as the ecosystem evolves.
 :::
 
 **Key commands for CA/CPA practice:**
@@ -183,12 +186,7 @@ The `/variance-analysis` command compares actual results against budget and prio
 
 The financial-services-plugins suite extends Cowork's CA/CPA capabilities into investment-facing professional work. If you work in financial services environments — bank audit, investment fund administration, insurance accounting, or capital markets advisory — these plugins are directly relevant.
 
-**Installation:**
-
-```bash
-claude plugin marketplace add anthropics/financial-services-plugins
-claude plugin install financial-analysis@financial-services-plugins
-```
+**Installation:** From the same **Customize** → **Browse plugins** menu, find `financial-services-plugins` and install the **financial-analysis** core plugin. The add-on plugins (equity-research, private-equity, wealth-management) can be installed individually as needed.
 
 The **financial-analysis core plugin** provides the `/dcf`, `/comps`, and `/lbo` commands. These are most relevant to corporate finance and restructuring work in Domain 2 (Tax and Non-Assurance Advisory). A CA/CPA advising on an M&A transaction or restructuring has direct access to financial modelling tools that previously required specialist software.
 
@@ -196,7 +194,7 @@ The **equity-research plugin** provides earnings analysis and sector research ca
 
 The **private-equity plugin** provides deal sourcing, IC memo, and portfolio monitoring capabilities directly relevant to due diligence and corporate finance work in Domain 2.
 
-You explored the full financial-services-plugins architecture in Chapter 17, Lesson 7. The key point for CA/CPA practice is that these plugins extend your capabilities beyond core accounting into the advisory and financial services work that Domain 2 (Tax and Non-Assurance Advisory) covers.
+You explored the full financial-services-plugins architecture in Chapter 17, Lessons 5 and 6. The key point for CA/CPA practice is that these plugins extend your capabilities beyond core accounting into the advisory and financial services work that Domain 2 (Tax and Non-Assurance Advisory) covers.
 
 ## Mapping Plugins to Practice Domains
 
@@ -307,7 +305,6 @@ For each service:
 ```
 
 **What you are learning:** A plugin stack is not one-size-fits-all. The combination of plugins, commands, and global instructions should match your firm's service lines. Planning the stack before installing forces you to think about your practice as a system of workflows rather than a collection of tasks — the same shift from tactical to strategic that separates a practitioner from a practice leader.
-
 
 ---
 
