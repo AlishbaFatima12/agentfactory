@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
 title: "Why the Toolchain Comes First"
-description: "Professional Python development starts with five tools, not with syntax. Learn the discipline stack and how each tool connects to the axioms from Chapter 14."
+description: "Professional Python development starts with five tools, not with syntax. Learn the discipline stack and how each tool connects to the axioms from Chapter 30."
 keywords: ["python toolchain", "discipline stack", "uv", "pyright", "ruff", "pytest", "git", "development environment", "package manager", "static analysis"]
-chapter: 15
+chapter: 31
 lesson: 1
 duration_minutes: 20
 
@@ -21,7 +21,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Remember"
     digcomp_area: "Digital Competence"
-    measurable_at_this_level: "Student can match each of the five discipline stack tools (uv, pyright, ruff, pytest, Git) to its corresponding axiom from Chapter 14"
+    measurable_at_this_level: "Student can match each of the five discipline stack tools (uv, pyright, ruff, pytest, Git) to its corresponding axiom from Chapter 30"
 
 learning_objectives:
   - objective: "Explain why professional Python development starts with tooling, not syntax"
@@ -34,7 +34,7 @@ learning_objectives:
     bloom_level: "Remember"
     assessment_method: "Student matches each tool (uv, pyright, ruff, pytest, Git) to its function in the development workflow"
 
-  - objective: "Connect each tool to its corresponding axiom from Chapter 14"
+  - objective: "Connect each tool to its corresponding axiom from Chapter 30"
     proficiency_level: "A2"
     bloom_level: "Understand"
     assessment_method: "Student completes an axiom-to-tool mapping table and explains why each connection exists"
@@ -52,7 +52,7 @@ differentiation:
 
 This chapter is about five tools. The projects here are small -- SmartNotes is a learning vehicle. But the toolchain you build in this chapter is the exact same toolchain you will use in Part 6 when you build your first Digital FTE -- an autonomous AI agent that runs in production, handles real work, and can be sold as a product. The habits you form now determine the quality of the agents you ship later.
 
-Chapter 14 ended with ten axioms -- a complete engineering philosophy for working with AI-generated code. You know the principles. You understand why the shell orchestrates, why types are guardrails, why tests are specifications. But principles on paper do not ship software. It is time to build the workbench.
+Chapter 30 ended with ten axioms -- a complete engineering philosophy for working with AI-generated code. You know the principles. You understand why the shell orchestrates, why types are guardrails, why tests are specifications. But principles on paper do not ship software. It is time to build the workbench.
 
 James opens his laptop on Monday morning, confident. He has read all ten axioms. He understands orchestration, types, tests, version control. Now he wants to write Python. He creates a file called `app.py`, writes a few lines that import `requests` and print a formatted greeting, and runs `python app.py`. The terminal prints "Hello from SmartNotes!" -- clean, no errors. James pushes the file to the team repository, writes "initial commit" in the message box, and closes his laptop. Done.
 
@@ -107,7 +107,7 @@ You may have used pip, venv, and pyenv as separate tools -- or poetry, conda, or
 
 ## The Axiom-Tool Connection
 
-Each tool in the discipline stack is the physical implementation of an axiom from Chapter 14. The axioms describe *what matters*. The tools enforce *that it happens*. James already understands the principles. Now he sees what turns those principles into daily practice.
+Each tool in the discipline stack is the physical implementation of an axiom from Chapter 30. The axioms describe *what matters*. The tools enforce *that it happens*. James already understands the principles. Now he sees what turns those principles into daily practice.
 
 | Tool | Axiom | How the Tool Enforces the Axiom |
 |---|---|---|
@@ -234,7 +234,7 @@ of how the tool enforces that axiom in daily development.
 
 2. **The discipline stack is a unified system, not a collection of separate tools.** uv, pyright, ruff, pytest, and Git work together -- each one covering a gap that the others cannot. Removing any tool leaves a failure mode that willpower alone cannot prevent.
 
-3. **Every tool in the stack implements a specific axiom from Chapter 14.** This is not a generic "install Python" tutorial. Each tool exists because an axiom demands it: uv enforces orchestration, pyproject.toml enforces knowledge-as-text, pyright enforces type safety, pytest enforces specification-as-tests, ruff enforces automated verification, and Git enforces persistent memory.
+3. **Every tool in the stack implements a specific axiom from Chapter 30.** This is not a generic "install Python" tutorial. Each tool exists because an axiom demands it: uv enforces orchestration, pyproject.toml enforces knowledge-as-text, pyright enforces type safety, pytest enforces specification-as-tests, ruff enforces automated verification, and Git enforces persistent memory.
 
 4. **The SmartNotes project is your running example for the entire course.** Starting in Lesson 2, you will build and configure this project step by step. Every tool you install, every configuration you add, and every command you run applies to SmartNotes.
 

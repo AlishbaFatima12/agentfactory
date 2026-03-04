@@ -3,7 +3,7 @@ sidebar_position: 4
 title: "Ruff -- Your Code Quality Guardian"
 description: "Run ruff check and ruff format on your SmartNotes project to discover the difference between code that runs and code that is correct"
 keywords: ["ruff", "linter", "formatter", "ruff check", "ruff format", "F401", "E501", "I001", "code quality", "pycodestyle", "pyflakes", "isort", "auto-fix", "verification pipeline"]
-chapter: 15
+chapter: 31
 lesson: 4
 duration_minutes: 22
 
@@ -104,7 +104,7 @@ Linting finds problems. Formatting enforces style. A linting error might be a re
 
 ## Axiom IX in Action
 
-In Axiom IX from Chapter 14, you learned that verification is a pipeline -- not a manual checklist you remember to follow, but an automated sequence that runs every time you change code. Ruff is the first stage of that pipeline.
+In Axiom IX from Chapter 30, you learned that verification is a pipeline -- not a manual checklist you remember to follow, but an automated sequence that runs every time you change code. Ruff is the first stage of that pipeline.
 
 Consider what happens without ruff. James finishes writing code. He runs it. It works. He commits. He opens a pull request. Emma reads the code and notices an unused library on line 3. She leaves a comment. James fixes it and pushes again. Emma notices inconsistent spacing on line 17. Another comment. Another fix. Another push. Three rounds of review for problems that have nothing to do with logic or design.
 

@@ -3,7 +3,7 @@ sidebar_position: 6
 title: "Testing With pytest"
 description: "Write your first pytest test for the SmartNotes project, run it, and learn to read pass/fail output to verify that code does what it is supposed to do."
 keywords: ["pytest", "testing", "assert", "test output", "pass fail", "test discovery", "naming conventions", "SmartNotes", "verification"]
-chapter: 15
+chapter: 31
 lesson: 6
 duration_minutes: 18
 
@@ -99,7 +99,7 @@ A clean run shows dots. Any `F` means a test found a problem.
 
 ## Axiom VII in Action
 
-In Axiom VII from Chapter 14, you learned that tests are the specification. pytest does not check that code runs. The Python interpreter already does that. pytest checks that code does *what you specified it should do*.
+In Axiom VII from Chapter 30, you learned that tests are the specification. pytest does not check that code runs. The Python interpreter already does that. pytest checks that code does *what you specified it should do*.
 
 When James writes `assert format_title("hello world") == "Hello World"`, he is not writing a test. He is writing a specification: this piece of code, given this input, must produce this output. The `assert` keyword is the specification expressed as code. If the assertion is true, the test passes silently. If it is false, pytest reports exactly what went wrong -- what the code returned and what the test expected.
 

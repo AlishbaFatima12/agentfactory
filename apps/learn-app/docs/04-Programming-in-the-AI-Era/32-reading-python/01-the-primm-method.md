@@ -20,7 +20,7 @@ keywords:
     "f-strings",
     "boolean logic",
   ]
-chapter: 16
+chapter: 32
 lesson: 1
 duration_minutes: 20
 
@@ -74,11 +74,11 @@ differentiation:
 
 # The PRIMM Method -- Predict, Run, Investigate
 
-In Chapter 15, you built the workbench -- uv, pyright, ruff, pytest, and Git. Every tool is installed, every configuration file is in place, and SmartNotes has a clean foundation. Now you use it. This chapter is where you meet Python for the first time -- not by writing it, but by reading it.
+In Chapter 31, you built the workbench -- uv, pyright, ruff, pytest, and Git. Every tool is installed, every configuration file is in place, and SmartNotes has a clean foundation. Now you use it. This chapter is where you meet Python for the first time -- not by writing it, but by reading it.
 
 Consider two developers staring at fifty lines of code that an AI assistant just generated. James clicks "Accept" and moves on. Emma pauses. She reads line twelve, predicts what it does, and notices the function returns an integer when the rest of the code expects a string. She rejects the suggestion before it reaches the codebase. James finds the same bug three hours later, in production, at the worst possible time. The difference between them is not experience or talent. It is method. Emma has a systematic way to read code. James does not.
 
-This lesson gives you Emma's method. It is called PRIMM -- Predict, Run, Investigate, Modify, Make -- developed by researchers Sue Sentance, Jane Waite, and Maria Kallia. You will learn the first three stages here. Modify and Make arrive in Chapter 17 when you begin writing code. By the end of this lesson, you will have predicted the output of four Python code blocks and discovered what your predictions reveal about your understanding.
+This lesson gives you Emma's method. It is called PRIMM -- Predict, Run, Investigate, Modify, Make -- developed by researchers Sue Sentance, Jane Waite, and Maria Kallia. You will learn the first three stages here. Modify and Make arrive in Chapter 33 when you begin writing code. By the end of this lesson, you will have predicted the output of four Python code blocks and discovered what your predictions reveal about your understanding.
 
 ---
 
@@ -126,8 +126,8 @@ PRIMM is a structured approach to learning programming through reading before wr
 | **Predict** | Read the code and predict its output *before* running it | Yes |
 | **Run** | Execute the code and compare the actual output to your prediction | Yes |
 | **Investigate** | Explore why the code behaves the way it does -- especially when your prediction was wrong | Yes |
-| **Modify** | Change part of the code and predict what the change does | Chapter 17 |
-| **Make** | Write new code from scratch using the patterns you have learned | Chapter 17 |
+| **Modify** | Change part of the code and predict what the change does | Chapter 33 |
+| **Make** | Write new code from scratch using the patterns you have learned | Chapter 33 |
 
 This chapter focuses on the first three stages. They form a tight loop: predict, run, investigate. Each pass through the loop either confirms your understanding or reveals a gap. Both outcomes are useful. A correct prediction means your mental model works. A wrong prediction tells you exactly where your mental model needs updating.
 
@@ -145,7 +145,7 @@ Time to practice. For each block, you will ask your AI assistant to generate a s
 $ uv run python main.py
 ```
 
-`uv` is the package manager you installed in Chapter 15. `uv run python main.py` tells it to execute your Python file.
+`uv` is the package manager you installed in Chapter 31. `uv run python main.py` tells it to execute your Python file.
 
 ---
 
@@ -432,7 +432,7 @@ check my answers.
 
 2. **Active reading means predicting, tracing, and explaining.** Scanning code is not reading. If you cannot predict what a line does before running it, you do not yet understand that line.
 
-3. **PRIMM gives you a formal method: Predict, Run, Investigate.** This chapter uses the first three stages. Modify and Make come in Chapter 17 when you start writing code.
+3. **PRIMM gives you a formal method: Predict, Run, Investigate.** This chapter uses the first three stages. Modify and Make come in Chapter 33 when you start writing code.
 
 4. **Wrong predictions are the most valuable learning moments.** A correct prediction confirms your model. A wrong prediction reveals exactly where your understanding has a gap -- and that gap is now something you can fix.
 

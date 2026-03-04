@@ -3,7 +3,7 @@ sidebar_position: 6
 title: "Axiom VI: Data is Relational"
 description: "Why structured data follows relational patterns, SQL as the universal data language, and how to choose between SQLite and PostgreSQL for agentic development"
 keywords: ["SQL", "relational database", "SQLite", "PostgreSQL", "ORM", "SQLModel", "data modeling", "schema", "migrations", "agentic development"]
-chapter: 14
+chapter: 30
 lesson: 6
 duration_minutes: 22
 

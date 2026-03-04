@@ -3,7 +3,7 @@ sidebar_position: 5
 title: "Pyright -- Your Type Safety Net"
 description: "Run pyright to catch type errors before your code runs, compare typed vs untyped Python code, and understand why strict mode requires complete type labels"
 keywords: ["pyright", "static type checker", "type annotations", "strict mode", "type error", "type safety", "Python types", "uv run pyright", "str | None", "type checking"]
-chapter: 15
+chapter: 31
 lesson: 5
 duration_minutes: 22
 
@@ -127,7 +127,7 @@ The broader pattern:
 | A value is missing (`None`) | Error appears only when the code runs, not when you write it |
 | Someone changes what code returns | Everything that depends on it breaks, but you discover breakage one piece at a time |
 
-The common thread: bugs hide. They do not surface at the point where the mistake was made. They surface later, in a different file, during a different operation. James experienced this pattern in Chapter 14 -- a failure in one part of the system cascaded because nothing checked assumptions early.
+The common thread: bugs hide. They do not surface at the point where the mistake was made. They surface later, in a different file, during a different operation. James experienced this pattern in Chapter 30 -- a failure in one part of the system cascaded because nothing checked assumptions early.
 
 A **static type checker** solves this by analyzing code *without running it*. It reads type annotations — those labels like `: str` and `: int` — traces how data moves through your code, and reports every place where the declared types do not match the actual usage. Errors appear in your terminal seconds after you save the file -- not hours later in a crash.
 
@@ -195,7 +195,7 @@ Strict mode enables 29 additional diagnostic rules that are completely disabled 
 
 ## Axiom V in Action
 
-In Axiom V from Chapter 14, you learned that types are guardrails -- not bureaucracy. They prevent your code from driving off a cliff by making the rules explicit. Pyright is the guardrail inspector. It walks along every type label in your code before it runs and tells you which guardrails are missing.
+In Axiom V from Chapter 30, you learned that types are guardrails -- not bureaucracy. They prevent your code from driving off a cliff by making the rules explicit. Pyright is the guardrail inspector. It walks along every type label in your code before it runs and tells you which guardrails are missing.
 
 This matters more in the AI era than it ever did before. When AI generates code, it generates fast. Dozens of lines in seconds. Without types, you have to read every line and mentally trace every piece of data to verify correctness. With types, pyright does that verification for you. The type labels serve double duty: they document what kind of data your code expects (for humans and AI to read), and they enable automated checking (for pyright to verify). One label, two benefits.
 

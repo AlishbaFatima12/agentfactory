@@ -3,7 +3,7 @@ sidebar_position: 7
 title: "Git -- Your Version Control Memory"
 description: "Initialize a Git repository, make your first commit, and run the complete verification pipeline that chains ruff, pyright, and pytest into a single command."
 keywords: ["git", "version control", "git init", "git add", "git commit", "verification pipeline", "discipline stack", "SmartNotes", "git log"]
-chapter: 15
+chapter: 31
 lesson: 7
 duration_minutes: 20
 
@@ -88,7 +88,7 @@ The common thread: every change is permanent. There is no undo beyond the editor
 
 ## Axiom VIII in Action
 
-In Axiom VIII from Chapter 14, you learned that version control is memory. Human memory is unreliable -- James could not remember the exact logic of his deleted `format_title` code after twenty minutes. Git memory is permanent -- every commit records the complete state of every file in the project.
+In Axiom VIII from Chapter 30, you learned that version control is memory. Human memory is unreliable -- James could not remember the exact logic of his deleted `format_title` code after twenty minutes. Git memory is permanent -- every commit records the complete state of every file in the project.
 
 This matters even more when working with AI assistants. An AI can generate fifty lines of code in seconds. If you experiment with that code, rewrite it, and lose the working version, the AI cannot reproduce the exact same output -- each generation is different. Git solves this by recording every version permanently.
 
@@ -275,7 +275,7 @@ Explain why commit messages matter by showing me:
 3. What is the one-line rule for commit messages and why does it matter?
 ```
 
-**What you're learning:** This prompt connects directly to Axiom VIII -- version control as memory. Good commit messages are the difference between a useful history and a useless one. James's story from Chapter 14 began with "wip" and "fix stuff" commits that told him nothing when he needed them. By studying good vs bad messages now, you build the habit before it costs you.
+**What you're learning:** This prompt connects directly to Axiom VIII -- version control as memory. Good commit messages are the difference between a useful history and a useless one. James's story from Chapter 30 began with "wip" and "fix stuff" commits that told him nothing when he needed them. By studying good vs bad messages now, you build the habit before it costs you.
 
 ### Prompt 3: Generate Code, Then Verify With the Full Pipeline
 
@@ -348,4 +348,4 @@ uv run ruff check . && uv run pyright && uv run pytest
 
 Your workbench is built. uv manages your project. pyproject.toml holds your configuration. ruff checks your style. pyright checks your types. pytest checks your behavior. Git records your history. Five tools, five axioms, one unified system protecting your code from the moment you start writing it.
 
-In Chapter 16, James and Emma will start reading Python -- learning how to store values, label their types, and combine them into expressions. Every line of code will be checked by ruff, type-checked by pyright, and tested by pytest. The workbench is no longer something you are building. It is something you are using.
+In Chapter 32, James and Emma will start reading Python -- learning how to store values, label their types, and combine them into expressions. Every line of code will be checked by ruff, type-checked by pyright, and tested by pytest. The workbench is no longer something you are building. It is something you are using.

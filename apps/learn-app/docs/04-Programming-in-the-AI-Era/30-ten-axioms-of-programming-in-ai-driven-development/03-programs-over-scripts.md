@@ -3,7 +3,7 @@ sidebar_position: 3
 title: "Axiom III: Programs Over Scripts"
 description: "Production work requires proper programs with types, tests, error handling, and CI integration. Scripts are for exploration; programs are for shipping."
 keywords: ["programs over scripts", "type annotations", "pytest", "pyright", "ruff", "uv", "Python discipline", "CI/CD", "agentic development", "production code"]
-chapter: 14
+chapter: 30
 lesson: 3
 duration_minutes: 22
 

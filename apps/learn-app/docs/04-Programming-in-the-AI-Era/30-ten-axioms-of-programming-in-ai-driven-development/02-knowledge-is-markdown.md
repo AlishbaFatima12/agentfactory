@@ -3,7 +3,7 @@ sidebar_position: 2
 title: "Axiom II: Knowledge is Markdown"
 description: "Why markdown is the universal knowledge format for agentic development — human-readable, version-controllable, AI-parseable, and tool-agnostic"
 keywords: ["markdown", "knowledge format", "CLAUDE.md", "ADR", "specifications", "YAML frontmatter", "documentation", "version control"]
-chapter: 14
+chapter: 30
 lesson: 2
 duration_minutes: 20
 
@@ -250,7 +250,7 @@ As Emma's team migrated their knowledge into markdown, James noticed a gap. The 
 ```markdown
 ---
 title: "Axiom II: Knowledge is Markdown"
-chapter: 14
+chapter: 30
 lesson: 2
 duration_minutes: 20
 skills:

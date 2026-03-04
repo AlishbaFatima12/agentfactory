@@ -3,7 +3,7 @@ sidebar_position: 7
 title: "Axiom VII: Tests Are the Specification"
 description: "Test-Driven Generation (TDG) transforms tests from verification tools into precise specifications that AI implements, making the implementation disposable and the test permanent"
 keywords: ["TDG", "Test-Driven Generation", "TDD", "pytest", "specification", "verification", "test pyramid", "fixtures", "parametrize"]
-chapter: 14
+chapter: 30
 lesson: 7
 duration_minutes: 25
 
