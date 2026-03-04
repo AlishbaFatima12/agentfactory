@@ -28,13 +28,13 @@ This part inverts the traditional order. You learn to read before you write. You
 
 ## Before You Begin
 
-Part 4 assumes no programming experience -- you do not need to have written code before. But it does assume you have completed Parts 1-3 of this book. Here is what you should be comfortable with before starting:
+Part 4 assumes no programming experience -- you do not need to have written code before. But it does assume you have completed Parts 1 and 2 of this book. Here is what you should be comfortable with before starting:
 
 - **You can use a terminal.** You can open a terminal, navigate directories, and run commands. Part 2 (Linux Mastery, Chapter 11) covered this.
-- **You can drive Claude Code confidently.** You can write clear prompts, evaluate whether the response is useful, and iterate when it is not. Parts 1-3 practiced this throughout.
+- **You can drive Claude Code confidently.** You can write clear prompts, evaluate whether the response is useful, and iterate when it is not. Parts 1 and 2 practiced this throughout.
 - **You understand Spec-Driven Development.** You know the four-phase SDD workflow -- Research, Specification, Refinement, Implementation -- and why specifications must come before code. [Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development) is a **required prerequisite**. TDG, the method you learn in Part 4, is SDD applied to Python: your specifications become types, your verification becomes pytest, and Claude Code remains the agent that generates the implementation.
 - **You understand version control basics.** You know what `git add`, `git commit`, and `git push` do, even if you are not fluent. Chapter 12 (Version Control) covered this.
-- **You have used Claude Code to build something.** You directed Claude Code to create a working project -- file processing, data extraction, or a budget tracker. Parts 2-3 did this.
+- **You have used Claude Code to build something.** You directed Claude Code to create a working project -- file processing, data extraction, or a budget tracker. Parts 2 did this.
 
 If any of these feel unfamiliar, revisit the relevant chapter before continuing. Part 4 builds on these foundations -- it does not repeat them.
 
