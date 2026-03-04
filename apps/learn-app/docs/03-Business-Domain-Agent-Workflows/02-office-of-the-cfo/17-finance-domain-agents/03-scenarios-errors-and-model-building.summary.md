@@ -1,6 +1,6 @@
 ### Core Concept
 
-This lesson covers three general capabilities of Claude in Excel that complete the foundation layer before the six pre-built Agent Skills: scenario testing without breaking formulas, formula error diagnosis from symptom to source, and building model structures from plain-language descriptions. Each capability is preceded by the financial concept boxes needed to use it — sensitivity analysis, DCF fundamentals, common Excel errors, EBITDA, and the three financial statements.
+This lesson covers three general capabilities of Claude in Excel that complete the foundation layer before the pre-built Agent Skills: scenario testing without breaking formulas, formula error diagnosis from symptom to source, and building model structures from plain-language descriptions. Each capability is preceded by the financial concept boxes needed to use it — sensitivity analysis, DCF fundamentals, common Excel errors, EBITDA, and the three financial statements.
 
 ### Key Mental Models
 
@@ -24,4 +24,4 @@ This lesson covers three general capabilities of Claude in Excel that complete t
 ### Connections
 
 - **Builds on**: Lesson 2 taught model comprehension (tracing dependencies, mapping logic); this lesson uses the same Claude in Excel interface for scenario testing, error diagnosis, and model construction
-- **Leads to**: Lesson 4 introduces the six pre-built Agent Skills (Layer 2), starting with Comparable Company Analysis and DCF — which build on the DCF and EBITDA concept boxes introduced here
+- **Leads to**: Lesson 4 introduces the Cowork finance plugins, starting with the architecture shift from embedded assistant to orchestrating agent — building on the workbook capabilities established here

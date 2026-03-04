@@ -22,5 +22,5 @@ Cross-app orchestration executes multi-step workflows that span multiple applica
 
 ### Connections
 
-- **Builds on**: Lessons 1-7 established Claude in Excel capabilities and plugin workflows within a single application; this lesson crosses the application boundary
+- **Builds on**: Lessons 1-6 established Claude in Excel capabilities and plugin workflows within a single application; this lesson crosses the application boundary
 - **Leads to**: Enterprise extensions and custom deployment patterns that build on the cross-app foundation

@@ -112,7 +112,7 @@ teaching_guide:
 
 In Lesson 2, you used Claude in Excel to comprehend inherited workbooks — tracing formula dependencies, mapping model logic, and understanding structures you did not build. Now you will use that same general intelligence for three additional capabilities: testing financial scenarios without breaking formulas, diagnosing formula errors from symptom to source, and building complete model structures from plain-language descriptions.
 
-These three skills cover the remaining general workbook capabilities before you move to the six pre-built Agent Skills in Lessons 4 and 5. Together with model comprehension from Lesson 2, they form the foundation layer of Claude in Excel: the intelligence that works on any workbook, requires no configuration, and is always active.
+These three skills cover the remaining general workbook capabilities before you move to the Cowork finance plugins in Lessons 4 through 6. Together with model comprehension from Lesson 2, they form the foundation layer of Claude in Excel: the intelligence that works on any workbook, requires no configuration, and is always active.
 
 ## Testing Scenarios Without Breaking Formulas
 
@@ -158,7 +158,7 @@ Notice what happened in this exchange. The CFO specified exact cells and exact c
 >
 > **Key components:** **Free Cash Flow** is the cash the business generates after operating costs and capital expenditure. **Discount Rate**, or WACC (Weighted Average Cost of Capital), is the required return of investors — a higher rate produces a lower valuation. **Terminal Value** captures the value of all cash flows beyond the projection period, usually five to ten years.
 >
-> **Why sensitivity matters:** A DCF is highly sensitive to the discount rate. A 1 percentage point increase in WACC typically reduces the equity value by 10 to 20 percent. This is why every professional DCF includes a sensitivity table showing value at different WACC and terminal growth rate combinations. You will explore WACC in detail in Lesson 4.
+> **Why sensitivity matters:** A DCF is highly sensitive to the discount rate. A 1 percentage point increase in WACC typically reduces the equity value by 10 to 20 percent. This is why every professional DCF includes a sensitivity table showing value at different WACC and terminal growth rate combinations. You will explore WACC in detail in Lesson 5.
 
 ---
 
@@ -351,4 +351,4 @@ to make assumptions I might not want?
 
 ---
 
-Continue to [Lesson 4: The Six Agent Skills: Market Analysis →](./04-agent-skills-market-analysis.md)
+Continue to [Lesson 4: From Assistant to Agent →](./04-from-assistant-to-agent.md)
