@@ -20,7 +20,7 @@ keywords:
   ]
 chapter: 17
 lesson: 4
-duration_minutes: 30
+duration_minutes: 45
 
 # HIDDEN SKILLS METADATA
 skills:
@@ -107,90 +107,83 @@ teaching_guide:
 
 In Lessons 1 through 3, you worked inside a single Excel workbook. Claude read your formulas, traced dependencies, tested scenarios, and built model structures from plain-language descriptions -- all within the boundary of one spreadsheet. You close the workbook and the context disappears. You finish the analysis and move to PowerPoint, but that transition is yours to make. Claude cannot follow you.
 
+This lesson crosses that boundary. When Claude operates through the Cowork platform, it is not embedded in Excel -- it is an agent that can act across applications, carry context from one tool to another, and execute multi-step workflows spanning the entire production process of a financial deliverable. The most significant change is scope: from analysing within one workbook to orchestrating across many tools and data sources.
+
 :::caution Prerequisites: Cowork Access
 This lesson requires the **Claude desktop app** with **Cowork** enabled. Cowork is available on **Pro, Max, Team, and Enterprise plans**.
 
 1. **Install the Claude desktop app** if you have not already — download it from [claude.ai/download](https://claude.ai/download) for macOS or Windows.
 2. **Switch to the Cowork tab.** Open the Claude desktop app and select the **Cowork** tab. If you do not see it, your plan may not include Cowork — check your subscription at [claude.ai/settings](https://claude.ai/settings).
-3. **Install the finance plugin.** In the Cowork sidebar, click **Customize** → **Browse plugins**, find the **Finance** plugin (`knowledge-work-plugins/finance`), and click **Install**. The plugin bundles skills, slash commands, and connector definitions into a single package — the workflows are ready to use immediately.
+3. **Install the finance plugin.** In the Cowork sidebar, click **Customize** → **Browse plugins** → **Personal**. Click the **+** button, select **Add marketplace from GitHub**, and enter `https://github.com/anthropics/knowledge-work-plugins`. Find the **Finance** plugin and click **Install**. The plugin bundles skills, slash commands, and connector definitions into a single package — the workflows are ready to use immediately.
 4. **Enable connectors for enterprise data (optional).** Cowork can read and create Excel, PowerPoint, Word, and PDF files directly through built-in file skills — no connectors needed for these. From the **Customize** menu, select **Connectors** only if your workflows need to reach enterprise systems like your ERP or data warehouse. The plugin references connector categories like `~~erp` and `~~data warehouse` — once you enable the matching connector, those workflows pull data automatically. Some connectors require a separate subscription or API key from the provider. For enterprise deployments, your IT team can pre-provision connectors through the admin console.
+5. **Connect a working folder.** Create a folder on your computer for this lesson's practice files (e.g., `finance-practice/`). In the Cowork chat, tell Claude to use this folder for reading and writing files. This gives Claude a place to store the sample financial data you will generate next.
    :::
 
-This lesson crosses that boundary. When Claude operates through the Cowork platform, it is not embedded in Excel the way a sidebar is embedded in a workbook. It is an agent that can act across applications, carry context from one tool to another, and execute multi-step workflows that span the entire production process of a financial deliverable. Claude in Excel has native access to the open workbook through a sidebar. Cowork has built-in file skills for Excel, PowerPoint, Word, and PDF -- it can read and create these files directly without connectors. Connectors are needed only when workflows reach enterprise systems like data warehouses, ERPs, or BI platforms. The most significant change is scope: from analysing within one workbook to orchestrating across many tools and data sources.
+## Verify the Install
 
-## The Architecture Shift: From One Tool to Many
+After installing the plugin, verify it is active by typing `/reconciliation` in the Cowork chat. You should see the command auto-complete. If it does not appear, return to **Customize** → **Browse plugins** and confirm the Finance plugin shows as installed.
 
-The distinction between an embedded assistant and an orchestrating agent is a scope distinction, not a technology distinction. Consider what happens when a controller needs to produce a monthly management report. The process starts in Excel (pull trial balance, reconcile accounts, generate income statement), moves to PowerPoint (build the CFO deck with variance commentary), and ends with email (distribute to the management team with the key findings summarised). Each transition -- copying numbers, formatting slides, writing the email -- is manual work that consumes time and introduces transcription errors.
-
-Claude in Excel handles the first step well. It can reconcile accounts, generate statements, and analyse variances inside the workbook. But when the controller closes Excel and opens PowerPoint, Claude's context resets. The analysis that took fifteen minutes to produce must be manually carried forward.
-
-Cowork treats these transitions as steps in a single workflow rather than as separate tasks. The controller specifies the outcome -- a formatted management deck with variance commentary based on the March close -- and Claude manages the sequence. Where Claude in Excel had native access to one workbook through its sidebar, Cowork can read and create Excel and PowerPoint files directly through built-in file skills, and uses connectors to reach enterprise systems like the data warehouse and email -- feeding an orchestrated workflow that spans multiple deliverables.
-
-> **What Is Cross-App Orchestration?**
->
-> Cross-app orchestration is the ability of an AI agent to execute multi-step workflows across multiple applications -- carrying context from one tool to the next and completing the full sequence autonomously.
->
-> **Current status:** Excel-to-PowerPoint orchestration is available in research preview through Cowork for Team and Enterprise plans. The analyst specifies the outcome. Claude manages the sequence: analyse in Excel, build the deck in PowerPoint, using the same data connections throughout.
-
-## Skills vs Commands in Cowork
-
-Before exploring the finance plugin, you need to understand the two ways Claude receives domain knowledge in Cowork.
-
-**Skills are passive.** They are instructions encoded in SKILL.md files that fire automatically when Claude judges them relevant. A finance skill might say: "whenever a variance exceeds ten percent, present it as a table with volume, price, and mix components." Claude applies this without being told to -- every time the condition is met.
-
-**Commands are active.** They are explicitly invoked by typing `/command-name`. They trigger a specific, defined workflow. `/reconciliation` always runs the reconciliation workflow. It does not fire unless you call it.
-
-The combination is what makes Cowork plugins behave like trained specialists rather than general assistants. The commands give you explicit control over specific tasks. The skills ensure that everything Claude does in between -- every response, every analysis, every contextual suggestion -- meets the domain standards encoded in the SKILL.md files.
-
-## The knowledge-work-plugins/finance Plugin
-
-The `knowledge-work-plugins/finance` plugin is a finance and accounting plugin designed for Cowork. It supports month-end close, journal entry preparation, account reconciliation, financial statement generation, variance analysis, and SOX audit support.
-
-**Who it serves:** Corporate FP&A teams, controllers, accounting managers, finance business partners, and internal audit teams. This is the operational finance plugin -- the one that keeps the books clean, the close on schedule, and the audit trail intact.
-
-**What it does not do:** This plugin assists with finance and accounting workflows but does not provide financial, tax, or audit advice. All outputs must be reviewed by qualified financial professionals before use in financial reporting, regulatory filings, or audit documentation.
-
-### Plugin Structure
-
-Every plugin in the knowledge-work-plugins collection follows the same file architecture:
-
-```
-finance/
-+-- .claude-plugin/plugin.json   # Manifest: name, description, version
-+-- .mcp.json                    # Tool connections (data sources)
-+-- CONNECTORS.md                # Documentation of connected tools
-+-- commands/                    # Slash commands you invoke explicitly
-|   +-- income-statement.md
-|   +-- journal-entry.md
-|   +-- reconciliation.md
-|   +-- sox-testing.md
-|   +-- variance-analysis.md
-+-- skills/                      # Domain knowledge Claude draws on automatically
-    +-- audit-support/SKILL.md
-    +-- close-management/SKILL.md
-    +-- financial-statements/SKILL.md
-    +-- journal-entry-prep/SKILL.md
-    +-- reconciliation/SKILL.md
-    +-- variance-analysis/SKILL.md
-```
-
-The separation is architecturally important. **Commands** are what you explicitly invoke. **Skills** are what Claude draws on automatically. You call `/reconciliation` when you want to run a reconciliation. Claude draws on the reconciliation SKILL.md whenever reconciliation is contextually relevant -- such as when you paste a trial balance and ask a question about it, even without invoking the command.
-
-### The Five Commands
-
-**`/journal-entry [type] [period]`** -- Generate journal entries with proper debits, credits, and supporting detail. For each entry type, the command produces the full debit/credit structure, the accounting rationale (which GAAP/IFRS standard applies), and the required supporting documentation. Without a connected ERP, you provide the figures. With a connected ERP, the command pulls transaction data automatically.
-
-```
-/journal-entry ap-accrual 2025-03
-/journal-entry revenue-recognition 2025-03
-```
-
-**`/reconciliation [account] [period]`** -- Compare GL balances to subledger, bank, or third-party balances and identify reconciling items. The output is a structured workpaper: GL balance, source of truth balance, net difference, and each reconciling item categorised as timing difference, in-transit item, error requiring correction, or item requiring investigation.
+Once you see the command, type:
 
 ```
 /reconciliation bank-USD 2025-03
-/reconciliation accounts-receivable 2025-03
 ```
+
+Claude will ask you to provide or upload bank and GL data (unless you have already connected an ERP). This confirms the plugin is loaded and the command is available.
+
+## Prepare Your Practice Data
+
+Before running the exercises, you need financial data to work with. If your organisation has connected an ERP or data warehouse, the commands will pull live data automatically. If not, ask Claude to generate realistic sample data in your connected folder:
+
+```
+Create a practice data set for a month-end close exercise:
+
+1. A bank statement spreadsheet for March 2025 with 45
+   transactions -- deposits totalling $892,000 and withdrawals
+   totalling $876,580
+2. A general ledger trial balance extract for the same period
+   with a $3,420 discrepancy against the bank statement
+3. A budget-vs-actuals spreadsheet with Q1 revenue of $465K
+   against a $500K budget, broken down by three product lines
+   with unit volumes and average selling prices so variances
+   can be decomposed into volume, price, and mix
+
+Make the data realistic. Include timing differences, a bank
+charge not yet posted to the GL, and one unidentified item.
+Save all files in my connected folder.
+```
+
+Claude will create the spreadsheets in your folder. You will use them throughout the exercises below. This is a valuable pattern beyond this lesson: whenever you need to practise a financial workflow but lack live data, have Claude generate a realistic data set first.
+
+## Skills vs Commands
+
+Before running the finance plugin's workflows, you need to understand the two ways Claude receives domain knowledge in Cowork.
+
+:::info Skills vs Commands
+**Commands** are active. You invoke them explicitly by typing `/command-name`. Each triggers a specific, defined workflow. `/reconciliation` always runs the reconciliation workflow. It does not fire unless you call it.
+
+**Skills** are passive. They are instructions encoded in SKILL.md files that fire automatically when Claude judges them relevant. A finance skill might say: "whenever a variance exceeds ten percent, present it as a table with volume, price, and mix components." Claude applies this without being told to.
+
+The combination is what makes Cowork plugins behave like trained specialists. Commands give you explicit control over specific tasks. Skills ensure that everything Claude does in between meets the domain standards encoded in the SKILL.md files.
+:::
+
+## The Five Commands
+
+The `knowledge-work-plugins/finance` plugin serves corporate FP&A teams, controllers, accounting managers, and internal audit teams. It provides five commands:
+
+| Command                                        | What It Produces                                                                         |
+| ---------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `/reconciliation [account] [period]`           | GL-to-source reconciliation workpaper with categorised reconciling items                 |
+| `/journal-entry [type] [period]`               | Journal entries with debits, credits, accounting rationale, and supporting documentation |
+| `/variance-analysis [area] [period-vs-period]` | Variance decomposition into volume, price, and mix with narrative explanations           |
+| `/income-statement [period-type] [period]`     | Management P&L with period-over-period comparison and material variance flags            |
+| `/sox-testing [process] [period]`              | SOX 404 control testing workpapers with sample selection methodology                     |
+
+Six passive skills complement these commands: journal-entry-prep, reconciliation, financial-statements, variance-analysis, close-management, and audit-support. The close-management skill is particularly important -- it activates whenever you are in a close context and applies the close checklist lens automatically, flagging whether items are resolved, whether they block downstream tasks, and who owns them.
+
+:::info Category Placeholders
+The plugin uses category placeholders (`~~erp`, `~~data warehouse`, `~~analytics`) instead of naming specific products. The SKILL.md files say "pull the trial balance from ~~erp" without caring whether the ERP is NetSuite or SAP. IT configures `.mcp.json` to map each placeholder to a specific system. This separates workflow knowledge (owned by the knowledge worker) from connector configuration (owned by IT) -- Chapter 15's division of responsibility made concrete.
+:::
 
 > **What Is a GL Reconciliation?**
 >
@@ -198,69 +191,109 @@ The separation is architecturally important. **Commands** are what you explicitl
 >
 > **Categories of reconciling items:** Timing differences (transaction in GL but not yet at the bank -- resolves next period). In-transit items (deposit recorded but not yet credited). Errors (wrong amount, wrong account, wrong period -- requires correcting entry). Items requiring investigation (no obvious explanation -- the most important category to resolve before closing).
 
-**`/income-statement [period-type] [period]`** -- Generate an income statement with period-over-period comparison and variance analysis. Current period, prior period, variance, budget, and budget variance for every line. Material variances above a configurable threshold are flagged for investigation.
-
-**`/variance-analysis [area] [period-vs-period]`** -- Decompose variances into drivers with narrative explanations. Revenue variances split into volume, price, and mix. Operating expense variances split into volume-driven and rate-driven components. The output includes narrative summaries and, when connected to a BI tool, waterfall charts.
-
-**`/sox-testing [process] [period]`** -- Generate SOX 404 control testing workpapers. Control objective, test of design, sample selection with statistical basis, test of operating effectiveness, and deficiency classification template.
-
-### The Six Skills
-
-Skills fire automatically when Claude detects that their domain is relevant.
-
-| Skill                    | When It Activates                                 | What It Adds                                                                  |
-| ------------------------ | ------------------------------------------------- | ----------------------------------------------------------------------------- |
-| **journal-entry-prep**   | Preparing or reviewing journal entries            | JE best practices, standard accrual types, documentation requirements         |
-| **reconciliation**       | Reconciling accounts or investigating differences | GL-to-subledger methodology, reconciling item categorisation, aging standards |
-| **financial-statements** | Generating or reviewing financial statements      | GAAP presentation standards, flux analysis methodology                        |
-| **variance-analysis**    | Explaining or investigating variances             | Decomposition techniques, materiality thresholds, narrative generation        |
-| **close-management**     | Managing month-end or quarter-end close           | Close checklist by day, task sequencing, dependency mapping, status tracking  |
-| **audit-support**        | Preparing for or responding to audits             | SOX 404 methodology, sample selection, deficiency classification              |
-
-The close-management skill deserves particular attention. It activates whenever you are in a close context -- even if you are asking Claude a general question about an account balance -- and applies the close checklist lens automatically: is this resolved? Does it need resolution before Day 5? Who owns it?
-
-### Connectors and the Category Placeholder System
-
-The finance plugin works best when connected to your financial data sources. Without connections, you paste data or upload files. With connections, commands pull data automatically. The CONNECTORS.md file documents the connection points -- but it reveals an architectural pattern worth understanding.
-
-The plugin does not reference specific products. Instead, it uses category placeholders:
-
-| Category         | Placeholder          | What It Means                                             |
-| ---------------- | -------------------- | --------------------------------------------------------- |
-| ERP / Accounting | `~~erp`              | Any accounting system: NetSuite, SAP, QuickBooks, Xero    |
-| Data warehouse   | `~~data warehouse`   | Any warehouse: Snowflake, Databricks, BigQuery            |
-| Spreadsheets     | `~~office suite`     | Google Sheets or Excel (pre-configured for Microsoft 365) |
-| BI / Analytics   | `~~analytics`        | Tableau, Looker, Power BI                                 |
-| Document storage | `~~document storage` | Any document management system                            |
-| Email            | `~~email`            | Pre-configured for Microsoft 365                          |
-
-This is not a limitation -- it is a design decision. The plugin describes _workflows_. IT configures _connections_. The SKILL.md files and commands say "pull the trial balance from ~~erp" without caring whether the ERP is NetSuite or SAP. When IT configures the `.mcp.json` to point `~~erp` at a NetSuite MCP server, the workflow works automatically. When a different organisation points it at SAP, the same workflow works with no changes to the SKILL.md or commands.
-
-This is Chapter 15's division of responsibility made concrete: the knowledge worker owns the workflow definitions (what the agent should do). IT owns the connector configuration (which systems to connect). Neither needs to modify the other's work.
-
 > **What Is a Month-End Close?**
 >
 > The month-end close is the process by which a company's accounting team finalises the financial records for a completed calendar month -- reconciling all accounts, posting final journal entries, and producing the management accounts. For most organisations, it takes three to ten business days after month-end.
 >
 > **Key close tasks by day:** Day 1-2: subledger feeds, bank statement receipt, preliminary trial balance. Day 2-3: AR/AP reconciliation, payroll posting, fixed asset depreciation. Day 3-5: accruals, prepaids, intercompany eliminations. Day 5-7: income statement and balance sheet preparation, flux analysis. Day 7-10: management review, CFO sign-off, distribution.
 
-## Example: The Full Month-End Close Workflow
+## Worked Example: The Month-End Close
 
-The month-end close demonstrates how commands and skills work together across multiple days.
+You are a controller starting the March close. The workflow spans seven business days, and each day maps to a specific command or skill in the finance plugin. Walk through the full cycle to see how the five commands and the close-management skill work together.
 
-**Day 1.** The controller opens Cowork and types: "Let's start the March close." The close-management skill activates automatically. Claude queries the connected data warehouse for each close checklist item's current state, produces the Day 1 status report, and surfaces two blockers: a $3,420 bank reconciliation discrepancy on the USD operating account and a missing intercompany settlement confirmation from Singapore.
+**Day 1: Close kickoff.** You tell Claude: _"Let's start the March close."_ You do not invoke a command — the close-management skill activates automatically. It produces a close checklist with task owners, deadlines, and dependencies. Throughout the close, this skill stays active in the background, flagging whether items are resolved, whether they block downstream tasks, and who owns them.
 
-**Day 3.** `/reconciliation bank-USD 2025-03`. Claude queries the connected bank data, runs the reconciliation against the GL, and produces a structured workpaper. The $3,420 discrepancy breaks down as: four timing differences totalling $2,180 (checks issued in March, clearing in April), two bank charges totalling $840 not yet posted to the GL (requires journal entry), and one unidentified item of $400 requiring investigation.
+**Day 3: Bank reconciliation.** The USD operating account shows a $3,420 discrepancy between the GL and the bank statement. You type:
 
-**Day 4.** `/journal-entry bank-charges 2025-03`. Claude generates the entry: debit Bank Charges Expense $840, credit Cash -- USD Operating $840, with transaction references and a note that this entry requires controller review before posting.
+```
+/reconciliation bank-USD 2025-03
+```
 
-**Day 5.** `/variance-analysis revenue 2025-Q1 vs budget`. Claude pulls Q1 actuals from the data warehouse and the budget from the BI platform. Revenue is $2.3M below budget (-4.1%), decomposed as: volume shortfall $3.1M adverse (unit volume 8.2% below budget), price $0.8M favourable (average selling price 2.1% above budget due to product mix shift toward premium SKUs). Narrative generated. CFO-ready in fifteen minutes.
+Claude reads the bank statement and trial balance from your connected folder (or queries your ERP if connected), runs the reconciliation against the GL, and produces a structured workpaper. The $3,420 discrepancy breaks down as:
 
-**Day 6.** `/income-statement monthly 2025-03`. The full management P&L with current month, prior month, YTD actual, YTD budget, and YTD variance columns, formatted in the firm's standard template, with material variances flagged and narrative summaries for the top three. Ready for distribution.
+| Item                                        | Category                   | Amount | Action Required              |
+| ------------------------------------------- | -------------------------- | ------ | ---------------------------- |
+| 4 checks issued in March, clearing in April | Timing difference          | $2,180 | None -- resolves next period |
+| 2 bank service charges not posted to GL     | Error requiring correction | $840   | Journal entry needed         |
+| 1 unidentified deposit                      | Requires investigation     | $400   | Research before Day 5        |
 
-**SOX season.** `/sox-testing revenue-recognition 2025-Q1`. Control testing workpapers: control objective (revenue recognised in accordance with ASC 606), test of design, sample selection with statistical methodology, test of operating effectiveness template, and deficiency classification guide.
+The close-management skill flags the $400 unidentified item as a blocker that must be resolved before Day 5 close activities can proceed.
 
-Throughout this entire workflow, the close-management skill is active in the background. On Day 3, when the controller runs the bank reconciliation, the skill contextualises the output: it flags the $400 unidentified item not just as an outstanding reconciling item but as a blocker that must be resolved before Day 5 close activities can proceed. On Day 5, when the variance analysis is complete, the skill checks it against the close checklist and marks the revenue review as complete.
+**Day 4: Correcting entries.** You fix the bank charges immediately:
+
+```
+/journal-entry bank-charges 2025-03
+```
+
+Claude generates the entry: debit Bank Charges Expense $840, credit Cash -- USD Operating $840, with transaction references and a note that this entry requires controller review before posting.
+
+**Day 5: Variance analysis.** With accounts reconciled and entries posted, you shift to management reporting:
+
+```
+/variance-analysis revenue Q1 vs budget
+```
+
+Claude decomposes the revenue variance into volume, price, and mix drivers across your product lines. The CFO wants to know why revenue is $35K below budget — now you can explain: volume was on plan, but average selling price fell 7% due to promotional discounting in one product line.
+
+**Day 6: Management P&L.**
+
+```
+/income-statement monthly 2025-03
+```
+
+Claude produces the management P&L with current month, prior month, YTD actual, YTD budget, and variance columns. Material variances are flagged. The variance narrative from Day 5 feeds directly into the P&L commentary.
+
+**SOX season: Control testing.** After the books are closed, control testing follows:
+
+```
+/sox-testing revenue-recognition 2025-Q1
+```
+
+Claude generates a SOX 404 control testing workpaper: control description, testing methodology, sample selection criteria, test steps, and spaces for test results and exceptions. This is a framework — the qualified auditor selects the actual samples, performs the tests, and documents the conclusions.
+
+Five commands, one skill, seven business days. Each command produces a deliverable that feeds the next phase. The close-management skill ties them together by tracking what is done, what is outstanding, and what blocks downstream work.
+
+### Exercise 5: Reconciliation and Journal Entry
+
+**Time:** 25 minutes. **Requires:** Cowork with the finance plugin installed.
+
+1. Run `/reconciliation bank-USD 2025-03`. Claude will use the bank statement and trial balance you generated in the practice data step (or your live data if you have connected an ERP). Review the structured workpaper output.
+
+2. Identify the reconciling items in the output. For each item, confirm the categorisation: is it a timing difference, an in-transit item, an error, or an item requiring investigation? If you disagree with any categorisation, tell Claude why and ask it to recategorise.
+
+3. For each item categorised as an error requiring correction, run `/journal-entry` to generate the correcting entry. Review the debit/credit structure: does the entry balance? Is the accounting rationale correct?
+
+4. Ask Claude: _"Which reconciling items must be resolved before Day 5 of the close, and which can wait?"_ The close-management skill should contextualise each item against the close timeline.
+
+5. Test the passive skill: copy a journal entry from the practice data and paste it into Cowork WITHOUT using a command. The journal-entry-prep skill should activate automatically, applying review standards and flagging documentation gaps -- no `/journal-entry` command needed. This is the difference between commands (you invoke them) and skills (they fire on their own).
+
+**The discipline:** Reconciliation finds problems; journal entries fix them. The two commands work as a pair -- reconciliation identifies discrepancies, and journal entry creates the correcting entries with proper documentation. Running them in sequence is the core close workflow.
+
+### Exercise 6: Variance Analysis
+
+**Time:** 20 minutes. **Requires:** Cowork with the finance plugin installed.
+
+1. Run `/variance-analysis revenue Q1 vs budget`. Claude will use the budget-vs-actuals spreadsheet you generated in the practice data step (or your live data if connected). The practice data includes three product lines with unit volumes and average selling prices -- enough for a full decomposition.
+
+2. Read the decomposition output. Revenue variances split into three drivers: volume (units sold vs planned), price (average selling price vs planned), and mix (product/segment distribution vs planned). Identify which driver accounts for the largest variance.
+
+3. Run `/income-statement monthly 2025-03`. Review the management P&L: current month, prior month, YTD actual, YTD budget, and YTD variance columns. Check which line items are flagged as material variances.
+
+4. Cross-reference: does the variance narrative from step 2 explain the revenue line in the income statement from step 3? Ask Claude: _"Summarise the revenue variance in two sentences suitable for the CFO deck."_
+
+**The discipline:** Variance analysis and the income statement are complementary views of the same data. The variance analysis explains _why_ numbers moved; the income statement shows _what_ moved. Running both commands and cross-referencing the outputs is how controllers build the management narrative.
+
+### Exercise 7: SOX Control Testing
+
+**Time:** 15 minutes. **Requires:** Cowork with the finance plugin installed.
+
+1. Run `/sox-testing revenue-recognition 2025-Q1`. Review the generated workpaper: does the control description match a revenue recognition process you recognise? Is the sample selection methodology appropriate for the population size?
+
+2. Ask Claude: _"What are the three most common revenue recognition control failures identified in SOX testing? For each, what test procedure would detect it?"_
+
+3. Run `/sox-testing procure-to-pay 2025-Q1`. Compare the two workpapers: what is structurally similar, and what differs between revenue cycle and expenditure cycle testing?
+
+**The discipline:** SOX workpapers are frameworks, not conclusions. The plugin generates the testing structure — control description, sample methodology, and test steps. A qualified auditor selects the actual samples, executes the tests, and documents the results. The plugin saves hours of document setup; professional judgment on control effectiveness remains human.
 
 ## Try With AI
 
@@ -290,28 +323,7 @@ Explain:
 
 **What you're learning:** The distinction between commands (explicit invocation) and skills (passive activation) is the core architectural concept of Cowork plugins. Understanding when each fires -- and why both exist for the same domain -- reveals how the plugin produces specialist behaviour rather than just providing tool access.
 
-### Prompt 2: Category Placeholder Analysis
-
-```
-The knowledge-work-plugins/finance plugin uses category
-placeholders in its workflow definitions:
-
-- ~~erp (could be NetSuite, SAP, QuickBooks, Xero)
-- ~~data warehouse (could be Snowflake, Databricks, BigQuery)
-- ~~analytics (could be Tableau, Looker, Power BI)
-
-Help me understand this design:
-1. Why doesn't the plugin just say "NetSuite" instead of ~~erp?
-2. Who is responsible for mapping ~~erp to a specific product?
-3. What happens to the workflow definitions (SKILL.md and
-   commands) when a company switches from NetSuite to SAP?
-4. How does this connect to the idea that knowledge workers
-   own workflows and IT owns infrastructure?
-```
-
-**What you're learning:** The category placeholder system is a concrete implementation of separation of concerns. By understanding who owns what -- knowledge workers own the SKILL.md, IT owns the .mcp.json -- you can see how plugins scale across organisations without requiring workflow rewrites for each enterprise's technology stack.
-
-### Prompt 3: Close Workflow Design
+### Prompt 2: Close Workflow Design
 
 ```
 I'm a controller at a mid-market company starting the March
@@ -333,6 +345,29 @@ For each day:
 ```
 
 **What you're learning:** A month-end close is not a single task but a multi-day workflow where each step builds on the previous one. By mapping commands and skills to specific close days, you develop the ability to orchestrate financial workflows through Cowork rather than treating each command as an isolated tool.
+
+### Prompt 3: Reconciliation Deep Dive
+
+```
+I have a bank reconciliation with these reconciling items:
+
+- 3 timing differences totalling $5,200
+- 1 bank charge of $150 not posted to GL
+- 1 unidentified item of $780
+
+Help me:
+1. Which items need journal entries and which resolve on
+   their own?
+2. Draft the journal entry for the bank charge. Include
+   debit/credit, account names, and the accounting rationale.
+3. What steps should I take to investigate the unidentified
+   $780? What are the three most common explanations for
+   unidentified reconciling items?
+4. If this is Day 3 of a 7-day close, which of these items
+   blocks Day 5 activities?
+```
+
+**What you're learning:** Reconciliation is not just identifying differences -- it is categorising them and knowing what action each category requires. Timing differences resolve themselves. Errors need correcting entries. Unidentified items need investigation. This prompt practises the judgment layer that sits on top of the `/reconciliation` command output.
 
 ## Flashcards Study Aid
 

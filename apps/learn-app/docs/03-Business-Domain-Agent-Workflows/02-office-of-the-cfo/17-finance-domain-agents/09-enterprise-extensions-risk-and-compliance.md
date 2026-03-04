@@ -174,7 +174,7 @@ Variance analysis compares actual results against a plan (budget or forecast) or
 - **Management quality signals** your experienced credit officers use as proxies for depth and reliability — the qualitative indicators that supplement the quantitative ratios.
 - **Non-negotiable escalation conditions** — transaction size thresholds, heightened-risk sectors, borrowers with prior credit events. These are unconditional routing rules, not guidelines.
 
-### Exercise 12: Credit Analysis SKILL.md
+### Exercise 15: Credit Analysis SKILL.md
 
 **What you need:** 30 minutes. No software required.
 
