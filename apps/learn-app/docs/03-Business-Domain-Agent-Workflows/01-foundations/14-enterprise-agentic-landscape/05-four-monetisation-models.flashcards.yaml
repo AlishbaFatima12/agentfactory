@@ -32,8 +32,8 @@ cards:
     difficulty: "basic"
 
   - id: "ch14-05-monetisation-005"
-    front: "Why is the license model appropriate for legal and healthcare domains?"
-    back: "BECAUSE these domains involve regulatory compliance, professional liability, and patient/client safety, THEREFORE both parties need contractual protections that a license agreement provides. The pricing reflects the risk profile and covers security, legal, and compliance reviews."
+    front: "Why is the license model appropriate for legal and banking domains?"
+    back: "BECAUSE these domains involve regulatory compliance, professional liability, and financial safety, THEREFORE both parties need contractual protections that a license agreement provides. The pricing reflects the risk profile and covers security, legal, and compliance reviews."
     tags: ["license", "regulated"]
     difficulty: "intermediate"
     why: "Connects the model choice to the domain's risk characteristics"
@@ -45,9 +45,9 @@ cards:
     difficulty: "intermediate"
 
   - id: "ch14-05-monetisation-007"
-    front: "Which monetisation model fits HR and technical documentation domains? Why?"
-    back: "Subscription. BECAUSE value in HR and documentation is continuous and diffuse (every employee benefits, none can be isolated), THEREFORE attribution to specific outcomes is impractical. A recurring fee matches the continuous value pattern."
-    tags: ["subscription", "HR", "documentation"]
+    front: "Which monetisation model fits HR and product management domains? Why?"
+    back: "Subscription. BECAUSE value in HR and product management is continuous and diffuse (every employee benefits, none can be isolated), THEREFORE attribution to specific outcomes is impractical. A recurring fee matches the continuous value pattern."
+    tags: ["subscription", "HR", "product-management"]
     difficulty: "intermediate"
     why: "Tests the reasoning behind model-domain matching, not just the pairing"
 

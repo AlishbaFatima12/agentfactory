@@ -105,7 +105,7 @@ Three core insights tie the entire chapter together.
 
 **First: the problem is knowledge transfer, not technology.** The technology arrived years before organisations could use it. What was missing was a structural way to move expertise from the professional's head into a deployable agent. The 2026 platforms solved this by putting the knowledge worker -- not the developer -- in the authoring position.
 
-**Second: every deployment decision flows from the knowledge question.** Whose expertise, encoded in what form, available to whom, under what constraints? The answer determines platform choice (Cowork for team-level, Frontier for enterprise-wide), monetisation model (success fee for measurable outcomes, subscription for ongoing operations), maturity requirements (Level 2 minimum for pilot, Level 3 for full deployment), and domain profile (which of the seven chapters guides the implementation).
+**Second: every deployment decision flows from the knowledge question.** Whose expertise, encoded in what form, available to whom, under what constraints? The answer determines platform choice (Cowork for team-level, Frontier for enterprise-wide), monetisation model (success fee for measurable outcomes, subscription for ongoing operations), maturity requirements (Level 2 minimum for pilot, Level 3 for full deployment), and domain profile (which of the seven sections guides the implementation).
 
 **Third: qualification before proposal.** The maturity model is not an academic framework. It is a filter. A Level 1 organisation needs education. A Level 3 organisation needs governance. Offering the wrong thing at the wrong maturity level wastes everyone's time.
 
@@ -122,7 +122,7 @@ Before moving to Chapter 15, test whether you can answer these questions. If you
 - [ ] **The Knowledge Question**: Can you answer "whose expertise, in what form, for whom, under what constraints" for a specific deployment you care about?
 - [ ] **Conversation Qualification**: Can you assess a stakeholder's readiness and frame value in terms that resonate with their specific role?
 
-If any of these feel uncertain, revisit the relevant lesson before continuing. The deployment chapters (15-24) assume this vocabulary is in place.
+If any of these feel uncertain, revisit the relevant lesson before continuing. The deployment chapters (15--29) assume this vocabulary is in place.
 
 ## What Comes Next
 

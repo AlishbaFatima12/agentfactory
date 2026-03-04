@@ -55,7 +55,7 @@ Part 3 spans **sixteen chapters across seven sections**. The sections follow the
 
 ### Chapters 14, 15, 16: How to Think About Enterprise AI Agents Before Building Them
 
-Section I establishes the conceptual and technical foundations that every subsequent chapter depends on. It answers three questions practitioners consistently struggle with: What does the enterprise AI landscape actually look like in 2025, and how do I navigate it strategically? How do I architect an agent that can reliably handle the complexity of a real business function? How do I transfer the knowledge locked in expert practitioners' heads into a format that AI agents can execute consistently?
+Section I establishes the conceptual and technical foundations that every subsequent chapter depends on. It answers three questions practitioners consistently struggle with: What does the enterprise AI landscape actually look like in 2026, and how do I navigate it strategically? How do I architect an agent that can reliably handle the complexity of a real business function? How do I transfer the knowledge locked in expert practitioners' heads into a format that AI agents can execute consistently?
 
 ---
 
@@ -63,9 +63,9 @@ Section I establishes the conceptual and technical foundations that every subseq
 
 **[→ Read Chapter 14](/docs/Business-Domain-Agent-Workflows/enterprise-agentic-landscape)**
 
-Maps the strategic landscape of enterprise AI in 2025 — vendor ecosystems, deployment patterns, and the build vs. buy vs. configure decision framework. Introduces the Cowork platform within the broader agent ecosystem, the four monetisation models that govern how domain agents create financial value, and the Organisational AI Maturity Model that tells you which organisations are genuinely ready to deploy.
+Maps the strategic landscape of enterprise AI in 2026 — why adoption stalled in 2024–2025, the platform shift that unlocked deployment, and the Cowork vs. Frontier decision framework. Introduces the four monetisation models that govern how domain agents create financial value and the Organisational AI Maturity Model that tells you which organisations are genuinely ready to deploy.
 
-**Key topics:** Enterprise AI maturity model · Cowork platform position · Build vs. buy decision framework · Common deployment failure modes · The SKILL.md architecture as competitive moat
+**Key topics:** The Pilot Trap and why enterprise AI stalled · Cowork vs. Frontier platform comparison · Knowledge worker centrality · Four monetisation models · Organisational AI Maturity Model · The seven deployment domains
 
 ---
 
@@ -73,9 +73,9 @@ Maps the strategic landscape of enterprise AI in 2025 — vendor ecosystems, dep
 
 **[→ Read Chapter 15](/docs/Business-Domain-Agent-Workflows/enterprise-agent-blueprint)**
 
-A repeatable 7-step design methodology for building enterprise-grade domain agents that perform reliably under production conditions. Explains the relationship between the SKILL.md file, the config.yaml metadata layer, and MCP connector scripts — and who is responsible for each layer.
+The anatomy of a Cowork plugin — SKILL.md files, the plugin package structure, MCP connectors, the governance layer, the three-way ownership model, and the marketplace. Explains the Persona–Questions–Principles (PQP) Framework, the three-level context hierarchy, and who is responsible for each layer.
 
-**Key topics:** 7 components of a production-grade agent · Designing for failure and graceful degradation · Context window management for complex workflows · Testing and validation before deployment · Version control and change management
+**Key topics:** Cowork plugin anatomy and package structure · The PQP Framework (Persona, Questions, Principles) · Three-level context hierarchy · MCP connector ecosystem · Governance layer and shadow mode · Three-way ownership model · Plugin marketplace
 
 ---
 
@@ -85,7 +85,7 @@ A repeatable 7-step design methodology for building enterprise-grade domain agen
 
 The methodology chapter for the entire curriculum. Describes how to transform the tacit knowledge locked in expert practitioners' heads — and in institutional documents — into the SKILL.md files that make domain agents genuinely useful. Every domain chapter in Sections II through VII applies this method.
 
-**Key topics:** Method A — expert interview protocol (the 12 questions that unlock tacit knowledge) · Method B — document distillation from policy manuals · The SKILL.md format specification · Encoding "what not to do" · Validation testing methodology
+**Key topics:** Method A — expert interview protocol (the five questions that surface tacit knowledge) · Method B — three-pass document extraction from policy manuals · From extraction to SKILL.md translation · Building validation scenario sets · The Validation Loop — shadow mode and graduated autonomy
 
 ---
 

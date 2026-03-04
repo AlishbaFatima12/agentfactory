@@ -3,7 +3,17 @@ slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/four-monetis
 sidebar_position: 5
 title: "Four Monetisation Models"
 description: "Understand the four ways domain agents create and capture value -- Success Fee, Subscription, License, and Marketplace -- with pricing benchmarks and domain-specific guidance"
-keywords: ["monetisation models", "success fee", "subscription", "license", "marketplace", "agent pricing", "attribution methodology", "domain agent value"]
+keywords:
+  [
+    "monetisation models",
+    "success fee",
+    "subscription",
+    "license",
+    "marketplace",
+    "agent pricing",
+    "attribution methodology",
+    "domain agent value",
+  ]
 chapter: 14
 lesson: 5
 duration_minutes: 35
@@ -68,7 +78,7 @@ teaching_guide:
   key_points:
     - "Before deploying any domain agent, you must understand how it creates value AND how that value is captured -- technology without a value model is a cost centre"
     - "Success Fee is the most natural model for domains with measurable outcomes (sales, finance), but requires clean attribution agreed before deployment"
-    - "Subscription works for continuous-value domains where attribution is difficult (HR, technical documentation)"
+    - "Subscription works for continuous-value domains where attribution is difficult (HR, product management, operations)"
     - "License is appropriate for high-stakes, regulated domains where security and compliance reviews are expected"
     - "Marketplace creates a new revenue stream by publishing SKILL.md files as reusable plugins -- but only for general domain knowledge, never organisation-specific knowledge"
   misconceptions:
@@ -106,11 +116,11 @@ The success fee model is the most naturally compelling because value is directly
 
 ### Natural Domains
 
-| Domain | Typical Fee Structure | Why It Fits |
-|--------|----------------------|-------------|
-| **Sales** | $3-8 per qualified lead, 0.5-1.5% of attributed closed revenue | Leads and revenue are directly measurable |
-| **Finance** | 1.5-2.5% of attributed savings identified | Cost reduction is quantifiable against baseline |
-| **Architecture / Construction** | 0.5-1% of attributed project savings | Budget variance is tracked on every project |
+| Domain           | Typical Fee Structure                                          | Why It Fits                                         |
+| ---------------- | -------------------------------------------------------------- | --------------------------------------------------- |
+| **Sales**        | $3-8 per qualified lead, 0.5-1.5% of attributed closed revenue | Leads and revenue are directly measurable           |
+| **Finance**      | 1.5-2.5% of attributed savings identified                      | Cost reduction is quantifiable against baseline     |
+| **Supply Chain** | 0.5-1% of attributed procurement savings                       | Spend reduction is tracked against purchase history |
 
 ### The Attribution Requirement
 
@@ -130,11 +140,11 @@ The subscription model works when value is continuous but difficult to attribute
 
 ### Natural Domains
 
-| Domain | Why Subscription Fits | Typical Range |
-|--------|----------------------|---------------|
-| **HR** | Continuous value across recruiting, onboarding, policy questions -- hard to tie to specific revenue | Team-level: $800-$2,500/month |
-| **Technical Documentation** | Diffuse, ongoing value across the organisation -- every employee benefits, none can be isolated | Enterprise: $5,000-$15,000/month |
-| **Project Management** | Ongoing coordination value that prevents delays but cannot be attributed to specific savings | Project-based: $500-$2,000/project |
+| Domain                 | Why Subscription Fits                                                                                                  | Typical Range                   |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| **HR**                 | Continuous value across recruiting, onboarding, policy questions -- hard to tie to specific revenue                    | Team-level: $800-$2,500/month   |
+| **Product Management** | Diffuse, ongoing value across discovery, planning, and stakeholder communication -- hard to tie to specific revenue    | Team-level: $2,000-$8,000/month |
+| **Operations**         | Ongoing process documentation and compliance value that prevents failures but cannot be attributed to specific savings | Department: $1,500-$5,000/month |
 
 ### The Self-Justification Problem
 
@@ -150,11 +160,11 @@ License agreements are annual contracts with significant upfront negotiation. Th
 
 ### Natural Domains
 
-| Domain | Typical Annual Range | Why License Fits |
-|--------|---------------------|-----------------|
-| **Legal** | $40,000-$150,000/year | Regulatory compliance, attorney-client privilege, malpractice risk |
-| **Healthcare** | $60,000-$180,000/year | Patient safety, HIPAA compliance, clinical liability |
-| **Architecture / BIM** | $60,000-$180,000/year | Building code compliance, structural safety, professional liability |
+| Domain                | Typical Annual Range  | Why License Fits                                                   |
+| --------------------- | --------------------- | ------------------------------------------------------------------ |
+| **Legal**             | $40,000-$150,000/year | Regulatory compliance, attorney-client privilege, malpractice risk |
+| **Banking / Finance** | $60,000-$200,000/year | IFRS 9, Basel III/IV compliance, AML/KYC regulatory exposure       |
+| **CA/CPA Practice**   | $40,000-$120,000/year | Audit standards, tax compliance, professional liability            |
 
 ### Requirements
 
@@ -184,12 +194,12 @@ This is the critical boundary. Your company's internal compliance procedures, cl
 
 ### Comparison Table
 
-| Model | Value Pattern | When to Use | Key Risk |
-|-------|--------------|-------------|----------|
-| **Success Fee** | Measurable, attributable outcomes | Sales, finance, cost reduction | Attribution disputes |
-| **Subscription** | Continuous, diffuse value | HR, documentation, coordination | Fails to self-justify |
-| **License** | High-stakes, regulated domains | Legal, healthcare, architecture | Lengthy procurement |
-| **Marketplace** | Reusable domain expertise | General best practices | IP boundary confusion |
+| Model            | Value Pattern                     | When to Use                        | Key Risk              |
+| ---------------- | --------------------------------- | ---------------------------------- | --------------------- |
+| **Success Fee**  | Measurable, attributable outcomes | Sales, finance, cost reduction     | Attribution disputes  |
+| **Subscription** | Continuous, diffuse value         | HR, product management, operations | Fails to self-justify |
+| **License**      | High-stakes, regulated domains    | Legal, banking, CA/CPA practice    | Lengthy procurement   |
+| **Marketplace**  | Reusable domain expertise         | General best practices             | IP boundary confusion |
 
 ## Try With AI
 
@@ -238,7 +248,6 @@ lead for sales, $40,000-$150,000/year for legal licenses)?
 ```
 
 **What you're learning:** You are grounding the abstract models in current market reality. Knowing what competitors charge and how they structure pricing gives you a reference point for your own deployment decisions.
-
 
 ## Flashcards Study Aid
 

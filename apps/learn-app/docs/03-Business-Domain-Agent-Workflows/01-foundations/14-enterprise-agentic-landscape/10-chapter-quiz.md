@@ -332,7 +332,7 @@ options: [
 "It only works for technology companies, not traditional enterprises"
 ],
 correctOption: 2,
-explanation: "The subscription model's weakness is that it does not self-justify. Unlike a success-fee agent that proves its value every time it generates a fee, a subscription agent requires active measurement to demonstrate the recurring cost is worth paying. Without deliberate value tracking, subscriptions become vulnerable during budget reviews. Option A is wrong because subscription ranges are specified at team-level pricing ($800-$2,500/month for HR). Option B conflates subscription with success fee — attribution methodology is the success fee's requirement. Option D is incorrect; the lesson identifies subscription as fitting HR, technical documentation, and project management across any industry.",
+explanation: "The subscription model's weakness is that it does not self-justify. Unlike a success-fee agent that proves its value every time it generates a fee, a subscription agent requires active measurement to demonstrate the recurring cost is worth paying. Without deliberate value tracking, subscriptions become vulnerable during budget reviews. Option A is wrong because subscription ranges are specified at team-level pricing ($800-$2,500/month for HR). Option B conflates subscription with success fee — attribution methodology is the success fee's requirement. Option D is incorrect; the lesson identifies subscription as fitting HR, product management, and operations across any industry.",
 source: "Lesson 5: Four Monetisation Models"
 },
 {
@@ -380,7 +380,7 @@ options: [
 "$200-$900 per month per subscriber"
 ],
 correctOption: 3,
-explanation: "The marketplace model generates $200-$900/month per subscriber with effectively zero marginal cost per additional subscriber. Option A describes the license model range for legal or healthcare domains. Option B resembles success fee pricing for sales leads. Option C is not a model described in the lesson.",
+explanation: "The marketplace model generates $200-$900/month per subscriber with effectively zero marginal cost per additional subscriber. Option A describes the license model range for legal or banking domains. Option B resembles success fee pricing for sales leads. Option C is not a model described in the lesson.",
 source: "Lesson 5: Four Monetisation Models"
 },
 {
@@ -492,15 +492,15 @@ explanation: "Every domain shares the problem of institutional knowledge lock-in
 source: "Lesson 7: The Seven Domains"
 },
 {
-question: "The Healthcare Operations domain comes with an explicit boundary. What is excluded and why?",
+question: "Why is Finance and Banking the largest section in Part 3, spanning five chapters (17--21)?",
 options: [
-"Patient billing — because financial transactions require separate compliance frameworks",
-"Clinical decision support and diagnosis — because clinical governance requirements are different in kind from operational decisions",
-"Emergency room operations — because real-time decisions cannot wait for AI processing",
-"Pharmaceutical prescriptions — because drug interactions require FDA-approved algorithms"
+"Because financial services have the largest IT budgets and can afford more agent deployments",
+"Because the domain encompasses foundational finance, intent-driven architecture, CA/CPA practice, Islamic finance, and banking regulation — each requiring distinct expertise and compliance frameworks",
+"Because finance was the first domain where AI was deployed and has the most historical data",
+"Because financial regulators require more documentation than other domains"
 ],
 correctOption: 1,
-explanation: "The lesson explicitly states: 'NOT clinical decision support or diagnosis. The governance requirements for clinical decisions are different in kind from operational decisions, and the deployment frameworks in this book are designed for operations.' Option A is incorrect because billing operations are not excluded. Option C fabricates a restriction not mentioned. Option D invents a specific pharmaceutical restriction not in the lesson.",
+explanation: "Finance and Banking spans five chapters because the domain encompasses genuinely distinct sub-domains: foundational FP&A and valuation (Ch 17), intent-driven financial architecture (Ch 18), CA/CPA practice areas (Ch 19), Islamic finance across seven jurisdictions (Ch 20), and banking-specific regulation covering IFRS 9, Basel III/IV, and AML/KYC (Ch 21). Each requires its own expertise and compliance frameworks. Option A confuses budget size with domain complexity. Option C and D are not the reasons given in the lesson.",
 source: "Lesson 7: The Seven Domains"
 },
 {
@@ -524,19 +524,19 @@ options: [
 "The governance requirements across all regulated and non-regulated domains"
 ],
 correctOption: 1,
-explanation: "The deployment methodology is consistent across all seven domains: (1) identify institutional knowledge at risk, (2) encode it into agent instructions, (3) connect to domain-specific data sources, (4) deploy with appropriate governance, (5) validate against the expert's knowledge. Option A is wrong because pricing varies significantly by domain and model. Option C is incorrect because some domains may better suit Frontier. Option D is wrong because governance requirements differ substantially — healthcare and legal have different requirements from sales or documentation.",
+explanation: "The deployment methodology is consistent across all seven domains: (1) identify institutional knowledge at risk, (2) encode it into agent instructions, (3) connect to domain-specific data sources, (4) deploy with appropriate governance, (5) validate against the expert's knowledge. Option A is wrong because pricing varies significantly by domain and model. Option C is incorrect because some domains may better suit Frontier. Option D is wrong because governance requirements differ substantially — banking and legal have different requirements from sales or product management.",
 source: "Lesson 7: The Seven Domains"
 },
 {
-question: "In the Architecture and Engineering domain, what makes the lead architect's expertise particularly difficult to encode?",
+question: "What role does Chapter 27 (Productivity and The Agentic Office) play within the People and Organisational Operations section?",
 options: [
-"Knowledge of CAD software keyboard shortcuts and menu locations",
-"Understanding of building material costs and supplier pricing",
-"Spatial reasoning and coordination logic — identifying clashes that software flags as warnings but experience says are critical, or misses entirely",
-"Familiarity with project management timelines and milestone tracking"
+"It teaches how to install and configure productivity software like Slack and Teams",
+"It is the integration chapter that connects all domain agents from Chapters 17 through 26 into a coherent agentic office — a workplace AI layer that knows the organisation's people, projects, and priorities",
+"It provides a standalone personal productivity system unrelated to other domain agents",
+"It focuses exclusively on calendar management and meeting scheduling automation"
 ],
-correctOption: 2,
-explanation: "The lesson identifies the lead architect's spatial reasoning and coordination logic as the expertise at risk — specifically the ability to distinguish software-flagged warnings that are actually critical from those that are not, and identifying clashes the software misses because they require understanding of construction sequence. Option A is tool proficiency, not institutional knowledge. Option B is commercial knowledge, not the spatial reasoning expertise highlighted. Option D is project management, a different domain.",
+correctOption: 1,
+explanation: "Chapter 27 is explicitly described as the integration chapter — it connects the domain agents from Chapters 17 through 26 into a workplace AI layer that knows the organisation's people, projects, terminology, and priorities. This is where domain agents stop being isolated point solutions and start working as a system. Option A describes IT setup, not domain expertise. Option C misses the integration purpose. Option D is far too narrow.",
 source: "Lesson 7: The Seven Domains"
 },
 {
