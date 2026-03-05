@@ -189,7 +189,7 @@ The transformation of software development is underway. You are not just learnin
 Refer back to this table whenever a term feels unfamiliar. You do not need to memorize anything now -- each term gets its own lesson with step-by-step explanation.
 
 <details>
-<summary>Click to expand glossary</summary>
+<summary>📖 Glossary</summary>
 
 | Term | Plain English |
 |------|--------------|
