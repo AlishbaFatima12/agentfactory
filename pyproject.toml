@@ -5,6 +5,7 @@
 name = "panaversity-monorepo"
 version = "0.0.0"
 description = "AI Native Software Development - Python workspace root"
+license = "LicenseRef-Proprietary"
 requires-python = ">=3.12"
 
 # No dependencies at root - each project manages its own

@@ -1,6 +1,24 @@
 # Contributing to AI Native Software Development
 
+## License & Intellectual Property
+
+This repository is **proprietary software** owned by Panaversity. All Rights Reserved.
+See the root [LICENSE](./LICENSE) file for full terms.
+
+By submitting any contribution (code, documentation, content, or other materials) to
+this repository, you agree that:
+
+1. Your contribution becomes the exclusive property of Panaversity
+2. You assign all intellectual property rights in your contribution to Panaversity
+3. You have the legal right to make this assignment
+4. Your contribution does not infringe any third-party intellectual property rights
+
+**Only authorized contributors may submit changes to this repository.**
+
+---
+
 This is an **Nx monorepo** containing multiple projects with different technology stacks:
+
 - **JS/TS projects** (Docusaurus, plugins) - managed with `pnpm`
 - **Python projects** (MCP server) - managed with `uv`
 
@@ -45,10 +63,10 @@ uv sync --all-extras
 
 This monorepo uses **two workspace systems** running in parallel:
 
-| Stack | Package Manager | Workspace Config | Lockfile |
-|-------|-----------------|------------------|----------|
-| JS/TS | pnpm | `pnpm-workspace.yaml` | `pnpm-lock.yaml` |
-| Python | uv | `pyproject.toml` ([tool.uv.workspace]) | `uv.lock` |
+| Stack  | Package Manager | Workspace Config                       | Lockfile         |
+| ------ | --------------- | -------------------------------------- | ---------------- |
+| JS/TS  | pnpm            | `pnpm-workspace.yaml`                  | `pnpm-lock.yaml` |
+| Python | uv              | `pyproject.toml` ([tool.uv.workspace]) | `uv.lock`        |
 
 **Nx** orchestrates tasks across both stacks but doesn't manage dependencies.
 
@@ -102,6 +120,7 @@ make build        # Build package
 ### JS/TS Dependencies
 
 **From root (preferred):**
+
 ```bash
 # Add to specific project
 pnpm add <package> --filter learn-app
@@ -112,6 +131,7 @@ pnpm add -D <package> -w
 ```
 
 **From project directory:**
+
 ```bash
 cd apps/learn-app
 pnpm add <package>
@@ -120,6 +140,7 @@ pnpm add <package>
 ### Python Dependencies
 
 **Always from project directory:**
+
 ```bash
 cd apps/panaversity-fs-py
 
@@ -171,6 +192,7 @@ pnpm init
 ```
 
 Create `apps/my-new-app/project.json`:
+
 ```json
 {
   "name": "my-new-app",
@@ -206,6 +228,7 @@ cd ../..
 ```
 
 Edit `pyproject.toml` at root to include the new project:
+
 ```toml
 [tool.uv.workspace]
 members = [
@@ -220,6 +243,7 @@ uv sync --all-extras
 ```
 
 Create `apps/my-python-app/project.json` for Nx integration:
+
 ```json
 {
   "name": "my-python-app",
@@ -257,6 +281,7 @@ cd ../..
 ```
 
 Add to workspace and then reference in dependent projects:
+
 ```toml
 # apps/my-python-app/pyproject.toml
 [project]
@@ -297,21 +322,25 @@ pnpm nx test my-new-app
 ## Nx Tips
 
 ### View Project Graph
+
 ```bash
 pnpm nx graph
 ```
 
 ### Check What's Affected
+
 ```bash
 pnpm nx affected:graph
 ```
 
 ### Reset Cache
+
 ```bash
 pnpm nx reset
 ```
 
 ### View Project Details
+
 ```bash
 pnpm nx show project learn-app
 pnpm nx show project panaversity-fs-py
@@ -320,23 +349,28 @@ pnpm nx show project panaversity-fs-py
 ## CI/CD
 
 GitHub Actions runs on every PR:
+
 - `nx affected -t lint test build` - Only runs tasks for changed projects
 - Uses Nx caching for faster builds
 
 ## Common Issues
 
 ### "Module not found" in Python tests
+
 Make sure to install dev dependencies from root:
+
 ```bash
 uv sync --all-extras
 ```
 
 ### pnpm lockfile conflicts
+
 ```bash
 pnpm install --no-frozen-lockfile
 ```
 
 ### Nx cache issues
+
 ```bash
 pnpm nx reset
 ```

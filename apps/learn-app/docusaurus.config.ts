@@ -567,7 +567,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} <strong>Panaversity</strong> • The AI Agent Factory • Free & Open Source`,
+      copyright: `Copyright © ${new Date().getFullYear()} <strong>Panaversity</strong>. All Rights Reserved.`,
     },
     prism: {
       theme: prismThemes.github,

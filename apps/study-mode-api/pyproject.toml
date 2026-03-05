@@ -2,6 +2,7 @@
 name = "study-mode-api"
 version = "0.1.0"
 description = "Study Mode API - AI-powered tutoring with ChatKit integration"
+license = "LicenseRef-Proprietary"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
