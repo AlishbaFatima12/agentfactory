@@ -1,0 +1,300 @@
+---
+slug: /Business-Domain-Agent-Workflows/banking-domain-agents/basel-leverage-liquidity
+sidebar_position: 8
+title: "Leverage Ratio, LCR, and NSFR"
+description: "Calculate the leverage ratio backstop, classify HQLA for the Liquidity Coverage Ratio, compute net cash outflows under a 30-day stress scenario, and understand how the Net Stable Funding Ratio ensures structural funding resilience"
+keywords:
+  [
+    "leverage ratio",
+    "LCR",
+    "Liquidity Coverage Ratio",
+    "NSFR",
+    "Net Stable Funding Ratio",
+    "HQLA",
+    "high quality liquid assets",
+    "liquidity stress test",
+    "Basel III liquidity",
+    "net cash outflows",
+    "banking regulation",
+    "banking AI agents",
+  ]
+chapter: 21
+lesson: 8
+duration_minutes: 35
+
+skills:
+  - name: "Calculate the Leverage Ratio"
+    proficiency_level: "B1"
+    category: "Applied"
+    bloom_level: "Apply"
+    digcomp_area: "Data Literacy"
+    measurable_at_this_level: "Student can compute the leverage ratio from Tier 1 capital and total exposure measure, and explain why a non-risk-weighted ratio is needed alongside RWA-based capital ratios"
+
+  - name: "Classify HQLA and Calculate the LCR"
+    proficiency_level: "B1"
+    category: "Applied"
+    bloom_level: "Apply"
+    digcomp_area: "Problem Solving"
+    measurable_at_this_level: "Student can classify bank assets into HQLA Level 1, 2A, and 2B, apply haircuts, calculate net cash outflows under a 30-day stress scenario, and compute the LCR"
+
+  - name: "Explain the NSFR and Its Relationship to LCR"
+    proficiency_level: "B1"
+    category: "Conceptual"
+    bloom_level: "Understand"
+    digcomp_area: "Information Literacy"
+    measurable_at_this_level: "Student can explain how NSFR measures structural funding stability over a 1-year horizon and why it complements the 30-day LCR"
+
+learning_objectives:
+  - objective: "Calculate the leverage ratio and explain why a non-risk-weighted solvency measure is needed alongside RWA-based capital ratios"
+    proficiency_level: "B1"
+    bloom_level: "Apply"
+    assessment_method: "Student computes leverage ratio from given data and explains the Northern Rock scenario where high capital ratios masked excessive leverage"
+
+  - objective: "Classify assets as HQLA Level 1, 2A, or 2B, apply regulatory haircuts, and calculate the Liquidity Coverage Ratio"
+    proficiency_level: "B1"
+    bloom_level: "Apply"
+    assessment_method: "Student correctly classifies assets in Exercise 4 data, calculates total HQLA after haircuts, computes net cash outflows, and determines whether LCR exceeds 100%"
+
+  - objective: "Explain the relationship between LCR and NSFR as complementary liquidity measures"
+    proficiency_level: "B1"
+    bloom_level: "Understand"
+    assessment_method: "Student describes what each ratio measures (30-day stress vs 1-year structural funding) and gives an example of a bank that passes one but fails the other"
+
+cognitive_load:
+  new_concepts: 6
+  concepts_list:
+    - "Leverage ratio = Tier 1 / total exposure measure (minimum 3%, UK 3.25%)"
+    - "Total exposure measure (on-balance-sheet + derivatives + SFTs + off-balance-sheet)"
+    - "HQLA classification -- Level 1 (cash, sovereign bonds), Level 2A (covered bonds, investment-grade corporates), Level 2B (equities, RMBS)"
+    - "LCR = HQLA / net cash outflows over 30 days (minimum 100%)"
+    - "Net cash outflows = total outflows - min(inflows, 75% of outflows)"
+    - "NSFR = Available Stable Funding / Required Stable Funding (minimum 100%)"
+  assessment: "6 concepts at B1 level -- within the 7-10 limit. Students already understand capital ratios and RWA from Lessons 6-7. This lesson extends the Basel framework to non-risk-weighted and liquidity dimensions. The concepts are computationally straightforward (ratio calculations with classification lookups)."
+
+differentiation:
+  extension_for_advanced: "Research the 2007-08 Northern Rock failure. Calculate an approximate leverage ratio from Northern Rock's 2006 annual report (total assets vs Tier 1 capital) and explain why its capital ratios looked adequate while its leverage and liquidity positions were catastrophic."
+  remedial_for_struggling: "Focus on LCR only. If you can explain what HQLA is, classify three asset types into the correct HQLA level, and compute a simple LCR, you have the essential concept. The leverage ratio and NSFR follow the same logic (numerator / denominator >= minimum)."
+---
+
+# Leverage Ratio, LCR, and NSFR
+
+In Lessons 6 and 7, you built the risk-weighted capital framework: capital stack, deductions, three ratios, SA risk weights, IRB models, and the output floor. All of those ratios share a fundamental design choice -- they weight assets by risk. This lesson covers the three Basel measures that do not rely on risk weights, or that measure a completely different dimension of bank resilience: the ability to survive short-term and long-term funding stress.
+
+The 2007-08 financial crisis demonstrated that a bank can report strong risk-weighted capital ratios and still fail. Northern Rock reported a Tier 1 ratio above 10% in 2006, yet it collapsed in September 2007 because it could not fund its assets when wholesale markets froze. Its balance sheet was 75x leveraged in absolute terms, and it had almost no liquid asset buffer. Basel III responded with three new measures: the leverage ratio (a non-risk-weighted capital backstop), the Liquidity Coverage Ratio (a 30-day stress survival test), and the Net Stable Funding Ratio (a 1-year structural funding requirement).
+
+## The Leverage Ratio
+
+The leverage ratio strips out risk-weighting entirely:
+
+**Leverage Ratio = Tier 1 Capital / Total Exposure Measure**
+
+| Component       | What It Includes                                                                                                                                          |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Numerator**   | Tier 1 capital (CET1 + AT1) -- same as for the Tier 1 capital ratio                                                                                       |
+| **Denominator** | Total on-balance-sheet assets + derivative exposures + securities financing transactions (SFTs) + off-balance-sheet items (at 100% CCF or regulatory CCF) |
+
+The minimum is **3.0%** under the Basel standard. The UK PRA sets a higher minimum of **3.25%** for deposit-takers with more than GBP 50 billion in retail deposits, and excludes central bank reserves from the denominator.
+
+:::info Why a Non-Risk-Weighted Ratio?
+A bank that holds GBP 50 billion in sovereign bonds (0% risk weight) and GBP 5 billion in corporate loans (100% risk weight) has RWA of only GBP 5 billion. If its CET1 is GBP 750 million, its CET1 ratio is 15% -- well above the minimum. But its leverage ratio is 750M / 55B = 1.36% -- dangerously low. The bank is funding GBP 55 billion of assets with only GBP 750 million of loss-absorbing capital. The leverage ratio catches this concentration in low-risk-weight assets that risk-weighted ratios miss.
+:::
+
+## The Liquidity Coverage Ratio (LCR)
+
+The LCR asks: if the bank faces a severe 30-day liquidity stress -- deposit withdrawals, wholesale funding freeze, credit line drawdowns -- does it hold enough liquid assets to survive without external support?
+
+**LCR = Stock of HQLA / Total Net Cash Outflows over 30 Days >= 100%**
+
+### HQLA Classification
+
+Not all liquid assets qualify equally. Basel classifies them into three levels:
+
+| Level        | Assets                                                                                        | Haircut | Cap                                          |
+| ------------ | --------------------------------------------------------------------------------------------- | ------- | -------------------------------------------- |
+| **Level 1**  | Cash, central bank reserves, qualifying sovereign bonds (0% risk weight)                      | 0%      | No cap                                       |
+| **Level 2A** | Sovereign bonds (20% risk weight), qualifying covered bonds, investment-grade corporate bonds | 15%     | Combined Level 2 capped at 40% of total HQLA |
+| **Level 2B** | Lower-rated corporate bonds, qualifying equities, qualifying RMBS                             | 25-50%  | Level 2B capped at 15% of total HQLA         |
+
+**Haircuts** reduce the counted value to account for potential price decline during the stress period. A GBP 100M covered bond with a 15% haircut counts as GBP 85M of HQLA.
+
+### Net Cash Outflows
+
+Net cash outflows are calculated by applying run-off rates to each funding category:
+
+| Outflow Category                                          | Run-Off Rate                   |
+| --------------------------------------------------------- | ------------------------------ |
+| Retail deposits -- stable (insured, primary relationship) | 3-5%                           |
+| Retail deposits -- less stable                            | 10%                            |
+| Wholesale deposits -- non-financial corporates            | 25%                            |
+| Wholesale deposits -- financial institutions              | 100%                           |
+| Undrawn committed facilities                              | 5-30% (varies by counterparty) |
+| Secured funding (repo) -- Level 1 collateral              | 0%                             |
+| Secured funding (repo) -- other collateral                | 15-100%                        |
+
+**Total net outflows = Total outflows - min(Total inflows, 75% of total outflows)**
+
+The 75% cap on inflows ensures the bank cannot rely entirely on expected inflows to meet the ratio.
+
+## Exercise 4: Liquidity Stress Test
+
+Calculate the LCR for a UK bank facing a 30-day stress scenario.
+
+**HQLA Portfolio:**
+
+| Asset                            | Amount (GBP M) | HQLA Level | Haircut | HQLA Value (GBP M) |
+| -------------------------------- | -------------- | ---------- | ------- | ------------------ |
+| Central bank reserves            | 420            | Level 1    | 0%      | 420.0              |
+| UK government bonds              | 380            | Level 1    | 0%      | 380.0              |
+| Qualifying covered bonds (AAA)   | 95             | Level 2A   | 15%     | 80.75              |
+| Investment-grade corporate bonds | 60             | Level 2A   | 15%     | 51.0               |
+| **Total HQLA**                   |                |            |         | **931.75**         |
+
+**Cash Outflows:**
+
+| Category                       | Balance (GBP M) | Run-Off Rate | Outflow (GBP M) |
+| ------------------------------ | --------------- | ------------ | --------------- |
+| Retail deposits -- stable      | 2,800           | 3%           | 84.0            |
+| Retail deposits -- less stable | 480             | 10%          | 48.0            |
+| Wholesale non-financial        | 320             | 25%          | 80.0            |
+| Wholesale financial            | 190             | 100%         | 190.0           |
+| Undrawn committed lines        | 150             | 10%          | 15.0            |
+| SPV liquidity facilities       | 45              | 100%         | 45.0            |
+| **Total Outflows**             |                 |              | **462.0**       |
+
+**Cash Inflows:**
+
+| Category                   | Amount (GBP M) | Inflow Rate | Inflow (GBP M) |
+| -------------------------- | -------------- | ----------- | -------------- |
+| Maturing interbank lending | 85             | 100%        | 85.0           |
+| Retail loan repayments     | 35             | 50%         | 17.5           |
+| **Total Inflows**          |                |             | **102.5**      |
+
+**Your tasks:**
+
+1. Verify the HQLA calculation (check the Level 2 cap: is combined Level 2 <= 40% of total HQLA?)
+2. Calculate total net cash outflows (apply the 75% inflow cap)
+3. Calculate the LCR
+4. Does the bank meet the 100% minimum?
+
+:::tip Worked Solution
+**Step 1 -- Level 2 Cap Check:**
+Level 2A: 80.75 + 51.0 = 131.75
+Level 2B: 0
+Total HQLA before cap: 931.75
+Level 2 as % of total: 131.75 / 931.75 = 14.1% -- well below the 40% cap. No adjustment needed.
+
+**Step 2 -- Net Cash Outflows:**
+Total outflows: GBP 462.0M
+Total inflows: GBP 102.5M
+75% cap on inflows: 75% x 462.0 = 346.5M (inflows of 102.5 are below the cap, so full inflows count)
+Net outflows: 462.0 - 102.5 = **GBP 359.5M**
+
+**Step 3 -- LCR:**
+LCR = 931.75 / 359.5 = **259.2%**
+
+**Step 4 -- Assessment:**
+The bank exceeds the 100% minimum with substantial headroom. It could survive a 30-day stress with its liquid asset buffer alone, even without the expected inflows.
+:::
+
+## The Net Stable Funding Ratio (NSFR)
+
+While LCR measures short-term survival (30 days), the NSFR measures structural funding resilience over a 1-year horizon:
+
+**NSFR = Available Stable Funding (ASF) / Required Stable Funding (RSF) >= 100%**
+
+| ASF Component                       | ASF Factor |
+| ----------------------------------- | ---------- |
+| Tier 1 and Tier 2 capital           | 100%       |
+| Stable retail deposits (insured)    | 95%        |
+| Less stable retail deposits         | 90%        |
+| Wholesale funding > 1 year maturity | 100%       |
+| Wholesale funding 6-12 months       | 50%        |
+| Wholesale funding < 6 months        | 0%         |
+
+| RSF Component                              | RSF Factor |
+| ------------------------------------------ | ---------- |
+| Cash, central bank reserves                | 0%         |
+| Sovereign bonds (0% risk weight)           | 5%         |
+| Corporate bonds and equities               | 50%        |
+| Residential mortgages (risk weight <= 35%) | 65%        |
+| Retail loans                               | 85%        |
+| All other assets                           | 100%       |
+
+The NSFR ensures that a bank funding 30-year mortgages has enough long-term or stable funding to match those long-dated assets, rather than relying on short-term wholesale markets that can evaporate in a crisis.
+
+:::info LCR vs NSFR: Complementary Measures
+A bank can pass LCR (plenty of liquid assets for 30 days) but fail NSFR (funding long-term assets with short-term debt). Conversely, a bank with perfectly matched funding (high NSFR) could fail LCR if its liquid asset buffer is insufficient. The two ratios together ensure both short-term resilience and structural soundness.
+:::
+
+## Try With AI
+
+Use these prompts in Claude or your preferred AI assistant to deepen your understanding of leverage and liquidity requirements.
+
+### Prompt 1: HQLA Classification Practice
+
+```
+I am learning the Basel III Liquidity Coverage Ratio. Classify
+each of these assets as HQLA Level 1, Level 2A, Level 2B, or
+NOT HQLA, and state the applicable haircut:
+
+1. GBP 500M in Bank of England reserves
+2. GBP 200M in UK gilts (AAA-rated sovereign bonds)
+3. GBP 150M in German Bunds (AAA-rated)
+4. GBP 80M in AAA-rated covered bonds (pfandbriefe)
+5. GBP 60M in AA-rated corporate bonds
+6. GBP 40M in qualifying equities (major index)
+7. GBP 30M in residential mortgage-backed securities (AA-rated)
+8. GBP 100M in commercial property
+9. GBP 25M in gold
+
+For each, explain WHY it qualifies at that level.
+Then calculate total HQLA after haircuts and check whether
+the Level 2 caps are breached.
+```
+
+**What you are learning:** HQLA classification requires understanding what makes an asset "liquid" in a crisis. Central bank reserves are the ultimate liquid asset (Level 1, no haircut) because they are already cash at the central bank. Commercial property is not HQLA because you cannot sell a building in 30 days at fair value. This classification logic is critical for AI agents that compute liquidity ratios from a bank's balance sheet.
+
+### Prompt 2: Capital vs Liquidity Failure
+
+```
+Northern Rock (UK, 2007) had a Tier 1 capital ratio above 10%
+but collapsed due to a liquidity crisis. Silicon Valley Bank
+(US, 2023) had a CET1 ratio of approximately 12% but failed
+when depositors withdrew $42 billion in one day.
+
+For each bank:
+1. What was the proximate cause of failure?
+2. Which Basel III ratio (capital, leverage, LCR, NSFR) would
+   have flagged the vulnerability BEFORE the crisis?
+3. What specific HQLA or funding structure weakness existed?
+4. How would an AI agent monitoring these ratios daily have
+   provided early warning?
+
+Then generalise: what is the relationship between capital
+adequacy and liquidity? Can a bank be well-capitalised
+but illiquid? Can it be liquid but undercapitalised?
+```
+
+**What you are learning:** Capital and liquidity are independent dimensions of bank resilience. A bank can fail from either one. Understanding this distinction is essential for building AI agents in the banking domain -- an agent that reports only capital ratios gives a dangerously incomplete picture. The strongest banking agents monitor all four dimensions (CET1, leverage, LCR, NSFR) simultaneously.
+
+### Prompt 3: NSFR Structural Analysis
+
+```
+A bank funds GBP 10 billion in 25-year residential mortgages
+primarily with:
+- GBP 2 billion in equity and long-term debt (> 1 year)
+- GBP 3 billion in stable retail deposits
+- GBP 5 billion in wholesale funding (3-6 month term)
+
+Calculate:
+1. The approximate Available Stable Funding (ASF)
+2. The approximate Required Stable Funding (RSF) for mortgages
+3. The NSFR
+4. Does this bank pass the 100% minimum?
+5. If not, what structural change would fix it?
+
+Explain why regulators are concerned about banks that fund
+long-term mortgages with short-term wholesale money.
+```
+
+**What you are learning:** The NSFR reveals maturity mismatch -- the fundamental banking risk that has caused failures for centuries. By computing it yourself, you internalise why a bank cannot safely fund 25-year mortgages with 3-month wholesale deposits, regardless of how profitable the carry trade might be. This structural understanding is what separates a competent banking AI agent from a simple ratio calculator.
