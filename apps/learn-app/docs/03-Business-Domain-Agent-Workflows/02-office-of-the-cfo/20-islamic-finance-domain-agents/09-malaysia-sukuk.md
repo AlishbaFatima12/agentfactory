@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/malaysia-sukuk
-sidebar_position: 8
+sidebar_position: 9
 title: "Malaysia Sukuk — The World's Largest Market"
 description: "Explore Malaysia's dominance of the global sukuk market, apply MFRS 9 and IAS 32 to sukuk musharakah issuance, examine the SRI Sukuk Framework for green and sustainable sukuk, and complete a comprehensive Tenaga Nasional Berhad corporate sukuk exercise"
 keywords:
@@ -22,7 +22,7 @@ keywords:
     "sukuk accounting",
   ]
 chapter: 20
-lesson: 8
+lesson: 9
 duration_minutes: 55
 
 # HIDDEN SKILLS METADATA
@@ -52,17 +52,17 @@ learning_objectives:
   - objective: "Apply IAS 32 and MFRS 9 to classify a Malaysian corporate sukuk musharakah from both issuer and investor perspectives, generating journal entries with correct Malaysian income labels"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 5 Steps 1-3 — issuer classification under IAS 32, quarterly distribution accounting under MFRS 9, and EPF investor classification with SPPI test and effective profit rate calculation"
+    assessment_method: "Student completes Exercise 6 Steps 1-3 — issuer classification under IAS 32, quarterly distribution accounting under MFRS 9, and EPF investor classification with SPPI test and effective profit rate calculation"
 
   - objective: "Explain Malaysia's SRI Sukuk Framework and identify the additional disclosure obligations that green sukuk designation creates beyond standard MFRS 9 measurement"
     proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Student completes Exercise 5 Step 4 — drafting the use-of-proceeds section and distinguishing measurement (unchanged) from disclosure (additional) requirements for green sukuk"
+    assessment_method: "Student completes Exercise 6 Step 4 — drafting the use-of-proceeds section and distinguishing measurement (unchanged) from disclosure (additional) requirements for green sukuk"
 
   - objective: "Draft the accounting and financial disclosure sections of a sukuk Information Memorandum for SC Malaysia regulatory submission"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 5 Step 5 — producing accounting policies, debt coverage ratios, MFRS 9 classification rationale, and Shariah compliance certification summary formatted for Bursa Malaysia"
+    assessment_method: "Student completes Exercise 6 Step 5 — producing accounting policies, debt coverage ratios, MFRS 9 classification rationale, and Shariah compliance certification summary formatted for Bursa Malaysia"
 
 cognitive_load:
   new_concepts: 6
@@ -77,7 +77,7 @@ cognitive_load:
 
 differentiation:
   extension_for_advanced: "Research the growth of sustainable sukuk issuance globally since 2020. Compare the SC Malaysia SRI Sukuk Framework with the ICMA Green Bond Principles and the ASEAN Green Bond Standards. Write a one-page analysis of whether Malaysia's SRI framework is more or less stringent than international equivalents, and what this means for cross-border green sukuk listings."
-  remedial_for_struggling: "Focus on Exercise 5 Steps 1 and 3 — the issuer and investor classification. The core question is identical for both: does the sukuk create a contractual obligation to deliver cash? If yes, it is a financial liability (issuer) or a financial asset (investor). The green sukuk overlay in Step 4 adds disclosure requirements but does not change the accounting numbers. Master the classification first; the green overlay is additional, not foundational."
+  remedial_for_struggling: "Focus on Exercise 6 Steps 1 and 3 — the issuer and investor classification. The core question is identical for both: does the sukuk create a contractual obligation to deliver cash? If yes, it is a financial liability (issuer) or a financial asset (investor). The green sukuk overlay in Step 4 adds disclosure requirements but does not change the accounting numbers. Master the classification first; the green overlay is additional, not foundational."
 
 teaching_guide:
   lesson_type: "core"
@@ -220,11 +220,13 @@ Malaysia's Securities Commission introduced the Sustainable and Responsible Inve
 
 The green designation is an **additional disclosure overlay**, not an accounting measurement change. This distinction matters because students sometimes assume "green" changes the numbers. It does not — it changes what the issuer must report about how the money is used.
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex05-malaysia-corporate-sukuk.md`, and reference the skill file in `skills/jurisdictions/malaysia-mfrs.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex05-malaysia-corporate-sukuk.md`
 :::
 
-## Practice Exercise 5: Malaysia Corporate Sukuk — Tenaga Nasional Berhad (55 min)
+## Practice Exercise 6: Malaysia Corporate Sukuk — Tenaga Nasional Berhad (55 min)
 
 **What you will build:** A complete sukuk accounting analysis from issuer classification through SC Malaysia regulatory submission, including green sukuk disclosure.
 
@@ -313,35 +315,18 @@ for choosing green over standard?
 
 **What you are learning:** The distinction between accounting measurement (unchanged) and disclosure obligations (additional) is a professional judgment that matters in practice. Issuers sometimes assume that "green" changes their financial statements. It does not change the numbers — it changes what they must report about how proceeds are used and what impact was achieved. Understanding this distinction prevents both over-engineering the accounting and under-estimating the disclosure obligations.
 
-### Prompt 3: Cross-Border Sukuk Listing — Malaysia and London
+### Prompt 3: Write Your Own — Cross-Border Sukuk Listing
 
-```
-A Malaysian corporation has issued MYR 2 billion sukuk
-musharakah listed on both Bursa Malaysia and the London
-Stock Exchange.
+**Do not copy a pre-written prompt.** Write your own prompt from scratch for this scenario:
 
-A UK-based Islamic fund holds GBP 50 million of the sukuk.
+> A Malaysian corporation has issued MYR 2 billion sukuk musharakah listed on both Bursa Malaysia and the London Stock Exchange. A UK-based Islamic fund holds GBP 50 million of the sukuk.
 
-Questions:
-1. The issuer applies MFRS 9 — what does the UK investor apply?
-2. Does the UK investor's IFRS 9 classification necessarily
-   match the Malaysian issuer's MFRS 9 classification?
-3. The issuer uses "Profit Paid on Sukuk" as its income label.
-   What label does the UK investor use?
-4. HMRC (UK tax authority) treats sukuk distributions as
-   interest for tax purposes. Does this affect the accounting
-   label in the investor's financial statements?
-5. If the sukuk is also designated as Green under SC Malaysia's
-   SRI Framework, does the UK investor have any green
-   disclosure obligation?
+Your prompt should get the AI to analyze how the **same instrument** appears in **two different jurisdictions' financial statements** — the Malaysian issuer's perspective (MFRS 9) and the UK investor's perspective (IFRS 9). Include questions about classification, income labels, and tax treatment differences.
 
-This tests cross-border Islamic finance accounting where
-the same instrument appears in two different jurisdictions'
-financial statements.
-```
+**After you get the output**, check: Did the AI apply each jurisdiction's framework independently? Did it correctly identify that HMRC treats sukuk distributions as interest for tax purposes while the accounting label remains Shariah-compliant? Did it address whether the issuer's MFRS 9 classification necessarily matches the investor's IFRS 9 classification?
 
-**What you are learning:** Cross-border sukuk listing forces you to apply jurisdiction-specific accounting to the same instrument from two different perspectives. The Malaysian issuer and the UK investor each apply their own jurisdiction's IFRS-equivalent framework independently. The income labels differ. The tax treatment differs. The green disclosure obligation may differ. This is exactly the multi-jurisdiction complexity that well-structured AI agent instructions prevent from producing errors.
+**What you are learning:** Writing cross-border prompts requires specifying both jurisdiction perspectives explicitly. If your prompt only mentioned one jurisdiction, the AI defaulted to a single framework. The skill of constructing a prompt that forces multi-jurisdiction analysis is the same skill that makes the router in the plugin architecture effective — it starts by identifying the jurisdiction before doing any accounting.
 
 ---
 
-Continue to [Lesson 9: Saudi Arabia →](./09-saudi-arabia.md)
+Continue to [Lesson 10: Saudi Arabia →](./10-saudi-arabia.md)

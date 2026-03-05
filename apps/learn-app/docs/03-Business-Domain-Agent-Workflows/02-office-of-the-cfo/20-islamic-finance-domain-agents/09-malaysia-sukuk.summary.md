@@ -22,4 +22,4 @@ Malaysia is the world's largest single sukuk market (35-40% of global issuance),
 ### Connections
 
 - **Builds on**: Lesson 6's sukuk product accounting (SPPI test, issuer derecognition) applied to Malaysia's specific regulatory context
-- **Leads to**: Lesson 9's Saudi Arabia deep-dive, where IFRS also governs but ZATCA zakat creates a distinctive local feature
+- **Leads to**: Lesson 10's Saudi Arabia deep-dive, where IFRS also governs but ZATCA zakat creates a distinctive local feature

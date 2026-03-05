@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/islamic-fintech
-sidebar_position: 16
+sidebar_position: 17
 title: "Islamic Fintech — Accounting for New Structures"
 description: "Examine how Islamic fintech is scaling faster than standard-setters can respond — digital murabaha platforms, Shariah-compliant robo-advisers, P2P Islamic lending, and green impact sukuk — and develop accounting positions for structures the frameworks have not yet addressed"
 keywords:
@@ -22,7 +22,7 @@ keywords:
     "Islamic digital banking",
   ]
 chapter: 20
-lesson: 16
+lesson: 17
 duration_minutes: 40
 
 # HIDDEN SKILLS METADATA
@@ -52,12 +52,12 @@ learning_objectives:
   - objective: "Evaluate whether specific fintech structures (digital murabaha, P2P Islamic lending) satisfy Shariah requirements and identify where Shariah compliance is genuinely uncertain"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student completes Exercise 13 Steps 1 and 3 — determining murabaha validity for a digital gold platform and assessing the IFI question for P2P Islamic lending"
+    assessment_method: "Student completes Exercise 14 Steps 1 and 3 — determining murabaha validity for a digital gold platform and assessing the IFI question for P2P Islamic lending"
 
   - objective: "Apply IFRS 9, IFRS 15, and regulatory frameworks to Islamic fintech structures, determining the accounting treatment for products that the standards did not anticipate"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 13 Steps 2 and 4 — performing IFRS 15 analysis for robo-advisory fees and determining IFRS 9 classification for impact sukuk"
+    assessment_method: "Student completes Exercise 14 Steps 2 and 4 — performing IFRS 15 analysis for robo-advisory fees and determining IFRS 9 classification for impact sukuk"
 
   - objective: "Analyze the regulatory landscape for Islamic fintech across Malaysia (BNM/SC), UK (FCA), and UAE (ADGM), identifying where existing frameworks create gaps for Shariah-compliant digital products"
     proficiency_level: "B1"
@@ -100,11 +100,13 @@ Traditional Islamic finance products were structured by banks, regulated by cent
 
 ---
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex13-islamic-fintech-scenarios.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex13-islamic-fintech-scenarios.md`
 :::
 
-## Exercise 13: Four Fintech Scenarios (40 min)
+## Exercise 14: Four Fintech Scenarios (40 min)
 
 Each scenario presents a real or realistic Islamic fintech structure and asks you to determine the accounting treatment, regulatory classification, and Shariah compliance position.
 
@@ -252,4 +254,4 @@ For each jurisdiction:
 
 ---
 
-Continue to [Lesson 17: Full Islamic Finance Agent →](./17-full-skill-library-capstone.md)
+Continue to [Lesson 18: Full Islamic Finance Agent →](./18-full-skill-library-capstone.md)

@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/uk-islamic-banking
-sidebar_position: 10
+sidebar_position: 11
 title: "UK Islamic Banking — IFRS, PRA/FCA, and HMRC"
 description: "Examine the UK as the leading Western Islamic finance centre, apply IFRS 9 substance-over-form analysis to diminishing musharaka home finance, explain HMRC tax equivalence under Finance Act 2005, and complete an Al Rayan Bank exercise covering DM accounting, tax characterisation, construction finance, and PRA regulatory capital"
 keywords:
@@ -22,7 +22,7 @@ keywords:
     "construction finance",
   ]
 chapter: 20
-lesson: 10
+lesson: 11
 duration_minutes: 50
 
 # HIDDEN SKILLS METADATA
@@ -52,17 +52,17 @@ learning_objectives:
   - objective: "Apply IFRS 9 substance-over-form analysis to classify a UK diminishing musharaka home finance arrangement as a financial asset at amortised cost, and generate the journal entries with correct UK income labels"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 7 Step 1 — applying IFRS 9 business model and SPPI tests to Al Rayan Bank's DM product, classifying the bank's share, and generating Month 1 journal entries"
+    assessment_method: "Student completes Exercise 8 Step 1 — applying IFRS 9 business model and SPPI tests to Al Rayan Bank's DM product, classifying the bank's share, and generating Month 1 journal entries"
 
   - objective: "Explain HMRC's tax equivalence treatment of Islamic finance under Finance Act 2005, including how DM rental is characterised as interest for tax purposes while the accounting label avoids the term 'interest'"
     proficiency_level: "B1"
     bloom_level: "Understand"
-    assessment_method: "Student completes Exercise 7 Step 2 — describing HMRC treatment of DM rental income and equity purchase payments, SDLT relief for Islamic mortgages, and drafting a client advisory note"
+    assessment_method: "Student completes Exercise 8 Step 2 — describing HMRC treatment of DM rental income and equity purchase payments, SDLT relief for Islamic mortgages, and drafting a client advisory note"
 
   - objective: "Draft a client advisory report comparing Islamic DM construction finance with conventional construction finance, covering cost comparison, HMRC treatment, and IFRS 16 lessee implications"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 7 Step 5 — producing a client-facing report covering cost comparison, HMRC differences, IFRS 16 analysis, and Shariah compliance certification requirements"
+    assessment_method: "Student completes Exercise 8 Step 5 — producing a client-facing report covering cost comparison, HMRC differences, IFRS 16 analysis, and Shariah compliance certification requirements"
 
 cognitive_load:
   new_concepts: 6
@@ -108,7 +108,7 @@ teaching_guide:
 
 # UK Islamic Banking — IFRS, PRA/FCA, and HMRC
 
-In Lesson 9, you examined Saudi Arabia's IFRS framework, the ZATCA zakat formula, and Al Rajhi Bank as the global Islamic banking benchmark. Now you cross to the most structurally interesting Western Islamic finance market: the United Kingdom.
+In Lesson 10, you examined Saudi Arabia's IFRS framework, the ZATCA zakat formula, and Al Rajhi Bank as the global Islamic banking benchmark. Now you cross to the most structurally interesting Western Islamic finance market: the United Kingdom.
 
 The UK has five fully-fledged Islamic banks: Al Rayan Bank (the largest), Gatehouse Bank, QIB (UK), Al Ahli United Bank (UK), and Bank of London and the Middle East (BLME). The UK government has issued sovereign sukuk. The London Stock Exchange hosts international sukuk listings. What makes the UK distinctive is not the existence of Islamic banking — several Western countries have Islamic finance products — but the deliberate regulatory and tax infrastructure that HM Treasury, the PRA, the FCA, and HMRC have built to ensure Islamic products compete on a level playing field with conventional alternatives. The most important piece of this infrastructure is HMRC's tax equivalence framework under Finance Act 2005, which ensures that Islamic finance products are neither tax-advantaged nor tax-disadvantaged compared to their conventional counterparts.
 
@@ -199,11 +199,13 @@ UK Islamic banks operate under the same Prudential Regulation Authority (PRA) an
 
 This matters because the risk-weighted asset (RWA) calculation for a DM home finance portfolio uses the same residential mortgage risk weight as a conventional mortgage portfolio. The Shariah structure does not change the bank's regulatory capital requirements.
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex07-uk-al-rayan-bank.md`, and reference the skill files in `skills/products/musharaka-dm.md` and `skills/jurisdictions/uk-ifrs.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex07-uk-al-rayan-bank.md`
 :::
 
-## Practice Exercise 7: Al Rayan Bank — UK Islamic Banking (50 min)
+## Practice Exercise 8: Al Rayan Bank — UK Islamic Banking (50 min)
 
 **What you will build:** A comprehensive analysis covering DM home finance IFRS 9 treatment, HMRC tax characterisation, construction finance structuring, PRA regulatory capital, and a client advisory report.
 
@@ -324,4 +326,4 @@ for each item to illustrate where the labels diverge.
 
 ---
 
-Continue to [Lesson 11: Nigeria Sovereign Sukuk →](./11-nigeria-sovereign-sukuk.md)
+Continue to [Lesson 12: Nigeria Sovereign Sukuk →](./12-nigeria-sovereign-sukuk.md)

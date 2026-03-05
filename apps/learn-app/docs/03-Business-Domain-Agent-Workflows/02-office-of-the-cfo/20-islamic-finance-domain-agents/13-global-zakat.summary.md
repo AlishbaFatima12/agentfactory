@@ -21,5 +21,5 @@ The same bank produces different zakat obligations depending on jurisdiction bec
 
 ### Connections
 
-- **Builds on**: Lessons 8-11's jurisdiction deep-dives where zakat appeared in Saudi (ZATCA), Malaysian (voluntary), and Pakistani (deduction-at-source) contexts
-- **Leads to**: Lesson 13's Shariah portfolio screening, applying Islamic compliance criteria to investment portfolio management
+- **Builds on**: Lessons 9-12's jurisdiction deep-dives where zakat appeared in Saudi (ZATCA), Malaysian (voluntary), and Pakistani (deduction-at-source) contexts
+- **Leads to**: Lesson 14's Shariah portfolio screening, applying Islamic compliance criteria to investment portfolio management

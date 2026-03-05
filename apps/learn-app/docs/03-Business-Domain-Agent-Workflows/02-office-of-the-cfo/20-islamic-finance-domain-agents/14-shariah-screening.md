@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/shariah-screening
-sidebar_position: 13
+sidebar_position: 14
 title: "Shariah Portfolio Screening — Global Standards"
 description: "Apply four competing Shariah equity screening methodologies — SC Malaysia, Tadawul, AAOIFI Standard 21, and MSCI Islamic — to a global portfolio, calculate purification obligations from quarterly dividends, analyze screening divergence where the same company passes one methodology but fails another, and build a quarterly Cowork screening workflow"
 keywords:
@@ -21,7 +21,7 @@ keywords:
     "Amana Income Fund",
   ]
 chapter: 20
-lesson: 13
+lesson: 14
 duration_minutes: 45
 
 # HIDDEN SKILLS METADATA
@@ -56,7 +56,7 @@ learning_objectives:
   - objective: "Calculate the quarterly purification obligation for a Shariah-compliant fund, generate the journal entries, and draft the purification section of the SSB quarterly report"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 10 Step 2, producing the correct purification amount from dividend data and non-permissible income ratios"
+    assessment_method: "Student completes Exercise 11 Step 2, producing the correct purification amount from dividend data and non-permissible income ratios"
 
   - objective: "Analyze screening divergence cases where methodologies produce conflicting pass/fail results for the same company and recommend a resolution approach"
     proficiency_level: "B2"
@@ -81,7 +81,7 @@ differentiation:
 
 # Shariah Portfolio Screening — Global Standards
 
-In Lesson 12, you compared zakat calculation across jurisdictions — one Islamic obligation, multiple formulas. Shariah portfolio screening presents an analogous challenge: one ethical framework, multiple screening methodologies, and the same company can be Shariah-compliant under one methodology and non-compliant under another.
+In Lesson 13, you compared zakat calculation across jurisdictions — one Islamic obligation, multiple formulas. Shariah portfolio screening presents an analogous challenge: one ethical framework, multiple screening methodologies, and the same company can be Shariah-compliant under one methodology and non-compliant under another.
 
 Four major screening frameworks govern global Islamic equity investing. The Securities Commission Malaysia maintains the SC Shariah-compliant securities list. The Saudi Exchange (Tadawul) publishes its own Shariah-compliant list. AAOIFI Shariah Standard 21 provides the scholarly reference standard. The MSCI Islamic Index applies its own independent methodology. All four agree on the core prohibitions — conventional banking, alcohol, gambling, pork, weapons of mass destruction. Where they diverge is in the financial ratio thresholds, the denominator used (total assets versus market capitalisation), and the treatment of borderline sectors.
 
@@ -181,11 +181,13 @@ The most professionally important concept in Shariah screening is that different
 
 ---
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex10-shariah-screening-amana.md`, and reference the skill file in `skills/products/shariah-screening-global.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex10-shariah-screening-amana.md`
 :::
 
-## Exercise 10: Saturna Capital Amana Income Fund — Global Screening
+## Exercise 11: Saturna Capital Amana Income Fund — Global Screening
 
 **What you will build:** A global screening workbook applying four methodologies, a purification calculation, a screening divergence analysis, and a quarterly SSB report.
 
@@ -332,29 +334,18 @@ address this volatility problem?
 
 **What you are learning:** The denominator choice is not a technicality — it determines how stable a company's Shariah status is over market cycles. A fund that uses market-cap-based screening will experience more turnover (and more transaction costs) during market downturns, as companies breach thresholds not because their debt increased but because their share price fell. The trailing average approach smooths this volatility but introduces a lag.
 
-### Prompt 3: Build a Personal Shariah Screening Agent
+### Prompt 3: Write Your Own — Personal Shariah Screening Agent
 
-```
-I want to screen my personal equity portfolio for Shariah compliance.
-I hold 15 stocks across US, UK, and Malaysian markets.
+**Do not copy a pre-written prompt.** Design your own prompt that asks the AI to build a personal Shariah screening agent SKILL.md. Your scenario:
 
-Build me a SKILL.md instruction for a Shariah screening agent that:
-(1) Takes a list of stock tickers as input
-(2) Fetches the latest financial data (debt, total assets, revenue
-breakdown) for each company
-(3) Applies the AAOIFI Standard 21 screening methodology
-(4) Flags any company that fails any screen
-(5) Calculates my personal purification obligation from dividends
-received in the past quarter
-(6) Produces a one-page compliance summary
+> You hold 15 stocks across US, UK, and Malaysian markets. You want an agent that screens your portfolio for Shariah compliance, flags failures, and calculates your purification obligation.
 
-Include the SKILL.md routing instruction: if I specify a different
-methodology (SC Malaysia, MSCI, Tadawul), switch to that methodology
-instead of AAOIFI.
-```
+Your prompt should specify: (1) what input the agent takes, (2) which screening methodology to apply by default and how to switch methodologies, (3) what output to produce. Think about what the routing instruction should say — how does the agent know which methodology to use?
 
-**What you are learning:** Personal Shariah screening uses the same methodologies as institutional screening. The SKILL.md you build here is a miniature version of the institutional screening agent — the routing logic, the ratio calculations, and the purification obligation are identical. The difference is scale and regulatory obligation: a fund manager must report to the SSB; a personal investor acts on their own conscience.
+**After you get the output**, evaluate the SKILL.md against the shariah-screening-global skill installed by the plugin. Does your agent handle methodology switching the same way the plugin's router handles jurisdiction switching? What routing logic did the AI include that you didn't specify?
+
+**What you are learning:** Building a screening SKILL.md from a prompt you wrote yourself tests whether you understand the routing pattern from Lesson 3. The router logic (identify methodology → load screening rules → apply → flag) mirrors the chapter's router → product → overlay architecture. If your prompt produced a SKILL.md without routing logic, your prompt was missing the jurisdiction/methodology switching instruction — the same gap that makes generic agents fail across jurisdictions.
 
 ---
 
-Continue to [Lesson 14: AAOIFI vs IFRS — Full Financial Statements →](./14-aaoifi-vs-ifrs-capstone.md)
+Continue to [Lesson 15: AAOIFI vs IFRS — Full Financial Statements →](./15-aaoifi-vs-ifrs-capstone.md)

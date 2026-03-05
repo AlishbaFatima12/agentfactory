@@ -100,7 +100,7 @@ This table is the most important single reference in this chapter. Every AI agen
 | **Sudan**          | AAOIFI                   | Mandatory                                   | Central Bank of Sudan              | Full Islamic banking system                           |
 
 :::info Downloadable Reference
-Download the printable Global Standards Map from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-references.zip` and find `references/global-standards-map.md`. Keep it alongside your skill files — the router checks it on every query.
+Download the printable Global Standards Map from the [plugin repository](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) — use `islamic-finance-exercise-data.zip` and find `references/global-standards-map.md`. Keep it alongside your skill files — the router checks it on every query.
 :::
 
 ## The Three Accounting Regimes
