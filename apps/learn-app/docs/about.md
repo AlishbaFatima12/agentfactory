@@ -56,14 +56,16 @@ A practical framework for engineers, domain professionals, enterprise leaders, p
 
 ![The Five-Layer Cake of AI](/img/five-layer-cake-of-ai.png)
 
-> Every breakthrough in AI rests on five layers: **Energy** at the foundation, **Chips** that compute, **Infrastructure** that scales, **Models** that reason, and **Applications** at the very top — where AI finally meets the real world. Billions of dollars flow into the bottom four layers so that the fifth layer can exist. **This book is about that fifth layer.** It teaches you how to build the applications, agents, and digital workers that turn all that investment into products people actually use, workflows organizations actually run, and value that enterprises actually capture.
+> Modern AI is built like a towering five-layer cake — a metaphor popularized by **Jensen Huang**, CEO of **NVIDIA**. At the base lies **Energy**, powering vast data centers around the world. Above it sit **Chips**, the specialized processors that perform trillions of calculations every second. On top of that comes **Infrastructure** — the global network of supercomputers and cloud platforms that scale those computations. Above the infrastructure are **Models**, the neural networks that learn, reason, and generate intelligence. And finally, at the very top, sits the fifth layer: **Applications** — where AI stops being technology and starts becoming useful.
+>
+> Billions of dollars are invested in the lower four layers so that this fifth layer can exist. **This book is about that fifth layer.** It teaches you **how to build the applications, agents, and digital workers** that transform AI capability into products people use, workflows organizations rely on, and value enterprises can capture.
 
 
 ---
 
 ## The Core Idea
 
-**Digital Full-Time Equivalents (Digital FTEs)** are reliable AI agents designed to perform structured knowledge work continuously, combining domain expertise, structured specifications, and human oversight to deliver consistent outcomes in real organizational environments.
+**Digital Full-Time Equivalents (Digital FTEs) or Digital Workers** are reliable AI agents designed to perform structured knowledge work continuously, combining domain expertise, structured specifications, and human oversight to deliver consistent outcomes in real organizational environments.
 
 The AI Agent Factory introduces a systematic approach for designing and deploying Digital FTEs—AI agents that transform human expertise into scalable digital workers.
 
