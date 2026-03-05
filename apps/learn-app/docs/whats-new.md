@@ -17,6 +17,10 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-05
+
+- docs: improve Part 4 overview beginner-friendliness and add chapter map ([#814](https://github.com/panaversity/agentfactory/pull/814))
+
 ### 2026-03-04
 - docs: improve Ch 32 beginner-friendliness and Part 4 structure ([#813](https://github.com/panaversity/agentfactory/pull/813))
 
