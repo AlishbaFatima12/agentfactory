@@ -22,7 +22,9 @@ Part 4 applies that methodology to Python. The core teaching model is simple:
 
 The workflow you learned in Chapter 5 -- specify first, generate second, verify third -- becomes **Test-Driven Generation (TDG)**, the Python-specific form of SDD where your specifications are types and your verification is pytest.
 
-The data confirms this shift. GitClear's 2025 analysis of 211 million lines of code from Google, Microsoft, Meta, and enterprise repositories found that code duplication quadrupled after widespread AI adoption, while refactoring dropped from 25% to under 10% of changes. Code generated fast, but revised just as fast -- 7.9% of newly added lines required changes within two weeks, up from 5.5% before AI tools. Separately, Qodo's State of AI Code Quality report found that 76% of developers using AI assistants fall into what researchers call the "red zone" -- frequent hallucinations paired with low confidence in shipping. The teams that escaped this pattern shared one trait: they used AI for testing and review, not just generation, and their confidence in code quality jumped from 27% to 61%. Speed without verification produces churn. Speed with verification produces software.
+:::info The research behind this shift
+GitClear's 2025 analysis of 211 million lines of code from Google, Microsoft, Meta, and enterprise repositories found that code duplication quadrupled after widespread AI adoption, while refactoring dropped from 25% to under 10% of changes. Code generated fast, but revised just as fast -- 7.9% of newly added lines required changes within two weeks, up from 5.5% before AI tools. Separately, Qodo's State of AI Code Quality report found that 76% of developers using AI assistants fall into what researchers call the "red zone" -- frequent hallucinations paired with low confidence in shipping. The teams that escaped this pattern shared one trait: they used AI for testing and review, not just generation, and their confidence in code quality jumped from 27% to 61%. Speed without verification produces churn. Speed with verification produces software.
+:::
 
 This part inverts the traditional order. You learn to read before you write. You learn types before syntax. You learn testing before building. And you learn it all through a single method that defines programming in the AI era: **Test-Driven Generation (TDG)**.
 
@@ -79,47 +81,20 @@ In the old model, writing code meant typing implementation -- functions, loops, 
 
 In the new model, writing code means three things:
 
-1. **Specifying with types.** A function signature is not boilerplate -- it is a contract. `def add_note(title: str, content: str) -> Note` tells AI exactly what to build. The precision of your types directly determines the quality of AI output.
+1. **Describing what you want precisely.** You write a clear description of what the code should accept and return -- its inputs, outputs, and data types. The more precise your description, the better AI's output.
 
-2. **Writing failing tests.** A test is not a verification afterthought -- it is a requirement document. Before a single line of implementation exists, your tests define what correct behavior looks like. This is how you communicate intent to AI with no ambiguity.
+2. **Defining what "correct" means before AI writes anything.** You write checks (tests) that specify the expected behavior: "If I give it 100 and 15%, I should get 115." These checks become the requirement document AI implements against.
 
-3. **Verifying output critically.** AI optimizes for plausibility, not correctness. Your tests are the only reliable signal. When they fail, you diagnose why -- you do not re-prompt blindly. When they pass, you review for security and edge cases the tests may have missed.
+3. **Verifying output critically.** AI optimizes for plausibility, not correctness. Your checks are the only reliable signal. When they fail, you diagnose why -- you do not re-prompt blindly. When they pass, you review for edge cases the checks may have missed.
 
-This is Test-Driven Generation (TDG) -- the method that defines programming in the AI era. Here is what it looks like in practice:
-
-```python
-# 1. REQUIREMENT
-# "I need a function that calculates total price with tax"
-
-# 2. YOUR TYPE SIGNATURE (the specification)
-def total_with_tax(price: float, tax_rate: float) -> float: ...
-
-# 3. YOUR FAILING TEST (the definition of "correct")
-def test_total_with_tax():
-    assert total_with_tax(100.0, 0.15) == 115.0
-    assert total_with_tax(0.0, 0.15) == 0.0
-
-# 4. PROMPT AI: "Implement total_with_tax to pass these tests"
-
-# 5. AI GENERATES
-def total_with_tax(price: float, tax_rate: float) -> float:
-    return round(price * (1 + tax_rate), 2)
-
-# 6. VERIFY: pytest → 2 passed ✓
-```
-
-You wrote five lines. AI wrote one. The five lines you wrote -- the signature and the tests -- are the specification. The one line AI wrote is the implementation. If the tests pass, the code is correct. If they fail, you debug and iterate. That is the entire cycle.
-
-:::note If you're new to programming
-The code above may look like a foreign language right now. That is completely normal. Here is what it says in plain English:
+This is Test-Driven Generation (TDG) -- the method that defines programming in the AI era. Here is what the cycle looks like in plain English:
 
 1. You tell the computer: "I need a calculation that takes a price and a tax rate and gives me the total."
 2. You write two checks: "If the price is 100 and tax is 15%, the answer should be 115" and "If the price is 0, the answer should be 0."
 3. You ask AI to write the actual calculation.
-4. You run your checks. If they pass, the calculation is correct.
+4. You run your checks. If they pass, the calculation is correct. If they fail, you debug and iterate.
 
-That is all TDG is -- describe what you want, write checks, let AI do the math, verify the answer. You will learn the syntax piece by piece starting in Chapter 32. By the time you reach Chapter 33 (Your First TDG Cycle), every line in this example will make sense.
-:::
+That is all TDG is -- describe what you want, write checks, let AI do the math, verify the answer. You will learn the syntax piece by piece starting in Chapter 32. By the time you reach Chapter 33 (Your First TDG Cycle), you will see this cycle in real Python code and every line will make sense.
 
 &nbsp;
 
@@ -153,7 +128,7 @@ Notice that you *see* and *read* before you are asked to *do* anything. This is 
 
 ## The SmartNotes Project
 
-**SmartNotes is a Personal AI Knowledge Base** -- a command-line and API-driven application for capturing, organizing, searching, and summarizing your notes using AI. Think of it as your own note-taking tool that understands what you wrote: you save notes in Markdown, tag and categorize them, search by meaning (not just keywords), and ask the AI to summarize or connect ideas across notes. By the end of Phase 8, SmartNotes has a typed Python core, a `smartnotes` CLI tool, a FastAPI async API, PostgreSQL persistence, AI-powered semantic search via the OpenAI Agents SDK or Anthropic SDK, and a GitHub Actions CI pipeline that verifies every commit.
+**SmartNotes is a Personal AI Knowledge Base** -- your own note-taking tool that understands what you wrote. You save notes, tag and categorize them, search by meaning (not just keywords), and ask AI to summarize or connect ideas across notes. By the end of Phase 8, SmartNotes is a complete application with a command-line tool, a web API, a database, AI-powered search, and an automated pipeline that verifies every change -- a portfolio-grade project you built yourself.
 
 You do not build nine throwaway exercises. You build SmartNotes once and grow it across Phases 1 through 8. Each phase adds a layer using the SDD workflow: you write the specification (types + tests), prompt Claude Code to generate the implementation, and verify the output. The project is the vehicle; TDG is the method. Phase 9 is different -- you build a completely new project from scratch to prove you can do it without scaffolding.
 
@@ -234,16 +209,16 @@ Phase 9 is proof -- not to an instructor, but to yourself. SmartNotes was guided
 
 By the end of Part 4, you will be able to:
 
-1. **Read and verify** AI-generated typed Python -- tracing expressions, interpreting annotations, reading function signatures, and reviewing modules critically
-2. **Specify with types** -- defining primitive types, typed collections, data models, functions as contracts, and control flow that tells AI precisely what to build
-3. **Prove code is correct** -- writing pytest suites that serve as requirement documents covering happy paths, edge cases, and error conditions
-4. **Debug AI output systematically** -- reading tracebacks, isolating failures, and fixing bugs rather than blindly re-prompting
-5. **Drive the TDG cycle** independently -- from problem statement through specification, types, tests, AI generation, verification, debugging, and iteration until green
-6. **Design object-oriented systems** -- classes, inheritance, composition, protocols, special methods, decorators, and properties -- modeling real domains that AI implements
-7. **Build production software** -- CLI tools, async APIs with FastAPI, PostgreSQL persistence, data processing pipelines, and modular package architecture
-8. **Ship secure software** -- CI/CD pipelines, security audits of AI-generated code, structured logging, and the full professional workflow from branch to merge
-9. **Exercise judgment about AI** -- knowing when to prompt, when to type manually, and when AI-generated code needs human security review
-10. **Architect complete systems** -- combining all skills to spec, build, test, secure, and ship a production-grade AI-powered application
+1. **Read AI-generated code critically** -- understand what it does, predict its output, and catch mistakes before they reach your project
+2. **Tell AI exactly what to build** -- write precise descriptions using Python's type system so AI generates what you actually want
+3. **Prove code is correct** -- write automated checks that define correct behavior and catch failures before users do
+4. **Debug when things go wrong** -- read error messages, find the root cause, and fix bugs instead of blindly re-prompting AI
+5. **Drive the full cycle independently** -- go from "I need this feature" to working, verified code without hand-holding
+6. **Design systems, not just scripts** -- organize code into objects and modules that model real domains and scale cleanly
+7. **Build real tools people can use** -- command-line applications, web APIs, and database-backed projects
+8. **Ship with confidence** -- automated pipelines that verify every change, plus security reviews that catch what AI misses
+9. **Know when NOT to use AI** -- recognize when manual coding is faster and when AI output needs human judgment
+10. **Architect complete applications** -- combine all skills to specify, build, test, secure, and ship a production-grade project
 
 ## What's Next
 
