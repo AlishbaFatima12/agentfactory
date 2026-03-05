@@ -454,6 +454,6 @@ The deployment "completed without errors" but three checks failed. What does thi
 
 ## What's Next
 
-You have practiced the three core skills -- **server navigation**, **infrastructure setup**, and **systematic diagnosis** -- across 14 exercises. These skills compound: every exercise makes Linux operations feel more instinctive, so when Ali's agent goes silent at 2am, you reach for the LNPS method instead of blindly restarting. Next in the **Chapter Quiz**, you will test your understanding of Linux concepts and deployment scenarios. The operations patterns you built here become the foundation for Chapter 13, where your agents deploy themselves.
+You have practiced the three core skills -- **server navigation**, **infrastructure setup**, and **systematic diagnosis** -- across 14 exercises. These skills compound: every exercise makes Linux operations feel more instinctive, so when Ali's agent goes silent at 2am, you reach for the LNPS method instead of blindly restarting. Next in the **Chapter Quiz**, you will test your understanding of Linux concepts and deployment scenarios. The operations patterns you built here become the foundation for the Project lesson, where your agents deploy themselves.
 
 <Flashcards />

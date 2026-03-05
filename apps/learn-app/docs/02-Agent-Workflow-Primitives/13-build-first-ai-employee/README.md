@@ -1,104 +1,87 @@
 ---
 sidebar_position: 13
-title: "Chapter 13: Build Your AI Employee"
+title: "Project: Build Your AI Employee with NanoClaw"
 ---
 
-# Chapter 13: Build Your AI Employee
+# Project: Build Your AI Employee with NanoClaw
 
-**Now it's time to combine everything into something greater than the sum of its parts.**
+**You've learned the pieces. Now build something real.**
 
-This chapter guides you through building a **Digital FTE** (Full-Time Equivalent) — an AI agent that proactively manages your personal and business affairs 24/7. Not a chatbot you poke when you need something. An employee that watches for work, plans its approach, asks permission for sensitive actions, and reports results.
+This is a **project**. You'll build a working AI Employee for YOUR profession using [NanoClaw](https://github.com/qwibitai/nanoclaw) — the same tool you set up in the "NanoClaw Hands-On Setup" lesson from "Meet Your First AI Employee - OpenClaw". No new installations, no architecture lectures. Just challenges, acceptance criteria, and your professional expertise.
 
-Your AI Employee uses **every skill from this part**: file processing for vault management, research for informed decisions, data analysis for metrics, document generation for communications, version control for safety, and automation for 24/7 operation.
+## Prerequisites
 
-## Principles Applied — All Seven
-
-This capstone chapter applies **all seven principles** from Chapter 3:
-
-| Principle | How Your Employee Uses It |
-|-----------|--------------------------|
-| **Bash is the Key** | File operations, process management, cron scheduling |
-| **Code as Universal Interface** | Skills and subagents expressed as code |
-| **Verification as Core Step** | HITL approval before sensitive actions |
-| **Small, Reversible Decomposition** | Modular skills that compose into larger behaviors |
-| **Persisting State in Files** | Obsidian vault as long-term memory |
-| **Constraints and Safety** | Governance rules, audit logging, rate limits |
-| **Observability** | Dashboard, logs, weekly CEO Briefing |
-
-## Interface Focus
-
-**Combined**: Code (skills, subagents, watchers) + Cowork (planning, debugging, refining)
-
-## What You'll Build
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│               YOUR PERSONAL AI EMPLOYEE                         │
-│                                                                  │
-│    PERCEPTION          REASONING           ACTION               │
-│    (Watchers)       (Claude Code)        (MCP Servers)          │
-│                                                                  │
-│  ┌──────────┐      ┌──────────────┐      ┌──────────────┐       │
-│  │  Gmail   │ ──▶  │   Skills +   │ ──▶  │ Gmail MCP    │       │
-│  │  Watcher │      │   Subagents  │      │ Browser MCP  │       │
-│  └──────────┘      └──────────────┘      └──────────────┘       │
-│  ┌──────────┐              │                    │               │
-│  │  File    │              ▼                    ▼               │
-│  │  Watcher │      ┌──────────────┐      ┌──────────────┐       │
-│  └──────────┘      │ HITL Approval│ ──▶  │ Real Actions │       │
-│                    └──────────────┘      └──────────────┘       │
-│                                                                  │
-│    Memory: Obsidian Vault (Dashboard, Goals, Handbook, Logs)    │
-└─────────────────────────────────────────────────────────────────┘
-```
+- **"NanoClaw Hands-On Setup" complete** (from "Meet Your First AI Employee - OpenClaw"): NanoClaw installed, running, WhatsApp connected
+- **Layer 3 design from "NanoClaw Hands-On Setup"**: Your blueprint with 3+ Agent Skills and 3+ MCP servers for your profession
+- **Part 2 foundations complete**: File Processing, Computation and Data Extraction, Structured Data and Persistent Storage, Linux Mastery, and Version Control
 
 ## Three Achievement Tiers
 
-| Tier | Lessons | What You Get |
-|------|---------|--------------|
-| **Bronze** | L01-L07 | Working email assistant (manual trigger) |
-| **Silver** | L01-L11 | Proactive assistant + CEO Briefing (24/7) |
-| **Gold** | L01-L12 | Full autonomous employee with error recovery |
+| Tier | Path | Time | What You Get |
+|------|------|------|--------------|
+| **Bronze** | The Project Brief through Bronze Capstone: First Real Day | ~3 hours | Working AI Employee: identity + skill + connection + proof |
+| **Silver** | The Project Brief through Prove Professional Value | ~6 hours | + autonomous monitoring + trust boundaries + persistent memory + domain report |
+| **Gold** | The Project Brief through Prove Professional Value (Gold track) | ~9 hours | + multi-group architecture with isolation + memory isolation |
+
+Pick the tier that matches your available time and ambition. You can always come back for the next tier later.
 
 ## Lessons
 
-### L00: Complete Specification (Reference)
+### The Brief
 
-| Lesson | Title | Focus |
-|--------|-------|-------|
-| [L00](./00-personal-ai-employee-specification.md) | Complete Specification | Full architectural blueprint |
+| Lesson | Duration |
+|--------|----------|
+| [The Project Brief](./00-the-project-brief.md) | 20 min |
 
-### Bronze Tier: Working Email Assistant
+### Bronze Tier: Working AI Employee
 
-| Lesson | Title | Focus |
-|--------|-------|-------|
-| [L01](./01-your-employees-memory.md) | Your Employee's Memory | Obsidian vault, AGENTS.md, CLAUDE.md |
-| [L02](./02-teaching-your-employee-to-write.md) | Teaching Your Employee to Write | email-drafter skill |
-| [L03](./03-teaching-professional-formats.md) | Teaching Professional Formats | email-templates skill |
-| [L04](./04-teaching-email-intelligence.md) | Teaching Email Intelligence | email-summarizer skill |
-| [L05](./05-hiring-specialists.md) | Hiring Specialists | 3 email subagents |
-| [L06](./06-granting-email-access.md) | Granting Email Access | Gmail MCP (19 tools) |
-| [L07](./07-bronze-capstone.md) | Bronze Capstone | email-assistant orchestrator |
+| Lesson | Duration |
+|--------|----------|
+| [Give Your Employee an Identity](./01-give-your-employee-an-identity.md) | 30 min |
+| [Teach Your Employee a Skill](./02-teach-your-employee-a-skill.md) | 40 min |
+| [Connect Your Employee to the World](./03-connect-your-employee-to-the-world.md) | 35 min |
+| [Bronze Capstone: First Real Day](./04-bronze-capstone-first-real-day.md) | 45 min |
 
-### Silver Tier: Proactive Assistant
+### Silver Tier: Proactive + Trusted + Learning
 
-| Lesson | Title | Focus |
-|--------|-------|-------|
-| [L08](./08-your-employees-senses.md) | Your Employee's Senses | Gmail Watcher, File Watcher |
-| [L09](./09-trust-but-verify.md) | Trust But Verify | HITL approval workflows |
-| [L10](./10-always-on-duty.md) | Always On Duty | cron, PM2, watchdog |
-| [L11](./11-silver-capstone-ceo-briefing.md) | Silver Capstone: CEO Briefing | Weekly audit + briefing |
+| Lesson | Duration |
+|--------|----------|
+| [Make Your Employee Proactive](./05-make-your-employee-proactive.md) | 40 min |
+| [Teach Your Employee Boundaries](./06-teach-your-employee-boundaries.md) | 40 min |
+| [Give Your Employee a Memory](./07-give-your-employee-a-memory.md) | 40 min |
+| [Prove Professional Value](./08-capstone-prove-professional-value.md) | 55 min |
 
-### Gold Tier: Autonomous Employee
+### Project Review
 
-| Lesson | Title | Focus |
-|--------|-------|-------|
-| [L12](./12-gold-capstone-autonomous-employee.md) | Gold Capstone | Full autonomous integration |
+| Lesson | Duration |
+|--------|----------|
+| [Project Review](./09-project-review.md) | 25 min |
 
-### Assessment
+## Student Deliverables (GitHub Repo)
 
-| Lesson | Title | Focus |
-|--------|-------|-------|
-| [L13](./13-chapter-assessment.md) | Chapter Assessment | Quiz + submission guidelines |
+```
+nanoclaw-employee/
+├── groups/
+│   ├── global/CLAUDE.md               (shared rules)
+│   └── main/CLAUDE.md                 (profession-specific identity)
+├── .claude/skills/{domain-skill}/
+│   └── SKILL.md                       (from Layer 3 design)
+├── conversation-log.md                (Bronze: First Real Day)
+├── evaluation.md                      (Bronze: self-assessment)
+├── scheduler-config.md                (Silver: scheduled task design)
+├── hitl-boundaries.md                 (Silver: permission table)
+├── memory-config.md                   (Silver: action log + knowledge store schemas)
+└── domain-report-sample.md            (Silver: generated report)
+```
 
-Each earlier chapter builds a capability. This chapter combines them all into a working Digital FTE — proving that the paradigm from Part 1 isn't theoretical. It's something you can build today.
+Gold adds: 3-group config + isolation demo + system diagram + memory isolation test.
+
+## Design Philosophy
+
+This project doesn't teach NanoClaw — you already know it. Instead, each lesson gives you:
+
+1. **A challenge** with clear acceptance criteria
+2. **A use case gallery** with profession-specific examples
+3. **Graduated hints** (3 levels) for when you're stuck
+
+Your Layer 3 design from the "NanoClaw Hands-On Setup" lesson in "Meet Your First AI Employee - OpenClaw" is your blueprint. This project is where you execute it.
