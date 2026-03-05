@@ -120,7 +120,7 @@ In Lessons 11 through 14, you worked through domain-specific practice labs — b
 These two capstone exercises test your ability to integrate across all five domains. Exercise 22 tests breadth — connecting every domain in a single new client onboarding workflow. Exercise 23 tests depth — running the complete annual audit cycle from planning through to the signed opinion across three study sessions. Together, they represent the culmination of every capability you have built in this chapter.
 
 :::info Downloadable Resources
-**New client onboarding workflow recipe**: A reusable workflow specification for Exercise 22, available in the [companion repository](https://github.com/panaversity/ca-cpa-domain-agents) at `workflow-recipes/`.
+**New client onboarding workflow recipe**: A reusable workflow specification for Exercise 22, available in the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents) at `workflow-recipes/`.
 
 **Audit cycle working paper pack**: Templates for audit planning memoranda, test documentation, misstatement schedules, and management letters, available at `exercises/working-papers/`.
 :::

@@ -118,7 +118,7 @@ This lab contains three exercises. Each builds a complete professional deliverab
 
 **Requirements for all exercises:** Cowork (Team or Enterprise) with `finance@knowledge-work-plugins` installed.
 
-**Companion files:** Download exercise data files from the [companion repository](https://github.com/panaversity/ca-cpa-domain-agents/releases/latest) (`ca-cpa-exercise-data.zip`) — `exercises/working-papers/` contains audit working paper templates and sample data. Or clone [the repo](https://github.com/panaversity/ca-cpa-domain-agents) directly.
+**Companion files:** Download exercise data files from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) (`ca-cpa-exercise-data.zip`) — `exercises/working-papers/` contains audit working paper templates and sample data. Or clone [the repo](https://github.com/panaversity/ca-cpa-practice-agents) directly.
 :::
 
 ---

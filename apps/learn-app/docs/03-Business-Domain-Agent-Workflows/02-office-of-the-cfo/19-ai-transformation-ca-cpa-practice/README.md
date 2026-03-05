@@ -62,15 +62,12 @@ By the end of this chapter, you should be able to answer these five questions:
 
 ## Companion Repository
 
-The SKILL.md extensions, exercise data, workflow recipes, and reference materials for this chapter are available in the companion repository: [**panaversity/ca-cpa-domain-agents**](https://github.com/panaversity/ca-cpa-domain-agents)
+Exercise data, reference SKILL.md examples, and workflow recipe templates for this chapter are available in the companion repository: [**panaversity/ca-cpa-practice-agents**](https://github.com/panaversity/ca-cpa-practice-agents)
 
-Downloads (from the [latest release](https://github.com/panaversity/ca-cpa-domain-agents/releases/latest)):
+Download `ca-cpa-exercise-data.zip` from the [latest release](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) — trial balances, entity profiles, source documents, and working paper templates for Exercises 1-24. Or clone the repo directly to also get:
 
-- `ca-cpa-exercise-data.zip` — Trial balances, entity profiles, source documents, and working paper templates for Exercises 1-23
-- `ca-cpa-skills-only.zip` — The five domain SKILL.md extensions (jurisdiction tax, chart of accounts, audit methodology, client entity, compliance calendar)
-- `ca-cpa-workflow-recipes.zip` — Scheduled task configurations for recurring workflows
-- `ca-cpa-references.zip` — Jurisdiction-specific regulatory references
-- `ca-cpa-domain-agents-full.zip` — Everything in one package (Exercise 24)
+- `reference-skills/` — Five reference SKILL.md files (Pakistan defaults) to study before building your own in Lessons 9-10
+- `workflow-recipes/` — Natural language scheduling templates for month-end close, board pack, compliance monitoring, and other recurring workflows
 
 ## After Chapter 19
 

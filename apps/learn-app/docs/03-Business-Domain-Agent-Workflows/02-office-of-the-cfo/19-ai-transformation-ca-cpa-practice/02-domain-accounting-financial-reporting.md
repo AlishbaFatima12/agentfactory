@@ -189,7 +189,7 @@ At the service level, fully automated reporting platforms are emerging as a busi
 
 **What you'll build:** A structured month-end close workflow using AI assistance, mapping the boundary between what the agent can execute and what requires your professional judgment.
 
-**Requirements:** Cowork (Team or Enterprise plan) or Claude with file access. Trial balance data in Excel or CSV format. If you do not have real data, download the ready-made Crescent Textiles trial balance from the [companion repository](https://github.com/panaversity/ca-cpa-domain-agents/releases/latest) — use the `ca-cpa-exercise-data.zip` download and find `exercises/trial-balances/textile-manufacturer-tb.csv` (PKR-denominated, ~35 IFRS accounts).
+**Requirements:** Cowork (Team or Enterprise plan) or Claude with file access. Trial balance data in Excel or CSV format. If you do not have real data, download the ready-made Crescent Textiles trial balance from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) — use the `ca-cpa-exercise-data.zip` download and find `exercises/trial-balances/textile-manufacturer-tb.csv` (PKR-denominated, ~35 IFRS accounts).
 
 1. Place your trial balance data in a Cowork folder. Ask Claude:
 
@@ -230,6 +230,16 @@ At the service level, fully automated reporting platforms are emerging as a busi
 5. Review the output. For each item where Claude has flagged an assumption or uncertainty, write a one-sentence instruction that would resolve it — this is the raw material for a month-end close SKILL.md.
 
 **Check your work:** You should have a draft income statement and balance sheet, a list of reconciliations with data sources, a set of proposed month-end journal entries, and a list of assumption-resolution instructions. The assumption list is the most valuable output — it maps the exact boundary between what an agent can execute and what requires your professional judgment.
+
+:::tip Plugin Bridge — From Prompts to Commands
+Steps 3 and 4 used conversational prompts. If you have `finance@knowledge-work-plugins` installed from Chapter 17, try the same tasks using structured plugin commands and compare the output:
+
+- `/income-statement monthly` — produces a standardised income statement from the same trial balance data
+- `/journal-entry "Record depreciation and accruals for month-end close"` — generates structured journal entries as in Step 4
+- `/reconciliation bank` — performs a structured bank reconciliation as discussed in Step 2
+
+The plugin commands produce consistent, structured output. The conversational approach gives you more flexibility to explore. In practice, you will use both — commands for routine execution, prompts for investigation and judgment calls.
+:::
 
 ## Try With AI
 

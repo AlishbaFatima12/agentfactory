@@ -206,9 +206,9 @@ Step 4 of Practice Exercise 4 makes this explicit: the SKILL.md instruction you 
 
 **What you will build:** A complete variance analysis workflow using the IDFA methodology, producing a CFO-ready narrative and a reusable SKILL.md specification.
 
-**Requirements:** Cowork, a financial dataset (actual vs. budget P&L for any period). If you need ready-made data, download the Crescent Textiles trial balance and entity profile from the [companion repository](https://github.com/panaversity/ca-cpa-domain-agents/releases/latest) (`ca-cpa-exercise-data.zip`) — use the trial balance as your "actual" figures and ask Claude to generate a budget scenario from the entity profile.
+**Requirements:** Cowork, a financial dataset (actual vs. budget P&L for any period). If you need ready-made data, download the Crescent Textiles trial balance and entity profile from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) (`ca-cpa-exercise-data.zip`) — use the trial balance as your "actual" figures and ask Claude to generate a budget scenario from the entity profile.
 
-1. Place your P&L data in a Cowork folder. Using the IDFA naming conventions from Chapter 18, ask Claude: _"Structure this P&L data as an IDFA-compliant variance analysis model. Name all inputs using the Inp\_ prefix convention. For the revenue and gross margin lines, decompose variances into volume, price, and mix components."_
+1. Place your P&L data in a Cowork folder. If you have `finance@knowledge-work-plugins` installed from Chapter 17, start with `/variance-analysis "Compare actual vs budget for this period"` to generate a structured baseline. Then refine with the IDFA naming conventions from Chapter 18 — ask Claude: _"Structure this P&L data as an IDFA-compliant variance analysis model. Name all inputs using the Inp\_ prefix convention. For the revenue and gross margin lines, decompose variances into volume, price, and mix components."_
 
 2. Ask: _"Write the CFO-ready narrative for this variance. The CFO wants: the three most significant drivers of the overall P&L variance, whether each driver is within or outside management control, and the forward implication -- does this variance change the full-year forecast?"_
 
