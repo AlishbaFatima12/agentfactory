@@ -149,95 +149,17 @@ Part 4 is organized into nine phases. Each phase gives you a new capability, and
 Each phase takes roughly 1-2 weeks at a few hours per day. The full Part 4 is designed for 3-5 months of steady practice. Some phases (1 and 4) are shorter; others (5 and 6) are longer because they cover more ground. Go at your own pace -- building a strong foundation matters more than speed.
 :::
 
-### Phase 1: The Workbench -- Read & Explore
-
-> Your role: **Reader** -- "I can understand what AI generates"
-
-Before you can specify, you must be able to read. Phase 1 installs your development tools (a package manager, a type checker, a code formatter, a test runner, and Git -- each explained when you first use it), introduces **SmartNotes**, and teaches you to read Python from scratch using the Predict-Run-Investigate method. You finish by performing your first code review on a real SmartNotes module and running your first TDG cycle: define a requirement, write a test, prompt AI to implement, verify it passes.
-
-- **Chapter 30**: Ten Axioms of AI-Driven Development
-- **Chapter 31**: The Development Environment
-- **Chapter 32**: Reading Python
-- **Chapter 33**: Your First TDG Cycle
-
-### Phase 2: Types as the Language of Intent -- Specify
-
-> Your role: **Specifier** -- "I can tell AI precisely what to build"
-
-AI output is only as good as your specification. Phase 2 teaches you to specify with precision -- using Python's type system as the vocabulary you give to AI before it writes a single line. You learn primitive types and expressions, typed collections (lists, dictionaries, tuples, sets), data models for structuring real domains, and function signatures as contracts. By the end, you can write a type-annotated specification that tells AI exactly what to build -- no ambiguity, no guessing.
-
-- **Chapter 34**: Primitive Types and Expressions
-- **Chapter 35**: Collections -- Lists, Dicts, Tuples, Sets
-- **Chapter 36**: Data Models -- Dataclasses and Pydantic
-- **Chapter 37**: Functions as Contracts
-
-### Phase 3: Tests as Specification -- Verify
-
-> Your role: **Verifier** -- "I can define correct and prove it"
-
-A type signature tells AI what shape the code should have. A test tells AI what it should *do*. Phase 3 teaches control flow (how code makes decisions and repeats), pytest (how you define "correct" before implementation exists), iterating on AI output (the feedback loop that makes TDG reliable), and error handling (anticipating what can go wrong). By the end, you write complete test suites that serve as the full specification AI implements against.
-
-- **Chapter 38**: Control Flow -- Through the Lens of Testing
-- **Chapter 39**: pytest Deep Dive
-- **Chapter 40**: Iterating on AI Output -- The Feedback Loop
-- **Chapter 41**: Error Handling and Exceptions
-
-### Phase 4: Debugging and TDG Independence -- Debug & Master
-
-> Your role: **Debugger** -- "I can diagnose failures and drive TDG without scaffolding"
-
-Phase 4 is the checkpoint between guided learning and independent practice. You learn to read error messages as diagnostic information (not text to paste back into the prompt), recognize the common failure patterns of AI-generated code, and follow a systematic debugging loop: reproduce, isolate, identify, fix, verify. By the end, you drive the full TDG cycle independently -- from a problem statement through specification, testing, generation, and verification -- without scaffolding.
-
-- **Chapter 42**: Debugging AI-Generated Code
-- **Chapter 43**: TDG Mastery -- The Complete Cycle
-
-### Phase 5: OOP -- The Python Object Model -- Model
-
-> Your role: **Modeler** -- "I can design systems for AI to implement"
-
-Phase 5 teaches object-oriented programming -- classes, inheritance, composition, and advanced patterns -- after you already know how to test and debug. Every OOP concept you learn, you immediately test and verify. You design class interfaces with types and tests; AI implements the behavior. By the end, you can model a real domain (like SmartNotes) as a system of interacting objects that AI builds to your specification.
-
-- **Chapter 44**: Classes and Instances
-- **Chapter 45**: Inheritance, Composition, and Design
-- **Chapter 46**: Special Methods and the Python Object Model
-- **Chapter 47**: Decorators, Properties, and Advanced Patterns
-
-### Phase 6: Real-World Python -- Build
-
-> Your role: **Practitioner** -- "I can specify and verify production-grade Python features"
-
-In Part 2, you directed Claude Code to handle file operations and build a database-backed project. Phase 6 teaches you to write and own the typed Python code underneath -- file processing, PostgreSQL persistence, modular project architecture, and efficient data transformation patterns. Instead of prompting Claude Code and trusting the output, you specify typed interfaces, write tests for edge cases, and verify every layer yourself.
-
-- **Chapter 48**: Files, Data Processing, and PostgreSQL
-- **Chapter 49**: Modules and Packages
-- **Chapter 50**: Comprehensions, Generators, and Functional Patterns
-
-### Phase 7: CLI and Concurrency -- Deploy
-
-> Your role: **Tool Builder** -- "I can build and ship production tools and async APIs"
-
-Phase 7 crosses the line from working code to real software that other people use. You build a professional command-line tool (`smartnotes`) and a FastAPI web API, learning how to handle concurrent operations (doing multiple things at once) along the way. These async patterns matter because agent SDKs, APIs, and everything you build in Part 5 depend on the fluency you develop here.
-
-- **Chapter 51**: Unix-Style CLI Tools
-- **Chapter 52**: Concurrency, async/await, and FastAPI
-
-### Phase 8: Production Systems -- Harden & Secure
-
-> Your role: **Shipping Engineer** -- "I can harden, secure, and ship production-grade software"
-
-Working code and production code are not the same thing. Phase 8 bridges that gap. You build a GitHub Actions CI pipeline that automatically runs your full verification stack on every commit, and you learn to audit AI-generated code for the security vulnerabilities that AI consistently misses -- because AI optimizes for functionality, not security. You become the human firewall.
-
-- **Chapter 53**: CI/CD, Git Workflows, and Observability
-- **Chapter 54**: Security Review for AI-Generated Code
-
-### Phase 9: Capstone -- Prove
-
-> Your role: **Architect** -- "I can architect and deliver complete, production-grade systems"
-
-Phase 9 is proof -- not to an instructor, but to yourself. SmartNotes was guided: each phase told you what to build next. Now you build **QuizForge**, an AI-Powered Quiz Generator, entirely from scratch. Feed it any text and QuizForge generates quiz questions, tracks your scores, identifies weak topics, and adapts difficulty automatically. Every skill from every phase appears in a single new project. Nobody tells you what to build in each step -- you drive the entire cycle from start to finish. You also develop the judgment to know when *not* to use AI, recognizing when manual coding is faster than prompting.
-
-- **Chapter 55**: When Not to Use AI
-- **Chapter 56**: QuizForge Capstone -- AI-Powered Quiz Generator
+| Phase | Title | Your Role | Chapters |
+|-------|-------|-----------|----------|
+| 1 | [The Workbench](the-workbench) | Reader | Ch 30-33 |
+| 2 | [Specify with Types](specify-with-types) | Specifier | Ch 34-37 |
+| 3 | [Tests as Specification](tests-as-specification) | Verifier | Ch 38-41 |
+| 4 | [Debug & Master](debug-and-master) | Debugger | Ch 42-43 |
+| 5 | [The Python Object Model](the-python-object-model) | Modeler | Ch 44-47 |
+| 6 | [Real-World Python](real-world-python) | Practitioner | Ch 48-50 |
+| 7 | [CLI & Concurrency](cli-and-concurrency) | Tool Builder | Ch 51-52 |
+| 8 | [Production Systems](production-systems) | Shipping Engineer | Ch 53-54 |
+| 9 | [Capstone](capstone) | Architect | Ch 55-56 |
 
 **Deliverables**: SDD specification documents, type definitions, object model diagram, passing test suites, AI-generated and human-verified implementation, security audit, green CI pipeline, and a deployed QuizForge application with CLI, API, and AI features. You finish Part 4 with two portfolio-grade projects -- SmartNotes (guided) and QuizForge (independent) -- proving you can drive the complete TDG cycle at production scale.
 
