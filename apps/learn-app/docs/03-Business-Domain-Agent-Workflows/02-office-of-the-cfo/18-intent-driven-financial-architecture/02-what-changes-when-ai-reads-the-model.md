@@ -86,7 +86,7 @@ teaching_guide:
   misconceptions:
     - "Students may think Named Ranges are just cosmetic — a readability improvement for humans. The lesson must demonstrate that Named Ranges change what the AI agent can do, not just how the formula looks"
     - "Students may assume the AI is 'smarter' on Named Range models. The AI is the same — the model gives it more information to work with"
-    - "Students may think converting to Named Ranges is the whole IDFA methodology. Named Range Priority is Guardrail 1 of four — later lessons cover LaTeX Verification, Intent Notes, and MCP Dependency"
+    - "Students may think converting to Named Ranges is the whole IDFA methodology. Named Range Priority is Guardrail 1 of four — later lessons cover LaTeX Verification, Intent Notes, and Delegated Calculation"
   discussion_prompts:
     - "Think about a time you inherited a spreadsheet from a colleague. How long did it take to understand what the formulas were doing? Would Named Ranges have changed that experience?"
     - "If an AI agent gives you a hedged answer about a formula ('this appears to subtract something from something'), would you trust that analysis in a board presentation? What about a definitive answer that names the business rule?"

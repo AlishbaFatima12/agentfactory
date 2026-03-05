@@ -241,7 +241,7 @@ In a coordinate-based model, inserting a row above your formulas shifts every ce
 
 Named Range formulas are immune to this. `Revenue_Y2` always points to the cell named `Revenue_Y2`, regardless of where that cell sits in the grid. Insert rows, delete columns, move entire sections — the formula still resolves correctly. Formula maintenance drops to near zero because there is nothing positional to maintain.
 
-This is why Guardrail 1 is the foundation of IDFA. The other three guardrails — LaTeX Verification, Intent Notes, and MCP Dependency — all assume that formulas are already Named Range compliant. Without Guardrail 1, the others cannot function.
+This is why Guardrail 1 is the foundation of IDFA. The other three guardrails — LaTeX Verification, Intent Notes, and Delegated Calculation — all assume that formulas are already Named Range compliant. Without Guardrail 1, the others cannot function.
 
 ## Try With AI
 

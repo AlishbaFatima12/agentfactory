@@ -18,7 +18,7 @@ The same financial formula written two ways produces categorically different AI 
 
 - Treating Named Ranges as a cosmetic improvement — they change what the AI agent can do, not just how the formula looks to humans
 - Believing better prompts can compensate for coordinate formulas — the information gap is architectural, not a prompting problem
-- Assuming Named Range Priority is the entire IDFA methodology — it is Guardrail 1 of four; later lessons cover LaTeX Verification, Intent Notes, and MCP Dependency
+- Assuming Named Range Priority is the entire IDFA methodology — it is Guardrail 1 of four; later lessons cover LaTeX Verification, Intent Notes, and Delegated Calculation
 
 ### Connections
 

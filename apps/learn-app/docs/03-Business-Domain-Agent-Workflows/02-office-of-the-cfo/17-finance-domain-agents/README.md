@@ -7,6 +7,10 @@ chapter_number: 17
 part_number: 3
 version: 1.0
 status: draft
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-17/finance-agent-architecture.pdf"
+  title: "Finance Agent Architecture"
+  height: 700
 ---
 
 # Chapter 17: Finance Domain Agents
@@ -16,6 +20,8 @@ status: draft
 Chapter 16 gave you the Knowledge Extraction Method — the structured process for surfacing tacit professional knowledge and translating it into SKILL.md files that produce agents genuinely useful in production contexts. This chapter applies that methodology to the first domain: finance.
 
 Finance is distinctive because a single application — Excel — sits at the centre of almost everything professionals do. This creates a natural two-layer teaching structure. First, you learn what Claude can do inside the workbook: understanding inherited models, testing scenarios, debugging formula errors, and building model structures from plain-language descriptions. Second, you learn what Claude can do across applications: the Cowork finance plugins that orchestrate multi-step workflows spanning Excel, PowerPoint, and connected enterprise systems — from the corporate finance plugin through the investment professional suite with its 39 commands, 42 skills, and 11 data integrations. Third, you apply the Knowledge Extraction Method to encode your own financial expertise into enterprise extensions that make the generic plugins yours.
+
+## 📚 Teaching Aid
 
 ## What You'll Learn
 

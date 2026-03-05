@@ -20,22 +20,22 @@ cards:
 
   - id: "ch18-11-the-five-capabilities-003"
     front: "What is the pass criterion for Deterministic What-If?"
-    back: "The agent uses write_cell() then read_cell(). The reported answer and verified answer must match exactly — no instance of reporting a number before reading it from the model."
+    back: "The agent delegates every calculation to the model — writing the assumption, letting the spreadsheet engine recalculate, and reading back the result. The reported answer and verified answer must match exactly — no instance of reporting a number before reading it from the model."
     tags: ["what-if", "capability-2", "pass-criterion"]
     difficulty: "intermediate"
 
   - id: "ch18-11-the-five-capabilities-004"
     front: "How does Logic De-compilation work as a capability test?"
-    back: "The Assumptions sheet is hidden. The agent uses inspect_model() on Calculations only, then reconstructs a complete IDFA Logic Map. Fewer than 5% of business rules may be incorrect or missing."
+    back: "The Assumptions sheet is hidden. The agent inspects only the Calculations sheet, then reconstructs a complete IDFA Logic Map. Fewer than 5% of business rules may be incorrect or missing."
     tags: ["logic-decompilation", "capability-3"]
     difficulty: "intermediate"
 
   - id: "ch18-11-the-five-capabilities-005"
     front: "What distinguishes Strategic Goal-Seeking from simple what-if analysis?"
-    back: "In what-if, you provide the input and read the output. In goal-seeking, you provide the target output and the agent iterates write_cell()/read_cell() to find the required input."
+    back: "In what-if, you provide the input and read the output. In goal-seeking, you provide the target output and the agent iterates — writing assumptions and reading results — to find the required input."
     tags: ["goal-seeking", "capability-4", "what-if"]
     difficulty: "intermediate"
-    why: "Why must the agent iterate via MCP rather than solving the equation algebraically?"
+    why: "Why must the agent iterate through the model rather than solving the equation algebraically?"
 
   - id: "ch18-11-the-five-capabilities-006"
     front: "What four statistics does a Stochastic Simulation result report?"
@@ -44,15 +44,15 @@ cards:
     difficulty: "basic"
 
   - id: "ch18-11-the-five-capabilities-007"
-    front: "Why must every Monte Carlo iteration go through MCP rather than being simulated internally?"
-    back: "Internal simulation bypasses actual model formulas, dependencies, and guardrails. MCP iteration ensures each scenario runs through Excel, honouring every Named Range relationship and formula dependency."
-    tags: ["monte-carlo", "mcp-dependency", "capability-5"]
+    front: "Why must every Monte Carlo iteration go through the model rather than being simulated internally?"
+    back: "Internal simulation bypasses actual model formulas, dependencies, and guardrails. Delegated calculation ensures each scenario runs through the spreadsheet engine, honouring every Named Range relationship and formula dependency."
+    tags: ["monte-carlo", "delegated-calculation", "capability-5"]
     difficulty: "intermediate"
     why: "What would happen to simulation accuracy if the model contained conditional overrides that the agent didn't know about?"
 
   - id: "ch18-11-the-five-capabilities-008"
     front: "What does a failed Capability 2 test reveal about the deployment?"
-    back: "The agent is performing internal arithmetic instead of using MCP. This violates Guardrail 4 and means agent-reported numbers are not deterministically verified."
+    back: "The agent is performing internal arithmetic instead of delegating to the spreadsheet engine. This violates Guardrail 4 and means agent-reported numbers are not deterministically verified."
     tags: ["capability-2", "failure", "guardrail-4"]
     difficulty: "intermediate"
 
@@ -77,7 +77,7 @@ cards:
 
   - id: "ch18-11-the-five-capabilities-012"
     front: "If Capability 4 (Goal-Seeking) fails, what is the most likely architectural cause?"
-    back: "Missing or inconsistent Named Ranges. If inputs lack clear Inp_ prefixes or naming is inconsistent, the agent cannot identify which Named Range to iterate in the write_cell()/read_cell() loop."
+    back: "Missing or inconsistent Named Ranges. If inputs lack clear Inp_ prefixes or naming is inconsistent, the agent cannot identify which Named Range to iterate in the write-calculate-read loop."
     tags: ["goal-seeking", "failure", "naming"]
     difficulty: "advanced"
     why: "How would you diagnose whether the failure is in naming conventions or in the agent's iteration logic?"

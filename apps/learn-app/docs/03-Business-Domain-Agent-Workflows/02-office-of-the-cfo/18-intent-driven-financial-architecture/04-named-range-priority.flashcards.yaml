@@ -57,7 +57,7 @@ cards:
 
   - id: "ch18-04-named-range-priority-009"
     front: "Why is Guardrail 1 the foundation for all other IDFA guardrails?"
-    back: "Guardrails 2-4 all assume Named Range compliance. LaTeX verification requires readable formulas, Intent Notes document visible business rules, MCP passes Named Ranges to Excel. Without Guardrail 1, the others cannot function."
+    back: "Guardrails 2-4 all assume Named Range compliance. LaTeX verification requires readable formulas, Intent Notes document visible business rules, Delegated Calculation passes Named Ranges to the spreadsheet engine. Without Guardrail 1, the others cannot function."
     tags: ["guardrail-1", "foundation"]
     difficulty: "intermediate"
     why: "What would happen if you tried to apply LaTeX Verification to a coordinate-based formula?"

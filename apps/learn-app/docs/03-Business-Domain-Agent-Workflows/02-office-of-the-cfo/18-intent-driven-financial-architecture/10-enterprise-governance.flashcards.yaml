@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch18-10-enforcement-vs-governance-001"
     front: "What is the difference between plugin enforcement and organisational governance in IDFA?"
-    back: "The plugin enforces technical guardrails automatically (naming conventions, layer isolation, LaTeX verification, Intent Notes, MCP dependency). Governance handles what the plugin cannot: accountability (who approves exceptions), tracking (which models exist, who owns them), approval workflows (Named Range modifications, production gating), and compliance metrics (Intent Note coverage %)."
+    back: "The plugin enforces technical guardrails automatically (naming conventions, layer isolation, LaTeX verification, Intent Notes, Delegated Calculation). Governance handles what the plugin cannot: accountability (who approves exceptions), tracking (which models exist, who owns them), approval workflows (Named Range modifications, production gating), and compliance metrics (Intent Note coverage %)."
     tags: ["governance", "plugin", "enforcement"]
     difficulty: "basic"
 

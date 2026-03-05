@@ -19,7 +19,7 @@ keywords:
     "Named Range Priority",
     "LaTeX Verification",
     "Intent Notes",
-    "MCP Dependency",
+    "Delegated Calculation",
     "financial modelling",
     "IDFA",
     "Intent-Driven Financial Architecture",
@@ -41,7 +41,7 @@ skills:
     category: "Applied"
     bloom_level: "Analyze"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can test whether an installed skill is active by providing an intent statement and verifying that the agent's output includes all four IDFA guardrails — Named Range notation, LaTeX verification for complex formulas, Intent Notes, and MCP workflow — without being prompted for any of them"
+    measurable_at_this_level: "Student can test whether an installed skill is active by providing an intent statement and verifying that the agent's output includes all four IDFA guardrails — Named Range notation, LaTeX verification for complex formulas, Intent Notes, and delegated calculation workflow — without being prompted for any of them"
 
   - name: "Cross-Platform Skill Portability"
     proficiency_level: "B1"
@@ -54,7 +54,7 @@ learning_objectives:
   - objective: "Install the IDFA plugin in Claude Code and verify that the agent automatically applies all four guardrails when given a financial modelling intent statement"
     proficiency_level: "B2"
     bloom_level: "Apply"
-    assessment_method: "Student installs the plugin, gives Claude a new intent statement, and confirms the output includes Named Range notation, LaTeX verification, Intent Notes, and MCP workflow without being explicitly asked"
+    assessment_method: "Student installs the plugin, gives Claude a new intent statement, and confirms the output includes Named Range notation, LaTeX verification, Intent Notes, and delegated calculation workflow without being explicitly asked"
 
   - objective: "Analyse agent output to determine whether each of the four IDFA guardrails was applied, identifying any guardrail that was missed and explaining what correct application would look like"
     proficiency_level: "B2"
@@ -83,7 +83,7 @@ differentiation:
 
 # The IDFA Skill
 
-In Lesson 8, you retrofitted a legacy coordinate-based model to IDFA compliance — converting formulas one by one, validating outputs at each step. Now you have the complete methodology: three layers, four guardrails, naming conventions, the MCP workflow, and the retrofitting process. All of that knowledge lives in your head. The IDFA plugin makes it live in every agent you use.
+In Lesson 8, you retrofitted a legacy coordinate-based model to IDFA compliance — converting formulas one by one, validating outputs at each step. Now you have the complete methodology: three layers, four guardrails, naming conventions, the delegated calculation workflow, and the retrofitting process. All of that knowledge lives in your head. The IDFA plugin makes it live in every agent you use.
 
 A SKILL.md file is a structured document that follows the [agentskills.io](https://agentskills.io) open standard. The Panaversity team has packaged the complete IDFA methodology as a Claude Code plugin — [`panaversity/idfa-financial-architect`](https://github.com/panaversity/idfa-financial-architect) — so you install the skill with two commands and it auto-activates on every financial modelling task. The agent reads it at the start of every session. It does not need to be prompted. It does not need to be reminded. The skill becomes part of how the agent thinks — and when someone mentions a financial model, a spreadsheet formula, or a model audit, the agent applies the full IDFA methodology automatically.
 
@@ -95,17 +95,27 @@ The IDFA plugin follows the standard Claude Code plugin structure:
 panaversity/idfa-financial-architect/
 ├── .claude-plugin/
 │   ├── plugin.json            ← Plugin metadata (name, version, author)
-│   └── marketplace.json       ← Marketplace catalog (for /plugin marketplace add)
+│   └── marketplace.json       ← Marketplace catalog
 ├── skills/
-│   └── financial-architect/
-│       ├── SKILL.md           ← The complete IDFA methodology
-│       └── references/
-│           └── IDFA-reference.md  ← Enterprise governance, complex formulas, sector naming
+│   ├── financial-architect/   ← The methodology (UNCHANGED)
+│   │   ├── SKILL.md           ← Behavioural guidance, four guardrails
+│   │   └── references/
+│   │       └── IDFA-reference.md  ← Enterprise governance, complex formulas, sector naming
+│   └── idfa-ops/              ← The operations — the agent's "hands"
+│       ├── SKILL.md           ← "Use these scripts for Named Range operations"
+│       └── scripts/
+│           ├── idfa_ops.py    ← Write, read, inspect, formula, create-range
+│           ├── idfa_audit.py  ← Compliance auditor
+│           └── recalc_bridge.py ← LibreOffice recalculation
+├── examples/
+│   └── gp_waterfall.xlsx      ← Reference model
 ├── README.md
 └── LICENSE                    ← Apache-2.0
 ```
 
-The heart of the plugin is `SKILL.md` — a single file that encodes every concept you learned in Lessons 1 through 8. Here is how it opens:
+The plugin includes two skills working together. The **financial-architect** skill encodes every concept you learned in Lessons 1 through 8 — the methodology, the guardrails, the naming conventions. The **idfa-ops** skill gives the agent its "hands" — the scripts that actually read from, write to, and audit Excel models programmatically. When the methodology skill says "write the assumption to the model," the operations skill provides the tool to do it.
+
+Here is how the methodology skill opens:
 
 ```yaml
 ---
@@ -135,25 +145,26 @@ The `references/` directory contains the extended reference guide — enterprise
 
 If you use Claude through the **Cowork** tab in the Claude desktop app:
 
-1. Open the **Cowork** tab
-2. Click **Customize** in the left sidebar
-3. Click **Browse plugins**, find the IDFA plugin (`panaversity/idfa-financial-architect`), and click **Install**
-4. The IDFA skill auto-activates in all Cowork sessions when you mention financial models
+1. Open the **Cowork** sidebar
+2. Click **Customize**
+3. Click **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub**
+4. Enter `https://github.com/panaversity/idfa-financial-architect`
+5. Find **IDFA Financial Architect** and click **Install**
+
+The IDFA skill auto-activates in all Cowork sessions when you mention financial models. Both skills — the methodology and the operations — install together as a single plugin.
 
 Plugins in Cowork are saved locally to your machine. For team-wide deployment, your IT team can pre-provision plugins across the organisation through the admin console — see Lesson 10 on governance.
 
-You can also upload the plugin directly from the [GitHub repo](https://github.com/panaversity/idfa-financial-architect) using the **Customize** menu's upload option.
-
 ### Claude Code (CLI)
 
-If you use Claude Code in the terminal, clone the plugin repo and load it directly:
+If you use Claude Code in the terminal:
 
 ```bash
-git clone https://github.com/panaversity/idfa-financial-architect.git
-claude --plugin-dir ./idfa-financial-architect
+/plugin marketplace add panaversity/idfa-financial-architect
+/plugin install idfa-financial-architect@panaversity-idfa
 ```
 
-Claude Code reads the SKILL.md file and makes it available in every session. When a conversation mentions financial models, named ranges, or any trigger phrase listed in the skill, Claude activates the IDFA methodology automatically.
+Claude Code reads both SKILL.md files and makes them available in every session. When a conversation mentions financial models, named ranges, or any trigger phrase listed in the skill, Claude activates the IDFA methodology automatically.
 
 ### Other Agents (GitHub Copilot, VS Code, Codex, Cursor)
 
@@ -181,12 +192,12 @@ The Agent Decision Table is the operational core of the skill. It tells the agen
 | Task                        | What the Agent Does Automatically                                                                                                                                                      |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Building a new model        | Extracts every input from the intent statement, names each with `Inp_`, writes all calculations in Named Range notation, verifies complex formulas in LaTeX, and attaches Intent Notes |
-| Auditing an existing model  | Runs `inspect_model()`, checks every Calculation layer formula for coordinate references, flags violations, and reports compliance percentage                                          |
-| Retrofitting a legacy model | Runs `inspect_model()`, identifies all hardcoded values, proposes Named Ranges, rewrites formulas one at a time, and validates that outputs match at each step                         |
-| What-if analysis            | Uses `write_cell()` to change assumptions and `read_cell()` to report results — never calculates internally                                                                            |
-| Goal-seeking                | Iterates `write_cell()`/`read_cell()` until the target output is reached, then reports the required input value                                                                        |
-| Explaining a formula        | Reads the formula via `read_formula()`, states the business rule in plain English, and checks for an Intent Note                                                                       |
-| Checking compliance         | Verifies all four guardrails: Named Ranges, LaTeX verification, Intent Notes, and MCP workflow                                                                                         |
+| Auditing an existing model  | Inspects the model, checks every Calculation layer formula for coordinate references, flags violations, and reports compliance percentage                                              |
+| Retrofitting a legacy model | Inspects the model, identifies all hardcoded values, proposes Named Ranges, rewrites formulas one at a time, and validates that outputs match at each step                             |
+| What-if analysis            | Writes the assumption to the model, lets the spreadsheet engine recalculate, and reads back the results — never calculates internally                                                  |
+| Goal-seeking                | Iterates writing assumptions and reading results until the target output is reached, then reports the required input value                                                             |
+| Explaining a formula        | Reads the formula from the model, states the business rule in plain English, and checks for an Intent Note                                                                             |
+| Checking compliance         | Verifies all four guardrails: Named Ranges, LaTeX verification, Intent Notes, and Delegated Calculation workflow                                                                       |
 
 Without the skill installed, you would need to prompt for each of these behaviours explicitly. With the plugin installed, the agent applies the correct workflow based on what you ask it to do.
 
@@ -197,9 +208,9 @@ The `description` field in the YAML frontmatter lists specific phrases that acti
 | What You Say                    | What Happens                                                                           |
 | ------------------------------- | -------------------------------------------------------------------------------------- |
 | "Explain how this model works"  | The agent produces a Logic Map in Named Range notation                                 |
-| "This model is a black box"     | The agent offers a full audit via `inspect_model()`                                    |
+| "This model is a black box"     | The agent offers a full audit — inspecting all formulas, inputs, and dependencies      |
 | "I inherited this model"        | The agent proposes an IDFA compliance audit and retrofitting sequence                  |
-| "What if revenue grows at 15%?" | The agent uses MCP to write the assumption and read the result                         |
+| "What if revenue grows at 15%?" | The agent writes the assumption to the model, recalculates, and reads back the result  |
 | "Check this formula"            | The agent verifies Named Range compliance, LaTeX correctness, and Intent Note presence |
 
 The trigger phrases are not rigid pattern matches. They are examples that teach the agent the category of request. "This spreadsheet makes no sense" will activate the skill just as "this model is a black box" does — because the agent understands the intent behind the phrase.
@@ -210,7 +221,7 @@ These mistakes appear in the SKILL.md as a safeguard. When the skill is active, 
 
 1. **Never mix layers.** A hardcoded `0.60` in a Calculation formula violates layer isolation. The skill teaches the agent to move it to Assumptions as `Inp_COGS_Pct_Y1`.
 
-2. **Never calculate internally.** If you ask "what is Year 3 Gross Profit?", the agent must use `read_cell()`, not arithmetic. The model's deterministic output and the agent's estimate can differ — and in finance, only the model result is audit-valid.
+2. **Never calculate internally.** If you ask "what is Year 3 Gross Profit?", the agent must delegate to the spreadsheet engine — never calculate internally. The model's deterministic output and the agent's estimate can differ — and in finance, only the model result is audit-valid.
 
 3. **Never skip LaTeX for WACC, IRR, NPV, or DCF.** These four formulas are where errors are most common and most consequential. The skill requires LaTeX verification before any of them are committed to the model.
 
@@ -220,21 +231,11 @@ These mistakes appear in the SKILL.md as a safeguard. When the skill is active, 
 
 ## Exercise: Install and Test the IDFA Plugin
 
-**Step 1.** Install the IDFA plugin. In Claude Code, run:
+**Step 1.** Install the IDFA plugin.
 
-```
-/plugin marketplace add panaversity/idfa-financial-architect
-/plugin install idfa-financial-architect@panaversity-idfa
-```
+**In Cowork** (recommended): Open the sidebar → **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/idfa-financial-architect` → find **IDFA Financial Architect** → click **Install**.
 
-If testing locally, clone the repo and use:
-
-```bash
-git clone https://github.com/panaversity/idfa-financial-architect.git
-claude --plugin-dir ./idfa-financial-architect
-```
-
-In Cowork, open **Customize → Browse plugins** and install or upload the plugin.
+**In Claude Code**: Run `/plugin marketplace add panaversity/idfa-financial-architect` then `/plugin install idfa-financial-architect@panaversity-idfa`.
 
 **Step 2.** Start a new Claude Code session (or Cowork session) so the plugin is loaded.
 
@@ -247,16 +248,16 @@ Project a 5-year SaaS revenue model with $5M ARR growing 30% YoY,
 
 **Step 4.** Review Claude's output against the four guardrails:
 
-| Guardrail            | What to Check                                                                                                    |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| Named Range Priority | Are all inputs named with `Inp_` prefix? Are all formulas written in Named Range notation with zero coordinates? |
-| LaTeX Verification   | If the model includes complex formulas, did Claude verify them in LaTeX notation?                                |
-| Intent Notes         | Did Claude include Intent Note format for generated formulas?                                                    |
-| MCP Dependency       | Did Claude describe the write/read workflow rather than calculating results internally?                          |
+| Guardrail             | What to Check                                                                                                    |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Named Range Priority  | Are all inputs named with `Inp_` prefix? Are all formulas written in Named Range notation with zero coordinates? |
+| LaTeX Verification    | If the model includes complex formulas, did Claude verify them in LaTeX notation?                                |
+| Intent Notes          | Did Claude include Intent Note format for generated formulas?                                                    |
+| Delegated Calculation | Did Claude describe the write/read workflow rather than calculating results internally?                          |
 
 If all four guardrails appear in the output without you asking for them, the skill is working. If any guardrail is missing, check that the plugin is installed and that you started a fresh session.
 
-**Step 5.** Open the installed SKILL.md and read the Agent Decision Table. Find the row for "Retrofitting a legacy model" and trace the workflow: `inspect_model()` → identify hardcoded values → propose Named Ranges → rewrite one by one → validate. This is the same five-phase process you learned in Lesson 8, now encoded as an instruction the agent follows automatically.
+**Step 5.** Open the installed SKILL.md and read the Agent Decision Table. Find the row for "Retrofitting a legacy model" and trace the workflow: inspect the model → identify hardcoded values → propose Named Ranges → rewrite one by one → validate. This is the same five-phase process you learned in Lesson 8, now encoded as an instruction the agent follows automatically.
 
 ## The Business Bottom Line
 
@@ -270,7 +271,7 @@ This also connects back to Chapter 15, where you learned the plugin architecture
 
 :::tip Setup
 
-Open a Cowork session (or Claude Code) where you have installed the IDFA plugin. In Cowork: install via **Customize → Browse plugins → Install**. In Claude Code: `git clone https://github.com/panaversity/idfa-financial-architect.git` then `claude --plugin-dir ./idfa-financial-architect`. Start a fresh session so the skill is loaded.
+Open a Cowork session (or Claude Code) where you have installed the IDFA plugin. In Cowork: **Customize** → **Browse plugins** → **Personal** → **+** → **Add marketplace from GitHub** → enter the GitHub URL → **Install**. In Claude Code: `/plugin marketplace add panaversity/idfa-financial-architect` then `/plugin install idfa-financial-architect@panaversity-idfa`. Start a fresh session so the skill is loaded.
 
 :::
 
@@ -284,7 +285,7 @@ decreasing 5% per year through supply chain optimisation.
 Project revenue, COGS, and gross profit for 5 years.
 ```
 
-**What you are learning:** Whether the skill activates automatically from a financial modelling request. Check the output for `Inp_` prefixed Named Ranges, Named Range-only formulas, and the MCP workflow description. If the agent produces coordinate-based formulas or calculates results internally, the skill is not active — verify the plugin is installed and restart the session.
+**What you are learning:** Whether the skill activates automatically from a financial modelling request. Check the output for `Inp_` prefixed Named Ranges, Named Range-only formulas, and the delegated calculation workflow. If the agent produces coordinate-based formulas or calculates results internally, the skill is not active — verify the plugin is installed and restart the session.
 
 **Prompt 2 — Test trigger phrase activation:**
 
@@ -294,7 +295,7 @@ It has 300 formulas across 8 tabs. I need to understand what
 it does before the board meeting next week.
 ```
 
-**What you are learning:** Whether trigger phrases activate the correct IDFA workflow. The phrase "I inherited this model" should trigger the agent to offer an IDFA compliance audit, propose `inspect_model()` to map all formulas, and suggest a retrofitting sequence. If the agent responds with generic spreadsheet advice instead of the IDFA methodology, the skill's trigger phrases are not being read.
+**What you are learning:** Whether trigger phrases activate the correct IDFA workflow. The phrase "I inherited this model" should trigger the agent to offer an IDFA compliance audit, inspect the model to map all formulas, and suggest a retrofitting sequence. If the agent responds with generic spreadsheet advice instead of the IDFA methodology, the skill's trigger phrases are not being read.
 
 **Prompt 3 — Build a complete model with the skill active:**
 
@@ -308,7 +309,7 @@ Project revenue, personnel costs, gross profit, and
 gross margin percentage for all three years.
 ```
 
-**What you are learning:** Whether the skill governs a complete model-building workflow end to end. The output should include: every input extracted and named with `Inp_`, all calculation formulas in Named Range notation, LaTeX verification for any multi-step formulas, Intent Notes for each generated formula, and the MCP write/read workflow. This is the full test — if all four guardrails appear without prompting, the IDFA skill is fully operational.
+**What you are learning:** Whether the skill governs a complete model-building workflow end to end. The output should include: every input extracted and named with `Inp_`, all calculation formulas in Named Range notation, LaTeX verification for any multi-step formulas, Intent Notes for each generated formula, and the delegated calculation workflow. This is the full test — if all four guardrails appear without prompting, the IDFA skill is fully operational.
 
 <Flashcards />
 

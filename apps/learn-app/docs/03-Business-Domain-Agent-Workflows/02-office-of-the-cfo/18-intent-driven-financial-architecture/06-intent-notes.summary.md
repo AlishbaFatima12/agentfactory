@@ -25,4 +25,4 @@ Every AI-generated formula in an IDFA-compliant model carries a permanent **Inte
 ### Connections
 
 - **Builds on**: Lesson 4 (Named Range Priority) established the self-documenting formula pattern; Lesson 5 (LaTeX Verification) established the mathematical verification checkpoint — Intent Notes add the business reasoning layer on top of both
-- **Leads to**: Lesson 7 (MCP Dependency — Guardrail 4) completes the four guardrails by ensuring every agent-reported number comes from the model's deterministic calculation; Lesson 11 (Capstone) validates Logic De-compilation, which depends on Intent Note quality
+- **Leads to**: Lesson 7 (Delegated Calculation — Guardrail 4) completes the four guardrails by ensuring every agent-reported number comes from the model's deterministic calculation; Lesson 11 (Capstone) validates Logic De-compilation, which depends on Intent Note quality
