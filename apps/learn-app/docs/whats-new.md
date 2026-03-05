@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-05
+- docs: add About This Book page ([#822](https://github.com/panaversity/agentfactory/pull/822))
+
+### 2026-03-05
 
 - docs: improve Part 4 overview beginner-friendliness and add chapter map ([#814](https://github.com/panaversity/agentfactory/pull/814))
 
