@@ -322,4 +322,4 @@ For each formula, tell me:
 
 ---
 
-**Next:** [Lesson 7: MCP Dependency — Guardrail 4](./07-mcp-dependency.md) — the final guardrail that ensures every number an agent reports comes from the model's deterministic calculation, never from the agent's internal arithmetic.
+**Next:** [Lesson 7: Delegated Calculation — Guardrail 4](./07-mcp-dependency.md) — the final guardrail that ensures every number an agent reports comes from the model's deterministic calculation, never from the agent's internal arithmetic.

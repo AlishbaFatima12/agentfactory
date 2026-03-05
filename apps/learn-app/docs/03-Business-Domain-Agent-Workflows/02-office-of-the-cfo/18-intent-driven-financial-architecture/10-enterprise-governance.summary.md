@@ -1,6 +1,6 @@
 ### Core Concept
 
-Individual IDFA practice produces better models; organisational IDFA deployment without governance produces chaos — different naming conventions, inconsistent layer structures, Intent Notes in multiple formats. Enterprise governance solves this through four written artefacts: the **Standards Document** (specification of naming conventions, layer rules, LaTeX protocol, and Intent Note format — version-controlled, reviewed annually), the **Model Registry** (centralised record of every IDFA-compliant model with Intent Note Coverage % as the key compliance metric), the **Validation Protocol** (four formal checks — Named Range compliance, LaTeX verification, Intent Note completeness, and output accuracy — required before any model reaches a board or regulator), and the **Finance Domain Agent Standards Policy** (MCP dependency mandatory, Named Range modifications require Controller sign-off, all agent-generated formulas require LaTeX verification and Intent Notes before production, session logs retained 90 days minimum).
+Individual IDFA practice produces better models; organisational IDFA deployment without governance produces chaos — different naming conventions, inconsistent layer structures, Intent Notes in multiple formats. Enterprise governance solves this through four written artefacts: the **Standards Document** (specification of naming conventions, layer rules, LaTeX protocol, and Intent Note format — version-controlled, reviewed annually), the **Model Registry** (centralised record of every IDFA-compliant model with Intent Note Coverage % as the key compliance metric), the **Validation Protocol** (four formal checks — Named Range compliance, LaTeX verification, Intent Note completeness, and output accuracy — required before any model reaches a board or regulator), and the **Finance Domain Agent Standards Policy** (Delegated Calculation mandatory, Named Range modifications require Controller sign-off, all agent-generated formulas require LaTeX verification and Intent Notes before production, session logs retained 90 days minimum).
 
 ### Key Mental Models
 
@@ -11,7 +11,7 @@ Individual IDFA practice produces better models; organisational IDFA deployment 
 ### Critical Patterns
 
 - Governance artefacts map one-to-one to failure modes: inconsistent conventions (Standards Document), lost or unvalidated models (Model Registry), non-compliant models in production (Validation Protocol), uncontrolled agent behaviour (Agent Standards Policy)
-- The Agent Standards Policy elevates Guardrail 4 (MCP Dependency) from a technical guardrail to an organisational policy — the distinction between an individual practice and an enforceable rule
+- The Agent Standards Policy elevates Guardrail 4 (Delegated Calculation) from a technical guardrail to an organisational policy — the distinction between an individual practice and an enforceable rule
 - Named Range definitions (the structural skeleton) require approval to modify, while Named Range values (the assumptions) are freely writable by agents during analysis
 
 ### Common Mistakes

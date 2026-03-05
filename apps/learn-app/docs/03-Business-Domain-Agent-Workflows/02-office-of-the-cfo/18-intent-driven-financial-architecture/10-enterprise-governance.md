@@ -17,7 +17,7 @@ keywords:
     "Named Range standards",
     "Intent Notes",
     "LaTeX verification",
-    "MCP Dependency",
+    "Delegated Calculation",
     "financial model registry",
     "agent session logs",
     "IDFA plugin",
@@ -82,23 +82,23 @@ differentiation:
 
 # Enterprise Governance
 
-In Lesson 9, you installed the IDFA plugin. Every analyst who installs `panaversity/idfa-financial-architect` gets identical enforcement of the four technical guardrails — Named Range naming, layer isolation, LaTeX verification, Intent Notes, and MCP dependency. The plugin solved the consistency problem. Now solve the accountability problem.
+In Lesson 9, you installed the IDFA plugin. Every analyst who installs `panaversity/idfa-financial-architect` gets identical enforcement of the four technical guardrails — Named Range naming, layer isolation, LaTeX verification, Intent Notes, and Delegated Calculation. The plugin solved the consistency problem. Now solve the accountability problem.
 
 Enforcement is not governance. The plugin ensures every agent-built formula uses `Inp_` prefixes and Named Range notation. But the plugin cannot tell you which models exist in the organisation, who owns them, when they were last validated, or who approved the last structural change. Enterprise governance is what turns plugin-enforced technical compliance into organisational capability. This lesson builds the four artefacts that a CFO signs off on — the organisational layer around the plugin's enforcement layer.
 
 ## What the Plugin Handles vs What Governance Handles
 
-| Plugin Enforces (Technical)             | Governance Handles (Organisational)                               |
-| --------------------------------------- | ----------------------------------------------------------------- |
-| `Inp_` naming convention                | Who approves exceptions to conventions                            |
-| Layer isolation rules                   | Who validates a model before a board meeting                      |
-| Intent Note format                      | Coverage tracking — what % of models are compliant                |
-| LaTeX verification for complex formulas | Session log retention — where stored, how long                    |
-| MCP dependency for all calculations     | Named Range modification approval — who signs off                 |
-| Agent Decision Table workflows          | Model Registry — which models exist, who owns them                |
-|                                         | Sector prefixes — which prefix your team uses                     |
-|                                         | Validation scheduling — quarterly reviews, re-validation triggers |
-|                                         | Plugin version management — when to update, who approves          |
+| Plugin Enforces (Technical)                | Governance Handles (Organisational)                               |
+| ------------------------------------------ | ----------------------------------------------------------------- |
+| `Inp_` naming convention                   | Who approves exceptions to conventions                            |
+| Layer isolation rules                      | Who validates a model before a board meeting                      |
+| Intent Note format                         | Coverage tracking — what % of models are compliant                |
+| LaTeX verification for complex formulas    | Session log retention — where stored, how long                    |
+| Delegated Calculation for all calculations | Named Range modification approval — who signs off                 |
+| Agent Decision Table workflows             | Model Registry — which models exist, who owns them                |
+|                                            | Sector prefixes — which prefix your team uses                     |
+|                                            | Validation scheduling — quarterly reviews, re-validation triggers |
+|                                            | Plugin version management — when to update, who approves          |
 
 The plugin is the enforcement layer. Governance is the accountability layer. Together they produce a finance function where every model is compliant by construction (plugin) and tracked by management (governance).
 
@@ -115,7 +115,7 @@ Every IDFA deployment beyond a single analyst requires four written documents. E
 
 ### 1. The IDFA Standards Document
 
-The plugin's SKILL.md already defines the base standard — `Inp_` prefixes, three-layer isolation, LaTeX verification for WACC/NPV/DCF/IRR, Intent Note format, and MCP dependency. Your Standards Document specifies everything the plugin does not cover:
+The plugin's SKILL.md already defines the base standard — `Inp_` prefixes, three-layer isolation, LaTeX verification for WACC/NPV/DCF/IRR, Intent Note format, and Delegated Calculation. Your Standards Document specifies everything the plugin does not cover:
 
 **Sector extensions.** Which domain prefix does your team use? If you are in investment banking, your Standards Document specifies `IB_` as the prefix. The plugin enforces `Inp_` for assumptions but does not know which sector prefix to apply. The Standards Document fills this gap.
 
@@ -163,7 +163,7 @@ Validation results are documented and attached to the model entry in the Registr
 
 ### 4. Finance Domain Agent Standards Policy
 
-The plugin enforces MCP dependency, guardrails, and the Agent Decision Table. The Policy governs what the plugin cannot:
+The plugin enforces Delegated Calculation, guardrails, and the Agent Decision Table. The Policy governs what the plugin cannot:
 
 **Named Range modification approval workflow.** The plugin allows agents to read Named Range values and write to Named Range inputs — this is normal What-If analysis. But modifying Named Range definitions — renaming a range, deleting a range, or changing which cell a range points to — changes the model's structural skeleton. The Policy specifies: who approves structural modifications (typically the Controller), how the approval is documented, and what happens if an unapproved modification is detected.
 
@@ -239,7 +239,7 @@ Open Claude in Cowork or Claude Code. Ensure the IDFA plugin is installed. In Cl
 ```
 Your team uses the IDFA plugin (panaversity/idfa-financial-architect).
 The plugin enforces naming conventions, layer isolation, LaTeX
-verification, Intent Notes, and MCP dependency. Draft a Standards
+verification, Intent Notes, and Delegated Calculation. Draft a Standards
 Document that covers what the plugin does NOT enforce:
 
 1. Sector prefix — we are in [YOUR DOMAIN]. Which prefix (IB_, PE_,

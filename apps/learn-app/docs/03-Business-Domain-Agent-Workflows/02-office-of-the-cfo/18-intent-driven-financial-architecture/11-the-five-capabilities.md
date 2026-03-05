@@ -14,14 +14,14 @@ keywords:
     "Goal-Seeking",
     "Stochastic Simulation",
     "Monte Carlo",
-    "MCP",
+    "delegated calculation",
     "GP Waterfall",
     "EBITDA",
     "Named Range",
     "capstone",
     "validation",
-    "write_cell",
-    "read_cell",
+    "IDFA plugin",
+    "delegated calculation",
     "production-ready",
   ]
 chapter: 18
@@ -36,12 +36,12 @@ skills:
     digcomp_area: "Problem Solving"
     measurable_at_this_level: "Student can execute all five Finance Domain Agent capability tests on an IDFA-compliant model, determine whether each test passes or fails, and explain why a failure indicates a deployment problem rather than a model problem"
 
-  - name: "MCP-Mediated Model Iteration"
+  - name: "Delegated Model Iteration"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Content Creation"
-    measurable_at_this_level: "Student can design and execute goal-seeking and Monte Carlo simulation workflows where every calculation passes through the Excel engine via MCP, collecting results across multiple iterations without internal agent arithmetic"
+    measurable_at_this_level: "Student can design and execute goal-seeking and Monte Carlo simulation workflows where every calculation passes through the spreadsheet engine, collecting results across multiple iterations without internal agent arithmetic"
 
   - name: "IDFA Model Extension"
     proficiency_level: "B1"
@@ -54,12 +54,12 @@ learning_objectives:
   - objective: "Execute the five Finance Domain Agent capability tests and evaluate whether each test produces a pass or fail result against the defined criteria"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student runs all five tests on the extended GP Waterfall; each test produces a documented pass/fail with evidence (MCP logs, read_cell confirmations, distribution statistics)"
+    assessment_method: "Student runs all five tests on the extended GP Waterfall; each test produces a documented pass/fail with evidence (model interaction logs, read confirmations, distribution statistics)"
 
-  - objective: "Design and run a goal-seeking iteration where the agent finds a required input value by writing and reading Named Ranges through MCP until a target output is reached"
+  - objective: "Design and run a goal-seeking iteration where the agent finds a required input value by writing and reading Named Ranges through the model until a target output is reached"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student prompts the agent to find Year 1 Revenue for a target Year 3 EBITDA; agent reaches the target through MCP iteration; final read_cell confirms the output equals the target"
+    assessment_method: "Student prompts the agent to find Year 1 Revenue for a target Year 3 EBITDA; agent reaches the target through iterative model interaction; the final read from the model confirms the output equals the target"
 
   - objective: "Extend the GP Waterfall model with Operating Expenses and EBITDA lines following IDFA layer isolation and naming conventions"
     proficiency_level: "B1"
@@ -71,16 +71,16 @@ cognitive_load:
   concepts_list:
     - "The five capability tests as a formal validation framework"
     - "Intent Synthesis — converting plain-English to full IDFA spec"
-    - "Deterministic What-If — write_cell/read_cell verification loop"
+    - "Deterministic What-If — write-calculate-read verification loop"
     - "Logic De-compilation — reconstructing business rules from formulas"
-    - "Strategic Goal-Seeking — iterative input search via MCP"
-    - "Stochastic Simulation — Monte Carlo via MCP iteration"
+    - "Strategic Goal-Seeking — iterative input search via model interaction"
+    - "Stochastic Simulation — Monte Carlo via iterative model interaction"
     - "OpEx and EBITDA extension of the GP Waterfall"
-  assessment: "7 concepts at B2 level. Students have built the full GP Waterfall, applied all four guardrails, installed the IDFA skill, and designed governance across Lessons 1-10. This capstone synthesises those skills into formal validation. The five capabilities are structurally parallel (same test pattern: prompt, execute via MCP, verify), reducing effective cognitive load despite the concept count."
+  assessment: "7 concepts at B2 level. Students have built the full GP Waterfall, applied all four guardrails, installed the IDFA skill, and designed governance across Lessons 1-10. This capstone synthesises those skills into formal validation. The five capabilities are structurally parallel (same test pattern: prompt, execute via the model, verify), reducing effective cognitive load despite the concept count."
 
 differentiation:
   extension_for_advanced: "Run Capability 5 with 500 scenarios instead of 100, adding a third variable (Inp_OpEx_Growth) to the probability distribution. Analyse whether OpEx growth uncertainty has a larger or smaller impact on EBITDA than revenue growth uncertainty. Present the results as a tornado chart showing sensitivity rankings."
-  remedial_for_struggling: "Focus on Capabilities 1 and 2 only. For Intent Synthesis, use the exact intent statement provided and verify the agent's output against the expected Named Ranges listed in the lesson. For Deterministic What-If, change one variable and confirm the agent reads back the result rather than calculating it. The remaining three capabilities follow the same MCP pattern."
+  remedial_for_struggling: "Focus on Capabilities 1 and 2 only. For Intent Synthesis, use the exact intent statement provided and verify the agent's output against the expected Named Ranges listed in the lesson. For Deterministic What-If, change one variable and confirm the agent reads back the result rather than calculating it. The remaining three capabilities follow the same delegated calculation pattern."
 ---
 
 # The Five Capabilities — Capstone
@@ -153,17 +153,17 @@ revenue minus acquisition cost. Project four quarters."
 - All inputs prefixed with `Inp_` (e.g., `Inp_Quarterly_Rev_Q1`, `Inp_QoQ_Growth`, `Inp_CAC_Pct`)
 - All calculations readable as plain-English business rules
 - Three-layer separation maintained (Assumptions, Calculations, Output)
-- Complete specification produced before any `write_cell()` call
+- Complete specification produced before writing anything to the model
 
 **What a passing response looks like:** The agent produces a document listing every Named Range with its layer, its formula or value, and the business rule it encodes. You can read the specification and understand the entire model without opening Excel.
 
 ## Capability 2 — Deterministic What-If
 
-**What it tests:** Does the agent use MCP for all calculation, or does it perform arithmetic internally?
+**What it tests:** Does the agent delegate all calculation to the spreadsheet engine, or does it perform arithmetic internally?
 
 **Test procedure:**
 
-Ask the agent a what-if question on your extended GP Waterfall. After it responds, ask it to verify by reading back each affected Named Range via `read_cell()`.
+Ask the agent a what-if question on your extended GP Waterfall. After it responds, ask it to verify by reading back each affected Named Range from the model.
 
 **Run this test:**
 
@@ -175,17 +175,17 @@ After the agent responds, follow up:
 
 ```
 "Verify your answer. Read back OpEx_Y2, OpEx_Y3, and EBITDA_Y3 from
-the model using read_cell(). Do the numbers match what you just reported?"
+the model. Do the numbers match what you just reported?"
 ```
 
 **Pass criteria:**
 
-- Agent uses `write_cell()` to set `Inp_OpEx_Growth = 0.10`
-- Agent uses `read_cell()` to retrieve each affected value
+- The agent writes `Inp_OpEx_Growth = 0.10` to the model
+- The agent reads each affected value back from the model
 - Reported answer and verified answer match exactly — not approximately
 - No instance of the agent reporting a number before reading it from the model
 
-**What failure looks like:** The agent says "Year 3 EBITDA would be approximately negative $1.73 million" before calling `read_cell()`. That "approximately" reveals internal arithmetic. The deterministic guarantee requires the number to come from Excel, not from the agent.
+**What failure looks like:** The agent says "Year 3 EBITDA would be approximately negative $1.73 million" before reading from the model. That "approximately" reveals internal arithmetic. The deterministic guarantee requires the number to come from the spreadsheet engine, not from the agent.
 
 ## Capability 3 — Logic De-compilation
 
@@ -193,7 +193,7 @@ the model using read_cell(). Do the numbers match what you just reported?"
 
 **Test procedure:**
 
-Hide the Assumptions sheet in your workbook (right-click the sheet tab, select "Hide"). The agent now has access only to the Calculations sheet via MCP.
+Hide the Assumptions sheet in your workbook (right-click the sheet tab, select "Hide"). The agent now has access only to the Calculations sheet via the IDFA plugin.
 
 ```
 "I've hidden the Assumptions sheet. Using only the Calculations sheet,
@@ -204,7 +204,7 @@ which values are inputs and which are calculations."
 
 **Pass criteria:**
 
-- Agent uses `inspect_model()` to read all formulas
+- Agent inspects the model to read all formulas
 - Agent correctly identifies inputs (values without formulas) versus calculations (values with formulas)
 - Fewer than 5% of identified business rules are incorrect or missing
 - Agent produces a structured Logic Map in Named Range notation
@@ -213,7 +213,7 @@ which values are inputs and which are calculations."
 
 ## Capability 4 — Strategic Goal-Seeking
 
-**What it tests:** Can the agent find a required input value by iterating through the model via MCP?
+**What it tests:** Can the agent find a required input value by iterating through the model?
 
 **Test procedure:**
 
@@ -221,22 +221,23 @@ Ask the agent to find the Year 1 Revenue needed for Year 3 EBITDA to equal exact
 
 ```
 "Find the Year 1 Revenue needed for Year 3 EBITDA to equal exactly
-$3,000,000. Use write_cell() and read_cell() only — do not calculate
-the answer internally. Show me each iteration."
+$3,000,000. Iterate through the model — write the assumption, read
+back the result, adjust, repeat. Do not calculate the answer
+internally. Show me each iteration."
 ```
 
 **Pass criteria:**
 
-- Agent iterates `write_cell(Inp_Rev_Y1, value)` followed by `read_cell(EBITDA_Y3)` multiple times
+- Agent iterates: writes Inp_Rev_Y1 to the model, reads back EBITDA_Y3, adjusts, repeats
 - Each iteration adjusts the input based on the previous result
-- Final `read_cell(EBITDA_Y3)` confirms the output equals $3,000,000 (within rounding tolerance)
-- Agent reports the required `Inp_Rev_Y1` value from the model, not from calculation
+- Final read from the model confirms the output equals $3,000,000 (within rounding tolerance)
+- Agent reports the required Inp_Rev_Y1 value from the model, not from calculation
 
-**What the iteration looks like:** The agent might start with `Inp_Rev_Y1 = 5,000,000`, read back EBITDA_Y3, find it too low, try `7,000,000`, find it too high, and converge through successive adjustments. The exact path depends on the agent's search strategy, but every number must come from `read_cell()`.
+**What the iteration looks like:** The agent might start with Inp_Rev_Y1 = $5,000,000, read back EBITDA_Y3, find it too low, try $7,000,000, find it too high, and converge through successive adjustments. The exact path depends on the agent's search strategy, but every number must come from reading the model.
 
 ## Capability 5 — Stochastic Simulation
 
-**What it tests:** Can the agent orchestrate Monte Carlo simulation across an IDFA model entirely through MCP?
+**What it tests:** Can the agent orchestrate Monte Carlo simulation across an IDFA model entirely through the spreadsheet engine?
 
 **Test procedure:**
 
@@ -245,17 +246,17 @@ Ask the agent to run scenarios with probability distributions for two assumption
 ```
 "Run 100 scenarios where Inp_Rev_Growth varies uniformly between 5%
 and 15% and Inp_COGS_Efficiency varies uniformly between 0.5% and 1.5%.
-For each scenario, write both values via MCP, let Excel recalculate,
-then read back EBITDA_Y3. After all 100 scenarios, report the mean,
-median, P10, and P90 of EBITDA_Y3."
+For each scenario, write both values to the model, let Excel
+recalculate, then read back EBITDA_Y3. After all 100 scenarios,
+report the mean, median, P10, and P90 of EBITDA_Y3."
 ```
 
 **Pass criteria:**
 
-- 100 MCP iterations completed (each with `write_cell` for both inputs, then `read_cell` for the output)
-- Results collected from `read_cell()` after each iteration
+- 100 iterations completed (each writing both inputs to the model, then reading back the output)
+- Results collected from the model after each iteration
 - Distribution statistics (mean, median, P10, P90) calculated from the collected results
-- No internal simulation — every EBITDA_Y3 value came from Excel via MCP
+- No internal simulation — every EBITDA_Y3 value came from the spreadsheet engine
 
 **Why 100 instead of 500:** Start with 100 scenarios to verify the workflow runs correctly. Once confirmed, scale to 500 for production-grade results. The mechanism is identical — only the iteration count changes.
 
@@ -271,15 +272,15 @@ Run all five capabilities in sequence on your extended GP Waterfall. Document ea
 
 **Step 1 — Intent Synthesis.** Use the SaaS quarterly revenue intent statement above. Verify the agent produces a complete IDFA specification before writing to Excel.
 
-**Step 2 — Deterministic What-If.** Change `Inp_OpEx_Growth` to 0.10. Verify the agent writes via MCP and reads back the result. Confirm reported and verified numbers match exactly.
+**Step 2 — Deterministic What-If.** Change `Inp_OpEx_Growth` to 0.10. Verify the agent writes to the model and reads back the result. Confirm reported and verified numbers match exactly.
 
 **Step 3 — Logic De-compilation.** Hide the Assumptions sheet. Ask the agent to reconstruct the full Logic Map from the Calculations sheet only. Unhide the Assumptions sheet and compare the agent's Logic Map against the actual model.
 
-**Step 4 — Strategic Goal-Seeking.** Find the `Inp_Rev_Y1` needed for `EBITDA_Y3 = $3,000,000`. Document the iteration path. Verify the final answer via `read_cell()`.
+**Step 4 — Strategic Goal-Seeking.** Find the `Inp_Rev_Y1` needed for `EBITDA_Y3 = $3,000,000`. Document the iteration path. Verify the final answer by reading from the model.
 
 **Step 5 — Stochastic Simulation.** Run 100 scenarios with the distributions specified above. Record the mean, median, P10, and P90 of Year 3 EBITDA.
 
-**Scoring:** Each capability is pass/fail. A production-ready IDFA deployment passes all five. If any capability fails, the failure traces to a specific architectural issue: missing Named Ranges (Capability 1), internal agent arithmetic (Capability 2), incomplete model inspection (Capability 3), unreliable MCP iteration (Capability 4), or insufficient iteration control (Capability 5).
+**Scoring:** Each capability is pass/fail. A production-ready IDFA deployment passes all five. If any capability fails, the failure traces to a specific architectural issue: missing Named Ranges (Capability 1), internal agent arithmetic (Capability 2), incomplete model inspection (Capability 3), unreliable model iteration (Capability 4), or insufficient iteration control (Capability 5).
 
 ## The Business Bottom Line
 
@@ -291,7 +292,7 @@ Pass all five and the deployment is production-ready. Fail any one and you have 
 
 :::tip Setup
 
-Open your extended GP Waterfall workbook (with OpEx and EBITDA) in Excel with Claude in Excel (or Cowork) active. The agent must have MCP access to read and write cells.
+Open your extended GP Waterfall workbook (with OpEx and EBITDA) in Cowork with the IDFA plugin installed. The agent must be able to read and write to the model.
 
 :::
 
@@ -315,24 +316,25 @@ structure: Assumptions, Calculations, Output.
 
 ```
 Find the Year 1 Revenue needed for Year 3 EBITDA to equal exactly
-$3,000,000. Use write_cell() and read_cell() only — do not calculate
-internally. Show me each iteration: what value you wrote to Inp_Rev_Y1,
+$3,000,000. Iterate through the model — write the assumption, read
+back the result, adjust, repeat. Do not calculate internally.
+Show me each iteration: what value you wrote to Inp_Rev_Y1,
 what you read back from EBITDA_Y3, and why you chose the next value.
 ```
 
-**What you are learning:** How to verify that an agent performs goal-seeking through model iteration rather than internal arithmetic. The deterministic guarantee of Guardrail 4 (MCP Dependency) means every number comes from Excel. If the agent skips `read_cell()` at any point, the guarantee is broken — and you now know how to detect that.
+**What you are learning:** How to verify that an agent performs goal-seeking through model iteration rather than internal arithmetic. The deterministic guarantee of Guardrail 4 (Delegated Calculation) means every number comes from the spreadsheet engine. If the agent skips reading from the model at any point, the guarantee is broken — and you now know how to detect that.
 
 **Prompt 3 — Monte Carlo setup:**
 
 ```
 Run 100 scenarios where Inp_Rev_Growth varies uniformly between 5% and
 15% and Inp_COGS_Efficiency varies between 0.5% and 1.5%. For each
-scenario, write both values via write_cell(), let Excel recalculate,
-then read EBITDA_Y3 via read_cell(). After all 100 scenarios, report
+scenario, write both values to the model, let Excel recalculate,
+then read back EBITDA_Y3. After all 100 scenarios, report
 mean, median, P10, and P90 for Year 3 EBITDA.
 ```
 
-**What you are learning:** How to orchestrate Monte Carlo simulation through MCP. The agent does not simulate internally — it runs each scenario through the actual Excel model. This means the simulation honours every formula, every dependency, and every guardrail in the model. The distribution statistics tell the CFO not just what EBITDA might be, but how confident the team should be in that estimate.
+**What you are learning:** How to orchestrate Monte Carlo simulation through the model. The agent does not simulate internally — it runs each scenario through the actual Excel model. This means the simulation honours every formula, every dependency, and every guardrail in the model. The distribution statistics tell the CFO not just what EBITDA might be, but how confident the team should be in that estimate.
 
 ## Flashcards Study Aid
 

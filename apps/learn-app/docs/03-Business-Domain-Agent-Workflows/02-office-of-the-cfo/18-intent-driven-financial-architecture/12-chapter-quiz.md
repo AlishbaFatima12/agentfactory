@@ -52,7 +52,7 @@ question: "A finance team is debating whether to convert their models to IDFA. A
 options: [
 "Named Ranges change what the agent CAN DO with the model — enabling Intent Synthesis, Deterministic What-If, Logic De-compilation, Goal-Seeking, and Stochastic Simulation — capabilities that are impossible with coordinate-based formulas",
 "Named Ranges make the spreadsheet look more professional for client presentations",
-"Named Ranges are required by Excel for the MCP Server to function",
+"Named Ranges are required for the agent to interact with the model programmatically",
 "Named Ranges make formulas run faster in large models"
 ],
 correctOption: 0,
@@ -68,7 +68,7 @@ options: [
 "There is no violation — any formula can appear in any layer as long as it uses Named Ranges"
 ],
 correctOption: 0,
-explanation: "Lesson 3 establishes the three-layer isolation rule. Layer 1 (Assumptions) contains only user-modifiable inputs — raw numbers, no formulas. Layer 2 (Calculations) contains all formulas using Named Ranges only. Layer 3 (Output) reads from Layer 2 for display. The formula =Revenue_Y1 * COGS_Pct_Y1 is a calculation and belongs in Layer 2.",
+explanation: "Lesson 3 establishes the three-layer isolation rule. Layer 1 (Assumptions) contains only user-modifiable inputs — raw numbers, no formulas. Layer 2 (Calculations) contains all formulas using Named Ranges only. Layer 3 (Output) reads from Layer 2 for display. The formula =Revenue_Y1 * COGS*Pct_Y1 is a calculation and belongs in Layer 2.",
 source: "Lesson 3: The Three Layers"
 },
 {
@@ -84,7 +84,7 @@ explanation: "Lesson 3 specifies the IDFA naming conventions: input assumptions 
 source: "Lesson 3: The Three Layers"
 },
 {
-question: "A financial model's Calculation layer contains this formula: =Revenue*Y1 _ 0.60. Does this pass IDFA compliance?",
+question: "A financial model's Calculation layer contains this formula: =Revenue*Y1 * 0.60. Does this pass IDFA compliance?",
 options: [
 "No — the hardcoded 0.60 violates layer isolation. It must be moved to the Assumptions layer as a Named Range (e.g., Inp_COGS_Pct_Y1) and the formula rewritten as =Revenue_Y1 _ Inp_COGS_Pct_Y1",
 "Yes — the formula uses a Named Range (Revenue_Y1) so it is IDFA-compliant",
@@ -92,7 +92,7 @@ options: [
 "Yes — constants are allowed in the Calculation layer as long as they are clearly documented"
 ],
 correctOption: 0,
-explanation: "Lesson 4 (Guardrail 1: Named Range Priority) requires that no formula in the Calculation layer references hardcoded values. The value 0.60 is an assumption and must live in Layer 1 as a Named Range (Inp_COGS_Pct_Y1). Every value that could change must be a named input. This ensures the model can be modified by changing assumptions, not by editing formulas.",
+explanation: "Lesson 4 (Guardrail 1: Named Range Priority) requires that no formula in the Calculation layer references hardcoded values. The value 0.60 is an assumption and must live in Layer 1 as a Named Range (Inp*COGS_Pct_Y1). Every value that could change must be a named input. This ensures the model can be modified by changing assumptions, not by editing formulas.",
 source: "Lesson 4: Named Range Priority"
 },
 {
@@ -104,7 +104,7 @@ options: [
 "If the formula has fewer than 5 cell references, it passes"
 ],
 correctOption: 0,
-explanation: "Lesson 4 defines the compliance test: readability without navigation. A formula like =Revenue_Y2 - (Revenue_Y2 _ COGS_Pct_Y2) passes because you can read its business meaning directly. A formula like =B14-(B14_$C$3) fails because you must click on B14 and C3 to understand what they represent.",
+explanation: "Lesson 4 defines the compliance test: readability without navigation. A formula like =Revenue_Y2 - (Revenue_Y2 * COGS*Pct_Y2) passes because you can read its business meaning directly. A formula like =B14-(B14*$C$3) fails because you must click on B14 and C3 to understand what they represent.",
 source: "Lesson 4: Named Range Priority"
 },
 {
@@ -170,38 +170,38 @@ source: "Lesson 6: Intent Notes"
 {
 question: "A financial analyst asks Claude: 'What is Year 3 Gross Profit if I change Year 1 Revenue to $12M?' Claude responds: 'Year 3 Gross Profit would be approximately $6,098,400.' According to IDFA's Guardrail 4, what is wrong with this response?",
 options: [
-"The agent calculated the answer internally instead of using write_cell() to set the assumption and read_cell() to retrieve the model's deterministic output — 'approximately' indicates estimation, not model calculation",
+"The agent calculated the answer internally instead of writing the assumption to the model and reading back the model's deterministic output — 'approximately' indicates estimation, not model calculation",
 "The agent should have asked permission before changing any assumptions",
 "The answer is mathematically incorrect",
 "The agent should have shown the full calculation steps"
 ],
 correctOption: 0,
-explanation: "Lesson 7 (Guardrail 4: MCP Dependency) prohibits agents from performing calculations internally. The word 'approximately' is the tell — it means the agent estimated rather than reading from the model. The correct workflow: write_cell('Inp_Rev_Y1', 12000000) → Excel calculates → read_cell('Gross_Profit_Y3') → report the exact deterministic result. Internal calculation and model calculation can produce different results; only the model result is audit-valid.",
-source: "Lesson 7: MCP Dependency"
+explanation: "Lesson 7 (Guardrail 4: Delegated Calculation) prohibits agents from performing calculations internally. The word 'approximately' is the tell — it means the agent estimated rather than reading from the model. The correct workflow: write the assumption to the model → spreadsheet engine calculates → read back the result → report the exact deterministic output. Internal calculation and model calculation can produce different results; only the model result is audit-valid.",
+source: "Lesson 7: Delegated Calculation"
 },
 {
-question: "The Excel MCP Server has four core tools. Which tool would you use to get a complete picture of all Named Ranges, their current values, and how they depend on each other?",
+question: "When the IDFA plugin is active, the agent can perform several operations on the model. Which operation would you use to get a complete picture of all Named Ranges, their current values, and how they depend on each other?",
 options: [
-"inspect_model() — it lists all Named Ranges, values, and dependencies, providing a complete map of the model's structure",
-"read_cell() called on every Named Range one at a time",
-"read_formula() called on every Named Range one at a time",
-"write_cell() with a special diagnostic flag"
+"Inspect the model — it lists all Named Ranges, values, and dependencies, providing a complete map of the model's structure",
+"Read every Named Range value one at a time",
+"Read every Named Range formula one at a time",
+"Write a special diagnostic value to a Named Range"
 ],
 correctOption: 0,
-explanation: "Lesson 7 introduces the four Excel MCP Server tools: write_cell(name, value), read_cell(name), inspect_model(), and read_formula(name). The inspect_model() tool produces a comprehensive view of the entire model — all Named Ranges, their current values, and the dependency map showing which ranges feed into which others. This is the starting point for auditing, retrofitting, and Logic De-compilation.",
-source: "Lesson 7: MCP Dependency"
+explanation: "Lesson 7 introduces the operations the IDFA plugin enables: writing assumption values, reading results, inspecting the model, and reading formulas. The model inspection produces a comprehensive view of the entire model — all Named Ranges, their current values, and the dependency map showing which ranges feed into which others. This is the starting point for auditing, retrofitting, and Logic De-compilation.",
+source: "Lesson 7: Delegated Calculation"
 },
 {
-question: "During goal-seeking, the agent needs to find the Year 1 Revenue required for Year 3 EBITDA to equal exactly $3M. What is the correct MCP workflow?",
+question: "During goal-seeking, the agent needs to find the Year 1 Revenue required for Year 3 EBITDA to equal exactly $3M. What is the correct delegated calculation workflow?",
 options: [
-"Iterate write_cell('Inp_Rev_Y1', value) → read_cell('EBITDA_Y3') repeatedly, adjusting the input value each iteration until EBITDA_Y3 equals $3M, then report the final Inp_Rev_Y1 value from the model",
+"Iterate: write Inp_Rev_Y1 to the model → read back EBITDA_Y3 → adjust → repeat until EBITDA_Y3 equals $3M, then report the final Inp_Rev_Y1 value from the model",
 "Calculate the required revenue algebraically using the model's formulas, then write the result",
 "Use Excel's built-in Goal Seek function directly",
 "Read all formulas, build an equation, solve it, and report the answer"
 ],
 correctOption: 0,
-explanation: "Lesson 7 defines goal-seeking as iterative MCP execution: the agent writes a trial value for the input assumption, reads back the output, checks if it matches the target, and adjusts. The agent must never solve the equation internally — iteration through the model ensures the result accounts for all dependencies, rounding, and non-linear relationships that algebraic solving might miss.",
-source: "Lesson 7: MCP Dependency"
+explanation: "Lesson 7 defines goal-seeking as iterative model interaction: the agent writes a trial value for the input assumption, reads back the output, checks if it matches the target, and adjusts. The agent must never solve the equation internally — iteration through the model ensures the result accounts for all dependencies, rounding, and non-linear relationships that algebraic solving might miss.",
+source: "Lesson 7: Delegated Calculation"
 },
 {
 question: "When retrofitting an existing coordinate-based model to IDFA compliance, what is the critical principle that governs the entire process?",
@@ -224,7 +224,7 @@ options: [
 "Full Inspection → Formula Rewriting → Input Identification → Validation → Dependency Ordering"
 ],
 correctOption: 0,
-explanation: "Lesson 8 defines the five phases in strict order. Full Inspection (inspect_model()) comes first to understand the model. Input Identification distinguishes inputs from calculations. Dependency Ordering establishes the rewrite sequence — you must rewrite dependencies before dependents. Formula Rewriting converts each formula to Named Range form with LaTeX verification and Intent Notes. Validation confirms outputs match pre-retrofit values.",
+explanation: "Lesson 8 defines the five phases in strict order. Full Inspection (ask Claude to inspect the model) comes first to understand the model. Input Identification distinguishes inputs from calculations. Dependency Ordering establishes the rewrite sequence — you must rewrite dependencies before dependents. Formula Rewriting converts each formula to Named Range form with LaTeX verification and Intent Notes. Validation confirms outputs match pre-retrofit values.",
 source: "Lesson 8: Retrofitting Existing Models"
 },
 {
@@ -278,25 +278,25 @@ source: "Lesson 9: The IDFA Skill"
 {
 question: "A user says to Claude (with IDFA skill installed): 'What if revenue growth drops to 5%?' According to the Agent Decision Table, what sequence of actions should the agent follow?",
 options: [
-"write_cell() to set the new assumption → read_cell() to retrieve affected outputs → report the deterministic results without any internal calculation",
+"Write the new assumption to the model → read back affected outputs from the model → report the deterministic results without any internal calculation",
 "Calculate the impact mentally and report the estimate immediately",
 "Ask the user to change the cell manually and then read the results",
 "Run a Monte Carlo simulation with 500 iterations"
 ],
 correctOption: 0,
-explanation: "Lesson 9's Agent Decision Table maps 'What if [assumption] changes?' to the MCP workflow: write_cell() for the assumption change, read_cell() for each affected output, and report results without internal calculation. This is Guardrail 4 (MCP Dependency) in action — the agent reasons about what to change, but Excel performs all arithmetic.",
+explanation: "Lesson 9's Agent Decision Table maps 'What if [assumption] changes?' to the delegated calculation workflow: write the assumption to the model, read back each affected output, and report results without internal calculation. This is Guardrail 4 (Delegated Calculation) in action — the agent reasons about what to change, but the spreadsheet engine performs all arithmetic.",
 source: "Lesson 9: The IDFA Skill"
 },
 {
 question: "Enterprise governance requires four artefacts. Which artefact governs how AI agents interact with IDFA-compliant models?",
 options: [
-"The Finance Domain Agent Standards Policy — it mandates MCP Dependency for all agent interactions, requires Controller sign-off for Named Range modifications, and sets 90-day minimum retention for agent session logs",
+"The Finance Domain Agent Standards Policy — it mandates Delegated Calculation for all agent interactions, requires Controller sign-off for Named Range modifications, and sets 90-day minimum retention for agent session logs",
 "The IDFA Standards Document — it specifies naming conventions and layer rules",
 "The Model Registry — it tracks all IDFA-compliant models in the organisation",
 "The Validation Protocol — it defines the tests a model must pass before board-level use"
 ],
 correctOption: 0,
-explanation: "Lesson 10 defines four governance artefacts. The Finance Domain Agent Standards Policy specifically governs AI agent behaviour: MCP Dependency is mandatory, agents cannot modify Named Range definitions without Controller sign-off, all agent-generated formulas require LaTeX verification and Intent Notes before production, and session logs are retained for 90 days minimum.",
+explanation: "Lesson 10 defines four governance artefacts. The Finance Domain Agent Standards Policy specifically governs AI agent behaviour: Delegated Calculation is mandatory, agents cannot modify Named Range definitions without Controller sign-off, all agent-generated formulas require LaTeX verification and Intent Notes before production, and session logs are retained for 90 days minimum.",
 source: "Lesson 10: Enterprise Governance"
 },
 {
@@ -350,13 +350,13 @@ source: "Lesson 11: The Five Capabilities"
 {
 question: "Capability 2 (Deterministic What-If) has a specific pass criterion that distinguishes it from ordinary what-if analysis. What is it?",
 options: [
-"The agent must use write_cell() → read_cell() for every result — no instance of the agent reporting a number before reading it from the model via MCP",
+"The agent must delegate every calculation to the model — no instance of the agent reporting a number before reading it from the model",
 "The what-if results must be within 1% of the original values",
-"The agent must complete the analysis in a single MCP call",
+"The agent must complete the analysis in a single interaction",
 "The agent must show the mathematical derivation of each changed value"
 ],
 correctOption: 0,
-explanation: "Lesson 11 defines the Deterministic What-If pass criterion: the agent uses write_cell()/read_cell() sequence for every result, with no instance of reporting a number before reading it from the model. The test is designed to catch agents that perform internal arithmetic — the reported answer and the MCP-verified answer must match exactly, not approximately.",
+explanation: "Lesson 11 defines the Deterministic What-If pass criterion: the agent delegates every calculation to the model — writing assumptions, letting the spreadsheet engine recalculate, and reading back results — with no instance of reporting a number before reading it from the model. The test is designed to catch agents that perform internal arithmetic — the reported answer and the model-verified answer must match exactly, not approximately.",
 source: "Lesson 11: The Five Capabilities"
 },
 {
@@ -372,7 +372,7 @@ explanation: "Lesson 11 sets the Logic De-compilation pass criterion at fewer th
 source: "Lesson 11: The Five Capabilities"
 },
 {
-question: "Capability 4 (Strategic Goal-Seeking) requires finding a specific input value to achieve a target output. Why must the agent iterate via MCP rather than solve algebraically?",
+question: "Capability 4 (Strategic Goal-Seeking) requires finding a specific input value to achieve a target output. Why must the agent iterate through the model rather than solve algebraically?",
 options: [
 "Because iteration through the model accounts for all dependencies, rounding, and non-linear relationships that algebraic solving might miss — and the final value comes from the model, not from the agent's calculation",
 "Because Excel does not support algebraic solving",
@@ -380,19 +380,19 @@ options: [
 "Because regulatory requirements mandate iterative methods"
 ],
 correctOption: 0,
-explanation: "Lesson 11 explains that MCP iteration ensures the result accounts for the full model behaviour — non-linear relationships, rounding, and complex dependencies that algebraic solving would need to enumerate perfectly. More importantly, the final read_cell() confirms the output equals the target, providing model-verified proof rather than agent-calculated estimation.",
+explanation: "Lesson 11 explains that iterating through the model ensures the result accounts for the full model behaviour — non-linear relationships, rounding, and complex dependencies that algebraic solving would need to enumerate perfectly. More importantly, the final read from the model confirms the output equals the target, providing model-verified proof rather than agent-calculated estimation.",
 source: "Lesson 11: The Five Capabilities"
 },
 {
-question: "Capability 5 (Stochastic Simulation) requires 500 Monte Carlo iterations. Why must each iteration go through MCP rather than being simulated internally by the agent?",
+question: "Capability 5 (Stochastic Simulation) requires 500 Monte Carlo iterations. Why must each iteration go through the model rather than being simulated internally by the agent?",
 options: [
-"Because each iteration must use write_cell() to set random assumptions and read_cell() to collect the deterministic model output — internal simulation would bypass the model's actual calculation logic and produce results that are not audit-valid",
+"Because each iteration must write random assumptions to the model and read back the deterministic model output — internal simulation would bypass the model's actual calculation logic and produce results that are not audit-valid",
 "Because 500 internal calculations would exceed the agent's processing capacity",
-"Because MCP iterations are faster than internal calculations",
+"Because model iterations are faster than internal calculations",
 "Because Excel has built-in Monte Carlo support that the agent must use"
 ],
 correctOption: 0,
-explanation: "Lesson 11 explains that Stochastic Simulation must go through MCP for the same reason all IDFA calculations do: the model is the source of mathematical truth, not the agent. Each of the 500 iterations writes random assumption values via write_cell(), lets Excel calculate deterministically, and reads back via read_cell(). The distribution statistics (mean, median, P10, P90) are calculated from collected model results, not from internal simulation.",
+explanation: "Lesson 11 explains that Stochastic Simulation must go through the model for the same reason all IDFA calculations do: the model is the source of mathematical truth, not the agent. Each of the 500 iterations writes random assumption values to the model, lets Excel calculate deterministically, and reads back the result. The distribution statistics (mean, median, P10, P90) are calculated from collected model results, not from internal simulation.",
 source: "Lesson 11: The Five Capabilities"
 },
 {
@@ -482,25 +482,25 @@ source: "Chapter 18 Overview and Lesson 1"
 {
 question: "A team has been using IDFA for six months. They want to validate their deployment. Which of the five capabilities should they test FIRST to establish baseline compliance?",
 options: [
-"Capability 2 (Deterministic What-If) — because it tests the most fundamental IDFA requirement: that the agent uses MCP for all calculations rather than performing arithmetic internally",
+"Capability 2 (Deterministic What-If) — because it tests the most fundamental IDFA requirement: that the agent delegates all calculations to the model rather than performing arithmetic internally",
 "Capability 5 (Stochastic Simulation) — because it is the most complex test",
 "Capability 1 (Intent Synthesis) — because it is listed first",
 "Capability 3 (Logic De-compilation) — because it tests understanding of existing models"
 ],
 correctOption: 0,
-explanation: "Deterministic What-If tests the core IDFA contract: agent reasoning + model calculation. If this fails (agent performs internal arithmetic), all other capabilities are unreliable because results are not model-verified. Intent Synthesis tests specification quality, Logic De-compilation tests comprehension, Goal-Seeking tests iteration, and Stochastic Simulation tests scale — but all depend on the agent correctly using MCP rather than calculating internally.",
+explanation: "Deterministic What-If tests the core IDFA contract: agent reasoning + model calculation. If this fails (agent performs internal arithmetic), all other capabilities are unreliable because results are not model-verified. Intent Synthesis tests specification quality, Logic De-compilation tests comprehension, Goal-Seeking tests iteration, and Stochastic Simulation tests scale — but all depend on the agent correctly delegating calculation to the model rather than calculating internally.",
 source: "Lesson 11: The Five Capabilities"
 },
 {
 question: "An analyst runs a What-If test (Capability 2). The agent reports Year 3 Gross Profit as $5,082,000. The analyst then asks the agent to verify by reading the cell directly. The agent reads back $5,082,000. Does this pass the Deterministic What-If test?",
 options: [
-"Only if the agent used write_cell() → read_cell() for the original answer too — if the agent calculated $5,082,000 internally and it happened to match, the methodology still failed even though the number is correct",
+"Only if the agent delegated the original calculation to the model too — if the agent calculated $5,082,000 internally and it happened to match, the methodology still failed even though the number is correct",
 "Yes — the numbers match, so the test passes regardless of method",
 "No — the numbers should never match exactly due to rounding",
 "It depends on whether the model uses circular references"
 ],
 correctOption: 0,
-explanation: "Lesson 11 emphasises that Capability 2 tests the METHOD, not just the RESULT. An agent that calculates internally and happens to get the right answer has still violated Guardrail 4. The pass criterion requires that 'no instance of the agent reporting a number before reading it from the model' — the workflow must be write_cell() → read_cell() → report. Correct results from incorrect methods are not IDFA-compliant.",
+explanation: "Lesson 11 emphasises that Capability 2 tests the METHOD, not just the RESULT. An agent that calculates internally and happens to get the right answer has still violated Guardrail 4. The pass criterion requires that 'no instance of the agent reporting a number before reading it from the model' — the workflow must be: write the assumption → let the model recalculate → read back the result → report. Correct results from incorrect methods are not IDFA-compliant.",
 source: "Lesson 11: The Five Capabilities"
 },
 {

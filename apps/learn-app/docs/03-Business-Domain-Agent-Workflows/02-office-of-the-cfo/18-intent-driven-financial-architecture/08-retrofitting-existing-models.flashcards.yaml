@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch18-08-retrofitting-existing-models-001"
     front: "What are the five phases of the IDFA retrofit process?"
-    back: "Phase 1: Full Inspection (inspect_model())\nPhase 2: Input Identification\nPhase 3: Dependency Ordering\nPhase 4: Formula Rewriting\nPhase 5: Validation"
+    back: "Phase 1: Full Inspection (ask Claude to inspect the model)\nPhase 2: Input Identification\nPhase 3: Dependency Ordering\nPhase 4: Formula Rewriting\nPhase 5: Validation"
     tags: ["five-phases", "retrofit"]
     difficulty: "basic"
 
@@ -33,7 +33,7 @@ cards:
 
   - id: "ch18-08-retrofitting-existing-models-005"
     front: "What are the seven steps for rewriting a single formula in Phase 4?"
-    back: "1. Read original via read_formula()\n2. State business rule in plain English\n3. Write IDFA equivalent using Named Ranges\n4. LaTeX-verify if complex\n5. Confirm output matches original\n6. Write to model\n7. Attach Intent Note"
+    back: "1. Read the original formula\n2. State business rule in plain English\n3. Write IDFA equivalent using Named Ranges\n4. LaTeX-verify if complex\n5. Confirm output matches original\n6. Apply the Named Range formula to the model\n7. Attach Intent Note"
     tags: ["formula-rewriting", "phase-4", "seven-steps"]
     difficulty: "intermediate"
 
@@ -51,8 +51,8 @@ cards:
     difficulty: "intermediate"
 
   - id: "ch18-08-retrofitting-existing-models-008"
-    front: "What does inspect_model() produce in Phase 1?"
-    back: "1. Existing Named Ranges (usually zero in legacy models)\n2. All formulas with cell locations\n3. All hardcoded values\n4. A dependency map"
+    front: "What does model inspection produce in Phase 1?"
+    back: "1. Existing Named Ranges (usually zero in legacy models)\n2. All formulas with cell locations\n3. All hardcoded values\n4. A dependency map showing which cells reference which others"
     tags: ["inspect-model", "phase-1"]
     difficulty: "intermediate"
 

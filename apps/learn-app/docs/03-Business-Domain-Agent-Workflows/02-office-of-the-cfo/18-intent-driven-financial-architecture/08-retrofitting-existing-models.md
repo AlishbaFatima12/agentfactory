@@ -14,7 +14,7 @@ keywords:
     "dependency ordering",
     "model validation",
     "Intent-Driven Financial Architecture",
-    "inspect_model",
+    "IDFA plugin",
   ]
 chapter: 18
 lesson: 8
@@ -34,7 +34,7 @@ skills:
     category: "Technical"
     bloom_level: "Analyze"
     digcomp_area: "Information Literacy"
-    measurable_at_this_level: "Student can use inspect_model() output to build a dependency graph, identify which calculations depend on which inputs, and determine the correct rewriting order that prevents broken references during conversion"
+    measurable_at_this_level: "Student can use the agent's model inspection output to build a dependency graph, identify which calculations depend on which inputs, and determine the correct rewriting order that prevents broken references during conversion"
 
   - name: "Validate Retrofitted Model Integrity"
     proficiency_level: "B1"
@@ -52,7 +52,7 @@ learning_objectives:
   - objective: "Analyse formula dependencies to determine the correct rewriting order, ensuring no dependent formula is rewritten before its dependencies"
     proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Student produces a dependency map from inspect_model() output and explains why a specific rewriting sequence is correct while an alternative sequence would produce errors"
+    assessment_method: "Student produces a dependency map from the agent's model inspection output and explains why a specific rewriting sequence is correct while an alternative sequence would produce errors"
 
   - objective: "Distinguish between original model errors surfaced by a retrofit and inference errors introduced during conversion, and apply the correct response to each"
     proficiency_level: "B1"
@@ -97,7 +97,7 @@ teaching_guide:
     - "The 40-minute business claim is realistic for a model with 20-30 formulas once students have practiced the workflow"
   assessment_checks:
     - question: "What are the five phases of the IDFA retrofit process?"
-      expected_response: "Phase 1: Full Inspection via inspect_model(). Phase 2: Input Identification — distinguish raw values from formula cells and propose Inp_ Named Ranges. Phase 3: Dependency Ordering — determine which calculations depend on which inputs and establish rewriting order. Phase 4: Formula Rewriting — rewrite each formula one at a time in dependency order, using Named Ranges, with validation after each. Phase 5: Validation — run on original inputs and confirm every output matches pre-retrofit values."
+      expected_response: "Phase 1: Full Inspection — ask Claude to inspect the model and list all formulas, inputs, and dependencies. Phase 2: Input Identification — distinguish raw values from formula cells and propose Inp_ Named Ranges. Phase 3: Dependency Ordering — determine which calculations depend on which inputs and establish rewriting order. Phase 4: Formula Rewriting — rewrite each formula one at a time in dependency order, using Named Ranges, with validation after each. Phase 5: Validation — run on original inputs and confirm every output matches pre-retrofit values."
     - question: "Why must you never change business logic during a retrofit?"
       expected_response: "The objective of a retrofit is transparency — making existing logic readable by replacing coordinates with Named Ranges. If you change the logic at the same time, you cannot validate that the retrofit preserved the original model's behavior. Any output difference could be the intended improvement or an accidental error, and you cannot tell which. Improvements happen after the logic is readable and validated."
     - question: "What does it mean when a validation discrepancy appears after a retrofit?"
@@ -106,7 +106,7 @@ teaching_guide:
 
 # Retrofitting Existing Models
 
-In Lessons 4 through 7, you learned to build IDFA-compliant models from scratch — every formula using Named Ranges, every complex calculation verified in LaTeX, every AI-generated formula carrying an Intent Note, every result flowing through MCP. Building from scratch is the ideal. But most financial professionals do not have the luxury of starting with a blank sheet.
+In Lessons 4 through 7, you learned to build IDFA-compliant models from scratch — every formula using Named Ranges, every complex calculation verified in LaTeX, every AI-generated formula carrying an Intent Note, every result flowing through delegated calculation. Building from scratch is the ideal. But most financial professionals do not have the luxury of starting with a blank sheet.
 
 You inherited a model. It is 47 tabs, 2,000 formulas, and zero documentation. The person who built it left two years ago. Your manager needs modifications by Friday. This is the reality for most finance teams — and the reason "I inherited this model" is one of the most dreaded sentences in corporate finance. The model works. Probably. But nobody can explain why it works, which formulas encode which business rules, or whether the assumptions are still current. Every modification is a gamble.
 
@@ -118,24 +118,20 @@ The retrofit is a conversion, not a rebuild. The distinction matters. Rebuilding
 
 ### Phase 1 — Full Inspection
 
-Before touching any formula, you need a complete inventory. Use `inspect_model()` to produce the full picture.
+Before touching any formula, you need a complete inventory. Ask Claude to inspect the model and list all formulas, inputs, and dependencies.
 
-```
-inspect_model()
-```
-
-**Output:**
-
-```
-Named Ranges: 0 defined
-Formulas: 47 cells containing formulas
-Hardcoded Values: 12 cells containing raw numbers
-Dependencies:
-  B14 → references B4, C14, F8, D3
-  B15 → references B14, C15
-  B16 → references B15, D16, F8
-  ...
-```
+> **You:** Inspect this model — list all Named Ranges, all formulas with their cell locations, all hardcoded values, and the dependency map showing which cells reference which others.
+>
+> **Claude:** Here is the full inspection:
+>
+> Named Ranges: 0 defined
+> Formulas: 47 cells containing formulas
+> Hardcoded Values: 12 cells containing raw numbers
+> Dependencies:
+> &nbsp;&nbsp;B14 → references B4, C14, F8, D3
+> &nbsp;&nbsp;B15 → references B14, C15
+> &nbsp;&nbsp;B16 → references B15, D16, F8
+> &nbsp;&nbsp;...
 
 This output tells you three things: how many Named Ranges already exist (usually zero in legacy models), which cells contain formulas versus raw values, and which cells depend on which others. All three are required for the next phases.
 
@@ -179,12 +175,12 @@ Rewrite Level 0 first (assign input Named Ranges), then Level 1, then Level 2, a
 
 This is the core of the retrofit. For each formula, in dependency order, follow these seven steps:
 
-1. **Read the original** via `read_formula()`
+1. **Read the original formula** from the model
 2. **State the business rule** in plain English
 3. **Write the IDFA equivalent** using Named Ranges
 4. **LaTeX-verify** if the formula involves WACC, IRR, NPV, DCF, or any multi-step calculation
 5. **Confirm the output matches** the original value
-6. **Write to the model** via `write_cell()`
+6. **Apply the Named Range formula** to the model
 7. **Attach an Intent Note**
 
 Here is what this looks like for a single formula.
@@ -195,12 +191,9 @@ Here is what this looks like for a single formula.
 Cell B14: =B4-(B4*C14)
 ```
 
-**Step 1 — Read:**
+**Step 1 — Read the original formula:**
 
-```
-read_formula("B14")
-→ "=B4-(B4*C14)"
-```
+Claude reads the formula in cell B14 from the model: `=B4-(B4*C14)`
 
 **Step 2 — State the business rule:**
 
@@ -214,14 +207,11 @@ Gross_Profit_Y1 = Revenue_Y1 - (Revenue_Y1 * COGS_Pct_Y1)
 
 **Step 4 — LaTeX-verify:** This formula is a simple subtraction and multiplication. LaTeX verification is not required for formulas at this complexity level — reserve it for WACC, NPV, IRR, DCF, and other multi-step calculations.
 
-**Step 5 — Confirm output matches:**
+**Step 5 — Confirm the output matches:**
 
-```
-read_cell("Gross_Profit_Y1") → $4,000,000
-Original B14 value:          → $4,000,000  ✓
-```
+Claude reads Gross_Profit_Y1 from the model: $4,000,000. Original B14 value: $4,000,000 ✓
 
-**Step 6 — Write to model.** The Named Range formula replaces the coordinate formula.
+**Step 6 — Apply the Named Range formula.** The Named Range formula replaces the coordinate formula in the model.
 
 **Step 7 — Attach Intent Note:**
 
@@ -265,96 +255,62 @@ The distinction matters. Original model errors are discoveries. Inference errors
 
 ## Cowork: Retrofitting a Revenue Model
 
-Here is what the five-phase process looks like when you and Claude work through it together on a small model. The model has five formulas calculating Revenue and Gross Profit for three years.
+Here is what the five-phase process looks like when you and Claude work through it together in Cowork on a small model. The model has five formulas calculating Revenue and Gross Profit for three years.
 
-**Your request:**
+> **You:** I have a coordinate-based revenue model. Inspect this spreadsheet — list all formulas, all hardcoded values, and all dependencies. Then walk me through converting it to IDFA compliance. Do not change any business logic — just make the formulas readable.
+>
+> **Claude:** I'll inspect the model first.
+>
+> **Inspection results:**
+>
+> Hardcoded values (inputs):
+>
+> - B4: 10,000,000 (header: "Y1 Revenue")
+> - C5: 0.60 (header: "COGS %")
+> - C6: 0.10 (header: "Growth Rate")
+>
+> Formulas:
+>
+> - B5: =B4\*C5 (Y1 COGS)
+> - B6: =B4-B5 (Y1 Gross Profit)
+> - C4: =B4\*(1+C6) (Y2 Revenue)
+> - C7: =C4-(C4\*C5) (Y2 Gross Profit)
+> - D4: =C4\*(1+C6) (Y3 Revenue)
+>
+> I recommend these input Named Ranges:
+>
+> - B4 → Inp_Rev_Y1 ($10,000,000 — Year 1 base revenue)
+> - C5 → Inp_COGS_Pct (0.60 — COGS as percentage of revenue)
+> - C6 → Inp_Rev_Growth (0.10 — annual revenue growth rate)
+>
+> Do these interpretations look correct? I am inferring the meaning from the column headers but want your confirmation before proceeding.
 
-```
-I have a coordinate-based revenue model. Use inspect_model() to show
-me what is in it, then walk me through converting it to IDFA compliance.
-Do not change any business logic — just make the formulas readable.
-```
-
-**Claude's inspection:**
-
-```
-inspect_model() results:
-
-Hardcoded values (inputs):
-  B4: 10,000,000    (header: "Y1 Revenue")
-  C5: 0.60          (header: "COGS %")
-  C6: 0.10          (header: "Growth Rate")
-
-Formulas:
-  B5: =B4*C5                          (Y1 COGS)
-  B6: =B4-B5                          (Y1 Gross Profit)
-  C4: =B4*(1+C6)                      (Y2 Revenue)
-  C7: =C4-(C4*C5)                     (Y2 Gross Profit)
-  D4: =C4*(1+C6)                      (Y3 Revenue)
-
-Dependencies:
-  B5 → B4, C5
-  B6 → B4, B5
-  C4 → B4, C6
-  C7 → C4, C5
-  D4 → C4, C6
-```
-
-**Claude's proposed Named Ranges:**
-
-```
-I recommend these input Named Ranges:
-
-  B4 → Inp_Rev_Y1          ($10,000,000 — Year 1 base revenue)
-  C5 → Inp_COGS_Pct        (0.60 — COGS as percentage of revenue)
-  C6 → Inp_Rev_Growth       (0.10 — annual revenue growth rate)
-
-Do these interpretations look correct? I am inferring the meaning
-from the column headers but want your confirmation before proceeding.
-```
-
-**Your confirmation:**
-
-```
-Correct. COGS percentage is the same all three years in this model
-(it does not improve with scale — that is a simplification).
-Proceed with the rewriting.
-```
-
-**Claude's dependency-ordered rewriting:**
-
-```
-Rewriting in dependency order:
-
-Level 0: Input Named Ranges assigned ✓
-  Inp_Rev_Y1 = 10,000,000
-  Inp_COGS_Pct = 0.60
-  Inp_Rev_Growth = 0.10
-
-Level 1: Direct calculations
-  Revenue_Y1 = Inp_Rev_Y1
-  → read_cell("Revenue_Y1") = $10,000,000  ✓ (matches B4)
-
-  COGS_Y1 = Revenue_Y1 * Inp_COGS_Pct
-  → read_cell("COGS_Y1") = $6,000,000  ✓ (matches B5)
-
-Level 2: Derived calculations
-  Gross_Profit_Y1 = Revenue_Y1 - COGS_Y1
-  → read_cell("Gross_Profit_Y1") = $4,000,000  ✓ (matches B6)
-
-  Revenue_Y2 = Revenue_Y1 * (1 + Inp_Rev_Growth)
-  → read_cell("Revenue_Y2") = $11,000,000  ✓ (matches C4)
-
-Level 3: Further derived
-  Gross_Profit_Y2 = Revenue_Y2 - (Revenue_Y2 * Inp_COGS_Pct)
-  → read_cell("Gross_Profit_Y2") = $4,400,000  ✓ (matches C7)
-
-  Revenue_Y3 = Revenue_Y2 * (1 + Inp_Rev_Growth)
-  → read_cell("Revenue_Y3") = $12,100,000  ✓ (matches D4)
-
-All 6 outputs match pre-retrofit values. Retrofit complete.
-Intent Notes attached to all formula cells.
-```
+> **You:** Correct. COGS percentage is the same all three years in this model (it does not improve with scale — that is a simplification). Proceed with the rewriting.
+>
+> **Claude:** Rewriting in dependency order:
+>
+> **Level 0:** Input Named Ranges assigned ✓
+>
+> - Inp_Rev_Y1 = 10,000,000
+> - Inp_COGS_Pct = 0.60
+> - Inp_Rev_Growth = 0.10
+>
+> **Level 1:** Direct calculations
+>
+> - Revenue_Y1 = Inp_Rev_Y1 → Reading from model: $10,000,000 ✓ (matches B4)
+> - COGS_Y1 = Revenue_Y1 \* Inp_COGS_Pct → Reading from model: $6,000,000 ✓ (matches B5)
+>
+> **Level 2:** Derived calculations
+>
+> - Gross_Profit_Y1 = Revenue_Y1 - COGS_Y1 → Reading from model: $4,000,000 ✓ (matches B6)
+> - Revenue_Y2 = Revenue_Y1 \* (1 + Inp_Rev_Growth) → Reading from model: $11,000,000 ✓ (matches C4)
+>
+> **Level 3:** Further derived
+>
+> - Gross_Profit_Y2 = Revenue_Y2 - (Revenue_Y2 \* Inp_COGS_Pct) → Reading from model: $4,400,000 ✓ (matches C7)
+> - Revenue_Y3 = Revenue_Y2 \* (1 + Inp_Rev_Growth) → Reading from model: $12,100,000 ✓ (matches D4)
+>
+> All 6 outputs match pre-retrofit values. Retrofit complete. Intent Notes attached to all formula cells.
 
 Notice what happened in this exchange. Claude inspected the model and proposed Named Ranges — but asked for your confirmation before proceeding. You provided domain knowledge that the COGS percentage is constant across years, which is something the coordinates alone could not reveal. Claude then rewrote each formula in strict dependency order, validating after each one. Neither of you could have done this as efficiently alone: Claude handled the systematic rewriting and validation; you provided the business context that coordinates hide.
 
@@ -392,12 +348,12 @@ Take any existing Excel model you have access to — one you built, one you inhe
 
 ## Try With AI
 
-Use these prompts in Claude in Excel or Cowork to practice the retrofit process.
+Use these prompts in Cowork to practice the retrofit process.
 
 ### Prompt 1: Inspect a Model
 
 ```
-Use inspect_model() to list all formulas in this spreadsheet.
+Inspect this spreadsheet. List all formulas and all hardcoded values.
 For each cell that contains a raw number (no formula), tell me
 what it likely represents based on its row/column headers.
 For each cell that contains a formula, list its dependencies.

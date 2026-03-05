@@ -14,13 +14,13 @@ cards:
 
   - id: "ch18-09-the-idfa-skill-002"
     front: "How do you install the IDFA plugin in Claude Code?"
-    back: "Two steps:\n1. /plugin marketplace add panaversity/idfa-financial-architect\n2. /plugin install idfa-financial-architect@panaversity-idfa"
+    back: "In Cowork: Customize → Browse plugins → Personal → + → Add marketplace from GitHub → enter the GitHub URL → find IDFA Financial Architect → Install.\nIn Claude Code: /plugin marketplace add panaversity/idfa-financial-architect → /plugin install idfa-financial-architect@panaversity-idfa"
     tags: ["installation", "claude-code", "marketplace"]
     difficulty: "basic"
 
   - id: "ch18-09-the-idfa-skill-003"
     front: "What is the structure of the IDFA plugin?"
-    back: ".claude-plugin/plugin.json (metadata)\n.claude-plugin/marketplace.json (catalog)\nskills/financial-architect/SKILL.md (methodology)\nskills/financial-architect/references/IDFA-reference.md\nREADME.md and LICENSE"
+    back: ".claude-plugin/plugin.json (metadata)\n.claude-plugin/marketplace.json (catalog)\nskills/financial-architect/SKILL.md (methodology)\nskills/financial-architect/references/IDFA-reference.md\nskills/idfa-ops/SKILL.md (operations — scripts for reading, writing, and auditing models)\nREADME.md and LICENSE"
     tags: ["plugin-structure", "files"]
     difficulty: "intermediate"
 
@@ -50,13 +50,13 @@ cards:
 
   - id: "ch18-09-the-idfa-skill-008"
     front: "How do you verify that the IDFA plugin is working after installation?"
-    back: "Start a fresh session, give a new intent statement, and check whether the output includes all four guardrails — Inp_ Named Ranges, LaTeX verification, Intent Notes, and MCP workflow — without being asked."
+    back: "Start a fresh session, give a new intent statement, and check whether the output includes all four guardrails — Inp_ Named Ranges, LaTeX verification, Intent Notes, and delegated calculation workflow — without being asked."
     tags: ["verification", "four-guardrails"]
     difficulty: "intermediate"
 
   - id: "ch18-09-the-idfa-skill-009"
     front: "What are the five common mistakes the IDFA skill prevents agents from making?"
-    back: "1. Mixing layers (hardcoded constants in formulas)\n2. Calculating internally instead of using read_cell()\n3. Skipping LaTeX for WACC/IRR/NPV/DCF\n4. Retrofitting by delete-and-rebuild\n5. Naming ranges with spaces"
+    back: "1. Mixing layers (hardcoded constants in formulas)\n2. Calculating internally instead of delegating to the spreadsheet engine\n3. Skipping LaTeX for WACC/IRR/NPV/DCF\n4. Retrofitting by delete-and-rebuild\n5. Naming ranges with spaces"
     tags: ["common-mistakes", "guardrails"]
     difficulty: "intermediate"
 

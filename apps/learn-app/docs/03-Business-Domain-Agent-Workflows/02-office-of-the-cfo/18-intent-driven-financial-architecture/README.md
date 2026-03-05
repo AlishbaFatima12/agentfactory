@@ -27,16 +27,24 @@ The tools in Chapter 17 are powerful. But they are working on a foundation with 
 
 The same Claude in Excel. The same MCP connectors. A fundamentally different architecture underneath. That is what changes everything.
 
+:::caution Prerequisites
+This chapter requires **Cowork** (set up in Chapter 17) and the **IDFA plugin**.
+
+1. **Install the IDFA plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/idfa-financial-architect` → find **IDFA Financial Architect** → click **Install**.
+2. The plugin includes two skills: the IDFA methodology (activates automatically on financial model conversations) and IDFA Operations (provides the tools Claude uses to read, write, and audit Excel models programmatically). Once installed, just mention a financial model in conversation — the skills activate automatically. No manual invocation needed.
+3. **Connect a working folder** for practice files, same as Chapter 17.
+   :::
+
 ## What You'll Learn
 
 By the end of this chapter, you will be able to:
 
 - Identify Formula Rot in existing financial models and explain why coordinate-based formulas are opaque to AI agents
 - Structure any financial model using IDFA's three layers — Assumptions, Calculations, and Output — with strict isolation between them
-- Apply the four deterministic guardrails: Named Range Priority, LaTeX Verification, Audit-Ready Intent Notes, and MCP Dependency
+- Apply the four deterministic guardrails: Named Range Priority, LaTeX Verification, Audit-Ready Intent Notes, and Delegated Calculation
 - Build a complete Gross Profit Waterfall model from an Intent Statement using only Named Range formulas
 - Verify complex financial formulas (WACC, NPV, Terminal Value, IRR) in LaTeX before committing them to a model
-- Run deterministic What-If analysis and Strategic Goal-Seeking through MCP without internal agent calculation
+- Run deterministic What-If analysis and Strategic Goal-Seeking where the agent reasons and the spreadsheet engine calculates
 - Retrofit an existing coordinate-based model to IDFA compliance using the five-phase conversion process
 - Install and test the IDFA SKILL.md as a portable Agent Skill across any skills-compatible agent
 - Design enterprise governance artefacts — Standards Document, Model Registry, Validation Protocol, and Agent Standards Policy
@@ -52,7 +60,7 @@ By the end of this chapter, you will be able to:
 | [L04](./04-named-range-priority.md)                 | Named Range Priority — Guardrail 1   | 25 min   | Zero-coordinate-reference formulas in the Calculation layer that read as business rules                                                           |
 | [L05](./05-latex-verification.md)                   | LaTeX Verification — Guardrail 2     | 25 min   | Verification of complex formulas (WACC, NPV, Terminal Value, IRR) in LaTeX before committing to a model                                           |
 | [L06](./06-intent-notes.md)                         | Intent Notes — Guardrail 3           | 25 min   | Audit-ready Intent Notes that document every AI-generated formula with its business intent                                                        |
-| [L07](./07-mcp-dependency.md)                       | MCP Dependency — Guardrail 4         | 30 min   | What-If analysis and Goal-Seeking through MCP where the agent reasons and Excel calculates                                                        |
+| [L07](./07-mcp-dependency.md)                       | Delegated Calculation — Guardrail 4  | 30 min   | What-If analysis and Goal-Seeking where the agent reasons and the spreadsheet engine calculates                                                   |
 | [L08](./08-retrofitting-existing-models.md)         | Retrofitting Existing Models         | 35 min   | Five-phase conversion of legacy coordinate-based models to IDFA compliance                                                                        |
 | [L09](./09-the-idfa-skill.md)                       | The IDFA Skill                       | 25 min   | The IDFA SKILL.md installed and tested as a portable Agent Skill across multiple agents                                                           |
 | [L10](./10-enterprise-governance.md)                | Enterprise Governance                | 30 min   | Four governance artefacts (Standards Document, Model Registry, Validation Protocol, Agent Standards Policy) and sector-specific naming extensions |
@@ -65,7 +73,7 @@ By the end of this chapter, you should be able to answer these five questions:
 
 1. What is Formula Rot, what are its four symptoms, and why does the Coordinate-First paradigm cause it?
 2. What are IDFA's three layers and four deterministic guardrails, and why does each guardrail exist?
-3. How does the MCP Dependency guardrail ensure that agent-reported numbers come from deterministic model calculation rather than internal agent arithmetic — and why does this distinction matter in finance?
+3. How does the Delegated Calculation guardrail ensure that agent-reported numbers come from deterministic model calculation rather than internal agent arithmetic — and why does this distinction matter in finance?
 4. What is the five-phase process for retrofitting an existing coordinate-based model to IDFA compliance, and what is the critical principle that governs it?
 5. What are the five Finance Domain Agent capabilities, and what does each capability test validate about an IDFA deployment?
 
