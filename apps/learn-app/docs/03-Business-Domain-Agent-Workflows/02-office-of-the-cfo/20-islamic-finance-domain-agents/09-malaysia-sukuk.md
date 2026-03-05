@@ -52,17 +52,17 @@ learning_objectives:
   - objective: "Apply IAS 32 and MFRS 9 to classify a Malaysian corporate sukuk musharakah from both issuer and investor perspectives, generating journal entries with correct Malaysian income labels"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 5 Steps 1-3 — issuer classification under IAS 32, quarterly distribution accounting under MFRS 9, and EPF investor classification with SPPI test and effective profit rate calculation"
+    assessment_method: "Student completes Exercise 6 Steps 1-3 — issuer classification under IAS 32, quarterly distribution accounting under MFRS 9, and EPF investor classification with SPPI test and effective profit rate calculation"
 
   - objective: "Explain Malaysia's SRI Sukuk Framework and identify the additional disclosure obligations that green sukuk designation creates beyond standard MFRS 9 measurement"
     proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Student completes Exercise 5 Step 4 — drafting the use-of-proceeds section and distinguishing measurement (unchanged) from disclosure (additional) requirements for green sukuk"
+    assessment_method: "Student completes Exercise 6 Step 4 — drafting the use-of-proceeds section and distinguishing measurement (unchanged) from disclosure (additional) requirements for green sukuk"
 
   - objective: "Draft the accounting and financial disclosure sections of a sukuk Information Memorandum for SC Malaysia regulatory submission"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 5 Step 5 — producing accounting policies, debt coverage ratios, MFRS 9 classification rationale, and Shariah compliance certification summary formatted for Bursa Malaysia"
+    assessment_method: "Student completes Exercise 6 Step 5 — producing accounting policies, debt coverage ratios, MFRS 9 classification rationale, and Shariah compliance certification summary formatted for Bursa Malaysia"
 
 cognitive_load:
   new_concepts: 6
@@ -77,7 +77,7 @@ cognitive_load:
 
 differentiation:
   extension_for_advanced: "Research the growth of sustainable sukuk issuance globally since 2020. Compare the SC Malaysia SRI Sukuk Framework with the ICMA Green Bond Principles and the ASEAN Green Bond Standards. Write a one-page analysis of whether Malaysia's SRI framework is more or less stringent than international equivalents, and what this means for cross-border green sukuk listings."
-  remedial_for_struggling: "Focus on Exercise 5 Steps 1 and 3 — the issuer and investor classification. The core question is identical for both: does the sukuk create a contractual obligation to deliver cash? If yes, it is a financial liability (issuer) or a financial asset (investor). The green sukuk overlay in Step 4 adds disclosure requirements but does not change the accounting numbers. Master the classification first; the green overlay is additional, not foundational."
+  remedial_for_struggling: "Focus on Exercise 6 Steps 1 and 3 — the issuer and investor classification. The core question is identical for both: does the sukuk create a contractual obligation to deliver cash? If yes, it is a financial liability (issuer) or a financial asset (investor). The green sukuk overlay in Step 4 adds disclosure requirements but does not change the accounting numbers. Master the classification first; the green overlay is additional, not foundational."
 
 teaching_guide:
   lesson_type: "core"

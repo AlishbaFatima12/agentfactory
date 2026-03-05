@@ -52,12 +52,12 @@ learning_objectives:
   - objective: "Evaluate whether specific fintech structures (digital murabaha, P2P Islamic lending) satisfy Shariah requirements and identify where Shariah compliance is genuinely uncertain"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student completes Exercise 13 Steps 1 and 3 — determining murabaha validity for a digital gold platform and assessing the IFI question for P2P Islamic lending"
+    assessment_method: "Student completes Exercise 14 Steps 1 and 3 — determining murabaha validity for a digital gold platform and assessing the IFI question for P2P Islamic lending"
 
   - objective: "Apply IFRS 9, IFRS 15, and regulatory frameworks to Islamic fintech structures, determining the accounting treatment for products that the standards did not anticipate"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 13 Steps 2 and 4 — performing IFRS 15 analysis for robo-advisory fees and determining IFRS 9 classification for impact sukuk"
+    assessment_method: "Student completes Exercise 14 Steps 2 and 4 — performing IFRS 15 analysis for robo-advisory fees and determining IFRS 9 classification for impact sukuk"
 
   - objective: "Analyze the regulatory landscape for Islamic fintech across Malaysia (BNM/SC), UK (FCA), and UAE (ADGM), identifying where existing frameworks create gaps for Shariah-compliant digital products"
     proficiency_level: "B1"

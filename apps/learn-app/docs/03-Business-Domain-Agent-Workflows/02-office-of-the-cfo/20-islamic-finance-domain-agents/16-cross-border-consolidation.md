@@ -50,17 +50,17 @@ learning_objectives:
   - objective: "Analyze the top five consolidation adjustments required when an AAOIFI parent consolidates IFRS subsidiaries, and produce the journal entries for each adjustment"
     proficiency_level: "B2"
     bloom_level: "Analyze"
-    assessment_method: "Student completes Exercise 12 Steps 1 and 5 — identifying policy differences, determining group framework, and producing consolidated financial statements with dual-framework disclosures"
+    assessment_method: "Student completes Exercise 13 Steps 1 and 5 — identifying policy differences, determining group framework, and producing consolidated financial statements with dual-framework disclosures"
 
   - objective: "Evaluate the IAH funds consolidation problem — explaining why AAOIFI and IFRS classify these funds differently, determining the group treatment, and generating the reclassification entries"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student completes Exercise 12 Step 2 — articulating the classification difference, choosing the group treatment, and producing the consolidation adjustment"
+    assessment_method: "Student completes Exercise 13 Step 2 — articulating the classification difference, choosing the group treatment, and producing the consolidation adjustment"
 
   - objective: "Assess whether intra-group murabaha and mudarib fee arrangements satisfy arm's-length and Shariah compliance requirements, and document the transfer pricing implications"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student completes Exercise 12 Steps 3-4 — determining elimination treatment for intra-group murabaha and documenting the Pakistan FBR transfer pricing requirements for mudarib fees"
+    assessment_method: "Student completes Exercise 13 Steps 3-4 — determining elimination treatment for intra-group murabaha and documenting the Pakistan FBR transfer pricing requirements for mudarib fees"
 
 cognitive_load:
   new_concepts: 5
@@ -92,7 +92,7 @@ teaching_guide:
 
 # Cross-Border Islamic Banking Group — Consolidation
 
-In Lesson 14, you produced full AAOIFI and IFRS financial statements for a single entity. Real Islamic banking groups do not operate in a single jurisdiction. Al Baraka Banking Group is headquartered in Bahrain (AAOIFI mandatory), with subsidiaries in the UAE (IFRS), Malaysia (MFRS), Pakistan (IFRS with SBP overlay), and a dozen other countries. When the group produces consolidated financial statements, every accounting policy difference you have studied in this chapter collides simultaneously.
+In Lesson 15, you produced full AAOIFI and IFRS financial statements for a single entity. Real Islamic banking groups do not operate in a single jurisdiction. Al Baraka Banking Group is headquartered in Bahrain (AAOIFI mandatory), with subsidiaries in the UAE (IFRS), Malaysia (MFRS), Pakistan (IFRS with SBP overlay), and a dozen other countries. When the group produces consolidated financial statements, every accounting policy difference you have studied in this chapter collides simultaneously.
 
 This lesson tackles the consolidation challenge head-on. The exercise strips the complexity to a four-entity group — one Bahrain parent, three subsidiaries in different IFRS jurisdictions — and works through the five adjustment categories that make Islamic banking consolidation distinct from conventional group reporting. The most complex of these, by a significant margin, is how to present Investment Account Holder funds when the parent calls them a separate balance sheet category and every subsidiary calls them a financial liability.
 

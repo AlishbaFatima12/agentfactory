@@ -52,17 +52,17 @@ learning_objectives:
   - objective: "Apply IFRS 9 substance-over-form analysis to classify a UK diminishing musharaka home finance arrangement as a financial asset at amortised cost, and generate the journal entries with correct UK income labels"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 7 Step 1 — applying IFRS 9 business model and SPPI tests to Al Rayan Bank's DM product, classifying the bank's share, and generating Month 1 journal entries"
+    assessment_method: "Student completes Exercise 8 Step 1 — applying IFRS 9 business model and SPPI tests to Al Rayan Bank's DM product, classifying the bank's share, and generating Month 1 journal entries"
 
   - objective: "Explain HMRC's tax equivalence treatment of Islamic finance under Finance Act 2005, including how DM rental is characterised as interest for tax purposes while the accounting label avoids the term 'interest'"
     proficiency_level: "B1"
     bloom_level: "Understand"
-    assessment_method: "Student completes Exercise 7 Step 2 — describing HMRC treatment of DM rental income and equity purchase payments, SDLT relief for Islamic mortgages, and drafting a client advisory note"
+    assessment_method: "Student completes Exercise 8 Step 2 — describing HMRC treatment of DM rental income and equity purchase payments, SDLT relief for Islamic mortgages, and drafting a client advisory note"
 
   - objective: "Draft a client advisory report comparing Islamic DM construction finance with conventional construction finance, covering cost comparison, HMRC treatment, and IFRS 16 lessee implications"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 7 Step 5 — producing a client-facing report covering cost comparison, HMRC differences, IFRS 16 analysis, and Shariah compliance certification requirements"
+    assessment_method: "Student completes Exercise 8 Step 5 — producing a client-facing report covering cost comparison, HMRC differences, IFRS 16 analysis, and Shariah compliance certification requirements"
 
 cognitive_load:
   new_concepts: 6
@@ -108,7 +108,7 @@ teaching_guide:
 
 # UK Islamic Banking — IFRS, PRA/FCA, and HMRC
 
-In Lesson 9, you examined Saudi Arabia's IFRS framework, the ZATCA zakat formula, and Al Rajhi Bank as the global Islamic banking benchmark. Now you cross to the most structurally interesting Western Islamic finance market: the United Kingdom.
+In Lesson 10, you examined Saudi Arabia's IFRS framework, the ZATCA zakat formula, and Al Rajhi Bank as the global Islamic banking benchmark. Now you cross to the most structurally interesting Western Islamic finance market: the United Kingdom.
 
 The UK has five fully-fledged Islamic banks: Al Rayan Bank (the largest), Gatehouse Bank, QIB (UK), Al Ahli United Bank (UK), and Bank of London and the Middle East (BLME). The UK government has issued sovereign sukuk. The London Stock Exchange hosts international sukuk listings. What makes the UK distinctive is not the existence of Islamic banking — several Western countries have Islamic finance products — but the deliberate regulatory and tax infrastructure that HM Treasury, the PRA, the FCA, and HMRC have built to ensure Islamic products compete on a level playing field with conventional alternatives. The most important piece of this infrastructure is HMRC's tax equivalence framework under Finance Act 2005, which ensures that Islamic finance products are neither tax-advantaged nor tax-disadvantaged compared to their conventional counterparts.
 

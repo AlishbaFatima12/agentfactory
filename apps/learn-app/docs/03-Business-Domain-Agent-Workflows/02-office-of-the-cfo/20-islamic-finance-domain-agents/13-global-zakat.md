@@ -54,7 +54,7 @@ learning_objectives:
   - objective: "Apply the ZATCA and Hanafi zakat formulas to a bank's balance sheet data and generate the correct journal entries for each jurisdiction"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 9 Steps 2-4, producing correct zakat calculations under both formulas with appropriate journal entries and identifying the pass-through accounting for Pakistan's Zakat and Ushr deductions"
+    assessment_method: "Student completes Exercise 10 Steps 2-4, producing correct zakat calculations under both formulas with appropriate journal entries and identifying the pass-through accounting for Pakistan's Zakat and Ushr deductions"
 
   - objective: "Create a global zakat SKILL.md that routes the correct formula, accounting treatment, and disclosure requirements by jurisdiction"
     proficiency_level: "B1"

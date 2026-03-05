@@ -56,7 +56,7 @@ learning_objectives:
   - objective: "Calculate the quarterly purification obligation for a Shariah-compliant fund, generate the journal entries, and draft the purification section of the SSB quarterly report"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 10 Step 2, producing the correct purification amount from dividend data and non-permissible income ratios"
+    assessment_method: "Student completes Exercise 11 Step 2, producing the correct purification amount from dividend data and non-permissible income ratios"
 
   - objective: "Analyze screening divergence cases where methodologies produce conflicting pass/fail results for the same company and recommend a resolution approach"
     proficiency_level: "B2"
@@ -81,7 +81,7 @@ differentiation:
 
 # Shariah Portfolio Screening — Global Standards
 
-In Lesson 12, you compared zakat calculation across jurisdictions — one Islamic obligation, multiple formulas. Shariah portfolio screening presents an analogous challenge: one ethical framework, multiple screening methodologies, and the same company can be Shariah-compliant under one methodology and non-compliant under another.
+In Lesson 13, you compared zakat calculation across jurisdictions — one Islamic obligation, multiple formulas. Shariah portfolio screening presents an analogous challenge: one ethical framework, multiple screening methodologies, and the same company can be Shariah-compliant under one methodology and non-compliant under another.
 
 Four major screening frameworks govern global Islamic equity investing. The Securities Commission Malaysia maintains the SC Shariah-compliant securities list. The Saudi Exchange (Tadawul) publishes its own Shariah-compliant list. AAOIFI Shariah Standard 21 provides the scholarly reference standard. The MSCI Islamic Index applies its own independent methodology. All four agree on the core prohibitions — conventional banking, alcohol, gambling, pork, weapons of mass destruction. Where they diverge is in the financial ratio thresholds, the denominator used (total assets versus market capitalisation), and the treatment of borderline sectors.
 

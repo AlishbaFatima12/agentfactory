@@ -21,5 +21,5 @@ Nigeria is Africa's most active sovereign sukuk issuer using ijarah structures b
 
 ### Connections
 
-- **Builds on**: Lessons 8-10's jurisdiction deep-dives in mature markets — Nigeria introduces frontier market dynamics and the scope boundary concept
-- **Leads to**: Lesson 12's global zakat accounting, applying multi-jurisdiction comparison to a universal Islamic obligation
+- **Builds on**: Lessons 9-11's jurisdiction deep-dives in mature markets — Nigeria introduces frontier market dynamics and the scope boundary concept
+- **Leads to**: Lesson 13's global zakat accounting, applying multi-jurisdiction comparison to a universal Islamic obligation

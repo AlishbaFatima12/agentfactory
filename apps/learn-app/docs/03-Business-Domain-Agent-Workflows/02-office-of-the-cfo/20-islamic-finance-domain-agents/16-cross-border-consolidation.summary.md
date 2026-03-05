@@ -21,5 +21,5 @@ When an AAOIFI parent (Bahrain) consolidates IFRS subsidiaries (UAE, Malaysia, P
 
 ### Connections
 
-- **Builds on**: Lesson 14's AAOIFI vs IFRS capstone — applies the single-entity reconciliation skills to a multi-entity group consolidation
-- **Leads to**: Lesson 16's Islamic fintech, where established frameworks must be applied to entirely novel product structures
+- **Builds on**: Lesson 15's AAOIFI vs IFRS capstone — applies the single-entity reconciliation skills to a multi-entity group consolidation
+- **Leads to**: Lesson 17's Islamic fintech, where established frameworks must be applied to entirely novel product structures

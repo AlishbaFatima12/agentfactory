@@ -21,5 +21,5 @@ UK Islamic banking operates under identical PRA/FCA regulation as conventional b
 
 ### Connections
 
-- **Builds on**: Lesson 9's Saudi deep-dive — both apply IFRS, but the UK adds HMRC tax equivalence while Saudi adds ZATCA zakat
-- **Leads to**: Lesson 11's Nigeria deep-dive, introducing frontier markets and the contractor independence principle
+- **Builds on**: Lesson 10's Saudi deep-dive — both apply IFRS, but the UK adds HMRC tax equivalence while Saudi adds ZATCA zakat
+- **Leads to**: Lesson 12's Nigeria deep-dive, introducing frontier markets and the contractor independence principle
