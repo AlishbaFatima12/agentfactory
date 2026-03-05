@@ -79,13 +79,12 @@ In Chapter 31, you built the workbench -- uv, pyright, ruff, pytest, and Git. Ev
 Here is a short piece of Python. Before you learn any rules or methods, just look at it:
 
 ```python
-x: int = 10
-y: int = 3
-result: int = x // y
-print(result)
+x: str = "3"
+y: str = "7"
+print(x + y)
 ```
 
-What do you think `print(result)` displays? Take a guess -- even if you have never seen Python before. If you guessed `3.33` or `3`, you just learned something about yourself. A wrong guess tells you exactly which piece of the language you do not yet understand. A right guess confirms a piece you do. Either way, you now know more than you did five seconds ago -- and all you did was read four lines and commit to an answer.
+What do you think `print(x + y)` displays? Take a guess -- even if you have never seen Python before. If you guessed `10`, you just discovered something important: those quotes around `"3"` and `"7"` make them text, not numbers, and `+` joins text end to end instead of adding. If you guessed `37`, your instinct about strings is already working. Either way, you now know more than you did five seconds ago -- and all you did was read three lines and commit to an answer.
 
 That is the core idea behind this lesson. It is called PRIMM -- Predict, Run, Investigate, Modify, Make -- developed by researchers Sue Sentance, Jane Waite, and Maria Kallia. You will learn the first three stages here. Modify and Make arrive in Chapter 33 when you begin writing code. By the end of this lesson, you will have predicted the output of four Python code blocks and discovered what your predictions reveal about your understanding.
 
