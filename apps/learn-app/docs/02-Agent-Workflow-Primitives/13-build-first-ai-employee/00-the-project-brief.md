@@ -44,7 +44,7 @@ cognitive_load:
 
 differentiation:
   extension_for_advanced: "Gold tier students plan multi-group architecture with isolation boundaries upfront, sketching a system diagram before writing any configuration"
-  remedial_for_struggling: "Students unsure of their Layer 3 design revisit Ch 7 L10 and use the Try With AI prompts to generate a fresh design for their profession"
+  remedial_for_struggling: "Students unsure of their Layer 3 design revisit Ch 7 L10 and use the acceptance criteria and use case gallery to refine their design for their profession"
 ---
 
 # The Project Brief
@@ -79,7 +79,7 @@ Pull out your Layer 3 design from Chapter 7 Lesson 10. This is your blueprint fo
 - **3+ MCP Servers** you identified (the external connections your employee needs)
 - **Domain vocabulary and rules** specific to your field
 
-If your design is missing any of these, revisit it now. The Try With AI section at the end of this lesson can help you fill gaps.
+If your design is missing any of these, revisit it now and fill the gaps before moving forward.
 
 Review your design and mark which skill you will implement first. Choose the one that would deliver the most value in a single conversation -- that is your Bronze target.
 
@@ -134,58 +134,3 @@ What does a completed AI employee look like across different professions? Here a
 - Silver: Sends a weekly capacity report every Monday, refuses to commit to timelines without checking current workload
 - Gold: Separate groups per client with isolated project contexts and communication logs
 
-## Try With AI
-
-### Prompt 1: Evaluate Your Layer 3 Design
-
-```
-I am a [your profession]. In Chapter 7, I designed a Layer 3 blueprint
-for my AI employee with these skills: [list your 3+ skills] and these
-MCP servers: [list your 3+ servers].
-
-Review this design critically:
-- Which skill would deliver the most value in a single WhatsApp conversation?
-- Are any of my planned skills too broad to implement in one session?
-- What domain rules am I likely forgetting for my profession?
-
-Help me prioritize: which skill should I build first for Bronze tier?
-```
-
-**What you are learning:** Design evaluation and prioritization. You are practicing the skill of taking an abstract plan and converting it into a sequenced implementation roadmap, which is the core project scoping ability for any multi-session build.
-
-### Prompt 2: Fill Gaps in Your Blueprint
-
-```
-I am building an AI employee for [your profession] using NanoClaw.
-My current Layer 3 design has [number] skills and [number] MCP servers.
-
-I think I might be missing important domain rules. For my profession,
-what are the top 5 things an AI assistant should NEVER do without
-human approval? What are 5 things it should ALWAYS do automatically?
-
-Also suggest: what MCP servers would give my employee access to the
-tools professionals in my field actually use daily?
-```
-
-**What you are learning:** Domain boundary analysis. You are learning to define what an AI employee should and should not do autonomously, which directly maps to the behavioral rules and boundary conditions you will configure in the next lesson.
-
-### Prompt 3: Validate Your Tier Choice
-
-```
-I chose [Bronze/Silver/Gold] tier for my AI employee project. I have
-[X hours] available this week. My profession is [profession] and my
-main goal is [what you want the employee to do].
-
-Challenge my tier choice:
-- Am I being too ambitious given my time?
-- Am I being too conservative given my goals?
-- What is the minimum viable version that would actually be useful to me?
-
-Be honest. I would rather build something I finish than something I abandon.
-```
-
-**What you are learning:** Scope calibration. You are practicing the critical project management skill of matching ambition to available resources. Over-scoping is the most common reason personal projects fail, and this prompt helps you find the right balance before you invest hours of work.
-
-## Flashcards Study Aid
-
-<Flashcards />

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 8
-title: "Chapter Assessment"
+title: "Project Review"
 description: "Evaluate your AI employee build against tier-specific acceptance criteria, reflect on the gap between design and implementation, and identify next steps"
 keywords:
   [
@@ -30,7 +30,7 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student compiles all chapter deliverables into a documented portfolio structure with evidence of completion at their chosen tier"
+    measurable_at_this_level: "Student compiles all project deliverables into a documented portfolio structure with evidence of completion at their chosen tier"
 
 learning_objectives:
   - objective: "Evaluate completed work against tier-specific acceptance criteria"
@@ -53,19 +53,15 @@ cognitive_load:
   assessment: "2 concepts (self-evaluation against criteria, gap analysis between plan and execution) — deliberately light to focus on reflection, not new learning"
 
 differentiation:
-  extension_for_advanced: "Write a 1-page 'lessons learned' document that someone starting this chapter could use to avoid your mistakes and accelerate their build."
+  extension_for_advanced: "Write a 1-page 'lessons learned' document that someone starting this project could use to avoid your mistakes and accelerate their build."
   remedial_for_struggling: "Focus on the Bronze checklist only. For any incomplete items, write one sentence explaining what blocked you and what you would need to complete it."
 ---
 
-# Chapter Assessment
+# Project Review
 
 In Lesson 0, you received a project brief. In Lessons 1 through 7, you built a working AI employee for your profession. Now you evaluate what you actually produced.
 
 This assessment is not a test — it is an honest inventory. The checklist below tells you exactly what a completed build looks like at each tier. Check what you finished, note what you did not, and decide what comes next.
-
-:::info Assessment
-This chapter's interactive quiz covers key concepts from all lessons. Your instructor will provide the quiz link separately.
-:::
 
 ## Submission Checklist
 
@@ -102,41 +98,3 @@ Consider these questions:
 **What would take your employee from its current tier to the next?** If you completed Bronze, what specific work would get you to Silver? If you completed Silver, what is the hardest part of Gold? Be concrete — "add scheduling" is vague, "build a weekly cash flow report skill that reads bank CSV and invoice spreadsheet" is actionable.
 
 **What surprised you about encoding your professional expertise into an AI system?** Most people discover that the hardest part is not the technology — it is articulating the judgment calls they make unconsciously every day. What did you know that you did not know you knew?
-
-## Try With AI
-
-Use these prompts to deepen your self-assessment.
-
-```
-Here is my Layer 3 design from Chapter 7:
-[Paste your original design]
-
-Here is what I actually built in Chapter 13:
-[List your completed deliverables with brief descriptions]
-
-Compare the two. What did I complete? What did I skip? For each
-skipped item, suggest whether it was:
-(a) not actually needed for my profession
-(b) needed but too complex for this stage
-(c) needed and achievable — I should go back and build it
-
-Be direct. Don't soften the assessment.
-```
-
-**What you're learning:** How to conduct a structured gap analysis between plan and execution. The AI provides an external perspective on your own work — it might notice that a "skipped" item was actually the most valuable part of your design, or that something you built was not in the original plan at all. This is the Analyze level: breaking down a complex outcome into its components.
-
-```
-I completed the [Bronze/Silver/Gold] tier. To advance to the next tier,
-I need to build:
-[List the items from the next tier's checklist]
-
-For my profession as a [your profession], create a concrete action plan:
-1. What to build first (highest value, lowest effort)
-2. What to build second (highest value, moderate effort)
-3. What to skip or defer (low value for my specific domain)
-
-Include time estimates for each item assuming I work on this
-1 hour per day.
-```
-
-**What you're learning:** How to prioritize professional development work using value-effort analysis. Not every Gold tier item matters equally for every profession — a teacher might benefit more from the parent-portal group than from a complex isolation test. You are teaching the AI your professional priorities while it structures your next steps into an actionable plan.

@@ -1,10 +1,10 @@
 ---
 sidebar_position: 7
-title: "Capstone: Prove Professional Value"
+title: "Prove Professional Value"
 description: "Build an autonomous report your employee generates on schedule (Silver) and design multi-group architecture for different professional contexts (Gold)"
 keywords:
   [
-    "capstone",
+    "project-deliverable",
     "autonomous report",
     "data synthesis",
     "multi-group",
@@ -58,28 +58,28 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 5
-  assessment: "5 concepts (multi-source synthesis, proactive recommendations, group isolation, data boundaries, professional quality evaluation) appropriate for B1-C1 capstone"
+  assessment: "5 concepts (multi-source synthesis, proactive recommendations, group isolation, data boundaries, professional quality evaluation) appropriate for this B1-C1 project milestone"
 
 differentiation:
   extension_for_advanced: "Gold path: implement 3-group architecture with strict isolation, cross-group communication protocol, and a full system architecture diagram"
   remedial_for_struggling: "Focus Silver only: build one report from two data sources. Skip the scheduling component — run it manually. The key deliverable is a report with a recommendation, not automation."
 ---
 
-# Capstone: Prove Professional Value
+# Prove Professional Value
 
-Everything you have built so far — identity, skill, connections, scheduling, boundaries — converges here. This capstone has two tiers: Silver proves your employee delivers real professional value through autonomous reporting. Gold proves you can architect a multi-context system with proper isolation.
+Everything you have built so far — identity, skill, connections, scheduling, boundaries — converges here. This final project milestone has two tracks: Silver proves your employee delivers real professional value through autonomous reporting. Gold proves you can architect a multi-context system with proper isolation.
 
-Both tiers test the same question: would you trust this employee's output enough to act on it? A report you would not show your boss is not a report worth generating. An architecture without real isolation is not an architecture worth building.
+Both tracks test the same question: would you trust this employee's output enough to act on it? A report you would not show your boss is not a report worth generating. An architecture without real isolation is not an architecture worth building.
 
 Choose your tier, or complete Silver first and continue to Gold.
 
 ---
 
-## Silver Challenge: The Autonomous Report
+## Silver Deliverable: Autonomous Report
 
 Build a report your employee generates and delivers on schedule. The report must do more than summarize — it must synthesize data from multiple sources and make at least one recommendation you did not ask for.
 
-### Silver Acceptance Criteria
+### Silver Success Criteria
 
 1. The report runs on schedule and is delivered through your configured channel
 2. It reads from 2 or more data sources (files, APIs, databases, web content — whatever fits your domain)
@@ -98,11 +98,11 @@ Build a report your employee generates and delivers on schedule. The report must
 
 ---
 
-## Gold Challenge: Multi-Group Architecture
+## Gold Deliverable: Multi-Group Architecture
 
 Design a system where different professional contexts operate with different identities, permissions, and data access — all within one NanoClaw installation.
 
-### Gold Acceptance Criteria
+### Gold Success Criteria
 
 All Silver criteria, plus:
 
@@ -192,66 +192,3 @@ Then describe how to test that isolation actually works.
 
 </details>
 
-## Try With AI
-
-Use these prompts to design, build, and evaluate your capstone work.
-
-```
-I need to build an automated weekly report for my role as a [your profession].
-
-My two data sources are:
-- Source A: [describe — e.g., "bank transaction CSV exported weekly"]
-- Source B: [describe — e.g., "outstanding invoices tracked in a spreadsheet"]
-
-Design a NanoClaw skill that:
-1. Reads both sources
-2. Cross-references them (what specific comparison creates insight?)
-3. Identifies anomalies or trends (what counts as unusual in my domain?)
-4. Generates one proactive recommendation based on the data
-5. Formats the output as a professional report
-
-Write the SKILL.md file for this report-generation skill.
-```
-
-**What you're learning:** How to decompose a professional reporting task into a reusable skill. The AI helps with the structure, but you provide the domain judgment — what counts as an "anomaly" in accounting is completely different from teaching or consulting. The resulting skill encodes your professional expertise into an executable asset.
-
-```
-Here is my report output. Evaluate it as if you were my [boss/client/colleague]:
-
-[Paste your generated report here]
-
-Score it on:
-1. Clarity: Can a non-technical reader understand the key findings?
-2. Actionability: Does it tell me what to DO, not just what happened?
-3. Accuracy: Are the cross-references logically sound?
-4. Professionalism: Would you share this in a meeting without editing?
-
-Be honest. If this report is not ready for professional use, tell me
-exactly what to fix.
-```
-
-**What you're learning:** How to evaluate AI-generated professional output against real-world standards. The gap between "technically correct" and "professionally useful" is where your domain expertise matters most. You are teaching the AI your quality bar while it gives you structured feedback on dimensions you might overlook.
-
-```
-I'm designing a 3-group NanoClaw architecture for my profession.
-
-Group 1 (main): admin — full system control
-Group 2 ([name]): [describe purpose and scope]
-Group 3 ([name]): [describe purpose and scope]
-
-For each group, write the CLAUDE.md file that enforces:
-- Identity: who this group "is" and how it communicates
-- Permissions: what it can and cannot do
-- Data access: what it can and cannot see
-- Boundaries: explicit rules for what stays within this group
-
-Then write 3 isolation test cases I can run to verify the boundaries
-actually work. Each test should attempt something the group should NOT
-be able to do.
-```
-
-**What you're learning:** How to translate organizational trust boundaries into technical architecture. Every organization has implicit rules about who sees what — this prompt forces you to make those rules explicit and testable. The AI helps with the CLAUDE.md syntax; you provide the organizational knowledge about what separation actually matters.
-
-## Flashcards Study Aid
-
-<Flashcards />
