@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 title: "Prove Professional Value"
 description: "Build an autonomous report your employee generates on schedule (Silver) and design multi-group architecture for different professional contexts (Gold)"
 keywords:
@@ -15,7 +15,7 @@ keywords:
     "scheduled reporting",
   ]
 chapter: 13
-lesson: 7
+lesson: 8
 duration_minutes: 55
 
 skills:
@@ -67,7 +67,7 @@ differentiation:
 
 # Prove Professional Value
 
-Everything you have built so far — identity, skill, connections, scheduling, boundaries — converges here. This final project milestone has two tracks: Silver proves your employee delivers real professional value through autonomous reporting. Gold proves you can architect a multi-context system with proper isolation.
+Everything you have built so far — identity, skill, connections, scheduling, boundaries, memory — converges here. This final project milestone has two tracks: Silver proves your employee delivers real professional value through autonomous reporting. Gold proves you can architect a multi-context system with proper isolation.
 
 Both tracks test the same question: would you trust this employee's output enough to act on it? A report you would not show your boss is not a report worth generating. An architecture without real isolation is not an architecture worth building.
 
@@ -83,7 +83,7 @@ Build a report your employee generates and delivers on schedule. The report must
 
 1. The report runs on schedule and is delivered through your configured channel
 2. It reads from 2 or more data sources (files, APIs, databases, web content — whatever fits your domain)
-3. It contains at least one **proactive recommendation** — something the employee spotted that you did not explicitly ask about
+3. It contains at least one **proactive recommendation** — something the employee spotted that you did not explicitly ask about. Drawing on patterns from your action log or knowledge store strengthens this significantly
 4. It meets professional quality standards: you would share this with your boss, client, or colleague without embarrassment
 
 ### Silver Use Case Gallery
@@ -110,12 +110,13 @@ All Silver criteria, plus:
 2. Demonstrated isolation: the non-admin group cannot perform admin actions or access admin-only data
 3. Data boundaries documented and tested: clear rules for what data flows between groups and what stays isolated
 4. A system architecture diagram showing groups, data flows, and permission boundaries
+5. Memory isolation verified: each group's action log and knowledge store are independent — the client-facing group cannot query the admin group's action log or knowledge entries
 
 ### Gold Use Case Gallery
 
-**Accountant** — `main` (admin: system config, all data access) + `accounting-ops` (bookkeeping, report generation, full transaction data) + `client-portal` (read-only financial summaries, no raw transaction access, no ability to modify records)
+**Accountant** — `main` (admin: system config, all data access) + `accounting-ops` (bookkeeping, report generation, full transaction data) + `client-portal` (read-only financial summaries, no raw transaction access, no ability to modify records). `client-portal` has its own knowledge store — corrections about Client A's preferences never leak to Client B's group.
 
-**Consultant** — `main` (admin: system config, all project data) + `research` (full data access, deep analysis, internal memos) + `client-comms` (filtered output only, no internal strategy documents, no access to other client data)
+**Consultant** — `main` (admin: system config, all project data) + `research` (full data access, deep analysis, internal memos) + `client-comms` (filtered output only, no internal strategy documents, no access to other client data). `client-comms` cannot access the internal group's action log — prevents leaking which other clients are being served.
 
 **Recruiter** — `main` (admin: pipeline management, all candidate data) + `sourcing` (job descriptions, public candidate info, outreach templates) + `hiring-manager-view` (anonymized candidate summaries, interview feedback forms, no salary data)
 
@@ -151,6 +152,8 @@ Include the specific data fields to read from each source and the
 logic for generating recommendations.
 ```
 
+Your action log from Give Your Employee a Memory is a natural data source. A daily digest of autonomous actions — "here's everything I did today without asking you" — is the simplest Silver report that proves real professional value. Combine it with one external data source for the 2-source requirement.
+
 **For Gold:**
 
 ```
@@ -176,7 +179,7 @@ Then describe how to test that isolation actually works.
 
 **Silver implementation:**
 
-1. Create a skill that performs your report logic: (a) read source A, (b) read source B, (c) cross-reference for patterns, (d) generate recommendations, (e) format the report, (f) deliver via your channel
+1. Create a skill that performs your report logic: (a) read source A, (b) read source B, (c) cross-reference for patterns — query your action_log for recurring patterns or your knowledge store for accumulated preferences, (d) generate recommendations, (e) format the report, (f) deliver via your channel
 2. Configure the scheduler to run this skill on your desired cadence (e.g., every Monday at 8am)
 3. Run it manually first and review the output. Iterate on the skill until the report quality meets your standard
 4. Enable the schedule and let it run autonomously. Save the output as `domain-report-sample.md`
@@ -186,7 +189,7 @@ Then describe how to test that isolation actually works.
 1. Create three group directories: `groups/main/`, `groups/[work-group]/`, `groups/[external-group]/`
 2. Write a distinct `CLAUDE.md` for each group with different identity, permitted actions, and data access rules
 3. Test isolation: from the non-admin group, attempt an admin action (like modifying system config). Verify it fails or is refused
-4. Test data boundaries: from the external group, attempt to access internal-only data. Verify it is not available
+4. Test data boundaries: from the external group, attempt to query the admin group's action_log or knowledge store. Verify the data is not available. This proves your memory isolation works at the group level, not just the CLAUDE.md level
 5. Create a system architecture diagram showing the three groups, their data access, and the boundaries between them
 6. Document all test results
 

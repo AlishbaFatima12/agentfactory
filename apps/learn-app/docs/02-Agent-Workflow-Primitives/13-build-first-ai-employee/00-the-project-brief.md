@@ -59,15 +59,15 @@ The result is something you can actually use: an AI employee built for YOUR work
 
 Your AI employee is a NanoClaw instance configured for your specific profession. It receives messages via WhatsApp (and optionally other channels), processes them using Claude with your domain knowledge encoded as skills, and responds with profession-appropriate expertise.
 
-By the end of the Bronze tier, your employee will have a professional identity, at least one domain skill, a working communication channel, and a logged conversation proving it works. Silver adds proactive behavior, trust boundaries, and a domain-specific report. Gold extends the architecture to multiple isolated groups.
+By the end of the Bronze tier, your employee will have a professional identity, at least one domain skill, a working communication channel, and a logged conversation proving it works. Silver adds proactive behavior, trust boundaries, persistent memory, and a domain-specific report. Gold extends the architecture to multiple isolated groups.
 
 ## Choose Your Tier
 
 | Tier | Path | Time | What You Build |
 |------|------|------|----------------|
 | **Bronze** | The Project Brief through Bronze Capstone: First Real Day | ~3 hours | Identity + one skill + WhatsApp connection + proof of work |
-| **Silver** | The Project Brief through Prove Professional Value | ~5 hours | Bronze + scheduled tasks + permission boundaries + domain report |
-| **Gold** | The Project Brief through Prove Professional Value (Gold track) | ~8 hours | Silver + multi-group architecture with per-group isolation |
+| **Silver** | The Project Brief through Prove Professional Value | ~6 hours | Bronze + scheduled tasks + permission boundaries + persistent memory + domain report |
+| **Gold** | The Project Brief through Prove Professional Value (Gold track) | ~9 hours | Silver + multi-group architecture with per-group isolation |
 
 Pick the tier that matches your time and ambition. Every tier produces something functional. You can always return for the next tier later.
 

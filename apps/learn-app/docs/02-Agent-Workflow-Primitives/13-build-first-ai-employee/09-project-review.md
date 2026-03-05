@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 9
 title: "Project Review"
 description: "Evaluate your AI employee build against tier-specific acceptance criteria, reflect on the gap between design and implementation, and identify next steps"
 keywords:
@@ -14,7 +14,7 @@ keywords:
     "deliverables",
   ]
 chapter: 13
-lesson: 8
+lesson: 9
 duration_minutes: 25
 
 skills:
@@ -79,6 +79,7 @@ Review your `nanoclaw-employee/` repository against the criteria for your tier. 
 
 - [ ] `scheduler-config.md` with scheduled task design — what runs, when, and why that cadence matters for your profession (Make Your Employee Proactive)
 - [ ] `hitl-boundaries.md` with 4 or more categorized actions — each with domain-specific reasoning for why it is auto-approve, needs-approval, or never-automate (Teach Your Employee Boundaries)
+- [ ] `memory-config.md` with action log and knowledge store schemas — working SQLite tables that log autonomous actions and persist corrections from real interactions (Give Your Employee a Memory)
 - [ ] `domain-report-sample.md` — an actual report your employee generated autonomously, pulling from 2 or more data sources, containing at least one proactive recommendation (Prove Professional Value)
 
 ### Gold Tier (All Silver items, plus)
@@ -86,6 +87,7 @@ Review your `nanoclaw-employee/` repository against the criteria for your tier. 
 - [ ] 3 groups configured with distinct `CLAUDE.md` files — `main` (admin), a professional work group, and a client-facing or external group, each with different identity and permissions (Prove Professional Value)
 - [ ] Isolation test results documented — evidence that the non-admin group cannot perform admin actions or access restricted data (Prove Professional Value)
 - [ ] System architecture diagram — showing the three groups, their data access boundaries, and communication flows between them (Prove Professional Value)
+- [ ] Memory isolation demonstrated — each group has independent action logs and knowledge stores; non-admin groups cannot access admin memory (Give Your Employee a Memory + Prove Professional Value)
 
 ## Reflection
 
@@ -96,5 +98,7 @@ Consider these questions:
 **How much of your Layer 3 design did you implement?** Count the skills you designed versus the skills you built. Count the MCP connections you planned versus the ones that work. The gap between plan and execution is normal — the question is whether you understand why the gap exists.
 
 **What would take your employee from its current tier to the next?** If you completed Bronze, what specific work would get you to Silver? If you completed Silver, what is the hardest part of Gold? Be concrete — "add scheduling" is vague, "build a weekly cash flow report skill that reads bank CSV and invoice spreadsheet" is actionable.
+
+**How did your employee's behavior change after corrections?** Review your knowledge store entries. Did the employee behave differently the next time a relevant task came up? For Gold students: does your memory isolation actually hold, or can groups leak knowledge to each other?
 
 **What surprised you about encoding your professional expertise into an AI system?** Most people discover that the hardest part is not the technology — it is articulating the judgment calls they make unconsciously every day. What did you know that you did not know you knew?
