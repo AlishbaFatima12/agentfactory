@@ -1,6 +1,6 @@
 ---
-title: "Which Agents to Use in 2026"
-description: "OpenClaw, Claude Code, Claude Cowork, NanoClaw, and Codex—five agentic tools representing five philosophies of AI automation."
+title: "Which AI Employees Should You Use in 2026?"
+description: "Five AI tools — matched to who you are and what you need. Find your starting point in under a minute."
 sidebar_position: -1.5
 pagination_prev: thesis
 keywords:
@@ -11,7 +11,9 @@ keywords:
   - NanoClaw
   - Codex
   - AI agents 2026
-  - agent comparison
+  - AI employees
+  - personal AI employee
+  - Digital FTE
 ---
 
 <div style={{
@@ -27,7 +29,7 @@ keywords:
   letterSpacing: '-0.02em',
   color: 'var(--ifm-color-emphasis-900)',
   marginBottom: '0.5rem'
-}}>Which Agents to Use in 2026?</h1>
+}}>Which AI Employees Should You Use?</h1>
 
 <p style={{
   fontSize: '1.1rem',
@@ -37,332 +39,125 @@ keywords:
   color: 'var(--ifm-color-emphasis-700)',
   marginBottom: '1.5rem'
 }}>
-Five agentic tools. Five philosophies. One landscape every builder needs to understand.
-</p>
-
-<p style={{
-  fontSize: '0.95rem',
-  lineHeight: '1.7',
-  color: 'var(--ifm-color-emphasis-600)',
-  maxWidth: '640px',
-  margin: '0 auto'
-}}>
-The year 2026 marks the transition from chatbots to fully agentic software. Instead of merely generating text, modern AI tools can plan tasks, call tools, run code, and interact with real systems. The ecosystem now includes both cloud-hosted enterprise agents and local open-source autonomous agents.
+The Agent Factory thesis says the future belongs to AI employees that deliver results. These are the five you'll work with throughout this book.
 </p>
 
 </div>
 
 ---
 
-## The Rise of Agentic Development Tools
+## Find Your Starting Point
 
-Agentic systems are AI programs that **plan → call tools → observe results → iterate**, allowing them to perform multi-step tasks autonomously. These tools differ from earlier copilots because they can execute commands, manipulate files, control browsers, coordinate sub-agents, and automate workflows.
+You don't need all five tools on day one. Find yourself below, and start there.
 
-The five tools discussed here represent five different philosophies of agentic AI:
-
-| Tool              | Philosophy                               |
-| ----------------- | ---------------------------------------- |
-| **OpenClaw**      | Open-source autonomous personal agent    |
-| **Claude Code**   | Developer-centric coding agent           |
-| **Claude Cowork** | Productivity coworker for non-developers |
-| **NanoClaw**      | Minimal lightweight agent architecture   |
-| **Codex**         | Cloud-powered autonomous coding agent    |
+| You Are... | Start With | Why |
+| --- | --- | --- |
+| **A developer or engineer** who builds software | **Claude Code** + **OpenClaw** | Claude Code is your all-purpose AI employee — it works right from your computer. OpenClaw adds a personal AI assistant on your phone and messaging apps. |
+| **A domain expert** in finance, law, operations, or another field | **Claude Cowork** + **OpenClaw** | Cowork handles your business workflows — reports, analysis, documents — without requiring any technical setup. OpenClaw manages your daily tasks through WhatsApp or Slack. |
+| **An executive or team leader** guiding AI adoption | **Claude Cowork** | Cowork connects to your team's existing tools (Google Drive, Gmail, Excel, DocuSign) and runs scheduled tasks automatically. Start here to experience what AI employees actually feel like. |
+| **A product manager or architect** designing AI-powered systems | **Claude Code** + **Codex** | Claude Code for general-purpose work and prototyping. Codex when you need heavy-duty reasoning through complex system designs. |
+| **Someone who cares deeply about security and data control** | **NanoClaw** | NanoClaw runs every AI employee inside a sealed container on your machine. Nothing leaks out. The codebase is small enough to read and audit yourself. |
 
 ---
 
-## OpenClaw
+## What to Install on Day One
 
-### Overview
+**If you're a developer:** Install [OpenClaw](https://openclaw.ai) and [Claude Code](https://claude.com/code). You'll use both from Part 1 onwards.
 
-OpenClaw is an open-source autonomous AI agent that runs locally and interacts with users through messaging platforms such as Telegram, Slack, or WhatsApp. Unlike traditional assistants, it can execute tasks directly on the user's system. The project surpassed 250,000 GitHub stars within four months of launch, making it one of the most-starred software projects on GitHub.
-
-### Key Characteristics
-
-- Fully open source (MIT license)
-- Runs locally on your machine
-- Integrates with 30+ messaging channels
-- Can run shell commands, browser automation, and file operations
-- Supports multiple LLM providers (Claude, GPT, DeepSeek, and others)
-
-### Architecture
-
-```
-User → Messaging Interface
-       ↓
-Agent Runtime
-       ↓
-LLM (Claude / GPT / DeepSeek)
-       ↓
-Tools (shell, browser, APIs, filesystem)
-```
-
-### Strengths
-
-- Full control over execution environment
-- Extremely flexible and extensible
-- Works with multiple LLM providers
-- Persistent agent memory
-- Massive community and plugin ecosystem
-
-### Weaknesses
-
-- Setup complexity for non-technical users
-- Security risks when agents access system resources
-- Requires technical knowledge to configure safely
-
-### Best Use Cases
-
-OpenClaw is ideal for AI hackers, DevOps automation, personal agent experimentation, and multi-agent research. _Chapter 7 walks you through building your first AI Employee with OpenClaw._
+**If you're not a developer:** Install [OpenClaw](https://openclaw.ai) and [Claude Cowork](https://claude.com/cowork) (inside Claude Desktop). No command line required.
 
 ---
 
-## Claude Code
+## The Five AI Employees
 
-### Overview
+### OpenClaw — Your Personal AI Employee
 
-Claude Code is a developer-focused agentic coding assistant from Anthropic. It operates through the terminal or IDE, enabling developers to delegate complex coding tasks directly to the AI. It understands entire project structures and integrates deeply with Git, testing frameworks, and development workflows.
+Created by Peter Steinberger and backed by **OpenAI** and **Vercel**, OpenClaw became the most-starred software project on GitHub in early 2026 — surpassing 250,000 stars in roughly 60 days. Over 1.5 million AI employees have been created on the platform.
 
-### Key Characteristics
+**Think of it as:** a tireless personal assistant that lives in your messaging apps. It sorts your email, manages your calendar, books your flights, handles insurance paperwork, and runs whatever daily tasks you teach it — all through WhatsApp, Telegram, Slack, or any of 50+ messaging apps you already use.
 
-- Reads and modifies entire codebases
-- Runs terminal commands and shell scripts
-- Creates pull requests and manages Git workflows
-- Refactors large projects with architectural awareness
-- Supports sub-agent delegation for parallel work
+OpenClaw is fully open source (MIT license). You run it on your own machine, pick your own AI model (Claude, GPT, DeepSeek, or others), and extend it with over 5,700 community-built skills from the ClawHub marketplace. Its personality is configured through a simple Markdown file called SOUL.md — the same format you'll learn to write specifications in throughout this book.
 
-### Architecture
-
-```
-Developer → Terminal / IDE
-            ↓
-Claude Code CLI
-            ↓
-Claude Model (API)
-            ↓
-Filesystem / Shell / Git
-```
-
-### Strengths
-
-- Best-in-class reasoning on large codebases
-- Deeply integrated developer workflows
-- Enterprise support and security controls
-- Spec-driven development methodology
-
-### Weaknesses
-
-- Primarily focused on software development
-- Cloud-dependent (requires API access)
-- Less flexible than open-source agents for non-coding tasks
-
-### Best Use Cases
-
-Claude Code is optimal for software engineers, startups building applications, large codebase refactoring, and AI-assisted development. _Chapter 5 teaches Spec-Driven Development using Claude Code as the primary tool, and Part 4 uses it throughout for Python development._
+_Chapter 7 walks you through setting up your first AI employee with OpenClaw._
 
 ---
 
-## Claude Cowork
+### Claude Code — Your All-Purpose AI Employee
 
-### Overview
+Claude Code is built by Anthropic and runs on your computer. Despite the name, it does far more than write code. Anthropic renamed its underlying framework from "Claude Code SDK" to the **Claude Agent SDK** because teams were using it for research, video production, data analysis, note-taking, and dozens of non-coding tasks.
 
-Claude Cowork extends Claude's agentic capabilities to general workplace tasks, targeting knowledge workers who are not necessarily developers. It runs within the Claude Desktop app on macOS and Windows, powered by Claude Opus 4.6 with a 1M context window.
+**Think of it as:** a general-purpose employee who can do anything you could do at a computer, but faster. Give it a task in plain English — analyze this spreadsheet, organize these files, research this topic, build this feature — and it plans the steps, executes them, and shows you the results. It reads your files, runs commands, manages your code, and can even delegate subtasks to specialized helpers that work in parallel.
 
-### Key Characteristics
+Claude Code is the primary tool you'll use throughout this book. Its skills system (reusable instruction files called SKILL.md) and its ability to spawn specialized sub-employees are the building blocks of the Agent Factory method.
 
-- Automates reports, file organization, and document analysis
-- Reads from and writes to local files directly
-- Supports scheduled tasks that run automatically
-- Coordinates multiple sub-agents for complex work
-- Connects to external systems via MCP and plugins
-
-### Architecture
-
-```
-User → Claude Desktop
-       ↓
-Cowork Agent
-       ↓
-Claude Opus 4.6 (1M context)
-       ↓
-Work Apps (GDrive, Slack, Notion, Files)
-```
-
-### Strengths
-
-- Extremely user-friendly — no terminal required
-- Minimal setup for powerful automation
-- Scheduled and background task execution
-- Integrates with enterprise productivity tools
-
-### Weaknesses
-
-- Limited customization compared to open-source options
-- Subscription cost (Pro, Max, Team, or Enterprise plan)
-- Depends on cloud services
-
-### Best Use Cases
-
-Claude Cowork is designed for office workers, analysts, researchers, executives, and operations teams. _Part 3 explores Claude Cowork for enterprise business workflows, including financial modeling in Excel._
+_Chapter 5 introduces Spec-Driven Development with Claude Code as the engine. You'll use it in every part of the book._
 
 ---
 
-## NanoClaw
+### Claude Cowork — Your Enterprise AI Employee
 
-### Overview
+Claude Cowork is Anthropic's AI employee for business professionals who don't work in a terminal. It runs inside the Claude Desktop app on macOS and Windows.
 
-NanoClaw is not a single commercial product but a minimalist architecture pattern emerging from the open-source agent ecosystem. The core idea: build small autonomous agents that do one job extremely well.
+**Think of it as:** a knowledgeable coworker who handles the work you never have time for — building reports, analyzing documents, organizing files, drafting presentations, and managing recurring tasks. It connects directly to your team's everyday tools: Google Drive, Gmail, Google Calendar, DocuSign, Excel, PowerPoint, and more.
 
-### Key Characteristics
+In February 2026, Anthropic shipped a major enterprise upgrade: private plugin marketplaces (so your company controls exactly which capabilities are available), department-specific plugins for HR, finance, engineering, legal, and operations, and a `/schedule` command that lets you set up tasks that run automatically — like a weekly competitor analysis every Monday morning.
 
-- A small runtime with a single LLM connection
-- A focused toolset for one specific task
-- Event-driven triggers (API calls, schedules, webhooks)
-- Container-isolated execution for security
-
-### Architecture
-
-```
-Trigger (API / schedule)
-       ↓
-Nano Agent
-       ↓
-LLM
-       ↓
-Tool
-```
-
-### Example NanoClaw Agents
-
-- GitHub issue triager
-- Meeting summary bot
-- Daily research assistant
-- Automated dataset analyzer
-- Document compliance checker
-
-### Strengths
-
-- Extremely lightweight and easy to deploy
-- Highly modular and composable
-- Cheap to run at scale
-- Strong isolation boundaries
-
-### Weaknesses
-
-- Limited autonomy compared to full agents
-- Less capable for complex multi-step tasks
-- Requires orchestration to scale across workflows
-
-### Best Use Cases
-
-NanoClaw fits micro-automation, serverless AI workflows, event-driven systems, and AI microservices. _This book covers a production implementation of the NanoClaw pattern with container isolation and security-first design._
+_Part 3 covers business-domain workflows — finance, legal, marketing, operations — the work that Cowork was built to handle._
 
 ---
 
-## Codex
+### NanoClaw — Your Secure AI Employee
 
-### Overview
+[NanoClaw](https://github.com/qwibitai/nanoclaw) is a lightweight, security-first alternative to OpenClaw. Where OpenClaw has nearly half a million lines of code, NanoClaw delivers the same core experience — an AI assistant on your messaging apps — in a codebase small enough to read and understand.
 
-Codex is OpenAI's software engineering agent, available in two modes: a cloud-hosted agent that works on tasks in parallel sandboxed environments, and an open-source CLI tool built in Rust for local terminal use. The cloud agent is powered by codex-1, a version of o3 optimized for software engineering.
+**Think of it as:** OpenClaw with a locked door. Every AI employee runs inside its own sealed container on your machine — a walled-off environment where it can only see the files you explicitly allow, with no internet access unless you grant it. This isn't a software setting; it's enforced by the operating system itself (Linux containers on Linux, Apple Containers on macOS).
 
-### Key Characteristics
+NanoClaw connects to WhatsApp, Telegram, Slack, Discord, and Gmail. It has persistent memory, scheduled jobs (daily briefings, weekly reports, pipeline monitoring), and is the first personal AI assistant to support **agent swarms** — teams of specialized AI employees that collaborate inside your chat. It runs directly on Anthropic's Agents SDK, the same framework you'll learn to build with in Part 5.
 
-- Cloud sandbox runs tasks autonomously (1–30 minutes per task)
-- CLI runs locally with granular approval controls
-- Multi-agent support via OpenAI Agents SDK
-- MCP integration for external tool access
-- Each cloud task runs in an isolated, network-disabled workspace
-
-### Architecture
-
-**Cloud Mode:**
-
-```
-Developer → Codex Web App
-            ↓
-Cloud Sandbox (per task)
-            ↓
-codex-1 Model
-            ↓
-Repository + Tests + Tools
-```
-
-**CLI Mode:**
-
-```
-Developer → Terminal
-            ↓
-Codex CLI (Rust)
-            ↓
-OpenAI API
-            ↓
-Filesystem / Shell
-```
-
-### Strengths
-
-- Parallel task execution in cloud sandboxes
-- No local setup required for cloud mode
-- Iterates autonomously until tests pass
-- Open-source CLI for local control
-
-### Weaknesses
-
-- Cloud mode has no network access during execution
-- Less interactive than real-time coding agents
-- CLI requires OpenAI API access
-
-### Best Use Cases
-
-Codex is suited for developers who want to delegate multiple coding tasks simultaneously, teams running parallel feature development, and organizations that prefer cloud-isolated execution. _Part 3 demonstrates how SKILL.md specifications port across Codex, Claude Code, and other platforms._
+_Part 5 teaches you to build custom AI employees with the same framework that powers NanoClaw._
 
 ---
 
-## Feature Comparison
+### Codex — Your Power Engineering AI Employee
 
-| Feature              | OpenClaw                   | Claude Code            | Claude Cowork       | NanoClaw              | Codex                      |
-| -------------------- | -------------------------- | ---------------------- | ------------------- | --------------------- | -------------------------- |
-| **Type**             | Open-source agent platform | Developer coding agent | Productivity agent  | Minimal agent pattern | Cloud + CLI coding agent   |
-| **Deployment**       | Local / self-hosted        | Cloud API + local CLI  | Desktop cloud agent | Anywhere              | Cloud sandbox + local CLI  |
-| **Primary Users**    | AI hackers and builders    | Software engineers     | Knowledge workers   | Automation engineers  | Developers and teams       |
-| **Tool Access**      | Very high                  | High                   | Medium              | Low                   | Medium                     |
-| **Setup Complexity** | High                       | Medium                 | Low                 | Very low              | Low (cloud) / Medium (CLI) |
-| **Customization**    | Maximum                    | Medium                 | Low                 | Medium                | Low                        |
-| **Autonomy**         | High                       | Medium                 | Medium              | Low                   | High (cloud)               |
-| **Open Source**      | Yes (MIT)                  | No                     | No                  | Pattern (varies)      | CLI only (open source)     |
+Codex is OpenAI's AI employee for hard engineering problems. It runs in two modes: a cloud mode where it works completely on its own in an isolated environment (typically 1–30 minutes per task), and an open-source command-line tool built in Rust that runs locally on your machine. Over one million developers adopted the local tool in its first month.
+
+**Think of it as:** the specialist you call in for the hardest jobs. While Claude Code handles the everyday, Codex is built for complex reasoning — designing system architectures, refactoring large codebases, tackling multi-file engineering problems that require deep thinking. Its latest model (GPT-5.3-Codex) combines frontier coding ability with advanced reasoning, and it's expanding beyond code into broader knowledge work.
+
+In cloud mode, you describe what you want, and Codex plans, builds, tests, and iterates autonomously until the work passes your tests — all in a sealed sandbox. You can run multiple tasks in parallel, each in its own isolated environment.
+
+_Parts 4 and 5 build the skills you need to direct AI employees like Codex: writing specifications they can execute, evaluating their output, and orchestrating teams of specialized workers._
 
 ---
 
-## Choosing the Right Tool
+## Your Journey Through the Book
 
-**Choose OpenClaw if** you want maximum control, you are building multi-agent systems, or you want to run agents locally on your own infrastructure.
-
-**Choose Claude Code if** you are a developer who needs help with code generation, refactoring, and debugging, or you want enterprise-grade AI-assisted development with spec-driven workflows.
-
-**Choose Claude Cowork if** you want a personal AI coworker for documents, reports, and research, or you prefer simple setup without terminal knowledge.
-
-**Choose NanoClaw if** you want tiny, focused AI automation services, you are building event-driven agent systems, or you want to scale many single-purpose agents cheaply.
-
-**Choose Codex if** you want to delegate multiple coding tasks in parallel, your team prefers cloud-isolated execution, or you want an open-source CLI alternative for local work.
+| Book Section | What You're Learning | Primary AI Employee | Supporting |
+| --- | --- | --- | --- |
+| **Part 1** — Foundations | What AI employees are and how to work with them | Claude Code | OpenClaw |
+| **Part 2** — Workflow Primitives | File processing, data extraction, version control | Claude Code | — |
+| **Part 3** — Business Domains | Finance, legal, marketing, operations workflows | Claude Cowork | Claude Code |
+| **Part 4** — Programming | Python development, testing, debugging | Claude Code | Codex |
+| **Part 5** — Building Custom AI Employees | Frameworks, tool protocols, databases, evaluation | Claude Code | NanoClaw |
 
 ---
 
-## The Future: Agent Fleets
+## Side-by-Side Comparison
 
-The most important trend for 2026 is **multi-agent orchestration**. Instead of a single AI assistant, systems increasingly deploy teams of specialized agents coordinated by a supervisor.
+| | OpenClaw | Claude Code | Claude Cowork | NanoClaw | Codex |
+| --- | --- | --- | --- | --- | --- |
+| **In one line** | Personal AI on your messaging apps | All-purpose AI on your computer | Enterprise AI for business work | Secure AI in sealed containers | Power AI for hard engineering |
+| **Best for** | Everyone | Developers and power users | Business professionals | Security-conscious teams | Complex coding and architecture |
+| **You talk to it via** | WhatsApp, Telegram, Slack, 50+ apps | Your computer's terminal or code editor | Claude Desktop app | WhatsApp, Telegram, Slack, Discord, Gmail | Terminal, code editor, or web app |
+| **Open source?** | Yes (MIT license) | No | No | Yes | Local tool only |
+| **Backed by** | OpenAI + Vercel | Anthropic | Anthropic | Community + Anthropic SDK | OpenAI |
 
-```
-Supervisor Agent
-    ├── Research Agent
-    ├── Coding Agent
-    ├── Data Agent
-    └── Automation Agent
-```
+---
 
-The layered approach is already emerging:
+## The Big Picture: Your Agent Fleet
 
-- **NanoClaw** micro-agents perform small, focused tasks
-- **Codex** and **Claude Code** build and maintain software
-- **Claude Cowork** manages knowledge work and business processes
-- **OpenClaw** orchestrates everything from a local control plane
+Nobody uses just one AI employee. The most effective setup in 2026 is a fleet — each tool handling what it does best. OpenClaw or NanoClaw manages your personal tasks. Claude Code handles your development and general-purpose work. Claude Cowork runs your team's business processes. Codex tackles the hardest engineering challenges.
 
-This architecture points toward **personal AI operating systems** composed of fleets of specialized agents — and it is precisely what the Agent Factory method is designed to build.
+This book teaches you to think in terms of fleets from the start. By Part 5, you'll be building your own specialized AI employees that slot into this ecosystem — Digital FTEs that other people will pay to use.
+
+*Last updated: March 2026*
