@@ -46,20 +46,12 @@ from .chatkit_store import (  # noqa: E402
 from .fte.answer_verification import detect_special_request  # noqa: E402
 from .metering import create_metering_hooks  # noqa: E402
 from .services.content_loader import load_lesson_content  # noqa: E402
-from .services.lesson_chunker import get_lesson_chunks  # noqa: E402
 
-# Enable agent-native mode (v3) - reviewer's architecture
-# When True: uses dynamic instructions + function tools + zero branching
-# When False: uses v2 chunked mode with server-side state machine
-USE_AGENT_NATIVE_TEACH = True
-
-# Enable skill-based teaching (v4) - simplified approach per reviewer
-# When True: uses skill prompt + learner profile + lesson content (no state machine)
-# This is the "agent as a tool" approach - simpler, more direct
-USE_SKILL_BASED_TEACH = True  # New simplified approach
+# Enable skill-based teaching (v4) - simplified approach
+# Uses skill prompt + learner profile + lesson content (no state machine)
+USE_SKILL_BASED_TEACH = True
 
 logger = logging.getLogger(__name__)
-logger.info(f"[ChatKit] USE_AGENT_NATIVE_TEACH = {USE_AGENT_NATIVE_TEACH}")
 
 # Fake ID constant from agents SDK (used by OpenAIChatCompletionsModel)
 # When using Chat Completions API, the SDK returns this placeholder ID
@@ -412,239 +404,6 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
 
         logger.info(f"[ChatKit] v4: Done for thread {thread.id}")
 
-    async def handle_teach_mode_v3(
-        self,
-        thread: ThreadMetadata,
-        user_text: str,
-        lesson_path: str,
-        user_name: str | None,
-        context: RequestContext,
-        is_first_message: bool,
-        content: str = "",
-        title: str = "",
-    ) -> AsyncIterator[ThreadStreamEvent]:
-        """
-        Handle Teach Me mode with agent-native architecture (v3).
-
-        Per reviewer: Zero branching - just: load → build context → run → save
-
-        Args:
-            thread: Thread metadata
-            user_text: User's message text
-            lesson_path: Path to lesson content
-            user_name: User's display name
-            context: Request context
-            is_first_message: Whether this is the first message in thread
-            content: Pre-loaded lesson content (avoids duplicate loading)
-            title: Pre-loaded lesson title (avoids duplicate loading)
-        """
-        from agents import Runner
-
-        from .fte.teach_agent import create_teach_agent
-        from .fte.teach_context import TeachContext
-        from .services.session_state import get_session_state, save_session_state
-
-        logger.info(f"[ChatKit] AGENT-NATIVE MODE (v3) for thread {thread.id}")
-
-        # 1. Use passed content/title or load (for direct calls)
-        if not content or not title:
-            content_data = await load_lesson_content(lesson_path)
-            content = content or content_data.get("content", "")
-            title = title or content_data.get("title", "Unknown")
-
-        chunks = await get_lesson_chunks(lesson_path, content, title)
-        state = await get_session_state(thread.id) or {}
-
-        logger.info(
-            f"[ChatKit] v3: title='{title}', chunks={len(chunks)}, "
-            f"state={state}"
-        )
-
-        # 1.5a QUICK_START: Parse personalization from UI picker
-        # Format: QUICK_START|path|level|profession (profession optional)
-        # Uses pipe delimiter to allow colons in profession (e.g., "AI:ML Engineer")
-        if user_text.startswith("QUICK_START|") or user_text.startswith("QUICK_START:"):
-            # Support both pipe (new) and colon (legacy) delimiters
-            delimiter = "|" if "|" in user_text else ":"
-            parts = user_text.split(delimiter)
-            if len(parts) >= 3:
-                qs_path = parts[1]  # work, passion, everyday, direct
-                qs_level = parts[2]  # beginner, intermediate, advanced
-                # Get profession from remaining parts joined (in case colon in profession)
-                qs_world = delimiter.join(parts[3:]) if len(parts) > 3 and parts[3].strip() else (
-                    "everyday life" if qs_path == "everyday" else
-                    "technical concepts" if qs_path == "direct" else
-                    "professional work"  # Better default for work/passion paths
-                )
-
-                # Pre-populate state - skip onboarding entirely
-                state["current_phase"] = "phase_2"
-                state["personalization_path"] = qs_path
-                state["learner_type"] = qs_level
-                state["student_world"] = qs_world
-                state["student_role"] = qs_world
-                state["ai_experience_asked"] = True
-                state["ai_experience_answered"] = True
-                # Mark that profile is already complete - DO NOT ask again
-                state["profile_complete"] = True
-
-                logger.info(
-                    f"[ChatKit] v3: QUICK_START: path={qs_path}, "
-                    f"level={qs_level}, world={qs_world}"
-                )
-
-                # Replace with start prompt - profile already complete
-                user_text = (
-                    "Start teaching directly. My profile is already set. "
-                    "Do not ask about my profession or field."
-                )
-
-        # Image generation removed - will be added in separate PR with proper
-        # budget controls and async handling (see PR review comments)
-
-        # 2. Build context for Guided Learning v9 (simplified)
-        from .fte.teach_agent import extract_key_concepts
-
-        # Pre-extract key concepts from first chunk
-        first_chunk = chunks[0] if chunks else None
-        if isinstance(first_chunk, dict):
-            chunk_content = first_chunk.get("content", "")
-            chunk_title = first_chunk.get("title", "")
-        elif first_chunk:
-            chunk_content = first_chunk.content
-            chunk_title = first_chunk.title
-        else:
-            chunk_content = ""
-            chunk_title = ""
-        key_concepts = state.get("key_concepts") or extract_key_concepts(chunk_content, chunk_title)
-
-        teach_ctx = TeachContext(
-            # Core lesson data
-            lesson_title=title,
-            chunks=[
-                {"index": c["index"] if isinstance(c, dict) else c.index,
-                 "title": c["title"] if isinstance(c, dict) else c.title,
-                 "content": c["content"] if isinstance(c, dict) else c.content}
-                for c in chunks
-            ],
-            current_chunk_index=state.get("concept_index", 0),
-            total_chunks=len(chunks),
-            is_first_message=is_first_message,
-            thread_id=thread.id,
-            user_name=user_name or "",
-
-            # Student Profile
-            current_phase=state.get("current_phase", "phase_0"),
-            student_role=state.get("student_role", ""),
-            student_world=state.get("student_world", ""),
-            learner_type=state.get("learner_type", "intermediate"),
-
-            # Personalization
-            personalization_path=state.get("personalization_path", ""),
-            ai_experience_asked=state.get("ai_experience_asked", False),
-            ai_experience_answered=state.get("ai_experience_answered", False),
-
-            # Teaching state (minimal)
-            key_concepts=key_concepts,
-            discovered_concepts=state.get("discovered_concepts", []),
-            conversation_turns=state.get("conversation_turns", 0),
-        )
-
-        # 3. Create and run agent — no branching, no script selection
-        agent = create_teach_agent()
-
-        # Create agent context for streaming
-        agent_context = AgentContext(
-            thread=thread,
-            store=self.store,
-            request_context=context,
-        )
-
-        # Create metering hooks
-        metering_hooks = create_metering_hooks()
-
-        logger.info(f"[ChatKit] v3: Running agent for thread {thread.id}")
-
-        try:
-            result = Runner.run_streamed(
-                agent,
-                user_text,
-                context=teach_ctx,
-                hooks=metering_hooks,
-            )
-
-            try:
-                async for event in _stream_with_real_ids(agent_context, result, thread.id):
-                    yield event
-
-            except Exception as stream_err:
-                # Log the actual error from Gemini for debugging
-                error_str = str(stream_err)
-                logger.error(f"[ChatKit] Stream error: {type(stream_err).__name__}: {error_str}")
-
-                # Check for specific Gemini API errors
-                if "400" in error_str or "INVALID_ARGUMENT" in error_str:
-                    logger.error("[ChatKit] Gemini 400 error - possibly tool call format issue")
-
-                # Re-raise to be handled by outer exception handler
-                raise
-
-            # Guardrails removed - simplified Guided Learning agent
-
-            # Save updated teaching state after response (simplified v9)
-            from .services.session_state import TeachSessionState
-            new_state: TeachSessionState = {
-                "concept_index": teach_ctx.current_chunk_index,
-                "current_phase": teach_ctx.current_phase,
-                "lesson_path": lesson_path,
-                "status": "complete" if teach_ctx.is_complete else "teaching",
-                # Student profile
-                "student_role": teach_ctx.student_role,
-                "student_world": teach_ctx.student_world,
-                "learner_type": teach_ctx.learner_type,
-                # Personalization
-                "personalization_path": teach_ctx.personalization_path,
-                "ai_experience_asked": teach_ctx.ai_experience_asked,
-                "ai_experience_answered": teach_ctx.ai_experience_answered,
-                "profile_complete": state.get("profile_complete", False),  # Preserve flag
-                # Teaching state
-                "key_concepts": teach_ctx.key_concepts,
-                "discovered_concepts": teach_ctx.discovered_concepts,
-                "conversation_turns": teach_ctx.conversation_turns + 1,  # Increment!
-            }
-            await save_session_state(thread.id, new_state)
-
-        except HTTPException as http_err:
-            if http_err.status_code == 402:
-                # Handle metering error gracefully using shared helper
-                detail: dict[str, Any] = (
-                    http_err.detail if isinstance(http_err.detail, dict) else {}
-                )
-                error_text = _format_402_error_text(detail)
-                error_code = detail.get("error_code", "INSUFFICIENT_BALANCE")
-                logger.warning(f"[ChatKit] v3 Metering blocked: {error_code}")
-                error_message = AssistantMessageItem(
-                    id=self.store.generate_item_id("message", thread, context),
-                    thread_id=thread.id,
-                    created_at=datetime.now(),
-                    content=[AssistantMessageContent(text=error_text, annotations=[])],
-                )
-                yield ThreadItemDoneEvent(item=error_message)
-                return
-            raise
-        except Exception:
-            if metering_hooks:
-                await metering_hooks.release_on_error(agent_context)
-            raise
-
-        # 4. Final state already saved in try block with incremented turns
-        # No duplicate save needed - removed to prevent overwriting increment
-
-        logger.info(
-            f"[ChatKit] v3: Done. chunk={teach_ctx.current_chunk_index}, "
-            f"phase={teach_ctx.current_phase}, turns={teach_ctx.conversation_turns}"
-        )
-
     async def respond(
         self,
         thread: ThreadMetadata,
@@ -765,10 +524,7 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             )
 
             # ROUTING: Choose handler based on mode and flags
-            logger.info(
-                f"[ChatKit] MODE CHECK: SKILL={USE_SKILL_BASED_TEACH}, "
-                f"AGENT_NATIVE={USE_AGENT_NATIVE_TEACH}, mode='{mode}'"
-            )
+            logger.info(f"[ChatKit] MODE CHECK: SKILL={USE_SKILL_BASED_TEACH}, mode='{mode}'")
 
             # Set thread title for new threads (common to all modes)
             if is_first_message and mode == "teach":
@@ -796,33 +552,6 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 ):
                     yield event
                 return
-
-            # AGENT-NATIVE MODE (v3): Dynamic instructions + function tools
-            if USE_AGENT_NATIVE_TEACH and mode == "teach":
-                logger.info("[ChatKit] >>> ROUTING TO AGENT-NATIVE MODE (v3) <<<")
-
-                async for event in self.handle_teach_mode_v3(
-                    thread=thread,
-                    user_text=user_text,
-                    lesson_path=lesson_path,
-                    user_name=user_name,
-                    context=context,
-                    is_first_message=is_first_message,
-                    content=content,
-                    title=title,
-                ):
-                    yield event
-
-                # Handle trigger message deletion for v3
-                if _is_trigger_message(user_text) and input_user_message:
-                    try:
-                        await self.store.delete_thread_item(
-                            thread.id, input_user_message.id, context
-                        )
-                        logger.info("[ChatKit] v3: Deleted trigger message")
-                    except Exception as del_err:
-                        logger.warning(f"[ChatKit] v3: Failed to delete trigger: {del_err}")
-                return  # Exit early, v3 handles everything
 
             # ASK MODE: Use ask_agent with DeepSeek for direct answers
             # Store lesson data in metadata for ask_agent's dynamic instructions
