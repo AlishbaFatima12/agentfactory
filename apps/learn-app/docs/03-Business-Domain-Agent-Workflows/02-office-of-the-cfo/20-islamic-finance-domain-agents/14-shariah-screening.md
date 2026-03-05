@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/shariah-screening
-sidebar_position: 13
+sidebar_position: 14
 title: "Shariah Portfolio Screening — Global Standards"
 description: "Apply four competing Shariah equity screening methodologies — SC Malaysia, Tadawul, AAOIFI Standard 21, and MSCI Islamic — to a global portfolio, calculate purification obligations from quarterly dividends, analyze screening divergence where the same company passes one methodology but fails another, and build a quarterly Cowork screening workflow"
 keywords:
@@ -21,7 +21,7 @@ keywords:
     "Amana Income Fund",
   ]
 chapter: 20
-lesson: 13
+lesson: 14
 duration_minutes: 45
 
 # HIDDEN SKILLS METADATA
@@ -187,7 +187,7 @@ The most professionally important concept in Shariah screening is that different
 **Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex10-shariah-screening-amana.md`
 :::
 
-## Exercise 10: Saturna Capital Amana Income Fund — Global Screening
+## Exercise 11: Saturna Capital Amana Income Fund — Global Screening
 
 **What you will build:** A global screening workbook applying four methodologies, a purification calculation, a screening divergence analysis, and a quarterly SSB report.
 
@@ -359,4 +359,4 @@ instead of AAOIFI.
 
 ---
 
-Continue to [Lesson 14: AAOIFI vs IFRS — Full Financial Statements →](./14-aaoifi-vs-ifrs-capstone.md)
+Continue to [Lesson 15: AAOIFI vs IFRS — Full Financial Statements →](./15-aaoifi-vs-ifrs-capstone.md)

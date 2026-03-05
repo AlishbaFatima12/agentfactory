@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/aaoifi-vs-ifrs-capstone
-sidebar_position: 14
+sidebar_position: 15
 title: "AAOIFI vs IFRS — Full Financial Statements"
 description: "Build complete AAOIFI financial statements for a Bahraini Islamic bank, reconcile the five most material AAOIFI/IFRS differences with USD impact, produce IFRS financial statements from reconciling adjustments, compare key ratios under both frameworks, and draft an auditor's risk assessment for framework tension"
 keywords:
@@ -22,7 +22,7 @@ keywords:
     "capstone accounting",
   ]
 chapter: 20
-lesson: 14
+lesson: 15
 duration_minutes: 90
 
 # HIDDEN SKILLS METADATA
@@ -138,7 +138,7 @@ Before building the financial statements, understand the five differences that d
 **Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex11-aaoifi-vs-ifrs-capstone.md`
 :::
 
-## Exercise 11: ABC Islamic Bank (Bahrain) — $8B Total Assets
+## Exercise 12: ABC Islamic Bank (Bahrain) — $8B Total Assets
 
 **What you will build:** Complete AAOIFI financial statements, an AAOIFI/IFRS reconciliation, IFRS financial statements from reconciling adjustments, key ratio comparison, and an auditor's risk assessment.
 
@@ -349,4 +349,4 @@ numbers in the dual-reporting context?
 
 ---
 
-Continue to [Lesson 15: Cross-Border Islamic Banking Group →](./15-cross-border-consolidation.md)
+Continue to [Lesson 16: Cross-Border Islamic Banking Group →](./16-cross-border-consolidation.md)

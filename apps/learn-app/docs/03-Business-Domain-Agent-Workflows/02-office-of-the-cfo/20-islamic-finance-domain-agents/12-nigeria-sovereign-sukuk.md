@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/nigeria-sovereign-sukuk
-sidebar_position: 11
+sidebar_position: 12
 title: "Nigeria Sovereign Sukuk — African Infrastructure Finance"
 description: "Examine Nigeria as Africa's most active sovereign sukuk issuer, apply IFRS to sovereign sukuk from issuer, investor, and contractor perspectives, explore the CBN Non-Interest Banking Framework, and complete a comprehensive FGN sovereign sukuk exercise demonstrating that Islamic finance structures only affect parties to the Shariah contract"
 keywords:
@@ -22,7 +22,7 @@ keywords:
     "African sukuk market",
   ]
 chapter: 20
-lesson: 11
+lesson: 12
 duration_minutes: 45
 
 # HIDDEN SKILLS METADATA
@@ -211,7 +211,7 @@ This principle applies broadly: a supplier to an Islamic bank does not adjust it
 **Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex08-nigeria-fgn-sukuk.md`
 :::
 
-## Practice Exercise 8: FGN Sovereign Sukuk — N300B Ijarah (45 min)
+## Practice Exercise 9: FGN Sovereign Sukuk — N300B Ijarah (45 min)
 
 **What you will build:** A multi-perspective analysis of a sovereign sukuk transaction from issuer, investor, regulator, contractor, and market perspectives.
 
@@ -357,4 +357,4 @@ why not?
 
 ---
 
-Continue to [Lesson 12: Global Zakat Accounting →](./12-global-zakat.md)
+Continue to [Lesson 13: Global Zakat Accounting →](./13-global-zakat.md)

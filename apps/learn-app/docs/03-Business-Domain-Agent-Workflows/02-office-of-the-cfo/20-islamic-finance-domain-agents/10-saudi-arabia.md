@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/saudi-arabia
-sidebar_position: 9
+sidebar_position: 10
 title: "Saudi Arabia — Vision 2030, ZATCA Zakat, and Al Rajhi"
 description: "Examine Saudi Arabia's IFRS framework with KSA-specific rules, compute ZATCA zakat using the equity-based formula, benchmark against Al Rajhi Bank's IFRS presentation standards, and complete a comprehensive Alinma Bank accounting review exercise"
 keywords:
@@ -22,7 +22,7 @@ keywords:
     "Islamic finance Saudi",
   ]
 chapter: 20
-lesson: 9
+lesson: 10
 duration_minutes: 55
 
 # HIDDEN SKILLS METADATA
@@ -203,7 +203,7 @@ Saudi Arabia's Public Investment Fund (PIF) has issued multiple tranches of suku
 **Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex06-saudi-ifi-alinma.md`
 :::
 
-## Practice Exercise 6: Saudi IFI — Alinma Bank Accounting Review (55 min)
+## Practice Exercise 7: Saudi IFI — Alinma Bank Accounting Review (55 min)
 
 **What you will build:** A comprehensive accounting review covering IFRS murabaha benchmarking, ZATCA zakat computation, PIF sukuk classification, green sukuk accounting, and board management accounts.
 
@@ -331,4 +331,4 @@ Present the analysis as if advising the bank's ALCO
 
 ---
 
-Continue to [Lesson 10: UK Islamic Banking →](./10-uk-islamic-banking.md)
+Continue to [Lesson 11: UK Islamic Banking →](./11-uk-islamic-banking.md)

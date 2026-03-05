@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/malaysia-sukuk
-sidebar_position: 8
+sidebar_position: 9
 title: "Malaysia Sukuk — The World's Largest Market"
 description: "Explore Malaysia's dominance of the global sukuk market, apply MFRS 9 and IAS 32 to sukuk musharakah issuance, examine the SRI Sukuk Framework for green and sustainable sukuk, and complete a comprehensive Tenaga Nasional Berhad corporate sukuk exercise"
 keywords:
@@ -22,7 +22,7 @@ keywords:
     "sukuk accounting",
   ]
 chapter: 20
-lesson: 8
+lesson: 9
 duration_minutes: 55
 
 # HIDDEN SKILLS METADATA
@@ -226,7 +226,7 @@ The green designation is an **additional disclosure overlay**, not an accounting
 **Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex05-malaysia-corporate-sukuk.md`
 :::
 
-## Practice Exercise 5: Malaysia Corporate Sukuk — Tenaga Nasional Berhad (55 min)
+## Practice Exercise 6: Malaysia Corporate Sukuk — Tenaga Nasional Berhad (55 min)
 
 **What you will build:** A complete sukuk accounting analysis from issuer classification through SC Malaysia regulatory submission, including green sukuk disclosure.
 
@@ -346,4 +346,4 @@ financial statements.
 
 ---
 
-Continue to [Lesson 9: Saudi Arabia →](./09-saudi-arabia.md)
+Continue to [Lesson 10: Saudi Arabia →](./10-saudi-arabia.md)

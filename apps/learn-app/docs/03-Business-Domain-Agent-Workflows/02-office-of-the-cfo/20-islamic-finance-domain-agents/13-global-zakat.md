@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/global-zakat
-sidebar_position: 12
+sidebar_position: 13
 title: "Global Zakat Accounting"
 description: "Compare zakat calculation methodologies across four jurisdictions — ZATCA equity-based formula (Saudi Arabia), AAOIFI/Hanafi liquid assets formula, Malaysia voluntary zakat, and Pakistan Zakat and Ushr deduction-at-source — and build a global zakat SKILL.md that routes the correct formula by jurisdiction"
 keywords:
@@ -19,7 +19,7 @@ keywords:
     "global Islamic finance",
   ]
 chapter: 20
-lesson: 12
+lesson: 13
 duration_minutes: 40
 
 # HIDDEN SKILLS METADATA
@@ -226,7 +226,7 @@ In AAOIFI disclosures, the amount and recipient charity must be disclosed and co
 **Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex09-global-zakat-comparison.md`
 :::
 
-## Exercise 9: Global Zakat Comparison
+## Exercise 10: Global Zakat Comparison
 
 **What you will build:** A global zakat comparison framework across four jurisdictions, with calculations under each formula and a deployable global zakat SKILL.md.
 
@@ -388,4 +388,4 @@ deduction capability into its core banking system?
 
 ---
 
-Continue to [Lesson 13: Shariah Portfolio Screening →](./13-shariah-screening.md)
+Continue to [Lesson 14: Shariah Portfolio Screening →](./14-shariah-screening.md)
