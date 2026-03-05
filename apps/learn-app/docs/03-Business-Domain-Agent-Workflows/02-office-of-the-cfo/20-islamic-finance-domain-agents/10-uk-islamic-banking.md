@@ -199,8 +199,10 @@ UK Islamic banks operate under the same Prudential Regulation Authority (PRA) an
 
 This matters because the risk-weighted asset (RWA) calculation for a DM home finance portfolio uses the same residential mortgage risk weight as a conventional mortgage portfolio. The Shariah structure does not change the bank's regulatory capital requirements.
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex07-uk-al-rayan-bank.md`, and reference the skill files in `skills/products/musharaka-dm.md` and `skills/jurisdictions/uk-ifrs.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex07-uk-al-rayan-bank.md`
 :::
 
 ## Practice Exercise 7: Al Rayan Bank — UK Islamic Banking (50 min)

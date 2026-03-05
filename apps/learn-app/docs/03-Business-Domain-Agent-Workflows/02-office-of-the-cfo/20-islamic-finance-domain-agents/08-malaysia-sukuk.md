@@ -220,8 +220,10 @@ Malaysia's Securities Commission introduced the Sustainable and Responsible Inve
 
 The green designation is an **additional disclosure overlay**, not an accounting measurement change. This distinction matters because students sometimes assume "green" changes the numbers. It does not — it changes what the issuer must report about how the money is used.
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex05-malaysia-corporate-sukuk.md`, and reference the skill file in `skills/jurisdictions/malaysia-mfrs.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex05-malaysia-corporate-sukuk.md`
 :::
 
 ## Practice Exercise 5: Malaysia Corporate Sukuk — Tenaga Nasional Berhad (55 min)

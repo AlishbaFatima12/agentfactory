@@ -181,8 +181,10 @@ The most professionally important concept in Shariah screening is that different
 
 ---
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex10-shariah-screening-amana.md`, and reference the skill file in `skills/products/shariah-screening-global.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex10-shariah-screening-amana.md`
 :::
 
 ## Exercise 10: Saturna Capital Amana Income Fund — Global Screening

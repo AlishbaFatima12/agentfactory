@@ -197,8 +197,10 @@ Saudi Arabia's Public Investment Fund (PIF) has issued multiple tranches of suku
 
 **Mark-to-market impact:** If held at FVOCI, changes in market yields affect OCI (other comprehensive income) without flowing through profit or loss. A 100 basis point rise in yields on a SAR 2 billion, 5-year duration sukuk portfolio produces a significant unrealised loss in OCI.
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex06-saudi-ifi-alinma.md`, and reference the skill file in `skills/jurisdictions/saudi-ifrs.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex06-saudi-ifi-alinma.md`
 :::
 
 ## Practice Exercise 6: Saudi IFI — Alinma Bank Accounting Review (55 min)

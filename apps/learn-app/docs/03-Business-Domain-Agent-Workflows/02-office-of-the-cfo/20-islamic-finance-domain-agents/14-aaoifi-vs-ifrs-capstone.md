@@ -132,8 +132,10 @@ Before building the financial statements, understand the five differences that d
 
 ---
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex11-aaoifi-vs-ifrs-capstone.md`, and reference the skill file in `skills/jurisdictions/bahrain-aaoifi.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex11-aaoifi-vs-ifrs-capstone.md`
 :::
 
 ## Exercise 11: ABC Islamic Bank (Bahrain) — $8B Total Assets

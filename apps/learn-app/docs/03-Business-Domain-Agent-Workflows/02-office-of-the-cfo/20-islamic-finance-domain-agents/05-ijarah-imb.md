@@ -178,8 +178,10 @@ Consider an Islamic bank with $5 billion of IMB assets:
 
 The difference between holding a physical asset and holding a receivable affects regulatory capital calculations, leverage ratios, and the bank's capacity to write new business. This is not a theoretical concern — it determines how much financing a bank can provide.
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex02-ijarah-four-jurisdictions.md`, and reference the skill files in `skills/products/ijarah-imb.md` and the four jurisdiction overlays.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex02-ijarah-four-jurisdictions.md`
 :::
 
 ## Practice Exercise 2: Ijarah Accounting Across Four Jurisdictions

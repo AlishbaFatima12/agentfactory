@@ -59,26 +59,33 @@ By the end of this chapter, you should be able to answer these five questions:
 4. How would you build a jurisdiction-specific SKILL.md extension for a new country using the Knowledge Extraction Method?
 5. Where is the boundary between agent execution and Shariah Supervisory Board judgment — what can the agent do autonomously and what must it escalate?
 
-## Companion Repository
+## Plugin & Companion Materials
 
-The skill files, exercise data, workflow recipes, and reference materials for this chapter are available in the companion repository: [**panaversity/islamic-finance-domain-agents**](https://github.com/panaversity/islamic-finance-domain-agents)
+Install the Islamic Finance Domain Agents plugin once — it activates automatically on all Islamic finance queries:
 
-Downloads (from the [latest release](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest)):
+**Claude Code CLI:**
 
-- `islamic-finance-domain-agents-exercise-data.zip` — Scenario data and Excel templates for Exercises 1-14
-- `islamic-finance-domain-agents-skills-only.zip` — 12 product skills, 13 jurisdiction overlays, and the global router
-- `islamic-finance-domain-agents-workflow-recipes.zip` — Scheduled task configurations (daily, monthly, quarterly, annual)
-- `islamic-finance-domain-agents-references.zip` — Global Standards Map, AAOIFI FAS reference table
-- `islamic-finance-domain-agents-full.zip` — Everything in one package (Exercise 14 capstone)
+```bash
+claude plugin install islamic-finance@agentfactory-business
+```
 
-Repository contents:
+**Cowork:** Sidebar → Customize → Browse plugins → + → Add marketplace from GitHub → `panaversity/agentfactory-business-plugins` → Install "islamic-finance"
 
-- `skills/products/` — 12 product SKILL.md files (murabaha, ijarah, sukuk, takaful, zakat, and more)
-- `skills/jurisdictions/` — 13 jurisdiction overlay SKILL.md files (Bahrain, Malaysia, Saudi, UAE, UK, and more)
-- `skills/islamic-finance-global-router.md` — The routing skill that directs queries to the correct product and jurisdiction
-- `exercises/` — Scenario data and Excel templates per exercise
-- `workflow-recipes/` — Scheduled task configurations (daily, monthly, quarterly, annual)
-- `references/` — Global Standards Map, AAOIFI FAS reference table
+Downloads (from the [latest release](https://github.com/panaversity/agentfactory-business-plugins/releases/latest)):
+
+- `islamic-finance-exercise-data.zip` — Scenario data for Exercises 1-14 + AAOIFI reference tables
+- `islamic-finance-workflow-recipes.zip` — Scheduled task configurations (daily, monthly, quarterly, annual)
+- `islamic-finance-full.zip` — Everything in one package (Exercise 14 capstone)
+
+Repository contents (inside `islamic-finance/`):
+
+- `skills/` — 13 skills: 1 router + 12 products (auto-loaded by agent)
+- `skills/islamic-finance-router/references/jurisdictions/` — 13 jurisdiction overlays (loaded on-demand)
+- `commands/` — 4 domain commands: `/if-journal`, `/if-compare`, `/if-screen`, `/if-zakat`
+- `hooks/` — SessionStart (capability announcement) + PostToolUse (framework label validation)
+- `exercises/` — Scenario data per exercise
+- `workflow-recipes/` — Operational playbooks
+- `references/` — AAOIFI FAS reference table
 
 ## After Chapter 20
 

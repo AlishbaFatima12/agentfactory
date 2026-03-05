@@ -205,8 +205,10 @@ The sukuk structure determines how the FGN raises the money. It does not change:
 
 This principle applies broadly: a supplier to an Islamic bank does not adjust its accounting because the bank is Islamic. A landlord leasing property to a takaful operator does not apply Islamic accounting to its lease income. A software company providing systems to Jaiz Bank bills under IFRS 15, not under AAOIFI.
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex08-nigeria-fgn-sukuk.md`, and reference the skill file in `skills/jurisdictions/nigeria-ifrs.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex08-nigeria-fgn-sukuk.md`
 :::
 
 ## Practice Exercise 8: FGN Sovereign Sukuk — N300B Ijarah (45 min)
