@@ -12,7 +12,7 @@
  * Reference: https://github.com/openai/openai-chatkit-starter-app
  */
 
-import React, { useState, useMemo, useCallback, useEffect } from "react";
+import React, { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useStudyMode } from "../../contexts/StudyModeContext";
@@ -229,10 +229,15 @@ function ChatKitWrapper({
     }
   }, [onSendMessage, sendUserMessage]);
 
+  // Ref to prevent duplicate initial message sends (React StrictMode protection)
+  const initialMessageSentRef = useRef(false);
+
   // Send initial message if provided (for Ask feature or auto-start teach mode)
   // Calls onInitialMessageSent callback to clear the message after sending
+  // Uses ref to prevent duplicate sends which causes duplicate threads
   useEffect(() => {
-    if (initialMessage && sendUserMessage) {
+    if (initialMessage && sendUserMessage && !initialMessageSentRef.current) {
+      initialMessageSentRef.current = true;
       sendUserMessage({ text: initialMessage, newThread: true }).then(() => {
         if (onInitialMessageSent) {
           onInitialMessageSent();
@@ -240,6 +245,13 @@ function ChatKitWrapper({
       });
     }
   }, [initialMessage, sendUserMessage, onInitialMessageSent]);
+
+  // Reset the ref when initial message changes (new chat)
+  useEffect(() => {
+    if (!initialMessage) {
+      initialMessageSentRef.current = false;
+    }
+  }, [initialMessage]);
 
   // Users type "A" or "B" to answer - this is handled by the chat input
 
