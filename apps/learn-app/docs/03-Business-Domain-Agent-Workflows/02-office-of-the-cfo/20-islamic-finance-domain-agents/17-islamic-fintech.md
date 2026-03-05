@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/islamic-fintech
-sidebar_position: 16
+sidebar_position: 17
 title: "Islamic Fintech — Accounting for New Structures"
 description: "Examine how Islamic fintech is scaling faster than standard-setters can respond — digital murabaha platforms, Shariah-compliant robo-advisers, P2P Islamic lending, and green impact sukuk — and develop accounting positions for structures the frameworks have not yet addressed"
 keywords:
@@ -22,7 +22,7 @@ keywords:
     "Islamic digital banking",
   ]
 chapter: 20
-lesson: 16
+lesson: 17
 duration_minutes: 40
 
 # HIDDEN SKILLS METADATA
@@ -106,7 +106,7 @@ Traditional Islamic finance products were structured by banks, regulated by cent
 **Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex13-islamic-fintech-scenarios.md`
 :::
 
-## Exercise 13: Four Fintech Scenarios (40 min)
+## Exercise 14: Four Fintech Scenarios (40 min)
 
 Each scenario presents a real or realistic Islamic fintech structure and asks you to determine the accounting treatment, regulatory classification, and Shariah compliance position.
 
@@ -254,4 +254,4 @@ For each jurisdiction:
 
 ---
 
-Continue to [Lesson 17: Full Islamic Finance Agent →](./17-full-skill-library-capstone.md)
+Continue to [Lesson 18: Full Islamic Finance Agent →](./18-full-skill-library-capstone.md)

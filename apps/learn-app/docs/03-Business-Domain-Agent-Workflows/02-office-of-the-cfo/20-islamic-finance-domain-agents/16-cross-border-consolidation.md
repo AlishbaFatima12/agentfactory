@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/cross-border-consolidation
-sidebar_position: 15
+sidebar_position: 16
 title: "Cross-Border Islamic Banking Group — Consolidation"
 description: "Navigate the consolidation challenge facing every Islamic banking group operating across AAOIFI and IFRS jurisdictions — reclassifying IAH funds, eliminating intra-group murabaha, resolving transfer pricing for mudarib fees, and producing dual-framework group financial statements"
 keywords:
@@ -20,7 +20,7 @@ keywords:
     "dual-framework reporting",
   ]
 chapter: 20
-lesson: 15
+lesson: 16
 duration_minutes: 75
 
 # HIDDEN SKILLS METADATA
@@ -118,7 +118,7 @@ The exercise that follows works through each of these systematically.
 **Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex12-cross-border-consolidation.md`
 :::
 
-## Exercise 12: 4-Entity Group Consolidation (75 min)
+## Exercise 13: 4-Entity Group Consolidation (75 min)
 
 **What you will build:** Consolidated group financial statements for an Islamic banking group operating across AAOIFI and IFRS jurisdictions, with all consolidation adjustments documented and a dual-framework accounting policy note.
 
@@ -306,4 +306,4 @@ be reviewed independently by the engagement partner.
 
 ---
 
-Continue to [Lesson 16: Islamic Fintech →](./16-islamic-fintech.md)
+Continue to [Lesson 17: Islamic Fintech →](./17-islamic-fintech.md)

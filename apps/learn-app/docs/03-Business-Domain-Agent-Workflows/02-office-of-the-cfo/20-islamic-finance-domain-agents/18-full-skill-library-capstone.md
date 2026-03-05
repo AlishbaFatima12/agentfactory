@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/full-skill-library-capstone
-sidebar_position: 17
+sidebar_position: 18
 title: "Full Islamic Finance Agent — SKILL.md Library Build"
 description: "Deploy the complete 25-file Islamic finance SKILL.md library — 12 product skills and 13 jurisdiction overlays — with the global routing skill, scheduled tasks, a multi-jurisdiction test suite, and the agent capability statement that draws the line between agent execution and SSB judgment"
 keywords:
@@ -21,7 +21,7 @@ keywords:
     "agent capstone",
   ]
 chapter: 20
-lesson: 17
+lesson: 18
 duration_minutes: 90
 
 # HIDDEN SKILLS METADATA
@@ -51,17 +51,17 @@ learning_objectives:
   - objective: "Audit and deploy a complete 25-file SKILL.md library with the global routing skill, verifying structural completeness and routing correctness"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student completes Exercise 14 Steps 1-2 — auditing the full library, building/verifying the routing skill, and confirming the four-question routing protocol"
+    assessment_method: "Student completes Exercise 15 Steps 1-2 — auditing the full library, building/verifying the routing skill, and confirming the four-question routing protocol"
 
   - objective: "Apply Knowledge Extraction Methods A (interview) and B (document analysis) to produce and verify SKILL.md files for Islamic finance products and jurisdictions"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student completes Exercise 14 Steps 3-4 — producing a murabaha product skill via Method A and jurisdiction overlays via Method B, then validating against the routing logic"
+    assessment_method: "Student completes Exercise 15 Steps 3-4 — producing a murabaha product skill via Method A and jurisdiction overlays via Method B, then validating against the routing logic"
 
   - objective: "Design and execute a multi-jurisdiction test suite that validates the complete routing and overlay system across all 13 jurisdictions"
     proficiency_level: "C1"
     bloom_level: "Evaluate"
-    assessment_method: "Student completes Exercise 14 Step 6 — running 13 test queries and verifying correct framework, labels, and disclosures in each output"
+    assessment_method: "Student completes Exercise 15 Step 6 — running 13 test queries and verifying correct framework, labels, and disclosures in each output"
 
 cognitive_load:
   new_concepts: 7
@@ -137,7 +137,7 @@ The routing logic follows a strict protocol: (1) identify jurisdiction, (2) iden
 **Full materials:** Download [`islamic-finance-full.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) for everything in one package.
 :::
 
-## Exercise 14: Full SKILL.md Library Build (90 min)
+## Exercise 15: Full SKILL.md Library Build (90 min)
 
 ### Step 1 — Audit the Full Skills Library
 

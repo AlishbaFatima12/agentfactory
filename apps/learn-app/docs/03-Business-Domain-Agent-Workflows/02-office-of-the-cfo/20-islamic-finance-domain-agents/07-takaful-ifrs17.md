@@ -292,4 +292,4 @@ it to takaful before.
 
 ---
 
-Continue to [Lesson 8: Malaysia Sukuk →](./08-malaysia-sukuk.md)
+Continue to [Lesson 8: Trade & Partnership Finance →](./08-trade-partnership-finance.md)

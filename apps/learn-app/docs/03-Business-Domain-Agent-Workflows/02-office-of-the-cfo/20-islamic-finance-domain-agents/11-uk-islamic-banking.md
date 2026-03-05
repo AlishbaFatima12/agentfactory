@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/uk-islamic-banking
-sidebar_position: 10
+sidebar_position: 11
 title: "UK Islamic Banking — IFRS, PRA/FCA, and HMRC"
 description: "Examine the UK as the leading Western Islamic finance centre, apply IFRS 9 substance-over-form analysis to diminishing musharaka home finance, explain HMRC tax equivalence under Finance Act 2005, and complete an Al Rayan Bank exercise covering DM accounting, tax characterisation, construction finance, and PRA regulatory capital"
 keywords:
@@ -22,7 +22,7 @@ keywords:
     "construction finance",
   ]
 chapter: 20
-lesson: 10
+lesson: 11
 duration_minutes: 50
 
 # HIDDEN SKILLS METADATA
@@ -205,7 +205,7 @@ This matters because the risk-weighted asset (RWA) calculation for a DM home fin
 **Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex07-uk-al-rayan-bank.md`
 :::
 
-## Practice Exercise 7: Al Rayan Bank — UK Islamic Banking (50 min)
+## Practice Exercise 8: Al Rayan Bank — UK Islamic Banking (50 min)
 
 **What you will build:** A comprehensive analysis covering DM home finance IFRS 9 treatment, HMRC tax characterisation, construction finance structuring, PRA regulatory capital, and a client advisory report.
 
@@ -326,4 +326,4 @@ for each item to illustrate where the labels diverge.
 
 ---
 
-Continue to [Lesson 11: Nigeria Sovereign Sukuk →](./11-nigeria-sovereign-sukuk.md)
+Continue to [Lesson 12: Nigeria Sovereign Sukuk →](./12-nigeria-sovereign-sukuk.md)
