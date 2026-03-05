@@ -60,7 +60,7 @@ differentiation:
 
 # Teach Your Employee Boundaries
 
-In Lesson 5, you made your employee proactive — it can now act without waiting for you. That is powerful, and it is dangerous. An employee that sends a client email without review, submits a filing with the wrong numbers, or deletes a production file is worse than one that does nothing at all.
+In Make Your Employee Proactive lesson, you made your employee proactive — it can now act without waiting for you. That is powerful, and it is dangerous. An employee that sends a client email without review, submits a filing with the wrong numbers, or deletes a production file is worse than one that does nothing at all.
 
 This lesson is about trust architecture. Every real manager answers the same question for every new hire: what can you do on your own, and what do you bring to me first? Your AI employee needs the same clarity. The difference is that your employee follows boundaries with perfect consistency — it will never "just this once" skip the approval step. But only if you define those boundaries precisely.
 
@@ -154,5 +154,4 @@ Use the AI's output as a starting point, then adjust based on your own risk tole
 Document your test results alongside your boundary table.
 
 </details>
-
 

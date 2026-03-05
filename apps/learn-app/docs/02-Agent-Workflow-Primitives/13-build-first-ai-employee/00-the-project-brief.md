@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
 title: "The Project Brief"
-description: "Frame your AI employee project, choose an achievement tier, and set up your repository structure using the NanoClaw platform you installed in Chapter 7"
+description: "Frame your AI employee project, choose an achievement tier, and set up your repository structure using the NanoClaw platform you installed in the NanoClaw Hands-On Setup lesson"
 keywords: ["NanoClaw", "AI employee", "project scoping", "WhatsApp agent", "Layer 3 design", "project tiers"]
 chapter: 13
 lesson: 0
@@ -31,7 +31,7 @@ learning_objectives:
   - objective: "Map a Layer 3 design to concrete project deliverables"
     proficiency_level: "A2"
     bloom_level: "Analyze"
-    assessment_method: "Student annotates their Layer 3 design from Ch 7 L10, identifying which skills and MCP servers they will implement first"
+    assessment_method: "Student annotates their Layer 3 design from the NanoClaw Hands-On Setup lesson, identifying which skills and MCP servers they will implement first"
 
   - objective: "Set up a project repository with the correct directory structure"
     proficiency_level: "A2"
@@ -44,12 +44,12 @@ cognitive_load:
 
 differentiation:
   extension_for_advanced: "Gold tier students plan multi-group architecture with isolation boundaries upfront, sketching a system diagram before writing any configuration"
-  remedial_for_struggling: "Students unsure of their Layer 3 design revisit Ch 7 L10 and use the acceptance criteria and use case gallery to refine their design for their profession"
+  remedial_for_struggling: "Students unsure of their Layer 3 design revisit the NanoClaw Hands-On Setup lesson and use the acceptance criteria and use case gallery to refine their design for their profession"
 ---
 
 # The Project Brief
 
-In Chapter 7 Lesson 10, you installed NanoClaw, connected it to WhatsApp, and designed a Layer 3 blueprint for your profession. You sketched out agent skills, MCP servers, and the domain expertise your AI employee would need. That blueprint has been sitting in your notes, waiting.
+In the "NanoClaw Hands-On Setup" lesson from "Meet Your First AI Employee - OpenClaw" chapter, you installed NanoClaw, connected it to WhatsApp, and designed a Layer 3 blueprint for your profession. You sketched out agent skills, MCP servers, and the domain expertise your AI employee would need. That blueprint has been sitting in your notes, waiting.
 
 Now you build it. Over the next several lessons, you will turn that design into a working AI employee that responds to real messages, thinks like a domain expert, and handles professional tasks through WhatsApp. This is not a tutorial where you follow instructions step by step. Each lesson gives you a challenge, acceptance criteria, and hints if you get stuck. You bring your profession, your expertise, and your Layer 3 design.
 
@@ -63,17 +63,17 @@ By the end of the Bronze tier, your employee will have a professional identity, 
 
 ## Choose Your Tier
 
-| Tier | Lessons | Time | What You Build |
-|------|---------|------|----------------|
-| **Bronze** | L00 through L04 | ~3 hours | Identity + one skill + WhatsApp connection + proof of work |
-| **Silver** | L00 through L07 | ~5 hours | Bronze + scheduled tasks + permission boundaries + domain report |
-| **Gold** | L00 through L07 (Gold path) | ~8 hours | Silver + multi-group architecture with per-group isolation |
+| Tier | Path | Time | What You Build |
+|------|------|------|----------------|
+| **Bronze** | The Project Brief through Bronze Capstone: First Real Day | ~3 hours | Identity + one skill + WhatsApp connection + proof of work |
+| **Silver** | The Project Brief through Prove Professional Value | ~5 hours | Bronze + scheduled tasks + permission boundaries + domain report |
+| **Gold** | The Project Brief through Prove Professional Value (Gold track) | ~8 hours | Silver + multi-group architecture with per-group isolation |
 
 Pick the tier that matches your time and ambition. Every tier produces something functional. You can always return for the next tier later.
 
 ## Your Blueprint
 
-Pull out your Layer 3 design from Chapter 7 Lesson 10. This is your blueprint for everything that follows. It should contain:
+Pull out your Layer 3 design from the "NanoClaw Hands-On Setup" lesson. This is your blueprint for everything that follows. It should contain:
 
 - **3+ Agent Skills** you planned for your profession (the domain expertise to encode)
 - **3+ MCP Servers** you identified (the external connections your employee needs)
@@ -86,7 +86,7 @@ Review your design and mark which skill you will implement first. Choose the one
 ## Acceptance Criteria
 
 1. You have chosen a tier (Bronze, Silver, or Gold) and can explain why
-2. Your Layer 3 design from Ch 7 L10 is reviewed, with your first skill identified
+2. Your Layer 3 design from the NanoClaw Hands-On Setup lesson is reviewed, with your first skill identified
 3. Your GitHub repository exists with the structure below
 
 ## Set Up Your Project Repository
@@ -104,8 +104,8 @@ nanoclaw-employee/
     skills/
       (your skills will go here)
   README.md               (profession, tier choice, timeline)
-  conversation-log.md     (you will fill this in L04)
-  evaluation.md           (you will fill this in L04)
+  conversation-log.md     (you will fill this in Bronze Capstone: First Real Day)
+  evaluation.md           (you will fill this in Bronze Capstone: First Real Day)
 ```
 
 Your README should state your profession, your chosen tier, and when you plan to complete each lesson.
@@ -133,4 +133,3 @@ What does a completed AI employee look like across different professions? Here a
 - Bronze: An employee that tracks project briefs, extracts deliverable deadlines, and flags revision requests when you forward client messages
 - Silver: Sends a weekly capacity report every Monday, refuses to commit to timelines without checking current workload
 - Gold: Separate groups per client with isolated project contexts and communication logs
-

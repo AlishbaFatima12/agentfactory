@@ -49,7 +49,7 @@ differentiation:
 
 # Give Your Employee an Identity
 
-In the previous lesson, you chose your tier and set up your project repository. Your NanoClaw instance is running from Chapter 7, and your Layer 3 design identifies the domain expertise your employee needs. There is one problem: right now your employee has no idea who it is.
+In the previous lesson, you chose your tier and set up your project repository. Your NanoClaw instance is running from the "NanoClaw Hands-On Setup" lesson in "Meet Your First AI Employee - OpenClaw" chapter, and your Layer 3 design identifies the domain expertise your employee needs. There is one problem: right now your employee has no idea who it is.
 
 Send it a message and you get a generic AI response. Ask it about your profession and it gives textbook answers. It does not know your field's terminology, your industry's rules, or the boundaries of what it should and should not do. It is a blank slate with a PhD -- knowledgeable but directionless.
 
@@ -131,5 +131,4 @@ Your `groups/main/CLAUDE.md` needs four sections:
 Test by sending three messages: one routine domain question, one that uses specialized vocabulary, and one that deliberately crosses a boundary.
 
 </details>
-
 
