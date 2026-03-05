@@ -1,6 +1,6 @@
 # The AI Agent Factory
 
-> The Spec-Driven Blueprint for Building and Monetizing Digital FTEs (Full-Time Equivalent Reliable AI Agents). 86 chapters across 9 parts. Published February 2026 by Panaversity.
+> The Spec-Driven Blueprint for Building and Monetizing Digital FTEs—Reliable AI Agents You Can Trust, Deploy, and Scale. 86 chapters across 9 parts. Published February 2026 by Panaversity.
 
 The AI Agent Factory teaches domain experts how to build sellable AI agents using Claude Code, MCP, and agent SDKs. It covers the full journey from understanding AI agents to building, deploying, and monetizing them at scale. The book is grounded in the February 2026 "SaaSpocalypse" — nearly $1 trillion erased from software stocks when Anthropic's Claude Cowork proved autonomous agents can perform complex professional work that justified $200/month SaaS subscriptions.
 

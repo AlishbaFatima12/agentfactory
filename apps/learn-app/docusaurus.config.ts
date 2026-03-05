@@ -55,7 +55,8 @@ const docsPath = hydrateEnabled ? "../build-source" : "docs";
 
 const config: Config = {
   title: "Agent Factory",
-  tagline: "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs",
+  tagline:
+    "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs—Reliable AI Agents You Can Trust, Deploy, and Scale",
   favicon: "favicon.png",
 
   // Custom fields accessible via useDocusaurusContext().siteConfig.customFields
@@ -417,7 +418,7 @@ const config: Config = {
       {
         property: "og:description",
         content:
-          "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs",
+          "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs—Reliable AI Agents You Can Trust, Deploy, and Scale",
       },
       { property: "og:type", content: "website" },
       {
@@ -432,7 +433,7 @@ const config: Config = {
       {
         name: "twitter:description",
         content:
-          "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs",
+          "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs—Reliable AI Agents You Can Trust, Deploy, and Scale",
       },
       {
         name: "twitter:image",
