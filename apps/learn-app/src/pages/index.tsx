@@ -76,9 +76,11 @@ function HomepageHeader() {
                 You Can Trust, Deploy, and Scale.
               </p>
               <p className="text-xs sm:text-sm text-muted-foreground/70 font-normal leading-[1.5] max-w-xl -mt-1 sm:-mt-2">
-                A practical framework for engineers, domain professionals (accountants, finance managers, marketing professions, etc. ),
-                enterprise leaders, startup founders, product architects, and operational teams
-                building the next generation of AI-powered organizations.
+                A practical framework for engineers, domain professionals
+                (accountants, finance managers, marketing professions, etc. ),
+                enterprise leaders, startup founders, product architects, and
+                operational teams building the next generation of AI-powered
+                organizations.
               </p>
             </div>
 
@@ -91,7 +93,7 @@ function HomepageHeader() {
                   className="h-11 sm:h-14 px-5 sm:px-8 text-sm sm:text-lg font-bold rounded-none bg-primary hover:bg-primary/90 text-primary-foreground transition-all"
                 >
                   <Link
-                    to="/docs/thesis"
+                    to="/docs/about"
                     className="flex items-center gap-2 sm:gap-3"
                   >
                     START READING{" "}
@@ -1031,7 +1033,7 @@ function FinalCTA() {
           className="h-14 px-8 text-lg font-semibold"
           asChild
         >
-          <Link to="/docs/thesis">Start Reading</Link>
+          <Link to="/docs/about">Start Reading</Link>
         </Button>
       </div>
     </section>
