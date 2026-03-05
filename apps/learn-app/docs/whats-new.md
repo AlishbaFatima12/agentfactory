@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-05
+- Part2/project ([#825](https://github.com/panaversity/agentfactory/pull/825))
+
+### 2026-03-05
 - docs: Ch20 Islamic Finance plugin migration + content improvements ([#821](https://github.com/panaversity/agentfactory/pull/821))
 
 ### 2026-03-05
