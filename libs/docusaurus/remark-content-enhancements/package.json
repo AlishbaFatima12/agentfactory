@@ -14,7 +14,7 @@
     "metadata-driven"
   ],
   "author": "Panaversity",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "dependencies": {
     "unist-util-visit": "^5.0.0"
   },

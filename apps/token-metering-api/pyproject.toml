@@ -2,6 +2,7 @@
 name = "token-metering-api"
 version = "0.1.0"
 description = "Freemium token tracking and metering service for the Agent Factory platform"
+license = "LicenseRef-Proprietary"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

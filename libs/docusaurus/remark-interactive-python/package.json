@@ -2,6 +2,7 @@
   "name": "remark-interactive-python",
   "version": "1.0.0",
   "description": "Remark plugin to transform Python code blocks into interactive components",
+  "license": "UNLICENSED",
   "main": "index.js",
   "keywords": [
     "remark",

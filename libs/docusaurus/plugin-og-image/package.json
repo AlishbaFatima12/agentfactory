@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "Automatically generate Open Graph images for Docusaurus pages",
   "main": "index.js",
-  "keywords": ["docusaurus", "plugin", "og-image", "open-graph"],
+  "keywords": [
+    "docusaurus",
+    "plugin",
+    "og-image",
+    "open-graph"
+  ],
   "author": "Panaversity",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "dependencies": {
     "satori": "^0.18.3"
   }
