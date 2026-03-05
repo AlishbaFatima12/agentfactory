@@ -19,6 +19,28 @@ prior written permission of Panaversity. This includes but is not limited to:
   - Using the Software to provide competing products or services
   - Reverse engineering, decompiling, or disassembling the Software
 
+PROTECTED ASSET TYPES
+
+This license expressly covers the following proprietary asset categories:
+
+  - Agent Skills: All SKILL.md files, skill definitions, and reusable skill
+    libraries
+  - Plugin & MCP Connectors: All plugin manifests, MCP server configurations,
+    and connector implementations
+  - Specifications: All software specifications, SDD-RI artifacts, SpecifyPlus
+    schemas, SPEC.md files, and architectural blueprints
+  - Prompts & System Instructions: All system prompts, agent personas,
+    instruction sets, and prompt templates
+  - Book & Curriculum Content: All chapter content, lesson plans, exercises,
+    assessments, and educational materials published at
+    agentfactory.panaversity.org or any affiliated platform
+  - Digital FTE Definitions: All agent persona definitions, role specifications,
+    and Digital FTE templates
+
+The above assets constitute core intellectual property of Panaversity and are
+subject to heightened protection. Reproduction of any of the above, in whole or
+in part, requires explicit written authorization from Panaversity.
+
 THIRD-PARTY MATERIALS
 
 Certain files in this repository are owned by third parties and are subject to
