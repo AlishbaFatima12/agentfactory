@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/saudi-arabia
-sidebar_position: 9
+sidebar_position: 10
 title: "Saudi Arabia — Vision 2030, ZATCA Zakat, and Al Rajhi"
 description: "Examine Saudi Arabia's IFRS framework with KSA-specific rules, compute ZATCA zakat using the equity-based formula, benchmark against Al Rajhi Bank's IFRS presentation standards, and complete a comprehensive Alinma Bank accounting review exercise"
 keywords:
@@ -22,7 +22,7 @@ keywords:
     "Islamic finance Saudi",
   ]
 chapter: 20
-lesson: 9
+lesson: 10
 duration_minutes: 55
 
 # HIDDEN SKILLS METADATA
@@ -52,17 +52,17 @@ learning_objectives:
   - objective: "Apply the ZATCA equity-based zakat formula to compute a Saudi IFI's zakat obligation, generate the journal entry, and distinguish the ZATCA formula from the AAOIFI/Hanafi methodology"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 6 Step 2 — calculating zakat base from share capital, reserves, retained earnings minus fixed assets and long-term investments, applying 2.5%, and noting the difference from AAOIFI GS9"
+    assessment_method: "Student completes Exercise 7 Step 2 — calculating zakat base from share capital, reserves, retained earnings minus fixed assets and long-term investments, applying 2.5%, and noting the difference from AAOIFI GS9"
 
   - objective: "Benchmark a Saudi Islamic bank's IFRS accounting policies against Al Rajhi Bank's published presentation standards for murabaha classification, income labelling, and ECL provisioning"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 6 Step 1 — identifying Al Rajhi's balance sheet classification, income captions, and ECL approach, and applying these benchmarks to Alinma Bank's policy review"
+    assessment_method: "Student completes Exercise 7 Step 1 — identifying Al Rajhi's balance sheet classification, income captions, and ECL approach, and applying these benchmarks to Alinma Bank's policy review"
 
   - objective: "Classify Vision 2030 PIF sukuk under IFRS 9 and produce monthly Islamic finance management accounts formatted for a Saudi board of directors"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 6 Steps 3 and 5 — PIF sukuk IFRS 9 classification with mark-to-market OCI analysis, and management accounts with murabaha income breakdown, DM income trend, sukuk portfolio position, zakat accrual, and key ratios"
+    assessment_method: "Student completes Exercise 7 Steps 3 and 5 — PIF sukuk IFRS 9 classification with mark-to-market OCI analysis, and management accounts with murabaha income breakdown, DM income trend, sukuk portfolio position, zakat accrual, and key ratios"
 
 cognitive_load:
   new_concepts: 6
@@ -73,11 +73,11 @@ cognitive_load:
     - "PIF sukuk structures (Vision 2030)"
     - "Saudi green sukuk (Saudi Electricity Company)"
     - "Board management accounts for Saudi IFIs"
-  assessment: "6 concepts at B1 level. Students enter with product-level knowledge from earlier lessons and Malaysia's MFRS application from Lesson 8. This lesson introduces the Saudi-specific ZATCA zakat formula — the most distinctive feature of Saudi Islamic finance accounting — and benchmarks against Al Rajhi Bank, which most students will recognise as the world's largest Islamic bank."
+  assessment: "6 concepts at B1 level. Students enter with product-level knowledge from earlier lessons and Malaysia's MFRS application from Lesson 9. This lesson introduces the Saudi-specific ZATCA zakat formula — the most distinctive feature of Saudi Islamic finance accounting — and benchmarks against Al Rajhi Bank, which most students will recognise as the world's largest Islamic bank."
 
 differentiation:
   extension_for_advanced: "Obtain Al Rajhi Bank's most recent published annual report. Compare its zakat disclosure note with the ZATCA formula taught in this lesson. Does Al Rajhi disclose enough detail to reconstruct its ZATCA zakat calculation? Write a one-page analysis of the transparency of Saudi IFI zakat disclosures compared to voluntary Malaysian zakat disclosures."
-  remedial_for_struggling: "Focus on the ZATCA zakat formula in Exercise 6 Step 2. The formula is arithmetic: add share capital, reserves, and retained earnings; subtract fixed assets and long-term investments; multiply by 2.5%. If you can perform this calculation and generate the journal entry (Dr: Zakat Expense, Cr: Zakat Payable — ZATCA), you have grasped the core Saudi-specific concept."
+  remedial_for_struggling: "Focus on the ZATCA zakat formula in Exercise 7 Step 2. The formula is arithmetic: add share capital, reserves, and retained earnings; subtract fixed assets and long-term investments; multiply by 2.5%. If you can perform this calculation and generate the journal entry (Dr: Zakat Expense, Cr: Zakat Payable — ZATCA), you have grasped the core Saudi-specific concept."
 
 teaching_guide:
   lesson_type: "core"
@@ -108,7 +108,7 @@ teaching_guide:
 
 # Saudi Arabia — Vision 2030, ZATCA Zakat, and Al Rajhi
 
-In Lesson 8, you applied MFRS 9 to Malaysian sukuk and examined the SRI Sukuk Framework. Now you turn to the jurisdiction that hosts the world's largest Islamic bank and is reshaping its entire economy through Vision 2030: Saudi Arabia.
+In Lesson 9, you applied MFRS 9 to Malaysian sukuk and examined the SRI Sukuk Framework. Now you turn to the jurisdiction that hosts the world's largest Islamic bank and is reshaping its entire economy through Vision 2030: Saudi Arabia.
 
 Saudi Arabia's Islamic finance accounting operates under a framework that surprises practitioners who assume it uses AAOIFI. It does not. Saudi listed companies and licensed banks apply IFRS as adopted in the Kingdom of Saudi Arabia. Al Rajhi Bank — the world's largest Islamic bank by capital — prepares IFRS-compliant financial statements. AAOIFI Shariah Standards are widely adopted by Saudi IFIs for Shariah compliance guidance, but AAOIFI Financial Accounting Standards are not the primary framework. The most distinctive feature of Saudi Islamic finance accounting is not the accounting standard — it is the zakat regime. The Zakat, Tax and Customs Authority (ZATCA) administers a mandatory zakat obligation using an equity-based formula that differs from both the AAOIFI and Hanafi methodologies taught in most Islamic finance textbooks.
 
@@ -197,11 +197,13 @@ Saudi Arabia's Public Investment Fund (PIF) has issued multiple tranches of suku
 
 **Mark-to-market impact:** If held at FVOCI, changes in market yields affect OCI (other comprehensive income) without flowing through profit or loss. A 100 basis point rise in yields on a SAR 2 billion, 5-year duration sukuk portfolio produces a significant unrealised loss in OCI.
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex06-saudi-ifi-alinma.md`, and reference the skill file in `skills/jurisdictions/saudi-ifrs.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex06-saudi-ifi-alinma.md`
 :::
 
-## Practice Exercise 6: Saudi IFI — Alinma Bank Accounting Review (55 min)
+## Practice Exercise 7: Saudi IFI — Alinma Bank Accounting Review (55 min)
 
 **What you will build:** A comprehensive accounting review covering IFRS murabaha benchmarking, ZATCA zakat computation, PIF sukuk classification, green sukuk accounting, and board management accounts.
 
@@ -229,7 +231,9 @@ Download the exercise data and skill files from the [companion repository](https
 
    _"Produce Alinma Bank's monthly Islamic finance management accounts: (1) Murabaha income — broken down by tenor bucket (less than 1 year, 1-3 years, over 3 years); (2) Home finance (DM) income — showing declining rental income trend; (3) Sukuk portfolio — income and mark-to-market position; (4) Zakat accrual; (5) Key ratios: Net Financing Margin, NPF ratio, Coverage ratio. Format for the Saudi board of directors. All figures in SAR."_
 
-**Check your work:** The ZATCA zakat base in Step 2 should be: SAR 20B + SAR 4.5B + SAR 3.2B - SAR 1.8B - SAR 5.0B = SAR 20.9B. Zakat obligation = SAR 20.9B x 2.5% = SAR 522.5M. The PIF sukuk in Step 3 should pass the SPPI test if distributions are fixed and redemption is at face value. The management accounts in Step 5 should present all figures in SAR with Saudi conventions.
+6. **Error detection — incorrect Saudi zakat.** Review this deliberately flawed calculation: _"A Saudi Islamic bank calculated its ZATCA zakat base as: Share capital SAR 20B plus Retained earnings SAR 3.2B = SAR 23.2B. Zakat at 2.5% = SAR 580M. What errors are in this zakat base calculation? What items were incorrectly included or excluded? Produce the corrected calculation."_ The bank omitted statutory reserves (should be added) and failed to deduct fixed assets and long-term investments (both should be deducted from the equity-based ZATCA formula).
+
+**Check your work:** The ZATCA zakat base in Step 2 should be: SAR 20B + SAR 4.5B + SAR 3.2B - SAR 1.8B - SAR 5.0B = SAR 20.9B. Zakat obligation = SAR 20.9B x 2.5% = SAR 522.5M. The PIF sukuk in Step 3 should pass the SPPI test if distributions are fixed and redemption is at face value. The management accounts in Step 5 should present all figures in SAR with Saudi conventions. In Step 6, the corrected zakat base should be SAR 20.9B, not SAR 23.2B — the student should identify the missing reserves and missing deductions.
 
 ## Try With AI
 
@@ -329,4 +333,4 @@ Present the analysis as if advising the bank's ALCO
 
 ---
 
-Continue to [Lesson 10: UK Islamic Banking →](./10-uk-islamic-banking.md)
+Continue to [Lesson 11: UK Islamic Banking →](./11-uk-islamic-banking.md)

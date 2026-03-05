@@ -193,8 +193,10 @@ The purchase undertaking is the most contested issue in global sukuk accounting 
 - **Shariah perspective:** AAOIFI Shariah Standard 59 permits purchase undertakings for ijarah sukuk but prohibits them for equity-based sukuk (musharakah, mudarabah) because guaranteeing capital return in a profit-sharing arrangement violates the risk-sharing principle
 - **Standard 62 risk:** If adopted, purchase undertakings in their current form may not satisfy the asset-backed requirement
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex03-gcc-sukuk-issuance.md`, and reference the skill files in `skills/products/sukuk-issuer.md` and `skills/products/sukuk-investor.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex03-gcc-sukuk-issuance.md`
 :::
 
 ## Practice Exercise 3: GCC Sukuk Issuance — Multi-Jurisdiction Accounting
@@ -215,7 +217,9 @@ Download the exercise data and skill files from the [companion repository](https
 
 5. **Comparison and Standard 62 analysis.** Ask: _"Produce a comparison table: Bahrain (AAOIFI FAS 25), Malaysia (MFRS 9), and UK (IFRS 9) investor accounting for this sukuk. For each: (1) Measurement basis; (2) Income label; (3) Balance sheet classification; (4) Impairment approach. Then: Is the purchase undertaking at face value a Shariah compliance concern? If Draft Standard 62 were adopted, would this sukuk pass the asset-backed test? What structural change would be required?"_
 
-**Check your work:** In Step 1, the derecognition analysis should conclude that assets remain on the issuer's balance sheet (failed derecognition due to purchase undertaking). The sukuk should be classified as a financial liability under IAS 32. In Steps 2-4, the ijarah sukuk should pass the SPPI test and be eligible for amortised cost classification. The comparison table in Step 5 should show similar measurement but different labels and disclosure requirements.
+6. **Error detection — misclassified sukuk.** Review this deliberately incorrect output and identify the errors: _"A Bahrain investor classified an ijarah sukuk at FVTPL and labelled the income 'Interest Income from Sukuk'. The balance sheet shows it under 'Trading Securities'. Identify all classification and labelling errors for a Bahrain entity under AAOIFI FAS 25. What should each line item be?"_
+
+**Check your work:** In Step 1, the derecognition analysis should conclude that assets remain on the issuer's balance sheet (failed derecognition due to purchase undertaking). The sukuk should be classified as a financial liability under IAS 32. In Steps 2-4, the ijarah sukuk should pass the SPPI test and be eligible for amortised cost classification. The comparison table in Step 5 should show similar measurement but different labels and disclosure requirements. In Step 6, the errors are: "Interest Income" is prohibited (should be "Sukuk Income" or "Ijarah Income"), FVTPL is wrong for an ijarah sukuk that passes the SPPI test (should be amortised cost), and "Trading Securities" is not an AAOIFI balance sheet classification for sukuk investments.
 
 :::tip Global Perspective
 

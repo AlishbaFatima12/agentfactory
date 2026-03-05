@@ -21,5 +21,5 @@ Saudi Arabia applies IFRS (not AAOIFI) for financial reporting, with Al Rajhi Ba
 
 ### Connections
 
-- **Builds on**: Lesson 8's Malaysia deep-dive — both apply IFRS, but Saudi adds the ZATCA zakat layer
-- **Leads to**: Lesson 10's UK deep-dive, where HMRC tax equivalence creates a different kind of jurisdiction-specific complexity
+- **Builds on**: Lesson 9's Malaysia deep-dive — both apply IFRS, but Saudi adds the ZATCA zakat layer
+- **Leads to**: Lesson 11's UK deep-dive, where HMRC tax equivalence creates a different kind of jurisdiction-specific complexity

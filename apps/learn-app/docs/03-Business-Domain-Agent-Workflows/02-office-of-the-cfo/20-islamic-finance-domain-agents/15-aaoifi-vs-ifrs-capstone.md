@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/aaoifi-vs-ifrs-capstone
-sidebar_position: 14
+sidebar_position: 15
 title: "AAOIFI vs IFRS — Full Financial Statements"
 description: "Build complete AAOIFI financial statements for a Bahraini Islamic bank, reconcile the five most material AAOIFI/IFRS differences with USD impact, produce IFRS financial statements from reconciling adjustments, compare key ratios under both frameworks, and draft an auditor's risk assessment for framework tension"
 keywords:
@@ -22,7 +22,7 @@ keywords:
     "capstone accounting",
   ]
 chapter: 20
-lesson: 14
+lesson: 15
 duration_minutes: 90
 
 # HIDDEN SKILLS METADATA
@@ -132,11 +132,13 @@ Before building the financial statements, understand the five differences that d
 
 ---
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex11-aaoifi-vs-ifrs-capstone.md`, and reference the skill file in `skills/jurisdictions/bahrain-aaoifi.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex11-aaoifi-vs-ifrs-capstone.md`
 :::
 
-## Exercise 11: ABC Islamic Bank (Bahrain) — $8B Total Assets
+## Exercise 12: ABC Islamic Bank (Bahrain) — $8B Total Assets
 
 **What you will build:** Complete AAOIFI financial statements, an AAOIFI/IFRS reconciliation, IFRS financial statements from reconciling adjustments, key ratio comparison, and an auditor's risk assessment.
 
@@ -271,7 +273,9 @@ Bahrain-AAOIFI jurisdiction overlay SKILL.md. It must cover:
 Format as a complete, deployable SKILL.md file with YAML frontmatter.
 ```
 
-**Check your work:** The SKILL.md from Step 6 is the capstone deliverable of the entire accounting track in this chapter. It encodes everything the AI agent needs to produce Bahrain-compliant AAOIFI output — the line items, the labels, the prohibited terms, the regulatory references, and the reconciliation logic for IFRS comparison. Deploy it and test it: give the agent a murabaha transaction in Bahrain and confirm the output uses AAOIFI FAS 2 terminology, not IFRS 9 defaults.
+7. **Error detection — mixed-framework financial statements.** Review a deliberately flawed balance sheet: _"An ABC Islamic Bank balance sheet shows 'Loans and Advances to Customers' as the main asset line, 'Net Interest Income' in the income statement, and Investment Account Holder funds classified under 'Other Liabilities'. This balance sheet claims to follow AAOIFI. Identify every AAOIFI violation and produce the corrected line items."_ At minimum you should find: (1) "Loans and Advances" is prohibited — each product gets its own line (Murabaha Receivables, Ijarah Assets, etc.); (2) "Net Interest Income" is prohibited — should be product-specific income labels; (3) IAH funds must appear as a separate category ("Equity of Investment Account Holders"), not under "Other Liabilities".
+
+**Check your work:** The SKILL.md from Step 6 is the capstone deliverable of the entire accounting track in this chapter. It encodes everything the AI agent needs to produce Bahrain-compliant AAOIFI output — the line items, the labels, the prohibited terms, the regulatory references, and the reconciliation logic for IFRS comparison. Deploy it and test it: give the agent a murabaha transaction in Bahrain and confirm the output uses AAOIFI FAS 2 terminology, not IFRS 9 defaults. In Step 7, the error detection exercise should identify at least 3 violations — the student demonstrates professional judgment by finding what the agent got wrong.
 
 ---
 
@@ -347,4 +351,4 @@ numbers in the dual-reporting context?
 
 ---
 
-Continue to [Lesson 15: Cross-Border Islamic Banking Group →](./15-cross-border-consolidation.md)
+Continue to [Lesson 16: Cross-Border Islamic Banking Group →](./16-cross-border-consolidation.md)

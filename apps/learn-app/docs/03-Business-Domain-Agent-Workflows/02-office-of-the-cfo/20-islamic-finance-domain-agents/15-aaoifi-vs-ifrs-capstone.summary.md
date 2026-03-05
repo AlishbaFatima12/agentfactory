@@ -21,5 +21,5 @@ Building complete financial statements under both AAOIFI and IFRS for the same I
 
 ### Connections
 
-- **Builds on**: All prior product lessons (L04-L06 murabaha, ijarah, sukuk) and jurisdiction lessons (L08-L12) — integrates every product and jurisdiction concept into a single comprehensive deliverable
-- **Leads to**: Lesson 15's cross-border consolidation, where the AAOIFI/IFRS reconciliation skills are applied to multi-entity group financial statements
+- **Builds on**: All prior product lessons (L04-L06 murabaha, ijarah, sukuk) and jurisdiction lessons (L09-L13) — integrates every product and jurisdiction concept into a single comprehensive deliverable
+- **Leads to**: Lesson 16's cross-border consolidation, where the AAOIFI/IFRS reconciliation skills are applied to multi-entity group financial statements
