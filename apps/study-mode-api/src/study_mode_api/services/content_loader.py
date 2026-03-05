@@ -13,12 +13,22 @@ Cache invalidation:
 """
 
 import logging
+from pathlib import Path
 
 import httpx
 
 from api_infra.core.redis_cache import cache_response, safe_redis_get
 
 from ..config import settings
+
+# Local docs path for development fallback
+# .parent (6x) gets to agentfactory root, then apps/learn-app/docs
+LOCAL_DOCS_PATH = (
+    Path(__file__).parent.parent.parent.parent.parent.parent
+    / "apps"
+    / "learn-app"
+    / "docs"
+)
 
 logger = logging.getLogger(__name__)
 
@@ -82,6 +92,19 @@ async def fetch_from_github(lesson_path: str) -> tuple[str, bool]:
             logger.warning(f"Failed to fetch from GitHub {url}: {e}")
             continue
 
+    # Fallback: Try local file system (for development)
+    if LOCAL_DOCS_PATH.exists():
+        for ext in extensions if extensions != [""] else [".md", ".mdx"]:
+            local_path = LOCAL_DOCS_PATH / f"{lesson_path.strip('/')}{ext}"
+            if local_path.exists():
+                try:
+                    content = local_path.read_text(encoding="utf-8")
+                    logger.info(f"Loaded content from local file: {local_path}")
+                    return content, True
+                except Exception as e:
+                    logger.warning(f"Failed to read local file {local_path}: {e}")
+                    continue
+
     return "", False
 
 
@@ -118,9 +141,15 @@ async def load_lesson_content(lesson_path: str) -> dict:
             "cached": False,  # Will be True on subsequent cached requests
         }
 
+    # Create a readable title from the lesson path
+    # e.g., "thesis" -> "Thesis", "ai-agents-intro" -> "AI Agents Intro"
+    readable_title = lesson_path.split("/")[-1]  # Get last part of path
+    readable_title = readable_title.replace("-", " ").replace("_", " ")
+    readable_title = readable_title.title()  # Capitalize each word
+
     return {
         "content": "",
-        "title": f"Page: {lesson_path}",
+        "title": readable_title,
         "cached": False,
     }
 
@@ -136,9 +165,10 @@ async def get_cached_content(lesson_path: str) -> dict | None:
 
     if cached_data:
         import json
+        from typing import Any
 
         try:
-            result = json.loads(cached_data)
+            result: dict[str, Any] = json.loads(cached_data)
             result["cached"] = True
             return result
         except Exception:
