@@ -1,0 +1,82 @@
+deck:
+  id: "ch13-00-project-brief"
+  title: "The Project Brief"
+  description: "Key concepts from Chapter 13 Lesson 0 — project scoping, tier selection, and Layer 3 design mapping"
+  tags: ["nanoclaw", "project-scoping", "ai-employee", "tiers"]
+  version: 1
+
+cards:
+  - id: "ch13-00-project-brief-001"
+    type: "thinking"
+    front: "Why does the chapter require students to pull out their Layer 3 design before starting implementation?"
+    back: "Without a pre-existing blueprint, students would build ad hoc features instead of executing a coherent professional design. The Layer 3 design provides sequenced skills and MCP servers that ensure the employee matches their actual profession."
+    tags: ["layer-3", "planning"]
+    difficulty: "intermediate"
+    why: "What goes wrong when you implement without a design document?"
+
+  - id: "ch13-00-project-brief-002"
+    type: "recall"
+    front: "What three components should a Layer 3 design from Ch 7 L10 contain?"
+    back: "1. 3+ Agent Skills\n2. 3+ MCP Servers\n3. Domain vocabulary and rules"
+    tags: ["layer-3", "prerequisites"]
+    difficulty: "basic"
+
+  - id: "ch13-00-project-brief-003"
+    type: "recall"
+    front: "In Chapter 13, what are the three achievement tiers and their approximate time commitments?"
+    back: "Bronze (~3 hours)\nSilver (~5 hours)\nGold (~8 hours)"
+    tags: ["tiers", "project-scoping"]
+    difficulty: "basic"
+
+  - id: "ch13-00-project-brief-004"
+    type: "thinking"
+    front: "A student picks Gold tier but only has 4 hours available. What is the likely outcome?"
+    back: "They will abandon the project incomplete because Gold requires ~8 hours. Over-scoping is the most common reason personal projects fail — matching ambition to available time produces better results than stretching."
+    tags: ["tiers", "scope-calibration"]
+    difficulty: "intermediate"
+    why: "How does scope calibration apply to professional project management beyond this chapter?"
+
+  - id: "ch13-00-project-brief-005"
+    type: "recall"
+    front: "What does the Bronze tier deliver at the end of Chapter 13?"
+    back: "Identity + one skill + WhatsApp connection + proof of work"
+    tags: ["bronze", "deliverables"]
+    difficulty: "basic"
+
+  - id: "ch13-00-project-brief-006"
+    type: "thinking"
+    front: "Why does the project brief instruct students to choose their first skill based on single-conversation value?"
+    back: "A skill that delivers value in one conversation can be tested and validated immediately. Skills requiring multi-step workflows introduce complexity that delays feedback, making it harder to iterate on the design."
+    tags: ["prioritization", "skill-selection"]
+    difficulty: "intermediate"
+    why: "How does rapid feedback change the quality of iterative design?"
+
+  - id: "ch13-00-project-brief-007"
+    type: "recall"
+    front: "What does Silver tier add beyond Bronze in Chapter 13?"
+    back: "Scheduled tasks + permission boundaries + domain report"
+    tags: ["silver", "deliverables"]
+    difficulty: "basic"
+
+  - id: "ch13-00-project-brief-008"
+    type: "thinking"
+    front: "Why does Gold tier focus on multi-group architecture with isolation rather than adding more skills?"
+    back: "Isolation architecture solves a different class of problem — data separation between contexts. More skills add depth within one context, but groups with isolation enable handling multiple clients or roles safely, which is the professional scaling challenge."
+    tags: ["gold", "architecture"]
+    difficulty: "advanced"
+    why: "When would a professional need data isolation between AI employee contexts?"
+
+  - id: "ch13-00-project-brief-009"
+    type: "recall"
+    front: "What is the name and structure of the GitHub repository students create for Chapter 13?"
+    back: "`nanoclaw-employee/` with groups/, .claude/skills/, README.md, conversation-log.md, evaluation.md"
+    tags: ["repository", "deliverables"]
+    difficulty: "basic"
+
+  - id: "ch13-00-project-brief-010"
+    type: "thinking"
+    front: "Why is Chapter 13 structured as challenges with acceptance criteria instead of step-by-step tutorials?"
+    back: "Challenge-based structure forces students to apply judgment from their own profession rather than copy generic instructions. Each student builds something different because their domain expertise drives the implementation, not the tutorial."
+    tags: ["pedagogy", "project-chapter"]
+    difficulty: "intermediate"
+    why: "What skills does a challenge-based approach develop that tutorials cannot?"

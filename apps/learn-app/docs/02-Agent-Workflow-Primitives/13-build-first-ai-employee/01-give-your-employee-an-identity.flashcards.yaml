@@ -1,0 +1,82 @@
+deck:
+  id: "ch13-01-employee-identity"
+  title: "Give Your Employee an Identity"
+  description: "Key concepts from Chapter 13 Lesson 1 — agent identity configuration, behavioral rules, domain vocabulary, and boundary conditions"
+  tags: ["nanoclaw", "claude-md", "identity", "boundaries"]
+  version: 1
+
+cards:
+  - id: "ch13-01-employee-identity-001"
+    type: "recall"
+    front: "What four sections does a well-configured NanoClaw CLAUDE.md identity file contain?"
+    back: "1. Identity\n2. Rules\n3. Vocabulary\n4. Boundaries"
+    tags: ["claude-md", "structure"]
+    difficulty: "basic"
+
+  - id: "ch13-01-employee-identity-002"
+    type: "thinking"
+    front: "Why does an AI employee need explicit boundary conditions instead of relying on its general training?"
+    back: "General training produces generic caution. Explicit boundaries enforce profession-specific limits — like an accountant refusing to file taxes without CPA review — because the model cannot infer domain-specific legal and ethical obligations from context alone."
+    tags: ["boundaries", "domain-specificity"]
+    difficulty: "intermediate"
+    why: "What happens when an AI employee encounters a request at the edge of its boundaries?"
+
+  - id: "ch13-01-employee-identity-003"
+    type: "recall"
+    front: "In a NanoClaw identity file, what is the difference between the Rules section and the Boundaries section?"
+    back: "Rules define what the employee always/never does. Boundaries define what is entirely outside its scope."
+    tags: ["claude-md", "rules-vs-boundaries"]
+    difficulty: "intermediate"
+
+  - id: "ch13-01-employee-identity-004"
+    type: "thinking"
+    front: "A real estate agent's AI employee gives a property value prediction despite being told not to. How would you fix this?"
+    back: "The Boundaries section needs more specific phrasing. Broad rules like 'no predictions' fail on edge cases. Adding specific patterns to refuse — like 'never state future values, expected returns, or appreciation rates' — closes the gaps the model exploits."
+    tags: ["boundaries", "robustness"]
+    difficulty: "advanced"
+    why: "Why do boundary rules need to anticipate rephrased requests, not just obvious violations?"
+
+  - id: "ch13-01-employee-identity-005"
+    type: "recall"
+    front: "What does the Vocabulary section of a CLAUDE.md identity file contain?"
+    back: "10-20 domain-specific terms with brief definitions"
+    tags: ["claude-md", "vocabulary"]
+    difficulty: "basic"
+
+  - id: "ch13-01-employee-identity-006"
+    type: "thinking"
+    front: "Why include domain vocabulary in the identity file when the AI model already knows these terms?"
+    back: "The model knows terms generically but may use them incorrectly in context. An accountant's 'accrual' and a programmer's 'accrual' mean different things. Explicit vocabulary ensures the employee uses terms as the profession defines them, not as general knowledge suggests."
+    tags: ["vocabulary", "precision"]
+    difficulty: "intermediate"
+    why: "How does vocabulary precision affect client trust in an AI employee's output?"
+
+  - id: "ch13-01-employee-identity-007"
+    type: "recall"
+    front: "Where does a NanoClaw employee's profession-specific identity configuration live in the file system?"
+    back: "`groups/main/CLAUDE.md`"
+    tags: ["file-structure", "nanoclaw"]
+    difficulty: "basic"
+
+  - id: "ch13-01-employee-identity-008"
+    type: "thinking"
+    front: "Why does the lesson recommend testing identity with three specific message types: routine, vocabulary, and boundary?"
+    back: "Each message type tests a different dimension. Routine tests basic persona and tone. Vocabulary tests domain precision. Boundary tests refusal behavior. A single test message could pass while leaving two dimensions completely untested."
+    tags: ["testing", "identity"]
+    difficulty: "intermediate"
+    why: "What is the risk of testing with only routine messages?"
+
+  - id: "ch13-01-employee-identity-009"
+    type: "recall"
+    front: "What is the difference between `groups/global/CLAUDE.md` and `groups/main/CLAUDE.md` in NanoClaw?"
+    back: "Global contains shared rules across all groups. Main contains profession-specific identity for that group."
+    tags: ["file-structure", "groups"]
+    difficulty: "intermediate"
+
+  - id: "ch13-01-employee-identity-010"
+    type: "thinking"
+    front: "Why is domain knowledge externalization described as the hardest part of configuring an AI employee?"
+    back: "Professionals make decisions using implicit knowledge they cannot easily articulate. Writing rules forces precision — turning 'I just know this invoice looks wrong' into specific checkable conditions. This tacit-to-explicit conversion is cognitively demanding."
+    tags: ["knowledge-externalization", "expertise"]
+    difficulty: "advanced"
+    why: "How does making tacit knowledge explicit benefit the professional, not just the AI?"
