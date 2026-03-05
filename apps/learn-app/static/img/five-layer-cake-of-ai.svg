@@ -1,113 +1,220 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
   <defs>
-    <linearGradient id="energy" x1="0" y1="0" x2="0" y2="1">
+    <!-- Layer gradients - front face -->
+    <linearGradient id="e1f" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f5a623"/>
-      <stop offset="100%" stop-color="#e8891a"/>
+      <stop offset="100%" stop-color="#d4891a"/>
     </linearGradient>
-    <linearGradient id="chips" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4ecdc4"/>
-      <stop offset="100%" stop-color="#3bb8b0"/>
+    <linearGradient id="c2f" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2dd4a8"/>
+      <stop offset="100%" stop-color="#1fb890"/>
     </linearGradient>
-    <linearGradient id="infra" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#45b7d1"/>
-      <stop offset="100%" stop-color="#3a9fc0"/>
+    <linearGradient id="i3f" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#2098d4"/>
     </linearGradient>
-    <linearGradient id="models" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#9b59b6"/>
-      <stop offset="100%" stop-color="#8e44ad"/>
+    <linearGradient id="m4f" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#8b3ed4"/>
     </linearGradient>
-    <linearGradient id="apps" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e74c8b"/>
-      <stop offset="100%" stop-color="#d63e7a"/>
+    <linearGradient id="a5f" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#db2d8a"/>
     </linearGradient>
-    <filter id="shadow">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    <!-- Layer gradients - top face (lighter) -->
+    <linearGradient id="e1t" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fcc96d"/>
+      <stop offset="100%" stop-color="#f5a623"/>
+    </linearGradient>
+    <linearGradient id="c2t" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6ee7c2"/>
+      <stop offset="100%" stop-color="#2dd4a8"/>
+    </linearGradient>
+    <linearGradient id="i3t" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="m4t" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="a5t" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f9a8d4"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <!-- Layer gradients - right face (darker) -->
+    <linearGradient id="e1r" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4891a"/>
+      <stop offset="100%" stop-color="#b87315"/>
+    </linearGradient>
+    <linearGradient id="c2r" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1fb890"/>
+      <stop offset="100%" stop-color="#189e7c"/>
+    </linearGradient>
+    <linearGradient id="i3r" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2098d4"/>
+      <stop offset="100%" stop-color="#1a7eb5"/>
+    </linearGradient>
+    <linearGradient id="m4r" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b3ed4"/>
+      <stop offset="100%" stop-color="#7630b5"/>
+    </linearGradient>
+    <linearGradient id="a5r" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#db2d8a"/>
+      <stop offset="100%" stop-color="#be2575"/>
+    </linearGradient>
+    <!-- Background blob gradients -->
+    <radialGradient id="blob1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blob2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blob3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sh">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.1"/>
     </filter>
-    <filter id="glow">
-      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#e74c8b" flood-opacity="0.3"/>
-    </filter>
-  </defs>
-
-  <!-- Background -->
-  <rect width="1000" height="700" fill="#faf9f7"/>
-
-  <!-- Title -->
-  <text x="500" y="52" text-anchor="middle" font-size="32" font-weight="800" fill="#1a1a1a" letter-spacing="-0.5">The Five-Layer Cake of AI</text>
-
-  <!-- ===== LAYER 1: ENERGY (bottom, widest) ===== -->
-  <rect x="220" y="555" width="560" height="85" rx="12" fill="url(#energy)" filter="url(#shadow)"/>
-  <!-- Icons: lightning bolts, solar panel -->
-  <text x="500" y="595" text-anchor="middle" font-size="28" opacity="0.3">&#9889; &#9889; &#9889;</text>
-  <text x="500" y="618" text-anchor="middle" font-size="13" fill="#fff" opacity="0.7">&#9788;  &#9889;  &#8982;</text>
-
-  <!-- Layer 1 label -->
-  <text x="205" y="585" text-anchor="end" font-size="17" font-weight="800" fill="#1a1a1a">Layer 1: Energy</text>
-  <text x="205" y="605" text-anchor="end" font-size="12" fill="#555">The foundational power required</text>
-  <text x="205" y="620" text-anchor="end" font-size="12" fill="#555">to run all AI systems,</text>
-  <text x="205" y="635" text-anchor="end" font-size="12" fill="#555">supercomputers, and data centers.</text>
-
-  <!-- ===== LAYER 2: CHIPS ===== -->
-  <rect x="260" y="455" width="480" height="85" rx="12" fill="url(#chips)" filter="url(#shadow)"/>
-  <!-- Icons: circuit patterns -->
-  <text x="500" y="498" text-anchor="middle" font-size="24" opacity="0.3">&#9881; &#9881; &#9881;</text>
-  <text x="500" y="520" text-anchor="middle" font-size="13" fill="#fff" opacity="0.6">&#9776;  &#9670;  &#9632;</text>
-
-  <!-- Layer 2 label -->
-  <text x="245" y="480" text-anchor="end" font-size="17" font-weight="800" fill="#1a1a1a">Layer 2: Chips</text>
-  <text x="245" y="500" text-anchor="end" font-size="12" fill="#555">The specialized semiconductors</text>
-  <text x="245" y="515" text-anchor="end" font-size="12" fill="#555">and processors that perform the</text>
-  <text x="245" y="530" text-anchor="end" font-size="12" fill="#555">complex calculations for AI tasks.</text>
-
-  <!-- ===== LAYER 3: INFRASTRUCTURE ===== -->
-  <rect x="300" y="355" width="400" height="85" rx="12" fill="url(#infra)" filter="url(#shadow)"/>
-  <!-- Icons: servers -->
-  <text x="500" y="398" text-anchor="middle" font-size="24" opacity="0.3">&#9634; &#9634; &#9634;</text>
-  <text x="500" y="420" text-anchor="middle" font-size="13" fill="#fff" opacity="0.6">&#9729;  &#9654;  &#9729;</text>
-
-  <!-- Layer 3 label -->
-  <text x="285" y="378" text-anchor="end" font-size="17" font-weight="800" fill="#1a1a1a">Layer 3: Infrastructure</text>
-  <text x="285" y="398" text-anchor="end" font-size="12" fill="#555">The physical data centers and</text>
-  <text x="285" y="413" text-anchor="end" font-size="12" fill="#555">supercomputers that house, cool,</text>
-  <text x="285" y="428" text-anchor="end" font-size="12" fill="#555">and operate the AI hardware.</text>
-
-  <!-- ===== LAYER 4: MODELS ===== -->
-  <rect x="340" y="255" width="320" height="85" rx="12" fill="url(#models)" filter="url(#shadow)"/>
-  <!-- Icons: neural network nodes -->
-  <text x="500" y="298" text-anchor="middle" font-size="24" opacity="0.3">&#10070; &#10070; &#10070;</text>
-  <text x="500" y="320" text-anchor="middle" font-size="13" fill="#fff" opacity="0.6">&#9677;&#8212;&#9677;&#8212;&#9677;</text>
-
-  <!-- Layer 4 label -->
-  <text x="325" y="278" text-anchor="end" font-size="17" font-weight="800" fill="#1a1a1a">Layer 4: Models</text>
-  <text x="325" y="298" text-anchor="end" font-size="12" fill="#555">The software algorithms and neural</text>
-  <text x="325" y="313" text-anchor="end" font-size="12" fill="#555">networks (including open-source) that</text>
-  <text x="325" y="328" text-anchor="end" font-size="12" fill="#555">form the intelligence of AI.</text>
-
-  <!-- ===== LAYER 5: APPLICATIONS (top, narrowest) ===== -->
-  <!-- Glow highlight for emphasis -->
-  <rect x="380" y="150" width="240" height="90" rx="14" fill="url(#apps)" filter="url(#glow)"/>
-  <!-- Bright border to call it out -->
-  <rect x="380" y="150" width="240" height="90" rx="14" fill="none" stroke="#fff" stroke-width="2.5" stroke-dasharray="6,3" opacity="0.6"/>
-  <!-- Icons: apps, devices -->
-  <text x="500" y="193" text-anchor="middle" font-size="24" opacity="0.35">&#9743; &#9000; &#9993;</text>
-  <text x="500" y="218" text-anchor="middle" font-size="13" fill="#fff" opacity="0.6">&#10004;  &#9733;  &#10004;</text>
-
-  <!-- Layer 5 label -->
-  <text x="365" y="178" text-anchor="end" font-size="17" font-weight="800" fill="#1a1a1a">Layer 5: Applications</text>
-  <text x="365" y="198" text-anchor="end" font-size="12" fill="#555">The end-user products and services</text>
-  <text x="365" y="213" text-anchor="end" font-size="12" fill="#555">that leverage AI to solve problems</text>
-  <text x="365" y="228" text-anchor="end" font-size="12" fill="#555">and provide value.</text>
-
-  <!-- ===== "THIS BOOK" callout arrow ===== -->
-  <line x1="640" y1="130" x2="625" y2="155" stroke="#e74c8b" stroke-width="2.5" marker-end="url(#arrowpink)"/>
-  <rect x="640" y="100" width="200" height="40" rx="8" fill="#e74c8b" filter="url(#shadow)"/>
-  <text x="740" y="125" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">THIS BOOK LIVES HERE</text>
-
-  <defs>
-    <marker id="arrowpink" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <marker id="ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#e74c8b"/>
     </marker>
   </defs>
 
+  <!-- Background -->
+  <rect width="1000" height="680" fill="#fefefe"/>
+  <!-- Soft background blobs -->
+  <ellipse cx="850" cy="150" rx="200" ry="180" fill="url(#blob1)"/>
+  <ellipse cx="150" cy="500" rx="180" ry="160" fill="url(#blob2)"/>
+  <ellipse cx="800" cy="550" rx="150" ry="130" fill="url(#blob3)"/>
+  <ellipse cx="350" cy="100" rx="120" ry="100" fill="url(#blob1)"/>
+
+  <!-- Title -->
+  <text x="500" y="48" text-anchor="middle" font-size="30" font-weight="800" fill="#1a1a1a" letter-spacing="-0.5">The Five-Layer Cake of AI</text>
+
+  <!-- 3D offset for isometric look -->
+  <!-- dx=25 dy=-18 for top face, dx=25 for right face -->
+
+  <!-- ===== LAYER 1: ENERGY (bottom, widest) ===== -->
+  <!-- Front face -->
+  <rect x="250" y="530" width="460" height="65" rx="8" fill="url(#e1f)"/>
+  <!-- Top face (parallelogram) -->
+  <path d="M 250,530 L 275,512 L 735,512 L 710,530 Z" fill="url(#e1t)"/>
+  <!-- Right face -->
+  <path d="M 710,530 L 735,512 L 735,577 L 710,595 Z" fill="url(#e1r)"/>
+  <!-- Small decorative elements on top face -->
+  <circle cx="420" cy="520" r="4" fill="#fff" opacity="0.4"/>
+  <circle cx="500" cy="518" r="5" fill="#fff" opacity="0.3"/>
+  <circle cx="580" cy="520" r="4" fill="#fff" opacity="0.4"/>
+  <!-- Lightning bolt shapes -->
+  <polygon points="460,522 465,518 462,520 468,515" fill="#fff" opacity="0.25"/>
+  <polygon points="530,520 535,516 532,518 538,513" fill="#fff" opacity="0.25"/>
+
+  <!-- Label -->
+  <text x="235" y="558" text-anchor="end" font-size="16" font-weight="800" fill="#1a1a1a">Layer 1: Energy</text>
+  <text x="235" y="576" text-anchor="end" font-size="11.5" fill="#555">The foundational power required</text>
+  <text x="235" y="591" text-anchor="end" font-size="11.5" fill="#555">to run all AI systems,</text>
+  <text x="235" y="606" text-anchor="end" font-size="11.5" fill="#555">supercomputers, and data centers.</text>
+
+  <!-- ===== LAYER 2: CHIPS ===== -->
+  <!-- Front face -->
+  <rect x="285" y="430" width="390" height="65" rx="8" fill="url(#c2f)"/>
+  <!-- Top face -->
+  <path d="M 285,430 L 310,412 L 700,412 L 675,430 Z" fill="url(#c2t)"/>
+  <!-- Right face -->
+  <path d="M 675,430 L 700,412 L 700,477 L 675,495 Z" fill="url(#c2r)"/>
+  <!-- Circuit-like decorative dots -->
+  <rect x="410" y="418" width="8" height="8" rx="1" fill="#fff" opacity="0.3"/>
+  <rect x="430" y="418" width="8" height="8" rx="1" fill="#fff" opacity="0.25"/>
+  <rect x="450" y="418" width="8" height="8" rx="1" fill="#fff" opacity="0.3"/>
+  <rect x="470" y="418" width="8" height="8" rx="1" fill="#fff" opacity="0.25"/>
+  <line x1="418" y1="426" x2="438" y2="426" stroke="#fff" stroke-width="1" opacity="0.2"/>
+  <line x1="458" y1="422" x2="478" y2="422" stroke="#fff" stroke-width="1" opacity="0.2"/>
+  <rect x="530" y="418" width="8" height="8" rx="1" fill="#fff" opacity="0.3"/>
+  <rect x="550" y="418" width="8" height="8" rx="1" fill="#fff" opacity="0.25"/>
+
+  <!-- Label -->
+  <text x="270" y="458" text-anchor="end" font-size="16" font-weight="800" fill="#1a1a1a">Layer 2: Chips</text>
+  <text x="270" y="476" text-anchor="end" font-size="11.5" fill="#555">The specialized semiconductors</text>
+  <text x="270" y="491" text-anchor="end" font-size="11.5" fill="#555">and processors that perform the</text>
+  <text x="270" y="506" text-anchor="end" font-size="11.5" fill="#555">complex calculations for AI tasks.</text>
+
+  <!-- ===== LAYER 3: INFRASTRUCTURE ===== -->
+  <!-- Front face -->
+  <rect x="320" y="330" width="320" height="65" rx="8" fill="url(#i3f)"/>
+  <!-- Top face -->
+  <path d="M 320,330 L 345,312 L 665,312 L 640,330 Z" fill="url(#i3t)"/>
+  <!-- Right face -->
+  <path d="M 640,330 L 665,312 L 665,377 L 640,395 Z" fill="url(#i3r)"/>
+  <!-- Server rack shapes -->
+  <rect x="420" y="316" width="14" height="18" rx="2" fill="#fff" opacity="0.25"/>
+  <rect x="438" y="316" width="14" height="18" rx="2" fill="#fff" opacity="0.2"/>
+  <rect x="456" y="316" width="14" height="18" rx="2" fill="#fff" opacity="0.25"/>
+  <line x1="423" y1="322" x2="431" y2="322" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+  <line x1="423" y1="326" x2="431" y2="326" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+  <line x1="441" y1="322" x2="449" y2="322" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+  <line x1="441" y1="326" x2="449" y2="326" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+  <circle cx="520" cy="322" r="8" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.2"/>
+  <circle cx="520" cy="322" r="3" fill="#fff" opacity="0.2"/>
+
+  <!-- Label -->
+  <text x="305" y="350" text-anchor="end" font-size="16" font-weight="800" fill="#1a1a1a">Layer 3: Infrastructure</text>
+  <text x="305" y="368" text-anchor="end" font-size="11.5" fill="#555">The physical data centers and</text>
+  <text x="305" y="383" text-anchor="end" font-size="11.5" fill="#555">supercomputers that house, cool,</text>
+  <text x="305" y="398" text-anchor="end" font-size="11.5" fill="#555">and operate the AI hardware.</text>
+
+  <!-- ===== LAYER 4: MODELS ===== -->
+  <!-- Front face -->
+  <rect x="355" y="230" width="250" height="65" rx="8" fill="url(#m4f)"/>
+  <!-- Top face -->
+  <path d="M 355,230 L 380,212 L 630,212 L 605,230 Z" fill="url(#m4t)"/>
+  <!-- Right face -->
+  <path d="M 605,230 L 630,212 L 630,277 L 605,295 Z" fill="url(#m4r)"/>
+  <!-- Neural network dots -->
+  <circle cx="440" cy="220" r="3.5" fill="#fff" opacity="0.3"/>
+  <circle cx="470" cy="216" r="3.5" fill="#fff" opacity="0.25"/>
+  <circle cx="500" cy="220" r="3.5" fill="#fff" opacity="0.3"/>
+  <circle cx="530" cy="216" r="3.5" fill="#fff" opacity="0.25"/>
+  <circle cx="560" cy="220" r="3.5" fill="#fff" opacity="0.3"/>
+  <line x1="443" y1="220" x2="467" y2="216" stroke="#fff" stroke-width="1" opacity="0.2"/>
+  <line x1="473" y1="216" x2="497" y2="220" stroke="#fff" stroke-width="1" opacity="0.2"/>
+  <line x1="503" y1="220" x2="527" y2="216" stroke="#fff" stroke-width="1" opacity="0.2"/>
+  <line x1="533" y1="216" x2="557" y2="220" stroke="#fff" stroke-width="1" opacity="0.2"/>
+
+  <!-- Label -->
+  <text x="340" y="250" text-anchor="end" font-size="16" font-weight="800" fill="#1a1a1a">Layer 4: Models</text>
+  <text x="340" y="268" text-anchor="end" font-size="11.5" fill="#555">The software algorithms and neural</text>
+  <text x="340" y="283" text-anchor="end" font-size="11.5" fill="#555">networks (including open-source) that</text>
+  <text x="340" y="298" text-anchor="end" font-size="11.5" fill="#555">form the intelligence of AI.</text>
+
+  <!-- ===== LAYER 5: APPLICATIONS (top, narrowest, highlighted) ===== -->
+  <!-- Front face -->
+  <rect x="390" y="130" width="180" height="65" rx="8" fill="url(#a5f)"/>
+  <!-- Top face -->
+  <path d="M 390,130 L 415,112 L 595,112 L 570,130 Z" fill="url(#a5t)"/>
+  <!-- Right face -->
+  <path d="M 570,130 L 595,112 L 595,177 L 570,195 Z" fill="url(#a5r)"/>
+  <!-- App-like shapes on top -->
+  <rect x="440" y="116" width="12" height="16" rx="3" fill="#fff" opacity="0.3"/>
+  <rect x="460" y="114" width="10" height="12" rx="2" fill="#fff" opacity="0.25"/>
+  <circle cx="490" cy="122" r="5" fill="#fff" opacity="0.25"/>
+  <rect x="510" y="116" width="14" height="10" rx="2" fill="#fff" opacity="0.2"/>
+  <rect x="530" y="118" width="8" height="14" rx="3" fill="#fff" opacity="0.3"/>
+
+  <!-- Label -->
+  <text x="375" y="150" text-anchor="end" font-size="16" font-weight="800" fill="#1a1a1a">Layer 5: Applications</text>
+  <text x="375" y="168" text-anchor="end" font-size="11.5" fill="#555">The end-user products and services</text>
+  <text x="375" y="183" text-anchor="end" font-size="11.5" fill="#555">that leverage AI to solve problems</text>
+  <text x="375" y="198" text-anchor="end" font-size="11.5" fill="#555">and provide value.</text>
+
+  <!-- ===== "THIS BOOK" callout ===== -->
+  <rect x="640" y="88" width="195" height="38" rx="8" fill="#e74c8b" filter="url(#sh)"/>
+  <text x="737" y="113" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">THIS BOOK LIVES HERE</text>
+  <line x1="638" y1="107" x2="598" y2="125" stroke="#e74c8b" stroke-width="2.5" marker-end="url(#ap)"/>
+
   <!-- Footer -->
-  <text x="500" y="680" text-anchor="middle" font-size="12" fill="#888" font-style="italic">Panaversity — The AI Agent Factory</text>
+  <text x="500" y="660" text-anchor="middle" font-size="12" fill="#999" font-style="italic">Panaversity — The AI Agent Factory</text>
 </svg>
