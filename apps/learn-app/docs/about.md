@@ -58,7 +58,7 @@ A practical framework for engineers, domain professionals, enterprise leaders, p
 
 > Modern AI is built like a towering five-layer cake — a metaphor popularized by **Jensen Huang**, CEO of **NVIDIA**. At the base lies **Energy**, powering vast data centers around the world. Above it sit **Chips**, the specialized processors that perform trillions of calculations every second. On top of that comes **Infrastructure** — the global network of supercomputers and cloud platforms that scale those computations. Above the infrastructure are **Models**, the neural networks that learn, reason, and generate intelligence. And finally, at the very top, sits the fifth layer: **Applications** — where AI stops being technology and starts becoming useful.
 >
-> Billions of dollars are invested in the lower four layers so that this fifth layer can exist. **This book is about that fifth layer.** It teaches you **how to build the applications, agents, and digital workers** that transform AI capability into products people use, workflows organizations rely on, and value enterprises can capture.
+> Billions of dollars are invested in the lower four layers so that this fifth layer can exist. **This book is about that fifth layer.** It teaches you **how to build the applications, agents, and digital workers** that transform AI capability into products people use, workflows organizations rely on, and value enterprises can capture.The mission of *The Agent Factory* is to help you design and build these intelligent systems — turning the immense power of modern AI into practical tools that operate inside businesses, products, and entire industries.
 
 
 ---
