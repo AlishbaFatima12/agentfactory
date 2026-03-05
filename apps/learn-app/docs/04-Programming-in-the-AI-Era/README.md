@@ -13,7 +13,7 @@ Traditional Python education teaches bottom-up: syntax first, verification last.
 
 AI eliminated that bottleneck. Claude Code generates hundreds of lines of working code in seconds. The mechanical act of writing code is no longer the human's job. But someone must still define what the code should do, and someone must verify that it does it correctly. The AI handles the middle. You handle everything that matters.
 
-**Claude Code is the primary development tool throughout Part 4.** Every chapter, every exercise, and every project iteration uses Claude Code as your AI coding agent. Part 4 applies the Spec-Driven Development methodology from [Chapter 5](/docs/General-Agents-Foundations/spec-driven-development) to Python. The core teaching model is simple:
+Part 3 used Claude Cowork to deploy agents without writing code. Part 4 switches to **Claude Code** -- your AI coding agent for the rest of the book. Every chapter, every exercise, and every project iteration uses Claude Code. Part 4 applies the Spec-Driven Development methodology from [Chapter 5](/docs/General-Agents-Foundations/spec-driven-development) to Python. The core teaching model is simple:
 
 - **INPUT: You write specifications** -- descriptions of what the code should do, using type labels and checks (tests). Then you prompt Claude Code to generate the implementation.
 - **OUTPUT: You verify the result** -- you run automated tools to prove the generated code is correct. You never accept output on faith.
