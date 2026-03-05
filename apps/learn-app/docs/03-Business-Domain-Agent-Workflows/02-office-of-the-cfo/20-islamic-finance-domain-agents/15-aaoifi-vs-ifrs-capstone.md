@@ -273,7 +273,9 @@ Bahrain-AAOIFI jurisdiction overlay SKILL.md. It must cover:
 Format as a complete, deployable SKILL.md file with YAML frontmatter.
 ```
 
-**Check your work:** The SKILL.md from Step 6 is the capstone deliverable of the entire accounting track in this chapter. It encodes everything the AI agent needs to produce Bahrain-compliant AAOIFI output — the line items, the labels, the prohibited terms, the regulatory references, and the reconciliation logic for IFRS comparison. Deploy it and test it: give the agent a murabaha transaction in Bahrain and confirm the output uses AAOIFI FAS 2 terminology, not IFRS 9 defaults.
+7. **Error detection — mixed-framework financial statements.** Review a deliberately flawed balance sheet: _"An ABC Islamic Bank balance sheet shows 'Loans and Advances to Customers' as the main asset line, 'Net Interest Income' in the income statement, and Investment Account Holder funds classified under 'Other Liabilities'. This balance sheet claims to follow AAOIFI. Identify every AAOIFI violation and produce the corrected line items."_ At minimum you should find: (1) "Loans and Advances" is prohibited — each product gets its own line (Murabaha Receivables, Ijarah Assets, etc.); (2) "Net Interest Income" is prohibited — should be product-specific income labels; (3) IAH funds must appear as a separate category ("Equity of Investment Account Holders"), not under "Other Liabilities".
+
+**Check your work:** The SKILL.md from Step 6 is the capstone deliverable of the entire accounting track in this chapter. It encodes everything the AI agent needs to produce Bahrain-compliant AAOIFI output — the line items, the labels, the prohibited terms, the regulatory references, and the reconciliation logic for IFRS comparison. Deploy it and test it: give the agent a murabaha transaction in Bahrain and confirm the output uses AAOIFI FAS 2 terminology, not IFRS 9 defaults. In Step 7, the error detection exercise should identify at least 3 violations — the student demonstrates professional judgment by finding what the agent got wrong.
 
 ---
 

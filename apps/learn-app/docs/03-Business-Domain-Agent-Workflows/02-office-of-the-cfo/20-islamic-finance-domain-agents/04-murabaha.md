@@ -183,7 +183,9 @@ The practical significance for a CA/CPA: if the jurisdiction's Shariah Superviso
 
 5. **Draft the disclosure notes for each.** Ask: _"Draft the murabaha receivable disclosure note for each entity's financial statements: (a) Bahrain — AAOIFI FAS 2 with murabaha receivable and deferred income movement tables; (b) Malaysia — MFRS 7/MFRS 9 for Islamic financing receivables."_
 
-**Check your work:** The numbers in the two schedules should be arithmetically identical. If they differ, check whether you specified the same mark-up rate and tenure for both. The disclosure notes should look structurally different — AAOIFI requires a Shariah compliance accounting policy statement and separate movement tables; MFRS 9 requires IFRS 7-style credit risk and ECL disclosures.
+6. **Error detection.** Deliberately introduce an error: ask your AI assistant to produce a murabaha schedule for a Bahrain entity but label the income as "Financing Income" (a conventional IFRS label, not AAOIFI-compliant). Then review the output and identify every non-compliance. _"I have a Bahrain murabaha income schedule where income is labelled 'Financing Income' and the receivable appears under 'Loans and Advances'. What compliance errors exist in these labels? What should each line item be called under AAOIFI FAS 2?"_
+
+**Check your work:** The numbers in the two schedules should be arithmetically identical. If they differ, check whether you specified the same mark-up rate and tenure for both. The disclosure notes should look structurally different — AAOIFI requires a Shariah compliance accounting policy statement and separate movement tables; MFRS 9 requires IFRS 7-style credit risk and ECL disclosures. In Step 6, your error detection should identify at least two labelling violations: "Financing Income" should be "Murabaha Income" and "Loans and Advances" should be "Murabaha Receivables" under AAOIFI.
 
 :::tip Global Perspective
 

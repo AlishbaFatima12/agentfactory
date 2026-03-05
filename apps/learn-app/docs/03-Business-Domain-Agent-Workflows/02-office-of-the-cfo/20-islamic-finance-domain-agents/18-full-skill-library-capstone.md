@@ -202,27 +202,28 @@ Step 5: Before generating any journal entry or financial statement:
 
 Verify the routing logic handles edge cases: what happens when a query mentions two jurisdictions (consolidation)? When a product is not in the library (new fintech structure)? When the jurisdiction uses a local standard not in the library (Iran, Bangladesh)?
 
-### Step 3 — Method A Knowledge Extraction for Murabaha (AAOIFI Regime)
+### Step 3 — Find a Gap in the Installed Library
 
-Method A is interview-based knowledge extraction — converting your own professional knowledge into SKILL.md instructions.
+The installed plugin covers 13 jurisdictions. Your task: identify a jurisdiction that is NOT in the library but has an active Islamic finance market.
 
-Interview yourself with these three questions:
+Choose one of: Jordan, Iran, Sudan, Bangladesh, Brunei, Morocco, or another country with Islamic banking regulation. Research its regulatory framework and determine:
 
-1. **What are the three most common AAOIFI FAS 2 errors in a Bahraini IFI's books?** (This captures the "what to watch for" instructions.)
-2. **What Shariah compliance conditions, if breached, would invalidate the murabaha accounting treatment?** (This captures the SSB escalation triggers.)
-3. **What do you always check when reviewing a murabaha receivable aging report?** (This captures the audit procedure instructions.)
+1. **Which regime does it fall under?** (AAOIFI mandatory, IFRS with Islamic guidance, or local standard)
+2. **What regulator oversees Islamic banking?**
+3. **What specific labelling requirements exist?**
+4. **What would the router need to know to route queries for this jurisdiction?**
 
-Convert your answers to SKILL.md instruction format. Ask your AI assistant to review for gaps. Save the result.
+If you choose a jurisdiction from the AAOIFI mandatory group (Sudan, Jordan), compare its requirements against the existing Bahrain overlay — what is shared and what is jurisdiction-specific?
 
-### Step 4 — Method B Document Analysis for Jurisdiction Overlays
+### Step 4 — Build the Extension: New Jurisdiction Overlay
 
-Method B converts regulatory source documents into SKILL.md instructions. For each jurisdiction overlay, provide the relevant regulatory source and extract the key rules:
+Using the Method B document analysis pattern, build a new jurisdiction overlay SKILL.md for the jurisdiction you identified in Step 3:
 
 ```
 I am building a jurisdiction overlay SKILL.md for [JURISDICTION].
 Here are the key regulatory requirements from [SOURCE DOCUMENT]:
 
-[PASTE KEY REQUIREMENTS]
+[PASTE KEY REQUIREMENTS — from the regulator's website or published framework]
 
 Extract the following into SKILL.md instruction format:
 (1) Primary accounting framework and governing body
@@ -231,14 +232,23 @@ Extract the following into SKILL.md instruction format:
 (4) Required Shariah disclosures
 (5) Regulatory-specific requirements (capital adequacy, reporting
     frequencies, unique local rules)
-(6) NEVER rules — what must never appear in this jurisdiction's
-    output
+(6) NEVER rules — what must never appear in this jurisdiction's output
 (7) SSB escalation triggers specific to this jurisdiction
 ```
 
-### Step 5 — Deploy All Scheduled Islamic Finance Tasks
+Save the result as a SKILL.md file. Compare its structure against the existing Bahrain or Malaysia overlay from the installed plugin — does it follow the same format? Does it contain the same section headings?
 
-Configure the full scheduled task architecture:
+### Step 5 — Test Your Extension
+
+Test your new jurisdiction overlay by running 3 queries against it:
+
+1. **Murabaha query** — Does the routing logic correctly identify your new jurisdiction and apply the right labels?
+2. **Sukuk investor query** — Does the classification match your jurisdiction's adopted framework?
+3. **Zakat query** — Does the zakat treatment follow the local regulatory approach?
+
+If any query produces incorrect output, identify whether the gap is in the product skill (unlikely — these are universal) or in your jurisdiction overlay (the labels, disclosure references, or regulatory requirements you specified). Fix the overlay and re-test.
+
+Also verify the scheduled task architecture would work for your jurisdiction:
 
 | Frequency     | Task                        | What It Does                                                                              |
 | ------------- | --------------------------- | ----------------------------------------------------------------------------------------- |
