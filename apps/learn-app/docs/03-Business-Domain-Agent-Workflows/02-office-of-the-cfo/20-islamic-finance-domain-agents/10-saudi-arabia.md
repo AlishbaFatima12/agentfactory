@@ -231,7 +231,9 @@ Saudi Arabia's Public Investment Fund (PIF) has issued multiple tranches of suku
 
    _"Produce Alinma Bank's monthly Islamic finance management accounts: (1) Murabaha income — broken down by tenor bucket (less than 1 year, 1-3 years, over 3 years); (2) Home finance (DM) income — showing declining rental income trend; (3) Sukuk portfolio — income and mark-to-market position; (4) Zakat accrual; (5) Key ratios: Net Financing Margin, NPF ratio, Coverage ratio. Format for the Saudi board of directors. All figures in SAR."_
 
-**Check your work:** The ZATCA zakat base in Step 2 should be: SAR 20B + SAR 4.5B + SAR 3.2B - SAR 1.8B - SAR 5.0B = SAR 20.9B. Zakat obligation = SAR 20.9B x 2.5% = SAR 522.5M. The PIF sukuk in Step 3 should pass the SPPI test if distributions are fixed and redemption is at face value. The management accounts in Step 5 should present all figures in SAR with Saudi conventions.
+6. **Error detection — incorrect Saudi zakat.** Review this deliberately flawed calculation: _"A Saudi Islamic bank calculated its ZATCA zakat base as: Share capital SAR 20B plus Retained earnings SAR 3.2B = SAR 23.2B. Zakat at 2.5% = SAR 580M. What errors are in this zakat base calculation? What items were incorrectly included or excluded? Produce the corrected calculation."_ The bank omitted statutory reserves (should be added) and failed to deduct fixed assets and long-term investments (both should be deducted from the equity-based ZATCA formula).
+
+**Check your work:** The ZATCA zakat base in Step 2 should be: SAR 20B + SAR 4.5B + SAR 3.2B - SAR 1.8B - SAR 5.0B = SAR 20.9B. Zakat obligation = SAR 20.9B x 2.5% = SAR 522.5M. The PIF sukuk in Step 3 should pass the SPPI test if distributions are fixed and redemption is at face value. The management accounts in Step 5 should present all figures in SAR with Saudi conventions. In Step 6, the corrected zakat base should be SAR 20.9B, not SAR 23.2B — the student should identify the missing reserves and missing deductions.
 
 ## Try With AI
 

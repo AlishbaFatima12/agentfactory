@@ -315,34 +315,17 @@ for choosing green over standard?
 
 **What you are learning:** The distinction between accounting measurement (unchanged) and disclosure obligations (additional) is a professional judgment that matters in practice. Issuers sometimes assume that "green" changes their financial statements. It does not change the numbers — it changes what they must report about how proceeds are used and what impact was achieved. Understanding this distinction prevents both over-engineering the accounting and under-estimating the disclosure obligations.
 
-### Prompt 3: Cross-Border Sukuk Listing — Malaysia and London
+### Prompt 3: Write Your Own — Cross-Border Sukuk Listing
 
-```
-A Malaysian corporation has issued MYR 2 billion sukuk
-musharakah listed on both Bursa Malaysia and the London
-Stock Exchange.
+**Do not copy a pre-written prompt.** Write your own prompt from scratch for this scenario:
 
-A UK-based Islamic fund holds GBP 50 million of the sukuk.
+> A Malaysian corporation has issued MYR 2 billion sukuk musharakah listed on both Bursa Malaysia and the London Stock Exchange. A UK-based Islamic fund holds GBP 50 million of the sukuk.
 
-Questions:
-1. The issuer applies MFRS 9 — what does the UK investor apply?
-2. Does the UK investor's IFRS 9 classification necessarily
-   match the Malaysian issuer's MFRS 9 classification?
-3. The issuer uses "Profit Paid on Sukuk" as its income label.
-   What label does the UK investor use?
-4. HMRC (UK tax authority) treats sukuk distributions as
-   interest for tax purposes. Does this affect the accounting
-   label in the investor's financial statements?
-5. If the sukuk is also designated as Green under SC Malaysia's
-   SRI Framework, does the UK investor have any green
-   disclosure obligation?
+Your prompt should get the AI to analyze how the **same instrument** appears in **two different jurisdictions' financial statements** — the Malaysian issuer's perspective (MFRS 9) and the UK investor's perspective (IFRS 9). Include questions about classification, income labels, and tax treatment differences.
 
-This tests cross-border Islamic finance accounting where
-the same instrument appears in two different jurisdictions'
-financial statements.
-```
+**After you get the output**, check: Did the AI apply each jurisdiction's framework independently? Did it correctly identify that HMRC treats sukuk distributions as interest for tax purposes while the accounting label remains Shariah-compliant? Did it address whether the issuer's MFRS 9 classification necessarily matches the investor's IFRS 9 classification?
 
-**What you are learning:** Cross-border sukuk listing forces you to apply jurisdiction-specific accounting to the same instrument from two different perspectives. The Malaysian issuer and the UK investor each apply their own jurisdiction's IFRS-equivalent framework independently. The income labels differ. The tax treatment differs. The green disclosure obligation may differ. This is exactly the multi-jurisdiction complexity that well-structured AI agent instructions prevent from producing errors.
+**What you are learning:** Writing cross-border prompts requires specifying both jurisdiction perspectives explicitly. If your prompt only mentioned one jurisdiction, the AI defaulted to a single framework. The skill of constructing a prompt that forces multi-jurisdiction analysis is the same skill that makes the router in the plugin architecture effective — it starts by identifying the jurisdiction before doing any accounting.
 
 ---
 

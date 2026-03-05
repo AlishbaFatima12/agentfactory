@@ -239,30 +239,17 @@ Questions:
 
 **What you are learning:** The AAOIFI depreciation policy — useful life, not lease term — creates a deliberate book loss on ownership transfer. This is not an error. It reflects the Shariah position that the lessor genuinely owns the asset and must depreciate it as an owner would. The total economics (rental income over the lease term minus total depreciation and transfer loss) should still be profitable — but the profit is distributed differently across the income statement over time compared to IFRS 16 treatment.
 
-### Prompt 2: Dual-Framework Consolidation Challenge
+### Prompt 2: Write Your Own — Dual-Framework Consolidation
 
-```
-A GCC Islamic banking group has:
-- A Bahrain subsidiary (AAOIFI FAS 32) with 800M in IMB assets
-- A UAE subsidiary (IFRS 16) with 600M in IMB assets
-- Both subsidiaries finance identical types of equipment
+This prompt tests your ability to construct an effective AI query for a complex accounting scenario. **Do not copy a pre-written prompt.** Instead, write your own prompt from scratch based on this scenario:
 
-The group prepares consolidated financial statements under IFRS.
+> A GCC Islamic banking group has a Bahrain subsidiary (AAOIFI FAS 32) with 800M in IMB assets and a UAE subsidiary (IFRS 16) with 600M in the same asset class. The group consolidates under IFRS.
 
-Questions:
-1. The Bahrain subsidiary reports 800M in Ijarah Assets on its
-   standalone AAOIFI statements. For IFRS consolidation, must
-   these be reclassified? If so, how?
-2. The UAE subsidiary has already derecognised its IMB assets
-   under IFRS 16. No adjustment needed. Correct?
-3. Draft the consolidation adjustment entries to convert
-   Bahrain AAOIFI balances to IFRS 16 for group reporting.
-4. What is the net balance sheet impact of this conversion?
-   Does the group's total assets increase or decrease?
-5. How does this affect the group's regulatory capital ratios?
-```
+**Your prompt should ask the AI to:** (1) determine whether the Bahrain assets need reclassification for IFRS consolidation, (2) produce the specific consolidation adjustment entries, and (3) quantify the balance sheet impact.
 
-**What you are learning:** Multi-jurisdiction consolidation is the highest-value skill in global Islamic finance practice. Most Islamic banking groups operate across AAOIFI and IFRS jurisdictions simultaneously. The consolidation adjustments — converting AAOIFI standalone balances to IFRS for group reporting — are substantive and affect capital ratios. This is the kind of engagement that commands premium advisory fees because few practitioners understand both frameworks well enough to execute the conversion correctly.
+**After you get the output**, evaluate it: Did the AI correctly distinguish between AAOIFI on-balance-sheet treatment and IFRS 16 derecognition? Did it produce adjustment entries that would actually produce a correct consolidated balance sheet?
+
+**What you are learning:** Writing effective prompts for multi-jurisdiction consolidation is harder than it appears. The prompt must specify both frameworks, both entity perspectives, and the consolidation direction (AAOIFI → IFRS, not the reverse). If your prompt was ambiguous, the AI may consolidate in the wrong direction. Compare your prompt and output with a classmate's — did the same scenario produce different outputs based on how you framed the question?
 
 ---
 

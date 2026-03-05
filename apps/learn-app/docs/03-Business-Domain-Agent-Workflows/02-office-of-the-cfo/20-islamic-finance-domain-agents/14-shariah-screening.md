@@ -334,28 +334,17 @@ address this volatility problem?
 
 **What you are learning:** The denominator choice is not a technicality — it determines how stable a company's Shariah status is over market cycles. A fund that uses market-cap-based screening will experience more turnover (and more transaction costs) during market downturns, as companies breach thresholds not because their debt increased but because their share price fell. The trailing average approach smooths this volatility but introduces a lag.
 
-### Prompt 3: Build a Personal Shariah Screening Agent
+### Prompt 3: Write Your Own — Personal Shariah Screening Agent
 
-```
-I want to screen my personal equity portfolio for Shariah compliance.
-I hold 15 stocks across US, UK, and Malaysian markets.
+**Do not copy a pre-written prompt.** Design your own prompt that asks the AI to build a personal Shariah screening agent SKILL.md. Your scenario:
 
-Build me a SKILL.md instruction for a Shariah screening agent that:
-(1) Takes a list of stock tickers as input
-(2) Fetches the latest financial data (debt, total assets, revenue
-breakdown) for each company
-(3) Applies the AAOIFI Standard 21 screening methodology
-(4) Flags any company that fails any screen
-(5) Calculates my personal purification obligation from dividends
-received in the past quarter
-(6) Produces a one-page compliance summary
+> You hold 15 stocks across US, UK, and Malaysian markets. You want an agent that screens your portfolio for Shariah compliance, flags failures, and calculates your purification obligation.
 
-Include the SKILL.md routing instruction: if I specify a different
-methodology (SC Malaysia, MSCI, Tadawul), switch to that methodology
-instead of AAOIFI.
-```
+Your prompt should specify: (1) what input the agent takes, (2) which screening methodology to apply by default and how to switch methodologies, (3) what output to produce. Think about what the routing instruction should say — how does the agent know which methodology to use?
 
-**What you are learning:** Personal Shariah screening uses the same methodologies as institutional screening. The SKILL.md you build here is a miniature version of the institutional screening agent — the routing logic, the ratio calculations, and the purification obligation are identical. The difference is scale and regulatory obligation: a fund manager must report to the SSB; a personal investor acts on their own conscience.
+**After you get the output**, evaluate the SKILL.md against the shariah-screening-global skill installed by the plugin. Does your agent handle methodology switching the same way the plugin's router handles jurisdiction switching? What routing logic did the AI include that you didn't specify?
+
+**What you are learning:** Building a screening SKILL.md from a prompt you wrote yourself tests whether you understand the routing pattern from Lesson 3. The router logic (identify methodology → load screening rules → apply → flag) mirrors the chapter's router → product → overlay architecture. If your prompt produced a SKILL.md without routing logic, your prompt was missing the jurisdiction/methodology switching instruction — the same gap that makes generic agents fail across jurisdictions.
 
 ---
 
