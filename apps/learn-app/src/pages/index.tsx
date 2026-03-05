@@ -76,8 +76,8 @@ function HomepageHeader() {
                 You Can Trust, Deploy, and Scale.
               </p>
               <p className="text-xs sm:text-sm text-muted-foreground/70 font-normal leading-[1.5] max-w-xl -mt-1 sm:-mt-2">
-                A practical framework for engineers, domain professionals,
-                enterprise leaders, product architects, and operational teams
+                A practical framework for engineers, domain professionals (accountants, finance managers, marketing professions, etc. ),
+                enterprise leaders, startup founders, product architects, and operational teams
                 building the next generation of AI-powered organizations.
               </p>
             </div>
