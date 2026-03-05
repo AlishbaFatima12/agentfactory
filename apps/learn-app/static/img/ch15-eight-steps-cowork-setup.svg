@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e87722"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="960" fill="#faf8f4"/>
+  <line x1="30" y1="20" x2="1170" y2="20" stroke="#e87722" stroke-width="3"/>
+  <line x1="30" y1="940" x2="1170" y2="940" stroke="#e87722" stroke-width="3"/>
+
+  <!-- ===== ARROWS ===== -->
+  <!-- 1 → 2 -->
+  <path d="M 310 100 C 360 80, 400 75, 430 80" fill="none" stroke="#e87722" stroke-width="2.5" marker-end="url(#ah)"/>
+  <!-- 2 → 3 -->
+  <path d="M 720 95 C 770 80, 810 70, 845 72" fill="none" stroke="#e87722" stroke-width="2.5" marker-end="url(#ah)"/>
+  <!-- 3 → 4 (curves down and left) -->
+  <path d="M 870 260 C 820 310, 550 310, 350 340" fill="none" stroke="#e87722" stroke-width="2.5" marker-end="url(#ah)"/>
+  <!-- 4 → 5 (through center) -->
+  <path d="M 320 490 C 450 530, 700 530, 830 490" fill="none" stroke="#e87722" stroke-width="2.5" marker-end="url(#ah)"/>
+  <!-- 5 → 6 (curves down and left) -->
+  <path d="M 870 580 C 820 630, 550 640, 350 655" fill="none" stroke="#e87722" stroke-width="2.5" marker-end="url(#ah)"/>
+  <!-- 6 → 7 -->
+  <path d="M 355 800 C 395 810, 420 810, 440 805" fill="none" stroke="#e87722" stroke-width="2.5" marker-end="url(#ah)"/>
+  <!-- 7 → 8 -->
+  <path d="M 755 800 C 790 810, 820 810, 845 805" fill="none" stroke="#e87722" stroke-width="2.5" marker-end="url(#ah)"/>
+
+  <!-- ===== CENTER: Big 8 + Title ===== -->
+  <text x="600" y="530" text-anchor="middle" font-size="240" font-weight="900" fill="#1a1a1a" opacity="0.07">8</text>
+  <text x="600" y="410" text-anchor="middle" font-size="30" font-weight="900" fill="#1a1a1a" letter-spacing="-0.5">Steps to</text>
+  <text x="600" y="448" text-anchor="middle" font-size="30" font-weight="900" fill="#1a1a1a" letter-spacing="-0.5">Set Up Your</text>
+  <text x="600" y="486" text-anchor="middle" font-size="30" font-weight="900" fill="#1a1a1a" letter-spacing="-0.5">Entire</text>
+  <text x="600" y="524" text-anchor="middle" font-size="30" font-weight="900" fill="#e87722" letter-spacing="-0.5">Claude</text>
+  <text x="600" y="562" text-anchor="middle" font-size="30" font-weight="900" fill="#1a1a1a" letter-spacing="-0.5">Cowork:</text>
+
+  <!-- =========================================================== -->
+  <!-- STEP 1 — Top Left                                            -->
+  <!-- =========================================================== -->
+  <circle cx="72" cy="58" r="18" fill="#e87722"/>
+  <text x="72" y="64" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">1</text>
+
+  <text x="50" y="92" font-size="16" font-weight="800" fill="#1a1a1a">Download The App</text>
+  <text x="50" y="116" font-size="12.5" fill="#444">Go to claude.com/download.</text>
+  <text x="50" y="134" font-size="12.5" fill="#444">You need a <tspan font-weight="700" fill="#1a1a1a">Pro plan ($20/mo)</tspan>.</text>
+  <text x="50" y="152" font-size="12.5" fill="#444">macOS or Windows only.</text>
+  <text x="50" y="170" font-size="12.5" fill="#444">Open the app.</text>
+  <text x="50" y="198" font-size="12.5" font-weight="600" fill="#1a1a1a" font-style="italic">2 minutes. Don't overthink it.</text>
+
+  <!-- =========================================================== -->
+  <!-- STEP 2 — Top Center                                          -->
+  <!-- =========================================================== -->
+  <circle cx="462" cy="58" r="18" fill="#e87722"/>
+  <text x="462" y="64" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">2</text>
+
+  <text x="440" y="92" font-size="16" font-weight="800" fill="#1a1a1a">Click The Cowork Tab</text>
+  <text x="440" y="116" font-size="12.5" fill="#444">Open the app.</text>
+  <text x="440" y="134" font-size="12.5" fill="#444">Click <tspan font-weight="700" fill="#1a1a1a">Cowork</tspan> at the tap.</text>
+  <text x="440" y="152" font-size="12.5" fill="#444">Select <tspan font-weight="700" fill="#1a1a1a">Opus 4.6</tspan>.</text>
+  <text x="440" y="170" font-size="12.5" fill="#444">Turn on <tspan font-weight="700" fill="#1a1a1a">Extended Thinking</tspan>.</text>
+  <text x="440" y="198" font-size="12.5" font-weight="600" fill="#1a1a1a" font-style="italic">Wrong model = bad output.</text>
+
+  <!-- =========================================================== -->
+  <!-- STEP 3 — Top Right                                           -->
+  <!-- =========================================================== -->
+  <circle cx="872" cy="58" r="18" fill="#e87722"/>
+  <text x="872" y="64" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">3</text>
+
+  <text x="850" y="92" font-size="16" font-weight="800" fill="#1a1a1a">Build This Exact Folder</text>
+  <text x="850" y="116" font-size="12.5" fill="#444">Create one folder: <tspan font-weight="700" fill="#1a1a1a">"Claude-Work."</tspan></text>
+  <text x="850" y="134" font-size="12.5" fill="#444">Inside it, 4 subfolders:</text>
+  <text x="858" y="155" font-size="12" fill="#444"><tspan font-weight="700" fill="#1a1a1a">ABOUT ME</tspan> — who you are</text>
+  <text x="858" y="172" font-size="12" fill="#444">+ how you write</text>
+  <text x="858" y="190" font-size="12" fill="#444"><tspan font-weight="700" fill="#1a1a1a">PROJECTS</tspan> — one subfolder</text>
+  <text x="858" y="207" font-size="12" fill="#444">per live project</text>
+  <text x="858" y="225" font-size="12" fill="#444"><tspan font-weight="700" fill="#1a1a1a">TEMPLATES</tspan> — best past work</text>
+  <text x="858" y="242" font-size="12" fill="#444">as structures</text>
+  <text x="858" y="260" font-size="12" fill="#444"><tspan font-weight="700" fill="#1a1a1a">OUTPUTS</tspan> — where Claude</text>
+  <text x="858" y="277" font-size="12" fill="#444">saves finished files</text>
+  <text x="850" y="300" font-size="12.5" fill="#444">Cowork <tspan font-weight="700" fill="#1a1a1a">has</tspan> read/write access.</text>
+  <text x="850" y="318" font-size="12.5" fill="#444">Keep it tight.</text>
+
+  <!-- =========================================================== -->
+  <!-- STEP 4 — Middle Left                                         -->
+  <!-- =========================================================== -->
+  <circle cx="72" cy="360" r="18" fill="#e87722"/>
+  <text x="72" y="366" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">4</text>
+
+  <text x="50" y="394" font-size="16" font-weight="800" fill="#1a1a1a">Create 3 Context Files</text>
+  <text x="50" y="418" font-size="12.5" fill="#444">Inside ABOUT ME, create:</text>
+  <text x="58" y="440" font-size="12" fill="#444"><tspan font-weight="700" fill="#1a1a1a">about-me.md</tspan> — what you</text>
+  <text x="58" y="457" font-size="12" fill="#444">work on day-to-day</text>
+  <text x="58" y="478" font-size="12" fill="#444"><tspan font-weight="700" fill="#1a1a1a">my-voice.md</tspan> — your tone,</text>
+  <text x="58" y="495" font-size="12" fill="#444">2–3 real writing samples</text>
+  <text x="58" y="516" font-size="12" fill="#444"><tspan font-weight="700" fill="#1a1a1a">my-rules.md</tspan> — ask before</text>
+  <text x="58" y="533" font-size="12" fill="#444">starting, show a plan, never delete</text>
+  <text x="50" y="560" font-size="12.5" font-weight="700" fill="#1a1a1a" font-style="italic">One great file beats 50</text>
+  <text x="50" y="578" font-size="12.5" font-weight="700" fill="#1a1a1a" font-style="italic">random uploads.</text>
+  <text x="50" y="602" font-size="12.5" font-weight="600" fill="#888" font-style="italic">Aha! I found it.</text>
+
+  <!-- =========================================================== -->
+  <!-- STEP 5 — Middle Right                                        -->
+  <!-- =========================================================== -->
+  <circle cx="872" cy="360" r="18" fill="#e87722"/>
+  <text x="872" y="366" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">5</text>
+
+  <text x="850" y="394" font-size="16" font-weight="800" fill="#1a1a1a">Set Instructions</text>
+  <text x="850" y="418" font-size="12.5" fill="#444">Settings → Cowork → Edit</text>
+  <text x="850" y="436" font-size="12.5" fill="#444"><tspan font-weight="700" fill="#1a1a1a">Instructions</tspan>. Paste:</text>
+
+  <rect x="850" y="450" width="300" height="80" rx="6" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <text x="862" y="472" font-size="11" fill="#333">"I'm [Name], [Role]. Read my</text>
+  <text x="862" y="489" font-size="11" fill="#333">files before every task. Ask</text>
+  <text x="862" y="506" font-size="11" fill="#333">questions before executing.</text>
+  <text x="862" y="523" font-size="11" fill="#333">Show a plan. Never delete</text>
+  <text x="862" y="540" font-size="11" fill="#333">without approval."</text>
+
+  <text x="850" y="568" font-size="12.5" font-weight="600" fill="#1a1a1a" font-style="italic">Set once. Runs forever.</text>
+  <text x="850" y="590" font-size="12.5" font-weight="600" fill="#888" font-style="italic">Found it again.</text>
+
+  <!-- =========================================================== -->
+  <!-- STEP 6 — Bottom Left                                         -->
+  <!-- =========================================================== -->
+  <circle cx="72" cy="660" r="18" fill="#e87722"/>
+  <text x="72" y="666" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">6</text>
+
+  <text x="50" y="692" font-size="16" font-weight="800" fill="#1a1a1a">Stop Prompting.</text>
+  <text x="50" y="710" font-size="16" font-weight="800" fill="#1a1a1a">Start Clicking.</text>
+  <text x="50" y="734" font-size="12.5" fill="#444">Paste this for every task:</text>
+
+  <rect x="50" y="745" width="280" height="72" rx="6" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <text x="62" y="764" font-size="10.5" fill="#333">"I want to [TASK]. Read all files</text>
+  <text x="62" y="779" font-size="10.5" fill="#333">first. Ask me questions using</text>
+  <text x="62" y="794" font-size="10.5" fill="#333">AskUserQuestion before you execute.</text>
+  <text x="62" y="809" font-size="10.5" fill="#333">If something is off, generate</text>
+  <text x="62" y="824" font-size="10.5" fill="#333">new questions. Do not guess."</text>
+
+  <text x="50" y="850" font-size="12.5" fill="#444">Claude generates clickable</text>
+  <text x="50" y="868" font-size="12.5" fill="#444"><tspan font-weight="700" fill="#1a1a1a">buttons</tspan>. You click. It executes.</text>
+  <text x="50" y="896" font-size="12" font-weight="600" fill="#1a1a1a" font-style="italic">You don't need to be clear.</text>
+  <text x="50" y="912" font-size="12" font-weight="600" fill="#1a1a1a" font-style="italic">Claude forces you to be clear.</text>
+
+  <!-- =========================================================== -->
+  <!-- STEP 7 — Bottom Center                                       -->
+  <!-- =========================================================== -->
+  <circle cx="472" cy="660" r="18" fill="#e87722"/>
+  <text x="472" y="666" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">7</text>
+
+  <text x="450" y="692" font-size="16" font-weight="800" fill="#1a1a1a">Install Your First Plugin</text>
+  <text x="450" y="716" font-size="12.5" fill="#444">Customize → Browse Plugins → Install.</text>
+  <text x="450" y="734" font-size="12.5" fill="#444">Type <tspan font-weight="700" fill="#1a1a1a">/</tspan> to see slash commands.</text>
+  <text x="458" y="758" font-size="12" fill="#444"><tspan font-weight="700" fill="#1a1a1a">Marketing</tspan> → /marketing:draft-content</text>
+  <text x="458" y="776" font-size="12" fill="#444"><tspan font-weight="700" fill="#1a1a1a">Data</tspan> → /data/explore</text>
+  <text x="458" y="794" font-size="12" fill="#444"><tspan font-weight="700" fill="#1a1a1a">Legal</tspan> → "Review this NDA."</text>
+  <text x="450" y="820" font-size="12.5" font-weight="600" fill="#1a1a1a" font-style="italic">Start with 2.</text>
+  <text x="450" y="848" font-size="12" font-weight="600" fill="#888" font-style="italic">This is why $285B in software</text>
+  <text x="450" y="866" font-size="12" font-weight="600" fill="#888" font-style="italic">stocks disappeared.</text>
+
+  <!-- =========================================================== -->
+  <!-- STEP 8 — Bottom Right                                        -->
+  <!-- =========================================================== -->
+  <circle cx="872" cy="660" r="18" fill="#e87722"/>
+  <text x="872" y="666" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">8</text>
+
+  <text x="850" y="692" font-size="16" font-weight="800" fill="#1a1a1a">Connect Your Tools</text>
+  <text x="850" y="716" font-size="12.5" fill="#444">Settings → Connectors → Browse</text>
+  <text x="850" y="734" font-size="12.5" fill="#444">→ Add.</text>
+  <text x="850" y="758" font-size="12.5" font-weight="700" fill="#1a1a1a">Slack. Google Drive. Notion.</text>
+  <text x="850" y="776" font-size="12.5" font-weight="700" fill="#1a1a1a">Figma.</text>
+  <text x="907" y="776" font-size="12.5" fill="#444">50+ more.</text>
+  <text x="850" y="800" font-size="12.5" fill="#444">Claude reads your tools</text>
+  <text x="850" y="818" font-size="12.5" fill="#444">mid-conversation.</text>
+  <text x="850" y="842" font-size="12.5" fill="#444">No copy-pasting. Free on all plans.</text>
+  <text x="850" y="870" font-size="12.5" font-weight="600" fill="#1a1a1a" font-style="italic">Claude stops being a chatbot.</text>
+  <text x="850" y="888" font-size="12.5" font-weight="600" fill="#1a1a1a" font-style="italic">Starts being a coworker.</text>
+
+  <!-- ===== FOOTER ===== -->
+  <text x="600" y="930" text-anchor="middle" font-size="11.5" fill="#888" font-style="italic">Panaversity — The AI Agent Factory</text>
+</svg>
