@@ -266,6 +266,9 @@ The transformation of software development is underway. You are not just learnin
 
 Refer back to this table whenever a term feels unfamiliar. You do not need to memorize anything now -- each term gets its own lesson with step-by-step explanation.
 
+<details>
+<summary>Click to expand glossary</summary>
+
 | Term | Plain English |
 |------|--------------|
 | **Python** | A programming language -- the one you are learning in this part |
@@ -284,5 +287,7 @@ Refer back to this table whenever a term feels unfamiliar. You do not need to me
 | **TDG** | Test-Driven Generation -- SDD applied to Python: your specification is types + tests, Claude Code generates, you verify |
 | **PRIMM** | Predict-Run-Investigate -- a method for reading code by predicting what it does before running it |
 | **Claude Code** | Your primary AI coding agent throughout Part 4 -- generates, explains, and reviews code based on your specifications |
+
+</details>
 
 Let's begin.
