@@ -54,9 +54,9 @@ A practical framework for engineers, domain professionals, enterprise leaders, p
 
 ---
 
-![The Five-Layer Cake of AI — Energy, Chips, Infrastructure, Models, and Applications. This book lives at the top layer.](/img/five-layer-cake-of-ai.png)
+![The Five-Layer Cake of AI](/img/five-layer-cake-of-ai.png)
 
-The AI industry is a five-layer stack: **Energy** powers the data centers, **Chips** perform the calculations, **Infrastructure** houses the hardware, **Models** provide the intelligence, and **Applications** deliver the value. This book operates entirely at **Layer 5 — Applications** — teaching you how to build the end-user products, agents, and services that sit on top of the entire stack and solve real problems for real organizations.
+Every breakthrough in AI rests on five layers: **Energy** at the foundation, **Chips** that compute, **Infrastructure** that scales, **Models** that reason, and **Applications** at the very top — where AI finally meets the real world. Billions of dollars flow into the bottom four layers so that the fifth layer can exist. **This book is about that fifth layer.** It teaches you how to build the applications, agents, and digital workers that turn all that investment into products people actually use, workflows organizations actually run, and value that enterprises actually capture.
 
 ---
 
