@@ -54,6 +54,12 @@ A practical framework for engineers, domain professionals, enterprise leaders, p
 
 ---
 
+![The Five-Layer Cake of AI — Energy, Chips, Infrastructure, Models, and Applications. This book lives at the top layer.](/img/five-layer-cake-of-ai.png)
+
+The AI industry is a five-layer stack: **Energy** powers the data centers, **Chips** perform the calculations, **Infrastructure** houses the hardware, **Models** provide the intelligence, and **Applications** deliver the value. This book operates entirely at **Layer 5 — Applications** — teaching you how to build the end-user products, agents, and services that sit on top of the entire stack and solve real problems for real organizations.
+
+---
+
 ## The Core Idea
 
 **Digital Full-Time Equivalents (Digital FTEs)** are reliable AI agents designed to perform structured knowledge work continuously, combining domain expertise, structured specifications, and human oversight to deliver consistent outcomes in real organizational environments.
