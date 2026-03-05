@@ -37,7 +37,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "Channel configuration, MCP server integration, and data boundary awareness. Within B1 budget of 3-5 concepts since students already understand NanoClaw architecture from Ch 7 L10."
+  assessment: "Channel configuration, MCP server integration, and data boundary awareness. Within B1 budget of 3-5 concepts since students already understand NanoClaw architecture from the NanoClaw Hands-On Setup lesson."
 
 differentiation:
   extension_for_advanced: "Add both a channel AND an MCP server. Map the full data flow for each, comparing what crosses the boundary."
@@ -46,7 +46,7 @@ differentiation:
 
 # Connect Your Employee to the World
 
-In Lesson 2, you gave your employee domain expertise through a custom skill. Now you will give it reach — the ability to communicate and act through the tools your profession actually uses.
+In Teach Your Employee a Skill lesson, you gave your employee domain expertise through a custom skill. Now you will give it reach — the ability to communicate and act through the tools your profession actually uses.
 
 Your AI employee can think, but it can only talk through WhatsApp. A real employee needs access to the platforms where your work happens. An accountant needs email for client invoices. A teacher needs Slack for parent communication. A developer needs GitHub for code review workflows. The connection you add here should be the single highest-value integration for your specific profession.
 
@@ -84,7 +84,7 @@ Your profession probably suggests a different connection entirely. That is the p
 <details>
 <summary>Level 1: Where to Look</summary>
 
-Run `/help` in your NanoClaw WhatsApp group to see all available commands, including the `/add-*` commands for channels. For MCP servers, check the NanoClaw repository's documentation on MCP configuration. Your Layer 3 design from Chapter 7 already lists the MCP servers you planned — start there.
+Run `/help` in your NanoClaw WhatsApp group to see all available commands, including the `/add-*` commands for channels. For MCP servers, check the NanoClaw repository's documentation on MCP configuration. Your Layer 3 design from the NanoClaw Hands-On Setup lesson already lists the MCP servers you planned — start there.
 
 </details>
 
@@ -109,5 +109,4 @@ Use the answer to confirm or adjust your choice before committing to the setup.
 **For the data boundary analysis:** Ask yourself three questions: (1) What data does my employee send OUT through this connection? (2) What data comes IN from this connection? (3) Is any of this data stored inside the container?
 
 </details>
-
 

@@ -41,7 +41,7 @@ learning_objectives:
   - objective: "Reflect on the gap between design and implementation"
     proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Student compares their Layer 3 design from Ch 7 L10 with what they actually built and articulates what changed and why"
+    assessment_method: "Student compares their Layer 3 design from the NanoClaw Hands-On Setup lesson with what they actually built and articulates what changed and why"
 
   - objective: "Identify concrete next steps for advancing to a higher tier"
     proficiency_level: "A2"
@@ -59,7 +59,7 @@ differentiation:
 
 # Project Review
 
-In Lesson 0, you received a project brief. In Lessons 1 through 7, you built a working AI employee for your profession. Now you evaluate what you actually produced.
+In The Project Brief, you set the scope and goals for your build. In the build lessons through Prove Professional Value, you created a working AI employee for your profession. Now you evaluate what you actually produced.
 
 This assessment is not a test — it is an honest inventory. The checklist below tells you exactly what a completed build looks like at each tier. Check what you finished, note what you did not, and decide what comes next.
 
@@ -69,27 +69,27 @@ Review your `nanoclaw-employee/` repository against the criteria for your tier. 
 
 ### Bronze Tier
 
-- [ ] `groups/main/CLAUDE.md` with profession-specific identity — not a generic assistant, but an employee that knows your domain vocabulary, common tasks, and professional standards (L01)
-- [ ] Custom `SKILL.md` in `.claude/skills/` with 5 or more domain decision rules — rules that encode how a professional in your field makes judgment calls, not just task instructions (L02)
-- [ ] Working channel or MCP connection documented — your employee can communicate through at least one external channel beyond the terminal (L03)
-- [ ] `conversation-log.md` with 3 to 5 real professional tasks — actual work you delegated, not toy examples, with the employee's responses and your assessment of quality (L04)
-- [ ] `evaluation.md` with completed rubric and honest reflection — did the employee perform at the level of a junior colleague, an intern, or not yet useful? (L04)
+- [ ] `groups/main/CLAUDE.md` with profession-specific identity — not a generic assistant, but an employee that knows your domain vocabulary, common tasks, and professional standards (Give Your Employee an Identity)
+- [ ] Custom `SKILL.md` in `.claude/skills/` with 5 or more domain decision rules — rules that encode how a professional in your field makes judgment calls, not just task instructions (Teach Your Employee a Skill)
+- [ ] Working channel or MCP connection documented — your employee can communicate through at least one external channel beyond the terminal (Connect Your Employee to the World)
+- [ ] `conversation-log.md` with 3 to 5 real professional tasks — actual work you delegated, not toy examples, with the employee's responses and your assessment of quality (Bronze Capstone: First Real Day)
+- [ ] `evaluation.md` with completed rubric and honest reflection — did the employee perform at the level of a junior colleague, an intern, or not yet useful? (Bronze Capstone: First Real Day)
 
 ### Silver Tier (All Bronze items, plus)
 
-- [ ] `scheduler-config.md` with scheduled task design — what runs, when, and why that cadence matters for your profession (L05)
-- [ ] `hitl-boundaries.md` with 4 or more categorized actions — each with domain-specific reasoning for why it is auto-approve, needs-approval, or never-automate (L06)
-- [ ] `domain-report-sample.md` — an actual report your employee generated autonomously, pulling from 2 or more data sources, containing at least one proactive recommendation (L07)
+- [ ] `scheduler-config.md` with scheduled task design — what runs, when, and why that cadence matters for your profession (Make Your Employee Proactive)
+- [ ] `hitl-boundaries.md` with 4 or more categorized actions — each with domain-specific reasoning for why it is auto-approve, needs-approval, or never-automate (Teach Your Employee Boundaries)
+- [ ] `domain-report-sample.md` — an actual report your employee generated autonomously, pulling from 2 or more data sources, containing at least one proactive recommendation (Prove Professional Value)
 
 ### Gold Tier (All Silver items, plus)
 
-- [ ] 3 groups configured with distinct `CLAUDE.md` files — `main` (admin), a professional work group, and a client-facing or external group, each with different identity and permissions (L07)
-- [ ] Isolation test results documented — evidence that the non-admin group cannot perform admin actions or access restricted data (L07)
-- [ ] System architecture diagram — showing the three groups, their data access boundaries, and communication flows between them (L07)
+- [ ] 3 groups configured with distinct `CLAUDE.md` files — `main` (admin), a professional work group, and a client-facing or external group, each with different identity and permissions (Prove Professional Value)
+- [ ] Isolation test results documented — evidence that the non-admin group cannot perform admin actions or access restricted data (Prove Professional Value)
+- [ ] System architecture diagram — showing the three groups, their data access boundaries, and communication flows between them (Prove Professional Value)
 
 ## Reflection
 
-Pull up your Layer 3 design from Chapter 7 Lesson 10. That design listed the skills you planned to build and the MCP servers you planned to connect. Compare it with what you actually built.
+Pull up your Layer 3 design from the "NanoClaw Hands-On Setup" lesson in "Meet Your First AI Employee - OpenClaw". That design listed the skills you planned to build and the MCP servers you planned to connect. Compare it with what you actually built.
 
 Consider these questions:
 

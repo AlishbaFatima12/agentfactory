@@ -110,10 +110,9 @@ Break your scheduled task into four decisions:
 1. **WHAT to monitor:** The data source or condition your employee checks (a folder, a calendar, a list, a status)
 2. **WHEN to check:** The interval that matches your work rhythm (daily at 8 AM? Monday mornings? Every Friday evening?)
 3. **WHAT to report:** The output format — what information and how it is structured (bullet list? table? prioritized flags?)
-4. **WHERE to deliver:** Which channel receives the output (WhatsApp? Slack? Gmail? The channel from Lesson 3?)
+4. **WHERE to deliver:** Which channel receives the output (WhatsApp? Slack? Gmail? The channel from Connect Your Employee to the World?)
 
 Configure the task in NanoClaw using its scheduling capabilities. Start with a short interval for testing (every few minutes), verify the output looks right, then switch to the production schedule.
 
 </details>
-
 
