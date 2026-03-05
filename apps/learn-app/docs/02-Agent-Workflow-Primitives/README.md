@@ -9,7 +9,7 @@ You understand the paradigm. You know the Seven Principles. You've seen what an 
 
 **Now it's time to build the skills to create your own.**
 
-This part is a progressive skills lab. Each chapter tackles a specific problem domain — organizing files, synthesizing research, analyzing data, generating documents, and managing versions. By Chapter 13, you combine everything to build your own AI Employee.
+This part is a progressive skills lab. Each chapter tackles a specific problem domain — organizing files, synthesizing research, analyzing data, generating documents, and managing versions. In the Project lesson, you combine everything to build your own AI Employee.
 
 ## The Progressive Arc
 
@@ -35,4 +35,4 @@ Each chapter starts with a problem you recognize from your own work. The solutio
 3. **Execute** in small, reversible steps
 4. **Persist** the output for future reuse
 
-This is the General Agent workflow. By Chapter 13, it will be second nature.
+This is the General Agent workflow. By the Project lesson, it will be second nature.
