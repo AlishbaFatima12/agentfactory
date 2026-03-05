@@ -82,7 +82,7 @@ differentiation:
 
 # Enterprise Governance
 
-In Lesson 9, you installed the IDFA plugin. Every analyst who installs `panaversity/idfa-financial-architect` gets identical enforcement of the four technical guardrails — Named Range naming, layer isolation, LaTeX verification, Intent Notes, and Delegated Calculation. The plugin solved the consistency problem. Now solve the accountability problem.
+In Lesson 9, you installed the IDFA plugin. Every analyst who installs `idfa-financial-architect` gets identical enforcement of the four technical guardrails — Named Range naming, layer isolation, LaTeX verification, Intent Notes, and Delegated Calculation. The plugin solved the consistency problem. Now solve the accountability problem.
 
 Enforcement is not governance. The plugin ensures every agent-built formula uses `Inp_` prefixes and Named Range notation. But the plugin cannot tell you which models exist in the organisation, who owns them, when they were last validated, or who approved the last structural change. Enterprise governance is what turns plugin-enforced technical compliance into organisational capability. This lesson builds the four artefacts that a CFO signs off on — the organisational layer around the plugin's enforcement layer.
 
@@ -123,7 +123,7 @@ The plugin's SKILL.md already defines the base standard — `Inp_` prefixes, thr
 
 **Organisation-specific additions.** Your team may require LaTeX verification for formulas beyond the four the plugin enforces (WACC, NPV, DCF, IRR). Debt schedules, waterfall distributions, carried interest calculations — the Standards Document extends the plugin's LaTeX list with your team's specific requirements.
 
-**Plugin version policy.** Which version of `panaversity/idfa-financial-architect` is approved for production use? When a new version is released, who evaluates it, who approves the upgrade, and what is the rollout timeline? The Standards Document governs the governance tool itself.
+**Plugin version policy.** Which version of `idfa-financial-architect` is approved for production use? When a new version is released, who evaluates it, who approves the upgrade, and what is the rollout timeline? The Standards Document governs the governance tool itself.
 
 The Standards Document is not a duplicate of the SKILL.md. It is the addendum — everything your organisation needs that the plugin does not provide out of the box.
 
@@ -230,14 +230,14 @@ The plugin handles enforcement. Governance handles accountability. Together they
 
 :::tip Setup
 
-Open Claude in Cowork or Claude Code. Ensure the IDFA plugin is installed. In Claude Code: `/plugin marketplace add panaversity/idfa-financial-architect` then `/plugin install idfa-financial-architect@panaversity-idfa`. In Cowork: install via **Customize → Browse plugins**. You will design governance artefacts using AI as a drafting partner.
+Open Claude in Cowork or Claude Code. Ensure the IDFA plugin is installed. In Claude Code: `/plugin marketplace add panaversity/agentfactory-business-plugins` then `/plugin install idfa-financial-architect@agentfactory-business`. In Cowork: install via **Customize → Browse plugins**. You will design governance artefacts using AI as a drafting partner.
 
 :::
 
 **Prompt 1 — Draft a Standards Document addendum:**
 
 ```
-Your team uses the IDFA plugin (panaversity/idfa-financial-architect).
+Your team uses the IDFA plugin (idfa-financial-architect).
 The plugin enforces naming conventions, layer isolation, LaTeX
 verification, Intent Notes, and Delegated Calculation. Draft a Standards
 Document that covers what the plugin does NOT enforce:
@@ -291,7 +291,7 @@ one quarter.
 
 ```
 Draft a Finance Domain Agent Standards Policy for a team that
-uses the IDFA plugin (panaversity/idfa-financial-architect).
+uses the IDFA plugin (idfa-financial-architect).
 The plugin already enforces the four technical guardrails.
 This policy covers what the plugin cannot:
 
