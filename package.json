@@ -9,6 +9,7 @@
     "affected": "nx affected"
   },
   "dependencies": {
+    "@docusaurus/faster": "^3.9.2",
     "nx": "^22.2.3",
     "playwright": "^1.57.0",
     "pptxgenjs": "^4.0.1",

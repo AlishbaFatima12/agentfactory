@@ -11,6 +11,7 @@ Features:
 import json
 import logging
 import os
+from typing import Any
 
 # Load .env into os.environ BEFORE importing settings or any SDK
 # This is required because OpenAI Agents SDK reads from os.environ directly
@@ -235,7 +236,6 @@ async def chatkit_endpoint(request: Request):
 @app.get("/health")
 async def health_check(request: Request):
     """Health check endpoint with database and Redis status."""
-    from typing import Any
     status: dict[str, Any] = {
         "status": "healthy",
         "version": "5.1.0",

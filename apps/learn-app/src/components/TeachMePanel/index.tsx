@@ -12,16 +12,19 @@
  * Reference: https://github.com/openai/openai-chatkit-starter-app
  */
 
-import React, { useState, useMemo, useCallback, useEffect } from "react";
+import React, { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useStudyMode } from "../../contexts/StudyModeContext";
 import { useAuth } from "../../contexts/AuthContext";
+import { useLearnerProfile } from "../../contexts/LearnerProfileContext";
 import { useUserDisplayName } from "../../hooks/useUserDisplayName";
 import { getOAuthAuthorizationUrl } from "@/lib/auth-client";
 import { Sheet, SheetContent, SheetClose } from "@/components/ui/sheet";
 import { X, Lock } from "lucide-react";
 import { ProfileSoftNudge } from "@/components/profile/ProfileSoftNudge";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
 
 // Fallback user ID for anonymous users (not logged in)
@@ -229,10 +232,15 @@ function ChatKitWrapper({
     }
   }, [onSendMessage, sendUserMessage]);
 
+  // Ref to prevent duplicate initial message sends (React StrictMode protection)
+  const initialMessageSentRef = useRef(false);
+
   // Send initial message if provided (for Ask feature or auto-start teach mode)
   // Calls onInitialMessageSent callback to clear the message after sending
+  // Uses ref to prevent duplicate sends which causes duplicate threads
   useEffect(() => {
-    if (initialMessage && sendUserMessage) {
+    if (initialMessage && sendUserMessage && !initialMessageSentRef.current) {
+      initialMessageSentRef.current = true;
       sendUserMessage({ text: initialMessage, newThread: true }).then(() => {
         if (onInitialMessageSent) {
           onInitialMessageSent();
@@ -240,6 +248,13 @@ function ChatKitWrapper({
       });
     }
   }, [initialMessage, sendUserMessage, onInitialMessageSent]);
+
+  // Reset the ref when initial message changes (new chat)
+  useEffect(() => {
+    if (!initialMessage) {
+      initialMessageSentRef.current = false;
+    }
+  }, [initialMessage]);
 
   // Users type "A" or "B" to answer - this is handled by the chat input
 
@@ -254,6 +269,7 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
   const { siteConfig } = useDocusaurusContext();
   const { isOpen, closePanel, openPanel, mode, setMode } = useStudyMode();
   const { session } = useAuth();
+  const { profile, needsOnboarding } = useLearnerProfile();
   const [chatKey, setChatKey] = useState(0);
   // Mode is now managed by context (useStudyMode)
   const [initialMessage, setInitialMessage] = useState<string | undefined>();
@@ -270,6 +286,9 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
 
   // Auth check
   const isLoggedIn = !!session?.user;
+
+  // Profile page link
+  const profileHref = useBaseUrl("/profile");
 
   // Auth config for login redirect
   const authUrl = siteConfig.customFields?.authUrl as string | undefined;
@@ -434,6 +453,28 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
           </SheetClose>
 
           <ProfileSoftNudge />
+          {/* Personalization Banner - matches deployed book style */}
+          {profile && (
+            <div className="mx-3 mt-3 mb-2 px-4 py-3 border border-border bg-background">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm font-semibold text-foreground">
+                  Profile {Math.round(profile.profile_completeness ?? 0)}% complete
+                </span>
+                <Link
+                  to={profileHref}
+                  className="text-sm font-medium text-primary hover:underline transition-colors"
+                >
+                  Complete profile for improved responses
+                </Link>
+              </div>
+              <div className="w-full h-1.5 bg-muted">
+                <div
+                  className="h-full bg-primary transition-all duration-300"
+                  style={{ width: `${profile.profile_completeness ?? 0}%` }}
+                />
+              </div>
+            </div>
+          )}
           <div className={styles.chatContainer}>
             <ChatKitWrapper
               key={`${lessonPath}-${chatKey}-${mode}`}

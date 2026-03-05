@@ -389,18 +389,3 @@ def get_onboarding_instructions() -> str:
     return ONBOARDING_AGENT_INSTRUCTIONS
 
 
-def get_phase_instructions(phase: str) -> str:
-    """Get phase-specific instructions.
-
-    Note: Phase-specific instructions (mastery gate, phase 3, phase 4) have been
-    removed in favor of natural progression. This function now returns empty
-    string for all phases except phase_0 which uses onboarding instructions.
-
-    Args:
-        phase: Current phase
-
-    Returns:
-        Phase-specific instructions (empty for teaching phases)
-    """
-    # Phase-specific instructions removed - using natural progression
-    return ""

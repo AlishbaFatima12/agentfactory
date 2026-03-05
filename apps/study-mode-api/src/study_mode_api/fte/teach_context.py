@@ -51,9 +51,6 @@ class TeachContext:
     discovered_concepts: list[str] = field(default_factory=list)
     conversation_turns: int = 0
 
-    # Image injection (used by chatkit_server)
-    open_image_url: str = ""
-
     # ==========================================================================
     # COMPUTED PROPERTIES
     # ==========================================================================

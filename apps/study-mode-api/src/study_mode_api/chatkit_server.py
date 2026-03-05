@@ -14,6 +14,7 @@ load_dotenv(_env_path)
 import logging  # noqa: E402
 from collections.abc import AsyncIterator  # noqa: E402
 from datetime import datetime  # noqa: E402
+from typing import Any  # noqa: E402
 
 from agents import Runner, RunResultStreaming  # noqa: E402
 from chatkit.agents import (  # noqa: E402
@@ -26,6 +27,7 @@ from chatkit.types import (  # noqa: E402
     AssistantMessageContent,
     AssistantMessageContentPartTextDelta,
     AssistantMessageItem,
+    InferenceOptions,
     ThreadItemAddedEvent,
     ThreadItemDoneEvent,
     ThreadItemUpdatedEvent,
@@ -46,16 +48,15 @@ from .metering import create_metering_hooks  # noqa: E402
 from .services.content_loader import load_lesson_content  # noqa: E402
 from .services.lesson_chunker import get_lesson_chunks  # noqa: E402
 
-# Constants for legacy code (kept for backwards compatibility, not used in agent-native mode)
-MAX_ATTEMPTS = 3
-
-# Enable chunked mode for faster responses
-USE_CHUNKED_MODE = True
-
 # Enable agent-native mode (v3) - reviewer's architecture
 # When True: uses dynamic instructions + function tools + zero branching
 # When False: uses v2 chunked mode with server-side state machine
 USE_AGENT_NATIVE_TEACH = True
+
+# Enable skill-based teaching (v4) - simplified approach per reviewer
+# When True: uses skill prompt + learner profile + lesson content (no state machine)
+# This is the "agent as a tool" approach - simpler, more direct
+USE_SKILL_BASED_TEACH = True  # New simplified approach
 
 logger = logging.getLogger(__name__)
 logger.info(f"[ChatKit] USE_AGENT_NATIVE_TEACH = {USE_AGENT_NATIVE_TEACH}")
@@ -83,6 +84,46 @@ TRIGGER_PATTERNS = {
 
 # Characters to strip (including zero-width chars)
 INVISIBLE_CHARS = "\u200B\u200b\uFEFF\u00A0\t\n\r "
+
+
+def _format_402_error_text(detail: dict) -> str:
+    """Format user-friendly error message for 402 metering errors.
+
+    Handles: is_expired, ACCOUNT_SUSPENDED, and insufficient balance cases.
+
+    Args:
+        detail: Error detail dict from HTTPException
+
+    Returns:
+        User-friendly error message
+    """
+    error_code = detail.get("error_code", "INSUFFICIENT_BALANCE")
+    available_balance = detail.get("available_balance", 0)
+    required = detail.get("required", 0)
+    is_expired = detail.get("is_expired", False)
+
+    if is_expired:
+        return (
+            "Your account has been inactive for over a year and your credits "
+            "have expired. Please contact support to reactivate."
+        )
+    elif error_code == "ACCOUNT_SUSPENDED":
+        return (
+            "Your account has been suspended. "
+            "Please contact support for assistance."
+        )
+    else:
+        # Default: insufficient balance — show USD, not raw credits
+        available_usd = available_balance / 10000
+        required_usd = required / 10000
+        fmt = ".4f" if required_usd < 0.1 else ".2f"
+        avail = f"${available_usd:{fmt}}"
+        needed = f"${required_usd:{fmt}}"
+        return (
+            f"You've used your free credits. "
+            f"Your balance is {avail} but this request needs {needed}. "
+            f"Please top up to continue learning."
+        )
 
 
 def _is_trigger_message(text: str) -> bool:
@@ -138,7 +179,6 @@ async def _stream_with_real_ids(
     context: AgentContext,
     result: RunResultStreaming,
     thread_id: str,
-    verification_result: str | None = None,
 ) -> AsyncIterator[ThreadStreamEvent]:
     """
     Simplified wrapper around stream_agent_response that:
@@ -217,6 +257,10 @@ async def _stream_with_real_ids(
 
         yield event
 
+    # Log if stream ended without any chunks (empty response)
+    if chunk_count == 0:
+        logger.warning(f"[ChatKit] Stream ended with 0 chunks for thread {thread_id}")
+
 
 class StudyModeChatKitServer(ChatKitServer[RequestContext]):
     """
@@ -232,6 +276,142 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
         super().__init__(store)
         logger.info("[ChatKit] StudyModeChatKitServer initialized")
 
+    async def handle_teach_skill(
+        self,
+        thread: ThreadMetadata,
+        user_text: str,
+        lesson_path: str,
+        user_name: str | None,
+        context: RequestContext,
+        content: str = "",
+        title: str = "",
+        items: list[Any] | None = None,
+        is_first_message: bool = True,
+    ) -> AsyncIterator[ThreadStreamEvent]:
+        """
+        Simplified skill-based teaching (v4).
+
+        Per reviewer: Agent as a tool with three inputs:
+        1. Learner profile (from API)
+        2. Skill prompt (teaching instructions)
+        3. Lesson content
+
+        Now also receives conversation history (items) to maintain context.
+        """
+        from agents import Runner
+
+        from .fte.teach_skill import (
+            TeachingContext,
+            create_teaching_agent,
+            get_learner_profile,
+        )
+
+        logger.info(f"[ChatKit] SKILL-BASED MODE (v4) for thread {thread.id}")
+
+        # 1. Load content if not provided
+        if not content or not title:
+            content_data = await load_lesson_content(lesson_path)
+            content = content or content_data.get("content", "")
+            title = title or content_data.get("title", "Unknown")
+
+        logger.info(f"[ChatKit] v4: title='{title}', content_len={len(content)}")
+
+        # 2. Get learner profile from API (falls back to mock if not found)
+        # Uses JWT token to identify user via /api/v1/profiles/me endpoint
+        auth_token = context.metadata.get("auth_token")
+        profile = await get_learner_profile(
+            user_name=user_name,
+            auth_token=auth_token,
+        )
+        logger.info(f"[ChatKit] v4: Profile for {profile.name}, AI: {profile.ai_fluency_level}")
+
+        # 3. Build teaching context (simple!)
+        teaching_ctx = TeachingContext(
+            profile=profile,
+            lesson_title=title,
+            lesson_content=content,
+            thread_id=thread.id,
+            is_first_message=is_first_message,
+        )
+
+        # 4. Create agent and run - that's it!
+        agent = create_teaching_agent(profile)
+
+        # Create agent context for streaming
+        agent_context = AgentContext(
+            thread=thread,
+            store=self.store,
+            request_context=context,
+        )
+
+        # Create metering hooks
+        metering_hooks = create_metering_hooks()
+
+        logger.info(f"[ChatKit] v4: Running skill for thread {thread.id}, first={is_first_message}")
+
+        # Use conversation history if available, otherwise fall back to current message
+        if items:
+            input_items = await simple_to_agent_input(items)
+            logger.debug(f"[ChatKit] v4: Using conversation history ({len(items)} items)")
+        else:
+            input_items = user_text
+            logger.debug("[ChatKit] v4: No history, using current message only")
+
+        try:
+            result = Runner.run_streamed(  # type: ignore[misc]
+                agent,
+                input_items,  # Pass full conversation history, not just current message
+                context=teaching_ctx,
+                hooks=metering_hooks,
+            )
+
+            async for event in _stream_with_real_ids(agent_context, result, thread.id):
+                yield event
+
+        except HTTPException as http_err:
+            if http_err.status_code == 402:
+                detail: dict[str, Any] = (
+                    http_err.detail if isinstance(http_err.detail, dict) else {}
+                )
+                error_text = _format_402_error_text(detail)
+                error_code = detail.get("error_code", "INSUFFICIENT_BALANCE")
+                logger.warning(f"[ChatKit] v4 Metering blocked: {error_code}")
+                error_message = AssistantMessageItem(
+                    id=self.store.generate_item_id("message", thread, context),
+                    thread_id=thread.id,
+                    created_at=datetime.now(),
+                    content=[AssistantMessageContent(text=error_text, annotations=[])],
+                )
+                yield ThreadItemDoneEvent(item=error_message)
+                return
+            raise
+        except Exception as e:
+            if metering_hooks:
+                await metering_hooks.release_on_error(agent_context)
+            # Log the error for debugging
+            error_str = str(e)
+            logger.error(f"[ChatKit] v4 Stream error: {type(e).__name__}: {error_str}")
+
+            # Create error message to maintain conversation history consistency
+            # This prevents consecutive UserMessages which breaks Gemini
+            error_text = "I encountered a temporary issue. Please try again."
+            if "INVALID_ARGUMENT" in error_str or "single turn" in error_str.lower():
+                error_text = (
+                    "I had trouble processing the conversation. "
+                    "Please try sending your message again."
+                )
+
+            error_message = AssistantMessageItem(
+                id=self.store.generate_item_id("message", thread, context),
+                thread_id=thread.id,
+                created_at=datetime.now(),
+                content=[AssistantMessageContent(text=error_text, annotations=[])],
+            )
+            yield ThreadItemDoneEvent(item=error_message)
+            return
+
+        logger.info(f"[ChatKit] v4: Done for thread {thread.id}")
+
     async def handle_teach_mode_v3(
         self,
         thread: ThreadMetadata,
@@ -240,6 +420,8 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
         user_name: str | None,
         context: RequestContext,
         is_first_message: bool,
+        content: str = "",
+        title: str = "",
     ) -> AsyncIterator[ThreadStreamEvent]:
         """
         Handle Teach Me mode with agent-native architecture (v3).
@@ -253,6 +435,8 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             user_name: User's display name
             context: Request context
             is_first_message: Whether this is the first message in thread
+            content: Pre-loaded lesson content (avoids duplicate loading)
+            title: Pre-loaded lesson title (avoids duplicate loading)
         """
         from agents import Runner
 
@@ -262,10 +446,11 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
 
         logger.info(f"[ChatKit] AGENT-NATIVE MODE (v3) for thread {thread.id}")
 
-        # 1. Load content and state
-        content_data = await load_lesson_content(lesson_path)
-        content = content_data.get("content", "")
-        title = content_data.get("title", "Unknown")
+        # 1. Use passed content/title or load (for direct calls)
+        if not content or not title:
+            content_data = await load_lesson_content(lesson_path)
+            content = content or content_data.get("content", "")
+            title = title or content_data.get("title", "Unknown")
 
         chunks = await get_lesson_chunks(lesson_path, content, title)
         state = await get_session_state(thread.id) or {}
@@ -276,14 +461,17 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
         )
 
         # 1.5a QUICK_START: Parse personalization from UI picker
-        # Format: QUICK_START:path:level:profession (profession optional)
-        if user_text.startswith("QUICK_START:"):
-            parts = user_text.split(":")
+        # Format: QUICK_START|path|level|profession (profession optional)
+        # Uses pipe delimiter to allow colons in profession (e.g., "AI:ML Engineer")
+        if user_text.startswith("QUICK_START|") or user_text.startswith("QUICK_START:"):
+            # Support both pipe (new) and colon (legacy) delimiters
+            delimiter = "|" if "|" in user_text else ":"
+            parts = user_text.split(delimiter)
             if len(parts) >= 3:
                 qs_path = parts[1]  # work, passion, everyday, direct
                 qs_level = parts[2]  # beginner, intermediate, advanced
-                # Get profession from parts[3], or use sensible defaults
-                qs_world = parts[3] if len(parts) > 3 and parts[3].strip() else (
+                # Get profession from remaining parts joined (in case colon in profession)
+                qs_world = delimiter.join(parts[3:]) if len(parts) > 3 and parts[3].strip() else (
                     "everyday life" if qs_path == "everyday" else
                     "technical concepts" if qs_path == "direct" else
                     "professional work"  # Better default for work/passion paths
@@ -311,51 +499,8 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                     "Do not ask about my profession or field."
                 )
 
-        # 1.5b Blended Teaching v7.1 - Image Strategy
-        # - Phase 0: No image (warm greeting, ask about role/expertise)
-        # - Phase 1: DALL-E personalized to their world (after we know who they are)
-        # - Phase 2+: Unsplash concept images via tool calls
-        open_image_url = ""
-        current_phase = state.get("current_phase", "phase_0")
-
-        # Generate DALL-E image only in Phase 1 (after we learned their world in Phase 0)
-        if current_phase == "phase_1":
-            try:
-                import os
-
-                from openai import AsyncOpenAI
-
-                openai_client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
-                # Personalize based on student profile from Phase 0
-                student_world = state.get("student_world", "technology")
-                student_role = state.get("student_role", "professional")
-
-                dalle_prompt = (
-                    f"Educational illustration for '{title}'. "
-                    f"Scene in {student_world} industry, relevant to a {student_role}. "
-                    f"Modern, clean, professional style showing AI/automation. "
-                    f"Blue and purple color scheme. No text on image."
-                )
-
-                logger.info(
-                    f"[ChatKit] v3: Phase 1 DALL-E: {title} for {student_role} in {student_world}"
-                )
-
-                response = await openai_client.images.generate(
-                    model="dall-e-3",
-                    prompt=dalle_prompt,
-                    size="1792x1024",
-                    quality="standard",
-                    n=1,
-                )
-
-                if response.data and response.data[0].url:
-                    open_image_url = response.data[0].url
-                    logger.info(f"[ChatKit] v3: DALL-E generated: {open_image_url[:60]}...")
-
-            except Exception as e:
-                logger.warning(f"[ChatKit] v3: DALL-E failed: {e}")
+        # Image generation removed - will be added in separate PR with proper
+        # budget controls and async handling (see PR review comments)
 
         # 2. Build context for Guided Learning v9 (simplified)
         from .fte.teach_agent import extract_key_concepts
@@ -428,33 +573,8 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 hooks=metering_hooks,
             )
 
-            # Stream response with image injection if available
-            image_injected = False
-            full_response_text = ""  # Collect for guardrail validation
-
             try:
                 async for event in _stream_with_real_ids(agent_context, result, thread.id):
-                    # Collect text for guardrail validation
-                    if isinstance(event, ThreadItemUpdatedEvent):
-                        update = event.update
-                        if isinstance(update, AssistantMessageContentPartTextDelta):
-                            full_response_text += update.delta
-
-                    # Inject pending image at the start of first text content
-                    if not image_injected and teach_ctx.open_image_url:
-                        if isinstance(event, ThreadItemUpdatedEvent):
-                            update = event.update
-                            if hasattr(update, 'content') and update.content:
-                                # Prepend image markdown to first text delta
-                                img_url = teach_ctx.open_image_url
-                                img_title = teach_ctx.lesson_title
-                                image_md = f"![{img_title}]({img_url})\n\n"
-                                for content_item in update.content:
-                                    if hasattr(content_item, 'text') and content_item.text:  # type: ignore[union-attr]
-                                        content_item.text = image_md + content_item.text  # type: ignore[union-attr]
-                                        image_injected = True
-                                        teach_ctx.open_image_url = ""  # Clear
-                                        break
                     yield event
 
             except Exception as stream_err:
@@ -486,6 +606,7 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 "personalization_path": teach_ctx.personalization_path,
                 "ai_experience_asked": teach_ctx.ai_experience_asked,
                 "ai_experience_answered": teach_ctx.ai_experience_answered,
+                "profile_complete": state.get("profile_complete", False),  # Preserve flag
                 # Teaching state
                 "key_concepts": teach_ctx.key_concepts,
                 "discovered_concepts": teach_ctx.discovered_concepts,
@@ -495,17 +616,13 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
 
         except HTTPException as http_err:
             if http_err.status_code == 402:
-                # Handle metering error gracefully
-                detail: dict[str, int] = (
+                # Handle metering error gracefully using shared helper
+                detail: dict[str, Any] = (
                     http_err.detail if isinstance(http_err.detail, dict) else {}
                 )
-                available_usd = detail.get("available_balance", 0) / 10000
-                required_usd = detail.get("required", 0) / 10000
-                error_text = (
-                    f"You've used your free credits. "
-                    f"Balance: ${available_usd:.4f}, needed: ${required_usd:.4f}. "
-                    f"Please top up to continue."
-                )
+                error_text = _format_402_error_text(detail)
+                error_code = detail.get("error_code", "INSUFFICIENT_BALANCE")
+                logger.warning(f"[ChatKit] v3 Metering blocked: {error_code}")
                 error_message = AssistantMessageItem(
                     id=self.store.generate_item_id("message", thread, context),
                     thread_id=thread.id,
@@ -559,12 +676,7 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 logger.warning("[ChatKit] Empty user message")
                 return
 
-            # ANSWER VERIFICATION (Script v2): Handle A/B answers and special requests
-            # The verification result is passed to create_agent() to select the right prompt
-            verification_result = None
-            special_request = None
-
-            # First check for special requests (hint, skip, option_confusion)
+            # Check for special requests (hint, skip, option_confusion)
             special_request = detect_special_request(user_text)
             if special_request:
                 logger.info(f"[ChatKit] Special request detected: {special_request}")
@@ -614,6 +726,29 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             )
             items = list(reversed(previous_items.data))
 
+            # FIX: Ensure current user message is included in items
+            # Race condition: add_user_message may not have saved to store yet
+            # Check if the last item is the current user message
+            last_item_text = ""
+            if items and hasattr(items[-1], 'content'):
+                last_content = items[-1].content
+                if last_content and hasattr(last_content[0], 'text'):
+                    last_item_text = last_content[0].text
+
+            # If current user_text is not in the last item, append it
+            if user_text and user_text.strip() and user_text != last_item_text:
+                # Create a temporary UserMessageItem for the current message
+                from datetime import datetime
+                current_msg = UserMessageItem(
+                    id=f"temp_{thread.id}_{len(items)}",
+                    thread_id=thread.id,
+                    created_at=datetime.now(),
+                    content=[UserMessageTextContent(text=user_text)],
+                    inference_options=InferenceOptions(model="teach"),
+                )
+                items.append(current_msg)
+                logger.info(f"[ChatKit] Added current user_text to items: '{user_text[:50]}...'")
+
             # Detect if this is the first message (new thread)
             # Check if there's already an AI response in the thread
             # Note: We can't just count items because trigger messages get deleted
@@ -629,22 +764,42 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 f"has_assistant={has_assistant_response}, is_first={is_first_message}"
             )
 
-            # AGENT-NATIVE MODE (v3): Use new architecture for teach mode
-            # Per reviewer: zero branching, agent has full autonomy
+            # ROUTING: Choose handler based on mode and flags
             logger.info(
-                f"[ChatKit] MODE CHECK: USE_AGENT_NATIVE_TEACH="
-                f"{USE_AGENT_NATIVE_TEACH}, mode='{mode}'"
+                f"[ChatKit] MODE CHECK: SKILL={USE_SKILL_BASED_TEACH}, "
+                f"AGENT_NATIVE={USE_AGENT_NATIVE_TEACH}, mode='{mode}'"
             )
+
+            # Set thread title for new threads (common to all modes)
+            if is_first_message and mode == "teach":
+                if _is_trigger_message(user_text):
+                    context.metadata["title"] = f"📚 {title}"
+                else:
+                    context.metadata["title"] = _generate_thread_title(user_text)
+                await self.store.save_thread(thread, context)
+
+            # SKILL-BASED MODE (v4): Simplified approach - agent as a tool
+            # Three inputs: learner profile + skill prompt + lesson content
+            if USE_SKILL_BASED_TEACH and mode == "teach":
+                logger.info("[ChatKit] >>> ROUTING TO SKILL-BASED MODE (v4) <<<")
+
+                async for event in self.handle_teach_skill(
+                    thread=thread,
+                    user_text=user_text,
+                    lesson_path=lesson_path,
+                    user_name=user_name,
+                    context=context,
+                    content=content,
+                    title=title,
+                    items=items,
+                    is_first_message=is_first_message,
+                ):
+                    yield event
+                return
+
+            # AGENT-NATIVE MODE (v3): Dynamic instructions + function tools
             if USE_AGENT_NATIVE_TEACH and mode == "teach":
                 logger.info("[ChatKit] >>> ROUTING TO AGENT-NATIVE MODE (v3) <<<")
-
-                # Set thread title for new threads
-                if is_first_message:
-                    if _is_trigger_message(user_text):
-                        context.metadata["title"] = f"📚 {title}"
-                    else:
-                        context.metadata["title"] = _generate_thread_title(user_text)
-                    await self.store.save_thread(thread, context)
 
                 async for event in self.handle_teach_mode_v3(
                     thread=thread,
@@ -653,6 +808,8 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                     user_name=user_name,
                     context=context,
                     is_first_message=is_first_message,
+                    content=content,
+                    title=title,
                 ):
                     yield event
 
@@ -694,41 +851,6 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             # Convert to agent input format
             input_items = await simple_to_agent_input(items)
 
-            # INJECT VERIFICATION: Add explicit verification to last message
-            # This ensures LLM sees "[CORRECT]" or "[INCORRECT]" and can't ignore it
-            if verification_result and input_items and isinstance(input_items, list):
-                logger.info(f"[ChatKit] Injecting verification '{verification_result}' into input")
-                # Find the last user message and annotate it
-                injected = False
-                for i in range(len(input_items) - 1, -1, -1):
-                    item = input_items[i]
-                    item_type = type(item).__name__
-                    has_role = hasattr(item, "role")
-                    logger.debug(f"[ChatKit] Item {i}: type={item_type}, has_role={has_role}")
-                    if hasattr(item, "role") and item.role == "user":
-                        if verification_result == "correct":
-                            # Prepend strong verification message
-                            original = item.content if hasattr(item, "content") else str(item)
-                            item.content = (
-                                f"[SERVER VERIFIED: CORRECT ✓]\n"
-                                f"Student answer: {original}\n"
-                                f"[YOU MUST SAY 'Correct!' - DO NOT SAY 'Not quite']"
-                            )
-                            logger.info("[ChatKit] Injected CORRECT verification")
-                            injected = True
-                        elif verification_result == "incorrect":
-                            original = item.content if hasattr(item, "content") else str(item)
-                            item.content = (
-                                f"[SERVER VERIFIED: WRONG ✗]\n"
-                                f"Student answer: {original}\n"
-                                f"[YOU MUST SAY 'Not quite.' - DO NOT SAY 'Correct']"
-                            )
-                            logger.info("[ChatKit] Injected INCORRECT verification")
-                            injected = True
-                        break
-                if not injected:
-                    logger.warning("[ChatKit] Failed to inject - no user message found")
-
             # Fallback: if input_items is empty (race condition), use current user message
             if not input_items:
                 logger.warning(
@@ -760,60 +882,23 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             # Wrap in try/except to release metering reservation on error
             try:
                 async for event in _stream_with_real_ids(
-                    agent_context, result, thread.id, verification_result
+                    agent_context, result, thread.id
                 ):
                     yield event
             except HTTPException as http_err:
                 # Handle metering 402 specially - show user-friendly message
                 if http_err.status_code == 402:
-                    from typing import Any
                     detail: dict[str, Any] = (
                         http_err.detail if isinstance(http_err.detail, dict) else {}
                     )
-                    # v5 format: error_code, balance, available_balance, required, is_expired
+                    error_text = _format_402_error_text(detail)
                     error_code = detail.get("error_code", "INSUFFICIENT_BALANCE")
-                    balance = detail.get("balance", 0)
-                    available_balance = detail.get("available_balance", 0)
-                    required = detail.get("required", 0)
-                    is_expired = detail.get("is_expired", False)
-
-                    if is_expired:
-                        error_text = (
-                            "Your account has been inactive for over"
-                            " a year and your credits have expired."
-                            " Please contact support to reactivate."
-                        )
-                    elif error_code == "ACCOUNT_SUSPENDED":
-                        error_text = (
-                            "Your account has been suspended. "
-                            "Please contact support for assistance."
-                        )
-                    else:
-                        # Default: insufficient balance — show USD, not raw credits
-                        available_usd = available_balance / 10000
-                        required_usd = required / 10000
-                        fmt = ".4f" if required_usd < 0.1 else ".2f"
-                        avail = f"${available_usd:{fmt}}"
-                        needed = f"${required_usd:{fmt}}"
-                        error_text = (
-                            f"You've used your free credits. "
-                            f"Your balance is {avail} but this "
-                            f"request needs {needed}. "
-                            f"Please top up to continue learning."
-                        )
-
-                    logger.warning(
-                        f"[ChatKit] Metering blocked: error_code={error_code}, "
-                        f"balance={balance}, required={required}, is_expired={is_expired}"
-                    )
-
+                    logger.warning(f"[ChatKit] Metering blocked: {error_code}")
                     error_message = AssistantMessageItem(
                         id=self.store.generate_item_id("message", thread, context),
                         thread_id=thread.id,
                         created_at=datetime.now(),
-                        content=[
-                            AssistantMessageContent(text=error_text, annotations=[])
-                        ],
+                        content=[AssistantMessageContent(text=error_text, annotations=[])],
                     )
                     yield ThreadItemDoneEvent(item=error_message)
                     return  # Don't re-raise, we handled it gracefully

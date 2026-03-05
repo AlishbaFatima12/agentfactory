@@ -28,15 +28,30 @@ from .teach_context import TeachContext
 logger = logging.getLogger(__name__)
 
 # =============================================================================
-# MODEL CONFIGURATION
+# MODEL CONFIGURATION (Lazy initialization)
 # =============================================================================
 
-_gemini_model = LitellmModel(
-    model="gemini/gemini-2.5-flash",
-    api_key=os.getenv("GEMINI_API_KEY"),
-)
+# Use lazy initialization to avoid race condition where GEMINI_API_KEY
+# might not be in environment when module is first imported.
 
-MODEL = _gemini_model
+_cached_model: LitellmModel | None = None
+
+
+def _get_gemini_model() -> LitellmModel:
+    """Get or create the Gemini model instance (lazy initialization)."""
+    global _cached_model
+    if _cached_model is None:
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not api_key:
+            raise ValueError(
+                "GEMINI_API_KEY environment variable not set. "
+                "Please set it before creating the teach agent."
+            )
+        _cached_model = LitellmModel(
+            model="gemini/gemini-2.5-flash",
+            api_key=api_key,
+        )
+    return _cached_model
 
 
 # =============================================================================
@@ -52,6 +67,9 @@ async def quick_start(
 ) -> str:
     """Initialize teaching session with student profile from UI picker.
 
+    Note: Profile is usually set server-side via QUICK_START message parsing.
+    This tool exists for edge cases where profile needs to be set mid-conversation.
+
     Args:
         path: Personalization path ("work", "passion", "everyday", "direct")
         level: Experience level ("beginner", "intermediate", "advanced")
@@ -60,38 +78,23 @@ async def quick_start(
     tc = ctx.context
     thread_id = tc.thread_id
 
-    # GUARD: If already in phase_2, don't reset - just continue teaching
+    # GUARD: If already in phase_2, profile is set - don't reset
     if tc.current_phase == "phase_2":
-        logger.info(f"[{thread_id}] quick_start called but already in phase_2 - ignoring")
-        return "Already teaching. Continue with the current concept. Do NOT restart."
+        logger.info(f"[{thread_id}] quick_start: profile already set, ignoring")
+        return "Profile already set. Continue with the current concept. Do NOT restart."
 
     logger.info(f"[{thread_id}] quick_start({path}, {level}, {world})")
 
-    # Set profile
+    # Set profile (fallback if server-side parsing didn't happen)
     tc.personalization_path = path
     tc.learner_type = level
     tc.student_world = world
     tc.student_role = world
-
-    # Skip to teaching phase
     tc.current_phase = "phase_2"
     tc.ai_experience_asked = True
     tc.ai_experience_answered = True
 
-    # Build context intro
-    if path == "everyday":
-        context_intro = "I'll use everyday examples like cooking and driving"
-    elif path == "direct":
-        context_intro = "I'll teach directly without extra analogies"
-    else:
-        context_intro = f"I'll connect everything to your experience in {world}"
-
-    return f"""Profile set! Starting lesson.
-
-Context: {context_intro}
-Level: {level}
-
-Now ask a guiding question about the first concept, related to {world}."""
+    return f"Profile set ({level} in {world}). Start teaching the first concept."
 
 
 @function_tool
@@ -405,7 +408,7 @@ def create_teach_agent() -> Agent:
 
     return Agent(
         name="GuidedLearningTeacher",
-        model=MODEL,
+        model=_get_gemini_model(),
         instructions=dynamic_instructions,
         tools=tools,  # type: ignore[arg-type]  # list variance issue with FunctionTool
     )
