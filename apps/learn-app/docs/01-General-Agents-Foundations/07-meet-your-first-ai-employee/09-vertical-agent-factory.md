@@ -234,7 +234,7 @@ This means building a professional AI Employee is driven by skills, not by code:
 Installing NanoClaw itself demonstrates this pattern. The entire setup is three steps:
 
 ```bash
-git clone https://github.com/gavrielc/nanoclaw.git
+git clone https://github.com/qwibitai/nanoclaw.git
 cd nanoclaw
 claude
 ```
