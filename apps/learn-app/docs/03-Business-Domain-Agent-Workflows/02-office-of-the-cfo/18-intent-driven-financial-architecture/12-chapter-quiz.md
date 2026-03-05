@@ -260,7 +260,7 @@ options: [
 "A special API integration must be built for each agent platform"
 ],
 correctOption: 0,
-explanation: "Lesson 9 teaches that the IDFA methodology is packaged as a portable plugin (panaversity/idfa-financial-architect) following the agentskills.io open standard. For Claude Code, add the marketplace and install the plugin. For Cowork, install via the plugin browser. For other agents — GitHub Copilot, VS Code, Codex — copy the SKILL.md from the plugin repo into the platform's custom instructions path. The skill transforms agent behaviour — when active, the agent automatically applies all four guardrails.",
+explanation: "Lesson 9 teaches that the IDFA methodology is packaged as a portable plugin (idfa-financial-architect) available from the agentfactory-business-plugins catalog, following the agentskills.io open standard. For Claude Code, add the marketplace and install the plugin. For Cowork, install via the plugin browser. For other agents — GitHub Copilot, VS Code, Codex — copy the SKILL.md from the plugin repo into the platform's custom instructions path. The skill transforms agent behaviour — when active, the agent automatically applies all four guardrails.",
 source: "Lesson 9: The IDFA Skill"
 },
 {

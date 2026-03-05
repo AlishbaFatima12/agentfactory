@@ -85,17 +85,16 @@ differentiation:
 
 In Lesson 8, you retrofitted a legacy coordinate-based model to IDFA compliance — converting formulas one by one, validating outputs at each step. Now you have the complete methodology: three layers, four guardrails, naming conventions, the delegated calculation workflow, and the retrofitting process. All of that knowledge lives in your head. The IDFA plugin makes it live in every agent you use.
 
-A SKILL.md file is a structured document that follows the [agentskills.io](https://agentskills.io) open standard. The Panaversity team has packaged the complete IDFA methodology as a Claude Code plugin — [`panaversity/idfa-financial-architect`](https://github.com/panaversity/idfa-financial-architect) — so you install the skill with two commands and it auto-activates on every financial modelling task. The agent reads it at the start of every session. It does not need to be prompted. It does not need to be reminded. The skill becomes part of how the agent thinks — and when someone mentions a financial model, a spreadsheet formula, or a model audit, the agent applies the full IDFA methodology automatically.
+A SKILL.md file is a structured document that follows the [agentskills.io](https://agentskills.io) open standard. The Panaversity team has packaged the complete IDFA methodology as a Claude Code plugin — [`idfa-financial-architect`](https://github.com/panaversity/agentfactory-business-plugins/tree/main/idfa-financial-architect) — available from the `agentfactory-business-plugins` catalog, so you install the skill with two commands and it auto-activates on every financial modelling task. The agent reads it at the start of every session. It does not need to be prompted. It does not need to be reminded. The skill becomes part of how the agent thinks — and when someone mentions a financial model, a spreadsheet formula, or a model audit, the agent applies the full IDFA methodology automatically.
 
 ## What the Plugin Contains
 
 The IDFA plugin follows the standard Claude Code plugin structure:
 
 ```
-panaversity/idfa-financial-architect/
+idfa-financial-architect/
 ├── .claude-plugin/
-│   ├── plugin.json            ← Plugin metadata (name, version, author)
-│   └── marketplace.json       ← Marketplace catalog
+│   └── plugin.json            ← Plugin metadata (name, version, author)
 ├── skills/
 │   ├── financial-architect/   ← The methodology (UNCHANGED)
 │   │   ├── SKILL.md           ← Behavioural guidance, four guardrails
@@ -110,7 +109,7 @@ panaversity/idfa-financial-architect/
 ├── examples/
 │   └── gp_waterfall.xlsx      ← Reference model
 ├── README.md
-└── LICENSE                    ← Apache-2.0
+└── LICENSE                    ← Proprietary
 ```
 
 The plugin includes two skills working together. The **financial-architect** skill encodes every concept you learned in Lessons 1 through 8 — the methodology, the guardrails, the naming conventions. The **idfa-ops** skill gives the agent its "hands" — the scripts that actually read from, write to, and audit Excel models programmatically. When the methodology skill says "write the assumption to the model," the operations skill provides the tool to do it.
@@ -148,7 +147,7 @@ If you use Claude through the **Cowork** tab in the Claude desktop app:
 1. Open the **Cowork** sidebar
 2. Click **Customize**
 3. Click **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub**
-4. Enter `https://github.com/panaversity/idfa-financial-architect`
+4. Enter `https://github.com/panaversity/agentfactory-business-plugins`
 5. Find **IDFA Financial Architect** and click **Install**
 
 The IDFA skill auto-activates in all Cowork sessions when you mention financial models. Both skills — the methodology and the operations — install together as a single plugin.
@@ -160,15 +159,15 @@ Plugins in Cowork are saved locally to your machine. For team-wide deployment, y
 If you use Claude Code in the terminal:
 
 ```bash
-/plugin marketplace add panaversity/idfa-financial-architect
-/plugin install idfa-financial-architect@panaversity-idfa
+/plugin marketplace add panaversity/agentfactory-business-plugins
+/plugin install idfa-financial-architect@agentfactory-business
 ```
 
 Claude Code reads both SKILL.md files and makes them available in every session. When a conversation mentions financial models, named ranges, or any trigger phrase listed in the skill, Claude activates the IDFA methodology automatically.
 
 ### Other Agents (GitHub Copilot, VS Code, Codex, Cursor)
 
-The plugin contains a standard SKILL.md file. For agents that do not support the Claude Code plugin format, download `skills/financial-architect/SKILL.md` from the [GitHub repository](https://github.com/panaversity/idfa-financial-architect) and place it in the platform's custom instructions path:
+The plugin contains a standard SKILL.md file. For agents that do not support the Claude Code plugin format, download `skills/financial-architect/SKILL.md` from the [GitHub repository](https://github.com/panaversity/agentfactory-business-plugins/tree/main/idfa-financial-architect) and place it in the platform's custom instructions path:
 
 | Agent          | Path                                         |
 | -------------- | -------------------------------------------- |
@@ -233,9 +232,9 @@ These mistakes appear in the SKILL.md as a safeguard. When the skill is active, 
 
 **Step 1.** Install the IDFA plugin.
 
-**In Cowork** (recommended): Open the sidebar → **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/idfa-financial-architect` → find **IDFA Financial Architect** → click **Install**.
+**In Cowork** (recommended): Open the sidebar → **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **IDFA Financial Architect** → click **Install**.
 
-**In Claude Code**: Run `/plugin marketplace add panaversity/idfa-financial-architect` then `/plugin install idfa-financial-architect@panaversity-idfa`.
+**In Claude Code**: Run `/plugin marketplace add panaversity/agentfactory-business-plugins` then `/plugin install idfa-financial-architect@agentfactory-business`.
 
 **Step 2.** Start a new Claude Code session (or Cowork session) so the plugin is loaded.
 
@@ -271,7 +270,7 @@ This also connects back to Chapter 15, where you learned the plugin architecture
 
 :::tip Setup
 
-Open a Cowork session (or Claude Code) where you have installed the IDFA plugin. In Cowork: **Customize** → **Browse plugins** → **Personal** → **+** → **Add marketplace from GitHub** → enter the GitHub URL → **Install**. In Claude Code: `/plugin marketplace add panaversity/idfa-financial-architect` then `/plugin install idfa-financial-architect@panaversity-idfa`. Start a fresh session so the skill is loaded.
+Open a Cowork session (or Claude Code) where you have installed the IDFA plugin. In Cowork: **Customize** → **Browse plugins** → **Personal** → **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → **Install**. In Claude Code: `/plugin marketplace add panaversity/agentfactory-business-plugins` then `/plugin install idfa-financial-architect@agentfactory-business`. Start a fresh session so the skill is loaded.
 
 :::
 
