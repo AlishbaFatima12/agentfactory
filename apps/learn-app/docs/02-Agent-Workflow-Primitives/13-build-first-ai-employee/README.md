@@ -1,13 +1,13 @@
 ---
 sidebar_position: 13
-title: "Chapter 13: Build Your AI Employee with NanoClaw"
+title: "Project: Build Your AI Employee with NanoClaw"
 ---
 
-# Chapter 13: Build Your AI Employee with NanoClaw
+# Project: Build Your AI Employee with NanoClaw
 
 **You've learned the pieces. Now build something real.**
 
-This is a **project chapter**. You'll build a working AI Employee for YOUR profession using [NanoClaw](https://github.com/qwibitai/nanoclaw) — the same tool you set up in Chapter 7 Lesson 10. No new installations, no architecture lectures. Just challenges, acceptance criteria, and your professional expertise.
+This is a **project**. You'll build a working AI Employee for YOUR profession using [NanoClaw](https://github.com/qwibitai/nanoclaw) — the same tool you set up in Chapter 7 Lesson 10. No new installations, no architecture lectures. Just challenges, acceptance criteria, and your professional expertise.
 
 ## Prerequisites
 
@@ -48,13 +48,13 @@ Pick the tier that matches your available time and ambition. You can always come
 |--------|-------|----------|
 | [L05](./05-make-your-employee-proactive.md) | Make Your Employee Proactive | 40 min |
 | [L06](./06-teach-your-employee-boundaries.md) | Teach Your Employee Boundaries | 40 min |
-| [L07](./07-capstone-prove-professional-value.md) | Capstone: Prove Professional Value | 55 min |
+| [L07](./07-capstone-prove-professional-value.md) | Prove Professional Value | 55 min |
 
-### Assessment
+### Project Review
 
 | Lesson | Title | Duration |
 |--------|-------|----------|
-| [L08](./08-chapter-assessment.md) | Chapter Assessment | 25 min |
+| [L08](./08-project-review.md) | Project Review | 25 min |
 
 ## Student Deliverables (GitHub Repo)
 
@@ -76,11 +76,10 @@ Gold adds: 3-group config + isolation demo + system diagram.
 
 ## Design Philosophy
 
-This chapter doesn't teach NanoClaw — you already know it. Instead, each lesson gives you:
+This project doesn't teach NanoClaw — you already know it. Instead, each lesson gives you:
 
 1. **A challenge** with clear acceptance criteria
 2. **A use case gallery** with profession-specific examples
 3. **Graduated hints** (3 levels) for when you're stuck
-4. **Try With AI prompts** for design, build, and evaluate phases
 
-Your Layer 3 design from Chapter 7 is your blueprint. This chapter is where you execute it.
+Your Layer 3 design from Chapter 7 is your blueprint. This project is where you execute it.
