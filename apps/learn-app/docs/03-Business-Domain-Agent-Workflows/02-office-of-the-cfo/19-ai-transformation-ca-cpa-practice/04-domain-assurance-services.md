@@ -183,7 +183,7 @@ The economics change significantly. An audit that currently requires 500 staff h
 
 **What you'll build:** A structured audit risk assessment, revenue recognition audit questions, a continuous monitoring specification, and SKILL.md instructions for sector-specific risk identification.
 
-**Requirements:** Cowork or Claude (any plan). Publicly available financial information about any listed company, or use the Crescent Textiles entity profile and trial balance from the [companion repository](https://github.com/panaversity/ca-cpa-domain-agents/releases/latest) (`ca-cpa-exercise-data.zip`).
+**Requirements:** Cowork or Claude (any plan). Publicly available financial information about any listed company, or use the Crescent Textiles entity profile and trial balance from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) (`ca-cpa-exercise-data.zip`).
 
 1. **Prepare a risk assessment.** Choose a listed company in a sector you know and ask your AI assistant:
 
@@ -200,6 +200,10 @@ The economics change significantly. An audit that currently requires 500 staff h
 4. **Encode sector risks.** Write a SKILL.md instruction for the risk identification step: encode the three most important sector-specific audit risks for this company's industry, with the indicators that would cause each risk to be elevated.
 
 **Check your work:** The risk assessment in Step 1 should identify risks that are specific to the company and sector, not generic audit risks. The continuous monitoring specification in Step 3 should define measurable thresholds and alert conditions, not vague instructions. The SKILL.md in Step 4 should capture sector expertise that would take a junior auditor years to develop.
+
+:::tip Plugin Connection
+Step 3's continuous monitoring specification is closely related to the `/sox-testing` command from `finance@knowledge-work-plugins` (Chapter 17). Try running `/sox-testing "Test revenue recognition controls for [your chosen company]"` — compare the structured output with your conversational monitoring specification. The plugin provides a standardised testing framework; your specification adds the sector-specific thresholds and escalation logic that make it operationally useful.
+:::
 
 :::info Curated Deployment Links
 

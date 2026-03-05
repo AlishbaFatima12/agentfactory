@@ -177,7 +177,7 @@ Three agentic systems are moving from prototype to production deployment.
 
 **What you'll build:** A structured tax research memo, a computed tax liability with flagged items, and draft SKILL.md instructions for automating the computation.
 
-**Requirements:** Cowork or Claude (any plan). A hypothetical or real tax scenario. If you need a ready-made scenario, download the Crescent Textiles entity profile from the [companion repository](https://github.com/panaversity/ca-cpa-domain-agents/releases/latest) — use `ca-cpa-exercise-data.zip` and find `exercises/entity-profiles/crescent-textiles.md` (PKR 500M textile manufacturer with export/domestic split).
+**Requirements:** Cowork or Claude (any plan). A hypothetical or real tax scenario. If you need a ready-made scenario, download the Crescent Textiles entity profile from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) — use `ca-cpa-exercise-data.zip` and find `exercises/entity-profiles/crescent-textiles.md` (PKR 500M textile manufacturer with export/domestic split).
 
 1. **Research a tax question.** Present this prompt to your AI assistant:
 

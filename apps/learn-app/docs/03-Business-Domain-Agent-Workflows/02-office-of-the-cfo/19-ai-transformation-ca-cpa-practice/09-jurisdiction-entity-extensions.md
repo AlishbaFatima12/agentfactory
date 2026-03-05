@@ -120,6 +120,10 @@ The finance plugins in Cowork — `/journal-entry`, `/reconciliation`, `/income-
 Generic plugins provide the framework. Domain extensions encode the institutional knowledge. This is the same principle established in Chapter 17 for finance domain agents — and for CA/CPA practice, this extension layer is not optional. It is the difference between an agent that assists and an agent that performs.
 :::
 
+:::tip Reference Implementations
+The [companion repository](https://github.com/panaversity/ca-cpa-practice-agents) contains reference SKILL.md files under `reference-skills/` — complete Pakistan-default implementations for all five extensions. Study these as you build your own, but do not copy them directly. The value of the extension is in encoding _your_ jurisdiction's rules and _your_ firm's practices.
+:::
+
 The building block of every extension is a single format: **When [condition], [action]**. Every instruction you write follows this pattern. The condition defines when the agent should apply the knowledge. The action defines what it should do. Precision in the condition clause determines whether the extension activates correctly — too broad and it fires on irrelevant work; too narrow and it misses cases it should handle.
 
 ## Extension 1: Jurisdiction-Specific Tax Rules

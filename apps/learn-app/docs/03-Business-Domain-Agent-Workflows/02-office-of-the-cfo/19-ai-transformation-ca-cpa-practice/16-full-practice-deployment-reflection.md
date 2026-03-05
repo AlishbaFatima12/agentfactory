@@ -127,20 +127,15 @@ The answer is not academic. It is your value proposition.
 ## Exercise 24: Full Practice Deployment — AI-Augmented Practice Stack (75 min)
 
 **Domain:** Cross-domain
-**What you need:** Cowork (Team or Enterprise), all plugins, a real or representative client base. Download the full companion materials from the [companion repository](https://github.com/panaversity/ca-cpa-domain-agents/releases/latest) — use `ca-cpa-domain-agents-full.zip` for all SKILL.md files, workflow recipes, and exercise data in one package.
+**What you need:** Cowork (Team or Enterprise), the Anthropic finance plugins from Chapters 17-18, your five locally-built SKILL.md extensions from Lessons 9-10, and a real or representative client base. Download the full companion materials from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) — use `ca-cpa-exercise-data.zip` for exercise data, and reference the `reference-skills/` folder for SKILL.md examples and `workflow-recipes/` for scheduling templates.
 **This is the final capstone exercise for Chapter 19.**
 
-### Step 1 — Install the Complete Plugin Stack
+### Step 1 — Verify the Complete Stack
 
-Install and verify all plugins:
+Confirm all Anthropic plugins are installed (from Chapters 17-18) and your five locally-built SKILL.md extensions are in place:
 
 ```
-# Install the full stack
-claude plugin install finance@knowledge-work-plugins
-claude plugin marketplace add anthropics/financial-services-plugins
-claude plugin marketplace add panaversity/ca-cpa-domain-agents
-
-# Verify installations
+# Verify Anthropic plugin installations
 claude plugin list
 
 # Expected output:
@@ -149,10 +144,17 @@ financial-analysis@financial-services-plugins    installed
 equity-research@financial-services-plugins       installed
 private-equity@financial-services-plugins        installed
 idfa-financial-architect                         installed  (from Ch 18)
-ca-cpa-domain-agents                             installed
 ```
 
-Run one test command from each plugin and confirm it returns output. Document any that fail to activate.
+Verify your five SKILL.md extensions exist in Cowork's Skills panel:
+
+1. **Jurisdiction Tax** (e.g., `pakistan-tax-jurisdiction`) — built in Lesson 9
+2. **Chart of Accounts** — built in Lesson 9
+3. **Audit Methodology** — built in Lesson 10
+4. **Client Entity** — built in Lesson 10
+5. **Compliance Calendar** — built in Lesson 10
+
+Run one test command from each Anthropic plugin (`/journal-entry`, `/dcf`, `/sox-testing`, `/variance-analysis`) and confirm output. Open each SKILL.md extension and verify it reflects your jurisdiction, not the Pakistan defaults.
 
 ### Step 2 — Configure Global Instructions for Your Jurisdiction
 
@@ -226,27 +228,48 @@ deadlines for the next 12 months with penalties for late filing"
 
 For each domain, verify the output references the correct jurisdiction rules and currency. If any output uses generic or US-defaulted values, revise the global instructions or relevant SKILL.md extension.
 
-### Step 4 — Set Up a Scheduled Month-End Close Automation
+### Step 4 — Set Up Scheduled Automations
 
-Configure all recurring Cowork tasks:
+Configure recurring Cowork tasks using `/schedule` with natural language specifications. For each, paste the workflow recipe text (available in the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents) under `workflow-recipes/`):
+
+**Monthly tasks:**
 
 ```
-Monthly tasks:
-/schedule month-end-close        — 1st business day, 7:00 AM
-/schedule board-pack-build       — 10th of each month, 6:00 AM
-/schedule management-commentary  — 11th of each month, 8:00 AM
+/schedule "On the 1st business day of each month at 7:00 AM:
+Run the month-end close sequence — reconcile bank, debtors,
+and creditors; post depreciation and accrual journals; generate
+the income statement; flag any reconciliation difference above
+the configured threshold."
 
-Weekly tasks:
-/schedule compliance-monitor     — Every Monday, 7:00 AM
-/schedule fraud-detection        — Every Monday, 8:00 AM
-/schedule cash-flow-update       — Every Monday, 7:30 AM
-
-Quarterly tasks:
-/schedule risk-register-update   — 1st Monday of each quarter, 8:00 AM
-/schedule audit-committee-report — 2nd Monday of each quarter, 9:00 AM
+/schedule "On the 10th of each month at 6:00 AM:
+Build the board pack — generate management accounts, run variance
+analysis, produce Excel financial summary, create PowerPoint
+board presentation."
 ```
 
-Run each scheduled task once manually and verify the output. Confirm the dependency chain: month-end close produces the accounts, board pack builds from those accounts, management commentary layers narrative on the completed board pack.
+**Weekly tasks:**
+
+```
+/schedule "Every Monday at 7:00 AM:
+Scan all compliance obligations, calculate days until due,
+flag any obligation entering the Red zone (7 days or fewer)."
+
+/schedule "Every Monday at 7:30 AM:
+Refresh the 13-week rolling cash flow forecast — advance the
+week counter, update actual receipts, recalculate, flag weeks
+where facility drawdown exceeds threshold."
+```
+
+**Quarterly tasks:**
+
+```
+/schedule "1st Monday of each quarter at 8:00 AM:
+Review the enterprise risk register, check action item completion,
+recalculate residual risk scores, flag any risk that moved from
+Amber to Red."
+```
+
+Run each scheduled task once manually and verify the output. Confirm the dependency chain: month-end close produces the accounts, board pack builds from those accounts.
 
 ### Step 5 — Test Cross-Domain Workflow (Board Pack)
 

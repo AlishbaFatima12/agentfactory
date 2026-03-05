@@ -122,7 +122,7 @@ These three exercises cover the full spectrum of Domain 2 practice: compliance (
 - **Exercise 13** (60 min) — Transaction advisory. Runs M&A financial due diligence with DCF and comparable company analysis. Best for corporate finance and advisory practitioners.
 - **Exercise 14** (45 min) — Restructuring. Models three restructuring scenarios for a distressed company. Best for insolvency and advisory practitioners.
 
-**Data files:** Download hypothetical entity profiles and tax computation templates from the [companion repository](https://github.com/panaversity/ca-cpa-domain-agents/releases/latest) — use `ca-cpa-exercise-data.zip` and find `exercises/entity-profiles/`. Or clone [the repo](https://github.com/panaversity/ca-cpa-domain-agents) directly.
+**Data files:** Download hypothetical entity profiles and tax computation templates from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) — use `ca-cpa-exercise-data.zip` and find `exercises/entity-profiles/`. Or clone [the repo](https://github.com/panaversity/ca-cpa-practice-agents) directly.
 :::
 
 ---
