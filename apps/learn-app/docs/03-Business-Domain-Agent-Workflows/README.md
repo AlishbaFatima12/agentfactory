@@ -50,7 +50,7 @@ Here is a breakdown of exactly who should read this part and why:
 #### 7. If you want to productise your expertise into reusable agents (via SKILL.md libraries and Cowork plugins) without becoming a coder
 
 #### Summary
-If **Part 1 and 2** of an AI curriculum are for the *coders*, **Part 3** is for the **builders of the modern enterprise**. Anyone involved in the strategy, development, compliance, or management of enterprise-grade AI should consider this required reading.
+If **Part 1 and 2** of this Agent Factory Book is for the *coders*, **Part 3** is for the **builders of the modern enterprise**. Anyone involved in the strategy, development, compliance, or management of enterprise-grade AI should consider this required reading.
 
 ---
 
