@@ -21,5 +21,5 @@ Four competing Shariah screening methodologies (SC Malaysia, Tadawul, AAOIFI Sta
 
 ### Connections
 
-- **Builds on**: Lesson 12's multi-jurisdiction zakat comparison — same pattern of one Islamic obligation with multiple calculation methodologies
-- **Leads to**: Lesson 14's AAOIFI vs IFRS capstone, where the screening knowledge feeds into full financial statement preparation under both frameworks
+- **Builds on**: Lesson 13's multi-jurisdiction zakat comparison — same pattern of one Islamic obligation with multiple calculation methodologies
+- **Leads to**: Lesson 15's AAOIFI vs IFRS capstone, where the screening knowledge feeds into full financial statement preparation under both frameworks

@@ -96,7 +96,7 @@ teaching_guide:
 
 # Full Islamic Finance Agent — SKILL.md Library Build
 
-In Lesson 16, you applied established accounting frameworks to fintech structures that the standards did not anticipate. Now you step back and look at the complete system. Over the preceding sixteen lessons, you have worked through every major Islamic finance product, explored jurisdiction-specific variations across thirteen countries, navigated cross-border consolidation, and reasoned through emerging fintech structures. This final lesson deploys the complete infrastructure.
+In Lesson 17, you applied established accounting frameworks to fintech structures that the standards did not anticipate. Now you step back and look at the complete system. Over the preceding seventeen lessons, you have worked through every major Islamic finance product, explored jurisdiction-specific variations across thirteen countries, navigated cross-border consolidation, and reasoned through emerging fintech structures. This final lesson deploys the complete infrastructure.
 
 This is the agent-building capstone. You will audit the full 25-file SKILL.md library, build and verify the global routing skill, apply both Knowledge Extraction methods, deploy the scheduled task architecture, validate the system with a multi-jurisdiction test suite, and produce the agent capability statement that defines the boundary between what the agent executes and what the Shariah Supervisory Board judges.
 

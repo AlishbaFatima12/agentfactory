@@ -21,5 +21,5 @@ Islamic fintech is scaling faster than standard-setters can respond — digital 
 
 ### Connections
 
-- **Builds on**: All prior product and jurisdiction lessons (L04-L14) plus consolidation (L15) — applies established frameworks to novel structures as a higher-order reasoning task
-- **Leads to**: Lesson 17's full SKILL.md library capstone, deploying the complete agent infrastructure that handles both established and emerging Islamic finance products
+- **Builds on**: All prior product and jurisdiction lessons (L04-L15) plus consolidation (L16) — applies established frameworks to novel structures as a higher-order reasoning task
+- **Leads to**: Lesson 18's full SKILL.md library capstone, deploying the complete agent infrastructure that handles both established and emerging Islamic finance products
