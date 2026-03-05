@@ -74,9 +74,9 @@ differentiation:
 
 In Lesson 1, you learned PRIMM -- predict, run, investigate -- and practiced on short two-to-four line blocks. In Lesson 2, you built trace tables to track variable state across longer code where values change. Now you combine both tools on real project code -- and this time, the code has a bug.
 
-Picture this scenario. Claude Code just generated a statistics module for SmartNotes. It calculates how many words a student has written, their reading speed, and whether their final score passes the threshold. James glances at it, sees that the variable names make sense, and accepts the code. Emma opens a trace table. By line eleven, she spots the problem -- a variable that looks like a number but is actually text. The code will crash the moment it runs. Emma rejects it, fixes one line, and moves on. James discovers the crash twenty minutes later, confused about why addition "stopped working."
+Here is the scenario. You ask Claude Code to generate a statistics module for SmartNotes -- something that calculates how many words a student has written, their reading speed, and whether their final score passes a threshold. The AI produces fifteen lines of code. The variable names look sensible. The arithmetic looks reasonable. Nothing seems obviously broken. But somewhere in those fifteen lines, one variable is the wrong type. The code will crash the moment it runs -- and no amount of staring at it casually will reveal the problem. Your trace table will.
 
-This lesson puts you in Emma's position. You are the reviewer. Your job is not to understand the code -- you already know how to do that. Your job is to find what is wrong.
+This lesson puts you in the reviewer's seat. Your job is not to understand the code -- you already know how to do that. Your job is to find what is wrong.
 
 ---
 
