@@ -76,9 +76,18 @@ differentiation:
 
 In Chapter 31, you built the workbench -- uv, pyright, ruff, pytest, and Git. Every tool is installed, every configuration file is in place, and SmartNotes has a clean foundation. Now you use it. This chapter is where you meet Python for the first time -- not by writing it, but by reading it.
 
-Consider two developers staring at fifty lines of code that an AI assistant just generated. James clicks "Accept" and moves on. Emma pauses. She reads line twelve, predicts what it does, and notices the function returns an integer when the rest of the code expects a string. She rejects the suggestion before it reaches the codebase. James finds the same bug three hours later, in production, at the worst possible time. The difference between them is not experience or talent. It is method. Emma has a systematic way to read code. James does not.
+Here is a short piece of Python. Before you learn any rules or methods, just look at it:
 
-This lesson gives you Emma's method. It is called PRIMM -- Predict, Run, Investigate, Modify, Make -- developed by researchers Sue Sentance, Jane Waite, and Maria Kallia. You will learn the first three stages here. Modify and Make arrive in Chapter 33 when you begin writing code. By the end of this lesson, you will have predicted the output of four Python code blocks and discovered what your predictions reveal about your understanding.
+```python
+x: int = 10
+y: int = 3
+result: int = x // y
+print(result)
+```
+
+What do you think `print(result)` displays? Take a guess -- even if you have never seen Python before. If you guessed `3.33` or `3`, you just learned something about yourself. A wrong guess tells you exactly which piece of the language you do not yet understand. A right guess confirms a piece you do. Either way, you now know more than you did five seconds ago -- and all you did was read four lines and commit to an answer.
+
+That is the core idea behind this lesson. It is called PRIMM -- Predict, Run, Investigate, Modify, Make -- developed by researchers Sue Sentance, Jane Waite, and Maria Kallia. You will learn the first three stages here. Modify and Make arrive in Chapter 33 when you begin writing code. By the end of this lesson, you will have predicted the output of four Python code blocks and discovered what your predictions reveal about your understanding.
 
 ---
 
