@@ -170,7 +170,7 @@ NanoClaw supports Apple Containers on macOS, but Docker is the default and recom
 Three commands. Under five minutes.
 
 ```bash
-git clone https://github.com/gavrielc/nanoclaw.git
+git clone https://github.com/qwibitai/nanoclaw.git
 cd nanoclaw
 claude
 ```
