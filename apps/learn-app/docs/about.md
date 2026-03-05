@@ -56,7 +56,8 @@ A practical framework for engineers, domain professionals, enterprise leaders, p
 
 ![The Five-Layer Cake of AI](/img/five-layer-cake-of-ai.png)
 
-Every breakthrough in AI rests on five layers: **Energy** at the foundation, **Chips** that compute, **Infrastructure** that scales, **Models** that reason, and **Applications** at the very top — where AI finally meets the real world. Billions of dollars flow into the bottom four layers so that the fifth layer can exist. **This book is about that fifth layer.** It teaches you how to build the applications, agents, and digital workers that turn all that investment into products people actually use, workflows organizations actually run, and value that enterprises actually capture.
+> Every breakthrough in AI rests on five layers: **Energy** at the foundation, **Chips** that compute, **Infrastructure** that scales, **Models** that reason, and **Applications** at the very top — where AI finally meets the real world. Billions of dollars flow into the bottom four layers so that the fifth layer can exist. **This book is about that fifth layer.** It teaches you how to build the applications, agents, and digital workers that turn all that investment into products people actually use, workflows organizations actually run, and value that enterprises actually capture.
+
 
 ---
 
