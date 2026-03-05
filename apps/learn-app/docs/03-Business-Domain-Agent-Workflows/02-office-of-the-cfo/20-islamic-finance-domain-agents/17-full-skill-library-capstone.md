@@ -131,8 +131,10 @@ The routing logic follows a strict protocol: (1) identify jurisdiction, (2) iden
 
 ---
 
-:::info Companion Repository
-Download the complete companion materials from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-full.zip` for everything in one package. You will need all 25 skill files, the exercise data, workflow recipes, and references.
+:::info Capstone Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Full materials:** Download [`islamic-finance-full.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) for everything in one package.
 :::
 
 ## Exercise 14: Full SKILL.md Library Build (90 min)

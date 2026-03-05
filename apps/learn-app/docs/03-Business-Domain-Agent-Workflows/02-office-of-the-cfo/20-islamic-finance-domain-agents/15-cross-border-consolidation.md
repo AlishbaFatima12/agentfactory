@@ -112,8 +112,10 @@ The exercise that follows works through each of these systematically.
 
 ---
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex12-cross-border-consolidation.md`, and reference the skill file in `skills/jurisdictions/gcc-crossborder.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex12-cross-border-consolidation.md`
 :::
 
 ## Exercise 12: 4-Entity Group Consolidation (75 min)

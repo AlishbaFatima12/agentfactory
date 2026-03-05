@@ -5,9 +5,10 @@ description: >-
   Use when: (1) a chapter needs downloadable exercise data, SKILL.md files,
   workflow recipes, or reference materials, (2) user says "create companion repo",
   "make the repo", "set up downloads", or references /companion-repo.
-  Produces a public GitHub repo under the panaversity org with auto-built
-  downloadable zips, a learner-friendly README, and injects clickable links
-  into all lesson exercise Requirements lines.
+  Supports two modes: (A) standalone chapter repo under panaversity org,
+  (B) plugin inside a marketplace monorepo (e.g., agentfactory-business-plugins).
+  Produces auto-built downloadable zips, a learner-friendly README, and injects
+  clickable links into all lesson exercise Requirements lines.
 user-invocable: true
 allowed-tools:
   - Bash
@@ -29,25 +30,63 @@ Create, populate, and publish a companion GitHub repository for a chapter, then 
 - A chapter has workflow recipes, reference materials, or plugin metadata
 - Pattern: any chapter with 3+ exercises needing external files
 
+## Mode Selection
+
+**Mode A: Standalone Repo** (default, e.g., Ch19 `ca-cpa-practice-agents`)
+
+- One repo per chapter under `panaversity/` org
+- Plugin metadata optional
+- Simple: clone/download and use
+
+**Mode B: Marketplace Plugin** (e.g., Ch20 `agentfactory-business-plugins/islamic-finance/`)
+
+- Plugin lives in a subfolder of a shared marketplace monorepo
+- Requires `.claude-plugin/plugin.json`, `marketplace.json` at repo root
+- Install via: `claude plugin install <plugin>@<marketplace>`
+- Skills/commands/hooks auto-discovered by Claude Code
+- Per-plugin CI/CD workflows with namespaced tags: `{plugin}-v{semver}`
+
+**When to use Mode B:**
+
+- Chapter ships 5+ skills that form a coherent agent capability
+- Skills need to auto-activate (not just be reference material)
+- Chapter includes commands (slash-command workflows)
+- Chapter benefits from hooks (auto-validation, session startup)
+- Future chapters will share the same marketplace repo
+
+**Reference docs for Mode B:**
+
+- Plugin anatomy: https://code.claude.com/docs/en/plugins-reference
+- SKILL.md spec: https://agentskills.io/specification
+- Scripts in skills: https://agentskills.io/skill-creation/using-scripts
+- Eval patterns: https://developers.openai.com/blog/eval-skills/
+
 ## Inputs Required
 
 Before invoking, gather:
 
 1. **Chapter number and title** — e.g., "Chapter 19: AI Transformation of CA/CPA Practice Areas"
-2. **Repo name** — short, kebab-case, descriptive (e.g., `ca-cpa-domain-agents`)
-3. **Content directories** — which of these apply:
-   - `skills/` — SKILL.md agent files
+2. **Mode** — A (standalone repo) or B (marketplace plugin)
+3. **Repo name** — Mode A: short, kebab-case (e.g., `ca-cpa-domain-agents`). Mode B: marketplace repo + plugin subfolder (e.g., `agentfactory-business-plugins/islamic-finance`)
+4. **Content directories** — which of these apply:
+   - `skills/` — SKILL.md agent files (Mode B: must follow Agent Skills spec)
+   - `commands/` — slash-command workflows (Mode B only)
+   - `hooks/` — automation hooks (Mode B only)
    - `exercises/` — data files for practice labs
    - `workflow-recipes/` — scheduled task specifications
    - `references/` — quick-reference lookup materials
-   - `.claude-plugin/` — Claude plugin marketplace metadata
-4. **Jurisdiction defaults** — primary jurisdiction for all examples (e.g., Pakistan/PKR)
-5. **Lesson directory path** — where the chapter's .md lesson files live
-6. **Content source** — where the scaffold content already exists (e.g., `specs/ch-19/companion-repo/`)
+   - `.claude-plugin/` — Claude plugin manifest (Mode B required)
+5. **Jurisdiction defaults** — primary jurisdiction for all examples (e.g., Pakistan/PKR)
+6. **Lesson directory path** — where the chapter's .md lesson files live
+7. **Content source** — where the scaffold content already exists (e.g., `specs/ch-20/`)
 
 ## Execution Steps
 
-### Phase 1: Create GitHub Repo
+### Mode Check
+
+If Mode B (marketplace plugin), skip to **Phase 1B** below. Otherwise continue with Phase 1A.
+
+### Phase 1A: Create Standalone Repo (Mode A)
 
 ```bash
 # 1. Verify GitHub auth and org access
@@ -64,6 +103,87 @@ gh repo create panaversity/{repo-name} \
 cd /tmp && rm -rf {repo-name}
 gh repo clone panaversity/{repo-name}
 ```
+
+### Phase 1B: Add Plugin to Marketplace Repo (Mode B)
+
+```bash
+# 1. Verify GitHub auth
+gh auth status
+gh org list | grep panaversity
+
+# 2. Clone or update the marketplace repo
+MARKETPLACE_REPO="agentfactory-business-plugins"  # or whatever the marketplace is
+cd /tmp && rm -rf ${MARKETPLACE_REPO}
+gh repo clone panaversity/${MARKETPLACE_REPO} || {
+  # Create if doesn't exist
+  gh repo create panaversity/${MARKETPLACE_REPO} \
+    --public \
+    --description "Business domain agent plugins from The AI Agent Factory" \
+    --license Apache-2.0
+  gh repo clone panaversity/${MARKETPLACE_REPO}
+}
+
+# 3. Create plugin subfolder
+PLUGIN_NAME="{plugin-name}"  # e.g., "islamic-finance"
+mkdir -p /tmp/${MARKETPLACE_REPO}/${PLUGIN_NAME}
+
+# 4. Create/update marketplace.json at repo root if needed
+```
+
+**marketplace.json template:**
+
+```json
+{
+  "name": "{marketplace-name}",
+  "description": "Business domain agent plugins from The AI Agent Factory — Part 3",
+  "plugins": [
+    {
+      "name": "{plugin-name}",
+      "description": "{plugin description}",
+      "source": "./{plugin-name}",
+      "version": "1.0.0"
+    }
+  ]
+}
+```
+
+**Plugin manifest (`.claude-plugin/plugin.json`):**
+
+```json
+{
+  "name": "{plugin-name}",
+  "version": "1.0.0",
+  "description": "{detailed description with activation keywords}",
+  "author": {
+    "name": "Panaversity",
+    "url": "https://github.com/panaversity"
+  },
+  "homepage": "https://agentfactory.panaversity.org",
+  "repository": "https://github.com/panaversity/{marketplace-repo}",
+  "license": "Apache-2.0",
+  "keywords": ["{domain}", "{keywords}"]
+}
+```
+
+**Skill files MUST follow Agent Skills spec (https://agentskills.io/specification):**
+
+- Each skill in `skills/{skill-name}/SKILL.md`
+- Required frontmatter: `name` (must match directory, lowercase+hyphens) + `description` (activation keywords)
+- Optional: `references/`, `scripts/`, `assets/` subdirectories
+- Keep SKILL.md under 500 lines. Move detailed content to `references/`
+
+**Commands** go in `commands/{command-name}.md` (slash-command markdown files).
+
+**Hooks** go in `hooks/hooks.json` (see https://code.claude.com/docs/en/plugins-reference).
+
+**Per-plugin CI/CD workflow** (`.github/workflows/{plugin-name}-release.yml`):
+
+- Trigger on tag `{plugin-name}-v*`
+- Validate plugin structure (plugin.json, SKILL.md frontmatter, hooks.json syntax)
+- Build zips from plugin subdirectory
+- Create GitHub Release with namespaced tag
+
+Continue to Phase 2 (content population) — same for both modes, just adjust the target directory.
 
 ### Phase 2: Populate Content
 

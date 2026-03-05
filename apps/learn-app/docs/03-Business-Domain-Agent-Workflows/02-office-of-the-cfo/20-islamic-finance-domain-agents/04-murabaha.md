@@ -159,8 +159,10 @@ The accounting treatment is identical to asset murabaha — the four-step journa
 
 The practical significance for a CA/CPA: if the jurisdiction's Shariah Supervisory Board has specific rulings on tawarruq, these must be checked before processing the transaction. The accounting is straightforward; the Shariah compliance assessment requires judgment.
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex01-murabaha-bahrain-malaysia.md`, and reference the skill files in `skills/products/murabaha.md`, `skills/jurisdictions/bahrain-aaoifi.md`, and `skills/jurisdictions/malaysia-mfrs.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex01-murabaha-bahrain-malaysia.md`
 :::
 
 ## Practice Exercise 1: Murabaha Income Schedule — Bahrain (AAOIFI) vs Malaysia (MFRS)

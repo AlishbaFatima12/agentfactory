@@ -193,8 +193,10 @@ The purchase undertaking is the most contested issue in global sukuk accounting 
 - **Shariah perspective:** AAOIFI Shariah Standard 59 permits purchase undertakings for ijarah sukuk but prohibits them for equity-based sukuk (musharakah, mudarabah) because guaranteeing capital return in a profit-sharing arrangement violates the risk-sharing principle
 - **Standard 62 risk:** If adopted, purchase undertakings in their current form may not satisfy the asset-backed requirement
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex03-gcc-sukuk-issuance.md`, and reference the skill files in `skills/products/sukuk-issuer.md` and `skills/products/sukuk-investor.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex03-gcc-sukuk-issuance.md`
 :::
 
 ## Practice Exercise 3: GCC Sukuk Issuance — Multi-Jurisdiction Accounting

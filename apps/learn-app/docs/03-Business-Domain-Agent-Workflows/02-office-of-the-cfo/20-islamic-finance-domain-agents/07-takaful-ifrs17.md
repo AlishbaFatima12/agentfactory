@@ -195,8 +195,10 @@ This IAS 37 analysis is the most analytically demanding issue in takaful account
 2. Risk adjustment for non-financial risk
 3. Contractual Service Margin (CSM)
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex04-takaful-ifrs17.md`, and reference the skill file in `skills/products/takaful-ifrs17.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex04-takaful-ifrs17.md`
 :::
 
 ## Practice Exercise 4: Global Takaful Operator — IFRS 17 and Wakala Model

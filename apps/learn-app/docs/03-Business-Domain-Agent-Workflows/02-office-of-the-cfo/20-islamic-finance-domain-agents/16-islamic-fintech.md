@@ -100,8 +100,10 @@ Traditional Islamic finance products were structured by banks, regulated by cent
 
 ---
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex13-islamic-fintech-scenarios.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex13-islamic-fintech-scenarios.md`
 :::
 
 ## Exercise 13: Four Fintech Scenarios (40 min)
