@@ -111,6 +111,8 @@ An expense categorization can be re-categorized. A sent email cannot be unsent. 
 
 Reversible actions are generally safe to automate. Irreversible actions — especially those involving money, legal commitments, external communications, or permanent records — need a human gate.
 
+Also consider: **who** is allowed to trigger your employee? NanoClaw's `sender-allowlist.ts` controls which contacts can invoke agent execution. For personal use on your own phone this may not matter, but for any shared deployment, controlling who can talk to your employee is as important as controlling what your employee can do.
+
 </details>
 
 <details>

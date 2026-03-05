@@ -20,8 +20,8 @@ This is a **project**. You'll build a working AI Employee for YOUR profession us
 | Tier | Path | Time | What You Get |
 |------|------|------|--------------|
 | **Bronze** | The Project Brief through Bronze Capstone: First Real Day | ~3 hours | Working AI Employee: identity + skill + connection + proof |
-| **Silver** | The Project Brief through Prove Professional Value | ~5 hours | + autonomous monitoring + trust boundaries + domain report |
-| **Gold** | The Project Brief through Prove Professional Value (Gold track) | ~8 hours | + multi-group architecture with isolation |
+| **Silver** | The Project Brief through Prove Professional Value | ~6 hours | + autonomous monitoring + trust boundaries + persistent memory + domain report |
+| **Gold** | The Project Brief through Prove Professional Value (Gold track) | ~9 hours | + multi-group architecture with isolation + memory isolation |
 
 Pick the tier that matches your available time and ambition. You can always come back for the next tier later.
 
@@ -42,19 +42,20 @@ Pick the tier that matches your available time and ambition. You can always come
 | [Connect Your Employee to the World](./03-connect-your-employee-to-the-world.md) | 35 min |
 | [Bronze Capstone: First Real Day](./04-bronze-capstone-first-real-day.md) | 45 min |
 
-### Silver Tier: Proactive + Trusted
+### Silver Tier: Proactive + Trusted + Learning
 
 | Lesson | Duration |
 |--------|----------|
 | [Make Your Employee Proactive](./05-make-your-employee-proactive.md) | 40 min |
 | [Teach Your Employee Boundaries](./06-teach-your-employee-boundaries.md) | 40 min |
-| [Prove Professional Value](./07-capstone-prove-professional-value.md) | 55 min |
+| [Give Your Employee a Memory](./07-give-your-employee-a-memory.md) | 40 min |
+| [Prove Professional Value](./08-capstone-prove-professional-value.md) | 55 min |
 
 ### Project Review
 
 | Lesson | Duration |
 |--------|----------|
-| [Project Review](./08-project-review.md) | 25 min |
+| [Project Review](./09-project-review.md) | 25 min |
 
 ## Student Deliverables (GitHub Repo)
 
@@ -69,10 +70,11 @@ nanoclaw-employee/
 ├── evaluation.md                      (Bronze: self-assessment)
 ├── scheduler-config.md                (Silver: scheduled task design)
 ├── hitl-boundaries.md                 (Silver: permission table)
+├── memory-config.md                   (Silver: action log + knowledge store schemas)
 └── domain-report-sample.md            (Silver: generated report)
 ```
 
-Gold adds: 3-group config + isolation demo + system diagram.
+Gold adds: 3-group config + isolation demo + system diagram + memory isolation test.
 
 ## Design Philosophy
 
