@@ -1,0 +1,82 @@
+deck:
+  id: "ch13-06-boundaries"
+  title: "Teach Your Employee Boundaries"
+  description: "Key concepts from Chapter 13 Lesson 6 — HITL workflows, permission categories, risk assessment, and trust architecture"
+  tags: ["nanoclaw", "hitl", "boundaries", "trust", "safety"]
+  version: 1
+
+cards:
+  - id: "ch13-06-boundaries-001"
+    type: "recall"
+    front: "What three permission categories does the boundary system use for action classification?"
+    back: "1. Auto-approve\n2. Needs approval\n3. Never automate"
+    tags: ["permission-categories", "classification"]
+    difficulty: "basic"
+
+  - id: "ch13-06-boundaries-002"
+    type: "thinking"
+    front: "Why is reversibility the key criterion for classifying actions as auto-approve versus needs-approval?"
+    back: "Reversible actions can be corrected after the fact — a miscategorized expense is re-categorized. Irreversible actions like sent emails or filed documents cannot be undone, so errors carry permanent consequences that justify requiring human review before execution."
+    tags: ["reversibility", "risk-assessment"]
+    difficulty: "intermediate"
+    why: "Are there reversible actions that should still require approval? When?"
+
+  - id: "ch13-06-boundaries-003"
+    type: "recall"
+    front: "What is a human-in-the-loop (HITL) approval workflow in the context of an AI employee?"
+    back: "Employee attempts sensitive action, stops, asks for permission, then proceeds or halts based on the human's response."
+    tags: ["hitl", "workflow"]
+    difficulty: "basic"
+
+  - id: "ch13-06-boundaries-004"
+    type: "thinking"
+    front: "Why must boundary reasoning be domain-specific rather than generically cautious?"
+    back: "Generic caution ('this could be risky') provides no decision framework. Domain-specific reasoning ('sending client financials without review violates CPA standards') ties each boundary to real professional consequences, making the system's behavior predictable and auditable."
+    tags: ["domain-reasoning", "specificity"]
+    difficulty: "intermediate"
+    why: "How would you explain a boundary decision to a client or regulator?"
+
+  - id: "ch13-06-boundaries-005"
+    type: "thinking"
+    front: "Why should the fallback rule for unlisted actions be 'treat as needs-approval' rather than 'auto-approve'?"
+    back: "Unlisted actions are unknown risk. Defaulting to approval means every new capability is unrestricted until someone notices a problem. Defaulting to review means the system is safe by default and permissions are granted deliberately as trust is established."
+    tags: ["fallback-rules", "safety"]
+    difficulty: "intermediate"
+    why: "How does this relate to the security principle of least privilege?"
+
+  - id: "ch13-06-boundaries-006"
+    type: "recall"
+    front: "What three elements should an approval workflow enforce for REVIEW-category actions?"
+    back: "1. Draft the output and show it\n2. Wait for approved/rejected response\n3. Proceed or halt based on response"
+    tags: ["approval-workflow", "implementation"]
+    difficulty: "intermediate"
+
+  - id: "ch13-06-boundaries-007"
+    type: "thinking"
+    front: "An AI employee follows boundaries with perfect consistency. Why is this both an advantage and a design responsibility?"
+    back: "Perfect consistency means the employee never makes exceptions — unlike humans who might 'just this once' skip a check. This is safer, but it means poorly designed boundaries create rigid behavior that blocks legitimate work. The designer must get the rules right upfront because the system will not exercise judgment about when to bend them."
+    tags: ["consistency", "design-responsibility"]
+    difficulty: "advanced"
+    why: "When might rigid boundary enforcement cause more harm than flexible human judgment?"
+
+  - id: "ch13-06-boundaries-008"
+    type: "recall"
+    front: "What deliverable file does Lesson 6 require, and what must it contain?"
+    back: "`hitl-boundaries.md` with 4+ actions categorized as auto/review/block, each with domain-specific reasoning"
+    tags: ["deliverables", "silver"]
+    difficulty: "basic"
+
+  - id: "ch13-06-boundaries-009"
+    type: "thinking"
+    front: "Why does stress-testing boundary rules focus on edge cases rather than obvious violations?"
+    back: "Obvious violations are easy to catch — 'file my taxes' is clearly blocked. Edge cases like 'based on recent trends, what should I expect this property to cost?' test whether boundaries handle subtle rephrasings. Real-world boundary failures happen at the edges, not the center."
+    tags: ["stress-testing", "edge-cases"]
+    difficulty: "advanced"
+    why: "How would you systematically generate edge-case tests for a boundary system?"
+
+  - id: "ch13-06-boundaries-010"
+    type: "recall"
+    front: "What should an AI employee do when it encounters an action that requires logging but not approval?"
+    back: "Proceed and log what it did (AUTO category behavior)"
+    tags: ["auto-actions", "logging"]
+    difficulty: "basic"

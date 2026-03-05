@@ -1,0 +1,68 @@
+deck:
+  id: "ch13-05-proactive"
+  title: "Make Your Employee Proactive"
+  description: "Key concepts from Chapter 13 Lesson 5 — scheduled tasks, proactive monitoring, work rhythm alignment, and autonomous output quality"
+  tags: ["nanoclaw", "scheduling", "proactive", "automation"]
+  version: 1
+
+cards:
+  - id: "ch13-05-proactive-001"
+    type: "thinking"
+    front: "Why is the shift from reactive to proactive described as the difference between an assistant and an employee?"
+    back: "An assistant waits for instructions and executes them. An employee monitors conditions, anticipates needs, and acts before being asked — like preparing a morning briefing before the manager arrives. Proactive behavior transforms the AI from a tool you use into a colleague that works independently."
+    tags: ["reactive-vs-proactive", "paradigm"]
+    difficulty: "intermediate"
+    why: "What minimum capabilities must an agent have before proactive behavior becomes useful rather than annoying?"
+
+  - id: "ch13-05-proactive-002"
+    type: "recall"
+    front: "What four decisions define a scheduled task design?"
+    back: "1. WHAT to monitor\n2. WHEN to check\n3. WHAT to report\n4. WHERE to deliver"
+    tags: ["scheduled-tasks", "design"]
+    difficulty: "basic"
+
+  - id: "ch13-05-proactive-003"
+    type: "thinking"
+    front: "A consultant's Friday report arrives at 5 PM but key decisions happen Thursday morning. What is the problem?"
+    back: "The report arrives after the decisions it should inform. Schedule design must match information delivery to decision-making moments — a Thursday 7 AM delivery enables the consultant to act on findings before committing to client timelines."
+    tags: ["schedule-optimization", "timing"]
+    difficulty: "intermediate"
+    why: "How would you determine the optimal delivery time for a recurring report?"
+
+  - id: "ch13-05-proactive-004"
+    type: "recall"
+    front: "What deliverable file does Lesson 5 require for the project repository?"
+    back: "`scheduler-config.md` documenting what, when, why, sample output, and time-saving assessment"
+    tags: ["deliverables", "silver"]
+    difficulty: "basic"
+
+  - id: "ch13-05-proactive-005"
+    type: "thinking"
+    front: "Why should the best candidate for automation be a task you already do manually on a regular basis?"
+    back: "Manually repeated tasks have a proven value signal — you keep doing them because the output matters. Automating an unproven task risks building something nobody needs, while automating a manual habit guarantees time savings and has a clear quality baseline to compare against."
+    tags: ["automation-selection", "value"]
+    difficulty: "intermediate"
+    why: "How do you distinguish between tasks worth automating and tasks better left manual?"
+
+  - id: "ch13-05-proactive-006"
+    type: "recall"
+    front: "What acceptance criteria must a Silver-tier scheduled task meet?"
+    back: "1. Runs at configured interval\n2. Domain-relevant output (not placeholders)\n3. Uses real data\n4. Schedule fits work rhythm"
+    tags: ["acceptance-criteria", "silver"]
+    difficulty: "intermediate"
+
+  - id: "ch13-05-proactive-007"
+    type: "thinking"
+    front: "Why start with a short test interval before switching to the production schedule?"
+    back: "Short intervals provide rapid feedback on output quality and formatting before committing to the real cadence. A weekly report with a bug wastes a week before you discover the problem. A 5-minute test interval reveals the same bug in minutes."
+    tags: ["testing", "iteration"]
+    difficulty: "intermediate"
+    why: "What specific output problems are best caught during short-interval testing?"
+
+  - id: "ch13-05-proactive-008"
+    type: "thinking"
+    front: "How does the gap between 'technically correct' and 'professionally useful' apply to automated reports?"
+    back: "A technically correct report contains accurate data but may lack actionable structure, priority ranking, or context that professionals need for quick decisions. Useful reports are scannable during a busy day and tell you what to DO, not just what happened."
+    tags: ["output-quality", "professional-standards"]
+    difficulty: "advanced"
+    why: "What makes a report scannable versus one that requires careful reading?"
