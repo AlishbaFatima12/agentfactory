@@ -84,7 +84,7 @@ Each exercise builds on the previous one. Work through them in order -- the outp
 - Access to your CRM with data on your last 20 closed-won deals
 - Data fields needed for each deal: company size, revenue, industry, buyer persona, trigger event, sales cycle length, primary pain point, deal-breaker risks
 - The `sales-marketing.local.md.template` from the Chapter 23 skill library (Lesson 10)
-- A text editor or Claude Cowork session open
+- A text editor or Cowork session open
 
 **Steps:**
 

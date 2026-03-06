@@ -169,7 +169,7 @@ The Legal Plugin ships with five primary commands, each representing a distinct 
 | `/respond`         | Templated responses for DSARs, discovery holds, routine legal inquiries | 20-30 hours to 4-6 hours per DSAR |
 
 ```
-Platform:  Claude Cowork
+Platform:  Cowork
 Path:      Cowork -> Plugins -> Browse -> Search "Legal" -> Install
 Plugin:    https://claude.com/plugins/legal
 Source:    https://github.com/anthropics/knowledge-work-plugins/tree/main/legal
