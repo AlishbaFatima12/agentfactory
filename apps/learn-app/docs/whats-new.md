@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-06
+- refactor: update chapter title and sidebar label for consistency in documentation ([#829](https://github.com/panaversity/agentfactory/pull/829))
+
+### 2026-03-06
 - Ch 23: Sales, RevOps & Marketing — 12 lessons + plugin ([#828](https://github.com/panaversity/agentfactory/pull/828))
 
 ### 2026-03-06
