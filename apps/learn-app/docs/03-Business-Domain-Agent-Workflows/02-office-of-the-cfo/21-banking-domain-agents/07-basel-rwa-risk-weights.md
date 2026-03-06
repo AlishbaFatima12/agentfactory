@@ -80,6 +80,22 @@ differentiation:
 
 # Risk-Weighted Assets -- SA and IRB Approaches
 
+:::info IRB vs SA (Internal Ratings-Based vs Standardised Approach)
+**Two methods for calculating risk-weighted assets: SA uses fixed regulatory risk weights (e.g., 35% for mortgages), while IRB lets banks use their own credit models to derive risk weights (which can be as low as 10-15% for well-secured portfolios).**
+
+A GBP 1 billion mortgage portfolio produces RWA of GBP 350M under SA (35% risk weight) but only GBP 120M under IRB (12% model-derived risk weight). Same loans, same risk, but GBP 230M difference in RWA.
+
+The approach a bank uses directly determines how much capital it must hold -- IRB banks report stronger capital ratios, which is why regulators introduced the output floor.
+:::
+
+:::info Output Floor (Basel IV)
+**A rule that prevents IRB banks from reporting RWA below 72.5% of what the Standardised Approach would produce for the same portfolio.**
+
+If SA RWA = GBP 8 billion and IRB RWA = GBP 4.9 billion, the floor = 72.5% x GBP 8B = GBP 5.8 billion. The bank must report GBP 5.8 billion, not GBP 4.9 billion.
+
+The output floor closes a loophole where banks with optimised models could hold less capital than their actual risk warranted -- it is being phased in from 50% (2025) to 72.5% (2030).
+:::
+
 In Lesson 6, you built the capital stack and calculated CET1, Tier 1, and Total Capital ratios. Every one of those ratios had the same denominator: risk-weighted assets. You used RWA as a given number. This lesson opens that denominator and examines how it is calculated -- because two banks with identical loan portfolios can report different RWA depending on which approach they use.
 
 The Basel framework offers two approaches for calculating credit risk RWA. The **Standardised Approach (SA)** uses fixed risk weights prescribed by the regulator for each asset class. The **Internal Ratings-Based (IRB) approach** allows banks to use their own credit risk models to derive risk weights. IRB typically produces lower RWA than SA -- which is why Basel IV introduced the **output floor**: IRB banks cannot report RWA below 72.5% of what the Standardised Approach would produce for the same portfolio.
@@ -225,6 +241,64 @@ The bank must report **GBP 6,148M** as its RWA.
 
 The floor reduces the reported CET1 ratio from 24.4% to 19.5% -- still comfortably above the 8.0% combined minimum, but a 4.9 percentage point reduction. This bank has heavily optimised IRB models (IRB RWA is only 58% of SA RWA), which is exactly the situation the output floor was designed to address.
 :::
+
+## Using the Banking Plugin
+
+The `basel-rwa-credit` skill assigns Standardised Approach risk weights, calculates RWA by asset class, and evaluates the Basel IV output floor impact for IRB banks. Here is a worked example.
+
+**Worked example.** Fatima Al-Mansouri, Risk Analytics Lead at Gulf Continental Bank, needs to assess the output floor impact on her bank's mortgage-heavy portfolio. She types:
+
+```
+Calculate SA RWA and output floor impact:
+Portfolio:
+  UK sovereign bonds (AAA): GBP 3,000M
+  Corporate loans (A-rated): GBP 2,500M
+  Corporate loans (unrated): GBP 1,800M
+  Residential mortgages (LTV <= 80%): GBP 5,500M
+  Residential mortgages (LTV > 80%): GBP 1,200M
+  Retail unsecured: GBP 2,000M
+  Commercial real estate (LTV <= 60%): GBP 800M
+  Past-due exposures: GBP 200M
+IRB RWA (model output): GBP 4,920M
+CET1: GBP 1,200M
+Jurisdiction: UK PRA
+```
+
+The agent routes through `basel-rwa-credit` and responds:
+
+```
+GOVERNING STANDARD: Basel III/IV — UK PRA
+DOMAIN: Credit Risk RWA — SA + Output Floor
+JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+
+SA RWA CALCULATION
+  Sovereign (0%):     GBP 0M
+  Corporate A (75%):  GBP 1,875M
+  Corporate unrated (100%): GBP 1,800M
+  Mortgage <=80% (35%): GBP 1,925M
+  Mortgage >80% (50%):  GBP 600M
+  Retail unsecured (75%): GBP 1,500M
+  CRE <=60% (60%):   GBP 480M
+  Past-due (150%):    GBP 300M
+  Total SA RWA:       GBP 8,480M
+
+OUTPUT FLOOR (72.5% fully phased)
+  Floor RWA: 72.5% x GBP 8,480M = GBP 6,148M
+  IRB RWA:   GBP 4,920M
+  Floor binds: YES (IRB < Floor)
+  Reported RWA: GBP 6,148M
+
+CET1 RATIOS
+  Under SA:          14.2%
+  Under IRB (raw):   24.4%
+  Under IRB (floored): 19.5%
+
+NOTE: The professional reviews the risk weight assignments
+and asset class mappings; the agent calculated the SA RWA,
+floor impact, and adjusted capital ratios.
+```
+
+Fatima reviews the asset class assignments -- particularly whether the A-rated corporates have valid external ratings that support the 75% weight rather than 100% -- and validates that the floor impact of 4.9 percentage points is consistent with her capital planning projections.
 
 ## Try With AI
 

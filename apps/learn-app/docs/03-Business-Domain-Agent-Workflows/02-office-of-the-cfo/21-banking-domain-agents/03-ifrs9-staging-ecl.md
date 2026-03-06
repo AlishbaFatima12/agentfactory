@@ -103,6 +103,14 @@ Three critical distinctions to internalise:
 
 **Interest revenue in Stage 3.** This is the distinction that catches many practitioners. In Stages 1 and 2, the bank recognises interest revenue based on the **gross** carrying amount (the full loan balance before deducting the ECL provision). In Stage 3, interest revenue is calculated on the **net** carrying amount (the loan balance minus the ECL provision). This reduces recognised income for credit-impaired assets.
 
+:::info SICR (Significant Increase in Credit Risk)
+**The trigger that moves a loan from Stage 1 (12-month ECL) to Stage 2 (lifetime ECL) -- the single most consequential classification decision in IFRS 9.**
+
+If a borrower's PD doubles from 1% to 2% after origination, SICR is triggered. A $10 million mortgage moves from a $5,400 provision (12-month) to a $54,000 provision (lifetime) -- a 10x increase from one classification change.
+
+SICR assessment drives provision volatility: one portfolio-wide rating downgrade can increase a bank's total ECL by hundreds of millions.
+:::
+
 ## SICR: When Does an Asset Move to Stage 2?
 
 The Significant Increase in Credit Risk (SICR) assessment is the most judgment-intensive part of IFRS 9. An asset moves from Stage 1 to Stage 2 when there has been a significant increase in the probability of default since initial recognition. IFRS 9 does not prescribe a single threshold — it requires banks to consider all reasonable and supportable information.
@@ -214,14 +222,51 @@ The `ifrs9-staging` skill tracks these migrations and produces the stage migrati
 
 ## Using the Banking Plugin
 
-The `ifrs9-staging` and `ifrs9-ecl` skills handle both staging classification and ECL calculation. The `/bank-ecl` command chains them automatically:
+The `ifrs9-staging` and `ifrs9-ecl` skills handle both staging classification and ECL calculation. Here is what that looks like in practice.
 
-1. You provide the portfolio data (facility-level PD, LGD, EAD, DPD, rating changes)
-2. The `ifrs9-staging` skill classifies each facility into Stage 1, 2, or 3
-3. The `ifrs9-ecl` skill calculates 12-month ECL (Stage 1) or lifetime ECL (Stage 2/3) for each facility
-4. The output includes facility-level and portfolio-level ECL, with stage migration summary
+**Worked example.** Sarah Chen, Head of Credit Risk at Meridian Commercial Bank, needs to stage a deteriorating corporate facility and calculate the ECL impact. She types:
 
-The next two lessons build the PD, LGD, and EAD components in depth (Lesson 4) and add macroeconomic scenario weighting (Lesson 5).
+```
+Stage this facility and calculate ECL:
+Borrower: Hartfield Engineering Ltd
+Facility: GBP 10M term loan, 4 years remaining
+Current rating: BB- (originated at BBB)
+DPD: 0
+Rating downgrade: 3 notches since origination
+PD (12m): 1.2%, LGD: 35%, EAD: GBP 10,000,000
+Jurisdiction: UK PRA
+```
+
+The agent routes through `ifrs9-staging` and `ifrs9-ecl` and responds:
+
+```
+GOVERNING STANDARD: IFRS 9 — UK PRA
+DOMAIN: IFRS 9 ECL — Stage Assessment + ECL Calculation
+JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+
+STAGING RESULT
+Facility: Hartfield Engineering Ltd — GBP 10M term loan
+Stage: 2 (SICR detected)
+SICR trigger: Rating downgrade of 3 notches since origination
+  (originated BBB, current BB-)
+
+ECL CALCULATION
+Measurement: Lifetime ECL (Stage 2)
+PD term structure applied over 4-year remaining life
+Lifetime ECL: GBP 397,889
+Previous Stage 1 ECL (12-month): GBP 42,000
+Provision increase: GBP 355,889 (+847%)
+
+NOTE: The professional reviews the SICR trigger rationale
+and the PD term structure assumptions; the agent calculated
+the staging classification and lifetime ECL.
+```
+
+Sarah reviews the staging trigger (the 3-notch downgrade is a clear SICR indicator) and validates that the PD term structure the agent applied is consistent with her bank's internal rating model calibration. The next two lessons build the PD, LGD, and EAD components in depth (Lesson 4) and add macroeconomic scenario weighting (Lesson 5).
+
+### Jurisdiction Variant: Pakistan (SBP)
+
+The State Bank of Pakistan (SBP) mandated IFRS 9 adoption for all Pakistani banks effective 1 January 2021, under BPRD Circular No. 04 of 2019. Pakistani banks follow the same three-stage model described above, but SBP introduced a local modification: a mandatory floor of 0.5% for 12-month PD on any performing Stage 1 exposure, regardless of the bank's internal model output. This prevents banks from understating ECL on newly originated assets. Additionally, SBP requires Pakistani banks to use a minimum of three macroeconomic scenarios (base, optimistic, pessimistic) weighted by probability, and the regulator publishes suggested macroeconomic variable paths during periods of economic stress. Banks reporting to SBP must reconcile their IFRS 9 provisions against SBP's Prudential Regulations for Corporate/Commercial Banking (PR-R8), which may produce a higher regulatory provision floor than the IFRS 9 model output. The banking plugin's `pakistan-sbp` jurisdiction overlay captures these local modifications.
 
 ## Try With AI
 

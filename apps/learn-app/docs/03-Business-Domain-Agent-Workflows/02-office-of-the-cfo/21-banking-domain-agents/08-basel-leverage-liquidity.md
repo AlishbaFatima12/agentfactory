@@ -99,6 +99,14 @@ The minimum is **3.0%** under the Basel standard. The UK PRA sets a higher minim
 A bank that holds GBP 50 billion in sovereign bonds (0% risk weight) and GBP 5 billion in corporate loans (100% risk weight) has RWA of only GBP 5 billion. If its CET1 is GBP 750 million, its CET1 ratio is 15% -- well above the minimum. But its leverage ratio is 750M / 55B = 1.36% -- dangerously low. The bank is funding GBP 55 billion of assets with only GBP 750 million of loss-absorbing capital. The leverage ratio catches this concentration in low-risk-weight assets that risk-weighted ratios miss.
 :::
 
+:::info HQLA (High-Quality Liquid Assets)
+**Assets a bank can sell for cash within 30 days at little or no loss of value -- the numerator of the Liquidity Coverage Ratio.**
+
+A bank holding GBP 500M in central bank reserves (Level 1, 0% haircut) and GBP 100M in covered bonds (Level 2A, 15% haircut) has HQLA = GBP 500M + GBP 85M = GBP 585M.
+
+HQLA is the bank's survival buffer -- if depositors and wholesale lenders demand their money back simultaneously, HQLA is the cash the bank can produce without selling illiquid assets at fire-sale prices.
+:::
+
 ## The Liquidity Coverage Ratio (LCR)
 
 The LCR asks: if the bank faces a severe 30-day liquidity stress -- deposit withdrawals, wholesale funding freeze, credit line drawdowns -- does it hold enough liquid assets to survive without external support?
@@ -225,6 +233,75 @@ The NSFR ensures that a bank funding 30-year mortgages has enough long-term or s
 :::info LCR vs NSFR: Complementary Measures
 A bank can pass LCR (plenty of liquid assets for 30 days) but fail NSFR (funding long-term assets with short-term debt). Conversely, a bank with perfectly matched funding (high NSFR) could fail LCR if its liquid asset buffer is insufficient. The two ratios together ensure both short-term resilience and structural soundness.
 :::
+
+## Using the Banking Plugin
+
+The `liquidity-lcr` and `liquidity-nsfr` skills classify HQLA, calculate net cash outflows under stress, and compute both liquidity ratios. Here is a worked example.
+
+**Worked example.** Nadia Petrova, Treasury Risk Manager at Northern Bridge Bank, needs to calculate LCR under a 30-day stress scenario after a large deposit outflow. She types:
+
+```
+Calculate LCR for this position:
+HQLA:
+  Central bank reserves: GBP 420M (Level 1)
+  UK gilts: GBP 380M (Level 1)
+  AAA covered bonds: GBP 95M (Level 2A)
+  IG corporate bonds: GBP 60M (Level 2A)
+Outflows (30-day stress):
+  Stable retail deposits GBP 2,800M at 3%
+  Less stable retail GBP 480M at 10%
+  Wholesale non-financial GBP 320M at 25%
+  Wholesale financial GBP 190M at 100%
+  Undrawn committed lines GBP 150M at 10%
+  SPV facilities GBP 45M at 100%
+Inflows:
+  Maturing interbank GBP 85M at 100%
+  Retail loan repayments GBP 35M at 50%
+Jurisdiction: UK PRA
+```
+
+The agent routes through `liquidity-lcr` and responds:
+
+```
+GOVERNING STANDARD: Basel III — UK PRA
+DOMAIN: Liquidity Coverage Ratio
+JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+
+HQLA (after haircuts)
+  Level 1: GBP 800.0M (420 + 380, no haircut)
+  Level 2A: GBP 131.75M (95 x 85% + 60 x 85%)
+  Level 2 cap check: 131.75 / 931.75 = 14.1% (below 40% cap)
+  Total HQLA: GBP 931.75M
+
+NET CASH OUTFLOWS
+  Total outflows: GBP 462.0M
+  Total inflows: GBP 102.5M
+  Inflow cap (75% of outflows): GBP 346.5M
+  Inflows within cap: GBP 102.5M (applied in full)
+  Net outflows: GBP 359.5M
+
+LCR = GBP 931.75M / GBP 359.5M = 259.2%
+Minimum: 100%
+Status: PASS — substantial headroom
+
+NOTE: The professional reviews the HQLA classifications
+and run-off rate assumptions; the agent calculated the
+haircuts, cap checks, and final LCR.
+```
+
+Nadia reviews whether the covered bonds genuinely qualify at Level 2A (AAA-rated, meeting the covered bond directive criteria) and confirms that the run-off rates applied to wholesale financial deposits reflect her bank's PRA-agreed assumptions.
+
+:::info ICAAP and ILAAP (Internal Capital/Liquidity Adequacy Assessment Processes)
+**A bank's own internal assessment of how much capital (ICAAP) and liquidity (ILAAP) it needs to survive severe stress -- submitted annually to the regulator, who can then set higher requirements.**
+
+If the Basel minimum CET1 is 8.0% but a bank's ICAAP stress test shows it needs 11.5% to survive a severe recession, the regulator may set the bank's individual capital requirement at 11.5%.
+
+ICAAP and ILAAP are the bridge between generic regulatory minimums and bank-specific risk profiles -- they are why two banks with identical balance sheets can have different capital requirements.
+:::
+
+### Jurisdiction Variant: US (CECL and DFAST)
+
+US banks operate under a different but parallel framework. Instead of IFRS 9's three-stage ECL model, US banks provision under CECL (ASC 326), which requires lifetime expected loss estimation from Day 1 for all assets -- there is no Stage 1 / 12-month ECL concept. On the stress testing side, US banks with $100 billion or more in total consolidated assets are subject to the Dodd-Frank Act Stress Testing (DFAST) framework administered by the Federal Reserve. DFAST requires banks to project capital ratios, pre-provision net revenue, and losses over a 9-quarter stress horizon under supervisory scenarios (severely adverse, adverse, and baseline) published annually. The DFAST results are publicly disclosed, creating market discipline that does not exist in the UK's ICAAP process (which is confidential between the bank and the PRA). Additionally, the largest US banks are subject to the Comprehensive Capital Analysis and Review (CCAR), which evaluates both quantitative capital adequacy and qualitative risk management practices including capital planning governance.
 
 ## Try With AI
 

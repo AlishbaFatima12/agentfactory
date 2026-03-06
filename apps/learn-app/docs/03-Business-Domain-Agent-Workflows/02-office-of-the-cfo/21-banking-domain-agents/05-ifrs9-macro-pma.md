@@ -243,6 +243,60 @@ Apply macroeconomic scenario analysis and PMA design to this GCC-region corporat
 4. Design a PMA for the Oil & Gas sector — Gulf Petrochemicals has $120M exposure and oil prices have dropped 25% in the last quarter. The base case macro scenarios were calibrated with oil at $80/barrel; current price is $60/barrel. Estimate the PMA amount and document the rationale.
 5. Calculate the final reported ECL (probability-weighted ECL + PMA).
 
+## Using the Banking Plugin
+
+The `ifrs9-scenarios` skill calculates probability-weighted ECL across multiple macroeconomic scenarios and drafts PMA documentation. Here is a worked example.
+
+**Worked example.** Priya Sharma, Chief Economist at Crescent Bank, needs to run a four-scenario overlay on her commercial real estate portfolio. She types:
+
+```
+Calculate probability-weighted ECL for this CRE portfolio:
+Portfolio balance: GBP 800M
+Scenario ECLs:
+  Upside: GBP 28M (weight 15%)
+  Base: GBP 45M (weight 40%)
+  Adverse: GBP 78M (weight 30%)
+  Severe: GBP 145M (weight 15%)
+Also draft a PMA rationale — oil prices dropped 25%
+and our base macro was calibrated at $80/bbl, now $60/bbl.
+Jurisdiction: UK PRA
+```
+
+The agent routes through `ifrs9-scenarios` and responds:
+
+```
+GOVERNING STANDARD: IFRS 9 — UK PRA
+DOMAIN: IFRS 9 ECL — Scenario Weighting + PMA
+JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+
+PROBABILITY-WEIGHTED ECL
+  Upside:  15% x GBP 28M  = GBP 4.20M
+  Base:    40% x GBP 45M  = GBP 18.00M
+  Adverse: 30% x GBP 78M  = GBP 23.40M
+  Severe:  15% x GBP 145M = GBP 21.75M
+  Weighted ECL: GBP 67.35M
+
+Non-linearity impact: Weighted ECL is 49% above base case
+ECL (GBP 45M) due to disproportionate adverse tail.
+
+PMA DRAFT
+Type: Sector PMA — Oil price shock
+Rationale: Base macro calibrated at $80/bbl; current
+  spot $60/bbl (-25%). CRE portfolio has 18% exposure
+  to energy-dependent tenants. Model does not incorporate
+  oil price as an explicit variable.
+Suggested PMA: GBP 3.2M (methodology: stress the
+  energy-linked sub-portfolio PDs by 1.5x CCA uplift)
+Governance: Requires credit committee approval,
+  quarterly review, 6-month expiry.
+
+NOTE: The professional reviews the scenario weights
+and the PMA quantum; the agent calculated the weighted
+ECL and drafted the PMA documentation.
+```
+
+Priya reviews the scenario weights against the bank's latest economic outlook and validates the PMA quantum by cross-checking the energy-linked sub-portfolio exposure against her internal concentration report.
+
 ## Try With AI
 
 Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.

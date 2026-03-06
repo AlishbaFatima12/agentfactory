@@ -80,6 +80,14 @@ differentiation:
 
 # Basel III/IV Capital Adequacy -- CET1, Tier 1, Total Capital
 
+:::info RWA (Risk-Weighted Assets)
+**The total value of a bank's assets adjusted for risk -- a GBP 100M sovereign bond at 0% risk weight contributes GBP 0 to RWA, while a GBP 100M corporate loan at 100% risk weight contributes GBP 100M.**
+
+A bank with GBP 2 billion in mortgages (35% risk weight) and GBP 500M in corporate loans (100% risk weight): RWA = (2,000 x 0.35) + (500 x 1.00) = GBP 700M + GBP 500M = GBP 1,200M.
+
+RWA is the denominator for all three Basel capital ratios -- a change in RWA directly affects whether the bank meets its capital requirements.
+:::
+
 In Lessons 3-5, you worked through the accounting pillar -- IFRS 9 expected credit losses, PD/LGD/EAD modelling, and macroeconomic overlays. That pillar answers: "How much should the bank set aside for losses it expects?" This lesson shifts to the solvency pillar, which answers a different question entirely: "Does the bank have enough of its own money to absorb losses it does not expect?"
 
 The Basel III/IV capital framework is the global answer to that question. It defines what counts as a bank's own capital, how much capital a bank must hold relative to its risk-weighted assets, and what happens when capital falls below minimum thresholds. The 2008 financial crisis revealed that many banks had reported strong capital ratios using instruments that could not actually absorb losses when losses arrived. Basel III responded by creating a hierarchy of capital quality -- from the highest-loss-absorbing Common Equity Tier 1 down to subordinated debt -- and setting minimum ratios for each tier.
@@ -137,6 +145,14 @@ Every bank must maintain three ratios above Basel minimums:
 **Tier 1 Ratio** = (CET1 + AT1) / Risk-Weighted Assets >= 6.0%
 
 **Total Capital Ratio** = (CET1 + AT1 + Tier 2) / Risk-Weighted Assets >= 8.0%
+
+:::info MDA (Maximum Distributable Amount)
+**The cap on dividends, bonuses, and share buybacks that a bank can pay when its CET1 ratio falls into the buffer zone above the hard minimum.**
+
+A bank with a combined buffer of 4.0% (CCB 2.5% + D-SIB 1.5%) that uses 50% of its buffer can distribute at most 40% of its quarterly profits. If CET1 falls further into the buffer, the MDA shrinks to zero.
+
+MDA is the mechanism that forces banks to rebuild capital before rewarding shareholders -- it turns capital pressure into immediate operational constraints.
+:::
 
 ### Capital Buffers
 
@@ -230,6 +246,60 @@ CET1 minimum + CCB + D-SIB = 4.5% + 2.5% + 1.0% = 8.0%
 Bank's CET1 ratio: 16.6% -- exceeds 8.0% by 8.6 percentage points.
 All three ratios comfortably exceed minimums. The bank has significant capital headroom.
 :::
+
+## Using the Banking Plugin
+
+The `basel-capital` skill classifies capital instruments, applies regulatory deductions, and calculates all three capital ratios with buffer assessment. Here is a worked example.
+
+**Worked example.** James Oduya, Capital Planning Manager at Sovereign Trust Bank, needs a quick capital adequacy check after a quarterly earnings update. He types:
+
+```
+Calculate capital ratios for this position:
+CET1 components: ordinary shares GBP 120M, share premium
+  GBP 65M, retained earnings GBP 100M, AOCI GBP 8M
+Deductions: goodwill GBP 25M, intangibles GBP 12M, DTAs GBP 5M
+AT1: CoCo bonds GBP 45M (6.5% trigger, perpetual)
+Tier 2: subordinated debt GBP 60M (7-year maturity)
+RWA: GBP 1,510.5M
+D-SIB buffer: 1.0%
+Jurisdiction: UK PRA
+```
+
+The agent routes through `basel-capital` and responds:
+
+```
+GOVERNING STANDARD: Basel III — UK PRA
+DOMAIN: Capital Adequacy — Ratio Calculation
+JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+
+CAPITAL STACK
+  Gross CET1: GBP 293.0M (120 + 65 + 100 + 8)
+  Deductions:  GBP 42.0M (25 + 12 + 5)
+  Net CET1:    GBP 251.0M
+  Tier 1:      GBP 296.0M (251 + 45 AT1)
+  Total Capital: GBP 356.0M (296 + 60 T2)
+
+RATIOS (RWA = GBP 1,510.5M)
+  CET1 Ratio:     16.6%  (minimum 4.5%)
+  Tier 1 Ratio:   19.6%  (minimum 6.0%)
+  Total Capital:  23.6%  (minimum 8.0%)
+
+BUFFER ASSESSMENT
+  CET1 minimum + CCB + D-SIB = 4.5% + 2.5% + 1.0% = 8.0%
+  CET1 surplus above combined buffer: 8.6pp
+  Status: All ratios exceed requirements with significant
+  headroom. No distribution constraints apply.
+
+NOTE: The professional reviews the instrument classifications
+and deduction completeness; the agent calculated the ratios
+and buffer compliance.
+```
+
+James reviews whether the AT1 CoCos meet the perpetuity and non-cumulative criteria for AT1 classification, and confirms that no additional deductions (such as significant investments) have been omitted from the calculation.
+
+### Jurisdiction Variant: GCC (SAMA and CBUAE)
+
+GCC regulators generally impose capital requirements above the Basel III minimums. The Saudi Arabian Monetary Authority (SAMA) requires a minimum CET1 ratio of 7.0% (versus the Basel 4.5%) and a Total Capital ratio of 10.5% (versus 8.0%), with additional D-SIB buffers of 0.5-1.5% applied to the largest Saudi banks (SAMA Circular 391000007497, 2023). The Central Bank of the UAE (CBUAE) sets similar floors: a minimum CET1 of 7.0% and a Capital Conservation Buffer of 2.5%, with the CBUAE additionally requiring a minimum Tier 1 leverage ratio of 3.0% for all UAE-licensed banks under CBUAE Regulation No. 52/2020. Both jurisdictions require banks to calculate capital ratios under the Standardised Approach unless explicitly approved for IRB, and both have adopted Basel III liquidity standards (LCR and NSFR) with local modifications to HQLA eligibility -- notably, UAE federal government bonds and Saudi government sukuk qualify as Level 1 HQLA. The banking plugin's `uae-cbuae` jurisdiction overlay reflects these higher floors and local HQLA classifications.
 
 ## Try With AI
 

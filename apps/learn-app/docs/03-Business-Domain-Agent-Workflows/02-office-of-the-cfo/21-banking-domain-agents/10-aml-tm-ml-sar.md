@@ -92,13 +92,13 @@ Rules-based TM systems use predefined rules to flag transactions that match know
 
 ### Common Typology Rules
 
-| Typology | Rule Logic | What It Detects |
-|----------|-----------|----------------|
-| **Structuring** | Multiple cash deposits just below the reporting threshold (e.g., multiple deposits of $9,500 when the threshold is $10,000) | Deliberate splitting to avoid Currency Transaction Reports |
-| **Round-tripping** | Funds leave the account, pass through intermediaries, and return to the same or related account | Creating the appearance of legitimate business transactions |
-| **Velocity** | Unusually high number of transactions in a short period, inconsistent with customer profile | Rapid movement of funds to obscure the trail |
-| **Geographic** | Transactions involving high-risk jurisdictions (FATF grey/black list countries) | Cross-border laundering through weak AML regimes |
-| **Peer group anomaly** | Transaction volume or value significantly exceeds the average for similar customers | Activity inconsistent with expected business patterns |
+| Typology               | Rule Logic                                                                                                                  | What It Detects                                             |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| **Structuring**        | Multiple cash deposits just below the reporting threshold (e.g., multiple deposits of $9,500 when the threshold is $10,000) | Deliberate splitting to avoid Currency Transaction Reports  |
+| **Round-tripping**     | Funds leave the account, pass through intermediaries, and return to the same or related account                             | Creating the appearance of legitimate business transactions |
+| **Velocity**           | Unusually high number of transactions in a short period, inconsistent with customer profile                                 | Rapid movement of funds to obscure the trail                |
+| **Geographic**         | Transactions involving high-risk jurisdictions (FATF grey/black list countries)                                             | Cross-border laundering through weak AML regimes            |
+| **Peer group anomaly** | Transaction volume or value significantly exceeds the average for similar customers                                         | Activity inconsistent with expected business patterns       |
 
 ### Limitations of Rules
 
@@ -115,24 +115,24 @@ Machine learning approaches address these limitations by learning patterns from 
 
 ### ML Typology Detection
 
-| ML Approach | How It Works | Advantage Over Rules |
-|------------|-------------|---------------------|
-| **Peer group analysis** | Clusters customers by profile (industry, turnover, geography) and flags behaviour that deviates significantly from the peer group | Adapts thresholds to each customer segment rather than using one threshold for all |
-| **Network analysis** | Maps relationships between accounts, customers, and counterparties to identify hidden connections and circular flows | Detects round-tripping and layering across multiple accounts that rules-based systems miss |
-| **Behavioural anomaly detection** | Uses autoencoders or other unsupervised models to learn a customer's "normal" behaviour and flag deviations | Detects novel typologies that no rule has been written for |
-| **Supervised classification** | Trains on labelled alert outcomes (suspicious vs legitimate) to predict which new alerts are likely to be genuine | Directly reduces false positive rate by learning from analyst decisions |
+| ML Approach                       | How It Works                                                                                                                      | Advantage Over Rules                                                                       |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Peer group analysis**           | Clusters customers by profile (industry, turnover, geography) and flags behaviour that deviates significantly from the peer group | Adapts thresholds to each customer segment rather than using one threshold for all         |
+| **Network analysis**              | Maps relationships between accounts, customers, and counterparties to identify hidden connections and circular flows              | Detects round-tripping and layering across multiple accounts that rules-based systems miss |
+| **Behavioural anomaly detection** | Uses autoencoders or other unsupervised models to learn a customer's "normal" behaviour and flag deviations                       | Detects novel typologies that no rule has been written for                                 |
+| **Supervised classification**     | Trains on labelled alert outcomes (suspicious vs legitimate) to predict which new alerts are likely to be genuine                 | Directly reduces false positive rate by learning from analyst decisions                    |
 
 ### The False Positive Problem
 
 The operational impact of false positives is severe:
 
-| Metric | Rules-Based | ML-Enhanced |
-|--------|------------|-------------|
-| False positive rate | 95-99% | 40-60% (after ML layer) |
-| Alert volume (300K/year) | 285K-297K false | 120K-180K false |
-| Analyst hours wasted | 95K-99K hours | 40K-60K hours |
-| FTE equivalent | 50-52 FTE | 21-31 FTE |
-| Cost at GBP 50K/FTE | GBP 2.5M-2.6M | GBP 1.1M-1.6M |
+| Metric                   | Rules-Based     | ML-Enhanced             |
+| ------------------------ | --------------- | ----------------------- |
+| False positive rate      | 95-99%          | 40-60% (after ML layer) |
+| Alert volume (300K/year) | 285K-297K false | 120K-180K false         |
+| Analyst hours wasted     | 95K-99K hours   | 40K-60K hours           |
+| FTE equivalent           | 50-52 FTE       | 21-31 FTE               |
+| Cost at GBP 50K/FTE      | GBP 2.5M-2.6M   | GBP 1.1M-1.6M           |
 
 Production deployments from leading vendors have demonstrated these reductions. However, regulators require model governance including explainability, regular validation, and documented evidence that ML does not suppress genuine alerts.
 
@@ -180,6 +180,7 @@ Consent Regime (UK only)
 ### SAR Content Requirements
 
 A SAR must include:
+
 - **Subject identification** -- full name, date of birth, address, account numbers
 - **Transaction details** -- dates, amounts, counterparties, channels
 - **Suspicion narrative** -- what triggered the suspicion, what makes the activity unusual
@@ -188,12 +189,12 @@ A SAR must include:
 
 ### Filing Timelines
 
-| Jurisdiction | Reporting Body | Timing |
-|-------------|---------------|--------|
-| UK | National Crime Agency (NCA) | "As soon as practicable" after suspicion formed |
-| USA | FinCEN | Within 30 calendar days of initial detection (60 days if no suspect identified) |
-| Australia | AUSTRAC | Within 3 business days for suspicious matter reports |
-| EU | National FIU | Varies by member state (typically "without delay") |
+| Jurisdiction | Reporting Body              | Timing                                                                          |
+| ------------ | --------------------------- | ------------------------------------------------------------------------------- |
+| UK           | National Crime Agency (NCA) | "As soon as practicable" after suspicion formed                                 |
+| USA          | FinCEN                      | Within 30 calendar days of initial detection (60 days if no suspect identified) |
+| Australia    | AUSTRAC                     | Within 3 business days for suspicious matter reports                            |
+| EU           | National FIU                | Varies by member state (typically "without delay")                              |
 
 ## The Tipping-Off Prohibition
 
@@ -201,12 +202,12 @@ Tipping-off is the act of informing any person that a SAR has been filed, that a
 
 ### What Constitutes Tipping-Off
 
-| Tipping-Off | Not Tipping-Off |
-|------------|----------------|
-| Telling the customer a SAR has been filed | Explaining general account restrictions ("our terms permit us to restrict accounts") |
-| Telling a colleague who has no need to know | Discussing with colleagues who are directly involved in the investigation |
-| Hinting that "we have concerns about your account" | Providing general AML training to staff |
-| Telling the customer their account is "under investigation" | Declining a transaction without giving a specific reason |
+| Tipping-Off                                                 | Not Tipping-Off                                                                      |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Telling the customer a SAR has been filed                   | Explaining general account restrictions ("our terms permit us to restrict accounts") |
+| Telling a colleague who has no need to know                 | Discussing with colleagues who are directly involved in the investigation            |
+| Hinting that "we have concerns about your account"          | Providing general AML training to staff                                              |
+| Telling the customer their account is "under investigation" | Declining a transaction without giving a specific reason                             |
 
 ### Penalties
 
@@ -231,36 +232,36 @@ Investigate the following three transaction monitoring alerts. For each, determi
 
 ### Alert 1: Mohammed Al-Rashid
 
-| Field | Details |
-|-------|---------|
-| **Customer** | Mohammed Al-Rashid, UK resident, retail banking customer |
-| **Account type** | Personal current account |
-| **Expected activity** | Monthly salary deposit (GBP 4,200), regular household expenses |
-| **Flagged activity** | 14 cash deposits over 18 days, amounts ranging from GBP 8,900 to GBP 9,800, total GBP 131,600 |
-| **Customer explanation (if asked)** | Not yet contacted |
-| **Additional context** | Customer has never made cash deposits exceeding GBP 500 in the previous 3 years |
+| Field                               | Details                                                                                       |
+| ----------------------------------- | --------------------------------------------------------------------------------------------- |
+| **Customer**                        | Mohammed Al-Rashid, UK resident, retail banking customer                                      |
+| **Account type**                    | Personal current account                                                                      |
+| **Expected activity**               | Monthly salary deposit (GBP 4,200), regular household expenses                                |
+| **Flagged activity**                | 14 cash deposits over 18 days, amounts ranging from GBP 8,900 to GBP 9,800, total GBP 131,600 |
+| **Customer explanation (if asked)** | Not yet contacted                                                                             |
+| **Additional context**              | Customer has never made cash deposits exceeding GBP 500 in the previous 3 years               |
 
 ### Alert 2: Meridian Trading Ltd
 
-| Field | Details |
-|-------|---------|
-| **Customer** | Meridian Trading Ltd, UK-registered import/export company |
-| **Account type** | Business current account |
-| **Expected activity** | Monthly turnover GBP 200K-400K, payments to/from EU suppliers |
-| **Flagged activity** | 6 wire transfers in one week totalling GBP 2.1M to a company in the UAE, then GBP 1.95M received from a different UAE company 3 days later |
-| **Customer explanation (if asked)** | Not yet contacted |
-| **Additional context** | Meridian has no previously declared trading relationship with UAE counterparties. The receiving UAE company was incorporated 4 months ago |
+| Field                               | Details                                                                                                                                    |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Customer**                        | Meridian Trading Ltd, UK-registered import/export company                                                                                  |
+| **Account type**                    | Business current account                                                                                                                   |
+| **Expected activity**               | Monthly turnover GBP 200K-400K, payments to/from EU suppliers                                                                              |
+| **Flagged activity**                | 6 wire transfers in one week totalling GBP 2.1M to a company in the UAE, then GBP 1.95M received from a different UAE company 3 days later |
+| **Customer explanation (if asked)** | Not yet contacted                                                                                                                          |
+| **Additional context**              | Meridian has no previously declared trading relationship with UAE counterparties. The receiving UAE company was incorporated 4 months ago  |
 
 ### Alert 3: Amara Diallo
 
-| Field | Details |
-|-------|---------|
-| **Customer** | Amara Diallo, UK resident, private banking customer |
-| **Account type** | High-value personal account (GBP 2.4M balance) |
-| **Expected activity** | Quarterly dividend income, occasional property-related transactions |
-| **Flagged activity** | GBP 180,000 wire transfer to a Senegalese bank account. Recipient name matches a Senegalese government official listed on PEP databases |
-| **Customer explanation (if asked)** | Not yet contacted |
-| **Additional context** | Amara Diallo is the sister of the recipient. The recipient is a current Minister of Agriculture in Senegal |
+| Field                               | Details                                                                                                                                 |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Customer**                        | Amara Diallo, UK resident, private banking customer                                                                                     |
+| **Account type**                    | High-value personal account (GBP 2.4M balance)                                                                                          |
+| **Expected activity**               | Quarterly dividend income, occasional property-related transactions                                                                     |
+| **Flagged activity**                | GBP 180,000 wire transfer to a Senegalese bank account. Recipient name matches a Senegalese government official listed on PEP databases |
+| **Customer explanation (if asked)** | Not yet contacted                                                                                                                       |
+| **Additional context**              | Amara Diallo is the sister of the recipient. The recipient is a current Minister of Agriculture in Senegal                              |
 
 **Your tasks for each alert:**
 
@@ -281,6 +282,60 @@ Typology: **Round-tripping with geographic risk** -- Funds sent to UAE, similar 
 **Alert 3 -- Amara Diallo:**
 Typology: **PEP-related** -- Transfer to a family member who is a current senior government official (PEP). This is not automatically suspicious -- family transfers are normal. But the PEP connection and the amount require investigation. Additional investigation: Is the amount consistent with a gift or family support? What is the minister's declared income and wealth? Is there adverse media on the minister? SAR recommendation: **Requires further investigation** -- PEP status alone does not make the transaction suspicious, but the combination of amount, jurisdiction, and PEP status warrants thorough EDD review before a filing decision.
 :::
+
+## Using the Banking Plugin
+
+The `aml-typologies` and `aml-sar-drafting` skills identify money laundering typology matches and draft SAR narratives for MLRO review. Here is a worked example.
+
+**Worked example.** Thomas Andersen, AML Investigation Analyst at Nordic Shield Bank, is investigating a transaction monitoring alert flagged for structuring. He types:
+
+```
+Analyse this TM alert and draft SAR narrative if warranted:
+Customer: Retail banking, salaried employee, GBP 3,800/month
+Flagged activity: 14 cash deposits over 18 days
+  Amounts: GBP 8,900 to GBP 9,800 each
+  Total: GBP 131,600
+Customer history: Zero cash deposits exceeding GBP 500
+  in previous 3 years
+Jurisdiction: UK NCA
+```
+
+The agent routes through `aml-typologies` and `aml-sar-drafting` and responds:
+
+```
+GOVERNING STANDARD: AML — UK POCA 2002
+DOMAIN: Transaction Monitoring — Typology Analysis + SAR Draft
+JURISDICTION: United Kingdom — NCA (National Crime Agency)
+
+TYPOLOGY MATCH
+  Primary: STRUCTURING (confidence: HIGH)
+  Pattern: 14 cash deposits averaging GBP 9,400 over 18 days,
+    all below GBP 10,000 enhanced CDD threshold
+  Behavioural anomaly: Customer has no prior cash deposit
+    history. Activity inconsistent with salaried profile.
+  Total deposited: GBP 131,600
+
+SAR NARRATIVE (DRAFT — requires MLRO review)
+  Subject deposited GBP 131,600 in cash across 14
+  transactions over 18 business days. All deposits fell
+  between GBP 8,900 and GBP 9,800, below the GBP 10,000
+  threshold. Subject's account history shows monthly salary
+  of GBP 3,800 and no cash deposits exceeding GBP 500 in
+  the preceding 36 months. The pattern is consistent with
+  the structuring typology — deliberate splitting of cash
+  deposits to avoid enhanced scrutiny thresholds.
+
+  IMPORTANT: Do NOT contact the customer regarding this
+  activity prior to MLRO filing decision (tipping-off
+  prohibition — POCA 2002 s333A).
+
+NOTE: The professional (MLRO) reviews the narrative and
+makes the SAR filing decision; the agent identified the
+typology and drafted the narrative. The agent must never
+file the SAR or disclose its existence.
+```
+
+Thomas reviews the typology match and narrative accuracy, then escalates the draft to the MLRO for the filing decision -- a step that carries personal criminal liability and must always be made by a human.
 
 ## Try With AI
 

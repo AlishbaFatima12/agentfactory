@@ -99,6 +99,14 @@ Every banking institution worldwide is governed by three regulatory pillars. The
 
 IFRS 9, effective 1 January 2018, replaced IAS 39 and its "incurred loss" model. Under IAS 39, a bank could only recognise a loss after it had already happened — the loan had to default before the bank booked a provision. The 2008 financial crisis exposed this flaw: banks were reporting healthy balance sheets until the moment they collapsed, because losses had occurred but not yet been formally recognised.
 
+:::info ECL (Expected Credit Loss)
+**The amount a bank expects to lose on a loan or portfolio, calculated before losses actually happen.**
+
+For a $10 million loan with a 2% chance of default and 40% loss severity: ECL = 0.02 x 0.40 x $10,000,000 = $80,000.
+
+ECL drives provisioning on every bank balance sheet worldwide -- it is the number auditors, regulators, and investors scrutinise each quarter.
+:::
+
 IFRS 9 introduced the **Expected Credit Loss (ECL)** model. Banks must now provision for losses they expect to happen in the future, not just losses that have already occurred. The ECL is calculated as the product of three components: the Probability of Default (PD), the Loss Given Default (LGD), and the Exposure at Default (EAD). Lessons 3-5 of this chapter build each component in depth.
 
 ### Pillar 2: Solvency — Basel III/IV Capital Adequacy
@@ -168,6 +176,14 @@ The three pillars are governed by different international bodies and adopted dif
 
 :::info Key Distinction: IFRS 9 vs US CECL
 This chapter teaches IFRS 9, which governs expected credit loss provisioning in 140+ countries. The United States uses a different standard — CECL (Current Expected Credit Losses) under ASC 326, effective 2020. While both are forward-looking ECL models, their mechanics differ. The banking plugin's IFRS 9 skills apply outside the US. A US-specific CECL module would require separate skills.
+:::
+
+:::info CECL (Current Expected Credit Losses)
+**The US equivalent of IFRS 9 provisioning -- a lifetime expected loss model required for all US banks under ASC 326, effective 2020.**
+
+A US bank holding a $50 million 10-year loan portfolio must provision for expected losses over the entire 10-year life from Day 1, not just the next 12 months as IFRS 9 Stage 1 would require.
+
+CECL matters because US banks report under a different standard -- if you encounter a US counterparty's financial statements, their provision methodology is CECL, not IFRS 9.
 :::
 
 ## Try With AI
