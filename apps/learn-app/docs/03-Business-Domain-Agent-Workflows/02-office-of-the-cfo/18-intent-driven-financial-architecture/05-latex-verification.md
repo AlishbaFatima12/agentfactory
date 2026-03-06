@@ -326,7 +326,7 @@ Difference: 0.5% (50 basis points)
 
 ## Try With AI
 
-Use these prompts in Claude in Excel, Claude Code, or your preferred AI assistant to practise LaTeX verification.
+Use these prompts in Cowork or your preferred AI assistant to practise LaTeX verification.
 
 ### Prompt 1: Verify WACC in LaTeX
 

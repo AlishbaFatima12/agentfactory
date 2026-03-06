@@ -17,7 +17,7 @@ keywords:
     "layer isolation",
     "Excel Named Ranges",
     "formula maintenance",
-    "Claude in Excel",
+    "Cowork",
     "financial modelling",
     "business rules",
   ]
@@ -40,12 +40,12 @@ skills:
     digcomp_area: "Problem Solving"
     measurable_at_this_level: "Student can identify layer isolation violations — hardcoded constants in the Calculation layer, direct Assumptions-to-Output references — and correct them by moving values to the appropriate layer"
 
-  - name: "AI-Assisted Formula Compliance Verification"
+  - name: "Agent-Assisted Formula Compliance Verification"
     proficiency_level: "A2"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can prompt Claude in Excel to scan a range of formulas, identify coordinate references, and confirm that every formula passes the Named Range compliance test"
+    measurable_at_this_level: "Student can prompt an AI agent to scan a range of formulas, identify coordinate references, and confirm that every formula passes the Named Range compliance test"
 
 learning_objectives:
   - objective: "Construct all twelve GP Waterfall calculation formulas using exclusively Named Range references, producing formulas that read as plain-English business rules"
@@ -58,7 +58,7 @@ learning_objectives:
     bloom_level: "Analyze"
     assessment_method: "Given the formula =Revenue_Y1 * 0.60, student identifies 0.60 as a layer violation, creates Inp_COGS_Pct_Y1 in the Assumptions layer, and rewrites the formula as =Revenue_Y1 * COGS_Pct_Y1"
 
-  - objective: "Use Claude in Excel to verify that a set of formulas contains zero coordinate references and follows the Inp_ and Variable_Dimension naming conventions"
+  - objective: "Use an AI agent to verify that a set of formulas contains zero coordinate references and follows the Inp_ and Variable_Dimension naming conventions"
     proficiency_level: "A2"
     bloom_level: "Apply"
     assessment_method: "Student prompts Claude to scan all Calculation layer formulas; Claude confirms zero violations or identifies specific cells to fix"
@@ -201,19 +201,56 @@ Excel will reject a name with spaces. If you try to create one, you will get an 
 
 ## Exercise: Build the GP Waterfall Calculation Layer
 
-Continue the workbook from L03 where you created the Assumptions layer with four Named Ranges.
+Continue the spreadsheet from L03 where you created the Assumptions layer with Named Ranges.
 
-**Step 1.** Create a section below or beside your Assumptions layer labelled "Calculations."
+### Step 1 — Prompt Cowork to Build the Calculation Layer
 
-**Step 2.** Enter the twelve formulas above, one at a time. For each formula:
+Open the spreadsheet in Cowork and type:
 
-- Type the formula using only Named Ranges
-- After entering it, click the cell and read the formula bar
-- Apply the compliance test: can you understand it without clicking any referenced cell?
+```
+Add a Calculation layer to this spreadsheet. Using the Assumptions
+layer inputs (Inp_Rev_Y1, Inp_Rev_Growth, Inp_COGS_Pct_Y1,
+Inp_COGS_Efficiency), build twelve formulas:
 
-**Step 3.** Create Named Ranges for each calculated result. Select the Revenue Year 1 cell, click the Name Box, type `Revenue_Y1`, press Enter. Repeat for all twelve cells.
+- Revenue for Years 1-3 (Year 1 = input, Years 2-3 grow by growth rate)
+- COGS Percentage for Years 1-3 (Year 1 = input, each year improves
+  by efficiency gain)
+- COGS Dollars for Years 1-3 (Revenue × COGS Percentage)
+- Gross Profit for Years 1-3 (Revenue − COGS)
 
-**Step 4.** Verify the numbers. With the example assumptions (Revenue 10M, Growth 10%, COGS 60%, Efficiency 1%):
+Every formula must use Named Ranges only — zero cell coordinates.
+Create a Named Range for each calculated result following the
+Variable_Dimension convention (e.g., Revenue_Y1, COGS_Pct_Y2,
+Gross_Profit_Y3).
+```
+
+### Step 2 — Apply the Compliance Test
+
+The formulas are in the spreadsheet, but you need to verify they follow Guardrail 1. Ask Cowork:
+
+```
+For every formula in the Calculation layer, show me:
+1. The Named Range name
+2. The formula assigned to it
+3. Whether the formula contains any cell coordinate references
+   (like B14, $F$8, or C3:C10) instead of Named Ranges
+
+Summarise: total formulas checked, total using Named Ranges only,
+total with coordinate references.
+```
+
+Read each formula Cowork reports. Apply the compliance test from the lesson: can you understand what it calculates without clicking any cell? For example, `Revenue_Y2 = Revenue_Y1 * (1 + Inp_Rev_Growth)` passes — you can read it as a sentence. If any formula contains a coordinate reference, ask Cowork to rewrite it using the correct Named Range.
+
+### Step 3 — Verify the Numbers
+
+Ask Cowork to show the calculated values:
+
+```
+List all twelve Calculation layer Named Ranges with their current
+values. Show them in a table: Name, Formula, Value.
+```
+
+Compare against the expected results:
 
 |                  | Year 1     | Year 2     | Year 3     |
 | ---------------- | ---------- | ---------- | ---------- |
@@ -222,18 +259,11 @@ Continue the workbook from L03 where you created the Assumptions layer with four
 | **COGS $**       | 6,000,000  | 6,490,000  | 7,018,000  |
 | **Gross Profit** | 4,000,000  | 4,510,000  | 5,082,000  |
 
-If your numbers match, your Calculation layer is correct and compliant.
+If the numbers match, the Calculation layer is correct and compliant. If any number differs, ask Cowork which formula produced the unexpected value — the Named Range notation will make the error readable.
 
-**Step 5.** Ask Claude in Excel to verify compliance:
-
-```
-Scan all formulas in my Calculation layer. Report any formula that
-contains a cell coordinate reference (like B14, $F$8, or C3:C10)
-instead of a Named Range. List the cell, the formula, and what
-Named Range should replace the coordinate.
-```
-
-Claude will scan every formula and confirm zero violations — or identify the specific cells to fix.
+:::note Keep This File
+Save this spreadsheet — you will add Intent Notes to these formulas in Lesson 6, and use it for what-if analysis in Lesson 7.
+:::
 
 ## Why This Matters: Silent Breakage Elimination
 
@@ -247,7 +277,7 @@ This is why Guardrail 1 is the foundation of IDFA. The other three guardrails �
 
 :::tip Setup
 
-Open your GP Waterfall workbook in Excel with Claude in Excel (or Cowork) active. You should have the Assumptions layer from L03 and the Calculation layer you just built.
+Use these prompts in Cowork or your preferred AI assistant. You should have the GP Waterfall spreadsheet from L03 with the Calculation layer you just built.
 
 :::
 
