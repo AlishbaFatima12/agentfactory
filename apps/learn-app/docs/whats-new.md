@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-06
+- Ch 22: Legal Operations and Compliance — 12 lessons ([#827](https://github.com/panaversity/agentfactory/pull/827))
+
+### 2026-03-06
 
 - Chapter 21: Banking-Specific AI — 15 lessons, 14 exercises ([#826](https://github.com/panaversity/agentfactory/pull/826))
 
