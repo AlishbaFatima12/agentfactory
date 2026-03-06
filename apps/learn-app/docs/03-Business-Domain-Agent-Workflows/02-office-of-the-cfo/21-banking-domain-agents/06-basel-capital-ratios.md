@@ -140,11 +140,11 @@ When Bank A acquires Bank B for more than Bank B's net assets, the excess is boo
 
 Every bank must maintain three ratios above Basel minimums:
 
-**CET1 Ratio** = CET1 Capital / Risk-Weighted Assets >= 4.5%
+**CET1 Ratio** = CET1 Capital / Risk-Weighted Assets ≥ 4.5%
 
-**Tier 1 Ratio** = (CET1 + AT1) / Risk-Weighted Assets >= 6.0%
+**Tier 1 Ratio** = (CET1 + AT1) / Risk-Weighted Assets ≥ 6.0%
 
-**Total Capital Ratio** = (CET1 + AT1 + Tier 2) / Risk-Weighted Assets >= 8.0%
+**Total Capital Ratio** = (CET1 + AT1 + Tier 2) / Risk-Weighted Assets ≥ 8.0%
 
 :::info MDA (Maximum Distributable Amount)
 **The cap on dividends, bonuses, and share buybacks that a bank can pay when its CET1 ratio falls into the buffer zone above the hard minimum.**
@@ -175,7 +175,7 @@ Breaching the combined buffer does not trigger immediate regulatory intervention
 
 Basel III also introduced a non-risk-weighted backstop:
 
-**Leverage Ratio** = Tier 1 Capital / Total Exposure Measure >= 3.0%
+**Leverage Ratio** = Tier 1 Capital / Total Exposure Measure ≥ 3.0%
 
 The UK PRA sets a higher minimum of 3.25% for banks with deposits exceeding GBP 50 billion, excluding central bank reserves from the total exposure measure.
 
@@ -201,19 +201,19 @@ A mid-size UK bank reports the following capital position:
 
 **Risk-Weighted Assets by Asset Class:**
 
-| Asset Class                         | Exposure (GBP M) | Risk Weight       | RWA (GBP M) |
-| ----------------------------------- | ---------------- | ----------------- | ----------- |
-| Cash and central bank reserves      | 180              | 0%                | 0           |
-| UK government bonds                 | 420              | 0%                | 0           |
-| Interbank lending (rated A)         | 150              | 50%               | 75          |
-| Corporate loans (rated BBB)         | 600              | 100%              | 600         |
-| Retail mortgages (LTV <= 80%)       | 850              | 35%               | 297.5       |
-| Retail mortgages (LTV > 80%)        | 200              | 50%               | 100         |
-| Consumer credit (unsecured)         | 310              | 75%               | 232.5       |
-| Commercial real estate (LTV <= 60%) | 180              | 60%               | 108         |
-| Past-due loans (> 90 days)          | 35               | 150%              | 52.5        |
-| Off-balance-sheet commitments       | 120              | 50% CCF, then 75% | 45          |
-| **Total**                           |                  |                   | **1,510.5** |
+| Asset Class                        | Exposure (GBP M) | Risk Weight       | RWA (GBP M) |
+| ---------------------------------- | ---------------- | ----------------- | ----------- |
+| Cash and central bank reserves     | 180              | 0%                | 0           |
+| UK government bonds                | 420              | 0%                | 0           |
+| Interbank lending (rated A)        | 150              | 50%               | 75          |
+| Corporate loans (rated BBB)        | 600              | 100%              | 600         |
+| Retail mortgages (LTV ≤ 80%)       | 850              | 35%               | 297.5       |
+| Retail mortgages (LTV &gt; 80%)    | 200              | 50%               | 100         |
+| Consumer credit (unsecured)        | 310              | 75%               | 232.5       |
+| Commercial real estate (LTV ≤ 60%) | 180              | 60%               | 108         |
+| Past-due loans (&gt; 90 days)      | 35               | 150%              | 52.5        |
+| Off-balance-sheet commitments      | 120              | 50% CCF, then 75% | 45          |
+| **Total**                          |                  |                   | **1,510.5** |
 
 **Your tasks:**
 

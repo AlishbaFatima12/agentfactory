@@ -395,7 +395,7 @@
 3. Internal Ratings-Based (IRB) — model-derived risk weights
 4. The IRB risk-weight function (correlation, maturity adjustment, confidence level 99.9%)
 5. Foundation IRB vs Advanced IRB (who estimates LGD and EAD)
-6. The Basel IV output floor — IRB RWA >= 72.5% of SA RWA
+6. The Basel IV output floor — IRB RWA ≥ 72.5% of SA RWA
 7. RWA for off-balance-sheet items (CCFs under SA)
 
 **Cognitive Load Validation**: 7 concepts at B1 level -- WITHIN LIMIT
@@ -416,7 +416,7 @@
 
 **Try With AI Prompt Themes**:
 
-1. "Calculate RWA under the Standardised Approach for: sovereigns $3B (0% risk weight), corporates $8B (100%), retail $4B (75%), residential mortgages $5B (35% for LTV<80%, 50% for LTV 80-90%)" — SA calculation
+1. "Calculate RWA under the Standardised Approach for: sovereigns $3B (0% risk weight), corporates $8B (100%), retail $4B (75%), residential mortgages $5B (35% for LTV&lt;80%, 50% for LTV 80-90%)" — SA calculation
 2. "An IRB bank's model-derived RWA is $12B. The same portfolio under SA would produce $16B RWA. The output floor is 72.5%. What is the bank's final RWA? Does the floor bite?" — output floor
 3. "Explain why the Basel Committee introduced the output floor. What problem was it solving? Use a real-world analogy" — regulatory rationale
 
