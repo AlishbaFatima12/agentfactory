@@ -129,7 +129,7 @@ E       AssertionError: assert 'SmartNotes' == 'Smart Notes'
 
 The `>` arrow points to the line that failed. The `E` line shows what the test expected versus what it got. `assert` insisted that `result` equals `"Smart Notes"`, but `result` was actually `"SmartNotes"` -- no space. The test failed loudly.
 
-That is enough about running tests. You will use `uv run pytest` throughout Chapter 33. For now, the point is: you can check your predictions.
+That is enough about running tests. You will use `uv run pytest` throughout Chapter 34. For now, the point is: you can check your predictions.
 
 ---
 
@@ -277,7 +277,7 @@ Do NOT reveal whether it passes -- let me predict first.
 
 Before running `uv run pytest test_practice.py -v`, read the test and predict: will it pass or fail? Evaluate the assert expression using what you know from Lessons 1-3. Then run it and compare.
 
-**What you're learning:** You are applying PRIMM to AI-generated test code -- the same workflow you will use in Chapter 33. The AI writes the test, you read it and predict the outcome, then you verify. This is the prediction loop applied to a new kind of code.
+**What you're learning:** You are applying PRIMM to AI-generated test code -- the same workflow you will use in Chapter 34. The AI writes the test, you read it and predict the outcome, then you verify. This is the prediction loop applied to a new kind of code.
 
 ### Prompt 2: Generate a Failing Test
 
@@ -306,10 +306,10 @@ Read the test. Find the line where the assert expects the wrong value. Predict w
 
 4. **Reading a test is reading code.** PRIMM works on test functions the same way it works on any code block. Predict what the assert checks, evaluate the expression, decide pass or fail.
 
-5. **In Chapter 33, you flip the direction.** Instead of predicting whether someone else's test passes, you write the test -- just the assert line and a few variables -- and AI writes the code that makes it pass.
+5. **In Chapter 34, you flip the direction.** Instead of predicting whether someone else's test passes, you write the test -- just the assert line and a few variables -- and AI writes the code that makes it pass.
 
 ---
 
 ## Looking Ahead
 
-You can now read tests. You know what `def` and `assert` mean. In Chapter 33, you flip the script: instead of predicting whether someone else's test passes, you write the test -- five lines at most -- and AI writes the code that makes it pass. The PRIMM method does not stop. It becomes the verification step: AI generates, you read and predict, you run and compare. Chapter 33 is where reading becomes doing.
+You can now read tests. You know what `def` and `assert` mean. In Chapter 34, you flip the script: instead of predicting whether someone else's test passes, you write the test -- five lines at most -- and AI writes the code that makes it pass. The PRIMM method does not stop. It becomes the verification step: AI generates, you read and predict, you run and compare. Chapter 34 is where reading becomes doing.
