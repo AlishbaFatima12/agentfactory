@@ -1,13 +1,13 @@
 ---
-sidebar_position: 30
-title: "Chapter 30: Ten Axioms of Programming in the Era of AI Driven Development"
+sidebar_position: 31
+title: "Chapter 31: Ten Axioms of Programming in the Era of AI Driven Development"
 slides:
   source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-4/chapter-14/the-agentic-engineering-system.pdf"
   title: "The Agentic Engineering System"
   height: 700
 ---
 
-# Chapter 30: Ten Axioms of Programming in the Era of AI Driven Development
+# Chapter 31: Ten Axioms of Programming in the Era of AI Driven Development
 
 In 2026, AI coding agents are no longer experimental tools—they are generating more production code than ever before. This shift does not diminish the importance of programming; it elevates it dramatically. The highest-leverage engineers are now those who have moved beyond typing lines of code to become expert orchestrators of AI agents, writers of precise specifications, designers of clean composable architectures, rigorous verifiers of correctness, and vigilant observers of live systems. This chapter presents the Ten Axioms of Programming in the Era of AI-Driven Development—a complete, battle-tested engineering system that turns AI from a source of unpredictable complexity into your most powerful and reliable collaborator. Master these axioms and you will not compete against AI; you will multiply your impact through it.
 

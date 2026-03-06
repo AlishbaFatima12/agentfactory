@@ -3,7 +3,7 @@ sidebar_position: 8
 title: "Axiom VIII: Version Control is Memory"
 description: "Git provides the persistent memory layer for all work — every decision, experiment, and evolution recorded as the system of record for software development."
 keywords: ["version control", "git", "memory", "commits", "branches", "agentic development", "AI collaboration", "conventional commits"]
-chapter: 30
+chapter: 31
 lesson: 8
 duration_minutes: 22
 

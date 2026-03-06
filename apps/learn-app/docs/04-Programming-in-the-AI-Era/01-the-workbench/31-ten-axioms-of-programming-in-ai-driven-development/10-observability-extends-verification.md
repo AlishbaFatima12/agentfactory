@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
 title: "Axiom X: Observability Extends Verification"
-chapter: 30
+chapter: 31
 lesson: 10
 duration_minutes: 25
 description: "Runtime monitoring extends pre-deployment verification into production, completing the verification system through structured logging, metrics, and tracing"

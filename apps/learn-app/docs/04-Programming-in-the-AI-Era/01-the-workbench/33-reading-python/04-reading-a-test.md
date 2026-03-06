@@ -16,7 +16,7 @@ keywords:
     "test-driven generation",
     "TDG preview",
   ]
-chapter: 32
+chapter: 33
 lesson: 4
 duration_minutes: 15
 
@@ -60,7 +60,7 @@ differentiation:
 
 In Lesson 3, you reviewed a fifteen-line SmartNotes module and caught a bug before running the code. You built trace tables, classified bugs as type errors or logic errors, and saw how PRIMM and Pyright work together. You can read code. You can find what is wrong with it.
 
-Chapter 33 will ask you to do something different: write a test first, then let AI generate the code that makes it pass. Before you can write a test, you need to recognize what one looks like. That is all this lesson does -- it adds two vocabulary words to your reading toolkit.
+Chapter 34 will ask you to do something different: write a test first, then let AI generate the code that makes it pass. Before you can write a test, you need to recognize what one looks like. That is all this lesson does -- it adds two vocabulary words to your reading toolkit.
 
 Think of it the way a medical student learns anatomy. Before performing surgery, you learn to point at a bone and name it. You do not need to understand the entire skeletal system. You need to recognize the part and know what it does. In this lesson, you will point at `def` and `assert` and know what they mean. That is enough. The deeper understanding comes in Phase 2 (Chapter 37 for functions) and Phase 3 (Chapter 39 for testing).
 

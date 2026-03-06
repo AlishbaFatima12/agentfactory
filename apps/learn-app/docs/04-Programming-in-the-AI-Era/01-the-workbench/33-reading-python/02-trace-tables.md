@@ -16,7 +16,7 @@ keywords:
     "debugging",
     "code tracing",
   ]
-chapter: 32
+chapter: 33
 lesson: 2
 duration_minutes: 25
 
