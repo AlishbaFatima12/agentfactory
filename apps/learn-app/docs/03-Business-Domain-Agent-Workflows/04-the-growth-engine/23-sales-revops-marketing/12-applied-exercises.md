@@ -753,18 +753,18 @@ Configure your Lead Intelligence Agent (Lesson 9, Agent 1) to monitor external s
 
 **Step 1 -- Define the metrics.**
 
-| Metric                                  | Owner     | Source          | Target             |
-| --------------------------------------- | --------- | --------------- | ------------------ |
-| HOT leads generated                     | Marketing | CRM             | [Your target/week] |
-| HOT lead to SAL conversion rate         | RevOps    | CRM             | >35%               |
-| Sales Accepted Leads (SAL)              | Sales     | CRM             | [Your target/week] |
-| SAL to Opportunity conversion           | Sales     | CRM             | >60%               |
-| Pipeline created (currency/week)        | Sales     | CRM             | [Your target]      |
-| Average deal size                       | Sales     | CRM             | [Your target]      |
-| Pipeline at risk (no activity >14 days) | RevOps    | CRM             | <15% of pipeline   |
-| Close rate                              | Sales     | CRM             | [Your baseline]    |
-| CAC by channel                          | RevOps    | CRM + Marketing | [Your target]      |
-| Content asset ROI                       | Marketing | CRM + Analytics | [Your target]      |
+| Metric                                     | Owner     | Source          | Target              |
+| ------------------------------------------ | --------- | --------------- | ------------------- |
+| HOT leads generated                        | Marketing | CRM             | [Your target/week]  |
+| HOT lead to SAL conversion rate            | RevOps    | CRM             | >35%                |
+| Sales Accepted Leads (SAL)                 | Sales     | CRM             | [Your target/week]  |
+| SAL to Opportunity conversion              | Sales     | CRM             | >60%                |
+| Pipeline created (currency/week)           | Sales     | CRM             | [Your target]       |
+| Average deal size                          | Sales     | CRM             | [Your target]       |
+| Pipeline at risk (no activity &gt;14 days) | RevOps    | CRM             | &lt;15% of pipeline |
+| Close rate                                 | Sales     | CRM             | [Your baseline]     |
+| CAC by channel                             | RevOps    | CRM + Marketing | [Your target]       |
+| Content asset ROI                          | Marketing | CRM + Analytics | [Your target]       |
 
 **Step 2 -- Configure the Revenue Reporting Agent (Lesson 9, Agent 5) to fetch all data sources via MCP and produce this dashboard every Monday morning.**
 
