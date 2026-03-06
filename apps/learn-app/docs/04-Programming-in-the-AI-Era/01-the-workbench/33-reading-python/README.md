@@ -61,7 +61,7 @@ This chapter introduces Python through reading, not writing. Every code example 
 - **Boolean logic**: `and`, `or`, comparisons
 - **`print()`** for output
 
-Functions, collections, imports, and control flow appear later in Phase 2. Lesson 4 adds two vocabulary words -- `def` and `assert` -- so you can read test code before writing your first test in Chapter 33. This chapter gives you a taste of Python -- enough to practice the PRIMM method and build confidence reading code.
+Functions, collections, imports, and control flow appear later in Phase 2. Lesson 4 adds two vocabulary words -- `def` and `assert` -- so you can read test code before writing your first test in Chapter 34. This chapter gives you a taste of Python -- enough to practice the PRIMM method and build confidence reading code.
 
 ## Prerequisites
 
