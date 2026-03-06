@@ -33,7 +33,7 @@ Pedagogical approach: YAML frontmatter with Bloom's taxonomy objectives, CEFR A1
 - [Chapter 10: Structured Data](https://agentfactory.panaversity.org/docs/Agent-Workflow-Primitives/structured-data-persistent-storage): Persistent storage patterns
 - [Chapter 11: Linux Mastery](https://agentfactory.panaversity.org/docs/Agent-Workflow-Primitives/linux-mastery): Linux for AI development
 - [Chapter 12: Version Control](https://agentfactory.panaversity.org/docs/Agent-Workflow-Primitives/version-control): Git workflows
-- [Chapter 13: Build Your First AI Employee](https://agentfactory.panaversity.org/docs/Agent-Workflow-Primitives/build-first-ai-employee): End-to-end AI employee construction
+- [Chapter 13: Project - Build Your AI Employee](https://agentfactory.panaversity.org/docs/Agent-Workflow-Primitives/build-first-ai-employee): End-to-end AI employee construction
 
 ## Part 3: Business Domain Agent Workflows
 
