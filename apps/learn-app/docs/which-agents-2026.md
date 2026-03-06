@@ -23,13 +23,6 @@ keywords:
   margin: '0 auto'
 }}>
 
-<h1 style={{
-  fontSize: '2.2rem',
-  fontWeight: '800',
-  letterSpacing: '-0.02em',
-  color: 'var(--ifm-color-emphasis-900)',
-  marginBottom: '0.5rem'
-}}>Which AI Employees Should You Use?</h1>
 
 <p style={{
   fontSize: '1.1rem',
