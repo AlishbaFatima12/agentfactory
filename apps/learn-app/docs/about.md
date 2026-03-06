@@ -85,7 +85,7 @@ At the center of this book is a simple idea:
 
 **Digital FTEs** — also called **Digital Workers** — are reliable AI agents designed to perform structured knowledge work continuously inside real organizational environments.
 
-A Digital FTE is not just a model with a prompt. It is a system. It combines domain expertise, explicit specifications, engineering architecture, and human oversight so that work can be performed consistently, audibly, and at scale.
+A Digital FTE is not just a model with a prompt. It is a system. It combines domain expertise, explicit specifications, engineering architecture, and human oversight so that work can be performed consistently, auditable, and at scale.
 
 The AI Agent Factory introduces a systematic approach for designing and deploying Digital FTEs—AI agents that transform human expertise into scalable digital workers.
 
