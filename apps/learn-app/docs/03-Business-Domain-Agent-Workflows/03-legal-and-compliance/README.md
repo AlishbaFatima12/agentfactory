@@ -11,6 +11,6 @@ Section III addresses the function that sets the boundaries within which all ent
 
 Chapter 22 gives significant treatment to Legal Operations Agents — the emerging practice of deploying AI agents specifically within legal department workflows. Legal Ops Agents manage contract lifecycles, route documents for review, flag non-standard clauses, monitor regulatory changes, and maintain the compliance calendar. They transform the legal function from a bottleneck into a business enabler.
 
-| #   | Chapter                         | Key Focus                                                               |
-| --- | ------------------------------- | ----------------------------------------------------------------------- |
-| 22  | Legal Operations and Compliance | Contract lifecycle, Legal Ops agents, regulatory monitoring _(Planned)_ |
+| #   | Chapter                         | Key Focus                                                   |
+| --- | ------------------------------- | ----------------------------------------------------------- |
+| 22  | Legal Operations and Compliance | Contract lifecycle, Legal Ops agents, regulatory monitoring |
