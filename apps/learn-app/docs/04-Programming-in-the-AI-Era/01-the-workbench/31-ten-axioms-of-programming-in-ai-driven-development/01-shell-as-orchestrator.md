@@ -3,7 +3,7 @@ sidebar_position: 1
 title: "Axiom I: Shell as Orchestrator"
 description: "The shell is the universal coordination layer for all agent work. Programs do computation; the shell orchestrates programs."
 keywords: ["shell", "orchestration", "bash", "pipes", "composition", "makefile", "task runner", "coordination", "unix philosophy"]
-chapter: 30
+chapter: 31
 lesson: 1
 duration_minutes: 20
 

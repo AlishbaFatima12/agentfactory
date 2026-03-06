@@ -3,7 +3,7 @@ sidebar_position: 2
 title: "Installing uv and Creating SmartNotes"
 description: "Install uv on any platform and create the SmartNotes project with a single command, connecting package management to Axiom I: Shell as Orchestrator."
 keywords: ["uv", "install uv", "uv init", "python project", "smartnotes", "package manager", "pyproject.toml", "python-version", "uv run", "shell orchestrator"]
-chapter: 31
+chapter: 32
 lesson: 2
 duration_minutes: 25
 
@@ -146,7 +146,7 @@ Your version number will likely be different from the one shown here -- and that
 
 ## Axiom I in Action
 
-In Chapter 30, you learned Axiom I: **Shell as Orchestrator.** The shell coordinates programs; programs do computation. uv is this axiom made concrete for Python development.
+In Chapter 31, you learned Axiom I: **Shell as Orchestrator.** The shell coordinates programs; programs do computation. uv is this axiom made concrete for Python development.
 
 Before uv, orchestrating Python required a chain of unrelated commands:
 

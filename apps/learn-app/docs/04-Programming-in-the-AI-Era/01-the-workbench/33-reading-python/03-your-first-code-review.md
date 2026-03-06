@@ -18,7 +18,7 @@ keywords:
     "verification",
     "static analysis",
   ]
-chapter: 32
+chapter: 33
 lesson: 3
 duration_minutes: 30
 
@@ -219,7 +219,7 @@ The trace table makes the problem visible. Row 12 shows `bonus_points` holding a
 
 ## Step 2: Run
 
-Now run the buggy code. Pyright is a *static type checker* -- it reads your code *without running it* and checks whether the types make sense. You installed it in Chapter 31 as part of your discipline stack. Run Pyright first, then Python:
+Now run the buggy code. Pyright is a *static type checker* -- it reads your code *without running it* and checks whether the types make sense. You installed it in Chapter 32 as part of your discipline stack. Run Pyright first, then Python:
 
 ```
 $ uv run pyright main.py
@@ -505,4 +505,4 @@ catches and what only a human reviewer would catch.
 
 ## Looking Ahead
 
-You can read Python. You can predict what code does line by line, trace variable changes through reassignment, and catch bugs -- both the type mismatches that crash programs and the logic errors that produce wrong answers silently. But Chapter 33 will ask you to write a test -- and a test uses two words you have not seen yet: `def` and `assert`. In Lesson 4, you will learn to read test code by recognizing those two vocabulary words. You will not write tests yet. You will read them and predict whether they pass or fail -- applying the same PRIMM method you already know to a new kind of code.
+You can read Python. You can predict what code does line by line, trace variable changes through reassignment, and catch bugs -- both the type mismatches that crash programs and the logic errors that produce wrong answers silently. But Chapter 34 will ask you to write a test -- and a test uses two words you have not seen yet: `def` and `assert`. In Lesson 4, you will learn to read test code by recognizing those two vocabulary words. You will not write tests yet. You will read them and predict whether they pass or fail -- applying the same PRIMM method you already know to a new kind of code.

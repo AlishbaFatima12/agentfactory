@@ -20,7 +20,7 @@ keywords:
     "f-strings",
     "boolean logic",
   ]
-chapter: 32
+chapter: 33
 lesson: 1
 duration_minutes: 20
 
@@ -74,7 +74,7 @@ differentiation:
 
 # The PRIMM Method -- Predict, Run, Investigate
 
-In Chapter 31, you built the workbench -- uv, pyright, ruff, pytest, and Git. Every tool is installed, every configuration file is in place, and SmartNotes has a clean foundation. Now you use it. This chapter is where you meet Python for the first time -- not by writing it, but by reading it.
+In Chapter 32, you built the workbench -- uv, pyright, ruff, pytest, and Git. Every tool is installed, every configuration file is in place, and SmartNotes has a clean foundation. Now you use it. This chapter is where you meet Python for the first time -- not by writing it, but by reading it.
 
 Before you see a single line of Python, you need to know the method you will use to read it. That method is called PRIMM, and it is the backbone of this entire course.
 
@@ -172,7 +172,7 @@ Time to practice. For each block, you will ask your AI assistant to generate a s
 $ uv run python main.py
 ```
 
-`uv` is the package manager you installed in Chapter 31. `uv run python main.py` tells it to execute your Python file.
+`uv` is the package manager you installed in Chapter 32. `uv run python main.py` tells it to execute your Python file.
 
 ---
 
@@ -451,7 +451,7 @@ check my answers.
 
 2. **Active reading means predicting, tracing, and explaining.** Scanning code is not reading. If you cannot predict what a line does before running it, you do not yet understand that line.
 
-3. **PRIMM gives you a formal method: Predict, Run, Investigate.** This chapter uses the first three stages. Modify and Make come in Chapter 33 when you start writing code.
+3. **PRIMM gives you a formal method: Predict, Run, Investigate.** This chapter uses the first three stages. Modify and Make come in Chapter 34 when you start writing code.
 
 4. **Wrong predictions are the most valuable learning moments.** A correct prediction confirms your model. A wrong prediction reveals exactly where your understanding has a gap -- and that gap is now something you can fix.
 
