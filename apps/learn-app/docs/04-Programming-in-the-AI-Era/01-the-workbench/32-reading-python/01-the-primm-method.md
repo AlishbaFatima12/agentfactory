@@ -76,23 +76,21 @@ differentiation:
 
 In Chapter 31, you built the workbench -- uv, pyright, ruff, pytest, and Git. Every tool is installed, every configuration file is in place, and SmartNotes has a clean foundation. Now you use it. This chapter is where you meet Python for the first time -- not by writing it, but by reading it.
 
-Here is a short piece of Python. Before you learn any rules or methods, just look at it:
-
-```python
-x: str = "3"
-y: str = "7"
-print(x + y)
-```
-
-What do you think `print(x + y)` displays? Take a guess -- even if you have never seen Python before. If you guessed `10`, you just discovered something important: those quotes around `"3"` and `"7"` make them text, not numbers, and `+` joins text end to end instead of adding. If you guessed `37`, your instinct about strings is already working. Either way, you now know more than you did five seconds ago -- and all you did was read three lines and commit to an answer.
-
-That is the core idea behind this lesson: predict what code does before you run it, then check whether you were right. By the end of this lesson, you will have a formal method for doing exactly that -- and you will have predicted the output of four Python code blocks and discovered what your predictions reveal about your understanding.
+Before you see a single line of Python, you need to know the method you will use to read it. That method is called PRIMM, and it is the backbone of this entire course.
 
 ---
 
-## The AI-Era Reading Shift
+## What Is PRIMM?
 
-Before AI assistants, the bottleneck in software development was writing code. Developers spent most of their time typing, debugging syntax, and looking up API documentation. Writing was slow, so reading was a secondary concern -- you mostly read code you had written yourself.
+PRIMM -- Predict, Run, Investigate, Modify, Make -- was developed by computing education researchers Sue Sentance, Jane Waite, and Maria Kallia. It is built on an insight that decades of teaching have confirmed: novice programmers fail not because they cannot type code, but because they cannot read it. Students who jump straight to writing code produce syntax they do not understand, copy patterns they cannot adapt, and freeze when something breaks. PRIMM fixes this by reversing the order -- you read before you write, you predict before you run, you understand before you produce.
+
+The method is used in classrooms worldwide because it works. You do not start learning French by writing essays. You start by reading sentences, recognizing words, and building comprehension. PRIMM applies the same principle to code. It builds comprehension first, then builds on that comprehension to reach modification and creation.
+
+---
+
+## Why PRIMM Matters in the AI Era
+
+Before AI assistants, the bottleneck in software development was writing code. Developers spent most of their time typing, debugging syntax, and looking up API documentation. Writing was slow, so reading was a secondary concern.
 
 AI changed the equation. Tools like Claude Code and GitHub Copilot generate code in seconds. Writing is no longer the bottleneck. Verification is. GitClear's 2025 research, analyzing 211 million changed lines of code, found that 7.9% of newly added code was revised within two weeks in 2024, up from 5.5% in 2020 -- a 44% increase in code churn. Code is being written faster but corrected more often. The bottleneck has moved.
 
@@ -101,7 +99,29 @@ AI changed the equation. Tools like Claude Code and GitHub Copilot generate code
 | **Pre-AI** | Writing code | Typing, syntax recall, API lookup | Producing code from scratch |
 | **AI era** | Verifying code | Reading, predicting, tracing | Deciding whether generated code is correct |
 
-Reading is no longer a nice-to-have. It is the skill that determines whether you can trust the code your tools produce. In this chapter, the AI generates the code you read -- just like in real projects.
+PRIMM builds exactly the skills AI cannot replace. When a beginner asks Claude Code to write a function, they get correct code in seconds. They can run it and move on. But they have learned nothing. They cannot predict what the code will do if the input changes. They cannot debug it when it breaks. They cannot modify it when requirements shift. Four of PRIMM's five stages are about comprehension, reasoning, and adaptation -- these happen inside your head, not inside an AI. PRIMM builds the developer. Claude Code is simply the most powerful tool that developer will use.
+
+---
+
+## The Five Stages
+
+| Stage | What You Do | Why It Matters in the AI Era | This Chapter? |
+|-------|-------------|------------------------------|---------------|
+| **Predict** | Read the code and predict its output *before* running it | Trains your mental compiler. Without it, you cannot evaluate whether AI-generated code is correct. | Yes |
+| **Run** | Execute the code and compare the actual output to your prediction | Creates the feedback loop. The gap between your prediction and reality is where learning happens -- AI cannot experience this gap on your behalf. | Yes |
+| **Investigate** | Explore why the code behaves the way it does -- especially when your prediction was wrong | Builds diagnostic instinct. Tracing variables, testing edge cases, asking "what happens if the input changes?" -- this is the work of a developer who can partner with AI rather than depend on it. | Yes |
+| **Modify** | Change part of the code and predict what the change does | The most common real-world task in AI-assisted development. Developers spend far more time modifying AI suggestions than accepting them wholesale. | Chapter 33 |
+| **Make** | Write new code from scratch using the patterns you have learned | In the AI era, "Make" means: write the specification, prompt Claude Code, then critically evaluate what it produces. The creative act is the culmination of understanding, not the starting point. | Chapter 33 |
+
+This chapter focuses on the first three stages. They form a tight loop: predict, run, investigate. Each pass through the loop either confirms your understanding or reveals a gap. Both outcomes are useful. A correct prediction means your mental model works. A wrong prediction tells you exactly where your mental model needs updating.
+
+**Why prediction matters**: When you predict before running, you commit to an answer. That commitment forces your brain to engage with the code rather than passively absorb it. If you skip prediction and just run the code, you see the output and think "oh, that makes sense" -- but you have no way to know whether you would have gotten it right on your own. Prediction turns reading into a test you give yourself.
+
+**PRIMM is not just this chapter.** It is the method you will use throughout Part 4. Every new Python feature you encounter -- functions, collections, classes, async patterns -- will go through the same cycle: see it, predict it, run it, investigate it. By the time you reach Phase 5, PRIMM will be a reflex, not a step you consciously think about. The method does not change. The code gets more complex. Your reading skill grows with it.
+
+:::note If you have never written code before
+That is exactly the right starting point for this chapter. You are not behind -- you are in position. Every code block in this lesson is short (2-4 lines), uses plain English variable names, and has type annotations that tell you what kind of data each variable holds. You do not need to memorize anything. You need to predict, run, and compare.
+:::
 
 ---
 
@@ -118,28 +138,6 @@ Active reading has three components:
 | **Explaining** | Put into words *why* the code produces its result | "The `//` operator divides and drops the decimal, so 10 // 3 gives 3, not 3.33" |
 
 Scanning feels productive because it is fast. Active reading feels slow because it forces you to think. But scanning produces false confidence -- you believe you understand the code when you do not. Active reading produces real understanding, one line at a time.
-
-:::note If you have never written code before
-That is exactly the right starting point for this chapter. You are not behind -- you are in position. Every code block in this lesson is short (2-4 lines), uses plain English variable names, and has type annotations that tell you what kind of data each variable holds. You do not need to memorize anything. You need to predict, run, and compare.
-:::
-
----
-
-## The PRIMM Method
-
-PRIMM is a structured approach to learning programming through reading before writing. It was developed by computing education researchers Sue Sentance, Jane Waite, and Maria Kallia, and is used in classrooms worldwide. The full method has five stages:
-
-| Stage | What You Do | This Chapter? |
-|-------|-------------|---------------|
-| **Predict** | Read the code and predict its output *before* running it | Yes |
-| **Run** | Execute the code and compare the actual output to your prediction | Yes |
-| **Investigate** | Explore why the code behaves the way it does -- especially when your prediction was wrong | Yes |
-| **Modify** | Change part of the code and predict what the change does | Chapter 33 |
-| **Make** | Write new code from scratch using the patterns you have learned | Chapter 33 |
-
-This chapter focuses on the first three stages. They form a tight loop: predict, run, investigate. Each pass through the loop either confirms your understanding or reveals a gap. Both outcomes are useful. A correct prediction means your mental model works. A wrong prediction tells you exactly where your mental model needs updating.
-
-**Why prediction matters**: When you predict before running, you commit to an answer. That commitment forces your brain to engage with the code rather than passively absorb it. If you skip prediction and just run the code, you see the output and think "oh, that makes sense" -- but you have no way to know whether you would have gotten it right on your own. Prediction turns reading into a test you give yourself.
 
 ---
 
