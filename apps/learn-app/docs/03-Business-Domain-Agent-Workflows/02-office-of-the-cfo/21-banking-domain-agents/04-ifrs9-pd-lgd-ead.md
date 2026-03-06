@@ -78,9 +78,41 @@ In Lesson 3, you learned the ECL formula: ECL = PD x LGD x EAD. You calculated E
 
 Credit risk officers spend months calibrating PD models, LGD assumptions, and EAD estimates. The banking plugin's `ifrs9-ecl` skill encodes these calculations, but a professional who cannot verify the inputs cannot trust the outputs. This lesson gives you the verification capability.
 
+:::info PD (Probability of Default)
+**The likelihood, expressed as a percentage, that a borrower will fail to repay within a given time horizon.**
+
+A corporate borrower with a PD of 2% means that out of 100 similar borrowers, 2 are expected to default within the next 12 months. On a $10 million loan with 2% PD, 35% LGD: ECL = 0.02 x 0.35 x $10M = $70,000.
+
+PD is the starting input for every ECL calculation and every Basel capital charge -- getting PD wrong cascades through both regulatory pillars.
+:::
+
+:::info LGD (Loss Given Default)
+**The percentage of a loan's value that the bank loses if the borrower defaults -- after recoveries from collateral, workout, and collections.**
+
+A secured mortgage with 20% LGD means the bank recovers 80% of the outstanding balance. On a $500,000 mortgage: loss = 0.20 x $500,000 = $100,000.
+
+LGD determines whether a default is a manageable loss or a catastrophic one -- the difference between a 15% LGD (well-secured) and a 75% LGD (unsecured consumer) is the difference between a $15,000 loss and a $75,000 loss on the same $100,000 exposure.
+:::
+
+:::info EAD (Exposure at Default)
+**The total amount the bank is owed at the moment of default -- including any undrawn credit the borrower may draw down before defaulting.**
+
+A revolving facility with $5M drawn and $15M undrawn at 60% CCF: EAD = $5M + (0.60 x $15M) = $14M -- nearly three times the current drawn balance.
+
+EAD is the most commonly underestimated ECL component because it includes future drawdowns, not just the current balance on the bank's books.
+:::
+
 ## Probability of Default (PD)
 
 The Probability of Default measures the likelihood that a borrower will default within a given time horizon. Two fundamental concepts govern PD estimation for IFRS 9.
+
+:::info TTC PD vs PIT PD (Through-the-Cycle vs Point-in-Time)
+**TTC PD averages default rates across full economic cycles; PIT PD adjusts for where the economy is right now.**
+
+A BBB corporate has a TTC PD of 1.5%. During a recession (CCA = 1.4), PIT PD = 1.5% x 1.4 = 2.1%. During an expansion (CCA = 0.7), PIT PD = 1.5% x 0.7 = 1.05%.
+
+Confusing TTC and PIT is one of the most common ECL errors -- IFRS 9 requires PIT PDs, so using TTC without adjustment understates provisions in downturns and overstates them in expansions.
+:::
 
 ### TTC vs PIT: The Critical Distinction
 
@@ -190,6 +222,14 @@ Without cure rate adjustment, the LGD would be overstated at 75%.
 
 EAD measures the total exposure at the moment of default. For a fully drawn term loan, EAD equals the outstanding balance. But many banking products have undrawn components — revolving credit facilities, overdrafts, credit card limits — where the borrower can draw additional funds before defaulting.
 
+:::info CCF (Credit Conversion Factor)
+**The percentage of an undrawn credit facility that a borrower is expected to draw down before defaulting.**
+
+A corporate revolving facility has $15M undrawn with a CCF of 60%: expected additional drawdown = 0.60 x $15M = $9M. Total EAD = drawn balance + $9M.
+
+CCF matters because distressed borrowers typically max out their credit lines before defaulting -- ignoring the undrawn portion understates the bank's true exposure by 2-3x for revolving facilities.
+:::
+
 ### Credit Conversion Factors (CCFs)
 
 The CCF converts undrawn commitments into their expected drawn-down amount at default:
@@ -260,6 +300,54 @@ Apply your knowledge to this portfolio of 8 facilities. Classify each into an IF
 3. Sum the Stage 1 ECL to get the portfolio-level Stage 1 provision.
 
 Use the `/bank-ecl` command or work through the calculations manually, then compare your results with the skill's output.
+
+## Using the Banking Plugin
+
+The `ifrs9-ecl` skill builds PD term structures, calculates downturn LGD, and computes EAD with credit conversion factors. Here is a worked example.
+
+**Worked example.** David Okonkwo, Senior Credit Risk Modeller at Atlas National Bank, is calibrating ECL parameters for a revolving facility. He types:
+
+```
+Build ECL components for this facility:
+Borrower: Pinnacle Logistics Group
+Facility: GBP 20M revolving credit, 5 years remaining
+Drawn: GBP 5M, Undrawn: GBP 15M, CCF: 60%
+TTC PD: 1.8%, CCA: 1.3 (mild recession)
+LGD: 45% (unsecured senior, downturn calibration)
+Stage: 1
+Jurisdiction: UK PRA
+```
+
+The agent routes through `ifrs9-ecl` and responds:
+
+```
+GOVERNING STANDARD: IFRS 9 — UK PRA
+DOMAIN: IFRS 9 ECL — PD/LGD/EAD Component Build
+JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+
+PD CALIBRATION
+TTC PD: 1.80%
+Credit Cycle Adjustment: 1.3 (mild recession)
+PIT PD (12-month): 2.34%
+
+LGD
+Downturn LGD: 45.0% (unsecured senior corporate)
+
+EAD
+Drawn balance: GBP 5,000,000
+Undrawn commitment: GBP 15,000,000
+CCF applied: 60%
+EAD = GBP 5,000,000 + (60% x GBP 15,000,000) = GBP 14,000,000
+
+12-MONTH ECL (Stage 1)
+ECL = 2.34% x 45% x GBP 14,000,000 = GBP 147,420
+
+NOTE: The professional reviews the CCA selection and the CCF
+assumption; the agent calculated the PIT PD conversion,
+EAD build, and facility-level ECL.
+```
+
+David reviews the CCA of 1.3 against his bank's latest credit cycle model output and confirms the 60% CCF is appropriate for a committed revolving facility under the bank's EAD policy.
 
 ## Try With AI
 

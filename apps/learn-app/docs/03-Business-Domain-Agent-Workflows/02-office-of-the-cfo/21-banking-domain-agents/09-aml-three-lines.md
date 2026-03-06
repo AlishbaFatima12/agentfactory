@@ -81,6 +81,38 @@ differentiation:
 
 # AML/KYC -- The Three Lines of Defence
 
+:::info SAR / STR (Suspicious Activity Report / Suspicious Transaction Report)
+**A confidential report filed by the bank to the national Financial Intelligence Unit when transactions or behaviour indicate potential money laundering, terrorist financing, or other financial crime.**
+
+A customer makes 8 cash deposits of GBP 9,200 each over 14 days across different branches -- total GBP 73,600, each deposit just below the GBP 10,000 reporting threshold. The compliance team files a SAR with the UK's National Crime Agency.
+
+Filing a SAR carries personal criminal liability for the Money Laundering Reporting Officer (MLRO) -- failing to file when indicators are present can result in prosecution; tipping off the customer that a SAR has been filed is itself a criminal offence.
+:::
+
+:::info PEP (Politically Exposed Person)
+**An individual who holds or has recently held a prominent public function -- such as a head of state, minister, senior judge, or military officer -- plus their family members and close associates.**
+
+A former Minister of Energy (left office 2 years ago) opens a bank account. PEP status triggers mandatory Enhanced Due Diligence: senior management approval, source of wealth verification, and ongoing enhanced monitoring.
+
+PEP status does not mean the person is a criminal -- it means their position creates elevated corruption and bribery risk, requiring the bank to apply a higher standard of scrutiny.
+:::
+
+:::info CDD / EDD (Customer Due Diligence / Enhanced Due Diligence)
+**CDD is the standard identity verification and risk assessment performed on every bank customer; EDD is the additional scrutiny required for higher-risk customers (PEPs, high-risk jurisdictions, complex ownership).**
+
+Standard CDD: verify identity, confirm source of funds, assign a risk rating -- takes 1-2 days for a retail customer. EDD: all of the above plus source of wealth verification, senior management approval, and enhanced ongoing monitoring -- takes 2-6 weeks for a complex corporate.
+
+CDD is the bank's first line of defence against financial crime -- inadequate CDD is the root cause behind most AML enforcement actions and billion-dollar fines.
+:::
+
+:::info FATF (Financial Action Task Force) and Grey List
+**FATF is the international body that sets AML standards (the "40 Recommendations"); the grey list is FATF's public list of countries with strategic deficiencies in their AML frameworks.**
+
+Pakistan was on the FATF grey list from June 2018 to October 2022, meaning every transaction involving a Pakistani counterparty triggered enhanced scrutiny at banks worldwide. Currently 20+ jurisdictions are grey-listed.
+
+Grey-listing increases the cost of doing business for an entire country -- banks apply EDD to all transactions involving grey-listed jurisdictions, slowing trade finance and increasing compliance costs.
+:::
+
 In Lessons 6-8, you built the solvency pillar: capital adequacy ratios, risk-weighted assets, leverage, and liquidity. That pillar protects the bank against financial losses. This lesson shifts to the third regulatory pillar -- financial crime compliance -- which protects the bank against being used as a conduit for money laundering, terrorist financing, and other illicit activity.
 
 The scale of the problem is staggering. The United Nations Office on Drugs and Crime estimates that between 2% and 5% of global GDP is laundered annually -- approximately $800 billion to $2 trillion. Banks are the primary gatekeepers. They are legally obligated to know their customers, monitor transactions, and report suspicious activity. The cost of failure is severe: HSBC paid $1.9 billion in fines for AML failures in 2012. Danske Bank's Estonian branch handled over EUR 200 billion in suspicious transactions between 2007 and 2015. These are not theoretical risks.
@@ -224,6 +256,64 @@ Assess the following customer for onboarding. Determine whether standard CDD or 
 
 **Agent boundary:** The AI can screen the former minister against PEP databases, scan adverse media, pull Companies House records, and generate an initial risk score. The decision to onboard or decline, the EDD conclusions, and the senior management approval must be made by humans.
 :::
+
+## Using the Banking Plugin
+
+The `aml-cdd-edd` and `kyc-risk-rating` skills automate customer screening, risk factor identification, and due diligence classification. Here is a worked example.
+
+**Worked example.** Rachel Mbeki, KYC Analyst at Commonwealth Pacific Bank, is onboarding a complex corporate client with multiple risk indicators. She types:
+
+```
+Screen this customer for CDD/EDD classification:
+Entity: Azura Power Holdings Limited
+Jurisdiction of incorporation: United Kingdom
+Operating jurisdictions: Nigeria, Kenya, Zambia
+Ownership: 45% Cayman Islands PE fund, 30% UK infra fund,
+  25% individual shareholders
+Key individual: One 25% shareholder is a former Minister
+  of Energy in Nigeria (left office 2019)
+Requested services: GBP 150M project finance facility
+Annual turnover: GBP 85M
+Jurisdiction: UK FCA
+```
+
+The agent routes through `aml-cdd-edd` and `kyc-risk-rating` and responds:
+
+```
+GOVERNING STANDARD: AML/KYC — UK FCA / JMLSG Guidance
+DOMAIN: Customer Due Diligence — Risk Classification
+JURISDICTION: United Kingdom — FCA Handbook / POCA 2002
+
+RISK FACTORS IDENTIFIED
+  1. PEP: Former Minister of Energy (Nigeria) — 25% shareholder
+     PEP status: Active (left office 2019, within extended
+     monitoring period)
+  2. High-risk jurisdictions: Nigeria, Kenya, Zambia
+     (elevated ML/TF risk per FATF mutual evaluations)
+  3. Complex ownership: Cayman Islands PE fund requires
+     UBO identification through to natural persons
+  4. High-value facility: GBP 150M project finance
+
+RISK RATING: HIGH
+CLASSIFICATION: Enhanced Due Diligence (EDD) required
+
+EDD REQUIREMENTS
+  - Senior management approval for onboarding
+  - Source of wealth verification for PEP shareholder
+  - Full beneficial ownership chain for Cayman PE fund
+  - Enhanced ongoing transaction monitoring
+  - Annual EDD review cycle
+
+NOTE: The professional makes the onboarding accept/reject
+decision and the EDD conclusions; the agent screened for
+risk factors and classified the due diligence level.
+```
+
+Rachel reviews the PEP screening result against her bank's PEP database and confirms the risk rating, then escalates the file to senior management for the onboarding approval decision -- which the agent cannot make.
+
+### Jurisdiction Variant: Pakistan (SBP AML Framework)
+
+Pakistan's AML framework is governed by the Anti-Money Laundering Act 2010 (AMLA 2010, amended 2020) and enforced by the State Bank of Pakistan (SBP) for banks and the Securities and Exchange Commission of Pakistan (SECP) for non-bank financial institutions. Pakistan was placed on the FATF grey list in June 2018 after its mutual evaluation identified strategic deficiencies in 27 of 40 FATF Recommendations. Over the following four years, Pakistan implemented a 34-item FATF action plan including enhanced CDD requirements for designated non-financial businesses and professions, strengthened beneficial ownership transparency through the Companies Act 2017 amendments, and increased SAR filing volumes from approximately 8,000 per year (2018) to over 45,000 per year (2021). Pakistan was removed from the grey list in October 2022 following a successful on-site visit. For banks operating in Pakistan, SBP's AML/CFT Regulations (BPRD Circular Letter No. 13 of 2018, updated 2021) require CDD thresholds aligned with FATF standards, mandatory EDD for all PEP relationships, and STR filing to the Financial Monitoring Unit (FMU) -- Pakistan's Financial Intelligence Unit. The banking plugin's `pakistan-sbp` jurisdiction overlay includes these SBP-specific CDD thresholds and FMU filing requirements.
 
 ## Try With AI
 

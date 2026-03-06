@@ -74,6 +74,22 @@ differentiation:
 
 # Exercises — Basel and AML Deep Practice
 
+:::info ACS (Bank of England Annual Cyclical Scenario)
+**The Bank of England's yearly stress test that forces UK banks to prove they can survive a severe economic downturn -- with specific GDP, unemployment, and property price shocks prescribed by the regulator.**
+
+In the 2023 ACS, banks had to model surviving GDP falling 5%, unemployment reaching 8.5%, and house prices dropping 31% -- then show their CET1 ratio stayed above the 4.5% hard minimum throughout.
+
+The ACS is the UK's primary tool for calibrating bank-specific capital buffers -- a bank that barely survives the scenario may be told to hold more CET1 than the Basel minimum.
+:::
+
+:::info DFAST (Dodd-Frank Act Stress Testing)
+**The US equivalent of the UK's ACS -- a Federal Reserve-mandated stress test requiring US banks with $100 billion or more in assets to project capital ratios over 9 quarters under severely adverse, adverse, and baseline scenarios.**
+
+A US bank with $500 billion in assets and a starting CET1 ratio of 12.5% must show it stays above 4.5% after modelling $80 billion in projected losses over the 9-quarter stress horizon.
+
+DFAST results are publicly disclosed (unlike the UK's confidential ICAAP), creating market discipline -- investors and counterparties can see which banks are most vulnerable to stress.
+:::
+
 In Lesson 11, you saw how IFRS 9, Basel, and AML interact in a cross-pillar cascade. Now you build fluency in Basel capital calculation and AML investigation through four extended exercises. Exercise 3 builds a complete capital ratio from raw balance sheet data. Exercise 5 stress-tests that capital under a Bank of England severe scenario. Exercises 6 and 8 take you through AML alert investigation and sanctions screening — the operational side of financial crime compliance.
 
 These exercises use the banking plugin's `basel-capital`, `basel-rwa`, `aml-typologies`, and `aml-sar-drafting` skills. The AI assists with computation and pattern matching, but you make the professional judgments: Is this alert suspicious or a false positive? Does the bank survive the stress scenario? What management actions restore capital adequacy?

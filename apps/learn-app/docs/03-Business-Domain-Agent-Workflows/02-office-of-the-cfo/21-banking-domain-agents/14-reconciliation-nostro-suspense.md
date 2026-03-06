@@ -77,6 +77,22 @@ differentiation:
 
 # Bank Reconciliation — Nostro, Suspense, and GL-to-Risk
 
+:::info Nostro Account
+**A bank's own account held at another bank (the "correspondent") in a foreign currency or for access to a foreign payment system -- from the Latin "nostro" meaning "ours."**
+
+A UK bank holds a USD nostro account at JPMorgan New York with a balance of $25 million to settle dollar-denominated client payments. Every transaction must appear in both the UK bank's mirror ledger and JPMorgan's statement.
+
+Nostro reconciliation is critical because a mismatch means the bank's reported cash position is wrong -- a GBP 1.5 million unreconciled break could mask a failed payment, a duplicated entry, or an unauthorised debit.
+:::
+
+:::info Suspense Account
+**A temporary holding account where transactions are parked when the bank cannot immediately identify the correct destination account, customer, or GL code.**
+
+An incoming SWIFT payment of GBP 45,000 arrives with a truncated reference -- the bank cannot match it to a customer, so it sits in the payments suspense account until operations staff identify the intended recipient.
+
+Suspense accounts must be cleared within strict SLA timelines (typically 30 days maximum) because aged suspense items can hide errors, fraud, or unbooked losses that distort the bank's financial position.
+:::
+
 In Lessons 3 through 13, you built and stress-tested the three regulatory pillars — IFRS 9, Basel, and AML. Every calculation in those lessons depended on the same assumption: the numbers are correct. The ECL is calculated from accurate exposure data. The capital ratio uses the right RWA. The AML screen matches against the correct transaction records. Reconciliation is where that assumption is tested.
 
 Bank reconciliation is the operational discipline that ensures every number in every system agrees — or, when they do not agree, that every difference is identified, classified, aged, escalated, and resolved. A bank that cannot reconcile its books cannot trust its regulatory returns, its financial statements, or its risk reports. This lesson covers the five categories of bank reconciliation and shows how the banking plugin's reconciliation skills automate the matching while humans investigate the breaks.
@@ -289,6 +305,66 @@ Clear 12 suspense items across 3 suspense accounts. Apply ageing SLAs and recomm
 4. SP07 (GBP 250, age 35 days) exceeds the 30-day SLA — recommend formal disposition
 5. SP09 (GBP 2.1M, age 1 day) is the largest item — is the ageing SLA appropriate given the amount, or should large items have different escalation rules?
 6. Calculate: what is the total suspense balance by account and by ageing band?
+
+## Using the Banking Plugin
+
+The `bank-reconciliation` skill performs nostro matching, classifies breaks, applies ageing SLAs, and generates exception hypotheses. Here is a worked example.
+
+**Worked example.** Kenji Watanabe, Reconciliation Officer at Pacific Ledger Bank, is running the daily GBP nostro reconciliation against the correspondent bank. He types:
+
+```
+Reconcile this nostro account:
+Mirror ledger (bank's records):
+  M001: Day 1, Credit GBP 250,000 (ABC Corp payment)
+  M002: Day 2, Debit GBP 180,000 (SWIFT in)
+  M003: Day 3, Credit GBP 1,850,000 (salary batch)
+  M006: Day 8, Credit GBP 310,000 (XYZ Ltd payment)
+Statement (correspondent):
+  S001: Day 1, Credit GBP 250,000 (ABC Corp)
+  S002: Day 2, Debit GBP 180,000 (SWIFT in)
+  S003: Day 3, Credit GBP 1,850,000 (salary batch)
+  S006: Day 8, Credit GBP 308,500 (XYZ Ltd)
+  S008: Day 10, Credit GBP 2,500 (monthly custody fee)
+Today is Day 12.
+Jurisdiction: UK PRA
+```
+
+The agent routes through `bank-reconciliation` and responds:
+
+```
+GOVERNING STANDARD: Banking Operations — UK PRA
+DOMAIN: Nostro Reconciliation — Break Classification
+JURISDICTION: United Kingdom — PRA Rulebook
+
+MATCHED (Level 1 — Exact)
+  M001/S001: GBP 250,000 — matched
+  M002/S002: GBP 180,000 — matched
+  M003/S003: GBP 1,850,000 — matched
+
+BREAKS
+  1. M006/S006: Amount mismatch
+     Mirror: GBP 310,000 | Statement: GBP 308,500
+     Difference: GBP 1,500
+     Hypothesis: Correspondent fee deducted at source
+     Age: 4 days — investigate, notify team lead
+
+  2. S008: Statement-only
+     Amount: GBP 2,500 (monthly custody fee)
+     No mirror entry exists
+     Action required: Book correspondent fee in mirror ledger
+     Age: 2 days — monitor
+
+SUMMARY
+  Matched: 3 of 5 items (Level 1 auto-match)
+  Breaks: 2 (1 amount mismatch, 1 statement-only)
+  Net unreconciled: GBP 4,000
+
+NOTE: The professional investigates the GBP 1,500 difference
+and confirms the custody fee booking; the agent matched
+entries and classified breaks with ageing escalation.
+```
+
+Kenji investigates the GBP 1,500 discrepancy by checking the correspondent's fee schedule, confirms it is a handling charge deducted at source, and posts the adjustment entry to clear the break.
 
 ## Try With AI
 
