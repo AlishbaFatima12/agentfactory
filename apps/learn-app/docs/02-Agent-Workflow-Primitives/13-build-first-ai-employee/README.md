@@ -1,9 +1,9 @@
 ---
 sidebar_position: 13
-title: "Project: Build Your AI Employee with NanoClaw"
+title: "Chapter 13: Project - Build Your AI Employee"
 ---
 
-# Project: Build Your AI Employee with NanoClaw
+# Chapter 13: Project - Build Your AI Employee
 
 **You've learned the pieces. Now build something real.**
 
