@@ -79,9 +79,9 @@
     "message": "Chapter 12: Version Control & Safe Experimentation",
     "description": "The label for category 'Chapter 12: Version Control & Safe Experimentation' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.Chapter 13: Build Your AI Employee": {
-    "message": "Chapter 13: Build Your AI Employee",
-    "description": "The label for category 'Chapter 13: Build Your AI Employee' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.Chapter 13: Project - Build Your AI Employee": {
+    "message": "Chapter 13: Project - Build Your AI Employee",
+    "description": "The label for category 'Chapter 13: Project - Build Your AI Employee' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Part 3: Applied Domain Workflows": {
     "message": "Part 3: Applied Domain Workflows",
