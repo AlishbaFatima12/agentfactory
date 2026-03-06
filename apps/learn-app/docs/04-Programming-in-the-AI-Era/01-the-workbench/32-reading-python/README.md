@@ -48,6 +48,7 @@ Every lesson in this chapter follows the **Predict-Run-Investigate** method. You
 | 1 | The PRIMM Method -- Predict, Run, Investigate | Learn the formal method for reading code, practice on short examples |
 | 2 | Trace Tables -- When Your Brain Takes Shortcuts | Track variable state line by line using trace tables |
 | 3 | Your First Code Review -- Catching a Bug | Apply PRIMM and trace tables to find a bug in SmartNotes code |
+| 4 | Reading a Test -- Two New Words | Recognize `def` and `assert` in test code, predict pass/fail |
 
 ## What This Chapter Uses
 
@@ -60,7 +61,7 @@ This chapter introduces Python through reading, not writing. Every code example 
 - **Boolean logic**: `and`, `or`, comparisons
 - **`print()`** for output
 
-Functions, collections, imports, and control flow appear later in Phase 2. This chapter gives you a taste of Python -- enough to practice the PRIMM method and build confidence reading code.
+Functions, collections, imports, and control flow appear later in Phase 2. Lesson 4 adds two vocabulary words -- `def` and `assert` -- so you can read test code before writing your first test in Chapter 33. This chapter gives you a taste of Python -- enough to practice the PRIMM method and build confidence reading code.
 
 ## Prerequisites
 
