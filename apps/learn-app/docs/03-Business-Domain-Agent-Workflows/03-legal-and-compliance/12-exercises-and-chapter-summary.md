@@ -506,16 +506,16 @@ You have now built a negotiation playbook, contract review workflow, NDA triage 
 
 **Step 1 -- Define the KPIs:**
 
-| Metric                                  | Data Source           | Target                                              |
-| --------------------------------------- | --------------------- | --------------------------------------------------- |
-| Contract review cycle time (by tier)    | Contract tracking log | Tier 1: <=1 day; Tier 2: <=2 days; Tier 3: <=5 days |
-| NDA Tier 1 auto-approval rate           | NDA triage log        | >60%                                                |
-| Open RED items pending attorney review  | Contract queue        | Zero items >5 days old                              |
-| Contracts with renewal dates in 60 days | Contract repository   | 100% visibility                                     |
-| Overdue compliance obligations          | Compliance calendar   | Zero overdue                                        |
-| Open DSARs vs. 30-day window            | DSAR log              | Zero overdue                                        |
-| Regulatory alerts actioned              | Monitoring log        | 100% within 30 days                                 |
-| External legal spend vs. budget         | AP system             | Within 10% of budget                                |
+| Metric                                  | Data Source           | Target                                           |
+| --------------------------------------- | --------------------- | ------------------------------------------------ |
+| Contract review cycle time (by tier)    | Contract tracking log | Tier 1: ≤1 day; Tier 2: ≤2 days; Tier 3: ≤5 days |
+| NDA Tier 1 auto-approval rate           | NDA triage log        | >60%                                             |
+| Open RED items pending attorney review  | Contract queue        | Zero items >5 days old                           |
+| Contracts with renewal dates in 60 days | Contract repository   | 100% visibility                                  |
+| Overdue compliance obligations          | Compliance calendar   | Zero overdue                                     |
+| Open DSARs vs. 30-day window            | DSAR log              | Zero overdue                                     |
+| Regulatory alerts actioned              | Monitoring log        | 100% within 30 days                              |
+| External legal spend vs. budget         | AP system             | Within 10% of budget                             |
 
 **Step 2 -- Build the dashboard:**
 
