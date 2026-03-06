@@ -111,7 +111,7 @@ HQLA is the bank's survival buffer -- if depositors and wholesale lenders demand
 
 The LCR asks: if the bank faces a severe 30-day liquidity stress -- deposit withdrawals, wholesale funding freeze, credit line drawdowns -- does it hold enough liquid assets to survive without external support?
 
-**LCR = Stock of HQLA / Total Net Cash Outflows over 30 Days >= 100%**
+**LCR = Stock of HQLA / Total Net Cash Outflows over 30 Days ≥ 100%**
 
 ### HQLA Classification
 
@@ -179,7 +179,7 @@ Calculate the LCR for a UK bank facing a 30-day stress scenario.
 
 **Your tasks:**
 
-1. Verify the HQLA calculation (check the Level 2 cap: is combined Level 2 <= 40% of total HQLA?)
+1. Verify the HQLA calculation (check the Level 2 cap: is combined Level 2 ≤ 40% of total HQLA?)
 2. Calculate total net cash outflows (apply the 75% inflow cap)
 3. Calculate the LCR
 4. Does the bank meet the 100% minimum?
@@ -208,25 +208,25 @@ The bank exceeds the 100% minimum with substantial headroom. It could survive a 
 
 While LCR measures short-term survival (30 days), the NSFR measures structural funding resilience over a 1-year horizon:
 
-**NSFR = Available Stable Funding (ASF) / Required Stable Funding (RSF) >= 100%**
+**NSFR = Available Stable Funding (ASF) / Required Stable Funding (RSF) ≥ 100%**
 
-| ASF Component                       | ASF Factor |
-| ----------------------------------- | ---------- |
-| Tier 1 and Tier 2 capital           | 100%       |
-| Stable retail deposits (insured)    | 95%        |
-| Less stable retail deposits         | 90%        |
-| Wholesale funding > 1 year maturity | 100%       |
-| Wholesale funding 6-12 months       | 50%        |
-| Wholesale funding < 6 months        | 0%         |
+| ASF Component                          | ASF Factor |
+| -------------------------------------- | ---------- |
+| Tier 1 and Tier 2 capital              | 100%       |
+| Stable retail deposits (insured)       | 95%        |
+| Less stable retail deposits            | 90%        |
+| Wholesale funding &gt; 1 year maturity | 100%       |
+| Wholesale funding 6-12 months          | 50%        |
+| Wholesale funding &lt; 6 months        | 0%         |
 
-| RSF Component                              | RSF Factor |
-| ------------------------------------------ | ---------- |
-| Cash, central bank reserves                | 0%         |
-| Sovereign bonds (0% risk weight)           | 5%         |
-| Corporate bonds and equities               | 50%        |
-| Residential mortgages (risk weight <= 35%) | 65%        |
-| Retail loans                               | 85%        |
-| All other assets                           | 100%       |
+| RSF Component                             | RSF Factor |
+| ----------------------------------------- | ---------- |
+| Cash, central bank reserves               | 0%         |
+| Sovereign bonds (0% risk weight)          | 5%         |
+| Corporate bonds and equities              | 50%        |
+| Residential mortgages (risk weight ≤ 35%) | 65%        |
+| Retail loans                              | 85%        |
+| All other assets                          | 100%       |
 
 The NSFR ensures that a bank funding 30-year mortgages has enough long-term or stable funding to match those long-dated assets, rather than relying on short-term wholesale markets that can evaporate in a crisis.
 

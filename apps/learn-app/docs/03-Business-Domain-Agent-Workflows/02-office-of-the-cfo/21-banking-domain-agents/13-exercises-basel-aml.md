@@ -125,10 +125,10 @@ These exercises use the banking plugin's `basel-capital`, `basel-rwa`, `aml-typo
 | Corporate bonds (BBB rated)        | GBP 240M   | 100%                   | Unrated corporates default to 100%       |
 | SME loans                          | GBP 320M   | 85%                    | SME supporting factor applied            |
 | Residential mortgages (LTV 50-80%) | GBP 1,450M | 35%                    | Standard residential                     |
-| High-LTV mortgages (LTV > 80%)     | GBP 185M   | 50%                    | Higher risk weight for high LTV          |
+| High-LTV mortgages (LTV &gt; 80%)  | GBP 185M   | 50%                    | Higher risk weight for high LTV          |
 | Commercial real estate (LTV 65%)   | GBP 380M   | 100%                   | CRE default weight                       |
 | Consumer unsecured                 | GBP 210M   | 75%                    | Retail exposure                          |
-| Stage 3 NPLs                       | GBP 45M    | 150%                   | Non-performing, specific provision < 20% |
+| Stage 3 NPLs                       | GBP 45M    | 150%                   | Non-performing, specific provision &lt; 20% |
 | Undrawn revolving credit           | GBP 190M   | Apply 40% CCF then 75% | Off-balance-sheet, retail                |
 
 ### Operational Risk

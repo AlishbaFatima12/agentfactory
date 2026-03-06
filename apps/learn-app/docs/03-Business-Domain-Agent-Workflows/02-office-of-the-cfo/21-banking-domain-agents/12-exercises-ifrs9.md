@@ -200,7 +200,7 @@ The GCC region's credit risk is sensitive to oil prices and GDP growth. Apply a 
 | Collateral Type               | LGD |
 | ----------------------------- | --- |
 | Cash deposit / govt guarantee | 15% |
-| Property (LTV < 80%)          | 30% |
+| Property (LTV &lt; 80%)        | 30% |
 | Plant and machinery           | 45% |
 | Stock and receivables         | 55% |
 | Fleet assets                  | 40% |

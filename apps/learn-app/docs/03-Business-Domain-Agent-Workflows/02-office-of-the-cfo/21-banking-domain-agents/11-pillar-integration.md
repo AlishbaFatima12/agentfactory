@@ -112,8 +112,8 @@ But the cascade does not stop at CET1. Consider what happens when fraud is disco
 
 - CET1 reduction: GBP 42.4M x (1 - 25% tax) = GBP 31.8M
 - If the bank is on the IRB approach, compare IFRS 9 ECL to regulatory Expected Loss (EL)
-- If IFRS 9 ECL > Regulatory EL: shortfall deducted from capital (50% CET1, 50% Tier 2)
-- If IFRS 9 ECL < Regulatory EL: excess added to Tier 2 (capped at 0.6% of credit RWA)
+- If IFRS 9 ECL &gt; Regulatory EL: shortfall deducted from capital (50% CET1, 50% Tier 2)
+- If IFRS 9 ECL &lt; Regulatory EL: excess added to Tier 2 (capped at 0.6% of credit RWA)
 - Risk-weighted assets may also increase if the exposure was previously at a low risk weight
 
 **Result**: A GBP 50M fraud becomes a GBP 42.4M provision charge, a GBP 31.8M CET1 hit, a potential capital shortfall, and a regulatory investigation — all from one discovery.

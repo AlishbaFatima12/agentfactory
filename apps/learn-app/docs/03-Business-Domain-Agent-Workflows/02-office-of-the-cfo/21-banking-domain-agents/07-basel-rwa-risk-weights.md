@@ -106,27 +106,27 @@ Under SA, every asset is assigned a risk weight based on its asset class and, wh
 
 ### SA Risk Weight Table
 
-| Asset Class                              | Conditions                   | Risk Weight |
-| ---------------------------------------- | ---------------------------- | ----------- |
-| Cash and central bank reserves           | --                           | 0%          |
-| Sovereign bonds                          | AAA to AA-                   | 0%          |
-| Sovereign bonds                          | A+ to A-                     | 20%         |
-| Sovereign bonds                          | BBB+ to BBB-                 | 50%         |
-| Bank exposures                           | AAA to AA-                   | 20%         |
-| Bank exposures                           | A+ to A- (short-term claims) | 20%         |
-| Bank exposures                           | A+ to A- (long-term claims)  | 50%         |
-| Bank exposures                           | BBB+ to BBB-                 | 50%         |
-| Corporate exposures                      | AAA to AA-                   | 20%         |
-| Corporate exposures                      | A+ to BBB-                   | 75%         |
-| Corporate exposures                      | Unrated                      | 100%        |
-| Retail exposures (including SME)         | --                           | 75%         |
-| Residential mortgage                     | LTV <= 50%                   | 20%         |
-| Residential mortgage                     | LTV 50-80%                   | 35%         |
-| Residential mortgage                     | LTV > 80%                    | 50%         |
-| Commercial real estate                   | LTV <= 60%                   | 60%         |
-| Consumer credit (unsecured)              | --                           | 75%         |
-| Past-due exposures (Stage 3 / > 90 days) | --                           | 150%        |
-| Equity holdings                          | --                           | 100-250%    |
+| Asset Class                                 | Conditions                   | Risk Weight |
+| ------------------------------------------- | ---------------------------- | ----------- |
+| Cash and central bank reserves              | --                           | 0%          |
+| Sovereign bonds                             | AAA to AA-                   | 0%          |
+| Sovereign bonds                             | A+ to A-                     | 20%         |
+| Sovereign bonds                             | BBB+ to BBB-                 | 50%         |
+| Bank exposures                              | AAA to AA-                   | 20%         |
+| Bank exposures                              | A+ to A- (short-term claims) | 20%         |
+| Bank exposures                              | A+ to A- (long-term claims)  | 50%         |
+| Bank exposures                              | BBB+ to BBB-                 | 50%         |
+| Corporate exposures                         | AAA to AA-                   | 20%         |
+| Corporate exposures                         | A+ to BBB-                   | 75%         |
+| Corporate exposures                         | Unrated                      | 100%        |
+| Retail exposures (including SME)            | --                           | 75%         |
+| Residential mortgage                        | LTV ≤ 50%                    | 20%         |
+| Residential mortgage                        | LTV 50-80%                   | 35%         |
+| Residential mortgage                        | LTV &gt; 80%                 | 50%         |
+| Commercial real estate                      | LTV ≤ 60%                    | 60%         |
+| Consumer credit (unsecured)                 | --                           | 75%         |
+| Past-due exposures (Stage 3 / &gt; 90 days) | --                           | 150%        |
+| Equity holdings                             | --                           | 100-250%    |
 
 :::info Reading the Table
 A 35% risk weight on a GBP 1 million mortgage means the bank must hold capital as if the exposure were GBP 350,000 -- not the full GBP 1 million. The risk weight reflects the regulator's assessment of the loss probability for that asset class. Sovereign bonds from AAA-rated governments carry 0% because the regulator treats the default probability as negligible. Past-due loans carry 150% because the borrower has already demonstrated distress.
@@ -136,14 +136,14 @@ A 35% risk weight on a GBP 1 million mortgage means the bank must hold capital a
 
 Undrawn credit facilities, guarantees, and letters of credit are not on the balance sheet but create potential exposure. Basel applies a **Credit Conversion Factor (CCF)** to convert them to an on-balance-sheet equivalent before applying the risk weight:
 
-| Commitment Type                              | CCF  |
-| -------------------------------------------- | ---- |
-| Unconditionally cancellable commitments      | 10%  |
-| Commitments with original maturity <= 1 year | 20%  |
-| Commitments with original maturity > 1 year  | 50%  |
-| Direct credit substitutes (guarantees)       | 100% |
+| Commitment Type                                | CCF  |
+| ---------------------------------------------- | ---- |
+| Unconditionally cancellable commitments        | 10%  |
+| Commitments with original maturity ≤ 1 year    | 20%  |
+| Commitments with original maturity &gt; 1 year | 50%  |
+| Direct credit substitutes (guarantees)         | 100% |
 
-**Example:** A GBP 100M undrawn corporate facility (original maturity > 1 year) has a CCF of 50%, producing a GBP 50M credit equivalent. At a 100% risk weight (unrated corporate), the RWA is GBP 50M.
+**Example:** A GBP 100M undrawn corporate facility (original maturity &gt; 1 year) has a CCF of 50%, producing a GBP 50M credit equivalent. At a 100% risk weight (unrated corporate), the RWA is GBP 50M.
 
 ## The Internal Ratings-Based Approach
 
@@ -205,17 +205,17 @@ A UK bank has the following portfolio. Calculate RWA under both approaches and d
 
 **Portfolio:**
 
-| Asset Class                         | Exposure (GBP M) | SA Risk Weight | SA RWA (GBP M) | IRB Risk Weight (model output) | IRB RWA (GBP M) |
-| ----------------------------------- | ---------------- | -------------- | -------------- | ------------------------------ | --------------- |
-| UK sovereign bonds (AAA)            | 3,000            | 0%             | 0              | 0%                             | 0               |
-| Corporate loans (A-rated)           | 2,500            | 75%            | 1,875          | 42%                            | 1,050           |
-| Corporate loans (unrated)           | 1,800            | 100%           | 1,800          | 65%                            | 1,170           |
-| Retail mortgages (LTV <= 80%)       | 5,500            | 35%            | 1,925          | 12%                            | 660             |
-| Retail mortgages (LTV > 80%)        | 1,200            | 50%            | 600            | 28%                            | 336             |
-| Retail unsecured                    | 2,000            | 75%            | 1,500          | 55%                            | 1,100           |
-| Commercial real estate (LTV <= 60%) | 800              | 60%            | 480            | 38%                            | 304             |
-| Past-due exposures                  | 200              | 150%           | 300            | 150%                           | 300             |
-| **Total**                           | **17,000**       |                | **8,480**      |                                | **4,920**       |
+| Asset Class                        | Exposure (GBP M) | SA Risk Weight | SA RWA (GBP M) | IRB Risk Weight (model output) | IRB RWA (GBP M) |
+| ---------------------------------- | ---------------- | -------------- | -------------- | ------------------------------ | --------------- |
+| UK sovereign bonds (AAA)           | 3,000            | 0%             | 0              | 0%                             | 0               |
+| Corporate loans (A-rated)          | 2,500            | 75%            | 1,875          | 42%                            | 1,050           |
+| Corporate loans (unrated)          | 1,800            | 100%           | 1,800          | 65%                            | 1,170           |
+| Retail mortgages (LTV ≤ 80%)       | 5,500            | 35%            | 1,925          | 12%                            | 660             |
+| Retail mortgages (LTV &gt; 80%)    | 1,200            | 50%            | 600            | 28%                            | 336             |
+| Retail unsecured                   | 2,000            | 75%            | 1,500          | 55%                            | 1,100           |
+| Commercial real estate (LTV ≤ 60%) | 800              | 60%            | 480            | 38%                            | 304             |
+| Past-due exposures                 | 200              | 150%           | 300            | 150%                           | 300             |
+| **Total**                          | **17,000**       |                | **8,480**      |                                | **4,920**       |
 
 **Your tasks:**
 
@@ -230,7 +230,7 @@ A UK bank has the following portfolio. Calculate RWA under both approaches and d
 72.5% x GBP 8,480M = **GBP 6,148M**
 
 **Step 4 -- Does the floor bite?**
-IRB RWA (GBP 4,920M) < Floor (GBP 6,148M). Yes, the floor bites.
+IRB RWA (GBP 4,920M) &lt; Floor (GBP 6,148M). Yes, the floor bites.
 The bank must report **GBP 6,148M** as its RWA.
 
 **Step 5 -- CET1 Ratios:**

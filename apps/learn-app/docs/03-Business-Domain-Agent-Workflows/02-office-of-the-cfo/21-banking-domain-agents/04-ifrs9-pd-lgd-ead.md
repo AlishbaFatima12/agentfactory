@@ -197,7 +197,7 @@ While every bank calibrates its own LGD models, these ranges are widely used in 
 | Asset Class                                       | Typical LGD Range | Key Driver                                   |
 | ------------------------------------------------- | ----------------- | -------------------------------------------- |
 | Residential mortgage (LTV ≤ 80%)                  | 10-20%            | Strong collateral coverage                   |
-| Residential mortgage (LTV > 80%)                  | 25-40%            | Weaker collateral coverage                   |
+| Residential mortgage (LTV &gt; 80%)               | 25-40%            | Weaker collateral coverage                   |
 | Commercial real estate                            | 25-45%            | Property type and location                   |
 | Corporate secured (senior)                        | 25-40%            | Collateral quality and enforcement           |
 | Corporate unsecured (senior)                      | 40-60%            | Depends on jurisdiction and recovery process |
