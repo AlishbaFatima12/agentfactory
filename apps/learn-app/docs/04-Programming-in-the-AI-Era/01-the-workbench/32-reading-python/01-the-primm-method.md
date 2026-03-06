@@ -86,7 +86,7 @@ print(x + y)
 
 What do you think `print(x + y)` displays? Take a guess -- even if you have never seen Python before. If you guessed `10`, you just discovered something important: those quotes around `"3"` and `"7"` make them text, not numbers, and `+` joins text end to end instead of adding. If you guessed `37`, your instinct about strings is already working. Either way, you now know more than you did five seconds ago -- and all you did was read three lines and commit to an answer.
 
-That is the core idea behind this lesson. It is called PRIMM -- Predict, Run, Investigate, Modify, Make -- developed by researchers Sue Sentance, Jane Waite, and Maria Kallia. You will learn the first three stages here. Modify and Make arrive in Chapter 33 when you begin writing code. By the end of this lesson, you will have predicted the output of four Python code blocks and discovered what your predictions reveal about your understanding.
+That is the core idea behind this lesson: predict what code does before you run it, then check whether you were right. By the end of this lesson, you will have a formal method for doing exactly that -- and you will have predicted the output of four Python code blocks and discovered what your predictions reveal about your understanding.
 
 ---
 
@@ -127,7 +127,7 @@ That is exactly the right starting point for this chapter. You are not behind --
 
 ## The PRIMM Method
 
-PRIMM is a structured approach to learning programming through reading before writing. It was developed by computing education researchers and is used in classrooms worldwide. The full method has five stages:
+PRIMM is a structured approach to learning programming through reading before writing. It was developed by computing education researchers Sue Sentance, Jane Waite, and Maria Kallia, and is used in classrooms worldwide. The full method has five stages:
 
 | Stage | What You Do | This Chapter? |
 |-------|-------------|---------------|
