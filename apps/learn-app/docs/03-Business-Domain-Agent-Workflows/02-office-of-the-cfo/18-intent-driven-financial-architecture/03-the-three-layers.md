@@ -214,33 +214,75 @@ Notice what is not here: there is no `Revenue_Y2`, no `Gross_Profit_Y3`, no form
 
 ## Exercise: Build the Assumptions Layer
 
-Open Excel (or Claude in Excel via Cowork) and build the Assumptions layer for the GP Waterfall.
+:::tip Plugin Setup Reminder
+This exercise requires the **IDFA Financial Architect** plugin installed in Cowork. If you have not set it up yet, follow the instructions in the [Chapter 18 prerequisites](./README.md#prerequisites) before continuing.
+:::
 
-**Step 1 — Create the four Named Ranges:**
+You will build the Assumptions layer for the GP Waterfall using Cowork. The goal is not just to produce a spreadsheet — it is to evaluate what the agent builds against the IDFA principles you just learned.
 
-1. In cell B2, type `10000000`. Click the Name Box, type `Inp_Rev_Y1`, press Enter.
-2. In cell B3, type `0.10`. Name it `Inp_Rev_Growth`.
-3. In cell B4, type `0.60`. Name it `Inp_COGS_Pct_Y1`.
-4. In cell B5, type `0.01`. Name it `Inp_COGS_Efficiency`.
+:::info New to Named Ranges?
+Named Ranges are not visible in the spreadsheet grid — they are metadata that lives behind the cells. You cannot see them by looking at a spreadsheet; you have to ask. If this concept is unfamiliar, read the **Concept Box** earlier in this lesson before continuing. You need to understand what a Named Range is — and why it matters — to evaluate whether the agent created them correctly.
+:::
 
-**Step 2 — Verify the names work:**
+### Step 1 — Prompt Cowork to Build the Assumptions Layer
 
-In any empty cell, type `=Inp_Rev_Y1` and press Enter. It should return `10000000`. Do the same for each name. If any returns a `#NAME?` error, the Named Range was not created correctly — go back to the Name Box and check.
-
-**Step 3 — Have the agent verify layer separation:**
-
-If you are working in Claude in Excel (via Cowork), type:
+Open Cowork and type:
 
 ```
-Review my Assumptions layer. Confirm that:
-1. All four Named Ranges exist and have correct values
-2. No cell in this layer contains a formula — only constants
-3. All names follow the Inp_ prefix convention
+Build me a simple Gross Profit Waterfall Assumptions layer in Excel.
+Year 1 Revenue is $10M, growing 10% year over year. COGS starts at
+60% of Revenue and improves by 1 percentage point each year. Use
+Named Ranges with the Inp_ prefix for every input. Assumptions only
+— no calculations yet.
 ```
 
-The agent should confirm all three checks. If it flags a formula in your Assumptions layer, move it — formulas belong in Layer 2, which you will build in Lesson 4.
+Cowork will create a spreadsheet. When it appears in the chat, click the file to open it in the **Cowork side panel** — this is where you inspect and interact with the model:
 
-**What you have built:** A clean Assumptions layer with four named inputs. Every formula in the Calculations layer (Lesson 4) will reference these names. When someone changes `Inp_Rev_Y1` from $10M to $12M, every downstream calculation will update automatically — and no formula will break, because no formula references a cell position.
+![Cowork spreadsheet panel showing an IDFA-compliant financial model with Layer 1 Assumptions and Named Ranges](./cowork-spreadsheet.png)
+
+### Step 2 — Verify Against IDFA Principles
+
+You can see the spreadsheet values in the side panel, but Named Ranges are metadata — they are not visible in the grid. To verify what was actually built, ask Cowork:
+
+```
+List every Named Range in this spreadsheet. For each one, show me
+the name, the cell it points to, and the current value. Then tell
+me: do all names follow the IDFA Inp_ convention?
+```
+
+Compare the response against what you expect from the intent statement — four assumptions, each with an `Inp_` prefix:
+
+| Assumption                  | Expected Named Range  | Value      |
+| --------------------------- | --------------------- | ---------- |
+| Year 1 Revenue              | `Inp_Rev_Y1`          | 10,000,000 |
+| Revenue growth rate         | `Inp_Rev_Growth`      | 0.10       |
+| Year 1 COGS percentage      | `Inp_COGS_Pct_Y1`     | 0.60       |
+| Annual COGS efficiency gain | `Inp_COGS_Efficiency` | 0.01       |
+
+**What to look for in the response:**
+
+- **Wrong count?** If there are more or fewer than four Named Ranges, the agent either missed an assumption or added calculations that belong in Layer 2.
+- **Missing `Inp_` prefix?** If any name reads `Revenue_Y1` instead of `Inp_Rev_Y1`, that name does not distinguish an input from a calculation. Ask Cowork: "Rename Revenue*Y1 to Inp_Rev_Y1 — all assumptions need the Inp* prefix."
+- **Formulas in the Assumptions layer?** If any Named Range points to a formula instead of a constant, that cell belongs in Layer 2. Ask Cowork to move it.
+- **Inconsistent naming?** Spaces, hyphens, or missing dimension suffixes (`_Y1`) all violate the conventions. Ask Cowork to fix them.
+
+### Step 3 — Extend the Model
+
+Once the four assumptions are verified, prompt Cowork:
+
+```
+Add a fifth assumption: Inp_Tax_Rate = 0.25 (corporate tax rate of
+25%). Keep it in the Assumptions layer with the same Inp_ naming
+convention.
+```
+
+Verify that the new Named Range appears correctly and does not disturb the existing four. This tests the isolation property — adding a new input should never break existing inputs.
+
+:::note Keep This File
+Save this spreadsheet — you will extend it with a Calculations layer in Lesson 4.
+:::
+
+**What you have built:** A clean Assumptions layer with named inputs. Every formula in the Calculations layer (Lesson 4) will reference these names. When someone changes `Inp_Rev_Y1` from $10M to $12M, every downstream calculation will update automatically — and no formula will break, because no formula references a cell position.
 
 ## The Business Bottom Line
 
@@ -248,13 +290,13 @@ Model handover is one of the most expensive activities in corporate finance — 
 
 ## Capability Preview: Intent Synthesis
 
-What you did manually in this lesson — reading an intent statement and extracting four assumptions — is exactly what a Finance Domain Agent does automatically. In Lesson 11, you will see the agent take an intent statement it has never seen, decompose it into Named Ranges, propose the complete three-layer structure, and wait for your approval before writing anything to the model. That capability is called **Intent Synthesis**, and it is the first of five Finance Domain Agent capabilities you will validate. The foundation you built today — understanding what belongs in Layer 1 and how to name it — is what lets you evaluate whether the agent got it right.
+What you did in this lesson — reading an intent statement, prompting the agent to extract assumptions, and then verifying the result — is the core loop of working with a Finance Domain Agent. In Lesson 11, you will see the agent take an intent statement it has never seen, decompose it into Named Ranges, propose the complete three-layer structure, and wait for your approval before writing anything to the model. That capability is called **Intent Synthesis**, and it is the first of five Finance Domain Agent capabilities you will validate. The foundation you built today — understanding what belongs in Layer 1 and how to name it — is what lets you evaluate whether the agent got it right.
 
 ## Try With AI
 
-Use these prompts in Claude in Excel (via Cowork) or your preferred AI assistant.
+Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Extract Assumptions from an Intent Statement
+### Prompt 1: Extract Assumptions from a New Intent Statement
 
 ```
 Here is an intent statement for a financial model:
@@ -272,7 +314,7 @@ Then tell me: did I miss any assumptions that would be needed
 to complete the model?
 ```
 
-**What you're learning:** Intent statement decomposition is a pattern, not a talent. Every assumption in the prose becomes an `Inp_` Named Range. The agent's ability to identify missing assumptions trains you to write more complete intent statements — which produce better models on the first try.
+**What you're learning:** Intent statement decomposition is a pattern, not a talent. Every assumption in the prose becomes an `Inp_` Named Range. The ability to identify missing assumptions trains you to write more complete intent statements — which produce better models on the first try.
 
 ### Prompt 2: Verify Layer Isolation
 

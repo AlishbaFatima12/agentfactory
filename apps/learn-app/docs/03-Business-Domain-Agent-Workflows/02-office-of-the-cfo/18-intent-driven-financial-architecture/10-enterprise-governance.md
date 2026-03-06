@@ -230,7 +230,7 @@ The plugin handles enforcement. Governance handles accountability. Together they
 
 :::tip Setup
 
-Open Claude in Cowork or Claude Code. Ensure the IDFA plugin is installed. In Claude Code: `/plugin marketplace add panaversity/agentfactory-business-plugins` then `/plugin install idfa-financial-architect@agentfactory-business`. In Cowork: install via **Customize → Browse plugins**. You will design governance artefacts using AI as a drafting partner.
+Open Cowork or Claude Code. Ensure the IDFA plugin is installed. In Claude Code: `/plugin marketplace add panaversity/agentfactory-business-plugins` then `/plugin install idfa-financial-architect@agentfactory-business`. In Cowork: install via **Customize → Browse plugins**. You will design governance artefacts using AI as a drafting partner.
 
 :::
 

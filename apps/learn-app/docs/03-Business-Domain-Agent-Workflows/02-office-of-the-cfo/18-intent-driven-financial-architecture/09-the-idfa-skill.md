@@ -228,24 +228,20 @@ These mistakes appear in the SKILL.md as a safeguard. When the skill is active, 
 
 5. **Never name a range with spaces.** `Inp_Rev_Y1`, not `Inp Rev Y1`. Excel rejects spaces in formula references; the skill prevents the agent from creating them.
 
-## Exercise: Install and Test the IDFA Plugin
+## Exercise: Invoke the Skill and Test Guardrail Activation
 
-**Step 1.** Install the IDFA plugin.
+You installed the IDFA plugin in the [Chapter 18 prerequisites](./README.md#prerequisites). In Lessons 3-8, the skill auto-activated when you mentioned financial models — you did not need to reference it by name. Now you will invoke it explicitly to see the difference.
 
-**In Cowork** (recommended): Open the sidebar → **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **IDFA Financial Architect** → click **Install**.
+### Step 1 — Auto-Activation (What You Have Been Doing)
 
-**In Claude Code**: Run `/plugin marketplace add panaversity/agentfactory-business-plugins` then `/plugin install idfa-financial-architect@agentfactory-business`.
-
-**Step 2.** Start a new Claude Code session (or Cowork session) so the plugin is loaded.
-
-**Step 3.** Give Claude this intent statement — a completely new model it has not seen in this chapter:
+Open Cowork and type a natural prompt — no skill reference:
 
 ```
 Project a 5-year SaaS revenue model with $5M ARR growing 30% YoY,
 70% gross margins improving to 80% by Year 5.
 ```
 
-**Step 4.** Review Claude's output against the four guardrails:
+Review the output. The skill should have auto-activated from trigger phrases like "revenue model" and "gross margins." Check for the four guardrails:
 
 | Guardrail             | What to Check                                                                                                    |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -254,9 +250,32 @@ Project a 5-year SaaS revenue model with $5M ARR growing 30% YoY,
 | Intent Notes          | Did Claude include Intent Note format for generated formulas?                                                    |
 | Delegated Calculation | Did Claude describe the write/read workflow rather than calculating results internally?                          |
 
-If all four guardrails appear in the output without you asking for them, the skill is working. If any guardrail is missing, check that the plugin is installed and that you started a fresh session.
+### Step 2 — Explicit Skill Invocation
 
-**Step 5.** Open the installed SKILL.md and read the Agent Decision Table. Find the row for "Retrofitting a legacy model" and trace the workflow: inspect the model → identify hardcoded values → propose Named Ranges → rewrite one by one → validate. This is the same five-phase process you learned in Lesson 8, now encoded as an instruction the agent follows automatically.
+Now invoke the skill directly by typing `/financial-architect` in Cowork:
+
+```
+/financial-architect
+
+Audit the SaaS model you just built. Check every formula for Named
+Range compliance, verify layer isolation, and confirm Intent Notes
+are attached. Report the compliance percentage.
+```
+
+When you type `/financial-architect`, you are telling Cowork to load the skill explicitly — the full methodology, the Agent Decision Table, the guardrail checks, and the naming conventions all activate at once. This is different from auto-activation: explicit invocation guarantees the skill is active, while auto-activation depends on trigger phrases being recognised.
+
+### Step 3 — Compare the Two Approaches
+
+| Approach               | When to Use                                  | Guarantee Level                         |
+| ---------------------- | -------------------------------------------- | --------------------------------------- |
+| Auto-activation        | Natural prompts about financial models       | High — trigger phrases cover most cases |
+| `/financial-architect` | Audits, compliance checks, complex retrofits | Certain — skill is explicitly loaded    |
+
+For everyday model building (Lessons 3-8), auto-activation is sufficient. For formal audits or when you need to guarantee the full methodology is active, invoke the skill by name.
+
+### Step 4 — Explore the Agent Decision Table
+
+Open the installed SKILL.md and read the Agent Decision Table. Find the row for "Retrofitting a legacy model" and trace the workflow: inspect the model → identify hardcoded values → propose Named Ranges → rewrite one by one → validate. This is the same five-phase process you learned in Lesson 8, now encoded as an instruction the agent follows automatically.
 
 ## The Business Bottom Line
 
@@ -270,7 +289,7 @@ This also connects back to Chapter 15, where you learned the plugin architecture
 
 :::tip Setup
 
-Open a Cowork session (or Claude Code) where you have installed the IDFA plugin. In Cowork: **Customize** → **Browse plugins** → **Personal** → **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → **Install**. In Claude Code: `/plugin marketplace add panaversity/agentfactory-business-plugins` then `/plugin install idfa-financial-architect@agentfactory-business`. Start a fresh session so the skill is loaded.
+Open Cowork or Claude Code with the IDFA plugin installed (see [Chapter 18 prerequisites](./README.md#prerequisites) if you have not installed it yet). Start a fresh session so the skill is loaded.
 
 :::
 

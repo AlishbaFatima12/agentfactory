@@ -256,7 +256,7 @@ The Intent Notes you write in this lesson become the input to that capability te
 ## Try With AI
 
 :::tip Setup
-Open Claude in Excel (or any Claude interface) with the GP Waterfall model from Lessons 3-4 available. If you do not have the model built, you can describe the formulas to Claude and work from the descriptions.
+Open Cowork with the GP Waterfall spreadsheet from Lessons 3-4 available. If you do not have the model built, you can describe the formulas to Claude and work from the descriptions.
 :::
 
 **Prompt 1 — Generate an Intent Note for a specific formula:**
