@@ -1,231 +1,292 @@
 ---
 sidebar_position: 1
 title: "The PRIMM Framework"
-description: "Understand the research-validated PRIMM framework -- five stages for learning to read code before writing it. Developed by Sentance, Waite, and Kallia, PRIMM inverts traditional programming education by making comprehension the primary activity and code production the final step."
-keywords:
-  [
-    "PRIMM",
-    "PRIMM framework",
-    "predict run investigate modify make",
-    "comprehension-first",
-    "code reading",
-    "Sentance Waite Kallia",
-    "Vygotsky",
-    "programming pedagogy",
-    "learning to program",
-    "computing education research",
-    "reading before writing",
-    "mental models",
-  ]
+description: "Discover PRIMM -- the research-validated method that teaches you to read and understand code before you write it -- and why comprehension is the bottleneck skill of the AI era."
+keywords: ["PRIMM", "Predict Run Investigate Modify Make", "Sue Sentance", "Jane Waite", "code comprehension", "Vygotsky", "sociocultural learning", "reading code", "AI era programming", "code literacy"]
 chapter: 30
 lesson: 1
-duration_minutes: 18
+duration_minutes: 20
 
 # HIDDEN SKILLS METADATA
 skills:
-  - name: "PRIMM Framework Comprehension"
+  - name: "PRIMM Framework Knowledge"
     proficiency_level: "A2"
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Computational Thinking"
-    measurable_at_this_level: "Student can describe all five PRIMM stages in sequence and explain why comprehension precedes production in the framework"
+    measurable_at_this_level: "Student can name the five stages of PRIMM in order, explain the purpose of each stage, and describe why the sequence begins with reading rather than writing"
 
-  - name: "Comprehension-First Mindset"
+  - name: "Code Prediction Reasoning"
+    proficiency_level: "A1"
+    category: "Conceptual"
+    bloom_level: "Remember"
+    digcomp_area: "Computational Thinking"
+    measurable_at_this_level: "Student can identify the cognitive activities involved in predicting code output (parsing structure, reasoning about sequence, building a mental model, committing to an answer)"
+
+  - name: "Comprehension Bottleneck Awareness"
     proficiency_level: "A2"
     category: "Conceptual"
     bloom_level: "Understand"
-    digcomp_area: "Digital Competence"
-    measurable_at_this_level: "Student can articulate why reading and verifying code is the bottleneck skill in AI-driven development and why PRIMM prioritizes comprehension over production"
-
-  - name: "Pedagogical Framework Recognition"
-    proficiency_level: "A1"
-    category: "Soft"
-    bloom_level: "Remember"
-    digcomp_area: "Communication and Collaboration"
-    measurable_at_this_level: "Student can name the five PRIMM stages in order and identify the research basis for the framework"
+    digcomp_area: "Information Literacy"
+    measurable_at_this_level: "Student can explain why code comprehension has replaced code production as the primary bottleneck in AI-assisted development and articulate the ratio of understanding stages to writing stages in PRIMM"
 
 learning_objectives:
-  - objective: "Explain the five stages of PRIMM and why they are sequenced from Predict to Make"
+  - objective: "Describe the five stages of PRIMM and explain why they are sequenced from reading to writing"
     proficiency_level: "A2"
     bloom_level: "Understand"
-    assessment_method: "Student describes all five stages in sequence and explains why comprehension stages precede the production stage, using a non-programming analogy"
+    assessment_method: "Student explains each stage in their own words and justifies the read-first sequence using the research finding that PRIMM learners outperformed control groups"
 
-  - objective: "Describe the research origin of PRIMM and its grounding in sociocultural learning theory"
+  - objective: "Identify the research basis for PRIMM including its creators, study design, and theoretical grounding"
     proficiency_level: "A1"
     bloom_level: "Remember"
-    assessment_method: "Student identifies the researchers (Sentance, Waite, Kallia), the study parameters (493 students, 13 schools), and names Vygotsky's sociocultural theory as the foundation"
+    assessment_method: "Student names the researchers (Sentance, Waite, Kallia), the study scale (493 students, 13 schools), and the theoretical basis (Vygotsky's sociocultural theory)"
 
-  - objective: "Articulate why comprehension-first learning matters more in 2026 than it did in 2016"
+  - objective: "Explain why code comprehension is the bottleneck skill in AI-assisted development"
     proficiency_level: "A2"
     bloom_level: "Understand"
-    assessment_method: "Student explains the bottleneck shift from writing code to verifying code and connects it to the rise of AI code generation"
+    assessment_method: "Student articulates the bottleneck shift from code production (pre-AI) to code verification (AI era) and connects this to PRIMM's 4:1 ratio of understanding to writing stages"
 
 cognitive_load:
-  new_concepts: 3
-  assessment: "3 new concepts (the PRIMM framework as a research-validated method, the five stages as a learning sequence, the comprehension-first paradigm). All conceptual -- no code, no tools. Well within the A2 budget of 5-7 concepts."
+  new_concepts: 4
+  assessment: "4 concepts (the PRIMM five-stage sequence, sociocultural learning theory, comprehension-as-bottleneck thesis, the prediction-reality gap as learning mechanism) well within A2 limit of 7"
 
 differentiation:
-  extension_for_advanced: "Find the original Sentance, Waite, and Kallia (2019) paper in Computer Science Education and read the abstract. Compare their classroom findings with your own experience learning any skill through observation before practice."
-  remedial_for_struggling: "Write each stage name (Predict, Run, Investigate, Modify, Make) on an index card with a one-sentence description. Arrange them in order. For each card, write one everyday example of that stage from cooking, driving, or another familiar activity."
+  extension_for_advanced: "Read the 2019 journal paper by Sentance, Waite, and Kallia in Computer Science Education (Vol. 29, No. 2-3) and identify which PRIMM stage maps most closely to code review in professional software engineering."
+  remedial_for_struggling: "Focus on just two stages -- Predict and Run. Practice the predict-then-compare cycle on the greeting program until the gap between expectation and reality feels natural. The other three stages build on this foundation."
 ---
 
 # The PRIMM Framework
 
-You are about to learn Python programming. But you are learning it in 2026, not 2016. That distinction matters more than any syntax rule this book will ever teach you.
+James watches his AI coding assistant generate fifty lines of Python in ten seconds. A function that parses JSON, validates fields, formats output, and returns a dictionary -- all syntactically correct, all ready to run. He copies it into his project and moves on to the next feature.
 
-A decade ago, learning to program meant staring at a blank editor, typing code character by character, running it, watching it crash, and slowly building up the ability to write working programs from scratch. The entire pedagogy of programming education was built around one assumption: the learner must produce code from nothing. That assumption is now obsolete.
+Emma walks over and points at line twelve. "What does that line do?"
 
-An AI coding assistant can write a working Python function in seconds. It can scaffold an entire project, generate tests, refactor code, and explain any program you show it. If the goal of learning programming were simply to produce code, you could skip this entire Part and just type prompts into a terminal. But producing code was never the real goal. The real goal is **understanding** -- the ability to read a program and know what it will do, to look at generated code and judge whether it is correct, to take a working function and adapt it for a new purpose. This chapter introduces the framework that makes comprehension the foundation of everything you will learn.
+James stares at it. The line reads `validated = {k: v for k, v in raw.items() if k in schema}`. He recognizes the individual words -- `for`, `in`, `if` -- but cannot explain what the line accomplishes. He generated fifty lines of working code and understands none of them.
 
----
+"Speed means nothing without comprehension," Emma says. "If you cannot read the code your AI produces, you cannot verify it, debug it, or adapt it. You are not programming. You are copying."
 
-## What Is PRIMM?
-
-PRIMM is a structured approach to teaching programming developed by computing education researchers **Sue Sentance**, **Jane Waite**, and **Maria Kallia** at King's College London and Queen Mary University of London. First presented in 2017 and formally published in *Computer Science Education* (2019) based on a mixed-methods study with 493 students across 13 schools, PRIMM stands for five sequential stages:
-
-1. **Predict** -- Read something complete and predict what it will do before you see the result.
-2. **Run** -- Execute it and compare the actual result to your prediction.
-3. **Investigate** -- Explore how and why it behaves the way it does.
-4. **Modify** -- Change it in targeted ways that demonstrate your understanding.
-5. **Make** -- Create something new from scratch to solve a related problem.
-
-The framework is grounded in **Lev Vygotsky's sociocultural theory of learning**, which holds that knowledge transfers from the social plane (discussion, collaboration, shared reasoning) to the cognitive plane (individual understanding). In practical terms: you learn programming by reading code, talking about code, and reasoning about code *before* you ever try to write it yourself.
-
-This is the opposite of how most programming courses work. Most courses begin with "write a program that prints Hello World" -- the Make stage -- and expect learners to somehow absorb reading, comprehension, and debugging skills along the way. PRIMM inverts this. You start by reading, and you arrive at writing only after you have built the comprehension skills to do it with confidence.
-
-Think of it this way: you do not learn a new spoken language by writing essays on your first day. You start by reading sentences, recognizing words, and building comprehension. Writing comes after you can read -- because writing requires you to *produce* what reading only requires you to *recognize*. PRIMM applies the same principle to programming.
-
-The research results are clear. Learners using PRIMM outperformed control groups on post-tests, and teachers reported that the approach was particularly effective for mixed-ability classes -- enabling all learners, not just the strongest ones, to make progress.
+This lesson introduces the framework that solves this problem: **PRIMM** -- Predict, Run, Investigate, Modify, Make. It is a research-validated method that teaches you to read and understand code before you ever try to write it. In the AI era, where code generation is nearly free, PRIMM's emphasis on comprehension is more relevant than it was when it was invented.
 
 ---
 
-## The Five Stages
+## The Research Behind PRIMM
 
-### Predict: Read Before You Run
+PRIMM was created by **Sue Sentance** and **Jane Waite**, who introduced the framework in a 2017 paper presented at the WiPSCE conference in Nijmegen, the Netherlands. **Maria Kallia** joined the research team for the 2019 publications that provided the framework's empirical foundation.
 
-You are shown something complete -- a recipe, a set of driving directions, a circuit diagram, or (once you start programming) a short program. Your task is to predict what it will produce before you see the result.
+The landmark study was published in 2019 as "Teaching computer programming with PRIMM: a sociocultural perspective" in *Computer Science Education*, Vol. 29, No. 2-3, pp. 136-176 (DOI: 10.1080/08993408.2019.1608781). A companion paper, "Teachers' Experiences of using PRIMM to Teach Programming in School," appeared in the *Proceedings of SIGCSE '19*, pp. 476-482 (DOI: 10.1145/3287324.3287477).
 
-When you predict, several things happen in your brain simultaneously. You are reading the material, which means you are parsing its structure. You are reasoning about sequence -- what happens first, second, third. You are building a **mental model** of how the thing behaves. And you are committing to an answer, which means you will notice when reality differs from your expectation.
+The study was mixed-methods and quasi-experimental, conducted with **493 students across 13 schools in England**, with students aged 11-14. The key finding: **learners using PRIMM outperformed control groups on post-tests**. The framework proved particularly effective for mixed-ability classes -- students of different skill levels all benefited from the structured progression.
 
-The prediction does not need to be perfect. The point is not to get the right answer -- it is to *engage* with the material before seeing the result. Even an incorrect prediction is pedagogically valuable, because the gap between your prediction and the actual outcome is where deep learning happens.
+PRIMM is grounded in **Lev Vygotsky's sociocultural theory of learning** -- the idea that knowledge transfers from the social plane (discussion, collaboration, shared language) to the cognitive plane (individual understanding). Language acts as a mediator: when students talk about code before writing it, they build the vocabulary and mental models that make writing possible. Vygotsky's concept of the *Zone of Proximal Development* -- the gap between what a learner can do alone and what they can do with guidance -- is exactly what PRIMM targets. Each stage provides just enough scaffolding to pull learners into new territory.
 
-**Everyday analogy.** Imagine reading a recipe for the first time: flour, sugar, butter, eggs, baking powder, vanilla, and an oven set to 175 degrees Celsius. Before you bake anything, you predict the outcome. "This will produce a cake -- probably a vanilla sponge." You might be wrong about the texture or the rise, but the act of predicting forces you to engage with the ingredients and the process. You are not passively scanning -- you are actively constructing an expectation.
+Since its publication, PRIMM has been adopted in **England** (where the studies took place), **Germany** (Bavarian school textbooks), the **USA** (CodeHS platform), **Hong Kong**, **Norway**, **Argentina**, **Tasmania** (Australia), and **Turkey**. The four core publications have accumulated **188 citations** as of March 2024. The current research home is the Raspberry Pi Computing Education Research Centre at https://computingeducationresearch.org/projects/primm/.
 
-### Run: Test Your Mental Model
+### The Inversion That Makes PRIMM Different
 
-Now you execute and compare the result to your prediction. You bake the cake and see what comes out of the oven.
+Most programming courses start at the end. Lesson one: write a Hello World program. Lesson two: write a program that adds numbers. The assumption is that writing code teaches you to understand it.
 
-If your prediction matched -- "I expected a sponge cake and got a sponge cake" -- you have evidence that your mental model is accurate. If it did not match -- "I expected a sponge but got something dense and flat" -- you have something even more valuable: a specific, concrete discrepancy that your brain will work to resolve.
+PRIMM inverts this. It starts at the beginning -- **reading** -- and works toward writing. The five stages are:
 
-Running something is trivially easy. Anyone can press a button and see the output. But running *after predicting* transforms a mechanical act into a learning event. The difference between "I ran it and saw the result" and "I predicted X but got Y" is the difference between passive exposure and active learning. The prediction creates a stake. The comparison creates understanding.
+1. **Predict** -- Read code and predict what it will do *before* running it
+2. **Run** -- Execute the code and compare the actual output to your prediction
+3. **Investigate** -- Probe the code: trace variables, test edge cases, ask questions
+4. **Modify** -- Change the code to alter its behavior in targeted ways
+5. **Make** -- Write a new program that applies what you learned
 
-**Everyday analogy.** You predict that taking the highway will get you to the airport in 40 minutes. You drive the route and it takes 55 minutes because of construction. That 15-minute gap is memorable. Next time, you account for construction. Without the prediction, you would have arrived in 55 minutes and thought nothing of it. With the prediction, you learned something about the route.
+Four of the five stages build understanding. Only the last one involves writing from scratch. This is not an accident. It reflects what the research showed: comprehension is the foundation that makes production possible.
 
-### Investigate: Understand Deeply
+---
 
-You already know *what* happened. The Investigate stage asks: *how* does it work, and *why*?
+## The Five Stages in Action
 
-Investigation takes many forms. You trace through the process step by step. You ask targeted questions: "What would happen if I changed this one ingredient?" You test edge cases: "What if I doubled the sugar? What if I left out the baking powder entirely?"
+To see how PRIMM works in practice, we will walk through all five stages using a single Python program.
 
-The Investigate stage is where you build what researchers call a **mental model** of the underlying mechanism. A mental model is not a memorized definition -- it is a working internal simulation that lets you predict what will happen in *new* situations. The person who memorizes "baking powder makes things rise" has a definition. The person who understands *why* baking powder makes things rise -- that it produces carbon dioxide when it reacts with moisture and heat, creating air pockets in the batter -- has a mental model. The mental model transfers to new contexts. The definition does not.
+> **About the code below:** You have not learned Python yet. That is the point. You are seeing what the PRIMM process looks like with real code. Focus on the *process*, not the syntax. When you encounter Python in Chapter 33, you will already know how to approach it.
 
-**Everyday analogy.** You are learning why a particular recipe produces a moist cake. You investigate: the recipe calls for buttermilk, which is acidic, and uses baking soda, which reacts with acid to produce gas. That is why the cake rises and stays moist -- the acid-base reaction creates texture while the buttermilk adds richness. You did not just memorize the recipe. You understand the chemistry well enough to troubleshoot a flat cake or substitute yogurt for buttermilk.
+### Stage 1: Predict
 
-### Modify: Adapt with Purpose
+Read the following program. Do not run it. Do not scroll past it. Stop and predict what it will print.
 
-You now understand how it works. The Modify stage asks you to change it -- not to start over from scratch, but to make targeted alterations that demonstrate your understanding while working within the safety net of something that already functions.
+```python
+names: list[str] = ["Amara", "Kenji", "Sofia", "Liam"]
+greeting: str = "Welcome to the Agent Factory"
 
-Each modification requires you to understand the existing material well enough to know *where* to make changes and *what* those changes will do. Modify is the bridge between reading and writing. It is scaffolded creation -- you are producing something new, but you are doing it within a structure that constrains the problem and provides immediate feedback.
+for name in names:
+    message: str = f"{greeting}, {name}!"
+    print(message)
+```
 
-**Everyday analogy.** You take the vanilla sponge recipe and adapt it. You substitute cocoa powder for some of the flour to make a chocolate cake. You reduce the sugar because cocoa is bitter and needs less sweetness to balance. You adjust the baking time because the denser batter needs longer in the oven. Each modification requires you to understand the original recipe well enough to predict the effect of your changes. You are not inventing a cake from nothing -- you are demonstrating mastery by adapting what exists.
+**What happens in your brain when you predict:**
 
-### Make: Create with Confidence
+1. **Parsing structure.** You notice a list of names, a greeting string, and a `for` loop. Even without knowing Python syntax, you can see that the loop does something with each name.
+2. **Reasoning about sequence.** The loop processes names in order -- Amara first, then Kenji, then Sofia, then Liam. The `f"{greeting}, {name}!"` combines the greeting with each name.
+3. **Building a mental model.** You construct a picture: the program will print four lines, each combining the greeting with one name.
+4. **Committing to an answer.** You write down (or say aloud) what you think the output will be. This commitment is critical -- a vague sense of "it probably prints greetings" is not a prediction. A prediction is specific and falsifiable.
 
-Finally, you create something from scratch. But "from scratch" does not mean "without any support." Make means: given what you have learned through predicting, running, investigating, and modifying, solve a new but related problem.
+Write your prediction now before reading further.
 
-This task requires you to transfer what you learned to a new context. You are not copying. You are applying understanding. If you learned the principles of cake baking through the first four stages, the Make stage might ask you to create a recipe for muffins -- a related but different challenge that requires you to apply the same techniques (leavening, fat ratios, oven temperatures) in a new configuration.
+### Stage 2: Run
 
-Notice the critical point: **you arrive at Make only after four stages of preparation.** By the time you sit down to create something new, you have already read something complete, predicted its behavior, executed it and compared your prediction, investigated its mechanics, and modified it with purpose. Creating becomes the natural next step, not a terrifying leap into the unknown.
+Here is the actual output:
+
+**Output:**
+
+```
+Welcome to the Agent Factory, Amara!
+Welcome to the Agent Factory, Kenji!
+Welcome to the Agent Factory, Sofia!
+Welcome to the Agent Factory, Liam!
+```
+
+Compare your prediction to the actual result. Three outcomes are possible:
+
+- **Exact match.** Your mental model is accurate for this code pattern. Good -- but do not stop here. Investigate why it worked.
+- **Close but not exact.** Perhaps you predicted the right content but the wrong format (missing the exclamation mark, for example). The gap reveals what your mental model missed.
+- **Significantly wrong.** This is not failure -- it is the most valuable outcome. The gap between your prediction and reality is exactly where learning happens. Every wrong prediction exposes an assumption you did not know you were making.
+
+The prediction-reality gap is the engine of PRIMM. Without the prediction step, running code teaches you nothing -- you see output and think "okay." With the prediction step, you have a hypothesis to test. That transforms passive observation into active learning.
+
+### Stage 3: Investigate
+
+Investigation means probing the code to build deeper understanding. Here are the kinds of questions you ask:
+
+**Tracing variables.** What is the value of `name` during the first iteration of the loop? It is `"Amara"`. During the second? `"Kenji"`. What is `message` at each step? Tracing forces you to simulate the computer's execution in your head -- the single most important skill in programming.
+
+**Testing edge cases.** What happens if `names` is an empty list? The loop body never executes. No output is printed. The program does not crash -- it simply does nothing. Understanding this behavior teaches you how `for` loops handle the boundary between "some items" and "no items."
+
+**Using AI as an investigation partner.** This is where your AI coding assistant becomes genuinely useful -- not to generate code, but to answer questions about code you are reading:
+
+```
+I am reading a Python program that uses a for loop over a list of strings.
+The list is: ["Amara", "Kenji", "Sofia", "Liam"]
+Inside the loop, it builds a formatted string using an f-string.
+
+Question: What would happen if I added a duplicate name to the list,
+like ["Amara", "Kenji", "Sofia", "Liam", "Amara"]? Would the program
+skip the duplicate or print it twice?
+```
+
+Your AI assistant will explain that Python lists allow duplicates, so `"Amara"` would print twice. But here is the critical rule of investigation:
+
+**Verify every AI explanation by running the code yourself.** The AI might be wrong. It might be right but imprecise. The only way to know is to run the experiment. Investigation is not about getting answers -- it is about building the habit of questioning and verifying.
+
+### Stage 4: Modify
+
+Modification requires understanding *where* to change code and *what* the change will do. Each task below demands more comprehension than the last.
+
+**Add a counter.** Print a number before each greeting so the output reads `1. Welcome to the Agent Factory, Amara!` and so on. You need to figure out where to introduce a counter variable and how to increment it inside the loop.
+
+**Add a conditional.** Print a special message for one name -- for example, `"Welcome to the Agent Factory, Sofia! (Team Lead)"` while keeping the standard greeting for everyone else. This requires understanding how to add a condition inside the loop body.
+
+**Reverse the list.** Make the greetings print in reverse order -- Liam first, Amara last -- without changing the list itself. You need to find a way to iterate backwards.
+
+Each modification is small, but each one forces you to understand a different aspect of the program. You cannot add a counter without understanding the loop. You cannot add a conditional without understanding how Python evaluates conditions. You cannot reverse iteration without understanding how lists work.
+
+### Stage 5: Make
+
+Now -- and only now -- you write a new program. The goal is a **team directory** that stores each person's name and role, then prints a formatted roster. The process:
+
+1. **Write a specification first.** Before touching code, describe what the program should do: "Given a collection of team members with names and roles, print each member's name and role in a formatted line."
+
+2. **Attempt it yourself.** Try writing the code based on what you learned from the greeting program. You will not get it perfect. That is expected.
+
+3. **Use AI for targeted help.** When you get stuck, ask a specific question -- not "write me a team directory" but "I have a list of dictionaries in Python. How do I access the value for a specific key inside a for loop?"
+
+4. **Run your code through the Predict-Run cycle.** Before executing your new program, predict what it will output. Then run it. Compare. This is PRIMM applied recursively -- you are now using the method to verify your own work.
+
+The Make stage completes the cycle. You started by reading someone else's code. You end by writing your own. Every stage in between built the comprehension that makes writing possible.
 
 ---
 
 ## The Comprehension Crisis
 
-Why does a framework developed for classroom teaching in 2017 matter even more in 2026?
+PRIMM was created in 2017 for secondary school classrooms. Why does it matter *more* in 2026 than it did then?
 
-Because AI coding assistants have made the final step of programming -- generating code -- nearly free. Any beginner can describe what they want and get a working result in seconds. This is extraordinary. But it creates a pedagogical trap.
+Because AI changed the economics of code production. Before AI coding assistants, writing code was slow and expensive. A developer spent hours translating requirements into syntax, debugging typos, looking up API signatures. The bottleneck was **production** -- the act of turning ideas into running code.
 
-If a learner can get working code without understanding it, and if that working code appears to solve their problem, what incentive do they have to learn? The incentive is invisible until it is not: the code breaks, the requirements change, the AI misunderstands a subtle constraint, or the learner is asked to debug a system they cannot read. At that point, the gap between "I can prompt AI" and "I understand programming" becomes a chasm.
+AI made production nearly free. A well-crafted prompt generates a working function in seconds. But this created a new problem: **working code without understanding**. James's fifty lines of Python work perfectly -- and he cannot explain what line twelve does. He has a program. He does not have knowledge.
 
-The bottleneck in software development has shifted.
+This is the pedagogical trap of the AI era. Students can produce code faster than ever, but the speed creates an illusion of competence. The bottleneck has shifted.
 
 | Era | Bottleneck | Primary Skill | What Slows You Down |
 |-----|-----------|---------------|---------------------|
-| **Pre-AI** | Writing code | Typing, syntax recall, API lookup | Producing code from scratch |
-| **AI era** | Verifying code | Reading, predicting, tracing | Deciding whether generated code is correct |
+| Pre-AI | Writing code | Typing, syntax recall, API lookup | Producing code from scratch |
+| AI era | Verifying code | Reading, predicting, tracing | Deciding whether generated code is correct |
 
-PRIMM prevents this crisis by making comprehension the *primary* activity and code generation the *final* activity. Four of the five stages -- Predict, Run, Investigate, Modify -- are about building understanding. Only the last stage involves writing new code. This ratio is exactly right for the AI era: the ability to read, evaluate, trace, and adapt code is now more valuable than the ability to write it from scratch, because writing from scratch is what AI does best.
+Look at PRIMM's structure through this lens. Four of five stages -- Predict, Run, Investigate, Modify -- build the verification skills that are now the bottleneck. Only one stage -- Make -- involves writing from scratch. **PRIMM's 4:1 ratio of understanding to production is exactly right for an era where production is cheap and verification is expensive.**
+
+---
 
 :::note If you are new to programming
-This is good news. You are not starting behind -- you are starting in position. The most important programming skill in 2026 is not typing speed or syntax memorization. It is the ability to read code and predict what it does. PRIMM builds that skill from your very first lesson.
+This is good news. The most important programming skill in 2026 is not typing speed or syntax memorization. It is the ability to read code and predict what it does. PRIMM builds that skill from your very first lesson. You are starting with the skill that matters most.
 :::
 
 :::note If you have coded before
-You already do this informally. When you review a pull request, you read the code, predict its behavior, investigate edge cases, and suggest modifications. PRIMM formalizes the process you probably already use by instinct -- and gives you a structured vocabulary for a skill you have been practicing without naming it.
+You already do this informally when reviewing pull requests or debugging a colleague's code. PRIMM formalizes the process and gives you structured vocabulary for a skill you have been practicing by instinct. The framework will sharpen what you already know.
 :::
 
 ---
 
 ## Key Takeaways
 
-1. **PRIMM is a research-validated framework** developed by Sentance, Waite, and Kallia (2019), tested with 493 students across 13 schools, and grounded in Vygotsky's sociocultural learning theory.
-
-2. **The five stages are sequential**: Predict, Run, Investigate, Modify, Make. Each stage builds on the one before it, progressing from pure comprehension to guided creation.
-
-3. **Comprehension comes before production.** Four of five stages are about understanding. Only the final stage involves creating something new. This ratio is deliberate.
-
-4. **The comprehension crisis is real.** AI can generate code cheaply. The bottleneck has shifted from writing to verifying. PRIMM builds the verification skills that AI cannot replace.
-
-5. **You arrive at Make prepared, not panicked.** By the time you create something from scratch, you have already predicted, run, investigated, and modified. Writing becomes the natural next step.
+- **PRIMM stands for Predict, Run, Investigate, Modify, Make** -- a five-stage method that starts with reading code and ends with writing it.
+- **The research is robust**: 493 students, 13 schools, quasi-experimental design. Learners using PRIMM outperformed control groups, especially in mixed-ability classes.
+- **The theory is Vygotsky's sociocultural learning**: knowledge moves from social interaction (discussing code) to individual understanding (writing code). Language mediates the transfer.
+- **The prediction-reality gap is the learning engine**: committing to a prediction before running code turns passive observation into active hypothesis testing.
+- **PRIMM's 4:1 comprehension-to-production ratio matches the AI era**, where generating code is cheap but verifying code is the bottleneck skill.
 
 ---
 
 ## Looking Ahead
 
-You now know the method. In the next lesson, you will see how AI coding assistants fit into each stage -- transforming PRIMM into **PRIMM-AI**. You will learn the five rules that govern every interaction with your AI partner, and you will see how the PRIMM-AI cycle maps directly to the professional workflow used by working developers every day.
-
-The framework is set. The AI integration comes next.
+You now know the method. In the next lesson, you will see how AI coding assistants integrate into each PRIMM stage -- transforming PRIMM into **PRIMM-AI**, the learning operating system you will use throughout every programming chapter in this book.
 
 ---
 
 ## Try With AI
 
-Open any AI assistant (Claude, ChatGPT, Gemini, or another tool you have access to) and try these prompts. You do not need Python installed yet -- these are conceptual explorations.
-
-### Prompt 1: Test Your Understanding of PRIMM
+### Prompt 1: Explore the Prediction Process
 
 ```
-A friend tells you: "Learning frameworks are a waste of time. Just start
-coding and you'll figure it out." You've just read about PRIMM -- a method
-where you predict, run, investigate, and modify code before ever writing
-your own.
+I am learning the PRIMM framework for reading code. Here is a short Python program:
 
-Give me three specific arguments for why starting with reading and
-predicting (the PRIMM approach) builds a stronger programmer than
-jumping straight to writing code. Use concrete examples, not
-abstract principles.
+numbers: list[int] = [10, 20, 30, 40, 50]
+total: int = 0
+
+for num in numbers:
+    total = total + num
+
+print(f"The sum is {total}")
+
+Before you tell me the answer, ask me what I think the output will be.
+After I give my prediction, show me the actual output and explain
+any differences. Then ask me one investigation question about the code.
 ```
 
-**What you are learning:** You are testing whether you can articulate the pedagogical logic behind PRIMM to a skeptic. Compare the AI's arguments with what you read in this lesson. Does it mention the prediction-gap mechanism -- that committing to a prediction creates a measurable discrepancy that drives learning? If not, push back and ask about it specifically. Evaluating an AI's explanation against your own understanding is itself a comprehension skill.
+**What you are learning:** The Predict-Run-Investigate cycle with AI as a structured learning partner. The prompt asks AI to *quiz you* rather than *give you answers* -- this keeps you in the active learning role that PRIMM requires.
 
-### Prompt 2: The Comprehension Shift
+### Prompt 2: Investigate an Edge Case
 
 ```
-Before AI coding assistants, the hardest part of programming was writing
-code from scratch. Now AI can generate code in seconds. Explain why this
-shift makes reading code MORE important, not less important. Include a
-realistic scenario where someone who can prompt AI but cannot read the
-output would get into serious trouble.
+I am practicing the Investigate stage of PRIMM. Here is a program:
+
+names: list[str] = ["Amara", "Kenji", "Sofia", "Liam"]
+greeting: str = "Welcome to the Agent Factory"
+
+for name in names:
+    message: str = f"{greeting}, {name}!"
+    print(message)
+
+I want to investigate what happens when things change. Walk me through
+these scenarios one at a time, asking me to predict before revealing
+the answer each time:
+
+1. What if the list has only one name?
+2. What if the list is empty?
+3. What if I change the greeting string to an empty string ""?
+4. What if I accidentally use 'Name' (capital N) instead of 'name' in the f-string?
+
+For each one, explain WHY the output is what it is.
 ```
 
-**What you are learning:** You are exploring the comprehension crisis -- the central argument for why PRIMM matters more in 2026 than it did when the framework was created. The AI's scenario should illustrate a concrete failure mode: generated code that looks correct but contains a subtle bug that only a reader (not a prompter) would catch. If the AI gives a vague answer, ask for specifics: "What exact bug? What would happen in production?"
+**What you are learning:** Systematic investigation through edge-case exploration. Each scenario tests a different assumption about how the code works -- list length, empty inputs, variable naming -- and builds your mental model of Python's behavior through concrete experiments rather than abstract rules.
