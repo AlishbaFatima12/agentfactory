@@ -178,9 +178,9 @@ Three agentic systems are moving from prototype to production deployment.
 
 **Requirements:** Cowork or Claude (any plan). A hypothetical or real tax scenario. If you need a ready-made scenario, download the Crescent Textiles entity profile from the companion repository: [`crescent-textiles.md`](https://github.com/panaversity/ca-cpa-practice-agents/blob/main/exercises/entity-profiles/crescent-textiles.md) (PKR 500M textile manufacturer with export/domestic split).
 
-1. **Research a tax question.** Present this prompt to your AI assistant:
+1. **Research a tax question.** Using the Crescent Textiles entity profile (downloaded above), present this prompt to your AI assistant:
 
-   _"A Pakistani company has earned dividend income from a foreign subsidiary. What are the withholding tax implications under Pakistan's tax law, and what reliefs or exemptions might apply? Structure your answer as a technical memo with: the issue, the relevant statutory provisions, the analysis, and the conclusion."_
+   _"Crescent Textiles Ltd, a Pakistani textile manufacturer with PKR 500M revenue and both export and domestic operations, has earned dividend income from a foreign subsidiary. What are the withholding tax implications under Pakistan's tax law, and what reliefs or exemptions might apply? Structure your answer as a technical memo with: the issue, the relevant statutory provisions, the analysis, and the conclusion."_
 
 2. **Identify uncertainty.** Review the memo and ask:
 
