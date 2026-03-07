@@ -139,6 +139,12 @@ _Part 5 teaches you to build custom AI employees with the same framework that po
 
 ---
 
+## Security & Privacy Deep Dive (especially for NanoClaw fans)
+
+Security remains a top concern in 2026. NanoClaw's sealed-container approach (no outbound traffic without explicit grant) makes it the safest for IP-sensitive work — audit the ~3k-line codebase yourself. OpenClaw offers local-run flexibility but defaults to cloud models (use DeepSeek local for zero-cloud). Claude Cowork and Code run in Anthropic's secure environment with enterprise controls (private plugins, audit logs), but never expose raw source to the provider. For regulated teams (finance, healthcare), combine NanoClaw + air-gapped models.
+
+---
+
 ## Your Journey Through the Book
 
 | Book Section                              | What You're Learning                              | Primary AI Employee | Supporting  |
@@ -166,6 +172,20 @@ This comparison is not ranking these tools from “best” to “worst.” It co
 
 ---
 
+## Trade-offs & Real-World Performance Notes
+
+No single agent wins every scenario — here are quick trade-offs based on early 2026 user reports and internal benchmarks:  
+- Claude Code leads in interactive speed and step-by-step reasoning (often 20–40% higher success on multi-file refactors), but can feel "chatty" for one-shot tasks.  
+- Codex (GPT-5.3-Codex) excels at long-horizon planning and parallel subtasks in cloud mode (up to 5× token efficiency on complex architectures), yet local CLI mode lags behind Claude Code on latency.  
+- OpenClaw shines for always-on personal automation (5,700+ community skills), but requires more prompt engineering to match Claude Code's out-of-box reliability.  
+- NanoClaw trades some speed for ironclad security (zero unintended network calls in sealed mode), making it the go-to for regulated industries.  
+- Cowork dominates non-technical workflows (Excel + Gmail + /schedule automation), but lacks the deep code understanding of Claude Code or Codex.  
+
+Real costs vary: heavy Claude Code fleets average $25–60/month; mixing DeepSeek-backed OpenClaw drops that to $10–25. Test failure modes yourself — most users run A/B fleets for 2–4 weeks.
+
+
+---
+
 ## The Big Picture: Your Agent Fleet
 
 Nobody uses just one AI employee. The most effective setup in 2026 is a fleet — General Agents handling your day-to-day work, Personal AI Employees running autonomously in your messaging apps and business workflows.
@@ -173,5 +193,21 @@ Nobody uses just one AI employee. The most effective setup in 2026 is a fleet �
 A fleet does not mean using every tool every day. In practice, most people will have one daily driver and one specialist: for example, Claude Code plus OpenClaw, or Cowork plus NanoClaw, or Claude Code plus Codex. The goal is not tool collection. The goal is coverage: one agent for your default workflow, and one agent for the jobs your default tool is not built to do.
 
 General Agents are what you *use*. Personal AI Employees are what you *build and deploy* — and eventually, sell. This book teaches you both sides: how to get maximum leverage from Claude Code, Cowork, and Codex today, and how to build your own Digital FTEs with OpenClaw and NanoClaw that other people will pay to use.
+
+---
+
+## Migration & Fleet Evolution
+
+Your fleet will evolve — start small, then layer. A common path: Day 1 = OpenClaw + Claude Code/Cowork → Month 3 = Add Codex for tough engineering → Month 6 = Introduce NanoClaw for sensitive tasks or build custom agents via SKILL.md/SOUL.md.
+
+Migration tips: Export/import SKILL.md patterns across agents; use ClawHub community skills as a bridge; monitor token spend weekly (Chapter 3 covers optimization scripts). Many readers report 2–3× productivity gains after combining 3+ agents, but avoid tool sprawl — cap at 4–5 core tools unless you're building for clients.
+
+---
+
+## Beyond the Core Fleet: Exploring Alternatives
+
+While Claude Code, Cowork, and NanoClaw form a strong foundation, 2026's agent landscape is far more diverse. Open-source frameworks like Gemini CLI, Qwen Code, LangGraph, CrewAI, and AutoGen power multi-agent fleets for complex orchestration, often at lower cost when paired with models from DeepSeek, or Qwen. No-code/low-code builders (Vellum, Microsoft Copilot Studio, Zapier Central, Salesforce Agentforce) let non-technical teams deploy agents faster without SDKs or terminals.
+
+For pure open-model fans, tools built on Llama 4, DeepSeek, Mistral, or Gemma offer fully local or self-hosted options with zero cloud dependency — ideal if privacy trumps speed. The book focuses on Claude Code + companions because they deliver the highest leverage today for most readers, but experiment with one alternative per quarter to future-proof your fleet.
 
 _Last updated: March 2026_
