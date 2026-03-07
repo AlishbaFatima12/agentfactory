@@ -189,7 +189,7 @@ At the service level, fully automated reporting platforms are emerging as a busi
 
 **What you'll build:** A structured month-end close workflow using AI assistance, mapping the boundary between what the agent can execute and what requires your professional judgment.
 
-**Requirements:** Cowork (Team or Enterprise plan) or Claude with file access. Trial balance data in Excel or CSV format. If you do not have real data, download the ready-made Crescent Textiles trial balance from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) — use the `ca-cpa-exercise-data.zip` download and find `exercises/trial-balances/textile-manufacturer-tb.csv` (PKR-denominated, ~35 IFRS accounts).
+**Requirements:** Cowork (Team or Enterprise plan) or Claude with file access. Trial balance data in Excel or CSV format. If you do not have real data, download the ready-made Crescent Textiles trial balance from the companion repository: [`textile-manufacturer-tb.csv`](https://raw.githubusercontent.com/panaversity/ca-cpa-practice-agents/main/exercises/trial-balances/textile-manufacturer-tb.csv) (PKR-denominated, ~35 IFRS accounts).
 
 1. Place your trial balance data in a Cowork folder. Ask Claude:
 

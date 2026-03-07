@@ -132,7 +132,7 @@ This lab contains four exercises across two domains. Exercises 18-19 cover manag
 
 **Requirements for all exercises:** Cowork (Team or Enterprise) with `finance@knowledge-work-plugins` installed. Exercise 19 also requires Claude in PowerPoint.
 
-**Companion files:** Download exercise data files from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) (`ca-cpa-exercise-data.zip`) — `exercises/` contains cash flow model templates, board pack structures, risk register templates, and a Pakistan regulatory obligations reference. Or clone [the repo](https://github.com/panaversity/ca-cpa-practice-agents) directly.
+**Companion files:** These exercises use hypothetical data provided inline. For a Pakistan regulatory obligations reference, see the companion repository: [`compliance-calendar/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills/compliance-calendar).
 :::
 
 ---
@@ -383,7 +383,6 @@ first, and why?
 ```
 
 **What you are learning:** Compliance risk prioritisation requires weighing financial penalties, reputational damage, and personal liability for officers. By ranking actual compliance failures by overall severity rather than chronological order, you develop the judgment to present compliance status to the Audit Committee in a way that focuses their attention on what matters most — not what happened most recently.
-
 
 ---
 

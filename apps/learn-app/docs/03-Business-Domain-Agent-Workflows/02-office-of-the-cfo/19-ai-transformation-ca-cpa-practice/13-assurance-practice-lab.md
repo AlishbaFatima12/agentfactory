@@ -118,7 +118,7 @@ This lab contains three exercises. Each builds a complete professional deliverab
 
 **Requirements for all exercises:** Cowork (Team or Enterprise) with `finance@knowledge-work-plugins` installed.
 
-**Companion files:** Download exercise data files from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) (`ca-cpa-exercise-data.zip`) — `exercises/working-papers/` contains audit working paper templates and sample data. Or clone [the repo](https://github.com/panaversity/ca-cpa-practice-agents) directly.
+**Companion files:** Download working paper templates from the companion repository: [`audit-planning-template.md`](https://github.com/panaversity/ca-cpa-practice-agents/blob/main/exercises/working-papers/audit-planning-template.md) and [`revenue-testing-template.md`](https://github.com/panaversity/ca-cpa-practice-agents/blob/main/exercises/working-papers/revenue-testing-template.md). Exercise 16 also uses [`source-documents/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/exercises/source-documents).
 :::
 
 ---
@@ -176,7 +176,7 @@ This lab contains three exercises. Each builds a complete professional deliverab
 
 **What you'll build:** A complete continuous transaction monitoring workflow for a manufacturing company's purchase-to-pay cycle — from fraud risk identification through detection rules to automated scheduled monitoring.
 
-**Requirements:** Cowork with `finance@knowledge-work-plugins` installed. Transaction data in Excel format (use sample data from `exercises/source-documents/` or your own).
+**Requirements:** Cowork with `finance@knowledge-work-plugins` installed. Transaction data in Excel format (use [sample data](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/exercises/source-documents) or your own).
 
 ### Steps
 
@@ -210,7 +210,7 @@ This lab contains three exercises. Each builds a complete professional deliverab
 
 **What you'll build:** A complete Internal Audit Report — from raw working papers to board-ready executive summary and audit committee presentation.
 
-**Requirements:** Cowork with `finance@knowledge-work-plugins` installed. Working paper files (create the files below or use samples from `exercises/working-papers/`).
+**Requirements:** Cowork with `finance@knowledge-work-plugins` installed. Working paper files (create the files below or use [samples](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/exercises/working-papers)).
 
 **Set up the working papers.** Create a folder `/inputs/audit-working-papers/` containing three files:
 
@@ -329,7 +329,6 @@ to a board that expects clear, direct communication.
 ```
 
 **What you are learning:** Forming an audit opinion is the highest-value professional judgment in internal audit. The agent can summarise findings and draft language — but the opinion itself requires weighing the severity of findings against the adequacy of management responses and the organisation's risk appetite. This prompt helps you practise the judgment that distinguishes a competent auditor from a mechanical report writer.
-
 
 ---
 
