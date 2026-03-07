@@ -10,7 +10,7 @@ sidebar_position: 0
 
 ## What You Will Learn
 
-Before you write a single line of Python, you need to understand *how* you will learn. This chapter introduces the pedagogical framework that governs all programming instruction in this book: **PRIMM-AI** — Predict, Run, Investigate, Modify, Make *with AI*.
+Before you write a single line of Python, you need to understand *how* you will learn. This chapter introduces the pedagogical framework that governs all programming instruction in this book: **PRIMM-AI** — Predict, Run, Investigate, Modify, Make *with AI*. Built on research-validated principles from computing education, PRIMM-AI teaches you to read and understand code before you ever try to write it — and integrates AI coding assistants as learning partners at every stage.
 
 ## Learning Outcomes
 
@@ -26,7 +26,8 @@ By the end of this chapter, you will be able to:
 
 | # | Lesson | Key Focus |
 |---|--------|-----------|
-| 1 | [How You Will Learn](how-you-will-learn) | PRIMM-AI: the framework for every lesson in this book |
+| 1 | [The PRIMM Framework](the-primm-framework) | The research-validated method: five stages for learning to read code before writing it |
+| 2 | [PRIMM-AI: Learning with an AI Partner](primm-ai-learning-with-ai) | How AI fits into each stage, the five rules, and the connection to professional practice |
 
 ## Prerequisites
 
