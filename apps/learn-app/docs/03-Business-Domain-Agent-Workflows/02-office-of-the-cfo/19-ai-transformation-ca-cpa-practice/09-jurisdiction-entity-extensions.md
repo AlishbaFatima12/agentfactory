@@ -331,7 +331,7 @@ This layering — generic plugin capability, augmented by jurisdiction rules, au
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to practise building jurisdiction and entity extensions.
+Use these prompts in Cowork or your preferred AI assistant to practise building jurisdiction and entity extensions.
 
 ### Prompt 1: Institutional Knowledge Audit
 

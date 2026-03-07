@@ -420,7 +420,6 @@ Because the execution work will no longer obscure it.
 
 ---
 
-<!-- TODO: Update Ch 20 teaser when chapter identity is confirmed -->
 
 ## What Comes Next
 
@@ -430,7 +429,7 @@ The next chapter builds on your domain agent skills to tackle a broader challeng
 
 ## Try With AI
 
-Use these prompts with your preferred AI assistant to deepen your understanding of practice deployment and professional positioning.
+Use these prompts in Cowork or your preferred AI assistant to deepen your understanding of practice deployment and professional positioning.
 
 ### Prompt 1: Deployment Risk Assessment
 

@@ -222,7 +222,7 @@ Step 4 of Practice Exercise 4 makes this explicit: the SKILL.md instruction you 
 
 ## Try With AI
 
-Use these prompts in Cowork, Claude Code, or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Variance Decomposition
 

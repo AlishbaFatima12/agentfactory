@@ -472,7 +472,7 @@ material misstatements.
 
 ## Try With AI
 
-Use these prompts with your preferred AI assistant to explore the integration patterns from these capstone exercises.
+Use these prompts in Cowork or your preferred AI assistant to explore the integration patterns from these capstone exercises.
 
 ### Prompt 1: Cross-Domain Workflow Design
 
