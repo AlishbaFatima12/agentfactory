@@ -106,7 +106,6 @@ teaching_guide:
       expected_response: "Because no model can make a restructuring recommendation without understanding the dynamics between creditors, management credibility, and operational viability. The three scenarios provide the quantitative foundation, but the recommendation requires judgment about which scenario is achievable given the specific circumstances."
 ---
 
-
 # Tax & Advisory Practice Lab
 
 > _"The value of a tax computation tool is not in the arithmetic — it is in knowing which positions are arguable and what the consequences are if the authority challenges them."_
@@ -122,7 +121,7 @@ These three exercises cover the full spectrum of Domain 2 practice: compliance (
 - **Exercise 13** (60 min) — Transaction advisory. Runs M&A financial due diligence with DCF and comparable company analysis. Best for corporate finance and advisory practitioners.
 - **Exercise 14** (45 min) — Restructuring. Models three restructuring scenarios for a distressed company. Best for insolvency and advisory practitioners.
 
-**Data files:** Download hypothetical entity profiles and tax computation templates from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) — use `ca-cpa-exercise-data.zip` and find `exercises/entity-profiles/`. Or clone [the repo](https://github.com/panaversity/ca-cpa-practice-agents) directly.
+**Data files:** Download the entity profiles from the companion repository: [`crescent-textiles.md`](https://github.com/panaversity/ca-cpa-practice-agents/blob/main/exercises/entity-profiles/crescent-textiles.md) and [`karachi-foods.md`](https://github.com/panaversity/ca-cpa-practice-agents/blob/main/exercises/entity-profiles/karachi-foods.md). Each exercise also provides hypothetical data inline.
 :::
 
 ---
@@ -551,7 +550,6 @@ dynamics between the parties.
 ```
 
 **What you are learning:** Restructuring recommendations are not determined by the numbers alone. The achievability of a scenario depends on creditor relationships, management credibility, and operational complexity — factors that no financial model captures. The model tells you what is possible; your judgment tells you what is achievable. This prompt forces you to articulate the difference.
-
 
 ---
 
