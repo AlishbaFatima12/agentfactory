@@ -52,7 +52,7 @@ cognitive_load:
 
 differentiation:
   extension_for_advanced: "Read the 2019 journal paper by Sentance, Waite, and Kallia in Computer Science Education (Vol. 29, No. 2-3) and identify which PRIMM stage maps most closely to code review in professional software engineering."
-  remedial_for_struggling: "Focus on just two stages -- Predict and Run. Practice the predict-then-compare cycle on the greeting program until the gap between expectation and reality feels natural. The other three stages build on this foundation."
+  remedial_for_struggling: "Focus on just two stages -- Predict and Run. Practice the predict-then-compare cycle on the four-line greeting program until the gap between expectation and reality feels natural. The other three stages build on this foundation."
 ---
 
 # The PRIMM Framework
@@ -108,20 +108,20 @@ To see how PRIMM works in practice, we will walk through all five stages using a
 Read the following program. Do not run it. Do not scroll past it. Stop and predict what it will print.
 
 ```python
-names: list[str] = ["Amara", "Kenji", "Sofia", "Liam"]
+name: str = "Amara"
 greeting: str = "Welcome to the Agent Factory"
-
-for name in names:
-    message: str = f"{greeting}, {name}!"
-    print(message)
+message: str = greeting + ", " + name + "!"
+print(message)
 ```
+
+This program has four lines. Even if you have never seen Python before, you can probably guess what each line does -- and that is the point.
 
 **What happens in your brain when you predict:**
 
-1. **Parsing structure.** You notice a list of names, a greeting string, and a `for` loop. Even without knowing Python syntax, you can see that the loop does something with each name.
-2. **Reasoning about sequence.** The loop processes names in order -- Amara first, then Kenji, then Sofia, then Liam. The `f"{greeting}, {name}!"` combines the greeting with each name.
-3. **Building a mental model.** You construct a picture: the program will print four lines, each combining the greeting with one name.
-4. **Committing to an answer.** You write down (or say aloud) what you think the output will be. This commitment is critical -- a vague sense of "it probably prints greetings" is not a prediction. A prediction is specific and falsifiable.
+1. **Parsing structure.** You see three lines that store values (`name`, `greeting`, `message`) and one line that prints something. The word `str` after each colon tells you these values are text.
+2. **Reasoning about sequence.** The program runs top to bottom. First it stores `"Amara"`, then it stores `"Welcome to the Agent Factory"`, then it glues them together with `+`, then it prints the result.
+3. **Building a mental model.** You construct a picture: the program will print one line that combines the greeting with the name.
+4. **Committing to an answer.** You write down (or say aloud) what you think the output will be. This commitment is critical -- a vague sense of "it probably prints a greeting" is not a prediction. A prediction is specific and falsifiable.
 
 Write your prediction now before reading further.
 
@@ -133,15 +133,12 @@ Here is the actual output:
 
 ```
 Welcome to the Agent Factory, Amara!
-Welcome to the Agent Factory, Kenji!
-Welcome to the Agent Factory, Sofia!
-Welcome to the Agent Factory, Liam!
 ```
 
 Compare your prediction to the actual result. Three outcomes are possible:
 
 - **Exact match.** Your mental model is accurate for this code pattern. Good -- but do not stop here. Investigate why it worked.
-- **Close but not exact.** Perhaps you predicted the right content but the wrong format (missing the exclamation mark, for example). The gap reveals what your mental model missed.
+- **Close but not exact.** Perhaps you predicted the right content but missed the comma or the exclamation mark. The gap reveals what your mental model missed.
 - **Significantly wrong.** This is not failure -- it is the most valuable outcome. The gap between your prediction and reality is exactly where learning happens. Every wrong prediction exposes an assumption you did not know you were making.
 
 The prediction-reality gap is the engine of PRIMM. Without the prediction step, running code teaches you nothing -- you see output and think "okay." With the prediction step, you have a hypothesis to test. That transforms passive observation into active learning.
@@ -150,47 +147,50 @@ The prediction-reality gap is the engine of PRIMM. Without the prediction step, 
 
 Investigation means probing the code to build deeper understanding. Here are the kinds of questions you ask:
 
-**Tracing variables.** What is the value of `name` during the first iteration of the loop? It is `"Amara"`. During the second? `"Kenji"`. What is `message` at each step? Tracing forces you to simulate the computer's execution in your head -- the single most important skill in programming.
+**Tracing variables.** What is the value of `name`? It is `"Amara"`. What is `greeting`? It is `"Welcome to the Agent Factory"`. What is `message`? It is the result of joining greeting, a comma and space, the name, and an exclamation mark. Tracing forces you to simulate the computer's execution in your head -- the single most important skill in programming.
 
-**Testing edge cases.** What happens if `names` is an empty list? The loop body never executes. No output is printed. The program does not crash -- it simply does nothing. Understanding this behavior teaches you how `for` loops handle the boundary between "some items" and "no items."
+**Testing edge cases.** What happens if `name` is an empty string `""`? The `+` operator still joins the pieces together, so the output would be `Welcome to the Agent Factory, !` -- a greeting with no name but the comma and exclamation mark still appear. Understanding this teaches you that `+` does not "know" what makes sense. It glues text together exactly as told.
 
 **Using AI as an investigation partner.** This is where your AI coding assistant becomes genuinely useful -- not to generate code, but to answer questions about code you are reading:
 
 ```
-I am reading a Python program that uses a for loop over a list of strings.
-The list is: ["Amara", "Kenji", "Sofia", "Liam"]
-Inside the loop, it builds a formatted string using an f-string.
+I am reading a Python program with these lines:
 
-Question: What would happen if I added a duplicate name to the list,
-like ["Amara", "Kenji", "Sofia", "Liam", "Amara"]? Would the program
-skip the duplicate or print it twice?
+name: str = "Amara"
+greeting: str = "Welcome to the Agent Factory"
+message: str = greeting + ", " + name + "!"
+print(message)
+
+Question: What would happen if I swapped the order and wrote
+name + ", " + greeting instead of greeting + ", " + name?
+What would the output look like?
 ```
 
-Your AI assistant will explain that Python lists allow duplicates, so `"Amara"` would print twice. But here is the critical rule of investigation:
+Your AI assistant will explain that the output would become `Amara, Welcome to the Agent Factory!` -- the name comes first because `+` joins text in the order you write it. But here is the critical rule of investigation:
 
 **Verify every AI explanation by running the code yourself.** The AI might be wrong. It might be right but imprecise. The only way to know is to run the experiment. Investigation is not about getting answers -- it is about building the habit of questioning and verifying.
 
 ### Stage 4: Modify
 
-Modification requires understanding *where* to change code and *what* the change will do. Each task below demands more comprehension than the last.
+Modification requires understanding *where* to change code and *what* the change will do. Each task below demands a little more comprehension than the last.
 
-**Add a counter.** Print a number before each greeting so the output reads `1. Welcome to the Agent Factory, Amara!` and so on. You need to figure out where to introduce a counter variable and how to increment it inside the loop.
+**Change the name.** Replace `"Amara"` with your own name. Predict what the output will be, then run it. This is the simplest modification -- you change one value and the rest follows.
 
-**Add a conditional.** Print a special message for one name -- for example, `"Welcome to the Agent Factory, Sofia! (Team Lead)"` while keeping the standard greeting for everyone else. This requires understanding how to add a condition inside the loop body.
+**Change the greeting.** Replace `"Welcome to the Agent Factory"` with `"Hello from SmartNotes"`. Predict the new output. Now you are changing a different piece and watching how it flows through to the final message.
 
-**Reverse the list.** Make the greetings print in reverse order -- Liam first, Amara last -- without changing the list itself. You need to find a way to iterate backwards.
+**Add a second line of output.** After the existing `print(message)`, add a new line that prints just the name by itself. You need to figure out where to place the new line and what to write.
 
-Each modification is small, but each one forces you to understand a different aspect of the program. You cannot add a counter without understanding the loop. You cannot add a conditional without understanding how Python evaluates conditions. You cannot reverse iteration without understanding how lists work.
+Each modification is small, but each one forces you to understand a different aspect of the program. You cannot change the greeting without understanding which variable feeds into `message`. You cannot add a second print without understanding the order in which lines execute.
 
 ### Stage 5: Make
 
-Now -- and only now -- you write a new program. The goal is a **team directory** that stores each person's name and role, then prints a formatted roster. The process:
+Now -- and only now -- you write a new program from scratch. The goal is a **project badge** that stores a person's name and role, then prints a formatted badge line like `Amara - Team Lead`. The process:
 
-1. **Write a specification first.** Before touching code, describe what the program should do: "Given a collection of team members with names and roles, print each member's name and role in a formatted line."
+1. **Write a specification first.** Before touching code, describe what the program should do: "Given a name and a role, print them on one line separated by a dash."
 
-2. **Attempt it yourself.** Try writing the code based on what you learned from the greeting program. You will not get it perfect. That is expected.
+2. **Attempt it yourself.** Try writing the code based on what you learned from the greeting program. You will need two variables (name and role), one variable that combines them, and a print statement. You will not get it perfect. That is expected.
 
-3. **Use AI for targeted help.** When you get stuck, ask a specific question -- not "write me a team directory" but "I have a list of dictionaries in Python. How do I access the value for a specific key inside a for loop?"
+3. **Use AI for targeted help.** When you get stuck, ask a specific question -- not "write me a badge program" but "How do I join two strings with a dash between them in Python?"
 
 4. **Run your code through the Predict-Run cycle.** Before executing your new program, predict what it will output. Then run it. Compare. This is PRIMM applied recursively -- you are now using the method to verify your own work.
 
@@ -248,15 +248,13 @@ You now know the method. In the next lesson, you will see how AI coding assistan
 ### Prompt 1: Explore the Prediction Process
 
 ```
-I am learning the PRIMM framework for reading code. Here is a short Python program:
+I am learning the PRIMM framework for reading code. Here is a short
+Python program:
 
-numbers: list[int] = [10, 20, 30, 40, 50]
-total: int = 0
-
-for num in numbers:
-    total = total + num
-
-print(f"The sum is {total}")
+first: str = "Agent"
+second: str = "Factory"
+result: str = first + " " + second
+print(result)
 
 Before you tell me the answer, ask me what I think the output will be.
 After I give my prediction, show me the actual output and explain
@@ -270,23 +268,21 @@ any differences. Then ask me one investigation question about the code.
 ```
 I am practicing the Investigate stage of PRIMM. Here is a program:
 
-names: list[str] = ["Amara", "Kenji", "Sofia", "Liam"]
+name: str = "Amara"
 greeting: str = "Welcome to the Agent Factory"
-
-for name in names:
-    message: str = f"{greeting}, {name}!"
-    print(message)
+message: str = greeting + ", " + name + "!"
+print(message)
 
 I want to investigate what happens when things change. Walk me through
 these scenarios one at a time, asking me to predict before revealing
 the answer each time:
 
-1. What if the list has only one name?
-2. What if the list is empty?
-3. What if I change the greeting string to an empty string ""?
-4. What if I accidentally use 'Name' (capital N) instead of 'name' in the f-string?
+1. What if name is an empty string ""?
+2. What if I remove the + "!" at the end?
+3. What if I swap greeting and name in the message line?
+4. What if I write Name (capital N) instead of name on the message line?
 
 For each one, explain WHY the output is what it is.
 ```
 
-**What you are learning:** Systematic investigation through edge-case exploration. Each scenario tests a different assumption about how the code works -- list length, empty inputs, variable naming -- and builds your mental model of Python's behavior through concrete experiments rather than abstract rules.
+**What you are learning:** Systematic investigation through edge-case exploration. Each scenario tests a different assumption about how the code works -- empty inputs, string order, variable naming -- and builds your mental model of Python's behavior through concrete experiments rather than abstract rules.
