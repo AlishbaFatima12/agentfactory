@@ -8,7 +8,7 @@ duration_minutes: 120
 
 primary_layer: "Layer 1"
 layer_progression: "L1 (Manual Foundation)"
-layer_1_foundation: "Hands-on practice applying Lessons 0-7 file processing workflows through 13 guided exercises"
+layer_1_foundation: "Hands-on practice applying Lessons 1-7 file processing workflows through 13 guided exercises"
 layer_2_collaboration: "N/A"
 layer_3_intelligence: "N/A"
 layer_4_capstone: "N/A"
@@ -127,7 +127,7 @@ You don't need to complete all 13 in one sitting. Work through one module at a t
 
 ## Key Differences from Chapter Lessons
 
-In Lessons 0-7, you learned each workflow in isolation with guided walkthroughs. These exercises are different in three ways:
+In Lessons 1-7, you learned each workflow in isolation with guided walkthroughs. These exercises are different in three ways:
 
 - **No step-by-step instructions.** The exercises describe the scenario and the goal. You decide the approach, choose the commands, and handle edge cases yourself.
 - **Build + Debug pairing.** Every module has a Build exercise (apply the workflow) and a Debug exercise (diagnose someone else's mistakes). Debugging someone else's work develops different skills than doing the work yourself — you learn to read logs, compare expected vs. actual state, and trace root causes.
@@ -169,7 +169,7 @@ For each exercise, evaluate yourself on:
 
 ## Module 1: File Investigation
 
-> **Core Skill:** Understanding what you have before changing anything (Lessons 0-1)
+> **Core Skill:** Understanding what you have before changing anything (Lessons 1-2)
 
 <ExerciseCard id="1.1" title="The Project Handoff" />
 
