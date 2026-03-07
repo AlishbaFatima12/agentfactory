@@ -93,7 +93,7 @@ This is the difference between theory and production. In Lessons 1 through 10, y
 
 ## Extending the GP Waterfall
 
-Before running the five tests, you need two additional line items in your model. The GP Waterfall from Lesson 4 calculates Revenue, COGS, and Gross Profit. Production financial models include operating expenses and earnings before interest, taxes, depreciation, and amortisation. Add them now.
+Before running the five tests, you need two additional line items in your model. The GP Waterfall from Lessons 3-5 calculates Revenue, COGS, Gross Profit, WACC, and NPV. Production financial models also include operating expenses and earnings before interest, taxes, depreciation, and amortisation. Add them now.
 
 **New Assumptions (Layer 1):**
 
@@ -125,6 +125,8 @@ Every formula follows the same two patterns from Lesson 4: direct assignment fro
 | **Gross Profit** | 4,000,000   | 4,510,000  | 5,082,000  |
 | **OpEx**         | 5,000,000   | 5,250,000  | 5,512,500  |
 | **EBITDA**       | (1,000,000) | (740,000)  | (430,500)  |
+
+Your model also includes WACC (8.7%) and NPV_Result from Lesson 5. These remain unchanged — the OpEx extension does not affect the WACC or NPV formulas.
 
 The EBITDA is negative because operating expenses exceed gross profit at this scale. That is correct for these assumptions — the model is working. The goal-seeking test in Capability 4 will find the revenue needed to make EBITDA positive.
 

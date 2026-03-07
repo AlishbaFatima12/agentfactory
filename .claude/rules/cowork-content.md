@@ -53,7 +53,7 @@ Lessons 3-7 build ONE model progressively. Each lesson adds to the previous spre
 
 - L03: Assumptions layer
 - L04: Calculation layer
-- L05: LaTeX verification (conceptual — no spreadsheet changes)
+- L05: LaTeX verification (adds WACC + NPV to the model, verifies in LaTeX)
 - L06: Intent Notes
 - L07: What-if and goal-seeking on the built model
 
