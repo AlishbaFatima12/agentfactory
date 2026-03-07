@@ -125,8 +125,8 @@ Watch what Claude Code does.
 Claude Code: I'll search for that tax document. Let me check common
 locations for downloaded PDFs related to taxes.
 
-[Runs: find ~/Downloads ~/Documents -name "*.pdf" -newer "2023-01-01"
-  ! -newer "2024-01-01" 2>/dev/null]
+[Runs: find ~/Downloads ~/Documents -name "*.pdf" -newermt "2023-01-01"
+  ! -newermt "2024-01-01" 2>/dev/null]
 [Runs: find ~/Downloads ~/Documents -iname "*1099*" -o -iname "*tax*"
   -o -iname "*dividend*" 2>/dev/null]
 
@@ -237,8 +237,8 @@ the PDFs to find it?
 ```
 Claude Code: I'll search the content of your PDF files.
 
-[Runs: find ~/Downloads -name "*.pdf" -newer "2025-12-01"
-  ! -newer "2026-01-01" -exec pdftotext {} - 2>/dev/null \;
+[Runs: find ~/Downloads -name "*.pdf" -newermt "2025-12-01"
+  ! -newermt "2026-01-01" -exec pdftotext {} - 2>/dev/null \;
   | grep -l -i "invoice"]
 
 Actually, let me take a better approach — I'll check each PDF
@@ -319,7 +319,7 @@ Consider the mental load difference:
 | Combined tools | How to chain commands with xargs |
 | Agent-directed | What you're looking for          |
 
-The agent knows `find -iname "*pattern*" -newer "date"`. The agent knows `grep -l -i "content"`. You know "it was a tax document from 2023 about dividends."
+The agent knows `find -iname "*pattern*" -newermt "date"`. The agent knows `grep -l -i "content"`. You know "it was a tax document from 2023 about dividends."
 
 Your knowledge is valuable. The agent's command syntax knowledge is mechanical. The combination is powerful.
 
