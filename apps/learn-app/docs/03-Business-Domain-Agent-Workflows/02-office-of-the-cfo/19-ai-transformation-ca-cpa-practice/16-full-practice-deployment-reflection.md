@@ -111,7 +111,6 @@ teaching_guide:
       expected_response: "Because the question is about professional qualification, not species. Many humans can do bookkeeping, but the question targets the specific judgment, liability, and regulatory authority that comes with the CA/CPA qualification — forming audit opinions, signing tax returns, advising on complex regulatory matters."
 ---
 
-
 # Full Practice Deployment and Reflection
 
 > _"The professional who can articulate a clear, specific, honest answer to the question 'What is the work that only I could do?' — and who builds their practice around it — will remain indispensable."_
@@ -127,7 +126,7 @@ The answer is not academic. It is your value proposition.
 ## Exercise 24: Full Practice Deployment — AI-Augmented Practice Stack (75 min)
 
 **Domain:** Cross-domain
-**What you need:** Cowork (Team or Enterprise), the Anthropic finance plugins from Chapters 17-18, your five locally-built SKILL.md extensions from Lessons 9-10, and a real or representative client base. Download the full companion materials from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) — use `ca-cpa-exercise-data.zip` for exercise data, and reference the `reference-skills/` folder for SKILL.md examples and `workflow-recipes/` for scheduling templates.
+**What you need:** Cowork (Team or Enterprise), the Anthropic finance plugins from Chapters 17-18, your five locally-built SKILL.md extensions from Lessons 9-10, and a real or representative client base. Download companion materials from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents): [`reference-skills/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills) for SKILL.md examples and [`workflow-recipes/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/workflow-recipes) for scheduling templates.
 **This is the final capstone exercise for Chapter 19.**
 
 ### Step 1 — Verify the Complete Stack
@@ -230,7 +229,7 @@ For each domain, verify the output references the correct jurisdiction rules and
 
 ### Step 4 — Set Up Scheduled Automations
 
-Configure recurring Cowork tasks using `/schedule` with natural language specifications. For each, paste the workflow recipe text (available in the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents) under `workflow-recipes/`):
+Configure recurring Cowork tasks using `/schedule` with natural language specifications. For each, paste the workflow recipe text (available in the companion repository under [`workflow-recipes/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/workflow-recipes)):
 
 **Monthly tasks:**
 
@@ -420,8 +419,6 @@ Because the execution work will no longer obscure it.
 
 ---
 
-<!-- TODO: Update Ch 20 teaser when chapter identity is confirmed -->
-
 ## What Comes Next
 
 The next chapter builds on your domain agent skills to tackle a broader challenge — applying the same plugin architecture, SKILL.md extension methodology, and professional judgment framework to an entirely new professional domain. The patterns you have learned here transfer directly: domain analysis, Gen-AI vs Agentic AI mapping, plugin deployment, extension building, and the professional judgment boundary. What changes is the professional context, surfacing different tacit knowledge, different governance requirements, and different domain-specific judgments.
@@ -430,7 +427,7 @@ The next chapter builds on your domain agent skills to tackle a broader challeng
 
 ## Try With AI
 
-Use these prompts with your preferred AI assistant to deepen your understanding of practice deployment and professional positioning.
+Use these prompts in Cowork or your preferred AI assistant to deepen your understanding of practice deployment and professional positioning.
 
 ### Prompt 1: Deployment Risk Assessment
 
@@ -508,5 +505,3 @@ initial deployment.
 ```
 
 **What you are learning:** AI deployment is not a one-time event — it requires ongoing maintenance, review, and adaptation. The six-month simulation forces you to think beyond the initial setup to the operational reality: SKILL.md files become stale as regulations change, new AI capabilities emerge that shift the automation boundary, and your professional value proposition evolves. The most important metric is whether the proportion of your time spent on judgment-intensive work has increased relative to execution work.
-
-

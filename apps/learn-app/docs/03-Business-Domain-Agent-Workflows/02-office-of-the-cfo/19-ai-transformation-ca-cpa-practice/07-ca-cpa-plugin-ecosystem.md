@@ -214,7 +214,7 @@ This mapping shows why both layers matter. Layer 1 covers the accounting and man
 
 **What you'll build:** A complete month-end close using sequenced plugin commands — from automated reconciliations through management accounts to variance analysis.
 
-**Requirements:** Cowork (Team or Enterprise plan), trial balance data in Excel or CSV, Claude Desktop. Download the ready-made trial balance from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) (`ca-cpa-exercise-data.zip` → `exercises/trial-balances/textile-manufacturer-tb.csv`) if you do not have your own data.
+**Requirements:** Cowork (Team or Enterprise plan), trial balance data in Excel or CSV, Claude Desktop. Download the ready-made trial balance from the companion repository: [`textile-manufacturer-tb.csv`](https://raw.githubusercontent.com/panaversity/ca-cpa-practice-agents/main/exercises/trial-balances/textile-manufacturer-tb.csv) if you do not have your own data.
 
 1. Create a test folder in Cowork with a trial balance export (real or hypothetical). Set a global Cowork instruction:
 

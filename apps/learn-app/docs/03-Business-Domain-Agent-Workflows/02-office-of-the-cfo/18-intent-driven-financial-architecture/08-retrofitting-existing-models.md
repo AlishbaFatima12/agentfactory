@@ -330,21 +330,58 @@ The workflow is:
 
 This separation is what makes IDFA retrofits trustworthy. The first step is provably lossless. The second step is an informed decision. Mixing them produces neither.
 
-## Exercise: Retrofit Three Calculations
+## Exercise: Retrofit the Chapter 17 Practice Workbook
 
-Take any existing Excel model you have access to — one you built, one you inherited, or a sample model from an online source. Select the three most important calculations (typically revenue, cost, and profit formulas).
+You will retrofit the coordinate-based practice workbook from Chapter 17. If you completed Chapter 17, you already know this model — it uses cell references like `=B14*C5` throughout. Now you will convert it to IDFA compliance.
 
-**For each calculation, execute the five-phase process:**
+**Download the workbook if you do not have it:**
 
-1. **Inspect:** Identify all cells involved — which are inputs, which are formulas, what depends on what
-2. **Name inputs:** Propose an `Inp_` Named Range for every raw value the calculation uses
-3. **Order dependencies:** Determine which formulas must be rewritten first
-4. **Rewrite:** Convert each formula to use Named Ranges, validate the output after each one
-5. **Validate:** Confirm the final outputs match the original values exactly
+<a href="/downloads/ch17/ch17_veeva_practice_workbook.xlsx" download>Download Practice Workbook (ch17_veeva_practice_workbook.xlsx)</a>
 
-**What to document:** For each formula you rewrite, record the original coordinate formula, the business rule it encodes, the Named Range equivalent, and whether the output matched. If any output does not match, classify the discrepancy as an original model error or an inference error, and explain your reasoning.
+### Step 1 — Inspect the Model
 
-**The business bottom line:** The model you just worked on was a black box thirty minutes ago. Now its three most important calculations read as business rules. The analyst who inherits this model next will understand those formulas without clicking through cell references. That is what legacy model rescue looks like — not rebuilding, not guessing, but making the existing logic visible one formula at a time.
+Open the workbook in Cowork and type:
+
+```
+Inspect this spreadsheet. List every formula and every hardcoded
+value. For each hardcoded value, tell me what it likely represents
+based on its row and column headers. For each formula, list the
+cells it references. Then organise everything into two groups:
+Inputs (raw values) and Calculations (formulas).
+```
+
+Review the inspection. Does Cowork's interpretation of each input match your understanding from Chapter 17? Correct any misinterpretations before proceeding — the Named Range names depend on accurate identification.
+
+### Step 2 — Retrofit Three Calculations
+
+Pick the three most important calculations (typically revenue, cost, and profit). Ask Cowork to retrofit them:
+
+```
+Retrofit these three calculations to IDFA compliance. For each one:
+1. Create Inp_ Named Ranges for every raw value it uses
+2. Rewrite the formula using only Named Ranges — zero cell coordinates
+3. After each rewrite, confirm the output matches the original value
+
+Work in dependency order — do not rewrite a formula before its
+inputs have Named Ranges. Show me each step: original formula,
+business rule, Named Range equivalent, and whether the value matches.
+```
+
+### Step 3 — Verify and Extend
+
+After the three calculations are retrofitted, verify the full set:
+
+```
+List all three retrofitted formulas with their original values
+and current values side by side. Do they all match exactly?
+
+Then pick one more formula from the model and retrofit it the
+same way. Confirm it matches before and after.
+```
+
+If any value does not match, ask Cowork whether the discrepancy is an original model error surfaced by the retrofit or an inference error in the conversion — the response to each is different (see the lesson above).
+
+**What you have done:** A model that was a black box of cell references now has its three most important calculations reading as business rules. The analyst who inherits this model next will understand those formulas without clicking through cell references.
 
 ## Try With AI
 
