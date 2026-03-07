@@ -355,6 +355,10 @@ why not?
 
 **What you are learning:** African sovereign sukuk represents a frontier investment opportunity that combines Islamic finance principles with infrastructure development needs. By evaluating the portfolio from a London-based fund perspective, you develop the cross-border investment analysis skills that institutional Islamic fund managers need — including currency risk, sovereign credit assessment, and liquidity analysis that go beyond simple IFRS 9 classification.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 13: Global Zakat Accounting →](./13-global-zakat.md)

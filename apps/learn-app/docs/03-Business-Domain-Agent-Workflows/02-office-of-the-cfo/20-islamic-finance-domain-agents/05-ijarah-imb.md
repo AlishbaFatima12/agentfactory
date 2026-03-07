@@ -251,6 +251,10 @@ This prompt tests your ability to construct an effective AI query for a complex 
 
 **What you are learning:** Writing effective prompts for multi-jurisdiction consolidation is harder than it appears. The prompt must specify both frameworks, both entity perspectives, and the consolidation direction (AAOIFI → IFRS, not the reverse). If your prompt was ambiguous, the AI may consolidate in the wrong direction. Compare your prompt and output with a classmate's — did the same scenario produce different outputs based on how you framed the question?
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 6: Sukuk →](./06-sukuk.md)

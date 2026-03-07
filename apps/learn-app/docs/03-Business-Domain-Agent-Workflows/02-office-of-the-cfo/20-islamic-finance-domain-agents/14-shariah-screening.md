@@ -346,6 +346,10 @@ Your prompt should specify: (1) what input the agent takes, (2) which screening 
 
 **What you are learning:** Building a screening SKILL.md from a prompt you wrote yourself tests whether you understand the routing pattern from Lesson 3. The router logic (identify methodology → load screening rules → apply → flag) mirrors the chapter's router → product → overlay architecture. If your prompt produced a SKILL.md without routing logic, your prompt was missing the jurisdiction/methodology switching instruction — the same gap that makes generic agents fail across jurisdictions.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 15: AAOIFI vs IFRS — Full Financial Statements →](./15-aaoifi-vs-ifrs-capstone.md)

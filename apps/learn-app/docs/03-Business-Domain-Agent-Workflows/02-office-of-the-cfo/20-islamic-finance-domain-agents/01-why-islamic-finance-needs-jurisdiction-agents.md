@@ -203,6 +203,10 @@ and explain in one sentence how it satisfies the principles.
 
 **What you are learning:** The Three Pillars are not abstract theology — they are the design constraints that produced every Islamic finance product. Understanding why conventional products violate these principles tells you why Islamic finance products are structured differently, which in turn explains why the accounting treatment must differ.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 2: The Global Standards Map →](./02-global-standards-map.md)

@@ -319,3 +319,7 @@ Using the GCC corporate ECL model results, answer:
 ```
 
 **What you are learning:** Sensitivity analysis reveals concentration risk — which borrower, sector, or scenario drives the most ECL volatility. PMA design bridges the gap between what the model captures and what professional judgment identifies as missing. The governance documentation requirement (approval, time-limiting, back-testing) ensures PMAs are not arbitrary adjustments but disciplined overlays.
+
+## Flashcards Study Aid
+
+<Flashcards />

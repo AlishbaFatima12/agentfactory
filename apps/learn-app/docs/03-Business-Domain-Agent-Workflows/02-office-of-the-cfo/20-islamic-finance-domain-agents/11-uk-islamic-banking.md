@@ -324,6 +324,10 @@ for each item to illustrate where the labels diverge.
 
 **What you are learning:** The systematic divergence between accounting labels and tax characterisation is unique to the UK. In Saudi Arabia, "Murabaha Income" is used for both accounting and tax purposes. In Malaysia, the income label and tax treatment are aligned. In the UK, the bank's financial statements say "Profit from Home Finance" while HMRC treats the same payment as interest. Understanding this divergence is essential for UK Islamic finance tax advisory.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 12: Nigeria Sovereign Sukuk →](./12-nigeria-sovereign-sukuk.md)

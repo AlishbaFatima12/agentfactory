@@ -316,3 +316,7 @@ instead, and why the board would make a different decision.
 ```
 
 **What you are learning:** Pillar isolation is not a theoretical problem. It is the default state of most banks today — separate teams, separate systems, separate reports. The integrated agent demonstrates the value of cross-pillar analysis by showing what each isolated view misses and how the integrated view changes the decision.
+
+## Flashcards Study Aid
+
+<Flashcards />

@@ -331,6 +331,10 @@ Present the analysis as if advising the bank's ALCO
 
 **What you are learning:** Portfolio-level sukuk classification requires strategic thinking beyond individual instrument analysis. The choice between amortised cost and FVOCI has direct implications for the bank's OCI volatility, regulatory capital, and interest rate risk management. By framing the analysis as ALCO advice, you develop the advisory perspective that senior practitioners need.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 11: UK Islamic Banking →](./11-uk-islamic-banking.md)

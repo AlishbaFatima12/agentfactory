@@ -343,6 +343,10 @@ that a non-accountant would not understand.
 
 **What you are learning:** The ability to explain IFRS 9's rationale to non-technical stakeholders is a professional skill. Board members, audit committee chairs, and senior management need to understand why provisions change, and the IAS 39 vs IFRS 9 comparison is the clearest way to explain the "why" behind the numbers.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 4: PD, LGD, and EAD — Building the ECL Components →](./04-ifrs9-pd-lgd-ead.md)

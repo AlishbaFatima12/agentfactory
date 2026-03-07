@@ -371,3 +371,7 @@ discovery through all three pillars, quantifying each impact.
 ```
 
 **What you are learning:** The five principles are the lasting takeaways from this chapter. Technical skills — ECL calculation, capital ratios, AML screening — can be looked up and re-learned. But the principles shape how you think about banking AI: what must be automated, what must remain human, and where the integration of multiple regulatory views creates insight that no single pillar can provide.
+
+## Flashcards Study Aid
+
+<Flashcards />

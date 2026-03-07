@@ -304,6 +304,10 @@ be reviewed independently by the engagement partner.
 
 **What you are learning:** Real group consolidation is too complex for a single session. Breaking the workflow into sessions with defined deliverables mirrors actual audit practice — the engagement partner reviews each phase's output before the team proceeds. Designing your own session boundaries develops the orchestration skill that distinguishes a senior practitioner from a junior one.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 17: Islamic Fintech →](./17-islamic-fintech.md)

@@ -1,0 +1,91 @@
+deck:
+  id: "ch21-15-full-skill-library-capstone"
+  title: "Full Banking Agent -- Skill Library Build and Capstone"
+  description: "Key concepts from building a 17-skill banking plugin, executing a cross-pillar capstone scenario, producing a Board Risk Report, and the five principles of banking domain AI."
+  tags: ["capstone", "skill-library", "board-risk-report", "banking-principles"]
+  version: 1
+
+cards:
+  - id: "ch21-15-full-skill-library-capstone-001"
+    front: "What is Method A (expert interview) for building banking skills?"
+    back: "Structuring a skill by defining the persona, decision logic, and validation criteria from domain expertise -- the builder interviews themselves as the expert."
+    tags: ["Method-A", "skill-building"]
+    difficulty: "basic"
+
+  - id: "ch21-15-full-skill-library-capstone-002"
+    front: "What four banking skills are built in the capstone using Method A?"
+    back: "1. ifrs9-ecl\n2. ifrs9-staging\n3. basel-rwa-credit\n4. aml-typologies"
+    tags: ["skill-library", "capstone"]
+    difficulty: "basic"
+
+  - id: "ch21-15-full-skill-library-capstone-003"
+    front: "Why must the aml-typologies skill identify typologies but never recommend SAR filing?"
+    back: "Filing a SAR is a legal act with criminal consequences for failure, and tipping-off is a criminal offence. The agent boundary must keep typology identification automated while SAR filing decisions remain exclusively human -- this is a legal requirement, not a design preference."
+    tags: ["AML", "agent-boundary", "SAR"]
+    difficulty: "intermediate"
+    why: "What other banking decisions should remain on the human side of the agent boundary?"
+
+  - id: "ch21-15-full-skill-library-capstone-004"
+    front: "Name any 4 of the 6 scheduled operational tasks in the banking plugin?"
+    back: "1. Staging monitor (daily)\n2. ECL calculation (quarterly)\n3. Capital ratio (daily)\n4. LCR calculation (daily)\n5. AML alert prioritisation (daily)\n6. Sanctions batch screen (daily)"
+    tags: ["scheduled-tasks", "operations"]
+    difficulty: "intermediate"
+
+  - id: "ch21-15-full-skill-library-capstone-005"
+    front: "What are the 10 slides in the Board Risk Report?"
+    back: "1. Executive Summary\n2. ECL Movement\n3. Stage Migration Analysis\n4. Capital Adequacy\n5. Liquidity Position\n6. AML and Financial Crime\n7. Integrated Stress Test\n8. Concentration Risk\n9. Recommendations\n10. Appendix"
+    tags: ["board-risk-report", "slides"]
+    difficulty: "intermediate"
+
+  - id: "ch21-15-full-skill-library-capstone-006"
+    front: "A bank has NSFR of 108%, giving 8 percentage points of headroom. Why is this considered thin?"
+    back: "A small increase in long-term lending without matching stable funding, or a large wholesale funding maturity without replacement, could breach the 100% minimum. Unlike LCR at 142% (42pp headroom), the NSFR has little buffer against adverse funding market conditions."
+    tags: ["NSFR", "liquidity", "headroom"]
+    difficulty: "intermediate"
+    why: "What management actions could a bank take to increase NSFR headroom?"
+
+  - id: "ch21-15-full-skill-library-capstone-007"
+    front: "What are the five principles of banking domain AI from Chapter 21?"
+    back: "1. Model governance applies to AI models\n2. SICR assessment is irreducibly human\n3. AML is a legal obligation, not a data exercise\n4. Basel IV output floor reshapes the industry\n5. Pillar interaction is where insight lives"
+    tags: ["banking-principles", "five-principles"]
+    difficulty: "intermediate"
+
+  - id: "ch21-15-full-skill-library-capstone-008"
+    front: "Why does the same model governance framework (SR 11-7, SS1/23) that governs traditional risk models also apply to AI agents in banking?"
+    back: "An AI agent that calculates ECL or stages assets is a model by regulatory definition. It therefore requires the same validation, back-testing, documentation, and approval as a statistical model -- the technology changes but the governance obligation does not."
+    tags: ["model-governance", "SR-11-7", "SS1/23"]
+    difficulty: "advanced"
+    why: "What unique validation challenges do AI models present compared to traditional statistical risk models?"
+
+  - id: "ch21-15-full-skill-library-capstone-009"
+    front: "Facilities A004 (job loss, no DPD) and A006 (property decline, no rating change) both lack quantitative deterioration. Why does this prove SICR assessment is irreducibly human?"
+    back: "Both facilities have qualitative risk indicators that require professional judgment to evaluate. No algorithm can definitively determine whether job loss or a 15% property decline constitutes a 'significant' increase in credit risk -- the threshold depends on context, borrower specifics, and regulatory interpretation."
+    tags: ["SICR", "professional-judgment", "qualitative-triggers"]
+    difficulty: "advanced"
+    why: "Could a well-trained model eventually handle these edge cases, or is the ambiguity inherent?"
+
+  - id: "ch21-15-full-skill-library-capstone-010"
+    front: "What is the Basel IV output floor and what percentage is it set at?"
+    back: "72.5% of Standardised Approach RWA -- it limits how much lower IRB banks' RWA can be compared to the SA calculation."
+    tags: ["Basel-IV", "output-floor"]
+    difficulty: "basic"
+
+  - id: "ch21-15-full-skill-library-capstone-011"
+    front: "How does the integrated stress test in the capstone demonstrate compounding effects that separate tests would miss?"
+    back: "The adverse macro scenario increases ECL by GBP 56M (GBP 42M post-tax CET1 hit), and the simultaneous AML fine adds another GBP 37.5M post-tax -- totalling GBP 79.5M. Testing each shock separately would miss their combined effect on buffer headroom and could lead the board to underestimate the capital at risk."
+    tags: ["integrated-stress-test", "compounding", "cross-pillar"]
+    difficulty: "advanced"
+    why: "What other simultaneous shocks beyond macro and AML could compound capital impact?"
+
+  - id: "ch21-15-full-skill-library-capstone-012"
+    front: "What is an MRA in the context of bank regulation?"
+    back: "Matters Requiring Attention -- a formal regulatory finding that the bank must address."
+    tags: ["MRA", "regulatory-finding"]
+    difficulty: "basic"
+
+  - id: "ch21-15-full-skill-library-capstone-013"
+    front: "Why does the banking plugin's router exist specifically to make cross-pillar integration automatic rather than manual?"
+    back: "Manual integration requires analysts to trace cascades across separate systems and teams, which is slow, error-prone, and often incomplete. The router detects cross-pillar queries and chains skills in sequence so that each pillar's output feeds the next, producing the integrated answer that boards and regulators need without manual handoffs."
+    tags: ["router", "skill-chaining", "cross-pillar"]
+    difficulty: "intermediate"
+    why: "What organisational barriers in banks make manual cross-pillar integration unreliable?"

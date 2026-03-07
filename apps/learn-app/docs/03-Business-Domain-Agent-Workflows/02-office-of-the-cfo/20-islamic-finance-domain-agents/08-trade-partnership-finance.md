@@ -326,6 +326,10 @@ whether AAOIFI or IFRS governs.
 
 **What you are learning:** Musharaka is where the Islamic finance and IFRS frameworks diverge most sharply. The SPPI test was designed for conventional debt instruments — principal plus interest. Musharaka returns are profit shares that depend on the venture's performance, which is fundamentally different from contractual interest. This means most musharaka investments end up at FVTPL under IFRS, creating income statement volatility that does not exist under AAOIFI. Understanding this divergence is critical for any practitioner working across jurisdictions.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 9: Malaysia Sukuk →](./09-malaysia-sukuk.md)

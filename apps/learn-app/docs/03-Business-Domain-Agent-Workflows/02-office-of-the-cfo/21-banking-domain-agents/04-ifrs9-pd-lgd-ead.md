@@ -420,6 +420,10 @@ calculation?
 
 **What you are learning:** EAD is the most frequently underestimated component of ECL. Many practitioners use the current drawn balance as a proxy for EAD, which dramatically understates exposure for revolving and construction facilities. Understanding CCFs ensures you recognise when the `ifrs9-ecl` skill is correctly capturing off-balance-sheet exposure.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 5: Macroeconomic Scenarios and Post-Model Adjustments →](./05-ifrs9-macro-pma.md)

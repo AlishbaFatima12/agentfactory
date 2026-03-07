@@ -300,6 +300,10 @@ the capital impact, and do we need to file a SAR?"
 
 **What you are learning:** The skill inventory is your reference map for the rest of this chapter. By cataloguing all 16 skills and their pillar assignments, you build the mental model that the router uses — and you can predict which skills any banking query will activate.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 3: IFRS 9 ECL — Staging and the ECL Formula →](./03-ifrs9-staging-ecl.md)

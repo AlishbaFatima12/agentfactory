@@ -249,6 +249,10 @@ finance principles but has not structured a tawarruq before.
 
 **What you are learning:** Commodity murabaha exposes the tension between Shariah form and economic substance. The accounting is identical to asset murabaha. The economic outcome for the customer — receiving cash now and repaying more later — resembles a conventional loan. The Shariah validity depends on whether the commodity transactions are genuinely separate. This is the kind of judgment that distinguishes a competent Islamic finance practitioner from one who merely follows templates.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 5: Ijarah and IMB →](./05-ijarah-imb.md)

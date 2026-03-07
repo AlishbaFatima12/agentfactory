@@ -256,6 +256,10 @@ pillars — identify all that apply and explain why.
 
 **What you are learning:** Pillar identification is the routing decision that the banking plugin's router makes on every query. By practising this classification yourself, you develop the same judgment the router encodes — and you can verify whether the router is routing correctly when you use it.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 2: The Banking Plugin Architecture →](./02-plugin-architecture.md)

@@ -233,6 +233,10 @@ regulatory compliance?
 
 **What you are learning:** The calculation is identical — the effective profit rate method produces the same numbers everywhere. The compliance difference is entirely in labels and classification. This distinction is what makes the jurisdiction overlay architecture work: the product skill handles the arithmetic, the overlay handles the labels.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 3: The Plugin Architecture →](./03-plugin-architecture.md)

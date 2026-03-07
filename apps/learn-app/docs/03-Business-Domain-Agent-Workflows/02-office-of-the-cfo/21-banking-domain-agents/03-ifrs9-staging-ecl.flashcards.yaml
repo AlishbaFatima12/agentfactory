@@ -1,0 +1,110 @@
+deck:
+  id: "ch21-03-ifrs9-staging-ecl"
+  title: "IFRS 9 ECL -- Staging and the ECL Formula"
+  description: "Key concepts from the IFRS 9 three-stage model, SICR triggers, the fundamental ECL formula (PD x LGD x EAD), and stage migration mechanics."
+  tags: ["ifrs9", "ecl", "staging", "sicr", "three-stage-model"]
+  version: 1
+
+cards:
+  - id: "ch21-03-ifrs9-staging-ecl-001"
+    front: "What defines a Stage 1 asset under IFRS 9, and what ECL measurement does it require?"
+    back: "Performing asset with credit quality unchanged since origination; requires 12-month ECL."
+    tags: ["stage-1", "ifrs9", "ecl-measurement"]
+    difficulty: "basic"
+
+  - id: "ch21-03-ifrs9-staging-ecl-002"
+    front: "A 20-year mortgage moves from Stage 1 to Stage 2 after a rating downgrade. Why does the provision typically increase 5-10x?"
+    back: "The measurement window expands from 12 months to the full remaining term. The economic loss expectation does not change by 5-10x -- the time horizon over which losses are measured does, because lifetime ECL captures all future years."
+    tags: ["staging-cliff", "stage-migration", "provision"]
+    difficulty: "intermediate"
+    why: "How does this cliff effect impact a bank's quarterly earnings volatility?"
+
+  - id: "ch21-03-ifrs9-staging-ecl-003"
+    front: "What defines a Stage 2 asset under IFRS 9, and what ECL measurement does it require?"
+    back: "Significant increase in credit risk (SICR) since origination, not yet defaulted; requires lifetime ECL."
+    tags: ["stage-2", "ifrs9", "sicr"]
+    difficulty: "basic"
+
+  - id: "ch21-03-ifrs9-staging-ecl-004"
+    front: "Why does Stage 1 use 12-month ECL instead of lifetime ECL, even though IFRS 9 is forward-looking?"
+    back: "Lifetime ECL for performing assets with 20-30 year terms would create enormous Day 1 provisions that do not reflect genuine credit risk. The 12-month ECL is a practical compromise -- forward-looking enough to capture near-term deterioration without distorting the balance sheet."
+    tags: ["stage-1", "12-month-ecl", "rationale"]
+    difficulty: "advanced"
+    why: "What mechanism then triggers full lifetime recognition when genuine deterioration is detected?"
+
+  - id: "ch21-03-ifrs9-staging-ecl-005"
+    front: "What is the fundamental ECL formula for a Stage 1 (12-month) calculation?"
+    back: "ECL = PD(12m) x LGD x EAD."
+    tags: ["ecl-formula", "stage-1"]
+    difficulty: "basic"
+
+  - id: "ch21-03-ifrs9-staging-ecl-006"
+    front: "How does the interest revenue basis differ between Stage 2 and Stage 3 assets under IFRS 9?"
+    back: "Stage 2 calculates interest on the gross carrying amount (full loan balance). Stage 3 calculates interest on the net carrying amount (loan balance minus ECL provision), reducing recognised income for credit-impaired assets."
+    tags: ["interest-revenue", "stage-2", "stage-3"]
+    difficulty: "intermediate"
+    why: "Why does this distinction reduce a bank's incentive to keep defaulted loans on its books?"
+
+  - id: "ch21-03-ifrs9-staging-ecl-007"
+    front: "What are the three categories of quantitative SICR triggers that move an asset from Stage 1 to Stage 2?"
+    back: "1. Rating downgrade (2+ notches since origination)\n2. PD increase (doubles or absolute threshold, e.g., +1.5%)\n3. Days past due (30+ DPD rebuttable presumption)"
+    tags: ["sicr", "quantitative-triggers", "stage-migration"]
+    difficulty: "intermediate"
+
+  - id: "ch21-03-ifrs9-staging-ecl-008"
+    front: "A borrower is 35 days past due but the bank has evidence the delay is purely administrative. Can the bank keep the loan in Stage 1?"
+    back: "The 30-day DPD SICR presumption is rebuttable. If the bank has evidence that past-due status does not indicate a significant increase in credit risk (e.g., administrative delay by a financially healthy borrower), it can override the presumption and keep the loan in Stage 1."
+    tags: ["30-day-presumption", "sicr", "rebuttable"]
+    difficulty: "intermediate"
+    why: "What documentation burden does the bank face when rebutting the presumption?"
+
+  - id: "ch21-03-ifrs9-staging-ecl-009"
+    front: "What standard did IFRS 9 replace, and when did IFRS 9 become effective?"
+    back: "Replaced IAS 39; effective 1 January 2018."
+    tags: ["ifrs9", "ias39", "effective-date"]
+    difficulty: "basic"
+
+  - id: "ch21-03-ifrs9-staging-ecl-010"
+    front: "How did IAS 39's incurred loss model contribute to banks reporting healthy balance sheets until they collapsed in 2008?"
+    back: "Under IAS 39, provisions were recognised only after objective evidence of loss appeared. During the crisis, losses were economically inevitable but not formally incurred, so banks could not book provisions until defaults materialised -- by then losses were too large to absorb."
+    tags: ["ias39", "incurred-loss", "2008-crisis"]
+    difficulty: "advanced"
+    why: "How does IFRS 9's three-stage model specifically prevent this delayed recognition?"
+
+  - id: "ch21-03-ifrs9-staging-ecl-011"
+    front: "Name any 3 of the 5 criteria that indicate a Stage 3 (default) classification under IFRS 9?"
+    back: "1. 90+ days past due\n2. Unlikely to pay without collateral realisation\n3. Debt restructuring with loss to lender\n4. Bankruptcy/insolvency proceedings\n5. Borrower deceased without sufficient estate"
+    tags: ["stage-3", "default-criteria"]
+    difficulty: "intermediate"
+
+  - id: "ch21-03-ifrs9-staging-ecl-012"
+    front: "A Stage 3 loan cures -- the borrower resumes payment. Can it return directly to Stage 1?"
+    back: "Stage migration is bidirectional. A cured loan moves to Stage 2 first. A return to Stage 1 requires credit quality to return to origination level, which is rare but possible for short-duration retail exposures."
+    tags: ["stage-migration", "cure", "bidirectional"]
+    difficulty: "intermediate"
+    why: "Why do most cured loans remain in Stage 2 rather than returning to Stage 1?"
+
+  - id: "ch21-03-ifrs9-staging-ecl-013"
+    front: "In the worked example, a $10M corporate loan at PD 1.2%, LGD 35% produces $42,000 in Stage 1. After a 3-notch downgrade, the Stage 2 lifetime ECL is $397,889. What is the multiplication factor?"
+    back: "Approximately 9.5x increase ($397,889 / $42,000)."
+    tags: ["staging-cliff", "worked-example", "ecl"]
+    difficulty: "basic"
+
+  - id: "ch21-03-ifrs9-staging-ecl-014"
+    front: "Why is SICR assessment described as the most judgment-intensive part of IFRS 9?"
+    back: "IFRS 9 does not prescribe a single threshold for SICR. Banks must consider all reasonable and supportable information, combining quantitative triggers (PD changes, rating downgrades, DPD) with qualitative triggers (watchlist, covenant breach, industry stress), requiring professional judgment at every step."
+    tags: ["sicr", "judgment", "ifrs9"]
+    difficulty: "advanced"
+    why: "How could two banks reach different staging conclusions for the same borrower?"
+
+  - id: "ch21-03-ifrs9-staging-ecl-015"
+    front: "Name any 3 of the 4 qualitative SICR triggers that can move a loan to Stage 2?"
+    back: "1. Watchlist placement\n2. Covenant breach\n3. Industry stress\n4. Forbearance (loan modification)"
+    tags: ["sicr", "qualitative-triggers"]
+    difficulty: "basic"
+
+  - id: "ch21-03-ifrs9-staging-ecl-016"
+    front: "What local modification did Pakistan's SBP introduce for IFRS 9 Stage 1 PD?"
+    back: "A mandatory floor of 0.5% for 12-month PD on any performing Stage 1 exposure, regardless of internal model output."
+    tags: ["sbp", "pakistan", "pd-floor"]
+    difficulty: "intermediate"

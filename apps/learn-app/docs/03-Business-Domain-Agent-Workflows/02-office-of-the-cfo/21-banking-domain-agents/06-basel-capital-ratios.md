@@ -373,3 +373,7 @@ perspectives?
 ```
 
 **What you are learning:** The gap between accounting equity and regulatory capital reveals a fundamental tension in banking. Accountants measure value; regulators measure loss-absorbing capacity. Deductions strip out items that have book value but cannot be converted to cash when the bank needs to absorb losses. This distinction is essential when building AI agents that must produce output for both accounting and regulatory audiences.
+
+## Flashcards Study Aid
+
+<Flashcards />

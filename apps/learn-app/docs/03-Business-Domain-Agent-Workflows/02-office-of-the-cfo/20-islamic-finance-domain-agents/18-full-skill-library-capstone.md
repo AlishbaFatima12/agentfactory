@@ -378,6 +378,10 @@ Design the skill library structure for this domain.
 
 **What you are learning:** The architectural contribution of this chapter is not limited to Islamic finance. The router-to-product-to-overlay pattern transfers to any domain where the same transaction or process has different rules by jurisdiction. Tax, legal, healthcare, and regulatory compliance all share this structure. Recognising the pattern across domains is the meta-skill that makes you an architect, not just a domain specialist.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Return to [Chapter 20 Overview](./README.md) to review the Chapter Contract questions.
