@@ -75,11 +75,17 @@ If you have not set it up yet, follow the instructions in the
 :::
 ```
 
-### Skill Invocation
+### Skill Invocation — Three Methods
+
+| Method              | How                                                    | Reliability                          | Taught In |
+| ------------------- | ------------------------------------------------------ | ------------------------------------ | --------- |
+| Auto-activation     | Trigger phrases in prompt match SKILL.md description   | High — depends on phrase recognition | L03-L08   |
+| Explicit invocation | Student types `/skill-name` in chat                    | Certain — skill explicitly loaded    | L09       |
+| Instructions pane   | Add NLP instructions via Cowork sidebar → Instructions | Always on — no prompt dependency     | L09       |
 
 - **L03-L08 pattern**: Simple natural prompts. Skills may auto-activate from trigger phrases but students don't reference skills by name.
-- **L09 pattern**: Explicit skill invocation — student types `/skill-name` (just the skill name, NOT `plugin-name:skill-name`).
-- **Auto-activation vs explicit invocation**: Teach the distinction. Auto-activation = trigger phrases in SKILL.md description. Explicit = typing `/skill-name`.
+- **L09 pattern**: Teaches all three methods. Explicit = typing `/skill-name`. Instructions pane = persistent session-wide activation via Cowork's folder instructions (equivalent of `CLAUDE.md`).
+- **Skill invocation is up to the agent** — none of the three methods guarantee the agent will use the skill. Instructions pane is the most reliable because it applies to every message in the session.
 
 ### Skill Name Format
 
@@ -89,6 +95,18 @@ When students invoke skills in Cowork:
 - Wrong: `/idfa-financial-architect:financial-architect`
 
 The student types only the skill name with a slash prefix. The plugin routing is handled internally.
+
+---
+
+## Plugin Structure in Lessons
+
+When showing a plugin directory tree in lessons, show only what the student installs — NOT repo development artifacts.
+
+**Plugin (show in tree):** `.claude-plugin/plugin.json`, `skills/`, `README.md`, `LICENSE`
+
+**Dev artifacts (do NOT show):** `CLAUDE.md`, `evals/`, `examples/`, `tests/`, `specs/`, `.gitignore`
+
+The repo may contain dev artifacts for contributors, but students install the plugin — not the repo. Keep trees focused on what they get.
 
 ---
 
