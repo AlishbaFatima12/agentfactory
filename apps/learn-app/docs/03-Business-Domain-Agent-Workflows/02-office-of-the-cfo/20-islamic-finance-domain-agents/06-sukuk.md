@@ -84,7 +84,7 @@ differentiation:
 
 In Lessons 4 and 5, you worked through murabaha and ijarah at the individual transaction level — a bank and a customer. Sukuk operates at a different scale. These are capital market instruments traded globally, issued by sovereigns and corporations, held by investors across multiple jurisdictions, and subject to accounting analysis from both the issuer's and investor's perspectives simultaneously.
 
-Global sukuk issuance exceeds $250 billion annually. Malaysia is the world's largest single issuer market, accounting for approximately 35-40% of global volume. Saudi Arabia, the UAE, Indonesia, and Pakistan are major sovereign issuers. The London Stock Exchange lists sukuk from multiple jurisdictions. Green sukuk — combining Islamic finance's asset-backed principles with the global sustainability movement — grew by 17% in Q1 2024.
+Global sukuk issuance reached approximately $200 billion in 2024. Malaysia is the world's largest single issuer market, accounting for approximately 35-40% of global volume. Saudi Arabia, the UAE, Indonesia, and Pakistan are major sovereign issuers. The London Stock Exchange lists sukuk from multiple jurisdictions. Green sukuk — combining Islamic finance's asset-backed principles with the global sustainability movement — grew by 17% in Q1 2024.
 
 ## Sukuk Structures
 
@@ -190,7 +190,7 @@ If adopted, originators would need to genuinely transfer assets (true sale), and
 The purchase undertaking is the most contested issue in global sukuk accounting and Shariah compliance:
 
 - **IFRS perspective:** A fixed-price purchase undertaking makes the sukuk economically equivalent to a bond — the investor gets back face value regardless of asset performance
-- **Shariah perspective:** AAOIFI Shariah Standard 59 permits purchase undertakings for ijarah sukuk but prohibits them for equity-based sukuk (musharakah, mudarabah) because guaranteeing capital return in a profit-sharing arrangement violates the risk-sharing principle
+- **Shariah perspective:** AAOIFI Shariah Standard 17 (Investment Sukuk) and the AAOIFI 2008 Shariah resolution on sukuk permit purchase undertakings for ijarah sukuk but prohibit them for equity-based sukuk (musharakah, mudarabah) because guaranteeing capital return in a profit-sharing arrangement violates the risk-sharing principle
 - **Standard 62 risk:** If adopted, purchase undertakings in their current form may not satisfy the asset-backed requirement
 
 :::info Exercise Requirements

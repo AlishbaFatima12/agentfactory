@@ -114,14 +114,14 @@ Saudi Arabia's Islamic finance accounting operates under a framework that surpri
 
 ## The Saudi Accounting Framework
 
-| Component                 | Saudi Arabia Rule                                               |
-| ------------------------- | --------------------------------------------------------------- |
-| **Primary standard**      | IFRS as adopted in KSA                                          |
-| **Regulator (banks)**     | SAMA (Saudi Arabian Monetary Authority)                         |
-| **Capital markets**       | CMA (Capital Market Authority), Tadawul                         |
-| **AAOIFI role**           | Shariah compliance guidance only — not mandatory for accounting |
-| **Zakat authority**       | ZATCA (Zakat, Tax and Customs Authority)                        |
-| **Reference institution** | Al Rajhi Bank — global IFRS benchmark for Islamic banking       |
+| Component                 | Saudi Arabia Rule                                                    |
+| ------------------------- | -------------------------------------------------------------------- |
+| **Primary standard**      | IFRS as adopted in KSA                                               |
+| **Regulator (banks)**     | SAMA (Saudi Central Bank, formerly Saudi Arabian Monetary Authority) |
+| **Capital markets**       | CMA (Capital Market Authority), Tadawul                              |
+| **AAOIFI role**           | Shariah compliance guidance only — not mandatory for accounting      |
+| **Zakat authority**       | ZATCA (Zakat, Tax and Customs Authority)                             |
+| **Reference institution** | Al Rajhi Bank — global IFRS benchmark for Islamic banking            |
 
 Saudi IFIs use distinctive income labels by convention. "Murabaha Income" is the standard caption for murabaha financing income in Saudi IFRS statements, even though IFRS does not prescribe this specific term. This convention is acceptable under IFRS because the standard requires disclosure of the nature of income, not a specific label. The critical rule remains: never use "Interest Income" in any Saudi Islamic banking context.
 

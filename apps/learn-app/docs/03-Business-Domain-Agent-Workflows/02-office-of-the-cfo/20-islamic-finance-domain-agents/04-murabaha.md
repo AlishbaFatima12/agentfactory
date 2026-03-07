@@ -136,11 +136,11 @@ Opening Receivable x (Effective Profit Rate / Periods per Year) = Period Profit
 
 Closing Receivable = Opening Receivable + Period Profit - Cash Instalment Received
 
-This means that the amortisation schedule produced under AAOIFI FAS 2 and the schedule produced under MFRS 9 will have identical numbers in every column. The opening balance, the profit allocation, the instalment, the closing balance — all the same. What differs is the column header: "Murabaha Income" in Bahrain, "Profit from Islamic Financing" in Malaysia.
+This means that the amortisation schedule produced under AAOIFI FAS 28 and the schedule produced under MFRS 9 will have identical numbers in every column. The opening balance, the profit allocation, the instalment, the closing balance — all the same. What differs is the column header: "Murabaha Income" in Bahrain, "Profit from Islamic Financing" in Malaysia.
 
-## AAOIFI FAS 2 vs MFRS 9 — Same Numbers, Different Labels
+## AAOIFI FAS 28 vs MFRS 9 — Same Numbers, Different Labels
 
-| Element                        | AAOIFI FAS 2 (Bahrain, Qatar)                | MFRS 9 / IFRS 9 (Malaysia, UAE, UK)                                   |
+| Element                        | AAOIFI FAS 28 (Bahrain, Qatar)               | MFRS 9 / IFRS 9 (Malaysia, UAE, UK)                                   |
 | ------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
 | **Income label**               | "Murabaha Income"                            | "Profit from Islamic Financing"                                       |
 | **Receivable classification**  | "Murabaha Receivables" — separate line item  | "Islamic Financing Receivables" or under "Loans and Advances"         |
