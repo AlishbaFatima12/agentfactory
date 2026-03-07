@@ -70,8 +70,8 @@ Running a fleet of AI employees requires managing API and subscription costs. He
 
 *   **OpenClaw & NanoClaw (Free + API Costs):** The software is fully open-source (MIT License). However, because they run locally but process reasoning in the cloud, you will pay per-token API costs to [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing), [OpenAI](https://openai.com/api/pricing/), or [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing). For heavy daily use, expect to spend **$15 to $40/month** in API credits.
 *   **Claude Code (Free + Subscription):** The CLI tool is free, but minimum subscription of **$20/user/month** for the [Pro Plan](https://claude.com/pricing) is required. Refer to Chapter 3 for reducing the cost.
-*   **Claude Cowork (Subscription):** Cowork is included in [Anthropic's higher-tier plans](https://claude.com/pricing) (typically Pro, Max or Enterprise, starting around **$20/user/month**) to a max of **$200/user/month**). It provides deep desktop file access without per-token API billing. **Using these plans you can use both Claude Code and Claude Codwork**. Refer to Chapter 3 for reducing the cost.
-*   **Codex / GPT-5.3-Codex (Subscription/API):** OpenAI's cloud-mode engineering environments require a [premium OpenAI subscription](https://developers.openai.com/codex/pricing/) or heavy API usage, which can scale up depending on the complexity of your system architecture tasks.
+*   **Claude Cowork (Subscription):** Cowork is included in [Anthropic's higher-tier plans](https://claude.com/pricing) (typically Pro, Max or Enterprise, starting around **$20/user/month**) to a max of **$200/user/month**). It provides deep desktop file access without per-token API billing. **Using these plans you can use both Claude Code and Claude Cowork**. Refer to Chapter 3 for reducing the cost.
+*   **Codex / GPT-5.4-Codex (Subscription/API):** OpenAI's cloud-mode engineering environments require a [premium OpenAI subscription](https://developers.openai.com/codex/pricing/) or heavy API usage, which can scale up depending on the complexity of your system architecture tasks.
 
 ---
 
@@ -103,7 +103,7 @@ _Chapter 5 introduces Spec-Driven Development with Claude Code as the engine. Yo
 
 ### Codex — Your Power Engineering AI Employee
 
-Codex is OpenAI's AI general agent for hard engineering problems. It runs in two modes: a cloud mode where it works completely on its own in an isolated environment (typically 1–30 minutes per task), and a command-line tool built that runs locally on your machine.
+Codex is OpenAI's AI general agent for hard engineering problems. It runs in two modes: a cloud mode where it works completely on its own in an isolated environment (typically 1–30 minutes per task), and a command-line tool that runs locally on your machine.
 
 **Think of it as:** the specialist you call in for the hardest jobs. While Claude Code handles the everyday, Codex is built for complex reasoning — designing system architectures that require deep thinking. Its latest model (GPT-5.3-Codex) combines frontier coding ability with advanced reasoning, and it's expanding beyond code into broader knowledge work.
 
@@ -206,7 +206,7 @@ Migration tips: Export/import SKILL.md patterns across agents; use ClawHub commu
 
 ## Beyond the Core Fleet: Exploring Alternatives
 
-While Claude Code, Cowork, and NanoClaw form a strong foundation, 2026's agent landscape is far more diverse. Open-source frameworks like Gemini CLI, Qwen Code, Open AI Agents SDK, and Claude Agents SDK power multi-agent fleets for complex orchestration, often at lower cost when paired with models from DeepSeek, or Qwen. No-code/low-code builders (Vellum, Microsoft Copilot Studio, Zapier Central, Salesforce Agentforce) let non-technical teams deploy agents faster without SDKs or terminals.
+While Claude Code, Cowork, and NanoClaw form a strong foundation, 2026's agent landscape is far more diverse. Open-source frameworks like Gemini CLI, Qwen Code, OpenAI Agents SDK, and Claude Agents SDK power multi-agent fleets for complex orchestration, often at lower cost when paired with models from DeepSeek, or Qwen. No-code/low-code builders (Vellum, Microsoft Copilot Studio, Zapier Central, Salesforce Agentforce) let non-technical teams deploy agents faster without SDKs or terminals.
 
 For pure open-model fans, tools built on Llama 4, DeepSeek, Mistral, or Gemma offer fully local or self-hosted options with zero cloud dependency — ideal if privacy trumps speed. The book focuses on Claude Code + companions because they deliver the highest leverage today for most readers, but experiment with one alternative per quarter to future-proof your fleet.
 
