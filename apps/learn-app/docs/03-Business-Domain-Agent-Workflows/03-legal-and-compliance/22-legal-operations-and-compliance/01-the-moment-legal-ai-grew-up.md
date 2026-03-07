@@ -18,7 +18,7 @@ keywords:
     "SRA Code of Conduct",
     "GCC legal operations",
     "Pakistan legal operations",
-    "PDPA 2023",
+    "PDPB 2023",
   ]
 chapter: 22
 lesson: 1
@@ -136,7 +136,7 @@ The legal profession has specific rules of professional conduct -- the ABA Model
 
 Every workflow, every exercise, and every SKILL.md file in this chapter is built around this principle. When the agent produces a contract redline, an attorney reviews it. When the agent flags a clause as RED (escalate), the escalation goes to a qualified lawyer. When the agent drafts a cease-and-desist letter, a licensed professional reviews it before it is sent.
 
-In Pakistan, the Pakistan Bar Council and provincial bar councils regulate legal practice. The Legal Practitioners and Bar Councils Act, 1973 defines who may practise law. In the UAE, the Federal Law No. 23 of 1991 Regulating the Legal Profession governs advocates, while DIFC and ADGM have their own practitioner regulations. In both jurisdictions, the governing principle holds: the agent assists, the licensed professional decides.
+In Pakistan, the Pakistan Bar Council and provincial bar councils regulate legal practice. The Legal Practitioners and Bar Councils Act, 1973 defines who may practise law. In the UAE, Federal Decree-Law No. 34 of 2022 on the Regulation of the Legal Profession (which replaced the former Federal Law No. 23 of 1991) governs advocates, while DIFC and ADGM have their own practitioner regulations. In both jurisdictions, the governing principle holds: the agent assists, the licensed professional decides.
 
 ---
 
@@ -187,9 +187,9 @@ The plugin out of the box is a capable tool. The plugin configured with a mature
 
 ## Legal Operations in the GCC and Pakistan
 
-The legal operations transformation is not limited to the US and UK markets. The Gulf Cooperation Council states -- particularly the UAE, Saudi Arabia, and Qatar -- have seen explosive growth in legal technology adoption, driven by three factors: the rapid expansion of free zone economies (DIFC alone hosts over 4,800 companies), the implementation of new data protection frameworks (UAE PDPL 2021, Saudi PDPL 2023), and the increasing complexity of dual-jurisdiction commercial structures where a single transaction may involve mainland UAE civil law, DIFC common law, and English-law-governed arbitration.
+The legal operations transformation is not limited to the US and UK markets. The Gulf Cooperation Council states -- particularly the UAE, Saudi Arabia, and Qatar -- have seen explosive growth in legal technology adoption, driven by three factors: the rapid expansion of free zone economies (DIFC alone hosts over 6,100 active registered entities as of 2025), the implementation of new data protection frameworks (UAE PDPL 2021, Saudi PDPL 2023), and the increasing complexity of dual-jurisdiction commercial structures where a single transaction may involve mainland UAE civil law, DIFC common law, and English-law-governed arbitration.
 
-In Pakistan, legal operations is an emerging discipline with enormous potential. Pakistan's 220 million population generates a commercial legal market that is growing at 12-15% annually, driven by the technology sector, the privatisation programme, and increasing foreign direct investment. The challenges are distinct: the Contract Act 1872 provides the foundational framework but predates digital commerce entirely, the PDPA 2023 is Pakistan's first comprehensive data protection law and organisations are still building compliance programmes from scratch, and the transition from interest-based to Islamic finance (mandated by the Federal Shariat Court ruling, deadline 2028) affects every financing agreement in the country.
+In Pakistan, legal operations is an emerging discipline with enormous potential. Pakistan's population of over 240 million generates a commercial legal market that is growing at 12-15% annually, driven by the technology sector, the privatisation programme, and increasing foreign direct investment. The challenges are distinct: the Contract Act 1872 provides the foundational framework but predates digital commerce entirely, the Personal Data Protection Bill 2023 (PDPB) — passed by the National Assembly in August 2023 but awaiting formal enactment as of early 2026 — represents Pakistan's first comprehensive data protection framework, and organisations are preparing compliance programmes in anticipation, and the transition from interest-based to Islamic finance (mandated by the Federal Shariat Court ruling, deadline 2028) affects every financing agreement in the country.
 
 For legal teams operating across these jurisdictions, the Legal Plugin's jurisdiction overlay system -- which loads Pakistan-specific, UAE-specific, or UK-specific legal frameworks automatically based on the governing law of each contract -- is not a nice-to-have. It is the difference between a generic review and a review that catches the issues that actually matter in your market.
 

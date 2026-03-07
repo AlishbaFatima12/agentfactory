@@ -160,12 +160,12 @@ The risk-weight function also uses an **asset correlation (R)** parameter that v
 
 ### Foundation IRB vs Advanced IRB
 
-| Parameter | Foundation IRB (F-IRB)                          | Advanced IRB (A-IRB) |
-| --------- | ----------------------------------------------- | -------------------- |
-| PD        | Bank estimates                                  | Bank estimates       |
-| LGD       | Supervisory values (e.g., 45% senior unsecured) | Bank estimates       |
-| EAD       | Supervisory rules                               | Bank estimates       |
-| Maturity  | Fixed at 2.5 years                              | Bank estimates       |
+| Parameter | Foundation IRB (F-IRB)                                                                        | Advanced IRB (A-IRB) |
+| --------- | --------------------------------------------------------------------------------------------- | -------------------- |
+| PD        | Bank estimates                                                                                | Bank estimates       |
+| LGD       | Supervisory values (e.g., 40% non-financial senior unsecured; 45% for financial institutions) | Bank estimates       |
+| EAD       | Supervisory rules                                                                             | Bank estimates       |
+| Maturity  | Fixed at 2.5 years                                                                            | Bank estimates       |
 
 **Why it matters:** A-IRB banks estimate all four parameters from their own historical data. This can produce significantly lower risk weights than SA -- a well-collateralised mortgage portfolio might produce 10-15% risk weights under A-IRB compared to 35% under SA. This difference is what motivated the output floor.
 
@@ -197,7 +197,7 @@ The output floor is being phased in gradually:
 | 2029 | 70%                  | EU / UK                        |
 | 2030 | 72.5% (fully phased) | EU / UK                        |
 
-The European Banking Authority estimates that the output floor will increase RWA by 18-22% for the average large EU bank, and by more than 30% for banks with heavily optimised IRB models. The UK PRA has set a similar trajectory, with full implementation expected by 1 January 2030. US rulemaking remains under discussion.
+The output floor is expected to materially increase RWA for large EU banks — particularly those with heavily optimised IRB models, where the impact may exceed 30% — as the floor progressively constrains internal model benefits. The UK PRA has set a similar trajectory, with full implementation expected by 1 January 2030. US rulemaking remains under discussion.
 
 ## Exercise 4: RWA Comparison -- SA vs IRB
 

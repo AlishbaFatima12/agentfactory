@@ -77,7 +77,7 @@ Islamic finance is that domain. It is a global industry present in more than 80 
 
 Consider a murabaha — the most common Islamic finance product, accounting for an estimated 40-60% of all Islamic banking financing globally. A bank purchases equipment for $1 million and sells it to a customer at a 20% mark-up payable over 24 months. The commercial economics are identical everywhere. But the accounting output is not.
 
-In Bahrain, where AAOIFI accounting standards are mandatory, the income line reads **"Murabaha Income."** The receivable is classified as **"Murabaha Receivables"** — never under "Loans and Advances." The governing standard is AAOIFI FAS 2.
+In Bahrain, where AAOIFI accounting standards are mandatory, the income line reads **"Murabaha Income."** The receivable is classified as **"Murabaha Receivables"** — never under "Loans and Advances." The governing standard is AAOIFI FAS 28 (Murabaha and Other Deferred Payment Sales), which superseded the earlier FAS 2 effective 1 January 2020. Many practitioners and regulatory references still cite "FAS 2" informally — throughout this chapter, references to FAS 2 should be understood as referring to the current standard, FAS 28.
 
 In Malaysia, where MFRS (equivalent to IFRS) governs, the income line reads **"Profit from Islamic Financing."** The receivable appears under **"Loans and Advances"** with an Islamic sub-classification. The governing standard is MFRS 9.
 
@@ -113,7 +113,7 @@ The domain agents you built in Chapter 19 worked because each operated within a 
 
 Islamic finance breaks this model in three ways.
 
-**Multiple frameworks govern the same product.** A murabaha is governed by AAOIFI FAS 2 in Bahrain, MFRS 9 in Malaysia, and IFRS 9 in the UK. The agent must know which framework applies before producing any output.
+**Multiple frameworks govern the same product.** A murabaha is governed by AAOIFI FAS 28 (formerly FAS 2) in Bahrain, MFRS 9 in Malaysia, and IFRS 9 in the UK. The agent must know which framework applies before producing any output.
 
 **Labels are compliance requirements, not preferences.** Using "Interest Income" instead of "Murabaha Income" in a Bahrain financial statement is not a stylistic choice — it is a compliance violation. The Central Bank of Bahrain's rulebook prohibits interest-based terminology in IFI financial statements. An agent that defaults to IFRS terminology in an AAOIFI jurisdiction produces non-compliant output.
 

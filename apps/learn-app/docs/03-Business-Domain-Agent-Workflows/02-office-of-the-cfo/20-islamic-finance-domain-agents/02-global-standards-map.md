@@ -110,7 +110,7 @@ Despite 20 jurisdictions with different regulators, the accounting treatment of 
 :::info The Three Accounting Regimes
 **Regime 1 — AAOIFI Primary** (Bahrain, Qatar, Sudan, partial Jordan/Pakistan)
 
-The Islamic financial institution uses AAOIFI Financial Accounting Standards as its primary framework. Murabaha is a trading transaction under FAS 2. Ijarah assets stay on the lessor's balance sheet under FAS 32. The financial statements look structurally different from IFRS statements. Terminology reflects Shariah characterisation: "Murabaha Income," "Murabaha Receivables," "Equity of Investment Account Holders."
+The Islamic financial institution uses AAOIFI Financial Accounting Standards as its primary framework. Murabaha is a trading transaction under FAS 28 (which superseded FAS 2 effective 1 January 2020). Ijarah assets stay on the lessor's balance sheet under FAS 32. The financial statements look structurally different from IFRS statements. Terminology reflects Shariah characterisation: "Murabaha Income," "Murabaha Receivables," "Equity of Investment Account Holders."
 
 **Regime 2 — IFRS with Islamic Guidance** (Malaysia, UAE, Saudi Arabia, Kuwait, UK, Turkey, Pakistan listed entities, most of Africa)
 
@@ -131,7 +131,7 @@ The 20-jurisdiction map is comprehensive but abstract. To make the regimes concr
 
 Bahrain is the global reference case for AAOIFI accounting. AAOIFI is headquartered in Bahrain, and the Central Bank of Bahrain requires all Islamic financial institutions to apply AAOIFI Financial Accounting Standards as their primary framework. Bahrain Islamic Bank, Ithmaar Banking Group, and Al Baraka Banking Group all prepare AAOIFI-primary financial statements.
 
-What this means in practice: when a Bahraini IFI executes a murabaha, the income is labelled "Murabaha Income" under FAS 2. The receivable is classified as "Murabaha Receivables" — never under "Loans and Advances." Investment account holders' funds appear as a separate category on the balance sheet: "Equity of Investment Account Holders" — between liabilities and shareholders' equity. The CBB Rulebook incorporates AAOIFI requirements directly.
+What this means in practice: when a Bahraini IFI executes a murabaha, the income is labelled "Murabaha Income" under FAS 28. The receivable is classified as "Murabaha Receivables" — never under "Loans and Advances." Investment account holders' funds appear as a separate category on the balance sheet: "Equity of Investment Account Holders" — between liabilities and shareholders' equity. The CBB Rulebook incorporates AAOIFI requirements directly.
 
 ### Malaysia — MFRS/IFRS with Islamic Guidance (Regime 2)
 
@@ -157,7 +157,7 @@ The table below makes the jurisdiction variation concrete. The same $1 million m
 
 | Element                       | Bahrain (AAOIFI)                    | Malaysia (MFRS)                        | UK (IFRS)                        | Pakistan (IFRS + AAOIFI)               |
 | ----------------------------- | ----------------------------------- | -------------------------------------- | -------------------------------- | -------------------------------------- |
-| **Governing standard**        | AAOIFI FAS 2                        | MFRS 9                                 | IFRS 9                           | IFRS 9 + SBP SGF                       |
+| **Governing standard**        | AAOIFI FAS 28                       | MFRS 9                                 | IFRS 9                           | IFRS 9 + SBP SGF                       |
 | **Income label**              | Murabaha Income                     | Profit from Islamic Financing          | Profit from Home Finance         | Profit from Islamic Financing          |
 | **Receivable classification** | Murabaha Receivables                | Islamic Financing                      | Loans and Advances               | Islamic Financing Receivables          |
 | **Balance sheet category**    | Financing Receivables (not "Loans") | Loans and Advances (Islamic sub-class) | Loans and Advances               | Loans and Advances (Islamic sub-class) |
@@ -222,7 +222,7 @@ A murabaha transaction has these economics:
 Show me the first three months of the income recognition
 schedule. Then show me how the income line would be labelled
 in each of these jurisdictions:
-1. Bahrain (AAOIFI FAS 2)
+1. Bahrain (AAOIFI FAS 28)
 2. Malaysia (MFRS 9)
 3. United Kingdom (IFRS 9)
 

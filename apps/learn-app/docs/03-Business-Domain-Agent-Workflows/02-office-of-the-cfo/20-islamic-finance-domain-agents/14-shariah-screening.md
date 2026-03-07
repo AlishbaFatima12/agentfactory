@@ -119,13 +119,13 @@ A company with **any** hard-exclusion involvement is automatically non-compliant
 
 This is where the methodologies diverge:
 
-| Ratio                                  | SC Malaysia         | Tadawul             | AAOIFI SS21         | MSCI Islamic                            |
-| -------------------------------------- | ------------------- | ------------------- | ------------------- | --------------------------------------- |
-| **Debt screen**                        | 33% of total assets | 30% of total assets | 30% of market cap   | 33% of trailing 24-month avg market cap |
-| **NPI screen**                         | 5% of total revenue | 5% of total revenue | 5% of total revenue | 5% of total revenue                     |
-| **Cash + interest-bearing securities** | 33% of total assets | 33% of total assets | 30% of market cap   | 33% of trailing 24-month avg market cap |
+| Ratio                                  | SC Malaysia         | Tadawul             | AAOIFI SS21         | MSCI Islamic           |
+| -------------------------------------- | ------------------- | ------------------- | ------------------- | ---------------------- |
+| **Debt screen**                        | 33% of total assets | 30% of market cap   | 30% of market cap   | 33.33% of total assets |
+| **NPI screen**                         | 5% of total revenue | 5% of total revenue | 5% of total revenue | 5% of total revenue    |
+| **Cash + interest-bearing securities** | 33% of total assets | 30% of market cap   | 30% of market cap   | 33.33% of total assets |
 
-The **denominator difference** is the most common source of screening divergence. SC Malaysia and Tadawul use **total assets** (a balance sheet figure, relatively stable). MSCI and AAOIFI use **market capitalisation** (a market figure, volatile). A company with stable debt but a falling share price can breach the MSCI debt threshold while remaining compliant under SC Malaysia — not because its debt changed, but because its market cap dropped.
+The **denominator difference** is the most common source of screening divergence. SC Malaysia and MSCI use **total assets** (a balance sheet figure, relatively stable). Tadawul and AAOIFI SS21 use **market capitalisation** (a market figure, volatile). A company with stable debt but a falling share price can breach the Tadawul or AAOIFI debt threshold while remaining compliant under SC Malaysia — not because its debt changed, but because its market cap dropped.
 
 ### Step 3: Non-Permissible Income (NPI) — The 5% Rule
 

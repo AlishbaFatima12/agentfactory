@@ -83,7 +83,7 @@ The ACS is the UK's primary tool for calibrating bank-specific capital buffers -
 :::
 
 :::info DFAST (Dodd-Frank Act Stress Testing)
-**The US equivalent of the UK's ACS -- a Federal Reserve-mandated stress test requiring US banks with $100 billion or more in assets to project capital ratios over 9 quarters under severely adverse, adverse, and baseline scenarios.**
+**The US equivalent of the UK's ACS -- a Federal Reserve-mandated stress test requiring US banks with $250 billion or more in total consolidated assets (threshold raised from $10 billion by EGRRCPA, 2018) to project capital ratios over 9 quarters under severely adverse, adverse, and baseline scenarios.**
 
 A US bank with $500 billion in assets and a starting CET1 ratio of 12.5% must show it stays above 4.5% after modelling $80 billion in projected losses over the 9-quarter stress horizon.
 
@@ -117,19 +117,19 @@ These exercises use the banking plugin's `basel-capital`, `basel-rwa`, `aml-typo
 
 ### Asset Portfolio
 
-| Asset Class                        | Exposure   | SA Risk Weight         | Notes                                    |
-| ---------------------------------- | ---------- | ---------------------- | ---------------------------------------- |
-| UK Gilts                           | GBP 850M   | 0%                     | Sovereign, AA-rated                      |
-| Bank of England reserves           | GBP 420M   | 0%                     | Central bank deposits                    |
-| Claims on Barclays (A+ rated)      | GBP 180M   | 20%                    | Bank exposure, short-term                |
-| Corporate bonds (BBB rated)        | GBP 240M   | 100%                   | Unrated corporates default to 100%       |
-| SME loans                          | GBP 320M   | 85%                    | SME supporting factor applied            |
-| Residential mortgages (LTV 50-80%) | GBP 1,450M | 35%                    | Standard residential                     |
-| High-LTV mortgages (LTV &gt; 80%)  | GBP 185M   | 50%                    | Higher risk weight for high LTV          |
-| Commercial real estate (LTV 65%)   | GBP 380M   | 100%                   | CRE default weight                       |
-| Consumer unsecured                 | GBP 210M   | 75%                    | Retail exposure                          |
+| Asset Class                        | Exposure   | SA Risk Weight         | Notes                                       |
+| ---------------------------------- | ---------- | ---------------------- | ------------------------------------------- |
+| UK Gilts                           | GBP 850M   | 0%                     | Sovereign, AA-rated                         |
+| Bank of England reserves           | GBP 420M   | 0%                     | Central bank deposits                       |
+| Claims on Barclays (A+ rated)      | GBP 180M   | 20%                    | Bank exposure, short-term                   |
+| Corporate bonds (BBB rated)        | GBP 240M   | 100%                   | Unrated corporates default to 100%          |
+| SME loans                          | GBP 320M   | 85%                    | SME supporting factor applied               |
+| Residential mortgages (LTV 50-80%) | GBP 1,450M | 35%                    | Standard residential                        |
+| High-LTV mortgages (LTV &gt; 80%)  | GBP 185M   | 50%                    | Higher risk weight for high LTV             |
+| Commercial real estate (LTV 65%)   | GBP 380M   | 100%                   | CRE default weight                          |
+| Consumer unsecured                 | GBP 210M   | 75%                    | Retail exposure                             |
 | Stage 3 NPLs                       | GBP 45M    | 150%                   | Non-performing, specific provision &lt; 20% |
-| Undrawn revolving credit           | GBP 190M   | Apply 40% CCF then 75% | Off-balance-sheet, retail                |
+| Undrawn revolving credit           | GBP 190M   | Apply 40% CCF then 75% | Off-balance-sheet, retail                   |
 
 ### Operational Risk
 

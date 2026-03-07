@@ -199,7 +199,7 @@ Confidence:    HIGH — strong public signal, recent and relevant
 
 Notice the Five Laws check at the bottom. This is not optional formatting. The agent will not output a message without it. If you are reviewing outreach your team has written manually, you can use the same five-point check as an evaluation framework. Any message that fails even one law should be rewritten before sending.
 
-> **CTR (Click-Through Rate):** The percentage of people who click a link after seeing or opening a message. In email outreach, CTR is calculated as clicks divided by opens (not sends). In LinkedIn, CTR measures the percentage of people who click through from an ad or sponsored post. CTR matters because it measures whether your message compelled action, not just attention. A high open rate with a low CTR means your subject line is working but your content is not. Industry benchmarks for B2B email CTR range from 3.5% to 5%, and LinkedIn Sponsored Content averages around 0.40%.
+> **CTR (Click-Through Rate):** The percentage of people who click a link after seeing or opening a message. In email outreach, CTR is calculated as clicks divided by opens (not sends). In LinkedIn, CTR measures the percentage of people who click through from an ad or sponsored post. CTR matters because it measures whether your message compelled action, not just attention. A high open rate with a low CTR means your subject line is working but your content is not. Industry benchmarks for B2B email CTR range from 2% to 4%, and LinkedIn Sponsored Content averages around 0.44-0.65% depending on ad format.
 
 ## Building Multi-Touch Sequences With `/sequence`
 
