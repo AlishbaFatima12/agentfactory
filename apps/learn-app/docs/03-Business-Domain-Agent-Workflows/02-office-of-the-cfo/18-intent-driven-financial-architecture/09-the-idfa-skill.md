@@ -275,8 +275,8 @@ When you type `/financial-architect`, you are telling Cowork to load the skill e
 
 Both auto-activation and explicit invocation depend on the agent deciding to load the skill for that particular message. For **persistent** activation across an entire session, you can configure the **Instructions pane** to tell Cowork to use IDFA on every interaction.
 
-1. In the Cowork right sidebar, click **Instructions** (the document icon)
-2. In the Instructions editor, add this natural-language instruction:
+1. In the Cowork right sidebar, click **Instructions** (under "outputs") — this opens the Folder Instructions modal
+2. In the editor, add this natural-language instruction:
 
 ```
 Always apply the IDFA Financial Architect methodology when working
@@ -286,6 +286,8 @@ and delegate all calculations to the spreadsheet engine.
 ```
 
 3. Save the instructions and return to the chat
+
+![The Folder Instructions modal in Cowork — type natural-language instructions that apply to every interaction in this session.](./cowork-folder-instructions.png)
 
 This writes to Cowork's equivalent of a `CLAUDE.md` file — persistent instructions that apply to every message in this session. Unlike auto-activation (which depends on trigger phrases) or explicit invocation (which you must type each time), Instructions pane configuration is **always on** for the session.
 
@@ -302,6 +304,10 @@ Check the output. Even though the prompt does not mention "financial model" or "
 ### Step 4 — Verify: Check the Context Panel
 
 After Cowork processes your prompt, look at the **Context** section in the right sidebar. When a skill is invoked — whether through auto-activation, explicit invocation, or Instructions — it appears in the Context panel as a loaded skill. This tells you exactly which skills Cowork is using for the current interaction.
+
+![The Cowork right sidebar showing the Context panel with loaded skills (financial-architect and idfa-ops), the outputs section with Instructions and workbook references, and the Progress panel tracking completed steps.](./cowork-context-panel.png)
+
+In the screenshot above, notice the **Context** section at the bottom right: it shows `financial-architect` and `idfa-ops` as loaded skills, confirming the IDFA plugin is active. The **outputs** section shows `Instructions : CLAUDE.md` — the persistent instructions you configured in Step 3.
 
 Verify the output against the four guardrails:
 
