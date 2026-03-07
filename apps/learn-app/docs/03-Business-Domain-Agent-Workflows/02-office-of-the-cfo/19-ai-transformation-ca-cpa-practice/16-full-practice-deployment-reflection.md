@@ -123,7 +123,7 @@ The answer is not academic. It is your value proposition.
 
 ---
 
-## Exercise 24: Full Practice Deployment — AI-Augmented Practice Stack (75 min)
+## Exercise 24: Full Practice Deployment — AI-Augmented Practice Stack (100 min)
 
 **Domain:** Cross-domain
 **What you need:** Cowork (Team or Enterprise), the Anthropic finance plugins from Chapters 17-18, your five locally-built SKILL.md extensions from Lessons 9-10, and a real or representative client base. Download companion materials from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents): [`reference-skills/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills) for SKILL.md examples and [`workflow-recipes/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/workflow-recipes) for scheduling templates.

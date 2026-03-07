@@ -124,6 +124,10 @@ Generic plugins provide the framework. Domain extensions encode the institutiona
 The companion repository contains reference SKILL.md files under [`reference-skills/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills) — complete Pakistan-default implementations for all five extensions. Study these as you build your own, but do not copy them directly. The value of the extension is in encoding _your_ jurisdiction's rules and _your_ firm's practices.
 :::
 
+:::warning Jurisdiction-Specific Rates Change Frequently
+Tax rates, withholding percentages, filing deadlines, and penalty amounts throughout this lesson (and Lessons 10 and 12) are illustrative based on the Income Tax Ordinance 2001 as amended through Finance Act 2024. Pakistan's Finance Act changes these figures annually. **Always verify current rates at [fbr.gov.pk](https://www.fbr.gov.pk) before applying to client work.** The same principle applies to every jurisdiction — US rates change with Congressional action, UK rates with the Finance Act and Autumn Statement. Treat every rate in a SKILL.md as a parameter to be verified, not a permanent constant.
+:::
+
 The building block of every extension is a single format: **When [condition], [action]**. Every instruction you write follows this pattern. The condition defines when the agent should apply the knowledge. The action defines what it should do. Precision in the condition clause determines whether the extension activates correctly — too broad and it fires on irrelevant work; too narrow and it misses cases it should handle.
 
 ## Extension 1: Jurisdiction-Specific Tax Rules
