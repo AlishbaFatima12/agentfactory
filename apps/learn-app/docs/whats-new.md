@@ -17,6 +17,10 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-07
+
+- Part2/minor fixes ([#833](https://github.com/panaversity/agentfactory/pull/833))
+
 ### 2026-03-06
 - docs: add Ch 32 Lesson 4 — Reading a Test ([#831](https://github.com/panaversity/agentfactory/pull/831))
 
