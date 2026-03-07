@@ -66,6 +66,11 @@ cognitive_load:
     - "Clone (downloading a full project from the cloud)"
     - ".gitignore (telling Git which files to skip)"
   assessment: "4 concepts (within A1 limit of 5-7) ✓"
+
+differentiation:
+  extension_for_advanced: "Add a GitHub Actions workflow that runs a simple check on every push; explore GitHub Pages to deploy a static portfolio site from the repository"
+  remedial_for_struggling: "Focus on the push-clone verification loop — push your project, clone it to a new folder, and confirm all files are present before attempting .gitignore or SSH keys"
+
 teaching_guide:
   lesson_type: "hands-on"
   session_group: 2
