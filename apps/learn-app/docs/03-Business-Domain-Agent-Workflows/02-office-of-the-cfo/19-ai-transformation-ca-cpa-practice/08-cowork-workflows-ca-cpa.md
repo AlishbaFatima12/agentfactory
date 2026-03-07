@@ -96,11 +96,10 @@ teaching_guide:
     - question: "In the month-end close workflow, what happens at 7:00 AM on Day 1?"
       expected_response: "Four reconciliation commands run automatically as scheduled Cowork tasks — bank, debtors, creditors, and intercompany. The CA/CPA arrives to find completed reconciliations with exceptions flagged for review."
     - question: "What are the requirements for cross-app orchestration from Excel to PowerPoint?"
-      expected_response: "Mac users on Max, Team, or Enterprise plans with both Claude in Excel and Claude in PowerPoint installed."
+      expected_response: "A paid plan (Pro, Max, Team, or Enterprise) on macOS or Windows, with both Claude in Excel and Claude in PowerPoint installed. Cross-app is currently a research preview."
     - question: "Why set Cowork global instructions rather than specifying context in each session?"
       expected_response: "Global instructions persist across all sessions, ensuring every workflow reflects your jurisdiction, currency, reporting standards, and practice conventions without repeating them. This prevents inconsistency and saves time."
 ---
-
 
 # Cowork Workflows for CA/CPA Practice
 
@@ -194,7 +193,7 @@ Cowork's cross-application capability — moving analysis from Excel through to 
 What previously required the finance team to build the Excel, export the charts, and manually format the PowerPoint — an hour of skilled work — becomes a five-minute Cowork orchestration.
 
 :::warning Platform Requirements
-Cross-app workflows between Excel and PowerPoint require Mac users on Max, Team, or Enterprise plans with both Claude in Excel and Claude in PowerPoint installed. Windows support for cross-app orchestration is on the Anthropic roadmap but not yet available at the time of writing.
+Cross-app workflows between Excel and PowerPoint are available as a research preview on both macOS and Windows for paid plans (Pro, Max, Team, and Enterprise). You need both Claude in Excel and Claude in PowerPoint installed.
 :::
 
 ## Setting Global Instructions
@@ -326,7 +325,6 @@ available on my platform?
 ```
 
 **What you are learning:** Cross-app workflows are powerful but have platform constraints. Designing the workflow before implementing it reveals whether your deliverable can be produced in a single orchestrated session or requires manual handoffs. The fallback question is practical — not every practitioner has the required platform configuration, and knowing the manual alternative ensures you are never blocked.
-
 
 ---
 

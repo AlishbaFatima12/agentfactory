@@ -180,7 +180,10 @@ When processing dividend payments to resident shareholders, apply
 withholding at 15% under Section 150 (filer) or 30% (non-filer).
 
 When processing payments for services to a resident company, apply
-withholding at 8% under Section 153(1)(b) (filer) or 16% (non-filer).
+withholding under Section 153(1)(b) at the rate specified in the current
+FBR Withholding Tax Rate Card — rates vary by service type (e.g., 6%
+filer / 12% non-filer for general services). Always consult the latest
+rate card, as rates change with each Finance Act.
 
 ## Filing Deadlines
 
@@ -189,14 +192,15 @@ is September 30 of the year following the tax year. Flag any return
 preparation beginning after August 15 as HIGH PRIORITY.
 
 When preparing a withholding tax statement (Section 165), the deadline
-is the 15th day of the month following the quarter-end.
+is the 20th day of the month following the quarter-end.
 
 ## Penalties
 
 When a return is filed after the due date, note the penalty under
 Section 182: PKR 40,000 or 0.1% of the tax payable for each day of
-default, whichever is higher. Include this penalty risk in any
-communication to the client about delayed filing.
+default, whichever is higher, subject to a maximum penalty of 50% of
+the tax payable. Include this penalty risk in any communication to
+the client about delayed filing.
 
 ## Escalation
 
@@ -397,7 +401,6 @@ handle — then write an additional instruction to cover that case.
 ```
 
 **What you are learning:** Chart of accounts extensions must be comprehensive enough to eliminate manual recoding but not so exhaustive that they become unmaintainable. By drafting five mappings, two documentation rules, and one restricted account — then immediately stress-testing for edge cases — you learn the practical balance between coverage and complexity that makes extensions sustainable in real practice.
-
 
 ---
 

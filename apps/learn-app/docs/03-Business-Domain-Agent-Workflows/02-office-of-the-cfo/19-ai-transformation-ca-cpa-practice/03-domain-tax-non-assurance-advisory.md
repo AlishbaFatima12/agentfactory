@@ -103,7 +103,6 @@ teaching_guide:
       expected_response: "Gen-AI capability: tax research — the AI synthesises tax law, case law, and rulings to answer a specific technical question and produce a structured memo. Agentic capability: autonomous tax compliance agent — the agent executes the full return preparation process (extracting data, applying rules, computing liability, preparing the return) with the human role limited to review and sign-off. The difference is that Gen-AI assists a specific task within a human workflow, while the agentic system executes the full workflow autonomously."
 ---
 
-
 # Domain 2 — Tax and Non-Assurance Advisory
 
 > _"The tax professional who says 'our AI handles your compliance, and I bring you the planning advice that no software can give you' is offering a better value proposition than the one who says 'we prepare your return.'"_
@@ -160,8 +159,8 @@ Three agentic systems are moving from prototype to production deployment.
 | Platform                      | What It Does                                                                                                   | Current Stage                                                                                                                                                     |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Thomson Reuters CoCounsel** | Autonomous tax research, complex position analysis, memo drafting, document review                             | Gen-AI with agentic evolution — over 1 million professionals across 107 countries use CoCounsel; "Ready to Review" agentic workflow launched for 1040 preparation |
-| **PwC Agent OS**              | Autonomous execution of professional services workflows including research, analysis, and advisory preparation | Agentic architecture — portfolio of 120+ AI agents; clients report up to 8x faster cycle times                                                                    |
-| **Intuit Assist**             | Automated tax preparation, document ingestion, expense classification, credit identification                   | Gen-AI at scale — automates data entry for 90% of common tax forms; generated USD 90 million in efficiencies in H1 2025                                           |
+| **PwC Agent OS**              | Autonomous execution of professional services workflows including research, analysis, and advisory preparation | Agentic architecture — portfolio of 250+ AI agents (as of October 2025); clients report up to 8x faster cycle times                                               |
+| **Intuit Assist**             | Automated tax preparation, document ingestion, expense classification, credit identification                   | Gen-AI at scale — automates data entry for 90% of common tax forms; nearly USD 90 million in annualized efficiencies in FY 2025                                   |
 
 :::tip Global Perspective
 
@@ -279,7 +278,6 @@ as the firm's current annual revenue for calculations.
 ```
 
 **What you are learning:** The strategic implications of AI in tax practice extend beyond individual tasks. By modelling firm-level scenarios, you develop the commercial judgment that senior practitioners need — understanding not just which tasks AI can handle, but how automation reshapes the business model of professional services firms. This is the kind of analysis that AI assists but cannot make alone, because it requires understanding the firm's competitive position, client relationships, and market dynamics.
-
 
 ---
 
