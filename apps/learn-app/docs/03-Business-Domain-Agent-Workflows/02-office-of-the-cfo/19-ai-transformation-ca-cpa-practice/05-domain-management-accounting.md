@@ -206,7 +206,7 @@ Step 4 of Practice Exercise 4 makes this explicit: the SKILL.md instruction you 
 
 **What you will build:** A complete variance analysis workflow using the IDFA methodology, producing a CFO-ready narrative and a reusable SKILL.md specification.
 
-**Requirements:** Cowork, a financial dataset (actual vs. budget P&L for any period). If you need ready-made data, download the Crescent Textiles trial balance and entity profile from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) (`ca-cpa-exercise-data.zip`) — use the trial balance as your "actual" figures and ask Claude to generate a budget scenario from the entity profile.
+**Requirements:** Cowork, a financial dataset (actual vs. budget P&L for any period). If you need ready-made data, download the Crescent Textiles [trial balance](https://raw.githubusercontent.com/panaversity/ca-cpa-practice-agents/main/exercises/trial-balances/textile-manufacturer-tb.csv) and [entity profile](https://github.com/panaversity/ca-cpa-practice-agents/blob/main/exercises/entity-profiles/crescent-textiles.md) from the companion repository — use the trial balance as your "actual" figures and ask Cowork to generate a budget scenario from the entity profile.
 
 1. Place your P&L data in a Cowork folder. If you have `finance@knowledge-work-plugins` installed from Chapter 17, start with `/variance-analysis "Compare actual vs budget for this period"` to generate a structured baseline. Then refine with the IDFA naming conventions from Chapter 18 — ask Claude: _"Structure this P&L data as an IDFA-compliant variance analysis model. Name all inputs using the Inp\_ prefix convention. For the revenue and gross margin lines, decompose variances into volume, price, and mix components."_
 
@@ -222,7 +222,7 @@ Step 4 of Practice Exercise 4 makes this explicit: the SKILL.md instruction you 
 
 ## Try With AI
 
-Use these prompts in Cowork, Claude Code, or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Variance Decomposition
 

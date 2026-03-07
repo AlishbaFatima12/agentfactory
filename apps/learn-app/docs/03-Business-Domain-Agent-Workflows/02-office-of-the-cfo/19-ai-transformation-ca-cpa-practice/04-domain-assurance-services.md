@@ -183,7 +183,7 @@ The economics change significantly. An audit that currently requires 500 staff h
 
 **What you'll build:** A structured audit risk assessment, revenue recognition audit questions, a continuous monitoring specification, and SKILL.md instructions for sector-specific risk identification.
 
-**Requirements:** Cowork or Claude (any plan). Publicly available financial information about any listed company, or use the Crescent Textiles entity profile and trial balance from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) (`ca-cpa-exercise-data.zip`).
+**Requirements:** Cowork or Claude (any plan). Publicly available financial information about any listed company, or use the Crescent Textiles [entity profile](https://github.com/panaversity/ca-cpa-practice-agents/blob/main/exercises/entity-profiles/crescent-textiles.md) and [trial balance](https://raw.githubusercontent.com/panaversity/ca-cpa-practice-agents/main/exercises/trial-balances/textile-manufacturer-tb.csv) from the companion repository.
 
 1. **Prepare a risk assessment.** Choose a listed company in a sector you know and ask your AI assistant:
 

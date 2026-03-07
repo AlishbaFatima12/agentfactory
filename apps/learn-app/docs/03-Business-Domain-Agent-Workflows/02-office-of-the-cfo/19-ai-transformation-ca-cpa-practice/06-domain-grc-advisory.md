@@ -205,7 +205,7 @@ The professional skills that become more valuable in this model are: interpretin
 
 **What you will build:** A SKILL.md specification for a continuous controls monitoring agent covering three financial controls.
 
-**Requirements:** Claude (any interface). Knowledge of any organisation's key financial controls. If you need a ready-made entity, download the Crescent Textiles profile from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) (`ca-cpa-exercise-data.zip` → `exercises/entity-profiles/crescent-textiles.md`) — it includes key risk areas and regulatory obligations.
+**Requirements:** Claude (any interface). Knowledge of any organisation's key financial controls. If you need a ready-made entity, download the Crescent Textiles profile from the companion repository: [`crescent-textiles.md`](https://github.com/panaversity/ca-cpa-practice-agents/blob/main/exercises/entity-profiles/crescent-textiles.md) — it includes key risk areas and regulatory obligations.
 
 1. Choose three financial controls for a specific organisation type (e.g., a bank, a retail company, a textile manufacturer). Ask Claude: _"For each control, specify: (a) what the control is designed to prevent, (b) what data would evidence that the control has been executed, (c) what anomaly would indicate the control may have failed, and (d) what the monitoring agent should do when it detects that anomaly."_
 
@@ -221,7 +221,7 @@ The professional skills that become more valuable in this model are: interpretin
 
 ## Try With AI
 
-Use these prompts in Cowork, Claude Code, or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Control Design Thinking
 

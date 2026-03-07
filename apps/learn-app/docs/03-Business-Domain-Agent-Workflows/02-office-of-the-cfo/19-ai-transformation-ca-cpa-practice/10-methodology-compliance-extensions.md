@@ -467,7 +467,7 @@ Converting Method A answers to extension instructions follows a direct pattern:
 
 **What you'll build:** One complete domain extension using the Method A interview framework.
 
-**Requirements:** Claude (any interface). Knowledge of your practice area's specific requirements. For reference implementations, see the five extension SKILL.md files in the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents) under `reference-skills/`.
+**Requirements:** Claude (any interface). Knowledge of your practice area's specific requirements. For reference implementations, see the five extension SKILL.md files in the companion repository under [`reference-skills/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills).
 
 1. **Choose one** of the five extensions from Lessons 9-10 that is most relevant to your practice. Answer these questions in writing (200 words minimum):
    - What are the three most common errors junior staff make in this area?
@@ -510,7 +510,7 @@ Extensions 1, 3, and 5 apply broadly (jurisdiction-wide or firm-wide). Extension
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to practise building methodology, entity, and compliance extensions.
+Use these prompts in Cowork or your preferred AI assistant to practise building methodology, entity, and compliance extensions.
 
 ### Prompt 1: Audit Methodology Gap Analysis
 
