@@ -93,7 +93,8 @@ The [IDFA plugin](https://github.com/panaversity/agentfactory-business-plugins/t
 
 ```
 idfa-financial-architect/
-├── CLAUDE.md                  ← Project instructions for Claude
+├── .claude-plugin/
+│   └── plugin.json            ← Plugin metadata (name, version, author)
 ├── skills/
 │   ├── financial-architect/   ← The methodology
 │   │   ├── SKILL.md           ← Behavioural guidance, four guardrails
@@ -106,13 +107,6 @@ idfa-financial-architect/
 │           ├── idfa_ops.py    ← Write, read, inspect, formula, create-range
 │           ├── idfa_audit.py  ← Compliance auditor
 │           └── recalc_bridge.py ← LibreOffice recalculation
-├── evals/                     ← Automated evaluation harness
-│   ├── cases.yaml             ← Test scenarios
-│   ├── golden/                ← Expected outputs
-│   └── graders/               ← LLM judge prompts
-├── examples/
-│   └── gp_waterfall.xlsx      ← Reference model
-├── tests/                     ← Programmatic tests
 ├── README.md
 └── LICENSE                    ← Proprietary
 ```
