@@ -327,6 +327,10 @@ Your prompt should get the AI to analyze how the **same instrument** appears in 
 
 **What you are learning:** Writing cross-border prompts requires specifying both jurisdiction perspectives explicitly. If your prompt only mentioned one jurisdiction, the AI defaulted to a single framework. The skill of constructing a prompt that forces multi-jurisdiction analysis is the same skill that makes the router in the plugin architecture effective — it starts by identifying the jurisdiction before doing any accounting.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 10: Saudi Arabia →](./10-saudi-arabia.md)

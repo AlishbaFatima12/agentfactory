@@ -427,3 +427,7 @@ should have been designed to prevent the tipping-off.
 ```
 
 **What you are learning:** Tipping-off is one of the highest-consequence risks in banking AI design. A single disclosure by an AI system can trigger criminal prosecution. By analysing these scenarios, you build the judgment needed to design AI systems with appropriate safeguards -- restricted-access data architectures, sanitised customer-facing language, and separation between investigation systems and operational systems. This is not a compliance checkbox; it is a criminal law requirement that must inform every architecture decision in banking AI.
+
+## Flashcards Study Aid
+
+<Flashcards />

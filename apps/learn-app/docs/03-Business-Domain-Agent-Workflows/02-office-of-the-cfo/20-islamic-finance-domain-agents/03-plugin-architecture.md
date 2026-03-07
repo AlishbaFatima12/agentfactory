@@ -287,6 +287,10 @@ claude plugin install islamic-finance@agentfactory-business
 Browse the complete skill library in the [plugin repository](https://github.com/panaversity/agentfactory-business-plugins/tree/main/islamic-finance) — the skill files examined in this lesson are at `skills/islamic-finance-router/SKILL.md`, `skills/murabaha/SKILL.md`, and `skills/islamic-finance-router/references/jurisdictions/bahrain-aaoifi.md`.
 :::
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 4: Murabaha — Cost-Plus Financing Across Jurisdictions →](./04-murabaha.md)

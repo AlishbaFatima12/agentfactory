@@ -370,6 +370,10 @@ optimistic weights to report lower provisions?
 
 **What you are learning:** Probability weight selection is one of the most contentious areas in IFRS 9 reporting. By calculating ECL under different weight schemes, you see how material the weight choice is — and why regulatory and audit scrutiny focuses on whether banks are assigning appropriate probabilities to adverse scenarios. This prepares you for the professional judgment required in real ECL reporting.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 6: Basel III/IV Capital Adequacy — CET1, Tier 1, Total Capital →](./06-basel-capital-ratios.md)

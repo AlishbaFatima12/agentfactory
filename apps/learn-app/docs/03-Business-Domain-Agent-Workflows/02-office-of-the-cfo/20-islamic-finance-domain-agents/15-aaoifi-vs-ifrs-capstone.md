@@ -349,6 +349,10 @@ numbers in the dual-reporting context?
 
 **What you are learning:** Impairment is the third most material difference between AAOIFI and IFRS (after IAH classification and ijarah treatment). The FAS 30 and IFRS 9 staging frameworks are broadly similar in structure but can produce different provision amounts for the same portfolio — particularly at the Stage 1/Stage 2 boundary where IFRS 9's forward-looking ECL model may recognise provisions earlier than FAS 30. The CBB's regulatory minimum provisions add a third layer. The auditor working on a Bahraini IFI must navigate all three.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 16: Cross-Border Islamic Banking Group →](./16-cross-border-consolidation.md)

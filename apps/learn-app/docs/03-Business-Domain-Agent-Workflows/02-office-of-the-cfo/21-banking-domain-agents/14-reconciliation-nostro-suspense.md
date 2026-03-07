@@ -440,3 +440,7 @@ amount-weighted SLA that accounts for materiality.
 ```
 
 **What you are learning:** Suspense clearance reveals a tension between standardised SLAs and risk-based prioritisation. A flat ageing SLA treats GBP 250 and GBP 2.1M identically, but the risk to the bank is not the same. By designing an amount-weighted SLA, you learn to think about reconciliation as a risk management discipline, not just an operational checklist.
+
+## Flashcards Study Aid
+
+<Flashcards />

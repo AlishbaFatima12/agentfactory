@@ -371,3 +371,7 @@ Use concrete examples where possible.
 ```
 
 **What you are learning:** Regulatory design involves tradeoffs. The output floor balances model sophistication (IRB is more risk-sensitive) against model risk (IRB can be gamed). Understanding this tradeoff is critical for building AI agents that explain regulatory requirements to different stakeholders -- a board member needs the strategic impact, a risk manager needs the calculation detail, a regulator needs compliance evidence.
+
+## Flashcards Study Aid
+
+<Flashcards />

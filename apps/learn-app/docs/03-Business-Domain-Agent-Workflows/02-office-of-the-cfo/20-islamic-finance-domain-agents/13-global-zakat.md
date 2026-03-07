@@ -386,6 +386,10 @@ deduction capability into its core banking system?
 
 **What you are learning:** Pakistan's 2028 full conversion mandate is the most significant structural change in global Islamic finance. The zakat deduction-at-source mechanism — currently applicable only to Islamic banks — will scale to the entire banking system. The operational and systems implications are substantial, and the CA/CPA advising banks on conversion must understand both the Shariah requirement and the systems architecture needed to implement it.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 14: Shariah Portfolio Screening →](./14-shariah-screening.md)

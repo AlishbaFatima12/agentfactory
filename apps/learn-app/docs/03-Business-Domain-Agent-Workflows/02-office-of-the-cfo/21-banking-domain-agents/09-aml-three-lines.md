@@ -398,3 +398,7 @@ Questions:
 ```
 
 **What you are learning:** Beneficial ownership investigation is where AML compliance meets detective work. Multi-layered structures, trusts with discretionary beneficiaries, and cross-jurisdictional holdings all complicate the analysis. AI agents can pull corporate registry data and map structures, but the judgment calls -- "Is this structure designed to obscure ownership?" -- require human expertise. Understanding both sides of this boundary makes you a more effective designer of banking AI systems.
+
+## Flashcards Study Aid
+
+<Flashcards />

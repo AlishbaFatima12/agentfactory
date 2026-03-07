@@ -284,6 +284,10 @@ the issuer's board of directors.
 
 **What you are learning:** Green sukuk represent the convergence of Islamic finance and sustainable finance — two movements with natural alignment (both require asset-backing, ethical screening, and real economic activity). The accounting treatment is unchanged, but the disclosure and reporting obligations are significantly expanded. This is one of the fastest-growing segments of the global sukuk market and a high-value advisory niche.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 7: Takaful and IFRS 17 →](./07-takaful-ifrs17.md)

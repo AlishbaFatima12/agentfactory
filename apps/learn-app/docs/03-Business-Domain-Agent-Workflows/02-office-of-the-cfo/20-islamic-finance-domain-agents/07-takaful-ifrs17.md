@@ -290,6 +290,10 @@ it to takaful before.
 
 **What you are learning:** Family takaful under the GMM is the most complex intersection of Islamic finance and insurance accounting. The CSM creates a mechanism for recognising profit over the coverage period — but in takaful, the "profit" belongs to different parties depending on the operating model. Understanding the GMM for family takaful positions you to advise on the IFRS 17 transition for the long-term takaful industry, which is still in early stages in many jurisdictions.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 8: Trade & Partnership Finance →](./08-trade-partnership-finance.md)

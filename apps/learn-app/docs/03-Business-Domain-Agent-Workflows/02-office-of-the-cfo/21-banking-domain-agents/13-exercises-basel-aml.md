@@ -479,3 +479,7 @@ rule and whether it applies to any of these cases.
 ```
 
 **What you are learning:** Sanctions screening is not binary. Payment 1 tests your ability to handle common-name false positives in high-volume regions. Payment 2 tests whether you can distinguish a UK company from a sanctioned Russian entity that happens to share a name — a critical skill because blocking a legitimate UK company is a compliance failure in the other direction. Payment 3 tests the OFAC 50% rule (entities 50% or more owned by a sanctioned party are themselves sanctioned) and the concept of sanctions evasion through third countries.
+
+## Flashcards Study Aid
+
+<Flashcards />

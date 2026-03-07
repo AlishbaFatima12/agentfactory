@@ -252,6 +252,10 @@ For each jurisdiction:
 
 **What you are learning:** Regulatory arbitrage is a real factor in Islamic fintech — platforms choose their jurisdiction partly based on regulatory clarity. Understanding which jurisdictions have addressed Islamic fintech specifically (Malaysia leads) and which have gaps (UK P2P framework) is essential knowledge for advising fintech clients on where to domicile and which authorisations to seek.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 18: Full Islamic Finance Agent →](./18-full-skill-library-capstone.md)

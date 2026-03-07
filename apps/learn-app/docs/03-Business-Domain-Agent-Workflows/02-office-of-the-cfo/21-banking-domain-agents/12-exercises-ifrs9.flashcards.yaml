@@ -1,0 +1,83 @@
+deck:
+  id: "ch21-12-exercises-ifrs9"
+  title: "IFRS 9 Deep Practice"
+  description: "Key concepts from the retail mortgage staging exercise and the GCC corporate ECL model, covering SICR triggers, ECL formulas, scenario weighting, and regional macro adjustments."
+  tags: ["IFRS-9", "ECL", "staging", "GCC", "exercises"]
+  version: 1
+
+cards:
+  - id: "ch21-12-exercises-ifrs9-001"
+    front: "What are the two quantitative SICR triggers for Stage 2 under IFRS 9?"
+    back: "1. Days past due of 30 or more (rebuttable presumption)\n2. Significant PD increase since origination (typically 2+ notch downgrade or PD doubling)"
+    tags: ["SICR", "Stage-2", "quantitative-triggers"]
+    difficulty: "basic"
+
+  - id: "ch21-12-exercises-ifrs9-002"
+    front: "A borrower has zero DPD, no rating change, but just lost their job. Why might this still trigger Stage 2 classification?"
+    back: "SICR includes qualitative triggers -- a significant adverse change in borrower circumstances (like job loss) can indicate increased credit risk even without quantitative deterioration. Professional judgment determines whether the qualitative indicator represents a significant increase."
+    tags: ["SICR", "qualitative-triggers", "professional-judgment"]
+    difficulty: "intermediate"
+    why: "How would you decide whether a property value decline alone is sufficient to trigger Stage 2?"
+
+  - id: "ch21-12-exercises-ifrs9-003"
+    front: "What triggers Stage 3 (credit-impaired) classification under IFRS 9?"
+    back: "1. Days past due of 90 or more\n2. Borrower in default\n3. Significant financial difficulty"
+    tags: ["SICR", "Stage-3", "credit-impaired"]
+    difficulty: "basic"
+
+  - id: "ch21-12-exercises-ifrs9-004"
+    front: "What ECL measurement basis applies to each IFRS 9 stage?"
+    back: "Stage 1: 12-month ECL\nStage 2: lifetime ECL\nStage 3: lifetime ECL (credit-impaired)"
+    tags: ["ECL", "measurement-basis", "staging"]
+    difficulty: "basic"
+
+  - id: "ch21-12-exercises-ifrs9-005"
+    front: "How is EAD calculated for a borrower with both drawn and undrawn exposures?"
+    back: "EAD = Drawn + (Undrawn x CCF)."
+    tags: ["EAD", "CCF", "exposure"]
+    difficulty: "basic"
+
+  - id: "ch21-12-exercises-ifrs9-006"
+    front: "Why is probability-weighted ECL always greater than or equal to the base case ECL?"
+    back: "The non-linearity effect: adverse scenarios produce disproportionately larger ECL increases than the reductions from upside scenarios. Because ECL is a product of PD x LGD x EAD, higher PDs multiply through rather than averaging linearly, pulling the weighted result above the base."
+    tags: ["ECL", "non-linearity", "scenario-weighting"]
+    difficulty: "advanced"
+    why: "How would you demonstrate the non-linearity effect using a simple two-scenario example?"
+
+  - id: "ch21-12-exercises-ifrs9-007"
+    front: "In the GCC corporate ECL model, what base PD multiplier converts through-the-cycle PDs to point-in-time PDs?"
+    back: "1.15 base PD multiplier reflecting current GCC conditions."
+    tags: ["GCC", "PD-multiplier", "point-in-time"]
+    difficulty: "basic"
+
+  - id: "ch21-12-exercises-ifrs9-008"
+    front: "What CCF is applied to undrawn commitments in the GCC corporate ECL exercise?"
+    back: "75% Credit Conversion Factor for all undrawn commitments."
+    tags: ["CCF", "undrawn", "GCC"]
+    difficulty: "basic"
+
+  - id: "ch21-12-exercises-ifrs9-009"
+    front: "How does the GCC region's oil price sensitivity affect ECL modelling?"
+    back: "Oil prices drive GDP growth in GCC economies, so falling oil prices increase default risk. The ECL model captures this through scenario-specific PD multipliers -- the adverse scenario (oil at $50/barrel) uses a 1.65 multiplier versus 0.85 for upside ($95/barrel), nearly doubling the PD."
+    tags: ["GCC", "oil-sensitivity", "macro-scenarios"]
+    difficulty: "intermediate"
+    why: "Which GCC sectors would be most and least sensitive to oil price shocks?"
+
+  - id: "ch21-12-exercises-ifrs9-010"
+    front: "What are the three macroeconomic scenarios and their probability weights in the GCC exercise?"
+    back: "Upside (PD x 0.85, 20%)\nBase (PD x 1.15, 50%)\nAdverse (PD x 1.65, 30%)"
+    tags: ["macro-scenarios", "probability-weighting", "GCC"]
+    difficulty: "intermediate"
+
+  - id: "ch21-12-exercises-ifrs9-011"
+    front: "A model uses 30% LGD for GCC real estate, but past downturns show 40% price declines. How does a Post-Model Adjustment address this gap?"
+    back: "A PMA adds a management overlay to increase the provision beyond what the model produces, bridging the gap between model assumptions and expert judgment. It requires governance: approval authority, time-limiting, and back-testing to prevent PMAs from becoming arbitrary adjustments."
+    tags: ["PMA", "model-overlay", "governance"]
+    difficulty: "intermediate"
+    why: "Why must PMAs be time-limited rather than permanent adjustments?"
+
+  - id: "ch21-12-exercises-ifrs9-012"
+    front: "In the mortgage exercise, what LGD applies based on LTV?"
+    back: "25% for LTV up to 80%, 40% for LTV above 80%."
+    tags: ["LGD", "LTV", "mortgage"]
+    difficulty: "basic"

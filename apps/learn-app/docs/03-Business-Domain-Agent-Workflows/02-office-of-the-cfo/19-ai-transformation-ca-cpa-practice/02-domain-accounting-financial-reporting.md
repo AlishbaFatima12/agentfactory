@@ -189,9 +189,17 @@ At the service level, fully automated reporting platforms are emerging as a busi
 
 **What you'll build:** A structured month-end close workflow using AI assistance, mapping the boundary between what the agent can execute and what requires your professional judgment.
 
-**Requirements:** Cowork (Team or Enterprise plan) or Claude with file access. Trial balance data in Excel or CSV format. If you do not have real data, download the ready-made Crescent Textiles trial balance from the companion repository: [`textile-manufacturer-tb.csv`](https://raw.githubusercontent.com/panaversity/ca-cpa-practice-agents/main/exercises/trial-balances/textile-manufacturer-tb.csv) (PKR-denominated, ~35 IFRS accounts).
+**Requirements:** Cowork (Team or Enterprise plan) or Claude with file access.
 
-1. Place your trial balance data in a Cowork folder. Ask Claude:
+### Setup
+
+1. Download the ready-made Crescent Textiles trial balance (PKR-denominated, ~35 IFRS accounts): [**textile-manufacturer-tb.csv**](https://raw.githubusercontent.com/panaversity/ca-cpa-practice-agents/main/exercises/trial-balances/textile-manufacturer-tb.csv). If you have your own trial balance data in Excel or CSV format, you can use that instead.
+2. Create a new folder on your computer (e.g., `month-end-close-exercise`). Place the downloaded CSV file inside it.
+3. Open that folder in Cowork.
+
+### Walkthrough
+
+1. Ask Claude:
 
    ```
    Review this trial balance. Identify the ten largest account

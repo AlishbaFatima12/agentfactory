@@ -375,3 +375,7 @@ long-term mortgages with short-term wholesale money.
 ```
 
 **What you are learning:** The NSFR reveals maturity mismatch -- the fundamental banking risk that has caused failures for centuries. By computing it yourself, you internalise why a bank cannot safely fund 25-year mortgages with 3-month wholesale deposits, regardless of how profitable the carry trade might be. This structural understanding is what separates a competent banking AI agent from a simple ratio calculator.
+
+## Flashcards Study Aid
+
+<Flashcards />
