@@ -221,7 +221,7 @@ The professional skills that become more valuable in this model are: interpretin
 
 ## Try With AI
 
-Use these prompts in Cowork, Claude Code, or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Control Design Thinking
 

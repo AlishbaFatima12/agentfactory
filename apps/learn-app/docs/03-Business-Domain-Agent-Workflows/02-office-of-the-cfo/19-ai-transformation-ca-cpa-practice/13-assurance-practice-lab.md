@@ -260,7 +260,7 @@ This lab contains three exercises. Each builds a complete professional deliverab
 
 ## Try With AI
 
-Use these prompts to explore assurance concepts beyond the exercises above.
+Use these prompts in Cowork or your preferred AI assistant to explore assurance concepts beyond the exercises above.
 
 ### Prompt 1: Audit Framework Comparison
 

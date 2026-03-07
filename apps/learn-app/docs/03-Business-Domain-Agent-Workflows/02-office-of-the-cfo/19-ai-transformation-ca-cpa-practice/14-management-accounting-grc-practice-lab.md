@@ -312,7 +312,7 @@ This lab contains four exercises across two domains. Exercises 18-19 cover manag
 
 ## Try With AI
 
-Use these prompts to explore management accounting and GRC concepts beyond the exercises above.
+Use these prompts in Cowork or your preferred AI assistant to explore management accounting and GRC concepts beyond the exercises above.
 
 ### Prompt 1: Stress Scenario Design
 

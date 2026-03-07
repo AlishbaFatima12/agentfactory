@@ -243,7 +243,7 @@ The plugin commands produce consistent, structured output. The conversational ap
 
 ## Try With AI
 
-Use these prompts to deepen your understanding of Domain 1 concepts.
+Use these prompts in Cowork or your preferred AI assistant to deepen your understanding of Domain 1 concepts.
 
 ### Prompt 1: Standard vs Non-Standard Disclosure Analysis
 

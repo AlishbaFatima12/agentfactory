@@ -510,7 +510,7 @@ Extensions 1, 3, and 5 apply broadly (jurisdiction-wide or firm-wide). Extension
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to practise building methodology, entity, and compliance extensions.
+Use these prompts in Cowork or your preferred AI assistant to practise building methodology, entity, and compliance extensions.
 
 ### Prompt 1: Audit Methodology Gap Analysis
 
