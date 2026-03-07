@@ -41,6 +41,8 @@ The Agent Factory thesis says the future belongs to AI employees that deliver re
 
 ## Find Your Starting Point
 
+The simplest way to choose your first AI employee is to ask four questions: Where do you want to work — terminal, desktop app, or messaging app? How autonomous should it be — paired with you or running tasks on its own? Where does your data live — local files, enterprise systems, or chat workflows? And how strict are your security requirements? Once those four answers are clear, the choice becomes much easier.
+
 You don't need all five tools on day one. Find yourself below, and start there.
 
 | You Are...                                                        | Start With                       | Why                                                                                                                                                                                         |
@@ -50,6 +52,7 @@ You don't need all five tools on day one. Find yourself below, and start there.
 | **An executive or team leader** guiding AI adoption               | **Claude Cowork**                | Cowork connects to your team's existing tools (Google Drive, Gmail, Excel, DocuSign) and runs scheduled tasks automatically. Start here to experience what AI employees actually feel like. |
 | **A product manager or architect** designing AI-powered systems   | **Claude Code** + **Codex**      | Claude Code for general-purpose work and prototyping. Codex when you need heavy-duty reasoning through complex system designs.                                                              |
 | **Someone who cares deeply about security and data control**      | **Cowork, Claude Code, NanoClaw**                     | NanoClaw runs every AI employee inside a sealed container on your machine. Nothing leaks out. The codebase is small enough to read and audit yourself.                                      |
+
 
 ---
 
@@ -78,7 +81,7 @@ Running a fleet of AI employees requires managing API and subscription costs. He
 
 Cowork is Anthropic's AI employee for business professionals who don't work in a terminal. It runs inside the Claude Desktop app on macOS and Windows.
 
-**Think of it as:** a knowledgeable coworker who handles the work you never have time for — building reports, analyzing documents, organizing files, drafting presentations, and managing recurring tasks. It connects directly to your team's everyday tools: Google Drive, Gmail, Google Calendar, DocuSign, Excel, PowerPoint, and more.
+**Think of it as:** a knowledgeable coworker who handles the work you never have time for — building reports, analyzing documents, organizing files, drafting presentations, and managing recurring tasks. It connects directly to your team's everyday tools: Google Drive, Gmail, Google Calendar, DocuSign, Excel, PowerPoint, and more. Connector availability is improving quickly, but in practice it still depends on your plan, your admin configuration, and which plugins your organization has enabled. Treat Cowork less like a fixed app and more like an enterprise AI surface whose usefulness grows with the systems your team actually connects to it.
 
 In February 2026, Anthropic shipped a major enterprise upgrade: private plugin marketplaces (so your company controls exactly which capabilities are available), department-specific plugins for HR, finance, engineering, legal, and operations, and a `/schedule` command that lets you set up tasks that run automatically — like a weekly competitor analysis every Monday morning.
 
@@ -105,6 +108,8 @@ Codex is OpenAI's AI general agent for hard engineering problems. It runs in two
 **Think of it as:** the specialist you call in for the hardest jobs. While Claude Code handles the everyday, Codex is built for complex reasoning — designing system architectures that require deep thinking. Its latest model (GPT-5.3-Codex) combines frontier coding ability with advanced reasoning, and it's expanding beyond code into broader knowledge work.
 
 In cloud mode, you describe what you want, and Codex plans, builds, tests, and iterates autonomously until the work passes your tests — all in a sealed sandbox. You can run multiple tasks in parallel, each in its own isolated environment.
+
+Use Codex when the task is engineering-heavy, well-scoped, and testable: major refactors, migrations, architecture spikes, debugging across large repos, or parallel implementation work that benefits from isolated environments. Reach for it when you want an agent to work through a substantial software task end-to-end, not just autocomplete inside a single file.
 
 ---
 
@@ -141,12 +146,14 @@ _Part 5 teaches you to build custom AI employees with the same framework that po
 | **Part 1** — Foundations                  | What AI employees are and how to work with them   | Claude Code         | OpenClaw    |
 | **Part 2** — Workflow Primitives          | File processing, data extraction, version control | Claude Code         | —           |
 | **Part 3** — Business Domains             | Finance, legal, marketing, operations workflows   | Claude Cowork       | Claude Code |
-| **Part 4** — Natural Language Programming                  | Typrscript, Python development, testing, debugging            | Claude Code         | Codex       |
+| **Part 4** — Natural Language Programming                  | Typescript, Python development, testing, debugging            | Claude Code         | Codex       |
 | **Part 5** — Building Custom AI Employees | Frameworks, tool protocols, databases, evaluation | Claude Code         | NanoClaw    |
 
 ---
 
 ## Side-by-Side Comparison
+
+This comparison is not ranking these tools from “best” to “worst.” It compares them across six practical dimensions: primary interface, deployment model, autonomy level, security posture, openness, and ideal user. The right choice depends less on model quality alone and more on where the agent runs, what systems it can touch, and how much supervision you want.
 
 |                        | Claude Cowork                   | Claude Code                             | Codex                             | OpenClaw                            | NanoClaw                                  |
 | ---------------------- | ------------------------------- | --------------------------------------- | --------------------------------- | ----------------------------------- | ----------------------------------------- |
@@ -162,6 +169,8 @@ _Part 5 teaches you to build custom AI employees with the same framework that po
 ## The Big Picture: Your Agent Fleet
 
 Nobody uses just one AI employee. The most effective setup in 2026 is a fleet — General Agents handling your day-to-day work, Personal AI Employees running autonomously in your messaging apps and business workflows.
+
+A fleet does not mean using every tool every day. In practice, most people will have one daily driver and one specialist: for example, Claude Code plus OpenClaw, or Cowork plus NanoClaw, or Claude Code plus Codex. The goal is not tool collection. The goal is coverage: one agent for your default workflow, and one agent for the jobs your default tool is not built to do.
 
 General Agents are what you *use*. Personal AI Employees are what you *build and deploy* — and eventually, sell. This book teaches you both sides: how to get maximum leverage from Claude Code, Cowork, and Codex today, and how to build your own Digital FTEs with OpenClaw and NanoClaw that other people will pay to use.
 
