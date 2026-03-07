@@ -123,6 +123,8 @@ This isn't academic. In 1982, the Vancouver Stock Exchange launched a new index 
 
 When they found the bug and corrected it over a weekend in November 1983, the index jumped from 524 to over 1098 overnight. The market hadn't crashed. The math had just been wrong — silently, invisibly, for almost two years.
 
+_Source: Quinn, M.J. (2014). Ethics for the Information Age. Pearson. The Vancouver Stock Exchange truncation incident is also documented in Goldberg, D. (1991). "What Every Computer Scientist Should Know About Floating-Point Arithmetic." ACM Computing Surveys._
+
 That was truncation at three decimal places. Your Bash terminal does worse: `$((10 / 3))` truncates to _zero_ decimal places.
 
 ## The Head Math Trap
