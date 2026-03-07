@@ -206,7 +206,7 @@ Migration tips: Export/import SKILL.md patterns across agents; use ClawHub commu
 
 ## Beyond the Core Fleet: Exploring Alternatives
 
-While Claude Code, Cowork, and NanoClaw form a strong foundation, 2026's agent landscape is far more diverse. Open-source frameworks like Gemini CLI, Qwen Code, LangGraph, CrewAI, and AutoGen power multi-agent fleets for complex orchestration, often at lower cost when paired with models from DeepSeek, or Qwen. No-code/low-code builders (Vellum, Microsoft Copilot Studio, Zapier Central, Salesforce Agentforce) let non-technical teams deploy agents faster without SDKs or terminals.
+While Claude Code, Cowork, and NanoClaw form a strong foundation, 2026's agent landscape is far more diverse. Open-source frameworks like Gemini CLI, Qwen Code, Open AI Agents SDK, and Claude Agents SDK power multi-agent fleets for complex orchestration, often at lower cost when paired with models from DeepSeek, or Qwen. No-code/low-code builders (Vellum, Microsoft Copilot Studio, Zapier Central, Salesforce Agentforce) let non-technical teams deploy agents faster without SDKs or terminals.
 
 For pure open-model fans, tools built on Llama 4, DeepSeek, Mistral, or Gemma offer fully local or self-hosted options with zero cloud dependency — ideal if privacy trumps speed. The book focuses on Claude Code + companions because they deliver the highest leverage today for most readers, but experiment with one alternative per quarter to future-proof your fleet.
 
