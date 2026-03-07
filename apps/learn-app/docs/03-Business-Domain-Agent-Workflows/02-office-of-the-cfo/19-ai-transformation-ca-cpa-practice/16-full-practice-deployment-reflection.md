@@ -505,3 +505,8 @@ initial deployment.
 ```
 
 **What you are learning:** AI deployment is not a one-time event — it requires ongoing maintenance, review, and adaptation. The six-month simulation forces you to think beyond the initial setup to the operational reality: SKILL.md files become stale as regulations change, new AI capabilities emerge that shift the automation boundary, and your professional value proposition evolves. The most important metric is whether the proportion of your time spent on judgment-intensive work has increased relative to execution work.
+
+
+## Flashcards Study Aid
+
+<Flashcards />

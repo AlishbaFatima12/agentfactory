@@ -7,6 +7,10 @@ chapter_number: 19
 part_number: 3
 version: 1.0
 status: draft
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-19/the-agentic-accountant.pdf"
+  title: "The Agentic Accountant"
+  height: 700
 ---
 
 # Chapter 19: AI Transformation of CA/CPA Practice Areas
@@ -16,6 +20,8 @@ status: draft
 Chapter 18 gave you the Intent-Driven Financial Architecture — the methodology for encoding financial logic into Named Range structures that AI agents can read, reason about, and extend. This chapter applies that foundation, along with everything you have learned about Cowork plugins (Chapter 15), knowledge extraction (Chapter 16), and finance domain agents (Chapter 17), to the profession where the stakes are highest: chartered accountancy and certified public accounting.
 
 The CA/CPA profession sits at the intersection of three forces: regulatory severity (errors carry legal consequences), high volume of routine work (ripe for automation), and an agentic AI transition already underway (major firms are deploying autonomous workflows). This chapter maps all five practice domains against the Gen-AI and Agentic AI spectrum, shows you exactly where automation replaces routine work and where professional judgment becomes more valuable, then builds the domain-specific agents for each.
+
+## 📚 Teaching Aid
 
 ## What You'll Learn
 
@@ -64,7 +70,7 @@ By the end of this chapter, you should be able to answer these five questions:
 
 Exercise data, reference SKILL.md examples, and workflow recipe templates for this chapter are available in the companion repository: [**panaversity/ca-cpa-practice-agents**](https://github.com/panaversity/ca-cpa-practice-agents)
 
-Download `ca-cpa-exercise-data.zip` from the [latest release](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) — trial balances, entity profiles, source documents, and working paper templates for Exercises 1-24. Or clone the repo directly to also get:
+[**Download ca-cpa-exercise-data.zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) — trial balances, entity profiles, source documents, and working paper templates for Exercises 1-24. Unzip into your working folder. Or clone the repo directly to also get:
 
 - `reference-skills/` — Five reference SKILL.md files (Pakistan defaults) to study before building your own in Lessons 9-10
 - `workflow-recipes/` — Natural language scheduling templates for month-end close, board pack, compliance monitoring, and other recurring workflows

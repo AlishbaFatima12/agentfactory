@@ -551,6 +551,11 @@ dynamics between the parties.
 
 **What you are learning:** Restructuring recommendations are not determined by the numbers alone. The achievability of a scenario depends on creditor relationships, management credibility, and operational complexity — factors that no financial model captures. The model tells you what is possible; your judgment tells you what is achievable. This prompt forces you to articulate the difference.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 13: Assurance Practice Lab →](./13-assurance-practice-lab.md)

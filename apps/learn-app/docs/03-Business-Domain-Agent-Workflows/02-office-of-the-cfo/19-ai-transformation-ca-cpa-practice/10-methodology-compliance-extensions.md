@@ -583,6 +583,11 @@ Focus on [YOUR JURISDICTION] regulatory obligations.
 
 **What you are learning:** Compliance calendars are only as good as their coverage. The obligations you remember to calendar are not the ones that cause problems — it is the ones you forget. By asking Claude to identify missed obligations, you stress-test your extension for completeness. The monitoring schedule question connects the calendar extension to Cowork's scheduling capability, showing how a static list of deadlines becomes a dynamic compliance monitoring system.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 11: Accounting and Reporting Practice Lab →](./11-accounting-reporting-practice-lab.md)
