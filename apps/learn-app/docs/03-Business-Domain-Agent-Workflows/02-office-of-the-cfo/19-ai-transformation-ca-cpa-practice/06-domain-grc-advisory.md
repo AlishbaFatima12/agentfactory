@@ -297,6 +297,11 @@ concrete professional skills like "monitoring programme design" or
 
 **What you are learning:** GRC is described as the domain where advisory judgment is most resilient -- but resilience is not automatic. By mapping your specific role against the automation spectrum, you identify which parts of your current work face displacement (manual testing, routine reporting) and which new skills you need to develop (monitoring programme design, agent governance, threshold calibration) to remain valuable in the continuous monitoring model.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 7: The CA/CPA Plugin Ecosystem -->](./07-ca-cpa-plugin-ecosystem.md)

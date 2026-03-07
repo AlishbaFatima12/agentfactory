@@ -652,6 +652,11 @@ elimination specifically, explain:
 
 **What you are learning:** Consolidation verification requires you to think beyond the mechanics of the current period. The unrealised profit elimination reverses the following year — meaning a consolidation error in one period compounds in the next. Understanding this temporal dimension is what separates a CA/CPA reviewing consolidated statements from a bookkeeper applying rules to a single period.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 12: Tax & Advisory Practice Lab →](./12-tax-advisory-practice-lab.md)

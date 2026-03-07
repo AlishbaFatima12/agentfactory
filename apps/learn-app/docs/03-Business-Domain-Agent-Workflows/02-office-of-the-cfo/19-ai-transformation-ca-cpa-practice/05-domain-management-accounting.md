@@ -296,6 +296,11 @@ shift from model maintenance to business partnering.
 **What you are learning:** The professional shift in management accounting is not theoretical -- it is a measurable reallocation of time. By mapping your own work against the automation spectrum, you identify which parts of your current role face displacement and which become more valuable. This is the same analysis the domain overview presents at the profession level, applied to your specific context.
 
 
+
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 6: Domain 5 -- Governance, Risk and Compliance Advisory -->](./06-domain-grc-advisory.md)

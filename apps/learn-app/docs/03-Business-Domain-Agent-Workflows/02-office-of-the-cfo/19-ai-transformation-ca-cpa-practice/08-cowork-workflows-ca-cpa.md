@@ -326,6 +326,11 @@ available on my platform?
 
 **What you are learning:** Cross-app workflows are powerful but have platform constraints. Designing the workflow before implementing it reveals whether your deliverable can be produced in a single orchestrated session or requires manual handoffs. The fallback question is practical — not every practitioner has the required platform configuration, and knowing the manual alternative ensures you are never blocked.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 9: Building Jurisdiction and Entity Extensions →](./09-jurisdiction-entity-extensions.md)

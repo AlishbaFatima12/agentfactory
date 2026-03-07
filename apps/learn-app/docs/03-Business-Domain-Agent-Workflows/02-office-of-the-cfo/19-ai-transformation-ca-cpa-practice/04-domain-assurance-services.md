@@ -299,6 +299,11 @@ Present the analysis with a recommendation.
 **What you are learning:** The commercial implications of AI in audit extend beyond efficiency. By modelling the economics at firm level — including the competitive dynamics of first-mover advantage — you develop the strategic judgment that partners and senior managers need. The competitive scenario in point 4 is particularly important: it shows why adopting continuous monitoring is not optional for firms that want to maintain market position.
 
 
+
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 5: Domain 4 — Management Accounting and Financial Management ->](./05-domain-management-accounting.md)

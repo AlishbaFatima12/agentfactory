@@ -541,6 +541,11 @@ cannot replace.
 
 **What you are learning:** The professional judgment boundary is not abstract — it is specific to each workflow. By analysing your own exercise output, you map exactly where AI execution ends and professional responsibility begins. The critical insight is that professional liability attaches to judgment decisions, not execution steps. Understanding this boundary is how you articulate your value proposition in an AI-augmented practice.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 16: Full Practice Deployment and Reflection →](./16-full-practice-deployment-reflection.md)

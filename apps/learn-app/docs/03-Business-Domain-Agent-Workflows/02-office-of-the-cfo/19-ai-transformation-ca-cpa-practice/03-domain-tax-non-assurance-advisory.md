@@ -279,6 +279,11 @@ as the firm's current annual revenue for calculations.
 
 **What you are learning:** The strategic implications of AI in tax practice extend beyond individual tasks. By modelling firm-level scenarios, you develop the commercial judgment that senior practitioners need — understanding not just which tasks AI can handle, but how automation reshapes the business model of professional services firms. This is the kind of analysis that AI assists but cannot make alone, because it requires understanding the firm's competitive position, client relationships, and market dynamics.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 4: Domain 3 — Assurance Services ->](./04-domain-assurance-services.md)

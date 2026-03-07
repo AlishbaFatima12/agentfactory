@@ -306,6 +306,11 @@ For each service:
 
 **What you are learning:** A plugin stack is not one-size-fits-all. The combination of plugins, commands, and global instructions should match your firm's service lines. Planning the stack before installing forces you to think about your practice as a system of workflows rather than a collection of tasks — the same shift from tactical to strategic that separates a practitioner from a practice leader.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
+
 ---
 
 Continue to [Lesson 8: Cowork Workflows for CA/CPA Practice →](./08-cowork-workflows-ca-cpa.md)
