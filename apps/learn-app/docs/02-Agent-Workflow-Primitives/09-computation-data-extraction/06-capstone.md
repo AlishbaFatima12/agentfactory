@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 6
 title: "Capstone: Tax Season Prep"
 chapter: 9
 lesson: 6

@@ -1,7 +1,7 @@
 ---
 title: "Practice: Computation & Data Extraction Exercises"
 practice_exercise: ch9-computation
-sidebar_position: 8
+sidebar_position: 7
 chapter: 9
 lesson: 7
 duration_minutes: 120

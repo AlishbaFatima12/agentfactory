@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: "From Broken Math to Your First Tool"
 chapter: 9
 lesson: 1
