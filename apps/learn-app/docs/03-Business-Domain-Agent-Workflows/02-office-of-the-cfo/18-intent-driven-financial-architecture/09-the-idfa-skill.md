@@ -257,9 +257,23 @@ and gross profit for all five years.
 
 The skill should auto-activate from trigger phrases like "revenue model," "gross margins," and "Named Range." But auto-activation depends on Cowork recognising those trigger phrases — it is not guaranteed.
 
-### Step 2 — Prompt: Configure the Instructions Pane
+### Step 2 — Prompt: Explicit Skill Invocation
 
-Skill invocation is ultimately up to the Cowork agent — auto-activation and explicit invocation both depend on the agent deciding to load the skill. For more reliable activation, you can configure the **Instructions pane** to tell Cowork to use IDFA on every interaction in this session.
+Now invoke the skill directly by typing `/financial-architect` in Cowork:
+
+```
+/financial-architect
+
+Audit the SaaS model you just built. Check every formula for Named
+Range compliance, verify layer isolation, and confirm Intent Notes
+are attached. Report the compliance percentage.
+```
+
+When you type `/financial-architect`, you are telling Cowork to load the skill explicitly — the full methodology, the Agent Decision Table, the guardrail checks, and the naming conventions all activate at once. This is different from auto-activation: explicit invocation guarantees the skill is loaded, while auto-activation depends on trigger phrases being recognised.
+
+### Step 3 — Prompt: Configure the Instructions Pane
+
+Both auto-activation and explicit invocation depend on the agent deciding to load the skill for that particular message. For **persistent** activation across an entire session, you can configure the **Instructions pane** to tell Cowork to use IDFA on every interaction.
 
 1. In the Cowork right sidebar, click **Instructions** (the document icon)
 2. In the Instructions editor, add this natural-language instruction:
@@ -285,7 +299,7 @@ payback period using gross profit per customer.
 
 Check the output. Even though the prompt does not mention "financial model" or "Named Ranges," the Instructions pane ensures the IDFA methodology is applied.
 
-### Step 3 — Verify: Check the Context Panel
+### Step 4 — Verify: Check the Context Panel
 
 After Cowork processes your prompt, look at the **Context** section in the right sidebar. When a skill is invoked — whether through auto-activation, explicit invocation, or Instructions — it appears in the Context panel as a loaded skill. This tells you exactly which skills Cowork is using for the current interaction.
 
@@ -298,7 +312,7 @@ Verify the output against the four guardrails:
 | Intent Notes          | Did Cowork include Intent Note format for generated formulas?                                                    |
 | Delegated Calculation | Did Cowork describe the write/read workflow rather than calculating results internally?                          |
 
-### Step 4 — Extend: Compare All Three Approaches
+### Step 5 — Extend: Compare All Three Approaches
 
 | Approach               | How It Works                                         | When to Use                                      | Reliability                              |
 | ---------------------- | ---------------------------------------------------- | ------------------------------------------------ | ---------------------------------------- |
