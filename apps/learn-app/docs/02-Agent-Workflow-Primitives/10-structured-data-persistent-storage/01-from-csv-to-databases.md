@@ -78,7 +78,7 @@ Your stomach drops. Not because the requirements are unreasonable, but because y
 - **Schema**: A formal blueprint that defines what columns exist, what types they hold, and how tables relate -- like a building's floor plan vs a pile of lumber
 - **Foreign key**: A column that points to a row in another table, creating an enforceable link -- like a shipping label that guarantees a package reaches its destination
 - **Relational database**: A system that stores data in linked tables with enforced rules, so every query draws from one consistent truth
-  :::
+:::
 
 ## The Exact Moment It Breaks
 

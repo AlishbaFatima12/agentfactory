@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: "From Broken Math to Your First Tool"
 chapter: 9
 lesson: 1
@@ -122,6 +122,8 @@ Every financial calculation involves decimals. Bash simply cannot do them.
 This isn't academic. In 1982, the Vancouver Stock Exchange launched a new index at 1000.000. Their software truncated to three decimal places instead of rounding — the same thing Bash does with `$((10 / 3))`. Every time a stock price changed (roughly 2,800 times per day), a tiny sliver of value vanished. No errors. No warnings. After 22 months, the index read approximately 524 — while its mathematically correct value should have been around 1009. They'd silently lost nearly half the index to truncation.
 
 When they found the bug and corrected it over a weekend in November 1983, the index jumped from 524 to over 1098 overnight. The market hadn't crashed. The math had just been wrong — silently, invisibly, for almost two years.
+
+_Source: Quinn, M.J. (2014). Ethics for the Information Age. Pearson. The Vancouver Stock Exchange truncation incident is also documented in Goldberg, D. (1991). "What Every Computer Scientist Should Know About Floating-Point Arithmetic." ACM Computing Surveys._
 
 That was truncation at three decimal places. Your Bash terminal does worse: `$((10 / 3))` truncates to _zero_ decimal places.
 

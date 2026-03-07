@@ -22,7 +22,7 @@ Throughout this part, you'll use your General Agent through two interfaces:
 - **Code** (Claude Code): For precise operations — file processing, data analysis, version control, automation scripts
 - **Cowork** (Claude Desktop): For iterative work — research synthesis, document generation, planning strategies
 
-Each chapter specifies which interface suits the problem. By Chapter 12, you'll fluidly switch between both.
+Each chapter specifies which interface suits the problem. By the end of this part, you'll fluidly switch between both.
 
 ## A Note on Mindset
 
