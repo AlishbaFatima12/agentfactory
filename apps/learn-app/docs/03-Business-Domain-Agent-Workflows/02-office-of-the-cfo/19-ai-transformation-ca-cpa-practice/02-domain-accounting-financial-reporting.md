@@ -193,7 +193,7 @@ At the service level, fully automated reporting platforms are emerging as a busi
 
 ### Setup
 
-1. Download the ready-made Crescent Textiles trial balance (PKR-denominated, ~35 IFRS accounts): [**textile-manufacturer-tb.csv**](https://raw.githubusercontent.com/panaversity/ca-cpa-practice-agents/main/exercises/trial-balances/textile-manufacturer-tb.csv). If you have your own trial balance data in Excel or CSV format, you can use that instead.
+1. [**Download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and unzip it. Open `exercises/trial-balances/textile-manufacturer-tb.csv` — the ready-made Crescent Textiles trial balance (PKR-denominated, ~35 IFRS accounts). If you have your own trial balance data in Excel or CSV format, you can use that instead.
 2. Create a new folder on your computer (e.g., `month-end-close-exercise`). Place the downloaded CSV file inside it.
 3. Open that folder in Cowork.
 

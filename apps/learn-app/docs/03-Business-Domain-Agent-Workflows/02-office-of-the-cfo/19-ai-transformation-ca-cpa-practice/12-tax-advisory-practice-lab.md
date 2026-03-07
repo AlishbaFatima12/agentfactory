@@ -121,7 +121,7 @@ These three exercises cover the full spectrum of Domain 2 practice: compliance (
 - **Exercise 13** (60 min) — Transaction advisory. Runs M&A financial due diligence with DCF and comparable company analysis. Best for corporate finance and advisory practitioners.
 - **Exercise 14** (45 min) — Restructuring. Models three restructuring scenarios for a distressed company. Best for insolvency and advisory practitioners.
 
-**Data files:** Download the entity profiles from the companion repository: [`crescent-textiles.md`](https://github.com/panaversity/ca-cpa-practice-agents/blob/main/exercises/entity-profiles/crescent-textiles.md) and [`karachi-foods.md`](https://github.com/panaversity/ca-cpa-practice-agents/blob/main/exercises/entity-profiles/karachi-foods.md). Each exercise also provides hypothetical data inline.
+**Data files:** Use the entity profiles from the exercise zip: `exercises/entity-profiles/crescent-textiles.md` and `exercises/entity-profiles/karachi-foods.md`. Each exercise also provides hypothetical data inline.
 :::
 
 ---
