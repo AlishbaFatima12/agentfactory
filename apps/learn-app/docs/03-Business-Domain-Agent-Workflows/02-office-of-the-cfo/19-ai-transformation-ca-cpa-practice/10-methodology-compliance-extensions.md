@@ -372,7 +372,7 @@ preparation cannot begin — audited financials outstanding."
 
 ### Withholding Tax Statements (Section 165)
 
-**Deadline:** 15th day of the month following the quarter-end.
+**Deadline:** 20th day of the month following the quarter-end.
 **Lead time required:** 5 working days.
 
 **Information checklist:**
@@ -396,8 +396,9 @@ preparation cannot begin — audited financials outstanding."
 - Director details and changes during the year
 - Registered office details
 
-**Penalty for late filing:** PKR 500 per day of default
-(Section 476, Companies Act 2017).
+**Penalty for late filing:** Daily penalties as prescribed under
+Section 476, Companies Act 2017 (amounts vary — consult the current
+statute text, as penalties are amended periodically).
 
 ### Change of Directors (Form 29)
 
@@ -581,7 +582,6 @@ Focus on [YOUR JURISDICTION] regulatory obligations.
 ```
 
 **What you are learning:** Compliance calendars are only as good as their coverage. The obligations you remember to calendar are not the ones that cause problems — it is the ones you forget. By asking Claude to identify missed obligations, you stress-test your extension for completeness. The monitoring schedule question connects the calendar extension to Cowork's scheduling capability, showing how a static list of deadlines becomes a dynamic compliance monitoring system.
-
 
 ---
 
