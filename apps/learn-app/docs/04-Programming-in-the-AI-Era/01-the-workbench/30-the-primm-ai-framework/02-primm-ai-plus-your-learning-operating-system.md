@@ -195,6 +195,20 @@ These gates feel unnecessary when a lesson is going well. They prove their value
 
 ---
 
+## Mandatory Trace Artifacts
+
+Every Investigate stage must produce something visible. A vague sense of "I think I understand it" is not investigation -- it is wishful thinking. PRIMM-AI+ requires you to create at least one of these artifacts before moving to Modify:
+
+- **A trace table** showing the value of each variable after every line executes
+- **A plain-English explanation** describing how the program works in your own words
+- **A failure note** documenting what you tried to trace and where you got stuck
+
+The third option matters most. If you cannot trace the program or explain it, that is not a sign of failure -- it is a diagnostic signal. A failure note that says "I do not understand how `round()` decides whether to round up or down" gives you an exact target for your AI investigation questions. Without the artifact requirement, you would skip past the confusion and carry it silently into Modify.
+
+The trace table from the `calculate_total` walkthrough earlier in this lesson is an example of a mandatory artifact. The mastery gate for Investigate ("can explain *how*, not just *what*") depends on having produced one.
+
+---
+
 ## A Complete PRIMM-AI+ Lesson Walkthrough
 
 Theory is useful. Practice is better. Here is what a single PRIMM-AI+ lesson looks like end-to-end, using a concrete Python program.
