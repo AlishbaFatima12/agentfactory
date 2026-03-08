@@ -57,6 +57,12 @@ differentiation:
 
 # The Complete Teaching and Learning System
 
+James flips through a programming chapter later in the book. He notices something: every chapter seems to follow the same rhythm. It starts with a complete program to study, moves through tracing and investigation, gives him something to modify, and ends with something to build from scratch.
+
+"Is that on purpose?" he asks Emma.
+
+"Every chapter, every lesson, every exercise," she says. "Once you see the pattern, you'll never feel lost. You'll always know where you are in the process and what comes next."
+
 You now know the five stages of PRIMM-AI+ -- Predict, Run, Investigate, Modify, Make -- and the structural safeguards that keep you honest: AI-free checkpoints, mastery gates, confidence scoring, and the verification ladder. But knowing the stages is like knowing the instruments in an orchestra. The question is: how does the music sound when they all play together?
 
 This lesson answers that question. It shows how four teaching methods -- worked examples, Parsons problems, live coding, and peer instruction -- are woven into the PRIMM-AI+ stages. It explains the difference between learning in a classroom and learning on your own. And it reveals the practical lesson architecture that every chapter in Parts 4 and 5 follows, so you will recognize the pattern the moment you encounter it.
@@ -69,11 +75,21 @@ PRIMM-AI+ provides the sequence and the safeguards. These four methods provide t
 
 ### Worked Examples: Predict and Investigate
 
+James opens a new chapter and sees a complete Python program at the top. He did not write it. His AI assistant did not write it. It is just there — ready to study.
+
+"Why don't I write it myself?" he asks.
+
+"Because you'd be solving two problems at once — figuring out *what* to write and figuring out *how* to write it," Emma explains. "The worked example separates those. Someone else handled the *what*. You focus entirely on the *how*."
+
 Every code block in this book is a worked example -- a complete, functioning program you study before writing your own. Instead of starting with a blank screen, you inspect a finished program, predict its output, run it, and analyze its structure. Worked examples reduce cognitive load because you do not have to invent everything at once. You focus on understanding how the code works, not on producing it.
 
 Where it fits: **Predict** (you study the example and commit to a prediction) and **Investigate** (you trace through it and produce artifacts like trace tables).
 
 ### Parsons Problems: Between Investigate and Modify
+
+Emma shows James four lines of code, but they are in the wrong order. "Put these back in the right sequence."
+
+James stares at them. He knows what each line does — he traced through a similar program minutes ago. But arranging them correctly requires something deeper: understanding *why* the order matters.
 
 A Parsons problem gives you the correct lines of code in scrambled order. Your job is to rearrange them into a working program. This tests whether you truly understand the program's structure -- the order of operations, the indentation, the data flow -- without requiring you to write code from scratch.
 
@@ -120,6 +136,10 @@ Where it fits: **All stages.** In classroom mode, it happens naturally through p
 
 ## Classroom Mode vs. Solo Mode
 
+"I'm studying alone," James says. "No teacher, no classmates. Is PRIMM-AI+ still going to work for me?"
+
+"That's exactly why we built the solo mode safeguards," Emma says. "The checkpoints, the confidence scoring, the mastery gates — they replace the teacher who would normally catch you skipping steps. When you're on your own, those structures are your accountability partner."
+
 **Classroom mode.** The teacher orchestrates the process. Predictions are shared in pairs or small groups before anyone runs the code. Investigation questions are discussed as a class before consulting AI. Modification approaches are compared across teams. The teacher controls AI permissions and uses mastery gates as checkpoints for the whole class.
 
 **Solo mode.** You replace human collaboration with structured AI interaction -- but only after passing through the AI-free checkpoint at each stage. You write your prediction alone, commit your confidence score, and only then engage your AI assistant. The confidence scoring system is especially important in solo mode because it makes self-deception visible. There is no classmate to challenge your assumptions, so you must challenge them yourself.
@@ -129,6 +149,10 @@ This book is designed for solo mode. Every technique works with just you, the bo
 ---
 
 ## A Practical Lesson Architecture
+
+James has a question that every student asks: "What exactly happens when I open a lesson? What do I do first? What comes after that?"
+
+Emma walks him through it. "Every lesson follows the same six steps. Once you've done it twice, you'll stop thinking about the process and just focus on the code."
 
 Here is what a typical lesson looks like when all the pieces work together. You will recognize this pattern starting in Chapter 33.
 
@@ -149,6 +173,10 @@ Notice the progression: you understand before you change, and you change before 
 ---
 
 ## How Every Chapter Follows PRIMM-AI+
+
+"So every *lesson* follows those six steps," James says. "But what about the chapter as a whole? Is there a pattern there too?"
+
+"Same structure, bigger scale," Emma says. "A chapter opens with worked examples, moves through investigation lessons, bridges to modification exercises, and finishes with a capstone where you build something new. You'll never open a chapter wondering what to expect."
 
 The six-step sequence above is not just a lesson pattern -- it is the chapter pattern. Every chapter in Parts 4 and 5 maps to the same structure at a larger scale.
 
@@ -212,4 +240,10 @@ compare notes.
 
 ## Looking Ahead
 
-You now know how you will learn. You know the five stages, the structural safeguards, the four teaching methods, and the lesson architecture. The next chapter introduces the principles that guide professional AI-driven development. You will experience those principles through the PRIMM-AI+ lens: predicting what professional code should look like, investigating why each principle matters, and eventually building programs that embody them.
+James sits back. In three lessons, he has gone from "what is PRIMM?" to knowing exactly how every lesson and every chapter in this book will work. The five stages. The nine enhancements. The four teaching methods. The six-step lesson architecture.
+
+"I feel like I have a map now," he says.
+
+"You do," Emma says. "And starting with the next chapter, you'll actually start walking. The next chapter introduces the principles that guide how professionals build software with AI — the rules of the road for the territory you're about to enter."
+
+You now know how you will learn: the five stages, the structural safeguards, the four teaching methods, and the lesson architecture. The next chapter introduces the principles that guide professional AI-driven development. You will experience those principles through the PRIMM-AI+ lens: predicting what professional code should look like, investigating why each principle matters, and eventually building programs that embody them.
