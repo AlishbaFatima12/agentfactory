@@ -45,7 +45,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can use an AI assistant to prepare a risk assessment for a listed company, design audit procedures for revenue recognition, specify a continuous monitoring programme, and draft SKILL.md instructions encoding sector-specific audit risks"
+    measurable_at_this_level: "Student can use Cowork to prepare a risk assessment for a listed company, design audit procedures for revenue recognition, specify a continuous monitoring programme, let a reusable skill emerge from the analysis conversation, and review and test that skill's reusability across engagements"
 
 learning_objectives:
   - objective: "Explain the fundamental shift from sampling-based to population-level audit testing, and describe why this changes the epistemics of assurance — from probabilistic conclusions to deterministic findings"
@@ -61,7 +61,7 @@ learning_objectives:
   - objective: "Execute an AI-assisted audit risk assessment workflow, identifying significant risks of material misstatement, designing audit procedures, and specifying a continuous monitoring programme"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Practice Exercise 3 — producing a structured risk assessment, revenue recognition audit questions, a continuous monitoring specification, and SKILL.md instructions encoding sector-specific audit risks"
+    assessment_method: "Student completes Practice Exercise 3 — producing a structured risk assessment, revenue recognition audit questions, a continuous monitoring specification, and a reusable skill created through the analysis conversation, then reviewed in Customize → Skills and tested on a different engagement"
 
 cognitive_load:
   new_concepts: 6
@@ -104,7 +104,6 @@ teaching_guide:
     - question: "What is the difference between an autonomous audit agent and a continuous audit agent?"
       expected_response: "An autonomous audit agent executes audit procedures — extracting data, running analytical procedures, testing reconciliations, selecting and testing samples, documenting results — and produces a draft audit file for senior review. It automates the execution of a traditional annual audit. A continuous audit agent monitors financial transactions in real time, flagging anomalies and potential misstatements as they occur throughout the year, rather than examining them retrospectively after year-end. The autonomous agent changes how audit is done; the continuous agent changes when audit is done."
 ---
-
 
 # Domain 3 — Assurance Services
 
@@ -179,17 +178,19 @@ The economics change significantly. An audit that currently requires 500 staff h
 
 :::
 
-## Practice Exercise 3: AI-Assisted Audit Risk Assessment (30 min)
+## Practice Exercise 3: AI-Assisted Audit Risk Assessment (35 min)
 
-**What you'll build:** A structured audit risk assessment, revenue recognition audit questions, a continuous monitoring specification, and SKILL.md instructions for sector-specific risk identification.
+**What you'll build:** A structured audit risk assessment workpaper, revenue recognition analysis, a continuous monitoring specification — and a reusable skill that encodes your sector-specific audit expertise, created through the natural workflow of doing the analysis, not as a separate writing task.
 
-**Requirements:** Cowork or Claude (any plan). Publicly available financial information about any listed company, or [**download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and use the Crescent Textiles entity profile (`exercises/entity-profiles/crescent-textiles.md`) and trial balance (`exercises/trial-balances/textile-manufacturer-tb.csv`).
+**Requirements:** Cowork (any Claude plan). [**Download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and add the Crescent Textiles entity profile (`exercises/entity-profiles/crescent-textiles.md`) and trial balance (`exercises/trial-balances/textile-manufacturer-tb.csv`) to your Cowork project folder. Alternatively, use publicly available financial information about any listed company in a sector you know.
 
-1. **Prepare a risk assessment.** Choose a listed company in a sector you know and ask your AI assistant:
+1. **Prepare a risk assessment.** Ask Cowork:
 
    _"Prepare an audit risk assessment for [Company Name] based on its most recent annual report. Structure the output as: (1) significant risks of material misstatement for each major financial statement line, (2) assessment of inherent risk for each significant risk, (3) the audit procedures most likely to address each risk effectively."_
 
-2. **Deep-dive on revenue.** Ask:
+   If you loaded the exercise data, Cowork reads the entity profile and trial balance from your project folder automatically. Review the output — does it identify risks specific to this company and sector, or generic audit risks that could apply to any entity?
+
+2. **Deep-dive on revenue.** Continue the same conversation:
 
    _"For the revenue recognition line, what are the three most important questions an auditor should answer to determine whether revenue has been recognised correctly under IFRS 15? What evidence should the auditor gather to answer each question?"_
 
@@ -197,12 +198,29 @@ The economics change significantly. An audit that currently requires 500 staff h
 
    _"If you were designing a continuous audit monitoring programme for this company, which three transaction types or account balances would you monitor in real time, and what anomalies would trigger an alert? Write this as if you were specifying it for an AI monitoring agent."_
 
-4. **Encode sector risks.** Write a SKILL.md instruction for the risk identification step: encode the three most important sector-specific audit risks for this company's industry, with the indicators that would cause each risk to be elevated.
+4. **Let the skill emerge from the work.** You have now done substantive audit analysis — risk identification, revenue deep-dive, monitoring design. Ask Cowork to encode what it learned:
 
-**Check your work:** The risk assessment in Step 1 should identify risks that are specific to the company and sector, not generic audit risks. The continuous monitoring specification in Step 3 should define measurable thresholds and alert conditions, not vague instructions. The SKILL.md in Step 4 should capture sector expertise that would take a junior auditor years to develop.
+   _"Write a SKILL.md instruction for the risk identification step: encode the three most important sector-specific audit risks for this company's industry, with the indicators that would cause each risk to be elevated."_
 
-:::tip Plugin Connection
-Step 3's continuous monitoring specification is closely related to the `/sox-testing` command from `finance@knowledge-work-plugins` (Chapter 17). Try running `/sox-testing "Test revenue recognition controls for [your chosen company]"` — compare the structured output with your conversational monitoring specification. The plugin provides a standardised testing framework; your specification adds the sector-specific thresholds and escalation logic that make it operationally useful.
+   Cowork creates the skill as a file artifact. This is the key insight: **the skill crystallises from practitioner work, not from a blank-page writing exercise.** The conversation you just had — identifying real risks, specifying real thresholds, designing real monitoring logic — is what gives the skill its substance.
+
+   ![A Cowork session showing the audit risk assessment conversation — the entity profile, trial balance, and risk analysis are in the project context, and the SKILL.md emerges as a file artifact from the analysis](/img/ch19-cowork-audit-risk-session.png)
+
+5. **Review and customise.** Open **Customize → Skills** in the Cowork sidebar. Your new skill appears under **My Skills**. Read its description and examine what Cowork encoded — the risk categories, the elevation indicators, the detection thresholds. Ask yourself:
+   - Are the thresholds specific enough? (e.g., "revenue spike > 2.5 standard deviations from trailing 30-day average" vs. "unusual revenue increase")
+   - Do the indicators reference concrete data sources? (e.g., "bill of lading date vs. invoice date" vs. "shipping documents")
+   - Would a junior auditor with this skill catch risks that sampling-based approaches would miss?
+
+   Edit anything that needs tightening. The skill is yours to refine.
+
+   ![The Customize → Skills panel showing the textile-audit-risk-id skill under My Skills — the skill description, elevation indicators, and detection thresholds are visible and editable](/img/ch19-cowork-skill-in-customize.png)
+
+6. **Test reusability.** Start a new Cowork task for a different company or sector. Invoke your skill and ask Cowork to run a risk identification using it. Does the skill generalise, or is it too narrowly tied to the original entity? If it breaks on a new engagement, that tells you which parts encode genuine sector expertise and which parts were entity-specific details that should have been parameterised.
+
+**Check your work:** The risk assessment (Step 1) should identify company-specific and sector-specific risks, not generic audit risks. The monitoring specification (Step 3) should define measurable thresholds and alert conditions, not vague instructions. The skill (Steps 4–5) should encode sector expertise that would take a junior auditor years to develop — with concrete elevation indicators drawn from real financial data, not abstract descriptions. The reusability test (Step 6) is the ultimate check: a skill that only works for one company is a template; a skill that works across the sector is encoded expertise.
+
+:::tip From Conversation to Reusable Asset
+This exercise demonstrates the core Agent Factory pattern: domain expertise encoded as a skill through the natural act of doing expert work. You did not sit down to "write a skill from scratch" — you did audit analysis, and the skill emerged from that analysis. In Lesson 13 (Assurance Practice Lab), you will build on this pattern with more complex multi-step audit workflows.
 :::
 
 :::info Curated Deployment Links
@@ -297,8 +315,6 @@ Present the analysis with a recommendation.
 ```
 
 **What you are learning:** The commercial implications of AI in audit extend beyond efficiency. By modelling the economics at firm level — including the competitive dynamics of first-mover advantage — you develop the strategic judgment that partners and senior managers need. The competitive scenario in point 4 is particularly important: it shows why adopting continuous monitoring is not optional for firms that want to maintain market position.
-
-
 
 ## Flashcards Study Aid
 
