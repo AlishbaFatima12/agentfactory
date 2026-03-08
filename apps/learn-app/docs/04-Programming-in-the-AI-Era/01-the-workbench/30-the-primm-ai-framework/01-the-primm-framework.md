@@ -36,10 +36,10 @@ learning_objectives:
     bloom_level: "Understand"
     assessment_method: "Student explains each stage in their own words and justifies the read-first sequence using the research finding that PRIMM learners outperformed control groups"
 
-  - objective: "Identify the research basis for PRIMM including its creators, study design, and theoretical grounding"
+  - objective: "Identify that PRIMM is a tested method backed by classroom research"
     proficiency_level: "A1"
     bloom_level: "Remember"
-    assessment_method: "Student names the researchers (Sentance, Waite, Kallia), the study scale (493 students, 13 schools), and the theoretical basis (Vygotsky's sociocultural theory)"
+    assessment_method: "Student states that PRIMM was tested with hundreds of students and that learners using PRIMM outperformed those who did not"
 
   - objective: "Explain why code comprehension is the bottleneck skill in AI-assisted development"
     proficiency_level: "A2"
@@ -69,17 +69,13 @@ This lesson introduces the framework that solves this problem: **PRIMM** -- Pred
 
 ---
 
-## The Research Behind PRIMM
+## Where Does PRIMM Come From?
 
-PRIMM was created by **Sue Sentance** and **Jane Waite**, who introduced the framework in a 2017 paper presented at the WiPSCE conference in Nijmegen, the Netherlands. **Maria Kallia** joined the research team for the 2019 publications that provided the framework's empirical foundation.
+PRIMM was created by computing education researchers **Sue Sentance** and **Jane Waite** in 2017. They tested it with **493 students across 13 schools in England**. The result: **students who learned with PRIMM outperformed students who learned without it** -- especially in classes where students had different skill levels.
 
-The landmark study was published in 2019 as "Teaching computer programming with PRIMM: a sociocultural perspective" in *Computer Science Education*, Vol. 29, No. 2-3, pp. 136-176 (DOI: 10.1080/08993408.2019.1608781). A companion paper, "Teachers' Experiences of using PRIMM to Teach Programming in School," appeared in the *Proceedings of SIGCSE '19*, pp. 476-482 (DOI: 10.1145/3287324.3287477).
+The core idea is simple: when you talk about code and read it before writing it, you build the vocabulary and mental models that make writing possible. Each PRIMM stage gives you just enough support to reach the next level of understanding.
 
-The study was mixed-methods and quasi-experimental, conducted with **493 students across 13 schools in England**, with students aged 11-14. The key finding: **learners using PRIMM outperformed control groups on post-tests**. The framework proved particularly effective for mixed-ability classes -- students of different skill levels all benefited from the structured progression.
-
-PRIMM is grounded in **Lev Vygotsky's sociocultural theory of learning** -- the idea that knowledge transfers from the social plane (discussion, collaboration, shared language) to the cognitive plane (individual understanding). Language acts as a mediator: when students talk about code before writing it, they build the vocabulary and mental models that make writing possible. Vygotsky's concept of the *Zone of Proximal Development* -- the gap between what a learner can do alone and what they can do with guidance -- is exactly what PRIMM targets. Each stage provides just enough scaffolding to pull learners into new territory.
-
-Since its publication, PRIMM has been adopted in **England** (where the studies took place), **Germany** (Bavarian school textbooks), the **USA** (CodeHS platform), **Hong Kong**, **Norway**, **Argentina**, **Tasmania** (Australia), and **Turkey**. The four core publications have accumulated **188 citations** as of March 2024. The current research home is the Raspberry Pi Computing Education Research Centre at https://computingeducationresearch.org/projects/primm/.
+Since 2017, PRIMM has been adopted in schools and platforms across **England, Germany, the USA, Hong Kong, Norway, Argentina, Australia, and Turkey**. The research home is the Raspberry Pi Computing Education Research Centre.
 
 ### The Inversion That Makes PRIMM Different
 
