@@ -342,19 +342,19 @@ Over the course of Parts 4 and 5, your calibration should improve. Early on, you
 
 ---
 
-## Error Taxonomy Preview
+## Five Kinds of Bugs — A Preview
 
-There are five kinds of bugs. You do not need to memorize this table now -- it is a vocabulary list. You will practice finding each kind starting in Chapter 33.
+When your code does not work, the first question is: *what kind of problem is this?* Not all bugs are the same. Knowing which kind you are looking at tells you where to search. You do not need to memorize this table now -- just know it exists. You will practice finding each kind starting in Chapter 33.
 
-| Error Category | Description |
-|---------------|-------------|
-| **Type Error** | Structural mismatch: passed a string where a list was expected |
-| **Logic Error** | Correct structure, wrong result: printed the name where the subject should be |
-| **Specification Error** | Correct implementation of the wrong thing |
-| **Data/Edge-Case Error** | Failures with unusual inputs: empty lists, negative numbers |
-| **Orchestration Error** | Component interaction failure: function called at the wrong time |
+| Kind of Bug | What Went Wrong | Simple Example |
+|-------------|----------------|----------------|
+| **Type Error** | You gave the wrong kind of data | You wrote `name + score` but `score` is a number, not text |
+| **Logic Error** | The code runs but gives the wrong answer | You printed the name where the subject should be |
+| **Specification Error** | The code does what you asked, but you asked for the wrong thing | You built a greeting program when the task was a profile card |
+| **Data Error** | The code breaks with unusual inputs | The name is empty, so the output starts with a space |
+| **Orchestration Error** | The pieces run in the wrong order | You tried to print `result` before you created it |
 
-When you encounter a bug during Investigate or Modify, try to classify it using this table. Naming the kind of error helps you search for it systematically rather than staring at the code hoping the problem becomes visible.
+When something goes wrong during Investigate or Modify, glance at this table. Even just asking "Is this a type problem or a logic problem?" narrows your search and saves time.
 
 ---
 
