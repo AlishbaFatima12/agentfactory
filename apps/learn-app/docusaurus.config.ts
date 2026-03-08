@@ -253,10 +253,11 @@ const config: Config = {
         calendar: "gregory",
       },
       ur: {
-        label: "Urdu",
+        label: "اردو",
         direction: "ltr",
-        htmlLang: "ur",
+        htmlLang: "ur-PK",
         calendar: "gregory",
+        path: "ur",
       },
     },
   },
