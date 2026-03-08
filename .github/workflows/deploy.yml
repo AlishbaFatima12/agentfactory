@@ -74,9 +74,7 @@ jobs:
           PANAVERSITY_SERVER_URL: ${{ secrets.PANAVERSITY_SERVER_URL }}
           AUTH_URL: ${{ secrets.AUTH_URL }}
           OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
-          # GitHub Pages: repo is at /owner/repo-name/, so baseUrl = /repo-name/
-          # If BASE_URL secret is not set, use computed value for GitHub Pages
-          BASE_URL: ${{ secrets.BASE_URL || format('/{0}/', github.event.repository.name) }}
+          BASE_URL: ${{ secrets.BASE_URL }}
           SITE_URL: ${{ secrets.SITE_URL }}
           PANAVERSITY_API_KEY: ${{ secrets.PANAVERSITY_API_KEY }}
         run: pnpm build
