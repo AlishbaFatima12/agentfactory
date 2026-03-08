@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: "PRIMM-AI+: Your Learning Operating System"
 description: "Adapt PRIMM for AI-assisted learning with PRIMM-AI+ enhancements: AI permissions at each stage, AI-free checkpoints, mastery gates, confidence scoring, a verification ladder, error taxonomy, and the deep connection between PRIMM-AI+ and professional software development practice."
-keywords: ["PRIMM-AI+", "PRIMM-AI", "AI-assisted learning", "AI-free checkpoints", "mastery gates", "verification ladder", "confidence scoring", "predict run investigate modify make", "Claude Code", "learning framework", "coding education", "Socratic tutoring"]
+keywords: ["PRIMM-AI+", "PRIMM-AI", "AI-assisted learning", "AI-free checkpoints", "mastery gates", "verification ladder", "confidence scoring", "predict run investigate modify make", "Claude Code", "learning framework", "coding education", "AI questioning partner"]
 chapter: 30
 lesson: 2
 duration_minutes: 25
@@ -130,7 +130,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What the AI must NOT do:** Interpret the results for you. The learning happens in the gap between your prediction and the actual output. If AI fills that gap with an explanation, you skip the comparison step that builds understanding.
 
-### Investigate -- AI as Socratic Tutor
+### Investigate -- AI as Questioning Partner
 
 **What you do:** Write your own explanation of how the program works first. Then ask specific questions about what you observed. Focus on the parts that surprised you during Run. Probe the mechanics you do not yet understand.
 
@@ -196,11 +196,11 @@ AI-free checkpoints are not punishment. They are the moments when you discover w
 
 James finishes reading a program and reaches for the keyboard. "I get it. Let me jump straight to modifying it."
 
-Emma holds up a hand. "Can you explain how line 3 works — not what it does, but *how*?"
+Emma holds up a hand. "Can you explain how the greeting message gets built — not what it prints, but *how* the pieces connect?"
 
-James hesitates. "It... builds a string?"
+James hesitates. "It... puts the words together?"
 
-"That's *what*. How does it build it? What does `str()` do? Why is the `+` needed?" She waits. James cannot answer. "That's why we have gates. You're not ready for Modify yet."
+"That's *what*. How does the `+` operator join them? Why does the comma appear where it does? What controls the order?" She waits. James cannot answer. "That's why we have gates. You're not ready for Modify yet."
 
 Each stage transition has a formal requirement. You cannot (or rather, should not) move to the next stage until the gate condition is met:
 
@@ -327,7 +327,7 @@ These rules are operational discipline, not suggestions. Each one prevents a spe
 
 **Rule 2: Never trust an explanation you have not tested.** AI explanations can be confident and wrong. When AI says "this function returns X," run it and verify. This verification mindset transfers directly to professional practice -- senior engineers test assumptions, junior engineers trust documentation.
 
-**Rule 3: Modify before you make.** Modification has lower cognitive load than creation. When you modify an existing program, you have a working reference, a known structure, and a safety net. When you create from scratch, you have nothing. Modification builds the skills that creation requires.
+**Rule 3: Modify before you make.** Modification is easier on your brain than creation. When you modify an existing program, you have a working reference, a known structure, and a safety net. When you create from scratch, you have nothing. Modification builds the skills that creation requires.
 
 **Rule 4: Write the spec before the code.** This is Spec-Driven Development from Chapter 5, applied to learning. Defining what your program should do -- inputs, outputs, edge cases, success criteria -- before writing a single line of code forces you to think about the problem before the solution. AI is dramatically better at generating correct code when the specification is clear.
 
@@ -361,7 +361,7 @@ James predicts the output of a program and rates himself a 5 — certain. He run
 
 "That's the most dangerous state," Emma says. "Being wrong isn't the problem. Being *confident and wrong* is the problem. In the real world, that's how bugs get shipped — someone looks at AI-generated code, thinks 'looks right,' and moves on without checking."
 
-In the previous lesson, you saw the 1-5 confidence scale during the Predict stage. Here is how to use it systematically throughout Parts 4 and 5.
+In the previous lesson, you saw the 1-5 confidence scale during the Predict stage. Here it is again for reference — and here is how to use it systematically throughout Parts 4 and 5.
 
 | Score | Meaning |
 |-------|---------|
@@ -516,6 +516,30 @@ real output. Compare the explanation to the actual results.
 Did the AI's explanation match the actual output? Python's rounding behavior surprises most people (and most AI models). The discrepancy you may find is exactly why Rule 2 exists: never trust an explanation you have not tested.
 
 **What you are learning:** The verification instinct that forms the foundation of the Verification Ladder. When you catch an AI explanation that does not match reality, you are practicing the same skill that senior engineers use when they question production logs that "look wrong."
+
+### Prompt 3: Classify Partner vs. Crutch
+
+```
+I am learning the difference between using AI as a learning
+partner and using it as a crutch. Here are three scenarios.
+For each one, tell me whether the student is using AI as a
+partner or a crutch, and explain why:
+
+1. A student sees a Python program, asks AI "What does this
+   print?", reads the answer, and moves on.
+
+2. A student writes their own prediction, runs the code,
+   gets a different result, and asks AI "Why does line 3
+   produce 'hello' instead of 'Hello'?"
+
+3. A student asks AI "Write me a program that prints a
+   greeting with a name" and submits the result.
+
+After explaining each one, ask me to come up with my own
+example of a partner interaction and a crutch interaction.
+```
+
+**What you are learning:** How to apply Rule 5 (partner, not crutch) in practice. Classifying real scenarios trains you to notice when your own AI interactions cross the line from learning to dependency — the most common failure mode in AI-assisted education.
 
 ---
 

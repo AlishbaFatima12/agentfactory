@@ -81,7 +81,7 @@ James opens a new chapter and sees a complete Python program at the top. He did 
 
 "Because you'd be solving two problems at once — figuring out *what* to write and figuring out *how* to write it," Emma explains. "The worked example separates those. Someone else handled the *what*. You focus entirely on the *how*."
 
-Every code block in this book is a worked example -- a complete, functioning program you study before writing your own. Instead of starting with a blank screen, you inspect a finished program, predict its output, run it, and analyze its structure. Worked examples reduce cognitive load because you do not have to invent everything at once. You focus on understanding how the code works, not on producing it.
+Every code block in this book is a worked example -- a complete, functioning program you study before writing your own. Instead of starting with a blank screen, you inspect a finished program, predict its output, run it, and analyze its structure. Worked examples are easier on your brain because you do not have to invent everything at once. You focus on understanding how the code works, not on producing it.
 
 Where it fits: **Predict** (you study the example and commit to a prediction) and **Investigate** (you trace through it and produce artifacts like trace tables).
 
@@ -113,11 +113,17 @@ To solve this, you must reason about data flow: `city` must exist before `label`
 
 ### Live Coding: Investigate and Modify
 
+Emma opens a code editor and starts typing, narrating as she goes: "First I'll create the variable... now I need to convert the number to text... watch what happens when I forget `str()` — see that error? That's the kind of mistake you learn from."
+
+James watches her think out loud — including the wrong turns and corrections. "That's more useful than seeing the finished code," he realizes.
+
 In classroom settings, the instructor writes or edits code in real time, narrating their thinking aloud -- including mistakes, debugging steps, and design choices. The value is seeing how an expert thinks, not just admiring their finished code.
 
 Where it fits: **Investigate** (the instructor traces and explains) and **Modify** (the instructor demonstrates changes). In solo mode, your AI assistant can serve a similar role when you ask it to walk through adding a feature step by step, explaining its reasoning as it goes.
 
 ### Peer Instruction: Across All Stages
+
+James writes his prediction: `Karachi: 32C`. Emma writes hers: `Karachi: 32 C` — with an extra space before the C. They disagree. Before either of them runs the code, they debate: does `str(temp) + "C"` produce a space or not? The disagreement forces both of them to look more closely at the code.
 
 Peer instruction means thinking individually first, then discussing your answer with a partner or small group. It is especially powerful in Predict -- you write your prediction, compare it with a classmate, discuss any disagreements, and only then run the code.
 
@@ -160,7 +166,7 @@ Here is what a typical lesson looks like when all the pieces work together. You 
 
 **Step 2: Run and Compare.** You run the code and compare the output to your prediction. In classroom mode, you share predictions with a partner first (peer instruction). In solo mode, you commit your prediction to writing before executing. The prediction-reality gap drives learning regardless of mode.
 
-**Step 3: Investigate with Artifacts.** You produce a trace table or line-by-line explanation. You discuss targeted questions -- with peers in classroom mode, or with your AI assistant in solo mode after your own first explanation. This is where the Socratic tutoring role from Lesson 2 activates.
+**Step 3: Investigate with Artifacts.** You produce a trace table or line-by-line explanation. You discuss targeted questions -- with peers in classroom mode, or with your AI assistant in solo mode after your own first explanation. This is where the questioning partner role from Lesson 2 activates.
 
 **Step 4: Parsons Problem.** A Parsons problem closely related to the worked example tests structural understanding before free creation. If you can reorder scrambled lines correctly, you have internalized the program's logic -- not just recognized it.
 
@@ -235,6 +241,25 @@ compare notes.
 ```
 
 **What you are learning:** Peer instruction in solo mode. By asking AI to share its own "prediction" and reasoning, you practice the compare-and-discuss step that makes peer instruction effective -- even when studying alone.
+
+### Prompt 3: Identify the Six Steps in a Lesson
+
+```
+I am learning about the six-step PRIMM-AI+ lesson architecture:
+1. Worked example with AI-free prediction
+2. Run and compare
+3. Investigate with artifacts
+4. Parsons problem
+5. Modify
+6. Make with specification
+
+Show me a short Python program (4-6 lines, using only variables
+and print) and walk me through all six steps. At each step,
+tell me which step we are on and what I should do. Start by
+showing the code and asking me to predict.
+```
+
+**What you are learning:** How the six-step lesson architecture feels in practice. By experiencing all six steps with AI guiding the process, you will recognize the pattern immediately when you encounter it in Chapter 33 and beyond.
 
 ---
 

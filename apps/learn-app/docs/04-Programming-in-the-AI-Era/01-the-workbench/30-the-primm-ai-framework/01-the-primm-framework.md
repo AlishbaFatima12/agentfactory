@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: "The PRIMM Framework"
 description: "Discover PRIMM -- the research-validated method that teaches you to read and understand code before you write it, with AI-free prediction and confidence scoring -- and why comprehension is the bottleneck skill of the AI era."
-keywords: ["PRIMM", "Predict Run Investigate Modify Make", "Sue Sentance", "Jane Waite", "code comprehension", "Vygotsky", "sociocultural learning", "reading code", "AI era programming", "code literacy"]
+keywords: ["PRIMM", "Predict Run Investigate Modify Make", "Sue Sentance", "Jane Waite", "code comprehension", "reading code", "AI era programming", "code literacy", "prediction-reality gap"]
 chapter: 30
 lesson: 1
 duration_minutes: 20
@@ -48,7 +48,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 4
-  assessment: "4 concepts (the PRIMM five-stage sequence, sociocultural learning theory, comprehension-as-bottleneck thesis, the prediction-reality gap as learning mechanism) well within A2 limit of 7"
+  assessment: "4 concepts (the PRIMM five-stage sequence, the research basis for PRIMM, comprehension-as-bottleneck thesis, the prediction-reality gap as learning mechanism) well within A2 limit of 7"
 
 differentiation:
   extension_for_advanced: "Read the 2019 journal paper by Sentance, Waite, and Kallia in Computer Science Education (Vol. 29, No. 2-3) and identify which PRIMM stage maps most closely to code review in professional software engineering."
@@ -59,11 +59,13 @@ differentiation:
 
 James is new to programming. He has spent his career in a non-technical role, but his company is shifting toward AI-driven workflows and he needs to understand code — not just use tools that generate it. His mentor is Emma, a senior engineer who has spent years building backend systems and has a reputation for turning confused beginners into confident developers.
 
-James watches his AI coding assistant generate fifty lines of Python in ten seconds. A function that parses JSON, validates fields, formats output, and returns a dictionary -- all syntactically correct, all ready to run. He copies it into his project and moves on to the next feature.
+On his first day of learning, Emma shows James an AI coding assistant. She types a prompt, and fifty lines of Python appear in ten seconds. A function that parses data, validates fields, formats output, and returns a result -- all syntactically correct, all ready to run.
 
-Emma walks over and points at line twelve. "What does that line do?"
+"That's amazing," James says. "So the AI writes the code and I just use it?"
 
-James stares at it. The line reads `validated = {k: v for k, v in raw.items() if k in schema}`. He recognizes the individual words -- `for`, `in`, `if` -- but cannot explain what the line accomplishes. He generated fifty lines of working code and understands none of them.
+Emma points at line twelve. "What does that line do?"
+
+James stares at it. He recognizes some of the words -- `for`, `in`, `if` -- but cannot explain what the line accomplishes. The AI generated fifty lines of working code and he understands none of them.
 
 "Speed means nothing without comprehension," Emma says. "If you cannot read the code your AI produces, you cannot verify it, debug it, or adapt it. You are not programming. You are copying."
 
@@ -321,6 +323,27 @@ For each one, explain WHY the output is what it is.
 ```
 
 **What you are learning:** Systematic investigation through edge-case exploration. Each scenario tests a different assumption about how the code works -- empty inputs, string order, variable naming -- and builds your mental model of Python's behavior through concrete experiments rather than abstract rules.
+
+### Prompt 3: Practice the Modify Stage
+
+```
+Here is a simple Python program:
+
+name: str = "Amara"
+greeting: str = "Welcome to the Agent Factory"
+message: str = greeting + ", " + name + "!"
+print(message)
+
+I want to modify this program so it prints TWO lines:
+1. The greeting message (same as now)
+2. Just the name by itself on a second line
+
+I will attempt the modification myself first. After I share
+my attempt, tell me if it is correct. If not, give me a hint
+without writing the full solution.
+```
+
+**What you are learning:** The Modify stage discipline — attempting a change yourself before asking for help. The prompt explicitly tells AI to give hints, not solutions, which keeps you in the driver's seat while still getting support when stuck.
 
 ---
 
