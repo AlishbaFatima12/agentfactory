@@ -28,7 +28,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Information Literacy"
-    measurable_at_this_level: "Student can describe how the PRIMM-AI+ verification instinct (Predict then Run) scales from learning exercises to production systems through the five rungs of the Verification Ladder"
+    measurable_at_this_level: "Student can describe how the PRIMM-AI+ verification instinct (Predict then Run) scales from learning exercises to production systems through the five steps of the Verification Ladder"
 
   - name: "PRIMM-to-Professional Mapping"
     proficiency_level: "A2"
@@ -51,7 +51,7 @@ learning_objectives:
   - objective: "Describe the Verification Ladder from PRIMM-AI+ learning exercises through production observability"
     proficiency_level: "A2"
     bloom_level: "Understand"
-    assessment_method: "Student explains in their own words how predicting-then-running during learning connects to testing-then-deploying in production, referencing at least three rungs of the Verification Ladder"
+    assessment_method: "Student explains in their own words how predicting-then-running during learning connects to testing-then-deploying in production, referencing at least three steps of the Verification Ladder"
 
 cognitive_load:
   new_concepts: 7
@@ -90,7 +90,7 @@ This is a solid foundation. But nothing in this table prevents you from asking A
 | 2 | **Stage-by-Stage AI Permissions** | Exact rules for what AI may and may not do at each stage |
 | 3 | **Mandatory Trace Artifacts** | You must produce something visible (trace table, explanation, or failure note) during Investigate |
 | 4 | **Mastery Gates** | You must earn the right to proceed to the next stage |
-| 5 | **Verification Ladder** | Five rungs connecting learning predictions to production observability |
+| 5 | **Verification Ladder** | Five steps connecting learning predictions to production observability |
 | 6 | **Error Taxonomy** | Five categories of bugs, so you diagnose before you fix |
 | 7 | **Confidence Scoring** | Rate your certainty 1-5 before each prediction -- reveals false confidence |
 | 8 | **Classroom and Solo Modes** | Same framework works for both -- this book uses solo mode |
@@ -303,9 +303,9 @@ These rules are operational discipline, not suggestions. Each one prevents a spe
 
 ## The Verification Ladder
 
-The instinct you build in PRIMM-AI+ -- predict, then verify -- is the foundation of a ladder that extends all the way to production systems. Each rung builds on the one before it.
+Every time you predict what code will do and then run it to check, you are building a habit: guess first, verify second. That habit does not stop being useful when you leave this chapter. It grows with you. The Verification Ladder shows how the same habit scales from a learning exercise all the way to professional software -- one step at a time.
 
-| Rung | Question | Maps To |
+| Step | Question | Maps To |
 |------|----------|---------|
 | 1. **Prediction** | What do I think this code does? | PRIMM-AI+ Predict and Run |
 | 2. **Types** | Is the structure valid? | Axiom V: Types Are Guardrails |
@@ -451,7 +451,7 @@ This structure mirrors professional code review: read the PR, understand the log
 - PRIMM-AI+ keeps all five stages from PRIMM and adds an AI partner with clear boundaries, AI-free checkpoints, mastery gates, and confidence scoring at each stage.
 - The AI Permissions Table defines exactly what AI may and may not do at each stage -- use it to distinguish partner interactions from crutch interactions.
 - The five rules (predict before running, test every explanation, modify before making, spec before code, partner not crutch) are operational discipline that prevents AI dependency.
-- The Verification Ladder connects your learning predictions to production observability across five rungs: Prediction, Types, Tests, Pipeline, Observability.
+- The Verification Ladder connects your learning predictions to production observability across five steps: Prediction, Types, Tests, Pipeline, Observability.
 - Every chapter in Parts 4-6 follows the PRIMM-AI+ cycle implicitly: see code, investigate it, modify it, build something new.
 - PRIMM-AI+ is the learning operating system; the Ten Axioms (Chapter 31) are the first application. Your learning habits map directly to professional practice.
 
