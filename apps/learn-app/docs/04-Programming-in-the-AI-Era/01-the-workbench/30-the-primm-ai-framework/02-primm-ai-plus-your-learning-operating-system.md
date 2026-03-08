@@ -104,6 +104,14 @@ PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- t
 
 ## AI Roles at Each Stage
 
+James opens his AI coding assistant and types: "Explain this Python program to me." The explanation appears instantly — clean, thorough, correct. He reads it, nods, and moves on.
+
+Emma stops him. "What did you just learn?"
+
+James thinks. "I learned... what the program does?"
+
+"No. You learned what the AI *says* the program does. You skipped Predict entirely. Your brain did zero work." She closes his AI assistant. "Let's talk about when you're allowed to open this."
+
 Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically -- what the AI must not do. The "must not" rules exist because AI is eager to help. Helpfulness without boundaries destroys the learning that each stage is designed to produce.
 
 ### Predict -- AI Generates, You Think
@@ -168,6 +176,10 @@ When you catch yourself about to use a prompt from the Wrong column, pause and r
 
 ## AI-Free Checkpoints
 
+"Close my AI assistant?" James looks alarmed. "But what if I get stuck?"
+
+"Getting stuck is the point," Emma says. "If you can't do it without AI, you haven't learned it yet. The checkpoint shows you where you actually are — not where you think you are."
+
 Throughout Parts 4 and 5, you will occasionally see **[AI-FREE]** marked in the margin of lessons. When you see this marker, close your AI assistant. Minimize the window, switch to a different tab, put it away. These moments are diagnostic -- they reveal whether you have actually internalized the concept or whether you have been leaning on AI without realizing it.
 
 The rules for AI-free checkpoints are simple:
@@ -181,6 +193,14 @@ AI-free checkpoints are not punishment. They are the moments when you discover w
 ---
 
 ## Mastery Gates
+
+James finishes reading a program and reaches for the keyboard. "I get it. Let me jump straight to modifying it."
+
+Emma holds up a hand. "Can you explain how line 3 works — not what it does, but *how*?"
+
+James hesitates. "It... builds a string?"
+
+"That's *what*. How does it build it? What does `str()` do? Why is the `+` needed?" She waits. James cannot answer. "That's why we have gates. You're not ready for Modify yet."
 
 Each stage transition has a formal requirement. You cannot (or rather, should not) move to the next stage until the gate condition is met:
 
@@ -197,6 +217,14 @@ These gates feel unnecessary when a lesson is going well. They prove their value
 
 ## Mandatory Trace Artifacts
 
+"I think I understand it," James says after reading through a program.
+
+"Show me," Emma replies. "Write it down. A trace table, an explanation in your own words, or even a note saying where you got confused. Something I can look at."
+
+"Why can't I just tell you?"
+
+"Because 'I think I understand' and 'I can prove I understand' are very different things. Your brain is good at feeling confident. Paper is good at exposing the gaps."
+
 Every Investigate stage must produce something visible. A vague sense of "I think I understand it" is not investigation -- it is wishful thinking. PRIMM-AI+ requires you to create at least one of these artifacts before moving to Modify:
 
 - **A trace table** showing the value of each variable after every line executes
@@ -211,7 +239,11 @@ The trace table from the walkthrough later in this lesson is an example of a man
 
 ## A Complete PRIMM-AI+ Lesson Walkthrough
 
-Theory is useful. Practice is better. Here is what a single PRIMM-AI+ lesson looks like end-to-end, using a concrete Python program. This example uses only variables and `print` -- the same building blocks you saw in Lesson 1.
+"Enough rules," James says. "Show me what this actually looks like."
+
+Emma nods. "Fair enough. Let's do a full PRIMM-AI+ cycle together — start to finish, one program, all five stages. You'll see every checkpoint, every gate, every rule in action."
+
+Here is what a single PRIMM-AI+ lesson looks like end-to-end, using a concrete Python program. This example uses only variables and `print` -- the same building blocks you saw in Lesson 1.
 
 ```python
 name: str = "Amara"
@@ -287,6 +319,8 @@ You have now completed a full PRIMM-AI+ cycle: predicted with a confidence score
 
 ## The Five PRIMM-AI+ Rules
 
+Emma pulls out a card with five rules printed on it. "Keep this next to your keyboard. Every time you catch yourself breaking one, stop and fix it. These are not suggestions — they are the difference between learning and pretending to learn."
+
 These rules are operational discipline, not suggestions. Each one prevents a specific failure mode in AI-assisted learning.
 
 **Rule 1: Never run code you have not predicted.** This rule builds your mental compiler. Every time you predict before running, you strengthen the neural pathways that let you read code and understand it. Skip the prediction and you train yourself to depend on the Run button instead of your own reasoning.
@@ -303,6 +337,10 @@ These rules are operational discipline, not suggestions. Each one prevents a spe
 
 ## The Verification Ladder
 
+"How long do I have to keep predicting before running?" James asks. "It feels like training wheels."
+
+Emma smiles. "You'll never stop. Senior engineers do the same thing — they just call it 'code review' and 'testing.' The habit you're building right now is the same habit that powers professional software. It just grows with you."
+
 Every time you predict what code will do and then run it to check, you are building a habit: guess first, verify second. That habit does not stop being useful when you leave this chapter. It grows with you. The Verification Ladder shows how the same habit scales from a learning exercise all the way to professional software -- one step at a time.
 
 | Step | Question | What You Do |
@@ -318,6 +356,10 @@ You are currently at Step 1 -- predicting and running. Steps 2 through 5 will be
 ---
 
 ## Confidence Scoring
+
+James predicts the output of a program and rates himself a 5 — certain. He runs the code. The output is completely different from his prediction.
+
+"That's the most dangerous state," Emma says. "Being wrong isn't the problem. Being *confident and wrong* is the problem. In the real world, that's how bugs get shipped — someone looks at AI-generated code, thinks 'looks right,' and moves on without checking."
 
 In the previous lesson, you saw the 1-5 confidence scale during the Predict stage. Here is how to use it systematically throughout Parts 4 and 5.
 
@@ -344,6 +386,14 @@ Over the course of Parts 4 and 5, your calibration should improve. Early on, you
 
 ## Five Kinds of Bugs — A Preview
 
+James runs his modified program and gets an error. "It's broken. I'll ask AI to fix it."
+
+"Wait," Emma says. "Before you ask for a fix, can you tell me what *kind* of problem this is? Did you give the wrong type of data? Did you get the logic backward? Did you build the wrong thing entirely?"
+
+James stares at the error. "I... don't know how to tell."
+
+"That's what this table is for."
+
 When your code does not work, the first question is: *what kind of problem is this?* Not all bugs are the same. Knowing which kind you are looking at tells you where to search. You do not need to memorize this table now -- just know it exists. You will practice finding each kind starting in Chapter 33.
 
 | Kind of Bug | What Went Wrong | Simple Example |
@@ -359,6 +409,10 @@ When something goes wrong during Investigate or Modify, glance at this table. Ev
 ---
 
 ## From Learning to Professional Practice
+
+"Will I still be doing this at work?" James asks. "Predicting output, tracing variables, writing things down before running them?"
+
+"Every day," Emma says. "You'll just call it something different. Predict becomes code review. Investigate becomes debugging. Make becomes shipping a feature. The habit is the same — the stakes just get bigger."
 
 The habits you build with PRIMM-AI+ do not disappear when you finish this book. They are the same habits professional developers use every day -- just applied at a larger scale. Here is what each habit looks like when you are learning versus when you are working professionally:
 
@@ -467,7 +521,11 @@ Did the AI's explanation match the actual output? Python's rounding behavior sur
 
 ## Looking Ahead
 
-The next lesson shows how everything fits together -- the four teaching methods embedded within PRIMM-AI+, how classroom and solo modes work, and what a typical lesson architecture looks like.
+James looks at the PRIMM-AI+ at a Glance table one more time. "OK, I know the stages, the rules, and the checkpoints. But what does a real lesson actually *feel* like when all of this is running at once?"
+
+"That's Lesson 3," Emma says. "You'll see the four teaching methods woven into the stages — worked examples, Parsons problems, live coding, and peer instruction — and you'll see the exact lesson architecture that every programming chapter in this book follows. After that, you'll recognize the pattern the moment you hit Chapter 33."
+
+The next lesson brings everything together: the teaching methods, classroom and solo modes, and the practical lesson architecture that governs every chapter from here forward.
 
 ---
 

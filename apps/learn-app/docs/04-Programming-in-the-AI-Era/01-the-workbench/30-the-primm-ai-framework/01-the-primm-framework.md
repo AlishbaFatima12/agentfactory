@@ -71,6 +71,10 @@ This lesson introduces the framework that solves this problem: **PRIMM** -- Pred
 
 ## Where Does PRIMM Come From?
 
+James is skeptical. "A framework from 2017? Won't AI have made that obsolete by now?"
+
+Emma shakes her head. "PRIMM wasn't built for a specific technology. It was built for how brains learn. That hasn't changed."
+
 PRIMM was created by computing education researchers **Sue Sentance** and **Jane Waite** in 2017. They tested it with **493 students across 13 schools in England**. The result: **students who learned with PRIMM outperformed students who learned without it** -- especially in classes where students had different skill levels.
 
 The core idea is simple: when you talk about code and read it before writing it, you build the vocabulary and mental models that make writing possible. Each PRIMM stage gives you just enough support to reach the next level of understanding.
@@ -95,7 +99,11 @@ Four of the five stages build understanding. Only the last one involves writing 
 
 ## The Five Stages in Action
 
-To see how PRIMM works in practice, we will walk through all five stages using a single Python program.
+Emma pulls up a short Python program on her screen. "Let me show you what this looks like in practice. I'll walk you through all five stages with one program — and you'll do the thinking, not me."
+
+James leans in. "What if I don't know Python yet?"
+
+"That's the point," Emma says. "You're learning the *process*, not the syntax. Ready?"
 
 > **About the code below:** You have not learned Python yet. That is the point. You are seeing what the PRIMM process looks like with real code. Focus on the *process*, not the syntax. When you encounter Python in Chapter 33, you will already know how to approach it.
 
@@ -135,6 +143,8 @@ Write your prediction now before reading further.
 
 ### Stage 2: Run
 
+James writes his prediction on a sticky note: `Welcome to the Agent Factory, Amara!` — confidence score 4. He is fairly sure, but the comma placement makes him hesitate. Time to find out.
+
 Here is the actual output:
 
 **Output:**
@@ -152,6 +162,10 @@ Compare your prediction to the actual result. Three outcomes are possible:
 The prediction-reality gap is the engine of PRIMM. Without the prediction step, running code teaches you nothing -- you see output and think "okay." With the prediction step, you have a hypothesis to test. That transforms passive observation into active learning.
 
 ### Stage 3: Investigate
+
+James got the output right. "Great, I understand it. Next stage?"
+
+"Not so fast," Emma says. "You got the *what* right. But do you understand *how*? What happens if the name is empty? What if you swap greeting and name in the message line? That's what Investigation is for — digging into the mechanics."
 
 Investigation means probing the code to build deeper understanding. Here are the kinds of questions you ask:
 
@@ -180,6 +194,12 @@ Your AI assistant will explain that the output would become `Amara, Welcome to t
 
 ### Stage 4: Modify
 
+"Now change something," Emma says. "Don't ask AI. Don't ask me. Open the code and change it yourself."
+
+James hesitates. "What if I break it?"
+
+"Then you'll learn more than if you hadn't tried."
+
 Modification requires understanding *where* to change code and *what* the change will do. Each task below demands a little more comprehension than the last.
 
 **Change the name.** Replace `"Amara"` with your own name. Predict what the output will be, then run it. This is the simplest modification -- you change one value and the rest follows.
@@ -191,6 +211,10 @@ Modification requires understanding *where* to change code and *what* the change
 Each modification is small, but each one forces you to understand a different aspect of the program. You cannot change the greeting without understanding which variable feeds into `message`. You cannot add a second print without understanding the order in which lines execute.
 
 ### Stage 5: Make
+
+James managed both modifications. The greeting now says "Hello from SmartNotes, James!" and a second line prints just his name. He is starting to feel confident. "Can I build something on my own now?"
+
+"Now you're ready," Emma says. "But start by writing down *what* you want to build before you write *how*."
 
 Now -- and only now -- you write a new program from scratch. The goal is a **project badge** that stores a person's name and role, then prints a formatted badge line like `Amara - Team Lead`. The process:
 
@@ -207,6 +231,12 @@ The Make stage completes the cycle. You started by reading someone else's code. 
 ---
 
 ## The Comprehension Crisis
+
+James just completed his first full PRIMM cycle — predict, run, investigate, modify, make — on a four-line program. It took twenty minutes. He could have asked AI to write the same program in ten seconds. "Is this really worth the time?" he asks.
+
+Emma points back at the fifty lines of AI-generated code from the beginning of the lesson. "Can you explain line twelve yet?"
+
+James pauses. He still cannot. But the greeting program? He understands every line — because he traced it, changed it, and built something new from it.
 
 PRIMM was created in 2017 for secondary school classrooms. Why does it matter *more* in 2026 than it did then?
 
@@ -294,4 +324,8 @@ For each one, explain WHY the output is what it is.
 
 ## Looking Ahead
 
-You now know the method. In the next lesson, you will see how AI coding assistants integrate into each PRIMM stage -- transforming PRIMM into **PRIMM-AI+**, the learning operating system you will use throughout every programming chapter in this book. You will learn the AI permissions at each stage, the mastery gates that earn you the right to proceed, and the verification ladder that connects your learning predictions to production observability.
+James has one more question. "I used PRIMM without any AI help in this lesson. But I *have* an AI coding assistant. When do I get to use it?"
+
+"Next lesson," Emma says. "You'll learn exactly when to bring AI in, when to keep it out, and how to tell whether it's helping you learn or just doing the work for you."
+
+That is what Lesson 2 introduces: **PRIMM-AI+** — the same five stages you just practiced, enhanced with AI permissions at each stage, checkpoints that keep you honest, and mastery gates that earn you the right to proceed. PRIMM gave you the method. PRIMM-AI+ gives you the operating system for learning with AI.
