@@ -59,7 +59,7 @@ cognitive_load:
 
 differentiation:
   extension_for_advanced: "Compare PRIMM-AI+ boundaries with pair programming protocols (driver/navigator) and formal code review practices. Analyze how the AI Permissions Table maps to specific failure modes in AI-assisted development."
-  remedial_for_struggling: "Focus exclusively on the five rules and the calculate_total walkthrough. Treat AI permissions, mastery gates, and the verification ladder as reference material to revisit when starting Chapter 33."
+  remedial_for_struggling: "Focus exclusively on the five rules and the lesson walkthrough. Treat AI permissions, mastery gates, and the verification ladder as reference material to revisit when starting Chapter 33."
 ---
 
 # PRIMM-AI+: Your Learning Operating System
@@ -112,7 +112,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What the AI does:** Generates programs at the right difficulty level for your current stage. Provides code for you to analyze.
 
-**What the AI must NOT do:** Explain the code before you have predicted. If the AI tells you what a program does before you think about it, the Predict stage produces nothing -- you are reading an explanation, not building a mental model. You can ask your AI assistant something like: *"Generate a short Python program that demonstrates a for loop. Include type hints. Do not explain the code -- just show it to me."* The key instruction is "do not explain" -- that preserves your prediction space.
+**What the AI must NOT do:** Explain the code before you have predicted. If the AI tells you what a program does before you think about it, the Predict stage produces nothing -- you are reading an explanation, not building a mental model. You can ask your AI assistant something like: *"Generate a short Python program that uses variables and print. Include type hints. Do not explain the code -- just show it to me."* The key instruction is "do not explain" -- that preserves your prediction space.
 
 ### Run -- AI Executes, You Compare
 
@@ -136,7 +136,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What you do:** Change the program yourself. Add a feature, fix a limitation, extend the behavior. You write the modification first, then ask for feedback.
 
-**What the AI does:** After you modify, shows an alternative approach. Compares your version to the original. Explains tradeoffs between approaches. Can provide a minimal hint or targeted diff if you are stuck -- but not a complete rewrite. You might say: *"I am trying to add a discount parameter. What am I missing?"*
+**What the AI does:** After you modify, shows an alternative approach. Compares your version to the original. Explains tradeoffs between approaches. Can provide a minimal hint or targeted diff if you are stuck -- but not a complete rewrite. You might say: *"I rearranged the variables but the output order is wrong. What am I missing?"*
 
 **What the AI must NOT do:** Modify the code for you. The moment AI writes the modification, you are in Make territory without having done the cognitive work that Modify requires. Your hands produce the change; AI evaluates it afterward.
 
@@ -156,11 +156,11 @@ The table below makes the boundaries concrete. The Right column shows prompts th
 
 | Stage | AI Permission | Right Interaction | Wrong Interaction |
 |-------|--------------|-------------------|-------------------|
-| **Predict** | AI may generate the code sample. AI must not reveal the answer or explain the code. | "Generate a program about list comprehensions. Do not explain the code." | "What will this code print?" |
+| **Predict** | AI may generate the code sample. AI must not reveal the answer or explain the code. | "Generate a short Python program using variables and print. Do not explain the code." | "What will this code print?" |
 | **Run** | AI may execute the program and display output. No restrictions. | "Run this program and show the output." | (No wrong interaction at this stage) |
-| **Investigate** | AI may explain and trace, but only after the learner provides a first explanation. | "What does enumerate return?" (after writing own trace) | "Explain everything about this code." |
-| **Modify** | AI may provide a minimal hint or targeted diff. Not a complete rewrite. | "I am trying to add a discount parameter. What am I missing?" | "Add a discount parameter to this function." |
-| **Make** | AI may review the specification and completed solution. AI must not write the solution. | "Review my code for correctness and edge cases. Do not rewrite it." | "Write a function that generates an invoice." |
+| **Investigate** | AI may explain and trace, but only after the learner provides a first explanation. | "What does the + operator do when I use it to join two strings?" (after writing own trace) | "Explain everything about this code." |
+| **Modify** | AI may provide a minimal hint or targeted diff. Not a complete rewrite. | "I am trying to add a second print line but it is not showing. What am I missing?" | "Add a second print line to this program for me." |
+| **Make** | AI may review the specification and completed solution. AI must not write the solution. | "Review my greeting program for correctness. Do not rewrite it." | "Write a program that prints a greeting with a name." |
 
 When you catch yourself about to use a prompt from the Wrong column, pause and rephrase. The Right column prompts produce learning. The Wrong column prompts produce output.
 
@@ -203,41 +203,32 @@ Every Investigate stage must produce something visible. A vague sense of "I thin
 - **A plain-English explanation** describing how the program works in your own words
 - **A failure note** documenting what you tried to trace and where you got stuck
 
-The third option matters most. If you cannot trace the program or explain it, that is not a sign of failure -- it is a diagnostic signal. A failure note that says "I do not understand how `round()` decides whether to round up or down" gives you an exact target for your AI investigation questions. Without the artifact requirement, you would skip past the confusion and carry it silently into Modify.
+The third option matters most. If you cannot trace the program or explain it, that is not a sign of failure -- it is a diagnostic signal. A failure note that says "I do not understand why `str(score)` is needed before joining with `+`" gives you an exact target for your AI investigation questions. Without the artifact requirement, you would skip past the confusion and carry it silently into Modify.
 
-The trace table from the `calculate_total` walkthrough earlier in this lesson is an example of a mandatory artifact. The mastery gate for Investigate ("can explain *how*, not just *what*") depends on having produced one.
+The trace table from the walkthrough later in this lesson is an example of a mandatory artifact. The mastery gate for Investigate ("can explain *how*, not just *what*") depends on having produced one.
 
 ---
 
 ## A Complete PRIMM-AI+ Lesson Walkthrough
 
-Theory is useful. Practice is better. Here is what a single PRIMM-AI+ lesson looks like end-to-end, using a concrete Python program.
-
-> **Remember:** You are not expected to understand every line of this code. This walkthrough shows what a complete PRIMM-AI+ lesson looks like. Focus on the process, not the syntax.
+Theory is useful. Practice is better. Here is what a single PRIMM-AI+ lesson looks like end-to-end, using a concrete Python program. This example uses only variables and `print` -- the same building blocks you saw in Lesson 1.
 
 ```python
-def calculate_total(prices: list[float], tax_rate: float = 0.17) -> float:
-    """Calculate the total price including tax."""
-    subtotal: float = sum(prices)
-    tax: float = subtotal * tax_rate
-    return round(subtotal + tax, 2)
-
-items: list[float] = [29.99, 15.50, 42.00]
-total: float = calculate_total(items)
-print(f"Total with tax: ${total}")
-
-discounted_total: float = calculate_total(items, 0.05)
-print(f"Total with discount tax: ${discounted_total}")
+name: str = "Amara"
+subject: str = "Python"
+score: int = 95
+result: str = name + " scored " + str(score) + " in " + subject
+print(result)
+print(name + " passed!")
 ```
 
 ### Stage 1: Predict [AI-FREE]
 
 Before running anything, answer these questions on paper or in a note:
 
-- What will the first `print` statement output? The prices add to 87.49. Tax at 0.17 is 14.8733. Total is 102.3633, rounded to 102.36. So: `Total with tax: $102.36`.
-- What will the second `print` statement output? Tax at 0.05 is 4.3745. Total is 91.8645, rounded to 91.86. So: `Total with discount tax: $91.86`.
-- What does `tax_rate: float = 0.17` mean? The notation after `=` suggests a default value -- if you call the function without specifying a tax rate, it uses 0.17.
-- What does `-> float` mean? It appears to describe what the function gives back -- a floating-point number.
+- What will the first `print` statement output? Look at how `result` is built: it joins `name`, the text `" scored "`, the score converted to text with `str(score)`, `" in "`, and `subject`. So: `Amara scored 95 in Python`.
+- What will the second `print` statement output? It joins `name` with `" passed!"`. So: `Amara passed!`.
+- What does `str(score)` do? The score is an `int` (a number). The `+` operator joins text, not numbers. `str(score)` converts the number `95` into the text `"95"` so it can be joined with the other strings.
 
 **Confidence score:** Rate yourself 1-5. Write it down next to your prediction.
 
@@ -248,47 +239,47 @@ Before running anything, answer these questions on paper or in a note:
 Execute the program (ask your AI assistant to run it, or run it directly when you have Python set up later). Here is the output:
 
 ```
-Total with tax: $102.36
-Total with discount tax: $91.86
+Amara scored 95 in Python
+Amara passed!
 ```
 
-Compare your predictions. Were you right about the default tax rate? Did you get the rounding correct? If your predictions matched, your mental model is accurate for this pattern. If they diverged, you have specific questions for the next stage.
+Compare your predictions. Did you get both lines right? Did you understand why `str(score)` was needed? If your predictions matched, your mental model is accurate for this pattern. If they diverged, you have specific questions for the next stage.
 
 **Mastery gate check:** Have you recorded where your prediction matched and where it diverged? If yes, proceed to Investigate.
 
 ### Stage 3: Investigate
 
-First, write your own explanation of how the function works. Even a rough version counts: "It takes a list of numbers, adds them up, calculates tax, and rounds the result." Only after writing your explanation should you ask AI for deeper investigation.
+First, write your own explanation of how the program works. Even a rough version counts: "It stores a name, a subject, and a score, then joins them into a sentence and prints it. A second print line prints a shorter message." Only after writing your explanation should you ask AI for deeper investigation.
 
 Now probe the mechanics. Focus on whatever surprised you during Run. Ask your AI assistant targeted questions:
 
-- *"Trace through `calculate_total(items)` step by step and show me the value of each variable."* -- The AI returns a trace table. But do not stop there: verify the trace by checking the math yourself (87.49 times 0.17 equals 14.8733, plus 87.49 equals 102.3633, rounded to 102.36).
-- *"What happens if the list is empty?"* -- Explore the edge case. Does the function crash or return zero?
-- *"What if I pass a string instead of a list of numbers?"* -- Test a type mismatch and observe what happens.
+- *"Trace through this program and show me the value of each variable after every line."* -- The AI returns a trace table. Verify it yourself: after line 4, `result` should hold `"Amara scored 95 in Python"`.
+- *"What happens if I remove `str()` and write `name + " scored " + score` instead?"* -- Explore the error. Python cannot join a string and an integer with `+`. Understanding *why* `str()` is needed is the key insight.
+- *"What if `name` is an empty string?"* -- Test the edge case. The output would be `" scored 95 in Python"` -- a sentence with no name but the spaces still appear.
 
-Each question sharpens your understanding of how the function behaves under different conditions. The AI answers; you verify by checking the logic yourself. That verification habit is Rule 2 in action.
+Each question sharpens your understanding of how the program behaves under different conditions. The AI answers; you verify by checking the logic yourself. That verification habit is Rule 2 in action.
 
-**Mastery gate check:** Can you explain *how* the function works, not just *what* it does? Can you describe the role of `sum()`, the multiplication, and `round()`? If yes, proceed to Modify.
+**Mastery gate check:** Can you explain *how* the program works, not just *what* it does? Can you describe why `str()` is needed and what the `+` operator does with strings? If yes, proceed to Modify.
 
 ### Stage 4: Modify
 
 Change the program yourself. Two challenges:
 
-**Challenge A:** Add a `discount` parameter that subtracts a flat amount before tax is calculated.
+**Challenge A:** Change the format so the output reads `Python: Amara scored 95` instead -- subject first, then name, then score.
 
-**Challenge B:** Change the function so it returns a breakdown (subtotal, tax amount, and total) instead of just the total.
+**Challenge B:** Add a third print line that shows just the score by itself: `Score: 95`.
 
-Attempt both modifications before asking AI for any help. If you get stuck, ask for a hint -- not a solution: *"I am trying to add a discount parameter. What am I missing?"*
+Attempt both modifications before asking AI for any help. If you get stuck, ask for a hint -- not a solution: *"I rearranged the variables but the output order is wrong. What am I missing?"*
 
-After you write your modifications, show both versions to your AI assistant and ask it to compare them. The AI might point out that your discount could make the subtotal negative -- an edge case you had not considered. That feedback makes your next version stronger.
+After you write your modifications, show both versions to your AI assistant and ask it to compare them. The AI might point out a simpler way to build the string -- a learning opportunity, not a failure.
 
 ### Stage 5: Make [AI-FREE start]
 
-Build something new. Write a specification first -- without AI: *"Create a function that accepts a list of item names and prices, applies tax, and returns a formatted summary showing each item, the subtotal, the tax, and the total."*
+Build something new. Write a specification first -- without AI: *"Create a program that stores a person's name, city, and age, then prints a profile line like 'Amara lives in Karachi, age 25' and a second line that says 'Welcome, Amara!'"*
 
 **Mastery gate check:** Do you have a written specification? If yes, implement it.
 
-Attempt the implementation yourself. When you finish your first attempt, then bring AI back in. Show your spec to your AI assistant for review -- ask whether you have covered all edge cases. Then ask the AI to review your code for correctness without rewriting it.
+Attempt the implementation yourself. You will need three variables, `str()` to convert the age, and two `print` statements. When you finish your first attempt, then bring AI back in. Show your spec to your AI assistant for review -- ask whether you have covered all edge cases. Then ask the AI to review your code for correctness without rewriting it.
 
 You have now completed a full PRIMM-AI+ cycle: predicted with a confidence score, ran and recorded the comparison, investigated after providing your own explanation, modified independently before requesting hints, and built from a written specification -- with AI as partner at every stage and ghostwriter at none.
 
@@ -322,7 +313,7 @@ The instinct you build in PRIMM-AI+ -- predict, then verify -- is the foundation
 | 4. **Pipeline** | Do all checks pass together? | Axiom IX: Verification Is a Pipeline |
 | 5. **Observability** | Is it still correct in production? | Axiom X: Observability Extends Verification |
 
-When you predict the output of `calculate_total` and then run it to check, you are practicing the same cognitive pattern that a CI/CD pipeline uses when it runs 500 tests before deploying to production. The scale changes. The instinct does not.
+When you predict the output of a program and then run it to check, you are practicing the same cognitive pattern that a CI/CD pipeline uses when it runs 500 tests before deploying to production. The scale changes. The instinct does not.
 
 You will encounter the axioms referenced in this table when you reach Chapter 31. For now, the key insight is that the predict-then-verify habit you are building is not a beginner exercise you will outgrow. It is the foundation of every verification practice in professional software engineering.
 
@@ -360,7 +351,7 @@ There are five kinds of bugs. You do not need to memorize this table now -- it i
 | Error Category | Description |
 |---------------|-------------|
 | **Type Error** | Structural mismatch: passed a string where a list was expected |
-| **Logic Error** | Correct structure, wrong result: discount applied after tax instead of before |
+| **Logic Error** | Correct structure, wrong result: printed the name where the subject should be |
 | **Specification Error** | Correct implementation of the wrong thing |
 | **Data/Edge-Case Error** | Failures with unusual inputs: empty lists, negative numbers |
 | **Orchestration Error** | Component interaction failure: function called at the wrong time |
@@ -409,7 +400,7 @@ Each PRIMM-AI+ stage maps directly to a step in the professional AI-assisted dev
 | **Modify** | Refine iteratively | You adjust the spec or the code based on what the review revealed |
 | **Make** | Ship to production | You deliver a complete, tested, documented solution |
 
-By the time you finish Parts 4 and 5, the Predict habit will be automatic. You will write specifications before asking AI to generate code -- not because a rule says so, but because you will have practiced prediction hundreds of times and internalized the pattern. The Investigate instinct will be second nature. You will read AI-generated code with the same critical eye you developed tracing through `calculate_total`. The Modify skill will be well-practiced. You will refine iteratively, improving code in stages rather than expecting perfection on the first attempt.
+By the time you finish Parts 4 and 5, the Predict habit will be automatic. You will write specifications before asking AI to generate code -- not because a rule says so, but because you will have practiced prediction hundreds of times and internalized the pattern. The Investigate instinct will be second nature. You will read AI-generated code with the same critical eye you developed tracing through the walkthrough programs in this chapter. The Modify skill will be well-practiced. You will refine iteratively, improving code in stages rather than expecting perfection on the first attempt.
 
 PRIMM-AI+ is not a temporary training wheel. It is the permanent operating system for working with AI.
 
@@ -472,12 +463,12 @@ This structure mirrors professional code review: read the PR, understand the log
 
 ```
 Ask your AI coding assistant to generate a short Python program
-(about 10 lines) that uses a for loop and an if statement to
-process a list of numbers. Tell it to include type hints and
+(4-6 lines) that uses variables and print to display information
+about a person or place. Tell it to include type hints and
 to NOT explain the code.
 ```
 
-After the AI generates the program, look away from the response. On paper, write down: What does this program do? What will it print? What happens if the list is empty? Rate your confidence 1-5. Only after you have written your predictions and confidence score should you ask the AI to run it. Record where your prediction matched and where it diverged.
+After the AI generates the program, look away from the response. On paper, write down: What does this program do? What will it print? What happens if one of the variables is empty? Rate your confidence 1-5. Only after you have written your predictions and confidence score should you ask the AI to run it. Record where your prediction matched and where it diverged.
 
 **What you are learning:** The Predict discipline with confidence scoring -- forcing yourself to build a mental model before seeing the answer and calibrating your certainty. This is the single most important habit in PRIMM-AI+, and the one most easily skipped when AI is one keystroke away.
 
