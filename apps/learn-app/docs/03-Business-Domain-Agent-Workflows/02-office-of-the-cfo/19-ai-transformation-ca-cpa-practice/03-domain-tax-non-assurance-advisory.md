@@ -200,7 +200,7 @@ Three agentic systems are moving from prototype to production deployment.
 
 Explore the real-world platforms discussed in this lesson:
 
-- **Thomson Reuters CoCounsel:** [thomsonreuters.com/en/artificial-intelligence/cocounsel](https://www.thomsonreuters.com/en/artificial-intelligence/cocounsel.html)
+- **Thomson Reuters CoCounsel:** [https://www.thomsonreuters.com/en/cocounsel](https://www.https://www.thomsonreuters.com/en/cocounsel)
 - **PwC Agent OS:** [pwc.com/us/en/services/ai/agent-os](https://www.pwc.com/us/en/services/ai/agent-os.html)
 - **Intuit Assist:** [intuit.com/intuitassist](https://www.intuit.com/intuitassist/)
 
