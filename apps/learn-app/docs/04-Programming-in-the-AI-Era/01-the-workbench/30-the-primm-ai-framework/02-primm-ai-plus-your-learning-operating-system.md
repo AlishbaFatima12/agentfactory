@@ -394,15 +394,20 @@ Each dimension has three levels: **Developing** (need more practice), **Competen
 
 ## PRIMM-AI+ at a Glance
 
-This table consolidates everything. Use it as a reference card whenever you start a PRIMM-AI+ lesson.
+This table consolidates everything. Use it as a reference card whenever you start a PRIMM-AI+ lesson. Here is what each column means:
 
-| Stage | AI Permission | Checkpoint | Mastery Gate | Artifact |
-|-------|--------------|------------|-------------|----------|
+- **AI Permission** — What your AI assistant is allowed to do at this stage
+- **What You Do First** — The action you must take before moving on
+- **Mastery Gate** — The requirement you must meet before proceeding to the next stage
+- **What You Produce** — The visible artifact you create as evidence of learning
+
+| Stage | AI Permission | What You Do First | Mastery Gate | What You Produce |
+|-------|--------------|-------------------|-------------|-----------------|
 | **Predict** | AI-free | Write prediction + confidence score | Written prediction exists | Prediction with confidence score |
 | **Run** | AI allowed | Compare prediction to output | Comparison recorded | Prediction vs. actual record |
-| **Investigate** | AI after learner explanation | Learner explains first | Learner can explain how, not just what | Trace table, explanation, or failure note |
-| **Modify** | AI for hints/diffs only | Learner attempts first | Learner explains the target behavior | Modified code with prediction |
-| **Make** | AI for review only | Spec and first attempt AI-free | Written spec or test exists | Specification + solution + rubric |
+| **Investigate** | AI after your explanation | Write your own explanation first | Can explain how, not just what | Trace table, explanation, or failure note |
+| **Modify** | AI for hints only | Attempt the change yourself first | Can explain the target behavior | Modified code with prediction |
+| **Make** | AI for review only | Write spec and first attempt AI-free | Written spec exists | Specification + solution + rubric |
 
 ---
 
