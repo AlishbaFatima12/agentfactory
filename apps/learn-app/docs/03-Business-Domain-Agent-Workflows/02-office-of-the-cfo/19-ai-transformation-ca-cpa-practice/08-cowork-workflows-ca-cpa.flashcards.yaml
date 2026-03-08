@@ -1,0 +1,84 @@
+deck:
+  id: "ch19-08-cowork-workflows-ca-cpa"
+  title: "Cowork Workflows for CA/CPA Practice"
+  description: "Month-end close walkthrough, cross-app orchestration, global instructions, and the professional judgment boundary in automated workflows"
+  tags: ["ca-cpa", "cowork", "workflows", "scheduled-tasks", "month-end-close"]
+  version: 1
+  lesson: 8
+  chapter: 19
+
+cards:
+  - id: "ch19-08-cowork-workflows-ca-cpa-001"
+    front: "At 7:00 AM on Day 1 of the month-end close workflow, what four reconciliation commands run automatically?"
+    back: "/reconciliation bank, /reconciliation debtors, /reconciliation creditors, /reconciliation intercompany"
+    tags: ["month-end-close", "scheduled-tasks"]
+    difficulty: "basic"
+
+  - id: "ch19-08-cowork-workflows-ca-cpa-002"
+    front: "How much time does reviewing the flagged reconciliation exceptions take compared to running the reconciliations manually?"
+    back: "30 minutes for exception review vs three hours for full manual reconciliations."
+    tags: ["time-compression", "month-end-close"]
+    difficulty: "basic"
+
+  - id: "ch19-08-cowork-workflows-ca-cpa-003"
+    front: "What platform requirements are needed for cross-app Excel to PowerPoint orchestration in Cowork?"
+    back: "Mac users on Max, Team, or Enterprise plans with both Claude in Excel and Claude in PowerPoint installed."
+    tags: ["cross-app-orchestration", "platform-requirements"]
+    difficulty: "basic"
+
+  - id: "ch19-08-cowork-workflows-ca-cpa-004"
+    front: "What six elements should a Cowork global instruction for a Pakistani CA include?"
+    back: "Jurisdiction and regulatory bodies, reporting standards, reporting currency (PKR), financial year, materiality threshold, variance analysis comparisons (actual vs budget and actual vs prior month)."
+    tags: ["global-instructions", "practice-context"]
+    difficulty: "intermediate"
+
+  - id: "ch19-08-cowork-workflows-ca-cpa-005"
+    front: "The month-end close workflow compresses four staff days to what?"
+    back: "One CA/CPA plus agent — with Day 2 morning distribution of completed management accounts."
+    tags: ["time-compression", "month-end-close"]
+    difficulty: "basic"
+
+  - id: "ch19-08-cowork-workflows-ca-cpa-006"
+    front: "What four types of work does the agent handle in a month-end close, and what four types remain with the CA/CPA?"
+    back: "Agent: data assembly, mechanical computation, format and presentation, schedule and coordination. CA/CPA: exception assessment, classification judgment, business context, sign-off authority."
+    tags: ["professional-judgment-boundary", "agent-vs-practitioner"]
+    difficulty: "intermediate"
+
+  - id: "ch19-08-cowork-workflows-ca-cpa-007"
+    front: "Why are global Cowork instructions more effective than specifying practice context in each session?"
+    back: "Global instructions persist across all sessions — ensuring jurisdiction, currency, reporting standards, and practice conventions apply to every workflow consistently without repeating them each time."
+    tags: ["global-instructions", "practice-context"]
+    difficulty: "basic"
+
+  - id: "ch19-08-cowork-workflows-ca-cpa-008"
+    front: "Why is writing management commentary the only step in the month-end close where the CA/CPA's specific business knowledge is irreplaceable?"
+    back: "The agent produced the numbers and bridge decomposition. BECAUSE explaining what variance drivers mean for this particular business — the raw material price increase, the delayed project — requires context only a human with client knowledge can supply."
+    tags: ["professional-judgment-boundary", "variance-commentary"]
+    difficulty: "intermediate"
+    why: "Could a CA/CPA encode their business commentary style as a global instruction to reduce the judgment time on management commentary?"
+
+  - id: "ch19-08-cowork-workflows-ca-cpa-009"
+    front: "A cross-app workflow converts Excel P&L to a four-slide PowerPoint board update. What did this previously require vs what does it require now?"
+    back: "Previously: build Excel, export charts, manually format PowerPoint — an hour of skilled work. Now: a five-minute Cowork orchestration in natural language."
+    tags: ["cross-app-orchestration", "time-compression"]
+    difficulty: "intermediate"
+    why: "What quality control check should the CA/CPA perform on the AI-generated board slides before presenting to the board?"
+
+  - id: "ch19-08-cowork-workflows-ca-cpa-010"
+    front: "Which step in the CA/CPA's manual month-end close takes the most time, and how does Cowork change it?"
+    back: "Running reconciliations: 3 hours manually → 30 minutes reviewing flagged exceptions. The agent handles the matching; the CA/CPA handles the judgment on genuine exceptions."
+    tags: ["time-compression", "reconciliation"]
+    difficulty: "intermediate"
+
+  - id: "ch19-08-cowork-workflows-ca-cpa-011"
+    front: "How does the Cowork month-end close workflow change the CA/CPA's total execution time?"
+    back: "From 7.5 hours of execution (reconciliations, journals, formatting, bridge) to 1 hour 45 minutes — mostly judgment and commentary."
+    tags: ["time-compression", "month-end-close"]
+    difficulty: "basic"
+
+  - id: "ch19-08-cowork-workflows-ca-cpa-012"
+    front: "Why does Cowork's professional value lie in the quality of judgment applied rather than hours saved?"
+    back: "As execution compresses, professionals are left with fewer, higher-stakes decisions. THEREFORE the measure of value shifts from throughput to the quality of exception assessment, classification calls, and business context — the irreplaceable professional layer."
+    tags: ["professional-value", "judgment"]
+    difficulty: "advanced"
+    why: "How does this shift change what CA/CPA training programmes should emphasise for new entrants?"

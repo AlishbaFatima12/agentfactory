@@ -274,12 +274,12 @@ export default function Flashcards({ cards: deck }: FlashcardsProps) {
     hasSubmittedRef.current = true;
     setIsSubmitting(true);
 
-    // Derive chapter_slug from current URL path
+    // Derive chapter_slug from current URL path (works for any nesting depth)
     const pathSegments = window.location.pathname.split("/");
     const docsIndex = pathSegments.indexOf("docs");
     const chapterSlug =
       docsIndex >= 0
-        ? pathSegments.slice(docsIndex + 1, docsIndex + 3).join("/")
+        ? pathSegments.slice(docsIndex + 1, -1).join("/")
         : "unknown";
 
     completeFlashcardSession(progressApiUrl, {

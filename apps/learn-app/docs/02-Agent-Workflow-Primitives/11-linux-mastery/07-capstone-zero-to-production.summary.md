@@ -20,4 +20,4 @@ A deployment spec turns three days of discovery into fifteen minutes of executio
 
 ### Connections
 - **Builds on**: All six previous lessons — each spec section directly maps to a lesson's core skill
-- **Leads to**: Chapter 13 — turning Linux deployment into a repeatable business process for selling agent services
+- **Leads to**: Project — turning Linux deployment into a repeatable business process for selling agent services

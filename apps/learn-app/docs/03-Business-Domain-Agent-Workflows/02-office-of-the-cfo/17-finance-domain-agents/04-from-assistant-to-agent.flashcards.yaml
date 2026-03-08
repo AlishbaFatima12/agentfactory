@@ -1,0 +1,67 @@
+deck:
+  id: "ch17-04-from-assistant-to-agent"
+  title: "From Assistant to Agent: Cowork Finance Plugins"
+  description: "The architecture shift from embedded assistant to orchestrating agent, the knowledge-work-plugins/finance plugin commands, skills vs commands, category placeholders, and hands-on reconciliation and variance analysis workflows."
+  tags: ["cowork", "finance-plugin", "skills-vs-commands", "category-placeholders", "reconciliation", "variance-analysis"]
+  version: 2
+
+cards:
+  - id: "ch17-04-architecture-shift-001"
+    front: "What is the key difference between Claude in Excel and Claude through Cowork?"
+    back: "Scope, not technology. Claude in Excel works within one workbook -- analysis, formulas, Agent Skills all bounded by the spreadsheet. Cowork enables Claude to orchestrate across multiple applications, carrying context from Excel to PowerPoint to email."
+    tags: ["architecture-shift", "scope"]
+    difficulty: "basic"
+
+  - id: "ch17-04-skills-vs-commands-003"
+    front: "What is the difference between a skill and a command in a Cowork plugin?"
+    back: "Commands are active -- explicitly invoked by typing /command-name, triggering a specific workflow. Skills are passive -- they fire automatically in the background whenever Claude judges them contextually relevant. Commands give you control over specific tasks; skills ensure consistent domain standards across all interactions."
+    tags: ["skills", "commands", "plugin-architecture"]
+    difficulty: "basic"
+
+  - id: "ch17-04-five-commands-006"
+    front: "What are the five commands in the knowledge-work-plugins/finance plugin?"
+    back: "1. /reconciliation [account] [period] -- compare GL to source of truth, categorise differences\n2. /journal-entry [type] [period] -- generate journal entries with debits, credits, and rationale\n3. /variance-analysis [area] [period-vs-period] -- decompose variances into volume, price, mix\n4. /income-statement [period-type] [period] -- management P&L with variance flagging\n5. /sox-testing [process] [period] -- SOX 404 control testing workpapers"
+    tags: ["five-commands", "finance-plugin"]
+    difficulty: "intermediate"
+
+  - id: "ch17-04-recon-je-pair-011"
+    front: "How do /reconciliation and /journal-entry work as a pair in the close workflow?"
+    back: "/reconciliation identifies discrepancies between the GL and source of truth, categorising each as timing difference, in-transit, error, or requiring investigation. /journal-entry then creates correcting entries for items categorised as errors. Reconciliation finds problems; journal entries fix them."
+    tags: ["reconciliation", "journal-entry", "close-workflow"]
+    difficulty: "intermediate"
+
+  - id: "ch17-04-category-placeholders-007"
+    front: "What is the category placeholder system (~~erp, ~~data warehouse) and why does the plugin use it?"
+    back: "Category placeholders are tool-agnostic references in workflow definitions. The plugin says 'pull data from ~~erp' instead of 'pull data from NetSuite.' This separates workflow knowledge (owned by the knowledge worker) from connector configuration (owned by IT). The same plugin works with NetSuite or SAP without modifying any SKILL.md or command file."
+    tags: ["category-placeholders", "tool-agnostic", "separation-of-concerns"]
+    difficulty: "intermediate"
+
+  - id: "ch17-04-gl-reconciliation-009"
+    front: "What are the four categories of reconciling items in a GL reconciliation?"
+    back: "1. Timing difference -- transaction in GL but not yet at the bank (resolves next period)\n2. In-transit item -- deposit recorded but not yet credited (also resolves automatically)\n3. Error -- wrong amount, account, or period (requires correcting entry)\n4. Item requiring investigation -- no obvious explanation (most important to resolve before closing)"
+    tags: ["gl-reconciliation", "reconciling-items"]
+    difficulty: "intermediate"
+
+  - id: "ch17-04-variance-decomp-012"
+    front: "What three drivers does /variance-analysis decompose revenue variances into?"
+    back: "Volume (units sold vs planned), price (average selling price vs planned), and mix (product/segment distribution vs planned). Operating expense variances split differently: into volume-driven and rate-driven components."
+    tags: ["variance-analysis", "revenue-drivers"]
+    difficulty: "intermediate"
+
+  - id: "ch17-04-close-management-skill-004"
+    front: "What makes the close-management skill particularly valuable as a passive skill?"
+    back: "It activates whenever you are in a close context -- even for general questions about account balances -- and applies the close checklist lens automatically. It flags whether items are resolved, whether they need resolution before a specific close day, and who owns them. It provides continuous context rather than waiting to be invoked."
+    tags: ["close-management", "passive-skill"]
+    difficulty: "intermediate"
+
+  - id: "ch17-04-sox-testing-013"
+    front: "What does /sox-testing produce, and why is it described as a framework rather than a conclusion?"
+    back: "/sox-testing generates a SOX 404 control testing workpaper: control description, testing methodology, sample selection criteria, test steps, and spaces for test results and exceptions. It is a framework because the plugin builds the testing structure, but a qualified auditor must execute the tests, document conclusions, and sign off. The plugin cannot substitute for professional judgment on control effectiveness."
+    tags: ["sox-testing", "control-testing", "compliance"]
+    difficulty: "intermediate"
+
+  - id: "ch17-04-cross-reference-014"
+    front: "Why should you run both /variance-analysis and /income-statement and cross-reference the outputs?"
+    back: "They are complementary views of the same data. The variance analysis explains WHY numbers moved (volume, price, mix decomposition). The income statement shows WHAT moved (line-by-line P&L). Cross-referencing builds the management narrative that the CFO deck requires."
+    tags: ["variance-analysis", "income-statement", "management-narrative"]
+    difficulty: "intermediate"

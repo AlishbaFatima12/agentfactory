@@ -17,6 +17,79 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-07
+
+- Part2/minor fixes ([#833](https://github.com/panaversity/agentfactory/pull/833))
+
+### 2026-03-06
+- docs: add Ch 32 Lesson 4 — Reading a Test ([#831](https://github.com/panaversity/agentfactory/pull/831))
+
+### 2026-03-06
+- refactor: update chapter title and sidebar label for consistency in documentation ([#829](https://github.com/panaversity/agentfactory/pull/829))
+
+### 2026-03-06
+- Ch 23: Sales, RevOps & Marketing — 12 lessons + plugin ([#828](https://github.com/panaversity/agentfactory/pull/828))
+
+### 2026-03-06
+- Ch 22: Legal Operations and Compliance — 12 lessons ([#827](https://github.com/panaversity/agentfactory/pull/827))
+
+### 2026-03-06
+
+- Chapter 21: Banking-Specific AI — 15 lessons, 14 exercises ([#826](https://github.com/panaversity/agentfactory/pull/826))
+
+### 2026-03-05
+- Part2/project ([#825](https://github.com/panaversity/agentfactory/pull/825))
+
+### 2026-03-05
+- docs: Ch20 Islamic Finance plugin migration + content improvements ([#821](https://github.com/panaversity/agentfactory/pull/821))
+
+### 2026-03-05
+- docs: add Which Agents to Use in 2026 page ([#823](https://github.com/panaversity/agentfactory/pull/823))
+
+### 2026-03-05
+- docs: add About This Book page ([#822](https://github.com/panaversity/agentfactory/pull/822))
+
+### 2026-03-05
+
+- docs: improve Part 4 overview beginner-friendliness and add chapter map ([#814](https://github.com/panaversity/agentfactory/pull/814))
+
+### 2026-03-04
+- docs: improve Ch 32 beginner-friendliness and Part 4 structure ([#813](https://github.com/panaversity/agentfactory/pull/813))
+
+### 2026-03-04
+- docs: move SmartNotes before Nine Phases + replace capstone with QuizForge ([#812](https://github.com/panaversity/agentfactory/pull/812))
+
+### 2026-03-04
+- docs: renumber Part 4 chapters, emphasize SDD + Claude Code ([#811](https://github.com/panaversity/agentfactory/pull/811))
+
+### 2026-03-04
+- docs: add beginner-friendly examples to Part 4 phase descriptions ([#810](https://github.com/panaversity/agentfactory/pull/810))
+
+### 2026-03-04
+- docs: rewrite Part 4 overview with TDG workflow and review feedback ([#804](https://github.com/panaversity/agentfactory/pull/804))
+
+### 2026-03-04
+- docs: fix plugin install instructions and companion repo links in ch18-20 ([#809](https://github.com/panaversity/agentfactory/pull/809))
+
+### 2026-03-04
+
+- docs: restructure ch17 Finance Domain Agents — plugin-based architecture ([#808](https://github.com/panaversity/agentfactory/pull/808))
+
+### 2026-03-03
+
+- feat: Part 3 section folders with content-API tree support ([#806](https://github.com/panaversity/agentfactory/pull/806))
+
+### 2026-03-02
+
+- update OpenClaw chapter ([#800](https://github.com/panaversity/agentfactory/pull/800))
+
+### 2026-03-01
+
+- docs: add Chapter 17 — Finance Domain Agents ([#795](https://github.com/panaversity/agentfactory/pull/795))
+
+### 2026-02-28
+- Part2/update exercises ([#792](https://github.com/panaversity/agentfactory/pull/792))
+
 ### 2026-02-28
 - docs: restructure Part 4 plan to 26 chapters / 9 phases (v2.8) ([#785](https://github.com/panaversity/agentfactory/pull/785))
 

@@ -2,6 +2,7 @@
 name = "learner-profile-api"
 version = "0.1.0"
 description = "Learner Profile API - profile CRUD, onboarding, PHM sync, progressive profiling"
+license = "LicenseRef-Proprietary"
 readme = { text = "", content-type = "text/markdown" }
 requires-python = ">=3.12"
 dependencies = [

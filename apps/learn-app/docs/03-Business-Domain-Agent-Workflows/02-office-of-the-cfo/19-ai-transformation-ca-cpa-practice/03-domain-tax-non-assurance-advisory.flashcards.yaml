@@ -1,0 +1,85 @@
+deck:
+  id: "ch19-03-domain-tax-non-assurance-advisory"
+  title: "Domain 2 — Tax and Non-Assurance Advisory"
+  description: "Tax compliance vs advisory bifurcation, Gen-AI and agentic capabilities, and real-world platforms in tax practice"
+  tags: ["ca-cpa", "tax", "advisory", "pakistan-tax", "ito-2001"]
+  version: 1
+  lesson: 3
+  chapter: 19
+
+cards:
+  - id: "ch19-03-domain-tax-non-assurance-advisory-001"
+    front: "What is the difference between tax compliance and tax advisory in terms of AI automation potential?"
+    back: "Tax compliance: backward-looking, rule-based, highly automatable. Tax advisory: forward-looking, judgment on ambiguous law, moderate automation potential."
+    tags: ["tax-compliance", "tax-advisory", "bifurcation"]
+    difficulty: "basic"
+
+  - id: "ch19-03-domain-tax-non-assurance-advisory-002"
+    front: "What are the three Gen-AI capabilities already transforming tax practice workflows?"
+    back: "1. Tax research (synthesising law into memos)\n2. Tax computation (applying rates and rules)\n3. Due diligence analysis (reviewing financial documents)"
+    tags: ["gen-ai-capabilities", "tax"]
+    difficulty: "basic"
+
+  - id: "ch19-03-domain-tax-non-assurance-advisory-003"
+    front: "What are the three agentic AI capabilities approaching production in tax practice?"
+    back: "1. Autonomous tax compliance agent\n2. Due diligence agent\n3. Restructuring simulation agent"
+    tags: ["agentic-ai", "tax"]
+    difficulty: "basic"
+
+  - id: "ch19-03-domain-tax-non-assurance-advisory-004"
+    front: "How many professionals use Thomson Reuters CoCounsel across how many countries?"
+    back: "Over 1 million professionals across 107 countries."
+    tags: ["cocounsel", "real-world-platforms"]
+    difficulty: "basic"
+
+  - id: "ch19-03-domain-tax-non-assurance-advisory-005"
+    front: "What efficiency gains did PwC Agent OS's portfolio of 120+ AI agents produce for clients?"
+    back: "Up to 8x faster cycle times."
+    tags: ["pwc-agent-os", "real-world-platforms"]
+    difficulty: "basic"
+
+  - id: "ch19-03-domain-tax-non-assurance-advisory-006"
+    front: "What did Intuit Assist automate and what efficiencies did it generate in H1 2025?"
+    back: "Automates data entry for 90% of common tax forms; generated USD 90 million in efficiencies in H1 2025."
+    tags: ["intuit-assist", "real-world-platforms"]
+    difficulty: "intermediate"
+
+  - id: "ch19-03-domain-tax-non-assurance-advisory-007"
+    front: "What governs corporate and individual taxation in Pakistan, and which body administers it?"
+    back: "Income Tax Ordinance 2001 (ITO 2001) governs taxation. Federal Board of Revenue (FBR) administers collection and filing."
+    tags: ["pakistan-regulatory", "fbr", "ito-2001"]
+    difficulty: "basic"
+
+  - id: "ch19-03-domain-tax-non-assurance-advisory-008"
+    front: "Why do practitioners who focus only on tax compliance face a shrinking market as AI advances?"
+    back: "Compliance costs approach zero as AI automates rule-based preparation. BECAUSE the value proposition shifts to advisory — practitioners without advisory capability are competing on a service where they cannot win on price."
+    tags: ["bifurcation", "advisory-value"]
+    difficulty: "intermediate"
+    why: "What specific advisory skill set should a compliance-focused tax professional develop first?"
+
+  - id: "ch19-03-domain-tax-non-assurance-advisory-009"
+    front: "What does a restructuring simulation agent do in corporate finance advisory?"
+    back: "Models different restructuring scenarios (voluntary arrangement, scheme of arrangement, pre-pack administration) and projects financial outcomes for different stakeholder groups under each."
+    tags: ["agentic-ai", "restructuring"]
+    difficulty: "intermediate"
+
+  - id: "ch19-03-domain-tax-non-assurance-advisory-010"
+    front: "How does a due diligence agent differ from a Gen-AI tool doing due diligence analysis?"
+    back: "Gen-AI tool assists a specific step in human workflow. The due diligence agent autonomously reviews the target's financial records, identifies risks and adjustments, and produces a structured report without human prompting at each step."
+    tags: ["agentic-ai", "due-diligence", "gen-ai-distinction"]
+    difficulty: "intermediate"
+    why: "What human review step remains essential even when a due diligence agent produces the full report?"
+
+  - id: "ch19-03-domain-tax-non-assurance-advisory-011"
+    front: "Which sub-category of Domain 2 has the lowest AI automation potential and why?"
+    back: "Restructuring — lower automation potential because it involves complex multi-stakeholder judgment about rescue or wind-down options where commercial circumstances and negotiation context are essential."
+    tags: ["restructuring", "ai-automation-potential"]
+    difficulty: "intermediate"
+    why: "Could an AI agent ever advise creditors in a restructuring negotiation without human professional involvement?"
+
+  - id: "ch19-03-domain-tax-non-assurance-advisory-012"
+    front: "A mid-market tax firm earns 60% compliance / 40% advisory revenue. AI cuts compliance delivery costs by 80%. Which of three strategies is most defensible long-term?"
+    back: "Advisory pivot — reinvesting freed capacity into advisory to shift toward 30/70 compliance/advisory mix. Status quo loses margin; volume play competes on price where AI incumbents eventually win."
+    tags: ["business-model", "advisory-pivot"]
+    difficulty: "advanced"
+    why: "What capabilities does a compliance-focused team need to develop to successfully execute the advisory pivot?"

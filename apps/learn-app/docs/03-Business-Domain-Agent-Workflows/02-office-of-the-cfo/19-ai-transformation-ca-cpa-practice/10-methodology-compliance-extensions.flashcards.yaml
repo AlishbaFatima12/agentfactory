@@ -1,0 +1,89 @@
+deck:
+  id: "ch19-10-methodology-compliance-extensions"
+  title: "Building Methodology and Compliance Extensions"
+  description: "Audit methodology encoding, client entity extensions, compliance calendar automation, and the Method A interview framework for the five-extension architecture"
+  tags: ["ca-cpa", "extensions", "audit-methodology", "compliance-calendar", "method-a"]
+  version: 1
+  lesson: 10
+  chapter: 19
+
+cards:
+  - id: "ch19-10-methodology-compliance-extensions-001"
+    front: "What are the five extension types that complete the full CA/CPA agent extension architecture?"
+    back: "1. Jurisdiction Tax\n2. Chart of Accounts\n3. Audit Methodology\n4. Client Entity\n5. Compliance Calendar"
+    tags: ["five-extensions", "extension-architecture"]
+    difficulty: "basic"
+
+  - id: "ch19-10-methodology-compliance-extensions-002"
+    front: "What are the four components of an audit methodology extension?"
+    back: "1. Materiality calculation methodology\n2. Minimum sample sizes by population and risk\n3. Working paper structure and sign-off requirements\n4. Escalation conditions"
+    tags: ["audit-methodology-extension", "extension-components"]
+    difficulty: "basic"
+
+  - id: "ch19-10-methodology-compliance-extensions-003"
+    front: "What materiality benchmark does the firm methodology extension use for for-profit entities?"
+    back: "1% of total revenue as planning materiality benchmark."
+    tags: ["materiality", "audit-methodology"]
+    difficulty: "basic"
+
+  - id: "ch19-10-methodology-compliance-extensions-004"
+    front: "At what percentage of planning materiality is performance materiality set, and how does fraud risk change it?"
+    back: "75% of planning materiality normally. Reduced to 50% if fraud risk indicators are present."
+    tags: ["materiality", "performance-materiality", "fraud-risk"]
+    difficulty: "intermediate"
+
+  - id: "ch19-10-methodology-compliance-extensions-005"
+    front: "What are the three Method A interview questions for building SKILL.md extensions?"
+    back: "1. What are the three most common errors junior staff make in this area?\n2. What questions do you always ask when reviewing this work?\n3. What conditions would always cause you to escalate or reject the work?"
+    tags: ["method-a", "knowledge-extraction"]
+    difficulty: "basic"
+
+  - id: "ch19-10-methodology-compliance-extensions-006"
+    front: "Why should each significant client have its own entity extension rather than sharing one?"
+    back: "Entity-specific knowledge varies between clients — seasonal patterns, related party relationships, and risk areas are unique. A shared extension risks applying one client's seasonal pattern to another client's analysis."
+    tags: ["client-entity-extension", "one-per-client"]
+    difficulty: "basic"
+
+  - id: "ch19-10-methodology-compliance-extensions-007"
+    front: "What must an audit working paper contain under the firm's methodology extension (seven elements)?"
+    back: "1. Objective\n2. Source\n3. Procedure\n4. Results\n5. Conclusion\n6. Preparer sign-off\n7. Reviewer sign-off"
+    tags: ["working-paper", "documentation-standards"]
+    difficulty: "intermediate"
+
+  - id: "ch19-10-methodology-compliance-extensions-008"
+    front: "How does the compliance calendar extension combine with Cowork scheduled tasks to become automated monitoring?"
+    back: "The calendar encodes every regulatory obligation with deadlines, lead times, and information checklists. Combined with a weekly scheduled task, the agent runs automatically, checks upcoming deadlines, and alerts when preparation needs to begin."
+    tags: ["compliance-calendar", "scheduled-tasks", "automation"]
+    difficulty: "intermediate"
+
+  - id: "ch19-10-methodology-compliance-extensions-009"
+    front: "What three extensions apply broadly (jurisdiction-wide or firm-wide) vs which two are entity-specific?"
+    back: "Broad: Jurisdiction Tax (all clients), Audit Methodology (all engagements), Compliance Calendar (all clients by type). Entity-specific: Chart of Accounts (one organisation), Client Entity (one client)."
+    tags: ["extension-scope", "five-extensions"]
+    difficulty: "intermediate"
+
+  - id: "ch19-10-methodology-compliance-extensions-010"
+    front: "What sampling approach applies when an audit population has fewer than 50 items?"
+    back: "Test 100% of the population — do not apply sampling."
+    tags: ["sampling-methodology", "audit-methodology"]
+    difficulty: "basic"
+
+  - id: "ch19-10-methodology-compliance-extensions-011"
+    front: "Why does the compliance calendar extension have immediate practical value for CA/CPA practices?"
+    back: "Missed deadlines are among the highest-risk events in CA/CPA practice — they trigger penalties, damage client relationships, and create professional liability. Encoding obligations with lead times transforms calendar-checking from manual to automated."
+    tags: ["compliance-calendar", "missed-deadlines", "risk"]
+    difficulty: "intermediate"
+    why: "How does the automated compliance alert change the CA/CPA's responsibility when a deadline is missed despite the alert?"
+
+  - id: "ch19-10-methodology-compliance-extensions-012"
+    front: "What does the Karachi Textile Exports client entity extension encode for Q2 seasonal variance analysis?"
+    back: "Q2 (Oct-Dec) represents 35% of annual revenue due to pre-Christmas EU/US export orders. Compare current period to same period last year — not quarterly average — because a high Q2 is NOT an anomaly."
+    tags: ["client-entity-extension", "seasonal-patterns"]
+    difficulty: "intermediate"
+
+  - id: "ch19-10-methodology-compliance-extensions-013"
+    front: "How does Method A transform a CA/CPA's tacit knowledge into SKILL.md instructions?"
+    back: "Each common error surfaces an encoding need; each review question reveals a quality check; each escalation condition becomes a 'When [condition], STOP and escalate' instruction — converting automatic professional judgment into explicit agent rules."
+    tags: ["method-a", "knowledge-extraction", "skill-md"]
+    difficulty: "advanced"
+    why: "What tacit knowledge is most likely to be missed when using Method A with a very experienced partner versus a mid-level manager?"
