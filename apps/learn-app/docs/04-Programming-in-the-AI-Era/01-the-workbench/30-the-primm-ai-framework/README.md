@@ -1,9 +1,9 @@
 ---
-title: "The PRIMM-AI Framework"
+title: "The PRIMM-AI+ Framework"
 sidebar_position: 0
 ---
 
-# Chapter 30: The PRIMM-AI Framework
+# Chapter 30: The PRIMM-AI+ Framework
 
 > *"The PRIMM approach recognises that starting with existing code and being able to explain what it does gives novice programmers the confidence to write their own programs."*
 > — Sentance, Waite, and Kallia (2019)
@@ -12,26 +12,28 @@ sidebar_position: 0
 
 You are about to learn Python programming. But you are learning it in 2026, not 2016. That distinction matters more than any syntax rule this book will ever teach you. An AI coding assistant can write a working Python function in seconds. If the goal were simply to *produce code*, you could skip this Part entirely. But producing code was never the real goal. The real goal is **understanding** — the ability to read a program and know what it will do, to look at AI-generated code and judge whether it is correct, to take a working function and adapt it for a new purpose.
 
-This chapter introduces the pedagogical framework that governs all programming instruction in this book: **PRIMM-AI** — Predict, Run, Investigate, Modify, Make *with AI*. Built on research-validated principles from computing education, PRIMM-AI teaches you to read and understand code before you ever try to write it — and integrates AI coding assistants as learning partners at every stage.
+This chapter introduces the pedagogical framework that governs all programming instruction in this book: **PRIMM-AI+** — Predict, Run, Investigate, Modify, Make *with AI*, enhanced with AI-free checkpoints, mastery gates, confidence scoring, and a verification ladder. Built on research-validated principles from computing education, PRIMM-AI+ teaches you to read and understand code before you ever try to write it — and integrates AI coding assistants as learning partners at every stage with clear structural safeguards.
 
 ## Learning Outcomes
 
 By the end of this chapter, you will be able to:
 
 - Explain the five stages of PRIMM and why they are sequenced in that order
-- Describe the research basis for PRIMM and its grounding in Vygotsky's sociocultural learning theory
-- Walk through a complete PRIMM-AI lesson cycle with a real Python program
-- Describe how AI coding assistants integrate into each PRIMM stage with clear boundaries
-- State the five PRIMM-AI rules and explain why each matters in the AI era
-- Map each PRIMM-AI stage to both a professional workflow step and a specific Ten Axiom
-- Articulate the verification chain from learning to production
+- Describe the research basis for PRIMM and its grounding in sociocultural learning theory
+- Walk through a complete PRIMM-AI+ lesson cycle with a real Python program
+- Describe how AI coding assistants integrate into each PRIMM stage with clear boundaries and AI-free checkpoints
+- State the five PRIMM-AI+ rules and explain why each matters in the AI era
+- Map each PRIMM-AI+ stage to both a professional workflow step and a specific Ten Axiom
+- Articulate the verification ladder from learning predictions to production observability
+- Identify the four teaching methods embedded within PRIMM-AI+ and where each fits in the learning sequence
 
 ## Lessons
 
 | # | Lesson | Key Focus |
 |---|--------|-----------|
 | 1 | [The PRIMM Framework](the-primm-framework) | The research-validated method: five stages demonstrated with real Python code, and why comprehension is the bottleneck skill of 2026 |
-| 2 | [PRIMM-AI: Your Learning Operating System](primm-ai-your-learning-operating-system) | AI roles at each stage, a complete lesson walkthrough, the five rules, and how PRIMM-AI connects to the Ten Axioms and professional practice |
+| 2 | [PRIMM-AI+: Your Learning Operating System](primm-ai-plus-your-learning-operating-system) | AI roles at each stage, AI permissions, AI-free checkpoints, mastery gates, the verification ladder, confidence scoring, and the connection to the Ten Axioms and professional practice |
+| 3 | [The Complete Teaching and Learning System](the-complete-teaching-and-learning-system) | The four embedded teaching methods, classroom vs. solo mode, practical lesson architecture, and how every chapter follows PRIMM-AI+ |
 
 ## Prerequisites
 
@@ -44,4 +46,4 @@ This chapter contains Python code examples. **You are not expected to understand
 
 ## What This Chapter Is Not
 
-This chapter teaches you *how you will learn*. The next chapter (Chapter 31: Ten Axioms) teaches *what professional practice looks like*. Together they form the complete system — the developer's comprehension and the software's correctness. PRIMM-AI is the operating system. The Ten Axioms are the first application that runs on it.
+This chapter teaches you *how you will learn*. The next chapter (Chapter 31: Ten Axioms) teaches *what professional practice looks like*. Together they form the complete system — the developer's comprehension and the software's correctness. PRIMM-AI+ is the learning operating system. The Ten Axioms are the first application that runs on it.

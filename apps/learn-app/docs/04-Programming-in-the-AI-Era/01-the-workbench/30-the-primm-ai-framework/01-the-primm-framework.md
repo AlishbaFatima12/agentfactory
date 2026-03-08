@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "The PRIMM Framework"
-description: "Discover PRIMM -- the research-validated method that teaches you to read and understand code before you write it -- and why comprehension is the bottleneck skill of the AI era."
+description: "Discover PRIMM -- the research-validated method that teaches you to read and understand code before you write it, with AI-free prediction and confidence scoring -- and why comprehension is the bottleneck skill of the AI era."
 keywords: ["PRIMM", "Predict Run Investigate Modify Make", "Sue Sentance", "Jane Waite", "code comprehension", "Vygotsky", "sociocultural learning", "reading code", "AI era programming", "code literacy"]
 chapter: 30
 lesson: 1
@@ -99,9 +99,9 @@ To see how PRIMM works in practice, we will walk through all five stages using a
 
 > **About the code below:** You have not learned Python yet. That is the point. You are seeing what the PRIMM process looks like with real code. Focus on the *process*, not the syntax. When you encounter Python in Chapter 33, you will already know how to approach it.
 
-### Stage 1: Predict
+### Stage 1: Predict [AI-FREE]
 
-Read the following program. Do not run it. Do not scroll past it. Stop and predict what it will print.
+Read the following program. Do not run it. Do not scroll past it. Do not ask your AI assistant. Stop and predict what it will print.
 
 ```python
 name: str = "Amara"
@@ -109,6 +109,18 @@ greeting: str = "Welcome to the Agent Factory"
 message: str = greeting + ", " + name + "!"
 print(message)
 ```
+
+**Before you read further, rate your confidence:** How sure are you of your prediction? Score yourself from 1 to 5:
+
+| Score | Meaning |
+|-------|---------|
+| 1 | No idea -- complete guess |
+| 2 | Vague guess -- something about a greeting? |
+| 3 | Think I know but could be wrong |
+| 4 | Fairly confident -- I see how the pieces fit |
+| 5 | Certain -- I can describe the exact output |
+
+Write down both your prediction and your confidence score. You will compare them to the actual output in the next stage.
 
 This program has four lines. Even if you have never seen Python before, you can probably guess what each line does -- and that is the point.
 
@@ -227,7 +239,8 @@ You already do this informally when reviewing pull requests or debugging a colle
 
 - **PRIMM stands for Predict, Run, Investigate, Modify, Make** -- a five-stage method that starts with reading code and ends with writing it.
 - **The research is robust**: 493 students, 13 schools, quasi-experimental design. Learners using PRIMM outperformed control groups, especially in mixed-ability classes.
-- **The theory is Vygotsky's sociocultural learning**: knowledge moves from social interaction (discussing code) to individual understanding (writing code). Language mediates the transfer.
+- **The Predict stage is AI-free**: you make your prediction without any AI assistance. This is diagnostic -- it reveals whether you actually understand the code or are relying on external help.
+- **Confidence scoring sharpens your judgment**: rating your certainty from 1 to 5 before seeing results builds calibration -- the ability to know when you know and when you do not.
 - **The prediction-reality gap is the learning engine**: committing to a prediction before running code turns passive observation into active hypothesis testing.
 - **PRIMM's 4:1 comprehension-to-production ratio matches the AI era**, where generating code is cheap but verifying code is the bottleneck skill.
 
@@ -281,4 +294,4 @@ For each one, explain WHY the output is what it is.
 
 ## Looking Ahead
 
-You now know the method. In the next lesson, you will see how AI coding assistants integrate into each PRIMM stage -- transforming PRIMM into **PRIMM-AI**, the learning operating system you will use throughout every programming chapter in this book.
+You now know the method. In the next lesson, you will see how AI coding assistants integrate into each PRIMM stage -- transforming PRIMM into **PRIMM-AI+**, the learning operating system you will use throughout every programming chapter in this book. You will learn the AI permissions at each stage, the mastery gates that earn you the right to proceed, and the verification ladder that connects your learning predictions to production observability.
