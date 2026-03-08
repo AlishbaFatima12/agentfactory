@@ -233,12 +233,6 @@ You already do this informally when reviewing pull requests or debugging a colle
 
 ---
 
-## Looking Ahead
-
-You now know the method. In the next lesson, you will see how AI coding assistants integrate into each PRIMM stage -- transforming PRIMM into **PRIMM-AI**, the learning operating system you will use throughout every programming chapter in this book.
-
----
-
 ## Try With AI
 
 ### Prompt 1: Explore the Prediction Process
@@ -282,3 +276,9 @@ For each one, explain WHY the output is what it is.
 ```
 
 **What you are learning:** Systematic investigation through edge-case exploration. Each scenario tests a different assumption about how the code works -- empty inputs, string order, variable naming -- and builds your mental model of Python's behavior through concrete experiments rather than abstract rules.
+
+---
+
+## Looking Ahead
+
+You now know the method. In the next lesson, you will see how AI coding assistants integrate into each PRIMM stage -- transforming PRIMM into **PRIMM-AI**, the learning operating system you will use throughout every programming chapter in this book.
