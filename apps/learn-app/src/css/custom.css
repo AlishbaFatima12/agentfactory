@@ -340,3 +340,43 @@ ul.tabs[role="tablist"] {
 .delay-400 { animation-delay: 400ms; }
 .delay-500 { animation-delay: 500ms; }
 
+/* ============================================
+   URDU LOCALE: RTL content only, LTR layout
+   ============================================ */
+html[lang="ur"] .markdown,
+html[lang="ur"] .theme-doc-markdown {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Floating action bar — keep at physical bottom-right regardless of document direction */
+html[dir="rtl"] .floating-actions,
+html[lang="ur"] .floating-actions {
+  right: 2rem !important;
+  left: auto !important;
+  direction: ltr !important;
+}
+
+html[lang="ur"] .markdown h1,
+html[lang="ur"] .markdown h2,
+html[lang="ur"] .markdown h3,
+html[lang="ur"] .markdown h4,
+html[lang="ur"] .markdown h5,
+html[lang="ur"] .markdown h6 {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="ur"] .markdown ul,
+html[lang="ur"] .markdown ol {
+  padding-inline-start: 0;
+  padding-inline-end: 2rem;
+}
+
+html[lang="ur"] .markdown blockquote {
+  border-left: none;
+  border-right: 4px solid var(--ifm-color-emphasis-300);
+  padding-left: 0;
+  padding-right: var(--ifm-blockquote-padding-horizontal);
+}
+

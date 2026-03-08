@@ -1,110 +1,83 @@
-# Glossary: English to Urdu (ur)
+# Glossary: Urdu (ur)
 
-Standard developer terminology for Urdu translations.
+## Convention
 
-```
-API | API
-Application | ایپلیکیشن
-Authentication | تصدیق
-Authorization | اجازت
-Backend | بیک اینڈ
-Bug | بگ
-Build | بلڈ
-Cache | کیش
-CLI | CLI
-Client | کلائنٹ
-Cloud | کلاؤڈ
-Command | کمانڈ
-Component | کمپوننٹ
-Configuration | کنفیگریشن
-Configure | کنفیگر کریں
-Connection | کنکشن
-Container | کنٹینر
-Controller | کنٹرولر
-Dashboard | ڈیش بورڈ
-Data | ڈیٹا
-Database | ڈیٹابیس
-Debug | ڈیبگ
-Default | ڈیفالٹ
-Dependency | ڈیپنڈنسی
-Deploy | ڈیپلوئے کریں
-Deployment | ڈیپلوئمنٹ
-Description | تفصیل
-Directory | ڈائریکٹری
-Download | ڈاؤن لوڈ
-Driver | ڈرائیور
-Endpoint | اینڈ پوائنٹ
-Environment | ماحول
-Error | ایرر
-Example | مثال
-Execute | عمل کریں
-Feature | فیچر
-File | فائل
-Folder | فولڈر
-Framework | فریم ورک
-Frontend | فرنٹ اینڈ
-Function | فنکشن
-Guide | گائیڈ
-HTTP | HTTP
-Image | تصویر
-Import | امپورٹ
-Install | انسٹال کریں
-Installation | انسٹالیشن
-Interface | انٹرفیس
-JSON | JSON
-Key | کلید
-Library | لائبریری
-License | لائسنس
-Link | لنک
-Log | لاگ
-Method | میتھڈ
-Middleware | مڈل ویئر
-Migration | مائگریشن
-Module | ماڈیول
-Network | نیٹ ورک
-Note | نوٹ
-Package | پیکج
-Parameter | پیرامیٹر
-Password | پاس ورڈ
-Path | پاتھ
-Permission | اجازت
-Plugin | پلگ ان
-Port | پورٹ
-Prerequisites | لوازمات
-Process | پروسیس
-Production | پروڈکشن
-Project | پروجیکٹ
-Protocol | پروٹوکول
-Query | کیوری
-Reference | حوالہ
-Repository | ریپوزٹری
-Request | ریکویسٹ
-Response | ریسپانس
-Route | روٹ
-Run | چلائیں
-SDK | SDK
-Security | سیکیورٹی
-Server | سرور
-Service | سروس
-Session | سیشن
-Setting | سیٹنگ
-Setup | سیٹ اپ
-SSL | SSL
-Status | اسٹیٹس
-Storage | اسٹوریج
-String | سٹرنگ
-Template | ٹیمپلیٹ
-Terminal | ٹرمینل
-Test | ٹیسٹ
-Token | ٹوکن
-Tool | ٹول
-URL | URL
-User | صارف
-Username | صارف نام
-Validate | توثیق کریں
-Variable | متغیر
-Version | ورژن
-Warning | انتباہ
-Webhook | ویب ہک
-Worker | ورکر
-```
+| Convention | Rule |
+|------------|------|
+| **[EN]** | Keep in English |
+| **[TR]** | Transliterate to Urdu script |
+| **[TL]** | Fully translate to Urdu |
+| **First use** | Show: `ترجمہ (English term)` on first occurrence |
+
+## BiDi (Bidirectional) Text Conventions
+
+Urdu is RTL. English terms embedded in Urdu text trigger BiDi rendering issues. Follow these conventions strictly:
+
+| Convention | Rule | Example |
+|------------|------|---------|
+| **Paragraph start** | Never start a paragraph with an English word. Lead with Urdu. | Bad: `SaaS کے دور نے` / Good: `دورِ SaaS نے` |
+| **List item start** | Never start a list item with an English word. Lead with Urdu. | Bad: `- Claude Code ایک ٹول ہے` / Good: `- یہ ٹول Claude Code ہے` |
+| **Heading start** | Never start a heading with an English word after `#`. Lead with Urdu. | Bad: `## SDD طریقہ کار` / Good: `## طریقہ کار SDD` |
+| **Parenthesized English** | Buffer with Urdu words on both sides. | Bad: `مہارتوں ،(specs)` / Good: `مہارتوں (specs) کو` |
+| **Bold with English** | Open `**` adjacent to Urdu character. | Bad: `**SDD طریقہ**` / Good: `**طریقہ SDD**` |
+| **RLM fallback** | If restructuring changes meaning, prepend U+200F (‏) before English word. | `‏SaaS کے دور نے` (only as last resort) |
+
+## Core Technical Terms
+
+| English Term | Urdu | Convention | Notes |
+|-------------|------|------------|-------|
+| AI Agent | اے آئی ایجنٹ | [TR] | |
+| Skill | مہارت | [TL] | In context of Claude Code skills |
+| Subagent | Subagent | [EN] | Keep as-is |
+| Prompt | پرامپٹ | [TR] | |
+| Specification | تفصیلات | [TL] | |
+| Repository | ریپو | [TR] | Short form common |
+| Commit | Commit | [EN] | Git term |
+| Branch | Branch | [EN] | Git term |
+| Pull Request | Pull Request | [EN] | Git term |
+| Merge | Merge | [EN] | Git term |
+| API | API | [EN] | Acronym |
+| CLI | CLI | [EN] | Acronym |
+| IDE | IDE | [EN] | Acronym |
+| Framework | فریم ورک | [TR] | |
+| Library | لائبریری | [TR] | |
+| Module | ماڈیول | [TR] | |
+| Component | کمپوننٹ | [TR] | |
+| Function | فنکشن | [TR] | |
+| Variable | متغیر | [TL] | |
+| Parameter | پیرامیٹر | [TR] | |
+| Deployment | تعیناتی | [TL] | |
+| Pipeline | پائپ لائن | [TR] | |
+| Workflow | ورک فلو | [TR] | |
+| Configuration | ترتیبات | [TL] | |
+| Authentication | تصدیق | [TL] | |
+| Authorization | اجازت | [TL] | |
+| Markdown | Markdown | [EN] | Format name |
+| MDX | MDX | [EN] | Format name |
+| YAML | YAML | [EN] | Format name |
+| JSON | JSON | [EN] | Format name |
+
+## Educational Terms
+
+| English Term | Urdu | Convention | Notes |
+|-------------|------|------------|-------|
+| Learning Objective | تعلیمی مقصد | [TL] | |
+| Proficiency Level | مہارت کی سطح | [TL] | |
+| Assessment | جائزہ | [TL] | |
+| Exercise | مشق | [TL] | |
+| Lesson | سبق | [TL] | |
+| Chapter | باب | [TL] | |
+| Quiz | مختصر امتحان | [TL] | |
+| Flashcard | فلیش کارڈ | [TR] | |
+
+## Agent Factory-Specific Terms
+
+| English Term | Urdu | Convention | Notes |
+|-------------|------|------------|-------|
+| Agent Factory | Agent Factory | [EN] | Product name |
+| Spec-Driven Development | Spec-Driven Development | [EN] | Methodology name |
+| SDD | SDD | [EN] | Acronym |
+| Seven Principles | سات اصول | [TL] | |
+| Bridge Book | Bridge Book | [EN] | Product concept |
+| General Agent | عام ایجنٹ | [TL] | |
+| Reusable Intelligence | قابل استعمال ذہانت | [TL] | |

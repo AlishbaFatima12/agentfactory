@@ -1,109 +1,70 @@
-# Glossary: English to Spanish (es)
+# Glossary: Spanish (es)
 
-Standard developer terminology for Spanish translations.
+## Convention
 
-```
-API | API
-Application | Aplicacion
-Authentication | Autenticacion
-Authorization | Autorizacion
-Backend | Backend
-Bug | Error / Bug
-Build | Compilar / Build
-Cache | Cache
-CLI | CLI
-Client | Cliente
-Cloud | Nube
-Command | Comando
-Component | Componente
-Configuration | Configuracion
-Configure | Configurar
-Connection | Conexion
-Container | Contenedor
-Controller | Controlador
-Dashboard | Panel de control
-Data | Datos
-Database | Base de datos
-Debug | Depurar
-Default | Predeterminado
-Dependency | Dependencia
-Deploy | Desplegar
-Deployment | Despliegue
-Description | Descripcion
-Directory | Directorio
-Download | Descargar
-Endpoint | Endpoint
-Environment | Entorno
-Error | Error
-Example | Ejemplo
-Execute | Ejecutar
-Feature | Funcionalidad
-File | Archivo
-Folder | Carpeta
-Framework | Framework
-Frontend | Frontend
-Function | Funcion
-Guide | Guia
-HTTP | HTTP
-Image | Imagen
-Import | Importar
-Install | Instalar
-Installation | Instalacion
-Interface | Interfaz
-JSON | JSON
-Key | Clave
-Library | Biblioteca
-License | Licencia
-Link | Enlace
-Log | Registro
-Method | Metodo
-Middleware | Middleware
-Migration | Migracion
-Module | Modulo
-Network | Red
-Note | Nota
-Package | Paquete
-Parameter | Parametro
-Password | Contrasena
-Path | Ruta
-Permission | Permiso
-Plugin | Plugin
-Port | Puerto
-Prerequisites | Requisitos previos
-Process | Proceso
-Production | Produccion
-Project | Proyecto
-Protocol | Protocolo
-Query | Consulta
-Reference | Referencia
-Repository | Repositorio
-Request | Solicitud / Peticion
-Response | Respuesta
-Route | Ruta
-Run | Ejecutar
-SDK | SDK
-Security | Seguridad
-Server | Servidor
-Service | Servicio
-Session | Sesion
-Setting | Configuracion
-Setup | Configuracion inicial
-SSL | SSL
-Status | Estado
-Storage | Almacenamiento
-String | Cadena
-Template | Plantilla
-Terminal | Terminal
-Test | Prueba
-Token | Token
-Tool | Herramienta
-URL | URL
-User | Usuario
-Username | Nombre de usuario
-Validate | Validar
-Variable | Variable
-Version | Version
-Warning | Advertencia
-Webhook | Webhook
-Worker | Worker
-```
+| Convention | Rule |
+|------------|------|
+| **[EN]** | Keep in English |
+| **[TR]** | Use Spanish phonetic adaptation |
+| **[TL]** | Fully translate to Spanish |
+| **First use** | Show: `traduccion (English term)` on first occurrence |
+
+## Core Technical Terms
+
+| English Term | Spanish | Convention | Notes |
+|-------------|---------|------------|-------|
+| AI Agent | Agente de IA | [TL] | |
+| Skill | Habilidad | [TL] | In context of Claude Code skills |
+| Subagent | Subagent | [EN] | Keep as-is |
+| Prompt | Prompt | [EN] | Widely used in Spanish tech |
+| Specification | Especificacion | [TL] | |
+| Repository | Repositorio | [TL] | |
+| Commit | Commit | [EN] | Git term |
+| Branch | Branch | [EN] | Git term |
+| Pull Request | Pull Request | [EN] | Git term |
+| Merge | Merge | [EN] | Git term |
+| API | API | [EN] | Acronym |
+| CLI | CLI | [EN] | Acronym |
+| IDE | IDE | [EN] | Acronym |
+| Framework | Framework | [EN] | Widely used |
+| Library | Biblioteca | [TL] | |
+| Module | Modulo | [TL] | |
+| Component | Componente | [TL] | |
+| Function | Funcion | [TL] | |
+| Variable | Variable | [TL] | Same word |
+| Parameter | Parametro | [TL] | |
+| Deployment | Despliegue | [TL] | |
+| Pipeline | Pipeline | [EN] | Widely used |
+| Workflow | Flujo de trabajo | [TL] | |
+| Configuration | Configuracion | [TL] | |
+| Authentication | Autenticacion | [TL] | |
+| Authorization | Autorizacion | [TL] | |
+| Markdown | Markdown | [EN] | Format name |
+| MDX | MDX | [EN] | Format name |
+| YAML | YAML | [EN] | Format name |
+| JSON | JSON | [EN] | Format name |
+
+## Educational Terms
+
+| English Term | Spanish | Convention | Notes |
+|-------------|---------|------------|-------|
+| Learning Objective | Objetivo de aprendizaje | [TL] | |
+| Proficiency Level | Nivel de competencia | [TL] | |
+| Assessment | Evaluacion | [TL] | |
+| Exercise | Ejercicio | [TL] | |
+| Lesson | Leccion | [TL] | |
+| Chapter | Capitulo | [TL] | |
+| Quiz | Cuestionario | [TL] | |
+| Flashcard | Tarjeta de estudio | [TL] | |
+
+## Agent Factory-Specific Terms
+
+| English Term | Spanish | Convention | Notes |
+|-------------|---------|------------|-------|
+| Agent Factory | Agent Factory | [EN] | Product name |
+| Spec-Driven Development | Spec-Driven Development | [EN] | Methodology name |
+| SDD | SDD | [EN] | Acronym |
+| Seven Principles | Los Siete Principios | [TL] | |
+| Bridge Book | Bridge Book | [EN] | Product concept |
+| General Agent | Agente General | [TL] | |
+| Reusable Intelligence | Inteligencia Reutilizable | [TL] | |

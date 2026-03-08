@@ -1,32 +1,76 @@
-# Glossary Template
+# Glossary Template: [Language Name]
 
-Use this format for terminology consistency. Create one per target language.
+Copy this file to `glossary-{lang-code}.md` (e.g., `glossary-ar.md`, `glossary-es.md`) and fill in translations.
 
-## Format
+## Purpose
 
-```
-English Term | Target Translation
-```
+Ensures consistent translation of technical terms across all files translated to this language. The translator MUST use these terms instead of ad-hoc translations.
 
-## Example (English to Urdu)
+## Convention
 
-```
-Server | سرور
-Token | ٹوکن
-Request | ریکویسٹ
-Response | ریسپانس
-Install | انسٹال
-Configure | کنفیگر
-Authentication | تصدیق
-Database | ڈیٹابیس
-Deploy | ڈیپلوئے
-API | API
-URL | URL
-```
+| Convention | Rule |
+|------------|------|
+| **Keep in English** | Terms marked with `[EN]` should remain in English |
+| **Transliterate** | Terms marked with `[TR]` should be transliterated (phonetic approximation) |
+| **Translate** | Terms marked with `[TL]` should be fully translated |
+| **First use** | On first occurrence, show: `translated-term (English term)` |
 
-## Usage rules
+## Core Technical Terms
 
-- Keep English terms that have no standard translation in the target language (e.g., API, URL, HTTP)
-- Use the same translation for a term everywhere in the document
-- Add new terms as they appear during translation
-- Technical terms commonly used in English by developers of the target language should stay in English
+| English Term | Translation | Convention | Notes |
+|-------------|-------------|------------|-------|
+| AI Agent | | [TL] | |
+| Skill | | [TL] | In context of Claude Code skills |
+| Subagent | | [EN] | Keep as-is |
+| Prompt | | [TR] | |
+| Specification | | [TL] | |
+| Repository | | [TR] | |
+| Commit | | [EN] | Git term |
+| Branch | | [EN] | Git term |
+| Pull Request | | [EN] | Git term |
+| Merge | | [EN] | Git term |
+| API | | [EN] | Acronym |
+| CLI | | [EN] | Acronym |
+| IDE | | [EN] | Acronym |
+| Framework | | [TR] | |
+| Library | | [TL] | |
+| Module | | [TL] | |
+| Component | | [TR] | |
+| Function | | [TL] | |
+| Variable | | [TL] | |
+| Parameter | | [TR] | |
+| Deployment | | [TL] | |
+| Pipeline | | [TR] | |
+| Workflow | | [TL] | |
+| Configuration | | [TL] | |
+| Authentication | | [TL] | |
+| Authorization | | [TL] | |
+| Markdown | | [EN] | Format name |
+| MDX | | [EN] | Format name |
+| YAML | | [EN] | Format name |
+| JSON | | [EN] | Format name |
+
+## Educational Terms
+
+| English Term | Translation | Convention | Notes |
+|-------------|-------------|------------|-------|
+| Learning Objective | | [TL] | |
+| Proficiency Level | | [TL] | |
+| Assessment | | [TL] | |
+| Exercise | | [TL] | |
+| Lesson | | [TL] | |
+| Chapter | | [TL] | |
+| Quiz | | [TL] | |
+| Flashcard | | [TL] | |
+
+## Agent Factory-Specific Terms
+
+| English Term | Translation | Convention | Notes |
+|-------------|-------------|------------|-------|
+| Agent Factory | | [EN] | Product name — never translate |
+| Spec-Driven Development | | [EN] | Methodology name |
+| SDD | | [EN] | Acronym |
+| Seven Principles | | [TL] | |
+| Bridge Book | | [EN] | Product concept |
+| General Agent | | [TL] | |
+| Reusable Intelligence | | [TL] | |
