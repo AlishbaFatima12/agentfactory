@@ -68,7 +68,35 @@ In the previous lesson, you learned the five stages of PRIMM -- Predict, Run, In
 
 You do not have a classroom teacher. You have an AI coding assistant.
 
-That changes the dynamics but not the pedagogy. PRIMM-AI+ keeps the five stages identical -- the same sequence, the same cognitive goals, the same research foundation. What changes is the partner sitting next to you and the structural safeguards around that partnership. Instead of a teacher walking between desks, you have an AI that can generate programs on demand, execute code instantly, answer questions at any hour, and review your work in seconds. That power makes the boundaries between stages more important, not less. Without boundaries, AI collapses all five stages into one: "write me a solution." The learning vanishes. This lesson establishes those boundaries, adds nine structural enhancements that upgrade PRIMM-AI into PRIMM-AI+, walks through a complete lesson from start to finish, and connects your learning process to the professional practices you will use for the rest of this book.
+That changes the partner, not the pedagogy. PRIMM with an AI coding assistant as your learning partner is called **PRIMM-AI** -- the same five stages, but AI generates examples for you to predict, executes code for you to compare, answers your investigation questions, and reviews your completed work. That adaptation is powerful. But it has a gap: without structural safeguards, AI makes it easy to skip stages and fake understanding. You can ask AI to explain the code before you predict, request a full solution before you modify, or let it write your Make project while you watch. Nothing in basic PRIMM-AI prevents this.
+
+Here is what PRIMM-AI looks like -- the same five stages, now with an AI partner:
+
+| Stage | You | AI |
+|-------|-----|-----|
+| **Predict** | Read the code, write your prediction | Generates code samples at the right difficulty |
+| **Run** | Compare prediction to actual output | Executes the program, shows raw output |
+| **Investigate** | Ask targeted questions, trace variables | Answers questions, generates trace tables |
+| **Modify** | Change the code yourself | Compares your version, suggests alternatives |
+| **Make** | Write a spec, then implement | Reviews your spec and completed code |
+
+This is a solid foundation. But nothing in this table prevents you from asking AI to explain the code during Predict, or to write the full solution during Make. The boundaries are implied, not enforced. That is the gap.
+
+**PRIMM-AI+** closes that gap. It keeps everything from PRIMM-AI -- every stage, every AI role, every rule -- and adds nine structural enhancements:
+
+| # | Enhancement | What It Adds |
+|---|------------|-------------|
+| 1 | **AI-Free Checkpoints** | Moments where AI is explicitly not allowed -- diagnostic, not punitive |
+| 2 | **Stage-by-Stage AI Permissions** | Exact rules for what AI may and may not do at each stage |
+| 3 | **Mandatory Trace Artifacts** | You must produce something visible (trace table, explanation, or failure note) during Investigate |
+| 4 | **Mastery Gates** | You must earn the right to proceed to the next stage |
+| 5 | **Verification Ladder** | Five rungs connecting learning predictions to production observability |
+| 6 | **Error Taxonomy** | Five categories of bugs, so you diagnose before you fix |
+| 7 | **Confidence Scoring** | Rate your certainty 1-5 before each prediction -- reveals false confidence |
+| 8 | **Classroom and Solo Modes** | Same framework works for both -- this book uses solo mode |
+| 9 | **Chapter-End Rubric** | Five-dimension self-assessment at the end of every programming chapter |
+
+You will learn each enhancement in detail throughout this lesson and the next. By the end of Lesson 3, you will have the complete PRIMM-AI+ picture.
 
 PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- the boundaries work the same way regardless of which AI coding assistant you use. The pedagogy is the constant. The AI tool is the variable. We use Claude Code as the primary partner throughout this book because it integrates with the Spec-Driven Development workflow you learned in Chapter 5, but every principle transfers.
 
