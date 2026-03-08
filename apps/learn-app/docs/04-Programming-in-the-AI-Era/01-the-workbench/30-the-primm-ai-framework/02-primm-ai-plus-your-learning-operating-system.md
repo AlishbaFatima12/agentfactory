@@ -432,6 +432,10 @@ By the time you finish Parts 4 and 5, these habits will be automatic. You will r
 
 ## Chapter-End Rubric Preview
 
+"How will I know if I actually learned something?" James asks. "Not just finished the lesson — actually *learned* it."
+
+"Every programming chapter ends with a self-check," Emma says. "Five questions. Honest answers. It takes two minutes and tells you exactly where you stand."
+
 Starting in Chapter 33, every programming chapter ends with a self-assessment against five dimensions. Here is the rubric you will use:
 
 | Dimension | What It Measures |
