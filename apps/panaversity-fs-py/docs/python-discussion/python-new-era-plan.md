@@ -1,8 +1,8 @@
 # Python for the New AI Era: Course Architecture Plan
 
-**Version:** 2.13
+**Version:** 2.14
 **Status:** Draft
-**Date:** 2026-03-06
+**Date:** 2026-03-08
 **Branch:** `learn-python`
 
 ---
@@ -91,7 +91,7 @@ Every Python feature follows this 5-step progression:
 Student specification ability increases across phases:
 
 ```
-Phase 1 (Ch 1-4):    Read & Explore (PRIMM-AI)   ← "I can read, predict, and verify what AI generates"
+Phase 1 (Ch 1-4):    Read & Explore (PRIMM-AI+)  ← "I can read, predict, and verify what AI generates"
 Phase 2 (Ch 5-8):    Specify with types          ← "I can tell AI precisely what to build"
 Phase 3 (Ch 9-12):   Specify with tests          ← "I can define correct and prove it"
 Phase 4 (Ch 13-14):  Debug & Master TDG          ← "I can diagnose failures and drive TDG without scaffolding"
@@ -120,21 +120,21 @@ The scope of Part 4 is ambitious — from basic types in Phase 1 to async APIs a
 
 **Chapter author directive**: Each chapter in Phases 5-9 must include a short "bridge paragraph" in its opening that says, in effect: "You already know the TDG cycle. This chapter applies it to [new domain]. The method is the same — specify with types, write failing tests, generate, verify. The only thing that changes is what you are specifying." This prevents the cognitive cliff where students feel they are learning an entirely new approach when they are actually applying the same one to bigger problems.
 
-### The PRIMM Recall Directive
+### The PRIMM-AI+ Recall Directive
 
-PRIMM-AI (Predict-Run-Investigate-Modify-Make with AI) is introduced in Chapter 1 as the pedagogical framework for the entire course and applied hands-on in Chapter 3 (Reading Python). Every Phase 2+ chapter introduces new Python features that students encounter for the first time. A lightweight callout at the start of each chapter reinforces the PRIMM-AI habit:
+PRIMM-AI+ (Predict-Run-Investigate-Modify-Make with AI, enhanced with AI-free checkpoints, mastery gates, confidence scoring, and a verification ladder) is introduced in Chapter 1 as the pedagogical framework for the entire course and applied hands-on in Chapter 3 (Reading Python). Every Phase 2+ chapter introduces new Python features that students encounter for the first time. A lightweight callout at the start of each chapter reinforces the PRIMM-AI+ habit:
 
 **Chapter author directive**: Each chapter in Phases 2-4 must include a `:::tip` callout in its opening section (after the narrative hook, before the first teaching section) that says, in effect:
 
 ```markdown
-:::tip Reading New Code? Use PRIMM-AI
-When you encounter new Python syntax in this chapter, use the PRIMM-AI method from Chapter 1:
-**Predict** what the code does before running it. **Run** it to check your prediction.
-**Investigate** any surprises. This works for every new concept you'll meet here.
+:::tip Reading New Code? Use PRIMM-AI+
+When you encounter new Python syntax in this chapter, use the PRIMM-AI+ method from Chapter 1:
+**Predict** what the code does before running it [AI-FREE]. Rate your confidence (1-5). **Run** it to check your prediction.
+**Investigate** any surprises — produce a trace artifact. This works for every new concept you'll meet here.
 :::
 ```
 
-By Phase 5, students will have internalized the method and the callout can be dropped or reduced to a single sentence. The goal is to make PRIMM a reflex, not a lesson to revisit.
+By Phase 5, students will have internalized the method and the callout can be dropped or reduced to a single sentence. The goal is to make PRIMM-AI+ a reflex, not a lesson to revisit.
 
 ---
 
@@ -186,7 +186,7 @@ without types, the workflow here will feel different by design.
 |---------|-----------------|---------------------|
 | New terminology (e.g., "virtual environment", "type annotation", "assertion") | Plain-English analogy explaining the concept | Skip — they already know it |
 | Concept that contradicts prior experience (e.g., "types are required", "tests before code") | Skip — they have no prior experience to conflict with | Explain what is different and why |
-| Tool or workflow unfamiliar to both (e.g., TDG, PRIMM, uv) | Simple analogy | How it compares to tools/workflows they already know |
+| Tool or workflow unfamiliar to both (e.g., TDG, PRIMM-AI+, uv) | Simple analogy | How it compares to tools/workflows they already know |
 | Complex code example with multiple new concepts | Break down each piece in plain English | Highlight what is Python-specific vs general programming |
 
 **Rules:**
@@ -206,7 +206,7 @@ All traditional Python features are taught. The **framing changes**, not the con
 | Matthes Chapter | Traditional Framing | Our Framing | Our Chapter |
 |---|---|---|---|
 | Ch 1: Getting Started | Install Python, run a script | The professional workbench: uv, pyright, ruff, pytest | Ch 2 |
-| Ch 2: Variables & Types | Variables store data | PRIMM-AI method + reading types/expressions (variables only, no functions) | Ch 3, 5 |
+| Ch 2: Variables & Types | Variables store data | PRIMM-AI+ method + reading types/expressions (variables only, no functions) | Ch 3, 5 |
 | Ch 3: Lists | Lists store sequences | Typed collections: what `list[str]` tells us about data | Ch 6 |
 | Ch 4: Working with Lists | Looping through lists | Iteration: how AI processes every item | Ch 9 |
 | Ch 5: If Statements | Conditional execution | Branch logic: predicting which path code takes | Ch 9 |
@@ -287,7 +287,7 @@ Part 4 serves students who have completed Parts 1-3 (AI prompting, file processi
 
 **Phase 1 chapters (Ch 1-4) must:**
 
-1. **Establish the learning method first.** Chapter 1 (PRIMM-AI) teaches students *how* they will learn before they learn anything about Python. Every subsequent chapter assumes students know the PRIMM-AI stages and apply them reflexively.
+1. **Establish the learning method first.** Chapter 1 (PRIMM-AI+) teaches students *how* they will learn before they learn anything about Python. Every subsequent chapter assumes students know the PRIMM-AI+ stages, AI-free checkpoints, and confidence scoring and apply them reflexively.
 2. **Show every command with expected output.** Never say "install uv" without showing the exact terminal command and what success looks like. Include common errors and fixes (wrong PATH, permission denied, Windows vs Mac differences).
 3. **Explain every tool before using it.** Before running `uv run pytest`, explain what pytest is and why it exists — in one sentence, not a lecture. A beginner callout can expand for those who need more.
 4. **Never assume terminal fluency beyond Parts 1-3.** Students can `cd`, `ls`, and run commands. They cannot debug environment issues, resolve PATH conflicts, or interpret cryptic error messages without guidance.
@@ -299,31 +299,50 @@ Part 4 serves students who have completed Parts 1-3 (AI prompting, file processi
 
 > Student role: **Reader** — "I can understand what AI generates"
 
-#### Chapter 1: The PRIMM-AI Framework
+#### Chapter 1: The PRIMM-AI+ Framework (3 Lessons)
 
-**Goal**: Student understands how they will learn throughout Parts 4 and 5 — the PRIMM-AI method (Predict, Run, Investigate, Modify, Make with AI) — before encountering a single line of Python.
+**Goal**: Student understands how they will learn throughout Parts 4 and 5 — the PRIMM-AI+ method (Predict, Run, Investigate, Modify, Make with AI, enhanced with AI-free checkpoints, mastery gates, confidence scoring, and a verification ladder) — before encountering a single line of Python.
 
-**Design decision**: This chapter is conceptual, not technical. No Python code is taught. No tools are installed. The chapter establishes the learning contract: here is *how* every lesson works, and here is *why* this approach produces better developers than the old "type from scratch" model.
+**Design decision**: This chapter is conceptual, not technical. Minimal Python code is used (simple variables + print only). No tools are installed. The chapter establishes the learning contract: here is *how* every lesson works, and here is *why* this approach produces better developers than the old "type from scratch" model.
 
-**Positioning**: PRIMM-AI sits *above* the Ten Axioms as the meta-learning framework. The Ten Axioms tell you what professional practice looks like. PRIMM-AI tells you how to *internalize* those practices. Together they form the complete system — the developer's comprehension and the software's correctness. "PRIMM-AI is the operating system. The Ten Axioms are the first application that runs on it."
+**Positioning**: PRIMM-AI+ sits *above* the Ten Axioms as the meta-learning framework. The Ten Axioms tell you what professional practice looks like. PRIMM-AI+ tells you how to *internalize* those practices. Together they form the complete system — the developer's comprehension and the software's correctness. "PRIMM-AI+ is the operating system. The Ten Axioms are the first application that runs on it."
 
+**Lesson 1: The PRIMM Framework** (~15 min)
 - Why learning to program in 2026 is different from 2016
 - The comprehension crisis: AI generates code, but who verifies it?
 - What is PRIMM? The research-validated framework (Sentance, Waite, Kallia 2019)
-- The five stages: Predict, Run, Investigate, Modify, Make
-- PRIMM-AI: adapting PRIMM for the AI coding assistant era
+- The five stages: Predict [AI-FREE], Run, Investigate, Modify, Make
+- Confidence scoring (1-5) introduced at Predict stage
+- Walkthrough with a simple 4-line greeting program (variables + print only)
+
+**Lesson 2: PRIMM-AI+: Your Learning Operating System** (~25 min)
+- PRIMM-AI+: adapting PRIMM for the AI coding assistant era with 9 structural enhancements
 - How AI participates in each stage (Predict: generates examples; Run: executes code; Investigate: Socratic tutor; Modify: comparison partner; Make: review partner)
-- The five PRIMM-AI rules:
+- AI Permissions Table: right vs wrong interactions at each stage
+- AI-Free Checkpoints: [AI-FREE] markers — diagnostic moments without AI
+- Mastery Gates: earn the right to proceed (written prediction, comparison recorded, can explain how, written spec)
+- The five PRIMM-AI+ rules:
   1. Never run code you have not predicted
   2. Never trust an explanation you have not tested
   3. Modify before you make
   4. Write the spec before the code
   5. Use AI as a partner, not a crutch
-- How every chapter in this book follows the PRIMM-AI structure
-- From PRIMM to professional practice: the Spec → Generate → Review → Refine → Ship workflow
-- PRIMM-AI maps to the Ten Axioms (Predict→Axiom VII Tests, Run→VII+IX Pipeline, Investigate→V+X Types+Observability, Modify→IV Composition, Make→II+III Markdown+Programs)
+- Verification Ladder: 5 rungs from Prediction → Types → Tests → Pipeline → Observability
+- Confidence scoring expanded: false confidence as the most dangerous state
+- Error taxonomy preview: 5 categories (Type, Logic, Spec, Data/Edge-Case, Orchestration)
+- Chapter-End Rubric preview: 5 dimensions (Prediction Accuracy, Trace Quality, Explanation Quality, Modification Quality, Independent Make)
+- PRIMM-AI+ at a Glance: consolidated summary table
+- PRIMM-AI+ maps to the Ten Axioms (Predict→Axiom VII Tests, Run→VII+IX Pipeline, Investigate→V+X Types+Observability, Modify→IV Composition, Make→II+III Markdown+Programs)
 
-**Student does**: Reads, reflects, internalizes the learning method — no code, no tools, pure pedagogy
+**Lesson 3: The Complete Teaching and Learning System** (~20 min)
+- Four embedded teaching methods: worked examples, Parsons problems, live coding, peer instruction
+- Where each method fits in the PRIMM-AI+ sequence
+- Classroom mode vs solo mode ("this book is designed for solo mode")
+- The 6-step practical lesson architecture every chapter follows
+- How every chapter in Parts 4-5 maps to PRIMM-AI+ structure
+- From PRIMM-AI+ to professional practice: the Spec → Generate → Review → Refine → Ship workflow
+
+**Student does**: Reads, reflects, internalizes the learning method — minimal code, no tools, pure pedagogy
 **AI role**: Not yet present — the student meets AI coding assistants in Ch 2 (tool installation) and Ch 3 (reading AI-generated code)
 
 **Transition to Ch 2**: "You now know *how* you will learn. Chapter 2 gives you the professional tools that make this method possible — a package manager, a type checker, a linter, a test runner, and version control."
@@ -347,11 +366,11 @@ Part 4 serves students who have completed Parts 1-3 (AI prompting, file processi
 
 ---
 
-#### Chapter 3: Reading Python (PRIMM-AI in Practice)
+#### Chapter 3: Reading Python (PRIMM-AI+ in Practice)
 
-**Goal**: Student applies the PRIMM-AI method from Chapter 1 to real Python code — variables, types, arithmetic, and print only. No functions, no collections, no imports.
+**Goal**: Student applies the PRIMM-AI+ method from Chapter 1 to real Python code — variables, types, arithmetic, and print only. No functions, no collections, no imports.
 
-**Design decision**: This chapter is standalone (not merged into Ch 2). It gives students a *taste* of Python through reading, not writing. Students already know the PRIMM-AI method from Ch 1; this chapter puts it into practice with the minimum Python needed. Phase 2 covers every Python feature in depth — Chapter 3 does NOT attempt to teach Python comprehensively.
+**Design decision**: This chapter is standalone (not merged into Ch 2). It gives students a *taste* of Python through reading, not writing. Students already know the PRIMM-AI+ method from Ch 1 (including AI-free checkpoints, confidence scoring, and mastery gates); this chapter puts it into practice with the minimum Python needed. Phase 2 covers every Python feature in depth — Chapter 3 does NOT attempt to teach Python comprehensively.
 
 **What students CAN use** (taught in Ch 2 or introduced here):
 - Variables with type annotations: `name: str = "Zia"`
@@ -372,13 +391,13 @@ Part 4 serves students who have completed Parts 1-3 (AI prompting, file processi
 
 **Lessons**:
 
-1. **The PRIMM-AI Method in Action — Predict, Run, Investigate**: Applies the PRIMM-AI framework from Ch 1 to real code. Students practice Predict-Run-Investigate on 4 short code blocks (2-4 lines each) using only variables, types, and arithmetic. Establishes the habit: predict before running.
+1. **The PRIMM-AI+ Method in Action — Predict, Run, Investigate**: Applies the PRIMM-AI+ framework from Ch 1 to real code. Students practice Predict [AI-FREE] with confidence scoring, then Run-Investigate on 4 short code blocks (2-4 lines each) using only variables, types, and arithmetic. Establishes the habit: predict before running.
 
 2. **Trace Tables — When Your Brain Takes Shortcuts**: Teaches trace tables as the formal tool for tracking variable state line by line. Students build trace tables for 4-6 line blocks with variable reassignment. Catches the most common prediction error (using old variable values after reassignment).
 
-3. **Your First Code Review — Catching a Bug**: Capstone lesson. Students read a 15-20 line SmartNotes excerpt (variables, arithmetic, print only — no functions). They apply PRIMM and trace tables to find a deliberate type mismatch bug. Connects to Pyright: the tool catches what the student just found manually.
+3. **Your First Code Review — Catching a Bug**: Capstone lesson. Students read a 15-20 line SmartNotes excerpt (variables, arithmetic, print only — no functions). They apply PRIMM-AI+ and trace tables to find a deliberate type mismatch bug. Uses the error taxonomy from Ch 1 to classify the bug. Connects to Pyright: the tool catches what the student just found manually.
 
-**Student does**: Predicts output using PRIMM-AI, builds trace tables, performs a mini code review
+**Student does**: Predicts output using PRIMM-AI+ (with [AI-FREE] checkpoints and confidence scoring), builds trace tables, performs a mini code review
 **AI role**: Generates typed Python samples; student reads, predicts, and explains
 
 **Transition to Ch 4**: "You can read Python. You can predict what it does. You can even find bugs. In Chapter 4, you flip the script — instead of reading someone else's code, you write a specification and AI generates code for you. Then you verify it using the reading skills you just learned."
@@ -1208,7 +1227,7 @@ For tracking that all essential Learning Python content is covered:
 
 | Lutz Part | Lutz Chapters | Our Coverage | Notes |
 |---|---|---|---|
-| **I: Getting Started** | Ch 1-3 | Ch 1-3 | Reframed: PRIMM-AI + workbench + reading |
+| **I: Getting Started** | Ch 1-3 | Ch 1-3 | Reframed: PRIMM-AI+ (3 lessons) + workbench + reading |
 | **II: Objects & Operations** | Ch 4-9 | Ch 5-6 | Reframed: typed collections |
 | **III: Statements & Syntax** | Ch 10-15 | Ch 9 | Reframed: through testing |
 | **IV: Functions & Generators** | Ch 16-21 | Ch 8, 21 | Reframed: contracts + generators |
@@ -1697,7 +1716,7 @@ quizforge/
 - [x] ~~Security chapter for AI-generated code?~~ → Resolved: Yes, Ch 25. OWASP-focused review of AI output, security testing, `bandit` tooling.
 - [x] ~~"When Not to Use AI" chapter?~~ → Resolved: Yes, Ch 26. Judgment about AI assistance spectrum, preventing AI dependency.
 - [x] ~~Split Production Systems phase?~~ → Resolved: Yes. Phase 7 (CLI + Concurrency) and Phase 8 (CI/CD + Security) — separate building from shipping.
-- [x] ~~Axioms at start vs end?~~ → Resolved: Keep near start. Chapter 31 (Ten Axioms) already exists and serves as the bridge from Part 3 into Part 4 (after PRIMM-AI). No duplicate needed.
+- [x] ~~Axioms at start vs end?~~ → Resolved: Keep near start. Chapter 31 (Ten Axioms) already exists and serves as the bridge from Part 3 into Part 4 (after PRIMM-AI+). No duplicate needed.
 
 ---
 
@@ -1720,3 +1739,4 @@ quizforge/
 | 2.11 | 2026-03-04 | Added Claude Code + SDD emphasis throughout (Sections 1-3, 6-7). Chapter 5 as required prerequisite. INPUT/OUTPUT teaching model. |
 | 2.12 | 2026-03-05 | Replaced Phase 9 SmartNotes capstone with QuizForge — an AI-Powered Quiz Generator built from scratch. SmartNotes now runs Phases 1-8 (guided); Phase 9 is QuizForge (independent). Added QuizForge stack diagram. Updated "Why This Works" table for two-project approach. Students finish with two portfolio-grade projects. |
 | 2.13 | 2026-03-06 | Added Chapter 1: The PRIMM-AI Framework as the dedicated conceptual chapter. PRIMM-AI is now formally positioned above the Ten Axioms as the meta-learning framework ("PRIMM-AI is the operating system; the Axioms are the first application that runs on it"). Expanded from 26 to 27 chapters. Renumbered all chapters +1: old Ch 1-26 → Ch 2-27. Phase 1 now has 4 chapters (Ch 1-4): PRIMM-AI → Dev Environment → Reading Python → First TDG. Updated all cross-references: feature maps, OOP progression, exercise thread, SmartNotes phases, Lutz coverage map, Syntax Cards, open questions. PRIMM Recall Directive now references Ch 1 (PRIMM-AI) and Ch 3 (Reading Python). Book-level: Chapter 30 becomes PRIMM-AI; Ten Axioms shifts to Chapter 31. |
+| 2.14 | 2026-03-08 | Upgraded PRIMM-AI → PRIMM-AI+ throughout. Chapter 1 now has 3 lessons: L1 (The PRIMM Framework — with [AI-FREE] Predict and confidence scoring), L2 (PRIMM-AI+: Your Learning Operating System — AI permissions table, AI-free checkpoints, mastery gates, verification ladder, confidence scoring, error taxonomy preview, chapter-end rubric preview, PRIMM-AI+ at a Glance), L3 (The Complete Teaching and Learning System — four embedded teaching methods, classroom vs solo mode, 6-step lesson architecture). Updated PRIMM Recall Directive callout to PRIMM-AI+ with [AI-FREE] and confidence scoring. Updated all cross-references. |
