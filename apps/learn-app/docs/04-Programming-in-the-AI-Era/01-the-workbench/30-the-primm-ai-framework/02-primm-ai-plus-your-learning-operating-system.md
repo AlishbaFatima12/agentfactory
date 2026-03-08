@@ -2,7 +2,7 @@
 sidebar_position: 2
 title: "PRIMM-AI+: Your Learning Operating System"
 description: "Adapt PRIMM for AI-assisted learning with PRIMM-AI+ enhancements: AI permissions at each stage, AI-free checkpoints, mastery gates, confidence scoring, a verification ladder, error taxonomy, and the deep connection between PRIMM-AI+ and professional software development practice."
-keywords: ["PRIMM-AI+", "PRIMM-AI", "AI-assisted learning", "AI-free checkpoints", "mastery gates", "verification ladder", "confidence scoring", "predict run investigate modify make", "Claude Code", "learning framework", "coding education", "Socratic tutoring", "ten axioms"]
+keywords: ["PRIMM-AI+", "PRIMM-AI", "AI-assisted learning", "AI-free checkpoints", "mastery gates", "verification ladder", "confidence scoring", "predict run investigate modify make", "Claude Code", "learning framework", "coding education", "Socratic tutoring"]
 chapter: 30
 lesson: 2
 duration_minutes: 25
@@ -305,17 +305,15 @@ These rules are operational discipline, not suggestions. Each one prevents a spe
 
 Every time you predict what code will do and then run it to check, you are building a habit: guess first, verify second. That habit does not stop being useful when you leave this chapter. It grows with you. The Verification Ladder shows how the same habit scales from a learning exercise all the way to professional software -- one step at a time.
 
-| Step | Question | Maps To |
-|------|----------|---------|
-| 1. **Prediction** | What do I think this code does? | PRIMM-AI+ Predict and Run |
-| 2. **Types** | Is the structure valid? | Axiom V: Types Are Guardrails |
-| 3. **Tests** | Is the behavior correct? | Axiom VII: Tests Are the Specification |
-| 4. **Pipeline** | Do all checks pass together? | Axiom IX: Verification Is a Pipeline |
-| 5. **Observability** | Is it still correct in production? | Axiom X: Observability Extends Verification |
+| Step | Question | What You Do |
+|------|----------|-------------|
+| 1. **Prediction** | What do I think this code does? | Read the code and commit to an answer before running it |
+| 2. **Types** | Is the structure valid? | Check that every variable and function has the right type labels |
+| 3. **Tests** | Is the behavior correct? | Write a test that states what the code should do, then run it |
+| 4. **Pipeline** | Do all checks pass together? | Run all your checks (types, tests, formatting) in one command |
+| 5. **Observability** | Is it still correct in production? | Monitor the running program to catch problems after deployment |
 
-When you predict the output of a program and then run it to check, you are practicing the same cognitive pattern that a CI/CD pipeline uses when it runs 500 tests before deploying to production. The scale changes. The instinct does not.
-
-You will encounter the axioms referenced in this table when you reach Chapter 31. For now, the key insight is that the predict-then-verify habit you are building is not a beginner exercise you will outgrow. It is the foundation of every verification practice in professional software engineering.
+You are currently at Step 1 -- predicting and running. Steps 2 through 5 will be introduced gradually as you progress through the book. The key insight is that the predict-then-verify habit you are building now is not a beginner exercise you will outgrow. It is the same habit that powers every step above it.
 
 ---
 
@@ -357,34 +355,6 @@ There are five kinds of bugs. You do not need to memorize this table now -- it i
 | **Orchestration Error** | Component interaction failure: function called at the wrong time |
 
 When you encounter a bug during Investigate or Modify, try to classify it using this table. Naming the kind of error helps you search for it systematically rather than staring at the code hoping the problem becomes visible.
-
----
-
-## PRIMM-AI+ and the Ten Axioms: The Complete System
-
-The next chapter introduces the Ten Axioms of AI-Driven Development -- the principles that define what professional software looks like. PRIMM-AI+ and the Ten Axioms are not separate topics. They form a single system.
-
-**PRIMM-AI+ is the learning operating system. The Ten Axioms are the first application that runs on it.**
-
-Here is why: PRIMM-AI+ is about the developer -- how you build understanding, how you learn to read and write code, how you develop judgment. The Ten Axioms are about the software -- properties that well-engineered programs possess (types, tests, version control, observability). You learn the axioms *through* PRIMM-AI+, not alongside it.
-
-### Stage-to-Axiom Mapping
-
-Each PRIMM-AI+ stage has a direct connection to specific axioms you will learn in Chapter 31:
-
-| PRIMM-AI+ Stage | Axiom Connection | What the Mapping Means |
-|---|---|---|
-| **Predict** | Axiom VII: Tests Are the Specification | Writing a test before code IS the professional version of Predict. `assert calculate_shipping(100.0, "express") == 12.50` is a prediction committed to code. Test-Driven Generation is Predict at production scale. |
-| **Run** | Axiom VII + Axiom IX: Verification Is a Pipeline | A CI/CD pipeline automates Run: every commit triggers a comparison between test predictions and actual behavior. The pipeline runs your predictions for you, thousands of times. |
-| **Investigate** | Axiom V: Types Are Guardrails + Axiom X: Observability | A type checker investigates data flow at compile time. Production logs investigate behavior at runtime. The investigation instinct -- "what is actually happening here?" -- is the same at every scale. |
-| **Modify** | Axiom IV: Composition Over Creation | Composable systems are designed to be modified. Emma's 12-line Makefile (from Chapter 31, Axiom I) was easy to modify because each line did one thing. James's 400-line script was impossible to modify because everything was tangled together. |
-| **Make** | Axiom II: Knowledge Is Markdown + Axiom III: Programs Over Scripts | Spec first means knowledge captured in markdown. A proper program with types, tests, and structure -- not a throwaway script -- is what Make produces at professional scale. |
-
-### Why PRIMM-AI+ Is Not an Axiom
-
-You might wonder: if PRIMM-AI+ connects to all ten axioms, why is it not the eleventh axiom? Because the ten axioms describe properties of the *software* -- characteristics that well-engineered programs have. PRIMM-AI+ describes the *developer* -- how you build the understanding needed to create software with those properties. PRIMM-AI+ is the meta-framework through which you learn everything else. It operates at a different level of abstraction.
-
-Think of it this way: an operating system is not an application. It is the environment that applications run on. PRIMM-AI+ is your learning operating system. The ten axioms are the first set of applications you will install.
 
 ---
 
@@ -453,7 +423,7 @@ This structure mirrors professional code review: read the PR, understand the log
 - The five rules (predict before running, test every explanation, modify before making, spec before code, partner not crutch) are operational discipline that prevents AI dependency.
 - The Verification Ladder connects your learning predictions to production observability across five steps: Prediction, Types, Tests, Pipeline, Observability.
 - Every chapter in Parts 4-6 follows the PRIMM-AI+ cycle implicitly: see code, investigate it, modify it, build something new.
-- PRIMM-AI+ is the learning operating system; the Ten Axioms (Chapter 31) are the first application. Your learning habits map directly to professional practice.
+- PRIMM-AI+ is not a training wheel you will outgrow. Your learning habits map directly to professional practice.
 
 ---
 

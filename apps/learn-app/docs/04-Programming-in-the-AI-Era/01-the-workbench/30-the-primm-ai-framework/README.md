@@ -23,7 +23,7 @@ By the end of this chapter, you will be able to:
 - Walk through a complete PRIMM-AI+ lesson cycle with a real Python program
 - Describe how AI coding assistants integrate into each PRIMM stage with clear boundaries and AI-free checkpoints
 - State the five PRIMM-AI+ rules and explain why each matters in the AI era
-- Map each PRIMM-AI+ stage to both a professional workflow step and a specific Ten Axiom
+- Map each PRIMM-AI+ stage to its professional workflow equivalent
 - Articulate the verification ladder from learning predictions to production observability
 - Identify the four teaching methods embedded within PRIMM-AI+ and where each fits in the learning sequence
 
@@ -32,7 +32,7 @@ By the end of this chapter, you will be able to:
 | # | Lesson | Key Focus |
 |---|--------|-----------|
 | 1 | [The PRIMM Framework](the-primm-framework) | The research-validated method: five stages demonstrated with real Python code, and why comprehension is the bottleneck skill of 2026 |
-| 2 | [PRIMM-AI+: Your Learning Operating System](primm-ai-plus-your-learning-operating-system) | AI roles at each stage, AI permissions, AI-free checkpoints, mastery gates, the verification ladder, confidence scoring, and the connection to the Ten Axioms and professional practice |
+| 2 | [PRIMM-AI+: Your Learning Operating System](primm-ai-plus-your-learning-operating-system) | AI roles at each stage, AI permissions, AI-free checkpoints, mastery gates, the verification ladder, confidence scoring, and the connection to professional practice |
 | 3 | [The Complete Teaching and Learning System](the-complete-teaching-and-learning-system) | The four embedded teaching methods, classroom vs. solo mode, practical lesson architecture, and how every chapter follows PRIMM-AI+ |
 
 ## Prerequisites
@@ -46,4 +46,4 @@ This chapter contains Python code examples. **You are not expected to understand
 
 ## What This Chapter Is Not
 
-This chapter teaches you *how you will learn*. The next chapter (Chapter 31: Ten Axioms) teaches *what professional practice looks like*. Together they form the complete system — the developer's comprehension and the software's correctness. PRIMM-AI+ is the learning operating system. The Ten Axioms are the first application that runs on it.
+This chapter teaches you *how you will learn*. The next chapter (Chapter 31: Ten Axioms) teaches *what professional practice looks like*. Together they form the complete system: your learning method and the professional standards you will apply it to.
