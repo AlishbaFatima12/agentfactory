@@ -19,7 +19,7 @@ This chapter introduces the pedagogical framework that governs all programming i
 By the end of this chapter, you will be able to:
 
 - Explain the five stages of PRIMM and why they are sequenced in that order
-- Describe the research basis for PRIMM and its grounding in sociocultural learning theory
+- Describe the research basis for PRIMM (493 students, 13 schools, tested and validated)
 - Walk through a complete PRIMM-AI+ lesson cycle with a real Python program
 - Describe how AI coding assistants integrate into each PRIMM stage with clear boundaries and AI-free checkpoints
 - State the five PRIMM-AI+ rules and explain why each matters in the AI era
