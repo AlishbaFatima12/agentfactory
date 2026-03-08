@@ -360,19 +360,19 @@ When something goes wrong during Investigate or Modify, glance at this table. Ev
 
 ## From Learning to Professional Practice
 
-Each PRIMM-AI+ stage maps directly to a step in the professional AI-assisted development workflow you will use in Parts 5 and 6:
+The habits you build with PRIMM-AI+ do not disappear when you finish this book. They are the same habits professional developers use every day -- just applied at a larger scale. Here is what each habit looks like when you are learning versus when you are working professionally:
 
-| PRIMM-AI+ Stage | Professional Equivalent | What Changes at Scale |
+| PRIMM-AI+ Stage | What You Do While Learning | What Professionals Do With the Same Habit |
 |---|---|---|
-| **Predict** | Write the specification | You define expected behavior before any code exists |
-| **Run** | Generate and execute | AI generates code from your spec; you run it against tests |
-| **Investigate** | Review the output | You examine generated code for correctness, security, and maintainability |
-| **Modify** | Refine iteratively | You adjust the spec or the code based on what the review revealed |
-| **Make** | Ship to production | You deliver a complete, tested, documented solution |
+| **Predict** | Read existing code and predict what it will output before running it | Read AI-generated code and predict whether it is correct before trusting it |
+| **Run** | Run the code and compare the output to your prediction | Run automated tests and compare the results to expected behavior |
+| **Investigate** | Trace variables and ask questions about how the code works | Review code for bugs, security issues, and maintainability |
+| **Modify** | Change an existing program to add a feature or fix a problem | Refine code iteratively based on what the review revealed |
+| **Make** | Write a new program from a specification you created | Build and deliver a complete, tested solution from requirements |
 
-By the time you finish Parts 4 and 5, the Predict habit will be automatic. You will write specifications before asking AI to generate code -- not because a rule says so, but because you will have practiced prediction hundreds of times and internalized the pattern. The Investigate instinct will be second nature. You will read AI-generated code with the same critical eye you developed tracing through the walkthrough programs in this chapter. The Modify skill will be well-practiced. You will refine iteratively, improving code in stages rather than expecting perfection on the first attempt.
+The key insight: Predict always means the same thing -- **read the code, form an expectation, then check whether you are right.** While learning, you predict what a program will print. As a professional, you predict whether AI-generated code is correct. The habit is identical. The stakes grow.
 
-PRIMM-AI+ is not a temporary training wheel. It is the permanent operating system for working with AI.
+By the time you finish Parts 4 and 5, these habits will be automatic. You will read AI-generated code with the same critical eye you developed tracing through the walkthrough programs in this chapter. You will refine iteratively, improving code in stages rather than expecting perfection on the first attempt.
 
 ---
 
