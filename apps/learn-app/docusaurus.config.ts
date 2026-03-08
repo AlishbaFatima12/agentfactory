@@ -128,6 +128,15 @@ const config: Config = {
         href: "/apple-touch-icon.png",
       },
     },
+    // Prevent browser auto-translate popup (Chrome, Edge, etc.)
+    // The site has its own translation system — browser translation causes layout issues.
+    {
+      tagName: "meta",
+      attributes: {
+        name: "google",
+        content: "notranslate",
+      },
+    },
     // Font Awesome - non-render-blocking load with preload
     {
       tagName: "link",
