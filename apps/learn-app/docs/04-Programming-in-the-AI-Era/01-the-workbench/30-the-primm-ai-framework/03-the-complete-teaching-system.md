@@ -212,4 +212,4 @@ compare notes.
 
 ## Looking Ahead
 
-You now know how you will learn. You know the five stages, the structural safeguards, the four teaching methods, and the lesson architecture. The next chapter introduces what professional practice looks like -- the Ten Axioms of AI-Driven Development. You will experience those axioms through the PRIMM-AI+ lens: predicting what professional code should look like, investigating why each axiom matters, and eventually building programs that embody them.
+You now know how you will learn. You know the five stages, the structural safeguards, the four teaching methods, and the lesson architecture. The next chapter introduces the principles that guide professional AI-driven development. You will experience those principles through the PRIMM-AI+ lens: predicting what professional code should look like, investigating why each principle matters, and eventually building programs that embody them.
