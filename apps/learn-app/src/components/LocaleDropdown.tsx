@@ -11,7 +11,7 @@ import { Globe } from "lucide-react";
 import { getLocaleUrl } from "@/utils/getLocaleUrl";
 
 export function LocaleDropdown() {
-  const {i18n} = useDocusaurusContext();
+  const {i18n, siteConfig} = useDocusaurusContext();
 
   const currentLocale = i18n.currentLocale;
 
@@ -22,6 +22,7 @@ export function LocaleDropdown() {
       targetLocale: locale,
       defaultLocale: i18n.defaultLocale,
       localeConfigs: i18n.localeConfigs,
+      baseUrl: siteConfig.baseUrl,
     });
     window.location.href = newPath + window.location.search + window.location.hash;
   };

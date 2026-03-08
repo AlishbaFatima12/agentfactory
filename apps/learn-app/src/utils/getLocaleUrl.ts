@@ -1,7 +1,7 @@
 /**
  * Pure function for locale URL computation.
- * Replaces Docusaurus's useAlternatePageUtils which computes
- * a double prefix (/ur/ur/) when building with BASE_URL="/ur/".
+ * Handles GitHub Pages baseUrl structure: /repo-name/[locale]/path
+ * Converts paths like /agent-factory-book/ → /agent-factory-book/ur/
  */
 export function getLocaleUrl({
   pathname,
@@ -9,17 +9,28 @@ export function getLocaleUrl({
   targetLocale,
   defaultLocale,
   localeConfigs,
+  baseUrl = '/',
 }: {
   pathname: string;
   currentLocale: string;
   targetLocale: string;
   defaultLocale: string;
   localeConfigs: Record<string, { path?: string }>;
+  baseUrl?: string;
 }): string {
   const currentPath = localeConfigs[currentLocale]?.path ?? currentLocale;
   const targetPath = localeConfigs[targetLocale]?.path ?? targetLocale;
 
-  let result = pathname;
+  // Remove trailing slash from baseUrl for consistent processing
+  const basePath = baseUrl.replace(/\/$/, '');
+
+  // Extract the part of pathname after the base path
+  let pathAfterBase = pathname;
+  if (basePath && pathname.startsWith(basePath)) {
+    pathAfterBase = pathname.slice(basePath.length) || '/';
+  }
+
+  let result = pathAfterBase;
 
   // Strip current locale prefix if not default locale
   if (currentLocale !== defaultLocale) {
@@ -40,5 +51,6 @@ export function getLocaleUrl({
     result = `/${targetPath}${result}`;
   }
 
-  return result;
+  // Reconstruct with base path
+  return basePath ? `${basePath}${result}` : result;
 }
