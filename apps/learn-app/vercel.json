@@ -3,11 +3,7 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/ur/((?!assets|static|img|favicon|search-index|sitemap).*)",
-      "destination": "/ur/index.html"
-    },
-    {
-      "source": "/((?!api|_next|static|favicon|img|assets|search-index|sitemap|ur/).*)",
+      "source": "/((?!api|_next|static|favicon|img|assets|search-index|sitemap).*)",
       "destination": "/index.html"
     }
   ],
