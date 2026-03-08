@@ -214,21 +214,23 @@ This mapping shows why both layers matter. Layer 1 covers the accounting and man
 
 **What you'll build:** A complete month-end close using sequenced plugin commands — from automated reconciliations through management accounts to variance analysis.
 
-**Requirements:** Cowork (Team or Enterprise plan), trial balance data in Excel or CSV, Claude Desktop. If you do not have your own data, [**download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and use `exercises/trial-balances/textile-manufacturer-tb.csv`.
+**Requirements:** Cowork (any Claude plan). [**Download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and add the full `exercises/` folder to your Cowork project. The zip includes the Crescent Textiles entity profile, June 2025 trial balance, May 2025 prior-month trial balance, bank statement with reconciling items, budget with variance drivers, and AR aging schedule — everything needed for a complete month-end close.
 
-1. Create a test folder in Cowork with a trial balance export (real or hypothetical). Set a global Cowork instruction:
+1. **Set context.** Create a Cowork project folder with the exercise data. Set a global instruction:
 
-   _"I am a management accountant at a manufacturing company. Our financial year runs January to December. We report monthly to the board. Our reporting currency is PKR. Variance analysis should compare actual vs. budget and actual vs. prior month."_
+   _"I am a management accountant at Crescent Textiles (Pvt) Ltd, a Pakistani textile manufacturer. Our financial year runs July to June. We report monthly to the board. Reporting currency is PKR (thousands). Variance analysis should compare actual vs. budget and actual vs. prior month. The exercise data folder contains our June 2025 year-end trial balance, prior month trial balance, bank statement, budget, AR aging, and entity profile."_
 
-2. Run the reconciliation commands: `/reconciliation bank` and `/reconciliation debtors`. Review the output. Confirm that the exceptions flagged are genuine exceptions — not matching errors or timing differences that resolve automatically.
+2. **Reconcile cash.** Ask Cowork to prepare a bank reconciliation using the bank statement and trial balance. Review the output — there are five reconciling items (three outstanding cheques, one deposit in transit, and bank charges not yet recorded in the GL). Confirm that the adjusted bank balance and adjusted GL balance agree.
 
-3. Run `/income-statement monthly` and `/variance-analysis monthly`. Review the variance analysis bridge. Ask Cowork: _"Which of these variances are within management control, and which are driven by external factors?"_
+3. **Reconcile receivables.** Ask Cowork to reconcile trade receivables using the AR aging schedule. Review the ECL assessment — does the allowance of PKR 1,200 thousand adequately cover the credit risk? The 91+ days bucket (Chase Up) and the quality dispute (Al-Fatah) are the items requiring your judgment.
 
-4. Ask Cowork to create a two-slide board update in PowerPoint: the P&L versus budget on slide 1, and the three key variance drivers with commentary on slide 2.
+4. **Produce management accounts with variance analysis.** Ask Cowork to prepare an income statement comparing June actuals vs. budget and vs. prior month, using the budget file and May trial balance. Review the variance bridge. Ask: _"Which of these variances are within management control, and which are driven by external factors?"_ The budget file includes root causes for the five largest variances — compare Cowork's analysis against those.
 
-5. Review the complete output: reconciliations, management accounts, variance analysis, and board slides. Note which elements required your professional judgment and which were fully automated. Write a brief specification for a monthly scheduled task that would automate steps 2 and 3 at each month-end.
+5. **Create board reporting.** Ask Cowork to produce a two-slide board update: the P&L versus budget on slide 1, and the three key variance drivers with commentary on slide 2.
 
-**Check your work:** You should have four outputs — two reconciliations, one income statement with variance analysis, and a two-slide board presentation. The key learning is identifying the boundary: the parts you reviewed and adjusted are where you added professional value. The rest was execution.
+6. **Identify the judgment boundary.** Review the complete output: reconciliations, management accounts, variance analysis, and board slides. Note which elements required your professional judgment (the ECL assessment, the variance root-cause commentary, the board narrative) and which were fully automated (the reconciliation arithmetic, the statement formatting, the variance calculations). Write a brief specification for a monthly scheduled task that would automate the mechanical steps at each month-end.
+
+**Check your work:** You should have five outputs — bank reconciliation, AR reconciliation, income statement with variance analysis, board presentation, and an automation specification. The bank reconciliation should balance to zero difference. The variance analysis should identify export revenue shortfall (PKR 20M, -5.9%) and raw material cost overrun (PKR 9M, -4.8%) as the two largest drivers. The key learning is the judgment boundary: everything you reviewed and adjusted is where you added professional value.
 
 :::tip Global Perspective
 **Pakistan (PKR):** The exercise uses PKR as the reporting currency. Management reporting under SECP's Code of Corporate Governance requires monthly board reporting for listed companies.
@@ -305,7 +307,6 @@ For each service:
 ```
 
 **What you are learning:** A plugin stack is not one-size-fits-all. The combination of plugins, commands, and global instructions should match your firm's service lines. Planning the stack before installing forces you to think about your practice as a system of workflows rather than a collection of tasks — the same shift from tactical to strategic that separates a practitioner from a practice leader.
-
 
 ## Flashcards Study Aid
 
