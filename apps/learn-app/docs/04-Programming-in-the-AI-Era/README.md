@@ -7,180 +7,209 @@ title: "Part 4: Programming in the AI Era"
 
 If AI can write code, why should you learn programming?
 
-It is the most common question in 2026. And the answer is counterintuitive: programming has become **more important, not less** -- but in a fundamentally different way.
+It is the most common question in 2026. And the answer is counterintuitive: programming has become **more important, not less** -- but what programming means has fundamentally changed.
 
-Traditional Python education teaches bottom-up: syntax first, verification last. *Python Crash Course* teaches features through projects, with testing arriving at Chapter 11. *Learning Python* devotes 1,270 pages to deep Python, with OOP starting at page 687. Both assume the bottleneck is producing code -- typing functions, loops, and classes from a blank page.
+Traditional Python education teaches bottom-up: syntax first, verification last. [Python Crash Course](https://www.oreilly.com/library/view/python-crash-course/9781098156664/) teaches features through projects, with testing arriving at Chapter 11. [Learning Python](https://www.oreilly.com/library/view/learning-python-5th/9781449355722/) devotes 1,270 pages to deep Python, with OOP starting at page 687. Both assume the bottleneck is producing code -- typing functions, loops, and classes from a blank page.
 
-AI eliminated that bottleneck. Tools like Claude Code, Cursor, and GitHub Copilot generate hundreds of lines of working code in seconds. The mechanical act of writing code is no longer the human's job. But someone must still **specify** what the code should do, and someone must **verify** that it does it correctly. The AI handles the process. You handle the input and the output.
+AI eliminated that bottleneck. Claude Code generates hundreds of lines of working code in seconds. The mechanical act of writing code is no longer the human's job. But someone must still define what the code should do, and someone must verify that it does it correctly. The AI handles the middle. You handle everything that matters.
+
+Part 3 used Claude Cowork to deploy agents without writing code. Part 4 switches to **Claude Code** -- your AI coding agent for the rest of the book. Every chapter, every exercise, and every project iteration uses Claude Code. Part 4 applies the Spec-Driven Development methodology from [Chapter 5](/docs/General-Agents-Foundations/spec-driven-development) to Python. The core teaching model is simple:
+
+- **INPUT: You write specifications** -- descriptions of what the code should do, using type labels and checks (tests). Then you prompt Claude Code to generate the implementation.
+- **OUTPUT: You verify the result** -- you run automated tools to prove the generated code is correct. You never accept output on faith.
+
+This workflow -- specify first, generate second, verify third -- is called **Test-Driven Generation (TDG)**, the Python-specific form of SDD.
+
+:::info The research behind this shift
+GitClear's 2025 analysis of 211 million lines of code from Google, Microsoft, Meta, and enterprise repositories found that code duplication quadrupled after widespread AI adoption, while refactoring dropped from 25% to under 10% of changes. Code generated fast, but revised just as fast -- 7.9% of newly added lines required changes within two weeks, up from 5.5% before AI tools. Separately, Qodo's State of AI Code Quality report found that 76% of developers using AI assistants fall into what researchers call the "red zone" -- frequent hallucinations paired with low confidence in shipping. The teams that escaped this pattern shared one trait: they used AI for testing and review, not just generation, and their confidence in code quality jumped from 27% to 61%. Speed without verification produces churn. Speed with verification produces software.
+:::
 
 This part inverts the traditional order. You learn to read before you write. You learn types before syntax. You learn testing before building. And you learn it all through a single method that defines programming in the AI era: **Test-Driven Generation (TDG)**.
 
+## Before You Begin
+
+Part 4 assumes no programming experience -- you do not need to have written code before. But it does build on skills from earlier parts of the book. If any of these are new to you, don't worry -- here's where to go first:
+
+- **Using a terminal** -- opening a terminal, navigating directories, running commands → [Part 2, Chapter 11](/docs/Applied-General-Agent-Workflows/linux-mastery)
+- **Driving Claude Code** -- writing clear prompts, evaluating responses, iterating → practiced throughout Parts 1 and 2
+- **Spec-Driven Development** -- writing specifications before code, the four-phase SDD workflow → [Chapter 5](/docs/General-Agents-Foundations/spec-driven-development) (required prerequisite)
+- **Version control basics** -- `git add`, `git commit`, `git push` → [Chapter 12](/docs/Applied-General-Agent-Workflows/version-control)
+- **Building something with Claude Code** -- directing Claude Code to create a working project → Part 2 projects
+
+:::note If you've never written a line of code
+That is exactly who Phase 1 is designed for. Chapter 31 walks you through every installation step with exact commands and expected output. Chapter 32 teaches you to read Python from scratch -- no prior syntax knowledge required. You will not be asked to write code until you can read it confidently. The course meets you where you are.
+:::
+
+## The New Workflow
+
 ```
 OLD:  Write syntax → Build things → Maybe test → Ship
-NEW:  Read code → Specify with types → Write tests → Prompt AI → Verify → Ship
+
+NEW:  Requirements → Types → Failing Tests → Generate → Verify & Iterate → Ship
 ```
 
-## How Every Python Feature Is Taught
+These six steps are not sequential phases you hand off and forget. They are a loop -- and AI is present throughout. What changes across the steps is who is driving. Here is the full loop at a glance -- if some terms are unfamiliar, the note box below the table explains each one:
 
-Every Python feature in this part follows a five-step progression:
+| Step | What happens | Who leads | AI role |
+|------|-------------|-----------|---------|
+| Requirements | Decide what you're building -- what it does, what it accepts, what it returns | Human | Assists: spots gaps, challenges assumptions |
+| Types | Describe your data and functions precisely -- labels that tell AI the shape of your code | Human | Assists: suggests structures, validates design |
+| Failing Tests | Write checks that define "correct" -- they fail because nothing is built yet | Human | Assists: suggests cases you missed |
+| Generate | AI writes the code to pass your checks | AI | Leads: produces full implementation |
+| Verify & Iterate | Run your checks, read failures, debug, refine, repeat until everything passes | Human | Assists: explains errors, refines output |
+| Ship | Save your work, automated pipeline verifies, deploy | Human | Assists: security review, changelog |
+
+The key insight: you never start from a blank page, and you never accept output blindly. You start with a requirement and end with a passing test suite. Everything in between is a collaboration -- but the specification and the verification are yours.
+
+:::note If you're new to programming
+Some of these terms may be unfamiliar. Here is what they mean in plain English:
+- **Types** are labels that describe what kind of data something is -- text, a whole number, a decimal, true/false. You will learn these in Chapter 32.
+- **A test** is a short piece of code that checks whether another piece of code does what you expect. Think of it as a checklist: "If I give it 100 and 15%, I should get 115."
+- **A failing test** is a test you write *before* the code exists. It fails because there is nothing to check yet. Then AI writes the code to make it pass. That is the core idea of TDG.
+- **pytest** is the tool that runs your tests automatically and tells you which passed and which failed.
+
+You do not need to memorize any of this now. Each term gets its own lesson with step-by-step explanations.
+:::
+
+## What "Writing Code" Means Now
+
+In the old model, writing code meant typing implementation -- functions, loops, conditionals -- from scratch. That skill still has value, but it is no longer the primary bottleneck or the primary skill.
+
+In the new model, writing code means three things:
+
+1. **Describing what you want precisely.** You write a clear description of what the code should accept and return -- its inputs, outputs, and data types. The more precise your description, the better AI's output.
+
+2. **Defining what "correct" means before AI writes anything.** You write checks (tests) that specify the expected behavior: "If I give it 100 and 15%, I should get 115." These checks become the requirement document AI implements against.
+
+3. **Verifying output critically.** AI optimizes for plausibility, not correctness. Your checks are the only reliable signal. When they fail, you diagnose why -- you do not re-prompt blindly. When they pass, you review for edge cases the checks may have missed.
+
+This is Test-Driven Generation (TDG) -- the method that defines programming in the AI era. Here is what the cycle looks like in plain English:
+
+1. You tell the computer: "I need a calculation that takes a price and a tax rate and gives me the total."
+2. You write two checks: "If the price is 100 and tax is 15%, the answer should be 115" and "If the price is 0, the answer should be 0."
+3. You ask AI to write the actual calculation.
+4. You run your checks. If they pass, the calculation is correct. If they fail, you debug and iterate.
+
+That is all TDG is -- describe what you want, write checks, let AI do the math, verify the answer. You will learn the syntax piece by piece starting in Chapter 32. By the time you reach Chapter 33 (Your First TDG Cycle), you will see this cycle in real Python code and every line will make sense.
+
+&nbsp;
+
+:::note If you've coded before
+If this reminds you of Test-Driven Development (TDD), you are right -- TDG is TDD with AI in the generation step. The difference: in TDD, you write the failing test and then write the implementation yourself. In TDG, you write the failing test and AI writes the implementation. Your job shifts from typing code to specifying precisely enough that AI gets it right on the first pass -- and verifying that it did.
+:::
+
+## What You Need to Be Able to Do This
+
+TDG requires a skill that the old model treated as optional: reading code fluently.
+
+You cannot write good type specifications if you cannot recognize good types when you see them. You cannot write good tests if you cannot trace what code does. You cannot verify AI output if you cannot read it critically.
+
+This is why Part 4 teaches you to read before it teaches you to specify. Not as a workflow step -- you do not read code each time you build a feature -- but as a foundational capability that makes every other step possible. A surgeon does not study anatomy during an operation. They studied it before ever entering the operating room. Reading code fluently is your pre-operative training.
+
+## How Every Chapter Is Structured
+
+Every Python feature in Part 4 follows a five-step progression that builds from reading to full TDG:
 
 1. **See it** -- AI generates code containing the feature
 2. **Read it** -- The lesson explains what it does and why
 3. **Predict it** -- "What will this output?" exercises build your mental model
-4. **Test it** -- You define expected behavior and verify test correctness with AI
-5. **Build it** -- You specify types and tests, prompt AI to implement, and verify the output
+4. **Test it** -- You define expected behavior with pytest and verify with AI assistance
+5. **Build it** -- You specify types and tests with AI assistance, prompt AI to implement, and verify the output
 
-Steps 4 and 5 are done **with AI**, not manually. Your job is to specify and verify -- never to type implementation from a blank page. "Writing code" in this course means defining types, writing test specifications, prompting AI, and verifying output.
+Steps 1--3 build your reading fluency. Steps 4--5 are the TDG cycle. By the end of Part 4, steps 4--5 feel as natural as steps 1--3 do now.
 
-## The Nine Phases
-
-Part 4 is organized into nine phases. Each phase gives you a new capability, and your role evolves from passive reader to full system architect. Your ability to specify what you want from AI grows with each phase.
-
-### Phase 1: The Workbench (Read + Verify)
-
-> Your role: **Reader** -- "I can understand what AI generates"
-
-Phase 1 establishes the foundation that every subsequent phase builds on. You install professional tools, learn to read typed Python, and experience the TDG cycle for the first time.
-
-**The Development Environment** installs the five-tool discipline stack -- uv, pyright, ruff, pytest, and Git. Before you write a single line of Python, you build the foundation that makes every line verifiable. By the end of this chapter, your SmartNotes project has a passing linter, a passing type checker, a passing test suite, and a clean Git history.
-
-**Reading Python** teaches you to read typed Python before you write it. Using the Predict-Run-Investigate method, you learn to recognize primitive types (`str`, `int`, `float`, `bool`), trace expressions by hand, read function signatures as contracts, distinguish runtime from static type checking, and perform your first code review on a real SmartNotes module.
-
-**Your First TDG Cycle** closes Phase 1 by giving you the complete Test-Driven Generation loop: Specify, Type, Test, AI Generates, Verify. You write your first test -- five lines that define a requirement -- prompt AI to implement the function that passes it, and run `pytest` to see green. Five lines of your code produce twenty lines of working implementation. This changes everything.
-
-### Phase 2: Types as the Language of Intent (Specify)
-
-> Your role: **Specifier** -- "I can tell AI precisely what to build"
-
-Phase 2 teaches the type system, data structures, and functions -- the vocabulary you need to specify precisely what AI should build.
-
-**Primitive Types and Expressions** teaches Python's type system as a specification language. `str`, `int`, `float`, `bool` -- along with string methods, arithmetic operators, f-string formatting, type conversions, and type narrowing -- all framed not as syntax to memorize but as contracts you write so AI knows what to build.
-
-**Collections** introduces typed containers: `list[str]` for ordered sequences, `dict[str, int]` for key-value mappings, `tuple[str, int, bool]` for fixed-size groups, and `set[str]` for unique collections. You learn indexing, slicing, mutability, nested collections, and when to use which structure -- all through the lens of type safety.
-
-**Data Models** introduces `@dataclass` and Pydantic `BaseModel` as specification tools. You model real domains -- Order, Customer, Product -- with typed data structures. Dataclasses handle internal data; Pydantic validates external boundaries. This chapter bridges to full OOP later -- dataclasses are simplified classes.
-
-**Functions as Contracts** reframes functions as specifications. A function signature IS a contract: inputs, output, and what it promises. You learn type annotations on parameters and return values, default values, `*args` and `**kwargs`, pure functions, composition, scope, first-class functions, and docstrings as specification. TDG exercises have you writing signatures and tests while AI implements the body.
-
-### Phase 3: Tests as Specification (Verify)
-
-> Your role: **Verifier** -- "I can prove code is correct"
-
-Phase 3 gives you the power to define "correct." You learn control flow, master pytest, practice iterating on AI output, and design exception hierarchies.
-
-**Control Flow** teaches how code makes decisions and repeats. `if/elif/else` for branching, `match/case` for structural pattern matching, `for` loops for iteration, `while` loops for conditional repetition, `break`, `continue`, and truthiness. You predict which path code takes, trace loop execution, and test that every branch behaves correctly.
-
-**pytest Deep Dive** turns you into a specification author. Arrange-Act-Assert structure, fixtures for reusable setup, `@pytest.mark.parametrize` for testing many cases from one function, `pytest.raises` for testing exceptions, coverage measurement, and test organization. By the end, you write complete test suites (20-40 lines) that serve as specifications for AI to implement against.
-
-**Iterating on AI Output** teaches the feedback loop that makes TDG effective. You evaluate AI output against your specifications, identify failures, refine prompts with more specificity and examples, and iterate until tests pass. You build the "verify before trust" habit that separates effective AI collaboration from blind acceptance.
-
-**Error Handling and Exceptions** teaches you to anticipate failures. `try/except/else/finally`, the built-in exception hierarchy, raising and chaining exceptions, custom exception classes, context managers, Pydantic validators for boundary data, and testing error paths with `pytest.raises`. You design exception hierarchies and write error-path tests before AI implements the handling.
-
-### Phase 4: Debugging and TDG Independence (Debug + Master)
-
-> Your role: **Debugger** -- "I can debug AI output and drive TDG independently"
-
-Phase 4 is the checkpoint between learning and mastery. When AI-generated code fails your tests, you need to diagnose WHY -- not just re-prompt blindly. This phase teaches systematic debugging and consolidates TDG into an independent practice you own completely.
-
-**Debugging AI-Generated Code** teaches you to read tracebacks, use `print()` debugging and `breakpoint()` strategically, recognize common AI mistakes (off-by-one errors, wrong scope, missed edge cases), and follow the debugging loop: reproduce, isolate, identify, fix, verify. You develop judgment about when to re-prompt AI versus fix the code manually.
-
-**TDG Mastery** brings everything together into an independent cycle you drive without scaffolding. Starting from a problem statement, you define types, write comprehensive tests (happy path + edge cases), prompt AI effectively, review output critically, debug failures, and iterate until the full verification stack passes. This is the chapter where you stop following instructions and start owning the process.
-
-### Phase 5: OOP -- The Python Object Model (Model)
-
-> Your role: **Modeler** -- "I can design systems for AI to implement"
-
-Phase 5 teaches object-oriented programming **after** testing and debugging mastery, so you can verify and debug every OOP concept you learn. The philosophy: composition first, inheritance when justified, protocols over abstract base classes, test every design decision.
-
-**Classes and Instances** progresses from dataclasses to full classes. The `class` statement, `__init__`, `self`, instance vs class attributes, methods, and the key decision: dataclass for data, class for behavior. You define class interfaces with types and tests, then prompt AI to implement.
-
-**Inheritance, Composition, and Design** teaches the relationships between objects. "Is-a" (inheritance) vs "has-a" (composition), method overriding, `super()`, abstract base classes, multiple inheritance and MRO. The design decision framework: when in doubt, choose composition. You design class hierarchies and write interface tests, then AI implements while you verify.
-
-**Special Methods and the Python Object Model** reveals how Python objects work under the hood. `__repr__`, `__str__`, `__eq__`, `__lt__`, `__len__`, `__getitem__`, `__iter__`, `__next__`, `__bool__`, `__hash__`, and the context manager protocol. You specify special method behavior through tests, then AI implements Pythonic objects.
-
-**Decorators, Properties, and Advanced Patterns** covers `@staticmethod`, `@classmethod`, `@property`, custom decorators, decorator arguments, `Protocol` for structural subtyping, dependency injection, and metaclasses (reference only). You architect patterns and verify -- the full advanced OOP toolkit.
-
-### Phase 6: Real-World Python (Architect + TDG)
-
-> Your role: **Practitioner** -- "I can spec real-world features via TDG"
-
-Phase 6 applies everything to real-world problems. By now, you have seen every Python feature dozens of times in AI output. Specifying it precisely feels natural.
-
-**Files, Data Processing, and PostgreSQL** teaches reading and writing text files with `pathlib`, JSON and CSV processing, binary files and encoding, processing pipelines, and error handling for I/O operations. When files are not enough, you graduate to PostgreSQL -- connecting with `psycopg`, creating tables, parameterized queries, and the repository pattern. You build data processing tools that start with JSON and graduate to a real database.
-
-**Modules and Packages** teaches code organization beyond single files. The `import` statement, creating modules and packages, `__init__.py`, relative vs absolute imports, `__name__ == "__main__"`, project structure conventions, and circular import resolution. You architect module structures and AI generates the scaffolding.
-
-**Comprehensions, Generators, and Functional Patterns** unleashes Python's expressive power for data transformation. List, dict, and set comprehensions, generator expressions for memory efficiency, `yield` and lazy evaluation, `map()`, `filter()`, `sorted()`, lambda functions, `functools`, and `itertools`. You specify transformation pipelines and compare AI versions for correctness and efficiency.
-
-### Phase 7: CLI and Concurrency (Build)
-
-> Your role: **Tool Builder** -- "I can build production CLI tools and async programs"
-
-Phase 7 takes you from working code to real tools. You build command-line applications and learn the async patterns that power modern Python.
-
-**Unix-Style CLI Tools** teaches professional command-line applications. `stdin`/`stdout`/`stderr`, argument parsing, exit codes, composable tools, environment variables, and packaging. You design the CLI interface and write integration tests, then AI implements the handlers.
-
-**Concurrency, async/await, and FastAPI** teaches concurrent execution for the real world where APIs, databases, and file I/O all block. Threading basics and the GIL, `async def` and `await`, the event loop, `asyncio.gather()`, async context managers, and when to use what. Then you put async to work with a FastAPI introduction -- one typed API endpoint with Pydantic request/response models, async handlers, and `TestClient` testing. This matters because FastAPI is async, agent SDKs are async, and MCP is async.
-
-### Phase 8: Production Systems (Ship + Secure)
-
-> Your role: **Shipping Engineer** -- "I can ship secure, tested, production-grade software"
-
-Phase 8 transforms working software into production software. You automate verification and review your code for security vulnerabilities.
-
-**CI/CD, Git Workflows, and Observability** automates verification and monitoring. Git branching and workflow, GitHub Actions CI pipeline, the verification pyramid (format, lint, type check, test, security), structured logging, health checks, and error tracking. The complete professional workflow: branch, code, test, CI, review, merge.
-
-**Security Review for AI-Generated Code** teaches you to systematically audit AI-generated code for vulnerabilities. AI optimizes for functionality, not security. You learn the OWASP Top 10 for Python (SQL injection, command injection, path traversal, insecure deserialization, hardcoded secrets), build a security review checklist, use tools like `bandit` and `pip audit`, and add security tests to your TDG cycle. This chapter makes you the human firewall that catches what AI misses.
-
-### Phase 9: Capstone (Prove)
-
-> Your role: **Architect** -- "I can architect and deliver complete systems"
-
-Phase 9 is proof. You develop professional judgment about AI, then build the complete SmartNotes application.
-
-**When Not to Use AI** develops the judgment that separates effective AI collaborators from dependent ones. You learn the AI assistance spectrum (fully manual to AI-generated), recognize when manual coding is faster than prompting, identify AI dependency warning signs, and practice the professional balance of knowing when to prompt, when to type, and when to read docs.
-
-**SmartNotes Capstone** completes **SmartNotes v1.0** -- the Personal AI Knowledge Base you have been developing since Phase 1, now fully integrated with AI-powered features. The capstone combines every skill: Markdown specifications, typed data models (dataclasses + Pydantic + classes), object-oriented design (inheritance, composition, protocols), PostgreSQL persistence, typed function composition, async/await for API and SDK calls, a `smartnotes` CLI tool, a FastAPI async API, AI integration (semantic search, auto-summarization via the Anthropic SDK), a pytest suite with 80%+ coverage, a security audit report, a GitHub Actions CI pipeline, and structured logging.
-
-**Deliverables**: Specification documents, type definitions, object model diagram, passing test suites, AI-generated and student-reviewed implementation, security audit, green CI pipeline, and a deployed SmartNotes application with CLI + API + AI features. One polished portfolio project that demonstrates every skill in the course.
+:::note If you're new to programming
+Notice that you *see* and *read* before you are asked to *do* anything. This is deliberate. You will not be thrown into writing tests or specifying types without first understanding what they look like and how they work. Every new concept is shown to you, explained, and practiced through prediction exercises before you use it yourself.
+:::
 
 ## The SmartNotes Project
 
-You do not build nine throwaway projects. You build **one real application** -- SmartNotes -- that grows with you across all nine phases. Each phase adds a layer that exercises that phase's core skills.
+**SmartNotes is a Personal AI Knowledge Base** -- your own note-taking tool that understands what you wrote. You save notes, tag and categorize them, search by meaning (not just keywords), and ask AI to summarize or connect ideas across notes. By the end of Phase 8, SmartNotes is a complete application with a command-line tool, a web API, a database, AI-powered search, and an automated pipeline that verifies every change -- a portfolio-grade project you built yourself.
 
-| Phase | SmartNotes Version | What You Build |
-|-------|-------------------|----------------|
-| 1 | v0.1: Explore | Read and annotate a pre-built prototype (~200 lines) |
-| 2 | v0.2: Type It | Typed data models, functions, and collections -- structure with no implementation |
-| 3 | v0.3: Prove It | Control flow + 30 passing tests with 90%+ coverage of the core domain |
-| 4 | v0.35: Debug It | Debug planted bugs, drive a full TDG cycle independently |
-| 5 | v0.4: Architect | Full object model with behavior, inheritance, protocols, decorators |
-| 6 | v0.5: Store It | PostgreSQL persistence, file import/export, proper package structure |
-| 7 | v0.6: Tool It | CLI tool + FastAPI async API with AI integration |
-| 8 | v0.8: Harden It | CI pipeline + security audit report |
-| 9 | v1.0: Complete | AI-powered semantic search, auto-tagging, summarization -- production-grade |
+You do not build nine throwaway exercises. You build SmartNotes once and grow it across Phases 1 through 8. Each phase adds a layer using the SDD workflow: you write the specification (types + tests), prompt Claude Code to generate the implementation, and verify the output. The project is the vehicle; TDG is the method. Phase 9 is different -- you build a completely new project from scratch to prove you can do it without scaffolding.
 
-Every exercise adds to the same project. Each phase produces a working, shippable version. By the end, you have one polished portfolio project that demonstrates typed Python, testing, OOP design, async APIs, security review, and AI integration -- not nine toy exercises.
+| Phase | What You Add to SmartNotes | What You Learn |
+|-------|---------------------------|----------------|
+| 1 | Read and annotate a pre-built prototype | Reading code, setting up tools, your first code review |
+| 2 | Data structures for notes, tags, and collections | Describing your data precisely so AI builds the right thing |
+| 3 | Decision logic + 30 automated checks that prove it works | Writing tests before code exists |
+| 4 | Find and fix planted bugs, then do a full cycle solo | Debugging and working independently |
+| 5 | Organize code into objects with real behavior | Designing systems, not just scripts |
+| 6 | Database storage, file import/export, project organization | Building production-grade features |
+| 7 | A command-line tool + a web API with AI integration | Shipping tools other people can use |
+| 8 | Automated pipeline that verifies every change + security audit | Making sure nothing breaks and nothing is vulnerable |
+
+Each phase produces a working version of SmartNotes. By the end of Phase 8, you have a polished, portfolio-grade project that demonstrates every skill you have learned. Then Phase 9 proves you can do it again -- on a brand-new project, from scratch, without guidance.
+
+## The Nine Phases
+
+Part 4 is organized into nine phases. Each phase gives you a new capability, and your role evolves from passive reader to full system architect. The TDG cycle runs through every phase -- what changes is how much of it you own and how deeply you can specify.
+
+:::note How long will this take?
+Each phase takes roughly 1-2 weeks at a few hours per day. The full Part 4 is designed for 3-5 months of steady practice. Some phases (1 and 4) are shorter; others (5 and 6) are longer because they cover more ground. Go at your own pace -- building a strong foundation matters more than speed.
+:::
+
+| Phase | Title | Your Role | Chapters |
+|-------|-------|-----------|----------|
+| 1 | [The Workbench](the-workbench) | Reader | Ch 30-33 |
+| 2 | [Specify with Types](specify-with-types) | Specifier | Ch 34-37 |
+| 3 | [Tests as Specification](tests-as-specification) | Verifier | Ch 38-41 |
+| 4 | [Debug & Master](debug-and-master) | Debugger | Ch 42-43 |
+| 5 | [The Python Object Model](the-python-object-model) | Modeler | Ch 44-47 |
+| 6 | [Real-World Python](real-world-python) | Practitioner | Ch 48-50 |
+| 7 | [CLI & Concurrency](cli-and-concurrency) | Tool Builder | Ch 51-52 |
+| 8 | [Production Systems](production-systems) | Shipping Engineer | Ch 53-54 |
+| 9 | [Capstone](capstone) | Architect | Ch 55-56 |
+
+**Deliverables**: SDD specification documents, type definitions, object model diagram, passing test suites, AI-generated and human-verified implementation, security audit, green CI pipeline, and a deployed QuizForge application with CLI, API, and AI features. You finish Part 4 with two portfolio-grade projects -- SmartNotes (guided) and QuizForge (independent) -- proving you can drive the complete TDG cycle at production scale.
 
 ## What You Will Be Able To Do
 
 By the end of Part 4, you will be able to:
 
-1. **Read and verify** AI-generated typed Python -- tracing expressions, interpreting annotations, reading function signatures, and reviewing modules critically
-2. **Specify with types** -- defining primitive types, typed collections, data models, functions as contracts, and control flow that tells AI precisely what to build
-3. **Prove code is correct** -- writing pytest suites that serve as requirement documents covering happy paths, edge cases, and error conditions
-4. **Debug AI output systematically** -- reading tracebacks, isolating failures, and fixing bugs rather than blindly re-prompting
-5. **Drive the TDG cycle** independently -- from problem statement through specification, types, tests, AI generation, verification, debugging, and iteration until green
-6. **Design object-oriented systems** -- classes, inheritance, composition, protocols, special methods, decorators, and properties -- modeling real domains that AI implements
-7. **Build production software** -- CLI tools, async APIs with FastAPI, PostgreSQL persistence, data processing pipelines, and modular package architecture
-8. **Ship secure software** -- CI/CD pipelines, security audits of AI-generated code, structured logging, and the full professional workflow from branch to merge
-9. **Exercise judgment about AI** -- knowing when to prompt, when to type manually, and when AI-generated code needs human security review
-10. **Architect complete systems** -- combining all skills to spec, build, test, secure, and ship a production-grade AI-powered application
+1. **Read AI-generated code critically** -- understand what it does, predict its output, and catch mistakes before they reach your project
+2. **Tell AI exactly what to build** -- write precise descriptions using Python's type system so AI generates what you actually want
+3. **Prove code is correct** -- write automated checks that define correct behavior and catch failures before users do
+4. **Debug when things go wrong** -- read error messages, find the root cause, and fix bugs instead of blindly re-prompting AI
+5. **Drive the full cycle independently** -- go from "I need this feature" to working, verified code without hand-holding
+6. **Design systems, not just scripts** -- organize code into objects and modules that model real domains and scale cleanly
+7. **Build real tools people can use** -- command-line applications, web APIs, and database-backed projects
+8. **Ship with confidence** -- automated pipelines that verify every change, plus security reviews that catch what AI misses
+9. **Know when NOT to use AI** -- recognize when manual coding is faster and when AI output needs human judgment
+10. **Architect complete applications** -- combine all skills to specify, build, test, secure, and ship a production-grade project
 
 ## What's Next
 
-After completing Part 4, continue to **Part 5: Building Custom Agents** where you apply your Python skills and axiom-grounded thinking to build production AI agents with SDKs like OpenAI Agents, Google ADK, and Claude Agent SDK. The async patterns you mastered in Phase 7, the typed interfaces you designed in Phase 5, the security review skills from Phase 8, and the testing discipline you built in Phase 3 feed directly into agent development.
+After completing Part 4, continue to **Part 5: Building Custom Agents** where you apply your Python skills and axiom-grounded thinking to build production AI agents with SDKs like OpenAI Agents SDK, Google ADK, and the Anthropic SDK. The async patterns you mastered in Phase 7, the typed interfaces you designed in Phase 5, the security review skills from Phase 8, and the testing discipline you built in Phase 3 feed directly into agent development.
 
-The transformation of software development is underway. You are not just learning a language. You are learning to direct and verify the AI systems that write it.
+The transformation of software development is underway. You are not just learning a language. You are learning to direct and verify the AI systems that write it. SmartNotes and QuizForge are the proof that you can.
+
+## Key Terms (60-Second Glossary)
+
+Refer back to this table whenever a term feels unfamiliar. You do not need to memorize anything now -- each term gets its own lesson with step-by-step explanation.
+
+<details>
+<summary>📖 Glossary</summary>
+
+| Term | Plain English |
+|------|--------------|
+| **Python** | A programming language -- the one you are learning in this part |
+| **Type** | A label that says what kind of data something is: text, whole number, decimal, or true/false |
+| **Type annotation** | A note in code that declares a variable's type, like `age: int = 25` (the `: int` part is the annotation) |
+| **Variable** | A named container that holds a value -- like a labeled jar |
+| **Function** | A reusable block of code with a name. You give it inputs, it gives you an output |
+| **Function signature** | The first line of a function that declares its name, inputs, and output type -- the contract |
+| **Test** | A short piece of code that checks whether another piece of code does what you expect |
+| **pytest** | The tool that runs your tests automatically and reports which passed and which failed |
+| **Pyright** | A tool that checks your type annotations and catches type mismatches before you run the code |
+| **Ruff** | A tool that checks code style and formatting -- like a spell-checker for code |
+| **uv** | The package manager that installs Python and your project's tools |
+| **Git** | A tool that tracks every change you make to your code, so you can undo mistakes and collaborate |
+| **SDD** | Spec-Driven Development -- write the specification first, then let AI generate the implementation (Chapter 5) |
+| **TDG** | Test-Driven Generation -- SDD applied to Python: your specification is types + tests, Claude Code generates, you verify |
+| **PRIMM** | Predict-Run-Investigate -- a method for reading code by predicting what it does before running it |
+| **Claude Code** | Your primary AI coding agent throughout Part 4 -- generates, explains, and reviews code based on your specifications |
+
+</details>
 
 Let's begin.

@@ -2,6 +2,9 @@
 
 Single API call to get all files, then builds a hierarchy of Parts > Chapters > Lessons.
 Cached in Redis with key "book_tree:v1" (no TTL, invalidated by admin endpoint / CI on git push).
+
+Some parts organise chapters into sections (Part > Section > Chapter > Lesson).
+Section folders are auto-detected by the presence of _category_.json at depth 2.
 """
 
 import json
@@ -9,6 +12,7 @@ import logging
 import re
 
 import httpx
+
 from api_infra.core.redis_cache import get_redis, safe_redis_get
 
 from ..config import settings
@@ -23,6 +27,27 @@ logger = logging.getLogger(__name__)
 
 CACHE_KEY = "book_tree:v1"
 DOCS_PREFIX = "apps/learn-app/docs/"
+
+
+def _detect_sectioned_parts(doc_paths: list[str]) -> set[str]:
+    """Auto-detect parts that use section folders.
+
+    A part is sectioned when it contains _category_.json at depth 2
+    (i.e. Part/Section/_category_.json), which Docusaurus requires for
+    sidebar grouping.  This avoids a hardcoded list that drifts.
+    """
+    sectioned: set[str] = set()
+    for path in doc_paths:
+        relative = path[len(DOCS_PREFIX) :]
+        segments = relative.split("/")
+        # Part/Section/_category_.json  →  3 segments
+        if (
+            len(segments) == 3
+            and segments[2] == "_category_.json"
+            and re.match(r"^\d+-", segments[1])
+        ):
+            sectioned.add(segments[0])
+    return sectioned
 
 
 def slug_to_title(slug: str) -> str:
@@ -54,12 +79,17 @@ async def build_book_tree() -> BookTreeResponse:
         logger.warning("[BookTree] No tree items from GitHub")
         return BookTreeResponse()
 
-    # Filter to docs directory
+    # Filter to docs directory (blobs only, but include _category_.json for detection)
     doc_paths = [
         item["path"]
         for item in tree_items
         if item["path"].startswith(DOCS_PREFIX) and item["type"] == "blob"
     ]
+
+    # Auto-detect which parts use section folders (Part > Section > Chapter > Lesson)
+    sectioned_parts = _detect_sectioned_parts(doc_paths)
+    if sectioned_parts:
+        logger.info("[BookTree] Sectioned parts detected: %s", sectioned_parts)
 
     # Build hierarchy
     parts: dict[str, PartMeta] = {}
@@ -74,8 +104,25 @@ async def build_book_tree() -> BookTreeResponse:
             continue
 
         part_slug = segments[0]
-        chapter_slug = segments[1] if len(segments) >= 3 else None
         filename = segments[-1]
+
+        # Determine chapter and (optional) section based on part structure.
+        # Sectioned parts: Part > Section > Chapter > Lesson (4+ segments)
+        # Other parts:     Part > Chapter > [SubSection] > Lesson (3+ segments)
+        if part_slug in sectioned_parts and len(segments) >= 4:
+            section_slug = segments[1]
+            chapter_slug = segments[2]
+        elif part_slug in sectioned_parts:
+            # 2-3 segment paths in sectioned parts are section-level files
+            # (e.g., README.md, _category_.json) — not chapters.
+            section_slug = None
+            chapter_slug = None
+        elif len(segments) >= 3:
+            section_slug = None
+            chapter_slug = segments[1]
+        else:
+            section_slug = None
+            chapter_slug = None
 
         # Only process .md/.mdx files (not directories)
         if not (filename.endswith(".md") or filename.endswith(".mdx")):
@@ -99,6 +146,8 @@ async def build_book_tree() -> BookTreeResponse:
             chapter = ChapterMeta(
                 slug=chapter_slug,
                 title=slug_to_title(chapter_slug),
+                section_slug=section_slug,
+                section_title=slug_to_title(section_slug) if section_slug else None,
             )
             part.chapters.append(chapter)
 

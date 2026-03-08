@@ -58,9 +58,9 @@ function HomepageHeader() {
 
             {/* Heading */}
             <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter text-foreground leading-[1.0] uppercase">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-foreground leading-[1.0] uppercase">
                 THE AI AGENT <br />
-                <span className="text-primary block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight mt-1">
+                <span className="text-primary block text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mt-1">
                   FACTORY
                 </span>
               </h1>
@@ -69,11 +69,18 @@ function HomepageHeader() {
                 <span className="text-foreground font-medium">
                   Spec-Driven Blueprint
                 </span>{" "}
-                for Building and Monetizing Digital FTEs. Full-Time Equivalent{" "}
+                for Building and Monetizing Digital FTEs&mdash;
                 <span className="text-foreground font-medium">
                   Reliable AI Agents
                 </span>{" "}
-                you can trust, deploy, and scale.
+                You Can Trust, Deploy, and Scale.
+              </p>
+              <p className="text-xs sm:text-sm text-muted-foreground/70 font-normal leading-[1.5] max-w-xl -mt-1 sm:-mt-2">
+                A practical framework for engineers, domain professionals
+                (accountants, finance managers, marketing professions, etc. ),
+                enterprise leaders, startup founders, product architects, and
+                operational teams building the next generation of AI-powered
+                organizations.
               </p>
             </div>
 
@@ -86,7 +93,7 @@ function HomepageHeader() {
                   className="h-11 sm:h-14 px-5 sm:px-8 text-sm sm:text-lg font-bold rounded-none bg-primary hover:bg-primary/90 text-primary-foreground transition-all"
                 >
                   <Link
-                    to="/docs/thesis"
+                    to="/docs/about"
                     className="flex items-center gap-2 sm:gap-3"
                   >
                     START READING{" "}
@@ -1026,7 +1033,7 @@ function FinalCTA() {
           className="h-14 px-8 text-lg font-semibold"
           asChild
         >
-          <Link to="/docs/thesis">Start Reading</Link>
+          <Link to="/docs/about">Start Reading</Link>
         </Button>
       </div>
     </section>
@@ -1089,7 +1096,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="The AI Agent Factory"
-      description="The Spec-Driven Blueprint for Building and Monetizing Digital FTEs. Full-Time Equivalent Reliable AI Agents you can trust, deploy, and scale."
+      description="The Spec-Driven Blueprint for Building and Monetizing Digital FTEs—Reliable AI Agents You Can Trust, Deploy, and Scale."
     >
       {/* Preload LCP image for faster paint */}
       <Head>

@@ -80,6 +80,11 @@ cognitive_load:
     - "git diff (comparing two snapshots side by side)"
     - "Three levels of undo (unstaged, staged, committed)"
   assessment: "6 concepts (at A1 limit) — merged from two lessons"
+
+differentiation:
+  extension_for_advanced: "Explore git log --oneline --graph to visualize branch history; experiment with interactive staging using git add -p to commit partial file changes"
+  remedial_for_struggling: "Focus on the three-step loop (edit → stage → commit) with a single file before attempting multi-file commits or any undo operations"
+
 teaching_guide:
   lesson_type: "core"
   session_group: 1

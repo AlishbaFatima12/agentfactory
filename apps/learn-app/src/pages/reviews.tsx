@@ -232,7 +232,7 @@ function CTASection() {
           size="lg"
           className="h-14 px-8 text-lg font-bold rounded-none bg-primary hover:bg-primary/90 text-primary-foreground"
         >
-          <Link to="/docs/thesis" className="flex items-center gap-3">
+          <Link to="/docs/about" className="flex items-center gap-3">
             START READING <ArrowRight className="w-5 h-5" />
           </Link>
         </Button>

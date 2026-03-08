@@ -1,0 +1,76 @@
+AI Impact Rank,Domain,Sub-categories,Gen-AI Use Cases,Agentic AI Use Cases,Real-World Disruptive AI and Emerging Agentic AI Examples,Practitioner-Level Implication,Service-Level Implication
+1,Accounting and Financial Reporting,"- Financial statement preparation; 
+- Accounting/ bookkeeping; 
+- Corporate reporting","Financial statement drafting; 
+Disclosure drafting; 
+Accounting research","Autonomous financial reporting agent; 
+Autonomous transactions recording agent","1) SAP Joule (AI-enabled ERP with emerging finance agents)
+SAP Joule represents one of the most advanced enterprise AI deployments in accounting. It can already analyze financial data, investigate variances, assist reconciliations, and guide close processes. While full autonomous financial reporting is still evolving, Joule establishes the foundational architecture for agentic finance functions where AI will progressively execute reconciliation, close, and reporting workflows with minimal human intervention.
+https://www.sap.com/products/artificial-intelligence/joule.html
+
+2) Oracle Fusion Cloud ERP AI and Agent Studio
+Oracle’s latest ERP platform embeds AI capable of assisting account reconciliation, anomaly investigation, and close management. Its Agent Studio introduces the capability to build autonomous workflow agents, signalling a transition from AI-assisted accounting to fully autonomous accounting operations. This represents one of the clearest pathways toward agentic financial reporting.
+https://www.oracle.com/artificial-intelligence/agent-studio/
+
+3) Numeric AI Close Platform (Autonomous-leaning financial close automation)
+Numeric uses AI to automatically analyze reconciliations, detect anomalies, and propose adjustments. While human approval remains required, this significantly reduces manual accounting workload and represents one of the closest real-world implementations of autonomous financial close agents.
+https://www.numeric.io/","Major reduction in reporting preparation roles; 
+shift to judgement","Fully automated reporting platforms; 
+subscription-based reporting services"
+2,Tax and Non-Assurance Advisory,"Tax compliance; 
+Tax advisory; 
+Corporate finance; 
+Restructuring","Tax research; 
+Tax computation; 
+Due diligence analysis","Autonomous tax compliance agent; 
+Due diligence agent; 
+restructuring simulation agent","1) Thomson Reuters CoCounsel (Advanced GenAI tax assistant transitioning toward agentic workflows)
+CoCounsel autonomously performs tax research, analyzes complex tax positions, and drafts memoranda. It significantly reduces tax advisory effort. However, final compliance execution still requires human intervention. It represents a major transition toward autonomous tax agents but is not yet fully agentic.
+https://tax.thomsonreuters.com/en/products/cocounsel
+
+2) PwC Agent OS (Internal agentic AI platform for professional services)
+PwC’s Agent OS is one of the first Big Four implementations of true agentic architecture. It enables autonomous execution of internal workflows including analysis, research, and advisory preparation. While still evolving, it represents a genuine early deployment of agentic AI within professional services.
+https://www.pwc.com/gx/en/issues/artificial-intelligence/agent-os.html
+
+3) Intuit Assist (AI-enabled tax automation platform)
+Intuit Assist significantly automates tax preparation, data gathering, and advisory support. While still primarily AI-assisted rather than autonomous, it demonstrates how tax compliance workflows are transitioning toward agentic automation.
+https://www.intuit.com/blog/ai/intuit-assist/",Significant decline in compliance-heavy tax roles,Tax automation software platforms replacing manual compliance
+3,Assurance Services,"External audit; 
+Internal audit; 
+Other assurance services","Audit documentation; 
+Contract analysis; 
+Risk identification and analysis","Autonomous audit agent; 
+Continuous audit agent","1) KPMG Clara (AI-enabled audit platform with agentic evolution pathway)
+KPMG Clara integrates AI to analyze entire populations of transactions, identify anomalies, and assist audit execution. While audit judgement and execution remain human-led, the platform establishes the technological foundation for future autonomous audit agents capable of continuous auditing.
+https://kpmg.com/xx/en/home/services/audit/clara.html
+
+2) MindBridge AI Audit Platform
+MindBridge uses AI to autonomously analyze financial transactions, identify anomalies, and flag potential risks. While it does not execute full audit procedures autonomously, it significantly transforms audit execution from manual testing to AI-driven analysis.
+https://www.mindbridge.ai/","Reduced junior audit workload; 
+shift to risk and judgement",Continuous audit platforms transforming audit delivery
+4,"Management Accounting and 
+Financial Management","FP&A; 
+Performance management; 
+Treasury","Variance analysis; 
+Budgeting; 
+Forecasting","Autonomous FP&A agent; 
+Autonomous forecasting agent","1) Pigment AI Financial Planning Platform
+Pigment integrates AI to automate financial forecasting, scenario modelling, and performance analysis. While still AI-assisted, it significantly reduces manual financial planning effort and represents a transition toward autonomous finance planning agents.
+https://www.pigment.com/
+
+2) Oracle AI Financial Planning
+Oracle integrates predictive AI into financial planning and forecasting processes, automating financial modelling and variance analysis. This represents a foundational stage toward autonomous FP&A agents.
+https://www.oracle.com/performance-management/","Reduction in analyst roles; 
+shift to strategic finance",Highly automated finance function requiring fewer staff
+5,"Governance, Risk and Compliance (GRC) Advisory","Governance advisory; 
+Risk management; 
+Internal controls; 
+Compliance management advisory","Policy drafting; 
+Risk assessment; 
+Compliance reporting","Continuous controls monitoring agent; 
+Autonomous compliance agent","1) ServiceNow AI Agents (One of the closest current examples to true agentic GRC)
+ServiceNow AI agents autonomously monitor transactions, identify incidents, open cases, and initiate investigation workflows. This represents one of the clearest current implementations of agentic AI in governance and compliance.
+https://www.servicenow.com/products/now-assist.html
+2) IBM Watsonx Governance
+Watsonx Governance enables automated monitoring, compliance analysis, and governance workflows using AI. While still evolving toward full autonomy, it represents one of the most advanced governance AI platforms currently deployed.
+https://www.ibm.com/products/watsonx-governance",Shift from manual compliance testing to oversight,Continuous compliance monitoring platforms

@@ -53,6 +53,20 @@ Every error becomes a rule. Review relevant sections before starting work.
 
 ---
 
+### 2026-03-03 Chapter 19: Phantom Component Imports
+
+**Error**: content-implementer subagent added `import Flashcards from '@site/src/components/Flashcards'` and `import Quiz from '@site/src/components/Quiz'` to 10+ lesson files. These components DO NOT EXIST. Broke Vercel build.
+
+**What went wrong**:
+- Subagent hallucinated React component imports for Flashcards and Quiz
+- Flashcards are actually YAML sidecar files (`.flashcards.yaml`) processed at build time, NOT React components
+- Quizzes use the `/quiz-generator` skill to produce standalone content, NOT an imported `<Quiz>` component
+- No other chapter in the book uses these imports (confirmed by grep)
+
+**Rule**: NEVER add `import` statements for `@site/src/components/Flashcards` or `@site/src/components/Quiz`. These components do not exist. Flashcards = `.flashcards.yaml` sidecar files. Quizzes = generated via `/quiz-generator` skill. If unsure whether a component exists, `ls apps/learn-app/src/components/` first.
+
+---
+
 ### Content Quick Reference
 
 - Confusing chapter and part numbers → `ch 11` ≠ `part 4` (always `ls -d` to discover)
@@ -63,6 +77,7 @@ Every error becomes a rule. Review relevant sections before starting work.
 - Skipping full YAML frontmatter → Missing skills, learning objectives
 - Minimal "Try With AI" sections → Quality degradation
 - Multi-line description in agent YAML → Tool parsing breaks
+- Adding `import` for non-existent components → Build failure (Flashcards/Quiz are NOT React components)
 
 ---
 

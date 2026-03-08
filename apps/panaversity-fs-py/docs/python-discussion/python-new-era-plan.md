@@ -1,6 +1,6 @@
 # Python for the New AI Era: Course Architecture Plan
 
-**Version:** 2.8
+**Version:** 2.12
 **Status:** Draft
 **Date:** 2026-02-24
 **Branch:** `learn-python`
@@ -16,11 +16,13 @@ Traditional Python education teaches **bottom-up**: syntax first, verification l
 - *Python Crash Course* (Matthes, 2023) — teaches features through projects, testing arrives at Chapter 11
 - *Learning Python* (Lutz, 2025) — 1,270 pages of deep Python, OOP starts at Chapter 26 (page 687)
 
-This course inverts that order.
+This course inverts that order. **Claude Code is the primary development tool throughout Part 4**, and **[Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development) is a required prerequisite.** Students must understand the four-phase SDD workflow — Research, Specification, Refinement, Implementation — before entering Part 4. SDD provides the methodology; Part 4 applies it to Python.
 
-**Our approach**: Teach reading and verification first. "Writing" means specifying (types + tests) and verifying AI output — never typing implementation from a blank page.
+**The core teaching model**: The INPUT is Spec-Driven Development with Claude Code — students write specifications (types + tests) and prompt Claude Code to generate implementations. The OUTPUT is verifying and testing — students run pyright, pytest, and ruff to prove the generated code is correct. Students never type implementation from a blank page. They specify, generate, and verify.
 
-**Core belief**: A student who can read typed Python, write precise test specifications, and drive AI to correct implementations is more valuable in 2026 than one who memorized list comprehension syntax.
+**Our approach**: Teach reading and verification first. "Writing" means specifying (types + tests) and prompting Claude Code to implement — never typing implementation from a blank page.
+
+**Core belief**: A student who can read typed Python, write precise test specifications, and drive Claude Code through the SDD workflow to correct implementations is more valuable in 2026 than one who memorized list comprehension syntax.
 
 ---
 
@@ -31,21 +33,32 @@ This course inverts that order.
 | Dimension | Old Way (Matthes / Lutz) | New Way (AI Era) |
 |---|---|---|
 | **Starts with** | `print("Hello World")` | `uv init` + `pyproject.toml` |
-| **Core skill** | Memorize syntax | Define specifications |
+| **Core skill** | Memorize syntax | Define specifications via SDD with Claude Code |
 | **Testing** | Chapter 11 (afterthought) | Chapter 3 (foundational) |
 | **Types** | Optional / "dynamic typing interlude" | Non-negotiable from line 1 |
 | **OOP** | Part VI, 7 chapters of theory-first | Integrated: dataclasses early, full OOP after testing mastery |
-| **Code authoring** | Student writes everything | Student specifies (types + tests), AI implements, student verifies |
+| **Code authoring** | Student writes everything | Student specifies (types + tests) via SDD, Claude Code implements, student verifies |
 | **First project** | Alien invasion game | Typed CLI tool with CI pipeline |
 | **"Done" means** | It runs | Types pass, tests pass, CI green |
-| **Entry point** | Writing from blank page | Reading AI-generated output |
+| **Entry point** | Writing from blank page | Reading Claude Code-generated output |
 
 ### The Inversion
 
 ```
 OLD:  Write syntax → Build things → Maybe test → Ship
-NEW:  Read code → Specify with types → Write tests → Prompt AI → Verify → Iterate → Ship
+NEW:  Requirements → Types → Failing Tests → Generate → Verify & Iterate → Ship
 ```
+
+Claude Code (the AI coding agent from Chapter 5's SDD workflow) is present at every step. What changes is who is driving:
+
+| Step | Who leads | AI role |
+|------|-----------|---------|
+| Requirements | Human | Assists: spots gaps, challenges assumptions |
+| Types | Human | Assists: suggests models, validates design |
+| Failing Tests | Human | Assists: suggests cases you missed |
+| Generate | AI | Leads: produces full implementation |
+| Verify & Iterate | Human | Assists: explains tracebacks, refines output |
+| Ship | Human | Assists: security review, changelog |
 
 ---
 
@@ -71,25 +84,57 @@ Every Python feature follows this 5-step progression:
 5. BUILD it   → Student specifies (types + tests) → prompts AI to implement → verifies and iterates (TDG cycle)
 ```
 
-**Critical principle**: Steps 4 and 5 are done WITH AI, not manually. The student's job is to **specify and verify**, never to write implementation from a blank page. "Writing" in the AI era means defining types, writing test specifications, prompting AI, and verifying output.
+**Critical principle**: Steps 4 and 5 are done WITH Claude Code using the SDD workflow from Chapter 5, not manually. The student's job is to **specify and verify**, never to write implementation from a blank page. "Writing" in the AI era means defining types, writing test specifications, prompting Claude Code via SDD, and verifying output. The INPUT is always a specification (types + tests); the OUTPUT is always verification (pyright + pytest + ruff).
 
 ### The Specification Sophistication Gradient
 
 Student specification ability increases across phases:
 
 ```
-Phase 1 (Ch 1-3):    Read + Understand          ← "I can read AI output"
-Phase 2 (Ch 4-7):    Specify with types          ← "I can tell AI what shape data has"
-Phase 3 (Ch 8-11):   Specify with tests          ← "I can define what correct means"
-Phase 4 (Ch 12-13):  Debug + master TDG          ← "I can debug AI output and drive TDG independently"
+Phase 1 (Ch 1-3):    Read & Explore (PRIMM)      ← "I can read, predict, and verify what AI generates"
+Phase 2 (Ch 4-7):    Specify with types          ← "I can tell AI precisely what to build"
+Phase 3 (Ch 8-11):   Specify with tests          ← "I can define correct and prove it"
+Phase 4 (Ch 12-13):  Debug & Master TDG          ← "I can diagnose failures and drive TDG without scaffolding"
 Phase 5 (Ch 14-17):  Design object models        ← "I can design systems for AI to implement"
-Phase 6 (Ch 18-20):  Architect components        ← "I can spec real-world features via TDG"
-Phase 7 (Ch 21-22):  Build CLI + async tools     ← "I can build production tools via TDG"
-Phase 8 (Ch 23-24):  Ship production systems     ← "I can ship secure, tested software via TDG"
-Phase 9 (Ch 25-26):  Full system architecture    ← "I can architect and deliver via TDG"
+Phase 6 (Ch 18-20):  Build production features   ← "I can specify and verify production-grade Python features"
+Phase 7 (Ch 21-22):  Deploy tools + async APIs   ← "I can build and ship production tools and async APIs"
+Phase 8 (Ch 23-24):  Harden & Secure             ← "I can harden, secure, and ship production-grade software"
+Phase 9 (Ch 25-26):  Full system architecture    ← "I can architect and deliver complete, production-grade systems"
 ```
 
 By Phase 6, students have seen every Python feature 50+ times in AI output. Specifying it precisely for AI feels natural, not forced.
+
+### Pacing and Cognitive Load: The TDG Anchor Rule
+
+The scope of Part 4 is ambitious — from basic types in Phase 1 to async APIs and CI/CD pipelines in Phases 7-8. Without deliberate scaffolding, beginners will feel overwhelmed by the sudden influx of architectural concepts in later phases.
+
+**The rule**: Phase 4 (TDG Mastery) is the anchor. After Phase 4, the TDG method never changes — only the problem domain grows. Every chapter from Phase 5 onward must open by connecting the new material back to the TDG cycle the student already owns:
+
+| Phase | New domain | TDG connection the chapter must make explicit |
+|-------|-----------|----------------------------------------------|
+| 5 | Objects and classes | "Same cycle, but now you specify class interfaces instead of function signatures" |
+| 6 | Files, databases, packages | "Same cycle, but now your tests verify I/O boundaries and data persistence" |
+| 7 | CLI tools, async/await, FastAPI | "Same cycle, but now your tests invoke CLI commands and async endpoints" |
+| 8 | CI/CD, security | "Same cycle, but now the pipeline runs your tests on every commit" |
+| 9 | Full system architecture | "Same cycle at system scale — QuizForge is a brand-new project proving you can drive TDG from scratch" |
+
+**Chapter author directive**: Each chapter in Phases 5-9 must include a short "bridge paragraph" in its opening that says, in effect: "You already know the TDG cycle. This chapter applies it to [new domain]. The method is the same — specify with types, write failing tests, generate, verify. The only thing that changes is what you are specifying." This prevents the cognitive cliff where students feel they are learning an entirely new approach when they are actually applying the same one to bigger problems.
+
+### The PRIMM Recall Directive
+
+PRIMM (Predict-Run-Investigate-Modify-Make) is introduced in Chapter 2 as the method for reading code. Every Phase 2+ chapter introduces new Python features that students encounter for the first time. A lightweight callout at the start of each chapter reinforces the PRIMM habit:
+
+**Chapter author directive**: Each chapter in Phases 2-4 must include a `:::tip` callout in its opening section (after the narrative hook, before the first teaching section) that says, in effect:
+
+```markdown
+:::tip Reading New Code? Use PRIMM
+When you encounter new Python syntax in this chapter, use the PRIMM method from Chapter 2:
+**Predict** what the code does before running it. **Run** it to check your prediction.
+**Investigate** any surprises. This works for every new concept you'll meet here.
+:::
+```
+
+By Phase 5, students will have internalized the method and the callout can be dropped or reduced to a single sentence. The goal is to make PRIMM a reflex, not a lesson to revisit.
 
 ---
 
@@ -114,6 +159,42 @@ Each chapter includes:
 - **"If you're new to programming" callouts**: Extra explanation of fundamentals
 - **"If you've coded before" callouts**: What's different in this approach
 
+### Dual-Track Callout Directive (Chapter Author Rule)
+
+Every lesson must include Docusaurus admonition callouts wherever terminology or concepts may confuse one audience. These are not optional polish — they are structural requirements for serving both tracks.
+
+**Format** (Docusaurus admonition syntax):
+
+```markdown
+:::note If you're new to programming
+A **virtual environment** is like a private toolbox for one project. The tools
+in one toolbox do not interfere with tools in another. You never need to manage
+this toolbox yourself -- uv creates it and keeps it organized automatically.
+:::
+
+:::note If you've coded before
+You may know Python as "dynamically typed." This course adds static type
+annotations checked by pyright in strict mode. The annotations are not optional
+documentation -- they are required guardrails. If you have written Python
+without types, the workflow here will feel different by design.
+:::
+```
+
+**When to add callouts:**
+
+| Trigger | Beginner callout | Experienced callout |
+|---------|-----------------|---------------------|
+| New terminology (e.g., "virtual environment", "type annotation", "assertion") | Plain-English analogy explaining the concept | Skip — they already know it |
+| Concept that contradicts prior experience (e.g., "types are required", "tests before code") | Skip — they have no prior experience to conflict with | Explain what is different and why |
+| Tool or workflow unfamiliar to both (e.g., TDG, PRIMM, uv) | Simple analogy | How it compares to tools/workflows they already know |
+| Complex code example with multiple new concepts | Break down each piece in plain English | Highlight what is Python-specific vs general programming |
+
+**Rules:**
+- At least one callout of each type per chapter (more in early phases, fewer in later phases)
+- Callouts should be 2-4 sentences — concise, not mini-lessons
+- Place callouts immediately after the concept they explain, not at the end of a section
+- Never let a technical term appear for the first time without either an inline explanation or a beginner callout
+
 ---
 
 ## 5. The Python Feature Map (Two Reference Books → Our Framing)
@@ -125,7 +206,7 @@ All traditional Python features are taught. The **framing changes**, not the con
 | Matthes Chapter | Traditional Framing | Our Framing | Our Chapter |
 |---|---|---|---|
 | Ch 1: Getting Started | Install Python, run a script | The professional workbench: uv, pyright, ruff, pytest | Ch 1 |
-| Ch 2: Variables & Types | Variables store data | Reading AI output: what `name: str = "Zia"` means | Ch 2, 4 |
+| Ch 2: Variables & Types | Variables store data | PRIMM method + reading types/expressions (variables only, no functions) | Ch 2, 4 |
 | Ch 3: Lists | Lists store sequences | Typed collections: what `list[str]` tells us about data | Ch 5 |
 | Ch 4: Working with Lists | Looping through lists | Iteration: how AI processes every item | Ch 8 |
 | Ch 5: If Statements | Conditional execution | Branch logic: predicting which path code takes | Ch 8 |
@@ -157,10 +238,15 @@ All traditional Python features are taught. The **framing changes**, not the con
 
 ## 6. The Technology Stack
 
+### The Primary Development Tool
+
+**Claude Code** is the AI coding agent used throughout Part 4. Students learned the SDD workflow with Claude Code in [Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development). In Part 4, that workflow becomes concrete: specifications are types and tests, Claude Code generates the implementation, and the discipline stack (below) verifies the output. The student's INPUT is always a specification delivered through SDD; the OUTPUT is always verification via types, tests, and linting.
+
 ### Non-Negotiable Tools (Every Chapter)
 
 | Layer | Tool | Purpose |
 |---|---|---|
+| **AI Coding Agent** | Claude Code | SDD workflow: generates implementations from specifications (Chapter 5 prerequisite) |
 | **Package Manager** | uv | Fast, reproducible environment management |
 | **Static Types** | Pyright (strict mode) | Catch type errors at edit time |
 | **Runtime Validation** | Pydantic v2 | Validate data at boundaries |
@@ -193,9 +279,22 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ## 7. Chapter Plan (26 Chapters, 9 Phases)
 
+### Onboarding Directive: Phase 1 Must Handle True Beginners
+
+Part 4 serves students who have completed Parts 1-3 (AI prompting, file processing, version control) but have **never written code**. The leap from "I can prompt Claude Code" to "I can write a failing pytest test" is real.
+
+**Required prerequisite**: [Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development). Students must understand the four-phase SDD workflow (Research → Specification → Refinement → Implementation) and Claude Code's native capabilities (Memory, Subagents, Tasks, Hooks) before entering Part 4. TDG is SDD applied to Python — specifications become types + tests, Claude Code generates the implementation, and the discipline stack verifies the output. Without Chapter 5, students lack the methodology that Part 4 assumes.
+
+**Phase 1 chapters (Ch 1-3) must:**
+
+1. **Show every command with expected output.** Never say "install uv" without showing the exact terminal command and what success looks like. Include common errors and fixes (wrong PATH, permission denied, Windows vs Mac differences).
+2. **Explain every tool before using it.** Before running `uv run pytest`, explain what pytest is and why it exists — in one sentence, not a lecture. A beginner callout can expand for those who need more.
+3. **Never assume terminal fluency beyond Parts 1-3.** Students can `cd`, `ls`, and run commands. They cannot debug environment issues, resolve PATH conflicts, or interpret cryptic error messages without guidance.
+4. **Make the first TDG cycle (Ch 3) feel small.** The student writes 5 lines (a type signature + 2 assertions). Claude Code writes 20. The ratio should feel empowering, not intimidating. Frame it as: "You already know how to tell Claude Code what you want via SDD. Now you are telling it with types and tests instead of English."
+
 ---
 
-### Phase 1: The Workbench (Read + Verify)
+### Phase 1: The Workbench (Read & Explore)
 
 > Student role: **Reader** — "I can understand what AI generates"
 
@@ -216,22 +315,41 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ---
 
-#### Chapter 2: Reading Python
+#### Chapter 2: Reading Python (The PRIMM Method)
 
-**Goal**: Student can read typed Python, predict behavior, and spot errors.
+**Goal**: Student learns the PRIMM method for reading code and applies it to simple typed Python — variables, types, arithmetic, and print only. No functions, no collections, no imports.
 
-- What is typed Python? (types as documentation for humans AND machines)
-- Primitive types: `str`, `int`, `float`, `bool`
-- Variables as labeled containers with type annotations
-- Reading expressions: `total: int = price * quantity`
-- Reading function signatures: `def greet(name: str) -> str:`
-- Predicting output: "What will this print?" exercises
-- Spotting type errors: "This function returns `str` but we need `int`"
-- How AI generates Python (demystifying the process)
-- Python's dynamic typing vs our typed discipline (Lutz Ch 6 reframed)
+**Design decision**: This chapter is standalone (not merged into Ch 1). It gives students a *taste* of Python through reading, not writing. It teaches the method (PRIMM) and the minimum Python needed to practice that method. Phase 2 covers every Python feature in depth — Chapter 2 does NOT attempt to teach Python comprehensively.
 
-**Student does**: Predicts output, annotates code, traces execution
+**What students CAN use** (taught in Ch 1 or introduced here):
+- Variables with type annotations: `name: str = "Zia"`
+- Four primitive types: `str`, `int`, `float`, `bool`
+- Arithmetic operators: `+`, `-`, `*`, `/`, `//`, `%`, `**`
+- String concatenation (`+`), repetition (`*`), f-strings
+- Boolean logic: `and`, `or`, `not`, comparisons
+- `print()` for output
+- Operator precedence (PEMDAS + Python extensions)
+
+**What students CANNOT use yet** (deferred to Phase 2+):
+- Functions (`def`, parameters, return, signatures)
+- Collections (`list`, `dict`, `tuple`, `set`)
+- Imports and modules
+- String methods (`.upper()`, `.split()`, etc.)
+- Control flow (`if/elif/else`, `for`, `while`)
+- Classes and dataclasses
+
+**Lessons**:
+
+1. **The PRIMM Method — Predict, Run, Investigate**: Introduces the formal method for reading code. Students practice Predict-Run-Investigate on 4 short code blocks (2-4 lines each) using only variables, types, and arithmetic. Establishes the habit: predict before running.
+
+2. **Trace Tables — When Your Brain Takes Shortcuts**: Teaches trace tables as the formal tool for tracking variable state line by line. Students build trace tables for 4-6 line blocks with variable reassignment. Catches the most common prediction error (using old variable values after reassignment).
+
+3. **Your First Code Review — Catching a Bug**: Capstone lesson. Students read a 15-20 line SmartNotes excerpt (variables, arithmetic, print only — no functions). They apply PRIMM and trace tables to find a deliberate type mismatch bug. Connects to Pyright: the tool catches what the student just found manually.
+
+**Student does**: Predicts output using PRIMM, builds trace tables, performs a mini code review
 **AI role**: Generates typed Python samples; student reads, predicts, and explains
+
+**Transition to Ch 3**: "You can read Python. You can predict what it does. You can even find bugs. In Chapter 3, you flip the script — instead of reading someone else's code, you write a specification and AI generates code for you. Then you verify it using the reading skills you just learned."
 
 ---
 
@@ -432,9 +550,9 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ---
 
-### Phase 4: Debugging and TDG Independence (Debug + Master)
+### Phase 4: Debugging and TDG Independence (Debug & Master)
 
-> Student role: **Debugger** — "I can debug AI output and drive TDG independently"
+> Student role: **Debugger** — "I can diagnose failures and drive TDG without scaffolding"
 
 **Why a debugging checkpoint?**: By Phase 3, students can write tests and verify code. But when AI output fails, they need to diagnose WHY. This phase teaches debugging as a systematic skill and consolidates TDG into an independent practice. Without this checkpoint, students hit a wall in Phase 5 (OOP) where AI errors are harder to trace.
 
@@ -485,7 +603,7 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ### Phase 5: OOP — The Python Object Model (Model)
 
-> Student role: **Modeler** — "I can design objects that model real domains"
+> Student role: **Modeler** — "I can design systems for AI to implement"
 
 **Why OOP gets its own phase**: Python is fundamentally object-oriented — everything is an object. Understanding the object model unlocks the language. But we teach it AFTER testing AND debugging mastery, so students can verify and debug every OOP concept they learn.
 
@@ -658,9 +776,11 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ---
 
-### Phase 6: Real-World Python (Architect + TDG)
+### Phase 6: Real-World Python (Build)
 
-> Student role: **Practitioner** — "I can spec real-world features via TDG"
+> Student role: **Practitioner** — "I can specify and verify production-grade Python features"
+
+Students already learned file processing and PostgreSQL in Part 2 — directing Claude Code to handle file operations, building a Budget Tracker with SQLAlchemy and Neon PostgreSQL, and managing Git workflows. That knowledge carries forward. Phase 6 builds on it by teaching the typed Python code underneath — the code that Claude Code was generating on their behalf — using TDG to specify, generate, and verify every layer.
 
 #### Chapter 18: Files, Data Processing, and PostgreSQL Introduction
 
@@ -752,9 +872,9 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ---
 
-### Phase 7: CLI and Concurrency (Build)
+### Phase 7: CLI and Concurrency (Deploy)
 
-> Student role: **Tool Builder** — "I can build production CLI tools and async programs"
+> Student role: **Tool Builder** — "I can build and ship production tools and async APIs"
 
 #### Chapter 21: Unix-Style CLI Tools
 
@@ -819,9 +939,11 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ---
 
-### Phase 8: Production Systems (Ship + Secure)
+### Phase 8: Production Systems (Harden & Secure)
 
-> Student role: **Shipping Engineer** — "I can ship secure, tested, production-grade software"
+> Student role: **Shipping Engineer** — "I can harden, secure, and ship production-grade software"
+
+Students already understand version control and CI concepts from Part 2 — they learned Git workflows, branching, PRs, and reviewing AI-generated code. Phase 8 builds on that foundation by teaching the professional engineering practices underneath: automated CI pipelines, structured logging, security auditing, and the complete verification pyramid.
 
 #### Chapter 23: CI/CD, Git Workflows, and Observability
 
@@ -904,52 +1026,55 @@ def calculate_total(items, tax_rate=0.0):  # No types = not allowed
 
 ---
 
-#### Chapter 26: SmartNotes Capstone — AI-Powered Application
+#### Chapter 26: QuizForge Capstone — AI-Powered Quiz Generator
 
-**Goal**: Student builds a complete, production-grade application using everything learned.
+**Goal**: Student builds a complete, production-grade application **from scratch** using everything learned — proving they can drive the full SDD/TDG cycle independently, without the SmartNotes scaffolding.
 
-**Project**: **SmartNotes** — the Personal AI Knowledge Base the student has been building since Phase 1, now fully integrated.
+**Project**: **QuizForge** — an AI-Powered Quiz Generator. Feed it any text (notes, chapters, documentation) and it generates quiz questions, tracks scores over time, identifies weak topics, and adapts difficulty automatically. This is a **new project**, not a continuation of SmartNotes. The student starts from a blank specification.
 
 | Component | Technologies | Chapters Applied |
 |---|---|---|
-| Problem Specification | Markdown, requirements | Ch 2, 3, 13 |
-| Data Models | Dataclasses, Pydantic, Classes | Ch 6, 14-15 |
-| Object Design | Inheritance, composition, protocols | Ch 15-17 |
-| Data Layer | PostgreSQL, repository pattern | Ch 18 |
-| Business Logic | Typed functions, composition | Ch 7, 20 |
-| Concurrency | async/await for API + SDK calls | Ch 22 |
-| CLI Interface | `smartnotes` CLI tool | Ch 21 |
+| Problem Specification | Markdown, requirements, SDD workflow | Ch 2, 3, 13 |
+| Data Models | `Question`, `Quiz`, `Score`, `Topic` — dataclasses + Pydantic | Ch 6, 14-15 |
+| Object Design | `QuestionBank`, `QuizEngine`, `ScoreTracker`, `DifficultyAdapter` | Ch 15-17 |
+| Data Layer | PostgreSQL — questions + performance history | Ch 18 |
+| Business Logic | Typed functions, difficulty adaptation, scoring | Ch 7, 20 |
+| Concurrency | async/await for AI SDK calls | Ch 22 |
+| CLI Interface | `quizforge` CLI tool | Ch 21 |
 | API Service | FastAPI (async) | Ch 22 |
-| AI Integration | Anthropic SDK (async) — semantic search, summaries | Ch 13, 22 |
+| AI Integration | OpenAI Agents SDK or Anthropic SDK — question generation, quality scoring | Ch 13, 22 |
 | Test Suite | pytest (80%+ coverage) | Ch 9, 13 |
 | CI Pipeline | GitHub Actions | Ch 23 |
 | Security Review | OWASP checklist, `bandit` | Ch 24 |
 | Observability | Structured logging | Ch 23 |
 
+**Key difference from SmartNotes**: Nobody tells the student what to build in each step. They receive the project requirements and drive the entire cycle — research, specification, types, tests, generation, verification, debugging, iteration — from start to finish.
+
 **Deliverables**:
-- Specification documents (Markdown)
+- SDD specification documents (Markdown)
 - Type definitions (dataclasses + Pydantic + classes)
 - Object model diagram (class relationships)
 - Test suites (passing, 80%+ coverage)
 - Implementation (AI-generated, student-reviewed)
 - Security audit report (student-conducted)
 - CI pipeline (green)
-- Deployed SmartNotes application with CLI + API + AI features
+- Deployed QuizForge application with CLI + API + AI features
+- **Two portfolio-grade projects**: SmartNotes (guided, Phases 1-8) + QuizForge (independent, Phase 9)
 
 ---
 
 ## 8. The Student Journey Summary
 
 ```
-Ch 1-3:    READER         → "I can read and understand AI-generated typed Python"
-Ch 4-7:    SPECIFIER      → "I can tell AI precisely what to build using types"
-Ch 8-11:   VERIFIER       → "I can prove code is correct with tests"
-Ch 12-13:  DEBUGGER       → "I can debug AI output and drive TDG independently"
-Ch 14-17:  MODELER        → "I can design object models for AI to implement"
-Ch 18-20:  PRACTITIONER   → "I can spec real-world features via TDG"
-Ch 21-22:  TOOL BUILDER   → "I can build production CLI tools and async programs"
-Ch 23-24:  SHIP ENGINEER  → "I can ship secure, tested, production-grade software"
-Ch 25-26:  ARCHITECT      → "I can architect and deliver complete systems via TDG"
+Ch 1-3:    READER         → "I can understand what AI generates"
+Ch 4-7:    SPECIFIER      → "I can tell AI precisely what to build"
+Ch 8-11:   VERIFIER       → "I can define correct and prove it"
+Ch 12-13:  DEBUGGER       → "I can diagnose failures and drive TDG without scaffolding"
+Ch 14-17:  MODELER        → "I can design systems for AI to implement"
+Ch 18-20:  PRACTITIONER   → "I can specify and verify production-grade Python features"
+Ch 21-22:  TOOL BUILDER   → "I can build and ship production tools and async APIs"
+Ch 23-24:  SHIP ENGINEER  → "I can harden, secure, and ship production-grade software"
+Ch 25-26:  ARCHITECT      → "I can architect and deliver complete, production-grade systems"
 ```
 
 ---
@@ -1038,7 +1163,7 @@ Ch 22 (Phase 7): FastAPI dependency injection → OOP applied to async services 
 | *Python Crash Course* (Matthes, 2023) | Reference for traditional Python feature coverage (beginner-friendly) |
 | *Learning Python* (Lutz, 2025) | Reference for deep OOP, object model, advanced patterns (1,270 pages) |
 | *The Lindy-AI Software Manifesto* v2.0 | Philosophical foundation and axioms |
-| Chapter 14: Ten Axioms of Agentic Development | Bridge chapter connecting principles to practice (start of Part 4) |
+| Chapter 30: Ten Axioms of Agentic Development | Bridge chapter connecting principles to practice (start of Part 4) |
 | Python 3.12+ documentation | Language reference |
 | Pyright documentation | Type checking rules |
 | pytest documentation | Testing patterns |
@@ -1460,20 +1585,20 @@ Students don't build nine throwaway projects. They build **one real application*
 
 ---
 
-#### Phase 9: Integrate & Polish (Ch 25-26) — "SmartNotes v1.0: Complete"
+#### Phase 9: Capstone — Prove (Ch 25-26) — "QuizForge: Built From Scratch"
 
-**Student role**: Architect — design and build complete systems
+**Student role**: Architect — design and build complete systems independently
 
 **What students build**:
-- Judgment about when to use AI vs write manually for SmartNotes features
-- Full AI-powered features: semantic search, auto-tagging, note summarization, related notes suggestions
-- Complete specification → implementation → verification cycle for a new feature
-- Performance optimization and refactoring
-- Documentation and deployment
+- Judgment about when to use AI vs write manually (Ch 25)
+- **QuizForge** — a brand-new AI-Powered Quiz Generator, built entirely from scratch without SmartNotes scaffolding (Ch 26)
+- Full SDD/TDG cycle driven independently: requirements → specification → types → tests → generation → verification → debugging → iteration
+- `quizforge` CLI tool + FastAPI async API + AI-powered question generation via OpenAI Agents SDK or Anthropic SDK
+- PostgreSQL persistence, 80%+ test coverage, CI pipeline, security audit
 
-**Deliverable**: Production-grade SmartNotes v1.0 — a portfolio-ready application demonstrating every skill in the course
+**Deliverable**: Production-grade QuizForge application — plus SmartNotes from Phases 1-8 — giving the student two portfolio-ready projects demonstrating every skill in the course
 
-### The SmartNotes Stack (Final)
+### The SmartNotes Stack (Phases 1-8)
 
 ```
 smartnotes/
@@ -1491,15 +1616,35 @@ smartnotes/
 └── README.md               # Project documentation
 ```
 
+### The QuizForge Stack (Phase 9 — Built From Scratch)
+
+```
+quizforge/
+├── pyproject.toml          # uv project
+├── src/quizforge/
+│   ├── models/             # Question, Quiz, Score, Topic
+│   ├── engine/             # QuizEngine, DifficultyAdapter
+│   ├── bank/               # QuestionBank, ScoreTracker
+│   ├── ai/                 # OpenAI Agents SDK or Anthropic SDK — question generation, quality scoring
+│   ├── storage/            # PostgreSQL — questions + performance history
+│   ├── api/                # FastAPI routes
+│   └── cli/                # quizforge CLI tool
+├── tests/                  # pytest suite, 80%+ coverage
+├── .github/workflows/      # CI pipeline
+├── security/               # Security audit report
+└── README.md               # Project documentation
+```
+
 ### Why This Works
 
-| Concern | How SmartNotes Addresses It |
+| Concern | How the Two-Project Approach Addresses It |
 |---|---|
-| "Exercises feel disconnected" | Every exercise adds to the same project |
+| "Exercises feel disconnected" | Phases 1-8: every exercise adds to SmartNotes |
 | "I never finish anything" | Each phase has a working, shippable version |
-| "Portfolio is empty" | One polished project > nine toy exercises |
-| "AI features feel bolted on" | Semantic search and summarization are core features |
-| "OOP feels abstract" | Notes, tags, collections ARE the domain objects |
+| "Can I do it alone?" | Phase 9: QuizForge from scratch proves independence |
+| "Portfolio is empty" | Two polished projects > nine toy exercises |
+| "AI features feel bolted on" | Both projects have AI as core feature |
+| "OOP feels abstract" | Notes, tags, questions, quizzes ARE the domain objects |
 | "Testing feels pointless" | Tests protect YOUR knowledge base from regressions |
 | "Security feels theoretical" | Students audit their own code for real vulnerabilities |
 | "I'm too dependent on AI" | Ch 26 explicitly teaches when NOT to use AI |
@@ -1520,7 +1665,7 @@ smartnotes/
 - [x] ~~Security chapter for AI-generated code?~~ → Resolved: Yes, Ch 24. OWASP-focused review of AI output, security testing, `bandit` tooling.
 - [x] ~~"When Not to Use AI" chapter?~~ → Resolved: Yes, Ch 25. Judgment about AI assistance spectrum, preventing AI dependency.
 - [x] ~~Split Production Systems phase?~~ → Resolved: Yes. Phase 7 (CLI + Concurrency) and Phase 8 (CI/CD + Security) — separate building from shipping.
-- [x] ~~Axioms at start vs end?~~ → Resolved: Keep at start. Chapter 14 (Ten Axioms) already exists and serves as the bridge from Part 3 into Part 4. No duplicate needed.
+- [x] ~~Axioms at start vs end?~~ → Resolved: Keep at start. Chapter 30 (Ten Axioms) already exists and serves as the bridge from Part 3 into Part 4. No duplicate needed.
 
 ---
 
@@ -1538,3 +1683,7 @@ smartnotes/
 | 2.6 | 2026-02-17 | AI-first philosophy applied throughout entire plan. Steps 4-5 of learning progression now explicitly done WITH AI. Renamed "Writing Gradient" to "Specification Sophistication Gradient". All chapter "Student writes/reads" lines replaced with "Student does/AI role" format reflecting TDG workflow. Phase 5 role renamed from "Writer" to "Practitioner". Exercise Type 5 "Build It" reframed from "no AI" to "full TDG ownership". "Build It Rule" rewritten. Student Journey Summary updated. |
 | 2.7 | 2026-02-20 | Folded SQL and FastAPI from standalone chapters into existing chapters per teacher directive. Ch 16 now includes PostgreSQL introduction (was separate Ch 18). Ch 20 (Concurrency) now includes FastAPI introduction (was separate Ch 22). Reduced from 25 to 23 chapters. Renumbered all cross-references: old Ch 19→18, 20→19, 21→20, 23→21, 24-25→22-23. Updated SmartNotes project phases, stack references, Syntax Cards count, exercise thread, and all section cross-references. Full SQL and FastAPI coverage deferred to later parts of the book. |
 | 2.8 | 2026-02-24 | Major restructuring from 23 chapters/7 phases to 26 chapters/9 phases. Added Phase 4: Debugging + TDG Mastery (Ch 12-13) — debugging checkpoint between testing and OOP. Split old Phase 6 into Phase 7 (CLI + Concurrency) and Phase 8 (CI/CD + Security). Added Ch 24: Security Review for AI-Generated Code (OWASP, bandit, security-focused TDG). Added Ch 25: When Not to Use AI (judgment, AI dependency prevention). Old Ch 10 (TDG Mastery) replaced with Ch 10 (Iterating on AI Output) and moved full TDG mastery to new Ch 13 in Phase 4. Renumbered OOP chapters (12-15 → 14-17), real-world chapters (16-18 → 18-20), production chapters (19-21 → 21-23). Kept axioms at start (Ch 14 already exists) — no duplicate axioms chapter. Updated all cross-references. |
+| 2.9 | 2026-02-24 | Aligned plan with Part 4 README changes. Updated workflow diagram to `Requirements → Types → Failing Tests → Generate → Verify & Iterate → Ship`. Added human/AI responsibility table showing who leads each step. Added Part 2 bridge acknowledgments to Phase 6 (file processing, PostgreSQL already covered in Part 2) and Phase 8 (Git workflows, CI concepts already covered in Part 2). |
+| 2.10 | 2026-02-24 | Synchronized all phase titles, role quotes, Specification Sophistication Gradient, and Student Journey Summary with the published Part 4 README. Phase titles now match README: Phase 1 "Read & Explore", Phase 4 "Debug & Master", Phase 6 "Build", Phase 7 "Deploy", Phase 8 "Harden & Secure". All 9 role quotes now identical between plan and README. |
+| 2.11 | 2026-03-04 | Added Claude Code + SDD emphasis throughout (Sections 1-3, 6-7). Chapter 5 as required prerequisite. INPUT/OUTPUT teaching model. |
+| 2.12 | 2026-03-05 | Replaced Phase 9 SmartNotes capstone with QuizForge — an AI-Powered Quiz Generator built from scratch. SmartNotes now runs Phases 1-8 (guided); Phase 9 is QuizForge (independent). Added QuizForge stack diagram. Updated "Why This Works" table for two-project approach. Students finish with two portfolio-grade projects. |

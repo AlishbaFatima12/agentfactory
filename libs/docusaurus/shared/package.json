@@ -2,6 +2,7 @@
   "name": "docusaurus-shared",
   "version": "1.0.0",
   "private": true,
+  "license": "UNLICENSED",
   "dependencies": {
     "yaml": "^2.7.1"
   }

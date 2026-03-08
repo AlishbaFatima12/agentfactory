@@ -97,6 +97,14 @@ Ali's competitor-tracker agent is running in production. It survived a reboot, r
 
 These exercises close that gap. Fourteen hands-on challenges across three tiers practice the skills that make Linux operations second nature: **server navigation** (finding your way around and reading what the system tells you), **infrastructure setup** (building production-ready deployments from scratch), and **systematic diagnosis** (finding root causes instead of blindly restarting). Every exercise puts you in Ali's shoes -- you direct Claude Code, read the output, and make decisions.
 
+:::info Download Exercise Files
+**[Download Linux Operations Exercises (ZIP)](https://github.com/panaversity/claude-code-linux-mastery-exercises/releases/latest/download/linux-mastery-exercises.zip)**
+
+After downloading, unzip the file. Each exercise has its own folder with an `INSTRUCTIONS.md` and starter files (simulated server output, broken configs, log files) you need.
+
+If the download link doesn't work, visit the [repository releases page](https://github.com/panaversity/claude-code-linux-mastery-exercises/releases) directly.
+:::
+
 ---
 
 ## How to Use These Exercises
@@ -446,6 +454,6 @@ The deployment "completed without errors" but three checks failed. What does thi
 
 ## What's Next
 
-You have practiced the three core skills -- **server navigation**, **infrastructure setup**, and **systematic diagnosis** -- across 14 exercises. These skills compound: every exercise makes Linux operations feel more instinctive, so when Ali's agent goes silent at 2am, you reach for the LNPS method instead of blindly restarting. Next in the **Chapter Quiz**, you will test your understanding of Linux concepts and deployment scenarios. The operations patterns you built here become the foundation for Chapter 13, where your agents deploy themselves.
+You have practiced the three core skills -- **server navigation**, **infrastructure setup**, and **systematic diagnosis** -- across 14 exercises. These skills compound: every exercise makes Linux operations feel more instinctive, so when Ali's agent goes silent at 2am, you reach for the LNPS method instead of blindly restarting. Next in the **Chapter Quiz**, you will test your understanding of Linux concepts and deployment scenarios. The operations patterns you built here become the foundation for the Project lesson, where your agents deploy themselves.
 
 <Flashcards />

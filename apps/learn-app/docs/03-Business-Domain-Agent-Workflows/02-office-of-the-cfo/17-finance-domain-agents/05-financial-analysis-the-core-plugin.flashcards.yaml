@@ -1,0 +1,67 @@
+deck:
+  id: "ch17-05-financial-analysis-core-plugin"
+  title: "Financial Analysis: The Core Plugin"
+  description: "Key concepts from the financial-analysis core plugin lesson -- install and verify, eight commands, data connectors, WACC, EV, LTM, LBO, comps/DCF interpretation, and verification discipline"
+  tags: ["financial-analysis", "core-plugin", "connectors", "WACC", "DCF", "LBO", "comps", "enterprise-value"]
+  version: 2
+
+cards:
+  - id: "ch17-05-01"
+    front: "Why must the financial-analysis core plugin be installed before any add-on in the financial-services-plugins suite?"
+    back: "Because all eleven data connectors are centralised in the core plugin. Add-on plugins inherit these connections -- without the core, add-ons have no data sources to work with."
+    tags: ["architecture", "install-order"]
+    difficulty: "basic"
+
+  - id: "ch17-05-03"
+    front: "What is the WACC formula, and why does a 1 percentage point increase in WACC significantly affect DCF output?"
+    back: "WACC = (E/V x Cost of Equity) + (D/V x Cost of Debt x (1 - Tax Rate)). A 1 percentage point increase in WACC typically reduces DCF equity value by 10-20% because WACC is the discount rate applied to all future cash flows -- small changes compound across every projection year and the terminal value."
+    tags: ["WACC", "DCF", "valuation"]
+    difficulty: "intermediate"
+
+  - id: "ch17-05-04"
+    front: "What is Enterprise Value (EV) and why is it used instead of market capitalisation in comparable company analysis?"
+    back: "EV = Market Cap + Total Debt + Preferred Stock + Minority Interest - Cash. EV is capital-structure-neutral -- two companies with identical operations but different debt levels have different market caps but similar EVs. Using EV allows fair comparison between differently leveraged businesses."
+    tags: ["EV", "enterprise-value", "comps"]
+    difficulty: "basic"
+
+  - id: "ch17-05-05"
+    front: "What does LTM stand for and how is it calculated?"
+    back: "LTM = Last (or Trailing) Twelve Months. Calculated as: Most Recent Annual Period + Most Recent Partial Period - Prior Year Comparable Partial Period. Used in comps so all companies are compared on the same timeframe regardless of fiscal year end."
+    tags: ["LTM", "comps", "financial-data"]
+    difficulty: "basic"
+
+  - id: "ch17-05-06"
+    front: "What are the key metrics in an LBO model and what are their typical targets?"
+    back: "Entry multiple (EV/EBITDA at purchase), exit multiple (EV/EBITDA at sale), IRR (annualised equity return, target 20-25%), and MOIC (total proceeds divided by equity invested, target 3-5x over 5 years). Debt typically funds 50-70% of the acquisition."
+    tags: ["LBO", "private-equity", "returns"]
+    difficulty: "intermediate"
+
+  - id: "ch17-05-07"
+    front: "Name the eight core plugin commands and briefly describe what each produces."
+    back: "/comps (comparable company analysis workbook), /dcf (DCF model with sensitivity tables), /lbo (leveraged buyout model), /3-statements (linked three-statement financial model), /competitive-analysis (market positioning analysis), /debug-model (financial model error report), /check-deck (pitch deck consistency review), /ppt-template (register firm's branded PowerPoint template)."
+    tags: ["commands", "core-plugin", "financial-modelling"]
+    difficulty: "intermediate"
+
+  - id: "ch17-05-08"
+    front: "What is the difference between commands and skills in the core plugin?"
+    back: "Commands are explicitly invoked by typing /command-name and trigger a specific workflow. Skills fire automatically in the background when Claude detects relevant context. For example, /comps produces a comps workbook when invoked, while the comps-analysis skill applies professional conventions automatically whenever comps-related context appears."
+    tags: ["commands", "skills", "architecture"]
+    difficulty: "basic"
+
+  - id: "ch17-05-09"
+    front: "What colour-coding convention does the /comps command use in its Excel output?"
+    back: "Blue cells for manually adjustable inputs, black cells for formulas, and green cells for output values (the multiples table and summary statistics). This follows the Wall Street professional convention for financial workbooks."
+    tags: ["comps", "Excel", "conventions"]
+    difficulty: "basic"
+
+  - id: "ch17-05-convergence-011"
+    front: "Why should you compare comps and DCF valuations, and what does divergence tell you?"
+    back: "Two methodologies should converge. Comps reflect current market sentiment (what peers trade at). DCF reflects projected cash flows (what you think the company is worth). When they diverge, the gap reveals different assumptions -- the professional skill is explaining the gap, not ignoring it."
+    tags: ["comps", "DCF", "valuation-comparison"]
+    difficulty: "intermediate"
+
+  - id: "ch17-05-verification-012"
+    front: "Why are /debug-model and /check-deck described as 'production discipline' rather than optional tools?"
+    back: "/debug-model catches formula errors (circular references, broken links, balance sheet imbalances) before they reach a client. /check-deck catches number inconsistencies between slides before they reach a committee. Building the habit of running verification after every model change separates reliable output from risky output."
+    tags: ["debug-model", "check-deck", "verification"]
+    difficulty: "intermediate"

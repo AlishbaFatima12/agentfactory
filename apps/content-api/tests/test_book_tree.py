@@ -93,14 +93,16 @@ class TestBuildBookTree:
 
                 result = await build_book_tree()
 
-        assert len(result.parts) == 2
+        assert len(result.parts) == 3
         assert result.parts[0].slug == "01-Foundations"
         assert result.parts[1].slug == "02-Advanced"
+        assert result.parts[2].slug == "03-Business-Domain-Agent-Workflows"
 
-        # Check chapters in first part
+        # Check chapters in first part (flat, no sections)
         part1 = result.parts[0]
         assert len(part1.chapters) == 2
         assert part1.chapters[0].slug == "01-intro"
+        assert part1.chapters[0].section_slug is None
         assert part1.chapters[1].slug == "02-basics"
 
         # Check lessons in first chapter
@@ -109,9 +111,23 @@ class TestBuildBookTree:
         assert ch1.lessons[0].slug == "01-welcome"
         assert ch1.lessons[1].slug == "02-setup"
 
+        # Check sectioned part (Part 3)
+        part3 = result.parts[2]
+        assert len(part3.chapters) == 2
+        assert part3.chapters[0].slug == "14-enterprise-agentic-landscape"
+        assert part3.chapters[0].section_slug == "01-foundations"
+        assert part3.chapters[0].section_title == "Foundations"
+        assert part3.chapters[1].slug == "15-enterprise-agent-blueprint"
+        assert part3.chapters[1].section_slug == "01-foundations"
+
+        # Lessons correctly assigned to sectioned chapters
+        assert len(part3.chapters[0].lessons) == 2
+        assert part3.chapters[0].lessons[0].slug == "01-origin-story"
+        assert len(part3.chapters[1].lessons) == 1
+
         # Verify totals
-        assert result.total_lessons == 5  # 2 + 1 + 2
-        assert result.total_chapters == 3  # 2 + 1
+        assert result.total_lessons == 8  # 2 + 1 + 2 + 2 + 1
+        assert result.total_chapters == 5  # 2 + 1 + 2
 
     @pytest.mark.asyncio
     async def test_build_tree_cache_hit(self):
