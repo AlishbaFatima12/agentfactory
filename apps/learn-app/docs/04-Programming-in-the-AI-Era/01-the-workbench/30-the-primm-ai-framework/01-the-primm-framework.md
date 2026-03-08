@@ -57,6 +57,8 @@ differentiation:
 
 # The PRIMM Framework
 
+James is a junior developer, three weeks into his first real job at a mid-sized e-commerce company. He works on the platform team — the group responsible for keeping the order management system running. His mentor is Emma, the team's senior engineer. She has been with the company for four years, built most of the backend infrastructure, and has a reputation for turning chaotic systems into clean ones. You will follow James and Emma throughout Parts 4 and 5 as James learns to program in the AI era and Emma guides him through each challenge.
+
 James watches his AI coding assistant generate fifty lines of Python in ten seconds. A function that parses JSON, validates fields, formats output, and returns a dictionary -- all syntactically correct, all ready to run. He copies it into his project and moves on to the next feature.
 
 Emma walks over and points at line twelve. "What does that line do?"

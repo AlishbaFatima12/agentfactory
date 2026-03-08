@@ -59,8 +59,6 @@ differentiation:
 
 The overview ended with a question: when an AI agent has access to a terminal, what should it actually do with it? This axiom's answer is simple — the terminal should *coordinate* work, never *do* the work itself. That sounds like a small distinction, until you are the one staring at line 247 of a broken script at 2am.
 
-James is a junior developer, three weeks into his first real job at a mid-sized e-commerce company. He works on the platform team — the group responsible for keeping the order management system running. His mentor is Emma, the team's senior engineer. She has been with the company for four years, built most of the backend infrastructure, and has a reputation for turning chaotic systems into clean ones.
-
 None of that mattered at 2:14am on James's first on-call rotation, when his phone buzzed: the deployment was stuck and 50,000 users were affected. He opened the deployment script — a 400-line file he had never seen — and stared at line 247. Variable names like `temp2` and `OUT` told him nothing. Somewhere above, a failed test should have stopped everything, but someone had removed that safety check three months ago and nobody noticed. The script kept running past broken tests, built a broken version of the app, and pushed it live.
 
 James called the senior engineer at 2:30am. "Yeah," Emma said. "That script breaks every few weeks. Nobody wants to touch it because everything is tangled together."
