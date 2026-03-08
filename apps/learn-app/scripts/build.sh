@@ -13,9 +13,24 @@ set -euo pipefail
 #
 # @docusaurus/faster flags (SWC + Lightning CSS) are enabled for speed.
 # rspackBundler is intentionally DISABLED — it leaks more memory per locale.
+#
+# Locales are discovered dynamically from docusaurus.config.ts — no hardcoding.
+# To add a new locale: register it in the config's i18n.locales array and run
+# `pnpm docusaurus write-translations --locale <code>`. The next build picks it up.
 
 # Change to learn-app directory (parent of scripts/)
 cd "$(dirname "$0")/.."
+
+# Cross-platform sharp fix: when building on Linux (WSL or CI) from a
+# Windows-installed node_modules, the linux-x64 sharp binary is missing.
+# Install it on-the-fly if not already present.
+if [ "$(uname -s)" = "Linux" ]; then
+  SHARP_LINUX_DIR=$(find ../../node_modules/.pnpm -maxdepth 1 -name '@img+sharp-linux-x64@*' 2>/dev/null | head -1)
+  if [ -z "$SHARP_LINUX_DIR" ]; then
+    echo "==> Installing sharp linux-x64 platform binary..."
+    pnpm add -w --save-optional @img/sharp-linux-x64 2>/dev/null || npm install --no-save @img/sharp-linux-x64 2>/dev/null || true
+  fi
+fi
 
 # Flashcard validation + Anki generation run via nx dependsOn (project.json)
 # before this script is invoked — no need to duplicate here.
@@ -33,7 +48,64 @@ fi
 
 export NODE_OPTIONS="$HEAP_SIZE $EXTRA_FLAGS"
 
-echo "==> Building locale: en (default)"
-npx docusaurus build --locale en
+# ---------------------------------------------------------------------------
+# Dynamically read locales from docusaurus.config.ts
+# Reads i18n.defaultLocale and i18n.locales so adding a new locale to the
+# config is the only change needed — this script requires no edits.
+# ---------------------------------------------------------------------------
+DEFAULT_LOCALE=$(node -e "
+const fs = require('fs');
+const src = fs.readFileSync('docusaurus.config.ts', 'utf8');
+const m = src.match(/defaultLocale:\s*[\"']([\w-]+)[\"']/);
+console.log(m ? m[1] : 'en');
+")
 
-echo "==> Build complete"
+ALL_LOCALES=$(node -e "
+const fs = require('fs');
+const src = fs.readFileSync('docusaurus.config.ts', 'utf8');
+// Match the locales: [...] array (handles both single-line and multi-line)
+const m = src.match(/locales:\s*\[([\s\S]*?)\]/);
+if (!m) { console.log(''); process.exit(0); }
+const tokens = m[1].match(/[\"']([\w-]+)[\"']/g) || [];
+console.log(tokens.map(t => t.replace(/[\"']/g, '')).join(' '));
+")
+
+echo "==> Detected locales: ${ALL_LOCALES}  (default: ${DEFAULT_LOCALE})"
+
+# Resolve the site-wide base URL (e.g. "/agent-factory-book/" on GitHub Pages, "/" on Vercel).
+# Strip the trailing slash so we can append locale paths cleanly.
+SITE_BASE="${BASE_URL:-/}"
+SITE_BASE="${SITE_BASE%/}"
+
+# ---------------------------------------------------------------------------
+# Build default locale
+# ---------------------------------------------------------------------------
+echo "==> Building locale: ${DEFAULT_LOCALE} (default)  [baseUrl=${SITE_BASE}/]"
+npx docusaurus build --locale "${DEFAULT_LOCALE}"
+
+# ---------------------------------------------------------------------------
+# Build each non-default locale in its own process, then merge into build/
+#
+# When building a single non-default locale separately, Docusaurus uses the
+# configured baseUrl for all asset and link references — it does NOT add the
+# locale path prefix automatically. We override BASE_URL so all generated URLs
+# (assets, docs, canonical) correctly reference <base>/<locale>/... paths.
+#
+# The locale build outputs files at the ROOT of its out-dir (not inside a
+# locale subdirectory). We copy them into build/<locale>/ so the server serves
+# them at /<base>/<locale>/ matching the links in the HTML.
+# ---------------------------------------------------------------------------
+for locale in ${ALL_LOCALES}; do
+  if [ "${locale}" = "${DEFAULT_LOCALE}" ]; then
+    continue
+  fi
+
+  echo "==> Building locale: ${locale}  [baseUrl=${SITE_BASE}/${locale}/]"
+  BASE_URL="${SITE_BASE}/${locale}/" npx docusaurus build --locale "${locale}" --out-dir "build-${locale}"
+
+  mkdir -p "build/${locale}"
+  cp -r "build-${locale}/"* "build/${locale}/"
+  rm -rf "build-${locale}"
+done
+
+echo "==> Build complete (all locales merged into build/)"
