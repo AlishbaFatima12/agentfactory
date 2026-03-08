@@ -144,7 +144,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What you do:** Change the program yourself. Add a feature, fix a limitation, extend the behavior. You write the modification first, then ask for feedback.
 
-**What the AI does:** After you modify, shows an alternative approach. Compares your version to the original. Explains tradeoffs between approaches. Can provide a minimal hint or targeted diff if you are stuck -- but not a complete rewrite. You might say: *"I rearranged the variables but the output order is wrong. What am I missing?"*
+**What the AI does:** After you modify, shows an alternative approach. Compares your version to the original. Explains tradeoffs between approaches. Can provide a minimal hint or point out the specific lines to change if you are stuck -- but not a complete rewrite. You might say: *"I rearranged the variables but the output order is wrong. What am I missing?"*
 
 **What the AI must NOT do:** Modify the code for you. The moment AI writes the modification, you are in Make territory without having done the cognitive work that Modify requires. Your hands produce the change; AI evaluates it afterward.
 
@@ -323,7 +323,7 @@ Emma pulls out a card with five rules printed on it. "Keep this next to your key
 
 These rules are operational discipline, not suggestions. Each one prevents a specific failure mode in AI-assisted learning.
 
-**Rule 1: Never run code you have not predicted.** This rule builds your mental compiler. Every time you predict before running, you strengthen the neural pathways that let you read code and understand it. Skip the prediction and you train yourself to depend on the Run button instead of your own reasoning.
+**Rule 1: Never run code you have not predicted.** This rule builds your mental compiler. Every time you predict before running, you train your brain to read code and understand it. Skip the prediction and you train yourself to depend on the Run button instead of your own reasoning.
 
 **Rule 2: Never trust an explanation you have not tested.** AI explanations can be confident and wrong. When AI says "this function returns X," run it and verify. This verification mindset transfers directly to professional practice -- senior engineers test assumptions, junior engineers trust documentation.
 

@@ -59,7 +59,7 @@ differentiation:
 
 James is new to programming. He has spent his career in a non-technical role, but his company is shifting toward AI-driven workflows and he needs to understand code — not just use tools that generate it. His mentor is Emma, a senior engineer who has spent years building backend systems and has a reputation for turning confused beginners into confident developers.
 
-On his first day of learning, Emma shows James an AI coding assistant. She types a prompt, and fifty lines of Python appear in ten seconds. A function that parses data, validates fields, formats output, and returns a result -- all syntactically correct, all ready to run.
+On his first day of learning, Emma shows James an AI coding assistant. She types a prompt, and fifty lines of Python appear in ten seconds. A program that reads data, checks whether it is correct, cleans it up, and gives back the result -- all working, all ready to run.
 
 "That's amazing," James says. "So the AI writes the code and I just use it?"
 
@@ -138,10 +138,10 @@ This program has four lines. Even if you have never seen Python before, you can 
 
 **What happens in your brain when you predict:**
 
-1. **Parsing structure.** You see three lines that store values (`name`, `greeting`, `message`) and one line that prints something. The word `str` after each colon tells you these values are text.
+1. **Reading the structure.** You see three lines that store values (`name`, `greeting`, `message`) and one line that prints something. The word `str` after each colon tells you these values are text.
 2. **Reasoning about sequence.** The program runs top to bottom. First it stores `"Amara"`, then it stores `"Welcome to the Agent Factory"`, then it glues them together with `+`, then it prints the result.
 3. **Building a mental model.** You construct a picture: the program will print one line that combines the greeting with the name.
-4. **Committing to an answer.** You write down (or say aloud) what you think the output will be. This commitment is critical -- a vague sense of "it probably prints a greeting" is not a prediction. A prediction is specific and falsifiable.
+4. **Committing to an answer.** You write down (or say aloud) what you think the output will be. This commitment is critical -- a vague sense of "it probably prints a greeting" is not a prediction. A prediction is specific and checkable — you can prove it right or wrong.
 
 Write your prediction now before reading further.
 

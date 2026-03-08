@@ -71,7 +71,7 @@ This lesson answers that question. It shows how four teaching methods -- worked 
 
 ## The Four Teaching Methods Inside PRIMM-AI+
 
-PRIMM-AI+ provides the sequence and the safeguards. These four methods provide the instructional moves used inside the sequence.
+PRIMM-AI+ provides the sequence and the safeguards. These four methods are the specific techniques used inside the sequence.
 
 ### Worked Examples: Predict and Investigate
 
