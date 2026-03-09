@@ -103,7 +103,6 @@ teaching_guide:
       expected_response: "Gen-AI capability: tax research — the AI synthesises tax law, case law, and rulings to answer a specific technical question and produce a structured memo. Agentic capability: autonomous tax compliance agent — the agent executes the full return preparation process (extracting data, applying rules, computing liability, preparing the return) with the human role limited to review and sign-off. The difference is that Gen-AI assists a specific task within a human workflow, while the agentic system executes the full workflow autonomously."
 ---
 
-
 # Domain 2 — Tax and Non-Assurance Advisory
 
 > _"The tax professional who says 'our AI handles your compliance, and I bring you the planning advice that no software can give you' is offering a better value proposition than the one who says 'we prepare your return.'"_
@@ -160,8 +159,8 @@ Three agentic systems are moving from prototype to production deployment.
 | Platform                      | What It Does                                                                                                   | Current Stage                                                                                                                                                     |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Thomson Reuters CoCounsel** | Autonomous tax research, complex position analysis, memo drafting, document review                             | Gen-AI with agentic evolution — over 1 million professionals across 107 countries use CoCounsel; "Ready to Review" agentic workflow launched for 1040 preparation |
-| **PwC Agent OS**              | Autonomous execution of professional services workflows including research, analysis, and advisory preparation | Agentic architecture — portfolio of 120+ AI agents; clients report up to 8x faster cycle times                                                                    |
-| **Intuit Assist**             | Automated tax preparation, document ingestion, expense classification, credit identification                   | Gen-AI at scale — automates data entry for 90% of common tax forms; generated USD 90 million in efficiencies in H1 2025                                           |
+| **PwC Agent OS**              | Autonomous execution of professional services workflows including research, analysis, and advisory preparation | Agentic architecture — portfolio of 250+ AI agents (as of October 2025); clients report up to 8x faster cycle times                                               |
+| **Intuit Assist**             | Automated tax preparation, document ingestion, expense classification, credit identification                   | Gen-AI at scale — automates data entry for 90% of common tax forms; nearly USD 90 million in annualized efficiencies in FY 2025                                   |
 
 :::tip Global Perspective
 
@@ -177,11 +176,11 @@ Three agentic systems are moving from prototype to production deployment.
 
 **What you'll build:** A structured tax research memo, a computed tax liability with flagged items, and draft SKILL.md instructions for automating the computation.
 
-**Requirements:** Cowork or Claude (any plan). A hypothetical or real tax scenario. If you need a ready-made scenario, download the Crescent Textiles entity profile from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) — use `ca-cpa-exercise-data.zip` and find `exercises/entity-profiles/crescent-textiles.md` (PKR 500M textile manufacturer with export/domestic split).
+**Requirements:** Cowork or Claude (any plan). A hypothetical or real tax scenario. If you need a ready-made scenario, [**download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip), unzip, and open `exercises/entity-profiles/crescent-textiles.md` (PKR 500M textile manufacturer with export/domestic split).
 
-1. **Research a tax question.** Present this prompt to your AI assistant:
+1. **Research a tax question.** Using the Crescent Textiles entity profile (downloaded above), present this prompt to your AI assistant:
 
-   _"A Pakistani company has earned dividend income from a foreign subsidiary. What are the withholding tax implications under Pakistan's tax law, and what reliefs or exemptions might apply? Structure your answer as a technical memo with: the issue, the relevant statutory provisions, the analysis, and the conclusion."_
+   _"Crescent Textiles Ltd, a Pakistani textile manufacturer with PKR 500M revenue and both export and domestic operations, has earned dividend income from a foreign subsidiary. What are the withholding tax implications under Pakistan's tax law, and what reliefs or exemptions might apply? Structure your answer as a technical memo with: the issue, the relevant statutory provisions, the analysis, and the conclusion."_
 
 2. **Identify uncertainty.** Review the memo and ask:
 
@@ -201,7 +200,7 @@ Three agentic systems are moving from prototype to production deployment.
 
 Explore the real-world platforms discussed in this lesson:
 
-- **Thomson Reuters CoCounsel:** [thomsonreuters.com/en/artificial-intelligence/cocounsel](https://www.thomsonreuters.com/en/artificial-intelligence/cocounsel.html)
+- **Thomson Reuters CoCounsel:** [https://www.thomsonreuters.com/en/cocounsel](https://www.https://www.thomsonreuters.com/en/cocounsel)
 - **PwC Agent OS:** [pwc.com/us/en/services/ai/agent-os](https://www.pwc.com/us/en/services/ai/agent-os.html)
 - **Intuit Assist:** [intuit.com/intuitassist](https://www.intuit.com/intuitassist/)
 
@@ -280,6 +279,10 @@ as the firm's current annual revenue for calculations.
 
 **What you are learning:** The strategic implications of AI in tax practice extend beyond individual tasks. By modelling firm-level scenarios, you develop the commercial judgment that senior practitioners need — understanding not just which tasks AI can handle, but how automation reshapes the business model of professional services firms. This is the kind of analysis that AI assists but cannot make alone, because it requires understanding the firm's competitive position, client relationships, and market dynamics.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
 
 ---
 

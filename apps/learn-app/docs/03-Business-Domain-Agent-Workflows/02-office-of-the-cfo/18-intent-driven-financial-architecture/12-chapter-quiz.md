@@ -260,7 +260,7 @@ options: [
 "A special API integration must be built for each agent platform"
 ],
 correctOption: 0,
-explanation: "Lesson 9 teaches that the IDFA methodology is packaged as a portable plugin (panaversity/idfa-financial-architect) following the agentskills.io open standard. For Claude Code, add the marketplace and install the plugin. For Cowork, install via the plugin browser. For other agents — GitHub Copilot, VS Code, Codex — copy the SKILL.md from the plugin repo into the platform's custom instructions path. The skill transforms agent behaviour — when active, the agent automatically applies all four guardrails.",
+explanation: "Lesson 9 teaches that the IDFA methodology is packaged as a portable plugin (idfa-financial-architect) available from the agentfactory-business-plugins catalog, following the agentskills.io open standard. For Claude Code, add the marketplace and install the plugin. For Cowork, install via the plugin browser. For other agents — GitHub Copilot, VS Code, Codex — copy the SKILL.md from the plugin repo into the platform's custom instructions path. The skill transforms agent behaviour — when active, the agent automatically applies all four guardrails.",
 source: "Lesson 9: The IDFA Skill"
 },
 {
@@ -540,15 +540,15 @@ explanation: "Lesson 10 frames IDFA governance benefits at the CFO level: audit 
 source: "Lesson 10: Enterprise Governance"
 },
 {
-question: "Chapter 17 taught Claude in Excel and Cowork plugins. Chapter 18 teaches IDFA. What is the relationship between them?",
+question: "Chapter 17 taught Cowork plugins and MCP connectors. Chapter 18 teaches IDFA. What is the relationship between them?",
 options: [
-"IDFA transforms the FOUNDATION those tools operate on — the same Claude in Excel gives categorically different results when the model underneath uses Named Range business rules instead of coordinate formulas",
+"IDFA transforms the FOUNDATION those tools operate on — the same Cowork gives categorically different results when the model underneath uses Named Range business rules instead of coordinate formulas",
 "IDFA replaces the tools from Chapter 17 with a new methodology",
-"IDFA is an alternative to using Claude in Excel",
+"IDFA is an alternative to using Cowork",
 "IDFA requires different MCP connectors than those configured in Chapter 17"
 ],
 correctOption: 0,
-explanation: "The Chapter 18 README and bridge text from Chapter 17 establish that IDFA does not replace the tools — it transforms the architecture they work on. The same Claude in Excel, the same MCP connectors, the same Cowork plugins. But when the model uses Named Ranges instead of coordinates, those tools can perform Intent Synthesis, Deterministic What-If, Logic De-compilation, Goal-Seeking, and Stochastic Simulation — capabilities impossible with coordinate-based models.",
+explanation: "The Chapter 18 README and bridge text from Chapter 17 establish that IDFA does not replace the tools — it transforms the architecture they work on. The same Cowork, the same MCP connectors, the same plugins. But when the model uses Named Ranges instead of coordinates, those tools can perform Intent Synthesis, Deterministic What-If, Logic De-compilation, Goal-Seeking, and Stochastic Simulation — capabilities impossible with coordinate-based models.",
 source: "Chapter 18 README and Lesson 2"
 },
 {

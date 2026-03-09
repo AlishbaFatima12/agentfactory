@@ -159,13 +159,13 @@ This chapter does three things, each building on the skills you developed in Cha
 
 **Domain Analysis (Lessons 2-6).** A rigorous examination of AI impact across all five CA/CPA practice domains. For each domain, you will learn what Gen-AI capabilities are available now, what agentic capabilities are approaching production, which real-world platforms are leading deployment, and what the practitioner and service implications are.
 
-**Cowork Deployment (Lessons 7-10).** How to deploy Anthropic Cowork and its plugin ecosystem across each domain. You will install plugins, build workflows, and create domain-specific SKILL.md extensions that encode your jurisdiction's requirements — using the same Cowork platform and SKILL.md methodology from Chapters 15-17.
+**Cowork Deployment (Lessons 7-10).** How to deploy Anthropic Cowork and its plugin ecosystem across each domain. You will install plugins, build workflows, and create domain-specific SKILL.md extensions that encode your jurisdiction's requirements — using the same Cowork platform and SKILL.md methodology from Chapters 15-18.
 
 **Domain Agents (Lessons 11-16).** Practice labs, cross-domain capstones, and a full practice deployment that integrates everything. By the end of the chapter, you will have a working AI-augmented CA/CPA practice environment with domain agents for each of the five practice areas.
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Mapping Your Practice to the Five Domains
 
@@ -233,6 +233,11 @@ oversight checkpoint you would require before deployment.
 
 **What you are learning:** The Gen-AI vs Agentic AI distinction is not binary — it is a spectrum with clear markers. By classifying real tasks and designing oversight checkpoints, you build the judgment framework you will apply throughout every domain lesson in this chapter.
 
+
+
+## Flashcards Study Aid
+
+<Flashcards />
 
 ---
 

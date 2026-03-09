@@ -104,7 +104,6 @@ teaching_guide:
       expected_response: "The monitoring agent sits primarily in the second line (oversight functions) -- it monitors whether the first line (operational management) is managing risk effectively by checking transactions, process executions, and system events against the control framework. It can also support the third line (independent assurance) by providing continuous data for internal audit. The agent does not sit in the first line because it does not own or manage operational risk -- it monitors and reports on it."
 ---
 
-
 # Domain 5 -- Governance, Risk and Compliance Advisory
 
 > _"The question is not whether AI can test controls faster than a human. It can. The question is whether the controls being tested are the right controls -- and that is an advisory judgment no agent can make alone."_
@@ -168,7 +167,7 @@ Two platforms illustrate the current state of AI in GRC.
 
 **ServiceNow AI Agents** ([servicenow.com/products/governance-risk-and-compliance.html](https://www.servicenow.com/products/governance-risk-and-compliance.html)) represent one of the closest current implementations of agentic GRC. ServiceNow AI agents autonomously monitor transactions, identify incidents, open cases, and initiate investigation workflows. They continuously evaluate controls against policy baselines and live operational signals, automatically create and route issues when deviations are detected, and trigger remediation playbooks. At Knowledge 2025, ServiceNow launched AI Control Tower -- a centralised command for governing AI agents across the enterprise.
 
-**IBM watsonx.governance** ([ibm.com/products/watsonx-governance](https://www.ibm.com/products/watsonx-governance)) enables automated monitoring, compliance analysis, and governance workflows. IBM was named a Leader in the 2025 IDC MarketScape for Unified AI Governance Platforms. The platform monitors AI models for fairness, bias, and drift, with compliance accelerators covering the EU AI Act, ISO 42001, and NIST AI RMF. As of Q1 2026, watsonx.governance supports governance of AI agents themselves -- monitoring agent decisions, behaviours, and performance in production and triggering alerts when thresholds are breached.
+**IBM watsonx.governance** ([ibm.com/products/watsonx-governance](https://www.ibm.com/products/watsonx-governance)) enables automated monitoring, compliance analysis, and governance workflows. IBM was named a Leader in the 2025 IDC MarketScape for Unified AI Governance Platforms. The platform monitors AI models for fairness, bias, and drift, with compliance accelerators covering the EU AI Act, ISO 42001, and NIST AI RMF. In early 2026, watsonx.governance is introducing governance of AI agents themselves -- monitoring agent decisions, behaviours, and performance in production and triggering alerts when thresholds are breached.
 
 :::info Curated Deployment Links
 
@@ -205,7 +204,7 @@ The professional skills that become more valuable in this model are: interpretin
 
 **What you will build:** A SKILL.md specification for a continuous controls monitoring agent covering three financial controls.
 
-**Requirements:** Claude (any interface). Knowledge of any organisation's key financial controls. If you need a ready-made entity, download the Crescent Textiles profile from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) (`ca-cpa-exercise-data.zip` → `exercises/entity-profiles/crescent-textiles.md`) — it includes key risk areas and regulatory obligations.
+**Requirements:** Claude (any interface). Knowledge of any organisation's key financial controls. If you need a ready-made entity, [**download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and open `exercises/entity-profiles/crescent-textiles.md` — it includes key risk areas and regulatory obligations.
 
 1. Choose three financial controls for a specific organisation type (e.g., a bank, a retail company, a textile manufacturer). Ask Claude: _"For each control, specify: (a) what the control is designed to prevent, (b) what data would evidence that the control has been executed, (c) what anomaly would indicate the control may have failed, and (d) what the monitoring agent should do when it detects that anomaly."_
 
@@ -221,7 +220,7 @@ The professional skills that become more valuable in this model are: interpretin
 
 ## Try With AI
 
-Use these prompts in Cowork, Claude Code, or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Control Design Thinking
 
@@ -298,6 +297,10 @@ concrete professional skills like "monitoring programme design" or
 
 **What you are learning:** GRC is described as the domain where advisory judgment is most resilient -- but resilience is not automatic. By mapping your specific role against the automation spectrum, you identify which parts of your current work face displacement (manual testing, routine reporting) and which new skills you need to develop (monitoring programme design, agent governance, threshold calibration) to remain valuable in the continuous monitoring model.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
 
 ---
 

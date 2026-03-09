@@ -235,22 +235,13 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    // Only enable locales with actual translated content
-    // Add others when translations are complete
-    locales: ["en", "ur"],
+    locales: ["en"],
     localeConfigs: {
       en: {
         label: "English",
         direction: "ltr",
         htmlLang: "en-US",
         calendar: "gregory",
-      },
-      ur: {
-        label: "اردو",
-        direction: "ltr",
-        htmlLang: "ur-PK",
-        calendar: "gregory",
-        path: "ur",
       },
     },
   },

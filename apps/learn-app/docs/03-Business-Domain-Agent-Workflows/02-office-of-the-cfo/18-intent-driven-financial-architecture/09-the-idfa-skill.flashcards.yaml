@@ -14,13 +14,13 @@ cards:
 
   - id: "ch18-09-the-idfa-skill-002"
     front: "How do you install the IDFA plugin in Claude Code?"
-    back: "In Cowork: Customize → Browse plugins → Personal → + → Add marketplace from GitHub → enter the GitHub URL → find IDFA Financial Architect → Install.\nIn Claude Code: /plugin marketplace add panaversity/idfa-financial-architect → /plugin install idfa-financial-architect@panaversity-idfa"
+    back: "In Cowork: Customize → Browse plugins → Personal → + → Add marketplace from GitHub → enter the GitHub URL → find IDFA Financial Architect → Install.\nIn Claude Code: /plugin marketplace add panaversity/agentfactory-business-plugins → /plugin install idfa-financial-architect@agentfactory-business"
     tags: ["installation", "claude-code", "marketplace"]
     difficulty: "basic"
 
   - id: "ch18-09-the-idfa-skill-003"
     front: "What is the structure of the IDFA plugin?"
-    back: ".claude-plugin/plugin.json (metadata)\n.claude-plugin/marketplace.json (catalog)\nskills/financial-architect/SKILL.md (methodology)\nskills/financial-architect/references/IDFA-reference.md\nskills/idfa-ops/SKILL.md (operations — scripts for reading, writing, and auditing models)\nREADME.md and LICENSE"
+    back: ".claude-plugin/plugin.json (metadata)\nskills/financial-architect/SKILL.md (methodology)\nskills/financial-architect/references/IDFA-reference.md\nskills/idfa-ops/SKILL.md (operations — scripts for reading, writing, and auditing models)\nREADME.md and LICENSE"
     tags: ["plugin-structure", "files"]
     difficulty: "intermediate"
 

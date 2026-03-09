@@ -121,7 +121,11 @@ Generic plugins provide the framework. Domain extensions encode the institutiona
 :::
 
 :::tip Reference Implementations
-The [companion repository](https://github.com/panaversity/ca-cpa-practice-agents) contains reference SKILL.md files under `reference-skills/` — complete Pakistan-default implementations for all five extensions. Study these as you build your own, but do not copy them directly. The value of the extension is in encoding _your_ jurisdiction's rules and _your_ firm's practices.
+The companion repository contains reference SKILL.md files under [`reference-skills/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills) — complete Pakistan-default implementations for all five extensions. Study these as you build your own, but do not copy them directly. The value of the extension is in encoding _your_ jurisdiction's rules and _your_ firm's practices.
+:::
+
+:::warning Jurisdiction-Specific Rates Change Frequently
+Tax rates, withholding percentages, filing deadlines, and penalty amounts throughout this lesson (and Lessons 10 and 12) are illustrative based on the Income Tax Ordinance 2001 as amended through Finance Act 2024. Pakistan's Finance Act changes these figures annually. **Always verify current rates at [fbr.gov.pk](https://www.fbr.gov.pk) before applying to client work.** The same principle applies to every jurisdiction — US rates change with Congressional action, UK rates with the Finance Act and Autumn Statement. Treat every rate in a SKILL.md as a parameter to be verified, not a permanent constant.
 :::
 
 The building block of every extension is a single format: **When [condition], [action]**. Every instruction you write follows this pattern. The condition defines when the agent should apply the knowledge. The action defines what it should do. Precision in the condition clause determines whether the extension activates correctly — too broad and it fires on irrelevant work; too narrow and it misses cases it should handle.
@@ -180,7 +184,10 @@ When processing dividend payments to resident shareholders, apply
 withholding at 15% under Section 150 (filer) or 30% (non-filer).
 
 When processing payments for services to a resident company, apply
-withholding at 8% under Section 153(1)(b) (filer) or 16% (non-filer).
+withholding under Section 153(1)(b) at the rate specified in the current
+FBR Withholding Tax Rate Card — rates vary by service type (e.g., 6%
+filer / 12% non-filer for general services). Always consult the latest
+rate card, as rates change with each Finance Act.
 
 ## Filing Deadlines
 
@@ -189,14 +196,15 @@ is September 30 of the year following the tax year. Flag any return
 preparation beginning after August 15 as HIGH PRIORITY.
 
 When preparing a withholding tax statement (Section 165), the deadline
-is the 15th day of the month following the quarter-end.
+is the 20th day of the month following the quarter-end.
 
 ## Penalties
 
 When a return is filed after the due date, note the penalty under
 Section 182: PKR 40,000 or 0.1% of the tax payable for each day of
-default, whichever is higher. Include this penalty risk in any
-communication to the client about delayed filing.
+default, whichever is higher, subject to a maximum penalty of 50% of
+the tax payable. Include this penalty risk in any communication to
+the client about delayed filing.
 
 ## Escalation
 
@@ -331,7 +339,7 @@ This layering — generic plugin capability, augmented by jurisdiction rules, au
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to practise building jurisdiction and entity extensions.
+Use these prompts in Cowork or your preferred AI assistant to practise building jurisdiction and entity extensions.
 
 ### Prompt 1: Institutional Knowledge Audit
 
@@ -398,6 +406,10 @@ handle — then write an additional instruction to cover that case.
 
 **What you are learning:** Chart of accounts extensions must be comprehensive enough to eliminate manual recoding but not so exhaustive that they become unmaintainable. By drafting five mappings, two documentation rules, and one restricted account — then immediately stress-testing for edge cases — you learn the practical balance between coverage and complexity that makes extensions sustainable in real practice.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
 
 ---
 

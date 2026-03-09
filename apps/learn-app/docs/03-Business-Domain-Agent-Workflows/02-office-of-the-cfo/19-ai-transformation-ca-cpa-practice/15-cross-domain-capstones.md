@@ -110,7 +110,6 @@ teaching_guide:
       expected_response: "The critical professional judgment is in Step 8 — evaluating whether identified misstatements, individually and in aggregate, are material to the financial statements. This determines the audit opinion. The AI agent can compile misstatements, calculate their aggregate effect, and draft the opinion language in ISA 700 format. But the decision about whether the accounts are 'true and fair' — and the professional liability that attaches to signing that opinion — belongs to the CA/CPA."
 ---
 
-
 # Cross-Domain Capstones
 
 > _"The engagement partner who signs the audit opinion carries the professional liability for every judgment in the file. AI produces the evidence. The CA/CPA forms the conclusion."_
@@ -120,9 +119,9 @@ In Lessons 11 through 14, you worked through domain-specific practice labs — b
 These two capstone exercises test your ability to integrate across all five domains. Exercise 22 tests breadth — connecting every domain in a single new client onboarding workflow. Exercise 23 tests depth — running the complete annual audit cycle from planning through to the signed opinion across three study sessions. Together, they represent the culmination of every capability you have built in this chapter.
 
 :::info Downloadable Resources
-**New client onboarding workflow recipe**: A reusable workflow specification for Exercise 22, available in the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents) at `workflow-recipes/`.
+**New client onboarding workflow recipe**: A reusable workflow specification for Exercise 22: [`workflow-recipes/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/workflow-recipes) in the companion repository.
 
-**Audit cycle working paper pack**: Templates for audit planning memoranda, test documentation, misstatement schedules, and management letters, available at `exercises/working-papers/`.
+**Audit cycle working paper pack**: Templates for audit planning memoranda, test documentation, misstatement schedules, and management letters: [`working-papers/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/exercises/working-papers) in the companion repository.
 :::
 
 ---
@@ -472,7 +471,7 @@ material misstatements.
 
 ## Try With AI
 
-Use these prompts with your preferred AI assistant to explore the integration patterns from these capstone exercises.
+Use these prompts in Cowork or your preferred AI assistant to explore the integration patterns from these capstone exercises.
 
 ### Prompt 1: Cross-Domain Workflow Design
 
@@ -542,6 +541,10 @@ cannot replace.
 
 **What you are learning:** The professional judgment boundary is not abstract — it is specific to each workflow. By analysing your own exercise output, you map exactly where AI execution ends and professional responsibility begins. The critical insight is that professional liability attaches to judgment decisions, not execution steps. Understanding this boundary is how you articulate your value proposition in an AI-augmented practice.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
 
 ---
 

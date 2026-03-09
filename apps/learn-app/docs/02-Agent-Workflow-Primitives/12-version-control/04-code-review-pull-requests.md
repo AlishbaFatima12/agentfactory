@@ -85,6 +85,11 @@ cognitive_load:
     - "Noting AI assistance in PR descriptions"
     - "Three reusable patterns (synthesis of L01-L03, zero new commands)"
   assessment: "4 concepts (within A2 limit) — patterns section introduces no new Git commands, only names for what students already do ✓"
+
+differentiation:
+  extension_for_advanced: "Create a PR with intentional issues, then review your own PR using the diff to catch them — practice the reviewer mindset before asking others for reviews"
+  remedial_for_struggling: "Focus on the Commit-Before-Experiment pattern first — practice making a safety commit before any risky change. Add Branch-Test-Merge and Push-for-Backup only after the first pattern is automatic"
+
 teaching_guide:
   lesson_type: "core"
   session_group: 2
