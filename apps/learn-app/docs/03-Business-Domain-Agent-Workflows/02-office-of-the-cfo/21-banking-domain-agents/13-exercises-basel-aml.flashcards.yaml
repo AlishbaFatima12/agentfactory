@@ -1,0 +1,83 @@
+deck:
+  id: "ch21-13-exercises-basel-aml"
+  title: "Basel and AML Deep Practice"
+  description: "Key concepts from Basel III capital ratio calculation, ICAAP stress testing, AML alert investigation, and multi-regime sanctions screening exercises."
+  tags: ["Basel-III", "AML", "capital-ratios", "sanctions", "stress-testing"]
+  version: 1
+
+cards:
+  - id: "ch21-13-exercises-basel-aml-001"
+    front: "What is the formula for the CET1 ratio under Basel III?"
+    back: "CET1 Capital / Total RWA."
+    tags: ["CET1", "capital-ratio", "Basel-III"]
+    difficulty: "basic"
+
+  - id: "ch21-13-exercises-basel-aml-002"
+    front: "What are the Basel III minimum capital ratios and the combined minimum including CCB?"
+    back: "CET1: 4.5% (7.0% with CCB)\nTier 1: 6.0% (8.5% with CCB)\nTotal Capital: 8.0% (10.5% with CCB)"
+    tags: ["capital-ratios", "CCB", "Basel-III"]
+    difficulty: "basic"
+
+  - id: "ch21-13-exercises-basel-aml-003"
+    front: "Under the Business Indicator Approach, how is operational risk RWA calculated when BI is below GBP 1B?"
+    back: "BI Component = BI x 12%.\nOp Risk Capital = BI Component x ILM.\nOp Risk RWA = Op Risk Capital / 8%."
+    tags: ["operational-risk", "BIA", "Basel-III"]
+    difficulty: "intermediate"
+
+  - id: "ch21-13-exercises-basel-aml-004"
+    front: "Two banks each hold GBP 5B in total assets, but one has 60% in gilts and the other has 60% in corporate loans. Why do their CET1 ratios differ dramatically?"
+    back: "Risk weights drive the difference. Gilts carry 0% risk weight (zero RWA contribution), while corporate loans carry 100% risk weight. The gilt-heavy bank has far lower total RWA, so the same CET1 capital produces a much higher ratio."
+    tags: ["risk-weights", "balance-sheet-composition", "CET1"]
+    difficulty: "intermediate"
+    why: "How does this explain why retail banks typically have lower CET1 ratios than private banks despite similar total assets?"
+
+  - id: "ch21-13-exercises-basel-aml-005"
+    front: "What money laundering typology involves multiple cash deposits deliberately kept below a reporting threshold?"
+    back: "Structuring (also called smurfing)."
+    tags: ["AML", "structuring", "typology"]
+    difficulty: "basic"
+
+  - id: "ch21-13-exercises-basel-aml-006"
+    front: "What is the OFAC 50% rule in sanctions screening?"
+    back: "Entities that are 50% or more owned by a sanctioned party are themselves sanctioned, even if not explicitly listed."
+    tags: ["OFAC", "sanctions", "50-percent-rule"]
+    difficulty: "intermediate"
+
+  - id: "ch21-13-exercises-basel-aml-007"
+    front: "A UK company shares its name with a sanctioned Russian entity. The compliance team blocks the payment. Why is this itself a compliance failure?"
+    back: "Blocking a legitimate UK company on a false positive disrupts lawful business. Compliance requires distinguishing true matches from name coincidences through verification steps -- over-blocking harms customers and creates liability, while under-blocking violates sanctions."
+    tags: ["sanctions-screening", "false-positive", "compliance"]
+    difficulty: "intermediate"
+    why: "What verification steps would distinguish a UK company from a sanctioned entity that shares its name?"
+
+  - id: "ch21-13-exercises-basel-aml-008"
+    front: "What is an ICAAP?"
+    back: "Internal Capital Adequacy Assessment Process -- a bank's own assessment of capital needs under stress, separate from regulatory minimums."
+    tags: ["ICAAP", "capital-adequacy", "stress-testing"]
+    difficulty: "basic"
+
+  - id: "ch21-13-exercises-basel-aml-009"
+    front: "How does DFAST (US) differ from the UK ACS in terms of transparency?"
+    back: "DFAST results are publicly disclosed, creating market discipline because investors can see which banks are most vulnerable. The UK's ICAAP is confidential -- only the regulator sees the detailed results."
+    tags: ["DFAST", "ACS", "stress-testing", "transparency"]
+    difficulty: "intermediate"
+    why: "What are the trade-offs of public stress test disclosure for financial stability?"
+
+  - id: "ch21-13-exercises-basel-aml-010"
+    front: "What is the purpose of the Bank of England's Annual Cyclical Scenario?"
+    back: "To force UK banks to prove they can survive a severe economic downturn and to calibrate bank-specific capital buffers."
+    tags: ["ACS", "stress-testing", "Bank-of-England"]
+    difficulty: "basic"
+
+  - id: "ch21-13-exercises-basel-aml-011"
+    front: "A newly established import/export company receives GBP 847K from high-risk jurisdictions and transfers GBP 812K to domestic companies within 24 hours. Why is this a red flag for money laundering?"
+    back: "Rapid throughput (same-day in/out), high-risk jurisdictions (UAE, Hong Kong, Cyprus), minimal fund retention (GBP 35K), and the company's young age (18 months) match the layering and trade-based money laundering typologies -- the company may be a pass-through vehicle for illicit funds."
+    tags: ["AML", "layering", "trade-based-ML", "red-flags"]
+    difficulty: "advanced"
+    why: "What due diligence on the UK recipient companies would help distinguish legitimate trade from money laundering?"
+
+  - id: "ch21-13-exercises-basel-aml-012"
+    front: "In the DFAST framework, what is the minimum asset threshold requiring banks to participate in stress testing?"
+    back: "USD 250 billion in total consolidated assets (raised from $10 billion by EGRRCPA, 2018)."
+    tags: ["DFAST", "threshold", "regulation"]
+    difficulty: "intermediate"

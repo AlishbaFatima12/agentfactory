@@ -136,11 +136,11 @@ Opening Receivable x (Effective Profit Rate / Periods per Year) = Period Profit
 
 Closing Receivable = Opening Receivable + Period Profit - Cash Instalment Received
 
-This means that the amortisation schedule produced under AAOIFI FAS 2 and the schedule produced under MFRS 9 will have identical numbers in every column. The opening balance, the profit allocation, the instalment, the closing balance — all the same. What differs is the column header: "Murabaha Income" in Bahrain, "Profit from Islamic Financing" in Malaysia.
+This means that the amortisation schedule produced under AAOIFI FAS 28 and the schedule produced under MFRS 9 will have identical numbers in every column. The opening balance, the profit allocation, the instalment, the closing balance — all the same. What differs is the column header: "Murabaha Income" in Bahrain, "Profit from Islamic Financing" in Malaysia.
 
-## AAOIFI FAS 2 vs MFRS 9 — Same Numbers, Different Labels
+## AAOIFI FAS 28 vs MFRS 9 — Same Numbers, Different Labels
 
-| Element                        | AAOIFI FAS 2 (Bahrain, Qatar)                | MFRS 9 / IFRS 9 (Malaysia, UAE, UK)                                   |
+| Element                        | AAOIFI FAS 28 (Bahrain, Qatar)               | MFRS 9 / IFRS 9 (Malaysia, UAE, UK)                                   |
 | ------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
 | **Income label**               | "Murabaha Income"                            | "Profit from Islamic Financing"                                       |
 | **Receivable classification**  | "Murabaha Receivables" — separate line item  | "Islamic Financing Receivables" or under "Loans and Advances"         |
@@ -159,8 +159,10 @@ The accounting treatment is identical to asset murabaha — the four-step journa
 
 The practical significance for a CA/CPA: if the jurisdiction's Shariah Supervisory Board has specific rulings on tawarruq, these must be checked before processing the transaction. The accounting is straightforward; the Shariah compliance assessment requires judgment.
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex01-murabaha-bahrain-malaysia.md`, and reference the skill files in `skills/products/murabaha.md`, `skills/jurisdictions/bahrain-aaoifi.md`, and `skills/jurisdictions/malaysia-mfrs.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex01-murabaha-bahrain-malaysia.md`
 :::
 
 ## Practice Exercise 1: Murabaha Income Schedule — Bahrain (AAOIFI) vs Malaysia (MFRS)
@@ -181,7 +183,9 @@ Download the exercise data and skill files from the [companion repository](https
 
 5. **Draft the disclosure notes for each.** Ask: _"Draft the murabaha receivable disclosure note for each entity's financial statements: (a) Bahrain — AAOIFI FAS 2 with murabaha receivable and deferred income movement tables; (b) Malaysia — MFRS 7/MFRS 9 for Islamic financing receivables."_
 
-**Check your work:** The numbers in the two schedules should be arithmetically identical. If they differ, check whether you specified the same mark-up rate and tenure for both. The disclosure notes should look structurally different — AAOIFI requires a Shariah compliance accounting policy statement and separate movement tables; MFRS 9 requires IFRS 7-style credit risk and ECL disclosures.
+6. **Error detection.** Deliberately introduce an error: ask your AI assistant to produce a murabaha schedule for a Bahrain entity but label the income as "Financing Income" (a conventional IFRS label, not AAOIFI-compliant). Then review the output and identify every non-compliance. _"I have a Bahrain murabaha income schedule where income is labelled 'Financing Income' and the receivable appears under 'Loans and Advances'. What compliance errors exist in these labels? What should each line item be called under AAOIFI FAS 2?"_
+
+**Check your work:** The numbers in the two schedules should be arithmetically identical. If they differ, check whether you specified the same mark-up rate and tenure for both. The disclosure notes should look structurally different — AAOIFI requires a Shariah compliance accounting policy statement and separate movement tables; MFRS 9 requires IFRS 7-style credit risk and ECL disclosures. In Step 6, your error detection should identify at least two labelling violations: "Financing Income" should be "Murabaha Income" and "Loans and Advances" should be "Murabaha Receivables" under AAOIFI.
 
 :::tip Global Perspective
 
@@ -244,6 +248,10 @@ finance principles but has not structured a tawarruq before.
 ```
 
 **What you are learning:** Commodity murabaha exposes the tension between Shariah form and economic substance. The accounting is identical to asset murabaha. The economic outcome for the customer — receiving cash now and repaying more later — resembles a conventional loan. The Shariah validity depends on whether the commodity transactions are genuinely separate. This is the kind of judgment that distinguishes a competent Islamic finance practitioner from one who merely follows templates.
+
+## Flashcards Study Aid
+
+<Flashcards />
 
 ---
 

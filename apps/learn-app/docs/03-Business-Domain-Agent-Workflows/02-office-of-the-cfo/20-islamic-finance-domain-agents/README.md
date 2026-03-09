@@ -24,7 +24,7 @@ By the end of this chapter, you will be able to:
 - Explain the three accounting regimes in global Islamic finance (AAOIFI primary, IFRS with Islamic guidance, local standards) and why the same transaction produces different outputs under each
 - Deploy the router to product skill to jurisdiction overlay architecture that ensures an agent never applies the wrong accounting framework
 - Build jurisdiction-specific SKILL.md extensions for any of the 20 reference jurisdictions using the Knowledge Extraction Method from Chapter 16
-- Execute 14 practice exercises spanning murabaha, ijarah, sukuk, takaful, zakat, Shariah screening, full financial statements, cross-border consolidation, and Islamic fintech
+- Execute 15 practice exercises spanning murabaha, ijarah, sukuk, takaful, salam, istisna'a, mudaraba, musharaka, zakat, Shariah screening, full financial statements, cross-border consolidation, and Islamic fintech
 - Articulate the boundary between agent execution and Shariah Supervisory Board judgment — what the agent does autonomously and what it must escalate
 
 ## Lesson Flow
@@ -38,16 +38,17 @@ By the end of this chapter, you will be able to:
 | [L05](./05-ijarah-imb.md)                                    | Ijarah and IMB — Four-Jurisdiction Lease Accounting                     | 50 min   | Exercise 2: Ijarah accounting across Bahrain, Malaysia, UAE, UK                                          |
 | [L06](./06-sukuk.md)                                         | Sukuk — Global Islamic Capital Markets                                  | 60 min   | Exercise 3: GCC sukuk issuance — multi-jurisdiction accounting                                           |
 | [L07](./07-takaful-ifrs17.md)                                | Takaful and IFRS 17 — Islamic Insurance                                 | 50 min   | Exercise 4: Global takaful operator — IFRS 17 and wakala model                                           |
-| [L08](./08-malaysia-sukuk.md)                                | Malaysia Sukuk — The World's Largest Market                             | 55 min   | Exercise 5: Malaysia corporate sukuk — Tenaga Nasional Berhad                                            |
-| [L09](./09-saudi-arabia.md)                                  | Saudi Arabia — Vision 2030, ZATCA Zakat, and Al Rajhi                   | 55 min   | Exercise 6: Saudi IFI — Alinma Bank accounting review                                                    |
-| [L10](./10-uk-islamic-banking.md)                            | UK Islamic Banking — IFRS, PRA/FCA, and HMRC                            | 50 min   | Exercise 7: Al Rayan Bank — UK Islamic banking                                                           |
-| [L11](./11-nigeria-sovereign-sukuk.md)                       | Nigeria Sovereign Sukuk — African Infrastructure Finance                | 45 min   | Exercise 8: FGN sovereign sukuk — N300B ijarah                                                           |
-| [L12](./12-global-zakat.md)                                  | Global Zakat Accounting                                                 | 40 min   | Exercise 9: Global zakat comparison across 4 jurisdictions                                               |
-| [L13](./13-shariah-screening.md)                             | Shariah Portfolio Screening — Global Standards                          | 45 min   | Exercise 10: Saturna Capital Amana Income Fund — global screening                                        |
-| [L14](./14-aaoifi-vs-ifrs-capstone.md)                       | AAOIFI vs IFRS — Full Financial Statements                              | 90 min   | Exercise 11: ABC Islamic Bank (Bahrain) — $8B total assets, capstone accounting                          |
-| [L15](./15-cross-border-consolidation.md)                    | Cross-Border Islamic Banking Group — Consolidation                      | 75 min   | Exercise 12: 4-entity group consolidation across AAOIFI + IFRS jurisdictions                             |
-| [L16](./16-islamic-fintech.md)                               | Islamic Fintech — Accounting for New Structures                         | 40 min   | Exercise 13: 4 fintech scenarios — digital murabaha, robo-adviser, P2P, climate sukuk                    |
-| [L17](./17-full-skill-library-capstone.md)                   | Full Islamic Finance Agent — SKILL.md Library Build                     | 90 min   | Exercise 14: Full 25-file skill library deployment, testing, and documentation                           |
+| [L08](./08-trade-partnership-finance.md)                     | Trade & Partnership Finance — Salam, Istisna'a, Mudaraba, Musharaka     | 45 min   | Exercise 5: Four products, one scenario — construction project across jurisdictions                      |
+| [L09](./09-malaysia-sukuk.md)                                | Malaysia Sukuk — The World's Largest Market                             | 55 min   | Exercise 6: Malaysia corporate sukuk — Tenaga Nasional Berhad                                            |
+| [L10](./10-saudi-arabia.md)                                  | Saudi Arabia — Vision 2030, ZATCA Zakat, and Al Rajhi                   | 55 min   | Exercise 7: Saudi IFI — Alinma Bank accounting review                                                    |
+| [L11](./11-uk-islamic-banking.md)                            | UK Islamic Banking — IFRS, PRA/FCA, and HMRC                            | 50 min   | Exercise 8: Al Rayan Bank — UK Islamic banking                                                           |
+| [L12](./12-nigeria-sovereign-sukuk.md)                       | Nigeria Sovereign Sukuk — African Infrastructure Finance                | 45 min   | Exercise 9: FGN sovereign sukuk — N300B ijarah                                                           |
+| [L13](./13-global-zakat.md)                                  | Global Zakat Accounting                                                 | 40 min   | Exercise 10: Global zakat comparison across 4 jurisdictions                                              |
+| [L14](./14-shariah-screening.md)                             | Shariah Portfolio Screening — Global Standards                          | 45 min   | Exercise 11: Saturna Capital Amana Income Fund — global screening                                        |
+| [L15](./15-aaoifi-vs-ifrs-capstone.md)                       | AAOIFI vs IFRS — Full Financial Statements                              | 90 min   | Exercise 12: ABC Islamic Bank (Bahrain) — $8B total assets, capstone accounting                          |
+| [L16](./16-cross-border-consolidation.md)                    | Cross-Border Islamic Banking Group — Consolidation                      | 75 min   | Exercise 13: 4-entity group consolidation across AAOIFI + IFRS jurisdictions                             |
+| [L17](./17-islamic-fintech.md)                               | Islamic Fintech — Accounting for New Structures                         | 40 min   | Exercise 14: 4 fintech scenarios — digital murabaha, robo-adviser, P2P, climate sukuk                    |
+| [L18](./18-full-skill-library-capstone.md)                   | Full Islamic Finance Agent — SKILL.md Library Build                     | 90 min   | Exercise 15: Full 25-file skill library deployment, testing, and documentation                           |
 
 ## Chapter Contract
 
@@ -59,26 +60,33 @@ By the end of this chapter, you should be able to answer these five questions:
 4. How would you build a jurisdiction-specific SKILL.md extension for a new country using the Knowledge Extraction Method?
 5. Where is the boundary between agent execution and Shariah Supervisory Board judgment — what can the agent do autonomously and what must it escalate?
 
-## Companion Repository
+## Plugin & Companion Materials
 
-The skill files, exercise data, workflow recipes, and reference materials for this chapter are available in the companion repository: [**panaversity/islamic-finance-domain-agents**](https://github.com/panaversity/islamic-finance-domain-agents)
+Install the Islamic Finance Domain Agents plugin once — it activates automatically on all Islamic finance queries:
 
-Downloads (from the [latest release](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest)):
+**Claude Code CLI:**
 
-- `islamic-finance-domain-agents-exercise-data.zip` — Scenario data and Excel templates for Exercises 1-14
-- `islamic-finance-domain-agents-skills-only.zip` — 12 product skills, 13 jurisdiction overlays, and the global router
-- `islamic-finance-domain-agents-workflow-recipes.zip` — Scheduled task configurations (daily, monthly, quarterly, annual)
-- `islamic-finance-domain-agents-references.zip` — Global Standards Map, AAOIFI FAS reference table
-- `islamic-finance-domain-agents-full.zip` — Everything in one package (Exercise 14 capstone)
+```bash
+claude plugin install islamic-finance@agentfactory-business
+```
 
-Repository contents:
+**Cowork:** Sidebar → Customize → Browse plugins → + → Add marketplace from GitHub → `panaversity/agentfactory-business-plugins` → Install "islamic-finance"
 
-- `skills/products/` — 12 product SKILL.md files (murabaha, ijarah, sukuk, takaful, zakat, and more)
-- `skills/jurisdictions/` — 13 jurisdiction overlay SKILL.md files (Bahrain, Malaysia, Saudi, UAE, UK, and more)
-- `skills/islamic-finance-global-router.md` — The routing skill that directs queries to the correct product and jurisdiction
-- `exercises/` — Scenario data and Excel templates per exercise
-- `workflow-recipes/` — Scheduled task configurations (daily, monthly, quarterly, annual)
-- `references/` — Global Standards Map, AAOIFI FAS reference table
+Downloads (from the [latest release](https://github.com/panaversity/agentfactory-business-plugins/releases/latest)):
+
+- `islamic-finance-exercise-data.zip` — Scenario data for Exercises 1-15 + AAOIFI reference tables
+- `islamic-finance-workflow-recipes.zip` — Scheduled task configurations (daily, monthly, quarterly, annual)
+- `islamic-finance-full.zip` — Everything in one package (Exercise 15 capstone)
+
+Repository contents (inside `islamic-finance/`):
+
+- `skills/` — 13 skills: 1 router + 12 products (auto-loaded by agent)
+- `skills/islamic-finance-router/references/jurisdictions/` — 13 jurisdiction overlays (loaded on-demand)
+- `commands/` — 4 domain commands: `/if-journal`, `/if-compare`, `/if-screen`, `/if-zakat`
+- `hooks/` — SessionStart (capability announcement) + PostToolUse (framework label validation)
+- `exercises/` — Scenario data per exercise
+- `workflow-recipes/` — Operational playbooks
+- `references/` — AAOIFI FAS reference table
 
 ## After Chapter 20
 

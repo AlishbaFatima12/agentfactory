@@ -372,7 +372,7 @@ preparation cannot begin — audited financials outstanding."
 
 ### Withholding Tax Statements (Section 165)
 
-**Deadline:** 15th day of the month following the quarter-end.
+**Deadline:** 20th day of the month following the quarter-end.
 **Lead time required:** 5 working days.
 
 **Information checklist:**
@@ -396,8 +396,9 @@ preparation cannot begin — audited financials outstanding."
 - Director details and changes during the year
 - Registered office details
 
-**Penalty for late filing:** PKR 500 per day of default
-(Section 476, Companies Act 2017).
+**Penalty for late filing:** Daily penalties as prescribed under
+Section 476, Companies Act 2017 (amounts vary — consult the current
+statute text, as penalties are amended periodically).
 
 ### Change of Directors (Form 29)
 
@@ -467,7 +468,7 @@ Converting Method A answers to extension instructions follows a direct pattern:
 
 **What you'll build:** One complete domain extension using the Method A interview framework.
 
-**Requirements:** Claude (any interface). Knowledge of your practice area's specific requirements. For reference implementations, see the five extension SKILL.md files in the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents) under `reference-skills/`.
+**Requirements:** Claude (any interface). Knowledge of your practice area's specific requirements. For reference implementations, see the five extension SKILL.md files in the companion repository under [`reference-skills/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills).
 
 1. **Choose one** of the five extensions from Lessons 9-10 that is most relevant to your practice. Answer these questions in writing (200 words minimum):
    - What are the three most common errors junior staff make in this area?
@@ -510,7 +511,7 @@ Extensions 1, 3, and 5 apply broadly (jurisdiction-wide or firm-wide). Extension
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to practise building methodology, entity, and compliance extensions.
+Use these prompts in Cowork or your preferred AI assistant to practise building methodology, entity, and compliance extensions.
 
 ### Prompt 1: Audit Methodology Gap Analysis
 
@@ -582,6 +583,10 @@ Focus on [YOUR JURISDICTION] regulatory obligations.
 
 **What you are learning:** Compliance calendars are only as good as their coverage. The obligations you remember to calendar are not the ones that cause problems — it is the ones you forget. By asking Claude to identify missed obligations, you stress-test your extension for completeness. The monitoring schedule question connects the calendar extension to Cowork's scheduling capability, showing how a static list of deadlines becomes a dynamic compliance monitoring system.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
 
 ---
 

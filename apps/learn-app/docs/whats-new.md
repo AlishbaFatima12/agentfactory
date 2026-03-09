@@ -17,6 +17,35 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-07
+
+- Part2/minor fixes ([#833](https://github.com/panaversity/agentfactory/pull/833))
+
+### 2026-03-06
+- docs: add Ch 32 Lesson 4 — Reading a Test ([#831](https://github.com/panaversity/agentfactory/pull/831))
+
+### 2026-03-06
+- refactor: update chapter title and sidebar label for consistency in documentation ([#829](https://github.com/panaversity/agentfactory/pull/829))
+
+### 2026-03-06
+- Ch 23: Sales, RevOps & Marketing — 12 lessons + plugin ([#828](https://github.com/panaversity/agentfactory/pull/828))
+
+### 2026-03-06
+- Ch 22: Legal Operations and Compliance — 12 lessons ([#827](https://github.com/panaversity/agentfactory/pull/827))
+
+### 2026-03-06
+
+- Chapter 21: Banking-Specific AI — 15 lessons, 14 exercises ([#826](https://github.com/panaversity/agentfactory/pull/826))
+
+### 2026-03-05
+- Part2/project ([#825](https://github.com/panaversity/agentfactory/pull/825))
+
+### 2026-03-05
+- docs: Ch20 Islamic Finance plugin migration + content improvements ([#821](https://github.com/panaversity/agentfactory/pull/821))
+
+### 2026-03-05
+- docs: add Which Agents to Use in 2026 page ([#823](https://github.com/panaversity/agentfactory/pull/823))
+
 ### 2026-03-05
 - docs: add About This Book page ([#822](https://github.com/panaversity/agentfactory/pull/822))
 

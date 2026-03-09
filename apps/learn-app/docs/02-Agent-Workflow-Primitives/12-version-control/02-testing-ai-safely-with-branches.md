@@ -73,6 +73,11 @@ cognitive_load:
     - "Merging (combining branch work into main)"
     - "Branch vs commit decision"
   assessment: "4 concepts (within A1 limit of 5-7) ✓"
+
+differentiation:
+  extension_for_advanced: "Create two competing branches for the same feature, compare their diffs side by side, and argue which approach is better before merging one"
+  remedial_for_struggling: "Work with only one branch at a time — create it, make one change, switch back to main to see it disappear, then merge. Add a second branch only after the first merge succeeds"
+
 teaching_guide:
   lesson_type: "core"
   session_group: 1

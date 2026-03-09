@@ -73,7 +73,7 @@ cognitive_load:
   assessment: "5 concepts at B1 level — within the 7-10 cognitive limit for this tier. Students have spent five lessons building Named Range formulas and verifying them in LaTeX; this lesson adds the documentation layer that makes those formulas permanently self-explaining."
 
 differentiation:
-  extension_for_advanced: "Draft an Intent Note template for a complex formula type not covered in the GP Waterfall — for example, WACC or NPV. Include the LaTeX expression in the FORMULA field. Then write a prompt that instructs Claude to generate Intent Notes for every formula in a model, applying your custom template. Test whether Claude follows the template consistently or drifts from it."
+  extension_for_advanced: "Draft an Intent Note template for a complex formula type not yet in the GP Waterfall — for example, Terminal Value or IRR. Include the LaTeX expression in the FORMULA field. Then write a prompt that instructs Claude to generate Intent Notes for every formula in a model, applying your custom template. Test whether Claude follows the template consistently or drifts from it."
   remedial_for_struggling: "Focus on the INTENT and ASSUMPTIONS fields only. For each of the three GP Waterfall formulas (Revenue_Y2, COGS_Pct_Y2, Gross_Profit_Y3), write one sentence that starts 'This formula calculates...' and list the Named Ranges it reads. If you can do that for all three, you have the core of Intent Notes."
 
 teaching_guide:
@@ -139,7 +139,7 @@ Each field serves a distinct purpose in the audit trail:
 
 ## Intent Notes in the GP Waterfall
 
-In Lessons 3 and 4, you built the Gross Profit Waterfall with Named Range formulas. In Lesson 5, you verified the complex formulas in LaTeX. Now each formula gets an Intent Note that documents the business reasoning.
+In Lessons 3 through 5, you built the Gross Profit Waterfall with Named Range formulas and extended it with WACC and NPV. In Lesson 5, you verified the complex formulas in LaTeX. Now each formula gets an Intent Note that documents the business reasoning.
 
 **Intent Note on `Revenue_Y2`:**
 
@@ -194,7 +194,7 @@ Without the Intent Note, the modification would be invisible. The formula would 
 
 Writing Intent Notes by hand for every formula in a model would be tedious. The cowork pattern solves this: Claude generates the Intent Notes, and the analyst reviews them for accuracy.
 
-Here is how this works with the GP Waterfall formulas you built in Lessons 3 and 4.
+Here is how this works with the GP Waterfall formulas you built in Lessons 3 through 5.
 
 **Your prompt to Claude:**
 
@@ -223,19 +223,54 @@ Start with Revenue_Y1 and work through every formula in dependency order.
 
 This is the cowork pattern at its most productive. Claude produces twelve Intent Notes in seconds. Your domain knowledge catches the nuances the agent's structural reading misses. The result is faster and more accurate than either party working alone.
 
-## Exercise: Write Intent Notes for Three Formulas
+## Exercise: Generate Intent Notes for the GP Waterfall
 
-Apply what you have learned. Write complete Intent Notes for these three formulas from the GP Waterfall:
+Your GP Waterfall now has GP formulas from Lessons 3-4 plus WACC and NPV from Lesson 5. All of these formulas need Intent Notes.
 
-**Formula 1:** `Revenue_Y2 = Revenue_Y1 * (1 + Inp_Rev_Growth)`
+### Step 1 — Prompt Cowork to Generate Intent Notes
 
-**Formula 2:** `COGS_Pct_Y2 = COGS_Pct_Y1 - Inp_COGS_Efficiency`
+Open the GP Waterfall spreadsheet in Cowork and type:
 
-**Formula 3:** `Gross_Profit_Y3 = Revenue_Y3 - COGS_Y3`
+```
+Review every Named Range formula in this spreadsheet. For each one,
+generate an Intent Note using this format:
 
-For each formula, write the Intent Note yourself first. Then ask Claude to generate one for the same formula. Compare the two. Where do they differ? Does Claude's version include business context you omitted? Does your version include domain reasoning Claude missed?
+INTENT:      [Plain-English business rule]
+FORMULA:     [LaTeX expression]
+ASSUMPTIONS: [Named Ranges this formula depends on]
+GENERATED:   [Today's date / current session]
+MODIFIED:    —
 
-The goal is not to produce identical notes. The goal is to understand what each party contributes to the final audit record.
+Start with the Calculation layer formulas (Revenue, COGS, Gross Profit),
+then do WACC and NPV. Work in dependency order.
+```
+
+### Step 2 — Verify the Generated Notes
+
+Review each Intent Note Cowork produced. Check three things:
+
+- **Is the INTENT field specific enough?** "COGS percentage decreases" is too vague. "COGS percentage decreases by the annual efficiency gain, reflecting scale improvements" captures the business reasoning.
+- **Is the ASSUMPTIONS field complete?** Every Named Range the formula reads should be listed. For WACC, that includes Equity_Value, Debt_Value, Cost_of_Equity, Cost_of_Debt, and Tax_Rate.
+- **Does the FORMULA field match the LaTeX you verified in Lesson 5?** The WACC Intent Note should show the same LaTeX expression with the tax shield on the debt term.
+
+Pay special attention to the WACC and NPV Intent Notes — these are the formulas where Cowork is most likely to miss business context (e.g., why the tax shield matters, why the initial investment is at period 0).
+
+### Step 3 — Extend: Correct and Refine
+
+Pick the weakest Intent Note Cowork produced — the one with the vaguest INTENT or the most incomplete ASSUMPTIONS. Ask Cowork to improve it:
+
+```
+The Intent Note for [formula name] is too vague. The INTENT field
+should explain WHY this calculation exists, not just WHAT it does.
+Rewrite it with the business reasoning included. Also check that
+the ASSUMPTIONS field lists every Named Range this formula reads.
+```
+
+Compare the original and refined versions. The difference between "what" and "why" is what makes Intent Notes valuable for audit.
+
+:::note Keep This File
+Save this spreadsheet — you will use it for what-if analysis and goal-seeking in Lesson 7.
+:::
 
 ## The Business Bottom Line: Institutional Memory
 
@@ -256,7 +291,7 @@ The Intent Notes you write in this lesson become the input to that capability te
 ## Try With AI
 
 :::tip Setup
-Open Claude in Excel (or any Claude interface) with the GP Waterfall model from Lessons 3-4 available. If you do not have the model built, you can describe the formulas to Claude and work from the descriptions.
+Open Cowork with the GP Waterfall spreadsheet from Lessons 3-5 (including WACC and NPV). If you do not have the model built, you can describe the formulas to Claude and work from the descriptions.
 :::
 
 **Prompt 1 — Generate an Intent Note for a specific formula:**

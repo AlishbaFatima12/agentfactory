@@ -1,0 +1,379 @@
+---
+slug: /Business-Domain-Agent-Workflows/banking-domain-agents/basel-capital-ratios
+sidebar_position: 6
+title: "Basel III/IV Capital Adequacy -- CET1, Tier 1, Total Capital"
+description: "Build the capital stack from ordinary shares through contingent convertibles to subordinated debt, apply regulatory deductions, and calculate the three capital ratios that determine whether a bank can keep lending"
+keywords:
+  [
+    "Basel III",
+    "Basel IV",
+    "CET1 ratio",
+    "Tier 1 capital",
+    "Total Capital ratio",
+    "capital adequacy",
+    "capital conservation buffer",
+    "D-SIB buffer",
+    "regulatory deductions",
+    "contingent convertibles",
+    "CoCos",
+    "banking AI agents",
+    "capital stack",
+  ]
+chapter: 21
+lesson: 6
+duration_minutes: 45
+
+skills:
+  - name: "Classify Capital Instruments into CET1, AT1, and Tier 2"
+    proficiency_level: "B1"
+    category: "Applied"
+    bloom_level: "Apply"
+    digcomp_area: "Data Literacy"
+    measurable_at_this_level: "Student can take a list of capital instruments and correctly classify each as CET1, Additional Tier 1, or Tier 2, explaining the qualifying criteria for each tier"
+
+  - name: "Apply Regulatory Deductions to Derive Regulatory Capital"
+    proficiency_level: "B1"
+    category: "Technical"
+    bloom_level: "Apply"
+    digcomp_area: "Data Literacy"
+    measurable_at_this_level: "Student can identify which items must be deducted from CET1 (goodwill, intangible assets, DTAs above threshold) and calculate net CET1 capital after deductions"
+
+  - name: "Calculate CET1, Tier 1, and Total Capital Ratios"
+    proficiency_level: "B1"
+    category: "Applied"
+    bloom_level: "Apply"
+    digcomp_area: "Problem Solving"
+    measurable_at_this_level: "Student can compute all three capital ratios from a balance sheet extract, compare them to minimum requirements plus applicable buffers, and determine the bank's capital surplus or deficit"
+
+learning_objectives:
+  - objective: "Identify and classify capital instruments into CET1, AT1, and Tier 2 tiers using Basel III qualifying criteria"
+    proficiency_level: "B1"
+    bloom_level: "Apply"
+    assessment_method: "Given a list of capital instruments, student correctly assigns each to CET1, AT1, or Tier 2 with justification"
+
+  - objective: "Apply regulatory deductions to CET1 capital and explain the prudential rationale for each deduction"
+    proficiency_level: "B1"
+    bloom_level: "Apply"
+    assessment_method: "Student calculates net CET1 from gross CET1 by identifying and applying all required deductions, and explains why goodwill is deducted"
+
+  - objective: "Calculate CET1 ratio, Tier 1 ratio, and Total Capital ratio and compare results to minimum requirements including capital buffers"
+    proficiency_level: "B1"
+    bloom_level: "Apply"
+    assessment_method: "Student computes all three ratios from Exercise 3 data and determines whether the bank meets requirements including CCB and D-SIB buffer"
+
+cognitive_load:
+  new_concepts: 7
+  concepts_list:
+    - "CET1 capital components (ordinary shares, share premium, retained earnings, AOCI)"
+    - "Additional Tier 1 capital (perpetual non-cumulative instruments, contingent convertibles)"
+    - "Tier 2 capital (subordinated debt with 5+ year maturity, general provisions)"
+    - "Regulatory deductions from CET1 (goodwill, intangibles, DTAs, significant investments)"
+    - "CET1 ratio = CET1 / RWA (minimum 4.5% plus buffers)"
+    - "Tier 1 ratio = (CET1 + AT1) / RWA (minimum 6%)"
+    - "Total Capital ratio = (CET1 + AT1 + T2) / RWA (minimum 8%)"
+  assessment: "7 concepts at B1 level -- within the 7-10 concept limit for this tier. Students have completed Lessons 3-5 on IFRS 9 and understand provisioning. This lesson shifts to the solvency pillar, introducing a new conceptual framework (capital adequacy) that builds on the three-pillar architecture from Lesson 1."
+
+differentiation:
+  extension_for_advanced: "Research the Additional Tier 1 write-down and conversion mechanics for contingent convertibles (CoCos). Identify the trigger points (e.g., CET1 falls below 5.125%) and explain how these instruments absorb losses before taxpayer bailout."
+  remedial_for_struggling: "Focus on the three ratios and the capital stack diagram. If you can explain what CET1 is, what gets deducted from it, and why 4.5% is the minimum but 8-9% is the practical floor, you have the essential foundation."
+---
+
+# Basel III/IV Capital Adequacy -- CET1, Tier 1, Total Capital
+
+:::info RWA (Risk-Weighted Assets)
+**The total value of a bank's assets adjusted for risk -- a GBP 100M sovereign bond at 0% risk weight contributes GBP 0 to RWA, while a GBP 100M corporate loan at 100% risk weight contributes GBP 100M.**
+
+A bank with GBP 2 billion in mortgages (35% risk weight) and GBP 500M in corporate loans (100% risk weight): RWA = (2,000 x 0.35) + (500 x 1.00) = GBP 700M + GBP 500M = GBP 1,200M.
+
+RWA is the denominator for all three Basel capital ratios -- a change in RWA directly affects whether the bank meets its capital requirements.
+:::
+
+In Lessons 3-5, you worked through the accounting pillar -- IFRS 9 expected credit losses, PD/LGD/EAD modelling, and macroeconomic overlays. That pillar answers: "How much should the bank set aside for losses it expects?" This lesson shifts to the solvency pillar, which answers a different question entirely: "Does the bank have enough of its own money to absorb losses it does not expect?"
+
+The Basel III/IV capital framework is the global answer to that question. It defines what counts as a bank's own capital, how much capital a bank must hold relative to its risk-weighted assets, and what happens when capital falls below minimum thresholds. The 2008 financial crisis revealed that many banks had reported strong capital ratios using instruments that could not actually absorb losses when losses arrived. Basel III responded by creating a hierarchy of capital quality -- from the highest-loss-absorbing Common Equity Tier 1 down to subordinated debt -- and setting minimum ratios for each tier.
+
+## The Capital Stack
+
+Think of bank capital as a three-layer stack. The top layer absorbs losses first and is the hardest to replenish. The bottom layer absorbs losses last and is the easiest to issue.
+
+| Tier       | Name                 | Components                                                                                       | Loss Absorption                                                                     |
+| ---------- | -------------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| **CET1**   | Common Equity Tier 1 | Ordinary shares, share premium, retained earnings, accumulated other comprehensive income (AOCI) | First to absorb losses -- permanent, fully loss-absorbing                           |
+| **AT1**    | Additional Tier 1    | Perpetual non-cumulative instruments, contingent convertibles (CoCos)                            | Absorbs losses via write-down or conversion to equity when CET1 falls below trigger |
+| **Tier 2** | Tier 2 Capital       | Subordinated debt (minimum 5-year original maturity), general loan-loss provisions (limited)     | Absorbs losses in gone-concern (resolution/insolvency)                              |
+
+### CET1 -- The Core
+
+CET1 is the gold standard. It consists of:
+
+- **Ordinary shares** issued and fully paid
+- **Share premium** from those shares
+- **Retained earnings** (accumulated profits not paid as dividends)
+- **Accumulated other comprehensive income (AOCI)** -- unrealised gains/losses on securities, pension adjustments
+
+CET1 is permanent. It cannot be redeemed. Dividends can be cancelled. This is why regulators treat it as the primary loss-absorbing buffer.
+
+### AT1 -- The Convertible Layer
+
+Additional Tier 1 instruments must be perpetual (no maturity date) and non-cumulative (missed coupons are not paid later). The most common AT1 instrument is the **contingent convertible bond (CoCo)** -- a bond that automatically converts to equity or writes down when the bank's CET1 ratio falls below a contractual trigger (typically 5.125% or 7%).
+
+### Tier 2 -- The Resolution Layer
+
+Tier 2 capital consists primarily of subordinated debt with an original maturity of at least five years. It absorbs losses only in resolution or insolvency -- it does not help a bank that is still operating as a going concern.
+
+## Regulatory Deductions
+
+Not all equity on the balance sheet counts as regulatory capital. Basel III requires several deductions from CET1:
+
+| Deduction                                                                              | Rationale                                                                      |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **Goodwill and intangible assets**                                                     | Cannot absorb losses -- you cannot sell goodwill to pay depositors             |
+| **Deferred tax assets (DTAs)** dependent on future profitability                       | Only valuable if the bank is profitable -- worthless in a loss scenario        |
+| **Significant investments** in unconsolidated financial institutions (above threshold) | Avoids double-counting capital across the banking system                       |
+| **Cash flow hedge reserve**                                                            | Removes volatile items that do not represent permanent loss-absorbing capacity |
+
+:::info Why Goodwill Is Deducted
+When Bank A acquires Bank B for more than Bank B's net assets, the excess is booked as goodwill. If Bank A later faces losses, it cannot sell the goodwill to raise cash -- goodwill is not a realisable asset. Deducting goodwill ensures that reported CET1 reflects only capital that can genuinely absorb losses.
+:::
+
+## The Three Capital Ratios
+
+Every bank must maintain three ratios above Basel minimums:
+
+**CET1 Ratio** = CET1 Capital / Risk-Weighted Assets ≥ 4.5%
+
+**Tier 1 Ratio** = (CET1 + AT1) / Risk-Weighted Assets ≥ 6.0%
+
+**Total Capital Ratio** = (CET1 + AT1 + Tier 2) / Risk-Weighted Assets ≥ 8.0%
+
+:::info MDA (Maximum Distributable Amount)
+**The cap on dividends, bonuses, and share buybacks that a bank can pay when its CET1 ratio falls into the buffer zone above the hard minimum.**
+
+A bank with a combined buffer of 4.0% (CCB 2.5% + D-SIB 1.5%) that uses 50% of its buffer can distribute at most 40% of its quarterly profits. If CET1 falls further into the buffer, the MDA shrinks to zero.
+
+MDA is the mechanism that forces banks to rebuild capital before rewarding shareholders -- it turns capital pressure into immediate operational constraints.
+:::
+
+### Capital Buffers
+
+The 4.5% CET1 minimum is a regulatory floor, not a practical operating level. Banks must also hold additional CET1 buffers:
+
+| Buffer                                | Requirement                         | Applies To                            |
+| ------------------------------------- | ----------------------------------- | ------------------------------------- |
+| **Capital Conservation Buffer (CCB)** | 2.5%                                | All banks                             |
+| **Countercyclical Buffer (CCyB)**     | 0--2.5% (set by national regulator) | All banks, varies by jurisdiction     |
+| **D-SIB Buffer**                      | 1.0--3.5%                           | Domestic systemically important banks |
+| **G-SIB Buffer**                      | 1.0--3.5%                           | Global systemically important banks   |
+
+For a large domestic bank, the effective CET1 minimum is typically:
+
+> 4.5% (minimum) + 2.5% (CCB) + 1.0% (D-SIB) = **8.0% CET1**
+
+Breaching the combined buffer does not trigger immediate regulatory intervention, but it restricts dividend payments, share buybacks, and discretionary bonuses -- the bank enters the "capital distribution constraint" zone.
+
+### The Leverage Ratio
+
+Basel III also introduced a non-risk-weighted backstop:
+
+**Leverage Ratio** = Tier 1 Capital / Total Exposure Measure ≥ 3.0%
+
+The UK PRA sets a higher minimum of 3.25% for banks with retail deposits exceeding GBP 75 billion (threshold revised from GBP 50 billion in PRA PS22/25, November 2025), excluding central bank reserves from the total exposure measure.
+
+The leverage ratio prevents a bank from holding very low-risk-weighted assets (such as sovereign bonds at 0% risk weight) to report strong RWA-based ratios while being dangerously leveraged in absolute terms.
+
+## Exercise 3: Bank Capital Ratio Calculation
+
+A mid-size UK bank reports the following capital position:
+
+**Capital Instruments:**
+
+| Item                                                      | Amount (GBP millions) |
+| --------------------------------------------------------- | --------------------- |
+| Ordinary share capital                                    | 120                   |
+| Share premium                                             | 65                    |
+| Retained earnings                                         | 100                   |
+| AOCI (unrealised gains on securities)                     | 8                     |
+| Goodwill (from 2019 acquisition)                          | 25                    |
+| Intangible assets (software, licences)                    | 12                    |
+| Deferred tax assets (dependent on future profitability)   | 5                     |
+| AT1 CoCo bonds (6.5% trigger, perpetual, non-cumulative)  | 45                    |
+| Subordinated debt (7-year original maturity, issued 2022) | 60                    |
+
+**Risk-Weighted Assets by Asset Class:**
+
+| Asset Class                        | Exposure (GBP M) | Risk Weight       | RWA (GBP M) |
+| ---------------------------------- | ---------------- | ----------------- | ----------- |
+| Cash and central bank reserves     | 180              | 0%                | 0           |
+| UK government bonds                | 420              | 0%                | 0           |
+| Interbank lending (rated A)        | 150              | 50%               | 75          |
+| Corporate loans (rated BBB)        | 600              | 100%              | 600         |
+| Retail mortgages (LTV ≤ 80%)       | 850              | 35%               | 297.5       |
+| Retail mortgages (LTV &gt; 80%)    | 200              | 50%               | 100         |
+| Consumer credit (unsecured)        | 310              | 75%               | 232.5       |
+| Commercial real estate (LTV ≤ 60%) | 180              | 60%               | 108         |
+| Past-due loans (&gt; 90 days)      | 35               | 150%              | 52.5        |
+| Off-balance-sheet commitments      | 120              | 50% CCF, then 75% | 45          |
+| **Total**                          |                  |                   | **1,510.5** |
+
+**Your tasks:**
+
+1. Calculate CET1 capital after deductions
+2. Calculate Tier 1 capital (CET1 + AT1)
+3. Calculate Total Capital (Tier 1 + Tier 2)
+4. Calculate all three capital ratios
+5. The bank is designated D-SIB with a 1.0% buffer. Does it meet all requirements including CCB and D-SIB?
+
+:::tip Worked Solution
+**Step 1 -- CET1 Capital:**
+Ordinary shares (120) + Share premium (65) + Retained earnings (100) + AOCI (8) = 293
+Less deductions: Goodwill (25) + Intangibles (12) + DTAs (5) = 42
+**CET1 = 293 - 42 = GBP 251M**
+
+**Step 2 -- Tier 1 Capital:**
+CET1 (251) + AT1 CoCos (45) = **GBP 296M**
+
+**Step 3 -- Total Capital:**
+Tier 1 (296) + Tier 2 sub-debt (60) = **GBP 356M**
+
+**Step 4 -- Ratios (RWA = GBP 1,510.5M):**
+
+- CET1 Ratio = 251 / 1,510.5 = **16.6%**
+- Tier 1 Ratio = 296 / 1,510.5 = **19.6%**
+- Total Capital Ratio = 356 / 1,510.5 = **23.6%**
+
+**Step 5 -- Buffer compliance:**
+CET1 minimum + CCB + D-SIB = 4.5% + 2.5% + 1.0% = 8.0%
+Bank's CET1 ratio: 16.6% -- exceeds 8.0% by 8.6 percentage points.
+All three ratios comfortably exceed minimums. The bank has significant capital headroom.
+:::
+
+## Using the Banking Plugin
+
+The `basel-capital` skill classifies capital instruments, applies regulatory deductions, and calculates all three capital ratios with buffer assessment. Here is a worked example.
+
+**Worked example.** James Oduya, Capital Planning Manager at Sovereign Trust Bank, needs a quick capital adequacy check after a quarterly earnings update. He types:
+
+```
+Calculate capital ratios for this position:
+CET1 components: ordinary shares GBP 120M, share premium
+  GBP 65M, retained earnings GBP 100M, AOCI GBP 8M
+Deductions: goodwill GBP 25M, intangibles GBP 12M, DTAs GBP 5M
+AT1: CoCo bonds GBP 45M (6.5% trigger, perpetual)
+Tier 2: subordinated debt GBP 60M (7-year maturity)
+RWA: GBP 1,510.5M
+D-SIB buffer: 1.0%
+Jurisdiction: UK PRA
+```
+
+The agent routes through `basel-capital` and responds:
+
+```
+GOVERNING STANDARD: Basel III — UK PRA
+DOMAIN: Capital Adequacy — Ratio Calculation
+JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+
+CAPITAL STACK
+  Gross CET1: GBP 293.0M (120 + 65 + 100 + 8)
+  Deductions:  GBP 42.0M (25 + 12 + 5)
+  Net CET1:    GBP 251.0M
+  Tier 1:      GBP 296.0M (251 + 45 AT1)
+  Total Capital: GBP 356.0M (296 + 60 T2)
+
+RATIOS (RWA = GBP 1,510.5M)
+  CET1 Ratio:     16.6%  (minimum 4.5%)
+  Tier 1 Ratio:   19.6%  (minimum 6.0%)
+  Total Capital:  23.6%  (minimum 8.0%)
+
+BUFFER ASSESSMENT
+  CET1 minimum + CCB + D-SIB = 4.5% + 2.5% + 1.0% = 8.0%
+  CET1 surplus above combined buffer: 8.6pp
+  Status: All ratios exceed requirements with significant
+  headroom. No distribution constraints apply.
+
+NOTE: The professional reviews the instrument classifications
+and deduction completeness; the agent calculated the ratios
+and buffer compliance.
+```
+
+James reviews whether the AT1 CoCos meet the perpetuity and non-cumulative criteria for AT1 classification, and confirms that no additional deductions (such as significant investments) have been omitted from the calculation.
+
+### Jurisdiction Variant: GCC (SAMA and CBUAE)
+
+GCC regulators apply the standard Basel III minimums (4.5% CET1, 8.0% Total Capital) plus the 2.5% Capital Conservation Buffer, producing combined requirements of 7.0% CET1 and 10.5% Total Capital — consistent with Basel III as implemented globally. SAMA additionally applies D-SIB buffers of 0.5-1.5% to the largest Saudi banks. The Central Bank of the UAE (CBUAE) sets similar floors: a minimum CET1 of 7.0% and a Capital Conservation Buffer of 2.5%, with the CBUAE additionally requiring a minimum Tier 1 leverage ratio of 3.0% for all UAE-licensed banks under CBUAE Regulation No. 52/2020. Both jurisdictions require banks to calculate capital ratios under the Standardised Approach unless explicitly approved for IRB, and both have adopted Basel III liquidity standards (LCR and NSFR) with local modifications to HQLA eligibility -- notably, UAE federal government bonds and Saudi government sukuk qualify as Level 1 HQLA. The banking plugin's `uae-cbuae` jurisdiction overlay reflects these higher floors and local HQLA classifications.
+
+## Try With AI
+
+Use these prompts in Claude or your preferred AI assistant to deepen your understanding of capital adequacy.
+
+### Prompt 1: Capital Classification
+
+```
+I am learning Basel III capital adequacy. A bank has the following
+instruments on its balance sheet. Classify each as CET1, AT1, or
+Tier 2, and explain WHY it qualifies for that tier:
+
+1. GBP 500M ordinary shares, fully paid
+2. GBP 200M retained earnings
+3. GBP 80M perpetual non-cumulative bonds (CoCos, 5.125% trigger)
+4. GBP 120M subordinated debt (8-year maturity, issued 2023)
+5. GBP 40M goodwill from a 2020 acquisition
+6. GBP 15M general loan-loss provisions
+
+For item 5, explain why it is NOT capital.
+For item 6, explain which tier it can count toward and any limits.
+```
+
+**What you are learning:** Capital classification is the foundational skill for computing all three ratios. By justifying each classification, you internalise the qualifying criteria -- permanence for CET1, perpetuity for AT1, subordination for Tier 2 -- rather than memorising a list.
+
+### Prompt 2: Buffer Analysis
+
+```
+A bank's CET1 ratio is 9.2%. The applicable requirements are:
+
+- Minimum CET1: 4.5%
+- Capital Conservation Buffer: 2.5%
+- Countercyclical buffer: 1.0% (set by national regulator)
+- D-SIB buffer: 1.5%
+
+Calculate:
+1. The combined buffer requirement
+2. How much CET1 is "free" above the combined buffer
+3. What restrictions apply if CET1 falls to 8.5%?
+4. What happens at 7.0%?
+5. At what CET1 ratio does the bank breach the hard minimum?
+
+Explain the difference between breaching the buffer zone
+and breaching the hard minimum.
+```
+
+**What you are learning:** The buffer framework creates a graduated response -- not a binary pass/fail. Understanding the distribution constraint mechanics tells you how capital pressure translates to operational restrictions before reaching the hard minimum where regulatory intervention begins.
+
+### Prompt 3: Deduction Rationale
+
+```
+A bank reports GBP 2.1 billion in shareholders' equity on its
+balance sheet. After Basel III deductions, its regulatory CET1
+is only GBP 1.6 billion -- a GBP 500 million reduction.
+
+The deductions are:
+- Goodwill: GBP 280M
+- Intangible assets (software): GBP 95M
+- DTAs dependent on future profitability: GBP 75M
+- Significant investment in insurance subsidiary: GBP 50M
+
+For EACH deduction:
+1. Explain in plain language why this item cannot absorb losses
+2. Give a scenario where keeping it in CET1 would be misleading
+3. Explain what would happen if regulators did not require
+   this deduction
+
+Then answer: why do shareholders' equity and regulatory capital
+differ? What does this tell us about accounting vs prudential
+perspectives?
+```
+
+**What you are learning:** The gap between accounting equity and regulatory capital reveals a fundamental tension in banking. Accountants measure value; regulators measure loss-absorbing capacity. Deductions strip out items that have book value but cannot be converted to cash when the bank needs to absorb losses. This distinction is essential when building AI agents that must produce output for both accounting and regulatory audiences.
+
+## Flashcards Study Aid
+
+<Flashcards />

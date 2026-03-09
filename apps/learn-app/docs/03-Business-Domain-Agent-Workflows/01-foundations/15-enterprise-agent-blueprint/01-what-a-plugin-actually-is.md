@@ -113,6 +113,8 @@ The word "plugin" carries baggage from its previous life in software. Browser pl
 
 This lesson gives you all three layers, plus the architectural property that makes the whole thing deployable in environments that do not tolerate black boxes.
 
+![8 Steps to Set Up Your Entire Claude Cowork — from downloading the app through writing your context files, setting instructions, installing plugins, and connecting tools](/img/ch15-eight-steps-cowork-setup.png)
+
 ## Layer 1: What a Plugin Is
 
 Anthropic's [plugin reference](https://code.claude.com/docs/en/plugins-reference) defines a plugin precisely: **a self-contained directory of components that extends Claude Code with custom functionality.** A plugin is a packaging format. It bundles skills, agents, hooks, MCP server declarations, and a manifest into a directory that Claude Code can discover, load, and use. That is all the format requires. It does not prescribe what the plugin is _about_, any more than a ZIP file prescribes its contents.

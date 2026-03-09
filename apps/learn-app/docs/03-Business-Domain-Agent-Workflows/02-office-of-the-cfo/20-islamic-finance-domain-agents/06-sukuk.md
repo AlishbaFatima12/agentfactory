@@ -84,7 +84,7 @@ differentiation:
 
 In Lessons 4 and 5, you worked through murabaha and ijarah at the individual transaction level — a bank and a customer. Sukuk operates at a different scale. These are capital market instruments traded globally, issued by sovereigns and corporations, held by investors across multiple jurisdictions, and subject to accounting analysis from both the issuer's and investor's perspectives simultaneously.
 
-Global sukuk issuance exceeds $250 billion annually. Malaysia is the world's largest single issuer market, accounting for approximately 35-40% of global volume. Saudi Arabia, the UAE, Indonesia, and Pakistan are major sovereign issuers. The London Stock Exchange lists sukuk from multiple jurisdictions. Green sukuk — combining Islamic finance's asset-backed principles with the global sustainability movement — grew by 17% in Q1 2024.
+Global sukuk issuance reached approximately $200 billion in 2024. Malaysia is the world's largest single issuer market, accounting for approximately 35-40% of global volume. Saudi Arabia, the UAE, Indonesia, and Pakistan are major sovereign issuers. The London Stock Exchange lists sukuk from multiple jurisdictions. Green sukuk — combining Islamic finance's asset-backed principles with the global sustainability movement — grew by 17% in Q1 2024.
 
 ## Sukuk Structures
 
@@ -190,11 +190,13 @@ If adopted, originators would need to genuinely transfer assets (true sale), and
 The purchase undertaking is the most contested issue in global sukuk accounting and Shariah compliance:
 
 - **IFRS perspective:** A fixed-price purchase undertaking makes the sukuk economically equivalent to a bond — the investor gets back face value regardless of asset performance
-- **Shariah perspective:** AAOIFI Shariah Standard 59 permits purchase undertakings for ijarah sukuk but prohibits them for equity-based sukuk (musharakah, mudarabah) because guaranteeing capital return in a profit-sharing arrangement violates the risk-sharing principle
+- **Shariah perspective:** AAOIFI Shariah Standard 17 (Investment Sukuk) and the AAOIFI 2008 Shariah resolution on sukuk permit purchase undertakings for ijarah sukuk but prohibit them for equity-based sukuk (musharakah, mudarabah) because guaranteeing capital return in a profit-sharing arrangement violates the risk-sharing principle
 - **Standard 62 risk:** If adopted, purchase undertakings in their current form may not satisfy the asset-backed requirement
 
-:::info Companion Repository
-Download the exercise data and skill files from the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) — use `islamic-finance-domain-agents-exercise-data.zip` for the scenario data in `exercises/ex03-gcc-sukuk-issuance.md`, and reference the skill files in `skills/products/sukuk-issuer.md` and `skills/products/sukuk-investor.md`.
+:::info Exercise Requirements
+
+**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex03-gcc-sukuk-issuance.md`
 :::
 
 ## Practice Exercise 3: GCC Sukuk Issuance — Multi-Jurisdiction Accounting
@@ -215,7 +217,9 @@ Download the exercise data and skill files from the [companion repository](https
 
 5. **Comparison and Standard 62 analysis.** Ask: _"Produce a comparison table: Bahrain (AAOIFI FAS 25), Malaysia (MFRS 9), and UK (IFRS 9) investor accounting for this sukuk. For each: (1) Measurement basis; (2) Income label; (3) Balance sheet classification; (4) Impairment approach. Then: Is the purchase undertaking at face value a Shariah compliance concern? If Draft Standard 62 were adopted, would this sukuk pass the asset-backed test? What structural change would be required?"_
 
-**Check your work:** In Step 1, the derecognition analysis should conclude that assets remain on the issuer's balance sheet (failed derecognition due to purchase undertaking). The sukuk should be classified as a financial liability under IAS 32. In Steps 2-4, the ijarah sukuk should pass the SPPI test and be eligible for amortised cost classification. The comparison table in Step 5 should show similar measurement but different labels and disclosure requirements.
+6. **Error detection — misclassified sukuk.** Review this deliberately incorrect output and identify the errors: _"A Bahrain investor classified an ijarah sukuk at FVTPL and labelled the income 'Interest Income from Sukuk'. The balance sheet shows it under 'Trading Securities'. Identify all classification and labelling errors for a Bahrain entity under AAOIFI FAS 25. What should each line item be?"_
+
+**Check your work:** In Step 1, the derecognition analysis should conclude that assets remain on the issuer's balance sheet (failed derecognition due to purchase undertaking). The sukuk should be classified as a financial liability under IAS 32. In Steps 2-4, the ijarah sukuk should pass the SPPI test and be eligible for amortised cost classification. The comparison table in Step 5 should show similar measurement but different labels and disclosure requirements. In Step 6, the errors are: "Interest Income" is prohibited (should be "Sukuk Income" or "Ijarah Income"), FVTPL is wrong for an ijarah sukuk that passes the SPPI test (should be amortised cost), and "Trading Securities" is not an AAOIFI balance sheet classification for sukuk investments.
 
 :::tip Global Perspective
 
@@ -279,6 +283,10 @@ the issuer's board of directors.
 ```
 
 **What you are learning:** Green sukuk represent the convergence of Islamic finance and sustainable finance — two movements with natural alignment (both require asset-backing, ethical screening, and real economic activity). The accounting treatment is unchanged, but the disclosure and reporting obligations are significantly expanded. This is one of the fastest-growing segments of the global sukuk market and a high-value advisory niche.
+
+## Flashcards Study Aid
+
+<Flashcards />
 
 ---
 

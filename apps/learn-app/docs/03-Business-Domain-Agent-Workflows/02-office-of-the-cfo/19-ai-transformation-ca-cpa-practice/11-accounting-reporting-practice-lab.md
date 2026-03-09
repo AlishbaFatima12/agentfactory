@@ -119,7 +119,6 @@ teaching_guide:
       expected_response: "The unrealised profit elimination in closing inventory. It requires understanding the IFRS 10 principle that all traces of intra-group profit must be eliminated until goods are sold to a third party — not just applying a formula."
 ---
 
-
 # Accounting & Reporting Practice Lab
 
 > _"A bookkeeping agent that never asks questions is one that is coding ambiguous transactions without flagging them. That is worse than asking."_
@@ -136,7 +135,7 @@ These are not quick demonstrations. Each exercise mirrors a real engagement: you
 - **Exercise 10** (40 min) — Most architecturally important. Builds a scheduled month-end close with exception handling.
 - **Exercise 11** (55 min) — Most technically demanding. Multi-entity consolidation with intercompany elimination.
 
-**Data files:** Download the exercise data from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest) — use `ca-cpa-exercise-data.zip` or clone [the repo](https://github.com/panaversity/ca-cpa-practice-agents). Each exercise references specific input files from the `exercises/` folder — trial balances, source document templates, and hypothetical entity data.
+**Data files:** [**Download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and unzip. You will find: `exercises/trial-balances/textile-manufacturer-tb.csv` (trial balance), `exercises/source-documents/` (invoices and receipts), and `exercises/consolidation/parent-subsidiary-data.md` (consolidation data for Exercise 11).
 :::
 
 ---
@@ -145,7 +144,7 @@ These are not quick demonstrations. Each exercise mirrors a real engagement: you
 
 **What you'll build:** A Cowork workflow that takes raw source documents and produces a coded transaction register ready for import into any accounting system.
 
-**Requirements:** Cowork (Team or Enterprise), `finance@knowledge-work-plugins` installed, 8-12 source documents (receipts, invoices, bank statements — real or from the [companion repo](https://github.com/panaversity/ca-cpa-practice-agents) at `exercises/source-documents/`).
+**Requirements:** Cowork (Team or Enterprise), `finance@knowledge-work-plugins` installed, 8-12 source documents (receipts, invoices, bank statements — real or from the [companion repo](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/exercises/source-documents)).
 
 ### Step-by-Step Instructions
 
@@ -477,7 +476,7 @@ completion time.
 
 **What you'll build:** An automated consolidation workflow that produces group financial statements from multiple entity trial balances, with full intercompany elimination.
 
-**Requirements:** Cowork (Team or Enterprise), Claude in Excel, `finance@knowledge-work-plugins`, trial balance data for two entities. Download the ready-made Crescent Textiles + Karachi Foods consolidation data from the [companion repo](https://github.com/panaversity/ca-cpa-practice-agents) at `exercises/consolidation/parent-subsidiary-data.md` — includes intercompany balances and elimination workings.
+**Requirements:** Cowork (Team or Enterprise), Claude in Excel, `finance@knowledge-work-plugins`, trial balance data for two entities. Use the consolidation data from the exercise zip: `exercises/consolidation/parent-subsidiary-data.md` — includes intercompany balances and elimination workings.
 
 ### Hypothetical Setup
 
@@ -653,6 +652,10 @@ elimination specifically, explain:
 
 **What you are learning:** Consolidation verification requires you to think beyond the mechanics of the current period. The unrealised profit elimination reverses the following year — meaning a consolidation error in one period compounds in the next. Understanding this temporal dimension is what separates a CA/CPA reviewing consolidated statements from a bookkeeper applying rules to a single period.
 
+
+## Flashcards Study Aid
+
+<Flashcards />
 
 ---
 

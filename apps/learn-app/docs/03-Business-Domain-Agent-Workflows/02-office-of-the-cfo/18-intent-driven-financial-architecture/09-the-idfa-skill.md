@@ -85,32 +85,30 @@ differentiation:
 
 In Lesson 8, you retrofitted a legacy coordinate-based model to IDFA compliance — converting formulas one by one, validating outputs at each step. Now you have the complete methodology: three layers, four guardrails, naming conventions, the delegated calculation workflow, and the retrofitting process. All of that knowledge lives in your head. The IDFA plugin makes it live in every agent you use.
 
-A SKILL.md file is a structured document that follows the [agentskills.io](https://agentskills.io) open standard. The Panaversity team has packaged the complete IDFA methodology as a Claude Code plugin — [`panaversity/idfa-financial-architect`](https://github.com/panaversity/idfa-financial-architect) — so you install the skill with two commands and it auto-activates on every financial modelling task. The agent reads it at the start of every session. It does not need to be prompted. It does not need to be reminded. The skill becomes part of how the agent thinks — and when someone mentions a financial model, a spreadsheet formula, or a model audit, the agent applies the full IDFA methodology automatically.
+A SKILL.md file is a structured document that follows the [agentskills.io](https://agentskills.io) open standard. The Panaversity team has packaged the complete IDFA methodology as a Claude Code plugin — [`idfa-financial-architect`](https://github.com/panaversity/agentfactory-business-plugins/tree/main/idfa-financial-architect) — available from the `agentfactory-business-plugins` catalog, so you install the skill with two commands and it auto-activates on every financial modelling task. The agent reads it at the start of every session. It does not need to be prompted. It does not need to be reminded. The skill becomes part of how the agent thinks — and when someone mentions a financial model, a spreadsheet formula, or a model audit, the agent applies the full IDFA methodology automatically.
 
 ## What the Plugin Contains
 
-The IDFA plugin follows the standard Claude Code plugin structure:
+The [IDFA plugin](https://github.com/panaversity/agentfactory-business-plugins/tree/main/idfa-financial-architect) has this structure:
 
 ```
-panaversity/idfa-financial-architect/
+idfa-financial-architect/
 ├── .claude-plugin/
-│   ├── plugin.json            ← Plugin metadata (name, version, author)
-│   └── marketplace.json       ← Marketplace catalog
+│   └── plugin.json            ← Plugin metadata (name, version, author)
 ├── skills/
-│   ├── financial-architect/   ← The methodology (UNCHANGED)
+│   ├── financial-architect/   ← The methodology
 │   │   ├── SKILL.md           ← Behavioural guidance, four guardrails
 │   │   └── references/
-│   │       └── IDFA-reference.md  ← Enterprise governance, complex formulas, sector naming
+│   │       ├── IDFA-reference.md   ← Enterprise governance, sector naming
+│   │       └── IDFA-whitepaper.md  ← Research foundation
 │   └── idfa-ops/              ← The operations — the agent's "hands"
 │       ├── SKILL.md           ← "Use these scripts for Named Range operations"
 │       └── scripts/
 │           ├── idfa_ops.py    ← Write, read, inspect, formula, create-range
 │           ├── idfa_audit.py  ← Compliance auditor
 │           └── recalc_bridge.py ← LibreOffice recalculation
-├── examples/
-│   └── gp_waterfall.xlsx      ← Reference model
 ├── README.md
-└── LICENSE                    ← Apache-2.0
+└── LICENSE                    ← Proprietary
 ```
 
 The plugin includes two skills working together. The **financial-architect** skill encodes every concept you learned in Lessons 1 through 8 — the methodology, the guardrails, the naming conventions. The **idfa-ops** skill gives the agent its "hands" — the scripts that actually read from, write to, and audit Excel models programmatically. When the methodology skill says "write the assumption to the model," the operations skill provides the tool to do it.
@@ -127,10 +125,17 @@ description: >-
   cell references, formula tracing, model audit, COGS, revenue projection,
   gross profit, EBITDA, DCF, LBO, comps, three-statement model, budget,
   forecast, variance analysis, what-if analysis, scenario modelling, goal
-  seeking, Monte Carlo simulation, model review, or model handover...
-license: Apache-2.0
+  seeking, Monte Carlo simulation, model review, or model handover.
+  Also activate when the user says "the model is a black box",
+  "I inherited this model", "I need to audit this spreadsheet",
+  or any similar phrase indicating confusion about how a financial
+  model works. Do NOT activate for general accounting questions,
+  tax advice, investment recommendations, or tasks unrelated to
+  the structure and logic of financial spreadsheets.
+license: Proprietary
 metadata:
   author: Panaversity
+  research-lead: Zia Khan
   version: "1.0"
 ---
 ```
@@ -148,7 +153,7 @@ If you use Claude through the **Cowork** tab in the Claude desktop app:
 1. Open the **Cowork** sidebar
 2. Click **Customize**
 3. Click **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub**
-4. Enter `https://github.com/panaversity/idfa-financial-architect`
+4. Enter `https://github.com/panaversity/agentfactory-business-plugins`
 5. Find **IDFA Financial Architect** and click **Install**
 
 The IDFA skill auto-activates in all Cowork sessions when you mention financial models. Both skills — the methodology and the operations — install together as a single plugin.
@@ -160,15 +165,15 @@ Plugins in Cowork are saved locally to your machine. For team-wide deployment, y
 If you use Claude Code in the terminal:
 
 ```bash
-/plugin marketplace add panaversity/idfa-financial-architect
-/plugin install idfa-financial-architect@panaversity-idfa
+/plugin marketplace add panaversity/agentfactory-business-plugins
+/plugin install idfa-financial-architect@agentfactory-business
 ```
 
 Claude Code reads both SKILL.md files and makes them available in every session. When a conversation mentions financial models, named ranges, or any trigger phrase listed in the skill, Claude activates the IDFA methodology automatically.
 
 ### Other Agents (GitHub Copilot, VS Code, Codex, Cursor)
 
-The plugin contains a standard SKILL.md file. For agents that do not support the Claude Code plugin format, download `skills/financial-architect/SKILL.md` from the [GitHub repository](https://github.com/panaversity/idfa-financial-architect) and place it in the platform's custom instructions path:
+The plugin contains a standard SKILL.md file. For agents that do not support the Claude Code plugin format, download `skills/financial-architect/SKILL.md` from the [GitHub repository](https://github.com/panaversity/agentfactory-business-plugins/tree/main/idfa-financial-architect) and place it in the platform's custom instructions path:
 
 | Agent          | Path                                         |
 | -------------- | -------------------------------------------- |
@@ -229,35 +234,93 @@ These mistakes appear in the SKILL.md as a safeguard. When the skill is active, 
 
 5. **Never name a range with spaces.** `Inp_Rev_Y1`, not `Inp Rev Y1`. Excel rejects spaces in formula references; the skill prevents the agent from creating them.
 
-## Exercise: Install and Test the IDFA Plugin
+## Exercise: Three Ways to Activate the IDFA Skill
 
-**Step 1.** Install the IDFA plugin.
+You installed the IDFA plugin in the [Chapter 18 prerequisites](./README.md#prerequisites). In Lessons 3-8, the skill auto-activated when you mentioned financial models — you did not need to reference it by name. Now you will learn two more activation methods and understand when each is appropriate.
 
-**In Cowork** (recommended): Open the sidebar → **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/idfa-financial-architect` → find **IDFA Financial Architect** → click **Install**.
+### Step 1 — Prompt: Auto-Activation (What You Have Been Doing)
 
-**In Claude Code**: Run `/plugin marketplace add panaversity/idfa-financial-architect` then `/plugin install idfa-financial-architect@panaversity-idfa`.
-
-**Step 2.** Start a new Claude Code session (or Cowork session) so the plugin is loaded.
-
-**Step 3.** Give Claude this intent statement — a completely new model it has not seen in this chapter:
+Open Cowork with a fresh session. Type a financial modelling prompt that mentions IDFA concepts:
 
 ```
-Project a 5-year SaaS revenue model with $5M ARR growing 30% YoY,
-70% gross margins improving to 80% by Year 5.
+Build an IDFA-compliant 5-year SaaS revenue model. Inputs: $5M ARR
+growing 30% YoY, 70% gross margins improving to 80% by Year 5.
+Use Named Range notation for all formulas. Project revenue, COGS,
+and gross profit for all five years.
 ```
 
-**Step 4.** Review Claude's output against the four guardrails:
+The skill should auto-activate from trigger phrases like "revenue model," "gross margins," and "Named Range." But auto-activation depends on Cowork recognising those trigger phrases — it is not guaranteed.
+
+### Step 2 — Prompt: Explicit Skill Invocation
+
+Now invoke the skill directly by typing `/financial-architect` in Cowork:
+
+```
+/financial-architect
+
+Audit the SaaS model you just built. Check every formula for Named
+Range compliance, verify layer isolation, and confirm Intent Notes
+are attached. Report the compliance percentage.
+```
+
+When you type `/financial-architect`, you are telling Cowork to load the skill explicitly — the full methodology, the Agent Decision Table, the guardrail checks, and the naming conventions all activate at once. This is different from auto-activation: explicit invocation guarantees the skill is loaded, while auto-activation depends on trigger phrases being recognised.
+
+### Step 3 — Prompt: Configure the Instructions Pane
+
+Both auto-activation and explicit invocation depend on the agent deciding to load the skill for that particular message. For **persistent** activation across an entire session, you can configure the **Instructions pane** to tell Cowork to use IDFA on every interaction.
+
+1. In the Cowork right sidebar, click **Instructions** (under "outputs") — this opens the Folder Instructions modal
+2. In the editor, add this natural-language instruction:
+
+```
+Always apply the IDFA Financial Architect methodology when working
+with financial models. Use Named Range notation for all formulas,
+verify complex formulas in mathematical notation, attach Intent Notes,
+and delegate all calculations to the spreadsheet engine.
+```
+
+3. Save the instructions and return to the chat
+
+![The Folder Instructions modal in Cowork — type natural-language instructions that apply to every interaction in this session.](./cowork-folder-instructions.png)
+
+This writes to Cowork's equivalent of a `CLAUDE.md` file — persistent instructions that apply to every message in this session. Unlike auto-activation (which depends on trigger phrases) or explicit invocation (which you must type each time), Instructions pane configuration is **always on** for the session.
+
+Now test it with a prompt that has no obvious trigger phrases:
+
+```
+Add a customer acquisition cost calculation to the SaaS model.
+CAC is $500 in Year 1, decreasing 10% per year. Calculate
+payback period using gross profit per customer.
+```
+
+Check the output. Even though the prompt does not mention "financial model" or "Named Ranges," the Instructions pane ensures the IDFA methodology is applied.
+
+### Step 4 — Verify: Check the Context Panel
+
+After Cowork processes your prompt, look at the **Context** section in the right sidebar. When a skill is invoked — whether through auto-activation, explicit invocation, or Instructions — it appears in the Context panel as a loaded skill. This tells you exactly which skills Cowork is using for the current interaction.
+
+![The Cowork right sidebar showing the Context panel with loaded skills (financial-architect and idfa-ops), the outputs section with Instructions and workbook references, and the Progress panel tracking completed steps.](./cowork-context-panel.png)
+
+In the screenshot above, notice the **Context** section at the bottom right: it shows `financial-architect` and `idfa-ops` as loaded skills, confirming the IDFA plugin is active. The **outputs** section shows `Instructions : CLAUDE.md` — the persistent instructions you configured in Step 3.
+
+Verify the output against the four guardrails:
 
 | Guardrail             | What to Check                                                                                                    |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | Named Range Priority  | Are all inputs named with `Inp_` prefix? Are all formulas written in Named Range notation with zero coordinates? |
-| LaTeX Verification    | If the model includes complex formulas, did Claude verify them in LaTeX notation?                                |
-| Intent Notes          | Did Claude include Intent Note format for generated formulas?                                                    |
-| Delegated Calculation | Did Claude describe the write/read workflow rather than calculating results internally?                          |
+| LaTeX Verification    | If the model includes complex formulas (like payback period), did Cowork verify them in mathematical notation?   |
+| Intent Notes          | Did Cowork include Intent Note format for generated formulas?                                                    |
+| Delegated Calculation | Did Cowork describe the write/read workflow rather than calculating results internally?                          |
 
-If all four guardrails appear in the output without you asking for them, the skill is working. If any guardrail is missing, check that the plugin is installed and that you started a fresh session.
+### Step 5 — Extend: Compare All Three Approaches
 
-**Step 5.** Open the installed SKILL.md and read the Agent Decision Table. Find the row for "Retrofitting a legacy model" and trace the workflow: inspect the model → identify hardcoded values → propose Named Ranges → rewrite one by one → validate. This is the same five-phase process you learned in Lesson 8, now encoded as an instruction the agent follows automatically.
+| Approach               | How It Works                                         | When to Use                                      | Reliability                              |
+| ---------------------- | ---------------------------------------------------- | ------------------------------------------------ | ---------------------------------------- |
+| Auto-activation        | Trigger phrases in prompt activate the skill         | Natural prompts about financial models           | High — but depends on phrase recognition |
+| `/financial-architect` | Explicit skill invocation typed in the chat          | Audits, compliance checks, one-off tasks         | Certain — skill is explicitly loaded     |
+| Instructions pane      | Persistent NLP instructions applied to every message | Sessions where every interaction should use IDFA | Always on — no prompt dependency         |
+
+For everyday model building (Lessons 3-8), auto-activation is sufficient. For formal audits or one-off checks, invoke `/financial-architect` explicitly. For dedicated IDFA sessions — building a complete model, retrofitting a legacy workbook, or preparing for an audit — configure the Instructions pane so the methodology is active without relying on trigger phrases.
 
 ## The Business Bottom Line
 
@@ -271,7 +334,7 @@ This also connects back to Chapter 15, where you learned the plugin architecture
 
 :::tip Setup
 
-Open a Cowork session (or Claude Code) where you have installed the IDFA plugin. In Cowork: **Customize** → **Browse plugins** → **Personal** → **+** → **Add marketplace from GitHub** → enter the GitHub URL → **Install**. In Claude Code: `/plugin marketplace add panaversity/idfa-financial-architect` then `/plugin install idfa-financial-architect@panaversity-idfa`. Start a fresh session so the skill is loaded.
+Use these prompts in Cowork or your preferred AI assistant with the IDFA plugin installed (see [Chapter 18 prerequisites](./README.md#prerequisites) if you have not installed it yet). For the most reliable results, configure the Instructions pane as described in the exercise above. Start a fresh session so the skill is loaded.
 
 :::
 

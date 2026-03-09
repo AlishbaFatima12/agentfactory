@@ -70,7 +70,7 @@ differentiation:
 
 # The Plugin Architecture — Router, Product Skills, Jurisdiction Overlays
 
-In Lesson 2, you examined the Global Standards Map and saw how 20 jurisdictions resolve into three accounting regimes. Now you will examine the skill architecture that translates that map into agent behaviour. The architecture has three layers, and you will walk through each one using the actual skill files from the companion repository.
+In Lesson 2, you examined the Global Standards Map and saw how 20 jurisdictions resolve into three accounting regimes. Now you will examine the skill architecture that translates that map into agent behaviour. The architecture has three layers, and you will walk through each one using the actual skill files from the plugin repository.
 
 ## The Three-Layer Stack
 
@@ -113,7 +113,7 @@ The router never defaults to IFRS. If the jurisdiction is not specified, it asks
 
 ## Anatomy of a Product Skill: Murabaha
 
-The murabaha product skill (`products/murabaha.md`) illustrates how product skills are structured. It opens with a core principle:
+The murabaha product skill (`skills/murabaha/SKILL.md`) illustrates how product skills are structured. It opens with a core principle:
 
 > Murabaha is a SALE transaction, not a LOAN transaction. The bank is a merchant purchasing and reselling — not a lender charging interest. This principle governs all accounting treatment and terminology.
 
@@ -138,7 +138,7 @@ The product skill contains the accounting mechanics. It does not contain Bahrain
 
 ## Anatomy of a Jurisdiction Overlay: Bahrain
 
-The Bahrain overlay (`jurisdictions/bahrain-aaoifi.md`) illustrates how overlays modify product skill output. It opens with the governing framework:
+The Bahrain overlay (`skills/islamic-finance-router/references/jurisdictions/bahrain-aaoifi.md`) illustrates how overlays modify product skill output. It opens with the governing framework:
 
 > AAOIFI Financial Accounting Standards are MANDATORY for all Islamic financial institutions licensed by the Central Bank of Bahrain.
 
@@ -188,9 +188,9 @@ To see the full architecture in action, trace a sample query through all three l
 
 **Query:** "Generate a murabaha income schedule for ABC Islamic Bank in Bahrain. The bank purchased industrial equipment for BHD 500,000 and sold it to a customer at 15% mark-up over 36 months."
 
-**Step 1 — Router identifies jurisdiction:** "Bahrain" appears in the query. Currency is BHD. The router loads `jurisdictions/bahrain-aaoifi.md`.
+**Step 1 — Router identifies jurisdiction:** "Bahrain" appears in the query. Currency is BHD. The router loads `skills/islamic-finance-router/references/jurisdictions/bahrain-aaoifi.md`.
 
-**Step 2 — Router identifies product:** "Murabaha" appears in the query. The router loads `products/murabaha.md`.
+**Step 2 — Router identifies product:** "Murabaha" appears in the query. The router loads `skills/murabaha/SKILL.md`.
 
 **Step 3 — Product skill applies:** The murabaha skill provides the four-step journal entry sequence, the effective profit rate calculation method, and the income recognition schedule formula.
 
@@ -270,9 +270,26 @@ escalated to the SSB? Why is this boundary non-negotiable?
 
 **What you are learning:** The boundary between automation and judgment is the most important design decision in any domain agent. In Islamic finance, the SSB has exclusive authority over Shariah compliance determinations. Understanding where the agent stops and the human begins prepares you for the exercises in Lessons 4-17, where you will encounter escalation scenarios repeatedly.
 
-:::info Companion Repository
-Browse the complete skill library in the [companion repository](https://github.com/panaversity/islamic-finance-domain-agents) — or download `islamic-finance-domain-agents-skills-only.zip` from the [releases page](https://github.com/panaversity/islamic-finance-domain-agents/releases/latest) to examine the files locally. The skill files examined in this lesson are at `skills/islamic-finance-global-router.md`, `skills/products/murabaha.md`, and `skills/jurisdictions/bahrain-aaoifi.md`. Read them alongside the exercises starting in Lesson 4.
+:::info Plugin Installation
+
+Install the Islamic Finance Domain Agents plugin to activate the skill architecture described in this lesson:
+
+**Claude Code CLI:**
+
+```bash
+claude plugin install islamic-finance@agentfactory-business
+```
+
+**Cowork:** Sidebar → Customize → Browse plugins → + → Add marketplace from GitHub → `panaversity/agentfactory-business-plugins` → Install "islamic-finance"
+
+**Verify:** Start a new session and say "I have a Bahrain murabaha query." The agent should automatically reference AAOIFI FAS 2 — if it does, the plugin is active.
+
+Browse the complete skill library in the [plugin repository](https://github.com/panaversity/agentfactory-business-plugins/tree/main/islamic-finance) — the skill files examined in this lesson are at `skills/islamic-finance-router/SKILL.md`, `skills/murabaha/SKILL.md`, and `skills/islamic-finance-router/references/jurisdictions/bahrain-aaoifi.md`.
 :::
+
+## Flashcards Study Aid
+
+<Flashcards />
 
 ---
 

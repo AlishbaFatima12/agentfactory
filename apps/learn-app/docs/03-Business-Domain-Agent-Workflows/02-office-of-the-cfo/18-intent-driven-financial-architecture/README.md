@@ -2,6 +2,10 @@
 slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture
 sidebar_position: 18
 title: "Chapter 18: Intent-Driven Financial Architecture"
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-18/intent-driven-financial-architecture.pdf"
+  title: "Intent-Driven Financial Architecture"
+  height: 700
 description: "Learn the Intent-Driven Financial Architecture (IDFA) — Panaversity original research that replaces coordinate-based formulas with Named Range business rules, making every financial model human-readable, AI-operable, and mathematically audit-proof through four deterministic guardrails and five Finance Domain Agent capabilities"
 chapter_number: 18
 part_number: 3
@@ -30,10 +34,12 @@ The same Claude in Excel. The same MCP connectors. A fundamentally different arc
 :::caution Prerequisites
 This chapter requires **Cowork** (set up in Chapter 17) and the **IDFA plugin**.
 
-1. **Install the IDFA plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/idfa-financial-architect` → find **IDFA Financial Architect** → click **Install**.
+1. **Install the IDFA plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **IDFA Financial Architect** → click **Install**.
 2. The plugin includes two skills: the IDFA methodology (activates automatically on financial model conversations) and IDFA Operations (provides the tools Claude uses to read, write, and audit Excel models programmatically). Once installed, just mention a financial model in conversation — the skills activate automatically. No manual invocation needed.
 3. **Connect a working folder** for practice files, same as Chapter 17.
    :::
+
+## 📚 Teaching Aid
 
 ## What You'll Learn
 

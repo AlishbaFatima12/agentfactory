@@ -1,0 +1,132 @@
+NOTICE — Third-Party Software Attributions
+==========================================
+
+Copyright (c) 2025-2026 Panaversity. All Rights Reserved.
+
+This product includes software developed by third parties. The following
+components are used under their respective open-source licenses.
+
+------------------------------------------------------------------------
+ANTHROPIC MATERIALS
+------------------------------------------------------------------------
+
+The following skills are created by Anthropic, PBC and are subject to
+Anthropic's terms of service:
+
+  .claude/skills/docx/     — © 2025 Anthropic, PBC. See docx/LICENSE.txt
+  .claude/skills/pptx/     — © 2025 Anthropic, PBC. See pptx/LICENSE.txt
+
+------------------------------------------------------------------------
+JAVASCRIPT / TYPESCRIPT DEPENDENCIES (apps/learn-app)
+------------------------------------------------------------------------
+
+Docusaurus — MIT License
+  Copyright (c) Facebook, Inc. and its affiliates.
+  https://github.com/facebook/docusaurus
+
+React — MIT License
+  Copyright (c) Meta Platforms, Inc. and affiliates.
+  https://github.com/facebook/react
+
+Radix UI — MIT License
+  Copyright (c) WorkOS.
+  https://github.com/radix-ui/primitives
+
+Tailwind CSS — MIT License
+  Copyright (c) Tailwind Labs, Inc.
+  https://github.com/tailwindlabs/tailwindcss
+
+Framer Motion — MIT License
+  Copyright (c) Framer B.V.
+  https://github.com/framer/motion
+
+Lucide Icons — ISC License
+  Copyright (c) Lucide Contributors.
+  https://github.com/lucide-icons/lucide
+
+shadcn/ui — MIT License
+  Copyright (c) shadcn.
+  https://github.com/shadcn-ui/ui
+
+Turndown — MIT License
+  Copyright (c) Dom Christie.
+  https://github.com/domchristie/turndown
+
+xterm.js — MIT License
+  Copyright (c) 2017-2024, The xterm.js authors.
+  https://github.com/xtermjs/xterm.js
+
+Monaco Editor (React wrapper) — MIT License
+  Copyright (c) Suren Atoyan.
+  https://github.com/suren-atoyan/monaco-react
+
+ChatKit React — MIT License
+  Copyright (c) OpenAI.
+  https://github.com/openai/chatkit
+
+simple-icons — CC0 1.0 Universal
+  https://github.com/simple-icons/simple-icons
+
+ts-fsrs — MIT License
+  Copyright (c) Open Spaced Repetition.
+  https://github.com/open-spaced-repetition/ts-fsrs
+
+------------------------------------------------------------------------
+PYTHON DEPENDENCIES (apps/study-mode-api)
+------------------------------------------------------------------------
+
+FastAPI — MIT License
+  Copyright (c) Sebastián Ramírez.
+  https://github.com/tiangolo/fastapi
+
+Pydantic — MIT License
+  Copyright (c) Samuel Colvin.
+  https://github.com/pydantic/pydantic
+
+SQLAlchemy — MIT License
+  Copyright (c) Mike Bayer.
+  https://github.com/sqlalchemy/sqlalchemy
+
+Uvicorn — BSD 3-Clause License
+  Copyright (c) Encode OSS Ltd.
+  https://github.com/encode/uvicorn
+
+httpx — BSD 3-Clause License
+  Copyright (c) Encode OSS Ltd.
+  https://github.com/encode/httpx
+
+Redis (redis-py) — MIT License
+  Copyright (c) Redis, Inc.
+  https://github.com/redis/redis-py
+
+OpenAI Agents SDK — MIT License
+  Copyright (c) OpenAI.
+  https://github.com/openai/openai-agents-python
+
+------------------------------------------------------------------------
+BUILD TOOLS & DEVELOPMENT DEPENDENCIES
+------------------------------------------------------------------------
+
+Nx — MIT License
+  Copyright (c) Nrwl, Inc.
+  https://github.com/nrwl/nx
+
+Vitest — MIT License
+  Copyright (c) Anthony Fu and Vitest contributors.
+  https://github.com/vitest-dev/vitest
+
+Ruff — MIT License
+  Copyright (c) Astral Software Inc.
+  https://github.com/astral-sh/ruff
+
+TypeScript — Apache License 2.0
+  Copyright (c) Microsoft Corporation.
+  https://github.com/microsoft/TypeScript
+
+------------------------------------------------------------------------
+
+For the complete text of each license, see the respective project
+repositories linked above.
+
+If you believe any attribution is missing or incorrect, please contact
+licensing@panaversity.org.
