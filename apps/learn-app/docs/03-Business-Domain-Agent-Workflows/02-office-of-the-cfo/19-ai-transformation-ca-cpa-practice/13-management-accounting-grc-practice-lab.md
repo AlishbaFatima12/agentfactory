@@ -130,7 +130,7 @@ This lab contains four exercises across two domains. Exercises 18-19 cover manag
 :::info Lab Format
 **Choose 1-2 exercises to complete fully.** Each exercise is self-contained with its own time estimate and deliverables. Review all four for professional context even if you only complete one or two.
 
-**Requirements for all exercises:** Cowork (Team or Enterprise) with `finance@knowledge-work-plugins` installed. Exercise 19 also requires Claude in PowerPoint.
+**Requirements for all exercises:** Cowork (Team or Enterprise) with `finance@knowledge-work-plugins` installed. Exercise 19 also requires Cowork's cross-app orchestration (for PowerPoint output).
 
 **Companion files:** These exercises use hypothetical data provided inline. For a Pakistan regulatory obligations reference, see the companion repository: [`compliance-calendar/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills/compliance-calendar).
 :::
@@ -179,7 +179,7 @@ This lab contains four exercises across two domains. Exercises 18-19 cover manag
 
 **What you'll build:** A complete monthly board pack — from raw financial data through Excel analysis to a polished, board-ready PowerPoint presentation — orchestrated as a single Cowork workflow.
 
-**Requirements:** Cowork (Max, Team, or Enterprise) with `finance@knowledge-work-plugins` installed and Claude in PowerPoint. Management accounts for one period (from earlier exercises or your own data).
+**Requirements:** Cowork (Max, Team, or Enterprise) with `finance@knowledge-work-plugins` installed and cross-app orchestration enabled (for PowerPoint output). Management accounts for one period (from earlier exercises or your own data).
 
 ### Steps
 

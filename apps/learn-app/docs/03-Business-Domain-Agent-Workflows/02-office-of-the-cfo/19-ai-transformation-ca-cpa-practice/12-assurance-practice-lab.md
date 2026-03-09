@@ -118,7 +118,7 @@ This lab contains three exercises. Each builds a complete professional deliverab
 
 **Requirements for all exercises:** Cowork (Team or Enterprise) with `finance@knowledge-work-plugins` installed.
 
-**Companion files:** Use the working paper templates from the exercise zip: `exercises/working-papers/audit-planning-template.md` and `exercises/working-papers/revenue-testing-template.md`. Exercise 16 also uses `exercises/source-documents/`.
+**Companion files:** Each exercise provides its own data and working paper structure inline. For additional templates and source documents, see the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/exercises).
 :::
 
 ---
