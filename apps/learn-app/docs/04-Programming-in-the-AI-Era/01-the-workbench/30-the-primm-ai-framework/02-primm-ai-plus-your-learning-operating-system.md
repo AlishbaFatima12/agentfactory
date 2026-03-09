@@ -80,7 +80,7 @@ Here is what PRIMM-AI looks like -- the same five stages, now with an AI partner
 | **Modify** | Change the code yourself | Compares your version, suggests alternatives |
 | **Make** | Write a spec, then implement | Reviews your spec and completed code |
 
-This is a solid foundation. But nothing in this table prevents you from asking AI to explain the code during Predict, or to write the full solution during Make. The boundaries are implied, not enforced. That is the gap.
+This is a solid foundation. But nothing in this table prevents you from asking AI to explain the code during Predict, or to write the full solution during Make. **The boundaries are implied, not enforced. That is the gap.**
 
 **PRIMM-AI+** closes that gap. It keeps everything from PRIMM-AI -- every stage, every AI role, every rule -- and adds nine structural enhancements:
 
@@ -112,7 +112,7 @@ James thinks. "I learned... what the program does?"
 
 "No. You learned what the AI *says* the program does. You skipped Predict entirely. Your brain did zero work." She closes his AI assistant. "Let's talk about when you're allowed to open this."
 
-Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically -- what the AI must not do. The "must not" rules exist because AI is eager to help. Helpfulness without boundaries destroys the learning that each stage is designed to produce.
+Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically -- what the AI must not do. The "must not" rules exist because AI is eager to help. **Helpfulness without boundaries destroys the learning that each stage is designed to produce.**
 
 ### Predict -- AI Generates, You Think
 
@@ -138,7 +138,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What the AI must NOT do:** Provide unsolicited explanations. If you ask about line 3, the AI answers about line 3 -- it does not explain the entire program. The investigation is yours to direct.
 
-**Critical rule:** Verify every AI explanation by running code yourself. AI can be wrong. When the AI says "this line does X," test it. Modify the line and see if the behavior matches the explanation. This verification instinct is the single most important habit PRIMM-AI+ builds.
+**Critical rule:** Verify every AI explanation by running code yourself. AI can be wrong. When the AI says "this line does X," test it. Modify the line and see if the behavior matches the explanation. **This verification instinct is the single most important habit PRIMM-AI+ builds.**
 
 ### Modify -- AI as Comparison Partner
 
@@ -188,7 +188,7 @@ The rules for AI-free checkpoints are simple:
 - **Make begins AI-free.** You write your specification and make your first implementation attempt without AI. Only after that first attempt do you ask AI for review.
 - **Other stages allow AI after your first attempt.** In Investigate, you write your own explanation before asking AI. In Modify, you attempt the change before requesting hints.
 
-AI-free checkpoints are not punishment. They are the moments when you discover whether you truly understand something or merely recognize it when AI explains it. There is a large gap between those two states, and the checkpoints make the gap visible.
+**AI-free checkpoints are not punishment.** They are the moments when you discover whether you truly understand something or merely recognize it when AI explains it. There is a large gap between those two states, and the checkpoints make the gap visible.
 
 ---
 
@@ -331,7 +331,7 @@ These rules are operational discipline, not suggestions. Each one prevents a spe
 
 **Rule 4: Write the spec before the code.** This is Spec-Driven Development from Chapter 5, applied to learning. Defining what your program should do -- inputs, outputs, edge cases, success criteria -- before writing a single line of code forces you to think about the problem before the solution. AI is dramatically better at generating correct code when the specification is clear.
 
-**Rule 5: Use AI as a partner, not a crutch.** The test is simple. After an AI interaction, do you understand more than you did before? If yes -- partner. Do you have working code but understand the same amount? If yes -- crutch. Partner interactions grow your capability. Crutch interactions grow your dependency.
+**Rule 5: Use AI as a partner, not a crutch.** The test is simple. After an AI interaction, do you understand more than you did before? If yes -- partner. Do you have working code but understand the same amount? If yes -- crutch. **Partner interactions grow your capability. Crutch interactions grow your dependency.**
 
 ---
 
@@ -351,7 +351,7 @@ Every time you predict what code will do and then run it to check, you are build
 | 4. **Pipeline** | Do all checks pass together? | Run all your checks (types, tests, formatting) in one command |
 | 5. **Observability** | Is it still correct in production? | Monitor the running program to catch problems after deployment |
 
-You are currently at Step 1 -- predicting and running. Steps 2 through 5 will be introduced gradually as you progress through the book. The key insight is that the predict-then-verify habit you are building now is not a beginner exercise you will outgrow. It is the same habit that powers every step above it.
+You are currently at Step 1 -- predicting and running. Steps 2 through 5 will be introduced gradually as you progress through the book. **The key insight is that the predict-then-verify habit you are building now is not a beginner exercise you will outgrow.** It is the same habit that powers every step above it.
 
 ---
 
