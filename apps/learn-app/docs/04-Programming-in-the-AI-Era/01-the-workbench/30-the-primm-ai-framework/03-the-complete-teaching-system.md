@@ -198,6 +198,16 @@ You will never be dropped into a Make exercise cold. By the time a chapter asks 
 
 ---
 
+:::note If you are new to programming
+The predictable structure is your biggest advantage. Every chapter follows the same rhythm: see code, predict, run, investigate, modify, make. You will never open a lesson wondering "what am I supposed to do?" The pattern becomes automatic after two chapters.
+:::
+
+:::note If you have coded before
+You already use these methods informally — studying examples, tweaking code, building from scratch. PRIMM-AI+ gives you a structured vocabulary for what you do by instinct and adds AI boundaries that prevent experienced developers from over-relying on AI just as easily as beginners.
+:::
+
+---
+
 ## Key Takeaways
 
 - Four teaching methods -- worked examples, Parsons problems, live coding, and peer instruction -- are embedded within PRIMM-AI+ stages, not added on top of them.
