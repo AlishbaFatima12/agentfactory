@@ -62,8 +62,8 @@ By the end of this chapter, you will be able to:
 
 ## Prerequisites
 
-- **Parts 1-3 completed** — You will need the AI prompting skills from Part 1 because each PRIMM stage involves structured AI interaction with specific boundaries. The file processing and version control concepts from Parts 2-3 provide the practical context for the code examples.
-- **[Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development) understood** — The Make stage of PRIMM-AI+ uses Spec-Driven Development directly: you write a specification before writing code. Chapter 5 teaches that workflow.
+- **[Chapter 3: Working with General Agents — Claude Code and Cowork](/docs/General-Agents-Foundations/general-agents)** — You will use Claude Code as your AI coding assistant throughout PRIMM-AI+. Every stage involves structured AI interaction with specific boundaries — you need to know how to prompt, run code, and work with Claude Code before applying those skills within the PRIMM-AI+ framework.
+- **[Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development)** — The Make stage of PRIMM-AI+ uses Spec-Driven Development directly: you write a specification before writing code, then use AI for review, not generation.
 
 ## About the Code in This Chapter
 
