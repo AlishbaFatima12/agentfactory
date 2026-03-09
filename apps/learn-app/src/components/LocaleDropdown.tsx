@@ -43,7 +43,7 @@ export function LocaleDropdown() {
           return (
             <DropdownMenuItem
               key={locale}
-              onClick={() => handleLocaleChange(locale)}
+              onSelect={() => handleLocaleChange(locale)}
               className={isActive ? 'bg-accent' : ''}
             >
               <div className="flex items-center justify-between w-full">
