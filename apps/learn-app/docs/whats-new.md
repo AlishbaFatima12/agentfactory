@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-09
+- fix: rewrite L08-L09 Try With AI from creation to application ([#839](https://github.com/panaversity/agentfactory/pull/839))
+
+### 2026-03-09
 - feat: Ch19 Cowork-native skill creation rewrite ([#838](https://github.com/panaversity/agentfactory/pull/838))
 
 ### 2026-03-09
