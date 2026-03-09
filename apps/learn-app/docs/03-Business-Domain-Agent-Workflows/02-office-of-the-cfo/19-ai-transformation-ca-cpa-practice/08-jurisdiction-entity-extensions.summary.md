@@ -20,5 +20,5 @@ Generic finance plugins produce structurally correct but contextually wrong outp
 
 ### Connections
 
-- **Builds on**: Lesson 7's plugin ecosystem and workflows that demonstrated the need for jurisdiction-specific output, and the SKILL.md format from earlier chapters.
+- **Builds on**: Lesson 7's plugin ecosystem and workflows that demonstrated the need for jurisdiction-specific output, and the skill-building methodology from earlier chapters.
 - **Leads to**: Lesson 9's three remaining extensions (audit methodology, client entity, compliance calendar) that complete the five-extension architecture.

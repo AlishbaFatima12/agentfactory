@@ -68,7 +68,7 @@ cards:
     back: "Step 6 — identifying disclosure obligations: positions that are arguable or where a specific schedule must be filed. Whether a position is aggressive enough to require disclosure is professional judgment encoding the firm's risk appetite."
     tags: ["exercise-12", "disclosure-obligations", "professional-judgment"]
     difficulty: "advanced"
-    why: "How would two firms with different risk appetites encode the same arguable tax position differently in their SKILL.md?"
+    why: "How would two firms with different risk appetites encode the same arguable tax position differently in their skill?"
 
   - id: "ch19-11-tax-advisory-practice-lab-011"
     front: "In the Exercise 13 DCF, what WACC is used and why does it reflect Pakistan risk?"

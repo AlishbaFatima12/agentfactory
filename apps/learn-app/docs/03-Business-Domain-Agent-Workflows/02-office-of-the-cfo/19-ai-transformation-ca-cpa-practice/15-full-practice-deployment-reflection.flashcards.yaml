@@ -52,7 +52,7 @@ cards:
 
   - id: "ch19-15-full-practice-deployment-reflection-008"
     front: "What six elements must the AI deployment documentation pack contain?"
-    back: "Plugin stack, global instructions, SKILL.md library, scheduled tasks (with inputs/outputs/exception handling), quality review procedures, and error reporting process."
+    back: "Plugin stack, global instructions, skill library, scheduled tasks (with inputs/outputs/exception handling), quality review procedures, and error reporting process."
     tags: ["exercise-24", "documentation", "deployment"]
     difficulty: "intermediate"
 

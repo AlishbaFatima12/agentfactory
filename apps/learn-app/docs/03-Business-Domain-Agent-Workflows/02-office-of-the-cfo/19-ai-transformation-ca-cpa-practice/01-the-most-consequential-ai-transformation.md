@@ -67,7 +67,7 @@ cognitive_load:
     - "Agentic AI as autonomous multi-step executor in professional services"
     - "Five CA/CPA practice domains as a classification framework"
     - "AI impact ranking across the five domains"
-  assessment: "5 concepts at A2 level — at the upper boundary of the 5-7 cognitive limit for this tier. Students enter from Chapters 17-18 with strong familiarity with Cowork, plugins, and SKILL.md architecture; this lesson introduces a new professional domain (CA/CPA) rather than new technical tools."
+  assessment: "5 concepts at A2 level — at the upper boundary of the 5-7 cognitive limit for this tier. Students enter from Chapters 17-18 with strong familiarity with Cowork, plugins, and skill architecture; this lesson introduces a new professional domain (CA/CPA) rather than new technical tools."
 
 differentiation:
   extension_for_advanced: "For each of the five domains, write one sentence describing a task you currently perform that falls in the Gen-AI category and one that would require Agentic AI. Which domain has the largest gap between what Gen-AI can do now and what Agentic AI will enable?"
@@ -159,7 +159,7 @@ This chapter does three things, each building on the skills you developed in Cha
 
 **Domain Analysis (Lessons 2-6).** A rigorous examination of AI impact across all five CA/CPA practice domains. For each domain, you will learn what Gen-AI capabilities are available now, what agentic capabilities are approaching production, which real-world platforms are leading deployment, and what the practitioner and service implications are.
 
-**Cowork Deployment (Lessons 7-9).** How to deploy Anthropic Cowork and its plugin ecosystem across each domain. You will install plugins, build workflows, and create domain-specific SKILL.md extensions that encode your jurisdiction's requirements — using the same Cowork platform and SKILL.md methodology from Chapters 15-18.
+**Cowork Deployment (Lessons 7-9).** How to deploy Anthropic Cowork and its plugin ecosystem across each domain. You will install plugins, build workflows, and create domain-specific Cowork skills that encode your jurisdiction's requirements — using the same Cowork platform and skill-building methodology from Chapters 15-18.
 
 **Domain Agents (Lessons 10-15).** Practice labs, cross-domain capstones, and a full practice deployment that integrates everything. By the end of the chapter, you will have a working AI-augmented CA/CPA practice environment with domain agents for each of the five practice areas.
 

@@ -74,7 +74,7 @@ cards:
     back: "The agent defaults to summarising numbers rather than interpreting them. THEREFORE the professional must explicitly instruct the agent to explain causes and implications — not restate figures the board can already read."
     tags: ["exercise-19", "management-commentary", "agent-default"]
     difficulty: "intermediate"
-    why: "How would you write a SKILL.md instruction that prevents the agent from producing summary-style commentary?"
+    why: "How would you write a skill instruction that prevents the agent from producing summary-style commentary?"
 
   - id: "ch19-13-management-accounting-grc-practice-lab-012"
     front: "Why does the compliance calendar extension have higher practical value when combined with a scheduled weekly task than as a standalone document?"

@@ -197,13 +197,13 @@ The practical implication: a management accountant who spends 80% of their time 
 
 This is the domain where the IDFA methodology from Chapter 18 becomes concrete practice rather than abstract architecture.
 
-When you structure a variance analysis model using IDFA conventions, you are doing management accounting. The Inp\_ prefix is a budget assumption. The Named Range formula is a variance calculation that reads as a business rule. The what-if workflow is a scenario analysis. The SKILL.md instruction that encodes the CFO's preferred variance bridge format is a management accounting deliverable specification.
+When you structure a variance analysis model using IDFA conventions, you are doing management accounting. The Inp\_ prefix is a budget assumption. The Named Range formula is a variance calculation that reads as a business rule. The what-if workflow is a scenario analysis. The skill instruction that encodes the CFO's preferred variance bridge format is a management accounting deliverable specification.
 
-Step 4 of Practice Exercise 4 makes this explicit: the SKILL.md instruction you draft is the CFO's preferred format -- the volume/price/mix decomposition, the within/outside-management-control distinction, the forward implication structure -- encoded as a reusable agent instruction. This is management accounting knowledge extraction applied through the methodology you learned in Chapter 18.
+Step 4 of Practice Exercise 4 makes this explicit: the skill instruction you draft is the CFO's preferred format -- the volume/price/mix decomposition, the within/outside-management-control distinction, the forward implication structure -- encoded as a reusable agent instruction. This is management accounting knowledge extraction applied through the methodology you learned in Chapter 18.
 
 ### Practice Exercise 4: FP&A Workflow with Cowork (30 min)
 
-**What you will build:** A complete variance analysis workflow using the IDFA methodology, producing a CFO-ready narrative and a reusable SKILL.md specification.
+**What you will build:** A complete variance analysis workflow using the IDFA methodology, producing a CFO-ready narrative and a reusable Cowork skill specification.
 
 **Requirements:** Cowork, a financial dataset (actual vs. budget P&L for any period). If you need ready-made data, [**download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and use the Crescent Textiles trial balance (`exercises/trial-balances/textile-manufacturer-tb.csv`) as your "actual" figures and the entity profile (`exercises/entity-profiles/crescent-textiles.md`) to generate a budget scenario.
 
@@ -213,11 +213,11 @@ Step 4 of Practice Exercise 4 makes this explicit: the SKILL.md instruction you 
 
 3. Ask: _"If this variance pattern continued for the next three months, what would be the full-year impact on EBITDA? Run this as a scenario through the model and show the IDFA what-if workflow."_
 
-4. Ask: _"What SKILL.md instructions would encode our CFO's preferred variance bridge format -- the volume/price/mix decomposition, the within/outside-management-control distinction, and the forward implication structure? Draft the key instructions."_
+4. Ask: _"What skill instructions would encode our CFO's preferred variance bridge format -- the volume/price/mix decomposition, the within/outside-management-control distinction, and the forward implication structure? Draft the key instructions."_
 
-**Check your work:** You should have (a) an IDFA-compliant model with Inp\_ named inputs, (b) a CFO narrative covering the three biggest drivers with controllability classification, (c) a forward-looking scenario, and (d) a draft SKILL.md that captures the CFO's preferred format as reusable agent instructions.
+**Check your work:** You should have (a) an IDFA-compliant model with Inp\_ named inputs, (b) a CFO narrative covering the three biggest drivers with controllability classification, (c) a forward-looking scenario, and (d) a draft skill that captures the CFO's preferred format as reusable agent instructions.
 
-**The key learning:** The IDFA architecture from Chapter 18 is not abstract when applied to management accounting -- it is the specific discipline of separating the budget assumption (an input) from the calculation of the variance (a formula that must read as a business rule). Step 4 makes this concrete: the SKILL.md instruction you draft is the CFO's preferred format encoded as reusable agent instruction.
+**The key learning:** The IDFA architecture from Chapter 18 is not abstract when applied to management accounting -- it is the specific discipline of separating the budget assumption (an input) from the calculation of the variance (a formula that must read as a business rule). Step 4 makes this concrete: the skill instruction you draft is the CFO's preferred format encoded as reusable agent instruction.
 
 ## Try With AI
 
@@ -265,7 +265,7 @@ For each step, specify:
 - What the agent escalates to the human finance team
 - What could go wrong (and how the agent should handle it)
 
-Structure the output as a SKILL.md specification using IDFA naming
+Structure the output as a Cowork skill specification using IDFA naming
 conventions for all financial inputs.
 ```
 

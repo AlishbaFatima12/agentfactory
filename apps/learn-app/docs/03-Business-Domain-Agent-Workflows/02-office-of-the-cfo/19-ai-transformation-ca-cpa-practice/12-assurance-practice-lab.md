@@ -194,7 +194,7 @@ This lab contains three exercises. Each builds a complete professional deliverab
 
 6. **Write the scheduled monitoring task.** Write and activate a `/schedule` task: every Monday at 8:00 AM, read the latest transaction export, run all detection rules, produce an exception report, and send an immediate alert if any High-risk exceptions are present or if more than 10 exceptions of any level are found.
 
-7. **Write the internal audit SKILL.md.** Ask Cowork to draft a SKILL.md for a continuous fraud monitoring agent. Include: the ten fraud schemes to monitor, detection rules for each, escalation logic, and the two conditions that should always cause the agent to stop and alert the Chief Internal Auditor immediately.
+7. **Create the internal audit skill.** Ask Cowork to draft a Cowork skill for a continuous fraud monitoring agent. Include: the ten fraud schemes to monitor, detection rules for each, escalation logic, and the two conditions that should always cause the agent to stop and alert the Chief Internal Auditor immediately.
 
 **Check your work:**
 
@@ -202,7 +202,7 @@ This lab contains three exercises. Each builds a complete professional deliverab
 - False positive rate is documented and acceptable
 - Escalation thresholds are justified with reference to the company's transaction volume
 - The scheduled task includes both automatic reporting and conditional alerting
-- The SKILL.md captures the full monitoring framework for reuse
+- The skill captures the full monitoring framework for reuse
 
 ---
 

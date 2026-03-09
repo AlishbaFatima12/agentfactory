@@ -45,7 +45,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can specify three financial controls with their prevention objectives, evidence data, failure anomalies, and agent response actions, structured as a SKILL.md specification for an autonomous GRC monitoring agent"
+    measurable_at_this_level: "Student can specify three financial controls with their prevention objectives, evidence data, failure anomalies, and agent response actions, structured as a Cowork skill specification for an autonomous GRC monitoring agent"
 
 learning_objectives:
   - objective: "Explain how Gen-AI capabilities automate the documentation-intensive components of GRC work -- policy drafting, risk assessment, compliance reporting -- while the advisory judgment layer (interpreting what monitoring data means, advising the board, designing the monitoring programme) remains with the professional"
@@ -61,7 +61,7 @@ learning_objectives:
   - objective: "Design a continuous controls monitoring specification that defines control objectives, evidence data, failure anomalies, escalation thresholds, and agent response actions for three financial controls"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student produces a SKILL.md specification with three controls, each containing the four specification elements (prevention objective, evidence data, failure anomaly, agent response)"
+    assessment_method: "Student produces a Cowork skill specification with three controls, each containing the four specification elements (prevention objective, evidence data, failure anomaly, agent response)"
 
 cognitive_load:
   new_concepts: 5
@@ -202,7 +202,7 @@ The professional skills that become more valuable in this model are: interpretin
 
 ### Practice Exercise 5: Continuous Controls Monitoring Specification (25 min)
 
-**What you will build:** A SKILL.md specification for a continuous controls monitoring agent covering three financial controls.
+**What you will build:** A Cowork skill specification for a continuous controls monitoring agent covering three financial controls.
 
 **Requirements:** Claude (any interface). Knowledge of any organisation's key financial controls. If you need a ready-made entity, [**download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and open `exercises/entity-profiles/crescent-textiles.md` — it includes key risk areas and regulatory obligations.
 
@@ -210,11 +210,11 @@ The professional skills that become more valuable in this model are: interpretin
 
 2. Ask: _"Design a continuous monitoring programme for these three controls. What is the monitoring frequency? What are the escalation thresholds? What actions should the agent take autonomously, and what should it escalate to a human?"_
 
-3. Ask: _"Write this monitoring programme as a SKILL.md specification for an autonomous GRC monitoring agent. Include: the control objectives, the monitoring rules, the anomaly detection thresholds, and the escalation routing."_
+3. Ask: _"Write this monitoring programme as a Cowork skill specification for an autonomous GRC monitoring agent. Include: the control objectives, the monitoring rules, the anomaly detection thresholds, and the escalation routing."_
 
 4. Ask: _"In the Three Lines Model, where does this monitoring agent sit -- first, second, or third line? What are the implications for the human roles in each line if this monitoring becomes continuous?"_
 
-**Check your work:** You should have (a) three controls with complete specifications (prevention objective, evidence data, failure anomaly, agent response), (b) a monitoring programme with frequencies and escalation thresholds, (c) a SKILL.md specification encoding the programme, and (d) a governance analysis placing the agent in the Three Lines Model.
+**Check your work:** You should have (a) three controls with complete specifications (prevention objective, evidence data, failure anomaly, agent response), (b) a monitoring programme with frequencies and escalation thresholds, (c) a Cowork skill specification encoding the programme, and (d) a governance analysis placing the agent in the Three Lines Model.
 
 **The key learning:** The discipline being built is control design thinking -- specifying precisely what a control is supposed to prevent, what evidence would show it has worked, and what anomaly would reveal it has failed. This is the skill the GRC professional must develop as AI takes over the testing: designing the monitoring programme that makes the agent effective.
 
@@ -296,7 +296,6 @@ concrete professional skills like "monitoring programme design" or
 ```
 
 **What you are learning:** GRC is described as the domain where advisory judgment is most resilient -- but resilience is not automatic. By mapping your specific role against the automation spectrum, you identify which parts of your current work face displacement (manual testing, routine reporting) and which new skills you need to develop (monitoring programme design, agent governance, threshold calibration) to remain valuable in the continuous monitoring model.
-
 
 ## Flashcards Study Aid
 

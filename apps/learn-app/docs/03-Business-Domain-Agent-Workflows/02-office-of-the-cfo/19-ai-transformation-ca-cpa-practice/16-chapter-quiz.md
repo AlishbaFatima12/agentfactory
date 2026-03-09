@@ -6,7 +6,7 @@ title: "Chapter 19: AI Transformation of CA/CPA Practice Quiz"
 
 # Chapter 19: AI Transformation of CA/CPA Practice Quiz
 
-Test your understanding of the five CA/CPA practice domains, the Cowork plugin ecosystem, SKILL.md extensions, workflow automation, and the professional judgment boundaries that define the AI-augmented practice.
+Test your understanding of the five CA/CPA practice domains, the Cowork plugin ecosystem, Cowork skills, workflow automation, and the professional judgment boundaries that define the AI-augmented practice.
 
 <Quiz
 title="Chapter 19: AI Transformation of CA/CPA Practice Assessment"
@@ -276,15 +276,15 @@ explanation: "Lesson 8 introduces the institutional knowledge gap as the core pr
 source: "Lesson 8: Building Jurisdiction and Entity Extensions"
 },
 {
-question: "A practitioner writes a SKILL.md extension with the instruction: 'Apply the correct withholding tax rate.' An experienced colleague reviews it and says the instruction will not activate reliably. What is wrong with the instruction according to Chapter 19's extension design principles?",
+question: "A practitioner writes a Cowork skill with the instruction: 'Apply the correct withholding tax rate.' An experienced colleague reviews it and says the instruction will not activate reliably. What is wrong with the instruction according to Chapter 19's extension design principles?",
 options: [
 "The instruction uses technical jargon that the agent cannot parse correctly",
 "The instruction is too short and needs at least three sentences to be effective",
 "The instruction lacks the specific condition clause that determines when it should activate",
-"The instruction should reference the exact SKILL.md file path for the agent to find it"
+"The instruction should reference the exact skill file path for the agent to find it"
 ],
 correctOption: 2,
-explanation: "Lesson 8 teaches the 'When [condition], [action]' pattern as the building block of extensions. 'Apply the correct withholding tax rate' lacks the condition clause — WHEN should this instruction activate? When processing dividends? Salary payments? Service invoices? Each has different rates and rules. The correct format would be: 'When dividend income is received from a Pakistani company, apply 15% withholding tax for filer status under Section 150 ITO 2001.' Technical jargon is not the issue — agents handle domain terminology. Length is not the criterion — precision of the condition clause is. File path references are not part of the instruction format — the SKILL.md structure handles discovery.",
+explanation: "Lesson 8 teaches the 'When [condition], [action]' pattern as the building block of extensions. 'Apply the correct withholding tax rate' lacks the condition clause — WHEN should this instruction activate? When processing dividends? Salary payments? Service invoices? Each has different rates and rules. The correct format would be: 'When dividend income is received from a Pakistani company, apply 15% withholding tax for filer status under Section 150 ITO 2001.' Technical jargon is not the issue — agents handle domain terminology. Length is not the criterion — precision of the condition clause is. File path references are not part of the instruction format — the skill structure handles discovery.",
 source: "Lesson 8: Building Jurisdiction and Entity Extensions"
 },
 {
@@ -480,7 +480,7 @@ explanation: "Lesson 14 covers audit opinion formation per ISA 700. The uncorrec
 source: "Lesson 14: Cross-Domain Capstones"
 },
 {
-question: "The capstone engagement requires the practitioner to build client-specific SKILL.md extensions during onboarding. A junior asks why extensions must be created during engagement acceptance rather than during fieldwork when the team knows the client better. What is the best explanation?",
+question: "The capstone engagement requires the practitioner to build client-specific Cowork skills during onboarding. A junior asks why skills must be created during engagement acceptance rather than during fieldwork when the team knows the client better. What is the best explanation?",
 options: [
 "Extensions created during acceptance ensure the agent has jurisdiction and entity context from the first interaction preventing contextually wrong output throughout planning and fieldwork",
 "Engagement acceptance is the only phase where extensions can be technically installed in Cowork",
@@ -488,7 +488,7 @@ options: [
 "Extensions must be approved by the engagement partner and acceptance is the only phase with partner involvement"
 ],
 correctOption: 0,
-explanation: "Lesson 14 positions SKILL.md extension creation as an onboarding step because the agent needs jurisdiction-specific rules, entity knowledge, and methodology parameters from the very first interaction — during planning, not just fieldwork. If extensions are created during fieldwork, all planning-phase interactions produce generic output with the institutional knowledge gap described in Lesson 8. Extensions can be created at any time technically. No specific regulation requires extensions during acceptance. Partners are involved throughout the engagement. The timing matters because every agent interaction before extensions are loaded produces contextually wrong output — and planning is when risk assessment, materiality calculation, and procedure design occur.",
+explanation: "Lesson 14 positions Cowork skill creation as an onboarding step because the agent needs jurisdiction-specific rules, entity knowledge, and methodology parameters from the very first interaction — during planning, not just fieldwork. If skills are created during fieldwork, all planning-phase interactions produce generic output with the institutional knowledge gap described in Lesson 8. Skills can be created at any time technically. No specific regulation requires skills during acceptance. Partners are involved throughout the engagement. The timing matters because every agent interaction before skills are loaded produces contextually wrong output — and planning is when risk assessment, materiality calculation, and procedure design occur.",
 source: "Lesson 14: Cross-Domain Capstones"
 },
 {
