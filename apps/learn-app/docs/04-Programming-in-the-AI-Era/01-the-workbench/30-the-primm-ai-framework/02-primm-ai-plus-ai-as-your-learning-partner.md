@@ -317,11 +317,15 @@ These rules are operational discipline, not suggestions. Each one prevents a spe
 ---
 
 :::note If You Are New to Programming
+
 The predictable structure is your safety net. You will never be thrown into the deep end. By the time a chapter asks you to write code, you will have already predicted, run, investigated, and modified programs using the same concepts. Every Make exercise has four stages of preparation behind it. The mastery gates ensure you do not skip ahead before you are ready.
+
 :::
 
 :::note If You Have Coded Before
+
 This structure mirrors professional code review: read the PR, understand the logic, suggest changes, build your own feature. PRIMM-AI+ formalizes what you already do informally -- and adds explicit AI boundaries, AI-free checkpoints, and mastery gates that prevent the over-reliance pattern experienced developers fall into just as easily as beginners.
+
 :::
 
 ---
