@@ -285,3 +285,5 @@ James sits back. In four lessons, he has gone from "what is PRIMM?" to knowing e
 "You do," Emma says. "And here's the thing — once the pattern is automatic, you stop thinking about the process and start thinking about the code. That's when real learning accelerates. Starting with the next chapter, you'll actually walk the territory. The next chapter introduces the ten axioms that guide how professionals build software with AI — the principles that turn a student into a practitioner."
 
 You now know how you will learn: the five stages, the structural safeguards, the four teaching methods, and the lesson architecture. The next chapter introduces the ten axioms that guide professional AI-driven development. You will experience those axioms through the PRIMM-AI+ lens: predicting what professional code should look like, investigating why each axiom matters, and eventually building programs that embody them.
+
+And if the Python code in this chapter looked foreign — that is expected. When you reach your first Python lessons later in the book, you will start from the absolute basics using this exact map.
