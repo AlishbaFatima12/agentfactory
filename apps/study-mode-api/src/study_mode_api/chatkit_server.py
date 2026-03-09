@@ -167,6 +167,36 @@ def _user_message_text(item: UserMessageItem) -> str:
     return " ".join(parts).strip()
 
 
+def _get_last_item_text(items: list[Any]) -> str:
+    """Extract text from the last item in a conversation history.
+
+    Used to check if current user message is already in the history
+    (race condition where message may not be persisted yet).
+
+    Args:
+        items: List of conversation items (UserMessageItem, AssistantMessageItem)
+
+    Returns:
+        Text content of last item, or empty string if none/invalid
+    """
+    if not items:
+        return ""
+
+    last_item = items[-1]
+    if not hasattr(last_item, "content"):
+        return ""
+
+    content = last_item.content
+    if not content:
+        return ""
+
+    first_part = content[0]
+    if hasattr(first_part, "text"):
+        return first_part.text
+
+    return ""
+
+
 async def _stream_with_real_ids(
     context: AgentContext,
     result: RunResultStreaming,
@@ -487,14 +517,7 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
 
             # FIX: Ensure current user message is included in items
             # Race condition: add_user_message may not have saved to store yet
-            # Check if the last item is the current user message
-            last_item_text = ""
-            if items and hasattr(items[-1], 'content'):
-                last_content = items[-1].content
-                if last_content and hasattr(last_content[0], 'text'):
-                    last_item_text = last_content[0].text
-
-            # If current user_text is not in the last item, append it
+            last_item_text = _get_last_item_text(items)
             if user_text and user_text.strip() and user_text != last_item_text:
                 # Create a temporary UserMessageItem for the current message
                 from datetime import datetime
