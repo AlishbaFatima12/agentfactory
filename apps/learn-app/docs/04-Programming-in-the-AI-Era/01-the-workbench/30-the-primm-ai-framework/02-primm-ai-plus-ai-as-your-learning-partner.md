@@ -169,7 +169,7 @@ The rules for AI-free checkpoints are simple:
 - **Make begins AI-free.** You write your specification and make your first implementation attempt without AI. Only after that first attempt do you ask AI for review.
 - **Other stages allow AI after your first attempt.** In Investigate, you write your own explanation before asking AI. In Modify, you attempt the change before requesting hints.
 
-**AI-free checkpoints are not punishment.** They are the moments when you discover whether you truly understand something or merely recognize it when AI explains it. There is a large gap between those two states, and the checkpoints make the gap visible.
+There is a large gap between truly understanding something and merely recognizing it when AI explains it. The checkpoints make that gap visible.
 
 ---
 
@@ -270,7 +270,7 @@ Now probe the mechanics. Focus on whatever surprised you during Run. Ask your AI
 - *"What happens if I remove `str()` and write `name + " scored " + score` instead?"* -- Explore the error. Python cannot join a string and an integer with `+`. Understanding *why* `str()` is needed is the key insight.
 - *"What if `name` is an empty string?"* -- Test the edge case. The output would be `" scored 95 in Python"` -- a sentence with no name but the spaces still appear.
 
-Each question sharpens your understanding of how the program behaves under different conditions. The AI answers; you verify by checking the logic yourself. That verification habit is Rule 2 in action.
+Each question sharpens your understanding of how the program behaves under different conditions. The AI answers; you verify by checking the logic yourself. This verification instinct — which you will see formalized as Rule 2 below — is the most important habit PRIMM-AI+ builds.
 
 **Mastery gate check:** Can you explain *how* the program works, not just *what* it does? Can you describe why `str()` is needed and what the `+` operator does with strings? If yes, proceed to Modify.
 
@@ -363,7 +363,7 @@ round(-1.5), round(0.5), and round(1.5) and show you the
 real output. Compare the explanation to the actual results.
 ```
 
-Did the AI's explanation match the actual output? Python's rounding behavior surprises most people (and most AI models). The discrepancy you may find is exactly why Rule 2 exists: never trust an explanation you have not tested.
+Did the AI's explanation match the actual output? Python uses "banker's rounding" (round half to even): `round(-2.5)` returns `-2`, not `-3`, because `-2` is the nearest even number. This surprises most people (and most AI models). The discrepancy you may find is exactly why Rule 2 exists: never trust an explanation you have not tested.
 
 **What you are learning:** The verification instinct that forms the foundation of the Verification Ladder. When you catch an AI explanation that does not match reality, you are practicing the same skill that senior engineers use when they question production logs that "look wrong."
 
