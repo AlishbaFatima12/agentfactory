@@ -461,6 +461,10 @@ CULTURAL ADAPTATIONS:
 
 The fundamental laws still hold: reference something specific, lead with their situation, make one ask, keep it concise, sound human. But the expression of each law adapts to the cultural context. The ask is chai, not a call. The opening is a referral, not a cold approach. The channel is WhatsApp, not LinkedIn.
 
+:::tip Deeper Coverage in Lesson 8
+Lesson 8 covers regional compliance and cultural adaptation in full depth, including the legal frameworks (CAN-SPAM, GDPR, PECA) that constrain outreach in each region. The cultural patterns introduced here -- referral-first markets, WhatsApp as a professional channel, formal address norms -- are explored with jurisdiction-specific compliance requirements and practical implementation guidance.
+:::
+
 ## Putting It All Together: The Outreach Workflow
 
 The commands you have seen in this lesson form a connected workflow. The `/outreach` command produces the initial message. The `/sequence` command wraps it in a multi-touch campaign. The `/follow-up` command handles what happens after the prospect responds. And the `/copy` command generates variants for testing, so every element of your outreach improves over time.
