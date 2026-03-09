@@ -52,7 +52,7 @@ learning_objectives:
   - objective: "Compare rules-based and ML-based transaction monitoring approaches, explaining the strengths and limitations of each"
     proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Student evaluates the three TM alerts in Exercise 6 and explains which typology each matches, whether rules or ML would detect it more effectively, and why the false positive rate matters"
+    assessment_method: "Student evaluates the three TM alerts in Exercise 7 and explains which typology each matches, whether rules or ML would detect it more effectively, and why the false positive rate matters"
 
   - objective: "Describe the end-to-end SAR filing workflow from alert generation to regulatory submission"
     proficiency_level: "B1"
@@ -226,7 +226,7 @@ An AI agent operating in banking must be designed with tipping-off safeguards:
 If a banking AI agent reveals SAR information to a customer -- whether through a chatbot response, an automated notification, or a system-generated letter -- the bank and potentially the individuals who designed and deployed the system face criminal liability for tipping-off. This is not a compliance nice-to-have. It is a criminal law requirement that must be built into every banking AI system from architecture through deployment.
 :::
 
-## Exercise 6: TM Alert Investigation
+## Exercise 7: TM Alert Investigation
 
 Investigate the following three transaction monitoring alerts. For each, determine whether the activity is suspicious, which typology it matches, and whether a SAR should be filed.
 
