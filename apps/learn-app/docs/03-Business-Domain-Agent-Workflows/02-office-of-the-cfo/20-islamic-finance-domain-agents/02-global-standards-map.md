@@ -172,43 +172,70 @@ This is why the jurisdiction overlay SKILL.md is not optional — it is the comp
 
 Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
 
-### Prompt 1: Standards Map Lookup
+### Prompt 1: Test the Agent Against the Standards Map
 
 ```
-Using the Global Standards Map from Chapter 20, look up these
-five jurisdictions and tell me for each:
-- Primary accounting standard
-- AAOIFI role (mandatory, supplemental, or voluntary)
-- Islamic finance regulator
-- Which of the three regimes it belongs to
+Install the Islamic Finance Domain Agents plugin (see Lesson 3
+if you have not already). Then test whether the agent applies
+the correct standard for your jurisdiction.
 
-Jurisdictions:
-1. Saudi Arabia
-2. Nigeria
-3. Qatar
-4. Turkey
-5. Indonesia
+Pick ONE of these products: sukuk, takaful, or mudaraba.
+Pick ONE jurisdiction you are interested in (e.g., your home
+country or a country you plan to work in).
+
+Run this command in Cowork or your preferred AI assistant:
+
+"I am a [YOUR JURISDICTION] Islamic bank. Generate the initial
+journal entry for a [YOUR PRODUCT] transaction worth $10M.
+Specify the governing standard and income label you are using."
+
+Then check the agent's output against the Global Standards Map
+from this lesson:
+1. Did the agent use the correct primary standard for your
+   jurisdiction?
+2. Did the income label match the regime's requirements?
+3. Did the agent reference the correct regulator?
+
+If the agent got anything wrong, identify which layer failed:
+the routing (wrong jurisdiction), the product skill (wrong
+accounting mechanics), or the overlay (wrong labels).
 ```
 
-**What you are learning:** The Standards Map is a lookup tool, not something to memorise. By practising lookups, you build the habit of checking jurisdiction before generating output — the same habit the router skill encodes for agents.
+**What you are learning:** Looking up jurisdictions in a table is recall. Testing whether an agent correctly applies those standards is application. By running a real query and checking the output against the map, you practise the verification skill you will use every time you deploy a jurisdiction-aware agent.
 
-### Prompt 2: Regime Classification Exercise
+### Prompt 2: Multi-Jurisdiction Consolidated Reporting Conflict
 
 ```
-Classify each of the following jurisdictions into one of
-the three Islamic finance accounting regimes:
+A multinational Islamic banking group has operations in three
+jurisdictions under different regimes:
 
-Regime 1: AAOIFI Primary
-Regime 2: IFRS with Islamic Guidance
-Regime 3: Local Standards
+- Subsidiary A: Bahrain (AAOIFI primary — Regime 1)
+- Subsidiary B: Malaysia (MFRS/IFRS with Islamic guidance — Regime 2)
+- Subsidiary C: Sudan (AAOIFI mandatory — Regime 1, but with
+  local central bank overlays)
 
-Jurisdictions: Bahrain, Malaysia, UAE, Pakistan, Sudan,
-United Kingdom, Qatar, Turkey, Iran, Nigeria
+The group must produce consolidated financial statements.
 
-For any jurisdiction that straddles two regimes, explain why.
+1. Subsidiary A labels murabaha income as "Murabaha Income"
+   (AAOIFI FAS 28). Subsidiary B labels the same product's
+   income as "Profit from Islamic Financing" (MFRS 9). What
+   conflict does this create in the consolidated income statement?
+
+2. How should the group resolve the labelling conflict — adopt
+   one label for consolidation, or show both with a note?
+   What does the parent's jurisdiction (Bahrain, AAOIFI primary)
+   require?
+
+3. Subsidiary C applies AAOIFI but the Central Bank of Sudan has
+   additional local requirements. If Sudan's local requirements
+   conflict with the Bahrain parent's AAOIFI application, which
+   takes precedence in consolidation?
+
+4. What standards-conflict disclosures must appear in the
+   consolidated financial statements?
 ```
 
-**What you are learning:** The three-regime model is the foundation of the routing architecture you will examine in Lesson 3. By classifying jurisdictions yourself, you internalise the routing logic before seeing it encoded in a skill file.
+**What you are learning:** Classifying jurisdictions into regimes is the starting point, not the end. The real professional challenge is what happens when a single group spans multiple regimes and the labels, classifications, and disclosure requirements conflict in consolidated reporting. This scenario tests whether you can apply the regime framework to a practical multi-jurisdiction problem.
 
 ### Prompt 3: The Compliance-vs-Calculation Distinction
 

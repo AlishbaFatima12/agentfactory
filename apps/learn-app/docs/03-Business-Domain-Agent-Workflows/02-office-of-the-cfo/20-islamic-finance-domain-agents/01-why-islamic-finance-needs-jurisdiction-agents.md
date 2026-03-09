@@ -137,49 +137,62 @@ Chapter 19 taught you to build domain agents for single-jurisdiction practice ar
 
 Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
 
-### Prompt 1: The Jurisdiction Problem
+### Prompt 1: Apply the Jurisdiction Pattern to a New Product
 
 ```
-I am learning about Islamic finance accounting. Explain why
-the same murabaha transaction (a bank buys equipment for $1M
-and sells it to a customer at 20% mark-up over 24 months)
-produces different accounting outputs in these three jurisdictions:
+This lesson showed how a murabaha transaction produces different
+accounting outputs in Bahrain (AAOIFI), Malaysia (MFRS), and
+the UK (IFRS). Now apply the same analysis to a DIFFERENT
+Islamic finance product: ijara (Islamic leasing).
 
+Scenario: A bank purchases a commercial vehicle for $500,000
+and leases it to a corporate customer under an ijara arrangement
+for 48 months at $12,000/month.
+
+For each of these three jurisdictions:
 1. Bahrain (AAOIFI FAS mandatory)
 2. Malaysia (MFRS, equivalent to IFRS)
 3. United Kingdom (IFRS)
 
-For each jurisdiction, tell me:
-- What is the income line label?
-- What is the receivable classified as on the balance sheet?
-- Which accounting standard governs?
+Tell me:
+- What is the income line label for rental income?
+- Does the leased asset stay on the bank's balance sheet or
+  get derecognised?
+- Which accounting standard governs the lease treatment?
 
-Then explain: if an AI agent defaulted to IFRS for all three,
-what would go wrong in Bahrain?
+Then explain: does the jurisdiction variation follow the same
+pattern you saw with murabaha (labels differ, arithmetic is
+identical), or is the ijara case structurally different?
 ```
 
-**What you are learning:** The jurisdiction problem is concrete, not abstract. By examining the same numbers under three frameworks, you see that the compliance issue is about labels and classifications — not arithmetic. This understanding is the foundation for every subsequent lesson.
+**What you are learning:** The jurisdiction problem is not unique to murabaha. By applying the same three-jurisdiction analysis to a different product, you test whether you have understood the pattern — not just memorised the murabaha example. If you can predict where the labels diverge for ijara before seeing the answer, you have internalised the framework.
 
-### Prompt 2: Mapping the Three Regimes
+### Prompt 2: Predict a New Jurisdiction's Regime
 
 ```
-Global Islamic finance accounting operates under three regimes:
-
+This lesson introduced three accounting regimes for Islamic finance:
 1. AAOIFI Primary (e.g., Bahrain, Qatar)
 2. IFRS with Islamic guidance (e.g., Malaysia, UAE, Saudi Arabia, UK)
 3. Local Standards (e.g., Iran, some African jurisdictions)
 
-For each regime, explain:
-- What is the primary accounting standard?
-- What role does AAOIFI play?
-- How would a murabaha receivable be classified on the balance sheet?
-- Give me two example jurisdictions.
+Scenario: Kazakhstan has announced it will launch an Islamic
+finance regulatory framework in 2027 as part of the Astana
+International Financial Centre (AIFC) initiative. The AIFC
+already uses IFRS-based regulation and English common law.
+Kazakhstan has no existing Islamic banking sector but wants
+to attract GCC investment.
 
-Then answer: why can't an AI agent simply default to IFRS
-for all Islamic finance work?
+Based on these facts:
+1. Which of the three regimes would Kazakhstan most likely adopt?
+2. What role would AAOIFI play — mandatory, supplemental, or
+   voluntary? Cite specific evidence from the scenario.
+3. Which existing jurisdiction in the lesson's framework is the
+   closest analogue to Kazakhstan's likely approach, and why?
+4. What is one risk Kazakhstan faces if it chooses a different
+   regime than you predicted?
 ```
 
-**What you are learning:** The three-regime classification is the mental model you will use throughout this chapter. By mapping jurisdictions to regimes, you transform a 20-country complexity problem into a three-category routing problem — which is exactly what the agent architecture does.
+**What you are learning:** Classifying a NEW jurisdiction into the three regimes tests whether you understand what determines regime membership — not just which countries belong where. If you can reason about Kazakhstan's likely approach from the structural clues (IFRS-based regulation, GCC investment attraction), you have the analytical framework, not just a memorised list.
 
 ### Prompt 3: The Three Pillars in Practice
 
