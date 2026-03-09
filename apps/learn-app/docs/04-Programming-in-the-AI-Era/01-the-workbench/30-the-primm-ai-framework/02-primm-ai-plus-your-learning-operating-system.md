@@ -64,11 +64,11 @@ differentiation:
 
 # PRIMM-AI+: Your Learning Operating System
 
-In the previous lesson, you learned the five stages of PRIMM -- Predict, Run, Investigate, Modify, Make -- and saw how each stage builds a specific cognitive skill. You traced through a greeting program, understood why comprehension comes before creation, and discovered the research showing that students who read and predict code before writing it develop stronger programming ability. The framework was designed for classrooms with human teachers guiding the process.
+In the previous lesson, you learned the five stages of PRIMM -- Predict, Run, Investigate, Modify, Make -- and saw how each stage builds a specific thinking skill. You traced through a greeting program, understood why comprehension comes before creation, and discovered the research showing that students who read and predict code before writing it develop stronger programming ability. The framework was designed for classrooms with human teachers guiding the process.
 
 You do not have a classroom teacher. You have an AI coding assistant.
 
-That changes the partner, not the pedagogy. PRIMM with an AI coding assistant as your learning partner is called **PRIMM-AI** -- the same five stages, but AI generates examples for you to predict, executes code for you to compare, answers your investigation questions, and reviews your completed work. That adaptation is powerful. But it has a gap: without structural safeguards, AI makes it easy to skip stages and fake understanding. You can ask AI to explain the code before you predict, request a full solution before you modify, or let it write your Make project while you watch. Nothing in basic PRIMM-AI prevents this.
+That changes the partner, not the method. PRIMM with an AI coding assistant as your learning partner is called **PRIMM-AI** -- the same five stages, but AI generates examples for you to predict, executes code for you to compare, answers your investigation questions, and reviews your completed work. That adaptation is powerful. But it has a gap: without structural safeguards, AI makes it easy to skip stages and fake understanding. You can ask AI to explain the code before you predict, request a full solution before you modify, or let it write your Make project while you watch. Nothing in basic PRIMM-AI prevents this.
 
 Here is what PRIMM-AI looks like -- the same five stages, now with an AI partner:
 
@@ -98,7 +98,7 @@ This is a solid foundation. But nothing in this table prevents you from asking A
 
 You will learn each enhancement in detail throughout this lesson and the next. By the end of Lesson 3, you will have the complete PRIMM-AI+ picture.
 
-PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- the boundaries work the same way regardless of which AI coding assistant you use. The pedagogy is the constant. The AI tool is the variable. We use Claude Code as the primary partner throughout this book because it integrates with the Spec-Driven Development workflow you learned in Chapter 5, but every principle transfers.
+PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- the boundaries work the same way regardless of which AI coding assistant you use. The method is the constant. The AI tool is the variable. This book uses Claude Code as the primary partner because it integrates with the Spec-Driven Development workflow you learned in Chapter 5, but every principle transfers.
 
 ---
 
@@ -146,7 +146,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What the AI does:** After you modify, shows an alternative approach. Compares your version to the original. Explains tradeoffs between approaches. Can provide a minimal hint or point out the specific lines to change if you are stuck -- but not a complete rewrite. You might say: *"I rearranged the variables but the output order is wrong. What am I missing?"*
 
-**What the AI must NOT do:** Modify the code for you. The moment AI writes the modification, you are in Make territory without having done the cognitive work that Modify requires. Your hands produce the change; AI evaluates it afterward.
+**What the AI must NOT do:** Modify the code for you. The moment AI writes the modification, you are in Make territory without having done the thinking that Modify requires. Your hands produce the change; AI evaluates it afterward.
 
 ### Make -- AI as Review Partner, Not Ghostwriter
 
@@ -485,7 +485,7 @@ This structure mirrors professional code review: read the PR, understand the log
 - The AI Permissions Table defines exactly what AI may and may not do at each stage -- use it to distinguish partner interactions from crutch interactions.
 - The five rules (predict before running, test every explanation, modify before making, spec before code, partner not crutch) are operational discipline that prevents AI dependency.
 - The Verification Ladder connects your learning predictions to production observability across five steps: Prediction, Types, Tests, Pipeline, Observability.
-- Every chapter in Parts 4-6 follows the PRIMM-AI+ cycle implicitly: see code, investigate it, modify it, build something new.
+- Every chapter in Parts 4 and 5 follows the PRIMM-AI+ cycle implicitly: see code, investigate it, modify it, build something new.
 - PRIMM-AI+ is not a training wheel you will outgrow. Your learning habits map directly to professional practice.
 
 ---
@@ -551,7 +551,7 @@ example of a partner interaction and a crutch interaction.
 
 James looks at the PRIMM-AI+ at a Glance table one more time. "OK, I know the stages, the rules, and the checkpoints. But what does a real lesson actually *feel* like when all of this is running at once?"
 
-"That's Lesson 3," Emma says. "You'll see the four teaching methods woven into the stages — worked examples, Parsons problems, live coding, and peer instruction — and you'll see the exact lesson architecture that every programming chapter in this book follows. After that, you'll recognize the pattern the moment you hit Chapter 33."
+"That's Lesson 3," Emma says. "You'll see how four teaching methods are woven into the stages, and you'll see the exact lesson architecture that every programming chapter in this book follows. After that, you'll recognize the pattern the moment you hit Chapter 33."
 
 The next lesson brings everything together: the teaching methods, classroom and solo modes, and the practical lesson architecture that governs every chapter from here forward.
 
