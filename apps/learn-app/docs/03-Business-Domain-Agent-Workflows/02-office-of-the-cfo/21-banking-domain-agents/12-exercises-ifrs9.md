@@ -47,12 +47,12 @@ learning_objectives:
   - objective: "Classify mortgage facilities into IFRS 9 stages using both quantitative and qualitative SICR indicators, then calculate ECL for each facility"
     proficiency_level: "B2"
     bloom_level: "Analyze"
-    assessment_method: "Student correctly stages all 8 facilities in Exercise 1, calculates ECL for each, and produces a stage movement summary suitable for IFRS 7 disclosure"
+    assessment_method: "Student correctly stages all 8 facilities in Exercise 8, calculates ECL for each, and produces a stage movement summary suitable for IFRS 7 disclosure"
 
   - objective: "Build a complete corporate ECL model incorporating drawn and undrawn exposures, GCC macro adjustments, and probability-weighted scenarios"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student constructs the full ECL model for 6 GCC borrowers in Exercise 2, applying CCFs to undrawn exposures, GCC PD multipliers, and three macroeconomic scenarios with correct probability weighting"
+    assessment_method: "Student constructs the full ECL model for 6 GCC borrowers in Exercise 9, applying CCFs to undrawn exposures, GCC PD multipliers, and three macroeconomic scenarios with correct probability weighting"
 
 cognitive_load:
   new_concepts: 2
@@ -62,8 +62,8 @@ cognitive_load:
   assessment: "2 new concepts at B2 level — within the B2 limit of 10. The exercises primarily apply and synthesize concepts from Lessons 3-5 (staging, ECL formula, PD/LGD/EAD, macro scenarios). The cognitive challenge is integration and execution at portfolio scale, not learning new domain knowledge."
 
 differentiation:
-  extension_for_advanced: "For Exercise 2, add a fourth scenario (severe downside: oil at $35, GDP -2.0%, PD multiplier 2.20, weight 10% — redistribute from other scenarios). Recalculate the probability-weighted ECL and determine whether the incremental ECL from the fourth scenario is material."
-  remedial_for_struggling: "Focus on Exercise 1 facilities A001, A003, A005, and A008 — these represent the clearest Stage 1, 2, and 3 classifications. If you can stage these four correctly and calculate their ECL, you have the core staging skill."
+  extension_for_advanced: "For Exercise 9, add a fourth scenario (severe downside: oil at $35, GDP -2.0%, PD multiplier 2.20, weight 10% — redistribute from other scenarios). Recalculate the probability-weighted ECL and determine whether the incremental ECL from the fourth scenario is material."
+  remedial_for_struggling: "Focus on Exercise 8 facilities A001, A003, A005, and A008 — these represent the clearest Stage 1, 2, and 3 classifications. If you can stage these four correctly and calculate their ECL, you have the core staging skill."
 ---
 
 # Exercises — IFRS 9 Deep Practice
@@ -72,7 +72,7 @@ In Lessons 3 through 5, you learned IFRS 9 staging, the ECL formula, PD/LGD/EAD 
 
 These exercises require you to make judgments — not just calculations. Staging decisions involve qualitative assessment of borrower circumstances. ECL models involve parameter choices that change the answer materially. The banking plugin's `ifrs9-staging` and `ifrs9-ecl` skills can assist with computation, but you drive the classification decisions and parameter selections.
 
-## Exercise 1: IFRS 9 Stage Assessment — Retail Mortgage Portfolio
+## Exercise 8: IFRS 9 Stage Assessment — Retail Mortgage Portfolio
 
 **Jurisdiction**: United Kingdom (PRA regulated)
 **Duration**: 35 minutes
@@ -149,7 +149,7 @@ Select the correct LGD based on the facility's LTV (25% for LTV up to 80%, 40% f
 
 ---
 
-## Exercise 2: Corporate ECL Model — GCC
+## Exercise 9: Corporate ECL Model — GCC
 
 **Jurisdiction**: Gulf Cooperation Council (multi-jurisdiction: KSA, UAE, Bahrain)
 **Duration**: 55 minutes
@@ -200,7 +200,7 @@ The GCC region's credit risk is sensitive to oil prices and GDP growth. Apply a 
 | Collateral Type               | LGD |
 | ----------------------------- | --- |
 | Cash deposit / govt guarantee | 15% |
-| Property (LTV &lt; 80%)        | 30% |
+| Property (LTV &lt; 80%)       | 30% |
 | Plant and machinery           | 45% |
 | Stock and receivables         | 55% |
 | Fleet assets                  | 40% |
@@ -247,59 +247,55 @@ For example, Al-Jazira Steel (BB+, TTC PD 1.8%):
 
 Use these prompts in Claude or your preferred AI assistant to work through these exercises.
 
-### Prompt 1: Staging the Mortgage Portfolio
+### Prompt 1: Staging a Different Portfolio
 
 ```
-I have 8 UK mortgage facilities to stage under IFRS 9. Here is
-the data for each:
+I have completed an IFRS 9 staging exercise for a UK mortgage
+portfolio. Now I want to test my staging skills on a different
+asset class. Here are 5 UK SME term loans:
 
-A001: GBP 245K, 0 DPD, A to A, LTV 68%, performing
-A002: GBP 380K, 0 DPD, A to BBB, LTV 71%, 2-notch downgrade
-A003: GBP 190K, 35 DPD, BBB to BB, LTV 82%, 35 days past due
-A004: GBP 520K, 0 DPD, A to A, LTV 55%, borrower lost job
-A005: GBP 155K, 95 DPD, BBB to CC, LTV 88%, severe deterioration
-A006: GBP 290K, 0 DPD, BBB to BBB, LTV 75%, property down 15%
-A007: GBP 410K, 0 DPD, A to A, LTV 61%, rate rise stress
-A008: GBP 175K, 62 DPD, BB to B, LTV 79%, hardship notified
+B001: GBP 180K, 0 DPD, BBB to BBB, fully secured by equipment,
+  borrower's revenue fell 40% last quarter
+B002: GBP 450K, 42 DPD, A to BBB-, secured by trade receivables,
+  2-notch downgrade, sector under government review
+B003: GBP 95K, 0 DPD, BB to BB, unsecured, performing but
+  borrower in a sector with 15% default rate
+B004: GBP 620K, 120 DPD, BBB to CCC, secured by property LTV 92%,
+  administrator appointed
+B005: GBP 310K, 0 DPD, A to A, cash-secured, performing
 
-For each facility, tell me:
-1. Which stage (1, 2, or 3) and why
-2. Which SICR triggers are present (quantitative and qualitative)
-3. The ECL using: Stage 1 PD 0.8%, Stage 2 lifetime PD 12%,
-   Stage 3 lifetime PD 55%, LGD 25% (LTV<=80%) or 40% (LTV>80%)
+For each: assign Stage 1, 2, or 3 with reasoning.
 
-Then produce a summary table showing total ECL by stage.
+Then compare: how do SME staging decisions differ from mortgage
+staging? What qualitative indicators matter more for SME than
+for retail mortgage?
 ```
 
-**What you are learning:** Staging is not mechanical — facilities like A004 (no DPD, no rating change, but job loss) and A006 (no DPD, no rating change, but property value decline) require qualitative judgment. The AI can assist with computation, but the staging decision reflects your professional judgment about whether a significant increase in credit risk has occurred.
+**What you are learning:** Staging principles are the same across asset classes, but the qualitative indicators change. SME lending introduces sector risk, revenue volatility, and complex security types that mortgages do not. By staging a different portfolio, you test whether you understand the SICR framework versus having memorised the mortgage answers.
 
-### Prompt 2: Building the GCC Corporate ECL Model
+### Prompt 2: Oil Price Shock Stress Test
 
 ```
-Build an ECL model for these 6 GCC corporate borrowers:
+I have built an ECL model for a GCC corporate portfolio
+(Exercise 9). Now I want to stress-test it.
 
-Al-Jazira Steel: KSA, BB+ (TTC PD 1.8%), drawn $85M, undrawn
-$25M, collateral: plant 45% LGD
-Dubai Towers: UAE, BBB (0.9%), drawn $165M, no undrawn,
-property LTV 72% -> 30% LGD
-Gulf Energy: Bahrain, A- (0.4%), drawn $210M, undrawn $50M,
-cash+guarantee -> 15% LGD
-Riyadh Retail: KSA, BB (2.8%), drawn $45M, undrawn $30M,
-stock/receivables -> 55% LGD
-Emirates Logistics: UAE, BBB- (1.3%), drawn $120M, undrawn $40M,
-fleet -> 40% LGD
-Manama Finance: Bahrain, BB- (4.2%), drawn $60M, undrawn $20M,
-nil -> 70% LGD
+Scenario: Oil drops to $35/barrel and stays there for 18 months.
+Regional GDP contracts 2.0%. Unemployment rises to 8%.
 
-CCF for undrawn: 75%
-Three scenarios: Upside (PD x 0.85, 20%), Base (PD x 1.15, 50%),
-Adverse (PD x 1.65, 30%)
-
-Calculate EAD, ECL under each scenario, and probability-weighted
-ECL for each borrower. Show a summary table.
+For this stress scenario:
+1. What PD multiplier would you apply and why? (The base
+   multiplier is 1.15, the adverse is 1.65 at $50/barrel)
+2. Which sectors are most affected: manufacturing, real estate,
+   energy, retail, transport, or financial services?
+3. Should any borrowers migrate from Stage 1 to Stage 2 under
+   this stress? Apply the SICR framework.
+4. How would LGD assumptions change for property-secured loans
+   if GCC real estate falls 35%?
+5. Estimate the total ECL increase as a percentage of the
+   portfolio and explain the key drivers.
 ```
 
-**What you are learning:** The GCC macro adjustment (PD multiplier) demonstrates how regional economic conditions translate into credit risk parameters. The probability-weighted ECL is always higher than the base case ECL because of the non-linearity effect — the adverse scenario's higher weight relative to upside pulls the weighted average above the base case. This is the same principle from Lesson 5, now applied to a real multi-borrower portfolio.
+**What you are learning:** Stress testing reveals whether your ECL model captures tail risk. The oil price shock is the defining stress scenario for GCC banks because it cascades through government revenue, corporate earnings, property values, and consumer spending. By designing the stress yourself (rather than using pre-built parameters), you learn how macroeconomic variables translate into credit risk parameters.
 
 ### Prompt 3: Sensitivity and PMA Design
 

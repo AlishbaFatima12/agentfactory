@@ -56,7 +56,7 @@ learning_objectives:
   - objective: "Classify customers as standard CDD or enhanced EDD using risk indicators including PEP status, jurisdiction risk, and complex ownership structures"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student reviews the Azura Power Holdings scenario in Exercise 7 and correctly identifies all risk factors requiring EDD with justification"
+    assessment_method: "Student reviews the Azura Power Holdings scenario in Exercise 6 and correctly identifies all risk factors requiring EDD with justification"
 
   - objective: "Explain the boundary between what AI agents can automate in AML and what requires human judgment"
     proficiency_level: "B1"
@@ -213,7 +213,7 @@ AI agents operating in banking AML must respect a clear boundary:
 The SAR filing decision carries **personal criminal liability** for the MLRO. An AI agent must never file a SAR, never draft a SAR without human review and approval, and never communicate to any customer or staff member that a SAR is being considered. Tipping-off -- informing anyone that a SAR has been or may be filed -- is a criminal offence under UK POCA 2002 s333A, punishable by up to two years' imprisonment.
 :::
 
-## Exercise 7: Customer Onboarding Risk Assessment
+## Exercise 6: Customer Onboarding Risk Assessment
 
 Assess the following customer for onboarding. Determine whether standard CDD or enhanced EDD is required, identify all risk factors, and explain which aspects an AI agent can handle versus which require human judgment.
 

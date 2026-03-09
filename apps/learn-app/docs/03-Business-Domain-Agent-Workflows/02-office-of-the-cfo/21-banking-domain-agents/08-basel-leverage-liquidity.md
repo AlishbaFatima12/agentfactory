@@ -53,7 +53,7 @@ learning_objectives:
   - objective: "Classify assets as HQLA Level 1, 2A, or 2B, apply regulatory haircuts, and calculate the Liquidity Coverage Ratio"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student correctly classifies assets in Exercise 4 data, calculates total HQLA after haircuts, computes net cash outflows, and determines whether LCR exceeds 100%"
+    assessment_method: "Student correctly classifies assets in Exercise 5 data, calculates total HQLA after haircuts, computes net cash outflows, and determines whether LCR exceeds 100%"
 
   - objective: "Explain the relationship between LCR and NSFR as complementary liquidity measures"
     proficiency_level: "B1"
@@ -143,7 +143,7 @@ Net cash outflows are calculated by applying run-off rates to each funding categ
 
 The 75% cap on inflows ensures the bank cannot rely entirely on expected inflows to meet the ratio.
 
-## Exercise 4: Liquidity Stress Test
+## Exercise 5: Liquidity Stress Test
 
 Calculate the LCR for a UK bank facing a 30-day stress scenario.
 
