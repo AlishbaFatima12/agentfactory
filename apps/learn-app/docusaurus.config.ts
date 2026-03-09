@@ -251,6 +251,7 @@ const config: Config = {
         direction: "ltr",
         htmlLang: "en-US",
         calendar: "gregory",
+        path: "en",
       },
       ur: {
         label: "اردو",
