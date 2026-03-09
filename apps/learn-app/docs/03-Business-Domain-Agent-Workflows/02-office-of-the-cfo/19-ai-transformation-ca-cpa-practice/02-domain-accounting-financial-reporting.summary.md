@@ -21,4 +21,4 @@ Accounting and Financial Reporting is where AI transforms the highest-volume, mo
 ### Connections
 
 - **Builds on**: Lesson 1's five-domain impact map and the Gen-AI vs Agentic AI distinction.
-- **Leads to**: Practice labs in Lesson 11 (accounting and reporting exercises) and plugin commands in Lesson 7 (/journal-entry, /reconciliation, /income-statement).
+- **Leads to**: Practice labs in Lesson 10 (accounting and reporting exercises) and plugin commands in Lesson 7 (/journal-entry, /reconciliation, /income-statement).

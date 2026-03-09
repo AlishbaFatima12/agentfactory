@@ -20,5 +20,5 @@ The final capstone deploys the entire AI-augmented CA/CPA practice as a single f
 
 ### Connections
 
-- **Builds on**: Every lesson in Chapter 19 (L01-L15) -- this is the culminating synthesis that assembles all components into a functioning whole.
+- **Builds on**: Every lesson in Chapter 19 (L01-L14) -- this is the culminating synthesis that assembles all components into a functioning whole.
 - **Leads to**: The next chapter, which applies the same plugin architecture, SKILL.md methodology, and professional judgment framework to an entirely new professional domain.

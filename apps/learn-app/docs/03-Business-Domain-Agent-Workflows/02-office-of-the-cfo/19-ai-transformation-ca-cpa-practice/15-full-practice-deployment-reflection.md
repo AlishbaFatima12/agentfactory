@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/full-practice-deployment-reflection
-sidebar_position: 16
+sidebar_position: 15
 title: "Full Practice Deployment and Reflection"
 description: "Build and deploy the complete AI-augmented CA/CPA practice — install all plugins, configure jurisdiction-specific global instructions, validate every domain workflow, schedule month-end automation, run cross-domain integration, document the deployment, stress-test with edge cases, and answer the five questions that define your professional future"
 keywords:
@@ -29,7 +29,7 @@ keywords:
     "chapter contract",
   ]
 chapter: 19
-lesson: 16
+lesson: 15
 duration_minutes: 100
 
 # HIDDEN SKILLS METADATA
@@ -78,7 +78,7 @@ cognitive_load:
     - "Parallel run methodology — comparing AI output against manual output to validate quality before production use"
     - "AI practice capabilities statement — communicating AI use to clients in professional, non-defensive language"
     - "Professional value proposition in AI-augmented practice — distinguishing execution from judgment through the Chapter Contract lens"
-  assessment: "4 new concepts at B2 level — within the 4-7 cognitive limit for this tier. Students arrive with deep familiarity with all five domains, plugin architecture, SKILL.md format, and workflow scheduling from Lessons 1-15. This lesson synthesises rather than introduces."
+  assessment: "4 new concepts at B2 level — within the 4-7 cognitive limit for this tier. Students arrive with deep familiarity with all five domains, plugin architecture, SKILL.md format, and workflow scheduling from Lessons 1-14. This lesson synthesises rather than introduces."
 
 differentiation:
   extension_for_advanced: "Extend the stress-testing step to cover a full quarterly reporting cycle rather than a single period. Run multi-entity consolidation with three subsidiaries in different currencies. Compare AI outputs against manually prepared quarterly financial statements, management commentary, and board pack. Document process improvements and time savings across the extended period."
@@ -89,10 +89,10 @@ teaching_guide:
   session_group: 6
   session_title: "Full Practice Deployment"
   key_points:
-    - "This is a synthesis exercise — students are assembling components they have already built individually across Lessons 7-15 into a functioning whole"
+    - "This is a synthesis exercise — students are assembling components they have already built individually across Lessons 7-14 into a functioning whole"
     - "The stress-test step (Step 7) catches edge cases that single-domain labs would not reveal — currency conversion, multi-entity consolidation, and cross-jurisdiction workflows"
     - "Step 8's reflection is the chapter's intellectual climax — answering the five Chapter Contract questions and the defining question 'What is the work that only a CA/CPA could do?'"
-    - "The chapter quiz covers all 16 lessons — students should review domain summaries before attempting it"
+    - "The chapter quiz covers all 15 lessons — students should review domain summaries before attempting it"
   misconceptions:
     - "Students may think deployment means 'turning everything on at once' — emphasise the step-by-step validation and stress-testing as mandatory quality gates"
     - "Students may confuse 'what only a human could do' with 'what only a CA/CPA could do' — the question is specifically about professional qualification, not species"
@@ -115,9 +115,9 @@ teaching_guide:
 
 > _"The professional who can articulate a clear, specific, honest answer to the question 'What is the work that only I could do?' — and who builds their practice around it — will remain indispensable."_
 
-In Lesson 15, you integrated all five CA/CPA practice domains through cross-domain capstone exercises — onboarding a new client and running a complete audit cycle across three study sessions. Now you will build and deploy the entire AI-augmented practice stack as a single functioning system, stress-test it with the edge cases that real practice throws at you, and answer the five questions that define your professional positioning.
+In Lesson 14, you integrated all five CA/CPA practice domains through cross-domain capstone exercises — onboarding a new client and running a complete audit cycle across three study sessions. Now you will build and deploy the entire AI-augmented practice stack as a single functioning system, stress-test it with the edge cases that real practice throws at you, and answer the five questions that define your professional positioning.
 
-This is the chapter's culminating exercise. Everything you have learned across fifteen lessons — the five domain analyses, the plugin ecosystem, the Cowork workflows, the jurisdiction and methodology extensions, the practice labs, and the cross-domain capstones — converges here. You will install, configure, validate, stress-test, and document a complete AI-augmented CA/CPA practice. Then you will step back from the technology and answer the question that matters most: what, specifically, is the work that only a qualified CA/CPA could do?
+This is the chapter's culminating exercise. Everything you have learned across fourteen lessons — the five domain analyses, the plugin ecosystem, the Cowork workflows, the jurisdiction and methodology extensions, the practice labs, and the cross-domain capstones — converges here. You will install, configure, validate, stress-test, and document a complete AI-augmented CA/CPA practice. Then you will step back from the technology and answer the question that matters most: what, specifically, is the work that only a qualified CA/CPA could do?
 
 The answer is not academic. It is your value proposition.
 
@@ -126,7 +126,7 @@ The answer is not academic. It is your value proposition.
 ## Exercise 24: Full Practice Deployment — AI-Augmented Practice Stack (100 min)
 
 **Domain:** Cross-domain
-**What you need:** Cowork (Team or Enterprise), the Anthropic finance plugins from Chapters 17-18, your five locally-built SKILL.md extensions from Lessons 9-10, and a real or representative client base. Download companion materials from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents): [`reference-skills/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills) for SKILL.md examples and [`workflow-recipes/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/workflow-recipes) for scheduling templates.
+**What you need:** Cowork (Team or Enterprise), the Anthropic finance plugins from Chapters 17-18, your five locally-built SKILL.md extensions from Lessons 8-9, and a real or representative client base. Download companion materials from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents): [`reference-skills/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills) for SKILL.md examples and [`workflow-recipes/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/workflow-recipes) for scheduling templates.
 **This is the final capstone exercise for Chapter 19.**
 
 ### Step 1 — Verify the Complete Stack
@@ -147,11 +147,11 @@ idfa-financial-architect                         installed  (from Ch 18)
 
 Verify your five SKILL.md extensions exist in Cowork's Skills panel:
 
-1. **Jurisdiction Tax** (e.g., `pakistan-tax-jurisdiction`) — built in Lesson 9
-2. **Chart of Accounts** — built in Lesson 9
-3. **Audit Methodology** — built in Lesson 10
-4. **Client Entity** — built in Lesson 10
-5. **Compliance Calendar** — built in Lesson 10
+1. **Jurisdiction Tax** (e.g., `pakistan-tax-jurisdiction`) — built in Lesson 8
+2. **Chart of Accounts** — built in Lesson 8
+3. **Audit Methodology** — built in Lesson 9
+4. **Client Entity** — built in Lesson 9
+5. **Compliance Calendar** — built in Lesson 9
 
 Run one test command from each Anthropic plugin (`/journal-entry`, `/dcf`, `/sox-testing`, `/variance-analysis`) and confirm output. Open each SKILL.md extension and verify it reflects your jurisdiction, not the Pakistan defaults.
 
@@ -505,7 +505,6 @@ initial deployment.
 ```
 
 **What you are learning:** AI deployment is not a one-time event — it requires ongoing maintenance, review, and adaptation. The six-month simulation forces you to think beyond the initial setup to the operational reality: SKILL.md files become stale as regulations change, new AI capabilities emerge that shift the automation boundary, and your professional value proposition evolves. The most important metric is whether the proportion of your time spent on judgment-intensive work has increased relative to execution work.
-
 
 ## Flashcards Study Aid
 

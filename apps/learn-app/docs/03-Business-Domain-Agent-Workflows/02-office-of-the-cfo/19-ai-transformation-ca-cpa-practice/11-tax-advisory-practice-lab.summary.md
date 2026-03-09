@@ -20,5 +20,5 @@ Three exercises cover the full spectrum of Domain 2 practice: corporate tax comp
 
 ### Connections
 
-- **Builds on**: Lesson 3's Domain 2 analysis, Lesson 7's /dcf and /comps plugin commands, and Lesson 9's jurisdiction tax extensions.
-- **Leads to**: Lesson 15's cross-domain capstones where tax computation integrates with assurance and accounting workflows.
+- **Builds on**: Lesson 3's Domain 2 analysis, Lesson 7's /dcf and /comps plugin commands, and Lesson 8's jurisdiction tax extensions.
+- **Leads to**: Lesson 14's cross-domain capstones where tax computation integrates with assurance and accounting workflows.

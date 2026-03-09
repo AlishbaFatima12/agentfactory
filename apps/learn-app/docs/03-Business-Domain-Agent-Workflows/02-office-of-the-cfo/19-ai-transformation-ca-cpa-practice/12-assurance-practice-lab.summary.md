@@ -20,5 +20,5 @@ Three exercises apply AI agents to assurance services: building a full external 
 
 ### Connections
 
-- **Builds on**: Lesson 4's assurance domain analysis, Lesson 7's /sox-testing command, and Lesson 10's audit methodology extension.
-- **Leads to**: Lesson 15's annual audit cycle capstone that runs planning, fieldwork, and completion across three sessions.
+- **Builds on**: Lesson 4's assurance domain analysis, Lesson 7's /sox-testing command, and Lesson 9's audit methodology extension.
+- **Leads to**: Lesson 14's annual audit cycle capstone that runs planning, fieldwork, and completion across three sessions.

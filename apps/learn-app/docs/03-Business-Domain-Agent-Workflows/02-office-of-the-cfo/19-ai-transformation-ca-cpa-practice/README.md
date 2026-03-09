@@ -46,15 +46,14 @@ By the end of this chapter, you will be able to:
 | [L05](./05-domain-management-accounting.md)             | Domain 4: Management Accounting and Financial Management | 40 min   | Domain analysis + Exercise 4: FP&A Workflow with Cowork                                                              |
 | [L06](./06-domain-grc-advisory.md)                      | Domain 5: Governance, Risk and Compliance Advisory       | 35 min   | Domain analysis + Exercise 5: Continuous Controls Monitoring Specification                                           |
 | [L07](./07-ca-cpa-plugin-ecosystem.md)                  | The CA/CPA Plugin Ecosystem                              | 55 min   | Plugin architecture + Exercise 6: Full Month-End Close Workflow                                                      |
-| [L08](./08-cowork-workflows-ca-cpa.md)                  | Cowork Workflows for CA/CPA Practice                     | 30 min   | Month-end close walkthrough, cross-app workflow, and global instructions setup                                       |
-| [L09](./09-jurisdiction-entity-extensions.md)           | Building Jurisdiction and Entity Extensions              | 30 min   | Extensions 1-2: jurisdiction-specific tax rules and chart of accounts encoding                                       |
-| [L10](./10-methodology-compliance-extensions.md)        | Building Methodology and Compliance Extensions           | 45 min   | Extensions 3-5 + Exercise 7: Building a CA/CPA Domain Extension                                                      |
-| [L11](./11-accounting-reporting-practice-lab.md)        | Accounting & Reporting Practice Lab                      | 90 min   | Exercises 8-11: bookkeeping, IFRS statements, scheduled close, consolidation                                         |
-| [L12](./12-tax-advisory-practice-lab.md)                | Tax & Advisory Practice Lab                              | 75 min   | Exercises 12-14: tax computation, M&A due diligence, restructuring modelling                                         |
-| [L13](./13-assurance-practice-lab.md)                   | Assurance Practice Lab                                   | 70 min   | Exercises 15-17: external audit, fraud detection, internal audit report                                              |
-| [L14](./14-management-accounting-grc-practice-lab.md)   | Management Accounting & GRC Practice Lab                 | 85 min   | Exercises 18-21: cash flow forecast, board pack, risk register, compliance calendar                                  |
-| [L15](./15-cross-domain-capstones.md)                   | Cross-Domain Capstones                                   | 75 min   | Exercises 22-23: new client onboarding + annual audit cycle (3 sessions)                                             |
-| [L16](./16-full-practice-deployment-reflection.md)      | Full Practice Deployment & Reflection                    | 100 min  | Exercise 24: full plugin stack deployment + chapter quiz                                                             |
+| [L08](./08-jurisdiction-entity-extensions.md)           | Building Jurisdiction and Entity Extensions              | 30 min   | Extensions 1-2: jurisdiction-specific tax rules and chart of accounts encoding                                       |
+| [L09](./09-methodology-compliance-extensions.md)        | Building Methodology and Compliance Extensions           | 45 min   | Extensions 3-5 + Exercise 7: Building a CA/CPA Domain Extension                                                      |
+| [L10](./10-accounting-reporting-practice-lab.md)        | Accounting & Reporting Practice Lab                      | 90 min   | Exercises 8-11: bookkeeping, IFRS statements, scheduled close, consolidation                                         |
+| [L11](./11-tax-advisory-practice-lab.md)                | Tax & Advisory Practice Lab                              | 75 min   | Exercises 12-14: tax computation, M&A due diligence, restructuring modelling                                         |
+| [L12](./12-assurance-practice-lab.md)                   | Assurance Practice Lab                                   | 70 min   | Exercises 15-17: external audit, fraud detection, internal audit report                                              |
+| [L13](./13-management-accounting-grc-practice-lab.md)   | Management Accounting & GRC Practice Lab                 | 85 min   | Exercises 18-21: cash flow forecast, board pack, risk register, compliance calendar                                  |
+| [L14](./14-cross-domain-capstones.md)                   | Cross-Domain Capstones                                   | 75 min   | Exercises 22-23: new client onboarding + annual audit cycle (3 sessions)                                             |
+| [L15](./15-full-practice-deployment-reflection.md)      | Full Practice Deployment & Reflection                    | 100 min  | Exercise 24: full plugin stack deployment + chapter quiz                                                             |
 
 ## Chapter Contract
 
@@ -72,7 +71,7 @@ Exercise data, reference SKILL.md examples, and workflow recipe templates for th
 
 [**Download ca-cpa-exercise-data.zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) — trial balances, entity profiles, source documents, and working paper templates for Exercises 1-24. Unzip into your working folder. Or clone the repo directly to also get:
 
-- `reference-skills/` — Five reference SKILL.md files (Pakistan defaults) to study before building your own in Lessons 9-10
+- `reference-skills/` — Five reference SKILL.md files (Pakistan defaults) to study before building your own in Lessons 8-9
 - `workflow-recipes/` — Natural language scheduling templates for month-end close, board pack, compliance monitoring, and other recurring workflows
 
 ## After Chapter 19

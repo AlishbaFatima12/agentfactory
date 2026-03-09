@@ -20,5 +20,5 @@ Four hands-on exercises apply the complete plugin and extension stack to real ac
 
 ### Connections
 
-- **Builds on**: Lessons 7-10's plugins, workflows, and extensions now applied to complete end-to-end accounting processes.
-- **Leads to**: Lessons 12-14's practice labs for the remaining four domains, and Lesson 15's cross-domain capstones that integrate all five domains.
+- **Builds on**: Lessons 7-9's plugins, workflows, and extensions now applied to complete end-to-end accounting processes.
+- **Leads to**: Lessons 11-13's practice labs for the remaining four domains, and Lesson 14's cross-domain capstones that integrate all five domains.

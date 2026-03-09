@@ -220,7 +220,7 @@ The economics change significantly. An audit that currently requires 500 staff h
 **Check your work:** The risk assessment (Step 1) should identify company-specific and sector-specific risks, not generic audit risks. The monitoring specification (Step 3) should define measurable thresholds and alert conditions, not vague instructions. The skill (Steps 4–5) should encode sector expertise that would take a junior auditor years to develop — with concrete elevation indicators drawn from real financial data, not abstract descriptions. The reusability test (Step 6) is the ultimate check: a skill that only works for one company is a template; a skill that works across the sector is encoded expertise.
 
 :::tip From Conversation to Reusable Asset
-This exercise demonstrates the core Agent Factory pattern: domain expertise encoded as a skill through the natural act of doing expert work. You did not sit down to "write a skill from scratch" — you did audit analysis, and the skill emerged from that analysis. In Lesson 13 (Assurance Practice Lab), you will build on this pattern with more complex multi-step audit workflows.
+This exercise demonstrates the core Agent Factory pattern: domain expertise encoded as a skill through the natural act of doing expert work. You did not sit down to "write a skill from scratch" — you did audit analysis, and the skill emerged from that analysis. In Lesson 12 (Assurance Practice Lab), you will build on this pattern with more complex multi-step audit workflows.
 :::
 
 :::info Curated Deployment Links

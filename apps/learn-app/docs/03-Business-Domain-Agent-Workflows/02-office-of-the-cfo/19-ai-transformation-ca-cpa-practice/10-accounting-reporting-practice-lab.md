@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/accounting-reporting-practice-lab
-sidebar_position: 11
+sidebar_position: 10
 title: "Accounting & Reporting Practice Lab"
 description: "Build four complete Cowork workflows for accounting and financial reporting — autonomous bookkeeping from source documents, IFRS financial statements with full disclosure, scheduled month-end close automation, and multi-entity consolidation with intercompany elimination"
 keywords:
@@ -19,7 +19,7 @@ keywords:
     "CA/CPA exercises",
   ]
 chapter: 19
-lesson: 11
+lesson: 10
 duration_minutes: 90
 
 # HIDDEN SKILLS METADATA
@@ -123,7 +123,7 @@ teaching_guide:
 
 > _"A bookkeeping agent that never asks questions is one that is coding ambiguous transactions without flagging them. That is worse than asking."_
 
-In Lessons 7-10, you installed the plugin stack, walked through orchestrated workflows, and built jurisdiction and methodology extensions. Now you will put all of it to work. This practice lab contains four exercises that each build a complete Cowork workflow for a specific accounting and financial reporting process — from raw inputs to professional deliverables.
+In Lessons 7-9, you installed the plugin stack, walked through the plugin ecosystem, and built jurisdiction and methodology extensions. Now you will put all of it to work. This practice lab contains four exercises that each build a complete Cowork workflow for a specific accounting and financial reporting process — from raw inputs to professional deliverables.
 
 These are not quick demonstrations. Each exercise mirrors a real engagement: you direct Cowork through a multi-step process, review its output at judgment points, refine where needed, and produce a deliverable that a reviewing partner could assess. Choose one or two exercises to complete fully. Review all four to understand the range of workflows available to you.
 
@@ -652,11 +652,10 @@ elimination specifically, explain:
 
 **What you are learning:** Consolidation verification requires you to think beyond the mechanics of the current period. The unrealised profit elimination reverses the following year — meaning a consolidation error in one period compounds in the next. Understanding this temporal dimension is what separates a CA/CPA reviewing consolidated statements from a bookkeeper applying rules to a single period.
 
-
 ## Flashcards Study Aid
 
 <Flashcards />
 
 ---
 
-Continue to [Lesson 12: Tax & Advisory Practice Lab →](./12-tax-advisory-practice-lab.md)
+Continue to [Lesson 11: Tax & Advisory Practice Lab →](./11-tax-advisory-practice-lab.md)
