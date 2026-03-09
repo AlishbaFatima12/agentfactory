@@ -33,7 +33,7 @@ export function LocaleDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="gap-2 px-2 py-1" title="Change language">
+        <Button variant="ghost" className="gap-2 px-2 py-1 text-blue-500 hover:text-blue-600 hover:bg-blue-500/10" title="Change language">
           <Globe className="w-4 h-4" />
           <span className="text-sm font-medium">{currentLabel}</span>
           <ChevronDown className="w-4 h-4" />
