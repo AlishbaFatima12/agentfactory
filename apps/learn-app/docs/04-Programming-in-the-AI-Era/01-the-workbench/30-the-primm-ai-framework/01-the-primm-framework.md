@@ -260,11 +260,15 @@ Look at PRIMM's structure through this lens. Four of five stages -- Predict, Run
 ---
 
 :::note If you are new to programming
+
 This is good news. The most important programming skill in 2026 is not typing speed or syntax memorization. It is the ability to read code and predict what it does. PRIMM builds that skill from your very first lesson. You are starting with the skill that matters most.
+
 :::
 
 :::note If you have coded before
+
 You already do this informally when reviewing pull requests or debugging a colleague's code. PRIMM formalizes the process and gives you structured vocabulary for a skill you have been practicing by instinct. The framework will sharpen what you already know.
+
 :::
 
 ---

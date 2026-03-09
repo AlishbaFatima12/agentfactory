@@ -206,11 +206,15 @@ This table consolidates everything from this lesson and the previous one. Use it
 ---
 
 :::note If You Are New to Programming
+
 Focus on confidence scoring and the professional practice table. Confidence scoring teaches you to be honest about what you know. The professional table shows you that every exercise has a real-world payoff — you are not doing busywork. The error taxonomy and verification ladder are reference material you will revisit as you encounter them naturally in later chapters.
+
 :::
 
 :::note If You Have Coded Before
+
 The verification ladder will feel familiar — you already use types, tests, and CI pipelines. What PRIMM-AI+ adds is the explicit prediction step at the base of the ladder. Even experienced developers skip mental predictions when AI generates the code, and that skip is where bugs enter production. The confidence scoring system catches that pattern.
+
 :::
 
 ---
