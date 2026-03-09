@@ -475,77 +475,61 @@ Skills 1, 3, and 5 apply broadly (jurisdiction-wide or firm-wide). Skills 2 and 
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to practise building methodology, entity, and compliance skills.
+You have built three more skills — audit methodology, client entity, and compliance calendar. These prompts test all five skills from Lessons 8-9 working together on realistic scenarios. Run each one in Cowork with all your skills active.
 
-### Prompt 1: Audit Methodology Gap Analysis
-
-```
-I am an audit engagement partner at a mid-size CA/CPA firm.
-Our current audit methodology for materiality calculation uses
-[YOUR BENCHMARK — e.g., 1% of revenue, 5% of profit before tax,
-2% of total assets].
-
-Review our materiality approach and:
-1. List three scenarios where this benchmark would produce
-   an inappropriate materiality level (too high or too low)
-2. For each scenario, suggest an alternative benchmark and explain
-   why it better serves the users of the financial statements
-3. Draft two escalation conditions — situations where the agent
-   should not calculate materiality autonomously but should
-   flag for partner judgment
-
-Use ISA 320 (Materiality in Planning and Performing an Audit)
-as the reference standard.
-```
-
-**What you are learning:** Materiality calculation is one of the highest-judgment areas in audit. By stress-testing your benchmark against scenarios where it fails, you identify the edge cases that your audit methodology skill must handle — and the escalation rules that prevent the agent from making autonomous materiality decisions in ambiguous situations.
-
-### Prompt 2: Client Entity Knowledge Extraction
+### Prompt 1: Audit Methodology Under Pressure
 
 ```
-I need to build a client entity skill in Cowork for my most
-important client. Help me extract the tacit knowledge using the
-Method A interview framework.
+I am planning the audit of a manufacturing company with:
+- Revenue: 850 million
+- Profit before tax: 12 million (unusually low — down 78% YoY)
+- Total assets: 2.1 billion
+- The company has a bank covenant requiring minimum equity of
+  500 million
 
-Ask me the following questions one at a time. After each answer,
-convert my response into one or more skill instructions using
-the "When [condition], [action]" format:
-
-1. What is the client's business model and primary revenue streams?
-2. What seasonal patterns affect their financial results?
-3. What related party relationships exist that require disclosure?
-4. What are the known risk areas that you always check?
-5. What are the CFO's specific reporting preferences?
-
-After all five questions, compile the complete skill instructions
-and identify three gaps — conditions I probably know but did not
-mention that should be in the skill.
+Calculate planning materiality and performance materiality.
+Show me which benchmark you used, why you chose it, and
+whether any conditions in this engagement require escalation
+to the engagement partner before finalising materiality.
 ```
 
-**What you are learning:** The Method A interview framework is most powerful when someone else asks the questions. By having Claude interview you about a client you know well, you experience how structured questioning surfaces knowledge you apply automatically but have never written down. The gap identification at the end reveals the blind spots that make skills incomplete.
+**What you are checking:** The profit drop makes the standard "5% of PBT" benchmark dangerously low (600K on an 850M revenue company) or dangerously high depending on how the skill handles it. Your audit methodology skill should either switch benchmarks automatically or trigger the escalation rule you wrote. If the agent calculates materiality mechanically without flagging the anomaly, your escalation instructions are too narrow.
 
-### Prompt 3: Compliance Calendar Stress Test
+### Prompt 2: Client Entity Recognition Test
 
 ```
-I have built a compliance calendar skill in Cowork for
-[YOUR JURISDICTION] that covers [LIST YOUR MAIN RETURN TYPES —
-e.g., corporate tax return, withholding tax statements,
-annual company return].
+Prepare a variance analysis for my client's Q2 results:
 
-Stress-test this calendar by:
-1. Identifying three regulatory obligations I likely missed
-   (common filings that practitioners often forget to calendar)
-2. For each obligation, provide: the return type, the deadline,
-   the penalty for late filing, and a one-sentence skill
-   instruction in "When [condition], [action]" format
-3. Suggest a weekly monitoring schedule — which day of the week
-   should the agent check deadlines, and how far ahead should it
-   look to generate preparation alerts?
+Revenue: 145 million (Q1: 180 million, Q2 last year: 140 million)
+COGS: 98 million (Q1: 115 million, Q2 last year: 94 million)
+Operating expenses: 32 million (Q1: 30 million, Q2 last year: 28 million)
 
-Focus on [YOUR JURISDICTION] regulatory obligations.
+Explain every significant variance. Flag anything that
+requires attention based on what you know about this client's
+business model and seasonal patterns. Include the correct
+account codes and any documentation I should gather.
 ```
 
-**What you are learning:** Compliance calendars are only as good as their coverage. The obligations you remember to calendar are not the ones that cause problems — it is the ones you forget. By asking Claude to identify missed obligations, you stress-test your skill for completeness. The monitoring schedule question connects the calendar skill to Cowork's scheduling capability, showing how a static list of deadlines becomes a dynamic compliance monitoring system.
+**What you are checking:** Did the agent apply your client entity skill — recognising seasonal patterns (Q2 might be a known low season), flagging variances against the client's specific risk areas, and using the CFO's preferred reporting format? Or did it produce a generic variance table with no client context? If the seasonal explanation is missing, your client entity skill's condition clauses are not triggering on variance analysis work.
+
+### Prompt 3: Compliance Calendar Live Check
+
+```
+Today is [TODAY'S DATE]. For my practice, show me:
+
+1. Every filing deadline in the next 45 days across all my
+   client types (corporate, individual, withholding agents)
+2. For each deadline: the return type, the statutory due date,
+   the penalty for late filing, and the current preparation
+   status (not started / in progress / ready to file)
+3. Flag any deadline where the preparation lead time means
+   we should have started already but have not
+
+Format as a table sorted by urgency. For any flagged items,
+tell me exactly what needs to happen this week.
+```
+
+**What you are checking:** Does the agent know your jurisdiction's actual filing calendar — not generic dates? Does it apply the correct penalty rates from your jurisdiction tax skill? Does the lead-time calculation reflect realistic preparation timelines from your compliance calendar skill? If the deadlines are wrong or the penalties are generic, your compliance calendar skill needs more specific date and penalty instructions. If it cannot assess preparation status, that is expected — but the dates and penalties should be spot-on.
 
 ## Flashcards Study Aid
 

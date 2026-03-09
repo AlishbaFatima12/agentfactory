@@ -357,73 +357,63 @@ This layering — generic plugin capability, augmented by jurisdiction rules, au
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to practise building jurisdiction and entity skills.
+You have just built two skills — jurisdiction tax and chart of accounts. These prompts test whether they actually work. Run each one in Cowork with your skills active.
 
-### Prompt 1: Institutional Knowledge Audit
-
-```
-I am a CA/CPA practising in [YOUR JURISDICTION — e.g., Pakistan,
-United States, United Kingdom, Canada, Australia].
-
-List the top 10 pieces of institutional knowledge that a generic
-AI accounting tool would get wrong when processing work for my
-typical clients. For each item:
-1. What the generic tool would assume (default behaviour)
-2. What the correct jurisdiction-specific behaviour is
-3. The downstream impact of the error (wrong filing, penalty,
-   client dissatisfaction, regulatory risk)
-
-Organise the list by severity — most consequential errors first.
-```
-
-**What you are learning:** Before writing skill instructions, you need to identify what institutional knowledge matters most. This prompt surfaces the gap between generic AI output and jurisdiction-specific requirements — the exact gap that Cowork skills close. The severity ordering helps you prioritise which instructions to write first.
-
-### Prompt 2: Tax Skill Creation
+### Prompt 1: Tax Skill Smoke Test
 
 ```
-I need to create a jurisdiction-specific tax skill in Cowork
-for [YOUR JURISDICTION]. Using the "When [condition], [action]"
-format, draft instructions covering:
+Process this transaction and prepare the journal entry:
 
-1. The three most common entity types and their applicable
-   corporate/income tax rates
-2. Withholding tax rates for the three most common payment types
-   (salary, dividends, services)
-3. The two most important filing deadlines with penalty provisions
-4. One escalation rule — the condition under which the agent should
-   STOP and flag for partner review rather than computing autonomously
+Our client (a private limited company) received a consulting
+services invoice for PKR 2,500,000 from a registered vendor.
+The service was rendered in [YOUR JURISDICTION]. Prepare the
+journal entry including all applicable withholding taxes.
 
-For each instruction, explain why the condition clause is written
-the way it is — what would go wrong if it were broader or narrower?
+Show me: the gross amount, each withholding tax applied (rate
+and legal basis), the net payable, and the journal entry with
+account codes.
 ```
 
-**What you are learning:** The precision of the condition clause determines whether the skill activates correctly. A condition that is too broad fires on irrelevant work; too narrow and it misses cases. By drafting real instructions and examining why each condition is scoped the way it is, you develop the skill of writing instructions that activate reliably.
+**What you are checking:** Did the agent apply your jurisdiction's withholding tax rate — or a generic default? Did it cite the correct tax ordinance? If you built a Pakistan tax skill, the output should reference the ITO 2001, apply the correct services WHT rate, and use FBR return categories. If it used US or IFRS defaults, your skill's description field is not triggering activation — go back and refine the trigger conditions.
 
-### Prompt 3: Chart of Accounts Skill Creation
+### Prompt 2: Chart of Accounts Collision Test
 
 ```
-I manage accounting for an entity that uses the following account
-structure:
-- Revenue accounts: 4000-4999
-- COGS accounts: 5000-5999
-- Operating expense accounts: 6000-6999
-- Intercompany accounts: prefixed with "IC-" + entity number
+Prepare a journal entry for this transaction:
 
-Draft the Instructions field for a Cowork chart of accounts skill
-with:
-1. Five account code mappings (code, description, category)
-2. Two documentation requirements (which accounts need what
-   supporting documents)
-3. One restricted account rule (which account requires senior
-   approval before posting)
-4. One intercompany netting instruction
+Record the monthly office rent payment of 450,000 to the
+landlord. The payment was made via bank transfer. Our internal
+policy requires a signed lease agreement on file for all
+rent-related postings.
 
-Use the "When [condition], [action]" format. After drafting,
-review each instruction and identify one edge case it does not
-handle — then write an additional instruction to cover that case.
+Use our chart of accounts. Show the full entry with account
+codes, descriptions, and any documentation requirements.
 ```
 
-**What you are learning:** Chart of accounts skills must be comprehensive enough to eliminate manual recoding but not so exhaustive that they become unmaintainable. By drafting five mappings, two documentation rules, and one restricted account — then immediately stress-testing for edge cases — you learn the practical balance between coverage and complexity that makes skills sustainable in real practice.
+**What you are checking:** Did the agent use your account codes (e.g., 6XXX for operating expenses) or invent its own? Did it flag the documentation requirement (signed lease)? If your chart of accounts skill is working, the output should slot directly into your ledger without recoding. If the agent used generic account descriptions like "Rent Expense" without your codes, your skill instructions need more explicit account mappings.
+
+### Prompt 3: Combined Stress Test
+
+```
+Process this month-end scenario:
+
+Our client received three invoices this month:
+1. Legal services from a local firm — 800,000
+2. IT consulting from a foreign contractor — USD 12,000
+3. Equipment purchase from a registered dealer — 3,200,000
+
+For each invoice, prepare the journal entry with:
+- All applicable taxes (withholding, sales tax, import duties
+  if relevant)
+- Correct account codes from our chart of accounts
+- Documentation requirements per our posting rules
+- Flag anything that requires senior approval per our
+  restricted account rules
+
+Summarise in a table: Invoice | Gross | Taxes Applied | Net | Account Code | Flags
+```
+
+**What you are checking:** This tests both skills simultaneously. The tax skill should handle domestic vs. foreign contractor rates differently. The chart of accounts skill should assign correct codes and flag restricted accounts. Look for: Does the foreign contractor invoice trigger a different WHT rate? Does the equipment purchase hit a capital account (not operating expense)? Does anything trigger your escalation or restricted-access rules? Mismatches here tell you exactly which skill instructions to tighten.
 
 ## Flashcards Study Aid
 
