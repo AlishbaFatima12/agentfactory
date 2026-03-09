@@ -11,7 +11,7 @@ keywords:
     "freedom-to-operate",
     "FTO analysis",
     "patent search AI",
-    "IP SKILL.md",
+    "IP Cowork skill",
     "prior art",
     "Nice Classification",
     "copyright compliance",
@@ -48,7 +48,7 @@ learning_objectives:
     bloom_level: "Analyze"
     assessment_method: "Student can describe why FTO preliminary research requires attorney review, what a cover memo must contain, and what privileged FTO opinions provide that agent research cannot"
 
-  - objective: "Configure IP parameters in SKILL.md covering registered marks, pending applications, monitoring parameters, and patent portfolio"
+  - objective: "Configure IP parameters as a Cowork skill covering registered marks, pending applications, monitoring parameters, and patent portfolio"
     proficiency_level: "B1"
     bloom_level: "Apply"
     assessment_method: "Student produces an IP configuration section with correctly structured fields for marks, applications, monitoring thresholds, and patent areas"
@@ -61,7 +61,7 @@ cognitive_load:
     - "Nice Classification for trademark registration"
     - "Patent landscape research with /brief"
     - "Trademark monitoring (phonetic, visual, conceptual similarity)"
-    - "IP configuration in SKILL.md (marks, patents, monitoring parameters)"
+    - "IP configuration as a Cowork skill (marks, patents, monitoring parameters)"
   assessment: "6 concepts at B1 level -- within the 7-10 cognitive limit. The lesson builds on the /brief command introduced in Lesson 1 and applies it to a specific domain."
 
 differentiation:
@@ -206,7 +206,13 @@ The agent monitors trademark databases for:
 - Conflicts with planned new mark registrations
 - Use of your marks in domain name registrations
 
-## IP Configuration in SKILL.md
+## IP Configuration as a Cowork Skill
+
+To make your IP monitoring parameters persistent across sessions, create a Cowork skill. Open **Skills** → **+** → **Write skill instructions**. Set:
+
+- **Skill name:** `ip-protection-config`
+- **Description:** `Activate for: IP monitoring, trademark watch, patent landscape, freedom-to-operate, prior art, copyright compliance, DMCA, open-source licence check`
+- **Instructions:** the configuration rules below
 
 ```markdown
 ## Intellectual Property Configuration
@@ -238,6 +244,8 @@ Open-source compliance: Identify all OSS components;
 confirm licence compatibility before shipping
 DMCA workflow: Draft notices for attorney review and submission
 ```
+
+The skill ensures that every IP-related query in Cowork automatically applies your organisation's registered marks, monitoring thresholds, and patent portfolio context -- without requiring you to paste the configuration into each prompt.
 
 ## Try With AI
 

@@ -288,34 +288,43 @@ month? Compare to 30 NDAs x 35 minutes without triage.
 
 **What you are learning:** Designing triage criteria forces you to make explicit risk judgments that most organisations leave implicit. The calculation at the end quantifies the business case -- the difference between 17+ hours of attorney time and 3-4 hours is the capacity released for higher-value legal work.
 
-### Prompt 2: Triage a Cross-Border NDA
+### Prompt 2: Triage a Cross-Border NDA with a New Jurisdiction Pair
 
 ```
 I am running /triage-nda on a mutual NDA from a potential
-technology partner based in Riyadh, Saudi Arabia. My company
-is headquartered in Lahore, Pakistan.
+technology partner based in Singapore. My company is
+headquartered in London, UK.
 
 The NDA has these provisions:
-- Term: 3 years
-- Governing law: Laws of the Kingdom of Saudi Arabia
-- Dispute resolution: Riyadh commercial courts
-- Confidentiality period: 5 years post-termination
-- Confidential information: standard mutual definition
-- Remedies: mutual injunctive relief
+- Term: 2 years
+- Governing law: Laws of the Republic of Singapore
+- Dispute resolution: Singapore International Arbitration
+  Centre (SIAC)
+- Confidentiality period: 3 years post-termination
+- Confidential information: broad mutual definition including
+  "business plans, customer lists, pricing strategies, and
+  technical specifications"
+- Representatives: includes "affiliates, subsidiaries, and
+  their respective advisors" without a need-to-know qualifier
 - No residuals clause
-- No non-compete
+- Non-solicitation of employees: 12-month restriction
+  post-termination
 
-Produce a full NDA Triage Report with:
-1. Tier classification and rationale
-2. GREEN/YELLOW/RED flags for each provision
-3. Proposed positions for any YELLOW flags
-4. Fallback positions if counterparty rejects the initial proposal
-5. Cross-border enforcement considerations (mention the
-   New York Convention and how arbitral awards work between
-   Pakistan and KSA)
+Run /triage-nda with the appropriate jurisdiction skill active.
+Produce a full NDA Triage Report and verify:
+1. Does the agent apply Singapore's data protection regime
+   (PDPA 2012) rather than defaulting to UK GDPR for the
+   confidential information definition?
+2. Does it flag the broad Representatives clause correctly?
+3. Does it assess the non-solicitation restriction under
+   Singapore's approach to restraint of trade (which differs
+   from English common law)?
+4. Does the cross-border enforcement analysis correctly
+   reference SIAC's reputation and the New York Convention
+   enforceability of Singapore arbitral awards in the UK?
 ```
 
-**What you are learning:** Cross-border NDAs introduce governing law and enforcement considerations that domestic NDAs do not. The agent's ability to flag jurisdiction-specific issues and propose alternatives (LCIA arbitration, SCCA arbitration) with enforcement rationale demonstrates how the triage system handles complexity beyond simple clause matching.
+**What you are learning:** Testing a UK-Singapore jurisdiction pair forces the agent to apply a different data protection regime and restraint-of-trade analysis than the lesson's Pakistan-Saudi example. Verifying the agent's output against the correct jurisdiction-specific rules builds your ability to spot when the agent defaults to generic analysis instead of applying the loaded overlay.
 
 ### Prompt 3: The Residuals Clause Trap
 
