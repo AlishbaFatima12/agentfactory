@@ -83,6 +83,8 @@ PRIMM was created by computing education researchers **Sue Sentance** and **Jane
 
 The core idea is simple: **when you talk about code and read it before writing it, you build the vocabulary and mental models that make writing possible.** Each PRIMM stage gives you just enough support to reach the next level of understanding.
 
+The theoretical foundation comes from work by Sentance, Waite, and **Maria Kallia**, who grounded PRIMM in sociocultural learning theory — the principle that understanding grows through language and social interaction, not isolation. In plain terms: you learn programming the same way you learn a spoken language. You hear it before you speak it. You read it before you write it. You discuss it with others before you use it on your own. PRIMM applies that sequence to code — and it is the reason every stage emphasizes talking about, reasoning about, and explaining code before producing it.
+
 Since 2017, PRIMM has been adopted in schools and platforms across **England, Germany, the USA, Hong Kong, Norway, Argentina, Australia, and Turkey**. The research home is the Raspberry Pi Computing Education Research Centre.
 
 ### The Inversion That Makes PRIMM Different
