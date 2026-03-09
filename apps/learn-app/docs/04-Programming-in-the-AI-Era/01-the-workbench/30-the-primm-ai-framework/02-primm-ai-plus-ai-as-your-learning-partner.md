@@ -1,11 +1,11 @@
 ---
 sidebar_position: 2
-title: "PRIMM-AI+: Your Learning Operating System"
-description: "Adapt PRIMM for AI-assisted learning with PRIMM-AI+ enhancements: AI permissions at each stage, AI-free checkpoints, mastery gates, confidence scoring, a verification ladder, error taxonomy, and the deep connection between PRIMM-AI+ and professional software development practice."
-keywords: ["PRIMM-AI+", "PRIMM-AI", "AI-assisted learning", "AI-free checkpoints", "mastery gates", "verification ladder", "confidence scoring", "predict run investigate modify make", "Claude Code", "learning framework", "coding education", "AI questioning partner"]
+title: "PRIMM-AI+: AI as Your Learning Partner"
+description: "How AI integrates into each PRIMM stage -- AI roles, permissions, AI-free checkpoints, mastery gates, mandatory trace artifacts, a complete walkthrough, and the five rules that keep AI as partner, not crutch."
+keywords: ["PRIMM-AI+", "PRIMM-AI", "AI-assisted learning", "AI-free checkpoints", "mastery gates", "AI permissions", "predict run investigate modify make", "Claude Code", "learning framework", "coding education", "AI questioning partner"]
 chapter: 30
 lesson: 2
-duration_minutes: 25
+duration_minutes: 15
 
 # HIDDEN SKILLS METADATA
 skills:
@@ -23,20 +23,6 @@ skills:
     digcomp_area: "Digital Competence"
     measurable_at_this_level: "Student can evaluate whether a specific AI interaction is acting as partner or crutch using the AI Permissions Table, and articulate why the distinction matters for long-term skill development"
 
-  - name: "Verification Ladder Reasoning"
-    proficiency_level: "A2"
-    category: "Conceptual"
-    bloom_level: "Understand"
-    digcomp_area: "Information Literacy"
-    measurable_at_this_level: "Student can describe how the PRIMM-AI+ verification instinct (Predict then Run) scales from learning exercises to production systems through the five steps of the Verification Ladder"
-
-  - name: "PRIMM-to-Professional Mapping"
-    proficiency_level: "A2"
-    category: "Conceptual"
-    bloom_level: "Understand"
-    digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can map each PRIMM-AI+ stage to its professional equivalent (Spec, Generate, Review, Refine, Ship) and explain why learning habits transfer directly to production workflows"
-
 learning_objectives:
   - objective: "Apply PRIMM-AI+ stages with an AI coding assistant while maintaining appropriate boundaries, AI-free checkpoints, and mastery gates at each stage"
     proficiency_level: "A2"
@@ -48,21 +34,16 @@ learning_objectives:
     bloom_level: "Evaluate"
     assessment_method: "Student reviews three AI interaction transcripts and classifies each as partner (student learned something new) or crutch (student produced output without understanding), citing the relevant AI Permission rule"
 
-  - objective: "Describe the Verification Ladder from PRIMM-AI+ learning exercises through production observability"
-    proficiency_level: "A2"
-    bloom_level: "Understand"
-    assessment_method: "Student explains in their own words how predicting-then-running during learning connects to testing-then-deploying in production, referencing at least three steps of the Verification Ladder"
-
 cognitive_load:
-  new_concepts: 7
-  assessment: "7 new concepts (AI roles at each stage, AI permissions table, AI-free checkpoints, mastery gates, five PRIMM-AI+ rules, verification ladder, confidence scoring) at the upper boundary of A2 limit of 5-7. Mitigated by the walkthrough grounding each concept in a single concrete example."
+  new_concepts: 5
+  assessment: "5 concepts (AI roles at each stage, AI permissions table, AI-free checkpoints, mastery gates with mandatory trace artifacts, five PRIMM-AI+ rules) within A2 limit of 5-7"
 
 differentiation:
   extension_for_advanced: "Compare PRIMM-AI+ boundaries with pair programming protocols (driver/navigator) and formal code review practices. Analyze how the AI Permissions Table maps to specific failure modes in AI-assisted development."
-  remedial_for_struggling: "Focus exclusively on the five rules and the lesson walkthrough. Treat AI permissions, mastery gates, and the verification ladder as reference material to revisit when starting Chapter 33."
+  remedial_for_struggling: "Focus exclusively on the five rules and the lesson walkthrough. Treat AI permissions and mastery gates as reference material to revisit when starting Chapter 33."
 ---
 
-# PRIMM-AI+: Your Learning Operating System
+# PRIMM-AI+: AI as Your Learning Partner
 
 In the previous lesson, you learned the five stages of PRIMM -- Predict, Run, Investigate, Modify, Make -- and saw how each stage builds a specific thinking skill. You traced through a greeting program, understood why comprehension comes before creation, and discovered the research showing that students who read and predict code before writing it develop stronger programming ability. The framework was designed for classrooms with human teachers guiding the process.
 
@@ -96,7 +77,7 @@ This is a solid foundation. But nothing in this table prevents you from asking A
 | 8 | **Classroom and Solo Modes** | Same framework works for both -- this book uses solo mode |
 | 9 | **Chapter-End Rubric** | Five-dimension self-assessment at the end of every programming chapter |
 
-You will learn each enhancement in detail throughout this lesson and the next. By the end of Lesson 3, you will have the complete PRIMM-AI+ picture.
+You will learn enhancements 1-4 in this lesson (the core mechanics of working with AI at each stage) and enhancements 5-9 across the next two lessons — self-assessment tools and professional connections in Lesson 3, and teaching methods with classroom and solo modes in Lesson 4.
 
 PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- the boundaries work the same way regardless of which AI coding assistant you use. **The method is the constant. The AI tool is the variable.** This book uses Claude Code as the primary partner because it integrates with the Spec-Driven Development workflow you learned in Chapter 5, but every principle transfers.
 
@@ -188,7 +169,7 @@ The rules for AI-free checkpoints are simple:
 - **Make begins AI-free.** You write your specification and make your first implementation attempt without AI. Only after that first attempt do you ask AI for review.
 - **Other stages allow AI after your first attempt.** In Investigate, you write your own explanation before asking AI. In Modify, you attempt the change before requesting hints.
 
-**AI-free checkpoints are not punishment.** They are the moments when you discover whether you truly understand something or merely recognize it when AI explains it. There is a large gap between those two states, and the checkpoints make the gap visible.
+There is a large gap between truly understanding something and merely recognizing it when AI explains it. The checkpoints make that gap visible.
 
 ---
 
@@ -233,7 +214,7 @@ Every Investigate stage must produce something visible. A vague sense of "I thin
 
 The third option matters most. If you cannot trace the program or explain it, that is not a sign of failure -- it is a diagnostic signal. A failure note that says "I do not understand why `str(score)` is needed before joining with `+`" gives you an exact target for your AI investigation questions. **Without the artifact requirement, you would skip past the confusion and carry it silently into Modify.**
 
-The trace table from the walkthrough later in this lesson is an example of a mandatory artifact. The mastery gate for Investigate ("can explain *how*, not just *what*") depends on having produced one.
+The trace table from the walkthrough below is an example of a mandatory artifact. The mastery gate for Investigate ("can explain *how*, not just *what*") depends on having produced one.
 
 ---
 
@@ -289,7 +270,7 @@ Now probe the mechanics. Focus on whatever surprised you during Run. Ask your AI
 - *"What happens if I remove `str()` and write `name + " scored " + score` instead?"* -- Explore the error. Python cannot join a string and an integer with `+`. Understanding *why* `str()` is needed is the key insight.
 - *"What if `name` is an empty string?"* -- Test the edge case. The output would be `" scored 95 in Python"` -- a sentence with no name but the spaces still appear.
 
-Each question sharpens your understanding of how the program behaves under different conditions. The AI answers; you verify by checking the logic yourself. That verification habit is Rule 2 in action.
+Each question sharpens your understanding of how the program behaves under different conditions. The AI answers; you verify by checking the logic yourself. This verification instinct — which you will see formalized as Rule 2 below — is the most important habit PRIMM-AI+ builds.
 
 **Mastery gate check:** Can you explain *how* the program works, not just *what* it does? Can you describe why `str()` is needed and what the `+` operator does with strings? If yes, proceed to Modify.
 
@@ -335,140 +316,6 @@ These rules are operational discipline, not suggestions. Each one prevents a spe
 
 ---
 
-## The Verification Ladder
-
-"How long do I have to keep predicting before running?" James asks. "It feels like training wheels."
-
-Emma smiles. "You'll never stop. Senior engineers do the same thing — they just call it 'code review' and 'testing.' The habit you're building right now is the same habit that powers professional software. It just grows with you."
-
-Every time you predict what code will do and then run it to check, you are building a habit: guess first, verify second. That habit does not stop being useful when you leave this chapter. It grows with you. The Verification Ladder shows how the same habit scales from a learning exercise all the way to professional software -- one step at a time.
-
-| Step | Question | What You Do |
-|------|----------|-------------|
-| 1. **Prediction** | What do I think this code does? | Read the code and commit to an answer before running it |
-| 2. **Types** | Is the structure valid? | Check that every variable and function has the right type labels |
-| 3. **Tests** | Is the behavior correct? | Write a test that states what the code should do, then run it |
-| 4. **Pipeline** | Do all checks pass together? | Run all your checks (types, tests, formatting) in one command |
-| 5. **Observability** | Is it still correct in production? | Monitor the running program to catch problems after deployment |
-
-You are currently at Step 1 -- predicting and running. Steps 2 through 5 will be introduced gradually as you progress through the book. **The key insight is that the predict-then-verify habit you are building now is not a beginner exercise you will outgrow.** It is the same habit that powers every step above it.
-
----
-
-## Confidence Scoring
-
-James predicts the output of a program and rates himself a 5 — certain. He runs the code. The output is completely different from his prediction.
-
-"That's the most dangerous state," Emma says. "Being wrong isn't the problem. Being *confident and wrong* is the problem. In the real world, that's how bugs get shipped — someone looks at AI-generated code, thinks 'looks right,' and moves on without checking."
-
-In the previous lesson, you saw the 1-5 confidence scale during the Predict stage. Here it is again for reference — and here is how to use it systematically throughout Parts 4 and 5.
-
-| Score | Meaning |
-|-------|---------|
-| 1 | No idea -- complete guess |
-| 2 | Vague guess -- something about a greeting? |
-| 3 | Think I know but could be wrong |
-| 4 | Fairly confident -- I see how the pieces fit |
-| 5 | Certain -- I can describe the exact output |
-
-After each prediction, record four things:
-
-1. **Your prediction** -- what you think the code will do
-2. **Your confidence score** -- how certain you are (1-5)
-3. **The actual result** -- what the code actually did
-4. **Your revised explanation** -- what you now understand that you did not before
-
-**Why this matters:** **False confidence -- rating yourself a 5 and getting it wrong -- is the most dangerous state for an AI-era developer.** It means you *think* you understand code but you do not. When AI generates code you falsely believe you understand, you ship bugs you cannot find. Confidence scoring trains you to know when you know and when you do not. That calibration is a professional skill.
-
-Over the course of Parts 4 and 5, your calibration should improve. Early on, you will probably rate yourself too high (overconfident) or too low (underconfident). Both are normal. The goal is not to always score 5. **The goal is for your confidence scores to accurately predict your actual accuracy.**
-
----
-
-## Five Kinds of Bugs — A Preview
-
-James runs his modified program and gets an error. "It's broken. I'll ask AI to fix it."
-
-"Wait," Emma says. "Before you ask for a fix, can you tell me what *kind* of problem this is? Did you give the wrong type of data? Did you get the logic backward? Did you build the wrong thing entirely?"
-
-James stares at the error. "I... don't know how to tell."
-
-"That's what this table is for."
-
-When your code does not work, the first question is: *what kind of problem is this?* Not all bugs are the same. Knowing which kind you are looking at tells you where to search. You do not need to memorize this table now -- just know it exists. You will practice finding each kind starting in Chapter 33.
-
-| Kind of Bug | What Went Wrong | Simple Example |
-|-------------|----------------|----------------|
-| **Type Error** | You gave the wrong kind of data | You wrote `name + score` but `score` is a number, not text |
-| **Logic Error** | The code runs but gives the wrong answer | You printed the name where the subject should be |
-| **Specification Error** | The code does what you asked, but you asked for the wrong thing | You built a greeting program when the task was a profile card |
-| **Data Error** | The code breaks with unusual inputs | The name is empty, so the output starts with a space |
-| **Orchestration Error** | The pieces run in the wrong order | You tried to print `result` before you created it |
-
-When something goes wrong during Investigate or Modify, glance at this table. Even just asking "Is this a type problem or a logic problem?" narrows your search and saves time.
-
----
-
-## From Learning to Professional Practice
-
-"Will I still be doing this at work?" James asks. "Predicting output, tracing variables, writing things down before running them?"
-
-"Every day," Emma says. "You'll just call it something different. Predict becomes code review. Investigate becomes debugging. Make becomes shipping a feature. The habit is the same — the stakes just get bigger."
-
-The habits you build with PRIMM-AI+ do not disappear when you finish this book. They are the same habits professional developers use every day -- just applied at a larger scale. Here is what each habit looks like when you are learning versus when you are working professionally:
-
-| PRIMM-AI+ Stage | What You Do While Learning | What Professionals Do With the Same Habit |
-|---|---|---|
-| **Predict** | Read existing code and predict what it will output before running it | Read AI-generated code and predict whether it is correct before trusting it |
-| **Run** | Run the code and compare the output to your prediction | Run automated tests and compare the results to expected behavior |
-| **Investigate** | Trace variables and ask questions about how the code works | Review code for bugs, security issues, and maintainability |
-| **Modify** | Change an existing program to add a feature or fix a problem | Refine code iteratively based on what the review revealed |
-| **Make** | Write a new program from a specification you created | Build and deliver a complete, tested solution from requirements |
-
-The key insight: Predict always means the same thing -- ****read the code, form an expectation, then check whether you are right.**** While learning, you predict what a program will print. As a professional, you predict whether AI-generated code is correct. The habit is identical. The stakes grow.
-
-By the time you finish Parts 4 and 5, these habits will be automatic. You will read AI-generated code with the same critical eye you developed tracing through the walkthrough programs in this chapter. You will refine iteratively, improving code in stages rather than expecting perfection on the first attempt.
-
----
-
-## Chapter-End Rubric Preview
-
-"How will I know if I actually learned something?" James asks. "Not just finished the lesson — actually *learned* it."
-
-"Every programming chapter ends with a self-check," Emma says. "Five questions. Honest answers. It takes two minutes and tells you exactly where you stand."
-
-Starting in Chapter 33, every programming chapter ends with a self-assessment against five dimensions. Here is the rubric you will use:
-
-| Dimension | What It Measures |
-|-----------|-----------------|
-| **Prediction Accuracy** | How often were your predictions correct? |
-| **Trace Quality** | Were your trace artifacts accurate without AI help? |
-| **Explanation Quality** | Can you explain the concept in your own words? |
-| **Modification Quality** | Were your modifications correct on the first or second attempt? |
-| **Independent Make** | Was the spec and first attempt produced without AI? |
-
-Each dimension has three levels: **Developing** (need more practice), **Competent** (solid understanding), and **Fluent** (ready to move on). You do not need to be Fluent in every dimension to proceed -- Competent is the target. But if you score Developing on Prediction Accuracy or Explanation Quality, revisit those concepts before moving forward.
-
----
-
-## PRIMM-AI+ at a Glance
-
-This table consolidates everything. Use it as a reference card whenever you start a PRIMM-AI+ lesson. Here is what each column means:
-
-- **AI Permission** — What your AI assistant is allowed to do at this stage
-- **What You Do First** — The action you must take before moving on
-- **Mastery Gate** — The requirement you must meet before proceeding to the next stage
-- **What You Produce** — The visible artifact you create as evidence of learning
-
-| Stage | AI Permission | What You Do First | Mastery Gate | What You Produce |
-|-------|--------------|-------------------|-------------|-----------------|
-| **Predict** | AI-free | Write prediction + confidence score | Written prediction exists | Prediction with confidence score |
-| **Run** | AI allowed | Compare prediction to output | Comparison recorded | Prediction vs. actual record |
-| **Investigate** | AI after your explanation | Write your own explanation first | Can explain how, not just what | Trace table, explanation, or failure note |
-| **Modify** | AI for hints only | Attempt the change yourself first | Can explain the target behavior | Modified code with prediction |
-| **Make** | AI for review only | Write spec and first attempt AI-free | Written spec exists | Specification + solution + rubric |
-
----
-
 :::note If You Are New to Programming
 The predictable structure is your safety net. You will never be thrown into the deep end. By the time a chapter asks you to write code, you will have already predicted, run, investigated, and modified programs using the same concepts. Every Make exercise has four stages of preparation behind it. The mastery gates ensure you do not skip ahead before you are ready.
 :::
@@ -481,12 +328,11 @@ This structure mirrors professional code review: read the PR, understand the log
 
 ## Key Takeaways
 
-- PRIMM-AI+ keeps all five stages from PRIMM and adds an AI partner with clear boundaries, AI-free checkpoints, mastery gates, and confidence scoring at each stage.
+- PRIMM-AI+ keeps all five stages from PRIMM and adds an AI partner with clear boundaries at each stage — what AI may do, what it must not do, and when it must be closed entirely.
 - The AI Permissions Table defines exactly what AI may and may not do at each stage -- use it to distinguish partner interactions from crutch interactions.
+- AI-free checkpoints are diagnostic, not punitive — they reveal whether you truly understand or merely recognize AI's explanations.
+- Mastery gates prevent you from skipping ahead: written prediction before Run, recorded comparison before Investigate, explanation of *how* before Modify, written spec before Make.
 - The five rules (predict before running, test every explanation, modify before making, spec before code, partner not crutch) are operational discipline that prevents AI dependency.
-- The Verification Ladder connects your learning predictions to production observability across five steps: Prediction, Types, Tests, Pipeline, Observability.
-- Every chapter in Parts 4 and 5 follows the PRIMM-AI+ cycle implicitly: see code, investigate it, modify it, build something new.
-- PRIMM-AI+ is not a training wheel you will outgrow. Your learning habits map directly to professional practice.
 
 ---
 
@@ -517,7 +363,7 @@ round(-1.5), round(0.5), and round(1.5) and show you the
 real output. Compare the explanation to the actual results.
 ```
 
-Did the AI's explanation match the actual output? Python's rounding behavior surprises most people (and most AI models). The discrepancy you may find is exactly why Rule 2 exists: never trust an explanation you have not tested.
+Did the AI's explanation match the actual output? Python uses "banker's rounding" (round half to even): `round(-2.5)` returns `-2`, not `-3`, because `-2` is the nearest even number. This surprises most people (and most AI models). The discrepancy you may find is exactly why Rule 2 exists: never trust an explanation you have not tested.
 
 **What you are learning:** The verification instinct that forms the foundation of the Verification Ladder. When you catch an AI explanation that does not match reality, you are practicing the same skill that senior engineers use when they question production logs that "look wrong."
 
@@ -549,11 +395,11 @@ example of a partner interaction and a crutch interaction.
 
 ## Looking Ahead
 
-James looks at the PRIMM-AI+ at a Glance table one more time. "OK, I know the stages, the rules, and the checkpoints. But what does a real lesson actually *feel* like when all of this is running at once?"
+James looks at the AI Permissions Table and the five rules. "I know *how* to work with AI now. But how do I know if I'm actually getting better? And does any of this matter once I'm past the exercises?"
 
-"That's Lesson 3," Emma says. "You'll see how four teaching methods are woven into the stages, and you'll see the exact lesson architecture that every programming chapter in this book follows. After that, you'll recognize the pattern the moment you hit Chapter 33."
+"That's the next lesson," Emma says. "You'll learn to measure your own growth — confidence scoring, the verification ladder, even a rubric you'll use at the end of every programming chapter. And you'll see that the habits you're building now are exactly what professionals use every day."
 
-The next lesson brings everything together: the teaching methods, classroom and solo modes, and the practical lesson architecture that governs every chapter from here forward.
+The next lesson introduces the self-assessment tools and professional connections that complete the PRIMM-AI+ picture: how to calibrate your confidence, how the predict-then-verify habit scales from exercises to production, and why the skills you are building now transfer directly to professional software development.
 
 ---
 
