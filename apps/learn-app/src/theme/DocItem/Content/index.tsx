@@ -34,6 +34,19 @@ import { PracticeContext } from "@/contexts/PracticeContext";
 import { PracticeSetupCard } from "@/components/PracticeSetupCard";
 import { PracticeErrorCard } from "@/components/PracticeErrorCard";
 import { CompletenessBanner } from "@/components/profile/CompletenessBanner";
+import ContentGate from "@/components/ContentGate";
+
+/**
+ * Pages that are publicly accessible without authentication.
+ * All other doc pages require login to view full content.
+ */
+const PUBLIC_PAGES = [
+  "about",
+  "thesis",
+  "which-agents-2026",
+  "why-ai-is-non-negotiable",
+  "preface-agent-native",
+];
 
 // Lazy-load terminal (requires DOM)
 const TerminalPanel = React.lazy(() =>
@@ -614,7 +627,7 @@ export default function ContentWrapper(props: Props): React.ReactElement {
     setMode("ask");
     openPanel();
   }, [setMode, openPanel]);
-  const { session } = useAuth();
+  const { session, isLoading } = useAuth();
   const isLoggedIn = !!session?.user;
 
   // Auth config for login redirect
@@ -676,6 +689,10 @@ export default function ContentWrapper(props: Props): React.ReactElement {
     rawSource.endsWith("README.mdx") ||
     rawSource.endsWith("index.md") ||
     rawSource.endsWith("index.mdx");
+
+  // Content gating: public pages and category indexes (part/chapter READMEs) are free
+  const isPublicPage = PUBLIC_PAGES.includes(docId) || isCategoryIndex;
+  const requiresAuth = !isPublicPage && !isLoggedIn && !isLoading;
 
   // Teaching Guide Sheet state
   const [teachingGuideOpen, setTeachingGuideOpen] = React.useState(false);
@@ -808,7 +825,13 @@ export default function ContentWrapper(props: Props): React.ReactElement {
           </div>
         )}
         {isLoggedIn && <CompletenessBanner hideDuringOnboarding />}
-        <Content {...props} />
+        {requiresAuth ? (
+          <ContentGate type="premium">
+            <Content {...props} />
+          </ContentGate>
+        ) : (
+          <Content {...props} />
+        )}
         {isLeafPage &&
           isLoggedIn &&
           hasValidSlug &&
@@ -926,9 +949,17 @@ export default function ContentWrapper(props: Props): React.ReactElement {
           </button>
         </div>
       )}
-      <LessonContent summaryElement={summaryElement}>
-        <Content {...props} />
-      </LessonContent>
+      {requiresAuth ? (
+        <ContentGate type="premium">
+          <LessonContent summaryElement={summaryElement}>
+            <Content {...props} />
+          </LessonContent>
+        </ContentGate>
+      ) : (
+        <LessonContent summaryElement={summaryElement}>
+          <Content {...props} />
+        </LessonContent>
+      )}
       {isLeafPage &&
         isLoggedIn &&
         hasValidSlug &&
