@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-09
+- docs: complete Ch 30 PRIMM-AI+ Framework — 4 lessons, quiz, summaries, editorial polish ([#835](https://github.com/panaversity/agentfactory/pull/835))
+
+### 2026-03-09
 - docs: polish Ch 30 formatting and update writing methodology to v2.0 ([#834](https://github.com/panaversity/agentfactory/pull/834))
 
 ### 2026-03-09
