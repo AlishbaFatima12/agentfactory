@@ -1,5 +1,5 @@
 ---
-title: "The PRIMM-AI+ Framework"
+title: "Chapter 30: The PRIMM-AI+ Framework"
 sidebar_position: 0
 description: "Learn the PRIMM-AI+ teaching framework -- Predict, Run, Investigate, Modify, Make with AI -- the research-validated method that teaches you to read and understand code before you write it, with AI-free checkpoints, mastery gates, and confidence scoring."
 keywords: ["PRIMM", "PRIMM-AI+", "Predict Run Investigate Modify Make", "code comprehension", "AI-assisted learning", "Sue Sentance", "Jane Waite", "reading code", "teaching framework", "confidence scoring", "mastery gates"]
