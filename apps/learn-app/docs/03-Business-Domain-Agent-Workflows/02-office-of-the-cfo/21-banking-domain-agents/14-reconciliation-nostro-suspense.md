@@ -47,17 +47,17 @@ learning_objectives:
   - objective: "Perform nostro reconciliation by matching mirror and statement entries, identifying and classifying breaks by type"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student correctly matches entries in Exercise 12, classifies all unmatched items, and produces an ageing report with escalation recommendations"
+    assessment_method: "Student correctly matches entries in Exercise 14, classifies all unmatched items, and produces an ageing report with escalation recommendations"
 
   - objective: "Execute a four-way IFRS 9 provision reconciliation across ECL model, risk system, GL, and regulatory disclosure"
     proficiency_level: "B2"
     bloom_level: "Apply"
-    assessment_method: "Student reconciles all four sources in Exercise 13, identifies three known breaks, traces each to its root cause, and recommends the correct adjustments"
+    assessment_method: "Student reconciles all four sources in Exercise 15, identifies three known breaks, traces each to its root cause, and recommends the correct adjustments"
 
   - objective: "Clear suspense account items using matching, ageing analysis, and escalation procedures"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student prioritises 12 suspense items in Exercise 14, matches items to source transactions, applies ageing SLAs, and recommends write-off for items exceeding 30 days"
+    assessment_method: "Student prioritises 12 suspense items in Exercise 16, matches items to source transactions, applies ageing SLAs, and recommends write-off for items exceeding 30 days"
 
 cognitive_load:
   new_concepts: 6
@@ -72,7 +72,7 @@ cognitive_load:
 
 differentiation:
   extension_for_advanced: "Design a Level 3 continuous reconciliation workflow that runs intra-day rather than end-of-day. What data feeds are required? How do you handle transactions that are in-flight at reconciliation time? What SLA changes are needed?"
-  remedial_for_struggling: "Focus on Exercise 12 (nostro reconciliation) — the matching process is the most intuitive of the five reconciliation types. If you can match 7 mirror entries to 8 statement entries and explain the breaks, you have the core reconciliation skill."
+  remedial_for_struggling: "Focus on Exercise 14 (nostro reconciliation) — the matching process is the most intuitive of the five reconciliation types. If you can match 7 mirror entries to 8 statement entries and explain the breaks, you have the core reconciliation skill."
 ---
 
 # Bank Reconciliation — Nostro, Suspense, and GL-to-Risk
@@ -187,7 +187,7 @@ The banking plugin implements three levels of reconciliation automation:
 
 ---
 
-## Exercise 12: Nostro Reconciliation
+## Exercise 14: Nostro Reconciliation
 
 **Duration**: 35 minutes
 **Skills used**: `recon-nostro`
@@ -230,7 +230,7 @@ You are reconciling the bank's GBP nostro account with Barclays. The bank's mirr
 
 ---
 
-## Exercise 13: IFRS 9 Provision Reconciliation
+## Exercise 15: IFRS 9 Provision Reconciliation
 
 **Duration**: 40 minutes
 **Skills used**: `recon-provision-four-way`
@@ -273,7 +273,7 @@ The finance team has flagged three issues that may explain some or all of the br
 
 ---
 
-## Exercise 14: Suspense Clearance
+## Exercise 16: Suspense Clearance
 
 **Duration**: 30 minutes
 **Skills used**: `recon-suspense`

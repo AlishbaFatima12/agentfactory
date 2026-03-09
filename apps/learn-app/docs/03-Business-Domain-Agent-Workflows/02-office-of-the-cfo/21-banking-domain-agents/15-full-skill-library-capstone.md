@@ -27,7 +27,7 @@ skills:
     category: "Technical"
     bloom_level: "Create"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can build 4 banking skills using Method A (expert interview), set up 6 scheduled operational tasks, and validate the complete library with 11 cross-domain queries, verifying that each skill produces correct output and skill chaining works across pillars"
+    measurable_at_this_level: "Student can build 4 banking skills using Cowork's skill creation workflow, set up 6 scheduled operational tasks, and validate the complete library with 11 cross-domain queries, verifying that each skill produces correct output and skill chaining works across pillars"
 
   - name: "Execute a Comprehensive Cross-Pillar Capstone Scenario"
     proficiency_level: "B2"
@@ -44,7 +44,7 @@ skills:
     measurable_at_this_level: "Student can explain each of the five principles (model governance applies to AI, SICR is irreducibly human, AML is legal obligation, Basel IV output floor reshapes industry, pillar interaction is where insight lives) and provide a concrete example from the chapter exercises for each"
 
 learning_objectives:
-  - objective: "Build 4 banking skills using Method A (expert interview) and validate the complete skill library with cross-domain queries"
+  - objective: "Build 4 banking skills using Cowork's skill creation workflow and validate the complete skill library with cross-domain queries"
     proficiency_level: "B2"
     bloom_level: "Create"
     assessment_method: "Student builds ifrs9-ecl, ifrs9-staging, basel-rwa-credit, and aml-typologies skills, sets up 6 scheduled tasks, and all 11 validation queries produce correct results"
@@ -62,14 +62,14 @@ learning_objectives:
 cognitive_load:
   new_concepts: 3
   concepts_list:
-    - "Skill library build using Method A (expert interview): structuring domain knowledge into reusable SKILL.md files"
+    - "Skill library build using Cowork: structuring domain knowledge into reusable skills via the native skill creation workflow"
     - "Scheduled operational tasks: daily, monthly, quarterly cycles for automated regulatory monitoring"
     - "Board Risk Report: assembling cross-pillar analysis into executive communication"
   assessment: "3 new concepts at B2 level — within the B2 limit of 10. This capstone integrates all prior concepts rather than introducing many new ones. The cognitive challenge is synthesis across 14 prior lessons into a coherent operational system."
 
 differentiation:
   extension_for_advanced: "Add a sixth scheduled task: a weekly model performance monitor that compares predicted PDs against observed default rates (back-testing). Design the skill that would automate this and specify what threshold of PD deviation should trigger a model review."
-  remedial_for_struggling: "Focus on Exercise 10 (Board Risk Report) Phase 1 (ECL Movement) and Phase 2 (Capital Dashboard). If you can produce these two dashboards with correct numbers, you have demonstrated the core cross-pillar competence."
+  remedial_for_struggling: "Focus on Exercise 18 (Board Risk Report) Phase 1 (ECL Movement) and Phase 2 (Capital Dashboard). If you can produce these two dashboards with correct numbers, you have demonstrated the core cross-pillar competence."
 ---
 
 # Full Banking Agent — Skill Library Build and Capstone
@@ -78,81 +78,72 @@ In Lessons 1 through 14, you progressed from understanding the three regulatory 
 
 This is a 90-minute lesson structured in three parts: skill library build (25 minutes), capstone scenario execution (50 minutes), and chapter summary (15 minutes).
 
-## Part 1: Skill Library Build — Exercise 11
+## Part 1: Skill Library Build — Exercise 17
 
 **Duration**: 25 minutes
 
-### Building Skills Using Method A (Expert Interview)
+### Building Skills in Cowork
 
-Method A structures a skill by interviewing a domain expert — in this case, you are both the expert (having completed 14 lessons of banking regulation) and the builder. For each skill, you define the persona, the decision logic, and the validation criteria.
+You have completed 14 lessons of banking regulation. Now you package that knowledge into reusable skills that your AI assistant can invoke on demand. In Cowork, you create skills through the native skill creation workflow — describing the persona, decision logic, and validation criteria in the skill instructions form.
 
 Build these four skills:
 
 ### Skill 1: `ifrs9-ecl`
 
-```yaml
-# SKILL.md structure
-name: ifrs9-ecl
-description: "Calculate Expected Credit Loss under IFRS 9. Handles
-  Stage 1 (12-month ECL), Stage 2 (lifetime ECL), and Stage 3
-  (lifetime ECL, credit-impaired). Supports individual facility
-  and portfolio-level calculation with macroeconomic scenario
-  weighting."
+Create a new skill in Cowork with these instructions:
 
-persona: "IFRS 9 credit risk analyst with expertise in ECL
-  modelling across retail and corporate portfolios"
-
-key_decisions:
-  - "Stage classification drives measurement basis (12-month vs lifetime)"
-  - "PD source: point-in-time for ECL, through-the-cycle for regulatory EL"
-  - "LGD: match to collateral type and apply downturn adjustment under stress"
-  - "Scenario weighting: probability-weighted ECL is NOT the base case ECL"
-
-validation:
-  - "ECL = PD x LGD x EAD (verify formula applied correctly)"
-  - "Stage 2 and 3 use lifetime PD (not 12-month)"
-  - "Probability-weighted ECL >= base case ECL (non-linearity check)"
-```
+- **Name**: `ifrs9-ecl`
+- **Description**: Calculate Expected Credit Loss under IFRS 9. Handles Stage 1 (12-month ECL), Stage 2 (lifetime ECL), and Stage 3 (lifetime ECL, credit-impaired). Supports individual facility and portfolio-level calculation with macroeconomic scenario weighting.
+- **Persona**: IFRS 9 credit risk analyst with expertise in ECL modelling across retail and corporate portfolios.
+- **Key decision rules to include in the instructions**:
+  - Stage classification drives measurement basis (12-month vs lifetime)
+  - PD source: point-in-time for ECL, through-the-cycle for regulatory EL
+  - LGD: match to collateral type and apply downturn adjustment under stress
+  - Scenario weighting: probability-weighted ECL is NOT the base case ECL
+- **Validation rules to include**:
+  - ECL = PD x LGD x EAD (verify formula applied correctly)
+  - Stage 2 and 3 use lifetime PD (not 12-month)
+  - Probability-weighted ECL >= base case ECL (non-linearity check)
 
 ### Skill 2: `ifrs9-staging`
 
-Define the skill for IFRS 9 stage classification. It should:
+Create the skill for IFRS 9 stage classification. The instructions should specify that it:
 
-- Accept facility-level data (DPD, rating changes, qualitative indicators)
-- Apply SICR triggers (quantitative: 30 DPD, 2-notch downgrade; qualitative: job loss, collateral decline)
-- Return Stage 1, 2, or 3 with reasoning
-- Flag edge cases where professional judgment is required
+- Accepts facility-level data (DPD, rating changes, qualitative indicators)
+- Applies SICR triggers (quantitative: 30 DPD, 2-notch downgrade; qualitative: job loss, collateral decline)
+- Returns Stage 1, 2, or 3 with reasoning
+- Flags edge cases where professional judgment is required
 
 ### Skill 3: `basel-rwa-credit`
 
-Define the skill for credit risk RWA calculation. It should:
+Create the skill for credit risk RWA calculation. The instructions should specify that it:
 
-- Support both Standardised Approach and IRB
-- Apply correct risk weights by asset class
-- Handle off-balance-sheet items with CCFs
-- Apply the Basel IV output floor (72.5% of SA RWA)
+- Supports both Standardised Approach and IRB
+- Applies correct risk weights by asset class
+- Handles off-balance-sheet items with CCFs
+- Applies the Basel IV output floor (72.5% of SA RWA)
 
 ### Skill 4: `aml-typologies`
 
-Define the skill for AML typology identification. It should:
+Create the skill for AML typology identification. The instructions should specify that it:
 
-- Recognise common typologies (structuring, layering, trade-based ML, PEP abuse)
-- Accept transaction patterns as input
-- Return identified typologies with confidence level and red flags
-- Flag the agent boundary: typology identification is automated; SAR filing decision is human
+- Recognises common typologies (structuring, layering, trade-based ML, PEP abuse)
+- Accepts transaction patterns as input
+- Returns identified typologies with confidence level and red flags
+- Flags the agent boundary: typology identification is automated; SAR filing decision is human
 
 ### Setting Up 6 Scheduled Tasks
 
 After building the skills, configure these operational tasks:
 
-| Task                        | Frequency                | Skills Used                      | Output                                                           |
-| --------------------------- | ------------------------ | -------------------------------- | ---------------------------------------------------------------- |
-| 1. Staging monitor          | Daily                    | `ifrs9-staging`                  | Flag any facilities where SICR indicators changed since last run |
-| 2. ECL calculation          | Quarterly (or on-demand) | `ifrs9-ecl`                      | Full portfolio ECL with scenario weighting                       |
-| 3. Capital ratio            | Daily                    | `basel-capital`, `basel-rwa`     | CET1, Tier 1, Total Capital ratios                               |
-| 4. LCR calculation          | Daily                    | `liquidity-lcr`                      | LCR with HQLA breakdown                                          |
-| 5. AML alert prioritisation | Daily                    | `aml-typologies` | Prioritised alert queue with typology tags                       |
-| 6. Sanctions batch screen   | Daily                    | `aml-cdd-edd`              | Screen all new payments against UK/EU/OFAC lists                 |
+| Task                        | Frequency                | Skills Used                  | Output                                                           |
+| --------------------------- | ------------------------ | ---------------------------- | ---------------------------------------------------------------- |
+| 1. Staging monitor          | Daily                    | `ifrs9-staging`              | Flag any facilities where SICR indicators changed since last run |
+| 2. ECL calculation          | Quarterly (or on-demand) | `ifrs9-ecl`                  | Full portfolio ECL with scenario weighting                       |
+| 3. Capital ratio            | Daily                    | `basel-capital`, `basel-rwa` | CET1, Tier 1, Total Capital ratios                               |
+| 4. LCR calculation          | Daily                    | `liquidity-lcr`              | LCR with HQLA breakdown                                          |
+| 5. AML alert prioritisation | Daily                    | `aml-typologies`             | Prioritised alert queue with typology tags                       |
+| 6. Sanctions batch screen   | Daily                    | `aml-cdd-edd`                | Screen all new payments against UK/EU/OFAC lists                 |
 
 ### Validation: 11 Cross-Domain Queries
 
@@ -172,7 +163,7 @@ Test the skill library with these queries. Each should produce a correct, comple
 
 ---
 
-## Part 2: Capstone Scenario — Exercise 10: Board Risk Report
+## Part 2: Capstone Scenario — Exercise 18: Board Risk Report
 
 **Duration**: 50 minutes
 
@@ -277,7 +268,7 @@ Assemble your analysis into a 10-slide Board Risk Report:
 
 ## Part 3: Chapter Summary — Five Principles of Banking Domain AI
 
-This chapter covered three regulatory pillars, 14 exercises, and a full cross-pillar capstone. Five principles emerged from this work.
+This chapter covered three regulatory pillars, 18 exercises, and a full cross-pillar capstone. Five principles emerged from this work.
 
 **Principle 1: Model governance applies to AI models.** The same regulatory framework (SR 11-7 in the US, SS1/23 in the UK) that governs traditional risk models applies to AI models used in banking. An AI agent that calculates ECL or stages assets is a model, and it requires validation, back-testing, documentation, and approval just like a statistical model.
 
@@ -285,18 +276,20 @@ This chapter covered three regulatory pillars, 14 exercises, and a full cross-pi
 
 **Principle 3: AML is a legal obligation, not a data exercise.** Filing a SAR is a legal act with criminal consequences for failure. The tipping-off prohibition is a criminal offence. The agent can gather data, screen transactions, and identify typologies, but it must never file a SAR, communicate suspicion to customers, or make risk acceptance decisions. These boundaries are not optional features — they are legal requirements.
 
-**Principle 4: The Basel IV output floor reshapes the industry.** The 72.5% output floor means that IRB banks can no longer achieve dramatically lower RWA than SA banks for the same portfolio. This compresses the capital advantage of IRB models, changes the economics of low-risk lending (mortgages, sovereigns), and means that the capital calculation you did in Exercise 3 becomes increasingly relevant even for IRB banks.
+**Principle 4: The Basel IV output floor reshapes the industry.** The 72.5% output floor means that IRB banks can no longer achieve dramatically lower RWA than SA banks for the same portfolio. This compresses the capital advantage of IRB models, changes the economics of low-risk lending (mortgages, sovereigns), and means that the capital calculation you did in Exercise 10 becomes increasingly relevant even for IRB banks.
 
 **Principle 5: Pillar interaction is where insight lives.** A bank that reports ECL, capital, and AML separately gets three answers. A bank that traces the cascade — provision increase reduces CET1, which tightens the buffer, which constrains the dividend, which signals market concern, which increases funding costs, which compresses NII — gets one integrated answer. The banking plugin's router exists specifically to make this integration automatic rather than manual.
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to complete the capstone.
+Use these prompts in Cowork or your preferred AI assistant to complete the capstone.
 
 ### Prompt 1: Building the Skill Library
 
 ```
-Help me build 4 banking skills using Method A (expert interview):
+Help me create 4 banking skills. For each, I will describe the
+domain knowledge — you help me structure it into a skill with
+a clear persona, decision rules, and validation criteria.
 
 1. ifrs9-ecl: Calculate Expected Credit Loss. Must handle Stage 1
    (12-month), Stage 2 (lifetime), Stage 3 (lifetime impaired).
@@ -314,11 +307,12 @@ Help me build 4 banking skills using Method A (expert interview):
    transaction patterns. Must recognize structuring, layering,
    trade-based ML, PEP abuse. Must NOT recommend SAR filing.
 
-For each skill, generate the SKILL.md with: persona, key
-decisions, input/output specification, and validation criteria.
+For each skill, help me write clear instructions covering: persona,
+key decision rules, input/output specification, and validation
+criteria that I can paste into the skill creation form.
 ```
 
-**What you are learning:** Building skills from your own expertise is Method A — the expert interview approach from Chapter 15. By structuring what you learned in Lessons 3-10 into reusable SKILL.md files, you transform knowledge into operational capability. The skill does not replace your judgment — it packages your analytical framework so that routine calculations are automated and edge cases are flagged for human review.
+**What you are learning:** Building skills from your own expertise is the expert interview approach from Chapter 15. By structuring what you learned in Lessons 3-10 into reusable Cowork skills, you transform knowledge into operational capability. The skill does not replace your judgment — it packages your analytical framework so that routine calculations are automated and edge cases are flagged for human review.
 
 ### Prompt 2: Executing the Capstone Scenario
 
