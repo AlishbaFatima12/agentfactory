@@ -83,6 +83,8 @@ PRIMM was created by computing education researchers **Sue Sentance** and **Jane
 
 The core idea is simple: **when you talk about code and read it before writing it, you build the vocabulary and mental models that make writing possible.** Each PRIMM stage gives you just enough support to reach the next level of understanding.
 
+The theoretical foundation comes from work by Sentance, Waite, and **Maria Kallia**, who grounded PRIMM in sociocultural learning theory — the principle that understanding grows through language and social interaction, not isolation. In plain terms: you learn programming the same way you learn a spoken language. You hear it before you speak it. You read it before you write it. You discuss it with others before you use it on your own. PRIMM applies that sequence to code — and it is the reason every stage emphasizes talking about, reasoning about, and explaining code before producing it.
+
 Since 2017, PRIMM has been adopted in schools and platforms across **England, Germany, the USA, Hong Kong, Norway, Argentina, Australia, and Turkey**. The research home is the Raspberry Pi Computing Education Research Centre.
 
 ### The Inversion That Makes PRIMM Different
@@ -255,6 +257,8 @@ Because AI changed the economics of code production. Before AI coding assistants
 | Pre-AI | Writing code | Typing, syntax recall, API lookup | Producing code from scratch |
 | AI era | Verifying code | Reading, predicting, tracing | Deciding whether generated code is correct |
 
+![The Bottleneck Shift: Pre-AI Era (writing code — typing speed, syntax memorization, slow production) versus AI Era 2026 (verifying code — reading comprehension, predicting behavior, judging correctness). PRIMM-AI+ trains comprehension before creation.](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-30/ch30-bottleneck-shift.png)
+
 Look at PRIMM's structure through this lens. Four of five stages -- Predict, Run, Investigate, Modify -- build the verification skills that are now the bottleneck. Only one stage -- Make -- involves writing from scratch. **PRIMM's 4:1 ratio of understanding to production is exactly right for an era where production is cheap and verification is expensive.**
 
 ---
@@ -353,8 +357,10 @@ without writing the full solution.
 
 ## Looking Ahead
 
+You now have the complete method: five stages, a fixed sequence, and a research-tested reason for every step. You predicted output before running code. You traced variables before modifying anything. You wrote a specification before building from scratch. That discipline — understand before you change, change before you create — is the foundation everything else in this book rests on.
+
 James has one more question. "I used PRIMM without any AI help in this lesson. But I *have* an AI coding assistant. When do I get to use it?"
 
-"Next lesson," Emma says. "You'll learn exactly when to bring AI in, when to keep it out, and how to tell whether it's helping you learn or just doing the work for you."
+"That's what comes next," Emma says. "You'll learn exactly when to bring AI in, when to keep it out, and how to tell whether it's helping you learn or just doing the work for you."
 
-That is what Lesson 2 introduces: **PRIMM-AI+** — the same five stages you just practiced, enhanced with AI permissions at each stage, checkpoints that keep you honest, and mastery gates that earn you the right to proceed. PRIMM gave you the method. PRIMM-AI+ gives you the operating system for learning with AI.
+The next lesson introduces **PRIMM-AI+** — the same five stages enhanced with AI permissions, checkpoints, and mastery gates. PRIMM gave you the method. PRIMM-AI+ gives you the operating system for learning with AI.
