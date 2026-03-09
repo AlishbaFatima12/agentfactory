@@ -81,7 +81,7 @@ James opens a new chapter and sees a complete Python program at the top. He did 
 
 "Because you'd be solving two problems at once — figuring out *what* to write and figuring out *how* to write it," Emma explains. "The worked example separates those. Someone else handled the *what*. You focus entirely on the *how*."
 
-Every code block in this book is a worked example -- a complete, functioning program you study before writing your own. Instead of starting with a blank screen, you inspect a finished program, predict its output, run it, and analyze its structure. Worked examples are easier on your brain because you do not have to invent everything at once. You focus on understanding how the code works, not on producing it.
+Every code block in this book is a worked example -- a complete, functioning program you study before writing your own. Instead of starting with a blank screen, you inspect a finished program, predict its output, run it, and analyze its structure. **Worked examples are easier on your brain because you do not have to invent everything at once.** You focus on understanding how the code works, not on producing it.
 
 Where it fits: **Predict** (you study the example and commit to a prediction) and **Investigate** (you trace through it and produce artifacts like trace tables).
 
@@ -150,7 +150,7 @@ Where it fits: **All stages.** In classroom mode, it happens naturally through p
 
 **Solo mode.** You replace human collaboration with structured AI interaction -- but only after passing through the AI-free checkpoint at each stage. You write your prediction alone, commit your confidence score, and only then engage your AI assistant. The confidence scoring system is especially important in solo mode because it makes self-deception visible. There is no classmate to challenge your assumptions, so you must challenge them yourself.
 
-This book is designed for solo mode. Every technique works with just you, the book, and your AI assistant. If you are in a classroom, your teacher will add the collaborative elements -- pair predictions, group investigations, live coding demonstrations -- on top of the same structure.
+**This book is designed for solo mode.** Every technique works with just you, the book, and your AI assistant. If you are in a classroom, your teacher will add the collaborative elements -- pair predictions, group investigations, live coding demonstrations -- on top of the same structure.
 
 ---
 
@@ -174,7 +174,7 @@ Here is what a typical lesson looks like when all the pieces work together. You 
 
 **Step 6: Make with Spec-Driven Development.** You write a specification first (AI-free), attempt the solution yourself, and use AI only for review, debugging, or targeted syntax help after your first attempt exists. This is the Make stage from Lesson 2 with the spec-before-code rule enforced.
 
-Notice the progression: you understand before you change, and you change before you create. Every step earns you the right to attempt the next one.
+Notice the progression: **you understand before you change, and you change before you create.** Every step earns you the right to attempt the next one.
 
 ---
 
@@ -194,7 +194,7 @@ The six-step sequence above is not just a lesson pattern -- it is the chapter pa
 | Exercises | Modify | You change existing programs to add features or fix issues |
 | Capstone | Make with Spec-Driven Development | You build something new from a specification, with AI as reviewer |
 
-You will never be dropped into a Make exercise cold. By the time a chapter asks you to write code from scratch, you will have predicted, run, investigated, and modified programs using the same concepts. The structure is your safety net.
+**You will never be dropped into a Make exercise cold.** By the time a chapter asks you to write code from scratch, you will have predicted, run, investigated, and modified programs using the same concepts. The structure is your safety net.
 
 ---
 

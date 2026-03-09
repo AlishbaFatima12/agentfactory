@@ -97,7 +97,7 @@ PRIMM inverts this. It starts at the beginning -- **reading** -- and works towar
 4. **Modify** -- Change the code to alter its behavior in targeted ways
 5. **Make** -- Write a new program that applies what you learned
 
-Four of the five stages build understanding. Only the last one involves writing from scratch. This is not an accident. It reflects what the research showed: comprehension is the foundation that makes production possible.
+**Four of the five stages build understanding. Only the last one involves writing from scratch.** This is not an accident. It reflects what the research showed: comprehension is the foundation that makes production possible.
 
 ---
 
@@ -163,7 +163,7 @@ Compare your prediction to the actual result. Three outcomes are possible:
 - **Close but not exact.** Perhaps you predicted the right content but missed the comma or the exclamation mark. The gap reveals what your mental model missed.
 - **Significantly wrong.** This is not failure -- it is the most valuable outcome. The gap between your prediction and reality is exactly where learning happens. Every wrong prediction exposes an assumption you did not know you were making.
 
-The prediction-reality gap is the engine of PRIMM. Without the prediction step, running code teaches you nothing -- you see output and think "okay." With the prediction step, you have a hypothesis to test. That transforms passive observation into active learning.
+**The prediction-reality gap is the engine of PRIMM.** Without the prediction step, running code teaches you nothing -- you see output and think "okay." With the prediction step, you have a hypothesis to test. That transforms passive observation into active learning.
 
 ### Stage 3: Investigate
 
@@ -173,7 +173,7 @@ James got the output right. "Great, I understand it. Next stage?"
 
 Investigation means probing the code to build deeper understanding. Here are the kinds of questions you ask:
 
-**Tracing variables.** What is the value of `name`? It is `"Amara"`. What is `greeting`? It is `"Welcome to the Agent Factory"`. What is `message`? It is the result of joining greeting, a comma and space, the name, and an exclamation mark. Tracing forces you to simulate the computer's execution in your head -- the single most important skill in programming.
+**Tracing variables.** What is the value of `name`? It is `"Amara"`. What is `greeting`? It is `"Welcome to the Agent Factory"`. What is `message`? It is the result of joining greeting, a comma and space, the name, and an exclamation mark. **Tracing forces you to simulate the computer's execution in your head -- the single most important skill in programming.**
 
 **Testing edge cases.** What happens if `name` is an empty string `""`? The `+` operator still joins the pieces together, so the output would be `Welcome to the Agent Factory, !` -- a greeting with no name but the comma and exclamation mark still appear. Understanding this teaches you that `+` does not "know" what makes sense. It glues text together exactly as told.
 
@@ -194,7 +194,7 @@ What would the output look like?
 
 Your AI assistant will explain that the output would become `Amara, Welcome to the Agent Factory!` -- the name comes first because `+` joins text in the order you write it. But here is the critical rule of investigation:
 
-**Verify every AI explanation by running the code yourself.** The AI might be wrong. It might be right but imprecise. The only way to know is to run the experiment. Investigation is not about getting answers -- it is about building the habit of questioning and verifying.
+**Verify every AI explanation by running the code yourself.** The AI might be wrong. It might be right but imprecise. The only way to know is to run the experiment. **Investigation is not about getting answers -- it is about building the habit of questioning and verifying.**
 
 ### Stage 4: Modify
 
@@ -248,7 +248,7 @@ Because AI changed the economics of code production. Before AI coding assistants
 
 AI made production nearly free. A well-crafted prompt generates a working function in seconds. But this created a new problem: **working code without understanding**. James's fifty lines of Python work perfectly -- and he cannot explain what line twelve does. He has a program. He does not have knowledge.
 
-This is the learning trap of the AI era. Students can produce code faster than ever, but the speed creates an illusion of competence. The bottleneck has shifted.
+**This is the learning trap of the AI era.** Students can produce code faster than ever, but the speed creates an illusion of competence. The bottleneck has shifted.
 
 | Era | Bottleneck | Primary Skill | What Slows You Down |
 |-----|-----------|---------------|---------------------|
