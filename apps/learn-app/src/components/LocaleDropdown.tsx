@@ -30,11 +30,14 @@ export function LocaleDropdown() {
       ? pathname.slice(baseUrl.length)
       : pathname;
 
-    // Strip current locale prefix if present (for non-default locales)
-    if (currentLocale !== defaultLocale) {
-      const localePrefix = currentLocale + '/';
-      if (pagePath.startsWith(localePrefix)) {
-        pagePath = pagePath.slice(localePrefix.length);
+    // Detect locale from URL (don't rely on i18n.currentLocale — it may not
+    // reflect the URL locale on static deployments like GitHub Pages)
+    const nonDefaultLocales = i18n.locales.filter((l) => l !== defaultLocale);
+    for (const locale of nonDefaultLocales) {
+      const prefix = locale + '/';
+      if (pagePath.startsWith(prefix) || pagePath === locale) {
+        pagePath = pagePath.slice(prefix.length);
+        break;
       }
     }
 
