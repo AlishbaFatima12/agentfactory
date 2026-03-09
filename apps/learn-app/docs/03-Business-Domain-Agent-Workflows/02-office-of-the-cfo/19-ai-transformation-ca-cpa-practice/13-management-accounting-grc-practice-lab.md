@@ -143,7 +143,7 @@ This lab contains four exercises across two domains. Exercises 18-19 cover manag
 
 **What you'll build:** A fully automated 13-week rolling cash flow model with receipts waterfall, disbursements schedule, revolving credit facility logic, stress testing, and weekly automated updates.
 
-**Requirements:** Cowork with `finance@knowledge-work-plugins` installed and Claude in Excel. Familiarity with IDFA Named Range conventions from Chapter 18.
+**Requirements:** Cowork with `finance@knowledge-work-plugins` installed. Familiarity with IDFA Named Range conventions from Chapter 18.
 
 **Company context:** A manufacturing company. Monthly invoicing: PKR 45M. Revolving credit facility: PKR 50M limit, PKR 22M current drawdown. Minimum operating cash requirement: PKR 2M.
 
