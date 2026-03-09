@@ -1,9 +1,9 @@
 # Chapter Writing Methodology: Python for the New AI Era
 
-**Version:** 1.0
-**Date:** 2026-02-20
+**Version:** 2.0
+**Date:** 2026-03-08
 **Purpose:** Comprehensive reference for how every chapter in the Python course is written — from research to publication.
-**Companion to:** `python-new-era-plan.md` (v2.7)
+**Companion to:** `python-new-era-plan.md` (v2.15)
 
 ---
 
@@ -77,7 +77,65 @@ Every chapter gets a grounding table before writing begins. Example for Chapter 
 
 ---
 
-## 3. Tone and Narrative Continuity
+## 3. The PRIMM-AI+ Lesson and Chapter Architecture
+
+Every lesson and every chapter in Parts 4 and 5 follows the PRIMM-AI+ framework defined in Chapter 30. This is not optional — it is the structural backbone of the entire course.
+
+### The Five-Step Lesson Architecture
+
+Every lesson follows the same five steps — one for each PRIMM stage:
+
+| Step | PRIMM Stage | What Happens | AI Permission |
+|------|-------------|-------------|---------------|
+| 1 | **Predict** | Lesson presents a worked example (complete program). Student writes prediction + confidence score (1-5). | AI-free |
+| 2 | **Run** | Student runs the code and compares output to prediction. Records where prediction matched/diverged. | AI allowed |
+| 3 | **Investigate** | Student produces a trace table or explanation. Optional Parsons problem tests structural understanding. | AI after student's first explanation |
+| 4 | **Modify** | Student changes the existing program to add a feature or fix a problem. | AI for hints only |
+| 5 | **Make** | Student writes a specification first (AI-free), attempts the solution, then uses AI for review only. | AI for review only |
+
+**Core progression**: You understand before you change, and you change before you create.
+
+> **Where do Parsons Problems fit?** Parsons problems — scrambled lines you reorder into a working program — are a bridge between Investigate and Modify. They appear inside Step 3 (Investigate) when a lesson needs to test structural understanding before free modifications. Not every lesson includes one.
+
+### The Chapter-Level PRIMM-AI+ Pattern
+
+The five-step sequence also governs the chapter as a whole, at a larger scale:
+
+| Chapter Element | PRIMM-AI+ Connection | What Happens |
+|----------------|----------------------|-------------|
+| Chapter Opening | Worked Example + Predict and Run | Complete programs, predict their output with confidence scoring, then run them |
+| Core Lessons | Investigate with Artifacts | Trace variables, test edge cases, produce visible artifacts |
+| Structural Bridge | Parsons Problems | Scrambled-code exercises test structural understanding |
+| Exercises | Modify | Change existing programs to add features or fix issues |
+| Capstone | Make with Spec-Driven Development | Build something new from a specification, with AI as reviewer |
+
+**Students are never dropped into a Make exercise cold.** By the time a chapter asks them to write code from scratch, they have predicted, run, investigated, and modified programs using the same concepts.
+
+### Four Embedded Teaching Methods
+
+Four research-backed teaching methods are woven into the PRIMM-AI+ stages — not added on top:
+
+| Method | What It Is | Where It Fits in PRIMM-AI+ |
+|--------|-----------|---------------------------|
+| **Worked Examples** | Complete programs students study before writing | Predict and Investigate |
+| **Parsons Problems** | Scrambled code lines students reorder | Between Investigate and Modify |
+| **Live Coding** | Real-time coding with narrated thinking (classroom) | Investigate and Modify |
+| **Peer Instruction** | Individual thinking, then group discussion | Across all stages |
+
+In **solo mode** (this book's default), AI replaces the human peer — but only after the student has committed their own answer first (AI-free checkpoint). In **classroom mode**, teachers add collaborative elements on top of the same structure.
+
+### Classroom vs Solo Mode
+
+This book is designed for solo mode. Every technique works with just the student, the book, and their AI assistant. Key solo-mode safeguards:
+
+- **AI-free checkpoints**: Predict is always AI-free. Make begins AI-free.
+- **Confidence scoring**: Students rate certainty 1-5 before seeing results. False confidence is the most dangerous state.
+- **Mastery gates**: Students must earn the right to proceed (written prediction exists, comparison recorded, can explain how not just what, written spec exists).
+- **Mandatory trace artifacts**: Every Investigate stage must produce something visible (trace table, explanation, or failure note).
+
+---
+
+## 4. Tone and Narrative Continuity
 
 ### Chapter 14's Established Pattern
 
@@ -150,7 +208,7 @@ Ch 14.1 (opening):    James opens his laptop. Empty terminal. No Python tools.
 
 ---
 
-## 4. Chapter Structure Methodology
+## 5. Chapter Structure Methodology
 
 ### Lesson Breakdown for Any Chapter
 
@@ -185,7 +243,7 @@ Chapter 14.1: The Development Environment
 
 ### Per-Lesson Internal Structure
 
-Every lesson within a chapter follows this template:
+Every lesson within a chapter follows this template, aligned with the PRIMM-AI+ five-step architecture (see Section 3):
 
 ```
 YAML Frontmatter (MANDATORY)
@@ -198,15 +256,18 @@ YAML Frontmatter (MANDATORY)
 
 Narrative Opening (2-3 paragraphs)
 ├── James faces a situation / problem
-├── Connect to what student already knows (from Ch 14)
+├── Connect to what student already knows
 └── Set up what this lesson will solve
 
-Core Content (main body)
-├── Concept explanation with axiom callback
-├── Concrete example (runnable commands with expected output)
+Core Content — follows the five-step PRIMM-AI+ cycle:
+├── Step 1 (Predict): Present a worked example + AI-free prediction with confidence score
+├── Step 2 (Run): Show actual output, student compares to prediction
+├── Step 3 (Investigate): Trace tables, targeted questions, optional Parsons problem
+├── Step 4 (Modify): Student changes existing program, AI for hints only
+├── Step 5 (Make): Student writes spec first (AI-free), then implements
 ├── "Before vs After" comparison where applicable
 ├── Platform-specific callouts (Windows / Mac / Linux) as needed
-├── Inline exercises: Read & Predict (2-3), Spot the Bug (1-2)
+├── Bold highlighting of key insight sentences (see Section 15)
 └── Tables comparing options, diagrams where helpful
 
 Try With AI Section (3 prompts)
@@ -215,13 +276,18 @@ Try With AI Section (3 prompts)
 ├── Prompt 3: Domain connection prompt (apply to student's own context)
 └── Each has "What you're learning:" explanation
 
-Lesson Summary
-└── Key takeaways, connection to next lesson
+Key Takeaways (5 bullets)
+└── Core insights, connection to next lesson
+
+Looking Ahead (1-2 paragraphs)
+└── Bridge to next lesson
 ```
+
+**Note**: Not every lesson includes all five PRIMM steps. Conceptual lessons (like Ch 30 L1-L3) may focus on specific stages. Programming lessons (Ch 33+) include the full five-step cycle.
 
 ---
 
-## 5. The Complete Writing Pipeline
+## 6. The Complete Writing Pipeline
 
 ### Phase A: Build Expertise Skill (Research)
 
@@ -341,7 +407,7 @@ Lesson Summary
 
 ---
 
-## 6. Pedagogical Layer System
+## 7. Pedagogical Layer System
 
 Every chapter maps to a pedagogical layer from the course plan. This determines what students DO in that chapter.
 
@@ -380,7 +446,7 @@ This means:
 
 ---
 
-## 7. Quality Gates
+## 8. Quality Gates
 
 Every lesson must pass through these gates before it's considered done:
 
@@ -431,7 +497,7 @@ Checked by: Main agent (manual review)
 
 ---
 
-## 8. The "Before vs After" Teaching Pattern
+## 9. The "Before vs After" Teaching Pattern
 
 This is Chapter 14's signature teaching technique and we carry it into every Python chapter.
 
@@ -468,7 +534,7 @@ Example for pyright:
 
 ---
 
-## 9. One Running Example Per Chapter
+## 10. One Running Example Per Chapter
 
 ### The Problem with Multiple Examples
 
@@ -498,7 +564,7 @@ By the end of Ch 14.1, students have a real project directory on their machine w
 
 ---
 
-## 10. Platform-Specific Handling
+## 11. Platform-Specific Handling
 
 ### The Problem
 
@@ -523,17 +589,37 @@ We do NOT write three versions of each lesson. Instead:
 
 ---
 
-## 11. Exercise Design for Phase 1 Chapters
+## 12. Exercise Design for Phase 1 Chapters
 
 ### Exercise Type Distribution (Phase 1 = Reader)
 
 ```
-Type 1: Read & Predict  — 70% of exercises (PRIMARY)
-Type 2: Spot the Bug    — 20% of exercises
-Type 3: Write the Test  — 10% (very simple, introduced late)
-Type 4: TDG Cycle       — 0% (not yet)
-Type 5: Build It         — 0% (not yet)
+Type 1: Read & Predict     — 60% of exercises (PRIMARY)
+Type 2: Spot the Bug       — 15% of exercises
+Type 3: Parsons Problem    — 15% (scrambled code, reorder for correct program)
+Type 4: Write the Test     — 10% (very simple, introduced late)
+Type 5: TDG Cycle          — 0% (not yet)
+Type 6: Build It            — 0% (not yet)
 ```
+
+### What Parsons Problems Look Like
+
+Parsons problems are scrambled code lines that students reorder into a working program. They bridge Investigate and Modify — testing structural understanding (data flow, execution order) without requiring code writing.
+
+```markdown
+**Parsons Problem**: These four lines are scrambled. What is the correct order?
+
+​```python
+print(label)
+temp: int = 32
+label: str = city + ": " + str(temp) + "C"
+city: str = "London"
+​```
+
+Rearrange them so the program outputs: `London: 32C`
+```
+
+The student must reason about data flow: `city` must exist before `label` can use it, `temp` must exist before `label` can use it, and `label` must exist before `print` can display it.
 
 ### What Read & Predict Looks Like in Ch 14.1
 
@@ -574,7 +660,7 @@ Answer: He should use `uv run pytest`, not bare `pytest`. uv manages the virtual
 
 ---
 
-## 12. The Checkpoint Pattern
+## 13. The Checkpoint Pattern
 
 ### End-of-Chapter Verification
 
@@ -596,7 +682,7 @@ All three must pass (green output). If any fails, the student knows exactly whic
 
 ---
 
-## 13. Summary: The Complete Pipeline
+## 14. Summary: The Complete Pipeline
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -645,7 +731,43 @@ All three must pass (green output). If any fails, the student knows exactly whic
 
 ---
 
-## 14. Key Rules (Non-Negotiable)
+## 15. Bold Highlighting Pattern
+
+Every lesson uses inline bold text to create a "concept runway" — reading all bold statements in sequence tells the lesson's skeleton. This pattern comes from Part 1 and must be applied consistently across all chapters.
+
+### How Bold Works
+
+| Bold Type | Function | Example |
+|-----------|----------|---------|
+| **Reframing Statement** | Flips reader assumptions | "**Most programming courses start at the end.**" |
+| **Core Definition** | Introduces essential concept | "**A prediction is specific and checkable.**" |
+| **Critical Insight** | Distills key learning point | "**AI made production nearly free.**" |
+| **Progressive Truth** | Reinforces core thesis as it builds | "**You started by reading someone else's code. You end by writing your own.**" |
+| **Causal Claim** | When causation matters, bold it | "**False confidence is the most dangerous state for an AI-era developer.**" |
+
+### Rules
+
+1. **Inline, not standalone** — bold appears within paragraphs, not as separate lines
+2. **Short and punchy** — typically 3-20 words
+3. **Every 2-4 sentences** in substantive paragraphs (~1 bold per 14 lines of body content)
+4. **Marks conceptual boundaries** — where new thinking starts
+5. **Never in dialogue quotes** — bold the lesson's own prose, not character speech
+6. **Never in callout boxes, tables, or code blocks** — body text only
+7. **Builds cumulatively** — reading all bolds in sequence tells the lesson's skeleton
+
+### Density Target
+
+| Lesson Length | Target Bold Count |
+|--------------|------------------|
+| ~300 lines | ~15-20 key insight bolds |
+| ~500 lines | ~25-35 key insight bolds |
+| ~600+ lines | ~35-45 key insight bolds |
+
+This count includes structural bolds (stage names, sub-section labels) plus the key insight bolds. The goal is that a reader skimming only the bold text gets the lesson's complete argument.
+
+---
+
+## 16. Key Rules (Non-Negotiable)
 
 1. **Never write lesson prose directly** — always use content-implementer subagent
 2. **Never show unverified commands** — MCP ground everything first
@@ -653,10 +775,14 @@ All three must pass (green output). If any fails, the student knows exactly whic
 4. **Never skip YAML frontmatter** — full skills, objectives, cognitive load metadata
 5. **Never introduce a tool without axiom callback** — every tool connects to Ch 14
 6. **Never use multiple disconnected examples** — one running project per chapter
-7. **Always show "Before vs After"** — pain first, solution second
-8. **Always include 3 Try With AI prompts** — each targeting a different skill
-9. **Always end with checkpoint command** — binary pass/fail verification
-10. **Always match Chapter 14's tone** — James/Emma, practical, respectful, problem-first
+7. **Never drop students into Make cold** — every Make is preceded by Predict, Run, Investigate, and Modify on the same concepts
+8. **Always follow the five-step PRIMM-AI+ lesson architecture** — Predict (AI-free) → Run → Investigate → Modify → Make (spec-first)
+9. **Always show "Before vs After"** — pain first, solution second
+10. **Always include 3 Try With AI prompts** — each targeting a different skill
+11. **Always end with checkpoint command** — binary pass/fail verification
+12. **Always match Chapter 14's tone** — James/Emma, practical, respectful, problem-first
+13. **Always bold key insight sentences** — inline, short, punchy, ~1 per 14 lines (see Section 15)
+14. **Always include Parsons problems** — at least one per programming chapter, between Investigate and Modify
 
 ---
 
@@ -664,4 +790,5 @@ All three must pass (green output). If any fails, the student knows exactly whic
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 2.0 | 2026-03-08 | Major update: Added Section 3 (PRIMM-AI+ lesson and chapter architecture from Ch 30 L3), Section 15 (bold highlighting pattern from Part 1), added Parsons Problems to exercise design, aligned per-lesson structure with five-step PRIMM-AI+ cycle, added four embedded teaching methods, added classroom/solo mode distinction, added 4 new key rules (#7 no cold Make, #8 follow five-step architecture, #13 bold key insights, #14 include Parsons problems), renumbered all sections, bumped companion reference to v2.15 |
 | 1.0 | 2026-02-20 | Initial methodology document covering MCP grounding, narrative continuity, writing pipeline, quality gates, exercise design, and platform handling |
