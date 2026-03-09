@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-09
+- feat: Ch19 Cowork-native skill creation rewrite ([#838](https://github.com/panaversity/agentfactory/pull/838))
+
+### 2026-03-09
 - fix: add blank lines in Ch 30 admonition blocks for proper rendering ([#836](https://github.com/panaversity/agentfactory/pull/836))
 
 ### 2026-03-09
