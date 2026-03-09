@@ -109,7 +109,7 @@ city: str = "London"
 London: 32C
 ```
 
-To solve this, you must reason about data flow: `city` must exist before `label` can use it, `temp` must exist before `label` can use it, and `label` must exist before `print` can display it. The correct order is `city`, then `temp`, then `label`, then `print`. If you can reorder these lines correctly, you understand the program's structure -- **not just what it does, but *why* the order matters.**
+To solve this, you must reason about data flow: `city` must exist before `label` can use it, `temp` must exist before `label` can use it, and `label` must exist before `print` can display it. The correct order is `city`, then `temp`, then `label`, then `print`. If you can reorder these lines correctly, you understand the program's structure -- **not just what it does, but *why* the order matters.** In solo mode, your AI assistant can generate fresh Parsons problems from any program you have just studied — ask it to scramble the lines and quiz you.
 
 ### Live Coding: Investigate and Modify
 
