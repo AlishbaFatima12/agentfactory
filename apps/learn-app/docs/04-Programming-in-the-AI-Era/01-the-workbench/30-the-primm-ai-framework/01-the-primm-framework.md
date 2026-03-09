@@ -248,7 +248,7 @@ Because AI changed the economics of code production. Before AI coding assistants
 
 AI made production nearly free. A well-crafted prompt generates a working function in seconds. But this created a new problem: **working code without understanding**. James's fifty lines of Python work perfectly -- and he cannot explain what line twelve does. He has a program. He does not have knowledge.
 
-This is the pedagogical trap of the AI era. Students can produce code faster than ever, but the speed creates an illusion of competence. The bottleneck has shifted.
+This is the learning trap of the AI era. Students can produce code faster than ever, but the speed creates an illusion of competence. The bottleneck has shifted.
 
 | Era | Bottleneck | Primary Skill | What Slows You Down |
 |-----|-----------|---------------|---------------------|
@@ -272,7 +272,7 @@ You already do this informally when reviewing pull requests or debugging a colle
 ## Key Takeaways
 
 - **PRIMM stands for Predict, Run, Investigate, Modify, Make** -- a five-stage method that starts with reading code and ends with writing it.
-- **The research is robust**: 493 students, 13 schools, quasi-experimental design. Learners using PRIMM outperformed control groups, especially in mixed-ability classes.
+- **The research is robust**: 493 students, 13 schools, tested in real classrooms. Learners using PRIMM outperformed students who learned without it, especially in classes where students had different skill levels.
 - **The Predict stage is AI-free**: you make your prediction without any AI assistance. This is diagnostic -- it reveals whether you actually understand the code or are relying on external help.
 - **Confidence scoring sharpens your judgment**: rating your certainty from 1 to 5 before seeing results builds calibration -- the ability to know when you know and when you do not.
 - **The prediction-reality gap is the learning engine**: committing to a prediction before running code turns passive observation into active hypothesis testing.
