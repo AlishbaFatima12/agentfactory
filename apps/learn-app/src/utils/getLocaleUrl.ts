@@ -20,23 +20,34 @@ export function getLocaleUrl({
 }): string {
   // For the current locale, use the configured path or fallback to locale name
   const currentPath = localeConfigs[currentLocale]?.path ?? currentLocale;
-  
-  // For the target locale, only use configured path if it has one
-  // Default locale (English) should NOT have a path prefix
-  const targetPath = localeConfigs[targetLocale]?.path;
 
-  // Remove trailing slash from baseUrl for consistent processing
-  const basePath = baseUrl.replace(/\/$/, '');
+  // Clean up baseUrl: if Docusaurus already appended the current locale to it (e.g. /agent-factory-book/ur/)
+  // we want to strip that so we have the pure root baseUrl.
+  let rootBasePath = baseUrl.replace(/\/$/, '');
 
-  // Extract the part of pathname after the base path
+  if (currentLocale !== defaultLocale) {
+    const localeSuffix = `/${currentPath}`;
+    if (rootBasePath.endsWith(localeSuffix)) {
+      rootBasePath = rootBasePath.slice(0, -localeSuffix.length);
+    }
+  }
+
+  // Ensure we still have a leading slash if it became empty
+  if (!rootBasePath && baseUrl.startsWith('/')) {
+    rootBasePath = '';
+  }
+
+  // Extract the part of pathname after the active base path
+  const activeBasePath = baseUrl.replace(/\/$/, '');
   let pathAfterBase = pathname;
-  if (basePath && pathname.startsWith(basePath)) {
-    pathAfterBase = pathname.slice(basePath.length) || '/';
+  if (activeBasePath && pathname.startsWith(activeBasePath)) {
+    pathAfterBase = pathname.slice(activeBasePath.length) || '/';
   }
 
   let result = pathAfterBase;
 
-  // Strip current locale prefix if not default locale
+  // Strip current locale prefix if we didn't strip it via activeBasePath
+  // (e.g., if pathname didn't perfectly match activeBasePath for some reason)
   if (currentLocale !== defaultLocale) {
     const prefix = `/${currentPath}/`;
     if (result.startsWith(prefix)) {
@@ -47,16 +58,19 @@ export function getLocaleUrl({
   }
 
   // Add target locale prefix only if target locale is NOT the default locale
-  // and it has a configured path
+  const targetPath = localeConfigs[targetLocale]?.path ?? targetLocale;
   if (
     targetLocale !== defaultLocale &&
-    targetPath &&
     !result.startsWith(`/${targetPath}/`) &&
     result !== `/${targetPath}`
   ) {
-    result = `/${targetPath}${result}`;
+    if (result === '/') {
+      result = `/${targetPath}/`;
+    } else {
+      result = `/${targetPath}${result}`;
+    }
   }
 
-  // Reconstruct with base path
-  return basePath ? `${basePath}${result}` : result;
+  // Reconstruct with root base path
+  return `${rootBasePath}${result}`;
 }
