@@ -100,13 +100,13 @@ Where it fits: **Between Investigate and Modify.** After you have traced through
 print(label)
 temp: int = 32
 label: str = city + ": " + str(temp) + "C"
-city: str = "Karachi"
+city: str = "London"
 ```
 
 **Output (when correctly ordered):**
 
 ```
-Karachi: 32C
+London: 32C
 ```
 
 To solve this, you must reason about data flow: `city` must exist before `label` can use it, `temp` must exist before `label` can use it, and `label` must exist before `print` can display it. The correct order is `city`, then `temp`, then `label`, then `print`. If you can reorder these lines correctly, you understand the program's structure -- not just what it does, but *why* the order matters.
@@ -123,7 +123,7 @@ Where it fits: **Investigate** (the instructor traces and explains) and **Modify
 
 ### Peer Instruction: Across All Stages
 
-James writes his prediction: `Karachi: 32C`. Emma writes hers: `Karachi: 32 C` — with an extra space before the C. They disagree. Before either of them runs the code, they debate: does `str(temp) + "C"` produce a space or not? The disagreement forces both of them to look more closely at the code.
+James writes his prediction: `London: 32C`. Emma writes hers: `London: 32 C` — with an extra space before the C. They disagree. Before either of them runs the code, they debate: does `str(temp) + "C"` produce a space or not? The disagreement forces both of them to look more closely at the code.
 
 Peer instruction means thinking individually first, then discussing your answer with a partner or small group. It is especially powerful in Predict -- you write your prediction, compare it with a classmate, discuss any disagreements, and only then run the code.
 
@@ -227,7 +227,7 @@ I am learning about Parsons problems -- exercises where you rearrange
 scrambled lines of code into the correct order. Here is a simple
 Python program:
 
-city: str = "Karachi"
+city: str = "London"
 temp: int = 32
 label: str = city + ": " + str(temp) + "C"
 print(label)
