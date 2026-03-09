@@ -24,16 +24,6 @@ export function LocaleDropdown() {
       localeConfigs: i18n.localeConfigs,
       baseUrl: siteConfig.baseUrl,
     });
-    
-    console.log('Locale change:', {
-      from: currentLocale,
-      to: locale,
-      pathname: window.location.pathname,
-      baseUrl: siteConfig.baseUrl,
-      newPath,
-      fullUrl: newPath + window.location.search + window.location.hash,
-    });
-    
     window.location.href = newPath + window.location.search + window.location.hash;
   };
 

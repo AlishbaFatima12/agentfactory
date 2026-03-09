@@ -1,8 +1,7 @@
 /**
  * Pure function for locale URL computation.
  * Handles GitHub Pages baseUrl structure: /repo-name/[locale]/path
- * For default locale (English), serves at /agent-factory-book/
- * For non-default locales (Urdu), serves at /agent-factory-book/ur/
+ * Converts paths like /agent-factory-book/ → /agent-factory-book/ur/
  */
 export function getLocaleUrl({
   pathname,
@@ -19,8 +18,12 @@ export function getLocaleUrl({
   localeConfigs: Record<string, { path?: string }>;
   baseUrl?: string;
 }): string {
+  // For the current locale, use the configured path or fallback to locale name
   const currentPath = localeConfigs[currentLocale]?.path ?? currentLocale;
-  const targetPath = localeConfigs[targetLocale]?.path ?? targetLocale;
+  
+  // For the target locale, only use configured path if it has one
+  // Default locale (English) should NOT have a path prefix
+  const targetPath = localeConfigs[targetLocale]?.path;
 
   // Remove trailing slash from baseUrl for consistent processing
   const basePath = baseUrl.replace(/\/$/, '');
@@ -44,13 +47,14 @@ export function getLocaleUrl({
   }
 
   // Add target locale prefix only if target locale is NOT the default locale
-  if (targetLocale !== defaultLocale) {
-    if (
-      !result.startsWith(`/${targetPath}/`) &&
-      result !== `/${targetPath}`
-    ) {
-      result = `/${targetPath}${result}`;
-    }
+  // and it has a configured path
+  if (
+    targetLocale !== defaultLocale &&
+    targetPath &&
+    !result.startsWith(`/${targetPath}/`) &&
+    result !== `/${targetPath}`
+  ) {
+    result = `/${targetPath}${result}`;
   }
 
   // Reconstruct with base path
