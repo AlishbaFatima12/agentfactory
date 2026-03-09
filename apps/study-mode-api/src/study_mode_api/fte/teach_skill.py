@@ -98,25 +98,32 @@ class LearnerProfile:
         )
 
     @classmethod
-    def mock(cls) -> "LearnerProfile":
-        """Create a mock profile for testing (from reviewer's sample)."""
+    def mock(cls, user_name: str | None = None) -> "LearnerProfile":
+        """Create a default profile for users without a saved profile.
+
+        Uses generic defaults that work for any learner. The profile API
+        should be used for personalized teaching; this is the fallback.
+
+        Args:
+            user_name: Optional user name to personalize greeting
+        """
         return cls(
-            name="Muhammad Junaid",
+            name=user_name or "there",  # "Hi there!" if no name
             domain_level="beginner",
-            domain_name="supply chain logistics",
-            programming_level="advanced",
-            ai_fluency_level="advanced",
-            current_role="Senior Software Engineer",
-            industry="supply chain",
-            tools_in_use=["Claude", "ChatGPT", "Claude Code", "Docker"],
-            language_complexity="technical",
+            domain_name="your field",
+            programming_level="beginner",
+            ai_fluency_level="beginner",
+            current_role="professional",
+            industry="technology",
+            tools_in_use=[],
+            language_complexity="simple",
             preferred_structure="problem-first",
             verbosity="detailed",
-            tone="conversational",
+            tone="encouraging",
             wants_check_in_questions=True,
-            include_code_samples=True,
+            include_code_samples=False,
             code_verbosity="minimal",
-            screen_reader=True,
+            screen_reader=False,
             cognitive_load_preference="standard",
         )
 
@@ -127,7 +134,7 @@ async def fetch_learner_profile(
     """Fetch learner profile from the Learner Profile API.
 
     Uses the /api/v1/profiles/me endpoint which identifies the user
-    from the JWT token in the Authorization header.
+    from the JWT (JSON Web Token) in the Authorization header.
 
     Args:
         auth_token: JWT auth token (required for production)
@@ -193,15 +200,9 @@ async def get_learner_profile(
     if profile:
         return profile
 
-    # Fall back to mock profile
-    logger.info("[TeachSkill] Using mock profile (no API profile found)")
-    mock_profile = LearnerProfile.mock()
-
-    # Override name if provided
-    if user_name:
-        mock_profile.name = user_name
-
-    return mock_profile
+    # Fall back to default profile
+    logger.info("[TeachSkill] Using default profile (no API profile found)")
+    return LearnerProfile.mock(user_name=user_name)
 
 
 # =============================================================================
@@ -484,21 +485,38 @@ Skip to step 3-5. Give direct explanation without preamble.
 # MODEL CONFIGURATION
 # =============================================================================
 
-_cached_model: LitellmModel | None = None
 
+class ModelProvider:
+    """Singleton provider for the teaching model.
 
-def _get_model() -> LitellmModel:
-    """Get or create the model instance (lazy initialization)."""
-    global _cached_model
-    if _cached_model is None:
-        api_key = os.getenv("GEMINI_API_KEY")
-        if not api_key:
-            raise ValueError("GEMINI_API_KEY environment variable not set.")
-        _cached_model = LitellmModel(
-            model="gemini/gemini-2.5-flash",
-            api_key=api_key,
-        )
-    return _cached_model
+    Thread-safe lazy initialization of the LiteLLM model (unified LLM API wrapper
+    that provides consistent interface across providers like OpenAI, Gemini, etc.).
+
+    Avoids global mutable state while maintaining single instance.
+
+    Usage:
+        model = ModelProvider.get_model()
+    """
+
+    _instance: LitellmModel | None = None
+
+    @classmethod
+    def get_model(cls) -> LitellmModel:
+        """Get or create the model instance (lazy initialization)."""
+        if cls._instance is None:
+            api_key = os.getenv("GEMINI_API_KEY")
+            if not api_key:
+                raise ValueError("GEMINI_API_KEY environment variable not set.")
+            cls._instance = LitellmModel(
+                model="gemini/gemini-2.5-flash",
+                api_key=api_key,
+            )
+        return cls._instance
+
+    @classmethod
+    def reset(cls) -> None:
+        """Reset the cached model instance (useful for testing)."""
+        cls._instance = None
 
 
 # =============================================================================
@@ -531,7 +549,7 @@ def create_teaching_agent(profile: LearnerProfile | None = None) -> Agent[Teachi
 
     return Agent(
         name="TeachingSkill",
-        model=_get_model(),
+        model=ModelProvider.get_model(),
         instructions=dynamic_instructions,
         tools=[],  # No tools - just teaching
     )
@@ -567,10 +585,10 @@ async def teach_lesson(
     """
     from agents import Runner
 
-    # Use mock profile if not provided
+    # Use default profile if not provided
     if profile is None:
         profile = LearnerProfile.mock()
-        logger.info("[TeachSkill] Using mock learner profile")
+        logger.info("[TeachSkill] Using default learner profile")
 
     # Build context
     ctx = TeachingContext(
