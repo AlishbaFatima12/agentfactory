@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-09
+- fix: add blank lines in Ch 30 admonition blocks for proper rendering ([#836](https://github.com/panaversity/agentfactory/pull/836))
+
+### 2026-03-09
 - docs: complete Ch 30 PRIMM-AI+ Framework — 4 lessons, quiz, summaries, editorial polish ([#835](https://github.com/panaversity/agentfactory/pull/835))
 
 ### 2026-03-09
