@@ -208,27 +208,36 @@ If the same query said "Maybank Islamic in Malaysia," the overlay would change t
 
 Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
 
-### Prompt 1: Trace the Routing
+### Prompt 1: Predict the Routing for a Mixed Transaction
 
 ```
-I am going to give you an Islamic finance query. Walk me
-through the routing steps as if you were the global router:
+The lesson traced routing for a straightforward query: one
+product (murabaha), one jurisdiction (Bahrain). Now consider
+a more complex case.
 
-Query: "A client in Qatar needs the ijarah accounting treatment
-for a fleet of vehicles leased to a corporate customer under
-an ijarah muntahia bittamleek arrangement."
+Query: "A Malaysian Islamic bank (Bank Islam Malaysia Berhad)
+is structuring a home financing product that combines a
+diminishing musharaka for the property purchase with a takaful
+policy for mortgage protection insurance. The customer is a
+Malaysian resident. Generate the complete journal entry
+sequence for both components."
 
-For each step, tell me:
-1. What jurisdiction did you identify? What signals told you?
-2. What product did you identify? What terms matched?
-3. What overlay would you load? What framework governs?
-4. What would the response header say?
+Before running this in Cowork, predict:
+1. What jurisdiction will the router identify? What signals?
+2. This query involves TWO products (diminishing musharaka AND
+   takaful). How should the router handle this — load both
+   product skills sequentially, or is there a combined skill?
+3. What overlay loads? Does the same overlay apply to both
+   the diminishing musharaka and the takaful components?
+4. What should the response header say?
 
-Then explain: what would change if the client were in
-Malaysia instead of Qatar?
+Now run the query in Cowork with the Islamic finance plugin
+installed. Compare the actual routing against your prediction.
+Did the agent handle the two-product query correctly, or did
+it only address one component?
 ```
 
-**What you are learning:** The routing protocol is a decision procedure, not a lookup table. By tracing queries yourself, you internalise the same logic the router encodes — and you can verify whether an agent is routing correctly when you deploy it.
+**What you are learning:** Single-product, single-jurisdiction queries are the easy case. Real Islamic finance transactions often combine multiple products. By predicting the routing for a mixed transaction and then verifying against the actual agent output, you test both your understanding of the architecture and the agent's ability to handle complexity beyond the worked example.
 
 ### Prompt 2: Product Skill vs Jurisdiction Overlay
 

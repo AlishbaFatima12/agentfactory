@@ -233,31 +233,49 @@ The agent has produced the operational infrastructure -- the notice, the custodi
 
 Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
 
-### Prompt 1: Design a Litigation Hold Policy
+### Prompt 1: Execute a Litigation Hold for a Regulatory Investigation
 
 ```
-I am General Counsel at a 150-person SaaS company. We have
-never had a formal litigation hold policy. Design one that
-covers:
+I am General Counsel at a 200-person fintech company. This
+morning I received the following notice:
 
-1. TRIGGER EVENTS: List at least 6 events that should trigger
-   a legal hold (demand letters, regulatory notices, etc.)
-2. SCOPE DETERMINATION: How do I define what documents are
-   "within scope"? Provide a checklist of ESI categories
-   (email, Slack, code repos, backups, etc.)
-3. CUSTODIAN IDENTIFICATION: How do I determine who should
-   receive the notice? What about employees who have left?
-4. ACKNOWLEDGEMENT PROCESS: Design the escalation timeline
-   (reminder at Day 3, manager at Day 5, GC at Day 7)
-5. IT COORDINATION: What automated deletion policies must
-   be suspended and how?
-6. RELEASE PROCESS: How and when is a hold lifted?
+"The Financial Conduct Authority hereby notifies your firm
+that it has commenced an investigation into potential breaches
+of the Consumer Duty rules (FCA PS22/9) in relation to your
+automated lending product 'QuickLend'. The investigation
+covers the period from 1 January 2025 to present. You are
+required to preserve all documents and communications relating
+to the design, testing, deployment, marketing, and customer
+outcomes of the QuickLend product."
 
-For each section, explain what the agent handles operationally
-and what requires attorney judgment.
+47 employees across Product, Engineering, Marketing, Compliance,
+and Customer Support may have relevant documents. Our data is
+spread across Gmail, Slack (channels: #quicklend, #lending-ops,
+#compliance-reviews), GitHub (quicklend-* repositories),
+Confluence (Product and Compliance spaces), and Salesforce
+(customer complaint records).
+
+Run the litigation hold workflow using /respond and verify:
+1. Are the custodian notifications correctly scoped to the
+   FCA's investigation period (1 January 2025 to present)?
+2. Does the preservation scope cover ALL the ESI categories
+   the FCA notice requires — including Salesforce customer
+   complaint data, which is easy to overlook?
+3. Does the IT suspension request address automated deletion
+   policies for each system (Gmail retention, Slack message
+   retention, GitHub branch cleanup)?
+4. Does the custodian acknowledgement escalation timeline
+   account for the regulatory urgency (FCA investigations
+   typically expect immediate preservation)?
+
+What you are checking: The FCA investigation scenario is more
+complex than a standard demand letter — the scope is defined
+by the regulator, not by you. Verify that the agent's output
+matches the investigation scope exactly, rather than defaulting
+to a generic preservation template.
 ```
 
-**What you are learning:** A litigation hold policy is the foundation for using `/respond` effectively. Without a policy, each hold is ad hoc. With one, the agent has consistent parameters to work with. The exercise of distinguishing operational tasks (agent) from strategic decisions (attorney) reinforces the governance boundary that runs through every legal AI workflow.
+**What you are learning:** A regulatory investigation imposes externally defined preservation obligations -- you do not get to choose the scope the way you might with a commercial dispute. Running the workflow against a specific FCA notice tests whether you can verify the agent's output against a defined regulatory requirement, which is a fundamentally different skill from designing a policy from scratch.
 
 ### Prompt 2: Preservation Failure Consequences
 

@@ -605,34 +605,43 @@ This example demonstrates the core value of multi-overlay loading. A single-juri
 
 Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
 
-### Prompt 1: Interpreting a Contract Review Output
+### Prompt 1: Apply Contract Review to a Different Agreement Type
 
 ```
-I am learning to use the Claude Legal Plugin for contract review.
-Here is a scenario:
+I am practising with the Claude Legal Plugin. The lesson walked
+through a cross-border services agreement. Now I want to test
+my skills on a different contract type.
 
-A 200-person company receives a vendor SaaS agreement with these
-clause issues:
-- Limitation of liability: capped at 3 months' fees (company
-  standard is 12 months)
-- Data protection: bare "comply with applicable laws" statement,
-  no DPA attached
-- Termination: auto-renewal with no termination for convenience
-- IP ownership: standard SaaS (vendor owns platform, customer
-  owns data)
+Here is a SaaS subscription agreement (you are the customer):
 
-For each clause:
-1. Classify it as GREEN, YELLOW, or RED and explain why
-2. Write the exact redline language you would propose
-3. Provide a fallback position if the counterparty rejects
-   the primary redline
-4. State the priority: Must-have or Nice-to-have
+- Vendor: a US-incorporated cloud analytics platform
+- Annual value: GBP 72,000
+- Governing law: State of California
+- These four clauses need review:
+  1. Auto-renewal with 90-day non-renewal notice window
+     (your standard is 60 days)
+  2. Vendor may modify the service "at any time with 30 days'
+     notice" including removing features you rely on
+  3. Indemnification is one-way (vendor indemnifies for IP
+     infringement only; no indemnification for data breaches)
+  4. Data processing addendum references "applicable law" but
+     does not specify UK GDPR or include SCCs for international
+     transfers
 
-Then provide the holistic risk summary with recommended action
-and priority negotiation order.
+Run /review-contract with your jurisdiction skill active (use
+UK law or your own jurisdiction). For each clause, provide the
+GREEN/YELLOW/RED classification, a proposed redline, and a
+fallback position.
+
+What you are checking: Did the agent flag the service modification
+clause as a material risk (it should — the vendor can remove
+features you depend on with only 30 days' notice)? Did it
+identify the international data transfer gap in the DPA? Compare
+the agent's classification against your own judgment — where do
+you agree and where would you override?
 ```
 
-**What you are learning:** Reading and interpreting the three-tier classification output is the core skill for using the Legal Plugin. This prompt forces you to think through each classification decision, not just read the agent's output passively. Understanding why a clause is RED rather than YELLOW builds the judgment you need to calibrate your own playbook.
+**What you are learning:** Applying contract review to a SaaS subscription agreement tests whether you can transfer the classification framework to a different contract type. The service modification clause is the kind of risk that a generic review might miss but a jurisdiction-aware review with a mature playbook should catch -- it has real business impact even though it is not a traditional "legal risk" clause.
 
 ### Prompt 2: Obligation Tracking After Execution
 
