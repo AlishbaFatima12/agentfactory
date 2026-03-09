@@ -234,7 +234,7 @@ Add a second run with documents that include a transaction the agent is likely t
 
 **What you'll build:** Complete IFRS financial reporting output — income statement, balance sheet, cash flow statement, selected notes, and a board-ready presentation — from a single trial balance.
 
-**Requirements:** Cowork (Team or Enterprise), Claude in Excel and Claude in PowerPoint installed, `finance@knowledge-work-plugins`, a trial balance in Excel (real or use the hypothetical data below).
+**Requirements:** Cowork (Team or Enterprise), `finance@knowledge-work-plugins`, a trial balance in Excel (real or use the hypothetical data below).
 
 ### Hypothetical Trial Balance
 
@@ -476,7 +476,7 @@ completion time.
 
 **What you'll build:** An automated consolidation workflow that produces group financial statements from multiple entity trial balances, with full intercompany elimination.
 
-**Requirements:** Cowork (Team or Enterprise), Claude in Excel, `finance@knowledge-work-plugins`, trial balance data for two entities. Use the consolidation data from the exercise zip: `exercises/consolidation/parent-subsidiary-data.md` — includes intercompany balances and elimination workings.
+**Requirements:** Cowork (Team or Enterprise), `finance@knowledge-work-plugins`, trial balance data for two entities. Use the consolidation data from the exercise zip: `exercises/consolidation/parent-subsidiary-data.md` — includes intercompany balances and elimination workings.
 
 ### Hypothetical Setup
 
@@ -584,73 +584,77 @@ and the output format.
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to deepen your understanding of the workflows you have built.
+You have built four complete workflows in Exercises 8-11. These prompts test whether those workflows produce correct output under stress. Run each one in Cowork with your skills active.
 
-### Prompt 1: Judgment Boundary Mapping
-
-```
-I have built an autonomous bookkeeping workflow that classifies
-source documents, codes transactions, and produces a transaction
-register. The workflow flags certain transactions for professional
-judgment.
-
-For my practice area [DESCRIBE YOUR TYPICAL CLIENTS — e.g.,
-manufacturing SMEs, professional services firms, retail chains],
-list the ten most common transaction types that would require
-professional judgment rather than mechanical coding. For each one,
-explain why the coding decision requires human expertise and what
-the consequence would be if the agent coded it incorrectly.
-
-Rank them from most to least consequential.
-```
-
-**What you are learning:** The value of an autonomous bookkeeping workflow is not in the routine transactions it codes correctly — it is in the boundary where routine ends and judgment begins. By mapping the judgment boundaries specific to your client types, you are building the exception rules that would make your bookkeeping skill genuinely useful rather than generically adequate.
-
-### Prompt 2: Exception Threshold Calibration
+### Prompt 1: Bookkeeping Trap Test
 
 ```
-I am setting up a scheduled month-end close for a [DESCRIBE ENTITY
-— e.g., mid-sized manufacturing company with PKR 500M annual
-revenue]. I need to define exception thresholds — the conditions
-that cause the automated close to stop and alert me.
+Process these five transactions and produce journal entries with
+account codes from our chart of accounts:
 
-For each of these parameters, recommend a threshold and explain
-your reasoning:
-1. Unreconciled bank difference (absolute value)
-2. Revenue variance versus prior month (percentage)
-3. New account balance appearing (absolute value)
-4. Gross margin variance (percentage points)
-5. Intercompany balance mismatch (absolute value)
+1. PKR 150,000 transferred from the business account to the
+   owner's personal account — described on the bank statement
+   as "Transfer to M. Khan"
+2. A PKR 85,000 deposit from "ABC Traders" — could be a sales
+   receipt or repayment of a loan we gave them last quarter
+3. An invoice from "Digital Solutions" for PKR 220,000 —
+   50% software license (asset) and 50% annual support (expense)
+4. A credit note from our supplier for PKR 45,000 — goods
+   returned due to quality issues, but we already sold half
+   of those goods to a customer
+5. Staff entertainment of PKR 32,000 — three team members
+   at a restaurant, but the receipt also includes PKR 8,000
+   for a client gift
 
-For each threshold, explain what happens if I set it too high
-(miss real errors) versus too low (generate too many false alerts
-and lose trust in the system).
+For each transaction, code it and explain your reasoning. Flag
+any transaction where you need my input before finalising.
 ```
 
-**What you are learning:** Exception thresholds are a professional judgment that balances sensitivity (catching real errors) against specificity (not crying wolf). Setting thresholds too low generates alert fatigue and causes you to stop reviewing them. Setting them too high lets genuine errors through silently. The right threshold depends on your entity's size, volatility, and risk appetite — there is no universal answer.
+**What you are checking:** Every transaction here is a judgment trap. #1 is an owner's drawing, not an expense. #2 is ambiguous between revenue and balance sheet. #3 requires splitting across asset and expense. #4 involves partial inventory that's already been sold. #5 mixes deductible and non-deductible amounts. If your bookkeeping workflow coded all five without flagging any, your judgment boundary rules are too loose. If it flagged all five, that's correct — these all require professional input.
 
-### Prompt 3: Consolidation Error Detection
+### Prompt 2: Month-End Exception Stress Test
 
 ```
-I have produced consolidated financial statements for a group
-with a parent and one wholly-owned subsidiary. The consolidation
-includes four elimination types: investment elimination,
-intercompany loan elimination, intercompany trading elimination,
-and unrealised profit in inventory.
+I have a scheduled month-end close running. Here is this month's
+trial balance summary versus last month:
 
-Act as a reviewing partner. List the seven most common errors
-in group consolidations and explain how to check for each one
-in the consolidated statements. For the unrealised profit
-elimination specifically, explain:
-1. How to calculate the unrealised profit amount
-2. Why the elimination is required under IFRS 10
-3. What happens to this elimination in the following year
-   when the inventory is sold to a third party
-4. How the entry differs if only 80% of the subsidiary
-   is owned (non-controlling interest impact)
+Revenue: PKR 42.3M (last month: PKR 18.7M)
+COGS: PKR 29.1M (last month: PKR 12.4M)
+Admin expenses: PKR 3.8M (last month: PKR 3.9M)
+Bank balance: PKR 11.2M (last month: PKR 8.4M)
+Trade receivables: PKR 38.7M (last month: PKR 15.2M)
+Suspense account: PKR 2.1M (last month: PKR 0)
+
+Run the month-end close process. Show me every exception that
+should fire based on these numbers. For each exception, tell me:
+what threshold was breached, what the likely explanation is, and
+whether the close should stop or continue with a flag.
 ```
 
-**What you are learning:** Consolidation verification requires you to think beyond the mechanics of the current period. The unrealised profit elimination reverses the following year — meaning a consolidation error in one period compounds in the next. Understanding this temporal dimension is what separates a CA/CPA reviewing consolidated statements from a bookkeeper applying rules to a single period.
+**What you are checking:** Revenue jumped 126% month-on-month — your 30% variance rule from Exercise 10 should fire. Receivables more than doubled — potentially a data error or a large contract. A suspense account appeared from zero — your "new balance over PKR 100,000" rule should fire. If your scheduled task runs through these numbers without stopping, your exception thresholds are not working. The correct response is at least 3 exceptions fired, with the close paused pending your review.
+
+### Prompt 3: Consolidation Break Test
+
+```
+I have completed the parent-subsidiary consolidation from
+Exercise 11. Now add this complication:
+
+The subsidiary sold goods to the parent (upstream) for
+PKR 8,000. The parent still holds PKR 3,000 of that inventory
+at year-end. The subsidiary's gross margin on those sales was 30%.
+
+Additionally, the parent charged the subsidiary a management
+fee of PKR 2,400 during the year. The subsidiary has accrued
+PKR 2,400 as an expense but the parent only recognised PKR 2,000
+as income (PKR 400 relates to next year's service).
+
+Produce the additional elimination entries needed. Then show me
+the updated consolidated income statement and balance sheet.
+Explain what is different about an upstream unrealised profit
+elimination versus the downstream one we did in Exercise 11.
+```
+
+**What you are checking:** The upstream elimination (subsidiary selling to parent) affects the subsidiary's profit — which matters if there's a non-controlling interest (it doesn't in this 100% case, but the agent should note the difference). The management fee mismatch (PKR 2,400 vs PKR 2,000) means intercompany balances don't agree — a consolidation should NEVER proceed with a PKR 400 mismatch without flagging it. If the agent silently adjusts the difference without asking you, your consolidation workflow is masking an error.
 
 ## Flashcards Study Aid
 
