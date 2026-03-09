@@ -47,17 +47,17 @@ learning_objectives:
   - objective: "Calculate Basel III capital ratios for a UK bank under the Standardised Approach, including credit RWA, operational risk RWA, and all three capital ratios"
     proficiency_level: "B2"
     bloom_level: "Apply"
-    assessment_method: "Student correctly classifies all asset classes, applies SA risk weights, computes operational risk using BIA, and calculates CET1, Tier 1, and Total Capital ratios in Exercise 3"
+    assessment_method: "Student correctly classifies all asset classes, applies SA risk weights, computes operational risk using BIA, and calculates CET1, Tier 1, and Total Capital ratios in Exercise 10"
 
   - objective: "Design an ICAAP stress scenario and calculate stressed capital ratios to determine capital adequacy under severe conditions"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student translates BoE severe scenario parameters into stressed PDs, LGDs, and ECL, calculates NII impact, determines stressed CET1 ratio trajectory over 3 years, and identifies management actions in Exercise 5"
+    assessment_method: "Student translates BoE severe scenario parameters into stressed PDs, LGDs, and ECL, calculates NII impact, determines stressed CET1 ratio trajectory over 3 years, and identifies management actions in Exercise 11"
 
   - objective: "Investigate AML alerts and sanctions screening hits, distinguishing true suspicious activity from false positives and applying the correct regulatory response"
     proficiency_level: "B2"
     bloom_level: "Analyze"
-    assessment_method: "Student correctly triages 3 AML alerts and 3 sanctions screening cases, identifying typologies, filing requirements, and escalation paths in Exercises 6 and 8"
+    assessment_method: "Student correctly triages 3 AML alerts and 3 sanctions screening cases, identifying typologies, filing requirements, and escalation paths in Exercises 12 and 13"
 
 cognitive_load:
   new_concepts: 3
@@ -68,8 +68,8 @@ cognitive_load:
   assessment: "3 new concepts at B2 level — within the B2 limit of 10. Exercises primarily apply Basel concepts from Lessons 6-8 and AML concepts from Lessons 9-10 at portfolio scale. The new concepts extend rather than replace prior knowledge."
 
 differentiation:
-  extension_for_advanced: "For Exercise 5, design a reverse stress test: starting from the point of failure (CET1 breaches 4.5%), work backwards to determine what combination of GDP decline, unemployment, and property crash would be required. Then assess whether this scenario is plausible."
-  remedial_for_struggling: "Focus on Exercise 3 (capital ratios) and Exercise 6 Alert 1 (structuring). If you can calculate a CET1 ratio and identify a structuring pattern, you have the core skills for both Basel and AML."
+  extension_for_advanced: "For Exercise 11, design a reverse stress test: starting from the point of failure (CET1 breaches 4.5%), work backwards to determine what combination of GDP decline, unemployment, and property crash would be required. Then assess whether this scenario is plausible."
+  remedial_for_struggling: "Focus on Exercise 10 (capital ratios) and Exercise 12 Alert 1 (structuring). If you can calculate a CET1 ratio and identify a structuring pattern, you have the core skills for both Basel and AML."
 ---
 
 # Exercises — Basel and AML Deep Practice
@@ -90,11 +90,11 @@ A US bank with $500 billion in assets and a starting CET1 ratio of 12.5% must sh
 DFAST results are publicly disclosed (unlike the UK's confidential ICAAP), creating market discipline -- investors and counterparties can see which banks are most vulnerable to stress.
 :::
 
-In Lesson 11, you saw how IFRS 9, Basel, and AML interact in a cross-pillar cascade. Now you build fluency in Basel capital calculation and AML investigation through four extended exercises. Exercise 3 builds a complete capital ratio from raw balance sheet data. Exercise 5 stress-tests that capital under a Bank of England severe scenario. Exercises 6 and 8 take you through AML alert investigation and sanctions screening — the operational side of financial crime compliance.
+In Lesson 11, you saw how IFRS 9, Basel, and AML interact in a cross-pillar cascade. Now you build fluency in Basel capital calculation and AML investigation through four extended exercises. Exercise 10 builds a complete capital ratio from raw balance sheet data. Exercise 11 stress-tests that capital under a Bank of England severe scenario. Exercises 12 and 13 take you through AML alert investigation and sanctions screening — the operational side of financial crime compliance.
 
 These exercises use the banking plugin's `basel-capital`, `basel-rwa`, `aml-typologies`, and `aml-sar-drafting` skills. The AI assists with computation and pattern matching, but you make the professional judgments: Is this alert suspicious or a false positive? Does the bank survive the stress scenario? What management actions restore capital adequacy?
 
-## Exercise 3: Basel III Capital Ratio — Standardised Approach
+## Exercise 10: Basel III Capital Ratio — Standardised Approach
 
 **Jurisdiction**: United Kingdom (PRA regulated)
 **Duration**: 45 minutes
@@ -172,7 +172,7 @@ The Business Indicator Approach calculates operational risk capital as:
 
 ---
 
-## Exercise 5: ICAAP Stress Test
+## Exercise 11: ICAAP Stress Test
 
 **Jurisdiction**: United Kingdom (Bank of England Annual Cyclical Scenario)
 **Duration**: 50 minutes
@@ -231,7 +231,7 @@ Clarification: Under stress, Stage 2 rises from 8% to 22% of the book. Additiona
 
 **Step 1: Calculate stressed stage distribution.** Starting from the GBP 2,800M loan book, compute the GBP amount in each stage after all migrations.
 
-**Step 2: Calculate stressed ECL.** Using the stressed LGDs and stage-specific PDs (use the same PD parameters from Exercise 1 as a baseline, or estimate reasonable stressed PDs), calculate the total ECL under the severe scenario.
+**Step 2: Calculate stressed ECL.** Using the stressed LGDs and stage-specific PDs (use the same PD parameters from Exercise 8 as a baseline, or estimate reasonable stressed PDs), calculate the total ECL under the severe scenario.
 
 **Step 3: Calculate the CET1 impact.** The additional ECL charge (stressed ECL minus pre-stress ECL) flows through to retained earnings:
 
@@ -249,7 +249,7 @@ Clarification: Under stress, Stage 2 rises from 8% to 22% of the book. Additiona
 
 ---
 
-## Exercise 6: AML Alert Review and SAR Decision
+## Exercise 12: AML Alert Review and SAR Decision
 
 **Jurisdiction**: United Kingdom (NCA / POCA 2002)
 **Duration**: 45 minutes
@@ -257,75 +257,83 @@ Clarification: Under stress, Stage 2 rises from 8% to 22% of the book. Additiona
 
 You are the Level 2 AML analyst reviewing three alerts escalated from the transaction monitoring system. For each alert, determine: Is this suspicious? Should a SAR be filed? What is the typology?
 
-### Alert 1: Mohammed Al-Rashid
+### Alert 1: Green Valley Properties Ltd
 
-**Customer profile**: Self-employed taxi driver, London. Annual declared income GBP 32,000. Account opened 3 years ago.
+**Customer profile**: UK-registered property development company, incorporated 8 months ago. Director: Viktor Petrov, Lithuanian national resident in London. Declared business: residential property development.
 
-**Transaction pattern**: 8 cash deposits over 14 days:
+**Transaction pattern**: Over 90 days, the company purchased 4 residential properties in cash:
 
-| Date   | Amount    | Branch        |
-| ------ | --------- | ------------- |
-| Day 1  | GBP 9,200 | Whitechapel   |
-| Day 2  | GBP 8,800 | Mile End      |
-| Day 4  | GBP 9,500 | Stratford     |
-| Day 5  | GBP 9,100 | Whitechapel   |
-| Day 8  | GBP 8,900 | Bethnal Green |
-| Day 9  | GBP 9,400 | Mile End      |
-| Day 11 | GBP 9,300 | Stratford     |
-| Day 14 | GBP 8,800 | Whitechapel   |
+| Date   | Property            | Amount      | Funding Source                                 |
+| ------ | ------------------- | ----------- | ---------------------------------------------- |
+| Day 5  | Flat, Tower Hamlets | GBP 385,000 | Wire from Baltica Holdings (Latvia)            |
+| Day 22 | House, Lewisham     | GBP 520,000 | Wire from Baltica Holdings (Latvia)            |
+| Day 48 | Flat, Greenwich     | GBP 410,000 | Wire from VKP Consulting (Lithuania)           |
+| Day 71 | House, Bromley      | GBP 615,000 | Wire from Vilnius Capital Partners (Lithuania) |
 
-**Total**: GBP 73,000 in 14 days. No single deposit exceeds GBP 10,000.
-
-**Your analysis:**
-
-1. What money laundering typology does this pattern match?
-2. Why are the amounts significant (what threshold is being avoided)?
-3. What additional information would you request before making a SAR decision?
-4. Draft your recommendation: file SAR, close as false positive, or request further investigation.
-
-### Alert 2: Meridian Trading Ltd
-
-**Customer profile**: Import/export company registered 18 months ago. Director: James Chen. Declared business: electronics distribution.
-
-**Transaction pattern**: 12 incoming SWIFT wires over 60 days from UAE, Hong Kong, and Cyprus, totalling GBP 847,000. Within 24 hours of each receipt, outgoing transfers totalling GBP 812,000 to 4 different UK companies.
-
-| Incoming Source            | Amount   | Outgoing Destination     | Amount              |
-| -------------------------- | -------- | ------------------------ | ------------------- |
-| Dubai Trading FZE (UAE)    | GBP 245K | Northern Components Ltd  | GBP 198K            |
-| HK Global Supplies (HK)    | GBP 312K | Midlands Distribution Co | GBP 287K            |
-| Limassol Ventures (Cyprus) | GBP 290K | Glasgow Wholesale Ltd    | GBP 327K            |
-|                            |          |                          | Total out: GBP 812K |
+**Total**: GBP 1,930,000 in property acquisitions. No mortgage financing on any property. All purchases funded by incoming wires from Baltic entities.
 
 **Red flags to evaluate:**
 
-- Rapid throughput (funds in and out within 24 hours)
-- Multiple high-risk jurisdictions (UAE, Hong Kong, Cyprus)
-- Company age (18 months — newly established)
-- Pass-through pattern (minimal retention of funds)
+- Cash property purchases by a newly incorporated company
+- All funding from Baltic entities (EU but high-risk for Russian-linked money flows)
+- Director's beneficial ownership of the Baltic sending entities is unclear
+- No rental income or development activity visible on the account since purchases
 
 **Your analysis:**
 
-1. What typologies might this represent? (Consider trade-based money laundering, layering)
-2. What due diligence would you perform on the 4 UK recipient companies?
-3. Is the GBP 35K retained balance consistent with legitimate business?
+1. What money laundering typology does this pattern match? (Consider property-based laundering, integration stage)
+2. What beneficial ownership checks would you perform on the three Baltic sending entities?
+3. What is the significance of cash property purchases (no mortgage) from an AML perspective?
+4. Draft your recommendation: file SAR, close as false positive, or request further investigation.
+
+### Alert 2: Pinnacle Logistics Group
+
+**Customer profile**: UK-registered freight forwarding company, trading for 6 years. Director: Thomas Wright. Declared annual turnover GBP 3.2M. Previously CDD-rated as standard risk.
+
+**Transaction pattern**: Over the past 120 days, a significant change in transaction pattern:
+
+| Period        | Incoming (GBP)                                       | Outgoing (GBP)                                    | Key Change                               |
+| ------------- | ---------------------------------------------------- | ------------------------------------------------- | ---------------------------------------- |
+| Prior 12 mths | 3.1M (EU sources)                                    | 2.9M (UK payroll, fuel, lease)                    | Consistent with declared turnover        |
+| Last 120 days | 5.8M (new sources from Turkey, Pakistan, Bangladesh) | 5.4M (new payees: 8 UK cash-intensive businesses) | Volume nearly doubled, geography shifted |
+
+**New counterparties identified:**
+
+- 3 incoming sources: Istanbul Shipping Co, Karachi Trade House, Dhaka Garment Exports
+- 8 outgoing UK payees: mix of restaurants, car washes, launderettes, and convenience stores
+
+**Red flags to evaluate:**
+
+- Sharp increase in turnover inconsistent with business growth trajectory
+- Geographic shift from EU to higher-risk jurisdictions
+- Outgoing payments to cash-intensive businesses (classic layering recipients)
+- Incoming amounts from trade counterparties do not match any visible goods shipments
+
+**Your analysis:**
+
+1. What typologies might this represent? (Consider trade-based money laundering, professional enabler)
+2. How does the geographic shift and volume increase change the risk profile?
+3. What investigation steps would distinguish legitimate business growth from laundering?
 4. SAR recommendation with rationale.
 
-### Alert 3: Amara Diallo
+### Alert 3: Dr. Helen Okonkwo
 
-**Customer profile**: UK resident, employed as university lecturer. Flagged as PEP — her sister is a minister in the Nigerian government.
+**Customer profile**: UK citizen, consultant surgeon at an NHS hospital, annual salary GBP 145,000. Private banking customer with GBP 1.8M in deposits. Not a PEP.
 
-**Transaction**: Single incoming wire of GBP 320,000 from a Nigerian law firm. Stated purpose: "Legal settlement — family property dispute."
+**Transaction**: Three outgoing wires over 6 weeks totalling GBP 890,000 to a bank account in the Cayman Islands held by "Okonkwo Family Trust." Stated purpose: "Family trust — inheritance planning."
+
+**Additional context**: Previous transaction history shows no international wire transfers in the past 4 years. The Cayman Islands account was opened 2 months ago. No record of a trust deed in the bank's files.
 
 **Your analysis:**
 
-1. What PEP-related risks does this transaction present?
-2. What Enhanced Due Diligence (EDD) steps are required?
-3. Can you accept the "legal settlement" explanation at face value? What would you verify?
-4. SAR recommendation, considering both the PEP status and the jurisdiction of origin.
+1. What risks does this transaction pattern present, even without PEP status?
+2. What Enhanced Due Diligence steps are required for outgoing payments to the Cayman Islands?
+3. What documentation would you request to verify the "family trust" explanation?
+4. SAR recommendation, considering the sudden change in pattern, offshore jurisdiction, and unverified trust structure.
 
 ---
 
-## Exercise 8: Sanctions Screening
+## Exercise 13: Sanctions Screening
 
 **Jurisdiction**: UK/EU/OFAC (multi-regime screening required)
 **Duration**: 40 minutes
@@ -400,62 +408,66 @@ Three payments require sanctions screening. For each, determine: true match, fal
 
 Use these prompts in Claude or your preferred AI assistant to work through these exercises.
 
-### Prompt 1: Building the Capital Ratio
+### Prompt 1: Capital Impact of a Loan Book Acquisition
 
 ```
-Calculate Basel III capital ratios for this UK bank under the
-Standardised Approach:
+A UK bank (the one from Exercise 10) is considering acquiring
+a GBP 400M SME loan portfolio from a competitor. The portfolio
+has these characteristics:
 
-Capital: CET1 GBP 285M, AT1 GBP 45M, Tier 2 GBP 60M
+- 70% secured by plant/equipment (85% risk weight)
+- 20% secured by property LTV 75% (35% risk weight)
+- 10% unsecured (75% risk weight)
+- Portfolio average PD: 3.2% (higher than existing book)
+- Expected ECL on acquisition: GBP 18M
 
-Assets and risk weights:
-- UK Gilts GBP 850M (0%)
-- BoE reserves GBP 420M (0%)
-- Bank claims (A+) GBP 180M (20%)
-- Corporate bonds (BBB) GBP 240M (100%)
-- SME loans GBP 320M (85%)
-- Residential mortgages (LTV 50-80%) GBP 1,450M (35%)
-- High-LTV mortgages GBP 185M (50%)
-- CRE GBP 380M (100%)
-- Consumer unsecured GBP 210M (75%)
-- NPLs GBP 45M (150%)
-- Undrawn revolving GBP 190M (40% CCF then 75% RW)
-
-Op Risk: BI GBP 480M, 12% coefficient, ILM 1.0
-Market Risk RWA: GBP 35M
-
-Calculate: credit RWA, total RWA, CET1 ratio, Tier 1 ratio,
-Total Capital ratio. Compare each to minimum + CCB.
+Questions:
+1. What additional credit RWA does this acquisition create?
+2. What is the impact on the CET1 ratio (assume no new
+   capital raised)?
+3. Does the bank still meet the combined buffer requirement
+   (CET1 minimum 4.5% + CCB 2.5%) after the acquisition?
+4. If the bank needs to maintain a 10% CET1 target, how much
+   additional CET1 capital must it raise?
+5. Should the bank use the acquisition ECL of GBP 18M or
+   re-estimate using its own models? What does IFRS 3
+   require for business combinations?
 ```
 
-**What you are learning:** Capital ratio calculation is the fundamental Basel skill. Every risk weight reflects a regulatory judgment about the riskiness of that asset class. By computing RWA yourself, you understand why banks with identical total assets can have very different capital ratios — it depends on the composition of the balance sheet and the risk weights that apply.
+**What you are learning:** Capital planning is not just about meeting minimums — it is about maintaining buffers through growth. An acquisition that looks profitable on an earnings basis can destroy capital headroom if the RWA impact is not modelled in advance. By calculating the capital impact before the deal closes, you practise the discipline that bank treasury teams apply to every balance sheet decision.
 
-### Prompt 2: AML Alert Investigation
+### Prompt 2: Funnel Account Investigation
 
 ```
-Investigate this AML alert:
+Investigate this AML alert involving a suspected funnel account:
 
-Customer: Mohammed Al-Rashid, taxi driver, annual income GBP 32K
-Pattern: 8 cash deposits in 14 days, amounts between GBP 8,800
-and GBP 9,500, across 4 branches, total GBP 73,000
+Customer: Sarah Jenkins, UK resident, registered childminder,
+  annual declared income GBP 28,000
+Account type: Personal current account, opened 5 years ago
+Pattern over 90 days:
+- 47 incoming faster payments from 31 different UK personal
+  accounts, amounts ranging from GBP 200 to GBP 2,500,
+  total received: GBP 58,400
+- 14 outgoing international transfers to 3 accounts in
+  Nigeria (GBP 42,000) and 2 accounts in Ghana (GBP 11,500)
+- Remaining balance: GBP 4,900
 
-1. What money laundering typology does this match?
-2. Why are ALL deposits below GBP 10,000?
-3. What is the UK reporting threshold and why is it relevant?
-4. What additional checks would you perform?
-5. Draft a SAR recommendation paragraph.
-
-Then investigate this second alert:
-Customer: Meridian Trading Ltd, import/export, 18 months old
-Pattern: 12 SWIFT wires from UAE/HK/Cyprus totalling GBP 847K,
-same-day outgoing GBP 812K to 4 UK companies
-
-Identify the typology and explain why rapid throughput from
-high-risk jurisdictions through a newly established company
-is a red flag.
+1. What typology does this match? Explain why the pattern of
+   many incoming domestic payments followed by fewer outgoing
+   international transfers is distinctive.
+2. How does this differ from the structuring pattern (deposits
+   just below a threshold)? What makes funnel accounts harder
+   to detect with rules-based TM?
+3. What additional information would you gather about the 31
+   sending accounts? What pattern would confirm the suspicion?
+4. Draft a SAR recommendation paragraph covering the key
+   indicators: multiple unrelated senders, rapid aggregation,
+   international dissipation, inconsistency with profile.
+5. What tipping-off risks exist if the bank freezes the
+   account? What language should the bank use?
 ```
 
-**What you are learning:** AML investigation is pattern recognition combined with professional judgment. The structuring pattern (deposits just below reporting thresholds) is one of the most common typologies, but identifying it requires knowing the threshold and understanding why someone would deliberately avoid it. The trade-based money laundering pattern is more complex — it uses legitimate-looking trade flows to move illicit funds across borders.
+**What you are learning:** Funnel accounts are a different typology from the structuring and trade-based patterns in Exercise 12. They use a domestic collection network (often recruited via social media) to aggregate small amounts into a personal account, then transfer the pooled funds internationally. By investigating a new typology, you test whether you can apply the AML investigation framework to unfamiliar patterns rather than relying on recognition of the Exercise 12 scenarios.
 
 ### Prompt 3: Sanctions Screening Decision
 

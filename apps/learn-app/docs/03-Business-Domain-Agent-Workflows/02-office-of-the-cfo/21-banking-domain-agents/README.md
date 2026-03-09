@@ -27,7 +27,7 @@ By the end of this chapter, you will be able to:
 - Calculate Basel III/IV capital adequacy ratios — CET1, Tier 1, Total Capital, risk-weighted assets, output floors, leverage ratio, and liquidity ratios (LCR/NSFR)
 - Design AML/KYC surveillance systems — the three lines of defence, transaction monitoring rule evolution to ML, SAR filing, and tipping-off prohibitions
 - Execute bank reconciliation across nostro, suspense, GL-to-risk-system, and four-way provision reconciliation using AI automation
-- Complete 14 exercises (22+ hours of practice) spanning all three pillars and reconciliation
+- Complete 18 exercises (22+ hours of practice) spanning all three pillars and reconciliation
 
 ## Lesson Flow
 
@@ -43,10 +43,10 @@ By the end of this chapter, you will be able to:
 | [L08](./08-basel-leverage-liquidity.md)       | Leverage Ratio, LCR, and NSFR                                  | 35 min   | Leverage ratio, HQLA, LCR calculation, NSFR, Exercise 5: Liquidity stress test                |
 | [L09](./09-aml-three-lines.md)                | AML/KYC — The Three Lines of Defence                           | 35 min   | CDD/EDD, three lines model, PEP screening, Exercise 6: Customer onboarding risk               |
 | [L10](./10-aml-tm-ml-sar.md)                  | Transaction Monitoring, ML Evolution, and SAR Filing           | 40 min   | Rule-based to ML TM, SAR workflow, tipping-off, Exercise 7: TM alert investigation            |
-| [L11](./11-pillar-integration.md)             | Cross-Pillar Integration — When IFRS 9, Basel, and AML Collide | 45 min   | Exercise 8: Fraud-triggered stage migration, Exercise 9: Capital impact of ECL spike          |
-| [L12](./12-exercises-ifrs9.md)                | Exercises: IFRS 9 Deep Practice                                | 60 min   | Exercise 10: Full portfolio ECL, Exercise 11: Stage migration cascade                         |
-| [L13](./13-exercises-basel-aml.md)            | Exercises: Basel and AML Deep Practice                         | 55 min   | Exercise 12: ICAAP stress scenario, Exercise 13: Cross-border AML investigation               |
-| [L14](./14-reconciliation-nostro-suspense.md) | Bank Reconciliation — Nostro, Suspense, and GL-to-Risk         | 45 min   | Nostro recon, suspense clearing, GL-risk system recon, Exercise 14: Four-way provision recon  |
+| [L11](./11-pillar-integration.md)             | Cross-Pillar Integration — When IFRS 9, Basel, and AML Collide | 45 min   | Fraud-triggered stage migration, capital impact of ECL spike (worked examples)                |
+| [L12](./12-exercises-ifrs9.md)                | Exercises: IFRS 9 Deep Practice                                | 60 min   | Exercise 8: Full portfolio ECL, Exercise 9: GCC corporate ECL model                           |
+| [L13](./13-exercises-basel-aml.md)            | Exercises: Basel and AML Deep Practice                         | 55 min   | Exercise 10-11: Capital ratio + ICAAP stress, Exercise 12-13: AML alert + sanctions screening |
+| [L14](./14-reconciliation-nostro-suspense.md) | Bank Reconciliation — Nostro, Suspense, and GL-to-Risk         | 45 min   | Exercise 14: Nostro recon, Exercise 15: Provision recon, Exercise 16: Suspense clearance      |
 | [L15](./15-full-skill-library-capstone.md)    | Full Banking Agent — Skill Library Build and Capstone          | 90 min   | Full 17-skill library deployment, cross-pillar capstone scenario, documentation               |
 
 ## Chapter Contract
@@ -73,7 +73,7 @@ claude plugin install banking@agentfactory-business
 
 Downloads (from the [latest release](https://github.com/panaversity/agentfactory-business-plugins/releases/latest)):
 
-- `banking-exercise-data.zip` — Scenario data for Exercises 1-14 + regulatory reference tables
+- `banking-exercise-data.zip` — Scenario data for Exercises 1-18 + regulatory reference tables
 - `banking-workflow-recipes.zip` — Scheduled task configurations (daily recon, monthly ECL, quarterly ICAAP, annual SREP)
 - `banking-full.zip` — Everything in one package (Lesson 15 capstone)
 
