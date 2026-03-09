@@ -89,7 +89,7 @@ explanation: "The student got the right output but cannot explain why a specific
 source: "Lesson 1: The PRIMM Framework"
 },
 {
-question: "PRIMM was created by Sentance and Waite in 2017 for secondary school classrooms. Why does the chapter argue it matters MORE in 2026?",
+question: "PRIMM was created by Sentance and Waite in 2017 for secondary school classrooms. Why does the chapter argue it matters MORE in the AI era?",
 options: ["Schools have adopted it widely so it has institutional momentum", "Student attention spans have decreased requiring more structured methods", "Teaching budgets have been cut requiring cheaper instructional methods", "AI made code production free, making comprehension the scarce bottleneck skill"],
 correctOption: 3,
 explanation: "Before AI, writing code was slow and expensive — the bottleneck was production. AI made production nearly free, shifting the bottleneck to comprehension. PRIMM's emphasis on reading and understanding code is now more critical than when it was invented. Institutional adoption, attention spans, and budgets are not the argument the chapter makes — the argument is about the economic shift in what skill is scarce.",

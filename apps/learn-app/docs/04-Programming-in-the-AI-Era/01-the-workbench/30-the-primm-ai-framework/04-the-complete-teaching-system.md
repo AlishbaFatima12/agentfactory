@@ -170,7 +170,7 @@ Here is what a typical lesson looks like when all the pieces work together. You 
 
 **Step 4: Modify.** You perform a modification task, changing the existing program to add a feature or alter its behavior. In classroom mode, the teacher may follow with a live-coding demonstration of a more advanced change. You write the modification yourself; AI evaluates it afterward.
 
-**Step 5: Make.** You write a specification first (AI-free), attempt the solution yourself, and use AI only for review, debugging, or targeted syntax help after your first attempt exists. This is Spec-Driven Development from Lesson 2 applied to your own programs.
+**Step 5: Make.** You write a specification first (AI-free), attempt the solution yourself, and use AI only for review, debugging, or targeted syntax help after your first attempt exists. This is Spec-Driven Development from Chapter 5 applied to your own programs.
 
 Notice the progression: **you understand before you change, and you change before you create.** Every step earns you the right to attempt the next one.
 
