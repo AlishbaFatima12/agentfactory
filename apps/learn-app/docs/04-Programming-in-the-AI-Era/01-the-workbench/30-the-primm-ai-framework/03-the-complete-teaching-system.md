@@ -28,7 +28,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Computational Thinking"
-    measurable_at_this_level: "Student can describe the six-step lesson sequence and recognize it when encountered in subsequent chapters"
+    measurable_at_this_level: "Student can describe the five-step lesson sequence and recognize it when encountered in subsequent chapters"
 
 learning_objectives:
   - objective: "Name the four teaching methods embedded in PRIMM-AI+ and explain where each fits in the learning sequence"
@@ -41,18 +41,18 @@ learning_objectives:
     bloom_level: "Remember"
     assessment_method: "Student states that this book is designed for solo mode and explains the key difference: structured AI interaction replaces human collaboration"
 
-  - objective: "Describe the six-step practical lesson architecture"
+  - objective: "Describe the five-step practical lesson architecture"
     proficiency_level: "A2"
     bloom_level: "Understand"
-    assessment_method: "Student lists the six steps in order and explains why prediction comes before running and specification comes before coding"
+    assessment_method: "Student lists the five steps in order and explains why prediction comes before running and specification comes before coding"
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (four embedded teaching methods as a group, classroom vs solo modes, the six-step lesson architecture) within A2 limit of 5-7"
+  assessment: "3 concepts (four embedded teaching methods as a group, classroom vs solo modes, the five-step lesson architecture) within A2 limit of 5-7"
 
 differentiation:
   extension_for_advanced: "Research Parsons problems further at parsons.problemsolving.io and analyze how they differ from traditional fill-in-the-blank code exercises."
-  remedial_for_struggling: "Focus on the six-step lesson architecture and the 'How Every Chapter Follows PRIMM-AI+' section. These two sections tell you exactly what to expect in every future chapter."
+  remedial_for_struggling: "Focus on the five-step lesson architecture and the 'How Every Chapter Follows PRIMM-AI+' section. These two sections tell you exactly what to expect in every future chapter."
 ---
 
 # The Complete Teaching and Learning System
@@ -158,21 +158,19 @@ Where it fits: **All stages.** In classroom mode, it happens naturally through p
 
 James has a question that every student asks: "What exactly happens when I open a lesson? What do I do first? What comes after that?"
 
-Emma walks him through it. "Every lesson follows the same six steps. Once you've done it twice, you'll stop thinking about the process and just focus on the code."
+Emma walks him through it. "Every lesson follows the same five steps — one for each PRIMM stage. Once you've done it twice, you'll stop thinking about the process and just focus on the code."
 
 Here is what a typical lesson looks like when all the pieces work together. You will recognize this pattern starting in Chapter 33.
 
-**Step 1: Worked Example and AI-Free Prediction.** The lesson presents a compact, complete program. You write your prediction and confidence score without AI assistance. This is the worked example method combined with the AI-free checkpoint from Lesson 2.
+**Step 1: Predict.** The lesson presents a compact, complete program (a worked example). You write your prediction and confidence score without AI assistance. This is the worked example method combined with the AI-free checkpoint from Lesson 2.
 
-**Step 2: Run and Compare.** You run the code and compare the output to your prediction. In classroom mode, you share predictions with a partner first (peer instruction). In solo mode, you commit your prediction to writing before executing. The prediction-reality gap drives learning regardless of mode.
+**Step 2: Run.** You run the code and compare the output to your prediction. In classroom mode, you share predictions with a partner first (peer instruction). In solo mode, you commit your prediction to writing before executing. The prediction-reality gap drives learning regardless of mode.
 
-**Step 3: Investigate with Artifacts.** You produce a trace table or line-by-line explanation. You discuss targeted questions -- with peers in classroom mode, or with your AI assistant in solo mode after your own first explanation. This is where the questioning partner role from Lesson 2 activates.
+**Step 3: Investigate.** You produce a trace table or line-by-line explanation. You discuss targeted questions -- with peers in classroom mode, or with your AI assistant in solo mode after your own first explanation. Some lessons include a Parsons problem here -- scrambled lines you reorder to confirm you understand the program's structure before moving on.
 
-**Step 4: Parsons Problem.** A Parsons problem closely related to the worked example tests structural understanding before free creation. If you can reorder scrambled lines correctly, you have internalized the program's logic -- not just recognized it.
+**Step 4: Modify.** You perform a modification task, changing the existing program to add a feature or alter its behavior. In classroom mode, the teacher may follow with a live-coding demonstration of a more advanced change. You write the modification yourself; AI evaluates it afterward.
 
-**Step 5: Modify.** You perform a modification task, changing the existing program to add a feature or alter its behavior. In classroom mode, the teacher may follow with a live-coding demonstration of a more advanced change. You write the modification yourself; AI evaluates it afterward.
-
-**Step 6: Make with Spec-Driven Development.** You write a specification first (AI-free), attempt the solution yourself, and use AI only for review, debugging, or targeted syntax help after your first attempt exists. This is the Make stage from Lesson 2 with the spec-before-code rule enforced.
+**Step 5: Make.** You write a specification first (AI-free), attempt the solution yourself, and use AI only for review, debugging, or targeted syntax help after your first attempt exists. This is Spec-Driven Development from Lesson 2 applied to your own programs.
 
 Notice the progression: **you understand before you change, and you change before you create.** Every step earns you the right to attempt the next one.
 
@@ -180,11 +178,11 @@ Notice the progression: **you understand before you change, and you change befor
 
 ## How Every Chapter Follows PRIMM-AI+
 
-"So every *lesson* follows those six steps," James says. "But what about the chapter as a whole? Is there a pattern there too?"
+"So every *lesson* follows those five steps," James says. "But what about the chapter as a whole? Is there a pattern there too?"
 
 "Same structure, bigger scale," Emma says. "A chapter opens with worked examples, moves through investigation lessons, bridges to modification exercises, and finishes with a capstone where you build something new. You'll never open a chapter wondering what to expect."
 
-The six-step sequence above is not just a lesson pattern -- it is the chapter pattern. Every chapter in Parts 4 and 5 maps to the same structure at a larger scale.
+The five-step sequence above is not just a lesson pattern -- it is the chapter pattern. Every chapter in Parts 4 and 5 maps to the same structure at a larger scale.
 
 | Chapter Element | PRIMM-AI+ Connection | What Happens |
 |----------------|----------------------|-------------|
@@ -212,7 +210,7 @@ You already use these methods informally — studying examples, tweaking code, b
 
 - Four teaching methods -- worked examples, Parsons problems, live coding, and peer instruction -- are embedded within PRIMM-AI+ stages, not added on top of them.
 - This book is designed for solo mode: you, the book, and your AI assistant. Classroom teachers add collaborative elements on top of the same structure.
-- Every lesson follows a six-step architecture: worked example with prediction, run and compare, investigate with artifacts, Parsons problem, modify, and make with specification.
+- Every lesson follows a five-step architecture that maps to the five PRIMM stages: predict (with worked example), run and compare, investigate (with artifacts and optional Parsons problems), modify, and make (with specification).
 - Every chapter follows the same pattern at a larger scale: opening worked examples, investigative lessons, structural bridges, modification exercises, and a make capstone.
 - The pattern is deliberate: you understand before you change, and you change before you create. No stage is skippable.
 
@@ -252,30 +250,29 @@ compare notes.
 
 **What you are learning:** Peer instruction in solo mode. By asking AI to share its own "prediction" and reasoning, you practice the compare-and-discuss step that makes peer instruction effective -- even when studying alone.
 
-### Prompt 3: Identify the Six Steps in a Lesson
+### Prompt 3: Walk Through All Five Steps
 
 ```
-I am learning about the six-step PRIMM-AI+ lesson architecture:
-1. Worked example with AI-free prediction
+I am learning about the five-step PRIMM-AI+ lesson architecture:
+1. Predict (with worked example, AI-free)
 2. Run and compare
-3. Investigate with artifacts
-4. Parsons problem
-5. Modify
-6. Make with specification
+3. Investigate (with artifacts)
+4. Modify
+5. Make (with specification)
 
 Show me a short Python program (4-6 lines, using only variables
-and print) and walk me through all six steps. At each step,
+and print) and walk me through all five steps. At each step,
 tell me which step we are on and what I should do. Start by
 showing the code and asking me to predict.
 ```
 
-**What you are learning:** How the six-step lesson architecture feels in practice. By experiencing all six steps with AI guiding the process, you will recognize the pattern immediately when you encounter it in Chapter 33 and beyond.
+**What you are learning:** How the five-step lesson architecture feels in practice. By experiencing all five steps with AI guiding the process, you will recognize the pattern immediately when you encounter it in Chapter 33 and beyond.
 
 ---
 
 ## Looking Ahead
 
-James sits back. In three lessons, he has gone from "what is PRIMM?" to knowing exactly how every lesson and every chapter in this book will work. The five stages. The nine enhancements. The four teaching methods. The six-step lesson architecture.
+James sits back. In three lessons, he has gone from "what is PRIMM?" to knowing exactly how every lesson and every chapter in this book will work. The five stages. The nine enhancements. The four teaching methods. The five-step lesson architecture.
 
 "I feel like I have a map now," he says.
 
