@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/management-accounting-grc-practice-lab
-sidebar_position: 14
+sidebar_position: 13
 title: "Management Accounting & GRC Practice Lab"
 description: "Four advanced exercises applying AI agents to management accounting and governance, risk and compliance — build a rolling cash flow forecast, automate board pack production, construct an enterprise risk register, and deploy automated regulatory compliance monitoring"
 keywords:
@@ -17,7 +17,7 @@ keywords:
     "CA/CPA practice lab",
   ]
 chapter: 19
-lesson: 14
+lesson: 13
 duration_minutes: 85
 
 # HIDDEN SKILLS METADATA
@@ -82,7 +82,7 @@ cognitive_load:
     - "COSO Enterprise Risk Management framework — five risk categories"
     - "Risk heat map — inherent vs residual risk visualisation"
     - "Risk-stratified compliance management — prioritising by penalty severity, not just deadline proximity"
-  assessment: "8 concepts at B1-B2 level. Students select 1-2 exercises from four, so effective cognitive load per session is 3-4 concepts. Prior lessons covered management accounting domain analysis (L05), GRC domain analysis (L06), plugin commands (L07), and IDFA methodology (Ch 18). This lab applies those foundations to complete professional deliverables."
+  assessment: "8 concepts at B1-B2 level. Students select 1-2 exercises from four, so effective cognitive load per session is 3-4 concepts. Prior lessons covered management accounting domain analysis (L05), GRC domain analysis (L06), plugin commands (L07), extension building (L08-L09), and IDFA methodology (Ch 18). This lab applies those foundations to complete professional deliverables."
 
 differentiation:
   extension_for_advanced: "Complete all four exercises. In Exercise 18, add a third stress scenario based on a specific business risk you identify. In Exercise 19, extend the board pack with a working capital dashboard slide. In Exercise 20, add an emerging risk analysis section. In Exercise 21, research and add the filing obligations for a second jurisdiction alongside Pakistan."
@@ -384,11 +384,10 @@ first, and why?
 
 **What you are learning:** Compliance risk prioritisation requires weighing financial penalties, reputational damage, and personal liability for officers. By ranking actual compliance failures by overall severity rather than chronological order, you develop the judgment to present compliance status to the Audit Committee in a way that focuses their attention on what matters most — not what happened most recently.
 
-
 ## Flashcards Study Aid
 
 <Flashcards />
 
 ---
 
-Continue to [Lesson 15: Cross-Domain Capstones →](./15-cross-domain-capstones.md)
+Continue to [Lesson 14: Cross-Domain Capstones →](./14-cross-domain-capstones.md)

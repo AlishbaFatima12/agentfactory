@@ -21,4 +21,4 @@ Tax and Non-Assurance Advisory splits into two distinct AI trajectories: tax com
 ### Connections
 
 - **Builds on**: Lesson 1's domain map and Lesson 2's pattern of drawing the human-AI judgment boundary per domain.
-- **Leads to**: Lesson 12's tax and advisory practice lab exercises, and Lesson 9's jurisdiction extensions for encoding specific tax legislation.
+- **Leads to**: Lesson 11's tax and advisory practice lab exercises, and Lesson 8's jurisdiction extensions for encoding specific tax legislation.

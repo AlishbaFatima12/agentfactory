@@ -1,83 +1,83 @@
 deck:
-  id: "ch19-13-assurance-practice-lab"
+  id: "ch19-12-assurance-practice-lab"
   title: "Assurance Practice Lab"
   description: "External audit programme with SOX-to-ISA conversion, continuous fraud detection monitoring, and internal audit report using 5-C structure"
   tags: ["ca-cpa", "practice-lab", "assurance", "sox", "isa-standards"]
   version: 1
-  lesson: 13
+  lesson: 12
   chapter: 19
 
 cards:
-  - id: "ch19-13-assurance-practice-lab-001"
+  - id: "ch19-12-assurance-practice-lab-001"
     front: "What are the three exercises in the Assurance Practice Lab?"
     back: "Exercise 15: External audit programme with /sox-testing (50 min). Exercise 16: Continuous transaction monitoring — fraud detection (45 min). Exercise 17: Internal audit report from working papers (40 min)."
     tags: ["lab-exercises", "overview"]
     difficulty: "basic"
 
-  - id: "ch19-13-assurance-practice-lab-002"
+  - id: "ch19-12-assurance-practice-lab-002"
     front: "What is the key difference between a SOX control test and an ISA substantive procedure?"
     back: "SOX control test: evaluates whether a specific internal control operates effectively (tests the control). ISA substantive procedure: tests whether a financial statement balance or disclosure is materially correct (tests the data)."
     tags: ["exercise-15", "sox-vs-isa", "audit-framework"]
     difficulty: "basic"
 
-  - id: "ch19-13-assurance-practice-lab-003"
+  - id: "ch19-12-assurance-practice-lab-003"
     front: "What is the 5-C structure for internal audit findings?"
     back: "Condition (what was found), Criteria (what should happen), Cause (why the gap exists), Consequence (what could happen), and Corrective action (what management agreed to do)."
     tags: ["exercise-17", "5-c-structure", "internal-audit"]
     difficulty: "basic"
 
-  - id: "ch19-13-assurance-practice-lab-004"
+  - id: "ch19-12-assurance-practice-lab-004"
     front: "In Exercise 16, what threshold calibration problem creates alert fatigue in fraud detection systems?"
     back: "Thresholds set too low flag too many exceptions — genuine fraud is dismissed alongside false positives. Thresholds too high miss real fraud. Only a professional who understands the business can calibrate this balance."
     tags: ["exercise-16", "alert-fatigue", "threshold-calibration"]
     difficulty: "intermediate"
 
-  - id: "ch19-13-assurance-practice-lab-005"
+  - id: "ch19-12-assurance-practice-lab-005"
     front: "What are the four internal audit risk rating levels in Exercise 17?"
     back: "Critical (immediate action, significant financial or reputational risk), High (prompt action), Medium (action within 90 days), Low (best practice improvement)."
     tags: ["exercise-17", "risk-ratings", "internal-audit"]
     difficulty: "basic"
 
-  - id: "ch19-13-assurance-practice-lab-006"
+  - id: "ch19-12-assurance-practice-lab-006"
     front: "Why is Exercise 15's Step 3 (SOX-to-ISA conversion) described as the most important step?"
     back: "The /sox-testing command produces technically competent output for the wrong framework. Recognising this mismatch and directing the agent to produce ISA substantive procedures — not control tests — is the professional judgment that distinguishes an expert from an operator."
     tags: ["exercise-15", "sox-to-isa-conversion", "professional-judgment"]
     difficulty: "intermediate"
     why: "What would happen in an ISA external audit if the auditor submitted SOX control testing documentation as substantive evidence?"
 
-  - id: "ch19-13-assurance-practice-lab-007"
+  - id: "ch19-12-assurance-practice-lab-007"
     front: "In Exercise 17, what finding has an inadequate management response and why is verbal CEO approval insufficient?"
     back: "The PKR 340,000 related party payment without documentation — management claims verbal CEO approval is sufficient. This is inadequate because it cannot be verified, creates reputational risk, and does not address the root cause (absence of documented authorisation process for related party transactions)."
     tags: ["exercise-17", "management-response", "related-party"]
     difficulty: "intermediate"
 
-  - id: "ch19-13-assurance-practice-lab-008"
+  - id: "ch19-12-assurance-practice-lab-008"
     front: "What five anomalies are seeded in Exercise 16's test data, and what fraud types do they represent?"
     back: "Two duplicate payments, one round-number payment to a new vendor, one payment just below approval threshold, and one payment to a vendor address matching an employee address — testing duplicate fraud, ghost vendor fraud, threshold manipulation, and vendor-employee collusion."
     tags: ["exercise-16", "seeded-anomalies", "fraud-types"]
     difficulty: "intermediate"
 
-  - id: "ch19-13-assurance-practice-lab-009"
+  - id: "ch19-12-assurance-practice-lab-009"
     front: "Why is evaluating management responses (Exercise 17, Step 3) the highest-value professional skill in internal audit reporting?"
     back: "The agent assesses responses against a checklist. BECAUSE the professional must judge whether the response addresses the root cause — and whether a proposed compensating control genuinely mitigates the risk or is a justification for the status quo."
     tags: ["exercise-17", "management-response-evaluation", "professional-judgment"]
     difficulty: "advanced"
     why: "What distinguishes a compensating control that genuinely mitigates a segregation of duties failure from one that merely documents it?"
 
-  - id: "ch19-13-assurance-practice-lab-010"
+  - id: "ch19-12-assurance-practice-lab-010"
     front: "What three revenue streams create distinct IFRS 15 performance obligations in Exercise 15?"
     back: "1. SaaS subscriptions: recognised monthly over subscription period. 2. Implementation services: percentage-of-completion basis. 3. Annual maintenance contracts: straight-line over contract period."
     tags: ["exercise-15", "ifrs-15", "revenue-recognition"]
     difficulty: "intermediate"
 
-  - id: "ch19-13-assurance-practice-lab-011"
+  - id: "ch19-12-assurance-practice-lab-011"
     front: "What overall audit opinion applies in Exercise 17, given one Critical finding with an inadequate management response?"
     back: "Unsatisfactory — a Critical finding where management's response does not adequately address the root cause warrants the highest severity opinion, signalling the board that significant control remediation is required."
     tags: ["exercise-17", "audit-opinion", "unsatisfactory"]
     difficulty: "intermediate"
     why: "How does the Audit Committee's response to an Unsatisfactory opinion differ from its response to Needs Improvement?"
 
-  - id: "ch19-13-assurance-practice-lab-012"
+  - id: "ch19-12-assurance-practice-lab-012"
     front: "What does ISA 240 provide for fraud risk identification in Exercise 16?"
     back: "ISA 240 (The Auditor's Responsibilities Relating to Fraud) provides the fraud risk framework — identifying fraud risks, assessing the potential for material misstatement due to fraud, and designing procedures to address identified risks."
     tags: ["exercise-16", "isa-240", "fraud-risk"]

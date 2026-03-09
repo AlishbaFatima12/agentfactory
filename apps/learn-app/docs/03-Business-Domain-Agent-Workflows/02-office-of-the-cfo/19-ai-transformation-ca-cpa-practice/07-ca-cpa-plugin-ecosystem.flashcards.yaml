@@ -1,8 +1,8 @@
 deck:
   id: "ch19-07-ca-cpa-plugin-ecosystem"
   title: "The CA/CPA Plugin Ecosystem"
-  description: "Cowork's four mechanisms, two-layer plugin architecture, five accounting commands, SOX Section 404, and month-end close workflows"
-  tags: ["ca-cpa", "plugins", "cowork", "knowledge-work-plugins", "financial-services-plugins"]
+  description: "Cowork's four mechanisms, two-layer plugin architecture, five accounting commands, SOX Section 404, month-end close workflows, cross-app orchestration, and global instructions"
+  tags: ["ca-cpa", "plugins", "cowork", "knowledge-work-plugins", "financial-services-plugins", "cross-app-orchestration", "global-instructions"]
   version: 1
   lesson: 7
   chapter: 19
@@ -89,3 +89,34 @@ cards:
     tags: ["income-statement-command", "ifrs", "pakistan"]
     difficulty: "intermediate"
     why: "What additional review step does a Pakistani CA perform on the /income-statement output that a US CPA would not?"
+
+  - id: "ch19-07-ca-cpa-plugin-ecosystem-014"
+    front: "How does the Cowork month-end close workflow compress the CA/CPA's total execution time?"
+    back: "From 7.5 hours of execution (reconciliations, journals, formatting, bridge) to 1 hour 45 minutes — mostly judgment and commentary."
+    tags: ["time-compression", "month-end-close"]
+    difficulty: "basic"
+
+  - id: "ch19-07-ca-cpa-plugin-ecosystem-015"
+    front: "What platform requirements are needed for cross-app Excel to PowerPoint orchestration in Cowork?"
+    back: "A paid plan (Pro, Max, Team, or Enterprise) on macOS or Windows with both Claude in Excel and Claude in PowerPoint installed. Cross-app is currently a research preview."
+    tags: ["cross-app-orchestration", "platform-requirements"]
+    difficulty: "basic"
+
+  - id: "ch19-07-ca-cpa-plugin-ecosystem-016"
+    front: "What six elements should a Cowork global instruction for a CA/CPA include?"
+    back: "Jurisdiction and regulatory bodies, reporting standards, reporting currency, financial year and reporting cycle, materiality threshold, variance analysis comparisons."
+    tags: ["global-instructions", "practice-context"]
+    difficulty: "intermediate"
+
+  - id: "ch19-07-ca-cpa-plugin-ecosystem-017"
+    front: "Why are global Cowork instructions more effective than specifying practice context in each session?"
+    back: "Global instructions persist across all sessions — ensuring jurisdiction, currency, reporting standards, and practice conventions apply to every workflow consistently without repeating them each time."
+    tags: ["global-instructions", "practice-context"]
+    difficulty: "basic"
+
+  - id: "ch19-07-ca-cpa-plugin-ecosystem-018"
+    front: "A cross-app workflow converts Excel P&L to a four-slide PowerPoint board update. What did this previously require vs what does it require now?"
+    back: "Previously: build Excel, export charts, manually format PowerPoint — an hour of skilled work. Now: a five-minute Cowork orchestration in natural language."
+    tags: ["cross-app-orchestration", "time-compression"]
+    difficulty: "intermediate"
+    why: "What quality control check should the CA/CPA perform on the AI-generated board slides before presenting to the board?"

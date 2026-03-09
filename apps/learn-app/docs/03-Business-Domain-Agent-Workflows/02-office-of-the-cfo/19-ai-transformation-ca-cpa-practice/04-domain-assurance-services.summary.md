@@ -21,4 +21,4 @@ Assurance services undergo an epistemological shift from sampling-based testing 
 ### Connections
 
 - **Builds on**: Lesson 1's domain map and the pattern established in Lessons 2-3 of identifying the human-AI boundary per domain.
-- **Leads to**: Lesson 13's assurance practice lab (audit programme generation, fraud detection, internal audit reporting) and Lesson 7's /sox-testing plugin command.
+- **Leads to**: Lesson 12's assurance practice lab (audit programme generation, fraud detection, internal audit reporting) and Lesson 7's /sox-testing plugin command.

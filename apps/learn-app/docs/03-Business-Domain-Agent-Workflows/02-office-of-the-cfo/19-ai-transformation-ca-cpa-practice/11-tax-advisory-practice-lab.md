@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/tax-advisory-practice-lab
-sidebar_position: 12
+sidebar_position: 11
 title: "Tax & Advisory Practice Lab"
 description: "Build three complete Cowork workflows for tax and advisory practice — corporate tax computation under Pakistan's ITO 2001, M&A financial due diligence with DCF and comparable company analysis, and restructuring scenario modelling across three creditor recovery scenarios"
 keywords:
@@ -19,7 +19,7 @@ keywords:
     "CA/CPA exercises",
   ]
 chapter: 19
-lesson: 12
+lesson: 11
 duration_minutes: 75
 
 # HIDDEN SKILLS METADATA
@@ -74,7 +74,7 @@ cognitive_load:
   assessment: "7 concepts across 3 exercises at B1-B2 level. Students select 1-2 exercises to complete fully. Exercise 12 (tax computation) is the most accessible starting point for practitioners with tax experience. Exercises 13 and 14 (due diligence and restructuring) require comfort with financial analysis concepts."
 
 differentiation:
-  extension_for_advanced: "After completing Exercise 12, adapt the tax computation for a second jurisdiction (US Form 1120 or UK CT600). Compare the workflow steps and identify which adjustments are jurisdiction-specific versus universal. Draft a jurisdiction-agnostic tax computation SKILL.md that handles the common steps and delegates jurisdiction-specific rules to extension files."
+  extension_for_advanced: "After completing Exercise 12, adapt the tax computation for a second jurisdiction (US Form 1120 or UK CT600). Compare the workflow steps and identify which adjustments are jurisdiction-specific versus universal. Draft a jurisdiction-agnostic tax computation skill that handles the common steps and delegates jurisdiction-specific rules to extension skills."
   remedial_for_struggling: "Start with Exercise 12 (tax computation). Focus on Steps 1-4 only — the accounting-to-taxable-income bridge and the tax liability calculation. These steps establish the core pattern of translating accounting data into a regulatory computation with statutory references. The remaining steps (advance tax credits, disclosure obligations) build on this foundation."
 
 teaching_guide:
@@ -91,7 +91,7 @@ teaching_guide:
     - "Students may take the DCF output at face value — the professional skill is in questioning the inputs (growth rate, WACC, terminal value) and understanding which assumptions drive the valuation range"
     - "Students may think restructuring modelling produces a 'right answer' — the three scenarios in Steps 2-4 are what makes the recommendation in Step 7 informed, not what makes it automatic"
   discussion_prompts:
-    - "In Exercise 12, the SKILL.md you write should encode your firm's risk appetite on arguable positions. What does 'risk appetite' mean in a tax computation context, and how would two different firms encode it differently?"
+    - "In Exercise 12, the skill you create should encode your firm's risk appetite on arguable positions. What does 'risk appetite' mean in a tax computation context, and how would two different firms encode it differently?"
     - "In Exercise 13, the quality of earnings analysis identifies items to adjust out of EBITDA. How does the choice of adjustments affect the implied acquisition multiple — and whose interest does each adjustment serve?"
   teaching_tips:
     - "Exercise 12 is Pakistan-specific by design — encourage students from other jurisdictions to note the structural similarities to their own tax computation process and identify which steps are universal"
@@ -110,7 +110,7 @@ teaching_guide:
 
 > _"The value of a tax computation tool is not in the arithmetic — it is in knowing which positions are arguable and what the consequences are if the authority challenges them."_
 
-In Lesson 11, you built workflows for accounting and financial reporting — bookkeeping, IFRS statements, month-end close automation, and consolidation. This practice lab shifts to the second CA/CPA domain: tax and non-assurance advisory. The exercises here are fundamentally different in character. Where accounting workflows follow standards that determine a single correct answer, tax and advisory workflows require you to make judgment calls about positions that are defensible but debatable.
+In Lesson 10, you built workflows for accounting and financial reporting — bookkeeping, IFRS statements, month-end close automation, and consolidation. This practice lab shifts to the second CA/CPA domain: tax and non-assurance advisory. The exercises here are fundamentally different in character. Where accounting workflows follow standards that determine a single correct answer, tax and advisory workflows require you to make judgment calls about positions that are defensible but debatable.
 
 These three exercises cover the full spectrum of Domain 2 practice: compliance (Exercise 12), transaction advisory (Exercise 13), and restructuring (Exercise 14). Each builds a complete Cowork workflow. Choose one or two to complete fully; review all three to understand the breadth of advisory workflows available to you.
 
@@ -225,17 +225,17 @@ income, (4) Tax computation, (5) Credits and payments,
 (6) Net tax payable/refundable, (7) Brought-forward loss schedule.
 ```
 
-**8. Write the jurisdiction SKILL.md.** Ask:
+**8. Create the jurisdiction skill.** Ask:
 
 ```
 Draft the core instructions for a Pakistan corporate tax computation
-SKILL.md. Cover: the six most common add-back items, the Section 113
+skill. Cover: the six most common add-back items, the Section 113
 minimum tax check, the final tax items that must be excluded from
 regular tax, and the conditions that require escalation to a senior
 tax professional.
 ```
 
-**Check your work:** Step 6 is the most professionally important step. Identifying positions that are arguable — and that a tax authority might challenge — is the judgment that no tax computation tool can make autonomously. Your SKILL.md should encode your firm's risk appetite on arguable positions, not just the mechanical computation rules.
+**Check your work:** Step 6 is the most professionally important step. Identifying positions that are arguable — and that a tax authority might challenge — is the judgment that no tax computation tool can make autonomously. Your skill should encode your firm's risk appetite on arguable positions, not just the mechanical computation rules.
 
 :::tip Global Perspective
 **Pakistan (ITO 2001)**: This exercise uses Pakistan's Income Tax Ordinance 2001 as the worked example — the jurisdiction-specific provisions (Section 21(l) entertainment, Section 56-57 loss carry-forward, Section 113 minimum tax) illustrate the pattern.
@@ -351,10 +351,10 @@ risk areas; (6) Key open items — questions to be answered before
 closing. Maximum 8 pages.
 ```
 
-**8. Write the DD SKILL.md.** Ask:
+**8. Create the DD skill.** Ask:
 
 ```
-Draft a SKILL.md for a financial due diligence agent. Include: the
+Draft a Cowork skill for a financial due diligence agent. Include: the
 standard quality of earnings adjustments to always test, the working
 capital normalisation methodology, the tax risk checklist items,
 and the three findings that would always cause a deal recommendation
@@ -551,11 +551,10 @@ dynamics between the parties.
 
 **What you are learning:** Restructuring recommendations are not determined by the numbers alone. The achievability of a scenario depends on creditor relationships, management credibility, and operational complexity — factors that no financial model captures. The model tells you what is possible; your judgment tells you what is achievable. This prompt forces you to articulate the difference.
 
-
 ## Flashcards Study Aid
 
 <Flashcards />
 
 ---
 
-Continue to [Lesson 13: Assurance Practice Lab →](./13-assurance-practice-lab.md)
+Continue to [Lesson 12: Assurance Practice Lab →](./12-assurance-practice-lab.md)

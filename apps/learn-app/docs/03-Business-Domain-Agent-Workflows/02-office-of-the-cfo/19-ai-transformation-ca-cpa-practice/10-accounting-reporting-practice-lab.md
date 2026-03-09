@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/accounting-reporting-practice-lab
-sidebar_position: 11
+sidebar_position: 10
 title: "Accounting & Reporting Practice Lab"
 description: "Build four complete Cowork workflows for accounting and financial reporting — autonomous bookkeeping from source documents, IFRS financial statements with full disclosure, scheduled month-end close automation, and multi-entity consolidation with intercompany elimination"
 keywords:
@@ -19,7 +19,7 @@ keywords:
     "CA/CPA exercises",
   ]
 chapter: 19
-lesson: 11
+lesson: 10
 duration_minutes: 90
 
 # HIDDEN SKILLS METADATA
@@ -87,7 +87,7 @@ cognitive_load:
   assessment: "8 concepts across 4 exercises at B1-B2 level. Students select 1-2 exercises to complete fully, reviewing all four. The lab format distributes cognitive load across self-selected exercises rather than requiring mastery of all 8 concepts in a single session."
 
 differentiation:
-  extension_for_advanced: "After completing any exercise, write a SKILL.md that encodes the workflow as a reusable agent instruction. Include the judgment boundaries — the conditions where the agent must escalate to a human rather than proceeding autonomously. Compare your SKILL.md to the reference implementation in the companion repo."
+  extension_for_advanced: "After completing any exercise, create a Cowork skill that encodes the workflow as a reusable agent instruction. Include the judgment boundaries — the conditions where the agent must escalate to a human rather than proceeding autonomously. Compare your skill to the reference implementation in the companion repo."
   remedial_for_struggling: "Start with Exercise 8 (bookkeeping). Focus on Steps 1-3 only — document classification, account mapping, and transaction register creation. These three steps establish the core pattern of directing Cowork through a structured workflow. Return to the remaining steps after the core pattern feels comfortable."
 
 teaching_guide:
@@ -123,7 +123,7 @@ teaching_guide:
 
 > _"A bookkeeping agent that never asks questions is one that is coding ambiguous transactions without flagging them. That is worse than asking."_
 
-In Lessons 7-10, you installed the plugin stack, walked through orchestrated workflows, and built jurisdiction and methodology extensions. Now you will put all of it to work. This practice lab contains four exercises that each build a complete Cowork workflow for a specific accounting and financial reporting process — from raw inputs to professional deliverables.
+In Lessons 7-9, you installed the plugin stack, walked through the plugin ecosystem, and built jurisdiction and methodology extensions. Now you will put all of it to work. This practice lab contains four exercises that each build a complete Cowork workflow for a specific accounting and financial reporting process — from raw inputs to professional deliverables.
 
 These are not quick demonstrations. Each exercise mirrors a real engagement: you direct Cowork through a multi-step process, review its output at judgment points, refine where needed, and produce a deliverable that a reviewing partner could assess. Choose one or two exercises to complete fully. Review all four to understand the range of workflows available to you.
 
@@ -225,7 +225,7 @@ and a trial balance extract for the accounts affected. Save to
 **Check your work:** Your transaction register should contain one row per transaction with balanced debits and credits. The trial balance extract should balance. At least one transaction should have been flagged for professional judgment in Step 7 — if none were flagged, your source documents may have been too straightforward. The value you provided was not in coding routine transactions — it was in answering the questions the agent could not answer for itself.
 
 :::tip Extension Exercise
-Add a second run with documents that include a transaction the agent is likely to mis-code — an owner's drawing that looks like an expense, or a deposit that might be revenue or a liability. Verify that the agent either codes it correctly or flags it for judgment. Write a SKILL.md instruction that resolves the ambiguity for your specific entity type.
+Add a second run with documents that include a transaction the agent is likely to mis-code — an owner's drawing that looks like an expense, or a deposit that might be revenue or a liability. Verify that the agent either codes it correctly or flags it for judgment. Write a skill instruction that resolves the ambiguity for your specific entity type.
 :::
 
 ---
@@ -561,10 +561,10 @@ produced for each of those errors. If any are present, identify
 and correct them.
 ```
 
-**8. Write the consolidation SKILL.md.** Ask:
+**8. Create the consolidation skill.** Ask:
 
 ```
-Draft a SKILL.md for a consolidation agent that will perform this
+Draft a Cowork skill for a consolidation agent that will perform this
 intercompany elimination process every period. Include: the data
 inputs required (trial balances per entity, intercompany transaction
 schedule), the four elimination types (investment, loans, trading,
@@ -604,7 +604,7 @@ the consequence would be if the agent coded it incorrectly.
 Rank them from most to least consequential.
 ```
 
-**What you are learning:** The value of an autonomous bookkeeping workflow is not in the routine transactions it codes correctly — it is in the boundary where routine ends and judgment begins. By mapping the judgment boundaries specific to your client types, you are building the exception rules that would make your bookkeeping SKILL.md genuinely useful rather than generically adequate.
+**What you are learning:** The value of an autonomous bookkeeping workflow is not in the routine transactions it codes correctly — it is in the boundary where routine ends and judgment begins. By mapping the judgment boundaries specific to your client types, you are building the exception rules that would make your bookkeeping skill genuinely useful rather than generically adequate.
 
 ### Prompt 2: Exception Threshold Calibration
 
@@ -652,11 +652,10 @@ elimination specifically, explain:
 
 **What you are learning:** Consolidation verification requires you to think beyond the mechanics of the current period. The unrealised profit elimination reverses the following year — meaning a consolidation error in one period compounds in the next. Understanding this temporal dimension is what separates a CA/CPA reviewing consolidated statements from a bookkeeper applying rules to a single period.
 
-
 ## Flashcards Study Aid
 
 <Flashcards />
 
 ---
 
-Continue to [Lesson 12: Tax & Advisory Practice Lab →](./12-tax-advisory-practice-lab.md)
+Continue to [Lesson 11: Tax & Advisory Practice Lab →](./11-tax-advisory-practice-lab.md)
