@@ -49,16 +49,7 @@ export default function Footer() {
                 className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground"
                 asChild
               >
-                <Link to="https://github.com/panaversity/ai-native-software-development/tree/main/specs">
-                  Specification
-                </Link>
-              </Button>
-              <Button
-                variant="link"
-                className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground"
-                asChild
-              >
-                <Link to="https://github.com/panaversity">Projects</Link>
+                <Link to="/factory">Factory Dashboard</Link>
               </Button>
               <Button
                 variant="link"
