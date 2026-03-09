@@ -246,7 +246,7 @@ Emma nods. "Fair enough. Let's do a full PRIMM-AI+ cycle together — start to f
 Here is what a single PRIMM-AI+ lesson looks like end-to-end, using a concrete Python program. This example uses only variables and `print` -- the same building blocks you saw in Lesson 1.
 
 ```python
-name: str = "Amara"
+name: str = "Sarah"
 subject: str = "Python"
 score: int = 95
 result: str = name + " scored " + str(score) + " in " + subject
@@ -258,8 +258,8 @@ print(name + " passed!")
 
 Before running anything, answer these questions on paper or in a note:
 
-- What will the first `print` statement output? Look at how `result` is built: it joins `name`, the text `" scored "`, the score converted to text with `str(score)`, `" in "`, and `subject`. So: `Amara scored 95 in Python`.
-- What will the second `print` statement output? It joins `name` with `" passed!"`. So: `Amara passed!`.
+- What will the first `print` statement output? Look at how `result` is built: it joins `name`, the text `" scored "`, the score converted to text with `str(score)`, `" in "`, and `subject`. So: `Sarah scored 95 in Python`.
+- What will the second `print` statement output? It joins `name` with `" passed!"`. So: `Sarah passed!`.
 - What does `str(score)` do? The score is an `int` (a number). The `+` operator joins text, not numbers. `str(score)` converts the number `95` into the text `"95"` so it can be joined with the other strings.
 
 **Confidence score:** Rate yourself 1-5. Write it down next to your prediction.
@@ -271,8 +271,8 @@ Before running anything, answer these questions on paper or in a note:
 Execute the program (ask your AI assistant to run it, or run it directly when you have Python set up later). Here is the output:
 
 ```
-Amara scored 95 in Python
-Amara passed!
+Sarah scored 95 in Python
+Sarah passed!
 ```
 
 Compare your predictions. Did you get both lines right? Did you understand why `str(score)` was needed? If your predictions matched, your mental model is accurate for this pattern. If they diverged, you have specific questions for the next stage.
@@ -285,7 +285,7 @@ First, write your own explanation of how the program works. Even a rough version
 
 Now probe the mechanics. Focus on whatever surprised you during Run. Ask your AI assistant targeted questions:
 
-- *"Trace through this program and show me the value of each variable after every line."* -- The AI returns a trace table. Verify it yourself: after line 4, `result` should hold `"Amara scored 95 in Python"`.
+- *"Trace through this program and show me the value of each variable after every line."* -- The AI returns a trace table. Verify it yourself: after line 4, `result` should hold `"Sarah scored 95 in Python"`.
 - *"What happens if I remove `str()` and write `name + " scored " + score` instead?"* -- Explore the error. Python cannot join a string and an integer with `+`. Understanding *why* `str()` is needed is the key insight.
 - *"What if `name` is an empty string?"* -- Test the edge case. The output would be `" scored 95 in Python"` -- a sentence with no name but the spaces still appear.
 
@@ -297,7 +297,7 @@ Each question sharpens your understanding of how the program behaves under diffe
 
 Change the program yourself. Two challenges:
 
-**Challenge A:** Change the format so the output reads `Python: Amara scored 95` instead -- subject first, then name, then score.
+**Challenge A:** Change the format so the output reads `Python: Sarah scored 95` instead -- subject first, then name, then score.
 
 **Challenge B:** Add a third print line that shows just the score by itself: `Score: 95`.
 
@@ -307,7 +307,7 @@ After you write your modifications, show both versions to your AI assistant and 
 
 ### Stage 5: Make [AI-FREE start]
 
-Build something new. Write a specification first -- without AI: *"Create a program that stores a person's name, city, and age, then prints a profile line like 'Amara lives in Karachi, age 25' and a second line that says 'Welcome, Amara!'"*
+Build something new. Write a specification first -- without AI: *"Create a program that stores a person's name, city, and age, then prints a profile line like 'Sarah lives in London, age 25' and a second line that says 'Welcome, Sarah!'"*
 
 **Mastery gate check:** Do you have a written specification? If yes, implement it.
 

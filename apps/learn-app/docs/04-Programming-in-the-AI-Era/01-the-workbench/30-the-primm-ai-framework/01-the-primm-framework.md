@@ -116,7 +116,7 @@ James leans in. "What if I don't know Python yet?"
 Read the following program. Do not run it. Do not scroll past it. Do not ask your AI assistant. Stop and predict what it will print.
 
 ```python
-name: str = "Amara"
+name: str = "Sarah"
 greeting: str = "Welcome to the Agent Factory"
 message: str = greeting + ", " + name + "!"
 print(message)
@@ -139,7 +139,7 @@ This program has four lines. Even if you have never seen Python before, you can 
 **What happens in your brain when you predict:**
 
 1. **Reading the structure.** You see three lines that store values (`name`, `greeting`, `message`) and one line that prints something. The word `str` after each colon tells you these values are text.
-2. **Reasoning about sequence.** The program runs top to bottom. First it stores `"Amara"`, then it stores `"Welcome to the Agent Factory"`, then it glues them together with `+`, then it prints the result.
+2. **Reasoning about sequence.** The program runs top to bottom. First it stores `"Sarah"`, then it stores `"Welcome to the Agent Factory"`, then it glues them together with `+`, then it prints the result.
 3. **Building a mental model.** You construct a picture: the program will print one line that combines the greeting with the name.
 4. **Committing to an answer.** You write down (or say aloud) what you think the output will be. This commitment is critical -- a vague sense of "it probably prints a greeting" is not a prediction. A prediction is specific and checkable — you can prove it right or wrong.
 
@@ -147,14 +147,14 @@ Write your prediction now before reading further.
 
 ### Stage 2: Run
 
-James writes his prediction on a sticky note: `Welcome to the Agent Factory, Amara!` — confidence score 4. He is fairly sure, but the comma placement makes him hesitate. Time to find out.
+James writes his prediction on a sticky note: `Welcome to the Agent Factory, Sarah!` — confidence score 4. He is fairly sure, but the comma placement makes him hesitate. Time to find out.
 
 Here is the actual output:
 
 **Output:**
 
 ```
-Welcome to the Agent Factory, Amara!
+Welcome to the Agent Factory, Sarah!
 ```
 
 Compare your prediction to the actual result. Three outcomes are possible:
@@ -173,7 +173,7 @@ James got the output right. "Great, I understand it. Next stage?"
 
 Investigation means probing the code to build deeper understanding. Here are the kinds of questions you ask:
 
-**Tracing variables.** What is the value of `name`? It is `"Amara"`. What is `greeting`? It is `"Welcome to the Agent Factory"`. What is `message`? It is the result of joining greeting, a comma and space, the name, and an exclamation mark. **Tracing forces you to simulate the computer's execution in your head -- the single most important skill in programming.**
+**Tracing variables.** What is the value of `name`? It is `"Sarah"`. What is `greeting`? It is `"Welcome to the Agent Factory"`. What is `message`? It is the result of joining greeting, a comma and space, the name, and an exclamation mark. **Tracing forces you to simulate the computer's execution in your head -- the single most important skill in programming.**
 
 **Testing edge cases.** What happens if `name` is an empty string `""`? The `+` operator still joins the pieces together, so the output would be `Welcome to the Agent Factory, !` -- a greeting with no name but the comma and exclamation mark still appear. Understanding this teaches you that `+` does not "know" what makes sense. It glues text together exactly as told.
 
@@ -182,7 +182,7 @@ Investigation means probing the code to build deeper understanding. Here are the
 ```
 I am reading a Python program with these lines:
 
-name: str = "Amara"
+name: str = "Sarah"
 greeting: str = "Welcome to the Agent Factory"
 message: str = greeting + ", " + name + "!"
 print(message)
@@ -192,7 +192,7 @@ name + ", " + greeting instead of greeting + ", " + name?
 What would the output look like?
 ```
 
-Your AI assistant will explain that the output would become `Amara, Welcome to the Agent Factory!` -- the name comes first because `+` joins text in the order you write it. But here is the critical rule of investigation:
+Your AI assistant will explain that the output would become `Sarah, Welcome to the Agent Factory!` -- the name comes first because `+` joins text in the order you write it. But here is the critical rule of investigation:
 
 **Verify every AI explanation by running the code yourself.** The AI might be wrong. It might be right but imprecise. The only way to know is to run the experiment. **Investigation is not about getting answers -- it is about building the habit of questioning and verifying.**
 
@@ -206,7 +206,7 @@ James hesitates. "What if I break it?"
 
 Modification requires understanding *where* to change code and *what* the change will do. Each task below demands a little more comprehension than the last.
 
-**Change the name.** Replace `"Amara"` with your own name. Predict what the output will be, then run it. This is the simplest modification -- you change one value and the rest follows.
+**Change the name.** Replace `"Sarah"` with your own name. Predict what the output will be, then run it. This is the simplest modification -- you change one value and the rest follows.
 
 **Change the greeting.** Replace `"Welcome to the Agent Factory"` with `"Hello from SmartNotes"`. Predict the new output. Now you are changing a different piece and watching how it flows through to the final message.
 
@@ -220,7 +220,7 @@ James managed both modifications. The greeting now says "Hello from SmartNotes, 
 
 "Now you're ready," Emma says. "But start by writing down *what* you want to build before you write *how*."
 
-Now -- and only now -- you write a new program from scratch. The goal is a **project badge** that stores a person's name and role, then prints a formatted badge line like `Amara - Team Lead`. The process:
+Now -- and only now -- you write a new program from scratch. The goal is a **project badge** that stores a person's name and role, then prints a formatted badge line like `Sarah - Team Lead`. The process:
 
 1. **Write a specification first.** Before touching code, describe what the program should do: "Given a name and a role, print them on one line separated by a dash."
 
@@ -305,7 +305,7 @@ any differences. Then ask me one investigation question about the code.
 ```
 I am practicing the Investigate stage of PRIMM. Here is a program:
 
-name: str = "Amara"
+name: str = "Sarah"
 greeting: str = "Welcome to the Agent Factory"
 message: str = greeting + ", " + name + "!"
 print(message)
@@ -329,7 +329,7 @@ For each one, explain WHY the output is what it is.
 ```
 Here is a simple Python program:
 
-name: str = "Amara"
+name: str = "Sarah"
 greeting: str = "Welcome to the Agent Factory"
 message: str = greeting + ", " + name + "!"
 print(message)
