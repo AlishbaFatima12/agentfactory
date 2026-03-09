@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/jurisdiction-entity-extensions
-sidebar_position: 9
+sidebar_position: 8
 title: "Building Jurisdiction and Entity Extensions"
 description: "Build two domain extensions that transform generic finance plugins into jurisdiction-aware, entity-specific agents — encoding tax rules, filing deadlines, chart of accounts structures, and documentation requirements as standing SKILL.md instructions"
 keywords:
@@ -17,7 +17,7 @@ keywords:
     "institutional knowledge",
   ]
 chapter: 19
-lesson: 9
+lesson: 8
 duration_minutes: 30
 
 # HIDDEN SKILLS METADATA
@@ -67,7 +67,7 @@ cognitive_load:
     - "Chart of accounts extension structure — mapping account codes, categories, documentation requirements"
     - "Standing instruction format — 'When [condition], [action]' as the building block of domain extensions"
     - "Extension activation triggers — writing description fields that control when the agent applies institutional knowledge"
-  assessment: "5 concepts at B1 level — within the 7-10 cognitive limit for this tier. Students enter from L08 with working knowledge of Cowork workflows and plugin commands; this lesson shifts from using plugins to extending them with institutional knowledge."
+  assessment: "5 concepts at B1 level — within the 7-10 cognitive limit for this tier. Students enter from L07 with working knowledge of the plugin ecosystem and plugin commands; this lesson shifts from using plugins to extending them with institutional knowledge."
 
 differentiation:
   extension_for_advanced: "Write a third extension that combines jurisdiction and entity knowledge — a client-specific tax extension that applies the jurisdiction rules but adjusts for entity-specific exemptions, deductions, or special tax treatments. Identify three scenarios where the combined extension would produce different output than either extension alone."
@@ -104,7 +104,7 @@ teaching_guide:
 
 > _"The difference between a tool that assists generic accounting work and an agent that performs as a competent member of your specific team is institutional knowledge — and institutional knowledge lives in extensions."_
 
-In Lesson 8, you walked through a complete month-end close as a Cowork workflow — scheduling reconciliations, generating management accounts, and producing board-ready presentations. The plugins executed every step correctly. But every output used generic account descriptions, default IFRS treatments, and standard formatting. If you ran that workflow against your actual client's data, the first thing you would do is manually recode the journal entries to match your chart of accounts. The second thing would be correcting the tax computations for your jurisdiction. The third would be adding the documentation your firm requires for each account type.
+In Lesson 7, you walked through the CA/CPA plugin ecosystem — scheduling reconciliations, generating management accounts, and producing board-ready presentations. The plugins executed every step correctly. But every output used generic account descriptions, default IFRS treatments, and standard formatting. If you ran that workflow against your actual client's data, the first thing you would do is manually recode the journal entries to match your chart of accounts. The second thing would be correcting the tax computations for your jurisdiction. The third would be adding the documentation your firm requires for each account type.
 
 That manual correction work is the institutional knowledge gap. The plugins know accounting. They do not know _your_ accounting. This lesson closes that gap for two of the five extension types that transform a generic finance agent into a jurisdiction-aware, entity-specific member of your team.
 
@@ -406,11 +406,10 @@ handle — then write an additional instruction to cover that case.
 
 **What you are learning:** Chart of accounts extensions must be comprehensive enough to eliminate manual recoding but not so exhaustive that they become unmaintainable. By drafting five mappings, two documentation rules, and one restricted account — then immediately stress-testing for edge cases — you learn the practical balance between coverage and complexity that makes extensions sustainable in real practice.
 
-
 ## Flashcards Study Aid
 
 <Flashcards />
 
 ---
 
-Continue to [Lesson 10: Building Methodology and Compliance Extensions →](./10-methodology-compliance-extensions.md)
+Continue to [Lesson 9: Building Methodology and Compliance Extensions →](./09-methodology-compliance-extensions.md)

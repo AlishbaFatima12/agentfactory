@@ -20,5 +20,5 @@ Four exercises span management accounting and GRC: a rolling 13-week cash flow f
 
 ### Connections
 
-- **Builds on**: Lesson 5's management accounting domain, Lesson 6's GRC domain, Lesson 7's plugin commands, Chapter 18's IDFA methodology, and Lesson 10's compliance calendar extension.
-- **Leads to**: Lesson 15's cross-domain capstones and Lesson 16's full practice deployment that integrates all domains into a single functioning system.
+- **Builds on**: Lesson 5's management accounting domain, Lesson 6's GRC domain, Lesson 7's plugin commands, Chapter 18's IDFA methodology, and Lesson 9's compliance calendar extension.
+- **Leads to**: Lesson 14's cross-domain capstones and Lesson 15's full practice deployment that integrates all domains into a single functioning system.

@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/tax-advisory-practice-lab
-sidebar_position: 12
+sidebar_position: 11
 title: "Tax & Advisory Practice Lab"
 description: "Build three complete Cowork workflows for tax and advisory practice — corporate tax computation under Pakistan's ITO 2001, M&A financial due diligence with DCF and comparable company analysis, and restructuring scenario modelling across three creditor recovery scenarios"
 keywords:
@@ -19,7 +19,7 @@ keywords:
     "CA/CPA exercises",
   ]
 chapter: 19
-lesson: 12
+lesson: 11
 duration_minutes: 75
 
 # HIDDEN SKILLS METADATA
@@ -110,7 +110,7 @@ teaching_guide:
 
 > _"The value of a tax computation tool is not in the arithmetic — it is in knowing which positions are arguable and what the consequences are if the authority challenges them."_
 
-In Lesson 11, you built workflows for accounting and financial reporting — bookkeeping, IFRS statements, month-end close automation, and consolidation. This practice lab shifts to the second CA/CPA domain: tax and non-assurance advisory. The exercises here are fundamentally different in character. Where accounting workflows follow standards that determine a single correct answer, tax and advisory workflows require you to make judgment calls about positions that are defensible but debatable.
+In Lesson 10, you built workflows for accounting and financial reporting — bookkeeping, IFRS statements, month-end close automation, and consolidation. This practice lab shifts to the second CA/CPA domain: tax and non-assurance advisory. The exercises here are fundamentally different in character. Where accounting workflows follow standards that determine a single correct answer, tax and advisory workflows require you to make judgment calls about positions that are defensible but debatable.
 
 These three exercises cover the full spectrum of Domain 2 practice: compliance (Exercise 12), transaction advisory (Exercise 13), and restructuring (Exercise 14). Each builds a complete Cowork workflow. Choose one or two to complete fully; review all three to understand the breadth of advisory workflows available to you.
 
@@ -551,11 +551,10 @@ dynamics between the parties.
 
 **What you are learning:** Restructuring recommendations are not determined by the numbers alone. The achievability of a scenario depends on creditor relationships, management credibility, and operational complexity — factors that no financial model captures. The model tells you what is possible; your judgment tells you what is achievable. This prompt forces you to articulate the difference.
 
-
 ## Flashcards Study Aid
 
 <Flashcards />
 
 ---
 
-Continue to [Lesson 13: Assurance Practice Lab →](./13-assurance-practice-lab.md)
+Continue to [Lesson 12: Assurance Practice Lab →](./12-assurance-practice-lab.md)

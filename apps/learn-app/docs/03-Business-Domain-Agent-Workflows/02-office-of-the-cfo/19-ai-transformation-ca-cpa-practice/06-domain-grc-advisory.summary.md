@@ -21,4 +21,4 @@ Governance, Risk, and Compliance (GRC) advisory is the CA/CPA domain most resili
 ### Connections
 
 - **Builds on**: Lessons 2-5's pattern of mapping human-AI boundaries per domain, completing the five-domain survey.
-- **Leads to**: Lesson 14's GRC practice lab (risk registers, compliance calendars) and Lesson 10's regulatory compliance extensions for encoding jurisdiction-specific requirements.
+- **Leads to**: Lesson 13's GRC practice lab (risk registers, compliance calendars) and Lesson 9's regulatory compliance extensions for encoding jurisdiction-specific requirements.

@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/assurance-practice-lab
-sidebar_position: 13
+sidebar_position: 12
 title: "Assurance Practice Lab"
 description: "Three advanced exercises applying AI agents to assurance services — build a full external audit programme, deploy continuous fraud detection monitoring, and produce an internal audit report from working papers"
 keywords:
@@ -17,7 +17,7 @@ keywords:
     "CA/CPA practice lab",
   ]
 chapter: 19
-lesson: 13
+lesson: 12
 duration_minutes: 70
 
 # HIDDEN SKILLS METADATA
@@ -69,7 +69,7 @@ cognitive_load:
     - "Escalation threshold calibration — balancing detection sensitivity with alert fatigue"
     - "5-C finding structure — Condition, Criteria, Cause, Consequence, Corrective action"
     - "Internal audit opinion formation — Satisfactory, Needs Improvement, Unsatisfactory"
-  assessment: "7 concepts at B1-B2 level. Students select 1-2 exercises from three, so effective cognitive load per session is 3-4 concepts. Prior lessons covered audit domain analysis (L04), plugin commands (L07), and workflow patterns (L08). This lab applies those foundations to complete professional deliverables."
+  assessment: "7 concepts at B1-B2 level. Students select 1-2 exercises from three, so effective cognitive load per session is 3-4 concepts. Prior lessons covered audit domain analysis (L04), plugin commands (L07), and extension building (L08-L09). This lab applies those foundations to complete professional deliverables."
 
 differentiation:
   extension_for_advanced: "Complete all three exercises. In Exercise 15, extend the audit programme to cover a second financial statement area (e.g., trade receivables or inventory). In Exercise 16, design an additional detection rule for a fraud scheme not covered in the ISA 240 brainstorm. In Exercise 17, draft a management letter addressing systemic control weaknesses."
@@ -109,7 +109,7 @@ teaching_guide:
 
 > _"The value of an audit is not in the procedures performed. It is in the judgment applied to what the procedures reveal."_
 
-In Lesson 4, you mapped the assurance domain across the Gen-AI and Agentic AI spectrum — understanding how AI transforms external audit, internal audit, and other assurance services. In Lessons 7 and 8, you installed the finance plugins and walked through Cowork workflows. Now you will apply those tools to three complete assurance engagements that test where AI executes reliably and where your professional judgment remains irreplaceable.
+In Lesson 4, you mapped the assurance domain across the Gen-AI and Agentic AI spectrum — understanding how AI transforms external audit, internal audit, and other assurance services. In Lesson 7, you installed the finance plugins and explored the plugin ecosystem. Now you will apply those tools to three complete assurance engagements that test where AI executes reliably and where your professional judgment remains irreplaceable.
 
 This lab contains three exercises. Each builds a complete professional deliverable: an external audit programme, a continuous fraud detection system, and an internal audit report. Choose one or two exercises to complete fully. Review all three to understand the range of assurance work that AI agents can support — and the professional boundaries they cannot cross.
 
@@ -330,11 +330,10 @@ to a board that expects clear, direct communication.
 
 **What you are learning:** Forming an audit opinion is the highest-value professional judgment in internal audit. The agent can summarise findings and draft language — but the opinion itself requires weighing the severity of findings against the adequacy of management responses and the organisation's risk appetite. This prompt helps you practise the judgment that distinguishes a competent auditor from a mechanical report writer.
 
-
 ## Flashcards Study Aid
 
 <Flashcards />
 
 ---
 
-Continue to [Lesson 14: Management Accounting & GRC Practice Lab →](./14-management-accounting-grc-practice-lab.md)
+Continue to [Lesson 13: Management Accounting & GRC Practice Lab →](./13-management-accounting-grc-practice-lab.md)

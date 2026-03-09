@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/cross-domain-capstones
-sidebar_position: 15
+sidebar_position: 14
 title: "Cross-Domain Capstones"
 description: "Integrate all five CA/CPA practice domains in two capstone exercises — a full new client onboarding workflow and a three-session annual audit cycle from planning through to the audit opinion"
 keywords:
@@ -27,7 +27,7 @@ keywords:
     "cross-domain workflow",
   ]
 chapter: 19
-lesson: 15
+lesson: 14
 duration_minutes: 75
 
 # HIDDEN SKILLS METADATA
@@ -77,7 +77,7 @@ cognitive_load:
     - "Multi-session exercise with session boundaries (planning/fieldwork/completion)"
     - "Audit opinion formation as professional judgment (ISA 700)"
     - "AI-augmented practice narrative for client communication"
-  assessment: "5 concepts at B2 level. Students arrive having completed all five domain lessons (L02-L06), all plugin and workflow lessons (L07-L10), and four practice labs (L11-L14). No new tools or capabilities are introduced — these capstones integrate what students already know. The cognitive challenge is orchestration across domains, not learning new material."
+  assessment: "5 concepts at B2 level. Students arrive having completed all five domain lessons (L02-L06), all plugin and extension lessons (L07-L09), and four practice labs (L10-L13). No new tools or capabilities are introduced — these capstones integrate what students already know. The cognitive challenge is orchestration across domains, not learning new material."
 
 differentiation:
   extension_for_advanced: "After completing Exercise 23, compare your audit opinion to the ISA 700 illustrative examples in the Handbook of International Quality Management, Auditing, Review, Other Assurance, and Related Services Pronouncements. Identify which paragraphs of your draft would need modification if the financial statements contained a material misstatement that management refused to correct. Draft the modified opinion paragraph for a qualified opinion under ISA 705."
@@ -88,7 +88,7 @@ teaching_guide:
   session_group: 5
   session_title: "Cross-Domain Integration"
   key_points:
-    - "These capstones are integration exercises, not new material — every capability used here was taught in L02-L14"
+    - "These capstones are integration exercises, not new material — every capability used here was taught in L02-L13"
     - "Exercise 22 tests breadth (all 5 domains in one workflow); Exercise 23 tests depth (one domain — assurance — across the full engagement lifecycle)"
     - "The multi-session structure of Exercise 23 mirrors real audit practice where planning, fieldwork, and completion are distinct phases separated by days or weeks"
     - "The professional judgment boundary is the thread connecting both exercises — in Exercise 22 it is engagement acceptance; in Exercise 23 it is the audit opinion"
@@ -114,7 +114,7 @@ teaching_guide:
 
 > _"The engagement partner who signs the audit opinion carries the professional liability for every judgment in the file. AI produces the evidence. The CA/CPA forms the conclusion."_
 
-In Lessons 11 through 14, you worked through domain-specific practice labs — building workflows for accounting and reporting, tax and advisory, assurance, management accounting, and GRC. Each lab exercised capabilities within a single domain. Real CA/CPA practice does not operate in silos. A new client engagement touches every domain simultaneously: you assess risk (assurance), review the financials (accounting), scope tax advisory, evaluate governance, and plan management reporting — all before the engagement letter is signed.
+In Lessons 10 through 13, you worked through domain-specific practice labs — building workflows for accounting and reporting, tax and advisory, assurance, management accounting, and GRC. Each lab exercised capabilities within a single domain. Real CA/CPA practice does not operate in silos. A new client engagement touches every domain simultaneously: you assess risk (assurance), review the financials (accounting), scope tax advisory, evaluate governance, and plan management reporting — all before the engagement letter is signed.
 
 These two capstone exercises test your ability to integrate across all five domains. Exercise 22 tests breadth — connecting every domain in a single new client onboarding workflow. Exercise 23 tests depth — running the complete annual audit cycle from planning through to the signed opinion across three study sessions. Together, they represent the culmination of every capability you have built in this chapter.
 
@@ -246,7 +246,7 @@ Draft the following SKILL.md extensions for this client:
     rates applicable to export proceeds
 ```
 
-**What this draws on:** The extension-building methodology (Lessons 9-10) and domain knowledge from Lessons 2-6.
+**What this draws on:** The extension-building methodology (Lessons 8-9) and domain knowledge from Lessons 2-6.
 
 ### Step 7 — Create the Engagement File Structure
 
@@ -541,11 +541,10 @@ cannot replace.
 
 **What you are learning:** The professional judgment boundary is not abstract — it is specific to each workflow. By analysing your own exercise output, you map exactly where AI execution ends and professional responsibility begins. The critical insight is that professional liability attaches to judgment decisions, not execution steps. Understanding this boundary is how you articulate your value proposition in an AI-augmented practice.
 
-
 ## Flashcards Study Aid
 
 <Flashcards />
 
 ---
 
-Continue to [Lesson 16: Full Practice Deployment and Reflection →](./16-full-practice-deployment-reflection.md)
+Continue to [Lesson 15: Full Practice Deployment and Reflection →](./15-full-practice-deployment-reflection.md)

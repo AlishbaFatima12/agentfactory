@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/methodology-compliance-extensions
-sidebar_position: 10
+sidebar_position: 9
 title: "Building Methodology and Compliance Extensions"
 description: "Build three domain extensions that encode audit methodology standards, client-specific entity knowledge, and regulatory compliance calendars — completing the five-extension architecture that transforms generic finance plugins into a practice-ready CA/CPA agent"
 keywords:
@@ -17,7 +17,7 @@ keywords:
     "escalation rules",
   ]
 chapter: 19
-lesson: 10
+lesson: 9
 duration_minutes: 45
 
 # HIDDEN SKILLS METADATA
@@ -81,7 +81,7 @@ cognitive_load:
     - "Regulatory compliance calendar encoding — deadlines, lead times, information checklists, penalties"
     - "Compliance monitoring automation — combining calendar extensions with Cowork scheduled tasks"
     - "Method A interview framework application — systematic extraction of tacit knowledge for extensions"
-  assessment: "7 concepts at B1 level — within the 7-10 cognitive limit for this tier. Students have built two extensions in L09 and understand the 'When [condition], [action]' format. This lesson applies the same pattern to three new extension types and introduces the Method A connection for systematic knowledge extraction."
+  assessment: "7 concepts at B1 level — within the 7-10 cognitive limit for this tier. Students have built two extensions in L08 and understand the 'When [condition], [action]' format. This lesson applies the same pattern to three new extension types and introduces the Method A connection for systematic knowledge extraction."
 
 differentiation:
   extension_for_advanced: "Design a compliance monitoring workflow that combines the compliance calendar extension with Cowork scheduled tasks: the agent runs weekly, checks each upcoming deadline against the calendar, confirms the required information is available, and generates a prioritised preparation alert. Write the scheduled task specification and the alert template."
@@ -120,7 +120,7 @@ teaching_guide:
 
 > _"A CA/CPA who can specify the conditions their agent might get wrong is the one who will build an agent that does not get them wrong."_
 
-In Lesson 9, you built two extensions that close the institutional knowledge gap for jurisdiction and entity structure — tax rules that the agent applies automatically and account codes that eliminate manual recoding. Those extensions address _what_ the agent computes and _how_ it labels the results. This lesson addresses three equally critical dimensions: _how_ the agent applies your firm's professional methodology, _what_ it knows about each specific client, and _when_ regulatory obligations fall due.
+In Lesson 8, you built two extensions that close the institutional knowledge gap for jurisdiction and entity structure — tax rules that the agent applies automatically and account codes that eliminate manual recoding. Those extensions address _what_ the agent computes and _how_ it labels the results. This lesson addresses three equally critical dimensions: _how_ the agent applies your firm's professional methodology, _what_ it knows about each specific client, and _when_ regulatory obligations fall due.
 
 Together, these five extensions — jurisdiction tax, chart of accounts, audit methodology, client entity, and compliance calendar — form the complete extension architecture that transforms generic finance plugins into a practice-ready CA/CPA agent.
 
@@ -446,7 +446,7 @@ The compliance calendar extension, when combined with a weekly Cowork scheduled 
 
 ## Building Extensions with the Method A Interview Framework
 
-In Chapter 16, you learned the Method A interview framework — a structured process for extracting tacit professional knowledge and converting it into SKILL.md instructions. That framework applies directly to building the five extensions covered in Lessons 9 and 10.
+In Chapter 16, you learned the Method A interview framework — a structured process for extracting tacit professional knowledge and converting it into SKILL.md instructions. That framework applies directly to building the five extensions covered in Lessons 8 and 9.
 
 The three core Method A questions for extension building:
 
@@ -470,7 +470,7 @@ Converting Method A answers to extension instructions follows a direct pattern:
 
 **Requirements:** Claude (any interface). Knowledge of your practice area's specific requirements. For reference implementations, see the five extension SKILL.md files in the companion repository under [`reference-skills/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills).
 
-1. **Choose one** of the five extensions from Lessons 9-10 that is most relevant to your practice. Answer these questions in writing (200 words minimum):
+1. **Choose one** of the five extensions from Lessons 8-9 that is most relevant to your practice. Answer these questions in writing (200 words minimum):
    - What are the three most common errors junior staff make in this area?
    - What questions do you always ask when reviewing this type of work?
    - What conditions would always cause you to escalate or reject the work?
@@ -501,11 +501,11 @@ With all five extensions built, here is the full architecture that transforms ge
 
 | Extension              | Scope                       | What It Encodes                                         | Lesson |
 | ---------------------- | --------------------------- | ------------------------------------------------------- | ------ |
-| 1. Jurisdiction Tax    | All clients in jurisdiction | Tax rates, deadlines, penalties, filing formats         | L09    |
-| 2. Chart of Accounts   | One organisation            | Account codes, documentation rules, restricted accounts | L09    |
-| 3. Audit Methodology   | All engagements at firm     | Materiality, sampling, documentation, escalation        | L10    |
-| 4. Client Entity       | One client                  | Business model, seasonality, risks, preferences         | L10    |
-| 5. Compliance Calendar | All clients by type         | Filing obligations, lead times, penalty matrix          | L10    |
+| 1. Jurisdiction Tax    | All clients in jurisdiction | Tax rates, deadlines, penalties, filing formats         | L08    |
+| 2. Chart of Accounts   | One organisation            | Account codes, documentation rules, restricted accounts | L08    |
+| 3. Audit Methodology   | All engagements at firm     | Materiality, sampling, documentation, escalation        | L09    |
+| 4. Client Entity       | One client                  | Business model, seasonality, risks, preferences         | L09    |
+| 5. Compliance Calendar | All clients by type         | Filing obligations, lead times, penalty matrix          | L09    |
 
 Extensions 1, 3, and 5 apply broadly (jurisdiction-wide or firm-wide). Extensions 2 and 4 apply to individual entities. Together, they ensure that every output the agent produces reflects your jurisdiction's rules, your firm's methodology, your client's context, and your regulatory obligations.
 
@@ -583,11 +583,10 @@ Focus on [YOUR JURISDICTION] regulatory obligations.
 
 **What you are learning:** Compliance calendars are only as good as their coverage. The obligations you remember to calendar are not the ones that cause problems — it is the ones you forget. By asking Claude to identify missed obligations, you stress-test your extension for completeness. The monitoring schedule question connects the calendar extension to Cowork's scheduling capability, showing how a static list of deadlines becomes a dynamic compliance monitoring system.
 
-
 ## Flashcards Study Aid
 
 <Flashcards />
 
 ---
 
-Continue to [Lesson 11: Accounting and Reporting Practice Lab →](./11-accounting-reporting-practice-lab.md)
+Continue to [Lesson 10: Accounting and Reporting Practice Lab →](./10-accounting-reporting-practice-lab.md)

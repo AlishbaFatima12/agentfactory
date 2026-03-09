@@ -74,7 +74,7 @@ cognitive_load:
   assessment: "5 concepts at A2-B1 level -- within the 5-7 cognitive limit. Students arrive with IDFA methodology and Cowork fluency from Ch 17-18; this lesson applies those tools to the management accounting domain rather than introducing entirely new architecture."
 
 differentiation:
-  extension_for_advanced: "Build a rolling 13-week cash flow forecast model using the IDFA Named Range methodology. Structure treasury assumptions as Inp_ variables and forecast formulas as named business rules. Compare your model structure to the approach used in Exercise 18 (Lesson 14)."
+  extension_for_advanced: "Build a rolling 13-week cash flow forecast model using the IDFA Named Range methodology. Structure treasury assumptions as Inp_ variables and forecast formulas as named business rules. Compare your model structure to the approach used in Exercise 18 (Lesson 13)."
   remedial_for_struggling: "Focus on the comparison table between Gen-AI and Agentic AI capabilities. For each row, write one sentence explaining what the AI does and what the human professional still decides. If you can explain why the CFO reviews the variance narrative rather than the AI publishing it directly, you have understood the core judgment boundary."
 
 teaching_guide:
@@ -103,7 +103,6 @@ teaching_guide:
     - question: "What does an autonomous FP&A agent do, and what does it not do?"
       expected_response: "An autonomous FP&A agent collects financial data from source systems, updates the rolling forecast model, identifies significant variances, generates explanatory commentary, and distributes the management reporting pack. It does not challenge management's assumptions, stress-test strategic plans, or make business partnering recommendations -- those judgment tasks remain with the finance professional."
 ---
-
 
 # Domain 4 -- Management Accounting and Financial Management
 
@@ -294,8 +293,6 @@ shift from model maintenance to business partnering.
 ```
 
 **What you are learning:** The professional shift in management accounting is not theoretical -- it is a measurable reallocation of time. By mapping your own work against the automation spectrum, you identify which parts of your current role face displacement and which become more valuable. This is the same analysis the domain overview presents at the profession level, applied to your specific context.
-
-
 
 ## Flashcards Study Aid
 

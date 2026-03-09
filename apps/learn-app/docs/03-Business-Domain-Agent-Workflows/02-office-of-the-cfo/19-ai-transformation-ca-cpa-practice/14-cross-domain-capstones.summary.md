@@ -20,5 +20,5 @@ Two capstone exercises integrate all five CA/CPA practice domains: Exercise 22 t
 
 ### Connections
 
-- **Builds on**: All prior lessons (L02-L14) -- no new tools or capabilities are introduced; the challenge is orchestrating everything together.
-- **Leads to**: Lesson 16's full practice deployment that assembles the entire stack, stress-tests it with edge cases, and answers the chapter's defining question about professional value.
+- **Builds on**: All prior lessons (L02-L13) -- no new tools or capabilities are introduced; the challenge is orchestrating everything together.
+- **Leads to**: Lesson 15's full practice deployment that assembles the entire stack, stress-tests it with edge cases, and answers the chapter's defining question about professional value.

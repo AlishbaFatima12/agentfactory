@@ -20,5 +20,5 @@ Three additional extensions complete the five-extension architecture: audit meth
 
 ### Connections
 
-- **Builds on**: Lesson 9's jurisdiction and chart of accounts extensions and the "When [condition], [action]" instruction format.
-- **Leads to**: Practice labs (Lessons 11-14) where all five extensions are applied to complete professional workflows.
+- **Builds on**: Lesson 8's jurisdiction and chart of accounts extensions and the "When [condition], [action]" instruction format.
+- **Leads to**: Practice labs (Lessons 10-13) where all five extensions are applied to complete professional workflows.
