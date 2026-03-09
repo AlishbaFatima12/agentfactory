@@ -1,5 +1,6 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { useAlternatePageUtils } from '@docusaurus/theme-common/internal';
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,21 +9,17 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Globe, ChevronDown } from "lucide-react";
-import { getLocaleUrl } from "@/utils/getLocaleUrl";
 
 export function LocaleDropdown() {
-  const {i18n, siteConfig} = useDocusaurusContext();
+  const { i18n } = useDocusaurusContext();
+  const alternatePageUtils = useAlternatePageUtils();
 
   const currentLocale = i18n.currentLocale;
 
   const handleLocaleChange = (locale: string) => {
-    const newPath = getLocaleUrl({
-      pathname: window.location.pathname,
-      currentLocale,
-      targetLocale: locale,
-      defaultLocale: i18n.defaultLocale,
-      localeConfigs: i18n.localeConfigs,
-      baseUrl: siteConfig.baseUrl,
+    const newPath = alternatePageUtils.createUrl({
+      locale,
+      fullyQualified: false,
     });
     window.location.href = newPath + window.location.search + window.location.hash;
   };
