@@ -1,6 +1,7 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAlternatePageUtils } from '@docusaurus/theme-common/internal';
+import { useHistorySelector } from '@docusaurus/theme-common';
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -13,15 +14,26 @@ import { Globe, ChevronDown } from "lucide-react";
 export function LocaleDropdown() {
   const { i18n } = useDocusaurusContext();
   const alternatePageUtils = useAlternatePageUtils();
+  const search = useHistorySelector((history) => history.location.search);
+  const hash = useHistorySelector((history) => history.location.hash);
 
   const currentLocale = i18n.currentLocale;
 
-  const handleLocaleChange = (locale: string) => {
-    const newPath = alternatePageUtils.createUrl({
+  // Match official Docusaurus pattern: construct locale URL with pathname:// prefix
+  const getLocaleUrl = (locale: string) => {
+    const url = alternatePageUtils.createUrl({
       locale,
       fullyQualified: false,
     });
-    window.location.href = newPath + window.location.search + window.location.hash;
+    return `pathname://${url}${search}${hash}`;
+  };
+
+  // Resolve pathname:// protocol to actual path (same as Docusaurus internal link handling)
+  const resolvePathname = (url: string) => {
+    if (url.startsWith('pathname://')) {
+      return url.replace('pathname://', '');
+    }
+    return url;
   };
 
   const currentLocaleConfig = i18n.localeConfigs[currentLocale];
@@ -40,16 +52,17 @@ export function LocaleDropdown() {
         {i18n.locales.map((locale) => {
           const config = i18n.localeConfigs[locale];
           const isActive = locale === currentLocale;
+          const localeUrl = resolvePathname(getLocaleUrl(locale));
           return (
             <DropdownMenuItem
               key={locale}
-              onSelect={() => handleLocaleChange(locale)}
+              asChild
               className={isActive ? 'bg-accent' : ''}
             >
-              <div className="flex items-center justify-between w-full">
+              <a href={localeUrl} className="flex items-center justify-between w-full cursor-pointer">
                 <span>{config?.label || locale}</span>
                 {isActive && <span>✓</span>}
-              </div>
+              </a>
             </DropdownMenuItem>
           );
         })}
