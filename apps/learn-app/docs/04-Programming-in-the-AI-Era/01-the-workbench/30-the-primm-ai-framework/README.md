@@ -40,8 +40,9 @@ By the end of this chapter, you will be able to:
 | # | Lesson | Duration | Key Focus |
 |---|--------|----------|-----------|
 | 1 | [The PRIMM Framework](the-primm-framework) | 20 min | The five stages demonstrated with real Python code, the research basis, and why comprehension is the bottleneck skill of 2026 |
-| 2 | [PRIMM-AI+: Your Learning Operating System](primm-ai-plus-your-learning-operating-system) | 25 min | How AI integrates into each stage — AI permissions, checkpoints, mastery gates, verification ladder, confidence scoring, and professional practice mapping |
-| 3 | [The Complete Teaching and Learning System](the-complete-teaching-and-learning-system) | 20 min | Four embedded teaching methods, classroom vs. solo mode, five-step lesson architecture, and how every chapter follows PRIMM-AI+ |
+| 2 | [PRIMM-AI+: AI as Your Learning Partner](primm-ai-plus-ai-as-your-learning-partner) | 15 min | How AI integrates into each stage — AI roles, permissions, checkpoints, mastery gates, trace artifacts, a complete walkthrough, and the five rules |
+| 3 | [The PRIMM-AI+ Toolkit](the-primm-ai-plus-toolkit) | 15 min | Self-assessment and growth tools — verification ladder, confidence scoring, error taxonomy, professional practice mapping, and chapter-end rubric |
+| 4 | [The Complete Teaching and Learning System](the-complete-teaching-system) | 20 min | Four embedded teaching methods, classroom vs. solo mode, five-step lesson architecture, and how every chapter follows PRIMM-AI+ |
 
 ## Prerequisites
 

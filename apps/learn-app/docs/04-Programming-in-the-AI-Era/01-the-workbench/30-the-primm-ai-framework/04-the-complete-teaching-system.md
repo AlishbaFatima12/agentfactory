@@ -1,10 +1,10 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 title: "The Complete Teaching and Learning System"
 description: "How PRIMM-AI+ works in practice -- the four embedded teaching methods, classroom and solo modes, practical lesson architecture, and how every chapter in this book follows the same pattern."
 keywords: ["PRIMM-AI+", "worked examples", "Parsons problems", "live coding", "peer instruction", "teaching methods", "classroom mode", "solo mode", "lesson architecture"]
 chapter: 30
-lesson: 3
+lesson: 4
 duration_minutes: 20
 
 # HIDDEN SKILLS METADATA
@@ -274,7 +274,7 @@ showing the code and asking me to predict.
 
 ## Looking Ahead
 
-James sits back. In three lessons, he has gone from "what is PRIMM?" to knowing exactly how every lesson and every chapter in this book will work. The five stages. The nine enhancements. The four teaching methods. The five-step lesson architecture.
+James sits back. In four lessons, he has gone from "what is PRIMM?" to knowing exactly how every lesson and every chapter in this book will work. The five stages. The nine enhancements. The four teaching methods. The five-step lesson architecture.
 
 "I feel like I have a map now," he says.
 
