@@ -1,6 +1,8 @@
 ---
 title: "The PRIMM-AI+ Framework"
 sidebar_position: 0
+description: "Learn the PRIMM-AI+ teaching framework -- Predict, Run, Investigate, Modify, Make with AI -- the research-validated method that teaches you to read and understand code before you write it, with AI-free checkpoints, mastery gates, and confidence scoring."
+keywords: ["PRIMM", "PRIMM-AI+", "Predict Run Investigate Modify Make", "code comprehension", "AI-assisted learning", "Sue Sentance", "Jane Waite", "reading code", "teaching framework", "confidence scoring", "mastery gates"]
 ---
 
 # Chapter 30: The PRIMM-AI+ Framework
@@ -10,9 +12,13 @@ sidebar_position: 0
 
 ## Why This Chapter Exists
 
+James stares at fifty lines of AI-generated Python on his screen. Every line is correct. Every function works. He understands none of it. His mentor Emma points at line twelve. "What does that line do?" James cannot answer. He has working code and zero knowledge.
+
 You are about to learn Python programming. But you are learning it in 2026, not 2016. That distinction matters more than any syntax rule this book will ever teach you. An AI coding assistant can write a working Python function in seconds. If the goal were simply to *produce code*, you could skip this Part entirely. But producing code was never the real goal. The real goal is **understanding** — the ability to read a program and know what it will do, to look at AI-generated code and judge whether it is correct, to take a working function and adapt it for a new purpose.
 
-This chapter introduces the teaching framework that governs all programming instruction in this book: **PRIMM-AI+** — Predict, Run, Investigate, Modify, Make *with AI*, enhanced with AI-free checkpoints, mastery gates, confidence scoring, and a verification ladder. Built on research-validated principles from computing education, PRIMM-AI+ teaches you to read and understand code before you ever try to write it — and integrates AI coding assistants as learning partners at every stage with clear structural safeguards.
+This chapter introduces the teaching framework that governs all programming instruction in this book: **PRIMM-AI+** — Predict, Run, Investigate, Modify, Make *with AI*, enhanced with AI-free checkpoints, mastery gates, confidence scoring, and a verification ladder.
+
+Built on research-tested methods from computing education (493 students, 13 schools), PRIMM-AI+ teaches you to read and understand code before you ever try to write it — and integrates AI coding assistants as learning partners at every stage with clear structural safeguards.
 
 ## Learning Outcomes
 
