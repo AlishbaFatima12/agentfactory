@@ -18,9 +18,9 @@ You are about to learn Python programming. But you are learning it in 2026, not 
 
 This matters even more in the context of this book. You are learning to build AI agents — systems that generate code autonomously, chain tools together, and execute multi-step workflows without human intervention. When an agent produces fifty lines of Python to process data, query an API, or orchestrate a pipeline, **someone must read that code and decide whether it is correct, safe, and does what was intended.** That someone is you. Code comprehension is not a nice-to-have skill for agent builders. It is the skill that separates someone who deploys agents from someone who deploys liabilities.
 
-This chapter introduces the teaching framework that governs all programming instruction in this book: **PRIMM-AI+**. In one sentence: PRIMM-AI+ is PRIMM adapted for the age of AI coding assistants, with structural safeguards that ensure AI helps rather than replaces your learning. The full name unpacks to Predict, Run, Investigate, Modify, Make *with AI* — enhanced with AI-free checkpoints, mastery gates, confidence scoring, and a verification ladder.
+This chapter introduces **PRIMM-AI+** — the learning operating system that governs every programming chapter in this book. Not a suggestion. Not a study tip. An operating system: a comprehension-first, scaffold-rich, verification-driven curriculum that determines what you do, in what order, with what tools, at every stage of learning. The full name unpacks to Predict, Run, Investigate, Modify, Make *with AI* — enhanced with AI-free checkpoints, mastery gates, confidence scoring, and a verification ladder. Every programming chapter from Chapter 33 onward runs on this system.
 
-Built on research-tested methods from computing education (493 students, 13 schools), PRIMM-AI+ teaches you to read and understand code before you ever try to write it — and integrates AI coding assistants as learning partners at every stage with clear boundaries. Here is what the process looks like in practice: you see a complete program, predict what it will do before running it, run it and compare the output to your prediction, investigate how it works by tracing variables and asking questions, modify it to change its behavior, and finally build something new from a specification you write. **Every programming chapter from Chapter 33 onward follows this same rhythm.**
+Built on research-tested methods from computing education (493 students, 13 schools), PRIMM-AI+ teaches you to read and understand code before you ever try to write it — and integrates AI coding assistants as learning partners at every stage with clear boundaries. Here is what the process looks like in practice: you see a complete program, predict what it will do before running it, run it and compare the output to your prediction, investigate how it works by tracing variables and asking questions, modify it to change its behavior, and finally build something new from a specification you write. **The rhythm is always the same. The concepts change. The method never does.**
 
 ## The Framework at a Glance
 
@@ -69,6 +69,8 @@ By the end of this chapter, you will be able to:
 
 This chapter contains Python code examples. **You are not expected to understand every line yet.** The code is here to show you what the PRIMM process looks like in action — so that when you encounter your first Python lesson in Chapter 33, the method is already familiar. Focus on the *process* (predict, run, investigate), not the syntax.
 
-## What This Chapter Is Not
+## The Complete System
 
-This chapter teaches you *how you will learn*. The next chapter (Chapter 31: Ten Axioms) teaches *what professional practice looks like*. Together they form the complete system: your learning method and the professional standards you will apply it to.
+This chapter teaches you *how you will learn*. The next chapter (Chapter 31: Ten Axioms) teaches *what professional practice looks like*. Together they form one coherent system: PRIMM-AI+ provides the method — the sequence, the safeguards, the verification habits — and the Ten Axioms provide the standards you will apply that method to. The method without standards produces competent students. The standards without method produce frustrated ones. You need both, and they are designed to work together.
+
+After this chapter, you will never open a programming lesson wondering what to do first. The operating system handles that. You focus on the code.
