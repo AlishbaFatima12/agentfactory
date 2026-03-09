@@ -24,7 +24,9 @@ Built on research-tested methods from computing education (493 students, 13 scho
 
 ## The Framework at a Glance
 
-Before you dive into the lessons, here is the complete picture in one table. You do not need to understand every term yet — each one is explained across the four lessons. This is your map. Return to it anytime you want to see where you are.
+Before you dive into the lessons, here is the complete picture. You do not need to understand every term yet — each one is explained across the four lessons. This is your map. Return to it anytime you want to see where you are.
+
+![PRIMM-AI+ Learning Cycle: five stages — Predict, Run, Investigate, Modify, Make — connected in a continuous cycle with mastery gates between each stage, AI-free checkpoints, and confidence scoring](/img/ch30-primm-ai-plus-learning-cycle.png)
 
 | Stage | What You Do | What AI Does | Key Safeguard |
 |-------|------------|-------------|---------------|
