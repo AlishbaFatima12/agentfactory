@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-09
+- docs: polish Ch 30 formatting and update writing methodology to v2.0 ([#834](https://github.com/panaversity/agentfactory/pull/834))
+
+### 2026-03-09
 
 - Add Ch 30 PRIMM-AI+ (3 lessons) + Ch 32 L4 + Part 4 renumbering ([#832](https://github.com/panaversity/agentfactory/pull/832))
 
