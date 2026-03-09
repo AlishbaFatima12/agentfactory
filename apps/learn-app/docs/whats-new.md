@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-09
+- docs: enhance Ch 30 PRIMM-AI+ with visuals and content polish ([#846](https://github.com/panaversity/agentfactory/pull/846))
+
+### 2026-03-09
 - fix: Ch20-23 content review — Try With AI, Cowork-native skills, dedup, renumbering ([#845](https://github.com/panaversity/agentfactory/pull/845))
 
 ### 2026-03-09
