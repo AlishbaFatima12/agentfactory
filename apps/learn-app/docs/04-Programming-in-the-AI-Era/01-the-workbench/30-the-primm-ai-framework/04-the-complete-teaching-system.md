@@ -71,6 +71,8 @@ This lesson answers that question. It shows how four teaching methods -- worked 
 
 ## The Four Teaching Methods Inside PRIMM-AI+
 
+![Four Teaching Methods Inside PRIMM-AI+: Worked Examples spans Predict and Investigate, Parsons Problems spans Investigate and Modify, Live Coding spans Investigate and Modify, Peer Instruction spans all five stages — each method is embedded within specific PRIMM stages](/img/ch30-teaching-methods-map.png)
+
 PRIMM-AI+ provides the sequence and the safeguards. **These four methods are the specific techniques used inside the sequence.**
 
 ### Worked Examples: Predict and Investigate

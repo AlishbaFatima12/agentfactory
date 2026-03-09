@@ -85,6 +85,8 @@ PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- t
 
 ## AI Roles at Each Stage
 
+![AI Roles Across PRIMM-AI+ Stages: five stages — Predict (AI-Free), Run (Execute Only), Investigate (After You), Modify (Hints Only), Make (Review Only) — showing how AI involvement changes in type at each stage, not in amount](/img/ch30-ai-permissions-gradient.png)
+
 James opens his AI coding assistant and types: "Explain this Python program to me." The explanation appears instantly — clean, thorough, correct. He reads it, nods, and moves on.
 
 Emma stops him. "What did you just learn?"

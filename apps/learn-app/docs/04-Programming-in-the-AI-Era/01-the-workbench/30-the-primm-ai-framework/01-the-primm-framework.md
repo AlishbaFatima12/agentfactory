@@ -257,6 +257,8 @@ Because AI changed the economics of code production. Before AI coding assistants
 | Pre-AI | Writing code | Typing, syntax recall, API lookup | Producing code from scratch |
 | AI era | Verifying code | Reading, predicting, tracing | Deciding whether generated code is correct |
 
+![The Bottleneck Shift: Pre-AI Era (writing code — typing speed, syntax memorization, slow production) versus AI Era 2026 (verifying code — reading comprehension, predicting behavior, judging correctness). PRIMM-AI+ trains comprehension before creation.](/img/ch30-bottleneck-shift.png)
+
 Look at PRIMM's structure through this lens. Four of five stages -- Predict, Run, Investigate, Modify -- build the verification skills that are now the bottleneck. Only one stage -- Make -- involves writing from scratch. **PRIMM's 4:1 ratio of understanding to production is exactly right for an era where production is cheap and verification is expensive.**
 
 ---

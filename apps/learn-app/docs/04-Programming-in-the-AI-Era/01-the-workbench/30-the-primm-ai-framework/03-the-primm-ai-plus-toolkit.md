@@ -77,6 +77,8 @@ Emma smiles. "You'll never stop. Senior engineers do the same thing — they jus
 
 Every time you predict what code will do and then run it to check, you are building a habit: guess first, verify second. That habit does not stop being useful when you leave this chapter. The Verification Ladder shows how the same habit scales from a learning exercise all the way to professional software -- one step at a time.
 
+![The PRIMM-AI+ Verification Ladder: five rungs from Prediction at the bottom through Type Checking, Testing, CI Pipeline, to Observability at the top — showing the progression from learning exercises to professional practice](/img/ch30-verification-ladder.png)
+
 | Step | Question | What You Do |
 |------|----------|-------------|
 | 1. **Prediction** | What do I think this code does? | Read the code and commit to an answer before running it |
