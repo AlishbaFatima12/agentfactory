@@ -13,38 +13,56 @@ export function LocaleDropdown() {
   const { siteConfig, i18n } = useDocusaurusContext();
 
   const defaultLocale = i18n.defaultLocale;
-  const baseUrl = siteConfig.baseUrl; // e.g. "/agent-factory-book/" or "/"
 
-  // Build locale URL from the browser's actual pathname (not React Router's)
-  // This avoids issues where useLocation() strips the baseUrl
+  // Docusaurus sets siteConfig.baseUrl per locale at build time:
+  //   English build: baseUrl = "/agent-factory-book/"
+  //   Urdu build:    baseUrl = "/agent-factory-book/ur/"
+  // So we need a locale-independent base to construct cross-locale URLs.
+  const rawBaseUrl = siteConfig.baseUrl; // e.g. "/agent-factory-book/ur/"
+
+  // Strip any locale suffix from baseUrl to get the true site root
+  // "/agent-factory-book/ur/" → "/agent-factory-book/"
+  // "/agent-factory-book/"    → "/agent-factory-book/"
+  let siteRoot = rawBaseUrl;
+  for (const locale of i18n.locales) {
+    if (locale === defaultLocale) continue;
+    const suffix = locale + '/';
+    if (siteRoot.endsWith(suffix)) {
+      siteRoot = siteRoot.slice(0, -suffix.length);
+      break;
+    }
+  }
+
   const getLocaleUrl = (targetLocale: string): string => {
     const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
     const search = typeof window !== 'undefined' ? window.location.search : '';
     const hash = typeof window !== 'undefined' ? window.location.hash : '';
 
-    // Strip baseUrl to get relative path: "/agent-factory-book/ur/docs/page" → "ur/docs/page"
+    // Strip the full baseUrl (which includes locale) to get the page-only path
+    // e.g. "/agent-factory-book/ur/docs/page" with baseUrl "/agent-factory-book/ur/"
+    //      → pagePath = "docs/page"
     let pagePath = pathname;
-    if (pagePath.startsWith(baseUrl)) {
-      pagePath = pagePath.slice(baseUrl.length);
+    if (pagePath.startsWith(rawBaseUrl)) {
+      pagePath = pagePath.slice(rawBaseUrl.length);
+    } else if (pagePath.startsWith(siteRoot)) {
+      // Fallback: strip site root and then any locale prefix
+      pagePath = pagePath.slice(siteRoot.length);
+      for (const locale of i18n.locales) {
+        if (locale === defaultLocale) continue;
+        if (pagePath === locale || pagePath === locale + '/') {
+          pagePath = '';
+          break;
+        }
+        if (pagePath.startsWith(locale + '/')) {
+          pagePath = pagePath.slice(locale.length + 1);
+          break;
+        }
+      }
     }
 
-    // Strip ANY existing locale prefix from the path
-    // e.g. "ur/docs/page" → "docs/page", "ur/" → "", "ur" → ""
-    for (const locale of i18n.locales) {
-      if (locale === defaultLocale) continue;
-      if (pagePath === locale || pagePath === locale + '/') {
-        pagePath = '';
-        break;
-      }
-      if (pagePath.startsWith(locale + '/')) {
-        pagePath = pagePath.slice(locale.length + 1);
-        break;
-      }
-    }
-
-    // Build: baseUrl + locale prefix (if non-default) + clean page path
-    const prefix = targetLocale !== defaultLocale ? targetLocale + '/' : '';
-    return baseUrl + prefix + pagePath + search + hash;
+    // Build: siteRoot + locale prefix (if non-default) + page path
+    const localePrefix = targetLocale !== defaultLocale ? targetLocale + '/' : '';
+    return siteRoot + localePrefix + pagePath + search + hash;
   };
 
   const currentLocale = i18n.currentLocale;
