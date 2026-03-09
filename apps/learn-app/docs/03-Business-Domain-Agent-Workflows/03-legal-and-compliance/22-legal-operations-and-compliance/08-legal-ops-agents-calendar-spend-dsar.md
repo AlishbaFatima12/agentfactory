@@ -465,20 +465,15 @@ No further action required.
 
 The entire DSAR was managed within the 30-day window with 6 hours of coordinated human work (discovery coordination, attorney review, final quality check) instead of the typical 20-30 hours of manual processing.
 
-**SKILL.md for DSAR Agent:**
+**Creating the DSAR Agent as a Cowork Skill:**
+
+To create this skill in Cowork: open **Skills** → **+** → **Write skill instructions**. Set:
+
+- **Skill name:** `dsar-agent`
+- **Description:** `Activate for: DSAR, data subject access request, subject access, right of access, GDPR request, CCPA request, privacy request, right to be forgotten, erasure request, data portability, data rectification, restriction of processing, objection to processing.`
+- **Instructions:** the rules below
 
 ```markdown
----
-name: dsar-agent
-version: 1.0
-description: >
-  Activate for: DSAR, data subject access request, subject access,
-  right of access, GDPR request, CCPA request, privacy request,
-  right to be forgotten, erasure request, data portability,
-  data rectification, restriction of processing, objection to
-  processing.
----
-
 ## JURISDICTION RESPONSE WINDOWS
 
 UK GDPR: 30 calendar days (ICO template recommended)

@@ -158,15 +158,7 @@ The Claude Legal Plugin, configured with the SKILL.md methodology in this chapte
 
 ## The Plugin at a Glance
 
-The Legal Plugin ships with five primary commands, each representing a distinct legal workflow:
-
-| Command            | Function                                                                | Typical Time Saving               |
-| ------------------ | ----------------------------------------------------------------------- | --------------------------------- |
-| `/review-contract` | Clause-by-clause review against your negotiation playbook               | Full day to 30-minute review      |
-| `/triage-nda`      | Rapid NDA pre-screening with routing recommendation                     | 30-45 min to 0-15 min per NDA     |
-| `/vendor-check`    | Vendor agreement status and obligation monitoring                       | Manual tracking to automated      |
-| `/brief`           | Legal briefings, topic research, regulatory updates, incident response  | Hours of research to minutes      |
-| `/respond`         | Templated responses for DSARs, discovery holds, routine legal inquiries | 20-30 hours to 4-6 hours per DSAR |
+The Legal Plugin ships with five primary commands -- `/review-contract`, `/triage-nda`, `/vendor-check`, `/brief`, and `/respond` -- each representing a distinct legal workflow that reduces hours of manual work to minutes of agent-assisted review. You will explore each command in detail in [Lesson 2](./02-plugin-architecture-and-the-playbook.md).
 
 ```
 Platform:  Cowork
