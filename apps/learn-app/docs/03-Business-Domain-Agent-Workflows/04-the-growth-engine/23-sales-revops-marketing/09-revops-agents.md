@@ -349,52 +349,74 @@ In the context of the Marketing Performance Agent, **anomaly detection** is the 
 **Sample Weekly Performance Dashboard:**
 
 ```
-MARKETING PERFORMANCE REPORT -- Week of 3 March 2026
-Campaign: Q2 Lead Gen -- "The Scaling Problem"
+MARKETING PERFORMANCE REPORT -- Week of 22 August 2026
+Campaign: Q3 Brand Awareness + Pipeline -- "Operations Intelligence"
 ================================================================
 
-HEADLINE NUMBERS -- WEEK 5 OF 12
+HEADLINE NUMBERS -- WEEK 8 OF 10
 
-                        Actual    Target    vs Target    vs Last Week
-Whitepaper downloads:      47        35     134%  (+)       +12%
-HOT leads generated:        6         4     150%  (+)        +2
-LinkedIn impressions:  18,400    12,000     153%  (+)        +8%
-LinkedIn CTR:           0.38%     0.40%      95%  (-)       flat
-Email open rate:          34%       28%     121%  (+)        +2%
-Email click rate:        3.1%      4.2%      74%  (!)       -0.3%
-Cost per download:      GBP 8.50  GBP 12   141%  (+)       -GBP 1.20
-Cost per HOT lead:    GBP 381   GBP 500    131%  (+)      -GBP 44
+                           Actual     Target    vs Target    vs Last Week
+Demo requests:                22         18     122%  (+)       +4
+SQLs generated:                9          7     129%  (+)       +3
+LinkedIn Ads impressions: 31,200     25,000     125%  (+)       +11%
+LinkedIn Ads CTR:          0.52%      0.45%     116%  (+)       +0.06%
+Podcast sponsor clicks:      184        150     123%  (+)       +22
+Webinar registrations:        67         50     134%  (+)       +9
+Webinar attendance rate:      58%        55%    105%  (+)       -2%
+Cost per demo request:    GBP 14.20  GBP 18    127%  (+)       -GBP 2.10
+Cost per SQL:             GBP 196    GBP 250   128%  (+)      -GBP 31
+
+ANOMALY DETECTED (automated alert fired 19 Aug)
+  Webinar replay page bounce rate spiked from 22% to 51% on 18 Aug.
+  Root cause identified: CDN cache cleared during maintenance; video
+  player took 9 seconds to load vs. normal 1.2 seconds.
+  Resolution: CDN cache repopulated at 19 Aug 07:15. Bounce rate
+  returned to 24% within 24 hours.
+  Impact: estimated 15-20 lost replay views. No SQL impact detected.
 
 TOP 3 OPTIMISATION OPPORTUNITIES
 
-1. EMAIL CLICK RATE IS DRAGGING (3.1% vs 4.2% benchmark)
-   Open rate is strong (34%) -- subject lines work. Click rate is weak.
-   Diagnosis: Email 3 in nurture sequence ("3 patterns we see in 3PL ops")
-   has lowest click rate at 1.8%. It is too theoretical -- lacks a concrete hook.
-   RECOMMENDED: Rewrite Email 3 with a specific case study. Test subject line:
-   "How one Midlands 3PL doubled throughput without hiring."
-   Expected impact: +1-1.5% click rate on Email 3; +3-4 incremental HOT leads.
+1. PODCAST SPONSORSHIP OUTPERFORMING LINKEDIN ADS ON CPL (GBP 11 vs GBP 14)
+   "The Ops Edge" podcast mid-roll: 184 clicks, 14 demo requests (7.6% conv).
+   LinkedIn Ads: 31,200 impressions, 162 clicks, 8 demo requests (4.9% conv).
+   Current budget split: 75% LinkedIn / 25% Podcast.
+   RECOMMENDED: Rebalance to 55% LinkedIn / 45% Podcast for weeks 9-10.
+   Add a second podcast ("Supply Chain Unpacked") at GBP 800/episode.
+   Expected impact: +5-7 incremental demo requests; -18% blended CPL.
 
-2. THOUGHT LEADER ADS OUTPERFORMING SPONSORED CONTENT (2.8x CTR)
-   CEO personal profile posts: 1.06% CTR. Company sponsored content: 0.38% CTR.
-   Current budget split: 70% Sponsored / 30% Thought Leader Ads.
-   RECOMMENDED: Rebalance to 40% Sponsored / 60% Thought Leader Ads for weeks
-   6-12. Reallocate GBP 2,500.
-   Expected impact: +35% total LinkedIn CTR; +8-10 additional downloads/week.
+2. WEBINAR-TO-SQL CONVERSION NEEDS A FASTER HANDOFF
+   67 registrants, 39 attendees, but only 4 converted to SQL (10%).
+   Industry benchmark for mid-funnel webinars: 15-20%.
+   Diagnosis: Post-webinar follow-up email fires 48 hours after event.
+   Attendee intent decays rapidly -- 80% of conversions happen within
+   24 hours of attendance.
+   RECOMMENDED: Trigger follow-up email within 4 hours of webinar end.
+   Include personalised recap based on poll responses and Q&A participation.
+   Expected impact: +3-5 additional SQLs per webinar; conversion to 15%+.
 
-3. TRADE PRESS CONVERSION BELOW EXPECTATION
-   Motor Transport article (Week 4): 31 UTM-tracked visits, only 8 downloads
-   (26% conversion vs 58% from other sources). Trade press audience is in
-   awareness mode -- whitepaper landing page is too mid-funnel for them.
-   RECOMMENDED: Create a lighter entry point ("3PL Scaling Checklist," 1 page)
-   as the trade press landing page, with whitepaper as upsell after email capture.
-   Expected impact: +15-20% conversion from trade press traffic.
+3. CROSS-CHANNEL ATTRIBUTION REVEALS HIDDEN LINKEDIN INFLUENCE
+   Agent-detected pattern: 6 of 9 SQLs this week visited LinkedIn Ads
+   content 2-3 weeks before converting via podcast or webinar.
+   LinkedIn is functioning as an awareness channel feeding downstream
+   conversion, but current last-touch attribution credits podcast/webinar.
+   RECOMMENDED: Implement multi-touch attribution model. Do NOT cut
+   LinkedIn budget based on last-touch SQL numbers alone.
+   Expected impact: More accurate budget allocation; prevents
+   starving the awareness channel that feeds the conversion channels.
+
+PREDICTIVE BUDGET REALLOCATION (agent-generated)
+  Based on weeks 1-8 performance trends, the agent recommends:
+  - Shift GBP 1,200 from LinkedIn single-image ads to podcast sponsorship
+  - Maintain webinar investment (high SQL volume despite conversion gap)
+  - Reserve GBP 500 for a test of LinkedIn Newsletter Ads (new format,
+    projected 0.8% CTR based on beta data from similar B2B accounts)
+  Projected impact if adopted: +12% total SQLs in weeks 9-10 vs. current pace
 
 WHAT IS WORKING -- DO NOT CHANGE
-  LinkedIn audience targeting: 94% of HOT leads within target firmographics
-  Whitepaper engagement: 73% of downloaders reading past page 6
-  Sales Plugin integration: average enrichment within 18 hours of download;
-  average HOT lead to first outreach within 31 hours
+  Webinar content quality: NPS 72 from attendees; 34% request recording link
+  Podcast audience fit: 91% of demo requests from target firmographics
+  Cross-channel retargeting: webinar no-shows who see LinkedIn retargeting
+  ads convert at 2.1x the rate of cold LinkedIn traffic
 
 ================================================================
 ```
