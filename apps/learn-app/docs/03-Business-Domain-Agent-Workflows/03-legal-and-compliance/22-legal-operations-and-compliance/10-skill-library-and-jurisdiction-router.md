@@ -127,21 +127,13 @@ Notice the chain: the user's natural language query triggers a specific product 
 
 The top-level routing file. Store at the root of your Cowork skills directory.
 
-```markdown
----
-name: legal-global-router
-version: 1.0
-description: >
-  TOP-LEVEL ROUTER. Activate when ANY of these terms appear:
-  contract review, NDA, non-disclosure, confidentiality, redline,
-  legal review, IP, intellectual property, patent, trademark,
-  copyright, trade secret, GDPR, DSAR, data subject, compliance,
-  regulatory, governing law, indemnity, limitation of liability,
-  termination, legal hold, discovery, litigation, cease and desist,
-  employment agreement, service agreement, MSA, SOW.
-author: Panaversity — The AI Agent Factory
----
+To create the router as a Cowork skill: open **Skills** → **+** → **Write skill instructions**. Set:
 
+- **Skill name:** `legal-global-router`
+- **Description:** `TOP-LEVEL ROUTER. Activate when ANY of these terms appear: contract review, NDA, non-disclosure, confidentiality, redline, legal review, IP, intellectual property, patent, trademark, copyright, trade secret, GDPR, DSAR, data subject, compliance, regulatory, governing law, indemnity, limitation of liability, termination, legal hold, discovery, litigation, cease and desist, employment agreement, service agreement, MSA, SOW.`
+- **Instructions:** the routing rules below
+
+```markdown
 ## STEP 1 — IDENTIFY TASK TYPE AND LOAD PRODUCT FILE
 
 Contract Review -> skills/jurisdiction-contract-review/SKILL.md

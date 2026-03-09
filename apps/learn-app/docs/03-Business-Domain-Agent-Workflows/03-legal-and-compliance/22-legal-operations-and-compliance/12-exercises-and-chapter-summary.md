@@ -88,7 +88,7 @@ claude plugin install legal@knowledge-work-plugins
 
 ## Exercise 1: Build Your Negotiation Playbook
 
-**Type:** SKILL.md Configuration
+**Type:** Cowork Skill Configuration
 **Time:** 60-90 minutes
 **Prerequisite:** Legal Plugin installed; access to your three most recently negotiated vendor agreements (executed copies with sensitive pricing redacted)
 **What you need:** Cowork with Legal Plugin installed, the `legal.local.md.template` from the skills library, 30 minutes with your General Counsel or most senior commercial attorney, three executed vendor agreements (redact sensitive pricing before uploading)
@@ -330,7 +330,7 @@ You are building a complete Contract Intake Agent that manages all incoming cont
 
 This is the process you are replacing. Document it so you can measure the improvement.
 
-**Step 2 -- Configure the SKILL.md.** Using the Contract Intake Agent SKILL.md in Part Five, customise for your organisation:
+**Step 2 -- Configure the Cowork skill.** Using the Contract Intake Agent skill from Lesson 7, create a Cowork skill via **Write skill instructions** and customise for your organisation:
 
 - Add your specific contract types
 - Define your SLA thresholds with named owners (not generic roles -- actual names)
@@ -353,7 +353,7 @@ This is the process you are replacing. Document it so you can measure the improv
 
 For each: record intake classification, routing decision, communication output, and whether the result was correct.
 
-**Step 5 -- Calibrate.** For any incorrect routing, identify whether the error was in playbook threshold, SKILL.md routing logic, or document type classification. Fix and re-test.
+**Step 5 -- Calibrate.** For any incorrect routing, identify whether the error was in playbook threshold, skill routing logic, or document type classification. Fix and re-test.
 
 **Step 6 -- Build the tracking dashboard.** Using the Google Sheets MCP, create a contract tracking dashboard showing:
 
@@ -361,7 +361,7 @@ For each: record intake classification, routing decision, communication output, 
 - Obligations due in 30/60/90 days
 - Average cycle time by tier (baseline from Step 1 vs. agent-assisted)
 
-**Deliverable:** A functioning Contract Intake Agent connected to your document management system, with tested SKILL.md, live tracking dashboard, and documented time savings.
+**Deliverable:** A functioning Contract Intake Agent connected to your document management system, with tested Cowork skill configuration, live tracking dashboard, and documented time savings.
 
 **The key learning:** Process automation reveals process gaps -- building the intake agent forces you to define routing rules, SLA thresholds, and escalation triggers that your organisation may never have formalised before.
 
@@ -407,7 +407,7 @@ Update your configuration based on gaps. Re-run.
 - Actions required (owner, action, deadline)
 - Horizon items (significant changes in the next 3-6 months)
 
-Draft this template in your SKILL.md. Test it by asking the agent to produce a sample monthly summary from four weeks of monitoring briefs.
+Draft this template in your Cowork skill's Instructions field. Test it by asking the agent to produce a sample monthly summary from four weeks of monitoring briefs.
 
 **Deliverable:** Working regulatory monitoring configuration producing weekly briefs and a monthly board summary -- reducing your preparation time from 4-6 hours to 45-60 minutes of review and sign-off.
 
@@ -422,76 +422,90 @@ Draft this template in your SKILL.md. Test it by asking the agent to produce a s
 **Plugin commands:** `/respond`, `/brief`
 **What you need:** Cowork with Legal Plugin installed, a list of your organisation's data processing systems (CRM, billing, email, marketing, HR, support), familiarity with UK GDPR or EU GDPR requirements
 
-At 09:17 this morning, the following email arrived at `privacy@yourcompany.com`:
+At 14:32 this afternoon, the following email arrived at `privacy@yourcompany.com`:
 
-> _"Dear Sir/Madam, I am writing to request all personal data that your company holds about me under Article 15 of the GDPR. My name is Sarah Johnson. I was a customer from March 2021 to June 2023. My email address at that time was sarah.johnson.42@gmail.com. Please confirm receipt and advise when I can expect a response. Regards, Sarah Johnson."_
+> _"Dear Data Protection Officer, Under Article 20 of the UK GDPR I am requesting the portability of all personal data your company holds about me in a structured, commonly used, machine-readable format. Additionally, under Article 15, I request access to any personal data not covered by the portability right. My name is Marcus Chen. I was a customer of your Enterprise plan from September 2022 to December 2024, and my company also used your API integration. My email addresses were m.chen@techbridge.io (work) and marcus.chen.99@protonmail.com (personal). Please confirm receipt. Regards, Marcus Chen."_
 
-You are the Privacy Officer. The 30-day GDPR clock started at 09:17. Work through the complete response workflow.
+You are the Privacy Officer. This is more complex than a standard access request because it combines a **data portability request** (Article 20) with a **subject access request** (Article 15), and Marcus's data is spread across three business units that each have different data retention policies. The 30-day GDPR clock started at 14:32. Work through the complete response workflow.
 
 **Day 1 -- Acknowledge immediately:**
 
 ```
 /respond type:"DSAR-acknowledgement"
-         requester-name:"Sarah Johnson"
-         requester-email:"sarah.johnson.42@gmail.com"
+         requester-name:"Marcus Chen"
+         requester-email:"marcus.chen.99@protonmail.com"
          request-date:"[today]"
-         request-type:"Subject Access Request (Article 15 UK GDPR)"
+         request-type:"Data Portability (Article 20) + Subject Access
+                        Request (Article 15) — UK GDPR"
          jurisdiction:"UK GDPR"
 ```
 
-Review the draft: does it confirm receipt, state the response deadline, set out identity verification requirements, and avoid confirming or denying what data is held? Edit as necessary. This letter goes out today.
+Review the draft: does it correctly acknowledge both the portability and access components? Does it state the response deadline? Does it handle the fact that two email addresses were provided? Edit as necessary.
 
 **Days 1-10 -- Data discovery:**
 
 ```
 /respond type:"DSAR-data-discovery"
-         requester:"Sarah Johnson, sarah.johnson.42@gmail.com"
-         customer-period:"March 2021 to June 2023"
-         systems:"CRM, billing, email, customer support,
-                  marketing database, HR system"
+         requester:"Marcus Chen, m.chen@techbridge.io /
+                    marcus.chen.99@protonmail.com"
+         customer-period:"September 2022 to December 2024"
+         systems:"CRM, billing, email, customer support, marketing
+                  database, API usage logs, HR system, partner portal"
+         note:"Search both email addresses across all systems.
+               Enterprise plan + API integration — check developer
+               portal and API access logs separately."
 ```
 
-The agent drafts the internal discovery requests to each system owner with a Day 10 response deadline.
+The agent drafts discovery requests to each system owner. Note: three business units hold Marcus's data (Sales, Engineering/API, and Customer Success), each with different retention policies.
 
 **Day 12 -- Data received (simulate):**
 
 The following has been identified:
 
-- CRM: Full customer record, purchase history, support tickets, sales rep notes (including: "difficult customer -- always pushes for discounts")
-- Billing: Invoice history, last 4 digits of payment card, billing address
-- Email: 47 support emails
-- Marketing: Campaign history, open/click tracking, preference settings
+- CRM (Sales): Full enterprise account record under TechBridge Ltd, Marcus listed as primary contact. Account notes, meeting records, renewal negotiation history
+- Billing (Finance): 27 invoices to TechBridge Ltd, payment method on file (company credit card ending \*7291)
+- API Usage Logs (Engineering): 14 months of API call logs tied to marcus.chen@techbridge.io, including endpoints called, request volumes, error rates. Retention policy: 18 months (some data already purged)
+- Customer Support: 8 tickets from m.chen@techbridge.io, 3 from marcus.chen.99@protonmail.com (personal email used during account migration issue)
+- Marketing: Campaign history sent to both email addresses, webinar attendance records, content download tracking
+- Partner Portal: Marcus registered as a certified integration partner; completed 2 certification assessments with scores
 - HR system: No data found
-- Legal case management: No data found
 
 ```
 /respond type:"DSAR-response-preparation"
          data-found:[provide summary above]
-         redaction-required:"third-party personal data in support
-           tickets; internal staff personal data; commercially
-           sensitive information unrelated to requester"
+         portability-scope:"Data provided by Marcus or generated
+           through his use of the service (Art. 20 scope):
+           account profile, API usage logs, support tickets,
+           certification records"
+         access-only-scope:"Data NOT covered by portability (Art. 15
+           only): internal account notes, sales rep meeting records,
+           marketing tracking/analytics, renewal negotiation history"
+         redaction-required:"third-party personal data (other
+           TechBridge employees named in account records); internal
+           staff names in meeting notes; TechBridge Ltd commercial
+           information unrelated to Marcus personally"
          jurisdiction:"UK GDPR"
 ```
 
-The agent produces a redaction checklist and response letter structure.
+The agent produces a redaction checklist and separates the response into portability-format data (machine-readable) and access-only data (human-readable).
 
 **Day 15 -- Response draft:**
 
-Have the agent draft the final response letter: categories of data held, how it is processed, legal basis for processing, retention periods, and information about Sarah's rights (including the right to complain to the ICO).
+Have the agent draft the final response covering both components: the Article 20 portability data in a structured format (JSON or CSV) and the Article 15 access data in a readable letter. Include categories of data, processing purposes, legal basis, retention periods, and rights information.
 
 Route for attorney review before sending.
 
 **Reflection questions:**
 
-1. The sales rep's CRM note calls Sarah a "difficult customer." Is this personal data she is entitled to see under Article 15? What does the agent say? Is the agent correct? (Answer: yes, this is personal data -- it relates to an identified individual and constitutes an opinion about her behaviour.)
+1. Marcus's API usage logs show which endpoints he called and how frequently. Is this personal data subject to portability under Article 20, or is it data "observed" by the controller (which has a narrower portability scope under WP29 guidance)? What does the agent say? Do you agree?
 
-2. If Sarah had also requested erasure under Article 17, how would the workflow change? Which step requires immediate escalation to Privacy Counsel, and why? (Consider: the legal basis for original processing; whether retention is required for legal obligations; whether you can technically delete from all systems.)
+2. The CRM contains renewal negotiation notes written by your sales rep: "Marcus is price-sensitive -- offered 15% discount to prevent churn to [Competitor]." This is personal data about Marcus (Art. 15 access), but is it data "provided by" Marcus for portability purposes (Art. 20)? How does the agent handle the distinction?
 
-3. Your response is ready on Day 28. That is within the 30-day window. But your IT team then discovers a legacy database containing Sarah's data that was not included in the discovery. What do you do? Draft the follow-up communication to Sarah.
+3. Some API usage logs from the first 4 months have already been purged under Engineering's 18-month retention policy. Marcus's data existed when his customer relationship was active but no longer exists. Do you need to disclose that data was deleted? Draft the paragraph explaining the retention situation.
 
-**Deliverable:** Completed DSAR simulation demonstrating the full 30-day workflow, with a validated DSAR Agent SKILL.md and a documented process map replacing your current manual approach.
+**Deliverable:** Completed DSAR simulation demonstrating the full 30-day workflow with combined portability and access rights, a validated DSAR Agent Cowork skill, and a documented process map showing how multi-business-unit discovery with different retention policies is coordinated.
 
-**The key learning:** DSAR management is a coordination challenge, not a legal complexity challenge -- the agent's value is in the systematic discovery and deadline tracking that prevents the most common failure mode: missing the 30-day window because someone forgot to check a system.
+**The key learning:** The dual Article 15/20 request and the three-business-unit discovery with different retention policies test real-world DSAR complexity. The agent's value is in systematically coordinating discovery across units and correctly separating portability-format data from access-only data -- a distinction that manual processing frequently gets wrong.
 
 ---
 

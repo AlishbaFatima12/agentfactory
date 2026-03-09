@@ -104,64 +104,9 @@ The accounting treatment column is where most practitioners encounter their firs
 
 ## The Two Competing Formulas
 
-### Formula 1: ZATCA Equity-Based (Saudi Arabia)
+The ZATCA zakat calculation method — base formula, adjustment items, journal entries, and the distinction between equity-based and liquid-assets-based approaches — was covered in detail in [Lesson 10](./10-saudi-arabia.md). This lesson focuses on comparing the ZATCA method with the Hanafi, Malaysian, and Bahraini approaches and building a skill that routes to the correct formula by jurisdiction.
 
-The Saudi Zakat, Tax and Customs Authority uses a formula that starts from the **equity side** of the balance sheet:
-
-```
-Zakat Base = Share Capital
-           + Retained Earnings
-           + Statutory Reserves
-           + Other Reserves
-           − Fixed Assets (net book value)
-           − Long-term Investments
-           − Unamortised Expenses
-```
-
-Zakat = Zakat Base × 2.5% per lunar year
-
-**Key rules:**
-
-- Foreign-owned equity portions pay **income tax at 20%**, not zakat
-- Saudi-owned portions pay **zakat instead of income tax**
-- For a bank with mixed ownership: proportionate calculation
-- Filing deadline: 120 days after fiscal year-end
-
-**Journal entry:**
-
-```
-Dr: Zakat Expense                    [Calculated amount]
-Cr: Zakat Payable — ZATCA            [Same]
-
-On payment:
-Dr: Zakat Payable — ZATCA            [Amount]
-Cr: Cash                             [Amount]
-```
-
-### Formula 2: Hanafi / AAOIFI GS9 (Most Other Jurisdictions)
-
-The Hanafi methodology — codified in AAOIFI Governance Standard 9 — starts from the **asset side**, focusing on liquid trade wealth:
-
-**Zakatable assets (include):**
-
-- Cash and near-cash
-- Trade receivables (murabaha, DM receivables net of provisions)
-- Inventory and commodities held for trade
-- Short-term investments and sukuk classified as trading
-- Mudaraba and musharaka investments intended for profit
-- Salam receivables
-
-**Not zakatable (exclude):**
-
-- Fixed assets (property, plant, equipment used in operations)
-- Ijarah assets on the IFI's books (productive, not trade goods)
-- Long-term strategic investments
-- Goodwill and intangibles
-
-```
-Zakat Base = Zakatable Assets − Current Liabilities
-Zakat = Zakat Base × 2.5% (if Zakat Base > Nisab)
-```
+The critical distinction: the ZATCA formula starts from the **equity side** of the balance sheet (share capital + reserves + retained earnings, minus fixed assets and long-term investments). The AAOIFI/Hanafi formula starts from the **asset side** (liquid trade assets minus current liabilities). For the same bank, these two starting points produce different zakat obligations.
 
 ### Why the Two Formulas Produce Different Results
 
@@ -307,23 +252,22 @@ accounts; (b) remittance to the Central Zakat Administration
 
 Check: The bank deducts 2.5% × PKR 5M = PKR 125,000. This is a pass-through — the bank's P&L is not affected. The entry debits the depositor's account and credits Zakat Payable.
 
-### Step 5 — Build the Global Zakat SKILL.md
+### Step 5 — Create the Global Zakat Skill in Cowork
 
-```
-Draft the global zakat SKILL.md covering all four jurisdictions.
-The SKILL.md must specify:
-(1) When zakat is mandatory vs voluntary by jurisdiction
-(2) Which formula to use in each jurisdiction
-(3) Whether zakat is a P&L expense, a pass-through, or footnote-only
-(4) The journal entry sequence for each jurisdiction
-(5) The disclosure note content for each jurisdiction
-(6) A routing instruction: if the user mentions zakat and a specific
-jurisdiction, automatically load that jurisdiction's formula
+Create a global zakat skill in Cowork using **Write skill instructions** in the Skills panel:
 
-Format as a deployable SKILL.md with YAML frontmatter.
-```
+- **Skill name:** `global-zakat-calculator`
+- **Description:** Activate when any query mentions zakat, zakatable assets, ZATCA, nisab, or purification for an Islamic financial institution. Route to the correct jurisdiction formula before calculating.
+- **Instructions:** Enter the routing rules you built in Steps 1-4 as When/action pairs:
+  - When jurisdiction is Saudi Arabia → apply the ZATCA equity-based formula, book as P&L expense
+  - When jurisdiction is Pakistan → apply Zakat and Ushr Ordinance deduction-at-source, book as pass-through
+  - When jurisdiction is Malaysia or Bahrain → apply AAOIFI GS9 / Hanafi liquid-assets formula, disclose in annual report
+  - Include journal entry templates for each jurisdiction
+  - Include disclosure note content for each jurisdiction
 
-**Check your work:** The SKILL.md routing logic is the most important deliverable. An AI agent that receives a zakat query about a Saudi IFI must apply the ZATCA equity-based formula — not the Hanafi liquid-assets formula. An agent handling a Pakistan bank's zakat must recognise the deduction-at-source mechanism and never book it as the bank's own expense. The SKILL.md encodes these routing decisions so the agent selects the correct formula before generating any output.
+Click **Create**.
+
+**Check your work:** Test the skill by asking a zakat question about a Saudi IFI — the agent must apply the ZATCA equity-based formula, not the Hanafi liquid-assets formula. Then ask about a Pakistan bank's zakat — the agent must recognise the deduction-at-source mechanism and never book it as the bank's own expense. The skill's routing logic ensures the correct formula is selected before generating any output.
 
 ---
 

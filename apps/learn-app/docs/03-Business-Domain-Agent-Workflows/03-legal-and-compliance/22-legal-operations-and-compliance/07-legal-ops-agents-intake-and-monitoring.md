@@ -224,17 +224,15 @@ If no attorney action by 17:00 Wednesday -> escalate to GC + CFO.
 
 Layla Hassan, the GC, receives the escalation at 09:22 -- seven minutes after the email arrived. She reviews the three RED items, agrees with the redline suggestions, calls Ahmed to discuss the governing law issue, and sends marked-up terms to Etisalat Digital by noon. Without the intake agent, this email would have sat in the legal inbox until someone opened it, read it, realised it was urgent, forwarded it to Layla, who would then have to read the full contract from scratch. Typical delay: 4-8 hours on a good day.
 
-**SKILL.md for Contract Intake Agent:**
+**Creating the Contract Intake Agent as a Cowork Skill:**
+
+To create this skill in Cowork: open **Skills** → **+** → **Write skill instructions**. Set:
+
+- **Skill name:** `contract-intake-agent`
+- **Description:** `Activate for: incoming contract, contract routing, contract triage, new NDA received, vendor agreement intake, legal intake, new contract.`
+- **Instructions:** the rules below
 
 ```markdown
----
-name: contract-intake-agent
-version: 1.0
-description: >
-  Activate for: incoming contract, contract routing, contract triage,
-  new NDA received, vendor agreement intake, legal intake, new contract.
----
-
 ## INTAKE SEQUENCE — EXECUTE IN ORDER
 
 STEP 1 — IDENTIFY DOCUMENT TYPE
