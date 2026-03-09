@@ -280,8 +280,8 @@ of bug it is before showing me the fix.
 
 ## Looking Ahead
 
+You now have the measurement tools that close the loop: confidence scoring that trains honest self-assessment, a verification ladder that shows how today's predictions connect to tomorrow's production systems, diagnostic vocabulary for five kinds of bugs, and a professional practice mapping that proves every exercise has a real-world payoff. The chapter-end rubric will be your checkpoint starting in Chapter 33.
+
 James sits back. "I know the stages, the rules, the checkpoints, and now the tools to measure myself. But what does a real lesson actually *feel* like when all of this is running at once?"
 
-"That's the next lesson," Emma says. "You'll see how four teaching methods are woven into the stages, and you'll see the exact lesson architecture that every programming chapter in this book follows. After that, you'll recognize the pattern the moment you hit Chapter 33."
-
-The next lesson brings everything together: the teaching methods embedded within PRIMM-AI+, classroom and solo modes, and the practical lesson architecture that governs every chapter from here forward.
+"That's what the final lesson shows you," Emma says. "The exact architecture that every programming chapter in this book follows. Once you see it, you'll recognize the pattern the moment you hit Chapter 33."

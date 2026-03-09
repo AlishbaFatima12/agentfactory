@@ -355,8 +355,10 @@ without writing the full solution.
 
 ## Looking Ahead
 
+You now have the complete method: five stages, a fixed sequence, and a research-tested reason for every step. You predicted output before running code. You traced variables before modifying anything. You wrote a specification before building from scratch. That discipline — understand before you change, change before you create — is the foundation everything else in this book rests on.
+
 James has one more question. "I used PRIMM without any AI help in this lesson. But I *have* an AI coding assistant. When do I get to use it?"
 
-"Next lesson," Emma says. "You'll learn exactly when to bring AI in, when to keep it out, and how to tell whether it's helping you learn or just doing the work for you."
+"That's what comes next," Emma says. "You'll learn exactly when to bring AI in, when to keep it out, and how to tell whether it's helping you learn or just doing the work for you."
 
-That is what Lesson 2 introduces: **PRIMM-AI+** — the same five stages you just practiced, enhanced with AI permissions at each stage, checkpoints that keep you honest, and mastery gates that earn you the right to proceed. PRIMM gave you the method. PRIMM-AI+ gives you the operating system for learning with AI.
+The next lesson introduces **PRIMM-AI+** — the same five stages enhanced with AI permissions, checkpoints, and mastery gates. PRIMM gave you the method. PRIMM-AI+ gives you the operating system for learning with AI.
