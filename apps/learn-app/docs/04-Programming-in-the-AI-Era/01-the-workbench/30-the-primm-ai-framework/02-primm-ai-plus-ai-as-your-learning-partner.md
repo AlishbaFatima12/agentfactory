@@ -85,6 +85,8 @@ PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- t
 
 ## AI Roles at Each Stage
 
+![AI Roles Across PRIMM-AI+ Stages: five stages — Predict (AI-Free), Run (Execute Only), Investigate (After You), Modify (Hints Only), Make (Review Only) — showing how AI involvement changes in type at each stage, not in amount](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-30/ch30-ai-permissions-gradient.png)
+
 James opens his AI coding assistant and types: "Explain this Python program to me." The explanation appears instantly — clean, thorough, correct. He reads it, nods, and moves on.
 
 Emma stops him. "What did you just learn?"
@@ -399,11 +401,11 @@ example of a partner interaction and a crutch interaction.
 
 ## Looking Ahead
 
+You now have the structural safeguards that make AI a learning partner instead of a crutch: AI-free checkpoints that reveal what you actually know, mastery gates that earn you the right to proceed, and five rules that keep the balance between assistance and dependency. The permissions table is your reference card — return to it whenever you are unsure what AI should or should not do at a given stage.
+
 James looks at the AI Permissions Table and the five rules. "I know *how* to work with AI now. But how do I know if I'm actually getting better? And does any of this matter once I'm past the exercises?"
 
-"That's the next lesson," Emma says. "You'll learn to measure your own growth — confidence scoring, the verification ladder, even a rubric you'll use at the end of every programming chapter. And you'll see that the habits you're building now are exactly what professionals use every day."
-
-The next lesson introduces the self-assessment tools and professional connections that complete the PRIMM-AI+ picture: how to calibrate your confidence, how the predict-then-verify habit scales from exercises to production, and why the skills you are building now transfer directly to professional software development.
+"Both questions have concrete answers," Emma says. "The next lesson gives you the tools to measure your own growth — and shows you that the habits you're building now are exactly what professionals use every day."
 
 ---
 

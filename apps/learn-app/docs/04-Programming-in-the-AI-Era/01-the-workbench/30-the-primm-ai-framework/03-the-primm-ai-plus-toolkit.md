@@ -77,6 +77,8 @@ Emma smiles. "You'll never stop. Senior engineers do the same thing — they jus
 
 Every time you predict what code will do and then run it to check, you are building a habit: guess first, verify second. That habit does not stop being useful when you leave this chapter. The Verification Ladder shows how the same habit scales from a learning exercise all the way to professional software -- one step at a time.
 
+![The PRIMM-AI+ Verification Ladder: five rungs from Prediction at the bottom through Type Checking, Testing, CI Pipeline, to Observability at the top — showing the progression from learning exercises to professional practice](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-30/ch30-verification-ladder.png)
+
 | Step | Question | What You Do |
 |------|----------|-------------|
 | 1. **Prediction** | What do I think this code does? | Read the code and commit to an answer before running it |
@@ -280,8 +282,8 @@ of bug it is before showing me the fix.
 
 ## Looking Ahead
 
+You now have the measurement tools that close the loop: confidence scoring that trains honest self-assessment, a verification ladder that shows how today's predictions connect to tomorrow's production systems, diagnostic vocabulary for five kinds of bugs, and a professional practice mapping that proves every exercise has a real-world payoff. The chapter-end rubric will be your checkpoint starting in Chapter 33.
+
 James sits back. "I know the stages, the rules, the checkpoints, and now the tools to measure myself. But what does a real lesson actually *feel* like when all of this is running at once?"
 
-"That's the next lesson," Emma says. "You'll see how four teaching methods are woven into the stages, and you'll see the exact lesson architecture that every programming chapter in this book follows. After that, you'll recognize the pattern the moment you hit Chapter 33."
-
-The next lesson brings everything together: the teaching methods embedded within PRIMM-AI+, classroom and solo modes, and the practical lesson architecture that governs every chapter from here forward.
+"That's what the final lesson shows you," Emma says. "The exact architecture that every programming chapter in this book follows. Once you see it, you'll recognize the pattern the moment you hit Chapter 33."

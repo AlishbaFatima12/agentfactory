@@ -71,6 +71,8 @@ This lesson answers that question. It shows how four teaching methods -- worked 
 
 ## The Four Teaching Methods Inside PRIMM-AI+
 
+![Four Teaching Methods Inside PRIMM-AI+: Worked Examples spans Predict and Investigate, Parsons Problems spans Investigate and Modify, Live Coding spans Investigate and Modify, Peer Instruction spans all five stages — each method is embedded within specific PRIMM stages](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-30/ch30-teaching-methods-map.png)
+
 PRIMM-AI+ provides the sequence and the safeguards. **These four methods are the specific techniques used inside the sequence.**
 
 ### Worked Examples: Predict and Investigate
@@ -109,7 +111,7 @@ city: str = "London"
 London: 32C
 ```
 
-To solve this, you must reason about data flow: `city` must exist before `label` can use it, `temp` must exist before `label` can use it, and `label` must exist before `print` can display it. The correct order is `city`, then `temp`, then `label`, then `print`. If you can reorder these lines correctly, you understand the program's structure -- **not just what it does, but *why* the order matters.**
+To solve this, you must reason about data flow: `city` must exist before `label` can use it, `temp` must exist before `label` can use it, and `label` must exist before `print` can display it. The correct order is `city`, then `temp`, then `label`, then `print`. If you can reorder these lines correctly, you understand the program's structure -- **not just what it does, but *why* the order matters.** In solo mode, your AI assistant can generate fresh Parsons problems from any program you have just studied — ask it to scramble the lines and quiz you.
 
 ### Live Coding: Investigate and Modify
 
@@ -285,3 +287,5 @@ James sits back. In four lessons, he has gone from "what is PRIMM?" to knowing e
 "You do," Emma says. "And here's the thing — once the pattern is automatic, you stop thinking about the process and start thinking about the code. That's when real learning accelerates. Starting with the next chapter, you'll actually walk the territory. The next chapter introduces the ten axioms that guide how professionals build software with AI — the principles that turn a student into a practitioner."
 
 You now know how you will learn: the five stages, the structural safeguards, the four teaching methods, and the lesson architecture. The next chapter introduces the ten axioms that guide professional AI-driven development. You will experience those axioms through the PRIMM-AI+ lens: predicting what professional code should look like, investigating why each axiom matters, and eventually building programs that embody them.
+
+And if the Python code in this chapter looked foreign — that is expected. When you reach your first Python lessons later in the book, you will start from the absolute basics using this exact map.
