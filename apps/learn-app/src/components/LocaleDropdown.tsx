@@ -1,7 +1,6 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { useAlternatePageUtils } from '@docusaurus/theme-common/internal';
-import { useHistorySelector } from '@docusaurus/theme-common';
+import { useLocation } from '@docusaurus/router';
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -12,28 +11,38 @@ import {
 import { Globe, ChevronDown } from "lucide-react";
 
 export function LocaleDropdown() {
-  const { i18n } = useDocusaurusContext();
-  const alternatePageUtils = useAlternatePageUtils();
-  const search = useHistorySelector((history) => history.location.search);
-  const hash = useHistorySelector((history) => history.location.hash);
+  const { siteConfig, i18n } = useDocusaurusContext();
+  const location = useLocation();
 
   const currentLocale = i18n.currentLocale;
+  const defaultLocale = i18n.defaultLocale;
+  const baseUrl = siteConfig.baseUrl; // e.g. "/agent-factory-book/" or "/"
 
-  // Match official Docusaurus pattern: construct locale URL with pathname:// prefix
-  const getLocaleUrl = (locale: string) => {
-    const url = alternatePageUtils.createUrl({
-      locale,
-      fullyQualified: false,
-    });
-    return `pathname://${url}${search}${hash}`;
-  };
+  // Build locale URL by manually constructing the path
+  // Docusaurus locale routing: default locale has no prefix, others get /locale/ prefix
+  const getLocaleUrl = (targetLocale: string): string => {
+    const pathname = location.pathname; // e.g. "/agent-factory-book/docs/some-page"
 
-  // Resolve pathname:// protocol to actual path (same as Docusaurus internal link handling)
-  const resolvePathname = (url: string) => {
-    if (url.startsWith('pathname://')) {
-      return url.replace('pathname://', '');
+    // Strip baseUrl from pathname to get the page-relative path
+    // e.g. "/agent-factory-book/docs/some-page" → "docs/some-page"
+    // or   "/agent-factory-book/ur/docs/some-page" → "ur/docs/some-page"
+    let pagePath = pathname.startsWith(baseUrl)
+      ? pathname.slice(baseUrl.length)
+      : pathname;
+
+    // Strip current locale prefix if present (for non-default locales)
+    if (currentLocale !== defaultLocale) {
+      const localePrefix = currentLocale + '/';
+      if (pagePath.startsWith(localePrefix)) {
+        pagePath = pagePath.slice(localePrefix.length);
+      }
     }
-    return url;
+
+    // Build new URL: baseUrl + (locale prefix if non-default) + pagePath
+    const localePrefix = targetLocale !== defaultLocale ? targetLocale + '/' : '';
+    const newPath = baseUrl + localePrefix + pagePath;
+
+    return newPath + location.search + location.hash;
   };
 
   const currentLocaleConfig = i18n.localeConfigs[currentLocale];
@@ -52,7 +61,7 @@ export function LocaleDropdown() {
         {i18n.locales.map((locale) => {
           const config = i18n.localeConfigs[locale];
           const isActive = locale === currentLocale;
-          const localeUrl = resolvePathname(getLocaleUrl(locale));
+          const localeUrl = getLocaleUrl(locale);
           return (
             <DropdownMenuItem
               key={locale}
