@@ -82,10 +82,10 @@ explanation: "This is the comprehension crisis: having working code without unde
 source: "Lesson 1: The PRIMM Framework"
 },
 {
-question: "A student rates their prediction confidence as 3 out of 5, meaning 'think I know but could be wrong.' After running the code, their prediction is exactly correct. What should happen next?",
+question: "A student rates their prediction confidence as 3 out of 5, meaning 'think I know but could be wrong.' After running the code, their prediction is exactly correct — but they cannot explain WHY line 4 produces its result. What should happen next?",
 options: ["They should celebrate and move directly to the Make stage", "They should investigate why their confidence was lower than their accuracy", "They should increase their score to 5 and proceed to Modify", "They should repeat the prediction with a different program immediately"],
 correctOption: 1,
-explanation: "Underconfidence (scoring 3 but getting it right) is a calibration signal worth investigating. Why did the student doubt themselves when they actually understood the code? Investigation helps recalibrate. Skipping to Make bypasses Investigate and Modify. Retroactively changing the score defeats the purpose of confidence tracking. Repeating with a different program skips the investigation that would improve calibration.",
+explanation: "The student got the right output but cannot explain why a specific line works — that is underconfidence combined with a genuine understanding gap. Investigation helps close both: analyzing why line 4 works builds real comprehension, and discovering that their intuition was correct recalibrates confidence. Skipping to Make bypasses Investigate and Modify. Retroactively changing the score defeats the purpose of confidence tracking. Repeating with a different program skips the investigation that would improve both understanding and calibration.",
 source: "Lesson 1: The PRIMM Framework"
 },
 {

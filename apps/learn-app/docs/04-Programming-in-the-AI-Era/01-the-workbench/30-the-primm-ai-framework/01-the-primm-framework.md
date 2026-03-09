@@ -47,8 +47,8 @@ learning_objectives:
     assessment_method: "Student articulates the bottleneck shift from code production (pre-AI) to code verification (AI era) and connects this to PRIMM's 4:1 ratio of understanding to writing stages"
 
 cognitive_load:
-  new_concepts: 4
-  assessment: "4 concepts (the PRIMM five-stage sequence, the research basis for PRIMM, comprehension-as-bottleneck thesis, the prediction-reality gap as learning mechanism) well within A2 limit of 7"
+  new_concepts: 5
+  assessment: "5 concepts (the PRIMM five-stage sequence as one unit, the research basis for PRIMM, comprehension-as-bottleneck thesis, the prediction-reality gap as learning mechanism, confidence scoring as calibration tool) within A2 limit of 5-7, manageable given strong scaffolding through the James/Emma narrative"
 
 differentiation:
   extension_for_advanced: "Read the 2019 journal paper by Sentance, Waite, and Kallia in Computer Science Education (Vol. 29, No. 2-3) and identify which PRIMM stage maps most closely to code review in professional software engineering."
@@ -224,7 +224,7 @@ Now -- and only now -- you write a new program from scratch. The goal is a **pro
 
 1. **Write a specification first.** Before touching code, describe what the program should do: "Given a name and a role, print them on one line separated by a dash."
 
-2. **Attempt it yourself.** Try writing the code based on what you learned from the greeting program. You will need two variables (name and role), one variable that combines them, and a print statement. You will not get it perfect. That is expected.
+2. **Attempt it yourself.** Try writing the code based on what you learned from the greeting program. You will need two variables (name and role), one variable that combines them, and a print statement. James tries `badge: str = name - role` and gets an error -- the minus sign does not work with text. He remembers the greeting program used `+` and tries `badge: str = name + " - " + role`. This time it works. You will make similar wrong turns. That is expected -- each mistake teaches you something the correct answer alone would not.
 
 3. **Use AI for targeted help.** When you get stuck, ask a specific question -- not "write me a badge program" but "How do I join two strings with a dash between them in Python?"
 
@@ -242,7 +242,7 @@ Emma points back at the fifty lines of AI-generated code from the beginning of t
 
 James pauses. He still cannot. But the greeting program? **He understands every line — because he traced it, changed it, and built something new from it.**
 
-PRIMM was created in 2017 for secondary school classrooms. Why does it matter *more* in 2026 than it did then?
+PRIMM was created in 2017 for secondary school classrooms. Why does it matter *more* in the AI era than it did when it was invented?
 
 Because AI changed the economics of code production. Before AI coding assistants, writing code was slow and expensive. A developer spent hours translating requirements into syntax, debugging typos, looking up API signatures. The bottleneck was **production** -- the act of turning ideas into running code.
 

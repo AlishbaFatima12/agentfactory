@@ -75,7 +75,7 @@ This lesson introduces each one. By the end, you will have the complete PRIMM-AI
 
 Emma smiles. "You'll never stop. Senior engineers do the same thing — they just call it 'code review' and 'testing.' The habit you're building right now is the same habit that powers professional software. It just grows with you."
 
-Every time you predict what code will do and then run it to check, you are building a habit: guess first, verify second. That habit does not stop being useful when you leave this chapter. It grows with you. The Verification Ladder shows how the same habit scales from a learning exercise all the way to professional software -- one step at a time.
+Every time you predict what code will do and then run it to check, you are building a habit: guess first, verify second. That habit does not stop being useful when you leave this chapter. The Verification Ladder shows how the same habit scales from a learning exercise all the way to professional software -- one step at a time.
 
 | Step | Question | What You Do |
 |------|----------|-------------|
@@ -158,7 +158,7 @@ The habits you build with PRIMM-AI+ do not disappear when you finish this book. 
 | **Modify** | Change an existing program to add a feature or fix a problem | Refine code iteratively based on what the review revealed |
 | **Make** | Write a new program from a specification you created | Build and deliver a complete, tested solution from requirements |
 
-Notice the Make row. While learning, you write the code yourself — that is how you build the skill. **In professional practice, AI writes the code from YOUR specification — which is why learning to write clear specifications matters more than learning to type code fast.** The spec is the product. The code is the output.
+Notice the Make row. While learning, you write the code yourself — that is how you build the skill. **In professional practice, AI often generates code from YOUR specification — which is why learning to write clear specifications matters more than learning to type code fast.** The spec is the product. The code is the output.
 
 The key insight: Predict always means the same thing -- **read the code, form an expectation, then check whether you are right.** While learning, you predict what a program will print. As a professional, you predict whether AI-generated code is correct. The habit is identical. The stakes grow.
 
