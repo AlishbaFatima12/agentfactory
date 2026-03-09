@@ -12,7 +12,7 @@ sidebar_position: 0
 
 You are about to learn Python programming. But you are learning it in 2026, not 2016. That distinction matters more than any syntax rule this book will ever teach you. An AI coding assistant can write a working Python function in seconds. If the goal were simply to *produce code*, you could skip this Part entirely. But producing code was never the real goal. The real goal is **understanding** — the ability to read a program and know what it will do, to look at AI-generated code and judge whether it is correct, to take a working function and adapt it for a new purpose.
 
-This chapter introduces the pedagogical framework that governs all programming instruction in this book: **PRIMM-AI+** — Predict, Run, Investigate, Modify, Make *with AI*, enhanced with AI-free checkpoints, mastery gates, confidence scoring, and a verification ladder. Built on research-validated principles from computing education, PRIMM-AI+ teaches you to read and understand code before you ever try to write it — and integrates AI coding assistants as learning partners at every stage with clear structural safeguards.
+This chapter introduces the teaching framework that governs all programming instruction in this book: **PRIMM-AI+** — Predict, Run, Investigate, Modify, Make *with AI*, enhanced with AI-free checkpoints, mastery gates, confidence scoring, and a verification ladder. Built on research-validated principles from computing education, PRIMM-AI+ teaches you to read and understand code before you ever try to write it — and integrates AI coding assistants as learning partners at every stage with clear structural safeguards.
 
 ## Learning Outcomes
 
