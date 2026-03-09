@@ -22,6 +22,22 @@ This chapter introduces the teaching framework that governs all programming inst
 
 Built on research-tested methods from computing education (493 students, 13 schools), PRIMM-AI+ teaches you to read and understand code before you ever try to write it — and integrates AI coding assistants as learning partners at every stage with clear boundaries. Here is what the process looks like in practice: you see a complete program, predict what it will do before running it, run it and compare the output to your prediction, investigate how it works by tracing variables and asking questions, modify it to change its behavior, and finally build something new from a specification you write. **Every programming chapter from Chapter 33 onward follows this same rhythm.**
 
+## The Framework at a Glance
+
+Before you dive into the lessons, here is the complete picture in one table. You do not need to understand every term yet — each one is explained across the four lessons. This is your map. Return to it anytime you want to see where you are.
+
+| Stage | What You Do | What AI Does | Key Safeguard |
+|-------|------------|-------------|---------------|
+| **Predict** | Read the code, write your prediction and confidence score | Generates code samples — but must not explain them | AI-free: no AI assistance allowed |
+| **Run** | Compare your prediction to the actual output | Executes the program and shows raw output | Gap recorded: you note where prediction matched or diverged |
+| **Investigate** | Write your own explanation first, then ask targeted questions | Answers questions and generates trace tables — only after your attempt | Artifact required: trace table, explanation, or failure note |
+| **Modify** | Change the code yourself before asking for help | Provides hints — not solutions | Your hands produce the change, AI evaluates afterward |
+| **Make** | Write a specification first, then build from scratch | Reviews your spec and code — but must not write the solution | Spec-first: written specification exists before any code |
+
+**The progression is deliberate:** you understand before you change, and you change before you create. Every programming chapter from Chapter 33 onward follows this same rhythm.
+
+---
+
 ## Learning Outcomes
 
 By the end of this chapter, you will be able to:
