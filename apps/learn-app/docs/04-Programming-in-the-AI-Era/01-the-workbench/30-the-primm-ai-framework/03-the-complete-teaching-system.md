@@ -174,6 +174,8 @@ Here is what a typical lesson looks like when all the pieces work together. You 
 
 Notice the progression: **you understand before you change, and you change before you create.** Every step earns you the right to attempt the next one.
 
+> **Where do Parsons Problems fit?** Parsons problems -- scrambled lines you reorder into a working program -- are a bridge between Investigate and Modify. They appear inside Step 3 (Investigate) when a lesson needs to test structural understanding before you attempt free modifications. Not every lesson includes one, but when you see scrambled code, that is a Parsons problem checking whether you understand *why* the code is ordered the way it is.
+
 ---
 
 ## How Every Chapter Follows PRIMM-AI+
