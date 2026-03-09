@@ -253,25 +253,25 @@ Format as an audit working paper with risk reference numbers.
 
 The framework tension risks include: dual-reporting inconsistency (the bank produces AAOIFI primary statements but investors and rating agencies request IFRS — are the reconciling adjustments consistently applied?), label compliance (using "interest income" in any output is a Shariah violation), ijarah asset misclassification (the AAOIFI balance sheet shows assets that IFRS would derecognise — which view governs for capital adequacy?), IAH fund treatment (if IAH funds are practically guaranteed, the AAOIFI separate-category presentation may not reflect economic substance), and impairment methodology divergence (FAS 30 vs IFRS 9 ECL may produce different provision levels).
 
-### Step 6 — Build the Master Bahrain-AAOIFI SKILL.md
+### Step 6 — Create the Bahrain-AAOIFI Jurisdiction Overlay Skill
 
-```
-Based on all work in this exercise, draft the comprehensive
-Bahrain-AAOIFI jurisdiction overlay SKILL.md. It must cover:
+Create a Bahrain-AAOIFI jurisdiction overlay skill in Cowork. Use **Write skill instructions** in the Skills panel:
 
-(1) Mandatory FAS reference list (FAS 2, 3, 4, 7, 32, 10, 25, 30, 33)
-(2) Balance sheet presentation requirements — every line item
-(3) Income statement line item requirements — every product label
-(4) IAH fund treatment — separate balance sheet category
-(5) SSB disclosure requirements
-(6) CBB Rulebook regulatory references
-(7) Non-Shariah income treatment (charity payable)
-(8) Zakat disclosure requirements
-(9) Income labels — NEVER use list
-(10) Reconciliation guidance for entities that also report under IFRS
+- **Skill name:** `bahrain-aaoifi-overlay`
+- **Description:** Activate when any query specifies Bahrain, CBB, Central Bank of Bahrain, or AAOIFI mandatory jurisdiction. Apply AAOIFI Financial Accounting Standards as the primary framework for all Islamic finance output.
+- **Instructions:** Enter the comprehensive rules from Steps 1-5 as your skill instructions:
+  - Mandatory FAS reference list (FAS 2, 3, 4, 7, 32, 10, 25, 30, 33)
+  - Balance sheet presentation requirements — every line item
+  - Income statement line item requirements — every product label
+  - IAH fund treatment — separate balance sheet category
+  - SSB disclosure requirements
+  - CBB Rulebook regulatory references
+  - Non-Shariah income treatment (charity payable)
+  - Zakat disclosure requirements
+  - Income labels — NEVER use list (e.g., NEVER "Interest Income," NEVER "Loans and Advances")
+  - Reconciliation guidance for entities that also report under IFRS
 
-Format as a complete, deployable SKILL.md file with YAML frontmatter.
-```
+Click **Create**, then test by running a transaction through the plugin with the skill active — give the agent a murabaha transaction in Bahrain and confirm the output uses AAOIFI FAS 2 terminology, not IFRS 9 defaults.
 
 7. **Error detection — mixed-framework financial statements.** Review a deliberately flawed balance sheet: _"An ABC Islamic Bank balance sheet shows 'Loans and Advances to Customers' as the main asset line, 'Net Interest Income' in the income statement, and Investment Account Holder funds classified under 'Other Liabilities'. This balance sheet claims to follow AAOIFI. Identify every AAOIFI violation and produce the corrected line items."_ At minimum you should find: (1) "Loans and Advances" is prohibited — each product gets its own line (Murabaha Receivables, Ijarah Assets, etc.); (2) "Net Interest Income" is prohibited — should be product-specific income labels; (3) IAH funds must appear as a separate category ("Equity of Investment Account Holders"), not under "Other Liabilities".
 

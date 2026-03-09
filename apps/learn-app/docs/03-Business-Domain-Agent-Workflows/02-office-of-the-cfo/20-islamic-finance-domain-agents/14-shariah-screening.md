@@ -334,17 +334,19 @@ address this volatility problem?
 
 **What you are learning:** The denominator choice is not a technicality — it determines how stable a company's Shariah status is over market cycles. A fund that uses market-cap-based screening will experience more turnover (and more transaction costs) during market downturns, as companies breach thresholds not because their debt increased but because their share price fell. The trailing average approach smooths this volatility but introduces a lag.
 
-### Prompt 3: Write Your Own — Personal Shariah Screening Agent
+### Prompt 3: Build a Personal Shariah Screening Skill
 
-**Do not copy a pre-written prompt.** Design your own prompt that asks the AI to build a personal Shariah screening agent SKILL.md. Your scenario:
+Build a personal Shariah screening skill in Cowork using **Create with Claude**. Tell Cowork your scenario:
 
-> You hold 15 stocks across US, UK, and Malaysian markets. You want an agent that screens your portfolio for Shariah compliance, flags failures, and calculates your purification obligation.
+> "I hold 15 stocks across US, UK, and Malaysian markets. Help me build a skill that screens my portfolio for Shariah compliance using the appropriate methodology for each market, flags failures, and calculates my purification obligation. The skill should default to SC Malaysia methodology for Malaysian stocks, MSCI Islamic for US and UK stocks, and let me switch methodologies if needed."
 
-Your prompt should specify: (1) what input the agent takes, (2) which screening methodology to apply by default and how to switch methodologies, (3) what output to produce. Think about what the routing instruction should say — how does the agent know which methodology to use?
+Review Claude's draft — does it include routing logic to select the correct methodology by market? Does it specify the financial ratio thresholds and NPI screen? Refine and save.
 
-**After you get the output**, evaluate the SKILL.md against the shariah-screening-global skill installed by the plugin. Does your agent handle methodology switching the same way the plugin's router handles jurisdiction switching? What routing logic did the AI include that you didn't specify?
+**Test the skill** by running a screening command on a sample portfolio: pick 3-4 well-known companies (e.g., Apple, Petronas, HSBC) and ask the skill to screen them. Check whether it correctly applies the hard exclusion for HSBC (conventional banking) and runs the financial ratio screens for the others.
 
-**What you are learning:** Building a screening SKILL.md from a prompt you wrote yourself tests whether you understand the routing pattern from Lesson 3. The router logic (identify methodology → load screening rules → apply → flag) mirrors the chapter's router → product → overlay architecture. If your prompt produced a SKILL.md without routing logic, your prompt was missing the jurisdiction/methodology switching instruction — the same gap that makes generic agents fail across jurisdictions.
+**After testing**, compare your skill's approach against the `shariah-screening-global` skill installed by the plugin. Does your skill handle methodology switching the same way the plugin's router handles jurisdiction switching? What routing logic did Claude include that you did not specify in your prompt?
+
+**What you are learning:** Building a screening skill from your own requirements tests whether you understand the routing pattern from Lesson 3. The router logic (identify methodology, load screening rules, apply, flag) mirrors the chapter's router-to-product-to-overlay architecture. If Claude produced a skill without routing logic, your prompt was missing the methodology-switching instruction — the same gap that makes generic agents fail across jurisdictions.
 
 ## Flashcards Study Aid
 
