@@ -33,7 +33,7 @@ cards:
     difficulty: "intermediate"
 
   - id: "ch19-09-methodology-compliance-extensions-005"
-    front: "What are the three Method A interview questions for building SKILL.md extensions?"
+    front: "What are the three Method A interview questions for building Cowork skills?"
     back: "1. What are the three most common errors junior staff make in this area?\n2. What questions do you always ask when reviewing this work?\n3. What conditions would always cause you to escalate or reject the work?"
     tags: ["method-a", "knowledge-extraction"]
     difficulty: "basic"
@@ -82,8 +82,8 @@ cards:
     difficulty: "intermediate"
 
   - id: "ch19-09-methodology-compliance-extensions-013"
-    front: "How does Method A transform a CA/CPA's tacit knowledge into SKILL.md instructions?"
+    front: "How does Method A transform a CA/CPA's tacit knowledge into Cowork skill instructions?"
     back: "Each common error surfaces an encoding need; each review question reveals a quality check; each escalation condition becomes a 'When [condition], STOP and escalate' instruction — converting automatic professional judgment into explicit agent rules."
-    tags: ["method-a", "knowledge-extraction", "skill-md"]
+    tags: ["method-a", "knowledge-extraction", "cowork-skill"]
     difficulty: "advanced"
     why: "What tacit knowledge is most likely to be missed when using Method A with a very experienced partner versus a mid-level manager?"

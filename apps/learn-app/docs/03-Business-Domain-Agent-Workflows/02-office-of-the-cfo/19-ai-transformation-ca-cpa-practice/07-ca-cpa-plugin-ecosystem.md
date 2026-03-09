@@ -427,7 +427,7 @@ Draft a Cowork global instruction for my practice that includes:
 Explain why each element matters for consistent agent output.
 ```
 
-**What you are learning:** Writing global instructions forces you to articulate your practice context explicitly — the jurisdiction, standards, conventions, and thresholds that experienced practitioners carry as tacit knowledge. Making this knowledge explicit is the same skill you will use in Lesson 8 when building domain extensions. The global instruction is the lightweight version; the SKILL.md extension is the full encoding.
+**What you are learning:** Writing global instructions forces you to articulate your practice context explicitly — the jurisdiction, standards, conventions, and thresholds that experienced practitioners carry as tacit knowledge. Making this knowledge explicit is the same skill you will use in Lesson 8 when building domain extensions. The global instruction is the lightweight version; the Cowork skill is the full encoding.
 
 ## Flashcards Study Aid
 

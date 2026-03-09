@@ -11,7 +11,7 @@ Three additional extensions complete the five-extension architecture: audit meth
 
 - Each significant client should have its own entity extension -- combining multiple clients into one extension risks applying one client's seasonal patterns or risk areas to another client's analysis.
 - Compliance calendar extensions combined with Cowork scheduled tasks transform compliance from reactive calendar-checking into automated monitoring that alerts the CA/CPA when preparation needs to begin and escalates when deadlines are at risk.
-- Method A answers convert directly to SKILL.md instructions: junior errors become standing rules, review questions become quality checks, escalation conditions become stop-and-flag triggers.
+- Method A answers convert directly to skill instructions: junior errors become standing rules, review questions become quality checks, escalation conditions become stop-and-flag triggers.
 
 ### Common Mistakes
 

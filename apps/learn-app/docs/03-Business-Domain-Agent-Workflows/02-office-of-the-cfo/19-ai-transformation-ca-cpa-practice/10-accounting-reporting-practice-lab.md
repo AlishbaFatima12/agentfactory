@@ -87,7 +87,7 @@ cognitive_load:
   assessment: "8 concepts across 4 exercises at B1-B2 level. Students select 1-2 exercises to complete fully, reviewing all four. The lab format distributes cognitive load across self-selected exercises rather than requiring mastery of all 8 concepts in a single session."
 
 differentiation:
-  extension_for_advanced: "After completing any exercise, write a SKILL.md that encodes the workflow as a reusable agent instruction. Include the judgment boundaries — the conditions where the agent must escalate to a human rather than proceeding autonomously. Compare your SKILL.md to the reference implementation in the companion repo."
+  extension_for_advanced: "After completing any exercise, create a Cowork skill that encodes the workflow as a reusable agent instruction. Include the judgment boundaries — the conditions where the agent must escalate to a human rather than proceeding autonomously. Compare your skill to the reference implementation in the companion repo."
   remedial_for_struggling: "Start with Exercise 8 (bookkeeping). Focus on Steps 1-3 only — document classification, account mapping, and transaction register creation. These three steps establish the core pattern of directing Cowork through a structured workflow. Return to the remaining steps after the core pattern feels comfortable."
 
 teaching_guide:
@@ -225,7 +225,7 @@ and a trial balance extract for the accounts affected. Save to
 **Check your work:** Your transaction register should contain one row per transaction with balanced debits and credits. The trial balance extract should balance. At least one transaction should have been flagged for professional judgment in Step 7 — if none were flagged, your source documents may have been too straightforward. The value you provided was not in coding routine transactions — it was in answering the questions the agent could not answer for itself.
 
 :::tip Extension Exercise
-Add a second run with documents that include a transaction the agent is likely to mis-code — an owner's drawing that looks like an expense, or a deposit that might be revenue or a liability. Verify that the agent either codes it correctly or flags it for judgment. Write a SKILL.md instruction that resolves the ambiguity for your specific entity type.
+Add a second run with documents that include a transaction the agent is likely to mis-code — an owner's drawing that looks like an expense, or a deposit that might be revenue or a liability. Verify that the agent either codes it correctly or flags it for judgment. Write a skill instruction that resolves the ambiguity for your specific entity type.
 :::
 
 ---
@@ -561,10 +561,10 @@ produced for each of those errors. If any are present, identify
 and correct them.
 ```
 
-**8. Write the consolidation SKILL.md.** Ask:
+**8. Create the consolidation skill.** Ask:
 
 ```
-Draft a SKILL.md for a consolidation agent that will perform this
+Draft a Cowork skill for a consolidation agent that will perform this
 intercompany elimination process every period. Include: the data
 inputs required (trial balances per entity, intercompany transaction
 schedule), the four elimination types (investment, loans, trading,
@@ -604,7 +604,7 @@ the consequence would be if the agent coded it incorrectly.
 Rank them from most to least consequential.
 ```
 
-**What you are learning:** The value of an autonomous bookkeeping workflow is not in the routine transactions it codes correctly — it is in the boundary where routine ends and judgment begins. By mapping the judgment boundaries specific to your client types, you are building the exception rules that would make your bookkeeping SKILL.md genuinely useful rather than generically adequate.
+**What you are learning:** The value of an autonomous bookkeeping workflow is not in the routine transactions it codes correctly — it is in the boundary where routine ends and judgment begins. By mapping the judgment boundaries specific to your client types, you are building the exception rules that would make your bookkeeping skill genuinely useful rather than generically adequate.
 
 ### Prompt 2: Exception Threshold Calibration
 
