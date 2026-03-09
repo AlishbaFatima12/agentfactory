@@ -1,6 +1,6 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/cross-domain-capstones
-sidebar_position: 15
+sidebar_position: 14
 title: "Cross-Domain Capstones"
 description: "Integrate all five CA/CPA practice domains in two capstone exercises — a full new client onboarding workflow and a three-session annual audit cycle from planning through to the audit opinion"
 keywords:
@@ -27,7 +27,7 @@ keywords:
     "cross-domain workflow",
   ]
 chapter: 19
-lesson: 15
+lesson: 14
 duration_minutes: 75
 
 # HIDDEN SKILLS METADATA
@@ -37,7 +37,7 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can orchestrate a complete new client onboarding — from document intake through risk assessment, analytical review, engagement scoping, fee estimation, SKILL.md extension drafting, and client meeting preparation — integrating capabilities from all five CA/CPA domains into a single coherent workflow"
+    measurable_at_this_level: "Student can orchestrate a complete new client onboarding — from document intake through risk assessment, analytical review, engagement scoping, fee estimation, Cowork skill creation, and client meeting preparation — integrating capabilities from all five CA/CPA domains into a single coherent workflow"
 
   - name: "Execute Multi-Session Audit Cycle"
     proficiency_level: "B2"
@@ -54,10 +54,10 @@ skills:
     measurable_at_this_level: "Student can identify which steps in a cross-domain workflow involve professional judgment (risk acceptance, materiality decisions, audit opinion formation) versus execution (data extraction, calculation, document formatting) and explain why the judgment steps cannot be delegated to AI"
 
 learning_objectives:
-  - objective: "Orchestrate a complete new client onboarding workflow that integrates document classification, risk assessment, analytical review, engagement scoping, fee estimation, SKILL.md extension creation, and client communication — drawing on capabilities from all five CA/CPA practice domains"
+  - objective: "Orchestrate a complete new client onboarding workflow that integrates document classification, risk assessment, analytical review, engagement scoping, fee estimation, Cowork skill creation, and client communication — drawing on capabilities from all five CA/CPA practice domains"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student completes Exercise 22 — producing a client profile, engagement risk assessment, analytical review, engagement letter, SKILL.md extensions, engagement file structure, and client meeting agenda for a new textile exporter client"
+    assessment_method: "Student completes Exercise 22 — producing a client profile, engagement risk assessment, analytical review, engagement letter, Cowork skills, engagement file structure, and client meeting agenda for a new textile exporter client"
 
   - objective: "Execute a three-session annual audit cycle — from planning analytical procedures and materiality calculation through fieldwork testing and documentation to misstatement evaluation, management letter drafting, and audit opinion formation — with explicit session boundaries producing self-contained deliverables at each stage"
     proficiency_level: "B2"
@@ -77,7 +77,7 @@ cognitive_load:
     - "Multi-session exercise with session boundaries (planning/fieldwork/completion)"
     - "Audit opinion formation as professional judgment (ISA 700)"
     - "AI-augmented practice narrative for client communication"
-  assessment: "5 concepts at B2 level. Students arrive having completed all five domain lessons (L02-L06), all plugin and workflow lessons (L07-L10), and four practice labs (L11-L14). No new tools or capabilities are introduced — these capstones integrate what students already know. The cognitive challenge is orchestration across domains, not learning new material."
+  assessment: "5 concepts at B2 level. Students arrive having completed all five domain lessons (L02-L06), all plugin and extension lessons (L07-L09), and four practice labs (L10-L13). No new tools or capabilities are introduced — these capstones integrate what students already know. The cognitive challenge is orchestration across domains, not learning new material."
 
 differentiation:
   extension_for_advanced: "After completing Exercise 23, compare your audit opinion to the ISA 700 illustrative examples in the Handbook of International Quality Management, Auditing, Review, Other Assurance, and Related Services Pronouncements. Identify which paragraphs of your draft would need modification if the financial statements contained a material misstatement that management refused to correct. Draft the modified opinion paragraph for a qualified opinion under ISA 705."
@@ -88,14 +88,14 @@ teaching_guide:
   session_group: 5
   session_title: "Cross-Domain Integration"
   key_points:
-    - "These capstones are integration exercises, not new material — every capability used here was taught in L02-L14"
+    - "These capstones are integration exercises, not new material — every capability used here was taught in L02-L13"
     - "Exercise 22 tests breadth (all 5 domains in one workflow); Exercise 23 tests depth (one domain — assurance — across the full engagement lifecycle)"
     - "The multi-session structure of Exercise 23 mirrors real audit practice where planning, fieldwork, and completion are distinct phases separated by days or weeks"
     - "The professional judgment boundary is the thread connecting both exercises — in Exercise 22 it is engagement acceptance; in Exercise 23 it is the audit opinion"
   misconceptions:
     - "Students may try to complete Exercise 23 in a single session — the session boundaries exist because real audits have natural stopping points, and the exercise teaches students to save state and resume"
     - "Students may assume the AI writes the audit opinion — the AI drafts the language in ISA 700 format, but the professional judgment about whether the financial statements are free from material misstatement is the CA/CPA's responsibility"
-    - "Students may skip the SKILL.md extension step in Exercise 22, treating it as optional — it is the step that converts a one-time engagement setup into a reusable practice asset"
+    - "Students may skip the skill creation step in Exercise 22, treating it as optional — it is the step that converts a one-time engagement setup into a reusable practice asset"
   discussion_prompts:
     - "In Exercise 22 Step 8, you explain your AI-augmented approach to the client. How would you respond if the client asked: 'If AI is doing the audit work, why am I paying professional fees?'"
     - "Exercise 23 separates planning, fieldwork, and completion into distinct sessions. In traditional practice, these phases can overlap. What are the advantages of keeping them distinct when working with AI agents?"
@@ -104,8 +104,8 @@ teaching_guide:
     - "For Exercise 23, emphasise the STOP HERE markers — they are pedagogical, not arbitrary. Each session produces a deliverable that stands on its own"
     - "The key learning paragraphs at the end of each exercise are the most important pedagogical moments — they articulate the professional judgment boundary that defines what it means to be a CA/CPA in an AI-augmented practice"
   assessment_checks:
-    - question: "Why does Exercise 22 include building SKILL.md extensions as part of new client onboarding?"
-      expected_response: "Because onboarding is when you gather the most detailed information about a client — business model, revenue recognition method, jurisdiction-specific tax rules, audit risk areas. Encoding this information in SKILL.md extensions immediately converts a one-time information-gathering exercise into a reusable practice asset. Every subsequent engagement for this client benefits from the encoded knowledge, and the extensions improve with each interaction."
+    - question: "Why does Exercise 22 include building Cowork skills as part of new client onboarding?"
+      expected_response: "Because onboarding is when you gather the most detailed information about a client — business model, revenue recognition method, jurisdiction-specific tax rules, audit risk areas. Encoding this information in Cowork skills immediately converts a one-time information-gathering exercise into a reusable practice asset. Every subsequent engagement for this client benefits from the encoded knowledge, and the skills improve with each interaction."
     - question: "In Exercise 23, what is the professional judgment that only the CA/CPA can exercise?"
       expected_response: "The critical professional judgment is in Step 8 — evaluating whether identified misstatements, individually and in aggregate, are material to the financial statements. This determines the audit opinion. The AI agent can compile misstatements, calculate their aggregate effect, and draft the opinion language in ISA 700 format. But the decision about whether the accounts are 'true and fair' — and the professional liability that attaches to signing that opinion — belongs to the CA/CPA."
 ---
@@ -114,7 +114,7 @@ teaching_guide:
 
 > _"The engagement partner who signs the audit opinion carries the professional liability for every judgment in the file. AI produces the evidence. The CA/CPA forms the conclusion."_
 
-In Lessons 11 through 14, you worked through domain-specific practice labs — building workflows for accounting and reporting, tax and advisory, assurance, management accounting, and GRC. Each lab exercised capabilities within a single domain. Real CA/CPA practice does not operate in silos. A new client engagement touches every domain simultaneously: you assess risk (assurance), review the financials (accounting), scope tax advisory, evaluate governance, and plan management reporting — all before the engagement letter is signed.
+In Lessons 10 through 13, you worked through domain-specific practice labs — building workflows for accounting and reporting, tax and advisory, assurance, management accounting, and GRC. Each lab exercised capabilities within a single domain. Real CA/CPA practice does not operate in silos. A new client engagement touches every domain simultaneously: you assess risk (assurance), review the financials (accounting), scope tax advisory, evaluate governance, and plan management reporting — all before the engagement letter is signed.
 
 These two capstone exercises test your ability to integrate across all five domains. Exercise 22 tests breadth — connecting every domain in a single new client onboarding workflow. Exercise 23 tests depth — running the complete annual audit cycle from planning through to the signed opinion across three study sessions. Together, they represent the culmination of every capability you have built in this chapter.
 
@@ -228,12 +228,12 @@ Follow the standard format required under ISA 210 and adapt for
 Pakistani professional standards (ICAP requirements).
 ```
 
-### Step 6 — Build Client-Specific SKILL.md Extensions
+### Step 6 — Build Client-Specific Cowork Skills
 
 Using the information gathered in Steps 1-4:
 
 ```
-Draft the following SKILL.md extensions for this client:
+Draft the following Cowork skills for this client:
 
 (1) Client entity knowledge — encode the business model, revenue
     recognition method applicable (IFRS 15 for export sales with
@@ -246,7 +246,7 @@ Draft the following SKILL.md extensions for this client:
     rates applicable to export proceeds
 ```
 
-**What this draws on:** The extension-building methodology (Lessons 9-10) and domain knowledge from Lessons 2-6.
+**What this draws on:** The extension-building methodology (Lessons 8-9) and domain knowledge from Lessons 2-6.
 
 ### Step 7 — Create the Engagement File Structure
 
@@ -280,7 +280,7 @@ with the CEO and Finance Manager. Sections:
 
 **The professional narrative:** Section 6 of the client meeting agenda is increasingly important. Clients will ask how AI is used in your engagement. The CA/CPA who can explain clearly that AI handles execution while the CA/CPA maintains professional responsibility for every judgment call, opinion, and deliverable is demonstrating both innovation and professional integrity. This is the narrative that allows you to price AI-augmented services appropriately rather than competing on cost reduction alone.
 
-**Check your work:** You should have produced eight deliverables: client profile, risk assessment, analytical review, engagement scope and fee proposal, engagement letter, two SKILL.md extensions, an engagement file structure, and a client meeting agenda. Each deliverable should reference or build upon the preceding ones.
+**Check your work:** You should have produced eight deliverables: client profile, risk assessment, analytical review, engagement scope and fee proposal, engagement letter, two Cowork skills, an engagement file structure, and a client meeting agenda. Each deliverable should reference or build upon the preceding ones.
 
 :::tip Global Perspective
 **IFRS**: The engagement letter format follows ISA 210, which applies in IFRS jurisdictions worldwide. The revenue recognition analysis uses IFRS 15.
@@ -487,7 +487,7 @@ CA/CPA practice areas. For each step:
    Management Accounting, or GRC)
 2. Specify what information flows into this step from previous steps
 3. Identify the professional judgment decision at this step
-4. Suggest the Cowork plugin command or SKILL.md that supports it
+4. Suggest the Cowork plugin command or skill that supports it
 
 Produce the workflow as a numbered sequence showing how the domains
 connect.
@@ -541,11 +541,10 @@ cannot replace.
 
 **What you are learning:** The professional judgment boundary is not abstract — it is specific to each workflow. By analysing your own exercise output, you map exactly where AI execution ends and professional responsibility begins. The critical insight is that professional liability attaches to judgment decisions, not execution steps. Understanding this boundary is how you articulate your value proposition in an AI-augmented practice.
 
-
 ## Flashcards Study Aid
 
 <Flashcards />
 
 ---
 
-Continue to [Lesson 16: Full Practice Deployment and Reflection →](./16-full-practice-deployment-reflection.md)
+Continue to [Lesson 15: Full Practice Deployment and Reflection →](./15-full-practice-deployment-reflection.md)

@@ -85,7 +85,7 @@ cards:
 
   - id: "ch19-01-consequential-ai-transformation-013"
     front: "How does chapter 19 use the five-domain framework across Lessons 2-16?"
-    back: "Lessons 2-6 analyse AI impact per domain. Lessons 7-10 deploy Cowork and build SKILL.md extensions. Lessons 11-16 are practice labs, capstones, and full deployment."
+    back: "Lessons 2-6 analyse AI impact per domain. Lessons 7-10 deploy Cowork and build Cowork skills. Lessons 11-16 are practice labs, capstones, and full deployment."
     tags: ["chapter-structure", "five-domains"]
     difficulty: "basic"
 

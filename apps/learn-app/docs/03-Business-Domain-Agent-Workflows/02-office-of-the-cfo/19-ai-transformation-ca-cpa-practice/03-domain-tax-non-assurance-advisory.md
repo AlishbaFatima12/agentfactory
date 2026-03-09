@@ -43,7 +43,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can use an AI assistant to research a tax question, produce a structured technical memo, identify uncertain positions, compute a tax liability, and draft SKILL.md instructions for automating the computation"
+    measurable_at_this_level: "Student can use an AI assistant to research a tax question, produce a structured technical memo, identify uncertain positions, compute a tax liability, and draft skill instructions for automating the computation"
 
 learning_objectives:
   - objective: "Explain the bifurcation of tax practice into compliance and advisory, and describe why each responds differently to AI automation"
@@ -59,7 +59,7 @@ learning_objectives:
   - objective: "Execute a tax research and computation workflow using an AI assistant, identifying points of uncertainty that require professional judgment"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Practice Exercise 2 — producing a structured tax memo, identifying uncertain positions, computing a tax liability with flagged items, and drafting SKILL.md instructions for automation"
+    assessment_method: "Student completes Practice Exercise 2 — producing a structured tax memo, identifying uncertain positions, computing a tax liability with flagged items, and drafting skill instructions for automation"
 
 cognitive_load:
   new_concepts: 6
@@ -95,7 +95,7 @@ teaching_guide:
   teaching_tips:
     - "The concept box is the lesson's anchor — ensure students understand the compliance/advisory distinction before moving to AI capabilities"
     - "Use the Pakistan ITO 2001 example to make the exercise concrete, but emphasise that every jurisdiction has equivalent structures"
-    - "The exercise Step 4 (drafting SKILL.md instructions) is the most important — it bridges from using AI to encoding domain knowledge for reusable automation"
+    - "The exercise Step 4 (drafting skill instructions) is the most important — it bridges from using AI to encoding domain knowledge for reusable automation"
   assessment_checks:
     - question: "What is the difference between tax compliance and tax advisory, and why does it matter for AI impact?"
       expected_response: "Tax compliance is backward-looking and rule-based — preparing returns by applying tax laws to financial data. Tax advisory is forward-looking and judgment-intensive — advising on tax-efficient structures where the law may be ambiguous. Compliance is highly automatable because it follows deterministic rules; advisory is less automatable because it requires interpreting ambiguous positions and understanding client-specific circumstances. As compliance costs approach zero, the value proposition of tax practices shifts to advisory."
@@ -174,7 +174,7 @@ Three agentic systems are moving from prototype to production deployment.
 
 ## Practice Exercise 2: Tax Research and Computation with Cowork (25 min)
 
-**What you'll build:** A structured tax research memo, a computed tax liability with flagged items, and draft SKILL.md instructions for automating the computation.
+**What you'll build:** A structured tax research memo, a computed tax liability with flagged items, and draft skill instructions for automating the computation.
 
 **Requirements:** Cowork or Claude (any plan). A hypothetical or real tax scenario. If you need a ready-made scenario, [**download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip), unzip, and open `exercises/entity-profiles/crescent-textiles.md` (PKR 500M textile manufacturer with export/domestic split).
 
@@ -192,9 +192,9 @@ Three agentic systems are moving from prototype to production deployment.
 
 4. **Draft automation instructions.** Ask:
 
-   _"If I wanted to automate this computation for our standard client tax returns, what SKILL.md instructions would I write? Draft the key instructions covering: the data inputs required, the computation sequence, and the conditions that require escalation to a tax professional."_
+   _"If I wanted to automate this computation for our standard client tax returns, what skill instructions would I write? Draft the key instructions covering: the data inputs required, the computation sequence, and the conditions that require escalation to a tax professional."_
 
-**Check your work:** Step 4 is the most important. The SKILL.md you draft is the difference between a generic tax computation tool and one calibrated to your practice's specific client base and jurisdiction. Compare the escalation conditions in your draft with the uncertain points identified in Step 2 — they should correspond.
+**Check your work:** Step 4 is the most important. The skill you draft is the difference between a generic tax computation tool and one calibrated to your practice's specific client base and jurisdiction. Compare the escalation conditions in your draft with the uncertain points identified in Step 2 — they should correspond.
 
 :::info Curated Deployment Links
 
@@ -247,7 +247,7 @@ For the standard corporate tax return in this jurisdiction:
 4. Specify what the agent's output should contain (draft return,
    computation workpapers, disclosure checklist, escalation log)
 
-Structure this as a specification that could be encoded in a SKILL.md.
+Structure this as a specification that could be encoded as a Cowork skill.
 ```
 
 **What you are learning:** Designing an autonomous agent forces you to make explicit what you know tacitly. The escalation conditions in point 3 are the most valuable output — they encode the professional judgment boundaries that distinguish a safe autonomous system from a dangerous one. This is the specification skill that Chapter 5 introduced, applied to tax domain expertise.
@@ -278,7 +278,6 @@ as the firm's current annual revenue for calculations.
 ```
 
 **What you are learning:** The strategic implications of AI in tax practice extend beyond individual tasks. By modelling firm-level scenarios, you develop the commercial judgment that senior practitioners need — understanding not just which tasks AI can handle, but how automation reshapes the business model of professional services firms. This is the kind of analysis that AI assists but cannot make alone, because it requires understanding the firm's competitive position, client relationships, and market dynamics.
-
 
 ## Flashcards Study Aid
 

@@ -200,11 +200,11 @@ The economics change significantly. An audit that currently requires 500 staff h
 
 4. **Let the skill emerge from the work.** You have now done substantive audit analysis — risk identification, revenue deep-dive, monitoring design. Ask Cowork to encode what it learned:
 
-   _"Write a SKILL.md instruction for the risk identification step: encode the three most important sector-specific audit risks for this company's industry, with the indicators that would cause each risk to be elevated."_
+   _"Write a skill instruction for the risk identification step: encode the three most important sector-specific audit risks for this company's industry, with the indicators that would cause each risk to be elevated."_
 
    Cowork creates the skill as a file artifact. This is the key insight: **the skill crystallises from practitioner work, not from a blank-page writing exercise.** The conversation you just had — identifying real risks, specifying real thresholds, designing real monitoring logic — is what gives the skill its substance.
 
-   ![A Cowork session showing the audit risk assessment conversation — the entity profile, trial balance, and risk analysis are in the project context, and the SKILL.md emerges as a file artifact from the analysis](/img/ch19-cowork-audit-risk-session.png)
+   ![A Cowork session showing the audit risk assessment conversation — the entity profile, trial balance, and risk analysis are in the project context, and the skill emerges as a file artifact from the analysis](/img/ch19-cowork-audit-risk-session.png)
 
 5. **Review and customise.** Open **Customize → Skills** in the Cowork sidebar. Your new skill appears under **My Skills**. Read its description and examine what Cowork encoded — the risk categories, the elevation indicators, the detection thresholds. Ask yourself:
    - Are the thresholds specific enough? (e.g., "revenue spike > 2.5 standard deviations from trailing 30-day average" vs. "unusual revenue increase")
@@ -220,7 +220,7 @@ The economics change significantly. An audit that currently requires 500 staff h
 **Check your work:** The risk assessment (Step 1) should identify company-specific and sector-specific risks, not generic audit risks. The monitoring specification (Step 3) should define measurable thresholds and alert conditions, not vague instructions. The skill (Steps 4–5) should encode sector expertise that would take a junior auditor years to develop — with concrete elevation indicators drawn from real financial data, not abstract descriptions. The reusability test (Step 6) is the ultimate check: a skill that only works for one company is a template; a skill that works across the sector is encoded expertise.
 
 :::tip From Conversation to Reusable Asset
-This exercise demonstrates the core Agent Factory pattern: domain expertise encoded as a skill through the natural act of doing expert work. You did not sit down to "write a skill from scratch" — you did audit analysis, and the skill emerged from that analysis. In Lesson 13 (Assurance Practice Lab), you will build on this pattern with more complex multi-step audit workflows.
+This exercise demonstrates the core Agent Factory pattern: domain expertise encoded as a skill through the natural act of doing expert work. You did not sit down to "write a skill from scratch" — you did audit analysis, and the skill emerged from that analysis. In Lesson 12 (Assurance Practice Lab), you will build on this pattern with more complex multi-step audit workflows.
 :::
 
 :::info Curated Deployment Links
@@ -279,7 +279,7 @@ For each step, specify:
 - The conditions that trigger escalation to a human auditor
 - The output produced
 
-Structure this as a SKILL.md specification. Include at least
+Structure this as a Cowork skill specification. Include at least
 three escalation conditions where human judgment is essential.
 ```
 
