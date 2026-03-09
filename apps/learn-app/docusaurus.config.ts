@@ -253,10 +253,8 @@ const config: Config = {
         docs: {
           path: docsPath, // 'docs' (local) or 'docsfs' (from MCP server)
           sidebarPath: "./sidebars.ts",
-          // editUrl kept for version history links (Edit this page hidden via CSS)
-          editUrl: hydrateEnabled
-            ? undefined
-            : "https://github.com/panaversity/ai-native-software-development/edit/main/apps/learn-app/",
+          // editUrl removed — repo is now private
+          editUrl: undefined,
           showLastUpdateTime: true,
           showLastUpdateAuthor: false,
           // Exclude .summary.md files from being rendered as pages
@@ -530,14 +528,6 @@ const config: Config = {
         {
           title: "Resources",
           items: [
-            {
-              label: "GitHub Repository",
-              href: "https://github.com/panaversity/ai-native-software-development",
-            },
-            {
-              label: "AI Native Specification",
-              href: "https://github.com/panaversity/ai-native-software-development/tree/main/specs",
-            },
             {
               label: "Factory Dashboard",
               to: "/factory",
