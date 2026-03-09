@@ -135,7 +135,7 @@ These are not quick demonstrations. Each exercise mirrors a real engagement: you
 - **Exercise 10** (40 min) — Most architecturally important. Builds a scheduled month-end close with exception handling.
 - **Exercise 11** (55 min) — Most technically demanding. Multi-entity consolidation with intercompany elimination.
 
-**Data files:** [**Download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and unzip. You will find: `exercises/trial-balances/textile-manufacturer-tb.csv` (trial balance), `exercises/source-documents/` (invoices and receipts), and `exercises/consolidation/parent-subsidiary-data.md` (consolidation data for Exercise 11).
+**Data files:** Each exercise provides its own data inline. For additional practice data — source documents, trial balances, and consolidation workings — see the [companion repository exercises folder](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/exercises).
 :::
 
 ---
@@ -234,7 +234,7 @@ Add a second run with documents that include a transaction the agent is likely t
 
 **What you'll build:** Complete IFRS financial reporting output — income statement, balance sheet, cash flow statement, selected notes, and a board-ready presentation — from a single trial balance.
 
-**Requirements:** Cowork (Team or Enterprise), `finance@knowledge-work-plugins`, a trial balance in Excel (real or use the hypothetical data below).
+**Requirements:** Cowork (Team or Enterprise) with cross-app orchestration enabled (for the PowerPoint step), `finance@knowledge-work-plugins`, a trial balance in Excel (real or use the hypothetical data below).
 
 ### Hypothetical Trial Balance
 
@@ -399,7 +399,7 @@ This specification is the discipline. A scheduled task that is poorly specified 
   /archive/            <- prior month outputs, auto-moved after sign-off
 ```
 
-Place a sample trial balance export in `/erp-exports/` named `trial-balance-YYYY-MM.csv`.
+Place a sample trial balance export in `/erp-exports/` named `trial-balance-YYYY-MM.csv`. You can use the hypothetical trial balance from Exercise 9, export a trial balance from your own accounting system, or create a simple CSV with account codes, descriptions, and balances.
 
 **3. Build and test the workflow interactively first.** Run the full month-end close workflow manually to confirm each step works:
 
@@ -476,7 +476,7 @@ completion time.
 
 **What you'll build:** An automated consolidation workflow that produces group financial statements from multiple entity trial balances, with full intercompany elimination.
 
-**Requirements:** Cowork (Team or Enterprise), `finance@knowledge-work-plugins`, trial balance data for two entities. Use the consolidation data from the exercise zip: `exercises/consolidation/parent-subsidiary-data.md` — includes intercompany balances and elimination workings.
+**Requirements:** Cowork (Team or Enterprise), `finance@knowledge-work-plugins`, trial balance data for two entities. Use the hypothetical setup below, or for more detailed consolidation data see the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/exercises/consolidation).
 
 ### Hypothetical Setup
 
