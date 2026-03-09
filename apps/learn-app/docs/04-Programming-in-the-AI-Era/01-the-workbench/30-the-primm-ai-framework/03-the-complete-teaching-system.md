@@ -278,6 +278,6 @@ James sits back. In three lessons, he has gone from "what is PRIMM?" to knowing 
 
 "I feel like I have a map now," he says.
 
-"You do," Emma says. "And starting with the next chapter, you'll actually start walking. The next chapter introduces the principles that guide how professionals build software with AI — the rules of the road for the territory you're about to enter."
+"You do," Emma says. "And starting with the next chapter, you'll actually start walking. The next chapter introduces the ten axioms that guide how professionals build software with AI — the rules of the road for the territory you're about to enter."
 
-You now know how you will learn: the five stages, the structural safeguards, the four teaching methods, and the lesson architecture. The next chapter introduces the principles that guide professional AI-driven development. You will experience those principles through the PRIMM-AI+ lens: predicting what professional code should look like, investigating why each principle matters, and eventually building programs that embody them.
+You now know how you will learn: the five stages, the structural safeguards, the four teaching methods, and the lesson architecture. The next chapter introduces the ten axioms that guide professional AI-driven development. You will experience those axioms through the PRIMM-AI+ lens: predicting what professional code should look like, investigating why each axiom matters, and eventually building programs that embody them.
