@@ -1,8 +1,8 @@
 # Python for the New AI Era: Course Architecture Plan
 
-**Version:** 2.14
+**Version:** 2.15
 **Status:** Draft
-**Date:** 2026-03-08
+**Date:** 2026-03-09
 **Branch:** `learn-python`
 
 ---
@@ -336,13 +336,14 @@ Part 4 serves students who have completed Parts 1-3 (AI prompting, file processi
 
 **Lesson 3: The Complete Teaching and Learning System** (~20 min)
 - Four embedded teaching methods: worked examples, Parsons problems, live coding, peer instruction
-- Where each method fits in the PRIMM-AI+ sequence
+- Where each method fits in the PRIMM-AI+ sequence (worked examples → Predict/Investigate, Parsons problems → bridge inside Investigate, live coding → Investigate/Modify, peer instruction → all stages)
 - Classroom mode vs solo mode ("this book is designed for solo mode")
-- The 6-step practical lesson architecture every chapter follows
-- How every chapter in Parts 4-5 maps to PRIMM-AI+ structure
-- From PRIMM-AI+ to professional practice: the Spec → Generate → Review → Refine → Ship workflow
+- The 5-step practical lesson architecture — one step per PRIMM stage: Predict, Run, Investigate (with optional Parsons problems), Modify, Make
+- Parsons problems sit inside Investigate as a structural check, not as a separate step
+- How every chapter in Parts 4-5 maps to PRIMM-AI+ structure at a larger scale
+- Blockquote callout: "Where do Parsons Problems fit?" — clarifies placement for students
 
-**Student does**: Reads, reflects, internalizes the learning method — minimal code, no tools, pure pedagogy
+**Student does**: Reads, reflects, internalizes the learning method — minimal code, no tools, pure method
 **AI role**: Not yet present — the student meets AI coding assistants in Ch 2 (tool installation) and Ch 3 (reading AI-generated code)
 
 **Transition to Ch 2**: "You now know *how* you will learn. Chapter 2 gives you the professional tools that make this method possible — a package manager, a type checker, a linter, a test runner, and version control."
@@ -1739,4 +1740,5 @@ quizforge/
 | 2.11 | 2026-03-04 | Added Claude Code + SDD emphasis throughout (Sections 1-3, 6-7). Chapter 5 as required prerequisite. INPUT/OUTPUT teaching model. |
 | 2.12 | 2026-03-05 | Replaced Phase 9 SmartNotes capstone with QuizForge — an AI-Powered Quiz Generator built from scratch. SmartNotes now runs Phases 1-8 (guided); Phase 9 is QuizForge (independent). Added QuizForge stack diagram. Updated "Why This Works" table for two-project approach. Students finish with two portfolio-grade projects. |
 | 2.13 | 2026-03-06 | Added Chapter 1: The PRIMM-AI Framework as the dedicated conceptual chapter. PRIMM-AI is now formally positioned above the Ten Axioms as the meta-learning framework ("PRIMM-AI is the operating system; the Axioms are the first application that runs on it"). Expanded from 26 to 27 chapters. Renumbered all chapters +1: old Ch 1-26 → Ch 2-27. Phase 1 now has 4 chapters (Ch 1-4): PRIMM-AI → Dev Environment → Reading Python → First TDG. Updated all cross-references: feature maps, OOP progression, exercise thread, SmartNotes phases, Lutz coverage map, Syntax Cards, open questions. PRIMM Recall Directive now references Ch 1 (PRIMM-AI) and Ch 3 (Reading Python). Book-level: Chapter 30 becomes PRIMM-AI; Ten Axioms shifts to Chapter 31. |
-| 2.14 | 2026-03-08 | Upgraded PRIMM-AI → PRIMM-AI+ throughout. Chapter 1 now has 3 lessons: L1 (The PRIMM Framework — with [AI-FREE] Predict and confidence scoring), L2 (PRIMM-AI+: Your Learning Operating System — AI permissions table, AI-free checkpoints, mastery gates, verification ladder, confidence scoring, error taxonomy preview, chapter-end rubric preview, PRIMM-AI+ at a Glance), L3 (The Complete Teaching and Learning System — four embedded teaching methods, classroom vs solo mode, 6-step lesson architecture). Updated PRIMM Recall Directive callout to PRIMM-AI+ with [AI-FREE] and confidence scoring. Updated all cross-references. |
+| 2.14 | 2026-03-08 | Upgraded PRIMM-AI → PRIMM-AI+ throughout. Chapter 1 now has 3 lessons: L1 (The PRIMM Framework — with [AI-FREE] Predict and confidence scoring), L2 (PRIMM-AI+: Your Learning Operating System — AI permissions table, AI-free checkpoints, mastery gates, verification ladder, confidence scoring, error taxonomy preview, chapter-end rubric preview, PRIMM-AI+ at a Glance), L3 (The Complete Teaching and Learning System — four embedded teaching methods, classroom vs solo mode, 5-step lesson architecture). Updated PRIMM Recall Directive callout to PRIMM-AI+ with [AI-FREE] and confidence scoring. Updated all cross-references. |
+| 2.15 | 2026-03-09 | L3 lesson architecture corrected from 6 steps to 5 steps (one per PRIMM stage). Parsons Problems folded into Investigate step with a blockquote callout explaining placement. Replaced regional names (Amara→Sarah, Karachi→London) across Ch 30 for international accessibility. Added bold highlighting of key insight sentences across all 3 lessons. |
