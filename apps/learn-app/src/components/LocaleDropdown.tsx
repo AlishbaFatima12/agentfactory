@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown } from "lucide-react";
+import { Globe, ChevronDown } from "lucide-react";
 import { getLocaleUrl } from "@/utils/getLocaleUrl";
 
 export function LocaleDropdown() {
@@ -34,6 +34,7 @@ export function LocaleDropdown() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="gap-2 px-2 py-1" title="Change language">
+          <Globe className="w-4 h-4" />
           <span className="text-sm font-medium">{currentLabel}</span>
           <ChevronDown className="w-4 h-4" />
         </Button>
