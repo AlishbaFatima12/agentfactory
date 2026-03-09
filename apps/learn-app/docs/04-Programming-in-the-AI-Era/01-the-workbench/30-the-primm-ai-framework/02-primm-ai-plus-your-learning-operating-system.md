@@ -424,7 +424,9 @@ The habits you build with PRIMM-AI+ do not disappear when you finish this book. 
 | **Modify** | Change an existing program to add a feature or fix a problem | Refine code iteratively based on what the review revealed |
 | **Make** | Write a new program from a specification you created | Build and deliver a complete, tested solution from requirements |
 
-The key insight: Predict always means the same thing -- ****read the code, form an expectation, then check whether you are right.**** While learning, you predict what a program will print. As a professional, you predict whether AI-generated code is correct. The habit is identical. The stakes grow.
+Notice the Make row. While learning, you write the code yourself — that is how you build the skill. **In professional practice, AI writes the code from YOUR specification — which is why learning to write clear specifications matters more than learning to type code fast.** The spec is the product. The code is the output.
+
+The key insight: Predict always means the same thing -- **read the code, form an expectation, then check whether you are right.** While learning, you predict what a program will print. As a professional, you predict whether AI-generated code is correct. The habit is identical. The stakes grow.
 
 By the time you finish Parts 4 and 5, these habits will be automatic. You will read AI-generated code with the same critical eye you developed tracing through the walkthrough programs in this chapter. You will refine iteratively, improving code in stages rather than expecting perfection on the first attempt.
 
