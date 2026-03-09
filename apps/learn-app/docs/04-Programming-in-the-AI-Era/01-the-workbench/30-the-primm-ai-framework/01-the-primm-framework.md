@@ -67,9 +67,9 @@ Emma points at line twelve. "What does that line do?"
 
 James stares at it. He recognizes some of the words -- `for`, `in`, `if` -- but cannot explain what the line accomplishes. The AI generated fifty lines of working code and he understands none of them.
 
-"Speed means nothing without comprehension," Emma says. "If you cannot read the code your AI produces, you cannot verify it, debug it, or adapt it. You are not programming. You are copying."
+"Speed means nothing without comprehension," Emma says. "If you cannot read the code your AI produces, you cannot verify it, debug it, or adapt it. **You are not programming. You are copying.**"
 
-This lesson introduces the framework that solves this problem: **PRIMM** -- Predict, Run, Investigate, Modify, Make. It is a research-validated method that teaches you to read and understand code before you ever try to write it. In the AI era, where code generation is nearly free, PRIMM's emphasis on comprehension is more relevant than it was when it was invented.
+This lesson introduces the framework that solves this problem: **PRIMM** -- Predict, Run, Investigate, Modify, Make. It is a **research-validated method that teaches you to read and understand code before you ever try to write it**. In the AI era, where code generation is nearly free, PRIMM's emphasis on comprehension is more relevant than it was when it was invented.
 
 ---
 
@@ -81,13 +81,13 @@ Emma shakes her head. "PRIMM wasn't built for a specific technology. It was buil
 
 PRIMM was created by computing education researchers **Sue Sentance** and **Jane Waite** in 2017. They tested it with **493 students across 13 schools in England**. The result: **students who learned with PRIMM outperformed students who learned without it** -- especially in classes where students had different skill levels.
 
-The core idea is simple: when you talk about code and read it before writing it, you build the vocabulary and mental models that make writing possible. Each PRIMM stage gives you just enough support to reach the next level of understanding.
+The core idea is simple: **when you talk about code and read it before writing it, you build the vocabulary and mental models that make writing possible.** Each PRIMM stage gives you just enough support to reach the next level of understanding.
 
 Since 2017, PRIMM has been adopted in schools and platforms across **England, Germany, the USA, Hong Kong, Norway, Argentina, Australia, and Turkey**. The research home is the Raspberry Pi Computing Education Research Centre.
 
 ### The Inversion That Makes PRIMM Different
 
-Most programming courses start at the end. Lesson one: write a Hello World program. Lesson two: write a program that adds numbers. The assumption is that writing code teaches you to understand it.
+**Most programming courses start at the end.** Lesson one: write a Hello World program. Lesson two: write a program that adds numbers. The assumption is that writing code teaches you to understand it.
 
 PRIMM inverts this. It starts at the beginning -- **reading** -- and works toward writing. The five stages are:
 
@@ -141,7 +141,7 @@ This program has four lines. Even if you have never seen Python before, you can 
 1. **Reading the structure.** You see three lines that store values (`name`, `greeting`, `message`) and one line that prints something. The word `str` after each colon tells you these values are text.
 2. **Reasoning about sequence.** The program runs top to bottom. First it stores `"Sarah"`, then it stores `"Welcome to the Agent Factory"`, then it glues them together with `+`, then it prints the result.
 3. **Building a mental model.** You construct a picture: the program will print one line that combines the greeting with the name.
-4. **Committing to an answer.** You write down (or say aloud) what you think the output will be. This commitment is critical -- a vague sense of "it probably prints a greeting" is not a prediction. A prediction is specific and checkable — you can prove it right or wrong.
+4. **Committing to an answer.** You write down (or say aloud) what you think the output will be. This commitment is critical -- a vague sense of "it probably prints a greeting" is not a prediction. **A prediction is specific and checkable** — you can prove it right or wrong.
 
 Write your prediction now before reading further.
 
@@ -161,7 +161,7 @@ Compare your prediction to the actual result. Three outcomes are possible:
 
 - **Exact match.** Your mental model is accurate for this code pattern. Good -- but do not stop here. Investigate why it worked.
 - **Close but not exact.** Perhaps you predicted the right content but missed the comma or the exclamation mark. The gap reveals what your mental model missed.
-- **Significantly wrong.** This is not failure -- it is the most valuable outcome. The gap between your prediction and reality is exactly where learning happens. Every wrong prediction exposes an assumption you did not know you were making.
+- **Significantly wrong.** This is not failure -- it is the most valuable outcome. The gap between your prediction and reality is exactly where learning happens. **Every wrong prediction exposes an assumption you did not know you were making.**
 
 **The prediction-reality gap is the engine of PRIMM.** Without the prediction step, running code teaches you nothing -- you see output and think "okay." With the prediction step, you have a hypothesis to test. That transforms passive observation into active learning.
 
@@ -177,7 +177,7 @@ Investigation means probing the code to build deeper understanding. Here are the
 
 **Testing edge cases.** What happens if `name` is an empty string `""`? The `+` operator still joins the pieces together, so the output would be `Welcome to the Agent Factory, !` -- a greeting with no name but the comma and exclamation mark still appear. Understanding this teaches you that `+` does not "know" what makes sense. It glues text together exactly as told.
 
-**Using AI as an investigation partner.** This is where your AI coding assistant becomes genuinely useful -- not to generate code, but to answer questions about code you are reading:
+**Using AI as an investigation partner.** This is where your AI coding assistant becomes genuinely useful -- **not to generate code, but to answer questions about code you are reading**:
 
 ```
 I am reading a Python program with these lines:
@@ -230,7 +230,7 @@ Now -- and only now -- you write a new program from scratch. The goal is a **pro
 
 4. **Run your code through the Predict-Run cycle.** Before executing your new program, predict what it will output. Then run it. Compare. This is PRIMM applied recursively -- you are now using the method to verify your own work.
 
-The Make stage completes the cycle. You started by reading someone else's code. You end by writing your own. Every stage in between built the comprehension that makes writing possible.
+The Make stage completes the cycle. **You started by reading someone else's code. You end by writing your own.** Every stage in between built the comprehension that makes writing possible.
 
 ---
 
@@ -240,13 +240,13 @@ James just completed his first full PRIMM cycle — predict, run, investigate, m
 
 Emma points back at the fifty lines of AI-generated code from the beginning of the lesson. "Can you explain line twelve yet?"
 
-James pauses. He still cannot. But the greeting program? He understands every line — because he traced it, changed it, and built something new from it.
+James pauses. He still cannot. But the greeting program? **He understands every line — because he traced it, changed it, and built something new from it.**
 
 PRIMM was created in 2017 for secondary school classrooms. Why does it matter *more* in 2026 than it did then?
 
 Because AI changed the economics of code production. Before AI coding assistants, writing code was slow and expensive. A developer spent hours translating requirements into syntax, debugging typos, looking up API signatures. The bottleneck was **production** -- the act of turning ideas into running code.
 
-AI made production nearly free. A well-crafted prompt generates a working function in seconds. But this created a new problem: **working code without understanding**. James's fifty lines of Python work perfectly -- and he cannot explain what line twelve does. He has a program. He does not have knowledge.
+**AI made production nearly free.** A well-crafted prompt generates a working function in seconds. But this created a new problem: **working code without understanding**. James's fifty lines of Python work perfectly -- and he cannot explain what line twelve does. He has a program. He does not have knowledge.
 
 **This is the learning trap of the AI era.** Students can produce code faster than ever, but the speed creates an illusion of competence. The bottleneck has shifted.
 

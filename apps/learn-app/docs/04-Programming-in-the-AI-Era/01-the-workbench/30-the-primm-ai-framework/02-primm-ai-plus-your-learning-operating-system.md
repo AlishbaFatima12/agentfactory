@@ -66,9 +66,9 @@ differentiation:
 
 In the previous lesson, you learned the five stages of PRIMM -- Predict, Run, Investigate, Modify, Make -- and saw how each stage builds a specific thinking skill. You traced through a greeting program, understood why comprehension comes before creation, and discovered the research showing that students who read and predict code before writing it develop stronger programming ability. The framework was designed for classrooms with human teachers guiding the process.
 
-You do not have a classroom teacher. You have an AI coding assistant.
+**You do not have a classroom teacher. You have an AI coding assistant.**
 
-That changes the partner, not the method. PRIMM with an AI coding assistant as your learning partner is called **PRIMM-AI** -- the same five stages, but AI generates examples for you to predict, executes code for you to compare, answers your investigation questions, and reviews your completed work. That adaptation is powerful. But it has a gap: without structural safeguards, AI makes it easy to skip stages and fake understanding. You can ask AI to explain the code before you predict, request a full solution before you modify, or let it write your Make project while you watch. Nothing in basic PRIMM-AI prevents this.
+That changes the partner, not the method. PRIMM with an AI coding assistant as your learning partner is called **PRIMM-AI** -- the same five stages, but AI generates examples for you to predict, executes code for you to compare, answers your investigation questions, and reviews your completed work. That adaptation is powerful. But it has a gap: **without structural safeguards, AI makes it easy to skip stages and fake understanding**. You can ask AI to explain the code before you predict, request a full solution before you modify, or let it write your Make project while you watch. Nothing in basic PRIMM-AI prevents this.
 
 Here is what PRIMM-AI looks like -- the same five stages, now with an AI partner:
 
@@ -98,7 +98,7 @@ This is a solid foundation. But nothing in this table prevents you from asking A
 
 You will learn each enhancement in detail throughout this lesson and the next. By the end of Lesson 3, you will have the complete PRIMM-AI+ picture.
 
-PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- the boundaries work the same way regardless of which AI coding assistant you use. The method is the constant. The AI tool is the variable. This book uses Claude Code as the primary partner because it integrates with the Spec-Driven Development workflow you learned in Chapter 5, but every principle transfers.
+PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- the boundaries work the same way regardless of which AI coding assistant you use. **The method is the constant. The AI tool is the variable.** This book uses Claude Code as the primary partner because it integrates with the Spec-Driven Development workflow you learned in Chapter 5, but every principle transfers.
 
 ---
 
@@ -128,7 +128,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What the AI does:** Executes the program. Runs it again with different inputs you specify. Shows raw output without interpretation.
 
-**What the AI must NOT do:** Interpret the results for you. The learning happens in the gap between your prediction and the actual output. If AI fills that gap with an explanation, you skip the comparison step that builds understanding.
+**What the AI must NOT do:** Interpret the results for you. **The learning happens in the gap between your prediction and the actual output.** If AI fills that gap with an explanation, you skip the comparison step that builds understanding.
 
 ### Investigate -- AI as Questioning Partner
 
@@ -146,7 +146,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What the AI does:** After you modify, shows an alternative approach. Compares your version to the original. Explains tradeoffs between approaches. Can provide a minimal hint or point out the specific lines to change if you are stuck -- but not a complete rewrite. You might say: *"I rearranged the variables but the output order is wrong. What am I missing?"*
 
-**What the AI must NOT do:** Modify the code for you. The moment AI writes the modification, you are in Make territory without having done the thinking that Modify requires. Your hands produce the change; AI evaluates it afterward.
+**What the AI must NOT do:** Modify the code for you. **The moment AI writes the modification, you are in Make territory without having done the thinking that Modify requires.** Your hands produce the change; AI evaluates it afterward.
 
 ### Make -- AI as Review Partner, Not Ghostwriter
 
@@ -154,7 +154,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What the AI does:** Reviews your specification for completeness. Answers specific syntax questions. Reviews your completed code for correctness and style. A typical Make interaction has two parts: first you ask AI to review your spec (*"Does this cover all edge cases?"*), then after implementing, you ask AI to review your code (*"Review for correctness. Do not rewrite -- just point out issues."*).
 
-**What the AI must NOT do:** Write the solution. If AI writes the program and you submit it, you have produced output without learning. The Make stage proves you can apply what you learned in the previous four stages independently.
+**What the AI must NOT do:** Write the solution. If AI writes the program and you submit it, **you have produced output without learning.** The Make stage proves you can apply what you learned in the previous four stages independently.
 
 ---
 
@@ -170,7 +170,7 @@ The table below makes the boundaries concrete. The Right column shows prompts th
 | **Modify** | AI may provide a minimal hint or targeted diff. Not a complete rewrite. | "I am trying to add a second print line but it is not showing. What am I missing?" | "Add a second print line to this program for me." |
 | **Make** | AI may review the specification and completed solution. AI must not write the solution. | "Review my greeting program for correctness. Do not rewrite it." | "Write a program that prints a greeting with a name." |
 
-When you catch yourself about to use a prompt from the Wrong column, pause and rephrase. The Right column prompts produce learning. The Wrong column prompts produce output.
+When you catch yourself about to use a prompt from the Wrong column, pause and rephrase. **The Right column prompts produce learning. The Wrong column prompts produce output.**
 
 ---
 
@@ -231,7 +231,7 @@ Every Investigate stage must produce something visible. A vague sense of "I thin
 - **A plain-English explanation** describing how the program works in your own words
 - **A failure note** documenting what you tried to trace and where you got stuck
 
-The third option matters most. If you cannot trace the program or explain it, that is not a sign of failure -- it is a diagnostic signal. A failure note that says "I do not understand why `str(score)` is needed before joining with `+`" gives you an exact target for your AI investigation questions. Without the artifact requirement, you would skip past the confusion and carry it silently into Modify.
+The third option matters most. If you cannot trace the program or explain it, that is not a sign of failure -- it is a diagnostic signal. A failure note that says "I do not understand why `str(score)` is needed before joining with `+`" gives you an exact target for your AI investigation questions. **Without the artifact requirement, you would skip past the confusion and carry it silently into Modify.**
 
 The trace table from the walkthrough later in this lesson is an example of a mandatory artifact. The mastery gate for Investigate ("can explain *how*, not just *what*") depends on having produced one.
 
@@ -327,7 +327,7 @@ These rules are operational discipline, not suggestions. Each one prevents a spe
 
 **Rule 2: Never trust an explanation you have not tested.** AI explanations can be confident and wrong. When AI says "this function returns X," run it and verify. This verification mindset transfers directly to professional practice -- senior engineers test assumptions, junior engineers trust documentation.
 
-**Rule 3: Modify before you make.** Modification is easier on your brain than creation. When you modify an existing program, you have a working reference, a known structure, and a safety net. When you create from scratch, you have nothing. Modification builds the skills that creation requires.
+**Rule 3: Modify before you make.** **Modification is easier on your brain than creation.** When you modify an existing program, you have a working reference, a known structure, and a safety net. When you create from scratch, you have nothing. Modification builds the skills that creation requires.
 
 **Rule 4: Write the spec before the code.** This is Spec-Driven Development from Chapter 5, applied to learning. Defining what your program should do -- inputs, outputs, edge cases, success criteria -- before writing a single line of code forces you to think about the problem before the solution. AI is dramatically better at generating correct code when the specification is clear.
 
@@ -378,9 +378,9 @@ After each prediction, record four things:
 3. **The actual result** -- what the code actually did
 4. **Your revised explanation** -- what you now understand that you did not before
 
-**Why this matters:** False confidence -- rating yourself a 5 and getting it wrong -- is the most dangerous state for an AI-era developer. It means you *think* you understand code but you do not. When AI generates code you falsely believe you understand, you ship bugs you cannot find. Confidence scoring trains you to know when you know and when you do not. That calibration is a professional skill.
+**Why this matters:** **False confidence -- rating yourself a 5 and getting it wrong -- is the most dangerous state for an AI-era developer.** It means you *think* you understand code but you do not. When AI generates code you falsely believe you understand, you ship bugs you cannot find. Confidence scoring trains you to know when you know and when you do not. That calibration is a professional skill.
 
-Over the course of Parts 4 and 5, your calibration should improve. Early on, you will probably rate yourself too high (overconfident) or too low (underconfident). Both are normal. The goal is not to always score 5. The goal is for your confidence scores to accurately predict your actual accuracy.
+Over the course of Parts 4 and 5, your calibration should improve. Early on, you will probably rate yourself too high (overconfident) or too low (underconfident). Both are normal. The goal is not to always score 5. **The goal is for your confidence scores to accurately predict your actual accuracy.**
 
 ---
 
@@ -424,7 +424,7 @@ The habits you build with PRIMM-AI+ do not disappear when you finish this book. 
 | **Modify** | Change an existing program to add a feature or fix a problem | Refine code iteratively based on what the review revealed |
 | **Make** | Write a new program from a specification you created | Build and deliver a complete, tested solution from requirements |
 
-The key insight: Predict always means the same thing -- **read the code, form an expectation, then check whether you are right.** While learning, you predict what a program will print. As a professional, you predict whether AI-generated code is correct. The habit is identical. The stakes grow.
+The key insight: Predict always means the same thing -- ****read the code, form an expectation, then check whether you are right.**** While learning, you predict what a program will print. As a professional, you predict whether AI-generated code is correct. The habit is identical. The stakes grow.
 
 By the time you finish Parts 4 and 5, these habits will be automatic. You will read AI-generated code with the same critical eye you developed tracing through the walkthrough programs in this chapter. You will refine iteratively, improving code in stages rather than expecting perfection on the first attempt.
 

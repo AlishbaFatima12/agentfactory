@@ -71,7 +71,7 @@ This lesson answers that question. It shows how four teaching methods -- worked 
 
 ## The Four Teaching Methods Inside PRIMM-AI+
 
-PRIMM-AI+ provides the sequence and the safeguards. These four methods are the specific techniques used inside the sequence.
+PRIMM-AI+ provides the sequence and the safeguards. **These four methods are the specific techniques used inside the sequence.**
 
 ### Worked Examples: Predict and Investigate
 
@@ -91,7 +91,7 @@ Emma shows James four lines of code, but they are in the wrong order. "Put these
 
 James stares at them. He knows what each line does — he traced through a similar program minutes ago. But arranging them correctly requires something deeper: understanding *why* the order matters.
 
-A Parsons problem gives you the correct lines of code in scrambled order. Your job is to rearrange them into a working program. This tests whether you truly understand the program's structure -- the order of operations, the indentation, the data flow -- without requiring you to write code from scratch.
+A Parsons problem gives you the correct lines of code in scrambled order. Your job is to rearrange them into a working program. **This tests whether you truly understand the program's structure** -- the order of operations, the indentation, the data flow -- without requiring you to write code from scratch.
 
 Where it fits: **Between Investigate and Modify.** After you have traced through a worked example and understand how it works, a Parsons problem checks that understanding before you attempt free modifications. Consider this example:
 
@@ -109,7 +109,7 @@ city: str = "London"
 London: 32C
 ```
 
-To solve this, you must reason about data flow: `city` must exist before `label` can use it, `temp` must exist before `label` can use it, and `label` must exist before `print` can display it. The correct order is `city`, then `temp`, then `label`, then `print`. If you can reorder these lines correctly, you understand the program's structure -- not just what it does, but *why* the order matters.
+To solve this, you must reason about data flow: `city` must exist before `label` can use it, `temp` must exist before `label` can use it, and `label` must exist before `print` can display it. The correct order is `city`, then `temp`, then `label`, then `print`. If you can reorder these lines correctly, you understand the program's structure -- **not just what it does, but *why* the order matters.**
 
 ### Live Coding: Investigate and Modify
 
@@ -117,7 +117,7 @@ Emma opens a code editor and starts typing, narrating as she goes: "First I'll c
 
 James watches her think out loud — including the wrong turns and corrections. "That's more useful than seeing the finished code," he realizes.
 
-In classroom settings, the instructor writes or edits code in real time, narrating their thinking aloud -- including mistakes, debugging steps, and design choices. The value is seeing how an expert thinks, not just admiring their finished code.
+In classroom settings, the instructor writes or edits code in real time, narrating their thinking aloud -- including mistakes, debugging steps, and design choices. **The value is seeing how an expert thinks, not just admiring their finished code.**
 
 Where it fits: **Investigate** (the instructor traces and explains) and **Modify** (the instructor demonstrates changes). In solo mode, your AI assistant can serve a similar role when you ask it to walk through adding a feature step by step, explaining its reasoning as it goes.
 
@@ -148,7 +148,7 @@ Where it fits: **All stages.** In classroom mode, it happens naturally through p
 
 **Classroom mode.** The teacher orchestrates the process. Predictions are shared in pairs or small groups before anyone runs the code. Investigation questions are discussed as a class before consulting AI. Modification approaches are compared across teams. The teacher controls AI permissions and uses mastery gates as checkpoints for the whole class.
 
-**Solo mode.** You replace human collaboration with structured AI interaction -- but only after passing through the AI-free checkpoint at each stage. You write your prediction alone, commit your confidence score, and only then engage your AI assistant. The confidence scoring system is especially important in solo mode because it makes self-deception visible. There is no classmate to challenge your assumptions, so you must challenge them yourself.
+**Solo mode.** You replace human collaboration with structured AI interaction -- but only after passing through the AI-free checkpoint at each stage. You write your prediction alone, commit your confidence score, and only then engage your AI assistant. **The confidence scoring system is especially important in solo mode because it makes self-deception visible.** There is no classmate to challenge your assumptions, so you must challenge them yourself.
 
 **This book is designed for solo mode.** Every technique works with just you, the book, and your AI assistant. If you are in a classroom, your teacher will add the collaborative elements -- pair predictions, group investigations, live coding demonstrations -- on top of the same structure.
 
@@ -164,7 +164,7 @@ Here is what a typical lesson looks like when all the pieces work together. You 
 
 **Step 1: Predict.** The lesson presents a compact, complete program (a worked example). You write your prediction and confidence score without AI assistance. This is the worked example method combined with the AI-free checkpoint from Lesson 2.
 
-**Step 2: Run.** You run the code and compare the output to your prediction. In classroom mode, you share predictions with a partner first (peer instruction). In solo mode, you commit your prediction to writing before executing. The prediction-reality gap drives learning regardless of mode.
+**Step 2: Run.** You run the code and compare the output to your prediction. In classroom mode, you share predictions with a partner first (peer instruction). In solo mode, you commit your prediction to writing before executing. **The prediction-reality gap drives learning regardless of mode.**
 
 **Step 3: Investigate.** You produce a trace table or line-by-line explanation. You discuss targeted questions -- with peers in classroom mode, or with your AI assistant in solo mode after your own first explanation. Some lessons include a Parsons problem here -- scrambled lines you reorder to confirm you understand the program's structure before moving on.
 
@@ -184,7 +184,7 @@ Notice the progression: **you understand before you change, and you change befor
 
 "Same structure, bigger scale," Emma says. "A chapter opens with worked examples, moves through investigation lessons, bridges to modification exercises, and finishes with a capstone where you build something new. You'll never open a chapter wondering what to expect."
 
-The five-step sequence above is not just a lesson pattern -- it is the chapter pattern. Every chapter in Parts 4 and 5 maps to the same structure at a larger scale.
+The five-step sequence above is not just a lesson pattern -- it is the chapter pattern. **Every chapter in Parts 4 and 5 maps to the same structure at a larger scale.**
 
 | Chapter Element | PRIMM-AI+ Connection | What Happens |
 |----------------|----------------------|-------------|
