@@ -1,10 +1,10 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 title: "The Complete Teaching and Learning System"
 description: "How PRIMM-AI+ works in practice -- the four embedded teaching methods, classroom and solo modes, practical lesson architecture, and how every chapter in this book follows the same pattern."
 keywords: ["PRIMM-AI+", "worked examples", "Parsons problems", "live coding", "peer instruction", "teaching methods", "classroom mode", "solo mode", "lesson architecture"]
 chapter: 30
-lesson: 3
+lesson: 4
 duration_minutes: 20
 
 # HIDDEN SKILLS METADATA
@@ -63,7 +63,7 @@ James flips through a programming chapter later in the book. He notices somethin
 
 "Every chapter, every lesson, every exercise," she says. "Once you see the pattern, you'll never feel lost. You'll always know where you are in the process and what comes next."
 
-You now know the five stages of PRIMM-AI+ -- Predict, Run, Investigate, Modify, Make -- and the structural safeguards that keep you honest: AI-free checkpoints, mastery gates, confidence scoring, and the verification ladder. But knowing the stages is like knowing the instruments in an orchestra. The question is: how does the music sound when they all play together?
+You now know the five stages of PRIMM-AI+ -- Predict, Run, Investigate, Modify, Make -- and the structural safeguards that keep you honest: AI-free checkpoints, mastery gates, confidence scoring, and the verification ladder. But knowing the stages is one thing. The question is: how do these pieces work together in practice?
 
 This lesson answers that question. It shows how four teaching methods -- worked examples, Parsons problems, live coding, and peer instruction -- are woven into the PRIMM-AI+ stages. It explains the difference between learning in a classroom and learning on your own. And it reveals the practical lesson architecture that every chapter in Parts 4 and 5 follows, so you will recognize the pattern the moment you encounter it.
 
@@ -170,7 +170,7 @@ Here is what a typical lesson looks like when all the pieces work together. You 
 
 **Step 4: Modify.** You perform a modification task, changing the existing program to add a feature or alter its behavior. In classroom mode, the teacher may follow with a live-coding demonstration of a more advanced change. You write the modification yourself; AI evaluates it afterward.
 
-**Step 5: Make.** You write a specification first (AI-free), attempt the solution yourself, and use AI only for review, debugging, or targeted syntax help after your first attempt exists. This is Spec-Driven Development from Lesson 2 applied to your own programs.
+**Step 5: Make.** You write a specification first (AI-free), attempt the solution yourself, and use AI only for review, debugging, or targeted syntax help after your first attempt exists. This is Spec-Driven Development from Chapter 5 applied to your own programs.
 
 Notice the progression: **you understand before you change, and you change before you create.** Every step earns you the right to attempt the next one.
 
@@ -274,10 +274,10 @@ showing the code and asking me to predict.
 
 ## Looking Ahead
 
-James sits back. In three lessons, he has gone from "what is PRIMM?" to knowing exactly how every lesson and every chapter in this book will work. The five stages. The nine enhancements. The four teaching methods. The five-step lesson architecture.
+James sits back. In four lessons, he has gone from "what is PRIMM?" to knowing exactly how every lesson and every chapter in this book will work. The five stages. The nine enhancements. The four teaching methods. The five-step lesson architecture.
 
 "I feel like I have a map now," he says.
 
-"You do," Emma says. "And starting with the next chapter, you'll actually start walking. The next chapter introduces the ten axioms that guide how professionals build software with AI — the rules of the road for the territory you're about to enter."
+"You do," Emma says. "And here's the thing — once the pattern is automatic, you stop thinking about the process and start thinking about the code. That's when real learning accelerates. Starting with the next chapter, you'll actually walk the territory. The next chapter introduces the ten axioms that guide how professionals build software with AI — the principles that turn a student into a practitioner."
 
 You now know how you will learn: the five stages, the structural safeguards, the four teaching methods, and the lesson architecture. The next chapter introduces the ten axioms that guide professional AI-driven development. You will experience those axioms through the PRIMM-AI+ lens: predicting what professional code should look like, investigating why each axiom matters, and eventually building programs that embody them.
