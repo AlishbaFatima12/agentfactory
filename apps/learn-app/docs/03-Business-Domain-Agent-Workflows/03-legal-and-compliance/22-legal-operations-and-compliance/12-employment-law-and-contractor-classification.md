@@ -1,7 +1,7 @@
 ---
 sidebar_position: 12
-title: "Employment Law in Legal Operations"
-description: "Why employment law is the most jurisdiction-sensitive area of Legal Ops, how employment contracts differ from commercial contracts in the playbook, and the Brightpath/Tariq Pakistan-UK cross-border worked example"
+title: "Employment Law and Contractor Classification"
+description: "Run an employment contract through /review-contract to discover why employment agreements generate different RED flags than commercial contracts, apply the five contractor-vs-employee classification indicators to a cross-border scenario, and produce a recommendation memo for Brightpath Technologies hiring Usman Tariq from Pakistan"
 keywords:
   [
     "employment law AI",
@@ -14,6 +14,11 @@ keywords:
     "employment contract review",
     "legal ops employment",
     "jurisdiction overlay employment",
+    "substance over form",
+    "EOBI",
+    "employer of record",
+    "Section 27 Contract Act",
+    "misclassification risk",
   ]
 chapter: 22
 lesson: 12
@@ -21,113 +26,80 @@ duration_minutes: 25
 
 # HIDDEN SKILLS METADATA
 skills:
-  - name: "Explain Why Employment Law Requires Different Playbook Treatment Than Commercial Contracts"
+  - name: "Identify How Employment Contracts Differ from Commercial Contracts in the Playbook"
     proficiency_level: "B2"
     category: "Conceptual"
     bloom_level: "Analyze"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can identify the four ways employment contracts differ from commercial contracts in the playbook (mandatory terms override, non-compete jurisdiction dependency, contractor classification risk, IP assignment jurisdiction specificity) and explain why each difference affects how the agent processes employment agreements"
+    measurable_at_this_level: "Student can name the four ways employment contracts differ from commercial contracts in the playbook (mandatory terms override, non-compete jurisdiction dependency, contractor classification risk, IP assignment jurisdiction specificity) and explain why each difference changes how the agent processes employment agreements"
 
-  - name: "Identify Contractor vs. Employee Misclassification Risk"
+  - name: "Apply Contractor vs Employee Classification Indicators to a Working Relationship"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Analyze"
     digcomp_area: "Safety"
-    measurable_at_this_level: "Student can list the five key classification indicators (control over how work is done, provision of tools, financial risk, exclusivity, permanence) and explain why substance-over-form tests mean contract labels do not determine classification"
+    measurable_at_this_level: "Student can apply the five classification indicators (control over how work is done, provision of tools, financial risk, exclusivity, permanence) to a described working relationship and determine whether the economic reality matches the contract label, citing the substance-over-form principle"
 
-  - name: "Trace a Cross-Border Employment Contract Through Multi-Jurisdiction Agent Review"
+  - name: "Produce a Cross-Border Employment Contract Review with Jurisdiction-Specific Flags"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can walk through the Brightpath/Tariq worked example and explain why a standard UK employment template generates RED escalations when applied to a Pakistan-based employee, including the employer registration, non-compete enforceability, and IP assignment issues"
+    measurable_at_this_level: "Student can run a cross-border employment agreement through /review-contract, interpret the 3 RED and 1 YELLOW flags for a UK-employer/Pakistan-employee scenario, and produce a recommendation memo with three structural options (subsidiary, EoR, restructured contractor) including risks for each"
 
 learning_objectives:
-  - objective: "Articulate the four critical ways employment contracts differ from commercial contracts in the Legal Ops playbook"
+  - objective: "Identify the four critical ways employment contracts differ from commercial contracts in the Legal Ops playbook and explain why each difference affects agent processing"
     proficiency_level: "B2"
     bloom_level: "Analyze"
-    assessment_method: "Student can name all four differences (mandatory terms, non-compete enforceability, contractor classification, IP assignment) and provide a jurisdiction-specific example for each"
+    assessment_method: "Student names all four differences (mandatory terms, non-compete enforceability, contractor classification, IP assignment) and provides a jurisdiction-specific example for each"
 
-  - objective: "Apply the contractor vs. employee classification indicators to a real-world scenario and identify misclassification risk"
+  - objective: "Apply the five contractor-vs-employee classification indicators to a real-world scenario and determine whether the economic reality matches the contract label"
     proficiency_level: "B2"
     bloom_level: "Apply"
-    assessment_method: "Student can assess a described working relationship against the five classification indicators and determine whether the economic reality matches the contract label"
+    assessment_method: "Given a described working relationship labelled 'Independent Contractor,' student evaluates against the five indicators and concludes whether the relationship is genuinely a contractor arrangement or a misclassified employment"
 
-  - objective: "Explain why cross-border employment agreements require multi-jurisdiction overlay loading and identify the specific issues that arise when a UK employer hires a Pakistan-based remote worker"
+  - objective: "Run a cross-border employment agreement through /review-contract with dual jurisdiction overlays and produce a recommendation memo with structural options"
     proficiency_level: "B2"
     bloom_level: "Apply"
-    assessment_method: "Student can trace the Brightpath/Tariq worked example and explain the three RED escalations (no Pakistan entity, non-compete scope, tax compliance) and the YELLOW item (IP assignment), including the specific Pakistani and English laws involved"
+    assessment_method: "Student traces the Brightpath/Tariq worked example, explains each RED and YELLOW escalation including the specific Pakistani and English laws involved, and drafts a recommendation memo with three options and risk assessment for each"
 
 cognitive_load:
   new_concepts: 5
   concepts_list:
     - "Mandatory statutory terms that override playbook positions"
     - "Non-compete enforceability variation across jurisdictions"
-    - "Contractor vs. employee classification (substance over form)"
+    - "Contractor vs employee classification (substance over form)"
     - "IP assignment differences between Pakistan and UK copyright law"
     - "Cross-border employment structural requirements (employer registration, tax withholding)"
-  assessment: "5 concepts at B2 level -- within the 5-7 cognitive limit. Students have already learned the playbook architecture, contract review workflows, and Legal Ops Agent pattern in earlier lessons. This lesson applies those concepts to the most jurisdiction-sensitive domain, building analytical depth rather than introducing entirely new frameworks."
+  assessment: "5 concepts at B2 level, within the 5-7 cognitive budget. Students have already learned the playbook architecture, contract review workflows, and jurisdiction overlay pattern in Lessons 2-4. This lesson applies those established concepts to the most jurisdiction-sensitive domain, building analytical depth rather than introducing new frameworks."
 
 differentiation:
   extension_for_advanced: "Research the employment law requirements in a third jurisdiction relevant to your work (UAE DIFC, Saudi Arabia, or a US state). Identify the three most material differences between that jurisdiction and the UK/Pakistan pair covered in this lesson. Draft a jurisdiction overlay section for the Legal Plugin that addresses those differences."
-  remedial_for_struggling: "Focus on the concept box for contractor vs. employee classification and the four ways employment contracts differ from commercial contracts. If you can list the five classification indicators and the four playbook differences, you have the analytical framework for the rest of the lesson."
+  remedial_for_struggling: "Focus on the four ways employment contracts differ from commercial contracts and the five classification indicators in the concept box. If you can list those nine items and explain why substance-over-form matters, you have the analytical framework for the rest of the lesson."
 ---
 
-# Employment Law in Legal Operations
+# Employment Law and Contractor Classification
 
-## Why Employment Law Is the Most Jurisdiction-Sensitive Area of Legal Ops
+In Lessons 3-11, every contract review assumed a commercial relationship between independent entities -- a SaaS vendor selling to Noor Technologies, a cloud provider negotiating service levels, an NDA protecting mutual confidentiality. Employment contracts are fundamentally different. A limitation of liability clause in a vendor agreement affects a business relationship. A non-compete clause in an employment agreement affects a person's livelihood. Courts in every jurisdiction recognise this asymmetry, and the result is that employment law is the most heavily regulated, most jurisdiction-specific, and most frequently litigated area of contract law.
 
-Commercial contracts are complex. Employment contracts are personal. A limitation of liability clause in a SaaS agreement affects a business relationship. A non-compete clause in an employment agreement affects a person's livelihood. Courts in every jurisdiction recognise this asymmetry, and the result is that employment law is the most heavily regulated, most jurisdiction-specific, and most frequently litigated area of contract law in every legal system.
+Brightpath Technologies in Manchester wants to hire Usman Tariq, a senior developer in Lahore, as a full-time remote employee. Their HR team has drafted an agreement based on their standard UK employment template. Before you run it through `/review-contract`, predict what will happen. Which clauses will the plugin flag as RED? Will the flags be the same ones you saw in the CloudStack vendor review in Lesson 3, or different? Write your predictions down. Then run the command.
 
-For Legal Operations teams, this creates a distinctive challenge. The playbook-based approach that works reliably for commercial contracts -- where clause positions, acceptable ranges, and escalation triggers can be standardised across most transactions -- requires significant modification for employment agreements. Employment contracts intersect with mandatory statutory protections that cannot be contracted out of, jurisdiction-specific rules that vary not just between countries but between provinces and states within countries, and cultural and regulatory expectations about the employment relationship that differ fundamentally across legal systems.
+## Discover Why Employment Contracts Are Different
 
-The Legal Plugin handles employment contracts through the same `/review-contract` workflow, but with a separate playbook section and escalation triggers calibrated to the unique risks of employment law. The jurisdiction-contract-review SKILL.md routes employment and contractor agreements to the HR Legal queue for specialist attention -- but the agent's triage and analysis capability means that the HR Legal team receives a structured summary rather than an unanalysed document.
-
-## How Employment Contracts Differ from Commercial Contracts in the Playbook
-
-The playbook structure for employment contracts differs from commercial contracts in four critical ways:
-
-**1. Mandatory terms override playbook positions.** In most jurisdictions, certain employment terms are mandatory -- minimum notice periods, statutory holiday entitlements, maximum working hours, pension enrolments, parental leave. The playbook cannot set acceptable ranges below statutory minimums. The agent flags any employment contract clause that falls below the mandatory floor for the applicable jurisdiction.
-
-**2. Non-compete enforceability is jurisdiction-dependent.** A 24-month non-compete with global scope is standard in a UAE DIFC employment contract and routinely enforced. The same clause in a Pakistan employment agreement is subject to the Contract Act 1872, Section 27 reasonableness test, and courts typically enforce only 6-12 months with geographic limitation to Pakistan. In California, non-competes are void entirely (Business and Professions Code Section 16600). The agent loads the applicable jurisdiction overlay and adjusts its analysis accordingly.
-
-**3. Contractor vs. employee classification is a tax and regulatory risk, not just a contractual choice.** Misclassifying an employee as an independent contractor exposes the organisation to back-taxes, penalties, and in some jurisdictions, criminal liability. The agent flags classification indicators -- control over working hours, provision of equipment, exclusivity, integration into the organisation -- and escalates to employment counsel when the indicators suggest misclassification risk.
-
-**4. IP assignment in employment requires jurisdiction-specific treatment.** In Pakistan, copyright vests in the author (the employee) unless there is a written assignment. In the UK, copyright in works created "in the course of employment" vests in the employer by default (CDPA 1988, Section 11(2)). The agent flags IP assignment clauses that may be insufficient under the employee's jurisdiction.
-
-:::info Contractor vs. Employee Classification
-
-The distinction between an independent contractor and an employee is determined by the **economic reality** of the relationship, not by the label on the contract. Key indicators include:
-
-1. Does the hiring party control _how_ the work is done, or only _what_ the output is?
-2. Does the worker provide their own tools and equipment?
-3. Does the worker bear financial risk of loss?
-4. Can the worker work for multiple clients simultaneously?
-5. Is the relationship intended to be permanent or for a defined project?
-
-Tax authorities in most jurisdictions (HMRC in the UK, FBR in Pakistan, IRS in the US) apply **substance-over-form tests**. A contract labelled "Independent Contractor Agreement" will not prevent reclassification if the economic reality is employment.
-
-:::
-
-## Worked Example: Pakistan Remote Developer Hired by UK Company
-
-**Parties:**
-
-- **Brightpath Technologies Ltd** -- a software company incorporated in England and Wales, 85 employees, headquartered in Manchester
-- **Usman Tariq** -- a senior software developer based in Lahore, Pakistan
-
-**Scenario:** Brightpath wants to hire Usman as a full-time remote developer. Their HR team has drafted an employment agreement based on their standard UK template. The contract is governed by English law. Monthly salary: GBP 4,200. Start date: 1 April 2026. The agreement includes a 12-month non-compete with worldwide scope, an IP assignment clause, and a standard UK termination provision (1 month notice during probation, 3 months after).
+Upload the Brightpath/Tariq employment agreement and run the review.
 
 ```
-You: /review-contract
-[Upload: Brightpath_Tariq_Employment_v1.pdf]
+/review-contract
 
-Context: We are the employer (Brightpath, UK). This is an employment
-agreement for a remote developer based in Pakistan. We want to ensure
-the agreement is enforceable and compliant in both jurisdictions.
+Context: We are the employer (Brightpath Technologies Ltd, UK).
+This is an employment agreement for a remote software developer
+based in Lahore, Pakistan. We want to ensure the agreement is
+enforceable and compliant in both jurisdictions.
+```
 
-Agent: Loading contract for review.
+**Expected output:**
 
+```
 TASK:         Contract Review -- Employment Agreement
 JURISDICTION: English Law (UK overlay loaded)
               CROSS-BORDER DETECTED:
@@ -140,137 +112,198 @@ mandatory statutory protections in the employee's jurisdiction.
 English governing law does not override Pakistan mandatory
 employment law for a Pakistan-based employee.
 
-CLAUSE:     Contractor vs. Employee Classification
+CLAUSE:     Employer Registration and Structure
 STATUS:     RED -- ESCALATE
-ISSUE:      This agreement is structured as a direct employment
-            relationship, but Brightpath has no legal entity in
-            Pakistan. Without a Pakistani entity, Brightpath cannot:
-            (1) Register as an employer with EOBI (Employees Old Age
+ISSUE:      Brightpath has no legal entity in Pakistan. Without
+            a Pakistani entity, Brightpath cannot:
+            (1) Register as employer with EOBI (Employees Old Age
                 Benefits Institution) -- mandatory for all employers
-                in Pakistan
             (2) Deduct and remit income tax to FBR (Federal Board
                 of Revenue) -- employer withholding obligation
             (3) Register for provincial social security (PESSI in
                 Punjab, where Lahore is located)
             Operating a direct employment relationship without
-            local registration creates tax and regulatory exposure
-            in Pakistan.
-REDLINE:    [This is a structural issue, not a clause redline.
-             Options for attorney consideration:
-             (a) Engage via an Employer of Record (EOR) service
-                 with a Pakistan entity
-             (b) Restructure as an independent contractor agreement
-                 (but only if the relationship genuinely meets
-                 contractor classification criteria)
-             (c) Establish a Pakistan subsidiary or branch office
+            local registration creates tax and regulatory exposure.
+REDLINE:    [Structural issue. Options for attorney:
+             (a) Engage via Employer of Record (EOR) with Pakistan entity
+             (b) Restructure as independent contractor (only if
+                 relationship genuinely meets contractor criteria)
+             (c) Establish Pakistan subsidiary or branch office
              Escalate to employment counsel with Pakistan expertise.]
 PRIORITY:   Must-have -- structural
 
 CLAUSE:     Non-Compete (Section 11)
 STATUS:     RED -- ESCALATE
-CURRENT:    "For a period of 12 months following termination, the
-             Employee shall not engage in any business that competes
-             with the Company anywhere in the world."
+CURRENT:    "For 12 months following termination, the Employee
+             shall not engage in any competing business worldwide."
 ISSUE:      Under Pakistan Contract Act 1872, Section 27, agreements
             in restraint of trade are void unless reasonable. Pakistani
-            courts typically enforce non-competes of 6-12 months
-            maximum, geographically limited to Pakistan, and restricted
-            to the specific type of work performed. A worldwide,
-            12-month restriction is unlikely to be enforceable
-            against a Pakistan-based employee in Pakistani courts.
-            Under English law, 12 months worldwide may also fail the
-            reasonableness test for a developer role (as opposed
-            to a senior executive with client relationships).
-REDLINE:    "For a period of 6 months following termination, the
-             Employee shall not, within Pakistan and the United
-             Kingdom, engage directly as an employee or contractor
-             with the companies listed in Schedule [X] (Direct
-             Competitors). This restriction applies only to work
-             substantially similar to the Employee's role at the
-             Company."
-FALLBACK:   If Brightpath requires broader protection, use a
-            reinforced confidentiality clause and IP assignment
-            instead of a non-compete -- these are more reliably
-            enforceable in Pakistan.
+            courts typically enforce 6-12 months maximum, geographically
+            limited to Pakistan, restricted to the specific type of
+            work performed. A worldwide 12-month restriction is
+            unlikely to be enforceable against a Pakistan-based
+            employee. Under English law, 12 months worldwide may also
+            fail the reasonableness test for a developer role.
+REDLINE:    "For 6 months following termination, the Employee shall
+             not, within Pakistan and the United Kingdom, engage
+             directly as an employee or contractor with the companies
+             listed in Schedule [X] (Direct Competitors). This
+             restriction applies only to work substantially similar
+             to the Employee's role at the Company."
+FALLBACK:   If broader protection needed, use reinforced
+            confidentiality + IP assignment instead of non-compete.
 RATIONALE:  "Narrower non-compete is more likely to be enforced in
              both jurisdictions. Overly broad restrictions risk the
-             entire clause being struck down, leaving no protection."
+             entire clause being struck down."
 PRIORITY:   Must-have
 
 CLAUSE:     Intellectual Property Assignment (Section 8)
 STATUS:     YELLOW -- NEGOTIATE
-CURRENT:    "All intellectual property created by the Employee in the
-             course of employment shall be the exclusive property of
-             the Company."
-ISSUE:      Under English law (CDPA 1988, s.11(2)), copyright in works
-            created in the course of employment vests in the employer
-            automatically. However, this statutory default applies
-            under English law. For a Pakistan-based employee, Pakistani
-            copyright law (Copyright Ordinance 1962) applies to the
-            act of creation. Under Pakistani law, copyright vests in
-            the author unless assigned in writing.
-            The current clause may be treated as a contractual
-            assignment -- but a standalone IP assignment deed executed
-            under both English and Pakistani law would provide
-            greater certainty.
+CURRENT:    "All intellectual property created in the course of
+             employment shall be the exclusive property of the Company."
+ISSUE:      Under English law (CDPA 1988, s.11(2)), copyright in
+            works created in the course of employment vests in the
+            employer automatically. For a Pakistan-based employee,
+            Pakistani copyright law (Copyright Ordinance 1962) applies
+            to the act of creation. Under Pakistani law, copyright
+            vests in the author unless assigned in writing.
+            The current clause may work as a contractual assignment,
+            but a standalone IP assignment deed executed under both
+            English and Pakistani law would provide greater certainty.
 REDLINE:    Add: "The Employee hereby assigns to the Company, by way
             of present assignment of future rights, all intellectual
-            property rights (including copyright) in all works
-            created in the course of employment, in all jurisdictions
-            worldwide. The Employee agrees to execute such further
-            documents as may be reasonably required to perfect this
-            assignment in any jurisdiction, including Pakistan."
+            property rights (including copyright) in all works created
+            in the course of employment, in all jurisdictions worldwide.
+            The Employee agrees to execute further documents as
+            reasonably required to perfect this assignment."
 RATIONALE:  "Belt-and-braces approach ensures assignment is effective
-             under both English and Pakistani intellectual property law."
-PRIORITY:   Nice-to-have (the current clause may suffice, but the
-            reinforced version eliminates jurisdictional uncertainty)
+             under both English and Pakistani IP law."
+PRIORITY:   Nice-to-have
 
 CLAUSE:     Tax and Social Security (not addressed in contract)
 STATUS:     RED -- ESCALATE
 ISSUE:      The contract does not address:
-            (1) Pakistan income tax withholding -- FBR requires
-                employer withholding for employees in Pakistan
-            (2) EOBI contributions -- mandatory for employers
-            (3) PESSI (Punjab Employees Social Security) --
-                mandatory for Punjab-based employees
-            (4) UK tax implications of having a Pakistan-based
-                employee (potential permanent establishment risk)
-            These are not optional -- they are statutory obligations.
+            (1) Pakistan income tax withholding (FBR requirement)
+            (2) EOBI contributions (mandatory)
+            (3) PESSI Punjab (mandatory for Punjab-based employees)
+            (4) UK tax implications (potential permanent establishment)
+            These are statutory obligations, not optional.
 REDLINE:    [Escalate to tax counsel in both jurisdictions.
-             The employment structure must be compliant before
-             the start date.]
+             Employment structure must be compliant before start date.]
 PRIORITY:   Must-have -- regulatory
 
 HOLISTIC RISK SUMMARY
 Total: 2 GREEN | 1 YELLOW | 3 RED
-Most material risk: Employment structure (no Pakistan entity) creates
-                    tax and regulatory non-compliance from day one.
-Recommendation: ESCALATE -- Do not execute this agreement in its current
-                form. The structural issue (no Pakistan entity/EOR)
-                must be resolved before the employment relationship
-                begins. Engage employment counsel with Pakistan and
-                UK cross-border expertise.
-Negotiation priority: (1) Employment structure/EOR, (2) Tax compliance,
-                      (3) Non-compete scope, (4) IP assignment mechanics.
+Most material risk: No Pakistan entity creates tax and regulatory
+                    non-compliance from day one.
+Recommendation: ESCALATE -- Do not execute in current form.
+Negotiation priority: (1) Structure/EOR, (2) Tax compliance,
+                      (3) Non-compete scope, (4) IP assignment.
 
 ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
 ```
 
-This worked example illustrates why employment law is the most jurisdiction-sensitive area of Legal Ops. A standard UK employment template -- perfectly adequate for a Manchester-based hire -- generates three RED escalations when applied to a Pakistan-based remote developer. The issues are not exotic edge cases. They are fundamental structural requirements (employer registration, tax withholding, social security) that apply to every cross-border employment relationship. Without the Pakistan overlay, the agent would review only against English law and miss all three.
-
-The pattern is consistent across GCC jurisdictions as well. UAE Federal Decree-Law No. 33 of 2021 replaced unlimited employment contracts with fixed-term contracts (maximum 3 years, renewable), introduced specific Emiratisation quotas in certain sectors, and mandated end-of-service gratuity calculations that differ from UK statutory redundancy. DIFC employment law (Employment Law No. 2 of 2019) follows a different framework closer to English law. A single "Middle East employment template" is an oxymoron -- the agent ensures each jurisdiction's mandatory requirements are identified and addressed.
+Compare this output to the vendor contract review you ran in Lesson 3. The CloudStack SaaS review flagged a limitation of liability cap and an auto-renewal clause. This employment review flags employer registration, tax withholding, and non-compete enforceability. The difference is not complexity -- it is category. Employment contracts trigger an entirely different set of RED flags because they intersect with mandatory statutory protections that do not exist in commercial law.
 
 > **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
 
+## Four Critical Differences Between Employment and Commercial Contracts
+
+The playbook structure for employment contracts differs from commercial contracts in four ways.
+
+**1. Mandatory terms override playbook positions.** In most jurisdictions, certain employment terms are mandatory -- minimum notice periods, statutory holiday entitlements, maximum working hours, pension enrolments, parental leave. The playbook cannot set acceptable ranges below statutory minimums. The agent flags any clause that falls below the mandatory floor for the applicable jurisdiction. In the Brightpath review, EOBI registration and FBR withholding are not negotiable positions. They are statutory obligations.
+
+**2. Non-compete enforceability is jurisdiction-dependent.** A 24-month non-compete with global scope is standard in a UAE DIFC employment contract and routinely enforced. The same clause in a Pakistan employment agreement is subject to the Contract Act 1872, **Section 27** reasonableness test, and courts typically enforce only 6-12 months with geographic limitation. In California, non-competes are void entirely (Business and Professions Code Section 16600). The agent loads the applicable jurisdiction overlay and adjusts its analysis accordingly.
+
+**3. Contractor vs. employee classification is a tax and regulatory risk.** Misclassifying an employee as an independent contractor exposes the organisation to back-taxes, penalties, and in some jurisdictions, criminal liability. The agent flags **classification indicators** and escalates to employment counsel when those indicators suggest misclassification.
+
+**4. IP assignment requires jurisdiction-specific treatment.** In Pakistan, copyright vests in the author (the employee) unless there is a written assignment. In the UK, copyright in works created "in the course of employment" vests in the employer by default (CDPA 1988, Section 11(2)). The Brightpath review flagged this as YELLOW because the current clause may be insufficient under Pakistani copyright law.
+
+## Contractor vs Employee: The Five Indicators
+
+Brightpath's attorney comes back with a question: "What if we restructure this as an independent contractor agreement instead?" Before answering, you need to evaluate whether the relationship genuinely qualifies as a contractor arrangement.
+
+:::info Contractor vs Employee Classification
+
+The distinction between an independent contractor and an employee is determined by the **economic reality** of the relationship, not by the label on the contract. Five indicators matter:
+
+1. **Control** -- Does the hiring party control _how_ the work is done, or only _what_ the output is?
+2. **Tools** -- Does the worker provide their own equipment and software?
+3. **Financial risk** -- Does the worker bear the risk of loss on the engagement?
+4. **Exclusivity** -- Can the worker serve multiple clients simultaneously?
+5. **Permanence** -- Is the relationship intended to be ongoing or project-based?
+
+Tax authorities in most jurisdictions -- HMRC in the UK, FBR in Pakistan, IRS in the US -- apply **substance-over-form tests**. A contract labelled "Independent Contractor Agreement" will not prevent reclassification if the economic reality is employment.
+
+:::
+
+Apply the five indicators to Usman's working relationship with Brightpath:
+
+| Indicator          | Usman's Situation                                         | Points Toward |
+| ------------------ | --------------------------------------------------------- | ------------- |
+| **Control**        | Works 9am-6pm PKT, attends daily standups, reports to CTO | Employee      |
+| **Tools**          | Uses company-provided laptop and software licences        | Employee      |
+| **Financial risk** | Fixed monthly salary, no risk of loss on projects         | Employee      |
+| **Exclusivity**    | Works exclusively for Brightpath, no other clients        | Employee      |
+| **Permanence**     | Ongoing role, no defined end date                         | Employee      |
+
+All five indicators point toward employment. Relabelling this as a "contractor agreement" does not change the economic reality. If HMRC or FBR were to review the arrangement, the substance-over-form test would likely result in reclassification -- with back-taxes, penalties, and interest.
+
+The answer to Brightpath's attorney: restructuring as a contractor is an option only if the relationship genuinely changes. If Usman will continue working full-time, exclusively, with company equipment, on an ongoing basis -- the label on the contract does not determine the classification. The economic reality does.
+
+## Recommendation Memo: Three Options for Brightpath
+
+Based on the `/review-contract` output and the classification analysis, produce a recommendation memo for Brightpath's board. Run this prompt:
+
+```
+Based on the employment contract review for Brightpath Technologies
+(UK) hiring Usman Tariq (Pakistan), produce a recommendation memo
+with three structural options:
+
+Option A: Establish a Pakistan subsidiary
+Option B: Engage through an Employer of Record (EOR)
+Option C: Restructure as a genuine independent contractor
+
+For each option, include:
+1. What it involves (setup steps)
+2. Timeline to implement
+3. Estimated cost range
+4. Legal risks if this option fails
+5. When this option is the right choice
+
+End with a recommendation for Brightpath given their size
+(85 employees), one Pakistan-based hire, and expansion plans.
+```
+
+**Expected output structure:**
+
+The agent produces a structured memo comparing all three options. The key trade-offs:
+
+| Option                     | Setup Time | Cost                               | Best When                               |
+| -------------------------- | ---------- | ---------------------------------- | --------------------------------------- |
+| **A: Pakistan subsidiary** | 3-6 months | $15-30K setup + ongoing compliance | 5+ employees planned in Pakistan        |
+| **B: Employer of Record**  | 1-2 weeks  | $300-600/month per employee        | 1-4 employees, testing the market       |
+| **C: Genuine contractor**  | Immediate  | Lowest                             | Truly project-based, non-exclusive work |
+
+For Brightpath hiring one developer with plans to expand, Option B (EOR) is typically the recommended starting point. It provides immediate compliance without the overhead of incorporating in Pakistan. If Brightpath scales to 5+ Pakistan-based employees, they can transition to Option A (subsidiary) when the economics justify the setup cost.
+
+Option C is available only if the working relationship genuinely changes -- project-based scope, worker's own tools, multiple clients, no fixed hours. Relabelling the current arrangement as a contractor without changing the economic reality creates misclassification risk.
+
+## What You Built
+
+1. Employment contract review with 3 RED escalations (no Pakistan entity, non-compete scope, tax compliance) and 1 YELLOW (IP assignment mechanics)
+2. Contractor vs employee classification analysis applying five indicators to the Brightpath/Tariq scenario
+3. Recommendation memo with three structural options (subsidiary, EoR, contractor) including risks, costs, and timelines for each
+
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Contractor vs. Employee Classification Analysis
+### Prompt 1: Classification Analysis
 
 ```
 I am a Legal Operations Manager. Analyse this working relationship
-against the five contractor vs. employee classification indicators:
+against the five contractor vs employee classification indicators:
 
 A software developer based in Karachi works exclusively for a
 London-based startup. He uses a laptop provided by the company,
@@ -291,61 +324,26 @@ Then give me an overall assessment:
 - What should the company do immediately?
 ```
 
-**What you are learning:** The label on the contract does not determine classification -- the economic reality does. This exercise builds the analytical skill of applying substance-over-form tests to real working relationships, which is the exact analysis the Legal Ops Agent performs when it flags classification risk.
+**What you are learning:** The label on a contract does not determine classification -- the economic reality does. This exercise builds the analytical skill of applying substance-over-form tests to real working relationships. The agent's analysis mirrors the exact triage the Legal Ops plugin performs when it flags classification risk in a `/review-contract` output.
 
-### Prompt 2: Non-Compete Enforceability Across Jurisdictions
+### Prompt 2: Non-Compete Enforceability Comparison
 
 ```
-I am drafting a non-compete clause for a senior product manager
-who will be based in Dubai (DIFC). Compare the enforceability of
-the following non-compete clause across three jurisdictions:
+Compare the enforceability of this non-compete clause across
+three jurisdictions:
 
-"For a period of 24 months following termination, the Employee
-shall not engage in any business that competes with the Company
-anywhere in the world."
+"For 24 months following termination, the Employee shall not
+engage in any competing business anywhere in the world."
 
-Analyse this clause under:
+Analyse under:
 1. UAE DIFC employment law (Employment Law No. 2 of 2019)
 2. Pakistan Contract Act 1872, Section 27
 3. California Business and Professions Code Section 16600
 
-For each jurisdiction:
-- Would this clause be enforceable as written?
-- If not, what modifications would make it enforceable?
-- What is the maximum scope (duration, geography, activity)
-  that courts in this jurisdiction typically enforce?
-- What alternative protections (confidentiality, garden leave,
-  IP assignment) would be more effective?
+For each jurisdiction: Would this clause be enforceable as written?
+If not, what modifications would make it enforceable? What is the
+maximum scope courts typically enforce? What alternative protections
+(confidentiality, garden leave, IP assignment) would be more effective?
 ```
 
-**What you are learning:** Non-compete enforceability is the clearest example of why jurisdiction overlays are essential. The same clause is standard practice in one jurisdiction, subject to a reasonableness test in another, and void entirely in a third. The agent must load the correct overlay to give useful analysis -- and you must understand the variation to evaluate the agent's output.
-
-### Prompt 3: Cross-Border Employment Compliance Checklist
-
-```
-I am the GC of a UK company that wants to hire its first three
-remote employees in Pakistan (Lahore, Islamabad, and Karachi).
-We currently have no legal entity in Pakistan.
-
-Create a compliance checklist covering:
-
-1. Employment structure options (direct employment vs. EOR vs.
-   subsidiary) — pros, cons, cost, and timeline for each
-2. Pakistan mandatory employment requirements we must comply with
-   (EOBI, provincial social security, FBR withholding, minimum
-   wage, leave entitlements)
-3. UK tax implications (permanent establishment risk, transfer
-   pricing if subsidiary)
-4. Contract clauses that need Pakistan-specific modification vs.
-   our standard UK template
-5. Ongoing compliance obligations once employees are onboarded
-
-For each item, state whether it is a legal requirement (must do),
-a best practice (should do), or optional (could do).
-```
-
-**What you are learning:** Cross-border employment is not a single legal question -- it is a matrix of requirements spanning employment law, tax law, social security, and corporate law in both jurisdictions. The checklist exercise builds your ability to identify the full scope of compliance requirements that the Legal Ops Agent must track, and to distinguish mandatory obligations from best practices.
-
----
-
-Continue to [Lesson 10: The SKILL.md Library and Jurisdiction Router ->](./10-skill-library-and-jurisdiction-router.md)
+**What you are learning:** Non-compete enforceability is the clearest example of why jurisdiction overlays are essential. The same clause is standard practice in DIFC, subject to a reasonableness test in Pakistan, and void entirely in California. Understanding this variation is what separates a legal ops professional who can evaluate agent output from one who accepts it uncritically.
