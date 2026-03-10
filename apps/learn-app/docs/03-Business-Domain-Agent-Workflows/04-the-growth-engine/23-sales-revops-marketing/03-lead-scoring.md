@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
-title: "Scoring, Qualifying, and Keeping Data Alive"
-description: "Build and evaluate the three-dimension lead scoring model using /score-lead, diagnose miscalibrated scores, understand score decay over time, and use the crm-enrichment skill to resolve conflicting data sources"
+title: "Lead Scoring"
+description: "Build a three-dimension lead scoring model (Fit + Timing + Engagement), score five demo prospects with routing recommendations, discover miscalibrated scoring when the model underweights a signal Farah recognises, and define routing rules for each score tier"
 keywords:
   [
     "lead scoring",
@@ -10,492 +10,332 @@ keywords:
     "fit score",
     "timing score",
     "engagement score",
-    "score decay",
-    "CRM enrichment",
-    "crm-enrichment skill",
-    "data quality",
     "miscalibrated scoring",
     "lead qualification",
+    "routing rules",
+    "ICP scoring",
+    "prospect ranking",
+    "sales pipeline",
+    "NexaFlow Technologies",
+    "Meridian Logistics",
   ]
 chapter: 23
 lesson: 3
-duration_minutes: 20
+duration_minutes: 25
 
 # HIDDEN SKILLS METADATA
 skills:
-  - name: "Interpret Three-Dimension Lead Scores and Determine Action"
+  - name: "Configure and Apply a Three-Dimension Lead Scoring Model"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can read a /score-lead output, identify which dimension drives the score, determine the correct action (outreach, nurture, monitor, disqualify), and explain their reasoning"
+    measurable_at_this_level: "Student can configure a scoring model with Fit (0-40), Timing (0-40), and Engagement (0-20), run /score-lead on 5 prospects, read the dimension breakdown, and determine the correct classification (HOT, WARM, CULTIVATE, NOT YET)"
 
-  - name: "Diagnose Miscalibrated Scoring"
+  - name: "Diagnose Miscalibrated Scoring by Comparing Agent Output to Domain Knowledge"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Analyze"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can identify when a score contradicts domain knowledge, trace the miscalibration to a specific ICP section or scoring weight, and propose a correction"
+    measurable_at_this_level: "Student can identify when a score contradicts expert judgment, trace the miscalibration to a specific underweighted dimension or ICP section, adjust point weights, and re-score to verify the correction"
 
-  - name: "Manage Score Decay and CRM Enrichment"
+  - name: "Define Routing Rules That Match Score Tiers to Sales Actions"
     proficiency_level: "A2"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can explain why scores decay without new signals, demonstrate re-scoring after enrichment, and resolve conflicting data sources using the crm-enrichment skill"
+    measurable_at_this_level: "Student can define routing rules (who gets which leads, what SLA applies) for each of the four classification tiers and explain why routing without scoring produces inconsistent results"
 
 learning_objectives:
-  - objective: "Use /score-lead to score prospects and interpret the three-dimension output (Fit 40, Timing 40, Engagement 20) to determine the correct sales action"
+  - objective: "Score 5 prospects using the three-dimension model (Fit 40 + Timing 40 + Engagement 20) and classify each as HOT, WARM, CULTIVATE, or NOT YET with the correct recommended action"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student scores 5 prospects and correctly classifies each with the appropriate action based on dimension analysis"
+    assessment_method: "Student produces scored output for all 5 demo prospects, correctly classifies each, and explains which dimension drove the classification"
 
-  - objective: "Diagnose miscalibrated scores by comparing agent output to domain knowledge and tracing errors to specific ICP sections"
+  - objective: "Diagnose a miscalibrated score by identifying a dimension the model underweights relative to domain expertise and adjusting the scoring weights to correct the classification"
     proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Given a score that contradicts known reality, student identifies which ICP section or weight caused the miscalibration"
+    assessment_method: "Given a prospect that Farah would call HOT but the model classifies WARM, student traces the gap to a specific underweighted timing signal and proposes a weight correction"
 
-  - objective: "Explain score decay and demonstrate how the crm-enrichment skill resolves conflicting data sources to maintain score accuracy"
+  - objective: "Define routing rules for each score tier specifying owner, SLA, and recommended action"
     proficiency_level: "A2"
     bloom_level: "Apply"
-    assessment_method: "Student can show the same prospect scored at two time points and explain why the score changed, then use crm-enrichment to update stale data"
+    assessment_method: "Student produces a routing table with owner assignments and SLA targets for HOT, WARM, CULTIVATE, and NOT YET classifications"
 
 cognitive_load:
-  new_concepts: 7
+  new_concepts: 6
   concepts_list:
     - "Three-dimension scoring model (Fit 40 / Timing 40 / Engagement 20)"
-    - "Miscalibrated Scoring as an agent error type"
-    - "Score decay over time without new signals"
-    - "Lead classification levels (HOT, WARM, CULTIVATE, NOT YET)"
-    - "CRM enrichment as continuous data maintenance"
-    - "Conflicting data sources and resolution"
-    - "Re-scoring cadence as operational discipline"
-  assessment: "7 concepts at B1 level. Scoring model is the foundation; miscalibration diagnosis requires analytical thinking. Score decay introduces temporal reasoning."
+    - "Dimension breakdown as the unit of analysis (not the composite score)"
+    - "Four classification tiers and their action mappings"
+    - "Miscalibrated Scoring as an agent error type (discovered, not taught)"
+    - "Scoring weight adjustment as the correction mechanism"
+    - "Routing rules that connect score tiers to team assignments and SLAs"
+  assessment: "6 concepts at B1 level. The scoring model provides the structural foundation; miscalibration diagnosis requires analytical comparison of agent output to domain knowledge. Routing rules are straightforward application."
 
 differentiation:
-  extension_for_advanced: "Score 10 prospects. Plot Fit vs Timing on a 2x2 grid. Which quadrant has the most prospects? What does that tell you about your pipeline health? Design a re-scoring schedule based on signal freshness."
-  remedial_for_struggling: "Focus on scoring 3 prospects with /score-lead and correctly determining the action for each based on the classification. If you can explain why a high-Fit, low-Timing prospect needs monitoring rather than outreach, you have the core concept."
+  extension_for_advanced: "Score 10 additional prospects. Plot Fit vs Timing on a 2x2 grid (high/low for each). Which quadrant has the most prospects? What does this tell you about pipeline health? Design a custom scoring model that adds a fourth dimension for your industry."
+  remedial_for_struggling: "Focus on scoring 3 prospects and correctly determining the action for each. If you can explain why a high-Fit, low-Timing prospect needs monitoring rather than immediate outreach, you have the core concept."
 ---
 
-# Scoring, Qualifying, and Keeping Data Alive
+# Lead Scoring
 
-In Lesson 2, you built your Ideal Customer Profile and ran `/research-prospect` to generate intelligence briefs. You now have a list of prospects with deep research behind them. The next question is the one every sales leader asks on Monday morning: **which of these prospects should my team call first?**
+In Lesson 2, you built NexaFlow's ICP and researched five prospects. You know WHO to target. But which prospect should get a call THIS WEEK?
 
-Your ICP tells you whether a prospect fits your business. Scoring goes further. It tells you three things at once: right company (**Fit** -- 40 points), right time (**Timing** -- 40 points), paying attention (**Engagement** -- 20 points). Most scoring models get Fit right and ignore Timing entirely. That is why pipelines fill up with prospects who match perfectly and never buy. A perfect-fit prospect in the middle of a cost-cutting freeze is not a lead. A decent-fit prospect who just closed a funding round and is hiring three sales roles is.
+Your CRM says Meridian Logistics is a "warm lead." What does that mean? Someone opened an email? The company matches your industry filter? "Warm" is not actionable. It does not tell Farah whether to call Meridian before TransPak, or whether either of them deserves attention over Al-Safa Transport in Dubai.
 
-This lesson introduces the `/score-lead` command, shows you how to read its three-dimension output, and teaches you to catch the second agent error type in our taxonomy: **Miscalibrated Scoring**. In Lesson 1, you learned that agents hallucinate data. Here you learn that agents also miscalibrate judgment -- they produce scores that are technically correct given their inputs but wrong given what you know about the market.
+This lesson replaces gut instinct with a three-dimension scoring model. Three questions, scored independently: does the company match your ICP (**Fit**)? Is something happening RIGHT NOW that makes them likely to buy (**Timing**)? Have they shown interest in NexaFlow (**Engagement**)? The composite score tells you where to look. The dimension breakdown tells you what to do.
 
-## The Three-Dimension Scoring Model
+## Why Most Lead Scoring Fails
 
-The `/score-lead` command evaluates prospects across three independent dimensions. Each dimension answers a different question:
+Before building the model, consider two scoring failures from NexaFlow's history.
 
-| Dimension       | Points | Question It Answers                                   |
-| --------------- | ------ | ----------------------------------------------------- |
-| **Fit**         | 40     | Does this company match our ICP?                      |
-| **Timing**      | 40     | Is this the right moment to sell to them?             |
-| **Engagement**  | 20     | Does this prospect know we exist?                     |
+**Failure 1: The "hot" lead that was a terrible fit.** Last quarter, a 15-person startup in Lahore scored 78 on the old single-dimension system. They had downloaded three whitepapers, attended a webinar, and replied to two emails. The old system weighted engagement heavily, so the startup looked like a top prospect. Farah's team spent three weeks on calls and demos. The startup could not afford NexaFlow's pricing, had no operations team to implement the product, and churned within two months of signing. High engagement, terrible fit. The old model could not distinguish interest from ability to buy.
 
-The weighting is deliberate. Fit and Timing carry equal weight because both are deal-breakers. A company that matches your ICP perfectly but has no budget right now will not buy. A company with urgent need but the wrong tech stack will not implement. Engagement carries less weight because it is the dimension you can change most directly through marketing and outreach.
+**Failure 2: The perfect-fit company scored "cold."** Falcon Logistics in Abu Dhabi matched NexaFlow's ICP on every dimension -- 180 employees, 3PL operator, legacy WMS, expanding into Saudi Arabia. But they had never visited NexaFlow's website. No email opens, no downloads, no webinar attendance. The old system scored them 22 out of 100 and the team ignored them for six months. Meanwhile, Falcon had just hired a new COO who was actively evaluating workflow automation vendors. The timing signals were there in public data -- hiring announcements, LinkedIn posts about operational efficiency, a Companies House filing showing new investment. The old system could not see them because it only measured engagement.
+
+Both failures have the same root cause: a single-dimension score hides the story. The three-dimension model separates what matters into independent questions so each gets a clear answer.
+
+## The Three-Dimension Model
+
+Score every prospect on three independent dimensions:
+
+| Dimension      | Points | Question It Answers              |
+| -------------- | ------ | -------------------------------- |
+| **Fit**        | 0-40   | Does this company match our ICP? |
+| **Timing**     | 0-40   | Is something happening NOW?      |
+| **Engagement** | 0-20   | Do they know we exist?           |
+| **Total**      | 0-100  |                                  |
+
+The weighting is deliberate. Fit and Timing carry equal weight because both are deal-breakers. A company that matches your ICP perfectly but has no budget right now will not buy. A company with urgent need but the wrong tech stack will not implement. Engagement carries less weight because it is the dimension you can change most directly through outreach and marketing.
 
 ### Why Not a Single Score?
 
-A single composite score hides the story. A prospect scoring 72/100 could be:
+A prospect scoring 72/100 could be:
 
-- **Fit 35 + Timing 35 + Engagement 2** -- great company, great timing, but they have never heard of you
-- **Fit 12 + Timing 38 + Engagement 22** -- wrong company that happens to be buying and follows your blog
-- **Fit 30 + Timing 10 + Engagement 32** -- decent fit, no urgency, but very engaged with your content
+- **Fit 35 + Timing 35 + Engagement 2** -- great company, great timing, but they have never heard of you. Action: awareness campaign.
+- **Fit 12 + Timing 38 + Engagement 22** -- wrong company that happens to be buying and follows your blog. Action: disqualify.
+- **Fit 30 + Timing 10 + Engagement 32** -- decent fit, no urgency, very engaged with content. Action: nurture and monitor for timing signals.
 
-Each of these prospects needs a completely different action. The composite number is the same. The three-dimension breakdown tells you what to do next.
+Same composite number. Three completely different next steps. The dimensions are the decision tool, not the total.
 
-## Worked Example: NexaFlow Prospect 001
+### Classification Tiers
 
-Farhan at NexaFlow Technologies in Karachi runs `/score-lead` on a prospect from their pipeline. Here is the full annotated output:
+| Classification | Total Score | Dimension Requirements          | Recommended Action                       |
+| -------------- | ----------- | ------------------------------- | ---------------------------------------- |
+| **HOT**        | 75-100      | Fit >= 25 AND Timing >= 25      | Immediate outreach or awareness campaign |
+| **WARM**       | 55-74       | Fit >= 20 OR Timing >= 20       | Nurture sequence with personalisation    |
+| **CULTIVATE**  | 35-54       | At least one dimension above 15 | Quarterly check; add to newsletter       |
+| **NOT YET**    | 0-34        | No dimension above 15           | Disqualify or defer to future quarter    |
+
+Notice that classification depends on BOTH the total and the dimension balance. A prospect with Fit 38 and Timing 0 scores 38 but does not meet CULTIVATE dimension requirements because a zero-Timing prospect with no engagement is not worth monitoring.
+
+## Score All 5 Prospects
+
+Take the five demo prospects from Lesson 2 and score each one. Start with Meridian:
 
 ```
-/score-lead NexaFlow-prospect-001
+Score this lead against NexaFlow's ICP:
+
+Meridian Logistics Ltd, Leeds, UK. 380 employees,
+£50M revenue. Sarah Chen, VP Operations. Recently won
+a major contract with a national retailer requiring
+40% capacity expansion. Legacy WMS (SAP, 8 years old).
+Hired a Head of Digital Transformation 3 months ago.
+Visited NexaFlow website twice, downloaded the logistics
+automation case study.
 ```
 
 **Output:**
 
 ```
-PROSPECT SCORE — NexaFlow-prospect-001
+LEAD SCORE — Meridian Logistics
+═══════════════════════════════
 
-TOTAL: 81/100
+TOTAL: 87/100
 Classification: HOT
 
 DIMENSION BREAKDOWN:
-  Fit:        33/40
-    Industry match:     10/10  (SaaS B2B — exact match)
-    Company size:       10/10  (120 employees — within ICP range)
-    Tech stack:          8/10  (uses 3 of 4 target platforms)
-    Geography:           5/10  (MENA region — partial match)
+  Fit:         36/40
+    Industry match:      10/10  (3PL / logistics — exact ICP match)
+    Company size:        10/10  (380 employees — within 50-400 range)
+    Tech stack:           8/10  (legacy SAP WMS, 8 years old — strong
+                                 positive signal; no automation platform)
+    Geography:            8/10  (UK — secondary market in ICP)
 
-  Timing:     40/40
-    Funding signal:     15/15  (Series B announced 28 days ago)
-    Hiring signal:      15/15  (3 open sales roles on LinkedIn)
-    Tech investment:    10/10  (new CRM implementation in progress)
+  Timing:      37/40
+    Contract trigger:    15/15  (major retailer contract requiring 40%
+                                 capacity expansion — highest-priority
+                                 trigger event)
+    Leadership change:   12/15  (Head of Digital Transformation hired
+                                 3 months ago — active evaluation window)
+    Tech investment:     10/10  (legacy system replacement likely given
+                                 capacity demands and new digital leader)
 
-  Engagement:  8/20
-    Website visits:      3/10  (1 visit, 2 pages, 45 seconds)
-    Content downloads:   0/5   (no downloads)
-    Event attendance:    0/5   (no events)
-    Email interaction:   5/5   (opened 1 newsletter)
+  Engagement:  14/20
+    Website visits:       6/10  (2 visits — moderate awareness)
+    Content downloads:    5/5   (logistics automation case study —
+                                 directly relevant to their challenge)
+    Event attendance:     0/5   (no events)
+    Email interaction:    3/5   (opened 1 newsletter)
 
-ACTION RECOMMENDATION: Awareness campaign before direct outreach.
-High Fit + High Timing + Low Engagement = prospect matches ICP
-and has budget NOW, but does not know you exist.
+ACTION RECOMMENDATION: Immediate personalised outreach.
+Strong Fit + strong Timing + moderate Engagement =
+prospect matches ICP, has urgent operational need, and
+has shown intentional interest (case study download is
+a buying signal). Farah should contact Sarah Chen this
+week referencing the capacity expansion challenge.
 ```
 
-Read the dimensions, not the total. The total says 81 -- a strong score. But the dimension breakdown reveals the real story:
+Meridian scores 87 — HOT. The dimension breakdown reveals why. Fit is strong across every sub-dimension: right industry, right size, legacy tech stack that needs replacing. Timing is nearly perfect: the contract win creates urgency, and a new digital transformation leader means someone is actively looking for solutions. Engagement is moderate but the case study download signals deliberate interest, not casual browsing.
 
-**Fit (33/40):** Strong match. The company is in the right industry, the right size, and uses most of the right technology. The geography deduction is minor -- MENA region is adjacent to Farhan's primary market of Pakistan and the Gulf.
+Now score the remaining four prospects. Run each one through the same prompt, substituting the prospect details from your Lesson 2 research briefs.
 
-**Timing (40/40):** Perfect. This prospect announced a Series B within the last month, is hiring sales roles (a signal of growth investment), and is implementing a new CRM (meaning they are actively spending on sales infrastructure). Every timing signal is green.
+### Ranking the 5 Prospects
 
-**Engagement (8/20):** Almost nothing. One website visit. One newsletter open. No downloads, no event attendance. This prospect does not know NexaFlow exists.
-
-The action flows directly from the dimensions. You do not cold-call someone who has never heard of you, no matter how good the fit. High Fit plus high Timing plus low Engagement equals an awareness campaign first -- targeted content, social engagement, warm introduction through a mutual connection. Build recognition before you ask for a meeting.
-
-### The Four Classification Levels
-
-The `/score-lead` command classifies every prospect into one of four levels based on the total score and dimension balance:
-
-| Classification | Total Score | Dimension Requirements           | Action                                   |
-| -------------- | ----------- | -------------------------------- | ---------------------------------------- |
-| **HOT**        | 75-100      | Fit >= 25 AND Timing >= 25      | Immediate outreach or awareness campaign |
-| **WARM**       | 55-74       | Fit >= 20 OR Timing >= 20       | Nurture sequence with personalisation    |
-| **CULTIVATE**  | 35-54       | At least one dimension above 15 | Monitor; add to newsletter and events    |
-| **NOT YET**    | 0-34        | No dimension above 15           | Disqualify or defer to future quarter    |
-
-Notice that classification depends on both the total score and the dimension balance. A prospect with Fit 38 and Timing 0 would score 38 total but would not classify as CULTIVATE under the dimension requirements -- a zero-Timing prospect with no engagement is not worth monitoring.
-
-## Introducing Miscalibrated Scoring
-
-In Lesson 1, you learned that agents produce **Hallucinated Data** -- fabricated facts that look plausible. Here you meet the second agent error type: **Miscalibrated Scoring**.
-
-Miscalibrated Scoring is more dangerous than hallucinated data because it looks correct. The agent follows its scoring logic perfectly. Every calculation checks out. But the score contradicts what you know about the market.
-
-### The Startup That Scored 85% Fit
-
-Farhan's ICP defines NexaFlow's ideal customer as "B2B SaaS companies with 50-500 employees." He runs `/score-lead` on a 12-person startup that launched six months ago:
+After scoring all five, rank them:
 
 ```
-/score-lead NexaFlow-prospect-007
+Rank these 5 scored prospects by total score. Show
+the dimension breakdown for each. Highlight the
+top-scoring and bottom-scoring prospect.
 ```
 
-**Output:**
+**Sample Ranking:**
 
 ```
-PROSPECT SCORE — NexaFlow-prospect-007
+PROSPECT RANKING — NexaFlow Pipeline
+═════════════════════════════════════
 
-TOTAL: 74/100
-Classification: WARM
-
-DIMENSION BREAKDOWN:
-  Fit:        34/40
-    Industry match:     10/10  (SaaS B2B — exact match)
-    Company size:        9/10  (12 employees — flagged as
-                                "early-stage but within sector")
-    Tech stack:         10/10  (modern stack, all 4 platforms)
-    Geography:           5/10  (Lahore — same country)
-
-  Timing:     32/40
-    Funding signal:     10/15  (seed round 3 months ago)
-    Hiring signal:       7/15  (hiring 2 engineers)
-    Tech investment:    15/15  (greenfield — building from scratch)
-
-  Engagement: 8/20
-    ...
+Rank  Prospect                    Fit   Timing  Engage  Total  Class
+────  ──────────────────────────  ────  ──────  ──────  ─────  ──────
+  1   Meridian Logistics (Leeds)   36    37      14       87   HOT
+  2   Al-Safa Transport (Dubai)    32    30      10       72   WARM
+  3   TransPak Logistics (KHI)     34    22       8       64   WARM
+  4   Greenline Express (LHR)      28    18      12       58   WARM
+  5   Coastal Freight (KHI)        18     8       6       32   NOT YET
 ```
 
-Farhan immediately spots the problem. A 12-person startup scoring 34/40 on Fit? His ICP says 50-500 employees. A 12-person company is below the minimum. They cannot afford NexaFlow's pricing. They do not have the team to implement the product. They will churn within three months.
+The ranking produces a priority list. Meridian is the clear first call. Al-Safa needs a nurture sequence with Dubai-specific content. TransPak has high Fit but moderate Timing -- monitor for trigger events. Greenline is borderline WARM, pulled up by engagement (they read your content regularly). Coastal falls below the threshold on every dimension.
 
-The agent gave a high score because the ICP's firmographic section has a gap. It specifies "B2B SaaS" as the industry criterion and "50-500 employees" as the size criterion, but the scoring weights treat industry match (10 points) and size match (10 points) as independent. The startup got full marks on industry and nearly full marks on size because the scoring model's thresholds allow a gradual curve rather than a hard cutoff at 50 employees.
+## When the Model Gets It Wrong
 
-**The score is technically correct given the ICP. The ICP is wrong.**
+Look at Al-Safa Transport. The model scores them 72 -- WARM. The recommended action is a nurture sequence.
 
-### Tracing the Miscalibration
+But Farah looks at Al-Safa's data and says: "That is our best prospect this quarter. I would call them today."
 
-To diagnose a miscalibrated score:
+Why? Farah knows something the model underweights. Al-Safa just lost their warehouse management vendor -- the vendor shut down operations in the UAE with 30 days notice. Al-Safa has no choice but to find a replacement immediately. This is not a "nice to have" evaluation. This is an emergency procurement with a hard deadline.
 
-1. **Identify the contradiction.** The score says HOT or WARM. Your experience says no.
-2. **Isolate the dimension.** Which dimension is inflated? In this case, Fit.
-3. **Trace to the ICP section.** The firmographic section's employee-count threshold is too soft. It allows a gradual curve instead of a hard minimum.
-4. **Propose the correction.** Change the ICP: "Minimum 50 employees. Companies below 50 employees score 0/10 on company size regardless of other fit criteria."
+The model gave Al-Safa a Timing score of 30/40. That is strong but not maximum. The vendor shutdown signal was captured under "tech investment" but scored the same as a routine system upgrade. The model treats "vendor shutting down" and "considering new software" as equivalent timing signals. They are not. A forced replacement is a higher-urgency signal than a planned evaluation.
 
-After Farhan updates the ICP's firmographic section and re-runs `/score-lead`, the startup's Fit drops from 34/40 to 24/40 and its classification changes from WARM to CULTIVATE. The scoring model now reflects the business reality that sub-50-employee companies are not viable customers.
+### Adjusting the Weights
+
+The scoring model underweights forced-replacement signals. To fix this:
+
+```
+Re-score Al-Safa Transport with this adjustment:
+Timing signals should distinguish between voluntary
+evaluation (planned system change) and forced replacement
+(vendor shutdown, contract termination, system failure).
+Forced replacement signals should score 15/15 on the
+relevant timing sub-dimension.
+```
+
+**Adjusted Output:**
+
+```
+LEAD SCORE (ADJUSTED) — Al-Safa Transport
+══════════════════════════════════════════
+
+TOTAL: 82/100 (was 72)
+Classification: HOT (was WARM)
+
+  Timing (adjusted):  40/40 (was 30/40)
+    Forced replacement:  15/15  (vendor shutdown — emergency
+                                 procurement, hard deadline)
+    Hiring signal:       15/15  (posted 2 ops roles in 2 weeks)
+    Tech investment:     10/10  (must replace system within 30 days)
+
+  Fit:                 32/40 (unchanged)
+  Engagement:          10/20 (unchanged)
+```
+
+Al-Safa jumps from 72 to 82. The classification changes from WARM to HOT. Farah's instinct was right -- and now the model captures why.
+
+The scoring model is only as good as the weights you configure. Every time you find a gap between the model's output and your best rep's judgment, you have found a calibration opportunity. Fix the weight, re-score, and the model gets smarter for every future prospect.
 
 :::tip Miscalibration Is Feedback, Not Failure
-When you find a miscalibrated score, you have found a gap in your ICP configuration. The agent did its job correctly -- it scored against the rules you gave it. The problem is in the rules. Every miscalibration you diagnose and fix makes the scoring model more accurate for every future prospect.
+When a score contradicts what your best rep knows, the agent has not failed. It scored against the rules you gave it. The rules were incomplete. Every miscalibration you diagnose and fix makes the scoring model more accurate for every future prospect.
 :::
 
-## Score Decay: When Data Ages Out
+## Routing Rules
 
-Scores are not permanent. They are snapshots of a moment. Without new signals, scores decay -- especially Timing, which is the most time-sensitive dimension.
+Scoring without routing is a ranking exercise. Routing turns scores into action by defining who gets which leads, what response time applies, and what the expected next step is.
 
-### The Same Prospect, Three Months Later
+| Classification | Owner                    | SLA                       | Action                                                   |
+| -------------- | ------------------------ | ------------------------- | -------------------------------------------------------- |
+| **HOT**        | Top rep (Farah or equiv) | Contact within 24h        | Personalised outreach referencing specific timing signal |
+| **WARM**       | Any rep on rotation      | First touch within 3 days | Nurture sequence with ICP-specific content               |
+| **CULTIVATE**  | Marketing automation     | Quarterly review          | Add to newsletter; invite to events; monitor for timing  |
+| **NOT YET**    | No owner assigned        | Re-score quarterly        | Disqualify or defer; do not invest rep time              |
 
-Farhan re-scores NexaFlow-prospect-001 three months after the initial assessment. No new interactions have occurred. No new signals have entered the system.
+Three decisions make routing work:
 
-| Dimension      | Original Score | Score After 3 Months | Change  | Reason                                      |
-| -------------- | -------------- | -------------------- | ------- | ------------------------------------------- |
-| **Fit**        | 33/40          | 33/40                | 0       | Company attributes have not changed          |
-| **Timing**     | 40/40          | 12/40                | -28     | Funding news is now 4 months old; hiring signals stale; CRM project assumed complete |
-| **Engagement** | 8/20           | 8/20                 | 0       | No new interactions to add or subtract       |
-| **Total**      | 81/100         | 53/100               | -28     |                                              |
-| **Classification** | HOT        | CULTIVATE            | Dropped | Below 55 threshold; Timing below 25         |
+1. **HOT prospects go to your best rep.** Not the rep who has capacity. Not the rep whose territory includes that geography. The rep most likely to close. Farah does not get HOT leads because she has free time -- she gets them because she converts at 340% of quota. Distributing HOT leads equally across the team sounds fair but costs revenue.
 
-The prospect has not changed. They are the same company, the same size, the same industry. But the data has aged. The Series B announcement that made Timing perfect is now four months old -- the funding has been deployed, the hiring decisions have been made, the CRM implementation is probably complete. The window may have closed.
+2. **WARM prospects get a defined sequence, not ad hoc follow-up.** "Nurture" is not a strategy. Nurture with what content? Over what timeline? With what exit conditions? Lesson 6 builds the full multi-touch sequence. For now, the routing rule establishes that WARM prospects enter a structured path, not a rep's personal follow-up style.
 
-This is **score decay**: the natural erosion of Timing and Engagement signals when no new data enters the system. Fit is the most stable dimension because company attributes (industry, size, tech stack) change slowly. Timing is the most volatile because market signals have a short half-life.
+3. **NOT YET prospects get zero rep time.** This is the hardest rule to enforce. Reps want to "keep the relationship warm" with prospects that scored 28. That is a misallocation. The quarterly re-score catches any NOT YET prospect whose circumstances change. Until then, no outreach, no calls, no "just checking in" emails.
 
-### Decay Rates by Dimension
+## What You Built
 
-| Dimension      | Half-Life     | Why                                                    |
-| -------------- | ------------- | ------------------------------------------------------ |
-| **Fit**        | 6-12 months   | Companies change industry, size, and stack slowly      |
-| **Timing**     | 30-90 days    | Funding rounds, hiring signals, and tech investments have short windows |
-| **Engagement** | 60-120 days   | A website visit from 4 months ago means little today   |
+- Three-dimension scoring model configured with Fit (0-40) + Timing (0-40) + Engagement (0-20)
+- 5 prospects scored and ranked by total with full dimension breakdowns
+- Scoring calibration validated against expert judgment (Al-Safa adjustment)
+- Routing rules defined for each score tier with owner, SLA, and action
 
-Half-life means the score loses roughly half its value over that period. A Timing score of 40 decays to approximately 20 after 60 days without new signals.
+## Flashcards Study Aid
 
-## Resolving Conflicting Data with CRM Enrichment
+Test your understanding of the key concepts from this lesson.
 
-Score decay is one problem. **Conflicting data** is another.
-
-Farhan runs the `crm-enrichment` skill on NexaFlow-prospect-001 to update stale records. The skill pulls from multiple sources and discovers a conflict:
-
-```
-crm-enrichment NexaFlow-prospect-001
-```
-
-**Output:**
-
-```
-CRM ENRICHMENT REPORT — NexaFlow-prospect-001
-
-UPDATED FIELDS:
-  Employee count:
-    LinkedIn:     520 employees
-    Crunchbase:   180 employees
-    Company website: "200+ team members"
-    CRM (current):   120 employees
-    CONFLICT DETECTED — sources disagree by >2x
-
-  Revenue estimate:
-    Crunchbase:   $12M ARR
-    PitchBook:    $18M ARR (post-Series B projection)
-    CONFLICT DETECTED — sources disagree by >30%
-
-  Office locations:
-    LinkedIn:     Karachi, Dubai, London
-    Company site: Karachi, Dubai
-    MINOR DISCREPANCY — LinkedIn may include remote workers
-
-RECOMMENDED RESOLUTION:
-  Employee count: Use LinkedIn (520) — most frequently
-    updated by employees themselves. Crunchbase (180)
-    likely reflects pre-Series B headcount. Company
-    website ("200+") is a marketing approximation.
-  Revenue: Flag for manual verification. ARR estimates
-    from third-party sources vary significantly. Request
-    from prospect during qualification call.
-  Offices: Use company website (Karachi, Dubai) as
-    authoritative. Note London presence as unconfirmed.
-
-SCORING IMPACT:
-  If employee count updated to 520:
-    Company size score changes from 10/10 to 10/10
-    (still within 50-500+ ICP range)
-  If revenue updated to $12-18M:
-    No scoring impact (revenue not a direct
-    scoring dimension in current ICP)
-```
-
-### Why Sources Conflict
-
-CRM data conflicts are normal, not exceptional. Every source has a different update frequency and a different incentive:
-
-| Source          | Update Frequency | Incentive                  | Common Problem                        |
-| --------------- | ---------------- | -------------------------- | ------------------------------------- |
-| LinkedIn        | Real-time        | Employees update profiles  | Includes contractors and remote staff |
-| Crunchbase      | Quarterly        | Investors update rounds    | Lags behind rapid growth              |
-| Company website | Irregular        | Marketing team updates     | Rounded numbers, aspirational claims  |
-| Your CRM        | When reps enter  | Reps enter what they learn | Stale the moment it is entered        |
-
-The `crm-enrichment` skill does not pick a source automatically. It flags the conflict, shows you the sources, and recommends a resolution with reasoning. You make the call. For employee counts, LinkedIn is usually the most current because employees update their own profiles. For revenue, no third-party source is reliable -- you verify during the qualification call.
-
-### The Enrichment-Rescore Cycle
-
-After enrichment, you re-score. This is the discipline that keeps your pipeline data alive:
-
-1. **Enrich** -- Run `crm-enrichment` on prospects with stale data (last enrichment > 30 days)
-2. **Resolve conflicts** -- Accept the recommended resolution or override with your judgment
-3. **Re-score** -- Run `/score-lead` with the updated data
-4. **Reclassify** -- Update the prospect's classification (HOT, WARM, CULTIVATE, NOT YET)
-5. **Act** -- Adjust your outreach based on the new classification
-
-This cycle should run on a cadence:
-
-| Classification | Re-scoring Cadence | Why                                                          |
-| -------------- | ------------------ | ------------------------------------------------------------ |
-| **HOT**        | Weekly             | Active opportunities; Timing signals change fast             |
-| **WARM**       | Bi-weekly          | Nurture targets; need to catch Timing upgrades               |
-| **CULTIVATE**  | Monthly            | Long-term pipeline; monitor for status changes               |
-| **NOT YET**    | Quarterly          | Low priority; check if circumstances have changed            |
-
-## Failure Analysis: Five Prospects, Five Verdicts
-
-Here are five scored prospects. Your job is to determine which scores you trust and which need human override.
-
-### Prospect A: Perfect Fit, Zero Timing
-
-| Dimension  | Score  | Details                                                    |
-| ---------- | ------ | ---------------------------------------------------------- |
-| Fit        | 38/40  | Enterprise SaaS, 300 employees, perfect tech stack         |
-| Timing     | 2/40   | No funding, no hiring, announced 15% layoffs last quarter  |
-| Engagement | 5/20   | Attended one webinar 6 months ago                          |
-| **Total**  | 45/100 | Classification: CULTIVATE                                  |
-
-**Verdict:** Score is correct. This is the right company at the wrong moment. Monitor quarterly. When they stabilise and start hiring again, Timing will recover and the classification will upgrade.
-
-### Prospect B: Wrong Company, Buying Now
-
-| Dimension  | Score  | Details                                                    |
-| ---------- | ------ | ---------------------------------------------------------- |
-| Fit        | 15/40  | Manufacturing sector (outside ICP), 2000 employees (too large) |
-| Timing     | 35/40  | $50M digital transformation budget announced, RFP issued   |
-| Engagement | 12/20  | Downloaded 3 whitepapers, attended demo                    |
-| **Total**  | 62/100 | Classification: WARM                                       |
-
-**Verdict:** Score is correct, but the action is wrong. WARM classification suggests a nurture sequence. In reality, this prospect is outside your ICP and spending the rep's time on a low-Fit account takes them away from higher-probability opportunities. Override: mark as NOT YET unless your team explicitly decides to pursue out-of-ICP enterprise deals.
-
-### Prospect C: Conflicting Sources
-
-| Dimension  | Score  | Details                                                    |
-| ---------- | ------ | ---------------------------------------------------------- |
-| Fit        | 28/40  | LinkedIn says 400 employees; CRM says 45; Crunchbase says 90 |
-| Timing     | 25/40  | Moderate signals; new product launch announced             |
-| Engagement | 10/20  | Regular newsletter reader, visited pricing page twice      |
-| **Total**  | 63/100 | Classification: WARM                                       |
-
-**Verdict:** Score is unreliable. The employee count conflict (400 vs 45 vs 90) means the Fit score could be anywhere from 15/40 to 35/40. Run `crm-enrichment` to resolve the conflict before acting on this score.
-
-### Prospect D: Agent Says HOT, You Say No
-
-| Dimension  | Score  | Details                                                    |
-| ---------- | ------ | ---------------------------------------------------------- |
-| Fit        | 36/40  | Strong ICP match across all criteria                       |
-| Timing     | 30/40  | Recent funding, hiring signals                             |
-| Engagement | 15/20  | Downloaded case study, attended 2 webinars, replied to email |
-| **Total**  | 81/100 | Classification: HOT                                        |
-
-But you know this company. They evaluate every vendor in the market and never buy. They have been in "evaluation mode" for two years. Three of your competitors have told you the same thing.
-
-**Verdict:** Miscalibrated. The scoring model has no way to capture "chronic evaluator" behaviour because that signal does not exist in the ICP or in any data source the agent can access. This is domain knowledge that lives in your team's experience. Override the classification from HOT to CULTIVATE. Consider adding a CRM field for "evaluation history" so this institutional knowledge persists.
-
-### Prospect E: Everything Aligns
-
-| Dimension  | Score  | Details                                                    |
-| ---------- | ------ | ---------------------------------------------------------- |
-| Fit        | 35/40  | SaaS B2B, 200 employees, 4/4 tech stack match             |
-| Timing     | 38/40  | Series A closed 3 weeks ago, hired VP Sales last month     |
-| Engagement | 18/20  | 5 website visits, downloaded ROI calculator, booked demo   |
-| **Total**  | 91/100 | Classification: HOT                                        |
-
-**Verdict:** Score is trustworthy. All three dimensions are strong. Timing signals are fresh (weeks, not months). Engagement shows deliberate buying behaviour (ROI calculator, demo booking). This is the prospect your best rep should call today.
-
-**Pattern recognition across the five:** Trust the score when all three dimensions tell a consistent story. Question the score when any single dimension seems inflated, when data sources conflict, or when your domain knowledge contradicts the agent's output. The agent scores against the data and rules it has. You score against everything you know.
-
-## Hands-On: Score Your Own Pipeline
-
-Take five real prospects your team is currently working. For each one:
-
-**Step 1: Write your gut score first.**
-
-Before running the agent, estimate each prospect's Fit, Timing, and Engagement from your own knowledge. Write the numbers down. Do not skip this step -- it establishes your baseline for comparison.
-
-| Prospect | Your Gut: Fit (/40) | Your Gut: Timing (/40) | Your Gut: Engagement (/20) |
-| -------- | -------------------- | ---------------------- | -------------------------- |
-| 1        |                      |                        |                            |
-| 2        |                      |                        |                            |
-| 3        |                      |                        |                            |
-| 4        |                      |                        |                            |
-| 5        |                      |                        |                            |
-
-**Step 2: Run `/score-lead` on all five.**
-
-Compare the agent's scores to your gut scores. Where they agree, the scoring model is aligned with your market knowledge. Where they disagree, one of two things is true: either you have information the agent lacks (domain knowledge override), or the agent has data you missed (agent-assisted discovery).
-
-**Step 3: For every disagreement, decide who is right.**
-
-- If you are right and the agent is wrong, trace the miscalibration to the ICP section that needs correction.
-- If the agent is right and you were wrong, ask what data the agent used that you did not consider. This is the agent teaching you something about your own pipeline.
-
-**Step 4: Establish your re-scoring cadence.**
-
-Based on the classifications:
-
-| Prospect | Classification | Re-Score Cadence | Next Re-Score Date |
-| -------- | -------------- | ---------------- | ------------------ |
-| 1        |                |                  |                    |
-| 2        |                |                  |                    |
-| 3        |                |                  |                    |
-| 4        |                |                  |                    |
-| 5        |                |                  |                    |
-
-**Step 5: Run `crm-enrichment` on any prospect with stale data.**
-
-If the last enrichment was more than 30 days ago, refresh the data. Resolve any conflicts the skill surfaces. Re-score after enrichment.
+<Flashcards />
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant.
-
-### Prompt 1: Diagnose a Miscalibrated Score
+### Prompt 1 (Reproduce)
 
 ```
-I have a lead scoring model with three dimensions:
-Fit (40 points), Timing (40 points), Engagement (20 points).
-
-A prospect scored 78/100 — classified as HOT:
-  Fit: 32/40 (B2B SaaS, 25 employees, perfect tech stack)
-  Timing: 38/40 (seed funding 2 months ago, hiring 4 roles)
-  Engagement: 8/20 (visited website twice)
-
-My ICP says ideal company size is 50-500 employees.
-This prospect has 25 employees.
-
-Walk me through the diagnosis:
-1. Which dimension is miscalibrated and why?
-2. What ICP section caused the miscalibration?
-3. What specific change to the ICP would fix this?
-4. After the fix, what would the new score approximately be?
-5. Would the classification change?
+Score all 5 demo prospects from NexaFlow's pipeline
+and rank by total score. Show the full dimension
+breakdown (Fit, Timing, Engagement) for the top-scoring
+prospect. Classify each as HOT, WARM, CULTIVATE,
+or NOT YET.
 ```
 
-**What you are learning:** Miscalibration diagnosis is the skill that separates operators who trust scores blindly from operators who use scores as decision inputs. By tracing a scoring error back to a specific ICP section, you build the ability to continuously improve your scoring model -- each correction makes every future score more accurate.
+**What you are learning:** The scoring model turns qualitative judgment into structured analysis. By scoring the same prospects you researched in Lesson 2, you see how ICP quality directly affects score accuracy -- a strong ICP produces scores that match your intuition; a weak ICP produces scores that surprise you. Every surprise is a calibration opportunity.
 
-### Prompt 2: Design a Re-Scoring Cadence
+### Prompt 2 (Adapt)
 
 ```
-I manage a pipeline of 200 prospects across four classifications:
-  HOT: 15 prospects
-  WARM: 45 prospects
-  CULTIVATE: 90 prospects
-  NOT YET: 50 prospects
-
-My team has capacity to re-score 30 prospects per week.
-
-Help me design a re-scoring schedule:
-1. How often should each classification be re-scored?
-2. Given my team's capacity, is this sustainable?
-3. What happens if we skip re-scoring for HOT prospects
-   for 3 weeks? Model the score decay.
-4. Which classification should I enrich (not just re-score)
-   and why?
-5. How do I handle the backlog when a CULTIVATE prospect
-   suddenly shows Timing signals?
+Take the lowest-scoring prospect from the ranking and
+identify which dimension (Fit, Timing, or Engagement)
+is dragging the score down. What would need to change
+in the real world for this prospect to move up one tier?
+Be specific — name the signal, the source, and the
+expected score impact.
 ```
 
-**What you are learning:** Re-scoring is an operational discipline, not a one-time task. By designing a cadence that matches your team's capacity to your pipeline size, you learn to treat lead scoring as a living system that requires maintenance -- the same way a CRM requires data hygiene. The capacity constraint forces you to prioritise, which is the real skill.
+**What you are learning:** Dimension analysis turns a binary "not ready" verdict into a diagnostic. A low Fit score means this is the wrong company -- no action will fix it. A low Timing score means the right company at the wrong moment -- monitor for trigger events. A low Engagement score means they do not know you exist -- marketing can fix that. The dimension that drags the score determines the response.
+
+### Prompt 3 (Apply)
+
+```
+Score a prospect from your own pipeline using the
+three-dimension model (Fit 0-40, Timing 0-40,
+Engagement 0-20). Before the agent scores, write down
+your gut estimate for each dimension. After scoring,
+compare. If the model and your gut disagree on any
+dimension, identify which one is right and why.
+```
+
+**What you are learning:** The gap between your gut score and the model's score reveals either domain knowledge the model lacks (you are right, fix the weights) or data the model found that you missed (the model is right, update your understanding). Both outcomes improve your pipeline. The exercise builds the habit of scoring BEFORE checking the agent -- which prevents anchoring bias where you unconsciously accept whatever number the agent produces.
