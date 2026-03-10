@@ -51,7 +51,7 @@ The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers def
 What remains: Intent. Verification. Outcome.
 </p>
 
-The market is converging on a complementary idea: every professional will soon have a personal AI agent — what Don Tapscott calls identic AI — that reflects their judgment and acts on their behalf.¹ The Agent Factory is the industrial architecture that makes this possible at scale.
+Intent doesn't type itself into a spec. It comes from a person — their judgment, their domain knowledge, their values. But as AI employees multiply, no professional can orchestrate them all by hand. They'll act through a personal agent that reflects their judgment and delegates on their behalf — what Don Tapscott calls identic AI.¹ The Agent Factory manufactures the workforce; identic AI is how each human commands it.
 
 </div>
 
