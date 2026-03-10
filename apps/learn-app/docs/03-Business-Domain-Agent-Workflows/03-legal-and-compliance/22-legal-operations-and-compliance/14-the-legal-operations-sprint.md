@@ -1,715 +1,524 @@
 ---
 sidebar_position: 14
-title: "Exercises and Chapter Summary"
-description: "Eight hands-on exercises building deployable legal operations artefacts, the four principles of legal AI deployment, and a quick reference for the Legal Plugin commands and resources"
+title: "The Legal Operations Sprint"
+description: "Run the complete legal operations engine end-to-end — build a negotiation playbook, review three contracts, triage NDAs, assess compliance risk, prepare a meeting brief with e-signature routing, process a DSAR, and produce the legal ops dashboard — assembling every plugin command, skill, and jurisdiction overlay from Lessons 1 through 13 into a timed capstone sprint"
 keywords:
   [
-    "legal AI exercises",
-    "negotiation playbook exercise",
+    "legal operations sprint",
+    "capstone",
+    "end-to-end legal workflow",
+    "negotiation playbook",
     "contract review sprint",
-    "NDA triage exercise",
-    "IP monitoring exercise",
-    "legal ops agent exercise",
-    "regulatory monitoring exercise",
-    "DSAR exercise",
+    "NDA triage",
+    "compliance assessment",
+    "DSAR response",
     "legal ops dashboard",
-    "legal AI deployment principles",
-    "legal plugin quick reference",
+    "four principles",
+    "Noor Technologies",
+    "PayGulf Technologies",
+    "legal AI deployment",
   ]
 chapter: 22
 lesson: 14
-duration_minutes: 30
+duration_minutes: 35
 
 # HIDDEN SKILLS METADATA
 skills:
-  - name: "Build and Validate a Negotiation Playbook Through Expert Interviews and Calibration"
+  - name: "Execute a Full Legal Operations Sprint"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Create"
-    digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can conduct the five-question expert interview, extract negotiation positions from historical contracts, draft a playbook using the template, test it against a known contract, and calibrate the GREEN/YELLOW/RED thresholds based on the gap between agent output and actual negotiation outcomes"
+    digcomp_area: "Problem Solving"
+    measurable_at_this_level: "Student can run the complete legal operations engine — playbook validation, contract review sprint, NDA triage calibration, compliance assessment, meeting prep with e-signature routing, DSAR response, and legal ops dashboard — in a single timed session, connecting every stage's output to the next"
 
-  - name: "Design and Deploy a Complete Legal Operations Agent System"
-    proficiency_level: "C1"
+  - name: "Diagnose Legal AI Output Errors Under Time Pressure"
+    proficiency_level: "B2"
     category: "Applied"
-    bloom_level: "Create"
-    digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can configure the Contract Intake Agent SKILL.md with organisation-specific contract types, SLA thresholds, communication templates, and escalation triggers, connect it via MCP to document management and communication tools, test with historical contracts, calibrate routing accuracy, and build a tracking dashboard with defined KPIs"
-
-  - name: "Articulate the Four Principles of Legal AI Deployment"
-    proficiency_level: "C1"
-    category: "Conceptual"
     bloom_level: "Evaluate"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can state all four principles, explain the business rationale for each, and apply them as design constraints when evaluating any proposed legal AI workflow -- identifying which principle is being violated when a proposed deployment is architecturally unsound"
+    measurable_at_this_level: "Student can identify miscalibrated thresholds, missing jurisdiction overlays, context loss between pipeline stages, and hallucinated regulatory references during live sprint execution — not in post-hoc review but while running the exercises"
+
+  - name: "Adapt the Legal Operations Engine to a New Organisation"
+    proficiency_level: "B2"
+    category: "Applied"
+    bloom_level: "Create"
+    digcomp_area: "Problem Solving"
+    measurable_at_this_level: "Student can reconfigure the legal operations engine for a different organisation, identifying which components transfer directly, which need playbook recalibration, and which require jurisdiction-specific overlay changes"
 
 learning_objectives:
-  - objective: "Complete hands-on exercises that produce deployable legal operations artefacts including a negotiation playbook, NDA triage system, IP monitoring workflow, regulatory monitoring configuration, DSAR response process, and legal ops dashboard"
+  - objective: "Complete the full legal operations sprint — playbook validation through dashboard production — producing connected outputs at every stage"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student produces at least three of the eight exercise deliverables: a validated negotiation playbook, a tested NDA triage configuration, and a legal ops dashboard specification with KPIs and ROI analysis"
+    assessment_method: "Student completes the sprint and produces: a validated playbook, 3 reviewed contracts, a calibrated NDA triage system, a compliance assessment with risk matrix, a meeting brief with e-signature routing, a DSAR acknowledgement, and a legal ops dashboard — all connected through the Noor Technologies pipeline"
 
-  - objective: "State and apply the four principles of legal AI deployment as design constraints for any legal operations workflow"
-    proficiency_level: "C1"
+  - objective: "Identify and correct at least 3 legal AI output errors during live sprint execution"
+    proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student can recite the four principles and, given a hypothetical legal AI deployment scenario, identify which principles are being followed and which are being violated, with specific recommendations for correction"
+    assessment_method: "Student flags errors during sprint execution (not after), traces each to root cause (playbook misconfiguration, missing overlay, or context loss), and corrects the issue before proceeding"
+
+  - objective: "Evaluate the legal operations engine's transferability by identifying which components are universal and which are organisation-specific"
+    proficiency_level: "B2"
+    bloom_level: "Evaluate"
+    assessment_method: "Student can articulate which commands, skills, and configurations transfer to a new organisation and which require reconfiguration, with specific examples"
 
 cognitive_load:
-  new_concepts: 4
+  new_concepts: 2
   concepts_list:
-    - "Expert interview methodology for playbook construction"
-    - "Calibration loop: testing agent output against known outcomes"
-    - "Process-level agents vs. document-level tools as distinct automation strategies"
-    - "The four principles of legal AI deployment as an architectural framework"
-  assessment: "4 new concepts at B2-C1 level -- well within the cognitive limit. The exercises apply concepts taught throughout the chapter rather than introducing new theory. The four principles synthesise prior learning into a memorable framework."
+    - "Sprint execution under time pressure (assembling known components against the clock)"
+    - "Legal operations engine transferability (what is universal vs organisation-specific)"
+  assessment: "2 new concepts only. This is the capstone — every other concept was taught in L01-L13. Low new concept count is intentional. The challenge is synthesis and execution speed, not new learning."
 
 differentiation:
-  extension_for_advanced: "Complete all eight exercises end-to-end, producing a comprehensive Legal Operations Deployment Report that documents: the negotiation playbook, NDA triage configuration, IP monitoring workflow, regulatory monitoring setup, DSAR process, contract intake agent, and dashboard specification -- with measured time savings and ROI calculations based on your actual legal department data."
-  remedial_for_struggling: "Focus on Exercise 1 (Build Your Negotiation Playbook) and Exercise 3 (NDA Triage System). These two exercises establish the foundational configuration that all other exercises build upon. If you can produce a validated playbook and a working NDA triage system, you have the core skills for Legal Plugin deployment."
+  extension_for_advanced: "Complete ALL 8 exercises including the full pipeline capstone. Then run the sprint for your own organisation with real contracts, real NDAs, and real compliance requirements. Document what you would change about the legal operations engine for your jurisdiction and practice area."
+  remedial_for_struggling: "Complete Exercises 1, 2, 3, and 7. These four cover the core loop: validate your playbook, review contracts, triage NDAs, and produce a dashboard. If you can complete these four, you have demonstrated the essential legal operations workflow."
 ---
 
-# Exercises and Chapter Summary
+# The Legal Operations Sprint
 
-The following exercises are designed to be completed in Cowork with the Legal Plugin installed. Each produces a deployable output -- not a demonstration but a real artefact you can use in your organisation immediately.
+Thirteen lessons. Playbook configuration, contract review, NDA triage, compliance assessment, IP monitoring, litigation hold, meeting prep, vendor management, process agents, DSAR workflows, employment law, and cross-border practice. Every piece of the legal operations engine is built. This sprint proves it works.
 
-Install both plugin layers before starting (see Lesson 2 for full installation walkthrough):
+No new concepts in this lesson. Every command, every skill, every jurisdiction overlay appeared in Lessons 1 through 13. What changes here is the mode of operation. In prior lessons you ran individual components and evaluated their output in isolation. In this sprint you assemble the complete engine and run it against Noor Technologies' full legal operations queue — contracts, NDAs, compliance questions, meeting prep, data subject requests, and the dashboard that ties it all together. The clock is running. Errors compound across stages. Your job is to execute, evaluate, and correct in real time.
 
-**Cowork:** Sidebar → **Customize** → **Browse plugins** → install `knowledge-work-plugins/legal` (Layer 1), then **Personal** → **+** → **Add marketplace from GitHub** → `https://github.com/panaversity/agentfactory-business-plugins` → install **legal-ops** (Layer 2).
+:::tip Minimum Viable Capstone
+If you have 30 minutes instead of 45, complete Exercises 1, 2, 3, and 7. These four cover the core loop: validate your playbook, review contracts, triage NDAs, and produce a dashboard. The remaining exercises deepen specific areas but are not required to demonstrate the end-to-end workflow.
+:::
 
-**Claude Code:**
+---
 
-```bash
-claude plugin install legal@knowledge-work-plugins
-/plugin marketplace add panaversity/agentfactory-business-plugins
-/plugin install legal-ops@agentfactory-business
+## Exercise 1: Validate Your Negotiation Playbook
+
+You built Noor Technologies' playbook in Lesson 2 and refined it through twelve subsequent lessons. Calibration drifts. Validate it now before using it as the foundation for every exercise that follows.
+
+**Your task:**
+
+Pull three recent contracts that Noor Technologies has already negotiated and executed (use the demo contracts from earlier lessons, or generate three executed contracts now). Run `/review-contract` against each, providing the playbook context.
+
+```
+Score these 3 executed contracts against our current playbook:
+1. TextileCloud SaaS MSA — UK vendor, executed 4 months ago,
+   GBP 48,000 annual, limitation of liability capped at 3 months' fees
+2. Karachi Logistics NDA — mutual NDA, 3-year term, Pakistani law
+3. Gulf Payments API Integration — DIFC law, data processing
+   involving customer payment data, 18-month term
+
+All 3 were negotiated successfully. If any review flags RED items
+that were actually accepted during negotiation, the playbook
+thresholds have drifted — identify which dimension is miscalibrated.
 ```
 
+**What to look for:** Every executed contract should produce a review consistent with the actual negotiation outcome. If the playbook flags the TextileCloud limitation of liability as RED when your team accepted it as reasonable for the deal size — your liability threshold is too aggressive for mid-market SaaS vendors. That is playbook miscalibration: the configuration penalises a position that your organisation actually accepts in practice.
+
+**If calibration has drifted:** Edit the offending section in `legal.local.md`. Re-run. Confirm the three executed contracts now produce reviews that match your actual risk tolerance without loosening criteria so broadly that genuinely problematic contracts also pass.
+
+**Deliverable:** A validated `legal.local.md` playbook, confirmed against real negotiation outcomes.
+
 ---
 
-## Exercise 1: Build Your Negotiation Playbook
+## Exercise 2: Contract Review Sprint
 
-**Type:** Cowork Skill Configuration
-**Time:** 60-90 minutes
-**Prerequisite:** Legal Plugin installed; access to your three most recently negotiated vendor agreements (executed copies with sensitive pricing redacted)
-**What you need:** Cowork with Legal Plugin installed, the `legal.local.md.template` from the skills library, 30 minutes with your General Counsel or most senior commercial attorney, three executed vendor agreements (redact sensitive pricing before uploading)
+Three contracts arrived this morning. Ayesha needs them reviewed by end of business. Fifteen minutes each.
 
-**The negotiation playbook is the single most important configuration decision in your Legal Plugin deployment.** Without it, every review is generic. With it, every review reflects your organisation's actual risk tolerance and negotiation history.
-
-**Step 1 -- Conduct the expert interview.** Before opening Cowork, conduct a 30-minute structured interview with your General Counsel or most senior commercial attorney. Use these questions exactly:
-
-1. In a typical vendor agreement where we are the customer, what is our standard position on limitation of liability? What is the absolute minimum you would accept before walking away?
-2. Which IP clauses are truly non-negotiable -- the ones where you would decline the deal rather than accept the counterparty's position?
-3. In the last 12 months, which clause caused the most negotiation difficulty? What was the eventual outcome?
-4. Which contract types do you personally review? Which do you delegate to junior attorneys? Which proceed without attorney review?
-5. What is one thing that looks acceptable on paper but your instinct always flags as a problem in practice?
-
-Record the answers verbatim. These are the raw material of your playbook.
-
-**Step 2 -- Document extraction.** For each of your three most recently negotiated vendor agreements:
-
-- What was the starting position on the three most-negotiated clauses?
-- What was the final agreed position?
-- Was the compromise one your organisation was comfortable with, or one you accepted under time pressure?
-
-**Step 3 -- Draft your playbook.** Using the `legal.local.md` template in Part One, draft your playbook. Cover at minimum: limitation of liability, IP ownership, indemnification, data protection, termination, and governing law.
-
-_For UAE-based organisations:_ Pay particular attention to the governing law section. Specify whether your standard is DIFC law, ADGM law, or mainland UAE law, and document when each is appropriate. Include the Arabic-language prevailing-version risk for mainland contracts. Reference UAE Civil Code Art. 390 (court power to reduce liquidated damages) in your limitation of liability notes.
-
-**Step 4 -- Test and calibrate.** Open Cowork with the Legal Plugin and run:
+**Contract A — SaaS Vendor Agreement (Noor is the customer):**
 
 ```
 /review-contract
-[Upload: one of the three executed contracts from Step 2 —
- use an executed contract so there is no risk of accidental action]
-
-Context: provide your position, urgency level, and any known
-issues from the actual negotiation
+Context: Cloud-based supply chain analytics platform. Annual value:
+PKR 8.5M (~$30K). Vendor is a UK company. Noor's standard position:
+limitation of liability at 12 months' fees, mutual indemnification,
+data processed in EU/UK only. Business unit wants to sign by Friday.
 ```
 
-Compare the agent's output against your knowledge of the actual negotiation:
+Evaluate: What is the overall risk rating? How many RED items? What is the single most important redline given the Friday deadline?
 
-- Did the agent flag the clauses that actually required negotiation?
-- Were any significant issues missed?
-- Were the GREEN/YELLOW/RED classifications consistent with your actual risk tolerance?
-
-**Step 5 -- Refine and re-test.** Update your playbook based on the gaps. Re-run the review. Document what changed and why.
-
-**Deliverable:** A validated `legal.local.md` negotiation playbook, ready to deploy as your organisation's Legal Plugin configuration.
-
-**The key learning:** The playbook encodes professional judgment about risk tolerance -- calibrating it against real negotiation outcomes teaches you the difference between theoretical positions and practical ones.
-
----
-
-## Exercise 2: Contract Review Sprint -- Three Contracts in One Hour
-
-**Type:** Applied Practice
-**Time:** 60 minutes (20 minutes per contract)
-**Plugin commands:** `/review-contract`
-**What you need:** Cowork with Legal Plugin and playbook configured (Exercise 1), three contracts to review (real or generated per instructions below), a timer
-
-You are the Legal Operations Manager at a 150-person technology company. Three contracts arrived this morning, all requesting review by end of business.
-
----
-
-**Contract A -- SaaS Vendor Agreement (you are the customer)**
-
-If you do not have a real SaaS agreement, generate a training document:
+**Contract B — Consulting Services Agreement:**
 
 ```
-/brief topic:"generate a realistic vendor-favourable SaaS MSA
-        for training purposes"
-      clauses:"limitation of liability (3 months' fees cap),
-               IP ownership (vendor retains all IP in platform
-               and customisations), data processing, termination
-               for convenience (60 days notice for vendor;
-               immediate for cause only for customer),
-               governing law: vendor's state"
-      note: "label this as a training document"
+/review-contract
+Context: Engaging a Dubai-based consultant for a 6-month ERP
+implementation advisory project. Fixed fee: AED 180,000 (~$49K).
+Consultant will access Noor's product roadmap and customer data.
+Governing law: DIFC.
 ```
 
-Then run `/review-contract` against it.
+Evaluate: What IP ownership issues does the agent flag? The limitation of liability cap is AED 18,000 (10% of fees) — how does the agent classify this?
 
-Context to provide: We are the customer. Cloud-based project management software. Annual value: GBP 48,000. Vendor evaluation in progress for 3 months. Business unit wants to sign by Friday.
+**Contract C — Partnership Agreement:**
 
-Answer:
+```
+/review-contract
+Context: Co-marketing and referral agreement with a complementary
+logistics software company. No cash exchange — mutual referrals
+only. Term: 2 years. Governing law: Pakistani law.
+```
 
-1. What is the overall risk rating?
-2. How many RED items are identified? Are they genuine deal issues?
-3. What is the single most important redline given the Friday deadline?
-4. Recommend: approve / negotiate / escalate / decline -- and draft the one-paragraph rationale you would send to the business unit.
+Evaluate: The contract has no limitation of liability clause at all. Using the agent's guidance, draft the clause you would propose inserting.
 
----
+**Sprint debrief:** Which review was most valuable? Which produced the most useful redlines? Which would have benefited from additional playbook configuration?
 
-**Contract B -- Consulting Services Agreement (you are the customer)**
-
-Context to provide: Engaging an external consultant for a 6-month product strategy project. Fixed fee: GBP 95,000. The consultant will have access to your product roadmap and customer data during the engagement.
-
-Answer:
-
-1. What IP ownership issues does the agent flag? Are they material given the nature of the work product?
-2. The agent flags a RED on the data protection clause. What specifically is the issue and what is the recommended redline?
-3. The limitation of liability cap is set at GBP 10,000 -- approximately 10% of the total fee. How does the agent classify this and what does it recommend?
-4. Draft a negotiation strategy email to the consultant's representative, using the agent's redline suggestions for the top 3 YELLOW/RED items.
+**Deliverable:** 3 reviewed contracts with attorney-ready summaries and priority negotiation order.
 
 ---
 
-**Contract C -- Co-Marketing Partnership Agreement**
+## Exercise 3: NDA Triage System
 
-Context: Co-marketing and referral agreement with a complementary software company. We refer customers to them; they refer customers to us. No cash -- value exchange only. Term: 2 years.
+Noor Technologies receives approximately 25 NDA requests per month. Currently all go to Ayesha, taking 30-45 minutes each. Your task: configure and test a triage system that routes standard NDAs for auto-approval while escalating non-standard ones.
 
-Answer:
+**Step 1 — Configure your triage criteria** in `legal.local.md` using the template from Lesson 5. Define Tier 1/2/3 thresholds.
 
-1. Partnerships create mutual obligations and shared risk. Which clauses does the agent flag as most important for this structure?
-2. The contract contains a residuals clause: "Nothing herein shall restrict either party's use of information retained in the unaided memories of its personnel." Is this a RED item? Why? What position would you propose?
-3. There is no limitation of liability clause at all. The agent flags this as a RED. Using the agent's guidance, draft the clause you would propose inserting.
-4. Write a one-paragraph executive summary of the contract risk profile for your CFO -- using the agent's output as the raw material but written in plain English.
+**Step 2 — Run `/triage-nda` on 5 test NDAs:**
 
-**Sprint debrief:** Which of the three reviews was most valuable? Which produced the most useful redlines? Which would have benefited most from additional playbook configuration?
-
-**The key learning:** Speed does not mean superficiality -- the three-tier classification system forces consistent risk assessment even under time pressure, teaching you to prioritise the material issues over the comprehensive ones.
-
----
-
-## Exercise 3: NDA Triage System -- Build, Test, Deploy
-
-**Type:** Workflow Configuration
-**Time:** 45 minutes
-**Plugin commands:** `/triage-nda`
-**What you need:** Cowork with Legal Plugin and playbook configured, your organisation's standard NDA template (or a sample mutual NDA), four test NDAs (instructions for creating them below)
-
-Your organisation receives approximately 25 NDA requests per month. Currently all go to the same junior attorney, taking 30-45 minutes each -- approximately 12+ hours of attorney time per month. Your task: design and test a triage system that reduces attorney NDA time to 3-4 hours per month.
-
-**Step 1 -- Configure your NDA triage playbook.** Add the NDA-specific section to `legal.local.md` using the template in Part Two. Define your Tier 1/2/3 criteria.
-
-**Step 2 -- Build a four-NDA test set:**
-
-- NDA A: Your own standard form, unmodified
-- NDA B: Your standard form with the counterparty's jurisdiction as governing law
-- NDA C: Your standard form + residuals clause + 5-year term (vs. your standard 3)
-- NDA D: Unilateral NDA (disclosing only, counterparty is discloser) when you expected mutual; broad confidential information definition; no publicly-available-information carve-out; perpetual survival
-
-For each: run `/triage-nda`, provide context, record the classification.
+```
+Triage these 5 NDAs against Noor Technologies' playbook:
+1. Noor's own standard mutual NDA — unmodified
+2. Noor's standard NDA with counterparty's governing law (English)
+3. Noor's standard NDA + residuals clause + 5-year term (vs standard 3)
+4. Unilateral NDA (counterparty is sole discloser) with perpetual
+   survival and no public-information carve-out
+5. Standard mutual NDA from a DIFC-registered counterparty with
+   DIFC governing law
+```
 
 **Expected results:**
 
-- NDA A: Tier 1 (Standard Approval)
-- NDA B: Tier 2 (Counsel Review)
-- NDA C: Tier 2 or Tier 3 depending on residuals clause configuration
-- NDA D: Tier 3 (Full Review -- multiple RED items)
+| NDA | Expected Tier           | Rationale                                  |
+| --- | ----------------------- | ------------------------------------------ |
+| 1   | Tier 1 (Auto-approve)   | Standard form, no deviations               |
+| 2   | Tier 2 (Counsel review) | Governing law deviation                    |
+| 3   | Tier 2 or 3             | Residuals clause + extended term           |
+| 4   | Tier 3 (Full review)    | Multiple RED items                         |
+| 5   | Tier 1 or 2             | Standard mutual but different jurisdiction |
 
-**Step 3 -- If results diverge from expected:** Update the playbook and re-run. Document why the initial configuration missed the expected result -- was it threshold misconfiguration, wrong logic, or document misclassification?
+**Calibration target:** 60% Tier 1, 25% Tier 2, 15% Tier 3. If your results diverge, update the playbook thresholds and re-run.
 
-**Step 4 -- Draft three routing email templates:**
-
-- Tier 1 to business unit: approved, here is the execution process
-- Tier 2 to reviewing attorney: here is the NDA, here are the flagged deviations, here is the deadline
-- Tier 3 to General Counsel: here are the RED items, here is the urgency, here is my recommendation
-
-**Deliverable:** Tested NDA triage configuration + three routing templates + calculation showing reduction from 12+ attorney hours/month to approximately 3-4 hours.
-
-**The key learning:** Triage is about matching attention to risk -- configuring the thresholds teaches you which deviations actually matter versus which ones merely look different from your standard.
+**Deliverable:** Calibrated NDA triage configuration with documented threshold rationale.
 
 ---
 
-## Exercise 4: IP Monitoring -- Competitor Patent Watch
+## Exercise 4: Compliance Assessment and Risk Matrix
 
-**Type:** Applied Research
-**Time:** 45 minutes
-**Plugin commands:** `/brief` with web search MCP enabled
-**What you need:** Cowork with Legal Plugin and web search MCP enabled, the names of 2 key competitors in your technology space, a description of your core technology in 2-3 sentences
-
-You are in-house counsel for a company that has developed a proprietary AI-based document analysis system. Your legal team has asked you to establish a patent monitoring programme for two key competitors and to assess freedom-to-operate risk before launching your next product feature.
-
-_For Pakistan-based AI companies:_ This exercise is particularly relevant given Pakistan's developing patent enforcement landscape. While patent protection is available under the Patents Ordinance 2000, enforcement mechanisms are still maturing. Consider filing in the US and EU for stronger enforcement while also filing at IPO Pakistan for domestic protection. The GCC Patent Office provides regional coverage across Gulf states -- essential if you are targeting the Gulf market.
-
-**Step 1 -- Landscape analysis:**
+Noor Technologies is planning to expand its ERP platform into Saudi Arabia. Before entering the market, Ayesha needs a compliance assessment.
 
 ```
-/brief topic:"patent landscape analysis"
-      technology:"AI document analysis, natural language processing,
-                  contract review automation, clause extraction"
-      key-competitors:"[Competitor 1], [Competitor 2]"
-      scope:"patents filed or granted 2021-2026"
-      jurisdictions:"US (USPTO), EU (EPO), UK (UKIPO)"
-      output:"landscape summary with freedom-to-operate flags"
+/compliance-check
+Business initiative: Expanding SaaS ERP platform to Saudi Arabia
+Company: Noor Technologies (Pakistan-based, existing UAE/DIFC ops)
+Areas to assess:
+- PDPL (Saudi Personal Data Protection Law) — data localisation
+- SAMA outsourcing rules (if serving financial services clients)
+- Commercial registration and licensing requirements
+- Employment law for local staff (Saudization/Nitaqat)
 ```
 
-Analyse the output: Who are the most active filers? Are there patents with broad claim language that may cover your planned feature? What white spaces exist?
+From the output, build the risk matrix:
 
-**Step 2 -- Set up weekly competitor monitoring:**
+| Risk | Severity (1-5) | Likelihood (1-5) | Score | Priority Action |
+| ---- | -------------- | ---------------- | ----- | --------------- |
+|      |                |                  |       |                 |
 
-```
-/brief topic:"patent monitoring brief"
-      monitor-assignees:"[Competitor 1], [Competitor 2]"
-      technology-keywords:"[list 5-8 relevant technical terms]"
-      jurisdictions:"US, EU, UK"
-      output:"weekly summary for IP attorney — new filings,
-              claim summaries, relevance assessment"
-```
+Populate for the top 4 risks identified. Any risk scoring 15+ (Severity x Likelihood) requires an immediate mitigation plan.
 
-Draft the monitoring brief template that would be sent weekly to your IP attorney.
+**What to evaluate:** Does the agent reference the correct Saudi regulations? If it cites PDPL Article numbers, verify that they exist. Hallucinated regulatory references in compliance assessments are dangerous — they create false confidence in regulatory compliance.
 
-**Step 3 -- FTO preliminary assessment brief:**
-
-```
-/brief topic:"freedom-to-operate preliminary research"
-      our-technology:"[describe your planned feature in 2-3
-                       technical sentences]"
-      potentially-relevant:"[list patents from Step 1]"
-      jurisdiction:"US"
-      note:"This is preliminary research for attorney review,
-            not a freedom-to-operate opinion."
-```
-
-Write the cover memo to your IP attorney that accurately characterises what the agent has produced and what you need them to confirm, refute, or act on.
-
-**Governance reminder:** The output of Step 3 is research scaffolding for your IP attorney -- not an FTO opinion. The cover memo must make this crystal clear. An FTO opinion is a privileged legal opinion signed by a qualified IP attorney.
-
-**Deliverable:** IP monitoring workflow + weekly competitor brief template + FTO research memo correctly scoped for attorney review.
-
-**The key learning:** IP research is about reducing attorney cost, not replacing attorney judgment -- the cover memo teaches you to clearly delineate what the agent has done (research) from what the attorney must do (opinion).
+**Deliverable:** Compliance assessment with 5x5 risk matrix and priority actions for top risks.
 
 ---
 
-## Exercise 5: Build the Legal Ops Agent -- Contract Intake
+## Exercise 5: Meeting Prep and E-Signature Routing
 
-**Type:** Agent Configuration and Testing
-**Time:** 90 minutes
-**Plugin commands:** All five Legal Plugin commands
-**What you need:** Cowork with Legal Plugin and playbook configured, access to your document management system (Google Drive, SharePoint, or equivalent), access to your communication tools (Gmail, Outlook, Slack), five historical contracts for testing (instructions below)
+Noor Technologies has a contract negotiation meeting tomorrow with Gulf Payments about the API integration contract (Contract B from Exercise 2). Prepare the meeting brief and, after the negotiation, route the agreed contract for execution.
 
-You are building a complete Contract Intake Agent that manages all incoming contracts from receipt through routing, tracking, and obligation monitoring.
+**Step 1 — Meeting briefing:**
 
-**Step 1 -- Map your current process.** Before configuring anything, document precisely:
+```
+Prepare a meeting briefing for tomorrow's contract negotiation:
+Meeting type: Contract negotiation
+Counterparty: Gulf Payments LLC, Dubai
+Contract: API Integration Agreement (AED 180K, 18-month term)
+Key issues from review: [paste your top 3 RED/YELLOW items from
+Exercise 2 Contract B]
+Our position: [reference your playbook positions]
+Their likely position: vendor-favourable on IP and liability
+Attendees: Ayesha Malik (GC), Bilal Ahmad (Legal Ops),
+           Gulf Payments' commercial director
+```
 
-- How do contracts currently arrive?
-- Who handles first review? How long does it take?
-- Where are executed contracts stored? Are they searchable?
-- How are renewal dates tracked?
-- What falls through the cracks most often?
+Evaluate: Does the briefing include specific preparation for each RED/YELLOW item? Does it suggest fallback positions? Does it reference relevant precedents from your playbook?
 
-This is the process you are replacing. Document it so you can measure the improvement.
+**Step 2 — Post-negotiation e-signature routing:**
 
-**Step 2 -- Configure the Cowork skill.** Using the Contract Intake Agent skill from Lesson 7, create a Cowork skill via **Write skill instructions** and customise for your organisation:
+After the negotiation, the parties agreed on revised terms. Route the contract for execution:
 
-- Add your specific contract types
-- Define your SLA thresholds with named owners (not generic roles -- actual names)
-- Write your three communication templates
-- Add your escalation triggers
+```
+/signature-request
+Contract: Gulf Payments API Integration Agreement (revised)
+Signatories:
+  - Noor Technologies: Ayesha Malik (General Counsel) — Sign first
+  - Gulf Payments: [Commercial Director] — Sign second
+Pre-flight checklist:
+  - All RED items resolved or accepted with documented rationale
+  - Governing law confirmed as DIFC
+  - Data processing addendum attached
+  - Insurance certificates current
+Routing: Sequential (Noor signs first, then Gulf Payments)
+```
 
-**Step 3 -- Connect via MCP.** Work with IT to connect:
-
-- Google Drive or SharePoint (contract storage)
-- Gmail or Outlook (legal intake email)
-- Google Sheets or Notion (contract tracking log)
-
-**Step 4 -- Test with five historical contracts:**
-
-- One NDA (standard / should be Tier 1)
-- One NDA (non-standard / should be Tier 2 or 3)
-- One vendor agreement (straightforward)
-- One vendor agreement (complex IP, data processing, unusual terms)
-- One employment or contractor agreement
-
-For each: record intake classification, routing decision, communication output, and whether the result was correct.
-
-**Step 5 -- Calibrate.** For any incorrect routing, identify whether the error was in playbook threshold, skill routing logic, or document type classification. Fix and re-test.
-
-**Step 6 -- Build the tracking dashboard.** Using the Google Sheets MCP, create a contract tracking dashboard showing:
-
-- All active contracts by status
-- Obligations due in 30/60/90 days
-- Average cycle time by tier (baseline from Step 1 vs. agent-assisted)
-
-**Deliverable:** A functioning Contract Intake Agent connected to your document management system, with tested Cowork skill configuration, live tracking dashboard, and documented time savings.
-
-**The key learning:** Process automation reveals process gaps -- building the intake agent forces you to define routing rules, SLA thresholds, and escalation triggers that your organisation may never have formalised before.
+**Deliverable:** Meeting brief with negotiation preparation and e-signature routing with pre-flight checklist.
 
 ---
 
-## Exercise 6: Regulatory Monitoring -- The Weekly Brief
+## Exercise 6: DSAR Response Process
 
-**Type:** Workflow Configuration
-**Time:** 45 minutes
-**Plugin commands:** `/brief`
-**What you need:** Cowork with Legal Plugin and web search MCP enabled, a list of your organisation's regulatory areas (data protection, employment, sector-specific), your primary jurisdictions
+At 14:32 today, the following email arrived at `privacy@noortechnologies.com`:
 
-You are Compliance Officer at a 150-person technology company with UK and EU operations. Your board has asked for a monthly regulatory briefing covering: data protection, AI regulation, employment law, and company law. This currently takes you 4-6 hours per month.
+> _"Dear Data Protection Officer, Under the Pakistan Personal Data Protection Act, I am requesting access to all personal data your company holds about me. My name is Tariq Hassan. I was a client of your Enterprise ERP plan from March 2023 to January 2025. My email addresses were t.hassan@meridiantextiles.pk (work) and tariqhassan@gmail.com (personal). Please confirm receipt. Regards, Tariq Hassan."_
 
-**Step 1 -- Configure monitoring parameters:**
-
-```
-/brief type:"regulatory-monitoring-setup"
-      organisation:"technology company, 150 employees,
-                    UK and EU operations, SaaS product"
-      primary-areas:
-        - "Data Protection: UK GDPR, EU GDPR, ICO guidance"
-        - "AI Regulation: EU AI Act implementation, UK AI framework"
-        - "Employment: UK employment law, EU Working Time,
-           remote working developments"
-        - "Company Law: Companies House requirements, director duties"
-      jurisdictions:"UK, EU (Germany, France, Netherlands primary)"
-      output:"weekly monitoring brief + monthly board summary"
-```
-
-**Step 2 -- Run a live test brief.** Use the current week. Evaluate:
-
-- Did it identify genuine regulatory developments?
-- Are the impact assessments (Immediate / 6 months / Monitor) correctly calibrated?
-- Is anything missing that you know should be covered?
-
-Update your configuration based on gaps. Re-run.
-
-**Step 3 -- Build the monthly board summary template.** The board summary is different from the weekly brief. It needs:
-
-- 3-5 bullet executive summary (most important changes this month)
-- RAG traffic-light status for each regulatory area
-- Actions required (owner, action, deadline)
-- Horizon items (significant changes in the next 3-6 months)
-
-Draft this template in your Cowork skill's Instructions field. Test it by asking the agent to produce a sample monthly summary from four weeks of monitoring briefs.
-
-**Deliverable:** Working regulatory monitoring configuration producing weekly briefs and a monthly board summary -- reducing your preparation time from 4-6 hours to 45-60 minutes of review and sign-off.
-
-**The key learning:** Regulatory monitoring is about impact assessment, not information collection -- the agent collects; your judgment determines which changes actually affect your organisation and what to do about them.
-
----
-
-## Exercise 7: DSAR Response -- The 30-Day Clock
-
-**Type:** Process Simulation
-**Time:** 45 minutes
-**Plugin commands:** `/respond`, `/brief`
-**What you need:** Cowork with Legal Plugin installed, a list of your organisation's data processing systems (CRM, billing, email, marketing, HR, support), familiarity with UK GDPR or EU GDPR requirements
-
-At 14:32 this afternoon, the following email arrived at `privacy@yourcompany.com`:
-
-> _"Dear Data Protection Officer, Under Article 20 of the UK GDPR I am requesting the portability of all personal data your company holds about me in a structured, commonly used, machine-readable format. Additionally, under Article 15, I request access to any personal data not covered by the portability right. My name is Marcus Chen. I was a customer of your Enterprise plan from September 2022 to December 2024, and my company also used your API integration. My email addresses were m.chen@techbridge.io (work) and marcus.chen.99@protonmail.com (personal). Please confirm receipt. Regards, Marcus Chen."_
-
-You are the Privacy Officer. This is more complex than a standard access request because it combines a **data portability request** (Article 20) with a **subject access request** (Article 15), and Marcus's data is spread across three business units that each have different data retention policies. The 30-day GDPR clock started at 14:32. Work through the complete response workflow.
-
-**Day 1 -- Acknowledge immediately:**
+**Step 1 — Acknowledge immediately:**
 
 ```
 /respond type:"DSAR-acknowledgement"
-         requester-name:"Marcus Chen"
-         requester-email:"marcus.chen.99@protonmail.com"
-         request-date:"[today]"
-         request-type:"Data Portability (Article 20) + Subject Access
-                        Request (Article 15) — UK GDPR"
-         jurisdiction:"UK GDPR"
+        requester-name:"Tariq Hassan"
+        requester-email:"tariqhassan@gmail.com"
+        request-date:"[today]"
+        request-type:"Subject Access Request — Pakistan PDPA"
+        jurisdiction:"Pakistan"
 ```
 
-Review the draft: does it correctly acknowledge both the portability and access components? Does it state the response deadline? Does it handle the fact that two email addresses were provided? Edit as necessary.
+Review the draft: Does it state the response deadline? Does it handle the two email addresses?
 
-**Days 1-10 -- Data discovery:**
+**Step 2 — Data discovery:**
 
 ```
 /respond type:"DSAR-data-discovery"
-         requester:"Marcus Chen, m.chen@techbridge.io /
-                    marcus.chen.99@protonmail.com"
-         customer-period:"September 2022 to December 2024"
-         systems:"CRM, billing, email, customer support, marketing
-                  database, API usage logs, HR system, partner portal"
-         note:"Search both email addresses across all systems.
-               Enterprise plan + API integration — check developer
-               portal and API access logs separately."
+        requester:"Tariq Hassan, t.hassan@meridiantextiles.pk /
+                   tariqhassan@gmail.com"
+        customer-period:"March 2023 to January 2025"
+        systems:"CRM, billing, ERP platform usage logs, customer
+                 support tickets, marketing database"
 ```
 
-The agent drafts discovery requests to each system owner. Note: three business units hold Marcus's data (Sales, Engineering/API, and Customer Success), each with different retention policies.
+The agent drafts discovery requests to each system owner. Note which systems hold data and which retention policies apply.
 
-**Day 12 -- Data received (simulate):**
+**Step 3 — Draft the response** covering all identified data categories, processing purposes, legal basis, and retention periods. Route for Ayesha's review before sending.
 
-The following has been identified:
-
-- CRM (Sales): Full enterprise account record under TechBridge Ltd, Marcus listed as primary contact. Account notes, meeting records, renewal negotiation history
-- Billing (Finance): 27 invoices to TechBridge Ltd, payment method on file (company credit card ending \*7291)
-- API Usage Logs (Engineering): 14 months of API call logs tied to marcus.chen@techbridge.io, including endpoints called, request volumes, error rates. Retention policy: 18 months (some data already purged)
-- Customer Support: 8 tickets from m.chen@techbridge.io, 3 from marcus.chen.99@protonmail.com (personal email used during account migration issue)
-- Marketing: Campaign history sent to both email addresses, webinar attendance records, content download tracking
-- Partner Portal: Marcus registered as a certified integration partner; completed 2 certification assessments with scores
-- HR system: No data found
-
-```
-/respond type:"DSAR-response-preparation"
-         data-found:[provide summary above]
-         portability-scope:"Data provided by Marcus or generated
-           through his use of the service (Art. 20 scope):
-           account profile, API usage logs, support tickets,
-           certification records"
-         access-only-scope:"Data NOT covered by portability (Art. 15
-           only): internal account notes, sales rep meeting records,
-           marketing tracking/analytics, renewal negotiation history"
-         redaction-required:"third-party personal data (other
-           TechBridge employees named in account records); internal
-           staff names in meeting notes; TechBridge Ltd commercial
-           information unrelated to Marcus personally"
-         jurisdiction:"UK GDPR"
-```
-
-The agent produces a redaction checklist and separates the response into portability-format data (machine-readable) and access-only data (human-readable).
-
-**Day 15 -- Response draft:**
-
-Have the agent draft the final response covering both components: the Article 20 portability data in a structured format (JSON or CSV) and the Article 15 access data in a readable letter. Include categories of data, processing purposes, legal basis, retention periods, and rights information.
-
-Route for attorney review before sending.
-
-**Reflection questions:**
-
-1. Marcus's API usage logs show which endpoints he called and how frequently. Is this personal data subject to portability under Article 20, or is it data "observed" by the controller (which has a narrower portability scope under WP29 guidance)? What does the agent say? Do you agree?
-
-2. The CRM contains renewal negotiation notes written by your sales rep: "Marcus is price-sensitive -- offered 15% discount to prevent churn to [Competitor]." This is personal data about Marcus (Art. 15 access), but is it data "provided by" Marcus for portability purposes (Art. 20)? How does the agent handle the distinction?
-
-3. Some API usage logs from the first 4 months have already been purged under Engineering's 18-month retention policy. Marcus's data existed when his customer relationship was active but no longer exists. Do you need to disclose that data was deleted? Draft the paragraph explaining the retention situation.
-
-**Deliverable:** Completed DSAR simulation demonstrating the full 30-day workflow with combined portability and access rights, a validated DSAR Agent Cowork skill, and a documented process map showing how multi-business-unit discovery with different retention policies is coordinated.
-
-**The key learning:** The dual Article 15/20 request and the three-business-unit discovery with different retention policies test real-world DSAR complexity. The agent's value is in systematically coordinating discovery across units and correctly separating portability-format data from access-only data -- a distinction that manual processing frequently gets wrong.
+**Deliverable:** DSAR acknowledgement within statutory window and documented discovery-to-response workflow.
 
 ---
 
-## Exercise 8: The Legal Ops Dashboard
+## Exercise 7: The Legal Ops Dashboard
 
-**Type:** Integration and Measurement
-**Time:** 60 minutes
-**Plugin commands:** `/vendor-check`, `/brief`
-**What you need:** Cowork with Legal Plugin installed, completed outputs from Exercises 1-7 (or simulated equivalents), access to Google Sheets or equivalent for dashboard creation
+You have built a playbook, reviewed contracts, triaged NDAs, assessed compliance, prepared meetings, routed signatures, and processed DSARs. This exercise ties them together into the dashboard Ayesha needs to run the legal function strategically.
 
-You have now built a negotiation playbook, contract review workflow, NDA triage system, IP monitoring brief, regulatory monitoring workflow, and DSAR agent. This exercise ties them together into the Legal Operations Dashboard your General Counsel needs to run the function strategically.
-
-**Step 1 -- Define the KPIs:**
-
-| Metric                                  | Data Source           | Target                                           |
-| --------------------------------------- | --------------------- | ------------------------------------------------ |
-| Contract review cycle time (by tier)    | Contract tracking log | Tier 1: ≤1 day; Tier 2: ≤2 days; Tier 3: ≤5 days |
-| NDA Tier 1 auto-approval rate           | NDA triage log        | >60%                                             |
-| Open RED items pending attorney review  | Contract queue        | Zero items >5 days old                           |
-| Contracts with renewal dates in 60 days | Contract repository   | 100% visibility                                  |
-| Overdue compliance obligations          | Compliance calendar   | Zero overdue                                     |
-| Open DSARs vs. 30-day window            | DSAR log              | Zero overdue                                     |
-| Regulatory alerts actioned              | Monitoring log        | 100% within 30 days                              |
-| External legal spend vs. budget         | AP system             | Within 10% of budget                             |
-
-**Step 2 -- Build the dashboard:**
+**Step 1 — Vendor health check:**
 
 ```
-/brief topic:"legal-ops-dashboard"
-      data-sources:
-        - "contract tracking log [link]"
-        - "NDA triage log [link]"
-        - "compliance calendar [link]"
-        - "DSAR log [link]"
-      output:"weekly dashboard for General Counsel"
-      include:"RAG status per category; trend vs. prior week;
-               items requiring GC personal attention; no-action
-               items for information only"
+/vendor-check
+Run an obligation and renewal check for Noor Technologies' active
+vendor contracts. Flag:
+- Contracts with renewal dates within 60 days
+- Overdue obligations
+- Vendors with expired insurance certificates
+- Contracts approaching auto-renewal that should be renegotiated
 ```
 
-**Step 3 -- Write the weekly GC briefing.** Using the dashboard, draft a 1-page briefing for your General Counsel. It should:
+**Step 2 — Compliance calendar:**
 
-- Take 5 minutes to read
-- Give an immediate picture of the legal pipeline state
-- Clearly identify items requiring GC personal attention
-- Identify emerging risks before they become urgent
+```
+Configure a compliance calendar for Noor Technologies:
+Jurisdictions: Pakistan, UAE/DIFC, UK
+Regulatory areas: Data protection, employment, corporate filings
+Include: Filing deadlines, renewal dates, audit schedules
+Escalation: 30-day warning → 14-day alert → 7-day escalation to GC
+```
 
-**Step 4 -- Measure the transformation.** Return to the process map from Exercise 5 Step 1. Document:
+**Step 3 — Legal spend report:**
 
-| Function                               | Hours/month before | Hours/month after | Saving |
-| -------------------------------------- | ------------------ | ----------------- | ------ |
-| Contract review                        |                    |                   |        |
-| NDA triage (attorney time)             |                    |                   |        |
-| Regulatory monitoring                  |                    |                   |        |
-| DSAR processing (per request x volume) |                    |                   |        |
-| Compliance calendar management         |                    |                   |        |
-| **Total**                              |                    |                   |        |
+```
+Generate a legal spend summary for Noor Technologies Q1 2026:
+Categories: External counsel, regulatory filings, IP renewals,
+            contract management tools, insurance
+Flag: Any category exceeding budget by >10%
+Include: Trend vs prior quarter
+```
 
-**Deliverable:** A Legal Ops Dashboard specification, a sample weekly GC briefing, and a documented ROI analysis showing the capacity transformation in your legal department.
+**Step 4 — Weekly GC briefing.** Combine the three outputs into a 1-page briefing for Ayesha:
 
-**The key learning:** The dashboard is not a reporting tool -- it is a management instrument that transforms legal from a reactive function (responding to requests) into a proactive one (identifying risks and opportunities before they become urgent).
+- 5-minute read maximum
+- RAG status per category (contracts, compliance, spend)
+- Items requiring GC personal attention
+- Emerging risks before they become urgent
+
+**Deliverable:** Legal ops dashboard with vendor health, compliance calendar, spend report, and weekly GC briefing.
 
 ---
 
-## Chapter Summary: Four Principles of Legal AI Deployment
+## Exercise 8: Full Pipeline (Optional Capstone)
 
-**Principle 1: The agent reviews. The attorney decides.**
-This is not a constraint to work around -- it is the architecture that makes legal AI safe, professionally responsible, and genuinely useful. The agent's value is in the 80% of legal work that is pattern recognition, research, document analysis, and first-draft preparation. The attorney's value is in the 20% requiring judgment, strategy, relationship management, and professional accountability. Keeping these distinct maximises the contribution of both.
+End-to-end contract lifecycle. A new vendor agreement arrives at Noor Technologies. Run every stage:
 
-**Principle 2: The playbook is the product.**
-The Legal Plugin out of the box is a capable tool. The Legal Plugin configured with a mature, validated, institution-specific negotiation playbook is a competitive advantage. Every hour spent refining the playbook -- adding real negotiation outcomes, sharpening thresholds, encoding your organisation's actual risk tolerance -- makes every subsequent review more accurate and more valuable. The playbook is living documentation of your organisation's legal intelligence.
+1. **Intake** — Contract Intake Agent classifies and routes (Lesson 10)
+2. **Review** — `/review-contract` with jurisdiction overlay
+3. **Triage decision** — Tier classification determines routing
+4. **Negotiate** — Meeting briefing for negotiation session
+5. **Execute** — `/signature-request` to route for signatures
+6. **Post-execution** — `/vendor-check` adds to obligation tracking
+7. **Dashboard** — Contract appears in compliance calendar
 
-**Principle 3: Legal Ops Agents manage processes, not documents.**
-The most transformative applications in this chapter are the process-level agents -- Contract Intake, Regulatory Monitoring, Compliance Calendar, DSAR Management. The document tools reduce time per task. The process agents eliminate the coordination overhead -- the chasing, tracking, escalating, and reporting -- that consumes legal operations capacity. Both matter. The process agents create the larger structural change.
+**Time target:** 60 minutes for the full lifecycle.
 
-**Principle 4: Differentiation lives in the institutional knowledge layer.**
-As Anthropic has moved into legal tech and generic legal AI workflows have been commoditised, the durable advantage belongs to organisations and firms that have systematically encoded their domain expertise into their tooling. The organisation with a mature playbook reflecting real negotiation history, a searchable contract repository, and a SKILL.md library encoding jurisdiction-specific expertise is operating a fundamentally different legal function than one using out-of-the-box tools. Building that institutional layer is the work of this chapter -- and it does not become obsolete when the next model version ships.
+**Deliverable:** Complete contract lifecycle from intake to dashboard tracking.
 
-**Getting started:** Install both plugin layers (see Lesson 2), work through Exercise 1 to build your playbook, and run your first `/review-contract` against an executed contract you already know well. The gap between the agent's output and your institutional knowledge is the roadmap for everything that follows.
+---
+
+## What You Built
+
+1. A validated negotiation playbook scored against executed contracts to detect calibration drift
+2. Three contract reviews with attorney-ready redlines and priority negotiation orders
+3. A calibrated NDA triage system with documented threshold rationale
+4. A compliance assessment with 5x5 risk matrix for Saudi Arabia expansion
+5. A meeting briefing with negotiation preparation and e-signature routing
+6. A DSAR response workflow with acknowledgement within statutory window
+7. A legal ops dashboard with vendor health, compliance calendar, and spend analytics
+
+The division of labour that runs through every lesson: the agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs. That boundary is what makes legal AI safe, professionally responsible, and genuinely useful at scale.
+
+---
+
+## Four Principles of Legal AI Deployment
+
+**Principle 1: The agent reviews. The attorney decides.** The agent's value is in the 80% of legal work that is pattern recognition, research, document analysis, and first-draft preparation. The attorney's value is in the 20% requiring judgment, strategy, relationship management, and professional accountability. Keeping these distinct maximises the contribution of both.
+
+**Principle 2: The playbook is the product.** The Legal Plugin out of the box is a capable tool. The Legal Plugin configured with a mature, validated, institution-specific negotiation playbook is a competitive advantage. Every hour spent refining the playbook makes every subsequent review more accurate.
+
+**Principle 3: Process-level agents eliminate coordination overhead.** The document tools reduce time per task. The process agents — Contract Intake, Regulatory Monitoring, Compliance Calendar, DSAR Management — eliminate the chasing, tracking, escalating, and reporting that consumes legal operations capacity.
+
+**Principle 4: Jurisdiction-aware analysis is non-negotiable for cross-border work.** A contract review that ignores governing law differences produces advice that is technically correct for the wrong jurisdiction. The overlay system ensures every analysis reflects the applicable legal framework.
 
 ---
 
 ## Quick Reference
 
-### Legal Plugin Commands
+### Anthropic Legal Plugin Commands (7)
 
-| Command            | Primary Use                          | Output                                |
-| ------------------ | ------------------------------------ | ------------------------------------- |
-| `/review-contract` | Full contract review vs. playbook    | GREEN/YELLOW/RED analysis + redlines  |
-| `/triage-nda`      | NDA pre-screening                    | Tier 1/2/3 routing recommendation     |
-| `/vendor-check`    | Obligation and status check          | Obligation summary + renewal calendar |
-| `/brief`           | Research, regulatory monitoring, IP  | Structured briefing or analysis       |
-| `/respond`         | DSAR, legal holds, routine responses | Draft for attorney review             |
+| Command              | Primary Use                          | Output                                |
+| -------------------- | ------------------------------------ | ------------------------------------- |
+| `/review-contract`   | Full contract review vs playbook     | GREEN/YELLOW/RED analysis + redlines  |
+| `/triage-nda`        | NDA pre-screening                    | Tier 1/2/3 routing recommendation     |
+| `/vendor-check`      | Obligation and status check          | Obligation summary + renewal calendar |
+| `/brief`             | Research, regulatory monitoring, IP  | Structured briefing or analysis       |
+| `/respond`           | DSAR, legal holds, routine responses | Draft for attorney review             |
+| `/compliance-check`  | Proactive regulatory assessment      | Risk assessment + action items        |
+| `/signature-request` | E-signature routing via DocuSign     | Pre-flight checklist + routing        |
 
-### Plugin Installation
+### Anthropic Legal Plugin Skills (6)
 
-```bash
-# Layer 1 (Base): Anthropic's Legal Plugin
-claude plugin install legal@knowledge-work-plugins
+| Skill                   | Trigger Pattern                    | Output                         |
+| ----------------------- | ---------------------------------- | ------------------------------ |
+| `contract-review`       | Upload contract + context          | Seven-phase analysis           |
+| `nda-triage`            | NDA document + playbook ref        | Tier classification            |
+| `compliance`            | Regulatory question + jurisdiction | Compliance assessment          |
+| `legal-risk-assessment` | Risk scenario description          | 5x5 severity-likelihood matrix |
+| `meeting-briefing`      | Meeting type + attendees + agenda  | Structured prep document       |
+| `canned-responses`      | Response category + context        | Draft from template library    |
 
-# Layer 2 (Extension): Agent Factory jurisdiction overlays
-/plugin marketplace add panaversity/agentfactory-business-plugins
-/plugin install legal-ops@agentfactory-business
-```
+### Agent Factory Legal Ops Extension Commands (4)
 
-### Key Resources
+| Command                | Primary Use                                     |
+| ---------------------- | ----------------------------------------------- |
+| `/legal-brief`         | Extended research with jurisdiction overlays    |
+| `/legal-hold`          | Litigation hold package with custodian tracking |
+| `/contract-intake`     | Automated classification and routing            |
+| `/compliance-calendar` | Deadline tracking with escalation logic         |
 
-| Resource                    | URL                                                                                                                         |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Layer 1 (Anthropic base)    | [knowledge-work-plugins/legal](https://github.com/anthropics/knowledge-work-plugins/tree/main/legal)                        |
-| Layer 2 (Agent Factory ext) | [agentfactory-business-plugins/legal-ops](https://github.com/panaversity/agentfactory-business-plugins/tree/main/legal-ops) |
-| Anthropic enters legal tech | [artificiallawyer.com](https://www.artificiallawyer.com/2026/02/02/anthropic-moves-into-legal-tech/)                        |
-| Market impact analysis      | [abovethelaw.com](https://abovethelaw.com/2026/02/anthropic-enters-legal-tech-legal-tech-enters-freefall/)                  |
-| Plugin deep-dive            | [MAA1 on Medium](https://maa1.medium.com/claudes-legal-productivity-plugin-what-it-means-for-legal-tech-a8e0d8e47b4e)       |
+### Agent Factory Legal Ops Extension Skills (9)
+
+| Skill                   | Capability                                         |
+| ----------------------- | -------------------------------------------------- |
+| `legal-global-router`   | Jurisdiction detection and overlay loading         |
+| `contract-intake-agent` | Classification, routing, SLA tracking              |
+| `regulatory-monitor`    | Weekly regulatory brief with impact assessment     |
+| `compliance-calendar`   | Filing deadlines, renewals, audit schedules        |
+| `legal-spend-analytics` | Spend tracking, budget variance, trend analysis    |
+| `dsar-manager`          | 30-day workflow with multi-system discovery        |
+| `employment-law`        | Contract review, contractor classification         |
+| `ip-monitor`            | Patent landscape, trademark watch, FTO scaffolding |
+| `litigation-support`    | Legal hold, document preservation, privilege log   |
+
+### Jurisdiction Overlays (6)
+
+| Overlay            | Coverage                                   |
+| ------------------ | ------------------------------------------ |
+| `uk-overlay`       | English law, UCTA, UK GDPR, Companies Act  |
+| `uae-overlay`      | UAE Civil Code, mainland federal law       |
+| `difc-overlay`     | DIFC law, DFSA regulations, DIFC Courts    |
+| `pakistan-overlay` | Contract Act 1872, PDPA, SECP requirements |
+| `saudi-overlay`    | Saudi law, PDPL, SAMA regulations          |
+| `gcc-overlay`      | GCC-wide commercial registration, VAT      |
+
+### MCP Connectors (8)
+
+| Connector       | Category          | Use Case                               |
+| --------------- | ----------------- | -------------------------------------- |
+| Gmail           | `~~communication` | Legal intake email monitoring          |
+| Slack           | `~~communication` | Team notifications and escalations     |
+| Google Calendar | `~~scheduling`    | Meeting briefing, deadline tracking    |
+| DocuSign        | `~~esignature`    | Signature routing and status tracking  |
+| Box             | `~~storage`       | Contract repository                    |
+| Egnyte          | `~~storage`       | Document management                    |
+| Atlassian       | `~~project`       | Legal project and matter tracking      |
+| MS365           | `~~productivity`  | Outlook, SharePoint, Teams integration |
 
 ---
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to reflect on the chapter as a whole.
+Use these prompts in Cowork or your preferred AI assistant with your legal plugins installed.
 
-### Prompt 1: Apply the Four Principles as a Design Review
-
-```
-I have completed Chapter 22 on Legal AI deployment. Here is a
-proposed legal AI workflow for a company:
-
-"We want to build an AI system that automatically reviews incoming
-contracts, approves standard ones without attorney review, sends
-non-standard ones to a junior paralegal, and generates a weekly
-report for the GC. The system will use a generic contract review
-template rather than building a custom playbook, since that takes
-too much time."
-
-Evaluate this proposal against the Four Principles of Legal AI
-Deployment:
-1. The agent reviews, the attorney decides
-2. The playbook is the product
-3. Legal Ops Agents manage processes, not documents
-4. Differentiation lives in the institutional knowledge layer
-
-For each principle, identify whether the proposal follows or
-violates it, and explain the specific risk created by each violation.
-Then recommend the minimum changes needed to make this deployment
-architecturally sound.
-```
-
-**What you are learning:** The four principles are not aspirational -- they are design constraints. Evaluating a real proposal against them builds the architectural judgment to distinguish sound legal AI deployments from ones that create professional liability, miss the value proposition, or fail to differentiate.
-
-### Prompt 2: Design Your 90-Day Legal Ops Transformation Plan
+### Prompt 1: Reproduce the Sprint
 
 ```
-Based on everything in Chapter 22, help me design a 90-day Legal
-Ops transformation plan for my organisation:
+I want to run the complete legal operations sprint. Here is my setup:
+- Organisation: [your organisation or Noor Technologies]
+- Playbook: [paste your legal.local.md configuration]
+- Jurisdictions: [your primary jurisdictions]
 
-[Describe: organisation size, legal team size, primary jurisdictions,
-current pain points, available budget for tooling]
+Run these steps in sequence:
+1. Validate my playbook against 3 executed contracts
+2. Review 3 new contracts (one SaaS, one consulting, one partnership)
+3. Triage 5 NDAs and report Tier distribution
+4. Run a compliance check for a planned business initiative
+5. Prepare a meeting briefing for the highest-priority contract
+6. Process a sample DSAR with multi-system discovery
+7. Produce the legal ops dashboard (vendor health + compliance
+   calendar + spend report)
 
-Structure the plan as:
-- Days 1-30: Foundation (playbook, plugin configuration, first
-  workflow)
-- Days 31-60: Expansion (additional workflows, agent configuration,
-  MCP integrations)
-- Days 61-90: Measurement (dashboard, ROI analysis, board
-  presentation)
-
-For each phase, specify:
-1. Which exercises from Chapter 22 to complete
-2. What deliverables to produce
-3. What success metrics to track
-4. What risks to watch for
-
-Include a realistic time commitment estimate per week for the
-Legal Ops lead and for the legal team.
+At the end, tell me:
+- Total time for the full sprint
+- How many playbook calibration issues you spotted
+- Which exercise produced the lowest quality output and why
 ```
 
-**What you are learning:** Transformation planning requires sequencing the exercises into a coherent deployment programme. The 90-day structure forces you to prioritise -- you cannot do everything at once, so you must decide which capability delivers the most value first and build from there.
+**What you are learning:** Execution speed and error detection under pressure. The first time through this sprint, you will likely spend 40-50 minutes. The second time, with a tuned playbook and familiar pipeline, it should take 20-25 minutes. The gap between first and second run measures how much of the sprint is setup versus execution.
 
-### Prompt 3: The Institutional Knowledge Audit
+### Prompt 2: Transfer to a Different Organisation
 
 ```
-Chapter 22 argues that "differentiation lives in the institutional
-knowledge layer." Help me audit my organisation's legal institutional
-knowledge:
+I have been running the legal operations engine for a mid-market
+technology company. Now I want to adapt it for [choose: a law firm /
+a healthcare company / a financial services firm / a government
+department / your organisation].
 
-1. Where does our negotiation history live? (Email inboxes? A shared
-   drive? Someone's memory?)
-2. How many people would need to leave before we lost critical
-   negotiation positions?
-3. Can a new attorney joining our team find our standard positions
-   on the top 10 clause types within their first day?
-4. When was the last time we systematically reviewed whether our
-   standard positions still reflect market practice?
-5. If we had to produce a complete negotiation playbook today, how
-   long would it take and who would need to be involved?
+For this new context:
+1. What percentage of the legal operations engine transfers directly
+   with zero changes? (Command structure, triage tiers, dashboard
+   metrics, DSAR workflow)
+2. What needs reconfiguration? (Playbook positions, jurisdiction
+   overlays, compliance calendar, risk thresholds)
+3. What is organisation-specific and does not exist in the current
+   engine? (Regulatory requirements, practice area specialisations,
+   professional conduct rules)
 
-Based on my answers, assess how vulnerable our legal operations
-are to knowledge loss and recommend the three highest-priority
-knowledge capture actions we should take before configuring the
-Legal Plugin.
+Build a migration checklist: every config file, skill, and overlay
+that needs to change, and what the change is.
 ```
 
-**What you are learning:** The playbook exercise (Exercise 1) assumes you can extract institutional knowledge. This audit reveals whether that knowledge actually exists in extractable form -- and if it does not, that is the most important finding, because it means your organisation is operating on tacit knowledge that is at risk every time someone leaves.
-
----
-
-This concludes Chapter 22: Legal Operations. The workflows, agents, and institutional knowledge assets you have built in this chapter form the foundation for deploying legal AI that is professionally responsible, jurisdiction-aware, and genuinely transformative for your legal function. The governing principle holds throughout: the agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.
+**What you are learning:** Legal operations engine portability. The command structure and triage methodology are universal. The playbook positions, jurisdiction overlays, and compliance requirements are organisation-specific. Understanding what transfers and what requires reconfiguration is the difference between rebuilding from scratch for each client and reconfiguring an existing system in an afternoon.
