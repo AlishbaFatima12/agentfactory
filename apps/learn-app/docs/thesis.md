@@ -108,6 +108,8 @@ Data centers are devouring copper and electricity at industrial scale: a single 
 
 The factories of the Agent era are not hypothetical. They are under construction.
 
+AI agents will soon graduate to fully-fledged economic actors that buy services, compute, and even data in the course of accomplishing high-level goals. 1-2 years before we start seeing this at scale.
+
 ![U.S. private construction spending: general office declining from $60B to $44B while data center surges from near zero to $42B, converging in 2025](../static/img/data-center-vs-office-construction.png)
 
 _Source: U.S. Census Bureau, Value of Construction Put in Place Survey (SAAR)_
