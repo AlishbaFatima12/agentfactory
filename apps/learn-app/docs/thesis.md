@@ -109,10 +109,6 @@ The developer doesn't disappear. The developer does _more_.
 
 AI employees are how work gets done. Identic AI is how humans will increasingly direct, govern, and interface with that AI workforce on their own behalf. The Agent Factory manufactures role-based AI employees to execute tasks, coordinate workflows, and deliver verified outcomes at scale, but the human remains the principal who defines purpose, values, constraints, and accountability. Identic AI adds a new personal layer: a self-sovereign agent that understands an individual’s context, judgment, and preferences, and can translate human intent into delegated action across the enterprise.¹ In this model, enterprise AI employees are the execution fabric, while identic AI is the human’s representative and orchestration layer, enabling people to supervise direction rather than perform routine execution themselves. The future firm will therefore operate across two connected layers: AI employees inside the factory, and personal agents at the edge, with humans setting intent and verifying outcomes across both.
 
-Add them to the **Personal Agents and the Enterprise Interface** section. The top hook should stay light — its job is to seed, not explain.
-
-Here's what I'd append right after the last sentence of that section ("...with humans setting intent and verifying outcomes across both."):
-
 We call this the **Two-Layer Model**:
 
 | Layer | What It Is | Who It Serves | What It Does |
