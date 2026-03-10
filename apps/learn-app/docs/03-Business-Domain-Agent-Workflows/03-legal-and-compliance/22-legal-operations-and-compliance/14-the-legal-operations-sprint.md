@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 14
 title: "Exercises and Chapter Summary"
 description: "Eight hands-on exercises building deployable legal operations artefacts, the four principles of legal AI deployment, and a quick reference for the Legal Plugin commands and resources"
 keywords:
@@ -17,7 +17,7 @@ keywords:
     "legal plugin quick reference",
   ]
 chapter: 22
-lesson: 12
+lesson: 14
 duration_minutes: 30
 
 # HIDDEN SKILLS METADATA

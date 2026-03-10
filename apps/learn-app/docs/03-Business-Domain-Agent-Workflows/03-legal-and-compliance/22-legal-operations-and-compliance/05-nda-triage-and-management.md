@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: "NDA Triage and Management"
 description: "Build a three-tier NDA triage system that reduces attorney NDA time from 12+ hours per month to 3-4 hours, with a full Saudi NDA worked example showing Al-Madinah Cloud Solutions triage in action"
 keywords:
@@ -18,7 +18,7 @@ keywords:
     "Saudi NDA",
   ]
 chapter: 22
-lesson: 4
+lesson: 5
 duration_minutes: 20
 
 # HIDDEN SKILLS METADATA

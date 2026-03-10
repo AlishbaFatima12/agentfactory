@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 10
 title: "Legal Ops Agents: Intake and Monitoring"
 description: "What Legal Ops Agents are, how they differ from document tools, and how to build Contract Intake and Regulatory Monitoring agents with full worked examples"
 keywords:
@@ -16,7 +16,7 @@ keywords:
     "legal process automation",
   ]
 chapter: 22
-lesson: 7
+lesson: 10
 duration_minutes: 25
 
 # HIDDEN SKILLS METADATA

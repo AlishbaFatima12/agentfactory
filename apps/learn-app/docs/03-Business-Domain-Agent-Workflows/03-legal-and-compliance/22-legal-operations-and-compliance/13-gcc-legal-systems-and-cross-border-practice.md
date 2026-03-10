@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 13
 title: "GCC Legal Context and Market Outlook"
 description: "What Anthropic's entry into legal tech means for the market, the GCC legal tech landscape, quantifying the transformation, and a full worked example navigating DIFC and Saudi law for a Riyadh fintech vendor agreement"
 keywords:
@@ -18,7 +18,7 @@ keywords:
     "SAMA outsourcing",
   ]
 chapter: 22
-lesson: 11
+lesson: 13
 duration_minutes: 25
 
 # HIDDEN SKILLS METADATA

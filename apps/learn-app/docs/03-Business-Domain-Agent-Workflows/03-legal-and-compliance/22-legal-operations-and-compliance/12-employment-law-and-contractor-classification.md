@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 12
 title: "Employment Law in Legal Operations"
 description: "Why employment law is the most jurisdiction-sensitive area of Legal Ops, how employment contracts differ from commercial contracts in the playbook, and the Brightpath/Tariq Pakistan-UK cross-border worked example"
 keywords:
@@ -16,7 +16,7 @@ keywords:
     "jurisdiction overlay employment",
   ]
 chapter: 22
-lesson: 9
+lesson: 12
 duration_minutes: 25
 
 # HIDDEN SKILLS METADATA
