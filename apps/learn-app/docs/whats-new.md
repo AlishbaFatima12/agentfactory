@@ -17,6 +17,10 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-10
+
+- docs: ch23 full chapter rewrite — 16 lessons ([#847](https://github.com/panaversity/agentfactory/pull/847))
+
 ### 2026-03-09
 - docs: enhance Ch 30 PRIMM-AI+ with visuals and content polish ([#846](https://github.com/panaversity/agentfactory/pull/846))
 
