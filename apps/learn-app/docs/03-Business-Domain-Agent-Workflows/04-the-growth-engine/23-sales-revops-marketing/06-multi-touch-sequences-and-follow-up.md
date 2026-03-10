@@ -1,596 +1,485 @@
 ---
-sidebar_position: 5
-title: "Multi-Touch Sequences and Copywriting"
-description: "Build multi-touch outreach sequences with /build-sequence, maintain Five Laws discipline across every touch, evaluate copywriting variants, manage follow-up responses, and recognise when automation should stop"
+sidebar_position: 6
+title: "Multi-Touch Sequences and Follow-Up"
+description: "Build a complete 6-touch outreach sequence for a top prospect, compare sales sequences to marketing nurture sequences, discover Over-Automation through personalisation decay, define exit conditions, and generate follow-up templates for post-meeting responses"
 keywords:
   [
     "multi-touch sequence",
-    "build-sequence",
     "outreach sequence",
-    "copywriting skill",
-    "follow-up skill",
     "sequence skill",
+    "follow-up skill",
+    "email-sequence",
     "over-automation",
-    "channel mixing",
-    "WhatsApp B2B",
+    "personalisation decay",
+    "exit conditions",
+    "follow-up templates",
+    "sales sequence",
+    "marketing sequence",
+    "nurture campaign",
     "Five Laws audit",
     "stop rules",
-    "touch cadence",
   ]
 chapter: 23
-lesson: 5
-duration_minutes: 20
+lesson: 6
+duration_minutes: 25
 
 # HIDDEN SKILLS METADATA
 skills:
-  - name: "Build and Evaluate Multi-Touch Sequences"
+  - name: "Build and Audit Multi-Touch Outreach Sequences"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can use /build-sequence to generate a 5-touch sequence, audit each touch against Five Laws, evaluate channel mixing, and identify where personalization degrades"
+    measurable_at_this_level: "Student can use the sequence skill to generate a 6-touch sequence, audit each touch against Five Laws, and identify where personalisation degrades across the sequence"
 
-  - name: "Evaluate Copywriting Variants Against Five Laws"
+  - name: "Compare Sales and Marketing Sequences"
     proficiency_level: "B1"
     category: "Applied"
-    bloom_level: "Evaluate"
-    digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can generate 3 variants using the copywriting skill, rank them against Five Laws, and select the strongest with specific reasoning"
+    bloom_level: "Analyze"
+    digcomp_area: "Information and Data Literacy"
+    measurable_at_this_level: "Student can generate a marketing nurture sequence with /email-sequence, compare it to a sales sequence, and articulate the difference in personalisation depth and exit conditions"
 
-  - name: "Diagnose Over-Automation in Sequences"
+  - name: "Diagnose Over-Automation and Define Exit Conditions"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Analyze"
     digcomp_area: "Safety"
-    measurable_at_this_level: "Student can identify when a sequence should have stopped (non-response, negative response, unsubscribe) and propose stop rules"
+    measurable_at_this_level: "Student can identify personalisation decay in later touches and define exit conditions for reply, bounce, unsubscribe, and silence scenarios"
 
 learning_objectives:
-  - objective: "Use /build-sequence to generate a multi-touch outreach sequence and audit each touch against the Five Laws for personalization decay"
+  - objective: "Generate a 6-touch outreach sequence and audit each touch against the Five Laws for personalisation decay"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student generates a 5-touch sequence and annotates each touch with law-by-law compliance, identifying where Law 1 (Specific Verifiable Reference) degrades"
+    assessment_method: "Student generates a 6-touch sequence and annotates each touch with law-by-law compliance, identifying where Law 1 (Specific Verifiable Reference) degrades"
 
-  - objective: "Generate and rank copywriting variants for outreach touches using the copywriting skill"
-    proficiency_level: "B1"
-    bloom_level: "Evaluate"
-    assessment_method: "Student produces 3 variants for touch #1, ranks them with Five Laws reasoning, and selects the best"
-
-  - objective: "Identify over-automation in sequences and define stop rules for when automated outreach should pause or end"
+  - objective: "Compare a personalised sales sequence to a segment-level marketing sequence and identify the key structural differences"
     proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Given a sequence with a non-responding prospect, student identifies which touch should have been the last and proposes 3 stop conditions"
+    assessment_method: "Student runs /email-sequence for a nurture campaign, compares to the Meridian sales sequence, and identifies differences in personalisation depth, trigger type, and exit conditions"
+
+  - objective: "Identify Over-Automation in a sequence and define exit conditions for when automated outreach should pause or end"
+    proficiency_level: "B1"
+    bloom_level: "Analyze"
+    assessment_method: "Given a sequence with a non-responding prospect, student identifies which touch should have been the last and proposes exit conditions for four scenarios"
 
 cognitive_load:
   new_concepts: 7
   concepts_list:
-    - "Multi-touch sequence as structured campaign (7-12 touches typical in B2B)"
-    - "Over-Automation as an agent error type"
-    - "Channel mixing (email, LinkedIn, WhatsApp) within a sequence"
-    - "Law 1 decay across touches (personalization gets generic over time)"
-    - "Stop rules (when to halt automated outreach)"
-    - "Follow-up skill for response handling"
-    - "Copywriting variants as testable alternatives"
-  assessment: "7 concepts at B1 level. Over-Automation is the key new diagnostic concept. The rest build on the Five Laws foundation from L04."
+    - "Multi-touch sequence as a structured 6-touch campaign over 21 days"
+    - "Over-Automation as an agent error type (discovered, not taught)"
+    - "Personalisation decay across sequence length"
+    - "Sales sequences vs marketing sequences (personalisation depth)"
+    - "Exit conditions (reply, bounce, unsubscribe, silence)"
+    - "Follow-up skill for post-meeting response handling"
+    - "/email-sequence command for marketing nurture campaigns"
+  assessment: "7 concepts at B1 level. Over-Automation is the key new diagnostic concept, discovered through hands-on examination. The rest build on the Five Laws foundation from L05."
 
 differentiation:
-  extension_for_advanced: "Build two parallel sequences for the same prospect: one email-only, one mixed-channel (email + LinkedIn + WhatsApp). Compare Five Laws compliance across both. Which maintains Law 1 better? Design stop rules that differ by channel."
-  remedial_for_struggling: "Focus on building a 3-touch sequence with /build-sequence and auditing Law 1 across all touches. If you can identify where personalization degrades, you have the core insight."
+  extension_for_advanced: "Build two parallel sequences for the same prospect: one email-only, one mixed-channel (email + LinkedIn). Compare personalisation decay rates across both. Which maintains Law 1 better by touch 5? Design different exit conditions for each channel."
+  remedial_for_struggling: "Focus on building a 3-touch sequence and auditing Law 1 across all touches. If you can identify where personalisation degrades, you have the core insight."
 ---
 
-# Multi-Touch Sequences and Copywriting
+# Multi-Touch Sequences and Follow-Up
 
-In Lesson 4, you built the Five Laws framework for evaluating single outreach messages. Now you will apply those laws across an entire **multi-touch sequence** -- a planned series of messages delivered across days and channels to move a prospect from unaware to engaged. The challenge is not sending more messages. The challenge is maintaining Five Laws discipline from touch #1 through touch #5 when the temptation to go generic grows with every follow-up.
+In Lesson 5, you drafted personalised outreach that follows the Five Laws. Sarah Chen received your LinkedIn message. She didn't respond. Now what?
 
-This lesson introduces a new agent error type: **Over-Automation**. In Lesson 1, you diagnosed Hallucinated Data. In Lesson 3, Miscalibrated Scoring. In Lesson 4, Compliance Gaps. Over-Automation is what happens when an agent keeps sending messages after the prospect has signalled they are not interested -- or has gone silent long enough that continued outreach damages your brand.
+Most reps face this moment and make one of two mistakes. They give up after a single touch — concluding that silence means disinterest. Or they send the same message again, hoping repetition will break through. Neither works. Industry data shows that single-touch outreach earns roughly a 5% response rate, while a well-constructed 6-touch sequence with genuine value at every step reaches 25-35%. The difference is not persistence. The difference is that each subsequent touch adds something the prospect did not have before — a case study, an industry insight, a diagnostic question — so that by touch 4 or 5, the cumulative value earns a reply.
 
-## What a Multi-Touch Sequence Looks Like
+The problem is cognitive load. Writing six unique, personalised touches for every prospect in your pipeline is exhausting. By touch 3, most reps default to generic follow-ups that could be sent to anyone. That is where the agent helps — and where it introduces a new risk. This lesson builds a complete 6-touch sequence, compares sales sequences to marketing sequences, and surfaces a new error type that the agent will not warn you about.
 
-A **multi-touch sequence** is a structured series of 5-12 outreach messages delivered across multiple channels over a defined time period. In B2B sales, the industry benchmark is 7-12 touches before a prospect responds. Not because prospects are ignoring you -- because they are busy, your first message arrived at the wrong time, and they need multiple exposure points before your name registers.
+## Building the Meridian Sequence
 
-Each touch in a sequence has three components:
+Sarah Chen is Director of Supply Chain Operations at Meridian Logistics in London. Your research brief from Lesson 2 identified that Meridian completed a BrightPath acquisition in Q3, their supply chain consolidation is behind schedule, and Sarah posted on LinkedIn about warehouse management system integration challenges. She is a top-scoring prospect from Lesson 3. You sent a Five Laws-compliant message in Lesson 5. She has not responded.
 
-| Component | What It Means | Example |
-|-----------|--------------|---------|
-| **Channel** | Where the message is delivered | Email, LinkedIn, WhatsApp Business |
-| **Cadence** | Days between this touch and the previous one | 3 days, 5 days, 7 days |
-| **Intent** | What this specific touch accomplishes | Introduce, add value, request meeting, break up |
-
-The `/build-sequence` command generates all of this from a prospect's research brief. The `sequence` skill handles the structural logic -- channel rotation, cadence spacing, intent progression. The `copywriting` skill generates the actual message text. The `follow-up` skill handles responses that arrive mid-sequence.
-
-## Building a Sequence: NexaFlow Prospect
-
-Let's build a real sequence. NexaFlow Technologies in Karachi has a prospect -- Bilal Asif, VP of Engineering at a logistics SaaS company with 200 employees. The research brief from Lesson 1 identified that his company recently expanded to three Gulf markets, their API response times degraded after the expansion, and Bilal posted on LinkedIn about hiring difficulties for senior backend engineers.
+Build the follow-up sequence:
 
 ```
-/build-sequence NexaFlow-prospect-001 --touches 5 --channels email,linkedin,whatsapp
+Build a 6-touch, 21-day outreach sequence for Sarah Chen at
+Meridian Logistics. Mix LinkedIn and email. Goal: discovery call.
+Tone: peer-level, no pitch. Use the research brief showing
+BrightPath acquisition, supply chain consolidation delays,
+and WMS integration challenges.
 ```
 
-**Output:**
+The sequence skill auto-activates from the trigger phrases. Here is the complete output:
 
 ```
-SEQUENCE: NexaFlow → Bilal Asif (VP Engineering, LogiTrack)
-Generated: 5 touches across 3 channels over 18 days
-Research brief: NexaFlow-prospect-001
+SEQUENCE: NexaFlow → Sarah Chen (Dir. Supply Chain, Meridian Logistics)
+Generated: 6 touches across 2 channels over 21 days
+Research brief: Meridian-prospect-003
 
-TOUCH 1 — Email (Day 0)
-Subject: Gulf expansion and API latency — a pattern we've solved before
+TOUCH 1 — LinkedIn Message (Day 0)  [Already sent in L05]
 ────────────────────────────────────────────────────────────
-Bilal,
+Sarah — your post about WMS integration after the BrightPath
+acquisition caught my attention. Consolidating two warehouse
+management systems while maintaining SLA commitments to existing
+clients is one of the hardest post-acquisition challenges in
+logistics. NexaFlow helped a freight company complete a similar
+WMS merge in 11 weeks. Happy to share the playbook if it's
+relevant to your timeline.
 
-Your team's expansion into UAE, Saudi Arabia, and Qatar is impressive
-— scaling a logistics platform across three regulatory environments
-in one quarter takes serious engineering discipline.
+TOUCH 2 — Email (Day 3)
+────────────────────────────────────────────────────────────
+Subject: WMS consolidation timelines after logistics acquisitions
 
-I noticed your LinkedIn post about the difficulty of hiring senior
-backend engineers in Karachi's current market. That hiring challenge
-often compounds when API response times increase after geographic
-expansion — which is exactly the pattern our clients in logistics
-SaaS hit after crossing the 150ms threshold on cross-region calls.
+Sarah,
 
-NexaFlow's edge routing layer reduced P95 latency by 62% for a
-freight platform with a similar Gulf expansion. Happy to share the
-architecture brief if it's relevant to what your team is facing.
+I reached out on LinkedIn about the BrightPath integration.
+Wanted to share a specific data point: logistics companies that
+begin WMS consolidation within 90 days of acquisition close
+typically complete 40% faster than those that wait for "the
+right time." The reason is data drift — every week of parallel
+systems increases the reconciliation effort geometrically.
 
-— Saad
+Meridian's Q3 close date suggests you are in the window where
+early consolidation still delivers the full speed advantage.
+
+No pitch — just a question: has your team set a target date for
+unified WMS, or are you still mapping the integration scope?
+
+— Farah
 NexaFlow Technologies
 
-TOUCH 2 — LinkedIn Connection Request (Day 3)
-────────────────────────────────────────────────────────────
-Bilal — Saad from NexaFlow. Saw your Gulf expansion work at
-LogiTrack. We help logistics SaaS teams solve the latency
-problems that follow multi-region launches. Sent you an email
-with specifics — happy to connect here too.
-
-TOUCH 3 — Email (Day 8)
-Subject: How FreightFlow cut Gulf API latency by 62%
-────────────────────────────────────────────────────────────
-Bilal,
-
-Following up on my earlier note. I mentioned NexaFlow's work
-with a similar Gulf expansion — here is the 2-page architecture
-brief showing how FreightFlow reduced cross-region P95 latency
-from 340ms to 128ms.
-
-[Link to case study]
-
-The three biggest wins were edge caching for customs API calls,
-connection pooling across Gulf endpoints, and async processing
-for shipment tracking updates. Each one addressed a bottleneck
-that shows up specifically when logistics platforms expand into
-GCC markets.
-
-If any of these match what your team is debugging, happy to walk
-through the implementation. If the timing isn't right, no
-worries at all.
-
-— Saad
-
-TOUCH 4 — WhatsApp Business (Day 12)
-────────────────────────────────────────────────────────────
-Hi Bilal — Saad from NexaFlow. Shared an architecture brief
-on Gulf API latency via email last week. Quick question: is
-latency still a priority for your team this quarter, or has
-the focus shifted? Either way, happy to help where I can.
-
-TOUCH 5 — Email: Breakup (Day 18)
-Subject: Closing the loop
-────────────────────────────────────────────────────────────
-Bilal,
-
-I have reached out a few times about the Gulf API latency
-challenge. I don't want to crowd your inbox, so this will be
-my last note on the topic.
-
-If latency reduction becomes a priority later, the architecture
-brief is still available — just reply to this thread and I will
-send it over.
-
-Wishing your team well with the Gulf expansion.
-
-— Saad
-```
-
-### Auditing the Sequence Against the Five Laws
-
-Now the real work begins. The agent generated the sequence. Your job is to evaluate whether each touch maintains Five Laws discipline.
-
-| Touch | Law 1: Specific Reference | Law 2: Problem Framing | Law 3: Credibility Evidence | Law 4: Conciseness | Law 5: Clear CTA |
-|-------|--------------------------|----------------------|---------------------------|-------------------|------------------|
-| **#1 Email** | Gulf expansion + LinkedIn hiring post + 150ms threshold -- **strong** | API latency after geographic expansion -- **specific** | 62% latency reduction for freight platform -- **concrete** | 4 paragraphs, 127 words -- **within range** | "Happy to share the architecture brief" -- **low-pressure** |
-| **#2 LinkedIn** | References Gulf expansion and email -- **adequate** | Latency problems after multi-region launches -- **inherited** | No new evidence -- **acceptable for LinkedIn** | 42 words -- **correct for platform** | "Happy to connect here too" -- **appropriate** |
-| **#3 Email** | FreightFlow case study, three specific wins -- **strong** | Same core problem, deeper specifics -- **maintained** | 2-page brief, 340ms→128ms numbers -- **excellent** | 5 paragraphs, 118 words -- **within range** | "Happy to walk through" + graceful exit -- **dual CTA** |
-| **#4 WhatsApp** | References email and brief from last week -- **adequate** | "Is latency still a priority this quarter?" -- **checking relevance** | None -- **appropriate for WhatsApp** | 38 words -- **correct for WhatsApp** | Direct question about priority -- **clear** |
-| **#5 Breakup** | References previous outreach -- **minimal but appropriate** | Gulf API latency -- **summary only** | Brief still available -- **light reference** | 3 paragraphs, 72 words -- **concise** | "Reply to this thread" -- **clear exit** |
-
-**Key finding:** Law 1 (Specific Verifiable Reference) is strongest in touches #1 and #3, where the email format allows space for detail. It degrades in touches #4 and #5 -- not because the agent failed, but because WhatsApp and breakup messages have legitimate format constraints. This is expected behaviour, not a violation. The question to ask is: does each touch contain the *maximum* specificity that its channel allows?
-
-### Where Law 1 Decay Becomes a Problem
-
-**Law 1 decay** is the gradual loss of prospect-specific references as a sequence progresses. In a well-designed sequence, each touch introduces *new* specific information or reframes existing information from a different angle. In a poorly designed sequence, touches #3-5 recycle the same reference from touch #1 until it feels generic.
-
-Watch for these warning signs:
-
-- Touch #4 says "as I mentioned" without adding new context
-- Touch #5 references "my previous emails" without naming what was in them
-- Any touch after #2 could be sent to a different prospect without changes
-
-The NexaFlow sequence above avoids the worst decay because touch #3 introduces the FreightFlow case study (new evidence) and touch #4 asks a specific diagnostic question ("is latency still a priority this quarter?"). But touch #5 is close to the line -- it references "the Gulf API latency challenge" without new specificity. This is acceptable for a breakup message. It would not be acceptable for a mid-sequence value-add.
-
-## Channel Mixing: Pakistan vs London
-
-The same sequence looks different in different markets. The NexaFlow prospect in Karachi received WhatsApp Business at touch #4 because WhatsApp is the dominant B2B communication channel in Pakistan. Over 85% of Pakistani businesses use WhatsApp for professional communication, and a WhatsApp message from a vendor is expected and welcome.
-
-Now consider the same sequence for Meridian Logistics in London, where the prospect is Claire Whitfield, Director of Supply Chain Operations.
-
-```
-/build-sequence Meridian-prospect-003 --touches 5 --channels email,linkedin
-```
-
-Notice the difference: no WhatsApp channel. In the UK B2B market, WhatsApp is personal. Sending an unsolicited WhatsApp Business message to a prospect you have not met feels intrusive. The sequence uses email and LinkedIn only.
-
-**Output (abbreviated):**
-
-```
-SEQUENCE: Meridian → Claire Whitfield (Dir. Supply Chain, Meridian)
-Generated: 5 touches across 2 channels over 21 days
-
-TOUCH 1 — Email (Day 0)
-Subject: Post-acquisition supply chain consolidation — Meridian + BrightPath
-...references the BrightPath acquisition announced in Q3, supply chain
-integration challenges, and a case study from a similar logistics merger...
-
-TOUCH 2 — LinkedIn (Day 4)
-...connection request referencing the acquisition...
-
-TOUCH 3 — Email (Day 10)
-...value-add content: 1-page playbook on supply chain consolidation
-timelines for logistics companies...
-
-TOUCH 4 — LinkedIn InMail (Day 15)
-...references the playbook, asks whether consolidation timeline is
-tracking to their Q1 target...
-
-TOUCH 5 — Email: Breakup (Day 21)
-...graceful close, offers to reconnect in Q2 if timing shifts...
-```
-
-The channel mixing reflects market reality. Both sequences maintain the same Five Laws discipline, but they adapt to how business communication works in each geography.
-
-| Dimension | NexaFlow (Karachi) | Meridian (London) |
-|-----------|-------------------|------------------|
-| **Channels** | Email + LinkedIn + WhatsApp | Email + LinkedIn only |
-| **WhatsApp** | Touch #4 -- expected and welcome | Not included -- would feel intrusive |
-| **Cadence** | 18 days total (faster market tempo) | 21 days total (longer decision cycles) |
-| **Tone** | Direct, relationship-first | Formal, evidence-first |
-| **CTA style** | "Quick question" (conversational) | "If relevant to your timeline" (consultative) |
-
-## Generating Copywriting Variants
-
-Every touch in a sequence can be written multiple ways. The `copywriting` skill generates variants so you can evaluate which version best fits your audience and Five Laws compliance.
-
-Let's generate three variants for touch #1 of the NexaFlow sequence:
-
-```
-Activate the copywriting skill. Generate 3 variants for:
-
-Prospect: Bilal Asif, VP Engineering, LogiTrack (Karachi)
-Context: Gulf expansion, API latency issues, hiring challenges
-Intent: First touch -- introduce NexaFlow, reference research, low-pressure CTA
-Constraints: Five Laws compliance required. Max 150 words.
-```
-
-**Output:**
-
-**Variant A -- Problem-Led**
-```
-Subject: The latency problem that follows Gulf expansion
-
-Bilal, logistics platforms that expand into GCC markets almost always
-hit an API latency wall between month 3 and month 6. Cross-region
-calls to customs APIs, multi-tenant shipment tracking, and connection
-pooling across Gulf endpoints create compounding delays that
-worsen as transaction volume grows.
-
-NexaFlow helped FreightFlow cut their Gulf P95 latency from 340ms
-to 128ms. Happy to share the architecture brief if this matches
-what your team is seeing post-expansion.
-```
-
-**Variant B -- Research-Led**
-```
-Subject: Gulf expansion and API latency — a pattern we've solved before
-
-Bilal, your team's expansion into UAE, Saudi Arabia, and Qatar is
-impressive — scaling a logistics platform across three regulatory
-environments in one quarter takes serious engineering discipline.
-
-I noticed your LinkedIn post about hiring senior backend engineers.
-That hiring pressure often compounds when API response times degrade
-after geographic expansion. NexaFlow's edge routing reduced P95
-latency by 62% for a similar freight platform. Architecture brief
-available if relevant.
-```
-
-**Variant C -- Social-Proof-Led**
-```
-Subject: How three logistics SaaS teams solved Gulf API latency
-
-Bilal, we have worked with three logistics SaaS platforms that
-expanded into Gulf markets in the last 18 months. All three hit
-the same API latency pattern your team is likely facing after
-crossing into UAE, Saudi, and Qatar.
-
-The common solution was a three-layer approach: edge caching for
-customs calls, connection pooling, and async shipment tracking.
-Average P95 improvement was 58%. Happy to share the details if
-useful for your roadmap.
-```
-
-### Ranking the Variants
-
-| Law | Variant A | Variant B | Variant C |
-|-----|-----------|-----------|-----------|
-| **Law 1: Specific Reference** | Gulf expansion + latency pattern -- **good** | Gulf expansion + LinkedIn post + hiring -- **strongest** | Gulf expansion + three companies -- **good** |
-| **Law 2: Problem Framing** | Latency wall, compounding delays -- **vivid** | Hiring compounds latency -- **insightful** | Same pattern across three clients -- **pattern-based** |
-| **Law 3: Credibility** | 340ms→128ms for FreightFlow -- **strong** | 62% reduction -- **strong** | Three companies, 58% average -- **broadest** |
-| **Law 4: Conciseness** | 89 words -- **excellent** | 108 words -- **good** | 97 words -- **good** |
-| **Law 5: Clear CTA** | "Share the brief" -- **standard** | "Available if relevant" -- **low-pressure** | "Share details if useful" -- **low-pressure** |
-
-**Recommendation:** Variant B is strongest for *this* prospect because it includes the LinkedIn hiring post reference (Law 1), which Bilal can verify independently and which signals genuine research. Variant A is stronger on problem framing but lacks the personal reference. Variant C works best when the prospect values social proof over personalisation.
-
-The key insight: the `copywriting` skill generates options. You make the judgment call based on your Five Laws audit. The agent cannot decide which variant fits your prospect's personality and your relationship context. That is your domain expertise.
-
-## Over-Automation: When the Agent Should Have Stopped
-
-Here is the new diagnostic concept for this lesson. In Lesson 1, you learned to catch Hallucinated Data -- the agent inventing facts that sound plausible. In Lesson 3, Miscalibrated Scoring -- the agent assigning confidence levels that do not match reality. In Lesson 4, Compliance Gaps -- the agent missing jurisdiction-specific legal requirements.
-
-**Over-Automation** is what happens when an agent continues executing a sequence after the prospect has signalled -- through action or inaction -- that further outreach is unwanted.
-
-### The NexaFlow Scenario
-
-Imagine Bilal received touches #1 and #2. He did not open either email. He did not accept the LinkedIn connection request. No engagement signal whatsoever.
-
-The agent, following the sequence plan, sends touch #3 on Day 8, touch #4 on Day 12, and touch #5 on Day 18. All five touches are delivered.
-
-**What went wrong?**
-
-After touch #2 with zero engagement, the agent had no evidence that Bilal was interested, reachable, or even receiving the messages. Sending touches #3-5 to a prospect with no engagement signals is Over-Automation. It wastes your sending reputation, risks your email deliverability score, and creates the impression that NexaFlow sends unsolicited bulk messages.
-
-### A Worse Scenario
-
-Now imagine Bilal replied after touch #2:
-
-> "Thanks Saad, not something we are looking at this quarter. Best of luck."
-
-This is a clear negative response. The sequence should stop immediately. But if the `follow-up` skill is not activated, the agent does not process the reply. Touch #3 arrives on Day 8. Touch #4 arrives on Day 12. Bilal now receives *two more messages* after explicitly declining.
-
-This is not a nuisance. In many markets, this is a compliance violation. Under PECA (Pakistan's Prevention of Electronic Crimes Act), continued unsolicited electronic communication after a recipient has opted out can constitute an offence. Under CAN-SPAM (US) and GDPR (EU), the violations carry financial penalties.
-
-Over-Automation is not a formatting error. It is a business risk.
-
-### Defining Stop Rules
-
-**Stop rules** are conditions that halt or pause an automated sequence. Every sequence you build with `/build-sequence` should include explicit stop rules that the `follow-up` skill monitors.
-
-| Stop Condition | Action | Reasoning |
-|---------------|--------|-----------|
-| **Negative reply** ("not interested", "please stop", "unsubscribe") | **Halt immediately** | Continuing after an explicit decline is a compliance violation in most jurisdictions |
-| **Zero engagement after 3 touches** (no opens, no clicks, no replies) | **Pause and review** | Three touches with zero signal means the prospect is either unreachable or uninterested -- human review required |
-| **Out-of-office reply** | **Pause until return date + 2 days** | Sending messages to someone who is away wastes touches and creates inbox clutter |
-| **Bounce / invalid email** | **Halt and flag for data team** | Continued sends to invalid addresses damage sender reputation |
-| **Prospect engages on different channel** (e.g. replies on LinkedIn but not email) | **Shift sequence to active channel** | Follow the prospect's preferred communication method |
-| **Prospect forwards to colleague** ("Copying in our CTO") | **Pause, re-research, and rebuild** | New stakeholder requires a fresh research brief and a new sequence |
-
-These stop rules are not optional extras. They are the governance layer that separates professional outreach from spam. When you evaluate any sequence the agent produces, check for stop rules before you check for copywriting quality.
-
-## Handling a Mid-Sequence Reply
-
-When a prospect replies during a sequence, the `follow-up` skill takes over from the `sequence` skill. Let's say Bilal replies after touch #3:
-
-> "This is interesting. We are not ready to evaluate vendors this quarter, but could you send more details about the edge caching approach? Our CTO might want to review it in Q2."
-
-This is a positive-but-delayed response. The `follow-up` skill needs to:
-
-1. **Stop the remaining sequence touches** -- touch #4 and #5 should not send
-2. **Acknowledge the timeline** -- respect "not this quarter"
-3. **Deliver the requested content** -- the edge caching details
-4. **Set a re-engagement trigger** -- follow up at the start of Q2
-
-```
-Activate the follow-up skill. Prospect replied to touch #3 with a positive-
-but-delayed response. They want edge caching details for CTO review in Q2.
-Draft a reply that stops the sequence, delivers the content, and sets a
-Q2 re-engagement.
-```
-
-**Output:**
-
-```
-Subject: Re: How FreightFlow cut Gulf API latency by 62%
-
-Bilal,
-
-Appreciate the reply. No rush at all — Q2 review makes sense given
-your team's current Gulf rollout priorities.
-
-Attached is the edge caching deep dive your CTO asked about. It
-covers the three-layer architecture (edge cache → connection pool
-→ async processing) with configuration examples for GCC-region
-deployments.
-
-I will follow up in the first week of April to see if a
-technical walkthrough would be useful for your CTO's evaluation.
-Until then, happy to answer any questions that come up from the
-document.
-
-— Saad
-```
-
-**Five Laws check on the follow-up:**
-
-- **Law 1:** References the specific edge caching request and CTO -- **pass**
-- **Law 2:** Acknowledges their timeline, does not push -- **pass**
-- **Law 3:** Delivers the requested deep dive document -- **pass**
-- **Law 4:** 87 words -- **concise**
-- **Law 5:** "First week of April" re-engagement is specific -- **pass**
-
-Notice what the `follow-up` skill did not do: it did not try to accelerate the timeline ("Are you sure you can't look at this sooner?"), it did not add a new pitch ("By the way, we also offer..."), and it did not send the remaining sequence touches. Restraint is a feature.
-
-## Failure Analysis: Spot the Problems
-
-Here is a 5-touch sequence with two deliberate failures. Read the sequence and identify what went wrong before checking the analysis below.
-
-```
-SEQUENCE: NexaFlow → Prospect Ahmed (CTO, DataPulse, Lahore)
-Topic: API monitoring solution
-
-TOUCH 1 — Email (Day 0)
-Subject: API monitoring for growing SaaS teams
-"Ahmed, as your team scales DataPulse, API monitoring becomes
-critical. NexaFlow's monitoring suite helps teams like yours
-catch latency issues before users notice. We've helped several
-SaaS companies reduce downtime by 40%. Want to see a demo?"
-
-TOUCH 2 — LinkedIn (Day 3)
-"Ahmed — Saad from NexaFlow. We help SaaS teams monitor APIs.
-Sent you an email — let's connect."
-
 TOUCH 3 — Email (Day 7)
-Subject: Following up on API monitoring
-"Ahmed, following up on my previous email about API monitoring.
-Many SaaS teams find that proactive monitoring saves significant
-engineering time. Happy to show you how."
+────────────────────────────────────────────────────────────
+Subject: How TransGlobal merged two WMS platforms in 11 weeks
 
-TOUCH 4 — Email (Day 12)
-Subject: Quick question about API monitoring
-"Ahmed, I know you're busy. Just wanted to check if API monitoring
-is on your radar this quarter. We've helped several companies
-in your space. Let me know if you'd like to chat."
+Sarah,
 
-[Ahmed replied on Day 9: "Not interested, thanks."]
+Following up with the case study I mentioned. TransGlobal
+Freight faced a similar post-acquisition WMS challenge last
+year — two Tier 1 platforms serving overlapping regions.
 
-TOUCH 5 — Email (Day 18)
-Subject: Last note on API monitoring
-"Ahmed, this is my last email about monitoring. If you ever want
-to revisit, just reply to this thread."
+Key numbers from their consolidation:
+• 11 weeks from mapping to unified system
+• 23% reduction in warehouse operating costs in Q1 post-merge
+• Zero SLA breaches during cutover (their biggest concern)
+
+The three decisions that accelerated their timeline were:
+(1) consolidating inventory masters before touching order flows,
+(2) running parallel systems for 2 weeks instead of the planned
+6, and (3) automating exception handling for the 400+ SKU
+mapping conflicts.
+
+I attached the 2-page brief. If any of these match what your
+team is working through, happy to walk through the
+implementation details.
+
+— Farah
+
+TOUCH 4 — LinkedIn Comment/DM (Day 12)
+────────────────────────────────────────────────────────────
+Sarah — shared a WMS consolidation case study via email last
+week (TransGlobal, 11-week timeline). Quick question: is the
+BrightPath integration still the top priority this quarter,
+or has the scope shifted? Either way, happy to help where I
+can.
+
+TOUCH 5 — Email (Day 17)
+────────────────────────────────────────────────────────────
+Subject: One insight from your Q3 earnings mention
+
+Sarah,
+
+I noticed Meridian's Q3 update mentioned "integration
+synergies expected in H1." If the BrightPath WMS
+consolidation is part of those synergies, the 90-day window
+I mentioned is closing.
+
+One thing we have seen work: a 2-hour consolidation
+diagnostic where we map the overlap between your two WMS
+platforms and flag the three highest-risk data conflicts.
+No commitment, no proposal — just a clear picture of
+what the first 30 days would look like.
+
+Would that be useful before your team finalises the H1
+integration plan?
+
+— Farah
+
+TOUCH 6 — Email: Graceful Close (Day 21)
+────────────────────────────────────────────────────────────
+Subject: Closing the loop on WMS consolidation
+
+Sarah,
+
+I have shared a few perspectives on the BrightPath WMS
+integration over the past three weeks. I don't want to
+crowd your inbox, so this will be my last note on the topic.
+
+If consolidation becomes a priority later, the TransGlobal
+case study and the diagnostic offer are both still on the
+table — just reply to this thread.
+
+Wishing your team well with the integration.
+
+— Farah
 ```
 
-### Analysis
+### Understanding the Sequence Logic
 
-**Problem 1 -- Law 1 Decay (Touch #3 and #4):**
+Read through all six touches and notice the progression. This is not six versions of the same message. Each touch adds something new:
 
-Touch #1 references "as your team scales DataPulse" -- generic. It mentions no specific research finding, no LinkedIn post, no company event. Compare this to the NexaFlow-Bilal sequence where touch #1 referenced the Gulf expansion, the hiring LinkedIn post, and the 150ms latency threshold. This touch #1 could be sent to any SaaS CTO without changes. It barely passes Law 1.
+| Touch  | Channel  | New Value Added                                       | Intent                            |
+| ------ | -------- | ----------------------------------------------------- | --------------------------------- |
+| **#1** | LinkedIn | WMS integration insight + playbook offer              | Introduce, establish relevance    |
+| **#2** | Email    | 90-day consolidation data point + diagnostic question | Add urgency with data             |
+| **#3** | Email    | TransGlobal case study with 3 specific decisions      | Deliver concrete proof            |
+| **#4** | LinkedIn | Check whether priority has shifted                    | Respect their time, re-engage     |
+| **#5** | Email    | Q3 earnings insight + 2-hour diagnostic offer         | New research + low-commitment CTA |
+| **#6** | Email    | Graceful close with door open                         | Protect the relationship          |
 
-By touch #3, there is no specific reference left at all. "Following up on my previous email about API monitoring" contains zero prospect-specific information. Touch #4 is worse: "several companies in your space" is the kind of generic social proof that tells the prospect you did not research them. Law 1 has fully decayed by touch #3.
+Touch 3 is content, not pitch. Touch 6 is a graceful close, not a last-ditch ask. The sequence earns attention by delivering value at every step — case studies, data points, diagnostic offers — rather than repeating the same request with increasing desperation.
 
-**Problem 2 -- Over-Automation (Touch #5 after negative reply):**
+## Sales Sequences vs Marketing Sequences
 
-Ahmed replied on Day 9 with "Not interested, thanks." This is a clear negative response. The sequence should have halted immediately. Instead, touch #4 went out on Day 12 and touch #5 on Day 18. That is two messages sent *after* the prospect explicitly declined.
+The sequence you just built is a **sales sequence** — personalised to Sarah Chen, informed by her research brief, tailored to her specific situation. Now compare it to a marketing sequence.
 
-In a Pakistani market context, this violates professional norms. In EU or US markets, it may violate CAN-SPAM or GDPR. In any market, it tells Ahmed that NexaFlow does not read replies -- which destroys trust with the entire organisation, not just this prospect.
-
-**The fix:** Activate the `follow-up` skill to monitor replies. Define a stop rule: any reply containing "not interested", "no thanks", "remove me", or "unsubscribe" triggers an immediate halt. Add a second rule: zero engagement after 3 touches triggers a pause for human review.
-
-## Building Your Own Sequences
-
-You now have the framework. Here is the workflow for building and evaluating sequences for your own prospects.
-
-**Step 1 -- Generate the sequence:**
-
-```
-/build-sequence [prospect-id] --touches 5 --channels email,linkedin
-```
-
-Add `--channels email,linkedin,whatsapp` if your market supports WhatsApp B2B outreach (Pakistan, UAE, India, parts of Southeast Asia and Latin America).
-
-**Step 2 -- Audit every touch against the Five Laws:**
-
-For each touch, answer five questions:
-
-1. Does this touch contain a **specific, verifiable** reference the prospect can confirm? (Law 1)
-2. Does it frame a **problem the prospect recognises** from their own experience? (Law 2)
-3. Does it include **credibility evidence** appropriate for this channel? (Law 3)
-4. Is it **within word limits** for the channel? (Law 4: email 100-200 words, LinkedIn 100 words, WhatsApp 50 words)
-5. Is the **call to action clear** and low-pressure? (Law 5)
-
-**Step 3 -- Check for Law 1 decay:**
-
-Read touches #1 through #5 in order. Does the specificity *increase* (new research, new evidence) or *decrease* (recycled references, generic language)? If specificity drops after touch #2, the sequence needs revision.
-
-**Step 4 -- Generate copywriting variants for any weak touch:**
+Run the `/email-sequence` command from the marketing plugin:
 
 ```
-Activate the copywriting skill. Generate 3 variants for touch #3
-of this sequence. The current version is too generic -- Law 1 has
-decayed. Add new prospect-specific evidence or reframe the existing
-research from a different angle.
+/email-sequence Create a 5-email onboarding nurture sequence for
+new NexaFlow trial users. Goal: convert to paid within 14 days.
 ```
 
-**Step 5 -- Define stop rules:**
+**Output:**
 
-Before activating the sequence, write down at least three stop conditions:
+```
+NURTURE SEQUENCE: NexaFlow Trial → Paid Conversion
+Generated: 5 emails over 14 days
+Segment: All new trial users
 
-1. What happens if the prospect replies negatively?
-2. What happens if there is zero engagement after N touches?
-3. What happens if the prospect replies positively but with a delayed timeline?
+EMAIL 1 — Welcome (Day 0)
+Subject: Your NexaFlow trial is live — here's where to start
+"Welcome to NexaFlow! Your trial includes full access to
+route optimisation, shipment tracking, and API monitoring.
+Here's a 3-step quick start guide..."
 
-Activate the `follow-up` skill to monitor for these conditions during execution.
+EMAIL 2 — Feature Highlight (Day 3)
+Subject: The feature most trial users miss
+"80% of our most successful customers activate real-time
+route optimisation in their first week. Here's how to set
+it up in 5 minutes..."
 
-**Step 6 -- Evaluate after completion:**
+EMAIL 3 — Social Proof (Day 7)
+Subject: How LogiPrime reduced delivery costs by 31%
+"LogiPrime started as a trial user 6 months ago. Today
+they process 12,000 shipments per day through NexaFlow.
+Here's what they did in their first 14 days..."
 
-After the sequence runs (or after the first 3 touches), review:
+EMAIL 4 — Objection Handling (Day 10)
+Subject: "We're not ready to commit yet" — we hear this a lot
+"Most teams need 2-3 weeks to see results. That's why we
+extended your trial by 7 days — no action needed. Here's
+what to focus on this week..."
 
-- Open rates per touch (if your email tool tracks them)
-- Reply rate and reply sentiment
-- Which channel generated the response
-- Whether any stop rule should have triggered earlier
+EMAIL 5 — Urgency + CTA (Day 14)
+Subject: Your trial ends tomorrow — here's what you'd lose
+"Your trial expires in 24 hours. You've processed [X]
+shipments and saved [Y] hours this week. Lock in your
+rate before it resets..."
+```
+
+Now compare the two sequences side by side:
+
+| Dimension           | Sales Sequence (Sarah Chen)                                                   | Marketing Sequence (Trial Users)                           |
+| ------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| **Personalisation** | References BrightPath acquisition, WMS challenges, Q3 earnings, LinkedIn post | Generic to all trial users — no individual research        |
+| **Trigger**         | Rep-initiated based on research                                               | Lifecycle-triggered (sign-up event)                        |
+| **Audience**        | One person: Sarah Chen                                                        | A segment: all new trial users                             |
+| **Exit condition**  | Reply, bounce, unsubscribe, silence after 6 → warm nurture                    | Trial converts, trial expires, user unsubscribes           |
+| **Five Laws**       | Enforced on every touch (Law 1 requires specific references)                  | Law 1 not applicable — no individual prospect to reference |
+| **Who sends**       | Rep reviews and approves each touch                                           | Fully automated, no human review                           |
+
+The key difference is personalisation depth. The sales sequence would fail if you swapped "Sarah Chen" for any other name — every touch references her specific situation. The marketing sequence works for any trial user because it references shared experiences (feature adoption, social proof), not individual research.
+
+Neither is better. They serve different purposes. Sales sequences convert known, researched prospects. Marketing sequences nurture segments at scale. The mistake is using a marketing sequence where a sales sequence is needed — sending Sarah Chen the same generic nurture email that 500 other trial users received.
+
+## Discovering the Decay Problem
+
+Go back to the Meridian sales sequence. Read Touch 5 carefully.
+
+```
+Ask yourself: Does Touch 5 reference anything specific about
+Sarah that was not already in Touch 1? Or has the personalisation
+decayed to generic advice?
+```
+
+Look at the language: "I noticed Meridian's Q3 update mentioned 'integration synergies expected in H1.'" This references a new data point — the Q3 earnings mention — which means the agent found additional research to keep the personalisation fresh. That is good.
+
+Now look at the phrase "the 90-day window I mentioned." This refers back to Touch 2. It is not new information. It is recycled context. By Touch 5, the agent is working harder to find new angles, and the ratio of new insight to recycled reference is shifting.
+
+This is **personalisation decay** — the gradual loss of prospect-specific references as a sequence progresses. In the early touches, the research brief provides rich material. By touches 4-5, the agent has used the best research and starts recycling earlier references or falling back to broader industry observations.
+
+Personalisation decay is not a bug in the agent. It is a structural limitation: the research brief has finite material, and a 6-touch sequence demands more unique angles than most briefs contain. The lesson is that later touches need manual review and enhancement. The agent drafts the structure. You add the fresh insight — a new LinkedIn post, a conference talk, a mutual connection — that keeps the sequence feeling researched, not robotic.
+
+:::warning Over-Automation
+You have just discovered a new agent error type. In Lesson 1, you identified **Hallucinated Data** — the agent inventing facts. In Lesson 3, **Miscalibrated Scoring** — the agent weighting dimensions incorrectly. In Lesson 5, **Compliance Gap** — legally non-compliant content. Now you have **Over-Automation**: the agent continues executing when it should pause for human judgment.
+
+Over-Automation is not limited to sequences that run too long. It includes any situation where the agent's output quality has degraded below the threshold where sending it helps your relationship with the prospect. A Touch 5 with recycled personalisation is not illegal. But it tells Sarah Chen that the person writing to her has run out of things to say — and is letting a machine keep talking.
+
+The diagnostic question: **"Should the agent have stopped before touch #5?"** If the answer is yes, you have detected Over-Automation. The fix is not deleting the touch. The fix is enhancing it with fresh research or replacing it with a manual, genuinely personal message.
+:::
+
+## Follow-Up Templates
+
+When a prospect responds — whether after touch 2 or touch 5 — the sequence stops and the follow-up skill takes over. Let's build a follow-up for a successful outcome.
+
+Sarah Chen replied after Touch 4:
+
+> "Hi Farah — the TransGlobal brief was helpful. We're finalising our WMS integration scope next month. Could we set up a call in early April to walk through the consolidation diagnostic you mentioned?"
+
+This is a positive response with a delayed timeline. Generate the follow-up:
+
+```
+Write a follow-up email after my outreach sequence to Sarah Chen
+at Meridian. She liked the TransGlobal case study and wants to
+schedule a consolidation diagnostic call in early April. Reference
+specific conversation points from the sequence.
+```
+
+The follow-up skill auto-activates:
+
+```
+Subject: Re: How TransGlobal merged two WMS platforms in 11 weeks
+
+Sarah,
+
+Great to hear the TransGlobal brief was useful — the inventory-
+masters-first approach they took is often the biggest unlock for
+logistics companies managing post-acquisition WMS overlap.
+
+I've blocked two slots for the consolidation diagnostic:
+• Tuesday 1 April, 10:00 GMT
+• Thursday 3 April, 14:00 GMT
+
+The diagnostic takes about 2 hours. I'll need:
+1. A list of both WMS platforms and their version numbers
+2. The number of active SKUs in each system
+3. Your current SLA commitments for order fulfilment
+
+If neither slot works, send me a couple of times that do and
+I'll adjust. Looking forward to it.
+
+— Farah
+```
+
+Now compare what a follow-up looks like **without** the context from the sequence:
+
+```
+Subject: Following up
+
+Sarah,
+
+Thanks for your interest in NexaFlow. We'd love to schedule
+a call to discuss how we can help with your supply chain
+needs. Please let us know a time that works.
+
+— Farah
+```
+
+The difference is stark. The context-aware follow-up references the TransGlobal brief, the inventory-masters-first approach, and provides a specific diagnostic agenda. The generic follow-up could be sent to anyone. The sequence built context over 21 days. The follow-up skill uses that context to make the response feel like a continuation of a conversation, not a cold start.
+
+## Exit Conditions
+
+Every sequence needs rules for when to stop. Without them, the agent sends all six touches regardless of what happens — and that is how Over-Automation damages relationships.
+
+| Condition                          | Action                                               | Reasoning                                                                                                                                 |
+| ---------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **Reply to any touch**             | Exit sequence, brief the rep                         | The prospect has engaged — shift from sequence to conversation                                                                            |
+| **Email bounce**                   | Switch channel (try LinkedIn)                        | The email address may be wrong, but the prospect is still reachable                                                                       |
+| **Unsubscribe or "stop"**          | Stop immediately, log in CRM                         | Continuing after an explicit opt-out is both unprofessional and, in most jurisdictions, illegal                                           |
+| **No response after 6 touches**    | Move to warm nurture, do not re-sequence for 90 days | Six touches with zero signal means the timing is wrong — not necessarily the prospect. Re-sequencing before 90 days feels like harassment |
+| **Out-of-office reply**            | Pause until return date + 3 days                     | Sending messages to someone who is away wastes touches and creates inbox clutter when they return                                         |
+| **Prospect forwards to colleague** | Pause, re-research, rebuild                          | A new stakeholder requires a fresh research brief and a new sequence tailored to their role                                               |
+
+Exit conditions are the governance layer that separates professional outreach from spam. When you evaluate any sequence the agent produces, check the exit conditions before you check the copywriting quality. A beautifully written Touch 5 that arrives after the prospect said "not interested" is worse than a mediocre Touch 1 sent at the right time.
+
+## What You Built
+
+In this lesson you constructed the complete multi-touch outreach workflow:
+
+- A complete 6-touch, 21-day outreach sequence for a top prospect, with every touch adding new value
+- A marketing nurture sequence for comparison, showing the structural differences between personalised sales outreach and segment-level automation
+- The Over-Automation error type, discovered by examining where personalisation decays across sequence length
+- Follow-up templates that use sequence context to continue the conversation naturally
+- Exit conditions for six scenarios — reply, bounce, unsubscribe, silence, out-of-office, and stakeholder change
 
 ## Try With AI
 
 Use these prompts in your preferred AI assistant.
 
-**Prompt 1: Build and Audit a Sequence**
+**Prompt 1: Build and Audit the Full Sequence**
 
 ```
-I'm selling [your product/service] to [prospect name, title, company].
+Build a 6-touch, 21-day outreach sequence for a real prospect in
+my pipeline. Here is their research brief:
 
-Here's what I know about them from research:
-- [Key fact 1: company event, expansion, hiring, funding round]
-- [Key fact 2: prospect's LinkedIn post or conference talk]
-- [Key fact 3: industry challenge relevant to your solution]
+[Paste your research brief from Lesson 2]
 
-Build a 5-touch outreach sequence across email and LinkedIn (add
-WhatsApp if my market supports it). For each touch, show me:
-1. The channel and day number
-2. The full message text
-3. A Five Laws audit: score each law (strong / adequate / weak)
+Mix email and LinkedIn. Goal: discovery call. Tone: peer-level.
 
-After generating all 5 touches, identify where Law 1 (Specific
-Verifiable Reference) is weakest and suggest how to strengthen it.
+After generating all 6 touches, audit each one against the
+Five Laws from Lesson 5:
+- Law 1: Specific Verifiable Reference
+- Law 2: Lead with Prospect
+- Law 3: One Ask
+- Law 4: Hard Word Limits
+- Law 5: Zero Jargon
+
+For each touch, rate Law 1 as STRONG, ADEQUATE, or WEAK.
+Then identify: at which touch does personalisation start to
+decay? What new research would you need to strengthen it?
 ```
 
-**What you're learning:** You are practising the complete sequence-building workflow -- from research brief to Five Laws audit -- with your own real prospect data. The AI generates the structure; you evaluate whether the personalisation holds across all five touches. This builds your ability to spot Law 1 decay before it reaches a prospect's inbox.
+**What you're learning:** You are practising the complete sequence-building workflow — from research brief to Five Laws audit — with your own prospect data. The audit forces you to evaluate whether personalisation holds across all six touches or decays after touch 3. This builds the diagnostic instinct to catch Over-Automation before it reaches a prospect's inbox.
 
-**Prompt 2: Diagnose Over-Automation**
+**Prompt 2: Sales vs Marketing Comparison**
 
 ```
-Here is a 5-touch outreach sequence I built:
+Run /email-sequence for a marketing nurture campaign relevant to
+my business:
 
-[Paste your sequence here]
+"Create a 5-email nurture sequence for [describe your segment:
+new trial users, webinar attendees, whitepaper downloaders].
+Goal: [conversion goal]. Timeline: [number] days."
 
-Assume the prospect did NOT respond to any of the first 3 touches
-(no opens, no clicks, no replies). Then assume they replied after
-touch #2 with: "Not the right time, check back in 6 months."
+Now compare the output to a sales sequence you built for a
+specific prospect. Answer these questions:
 
-For each scenario:
-1. Which touch should have been the LAST one sent?
-2. What stop rule would have caught this?
-3. Write the follow-up message for the "check back in 6 months"
-   reply that stops the sequence and sets a re-engagement trigger.
-
-Also: review my sequence for any touches that could be sent to a
-different prospect without changes. Those touches have Law 1 decay
-and need rewriting.
+1. How many touches reference the individual prospect by name or
+   situation? (Sales should be 100%, marketing should be 0%)
+2. What triggers each sequence? (Rep-initiated vs lifecycle event)
+3. What are the exit conditions for each?
+4. Which sequence would you trust to send without editing?
+5. Where would using a marketing sequence for a sales prospect
+   damage your credibility?
 ```
 
-**What you're learning:** You are building diagnostic instincts for Over-Automation -- the ability to recognise when a sequence should stop before it reaches the end. The AI helps you define stop rules and draft follow-up responses, but the judgment about *when* to stop is a business decision that reflects your relationship with the prospect and your market's communication norms.
+**What you're learning:** The comparison reveals the structural boundary between personalised outreach and segment-level automation. Sales sequences require human review because personalisation is their value. Marketing sequences can run fully automated because they address shared experiences. Confusing the two — sending a generic nurture email to a researched prospect — signals that you did not do the work.
+
+**Prompt 3: Build a Sequence for a Real Prospect**
+
+```
+Build a 6-touch outreach sequence for a real prospect from my
+pipeline. After the agent generates all 6 touches, review each
+one and mark it:
+
+- SEND: Ready to go as-is
+- EDIT: Good structure, needs fresh personalisation or a stronger
+  data point
+- REWRITE: Too generic — could be sent to any prospect without
+  changes
+
+Tally your results. How many touches needed intervention?
+
+For any touch marked EDIT or REWRITE, explain what specific
+research or insight would make it SEND-ready. Then revise
+those touches and re-evaluate.
+```
+
+**What you're learning:** This exercise calibrates your judgment for where the agent's output is good enough to send and where it needs human enhancement. Most students find that touches 1-3 earn SEND or EDIT status, while touches 4-6 need more work. That pattern reflects personalisation decay — and knowing where it starts in your sequences tells you exactly where to invest your time.
+
+## Flashcards Study Aid
+
+<Flashcards />
