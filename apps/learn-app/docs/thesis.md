@@ -109,6 +109,20 @@ The developer doesn't disappear. The developer does _more_.
 
 AI employees are how work gets done. Identic AI is how humans will increasingly direct, govern, and interface with that AI workforce on their own behalf. The Agent Factory manufactures role-based AI employees to execute tasks, coordinate workflows, and deliver verified outcomes at scale, but the human remains the principal who defines purpose, values, constraints, and accountability. Identic AI adds a new personal layer: a self-sovereign agent that understands an individual’s context, judgment, and preferences, and can translate human intent into delegated action across the enterprise.¹ In this model, enterprise AI employees are the execution fabric, while identic AI is the human’s representative and orchestration layer, enabling people to supervise direction rather than perform routine execution themselves. The future firm will therefore operate across two connected layers: AI employees inside the factory, and personal agents at the edge, with humans setting intent and verifying outcomes across both.
 
+Add them to the **Personal Agents and the Enterprise Interface** section. The top hook should stay light — its job is to seed, not explain.
+
+Here's what I'd append right after the last sentence of that section ("...with humans setting intent and verifying outcomes across both."):
+
+We call this the **Two-Layer Model**:
+
+| Layer | What It Is | Who It Serves | What It Does |
+| --- | --- | --- | --- |
+| **Factory Layer** | Role-based AI employees | The enterprise | Executes tasks, coordinates workflows, delivers verified outcomes |
+| **Edge Layer** | Personal identic agents | The individual | Translates human intent, delegates to factory agents, governs on behalf of the principal |
+
+Neither layer works alone. A factory without personal agents at the edge forces humans back into manual orchestration. Personal agents without an industrialized factory behind them are digital assistants with no workforce to command. The Two-Layer Model is what makes the Agent Factory thesis complete: manufacturing at the core, human sovereignty at the edge, and specs as the contract language between them.
+
+
 **Notes**
 
 ¹ Don Tapscott, interview on HBR IdeaCast, “[With Rise of Agents, We Are Entering the World of Identic AI](https://hbr.org/podcast/2026/02/with-rise-of-agents-we-are-entering-the-world-of-identic-ai)”, Harvard Business Review, February 17, 2026.
