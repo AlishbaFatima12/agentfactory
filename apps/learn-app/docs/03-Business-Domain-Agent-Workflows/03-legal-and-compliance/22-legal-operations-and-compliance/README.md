@@ -51,11 +51,7 @@ This chapter requires the **Claude desktop app** with **Cowork** enabled (Pro, M
 
 ### Plugin & Companion Materials
 
-Install the Legal Ops plugin once — it activates automatically on all legal operations queries:
-
-**Cowork:** Sidebar → Customize → Browse plugins → + → Add marketplace from GitHub → `panaversity/agentfactory-business-plugins` → Install "Legal Ops"
-
-**Claude Code CLI:**
+Plugin installation is covered in [Prerequisites](#prerequisites) above. For Claude Code CLI users:
 
 ```bash
 claude plugin install legal-ops@agentfactory-business

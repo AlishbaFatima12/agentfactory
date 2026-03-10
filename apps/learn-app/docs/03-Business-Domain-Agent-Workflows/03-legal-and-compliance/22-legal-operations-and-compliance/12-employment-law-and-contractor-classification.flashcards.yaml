@@ -55,7 +55,7 @@ cards:
     tags: ["structural-options", "eor", "subsidiary"]
 
   - id: "ch22-12-employment-009"
-    front: "Why can't Brightpath simply relabel Usman's employment as an independent contractor agreement?"
+    front: "Why can't Brightpath relabel Usman's employment as an independent contractor agreement?"
     back: "All five classification indicators point toward employment: Usman works fixed hours (9am-6pm), uses company-provided equipment, receives a fixed salary with no financial risk, works exclusively for Brightpath, and has an ongoing role with no end date. Relabelling the contract does not change the economic reality. HMRC or FBR would likely reclassify the arrangement, resulting in back-taxes, penalties, and interest."
     difficulty: "intermediate"
     tags: ["misclassification", "economic-reality"]
