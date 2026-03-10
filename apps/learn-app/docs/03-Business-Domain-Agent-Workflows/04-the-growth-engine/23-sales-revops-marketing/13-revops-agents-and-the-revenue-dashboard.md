@@ -1,680 +1,531 @@
 ---
 sidebar_position: 13
-title: "Monitoring and Reporting Agents"
-description: "Deploy four schedule-driven agents — Lead Intelligence, CRM Hygiene, Marketing Performance, and Revenue Reporting — that run on cadence, produce actionable digests, and inform human decisions without taking autonomous action"
+title: "RevOps Agents and the Revenue Dashboard"
+description: "Configure five schedule-driven RevOps agents, run pipeline analysis and sales forecasts, build a weekly revenue dashboard with executive summary, and set up a daily sales briefing as the rep's morning routine"
 keywords:
   [
-    "lead-intelligence-agent",
-    "crm-hygiene-agent",
-    "marketing-performance-agent",
-    "revenue-reporting-agent",
-    "schedule-driven agents",
-    "monitoring agents",
-    "daily digest",
-    "weekly report",
-    "agent cadence",
     "RevOps agents",
-    "autonomous monitoring",
-    "pipeline alerts",
+    "revenue dashboard",
+    "pipeline review",
+    "sales forecast",
+    "daily briefing",
+    "lead intelligence agent",
+    "CRM hygiene agent",
+    "outreach sequencing agent",
+    "marketing performance agent",
+    "revenue reporting agent",
+    "agent schedule",
+    "NexaFlow Technologies",
+    "Meridian Logistics",
+    "pipeline health",
+    "weighted pipeline",
+    "deal velocity",
   ]
 chapter: 23
 lesson: 13
-duration_minutes: 25
+duration_minutes: 30
 
 # HIDDEN SKILLS METADATA
 skills:
-  - name: "Deploy and Evaluate Schedule-Driven Monitoring Agents"
-    proficiency_level: "B2"
+  - name: "Configure and Deploy RevOps Agents on Business Cadence"
+    proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can configure the scheduling, data sources, alert thresholds, and output format for 2+ monitoring agents and evaluate whether reports are actionable or noise"
+    measurable_at_this_level: "Student can describe the purpose, data sources, schedule, and output of each of the five RevOps agents and map them to a weekly business rhythm"
 
-  - name: "Trace Agent Skill Composition"
-    proficiency_level: "B2"
-    category: "Conceptual"
+  - name: "Analyse Pipeline Health and Forecast Revenue"
+    proficiency_level: "B1"
+    category: "Applied"
     bloom_level: "Analyze"
-    digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can trace which L01-L06 skills a monitoring agent composes internally and explain the data flow between composed skills"
+    digcomp_area: "Information and Data Literacy"
+    measurable_at_this_level: "Student can run /pipeline-review and /forecast, interpret deal-level health scores, identify at-risk deals, and evaluate whether forecast assumptions match the business context"
 
-  - name: "Evaluate Monitoring Agent Output for Actionability"
-    proficiency_level: "B2"
+  - name: "Evaluate Revenue Dashboard Metrics for Executive Reporting"
+    proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Evaluate"
-    digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can read a monitoring agent's output, determine whether each flagged item is actionable, and identify false positives"
+    digcomp_area: "Problem Solving"
+    measurable_at_this_level: "Student can assess whether a revenue dashboard's seven metrics accurately represent pipeline health and produce a five-bullet executive summary that a non-technical reader can act on"
 
 learning_objectives:
-  - objective: "Configure and deploy 2 monitoring agents with appropriate cadence, data sources, and alert thresholds"
-    proficiency_level: "B2"
+  - objective: "Configure five RevOps agents with appropriate cadence, data sources, and output format for a B2B sales operation"
+    proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student produces configuration for 2 agents and can explain why the chosen cadence matches the data freshness requirements"
+    assessment_method: "Student maps each agent to a day of the week and explains why the chosen cadence matches the data freshness requirement"
 
-  - objective: "Trace how a monitoring agent composes skills from L01-L06 into its workflow"
-    proficiency_level: "B2"
+  - objective: "Run pipeline analysis and sales forecast commands, interpret deal-level health scores, and identify at-risk deals"
+    proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Student can diagram the Lead Intelligence agent's internal skill composition and explain data flow"
+    assessment_method: "Student identifies the 3 highest-risk deals and the 2 most likely to close from /pipeline-review and /forecast output"
 
-  - objective: "Evaluate monitoring output for actionability and identify false positives"
-    proficiency_level: "B2"
+  - objective: "Build a revenue dashboard with seven core metrics and produce a weekly executive summary"
+    proficiency_level: "B1"
     bloom_level: "Evaluate"
-    assessment_method: "Given a CRM Hygiene report, student identifies at least 1 false positive and explains why the agent flagged it incorrectly"
+    assessment_method: "Student produces a 150-word executive email covering pipeline health, forecast status, and recommended actions"
 
 cognitive_load:
-  new_concepts: 6
+  new_concepts: 7
   concepts_list:
-    - "Schedule-driven agents (run on cadence, produce digests)"
-    - "Lead Intelligence Agent (daily signal monitoring and classification)"
-    - "CRM Hygiene Agent (weekly data quality maintenance)"
-    - "Marketing Performance Agent (campaign analytics and recommendations)"
-    - "Revenue Reporting Agent (pipeline metrics and forecasting)"
-    - "Composition trace (which skills an agent uses internally)"
-  assessment: "6 concepts at B2 level. Four agents are introduced but share a common pattern (schedule-driven, stateless, digest-producing). The composition trace is the deeper analytical concept."
+    - "Five RevOps agents as a coordinated system (not isolated tools)"
+    - "Outreach Sequencing Agent (event-driven, continuous monitoring)"
+    - "/pipeline-review with three-dimension scoring integration"
+    - "/forecast with best/worst/likely scenario modelling"
+    - "Daily sales briefing as morning routine"
+    - "Revenue dashboard with seven core metrics"
+    - "Agent schedule mapped to business rhythm (daily/weekly cadence)"
+  assessment: "7 concepts at B1 level. The five agents share a common pattern from L12's monitoring architecture, reducing novelty. Pipeline review, forecast, and dashboard are new analytical outputs. The daily briefing is a practical configuration exercise."
 
 differentiation:
-  extension_for_advanced: "Deploy all 4 agents and run them simultaneously on the same data. Compare outputs — do Lead Intelligence and Revenue Reporting agree? If they flag different things about the same prospect, which agent is right and why?"
-  remedial_for_struggling: "Focus on deploying 1 agent (Lead Intelligence). Configure it with 3 alert thresholds (HOT/WARM/NEUTRAL). Run it once. If you can evaluate whether the flagged items are actually actionable, you have the core judgment."
+  extension_for_advanced: "Add a sixth agent — a Competitor Intelligence Agent that scans industry news and competitor product updates weekly. Define its data sources, alert thresholds, and how its output integrates with the Lead Intelligence Agent's signals."
+  remedial_for_struggling: "Focus on the daily briefing and one agent (Lead Intelligence). If you can configure one agent's cadence, run the daily briefing, and read the pipeline review output, you have the core pattern. Add agents incrementally."
 ---
 
-# Monitoring and Reporting Agents
+# RevOps Agents and the Revenue Dashboard
 
-In Lessons 1 through 12, you ran every command yourself. You typed `/research-prospect` and read the brief. You typed `/score-lead` and evaluated the output. You connected the pipeline manually and caught errors through direct inspection. That works when you have 15 prospects and one rep. It breaks when you have 500 prospects and a team of eight.
+In Lesson 12, you built jurisdiction-compliant outreach for three markets. Every workflow in this chapter so far has required you to type a prompt. Research, score, enrich, draft outreach, analyse campaigns, check compliance -- all on demand, all dependent on you remembering to run the right command at the right time.
 
-Mature RevOps does not rely on reps remembering to run commands. It deploys agents that run those commands on schedule, digest what matters, and surface it to the humans who decide what to do. The four agents in this lesson watch your pipeline, your CRM, your campaigns, and your revenue numbers. They run on cadence. They produce reports. They flag anomalies. They never take autonomous action.
+That works when you have fifteen prospects and one rep. It breaks when NexaFlow has fifty active deals, three markets, and a sales team that needs pipeline intelligence before their first coffee. What if the system ran these workflows automatically, on schedule, without waiting for anyone to remember?
 
-That last point is critical. These are **monitoring agents**, not action agents. They inform decisions. They do not make them. The rep who reads a Lead Intelligence digest and decides to call Meridian Logistics first thing tomorrow morning is exercising judgment the agent cannot replicate. The agent identified the signal. The human chose the response. That division of labour is the foundation of trustworthy RevOps automation.
+RevOps agents run on cadence. They monitor signals, enrich CRM data, manage sequences, analyse campaign performance, and report on pipeline health. They produce digests. They never take autonomous action. The rep who reads the daily briefing and decides to call Meridian Logistics first is exercising judgment the agent cannot replicate. The agent identified the signal. The human chose the response.
 
----
+## The Five RevOps Agents
 
-## The Shared Architecture
+Each agent serves a distinct operational function. Together, they form a coordinated monitoring and reporting system that keeps NexaFlow's revenue engine running without manual prompts.
 
-All four agents in this lesson follow the same pattern. Before you learn any individual agent, understand the architecture they share.
+### Agent 1: Lead Intelligence Agent
 
-A **schedule-driven agent** runs on a fixed cadence — daily, weekly, or monthly. Between runs, it does nothing. It does not listen for events. It does not maintain a connection to your CRM. When its scheduled time arrives, it wakes up, reads the current state of whatever data source it monitors, produces a structured report, and goes back to sleep.
+The Lead Intelligence Agent watches for buying signals across your pipeline and alerts reps when something changes.
 
-Each run is **stateless**. The agent starts fresh every time. It does not remember what it flagged yesterday. If a prospect was flagged as HOT on Monday and nothing changed by Tuesday, the agent will flag it again on Tuesday. Statefulness lives in the CRM, not in the agent. This design keeps agents simple and predictable — you never have to debug why an agent "forgot" something.
+| Property     | Configuration                                                                               |
+| ------------ | ------------------------------------------------------------------------------------------- |
+| **Monitors** | Funding announcements, leadership changes, contract wins, hiring surges, social media posts |
+| **Trigger**  | Any HOT signal generates an alert within 2 hours                                            |
+| **Schedule** | Daily scan at 06:00 UTC, weekly digest every Monday                                         |
+| **Output**   | Priority-sorted signal digest with score impact                                             |
 
-The output is always a **digest** — a structured report designed for a human to scan in under three minutes. The digest contains flags, not instructions. It says "Meridian Logistics had a funding announcement yesterday" rather than "Call Meridian Logistics." The human interprets the flag. The human decides the action.
+When DataForge Solutions in Karachi posts two engineering roles mentioning "logistics integration" on Rozee.pk, the agent flags it as HOT. When Gulf Express in Dubai's VP of Operations posts about modernising fleet management on LinkedIn, the agent catches it within hours. Neither signal required a rep to remember to check.
 
-| Property | What It Means | Why It Matters |
-|----------|---------------|----------------|
-| **Schedule-driven** | Runs on cadence (daily, weekly, monthly) | Predictable. You know when reports arrive. |
-| **Stateless per run** | No memory of previous runs | Debuggable. Every run starts from the same baseline. |
-| **Digest-producing** | Outputs structured report, not action | Trustworthy. Human retains decision authority. |
-| **Composable** | Uses L01-L06 skills internally | Traceable. You know which skills produce which data. |
+### Agent 2: CRM Hygiene Agent
 
-That fourth property — **composable** — is what connects these agents to everything you built in the first twelve lessons. The `lead-intelligence-agent` does not contain its own research engine. It calls the same `prospect-research` skill you used in Lesson 2 and the same `lead-scoring` model you built in Lesson 3. The agent is an orchestrator that runs existing skills on schedule, filters the output, and formats the digest. Understanding what skills an agent composes is how you predict its behaviour, diagnose its errors, and extend its capabilities.
+The CRM Hygiene Agent scans your database for data quality issues that degrade scoring accuracy and pipeline reliability.
 
----
+| Property     | Configuration                                                                             |
+| ------------ | ----------------------------------------------------------------------------------------- |
+| **Monitors** | Stale records (no update in 30+ days), duplicate entries, conflicting data across sources |
+| **Action**   | Automatic enrichment of outdated fields, role change flagging, duplicate detection        |
+| **Schedule** | Weekly for Tier 1 accounts, monthly for all accounts                                      |
+| **Output**   | Categorised issue report with recommended actions                                         |
 
-## Lead Intelligence Agent
+A CRM where Kaizen Supply Co. shows 120 employees while LinkedIn shows 340 produces inaccurate Fit scores. The Hygiene Agent catches the discrepancy and recommends the update. A rep who relies on the old figure underestimates the deal size and under-invests in the relationship.
 
-The `lead-intelligence-agent` runs daily. Its job: scan your pipeline for new signals that change how you should prioritise your day.
+### Agent 3: Outreach Sequencing Agent
 
-### Configuration
+The Outreach Sequencing Agent monitors active sequences and manages touch progression based on prospect behaviour.
 
-```yaml
-# lead-intelligence-agent configuration
-agent: lead-intelligence-agent
-cadence: daily
-time: 06:00 UTC
+| Property     | Configuration                                                                |
+| ------------ | ---------------------------------------------------------------------------- |
+| **Monitors** | Sequence progress, email opens, link clicks, replies, bounces                |
+| **Action**   | Triggers next touch on schedule, pauses on reply, stops on bounce or opt-out |
+| **Schedule** | Continuous (event-driven, not time-driven)                                   |
+| **Output**   | Sequence status report with engagement metrics                               |
 
-data_sources:
-  - crm: "active pipeline"
-  - web: "company news, funding, hiring, press mentions"
+This agent is different from the others. It runs continuously, reacting to events rather than waiting for a schedule. When a prospect opens email three in a six-touch sequence and clicks the case study link, the agent advances to touch four. When a prospect replies "not interested," the agent pauses the sequence immediately. When an email bounces, the sequence stops and the CRM record gets flagged for the Hygiene Agent to investigate.
 
-alert_thresholds:
-  HOT:    "New funding, executive hire, or direct engagement in last 48 hours"
-  WARM:   "Industry news, job postings, or website visit in last 7 days"
-  NEUTRAL: "No new signals since last run"
+The over-automation risk from Lesson 6 applies here. An agent that sends touch five to a prospect who replied "let me think about it" after touch three has ignored a human signal. Exit conditions matter: reply (any reply) pauses. Bounce stops. Opt-out stops permanently. The agent handles timing and progression. You handle the judgment calls.
 
-output_format: digest
-delivery: email + CRM dashboard
+### Agent 4: Marketing Performance Agent
+
+The Marketing Performance Agent evaluates campaign results across channels and identifies where budget is working and where it is not.
+
+| Property     | Configuration                                                                                |
+| ------------ | -------------------------------------------------------------------------------------------- |
+| **Monitors** | LinkedIn Ads, email nurture, content/SEO, Google Ads, events                                 |
+| **Action**   | Weekly analysis report with channel comparison, CPL trends, and optimisation recommendations |
+| **Schedule** | Every Friday                                                                                 |
+| **Output**   | Channel performance digest with budget status                                                |
+
+NexaFlow's email nurture campaign delivers leads at $9.50 CPL with 4.8% conversion. Google Ads delivers leads at $387.50 CPL with 0.9% conversion. The Marketing Performance Agent flags the disparity. But the recommendation to "pause Google Ads" requires context the agent does not have -- if Google Ads targets enterprise logistics directors while email targets mid-market operations managers, comparing CPL across them is misleading. The agent compares numbers. You compare strategy.
+
+### Agent 5: Revenue Reporting Agent
+
+The Revenue Reporting Agent aggregates pipeline metrics, tracks deal velocity, and produces the weekly revenue dashboard.
+
+| Property     | Configuration                                                                        |
+| ------------ | ------------------------------------------------------------------------------------ |
+| **Monitors** | Pipeline value, conversion rates, deal velocity, forecast accuracy, stage stagnation |
+| **Action**   | Weekly revenue dashboard with executive summary                                      |
+| **Schedule** | Every Monday                                                                         |
+| **Output**   | Dashboard with seven core metrics plus five-bullet executive email                   |
+
+:::info Connector Note
+With HubSpot, Close, or another CRM connected via MCP, plus Slack and Google Calendar integrations, these agents can monitor a live pipeline, send real Slack alerts, and schedule calendar events. Without connectors, agents produce text-based reports that you review manually. The workflows are identical -- only the delivery channel changes.
+:::
+
+## Pipeline Analysis
+
+NexaFlow's pipeline has ten active deals. Before you build the dashboard, you need to understand the pipeline's health at the deal level.
+
+### Running /pipeline-review
+
+```
+Run /pipeline-review for NexaFlow's active pipeline.
+Include deal-level health scores.
 ```
 
-Three decisions in that configuration deserve attention. First, the cadence is daily because pipeline signals change daily — a funding announcement this morning is stale by next week. Second, the thresholds distinguish between prospect actions (engagement, visits) and market events (funding, hiring). Both matter, but they signal different things. Third, the output goes to both email and the CRM dashboard. The email catches the rep at 7 AM. The dashboard persists the data for the morning briefing in Lesson 7.
-
-### Composition Trace
-
-Before you run the agent, trace what it does internally. The `lead-intelligence-agent` composes two skills from earlier lessons:
-
-```
-lead-intelligence-agent (daily)
-├── prospect-research (L02)
-│   └── Scans web for new signals per prospect
-│   └── Returns: signal type, date, source URL
-├── lead-scoring (L03)
-│   └── Re-scores prospects with new signals
-│   └── Returns: updated Fit/Timing/Engagement scores
-└── digest formatter
-    └── Filters: only prospects with score changes or new signals
-    └── Formats: structured digest sorted by priority
-```
-
-Notice what the agent does NOT compose. It does not include the `outreach` skill from Lesson 5. It does not write emails. It does not schedule calls. It does not touch the CRM. The boundary between "inform" and "act" is deliberate. The agent tells you Meridian Logistics received $12M in Series B funding yesterday. Whether you call them, email them, or wait until their next board meeting is your decision.
-
-### Running Against NexaFlow's Pipeline
-
-Run the `lead-intelligence-agent` against NexaFlow Technologies' pipeline of 50 active prospects. The agent scans all 50 but only flags those with new signals since yesterday's run.
+The base Sales plugin's `/pipeline-review` command produces a structured pipeline overview. When the RevOps extension is installed, the extension's pipeline skill auto-activates, adding three-dimension scoring integration (Fit + Timing + Engagement from Lesson 3) and deal-level health scores.
 
 **Output:**
 
 ```
 ══════════════════════════════════════════════════════════════
-          LEAD INTELLIGENCE DIGEST
-          NexaFlow Technologies — Daily Report
-          Date: 2026-03-10 06:02 UTC
-          Prospects Scanned: 50 | Flagged: 7
+          PIPELINE REVIEW — NexaFlow Technologies
+          Date: 2026-03-11
+          Active Deals: 10 | Total Value: $1,680,000
 ══════════════════════════════════════════════════════════════
 
-HOT SIGNALS (immediate attention)
+DEAL HEALTH SCORES
 ─────────────────────────────────────────────────────────────
-1. Meridian Logistics (London)
-   Signal:   Series B funding — $12M announced Mar 9
-   Source:   TechCrunch article
-   Impact:   Timing score +15 (was 28, now 43/40 capped)
-   Previous: WARM → Now: HOT
-   Action:   Human decision required
-
-2. Gulf Express LLC (Dubai)
-   Signal:   VP of Operations posted on LinkedIn about
-             "modernising fleet management" — 3 hrs ago
-   Source:   LinkedIn activity
-   Impact:   Engagement score +8 (was 17, now 25/20 capped)
-   Previous: WARM → Now: HOT
-   Action:   Human decision required
-
-3. DataForge Solutions (Karachi)
-   Signal:   Posted 2 senior engineering roles on Rozee.pk
-             yesterday — titles mention "logistics integration"
-   Source:   Job board scan
-   Impact:   Timing score +10 (was 22, now 32)
-   Previous: NEUTRAL → Now: HOT
-   Action:   Human decision required
-
-WARM SIGNALS (monitor this week)
+Deal                    Value      Stage       Health  Risk
 ─────────────────────────────────────────────────────────────
-4. Kaizen Supply Co. (Lahore)
-   Signal:   Industry report mentions Kaizen expanding to
-             UAE market — published in Dawn Business Mar 8
-   Source:   News scan
-   Impact:   Timing score +5 (was 20, now 25)
-   Previous: NEUTRAL → Now: WARM
+Meridian Logistics      $180,000   Proposal    92/100  LOW
+  Fit: 38/40  Timing: 34/40  Engagement: 20/20
+  Champion: Sarah Chen (VP Ops). Proposal sent Mar 5.
 
-5. AlphaRoute Dubai
-   Signal:   Visited NexaFlow pricing page twice (Mar 8-9)
-   Source:   Website analytics
-   Impact:   Engagement score +6 (was 12, now 18)
-   Previous: NEUTRAL → Now: WARM
+Gulf Express LLC        $95,000    Negotiation 85/100  LOW
+  Fit: 30/40  Timing: 35/40  Engagement: 20/20
+  Active engagement. VP posted about fleet modernisation.
 
-NEUTRAL (no new signals — 43 prospects)
+DataForge Solutions     $120,000   Discovery   78/100  MEDIUM
+  Fit: 32/40  Timing: 32/40  Engagement: 14/20
+  Hiring for logistics integration roles. Early stage.
+
+Crescent Freight        $200,000   Proposal    45/100  HIGH
+  Fit: 35/40  Timing: 8/40   Engagement: 2/20
+  34 days in stage. No response to proposal. No champion.
+
+BridgePoint UK          $90,000    Discovery   38/100  HIGH
+  Fit: 28/40  Timing: 6/40   Engagement: 4/20
+  42 days in discovery. No next step scheduled.
+
+ThetaPharma Lahore      $150,000   Qualifying  52/100  HIGH
+  Fit: 30/40  Timing: 12/40  Engagement: 10/20
+  High value but low engagement. Contact went quiet Feb 7.
+
+Kaizen Supply Co.       $85,000    Discovery   65/100  MEDIUM
+  Fit: 25/40  Timing: 25/40  Engagement: 15/20
+  Expanding to UAE. Warm signal from Dawn Business article.
+
+AlphaRoute Dubai        $110,000   Qualifying  70/100  MEDIUM
+  Fit: 28/40  Timing: 22/40  Engagement: 20/20
+  Visited pricing page twice. No meeting scheduled yet.
+
+TransPak Logistics      $350,000   Proposal    73/100  MEDIUM
+  Fit: 38/40  Timing: 20/40  Engagement: 15/20
+  Large deal. Mutual connection through KCCI. Slow cycle.
+
+Metro Delivery ISB      $100,000   Qualifying  55/100  MEDIUM
+  Fit: 22/40  Timing: 18/40  Engagement: 15/20
+  Mid-market. Reasonable engagement but weak fit score.
 ─────────────────────────────────────────────────────────────
-No changes detected for remaining 43 prospects.
-Score decay applied: 5 prospects dropped 2-4 points due to
-30+ days without new engagement signals.
 
-══════════════════════════════════════════════════════════════
-PIPELINE SUMMARY
-─────────────────────────────────────────────────────────────
-HOT:      3  (was 1 yesterday)
-WARM:     9  (was 11 yesterday — 2 upgraded to HOT)
-NEUTRAL:  38 (was 38 yesterday)
-──────────────────────────────────────────────────────────────
-Score Decay:  5 prospects lost points (stale engagement)
-New Signals:  7 prospects had activity in last 24 hours
-══════════════════════════════════════════════════════════════
-```
+AT-RISK DEALS (3)
+  Crescent Freight:   $200K — 34 days stalled in Proposal
+  BridgePoint UK:     $90K  — 42 days stalled in Discovery
+  ThetaPharma Lahore: $150K — Contact unresponsive since Feb 7
 
-Seven of fifty prospects had new signals. The agent flagged them and categorised each. The remaining forty-three required no attention today. That filtering is the value — without the agent, someone would need to manually check all fifty accounts every morning.
+STRONGEST CLOSES (2)
+  Meridian Logistics:  $180K — 92/100 health, proposal active
+  Gulf Express LLC:    $95K  — 85/100 health, in negotiation
 
-### Reading the Digest
-
-Three things to evaluate in any Lead Intelligence digest:
-
-**Does the signal classification match reality?** DataForge posted engineering roles mentioning "logistics integration." The agent classified this as HOT because job postings indicate budget and hiring intent. That classification is reasonable. But what if the job titles mentioned "logistics integration" because DataForge builds logistics software for their own clients — not because they are buying your product? The agent cannot distinguish between a company hiring to build and a company hiring to buy. You can.
-
-**Did the agent miss anything?** The digest shows 7 flagged prospects. It does not show what it missed. If a prospect's CEO mentioned NexaFlow at a Karachi tech meetup last night, that signal lives in your sales team's relationship intelligence, not in the agent's data sources. The agent scans public web, CRM, and website analytics. Private conversations, informal referrals, and hallway mentions are invisible to it. A daily digest is a floor, not a ceiling.
-
-**Is the score math correct?** Gulf Express had an Engagement score of 17/20. A LinkedIn post pushed it to 25/20, but the agent capped it at 20. That cap is correct — the three-dimension model from Lesson 3 prevents any single dimension from dominating. But the cap also means the signal's full strength is not reflected in the composite score. A prospect with capped Engagement and low Fit might rank lower than you expect despite strong buying signals.
-
----
-
-## CRM Hygiene Agent
-
-The `crm-hygiene-agent` runs weekly. Its job: scan CRM records for data quality issues that degrade scoring accuracy and pipeline reliability.
-
-```yaml
-# crm-hygiene-agent configuration
-agent: crm-hygiene-agent
-cadence: weekly (Sunday 22:00 UTC)
-data_sources:
-  - crm: "all active records"
-alert_thresholds:
-  duplicate:     "2+ records share company name or domain"
-  stale:         ">90 days since last update"
-  conflicting:   "2+ data sources disagree on same field"
-output_format: digest
-```
-
-### Composition Trace
-
-```
-crm-hygiene-agent (weekly)
-├── crm-enrichment (L03)
-│   └── Pulls current data from external sources
-│   └── Compares against CRM records
-├── lead-scoring (L03)
-│   └── Re-scores after enrichment
-│   └── Identifies score changes from data corrections
-└── digest formatter
-    └── Groups issues by type (duplicate, stale, conflicting)
-    └── Prioritises by pipeline impact
-```
-
-### Meridian Logistics CRM Hygiene Report
-
-Run the agent against NexaFlow's CRM. Here is the relevant section from the weekly digest:
-
-```
-══════════════════════════════════════════════════════════════
-          CRM HYGIENE DIGEST
-          NexaFlow Technologies — Weekly Report
-          Week: Mar 3-9, 2026
-          Records Scanned: 487 | Issues Found: 14
-══════════════════════════════════════════════════════════════
-
-DUPLICATES (3 found)
-─────────────────────────────────────────────────────────────
-D-01  "Gulf Express" and "Gulf Express LLC"
-      Same domain: gulfexpress.ae
-      Recommendation: Merge. Keep LLC record (more recent).
-
-D-02  "Crescent Freight" and "Crescent Freight Services"
-      Same phone: +971-4-XXX-XXXX
-      Recommendation: Merge. Keep "Crescent Freight" (has
-      meeting history).
-
-D-03  "Metro Delivery ISB" and "Metro Delivery Islamabad"
-      Same address, different contact names.
-      Recommendation: Verify — may be same company, different
-      departments. Do NOT auto-merge.
-
-STALE RECORDS (5 found — no update >90 days)
-─────────────────────────────────────────────────────────────
-S-01  CloudOps Lahore         Last update: Nov 28, 2025 (102 days)
-S-02  BridgePoint UK          Last update: Dec 5, 2025 (95 days)
-S-03  Vertex Transport        Last update: Nov 15, 2025 (115 days)
-S-04  PakTech Solutions       Last update: Oct 30, 2025 (131 days)    ←
-S-05  Islamabad Govt Services Last update: Dec 1, 2025 (99 days)     ←
-
-CONFLICTING DATA (4 found)
-─────────────────────────────────────────────────────────────
-C-01  Kaizen Supply Co.
-      Employee count: CRM says 120, LinkedIn says 340
-      Last CRM update: Aug 2025
-      Recommendation: Update to LinkedIn figure (more recent)
-
-C-02  TechBridge Karachi
-      Revenue: CRM says $5M, Crunchbase says $12M
-      Crunchbase updated: Jan 2026
-      Recommendation: Update to Crunchbase figure
-
-C-03  Noor Logistics
-      HQ Location: CRM says Lahore, website says Islamabad
-      Website updated: Feb 2026
-      Recommendation: Verify — company may have relocated
-
-C-04  SwiftHaul Riyadh
-      Contact email: CRM has personal Gmail, LinkedIn shows
-      corporate email (ahmed@swifthaul.sa)
-      Recommendation: Update to corporate email
+FORECAST GAP
+  Weighted pipeline: $565,000
+  Quarterly target:  $750,000
+  Gap: $185,000 (24.7%)
 ══════════════════════════════════════════════════════════════
 ```
 
-Fourteen issues across 487 records. Three duplicates, five stale, four conflicting. The agent categorised each and recommended an action. But two of those recommendations are wrong.
+Three deals are at risk. Crescent Freight is the largest deal in the pipeline at $200,000, sitting in Proposal for 34 days with zero engagement. That is not a deal in progress -- it is a deal that has gone silent. BridgePoint UK has been in Discovery for 42 days with no next step. ThetaPharma's contact went quiet five weeks ago. Each requires a different human intervention: Crescent needs a new champion or a different approach; BridgePoint needs qualification; ThetaPharma needs re-engagement or disqualification.
 
-### False Positive Analysis
+Meridian Logistics and Gulf Express are the strongest closes. Meridian has a champion (Sarah Chen), an active proposal, and scores of 92/100. Gulf Express is in negotiation with high engagement. These two deals represent $275,000 in near-term revenue.
 
-Look at the stale records. S-04, PakTech Solutions: last updated October 30, 2025 — 131 days ago. The agent flagged it as stale. That flag is correct by the 90-day threshold.
+## Sales Forecast
 
-Now look at S-05, Islamabad Govt Services: last updated December 1, 2025 — 99 days ago. The agent flagged it as stale. The 90-day threshold triggered. But government procurement cycles in Pakistan run 6 to 12 months. A 99-day gap between CRM updates is normal for a government account — the next milestone is a tender response deadline in April. The record is not stale. The deal is progressing on its own timeline.
+With the pipeline reviewed, run the forecast to model revenue scenarios.
 
-This is a **false positive** — the agent applied a universal threshold (90 days) to a prospect where the normal update cadence is longer. The agent has no way to know that government accounts move slowly. You do.
-
-The fix is not to change the 90-day threshold globally. That would miss genuinely stale records in faster-moving sectors. The fix is a **feedback mechanism**: tag government accounts with a procurement cycle length, and configure the agent to use that tag when evaluating staleness. A government account with a 180-day cycle should not trigger until day 180.
-
-```yaml
-# Enhanced staleness configuration
-stale_thresholds:
-  default: 90
-  overrides:
-    - tag: "government"
-      threshold: 180
-    - tag: "enterprise-procurement"
-      threshold: 120
-```
-
-That configuration is a direct result of reading the digest, identifying the false positive, and translating your domain knowledge into a rule the agent can follow. The agent flagged the issue. You diagnosed it. You improved the system. That loop — flag, diagnose, improve — is how monitoring agents get smarter over time without gaining autonomy.
-
----
-
-## Marketing Performance Agent
-
-The `marketing-performance-agent` runs weekly. Its job: evaluate campaign performance across channels and flag underperforming investments.
-
-```yaml
-# marketing-performance-agent configuration
-agent: marketing-performance-agent
-cadence: weekly (Monday 07:00 UTC)
-data_sources:
-  - campaigns: "all active campaigns"
-  - channels: "email, LinkedIn, content, paid, events"
-alert_thresholds:
-  underperforming: "CPL >2x channel average or conversion <50% of target"
-  budget_risk:     "Spend >80% of monthly allocation before day 20"
-  winner:          "CPL <0.5x channel average AND conversion >150% of target"
-output_format: digest
-```
-
-### Composition Trace
+### Running /forecast
 
 ```
-marketing-performance-agent (weekly)
-├── campaign analytics
-│   └── Pulls metrics per campaign per channel
-│   └── Returns: impressions, clicks, conversions, CPL, spend
-├── content-performance (L06 extension)
-│   └── Evaluates content engagement by type
-│   └── Returns: views, shares, conversion attribution
-└── digest formatter
-    └── Compares against targets and benchmarks
-    └── Flags outliers (over- and under-performers)
+Run /forecast for NexaFlow's pipeline.
+Show best, likely, and worst case scenarios.
 ```
 
-### NexaFlow Marketing Digest (Excerpt)
+The base Sales plugin's `/forecast` command produces a revenue projection model. It has no extension equivalent -- `/forecast` runs from the base plugin directly.
+
+**Output:**
 
 ```
 ══════════════════════════════════════════════════════════════
-          MARKETING PERFORMANCE DIGEST
+          SALES FORECAST — NexaFlow Technologies
+          Quarter: Q1 2026 (Jan-Mar)
+          Generated: 2026-03-11
+══════════════════════════════════════════════════════════════
+
+SCENARIO MODELLING
+─────────────────────────────────────────────────────────────
+                  Best Case    Likely      Worst Case
+─────────────────────────────────────────────────────────────
+Meridian          $180,000     $180,000    $180,000
+  Probability:    95%          90%         85%
+  Rationale:      Champion active, proposal reviewed
+
+Gulf Express      $95,000      $95,000     $0
+  Probability:    85%          70%         40%
+  Rationale:      In negotiation, but pricing not agreed
+
+DataForge         $120,000     $60,000     $0
+  Probability:    70%          50%         20%
+  Rationale:      Early stage, hiring signals strong
+
+TransPak          $350,000     $175,000    $0
+  Probability:    60%          40%         15%
+  Rationale:      Large deal, slow cycle, KCCI connection
+
+Crescent Freight  $200,000     $0          $0
+  Probability:    30%          10%         5%
+  Rationale:      34 days stalled, no champion identified
+
+Others (5 deals)  $385,000     $120,000    $45,000
+─────────────────────────────────────────────────────────────
+TOTAL             $1,330,000   $630,000    $225,000
+─────────────────────────────────────────────────────────────
+Quarterly Target: $750,000
+Best Case:        $1,330,000  (177% of target)  ✓
+Likely Case:      $630,000   (84% of target)    ⚠ Gap: $120K
+Worst Case:       $225,000   (30% of target)    ✗
+══════════════════════════════════════════════════════════════
+```
+
+The likely case falls $120,000 short of target. The gap depends almost entirely on three swing deals: DataForge ($60,000 in likely), TransPak ($175,000 in likely), and Crescent Freight ($0 in likely). If TransPak closes at full value, NexaFlow exceeds target. If Crescent Freight re-engages, the quarter is comfortable. If both stall, the team needs to accelerate Gulf Express and pull forward deals from next quarter.
+
+Evaluate the assumptions. TransPak at 40% likely probability reflects the KCCI mutual connection and NexaFlow's strong fit score, but the slow cycle makes Q1 closure uncertain. Is 40% realistic for a $350,000 deal with a procurement timeline that could extend into Q2? That judgment is yours, not the agent's.
+
+## Building the Revenue Dashboard
+
+The revenue dashboard consolidates pipeline health, forecast, and operational metrics into a single weekly view. Define seven core metrics.
+
+| #   | Metric                          | Source                      | What It Reveals             |
+| --- | ------------------------------- | --------------------------- | --------------------------- |
+| 1   | HOT leads generated (this week) | Lead Intelligence Agent     | Inbound signal quality      |
+| 2   | Lead-to-SAL conversion rate     | CRM + Scoring data          | Qualification effectiveness |
+| 3   | Pipeline created (this week)    | CRM new opportunities       | Growth trajectory           |
+| 4   | Average deal size               | Pipeline data               | Market positioning          |
+| 5   | Pipeline at risk ($ value)      | /pipeline-review            | Revenue exposure            |
+| 6   | Close rate (trailing 90 days)   | CRM closed-won/closed-lost  | Sales effectiveness         |
+| 7   | CAC by channel                  | Marketing Performance Agent | Budget efficiency           |
+
+### Running the Dashboard
+
+```
+Build NexaFlow's weekly revenue dashboard using the demo pipeline data.
+Include all seven metrics. Then produce a weekly executive email --
+five bullets, maximum 150 words.
+```
+
+**Output:**
+
+```
+══════════════════════════════════════════════════════════════
+          WEEKLY REVENUE DASHBOARD
           NexaFlow Technologies — Week of Mar 3-9, 2026
 ══════════════════════════════════════════════════════════════
 
-CHANNEL PERFORMANCE
+METRIC                          THIS WEEK    LAST WEEK   TREND
 ─────────────────────────────────────────────────────────────
-Channel        Spend    Leads   CPL      Conv%   Status
-─────────────────────────────────────────────────────────────
-LinkedIn Ads   $4,200   28      $150     3.2%    On Target
-Email Nurture  $400     42      $9.50    4.8%    ★ Winner
-Content/SEO    $800     31      $25.80   2.1%    On Target
-Google Ads     $3,100   8       $387.50  0.9%    ⚠ Alert
-Events (KHI)   $1,500   15      $100     5.2%    On Target
+HOT Leads Generated             3            1           ▲ +200%
+Lead-to-SAL Conversion          18%          15%         ▲ +3pp
+Pipeline Created                $230,000     $110,000    ▲ +109%
+Average Deal Size               $168,000     $155,000    ▲ +8%
+Pipeline at Risk                $440,000     $290,000    ▲ +52%
+Close Rate (90-day trailing)    28%          31%         ▼ -3pp
+CAC by Channel (avg)            $134         $128        ▲ +5%
 ─────────────────────────────────────────────────────────────
 
-⚠ UNDERPERFORMING: Google Ads
-   CPL ($387.50) is 2.6x channel average ($150)
-   Conversion (0.9%) is below 2% target
-   Recommendation: Pause and reallocate to LinkedIn or Email
-
-★ WINNER: Email Nurture
-   CPL ($9.50) is lowest across all channels
-   Conversion (4.8%) exceeds 3% target by 60%
-   Recommendation: Increase email send volume by 25%
-
-BUDGET STATUS
+EXECUTIVE SUMMARY — 5 BULLETS
 ─────────────────────────────────────────────────────────────
-Monthly budget: $45,000 | Spent to date: $10,000 (22%)
-Projected spend at current rate: $43,000
-Status: On track
-══════════════════════════════════════════════════════════════
+1. Three new HOT signals this week (DataForge hiring,
+   Gulf Express LinkedIn activity, Kaizen UAE expansion)
+   — all require rep follow-up by Wednesday.
+
+2. Pipeline created doubled to $230K driven by TransPak
+   Logistics ($350K deal entered Proposal stage).
+
+3. At-risk pipeline grew to $440K. Crescent Freight ($200K)
+   and BridgePoint UK ($90K) need immediate intervention
+   or disqualification.
+
+4. Close rate dropped 3 points to 28%. Two deals lost in
+   qualifying stage — review disqualification criteria.
+
+5. Likely forecast: $630K against $750K target. Gap closes
+   if TransPak or Crescent re-engage this quarter.
+─────────────────────────────────────────────────────────────
 ```
 
-The marketing team gets this every Monday morning. One channel is burning cash with poor returns. One is delivering leads at a fraction of the cost. The agent identified both. But the recommendation to "pause Google Ads and reallocate" assumes every channel targets the same buyer. If Google Ads targets enterprise logistics directors while email nurture targets mid-market operations managers, comparing CPL across them is misleading. The agent compares numbers. You compare strategy.
+That executive email takes thirty seconds to read. A CEO scanning it on Monday morning sees the headline: pipeline is growing, but at-risk deals are growing faster, and the forecast has a gap. Three specific actions emerge: follow up on HOT signals, intervene on stalled deals, and review why the close rate dropped. No jargon. No dashboards to navigate. Five bullets that drive five decisions.
 
-:::info Near-Identical Names
-The extension's `performance-analysis` skill and the Anthropic Marketing
-plugin's `performance-analytics` skill have nearly identical names.
-The extension wraps the base — Anthropic provides global channel
-benchmarks, and the extension adds ICP-filtered analysis with regional
-data. When both plugins are installed, the Wrapper runs both layers
-automatically.
-:::
+## The Daily Briefing
 
----
+The Sales plugin includes a `daily-briefing` skill that produces a morning snapshot for each rep. This is the first thing a rep reads before their first meeting.
 
-## Revenue Reporting Agent
-
-The `revenue-reporting-agent` runs weekly and monthly. Its job: aggregate pipeline metrics and flag deals at risk of slipping.
-
-```yaml
-# revenue-reporting-agent configuration
-agent: revenue-reporting-agent
-cadence:
-  weekly: "Monday 08:00 UTC"
-  monthly: "1st of month, 08:00 UTC"
-data_sources:
-  - crm: "all deals in pipeline"
-  - history: "closed deals (last 12 months)"
-alert_thresholds:
-  slipping:     "Deal in stage >30 days without advancement"
-  forecast_risk: "Weighted pipeline <80% of quarterly target"
-  velocity_drop: "Average deal velocity decreased >15% vs prior quarter"
-output_format: digest
+```
+Give me today's sales briefing for NexaFlow.
 ```
 
-### NexaFlow Revenue Digest (Weekly Excerpt)
+**Output:**
 
 ```
 ══════════════════════════════════════════════════════════════
-          REVENUE REPORTING DIGEST
-          NexaFlow Technologies — Week of Mar 3-9, 2026
+          DAILY SALES BRIEFING — NexaFlow Technologies
+          Tuesday, March 11, 2026
 ══════════════════════════════════════════════════════════════
+
+DEALS CLOSING THIS WEEK
+─────────────────────────────────────────────────────────────
+• Meridian Logistics — $180K — Proposal review scheduled
+  Thursday. Sarah Chen confirmed attendance. Prepare ROI
+  comparison vs. their current Descartes contract.
+
+• Gulf Express LLC — $95K — Pricing negotiation in progress.
+  VP responded to revised quote yesterday. Follow up today
+  for final terms.
+
+MEETINGS TODAY
+─────────────────────────────────────────────────────────────
+• 10:00 AM — AlphaRoute Dubai (qualifying call)
+  Context: Visited pricing page twice. First live conversation.
+  Prep: Review research brief. Key question: fleet size and
+  current route optimisation approach.
+
+• 14:30 PM — DataForge Solutions (discovery)
+  Context: Hiring for logistics integration roles. Early stage.
+  Prep: Ask about integration timeline and budget approval
+  process. This is a B1 qualification conversation.
+
+SIGNALS TO ACT ON
+─────────────────────────────────────────────────────────────
+• Kaizen Supply Co. (Lahore) — Dawn Business reported UAE
+  expansion plans. Warm signal. Consider outreach this week
+  using the Pakistan overlay (WhatsApp, KCCI connection).
+
+• Crescent Freight — 34 days in Proposal with zero engagement.
+  Decision point: escalate to different contact or disqualify.
 
 PIPELINE SNAPSHOT
 ─────────────────────────────────────────────────────────────
-Total Pipeline Value:   $1,240,000
-Weighted Pipeline:      $465,000
-Quarterly Target:       $600,000
-Gap to Target:          $135,000 (22.5%)
-Status:                 ⚠ Forecast Risk
-
-DEAL VELOCITY
-─────────────────────────────────────────────────────────────
-Average days to close (this quarter):    47 days
-Average days to close (last quarter):    38 days
-Change:                                  +9 days (+23.7%)
-Status:                                  ⚠ Velocity Drop
-
-DEALS AT RISK (stage stagnation >30 days)
-─────────────────────────────────────────────────────────────
-1. Crescent Freight     Stage: Proposal    Days: 34
-   Value: $200,000      Last Activity: Feb 4
-   Risk: Largest deal in pipeline with no movement.
-
-2. BridgePoint UK       Stage: Discovery   Days: 42
-   Value: $90,000       Last Activity: Jan 26
-   Risk: No champion identified. Discovery stalled.
-
-3. ThetaPharma Lahore   Stage: Qualifying  Days: 31
-   Value: $150,000      Last Activity: Feb 7
-   Risk: High value but low engagement score (10/20).
-
-FORECAST PROJECTION
-─────────────────────────────────────────────────────────────
-Likely to close this quarter:
-  Meridian Logistics    $180,000  (85% probability)
-  Gulf Express LLC      $95,000   (70% probability)
-  DataForge Solutions   $120,000  (60% probability)
-Subtotal:               $395,000  (weighted: $305,500)
-Gap remaining:          $294,500
-
-Needed: 2-3 additional closes from current pipeline
-        OR acceleration of Crescent Freight ($200K)
+Active Deals: 10 | At Risk: 3 | HOT Signals: 3
+Weighted Pipeline: $565,000 | Gap to Target: $185,000
 ══════════════════════════════════════════════════════════════
 ```
 
-:::info Anthropic Sales Commands
-The Anthropic Sales plugin provides `/forecast` (weighted pipeline
-forecasts with best/likely/worst scenarios) and `/pipeline-review`
-(deal health analysis). When both plugins are installed, `/pipeline-review`
-routes through the extension's `pipeline` skill with three-dimension
-scoring. `/forecast` has no extension equivalent and runs from the
-Anthropic base directly — use it for commit-vs-upside breakdown that
-the `revenue-reporting-agent` does not replicate.
-:::
+Configure this as the rep's morning routine. Before opening email, before checking Slack, the daily briefing tells you: what is closing this week, who you are meeting today (with context), and what signals need attention. The briefing composes skills from across the chapter -- research briefs from Lesson 2, scoring from Lesson 3, meeting context from Lesson 7, and pipeline data from the Revenue Reporting Agent. It is a single view that replaces fifteen minutes of manual CRM checking.
 
-### When Two Agents Disagree
+## Configuring Agent Schedules
 
-Now read both digests together. The Lead Intelligence digest flagged DataForge Solutions as HOT — new engineering job postings mentioning "logistics integration." The Revenue Reporting digest does not include DataForge in the "deals at risk" section but lists it in the forecast at 60% probability.
+Map each agent to the business rhythm. Not every agent runs every day. The schedule reflects when each type of intelligence is most valuable.
 
-Both are technically correct. They see different data.
+| Day            | Agent                                     | Why This Day                                                       |
+| -------------- | ----------------------------------------- | ------------------------------------------------------------------ |
+| **Monday**     | Revenue dashboard + /forecast             | Start the week knowing pipeline health and forecast status         |
+| **Wednesday**  | CRM Hygiene report                        | Mid-week data quality check catches issues before Friday reporting |
+| **Friday**     | Marketing Performance analysis            | End-of-week campaign review informs next week's budget decisions   |
+| **Daily**      | Sales briefing + Lead Intelligence alerts | Reps need signal intelligence before their first meeting           |
+| **Continuous** | Outreach Sequencing Agent                 | Event-driven -- responds to prospect behaviour in real time        |
 
-Lead Intelligence sees external signals: job postings, news, website visits. It flags DataForge as HOT because hiring signals indicate budget and intent. Revenue Reporting sees CRM data: deal stage, days in stage, last activity. It shows DataForge at 60% probability because the deal is progressing normally through the pipeline.
+This schedule means a NexaFlow rep's week looks like this:
 
-Neither agent knows what the other found. Lead Intelligence does not check CRM deal stage. Revenue Reporting does not scan job boards. The human reading both digests is the integration layer. You see the job postings AND the deal stage. You conclude: DataForge is both a hot signal (new hiring intent) and a progressing deal (60% forecast). That combination means it deserves more attention than either digest alone suggests.
+**Monday morning:** Read the revenue dashboard (30 seconds) and daily briefing (2 minutes). Know the forecast gap, the at-risk deals, and today's meetings.
 
-The reverse also happens. Suppose Lead Intelligence flags a prospect as HOT based on a funding announcement, but Revenue Reporting shows no CRM record for that prospect. The signal is real, but there is no deal. That gap means someone needs to create the opportunity in CRM and begin the pipeline. The agents identified the gap. You close it.
+**Wednesday:** CRM Hygiene report arrives. Review flagged records, merge duplicates, update stale data. Ten minutes of maintenance that keeps scoring accurate.
 
----
+**Friday afternoon:** Marketing Performance report arrives. See which channels delivered this week. Decide whether to adjust budget for next week before leaving for the weekend.
 
-## Failure Analysis: The 90-Day Threshold Problem
+**Every morning:** Daily briefing. Deals closing, meetings today, signals to act on. The rep starts the day informed, not scrambling.
 
-The CRM Hygiene agent flagged Islamabad Govt Services as stale. You identified it as a false positive because government procurement timelines are longer than 90 days. That was one record. Now scale the problem.
+**All week:** Outreach Sequencing Agent handles touch progression automatically. The rep focuses on conversations, not on remembering which prospect needs touch four.
 
-NexaFlow sells to three market segments: mid-market SaaS companies (fast sales cycles, 30-60 days), enterprise logistics firms (medium cycles, 60-120 days), and government bodies (slow cycles, 120-365 days). A single 90-day staleness threshold works for mid-market and catches genuine stale records. It generates false positives for enterprise and is nearly useless for government.
+## What You Built
 
-If 15% of NexaFlow's pipeline is government accounts (roughly 73 of 487 records), the CRM Hygiene agent will flag a significant portion of them as stale every week. Those false flags train the sales team to ignore the digest. When a genuinely stale government record appears — one where the tender was cancelled and no one updated the CRM — it gets buried in the noise of false positives the team learned to dismiss.
-
-This is the core failure mode of monitoring agents: **threshold miscalibration erodes trust, and eroded trust causes real issues to go unnoticed.**
-
-The solution is segment-aware thresholds:
-
-```yaml
-stale_thresholds:
-  default: 90
-  overrides:
-    - segment: "mid-market"
-      threshold: 60
-    - segment: "enterprise"
-      threshold: 120
-    - segment: "government"
-      threshold: 180
-    - segment: "government-defence"
-      threshold: 365
-```
-
-The marketing team faces the same challenge. The Marketing Performance agent compared Google Ads CPL ($387.50) against a channel average ($150). But if Google Ads targets enterprise logistics directors — a deliberately narrow audience — a higher CPL is expected and may still deliver positive ROI at the deal sizes involved. A $387 lead that closes a $200,000 deal is more valuable than a $9.50 lead that closes a $5,000 deal. The agent compared cost per lead. You need to compare cost per closed dollar.
-
-Both failures share a root cause: the agent applied a universal metric where a segmented one is needed. Identifying this pattern — and configuring agents with segment-appropriate thresholds — is what separates a noisy monitoring system from an actionable one.
-
----
-
-## Deploying Your First Two Agents
-
-You do not need all four agents on day one. Start with the two that match your most pressing operational gap.
-
-**Choose based on your biggest pain point:**
-
-| If Your Team's Problem Is... | Start With | Cadence |
-|------------------------------|------------|---------|
-| "We miss buying signals and react too late" | `lead-intelligence-agent` | Daily |
-| "Our CRM is a mess and scoring is unreliable" | `crm-hygiene-agent` | Weekly |
-| "Marketing spends but we do not know what works" | `marketing-performance-agent` | Weekly |
-| "Pipeline forecast is always wrong" | `revenue-reporting-agent` | Weekly |
-
-### Step 1: Choose Your Two Agents
-
-Pick the two that address your most urgent problems. If you are using NexaFlow's pipeline from the earlier lessons, start with `lead-intelligence-agent` and `crm-hygiene-agent` — they build directly on the scoring and research skills you already configured.
-
-### Step 2: Define Data Sources
-
-For each agent, list the data sources it will read:
-
-```yaml
-# Example: Lead Intelligence
-data_sources:
-  crm: "HubSpot — active pipeline deals"
-  web: "Google News, LinkedIn, company websites"
-  analytics: "Website visitor tracking (if available)"
-
-# Example: CRM Hygiene
-data_sources:
-  crm: "HubSpot — all contact and company records"
-  enrichment: "LinkedIn, Crunchbase, company websites"
-```
-
-If you do not have a live CRM, use the mock pipeline data from Lesson 7. The agents work on any structured data — the format matters more than the source.
-
-### Step 3: Configure Alert Thresholds
-
-This is the decision that determines whether your digests are useful or noisy. Start conservative:
-
-```yaml
-# Lead Intelligence — start narrow, widen later
-alert_thresholds:
-  HOT: "Funding announcement OR direct engagement in last 24 hours"
-  WARM: "Job postings OR news mentions in last 7 days"
-  NEUTRAL: "Everything else"
-```
-
-Conservative thresholds mean fewer false positives. You can always widen them after a week of reviewing digests and deciding that certain signal types should trigger alerts.
-
-### Step 4: Run and Evaluate
-
-Run each agent once. Read the digest. For every flagged item, answer:
-
-1. **Is this actionable?** Would you change your plan for today or this week based on this flag?
-2. **Is this accurate?** Does the flag match what you know about this prospect or record?
-3. **Is this new information?** Did the digest surface something you did not already know?
-
-If most flags fail all three questions, your thresholds are too loose. If most flags pass all three, your thresholds are appropriate. If you get zero flags, they are too tight.
-
-Record your evaluation. After one week of daily Lead Intelligence digests and one CRM Hygiene weekly digest, you will have enough data to tune the thresholds. That tuning process — run, evaluate, adjust — is how monitoring agents earn trust.
-
----
+- Five RevOps agents understood and configured -- each with a clear purpose, schedule, and output format
+- Pipeline health audit with deal-level health scores and three-dimension scoring, identifying the 3 highest-risk and 2 strongest deals
+- Sales forecast with three scenarios (best/likely/worst), revealing a $120,000 gap to quarterly target
+- Daily sales briefing configured as the rep's morning routine, composing skills from across the chapter
+- Weekly revenue dashboard with seven metrics and a 150-word executive summary
+- Agent schedule mapped to NexaFlow's business rhythm -- Monday through Friday, daily and continuous
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to practise the skills from this lesson.
+Use these prompts in your preferred AI assistant.
 
-### Prompt 1: Design a Monitoring Agent
-
-```
-I manage a sales team selling [your product] to [your market].
-Our pipeline has approximately [number] active prospects.
-
-Design a lead-intelligence-agent for my team. Include:
-1. Data sources it should monitor (be specific to my market)
-2. Alert thresholds for HOT, WARM, and NEUTRAL classifications
-3. The cadence (daily, weekly) and why
-4. Which skills from a typical sales pipeline it should compose
-   internally (research, scoring, enrichment, etc.)
-
-After designing it, tell me: what signals would this agent
-MISS that a human would catch? Where are the blind spots?
-```
-
-**What you are learning:** Translating your specific business context into agent configuration. The AI will generate a reasonable default, but the value is in the follow-up question about blind spots. Every monitoring agent has them. Identifying blind spots before deployment prevents the false confidence that comes from trusting a digest that covers 80% of signals and silently misses the other 20%.
-
-### Prompt 2: Evaluate a CRM Hygiene Report
+**Prompt 1: Pipeline Analysis**
 
 ```
-Here is a CRM Hygiene digest for my team. Review it and help me
-identify false positives.
+Run /pipeline-review and /forecast on NexaFlow's demo pipeline data
+(or your own pipeline if you have one).
 
-[Paste the CRM Hygiene digest from this lesson, or generate one
-for your own CRM data]
-
-For each flagged record, tell me:
-1. Is this a true positive (genuine data quality issue) or
-   a false positive (flagged by the threshold but not actually
-   a problem)?
-2. If false positive: what additional context would the agent
-   need to avoid this mistake?
-3. What threshold adjustment would reduce false positives
-   without missing true issues?
-
-Assume 15% of my pipeline is government accounts with
-6-12 month procurement cycles.
+From the output, identify:
+1. The 3 highest-risk deals and what makes each one risky
+2. The 2 most likely to close this quarter and why
+3. The gap between likely forecast and quarterly target
+4. One deal where you disagree with the agent's probability
+   estimate — explain why your assessment differs
 ```
 
-**What you are learning:** Evaluating agent output for actionability is the core skill of working with monitoring agents. The AI will help you think through each flag systematically, but the judgment call — "is this actually a problem?" — requires your domain knowledge. Pay attention to which flags the AI marks as borderline. Those are the ones where threshold configuration makes the biggest difference.
+**What you are learning:** Pipeline analysis is not about reading numbers. It is about interpreting deal health in context. The agent scores deals on data it can measure (stage duration, engagement, signals). You evaluate deals on context it cannot measure (relationship strength, procurement cycles, competitive dynamics). The disagreement between your assessment and the agent's is where your judgment adds value.
+
+**Prompt 2: Dashboard for a Different Metric**
+
+```
+NexaFlow's revenue dashboard tracks 7 metrics focused on pipeline
+and acquisition. Reconfigure the Revenue Reporting Agent to produce
+a dashboard focused on customer retention instead of pipeline.
+
+Replace the 7 metrics with retention-focused alternatives:
+- What metrics would you track? (e.g., churn rate, NPS, expansion
+  revenue, support ticket volume, renewal pipeline)
+- How does the executive summary change when the dashboard measures
+  retention instead of acquisition?
+- What data sources does the agent need that the pipeline dashboard
+  did not require?
+
+Produce a sample retention dashboard and executive email using
+NexaFlow's business context.
+```
+
+**What you are learning:** Dashboard design is metric selection. Changing from pipeline to retention changes every data source, every threshold, and every recommendation. The underlying agent architecture (schedule-driven, digest-producing, stateless) stays the same. By rebuilding the dashboard for a different business question, you internalise the pattern: agents are configurable instruments, not fixed reports.
+
+**Prompt 3: Daily Briefing in Practice**
+
+```
+Run "Give me today's sales briefing" for NexaFlow's pipeline
+(or your own pipeline if available).
+
+After reading the briefing:
+1. Write down the 3 actions you would take today based on
+   what the briefing told you
+2. Now think about what you would have done this morning
+   WITHOUT the briefing — would your priorities have been
+   the same?
+3. Identify one signal in the briefing that changes your
+   plan for today. What would you have missed without it?
+
+If using your own data: which section of the briefing was
+most valuable? Which was noise? How would you configure the
+agent to show more of what matters and less of what does not?
+```
+
+**What you are learning:** The value of a daily briefing is not information delivery -- it is priority realignment. Without the briefing, you start the day with yesterday's mental model. With it, you start with today's signals. The third question forces you to identify the specific moment where the agent's output changed your behaviour. That is the measurable value of automation: not time saved, but decisions improved.
+
+## Flashcards Study Aid
+
+<Flashcards />

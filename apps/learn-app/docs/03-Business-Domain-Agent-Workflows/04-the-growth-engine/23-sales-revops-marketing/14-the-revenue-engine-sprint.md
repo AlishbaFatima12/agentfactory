@@ -1,484 +1,518 @@
 ---
-sidebar_position: 16
-title: "Applied Practice"
-description: "Six cross-lesson exercises plus a capstone that connect research, scoring, outreach, campaigns, assets, collision resolution, and agent architecture — each requiring diagnosis of Agent Output Taxonomy errors with real business data"
+sidebar_position: 14
+title: "The Revenue Engine Sprint"
+description: "Run the complete revenue engine end-to-end — research, score, and outreach 5 new prospects, build a full campaign with content calendar, and produce the revenue dashboard — assembling every plugin, skill, and diagnostic from Lessons 1 through 13 into a timed capstone sprint"
 keywords:
   [
-    "applied exercises",
+    "revenue engine sprint",
     "capstone",
+    "end-to-end sales workflow",
+    "prospect pipeline",
+    "campaign brief",
+    "revenue dashboard",
+    "ICP calibration",
+    "Five Laws",
     "Agent Output Taxonomy",
-    "cross-lesson exercises",
-    "ICP calibration sprint",
-    "pipeline exercise",
-    "Five Laws audit",
-    "campaign exercise",
-    "agent architecture challenge",
-    "sales exercises",
-    "RevOps practice",
+    "NexaFlow Technologies",
+    "Meridian Logistics",
+    "full sprint",
+    "RevOps",
   ]
 chapter: 23
-lesson: 16
-duration_minutes: 60
+lesson: 14
+duration_minutes: 45
 
 # HIDDEN SKILLS METADATA
 skills:
-  - name: "Execute Cross-Lesson Revenue Workflows"
+  - name: "Execute a Full Revenue Engine Sprint"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can connect capabilities from multiple lessons into complete workflows, executing them end-to-end with real business data"
+    measurable_at_this_level: "Student can run the complete revenue engine — ICP validation, 5-prospect research-and-score sprint, outreach generation with Five Laws audit, campaign brief with content calendar, and revenue dashboard — in a single timed session, connecting every stage's output to the next"
 
-  - name: "Diagnose Agent Output Taxonomy Errors Across Workflows"
+  - name: "Diagnose All Five Agent Output Taxonomy Errors Under Time Pressure"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Evaluate"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can identify and classify all 5 Agent Output Taxonomy error types in workflow outputs, tracing each to its root cause and proposing corrections"
+    measurable_at_this_level: "Student can identify and classify Hallucinated Data, Miscalibrated Scoring, Compliance Gap, Over-Automation, and Context Loss errors while running the sprint — not in post-hoc review but during live execution"
 
-  - name: "Design and Defend a Complete Agent Architecture"
+  - name: "Adapt the Revenue Engine to a New Business Context"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can deploy monitoring + reactive agents, trace coordination, and identify where human approval gates are needed"
+    measurable_at_this_level: "Student can reconfigure the revenue engine for a different industry, identifying which components transfer directly, which need reconfiguration, and which are industry-specific"
 
 learning_objectives:
-  - objective: "Complete 3+ cross-lesson exercises that connect capabilities from different phases of the chapter"
+  - objective: "Complete the full revenue engine sprint — ICP validation through revenue dashboard — in under 45 minutes, producing connected outputs at every stage"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student completes exercises and produces outputs demonstrating cross-lesson integration"
+    assessment_method: "Student completes the sprint and produces: 5 research briefs, 5 lead scores, 3 outreach messages, 1 call summary, 1 campaign brief with content calendar, and 1 revenue dashboard configuration — all connected through the NexaFlow pipeline"
 
-  - objective: "Identify and classify Agent Output Taxonomy errors in at least 2 exercises"
+  - objective: "Identify and classify at least 3 Agent Output Taxonomy errors during live sprint execution"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student flags 2+ errors with correct taxonomy classification and root cause analysis"
+    assessment_method: "Student flags errors during sprint execution (not after), classifies each using the exact taxonomy name, and traces each to root cause"
 
-  - objective: "Complete the capstone exercise with real business data, including error diagnosis"
+  - objective: "Evaluate the revenue engine's transferability by identifying which components are universal and which are business-specific"
     proficiency_level: "B2"
-    bloom_level: "Create"
-    assessment_method: "Student selects 1 exercise, runs end-to-end with real data, and identifies 2+ Agent Output Taxonomy errors with classification"
+    bloom_level: "Evaluate"
+    assessment_method: "Student can articulate which skills, commands, and configurations transfer to a new industry and which require reconfiguration, with specific examples"
 
 cognitive_load:
   new_concepts: 2
   concepts_list:
-    - "Cross-lesson workflow integration (connecting capabilities from different phases)"
-    - "Error taxonomy as diagnostic framework (systematic classification, not ad hoc)"
-  assessment: "2 new concepts only — this lesson is about application and synthesis of everything learned in L01-L15. Low new concept count is intentional."
+    - "Sprint execution under time pressure (assembling known components against the clock)"
+    - "Revenue engine transferability (what is universal vs business-specific)"
+  assessment: "2 new concepts only. This is the capstone — every other concept was taught in L01-L13. Low new concept count is intentional. The challenge is synthesis and execution speed, not new learning."
 
 differentiation:
-  extension_for_advanced: "Complete all 6 exercises. For each, document 3+ Agent Output Taxonomy errors. Build a comprehensive error log that shows which error types are most common in which workflow stages."
-  remedial_for_struggling: "Focus on Exercise 1 (ICP Calibration Sprint) and Exercise 2 (Pipeline). These use the most fundamental skills from L01-L06. If you can complete both with 1 error diagnosis each, you have demonstrated the core competency."
+  extension_for_advanced: "Complete ALL 7 exercises including bonus exercises. Then run the full sprint for your own business with real prospects, real pipeline data, and real campaign goals. Document what you would change about the revenue engine for your industry."
+  remedial_for_struggling: "Complete the Minimum Viable Capstone (Exercises 1, 2, 4, and 7). These four exercises cover the core loop: validate ICP, research and outreach prospects, plan a campaign, and produce a dashboard. If you can complete these four, you have demonstrated the essential revenue engine workflow."
 ---
 
-# Applied Practice
+# The Revenue Engine Sprint
 
-Fifteen lessons of individual capabilities. You can research a prospect, score a lead, write Five Laws-compliant outreach, build a multi-touch sequence, generate battlecards, plan campaigns, multiply content, create interactive assets, configure brand voice, compose plugin layers, resolve skill collisions, and orchestrate RevOps agents. Each of those capabilities produced a clean output when you ran it in isolation. But revenue does not come from isolated capabilities. Revenue comes from connecting them into workflows where Stage 1 feeds Stage 2 feeds Stage 3 — and where every handoff is an opportunity for errors that compound downstream.
+Thirteen lessons. Research, scoring, outreach, sequences, briefs, content, campaigns, analysis, compliance, agents, dashboards. Every piece of the revenue engine is built. This is the sprint that proves it works.
 
-This lesson connects what you have built. Six exercises, each spanning two or more prior lessons, each requiring you to diagnose at least one **Agent Output Taxonomy** error. The five error types from the chapter — **Hallucinated Data** (L01), **Miscalibrated Scoring** (L03), **Compliance Gap** (L04), **Over-Automation** (L05), and **Context Loss** (L06) — are your diagnostic toolkit. You learned them individually. Now apply them together, under pressure, with real pipeline data.
+No new concepts in this lesson. Every skill, every command, every diagnostic framework appeared in Lessons 1 through 13. What changes here is the mode of operation. In prior lessons you ran individual components and evaluated their output in isolation. In this sprint you assemble the complete engine and run it against five fresh prospects, a full campaign, and the revenue dashboard — all in a single session. The clock is running. Errors compound across stages. Your job is to execute, evaluate, and correct in real time.
 
-The capstone at the end runs an exercise of your choosing end-to-end with your actual business data. Not hypothetical. Not NexaFlow or Meridian. Yours.
+The sprint has three parts. Part A builds the research-to-meeting pipeline for five new prospects. Part B constructs a campaign with a content calendar. Part C produces the revenue dashboard. Four exercises are required. Three are bonus extensions. Complete the required exercises first, then take on the bonus work if time permits.
 
----
-
-## The Error Taxonomy Checklist
-
-Before you start, keep this checklist open. Every exercise requires you to classify at least one error using the taxonomy. Knowing where to look matters as much as finding the error itself.
-
-| Error Type | First Taught | What It Looks Like | Where It Hides |
-|---|---|---|---|
-| **Hallucinated Data** | L01 | Fabricated financials, wrong investor names, invented personnel | Research briefs, competitive claims |
-| **Miscalibrated Scoring** | L03 | False positives, inflated totals, missing negative signals | ICP configuration gaps, overly broad criteria |
-| **Compliance Gap** | L04 | Missing opt-out, wrong consent model, unverifiable competitive claims | Outreach, cross-border messaging, battlecard references |
-| **Over-Automation** | L05 | Sequence continues past negative signal, agent acts without human gate | Multi-touch sequences, reactive agent triggers |
-| **Context Loss** | L06 | Generic output when specific intelligence was available upstream | Follow-ups, pre-call briefs, CRM updates |
-
-Use the exact taxonomy name when you classify an error. "The score seems wrong" is not a diagnosis. "Miscalibrated Scoring — the Fit dimension is 35/35 because the ICP has no industry filter" is a diagnosis.
+:::tip Minimum Viable Capstone
+If you have 30 minutes instead of 45, complete Exercises 1, 2, 4, and 7. These four cover the core loop: validate your ICP, sprint through 5 prospects, build a campaign brief, and produce a dashboard. The three bonus exercises deepen specific areas but are not required to demonstrate the end-to-end workflow.
+:::
 
 ---
 
-## Exercise 1: ICP Calibration Sprint
+## Part A: The Research-to-Meeting Sprint
 
-**Connects:** L02 (ICP configuration) + L03 (lead scoring)
+This is the core of the revenue engine. Five prospects enter. Research briefs, lead scores, ranked priorities, outreach messages, and a call summary come out the other end. Time target: 15 minutes for the required exercises.
 
-**Duration:** 20 minutes
+### Exercise 1: Validate Your ICP (Required)
 
-### The Task
+You built NexaFlow's ICP in Lesson 2. Thirteen lessons later, you have run dozens of research briefs and scoring operations against it. Calibration drifts. Validate it now before using it to score five new prospects.
 
-Your ICP from Lesson 2 will be tested against three prospects. Two are companies you know are strong fits for your product — the kind of account your best rep would prioritise. The third is a company you know is a poor fit — a company that your team would disqualify within minutes of reviewing.
+**Your task:**
 
-Run `/research-prospect` for all three. Then run `/score-lead` on each.
-
-If the ICP is well-calibrated, the two strong-fit prospects should score 75+ and the poor-fit prospect should score below 50. That is the hypothesis. Test it.
-
-### NexaFlow Technologies, Karachi
-
-You know NexaFlow from the chapter. Logistics-tech, 85-120 employees, scaling from 50K to 500K daily deliveries, hiring Kafka engineers. Strong fit for data infrastructure solutions. Research and score this prospect.
-
-### Meridian Logistics, London
-
-Meridian is the UK-based supply chain management firm from L11. They run Java Spring Boot, have 200-350 employees, and focus on European supply chain compliance. Whether Meridian is a strong or weak fit depends on your ICP. If you sell data infrastructure, Meridian's Java stack and compliance focus may not align. If you sell supply chain analytics, they are a strong match. Know your ICP before scoring.
-
-### The Deliberate Misfit
-
-Choose a company you know from personal experience would never buy your product. A company outside your industry, below your size threshold, or in a market you do not serve. This is your negative control. Score it.
-
-### The Diagnosis
-
-Compare the three scores. Answer these questions:
-
-1. Did the two strong-fit prospects score above 75? If one scored below, which scoring dimension pulled it down? Was that dimension correct, or was it penalising a signal that your ICP should value?
-
-2. Did the deliberate misfit score below 50? If it scored higher, trace the false positive to a specific ICP section. Which criterion was too broad? Which negative signal was missing?
-
-3. After identifying the calibration gap, edit your ICP in `sales-marketing.local.md`. Add the missing negative signal or tighten the criterion. Re-run `/score-lead` on all three. Did the false positive drop below threshold? Did the two strong-fit prospects hold their scores?
-
-**Error to diagnose: Miscalibrated Scoring.** Trace the false positive to a specific ICP section. The diagnosis is not "the score was wrong." The diagnosis is "the Fit dimension scored 30/35 because the ICP's industry filter accepts 'logistics' without distinguishing logistics-tech from logistics-consulting, and the misfit prospect is a logistics-consulting firm that shares the keyword but not the buying profile."
-
-**What success looks like:** After recalibration, the false positive drops below threshold. The two ideal prospects still score correctly. You have a documented ICP change and the reasoning behind it.
-
----
-
-## Exercise 2: Prospect-to-Meeting Pipeline
-
-**Connects:** L06 (pipeline) + L04 (Five Laws) + L05 (over-automation)
-
-**Duration:** 30 minutes
-
-### The Task
-
-Run the complete prospect-to-meeting pipeline for one prospect. All eight stages from L06, in sequence:
-
-1. `/research-prospect` — generate the research brief
-2. `/score-lead` — score the prospect
-3. Qualification decision — your judgment, not the agent's
-4. `outreach` skill — generate Five Laws-compliant outreach
-5. `pre-call-brief` — prepare for the meeting
-6. Meeting notes — write hypothetical meeting notes based on what you know about the prospect
-7. `/call-summary` — summarise the meeting
-8. `pipeline` skill — update the CRM record
-
-At every stage, document the data flow. Write down what intelligence arrived from the previous stage and what intelligence the current stage produced.
-
-### NexaFlow Path (Karachi Pipeline)
-
-Use NexaFlow Technologies for this pipeline. You already have a research brief and scoring output from earlier lessons. Build on what exists rather than starting from scratch. If you are running this fresh, start from `/research-prospect NexaFlow Technologies Karachi` and work through every stage.
-
-For Stage 6 (meeting notes), use the hypothetical meeting data from L06: Mehreen confirmed PostgreSQL is hitting limits at 120K deliveries/day, they have not chosen Kafka yet, budget requires CEO approval above $3K/month, and the funding was a seed round from Sarmayacar, not a Series A.
-
-### The Diagnosis
-
-Two errors hide in this pipeline. Find both.
-
-**Error 1: Context Loss.** After running the full pipeline, generate a follow-up email using the `follow-up` skill. Compare the follow-up to the call summary. Does the follow-up reference specific meeting findings — the 120K daily delivery limit, the Kafka vs Redpanda evaluation, the Eid timeline, Usman as technical contact? Or does it default to "Great speaking with you, I will send over some information"? If it defaults to generic language, you have Context Loss. The intelligence existed upstream. The follow-up did not consume it.
-
-**Error 2: Over-Automation.** Review the 5-touch outreach sequence you would build after the initial message. Now imagine the prospect responds to Touch 1 with: "Thanks, but we just signed a contract with a competitor last week. Timing is not right." Does the sequence continue to Touch 2? It should not. But if you built the sequence using `/build-sequence` without stop rules, Touches 2 through 5 are queued. The agent does not read the prospect's response and halt the sequence. That is Over-Automation — the system continues past a signal that a human would recognise as "stop."
-
-**What success looks like:** A complete pipeline trace from research through CRM update, with every stage's data flow documented. Two annotated errors — Context Loss in the follow-up, Over-Automation in the sequence — with specific evidence and proposed fixes.
-
----
-
-## Exercise 3: Five Laws Audit and Competitive Outreach
-
-**Connects:** L04 (Five Laws) + L07 (battlecards) + L05 (outreach sequences)
-
-**Duration:** 20 minutes
-
-### The Task
-
-Generate a competitive battlecard for NexaFlow's primary competitor using the `competitive-intelligence` skill. Then write Five Laws-compliant outreach that references the competitive intelligence. Audit every word.
-
-### Step 1: Generate the Battlecard
+Pull five closed-won deals from NexaFlow's pipeline (use the demo data you generated in Lesson 1, or generate five closed-won companies now). Score each against your current ICP using `/score-lead`.
 
 ```
-Use the competitive-intelligence skill to generate a battlecard
-for [NexaFlow's primary competitor in the Karachi logistics-tech
-market]. Include pricing comparison, feature comparison, and
-known weaknesses.
+Score these 5 closed-won companies against our current ICP:
+1. DataStream Logistics, Lahore (closed $45K, 6-month deal cycle)
+2. Gulf Express LLC, Dubai (closed $120K, 3-month deal cycle)
+3. QuickHaul Karachi (closed $28K, 2-month deal cycle)
+4. Nordic Supply Chain, Stockholm (closed $85K, 4-month deal cycle)
+5. Atlas Freight, London (closed $150K, 5-month deal cycle)
+
+All 5 should score 60+ since they already bought. If any score
+below 60, the ICP has drifted — identify which dimension is
+miscalibrated.
 ```
 
-Read the battlecard. Identify at least two claims about the competitor that you cannot independently verify. Mark them. These are potential Hallucinated Data — the agent fabricated competitive intelligence because it had insufficient public data about a private company in an emerging market.
+**What to look for:** Every closed-won deal should score above 60. If DataStream scores 52 because the ICP's revenue threshold is set at $10M and DataStream is a $3M company — but they bought anyway — your revenue threshold is filtering out real buyers. That is Miscalibrated Scoring from Lesson 3: the model penalises a dimension that does not predict buying behaviour.
 
-### Step 2: Write the Competitive Outreach
-
-Now use the `outreach` skill to write a message to Mehreen Qazi that references the competitive battlecard. The outreach should position your solution against the competitor.
-
-### Step 3: Audit
-
-Audit the outreach against the Five Laws. Separately, audit the competitive claims in the outreach against the battlecard. Ask these questions:
-
-1. Does the outreach reference a specific competitor weakness? Can you verify that weakness from a public source?
-
-2. If the competitive claim is unverifiable, does including it in outreach create a legal risk? Making false claims about a competitor in commercial communication is actionable in most jurisdictions. Even if the Five Laws are satisfied — specific reference, prospect-first, single ask, word limit, no jargon — a fabricated competitive claim is a **Compliance Gap** that the Five Laws framework does not catch.
-
-3. Does the outreach need the competitive reference at all? Would a version without the competitive angle — one that focuses entirely on the prospect's pain point — be equally effective and carry zero legal risk?
-
-**Error to diagnose: Compliance Gap.** The Five Laws audit may pass. The outreach may be specific, prospect-first, single-ask, concise, and jargon-free. But if it includes an unverifiable claim about a competitor, it has a compliance gap that exists outside the Five Laws framework. The Five Laws govern outreach quality. They do not govern factual accuracy of competitive intelligence.
-
-**What success looks like:** A battlecard with annotated hallucinated claims. An outreach message with a law-by-law Five Laws audit. A separate compliance audit that evaluates the competitive claims independent of the Five Laws. A recommendation on whether to include or remove the competitive reference.
+**If calibration has drifted:** Edit the offending ICP section in `sales-marketing.local.md`. Re-score. Confirm all five closed-won deals now score above 60 without loosening criteria so broadly that obviously poor-fit companies also pass.
 
 ---
 
-## Exercise 4: Campaign and Content Factory
+### Exercise 2: The Research and Outreach Sprint (Required)
 
-**Connects:** L08 (campaigns and content multiplication)
+Five new prospects. Full pipeline from research through outreach. This is the engine running at speed.
 
-**Duration:** 20 minutes
+**Step 1 — Generate or select 5 prospects:**
 
-### The Task
-
-Plan a campaign for Meridian Logistics using `/plan-campaign`. Then multiply one piece of campaign content into eight formats using the `content-creation` skill. Audit the results with `/seo-audit`.
-
-### Step 1: Plan the Campaign
-
-Meridian Logistics is a 200-350 employee supply chain management firm in London. They are your target for a European supply chain analytics offering. Budget: GBP 15,000 for a 60-day campaign targeting VP Operations and CTO personas at mid-market logistics companies across the UK and EU.
+If you have real prospects from your own pipeline, use them. Otherwise, generate five fresh companies in NexaFlow's target market:
 
 ```
-/plan-campaign
-Goal: Generate 30 qualified leads for supply chain analytics
-Audience: VP Operations and CTO at mid-market logistics (100-500 employees)
-Geography: UK + EU
-Budget: GBP 15,000
-Timeline: 60 days
+Generate 5 new logistics technology prospects for NexaFlow:
+- 2 in Pakistan (Karachi or Lahore)
+- 1 in UAE (Dubai)
+- 1 in UK (London)
+- 1 in any other market
+
+For each, provide: company name, HQ city, employee count,
+primary logistics service, and one recent business event
+(funding, expansion, executive hire, or technology change).
 ```
 
-Review the campaign brief. Does the channel allocation make sense for a GBP 15,000 budget? If the agent allocates 40% to paid search and 30% to trade conferences, that may not be realistic — a single UK logistics trade show booth can cost GBP 5,000-8,000, which would consume half the budget for one channel.
+**Step 2 — Research and score all 5:**
 
-### Step 2: Multiply Content
+Run `/research-prospect` for each company. Then run `/score-lead` on each. As research briefs arrive, flag any claims you cannot verify — funding amounts, employee counts, technology stack details. Mark each flagged claim as **Hallucinated Data** or **Verifiable**. Do not stop the sprint to verify. Flag and continue.
 
-Take the campaign's cornerstone blog post (or generate one using the `content-creation` skill). Multiply it into 8 formats:
+**Step 3 — Rank and select top 3:**
 
-1. LinkedIn post
-2. Email newsletter section
-3. Twitter/X thread
-4. Short video script
-5. Infographic outline
-6. Webinar abstract
-7. Sales one-pager
-8. Podcast talking points
+Rank all five by composite score. Select the top 3 for outreach.
 
-Now evaluate the outputs. Are they genuinely different content adapted for each format? Or are they the same 300 words reformatted with different headers? A LinkedIn post should be conversational and use first-person. A sales one-pager should lead with ROI metrics. A podcast outline should be structured as conversational questions. If all eight outputs read like the blog post with minor formatting changes, the multiplication produced quantity without quality.
+**Step 4 — Generate outreach for the top 3:**
 
-### Step 3: SEO Audit
+For each of the top 3 prospects, generate Five Laws-compliant outreach using the `outreach` skill. After each message is generated, run a quick Five Laws audit:
 
-Run `/seo-audit` on the top 3 content pieces (blog post, LinkedIn post, email newsletter). How many pass? What are the common failures — missing meta descriptions, keyword stuffing, thin content, duplicate content across formats?
+| Law                                           | Pass? | Evidence |
+| --------------------------------------------- | ----- | -------- |
+| Specific reference to prospect's business     |       |          |
+| Prospect-first (their pain, not your product) |       |          |
+| Single ask                                    |       |          |
+| Under word limit                              |       |          |
+| No jargon                                     |       |          |
 
-**Error to watch for: Hallucinated Data.** The campaign brief may include market sizing data — "the UK supply chain analytics market is worth GBP X billion." The content multiplication may include statistics — "companies that adopt supply chain analytics see a Y% reduction in logistics costs." Are those numbers real? Check the source. If the agent fabricated market data to make the campaign brief more convincing, that is Hallucinated Data embedded in marketing collateral. Every downstream asset that references the fabricated statistic inherits the error.
+If any message fails a law, fix it before moving on.
 
-**What success looks like:** A campaign brief with realistic channel allocation. Eight content pieces where at least 5 are genuinely adapted for their format. SEO audit results with specific improvement recommendations. At least one hallucination flagged in the campaign brief or content output.
+**Step 5 — Call summary for the #1 prospect:**
 
----
+Take your highest-scoring prospect. Run `/call-summary` using this hypothetical meeting data:
 
-## Exercise 5: Sales Asset Workshop and Brand Voice Consistency
+```
+Generate a call summary for a 25-minute discovery call with
+[#1 prospect name]. Key meeting findings:
+- They confirmed the pain point from the research brief
+- Budget exists but requires VP approval above $5K/month
+- Current solution is manual spreadsheets + one legacy tool
+- Timeline: decision by end of Q2
+- Champion: [operations manager name from research brief]
+- Next step: technical demo in 2 weeks
+```
 
-**Connects:** L09 (sales assets and brand voice) + L05 (outreach sequences)
+Review the call summary. Does it reference specific findings from the research brief? Or is it generic? If it reads like "Great meeting, they have budget and a timeline" without referencing the specific pain point, technology stack, or champion name from the research — that is **Context Loss**. The intelligence existed. The summary did not use it.
 
-**Duration:** 20 minutes
-
-### The Task
-
-Generate a sales asset for NexaFlow. Then configure brand voice. Then audit your outreach from Exercise 2 against the brand voice standard.
-
-### Step 1: Generate the Asset
-
-Use `create-an-asset` to build an interactive ROI calculator for NexaFlow. The calculator should let a prospect input their current daily delivery volume, their target volume, their current infrastructure cost, and their timeline. It should output estimated cost savings and time-to-value.
-
-Review the asset. Is it genuinely interactive? Can you edit the input fields? Does the output change when you change the inputs? Or is it a static HTML page with hardcoded numbers?
-
-### Step 2: Configure Brand Voice
-
-Define your brand voice in `sales-marketing.local.md` with at least these parameters:
-
-- **Audience:** Technical buyers (CTOs, VP Engineering) at mid-market companies
-- **Tone:** Direct, data-driven, zero superlatives
-- **Forbidden words:** "revolutionary," "cutting-edge," "leverage," "synergy," "disrupt"
-- **Signature phrases:** Specific to your product positioning
-
-### Step 3: Cross-Channel Audit
-
-Run `/brand-review` on three pieces of content you have produced in this chapter:
-
-1. The NexaFlow outreach from Exercise 2
-2. The ROI calculator from Step 1
-3. The Meridian campaign blog post from Exercise 4
-
-Does the brand voice hold across all three? Does the outreach say "leverage our platform" while the brand voice forbids "leverage"? Does the ROI calculator use superlatives ("revolutionary savings") while the brand voice says "zero superlatives"? Does the blog post match the direct, data-driven tone?
-
-**Error to watch for: Context Loss.** The brand voice configuration lives in `sales-marketing.local.md`. The `outreach` skill and `create-an-asset` skill may or may not reference the brand voice section when generating output. If the outreach uses forbidden words that are defined in the brand voice configuration, the skill did not consume the brand voice context. That is Context Loss — the configuration exists, but the generating skill did not use it.
-
-**What success looks like:** An interactive ROI calculator with editable inputs. A configured brand voice with specific parameters. A cross-channel audit showing where brand consistency holds and where it breaks. At least one Context Loss instance identified where a skill ignored brand voice configuration.
+**Deliverable:** 5 research briefs, 5 lead scores with ranking, 3 outreach messages with Five Laws audits, 1 call summary. Flagged errors noted inline.
 
 ---
 
-## Exercise 6: Agent Architecture Challenge
+### Exercise 3: Ghostwrite a Full Sequence (Bonus)
 
-**Connects:** L13 (RevOps agents) + L14 (skill library architecture) + L15 (extending plugins)
+Pick the #1 prospect from Exercise 2. Build a complete outreach sequence:
 
-**Duration:** 30 minutes
+```
+Build a 6-touch, 21-day outreach sequence for [#1 prospect].
+Mixed channels: email (touches 1, 3, 5), LinkedIn (touches 2, 4),
+phone (touch 6).
 
-### The Task
+Each touch must:
+- Reference a specific finding from the research brief
+- Build on the previous touch (not repeat it)
+- Include an exit condition (what signal means STOP)
+```
 
-Design and deploy a two-agent RevOps system: one monitoring agent and one reactive agent. Then trace their coordination and identify where human gates are needed.
+After the sequence is generated, evaluate each touch against the Five Laws. A common failure: touches 4 through 6 become generic because the agent runs out of specific research findings to reference. Touch 1 says "I noticed your Series A announcement last month." Touch 5 says "I wanted to follow up on my previous message." That quality decay across the sequence is a form of **Context Loss** — the research intelligence was consumed by early touches and not replenished for later ones.
 
-### Step 1: Deploy the Monitoring Agent
+Also check for **Over-Automation**: does the sequence include exit conditions? If the prospect responds "Not interested" after Touch 2, does Touch 3 still fire? If there are no stop rules defined, the sequence will continue past a negative signal. Add exit conditions if they are missing:
 
-The **Lead Intelligence Agent** from L13 monitors your pipeline for buying signals — job postings, funding announcements, technology changes, executive moves. Configure it to watch three prospects from your pipeline.
-
-Run it. What signals does it detect? Are the signals real or hallucinated? Check at least one signal against a public source. If the agent reports "NexaFlow posted a Senior Kafka Engineer role on LinkedIn" — is that posting real? Can you find it?
-
-### Step 2: Deploy the Reactive Agent
-
-The **Outreach Sequencing Agent** from L13 reacts to Lead Intelligence signals by initiating outreach sequences. When Lead Intelligence flags a buying signal, Outreach Sequencing starts a sequence.
-
-Configure the reactive agent to watch Lead Intelligence output. Set it to trigger a 3-touch sequence when a prospect shows a technology hiring signal.
-
-### Step 3: Trace the Coordination
-
-Now watch the two agents work together. Lead Intelligence detects a signal. Outreach Sequencing starts a sequence. Trace the full flow:
-
-1. What signal did Lead Intelligence detect?
-2. Is that signal verified or hallucinated? (**Hallucinated Data** check)
-3. What sequence did Outreach Sequencing trigger?
-4. Does the sequence reference the specific signal? Or is it generic? (**Context Loss** check)
-5. If the signal was hallucinated, the entire sequence is based on fabricated intelligence. The outreach references a job posting that does not exist. The prospect receives a message about a hiring need they do not have. That is worse than a cold email — it is a warm email based on a lie.
-
-### Step 4: Identify Human Gates
-
-Where in this two-agent system does a human need to approve before the system acts? Map every decision point:
-
-| Decision Point | Current: Agent or Human? | Should Be: Agent or Human? | Why? |
-|---|---|---|---|
-| Detect buying signal | Agent | Agent | Monitoring is low-risk, high-volume |
-| Verify signal accuracy | ? | Human | Hallucinated signals trigger false outreach |
-| Initiate outreach sequence | ? | ? | Depends on signal confidence |
-| Continue past Touch 2 | ? | Human | Over-Automation risk after initial touches |
-| Escalate to account executive | ? | Human | AE time is expensive, needs justified allocation |
-
-**Error to diagnose: Over-Automation.** The two-agent system has no human gate between "signal detected" and "sequence started." Lead Intelligence flags a signal. Outreach Sequencing acts on it immediately. If the signal is hallucinated, the outreach fires before anyone checks. If the prospect recently said "not interested," the sequence fires anyway because Lead Intelligence does not check CRM disposition — it checks buying signals. A human between detection and action would catch both cases.
-
-**What success looks like:** Two agents deployed and coordinated. A signal trace from detection through outreach. At least one hallucination check on a detected signal. A human gate map showing where the system needs approval checkpoints. A documented Over-Automation risk with a proposed architectural fix.
+```yaml
+exit_conditions:
+  - trigger: "Prospect declines or requests removal"
+    action: "Stop sequence immediately"
+  - trigger: "Prospect books a meeting"
+    action: "Stop sequence, transition to pre-call brief"
+  - trigger: "No response after all 6 touches"
+    action: "Move to nurture cadence (monthly)"
+```
 
 ---
 
-## Capstone: Your Revenue Engine, End-to-End
+## Part B: The Campaign and Content Engine
 
-**Duration:** 45-60 minutes
+The research-to-meeting pipeline handles individual prospects. The campaign engine handles markets. Time target: 10 minutes for the required exercise.
 
-Select one of the six exercises above. Run it end-to-end with your real business data.
+### Exercise 4: Full Campaign Brief (Required)
 
-Not NexaFlow. Not Meridian. Your actual prospects, your actual ICP, your actual competitors, your actual brand voice.
+Build a campaign for NexaFlow targeting logistics operations leaders.
 
-### Requirements
+```
+/campaign-plan
+Goal: Generate 50 HOT leads for NexaFlow's logistics data platform
+Audience: VP Operations + COO at mid-market logistics companies
+         (100-500 employees)
+Geography: Pakistan, UAE, UK
+Budget: $25,000
+Timeline: 12 weeks
+Channels: LinkedIn, email, content marketing, 1 regional event
+```
 
-1. **Real data.** Use prospects currently in your pipeline. Use your actual ICP configuration. Use competitors you face in deals. If you do not have an active pipeline, use the last 3 companies that evaluated your product.
+Review the campaign brief. Three things to evaluate:
 
-2. **Full execution.** Do not skip stages. If you choose Exercise 2 (Prospect-to-Meeting Pipeline), run all eight stages. If you choose Exercise 1 (ICP Calibration Sprint), score all three prospects and recalibrate.
+**Channel allocation realism.** If the agent allocates $8,000 to "a logistics trade show in Karachi," verify that number. A booth at ITCN Asia or a logistics-specific conference may cost $3,000 to $15,000 depending on the event. If the budget assumption is fabricated, that is **Hallucinated Data** embedded in your campaign plan — every downstream decision built on that budget allocation inherits the error.
 
-3. **Error diagnosis.** Identify and classify at least 2 Agent Output Taxonomy errors. Use the exact taxonomy name. Trace each error to its root cause. Propose a specific fix.
+**Audience sizing.** The brief should estimate total addressable audience. If it says "approximately 2,400 VP Operations at mid-market logistics companies across Pakistan, UAE, and UK" — is that number sourced or invented? LinkedIn Sales Navigator can verify this count. If the number is fabricated, your CPL projections are built on fabricated denominators.
 
-4. **Written deliverable.** Produce a brief report (one page is sufficient) that includes:
-   - Which exercise you ran
-   - The real business data you used (prospect names, ICP parameters)
-   - The workflow stages you executed
-   - The 2+ errors you found, classified by taxonomy
-   - The root cause of each error
-   - The fix you would implement
+**Content calendar.** After the campaign brief is generated, build the content calendar:
 
-### Choosing Your Exercise
+```
+Build a 12-week content calendar for this campaign.
+Week-by-week schedule. For each week, specify:
+- Content piece (blog post, case study, LinkedIn post, etc.)
+- Channel
+- Target persona (VP Ops or COO)
+- Call to action
+- Tie to campaign goal
+```
 
-Pick based on where your sales process needs the most work:
-
-| If Your Priority Is... | Choose | Because |
-|---|---|---|
-| Targeting accuracy | Exercise 1: ICP Calibration Sprint | Forces you to test your ICP against real prospects |
-| End-to-end pipeline execution | Exercise 2: Prospect-to-Meeting Pipeline | Tests every stage with real data |
-| Competitive positioning | Exercise 3: Five Laws Audit + Competitive Outreach | Validates your competitive intelligence |
-| Marketing scale | Exercise 4: Campaign + Content Factory | Tests content quality at volume |
-| Brand consistency | Exercise 5: Sales Asset Workshop | Audits your brand voice across channels |
-| Systems architecture | Exercise 6: Agent Architecture Challenge | Validates your agent coordination design |
-
-### What the Capstone Tests
-
-The capstone is not about producing a perfect pipeline output. Agents will hallucinate. Scores will miscalibrate. Context will be lost. Sequences will over-automate. Compliance gaps will appear.
-
-The capstone tests whether you can **operate the system, evaluate its output, and catch its mistakes before they reach the prospect.** That is the skill. Not prompting. Not configuring. Diagnosing. Every lesson in this chapter built one piece of that diagnostic capability. The capstone assembles the full toolkit and deploys it against real revenue.
-
-### Evaluation Criteria
-
-| Criterion | What We Are Looking For |
-|---|---|
-| **Execution completeness** | All stages of the chosen exercise were run — no stages skipped |
-| **Data authenticity** | Real prospects, real ICP, real competitors — not hypothetical |
-| **Error identification** | 2+ errors found and correctly classified by Agent Output Taxonomy |
-| **Root cause analysis** | Each error traced to a specific cause (not "the agent was wrong") |
-| **Proposed fix** | Each error has a concrete, implementable fix |
-
-A report with 2 well-diagnosed errors is stronger than a report with 5 vaguely described problems. Precision matters more than volume.
+**Deliverable:** Campaign brief with budget allocation, 12-week content calendar, and at least one flagged data point that requires verification.
 
 ---
 
-## Error Frequency by Workflow Stage
+### Exercise 5: Content Factory — 10 Assets (Bonus)
 
-After completing your exercises, this reference shows where each error type most commonly appears. Use it to guide your diagnostic focus.
+Take the campaign's cornerstone asset — a blog post or whitepaper on logistics data infrastructure. Multiply it into 10 derivative assets:
 
-| Workflow Stage | Most Common Error | Second Most Common | Why |
-|---|---|---|---|
-| Research (L01) | Hallucinated Data | — | Agent fills data gaps with fabrication |
-| Scoring (L03) | Miscalibrated Scoring | Hallucinated Data | ICP gaps + hallucinated inputs compound |
-| Outreach (L04) | Compliance Gap | Over-Automation | Legal requirements exist outside content quality |
-| Sequences (L05) | Over-Automation | Context Loss | No stop rules + personalisation decay |
-| Pipeline (L06) | Context Loss | Miscalibrated Scoring | Handoff points lose intelligence |
-| Campaigns (L08) | Hallucinated Data | Compliance Gap | Market stats fabricated, regional rules missed |
-| Assets (L09) | Context Loss | Hallucinated Data | Brand voice not consumed, ROI figures invented |
-| Agent Coordination (L13-L15) | Over-Automation | Hallucinated Data | No human gates + fabricated signals |
+```
+Take this cornerstone asset and produce 10 derivative pieces:
+1. LinkedIn post (conversational, first-person)
+2. Email newsletter section (3 paragraphs, single CTA)
+3. X/Twitter thread (5-7 tweets)
+4. Short video script (60 seconds)
+5. Infographic outline (5 data points + visual flow)
+6. Webinar abstract (title, 3 learning objectives, speaker bio)
+7. Sales one-pager (ROI-focused, 1 page PDF layout)
+8. Podcast talking points (10 questions for a 20-min episode)
+9. Case study outline (problem, solution, results framework)
+10. Executive summary (150 words for board-level audience)
+```
 
-The pattern: early stages tend toward fabrication errors (Hallucinated Data, Miscalibrated Scoring). Late stages tend toward flow errors (Context Loss, Over-Automation). Compliance Gaps appear wherever the output touches a prospect — outreach, campaigns, and any agent-generated communication.
+After generating all 10, run `/brand-review` on three key pieces — the LinkedIn post, the sales one-pager, and the executive summary.
+
+**What to evaluate:** Are the 10 pieces genuinely different formats, or are they the same 300 words with different headers? The LinkedIn post should use conversational tone. The sales one-pager should lead with numbers. The executive summary should be dense and jargon-appropriate for a board audience. If all ten read like the blog post reformatted, the multiplication produced quantity without quality.
+
+**Brand voice consistency:** Does the LinkedIn post say "leverage our platform" while your brand voice in `sales-marketing.local.md` forbids "leverage"? Does the one-pager use superlatives that your brand guidelines prohibit? If the generating skills did not consume your brand voice configuration, that is **Context Loss**.
+
+---
+
+## Part C: The Revenue Dashboard
+
+The pipeline handles prospects. The campaign handles markets. The dashboard handles the business. Time target: 5 minutes for the required exercise.
+
+### Exercise 6: Pipeline Health Audit (Bonus)
+
+Run a pipeline health check using NexaFlow's pipeline data from earlier lessons.
+
+```
+/pipeline-review
+Run a deal health analysis on NexaFlow's current pipeline.
+For each deal in proposal or later stages, evaluate:
+- Days in current stage
+- Last activity date
+- Champion status (identified / engaged / at risk)
+- Competitive threat level
+- Probability assessment (agent vs CRM probability)
+```
+
+Then run a three-scenario forecast:
+
+```
+/forecast
+Generate a 3-scenario revenue forecast for NexaFlow Q2 2026:
+- Best case: all deals close at current probability
+- Likely case: apply historical close rate to each stage
+- Worst case: remove any deal with no activity >30 days
+```
+
+From the forecast output, produce deal health briefs for the top 3 opportunities. Each brief should include: the deal name, current stage, probability assessment, risk factors, and the one action most likely to advance the deal this week.
+
+**What to evaluate:** Compare the agent's probability assessment against the CRM's stored probability. If the CRM says Crescent Freight is at 60% but the agent says 35% because the deal has been in Proposal stage for 34 days with no activity — which assessment is more accurate? The CRM stores the rep's subjective estimate. The agent applies objective criteria. Neither is always right. The value is in the gap between them. A 25-point gap means someone needs to investigate.
+
+---
+
+### Exercise 7: The RevOps Dashboard (Required)
+
+Configure the Revenue Reporting Agent from Lesson 13 with all metrics, then produce two outputs.
+
+**Output 1 — Weekly dashboard:**
+
+```
+Configure the revenue-reporting-agent for NexaFlow with these metrics:
+
+Pipeline metrics:
+- Total pipeline value and weighted pipeline
+- Deals by stage (count and value)
+- Average days in each stage
+- Deals at risk (>30 days without advancement)
+
+Activity metrics:
+- Meetings held this week
+- Outreach messages sent
+- Response rate by channel
+
+Forecast metrics:
+- Quarterly target vs weighted pipeline
+- Gap to target
+- Top 3 deals most likely to close this quarter
+
+Produce the weekly dashboard for the week of March 10-14, 2026.
+```
+
+**Output 2 — Executive email:**
+
+```
+Generate a weekly executive email for NexaFlow's CEO.
+Requirements:
+- Maximum 5 bullets
+- Maximum 150 words
+- Lead with the single most important pipeline change this week
+- Include: pipeline value change, deals at risk count, forecast gap
+- Close with the one action the sales team needs to take this week
+```
+
+**Output 3 — Leading indicator alert:**
+
+Define one leading indicator alert that the dashboard should monitor continuously:
+
+```
+Configure a leading indicator alert:
+Metric: HOT-to-SAL (Sales Accepted Lead) conversion rate
+Threshold: Alert when conversion rate drops below 25%
+           (baseline: 35% from last quarter)
+Cadence: Check daily
+Action: Flag in daily digest + notify sales manager
+
+Why this metric: A dropping HOT-to-SAL rate means either the
+ICP is generating false positives (scoring problem) or the
+outreach is failing to convert genuine interest into meetings
+(execution problem). Either way, it's a leading indicator of
+future pipeline decline — the revenue impact won't appear for
+6-8 weeks, but the diagnostic signal is visible now.
+```
+
+**Deliverable:** Weekly dashboard, 5-bullet executive email (150 words max), and one configured leading indicator alert with rationale.
+
+---
+
+## What You Built
+
+This chapter taught you to operate a coordinated revenue engine. Here is every component, assembled.
+
+**Prospect Intelligence (L01-L04):**
+
+- Installed three plugin layers (Sales + Marketing + RevOps extension)
+- Configured `sales-marketing.local.md` with ICP, brand voice, and business data
+- Ran `/research-prospect` briefs and detected hallucinated data
+- Built a three-dimension scoring model (Fit + Timing + Engagement)
+- Managed CRM enrichment and data decay
+
+**Sales Execution (L05-L08):**
+
+- Applied the Five Laws of outreach as hard constraints
+- Built multi-touch sequences with exit conditions
+- Generated pre-call briefs and battlecards with `/call-summary`
+- Ran the complete prospect-to-meeting pipeline end-to-end
+- Discovered config quality amplification — good ICP produces great output, bad ICP produces garbage
+
+**Content and Campaigns (L09-L11):**
+
+- Created interactive sales assets with `create-an-asset`
+- Configured brand voice and ran `/brand-review` audits
+- Built campaign briefs with `/campaign-plan` and content calendars
+- Multiplied cornerstone content into derivative assets
+- Analysed campaign performance and identified underperforming channels
+
+**Compliance and Operations (L12-L13):**
+
+- Applied jurisdiction overlays for PECA (Pakistan), GDPR (UK/EU), and UAE data law
+- Generated compliant outreach across three regulatory frameworks
+- Deployed monitoring agents: Lead Intelligence, CRM Hygiene, Marketing Performance, Revenue Reporting
+- Configured schedule-driven agents with segment-aware thresholds
+- Built the revenue dashboard with leading indicator alerts
+
+**Diagnostic Capability (L01-L13):**
+
+- Identified all five Agent Output Taxonomy errors:
+
+| Error Type                | First Taught | What You Can Do                                                            |
+| ------------------------- | ------------ | -------------------------------------------------------------------------- |
+| **Hallucinated Data**     | L01          | Flag unverifiable claims in research briefs and campaign data              |
+| **Miscalibrated Scoring** | L03          | Trace false positives to specific ICP sections and recalibrate             |
+| **Compliance Gap**        | L05          | Audit outreach against Five Laws AND jurisdiction-specific regulations     |
+| **Over-Automation**       | L06          | Add exit conditions to sequences and human gates to agent workflows        |
+| **Context Loss**          | L07          | Trace intelligence flow across pipeline stages and identify where it drops |
+
+**The division of labour that runs through every lesson:** The agent researches, drafts, and recommends. The sales professional decides and sends. The agent identified the signal. You chose the response. That boundary — inform versus act — is what makes the revenue engine trustworthy at scale.
+
+This system is the product. For the dispatcher building a logistics business, the agency selling sales enablement, the consultancy offering RevOps-as-a-service — what you built in 13 lessons is the offering. Configure it for a client's ICP, connect it to their CRM, tune the thresholds, and the revenue engine runs. The plugins provide the capability. Your configuration and diagnostic skill provide the value.
+
+---
+
+## Flashcards Study Aid
+
+<Flashcards />
 
 ---
 
 ## Try With AI
 
-**Setup:** Open Claude Code with your sales-marketing plugins installed and `sales-marketing.local.md` configured with your real business data.
+Use these prompts in Claude or your preferred AI assistant with your sales-marketing plugins installed.
 
-**Prompt 1:**
-
-```
-I just ran my full prospect-to-meeting pipeline for [Prospect Name].
-Here is the output from each stage:
-
-[Paste your Stage 1-8 outputs]
-
-Review the full pipeline. For each stage, identify:
-1. What intelligence arrived from the upstream stage
-2. What intelligence was generated fresh
-3. What intelligence was available upstream but NOT used (Context Loss)
-4. What claims cannot be independently verified (Hallucinated Data)
-
-Then classify every error you find using the Agent Output Taxonomy:
-Hallucinated Data, Miscalibrated Scoring, Compliance Gap,
-Over-Automation, or Context Loss. For each error, trace the root
-cause and propose a fix.
-```
-
-**What you are learning:** Using AI to audit AI output. The agent reviewing the pipeline did not produce the pipeline — it is evaluating it. This is a second-pass diagnostic pattern: run a workflow with one agent, then review the output with a fresh agent context. The reviewing agent will catch errors that the producing agent cannot see because the producing agent was optimising for generation, not evaluation.
-
-**Prompt 2:**
+### Prompt 1: Reproduce the Sprint
 
 ```
-Here is my ICP configuration from sales-marketing.local.md:
+I want to run the complete revenue engine sprint. Here is my setup:
+- Product: [your product or NexaFlow's logistics data platform]
+- ICP: [paste your ICP from sales-marketing.local.md]
+- Target market: [your markets]
 
-[Paste your ICP YAML]
+Run these steps in sequence and time each one:
+1. Score 5 closed-won deals to validate ICP (all should be 60+)
+2. Research 5 new prospects in my target market
+3. Score all 5 and rank by composite score
+4. Generate Five Laws-compliant outreach for the top 3
+5. Generate a call summary for the #1 prospect
+6. Build a campaign brief ($25K, 12 weeks, 50 HOT leads target)
+7. Produce a weekly revenue dashboard
 
-And here are the scores for 3 prospects:
-- Prospect A (strong fit): [score]
-- Prospect B (strong fit): [score]
-- Prospect C (deliberate misfit): [score]
-
-Prospect C scored [X], which is higher than expected for a
-company I know is a poor fit. Diagnose the miscalibration.
-Which ICP section is too broad? What negative signal is missing?
-Propose specific edits to the ICP that would drop Prospect C
-below 50 without affecting the scores for Prospects A and B.
+At the end, tell me:
+- Total time for the full sprint
+- How many Agent Output Taxonomy errors you spotted
+- Which pipeline stage had the lowest output quality and why
 ```
 
-**What you are learning:** Collaborative ICP refinement. You bring the domain knowledge (which prospect is a misfit and why). The agent brings systematic analysis of the ICP configuration. Neither can solve this alone — you know the prospect is wrong-fit but may not see which ICP criterion is too broad; the agent can trace the scoring logic but does not know which prospect is genuinely wrong-fit. This is the convergence pattern: your judgment plus the agent's analysis produces a better ICP than either could produce independently.
+**What you are learning:** Execution speed and error detection under pressure. The first time through this sprint, you will likely spend 40-50 minutes. The second time, with a tuned ICP and familiar pipeline, it should take 20-25 minutes. The gap between first and second run measures how much of the sprint is setup versus execution — and setup time drops to near zero once your configuration is dialled in.
+
+### Prompt 2: Transfer to a Different Industry
+
+```
+I have been running the revenue engine for logistics technology.
+Now I want to adapt it for [choose: healthcare SaaS / fintech /
+legal tech / e-commerce / cybersecurity / your industry].
+
+For this new industry:
+1. What percentage of the revenue engine transfers directly
+   with zero changes? (ICP structure, scoring model, Five Laws,
+   pipeline stages, dashboard metrics)
+2. What needs reconfiguration? (ICP criteria, compliance
+   jurisdictions, channel allocation, content formats)
+3. What is industry-specific and does not exist in the current
+   engine? (Regulatory requirements, sales cycle patterns,
+   buying committee structures, industry data sources)
+
+Build a migration checklist: every config file, skill, and
+command that needs to change, and what the change is.
+```
+
+**What you are learning:** Revenue engine portability. The Five Laws apply to any B2B outreach. The three-dimension scoring model (Fit + Timing + Engagement) works across industries — only the criteria within each dimension change. The pipeline stages are universal. What changes between industries is the ICP content, the compliance framework, the content formats that resonate with the audience, and the data sources for research. Understanding what transfers and what requires reconfiguration is the difference between rebuilding the engine from scratch for each client and reconfiguring an existing system in an afternoon.
+
+### Prompt 3: Apply to Your Business
+
+```
+I want to run the revenue engine sprint for my actual business.
+
+My business: [describe your product/service]
+My market: [describe your target customers]
+My current pipeline: [number of active prospects, average deal size]
+My biggest sales challenge: [what is not working today]
+
+Help me:
+1. Build an ICP for my business (not NexaFlow's)
+2. Research 5 real prospects from my market
+3. Score them against my ICP
+4. Generate outreach for the top 3
+5. Build a campaign brief with realistic budget for my stage
+6. Produce a dashboard with the 3 metrics that matter most
+   for my current pipeline size
+
+At the end, write a 3-sentence summary:
+- Sentence 1: What I built (the system)
+- Sentence 2: What surprised me (unexpected finding)
+- Sentence 3: What I would change (improvement for next sprint)
+```
+
+**What you are learning:** The gap between demo data and real data. NexaFlow's pipeline is clean, structured, and designed to illustrate specific concepts. Your pipeline has missing data, inconsistent formatting, prospects who do not fit neatly into scoring dimensions, and deals that defy standard stage progressions. Running the engine against real data reveals which components are robust (they work despite messy inputs) and which are fragile (they break when data does not match the expected format). That fragility map is your improvement roadmap.
