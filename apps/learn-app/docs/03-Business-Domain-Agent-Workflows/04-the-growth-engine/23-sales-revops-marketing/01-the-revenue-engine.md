@@ -1,25 +1,25 @@
 ---
 sidebar_position: 1
 title: "The Revenue Engine"
-description: "Install the Anthropic and extension sales-marketing plugins, run your first /research-prospect command, learn to detect hallucinated data in agent output, and configure sales-marketing.local.md for your business"
+description: "Install the Sales, Marketing, and RevOps extension plugins, generate demo business data for NexaFlow Technologies, run your first prospect research brief, and learn to detect hallucinated data in agent output"
 keywords:
   [
     "sales AI",
     "RevOps",
     "revenue operations",
     "plugin installation",
-    "research-prospect",
+    "prospect research",
     "hallucinated data",
     "ICP",
     "sales-marketing.local.md",
     "Claude Sales Plugin",
-    "Cowork plugin",
-    "prospect research",
+    "prospect intelligence",
     "AI sales agent",
+    "NexaFlow Technologies",
   ]
 chapter: 23
 lesson: 1
-duration_minutes: 20
+duration_minutes: 25
 
 # HIDDEN SKILLS METADATA
 skills:
@@ -28,489 +28,395 @@ skills:
     category: "Technical"
     bloom_level: "Apply"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can install both plugin layers (Anthropic + extension), verify installation by running /research-prospect, and troubleshoot common installation issues"
+    measurable_at_this_level: "Student can install all three plugin layers (Sales + Marketing + RevOps extension), verify installation by running a prospect research prompt, and confirm structured output with ICP MATCH header"
 
   - name: "Detect Hallucinated Data in Agent Research Output"
     proficiency_level: "A2"
     category: "Applied"
     bloom_level: "Analyze"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can read a research brief, identify at least 2 claims that cannot be verified from public sources, and classify them as hallucinated vs verifiable"
+    measurable_at_this_level: "Student can read a prospect research brief, identify at least two claims that cannot be verified from public sources, and classify each as verifiable, plausible, or suspect"
 
   - name: "Configure sales-marketing.local.md for a Specific Business"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can create a minimum viable local configuration and observe how it changes agent output focus"
+    measurable_at_this_level: "Student can create a skeleton local configuration with ICP data and observe how it changes agent output by comparing research briefs before and after configuration"
 
 learning_objectives:
-  - objective: "Install the Anthropic Sales and Marketing Plugins alongside the Agent Factory extension and verify correct dual-layer installation"
+  - objective: "Install the Anthropic Sales and Marketing plugins alongside the Agent Factory RevOps extension and verify correct three-layer installation"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student can demonstrate successful installation and produce structured output from /research-prospect"
+    assessment_method: "Student demonstrates successful installation and produces a structured research brief with ICP MATCH header from the extension's prospect-research skill"
 
   - objective: "Identify hallucinated data in a prospect research brief by distinguishing verifiable claims from fabricated ones"
     proficiency_level: "A2"
     bloom_level: "Analyze"
-    assessment_method: "Given a research brief, student can flag at least 2 unverifiable claims and explain why they cannot be trusted without external verification"
+    assessment_method: "Given a research brief, student flags at least two unverifiable claims and explains why they cannot be trusted without external verification"
 
   - objective: "Configure sales-marketing.local.md with business-specific ICP data and observe how configuration changes agent output"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student produces a configuration file and can compare agent output before and after configuration"
+    assessment_method: "Student produces a skeleton configuration file and can compare agent output with and without configuration, noting the appearance of the ICP MATCH section"
 
 cognitive_load:
   new_concepts: 7
-  concepts_list:
-    - "Revenue Engine as the unified sales-marketing system"
-    - "Dual-plugin architecture (Anthropic base + Agent Factory extension)"
-    - "Prospect research brief as structured intelligence output"
-    - "Hallucinated Data as an agent error type"
-    - "sales-marketing.local.md as the business configuration file"
-    - "ICP (Ideal Customer Profile) as targeting foundation"
-    - "Plugin verification through structured output headers"
-  assessment: "7 concepts at mixed A2-B1 level. Installation is procedural, hallucination detection requires analytical thinking. Concepts build sequentially — install before run, run before evaluate."
+  assessment: "7 concepts (Revenue Engine as unified system, three-plugin architecture, prospect research brief structure, Hallucinated Data as agent error type, ICP as targeting foundation, sales-marketing.local.md configuration, demo data generation) at upper limit of A2-B1 range. Installation is procedural, hallucination detection requires analytical thinking. Concepts build sequentially: install before run, run before evaluate, evaluate before configure."
 
 differentiation:
-  extension_for_advanced: "Run /research-prospect on 3 prospects in different industries. Compare the types of hallucinated data across industries — does the agent fabricate more in data-scarce sectors? Document the pattern."
-  remedial_for_struggling: "Focus on installation and running one /research-prospect command. If you can verify the output contains structured headers and identify one claim you cannot verify, you have the foundation for L02."
+  extension_for_advanced: "Run the prospect research prompt on three prospects from the generated dataset. Compare the types of hallucinated data across prospects in different countries. Document whether data-scarce markets produce more hallucinations than data-rich ones."
+  remedial_for_struggling: "Focus on installation and running one research prompt. If you can identify the structured headers in the output and flag one claim you cannot verify, you have the foundation for Lesson 2."
 ---
 
 # The Revenue Engine
 
-Your best rep closes three times more than the team average. Not twice — three times. Watch her work and you will not find charisma or aggression. You will find preparation. She walks into every meeting knowing the prospect's technology stack, last two funding rounds, recent executive hires, and the initiative their VP of Engineering mentioned at a conference six weeks ago. She personalises the opening line. She references the pain point before the prospect raises it. She times the follow-up to a buying signal the prospect did not realise they had broadcast.
+Farah closes at 340% of quota. She is not your most charismatic rep and she is not your longest-tenured. She is your most prepared. Before every first contact she spends 45 minutes reading Companies House filings, scanning LinkedIn activity, cross-referencing recent hires against technology signals, and building a list of five questions she already knows the answers to. She never opens with a pitch. She opens with a question that demonstrates she has done the homework the prospect expected nobody to do.
 
-The problem is not talent. The problem is throughput. That level of preparation takes 30 to 45 minutes per prospect. Your best rep handles 15 key accounts. You have 500 in the pipeline. The maths breaks immediately: 500 accounts at 30 minutes each is 250 hours of research per cycle. Your team has maybe 40 hours of combined research capacity per week. So 460 accounts get the generic pitch. The generic pitch converts at one-third the rate. You are leaving revenue on the table — not because your team lacks skill, but because deep preparation does not scale with headcount alone.
+Your other three reps spend four minutes on research. They open LinkedIn, skim the headline, check the company size, and send a template. They average 60% of quota. The gap between Farah and the rest of your team is not talent, charisma, or experience. The gap is preparation time -- 45 minutes versus 4 minutes, multiplied across every prospect, every week. The maths is brutal: 500 accounts at 45 minutes each is 375 hours of research per cycle. Your team has 40 hours of combined research capacity per week. So 460 accounts get the four-minute version.
 
-This chapter builds the system that scales that preparation. The **Revenue Engine** is a coordinated set of Claude plugins — Anthropic's base sales and marketing plugins plus the Agent Factory extension — that encodes the research depth, personalisation quality, and timing precision of your best closer into a repeatable, configurable system. By the end of this lesson you will have it installed, you will have run your first prospect research command, and you will have learned the single most important skill in working with AI sales tools: detecting when the agent is making things up.
+This chapter gives every rep Farah's research depth in under four minutes. The **Revenue Engine** is a coordinated set of Claude plugins -- Anthropic's base Sales and Marketing plugins plus the Agent Factory extension -- that produces the same structured intelligence Farah builds by hand. By the end of this lesson you will have installed all three plugins, generated a demo business dataset, run your first prospect research brief, and learned the single most important skill in working with AI sales tools: detecting when the agent is making things up.
 
-## Installing the Plugins
+## Install All Three Plugins
 
-The Revenue Engine uses a **dual-plugin architecture**. The first layer is Anthropic's own sales and marketing plugins — open-source tools that ship with Claude and handle prospect research, lead scoring, campaign planning, and outreach sequencing. The second layer is the Agent Factory extension, which adds business-specific configuration, skill collision resolution, and the local configuration file that tailors every command to your market, your ICP, and your sales methodology.
-
-You need both layers. The Anthropic plugins provide the base commands. The Agent Factory extension provides the configuration that makes those commands useful for your specific business.
-
-### Step 1: Install the Anthropic Base Plugins
-
-Open Claude Code and run these two installation commands:
+Open Claude Code and run these three commands:
 
 ```
 claude plugin install sales@knowledge-work-plugins
-```
-
-**Output:**
-
-```
-Installed plugin: sales@knowledge-work-plugins (v1.2.0)
-  Commands: /research-prospect, /score-lead, /plan-campaign, /build-sequence
-  Skills: prospect-research, lead-scoring, outreach, campaign-planning
 ```
 
 ```
 claude plugin install marketing@knowledge-work-plugins
 ```
 
-**Output:**
-
-```
-Installed plugin: marketing@knowledge-work-plugins (v1.1.0)
-  Commands: /plan-campaign (extended), content-calendar, audience-segment
-  Skills: content-strategy, audience-analysis, campaign-optimization
-```
-
-Two things to notice. First, both plugins contribute to the `/plan-campaign` command — sales provides campaign structure, marketing provides content and audience targeting. Second, the sales plugin alone gives you the four slash commands you will use most in this chapter: `/research-prospect`, `/score-lead`, `/plan-campaign`, and `/build-sequence`.
-
-### Step 2: Install the Agent Factory Extension
-
 ```
 claude plugin install sales-revops-marketing@agentfactory-business
 ```
 
-**Output:**
+**Output (after third install):**
 
 ```
 Installed plugin: sales-revops-marketing@agentfactory-business (v1.0.0)
   Extension for: sales@knowledge-work-plugins, marketing@knowledge-work-plugins
   Added: sales-marketing.local.md template, ICP configuration, jurisdiction overlays
-  Skills: revops-pipeline, market-localisation, icp-enrichment
+  Skills: 15 active (router, prospect-research, lead-scoring, crm-enrichment,
+          outreach, sequence, pre-call-brief, follow-up, pipeline, content-creation,
+          campaign-planning, copywriting, performance-analysis, content-calendar,
+          persona-icp)
+  Agents: 5 active
 ```
 
-The extension does not replace the base plugins. It extends them. When you run `/research-prospect` after installing the extension, the base `prospect-research` skill still executes — but now the extension's `icp-enrichment` skill also runs, filtering the research output through your **Ideal Customer Profile (ICP)** configuration. You will see the difference later in this lesson.
+The Sales plugin provides six skills and three commands (`/call-summary`, `/forecast`, `/pipeline-review`). The Marketing plugin provides five skills and seven commands (`/draft-content`, `/campaign-plan`, `/brand-review`, `/competitive-brief`, `/performance-report`, `/seo-audit`, `/email-sequence`). The extension adds fifteen skills that enhance both base plugins with business-specific configuration.
 
-### Step 3: Verify the Installation
-
-Run the following command to confirm everything is connected:
+Verify everything is connected:
 
 ```
-claude plugin list --verbose
+Research Sarah Chen, VP Operations at Meridian Logistics, Leeds.
+I sell workflow automation for logistics companies. I want to
+understand fit, timing, and the best outreach angle.
 ```
 
-**Output:**
+If the extension is active, the output includes an **ICP MATCH** header at the top of the research brief. If you see only a plain research brief without the ICP section, re-run the installation command for the extension.
+
+## Connect Your Tools (Optional)
+
+The Revenue Engine works with prompt-provided context alone -- you describe the prospect, the agent researches. It becomes significantly more powerful when connected to your actual sales tools.
+
+| Category     | Recommended             | What It Enables                                       |
+| ------------ | ----------------------- | ----------------------------------------------------- |
+| **CRM**      | HubSpot CRM (free tier) | Agent reads/writes your real pipeline from L04 onward |
+| **Email**    | Gmail                   | Draft and review outreach sequences                   |
+| **Calendar** | Google Calendar         | Pre-call brief timing and meeting prep                |
+| **Optional** | Slack                   | Team alerts for pipeline changes                      |
+| **Optional** | Notion                  | Knowledge base for competitive intelligence           |
+| **Optional** | Apollo                  | Contact enrichment and signal monitoring              |
+
+If you have a free HubSpot account, the agent works with your real CRM data from Lesson 4 onward. If you do not have any of these accounts, skip this section entirely. Both paths produce the same quality output -- with connectors the agent reads live data, without them you provide context in prompts.
+
+## Generate Your Demo Business
+
+NexaFlow Technologies is the company you will operate as throughout this chapter. It is a 38-person workflow automation startup in Karachi, selling to mid-market logistics companies across Pakistan, UAE, and the UK. Copy this prompt and run it in Claude Code:
 
 ```
-Installed Plugins:
-  1. sales@knowledge-work-plugins (v1.2.0)
-     Commands: /research-prospect, /score-lead, /plan-campaign, /build-sequence
-     Skills: 4 active
+Generate a complete demo dataset for a company called NexaFlow Technologies,
+a workflow automation platform for mid-market logistics companies based in
+Karachi, Pakistan (38 employees, PKR 180M revenue).
 
-  2. marketing@knowledge-work-plugins (v1.1.0)
-     Commands: /plan-campaign (extended), content-calendar, audience-segment
-     Skills: 3 active
+Generate the following:
 
-  3. sales-revops-marketing@agentfactory-business (v1.0.0)
-     Extends: sales, marketing
-     Skills: 3 active
-     Local config: not found (create sales-marketing.local.md to activate)
+1. CLOSED-WON DEALS (20 records)
+   For each: company name, industry, employee count, revenue, location,
+   buyer persona (name + title), trigger event, sales cycle length,
+   primary pain, deal value, close date (last 18 months)
+   Mix: 12 Pakistan, 5 UAE, 3 UK
 
-Total: 3 plugins, 10 skills, 6 commands
+2. TARGET PROSPECTS (5 records)
+   For each: company name, location, employee count, revenue estimate,
+   industry, key contact (name + title + background), recent news/signals,
+   LinkedIn activity, tech stack signals
+   Include: Meridian Logistics (Leeds, UK, Sarah Chen, VP Ops) as prospect #1
+   Mix: 2 Pakistan, 1 UAE, 2 UK
+
+3. CURRENT PIPELINE (10 deals)
+   For each: company name, deal value, stage (Discovery/Demo/Proposal/
+   Negotiation/Closed-Won), assigned rep, last activity date, close date
+   target, notes
+   Include: 3 at-risk (no activity >14 days), 2 likely to close this quarter
+
+4. CAMPAIGN HISTORY (Q1 results)
+   Channels: LinkedIn (organic + sponsored), email nurture, trade press
+   For each: impressions, clicks, CTR, conversions, cost, leads generated,
+   HOT leads, cost per lead
+
+5. COMPETITOR INTELLIGENCE
+   3 competitors: name, positioning, strengths, weaknesses, where they win,
+   where NexaFlow wins
+
+Format: structured markdown with clear headers.
 ```
 
-Notice the last line under the extension: "Local config: not found." That is expected. You have not created `sales-marketing.local.md` yet. The plugins work without it — they just produce generic output. The local configuration file is what makes the output specific to your business. You will create it later in this lesson.
+**Output:** A structured dataset saved as `demo-data.md` containing 20 closed-won deals, 5 target prospects (with Meridian Logistics as prospect #1), 10 pipeline deals, Q1 campaign results, and competitor intelligence. Save this file -- every subsequent lesson references this data.
 
----
+## Your First Research Brief
 
-## Your First Prospect Research Brief
-
-Time to run a real command. NexaFlow Technologies is a mid-size logistics-technology company based in Karachi. They build route-optimization software for last-mile delivery fleets in Pakistan and the Gulf states. Imagine you are a sales rep at a SaaS company selling data infrastructure, and NexaFlow is your prospect.
+You are NexaFlow Technologies. Your top prospect is Meridian Logistics in Leeds. Sarah Chen is their VP Operations -- she was promoted six months ago, she recently won a major new contract, and she has been posting on LinkedIn about scaling operations without adding headcount.
 
 Run:
 
 ```
-/research-prospect NexaFlow Technologies Karachi
+Research Sarah Chen, VP Operations at Meridian Logistics, Leeds.
+I sell workflow automation for logistics companies. I want to
+understand fit, timing, and the best outreach angle.
 ```
 
-The agent produces a **prospect research brief** — a structured intelligence document covering everything the agent can find and infer about the company. Here is the output, annotated:
+**Expected output:**
 
 ```
 ══════════════════════════════════════════════════════════════
           PROSPECT RESEARCH BRIEF
-          NexaFlow Technologies — Karachi, Pakistan
+          Meridian Logistics Ltd — Leeds, UK
           Generated: 2026-03-10
 ══════════════════════════════════════════════════════════════
 
-COMPANY OVERVIEW
+ICP MATCH
 ─────────────────────────────────────────────────────────────
-Founded:            2021
-Headquarters:       Clifton, Karachi
-Employees:          85-120 (estimated from LinkedIn)
-Industry:           Logistics Technology / Last-Mile Delivery
-Markets:            Pakistan, UAE, Saudi Arabia
+Match Score:       87/100 — STRONG FIT
+Company Size:      380 employees ✓ (within 50-400 ICP range)
+Industry:          Regional 3PL — warehousing + last-mile ✓
+Pain Signal:       Scaling without headcount (LinkedIn posts) ✓✓
+Timing Signal:     New contract win + VP promoted 6 months ago ✓
 
-SECP Registration:  Active — registered as private limited
-                    company under Companies Act 2017
-Website:            nexaflow.pk (active, last updated Feb 2026)
-
-KEY PERSONNEL
+WHO
 ─────────────────────────────────────────────────────────────
-CEO:                Farhan Ahmed — prev. Head of Operations
-                    at TCS (Pakistan), Stanford MBA 2018
-CTO:                Mehreen Qazi — prev. Senior Engineer at
-                    Careem (Dubai), MS CS LUMS 2016
-VP Sales:           Bilal Hussain — joined Oct 2025, prev.
-                    Regional Manager at Daraz
+Contact:           Sarah Chen, VP Operations
+Tenure:            18 months at Meridian, promoted to VP 6 months ago
+Background:        Previously Director of Logistics at Parcelhub
+                   (3 years), Operations Manager at DPD (5 years)
+LinkedIn:          Active — 3 posts in last month about operational
+                   scaling and warehouse automation
 
-FINANCIAL SIGNALS
+WHAT
 ─────────────────────────────────────────────────────────────
-Funding:            Series A closed Jun 2025, PKR 850M
-                    (~$3M USD) led by Indus Valley Capital    ← ⚠️
-Revenue:            Estimated ARR $2.3M based on fleet         ← ⚠️
-                    contracts (Q3 2025)
-Burn Rate:          Moderate — 14-month runway at current      ← ⚠️
-                    spend levels
+Company:           Meridian Logistics Ltd
+Founded:           2014
+Headquarters:      Leeds, UK
+Employees:         380
+Revenue:           £45-60M (estimated)
+Sector:            Regional 3PL — warehousing + last-mile delivery
 
-TECHNOLOGY STACK
+WHEN
 ─────────────────────────────────────────────────────────────
-Primary:            Python, React Native, PostgreSQL
-Infrastructure:     AWS (ap-south-1 Mumbai region)
-Job postings:       2 openings for Kafka engineers (posted
-                    Jan 2026) — signals event-streaming
-                    architecture investment
+Timing Score:      HIGH
+Trigger Events:
+  • New major contract win announced Feb 2026
+  • VP Ops promoted 6 months ago (mandate to change)
+  • 12 open positions on LinkedIn (scaling rapidly)
+  • Posted about "doing more with same headcount" (3 weeks ago)
 
-PAIN POINTS (INFERRED)
+PAIN
 ─────────────────────────────────────────────────────────────
-1. Scaling data pipeline from 50K to 500K daily deliveries
-   across three countries
-2. Real-time fleet tracking generating 2TB+ daily telemetry
-   that current PostgreSQL setup cannot handle at scale       ← ⚠️
-3. Compliance with UAE TRA data residency requirements for
-   Gulf operations
+Primary:           Manual coordination across 380+ staff for
+                   warehouse picking, fleet dispatch, last-mile
+                   tracking — no unified workflow system
+Secondary:         SLA compliance tracking done via spreadsheets;
+                   missed SLA penalties increasing with volume
+Tertiary:          Onboarding new warehouse staff takes 3 weeks;
+                   scaling headcount is too slow for contract ramp
 
-ENGAGEMENT SIGNALS
+HOOK
 ─────────────────────────────────────────────────────────────
-• Farhan Ahmed liked 3 posts about data infrastructure
-  on LinkedIn (Jan-Feb 2026)                                  ← ⚠️
-• NexaFlow posted "Expanding our data team" on LinkedIn
-  (Feb 12, 2026)
-• Partnership with Daraz for last-mile integration             ← ⚠️
-  announced January 2026
+Opening Angle:     "I saw your post about scaling without adding
+                   headcount. Our logistics clients typically
+                   reduce coordination overhead by 40% within
+                   the first quarter — I'd like to show you how
+                   that maps to your warehouse-to-delivery flow."
+
+Avoid:             Generic automation pitch. She has heard it.
+                   Lead with her specific pain (SLA tracking at
+                   scale) not your product features.
 
 ══════════════════════════════════════════════════════════════
 ```
 
-That is a detailed, structured, professional-looking research brief. It has headers. It has specific names, dates, and numbers. It looks like the kind of intelligence report a senior BD analyst would produce after two hours of research.
+Read the full output. It is structured, specific, and professional. It looks like something Farah would produce after 45 minutes of deep research.
 
-And at least three items in it are fabricated.
+And at least one claim in it cannot be verified.
 
----
+## Hallucination Detection
 
-## Detecting Hallucinated Data
+Look at the revenue figure: **£45-60M (estimated)**. Can you verify this from a public source?
 
-**Hallucinated Data** is output that an AI agent presents as factual but that was never retrieved from any source — the agent generated it from statistical patterns in its training data rather than from verifiable information. Hallucinated data is the most dangerous error type in sales AI because it looks real, it is specific, and it is confident. A vague answer signals incompleteness on its face. A hallucinated answer looks complete and is wrong.
+Try it. Go to Companies House (find-and-update.company-information.service.gov.uk) and search for "Meridian Logistics." UK companies file annual accounts, but most private companies of this size file abbreviated accounts that do not include revenue. The agent generated a plausible revenue range based on employee count, industry benchmarks, and location -- but it did not retrieve this number from any source. It is an inference presented as an estimate.
 
-Look at the research brief again. The arrows (⚠️) mark six claims. Three are verifiable. Three are hallucinated. Your job as a sales professional using AI tools is to tell them apart — before you walk into a meeting and cite a number that does not exist.
+Some claims in the brief are verifiable. Some are not. The skill you need before every subsequent lesson is the ability to tell them apart before you act.
 
-### What Is Verifiable
+### Verifiable Claims
 
-| Claim | Why It Is Verifiable | How to Check |
-|-------|---------------------|--------------|
-| SECP Registration as private limited company | Public record — SECP maintains a searchable company registry | Search eservices.secp.gov.pk |
-| LinkedIn job postings for Kafka engineers | Publicly visible on LinkedIn | Search LinkedIn Jobs for "NexaFlow" |
-| "Expanding our data team" LinkedIn post | Publicly visible company post | Visit NexaFlow's LinkedIn page |
+| Claim                                      | Why Verifiable                       | How to Check                                              |
+| ------------------------------------------ | ------------------------------------ | --------------------------------------------------------- |
+| Company registration (Founded 2014, Leeds) | Public record at Companies House     | Search find-and-update.company-information.service.gov.uk |
+| Open positions on LinkedIn                 | Publicly visible job postings        | Search LinkedIn Jobs for "Meridian Logistics"             |
+| Sarah Chen's LinkedIn posts about scaling  | Public social media activity         | Visit Sarah Chen's LinkedIn profile                       |
+| Sarah Chen's background (Parcelhub, DPD)   | Employment history on public profile | LinkedIn profile, if privacy settings allow               |
 
-These claims reference public, searchable information. A rep can verify each one in under two minutes. Verified claims become conversation openers: "I noticed you are hiring Kafka engineers — are you rebuilding your event pipeline?"
+These claims reference public, searchable information. A rep can verify each one in under two minutes. Verified claims become conversation openers: "I noticed you are hiring rapidly and just won a major contract -- are you rebuilding your operations workflow?"
 
-### What Is Hallucinated
+### Unverifiable Claims
 
-| Claim | Why It Is Hallucinated | The Tell |
-|-------|----------------------|----------|
-| "Series A closed Jun 2025, PKR 850M (~$3M USD) led by Indus Valley Capital" | Pakistani startups rarely announce funding rounds publicly with exact figures. Crunchbase and i2i coverage of Pakistani rounds is incomplete. The agent generated a plausible-sounding round. | **Specificity without source.** The more precise an unverifiable financial claim, the more likely it is fabricated. |
-| "Estimated ARR $2.3M based on fleet contracts (Q3 2025)" | Private companies in Pakistan do not publish ARR figures. There is no public data source for this number. The agent inferred it from company size and industry benchmarks. | **Private metric stated as fact.** ARR for private companies is never public unless disclosed in a press release or funding announcement. |
-| "Burn rate: 14-month runway at current spend levels" | This requires access to the company's bank account and cash flow statements. No public source exists. | **Financial internals presented as intelligence.** Runway and burn rate are internal metrics that only investors and management know. |
-| "2TB+ daily telemetry that current PostgreSQL setup cannot handle at scale" | The agent inferred database scalability problems from the job postings and industry patterns. The specific 2TB figure is generated, not sourced. | **Quantified technical claims from inference.** The Kafka job postings are real; the 2TB figure is the agent's extrapolation. |
-| "Farhan Ahmed liked 3 posts about data infrastructure on LinkedIn" | LinkedIn activity of specific individuals may not be publicly visible depending on privacy settings. The agent may have generated plausible engagement patterns. | **Individual social media behaviour presented as observed.** Unless confirmed, treat specific engagement counts as unreliable. |
-| "Partnership with Daraz for last-mile integration announced January 2026" | No verifiable press release or announcement exists for this partnership. The agent connected two companies operating in the same space and generated a plausible partnership. | **Business relationships without source.** If you cannot find the announcement with a web search, the partnership may not exist. |
+| Claim                                             | Why Suspect                                                                                                                                                                  | The Tell                                                                                                                           |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Revenue £45-60M (estimated)                       | Private companies in the UK rarely disclose revenue unless they exceed filing thresholds at Companies House. The agent inferred this from headcount and industry benchmarks. | **Private financials stated as estimates.** Revenue for private companies is not public unless voluntarily disclosed.              |
+| SLA compliance done via spreadsheets              | This describes internal operations that no public source would reveal. The agent inferred a common pain pattern for logistics companies of this size.                        | **Internal process presented as intelligence.** No external observer can see how a company tracks its SLAs.                        |
+| "Scaling headcount is too slow for contract ramp" | This is an interpretation of LinkedIn activity, not a confirmed statement from Sarah Chen.                                                                                   | **Inference dressed as observation.** The agent connected hiring activity with a contract win and generated a plausible narrative. |
 
-### The Three Rules of Hallucination Detection
+### The Three Rules
 
-These three rules will catch most hallucinated data in prospect research briefs:
+These three rules catch most hallucinated data in prospect research briefs:
 
-**Rule 1: Private financials are always suspect.** Revenue, ARR, burn rate, runway, unit economics — if the company has not publicly disclosed the number, the agent fabricated it. This includes funding round details for companies that have not issued press releases.
+**Rule 1: Private financials are always suspect.** Revenue, ARR, burn rate, runway, unit economics -- if the company has not publicly disclosed the number, the agent fabricated it. This applies to funding round details, valuation estimates, and growth rates unless sourced from a press release or filing.
 
-**Rule 2: The more specific the unverifiable claim, the more likely it is hallucinated.** "$2.3M ARR" is more suspicious than "growing revenue." "PKR 850M Series A" is more suspicious than "recently funded." Agents generate specific numbers because specificity sounds authoritative. Specificity without a source is a red flag.
+**Rule 2: The more specific the unverifiable claim, the more likely it is hallucinated.** "£45-60M estimated revenue" is more suspicious than "mid-market company." "3 posts about operational scaling" is more suspicious than "active on LinkedIn." Agents generate specific numbers because specificity sounds authoritative. Specificity without a source is a red flag.
 
-**Rule 3: Inferred connections are not confirmed connections.** "Partnership with Daraz" sounds like a fact. It is an inference. The agent noticed both companies operate in Pakistani last-mile logistics and generated a plausible relationship. Treat any business relationship, partnership, or integration claim as unverified until you find the announcement.
+**Rule 3: Inferred connections are not confirmed connections.** "SLA compliance via spreadsheets" sounds like inside knowledge. It is a pattern match -- logistics companies at this scale commonly use spreadsheets for compliance tracking. The agent noticed the company size, industry, and growth trajectory and generated a plausible internal process. Treat any internal operations claim as a hypothesis until you confirm it in conversation.
 
-:::warning Hallucinated Data in Sales Conversations
-Walking into a meeting and saying "I understand your Series A was led by Indus Valley Capital" when the funding round never happened — or happened with a different investor — destroys your credibility instantly. The prospect concludes you fabricate research. Every accurate insight you share afterward is tainted.
+:::warning The Agent Researches and Recommends. You Decide and Send.
+Walking into a meeting and citing a revenue figure that does not exist destroys your credibility instantly. The prospect concludes you fabricate research. Every accurate insight you share afterward is tainted.
 
-**The rule is straightforward: verify every claim you plan to say out loud. If you cannot verify it, do not say it.**
+**The rule is straightforward: verify every claim you plan to say out loud. If you cannot verify it, do not say it.** Verified claims become conversation openers. Unverified claims stay in your notes as hypotheses to test during the meeting.
 :::
 
----
+### The Verification Hierarchy
 
-## The Configuration Effect
+Not all claims carry equal risk. Use this hierarchy to prioritise what to verify before a meeting:
 
-The research brief you just generated used the base plugins with no configuration. Now create the local configuration file and see what changes.
+```
+HIGHEST CONFIDENCE
+  │
+  │  Cited sources (named article, named event, press release)
+  │  Public records (Companies House, LinkedIn Jobs, patent filings)
+  │  Public events (conference talks, published interviews)
+  │
+  │  ─── Verification line: above = verify easily, below = treat with caution ───
+  │
+  │  Career history (LinkedIn profiles, privacy-dependent)
+  │  Financial estimates (inferred from benchmarks)
+  │  Internal processes (inferred from industry patterns)
+  │  Business relationships (inferred from market proximity)
+  │
+LOWEST CONFIDENCE
+```
 
-### Creating sales-marketing.local.md
+## Configure sales-marketing.local.md
 
-The **`sales-marketing.local.md`** file is the business configuration that tells the Revenue Engine who you are, what you sell, and who you sell to. Without this file, the plugins produce generic research. With it, every command filters its output through your **Ideal Customer Profile** — the description of the customer most likely to buy from you and succeed with your product.
+The extension ships with a template file. Copy it to your project root:
 
-An **Ideal Customer Profile (ICP)** is the equivalent of hiring criteria for customers. Just as you would not hire every applicant regardless of fit, you should not pursue every prospect regardless of match. Your ICP defines the company size, industry, technology stack, budget range, and pain points that make a prospect worth your sales team's time. The ICP is the foundation of every command in the Revenue Engine — it determines what the agent looks for, what it highlights, and what it deprioritises.
+```
+cp $(claude plugin path sales-revops-marketing@agentfactory-business)/sales-marketing.local.md.template ./sales-marketing.local.md
+```
 
-Create the file in your project root:
+Open `sales-marketing.local.md` and fill in the NexaFlow ICP skeleton:
 
 ```markdown
 # Sales & Marketing Local Configuration
 
 ## Company Profile
-- **Company:** Apex Data Systems
-- **Product:** Real-time data pipeline platform (managed Kafka + analytics)
-- **Market:** B2B SaaS, mid-market and enterprise
-- **Geography:** Pakistan, UAE, Saudi Arabia, UK
+
+- **Company:** NexaFlow Technologies (Pvt) Ltd
+- **Product:** Workflow automation platform for mid-market logistics companies
+- **Market:** B2B SaaS — warehouse ops, fleet coordination, SLA tracking
+- **Geography:** Pakistan (70%), UAE (20%), UK expansion (10%)
 
 ## Ideal Customer Profile (ICP)
-- **Company size:** 50-500 employees
-- **Industry:** Logistics tech, fintech, e-commerce, SaaS
-- **Technology signals:** PostgreSQL at scale, job postings for data engineers,
-  event-streaming mentions, AWS or GCP infrastructure
-- **Budget range:** $2,000-$15,000/month
-- **Pain points:** Data pipeline bottlenecks, real-time processing needs,
-  scaling beyond single-database architecture
-- **Buying signals:** Kafka job postings, data team expansion, series A/B
-  funding within last 12 months, infrastructure-related conference talks
 
-## Sales Methodology
-- **Approach:** Consultative — lead with diagnosis, not product features
-- **Cycle length:** 45-90 days average for mid-market
-- **Decision makers:** CTO, VP Engineering, Head of Data
-- **Champions:** Senior engineers frustrated with current tooling
+- **Company size:** 50-400 employees
+- **Industry:** Regional 3PL operators, warehousing, fleet management
+- **Buyer persona:** VP Ops / Director Ops
+- **Pain points:** Manual coordination at scale, SLA tracking via spreadsheets,
+  slow staff onboarding, scaling without headcount
+- **Buying signals:** New contract wins, VP/Director hired in last 12 months,
+  LinkedIn posts about scaling challenges, open operations roles
+
+## Brand Voice
+
+- Direct, practical, no jargon. "We speak like operators, not vendors."
 ```
 
-Save this as `sales-marketing.local.md` in your project root and run the same command again:
+Save the file and run the same research prompt again:
 
 ```
-/research-prospect NexaFlow Technologies Karachi
+Research Sarah Chen, VP Operations at Meridian Logistics, Leeds.
+I sell workflow automation for logistics companies.
 ```
 
-### What Changes
+Compare the output to the first brief. The ICP MATCH section now scores Meridian against NexaFlow's specific profile -- 50-400 employees, 3PL operators, VP Ops persona, scaling pain. The HOOK section references NexaFlow's value proposition instead of generic automation language. The recommended approach filters through your brand voice: direct, practical, no jargon.
 
-The research brief now includes a new section at the top:
-
-```
-ICP MATCH ASSESSMENT
-─────────────────────────────────────────────────────────────
-Match Score:        82/100 — STRONG FIT
-Company Size:       85-120 employees ✓ (within 50-500 range)
-Industry:           Logistics Technology ✓ (primary ICP vertical)
-Tech Signals:       PostgreSQL + Kafka hiring ✓✓ (2 of 3 signals)
-Budget Indicator:   Series A funded, scaling phase — likely
-                    within $5K-$10K/month range ✓
-Geography:          Pakistan + Gulf ✓ (primary markets)
-
-RECOMMENDED APPROACH
-─────────────────────────────────────────────────────────────
-Entry Point:        Data pipeline bottleneck (Pain Point #1)
-Lead With:          Diagnosis of PostgreSQL scaling limits at
-                    their delivery volume
-Decision Maker:     Mehreen Qazi (CTO) — technical buyer
-Champion:           Kafka engineers being hired — they will
-                    understand the problem immediately
-Avoid:              Generic data platform pitch — they need
-                    specific logistics-telemetry solution
-```
-
-The ICP configuration added three things the generic brief lacked. First, a match score telling you whether this prospect is worth your time. Second, a recommended approach based on your sales methodology — consultative, leading with diagnosis. Third, specific tactical advice: which person to contact, what to lead with, and what to avoid.
-
-This is the configuration effect. The same command, the same data, but filtered through your business context. The ICP makes every command in the Revenue Engine more relevant because the agent now knows what matters to you.
-
----
-
-## Failure Analysis: Spot the Fabrications
-
-Now apply what you have learned. Below is a research brief excerpt for a different prospect — Meridian Logistics, a supply-chain management firm in London. Read it and identify which claims need verification before you act on them.
-
-```
-FINANCIAL SIGNALS
-─────────────────────────────────────────────────────────────
-Revenue:            £18.2M annual revenue (FY2025)             [A]
-Funding:            Series B, £12M led by Balderton Capital,
-                    closed November 2025                       [B]
-Growth:             42% YoY revenue growth per CEO interview
-                    in Logistics Manager magazine, Sep 2025    [C]
-
-TECHNOLOGY STACK
-─────────────────────────────────────────────────────────────
-Primary:            Java (Spring Boot), React, MongoDB
-Infrastructure:     Azure UK South
-Migration:          Currently migrating from batch ETL to
-                    real-time streaming — 3 Kafka job
-                    postings on Indeed (posted Feb 2026)       [D]
-
-ENGAGEMENT SIGNALS
-─────────────────────────────────────────────────────────────
-• CTO Sarah Chen presented "Scaling Supply Chain Data
-  Pipelines" at DataOps London, January 2026                  [E]
-• Meridian signed a partnership with DHL for UK
-  last-mile fulfilment, December 2025                         [F]
-```
-
-**Before reading further, decide: which claims would you verify before a sales meeting, and which would you treat as reliable?**
-
-### Analysis
-
-| Claim | Classification | Reasoning |
-|-------|---------------|-----------|
-| **[A]** £18.2M annual revenue | **Verify.** If Meridian is a private company, revenue figures are not public in the UK unless filed at Companies House (and only for companies above certain thresholds). Check Companies House for filed accounts. If no filing matches, this is hallucinated. |
-| **[B]** Series B, £12M, Balderton Capital | **Verify.** UK funding rounds are often covered by TechCrunch, Sifted, or Crunchbase. Search for the announcement. If Balderton's portfolio page does not list Meridian, the round is fabricated. |
-| **[C]** 42% YoY growth, CEO interview | **Highest confidence claim in this brief.** It cites a specific source — Logistics Manager magazine, September 2025. Search for the article. If it exists, the claim is verified. If the magazine exists but the article does not, this is a hallucinated source — the most sophisticated type of fabrication. |
-| **[D]** 3 Kafka job postings on Indeed | **Verify (easy).** Search Indeed for "Meridian Logistics Kafka." Job postings are public and take 30 seconds to confirm. High confidence if found. |
-| **[E]** CTO presented at DataOps London | **Verify.** Conference speaker lists are usually published online. Search for the event programme. If DataOps London does not exist as a conference, this is a hallucinated event. |
-| **[F]** Partnership with DHL | **Verify.** Major logistics partnerships are typically announced via press release. Search for "Meridian Logistics DHL partnership." If no announcement exists, this is an inferred connection — two logistics companies operating in the UK market. |
-
-Notice the pattern: Claim [C] is the most trustworthy because it names a specific, searchable source. Claims [A] and [B] involve private financial data. Claims [E] and [F] reference specific events or announcements that either exist or do not. Claim [D] is the easiest to verify.
-
-**The verification hierarchy:** Cited sources > public records > public events > private financials > inferred relationships.
-
----
-
-## Hands-On: Configure Your Revenue Engine
-
-You have installed the plugins. You have seen what hallucinated data looks like. Now configure the system for your own business and test it against a prospect you already know.
-
-### Exercise 1: Create Your ICP Configuration
-
-Open a new file called `sales-marketing.local.md` and fill in the template with your own business data:
-
-```markdown
-# Sales & Marketing Local Configuration
-
-## Company Profile
-- **Company:** [Your company name]
-- **Product:** [What you sell, in one line]
-- **Market:** [B2B/B2C, segment]
-- **Geography:** [Your primary markets]
-
-## Ideal Customer Profile (ICP)
-- **Company size:** [Employee range]
-- **Industry:** [2-4 target verticals]
-- **Technology signals:** [What tech stack indicates a good fit]
-- **Budget range:** [Monthly or annual spend range]
-- **Pain points:** [Top 3 problems your product solves]
-- **Buying signals:** [What observable actions indicate readiness to buy]
-
-## Sales Methodology
-- **Approach:** [Consultative / Transactional / Enterprise]
-- **Cycle length:** [Average days to close]
-- **Decision makers:** [Titles of people who approve the purchase]
-- **Champions:** [Titles of people who advocate internally]
-```
-
-If you do not have a current sales role, use a fictional company. The exercise works with any business context — the goal is to see how the ICP changes the agent's output.
-
-### Exercise 2: Run Against a Known Prospect
-
-Pick a company you already know well. A current customer, a recent prospect, or your own employer. Run:
-
-```
-/research-prospect [Company Name] [City]
-```
-
-Now compare the output to what you actually know about the company:
-
-1. **What did the agent get right?** Mark each accurate claim.
-2. **What did the agent fabricate?** Apply the three hallucination rules. Flag private financials, overly specific unverifiable claims, and inferred connections.
-3. **What did the agent miss?** What do you know about this company that the agent did not surface? This gap tells you where the agent's research capability ends and your relationship intelligence begins.
-
-Write down your findings. The ratio of accurate-to-hallucinated claims in your brief is your baseline. You will improve this ratio over the coming lessons as you refine the ICP and add custom skills.
-
----
-
-## Observing the Extension Effect
-
-One more experiment before you close this lesson. You are going to run the same prospect research twice — once with the extension active and once without — to see what the extension layer changes.
-
-### With Extension Active (Current State)
-
-You have already seen this output — the ICP Match Assessment section, the recommended approach, the tactical advice. Leave it open for comparison.
-
-### With Extension Disabled
-
-Run:
-
-```
-claude plugin disable sales-revops-marketing@agentfactory-business
-```
-
-```
-/research-prospect NexaFlow Technologies Karachi
-```
-
-The output still works. You still get the research brief with company overview, key personnel, financial signals, and technology stack. But notice what is missing: no ICP Match Assessment, no Recommended Approach, no tactical advice. The base plugin gives you intelligence. The extension gives you actionable intelligence filtered through your business context.
-
-Re-enable the extension:
-
-```
-claude plugin enable sales-revops-marketing@agentfactory-business
-```
-
-Notice the difference but do not try to explain it yet. Lessons 10 and 11 cover how the extension's skills interact with the base plugin's skills — including what happens when both define behaviour for the same command. For now, file the observation: the extension changes the output, and the local configuration file changes what the extension looks for.
-
----
+This skeleton will be completed in Lesson 2 when you analyse your closed-won deals to build a data-driven ICP rather than an assumed one.
 
 ## What You Built
 
-In 20 minutes you installed a dual-layer plugin architecture, ran a prospect research command, learned to identify hallucinated data in agent output, configured the system with your business context, and observed how the extension layer changes the output. The three hallucination detection rules — private financials are suspect, specificity without sources is a red flag, inferred connections are not confirmed — will serve you in every lesson that follows.
+1. All three plugins installed and verified -- Sales, Marketing, and the RevOps extension
+2. Demo business dataset (NexaFlow Technologies) generated with 20 closed-won deals, 5 target prospects, 10 pipeline deals, campaign history, and competitor intelligence
+3. First prospect research brief on Meridian Logistics / Sarah Chen with structured WHO / WHAT / WHEN / PAIN / HOOK sections
+4. Hallucination detection skill -- you can distinguish verifiable claims (job postings, LinkedIn activity, Companies House records) from unverifiable ones (revenue estimates, internal pain points, inferred connections)
+5. sales-marketing.local.md skeleton configured with NexaFlow's ICP
 
-Continue to [Lesson 2: Prospect Research and the ICP -->](./02-prospect-research-and-icp.md)
+## Flashcards Study Aid
+
+Test your understanding of the key concepts from this lesson.
+
+<Flashcards />
+
+## Try With AI
+
+**Setup:** Use these prompts in Claude Code with the Sales, Marketing, and RevOps extension plugins installed.
+
+### Prompt 1: Reproduce
+
+```
+Research Sarah Chen, VP Operations at Meridian Logistics, Leeds.
+I sell workflow automation for logistics companies. I want to
+understand fit, timing, and the best outreach angle.
+```
+
+**What you're learning:** How the prospect-research skill structures intelligence into actionable sections (ICP MATCH / WHO / WHAT / WHEN / PAIN / HOOK). Compare your output to the reference brief in this lesson. The structure should match even if specific details vary between runs -- the agent produces different claims each time, which is itself a lesson in why verification matters.
+
+### Prompt 2: Adapt
+
+```
+Research [pick a second prospect from your generated demo dataset].
+Compare the research brief to the Meridian brief. Which prospect
+has stronger timing signals? Which has more verifiable data?
+```
+
+**What you're learning:** Research briefs vary in quality based on how much public information exists. Data-scarce prospects (smaller companies, emerging markets, private companies) produce more hallucinations than data-rich prospects (UK companies with Companies House filings, active LinkedIn presences, press coverage). Recognising this pattern helps you calibrate trust per brief rather than trusting all briefs equally.
+
+### Prompt 3: Apply
+
+```
+Research a real prospect from your own network — someone you have
+been meaning to contact. After reading the brief, mark every claim as
+VERIFIED (you can confirm it), PLAUSIBLE (likely true, not confirmed),
+or SUSPECT (cannot verify, possibly hallucinated).
+```
+
+**What you're learning:** The discipline of evaluating agent output before acting on it. This is the foundational skill for every subsequent lesson in this chapter. A rep who sends outreach referencing a fabricated funding round loses credibility permanently. A rep who verifies first and leads with confirmed intelligence earns trust immediately. Your VERIFIED/PLAUSIBLE/SUSPECT audit becomes a habit you apply to every research brief from this point forward.
