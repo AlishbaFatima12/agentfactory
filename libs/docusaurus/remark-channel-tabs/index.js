@@ -21,6 +21,9 @@
  * ::telegram
  * Telegram-specific content here
  *
+ * ::discord
+ * Discord-specific content here
+ *
  * ::::
  *
  * Transforms into:
@@ -30,6 +33,9 @@
  *   </TabItem>
  *   <TabItem value="telegram" label="Telegram">
  *     Telegram-specific content here
+ *   </TabItem>
+ *   <TabItem value="discord" label="Discord">
+ *     Discord-specific content here
  *   </TabItem>
  * </Tabs>
  *
@@ -43,6 +49,7 @@ const { visit } = require("unist-util-visit");
 const CHANNEL_CONFIG = {
   whatsapp: { label: "WhatsApp", default: true },
   telegram: { label: "Telegram", default: false },
+  discord: { label: "Discord", default: false },
 };
 
 function remarkChannelTabs(options = {}) {
@@ -62,7 +69,7 @@ function remarkChannelTabs(options = {}) {
     nodesToTransform.forEach(({ node, index, parent }) => {
       const tabItems = [];
 
-      // Process children to find ::whatsapp, ::telegram leaf directives
+      // Process children to find ::whatsapp, ::telegram, ::discord leaf directives
       let currentChannel = null;
       let currentContent = [];
 

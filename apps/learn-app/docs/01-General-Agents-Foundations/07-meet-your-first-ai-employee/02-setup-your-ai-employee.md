@@ -1,12 +1,13 @@
 ---
 sidebar_position: 2
 title: "Setup Your AI Employee (Free)"
-description: "Install OpenClaw, connect a free LLM provider, and chat with your AI Employee through Telegram, WhatsApp, or the Control UI in under 45 minutes"
+description: "Install OpenClaw, connect a free LLM provider, and chat with your AI Employee through Telegram, WhatsApp, Discord, or the Control UI in under 45 minutes"
 keywords:
   [
     openclaw setup,
     whatsapp ai agent,
     telegram bot,
+    discord bot,
     ai employee installation,
     gemini free tier,
     openrouter free models,
@@ -108,7 +109,7 @@ teaching_guide:
 
 In Lesson 1, you saw why the AI Employee paradigm matters and how OpenClaw validated it at scale. Now you build one yourself. In the next 30-45 minutes, you will have a working AI Employee on your phone -- not a demo, not a simulation, but a real agent that can research, write, analyze, and remember.
 
-Everything in this lesson is free. Google Gemini's free tier gives you enough tokens to complete this entire chapter without spending a dollar. You need a computer with a terminal, Node.js 22 or later, a Google account, and a WhatsApp or Telegram account. No paid API keys to create. No credit cards to enter.
+Everything in this lesson is free. Google Gemini's free tier gives you enough tokens to complete this entire chapter without spending a dollar. You need a computer with a terminal, Node.js 22 or later, a Google account, and a WhatsApp, Telegram, or Discord account. No paid API keys to create. No credit cards to enter.
 
 **Honest time estimate**: Budget 45 minutes. The happy path takes 15-20 minutes, but Node.js version issues, network hiccups, and shell PATH problems are common first-time obstacles. Troubleshooting is where real learning happens.
 
@@ -195,7 +196,7 @@ The wizard then asks you to pick a model:
 
 ### Connect Your Messaging Channel
 
-The wizard asks which messaging platform to connect. Both Telegram and WhatsApp are fully supported first-class channels -- pick whichever you use daily:
+The wizard asks which messaging platform to connect. WhatsApp, Telegram, and Discord are all fully supported first-class channels -- pick whichever you use daily:
 
 ::::channel-tabs
 
@@ -253,7 +254,75 @@ Your bot token grants full control over your Telegram bot. Treat it like a passw
 :::
 
 :::tip Telegram Availability
-Telegram is blocked in some regions (including Pakistan). If you cannot access Telegram, use WhatsApp instead.
+Telegram is blocked in some regions (including Pakistan). If you cannot access Telegram, use WhatsApp or Discord instead.
+:::
+
+::discord
+
+Select **Discord (Bot API)**. The wizard needs three things: a **server name** (guild), a **channel name**, and a **bot token**. You will create the server and channel first, then create the bot.
+
+**Step 1 -- Create a Discord Server**
+
+If you already have a server you want to use, skip to Step 2.
+
+1. Open Discord and click the **+** icon on the left sidebar
+2. Select **Create My Own**
+3. Choose **For me and my friends** (or any option -- it does not matter for this setup)
+4. Give your server a name (e.g., `AI Office`) and click **Create**
+
+Remember this name -- the wizard will ask for it.
+
+**Step 2 -- Create a Channel**
+
+Your server comes with a `#general` channel by default. You can use that, or create a dedicated channel:
+
+1. Click the **+** next to **Text Channels** in your server
+2. Select **Text Channel**
+3. Name it (e.g., `ai-employee`) and click **Create Channel**
+
+Remember this channel name. If you are using the default, the channel name is `general`.
+
+**Step 3 -- Enable Developer Mode**
+
+You will need Developer Mode to copy IDs for troubleshooting later:
+
+1. Open **User Settings** (the gear icon near your name)
+2. Scroll down to **Advanced** and toggle **Developer Mode** to **ON**
+
+**Step 4 -- Create the Bot and Get the Token**
+
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications)
+2. Click **New Application** and give it a name (e.g., `My AI Employee`)
+3. On the left sidebar, click **Bot**
+4. Find the **Token** section and click **Reset Token** (or **Copy** if this is your first time). **Keep this secret** -- this is the password for your bot
+5. **Crucial**: Scroll down on the same Bot page to **Privileged Gateway Intents**. Toggle **ON** these three:
+   - **Presence Intent**
+   - **Server Members Intent**
+   - **Message Content Intent** (this is the most important -- without it, the bot cannot read your messages)
+6. Click **Save Changes**
+
+**Step 5 -- Invite the Bot to Your Server**
+
+1. On the left sidebar, click **OAuth2**, then select **URL Generator**
+2. Under **Scopes**, check the box for `bot`
+3. A **Bot Permissions** list appears below. Check these:
+   - Read Messages/View Channels
+   - Send Messages
+   - Read Message History
+4. Copy the URL generated at the bottom, paste it into a new browser tab, and follow the prompts to add the bot to your server
+
+**Step 6 -- Enter the Details in the Wizard**
+
+The wizard asks for three values:
+
+- **Guild** (server name): Enter your server name (e.g., `AI Office`)
+- **Channel**: Enter your channel name (default is `general`)
+- **Bot Token**: Paste the token from Step 4
+
+The wizard writes the configuration for you. No manual JSON editing required.
+
+:::caution Protect Your Bot Token
+Your bot token grants full control over your Discord bot. Treat it like a password. Never share it publicly or commit it to Git.
 :::
 
 ::::
@@ -278,6 +347,12 @@ WhatsApp: linked (auth age 0m)
 
 ```
 Telegram: ok (@your_bot_name)
+```
+
+::discord
+
+```
+[discord] channels resolved: AI Office/general→1459149351123456789/1459149352123456789 (guild:AI Office; channel:general)
 ```
 
 ::::
@@ -392,6 +467,18 @@ Approved telegram sender 1234567890.
 OpenClaw supports DM policies (`pairing`, `allowlist`, `open`, `disabled`) and group policies to control who your bot responds to. The defaults are safe -- `pairing` means only approved users get responses. To explore further, ask Claude Code (your General Agent from Chapter 3) to read the docs at [docs.openclaw.ai/gateway/security](https://docs.openclaw.ai/gateway/security) and configure the policies for you.
 :::
 
+::discord
+
+Go to the Discord channel you configured during setup and **@mention the bot** with a message:
+
+```
+@MyAIEmployee hello
+```
+
+Your AI Employee responds -- same agent, same memory as the TUI session, just a different channel.
+
+**If your bot does not reply**: check the gateway logs at `~/.openclaw/logs/gateway.log`. The most common causes are a mistyped bot token, wrong server or channel name, or missing **Message Content Intent** (go back to the Developer Portal → Bot → Privileged Gateway Intents and ensure all three are enabled).
+
 ::::
 
 ---
@@ -406,7 +493,7 @@ openclaw dashboard
 
 This launches the Control UI in your default browser with authentication handled automatically. Going to `http://127.0.0.1:18789/` directly will fail with "too many bad/missing token attempts" because the URL requires an authentication token. Always use the command.
 
-Three channels, one agent: TUI, your messaging app (Telegram or WhatsApp), and the Control UI all reach the same AI Employee with the same memory. That is the channel adapter pattern from Lesson 1.
+Three channels, one agent: TUI, your messaging app (WhatsApp, Telegram, or Discord), and the Control UI all reach the same AI Employee with the same memory. That is the channel adapter pattern from Lesson 1.
 
 ---
 
