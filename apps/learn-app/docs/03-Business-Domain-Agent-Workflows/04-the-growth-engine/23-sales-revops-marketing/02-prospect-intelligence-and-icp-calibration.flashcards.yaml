@@ -1,0 +1,109 @@
+deck:
+  id: "ch23-02-icp-calibration"
+  title: "Prospect Intelligence and ICP Calibration"
+  description: "Closed-won analysis, ICP dimensions, validation scoring, and data availability across markets"
+  tags: ["sales", "revops", "marketing", "chapter-23"]
+  version: 1
+
+cards:
+  - id: "ch23-02-icp-calibration-001"
+    front: "What is the source of ICP patterns in this lesson's approach — intuition or data?"
+    back: "Closed-won deal data. The ICP is derived from analysing 20 historical wins, not from guesswork."
+    difficulty: "basic"
+    tags: ["closed-won-analysis"]
+
+  - id: "ch23-02-icp-calibration-002"
+    front: "What are the five ICP dimensions extracted from closed-won deal analysis?"
+    back: "1. Firmographics\n2. Technographics\n3. Timing signals\n4. Persona profiles\n5. Negative signals"
+    difficulty: "basic"
+    tags: ["icp-dimensions"]
+
+  - id: "ch23-02-icp-calibration-003"
+    front: "Farah says her ideal customer is 'mid-size 3PL, growing fast, legacy systems, new VP.' Why is encoding this into data better than leaving it as tribal knowledge?"
+    back: "Tribal knowledge lives in one person's head and disappears when she is unavailable. Encoding it into an ICP configuration makes the pattern teachable, scalable, and usable by every rep and agent command — because configuration survives personnel changes while intuition does not."
+    difficulty: "intermediate"
+    why: "What happens to NexaFlow's close rate when they hire rep number five without an encoded ICP?"
+    tags: ["icp-encoding"]
+
+  - id: "ch23-02-icp-calibration-004"
+    front: "In NexaFlow's closed-won analysis, what employee range is the sweet spot?"
+    back: "80-250 employees (14 of 20 deals)."
+    difficulty: "basic"
+    tags: ["firmographics"]
+
+  - id: "ch23-02-icp-calibration-005"
+    front: "Which trigger event produced the fastest sales cycles in NexaFlow's closed-won data?"
+    back: "System failure — averaging 18 days."
+    difficulty: "intermediate"
+    tags: ["timing-signals"]
+
+  - id: "ch23-02-icp-calibration-006"
+    front: "What are hard disqualifiers versus soft disqualifiers in an ICP's negative signals?"
+    back: "Hard disqualifiers: deal-breakers like an active competitor contract. Soft disqualifiers: risk factors like CEO-only buyer with no champion."
+    difficulty: "intermediate"
+    tags: ["negative-signals"]
+
+  - id: "ch23-02-icp-calibration-007"
+    front: "Why is ICP validation done by scoring closed-won deals rather than new prospects?"
+    back: "Closed-won deals have known outcomes. If your best historical deals do not score HOT, the ICP definition is wrong — because retrospective scoring tests the ICP's accuracy, not the deal quality."
+    difficulty: "intermediate"
+    why: "What should you fix first if a closed-won deal scores below 60?"
+    tags: ["icp-validation"]
+
+  - id: "ch23-02-icp-calibration-008"
+    front: "What fit score threshold must all closed-won deals meet during ICP validation?"
+    back: "60 or above (HOT classification)."
+    difficulty: "basic"
+    tags: ["icp-validation"]
+
+  - id: "ch23-02-icp-calibration-009"
+    front: "Gulf Chain Solutions scored lower on technographics because it had a modern stack instead of legacy systems. How should you adjust the ICP?"
+    back: "Add a broader positive signal like 'operational complexity exceeding current tooling capacity' to catch modern-stack companies that still need workflow automation — because the original ICP only looked for legacy TMS, missing a valid customer segment."
+    difficulty: "advanced"
+    why: "What other ICP dimensions might be too narrow based on similar edge cases in your data?"
+    tags: ["icp-adjustment"]
+
+  - id: "ch23-02-icp-calibration-010"
+    front: "What is a technographic signal in an ICP?"
+    back: "A technology-related indicator of fit, such as legacy systems, job postings mentioning automation, or Excel-based reporting."
+    difficulty: "basic"
+    tags: ["technographics"]
+
+  - id: "ch23-02-icp-calibration-011"
+    front: "Why does a Karachi prospect brief contain more hallucinated data than a London prospect brief?"
+    back: "UK companies file detailed annual accounts at Companies House and have stronger media coverage. Pakistani companies have lighter filing requirements at SECP and thinner press coverage — so the agent supplements thin public data with inference, increasing hallucination risk."
+    difficulty: "intermediate"
+    why: "How should this affect your verification effort for each market?"
+    tags: ["data-availability"]
+
+  - id: "ch23-02-icp-calibration-012"
+    front: "What three persona roles does the ICP define for the buying committee?"
+    back: "1. Primary buyer (VP/Director of Operations)\n2. Economic buyer (CEO/MD/COO)\n3. Champion (Operations Manager/Fleet Coordinator)"
+    difficulty: "intermediate"
+    tags: ["persona-profiles"]
+
+  - id: "ch23-02-icp-calibration-013"
+    front: "Meridian Logistics in London scored highest in NexaFlow's prospect ranking despite being outside the primary geography. Why?"
+    back: "Data availability and timing strength compensated for geographic distance. The ICP separates decisions by dimensions, not geography alone — because strong signals in multiple dimensions outweigh weakness in one."
+    difficulty: "advanced"
+    why: "What does this reveal about the danger of filtering prospects by geography before scoring?"
+    tags: ["prospect-ranking"]
+
+  - id: "ch23-02-icp-calibration-014"
+    front: "What does the /competitive-brief command produce?"
+    back: "A structured competitive analysis with overview, positioning versus your product, where you win, and where the competitor wins."
+    difficulty: "basic"
+    tags: ["competitive-positioning"]
+
+  - id: "ch23-02-icp-calibration-015"
+    front: "A prospect's firmographic failure means 'remove from pipeline.' A timing failure means something different. What?"
+    back: "Monitor and revisit. The company is a good fit but the timing is wrong — circumstances may change."
+    difficulty: "intermediate"
+    tags: ["diagnostic-actions"]
+
+  - id: "ch23-02-icp-calibration-016"
+    front: "Why is the ICP described as a 'calibration instrument' rather than a 'finished document'?"
+    back: "Every miscalibration you find when scoring known deals reveals a dimension to adjust. The ICP improves continuously through validation feedback — because market conditions and deal patterns evolve over time."
+    difficulty: "intermediate"
+    why: "How often should you re-validate the ICP as new deals close?"
+    tags: ["icp-calibration"]
