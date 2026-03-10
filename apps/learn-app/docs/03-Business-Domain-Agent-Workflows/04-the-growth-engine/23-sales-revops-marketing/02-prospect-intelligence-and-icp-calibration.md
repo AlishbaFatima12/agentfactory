@@ -1,582 +1,537 @@
 ---
 sidebar_position: 2
 title: "Prospect Intelligence and ICP Calibration"
-description: "Configure the 8-section Ideal Customer Profile using the persona-icp skill, calibrate ICP against known prospects, introduce progressive connectors, and diagnose ICP miscalibration through failure analysis"
+description: "Turn intuitive sales knowledge into a data-driven ICP configuration using closed-won deal analysis, the persona-icp skill, and competitive positioning — then validate the ICP by scoring known deals and building research briefs for five target prospects"
 keywords:
   [
     "ICP",
     "ideal customer profile",
     "persona-icp",
     "prospect intelligence",
-    "firmographic criteria",
-    "technographic signals",
+    "closed-won analysis",
+    "firmographics",
+    "technographics",
     "timing signals",
-    "progressive connectors",
-    "CRM connector",
+    "negative signals",
+    "competitive-brief",
     "sales-marketing.local.md",
-    "research-prospect",
-    "prospect scoring",
+    "prospect research",
+    "ICP calibration",
+    "lead scoring",
+    "research brief",
   ]
 chapter: 23
 lesson: 2
-duration_minutes: 20
+duration_minutes: 25
 
 # HIDDEN SKILLS METADATA
 skills:
-  - name: "Configure a Complete ICP Using the persona-icp Skill"
+  - name: "Analyse Closed-Won Deals to Extract ICP Patterns"
+    proficiency_level: "B1"
+    category: "Applied"
+    bloom_level: "Analyze"
+    digcomp_area: "Information and Data Literacy"
+    measurable_at_this_level: "Student can prompt the agent to analyse 20 closed-won deals, identify recurring patterns across firmographics, technographics, timing, and persona, and articulate the patterns in structured ICP dimensions"
+
+  - name: "Configure and Validate a Complete ICP Using the persona-icp Skill"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can configure all 8 ICP sections (firmographic, technographic, timing, engagement, persona, budget, negative signals, data sources) and explain how each constrains agent output"
+    measurable_at_this_level: "Student can build a full ICP configuration (firmographics, technographics, timing signals, persona profiles, negative signals), populate sales-marketing.local.md, score 5 closed-won deals against the ICP, and debug scoring gaps by adjusting ICP dimensions"
 
-  - name: "Calibrate ICP Against Known Prospects"
+  - name: "Build Prospect Research Briefs and Rank by Fit"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Evaluate"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can run /research-prospect on prospects they know well, compare agent classifications to their own judgment, and adjust ICP sections to improve alignment"
-
-  - name: "Understand Progressive Connector Enhancement"
-    proficiency_level: "A2"
-    category: "Conceptual"
-    bloom_level: "Understand"
-    digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can explain how adding connectors (CRM, enrichment) progressively improves research output without breaking standalone functionality"
+    measurable_at_this_level: "Student can generate research briefs for 5 prospects, rank them by fit and timing, compare data availability across markets (Pakistan vs UK), and explain how ICP quality affects research output"
 
 learning_objectives:
-  - objective: "Configure all 8 sections of the Ideal Customer Profile using the persona-icp skill and explain how each section constrains the agent's research focus"
+  - objective: "Analyse closed-won deal data to identify recurring patterns and translate those patterns into structured ICP dimensions"
+    proficiency_level: "B1"
+    bloom_level: "Analyze"
+    assessment_method: "Student prompts the agent with 20 closed-won deals and produces a pattern summary covering firmographics, technographics, timing signals, persona profiles, and negative signals"
+
+  - objective: "Build a complete ICP configuration in sales-marketing.local.md and validate it by scoring 5 known deals, debugging any scoring failures"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student produces a complete ICP configuration and can explain what each section contributes to research quality"
+    assessment_method: "Student produces a complete configuration file and demonstrates that all 5 closed-won deals score 60+ (HOT), adjusting ICP dimensions if any score below threshold"
 
-  - objective: "Calibrate the ICP by running /research-prospect on known prospects and iterating until agent classifications match domain judgment"
+  - objective: "Generate research briefs for 5 target prospects, rank them by fit, and explain differences in data availability across markets"
     proficiency_level: "B1"
     bloom_level: "Evaluate"
-    assessment_method: "Student runs research on 3 known prospects (ideal, borderline, wrong-fit) and adjusts ICP until agent output aligns with their assessment"
-
-  - objective: "Describe how progressive connectors enhance research output and demonstrate graceful degradation when connectors are removed"
-    proficiency_level: "A2"
-    bloom_level: "Understand"
-    assessment_method: "Student can show /research-prospect output with zero, one, and two connectors and explain what each adds"
+    assessment_method: "Student produces 5 ranked research briefs and can articulate why the Karachi prospect brief differs from the London prospect brief in data depth and sourcing"
 
 cognitive_load:
   new_concepts: 6
   concepts_list:
+    - "Closed-won analysis as the source of ICP patterns"
     - "ICP as a calibration instrument (not a static form)"
-    - "The 8 ICP sections and their functions"
-    - "Fit vs Timing distinction in prospect classification"
-    - "Progressive connectors (zero → CRM → enrichment)"
-    - "Garbage-in-garbage-out in ICP configuration"
-    - "ICP iteration loop (configure → run → compare → adjust)"
-  assessment: "6 concepts at B1 level. The key conceptual shift is ICP as calibration instrument rather than static form — this reframes the entire lesson."
+    - "Firmographic, technographic, timing, persona, and negative signal dimensions"
+    - "ICP validation through retrospective deal scoring"
+    - "Fit score as a diagnostic tool (not a prospecting tool when applied to closed-won deals)"
+    - "Data availability variance across markets"
+  assessment: "6 concepts at B1 level. The key conceptual shift is using closed-won deals to derive the ICP rather than building it from intuition alone. Concepts build sequentially: analyse deals, extract patterns, configure ICP, validate, then apply to new prospects."
 
 differentiation:
-  extension_for_advanced: "Configure ICPs for two different business lines within the same company. Run /research-prospect on the same prospect with each ICP. How do the research briefs differ? What does this tell you about ICP specificity vs generality?"
-  remedial_for_struggling: "Focus on configuring 3 ICP sections (firmographic, timing, persona) and running /research-prospect on 1 known ideal prospect. If the agent classifies them as high-fit, your ICP foundation is working."
+  extension_for_advanced: "Build two ICPs — one for NexaFlow's Pakistan market and one for their UK expansion. Run the same 5 prospects through both ICPs. How do the scores differ? What does this tell you about market-specific ICP tuning?"
+  remedial_for_struggling: "Focus on the closed-won analysis prompt and the ICP configuration. If the agent produces a complete ICP and your 5 closed-won deals score 60+, you have the foundation for L03."
 ---
 
 # Prospect Intelligence and ICP Calibration
 
-In Lesson 1, you ran `/research-prospect` and received a research brief. It was broad, generic, and full of information that did not help you decide whether to invest sales time. The problem was not the command. The problem was the input. The agent researched everything because you told it nothing about who matters to your business. This lesson fixes that.
+In Lesson 1, you installed the Revenue Engine, ran your first research brief, and learned to spot hallucinated data. Now you will turn Farah's intuition into a data-driven ICP that the agent can use on every prospect in the pipeline.
 
-The **Ideal Customer Profile** is the single most important configuration in the entire sales plugin. Most teams treat the ICP as a form — fill it out once, file it in a shared drive, forget it exists. That approach fails because an ICP is not a document. It is a **calibration instrument**. You adjust it until the agent's research output matches your experienced sales judgment about who is worth pursuing and who is not. Think of it like tuning a radio: the signal exists, but without calibration you get static.
+Farah is NexaFlow's top rep. She closes at 340% of quota while the other three reps average 60%. Ask her to describe her ideal customer and she says "mid-size 3PL, growing fast, legacy systems, new VP trying to make their mark." Ask her to explain why she passes on certain prospects and she says "you just know." That gut-level pattern recognition is real and valuable — but it lives in one person's head. When Farah is on leave, the team reverts to the generic pitch. When NexaFlow hires rep number five, there is no playbook to hand over.
 
-By the end of this lesson, you will have configured all 8 sections of the ICP using the `persona-icp` skill, run `/research-prospect` against prospects you already know, and iterated until the agent's classifications match your own. You will also see how **progressive connectors** enhance the research output without breaking standalone functionality — planting the seed for the full connector architecture in Lesson 10.
+This lesson extracts the patterns from NexaFlow's 20 best deals and encodes them into a configuration file that every rep — and every agent command — can use. By the end, you will have a validated ICP, a complete `sales-marketing.local.md`, and five ranked research briefs for NexaFlow's target prospects.
 
-## The 8 Sections of the ICP
+## Analysing the Closed-Won Deals
 
-The `persona-icp` skill structures your ICP into 8 sections. Each section constrains the agent's research in a different way. Skip a section and the agent fills the gap with guesses. Configure it well and the agent focuses its research exactly where your sales judgment says to look.
+In Lesson 1 you generated demo data for NexaFlow, including 20 closed-won deals. Those deals contain the raw signal. Instead of building an ICP from guesswork, you will let the data tell you who NexaFlow's real customers are.
 
-Open your `sales-marketing.local.md` file — the local configuration you set up in Lesson 1 — and add the ICP configuration block. We will walk through each section using NexaFlow Technologies in Karachi as the worked example.
+Open the 20 closed-won deals and run:
 
-### Section 1: Firmographic Criteria
+```
+Analyse these 20 closed-won deals. What patterns do you see in company size, industry, buyer persona, trigger event, and sales cycle length?
 
-**Firmographic criteria** define the structural characteristics of your target companies. These are the broadest filters — they eliminate companies that could never be customers regardless of timing or interest.
+[Paste or reference the 20 closed-won deal records from L01]
+```
+
+**Sample Output:**
+
+```
+CLOSED-WON PATTERN ANALYSIS — NexaFlow Technologies
+═══════════════════════════════════════════════════════
+
+COMPANY SIZE
+  Range:          40–380 employees
+  Sweet spot:     80–250 employees (14 of 20 deals)
+  Outliers:       2 deals below 50, 1 deal above 350
+
+INDUSTRY
+  Regional 3PL:           12 deals (60%)
+  Freight forwarding:      4 deals (20%)
+  E-commerce fulfilment:   3 deals (15%)
+  Cold chain logistics:    1 deal  (5%)
+
+BUYER PERSONA
+  VP Operations:          11 deals — primary decision maker
+  Director of Ops:         5 deals — mid-market variant
+  CEO (founder-led):       4 deals — smaller companies
+
+TRIGGER EVENT
+  New leadership:          8 deals — new VP/Director hired
+                           within 6 months of close
+  Contract win:            5 deals — prospect won a major
+                           client contract and needed to scale
+  System failure:          4 deals — existing system crashed
+                           or caused a visible service failure
+  Expansion:               3 deals — new warehouse, new market,
+                           or new geography
+
+SALES CYCLE
+  Average:                 52 days
+  Fastest:                 18 days (system failure trigger)
+  Slowest:                 94 days (CEO buyer, no champion)
+
+NEGATIVE PATTERNS
+  All 3 lost deals in Q4 2025 shared one trait: the prospect
+  had just signed a 3-year contract with a competitor.
+  Two stalled deals involved government-owned logistics
+  bodies — procurement cycle exceeded NexaFlow's patience.
+```
+
+Read that output carefully. Farah's "you just know" is now decomposed into five measurable dimensions. The 80-250 employee sweet spot, the VP Operations persona, the "new leadership" trigger — these are the signals that separate NexaFlow's closed-won customers from the rest of the market.
+
+Notice what the data reveals that intuition does not. The trigger event breakdown shows that system failures produce the fastest sales cycles (18 days average). Farah knows this instinctively — she prioritises prospects who just had an outage. But the other reps do not know to look for that signal. The ICP will encode it.
+
+## Building the ICP
+
+Now convert those patterns into a structured ICP configuration. The `persona-icp` skill auto-activates when you work through ICP prompts — you do not need to invoke it by name.
+
+```
+Build an ICP definition for NexaFlow Technologies based on these
+20 closed-won deals:
+
+[Paste or reference the 20 closed-won deal records]
+
+Include:
+- Firmographics (industry, size, geography, revenue)
+- Technographics (tech signals that indicate fit)
+- Timing signals (trigger events ranked by priority)
+- Persona profiles (decision maker, economic buyer, champion)
+- Negative signals (hard and soft disqualifiers)
+```
+
+**Sample Output:**
 
 ```yaml
 icp:
   firmographic:
     industries:
-      - "SaaS / Cloud Software"
-      - "B2B Technology Services"
-      - "Digital Transformation Consulting"
+      - "Regional 3PL / Third-Party Logistics"
+      - "Freight Forwarding"
+      - "E-commerce Fulfilment"
+      - "Cold Chain Logistics"
     company_size:
       employees_min: 50
-      employees_max: 500
+      employees_max: 400
     geography:
-      primary: ["Pakistan", "UAE", "Saudi Arabia"]
-      secondary: ["UK", "Singapore"]
+      primary: ["Pakistan", "UAE"]
+      secondary: ["UK", "Saudi Arabia"]
     revenue_range:
-      min_usd: 500000
-      max_usd: 50000000
-    company_stage:
-      - "Series A+"
-      - "Established SME"
-```
+      min_usd: 200000
+      max_usd: 10000000
 
-NexaFlow sells AI-powered workflow automation to mid-market B2B companies across South Asia and the Gulf. The firmographic section tells the agent: do not waste research time on consumer companies, solo consultancies, or enterprises with 10,000 employees. Those are outside the strike zone.
-
-**What this constrains:** When the agent runs `/research-prospect`, it checks the prospect's industry, size, geography, and revenue against these criteria. A company in retail with 15 employees in Lagos scores low on firmographic fit regardless of every other signal.
-
-### Section 2: Technographic Signals
-
-**Technographic signals** describe the technology footprint that indicates a prospect might need your product. The agent searches for these signals in job postings, press releases, GitHub activity, and technology review sites.
-
-```yaml
   technographic:
     positive_signals:
-      - "Uses Salesforce, HubSpot, or Pipedrive (CRM already in place)"
-      - "Active GitHub organisation (engineering team builds internally)"
-      - "Job postings mention 'AI', 'automation', or 'workflow'"
+      - "Legacy TMS or WMS system (5+ years old)"
+      - "Manual dispatch or route planning processes"
+      - "Job postings mention 'operations', 'automation', or 'workflow'"
+      - "Excel-based reporting for fleet or warehouse metrics"
     negative_signals:
-      - "Fully custom-built internal tooling (not buying SaaS)"
-      - "No public engineering presence (no technical buyer)"
-    stack_preferences:
-      - "Python or JavaScript tech stack"
-      - "Cloud-hosted (AWS, GCP, Azure)"
-```
+      - "Recently implemented a competitor platform (last 12 months)"
+      - "Fully custom-built internal system with dedicated dev team"
 
-A prospect whose job postings mention "workflow automation engineer" is signalling a problem that NexaFlow solves. A prospect with zero public engineering presence likely has no technical buyer to champion the purchase. The technographic section helps the agent separate companies that have the pain from companies that do not.
-
-### Section 3: Timing Signals
-
-**Timing signals** are the most underused section in most ICPs — and the highest-leverage one. A prospect can be a perfect fit on every dimension and still be unreachable if the timing is wrong. Timing signals tell the agent what events make a prospect reachable right now.
-
-```yaml
   timing:
     high_priority:
-      - "Funding round closed in last 90 days"
-      - "New CTO, VP Engineering, or Head of Operations appointed"
-      - "Expansion into new geography announced"
-      - "Public statement about 'scaling operations' or 'operational efficiency'"
+      - "New VP Operations or Director of Ops hired in last 6 months"
+      - "Major contract win requiring operational scaling"
+      - "System failure or visible service disruption"
     moderate_priority:
-      - "Hiring surge (10+ roles posted in 30 days)"
-      - "Product launch within last 60 days"
+      - "Expansion into new geography or new warehouse"
+      - "Hiring surge in operations roles (5+ in 30 days)"
     low_priority:
-      - "Conference attendance or speaking engagement"
-      - "Partnership or integration announcement"
-```
+      - "Industry conference attendance or speaking"
+      - "Competitor mentioned negatively in public forums"
 
-Timing signals answer a question that firmographic and technographic criteria cannot: **why now?** A company that raised a Series B last month has budget, urgency, and a mandate to scale. The same company six months later may have already allocated that budget. The agent weights timing signals heavily because they decay — a funding round from 18 months ago carries far less signal than one from last week.
-
-### Section 4: Engagement Signals
-
-**Engagement signals** tell the agent what prospect behaviors indicate active interest. These are signals from your own systems — website visits, content downloads, event attendance — rather than public information.
-
-```yaml
-  engagement:
-    high_intent:
-      - "Visited pricing page (any source)"
-      - "Downloaded ROI calculator or integration guide"
-      - "Attended product demo or webinar"
-    moderate_intent:
-      - "Opened 3+ marketing emails in 30 days"
-      - "Visited blog posts on workflow automation"
-    low_intent:
-      - "Subscribed to newsletter"
-      - "Followed company on LinkedIn"
-```
-
-Without a CRM connector (which we introduce later in this lesson), the agent cannot access engagement signals directly. It will skip this section and rely on the other seven. When you add the CRM connector, this section activates and the research briefs gain a new dimension.
-
-### Section 5: Persona Profiles
-
-**Persona profiles** describe the people within a target company who make or influence the buying decision. The agent uses these profiles to identify the right contacts and tailor the research brief to their priorities.
-
-```yaml
   personas:
     primary_buyer:
-      titles: ["CTO", "VP Engineering", "Head of Operations"]
+      titles: ["VP Operations", "Director of Operations"]
       motivations:
-        - "Reduce manual workflow overhead"
-        - "Ship faster without growing headcount proportionally"
+        - "Reduce manual dispatch and planning overhead"
+        - "Improve on-time delivery rates for new contracts"
       fears:
-        - "Integration complexity with existing systems"
-        - "Team resistance to AI-driven tools"
+        - "Disruption to live operations during implementation"
+        - "Staff resistance to new systems"
     economic_buyer:
-      titles: ["CEO", "CFO", "COO"]
+      titles: ["CEO", "Managing Director", "COO"]
       motivations:
         - "Revenue per employee improvement"
-        - "Operational cost reduction"
+        - "Ability to take on larger contracts without proportional headcount"
       fears:
-        - "Unproven ROI"
-        - "Vendor lock-in"
+        - "Implementation timeline exceeding 90 days"
+        - "Hidden costs beyond subscription"
     champion:
-      titles: ["Engineering Manager", "DevOps Lead", "Product Manager"]
+      titles: ["Operations Manager", "Fleet Coordinator", "Warehouse Lead"]
       motivations:
-        - "Personal productivity gain"
-        - "Reducing toil on the team"
-```
+        - "Eliminating repetitive manual tasks"
+        - "Real-time visibility into operations"
 
-This section is where domain expertise matters most. You know your buyers. You know what keeps the CTO up at night versus what the CFO cares about. The agent does not know this — you teach it through the persona profiles. When the agent generates a research brief, it maps the prospect's leadership team against these personas and flags which contacts match which roles.
-
-### Section 6: Budget Parameters
-
-**Budget parameters** tell the agent what deal sizes are realistic for your product. This prevents the agent from classifying a $5,000-budget startup as a high-fit prospect when your minimum contract is $50,000.
-
-```yaml
-  budget:
-    currency: "USD"
-    typical_deal_range:
-      min: 25000
-      max: 250000
-    fiscal_year_end: "December"
-    budget_cycle_note: "Most prospects allocate Q1 budgets in Nov-Dec"
-```
-
-The fiscal year timing matters. A prospect whose fiscal year ends in March behaves differently from one ending in December. Budget conversations in October mean different things depending on the fiscal calendar. The agent uses this context when assessing timing signals.
-
-### Section 7: Negative Signals
-
-**Negative signals** are disqualifiers — characteristics that mean a prospect should not be pursued regardless of how well they score on other dimensions.
-
-```yaml
   negative_signals:
     hard_disqualifiers:
-      - "Government or public sector (procurement cycle incompatible)"
-      - "Companies with active litigation against vendors in our space"
-      - "Already using a direct competitor (switching cost too high)"
+      - "Active 3-year contract with a competitor"
+      - "Government or public-sector procurement process"
     soft_disqualifiers:
-      - "Company culture strongly anti-AI (public statements)"
-      - "No budget authority below C-suite (long sales cycle)"
-```
+      - "CEO buyer with no operational champion (long cycle risk)"
+      - "Company culture strongly opposed to SaaS adoption"
 
-Negative signals save more time than positive signals. A single hard disqualifier should drop a prospect from the pipeline regardless of every other score. The agent applies negative signals as a final check after scoring all other dimensions — a prospect that scores 95 on everything but triggers a hard disqualifier gets flagged as "Disqualified" with the reason.
-
-### Section 8: Data Sources
-
-**Data sources** tell the agent where to look for each type of signal. Without this section, the agent searches broadly. With it, the agent searches efficiently.
-
-```yaml
   data_sources:
-    firmographic: ["LinkedIn Company Page", "Crunchbase", "local registrar"]
-    technographic: ["StackShare", "GitHub", "job boards (Rozee.pk, LinkedIn Jobs)"]
-    timing: ["Crunchbase funding alerts", "Google News", "LinkedIn announcements"]
-    engagement: ["HubSpot (if CRM connector active)", "Google Analytics (if connected)"]
-    persona: ["LinkedIn Sales Navigator", "company About page", "conference speaker lists"]
+    firmographic:
+      [
+        "LinkedIn Company Page",
+        "local registrar (SECP/Companies House)",
+        "Crunchbase",
+      ]
+    technographic:
+      ["Job boards (Rozee.pk, LinkedIn Jobs, Indeed)", "GitHub", "StackShare"]
+    timing:
+      ["Google News", "LinkedIn announcements", "Crunchbase funding alerts"]
+    persona: ["LinkedIn", "company About page", "conference speaker lists"]
 ```
 
-For NexaFlow operating in Pakistan and the Gulf, the data sources include regional platforms like Rozee.pk for job postings — a source that a generic ICP would miss entirely. The data sources section is how you encode local market knowledge into the agent's research protocol.
+Review the output against the closed-won analysis. Does the ICP capture the patterns you identified? Two things to check immediately. First, the employee range (50-400) should encompass 18 of 20 closed-won deals — if it misses more than 2, widen it. Second, the high-priority timing signals should map to the trigger events from your analysis. If "system failure" appeared in 4 of 20 deals but the ICP omits it, add it.
 
-## Running the Calibration: NexaFlow Researches Meridian Logistics
+## Completing sales-marketing.local.md
 
-With all 8 sections configured, run `/research-prospect` against a company you can evaluate. We will use Meridian Logistics, a London-based freight and logistics company that recently raised a Series B.
+The ICP is the largest section of the configuration file, but the Revenue Engine needs more context. Open `sales-marketing.local.md` and add the remaining sections:
 
-```
-/research-prospect Meridian Logistics London
-```
+```markdown
+# Sales & Marketing Local Configuration — NexaFlow Technologies
 
-The agent returns a research brief. Here is the annotated output:
+## Company Profile
 
-```
-PROSPECT RESEARCH BRIEF — Meridian Logistics, London
-=====================================================
+- **Company:** NexaFlow Technologies (Pvt) Ltd
+- **Product:** Workflow automation platform for mid-market logistics companies
+- **Market:** B2B SaaS, mid-market logistics operators
+- **Geography:** Pakistan (70%), UAE (20%), UK expansion (10%)
 
-FIRMOGRAPHIC FIT: LOW (2/5)
-  Industry: Freight & Logistics — NOT in ICP target industries
-  Employees: ~320 — Within range (50-500) ✓
-  Geography: London, UK — Secondary geography ✓
-  Revenue: Est. $35M — Within range ✓
-  Stage: Series B — Matches "Series A+" ✓
+## Brand Voice
 
-  Assessment: 4 of 5 firmographic criteria met, but
-  INDUSTRY MISMATCH is a significant gap. Logistics is
-  not SaaS, B2B Technology, or Digital Transformation.
+- **Tone:** Direct, practical, no jargon. "We speak like operators, not vendors."
+- **Avoid:** Buzzwords, "digital transformation", "synergy", "leverage"
+- **Mirror:** Use the prospect's operational language — routes, dispatch, on-time rates
 
-TECHNOGRAPHIC FIT: MODERATE (3/5)
-  Positive: Job postings mention "automation" and "Python"
-  Positive: Active GitHub organisation (15 contributors)
-  Negative: No CRM system detected in tech stack
-  Stack: Python + AWS ✓
+## Ideal Customer Profile
 
-TIMING FIT: HIGH (5/5)
-  HIGH: Series B closed 6 weeks ago ($28M)
-  HIGH: New VP of Operations appointed 3 weeks ago
-  MODERATE: 12 engineering roles posted in last 30 days
+[Paste the full ICP YAML from the previous section]
 
-ENGAGEMENT: [NO DATA — CRM connector not active]
+## Competitor Intelligence
 
-PERSONA MATCH:
-  VP Operations (new hire) → Maps to Primary Buyer
-  CEO (founder) → Maps to Economic Buyer
-  No engineering manager identified on LinkedIn → Champion gap
+- **Primary competitor:** RouteMaster Pro — legacy, expensive, slow implementation
+- **Secondary:** FleetOps AI — newer, cheaper, limited to Pakistan market
+- **Positioning:** Mid-price, fastest implementation (30-day go-live guarantee)
 
-BUDGET ASSESSMENT: LIKELY QUALIFIED
-  Series B funding suggests budget available
-  No public pricing complaints or vendor cost concerns
+## Sales Methodology
 
-NEGATIVE SIGNALS: NONE TRIGGERED
-
-OVERALL CLASSIFICATION:
-  Fit: LOW-MODERATE (industry mismatch drags score)
-  Timing: HIGH (recent funding + new leadership)
-  Recommendation: WORTH MONITORING — timing is strong but
-  industry fit is weak. If Meridian's automation needs
-  overlap with NexaFlow's product, the timing makes this
-  window worth exploring. If not, deprioritise.
+- **Approach:** Consultative — lead with operational diagnosis, not features
+- **Cycle length:** 45-60 days average
+- **Decision makers:** VP Operations, Director of Operations
+- **Champions:** Operations Managers frustrated with manual processes
 ```
 
-Read this brief carefully. The agent classified Meridian as low firmographic fit but high timing. Is that correct? Think about what you know:
+Save the file. Every command in the Revenue Engine — `/research-prospect`, `/score-lead`, `/competitive-brief` — now reads this configuration and filters its output through NexaFlow's context.
 
-- Meridian is a logistics company, not a SaaS company. The ICP says SaaS/B2B Tech/Digital Transformation. **Industry mismatch is real.**
-- But Meridian just raised $28M and hired a VP of Operations. They are actively building automation capabilities. **The timing signal is strong.**
-- The agent's recommendation — "worth monitoring" — reflects both dimensions accurately.
+## Validating the ICP Against Known Deals
 
-This is the key distinction: **Fit** tells you whether the company matches your target profile. **Timing** tells you whether now is the right moment. A company can have low fit and high timing (Meridian) or high fit and low timing (a perfect-profile company in a budget freeze). Your job is deciding what the combination means for your pipeline. The agent surfaces the data. You make the call.
+The ICP looks good on paper. But an ICP is a calibration instrument, not a finished document. You validate it by scoring deals whose outcomes you already know.
 
-## Progressive Connectors
-
-The Meridian research brief above was generated with zero connectors — the agent used only publicly available web intelligence. The `persona-icp` skill works standalone. But the output improves when you add connectors.
-
-### Zero Connectors: Web Intelligence Only
-
-With no connectors, `/research-prospect` pulls from:
-- Company websites and LinkedIn
-- Job boards and press releases
-- Crunchbase and public funding data
-- News articles and conference listings
-
-The engagement section shows `[NO DATA]` because the agent has no access to your internal systems. The firmographic data comes from public estimates, which may be inaccurate.
-
-### Adding the CRM Connector
-
-Add the HubSpot connector to your `sales-marketing.local.md`:
-
-```yaml
-connectors:
-  crm:
-    platform: "hubspot"
-    sync: "read-only"
-    fields: ["deal_stage", "last_activity", "contact_history", "lead_source"]
-```
-
-Now run the same research:
+Take 5 of the 20 closed-won deals and score them against the ICP you just built:
 
 ```
-/research-prospect Meridian Logistics London
+Score these 5 closed-won deals against NexaFlow's ICP.
+For each deal, show the fit score (0-100) and which ICP
+dimensions contributed positively or negatively.
+
+Deal 1: [paste deal 1 details]
+Deal 2: [paste deal 2 details]
+Deal 3: [paste deal 3 details]
+Deal 4: [paste deal 4 details]
+Deal 5: [paste deal 5 details]
 ```
 
-The output gains new sections:
+**Sample Output:**
 
 ```
-ENGAGEMENT: MODERATE (3/5)
-  CRM Record: Contact created 4 months ago
-  Last Activity: Downloaded "Automation ROI Guide" 2 weeks ago
-  Deal Stage: Marketing Qualified Lead (MQL)
-  Lead Source: Organic search → pricing page → guide download
+ICP VALIDATION — 5 Closed-Won Deals
+═════════════════════════════════════
 
-  Assessment: Active engagement. The pricing page visit
-  followed by guide download suggests evaluation phase.
+Deal 1: Karachi Express Logistics (Karachi, 120 employees)
+  Fit Score: 88/100 — HOT
+  ✓ Firmographic: Regional 3PL, 120 employees, Pakistan
+  ✓ Technographic: Legacy TMS, Excel-based reporting
+  ✓ Timing: New VP Ops hired 3 months before close
+  ✓ Persona: VP Ops as primary buyer, Ops Manager as champion
+  ✗ Minor gap: No negative signal check (competitor status unknown)
+
+Deal 2: Gulf Chain Solutions (Dubai, 210 employees)
+  Fit Score: 82/100 — HOT
+  ✓ Firmographic: Freight forwarding, 210 employees, UAE
+  ✓ Timing: Won a major contract 6 weeks before engagement
+  ✓ Persona: Director of Operations as buyer
+  ✗ Technographic: Modern stack (cloud-native) — signals did not
+    match "legacy TMS" criteria. Score reduced.
+
+Deal 3: Speedline Couriers (Lahore, 65 employees)
+  Fit Score: 71/100 — HOT
+  ✓ Firmographic: E-commerce fulfilment, Pakistan
+  ✓ Timing: System failure triggered urgent evaluation
+  ✗ Company size: 65 employees — near lower boundary
+  ✗ Persona: CEO-led sale (no operational champion)
+
+Deal 4: Northern Freight (Islamabad, 95 employees)
+  Fit Score: 76/100 — HOT
+  ✓ Firmographic: Regional 3PL, Pakistan
+  ✓ Technographic: Manual dispatch, Excel reporting
+  ✓ Persona: VP Ops buyer, Fleet Coordinator champion
+  ✗ Timing: No clear trigger event — slow sales cycle (87 days)
+
+Deal 5: Falcon Logistics (Abu Dhabi, 180 employees)
+  Fit Score: 85/100 — HOT
+  ✓ Firmographic: 3PL, UAE
+  ✓ Technographic: Legacy WMS, hiring for automation roles
+  ✓ Timing: New geography expansion into Saudi Arabia
+  ✓ Persona: COO as economic buyer, Ops Manager champion
+
+SUMMARY: All 5 deals score 60+ (HOT)
+  Average fit score: 80.4
+  Lowest: Deal 3 (71) — CEO-led, near size boundary
+  Highest: Deal 1 (88) — textbook ICP match
 ```
 
-The CRM connector transforms the engagement section from `[NO DATA]` to actionable intelligence. You now know Meridian has been in your system for four months and recently downloaded a buying-intent asset. The timing signal (funding + new VP) combined with the engagement signal (pricing page + download) tells a different story than timing alone.
+All five deals scored 60 or above. The ICP is validated against known outcomes.
 
-### Adding the Enrichment Connector
+:::warning If Any Deal Scores Below 60
+You are scoring historical deals to validate the ICP, not to prioritise them for outreach. If your best deals do not score HOT, your ICP definition is wrong — not the deals. The lead-scoring skill is designed for prospects, not closed-won deals. This is a calibration exercise that works because Fit scores are retrospective. Go back to the ICP and find the missing dimension. Common fixes: widening the employee range, adding an industry vertical you overlooked, or adding a timing signal that the analysis surfaced but the ICP omitted.
+:::
 
-Add an enrichment connector:
+Notice Deal 2 — Gulf Chain scored lower on technographics because they had a modern stack, not legacy systems. This is useful feedback. Not all closed-won customers match the "legacy TMS" signal. You might add "Operational complexity exceeding current tooling capacity" as an additional positive technographic signal to catch companies like Gulf Chain that have modern infrastructure but still need workflow automation at scale.
 
-```yaml
-connectors:
-  enrichment:
-    platform: "clearbit"
-    fields: ["verified_employee_count", "tech_stack", "revenue_estimate", "sub_industry"]
-```
+## Deep Research on 5 Prospects
 
-Run the research again:
+With a validated ICP, turn to NexaFlow's actual pipeline. Run research briefs for 5 target prospects and rank them.
 
 ```
-/research-prospect Meridian Logistics London
+Research TransPak Logistics — build a full intelligence brief.
+
+TransPak Logistics, Karachi. Regional 3PL specialising in
+pharmaceutical cold chain. ~150 employees.
 ```
 
-The firmographic section now shows verified data instead of estimates:
+Repeat for all 5 demo prospects. Then compare two briefs side by side: NexaFlow's Karachi-based prospect versus Meridian Logistics in London.
+
+### Comparing Data Availability: Karachi vs London
 
 ```
-FIRMOGRAPHIC FIT: LOW-MODERATE (2.5/5)
-  Industry: Freight & Logistics (sub-industry: "Supply Chain Technology")
-  — Sub-industry "Supply Chain Technology" is closer to ICP than
-    parent industry "Logistics" suggests
-  Employees: 287 (verified) — Within range ✓
-  Revenue: $31.2M (verified) — Within range ✓
+PROSPECT COMPARISON — Data Availability
+════════════════════════════════════════
+
+TransPak Logistics (Karachi)
+────────────────────────────
+  Firmographic:    SECP registration confirms company details ✓
+  Technographic:   Job postings on Rozee.pk (3 ops roles) ✓
+  Timing:          No recent press coverage — limited signal
+  Financial:       No public revenue data — private company
+  Persona:         LinkedIn profiles sparse — 2 of 5 leaders found
+  Data quality:    MODERATE — public records exist but media
+                   coverage and social presence are thin
+
+Meridian Logistics (Leeds, UK)
+──────────────────────────────
+  Firmographic:    Companies House filing — verified revenue,
+                   employee count, registered directors ✓
+  Technographic:   12 job postings on Indeed and LinkedIn ✓
+  Timing:          TechCrunch coverage of recent contract win ✓
+  Financial:       Annual accounts filed at Companies House ✓
+  Persona:         Full LinkedIn profiles for leadership team ✓
+  Data quality:    HIGH — UK regulatory filings, active press,
+                   strong social presence
 ```
 
-The enrichment connector reveals that Meridian's sub-industry is "Supply Chain Technology" — not pure logistics. This changes the firmographic assessment. A logistics company is outside the ICP. A supply chain technology company is adjacent to it. The overall fit score nudges from LOW to LOW-MODERATE.
+The difference is structural, not a reflection of company quality. UK companies file annual accounts at Companies House, making revenue and director information public by law. Pakistani companies file with SECP, but the filing requirements are lighter and media coverage of mid-market companies is thinner.
 
-### The Connector Principle
+This matters for your sales process. For the Karachi prospect, the agent supplements public data with inference — and inference means higher hallucination risk. Apply the three detection rules from Lesson 1 more aggressively on briefs with thin public data. For the London prospect, the agent has richer verified sources, so the brief is more reliable — but you still check financial claims against Companies House filings rather than trusting the agent's numbers.
 
-Each connector makes the output richer. Remove them and the output degrades gracefully but still works. The agent never requires a connector — it adjusts its research scope to whatever data sources are available.
+### Ranking the 5 Prospects
 
-| Connectors Active | Engagement Data | Firmographic Accuracy | Research Depth |
-| --- | --- | --- | --- |
-| Zero | None | Public estimates | Web intelligence only |
-| CRM only | Full history | Public estimates | Web + CRM signals |
-| CRM + Enrichment | Full history | Verified data | Web + CRM + enriched firmographics |
-
-This architecture matters because not every team starts with CRM and enrichment tools. A founder using a spreadsheet as their CRM can still run `/research-prospect` and get useful output. As they add tools, the output improves. No migration, no reconfiguration — each connector plugs in and the agent adapts.
-
-## Diagnosing ICP Miscalibration
-
-The ICP is only useful if it produces accurate classifications. Here are three research briefs from NexaFlow's pipeline. One is correctly classified. Two contain ICP miscalibrations. Your job is to identify which ICP section caused each failure.
-
-### Brief 1: DataForge Solutions, Dubai
+After running all 5 briefs, rank them:
 
 ```
-FIRMOGRAPHIC FIT: HIGH (5/5)
-TECHNOGRAPHIC FIT: HIGH (4/5)
-TIMING FIT: HIGH (5/5)
-OVERALL: HIGH FIT — PURSUE
-
-  DataForge is a B2B SaaS company (180 employees, Dubai)
-  that sells data pipeline tools. Series A+, $12M revenue.
-  New CTO hired 4 weeks ago. Job postings mention "AI"
-  and "workflow automation." Python + AWS stack.
+Rank these 5 research briefs by total fit (ICP score +
+timing strength + data availability). For the lowest-scoring
+prospect, identify which ICP dimensions they fail on.
 ```
 
-**Diagnosis:** Correct classification. DataForge matches the ICP on every dimension. Industry, size, geography, technographic signals, and timing all align. The agent's recommendation to pursue matches experienced judgment. **No ICP adjustment needed.**
-
-### Brief 2: Pinnacle Analytics, Lahore
+**Sample Output:**
 
 ```
-FIRMOGRAPHIC FIT: HIGH (4/5)
-TECHNOGRAPHIC FIT: MODERATE (3/5)
-TIMING FIT: LOW (1/5)
-BUDGET: DISQUALIFIED — below $25,000 minimum
-OVERALL: LOW FIT — DEPRIORITISE
+PROSPECT RANKING — NexaFlow Pipeline
+═════════════════════════════════════
 
-  Pinnacle is a 12-person data analytics startup in Lahore.
-  Seed-stage, estimated revenue $80K. The founder expressed
-  interest at a conference last month.
+Rank  Prospect                    Fit   Timing  Data    Total
+────  ──────────────────────────  ────  ──────  ──────  ─────
+  1   Meridian Logistics (Leeds)   82    HIGH    HIGH     91
+  2   TransPak Logistics (KHI)     78    MOD     MOD      74
+  3   Al-Safa Transport (Dubai)    75    HIGH    MOD      77
+  4   Greenline Express (LHR)      68    LOW     MOD      58
+  5   Coastal Freight (KHI)        52    LOW     LOW      42
+
+LOWEST SCORER: Coastal Freight (52 fit, 42 total)
+  ✗ Firmographic: 30 employees — below 50 minimum
+  ✗ Technographic: No automation signals in job postings
+  ✗ Timing: No trigger events detected
+  ✗ Persona: No VP/Director level — CEO-only company
+  → Recommendation: REMOVE from pipeline
 ```
 
-**Diagnosis:** The agent classified Pinnacle as high firmographic fit — but a 12-person seed-stage startup with $80K revenue should have been caught by the firmographic filters. The `company_size` minimum is 50 employees. The `revenue_range` minimum is $500,000. Pinnacle fails both.
+The ranking reveals something counterintuitive. Meridian — a UK company outside NexaFlow's primary geography — scores highest because data availability and timing strength compensate for the geographic distance. This is the ICP working as designed: it separates signal from noise and lets you make decisions based on dimensions, not gut feeling.
 
-**The problem is not in the ICP.** The ICP criteria are correct. The issue is that the agent's data was wrong — it may have pulled an inflated employee count from LinkedIn (common for startups that count advisors and contractors). This is a **Hallucinated Data** error from Lesson 1's taxonomy. The fix is not to change the ICP but to verify the agent's data sources for small companies.
+## Competitive Positioning
 
-However, the budget section caught the error anyway — it flagged Pinnacle as below the $25,000 deal minimum. The budget section acted as a safety net. Multiple overlapping filters catch what a single filter misses.
-
-### Brief 3: Crescent Manufacturing, Rawalpindi
+One piece remains. NexaFlow's sales team needs to know how they stack up against RouteMaster Pro and FleetOps AI. Run:
 
 ```
-FIRMOGRAPHIC FIT: N/A — "Manufacturing" not in ICP industries
-TECHNOGRAPHIC FIT: N/A — No signals found
-TIMING FIT: N/A — No timing data available
-OVERALL: UNSCORED — Insufficient ICP coverage
-
-  Crescent Manufacturing is a 200-person manufacturer of
-  industrial valves. No public tech stack. No recent
-  funding or leadership changes. No engagement data.
+/competitive-brief RouteMaster Pro
 ```
 
-**Diagnosis:** The agent returned `UNSCORED` because the ICP has no signals for manufacturing companies. It is not a negative classification — it is an admission that the ICP cannot evaluate this prospect. The agent does not know whether Crescent is a good or bad prospect. It knows it has no framework for deciding.
-
-This is **garbage-in-garbage-out** at the ICP level. If NexaFlow wants to evaluate manufacturing prospects, it needs to add manufacturing-relevant signals:
-
-- **Firmographic:** Add "Industrial Manufacturing" to the industries list
-- **Technographic:** Add signals like "ERP system modernisation" or "Industry 4.0 initiatives"
-- **Timing:** Add signals like "Factory expansion announced" or "New plant commissioning"
-
-The ICP does not need to cover every industry. But if you ask the agent to research a company in an industry the ICP does not cover, expect `UNSCORED` — not a useful classification.
-
-## Calibrating With Known Prospects
-
-The most reliable way to tune your ICP is to test it against prospects whose outcome you already know. Pick three companies from your pipeline:
-
-### Step 1: Select Your Test Prospects
-
-Choose:
-- **One ideal customer you have already closed.** This is your positive control. The agent should classify them as HIGH FIT. If it does not, your ICP is missing signals that describe your best customers.
-- **One borderline prospect you are unsure about.** This is your calibration target. You do not know what the agent should say — you want to see whether its analysis reveals something you missed.
-- **One wrong-fit company you would never pursue.** This is your negative control. The agent should classify them as LOW FIT or trigger a negative signal. If it classifies them as high fit, your ICP is too loose.
-
-### Step 2: Run the Research
+**Sample Output:**
 
 ```
-/research-prospect [Company Name] [City]
+COMPETITIVE BRIEF — RouteMaster Pro
+════════════════════════════════════
+
+OVERVIEW
+  Founded: 2012 | HQ: Singapore | Employees: ~400
+  Product: Enterprise TMS for large logistics operators
+  Markets: Southeast Asia, Middle East, UK
+
+POSITIONING vs NexaFlow
+  RouteMaster strengths:
+    - Enterprise-grade (500+ employee companies)
+    - Deep regulatory compliance (cross-border documentation)
+    - 10-year track record and reference customers
+
+  RouteMaster weaknesses:
+    - 6-12 month implementation cycle (vs NexaFlow 30 days)
+    - Pricing starts at $5,000/month (vs NexaFlow $800/month)
+    - Legacy architecture — no API-first integration
+
+  NexaFlow wins when:
+    - Prospect needs go-live in under 90 days
+    - Budget under $3,000/month
+    - Mid-market (50-400 employees) — RouteMaster oversells
+
+  RouteMaster wins when:
+    - Prospect has 500+ employees and cross-border operations
+    - Compliance requirements dominate the buying criteria
+    - Prospect values vendor longevity over speed
 ```
 
-Run it for all three. Read each brief carefully.
+Add the competitive intelligence to `sales-marketing.local.md` under the Competitor Intelligence section. Every subsequent research brief and outreach draft will reference this positioning automatically.
 
-### Step 3: Compare and Adjust
+## What You Built
 
-| Prospect | Your Judgment | Agent Classification | Match? | Action |
-| --- | --- | --- | --- | --- |
-| Closed customer | Ideal fit | Should be HIGH | If LOW → ICP too strict (loosen criteria) | Widen the section that blocked them |
-| Borderline | Unsure | Read the brief | Does the analysis clarify your uncertainty? | Note which signals were decisive |
-| Wrong-fit | Bad fit | Should be LOW | If HIGH → ICP too loose (tighten criteria) | Add the missing negative signal |
+- ICP definition validated against 5 closed-won deals (all scored 60+ HOT)
+- Complete `sales-marketing.local.md` with company profile, brand voice, ICP, competitor intel, and sales methodology
+- 5 research briefs with fit ranking and data-availability comparison
+- Understanding of how ICP quality directly affects the relevance and accuracy of every downstream command
 
-### Step 4: Iterate
+## Flashcards Study Aid
 
-If the agent's classifications did not match your judgment, change one ICP section at a time. Run `/research-prospect` again after each change. Watch how the output shifts.
+Test your understanding of the key concepts from this lesson.
 
-Common adjustments:
-- **Agent scored your best customer LOW:** Your firmographic criteria may be too narrow. Did the customer's actual industry fall outside your listed industries? Add it.
-- **Agent scored a wrong-fit company HIGH:** Your negative signals section is too thin. What disqualified this company in your mind? Add that as a hard disqualifier.
-- **Agent missed a timing signal you know about:** Your timing section may lack the event type. Did a competitor just lose this customer? Add "Competitor contract expiration" as a high-priority timing signal.
-
-The ICP is never finished. It improves with every calibration run. The first version is your best guess. The tenth version reflects validated sales judgment.
-
-## ICP Configuration Summary
-
-| Section | What It Constrains | What Happens If Missing |
-| --- | --- | --- |
-| Firmographic | Company type, size, geography | Agent researches every company equally |
-| Technographic | Technology fit signals | Agent cannot assess product relevance |
-| Timing | Why-now triggers | Agent scores fit without urgency context |
-| Engagement | Prospect behavior signals | Requires CRM connector; skipped if absent |
-| Persona | Decision-maker profiles | Agent lists contacts without role mapping |
-| Budget | Deal size parameters | Agent cannot flag budget mismatches |
-| Negative | Hard disqualifiers | Agent never eliminates obvious bad fits |
-| Data Sources | Where to research | Agent searches broadly instead of efficiently |
+<Flashcards />
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
-
-### Prompt 1: Build Your ICP
+### Prompt 1 (Reproduce)
 
 ```
-I want to configure an Ideal Customer Profile for my business.
-
-My company: [describe what you sell, to whom, typical deal size]
-My market: [list your primary geographies and industries]
-My best customer: [describe your best existing customer — industry,
-  size, what made them ideal]
-
-Help me configure all 8 ICP sections:
-1. Firmographic criteria
-2. Technographic signals (positive and negative)
-3. Timing signals (high, moderate, low priority)
-4. Engagement signals (high, moderate, low intent)
-5. Persona profiles (primary buyer, economic buyer, champion)
-6. Budget parameters
-7. Negative signals (hard and soft disqualifiers)
-8. Data sources for each signal type
-
-Format the output as YAML I can paste into my
-sales-marketing.local.md file.
+Build an ICP definition for NexaFlow using the 20 closed-won deals.
+Identify: firmographics, technographics, timing signals, persona
+profiles, and negative signals.
 ```
 
-**What you are learning:** Translating your sales intuition into structured configuration. The hardest part of ICP configuration is not the YAML syntax — it is articulating what you already know about your buyers in a format precise enough for an agent to act on. The AI helps you systematize tacit knowledge. But pay attention to what it generates: if a section feels wrong, that is your domain expertise catching something the AI missed. Correct it.
+**What you're learning:** How closed-won analysis reveals patterns that intuitive sellers like Farah know implicitly but cannot articulate. The agent decomposes "you just know" into measurable dimensions — employee range, trigger events, buyer personas — that can be taught, configured, and scaled across the team.
 
-### Prompt 2: Diagnose a Miscalibration
+### Prompt 2 (Adapt)
 
 ```
-Here is my ICP configuration: [paste your YAML]
-
-I ran /research-prospect on a company I know well:
-[Company name, what they do, why you consider them a
-good/bad/borderline prospect]
-
-The agent classified them as [HIGH/LOW/MODERATE] fit.
-I expected [different classification].
-
-Diagnose: which ICP section most likely caused the
-mismatch? What specific change would fix it?
-Give me the updated YAML for that section only.
+Take the ICP you built and score the 5 target prospects from the
+demo data. Rank them by total fit. For the lowest-scoring prospect,
+identify which ICP dimensions they fail on.
 ```
 
-**What you are learning:** ICP debugging — the same skill you practiced in the failure analysis section above, but applied to your own configuration. The agent suggests a diagnosis, but you evaluate whether the suggestion matches your domain knowledge. If the agent says "widen your firmographic criteria" but you know the criteria are correct, the problem is elsewhere. This back-and-forth between your judgment and the agent's analysis is how calibration works.
+**What you're learning:** An ICP is a diagnostic tool — it tells you not just WHO to pursue but WHY some prospects are weak. When the lowest-scoring prospect fails on firmographics versus timing versus persona, the diagnosis is different and the response is different. Firmographic failure means remove from pipeline. Timing failure means monitor and revisit. Persona failure means find a different entry point.
 
----
+### Prompt 3 (Apply)
 
-Continue to Lesson 3, where you will build the three-dimension lead scoring model and run `/score-lead` to rank your pipeline by fit, timing, and engagement.
+```
+Build an ICP for your own business (or a business you know well)
+using 10+ past deals. Run /competitive-brief for your top competitor
+and add the competitive positioning to your ICP definition.
+```
+
+**What you're learning:** ICP and competitive positioning together form the foundation that every subsequent lesson builds on. Lead scoring (L03) scores prospects against this ICP. Outreach (L05) references this competitive positioning. Campaign planning (L10) targets this persona profile. Getting the foundation right here means every downstream command produces more relevant output.
