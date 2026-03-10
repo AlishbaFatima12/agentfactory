@@ -89,7 +89,7 @@ The problem is cognitive load. Writing six unique, personalised touches for ever
 
 ## Building the Meridian Sequence
 
-Sarah Chen is Director of Supply Chain Operations at Meridian Logistics in London. Your research brief from Lesson 2 identified that Meridian completed a BrightPath acquisition in Q3, their supply chain consolidation is behind schedule, and Sarah posted on LinkedIn about warehouse management system integration challenges. She is a top-scoring prospect from Lesson 3. You sent a Five Laws-compliant message in Lesson 5. She has not responded.
+Sarah Chen is VP Operations at Meridian Logistics in Leeds. Your research brief from Lesson 2 identified that Meridian completed a BrightPath acquisition in Q3, their supply chain consolidation is behind schedule, and Sarah posted on LinkedIn about warehouse management system integration challenges. She is a top-scoring prospect from Lesson 3. You sent a Five Laws-compliant message in Lesson 5. She has not responded.
 
 Build the follow-up sequence:
 
@@ -104,7 +104,7 @@ and WMS integration challenges.
 The sequence skill auto-activates from the trigger phrases. Here is the complete output:
 
 ```
-SEQUENCE: NexaFlow → Sarah Chen (Dir. Supply Chain, Meridian Logistics)
+SEQUENCE: NexaFlow → Sarah Chen (VP Operations, Meridian Logistics)
 Generated: 6 touches across 2 channels over 21 days
 Research brief: Meridian-prospect-003
 
@@ -405,6 +405,10 @@ In this lesson you constructed the complete multi-touch outreach workflow:
 - Follow-up templates that use sequence context to continue the conversation naturally
 - Exit conditions for six scenarios — reply, bounce, unsubscribe, silence, out-of-office, and stakeholder change
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
 Use these prompts in your preferred AI assistant.
@@ -479,7 +483,3 @@ those touches and re-evaluate.
 ```
 
 **What you're learning:** This exercise calibrates your judgment for where the agent's output is good enough to send and where it needs human enhancement. Most students find that touches 1-3 earn SEND or EDIT status, while touches 4-6 need more work. That pattern reflects personalisation decay — and knowing where it starts in your sequences tells you exactly where to invest your time.
-
-## Flashcards Study Aid
-
-<Flashcards />

@@ -292,7 +292,7 @@ The ICP is the largest section of the configuration file, but the Revenue Engine
 - **Champions:** Operations Managers frustrated with manual processes
 ```
 
-Save the file. Every command in the Revenue Engine — `/research-prospect`, `/score-lead`, `/competitive-brief` — now reads this configuration and filters its output through NexaFlow's context.
+Save the file. Every skill in the Revenue Engine — prospect research, lead scoring, `/competitive-brief` — now reads this configuration and filters its output through NexaFlow's context.
 
 ## Validating the ICP Against Known Deals
 
