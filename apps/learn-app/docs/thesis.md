@@ -27,7 +27,7 @@ keywords:
   fontWeight: '600',
   color: 'var(--ifm-color-emphasis-900)'
 }}>
-In the AI era, the most valuable companies won't sell software—they'll manufacture <em>AI employees</em>: role-based systems that compose tools, spawn specialist agents, and deliver outcomes at scale.
+In the AI era, the most valuable companies won't sell software—they'll manufacture <em>AI employees</em>: role-based systems that compose tools, spawn specialist agents, and deliver outcomes at scale. And these AI employees are on the verge of becoming something more: <strong>fully-fledged economic actors</strong> that autonomously buy services, procure compute, and acquire data in the course of accomplishing high-level goals. We are one to two years away from seeing this at scale.
 </p>
 
 <p style={{
@@ -37,7 +37,7 @@ In the AI era, the most valuable companies won't sell software—they'll manufac
   color: 'var(--ifm-color-emphasis-800)',
   marginTop: '2rem'
 }}>
-The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers define intent. Agents execute. Humans supervise and verify. This model industrializes execution through machine-readable specs, reusable skills, Standard Tool Protocols (MCP: a shared tool-connection standard), and cloud-native infrastructure—shifting the focus from manual workflows to <strong>capability on demand</strong>.
+The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers define intent. Agents execute. Humans supervise and verify. Soon, agents won't just <em>do</em> the work—they'll <em>source what they need</em> to do it, dynamically purchasing resources within budgets and permission envelopes set by their human supervisors. This model industrializes execution through machine-readable specs, reusable skills, Standard Tool Protocols (MCP: a shared tool-connection standard), and cloud-native infrastructure—shifting the focus from manual workflows to <strong>capability on demand</strong>.
 </p>
 
 <p style={{
@@ -55,7 +55,7 @@ What remains: Intent. Verification. Outcome.
 
 ## 📚 Teaching Aid
 
-<PDFViewer src="https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-0/chapter-00/agent-factory-thesis.pdf" title="The Agent Factory Thesis" height={700} />
+[🖥️ Fullscreen](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-0/chapter-00/agent-factory-thesis.pdf)
 
 ---
 
@@ -66,6 +66,7 @@ What remains: Intent. Verification. Outcome.
 | **Product**         | Software Tools             | AI Employees                               |
 | **Value Metric**    | Per-Seat Subscriptions     | Per-Outcome Results                        |
 | **Execution Model** | Manual & Visible           | Automated & Industrialized                 |
+| **Resource Acquisition** | Humans procure tools & services | Agents buy compute, data & services autonomously |
 | **Human Role**      | Operator                   | Supervisor & Verifier                      |
 | **Integration**     | Rigid, point-to-point APIs | Standard Tool Protocols (MCP)              |
 | **Focus**           | How the work is done       | _That_ the work is done—verifiably correct |
@@ -83,6 +84,16 @@ The Factory is the core of the thesis—the production engine that sits between 
 A traditional factory takes raw materials, runs them through a series of specialized stations, and produces finished products. The Agent Factory does the same thing—but the raw material is intent, the stations are agents, and the finished product is a verified outcome.
 
 Three mechanisms power the factory: specs define the work, skills package how it gets done, and feedback loops ensure it improves—with MCP as the universal protocol that connects every agent to every tool.
+
+### Agents as Economic Actors
+
+Today's agents execute tasks. Tomorrow's agents will participate in markets. The thesis opens with this claim because it represents the next great inflection: the shift from agent-as-tool to agent-as-buyer.
+
+Consider an agent assigned a high-level goal—"reduce customer churn by 15%." It will autonomously purchase the compute to train a model, negotiate an API contract for enrichment data, and provision cloud services to deploy the solution—all within a budget and permission envelope set by its human supervisor. The primitives are already in place: agents can call APIs, manage credentials, and make decisions under constraints. What remains is the trust infrastructure—payment rails, audit trails, and liability frameworks—that lets organizations safely delegate purchasing authority to non-human actors.
+
+When agents become buyers, the economics of the Agent Factory shift fundamentally. The factory no longer just _consumes_ resources allocated by humans; it dynamically _sources_ them. Compute, data, and specialist services become inputs that agents discover, evaluate, and acquire in real time—turning the factory into a self-provisioning system that optimizes not just for task completion, but for cost, speed, and quality simultaneously.
+
+The implication for builders: design your agents and your infrastructure for economic participation from day one. Agents need budgets, not just permissions. Outcome contracts, not just API keys. And the organizations that master this shift will capture the next wave of value, just as the companies that moved from SaaS subscriptions to outcome-based pricing are capturing this one.
 
 ### The Human in the Loop
 
@@ -107,8 +118,6 @@ Very soon more money will be spent on new construction for digital workers (data
 Data centers are devouring copper and electricity at industrial scale: a single hyperscale AI facility requires up to 50,000 tons of copper, up to ten times what a conventional data center needs. Meta, Google, Amazon, and Microsoft alone project over $600 billion in AI infrastructure spending for 2026 — as a share of GDP, that rivals the railroad expansion of the 1850s and the interstate highway system of the 1950s.
 
 The factories of the Agent era are not hypothetical. They are under construction.
-
-AI agents will soon graduate to fully-fledged economic actors that buy services, compute, and even data in the course of accomplishing high-level goals. 1-2 years before we start seeing this at scale.
 
 ![U.S. private construction spending: general office declining from $60B to $44B while data center surges from near zero to $42B, converging in 2025](../static/img/data-center-vs-office-construction.png)
 
