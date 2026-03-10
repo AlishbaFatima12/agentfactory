@@ -30,7 +30,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can configure a scoring model with Fit (0-40), Timing (0-40), and Engagement (0-20), run /score-lead on 5 prospects, read the dimension breakdown, and determine the correct classification (HOT, WARM, CULTIVATE, NOT YET)"
+    measurable_at_this_level: "Student can configure a scoring model with Fit (0-40), Timing (0-40), and Engagement (0-20), score 5 prospects using the lead-scoring skill, read the dimension breakdown, and determine the correct classification (HOT, WARM, CULTIVATE, NOT YET)"
 
   - name: "Diagnose Miscalibrated Scoring by Comparing Agent Output to Domain Knowledge"
     proficiency_level: "B1"

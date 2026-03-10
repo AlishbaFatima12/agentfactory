@@ -167,13 +167,13 @@ hiring for an operations manager.
 
 The `outreach` skill produces a Five Laws-compliant message. Review it against the five constraints from Lesson 5:
 
-| Law                                  | Check                                                                                         |
-| ------------------------------------ | --------------------------------------------------------------------------------------------- |
-| Law 1: Specific verifiable reference | Does it cite the Port Qasim expansion or the ops manager hiring? Both are verifiable signals. |
-| Law 2: Value-first                   | Does it offer something useful before asking for anything?                                    |
-| Law 3: Personalised to this prospect | Could this message be sent to any freight company, or is it specific to Crescent?             |
-| Law 4: Under 150 words               | Count the words.                                                                              |
-| Law 5: Clear, low-commitment CTA     | Is the ask specific ("15-minute call") rather than vague ("let's connect")?                   |
+| Law                                       | Check                                                                                         |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------- |
+| Law 1: Specific verifiable reference      | Does it cite the Port Qasim expansion or the ops manager hiring? Both are verifiable signals. |
+| Law 2: Lead with prospect, not product    | Does the first sentence describe Crescent's situation, not NexaFlow's product?                |
+| Law 3: One ask, one clear next step       | Is there exactly one call-to-action, not two or three?                                        |
+| Law 4: Hard word limits (under 150 words) | Count the words.                                                                              |
+| Law 5: Zero jargon                        | Could a non-technical VP read this without stumbling on industry buzzwords?                   |
 
 If any law fails, iterate. Prompt the agent to fix the specific violation. The outreach skill enforces the Five Laws, but enforcement is not perfect — you are the final auditor.
 

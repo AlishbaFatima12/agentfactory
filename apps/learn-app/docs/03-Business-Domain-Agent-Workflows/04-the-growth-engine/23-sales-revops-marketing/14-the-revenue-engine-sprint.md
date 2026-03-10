@@ -97,7 +97,7 @@ You built NexaFlow's ICP in Lesson 2. Thirteen lessons later, you have run dozen
 
 **Your task:**
 
-Pull five closed-won deals from NexaFlow's pipeline (use the demo data you generated in Lesson 1, or generate five closed-won companies now). Score each against your current ICP using `/score-lead`.
+Pull five closed-won deals from NexaFlow's pipeline (use the demo data you generated in Lesson 1, or generate five closed-won companies now). Score each against your current ICP using the lead-scoring skill.
 
 ```
 Score these 5 closed-won companies against our current ICP:
@@ -140,7 +140,7 @@ primary logistics service, and one recent business event
 
 **Step 2 — Research and score all 5:**
 
-Run `/research-prospect` for each company. Then run `/score-lead` on each. As research briefs arrive, flag any claims you cannot verify — funding amounts, employee counts, technology stack details. Mark each flagged claim as **Hallucinated Data** or **Verifiable**. Do not stop the sprint to verify. Flag and continue.
+Research each company using the prospect-research skill, then score each with the lead-scoring skill. As research briefs arrive, flag any claims you cannot verify — funding amounts, employee counts, technology stack details. Mark each flagged claim as **Hallucinated Data** or **Verifiable**. Do not stop the sprint to verify. Flag and continue.
 
 **Step 3 — Rank and select top 3:**
 
@@ -380,43 +380,13 @@ future pipeline decline — the revenue impact won't appear for
 
 ## What You Built
 
-This chapter taught you to operate a coordinated revenue engine. Here is every component, assembled.
-
-**Prospect Intelligence (L01-L04):**
-
-- Installed three plugin layers (Sales + Marketing + RevOps extension)
-- Configured `sales-marketing.local.md` with ICP, brand voice, and business data
-- Ran `/research-prospect` briefs and detected hallucinated data
-- Built a three-dimension scoring model (Fit + Timing + Engagement)
-- Managed CRM enrichment and data decay
-
-**Sales Execution (L05-L08):**
-
-- Applied the Five Laws of outreach as hard constraints
-- Built multi-touch sequences with exit conditions
-- Generated pre-call briefs and battlecards with `/call-summary`
-- Ran the complete prospect-to-meeting pipeline end-to-end
-- Discovered config quality amplification — good ICP produces great output, bad ICP produces garbage
-
-**Content and Campaigns (L09-L11):**
-
-- Created interactive sales assets with `create-an-asset`
-- Configured brand voice and ran `/brand-review` audits
-- Built campaign briefs with `/campaign-plan` and content calendars
-- Multiplied cornerstone content into derivative assets
-- Analysed campaign performance and identified underperforming channels
-
-**Compliance and Operations (L12-L13):**
-
-- Applied jurisdiction overlays for PECA (Pakistan), GDPR (UK/EU), and UAE data law
-- Generated compliant outreach across three regulatory frameworks
-- Deployed monitoring agents: Lead Intelligence, CRM Hygiene, Marketing Performance, Revenue Reporting
-- Configured schedule-driven agents with segment-aware thresholds
-- Built the revenue dashboard with leading indicator alerts
-
-**Diagnostic Capability (L01-L13):**
-
-- Identified all five Agent Output Taxonomy errors:
+1. A validated ICP scored against closed-won deals to detect calibration drift
+2. Five prospect research briefs with hallucination flags
+3. Five lead scores with three-dimension breakdowns and routing classifications
+4. Three Five Laws-compliant outreach messages with law-by-law audits
+5. A campaign brief with content calendar, budget allocation, and measurement framework
+6. A weekly revenue dashboard with pipeline metrics and leading indicator alerts
+7. A diagnostic log identifying all five Agent Output Taxonomy errors during live execution:
 
 | Error Type                | First Taught | What You Can Do                                                            |
 | ------------------------- | ------------ | -------------------------------------------------------------------------- |
@@ -426,9 +396,7 @@ This chapter taught you to operate a coordinated revenue engine. Here is every c
 | **Over-Automation**       | L06          | Add exit conditions to sequences and human gates to agent workflows        |
 | **Context Loss**          | L07          | Trace intelligence flow across pipeline stages and identify where it drops |
 
-**The division of labour that runs through every lesson:** The agent researches, drafts, and recommends. The sales professional decides and sends. The agent identified the signal. You chose the response. That boundary — inform versus act — is what makes the revenue engine trustworthy at scale.
-
-This system is the product. For the dispatcher building a logistics business, the agency selling sales enablement, the consultancy offering RevOps-as-a-service — what you built in 13 lessons is the offering. Configure it for a client's ICP, connect it to their CRM, tune the thresholds, and the revenue engine runs. The plugins provide the capability. Your configuration and diagnostic skill provide the value.
+The division of labour that runs through every lesson: the agent researches, drafts, and recommends. The sales professional decides and sends. That boundary — inform versus act — is what makes the revenue engine trustworthy at scale.
 
 ---
 

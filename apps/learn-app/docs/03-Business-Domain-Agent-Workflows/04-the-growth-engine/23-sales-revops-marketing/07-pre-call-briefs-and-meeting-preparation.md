@@ -102,7 +102,7 @@ Ahmed skips all five. He relies on charm and improvisation. It works with warm p
 
 ## Building the Meridian Pre-Call Brief
 
-Sarah Chen agreed to a 30-minute discovery call. She is Director of Supply Chain Operations at Meridian Logistics in London. Your research brief from Lesson 2 identified the BrightPath acquisition, supply chain consolidation delays, and WMS integration challenges. Your outreach sequence from Lesson 6 referenced the TransGlobal case study, and Sarah replied after Touch 4 mentioning she found the brief helpful.
+Sarah Chen agreed to a 30-minute discovery call. She is VP Operations at Meridian Logistics in Leeds. Your research brief from Lesson 2 identified the BrightPath acquisition, supply chain consolidation delays, and WMS integration challenges. Your outreach sequence from Lesson 6 referenced the TransGlobal case study, and Sarah replied after Touch 4 mentioning she found the brief helpful.
 
 Build the brief:
 
@@ -119,8 +119,8 @@ The pre-call-brief skill auto-activates. Here is the complete output:
 ```
 ══════════════════════════════════════════════════════════════
           PRE-CALL BRIEF
-          Prospect: Sarah Chen, Director of Supply Chain Ops
-          Company: Meridian Logistics (London)
+          Prospect: Sarah Chen, VP Operations
+          Company: Meridian Logistics (Leeds)
           Call: Discovery | 30 min | Tuesday 10:00 GMT
 ══════════════════════════════════════════════════════════════
 
@@ -543,7 +543,7 @@ Use these prompts in your preferred AI assistant.
 
 ```
 Build a pre-call brief for a discovery call with Meridian's
-Sarah Chen. She is Director of Supply Chain Operations.
+Sarah Chen. She is VP Operations.
 Meridian completed the BrightPath acquisition in Q3, and
 she responded to our outreach about WMS consolidation.
 
