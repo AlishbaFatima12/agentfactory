@@ -385,6 +385,14 @@ a partial competitor.
 
 **What you are learning:** The residuals clause illustrates why NDA triage cannot be purely mechanical. The same clause that is acceptable when sharing marketing materials with an agency becomes a serious risk when sharing product roadmaps with a competitor. Tier 3 escalation ensures human judgment is applied to these context-dependent decisions.
 
+## What You Built
+
+1. A three-tier NDA triage system with SLA targets (Tier 1: 1 business day, Tier 2: 2 days, Tier 3: 5 days with attorney review)
+2. Nine automatic RED flag triggers that route NDAs to Tier 3 regardless of other content
+3. A calibrated triage configuration targeting 60% Tier 1, 25% Tier 2, 15% Tier 3 distribution
+4. A cross-border NDA review (Al-Madinah worked example) demonstrating jurisdiction overlay integration
+5. Understanding of the residuals clause trap and why context-dependent decisions require human judgment
+
 ---
 
 Continue to [Lesson 6: Compliance Check and Legal Risk Assessment ->](./06-compliance-check-and-legal-risk-assessment.md)

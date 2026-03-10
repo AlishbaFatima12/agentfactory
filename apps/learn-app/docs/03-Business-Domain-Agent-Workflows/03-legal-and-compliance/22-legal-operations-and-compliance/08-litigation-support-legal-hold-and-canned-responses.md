@@ -366,6 +366,14 @@ attorney-only.
 
 **What you are learning:** The operational/strategic distinction is the most important governance concept in litigation support. Items 1, 3, 5, 7, and 9 are operational -- the agent produces the infrastructure. Items 2, 4, 6, 8, and 10 are strategic -- they require legal judgment, create privilege, or involve court-facing decisions. Correctly classifying these tasks is the skill that makes litigation AI safe and effective.
 
+## What You Built
+
+1. A litigation hold package with hold notice, custodian list, acknowledgement tracker, and IT suspension request
+2. Seven canned response categories configured for /respond (DSRs, discovery holds, privacy inquiries, vendor questions, NDA requests, subpoena/legal process, insurance notifications)
+3. Universal escalation triggers identifying when to stop templated response and involve an attorney
+4. The operational vs. strategic governance distinction for litigation support tasks
+5. Understanding of ESI preservation obligations and the duty to preserve electronically stored information
+
 ---
 
 Continue to [Lesson 9: Meeting Prep and Vendor Management ->](./09-meeting-prep-and-vendor-management.md)

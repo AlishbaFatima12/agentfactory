@@ -483,6 +483,14 @@ For each item:
 
 **What you are learning:** A regulatory briefing is only useful if you can translate RAG status into specific actions, ownership assignments, and risk assessments. This prompt builds the skill of reading an agent's output and making the decisions that the agent cannot make for you -- because the agent reviews, but the attorney (and compliance officer) decides.
 
+## What You Built
+
+1. A Contract Intake Agent with five-stage workflow: receive, classify, route, SLA-track, escalate
+2. Document type classification across six contract categories with confidence thresholds
+3. A Regulatory Monitoring Agent producing weekly RAG-status briefings with action items and ownership
+4. Understanding of the agent vs. tool distinction: agents maintain state, make routing decisions, and manage processes over time
+5. Connector integration mapping (Gmail for intake, Slack for alerts, Atlassian for matter tracking)
+
 ---
 
 Continue to [Lesson 11: Legal Ops Agents — Calendar, Spend, and DSAR ->](./11-legal-ops-agents-calendar-spend-dsar.md)
