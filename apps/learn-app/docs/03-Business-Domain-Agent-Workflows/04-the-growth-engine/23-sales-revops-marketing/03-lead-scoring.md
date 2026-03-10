@@ -289,10 +289,10 @@ Three decisions make routing work:
 
 ## What You Built
 
-- Three-dimension scoring model configured with Fit (0-40) + Timing (0-40) + Engagement (0-20)
-- 5 prospects scored and ranked by total with full dimension breakdowns
-- Scoring calibration validated against expert judgment (Al-Safa adjustment)
-- Routing rules defined for each score tier with owner, SLA, and action
+1. Three-dimension scoring model configured with Fit (0-40) + Timing (0-40) + Engagement (0-20)
+2. 5 prospects scored and ranked by total with full dimension breakdowns
+3. Scoring calibration validated against expert judgment (Al-Safa adjustment)
+4. Routing rules defined for each score tier with owner, SLA, and action
 
 ## Flashcards Study Aid
 

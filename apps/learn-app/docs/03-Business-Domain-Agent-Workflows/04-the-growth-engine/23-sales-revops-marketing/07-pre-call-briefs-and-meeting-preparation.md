@@ -526,14 +526,16 @@ The `/call-summary` output connects the brief to the follow-up. The pre-call bri
 
 ## What You Built
 
-In this lesson you constructed the complete meeting preparation workflow:
+1. 3 pre-call briefs with tailored discovery questions for different call types (discovery, demo, follow-up)
+2. A competitive battlecard for NexaFlow's top competitor, integrated into meeting preparation
+3. A call summary with action items from `/call-summary`, including a draft follow-up email
+4. Objection handling responses for 3 common objections, grounded in prospect-specific context
+5. The **Context Loss** error type, discovered by building a brief without feeding prior research
+6. The principle: always feed prior context into brief prompts — the agent does not remember across sessions
 
-- 3 pre-call briefs with tailored discovery questions for different call types (discovery, demo, follow-up)
-- A competitive battlecard for NexaFlow's top competitor, integrated into meeting preparation
-- A call summary with action items from `/call-summary`, including a draft follow-up email
-- Objection handling responses for 3 common objections, grounded in prospect-specific context
-- The **Context Loss** error type, discovered by building a brief without feeding prior research
-- The principle: always feed prior context into brief prompts — the agent does not remember across sessions
+## Flashcards Study Aid
+
+<Flashcards />
 
 ## Try With AI
 
@@ -609,7 +611,3 @@ that the summary did not capture?
 ```
 
 **What you are learning:** Applying the brief-to-call-to-summary workflow to your own pipeline. The comparison between generated action items and actual commitments reveals the gap between what the agent captures and what you committed to in conversation. Some commitments are explicit ("I will send the report today"). Others are implicit ("Let me look into that for you"). The agent captures explicit commitments reliably. Implicit ones — the ones that damage trust when you forget them — require your own notes.
-
-## Flashcards Study Aid
-
-<Flashcards />

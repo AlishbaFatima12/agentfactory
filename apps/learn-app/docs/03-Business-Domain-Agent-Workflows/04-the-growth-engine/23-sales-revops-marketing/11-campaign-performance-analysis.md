@@ -367,7 +367,7 @@ LogiFlow avoids the AI conversation. NexaFlow can own it.
 ══════════════════════════════════════════════════════════════
 ```
 
-Meridian Logistics in London faces a different competitive landscape. Their competitors lead with post-Brexit customs automation and HMRC compliance — a positioning battle where regulatory credibility matters more than AI capability. The competitive brief for Meridian's market would emphasise compliance and established client references rather than technology differentiation. This is why competitive positioning is market-specific: the same company needs different messaging in Karachi versus London.
+Meridian Logistics in Leeds faces a different competitive landscape. Their competitors lead with post-Brexit customs automation and HMRC compliance — a positioning battle where regulatory credibility matters more than AI capability. The competitive brief for Meridian's market would emphasise compliance and established client references rather than technology differentiation. This is why competitive positioning is market-specific: the same company needs different messaging in Karachi versus Leeds.
 
 ### Using Competitive Intel in Week 6
 
@@ -411,11 +411,11 @@ In Lesson 13, you will build a RevOps dashboard with automated agents. The Monda
 
 ## What You Built
 
-- A Week 5 campaign analysis with 3 specific optimisation actions tied to team capacity
-- A budget reallocation recommendation based on channel efficiency and regional benchmarks
-- A competitive brief for differentiated positioning against NexaFlow's primary competitor
-- A weekly Monday-Wednesday-Friday review cadence connecting to L10's measurement framework
-- The judgment to distinguish observation-only reporting (CTR is 0.72%) from actionable analysis (CTR is above local benchmark; the real problem is ICP match rate)
+1. A Week 5 campaign analysis with 3 specific optimisation actions tied to team capacity
+2. A budget reallocation recommendation based on channel efficiency and regional benchmarks
+3. A competitive brief for differentiated positioning against NexaFlow's primary competitor
+4. A weekly Monday-Wednesday-Friday review cadence connecting to L10's measurement framework
+5. The judgment to distinguish observation-only reporting (CTR is 0.72%) from actionable analysis (CTR is above local benchmark; the real problem is ICP match rate)
 
 ## Try With AI
 

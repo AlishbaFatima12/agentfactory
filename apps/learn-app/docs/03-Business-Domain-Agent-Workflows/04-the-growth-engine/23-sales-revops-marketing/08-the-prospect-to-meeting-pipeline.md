@@ -316,9 +316,9 @@ The pipeline gives every rep Farah's output quality in Ahmed's timeframe. That i
 
 ## What You Built
 
-- Complete prospect-to-meeting pipeline for Crescent Freight (all 6 stages, one session)
-- Understanding: the pipeline amplifies config quality — strong ICP produces strong output at every stage, weak ICP produces garbage at every stage
-- Time comparison: AI-assisted pipeline (~10 minutes) versus manual preparation (~2 hours 45 minutes)
+1. Complete prospect-to-meeting pipeline for Crescent Freight (all 6 stages, one session)
+2. Understanding: the pipeline amplifies config quality — strong ICP produces strong output at every stage, weak ICP produces garbage at every stage
+3. Time comparison: AI-assisted pipeline (~10 minutes) versus manual preparation (~2 hours 45 minutes)
 
 ## Flashcards Study Aid
 

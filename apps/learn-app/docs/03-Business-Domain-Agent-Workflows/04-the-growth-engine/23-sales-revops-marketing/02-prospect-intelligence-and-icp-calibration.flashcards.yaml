@@ -83,7 +83,7 @@ cards:
     tags: ["persona-profiles"]
 
   - id: "ch23-02-icp-calibration-013"
-    front: "Meridian Logistics in London scored highest in NexaFlow's prospect ranking despite being outside the primary geography. Why?"
+    front: "Meridian Logistics in Leeds scored highest in NexaFlow's prospect ranking despite being outside the primary geography. Why?"
     back: "Data availability and timing strength compensated for geographic distance. The ICP separates decisions by dimensions, not geography alone — because strong signals in multiple dimensions outweigh weakness in one."
     difficulty: "advanced"
     why: "What does this reveal about the danger of filtering prospects by geography before scoring?"

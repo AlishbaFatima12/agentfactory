@@ -341,12 +341,12 @@ Everything else should pass with minor edits. The cornerstone carries the brand 
 
 ## What You Built
 
-- Brand voice configuration in `sales-marketing.local.md` (tone, pillars, persona guides)
-- 1 cornerstone LinkedIn article — SEO-audited and brand-reviewed
-- 10 derivative assets across channels — each evaluated for brand consistency
-- 1 interactive sales one-pager for Meridian Logistics via `create-an-asset` — deployable with a proposal
-- Content multiplication skill: 1 piece of thinking becomes 10 distribution-ready assets
-- Used base `/brand-review`, `/seo-audit` commands and the `create-an-asset` Sales plugin skill
+1. Brand voice configuration in `sales-marketing.local.md` (tone, pillars, persona guides)
+2. 1 cornerstone LinkedIn article — SEO-audited and brand-reviewed
+3. 10 derivative assets across channels — each evaluated for brand consistency
+4. 1 interactive sales one-pager for Meridian Logistics via `create-an-asset` — deployable with a proposal
+5. Content multiplication skill: 1 piece of thinking becomes 10 distribution-ready assets
+6. Used base `/brand-review`, `/seo-audit` commands and the `create-an-asset` Sales plugin skill
 
 ## Flashcards Study Aid
 
