@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 11
 title: "Legal Ops Agents: Calendar, Spend, and DSAR"
 description: "Three Legal Ops Agents for compliance calendar management with escalation logic, legal spend analytics with anomaly detection, and DSAR processing with full 30-day timeline"
 keywords:
@@ -16,7 +16,7 @@ keywords:
     "legal process automation",
   ]
 chapter: 22
-lesson: 8
+lesson: 11
 duration_minutes: 30
 
 # HIDDEN SKILLS METADATA

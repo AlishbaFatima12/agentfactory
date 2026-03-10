@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 8
 title: "Litigation Support and Legal Hold"
 description: "Use the /respond command to manage litigation hold workflows when disputes become real, with a full DataFlow Systems patent infringement worked example showing preservation notices, custodian tracking, and the absolute governance boundary on litigation strategy"
 keywords:
@@ -18,7 +18,7 @@ keywords:
     "patent infringement",
   ]
 chapter: 22
-lesson: 6
+lesson: 8
 duration_minutes: 20
 
 # HIDDEN SKILLS METADATA

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
 title: "Intellectual Property Protection"
 description: "Transform IP protection from a specialist billable-hour function into a continuous, proactive capability using /brief for patent landscape research, trademark monitoring, and freedom-to-operate assessment, with a full Lahore AI startup worked example"
 keywords:
@@ -18,7 +18,7 @@ keywords:
     "DMCA workflow",
   ]
 chapter: 22
-lesson: 5
+lesson: 7
 duration_minutes: 20
 
 # HIDDEN SKILLS METADATA
