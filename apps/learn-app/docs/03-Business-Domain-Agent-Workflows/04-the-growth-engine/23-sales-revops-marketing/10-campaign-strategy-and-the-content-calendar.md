@@ -361,13 +361,11 @@ Notice that different channels have different pause thresholds. UK LinkedIn has 
 
 ## What You Built
 
-By working through this lesson, you now have:
-
-- A complete 12-week campaign brief with budget allocation across channels and markets
-- An email nurture sequence — and the ability to compare base plugin output against the extension's personalised version
-- A weekly content calendar with 36+ entries, each tagged by persona, channel, and CTA
-- A measurement framework with pause thresholds, reallocation triggers, and metric owners
-- The judgment to evaluate a campaign brief critically: is the channel mix realistic for this market, this budget, and this team?
+1. A complete 12-week campaign brief with budget allocation across channels and markets
+2. An email nurture sequence — and the ability to compare base plugin output against the extension's personalised version
+3. A weekly content calendar with 36+ entries, each tagged by persona, channel, and CTA
+4. A measurement framework with pause thresholds, reallocation triggers, and metric owners
+5. The judgment to evaluate a campaign brief critically: is the channel mix realistic for this market, this budget, and this team?
 
 ## Try With AI
 

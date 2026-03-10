@@ -59,4 +59,4 @@ Errors are discovered progressively across lessons. By L14, you can diagnose all
 | Case Study                         | Role                  | Purpose                                              |
 | ---------------------------------- | --------------------- | ---------------------------------------------------- |
 | **NexaFlow Technologies, Karachi** | Learner's peer (~60%) | Emerging market, PKR budgets, relationship-heavy B2B |
-| **Meridian Logistics, London**     | Expert model (~40%)   | Enterprise, GDPR, mature RevOps                      |
+| **Meridian Logistics, Leeds**      | Expert model (~40%)   | Enterprise, GDPR, mature RevOps                      |

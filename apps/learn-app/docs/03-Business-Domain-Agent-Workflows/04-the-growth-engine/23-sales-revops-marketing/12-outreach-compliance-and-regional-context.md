@@ -207,11 +207,11 @@ Review the output for cultural fit. Does it reference the mutual connection? Doe
 
 ### UK: Meridian Prospect (LinkedIn DM)
 
-Meridian Logistics in London wants to reach Sarah Chen, VP Operations at a mid-market UK retailer. Sarah's company runs 200+ warehouse operations and is publicly evaluating logistics automation.
+NexaFlow wants to reach Sarah Chen, VP Operations at Meridian Logistics, Leeds. Meridian runs 200+ warehouse operations and is publicly evaluating logistics automation.
 
 ```
 Draft LinkedIn DM outreach for Sarah Chen, VP Operations at
-BrightStore Retail, London. Market: UK. Reference her company's
+Meridian Logistics, Leeds. Market: UK. Reference her company's
 published logistics automation evaluation. GDPR-compliant,
 legitimate interest basis.
 ```
@@ -257,10 +257,10 @@ The agent adapts. You evaluate again. This iteration loop -- where your market k
 
 ## What You Built
 
-- Jurisdiction-compliant outreach for Pakistan, UK, and UAE -- three markets with three different regulatory frameworks and three different channel strategies
-- Understanding of how compliance rules differ: PECA's opt-out simplicity, UK GDPR + PECR's corporate subscriber distinction and TPS requirements, UAE PDPL's consent-based model
-- Cultural adaptation skill: the same prospect type in a different market requires a different channel, tone, and relationship approach
-- The three-tier compliance diagnostic: letter of law, spirit of law, cultural expectations -- applied to every message before it sends
+1. Jurisdiction-compliant outreach for Pakistan, UK, and UAE -- three markets with three different regulatory frameworks and three different channel strategies
+2. Understanding of how compliance rules differ: PECA's opt-out simplicity, UK GDPR + PECR's corporate subscriber distinction and TPS requirements, UAE PDPL's consent-based model
+3. Cultural adaptation skill: the same prospect type in a different market requires a different channel, tone, and relationship approach
+4. The three-tier compliance diagnostic: letter of law, spirit of law, cultural expectations -- applied to every message before it sends
 
 ## Try With AI
 

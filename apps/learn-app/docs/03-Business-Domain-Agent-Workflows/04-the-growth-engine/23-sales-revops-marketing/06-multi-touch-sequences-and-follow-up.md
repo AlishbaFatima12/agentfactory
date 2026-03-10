@@ -397,13 +397,11 @@ Exit conditions are the governance layer that separates professional outreach fr
 
 ## What You Built
 
-In this lesson you constructed the complete multi-touch outreach workflow:
-
-- A complete 6-touch, 21-day outreach sequence for a top prospect, with every touch adding new value
-- A marketing nurture sequence for comparison, showing the structural differences between personalised sales outreach and segment-level automation
-- The Over-Automation error type, discovered by examining where personalisation decays across sequence length
-- Follow-up templates that use sequence context to continue the conversation naturally
-- Exit conditions for six scenarios — reply, bounce, unsubscribe, silence, out-of-office, and stakeholder change
+1. A complete 6-touch, 21-day outreach sequence for a top prospect, with every touch adding new value
+2. A marketing nurture sequence for comparison, showing the structural differences between personalised sales outreach and segment-level automation
+3. The Over-Automation error type, discovered by examining where personalisation decays across sequence length
+4. Follow-up templates that use sequence context to continue the conversation naturally
+5. Exit conditions for six scenarios — reply, bounce, unsubscribe, silence, out-of-office, and stakeholder change
 
 ## Flashcards Study Aid
 

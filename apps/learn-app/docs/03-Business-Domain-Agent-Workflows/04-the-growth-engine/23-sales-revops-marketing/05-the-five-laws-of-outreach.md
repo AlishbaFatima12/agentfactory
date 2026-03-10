@@ -370,10 +370,10 @@ Iterate until all three messages pass all five laws. Then read each message one 
 
 ## What You Built
 
-- Five Laws of Outreach understood through practice -- not as theory, but as an audit framework you applied to real output
-- 3 personalised outreach messages for your top 3 prospects, each on a different channel and each passing all five laws
-- Five Laws compliance audit completed -- you audited agent output and your own corrections
-- Compliance Gap error type discovered -- you saw a culturally mismatched message pass all content laws and identified why it was still wrong to send
+1. Five Laws of Outreach understood through practice -- not as theory, but as an audit framework you applied to real output
+2. 3 personalised outreach messages for your top 3 prospects, each on a different channel and each passing all five laws
+3. Five Laws compliance audit completed -- you audited agent output and your own corrections
+4. Compliance Gap error type discovered -- you saw a culturally mismatched message pass all content laws and identified why it was still wrong to send
 
 ## Flashcards Study Aid
 

@@ -456,12 +456,12 @@ This schedule means a NexaFlow rep's week looks like this:
 
 ## What You Built
 
-- Five RevOps agents understood and configured -- each with a clear purpose, schedule, and output format
-- Pipeline health audit with deal-level health scores and three-dimension scoring, identifying the 3 highest-risk and 2 strongest deals
-- Sales forecast with three scenarios (best/likely/worst), revealing a $120,000 gap to quarterly target
-- Daily sales briefing configured as the rep's morning routine, composing skills from across the chapter
-- Weekly revenue dashboard with seven metrics and a 150-word executive summary
-- Agent schedule mapped to NexaFlow's business rhythm -- Monday through Friday, daily and continuous
+1. Five RevOps agents understood and configured -- each with a clear purpose, schedule, and output format
+2. Pipeline health audit with deal-level health scores and three-dimension scoring, identifying the 3 highest-risk and 2 strongest deals
+3. Sales forecast with three scenarios (best/likely/worst), revealing a $120,000 gap to quarterly target
+4. Daily sales briefing configured as the rep's morning routine, composing skills from across the chapter
+5. Weekly revenue dashboard with seven metrics and a 150-word executive summary
+6. Agent schedule mapped to NexaFlow's business rhythm -- Monday through Friday, daily and continuous
 
 ## Try With AI
 

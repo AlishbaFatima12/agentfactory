@@ -265,10 +265,10 @@ The triggered enrichment section is the most valuable part. When a CULTIVATE pro
 
 ## What You Built
 
-- 5 accounts enriched with current data from multiple sources
-- Timing signals refreshed -- at least one prospect's classification changed after enrichment
-- Stale records identified and flagged for update (changed fields vs confirmed fields)
-- Enrichment schedule configured in `sales-marketing.local.md` with tier-based cadences and triggered enrichment rules
+1. 5 accounts enriched with current data from multiple sources
+2. Timing signals refreshed -- at least one prospect's classification changed after enrichment
+3. Stale records identified and flagged for update (changed fields vs confirmed fields)
+4. Enrichment schedule configured in `sales-marketing.local.md` with tier-based cadences and triggered enrichment rules
 
 ## Flashcards Study Aid
 

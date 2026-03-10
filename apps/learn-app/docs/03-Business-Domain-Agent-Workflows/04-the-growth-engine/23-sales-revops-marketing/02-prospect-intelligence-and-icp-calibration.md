@@ -61,7 +61,7 @@ learning_objectives:
   - objective: "Generate research briefs for 5 target prospects, rank them by fit, and explain differences in data availability across markets"
     proficiency_level: "B1"
     bloom_level: "Evaluate"
-    assessment_method: "Student produces 5 ranked research briefs and can articulate why the Karachi prospect brief differs from the London prospect brief in data depth and sourcing"
+    assessment_method: "Student produces 5 ranked research briefs and can articulate why the Karachi prospect brief differs from the Leeds prospect brief in data depth and sourcing"
 
 cognitive_load:
   new_concepts: 6
@@ -380,9 +380,9 @@ TransPak Logistics, Karachi. Regional 3PL specialising in
 pharmaceutical cold chain. ~150 employees.
 ```
 
-Repeat for all 5 demo prospects. Then compare two briefs side by side: NexaFlow's Karachi-based prospect versus Meridian Logistics in London.
+Repeat for all 5 demo prospects. Then compare two briefs side by side: NexaFlow's Karachi-based prospect versus Meridian Logistics in Leeds.
 
-### Comparing Data Availability: Karachi vs London
+### Comparing Data Availability: Karachi vs Leeds
 
 ```
 PROSPECT COMPARISON — Data Availability
@@ -493,10 +493,10 @@ Add the competitive intelligence to `sales-marketing.local.md` under the Competi
 
 ## What You Built
 
-- ICP definition validated against 5 closed-won deals (all scored 60+ HOT)
-- Complete `sales-marketing.local.md` with company profile, brand voice, ICP, competitor intel, and sales methodology
-- 5 research briefs with fit ranking and data-availability comparison
-- Understanding of how ICP quality directly affects the relevance and accuracy of every downstream command
+1. ICP definition validated against 5 closed-won deals (all scored 60+ HOT)
+2. Complete `sales-marketing.local.md` with company profile, brand voice, ICP, competitor intel, and sales methodology
+3. 5 research briefs with fit ranking and data-availability comparison
+4. Understanding of how ICP quality directly affects the relevance and accuracy of every downstream command
 
 ## Flashcards Study Aid
 
