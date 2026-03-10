@@ -71,7 +71,7 @@ differentiation:
 
 # Intellectual Property Protection
 
-In Lessons 3 and 4, you applied the Legal Plugin to contracts and NDAs -- agreement types where the agent reviews existing documents. Now you will use `/brief` to proactively monitor and protect your organisation's intellectual property, transforming IP protection from a reactive specialist function into a continuous, automated capability.
+In Lessons 3 through 5, you applied the Legal Plugin to contracts and NDAs — agreement types where the agent reviews existing documents. Now you will use `/brief` to proactively monitor and protect your organisation's intellectual property, transforming IP protection from a reactive specialist function into a continuous, automated capability.
 
 ## Why IP Is Transformed by AI
 
@@ -245,7 +245,22 @@ confirm licence compatibility before shipping
 DMCA workflow: Draft notices for attorney review and submission
 ```
 
-The skill ensures that every IP-related query in Cowork automatically applies your organisation's registered marks, monitoring thresholds, and patent portfolio context -- without requiring you to paste the configuration into each prompt.
+The skill ensures that every IP-related query in Cowork automatically applies your organisation's registered marks, monitoring thresholds, and patent portfolio context — without requiring you to paste the configuration into each prompt.
+
+## Open-Source Licence Hierarchy
+
+When the agent scans your codebase for OSS components, it applies a risk hierarchy based on licence obligations:
+
+| Risk Level   | Licences                           | Obligation                                                           | Impact on Proprietary Product      |
+| ------------ | ---------------------------------- | -------------------------------------------------------------------- | ---------------------------------- |
+| **Low**      | MIT, BSD-2, BSD-3, ISC, Apache-2.0 | Attribution only                                                     | Safe for proprietary use           |
+| **Medium**   | LGPL-2.1, LGPL-3.0, MPL-2.0        | Modifications to library must be shared; your code stays proprietary | Usually safe with careful linking  |
+| **High**     | GPL-2.0, GPL-3.0                   | Combined work must be distributed under GPL                          | Requires IP counsel review         |
+| **Critical** | AGPL-3.0                           | Network use triggers distribution obligation                         | Escalate to IP counsel immediately |
+
+:::warning GPL/AGPL Escalation Rule
+If the agent identifies GPL or AGPL components in a product intended for proprietary distribution or SaaS deployment, escalate to IP counsel immediately. Do not rely on the agent's assessment of whether the component triggers copyleft obligations. Licence interpretation depends on linking method, distribution model, and jurisdiction — this is attorney work.
+:::
 
 ## Try With AI
 
@@ -328,4 +343,4 @@ Cover these dimensions:
 
 ---
 
-Continue to [Lesson 6: Litigation Support and Legal Hold ->](./06-litigation-support-and-legal-hold.md)
+Continue to [Lesson 8: Litigation Support, Legal Hold, and Canned Responses ->](./08-litigation-support-legal-hold-and-canned-responses.md)

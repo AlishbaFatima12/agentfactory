@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
-title: "Litigation Support and Legal Hold"
-description: "Use the /respond command to manage litigation hold workflows when disputes become real, with a full DataFlow Systems patent infringement worked example showing preservation notices, custodian tracking, and the absolute governance boundary on litigation strategy"
+title: "Litigation Support, Legal Hold, and Canned Responses"
+description: "Execute litigation hold workflows with /respond, manage 7 categories of canned responses with escalation triggers, build preservation notice packages with custodian tracking, and enforce the absolute governance boundary between operational support and litigation strategy"
 keywords:
   [
     "litigation support",
@@ -19,7 +19,7 @@ keywords:
   ]
 chapter: 22
 lesson: 8
-duration_minutes: 20
+duration_minutes: 30
 
 # HIDDEN SKILLS METADATA
 skills:
@@ -69,11 +69,13 @@ differentiation:
   remedial_for_struggling: "Focus on two things: (1) a legal hold means 'stop deleting anything that might be relevant' and (2) the agent handles the paperwork (notices, tracking, reminders) while the attorney handles the strategy (what to argue, whether to settle, how to respond). If you understand this division, you understand the lesson."
 ---
 
-# Litigation Support and Legal Hold
+# Litigation Support, Legal Hold, and Canned Responses
 
 ## When Disputes Become Real
 
-Every legal function hopes to avoid litigation. Most cannot. When a dispute escalates from commercial negotiation to formal proceedings -- or when proceedings become reasonably foreseeable -- the organisation's obligations change fundamentally. Document preservation obligations attach. Communication protocols tighten. The stakes shift from commercial compromise to legal exposure that can dwarf the original contract value.
+In Lesson 5, you triaged NDAs into Tier 1/2/3. A Tier 3 NDA — one with RED flags like residuals clauses or asymmetric injunctive relief — sometimes surfaces issues that escalate to litigation. This lesson covers what happens when a dispute becomes real, and how the `/respond` command handles both litigation holds and the seven categories of routine legal correspondence that consume most legal ops time.
+
+Every legal function hopes to avoid litigation. Most cannot. When a dispute escalates from commercial negotiation to formal proceedings — or when proceedings become reasonably foreseeable — the organisation's obligations change fundamentally. Document preservation obligations attach. Communication protocols tighten. The stakes shift from commercial compromise to legal exposure that can dwarf the original contract value.
 
 Litigation support is the set of processes by which a legal department prepares for, manages, and responds to disputes. The Legal Plugin's `/respond` command, combined with the `/brief` command for legal research, provides structured workflow support for the two most operationally demanding phases of dispute preparation: legal hold management and document discovery support.
 
@@ -229,9 +231,40 @@ The agent has produced the operational infrastructure -- the notice, the custodi
 
 > **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
 
+## Canned Responses and `/respond`
+
+Beyond litigation holds, the `/respond` command handles seven categories of routine legal correspondence. Each category has a structured template, jurisdiction-appropriate language, and built-in escalation triggers that stop the templated response when human judgment is required.
+
+### The Seven Response Categories
+
+| Category               | Command                                  | Typical Use                                        |
+| ---------------------- | ---------------------------------------- | -------------------------------------------------- |
+| Discovery hold         | `/respond type:"discovery-hold"`         | Preservation notices to custodians                 |
+| Privacy inquiry        | `/respond type:"privacy-inquiry"`        | Routine privacy questions from employees/customers |
+| DSAR response          | `/respond type:"dsar"`                   | Data subject access request acknowledgement        |
+| Vendor question        | `/respond type:"vendor-question"`        | Contract term clarifications, renewal queries      |
+| NDA request            | `/respond type:"nda-request"`            | Standard NDA routing for incoming requests         |
+| Subpoena/legal process | `/respond type:"legal-process"`          | Acknowledgement and routing of legal process       |
+| Insurance notification | `/respond type:"insurance-notification"` | Incident notification to carriers                  |
+
+### Universal Escalation Triggers
+
+The agent stops the templated response and routes to an attorney when any of these conditions are detected:
+
+- **Potential litigation** — the inquiry suggests the sender is considering legal action
+- **Regulator inquiry** — the communication comes from a regulatory body
+- **Binding commitments** — the response would create contractual obligations
+- **Criminal liability** — the situation involves potential criminal exposure
+- **Media attention** — the matter involves or may attract press coverage
+- **Unprecedented situation** — no template exists for this type of inquiry
+
+:::note Prediction Moment
+Before running `/respond type:"discovery-hold"` for the DataFlow scenario, predict: what sections will the template include? What will it refuse to include — and why? The governance boundary means the agent will produce the operational infrastructure but will not touch litigation strategy.
+:::
+
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Execute a Litigation Hold for a Regulatory Investigation
 
@@ -335,4 +368,4 @@ attorney-only.
 
 ---
 
-Continue to [Lesson 7: Legal Ops Agents -- Intake and Monitoring ->](./07-legal-ops-agents-intake-and-monitoring.md)
+Continue to [Lesson 9: Meeting Prep and Vendor Management ->](./09-meeting-prep-and-vendor-management.md)

@@ -75,7 +75,11 @@ differentiation:
 
 # Legal Ops Agents: Intake and Monitoring
 
-This section introduces the most important concept in the chapter.
+In Lessons 3 through 9, you used commands and skills to review contracts, triage NDAs, assess compliance, manage IP, handle litigation, and prepare for meetings. Each was a single-task workflow. Now you will build agents that manage entire processes end-to-end — receiving inputs, making routing decisions, and tracking progress across the contract lifecycle.
+
+:::tip Connector Integration
+If you connected Gmail, Slack, and Atlassian MCP servers in Lesson 1, the Intake Agent can receive contracts via email, post routing notifications to Slack channels, and log matters in Jira. If not, the agent works with manually uploaded documents — you provide the trigger, the agent handles everything after.
+:::
 
 ## What Legal Ops Agents Are
 
@@ -481,4 +485,4 @@ For each item:
 
 ---
 
-Continue to [Lesson 8: Legal Ops Agents -- Calendar, Spend, and DSAR ->](./08-legal-ops-agents-calendar-spend-dsar.md)
+Continue to [Lesson 11: Legal Ops Agents — Calendar, Spend, and DSAR ->](./11-legal-ops-agents-calendar-spend-dsar.md)

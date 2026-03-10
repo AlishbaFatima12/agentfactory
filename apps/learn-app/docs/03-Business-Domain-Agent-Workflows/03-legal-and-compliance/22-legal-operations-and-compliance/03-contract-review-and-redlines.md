@@ -1,11 +1,9 @@
 ---
 sidebar_position: 3
-title: "Contract Lifecycle Management"
-description: "The three-stage CLM workflow using the Legal Plugin: clause-by-clause review with /review-contract, obligation tracking with /vendor-check, and the contract repository as institutional intelligence, including cross-border contract analysis"
+title: "Contract Review and Redlines"
+description: "Execute the seven-phase /review-contract workflow with playbook-calibrated clause analysis, interpret GREEN/YELLOW/RED classification, generate attorney-ready redlines, track post-execution obligations with /vendor-check, and query the contract repository as institutional intelligence"
 keywords:
   [
-    "contract lifecycle management",
-    "CLM",
     "contract review",
     "review-contract",
     "vendor-check",
@@ -15,16 +13,14 @@ keywords:
     "three-tier classification",
     "GREEN YELLOW RED",
     "contract repository",
-    "cross-border contracts",
-    "conflict of laws",
-    "multi-jurisdictional review",
+    "CLM",
+    "contract lifecycle management",
     "Pakistan PDPA",
-    "UAE PDPL",
-    "Saudi PDPL",
+    "playbook calibration",
   ]
 chapter: 22
 lesson: 3
-duration_minutes: 35
+duration_minutes: 30
 
 # HIDDEN SKILLS METADATA
 skills:
@@ -42,13 +38,6 @@ skills:
     digcomp_area: "Digital Content Creation"
     measurable_at_this_level: "Student can use /vendor-check to query a vendor's contract status, interpret obligation summaries, upcoming deadlines, overdue items, and renewal alerts, and explain how connected contract repositories enable automated obligation monitoring"
 
-  - name: "Analyse Cross-Border Contracts Using Multi-Overlay Loading"
-    proficiency_level: "B1"
-    category: "Applied"
-    bloom_level: "Analyze"
-    digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can identify when a contract involves multiple jurisdictions (governing law, party jurisdictions, performance jurisdictions), explain how the legal-global-router loads multiple overlays simultaneously, and describe the five common cross-border pitfalls (mandatory local law conflicts, arbitration enforceability gaps, data transfer mechanism gaps, tax withholding obligations, language precedence)"
-
 learning_objectives:
   - objective: "Execute a complete contract review using /review-contract and interpret the three-tier classification output"
     proficiency_level: "B1"
@@ -60,28 +49,22 @@ learning_objectives:
     bloom_level: "Apply"
     assessment_method: "Student can demonstrate a /vendor-check query and explain how contract archive queries transform static storage into institutional memory for negotiation benchmarking"
 
-  - objective: "Identify cross-border contract risks that single-jurisdiction reviews miss and explain how the router's multi-overlay loading addresses them"
-    proficiency_level: "B1"
-    bloom_level: "Analyze"
-    assessment_method: "Student can identify at least three cross-border pitfalls in a sample multi-jurisdictional contract and explain which jurisdiction overlay catches each issue"
-
 cognitive_load:
-  new_concepts: 6
+  new_concepts: 5
   concepts_list:
     - "CLM (Contract Lifecycle Management) as an end-to-end process"
     - "The seven-step /review-contract workflow"
     - "Three-tier classification: GREEN (acceptable), YELLOW (negotiate), RED (escalate)"
     - "Redline format: current text, issue, replacement, fallback, rationale, priority"
     - "Obligation tracking and the contract repository as queryable intelligence"
-    - "Cross-border multi-overlay loading and conflict of laws"
-  assessment: "6 concepts at B1 level -- at the upper boundary of the 5-7 cognitive limit. The lesson is long but structured in three distinct stages (review, tracking, intelligence) with worked examples at each stage providing concrete scaffolding."
+  assessment: "5 concepts at B1 level -- well within the 5-7 cognitive limit. The lesson is structured in three distinct stages (review, tracking, intelligence) with worked examples at each stage providing concrete scaffolding. Cross-border analysis has been moved to Lesson 4."
 
 differentiation:
   extension_for_advanced: "Take a real contract from your organisation and run it through the /review-contract workflow. Compare the agent's output against your own legal review. Identify where the playbook needs calibration based on the differences."
   remedial_for_struggling: "Focus on the three-tier classification system (GREEN/YELLOW/RED) and the redline format. If you can read an agent output and explain why a clause was flagged RED, what the proposed replacement text does, and what the fallback position is, you have the core skill for contract review."
 ---
 
-# Contract Lifecycle Management
+# Contract Review and Redlines
 
 ## What CLM Actually Is
 
@@ -89,7 +72,13 @@ differentiation:
 >
 > CLM is the end-to-end process of creating, negotiating, executing, storing, monitoring, and renewing or terminating contracts. In a mature CLM system, every contract is searchable, every obligation is tracked, and every renewal date triggers an alert. For example, a company with 500 active vendor contracts and a proper CLM system knows that 23 contracts have renewal notice deadlines in the next 60 days, that 4 contracts have uncapped liability provisions flagged for renegotiation, and that the average negotiation cycle time is 11 days. Without CLM, that same company discovers missed renewals when the invoice arrives for another year of a service they intended to cancel. Why it matters: the World Commerce & Contracting Association estimates that poor contract management costs organisations 5-9% of annual revenue -- for a PKR 10 billion company, that is PKR 500 million to PKR 900 million per year lost to administrative friction.
 
-Contract Lifecycle Management is the end-to-end process by which organisations create, negotiate, execute, store, monitor, and renew or terminate contracts. In most organisations without a dedicated CLM system, this process is chaos: contracts drafted in Word, negotiated via tracked-changes email threads, executed by printing and scanning, stored in a shared drive no one can search, renewed when (and if) a calendar reminder fires.
+In Lesson 2, you built a negotiation playbook — the `legal.local.md` file that calibrates every review to your organisation's positions. Now you will see exactly how that playbook drives the review output. You will run `/review-contract` against a real vendor agreement, interpret the GREEN/YELLOW/RED classification, and generate attorney-ready redlines that reflect your organisation's standards rather than generic commercial positions.
+
+:::tip Connector Dual-Mode
+If you connected Box, Egnyte, or another document management system in Lesson 1, the agent can pull contracts directly from your storage. If not, upload the contract PDF or paste the text — both paths produce identical quality output.
+:::
+
+**Contract Lifecycle Management** is the end-to-end process by which organisations create, negotiate, execute, store, monitor, and renew or terminate contracts. In most organisations without a dedicated CLM system, this process is chaos: contracts drafted in Word, negotiated via tracked-changes email threads, executed by printing and scanning, stored in a shared drive no one can search, renewed when (and if) a calendar reminder fires.
 
 The World Commerce & Contracting Association estimates that poor contract management costs organisations between 5% and 9% of annual revenue -- through missed renewals, unfavourable auto-renewals, untracked obligations, and failed compliance. For a $100M business, that is between $5M and $9M per year in contractual value lost to administrative friction.
 
@@ -156,6 +145,10 @@ PRIORITY:   Nice-to-have
 ### Worked Example: Noor Technologies Reviews a Vendor SaaS Agreement
 
 Noor Technologies is a 180-person software company headquartered in Karachi, Pakistan. Their Head of Legal Operations, Bilal Hussain, has received a SaaS agreement from CloudStack Inc., a US-based project management tool vendor. The annual contract value is PKR 4,800,000 (approximately USD 17,000). Noor Technologies is the customer.
+
+:::note Prediction Moment
+Before Bilal runs `/review-contract`, predict: which clauses will the plugin flag as RED? Which will be GREEN? Read the contract description above — a US-based SaaS vendor, PKR 4.8M annual value, Pakistani customer. Write your predictions, then compare them to the output below.
+:::
 
 Bilal opens Cowork and begins the review:
 
@@ -400,204 +393,19 @@ Most resistant counterparties: US enterprise vendors (average 7.2 months
 
 This data is invaluable. When Bilal negotiates with the next vendor who insists on a 3-month cap, he has evidence: "Our executed contract portfolio shows that 94% of our SaaS vendors with comparable contract values accept a 6-12 month mutual cap. We would be pleased to discuss this further." That is not a negotiating position pulled from a textbook -- it is institutional intelligence derived from actual outcomes.
 
----
-
-## Cross-Border Contract Analysis
-
-### Why Cross-Border Contracts Break Single-Jurisdiction Thinking
-
-The majority of legal AI tools -- and the majority of legal training -- assume a single governing law. A contract is governed by English law, or New York law, or UAE law, and the analysis proceeds within that framework. In practice, a growing proportion of commercial contracts involve parties, performance obligations, and regulatory exposure in multiple jurisdictions simultaneously. The World Commerce & Contracting Association estimates that 40% of enterprise contracts signed in 2025 involved counterparties in at least two different legal systems. In the GCC and South Asian technology corridors, that figure rises to over 60%.
-
-Cross-border contracts are not simply contracts with a foreign governing law clause. They are contracts where the governing law may be one jurisdiction, the parties are incorporated in two others, the services are delivered in a fourth, the data flows through a fifth, and the dispute resolution mechanism sits in a sixth. Each of these touchpoints creates a distinct legal exposure that a single-jurisdiction overlay will miss.
-
-The Legal Plugin's router architecture -- the `legal-global-router` -- was designed specifically for this complexity. When a contract involves multiple jurisdictions, the router loads multiple overlays simultaneously and cross-references them, flagging conflicts, gaps, and escalation triggers that exist in one jurisdiction but not another.
-
-> **Concept Box: Conflict of Laws**
->
-> Conflict of laws (also called private international law) is the body of rules that determines which jurisdiction's law applies when a legal dispute involves elements from more than one country. Key questions include: (1) Which court has jurisdiction to hear the dispute? (2) Which country's substantive law governs the contract? (3) Will a judgment or arbitral award from one country be enforced in another? The answers depend on the governing law clause, the parties' domicile, where performance occurs, and applicable treaties (such as the New York Convention on arbitral awards or the Hague Convention on Choice of Court Agreements). A governing law clause does not eliminate conflict of laws issues -- it resolves one question (applicable substantive law) while leaving others (enforcement, regulatory compliance, mandatory local laws) open.
-
-### How the Router Loads Multiple Overlays
-
-When you provide a contract for review and the agent identifies multi-jurisdictional elements, the router executes an expanded loading sequence:
-
-```
-STEP 1 -- Identify primary governing law      -> Load primary overlay
-STEP 2 -- Identify party jurisdictions         -> Load party jurisdiction overlays
-STEP 3 -- Identify performance jurisdictions   -> Load performance jurisdiction overlays
-STEP 4 -- Cross-reference escalation triggers  -> Flag conflicts between overlays
-STEP 5 -- Output combined analysis             -> Jurisdiction-specific notes per clause
-```
-
-For each clause, the agent indicates which jurisdiction's rules apply and where the overlays conflict. This is not legal advice -- it is structured issue-spotting that ensures the reviewing attorney has a complete map of cross-border exposure before forming a view.
-
-### Common Cross-Border Pitfalls the Agent Flags
-
-The following pitfalls recur in cross-border contracts and are encoded as escalation triggers across the jurisdiction overlays:
-
-1. **Governing law vs. mandatory local law conflicts.** A contract governed by English law does not override mandatory local employment law, consumer protection law, or data localisation requirements in the jurisdiction where services are performed.
-2. **Arbitration enforceability gaps.** Not all jurisdictions enforce foreign arbitral awards equally. The agent checks whether the performance and party jurisdictions are New York Convention signatories and flags non-signatory jurisdictions as RED.
-3. **Data transfer mechanism gaps.** A DPA referencing EU Standard Contractual Clauses may be insufficient for transfers to jurisdictions not covered by EU adequacy decisions. The agent cross-references the data flow against applicable transfer mechanisms.
-4. **Tax withholding obligations.** Cross-border service agreements frequently trigger withholding tax obligations in the jurisdiction where services are consumed. The agent flags this for tax counsel review -- it does not provide tax advice, but it ensures the issue is not overlooked.
-5. **Language precedence.** In jurisdictions where Arabic is the official court language (UAE mainland, Saudi Arabia), an English-language contract may need a certified Arabic translation, and the Arabic version may prevail in court. The agent flags language precedence as a structural risk.
-
----
-
-### Worked Example: NexGen Solutions (Lahore) and Al-Faisal Digital (Dubai) -- Saudi Delivery
-
-**Parties:**
-
-- **NexGen Solutions (Pvt.) Ltd.** -- a software development company incorporated in Lahore, Pakistan (SECP-registered)
-- **Al-Faisal Digital Enterprises LLC** -- a digital services company incorporated in Dubai, UAE (mainland, not DIFC or ADGM)
-
-**Contract:** A Master Services Agreement under which NexGen will develop a custom logistics management platform for Al-Faisal. The platform will be deployed and used by Al-Faisal's operations team in Riyadh, Saudi Arabia. Contract value: AED 1,850,000 (approximately PKR 140 million / USD 504,000). Term: 18 months. Governing law: UAE law. Dispute resolution: Dubai International Arbitration Centre (DIAC).
-
-**Agent dialogue:**
-
-```
-You: /review-contract
-[Upload: NexGen_AlFaisal_MSA_v2.pdf]
-
-Context: We are the vendor (NexGen Solutions, Pakistan).
-Contract value: AED 1,850,000. 18-month development engagement.
-Client is Dubai mainland. Delivery in Riyadh.
-
-Agent: Loading contract for review.
-
-TASK:         Contract Review -- Master Services Agreement
-JURISDICTION: UAE Law (mainland overlay loaded)
-              CROSS-BORDER DETECTED:
-              - Vendor jurisdiction: Pakistan (pakistan-law overlay loaded)
-              - Performance jurisdiction: Saudi Arabia (saudi-law overlay loaded)
-PLAYBOOK:     NexGen Negotiation Playbook v1.2
-ATTORNEY REVIEW REQUIRED: YES
-
-CROSS-BORDER ALERT: This contract involves three jurisdictions.
-I will analyse against all three overlays and flag inter-jurisdictional
-conflicts.
-
-CLAUSE:     Data Protection (Section 9)
-STATUS:     RED -- ESCALATE
-CURRENT:    "Each party shall comply with applicable data protection
-             laws in performance of this Agreement."
-ISSUE:      Three different data protection regimes apply simultaneously:
-            (1) UAE PDPL (Federal Decree-Law No. 45 of 2021) for UAE
-                resident data processed by Al-Faisal
-            (2) Pakistan PDPA 2023 for personal data of Pakistani
-                developers and any Pakistani resident data
-            (3) Saudi PDPL (Royal Decree M/19 of 2021) for data
-                processed in the Riyadh deployment
-            The current clause is too vague to satisfy any of these
-            frameworks. No DPA is attached. No cross-border transfer
-            mechanism is specified for Pakistan->UAE or UAE->Saudi
-            data flows.
-REDLINE:    "Each party shall comply with all applicable data protection
-             laws, including the UAE Federal Decree-Law No. 45 of 2021,
-             the Pakistan Personal Data Protection Act 2023, and the
-             Saudi Arabia Personal Data Protection Law. The parties
-             shall execute the Data Processing Addendum attached as
-             Schedule [X], which shall specify: (a) categories of
-             personal data processed; (b) lawful basis for processing;
-             (c) cross-border transfer mechanisms; (d) data localisation
-             obligations; and (e) breach notification timelines
-             applicable in each jurisdiction."
-RATIONALE:  "Multi-jurisdictional data processing requires jurisdiction-
-             specific compliance. A blanket compliance clause is
-             insufficient for regulatory enforcement purposes."
-PRIORITY:   Must-have
-
-CLAUSE:     Tax and Withholding (Section 14)
-STATUS:     RED -- ESCALATE
-CURRENT:    "All fees are exclusive of applicable taxes."
-ISSUE:      Pakistan Federal Board of Revenue (FBR) imposes withholding
-            tax on payments for services rendered by Pakistani entities
-            to foreign parties. Saudi Arabia imposes 5% withholding tax
-            on payments to non-resident service providers. Neither
-            obligation is addressed. NexGen may receive net payments
-            significantly below the stated AED 1,850,000 contract
-            value if withholding is not allocated.
-REDLINE:    [Recommend escalation to tax counsel in Pakistan and
-             Saudi Arabia before proposing specific language.
-             The commercial impact may exceed AED 200,000.]
-PRIORITY:   Must-have -- escalate to tax counsel
-
-CLAUSE:     Intellectual Property (Section 7)
-STATUS:     YELLOW -- NEGOTIATE
-CURRENT:    "All work product developed under this Agreement shall be
-             the exclusive property of Al-Faisal upon payment."
-ISSUE:      Pakistan IP law (Patents Ordinance 2000, Copyright
-            Ordinance 1962) treats computer programs as literary works.
-            Under Pakistani law, copyright vests in the author
-            (developer) unless assigned in writing. The current clause
-            may be insufficient as a valid assignment under Pakistani
-            copyright law -- a standalone IP assignment deed executed
-            under Pakistani law is recommended.
-            Additionally, NexGen's pre-existing IP (frameworks,
-            libraries, development tools) is not carved out.
-REDLINE:    "All Deliverables (as defined in Schedule A) developed
-             specifically for Al-Faisal under this Agreement shall
-             be assigned to Al-Faisal upon full payment, by way of a
-             separate IP Assignment Deed in the form set out in
-             Schedule [Y]. NexGen retains all right, title, and
-             interest in its Pre-Existing IP (as defined in
-             Schedule A), and grants Al-Faisal a perpetual,
-             non-exclusive licence to use such Pre-Existing IP
-             solely as embedded in the Deliverables."
-FALLBACK:   If Al-Faisal resists a separate assignment deed, propose
-            a warranty that NexGen has full authority to assign and
-            that the assignment is effective under Pakistani law.
-RATIONALE:  "Protects both parties: Al-Faisal receives clean IP
-             ownership of custom work; NexGen retains its platform
-             and development tools for future engagements."
-PRIORITY:   Nice-to-have (the separate deed); Must-have (the
-            pre-existing IP carve-out)
-
-CLAUSE:     Governing Law and Dispute Resolution (Section 18)
-STATUS:     YELLOW -- NEGOTIATE
-CURRENT:    "This Agreement is governed by the laws of the United Arab
-             Emirates. Disputes shall be resolved by DIAC arbitration
-             in Dubai."
-ISSUE:      UAE mainland law applies civil law principles (UAE Civil
-            Code, Federal Law No. 5 of 1985). As vendor, NexGen
-            should note:
-            (1) UAE courts may reduce liquidated damages deemed
-                excessive (Art. 390) -- penalty clauses may not be
-                enforced at agreed amounts.
-            (2) Good faith obligations (Art. 246) are broader than
-                common law jurisdictions.
-            (3) Arabic is the official court language -- if arbitration
-                fails and litigation is required, contracts need
-                certified Arabic translation. The Arabic version
-                may prevail.
-            DIAC arbitration is reasonable for this contract value.
-            Both UAE and Pakistan are New York Convention signatories,
-            so the award is enforceable in both jurisdictions.
-            Saudi Arabia is also a signatory.
-REDLINE:    Add: "The English language version of this Agreement shall
-            prevail in the event of any conflict with any translated
-            version. Arbitration proceedings shall be conducted in
-            English."
-RATIONALE:  "Ensures both parties can participate in dispute resolution
-             proceedings without translation disadvantage."
-PRIORITY:   Must-have
-
-HOLISTIC RISK SUMMARY
-Total: 2 GREEN | 2 YELLOW | 2 RED
-Most material risk: Unaddressed cross-border data protection compliance
-                    across three jurisdictions without a DPA.
-Recommendation: NEGOTIATE -- address the 2 RED items (data protection
-                DPA and tax withholding) before execution. Both require
-                specialist counsel (data protection and tax respectively).
-                The 2 YELLOW items can be resolved in the same negotiation
-                round.
-Negotiation priority: (1) Data protection DPA, (2) Tax withholding,
-                      (3) IP assignment mechanics, (4) Language precedence.
-
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
-```
-
-This example demonstrates the core value of multi-overlay loading. A single-jurisdiction review under UAE law alone would miss the Pakistan withholding tax exposure, the Pakistani copyright assignment requirements, and the Saudi data localisation obligations. The router's cross-referencing catches issues that exist at the intersection of jurisdictions -- precisely where human reviewers, operating with expertise in one system, are most likely to miss them.
-
 > **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
+
+:::tip Cross-Border Contracts
+When your contracts involve parties, performance, or data flows across multiple jurisdictions, the review gets more complex. Lesson 4 covers cross-border analysis in depth — including multi-overlay loading, the five cross-border pitfalls, and e-signature routing with `/signature-request`.
+:::
+
+---
+
+## What You Built
+
+1. A complete contract review with GREEN/YELLOW/RED classification and attorney-ready redlines for the CloudStack SaaS agreement
+2. An obligation tracking dashboard showing upcoming deadlines, renewal alerts, and overdue items via `/vendor-check`
+3. An institutional benchmarking query against Noor Technologies' contract repository — evidence-based negotiation positions derived from 34 executed contracts
 
 ---
 
@@ -664,25 +472,28 @@ produce for this contract. Include:
 
 **What you are learning:** A signed contract is the beginning, not the end, of legal work. Designing the obligation tracking output teaches you to think about contracts as ongoing relationships with active requirements -- the mindset that prevents missed renewals, overlooked audit rights, and compliance gaps.
 
-### Prompt 3: Cross-Border Issue Spotting
+### Prompt 3: Apply to Your Organisation
 
 ```
-A Pakistani software company (incorporated in Lahore) is entering
-a Master Services Agreement with a company in Dubai (UAE mainland).
-The software will be deployed in Riyadh, Saudi Arabia.
+Take a real vendor agreement from your organisation (or use a
+sample SaaS agreement you can find online). Run /review-contract
+with your playbook active.
 
-Governing law: UAE law. Dispute resolution: DIAC arbitration.
+Before running: predict which clauses will be flagged RED
+and which will be GREEN. Write your predictions.
 
-Identify at least five cross-border legal issues that a single-
-jurisdiction review under UAE law alone would miss. For each issue:
-1. Name the specific risk
-2. Identify which jurisdiction's law creates the issue
-3. Explain why a UAE-only overlay would not catch it
-4. Suggest the redline or escalation action
+After running: compare the agent's classification against
+your predictions. Where do you agree? Where did the agent
+catch something you missed? Where would you override the
+agent's classification based on your knowledge of the
+commercial relationship?
+
+This comparison — agent output vs. your judgment — is exactly
+what attorney review means in practice.
 ```
 
-**What you are learning:** Cross-border contracts are where legal AI provides the greatest value -- and where single-jurisdiction thinking fails most visibly. This prompt builds your ability to spot issues at the intersection of jurisdictions, which is exactly what the Legal Plugin's multi-overlay router is designed to do.
+**What you are learning:** The real test of the contract review workflow is applying it to your own agreements. The prediction-then-comparison exercise builds the judgment calibration that makes you effective at reviewing agent output — knowing when to accept the classification and when to override it based on context the agent does not have.
 
 ---
 
-Continue to [Lesson 4: NDA Triage and Management ->](./04-nda-triage-and-management.md)
+Continue to [Lesson 4: Cross-Border Contracts and E-Signatures ->](./04-cross-border-contracts-and-e-signatures.md)
