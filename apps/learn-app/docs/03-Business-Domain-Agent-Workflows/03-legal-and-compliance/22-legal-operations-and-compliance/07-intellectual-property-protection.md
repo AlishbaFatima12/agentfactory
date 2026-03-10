@@ -341,6 +341,14 @@ Cover these dimensions:
 
 **What you are learning:** The FTO governance boundary is the most important concept in IP workflow automation. Agent research reduces attorney hours from 40+ to 10-15, but it cannot replace the attorney's opinion. Understanding why -- privilege, claim construction doctrine, professional liability -- ensures you use the agent correctly and avoid the trap of treating research scaffolding as a legal opinion.
 
+## What You Built
+
+1. A patent landscape analysis for your technology area identifying white spaces, FTO flags, and prior art candidates
+2. A trademark monitoring configuration with similarity thresholds, priority jurisdictions, and scan frequency
+3. An IP configuration Cowork skill covering registered marks, pending applications, monitoring parameters, and patent portfolio
+4. Understanding of the OSS licence risk hierarchy (MIT/BSD → LGPL/MPL → GPL → AGPL) and the GPL/AGPL escalation rule
+5. A cover memo template that correctly scopes agent IP research as preliminary scaffolding, not an FTO opinion
+
 ---
 
 Continue to [Lesson 8: Litigation Support, Legal Hold, and Canned Responses ->](./08-litigation-support-legal-hold-and-canned-responses.md)

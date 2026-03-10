@@ -1,67 +1,79 @@
 deck:
   id: "ch22-14-legal-operations-sprint"
   title: "The Legal Operations Sprint"
-  description: "Capstone sprint exercises, Four Principles of Legal AI Deployment, command/skill/overlay/connector quick reference, playbook validation, and engine transferability"
+  description: "Capstone sprint assembling all Legal Plugin commands, skills, and jurisdiction overlays into a timed end-to-end exercise — playbook validation, contract review sprint, NDA triage, compliance assessment, meeting prep, DSAR processing, and legal ops dashboard"
   tags: ["legal-ops", "capstone", "sprint", "chapter-22"]
   version: 1
 
 cards:
   - id: "ch22-14-sprint-001"
-    front: "What are the Four Principles of Legal AI Deployment?"
-    back: "1. The agent reviews, the attorney decides\n2. The playbook is the product (institutional knowledge drives differentiation)\n3. Process-level agents eliminate coordination overhead\n4. Jurisdiction-aware analysis is non-negotiable for cross-border work"
+    front: "What are the seven stages of the legal operations sprint capstone?"
+    back: "1. Playbook validation — score executed contracts against the playbook to detect calibration drift.\n2. Contract review sprint — review 3 contracts with attorney-ready redlines.\n3. NDA triage — configure and test a Tier 1/2/3 triage system.\n4. Compliance assessment — produce a 5x5 risk matrix for a new market.\n5. Meeting prep with e-signature routing — briefing and /signature-request.\n6. DSAR response — acknowledgement within statutory window and data discovery.\n7. Legal ops dashboard — vendor health, compliance calendar, spend report, and GC briefing."
     difficulty: "basic"
-    tags: ["four-principles"]
+    tags: ["sprint-stages", "capstone"]
 
   - id: "ch22-14-sprint-002"
-    front: "What are the 7 Anthropic Legal Plugin commands?"
-    back: "1. /review-contract — full contract review vs playbook\n2. /triage-nda — NDA pre-screening (Tier 1/2/3)\n3. /vendor-check — obligation and status check\n4. /brief — research, regulatory monitoring, IP\n5. /respond — DSAR, legal holds, routine responses\n6. /compliance-check — proactive regulatory assessment\n7. /signature-request — e-signature routing via DocuSign"
-    difficulty: "basic"
-    tags: ["commands", "quick-reference"]
+    front: "What is playbook calibration drift and how do you detect it?"
+    back: "Calibration drift occurs when the playbook thresholds no longer match the organisation's actual risk tolerance — for example, flagging a limitation of liability clause as RED when the organisation accepted that same position in a recent deal. Detection method: run /review-contract against 3 recently executed contracts. If any review flags RED items that were actually accepted during negotiation, the playbook is miscalibrated and needs adjustment."
+    difficulty: "intermediate"
+    tags: ["calibration-drift", "playbook-validation"]
 
   - id: "ch22-14-sprint-003"
-    front: "What are the 6 Anthropic Legal Plugin skills?"
-    back: "1. contract-review — seven-phase analysis\n2. nda-triage — tier classification\n3. compliance — compliance assessment\n4. legal-risk-assessment — 5x5 severity-likelihood matrix\n5. meeting-briefing — structured prep document\n6. canned-responses — draft from template library"
-    difficulty: "basic"
-    tags: ["skills", "quick-reference"]
+    front: "What are the four principles of legal AI deployment?"
+    back: "1. The agent reviews; the attorney decides — pattern recognition and draft preparation vs judgment and strategy.\n2. The playbook is the product — the plugin is infrastructure that gets commoditised; institutional knowledge does not.\n3. Process-level agents eliminate coordination overhead — Contract Intake, Regulatory Monitoring, Compliance Calendar, DSAR Management remove chasing/tracking/escalating work.\n4. Jurisdiction-aware analysis is non-negotiable for cross-border work — overlays ensure every analysis reflects the applicable legal framework."
+    difficulty: "intermediate"
+    tags: ["four-principles", "deployment"]
 
   - id: "ch22-14-sprint-004"
-    front: "What are the 8 MCP connectors and their categories?"
-    back: "Communication: Gmail, Slack\nScheduling: Google Calendar\nE-signature: DocuSign\nStorage: Box, Egnyte\nProject: Atlassian\nProductivity: MS365"
-    difficulty: "intermediate"
-    tags: ["mcp-connectors"]
-
-  - id: "ch22-14-sprint-005"
-    front: "What are the 6 jurisdiction overlays available in the Legal Ops extension?"
-    back: "1. uk-overlay — English law, UCTA, UK GDPR, Companies Act\n2. uae-overlay — UAE Civil Code, mainland federal law\n3. difc-overlay — DIFC law, DFSA regulations, DIFC Courts\n4. pakistan-overlay — Contract Act 1872, PDPA, SECP requirements\n5. saudi-overlay — Saudi law, PDPL, SAMA regulations\n6. gcc-overlay — GCC-wide commercial registration, VAT"
-    difficulty: "intermediate"
-    tags: ["jurisdiction-overlays"]
-
-  - id: "ch22-14-sprint-006"
-    front: "What is playbook validation and why is it necessary?"
-    back: "Playbook validation tests your legal.local.md against executed contracts to detect calibration drift — cases where your configured positions no longer match actual negotiation outcomes. If 3 of your last 10 contracts accepted a liability cap below your configured minimum, either your threshold is wrong or your negotiators are conceding without updating the playbook."
-    difficulty: "intermediate"
-    tags: ["playbook-validation"]
-
-  - id: "ch22-14-sprint-007"
-    front: "What is the target NDA triage distribution for a calibrated system?"
-    back: "60% Tier 1 (auto-process), 25% Tier 2 (legal review), 15% Tier 3 (attorney escalation). If the actual distribution deviates significantly — for example, 40% Tier 3 — the thresholds need recalibration because too many NDAs are being escalated unnecessarily."
+    front: "What is the target NDA triage distribution, and what does deviation indicate?"
+    back: "Target: 60% Tier 1 (auto-approve), 25% Tier 2 (counsel review), 15% Tier 3 (full review). If results diverge significantly — for example, too many NDAs landing in Tier 3 — the playbook thresholds are too aggressive and need loosening. If too many land in Tier 1, the thresholds may be too permissive and letting problematic NDAs through without review."
     difficulty: "intermediate"
     tags: ["nda-triage", "calibration"]
 
+  - id: "ch22-14-sprint-005"
+    front: "Name the seven Legal Plugin commands and their primary use."
+    back: "1. /review-contract — full contract review vs playbook.\n2. /triage-nda — NDA pre-screening and tier routing.\n3. /vendor-check — obligation and status check.\n4. /brief — research, regulatory monitoring, IP analysis.\n5. /respond — DSAR, legal holds, routine responses.\n6. /compliance-check — proactive regulatory assessment.\n7. /signature-request — e-signature routing via DocuSign."
+    difficulty: "basic"
+    tags: ["commands", "quick-reference"]
+
+  - id: "ch22-14-sprint-006"
+    front: "Name the four Agent Factory Legal Ops Extension commands."
+    back: "1. /legal-brief — extended research with jurisdiction overlays.\n2. /legal-hold — litigation hold package with custodian tracking.\n3. /contract-intake — automated classification and routing.\n4. /compliance-calendar — deadline tracking with escalation logic."
+    difficulty: "basic"
+    tags: ["extension-commands", "quick-reference"]
+
+  - id: "ch22-14-sprint-007"
+    front: "What six jurisdiction overlays are available in the Legal Plugin?"
+    back: "1. uk-overlay — English law, UCTA, UK GDPR, Companies Act.\n2. uae-overlay — UAE Civil Code, mainland federal law.\n3. difc-overlay — DIFC law, DFSA regulations, DIFC Courts.\n4. pakistan-overlay — Contract Act 1872, PDPA, SECP requirements.\n5. saudi-overlay — Saudi law, PDPL, SAMA regulations.\n6. gcc-overlay — GCC-wide commercial registration, VAT."
+    difficulty: "basic"
+    tags: ["jurisdiction-overlays", "quick-reference"]
+
   - id: "ch22-14-sprint-008"
-    front: "What does Principle 2 ('The playbook is the product') mean in practice?"
-    back: "The Legal Plugin out of the box is a capable tool using generic standards. Configured with a mature, validated, institution-specific negotiation playbook, it becomes a competitive advantage. The playbook encodes risk tolerance, negotiation positions, and hard boundaries — institutional knowledge that the agent cannot generate independently. Infrastructure gets commoditised; institutional knowledge does not."
-    difficulty: "intermediate"
-    tags: ["four-principles", "playbook"]
+    front: "What is the minimum viable capstone (for 30 minutes instead of 45)?"
+    back: "Exercises 1, 2, 3, and 7: validate your playbook, review 3 contracts, triage 5 NDAs, and produce the legal ops dashboard. These four cover the core loop and demonstrate the end-to-end workflow. The remaining exercises (compliance assessment, meeting prep, DSAR, full pipeline) deepen specific areas but are not required for the minimum viable demonstration."
+    difficulty: "basic"
+    tags: ["minimum-viable", "time-management"]
 
   - id: "ch22-14-sprint-009"
-    front: "What does Principle 3 ('Process-level agents eliminate coordination overhead') mean?"
-    back: "Document-level tools (contract review, NDA triage) reduce time per task. Process-level agents — Contract Intake, Regulatory Monitoring, Compliance Calendar, DSAR Management — eliminate the chasing, tracking, escalating, and reporting that consumes legal operations capacity. The coordination overhead (40-60% of legal ops time) is where the largest efficiency gains occur."
+    front: "What three types of errors should you watch for during live sprint execution?"
+    back: "1. Miscalibrated thresholds — playbook positions that flag acceptable deals as RED or miss genuinely problematic clauses.\n2. Missing jurisdiction overlays — cross-border contracts analysed under only one jurisdiction when multiple apply.\n3. Hallucinated regulatory references — the agent citing specific article numbers or regulations that do not exist, creating false confidence in compliance."
     difficulty: "advanced"
-    tags: ["four-principles", "agents"]
+    tags: ["error-detection", "quality-control"]
 
   - id: "ch22-14-sprint-010"
-    front: "What three categories determine legal operations engine transferability to a new organisation?"
-    back: "1. What transfers directly (zero changes): command structure, triage tiers, dashboard metrics, DSAR workflow\n2. What needs reconfiguration: playbook positions, jurisdiction overlays, compliance calendar, risk thresholds\n3. What is organisation-specific (does not exist in current engine): regulatory requirements, practice area specialisations, professional conduct rules"
+    front: "What does the weekly GC briefing dashboard contain, and what are its constraints?"
+    back: "Contents: RAG status per category (contracts, compliance, spend), items requiring GC personal attention, and emerging risks before they become urgent. Constraints: 5-minute read maximum, 1-page format, combining vendor health check, compliance calendar, and legal spend report outputs into a single executive summary."
+    difficulty: "intermediate"
+    tags: ["gc-briefing", "dashboard"]
+
+  - id: "ch22-14-sprint-011"
+    front: "When transferring the legal operations engine to a new organisation, what transfers directly and what requires reconfiguration?"
+    back: "Transfers directly (zero changes): command structure, triage tier methodology, dashboard metrics framework, DSAR workflow steps.\nRequires reconfiguration: playbook clause positions (risk tolerance), jurisdiction overlays (applicable legal systems), compliance calendar (regulatory deadlines), risk thresholds (organisation-specific floors and ceilings).\nOrganisation-specific (does not exist in current engine): unique regulatory requirements, practice area specialisations, professional conduct rules."
     difficulty: "advanced"
-    tags: ["transferability"]
+    tags: ["transferability", "reconfiguration"]
+
+  - id: "ch22-14-sprint-012"
+    front: "What is the core division of labour that runs through every lesson in Chapter 22?"
+    back: "The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs. The agent handles the 80% of legal work that is pattern recognition, research, document analysis, and first-draft preparation. The attorney handles the 20% requiring judgment, strategy, relationship management, and professional accountability. Keeping these distinct maximises the contribution of both."
+    difficulty: "basic"
+    tags: ["division-of-labour", "core-principle"]

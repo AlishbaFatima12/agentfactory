@@ -611,6 +611,14 @@ reasoning. Flag any items where reasonable lawyers might disagree.
 
 **What you are learning:** DSAR redaction is where the agent's analytical capability meets the attorney's professional judgment. The agent can categorise data and flag issues, but the disclosure decisions -- especially on opinions about data subjects, legal privilege, and third-party data -- require human judgment. Understanding the boundary between what the agent decides and what the attorney decides is the core skill.
 
+## What You Built
+
+1. A compliance calendar agent with 60-30-14-7-1 day escalation sequence for contract deadlines and regulatory filings
+2. A legal spend analytics agent detecting 10 anomaly types (rate variance, budget overrun, timing concentration, write-off patterns)
+3. A DSAR management agent with 30-day workflow including acknowledgement, discovery requests, redaction checklist, and statutory window tracking
+4. A DSAR Cowork skill with jurisdiction-specific response windows (UK GDPR 30 days, CCPA 45 days) and request type routing
+5. Understanding of Calendar MCP integration for automated deadline reminders and DSAR connector paths for multi-system discovery
+
 ---
 
 Continue to [Lesson 12: Employment Law and Contractor Classification ->](./12-employment-law-and-contractor-classification.md)
