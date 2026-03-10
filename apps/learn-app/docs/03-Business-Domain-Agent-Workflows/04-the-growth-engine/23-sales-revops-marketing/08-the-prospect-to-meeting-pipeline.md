@@ -1,698 +1,376 @@
 ---
-sidebar_position: 6
-title: "The Prospect-to-Meeting Workflow"
-description: "Connect the full sales pipeline end-to-end — research to scoring to outreach to call preparation to meeting summary — diagnose context loss between stages, and understand how pipeline errors propagate"
+sidebar_position: 8
+title: "The Prospect-to-Meeting Pipeline"
+description: "Run the complete prospect-to-meeting pipeline for a fresh prospect — research, score, outreach, sequence, brief, and follow-up — in a single session, then discover how config quality amplifies or destroys pipeline output"
 keywords:
   [
+    "prospect-to-meeting pipeline",
+    "end-to-end sales workflow",
+    "pipeline execution",
+    "config quality",
+    "garbage in garbage out",
+    "prospect research",
+    "lead scoring",
+    "outreach",
+    "pre-call brief",
+    "follow-up",
+    "ICP amplification",
     "sales pipeline",
-    "prospect-to-meeting workflow",
-    "pre-call-brief",
-    "call-summary",
-    "pipeline skill",
-    "follow-up skill",
-    "context loss",
-    "garbage propagation",
-    "end-to-end workflow",
-    "CRM update",
-    "meeting preparation",
-    "sales process",
+    "NexaFlow Technologies",
+    "Meridian Logistics",
   ]
 chapter: 23
-lesson: 6
+lesson: 8
 duration_minutes: 25
 
 # HIDDEN SKILLS METADATA
 skills:
-  - name: "Trace the Full Prospect-to-Meeting Pipeline"
+  - name: "Execute a Complete Prospect-to-Meeting Pipeline"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can execute the full pipeline (research → score → outreach → call prep → meeting → summary → CRM update) and trace data flow between each stage"
+    measurable_at_this_level: "Student can run all six pipeline stages (research, score, outreach, sequence, brief, follow-up) for a single prospect in one session, producing connected outputs where each stage references the previous"
 
-  - name: "Diagnose Context Loss Between Pipeline Stages"
+  - name: "Diagnose Config Quality Amplification"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Analyze"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can identify when a downstream stage fails to reference upstream intelligence and trace the context loss to a specific handoff point"
+    measurable_at_this_level: "Student can run the same pipeline with a strong ICP and a weak ICP, compare outputs side-by-side, and explain how config quality amplifies through every downstream stage"
 
-  - name: "Understand Garbage Propagation in Pipelines"
+  - name: "Evaluate Pipeline Output Quality at Each Stage"
     proficiency_level: "B1"
-    category: "Conceptual"
-    bloom_level: "Analyze"
-    digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can trace how a bad ICP configuration cascades through every pipeline stage, amplifying the original error"
+    category: "Applied"
+    bloom_level: "Evaluate"
+    digcomp_area: "Information and Data Literacy"
+    measurable_at_this_level: "Student can rate each stage output as READY, NEEDS EDITING, or REDO and explain why — connecting output quality to upstream config quality"
 
 learning_objectives:
-  - objective: "Execute the full prospect-to-meeting pipeline using 6+ skills and commands in sequence, tracing data flow between stages"
+  - objective: "Execute all six pipeline stages for a single prospect in one session, tracing how each stage consumes the previous stage's output"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student runs a complete pipeline for one prospect and documents what data flows from each stage to the next"
+    assessment_method: "Student completes the full pipeline for one prospect and documents the data flowing between each stage"
 
-  - objective: "Identify context loss between pipeline stages and propose solutions to maintain intelligence continuity"
+  - objective: "Compare pipeline output quality between a strong ICP configuration and a weak one, identifying where amplification occurs"
     proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Student identifies at least 2 points in a pipeline trace where downstream output fails to reference upstream intelligence"
+    assessment_method: "Student runs the pipeline with both configurations and produces a side-by-side comparison showing quality divergence at each stage"
 
-  - objective: "Trace error propagation through the pipeline from a single misconfigured input"
+  - objective: "Evaluate the total time investment and output quality of the AI-assisted pipeline versus a manual sales workflow"
     proficiency_level: "B1"
-    bloom_level: "Analyze"
-    assessment_method: "Student can show how a miscalibrated ICP produces cascading errors at every pipeline stage"
+    bloom_level: "Evaluate"
+    assessment_method: "Student documents the time per stage and rates each output, producing a pipeline quality scorecard"
 
 cognitive_load:
-  new_concepts: 5
+  new_concepts: 4
   concepts_list:
-    - "Context Loss as an agent error type"
-    - "Pipeline as connected stages with data handoffs"
-    - "Garbage propagation (errors amplify through stages)"
-    - "Pre-call brief as meeting preparation intelligence"
-    - "Call summary as post-meeting record (Anthropic /call-summary)"
-  assessment: "5 concepts at B1 level. Most concepts build directly on L01-L05 skills. The new insight is pipeline thinking — how individual capabilities connect."
+    - "Pipeline as connected execution (not isolated commands)"
+    - "Config quality amplification (good config → great output, bad config → garbage output)"
+    - "Pipeline quality scorecard (READY / NEEDS EDITING / REDO per stage)"
+    - "Time-value comparison (AI pipeline vs manual workflow)"
+  assessment: "4 concepts at B1 level. Low concept count because this lesson is primarily execution — applying L01-L07 skills in sequence. The new insight is that the pipeline amplifies whatever you put into it."
 
 differentiation:
-  extension_for_advanced: "Map your company's actual sales process stages. Compare to the plugin's pipeline stages. Where are there gaps? Where does the plugin add a stage your team skips? Design a custom pipeline that matches your real workflow."
-  remedial_for_struggling: "Focus on running 3 consecutive stages (research → score → outreach) for one prospect. If you can identify what data flows from research to scoring, you understand the pipeline concept."
+  extension_for_advanced: "Run the pipeline for a prospect in a market you have never sold into (different country, different industry vertical). At each stage, rate the output quality and identify which stages degrade most when the ICP has no data for that market."
+  remedial_for_struggling: "Focus on running the first three stages (research, score, outreach) for one prospect. If you can trace what data flows from research into the score and from the score into the outreach, you understand the pipeline concept."
 ---
 
-# The Prospect-to-Meeting Workflow
+# The Prospect-to-Meeting Pipeline
 
-You can research a prospect. You can score a lead. You can write a Five Laws-compliant outreach sequence. You can build a follow-up cadence. Lessons 1 through 5 taught each of those capabilities in isolation. A real sales process never uses them in isolation. A real sales process is a **pipeline** — eight stages running in sequence, where the output of each stage feeds the input of the next. Research feeds scoring. Scoring determines whether you proceed to outreach. Outreach opens the door to a meeting. Meeting preparation requires everything upstream. The call summary captures what happened. The CRM update closes the loop.
+In Lessons 1 through 7, you built every piece of the sales workflow: research, scoring, outreach, sequences, briefs, and follow-up. Each lesson focused on one capability in isolation. But NexaFlow's reps do not execute isolated commands. When a new prospect appears, they run a pipeline: research the company, score the lead, draft outreach if the score is hot, build a multi-touch sequence, prepare a pre-call brief when the prospect responds, and write a follow-up after the call. Six stages, one session, one prospect.
 
-This lesson connects every capability you have built into a single end-to-end workflow: the **prospect-to-meeting pipeline**. You will run all eight stages for one prospect, trace the data flowing between stages, and discover the failure mode that only appears when capabilities are connected — **Context Loss**, where intelligence gathered in one stage disappears before reaching a stage that needs it.
+This lesson runs that complete pipeline for a fresh prospect — Crescent Freight, the fifth demo company from your Lesson 1 dataset that you have not yet worked with. You will execute all six stages, trace the data flowing between them, and then run the same pipeline with a deliberately weak ICP to see what happens when the foundation is broken.
 
-Pipeline thinking is the difference between a collection of tools and a revenue system. Individual commands produce output. Pipelines produce outcomes.
+## The Pipeline
 
----
+Each stage uses a specific skill from the Revenue Engine extension. Each stage produces output that the next stage consumes.
 
-## The Eight Stages
+| Stage | Action                 | Skill               | Input From                          | Output To         |
+| ----- | ---------------------- | ------------------- | ----------------------------------- | ----------------- |
+| 1     | Research the prospect  | `prospect-research` | Company name + context              | Stage 2           |
+| 2     | Score the lead         | `lead-scoring`      | Research brief                      | Stage 3           |
+| 3     | Draft outreach         | `outreach`          | Research + score + ICP              | Stage 4           |
+| 4     | Build sequence         | `sequence`          | Research + outreach + ICP           | Stage 5           |
+| 5     | Prepare pre-call brief | `pre-call-brief`    | Research + score + outreach history | Stage 6           |
+| 6     | Write follow-up        | `follow-up`         | Meeting notes + prior context       | Pipeline complete |
 
-Before running anything, understand the full sequence. Each stage uses a specific command or skill, and each produces output that the next stage consumes.
-
-| Stage | Action                  | Command or Skill       | Input From                          | Output To           |
-| ----- | ----------------------- | ---------------------- | ----------------------------------- | ------------------- |
-| 1     | Research the prospect   | `/research-prospect`   | Company name + city                 | Stage 2 (score)     |
-| 2     | Score the lead          | `/score-lead`          | Research brief                      | Stage 3 (qualify)   |
-| 3     | Qualification decision  | Human judgment         | Score + research                    | Stage 4 (outreach)  |
-| 4     | Write outreach          | `outreach` skill       | Research + score + ICP              | Stage 5 (call prep) |
-| 5     | Prepare for the meeting | `pre-call-brief` skill | Research + score + outreach history | Stage 6 (meeting)   |
-| 6     | Conduct the meeting     | Human (with brief)     | Pre-call brief                      | Stage 7 (summary)   |
-| 7     | Summarise the meeting   | `/call-summary`        | Meeting notes                       | Stage 8 (CRM)       |
-| 8     | Update the CRM          | `pipeline` skill       | Summary + score + next steps        | Pipeline closed     |
-
-Three of these stages are human (qualification decision, meeting, providing meeting notes). Five are agent-driven. The pipeline works because each agent stage references the outputs of previous stages — when it works correctly.
+The agent researches, drafts, and recommends. The sales professional decides and sends.
 
 ---
 
-## Running the Full Pipeline: NexaFlow Technologies
+### Step 1: Research
 
-Time to run the whole sequence. NexaFlow Technologies is the Karachi-based logistics-tech company you researched in Lesson 1. You already have a research brief and an ICP configuration. Now run every stage, and at each one, track what data arrived from upstream.
-
-### Stage 1: Research
+Crescent Freight is a mid-size freight forwarding company based in Karachi. You generated their profile in Lesson 1 but never ran intelligence on them. Start the pipeline:
 
 ```
-/research-prospect NexaFlow Technologies Karachi
+Research Crescent Freight Karachi — full intelligence brief
 ```
 
-You ran this in Lesson 1. The research brief contains company overview, key personnel, financial signals, technology stack, pain points, and engagement signals. You know which claims are verifiable and which are hallucinated. For this pipeline trace, focus on the key intelligence that downstream stages should use:
+The `prospect-research` skill auto-activates and produces a structured brief: company overview, key personnel, financial signals, technology stack, pain points, and engagement signals. Review the output against the hallucination detection rules from Lesson 1.
 
-**Key intelligence produced:**
+**What to check before moving to Step 2:**
 
-- CTO: Mehreen Qazi (technical buyer)
-- Pain point: scaling data pipeline from 50K to 500K daily deliveries
-- Technology signal: hiring Kafka engineers (real, verified on LinkedIn)
-- Series A claim: unverified (apply Hallucination Rule 1 — private financials are suspect)
-- Engagement: "Expanding our data team" LinkedIn post (verified)
+- Identify the primary buyer (likely VP Operations or Director of Logistics based on NexaFlow's ICP)
+- Flag any financial claims that cannot be verified from public sources
+- Note the technology signals — are they running legacy systems or modern infrastructure?
+- Check for timing signals — new leadership, contract wins, system failures, expansion
 
-### Stage 2: Score
+The research brief is the foundation. Every downstream stage will reference it. If the research is thin, everything downstream will be thin. If the research is specific, everything downstream will be specific.
 
-```
-/score-lead NexaFlow-prospect-001
-```
+---
 
-The scoring model from Lesson 3 evaluates three dimensions: Fit, Timing, and Engagement. The score draws directly from the research brief.
+### Step 2: Score
 
-```
-══════════════════════════════════════════════════════════════
-          LEAD SCORE — NexaFlow Technologies
-══════════════════════════════════════════════════════════════
-
-DIMENSION SCORES
-─────────────────────────────────────────────────────────────
-Fit:              28/35 — Strong ICP match: logistics-tech,
-                  50-500 employees, PostgreSQL at scale,
-                  Pakistan + Gulf geography
-Timing:           31/35 — Series A within 12 months (if real),
-                  Kafka hiring = active infrastructure
-                  investment, data team expansion
-Engagement:       22/30 — LinkedIn activity visible, no direct
-                  inbound signal, conference presence unknown
-
-TOTAL SCORE:      81/100 — HOT
-
-SCORING NOTES
-─────────────────────────────────────────────────────────────
-Timing score relies on Series A claim from research brief.
-If funding is hallucinated, Timing drops to ~22/35 and
-total falls to ~72/100 (WARM, not HOT). Verify before
-committing outreach resources.
-
-══════════════════════════════════════════════════════════════
-```
-
-**Data flow trace:** The score references specific findings from Stage 1 — company size, industry match, Kafka hiring, Series A claim. Notice the scoring notes flag the dependency on unverified funding data. This is good pipeline hygiene: the scoring stage is transparent about which upstream data is unverified and how that uncertainty affects the score.
-
-### Stage 3: Qualification Decision
-
-This is your decision, not the agent's. Based on an 81/100 score with the caveat about unverified funding:
-
-**Decision: Proceed.** Even if the Series A is hallucinated, the Kafka hiring and data team expansion are verified signals. Fit and verified Timing alone support a ~72 score (WARM). Worth pursuing — but lead with verified intelligence, not the funding claim.
-
-### Stage 4: Outreach
-
-The `outreach` skill generates a Five Laws-compliant message using the research brief, the score, and the ICP configuration.
+Feed the research brief into the scoring model:
 
 ```
-══════════════════════════════════════════════════════════════
-          OUTREACH — NexaFlow Technologies
-══════════════════════════════════════════════════════════════
-
-TO:               Mehreen Qazi, CTO
-CHANNEL:          LinkedIn InMail
-SUBJECT:          Scaling telemetry pipelines past PostgreSQL
-
-─────────────────────────────────────────────────────────────
-Hi Mehreen,
-
-I noticed NexaFlow posted about expanding the data team last
-month, and I saw two Kafka engineer openings on LinkedIn.
-That combination usually means the delivery telemetry has
-outgrown the current database layer — a problem we have
-helped three logistics-tech companies in the Gulf solve in
-the last year.
-
-We built a managed streaming pipeline for [similar company]
-that handled their jump from 80K to 600K daily shipments
-without a database migration. Their CTO said the hardest
-part was not the technology — it was figuring out what to
-stream first.
-
-Would a 20-minute call to compare your architecture with
-what we have seen work at that scale be useful? I am happy
-to share the migration playbook either way.
-
-Best,
-[Your name]
-─────────────────────────────────────────────────────────────
-
-FIVE LAWS COMPLIANCE CHECK
-─────────────────────────────────────────────────────────────
-Law 1 (Specificity):     ✓ References Kafka hiring, LinkedIn
-                         post — verified signals only
-Law 2 (Value-First):     ✓ Offers migration playbook with no
-                         commitment
-Law 3 (Personalisation): ✓ Names CTO, references their
-                         specific scaling challenge
-Law 4 (Brevity):         ✓ 127 words — under 150 target
-Law 5 (Clear CTA):       ✓ "20-minute call" — specific,
-                         low-commitment ask
-
-══════════════════════════════════════════════════════════════
+Score this lead: Crescent Freight, Karachi. Use the research brief from Step 1.
 ```
 
-**Data flow trace:** The outreach references Mehreen Qazi (from research), the Kafka hiring and LinkedIn post (from research, verified), and the data pipeline pain point (from research). Notice it did not mention the unverified Series A — good. The outreach skill inherited the scoring caution. It used only verified intelligence.
+The `lead-scoring` skill evaluates three dimensions — Fit, Timing, and Engagement — using the ICP you built in Lesson 2.
 
-### Stage 5: Pre-Call Brief
-
-Imagine Mehreen replied and agreed to a 20-minute call next Tuesday. Now you need to prepare. The `pre-call-brief` skill assembles meeting preparation intelligence from every upstream stage.
+**Sample Output:**
 
 ```
-══════════════════════════════════════════════════════════════
-          PRE-CALL BRIEF
-          Meeting: Mehreen Qazi, CTO — NexaFlow Technologies
-          Date: Tuesday 2026-03-17, 14:00 PKT
-══════════════════════════════════════════════════════════════
-
-PROSPECT CONTEXT (from research brief)
-─────────────────────────────────────────────────────────────
-Company:          Route-optimization software for last-mile
-                  delivery fleets in Pakistan and Gulf states
-Size:             85-120 employees
-Tech Stack:       Python, React Native, PostgreSQL, AWS
-                  (ap-south-1 Mumbai)
-Key Pain:         Scaling from 50K to 500K daily deliveries
-                  across three countries
-
-QUALIFICATION CONTEXT (from lead score)
-─────────────────────────────────────────────────────────────
-Score:            81/100 (HOT) — caveat: Timing dimension
-                  includes unverified Series A claim
-Strongest Signal: Kafka hiring + data team expansion
-                  (verified independently)
-Weakest Signal:   No direct inbound interest — we initiated
-
-ENGAGEMENT HISTORY (from outreach)
-─────────────────────────────────────────────────────────────
-Outreach Channel: LinkedIn InMail to Mehreen Qazi
-Hook Used:        Kafka hiring + PostgreSQL scaling pain
-Response:         Agreed to 20-min call — "Interesting,
-                  let's talk. We are in the middle of
-                  exactly this conversation internally."
-
-MEETING OBJECTIVES
-─────────────────────────────────────────────────────────────
-1. Confirm pain point: Is telemetry scaling their primary
-   infrastructure challenge, or is there a bigger problem?
-2. Discover timeline: Are they evaluating solutions now, or
-   researching for next quarter?
-3. Understand decision process: Is Mehreen the sole technical
-   buyer, or does the CEO (Farhan Ahmed) need to approve?
-4. Qualify budget: Does their infrastructure budget align
-   with $5K-$10K/month range from ICP?
-
-CONVERSATION STARTERS
-─────────────────────────────────────────────────────────────
-• "You mentioned you are in the middle of this conversation
-  internally — what is driving the timing?"
-• "The Kafka engineer postings suggest event streaming is
-  the direction. Have you already chosen Kafka, or are you
-  evaluating alternatives?"
-• "At 50K deliveries you can get away with PostgreSQL
-  polling. At 500K that breaks. Where are you on that
-  curve right now?"
-
-CAUTIONS
-─────────────────────────────────────────────────────────────
-• Do NOT reference Series A or funding — unverified
-• Do NOT quote specific revenue figures — hallucinated
-• The "2TB daily telemetry" figure from research brief is
-  an agent estimate, not a confirmed number
-• Gulf operations compliance (UAE TRA data residency) may
-  be a secondary pain point — let Mehreen raise it first
-
-══════════════════════════════════════════════════════════════
+LEAD SCORE — Crescent Freight
+════════════════════════════════════════
+Fit:         32/40 — Regional freight forwarder, 180 employees,
+             Pakistan geography. Strong ICP match.
+Timing:      26/30 — Hiring operations manager (LinkedIn, 2 weeks
+             ago). New warehouse in Port Qasim announced.
+Engagement:  18/30 — No direct inbound signal. Attended PIFFA
+             conference where NexaFlow exhibited.
+────────────────────────────────────────
+TOTAL:       76/100 — HOT
+ROUTING:     Proceed to outreach
+════════════════════════════════════════
 ```
 
-**Data flow trace:** This is where pipeline value becomes visible. The `pre-call-brief` skill pulled intelligence from three upstream stages: research (company context, personnel, pain points), scoring (qualification rationale, signal strength), and outreach (what hook was used, what the prospect said in response). It synthesised all three into actionable meeting preparation.
+The score says HOT. The routing says proceed. But examine the dimensions. Engagement is the weakest at 18/30 — Crescent has not reached out to you. The conference attendance is a passive signal. This means your outreach needs to work harder to establish relevance, because Crescent is not already looking for you.
 
-Notice the Cautions section. It carried forward the hallucination warnings from Stages 1 and 2 — Series A unverified, revenue hallucinated, 2TB figure is an estimate. The pipeline preserved critical caveats across four stages. When this works, it is powerful.
+Compare this to Meridian Logistics from Lesson 7, which scored 94 with a meeting already booked. Meridian's pipeline was easier because engagement was high. Crescent's pipeline requires you to create the engagement through outreach quality.
 
-:::info Base Plugin Alternative
-The Anthropic Sales plugin includes a `call-prep` skill that also prepares
-meeting briefs. When both plugins are installed, the extension's
-`pre-call-brief` overrides `call-prep` — you get the ICP-scored version
-with three-dimension deal health and conversation starters drawn from
-upstream pipeline data. If you disable the extension, `call-prep` still
-works as a standalone meeting preparation tool.
+**Routing decision: HOT — proceed to outreach.**
+
+---
+
+### Step 3: Outreach
+
+The score is hot. Now draft a first-touch message:
+
+```
+Draft a LinkedIn DM for the VP Operations at Crescent Freight.
+Reference the new warehouse expansion at Port Qasim and their
+hiring for an operations manager.
+```
+
+The `outreach` skill produces a Five Laws-compliant message. Review it against the five constraints from Lesson 5:
+
+| Law                                  | Check                                                                                         |
+| ------------------------------------ | --------------------------------------------------------------------------------------------- |
+| Law 1: Specific verifiable reference | Does it cite the Port Qasim expansion or the ops manager hiring? Both are verifiable signals. |
+| Law 2: Value-first                   | Does it offer something useful before asking for anything?                                    |
+| Law 3: Personalised to this prospect | Could this message be sent to any freight company, or is it specific to Crescent?             |
+| Law 4: Under 150 words               | Count the words.                                                                              |
+| Law 5: Clear, low-commitment CTA     | Is the ask specific ("15-minute call") rather than vague ("let's connect")?                   |
+
+If any law fails, iterate. Prompt the agent to fix the specific violation. The outreach skill enforces the Five Laws, but enforcement is not perfect — you are the final auditor.
+
+---
+
+### Step 4: Sequence
+
+One touch is not enough. Build a multi-touch sequence for Crescent:
+
+```
+Build a 6-touch, 21-day outreach sequence for Crescent Freight.
+Include exit conditions for reply, bounce, unsubscribe, and silence.
+```
+
+The `sequence` skill generates a full cadence. Review the output against what you learned in Lesson 6:
+
+**Exit conditions to verify:**
+
+- **Reply:** Stop the sequence. Any reply — positive, negative, or "not now" — triggers a human handoff.
+- **Bounce:** Remove from sequence. Invalid contact.
+- **Unsubscribe:** Remove immediately. Legal requirement.
+- **Silence after 6 touches:** Exit to nurture. Do not keep pushing.
+
+Check for personalisation decay across the sequence. Touch 1 should reference the Port Qasim expansion. Touch 6 should still reference something specific to Crescent — not a generic "following up on my previous message." If the later touches decay into templates, that is Over-Automation from Lesson 6. Flag it and ask the agent to maintain specificity.
+
+---
+
+### Step 5: Brief
+
+Assume Crescent's VP Operations responds to Touch 2. She agrees to a discovery call next Thursday. Prepare:
+
+```
+Prepare a pre-call brief for my discovery call with Crescent Freight.
+The VP Operations responded to our LinkedIn outreach about the
+Port Qasim warehouse expansion. Call is scheduled for Thursday.
+```
+
+The `pre-call-brief` skill assembles meeting preparation from every upstream stage — research context, scoring rationale, outreach history, and engagement signals.
+
+**What to verify in the brief:**
+
+- Does it reference the specific hook that got the response (Port Qasim expansion)?
+- Does it include discovery questions drawn from the research brief?
+- Does it carry forward any hallucination warnings from Stage 1?
+- Does it suggest talking points based on Crescent's ICP fit dimensions?
+
+The brief should feel like a document prepared by someone who has been following this prospect for weeks. That is the pipeline working — six stages of accumulated intelligence converging into one preparation document.
+
+---
+
+### Step 6: Follow-Up
+
+Assume the call went well. Crescent's VP confirmed the expansion timeline, mentioned they are evaluating two vendors including NexaFlow, and wants a technical demo next week. Write the follow-up:
+
+```
+Write a follow-up email for Crescent Freight. Call notes:
+VP confirmed Port Qasim warehouse goes live Q3. Evaluating
+NexaFlow and one competitor. Wants a technical demo next
+Tuesday. Key concern: integration with their existing SAP
+dispatch system. Action: send SAP integration case study
+before demo.
+```
+
+The `follow-up` skill generates the email. Apply the Context Loss test from Lesson 7: does the follow-up reference specific conversation points, or is it a generic "great speaking with you" template?
+
+**Specific references to check:**
+
+- Port Qasim Q3 timeline
+- SAP dispatch integration concern
+- Technical demo on Tuesday
+- SAP integration case study as the deliverable
+
+If the follow-up misses any of these, you have Context Loss. The fix is operational: include the call notes in your prompt so the skill has the intelligence to reference. The agent uses what you give it. It cannot reference a conversation it was not told about.
+
+---
+
+## Garbage In, Garbage Out
+
+You just ran a complete pipeline with NexaFlow's calibrated ICP — the one you validated against 20 closed-won deals in Lesson 2. Now run the same pipeline with a deliberately weak configuration.
+
+### The Weak ICP
+
+Open `sales-marketing.local.md` and replace the ICP with a minimal version:
+
+```yaml
+icp:
+  firmographic:
+    industries: ["Any"]
+    company_size:
+      employees_min: 1
+      employees_max: 100000
+    geography:
+      primary: ["Global"]
+```
+
+No technographic signals. No timing signals. No persona profiles. No negative signals. No data sources. This is the ICP equivalent of "sell to everyone."
+
+### Running the Same Pipeline
+
+Run the same six stages for Crescent Freight with the weak ICP. At each stage, compare the output to what you got with the strong ICP:
+
+| Stage     | Strong ICP Output                                        | Weak ICP Output                                             | What Changed                        |
+| --------- | -------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------- |
+| Research  | Specific intelligence brief                              | Same — research does not use ICP                            | No change yet                       |
+| Score     | 76/100 — meaningful dimensions                           | 95/100 — everything scores high because nothing is filtered | Score inflated, signal destroyed    |
+| Outreach  | References Port Qasim, ops manager hiring, specific pain | Generic "we help freight companies" message                 | Personalisation lost                |
+| Sequence  | 6 touches with Crescent-specific hooks                   | 6 touches with generic templates                            | Personalisation decays from Touch 1 |
+| Brief     | Actionable preparation with discovery questions          | Vague preparation with no targeted questions                | Meeting advantage lost              |
+| Follow-up | References specific call points                          | Generic template regardless of call quality                 | Context reduced to minimum          |
+
+The research brief is identical — `prospect-research` does not reference the ICP. But from Stage 2 onward, every output degrades. The score is meaningless because everything is a fit. The outreach is generic because the ICP provides no targeting guidance. The sequence decays because there are no prospect-specific hooks to sustain personalisation. The brief is vague because the scoring rationale is empty. The follow-up defaults to a template because there is no upstream intelligence to carry forward.
+
+**The pipeline amplifies whatever you put into it.** A strong ICP at the top produces specific, actionable output at every stage. A weak ICP at the top produces generic output that gets worse at every stage. This is why Lesson 2 — ICP calibration — is the most important lesson in this chapter. Everything downstream depends on it.
+
+:::warning Restore Your Config
+After running the weak-ICP comparison, restore `sales-marketing.local.md` to the validated ICP from Lesson 2. Do not leave the weak config in place — every command you run from this point forward will use whatever configuration is active.
 :::
 
-### Stage 6: The Meeting
+---
 
-The meeting happens. You walk in with the pre-call brief, have a productive 25-minute conversation, and take rough notes:
+## The Time Comparison
 
-```
-Meeting Notes (handwritten / quick capture):
-- Mehreen confirmed: PostgreSQL is hitting limits at ~120K
-  deliveries/day, target is 400K by Q4
-- They have NOT chosen Kafka yet — evaluating Kafka vs
-  Redpanda vs managed streaming
-- Budget: "We have infrastructure budget but Farhan needs
-  to approve anything over $3K/month"
-- Secondary pain: UAE TRA compliance for Gulf fleet data
-  (she raised it, not us)
-- Timeline: Decision in 6-8 weeks, want POC before Eid
-- Mehreen mentioned they raised a seed round (not Series A)
-  from Sarmayacar, not Indus Valley Capital
-- Action items: Send architecture comparison doc, schedule
-  technical deep-dive with their lead engineer (Usman)
-```
+Track how long each pipeline stage takes with the Revenue Engine versus doing it manually.
 
-Two critical findings in those notes. First, Mehreen confirmed the funding was a seed round from Sarmayacar — the research brief hallucinated both the round type (Series A vs seed) and the investor (Indus Valley Capital vs Sarmayacar). Second, the $3K approval threshold is below your ICP's $5K-$10K range, which means the deal requires CEO approval for anything meaningful.
+| Stage     | AI-Assisted Time                              | Farah (Manual)                                      | Ahmed (Skips It)                           |
+| --------- | --------------------------------------------- | --------------------------------------------------- | ------------------------------------------ |
+| Research  | 2 minutes (generate + review)                 | 45 minutes (Companies House, LinkedIn, news search) | 4 minutes (skim LinkedIn headline)         |
+| Score     | 30 seconds (generate + evaluate)              | 10 minutes (mental scoring against criteria)        | 0 minutes (gut feeling)                    |
+| Outreach  | 2 minutes (generate + Five Laws audit)        | 20 minutes (draft, revise, check specificity)       | 3 minutes (send template)                  |
+| Sequence  | 2 minutes (generate + review exit conditions) | 45 minutes (plan 6 touches, write each one)         | 0 minutes (no sequence, single touch only) |
+| Brief     | 2 minutes (generate + verify intelligence)    | 30 minutes (assemble from notes, CRM, research)     | 0 minutes (walks in cold)                  |
+| Follow-up | 1 minute (generate + context check)           | 15 minutes (write specific follow-up from notes)    | 2 minutes (generic "thanks for the call")  |
+| **Total** | **~10 minutes**                               | **~2 hours 45 minutes**                             | **~9 minutes**                             |
 
-### Stage 7: Call Summary
+Farah spends nearly three hours on a single prospect. She produces excellent output because she does the work. Ahmed spends nine minutes and produces minimal output because he skips most stages.
 
-Feed your meeting notes to the Anthropic `/call-summary` command:
-
-```
-/call-summary
-```
-
-The agent prompts you to paste or describe the meeting. You provide your notes. It produces:
-
-```
-══════════════════════════════════════════════════════════════
-          CALL SUMMARY
-          NexaFlow Technologies — Mehreen Qazi (CTO)
-          2026-03-17
-══════════════════════════════════════════════════════════════
-
-KEY FINDINGS
-─────────────────────────────────────────────────────────────
-1. Pain confirmed: PostgreSQL scaling at 120K deliveries/day,
-   target 400K by Q4 2026
-2. Evaluation phase: Kafka vs Redpanda vs managed streaming
-   — no decision yet
-3. Budget gate: $3K/month CTO authority, CEO approval above
-4. Secondary need: UAE TRA data residency for Gulf fleet data
-5. Timeline: 6-8 week decision window, POC before Eid
-
-CORRECTIONS TO PRIOR INTELLIGENCE
-─────────────────────────────────────────────────────────────
-• Funding: Seed round from Sarmayacar (NOT Series A from
-  Indus Valley Capital as research brief stated)
-• Delivery volume: 120K current (NOT 50K as research brief
-  estimated)
-
-ACTION ITEMS
-─────────────────────────────────────────────────────────────
-□ Send architecture comparison: Kafka vs Redpanda vs managed
-  streaming (owner: you, by Friday)
-□ Schedule technical deep-dive with Usman (lead engineer)
-  (owner: you, next week)
-□ Prepare POC proposal with pricing under $3K/month initial
-  tier (owner: you, before next meeting)
-
-DEAL STAGE: DISCOVERY → EVALUATION
-NEXT MEETING: Technical deep-dive with Usman, week of Mar 24
-
-══════════════════════════════════════════════════════════════
-```
-
-**Data flow trace:** The call summary captured meeting-specific intelligence (confirmed pain, corrected funding, action items) and produced a structured record. Notice the "Corrections to Prior Intelligence" section — the summary flagged where the meeting contradicted earlier research. This is valuable. It means the pipeline can self-correct when human-gathered intelligence overrides agent-generated estimates.
-
-### Stage 8: CRM Update
-
-The `pipeline` skill takes the call summary and updates the deal record:
-
-```
-══════════════════════════════════════════════════════════════
-          PIPELINE UPDATE — NexaFlow Technologies
-══════════════════════════════════════════════════════════════
-
-DEAL RECORD
-─────────────────────────────────────────────────────────────
-Deal Stage:       Evaluation (moved from Discovery)
-Score:            81/100 → Updated to 78/100 (Timing adjusted
-                  for 6-8 week cycle; Fit confirmed)
-Primary Contact:  Mehreen Qazi, CTO
-Technical Contact: Usman (Lead Engineer) — NEW
-Decision Maker:   Farhan Ahmed, CEO (for deals > $3K/month)
-
-SCORE DIMENSIONS (updated)
-─────────────────────────────────────────────────────────────
-Fit:              28/35 → 30/35 (pain confirmed, tech match)
-Timing:           31/35 → 24/35 (6-8 weeks, not immediate)
-Engagement:       22/30 → 24/30 (responded, meeting held)
-
-NEXT STEPS
-─────────────────────────────────────────────────────────────
-1. Architecture comparison doc → Mar 21
-2. Technical deep-dive with Usman → week of Mar 24
-3. POC proposal (sub-$3K tier) → before next meeting
-
-FOLLOW-UP DATE: March 21, 2026
-
-══════════════════════════════════════════════════════════════
-```
-
-**Data flow trace:** The `pipeline` skill updated the deal stage, adjusted the score based on meeting intelligence, added a new contact (Usman), and set concrete next steps with dates. It preserved the three-dimension scoring breakdown — Fit, Timing, Engagement — not just the total score.
-
-That is the full pipeline. Eight stages. Research through CRM update. Each stage consumed upstream output and produced downstream input.
+The pipeline gives every rep Farah's output quality in Ahmed's timeframe. That is the value proposition of the Revenue Engine: research depth in minutes, not hours. But only when the ICP is calibrated. With a weak ICP, the pipeline produces Ahmed's output quality — generic, unfocused, no competitive advantage — regardless of how fast it runs.
 
 ---
 
-## Context Loss: The Invisible Pipeline Failure
+## What You Built
 
-The NexaFlow pipeline worked well. Intelligence flowed through. Hallucination warnings persisted. Meeting corrections propagated. But that was the happy path. Now see what happens when the pipeline breaks.
+- Complete prospect-to-meeting pipeline for Crescent Freight (all 6 stages, one session)
+- Understanding: the pipeline amplifies config quality — strong ICP produces strong output at every stage, weak ICP produces garbage at every stage
+- Time comparison: AI-assisted pipeline (~10 minutes) versus manual preparation (~2 hours 45 minutes)
 
-**Context Loss** is when a downstream stage fails to reference intelligence that an upstream stage already gathered. The information was there — it was produced, it was available — but the downstream stage did not use it. Context Loss is different from hallucinated data (L01), miscalibrated scoring (L03), compliance gaps (L04), or over-automation (L05). Those errors produce wrong output. Context Loss produces generic output when specific output was available.
+## Flashcards Study Aid
 
-### Where Context Loss Appears
-
-Run the full pipeline for NexaFlow again, but this time pay attention to the `follow-up` skill. After the meeting, you need to send a follow-up email. The `follow-up` skill generates one:
-
-```
-══════════════════════════════════════════════════════════════
-          FOLLOW-UP EMAIL — NexaFlow Technologies
-══════════════════════════════════════════════════════════════
-
-TO:               Mehreen Qazi
-SUBJECT:          Great conversation — next steps
-
-─────────────────────────────────────────────────────────────
-Hi Mehreen,
-
-Thank you for taking the time to speak with me today. It was
-a great conversation and I appreciated learning more about
-NexaFlow's data infrastructure plans.
-
-As discussed, I will send over the architecture comparison
-document by Friday and we can schedule a follow-up to go
-deeper on the technical requirements.
-
-Looking forward to continuing the conversation.
-
-Best regards,
-[Your name]
-
-══════════════════════════════════════════════════════════════
-```
-
-Read that email carefully. Now compare it to the pre-call brief and the meeting notes. What is missing?
-
-| Intelligence Available                                             | Used in Follow-Up?                  |
-| ------------------------------------------------------------------ | ----------------------------------- |
-| Mehreen confirmed PostgreSQL hitting limits at 120K deliveries/day | No                                  |
-| Evaluating Kafka vs Redpanda vs managed streaming                  | No                                  |
-| POC before Eid as timeline anchor                                  | No                                  |
-| UAE TRA compliance as secondary need                               | No                                  |
-| Usman (lead engineer) as technical deep-dive contact               | No                                  |
-| Budget threshold: $3K/month CTO authority                          | No                                  |
-| "Great conversation" + generic thanks                              | Yes (but carries zero intelligence) |
-
-The follow-up email is polite, professional, and completely generic. It could have been written for any prospect after any meeting. Every piece of specific intelligence gathered through six pipeline stages — the confirmed pain point, the technology evaluation, the Eid timeline, the UAE compliance need, the new contact, the budget gate — was available and was ignored.
-
-This is **Context Loss**. The `follow-up` skill generated its output without referencing the call summary, the pre-call brief, or the research brief. It defaulted to a template. The intelligence was there. It did not flow through.
-
-### What the Follow-Up Should Have Said
-
-Compare the generic version to a follow-up that uses upstream intelligence:
-
-```
-Hi Mehreen,
-
-Thank you for the conversation today. Three things stood out
-that I want to make sure we address properly:
-
-1. The PostgreSQL scaling challenge at 120K deliveries/day:
-   I will include specific benchmarks for the 120K → 400K
-   range in the architecture comparison, not generic
-   throughput numbers.
-
-2. Kafka vs Redpanda vs managed streaming: The comparison
-   document will cover all three options with our
-   recommendations for your PostgreSQL-to-streaming
-   migration path specifically.
-
-3. UAE TRA data residency: I will add a section on how our
-   Gulf region deployment handles TRA compliance, since you
-   mentioned this is a real constraint for fleet data.
-
-I will have the document to you by Friday. I will also reach
-out to Usman to schedule the technical deep-dive for next
-week — please let me know if there is a preferred time.
-
-Best,
-[Your name]
-```
-
-The difference is not style. The difference is data. The second version references three specific findings from the meeting, names the technical contact discovered during the call, and addresses the secondary pain point Mehreen raised. Every sentence carries intelligence from upstream stages.
-
-### Diagnosing the Break
-
-Where did Context Loss occur? Trace backwards:
-
-1. **Stage 7 (Call Summary):** Captured all key findings, corrections, and action items. Intelligence was present.
-2. **Stage 8 (Pipeline Update):** Used the call summary. Updated score, contacts, next steps. Intelligence was present.
-3. **Follow-up generation:** Did NOT reference the call summary. Did NOT reference the pre-call brief. Defaulted to a generic template.
-
-The break happened at the handoff between the call summary and the `follow-up` skill. The call summary was produced. The `follow-up` skill did not consume it. The `pipeline` skill did consume it. Two downstream stages, same upstream output, different results.
-
-**Why this happens:** Each skill operates with whatever context it receives in the prompt. If you invoke the `follow-up` skill without passing the call summary, it has no meeting intelligence to reference. It generates the best email it can from whatever context is available — which might be nothing more than the prospect name and a generic template.
-
-**The fix is operational, not technical.** When you invoke `follow-up`, include the call summary in the context. Copy the meeting notes or call summary output and reference it in your prompt. The skill can use intelligence it receives. It cannot use intelligence it was never given.
-
----
-
-## Garbage Propagation: When Stage 1 Is Wrong
-
-Context Loss is about intelligence that exists but does not flow. **Garbage propagation** is about intelligence that is wrong from the start — and gets worse at every stage.
-
-Return to the miscalibrated ICP from Lesson 2. In that lesson, the ICP was configured for "all companies, any size, any industry" — no filtering, no targeting. Now run the full pipeline with that broken ICP and watch the cascade.
-
-### The Cascade
-
-**Stage 1 — Research with broken ICP:**
-The research brief is identical — `/research-prospect` does not use the ICP. No damage yet.
-
-**Stage 2 — Scoring with broken ICP:**
-The scoring model evaluates NexaFlow against "all companies, any size, any industry." Every company is a fit. NexaFlow scores 95/100 — Fit is 35/35 because there are no fit criteria to fail. The score is technically correct (NexaFlow matches "any company") and completely useless. You cannot distinguish a strong prospect from a weak one because the model says everyone is strong.
-
-**Stage 3 — Qualification with inflated score:**
-Based on 95/100, NexaFlow looks like the best prospect in the pipeline. You allocate premium outreach resources. But the score is meaningless — it reflects the absence of criteria, not the presence of fit.
-
-**Stage 4 — Outreach with no targeting:**
-The `outreach` skill generates a message, but without ICP constraints, it has no guidance on what pain points to lead with, what value proposition to emphasise, or what buying signals to reference. The outreach becomes generic: "We help companies with data challenges." That is a pitch, not a personalised message. It violates Law 1 (Specificity) and Law 3 (Personalisation) from Lesson 5.
-
-**Stage 5 — Pre-call brief with no focus:**
-The `pre-call-brief` skill assembles meeting preparation from upstream stages. But the research has no ICP filter, the score has no meaningful dimensions, and the outreach was generic. The brief says "NexaFlow is a strong fit" without explaining why. The conversation starters are vague. The cautions section is empty because the scoring model flagged nothing.
-
-**Stage 6 — The meeting:**
-You walk in with a brief that tells you nothing specific. The meeting becomes discovery from scratch — exactly the scenario the pipeline was built to prevent. Mehreen asks "What do you know about our challenges?" and you have nothing beyond what a five-minute LinkedIn search would yield. The 25 minutes of research, scoring, and outreach preparation produced no usable advantage.
-
-**One wrong input at Stage 1. Six stages of amplification. Zero pipeline value at Stage 6.**
-
-This is garbage propagation. The pipeline does not average errors — it amplifies them. A miscalibrated ICP does not just produce a bad score. It produces a bad score that produces bad outreach that produces a bad brief that produces a wasted meeting. Each stage trusts its upstream input. If that input is wrong, the trust compounds the error.
-
-| Stage             | With Correct ICP         | With Broken ICP               | Error Amplification              |
-| ----------------- | ------------------------ | ----------------------------- | -------------------------------- |
-| 1. Research       | Targeted intelligence    | Same (ICP not used here)      | None yet                         |
-| 2. Score          | 81/100 (meaningful)      | 95/100 (meaningless)          | Score inflated, signal destroyed |
-| 3. Qualify        | Proceed with caveats     | Proceed with false confidence | Decision based on bad data       |
-| 4. Outreach       | Personalised, specific   | Generic, unfocused            | Lost personalisation             |
-| 5. Pre-call brief | Actionable preparation   | Empty preparation             | No meeting advantage             |
-| 6. Meeting        | Lead with confirmed pain | Discover from scratch         | Pipeline value = zero            |
-
-The lesson: **the pipeline is only as good as its weakest input.** A well-configured ICP propagates precision through every stage. A misconfigured ICP propagates noise.
-
----
-
-## Failure Analysis: Two Pipeline Breaks
-
-You are reviewing pipeline outputs from two reps on your team. Each pipeline has a failure. Identify where it originated and what it affects downstream.
-
-### Failure A: Wrong Prospect's Research
-
-The `pre-call-brief` for NexaFlow Technologies contains this section:
-
-```
-PROSPECT CONTEXT (from research brief)
-─────────────────────────────────────────────────────────────
-Company:          Meridian Logistics — supply-chain management
-                  firm in London, UK
-Size:             200-350 employees
-Tech Stack:       Java (Spring Boot), React, MongoDB, Azure
-```
-
-The brief is for NexaFlow but the prospect context describes Meridian Logistics. The conversation starters reference MongoDB migration (Meridian's stack) instead of PostgreSQL scaling (NexaFlow's pain). The meeting objectives discuss UK supply-chain compliance instead of Gulf telemetry scaling.
-
-**Diagnosis:** The `pre-call-brief` skill was invoked with the wrong prospect identifier. It pulled Meridian's research brief instead of NexaFlow's. This is a data routing error — the intelligence is accurate for Meridian, but it was delivered to the wrong pipeline. Every section of the brief that references prospect context is contaminated. The scoring context, engagement history, and meeting objectives are all based on the wrong company.
-
-**Impact:** If the rep walks into the NexaFlow meeting with Meridian's brief, every conversation starter will reference the wrong technology, the wrong pain point, and the wrong geography. The prospect will conclude the rep did no preparation at all.
-
-**Fix:** Verify the prospect identifier at each stage. Before running `pre-call-brief`, confirm the prospect ID matches the intended company. This is a human checkpoint, not an automated one — the agent cannot detect that it loaded the wrong prospect.
-
-### Failure B: Scoring Dimensions Dropped
-
-The `pipeline` skill produced this CRM update for a different prospect:
-
-```
-DEAL RECORD
-─────────────────────────────────────────────────────────────
-Deal Stage:       Evaluation
-Score:            76/100
-Primary Contact:  Sarah Chen, CTO
-Next Steps:       Send proposal by March 28
-```
-
-Compare this to the full scoring output from Stage 2:
-
-```
-Fit:              22/35 — Weak industry match, strong size match
-Timing:           29/35 — Active evaluation, Q2 deadline
-Engagement:       25/30 — Inbound interest, conference meeting
-```
-
-The CRM update records only the total score (76). The three dimension scores — Fit, Timing, Engagement — are missing. The total score says "Warm." The dimensions tell a different story: weak Fit (22/35) means this prospect is outside your ICP, but strong Timing (29/35) and Engagement (25/30) mean they are actively looking and interested.
-
-**Diagnosis:** The `pipeline` skill summarised the score instead of preserving the dimensions. This is Context Loss — the detailed scoring intelligence was available but was not carried through to the CRM record.
-
-**Impact:** A manager reviewing the pipeline sees "76/100 — Warm" and deprioritises the deal. With the dimensions visible, the manager would see "Weak Fit but High Timing and Engagement" and might make a different call — perhaps this is a prospect worth pursuing because their active buying timeline compensates for imperfect ICP match. The collapsed score hides the strategic nuance.
-
-**Fix:** When running the `pipeline` skill, explicitly request dimension-level scoring in the CRM update. Include "preserve Fit, Timing, and Engagement scores separately" in your prompt. The skill will include what you ask for.
-
----
-
-## Hands-On: Run Your Own Pipeline
-
-Map your actual sales process to the eight-stage pipeline. You do not need to match the plugin's stages exactly — your process may have more stages, fewer stages, or different stages. The goal is to trace data flow through your real workflow.
-
-### Step 1: Map Your Stages
-
-Write down your current sales process, stage by stage. For each stage, answer:
-
-- What information enters this stage?
-- What information leaves this stage?
-- Who is responsible — human or agent?
-- Where does context get lost between your stages today?
-
-### Step 2: Run a Real Prospect
-
-Pick a prospect currently in your pipeline. Run the full eight-stage sequence:
-
-```
-/research-prospect [Company] [City]
-/score-lead [prospect-id]
-```
-
-Make the qualification decision. Generate outreach using the `outreach` skill. If you have a meeting scheduled, generate a pre-call brief using the `pre-call-brief` skill.
-
-### Step 3: Trace the Data Flow
-
-At each stage, document:
-
-1. **What arrived from upstream?** List the specific intelligence the stage received.
-2. **What was generated fresh?** List what the stage added that was not in upstream output.
-3. **What was lost?** Identify any upstream intelligence that was available but not referenced.
-4. **What was wrong?** Identify any claims that were hallucinated, inflated, or misrouted.
-
-### Step 4: Evaluate the Pipeline
-
-After running the full sequence, answer these questions:
-
-- Where did the agent add the most value? (Which stage saved you the most time?)
-- Where did the agent need the most correction? (Which stage required the most human review?)
-- Where did you find Context Loss? (Which stages dropped upstream intelligence?)
-- Where would a human catch an error that the agent missed?
-
-Write down your findings. Your pipeline trace is the foundation for Lessons 7 through 11, where you will optimise individual stages, resolve skill collisions, and build custom extensions.
-
----
+<Flashcards />
 
 ## Try With AI
 
-**Setup:** Open Claude Code with your sales-marketing plugins installed and `sales-marketing.local.md` configured.
+Use these prompts in Claude or your preferred AI assistant to practise the pipeline skills from this lesson.
 
-**Prompt 1:**
-
-```
-Run /research-prospect for a company I know well: [Company Name]
-[City]. Then run /score-lead on the result. Compare the research
-brief and the score. Does the score reference specific findings
-from the research brief, or does it score generically? Identify
-any intelligence from the research brief that the scoring model
-ignored.
-```
-
-**What you are learning:** How to trace data flow between two consecutive pipeline stages and identify where intelligence is preserved versus lost in the handoff.
-
-**Prompt 2:**
+### Prompt 1 (Reproduce)
 
 ```
-Generate a follow-up email for this prospect using the follow-up
-skill. Then manually rewrite the email to include 3 specific
-findings from the research brief that the generated email missed.
-Compare the two versions. Which would you actually send?
+Run the full 6-step pipeline for Crescent Freight (Karachi):
+1. Research — full intelligence brief
+2. Score — three-dimension lead score
+3. Outreach — LinkedIn DM referencing a specific trigger
+4. Sequence — 6-touch, 21-day cadence with exit conditions
+5. Brief — pre-call preparation (assume prospect responded)
+6. Follow-up — post-call email (assume call confirmed timeline)
+
+At each step, document: what data arrived from the previous step,
+what the agent added fresh, and your total elapsed time.
 ```
 
-**What you are learning:** How to diagnose Context Loss by comparing agent output against available upstream intelligence, and how to manually compensate when the pipeline drops context.
+**What you are learning:** How to execute the complete pipeline as a connected workflow rather than isolated commands. By tracking data flow between stages, you see where the pipeline preserves intelligence and where it drops context. The elapsed time gives you a baseline to compare against manual preparation.
+
+### Prompt 2 (Adapt)
+
+```
+Run the pipeline for a prospect in a DIFFERENT market — pick a
+company in the UAE or UK instead of Pakistan.
+
+At each stage, note where the output changes (compliance language,
+cultural tone, channel selection, data availability) and where it
+stays the same (pipeline structure, scoring dimensions, exit
+conditions).
+```
+
+**What you are learning:** How market context affects pipeline output while pipeline structure stays constant. The scoring dimensions (Fit, Timing, Engagement) work the same way regardless of geography, but the outreach tone, compliance requirements, and data availability change significantly between Pakistan, UAE, and UK markets.
+
+### Prompt 3 (Apply)
+
+```
+Run the pipeline for a real prospect from your own network.
+
+At each stage, rate the output:
+- READY: could use as-is, no edits needed
+- NEEDS EDITING: close but needs tweaks before sending
+- REDO: not usable, would need to regenerate with better context
+
+What is your average across all 6 stages? Where did the pipeline
+produce the strongest output? Where did it need the most correction?
+```
+
+**What you are learning:** How to evaluate pipeline output quality against your professional standards. A pipeline that produces all-READY output is configured well. A pipeline that produces mostly-REDO output has a config problem upstream — usually the ICP, the brand voice, or the competitive intelligence. Your ratings tell you where to invest configuration time.
