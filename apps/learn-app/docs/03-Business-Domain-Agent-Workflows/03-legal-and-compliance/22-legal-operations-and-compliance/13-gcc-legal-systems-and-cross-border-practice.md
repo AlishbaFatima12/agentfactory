@@ -48,7 +48,7 @@ skills:
     measurable_at_this_level: "Student can fill in a before/after transformation model using their own organisation's data (or the reference model), calculate monthly hours saved across six legal functions, and distinguish what changes with legal AI from what does not change (attorney obligation, privilege, judgment)"
 
 learning_objectives:
-  - objective: "Run a multi-jurisdiction contract review using /review-contract with dual overlay loading and identify the cross-border compliance issues that emerge specifically from the DIFC-Saudi intersection"
+  - objective: "Run a multi-jurisdiction contract review using /review-contract with dual overlay loading and identify the cross-border compliance issues that emerge from the DIFC-Saudi intersection"
     proficiency_level: "B2"
     bloom_level: "Apply"
     assessment_method: "Student runs the PayStream/CloudVault review, identifies the dual data protection requirement (DIFC DP Law + Saudi PDPL), the SAMA outsourcing alert, and the data localisation obligation in the output"
@@ -81,9 +81,9 @@ differentiation:
 
 # GCC Legal Systems and Cross-Border Practice
 
-In L04, you reviewed a cross-border contract across Pakistan, UAE, and Saudi Arabia and learned the five pitfalls that multi-jurisdiction contracts create. Now you go deeper into the GCC's unique legal landscape -- a region where two companies in the same city can operate under fundamentally different legal systems, and where a single contract can trigger data protection obligations under three separate regulators.
+In L04, you learned the five cross-border pitfalls and saw how jurisdiction overlays shape contract review. In L12, you applied employment law overlays for Pakistan and UK. Now you work with the most complex multi-jurisdiction environment in legal AI: the GCC.
 
-Fatima Al-Rashidi at PayGulf Technologies reviews 15 vendor contracts per month. Three of those involve DIFC-registered counterparties contracting with Saudi entities. Every one triggers dual data protection compliance, SAMA outsourcing scrutiny, and governing law questions that a single-jurisdiction review would miss entirely. Before the plugin, each of these reviews took a full day. The dual overlay loading cuts that to 45 minutes of attorney review time -- but only if the zone identification step is correct.
+Fatima Al-Rashidi at PayGulf Technologies reviews 15 vendor contracts per month from her DIFC office. Three of those involve DIFC-registered counterparties contracting with Saudi entities. Every one triggers dual data protection compliance, SAMA outsourcing scrutiny, and governing law questions that a single-jurisdiction review would miss. Before the plugin, each of these reviews took a full day. The dual overlay loading cuts that to 45 minutes of attorney review time -- but only if the zone identification step is correct.
 
 ## The GCC Dual Legal System
 
@@ -99,7 +99,9 @@ AED 920,000 per year. We are SAMA-regulated. Our data includes
 payment transaction data for Saudi consumers.
 ```
 
-Before reading the output, notice the jurisdiction header:
+Before reading the output, predict: will the jurisdiction header show one overlay or more than one? Think about where PayStream is based, where CloudVault is registered, and where the data subjects live.
+
+The jurisdiction header shows:
 
 ```
 JURISDICTION: DIFC Law (DIFC common law overlay loaded)
@@ -109,9 +111,9 @@ JURISDICTION: DIFC Law (DIFC common law overlay loaded)
               - Data subjects: Saudi Arabia (Saudi PDPL applies)
 ```
 
-The output shows two different data protection frameworks loaded simultaneously. Why? Because the UAE is not one legal system. It is at least three.
+Two different data protection frameworks loaded simultaneously. Why? Because the UAE is not one legal system. It is at least three.
 
-**Mainland UAE** operates under a civil law system influenced by Egyptian and French legal traditions. The primary governing statute for contracts is the UAE Civil Code (Federal Law No. 5 of 1985). Article 390 allows courts to reduce liquidated damages they consider excessive -- a material risk for contracts relying on penalty clauses as deterrents. Arabic is the official court language, and the Arabic version of a contract may prevail over the English version in mainland courts.
+**Mainland UAE** operates under a civil law system influenced by Egyptian and French legal traditions. The primary governing statute for contracts is the UAE Civil Code (Federal Law No. 5 of 1985). Article 390 allows courts to reduce liquidated damages they consider excessive. Arabic is the official court language, and the Arabic version of a contract may prevail over the English version in mainland courts.
 
 **DIFC** (Dubai International Financial Centre) is an independent common law jurisdiction within Dubai, established by Dubai Law No. 9 of 2004. It operates its own courts conducting proceedings in English, its own financial regulator (DFSA), and its own data protection law (DIFC Data Protection Law 2020, aligned with GDPR). DIFC judgments are internationally enforceable in over 30 jurisdictions.
 
@@ -149,7 +151,7 @@ For each scenario, identify which legal zone applies. Write your answers before 
 4. **Dual jurisdiction.** The mainland company is subject to UAE Civil Code. The DIFC firm operates under DIFC law. The governing law clause determines which system interprets the contract, but both parties' regulatory obligations persist regardless.
 5. **DIFC.** Employment contracts for DIFC-based employees fall under the DIFC Employment Law No. 2 of 2019, not UAE Federal Labour Law.
 
-Notice that scenarios 3 and 4 are not single-zone answers. Cross-zone contracts within the UAE create the same dual-overlay complexity as cross-border contracts between different countries.
+Scenarios 3 and 4 are not single-zone answers. Cross-zone contracts within the UAE create the same dual-overlay complexity as cross-border contracts between different countries.
 
 ## Worked Example: PayStream + CloudVault -- Riyadh Deployment
 
@@ -188,11 +190,13 @@ REDLINE:    "CloudVault shall process Customer Data exclusively
 PRIORITY:   Must-have
 ```
 
-This RED flag exists specifically because the contract crosses the DIFC-Saudi boundary. A review under DIFC law alone would have checked CloudVault's processing against DIFC Data Protection Law 2020 -- and the clause would pass. A review under Saudi law alone would have applied Saudi contract law analysis instead of DIFC common law. The dual overlay catches what neither jurisdiction alone would flag: the Saudi PDPL data localisation requirement applied to data processed by a DIFC entity.
+This RED flag exists because the contract crosses the DIFC-Saudi boundary. A review under DIFC law alone would have checked CloudVault's processing against DIFC Data Protection Law 2020 -- and the clause would pass. A review under Saudi law alone would have applied Saudi contract law analysis instead of DIFC common law. The dual overlay catches what neither jurisdiction alone would flag: the Saudi PDPL data localisation requirement applied to data processed by a DIFC entity.
 
 The SAMA outsourcing alert is equally specific. PayStream is a SAMA-regulated payment services provider. SAMA Outsourcing Regulations require that regulated entities and the regulator itself have audit rights over outsourced service providers. The contract's audit clause -- once per year with 60 days' notice -- is insufficient for regulatory-triggered audits that SAMA may require on shorter notice.
 
 > **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
+
+Now consider how Noor Technologies encounters the same pattern. Ayesha Malik is expanding Noor's Cloud ERP into the UAE market. When Noor Technologies (Karachi) contracts with a DIFC-registered distribution partner, Ayesha faces the same dual-overlay pattern -- Pakistani law for Noor's obligations plus DIFC law for the partner. The five cross-border pitfalls from L04 all apply, but with the added complexity of DIFC being a separate common law system within the UAE rather than a separate country. The zone identification step is the first question she must answer before any analysis begins.
 
 ## What Changes, What Does Not Change
 
@@ -233,7 +237,9 @@ Fill in your own numbers. If you do not have real data, use the reference model 
 | Legal spend review    | Monthly             | \_\_\_ hours           | \_\_\_              | 30 min review         | \_\_\_             | \_\_\_      |
 | **Total**             |                     |                        | **\_\_\_**          |                       | **\_\_\_**         | **\_\_\_**  |
 
-At your blended internal attorney cost of **_ per hour, the monthly saving is _**. This is capacity recaptured for strategic work, business partnering, and the professional judgment tasks in the "what does not change" column.
+At your blended internal attorney cost of **\_\_\_** per hour, the monthly saving is **\_\_\_**. This is capacity recaptured for strategic work, business partnering, and the professional judgment tasks in the "what does not change" column.
+
+For Noor Technologies, Ayesha and Bilal handle 12 vendor contracts and 25 NDAs per month with a two-person team. Using the reference model: contract review alone saves 30-39 hours per month, and NDA triage saves 10-17 hours. That is 40-56 hours of recaptured capacity -- more than a full working week -- redirected from administrative review to strategic legal work.
 
 ## The Plugin Is Infrastructure, Your Playbook Is the Product
 
@@ -308,6 +314,28 @@ summary of total hours saved and cost impact.
 
 **What you are learning:** The transformation tables are a planning tool, not a hypothetical exercise. Building your own version forces you to assess your current legal operations capacity honestly and identify the specific functions where the plugin delivers the most immediate value. Organisations with high DSAR volume see the largest per-item savings. Organisations with high NDA volume see the largest aggregate savings because triage automation eliminates the most repetitive work.
 
----
+### Prompt 3: Cross-Border GCC Scenario
 
-Continue to [Lesson 14: The Legal Operations Sprint ->](./14-the-legal-operations-sprint.md)
+```
+Two companies are negotiating a technology services contract:
+
+Party A: A fintech company registered in the ADGM (Abu Dhabi),
+regulated by the FSRA.
+Party B: A cloud infrastructure provider incorporated in
+mainland Bahrain.
+
+The services will be delivered to end-users in Saudi Arabia.
+
+Analyse this contract scenario:
+1. Identify all jurisdictions involved and which legal system
+   applies to each party.
+2. List which data protection laws apply and where they overlap.
+3. Identify which of the five cross-border pitfalls from L04
+   are triggered.
+4. Explain how this scenario differs from the DIFC-Saudi
+   scenario in this lesson.
+5. Draft the governing law and dispute resolution clause you
+   would recommend.
+```
+
+**What you are learning:** Each GCC jurisdiction combination creates a different risk profile. ADGM applies English common law directly (unlike DIFC, which developed its own common law principles). Bahrain has its own Personal Data Protection Law (Law No. 30 of 2018). Adding a third GCC jurisdiction forces you to apply the zone identification discipline beyond the DIFC-Saudi pair covered in this lesson. The exercise builds the pattern recognition that lets you anticipate jurisdiction complexity before the agent flags it.

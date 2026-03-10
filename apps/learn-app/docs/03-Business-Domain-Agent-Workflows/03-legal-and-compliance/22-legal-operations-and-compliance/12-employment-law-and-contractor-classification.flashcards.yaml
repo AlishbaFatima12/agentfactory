@@ -1,0 +1,79 @@
+deck:
+  id: "ch22-12-employment-law-contractor-classification"
+  title: "Employment Law and Contractor Classification"
+  description: "How employment contracts differ from commercial contracts, the five contractor-vs-employee classification indicators, substance-over-form principle, cross-border employment structural options, and jurisdiction-specific non-compete enforceability"
+  tags: ["legal-ops", "employment-law", "contractor-classification", "chapter-22"]
+  version: 1
+
+cards:
+  - id: "ch22-12-employment-law-001"
+    front: "What are the four critical ways employment contracts differ from commercial contracts in the Legal Ops playbook?"
+    back: "1. Mandatory terms override playbook positions (statutory minimums cannot be negotiated below).\n2. Non-compete enforceability is jurisdiction-dependent (standard in DIFC, restricted in Pakistan, void in California).\n3. Contractor vs employee classification is a tax and regulatory risk (misclassification triggers back-taxes and penalties).\n4. IP assignment requires jurisdiction-specific treatment (employer owns by default in UK, author owns unless assigned in Pakistan)."
+    difficulty: "intermediate"
+    tags: ["employment-vs-commercial"]
+
+  - id: "ch22-12-employment-law-002"
+    front: "What are the five contractor-vs-employee classification indicators?"
+    back: "1. Control — does the hiring party control how the work is done, or only the output?\n2. Tools — does the worker provide their own equipment and software?\n3. Financial risk — does the worker bear the risk of loss on the engagement?\n4. Exclusivity — can the worker serve multiple clients simultaneously?\n5. Permanence — is the relationship intended to be ongoing or project-based?"
+    difficulty: "basic"
+    tags: ["classification-indicators"]
+
+  - id: "ch22-12-employment-law-003"
+    front: "What is the substance-over-form principle in employment classification?"
+    back: "Tax authorities (HMRC, FBR, IRS) determine worker classification based on the economic reality of the relationship, not the label on the contract. A contract labelled 'Independent Contractor Agreement' will not prevent reclassification if the economic reality — control, tools, financial risk, exclusivity, permanence — points to employment."
+    difficulty: "intermediate"
+    tags: ["substance-over-form"]
+
+  - id: "ch22-12-employment-law-004"
+    front: "Why did the Brightpath/Tariq employment contract receive a RED escalation on employer registration?"
+    back: "Brightpath (UK) has no legal entity in Pakistan. Without a Pakistani entity, they cannot: (1) register as employer with EOBI, (2) deduct and remit income tax to FBR, or (3) register for PESSI provincial social security in Punjab. Operating a direct employment relationship without local registration creates immediate tax and regulatory exposure."
+    difficulty: "intermediate"
+    tags: ["employer-registration", "brightpath"]
+
+  - id: "ch22-12-employment-law-005"
+    front: "Why was the Brightpath non-compete clause (12 months worldwide) flagged as RED?"
+    back: "Under Pakistan Contract Act 1872, Section 27, agreements in restraint of trade are void unless reasonable — Pakistani courts typically enforce 6-12 months maximum, geographically limited to Pakistan, restricted to the specific type of work. Under English law, 12 months worldwide may also fail the reasonableness test for a developer role. The recommended redline narrows to 6 months, limited to Pakistan and UK, restricted to listed direct competitors."
+    difficulty: "advanced"
+    tags: ["non-compete", "section-27"]
+
+  - id: "ch22-12-employment-law-006"
+    front: "How does IP assignment differ between UK and Pakistan employment law?"
+    back: "UK: Under CDPA 1988 Section 11(2), copyright in works created in the course of employment vests in the employer automatically.\nPakistan: Under the Copyright Ordinance 1962, copyright vests in the author (the employee) unless assigned in writing.\nThe recommended approach is a belt-and-braces present assignment of future rights effective under both jurisdictions."
+    difficulty: "intermediate"
+    tags: ["ip-assignment", "copyright"]
+
+  - id: "ch22-12-employment-law-007"
+    front: "What are the three structural options for a UK company hiring a remote employee in Pakistan?"
+    back: "Option A: Establish a Pakistan subsidiary (3-6 months, $15-30K setup — best when 5+ employees planned).\nOption B: Employer of Record / EOR (1-2 weeks, $300-600/month per employee — best for 1-4 employees, testing the market).\nOption C: Genuine independent contractor (immediate, lowest cost — only valid if the relationship is truly project-based, non-exclusive, worker's own tools)."
+    difficulty: "intermediate"
+    tags: ["structural-options", "eor"]
+
+  - id: "ch22-12-employment-law-008"
+    front: "When is an Employer of Record (EOR) the recommended option for cross-border hiring?"
+    back: "When hiring 1-4 employees in a foreign jurisdiction to test the market. The EOR provides immediate compliance (employer registration, tax withholding, social security) without the overhead of incorporating locally. If the company scales to 5+ employees, they can transition to a subsidiary when the economics justify setup costs."
+    difficulty: "basic"
+    tags: ["eor", "recommendation"]
+
+  - id: "ch22-12-employment-law-009"
+    front: "Why can't Brightpath simply relabel Usman Tariq's employment as an 'independent contractor' to avoid registration requirements?"
+    back: "All five classification indicators point to employment: Usman works fixed hours (9-6), uses company equipment, earns a fixed salary with no financial risk, works exclusively for Brightpath, and has an ongoing role with no end date. Relabelling without changing the economic reality creates misclassification risk — HMRC or FBR would likely reclassify with back-taxes, penalties, and interest."
+    difficulty: "intermediate"
+    tags: ["misclassification", "substance-over-form"]
+
+  - id: "ch22-12-employment-law-010"
+    front: "What mandatory Pakistani employment obligations does /review-contract flag that do not exist in commercial contracts?"
+    back: "1. EOBI registration (Employees Old Age Benefits Institution) — mandatory for all employers.\n2. FBR income tax withholding — employer deduction and remittance obligation.\n3. PESSI registration (Punjab Employees Social Security Institution) — mandatory for Punjab-based employees.\nThese are statutory obligations that cannot be contracted away."
+    difficulty: "intermediate"
+    tags: ["pakistan-employment", "statutory-obligations"]
+
+  - id: "ch22-12-employment-law-011"
+    front: "How does non-compete enforceability vary across DIFC, Pakistan, and California?"
+    back: "UAE DIFC: 24-month worldwide non-compete is standard practice and routinely enforced under Employment Law No. 2 of 2019.\nPakistan: Subject to Contract Act 1872 Section 27 reasonableness test — courts typically enforce 6-12 months, geographically limited, restricted to specific work type.\nCalifornia: Non-competes are void entirely under Business and Professions Code Section 16600."
+    difficulty: "advanced"
+    tags: ["non-compete", "jurisdiction-comparison"]
+
+  - id: "ch22-12-employment-law-012"
+    front: "What is the governance rule when /review-contract processes an employment agreement?"
+    back: "The agent reviews, triages, drafts, and flags — but employment contracts intersect with mandatory statutory protections that vary by jurisdiction. The licensed attorney confirms the analysis, verifies regulatory interpretation for the employee's jurisdiction, and signs off before the agreement is executed. Do not execute an employment agreement in its current form when RED escalations exist."
+    difficulty: "basic"
+    tags: ["governance", "attorney-review"]

@@ -1,0 +1,67 @@
+deck:
+  id: "ch22-14-legal-operations-sprint"
+  title: "The Legal Operations Sprint"
+  description: "Capstone sprint exercises, Four Principles of Legal AI Deployment, command/skill/overlay/connector quick reference, playbook validation, and engine transferability"
+  tags: ["legal-ops", "capstone", "sprint", "chapter-22"]
+  version: 1
+
+cards:
+  - id: "ch22-14-sprint-001"
+    front: "What are the Four Principles of Legal AI Deployment?"
+    back: "1. The agent reviews, the attorney decides\n2. The playbook is the product (institutional knowledge drives differentiation)\n3. Process-level agents eliminate coordination overhead\n4. Jurisdiction-aware analysis is non-negotiable for cross-border work"
+    difficulty: "basic"
+    tags: ["four-principles"]
+
+  - id: "ch22-14-sprint-002"
+    front: "What are the 7 Anthropic Legal Plugin commands?"
+    back: "1. /review-contract — full contract review vs playbook\n2. /triage-nda — NDA pre-screening (Tier 1/2/3)\n3. /vendor-check — obligation and status check\n4. /brief — research, regulatory monitoring, IP\n5. /respond — DSAR, legal holds, routine responses\n6. /compliance-check — proactive regulatory assessment\n7. /signature-request — e-signature routing via DocuSign"
+    difficulty: "basic"
+    tags: ["commands", "quick-reference"]
+
+  - id: "ch22-14-sprint-003"
+    front: "What are the 6 Anthropic Legal Plugin skills?"
+    back: "1. contract-review — seven-phase analysis\n2. nda-triage — tier classification\n3. compliance — compliance assessment\n4. legal-risk-assessment — 5x5 severity-likelihood matrix\n5. meeting-briefing — structured prep document\n6. canned-responses — draft from template library"
+    difficulty: "basic"
+    tags: ["skills", "quick-reference"]
+
+  - id: "ch22-14-sprint-004"
+    front: "What are the 8 MCP connectors and their categories?"
+    back: "Communication: Gmail, Slack\nScheduling: Google Calendar\nE-signature: DocuSign\nStorage: Box, Egnyte\nProject: Atlassian\nProductivity: MS365"
+    difficulty: "intermediate"
+    tags: ["mcp-connectors"]
+
+  - id: "ch22-14-sprint-005"
+    front: "What are the 6 jurisdiction overlays available in the Legal Ops extension?"
+    back: "1. uk-overlay — English law, UCTA, UK GDPR, Companies Act\n2. uae-overlay — UAE Civil Code, mainland federal law\n3. difc-overlay — DIFC law, DFSA regulations, DIFC Courts\n4. pakistan-overlay — Contract Act 1872, PDPA, SECP requirements\n5. saudi-overlay — Saudi law, PDPL, SAMA regulations\n6. gcc-overlay — GCC-wide commercial registration, VAT"
+    difficulty: "intermediate"
+    tags: ["jurisdiction-overlays"]
+
+  - id: "ch22-14-sprint-006"
+    front: "What is playbook validation and why is it necessary?"
+    back: "Playbook validation tests your legal.local.md against executed contracts to detect calibration drift — cases where your configured positions no longer match actual negotiation outcomes. If 3 of your last 10 contracts accepted a liability cap below your configured minimum, either your threshold is wrong or your negotiators are conceding without updating the playbook."
+    difficulty: "intermediate"
+    tags: ["playbook-validation"]
+
+  - id: "ch22-14-sprint-007"
+    front: "What is the target NDA triage distribution for a calibrated system?"
+    back: "60% Tier 1 (auto-process), 25% Tier 2 (legal review), 15% Tier 3 (attorney escalation). If the actual distribution deviates significantly — for example, 40% Tier 3 — the thresholds need recalibration because too many NDAs are being escalated unnecessarily."
+    difficulty: "intermediate"
+    tags: ["nda-triage", "calibration"]
+
+  - id: "ch22-14-sprint-008"
+    front: "What does Principle 2 ('The playbook is the product') mean in practice?"
+    back: "The Legal Plugin out of the box is a capable tool using generic standards. Configured with a mature, validated, institution-specific negotiation playbook, it becomes a competitive advantage. The playbook encodes risk tolerance, negotiation positions, and hard boundaries — institutional knowledge that the agent cannot generate independently. Infrastructure gets commoditised; institutional knowledge does not."
+    difficulty: "intermediate"
+    tags: ["four-principles", "playbook"]
+
+  - id: "ch22-14-sprint-009"
+    front: "What does Principle 3 ('Process-level agents eliminate coordination overhead') mean?"
+    back: "Document-level tools (contract review, NDA triage) reduce time per task. Process-level agents — Contract Intake, Regulatory Monitoring, Compliance Calendar, DSAR Management — eliminate the chasing, tracking, escalating, and reporting that consumes legal operations capacity. The coordination overhead (40-60% of legal ops time) is where the largest efficiency gains occur."
+    difficulty: "advanced"
+    tags: ["four-principles", "agents"]
+
+  - id: "ch22-14-sprint-010"
+    front: "What three categories determine legal operations engine transferability to a new organisation?"
+    back: "1. What transfers directly (zero changes): command structure, triage tiers, dashboard metrics, DSAR workflow\n2. What needs reconfiguration: playbook positions, jurisdiction overlays, compliance calendar, risk thresholds\n3. What is organisation-specific (does not exist in current engine): regulatory requirements, practice area specialisations, professional conduct rules"
+    difficulty: "advanced"
+    tags: ["transferability"]

@@ -1,0 +1,73 @@
+deck:
+  id: "ch22-10-intake-monitoring"
+  title: "Legal Ops Agents: Intake and Monitoring"
+  description: "Legal Ops Agent vs Document Tool distinction, Contract Intake Agent five-step workflow, triage tier routing with SLA rules, Regulatory Monitoring Agent weekly briefings, and RAG status categorisation"
+  tags: ["legal-ops", "agents", "contract-intake", "regulatory-monitoring", "chapter-22"]
+  version: 1
+
+cards:
+  - id: "ch22-10-intake-monitoring-001"
+    front: "What is the fundamental difference between a Legal Ops Agent and a document tool?"
+    back: "A document tool takes a single input and produces a single output (e.g., contract in, redline report out). A Legal Ops Agent is a persistent, multi-step workflow that manages a process end-to-end — accepting inputs, making routing decisions, tracking progress, escalating when deadlines approach, and maintaining state across interactions."
+    difficulty: "basic"
+    tags: ["agent-vs-tool"]
+
+  - id: "ch22-10-intake-monitoring-002"
+    front: "What five steps does the Contract Intake Agent follow?"
+    back: "1. Receive document — extract metadata (counterparty, type, business unit, urgency, value)\n2. Classify document type — route to appropriate protocol (NDA, MSA, employment, unknown)\n3. Apply triage and routing — assign tier, notify appropriate reviewer\n4. Track progress — check status daily, escalate if SLA breached\n5. On execution — save to repository, set obligation reminders, set renewal calendar entry"
+    difficulty: "intermediate"
+    tags: ["intake-workflow"]
+
+  - id: "ch22-10-intake-monitoring-003"
+    front: "What percentage of legal operations capacity does coordination overhead consume, and why does this matter?"
+    back: "Coordination overhead — chasing, tracking, escalating, and reporting — consumes 40-60% of legal operations capacity. Automating this transforms the legal function structurally, not just incrementally. The agent eliminates the work that should never have required human attention."
+    difficulty: "intermediate"
+    tags: ["coordination-overhead"]
+
+  - id: "ch22-10-intake-monitoring-004"
+    front: "How does the Contract Intake Agent classify incoming documents for routing?"
+    back: "NDA / Mutual CA -> /triage-nda protocol\nVendor Agreement / MSA -> /review-contract protocol\nEmployment / Contractor -> route directly to HR Legal queue\nUnknown -> extract key terms; route to GC queue with summary"
+    difficulty: "basic"
+    tags: ["document-classification"]
+
+  - id: "ch22-10-intake-monitoring-005"
+    front: "What SLA timelines does the Contract Intake Agent enforce, and what happens when they are breached?"
+    back: "Tier 1 (Standard Approval): 1 business day\nTier 2 (Counsel Review): 2 business days\nTier 3 (Full Review): 5 business days\nURGENT flag: halve all timelines, notify GC immediately\nOn breach: escalate to next level (e.g., GC + CFO if no attorney action by deadline)"
+    difficulty: "intermediate"
+    tags: ["sla-rules"]
+
+  - id: "ch22-10-intake-monitoring-006"
+    front: "What four safety rules ('NEVER DO THESE') apply to the Contract Intake Agent?"
+    back: "1. NEVER approve a contract for execution — human authorised signatory only\n2. NEVER route a RED item to Tier 1, regardless of business pressure\n3. NEVER skip metadata extraction — required for compliance log\n4. NEVER send legal advice to the requesting business unit — send routing decisions and timelines only"
+    difficulty: "intermediate"
+    tags: ["safety-rules"]
+
+  - id: "ch22-10-intake-monitoring-007"
+    front: "What does the Regulatory Monitoring Agent produce in its weekly briefing?"
+    back: "A jurisdictional regulatory briefing with: (1) summaries of each regulatory development with effective dates and impact level, (2) identification of internal policies needing updates, (3) flags for executed contracts needing amendment, and (4) RAG status summary per regulatory area. Items are categorised as HIGH PRIORITY (action within 30 days), MONITOR (review within 6 months), or AWARENESS (information only)."
+    difficulty: "intermediate"
+    tags: ["regulatory-briefing"]
+
+  - id: "ch22-10-intake-monitoring-008"
+    front: "What does RAG status mean in the context of regulatory monitoring?"
+    back: "RED — immediate action required, regulatory change with near-term enforcement or compliance gap\nAMBER/YELLOW — requires planning, regulatory development within 6 months or consultation response needed\nGREEN — no changes requiring action in this area"
+    difficulty: "basic"
+    tags: ["rag-status"]
+
+  - id: "ch22-10-intake-monitoring-009"
+    front: "In the Gulf Digital worked example, why was the Etisalat MSA classified as Tier 3 with an URGENT flag?"
+    back: "Tier 3 because 3 RED items were identified in the /review-contract analysis (including governing law and liability cap issues). URGENT because the business deadline was less than 48 hours away. The combination halved the SLA timeline and triggered immediate GC notification."
+    difficulty: "intermediate"
+    tags: ["worked-example"]
+
+  - id: "ch22-10-intake-monitoring-010"
+    front: "How does the Contract Intake Agent communicate with three different audiences?"
+    back: "Business unit receives an acknowledgement with tier classification, reference number, and expected response date. Reviewing attorney receives a notification with contract type, counterparty, triage summary, deadline, and deal value. General Counsel receives a RED escalation with item count, most material risk summary, and recommendation to schedule a call."
+    difficulty: "intermediate"
+    tags: ["communication-templates"]
+
+  - id: "ch22-10-intake-monitoring-011"
+    front: "Why is the Legal Ops Agent architecture especially consequential for lean legal teams in Pakistan and the GCC?"
+    back: "Many mid-sized companies in Karachi, Lahore, Dubai, and Riyadh operate with a single GC and one or two junior associates handling all commercial, regulatory, employment, and compliance work. These teams cannot afford coordination overhead that larger departments absorb with dedicated Legal Ops staff. The agent architecture gives a three-person team the operational capacity of a team twice its size."
+    difficulty: "basic"
+    tags: ["lean-teams"]
