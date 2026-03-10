@@ -1,6 +1,10 @@
 ---
 title: "Chapter 23 — Sales, RevOps & Marketing"
 sidebar_position: 0
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-23/revenue-engine-blueprint.pdf"
+  title: "Revenue Engine Blueprint"
+  height: 700
 ---
 
 # Chapter 23 — Sales, RevOps & Marketing
@@ -13,15 +17,16 @@ The chapter spans three interconnected domains — sales execution, revenue oper
 
 Every lesson delivers a working workflow where you evaluate real agent output with your domain expertise, diagnose errors using the Agent Output Taxonomy, and configure the system for your business.
 
-### Prerequisites
+### Prerequisites: Cowork Access
 
-Install the three plugin layers before starting Lesson 1:
+This chapter requires **Cowork** (set up in Chapter 17) and three plugin layers.
 
-```bash
-claude plugin install sales@knowledge-work-plugins
-claude plugin install marketing@knowledge-work-plugins
-claude plugin install sales-revops-marketing@agentfactory-business
-```
+1. **Install the Sales plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → find **Sales** (from `knowledge-work-plugins`) → click **Install**.
+2. **Install the Marketing plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → find **Marketing** (from `knowledge-work-plugins`) → click **Install**.
+3. **Install the Sales RevOps Marketing plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Sales RevOps Marketing** → click **Install**.
+4. **Connect a working folder** for practice files, same as Chapter 17.
+
+## 📚 Teaching Aid
 
 ### Lesson Map
 
