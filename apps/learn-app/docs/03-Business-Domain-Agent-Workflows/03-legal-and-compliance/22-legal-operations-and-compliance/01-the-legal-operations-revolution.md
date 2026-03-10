@@ -1,258 +1,371 @@
 ---
 sidebar_position: 1
-title: "The Moment Legal AI Grew Up"
-description: "How Anthropic's Claude Legal Plugin transformed legal operations overnight, the governing principle that makes legal AI safe, the five bottlenecks it addresses, and the GCC/Pakistan legal operations landscape"
+title: "The Legal Operations Revolution"
+description: "Install the Anthropic Legal Plugin and Agent Factory Legal Ops extension in Cowork, configure MCP connectors, run your first contract review with GREEN/YELLOW/RED classification, and discover the governing principle of legal AI through output"
 keywords:
   [
     "legal AI",
     "Claude Legal Plugin",
     "legal operations",
     "contract review AI",
-    "NDA triage",
-    "legal tech disruption",
-    "AI reviews lawyers decide",
-    "legal ops automation",
     "Cowork legal plugin",
     "Anthropic legal tech",
+    "legal ops automation",
     "ABA Model Rules",
     "SRA Code of Conduct",
-    "GCC legal operations",
-    "Pakistan legal operations",
-    "PDPB 2023",
+    "GREEN YELLOW RED",
+    "attorney review required",
+    "negotiation playbook",
+    "Noor Technologies",
+    "legal plugin installation",
   ]
 chapter: 22
 lesson: 1
-duration_minutes: 15
+duration_minutes: 25
 
 # HIDDEN SKILLS METADATA
 skills:
-  - name: "Explain the Governing Principle of Legal AI Deployment"
+  - name: "Install and Verify Legal Plugins in Cowork"
+    proficiency_level: "B1"
+    category: "Technical"
+    bloom_level: "Apply"
+    digcomp_area: "Digital Content Creation"
+    measurable_at_this_level: "Student can install both plugin layers (Anthropic Legal base + Agent Factory Legal Ops extension), verify installation by running /review-contract, and confirm structured output with ATTORNEY REVIEW: REQUIRED header"
+
+  - name: "Run and Interpret a Contract Review with GREEN/YELLOW/RED Classification"
+    proficiency_level: "A2"
+    category: "Applied"
+    bloom_level: "Analyze"
+    digcomp_area: "Information and Data Literacy"
+    measurable_at_this_level: "Student can upload a vendor agreement, run /review-contract, read the three-tier classification output, and identify which clauses are GREEN (acceptable), YELLOW (negotiate), and RED (escalate to attorney)"
+
+  - name: "Discover the Governing Principle of Legal AI Deployment"
     proficiency_level: "A2"
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can articulate the principle that the agent reviews, triages, drafts, and flags while the licensed attorney advises, decides, and signs, and can explain why this boundary exists in terms of professional conduct rules and privilege"
-
-  - name: "Identify the Five Pre-AI Legal Department Bottlenecks"
-    proficiency_level: "A2"
-    category: "Conceptual"
-    bloom_level: "Remember"
-    digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can name the five bottlenecks (contract review queues, NDA backlogs, compliance monitoring gaps, knowledge management failures, reporting blind spots) and explain how each wastes organisational capacity"
-
-  - name: "Describe the Legal Operations Landscape in GCC and Pakistan"
-    proficiency_level: "A2"
-    category: "Conceptual"
-    bloom_level: "Understand"
-    digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can identify the key drivers of legal technology adoption in the GCC (free zone economies, data protection frameworks, dual-jurisdiction structures) and the distinct challenges in Pakistan (Contract Act 1872, PDPA 2023, Islamic finance transition)"
+    measurable_at_this_level: "Student can articulate the principle that the agent reviews, triages, drafts, and flags while the licensed attorney advises, decides, and signs, discovered through reading the output header rather than being told"
 
 learning_objectives:
-  - objective: "Explain why legal AI requires a strict boundary between agent analysis and attorney decision-making, referencing professional conduct rules"
+  - objective: "Install the Anthropic Legal Plugin and Agent Factory Legal Ops extension in Cowork and verify correct two-layer installation"
+    proficiency_level: "B1"
+    bloom_level: "Apply"
+    assessment_method: "Student demonstrates successful installation by running /review-contract and receiving structured output with the ATTORNEY REVIEW: REQUIRED header"
+
+  - objective: "Run a contract review against a sample vendor SaaS agreement and interpret the GREEN/YELLOW/RED clause classification"
+    proficiency_level: "A2"
+    bloom_level: "Analyze"
+    assessment_method: "Student uploads a contract, predicts the overall assessment before running /review-contract, then compares their prediction against the actual output and identifies at least one RED flag they did not expect"
+
+  - objective: "Explain why legal AI requires a strict boundary between agent analysis and attorney decision-making, referencing the output header and professional conduct rules"
     proficiency_level: "A2"
     bloom_level: "Understand"
-    assessment_method: "Student can describe the governing principle and name at least two professional conduct frameworks (ABA Model Rules, SRA Code of Conduct) that create this boundary"
-
-  - objective: "Identify the five predictable bottlenecks in pre-AI legal departments and explain how the Claude Legal Plugin addresses each"
-    proficiency_level: "A2"
-    bloom_level: "Remember"
-    assessment_method: "Student can list all five bottlenecks and map each to the plugin capability that addresses it"
-
-  - objective: "Describe the Claude Legal Plugin's five primary commands and the workflow each addresses"
-    proficiency_level: "A2"
-    bloom_level: "Remember"
-    assessment_method: "Student can name all five commands (/review-contract, /triage-nda, /vendor-check, /brief, /respond) and state the primary function of each"
+    assessment_method: "Student reads the ATTORNEY REVIEW: REQUIRED header in their own output and can state the governing principle in their own words, naming at least one professional conduct framework (ABA Model Rules or SRA Code of Conduct)"
 
 cognitive_load:
-  new_concepts: 5
-  concepts_list:
-    - "The governing principle: AI reviews, lawyers decide"
-    - "Professional conduct rules creating the AI-attorney boundary"
-    - "Five pre-AI legal department bottlenecks"
-    - "The Claude Legal Plugin and its five commands"
-    - "The playbook as institutional knowledge asset"
-  assessment: "5 concepts at A2 level -- within the 5-7 cognitive limit for this tier. This is an introductory lesson establishing the domain context and governing principle before any technical configuration."
+  new_concepts: 6
+  assessment: "6 concepts (two-layer plugin architecture, Cowork plugin installation, MCP connectors, GREEN/YELLOW/RED classification, ATTORNEY REVIEW: REQUIRED header, five pre-AI bottlenecks) at the upper boundary of A2 range. Installation is procedural and low-load. The contract review output introduces classification and the governing principle through discovery. Concepts build sequentially: install before run, run before interpret, interpret before discover the principle."
 
 differentiation:
-  extension_for_advanced: "Research the ABA Model Rules on attorney supervision of non-lawyer assistants (Rule 5.3) and consider how these rules apply to AI agent outputs. Draft a one-paragraph policy for your organisation defining how AI legal outputs must be reviewed."
-  remedial_for_struggling: "Focus on the governing principle and the five bottlenecks. If you can state the principle in one sentence and name the five bottlenecks, you have the foundation for every subsequent lesson."
+  extension_for_advanced: "Run /review-contract on a real vendor agreement from your own organisation. Compare the GREEN/YELLOW/RED distribution against the CloudStack sample. Note which clause types your organisation's contracts flag differently and why."
+  remedial_for_struggling: "Focus on installing both plugins and running /review-contract on the sample text. If you can see the ATTORNEY REVIEW: REQUIRED header and identify at least one RED clause, you have the foundation for Lesson 2."
 ---
 
-# The Moment Legal AI Grew Up
+# The Legal Operations Revolution
 
-> _"For the first time, a foundation-model company is packaging a legal workflow product directly into its platform, rather than merely supplying an API to legal-tech vendors."_
-> -- Bob Ambrogi, LawNext, February 2026
+Ayesha Malik has 37 contracts waiting for review. She is the General Counsel at Noor Technologies, an 85-person cloud ERP company in Karachi that builds production planning and export documentation software for textile manufacturers. Her legal team is two people: Ayesha and Bilal Ahmad, her Legal Operations associate. Three vendor auto-renewals slipped past them last quarter -- one for a cloud infrastructure provider that cost PKR 4.8M she had been planning to renegotiate. A data subject access request from a former European client has been sitting unanswered for 26 days. The GDPR clock gives her 30.
 
-On February 2, 2026, Anthropic released the Claude Legal Plugin for Cowork -- and shares in Thomson Reuters dropped 15%, LexisNexis's parent company fell 14%, and DocuSign lost 11% of its value in a single trading session. The Jefferies Group called it the "SaaSpocalypse." Above the Law called it the moment "your supplier became your competitor."
+Bilal spends 60% of his time on administrative coordination -- forwarding contracts to the right person, chasing signatures, sending deadline reminders by email. Forty percent of his time goes to actual legal work. That ratio is inverted from what Ayesha needs. She needs Bilal reviewing clause language and flagging risk. Instead he is a human router.
 
-What had actually happened was simpler: Anthropic packaged an end-to-end legal workflow directly into the Cowork platform -- open-source, configurable, and available to every paid Claude user from day one. The legal plugin automates contract review, NDA triage, compliance workflows, legal briefings, and templated responses. It is built for commercial counsel, product counsel, privacy and compliance teams, and litigation support.
+This chapter gives Ayesha's two-person team the operational capacity of six. By the end of this lesson you will have installed two plugin layers, run your first contract review with structured risk classification, and discovered the single principle that governs every legal AI workflow in this chapter.
 
-For legal professionals reading this chapter, the plugin is not a threat. It is a tool. The question is not whether AI will transform legal work -- it already has. The question is whether the lawyers, legal operations managers, and in-house counsel who understand their organisations' specific legal needs will be the ones who direct that transformation, or whether it will be directed for them.
+## Install Both Plugins
 
-This chapter teaches you to direct it.
+This chapter uses two plugin layers in Cowork: the **Anthropic Legal Plugin** (base) and the **Agent Factory Legal Ops extension** (ours). The base plugin provides seven commands and six skills for contract review, NDA triage, compliance, briefings, and templated responses. The extension adds nine skills, four commands, and six jurisdiction overlays for cross-border legal work.
 
-### Who This Chapter Is For
+**Prerequisites:** The Claude desktop app with Cowork enabled. Cowork is available on Pro, Max, Team, and Enterprise plans.
 
-If you are a General Counsel at a mid-sized company drowning in a contract review backlog, this chapter shows you how to build a system that clears that backlog without hiring. If you are a Legal Operations Manager at a multinational with offices in London, Dubai, and Karachi, this chapter shows you how to configure jurisdiction-aware workflows that respect the differences between English common law, UAE civil law, and Pakistan's Contract Act 1872. If you are a compliance officer tracking regulatory changes across five jurisdictions while also managing DSARs and renewal deadlines, this chapter gives you the agent architecture that makes that workload sustainable.
+**Step 1.** Open the Claude desktop app and select the **Cowork** tab. If you do not see it, check your subscription at [claude.ai/settings](https://claude.ai/settings).
 
-### Worked Example: Ayesha Malik at NexaByte Solutions
+**Step 2.** Install the Anthropic Legal Plugin. In the Cowork sidebar, click **Customize**, then **Browse plugins**. Find **Legal** and click **Install**.
 
-Consider Ayesha Malik, General Counsel at a 200-person Pakistani software company, NexaByte Solutions in Islamabad. Ayesha's legal team consists of herself, one junior associate, and a part-time company secretary. They handle everything: vendor contracts governed by Pakistani law and English law, employment agreements subject to provincial labour legislation in Punjab and Sindh, IP filings at IPO Pakistan, PDPA compliance for their SaaS product processing data of Pakistani residents, and an increasing number of cross-border NDAs as NexaByte expands into the Gulf market. Last quarter, Ayesha counted 37 contracts waiting for review at a single point in time. Three auto-renewals were missed because no one tracked the notice periods. A DSAR from a former European client sat unanswered for 26 days before anyone noticed the 30-day GDPR clock was ticking.
+**Step 3.** Install the Agent Factory Legal Ops extension. In the Cowork sidebar: **Customize**, then **Browse plugins**, then **Personal**, then click the **+** button. Select **Add marketplace from GitHub** and enter:
 
-When Ayesha installs the Legal Plugin and begins working through this chapter, here is what changes. She configures a negotiation playbook encoding her standard positions -- liability capped at 12 months' fees in PKR, IP ownership provisions reflecting Pakistan's first-to-file trademark regime, data protection clauses referencing the PDPA 2023. She sets up the Contract Intake Agent to receive documents at `legal-intake@nexabyte.pk` and route them automatically: standard vendor NDAs go straight to her junior associate with a pre-populated triage summary; complex cross-border agreements route to Ayesha herself with RED items highlighted; employment agreements route to the company secretary for the provincial-specific review. Within two weeks, the 37-contract backlog is gone. Within a month, the compliance calendar agent is tracking every renewal date, every PDPA registration deadline, every annual return filing with SECP.
+```
+https://github.com/panaversity/agentfactory-business-plugins
+```
 
-Ayesha did not hire anyone. She did not buy enterprise legal tech software. She configured an AI agent with her institutional knowledge and deployed it.
+Find **Legal Ops** in the marketplace list and click **Install**.
 
-That is what this chapter teaches you to build.
+**Step 4.** Connect a working folder. Click **Work in a folder** and select or create a folder on your computer for this chapter's practice files (for example, `legal-practice/`). This gives the agent a place to read and write sample legal documents.
 
----
+**Step 5.** Verify the installation. Type `/review-contract` in the Cowork chat. The command should auto-complete. If it does not appear, return to **Customize** and confirm both plugins show as installed.
 
-## The Governing Principle: AI Reviews, Lawyers Decide
+## Connect Your Tools (Optional)
 
-Before building anything, internalise the single most important principle in legal AI:
+Cowork can read and create Office, PDF, and text files directly through built-in file skills -- no connectors needed for document review. If your workflows need to reach enterprise systems, open **Customize** and select **Connectors** to link your tools.
 
-> **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
+| Category          | Recommended Server          | What It Enables                                                |
+| ----------------- | --------------------------- | -------------------------------------------------------------- |
+| **Email**         | Gmail                       | Agent reads your legal inbox for intake and correspondence     |
+| **Calendar**      | Google Calendar              | Agent reads meeting context for briefing prep                  |
+| **Chat**          | Slack                       | Agent posts alerts and escalation notices to your channels     |
+| **Cloud storage** | Box or Egnyte               | Agent accesses your document management system                 |
+| **E-signature**   | DocuSign                    | Agent routes documents for e-signature (Lesson 4 onward)      |
+| **Project tracker** | Atlassian (Jira/Confluence) | Agent logs matters and tracks obligations                     |
+| **CRM**           | Salesforce or HubSpot       | Agent cross-references vendor and client records               |
+| **Office suite**  | Microsoft 365               | Agent reads and creates Word, Excel, and PowerPoint files      |
 
-This is not a limitation of current AI capability. It is the correct architecture for legal deployment, and it is hard-coded into the Claude Legal Plugin itself -- every output page ends with the explicit reminder that _"all outputs should be reviewed by licensed attorneys."_
+**Minimum recommended:** Gmail and Google Calendar. Both are free and unlock meeting prep and email-based intake in later lessons.
 
-> **ABA Model Rules of Professional Conduct**
->
-> The American Bar Association's Model Rules govern lawyer conduct in the United States. Rule 1.1 requires competence; Rule 5.3 requires supervision of non-lawyer assistants -- including AI tools. A lawyer using the Legal Plugin must review its outputs with the same diligence they would apply to work product from a junior associate. In practice: if an AI-generated redline contains an error that a competent attorney would have caught, the attorney -- not the AI -- bears professional responsibility. Why it matters: this is why every workflow in this chapter routes outputs for attorney review before any action is taken.
+If you have these accounts, connect them now. If you do not, skip this section entirely. Both paths produce the same quality output -- with connectors the agent reads live data, without them you upload documents and provide context in prompts.
 
-> **SRA Code of Conduct (Solicitors Regulation Authority)**
->
-> The SRA regulates solicitors in England and Wales. The SRA Standards and Regulations (November 2019, updated 2023) require solicitors to "maintain competence and legal knowledge" (Principle 2) and to "act in the best interests of each client" (Principle 7). The SRA's 2024 guidance on AI use states that solicitors may use AI tools but remain personally responsible for all work product. For example, a solicitor at a London firm using the Legal Plugin to review a vendor MSA worth GBP 500,000 must personally verify the agent's three-tier classification before sending any redline to the counterparty. Why it matters: professional regulators worldwide are converging on the same principle -- AI as tool, lawyer as responsible professional.
+## Your First Contract Review
 
-The legal profession has specific rules of professional conduct -- the ABA Model Rules in the US, the SRA Code of Conduct in the UK, the Bar Council rules across most Commonwealth jurisdictions -- that create attorney-client privilege, impose confidentiality obligations, and define unauthorised practice of law. An AI agent cannot be a lawyer. It can be a lawyer's most capable paralegal, research assistant, and first-draft specialist. The distinction is not semantic. It determines what the agent can do and what the attorney must still do.
+Upload or paste the following sample vendor SaaS agreement into Cowork. This is a standard agreement from CloudStack Inc., a cloud infrastructure vendor, to Noor Technologies.
 
-| What the Agent Does                   | What the Attorney Does             |
-| ------------------------------------- | ---------------------------------- |
-| Reviews contracts clause-by-clause    | Makes the commercial judgment call |
-| Triages NDAs by risk level            | Approves or overrides the triage   |
-| Flags deviations as GREEN/YELLOW/RED  | Decides which RED items to accept  |
-| Drafts redline suggestions            | Reviews and sends the redline      |
-| Produces regulatory monitoring briefs | Interprets the regulatory impact   |
-| Drafts DSAR response letters          | Signs and sends the response       |
+```
+MASTER SERVICES AGREEMENT
 
-Every workflow, every exercise, and every SKILL.md file in this chapter is built around this principle. When the agent produces a contract redline, an attorney reviews it. When the agent flags a clause as RED (escalate), the escalation goes to a qualified lawyer. When the agent drafts a cease-and-desist letter, a licensed professional reviews it before it is sent.
+This Master Services Agreement ("Agreement") is entered into as of
+March 1, 2026, by and between CloudStack Inc., a Delaware corporation
+("Provider"), and Noor Technologies (Pvt) Ltd, a company incorporated
+under the laws of Pakistan ("Customer").
 
-In Pakistan, the Pakistan Bar Council and provincial bar councils regulate legal practice. The Legal Practitioners and Bar Councils Act, 1973 defines who may practise law. In the UAE, Federal Decree-Law No. 34 of 2022 on the Regulation of the Legal Profession (which replaced the former Federal Law No. 23 of 1991) governs advocates, while DIFC and ADGM have their own practitioner regulations. In both jurisdictions, the governing principle holds: the agent assists, the licensed professional decides.
+1. SERVICES
+Provider shall provide cloud infrastructure services as described
+in the applicable Service Order Form(s).
 
----
+2. TERM AND RENEWAL
+Initial term: 24 months from the Effective Date.
+Auto-renewal: This Agreement shall automatically renew for successive
+12-month periods unless either party provides written notice of
+non-renewal at least 30 days prior to the end of the then-current term.
+
+3. FEES AND PAYMENT
+Customer shall pay all fees set forth in the Service Order Form within
+45 days of invoice date. Late payments accrue interest at 1.5% per month.
+
+4. LIMITATION OF LIABILITY
+Provider's total aggregate liability under this Agreement shall not
+exceed the fees paid by Customer in the three (3) months immediately
+preceding the claim. In no event shall Provider be liable for any
+indirect, incidental, special, consequential, or punitive damages.
+
+5. INDEMNIFICATION
+Customer shall indemnify, defend, and hold harmless Provider against
+all claims, damages, and expenses arising from Customer's use of
+the Services.
+
+6. DATA PROTECTION
+Provider shall process Customer Personal Data in accordance with
+applicable data protection laws. Provider may transfer data to
+any jurisdiction where Provider maintains facilities.
+
+7. INTELLECTUAL PROPERTY
+All intellectual property developed by Provider in connection with
+the Services shall remain the sole property of Provider, including
+any customisations or configurations created for Customer.
+
+8. TERMINATION
+Either party may terminate for material breach upon 30 days' written
+notice if the breach remains uncured. Upon termination, Customer
+shall pay all outstanding fees. Provider shall have no obligation
+to return or migrate Customer data after termination.
+
+9. GOVERNING LAW
+This Agreement shall be governed by the laws of the State of Delaware,
+without regard to conflict of laws principles. Any disputes shall be
+resolved by binding arbitration in Wilmington, Delaware.
+
+10. ENTIRE AGREEMENT
+This Agreement constitutes the entire agreement between the parties.
+```
+
+**Prediction moment.** Read the agreement above before running the command. Predict: will the overall assessment be "proceed," "proceed with modifications," or "escalate to attorney"? Write your prediction down.
+
+Now run:
+
+```
+/review-contract
+```
+
+**Expected output:**
+
+```
+══════════════════════════════════════════════════════════════
+     ATTORNEY REVIEW: REQUIRED
+     Contract Review — CloudStack Inc. MSA
+     Generated: 2026-03-11
+══════════════════════════════════════════════════════════════
+
+OVERALL ASSESSMENT: PROCEED WITH MODIFICATIONS
+7 clauses require attention before execution.
+
+─────────────────────────────────────────────────────────────
+CLAUSE-BY-CLAUSE ANALYSIS
+─────────────────────────────────────────────────────────────
+
+GREEN — Acceptable as Written
+┌──────────────────────────────────────────────────────────┐
+│ § 1. Services         Standard service description       │
+│ § 10. Entire Agreement  Standard integration clause      │
+└──────────────────────────────────────────────────────────┘
+
+YELLOW — Negotiate Before Signing
+┌──────────────────────────────────────────────────────────┐
+│ § 2. Auto-Renewal     30-day notice is short for a       │
+│                       24-month commitment. Industry       │
+│                       standard: 60-90 days.              │
+│                                                          │
+│ § 3. Late Payment     1.5% per month (18% annualised)    │
+│                       exceeds typical commercial rates.   │
+│                       Recommend: cap at SBP policy rate   │
+│                       + 2%.                               │
+│                                                          │
+│ § 5. Indemnification  One-sided. Customer indemnifies     │
+│                       Provider but not vice versa.        │
+│                       Recommend: mutual indemnification.  │
+└──────────────────────────────────────────────────────────┘
+
+RED — Escalate to Attorney
+┌──────────────────────────────────────────────────────────┐
+│ § 4. Liability Cap    3 months' fees is significantly     │
+│                       below market standard (12 months).  │
+│                       On a PKR 4.8M annual contract,      │
+│                       this caps liability at PKR 1.2M.    │
+│                       RECOMMENDATION: Reject. Negotiate   │
+│                       to 12 months' fees minimum.         │
+│                                                          │
+│ § 6. Data Transfer    "Any jurisdiction where Provider    │
+│                       maintains facilities" has no        │
+│                       restrictions. Potential PDPA 2023   │
+│                       conflict for Pakistani data         │
+│                       subjects. Requires adequacy         │
+│                       assessment or SCCs.                 │
+│                                                          │
+│ § 7. IP Ownership     All IP including "customisations    │
+│                       or configurations created for       │
+│                       Customer" belongs to Provider.      │
+│                       This means custom integrations      │
+│                       built for Noor are not yours.       │
+│                       RECOMMENDATION: Carve out           │
+│                       customer-specific configurations.   │
+│                                                          │
+│ § 8. Data on          No obligation to return or migrate  │
+│      Termination      Customer data. Combined with § 7,   │
+│                       Customer loses both IP and data     │
+│                       upon termination.                   │
+│                       RECOMMENDATION: Add 90-day data     │
+│                       migration period, data return in    │
+│                       standard format.                    │
+│                                                          │
+│ § 9. Governing Law    Delaware law + Wilmington           │
+│                       arbitration. Pakistani company      │
+│                       forced to litigate in US.           │
+│                       RECOMMENDATION: Negotiate to        │
+│                       Pakistan-seated arbitration or      │
+│                       English law neutral venue.          │
+└──────────────────────────────────────────────────────────┘
+
+══════════════════════════════════════════════════════════════
+```
+
+**Calibration.** Compare your prediction to the actual output. Most students predict "proceed" because the agreement looks standard at first read. The RED flags surprise them. Five of ten clauses require attention. The liability cap, data transfer, IP ownership, data on termination, and governing law clauses each carry material risk that a quick manual read could miss.
+
+Notice the header at the top of the output: **ATTORNEY REVIEW: REQUIRED**. That header appears on every output the Legal Plugin produces. It is not optional and it cannot be removed.
 
 ## The Five Bottlenecks
 
-Legal operations -- the application of business process management, technology, and project management discipline to the delivery of legal services -- has been the fastest-growing discipline in corporate legal departments for the past decade. The Association of Corporate Counsel reports that Legal Ops roles grew 340% between 2018 and 2025. The reason is simple: legal work is expensive, the volume of commercial activity requiring legal review has grown faster than legal department headcount, and organisations that treat legal as a strategic function rather than a cost centre win commercial deals faster and manage risk better.
+Before this plugin existed, how would Ayesha handle 37 contracts with a two-person team? Think about it for a moment. She would triage by urgency, review the most critical ones herself, delegate simpler NDAs to Bilal, and let the rest sit in the queue. Some would auto-renew without scrutiny. Compliance gaps would go unnoticed until an incident forced attention. Knowledge about past deals and standard positions would live in Ayesha's inbox, inaccessible to Bilal.
 
-The predictable bottlenecks in a typical pre-AI legal department:
+These five bottlenecks appear in virtually every legal department that operates without automation:
 
-| Bottleneck                        | The Problem                                                                                                                          | Business Impact                           |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- |
-| **Contract review queues**        | Standard vendor agreements sitting unreviewed for days because every non-standard clause needed attorney time                        | Deals delayed, revenue deferred           |
-| **NDA backlogs**                  | Incoming confidentiality agreements from prospective partners piling up while the legal team worked through higher-priority matters  | Business development slowed               |
-| **Compliance monitoring gaps**    | Regulatory changes tracked manually, with no systematic process for identifying which internal policies needed updating              | Compliance risk, potential fines          |
-| **Knowledge management failures** | Institutional knowledge about past deals, standard positions, and negotiation outcomes locked in individual attorneys' email inboxes | Repeated mistakes, inconsistent positions |
-| **Reporting blind spots**         | No real-time visibility into contract pipeline, approval cycle times, or clause-level risk exposure                                  | GC cannot manage strategically            |
+| Bottleneck                        | The Problem                                                                                                        | Plugin Command That Addresses It |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
+| **Contract review queues**        | Standard vendor agreements sit unreviewed for days because every clause needs attorney time                          | `/review-contract`               |
+| **NDA backlogs**                  | Incoming confidentiality agreements pile up while the team handles higher-priority matters                           | `/triage-nda`                    |
+| **Compliance monitoring gaps**    | Regulatory changes tracked manually with no systematic process for identifying which policies need updating          | `/compliance-check`              |
+| **Knowledge management failures** | Institutional knowledge about past deals and standard positions locked in individual email inboxes                   | Negotiation playbook (Lesson 2)  |
+| **Reporting blind spots**         | No visibility into contract pipeline, approval cycle times, or clause-level risk exposure                            | `/brief`                         |
 
-The Claude Legal Plugin, configured with the SKILL.md methodology in this chapter, addresses all five -- not by replacing the legal team, but by giving them leverage they have never had before.
+The contract review you ran a moment ago addressed the first bottleneck. A review that would have taken Ayesha 45 minutes of close reading produced a structured risk analysis in under two minutes. Multiply that across 37 contracts.
 
-## The Plugin at a Glance
+## The Governing Principle
 
-The Legal Plugin ships with five primary commands -- `/review-contract`, `/triage-nda`, `/vendor-check`, `/brief`, and `/respond` -- each representing a distinct legal workflow that reduces hours of manual work to minutes of agent-assisted review. You will explore each command in detail in [Lesson 2](./02-plugin-architecture-and-the-playbook.md).
+Look at the output header again: **ATTORNEY REVIEW: REQUIRED**.
 
-```
-Platform:  Cowork
-Path:      Cowork -> Plugins -> Browse -> Search "Legal" -> Install
-Plugin:    https://claude.com/plugins/legal
-Source:    https://github.com/anthropics/knowledge-work-plugins/tree/main/legal
-```
+Why does the agent refuse to approve the contract? Why does it classify and recommend rather than decide?
 
-The most important configuration element in the Legal Plugin is the **negotiation playbook** -- the organisation-specific file that defines your standard positions, acceptable ranges, and escalation triggers for each major clause type. Without the playbook, the plugin reviews against general commercial standards. With it, the plugin becomes an institutional knowledge system encoding your organisation's accumulated negotiation experience into every review it performs.
+The answer is the principle that governs every workflow in this chapter:
 
-This is the Knowledge Extraction Method from Chapter 16 applied to legal: the expert knowledge that lives in your senior counsel's head -- what your organisation will and will not accept on limitation of liability, which indemnity carve-outs are non-negotiable, how aggressively to push back on IP ownership clauses -- becomes a structured, testable, deployable asset.
+> **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
 
-:::tip The Plugin Is Infrastructure. Your Playbook Is the Product.
-The plugin out of the box is a capable tool. The plugin configured with a mature, validated, institution-specific negotiation playbook is a competitive advantage. As the Medium analysis of the launch put it: "The real strength of these workflows lies in the extent to which they can be tailored to specific markets, historic data sets and negotiation approaches." Building that institutional layer is the work of this chapter.
-:::
+This is not a limitation of current AI capability. It is the correct architecture for legal deployment, and it is built into the plugin itself.
 
----
+The legal profession has specific rules of professional conduct that create this boundary. The **ABA Model Rules of Professional Conduct** in the United States require competence (Rule 1.1) and supervision of nonlawyer assistants (Rule 5.3) -- including AI tools. ABA Formal Opinion 512 (2024) confirmed that generative AI falls under Rule 5.3: lawyers must review AI outputs with the same diligence they would apply to work from a junior associate.
 
-## Legal Operations in the GCC and Pakistan
+The **SRA Code of Conduct** in England and Wales requires solicitors to maintain competence and legal knowledge (paragraph 3.2 and 3.4) and effectively supervise all work undertaken for the client (paragraph 3.5(b)). The SRA's guidance states that solicitors may use AI tools but remain personally responsible for all work product.
 
-The legal operations transformation is not limited to the US and UK markets. The Gulf Cooperation Council states -- particularly the UAE, Saudi Arabia, and Qatar -- have seen explosive growth in legal technology adoption, driven by three factors: the rapid expansion of free zone economies (DIFC alone hosts over 6,100 active registered entities as of 2025), the implementation of new data protection frameworks (UAE PDPL 2021, Saudi PDPL 2023), and the increasing complexity of dual-jurisdiction commercial structures where a single transaction may involve mainland UAE civil law, DIFC common law, and English-law-governed arbitration.
+In Pakistan, the Pakistan Bar Council and provincial bar councils regulate legal practice under the Legal Practitioners and Bar Councils Act, 1973. In the UAE, Federal Decree-Law No. 34 of 2022 governs advocates, while DIFC and ADGM have their own practitioner regulations.
 
-In Pakistan, legal operations is an emerging discipline with enormous potential. Pakistan's population of over 240 million generates a commercial legal market that is growing at 12-15% annually, driven by the technology sector, the privatisation programme, and increasing foreign direct investment. The challenges are distinct: the Contract Act 1872 provides the foundational framework but predates digital commerce entirely, the Personal Data Protection Bill 2023 (PDPB) — passed by the National Assembly in August 2023 but awaiting formal enactment as of early 2026 — represents Pakistan's first comprehensive data protection framework, and organisations are preparing compliance programmes in anticipation, and the transition from interest-based to Islamic finance (mandated by the Federal Shariat Court ruling, deadline 2028) affects every financing agreement in the country.
+In every jurisdiction, the principle holds: the agent assists, the licensed professional decides.
 
-For legal teams operating across these jurisdictions, the Legal Plugin's jurisdiction overlay system -- which loads Pakistan-specific, UAE-specific, or UK-specific legal frameworks automatically based on the governing law of each contract -- is not a nice-to-have. It is the difference between a generic review and a review that catches the issues that actually matter in your market.
+| What the Agent Does                  | What the Attorney Does             |
+| ------------------------------------ | ---------------------------------- |
+| Reviews contracts clause-by-clause   | Makes the commercial judgment call |
+| Classifies risk as GREEN/YELLOW/RED  | Decides which RED items to accept  |
+| Drafts redline suggestions           | Reviews and sends the redline      |
+| Flags regulatory compliance issues   | Interprets the regulatory impact   |
+| Produces briefings and summaries     | Signs off on advice to business    |
 
----
+## What You Built
+
+1. Both plugins installed and verified -- Anthropic Legal Plugin (base) and Agent Factory Legal Ops extension
+2. MCP connectors configured for enterprise tools (optional)
+3. First contract review output with GREEN/YELLOW/RED clause classification on the CloudStack vendor agreement
+4. Understanding of the governing principle -- discovered through the ATTORNEY REVIEW: REQUIRED header, not told as a lecture
+5. Five pre-AI bottlenecks identified and mapped to the plugin commands that address each
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork with the Legal Plugin and Legal Ops extension installed.
 
-### Prompt 1: The Governing Principle in Practice
-
-```
-I am learning about legal AI deployment. Explain the principle
-"the agent reviews, the attorney decides" using this scenario:
-
-A 150-person technology company receives a vendor SaaS agreement
-with a limitation of liability clause capping liability at 3 months'
-fees (approximately $12,000 on a $48,000/year contract). The company's
-standard position is 12 months' fees.
-
-Walk me through:
-1. What the AI agent should do with this clause
-2. What the AI agent must NOT do
-3. What the reviewing attorney's role is
-4. Why this boundary exists (reference professional conduct rules)
-```
-
-**What you are learning:** The governing principle is not abstract policy -- it produces specific, different behaviours for the agent and the attorney on the same clause. Understanding where the boundary falls is the foundation for every workflow in this chapter.
-
-### Prompt 2: Mapping the Five Bottlenecks
+### Prompt 1: Reproduce
 
 ```
-A mid-size company's legal department has these problems:
-
-1. Contract reviews take 5-7 business days on average
-2. 25 NDAs per month, each taking 30-45 minutes of attorney time
-3. A regulatory change last quarter was missed, resulting in a
-   non-compliant clause in 12 active contracts
-4. When the senior commercial lawyer left, nobody knew the standard
-   negotiation positions she had developed over 8 years
-5. The General Counsel cannot answer "how many contracts are pending
-   review right now" without asking three people
-
-For each problem:
-- Identify which of the five pre-AI bottlenecks it represents
-- Explain which Legal Plugin command addresses it
-- Estimate the time saving (be specific about hours per month)
+/review-contract
 ```
 
-**What you are learning:** The five bottlenecks are not theoretical categories -- they are the daily reality of legal departments. Mapping real problems to specific plugin capabilities builds the diagnostic skill you need to configure the plugin for your own organisation.
+Upload or paste the CloudStack vendor agreement from this lesson. Compare your output to the reference output above. The structure should match -- GREEN/YELLOW/RED classification with clause-by-clause analysis. The specific recommendations may vary between runs, which is itself a reason the attorney review header exists.
 
-### Prompt 3: GCC and Pakistan Jurisdictional Complexity
+**What you are learning:** How the `/review-contract` command structures a clause-by-clause risk analysis into three tiers. GREEN clauses need no attention. YELLOW clauses are negotiation points. RED clauses require attorney escalation before the agreement can proceed. This triage structure is the foundation of every contract workflow in this chapter.
+
+### Prompt 2: Adapt
 
 ```
-I am a legal operations professional at a technology company with
-offices in Islamabad (Pakistan), Dubai (UAE mainland), and DIFC.
-
-Explain the three different legal frameworks I need to consider when
-reviewing a single vendor contract:
-1. Pakistan's Contract Act 1872 and PDPA 2023
-2. UAE mainland civil law (Federal Law No. 5 of 1985)
-3. DIFC common law
-
-For each framework, identify:
-- The key statute or regulation
-- One unique challenge for AI-assisted contract review
-- Why a single-jurisdiction AI review would miss this issue
+Review the CloudStack agreement, but assume Noor Technologies is
+governed by English law rather than Pakistani law. What changes
+in the RED flags? Specifically: does the governing law clause
+(Section 9) still flag RED, and does the data transfer clause
+(Section 6) flag differently under UK GDPR versus PDPA 2023?
 ```
 
-**What you are learning:** Cross-border legal operations require jurisdiction-aware tools. A generic AI contract review misses jurisdiction-specific issues -- the playbook and overlay system you will build in the next lessons exists precisely to catch what single-jurisdiction thinking misses.
+**What you are learning:** Jurisdiction changes the risk analysis. A governing law clause that is RED for a Pakistani company (forced to litigate in Delaware) may be YELLOW for a UK company (English law is often acceptable as neutral ground). The data transfer clause may flag differently because UK GDPR has specific adequacy decisions that PDPA 2023 does not yet have. Recognising how jurisdiction shifts risk classification is the foundation for the cross-border work in Lesson 4.
 
----
+### Prompt 3: Apply
 
-Continue to [Lesson 2: Plugin Architecture and the Playbook ->](./02-plugin-architecture-and-the-playbook.md)
+```
+I am a [your role] at [your organisation]. We recently signed or
+are reviewing a vendor agreement. Describe the agreement in 2-3
+sentences — the vendor, the service, the approximate annual value,
+and the governing law.
+
+Based on this description, which of the five bottlenecks (contract
+review queues, NDA backlogs, compliance gaps, knowledge management
+failures, reporting blind spots) is the biggest problem in your
+legal workflow today? Explain why, and identify which Legal Plugin
+command would address it first.
+```
+
+**What you are learning:** The five bottlenecks are not abstract categories. They map to specific pain in your own organisation. Identifying your primary bottleneck determines which plugin command you configure first and which lesson in this chapter delivers the most immediate value to your team.
