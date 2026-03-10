@@ -76,7 +76,11 @@ differentiation:
 
 # Legal Ops Agents: Calendar, Spend, and DSAR
 
-This lesson covers three Legal Ops Agents that manage the compliance, financial, and privacy operations of a legal department. Each follows the same agent pattern introduced in Lesson 7: persistent workflow, multi-step process, state maintenance, escalation logic, and completion logging.
+In Lesson 10, you built the Contract Intake Agent and Regulatory Monitoring Agent — agents that manage intake and external awareness. This lesson adds three more agents that handle the ongoing operational responsibilities of a legal department: compliance deadlines, legal spend, and data subject access requests. Each follows the same agent pattern: persistent workflow, multi-step process, state maintenance, escalation logic, and completion logging.
+
+:::tip Connector Integration
+If you connected Google Calendar in Lesson 1, the Compliance Calendar Agent can create calendar events with escalation reminders at 60/30/14/7/1 day marks. The DSAR Agent can search real email, CRM, and document systems via MCP connectors for data discovery. Without connectors, you provide obligation lists and data locations manually.
+:::
 
 ## Agent 3: The Compliance Calendar Agent
 
@@ -609,4 +613,4 @@ reasoning. Flag any items where reasonable lawyers might disagree.
 
 ---
 
-Continue to [Lesson 9: Employment Law in Legal Operations ->](./09-employment-law-in-legal-operations.md)
+Continue to [Lesson 12: Employment Law and Contractor Classification ->](./12-employment-law-and-contractor-classification.md)

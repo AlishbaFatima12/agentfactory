@@ -71,7 +71,11 @@ differentiation:
 
 # NDA Triage and Management
 
-In Lesson 3, you learned the contract review workflow for complex agreements. Now you will tackle the highest-volume, lowest-complexity contract type in most legal departments: the Non-Disclosure Agreement.
+In Lesson 3, you reviewed the CloudStack agreement clause by clause and saw RED flags on data protection and liability. NDAs are different — the question is not "what needs redlining?" but "does this need attorney time at all?" This lesson builds a three-tier triage system that routes the right NDAs to the right level of review.
+
+:::tip Connector Dual-Mode
+If you connected Box or Egnyte in Lesson 1, the agent can pull NDAs directly from your document management system. If not, upload the NDA PDF or paste the text — both paths produce identical triage output.
+:::
 
 :::info Concept Box: NDA (Non-Disclosure Agreement)
 An NDA -- also called a confidentiality agreement, mutual CA, or CDA -- is a contract in which one or both parties agree not to disclose specified confidential information. For example, before NexaByte Solutions (Karachi) evaluates a cloud infrastructure provider for a potential PKR 50 million migration, both companies sign a mutual NDA so they can share technical specifications, pricing, and customer data without fear of disclosure. A typical mutual NDA defines "Confidential Information," specifies a term (usually 2-5 years), includes carve-outs for publicly available information, and sets out remedies for breach. Organisations receive 10-50 NDAs per month; without a triage system, every one requires attorney review regardless of risk level. **Why it matters:** NDAs are high-volume, low-complexity contracts that consume disproportionate attorney time -- the perfect candidate for AI-assisted triage.
@@ -95,9 +99,37 @@ NDAs with deviations falling within acceptable range but requiring attorney conf
 
 NDAs with RED deviations, unusual structures (unilateral where mutual expected), unusually broad confidential information scope, or concerning jurisdiction choices. Routes to senior counsel with a detailed risk summary. Target: 10-15%.
 
+### SLA Targets for NDA Response
+
+| Tier   | Target Response Time | Attorney Involvement                       |
+| ------ | -------------------- | ------------------------------------------ |
+| Tier 1 | 1 business day       | None — business-unit manager approval      |
+| Tier 2 | 2 business days      | Reviewing attorney (~15 min)               |
+| Tier 3 | 5 business days      | Senior counsel (full review + negotiation) |
+
+### Nine Automatic RED Flags
+
+The following provisions trigger automatic Tier 3 escalation regardless of other clause quality:
+
+1. **Residuals clause** — permits use of information "retained in unaided memory"
+2. **No carve-out for publicly available information** — overly broad scope
+3. **Non-compete provisions** of any scope
+4. **Asymmetric injunctive relief** — favouring counterparty only
+5. **Perpetual confidentiality** — no sunset provision
+6. **Unilateral NDA where mutual expected** — without business justification
+7. **Unrestricted disclosure to affiliates** — no need-to-know requirement
+8. **Governing law in non-English-speaking jurisdiction** — without executive summary
+9. **Survival period exceeding 7 years** — disproportionate to typical commercial risk
+
 ## Worked Example: Triaging an NDA from a Saudi Partner
 
-Noor Technologies is exploring a partnership with Al-Madinah Cloud Solutions, a Saudi Arabian cloud infrastructure provider based in Riyadh. Al-Madinah's legal team has sent their standard mutual NDA. Bilal runs the triage:
+Noor Technologies is exploring a partnership with Al-Madinah Cloud Solutions, a Saudi Arabian cloud infrastructure provider based in Riyadh. Al-Madinah's legal team has sent their standard mutual NDA.
+
+:::note Prediction Moment
+Read the scenario above. Before running `/triage-nda`, predict: will this NDA be classified as Tier 1 (auto-approve), Tier 2 (counsel review), or Tier 3 (escalate)? Which clauses concern you most? Write your prediction.
+:::
+
+Bilal runs the triage:
 
 ```
 Bilal: /triage-nda
@@ -164,9 +196,13 @@ ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
 A residuals clause in an NDA permits a party to use information "retained in the unaided memory" of its personnel after the NDA terminates. For example: "Nothing in this Agreement shall restrict either party from using ideas, concepts, know-how, or techniques that are retained in the unaided memories of its Representatives who have had access to Confidential Information." This sounds innocuous but creates an enormous loophole -- any information an employee can remember, they can use freely. In practice, it can render the entire NDA unenforceable for its most valuable purpose: protecting trade secrets and proprietary methodologies. The Legal Plugin automatically flags any residuals clause as a Tier 3 RED item. **Why it matters:** residuals clauses are the most commonly overlooked high-risk provision in NDAs -- they sound reasonable but can undermine the entire agreement.
 :::
 
-Bilal reviews the output. The governing law flag is sensible -- he knows from experience that English law with LCIA arbitration is the standard recommendation for cross-border deals between Pakistani and Gulf entities. He routes to the reviewing attorney with the agent's summary attached. The attorney confirms the governing law position, notes that the 5-year confidentiality period is acceptable for a strategic partnership, and the NDA is routed for signatory approval.
+Compare your prediction to the output. If you predicted Tier 1 but it classified Tier 2, look at which deviations triggered the routing. The governing law deviation (Saudi law instead of Pakistani/English law) is the kind of issue that seems minor but has real enforcement implications. This gap between gut feel and systematic triage is the value of the system — it catches issues your intuition might dismiss.
+
+Bilal reviews the output. The governing law flag is sensible — he knows from experience that English law with LCIA arbitration is the standard recommendation for cross-border deals between Pakistani and Gulf entities. He routes to the reviewing attorney with the agent's summary attached. The attorney confirms the governing law position, notes that the 5-year confidentiality period is acceptable for a strategic partnership, and the NDA is routed for signatory approval.
 
 Total attorney time: 12 minutes. Without the triage system, this NDA would have waited in the general review queue for 2-3 days, potentially delaying the partnership kickoff.
+
+> **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
 
 ## Configuring NDA Triage in the Playbook
 
@@ -351,4 +387,4 @@ a partial competitor.
 
 ---
 
-Continue to [Lesson 5: Intellectual Property Protection ->](./05-intellectual-property-protection.md)
+Continue to [Lesson 6: Compliance Check and Legal Risk Assessment ->](./06-compliance-check-and-legal-risk-assessment.md)
