@@ -1,79 +1,79 @@
 deck:
   id: "ch22-04-cross-border-e-signatures"
   title: "Cross-Border Contracts and E-Signatures"
-  description: "Five cross-border pitfalls, multi-overlay jurisdiction loading, conflict of laws, New York Convention, Arabic prevails risk, /signature-request pre-flight verification, and post-execution obligation extraction"
+  description: "Five cross-border pitfalls, multi-overlay jurisdiction review, conflict of laws, New York Convention, Arabic prevails risk, /signature-request with pre-flight verification, and post-execution obligation extraction"
   tags: ["legal-ops", "cross-border", "e-signatures", "chapter-22"]
   version: 1
 
 cards:
   - id: "ch22-04-cross-border-001"
-    front: "What are the five cross-border pitfalls that recur in every multi-jurisdictional contract?"
-    back: "1. Governing law vs. mandatory local law conflicts — governing law does not override mandatory local regulations\n2. Arbitration enforceability gaps — not all jurisdictions enforce foreign arbitral awards equally\n3. Data transfer mechanism gaps — a DPA referencing one framework may be insufficient across multiple jurisdictions\n4. Tax withholding obligations — cross-border payments frequently trigger withholding tax\n5. Language precedence (Arabic prevails risk) — in Arabic-language jurisdictions, the Arabic version may prevail in court"
-    difficulty: "intermediate"
-    tags: ["cross-border-pitfalls"]
+    front: "What is 'conflict of laws' (private international law) and what three questions does it address?"
+    back: "Conflict of laws is the body of rules that determines which jurisdiction's law applies when a legal dispute involves elements from more than one country. Three questions arise: (1) Which court has jurisdiction? (2) Which country's substantive law governs? (3) Will a judgment or arbitral award from one country be enforced in another? A governing law clause answers question 2 but leaves questions 1 and 3 open."
+    difficulty: "basic"
+    tags: ["conflict-of-laws", "private-international-law"]
 
   - id: "ch22-04-cross-border-002"
-    front: "What is conflict of laws (private international law)?"
-    back: "The body of rules that determines which jurisdiction's law applies when a legal dispute involves elements from more than one country. Three questions arise: (1) Which court has jurisdiction? (2) Which country's substantive law governs? (3) Will a judgment or arbitral award from one country be enforced in another? A governing law clause answers question 2 but leaves questions 1 and 3 open."
-    difficulty: "basic"
-    tags: ["conflict-of-laws"]
+    front: "Name the five cross-border pitfalls that recur in every multi-jurisdictional contract."
+    back: "1. Governing law vs mandatory local law — governing law does not override local regulations.\n2. Arbitration enforceability gaps — not all jurisdictions enforce foreign arbitral awards equally.\n3. Data transfer mechanism gaps — a DPA referencing EU SCCs may be insufficient elsewhere.\n4. Tax withholding obligations — cross-border services frequently trigger withholding tax.\n5. Language precedence — in UAE mainland and Saudi Arabia, the Arabic version may prevail in court."
+    difficulty: "intermediate"
+    tags: ["five-pitfalls", "cross-border"]
 
   - id: "ch22-04-cross-border-003"
-    front: "What is the New York Convention and why does it matter for cross-border contracts?"
-    back: "The Convention on the Recognition and Enforcement of Foreign Arbitral Awards (1958), signed by 172 countries, requires courts in signatory states to enforce arbitral awards made in other signatory states. If your arbitration clause specifies a signatory state, the award is enforceable across all 172 member countries. If a party or performance jurisdiction is not a signatory, enforcement becomes uncertain — the agent flags this gap as RED."
+    front: "What is the New York Convention and why does it matter for cross-border dispute resolution?"
+    back: "The New York Convention (1958) is a treaty signed by 172 countries requiring courts in signatory states to enforce arbitral awards made in other signatory states. If your dispute resolution clause specifies arbitration in a signatory state, the resulting award is enforceable across all 172 member countries. If a party or performance jurisdiction is not a signatory, enforcement becomes uncertain and the agent flags this as RED."
     difficulty: "intermediate"
     tags: ["new-york-convention", "arbitration"]
 
   - id: "ch22-04-cross-border-004"
-    front: "What is the Arabic prevails risk in GCC contracts?"
-    back: "In jurisdictions where Arabic is the official court language — UAE mainland and Saudi Arabia — an English-language contract may need a certified Arabic translation, and the Arabic version may prevail in court if there is a discrepancy. A contract worth AED 1.8 million can turn on a translation nuance. The recommended mitigation is to add a clause specifying that the English version prevails and that arbitration proceedings are conducted in English."
+    front: "What are the five steps of multi-overlay loading in the Legal Plugin?"
+    back: "Step 1: Identify primary governing law and load primary overlay.\nStep 2: Identify party jurisdictions and load party jurisdiction overlays.\nStep 3: Identify performance jurisdictions and load performance jurisdiction overlays.\nStep 4: Cross-reference escalation triggers and flag conflicts between overlays.\nStep 5: Output combined analysis with jurisdiction-specific notes per clause."
+    difficulty: "intermediate"
+    tags: ["multi-overlay", "jurisdiction-loading"]
+
+  - id: "ch22-04-cross-border-005"
+    front: "Why is Step 4 (cross-referencing) the most valuable step in multi-overlay loading?"
+    back: "Cross-referencing compares each clause against every loaded overlay and flags conflicts — for example, a data protection clause that satisfies UAE PDPL but violates Pakistan's PDPA, or an IP assignment clause that works under UAE law but fails under Pakistan's copyright framework. A UAE-law overlay alone would not flag Pakistan's FBR withholding tax, and a Pakistan overlay alone would not flag the Arabic-prevails risk in UAE mainland courts."
+    difficulty: "advanced"
+    tags: ["multi-overlay", "cross-referencing"]
+
+  - id: "ch22-04-cross-border-006"
+    front: "What is the 'Arabic prevails risk' in GCC contracts?"
+    back: "In UAE mainland and Saudi Arabia, where Arabic is the official court language, an English-language contract may need a certified Arabic translation, and the Arabic version may prevail in court if there is a discrepancy. A contract worth millions can turn on a translation nuance. The mitigation is to add a clause specifying that the English-language version prevails and that arbitration proceedings shall be conducted in English."
     difficulty: "intermediate"
     tags: ["arabic-prevails", "language-precedence"]
 
-  - id: "ch22-04-cross-border-005"
-    front: "What are the five steps of multi-overlay loading in the Legal Plugin?"
-    back: "1. Identify primary governing law — load primary overlay\n2. Identify party jurisdictions — load party jurisdiction overlays\n3. Identify performance jurisdictions — load performance jurisdiction overlays\n4. Cross-reference escalation triggers — flag conflicts between overlays\n5. Output combined analysis — jurisdiction-specific notes per clause\nStep 4 is where the real value emerges, catching issues that exist in one jurisdiction but not another."
-    difficulty: "intermediate"
-    tags: ["multi-overlay", "jurisdiction"]
-
-  - id: "ch22-04-cross-border-006"
-    front: "Why does a single-jurisdiction contract review miss cross-border risks?"
-    back: "A single-jurisdiction review applies only one legal framework. Cross-border contracts operate in multiple legal systems simultaneously — the vendor's jurisdiction, the buyer's jurisdiction, and the performance jurisdiction. A UAE-law overlay alone would not flag Pakistan's FBR withholding tax. A Pakistan overlay alone would not flag the Arabic-prevails risk in UAE mainland courts. Multi-overlay loading catches both."
-    difficulty: "intermediate"
-    tags: ["multi-overlay", "cross-border-pitfalls"]
-
   - id: "ch22-04-cross-border-007"
-    front: "In the NexGen-AlFaisal worked example, why was the data protection clause classified as RED?"
-    back: "Three different data protection regimes apply simultaneously: UAE PDPL (Federal Decree-Law No. 45 of 2021), Pakistan PDPA 2023, and Saudi PDPL (Royal Decree M/19 of 2021). The clause was a vague blanket statement ('comply with applicable data protection laws') with no DPA attached and no cross-border transfer mechanisms specified for Pakistan-to-UAE or UAE-to-Saudi data flows."
-    difficulty: "advanced"
-    tags: ["data-protection", "multi-jurisdiction"]
+    front: "What are the five checks in the pre-signature checklist before routing a contract for execution?"
+    back: "1. Final form confirmed — correct version, no tracked changes or comments remaining.\n2. Entity names verified — match official registration exactly, consistent throughout the document.\n3. Signature blocks aligned — with authorised signers confirmed.\n4. All exhibits and schedules attached — SOW, DPA, IP assignment, payment milestones.\n5. Internal approvals completed — board resolution (if required), GC sign-off, finance sign-off."
+    difficulty: "intermediate"
+    tags: ["pre-signature", "checklist"]
 
   - id: "ch22-04-cross-border-008"
-    front: "What tax withholding risks did the NexGen-AlFaisal cross-border review flag?"
-    back: "Pakistan's FBR imposes withholding tax on payments for services rendered by Pakistani entities to foreign parties. Saudi Arabia imposes 5% withholding tax on payments to non-resident service providers. Neither obligation was addressed in the contract. The commercial impact could exceed AED 200,000 — the agent recommended escalation to tax counsel before proposing specific contract language."
-    difficulty: "advanced"
-    tags: ["tax-withholding", "cross-border"]
+    front: "What is the most common cause of contracts requiring re-execution?"
+    back: "Entity name mismatch — where the legal entity name in the contract does not exactly match the official registration. This is the single most frequent cause of contracts requiring re-execution, making it a costly and embarrassing delay."
+    difficulty: "basic"
+    tags: ["entity-name", "execution-errors"]
 
   - id: "ch22-04-cross-border-009"
-    front: "What are the five checks in the /signature-request pre-signature verification?"
-    back: "1. Final form confirmed — matches last redline exchange, no tracked changes remaining\n2. Entity names verified — match official registrations, consistent throughout the document\n3. Signature blocks aligned — authorised signers confirmed\n4. All exhibits and schedules attached — SOW, DPA, IP deed, payment milestones all present\n5. Internal approvals completed — board resolution, GC sign-off, and finance sign-off routed"
-    difficulty: "intermediate"
-    tags: ["signature-request", "pre-signature"]
-
-  - id: "ch22-04-cross-border-010"
-    front: "What is the single most frequent cause of contracts requiring re-execution?"
-    back: "Entity name mismatch — when the legal entity name in the contract does not exactly match the official registration (e.g., 'NexGen Solutions Ltd' vs 'NexGen Solutions (Pvt.) Ltd.'). The /signature-request pre-flight check verifies entity names against official registrations and checks consistency throughout the document."
-    difficulty: "basic"
-    tags: ["signature-request", "entity-names"]
-
-  - id: "ch22-04-cross-border-011"
     front: "How does /signature-request work differently with and without the DocuSign MCP connector?"
-    back: "With DocuSign: digital e-signature, automatic audit trail with timestamps, automatic repository filing, obligation extraction triggered on completion, execution in minutes.\nWithout DocuSign: manual wet ink execution instructions (print, sign, scan, file), manual upload to repository, obligation extraction triggered on manual filing, execution takes days. Both paths end with obligations extracted and tracked."
+    back: "With DocuSign MCP: routes documents directly for digital signatures, creates an automatic timestamped audit trail, and files the executed contract automatically.\nWithout connector: generates manual execution instructions (print, sign, scan, file).\nBoth paths end with the same result: the contract enters the repository and obligations are extracted for tracking."
     difficulty: "basic"
     tags: ["signature-request", "docusign"]
 
-  - id: "ch22-04-cross-border-012"
+  - id: "ch22-04-cross-border-010"
     front: "What happens automatically after a contract is filed in the repository post-execution?"
-    back: "The agent extracts obligations and sets up monitoring: payment milestones with dates, audit rights schedule, compliance report deadlines (e.g., SOC 2 Type II), non-renewal notice deadline, and calendar reminders for all deadlines. The /vendor-check command is enabled for ongoing monitoring — connecting the signed contract to active obligation tracking without additional configuration."
+    back: "The agent extracts obligations and sets up monitoring automatically: payment milestones, audit rights, renewal alerts, and compliance deadlines are tracked. This connects directly to the /vendor-check workflow — the contract moves from 'negotiated and signed' to 'actively monitored' without additional configuration."
     difficulty: "intermediate"
-    tags: ["post-execution", "obligation-tracking"]
+    tags: ["post-execution", "obligation-extraction"]
+
+  - id: "ch22-04-cross-border-011"
+    front: "In the NexGen/Al-Faisal worked example, which cross-border pitfalls were flagged and at what status?"
+    back: "Mandatory local law conflicts: RED — three data protection frameworks apply simultaneously.\nArbitration enforceability: GREEN — all three jurisdictions are New York Convention signatories.\nData transfer mechanism gaps: RED — no cross-border transfer mechanisms specified.\nTax withholding obligations: RED — Pakistan FBR + Saudi 5% withholding, AED 200,000+ exposure.\nLanguage precedence: YELLOW — Arabic prevails risk in UAE mainland courts."
+    difficulty: "advanced"
+    tags: ["worked-example", "pitfall-mapping"]
+
+  - id: "ch22-04-cross-border-012"
+    front: "Why does a governing law clause NOT exempt parties from local regulatory obligations?"
+    back: "A governing law clause resolves which law interprets the contract — it does not override mandatory local employment law, consumer protection law, or data localisation requirements in the jurisdiction where services are performed. For example, a contract governed by English law still requires compliance with Pakistan's PDPA 2023 for data processed in Pakistan and Saudi PDPL for data subjects in Saudi Arabia."
+    difficulty: "intermediate"
+    tags: ["governing-law", "mandatory-local-law"]

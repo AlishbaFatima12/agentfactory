@@ -289,6 +289,18 @@ requires response by [date]. Call recommended: [Y/N]."
 
 ---
 
+:::info PayGulf Comparison
+
+PayGulf Technologies' Contract Intake Agent adds a regulatory classification layer that Gulf Digital's intake workflow does not require. Every incoming contract at PayGulf is classified not only by type (NDA, MSA, vendor agreement) and urgency, but also by regulatory impact — a dimension that non-regulated companies can skip entirely.
+
+The regulatory classification asks three questions before standard triage begins. First: does this contract create a new outsourcing arrangement that must be reported to the DFSA? The DFSA requires notification of material outsourcing, and a new merchant processing agreement or technology vendor contract may qualify. Second: does the counterparty operate under SAMA regulation? If PayGulf is contracting with a Saudi-regulated entity, both regulators' outsourcing frameworks apply, and the contract must satisfy both sets of requirements. Third: does the contract involve access to, processing of, or storage of payment data subject to PCI DSS? If yes, specific data handling provisions are mandatory regardless of the contract's commercial terms.
+
+The routing logic changes accordingly. A contract flagged as regulatory-impact is routed directly to Fatima (GC) regardless of its commercial urgency tier. A Tier 1 vendor agreement that would normally bypass attorney review entirely gets escalated to Tier 2 or Tier 3 if the regulatory classification triggers. The intake agent's acknowledgement to the business unit reflects this: "Your contract request has been received. Classification: Tier 2 — Regulatory Review Required. This contract involves a potential outsourcing arrangement under DFSA rules. Expected response: 3 business days."
+
+This adds processing time compared to Gulf Digital's workflow, but the alternative — discovering a DFSA notification requirement after the contract is executed — creates regulatory exposure that dwarfs the cost of a two-day review delay.
+
+:::
+
 ## Agent 2: The Regulatory Monitoring Agent
 
 **Purpose:** Track regulatory changes across relevant jurisdictions daily; assess impact on internal policies and contracts; produce weekly GC briefing.

@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch22-14-sprint-001"
     front: "What are the seven stages of the legal operations sprint capstone?"
-    back: "1. Playbook validation — score executed contracts against the playbook to detect calibration drift.\n2. Contract review sprint — review 3 contracts with attorney-ready redlines.\n3. NDA triage — configure and test a Tier 1/2/3 triage system.\n4. Compliance assessment — produce a 5x5 risk matrix for a new market.\n5. Meeting prep with e-signature routing — briefing and /signature-request.\n6. DSAR response — acknowledgement within statutory window and data discovery.\n7. Legal ops dashboard — vendor health, compliance calendar, spend report, and GC briefing."
+    back: "1. Playbook validation — score contracts to detect calibration drift.\n2. Contract review sprint — review 3 contracts with redlines.\n3. NDA triage — configure and test Tier 1/2/3 system.\n4. Compliance assessment — 5x5 risk matrix for a new market.\n5. Meeting prep — briefing and /signature-request routing.\n6. DSAR response — acknowledgement within statutory window.\n7. Legal ops dashboard — vendor health, calendar, spend, and GC briefing."
     difficulty: "basic"
     tags: ["sprint-stages", "capstone"]
 
@@ -20,7 +20,7 @@ cards:
 
   - id: "ch22-14-sprint-003"
     front: "What are the four principles of legal AI deployment?"
-    back: "1. The agent reviews; the attorney decides — pattern recognition and draft preparation vs judgment and strategy.\n2. The playbook is the product — the plugin is infrastructure that gets commoditised; institutional knowledge does not.\n3. Process-level agents eliminate coordination overhead — Contract Intake, Regulatory Monitoring, Compliance Calendar, DSAR Management remove chasing/tracking/escalating work.\n4. Jurisdiction-aware analysis is non-negotiable for cross-border work — overlays ensure every analysis reflects the applicable legal framework."
+    back: "1. The agent reviews; the attorney decides — pattern recognition vs judgment and strategy.\n2. The playbook is the product — the plugin is infrastructure; institutional knowledge is not.\n3. Process-level agents eliminate coordination overhead — intake, monitoring, calendar, DSAR remove chasing and tracking work.\n4. Jurisdiction-aware analysis is non-negotiable — overlays ensure every analysis reflects the applicable legal framework."
     difficulty: "intermediate"
     tags: ["four-principles", "deployment"]
 
@@ -68,7 +68,7 @@ cards:
 
   - id: "ch22-14-sprint-011"
     front: "When transferring the legal operations engine to a new organisation, what transfers directly and what requires reconfiguration?"
-    back: "Transfers directly (zero changes): command structure, triage tier methodology, dashboard metrics framework, DSAR workflow steps.\nRequires reconfiguration: playbook clause positions (risk tolerance), jurisdiction overlays (applicable legal systems), compliance calendar (regulatory deadlines), risk thresholds (organisation-specific floors and ceilings).\nOrganisation-specific (does not exist in current engine): unique regulatory requirements, practice area specialisations, professional conduct rules."
+    back: "Transfers directly: command structure, triage methodology, dashboard framework, DSAR workflow.\nRequires reconfiguration: playbook clause positions, jurisdiction overlays, compliance calendar deadlines, risk thresholds.\nOrganisation-specific (does not transfer): unique regulatory requirements, practice area specialisations, professional conduct rules."
     difficulty: "advanced"
     tags: ["transferability", "reconfiguration"]
 

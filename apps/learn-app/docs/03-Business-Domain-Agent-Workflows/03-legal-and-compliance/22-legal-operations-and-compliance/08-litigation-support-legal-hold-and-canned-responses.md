@@ -231,6 +231,18 @@ The agent has produced the operational infrastructure -- the notice, the custodi
 
 > **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
 
+:::info PayGulf Comparison
+
+When PayGulf Technologies receives a legal claim, Fatima Al-Rashidi's litigation hold workflow includes steps that DataFlow's Priya Sharma does not face. A DFSA-regulated entity operates under notification obligations that attach the moment material litigation becomes reasonably foreseeable — not just preservation obligations, but regulatory reporting obligations.
+
+The DFSA requires regulated firms to notify the regulator of any material litigation or regulatory action that could affect the firm's ability to meet its regulatory obligations or that could cause significant reputational harm. The threshold for "material" is a judgment call that Fatima must make — and it is a judgment the agent cannot make for her. The agent flags the question: "This matter may trigger DFSA notification requirements under GEN Rule 11.10. Attorney assessment required." Fatima then evaluates whether the claim's value, nature, or potential reputational impact crosses the materiality threshold.
+
+The preservation scope also expands for a regulated payment processor. A standard litigation hold preserves documents, emails, and code related to the disputed matter. PayGulf's hold must also encompass regulatory compliance records — DFSA filings, AML transaction monitoring logs, sanctions screening records, and payment system audit trails — that a non-regulated company would not maintain or need to preserve. If the claim involves payment processing failures, PCI DSS compliance documentation and card scheme incident reports become part of the hold scope. These are records that standard commercial preservation templates do not cover.
+
+If the claim involves cross-border payment data, a further complication arises: PCI DSS data retention rules may conflict with the litigation hold. PCI DSS requires that cardholder data not be stored beyond business necessity, while the litigation hold requires preservation of all potentially relevant materials. Fatima must determine how to satisfy both requirements simultaneously — typically by isolating payment data under restricted access controls that satisfy PCI DSS while preserving it for litigation purposes. The agent identifies the conflict; Fatima designs the resolution.
+
+:::
+
 ## Canned Responses and `/respond`
 
 Beyond litigation holds, the `/respond` command handles seven categories of routine legal correspondence. Each category has a structured template, jurisdiction-appropriate language, and built-in escalation triggers that stop the templated response when human judgment is required.

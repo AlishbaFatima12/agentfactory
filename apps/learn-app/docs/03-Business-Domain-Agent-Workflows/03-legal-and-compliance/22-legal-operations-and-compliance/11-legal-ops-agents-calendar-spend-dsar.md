@@ -515,6 +515,18 @@ legal advice of any kind
   (manifestly unfounded / excessive threshold only)
 ```
 
+:::info PayGulf Comparison
+
+PayGulf Technologies faces a dual data protection regime that makes DSAR processing materially more involved than DataBridge's single-jurisdiction workflow. A data subject request to PayGulf can trigger two different legal frameworks simultaneously — and the agent must identify which applies before the response workflow begins.
+
+A data subject request from a Saudi customer triggers the Saudi Personal Data Protection Law (PDPL), which imposes a 30-day response window administered by the Saudi Data and Artificial Intelligence Authority (SDAIA). A request from a DIFC-based merchant triggers the DIFC Data Protection Law 2020 (DIFC Law No. 5 of 2020), which also imposes a 30-day window but is administered by the DIFC Commissioner of Data Protection — a different regulator with different exemption provisions and different enforcement mechanisms.
+
+The complication that distinguishes PayGulf from simpler DSAR scenarios arises when a single data subject has data in both jurisdictions. A merchant based in Riyadh who processes payments through PayGulf's DIFC-based platform may have customer account data governed by Saudi PDPL and transaction processing data governed by DIFC Data Protection Law. The DSAR must satisfy both frameworks simultaneously: different exemption grounds, different third-party disclosure rules, different regulator notification requirements if the request is refused.
+
+The DSAR Agent identifies which regime applies based on two factors: the data subject's residency (which determines their statutory rights) and the data's processing location (which determines which regulator has jurisdiction over the processing). When both regimes apply, the agent generates parallel redaction assessments — one under Saudi PDPL exemptions and one under DIFC Data Protection Law exemptions — and flags any items where the two frameworks produce different disclosure outcomes. Fatima reviews the dual-regime assessment before the response is sent, because a disclosure decision that satisfies one framework may violate the other. The agent surfaces the conflict; the attorney resolves it.
+
+:::
+
 ## Try With AI
 
 Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
