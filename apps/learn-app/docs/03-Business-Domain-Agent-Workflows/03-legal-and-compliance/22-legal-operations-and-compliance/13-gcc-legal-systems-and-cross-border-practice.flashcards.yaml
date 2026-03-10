@@ -1,0 +1,73 @@
+deck:
+  id: "ch22-13-gcc-legal-systems"
+  title: "GCC Legal Systems and Cross-Border Practice"
+  description: "GCC dual legal system, DIFC vs ADGM vs mainland UAE, dual overlay loading, SAMA outsourcing, Saudi PDPL data localisation, quantified transformation model, and infrastructure vs institutional knowledge"
+  tags: ["legal-ops", "gcc", "cross-border", "chapter-22"]
+  version: 1
+
+cards:
+  - id: "ch22-13-gcc-001"
+    front: "What are the three distinct legal zones within the UAE, and what legal system does each follow?"
+    back: "1. Mainland UAE — civil law (Egyptian/French tradition), UAE Civil Code, Arabic official court language\n2. DIFC (Dubai International Financial Centre) — independent common law jurisdiction, own courts in English, own data protection law\n3. ADGM (Abu Dhabi Global Market) — independent common law jurisdiction applying English law directly as at 1 June 2015"
+    difficulty: "basic"
+    tags: ["uae-zones"]
+
+  - id: "ch22-13-gcc-002"
+    front: "What is Article 390 of the UAE Civil Code and why does it matter for contract review?"
+    back: "Article 390 allows UAE mainland courts to reduce liquidated damages they consider excessive — regardless of what the parties agreed in the contract. This means a penalty clause that would be enforceable under DIFC common law (reasonableness test) may be judicially reduced under mainland UAE law. Getting the zone identification wrong can invalidate an entire contract review."
+    difficulty: "intermediate"
+    tags: ["article-390", "mainland-uae"]
+
+  - id: "ch22-13-gcc-003"
+    front: "How does DIFC differ from ADGM in its application of common law?"
+    back: "DIFC applies its own common law principles developed through DIFC Courts precedent. ADGM directly applies English common law as at 1 June 2015 — English Court of Appeal and Supreme Court decisions are directly applicable, subject to specific ADGM legislation. Both use English as court language, but their legal bases are distinct."
+    difficulty: "intermediate"
+    tags: ["difc", "adgm"]
+
+  - id: "ch22-13-gcc-004"
+    front: "What is dual overlay loading, and when does it occur?"
+    back: "Dual overlay loading occurs when a contract crosses jurisdictional boundaries — the plugin loads multiple jurisdiction overlays simultaneously (e.g., DIFC overlay + Saudi overlay). This happens for cross-border contracts where parties operate under different legal systems, including cross-zone contracts within the UAE itself."
+    difficulty: "intermediate"
+    tags: ["dual-overlay"]
+
+  - id: "ch22-13-gcc-005"
+    front: "Why does the PayStream/CloudVault contract trigger dual data protection compliance?"
+    back: "PayStream is a Saudi entity (Saudi PDPL applies to data subjects who are Saudi residents) while CloudVault processes data in the DIFC (DIFC Data Protection Law 2020 applies to processors in the DIFC). The same data is subject to two overlapping data protection regimes because the controller and processor are in different jurisdictions."
+    difficulty: "advanced"
+    tags: ["data-protection", "dual-compliance"]
+
+  - id: "ch22-13-gcc-006"
+    front: "What are SAMA Outsourcing Regulations and why do they affect the CloudVault contract?"
+    back: "SAMA (Saudi Arabian Monetary Authority) regulates financial services in Saudi Arabia. Its Outsourcing Regulations require that regulated entities and the regulator have audit rights over outsourced service providers. PayStream is SAMA-regulated, so the contract's audit clause (once per year with 60 days' notice) is insufficient — SAMA may require regulatory-triggered audits on shorter notice."
+    difficulty: "advanced"
+    tags: ["sama", "outsourcing"]
+
+  - id: "ch22-13-gcc-007"
+    front: "Why is the zone identification step called 'CRITICAL FIRST STEP' in the UAE overlay?"
+    back: "Because getting the zone wrong invalidates the entire contract review. A limitation of liability clause analysed under DIFC common law (reasonableness test, similar to English UCTA) reaches a completely different conclusion than the same clause analysed under mainland UAE civil law (where Article 390 allows judicial reduction). The wrong zone means the wrong legal framework applied to every clause."
+    difficulty: "basic"
+    tags: ["zone-identification"]
+
+  - id: "ch22-13-gcc-008"
+    front: "What is the reference model for legal operations transformation savings?"
+    back: "For a 150-250 person company with a 3-person legal team operating across 2-3 jurisdictions: 78-123 attorney hours saved per month across six functions — contract review (30-39 hrs), NDA triage (10-17 hrs), regulatory monitoring (3-5 hrs), DSAR processing (32-48 hrs), compliance calendar (7-9 hrs), and legal spend review (3.5-5.5 hrs)."
+    difficulty: "intermediate"
+    tags: ["transformation", "quantification"]
+
+  - id: "ch22-13-gcc-009"
+    front: "What does NOT change when deploying the Legal Plugin?"
+    back: "Five things remain unchanged:\n1. The attorney's professional obligation and duty of care\n2. Attorney-client privilege (attaches to attorney communications, not AI outputs)\n3. The requirement for a licensed professional to provide legal advice\n4. Judgment for litigation risk, negotiation strategy, and complex legal questions\n5. Professional responsibility for the final content of executed legal documents"
+    difficulty: "basic"
+    tags: ["governance", "unchanged"]
+
+  - id: "ch22-13-gcc-010"
+    front: "What is the difference between infrastructure and institutional knowledge in legal AI?"
+    back: "The plugin is infrastructure — it gets commoditised. Every organisation with the same plugin gets the same generic capability. Institutional knowledge — the negotiation playbook, jurisdiction overlays, calibrated triage thresholds, contract repository — is the product. An organisation with a mature playbook gets a transformed legal function. An organisation without one gets a better tool."
+    difficulty: "intermediate"
+    tags: ["infrastructure", "institutional-knowledge"]
+
+  - id: "ch22-13-gcc-011"
+    front: "Can two companies in the same UAE city operate under different legal systems? Give an example."
+    back: "Yes. A company registered in mainland Dubai operates under UAE Civil Code (civil law, Arabic courts). A company registered in the DIFC (also in Dubai) operates under DIFC law (common law, English courts). A contract between them creates a dual-jurisdiction situation requiring the governing law clause to determine which system interprets the contract — but both parties' regulatory obligations persist regardless."
+    difficulty: "basic"
+    tags: ["dual-jurisdiction", "uae-zones"]
