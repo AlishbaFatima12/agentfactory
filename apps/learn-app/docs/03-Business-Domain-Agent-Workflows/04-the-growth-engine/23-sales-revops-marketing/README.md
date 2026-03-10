@@ -25,36 +25,34 @@ claude plugin install sales-revops-marketing@agentfactory-business
 
 ### Lesson Map
 
-| #   | Lesson                                       | Key Focus                                                                                   |
-| --- | -------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| 1   | The Revenue Engine                           | Install dual plugins; `/research-prospect`; hallucinated data detection; local config       |
-| 2   | Prospect Intelligence and ICP Calibration    | `persona-icp` skill; 8-section calibration; progressive connector intro                     |
-| 3   | Scoring, Qualifying, and Keeping Data Alive  | `/score-lead`; three-dimension scoring; score decay; `crm-enrichment`                       |
-| 4   | The Five Laws of Outreach                    | Five Laws as constraints; 17 banned words; `outreach` skill; design force for Override      |
-| 5   | Multi-Touch Sequences and Copywriting        | `/build-sequence`; `follow-up`; `copywriting` skills; over-automation; WhatsApp B2B         |
-| 6   | The Prospect-to-Meeting Workflow             | End-to-end pipeline; `pre-call-brief`; `/call-summary`; context loss; garbage propagation   |
-| 7   | Morning Briefing and Competitive Battlecards | `daily-briefing`; `competitive-intelligence` battlecards; intel-to-outreach                 |
-| 8   | Campaign Strategy and the Content Engine     | `/plan-campaign`; `content-creation`; `/seo-audit`; `/email-sequence`; ABM; attribution     |
-| 9   | Sales Assets and Brand Voice                 | `create-an-asset` interactive HTML; `brand-voice`; `/brand-review` cross-channel            |
-| 10  | Wrappers and Progressive Enhancement         | Wrapper pattern; progressive connectors; zero-connector exercise; design reasoning          |
-| 11  | Override, Delegation, and the Five Laws      | Override necessity; Five Laws as design force; `sales-marketing-global-router`; delegation   |
-| 12  | Outreach Compliance and Regional Context     | CAN-SPAM, GDPR, PECA; jurisdiction overlays; cultural mismatch; ethical outreach            |
-| 13  | Monitoring and Reporting Agents              | `lead-intelligence-agent`; `crm-hygiene-agent`; `marketing-performance-agent`; schedule     |
-| 14  | Reactive Agents and State Machines           | `outreach-sequencing-agent`; event-driven state machine; branch conditions; stop rules      |
-| 15  | Agent Orchestration and the Skill Library    | `sales-marketing-global-router`; cross-agent coordination; jurisdiction overlays; extension  |
-| 16  | Applied Practice                             | 6 cross-lesson exercises + capstone; Agent Output Taxonomy diagnostics; real business data   |
+| #   | Lesson                                     | Key Focus                                                                                  |
+| --- | ------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| 1   | The Revenue Engine                         | Install 3 plugins; first research brief; hallucination detection; demo data generation     |
+| 2   | Prospect Intelligence and ICP Calibration  | `persona-icp` skill; ICP from closed-won data; `/competitive-brief`; 5 research briefs     |
+| 3   | Lead Scoring                               | Three-dimension scoring (Fit + Timing + Engagement); routing rules; calibration            |
+| 4   | CRM Enrichment and Data Decay              | `crm-enrichment` skill; timing signal refresh; enrichment schedule                         |
+| 5   | The Five Laws of Outreach                  | Five Laws as constraints; 17 banned words; `outreach` skill; compliance gap discovery      |
+| 6   | Multi-Touch Sequences and Follow-Up        | 6-touch sequence; `/email-sequence`; over-automation discovery; exit conditions            |
+| 7   | Pre-Call Briefs and Meeting Preparation    | `pre-call-brief`; `competitive-intelligence` battlecards; `/call-summary`; context loss    |
+| 8   | The Prospect-to-Meeting Pipeline           | End-to-end: research → score → outreach → brief → follow-up; config quality amplification  |
+| 9   | Content Creation and Brand Voice           | `create-an-asset` interactive HTML; `/brand-review`; `/seo-audit`; 10 assets from 1 piece  |
+| 10  | Campaign Strategy and the Content Calendar | `/campaign-plan`; `/email-sequence`; content calendar; measurement framework               |
+| 11  | Campaign Performance Analysis              | `/performance-report`; extension analysis comparison; `/competitive-brief`; weekly cadence |
+| 12  | Outreach Compliance and Regional Context   | PECA, GDPR, UAE data law; jurisdiction overlays; 3-market compliant outreach               |
+| 13  | RevOps Agents and the Revenue Dashboard    | 5 agents; `/pipeline-review`; `/forecast`; `daily-briefing`; revenue dashboard             |
+| 14  | The Revenue Engine Sprint                  | Full sprint: ICP → research → score → outreach → campaign → dashboard (capstone)           |
 
 ### Agent Output Taxonomy
 
-Errors are introduced progressively across lessons. By L16, you can diagnose all five:
+Errors are discovered progressively across lessons. By L14, you can diagnose all five:
 
-| Error Type             | Introduced | Diagnostic Question                                        |
-| ---------------------- | ---------- | ---------------------------------------------------------- |
-| Hallucinated Data      | L01        | "Can you verify this claim from the research brief?"       |
-| Miscalibrated Scoring  | L03        | "Does this score match what you know about this prospect?" |
-| Compliance Gap         | L04        | "Is this outreach legal in the prospect's jurisdiction?"   |
-| Over-Automation        | L05        | "Should the agent have stopped before touch #5?"           |
-| Context Loss           | L06        | "Did the follow-up reference the research brief?"          |
+| Error Type            | Discovered | Diagnostic Question                                        |
+| --------------------- | ---------- | ---------------------------------------------------------- |
+| Hallucinated Data     | L01        | "Can you verify this claim from the research brief?"       |
+| Miscalibrated Scoring | L03        | "Does this score match what you know about this prospect?" |
+| Compliance Gap        | L05        | "Is this outreach legal in the prospect's jurisdiction?"   |
+| Over-Automation       | L06        | "Should the agent have stopped before touch #5?"           |
+| Context Loss          | L07        | "Did the follow-up reference the research brief?"          |
 
 ### Case Studies
 
