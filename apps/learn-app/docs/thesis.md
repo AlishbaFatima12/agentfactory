@@ -51,6 +51,8 @@ The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers def
 What remains: Intent. Verification. Outcome.
 </p>
 
+The market is converging on a complementary idea: every professional will soon have a personal AI agent — what Don Tapscott calls identic AI — that reflects their judgment and acts on their behalf.¹ The Agent Factory is the industrial architecture that makes this possible at scale.
+
 </div>
 
 ## 📚 Teaching Aid
@@ -102,6 +104,15 @@ A common fear: agents replace people. The evidence says otherwise. For most task
 This changes what it means to be a "tech professional." A web developer or mobile developer is not just someone who writes React or Swift. They are a **technology expert**—someone who understands systems, data flows, APIs, and user needs. In the Agent Factory era, that expertise becomes far more valuable, because it is no longer spent hand-coding screens. It is spent designing, deploying, and supervising agents that deliver entire products.
 
 The developer doesn't disappear. The developer does _more_.
+
+### Personal Agents and the Enterprise Interface
+
+AI employees are how work gets done. Identic AI is how humans will increasingly direct, govern, and interface with that AI workforce on their own behalf. The Agent Factory manufactures role-based AI employees to execute tasks, coordinate workflows, and deliver verified outcomes at scale, but the human remains the principal who defines purpose, values, constraints, and accountability. Identic AI adds a new personal layer: a self-sovereign agent that understands an individual’s context, judgment, and preferences, and can translate human intent into delegated action across the enterprise.¹ In this model, enterprise AI employees are the execution fabric, while identic AI is the human’s representative and orchestration layer, enabling people to supervise direction rather than perform routine execution themselves. The future firm will therefore operate across two connected layers: AI employees inside the factory, and personal agents at the edge, with humans setting intent and verifying outcomes across both.
+
+**Notes**
+
+¹ Don Tapscott, interview on HBR IdeaCast, “[With Rise of Agents, We Are Entering the World of Identic AI](https://hbr.org/podcast/2026/02/with-rise-of-agents-we-are-entering-the-world-of-identic-ai)”, Harvard Business Review, February 17, 2026.
+
 
 ### The Workforce Opportunity
 
