@@ -385,6 +385,18 @@ a partial competitor.
 
 **What you are learning:** The residuals clause illustrates why NDA triage cannot be purely mechanical. The same clause that is acceptable when sharing marketing materials with an agency becomes a serious risk when sharing product roadmaps with a competitor. Tier 3 escalation ensures human judgment is applied to these context-dependent decisions.
 
+:::info PayGulf Comparison
+
+PayGulf Technologies processes approximately 20 NDAs per month with fintech counterparties — payment gateways, banking API providers, card scheme partners, and merchant acquirers. The volume is comparable to Noor Technologies, but PayGulf's triage thresholds are materially tighter because of its DFSA-regulated status.
+
+A standard technology company triaging an NDA asks: does this deviate from our standard form? A DFSA-regulated entity must also ask: does this counterparty handle payment data, and if so, does the NDA adequately protect information that falls under both confidentiality obligations and PCI DSS requirements? An NDA with a payment gateway provider that would be Tier 1 (auto-approve) for Noor Technologies may be Tier 2 (counsel review) for PayGulf, because the counterparty processes cardholder data and the NDA must address data handling practices that the DFSA requires PayGulf to oversee in its outsourcing arrangements.
+
+PayGulf's triage configuration adds three RED flags beyond the standard nine. First, any NDA with a counterparty that processes, stores, or transmits payment card data must include provisions addressing PCI DSS compliance obligations — without these, the NDA is incomplete for regulatory purposes. Second, counterparty due diligence on data handling practices is required by DFSA outsourcing rules whenever confidential information includes customer payment data. Third, any NDA breach involving payment system data may trigger mandatory reporting obligations to the DFSA and potentially to card schemes — the NDA must not contain provisions that would prevent or delay such reporting.
+
+The practical effect: what Noor classifies as Tier 1 auto-approve, PayGulf may classify as Tier 2 review. Fatima's team reviews more NDAs than a non-regulated company of similar size — but the regulatory cost of getting an NDA wrong is proportionally higher. The triage system does not reduce attorney involvement to zero; it ensures attorney time is spent on the NDAs where regulatory exposure is real.
+
+:::
+
 ## What You Built
 
 1. A three-tier NDA triage system with SLA targets (Tier 1: 1 business day, Tier 2: 2 days, Tier 3: 5 days with attorney review)

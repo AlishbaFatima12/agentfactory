@@ -49,6 +49,30 @@ This chapter requires the **Claude desktop app** with **Cowork** enabled (Pro, M
 | 13  | GCC Legal Systems and Cross-Border Practice          | DIFC/ADGM/mainland; multi-jurisdiction review; quantified transformation model             |
 | 14  | The Legal Operations Sprint                          | 8 exercises with exact prompts; all commands/skills; four principles; quick reference      |
 
+### Plugin & Companion Materials
+
+Install the Legal Ops plugin once — it activates automatically on all legal operations queries:
+
+**Cowork:** Sidebar → Customize → Browse plugins → + → Add marketplace from GitHub → `panaversity/agentfactory-business-plugins` → Install "Legal Ops"
+
+**Claude Code CLI:**
+
+```bash
+claude plugin install legal-ops@agentfactory-business
+```
+
+Downloads (from the [latest release](https://github.com/panaversity/agentfactory-business-plugins/releases/latest)):
+
+- `legal-ops-exercise-data.zip` — Exercise scenarios for Lessons 1-14 (sample contracts, NDAs, employment agreements, demand letters)
+- `legal-ops-workflow-recipes.zip` — Operational playbook templates (contract intake, NDA triage, DSAR 30-day workflow, regulatory monitoring)
+- `legal-ops-full.zip` — Everything in one package (Lesson 14 capstone sprint)
+
+Repository contents (inside `legal-ops/`):
+
+- `exercises/` — 8 self-contained exercise files mapped to chapter lessons
+- `workflow-recipes/` — 4 operational playbook templates for scheduling recurring legal workflows
+- `legal.local.md.template` — Negotiation playbook template (copy and customise in Lesson 2)
+
 ### Case Studies
 
 | Case Study                      | Role                  | Purpose                                                                  |

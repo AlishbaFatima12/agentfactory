@@ -113,6 +113,10 @@ The agent (connected via MCP to Google Patents, USPTO, EPO public APIs) produces
 
 Zara Akhtar is Head of Product at SpectraAI, a 25-person AI startup based in Lahore, Pakistan. SpectraAI has developed a proprietary method for extracting structured data from Urdu-language legal documents -- a technology with significant commercial potential given Pakistan's legal system still processes many documents in Urdu. Before launching their commercial product and seeking Series A funding, Zara needs to understand the patent landscape.
 
+:::tip Prediction Moment
+Before reading the landscape analysis below, predict: how crowded is the patent space for Urdu-script document processing? Will the agent find dozens of competing patents, a handful, or almost none? Which of Zara's three technology areas -- nastaliq OCR, Pakistani legal entity recognition, or clause classification under the Contract Act 1872 -- has the most existing patent coverage? Write your predictions, then compare them to the output.
+:::
+
 ```
 Zara: /brief topic:"patent landscape analysis"
       subject:"AI-based structured data extraction from Urdu and

@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch22-13-gcc-001"
     front: "What are the three legal zones within the UAE, and what legal tradition does each follow?"
-    back: "1. Mainland UAE — civil law system influenced by Egyptian and French legal traditions, governed by the UAE Civil Code (Federal Law No. 5 of 1985).\n2. DIFC (Dubai International Financial Centre) — independent common law jurisdiction within Dubai, established by Dubai Law No. 9 of 2004, with its own courts, financial regulator (DFSA), and data protection law.\n3. ADGM (Abu Dhabi Global Market) — independent common law jurisdiction within Abu Dhabi, established by Abu Dhabi Law No. 4 of 2013, which directly applies English common law as at 1 June 2015."
+    back: "1. Mainland UAE — civil law system governed by the UAE Civil Code (Federal Law No. 5 of 1985).\n2. DIFC — independent common law jurisdiction within Dubai with its own courts, regulator (DFSA), and data protection law.\n3. ADGM — independent common law jurisdiction within Abu Dhabi that directly applies English common law as at 1 June 2015."
     difficulty: "basic"
     tags: ["uae-zones", "dual-legal-system"]
 
