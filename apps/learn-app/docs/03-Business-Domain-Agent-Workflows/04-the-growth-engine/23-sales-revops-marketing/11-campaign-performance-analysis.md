@@ -156,61 +156,17 @@ Provide: channel-by-channel analysis, 3 optimisation recommendations,
 and a budget reallocation suggestion.
 ```
 
-**Output:**
+**What to expect:** The `/performance-report` produces a structured campaign analysis. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          CAMPAIGN PERFORMANCE REPORT
-          NexaFlow Q2 — Week 5 of 12
-          Period: 42% through campaign
-══════════════════════════════════════════════════════════════
+| Section                        | Intent                                        | What to Verify                                                      |
+| ------------------------------ | --------------------------------------------- | ------------------------------------------------------------------- |
+| Channel performance summary    | Per-channel status with action recommendation | Each channel rated (STRONG/GOOD/WATCH/WEAK) with specific next step |
+| Recommendations (3)            | Specific optimisation actions                 | Each recommendation names the problem, the fix, and expected impact |
+| Budget reallocation suggestion | Where to move money based on efficiency       | Shifts budget FROM underperforming TO high-efficiency channels      |
 
-CHANNEL PERFORMANCE SUMMARY
-─────────────────────────────────────────────────────────────
-Channel               Performance    Budget Efficiency   Action
-LinkedIn Ads (PK/UAE) GOOD           CPL $310 (< $400)   Continue
-LinkedIn Ads (UK)     WATCH          CPL $680 (< $750)   Monitor
-Google Search         STRONG         CTR 3.2% (> 1.5%)   Expand
-Email Nurture         MIXED          Open ✓, Click ✗     Fix CTAs
-WhatsApp (PK)         STRONG         24% response        Continue
-LinkedIn Organic      STRONG         3.8% engagement     Boost posts
-Trade Press           WEAK           1 of 3 target       Reassess
-
-RECOMMENDATIONS
-─────────────────────────────────────────────────────────────
-1. FIX EMAIL CLICK RATE
-   Issue: Open rate strong (28%) but click rate weak (1.8%).
-   Diagnosis: Recipients read emails but do not click CTAs.
-   Action: Rewrite CTAs in emails 4-6. Replace generic "Learn
-   more" with specific value CTAs: "See how TCS cut dispatch
-   errors by 60%" or "Calculate your fleet ROI in 2 minutes."
-   Expected impact: Click rate improvement to 2.5-3.5%.
-
-2. REDUCE TRADE PRESS GAP
-   Issue: 1 mention vs 3 target. Behind by 2 mentions.
-   Action: Pitch 2 contributed articles to Pakistan logistics
-   publications (Logistics Pakistan, Dawn Business). Use the
-   customer story from L09 as the pitch angle.
-   Expected impact: 1-2 additional mentions by Week 8.
-
-3. EXPAND GOOGLE SEARCH KEYWORDS
-   Issue: Google CTR at 3.2% — well above 1.5% threshold.
-   Action: Add 10 long-tail logistics keywords targeting UAE
-   and UK markets. Current keywords focus on Pakistan. Expand
-   to "3PL automation Dubai" and "supply chain AI UK."
-   Expected impact: 2-3 additional leads from Search by Week 8.
-
-BUDGET REALLOCATION SUGGESTION
-─────────────────────────────────────────────────────────────
-Current state: LinkedIn PK/UAE is most efficient (CPL $310).
-Google Search has headroom (high CTR, low keyword count).
-Trade press is underperforming (1 of 3).
-
-Suggested reallocation: Move $500 from trade press budget
-to Google Search keyword expansion. No other changes until
-Week 7 data confirms trends.
-══════════════════════════════════════════════════════════════
-```
+:::note Your output will vary
+The report depends on the Week 5 data you generated. The teaching point is _evaluating_ the recommendations: (1) Is each recommendation specific enough for Zara to execute Monday morning? (2) Is the expected impact realistic? (3) Can the team actually do this given their capacity? A recommendation that fails any of these tests needs iteration.
+:::
 
 ## Comparing the Extension's Performance Analysis
 
@@ -226,73 +182,29 @@ and three-dimension scoring integration.
 
 The extension adds three dimensions the base report does not cover:
 
-```
-EXTENSION: PERFORMANCE-ANALYSIS SKILL
-══════════════════════════════════════════════════════════════
+**What to expect from the extension:**
 
-ICP-FILTERED ANALYSIS
-─────────────────────────────────────────────────────────────
-Of 28 whitepaper downloads:
-  ICP-matched (3PL, VP Ops/COO, 100-500 employees): 16 (57%)
-  Adjacent (logistics but wrong title/size): 8 (29%)
-  Non-ICP (outside logistics entirely): 4 (14%)
+| Section                             | Intent                                               | What to Verify                                                  |
+| ----------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------- |
+| ICP-filtered analysis               | What percentage of leads match your target persona   | Breakdown: ICP-matched vs adjacent vs non-ICP                   |
+| Regional benchmark comparison       | Your metrics vs local market benchmarks (not global) | Pakistan, UAE, and UK each have different baselines             |
+| Three-dimension scoring integration | Fit/Timing/Engagement breakdown of HOT leads         | Identifies which scoring dimension is weakest across your leads |
 
-Assessment: 57% ICP match is adequate but below the 70%
-benchmark for targeted campaigns. LinkedIn Ads targeting
-parameters may be too broad. Recommendation: Narrow LinkedIn
-audience from "logistics professionals" to "3PL operations
-managers, VP Operations, COO" with company size filter.
-
-REGIONAL BENCHMARK COMPARISON
-─────────────────────────────────────────────────────────────
-Pakistan LinkedIn CTR:
-  Your campaign: 0.72%
-  Pakistan B2B benchmark: 0.65%
-  Assessment: ABOVE local benchmark ✓
-  (Base report flagged this as below target — but target used
-  global benchmark of 0.80%. Pakistan's benchmark is lower.)
-
-UK LinkedIn CPL:
-  Your campaign: $680
-  UK B2B benchmark: $600-900
-  Assessment: WITHIN local range ✓
-  (Base report shows $680 as concerning; regionally, this is
-  mid-range for UK B2B logistics.)
-
-UAE WhatsApp:
-  Not active (correct — WhatsApp is not a B2B channel in UAE)
-
-THREE-DIMENSION SCORING INTEGRATION
-─────────────────────────────────────────────────────────────
-Of 18 HOT leads:
-  Fit score (ICP match):     Avg 72/100
-  Timing score (signals):    Avg 58/100
-  Engagement score (actions): Avg 65/100
-
-Weakest dimension: Timing. Leads match the ICP and engage
-with content, but few show active buying signals (fleet
-expansion, new warehouse, hiring ops managers).
-
-Recommendation: Add timing-signal enrichment to top 10 leads.
-Run CRM enrichment (L04) to check for recent job postings,
-facility announcements, or funding events. Leads with low
-timing scores may convert in Q3, not Q2.
-══════════════════════════════════════════════════════════════
-```
+:::note Your output will vary
+The extension adds context the base report lacks. The teaching point is the _difference in judgment_: the base report may flag a metric as "below target" using a global benchmark, while the extension shows it is actually above the local benchmark. Your domain expertise decides which report leads to better decisions. The real problem may not be the metric the base report flagged — it may be ICP match rate or timing score weakness.
+:::
 
 ### What the Extension Adds
 
-Read both reports side by side. Three differences change the recommended actions:
+Read both reports side by side. Three differences typically change the recommended actions:
 
-| Dimension                 | Base Plugin                            | Extension                                          |
-| ------------------------- | -------------------------------------- | -------------------------------------------------- |
-| **LinkedIn CTR judgment** | Below target (used global 0.80%)       | Above local benchmark (Pakistan B2B is 0.65%)      |
-| **Lead quality**          | Counts all 28 downloads equally        | 57% ICP-matched — targeting may be too broad       |
-| **Lead readiness**        | Reports 18 HOT leads as a single count | Breaks into Fit/Timing/Engagement — timing is weak |
+| Dimension             | Base Plugin                         | Extension                                                            |
+| --------------------- | ----------------------------------- | -------------------------------------------------------------------- |
+| **Benchmark context** | Uses global benchmarks              | Uses regional benchmarks (which may tell a different story)          |
+| **Lead quality**      | Counts all leads equally            | Filters by ICP match — reveals whether targeting is too broad        |
+| **Lead readiness**    | Reports HOT leads as a single count | Breaks into Fit/Timing/Engagement — shows which dimension is weakest |
 
-The base report would have you fix LinkedIn CTR. The extension shows that LinkedIn CTR is actually performing above the local benchmark — the "problem" was a global target that does not account for regional differences. The real problem is that 43% of downloads come from non-ICP contacts, meaning the budget is partially wasted on leads the sales team will never work.
-
-This is the difference between observation and actionable analysis. The base report observes that CTR is below 0.80%. The extension analyses whether 0.80% is the right benchmark for Pakistan and concludes it is not. Your domain expertise decides which report leads to better decisions.
+The base report may flag a channel as underperforming. The extension may show that same channel is actually above the local benchmark — the "problem" was a global target that does not account for regional differences. Your domain expertise decides which report leads to better budget decisions.
 
 ## Evaluating the Recommendations
 
@@ -326,46 +238,18 @@ Market: 3PL logistics automation, Pakistan and UAE
 Focus: How they position against smaller competitors like NexaFlow
 ```
 
-**Output:**
+**What to expect:** The `/competitive-brief` produces positioning intelligence. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          COMPETITIVE BRIEF
-          LogiFlow Solutions vs NexaFlow Technologies
-══════════════════════════════════════════════════════════════
+| Section               | Intent                                                      | What to Verify                                    |
+| --------------------- | ----------------------------------------------------------- | ------------------------------------------------- |
+| Positioning           | How the competitor describes themselves                     | Key messages and market claims                    |
+| NexaFlow gap          | Where the competitor's positioning exposes your differences | Specific dimensions where you compete differently |
+| Content analysis      | What the competitor is publishing                           | Volume, topics, engagement levels                 |
+| Messaging opportunity | Gaps the competitor leaves open                             | Areas where NexaFlow can own the conversation     |
 
-POSITIONING
-─────────────────────────────────────────────────────────────
-LogiFlow positions as "enterprise-grade logistics platform."
-Key messages:
-  - "Built for 500+ fleet operators"
-  - "SOC 2 certified, GDPR compliant"
-  - "Trusted by 40+ logistics companies across MENA"
-
-NexaFlow gap:
-  - LogiFlow claims enterprise scale; NexaFlow targets 100-500.
-  - LogiFlow leads with compliance; NexaFlow leads with AI.
-  - LogiFlow avoids mentioning AI automation — positions as
-    traditional platform with "intelligent workflows."
-
-CONTENT ANALYSIS
-─────────────────────────────────────────────────────────────
-LogiFlow's recent content:
-  - Blog: "Why Logistics Companies Need SOC 2" (compliance angle)
-  - Case study: "How XYZ Freight Cut Costs by 30%" (cost focus)
-  - LinkedIn: 2 posts/week, 1.2% engagement (below NexaFlow's 3.8%)
-
-MESSAGING OPPORTUNITY
-─────────────────────────────────────────────────────────────
-LogiFlow avoids the AI conversation. NexaFlow can own it.
-  - Position AI automation as the differentiator LogiFlow lacks
-  - Address the "too small" objection: "Purpose-built for
-    growing 3PLs, not retrofitted enterprise software"
-  - Counter compliance concern: highlight NexaFlow's data
-    handling practices without claiming certifications you
-    do not have
-══════════════════════════════════════════════════════════════
-```
+:::note Your output will vary
+Competitive intelligence from an agent is a starting point. Verify claims against current public sources. The teaching point is _using_ the brief: take the messaging opportunity and feed it into next week's content calendar entries to differentiate against the competitor's blind spots.
+:::
 
 Meridian Logistics in Leeds faces a different competitive landscape. Their competitors lead with post-Brexit customs automation and HMRC compliance — a positioning battle where regulatory credibility matters more than AI capability. The competitive brief for Meridian's market would emphasise compliance and established client references rather than technology differentiation. This is why competitive positioning is market-specific: the same company needs different messaging in Karachi versus Leeds.
 

@@ -101,124 +101,25 @@ research brief showing BrightPath acquisition, supply chain
 consolidation delays, and WMS integration challenges.
 ```
 
-The sequence skill auto-activates from the trigger phrases. Here is the complete output:
+**What to expect:** The agent produces a complete 6-touch sequence with channel assignments and timing. Your output will vary, but look for these sections:
 
-```
-SEQUENCE: NexaFlow → Sarah Chen (VP Operations, Meridian Logistics)
-Generated: 6 touches across 2 channels over 21 days
-Research brief: Meridian-prospect-003
+| Section          | Intent                                         | What to Verify                                      |
+| ---------------- | ---------------------------------------------- | --------------------------------------------------- |
+| Sequence header  | Prospect name, touch count, timeline, channels | Matches your prospect and the 21-day cadence        |
+| Touch 1 (Day 0)  | Initial outreach (already sent in L05)         | References the specific hook from your L05 outreach |
+| Touch 2 (Day 3)  | New data point or urgency angle                | Adds information not in Touch 1                     |
+| Touch 3 (Day 7)  | Case study or proof point                      | Concrete evidence, not generic pitch                |
+| Touch 4 (Day 12) | Re-engagement via different channel            | Checks whether priority has shifted                 |
+| Touch 5 (Day 17) | New research + low-commitment CTA              | Fresh insight, not recycled from earlier touches    |
+| Touch 6 (Day 21) | Graceful close with door open                  | Protects the relationship; no last-ditch ask        |
 
-TOUCH 1 — LinkedIn Message (Day 0)  [Already sent in L05]
-────────────────────────────────────────────────────────────
-Sarah — your post about WMS integration after the BrightPath
-acquisition caught my attention. Consolidating two warehouse
-management systems while maintaining SLA commitments to existing
-clients is one of the hardest post-acquisition challenges in
-logistics. NexaFlow helped a freight company complete a similar
-WMS merge in 11 weeks. Happy to share the playbook if it's
-relevant to your timeline.
-
-TOUCH 2 — Email (Day 3)
-────────────────────────────────────────────────────────────
-Subject: WMS consolidation timelines after logistics acquisitions
-
-Sarah,
-
-I reached out on LinkedIn about the BrightPath integration.
-Wanted to share a specific data point: logistics companies that
-begin WMS consolidation within 90 days of acquisition close
-typically complete 40% faster than those that wait for "the
-right time." The reason is data drift — every week of parallel
-systems increases the reconciliation effort geometrically.
-
-Meridian's Q3 close date suggests you are in the window where
-early consolidation still delivers the full speed advantage.
-
-No pitch — just a question: has your team set a target date for
-unified WMS, or are you still mapping the integration scope?
-
-— Farah
-NexaFlow Technologies
-
-TOUCH 3 — Email (Day 7)
-────────────────────────────────────────────────────────────
-Subject: How TransGlobal merged two WMS platforms in 11 weeks
-
-Sarah,
-
-Following up with the case study I mentioned. TransGlobal
-Freight faced a similar post-acquisition WMS challenge last
-year — two Tier 1 platforms serving overlapping regions.
-
-Key numbers from their consolidation:
-• 11 weeks from mapping to unified system
-• 23% reduction in warehouse operating costs in Q1 post-merge
-• Zero SLA breaches during cutover (their biggest concern)
-
-The three decisions that accelerated their timeline were:
-(1) consolidating inventory masters before touching order flows,
-(2) running parallel systems for 2 weeks instead of the planned
-6, and (3) automating exception handling for the 400+ SKU
-mapping conflicts.
-
-I attached the 2-page brief. If any of these match what your
-team is working through, happy to walk through the
-implementation details.
-
-— Farah
-
-TOUCH 4 — LinkedIn Comment/DM (Day 12)
-────────────────────────────────────────────────────────────
-Sarah — shared a WMS consolidation case study via email last
-week (TransGlobal, 11-week timeline). Quick question: is the
-BrightPath integration still the top priority this quarter,
-or has the scope shifted? Either way, happy to help where I
-can.
-
-TOUCH 5 — Email (Day 17)
-────────────────────────────────────────────────────────────
-Subject: One insight from your Q3 earnings mention
-
-Sarah,
-
-I noticed Meridian's Q3 update mentioned "integration
-synergies expected in H1." If the BrightPath WMS
-consolidation is part of those synergies, the 90-day window
-I mentioned is closing.
-
-One thing we have seen work: a 2-hour consolidation
-diagnostic where we map the overlap between your two WMS
-platforms and flag the three highest-risk data conflicts.
-No commitment, no proposal — just a clear picture of
-what the first 30 days would look like.
-
-Would that be useful before your team finalises the H1
-integration plan?
-
-— Farah
-
-TOUCH 6 — Email: Graceful Close (Day 21)
-────────────────────────────────────────────────────────────
-Subject: Closing the loop on WMS consolidation
-
-Sarah,
-
-I have shared a few perspectives on the BrightPath WMS
-integration over the past three weeks. I don't want to
-crowd your inbox, so this will be my last note on the topic.
-
-If consolidation becomes a priority later, the TransGlobal
-case study and the diagnostic offer are both still on the
-table — just reply to this thread.
-
-Wishing your team well with the integration.
-
-— Farah
-```
+:::note Your output will vary
+The specific content of each touch depends on your research brief from Lesson 2 and enrichment data from Lesson 4. The teaching point is the _progression_ — each touch adds something new — and whether personalisation holds through all six touches or decays in the later ones. If Touch 5 recycles references from Touch 2, you have found personalisation decay.
+:::
 
 ### Understanding the Sequence Logic
 
-Read through all six touches and notice the progression. This is not six versions of the same message. Each touch adds something new:
+Read through your six touches and notice the progression. This is not six versions of the same message. Each touch should add something new:
 
 | Touch  | Channel  | New Value Added                                       | Intent                            |
 | ------ | -------- | ----------------------------------------------------- | --------------------------------- |
@@ -242,43 +143,20 @@ Run the `/email-sequence` command from the marketing plugin:
 new NexaFlow trial users. Goal: convert to paid within 14 days.
 ```
 
-**Output:**
+**What to expect:** The agent produces a segment-level nurture sequence. Your output will vary, but look for these sections:
 
-```
-NURTURE SEQUENCE: NexaFlow Trial → Paid Conversion
-Generated: 5 emails over 14 days
-Segment: All new trial users
+| Section                     | Intent                               | What to Verify                                            |
+| --------------------------- | ------------------------------------ | --------------------------------------------------------- |
+| Sequence header             | Segment name, email count, timeline  | Audience is "all new trial users" — not a named prospect  |
+| Welcome email (Day 0)       | Product introduction + quick start   | Generic to all users, no individual references            |
+| Feature highlight (Day 3)   | Key feature adoption nudge           | References shared behaviour patterns, not individual data |
+| Social proof (Day 7)        | Customer story or metric             | Generic success story applicable to the segment           |
+| Objection handling (Day 10) | Common hesitation addressed          | Uses aggregate patterns, not prospect-specific research   |
+| Urgency + CTA (Day 14)      | Conversion push before trial expires | Clear deadline and loss framing                           |
 
-EMAIL 1 — Welcome (Day 0)
-Subject: Your NexaFlow trial is live — here's where to start
-"Welcome to NexaFlow! Your trial includes full access to
-route optimisation, shipment tracking, and API monitoring.
-Here's a 3-step quick start guide..."
-
-EMAIL 2 — Feature Highlight (Day 3)
-Subject: The feature most trial users miss
-"80% of our most successful customers activate real-time
-route optimisation in their first week. Here's how to set
-it up in 5 minutes..."
-
-EMAIL 3 — Social Proof (Day 7)
-Subject: How LogiPrime reduced delivery costs by 31%
-"LogiPrime started as a trial user 6 months ago. Today
-they process 12,000 shipments per day through NexaFlow.
-Here's what they did in their first 14 days..."
-
-EMAIL 4 — Objection Handling (Day 10)
-Subject: "We're not ready to commit yet" — we hear this a lot
-"Most teams need 2-3 weeks to see results. That's why we
-extended your trial by 7 days — no action needed. Here's
-what to focus on this week..."
-
-EMAIL 5 — Urgency + CTA (Day 14)
-Subject: Your trial ends tomorrow — here's what you'd lose
-"Your trial expires in 24 hours. You've processed [X]
-shipments and saved [Y] hours this week. Lock in your
-rate before it resets..."
-```
+:::note Your output will vary
+The content depends on your product description and segment definition. The teaching point is the _contrast with the sales sequence_ — marketing sequences address a segment, sales sequences address a person. Count how many touches reference the prospect by name (sales: all, marketing: none). That count reveals the structural boundary between personalised outreach and segment-level automation.
+:::
 
 Now compare the two sequences side by side:
 

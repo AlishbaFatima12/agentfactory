@@ -125,99 +125,32 @@ Team: 1 content marketer, 1 freelance designer, 4 sales reps
 Constraints: No events budget. Digital and content channels only.
 ```
 
-**Output:**
+**What to expect:** The `/campaign-plan` command produces a structured campaign brief. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          CAMPAIGN BRIEF
-          NexaFlow Technologies — Q2 Lead Generation
-          Budget: $25,000 USD (PKR 7M)
-          Timeline: 12 weeks
-══════════════════════════════════════════════════════════════
+| Section                  | Intent                                                 | What to Verify                                                                   |
+| ------------------------ | ------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| Channel allocation table | Budget split across channels with expected lead counts | Channels match your market constraints (no events = digital only)                |
+| Milestones               | Weekly/bi-weekly execution phases                      | Content sprint → launch → optimise cadence                                       |
+| KPIs                     | Primary, secondary, and tertiary metrics               | Mix of leading indicators (CPL) and outcomes (lead count)                        |
+| Risk assessment          | Market-specific risks with mitigations                 | Identifies channel-market mismatches (e.g., WhatsApp works in PK but not UK B2B) |
 
-CHANNEL ALLOCATION
-─────────────────────────────────────────────────────────────
-Channel                 Budget (USD)   % of Total   Expected Leads
-LinkedIn Ads (PK/UAE)   7,500          30%          12-16
-LinkedIn Ads (UK)       5,000          20%          6-8
-Google Ads (Search)     3,500          14%          5-7
-Content Production      4,000          16%          (enables all channels)
-WhatsApp Business API   1,000          4%           8-12
-LinkedIn Organic        0              0%           10-14
-Sales-Assisted Outreach 2,500          10%          6-8
-Retargeting             1,500          6%           3-5
+:::note Your output will vary
+The channel allocation depends on your budget, markets, and team size. The teaching point is _evaluating_ the brief: Is the channel mix appropriate for each market? Does the team have capacity to execute the content sprint? Are the KPIs leading indicators or vanity metrics? Every campaign brief is a draft that needs your domain expertise.
+:::
 
-TOTAL                   25,000         100%         50-70
+When the RevOps extension is installed, the extension's `campaign-planning` skill auto-activates, adding three dimensions the base plugin does not cover:
 
-MILESTONES
-─────────────────────────────────────────────────────────────
-Week 1-2:   Content sprint. 4 blog posts, 2 case studies,
-            12 LinkedIn articles. All /seo-audited. Assets
-            from L09 content engine feed the campaign.
-Week 3-4:   Launch LinkedIn Ads (PK/UAE first, UK second).
-            Start WhatsApp sequences for warm contacts.
-Week 5-8:   Sales reps begin outreach to scored leads.
-            Retargeting activated for site visitors.
-Week 9-12:  Optimise based on week 5-8 data. Pause
-            underperforming channels. Reallocate to top 2.
+**What to expect from the extension overlay:**
 
-KPIs
-─────────────────────────────────────────────────────────────
-Primary:    50 HOT-scored leads (score 60+)
-Secondary:  Cost per lead < $500
-Tertiary:   LinkedIn follower growth > 300
-Content:    Average /seo-audit score > 75/100
-Pipeline:   $250K+ pipeline from campaign-sourced leads
+| Section               | Intent                                                | What to Verify                                                      |
+| --------------------- | ----------------------------------------------------- | ------------------------------------------------------------------- |
+| ICP targeting overlay | Per-market decision-maker profiles and timing signals | Buyer personas match your ICP from Lesson 2                         |
+| Budget localisation   | Market-specific CPM, CPL, and channel cost estimates  | Cost estimates reflect real market differences (PK cheaper than UK) |
+| Content localisation  | Market-specific content hooks and references          | Each market gets culturally relevant messaging angles               |
 
-RISK
-─────────────────────────────────────────────────────────────
-1. UK LinkedIn CPM ($45-65) may consume budget without
-   sufficient lead volume. Mitigation: cap UK spend at $5K
-   and shift to Google Search if CPL exceeds $750 by week 6.
-2. WhatsApp works in PK/UAE but is not a B2B channel in UK.
-   Do not allocate WhatsApp budget to UK market.
-3. Small team limits content volume. Zara cannot produce
-   more than 3 assets per week without quality degradation.
-══════════════════════════════════════════════════════════════
-```
-
-Now the extension's `campaign-planning` skill auto-activates because the prompt mentions ICP targeting and multiple markets. The extension adds three things the base plugin does not:
-
-```
-EXTENSION: CAMPAIGN-PLANNING SKILL (auto-activated)
-─────────────────────────────────────────────────────────────
-
-ICP TARGETING OVERLAY
-  Pakistan: 3PL operators in Karachi/Lahore with 100+ fleet.
-    Decision-maker: VP Ops (operational pain) or COO (cost pain).
-    Timing signals: fleet expansion, new warehouse, hiring ops.
-  UAE: 3PL operators in Dubai/Abu Dhabi serving cross-border.
-    Decision-maker: COO (cost + compliance pain).
-    Timing signals: free zone expansion, new trade lane.
-  UK: 3PL operators in logistics corridors (Midlands, M62).
-    Decision-maker: VP Ops (efficiency pain).
-    Timing signals: warehouse automation investment, new contract.
-
-BUDGET LOCALISATION
-  Pakistan (PKR 2.1M / $7,500):
-    LinkedIn CPM: PKR 800-1,200 (~$3-4). Cost per lead: ~$250.
-    WhatsApp: Primary follow-up channel. PKR 1,000/month API.
-  UAE (AED allocated within PK/UAE LinkedIn budget):
-    LinkedIn CPM: AED 120-180 (~$33-49). More expensive than PK.
-    No WhatsApp for cold outreach — email preferred for UAE B2B.
-  UK (GBP equivalent of $5,000):
-    LinkedIn CPM: £35-55. Most expensive market.
-    Google Search: logistics-specific keywords less competitive
-    than generic SaaS terms.
-
-CONTENT LOCALISATION
-  Pakistan: Urdu/English mix for LinkedIn. Case studies from
-    local logistics companies (PIA Cargo, TCS, Leopards).
-  UAE: English. Reference free zone regulations and cross-border
-    compliance in content hooks.
-  UK: English. Reference HMRC customs compliance and post-Brexit
-    supply chain challenges in content hooks.
-```
+:::note Your output will vary
+The extension overlay depends on your ICP configuration and market selection. The teaching point is that the same budget produces different strategies in different markets — what works in Pakistan (WhatsApp, lower CPM) does not work in the UK (higher CPM, email-preferred). Evaluate whether the extension's market-specific guidance matches your knowledge of each market.
+:::
 
 ### Evaluating the Brief
 
@@ -241,49 +174,26 @@ Every campaign needs an email nurture track — the sequence of emails that keep
   --length 6
 ```
 
-**Base plugin output (abbreviated):**
+**What to expect from the base plugin:**
 
-```
-EMAIL NURTURE SEQUENCE — 6 emails over 6 weeks
-─────────────────────────────────────────────────────────────
-Email 1 (Day 1):  Welcome + cornerstone content link
-Email 2 (Day 5):  Pain point: manual dispatch coordination
-Email 3 (Day 12): Case study: fleet efficiency gains
-Email 4 (Day 19): ROI calculator link (from L09 assets)
-Email 5 (Day 26): Social proof: customer quote
-Email 6 (Day 33): CTA: book a 15-minute call
-─────────────────────────────────────────────────────────────
-Exit condition: Unsubscribe or reply
-```
+| Section               | Intent                                     | What to Verify                                                                         |
+| --------------------- | ------------------------------------------ | -------------------------------------------------------------------------------------- |
+| Sequence header       | Segment, email count, timeline             | Generic audience — not individualised                                                  |
+| 6 emails over 6 weeks | Progressive engagement from welcome to CTA | Each email has a distinct purpose (welcome → pain point → proof → objection → urgency) |
+| Exit condition        | When to stop the sequence                  | Basic: unsubscribe or reply                                                            |
 
-Now compare with the extension's `sequence` skill, which auto-activates on the same prompt:
+**What to expect from the extension's sequence skill:**
 
-```
-EXTENSION: SEQUENCE SKILL (comparison)
-─────────────────────────────────────────────────────────────
-Email 1 (Day 1):  Welcome + relationship opener (South Asian
-                  norm). Link to cornerstone. Five Laws applied.
-Email 2 (Day 5):  Pain point personalised to prospect's fleet
-                  size (from CRM enrichment data).
-Email 3 (Day 12): Case study matched to prospect's market
-                  (PK gets PK case study, UAE gets UAE).
-Email 4 (Day 19): ROI calculator with pre-filled assumptions
-                  based on prospect's company size.
-Email 5 (Day 26): Competitive comparison (if competitor
-                  identified in research brief).
-Email 6 (Day 33): Meeting CTA with suggested agenda based on
-                  prospect's stated pain points.
-─────────────────────────────────────────────────────────────
-Exit conditions:
-  - Unsubscribe
-  - Reply (auto-route to sales rep)
-  - 3 consecutive opens with no click (switch to phone)
-  - Competitor engagement detected (accelerate sequence)
+| Section                      | Intent                                               | What to Verify                                                                    |
+| ---------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Per-prospect personalisation | Each email adapts to prospect's CRM data             | References fleet size, market, or company-specific details                        |
+| Market-matched content       | Case studies and references calibrated per geography | PK prospects get PK examples; UAE gets UAE examples                               |
+| Enhanced exit conditions     | Behavioural triggers beyond reply/unsubscribe        | Includes signals like "3 opens with no click" or "competitor engagement detected" |
+| Five Laws compliance         | Every email checked against banned word list         | Cultural calibration applied (relationship opener for PK/UAE, not UK)             |
 
-Five Laws compliance: All 6 emails checked against banned
-  word list. Relationship opener on Email 1 for PK/UAE.
-  No opener for UK prospects.
-```
+:::note Your output will vary
+Compare both outputs side by side. The base sequence treats all prospects identically. The extension adapts to each prospect's market, company size, and engagement behaviour. The key question: does the extension version reference data from your CRM enrichment (Lesson 4)? If yes, the personalisation pipeline is working. If both versions look similar, your CRM data may be too thin.
+:::
 
 ### What Is Different
 
@@ -313,22 +223,22 @@ WhatsApp, and email nurture. Target VP Ops and COO at 3PL
 operators in Pakistan, UAE, and UK.
 ```
 
-The extension's `content-calendar` skill auto-activates and produces a structured table. Here are weeks 1-4 of 12:
+The extension's `content-calendar` skill auto-activates and produces a structured table. Your output will be a 12-week calendar. Look for these elements in each entry:
 
-| Week | Title                                       | Format                 | Persona | Channel                | CTA                          |
-| ---- | ------------------------------------------- | ---------------------- | ------- | ---------------------- | ---------------------------- |
-| 1    | Why 3PL Fleets Outgrow Spreadsheet Dispatch | Blog post              | VP Ops  | LinkedIn Organic + SEO | Read the full analysis       |
-| 1    | Fleet dispatch bottleneck stats             | LinkedIn carousel      | VP Ops  | LinkedIn Organic       | Comment with your bottleneck |
-| 1    | "We cut dispatch errors by 60%"             | Customer quote graphic | COO     | LinkedIn Ad (PK/UAE)   | See the case study           |
-| 2    | The ROI of Automated Dispatch               | Blog post (SEO)        | COO     | Google Search          | Try the ROI calculator       |
-| 2    | 3 signs your fleet ops needs AI             | WhatsApp broadcast     | VP Ops  | WhatsApp (PK only)     | Reply for the full guide     |
-| 2    | NexaFlow customer story: TCS integration    | Case study             | VP Ops  | LinkedIn Ad (PK)       | Book a demo                  |
-| 3    | Post-Brexit Supply Chain Automation         | Blog post (SEO)        | VP Ops  | Google Search (UK)     | Download the whitepaper      |
-| 3    | Dispatch automation in free zones           | LinkedIn article       | COO     | LinkedIn Organic (UAE) | See the ROI calculator       |
-| 3    | Email 2: Dispatch coordination pain         | Email                  | VP Ops  | Email nurture          | Read the case study          |
-| 4    | Warehouse-to-last-mile handoff gaps         | Blog post              | VP Ops  | LinkedIn Organic       | Comment with your experience |
-| 4    | ROI calculator walkthrough                  | Video script           | COO     | LinkedIn Ad (UK)       | Try the calculator           |
-| 4    | Email 3: Fleet efficiency case study        | Email                  | VP Ops  | Email nurture          | Book a 15-minute call        |
+**What to expect:**
+
+| Column  | Intent                                           | What to Verify                                              |
+| ------- | ------------------------------------------------ | ----------------------------------------------------------- |
+| Week    | Publication timing                               | Entries spread evenly across 12 weeks                       |
+| Title   | Content topic                                    | Relevant to your ICP's pain points, not generic marketing   |
+| Format  | Content type (blog, carousel, case study, email) | Mix of formats — not all blog posts                         |
+| Persona | Target reader (VP Ops, COO, CEO)                 | Balance across personas — not all targeting one role        |
+| Channel | Distribution platform                            | Market-appropriate (WhatsApp for PK, LinkedIn for UK, etc.) |
+| CTA     | Call to action                                   | Each entry has a specific next step, not just "learn more"  |
+
+:::note Your output will vary
+The calendar content depends on your brand voice config, ICP, and campaign brief. The teaching point is _evaluating_ the calendar for three things: (1) volume vs capacity — can your team sustain the weekly entry count for 12 weeks? (2) persona balance — are both VP Ops and COO represented? (3) market-specific content — does each market get entries calibrated to its regulatory and operational context?
+:::
 
 Three things to evaluate in the calendar:
 
