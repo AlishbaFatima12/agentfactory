@@ -142,7 +142,12 @@ AI will unbundle jobs into tasks. Some of those tasks will be automated entirely
 
 The future workforce must build **dynamic skill portfolios** rather than rely on fixed career paths. Professionals who learn to think with AI, build using AI tools daily, and collaborate with AI as a digital teammate won't just survive the transition—they'll thrive in it.
 
-The SaaS era created millions of jobs for developers, designers, and product managers. The Agent Factory era will create millions more—for agent designers, outcome architects, verification specialists, and domain experts who teach machines what "correct" looks like in their field. **This transition also represents one of the largest training opportunities in history**: billions of workers will need to learn how to collaborate with AI systems, supervise autonomous agents, and build AI-augmented workflows. Organizations, universities, and governments that invest early in training this workforce will shape who participates in—and benefits from—the AI economy.
+The SaaS era created millions of jobs for developers, designers, and product managers. The Agent Factory era will create millions more—for agent designers, outcome architects, verification specialists, and domain experts who teach machines what "correct" looks like in their field. **It is also one of the largest workforce training opportunities in history**: by 2030, 59 out of every 100 workers globally are expected to require reskilling or upskilling to adapt to new technologies and ways of working.²
+
+![Training Opportunity](../static/img/training.png)
+
+² World Economic Forum, Future of Jobs Report 2025, January 2025.
+https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/
 
 **The opportunity is not smaller. It is broader, and it rewards those who adapt.**
 
