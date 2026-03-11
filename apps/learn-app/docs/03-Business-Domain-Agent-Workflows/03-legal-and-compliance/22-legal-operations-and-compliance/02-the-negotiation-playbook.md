@@ -255,18 +255,20 @@ agreement for cloud infrastructure. Contract value: PKR 2,400,000/year.
 We need to finalise within 30 days.
 ```
 
-Compare the two outputs side by side:
+Compare the two outputs side by side. Look for these differences:
 
-| Clause                  | Without Playbook                                       | With Playbook                                                                                                                          |
-| ----------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Limitation of Liability | YELLOW -- "Cap appears low relative to contract value" | RED -- "3-month cap = PKR 600,000 against Noor standard of 12 months = PKR 2,400,000. 75% below floor. Recommend mutual 12-month cap." |
-| Data Protection         | YELLOW -- "Consider adding a DPA"                      | RED -- "No DPA offered. Vendor processes Noor employee and client data. PDPA 2023 requires DPA. Escalate to GC."                       |
-| Governing Law           | GREEN -- "Delaware law is standard for US SaaS"        | YELLOW -- "Delaware law. Noor standard is Pakistani law. Acceptable for US vendors but recommend ICC arbitration fallback clause."     |
-| Termination             | GREEN -- "60-day notice for convenience"               | GREEN -- "60-day notice. Within Noor's 14-60 day acceptable range. Auto-renewal clause present -- tracked."                            |
+| Dimension               | Without Playbook (Generic)                   | With Playbook (Calibrated)                                                                             |
+| ----------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Classification changes  | Clauses tend to be YELLOW (generic concern)  | Clauses may escalate to RED when they breach your specific thresholds                                  |
+| Specificity of analysis | Vague observations ("cap appears low")       | Quantified comparison against your playbook floor ("X months' fees against your standard of Y months") |
+| Redline language        | Generic suggestions ("consider negotiating") | Position-specific instructions matching your playbook ("recommend mutual N-month cap")                 |
+| Regulatory context      | General data protection observation          | Organisation-specific regulatory requirements (e.g., PDPA 2023 DPA requirement for your jurisdiction)  |
 
-Notice three differences. First, the classifications changed -- Limitation of Liability moved from YELLOW to RED because your playbook defines a specific floor. Second, the analysis includes numbers -- PKR 600,000 against PKR 2,400,000, not "appears low." Third, the redline language matches your positions -- "recommend mutual 12-month cap" instead of "consider negotiating."
+:::note Your output will vary
+The specific classifications and redline language depend on your playbook configuration and the plugin version. The teaching point is the difference in specificity and actionability between generic and playbook-calibrated output — not the exact clause classifications. Look for at least two clauses that change classification or become materially more specific.
+:::
 
-The playbook turned a generic observation into an actionable instruction. That is the difference between a tool and an institutional knowledge system.
+The playbook turns generic observations into actionable instructions. That is the difference between a tool and an institutional knowledge system.
 
 > **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.** The playbook makes the agent's output more specific, but the attorney still reviews every RED flag and makes the commercial judgment call.
 

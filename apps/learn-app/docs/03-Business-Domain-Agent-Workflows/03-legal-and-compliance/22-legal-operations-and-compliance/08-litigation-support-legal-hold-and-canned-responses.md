@@ -121,10 +121,8 @@ These are attorney functions protected by legal professional privilege and gover
 
 **Scenario:** DataFlow Systems Ltd, a 200-person SaaS company headquartered in London, receives a demand letter from CloudMesh Technologies Inc. (a Delaware-incorporated competitor) alleging that DataFlow's new "AutoPipeline" feature infringes CloudMesh's US Patent No. 11,432,876 relating to automated data pipeline configuration. The demand letter requests cessation of the allegedly infringing feature and damages of USD 2.4 million. DataFlow's General Counsel, Priya Sharma, determines that litigation is reasonably anticipated and instructs the legal operations team to initiate a legal hold.
 
-**Agent dialogue:**
-
 ```
-You: /respond type:"litigation-hold"
+/respond type:"litigation-hold"
      matter:"CloudMesh v DataFlow -- Patent Infringement Claim"
      scope:"All documents, emails, Slack messages, code commits, design
             documents, product specifications, and meeting notes relating
@@ -136,98 +134,24 @@ You: /respond type:"litigation-hold"
               14 March 2026, alleging infringement of US Patent
               No. 11,432,876."
      instructing-attorney:"Priya Sharma, General Counsel"
-
-Agent:
-
-LITIGATION HOLD -- INITIATED
-Matter:     CloudMesh v DataFlow -- Patent Infringement Claim
-Reference:  LH-2026-003
-Trigger:    Demand letter received 14 March 2026
-Attorney:   Priya Sharma, General Counsel
-Status:     DRAFT -- Awaiting attorney approval before distribution
-
-PRESERVATION NOTICE (Draft for Attorney Review)
-
-TO:         [Custodian Name]
-FROM:       Legal Department -- DataFlow Systems Ltd
-DATE:       [Date]
-RE:         LEGAL HOLD NOTICE -- Preserve All Documents
-            Matter: CloudMesh v DataFlow (LH-2026-003)
-
-This notice requires you to preserve all documents and electronically
-stored information within the scope described below. This obligation
-is immediate and supersedes any routine document retention or
-deletion policies.
-
-SCOPE OF PRESERVATION:
-You must preserve all documents, emails, Slack messages, Teams
-messages, code repositories, design documents, product specifications,
-meeting notes, calendar entries, and any other records (electronic or
-physical) relating to:
-- The "AutoPipeline" feature (all versions)
-- Data pipeline configuration technology
-- Any competitor analysis of CloudMesh Technologies
-- Any prior art research relating to automated pipeline configuration
-
-DATE RANGE: 1 January 2024 to present (and ongoing until this
-hold is lifted by the Legal Department in writing).
-
-YOUR OBLIGATIONS:
-1. Do NOT delete, destroy, or modify any documents within scope
-2. Do NOT alter any automated deletion settings for in-scope data
-3. Preserve all backup copies and archived materials
-4. If in doubt about whether a document is in scope, PRESERVE IT
-5. Acknowledge receipt of this notice within 3 business days by
-   replying to legal-hold@dataflow.com
-
-Failure to comply with this notice may expose the company to
-sanctions in legal proceedings. If you have questions, contact
-the Legal Department immediately.
-
-[Signature block -- Attorney]
-
-RECOMMENDED CUSTODIANS:
-Based on the matter scope, the following departments and
-individuals should receive this notice:
-1. Engineering -- AutoPipeline development team (lead + all
-   contributors)
-2. Product Management -- product manager for AutoPipeline
-3. Design -- UX/UI designers who worked on AutoPipeline
-4. Executive -- CTO, VP Engineering (decision-makers for the feature)
-5. Legal -- any prior correspondence regarding CloudMesh or
-   pipeline patents
-6. Marketing -- any public-facing materials about AutoPipeline
-7. Sales -- any customer-facing materials or demos
-8. IT -- administrator access to preserve backups and archives
-
-NOTE: Any custodians who have left DataFlow since January 2024
-must be identified. Their data (email archives, documents, code
-contributions) must be preserved by IT before any account
-decommissioning proceeds.
-
-IT SUSPENSION REQUEST (Draft):
-Suspend all automated deletion for:
-- Email: all custodian mailboxes within scope
-- Slack: channels #autopipeline, #engineering, #product
-- Code repositories: autopipeline-*, pipeline-config-*
-- Document storage: all folders tagged "AutoPipeline"
-- Backups: suspend rotation for tapes/snapshots from Jan 2024+
-
-ACKNOWLEDGEMENT TRACKING:
-Custodian acknowledgements will be tracked with the following
-escalation schedule:
-- Day 3: Automated reminder to non-responding custodians
-- Day 5: Escalation to custodian's manager
-- Day 7: Escalation to General Counsel
-
-NEXT STEPS: Route this entire package to Priya Sharma (GC) for
-review and approval before any distribution.
-
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
-LITIGATION STRATEGY IS EXCLUSIVELY ATTORNEY WORK
 ```
 
-The agent has produced the operational infrastructure -- the notice, the custodian list, the IT suspension request, and the tracking mechanism -- in minutes rather than the hours this typically requires. Priya Sharma reviews the package, adjusts the custodian list based on her knowledge of who was involved in the feature's development, approves the notice language, and instructs distribution. The strategic decisions -- whether to engage US patent litigation counsel, whether to conduct a freedom-to-operate analysis, whether to respond to the demand letter or wait -- remain exclusively hers.
+**What to expect:** The agent produces a complete litigation hold package. Your output will vary, but look for these sections:
+
+| Section                 | Intent                                                                                       | What to Verify                                                                                                                          |
+| ----------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Hold initiation header  | Matter reference, trigger event, instructing attorney, DRAFT status                          | Confirm the hold is marked DRAFT pending attorney approval — the agent never distributes without attorney sign-off                      |
+| Preservation notice     | Formal notice for custodian distribution with scope, date range, and obligations             | Check that the scope matches what you provided and includes an explicit "if in doubt, PRESERVE IT" instruction                          |
+| Recommended custodians  | Departments and individuals who should receive the notice                                    | Should identify all departments with potential access to in-scope materials, including departed employees whose data needs preservation |
+| IT suspension request   | Request to suspend automated deletion policies within hold scope                             | Should cover email, chat, code repositories, document storage, and backup rotation                                                      |
+| Acknowledgement tracker | Escalation schedule for non-responding custodians                                            | Should include a 3-day reminder, 5-day manager escalation, and 7-day General Counsel escalation                                         |
+| Governance footer       | Dual boundary: attorney review required AND litigation strategy is exclusively attorney work | Confirm both governance statements are present                                                                                          |
+
+:::note Your output will vary
+The specific custodian departments, IT systems, and escalation timelines depend on the matter scope and your organisation's structure. Focus on the four outputs (notice, custodians, IT suspension, tracker) and the governance boundary. The teaching point is that the agent handles the operational infrastructure while the attorney retains all strategic decisions.
+:::
+
+The agent produces the operational infrastructure -- the notice, the custodian list, the IT suspension request, and the tracking mechanism -- in minutes rather than the hours this typically requires. Priya Sharma reviews the package, adjusts the custodian list based on her knowledge of who was involved in the feature's development, approves the notice language, and instructs distribution. The strategic decisions -- whether to engage US patent litigation counsel, whether to conduct a freedom-to-operate analysis, whether to respond to the demand letter or wait -- remain exclusively hers.
 
 > **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
 

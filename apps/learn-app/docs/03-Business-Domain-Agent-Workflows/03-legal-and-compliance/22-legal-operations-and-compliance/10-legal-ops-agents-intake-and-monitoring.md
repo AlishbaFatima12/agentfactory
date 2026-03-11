@@ -157,76 +157,21 @@ At 09:15 on a Tuesday morning, the following arrives:
 > _Subject: Urgent -- New MSA from Etisalat Digital for review_
 > _"Hi Legal, attached is the MSA from Etisalat Digital for our enterprise API platform deployment. Contract value AED 3,600,000 annually. They want to sign by Thursday. This is our largest deal this quarter. Please prioritise."_
 
-The Contract Intake Agent processes this automatically:
+The Contract Intake Agent processes this automatically. The agent executes a five-step sequence. Your output will vary, but look for these sections:
 
-```
-STEP 1 — DOCUMENT RECEPTION
-Reference ID:    2026-03-18-0023
-Receipt time:    09:15 UAE (GST)
-Source:          Email — legal@gulfdigital.ae
-Requestor:       Ahmed Qureshi, VP Sales
-Attachment:      Etisalat_Digital_Enterprise_MSA_v2.pdf
+| Section                              | Intent                                                                                            | What to Verify                                                                                                                                                 |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Step 1: Document reception           | Logs receipt with reference ID, timestamp, source channel, and requestor                          | Check that the reference ID is unique and the source is correctly identified                                                                                   |
+| Step 2: Document type classification | Classifies the document type and selects the appropriate review protocol                          | Should route vendor agreements to `/review-contract` and NDAs to `/triage-nda`                                                                                 |
+| Step 3: Metadata extraction          | Extracts counterparty, contract type, business unit, urgency, deal value, governing law, and date | Verify all seven metadata fields are populated — missing fields should be flagged                                                                              |
+| Step 4: Triage and routing           | Runs the appropriate review protocol and routes based on tier classification and urgency          | Should apply the correct communication template (acknowledgement to business unit, escalation to GC for RED items) and halve SLA timelines for urgent requests |
+| Step 5: Progress tracking            | Activates deadline monitoring with escalation if no attorney action by the SLA deadline           | Check that the escalation path is specified                                                                                                                    |
 
-STEP 2 — DOCUMENT TYPE CLASSIFICATION
-Document type:   Vendor Agreement / MSA (enterprise software deployment)
-Route:           -> jurisdiction-contract-review protocol
+:::note Your output will vary
+The specific metadata, triage results, and routing decisions depend on the contract you provide. Focus on whether the five steps execute in sequence and whether the routing matches the triage tier — particularly whether RED items with urgent flags bypass the normal SLA timeline.
+:::
 
-STEP 3 — METADATA EXTRACTION
-Counterparty:    Etisalat Digital LLC (Dubai, UAE)
-Contract type:   Master Services Agreement — Enterprise API Platform
-Business unit:   Sales (Ahmed Qureshi)
-Urgency:         HIGH — business deadline Thursday (< 48 hours)
-Deal value:      AED 3,600,000/year
-Governing law:   UAE Federal Law (mainland)
-Date received:   18 March 2026
-
-STEP 4 — TRIAGE AND ROUTING
-
-Running /review-contract protocol...
-
-[Full review completes — 3 RED items identified]
-
-Classification:  Tier 3 — Full Review (RED items present)
-URGENT flag:     YES — deadline < 48 hours
-
-ROUTING:
--> NOTIFY General Counsel (Layla Hassan) immediately
-   Template C — RED ESCALATION
-   Subject: RED ESCALATION — MSA, Etisalat Digital — 2026-03-18-0023
-
--> Content:
-   Reference:         2026-03-18-0023
-   Counterparty:      Etisalat Digital LLC
-   Deal value:        AED 3,600,000/year
-   Business unit:     Sales | Contact: Ahmed Qureshi
-   Business deadline: Thursday 20 March (2 days)
-
-   Triage: 3 RED items | 2 YELLOW items
-   Most material risk: Governing law is UAE federal (mainland) —
-     Arabic version prevails; recommend DIFC law amendment.
-     Also: limitation of liability capped at AED 300,000
-     (1 month's fees) — below playbook minimum of 6 months.
-   Full review: [attached]
-
-   Recommend scheduling 30-minute review call with Ahmed Qureshi.
-
--> SLA timeline HALVED (urgent): Attorney response required by
-   end of day Wednesday 19 March
-
--> ACKNOWLEDGE to business unit (Template A — modified for urgent):
-   "Your contract request has been received and triaged.
-    Classification: Tier 3 — Full Review (urgent).
-    Reference: 2026-03-18-0023.
-    Legal is reviewing with priority. Expected response: Wednesday
-    19 March. Please do not send this contract to the counterparty
-    until you receive clearance from Legal."
-
-STEP 5 — PROGRESS TRACKING
-Tracking activated. Daily status check.
-If no attorney action by 17:00 Wednesday -> escalate to GC + CFO.
-```
-
-Layla Hassan, the GC, receives the escalation at 09:22 -- seven minutes after the email arrived. She reviews the three RED items, agrees with the redline suggestions, calls Ahmed to discuss the governing law issue, and sends marked-up terms to Etisalat Digital by noon. Without the intake agent, this email would have sat in the legal inbox until someone opened it, read it, realised it was urgent, forwarded it to Layla, who would then have to read the full contract from scratch. Typical delay: 4-8 hours on a good day.
+The GC receives the escalation within minutes of the email arriving. Without the intake agent, the email would sit in the legal inbox until someone opened it, read it, realised it was urgent, and forwarded it manually. Typical delay without automation: 4-8 hours on a good day.
 
 **Creating the Contract Intake Agent as a Cowork Skill:**
 
@@ -324,104 +269,27 @@ This adds processing time compared to Gulf Digital's workflow, but the alternati
 
 ### Worked Example: Weekly Regulatory Briefing for DataBridge (Pakistan/UK)
 
-DataBridge Ltd is a 200-person SaaS company incorporated in England with a development centre in Lahore, Pakistan. Their Compliance Officer, Priya Sharma, has configured the Regulatory Monitoring Agent to track both UK and Pakistani regulatory developments. Here is a sample weekly briefing:
+DataBridge Ltd is a 200-person SaaS company incorporated in England with a development centre in Lahore, Pakistan. Their Compliance Officer, Priya Sharma, has configured the Regulatory Monitoring Agent to track both UK and Pakistani regulatory developments.
 
-```
-WEEKLY REGULATORY BRIEFING — Week of 17 March 2026
-Generated by: Legal Ops Monitoring Agent
-Jurisdictions: UK, Pakistan
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+**What to expect:** The agent produces a weekly regulatory briefing. Your output will vary, but look for these sections:
 
-HIGH PRIORITY — Action required within 30 days
-────────────────────────────────────────────────────────
+| Section             | Intent                                                                     | What to Verify                                                                                   |
+| ------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| HIGH PRIORITY items | Regulatory changes requiring action within 30 days                         | Should include effective dates, internal impact assessment, contract impact, and assigned owners |
+| MONITOR items       | Changes requiring attention within 6 months                                | Should include status, internal impact, and recommended timeline for action                      |
+| AWARENESS items     | Informational updates with no immediate action required                    | Should be brief summaries with no assigned owners                                                |
+| RAG status summary  | Per-topic RED/YELLOW/GREEN classification across all monitored areas       | Check that the RAG status matches the priority classification of each item                       |
+| Governance footer   | Confirmation that regulatory interpretations require attorney confirmation | Should be present on every briefing                                                              |
 
-1. PAKISTAN — PDPA 2023 Implementation Update
-   Effective:       Phase 2 enforcement begins 1 April 2026
-   Summary:         National Commission for Personal Data Protection (NCPDP)
-                    issued enforcement guidance on cross-border data transfers.
-                    Organisations processing sensitive personal data of
-                    Pakistani residents must demonstrate either (a) data
-                    localisation in Pakistan or (b) transfer to a country
-                    on the NCPDP adequacy list with documented safeguards.
-   Internal impact: DataBridge processes customer support data (including
-                    names, emails, phone numbers) of Pakistani clients at
-                    the Lahore development centre. Data is stored on AWS
-                    eu-west-2 (London). This may require NCPDP registration
-                    and documented transfer safeguards.
-   Contract impact: 14 vendor contracts involve processing of Pakistani
-                    resident data — DPAs should be reviewed for PDPA
-                    compliance.
-   Action:          Schedule review with Privacy Counsel by 25 March.
-                    Owner: Priya Sharma.
+:::note Your output will vary
+The specific regulatory updates depend on the jurisdictions configured, the date range, and the regulatory sources available via MCP. Focus on the three-tier structure (HIGH PRIORITY / MONITOR / AWARENESS) and whether each item includes internal impact assessment and contract impact. The teaching point is that a weekly briefing replaces 4-6 hours of manual regulatory research with a 20-minute review.
+:::
 
-2. UK — ICO AI Audit Framework Update
-   Effective:       Consultation closes 31 March 2026
-   Summary:         ICO published updated draft guidance on auditing AI
-                    systems for data protection compliance. Key change:
-                    organisations deploying AI that processes personal data
-                    must conduct a DPIA specifically addressing algorithmic
-                    fairness and automated decision-making under Art. 22.
-   Internal impact: DataBridge's AI-powered customer segmentation feature
-                    may qualify as automated decision-making. DPIA review
-                    recommended.
-   Contract impact: 3 enterprise client contracts contain automated
-                    decision-making warranties — verify compliance.
-   Action:          Commission AI-specific DPIA. Owner: Data Protection
-                    Officer. Deadline: 15 April 2026.
-
-MONITOR — Review within 6 months
-────────────────────────────────────────────────────────
-
-3. PAKISTAN — Islamic Finance Transition (2028 Deadline)
-   Status:          Federal Shariat Court ruling (2022, upheld 2024)
-                    requires elimination of interest-based banking by 2028.
-   Internal impact: DataBridge's corporate treasury currently holds PKR
-                    45,000,000 in conventional interest-bearing deposits
-                    at HBL. Will need to transition to Islamic finance
-                    instruments (Murabaha, Mudaraba) before 2028 deadline.
-   Action:          Add to Q3 2026 board agenda. Owner: CFO.
-
-4. UK — Employment Rights Bill 2025
-   Status:          Committee stage ongoing; Royal Assent expected Q4 2026.
-   Key provisions:  Day-one unfair dismissal rights (removing 2-year
-                    qualifying period); restrictions on zero-hour contracts;
-                    enhanced trade union rights.
-   Internal impact: 23 UK employees affected. HR policies will need updating.
-                    6-month lead time recommended.
-   Action:          Monitor. HR to begin impact assessment in Q3 2026.
-
-AWARENESS — For information only
-────────────────────────────────────────────────────────
-
-5. PAKISTAN — SECP Digital Companies Framework
-   Summary:         SECP (Securities and Exchange Commission of Pakistan)
-                    consulting on streamlined incorporation process for
-                    digital-first companies. No immediate action required.
-
-6. UK — Intellectual Property Office AI Patent Guidance
-   Summary:         UKIPO updated guidance on AI-generated inventions.
-                    Confirms that an AI system cannot be named as inventor.
-                    Relevant for DataBridge R&D team awareness only.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-RAG STATUS SUMMARY:
-  Data Protection (UK):    YELLOW — ICO AI audit guidance — DPIA needed
-  Data Protection (PK):    RED — PDPA Phase 2 — immediate action
-  AI Regulation:           YELLOW — ICO consultation — respond by 31 March
-  Employment Law (UK):     YELLOW — Rights Bill — plan for Q4 2026
-  Islamic Finance (PK):    YELLOW — 2028 deadline — board agenda item
-  Company Law:             GREEN — No changes requiring action
-
-NOTE: All regulatory interpretations must be confirmed with
-qualified legal counsel before reliance.
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
-
-Priya reviews this briefing in 20 minutes on Monday morning, forwards the two HIGH PRIORITY items to the GC with recommended actions, and adds the MONITOR items to the quarterly compliance review agenda. Before the agent, producing this briefing took her 4-6 hours of manual research each week.
+The Compliance Officer reviews this briefing in 20 minutes on Monday morning, forwards the HIGH PRIORITY items to the GC with recommended actions, and adds the MONITOR items to the quarterly compliance review agenda. Before the agent, producing this briefing took 4-6 hours of manual research each week.
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Agent vs. Tool Classification Exercise
 

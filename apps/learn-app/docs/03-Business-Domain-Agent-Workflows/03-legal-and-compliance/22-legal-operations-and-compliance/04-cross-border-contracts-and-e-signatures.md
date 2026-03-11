@@ -145,137 +145,24 @@ Contract value: AED 1,850,000. 18-month development engagement.
 Client is Dubai mainland. Delivery in Riyadh.
 ```
 
-**Expected output:**
+**What to expect:** The agent loads overlays for all three jurisdictions and produces a cross-border analysis. Your output will vary, but look for these sections:
 
-```
-TASK:         Contract Review — Master Services Agreement
-JURISDICTION: UAE Law (mainland overlay loaded)
-              CROSS-BORDER DETECTED:
-              - Vendor jurisdiction: Pakistan (pakistan-law overlay loaded)
-              - Performance jurisdiction: Saudi Arabia (saudi-law overlay loaded)
-PLAYBOOK:     Loaded (your organisation's negotiation playbook)
-ATTORNEY REVIEW REQUIRED: YES
+| Section                                        | Intent                                                                      | What to Verify                                                           |
+| ---------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Jurisdiction header with CROSS-BORDER DETECTED | Shows which overlays loaded (UAE, Pakistan, Saudi)                          | Confirm all three jurisdictions are identified                           |
+| Data Protection clause                         | Flags overlapping data protection regimes (UAE PDPL, PDPA 2023, Saudi PDPL) | Should identify multi-jurisdiction DPA requirement                       |
+| Tax and Withholding clause                     | Identifies cross-border tax obligations (FBR, Saudi withholding)            | Should escalate to tax counsel in both jurisdictions                     |
+| Intellectual Property clause                   | Evaluates IP assignment under Pakistani copyright law                       | Should flag need for jurisdiction-specific assignment mechanism          |
+| Governing Law clause                           | Assesses UAE mainland law specifics (Art. 390, Arabic prevails risk)        | Should recommend English language precedence clause                      |
+| Holistic Risk Summary                          | Cross-border-aware recommendation with negotiation priority                 | Should prioritise regulatory requirements across all three jurisdictions |
 
-CROSS-BORDER ALERT: This contract involves three jurisdictions.
-I will analyse against all three overlays and flag inter-jurisdictional
-conflicts.
-
-CLAUSE:     Data Protection (Section 9)
-STATUS:     RED — ESCALATE
-CURRENT:    "Each party shall comply with applicable data protection
-             laws in performance of this Agreement."
-ISSUE:      Three different data protection regimes apply simultaneously:
-            (1) UAE PDPL (Federal Decree-Law No. 45 of 2021) for UAE
-                resident data processed by Al-Faisal
-            (2) Pakistan PDPA 2023 for personal data of Pakistani
-                developers and any Pakistani resident data
-            (3) Saudi PDPL (Royal Decree M/19 of 2021) for data
-                processed in the Riyadh deployment
-            The current clause is too vague to satisfy any of these
-            frameworks. No DPA is attached. No cross-border transfer
-            mechanism is specified for Pakistan→UAE or UAE→Saudi
-            data flows.
-REDLINE:    "Each party shall comply with all applicable data protection
-             laws, including the UAE Federal Decree-Law No. 45 of 2021,
-             the Pakistan Personal Data Protection Act 2023, and the
-             Saudi Arabia Personal Data Protection Law. The parties
-             shall execute the Data Processing Addendum attached as
-             Schedule [X], which shall specify: (a) categories of
-             personal data processed; (b) lawful basis for processing;
-             (c) cross-border transfer mechanisms; (d) data localisation
-             obligations; and (e) breach notification timelines
-             applicable in each jurisdiction."
-RATIONALE:  "Multi-jurisdictional data processing requires jurisdiction-
-             specific compliance. A blanket compliance clause is
-             insufficient for regulatory enforcement purposes."
-PRIORITY:   Must-have
-
-CLAUSE:     Tax and Withholding (Section 14)
-STATUS:     RED — ESCALATE
-CURRENT:    "All fees are exclusive of applicable taxes."
-ISSUE:      Pakistan FBR imposes withholding tax on payments for
-            services rendered by Pakistani entities to foreign parties.
-            Saudi Arabia imposes 5% withholding tax on payments to
-            non-resident service providers. Neither obligation is
-            addressed. NexGen may receive net payments significantly
-            below the stated AED 1,850,000 if withholding is not
-            allocated.
-REDLINE:    [Recommend escalation to tax counsel in Pakistan and
-             Saudi Arabia before proposing specific language.
-             The commercial impact may exceed AED 200,000.]
-PRIORITY:   Must-have — escalate to tax counsel
-
-CLAUSE:     Intellectual Property (Section 7)
-STATUS:     YELLOW — NEGOTIATE
-CURRENT:    "All work product developed under this Agreement shall be
-             the exclusive property of Al-Faisal upon payment."
-ISSUE:      Pakistan IP law (Copyright Ordinance 1962) treats computer
-            programs as literary works. Under Pakistani law, copyright
-            vests in the author (developer) unless assigned in writing.
-            The current clause may be insufficient as a valid assignment
-            under Pakistani copyright law — a standalone IP assignment
-            deed executed under Pakistani law is recommended.
-            Additionally, NexGen's pre-existing IP (frameworks,
-            libraries, development tools) is not carved out.
-REDLINE:    "All Deliverables (as defined in Schedule A) developed
-             specifically for Al-Faisal under this Agreement shall
-             be assigned to Al-Faisal upon full payment, by way of a
-             separate IP Assignment Deed in the form set out in
-             Schedule [Y]. NexGen retains all right, title, and
-             interest in its Pre-Existing IP (as defined in
-             Schedule A), and grants Al-Faisal a perpetual,
-             non-exclusive licence to use such Pre-Existing IP
-             solely as embedded in the Deliverables."
-FALLBACK:   If Al-Faisal resists a separate assignment deed, propose
-            a warranty that NexGen has full authority to assign and
-            that the assignment is effective under Pakistani law.
-RATIONALE:  "Protects both parties: Al-Faisal receives clean IP
-             ownership of custom work; NexGen retains its platform
-             and development tools for future engagements."
-PRIORITY:   Nice-to-have (the separate deed); Must-have (the
-            pre-existing IP carve-out)
-
-CLAUSE:     Governing Law and Dispute Resolution (Section 18)
-STATUS:     YELLOW — NEGOTIATE
-CURRENT:    "This Agreement is governed by the laws of the United Arab
-             Emirates. Disputes shall be resolved by DIAC arbitration
-             in Dubai."
-ISSUE:      UAE mainland law (Civil Code, Federal Law No. 5 of 1985):
-            (1) Courts may reduce liquidated damages deemed excessive
-                (Art. 390)
-            (2) Good faith obligations (Art. 246) are broader than
-                common law jurisdictions
-            (3) Arabic is the official court language — if arbitration
-                fails and litigation is required, the Arabic version
-                of the contract may prevail
-            DIAC arbitration is reasonable for this value. Both UAE
-            and Pakistan are New York Convention signatories, so the
-            award is enforceable in both jurisdictions. Saudi Arabia
-            is also a signatory.
-REDLINE:    Add: "The English language version of this Agreement shall
-            prevail in the event of any conflict with any translated
-            version. Arbitration proceedings shall be conducted in
-            English."
-RATIONALE:  "Ensures both parties can participate in dispute resolution
-             proceedings without translation disadvantage."
-PRIORITY:   Must-have
-
-HOLISTIC RISK SUMMARY
-Total: 2 GREEN | 2 YELLOW | 2 RED
-Most material risk: Unaddressed cross-border data protection compliance
-                    across three jurisdictions without a DPA.
-Recommendation: NEGOTIATE — address the 2 RED items (data protection
-                DPA and tax withholding) before execution. Both require
-                specialist counsel.
-Negotiation priority: (1) Data protection DPA, (2) Tax withholding,
-                      (3) IP assignment mechanics, (4) Language precedence.
-
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
-```
+:::note Your output will vary
+The specific clause analysis and redline language depend on the contract text and your playbook configuration. Focus on whether the agent correctly identifies issues at the jurisdictional intersections — the problems that exist because three frameworks apply simultaneously. A single-jurisdiction review would miss these intersection risks.
+:::
 
 ### Mapping the Pitfalls
 
-Compare your prediction against the output. The agent flagged four of the five pitfalls:
+Compare your prediction against the output. The agent should flag four of the five pitfalls:
 
 | Pitfall                       | Status | Where It Appeared                                               |
 | ----------------------------- | ------ | --------------------------------------------------------------- |
@@ -321,67 +208,21 @@ Context: This is the finalised NexGen-AlFaisal MSA after negotiation.
 Both parties have agreed to all terms. Route for execution.
 ```
 
-**Expected output:**
+**What to expect:** The agent produces a pre-signature verification report. Your output will vary, but look for these sections:
 
-```
-PRE-SIGNATURE VERIFICATION
-─────────────────────────────────────────────────────────────
+| Section                      | Intent                                                                        | What to Verify                                                                                     |
+| ---------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Final form confirmation      | Confirms the document is the agreed version with no tracked changes remaining | Check that the agent identifies the correct version and flags any residual markup                  |
+| Entity name verification     | Checks entity names against official registration and consistency throughout  | Confirm both party names are verified and consistent across all occurrences                        |
+| Signature block alignment    | Confirms authorised signatories match the signature blocks                    | Verify the agent identifies the correct authorised signers                                         |
+| Exhibits and schedules check | Verifies all referenced attachments are present                               | Confirm all schedules mentioned in the agreement body are accounted for                            |
+| Internal approvals routing   | Identifies required internal sign-offs before execution                       | Check that GC and Finance approvals are flagged as required                                        |
+| Routing recommendation       | Provides execution instructions (digital via DocuSign MCP or manual wet ink)  | Verify the agent detects whether DocuSign connector is installed and provides the appropriate path |
+| Post-execution steps         | Lists obligation extraction, calendar reminders, and vendor-check enablement  | Confirm obligations are identified for ongoing monitoring                                          |
 
-☑ Final form confirmed
-  Version: v4.2 (FINAL) — matches last redline exchange
-  No tracked changes or comments remaining
-
-☑ Entity names verified
-  Party 1: "NexGen Solutions (Pvt.) Ltd."
-    ✓ Matches SECP registration exactly
-    ✓ Consistent throughout document (checked 14 occurrences)
-  Party 2: "Al-Faisal Digital Enterprises LLC"
-    ✓ Matches Dubai DED registration
-    ✓ Consistent throughout document (checked 11 occurrences)
-
-☑ Signature blocks aligned with authorised signers
-  Party 1: Khalid Farooq, CEO — confirmed authorised signatory
-  Party 2: Mohammed Al-Faisal, Managing Director — confirmed
-
-☑ All exhibits and schedules attached
-  Schedule A: Statement of Work and Deliverables — PRESENT
-  Schedule B: Data Processing Addendum — PRESENT
-  Schedule C: IP Assignment Deed — PRESENT
-  Schedule D: Payment Milestones — PRESENT
-
-☑ Internal approvals completed
-  Board resolution required: NO (below threshold)
-  GC sign-off: REQUIRED — route to legal@nexgen.pk
-  Finance sign-off: REQUIRED — route to cfo@nexgen.pk
-
-─────────────────────────────────────────────────────────────
-
-ROUTING RECOMMENDATION:
-  DocuSign connector: NOT CONNECTED
-  → Generating manual execution instructions:
-
-  1. Print 2 original counterparts (wet ink execution)
-  2. Each party executes both counterparts
-  3. Each party retains one fully executed original
-  4. Scanned copy to legal@nexgen.pk for repository
-
-  Alternative: Connect DocuSign MCP for digital execution.
-  Run: claude plugin install docusign-mcp
-  Benefits: Audit trail, timestamp, automated repository filing
-
-POST-EXECUTION STEPS (automated when contract is filed):
-  → Contract saved to repository with reference 2026-04-XX-XXXX
-  → Obligations extracted:
-    • 15 payment milestones over 18 months
-    • Quarterly data processing audit rights
-    • SOC 2 Type II report due within 60 days
-    • Non-renewal notice deadline: [date calculated]
-  → Calendar reminders set for all deadlines
-  → /vendor-check enabled for this contract
-
-─────────────────────────────────────────────────────────────
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
-```
+:::note Your output will vary
+The specific entity names, schedule lists, and routing instructions depend on the contract you upload and your connector configuration. Focus on whether the agent performs all five pre-signature checks and provides a clear execution path. The teaching point is the pre-signature verification workflow — not the specific details in any single output.
+:::
 
 ### With and Without the DocuSign Connector
 

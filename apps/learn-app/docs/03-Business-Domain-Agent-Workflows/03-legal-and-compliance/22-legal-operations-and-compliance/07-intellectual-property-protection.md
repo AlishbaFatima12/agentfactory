@@ -118,7 +118,7 @@ Before reading the landscape analysis below, predict: how crowded is the patent 
 :::
 
 ```
-Zara: /brief topic:"patent landscape analysis"
+/brief topic:"patent landscape analysis"
       subject:"AI-based structured data extraction from Urdu and
                Arabic-script legal documents, including OCR for
                nastaliq script, named entity recognition for Pakistani
@@ -127,72 +127,24 @@ Zara: /brief topic:"patent landscape analysis"
       key-competitors:"ABBYY, Kofax, Tessaract-based solutions"
       scope:"patents filed 2020-2026"
       jurisdictions:"US (USPTO), Pakistan (IPO-PK), GCC (GCC Patent Office)"
-
-Agent:
-PATENT LANDSCAPE ANALYSIS — Urdu/Arabic-Script Legal Document Processing
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-LANDSCAPE SUMMARY:
-Total relevant patents identified: 47
-Active filers in this space: 12 entities
-
-Top patent holders:
-  1. ABBYY Development (14 patents) — primarily OCR and document
-     structure recognition; most claims are for Latin-script processing
-     with some Arabic-script extensions
-  2. Microsoft Corp (8 patents) — general NLP and document
-     understanding; 2 patents specifically reference Arabic script
-  3. IBM (6 patents) — contract analysis and clause extraction;
-     language-agnostic claims
-  4. Various academic/individual filers (19 patents) — fragmented;
-     mostly narrow claims
-
-WHITE SPACES IDENTIFIED:
-  ✅ Nastaliq-specific OCR (distinct from standard Arabic naskh script):
-     Only 2 patents reference nastaliq; neither covers legal document
-     processing specifically. Strong filing opportunity.
-  ✅ Pakistani legal entity recognition: No patents found specifically
-     covering NER for Pakistani legal entities (SECP-registered companies,
-     courts, regulatory bodies). Novel territory.
-  ✅ Clause classification under Contract Act 1872: No existing patents
-     reference Pakistani contract law structure. Filing opportunity.
-
-FTO FLAGS (require IP attorney review):
-  ⚠️ US Patent 11,XXX,XXX (ABBYY): Claims cover "method for extracting
-     structured data from Arabic-script documents using transformer-based
-     OCR." Broad claim language — may read on nastaliq processing.
-     RECOMMEND: IP attorney to review claims 1, 3, and 7 for applicability
-     to nastaliq (a distinct script variant from standard Arabic naskh).
-  ⚠️ US Patent 11,XXX,YYY (IBM): Claims cover "automated clause
-     classification in commercial contracts using NLP." Language-agnostic
-     claims — may cover any language including Urdu.
-     RECOMMEND: IP attorney to assess whether our implementation
-     differs sufficiently in method.
-
-PRIOR ART CANDIDATES:
-  - FAST-NUCES Lahore (2022): Published paper on nastaliq OCR achieving
-    94.2% accuracy — potential prior art for ABBYY claim if their
-    filing date is post-2022
-  - LUMS CS Department (2023): Conference paper on Urdu NER for
-    legal documents — relevant prior art
-
-PAKISTAN-SPECIFIC NOTES (from pakistan-law.md overlay):
-  - Pakistan IPO: Patent protection available under Patents Ordinance 2000;
-    20-year term from filing date
-  - FIRST TO FILE: File at IPO Pakistan before any public disclosure
-  - Patent enforcement in Pakistan is developing — consider filing in
-    US/EU for stronger enforcement mechanisms
-  - GCC Patent Office: regional protection available across Gulf states
-    (relevant for your Gulf expansion)
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-GOVERNANCE: This is a RESEARCH SUMMARY, not a freedom-to-operate opinion.
-A qualified IP attorney must review before any product launch or investment
-decision that relies on FTO assumptions.
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
 ```
 
-Zara now has a structured research package to send to SpectraAI's IP attorney. Instead of asking the attorney to start from a blank page at USD 400/hour (or PKR 120,000/hour for international IP firms), the attorney reviews pre-screened research, focuses on the two FTO flags that actually need analysis, and produces a formal opinion in 10 hours instead of 40.
+**What to expect:** The agent produces a patent landscape analysis. Your output will vary, but look for these sections:
+
+| Section                     | Intent                                                                  | What to Verify                                                                                                                        |
+| --------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Landscape summary           | Total relevant patents and top filers in the technology area            | Check whether the agent identifies the major patent holders and filing trends                                                         |
+| White spaces                | Technology areas with few or no existing patents (filing opportunities) | Look for nastaliq-specific OCR, Pakistani legal entity NER, and jurisdiction-specific clause classification as potential white spaces |
+| FTO flags                   | Patents with broad claims that may read on your technology              | Should identify patents requiring IP attorney review, with specific claim numbers                                                     |
+| Prior art candidates        | Published research that could challenge existing patents                | Should include academic publications from relevant institutions                                                                       |
+| Jurisdiction-specific notes | Patent filing strategy for your markets                                 | Should reference Pakistan IPO, first-to-file rules, and GCC regional protection                                                       |
+| Governance footer           | Explicit statement that this is research, not an FTO opinion            | Confirm the output distinguishes research scaffolding from privileged legal opinion                                                   |
+
+:::note Your output will vary
+The specific patents, filing counts, and prior art candidates depend on the technology description and the databases the agent can access via MCP. Focus on the structure: landscape summary, white spaces, FTO flags, and the governance boundary. The teaching point is that patent landscape research reduces attorney work from 40+ hours to 10-15 hours — but cannot replace the attorney's privileged FTO opinion.
+:::
+
+Zara now has a structured research package to send to SpectraAI's IP attorney. Instead of asking the attorney to start from a blank page, the attorney reviews pre-screened research, focuses on the FTO flags that actually need analysis, and produces a formal opinion in significantly less time.
 
 ## Trademark Monitoring
 
@@ -268,7 +220,7 @@ If the agent identifies GPL or AGPL components in a product intended for proprie
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Patent Landscape Analysis for Your Technology
 

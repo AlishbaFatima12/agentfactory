@@ -153,148 +153,32 @@ Before Bilal runs `/review-contract`, predict: which clauses will the plugin fla
 Bilal opens Cowork and begins the review:
 
 ```
-Bilal: /review-contract
+/review-contract
 [Upload: CloudStack_MSA_v3.1.pdf]
 
-Agent: I'll review this contract for you. First, a few context questions:
-
-1. Which party are you? (Customer / Vendor / Licensor / Licensee / Partner)
-2. What is the contract type?
-3. When does this need to be finalised?
-4. Approximate contract value?
-5. Any specific clauses of concern?
-6. Relevant business context?
-
-Bilal: We are the Customer. SaaS agreement for project management software.
+We are the Customer. SaaS agreement for project management software.
 Need to finalise by end of month -- about 3 weeks. Annual value PKR 4,800,000
 (approx USD 17,000). Concerned about data residency -- our client data will
 be in this system and we need to comply with Pakistan's PDPA 2023.
 New vendor -- first engagement.
-
-Agent: Loading playbook... Found: NexaByte Legal Playbook v2.1.
-Jurisdiction overlay loaded: pakistan-law.md (based on your organisation profile).
-
-Reading full contract before analysis...
-
-[After full contract read]
-
-TASK:             Contract Review -- Vendor SaaS MSA
-JURISDICTION:     Governing law specified: State of Delaware, USA
-PLAYBOOK:         Loaded: Noor Technologies Playbook v2.1
-ATTORNEY REVIEW:  REQUIRED -- all outputs must be reviewed by a licensed attorney
-ESCALATION:       Yes -- see RED items below
-
-------------------------------------------------------------
-
-CLAUSE-BY-CLAUSE ANALYSIS
-
-CLAUSE:     Limitation of Liability (Section 9.1)
-STATUS:     RED
-CURRENT:    "The total aggregate liability of CloudStack shall not exceed
-             the fees paid by Customer in the three (3) months immediately
-             preceding the event giving rise to the claim."
-ISSUE:      Cap is PKR 1,200,000 (3 months' fees). Your playbook minimum
-            is 12 months' fees (PKR 4,800,000). Asymmetric: no cap
-            stated for Customer's liability. Additionally, no carve-outs
-            specified -- data breach liability would be subject to this cap.
-REDLINE:    "The total aggregate liability of either party shall not exceed
-             the greater of (i) the fees paid or payable under this Agreement
-             in the twelve (12) months immediately preceding the event giving
-             rise to the claim, or (ii) PKR 5,000,000, except that this
-             limitation shall not apply to (a) breaches of Section [Data
-             Protection], (b) IP infringement indemnities, or (c) liability
-             arising from gross negligence or wilful misconduct."
-FALLBACK:   If 12 months rejected, propose 6 months with a floor of
-            PKR 3,000,000 and mandatory carve-outs for data breach
-            and IP indemnity.
-RATIONALE:  "3-month cap creates material risk given the sensitive nature
-             of data processed. Standard commercial practice for SaaS
-             agreements in our market is 12 months' fees with mutual
-             application."
-PRIORITY:   Must-have
-
-CLAUSE:     Data Protection (Section 11)
-STATUS:     RED
-CURRENT:    "CloudStack shall comply with all applicable data protection
-             laws." [No DPA attached. No data residency provisions.
-             No breach notification timeline. No deletion on termination.]
-ISSUE:      Pakistan PDPA 2023 requires: (1) sensitive personal data may
-            need to be stored in Pakistan (verify with counsel); (2) data
-            subject rights including access, correction, erasure; (3)
-            cross-border transfer safeguards. Current clause is a bare
-            compliance statement with no operational substance.
-            ESCALATION TRIGGER: SaaS contract processing personal data
-            of Pakistani residents without PDPA-compliant DPA.
-REDLINE:    "CloudStack shall execute the Data Processing Addendum attached
-             as Schedule [X] prior to processing any Customer Personal Data.
-             The DPA shall specify: (a) categories of data processed, (b)
-             purposes of processing, (c) data residency requirements
-             including any Pakistan data localisation obligations under
-             PDPA 2023, (d) 72-hour breach notification to Customer,
-             (e) deletion of all Customer Personal Data within 30 days
-             of termination, and (f) cooperation with data subject
-             requests within applicable response windows."
-FALLBACK:   None -- a DPA is a legal requirement, not a negotiation position.
-RATIONALE:  "PDPA 2023 compliance is mandatory. Processing personal data
-             without a DPA exposes both parties to regulatory risk.
-             Penalties under PDPA: up to PKR 25 million."
-PRIORITY:   Must-have -- do not proceed without DPA
-
-CLAUSE:     Governing Law (Section 14.1)
-STATUS:     YELLOW
-CURRENT:    "This Agreement shall be governed by the laws of the State
-             of Delaware, United States."
-ISSUE:      Your playbook standard is Pakistani law for domestic
-            contracts, English law for significant international
-            contracts. Delaware law is acceptable for a US-headquartered
-            vendor but note: enforcement of Delaware judgments in
-            Pakistan requires a fresh suit (Pakistan does not have a
-            reciprocal enforcement treaty with the US for civil
-            judgments). Consider ICC arbitration as alternative.
-REDLINE:    "This Agreement shall be governed by the laws of England
-             and Wales. Any dispute shall be finally resolved by
-             arbitration under the ICC Rules, with the seat of
-             arbitration in London and the language of arbitration
-             being English."
-FALLBACK:   Accept Delaware law if vendor adds ICC arbitration clause
-            (Pakistan is a New York Convention signatory -- arbitral
-            awards are enforceable).
-RATIONALE:  "English law is commonly accepted for international
-             commercial contracts involving Pakistani parties and
-             is enforceable in Pakistani courts. ICC arbitration
-             provides neutral, internationally enforceable
-             dispute resolution."
-PRIORITY:   Nice-to-have
-
-CLAUSE:     IP Ownership (Section 7)
-STATUS:     GREEN
-CURRENT:    "CloudStack retains all IP rights in the Platform.
-             Customer retains all IP rights in Customer Data."
-ISSUE:      Standard SaaS position -- vendor owns platform, customer
-            owns data. Consistent with playbook.
-PRIORITY:   No action required
-
-------------------------------------------------------------
-
-HOLISTIC RISK SUMMARY
-
-Total: 3 GREEN | 2 YELLOW | 2 RED
-Single most material risk: No Data Processing Addendum despite processing
-  personal data of Pakistani residents -- PDPA 2023 compliance gap.
-Recommendation: NEGOTIATE -- do not execute without DPA and liability
-  cap revision. Route RED items to reviewing attorney.
-Priority negotiation order:
-  1. Data protection (DPA) -- legal requirement
-  2. Limitation of liability -- material financial risk
-  3. Governing law -- enforcement practicality
-
-------------------------------------------------------------
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
 ```
 
-Bilal reviews the output. The RED on data protection is exactly right -- he knows from his PDPA compliance work that a bare "comply with applicable laws" clause is insufficient. He forwards the output to Ayesha (the GC), who reviews the redlines, adjusts the liability floor from PKR 5,000,000 to PKR 4,800,000 (matching exactly 12 months' fees for cleaner negotiation optics), and sends the marked-up contract to CloudStack's legal team.
+**What to expect:** The agent loads your playbook, identifies the governing law, and produces a clause-by-clause analysis using the seven-step process described above. Your output will vary, but look for these sections:
 
-Total time: 25 minutes (Bilal's review) + 15 minutes (Ayesha's attorney review) = 40 minutes. The same review without the plugin would have taken Ayesha 3-4 hours of her own time.
+| Section                               | Intent                                                        | What to Verify                                                                             |
+| ------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Header with ATTORNEY REVIEW: REQUIRED | Governance boundary                                           | Present on every output                                                                    |
+| Limitation of Liability clause        | Compares the contract's cap against your playbook standard    | Should flag the gap between the contract's short cap and your playbook's 12-month standard |
+| Data Protection clause                | Assesses DPA adequacy against PDPA 2023                       | Should identify a bare "comply with applicable laws" clause as insufficient without a DPA  |
+| Governing Law clause                  | Evaluates jurisdiction enforceability for a Pakistani company | Should assess enforcement practicality of foreign law                                      |
+| IP Ownership clause                   | Checks vendor/customer IP split                               | Standard SaaS position should be acceptable                                                |
+| Holistic Risk Summary                 | Overall recommendation with priority negotiation order        | Should prioritise regulatory requirements (DPA) over commercial preferences                |
+
+:::note Your output will vary
+The specific redline language, fallback positions, and priority rankings depend on your playbook configuration and the contract details. Focus on whether the agent correctly identifies the gap between the contract terms and your playbook standards. The teaching point is calibrated analysis — the agent uses your playbook to produce specific, actionable redlines rather than generic observations.
+:::
+
+Bilal reviews the output. He forwards it to Ayesha (the GC), who reviews the redlines, adjusts any liability floor figures for cleaner negotiation optics, and sends the marked-up contract to CloudStack's legal team. Total time: roughly 40 minutes of combined review — compared to 3-4 hours of manual attorney review without the plugin.
 
 ---
 
@@ -318,33 +202,20 @@ After the CloudStack agreement is negotiated and executed, Bilal runs:
 
 ```
 /vendor-check CloudStack Inc.
-
-Agent:
-VENDOR STATUS -- CloudStack Inc.
-------------------------------------------------------------
-Contract:       SaaS MSA -- Project Management Platform
-Reference:      2026-03-15-0047
-Executed:       15 March 2026
-Term:           12 months (auto-renewal with 60-day notice)
-Annual value:   PKR 4,800,000
-Governing law:  English law, ICC arbitration (London)
-
-UPCOMING OBLIGATIONS (next 90 days):
-  15 May 2026  -- CloudStack to provide SOC 2 Type II report
-                   (Section 11.4) -- Owner: Vendor
-  30 May 2026  -- Noor Technologies quarterly data processing
-                   audit right window opens (DPA Section 5)
-                   -- Owner: Bilal Hussain
-  15 Jun 2026  -- Q2 invoice due -- PKR 1,200,000 -- Owner: Finance
-
-RENEWAL ALERT:
-  Last date to give non-renewal notice: 15 January 2027
-    (60 days before 15 March 2027 auto-renewal)
-    Calendar reminder set: 1 January 2027
-
-NO OVERDUE ITEMS
-------------------------------------------------------------
 ```
+
+**What to expect:** The agent queries your contract repository and produces a structured obligation summary. Your output will vary, but look for these sections:
+
+| Section                              | Intent                                                     | What to Verify                                         |
+| ------------------------------------ | ---------------------------------------------------------- | ------------------------------------------------------ |
+| Contract summary                     | Key terms at a glance (term, value, governing law)         | Should match the negotiated terms                      |
+| Upcoming obligations (30/60/90 days) | Deliverables, payments, audit rights with dates and owners | Each obligation should have a clear owner and deadline |
+| Renewal alert                        | Auto-renewal date and last date for non-renewal notice     | Should flag the notice window so you do not miss it    |
+| Overdue items                        | Obligations past their deadline                            | Address any overdue items immediately                  |
+
+:::note Your output will vary
+The specific dates, amounts, and obligation details depend on the contract you executed and the data in your repository. The teaching point is that a signed contract is the beginning of a legal relationship — the agent transforms it from a static document into an actively monitored set of obligations.
+:::
 
 ---
 
@@ -367,31 +238,20 @@ Bilal wants to prepare for a negotiation with a large enterprise vendor. He quer
 /brief topic:"limitation of liability benchmarking"
       scope:"all executed vendor SaaS contracts, 2024-2026"
       output:"ranges by contract value tier"
-
-Agent:
-LIABILITY CAP BENCHMARKING -- Noor Technologies
-------------------------------------------------------------
-Source: 34 executed SaaS contracts (2024-2026)
-
-By contract value tier:
-  < PKR 2,000,000/yr:   Average cap: 6 months' fees (100% mutual)
-  PKR 2M-10M/yr:        Average cap: 10.4 months' fees (94% mutual)
-  > PKR 10,000,000/yr:  Average cap: 12 months' fees (88% mutual)
-                         2 contracts have uncapped IP indemnity carve-outs
-
-Position outcomes:
-  Started at our standard (12 months): 34/34 (100%)
-  Achieved 12 months:                  22/34 (65%)
-  Settled at 6-11 months:              10/34 (29%)
-  Settled below 6 months:              2/34 (6%) -- both strategic
-                                       partners with board-approved exceptions
-
-Most resistant counterparties: US enterprise vendors (average 7.2 months
-  on first offer; all moved to 9+ months after pushback with rationale).
-------------------------------------------------------------
 ```
 
-This data is invaluable. When Bilal negotiates with the next vendor who insists on a 3-month cap, he has evidence: "Our executed contract portfolio shows that 94% of our SaaS vendors with comparable contract values accept a 6-12 month mutual cap. We would be pleased to discuss this further." That is not a negotiating position pulled from a textbook -- it is institutional intelligence derived from actual outcomes.
+**What to expect:** The agent searches your contract archive and produces benchmarking data. Your output will vary, but look for these sections:
+
+| Section                          | Intent                                                    | What to Verify                                  |
+| -------------------------------- | --------------------------------------------------------- | ----------------------------------------------- |
+| Source count                     | How many executed contracts inform the analysis           | More contracts produce more reliable benchmarks |
+| Cap ranges by value tier         | Average liability cap by contract size                    | Compare against your playbook standard          |
+| Position outcomes                | How often you achieved your standard position vs. settled | Reveals your actual negotiation track record    |
+| Counterparty resistance patterns | Which vendor types push back hardest                      | Informs preparation for future negotiations     |
+
+:::note Your output will vary
+The benchmarking results depend entirely on the contracts in your repository. The teaching point is that your archive of executed contracts is institutional intelligence — it transforms anecdotal negotiation experience into evidence-based positions. When a vendor insists on a short liability cap, your portfolio data provides specific evidence of what comparable vendors have accepted.
+:::
 
 > **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
 
@@ -411,7 +271,7 @@ When your contracts involve parties, performance, or data flows across multiple 
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Apply Contract Review to a Different Agreement Type
 
