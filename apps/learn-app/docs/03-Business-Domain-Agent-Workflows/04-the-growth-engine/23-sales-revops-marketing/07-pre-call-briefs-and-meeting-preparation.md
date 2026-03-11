@@ -107,11 +107,12 @@ Sarah Chen agreed to a 30-minute discovery call. She is VP Operations at Meridia
 Build the brief:
 
 ```
-Prepare me for a discovery call with Sarah Chen at Meridian
-Logistics tomorrow. 30-minute call. First conversation.
-She responded to our outreach about WMS consolidation after
-the BrightPath acquisition. She found the TransGlobal case
-study helpful and wants to discuss the consolidation diagnostic.
+Use the pre-call-brief skill to prepare me for a discovery call
+with Sarah Chen at Meridian Logistics tomorrow. 30-minute call.
+First conversation. She responded to our outreach about WMS
+consolidation after the BrightPath acquisition. She found the
+TransGlobal case study helpful and wants to discuss the
+consolidation diagnostic.
 ```
 
 The pre-call-brief skill auto-activates. Here is the complete output:
@@ -544,8 +545,8 @@ Use these prompts in your preferred AI assistant.
 **Prompt 1: Build a Pre-Call Brief with Competitive Positioning**
 
 ```
-Build a pre-call brief for a discovery call with Meridian's
-Sarah Chen. She is VP Operations.
+Use the pre-call-brief skill to build a pre-call brief for a
+discovery call with Meridian's Sarah Chen. She is VP Operations.
 Meridian completed the BrightPath acquisition in Q3, and
 she responded to our outreach about WMS consolidation.
 

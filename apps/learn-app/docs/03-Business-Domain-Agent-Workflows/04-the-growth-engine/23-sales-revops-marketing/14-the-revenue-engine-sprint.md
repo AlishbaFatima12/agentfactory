@@ -408,7 +408,7 @@ The division of labour that runs through every lesson: the agent researches, dra
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant with your sales-marketing plugins installed.
+Use these prompts in Claude or your preferred AI assistant with your Sales, Marketing, and RevOps extension plugins installed.
 
 ### Prompt 1: Reproduce the Sprint
 

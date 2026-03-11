@@ -96,7 +96,7 @@ List all my sales and marketing skills and tell me which
 plugin each one comes from.
 ```
 
-If the extension is active, the output includes an **ICP MATCH** header at the top of the research brief. If you see only a plain research brief without the ICP section, reinstall the Sales RevOps Marketing plugin from the Cowork sidebar.
+You should see skills from all three layers: six from the Sales plugin (including `account-research` and `call-summary`), five from Marketing (including `content-creation` and `campaign-planning`), and fifteen from the extension (including `prospect-research`, `lead-scoring`, `persona-icp`, and `crm-enrichment`). If you see only base-plugin skills without the extension additions, reinstall the Sales RevOps Marketing plugin from the Cowork sidebar.
 
 ## Connect Your Tools (Optional)
 
@@ -152,10 +152,37 @@ Generate the following:
    3 competitors: name, positioning, strengths, weaknesses, where they win,
    where NexaFlow wins
 
-Format: structured markdown with clear headers.
+Format: structured markdown with clear section headers.
+Save the output as demo-data.md in my working folder.
 ```
 
 **Output:** A structured dataset saved as `demo-data.md` containing 20 closed-won deals, 5 target prospects (with Meridian Logistics as prospect #1), 10 pipeline deals, Q1 campaign results, and competitor intelligence. Save this file -- every subsequent lesson references this data.
+
+## Set Up Folder Instructions
+
+Every lesson in this chapter assumes the agent knows who NexaFlow is, where the demo data lives, and what voice to use. Instead of pasting this context into every prompt, set it once in Cowork's folder instructions.
+
+Open the Cowork sidebar → **Instructions** pane. Paste this block and save:
+
+```
+You are working as a sales and marketing assistant for NexaFlow Technologies,
+a workflow automation platform for mid-market logistics companies based in
+Karachi, Pakistan (38 employees, PKR 180M revenue).
+
+Always read demo-data.md for prospect records, pipeline data, campaign history,
+and competitor intelligence. Always read sales-marketing.local.md for our ICP
+definition, company profile, and brand voice.
+
+When generating outreach, research briefs, or content, apply our brand voice:
+direct, practical, no jargon — "We speak like operators, not vendors."
+
+Our ICP: 50-400 employee regional 3PL operators, warehousing, or fleet management
+companies. Buyer persona: VP Ops / Director Ops. Key markets: Pakistan, UAE, UK.
+```
+
+:::note Folder instructions persist across all messages in this session
+Once saved, the agent reads demo-data.md and sales-marketing.local.md automatically — you do not need to reference these files in every prompt. Every lesson from L02 onward assumes these instructions are active. If you start a new Cowork session, re-paste them.
+:::
 
 ## Your First Research Brief
 

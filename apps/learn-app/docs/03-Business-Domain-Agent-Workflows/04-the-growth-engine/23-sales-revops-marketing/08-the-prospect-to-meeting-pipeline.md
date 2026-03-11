@@ -104,7 +104,8 @@ The agent researches, drafts, and recommends. The sales professional decides and
 Crescent Freight is a mid-size freight forwarding company based in Karachi. You generated their profile in Lesson 1 but never ran intelligence on them. Start the pipeline:
 
 ```
-Research Crescent Freight Karachi — full intelligence brief
+Use the prospect-research skill to research Crescent Freight
+Karachi — full intelligence brief
 ```
 
 The `prospect-research` skill auto-activates and produces a structured brief: company overview, key personnel, financial signals, technology stack, pain points, and engagement signals. Review the output against the hallucination detection rules from Lesson 1.
@@ -125,7 +126,8 @@ The research brief is the foundation. Every downstream stage will reference it. 
 Feed the research brief into the scoring model:
 
 ```
-Score this lead: Crescent Freight, Karachi. Use the research brief from Step 1.
+Use the lead-scoring skill to score this lead: Crescent Freight,
+Karachi. Use the research brief from Step 1.
 ```
 
 The `lead-scoring` skill evaluates three dimensions — Fit, Timing, and Engagement — using the ICP you built in Lesson 2.
@@ -160,9 +162,10 @@ Compare this to Meridian Logistics from Lesson 7, which scored 94 with a meeting
 The score is hot. Now draft a first-touch message:
 
 ```
-Draft a LinkedIn DM for the VP Operations at Crescent Freight.
-Reference the new warehouse expansion at Port Qasim and their
-hiring for an operations manager.
+Use the outreach skill to draft a LinkedIn DM for the VP
+Operations at Crescent Freight. Reference the new warehouse
+expansion at Port Qasim and their hiring for an operations
+manager.
 ```
 
 The `outreach` skill produces a Five Laws-compliant message. Review it against the five constraints from Lesson 5:
@@ -184,8 +187,9 @@ If any law fails, iterate. Prompt the agent to fix the specific violation. The o
 One touch is not enough. Build a multi-touch sequence for Crescent:
 
 ```
-Build a 6-touch, 21-day outreach sequence for Crescent Freight.
-Include exit conditions for reply, bounce, unsubscribe, and silence.
+Use the sequence skill to build a 6-touch, 21-day outreach
+sequence for Crescent Freight. Include exit conditions for reply,
+bounce, unsubscribe, and silence.
 ```
 
 The `sequence` skill generates a full cadence. Review the output against what you learned in Lesson 6:
@@ -206,9 +210,10 @@ Check for personalisation decay across the sequence. Touch 1 should reference th
 Assume Crescent's VP Operations responds to Touch 2. She agrees to a discovery call next Thursday. Prepare:
 
 ```
-Prepare a pre-call brief for my discovery call with Crescent Freight.
-The VP Operations responded to our LinkedIn outreach about the
-Port Qasim warehouse expansion. Call is scheduled for Thursday.
+Use the pre-call-brief skill to prepare for my discovery call
+with Crescent Freight. The VP Operations responded to our LinkedIn
+outreach about the Port Qasim warehouse expansion. Call is
+scheduled for Thursday.
 ```
 
 The `pre-call-brief` skill assembles meeting preparation from every upstream stage — research context, scoring rationale, outreach history, and engagement signals.
@@ -229,12 +234,12 @@ The brief should feel like a document prepared by someone who has been following
 Assume the call went well. Crescent's VP confirmed the expansion timeline, mentioned they are evaluating two vendors including NexaFlow, and wants a technical demo next week. Write the follow-up:
 
 ```
-Write a follow-up email for Crescent Freight. Call notes:
-VP confirmed Port Qasim warehouse goes live Q3. Evaluating
-NexaFlow and one competitor. Wants a technical demo next
-Tuesday. Key concern: integration with their existing SAP
-dispatch system. Action: send SAP integration case study
-before demo.
+Use the follow-up skill to write a follow-up email for Crescent
+Freight. Call notes: VP confirmed Port Qasim warehouse goes live
+Q3. Evaluating NexaFlow and one competitor. Wants a technical demo
+next Tuesday. Key concern: integration with their existing SAP
+dispatch system. Action: send SAP integration case study before
+demo.
 ```
 
 The `follow-up` skill generates the email. Apply the Context Loss test from Lesson 7: does the follow-up reference specific conversation points, or is it a generic "great speaking with you" template?
@@ -332,12 +337,12 @@ Use these prompts in Claude or your preferred AI assistant to practise the pipel
 
 ```
 Run the full 6-step pipeline for Crescent Freight (Karachi):
-1. Research — full intelligence brief
-2. Score — three-dimension lead score
-3. Outreach — LinkedIn DM referencing a specific trigger
-4. Sequence — 6-touch, 21-day cadence with exit conditions
-5. Brief — pre-call preparation (assume prospect responded)
-6. Follow-up — post-call email (assume call confirmed timeline)
+1. Use the prospect-research skill — full intelligence brief
+2. Use the lead-scoring skill — three-dimension lead score
+3. Use the outreach skill — LinkedIn DM referencing a specific trigger
+4. Use the sequence skill — 6-touch, 21-day cadence with exit conditions
+5. Use the pre-call-brief skill — preparation (assume prospect responded)
+6. Use the follow-up skill — post-call email (assume call confirmed timeline)
 
 At each step, document: what data arrived from the previous step,
 what the agent added fresh, and your total elapsed time.

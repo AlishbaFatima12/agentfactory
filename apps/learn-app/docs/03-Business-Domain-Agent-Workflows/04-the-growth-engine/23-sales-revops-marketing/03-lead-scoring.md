@@ -135,59 +135,26 @@ Notice that classification depends on BOTH the total and the dimension balance. 
 Take the five demo prospects from Lesson 2 and score each one. Start with Meridian:
 
 ```
-Score this lead against NexaFlow's ICP:
-
-Meridian Logistics Ltd, Leeds, UK. 380 employees,
-£50M revenue. Sarah Chen, VP Operations. Recently won
-a major contract with a national retailer requiring
-40% capacity expansion. Legacy WMS (SAP, 8 years old).
-Hired a Head of Digital Transformation 3 months ago.
-Visited NexaFlow website twice, downloaded the logistics
-automation case study.
+Use the lead-scoring skill to score Meridian Logistics against
+NexaFlow's ICP. Show the full dimension breakdown (Fit, Timing,
+Engagement) and classify the lead.
 ```
 
-**Output:**
+**What to expect:** The agent reads your Meridian prospect record from demo-data.md and scores it against the ICP in sales-marketing.local.md. Your output will vary, but look for these sections:
 
-```
-LEAD SCORE — Meridian Logistics
-═══════════════════════════════
+| Section                | What It Shows                                       | What to Verify                                                         |
+| ---------------------- | --------------------------------------------------- | ---------------------------------------------------------------------- |
+| TOTAL + Classification | Overall score and HOT/WARM/CULTIVATE/NOT YET label  | Classification matches the threshold table from earlier in this lesson |
+| Fit dimension          | Industry, size, tech stack, geography sub-scores    | Sub-scores reference data from demo-data.md, not invented details      |
+| Timing dimension       | Trigger events, leadership changes, tech investment | Timing signals reference prospect record specifics                     |
+| Engagement dimension   | Website, content, events, email sub-scores          | Lower scores for fictional prospects (limited public data)             |
+| Action recommendation  | Next step for this prospect                         | Recommendation matches classification                                  |
 
-TOTAL: 87/100
-Classification: HOT
+:::note Your output will vary
+The agent's scores depend on your demo-data.md content and ICP configuration. The teaching point is the _structure_ — three independent dimensions with sub-scores — not the exact numbers. If Meridian scores HOT (75+), the ICP is working. If it scores lower than expected, check which dimension is dragging the score.
+:::
 
-DIMENSION BREAKDOWN:
-  Fit:         36/40
-    Industry match:      10/10  (3PL / logistics — exact ICP match)
-    Company size:        10/10  (380 employees — within 50-400 range)
-    Tech stack:           8/10  (legacy SAP WMS, 8 years old — strong
-                                 positive signal; no automation platform)
-    Geography:            8/10  (UK — secondary market in ICP)
-
-  Timing:      37/40
-    Contract trigger:    15/15  (major retailer contract requiring 40%
-                                 capacity expansion — highest-priority
-                                 trigger event)
-    Leadership change:   12/15  (Head of Digital Transformation hired
-                                 3 months ago — active evaluation window)
-    Tech investment:     10/10  (legacy system replacement likely given
-                                 capacity demands and new digital leader)
-
-  Engagement:  14/20
-    Website visits:       6/10  (2 visits — moderate awareness)
-    Content downloads:    5/5   (logistics automation case study —
-                                 directly relevant to their challenge)
-    Event attendance:     0/5   (no events)
-    Email interaction:    3/5   (opened 1 newsletter)
-
-ACTION RECOMMENDATION: Immediate personalised outreach.
-Strong Fit + strong Timing + moderate Engagement =
-prospect matches ICP, has urgent operational need, and
-has shown intentional interest (case study download is
-a buying signal). Farah should contact Sarah Chen this
-week referencing the capacity expansion challenge.
-```
-
-Meridian scores 87 — HOT. The dimension breakdown reveals why. Fit is strong across every sub-dimension: right industry, right size, legacy tech stack that needs replacing. Timing is nearly perfect: the contract win creates urgency, and a new digital transformation leader means someone is actively looking for solutions. Engagement is moderate but the case study download signals deliberate interest, not casual browsing.
+If Meridian scores HOT, examine the dimension breakdown to understand why. The Fit dimension should reflect industry match, company size, and tech stack signals from demo-data.md. The Timing dimension should capture trigger events like contract wins and leadership changes. Engagement will typically be moderate for fictional prospects — limited public data means lower website and content interaction scores.
 
 Now score the remaining four prospects. Run each one through the same prompt, substituting the prospect details from your Lesson 2 research briefs.
 

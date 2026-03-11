@@ -94,11 +94,11 @@ Sarah Chen is VP Operations at Meridian Logistics in Leeds. Your research brief 
 Build the follow-up sequence:
 
 ```
-Build a 6-touch, 21-day outreach sequence for Sarah Chen at
-Meridian Logistics. Mix LinkedIn and email. Goal: discovery call.
-Tone: peer-level, no pitch. Use the research brief showing
-BrightPath acquisition, supply chain consolidation delays,
-and WMS integration challenges.
+Use the sequence skill to build a 6-touch, 21-day outreach
+sequence for Sarah Chen at Meridian Logistics. Mix LinkedIn and
+email. Goal: discovery call. Tone: peer-level, no pitch. Use the
+research brief showing BrightPath acquisition, supply chain
+consolidation delays, and WMS integration challenges.
 ```
 
 The sequence skill auto-activates from the trigger phrases. Here is the complete output:
@@ -414,8 +414,9 @@ Use these prompts in your preferred AI assistant.
 **Prompt 1: Build and Audit the Full Sequence**
 
 ```
-Build a 6-touch, 21-day outreach sequence for a real prospect in
-my pipeline. Here is their research brief:
+Use the sequence skill to build a 6-touch, 21-day outreach
+sequence for a real prospect in my pipeline. Here is their
+research brief:
 
 [Paste your research brief from Lesson 2]
 
