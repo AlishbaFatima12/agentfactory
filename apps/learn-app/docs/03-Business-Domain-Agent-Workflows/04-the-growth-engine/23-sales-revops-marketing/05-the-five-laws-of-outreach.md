@@ -195,8 +195,8 @@ Seventeen words are banned from all outreach:
 Your research brief from Lesson 2 includes Sarah Chen at Meridian Logistics. In Lesson 3 you scored Meridian. In Lesson 4 you enriched the record and discovered a Leeds warehouse expansion of 40%. Now put the Five Laws to work.
 
 ```
-Using the research brief for Meridian Logistics, draft a LinkedIn
-DM for Sarah Chen. Hook: they just expanded their Leeds warehouse
+Use the outreach skill to draft a LinkedIn DM for Sarah Chen at
+Meridian Logistics. Hook: they just expanded their Leeds warehouse
 capacity by 40%.
 ```
 
@@ -388,10 +388,10 @@ Use these prompts in Claude or your preferred AI assistant with the Sales and Re
 ### Prompt 1: Reproduce and Audit
 
 ```
-Draft a LinkedIn DM for Sarah Chen at Meridian Logistics. Hook:
-they just expanded their Leeds warehouse capacity by 40% and
-posted 8 new operations roles. Audit each of the Five Laws
-against the output:
+Use the outreach skill to draft a LinkedIn DM for Sarah Chen at
+Meridian Logistics. Hook: they just expanded their Leeds warehouse
+capacity by 40% and posted 8 new operations roles. Audit each of
+the Five Laws against the output:
 
 Law 1: Specific Verifiable Reference
 Law 2: Lead with Prospect

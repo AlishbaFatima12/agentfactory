@@ -94,51 +94,23 @@ Take the five target prospects from the demo dataset you generated in Lesson 1. 
 Run this prompt for the first prospect:
 
 ```
-Enrich this prospect record from our CRM:
-
-Company: Meridian Logistics Ltd, Leeds, UK
-Contact: Sarah Chen, VP Operations
-Last updated: 3 months ago
-Employee count: 380
-Industry: Regional 3PL
-Recent notes: Won a major contract Feb 2026, VP promoted 6 months ago
-
-Pull current data from all available sources. For each field, tell me:
-what changed, what was confirmed, and any new timing signals.
+Use the crm-enrichment skill to enrich the Meridian Logistics
+prospect record. Pull current data from all available sources.
+For each field, tell me: what changed, what was confirmed, and
+any new timing signals.
 ```
 
-**Output:**
+**What to expect:** The agent produces an enrichment report for Meridian. Your output will vary, but look for these sections:
 
-```
-CRM ENRICHMENT REPORT — Meridian Logistics Ltd
+| Section               | Intent                                        | What to Verify                                                |
+| --------------------- | --------------------------------------------- | ------------------------------------------------------------- |
+| Field-by-field status | CONFIRMED vs CHANGED per field                | Changes reference real-world signals the agent found          |
+| New signals detected  | Timing signals not in original record         | Signals are sourced (LinkedIn, news, job boards) not invented |
+| Scoring impact        | Before/after scores with classification shift | Score change is driven by the new signals, not random         |
 
-FIELD-BY-FIELD STATUS:
-  Contact: Sarah Chen
-    Title:           VP Operations → VP Operations  CONFIRMED
-    Company:         Meridian Logistics → Meridian Logistics  CONFIRMED
-    Location:        Leeds, UK → Leeds, UK  CONFIRMED
-
-  Company: Meridian Logistics
-    Employee count:  380 → 420  CHANGED (+40, 10.5% growth)
-    Industry:        Regional 3PL  CONFIRMED
-    Office locations: Leeds → Leeds, Manchester  CHANGED (new depot opened)
-
-  NEW SIGNALS DETECTED:
-    • Partnership announcement with UK logistics tech consortium
-      (published 12 days ago)
-    • 8 new open roles on LinkedIn (up from 12 three months ago —
-      suggests first wave filled, second wave starting)
-    • Sarah Chen posted about "warehouse automation pilot results"
-      (6 days ago — indicates active evaluation)
-
-SCORING IMPACT:
-  Timing (before):    25/40  (contract win was 4+ months ago — decaying)
-  Timing (after):     36/40  (new partnership + automation pilot = fresh signals)
-  Fit (before):       33/40
-  Fit (after):        35/40  (420 employees still within ICP; Manchester
-                              depot improves geographic reach)
-  Classification:     WARM (63) → HOT (79)
-```
+:::note Your output will vary
+The enrichment report depends on what the agent finds via web research and your demo-data.md content. The teaching point is the _structure_ — confirmed fields, changed fields, new signals, scoring impact — and the concept that timing signals drive classification shifts. Expect at least one changed field and one new signal for each prospect.
+:::
 
 Read the report in three layers. First, the **confirmed fields** -- Sarah Chen is still VP Operations at Meridian Logistics in Leeds. You do not need to update those records. Second, the **changed fields** -- employee count grew from 380 to 420, and they opened a Manchester depot. These are real changes that affect scoring. Third, the **new signals** -- a partnership announcement, new hiring, and a LinkedIn post about automation pilot results. These are the timing signals that were sitting in the market unseen while the CRM record gathered dust.
 
@@ -149,51 +121,22 @@ The classification shift from WARM to HOT is driven entirely by the timing signa
 Now run enrichment on a prospect that was scored as CULTIVATE in Lesson 3. This is the scenario most teams miss entirely: a prospect sitting quietly in the bottom of the pipeline while their buying signals light up.
 
 ```
-Enrich this prospect record:
-
-Company: TransGulf Freight, Dubai, UAE
-Contact: Ahmad Khalil, Director of Operations
-Last updated: 5 months ago
-Employee count: 95
-Industry: Freight forwarding
-Score from L03: 42/100 (CULTIVATE)
-Notes: Decent fit, no timing signals when last scored
+Use the crm-enrichment skill to enrich the TransGulf Freight
+prospect record. Include the L03 score (42/100, CULTIVATE) as
+baseline. Pull current data from all available sources.
 ```
 
-**Output:**
+**What to expect:** The agent produces an enrichment report for TransGulf. Your output will vary, but look for these sections:
 
-```
-CRM ENRICHMENT REPORT — TransGulf Freight
+| Section               | Intent                                                 | What to Verify                                         |
+| --------------------- | ------------------------------------------------------ | ------------------------------------------------------ |
+| Field-by-field status | Same structure as Meridian                             | Baseline score (42, CULTIVATE) is referenced           |
+| New signals           | Timing signals that were invisible at L03 scoring time | This is the lesson's "Hidden HOT Lead" teaching moment |
+| Classification shift  | CULTIVATE → higher classification                      | Shift is driven by timing, not fit changes             |
 
-FIELD-BY-FIELD STATUS:
-  Contact: Ahmad Khalil
-    Title:           Director of Operations → COO  CHANGED (promoted)
-    Company:         TransGulf Freight  CONFIRMED
-
-  Company: TransGulf Freight
-    Employee count:  95 → 140  CHANGED (+45, 47% growth in 5 months)
-    Revenue signal:  Won government logistics contract (announced 3 weeks ago)
-    Office:          Dubai → Dubai + Abu Dhabi  CHANGED (new office)
-
-  NEW SIGNALS DETECTED:
-    • Government contract win worth AED 12M (announced 3 weeks ago)
-    • Ahmad Khalil promoted to COO (title change on LinkedIn, 6 weeks ago)
-    • Hiring: 5 operations roles, 2 tech roles on LinkedIn
-    • Posted RFP for "warehouse management system" on procurement portal
-      (9 days ago)
-
-SCORING IMPACT:
-  Fit (before):      22/40
-  Fit (after):       28/40  (140 employees now within ICP sweet spot;
-                             was borderline at 95)
-  Timing (before):   12/40
-  Timing (after):    32/40  (government contract + COO promotion + RFP
-                             = three independent buying signals)
-  Engagement:         2/20 → 2/20  (no change — they have not interacted
-                                    with NexaFlow content)
-  Total:             42/100 → 67/100
-  Classification:    CULTIVATE → WARM
-```
+:::note Your output will vary
+The teaching point is that enrichment reveals timing signals that were invisible when you scored the prospect in L03. A prospect sitting at CULTIVATE can jump to WARM or HOT when new signals appear — contract wins, promotions, hiring surges, RFPs. The specific numbers differ, but the pattern is consistent: timing is the most volatile dimension.
+:::
 
 Five months ago, TransGulf was a 95-person freight forwarder with no buying signals. Today they have won a government contract, promoted their operations director to COO, grown by 47%, and posted an RFP for warehouse management software. Their timing score jumped from 12 to 32. The classification moved from CULTIVATE to WARM -- and with an active RFP, this prospect deserves immediate attention despite the low engagement score.
 

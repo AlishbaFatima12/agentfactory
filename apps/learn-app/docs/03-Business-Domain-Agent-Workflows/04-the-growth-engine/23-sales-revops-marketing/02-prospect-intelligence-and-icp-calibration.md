@@ -94,56 +94,27 @@ In Lesson 1 you generated demo data for NexaFlow, including 20 closed-won deals.
 Open the 20 closed-won deals and run:
 
 ```
-Analyse these 20 closed-won deals. What patterns do you see in company size, industry, buyer persona, trigger event, and sales cycle length?
-
-[Paste or reference the 20 closed-won deal records from L01]
+Analyse NexaFlow's 20 closed-won deals. What patterns do you see
+in company size, industry, buyer persona, trigger event, and
+sales cycle length?
 ```
 
-**Sample Output:**
+**What to expect:** The agent reads your closed-won deals from demo-data.md and produces a pattern analysis. Your output will vary based on the data you generated in L01, but look for these sections:
 
-```
-CLOSED-WON PATTERN ANALYSIS — NexaFlow Technologies
-═══════════════════════════════════════════════════════
+| Section            | What It Shows                                    | What to Verify                                                 |
+| ------------------ | ------------------------------------------------ | -------------------------------------------------------------- |
+| Company size range | Sweet spot and outliers across 20 deals          | Range encompasses most deals (14-16 of 20)                     |
+| Industry breakdown | Percentage distribution across verticals         | Totals add up to 20 deals                                      |
+| Buyer persona      | Decision-maker titles ranked by frequency        | VP Ops or Director Ops appears as primary                      |
+| Trigger events     | Ranked list of events that preceded closed deals | Trigger types reference your deal records, not invented events |
+| Sales cycle        | Average, fastest, slowest with explanations      | Fastest cycles correlate with high-urgency triggers            |
+| Negative patterns  | Patterns from lost or stalled deals              | Patterns reference your actual demo data                       |
 
-COMPANY SIZE
-  Range:          40–380 employees
-  Sweet spot:     80–250 employees (14 of 20 deals)
-  Outliers:       2 deals below 50, 1 deal above 350
+:::note Your output will vary
+Since you generated the demo data in L01, the specific numbers and company names will differ from another student's. The teaching point is the _structure_ of the analysis — five measurable dimensions extracted from deal data — not the exact percentages.
+:::
 
-INDUSTRY
-  Regional 3PL:           12 deals (60%)
-  Freight forwarding:      4 deals (20%)
-  E-commerce fulfilment:   3 deals (15%)
-  Cold chain logistics:    1 deal  (5%)
-
-BUYER PERSONA
-  VP Operations:          11 deals — primary decision maker
-  Director of Ops:         5 deals — mid-market variant
-  CEO (founder-led):       4 deals — smaller companies
-
-TRIGGER EVENT
-  New leadership:          8 deals — new VP/Director hired
-                           within 6 months of close
-  Contract win:            5 deals — prospect won a major
-                           client contract and needed to scale
-  System failure:          4 deals — existing system crashed
-                           or caused a visible service failure
-  Expansion:               3 deals — new warehouse, new market,
-                           or new geography
-
-SALES CYCLE
-  Average:                 52 days
-  Fastest:                 18 days (system failure trigger)
-  Slowest:                 94 days (CEO buyer, no champion)
-
-NEGATIVE PATTERNS
-  All 3 lost deals in Q4 2025 shared one trait: the prospect
-  had just signed a 3-year contract with a competitor.
-  Two stalled deals involved government-owned logistics
-  bodies — procurement cycle exceeded NexaFlow's patience.
-```
-
-Read that output carefully. Farah's "you just know" is now decomposed into five measurable dimensions. The 80-250 employee sweet spot, the VP Operations persona, the "new leadership" trigger — these are the signals that separate NexaFlow's closed-won customers from the rest of the market.
+Review your output against these sections. Farah's "you just know" is now decomposed into measurable dimensions — employee sweet spots, persona patterns, trigger events, cycle lengths. These are the signals that separate NexaFlow's closed-won customers from the rest of the market.
 
 Notice what the data reveals that intuition does not. The trigger event breakdown shows that system failures produce the fastest sales cycles (18 days average). Farah knows this instinctively — she prioritises prospects who just had an outage. But the other reps do not know to look for that signal. The ICP will encode it.
 
@@ -152,10 +123,8 @@ Notice what the data reveals that intuition does not. The trigger event breakdow
 Now convert those patterns into a structured ICP configuration. The `persona-icp` skill auto-activates when you work through ICP prompts — you do not need to invoke it by name.
 
 ```
-Build an ICP definition for NexaFlow Technologies based on these
-20 closed-won deals:
-
-[Paste or reference the 20 closed-won deal records]
+Use the persona-icp skill to build an ICP definition for NexaFlow
+Technologies based on the 20 closed-won deals.
 
 Include:
 - Firmographics (industry, size, geography, revenue)
@@ -165,92 +134,20 @@ Include:
 - Negative signals (hard and soft disqualifiers)
 ```
 
-**Sample Output:**
+**What to expect:** The agent produces a structured ICP definition in YAML format. Your output will vary, but look for these sections:
 
-```yaml
-icp:
-  firmographic:
-    industries:
-      - "Regional 3PL / Third-Party Logistics"
-      - "Freight Forwarding"
-      - "E-commerce Fulfilment"
-      - "Cold Chain Logistics"
-    company_size:
-      employees_min: 50
-      employees_max: 400
-    geography:
-      primary: ["Pakistan", "UAE"]
-      secondary: ["UK", "Saudi Arabia"]
-    revenue_range:
-      min_usd: 200000
-      max_usd: 10000000
+| Section          | What It Contains                                         | What to Verify                                                           |
+| ---------------- | -------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Firmographic     | Industries, company size range, geography, revenue range | Employee range encompasses 18+ of 20 closed-won deals                    |
+| Technographic    | Positive and negative technology signals                 | Signals map to patterns found in the deal analysis                       |
+| Timing           | High, moderate, and low priority trigger events          | High-priority triggers match the top trigger events from the analysis    |
+| Personas         | Primary buyer, economic buyer, and champion profiles     | Titles match the buyer persona breakdown from the analysis               |
+| Negative signals | Hard and soft disqualifiers                              | Disqualifiers reference the failed/stalled deals from your data          |
+| Data sources     | Where to find each signal type                           | Sources are real, verifiable platforms (LinkedIn, Companies House, etc.) |
 
-  technographic:
-    positive_signals:
-      - "Legacy TMS or WMS system (5+ years old)"
-      - "Manual dispatch or route planning processes"
-      - "Job postings mention 'operations', 'automation', or 'workflow'"
-      - "Excel-based reporting for fleet or warehouse metrics"
-    negative_signals:
-      - "Recently implemented a competitor platform (last 12 months)"
-      - "Fully custom-built internal system with dedicated dev team"
-
-  timing:
-    high_priority:
-      - "New VP Operations or Director of Ops hired in last 6 months"
-      - "Major contract win requiring operational scaling"
-      - "System failure or visible service disruption"
-    moderate_priority:
-      - "Expansion into new geography or new warehouse"
-      - "Hiring surge in operations roles (5+ in 30 days)"
-    low_priority:
-      - "Industry conference attendance or speaking"
-      - "Competitor mentioned negatively in public forums"
-
-  personas:
-    primary_buyer:
-      titles: ["VP Operations", "Director of Operations"]
-      motivations:
-        - "Reduce manual dispatch and planning overhead"
-        - "Improve on-time delivery rates for new contracts"
-      fears:
-        - "Disruption to live operations during implementation"
-        - "Staff resistance to new systems"
-    economic_buyer:
-      titles: ["CEO", "Managing Director", "COO"]
-      motivations:
-        - "Revenue per employee improvement"
-        - "Ability to take on larger contracts without proportional headcount"
-      fears:
-        - "Implementation timeline exceeding 90 days"
-        - "Hidden costs beyond subscription"
-    champion:
-      titles: ["Operations Manager", "Fleet Coordinator", "Warehouse Lead"]
-      motivations:
-        - "Eliminating repetitive manual tasks"
-        - "Real-time visibility into operations"
-
-  negative_signals:
-    hard_disqualifiers:
-      - "Active 3-year contract with a competitor"
-      - "Government or public-sector procurement process"
-    soft_disqualifiers:
-      - "CEO buyer with no operational champion (long cycle risk)"
-      - "Company culture strongly opposed to SaaS adoption"
-
-  data_sources:
-    firmographic:
-      [
-        "LinkedIn Company Page",
-        "local registrar (SECP/Companies House)",
-        "Crunchbase",
-      ]
-    technographic:
-      ["Job boards (Rozee.pk, LinkedIn Jobs, Indeed)", "GitHub", "StackShare"]
-    timing:
-      ["Google News", "LinkedIn announcements", "Crunchbase funding alerts"]
-    persona: ["LinkedIn", "company About page", "conference speaker lists"]
-```
+:::note Your output will vary
+The ICP dimensions are derived from YOUR demo data, so the specific industries, employee ranges, and trigger events will differ between students. The teaching point is the _structure_ — five ICP dimensions with ranked priorities — not the exact values.
+:::
 
 Review the output against the closed-won analysis. Does the ICP capture the patterns you identified? Two things to check immediately. First, the employee range (50-400) should encompass 18 of 20 closed-won deals — if it misses more than 2, widen it. Second, the high-priority timing signals should map to the trigger events from your analysis. If "system failure" appeared in 4 of 20 deals but the ICP omits it, add it.
 
@@ -301,15 +198,9 @@ The ICP looks good on paper. But an ICP is a calibration instrument, not a finis
 Take 5 of the 20 closed-won deals and score them against the ICP you just built:
 
 ```
-Score these 5 closed-won deals against NexaFlow's ICP.
+Score 5 closed-won deals from demo-data.md against NexaFlow's ICP.
 For each deal, show the fit score (0-100) and which ICP
 dimensions contributed positively or negatively.
-
-Deal 1: [paste deal 1 details]
-Deal 2: [paste deal 2 details]
-Deal 3: [paste deal 3 details]
-Deal 4: [paste deal 4 details]
-Deal 5: [paste deal 5 details]
 ```
 
 **Sample Output:**
