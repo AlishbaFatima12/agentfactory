@@ -111,12 +111,13 @@ AI employees are how work gets done. Identic AI is how humans will increasingly 
 
 We call this the **Two-Layer Model**:
 
+![Two_Layer_Model](../static/img/two-layers.png)
+
+
 | Layer | What It Is | Who It Serves | What It Does |
 | --- | --- | --- | --- |
 | **Factory Layer** | Role-based AI employees | The enterprise | Executes tasks, coordinates workflows, delivers verified outcomes |
 | **Edge Layer** | Personal Identic agents | The individual | Translates human intent, delegates to factory agents, governs on behalf of the principal |
-
-![Two_Layer_Model](../static/img/two-layers.png)
 
 Neither layer works alone. A factory without personal agents at the edge forces humans back into manual orchestration. Personal agents without an industrialized factory behind them are digital assistants with no workforce to command. The Two-Layer Model is what makes the Agent Factory thesis complete: manufacturing at the core, human sovereignty at the edge, and specs as the contract language between them.
 
