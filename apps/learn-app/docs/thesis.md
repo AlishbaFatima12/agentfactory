@@ -51,6 +51,8 @@ The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers def
 What remains: Intent. Verification. Outcome.
 </p>
 
+Intent doesn't type itself into a spec. It comes from a person — their judgment, their domain knowledge, their values. But as AI employees multiply, no professional can orchestrate them all by hand. They'll act through a personal agent that reflects their judgment and delegates on their behalf — what Don Tapscott calls identic AI.¹ The Agent Factory manufactures the workforce; identic AI is how each human commands it.
+
 </div>
 
 ## 📚 Teaching Aid
@@ -102,6 +104,28 @@ A common fear: agents replace people. The evidence says otherwise. For most task
 This changes what it means to be a "tech professional." A web developer or mobile developer is not just someone who writes React or Swift. They are a **technology expert**—someone who understands systems, data flows, APIs, and user needs. In the Agent Factory era, that expertise becomes far more valuable, because it is no longer spent hand-coding screens. It is spent designing, deploying, and supervising agents that deliver entire products.
 
 The developer doesn't disappear. The developer does _more_.
+
+### Personal Agents and the Enterprise Interface
+
+AI employees are how work gets done. Identic AI is how humans will increasingly direct, govern, and interface with that AI workforce on their own behalf. The Agent Factory manufactures role-based AI employees to execute tasks, coordinate workflows, and deliver verified outcomes at scale, but the human remains the principal who defines purpose, values, constraints, and accountability. Identic AI adds a new personal layer: a self-sovereign agent—owned by the individual, not the platform—that understands an individual’s context, judgment, and preferences, and can translate human intent into delegated action across the enterprise.¹ In this model, enterprise AI employees are the execution fabric, while identic AI is the human’s representative and orchestration layer, enabling people to supervise direction rather than perform routine execution themselves. The future firm will therefore operate across two connected layers: AI employees inside the factory, and personal agents at the edge, with humans setting intent and verifying outcomes across both.
+
+We call this the **Two-Layer Model**:
+
+![Two_Layer_Model](../static/img/two-layers.png)
+
+
+| Layer | What It Is | Who It Serves | What It Does |
+| --- | --- | --- | --- |
+| **Factory Layer** | Role-based AI employees | The enterprise | Executes tasks, coordinates workflows, delivers verified outcomes |
+| **Edge Layer** | Personal Identic agents | The individual | Translates human intent, delegates to factory agents, governs on behalf of the principal |
+
+Neither layer works alone. A factory without personal agents at the edge forces humans back into manual orchestration. Personal agents without an industrialized factory behind them are digital assistants with no workforce to command. The Two-Layer Model is what makes the Agent Factory thesis complete: manufacturing at the core, human sovereignty at the edge, and specs as the contract language between them.
+
+
+**Notes**
+
+¹ Don Tapscott, interview on HBR IdeaCast, “[With Rise of Agents, We Are Entering the World of Identic AI](https://hbr.org/podcast/2026/02/with-rise-of-agents-we-are-entering-the-world-of-identic-ai)”, Harvard Business Review, February 17, 2026.
+
 
 ### The Workforce Opportunity
 
