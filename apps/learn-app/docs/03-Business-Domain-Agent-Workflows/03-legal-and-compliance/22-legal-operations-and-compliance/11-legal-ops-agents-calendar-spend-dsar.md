@@ -114,59 +114,21 @@ Gulf Digital Solutions uses the Compliance Calendar Agent to track 127 active co
 
 **The contract:** Gulf Digital's cloud infrastructure agreement with a major provider. Annual value: AED 2,160,000. Auto-renewal clause: renews automatically for successive 12-month terms unless either party gives 60 days' written notice before the renewal date. Renewal date: 15 May 2026. Last date for non-renewal notice: 16 March 2026.
 
-```
-COMPLIANCE CALENDAR — ESCALATION SEQUENCE
+**What to expect:** The agent produces a compliance calendar escalation sequence. Your output will vary, but look for these sections:
 
-60 days before (14 January 2026):
-  Action: Added to upcoming obligations dashboard.
-  Status: INFORMATIONAL. Owner: Procurement (Hassan Ali).
-  Note:   "Cloud infrastructure renewal — AED 2,160,000.
-           Decision needed: renew, renegotiate, or terminate.
-           Last date for non-renewal notice: 16 March 2026."
+| Section               | Intent                                                      | What to Verify                                                                                                      |
+| --------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| 60-day notification   | Adds the obligation to the upcoming dashboard for awareness | Check that the obligation owner is correctly identified                                                             |
+| 30-day notification   | Direct email to the obligation owner requesting a decision  | Should offer clear options (renew, renegotiate, or terminate) and state the escalation consequence for non-response |
+| 14-day escalation     | Notification expands to include the owner's manager         | Check that the escalation adds a second recipient                                                                   |
+| 7-day GC escalation   | General Counsel notified; item added to weekly GC brief     | Should state the financial consequence of inaction                                                                  |
+| 1-day emergency alert | CFO and GC receive urgent notification                      | Should explicitly state the auto-renewal trigger and the financial commitment                                       |
+| Day-of (missed)       | Compliance incident logged with remediation workflow        | Should log the incident for compliance review                                                                       |
+| Day-after (missed)    | Incident report to GC with root cause recommendation        | Should quantify the financial impact and recommend remediation options                                              |
 
-30 days before (13 February 2026):
-  Action: Email notification to Hassan Ali (Procurement).
-  Subject: "Renewal Decision Required — [Cloud Provider] — Due 16 March"
-  Content: "The non-renewal notice deadline for your cloud infrastructure
-            contract is 16 March 2026 (30 days from today). Please confirm:
-            (a) Renew on current terms, (b) Request renegotiation, or
-            (c) Issue non-renewal notice. If no response by 28 February,
-            this will escalate to your manager."
-
-14 days before (2 March 2026):
-  Action: Email to Hassan Ali + his manager (VP Technology).
-  Subject: "ESCALATION: Renewal Decision Required — 14 Days Remaining"
-  Status: ELEVATED. Two recipients.
-
-7 days before (9 March 2026):
-  Action: Email to General Counsel. Added to weekly GC brief.
-  Subject: "GC Attention Required: Cloud Infrastructure Renewal — 7 Days"
-  Content: "No renewal decision received. Contract auto-renews on 15 May
-            for AED 2,160,000 if notice is not given by 16 March.
-            Procurement and VP Technology have been notified. GC action
-            recommended."
-
-1 day before (15 March 2026):
-  Action: EMERGENCY ALERT to CFO (financial obligation) + GC.
-  Subject: "URGENT: Cloud Infrastructure — Auto-Renewal Tomorrow"
-  Status: CRITICAL.
-  Content: "AED 2,160,000 auto-renewal triggers tomorrow unless notice
-            is given TODAY. CFO and GC notification per escalation policy."
-
-Day of deadline (16 March 2026) — if missed:
-  Action: Log as compliance incident.
-  Content: "Non-renewal notice deadline MISSED. Contract will auto-renew
-            for 12 months at AED 2,160,000. Initiating remediation workflow.
-            Incident logged for compliance review."
-
-Day after (17 March 2026):
-  Action: Incident report to GC.
-  Content: "Missed deadline incident report. Contract: [ref].
-            Vendor: [name]. Financial impact: AED 2,160,000 committed
-            for additional 12 months. Root cause analysis recommended.
-            Assess whether early termination or renegotiation is available
-            under the contract terms."
-```
+:::note Your output will vary
+The specific dates, amounts, and recipients depend on the contract and your organisational structure. Focus on the escalation ladder — the progressive expansion of recipients from obligation owner to manager to GC to CFO. The teaching point is that automated escalation prevents the most common compliance failure: a deadline that everyone knew about but nobody acted on.
+:::
 
 **Compliance Calendar Escalation Rules:**
 
@@ -211,77 +173,21 @@ Connected to accounts payable via MCP, the agent produces:
 
 Noor Technologies retains three law firms for external legal work: a Karachi-based firm for Pakistani commercial law (PKR 35,000/hour for senior associates), a London firm for English-law contracts (GBP 425/hour for senior associates), and a Dubai firm for UAE/DIFC matters (AED 2,200/hour for senior associates). Bilal runs a Q1 spend analysis:
 
-```
-LEGAL SPEND ANALYSIS — Q1 2026 (January-March)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+**What to expect:** The agent produces a legal spend analysis with anomaly detection. Your output will vary, but look for these sections:
 
-SUMMARY
-Total external legal spend:     PKR 18,450,000
-vs. Q1 2025:                    +23%
-vs. budget:                     +11% (budget: PKR 16,600,000)
+| Section            | Intent                                                                                     | What to Verify                                                                                    |
+| ------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| Spend summary      | Total external legal spend vs. prior period and vs. budget                                 | Check that year-over-year and budget variance percentages are calculated                          |
+| Per-firm breakdown | Each panel firm with total spend, effective hourly rate, budget variance, and matter count | Verify that effective rates are compared against agreed rates — deviations are anomaly candidates |
+| RED anomalies      | Rate variances or billing irregularities requiring immediate attention                     | Should identify the specific matter, the variance amount, and a recommended action                |
+| YELLOW anomalies   | Budget overruns or unusual billing patterns requiring investigation                        | Should distinguish between legitimate scope expansion and potential billing issues                |
+| Governance footer  | Reminder that billing disputes require GC authorisation                                    | Should be present — the agent flags anomalies but does not dispute invoices                       |
 
-BY FIRM (all 3 panel firms)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-1. Akhtar & Shah (Karachi)
-   Total:         PKR 5,600,000
-   Eff. rate:     PKR 32,000/hr (below agreed PKR 35,000 — write-offs)
-   vs. budget:    -3%
-   Matters:       7 (commercial contracts, employment, IP filing)
+:::note Your output will vary
+The specific spend figures, firm names, and anomalies depend on your accounts payable data. Focus on whether the agent identifies rate variances and budget overruns that would otherwise be paid without question. The teaching point is that anomaly detection turns legal spend management from quarterly manual review into continuous automated monitoring.
+:::
 
-2. Clifford Carter LLP (London)
-   Total:         PKR 8,200,000 (GBP 21,200 equivalent)
-   Eff. rate:     GBP 445/hr (above agreed GBP 425/hr)
-   vs. budget:    +18%
-   Matters:       3 (cross-border MSA, UK employment, GDPR advisory)
-
-3. Al-Farsi Legal (Dubai)
-   Total:         PKR 4,650,000 (AED 61,400 equivalent)
-   Eff. rate:     AED 2,150/hr (within agreed range)
-   vs. budget:    +8%
-   Matters:       2 (DIFC contract dispute, UAE vendor agreement)
-
-ANOMALIES FLAGGED: 3
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-RED — ANOMALY 1 — Clifford Carter: Rate Variance
-   Matter: UK Employment Tribunal Preparation
-   Agreed rate: GBP 425/hr (Senior Associate)
-   Invoiced rate: GBP 510/hr (3 time entries)
-   Variance: +20% above agreed rate without written authorisation
-   Total overcharge: GBP 1,275 (PKR 494,000)
-   RECOMMENDED ACTION: Request rate reconciliation from Clifford Carter.
-   Query whether Senior Associate was substituted with a more senior
-   fee earner without notification.
-
-YELLOW — ANOMALY 2 — Clifford Carter: Matter Budget Variance
-   Matter: Cross-Border MSA (Gulf Expansion)
-   Approved budget: GBP 12,000
-   Invoiced to date: GBP 14,800 (+23%)
-   No budget extension request received.
-   RECOMMENDED ACTION: Request matter status update and revised budget
-   estimate before approving further invoices.
-
-YELLOW — ANOMALY 3 — Akhtar & Shah: Billing Pattern
-   Matter: Commercial IP Filing (Patent Ordinance 2000)
-   Billing in final month (March): PKR 2,100,000
-   Billing in Jan-Feb combined: PKR 800,000
-   Pattern: 72% of matter billing in final month.
-   NOTE: This pattern is common before matter close but should be
-   verified — potential for front-loading work to clear WIP
-   before quarter end.
-   RECOMMENDED ACTION: Review time entries for March; confirm work
-   performed matches billing volume.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-NOTE: Billing anomalies require discussion with the relevant partner
-before any payment dispute is raised. GC authorisation required
-before formal dispute.
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
-
-Bilal forwards this to Ayesha (GC). The rate variance anomaly at Clifford Carter turns out to be a billing error -- the firm inadvertently billed at partner rate instead of senior associate rate on three entries. They issue a credit note for GBP 1,275. The matter budget overrun prompts a conversation about scope creep on the Gulf expansion work, leading to a revised budget and clearer scope definition.
-
-Without the anomaly detection, these issues would have been paid without question. The PKR 494,000 rate overcharge alone pays for several months of the agent's operating cost.
+Without anomaly detection, rate overcharges and budget overruns would be paid without question. The agent surfaces billing irregularities that typically cost more to miss than the agent costs to operate.
 
 ---
 
@@ -330,29 +236,11 @@ The DSAR Agent activates immediately. Here is the complete 30-day timeline:
 - Request logged. Reference: DSAR-2026-0017.
 - 30-day clock started. Response deadline: Wednesday 2 April 2026.
 - Internal alerts set: Day 7 (10 March), Day 21 (24 March), Day 28 (31 March).
-- Acknowledgement letter drafted and sent by 11:00:
+- Acknowledgement letter drafted and sent. The agent produces an acknowledgement that includes: reference number, response deadline, identity verification request, contact details, and a statement that does not confirm or deny what data is held. This follows the acknowledgement rules in the DSAR skill configuration.
 
-```
-Dear Ms Johnson,
-
-Thank you for your request dated 3 March 2026 under Article 15 of
-the UK GDPR. We acknowledge receipt.
-
-Reference: DSAR-2026-0017
-Response deadline: 2 April 2026
-
-We may need to verify your identity before responding. Please provide
-a copy of a government-issued photo ID. The 30-day response period
-will pause until identity verification is complete.
-
-For any queries, please contact: privacy@databridge.co.uk
-
-This acknowledgement does not confirm or deny what personal data
-DataBridge Ltd holds about you.
-
-Regards,
-Privacy Team, DataBridge Ltd
-```
+:::note Your output will vary
+The specific acknowledgement language depends on the jurisdiction and your organisation's template. Focus on whether the agent includes all required elements (reference, deadline, identity verification, no confirmation of data held) and omits prohibited elements (no confirmation of data holdings, no substantive response, no legal advice).
+:::
 
 **Days 1-3 -- Identity Verification**
 
@@ -382,45 +270,17 @@ Privacy Team, DataBridge Ltd
 
 **Day 12 -- Redaction Assessment**
 
-Agent prepares redaction checklist:
+Agent prepares a redaction checklist. Your output will vary, but look for these sections:
 
-```
-REDACTION ASSESSMENT — DSAR-2026-0017
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+| Section                  | Intent                                                           | What to Verify                                                                                                                     |
+| ------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| MUST DISCLOSE            | Personal data about the requester that must be provided          | Should include all data categories discovered, including opinions about the data subject (which are personal data under Art. 4(1)) |
+| REDACT                   | Third-party personal data that must be removed before disclosure | Should identify other individuals' names and data appearing in the requester's records                                             |
+| ATTORNEY REVIEW REQUIRED | Items requiring legal judgment before disclosure/redaction       | Should flag borderline items where commercial sensitivity may intersect with data subject rights                                   |
 
-MUST DISCLOSE (personal data about Sarah):
-  - Full CRM customer record
-  - Purchase history and invoice data
-  - Support ticket content
-  - Marketing campaign data and tracking
-  - CSAT scores
-  - Sales rep notes about Sarah — INCLUDING the opinion
-    "difficult customer — always pushes for discounts"
-    (This IS personal data under Art. 4(1) — it relates to an
-    identified individual and constitutes an opinion about her.
-    The ICO has confirmed that opinions about data subjects are
-    personal data and must be disclosed.)
-
-REDACT (do not disclose):
-  - Support agent names in internal notes (third-party personal data)
-  - Other customer names mentioned in ticket threads
-  - Internal escalation notes referencing other customers
-
-ATTORNEY REVIEW REQUIRED:
-  - Sales rep notes contain the retention discount amount (15%).
-    This is Sarah's personal data (it was applied to her account).
-    However, verify with counsel whether the discount percentage
-    constitutes commercially sensitive information that could be
-    withheld under Recital 63 exemption.
-  - Marketing tracking data includes pixel tracking and device
-    fingerprinting. Counsel to confirm whether technical identifiers
-    should be included in machine-readable format (Art. 20
-    portability right was not specifically requested but should
-    be offered).
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ROUTE FOR ATTORNEY REVIEW: Day 15 at latest
-```
+:::note Your output will vary
+The specific data categories and redaction decisions depend on what data your systems hold. Focus on whether the agent correctly identifies opinions about the data subject as disclosable personal data and whether it flags items requiring attorney judgment rather than making the disclosure decision itself.
+:::
 
 **Day 15 -- Response Draft**
 
@@ -449,23 +309,7 @@ Agent drafts complete response letter including:
 
 Response sent to Sarah Johnson. DSAR-2026-0017 logged as complete.
 
-```
-DSAR COMPLETION LOG
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Reference:           DSAR-2026-0017
-Date received:       3 March 2026
-Date acknowledged:   3 March 2026
-Date responded:      31 March 2026 (Day 29 of 30)
-Data categories:     Customer account, billing, communications,
-                     marketing, support
-Data withheld:       Third-party personal data (support agent names,
-                     other customer names) — Art. 15(4) exemption
-Attorney sign-off:   James Chen, 25 March 2026
-Stored in:           Compliance archive / DSAR / 2026 / DSAR-2026-0017
-
-No further action required.
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
+The agent produces a completion log recording the reference, dates (received, acknowledged, responded), data categories disclosed, data withheld with legal basis, attorney sign-off, and archive location. This log serves as the compliance record demonstrating that the DSAR was handled within the statutory window.
 
 The entire DSAR was managed within the 30-day window with 6 hours of coordinated human work (discovery coordination, attorney review, final quality check) instead of the typical 20-30 hours of manual processing.
 
@@ -529,7 +373,7 @@ The DSAR Agent identifies which regime applies based on two factors: the data su
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Design Your Compliance Calendar Escalation
 

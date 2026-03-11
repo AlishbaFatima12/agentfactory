@@ -329,42 +329,22 @@ Today is Day 12.
 Jurisdiction: UK PRA
 ```
 
-The agent routes through `bank-reconciliation` and responds:
+The agent routes through `bank-reconciliation` to produce a nostro reconciliation report.
 
-```
-GOVERNING STANDARD: Banking Operations — UK PRA
-DOMAIN: Nostro Reconciliation — Break Classification
-JURISDICTION: United Kingdom — PRA Rulebook
+**What to expect:** The agent produces a matching report with break classifications and ageing escalation. Your output will vary based on the entries you provide, but look for these sections:
 
-MATCHED (Level 1 — Exact)
-  M001/S001: GBP 250,000 — matched
-  M002/S002: GBP 180,000 — matched
-  M003/S003: GBP 1,850,000 — matched
+| Section               | Intent                                                             | What to Verify                                                                                       |
+| --------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| Matched items         | Lists entries matched at each level (exact, fuzzy, date tolerance) | All exact matches correctly paired; matching percentage reported                                     |
+| Breaks                | Classifies each unmatched or mismatched item by type               | Each break type correct (amount mismatch, mirror-only, statement-only, timing, duplicate)            |
+| Hypotheses            | Suggests a likely cause for each break                             | Hypotheses are plausible (e.g., correspondent fee for small differences, timing for date mismatches) |
+| Ageing and escalation | Applies ageing SLA to each break                                   | Correct escalation level for each break's age; action recommendations appropriate                    |
 
-BREAKS
-  1. M006/S006: Amount mismatch
-     Mirror: GBP 310,000 | Statement: GBP 308,500
-     Difference: GBP 1,500
-     Hypothesis: Correspondent fee deducted at source
-     Age: 4 days — investigate, notify team lead
+:::note Your output will vary
+The specific matches and breaks depend on the mirror and statement entries you provide. The teaching point is the matching hierarchy and break classification discipline — verify that every item is either matched or classified with an ageing escalation, not that specific amounts match.
+:::
 
-  2. S008: Statement-only
-     Amount: GBP 2,500 (monthly custody fee)
-     No mirror entry exists
-     Action required: Book correspondent fee in mirror ledger
-     Age: 2 days — monitor
-
-SUMMARY
-  Matched: 3 of 5 items (Level 1 auto-match)
-  Breaks: 2 (1 amount mismatch, 1 statement-only)
-  Net unreconciled: GBP 4,000
-
-NOTE: The professional investigates the GBP 1,500 difference
-and confirms the custody fee booking; the agent matched
-entries and classified breaks with ageing escalation.
-```
-
-Kenji investigates the GBP 1,500 discrepancy by checking the correspondent's fee schedule, confirms it is a handling charge deducted at source, and posts the adjustment entry to clear the break.
+Kenji investigates discrepancies by checking the correspondent's fee schedule, confirms any handling charges deducted at source, and posts adjustment entries to clear the breaks.
 
 ## Try With AI
 

@@ -1,0 +1,91 @@
+{
+  "expectations": [
+    {
+      "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+      "passed": true,
+      "evidence": "The audit report's Context line states: 'Post-fix audit. File was updated in commits 4a92156b and 75906eee to replace fabricated outputs with intent tables.' The summary table shows D1: Fabricated Agent Output = 0. The Verdict confirms: 'The fabricated output replacement (D1) was done correctly.' Correctly Handled Elements item 3 praises the intent tables as 'Well-structured.'"
+    },
+    {
+      "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+      "passed": true,
+      "evidence": "Correctly Handled Elements item 1 explicitly recognises the Compliance Gap example (lines 246-269) as an 'Intentional teaching example with :::note Illustrative example disclaimer. Falls under the Anti-pattern examples exception. Correctly retained.' It is not counted in the defect table. Note: D2-1 flags the *prompt* preceding this section for missing a skill name, but does not flag the anti-pattern example content itself."
+    },
+    {
+      "text": "Does NOT flag the intent tables themselves as fabricated output",
+      "passed": true,
+      "evidence": "The D1 (Fabricated Agent Output) count is 0. Correctly Handled Elements item 3 positively identifies the intent tables: 'Intent tables (lines 206-216, 222-232): Well-structured. Follow the skill's intent table design guide: 3-4 rows, match skill output structure, include What to Verify column.' They are treated as correct elements, not defects."
+    },
+    {
+      "text": "Identifies the lesson as mostly clean / low defect count",
+      "passed": true,
+      "evidence": "The report finds only 4 defects (all medium severity) plus 1 usability gap. The Verdict states: 'The file is in good shape after the previous fix commits.' Recommended action is to 'Fix all 4 defects and the usability gap. Estimated effort: 5 minutes.' This clearly signals a mostly clean file with low effort remaining."
+    },
+    {
+      "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+      "passed": true,
+      "evidence": "All 4 defects use the D1-D6 taxonomy: D2-1 and D2-2 (Missing Skill Name in Prompt) for exercise prompts lacking 'Use the outreach skill' prefix; D6-1 and D6-2 (Plugin/Tool Terminology) for 'Claude' instead of 'Cowork' and missing 'Marketing' in the plugin name. The additional usability gap is explicitly marked 'Not a Skill Defect Type', showing correct taxonomy discipline. All categorisations are accurate."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": 7,
+    "errors_encountered": 0,
+    "output_chars": 5244,
+    "transcript_chars": 5244
+  },
+  "timing": {
+    "executor_duration_seconds": 85,
+    "grader_duration_seconds": null,
+    "total_duration_seconds": null
+  },
+  "claims": [
+    {
+      "claim": "D1 (Fabricated Agent Output) count is 0",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Summary table in audit report shows D1: 0. No fabricated outputs are flagged anywhere in the report."
+    },
+    {
+      "claim": "D2 defects correctly identify missing skill names in exercise prompts",
+      "type": "quality",
+      "verified": true,
+      "evidence": "D2-1 quotes lines 239-242 showing no skill name in the Compliance Gap prompt. D2-2 quotes lines 299-309 showing no skill name in the Three Outreach Messages prompt. Both recommended fixes prepend 'Use the outreach skill to...' which matches the pattern seen in Try With AI Prompt 1 (line 352+) which correctly includes the skill name."
+    },
+    {
+      "claim": "D6 defects correctly identify terminology issues",
+      "type": "quality",
+      "verified": true,
+      "evidence": "D6-1 flags 'Claude' where 'Cowork' should be used, citing .claude/rules/cowork-content.md. D6-2 flags 'Sales and RevOps' missing 'Marketing'. Both are on line 348. The cowork-content.md rule confirms: Ch18+ should reference 'Cowork' not 'Claude'."
+    },
+    {
+      "claim": "Compliance Gap example falls under the anti-pattern exception",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The report states it has a ':::note Illustrative example' disclaimer, which is the correct mechanism for retaining intentional anti-pattern examples for teaching purposes."
+    },
+    {
+      "claim": "Intent tables follow the skill's design guide",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Report claims '3-4 rows, match skill output structure, include What to Verify column.' This is consistent with intent table patterns used in the lesson-prompt-improver skill for replacing fabricated outputs."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Identifies the lesson as mostly clean / low defect count",
+        "reason": "This assertion is somewhat soft — a report listing 8 medium-severity defects could still be called 'mostly clean' depending on interpretation. Consider adding a numeric threshold (e.g., 'reports fewer than 5 defects of the D1/D3/D4/D5 categories') to make the assertion more discriminating."
+      },
+      {
+        "reason": "No assertion checks whether the D2/D6 defects flagged are *accurate* (i.e., that the cited lines actually contain the issues described). Expectation 5 checks correct categorisation but not correctness of the underlying finding. For a post-fix eval, verifying accuracy of remaining defects against the actual lesson file would add confidence."
+      }
+    ],
+    "overall": "Assertions cover the key discrimination points well — especially expectations 2 and 3, which test that the skill correctly recognises exceptions and does not over-flag. The two suggestions above would tighten the boundary between a genuine clean audit and one that simply under-reports."
+  }
+}

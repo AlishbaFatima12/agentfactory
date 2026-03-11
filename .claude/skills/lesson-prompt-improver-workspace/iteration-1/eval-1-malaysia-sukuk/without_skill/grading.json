@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies at least one fabricated agent output block (Defect 1)",
+      "passed": false,
+      "evidence": "Did NOT identify any fabricated output blocks. Report focused entirely on prompt quality issues (overpacked prompts, missing format specs, hallucination risk) but never checked for code blocks pretending to show agent output."
+    },
+    {
+      "text": "Does NOT flag prompt code blocks (student input) as fabricated output",
+      "passed": true,
+      "evidence": "Did not flag prompts as fabricated output (though used an entirely different analytical framework)."
+    },
+    {
+      "text": "Does NOT flag framework tables or scoring models as fabricated output",
+      "passed": true,
+      "evidence": "Did not flag any framework content."
+    },
+    {
+      "text": "Produces a summary table with Line Range, Defect Type, and Recommended Fix columns",
+      "passed": false,
+      "evidence": "Produced a summary table but with different columns (Issue, Location, Severity, Category). Missing 'Recommended Fix' column. Does not use the 6-defect-type taxonomy."
+    },
+    {
+      "text": "Recommended fixes use intent table format with Section/Intent/What to Verify columns",
+      "passed": false,
+      "evidence": "No intent tables in any fix recommendation. Suggested inline text changes and prompt restructuring."
+    },
+    {
+      "text": "Includes a :::note Your output will vary disclaimer in the fix",
+      "passed": false,
+      "evidence": "No :::note disclaimers anywhere in the report."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  }
+}

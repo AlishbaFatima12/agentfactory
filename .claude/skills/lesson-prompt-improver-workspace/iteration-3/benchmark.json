@@ -1,0 +1,774 @@
+{
+  "metadata": {
+    "skill_name": "lesson-prompt-improver",
+    "skill_path": ".claude/skills/lesson-prompt-improver",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-03-11T10:13:56Z",
+    "evals_run": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 45,
+        "tokens": 4821,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+          "passed": true,
+          "evidence": "Summary table classifies all defects under 'D6: Plugin/Tool Terminology'. Each defect detail (D6-1 through D6-4) explicitly states the rationale: 'This is Ch 18 content' and 'Claude in Excel is the Ch 17 product name; Ch 18+ uses Cowork per .claude/rules/cowork-content.md'."
+        },
+        {
+          "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+          "passed": true,
+          "evidence": "Found 4 instances: D6-1 (line 95, YAML teaching_tips), D6-2 (line 143, 'Feel the Problem' section), D6-3 (line 179, exercise section), D6-4 (line 189, Try With AI header). Additionally, the report correctly identified a borderline case at line 70 ('Students enter from Chapter 17 with hands-on experience using Claude in Excel and Cowork') and ruled it ACCEPTABLE as a legitimate cross-reference \u2014 demonstrating discriminating judgment rather than over-flagging."
+        },
+        {
+          "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+          "passed": true,
+          "evidence": "All 4 defects include a 'Recommended fix' block replacing 'Claude in Excel' with 'Cowork'. D6-4 matches the exact pattern from cowork-content.md: 'Use these prompts in Cowork or your preferred AI assistant.' Each rationale cites the cowork-content rules explicitly."
+        },
+        {
+          "text": "Produces a summary table organized by the 6-defect taxonomy",
+          "passed": true,
+          "evidence": "The Summary section contains a markdown table with all 6 defect types (D1: Fabricated Agent Output, D2: Missing Skill Name, D3: Inline Data Injection, D4: Fiction-Researching Prompt, D5: Narrative Referencing Fabricated, D6: Plugin/Tool Terminology) with Count and Severity columns. D1-D5 show 0 count, D6 shows 4 with Medium severity."
+        },
+        {
+          "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+          "passed": true,
+          "evidence": "The 'Items Reviewed but Clean' section explicitly marks D1-D5 as CLEAN or N/A. The formula example is correctly identified as 'a teaching device \u2014 student input, not agent output.' The Recommendations section states 'No structural changes needed \u2014 the lesson's prompt architecture is sound' and calls the lesson 'a good reference' for exercise design. Zero defects were raised against conceptual content, framework tables, or pedagogical structure."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 45,
+        "tokens": 4836,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+          "passed": true,
+          "evidence": "Report section 'D6: Plugin/Tool Terminology' explicitly states: 'Per .claude/rules/cowork-content.md, Ch18+ is a Cowork chapter. \"Claude in Excel\" is a separate product taught in Ch17. All references in Ch18 should say \"Cowork\" unless they are explicit cross-references to the Ch17 product.' The summary table classifies these under D6 with Count=4."
+        },
+        {
+          "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+          "passed": true,
+          "evidence": "Report identifies exactly 4 instances in a numbered table: (1) line 95, (2) line 143, (3) line 179, (4) line 189. Additionally, the report correctly excludes line 70 as a legitimate cross-reference to Ch17, demonstrating genuine understanding rather than pattern-matching all occurrences."
+        },
+        {
+          "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+          "passed": true,
+          "evidence": "Each of the 4 defect rows includes a 'Recommended Fix' column showing the exact replacement text with 'Cowork'. Example: line 143 fix is 'Open Cowork (or your preferred AI assistant)'. The report also cites .claude/rules/cowork-content.md as the authoritative source for this rule."
+        },
+        {
+          "text": "Produces a summary table organized by the 6-defect taxonomy",
+          "passed": true,
+          "evidence": "Summary section contains a markdown table with columns 'Defect Type | Count | Severity' listing all six types: D1 (Fabricated Agent Output, 0), D2 (Missing Skill Name, 0 N/A), D3 (Inline Data Injection, 0), D4 (Fiction-Researching Prompt, 0), D5 (Narrative Referencing Fabricated, 0), D6 (Plugin/Tool Terminology, 4 Medium). Total line reads 'Total defects: 4 (all terminology)'."
+        },
+        {
+          "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+          "passed": true,
+          "evidence": "All five non-terminology defect types are marked CLEAN or NOT APPLICABLE with explanations. D1 analysis enumerates all 5 code blocks and classifies each correctly (student input or prompt blocks, not agent output). D2 explains why skill names don't apply to L01. The report explicitly states 'This lesson is a clean conceptual introduction with well-structured prompts. The only issue is the terminology debt.' No false positives on conceptual content."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0.0,
+        "tokens": 6772,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+          "passed": true,
+          "evidence": "Summary table shows 'D6: Plugin/Tool Terminology | 5 | Medium'. All 5 defects are labeled D6-1 through D6-5. Report explicitly states: 'Ch18 is a Cowork chapter. Per .claude/rules/cowork-content.md, \"Claude in Excel\" and \"Cowork\" are separate products.'"
+        },
+        {
+          "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+          "passed": true,
+          "evidence": "Found exactly 5 instances: D6-1 (line 95, teaching_tips), D6-2 (line 70, cognitive_load), D6-3 (line 143, exercise instructions), D6-4 (line 179, exercise instructions), D6-5 (line 189, Try With AI header). 5 >= 3."
+        },
+        {
+          "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+          "passed": true,
+          "evidence": "Each of the 5 defect entries includes a 'Recommended fix' block showing 'Cowork' replacing 'Claude in Excel'. Recommendations section #1 states: 'Replace \"Claude in Excel\" with \"Cowork\" in lines 95, 70, 143, 179, and 189. This is a straightforward terminology fix aligned with the cowork-content.md rule that Ch18+ uses \"Cowork.\"'"
+        },
+        {
+          "text": "Produces a summary table organized by the 6-defect taxonomy",
+          "passed": true,
+          "evidence": "Summary section contains a markdown table with all 6 rows: D1 (Fabricated Agent Output, 0), D2 (Missing Skill Name, 0), D3 (Inline Data Injection, 0), D4 (Fiction-Researching Prompt, 0), D5 (Narrative Referencing Fabricated Content, 0), D6 (Plugin/Tool Terminology, 5). Includes Count and Severity columns plus a Total row."
+        },
+        {
+          "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+          "passed": true,
+          "evidence": "The 'Defects NOT Found (Clean Areas)' section explicitly marks D1 as CLEAN ('uses a formula example as a pedagogical input, not a fabricated output'), D2 as NOT APPLICABLE ('conceptual foundation, no domain skills being invoked'), D3-D5 as CLEAN. Recommendations note: 'No structural prompt issues \u2014 The lesson's prompt architecture is sound.' No conceptual content, framework tables, or pedagogical design elements were flagged as defects."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0.0,
+        "tokens": 11279,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+          "passed": true,
+          "evidence": "Non-Defects section explicitly states: '\"Claude in Excel\" References (Frontmatter) \u2014 NOT a defect. Five occurrences of \"Claude in Excel\" in YAML frontmatter and teaching metadata. All correctly contrast Ch17's embedded assistant product with Cowork. Per cowork-content.md: \"Ch 17 correctly uses 'Claude in Excel' because that chapter teaches that product.\"' D6 count is 0."
+        },
+        {
+          "text": "Identifies inline data injection or paste-based patterns in exercise prompts",
+          "passed": true,
+          "evidence": "Found 3 CRITICAL D1 defects where specific fabricated data was embedded inline in the lesson narrative: D1-1 (reconciliation workpaper with $2,180/$840/$400 breakdown), D1-2 (journal entry with fabricated $840 and account names), D1-3 (variance analysis with fabricated 7% price decline and promotional discounting explanation). The skill correctly identified these as inline fabricated data that students would see but the agent would not reproduce. The practice data prompt (lines 139-154) was separately examined and correctly cleared as student-generated data."
+        },
+        {
+          "text": "Checks for missing skill names in exercise prompts",
+          "passed": true,
+          "evidence": "D2 (Missing Skill Name in Prompt) count is 0. Non-Defects section explicitly explains: 'Exercises 5-7 correctly use /command-name format for Cowork plugin commands. Commands are the correct invocation pattern for this chapter (not skills with \"Use the X skill to...\" phrasing). No D2 defect.' This demonstrates the skill actively checked for this defect class and made a reasoned judgment that commands (not skills) are the correct pattern for Ch17."
+        },
+        {
+          "text": "Produces a prioritised defect summary (Defect 1 highest priority)",
+          "passed": true,
+          "evidence": "Report includes a 'Priority-Ordered Fix List' table with columns Priority/Defect/Line Range/Fix Type/Effort. Priority 1 is D1-1 (lines 212-219, 'Replace table with intent table + disclaimer', Medium effort). Priorities 2-6 follow in descending order. Additionally, the summary table at the top shows counts by defect type with severity ratings (CRITICAL for D1, MEDIUM for D5)."
+        },
+        {
+          "text": "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)",
+          "passed": true,
+          "evidence": "The report explicitly recognizes the Ch17 context: 'Per cowork-content.md: \"Ch 17 correctly uses 'Claude in Excel' because that chapter teaches that product.\"' D6 (Plugin/Tool Terminology) count is 0. The report also correctly uses 'Cowork plugin commands' when referring to the broader Cowork platform features used in exercises, showing awareness of the distinction between the two products."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "time_seconds": 0.0,
+        "tokens": 6711,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+          "passed": true,
+          "evidence": "D6 section explicitly states: 'This is Ch17, where \"Claude in Excel\" is the correct term for the embedded assistant product. All references to \"Claude in Excel\" appear in proper context (contrasting the embedded assistant with Cowork as an orchestrating agent).' D6 count is 0 \u2014 no terminology defects flagged."
+        },
+        {
+          "text": "Identifies inline data injection or paste-based patterns in exercise prompts",
+          "passed": false,
+          "evidence": "The skill checked D3 (Inline Data Injection) and marked it CLEAN. It identified the data-generation prompt at lines 139-154 but classified it as 'a legitimate data-generation prompt where the student specifies parameters' rather than a defective injection pattern. The eval's expected_output states 'Identifies inline data injection patterns (paste-based data injection in prompts)' \u2014 implying such patterns should be surfaced as defects. The skill found the candidate but dismissed it. Without the source file to verify whether the classification is correct, the skill did not produce the expected finding."
+        },
+        {
+          "text": "Checks for missing skill names in exercise prompts",
+          "passed": true,
+          "evidence": "D2 section explicitly addresses this: 'All exercise prompts correctly use slash-command syntax (/reconciliation, /journal-entry, /variance-analysis, /income-statement, /sox-testing). This is appropriate because the exercises invoke Cowork commands, not skills.' The skill checked and found no missing skill names, with specific evidence of what it verified."
+        },
+        {
+          "text": "Produces a prioritised defect summary (Defect 1 highest priority)",
+          "passed": true,
+          "evidence": "The 'Fix Priority' section lists defects in explicit priority order: 1. D1-1 (CRITICAL), 2. D1-2 (CRITICAL), 3. D1-3 + D5-2 (CRITICAL), 4. D5-1 (Medium). The highest-severity defect (fabricated reconciliation table) is listed first. The summary table at the top also shows defect counts by type with severity ratings."
+        },
+        {
+          "text": "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)",
+          "passed": true,
+          "evidence": "D6 section states: 'This is Ch17, where \"Claude in Excel\" is the correct term for the embedded assistant product... \"Cowork\" is used correctly throughout for the orchestrating agent platform.' The skill explicitly contextualises the distinction between Ch17 (Claude in Excel = correct) and the Cowork platform, demonstrating awareness of the boundary."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "time_seconds": 45,
+        "tokens": 6874,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+          "passed": true,
+          "evidence": "D6 section explicitly states: \"'Claude in Excel' is used correctly in Ch17 (it refers to the specific product taught in this chapter).\" D6 count is 0 in the summary table. The skill correctly recognized Ch17's legitimate use of the term."
+        },
+        {
+          "text": "Identifies inline data injection or paste-based patterns in exercise prompts",
+          "passed": false,
+          "evidence": "The audit report marks D3 as CLEAN, stating 'No instances of Read demo-data.md or similar patterns.' However, Prompt 3 (lines 351-368 of the lesson) contains a clear paste-based data injection pattern: the student is instructed to paste fabricated reconciliation items ('3 timing differences totalling $5,200', '1 bank charge of $150 not posted to GL', '1 unidentified item of $780') directly into a prompt. This is inline data injection \u2014 fabricated numbers hardcoded into a prompt for the student to copy-paste. The skill only checked for file-reference patterns (Read demo-data.md) and missed the paste-based variant."
+        },
+        {
+          "text": "Checks for missing skill names in exercise prompts",
+          "passed": true,
+          "evidence": "D2 section explicitly states: 'Exercises use explicit /command-name invocations (correct for commands). Try With AI prompts are conceptual/educational, not triggering specific skills. No skill-name additions needed.' The skill correctly identified that this lesson uses slash commands (/reconciliation, /journal-entry, /variance-analysis, /income-statement, /sox-testing) rather than skills, so skill-name additions are not applicable. This is a reasonable assessment."
+        },
+        {
+          "text": "Produces a prioritised defect summary (Defect 1 highest priority)",
+          "passed": true,
+          "evidence": "The report begins with a summary table listing all six defect types (D1-D6) with counts and severities. D1 (Fabricated Agent Output) is listed first as the highest-priority finding (borderline, Low severity). Detailed findings section leads with D1, followed by D5 (conditional on D1). Clean findings are grouped at the end under 'Defects Not Found.'"
+        },
+        {
+          "text": "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)",
+          "passed": true,
+          "evidence": "D6 section states: \"'Claude in Excel' is used correctly in Ch17 (it refers to the specific product taught in this chapter). 'Cowork' is used correctly when referring to the Cowork platform. The lesson correctly describes the architectural shift between the two products.\" The skill explicitly understood the Ch17 vs Ch18+ distinction."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 45,
+        "tokens": 3842,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+          "passed": true,
+          "evidence": "Under D1, the report states: 'The two Meridian Logistics outputs (lines 206-215 and 222-232) are already converted to intent tables. Clean.' The D1 count is 0 and the summary table shows 'D1: Fabricated Agent Output | 0'."
+        },
+        {
+          "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+          "passed": true,
+          "evidence": "The report explicitly exempts this: 'Why this is NOT a defect: This is a deliberate anti-pattern example for teaching the Compliance Gap... Per the skill\u2019s exception rules, anti-pattern examples used for teaching contrast are exempt.' D1 count remains 0."
+        },
+        {
+          "text": "Does NOT flag the intent tables themselves as fabricated output",
+          "passed": true,
+          "evidence": "The intent tables are described as 'already converted to intent tables. Clean.' under D1. They are not counted as fabricated output \u2014 D1 count is 0."
+        },
+        {
+          "text": "Identifies the lesson as mostly clean / low defect count",
+          "passed": true,
+          "evidence": "Summary states 'Overall: 4 low-severity issues remain. No critical defects.' Verdict says 'The lesson is in good shape post-fix. The four remaining issues are all LOW severity.' Zero critical or high severity findings."
+        },
+        {
+          "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+          "passed": true,
+          "evidence": "All 4 remaining issues are categorised using the D1-D6 taxonomy: D2 (Missing Skill Name in Prompt, 2 instances at lines 239 and 300) and D6 (Plugin/Tool Terminology, 2 instances at line 348). The summary table lists all 6 defect types with correct counts. Categories are applied correctly \u2014 D2 for missing skill names in primary exercise prompts, D6 for 'Claude' vs 'Cowork' terminology and incomplete plugin suite name."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0.0,
+        "tokens": 6218,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+          "passed": true,
+          "evidence": "D1 section states: 'Two intent tables are properly implemented' with details on both tables (lines 205-215 and 221-232). Overall Assessment confirms: 'The two commits (4a92156b and 75906eee) successfully addressed the critical defects. The intent tables are well-designed with appropriate Section/Intent/What to Verify columns.'"
+        },
+        {
+          "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+          "passed": true,
+          "evidence": "D1 section explicitly recognises the PakFreight/Hamza example as intentional: 'One intentional illustrative example retained (lines 246-269): The PakFreight LinkedIn DM is shown as a deliberate teaching example for the Compliance Gap concept... This correctly falls under the anti-pattern exception \u2014 the output exists to be critiqued, not to set expectations.' D1 count remains 0."
+        },
+        {
+          "text": "Does NOT flag the intent tables themselves as fabricated output",
+          "passed": true,
+          "evidence": "D1 is marked CLEAN with count 0. The intent tables are described as 'properly implemented' and 'well-designed with appropriate Section/Intent/What to Verify columns.' They are treated as correct replacements, not as fabricated output."
+        },
+        {
+          "text": "Identifies the lesson as mostly clean / low defect count",
+          "passed": true,
+          "evidence": "Summary table shows 'Total defects found: 4 (0 critical, 4 minor)'. Overall Assessment states: 'This lesson is in good shape post-fix.' Recommendation is only '~2 minutes of edits across 3 locations.'"
+        },
+        {
+          "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+          "passed": true,
+          "evidence": "All 6 defect types (D1-D6) are evaluated in the summary table. 4 minor defects found: 2x D2 (Missing Skill Name in Prompt \u2014 lines 239-242 and 300-309, prompts lack explicit skill name in the code block) and 2x D6 (Plugin/Tool Terminology \u2014 line 348, 'Claude' instead of 'Cowork' and missing 'Marketing' in plugin list). Categorisations are correct: the prompt blocks missing skill names match D2 definition, and the Cowork/Claude terminology mismatch matches D6."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0.0,
+        "tokens": 5244,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+          "passed": true,
+          "evidence": "The audit report's Context line states: 'Post-fix audit. File was updated in commits 4a92156b and 75906eee to replace fabricated outputs with intent tables.' The summary table shows D1: Fabricated Agent Output = 0. The Verdict confirms: 'The fabricated output replacement (D1) was done correctly.' Correctly Handled Elements item 3 praises the intent tables as 'Well-structured.'"
+        },
+        {
+          "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+          "passed": true,
+          "evidence": "Correctly Handled Elements item 1 explicitly recognises the Compliance Gap example (lines 246-269) as an 'Intentional teaching example with :::note Illustrative example disclaimer. Falls under the Anti-pattern examples exception. Correctly retained.' It is not counted in the defect table. Note: D2-1 flags the *prompt* preceding this section for missing a skill name, but does not flag the anti-pattern example content itself."
+        },
+        {
+          "text": "Does NOT flag the intent tables themselves as fabricated output",
+          "passed": true,
+          "evidence": "The D1 (Fabricated Agent Output) count is 0. Correctly Handled Elements item 3 positively identifies the intent tables: 'Intent tables (lines 206-216, 222-232): Well-structured. Follow the skill's intent table design guide: 3-4 rows, match skill output structure, include What to Verify column.' They are treated as correct elements, not defects."
+        },
+        {
+          "text": "Identifies the lesson as mostly clean / low defect count",
+          "passed": true,
+          "evidence": "The report finds only 4 defects (all medium severity) plus 1 usability gap. The Verdict states: 'The file is in good shape after the previous fix commits.' Recommended action is to 'Fix all 4 defects and the usability gap. Estimated effort: 5 minutes.' This clearly signals a mostly clean file with low effort remaining."
+        },
+        {
+          "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+          "passed": true,
+          "evidence": "All 4 defects use the D1-D6 taxonomy: D2-1 and D2-2 (Missing Skill Name in Prompt) for exercise prompts lacking 'Use the outreach skill' prefix; D6-1 and D6-2 (Plugin/Tool Terminology) for 'Claude' instead of 'Cowork' and missing 'Marketing' in the plugin name. The additional usability gap is explicitly marked 'Not a Skill Defect Type', showing correct taxonomy discipline. All categorisations are accurate."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 0.0,
+        "tokens": 6358,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Checks for all 6 defect types, not just fabricated output",
+          "passed": true,
+          "evidence": "The audit report explicitly checks all 6 defect types: D1 (Fabricated Agent Output \u2014 CLEAN), D2 (Missing Skill Name in Prompt \u2014 4 instances found), D3 (Inline Data Injection \u2014 CLEAN), D4 (Fiction-Researching Prompt \u2014 CLEAN), D5 (Narrative Referencing Fabricated Content \u2014 CLEAN), D6 (Plugin/Tool Terminology \u2014 CLEAN). Each has a dedicated subsection under 'Defects NOT Found (Clean Areas)' or 'Defect Details' with specific evidence."
+        },
+        {
+          "text": "Identifies any fabricated output blocks preceded by **Output:**",
+          "passed": true,
+          "evidence": "The audit report correctly identifies the **Output:** label on line 177 and classifies it as NOT a defect \u2014 it is legitimate explanatory text ('Zakat is recognised as an expense in the Saudi IFI's income statement'), not a fabricated agent output block. The report flags it as an 'Additional Finding: Misleading **Output:** Label' and recommends renaming to 'Accounting treatment:' for clarity. Verified against the source file: line 177 contains '**Output:**' followed by a one-sentence explanation on line 179, which is indeed pedagogical content, not fabricated agent output. This is a nuanced and correct judgment."
+        },
+        {
+          "text": "Checks whether exercise prompts include natural skill names",
+          "passed": true,
+          "evidence": "The audit identifies 4 D2 defects \u2014 missing skill names on: (1) Exercise 7 Step 1 (line 216), (2) Try With AI Prompt 1 (lines 245-270), (3) Try With AI Prompt 2 (lines 277-302), (4) Try With AI Prompt 3 (lines 309-331). The audit correctly distinguishes primary prompts (need skill names) from follow-up prompts within the same flow (Steps 2-6, which do not). Verified against the source file: all four cited prompts lack skill names, and the line numbers are accurate."
+        },
+        {
+          "text": "Checks for inline data injection patterns",
+          "passed": true,
+          "evidence": "Under 'D3: Inline Data Injection \u2014 CLEAN', the report states: 'No instances of Read demo-data.md, Read sales-marketing.local.md, or [Paste or reference the...] found. Exercise data is referenced via a download link (line 203) and specific numbers are embedded directly in prompts where needed.' Verified against the source: line 203 contains the download link to islamic-finance-exercise-data.zip, and exercise prompts embed specific numbers inline (e.g., 'Share capital SAR 20B' on line 220). No injection patterns present."
+        },
+        {
+          "text": "Produces a prioritised summary (Defect 1 first, then 2-6)",
+          "passed": true,
+          "evidence": "The summary table at the top of the report lists defects in order D1 through D6, with counts and severity for each. The Defect Details section addresses D2 first (the only type with findings). The 'Defects NOT Found' section then covers D1, D3, D4, D5, D6 in numerical order. The 'Recommended Fix Order' section prioritises D2 fixes first, then the additional label cleanup. The overall structure follows D1-first ordering."
+        },
+        {
+          "text": "Anti-pattern examples and framework tables are correctly excluded from defect list",
+          "passed": true,
+          "evidence": "The lesson contains several elements that could be false-positived: (1) The ZATCA formula code block (lines 134-144) \u2014 correctly excluded, noted as 'Framework definitions' under D1 clean areas. (2) Template journal entries (lines 165-175) \u2014 correctly excluded, noted as 'Template journal entries... shows the accounting pattern.' (3) The comparison table (lines 150-160) \u2014 correctly excluded. (4) The 'Check your work' section (line 236) with answer key \u2014 correctly excluded, noted as 'Answer key in Check your work section.' (5) The **Output:** label on line 177 \u2014 correctly handled as a non-defect additional finding rather than a D1 hit. All framework/pedagogical elements were properly distinguished from actual defects."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 0.0,
+        "tokens": 6637,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Checks for all 6 defect types, not just fabricated output",
+          "passed": true,
+          "evidence": "The audit report has explicit sections for all six defect types: D1 (Fabricated Agent Output), D2 (Missing Skill Name in Prompt), D3 (Inline Data Injection), D4 (Fiction-Researching Prompt), D5 (Narrative Referencing Fabricated Content), and D6 (Plugin/Tool Terminology). Each is evaluated with a finding (count or 'NONE FOUND'). The summary table at the top also lists all six."
+        },
+        {
+          "text": "Identifies any fabricated output blocks preceded by **Output:**",
+          "passed": true,
+          "evidence": "The audit report identifies the **Output:** label at line 177 of the source file and correctly classifies it as a factual paragraph, NOT fabricated agent output: 'An **Output:** label precedes \"Zakat is recognised as an expense in the Saudi IFI's income statement...\" This is a factual accounting statement, NOT a fabricated agent output.' It flags it as a minor issue (misleading label) but does not count it as a D1 defect. Verified against source file: line 177 indeed contains '**Output:**' before a factual statement about zakat recognition timing. This is correct judgment \u2014 the text is lesson prose, not simulated agent output."
+        },
+        {
+          "text": "Checks whether exercise prompts include natural skill names",
+          "passed": true,
+          "evidence": "The audit report identifies 2 D2 instances: (1) Exercise Step 1 at lines 214-216 ('Ask your AI assistant: Jurisdiction: Saudi Arabia...') lacks a skill name, and (2) Try With AI Prompt 1 at lines 244-270 ('Compare the ZATCA zakat calculation...') lacks a skill name. The report recommends adding natural-language skill references like 'Use the islamic-finance-accounting skill to...' and explicitly notes the style should be 'natural language, NOT /skill-name'. It also correctly excludes Steps 2-6 and Prompts 2-3 as follow-up prompts that don't require skill names."
+        },
+        {
+          "text": "Checks for inline data injection patterns",
+          "passed": true,
+          "evidence": "The audit report explicitly checks D3 (Inline Data Injection) and reports 'NONE FOUND'. It states: 'No Read demo-data.md, Read sales-marketing.local.md, or [Paste or reference the...] patterns found.' It also distinguishes the exercise's self-contained data (SAR values in prompt text) as legitimate student-provided inputs, not inline data injection. Verified against source file: exercise prompts embed explicit numerical values (SAR 20B, SAR 4.5B, etc.) directly in prompts, which is the correct approach."
+        },
+        {
+          "text": "Produces a prioritised summary (Defect 1 first, then 2-6)",
+          "passed": true,
+          "evidence": "The summary table at the top of the report lists defects D1 through D6 in sequential order with counts and severity. The Defect Details section is structured D1, D2, D3, D4, D5, D6 in order. The 'Recommended Fixes (Priority Order)' section lists: 1. [Medium] Exercise Step 1 skill name, 2. [Medium] Try With AI Prompt 1 skill name, 3. [Low] Remove misleading Output label. This follows D1-first ordering (D1 cleared, D2 fixes listed first since they are the only defects found)."
+        },
+        {
+          "text": "Anti-pattern examples and framework tables are correctly excluded from defect list",
+          "passed": true,
+          "evidence": "Multiple pedagogical elements are correctly NOT flagged as defects: (1) The ZATCA vs AAOIFI comparison table (source lines 148-161) \u2014 a framework table, not flagged. (2) Journal entry templates (source lines 163-175) \u2014 accounting examples, not flagged. (3) The 'Check your work' section (source line 236) with expected numerical answers \u2014 explicitly identified as 'an answer key, not fabricated output'. (4) The Saudi Accounting Framework table (source lines 117-125) \u2014 informational table, not flagged. (5) The **Output:** label at line 177 is correctly excluded from D1 defects (noted only as a minor issue). The report demonstrates good discrimination between lesson content and actual defects."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 0.0,
+        "tokens": 6142,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Checks for all 6 defect types, not just fabricated output",
+          "passed": true,
+          "evidence": "The 'Defect-by-Defect Analysis' section (audit report lines 90-126) has explicit subsections for D1 through D6: 'D1: Fabricated Agent Output \u2014 CLEAN', 'D2: Missing Skill Name \u2014 2 DEFECTS', 'D3: Inline Data Injection \u2014 CLEAN', 'D4: Fiction-Researching Prompt \u2014 CLEAN', 'D5: Narrative Referencing Fabricated Content \u2014 CLEAN', 'D6: Plugin/Tool Terminology \u2014 CLEAN'. Each is evaluated individually with evidence."
+        },
+        {
+          "text": "Identifies any fabricated output blocks preceded by **Output:**",
+          "passed": true,
+          "evidence": "The report identifies the '**Output:**' label at source line 177 under 'Minor Issue: Misleading \"Output:\" Label' (audit report lines 68-85). It correctly analyzes that this is NOT fabricated output \u2014 it's a factual accounting statement ('Zakat is recognised as an expense...'), not a code block pretending to be agent output. It recommends relabelling to '**Accounting treatment:**' for clarity. This is a nuanced, correct judgment."
+        },
+        {
+          "text": "Checks whether exercise prompts include natural skill names",
+          "passed": true,
+          "evidence": "Two D2 defects identified: (1) D2-1 at source line 214 \u2014 Step 1 exercise prompt begins 'Jurisdiction: Saudi Arabia...' without naming the skill. (2) D2-2 at source line 245 \u2014 Try With AI Prompt 1 begins 'Compare the ZATCA zakat calculation...' without naming the skill. The report correctly notes that Steps 2-6 and Try With AI Prompts 2-3 are follow-ups and do NOT require skill names. Verified against source: both flagged prompts lack skill references."
+        },
+        {
+          "text": "Checks for inline data injection patterns",
+          "passed": true,
+          "evidence": "D3 section (audit report lines 109-111) explicitly checks for 'Read demo-data.md', 'Read sales-marketing.local.md', and '[Paste or reference the...]' patterns. Reports none found and notes the lesson uses a zip file download (source line 203) with parameters provided directly in prompts. Verified against source: no inline data injection patterns present."
+        },
+        {
+          "text": "Produces a prioritised summary (Defect 1 first, then 2-6)",
+          "passed": true,
+          "evidence": "Summary table (audit report lines 13-21) lists defects D1 through D6 in order with counts and severity. The 'Defect-by-Defect Analysis' section then presents D1 first (lines 90-98), D2 second (lines 100-106), D3 through D6 following in sequence. Priority ordering is D1-first throughout."
+        },
+        {
+          "text": "Anti-pattern examples and framework tables are correctly excluded from defect list",
+          "passed": true,
+          "evidence": "Under D1 analysis (audit report lines 92-98), the report explicitly lists exclusions: 'ZATCA formula (lines 134-144): Framework definition \u2014 exception applies', 'Journal entries (lines 165-175): Standard accounting entry templates \u2014 exception applies', 'Exercise prompts (lines 216-234): Student-typed instructions with explicit parameters \u2014 exception applies', 'Try With AI prompts (lines 245-330): Student-typed prompts \u2014 these are inputs, not fabricated outputs'. The ZATCA vs AAOIFI comparison table (source lines 148-161) and Saudi Accounting Framework table (source lines 117-125) are also correctly not flagged."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0.0,
+        "tokens": 5511,
+        "tool_calls": 7,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+          "passed": true,
+          "evidence": "The report identifies 'Claude in Excel' as a terminology violation citing cowork-content.md ('Ch 18+ must use Cowork, not Claude in Excel. The two are separate products.'). The Checklist Summary table lists 'Terminology (Cowork vs Claude in Excel)' as the 6th row with result FAIL. While the report's own issue numbering places it at Issue 1, the 6-category checklist maps it to the 6th defect category. The Ch18-vs-Ch17 distinction is explicitly explained."
+        },
+        {
+          "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+          "passed": true,
+          "evidence": "The report identifies exactly 4 incorrect instances: Violation 1a (line 95, teaching_guide), Violation 1b (line 143, body text), Violation 1c (line 179, exercise section), Violation 1d (line 189, Try With AI intro). It also correctly distinguishes 1 contextually correct reference at line 70 as a legitimate Ch 17 cross-reference. 4 > 3."
+        },
+        {
+          "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+          "passed": true,
+          "evidence": "Each violation includes a 'Should be' replacement using 'Cowork'. The Recommendations table states: 'Replace with \"Cowork\" per cowork-content.md rules'. The report explicitly cites the rule: 'The cowork-content rule specifies the exact phrasing: \"Use these prompts in Cowork or your preferred AI assistant.\"'"
+        },
+        {
+          "text": "Produces a summary table organized by the 6-defect taxonomy",
+          "passed": true,
+          "evidence": "The 'Checklist Summary' table at the end has 6 rows: (1) Fabricated agent outputs, (2) Missing skill names, (3) Inline data injection, (4) Fiction-researching prompts, (5) Narrative references fabricated content, (6) Terminology. Each row has Check, Result, and Details columns. This covers 6 defect categories systematically."
+        },
+        {
+          "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+          "passed": true,
+          "evidence": "The report explicitly states 'the lesson content and pedagogy are sound'. No issues are raised about the lesson's framework tables, conceptual models, or teaching approach. Only terminology violations and a minor narrative prediction concern are flagged. The report correctly marks Issues 2-5 (fabricated outputs, skill names, data injection, fiction-researching prompts) as clean passes or N/A."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 0.0,
+        "tokens": 7250,
+        "tool_calls": 4,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+          "passed": true,
+          "evidence": "The report's Terminology Issues section explicitly states: 'The one reference to \"Claude in Excel\" (lines 108, 110, etc.) correctly refers to the separate Claude in Excel product from Lessons 1-3, which is the intended usage per .claude/rules/cowork-content.md.' Terminology defect count is 0. The auditor correctly recognized Ch17's usage as intentional."
+        },
+        {
+          "text": "Identifies inline data injection or paste-based patterns in exercise prompts",
+          "passed": true,
+          "evidence": "Defect 2 is titled 'Inline Data Injection (MEDIUM)' at lines 139-154, calling out specific injected values: '$892,000 deposits', '$876,580 withdrawals', '$3,420 discrepancy', '$465K revenue against a $500K budget'. The auditor also notes the tight coupling between these injected parameters and the fabricated worked example outputs."
+        },
+        {
+          "text": "Checks for missing skill names in exercise prompts",
+          "passed": true,
+          "evidence": "The report includes a dedicated 'Missing Skill Names' section (under 'Defects NOT Found') which states: 'No prompts in the lesson require skill invocation by name. The exercises correctly use command names (/reconciliation, /journal-entry, etc.) which are commands, not skills.' The auditor checked and found no defect, which demonstrates the check was performed."
+        },
+        {
+          "text": "Produces a prioritised defect summary (Defect 1 highest priority)",
+          "passed": true,
+          "evidence": "The Summary table lists 3 defects numbered 1-3. Defect 1 ('Fabricated agent outputs') is rated HIGH severity, while Defects 2 and 3 are both MEDIUM. The ordering places the highest-priority defect first. The Overall Assessment reinforces this: '1 high-severity and 2 medium-severity defects.'"
+        },
+        {
+          "text": "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)",
+          "passed": true,
+          "evidence": "The Terminology Issues section makes the distinction explicit: 'The lesson correctly uses \"Cowork\" throughout (not \"Claude in Excel\" for Cowork contexts). The one reference to \"Claude in Excel\" ... correctly refers to the separate Claude in Excel product from Lessons 1-3.' This demonstrates understanding that Ch17 uses 'Claude in Excel' as a distinct product name, not a terminology error."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "time_seconds": 45,
+        "tokens": 5847,
+        "tool_calls": 4,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+          "passed": true,
+          "evidence": "The audit report explicitly acknowledges the prior fixes. Summary states: 'The lesson is in good shape after the intent-table fixes.' Section 1 references the intent-table pattern at lines 206-211 and 223-228 and calls it 'a better approach \u2014 it was applied to the Meridian DM and follow-up email sections.'"
+        },
+        {
+          "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+          "passed": false,
+          "evidence": "The audit report flags the Compliance Gap section (lines 247-269) as a fabricated output defect with Medium severity. Section 1 heading reads 'One fabricated output remains (lines 247-269)' and recommends: 'Replace the fabricated code block (lines 247-269) with an intent table describing what the student should expect.' Section 5 also flags lines 275-281 as narrative referencing fabricated content. The auditor failed to recognise that this example was intentionally preserved as a teaching anti-pattern (demonstrating a compliance gap). While it acknowledges the ':::note Illustrative example' disclaimer, it still treats it as a defect requiring remediation."
+        },
+        {
+          "text": "Does NOT flag the intent tables themselves as fabricated output",
+          "passed": true,
+          "evidence": "The audit report references intent tables only positively. Section 1 calls them 'a better approach' at lines 206-211 and 223-228. No section flags intent tables as fabricated output or raises concerns about their content."
+        },
+        {
+          "text": "Identifies the lesson as mostly clean / low defect count",
+          "passed": true,
+          "evidence": "The summary states 'The lesson is in good shape after the intent-table fixes.' The audit found 0 issues in Inline data injection, 0 in Fiction-researching prompts, and only low-to-medium severity items in other categories. The overall tone is that this is a mostly-clean lesson with one remaining area of concern."
+        },
+        {
+          "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+          "passed": true,
+          "evidence": "The report uses a 6-category structure: (1) Fabricated agent outputs, (2) Missing skill names, (3) Inline data injection, (4) Fiction-researching prompts, (5) Narrative referencing fabricated content, (6) Terminology issues. These align with a standard 6-type taxonomy. The terminology and formatting findings are correctly categorised within their respective types. Note: the primary 'defect' found (Compliance Gap example) was incorrectly judged as a defect per expectation 2, but the categorisation methodology itself is sound."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.83,
+        "passed": 5,
+        "failed": 1,
+        "total": 6,
+        "time_seconds": 30,
+        "tokens": 15969,
+        "tool_calls": 10,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Checks for all 6 defect types, not just fabricated output",
+          "passed": true,
+          "evidence": "The report has six explicit sections titled 'Defect 1: Fabricated Agent Output' through 'Defect 6: Plugin/Tool Terminology', each with a status assessment (CLEAN or findings). All six defect types from the lesson-prompt-improver skill are covered."
+        },
+        {
+          "text": "Identifies any fabricated output blocks preceded by **Output:**",
+          "passed": false,
+          "evidence": "Line 177 of the lesson contains a bold '**Output:**' marker followed by explanatory text ('Zakat is recognised as an expense in the Saudi IFI's income statement. It is filed with ZATCA annually, within 120 days of fiscal year-end.'). The audit report did NOT identify or mention this **Output:** marker at all. While the content after it is explanatory prose rather than fabricated numbers, the audit should have flagged the marker's presence and explicitly analyzed whether it constitutes a defect. The report only references code blocks at 'lines 134-143' and 'lines 165-175' in its Defect 1 analysis, completely missing the **Output:** tag on line 177."
+        },
+        {
+          "text": "Checks whether exercise prompts include natural skill names",
+          "passed": true,
+          "evidence": "Defect 2 section (lines 53-99) systematically reviews all 6 exercise prompts (E7-S1 through E7-S6) and all 3 TWA prompts, noting that none reference skill names. The report identifies the Islamic Finance plugin's 13 skills and 4 commands, then flags 5 exercise prompts and 1 TWA prompt as needing skill name additions. E7-S6 is correctly exempted as an error-detection exercise."
+        },
+        {
+          "text": "Checks for inline data injection patterns",
+          "passed": true,
+          "evidence": "Defect 3 section (lines 103-111) explicitly checks for 'Read demo-data.md' and similar data file injection instructions. The report correctly notes that E7-S2's in-prompt data (Share capital SAR 20B, etc.) is the correct pattern \u2014 the data IS the prompt. It also verifies that the exercise data reference is correctly placed in the ':::info Exercise Requirements' block, not inside prompt code blocks."
+        },
+        {
+          "text": "Produces a prioritised summary (Defect 1 first, then 2-6)",
+          "passed": true,
+          "evidence": "The main report sections are ordered sequentially: 'Defect 1: Fabricated Agent Output' \u2192 'Defect 2: Missing Skill Name in Prompt' \u2192 'Defect 3: Inline Data Injection' \u2192 'Defect 4: Fiction-Researching Prompt' \u2192 'Defect 5: Narrative Referencing Fabricated Content' \u2192 'Defect 6: Plugin/Tool Terminology'. The summary table (lines 188-196) maintains this ordering. The 'Top Priority Fixes' section (lines 213-222) further prioritizes by impact severity."
+        },
+        {
+          "text": "Anti-pattern examples and framework tables are correctly excluded from defect list",
+          "passed": true,
+          "evidence": "The report correctly excludes: (1) the ZATCA formula code block (lines 134-143 of lesson) \u2014 noted as 'a framework definition, not fabricated output'; (2) journal entry templates (lines 165-175) \u2014 noted as 'accounting notation patterns, not agent output'; (3) the ZATCA vs AAOIFI comparison table (lines 150-158 of lesson) is not flagged as a defect. The report also correctly identifies Try With AI prompt blocks as 'student inputs, not agent outputs'."
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.9667,
+        "stddev": 0.0778,
+        "min": 0.8,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 15.0,
+        "stddev": 22.1565,
+        "min": 0.0,
+        "max": 45
+      },
+      "tokens": {
+        "mean": 6311.1667,
+        "stddev": 1837.6463,
+        "min": 3842,
+        "max": 11279
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.9075,
+        "stddev": 0.1075,
+        "min": 0.8,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 18.75,
+        "stddev": 22.5,
+        "min": 0.0,
+        "max": 45
+      },
+      "tokens": {
+        "mean": 8644.25,
+        "stddev": 4940.9095,
+        "min": 5511,
+        "max": 15969
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.06",
+      "time_seconds": "-3.8",
+      "tokens": "-2333"
+    }
+  },
+  "notes": []
+}

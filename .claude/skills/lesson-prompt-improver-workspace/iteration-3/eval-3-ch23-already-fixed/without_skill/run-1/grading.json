@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+      "passed": true,
+      "evidence": "The audit report explicitly acknowledges the prior fixes. Summary states: 'The lesson is in good shape after the intent-table fixes.' Section 1 references the intent-table pattern at lines 206-211 and 223-228 and calls it 'a better approach — it was applied to the Meridian DM and follow-up email sections.'"
+    },
+    {
+      "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+      "passed": false,
+      "evidence": "The audit report flags the Compliance Gap section (lines 247-269) as a fabricated output defect with Medium severity. Section 1 heading reads 'One fabricated output remains (lines 247-269)' and recommends: 'Replace the fabricated code block (lines 247-269) with an intent table describing what the student should expect.' Section 5 also flags lines 275-281 as narrative referencing fabricated content. The auditor failed to recognise that this example was intentionally preserved as a teaching anti-pattern (demonstrating a compliance gap). While it acknowledges the ':::note Illustrative example' disclaimer, it still treats it as a defect requiring remediation."
+    },
+    {
+      "text": "Does NOT flag the intent tables themselves as fabricated output",
+      "passed": true,
+      "evidence": "The audit report references intent tables only positively. Section 1 calls them 'a better approach' at lines 206-211 and 223-228. No section flags intent tables as fabricated output or raises concerns about their content."
+    },
+    {
+      "text": "Identifies the lesson as mostly clean / low defect count",
+      "passed": true,
+      "evidence": "The summary states 'The lesson is in good shape after the intent-table fixes.' The audit found 0 issues in Inline data injection, 0 in Fiction-researching prompts, and only low-to-medium severity items in other categories. The overall tone is that this is a mostly-clean lesson with one remaining area of concern."
+    },
+    {
+      "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+      "passed": true,
+      "evidence": "The report uses a 6-category structure: (1) Fabricated agent outputs, (2) Missing skill names, (3) Inline data injection, (4) Fiction-researching prompts, (5) Narrative referencing fabricated content, (6) Terminology issues. These align with a standard 6-type taxonomy. The terminology and formatting findings are correctly categorised within their respective types. Note: the primary 'defect' found (Compliance Gap example) was incorrectly judged as a defect per expectation 2, but the categorisation methodology itself is sound."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 1,
+    "total": 5,
+    "pass_rate": 0.8
+  },
+  "execution_metrics": {
+    "tool_calls": 4,
+    "total_tool_calls": 4,
+    "errors_encountered": 0,
+    "output_chars": 5847,
+    "transcript_chars": 5847
+  },
+  "timing": {
+    "executor_duration_seconds": 45,
+    "total_duration_seconds": 45
+  },
+  "claims": [
+    {
+      "claim": "The intent-table pattern was applied to Meridian DM and follow-up email sections at lines 206-211 and 223-228",
+      "type": "factual",
+      "verified": true,
+      "evidence": "The audit report references specific line numbers for intent tables. This is consistent with the stated fix having been applied to those sections."
+    },
+    {
+      "claim": "The Compliance Gap section at lines 247-269 contains fabricated agent output",
+      "type": "factual",
+      "verified": true,
+      "evidence": "The audit describes a full LinkedIn DM with fake word count and law-check formatting. This is fabricated output, but it is intentionally preserved as a teaching anti-pattern with a disclaimer — the auditor's characterisation of it as a 'defect' is the error, not the factual observation."
+    },
+    {
+      "claim": "The lesson has a :::note Illustrative example disclaimer",
+      "type": "factual",
+      "verified": true,
+      "evidence": "The audit report references 'an :::note Illustrative example disclaimer (lines 271-273)' that frames the output as a teaching example."
+    },
+    {
+      "claim": "There are terminology inconsistencies between 'extension' and 'skill'",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The audit cites specific lines (79, 348) using 'extension' vs lines (89, 203, 236) using 'skill'. This is a legitimate minor finding."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+        "reason": "This is the most discriminating assertion in the set and correctly caught the key failure. The without-skill auditor flagged the intentionally-preserved anti-pattern as a defect. This assertion effectively tests whether the auditor understands the pedagogical intent behind the preserved example. No change needed — this is a well-designed assertion."
+      },
+      {
+        "reason": "Consider adding an assertion that checks whether the auditor distinguishes between 'fabricated output presented as real' (defect) vs 'fabricated output explicitly labelled as illustrative' (acceptable teaching pattern). The current assertion tests the outcome but a more specific assertion could test the reasoning — did the auditor understand WHY the example was preserved, or did it just happen to not flag it?"
+      }
+    ],
+    "overall": "The eval assertions are well-designed. The critical assertion (expectation 2) is the most discriminating — it catches whether the auditor understands pedagogical intent vs mechanically applying the fabricated-output rule. The remaining assertions provide good coverage of the other expected behaviours. One minor gap: no assertion checks whether the auditor identifies the specific terminology inconsistencies (extension vs skill), which are genuine low-severity findings that a good audit should surface."
+  }
+}

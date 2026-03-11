@@ -132,65 +132,28 @@ Read the scenario above. Before running `/triage-nda`, predict: will this NDA be
 Bilal runs the triage:
 
 ```
-Bilal: /triage-nda
+/triage-nda
 [Upload: AlMadinah_Mutual_NDA_2026.pdf]
 
-Agent: A few context questions before I review:
-1. Mutual or unilateral?
-2. Purpose?
-3. Counterparty type?
-4. Urgency?
-5. Any known concerns?
-
-Bilal: Mutual. Prospective technology partnership -- they would provide
+Context: Mutual. Prospective technology partnership -- they would provide
 cloud infrastructure for our Gulf expansion. Strategic partner.
 Business team wants to start technical discussions next week.
-
-Agent: Loading playbook... Found: Noor Technologies NDA Playbook v2.1.
-Reading NDA...
-
-NDA TRIAGE REPORT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Counterparty:   Al-Madinah Cloud Solutions (Riyadh, KSA)
-Date:           22 March 2026
-Playbook:       Noor Technologies NDA Playbook v2.1
-
-TRIAGE TIER:    2 — Counsel Review Required
-Attorney time:  ~15 minutes
-
-SUMMARY: 3 GREEN · 2 YELLOW · 0 RED
-RECOMMENDATION: Route to reviewing attorney — no negotiation expected.
-
-DEVIATIONS FROM STANDARD FORM:
-🟢 Term: 3 years — matches our standard
-🟢 Definition of Confidential Information: standard mutual definition
-    with appropriate carve-outs — acceptable
-🟢 Remedies: mutual injunctive relief — standard
-
-🟡 Governing law: Laws of the Kingdom of Saudi Arabia, Riyadh courts
-   — Our standard is Pakistani law or English law. Saudi commercial
-   courts are developing but less established for cross-border disputes
-   than DIFC or English courts.
-   PROPOSED POSITION: Suggest amendment to English law with LCIA
-   arbitration (both Pakistan and KSA are New York Convention
-   signatories — arbitral awards enforceable in both jurisdictions).
-   FALLBACK: Accept Saudi law if counterparty adds SCCA (Saudi Centre
-   for Commercial Arbitration) arbitration clause.
-
-🟡 Confidentiality period: 5 years post-termination (our standard:
-   3 years). Within acceptable range (2-5 years per playbook) but
-   at upper limit.
-   NOTE: Accept without negotiation — 5 years is commercially
-   reasonable for a strategic technology partnership where trade
-   secrets may be shared.
-
-RESIDUALS CLAUSE CHECK: ✅ No residuals clause present
-NON-COMPETE CHECK: ✅ No non-compete provisions
-PUBLIC INFO CARVE-OUT: ✅ Present and standard
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
 ```
+
+**What to expect:** The agent asks context questions (mutual/unilateral, purpose, counterparty type, urgency), loads the playbook, and produces a triage report. Your output will vary, but look for these sections:
+
+| Section                            | Intent                                                                       | What to Verify                                                                                       |
+| ---------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Triage tier classification         | Routes the NDA to the correct review level (Tier 1/2/3)                      | Check whether the tier matches your prediction and whether the routing recommendation is appropriate |
+| GREEN/YELLOW/RED deviation summary | Counts deviations from your standard form by severity                        | Confirm the count reflects the actual clause analysis below                                          |
+| GREEN clauses                      | Standard-form clauses that need no attention                                 | Should include clauses that match your playbook (term, definition scope, remedies)                   |
+| YELLOW clauses                     | Deviations requiring counsel confirmation but not negotiation                | Look for governing law (Saudi vs Pakistani/English) and confidentiality period at upper range        |
+| RED flag checks                    | Automatic Tier 3 triggers (residuals, non-compete, no public info carve-out) | Verify each of the nine automatic RED flags is checked                                               |
+| Attorney review footer             | Governance boundary reminder                                                 | Confirm the ATTORNEY REVIEW: REQUIRED footer is present                                              |
+
+:::note Your output will vary
+The specific clause classifications, deviation counts, and proposed positions depend on your playbook configuration and the NDA text. Focus on the triage tier assignment and the deviation analysis structure. The teaching point is how the three-tier system routes NDAs to the appropriate level of review — not the specific recommendations in any single output.
+:::
 
 :::info Concept Box: Residuals Clause
 A residuals clause in an NDA permits a party to use information "retained in the unaided memory" of its personnel after the NDA terminates. For example: "Nothing in this Agreement shall restrict either party from using ideas, concepts, know-how, or techniques that are retained in the unaided memories of its Representatives who have had access to Confidential Information." This sounds innocuous but creates an enormous loophole -- any information an employee can remember, they can use freely. In practice, it can render the entire NDA unenforceable for its most valuable purpose: protecting trade secrets and proprietary methodologies. The Legal Plugin automatically flags any residuals clause as a Tier 3 RED item. **Why it matters:** residuals clauses are the most commonly overlooked high-risk provision in NDAs -- they sound reasonable but can undermine the entire agreement.
@@ -262,38 +225,22 @@ The following deviations may be approved without attorney review:
 > User: Mutual. Prospective technology partner. Need to respond Friday.
 ```
 
-**Sample output:**
+**What to expect:** The agent produces a triage report with the same structure as the Al-Madinah worked example. Your output will vary, but look for these sections:
 
-```
-NDA TRIAGE REPORT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Counterparty:  Acme Corp
-Reviewed:      [Date]
-Playbook:      [Organisation] NDA Playbook v1.0
+| Section                     | Intent                                                         | What to Verify                                                                             |
+| --------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Triage tier classification  | Assigns the NDA to Tier 1, 2, or 3 based on deviation severity | Check that the tier matches the deviations found                                           |
+| Deviation summary           | Counts GREEN, YELLOW, and RED deviations                       | Confirm the count is consistent with the clause-by-clause analysis                         |
+| Clause-by-clause deviations | Compares each NDA clause to your standard form                 | Verify each deviation is correctly classified and includes a proposed position or fallback |
+| Attorney review footer      | Governance boundary reminder                                   | Confirm the footer is present                                                              |
 
-TRIAGE TIER:   2 — Counsel Review Required
-Attorney time: ~15 minutes
-
-SUMMARY: 1 GREEN · 2 YELLOW · 0 RED
-RECOMMENDATION: Route to [Reviewing Attorney] — no negotiation
-  expected to be required.
-
-DEVIATIONS FROM STANDARD FORM:
-🟢 Term: 5 years (standard: 3 years) — within acceptable range
-🟡 Governing law: State of Delaware (standard: England & Wales)
-   — commercially reasonable for US-incorporated counterparty;
-   note for counsel
-🟡 Representatives: includes "advisors and consultants" without
-   need-to-know qualifier — propose adding qualifier; fallback:
-   accept if counterparty adds "engaged in connection with the
-   Permitted Purpose"
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
-```
+:::note Your output will vary
+The specific deviations depend on the NDA you upload and your playbook configuration. Focus on whether the triage tier is justified by the deviations found, and whether each deviation includes a clear recommendation.
+:::
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
 
 ### Prompt 1: Design Your NDA Triage Configuration
 

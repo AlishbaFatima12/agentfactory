@@ -318,36 +318,22 @@ Stage: 1
 Jurisdiction: UK PRA
 ```
 
-The agent routes through `ifrs9-ecl` and responds:
+The agent routes through `ifrs9-ecl` to produce a component-level ECL build.
 
-```
-GOVERNING STANDARD: IFRS 9 — UK PRA
-DOMAIN: IFRS 9 ECL — PD/LGD/EAD Component Build
-JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+**What to expect:** The agent produces a structured breakdown of each ECL component. Your output will vary based on your inputs, but look for these sections:
 
-PD CALIBRATION
-TTC PD: 1.80%
-Credit Cycle Adjustment: 1.3 (mild recession)
-PIT PD (12-month): 2.34%
+| Section        | Intent                                                     | What to Verify                                                             |
+| -------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------- |
+| PD calibration | Converts TTC PD to PIT PD using Credit Cycle Adjustment    | PIT PD = TTC PD x CCA; direction matches economic conditions               |
+| LGD            | States the downturn LGD with collateral type justification | LGD matches collateral profile (secured vs unsecured, downturn vs current) |
+| EAD            | Computes total exposure including undrawn commitments      | EAD = Drawn + (CCF x Undrawn); CCF appropriate for facility type           |
+| ECL result     | Calculates facility-level ECL from the three components    | ECL = PD x LGD x EAD; formula applied correctly for the stage              |
 
-LGD
-Downturn LGD: 45.0% (unsecured senior corporate)
+:::note Your output will vary
+The specific amounts depend on your TTC PD, CCA, LGD, and CCF inputs. The teaching point is the component build process — verify that each conversion step (TTC to PIT, undrawn to EAD) is methodologically sound, not that specific numbers match.
+:::
 
-EAD
-Drawn balance: GBP 5,000,000
-Undrawn commitment: GBP 15,000,000
-CCF applied: 60%
-EAD = GBP 5,000,000 + (60% x GBP 15,000,000) = GBP 14,000,000
-
-12-MONTH ECL (Stage 1)
-ECL = 2.34% x 45% x GBP 14,000,000 = GBP 147,420
-
-NOTE: The professional reviews the CCA selection and the CCF
-assumption; the agent calculated the PIT PD conversion,
-EAD build, and facility-level ECL.
-```
-
-David reviews the CCA of 1.3 against his bank's latest credit cycle model output and confirms the 60% CCF is appropriate for a committed revolving facility under the bank's EAD policy.
+David reviews the CCA against his bank's latest credit cycle model output and confirms the CCF is appropriate for a committed revolving facility under the bank's EAD policy.
 
 ## Try With AI
 

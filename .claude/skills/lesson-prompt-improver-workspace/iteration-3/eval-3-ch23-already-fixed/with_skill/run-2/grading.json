@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+      "passed": true,
+      "evidence": "D1 section states: 'Two intent tables are properly implemented' with details on both tables (lines 205-215 and 221-232). Overall Assessment confirms: 'The two commits (4a92156b and 75906eee) successfully addressed the critical defects. The intent tables are well-designed with appropriate Section/Intent/What to Verify columns.'"
+    },
+    {
+      "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+      "passed": true,
+      "evidence": "D1 section explicitly recognises the PakFreight/Hamza example as intentional: 'One intentional illustrative example retained (lines 246-269): The PakFreight LinkedIn DM is shown as a deliberate teaching example for the Compliance Gap concept... This correctly falls under the anti-pattern exception — the output exists to be critiqued, not to set expectations.' D1 count remains 0."
+    },
+    {
+      "text": "Does NOT flag the intent tables themselves as fabricated output",
+      "passed": true,
+      "evidence": "D1 is marked CLEAN with count 0. The intent tables are described as 'properly implemented' and 'well-designed with appropriate Section/Intent/What to Verify columns.' They are treated as correct replacements, not as fabricated output."
+    },
+    {
+      "text": "Identifies the lesson as mostly clean / low defect count",
+      "passed": true,
+      "evidence": "Summary table shows 'Total defects found: 4 (0 critical, 4 minor)'. Overall Assessment states: 'This lesson is in good shape post-fix.' Recommendation is only '~2 minutes of edits across 3 locations.'"
+    },
+    {
+      "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+      "passed": true,
+      "evidence": "All 6 defect types (D1-D6) are evaluated in the summary table. 4 minor defects found: 2x D2 (Missing Skill Name in Prompt — lines 239-242 and 300-309, prompts lack explicit skill name in the code block) and 2x D6 (Plugin/Tool Terminology — line 348, 'Claude' instead of 'Cowork' and missing 'Marketing' in plugin list). Categorisations are correct: the prompt blocks missing skill names match D2 definition, and the Cowork/Claude terminology mismatch matches D6."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": 7,
+    "errors_encountered": 0,
+    "output_chars": 6218,
+    "transcript_chars": 6218
+  },
+  "timing": {
+    "executor_duration_seconds": 89.0
+  },
+  "claims": [
+    {
+      "claim": "Two intent tables are properly implemented at lines 205-215 and 221-232",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Report provides specific line ranges and describes the table structure (Section/Intent/What to Verify columns) and disclaimers (:::note Your output will vary). Cannot verify line numbers without reading the source lesson, but the structural description is internally consistent."
+    },
+    {
+      "claim": "PakFreight illustrative example is properly disclaimed with :::note Illustrative example at lines 271-273",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Report provides specific line reference and quotes the disclaimer type. The narrative analysis (lines 275-281) is described as critiquing the example, which matches anti-pattern exception design."
+    },
+    {
+      "claim": "Two D2 defects exist: prompts at lines 239-242 and 300-309 lack skill names",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Report quotes both prompt blocks verbatim and shows they lack a skill name reference. The surrounding narrative mentions the skill but the code blocks themselves do not contain it. The recommended fixes are provided."
+    },
+    {
+      "claim": "Line 348 says 'Claude' instead of 'Cowork' and omits 'Marketing' from the plugin name",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Report quotes line 348: 'Use these prompts in Claude or your preferred AI assistant with the Sales and RevOps extension plugins installed.' Both issues (Claude→Cowork, missing Marketing) are correctly identified per cowork-content.md rules."
+    },
+    {
+      "claim": "Total effort to fix is ~2 minutes of edits across 3 locations",
+      "type": "quality",
+      "verified": true,
+      "evidence": "3 locations: two D2 prompt blocks (add 'Use the outreach skill to' prefix) and one D6 line (change 'Claude' to 'Cowork' and add 'Marketing'). These are indeed trivial text insertions."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+        "reason": "This is the strongest assertion in the set — it tests whether the skill understands the nuanced distinction between a fabricated output (D1 defect) and an intentional illustrative example that exists to be critiqued. It passed convincingly here. However, consider adding a negative variant: an eval where the anti-pattern example is NOT properly disclaimed, to verify the skill would flag it in that case."
+      },
+      {
+        "reason": "No assertion checks whether the skill correctly identified the D2 and D6 minor defects. The current assertions only check that the skill didn't over-flag (false positives) and recognised the lesson as clean. Adding an expectation like 'Identifies at least one genuine minor defect' would verify the skill isn't just rubber-stamping everything as clean."
+      }
+    ],
+    "overall": "The eval effectively tests the hardest part of this scenario — distinguishing between fabricated outputs, intent tables, and intentional anti-pattern examples. The gap is on the true-positive side: no assertion verifies the skill can still find real (minor) defects in an already-fixed lesson."
+  }
+}

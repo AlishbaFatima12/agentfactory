@@ -1,0 +1,102 @@
+{
+  "expectations": [
+    {
+      "text": "Checks for all 6 defect types, not just fabricated output",
+      "passed": true,
+      "evidence": "The audit report explicitly checks all 6 defect types: D1 (Fabricated Agent Output — CLEAN), D2 (Missing Skill Name in Prompt — 4 instances found), D3 (Inline Data Injection — CLEAN), D4 (Fiction-Researching Prompt — CLEAN), D5 (Narrative Referencing Fabricated Content — CLEAN), D6 (Plugin/Tool Terminology — CLEAN). Each has a dedicated subsection under 'Defects NOT Found (Clean Areas)' or 'Defect Details' with specific evidence."
+    },
+    {
+      "text": "Identifies any fabricated output blocks preceded by **Output:**",
+      "passed": true,
+      "evidence": "The audit report correctly identifies the **Output:** label on line 177 and classifies it as NOT a defect — it is legitimate explanatory text ('Zakat is recognised as an expense in the Saudi IFI's income statement'), not a fabricated agent output block. The report flags it as an 'Additional Finding: Misleading **Output:** Label' and recommends renaming to 'Accounting treatment:' for clarity. Verified against the source file: line 177 contains '**Output:**' followed by a one-sentence explanation on line 179, which is indeed pedagogical content, not fabricated agent output. This is a nuanced and correct judgment."
+    },
+    {
+      "text": "Checks whether exercise prompts include natural skill names",
+      "passed": true,
+      "evidence": "The audit identifies 4 D2 defects — missing skill names on: (1) Exercise 7 Step 1 (line 216), (2) Try With AI Prompt 1 (lines 245-270), (3) Try With AI Prompt 2 (lines 277-302), (4) Try With AI Prompt 3 (lines 309-331). The audit correctly distinguishes primary prompts (need skill names) from follow-up prompts within the same flow (Steps 2-6, which do not). Verified against the source file: all four cited prompts lack skill names, and the line numbers are accurate."
+    },
+    {
+      "text": "Checks for inline data injection patterns",
+      "passed": true,
+      "evidence": "Under 'D3: Inline Data Injection — CLEAN', the report states: 'No instances of Read demo-data.md, Read sales-marketing.local.md, or [Paste or reference the...] found. Exercise data is referenced via a download link (line 203) and specific numbers are embedded directly in prompts where needed.' Verified against the source: line 203 contains the download link to islamic-finance-exercise-data.zip, and exercise prompts embed specific numbers inline (e.g., 'Share capital SAR 20B' on line 220). No injection patterns present."
+    },
+    {
+      "text": "Produces a prioritised summary (Defect 1 first, then 2-6)",
+      "passed": true,
+      "evidence": "The summary table at the top of the report lists defects in order D1 through D6, with counts and severity for each. The Defect Details section addresses D2 first (the only type with findings). The 'Defects NOT Found' section then covers D1, D3, D4, D5, D6 in numerical order. The 'Recommended Fix Order' section prioritises D2 fixes first, then the additional label cleanup. The overall structure follows D1-first ordering."
+    },
+    {
+      "text": "Anti-pattern examples and framework tables are correctly excluded from defect list",
+      "passed": true,
+      "evidence": "The lesson contains several elements that could be false-positived: (1) The ZATCA formula code block (lines 134-144) — correctly excluded, noted as 'Framework definitions' under D1 clean areas. (2) Template journal entries (lines 165-175) — correctly excluded, noted as 'Template journal entries... shows the accounting pattern.' (3) The comparison table (lines 150-160) — correctly excluded. (4) The 'Check your work' section (line 236) with answer key — correctly excluded, noted as 'Answer key in Check your work section.' (5) The **Output:** label on line 177 — correctly handled as a non-defect additional finding rather than a D1 hit. All framework/pedagogical elements were properly distinguished from actual defects."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": 7,
+    "errors": 0,
+    "output_chars": 6358,
+    "transcript_chars": 6358
+  },
+  "timing": {
+    "executor_duration_seconds": 78,
+    "grader_duration_seconds": null,
+    "total_duration_seconds": null
+  },
+  "claims": [
+    {
+      "claim": "4 D2 defects found (missing skill names on primary prompts)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Verified all 4 cited locations in the source file. Exercise 7 Step 1 (line 216), Try With AI Prompt 1 (line 245), Prompt 2 (line 277), Prompt 3 (line 309) — none contain a skill name reference. Line numbers are accurate."
+    },
+    {
+      "claim": "Steps 2-6 are follow-ups and don't need skill names",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Steps 2-6 are part of the same Exercise 7 flow (building on Step 1's context). The audit correctly applies the rule that follow-up prompts within a flow don't need skill names."
+    },
+    {
+      "claim": "Line 177 has an **Output:** label with legitimate explanatory text",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Source file line 177: '**Output:**' followed by line 179: 'Zakat is recognised as an expense in the Saudi IFI's income statement.' This is indeed pedagogical explanation, not fabricated agent output."
+    },
+    {
+      "claim": "All referenced entities (Al Rajhi Bank, Alinma Bank, Saudi Electricity Company, PIF) are real",
+      "type": "factual",
+      "verified": true,
+      "evidence": "All four are well-known real entities: Al Rajhi Bank (Tadawul: 1120), Alinma Bank (Tadawul: 1150), Saudi Electricity Company (Tadawul: 5110), PIF (Saudi sovereign wealth fund). No fictional entities in prompts."
+    },
+    {
+      "claim": "No instances of 'Claude in Excel' in the lesson",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Searched the full source file — no occurrences of 'Claude in Excel'. Uses 'Cowork' and 'Cowork or your preferred AI assistant' correctly."
+    },
+    {
+      "claim": "Exercise data is referenced via download link on line 203",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Source file line 203: '**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex06-saudi-ifi-alinma.md`'"
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Checks whether exercise prompts include natural skill names",
+        "reason": "This assertion passes if the audit finds ANY missing skill names, but doesn't verify whether the recommended skill name is correct. The audit itself flags this uncertainty ('Verify the exact skill name against the plugin's skills/ directory before applying fixes'), which is good practice — but an assertion checking that the recommended skill name actually exists in the plugin would add discriminating power."
+      },
+      {
+        "reason": "No assertion checks whether the audit correctly identifies the ZATCA formula code block (lines 134-144) and journal entry templates (lines 165-175) as exceptions rather than D1 defects. Expectation 6 partially covers this, but an explicit 'correctly distinguishes formula/template code blocks from fabricated output' assertion would be more discriminating — a naive audit could easily false-positive on these code blocks."
+      }
+    ],
+    "overall": "Strong eval set. All 6 expectations are meaningful and discriminating. The audit produced a notably high-quality result: it correctly handled the ambiguous **Output:** label on line 177 (a subtle judgment call), properly classified pedagogical code blocks as exceptions, and accurately distinguished primary from follow-up prompts. The two suggestions above would add incremental rigor for edge cases."
+  }
+}

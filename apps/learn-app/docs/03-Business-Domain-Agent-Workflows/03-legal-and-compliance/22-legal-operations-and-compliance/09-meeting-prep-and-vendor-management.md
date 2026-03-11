@@ -119,111 +119,22 @@ I am the customer's legal ops coordinator. I need talking points,
 red lines, and a preparation checklist.
 ```
 
-**Expected output:**
+**What to expect:** The agent produces a structured meeting briefing. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          MEETING BRIEFING
-          Vendor Renegotiation: CloudStack Inc.
-          Meeting: Thursday 14:00 PKT
-          Prepared for: Bilal Ahmad, Legal Ops
-══════════════════════════════════════════════════════════════
+| Section                              | Intent                                                                                     | What to Verify                                                                                 |
+| ------------------------------------ | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| Meeting header and preparation level | Identifies meeting type (vendor negotiation) and urgency                                   | Check that the preparation level reflects the complexity of the renegotiation                  |
+| Background and team                  | Summarises the vendor relationship, contract value, and your team's roles                  | Verify the context matches what you provided                                                   |
+| Open issues with positions           | Lists each negotiation point with current terms, target, rationale, and walk-away position | Should include RED-priority items (liability cap, DPA) and YELLOW items (governing law, SOC 2) |
+| Talking points and sequencing        | Opening statement, discussion sequence, and closing strategy                               | Look for strategic sequencing — regulatory items first to establish seriousness                |
+| Red lines                            | Non-negotiable positions requiring GC approval to concede                                  | Should clearly distinguish between regulatory requirements and commercial preferences          |
+| Preparation gaps                     | Information the team needs before the meeting but does not yet have                        | Should flag missing items like counterparty counsel details or unreceived documents            |
 
-MEETING TYPE: Vendor Call — Contract Renegotiation
-PREPARATION LEVEL: HIGH (active disputes on multiple clauses)
+:::note Your output will vary
+The specific talking points, walk-away positions, and sequencing depend on the context you provide and your playbook configuration. Focus on whether the briefing covers all six sections and whether the walk-away positions are marked as suggestions requiring attorney approval. The teaching point is that a negotiation briefing goes beyond "what we want changed" to include sequencing strategy, preparation gaps, and escalation rules.
+:::
 
-BACKGROUND
-─────────────────────────────────────────────────────────────
-Vendor:          CloudStack Inc. (US-based, Delaware)
-Relationship:    Active — SaaS project management platform
-Contract Value:  PKR 4,800,000/year (~USD 17,000)
-Contract Status: Renewal pending
-Last Review:     RED flags on liability cap + data protection
-
-OUR TEAM
-─────────────────────────────────────────────────────────────
-Lead:            Bilal Ahmad (Legal Ops) — runs the meeting
-Joining:         Ayesha Malik (GC) — for liability cap discussion
-Role:            Customer side — we are the buyer renegotiating terms
-
-OPEN ISSUES (from prior review)
-─────────────────────────────────────────────────────────────
-1. LIABILITY CAP [RED — priority negotiation item]
-   Current:    3 months' fees (PKR 1,200,000)
-   Target:     12 months' fees (PKR 4,800,000)
-   Rationale:  3-month cap exposes Noor to uncovered losses if
-               CloudStack suffers a data breach or extended outage.
-               Industry standard for SaaS at this value: 12 months.
-   Walk-away:  Do not accept less than 6 months. Below 6 months,
-               escalate to Ayesha for commercial decision.
-
-2. DATA PROCESSING ADDENDUM [RED — regulatory requirement]
-   Current:    No DPA exists. Contract contains only a general
-               "comply with applicable laws" clause.
-   Target:     Execute a standalone DPA compliant with PDPA 2023.
-   Rationale:  PDPA 2023 requires data processors to execute a
-               written agreement specifying processing purposes,
-               security measures, sub-processor controls, and
-               breach notification timelines.
-   Walk-away:  Non-negotiable. No DPA = no renewal. This is a
-               regulatory requirement, not a commercial preference.
-
-3. GOVERNING LAW [YELLOW — strong preference, not a deal-breaker]
-   Current:    Delaware law, Delaware courts
-   Target:     English law with London arbitration (LCIA)
-   Rationale:  Noor operates across Pakistan, UAE, and UK. English
-               law is the most practical neutral jurisdiction for
-               cross-border enforcement.
-   Fallback:   Accept Delaware law if arbitration clause added
-               (ICC or LCIA) to avoid Delaware court litigation.
-
-4. SOC 2 TYPE II REPORT [YELLOW — compliance verification]
-   Due:        15 May 2026
-   Status:     Not yet received
-   Action:     Request status update in meeting. If delayed, request
-               interim letter from CloudStack's auditor confirming
-               the audit is in progress.
-
-TALKING POINTS
-─────────────────────────────────────────────────────────────
-Opening:     "We value the CloudStack relationship and want to
-             renew. Our review identified three areas where the
-             current terms don't match our regulatory obligations
-             or risk tolerance."
-
-Sequence:    1. DPA first (regulatory, non-negotiable — establish
-                this early to show seriousness)
-             2. Liability cap (commercial, room to negotiate)
-             3. Governing law (preference, flexible)
-             4. SOC 2 status update (quick item, end of meeting)
-
-Close:       "We'd like to agree on the DPA framework today and
-             take the liability discussion to a second round if
-             needed. Can we target redlines by [date]?"
-
-RED LINES (do not concede)
-─────────────────────────────────────────────────────────────
-• DPA execution is a condition of renewal — not optional
-• Liability cap below 6 months requires GC escalation
-• No unlimited liability for Noor (mutual cap, not one-sided)
-
-PREPARATION GAPS
-─────────────────────────────────────────────────────────────
-⚠ CloudStack's counsel name unknown — request from account
-  manager before meeting
-⚠ Prior negotiation email history not available — check with
-  Ayesha for any direct correspondence
-⚠ CloudStack's standard DPA template not reviewed — request
-  in advance so you can pre-review before the meeting
-
-ATTORNEY REVIEW: This briefing supports preparation. All
-negotiation positions and concession authorities require
-approval from Ayesha Malik (GC) before the meeting.
-
-══════════════════════════════════════════════════════════════
-```
-
-Compare this briefing against the list you wrote during the prediction moment. Most students list "current contract terms" and "what we want changed." Fewer list "walk-away positions," "preparation gaps," or "sequencing strategy." The briefing produced all of these automatically because the meeting-briefing skill is designed for negotiation preparation, not general-purpose summarisation.
+Compare this briefing against the list you wrote during the prediction moment. Most students list "current contract terms" and "what we want changed." Fewer list "walk-away positions," "preparation gaps," or "sequencing strategy." The briefing produces all of these because the meeting-briefing skill is designed for negotiation preparation, not general-purpose summarisation.
 
 :::warning The Agent Researches and Recommends. You Decide and Send.
 The walk-away positions in this briefing are suggestions based on industry benchmarks and the context you provided. They are starting points for Ayesha to approve, not final positions. The GC sets the actual red lines. The agent prepares the options; the attorney decides the strategy.
@@ -237,69 +148,21 @@ The meeting briefing tells you what to discuss. The **vendor obligation dashboar
 /vendor-check CloudStack Inc.
 ```
 
-**Expected output:**
+**What to expect:** The agent produces a vendor obligation dashboard. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          VENDOR OBLIGATION DASHBOARD
-          CloudStack Inc.
-══════════════════════════════════════════════════════════════
+| Section            | Intent                                                           | What to Verify                                                                                           |
+| ------------------ | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Obligation summary | Counts active obligations, overdue items, and upcoming deadlines | Check that the counts are consistent with the detailed views below                                       |
+| 30/60/90-day views | Timeline of upcoming vendor obligations                          | Should show deliverables, reports, and renewal deadlines in chronological order                          |
+| Overdue items      | Obligations past their deadline or newly required by regulation  | Look for items that became obligations after the contract was signed (e.g., new regulatory requirements) |
+| Renewal calendar   | Contract dates, auto-renewal terms, and notice deadlines         | Should identify whether the renewal window is open and the notice deadline                               |
+| SLA monitoring     | Actual performance vs. contractual guarantees                    | Should flag any SLA shortfalls as negotiation leverage                                                   |
 
-OBLIGATION SUMMARY
-─────────────────────────────────────────────────────────────
-Active Obligations:    8
-Overdue:               1 (DPA execution — no deadline set, now
-                         required under PDPA 2023)
-Due in 30 days:        2
-Due in 60 days:        1
-Due in 90 days:        1
+:::note Your output will vary
+The specific obligations, dates, and SLA figures depend on the contract data available. Focus on whether the dashboard surfaces items that feed directly into the meeting briefing — the connection between vendor obligations and negotiation preparation is the teaching point.
+:::
 
-30-DAY VIEW
-─────────────────────────────────────────────────────────────
-15 May 2026    SOC 2 Type II report delivery
-31 May 2026    Quarterly uptime report (SLA compliance)
-
-60-DAY VIEW
-─────────────────────────────────────────────────────────────
-30 Jun 2026    Annual contract renewal decision deadline
-
-90-DAY VIEW
-─────────────────────────────────────────────────────────────
-15 Jul 2026    Sub-processor list update (if DPA executed)
-
-OVERDUE ITEMS
-─────────────────────────────────────────────────────────────
-⚠ DPA execution — PDPA 2023 requires written data processing
-  agreement. No DPA exists. No deadline was set in the original
-  contract because PDPA was not yet enacted at signing.
-  RECOMMENDATION: Make DPA execution a condition of renewal
-  with a specific deadline (suggest: 30 days from renewal signing).
-
-RENEWAL CALENDAR
-─────────────────────────────────────────────────────────────
-Contract Start:    1 Jul 2025
-Contract End:      30 Jun 2026
-Auto-Renewal:      YES — 30-day notice required to prevent
-Notice Deadline:   31 May 2026
-Status:            RENEWAL WINDOW OPEN — negotiate now
-
-SLA MONITORING
-─────────────────────────────────────────────────────────────
-Guaranteed Uptime:     99.9%
-Last Quarter Actual:   99.7% (below SLA)
-SLA Credits Claimed:   None
-RECOMMENDATION:        Raise SLA shortfall in renegotiation.
-                       99.7% in Q1 means ~2.2 hours additional
-                       downtime beyond the guarantee.
-
-══════════════════════════════════════════════════════════════
-```
-
-Cross-reference this dashboard with the meeting briefing. Three items should feed directly into Thursday's agenda:
-
-1. The SOC 2 report is due 15 May -- raise it as a concrete deliverable with a deadline, not a vague request
-2. The SLA fell below 99.9% last quarter -- this strengthens your negotiation position on the liability cap
-3. The auto-renewal notice deadline is 31 May -- if the renegotiation stalls, you have a hard deadline to decide whether to renew on existing terms or give notice
+Cross-reference this dashboard with the meeting briefing. Items from the dashboard should feed directly into the meeting agenda — deliverable deadlines become concrete requests, SLA shortfalls become negotiation leverage, and auto-renewal notice deadlines create urgency.
 
 **With connectors:** If you connected Google Calendar and Gmail in Lesson 1, the meeting-briefing skill pulls the meeting invite, prior email threads with CloudStack, and any attached documents automatically. The vendor-check cross-references calendar reminders for upcoming deadlines.
 
@@ -328,38 +191,19 @@ Assign priority, ownership, deadline, and follow-up cadence
 for each item.
 ```
 
-**Expected output:**
+**What to expect:** The agent produces a structured action item tracker. Your output will vary, but look for these sections:
 
-```
-ACTION ITEMS — CloudStack Renegotiation (Thursday)
-══════════════════════════════════════════════════════════════
+| Section                 | Intent                                                                        | What to Verify                                                                                 |
+| ----------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Action item table       | Each item with owner, priority, deadline, follow-up cadence, and dependencies | Check that priorities reflect meeting urgency and that dependencies are correctly mapped       |
+| Follow-up cadence rules | Priority-based check frequency (daily/weekly/monthly)                         | HIGH items should have daily cadence, MEDIUM weekly, LOW monthly or dependency-triggered       |
+| Next steps              | Immediate post-meeting actions                                                | Should include distributing the summary and setting calendar reminders for high-priority items |
 
-# | Action                           | Owner    | Priority | Deadline      | Follow-up  | Dependencies
-──┼──────────────────────────────────┼──────────┼──────────┼───────────────┼────────────┼─────────────
-1 | DPA template from CloudStack     | Bilal    | HIGH     | Fri 17:00 PKT | Daily      | None
-2 | Liability cap approval           | Ayesha   | HIGH     | Wed EOD       | Daily      | None
-3 | SOC 2 delivery date confirmation | Bilal    | MEDIUM   | Mon EOD       | Weekly     | None
-4 | Governing law compromise draft   | Bilal    | MEDIUM   | Tue EOD       | Weekly     | Depends on #2
-5 | Follow-up meeting prep           | Bilal    | LOW      | Next Wed      | —          | Depends on #1-4
+:::note Your output will vary
+The specific action items depend on what happened in your meeting. Focus on the structure: priority assignment, ownership, deadline, and dependency mapping. The teaching point is that follow-up cadence should match priority — daily checks for items that block the next meeting, weekly for important-but-not-blocking items.
+:::
 
-FOLLOW-UP CADENCE RULES
-─────────────────────────────────────────────────────────────
-HIGH priority:    Daily check until resolved
-MEDIUM priority:  Weekly check until resolved
-LOW priority:     Monthly check or triggered by dependency
-
-NEXT STEPS
-─────────────────────────────────────────────────────────────
-• Send action item summary to all attendees within 1 hour
-• Calendar reminder: check items #1 and #2 daily
-• Prepare for follow-up meeting once items #1-4 are resolved
-• If DPA template not received by Friday, escalate to Ayesha
-  for direct follow-up with CloudStack's GC
-
-══════════════════════════════════════════════════════════════
-```
-
-The follow-up cadence is not arbitrary. HIGH priority items (the DPA template, the liability cap approval) have hard deadlines before the next meeting. If Bilal checks weekly instead of daily and the DPA template arrives late, the follow-up meeting has no redlines to exchange. MEDIUM items (SOC 2 confirmation, governing law draft) are important but do not block the next meeting. LOW items are downstream -- the follow-up meeting prep depends on everything else completing first.
+The follow-up cadence is not arbitrary. HIGH priority items have hard deadlines before the next meeting — if checked weekly instead of daily, a late delivery may leave the follow-up meeting without materials. MEDIUM items are important but do not block the next meeting. LOW items are downstream, triggered by completion of higher-priority items.
 
 > **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
 
@@ -384,69 +228,21 @@ I am General Counsel presenting to the board. I need a structured
 briefing I can use as my presentation outline.
 ```
 
-**Expected output:**
+**What to expect:** The agent produces a board-level briefing with a different structure from the vendor negotiation briefing. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          BOARD MEETING BRIEFING
-          PayGulf Technologies — Q1 Legal Update
-          Meeting: Tuesday 10:00 GST
-          Prepared for: Fatima Al-Rashidi, General Counsel
-══════════════════════════════════════════════════════════════
+| Section            | Intent                                                                     | What to Verify                                                                  |
+| ------------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Executive summary  | One-paragraph status with items requiring board awareness vs. board action | Check that the summary distinguishes between awareness items and action items   |
+| Risk highlights    | RAG-coded (RED/AMBER/GREEN) risk status for each open matter               | Should cover regulatory, litigation, and compliance risks relevant to the board |
+| Regulatory updates | Recent regulatory changes affecting the business                           | Should identify which updates require action and which are informational        |
+| Contract pipeline  | Summary of agreements in negotiation, pending signature, and renewals      | Should give the board visibility into legal workload and velocity               |
+| Compliance posture | Audit status, open findings, and next scheduled audit                      | Should reference the most recent audit and flag any unresolved findings         |
+| Budget vs. actuals | YTD spend against plan with variance explanation                           | Should explain the variance in terms the board can act on                       |
+| Preparation gaps   | Questions the board may ask that you do not yet have answers for           | Should help you prepare for likely follow-up questions                          |
 
-MEETING TYPE: Board/Committee — Legal Operations Update
-PREPARATION LEVEL: HIGH (board presentation)
-
-EXECUTIVE SUMMARY
-─────────────────────────────────────────────────────────────
-Legal department status: GREEN — no material unresolved risks.
-Two items require board awareness (DFSA consultation, Saudi
-expansion licensing). No items require board action this quarter.
-
-RISK HIGHLIGHTS
-─────────────────────────────────────────────────────────────
-1. [GREEN] DFSA licence renewal — renewal application submitted,
-   no deficiencies noted, expected approval within 30 days
-2. [AMBER] Saudi expansion — SAMA outsourcing regulations require
-   local data residency for payment processing. Legal is evaluating
-   two cloud providers with Saudi data centres.
-3. [GREEN] No pending litigation or threatened disputes
-
-REGULATORY UPDATES
-─────────────────────────────────────────────────────────────
-• DFSA consultation paper on AI in financial services — response
-  deadline 15 June. Legal is drafting a response.
-• UAE PDPL enforcement guidance published — no material changes
-  to PayGulf's current compliance posture
-• SAMA updated outsourcing framework — affects Saudi expansion
-  timeline (see Risk #2)
-
-CONTRACT PIPELINE
-─────────────────────────────────────────────────────────────
-New Agreements:    3 in negotiation, 2 pending signature
-Renewals:          5 due this quarter (all on track)
-Terminated:        0
-
-COMPLIANCE POSTURE
-─────────────────────────────────────────────────────────────
-Last Audit:        Q4 2025 (internal)
-Open Findings:     0 — all 3 findings from Q4 closed
-Next Audit:        Q2 2026 (external — DFSA annual review)
-
-BUDGET
-─────────────────────────────────────────────────────────────
-YTD Spend:         AED 1.2M (92% of plan)
-Variance:          Under budget by AED 105K (external counsel
-                   spend lower than projected due to in-house
-                   contract review capability)
-
-PREPARATION GAPS
-─────────────────────────────────────────────────────────────
-⚠ Saudi expansion legal cost estimate not yet finalised —
-  board may ask. Prepare a range (AED 150-250K).
-
-══════════════════════════════════════════════════════════════
-```
+:::note Your output will vary
+The specific risk items, regulatory updates, and budget figures depend on the context you provide. Focus on the structural difference from the vendor negotiation briefing: board briefings use RAG status codes, executive summaries, and budget variance — not talking points and walk-away positions. The teaching point is that the same skill adapts its output structure to the meeting type and audience.
+:::
 
 Notice the structural difference. The vendor negotiation briefing focused on talking points, red lines, and walk-away positions. The board briefing focuses on risk status (RAG colour coding), regulatory updates, and budget variance. Same skill, different meeting type, different output structure. The meeting-briefing skill produces what the audience needs, not a generic document.
 

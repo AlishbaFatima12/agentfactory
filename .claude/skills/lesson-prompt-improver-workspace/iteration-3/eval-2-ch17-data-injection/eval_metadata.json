@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "eval_name": "ch17-data-injection",
+  "prompt": "Review this Ch17 lesson for prompt defects — check all six types: apps/learn-app/docs/03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/17-finance-domain-agents/04-from-assistant-to-agent.md",
+  "expected_output": "Identifies inline data injection patterns (paste-based data injection in prompts) and possibly missing skill names. Should NOT flag 'Claude in Excel' as wrong since Ch17 uses it correctly.",
+  "expectations": [
+    "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+    "Identifies inline data injection or paste-based patterns in exercise prompts",
+    "Checks for missing skill names in exercise prompts",
+    "Produces a prioritised defect summary (Defect 1 highest priority)",
+    "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)"
+  ]
+}
