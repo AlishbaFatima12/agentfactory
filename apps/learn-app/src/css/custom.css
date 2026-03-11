@@ -319,6 +319,8 @@ ul.tabs[role="tablist"] {
    Animations
    ============================================ */
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
+
 @keyframes scale-in {
   from {
     opacity: 0;
@@ -347,6 +349,8 @@ html[lang="ur"] .markdown,
 html[lang="ur"] .theme-doc-markdown {
   direction: rtl;
   text-align: right;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  line-height: 1.8;
 }
 
 /* Floating action bar — keep at physical bottom-right regardless of document direction */

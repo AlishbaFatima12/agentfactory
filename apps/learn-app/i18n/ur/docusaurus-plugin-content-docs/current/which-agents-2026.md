@@ -1,6 +1,6 @@
 ---
 title: "2026 میں آپ کو کون سے اے آئی ملازمین استعمال کرنے چاہییں؟"
-description: "پانچ اے آئی ٹولز — آپ کون ہیں اور آپ کو کیا چاہیے، اس کے مطابق چنے گئے۔ ایک منٹ سے بھی کم وقت میں اپنا آغاز طے کریں۔"
+description: "پانچ اے آئی ٹولز — آپ کون ہیں اور آپ کو کیا درکار ہے، اس کے مطابق منتخب کیے گئے۔ ایک منٹ سے بھی کم وقت میں اپنا درست آغاز طے کریں۔"
 sidebar_position: -1.5
 pagination_prev: thesis
 keywords:
@@ -23,7 +23,6 @@ keywords:
   margin: '0 auto'
 }}>
 
-
 <p style={{
   fontSize: '1.1rem',
   lineHeight: '1.8',
@@ -32,7 +31,7 @@ keywords:
   color: 'var(--ifm-color-emphasis-700)',
   marginBottom: '1.5rem'
 }}>
-Agent Factory کا نظریہ کہتا ہے کہ مستقبل اُن اے آئی ملازمین کا ہے جو نتائج فراہم کرتے ہیں۔ اس پوری کتاب میں آپ انہی پانچ کے ساتھ کام کریں گے۔
+<span dir="ltr">Agent Factory</span> کا بنیادی نظریہ یہ ہے کہ مستقبل اُن اے آئی ملازمین کا ہے جو محض گفتگو نہیں کرتے، بلکہ حقیقی نتائج فراہم کرتے ہیں۔ اس پوری کتاب میں آپ انہی پانچ ٹولز کے ساتھ کام کریں گے۔
 </p>
 
 </div>
@@ -41,36 +40,36 @@ Agent Factory کا نظریہ کہتا ہے کہ مستقبل اُن اے آئی
 
 ## اپنا آغاز یہاں سے تلاش کریں
 
-اپنا پہلا اے آئی ملازم چننے کا سب سے آسان طریقہ یہ ہے کہ آپ چار سوال پوچھیں: آپ کہاں کام کرنا چاہتے ہیں—ٹرمنل (terminal)، ڈیسک ٹاپ ایپ (desktop app)، یا میسجنگ ایپ (messaging app)؟ آپ اسے کتنی خودمختاری دینا چاہتے ہیں—آپ کے ساتھ مل کر کام کرے یا خود اپنی طرف سے tasks چلائے؟ آپ کا ڈیٹا کہاں موجود ہے—مقامی فائلیں (local files)، ادارہ جاتی نظام (enterprise systems)، یا چیٹ ورک فلو (chat workflows)؟ اور آپ کے سیکیورٹی تقاضے کتنے سخت ہیں؟ جب ان چاروں سوالوں کے جواب واضح ہو جائیں تو انتخاب بہت آسان ہو جاتا ہے۔
+اپنا پہلا اے آئی ملازم چننے کا سب سے آسان طریقہ یہ ہے کہ آپ چار سوالات کے جواب واضح کریں: آپ کہاں کام کرنا چاہتے ہیں — ٹرمنل میں، ڈیسک ٹاپ ایپ میں، یا میسجنگ ایپ میں؟ آپ اسے کتنی خودمختاری دینا چاہتے ہیں — کیا وہ آپ کے ساتھ مل کر کام کرے، یا خود اپنی طرف سے کام چلائے؟ آپ کا ڈیٹا کہاں موجود ہے — مقامی فائلوں میں، ادارہ جاتی نظاموں میں، یا چیٹ کے کام کے بہاؤ میں؟ اور آپ کے سیکیورٹی تقاضے کتنے سخت ہیں؟ جب ان چار سوالوں کے جواب واضح ہو جائیں تو انتخاب بھی کہیں آسان ہو جاتا ہے۔
 
-آپ کو پہلے ہی دن یہ پانچوں ٹولز درکار نہیں ہوں گے۔ نیچے خود کو تلاش کریں، اور وہیں سے آغاز کریں۔
+آپ کو پہلے ہی دن یہ پانچوں ٹولز درکار نہیں ہوں گے۔ نیچے اپنی صورتِ حال تلاش کریں، اور وہیں سے آغاز کریں۔
 
 | آپ ہیں... | آغاز کریں | کیوں |
-| ----------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **ایسے developer یا engineer** جو software بناتے ہیں | **Claude Code** + **OpenClaw**   | Claude Code آپ کا ہمہ مقصدی اے آئی ملازم ہے — یہ براہِ راست آپ کے کمپیوٹر سے کام کرتا ہے۔ OpenClaw آپ کے فون اور میسجنگ ایپس میں ایک ذاتی اے آئی معاون کا اضافہ کرتا ہے۔ |
-| **ایسے domain expert** جو finance، law، operations، یا کسی اور شعبے میں کام کرتے ہیں | **Claude Cowork** + **OpenClaw** | Cowork آپ کے کاروباری ورک فلو—رپورٹس، تجزیہ، دستاویزات—کو سنبھالتا ہے، اور اس کے لیے کسی technical setup کی ضرورت نہیں ہوتی۔ OpenClaw WhatsApp یا Slack کے ذریعے آپ کے روزمرہ کام سنبھالتا ہے۔ |
-| **ایسے executive یا ٹیم لیڈر** جو اے آئی اپنانے کی رہنمائی کر رہے ہیں | **Claude Cowork**                | Cowork آپ کی ٹیم کے موجودہ ٹولز (Google Drive، Gmail، Excel، DocuSign) سے جڑتا ہے اور طے شدہ tasks خودکار طور پر چلاتا ہے۔ یہاں سے آغاز کریں تاکہ آپ حقیقت میں محسوس کر سکیں کہ اے آئی ملازمین کے ساتھ کام کرنا کیسا لگتا ہے۔ |
-| **ایسے product manager یا architect** جو اے آئی سے تقویت یافتہ systems ڈیزائن کرتے ہیں | **Claude Code** + **Codex**      | عمومی کام اور prototyping کے لیے Claude Code استعمال کریں۔ جب پیچیدہ system designs پر بھاری درجے کی reasoning درکار ہو تو Codex استعمال کریں۔ |
-| **ایسے شخص** جو سیکیورٹی اور data control کو بہت اہمیت دیتے ہیں | **Cowork, Claude Code, NanoClaw** | NanoClaw ہر اے آئی ملازم کو آپ کی مشین کے اندر ایک بند container میں چلاتا ہے۔ کچھ بھی باہر نہیں نکلتا۔ اس کا codebase اتنا چھوٹا ہے کہ آپ خود پڑھ اور audit کر سکتے ہیں۔ |
+| --- | --- | --- |
+| **ایسے ڈویلپر یا انجینئر** جو سافٹ ویئر بناتے ہیں | **<span dir="ltr">Claude Code</span>** + **<span dir="ltr">OpenClaw</span>** | <span dir="ltr">Claude Code</span> آپ کا ہمہ مقصدی اے آئی ملازم ہے — یہ براہِ راست آپ کے کمپیوٹر پر کام کرتا ہے۔ <span dir="ltr">OpenClaw</span> آپ کے فون اور میسجنگ ایپس میں ایک ذاتی اے آئی معاون کا اضافہ کرتا ہے۔ |
+| **ایسے شعبہ جاتی ماہر** جو مالیات، قانون، آپریشنز، یا کسی اور شعبے میں کام کرتے ہیں | **<span dir="ltr">Claude Cowork</span>** + **<span dir="ltr">OpenClaw</span>** | <span dir="ltr">Cowork</span> آپ کے کاروباری کام کے بہاؤ — رپورٹس، تجزیے، دستاویزات — سنبھالتا ہے، اور اس کے لیے کسی پیچیدہ تکنیکی ترتیب کی ضرورت نہیں ہوتی۔ <span dir="ltr">OpenClaw</span> <span dir="ltr">WhatsApp</span> یا <span dir="ltr">Slack</span> کے ذریعے آپ کے روزمرہ کام سنبھالتا ہے۔ |
+| **ایسے ادارہ جاتی رہنما یا ٹیم لیڈر** جو اے آئی اپنانے کی رہنمائی کر رہے ہیں | **<span dir="ltr">Claude Cowork</span>** | <span dir="ltr">Cowork</span> آپ کی ٹیم کے موجودہ ٹولز (<span dir="ltr">Google Drive</span>، <span dir="ltr">Gmail</span>، <span dir="ltr">Excel</span>، <span dir="ltr">DocuSign</span>) سے جڑتا ہے اور طے شدہ کام خودکار طور پر چلاتا ہے۔ یہاں سے آغاز کریں تاکہ آپ عملی طور پر محسوس کر سکیں کہ اے آئی ملازمین کے ساتھ کام کرنا کیسا لگتا ہے۔ |
+| **ایسے پروڈکٹ مینیجر یا معمار** جو اے آئی سے تقویت یافتہ نظام ڈیزائن کرتے ہیں | **<span dir="ltr">Claude Code</span>** + **<span dir="ltr">Codex</span>** | عمومی کام اور ابتدائی نمونہ سازی کے لیے <span dir="ltr">Claude Code</span> استعمال کریں۔ جب پیچیدہ نظامی ڈیزائن پر گہری سوچ درکار ہو، تو <span dir="ltr">Codex</span> بہتر انتخاب ہے۔ |
+| **ایسے افراد** جو سیکیورٹی اور ڈیٹا پر قابو کو بہت اہمیت دیتے ہیں | **<span dir="ltr">Cowork</span>، <span dir="ltr">Claude Code</span>، <span dir="ltr">NanoClaw</span>** | <span dir="ltr">NanoClaw</span> ہر اے آئی ملازم کو آپ کی مشین کے اندر ایک بند کنٹینر میں چلاتا ہے۔ کچھ بھی باہر نہیں جاتا۔ اس کا بنیادی کوڈ اتنا مختصر ہے کہ آپ خود اسے پڑھ اور جانچ سکتے ہیں۔ |
 
 ---
 
-## پہلے دن کیا install کریں
+## پہلے دن کیا نصب کریں
 
-**اگر آپ developer ہیں:** [OpenClaw](https://openclaw.ai) اور [Claude Code](https://claude.com/code) install کریں۔ حصہ 1 سے ہی آپ دونوں استعمال کریں گے۔
+**اگر آپ ڈویلپر ہیں:** [<span dir="ltr">OpenClaw</span>](https://openclaw.ai) اور [<span dir="ltr">Claude Code</span>](https://claude.com/code) نصب کریں۔ حصہ 1 سے ہی آپ دونوں استعمال کریں گے۔
 
-**اگر آپ developer نہیں ہیں:** [OpenClaw](https://openclaw.ai) اور [Claude Cowork](https://claude.com/cowork) (Claude Desktop کے اندر) install کریں۔ command line درکار نہیں۔
+**اگر آپ ڈویلپر نہیں ہیں:** [<span dir="ltr">OpenClaw</span>](https://openclaw.ai) اور [<span dir="ltr">Claude Cowork</span>](https://claude.com/cowork) (<span dir="ltr">Claude Desktop</span> کے اندر) نصب کریں۔ کمانڈ لائن درکار نہیں۔
 
 ---
 
-## آپ کے Agent Fleet کی لاگت
+## آپ کے ایجنٹ فلیٹ کی لاگت
 
-اے آئی ملازمین کے ایک فلیٹ (agent fleet) کو چلانے کے لیے API اور subscription لاگت سنبھالنی پڑتی ہے۔ آپ کو یہ اخراجات متوقع رکھنے چاہییں:
+اے آئی ملازمین کے ایک فلیٹ کو چلانے کے لیے <span dir="ltr">API</span> اور رکنیتی لاگت کو ذہن میں رکھنا ضروری ہے۔ مجموعی طور پر آپ کو درج ذیل اخراجات متوقع رکھنے چاہییں:
 
-*   **OpenClaw اور NanoClaw (مفت + API لاگت):** software مکمل طور پر کھلے ماخذ (open-source) پر مبنی ہے (MIT License)۔ تاہم، چونکہ یہ مقامی طور پر چلتے ہیں مگر reasoning کو کلاؤڈ میں process کرتے ہیں، اس لیے آپ [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing)، [OpenAI](https://openai.com/api/pricing/)، یا [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing) کو فی ٹوکن API لاگت ادا کریں گے۔ بھاری روزانہ استعمال کی صورت میں **$15 سے $40 ماہانہ** API credits خرچ ہونے کی توقع رکھیں۔
-*   **Claude Code (مفت + Subscription):** CLI ٹول مفت ہے، مگر کم از کم **$20 فی صارف ماہانہ** کا [Pro Plan](https://claude.com/pricing) درکار ہے۔ لاگت کم کرنے کے طریقوں کے لیے باب 3 دیکھیں۔
-*   **Claude Cowork (Subscription):** Cowork [Anthropic کے اعلیٰ درجے کے plans](https://claude.com/pricing) میں شامل ہے (عموماً Pro، Max، یا Enterprise، جن کی شروعات تقریباً **$20 فی صارف ماہانہ** سے ہوتی ہے اور زیادہ سے زیادہ **$200 فی صارف ماہانہ** تک جاتی ہے)۔ یہ فی ٹوکن API billing کے بغیر desktop files تک گہری رسائی فراہم کرتا ہے۔ **ان plans کے ذریعے آپ Claude Code اور Claude Cowork دونوں استعمال کر سکتے ہیں۔** لاگت کم کرنے کے طریقوں کے لیے باب 3 دیکھیں۔
-*   **Codex / GPT-5.4-Codex (Subscription/API):** OpenAI کے cloud-mode engineering environments کے لیے [premium OpenAI subscription](https://developers.openai.com/codex/pricing/) یا بھاری API usage درکار ہوتی ہے، اور آپ کے system architecture tasks کی پیچیدگی کے مطابق یہ لاگت بڑھ سکتی ہے۔
+* **<span dir="ltr">OpenClaw</span> اور <span dir="ltr">NanoClaw</span> (مفت + <span dir="ltr">API</span> لاگت):** یہ سافٹ ویئر مکمل طور پر کھلے ماخذ پر مبنی ہے (<span dir="ltr">MIT License</span>)۔ تاہم، چونکہ یہ مقامی طور پر چلتے ہیں مگر استدلال کو کلاؤڈ میں انجام دیتے ہیں، اس لیے آپ [<span dir="ltr">Anthropic</span>](https://platform.claude.com/docs/en/about-claude/pricing)، [<span dir="ltr">OpenAI</span>](https://openai.com/api/pricing/)، یا [<span dir="ltr">DeepSeek</span>](https://api-docs.deepseek.com/quick_start/pricing) کو فی ٹوکن <span dir="ltr">API</span> لاگت ادا کریں گے۔ بھاری روزانہ استعمال کی صورت میں **<span dir="ltr">$15–$40 ماہانہ</span>** کے <span dir="ltr">API</span> کریڈٹس خرچ ہونے کی توقع رکھیں۔
+* **<span dir="ltr">Claude Code</span> (مفت + رکنیت):** <span dir="ltr">CLI</span> ٹول مفت ہے، مگر کم از کم **<span dir="ltr">$20 فی صارف ماہانہ</span>** کا [<span dir="ltr">Pro Plan</span>](https://claude.com/pricing) درکار ہے۔ لاگت کم کرنے کے طریقوں کے لیے باب 3 دیکھیں۔
+* **<span dir="ltr">Claude Cowork</span> (رکنیت):** <span dir="ltr">Cowork</span> [<span dir="ltr">Anthropic</span> کے اعلیٰ درجے کے منصوبوں](https://claude.com/pricing) میں شامل ہے (عموماً <span dir="ltr">Pro</span>، <span dir="ltr">Max</span>، یا <span dir="ltr">Enterprise</span>)، جن کی قیمت تقریباً **<span dir="ltr">$20</span>** سے شروع ہو کر **<span dir="ltr">$200 فی صارف ماہانہ</span>** تک جا سکتی ہے۔ یہ فی ٹوکن بلنگ کے بغیر ڈیسک ٹاپ فائلوں تک گہری رسائی فراہم کرتا ہے۔ **اسی منصوبے کے ذریعے آپ <span dir="ltr">Claude Code</span> اور <span dir="ltr">Claude Cowork</span> دونوں استعمال کر سکتے ہیں۔**
+* **<span dir="ltr">Codex / GPT-5.4-Codex</span> (رکنیت/<span dir="ltr">API</span>):** <span dir="ltr">OpenAI</span> کے کلاؤڈ موڈ انجینئرنگ ماحول کے لیے [اعلیٰ درجے کی <span dir="ltr">OpenAI</span> رکنیت](https://developers.openai.com/codex/pricing/) یا بھاری <span dir="ltr">API</span> استعمال درکار ہوتا ہے، اور آپ کے نظامی معمارتی کاموں کی پیچیدگی کے مطابق یہ لاگت تیزی سے بڑھ سکتی ہے۔
 
 ---
 
@@ -78,37 +77,37 @@ Agent Factory کا نظریہ کہتا ہے کہ مستقبل اُن اے آئی
 
 ### Cowork — آپ کا ادارہ جاتی اے آئی ملازم
 
-Cowork، Anthropic کا ایسا اے آئی ملازم ہے جو اُن کاروباری professionals کے لیے بنایا گیا ہے جو ٹرمنل میں کام نہیں کرتے۔ یہ macOS اور Windows پر Claude Desktop ایپ کے اندر چلتا ہے۔
+<span dir="ltr">Cowork</span>، <span dir="ltr">Anthropic</span> کا ایسا اے آئی ملازم ہے جو اُن کاروباری پیشہ ور افراد کے لیے بنایا گیا ہے جو ٹرمنل میں کام نہیں کرتے۔ یہ <span dir="ltr">macOS</span> اور <span dir="ltr">Windows</span> پر <span dir="ltr">Claude Desktop</span> ایپ کے اندر چلتا ہے۔
 
-**اسے یوں سمجھیں:** ایک باخبر ساتھی کار جو وہ کام سنبھال لیتا ہے جن کے لیے آپ کے پاس کبھی وقت نہیں ہوتا — رپورٹس بنانا، دستاویزات کا تجزیہ کرنا، فائلیں منظم کرنا، presentations تیار کرنا، اور بار بار آنے والے کام سنبھالنا۔ یہ آپ کی ٹیم کے روزمرہ ٹولز سے براہِ راست جڑتا ہے: Google Drive، Gmail، Google Calendar، DocuSign، Excel، PowerPoint، اور مزید بہت کچھ۔ connectors کی دستیابی تیزی سے بہتر ہو رہی ہے، مگر عملی طور پر یہ اب بھی آپ کے plan، آپ کی admin ترتیبات (configuration)، اور اس بات پر منحصر ہے کہ آپ کی organization نے کون سے plugins فعال کیے ہیں۔ Cowork کو ایک جامد ایپ کم اور ایک ادارہ جاتی اے آئی سطح (enterprise AI surface) زیادہ سمجھیں، جس کی افادیت اُن systems کے ساتھ بڑھتی ہے جن سے آپ کی ٹیم حقیقت میں اسے جوڑتی ہے۔
+**اسے یوں سمجھیں:** ایک باخبر ساتھی کار جو وہ کام سنبھال لیتا ہے جن کے لیے آپ کے پاس کبھی وقت نہیں ہوتا — رپورٹس بنانا، دستاویزات کا تجزیہ کرنا، فائلیں منظم کرنا، پریزنٹیشنز تیار کرنا، اور بار بار آنے والے کام سنبھالنا۔ یہ آپ کی ٹیم کے روزمرہ ٹولز سے براہِ راست جڑتا ہے: <span dir="ltr">Google Drive</span>، <span dir="ltr">Gmail</span>، <span dir="ltr">Google Calendar</span>، <span dir="ltr">DocuSign</span>، <span dir="ltr">Excel</span>، <span dir="ltr">PowerPoint</span>، اور مزید بہت کچھ۔ کنیکٹرز کی دستیابی تیزی سے بہتر ہو رہی ہے، مگر عملی طور پر یہ اب بھی آپ کے منصوبے، آپ کی منتظمانہ ترتیبات، اور اس بات پر منحصر ہے کہ آپ کے ادارے نے کون سے پلگ اِنز فعال کیے ہیں۔ <span dir="ltr">Cowork</span> کو محض ایک ایپ نہیں بلکہ ایک ادارہ جاتی اے آئی سطح سمجھنا چاہیے، جس کی افادیت اُن نظاموں کے ساتھ بڑھتی ہے جن سے آپ کی ٹیم اسے حقیقتاً جوڑتی ہے۔
 
-فروری 2026 میں Anthropic نے ایک بڑی enterprise upgrade جاری کی: private plugin marketplaces (تاکہ آپ کی company ٹھیک ٹھیک یہ قابو رکھ سکے کہ کون سی capabilities دستیاب ہوں)، HR، finance، engineering، legal، اور operations کے لیے department-specific plugins، اور ایک `/schedule` command جو آپ کو ایسے tasks ترتیب دینے دیتی ہے جو خودکار طور پر چلتے رہیں — مثلاً ہر پیر کی صبح weekly competitor analysis۔
+فروری 2026 میں <span dir="ltr">Anthropic</span> نے ایک بڑی ادارہ جاتی اپ گریڈ جاری کی: نجی پلگ اِن مارکیٹ پلیسز، انسانی وسائل، مالیات، انجینئرنگ، قانونی امور، اور آپریشنز کے لیے شعبہ وار پلگ اِنز، اور ایک `<span dir="ltr">/schedule</span>` کمانڈ جو آپ کو ایسے کام ترتیب دینے دیتی ہے جو خودکار طور پر چلتے رہیں — مثلاً ہر پیر کی صبح ہفتہ وار حریفانہ تجزیہ۔
 
-_حصہ 3 میں business-domain workflows—finance، legal، marketing، operations—کا احاطہ کیا گیا ہے؛ یہی وہ کام ہیں جن کے لیے Cowork بنایا گیا ہے۔_
+_حصہ 3 میں کاروباری شعبہ جاتی کام کے بہاؤ — مالیات، قانونی امور، مارکیٹنگ، اور آپریشنز — کا احاطہ کیا گیا ہے؛ یہی وہ کام ہیں جن کے لیے <span dir="ltr">Cowork</span> بنایا گیا ہے۔_
 
 ---
 
 ### Claude Code — آپ کا ہمہ مقصدی عام ایجنٹ
 
-Claude Code، Anthropic کا بنایا ہوا ٹول ہے اور آپ کے کمپیوٹر پر چلتا ہے۔ نام کے باوجود، یہ صرف code لکھنے سے کہیں زیادہ کام کرتا ہے۔ Anthropic نے اپنے بنیادی framework کا نام "Claude Code SDK" سے بدل کر **Claude Agent SDK** رکھا، کیونکہ teams اسے research، video production، data analysis، note-taking، اور coding سے باہر درجنوں دوسرے کاموں کے لیے استعمال کر رہی تھیں۔
+<span dir="ltr">Claude Code</span>، <span dir="ltr">Anthropic</span> کا بنایا ہوا ٹول ہے اور آپ کے کمپیوٹر پر چلتا ہے۔ نام کے باوجود، یہ صرف کوڈ لکھنے تک محدود نہیں۔ <span dir="ltr">Anthropic</span> نے اپنے بنیادی فریم ورک کا نام "<span dir="ltr">Claude Code SDK</span>" سے بدل کر **<span dir="ltr">Claude Agent SDK</span>** رکھا، کیونکہ ٹیمیں اسے تحقیق، ویڈیو تیاری، ڈیٹا کے تجزیے، نوٹ سازی، اور کوڈنگ سے باہر بھی درجنوں دوسرے کاموں کے لیے استعمال کر رہی تھیں۔
 
-**اسے یوں سمجھیں:** ایک ہمہ مقصدی ایجنٹ جو کمپیوٹر پر وہ سب کچھ کر سکتا ہے جو آپ کر سکتے ہیں، مگر زیادہ تیزی سے۔ اسے plain English میں کام دیں — اس spreadsheet کا تجزیہ کریں، یہ files منظم کریں، اس موضوع پر تحقیق کریں، یہ feature بنائیں — اور یہ steps کی منصوبہ بندی کرتا ہے، انہیں انجام دیتا ہے، اور آپ کو نتائج دکھاتا ہے۔ یہ آپ کی files پڑھتا ہے، commands چلاتا ہے، آپ کا code سنبھالتا ہے، اور یہاں تک کہ specialized helpers کو ذیلی tasks بھی سونپ سکتا ہے جو ایک ساتھ parallel میں کام کرتے ہیں۔
+**اسے یوں سمجھیں:** ایک ہمہ مقصدی ایجنٹ جو کمپیوٹر پر تقریباً وہ سب کچھ کر سکتا ہے جو آپ کر سکتے ہیں، مگر زیادہ تیزی سے۔ اسے سادہ زبان میں کام دیں — اس <span dir="ltr">spreadsheet</span> کا تجزیہ کریں، یہ فائلیں منظم کریں، اس موضوع پر تحقیق کریں، یہ فیچر بنائیں — اور یہ قدموں کی منصوبہ بندی کرتا ہے، انہیں انجام دیتا ہے، اور آپ کو نتائج دکھاتا ہے۔ یہ آپ کی فائلیں پڑھتا ہے، کمانڈز چلاتا ہے، آپ کا کوڈ سنبھالتا ہے، اور ذیلی کام خصوصی معاونوں کے سپرد بھی کر سکتا ہے جو ایک ساتھ متوازی انداز میں کام کرتے ہیں۔
 
-اس پوری کتاب میں Claude Code وہ بنیادی ٹول ہوگا جسے آپ سب سے زیادہ استعمال کریں گے۔ اس کا مہارتی نظام (skills system)—یعنی دوبارہ قابلِ استعمال ہدایتی فائلیں جنہیں SKILL.md کہا جاتا ہے—اور اس کی specialized ذیلی ملازمین پیدا کرنے کی صلاحیت، Agent Factory طریقۂ کار کی بنیادی اینٹیں ہیں۔
+اس پوری کتاب میں <span dir="ltr">Claude Code</span> وہ بنیادی ٹول ہوگا جسے آپ سب سے زیادہ استعمال کریں گے۔ اس کا مہارتی نظام—یعنی دوبارہ قابلِ استعمال ہدایتی فائلیں جنہیں <span dir="ltr">SKILL.md</span> کہا جاتا ہے—اور اس کی ذیلی ماہر معاون پیدا کرنے کی صلاحیت، <span dir="ltr">Agent Factory</span> طریقۂ کار کی بنیادی اینٹیں ہیں۔
 
-_باب 5 میں Claude Code کو engine بنا کر Spec-Driven Development متعارف کرائی گئی ہے۔ آپ اسے کتاب کے ہر حصے میں استعمال کریں گے۔_
+_باب 5 میں <span dir="ltr">Claude Code</span> کو مرکزی محرک بنا کر <span dir="ltr">Spec-Driven Development</span> متعارف کرائی گئی ہے۔ آپ اسے کتاب کے ہر حصے میں استعمال کریں گے۔_
 
 ---
 
 ### Codex — آپ کا طاقتور انجینئرنگ اے آئی ملازم
 
-Codex، OpenAI کا عام نوعیت کا ایسا اے آئی ایجنٹ ہے جو مشکل engineering مسائل کے لیے بنایا گیا ہے۔ یہ دو طریقوں سے چلتا ہے: ایک cloud mode، جس میں یہ ایک الگ تھلگ ماحول میں مکمل طور پر خود کام کرتا ہے (عموماً ہر task کے لیے 1–30 منٹ)، اور ایک command-line ٹول، جو آپ کی machine پر مقامی طور پر چلتا ہے۔
+<span dir="ltr">Codex</span>، <span dir="ltr">OpenAI</span> کا ایسا عام نوعیت کا اے آئی ایجنٹ ہے جو مشکل انجینئرنگ مسائل کے لیے بنایا گیا ہے۔ یہ دو طریقوں سے چلتا ہے: ایک کلاؤڈ موڈ، جس میں یہ ایک الگ تھلگ ماحول میں مکمل طور پر خود کام کرتا ہے، اور دوسرا ایک کمانڈ لائن ٹول، جو آپ کے کمپیوٹر پر مقامی طور پر چلتا ہے۔
 
-**اسے یوں سمجھیں:** وہ specialist جسے آپ سب سے مشکل کاموں کے لیے بلاتے ہیں۔ جہاں Claude Code روزمرہ کام سنبھالتا ہے، وہاں Codex پیچیدہ reasoning کے لیے بنایا گیا ہے — ایسی system architectures ڈیزائن کرنے کے لیے جن میں گہری سوچ درکار ہو۔ اس کا تازہ ترین model (GPT-5.3-Codex) frontier coding صلاحیت کو advanced reasoning کے ساتھ جوڑتا ہے، اور یہ code سے آگے بڑھ کر وسیع تر knowledge work میں بھی پھیل رہا ہے۔
+**اسے یوں سمجھیں:** وہ ماہر جسے آپ سب سے مشکل کاموں کے لیے بلاتے ہیں۔ جہاں <span dir="ltr">Claude Code</span> روزمرہ کام سنبھالتا ہے، وہاں <span dir="ltr">Codex</span> پیچیدہ استدلال کے لیے بنایا گیا ہے — ایسے نظامی ڈھانچے ڈیزائن کرنے کے لیے جن میں گہری سوچ درکار ہو۔ اس کا تازہ ترین ماڈل (<span dir="ltr">GPT-5.3-Codex</span>) اعلیٰ درجے کی کوڈنگ صلاحیت کو گہرے استدلال کے ساتھ جوڑتا ہے، اور یہ کوڈ سے آگے بڑھ کر وسیع تر علمی کام میں بھی پھیل رہا ہے۔
 
-cloud mode میں آپ اپنی ضرورت بیان کرتے ہیں، اور Codex ایک بند sandbox کے اندر خود مختار انداز میں منصوبہ بندی، تعمیر، testing، اور iteration کرتا رہتا ہے، یہاں تک کہ کام آپ کے tests پر پورا اتر جائے۔ آپ کئی tasks ایک ساتھ parallel میں چلا سکتے ہیں، اور ہر ایک اپنے الگ ماحول میں چلتا ہے۔
+کلاؤڈ موڈ میں آپ اپنی ضرورت بیان کرتے ہیں، اور <span dir="ltr">Codex</span> ایک بند <span dir="ltr">sandbox</span> کے اندر خودمختار انداز میں منصوبہ بندی، تعمیر، جانچ، اور بار بار بہتری کرتا رہتا ہے، یہاں تک کہ کام آپ کے جانچ کے معیار پر پورا اتر جائے۔ آپ کئی کام ایک ساتھ متوازی انداز میں چلا سکتے ہیں، اور ہر ایک اپنے الگ ماحول میں چلتا ہے۔
 
-Codex وہاں استعمال کریں جہاں task engineering-heavy، اچھی طرح متعین (well-scoped)، اور testable ہو: بڑے refactors، migrations، architecture spikes، بڑے repos میں debugging، یا ایسا parallel implementation work جسے isolated environments سے فائدہ پہنچتا ہو۔ جب آپ چاہتے ہوں کہ کوئی ایجنٹ ایک بڑے software task کو ابتدا سے انتہا تک سنبھالے، نہ کہ صرف ایک file کے اندر autocomplete کرے، تو Codex کی طرف رجوع کریں۔
+<span dir="ltr">Codex</span> وہاں استعمال کریں جہاں کام انجینئرنگ کے لحاظ سے بھاری، اچھی طرح متعین، اور جانچ کے قابل ہو: بڑے پیمانے کی ریفیکٹرنگ، منتقلیاں، معماریاتی تجربات، بڑے ذخائر میں خرابیوں کی تلاش، یا ایسا متوازی نفاذی کام جسے الگ ماحولوں سے فائدہ پہنچتا ہو۔ جب آپ چاہتے ہوں کہ کوئی ایجنٹ ایک بڑے سافٹ ویئر کام کو ابتدا سے انتہا تک سنبھالے، نہ کہ صرف ایک فائل کے اندر خودکار تکمیل کرے، تو <span dir="ltr">Codex</span> مناسب انتخاب ہے۔
 
 ---
 
@@ -116,96 +115,101 @@ Codex وہاں استعمال کریں جہاں task engineering-heavy، اچھ�
 
 ### OpenClaw — آپ کا ذاتی اے آئی ملازم
 
-Peter Steinberger کے تخلیق کردہ، اور **OpenAI** اور **Vercel** کی پشت پناہی رکھنے والے OpenClaw نے 2026 کے اوائل میں GitHub پر سب سے زیادہ starred software project بننے کا اعزاز حاصل کیا — اور تقریباً 120 دنوں میں 250,000 سے زیادہ stars حاصل کر لیے۔
+<span dir="ltr">Peter Steinberger</span> کے تخلیق کردہ، اور **<span dir="ltr">OpenAI</span>** اور **<span dir="ltr">Vercel</span>** کی پشت پناہی رکھنے والے <span dir="ltr">OpenClaw</span> نے 2026 کے اوائل میں <span dir="ltr">GitHub</span> پر سب سے زیادہ ستارے حاصل کرنے والے سافٹ ویئر منصوبے کا مقام حاصل کیا، اور تقریباً 120 دنوں میں <span dir="ltr">250,000+</span> ستاروں سے آگے نکل گیا۔
 
-**اسے یوں سمجھیں:** ایک نہ تھکنے والا ذاتی معاون جو آپ کی میسجنگ ایپس سے جڑ جاتا ہے۔ یہ آپ کی email چھانٹتا ہے، calendar سنبھالتا ہے، flights book کرتا ہے، insurance paperwork نمٹاتا ہے، اور وہ روزمرہ کام چلاتا ہے جو آپ اسے سکھاتے ہیں — یہ سب WhatsApp، Telegram، Slack، یا اُن 50+ میسجنگ ایپس کے ذریعے جنہیں آپ پہلے ہی استعمال کرتے ہیں۔
+**اسے یوں سمجھیں:** ایک نہ تھکنے والا ذاتی معاون جو آپ کی میسجنگ ایپس سے جڑ جاتا ہے۔ یہ آپ کی ای میل چھانٹتا ہے، کیلنڈر سنبھالتا ہے، پروازوں کی بکنگ کرتا ہے، انشورنس کے کاغذات نمٹاتا ہے، اور وہ روزمرہ کام انجام دیتا ہے جو آپ اسے سکھاتے ہیں — یہ سب <span dir="ltr">WhatsApp</span>، <span dir="ltr">Telegram</span>، <span dir="ltr">Slack</span>، یا ان <span dir="ltr">50+</span> میسجنگ ایپس کے ذریعے جنہیں آپ پہلے ہی استعمال کرتے ہیں۔
 
-OpenClaw مکمل طور پر کھلے ماخذ (open source) پر مبنی ہے (MIT license)۔ آپ اسے اپنی machine پر چلاتے ہیں، اپنا پسندیدہ اے آئی model منتخب کرتے ہیں (Claude، GPT، DeepSeek، یا دیگر)، اور اسے ClawHub marketplace کی 5,700 سے زیادہ community-built مہارتوں (skills) کے ذریعے پھیلاتے ہیں۔ اس کی شخصیت ایک سادہ Markdown file کے ذریعے ترتیب دی جاتی ہے جسے SOUL.md کہا جاتا ہے — یہی وہ format ہے جس میں آپ اس پوری کتاب کے دوران تفصیلات (specifications) لکھنا سیکھیں گے۔
+<span dir="ltr">OpenClaw</span> مکمل طور پر کھلا ماخذ ہے (<span dir="ltr">MIT license</span>)۔ آپ اسے اپنے کمپیوٹر پر چلاتے ہیں، اپنی پسند کا اے آئی ماڈل منتخب کرتے ہیں (<span dir="ltr">Claude</span>، <span dir="ltr">GPT</span>، <span dir="ltr">DeepSeek</span>، یا دیگر)، اور <span dir="ltr">ClawHub</span> مارکیٹ پلیس سے دستیاب <span dir="ltr">5,700+</span> کمیونٹی کی بنائی ہوئی مہارتوں کے ذریعے اسے بڑھاتے ہیں۔ اس کی شخصیت ایک سادہ مارک ڈاؤن فائل <span dir="ltr">SOUL.md</span> کے ذریعے ترتیب دی جاتی ہے — یہی وہ فارمیٹ ہے جس میں آپ اس پوری کتاب کے دوران اسپیسفیکیشنز لکھنا سیکھیں گے۔
 
-_باب 7 میں OpenClaw کے ساتھ آپ کا پہلا اے آئی ملازم ترتیب دینے کا مرحلہ وار طریقہ دیا گیا ہے۔_
+_باب 7 میں <span dir="ltr">OpenClaw</span> کے ساتھ آپ کا پہلا اے آئی ملازم ترتیب دینے کا مرحلہ وار طریقہ دیا گیا ہے۔_
 
 ---
 
 ### NanoClaw — آپ کا محفوظ اے آئی ملازم
 
-[NanoClaw](https://github.com/qwibitai/nanoclaw) OpenClaw کا ایک ہلکا پھلکا، سیکیورٹی-فرسٹ متبادل ہے۔ جہاں OpenClaw میں تقریباً پانچ لاکھ سطورِ کوڈ ہیں، وہاں NanoClaw وہی بنیادی تجربہ — یعنی آپ کی میسجنگ ایپس میں ایک اے آئی معاون — ایک ایسے codebase میں فراہم کرتا ہے جو اتنا چھوٹا ہے کہ آپ خود اسے پڑھ اور سمجھ سکیں۔
+[<span dir="ltr">NanoClaw</span>](https://github.com/qwibitai/nanoclaw) <span dir="ltr">OpenClaw</span> کا ایک ہلکا پھلکا، سیکیورٹی کو ترجیح دینے والا متبادل ہے۔ جہاں <span dir="ltr">OpenClaw</span> میں تقریباً پانچ لاکھ سطورِ کوڈ ہیں، وہاں <span dir="ltr">NanoClaw</span> وہی بنیادی تجربہ — یعنی آپ کی میسجنگ ایپس میں ایک اے آئی معاون — ایک ایسے کوڈ بیس میں فراہم کرتا ہے جو اتنا مختصر ہے کہ آپ خود اسے پڑھ اور سمجھ سکیں۔
 
-**اسے یوں سمجھیں:** OpenClaw، مگر بند دروازے کے ساتھ۔ ہر اے آئی ملازم آپ کی machine پر اپنے الگ بند container میں چلتا ہے — ایک ایسی دیوار بند جگہ جہاں وہ صرف وہی files دیکھ سکتا ہے جن کی آپ واضح اجازت دیتے ہیں، اور اسے internet access بھی تبھی ملتی ہے جب آپ اسے دیں۔ یہ کوئی software setting نہیں؛ اسے operating system خود نافذ کرتا ہے (Linux پر Linux containers، اور macOS پر Apple Containers)۔
+**اسے یوں سمجھیں:** <span dir="ltr">OpenClaw</span>، مگر بند دروازے کے ساتھ۔ ہر اے آئی ملازم آپ کے کمپیوٹر پر اپنے الگ بند کنٹینر میں چلتا ہے — ایک ایسی حدبندی والی محفوظ جگہ جہاں وہ صرف وہی فائلیں دیکھ سکتا ہے جن کی آپ واضح اجازت دیتے ہیں، اور انٹرنیٹ تک رسائی بھی اسے تبھی ملتی ہے جب آپ خود دیں۔ یہ محض سافٹ ویئر کی کوئی ترتیب نہیں؛ اسے <span dir="ltr">operating system</span> خود نافذ کرتا ہے (<span dir="ltr">Linux</span> پر <span dir="ltr">Linux containers</span>، اور <span dir="ltr">macOS</span> پر <span dir="ltr">Apple Containers</span>)۔
 
-NanoClaw WhatsApp، Telegram، Slack، Discord، اور Gmail سے جڑتا ہے۔ اس میں persistent memory، scheduled jobs (روزانہ briefings، ہفتہ وار reports، pipeline monitoring)، اور ذاتی اے آئی معاونین میں پہلی بار **ایجنٹ جھنڈ (agent swarms)** کی سپورٹ موجود ہے — یعنی specialized اے آئی ملازمین کی ایسی ٹیمیں جو آپ کی chat کے اندر باہمی تعاون کرتی ہیں۔ یہ براہِ راست Anthropic کے Agents SDK پر چلتا ہے، جو وہی framework ہے جس پر آپ حصہ 5 میں خود بنانا سیکھیں گے۔
+<span dir="ltr">NanoClaw</span> <span dir="ltr">WhatsApp</span>، <span dir="ltr">Telegram</span>، <span dir="ltr">Slack</span>، <span dir="ltr">Discord</span>، اور <span dir="ltr">Gmail</span> سے جڑتا ہے۔ اس میں مستقل یادداشت، طے شدہ کام (روزانہ بریفنگز، ہفتہ وار رپورٹس، پائپ لائن کی نگرانی)، اور ذاتی اے آئی معاونین میں پہلی بار **<span dir="ltr">agent swarms</span>** کی سپورٹ موجود ہے — یعنی ایسے خصوصی اے آئی ملازمین کی ٹیمیں جو آپ کی گفتگو کے اندر باہمی تعاون کرتی ہیں۔ یہ براہِ راست <span dir="ltr">Anthropic</span> کے <span dir="ltr">Agents SDK</span> پر چلتا ہے، جو وہی فریم ورک ہے جس پر آپ حصہ 5 میں تعمیر کرنا سیکھیں گے۔
 
-_حصہ 5 میں آپ وہی framework استعمال کرتے ہوئے custom اے آئی ملازمین بنانا سیکھیں گے جس سے NanoClaw چلتا ہے۔_
+_حصہ 5 میں آپ اسی فریم ورک پر اپنے مطابق اے آئی ملازمین بنانا سیکھیں گے جس سے <span dir="ltr">NanoClaw</span> چلتا ہے۔_
 
 ---
 
-## سیکیورٹی اور پرائیویسی کی گہری نظر (خاص طور پر NanoClaw کے شائقین کے لیے)
+## سیکیورٹی اور پرائیویسی کا گہرا جائزہ (خاص طور پر NanoClaw کے شائقین کے لیے)
 
-2026 میں بھی سیکیورٹی ایک بڑی تشویش ہے۔ NanoClaw کا sealed-container طریقہ (واضح اجازت کے بغیر کوئی outbound traffic نہیں) اسے intellectual property سے حساس کام کے لیے سب سے محفوظ بناتا ہے — تقریباً 3 ہزار سطور والے codebase کا audit آپ خود کر سکتے ہیں۔ OpenClaw مقامی اجرا (local-run) کی لچک دیتا ہے، مگر اس کی default ترتیب cloud models پر مبنی ہے (zero-cloud کے لیے DeepSeek local استعمال کریں)۔ Claude Cowork اور Claude Code، Anthropic کے محفوظ ماحول میں enterprise controls (private plugins، audit logs) کے ساتھ چلتے ہیں، مگر raw source کو provider کے سامنے نہیں کھولتے۔ regulated teams (finance، healthcare) کے لیے NanoClaw + air-gapped models بہترین امتزاج ہیں۔
+2026 میں بھی سیکیورٹی سب سے بڑی تشویشات میں شامل ہے۔ <span dir="ltr">NanoClaw</span> کا بند کنٹینروں والا طریقۂ کار (واضح اجازت کے بغیر کوئی باہر جانے والی نیٹ ورک ٹریفک نہیں) اسے حساس دانشورانہ ملکیت والے کام کے لیے سب سے محفوظ بناتا ہے — اور تقریباً 3 ہزار سطور والے اس کے کوڈ بیس کی جانچ آپ خود کر سکتے ہیں۔ <span dir="ltr">OpenClaw</span> مقامی طور پر چلانے کی لچک دیتا ہے، مگر بنیادی طور پر کلاؤڈ ماڈلز پر انحصار کرتا ہے (<span dir="ltr">zero-cloud</span> کے لیے <span dir="ltr">DeepSeek local</span> استعمال کریں)۔ <span dir="ltr">Claude Cowork</span> اور <span dir="ltr">Claude Code</span>، <span dir="ltr">Anthropic</span> کے محفوظ ماحول میں ادارہ جاتی کنٹرولز (نجی پلگ اِنز، جانچ لاگز) کے ساتھ چلتے ہیں، مگر خام سورس کوڈ کو فراہم کنندہ کے سامنے براہِ راست ظاہر نہیں کرتے۔ ضابطہ بند شعبوں کی ٹیموں (مالیات، صحت کی دیکھ بھال) کے لیے <span dir="ltr">NanoClaw</span> کے ساتھ <span dir="ltr">air-gapped models</span> کا امتزاج مضبوط انتخاب ہے۔
 
 ---
 
 ## کتاب کے ساتھ آپ کا سفر
 
 | کتاب کا حصہ | آپ کیا سیکھ رہے ہیں | بنیادی اے آئی ملازم | معاون |
-| ----------------------------------------- | ------------------------------------------------- | ------------------- | ----------- |
-| **حصہ 1** — بنیادیں | اے آئی ملازمین کیا ہیں اور ان کے ساتھ کیسے کام کرنا ہے | Claude Code | OpenClaw |
-| **حصہ 2** — ورک فلو کی بنیادی اکائیاں | file processing، data extraction، version control | Claude Code | — |
-| **حصہ 3** — کاروباری شعبے | finance، legal، marketing، operations workflows | Claude Cowork | Claude Code |
-| **حصہ 4** — قدرتی زبان کے ذریعے programming | Typescript، Python development، testing، debugging | Claude Code | Codex |
-| **حصہ 5** — custom اے آئی ملازمین بنانا | frameworks، tool protocols، databases، evaluation | Claude Code | NanoClaw |
+| --- | --- | --- | --- |
+| **حصہ 1** — بنیادیں | اے آئی ملازمین کیا ہیں اور ان کے ساتھ کیسے کام کرنا ہے | <span dir="ltr">Claude Code</span> | <span dir="ltr">OpenClaw</span> |
+| **حصہ 2** — ورک فلو کی بنیادی اکائیاں | فائل پراسیسنگ، ڈیٹا اخذ کرنا، ورژن کنٹرول | <span dir="ltr">Claude Code</span> | — |
+| **حصہ 3** — کاروباری شعبے | مالیات، قانونی کام، مارکیٹنگ، عملیاتی ورک فلو | <span dir="ltr">Claude Cowork</span> | <span dir="ltr">Claude Code</span> |
+| **حصہ 4** — قدرتی زبان کے ذریعے پروگرامنگ | <span dir="ltr">TypeScript</span>، <span dir="ltr">Python</span> ڈیولپمنٹ، جانچ، خرابیوں کی تلاش | <span dir="ltr">Claude Code</span> | <span dir="ltr">Codex</span> |
+| **حصہ 5** — حسبِ ضرورت اے آئی ملازمین بنانا | فریم ورکس، ٹول پروٹوکولز، ڈیٹابیسز، جانچ و جائزہ | <span dir="ltr">Claude Code</span> | <span dir="ltr">NanoClaw</span> |
 
 ---
 
 ## ساتھ ساتھ موازنہ
 
-یہ موازنہ ان ٹولز کو “بہترین” سے “بدترین” تک درجہ بندی نہیں کرتا۔ یہ انہیں چھ عملی جہتوں میں دیکھتا ہے: بنیادی interface، تعیناتی ماڈل، خودمختاری کی سطح، سیکیورٹی کی کیفیت، openness، اور موزوں صارف۔ درست انتخاب صرف model quality پر منحصر نہیں ہوتا، بلکہ اس بات پر بھی ہوتا ہے کہ ایجنٹ کہاں چلتا ہے، کن systems کو چھو سکتا ہے، اور آپ کتنی نگرانی چاہتے ہیں۔
+یہ موازنہ ان ٹولز کو “بہترین” سے “بدترین” تک درجہ بندی نہیں کرتا۔ یہ انہیں چھ عملی جہتوں میں دیکھتا ہے: رابطے کا بنیادی طریقہ، تعیناتی کا انداز، خودمختاری کی سطح، سیکیورٹی کی کیفیت، کھلا پن، اور موزوں صارف۔ درست انتخاب صرف ماڈل کے معیار پر منحصر نہیں ہوتا، بلکہ اس بات پر بھی ہوتا ہے کہ ایجنٹ کہاں چلتا ہے، کن نظاموں تک رسائی رکھتا ہے، اور آپ کتنی نگرانی چاہتے ہیں۔
 
-|                        | Claude Cowork                   | Claude Code                             | Codex                             | OpenClaw                            | NanoClaw                                  |
-| ---------------------- | ------------------------------- | --------------------------------------- | --------------------------------- | ----------------------------------- | ----------------------------------------- |
-| **زمرہ**           | عام ایجنٹ                   | عام ایجنٹ                           | عام ایجنٹ                     | ذاتی اے آئی ملازم                | ذاتی اے آئی ملازم                      |
-| **ایک سطر میں**        | کاروباری کام کے لیے ادارہ جاتی اے آئی | آپ کے کمپیوٹر پر ہمہ مقصدی اے آئی | مشکل engineering کے لیے طاقتور اے آئی | آپ کی میسجنگ ایپس میں ذاتی اے آئی | بند containers میں محفوظ اے آئی |
-| **بہترین کس کے لیے**           | کاروباری professionals          | developers اور power users              | پیچیدہ coding اور architecture   | سب کے لیے                            | سیکیورٹی کو اہمیت دینے والی teams                  |
-| **آپ اس سے کیسے بات کرتے ہیں** | Claude Desktop app              | آپ کے کمپیوٹر کے terminal یا code editor کے ذریعے | terminal، code editor، یا web app | WhatsApp، Telegram، Slack، 50+ apps | WhatsApp، Telegram، Slack، Discord، Gmail |
-| **کیا یہ کھلے ماخذ پر ہے؟**       | نہیں                              | نہیں                                      | صرف مقامی ٹول                   | ہاں (MIT license)                   | ہاں                                       |
-| **کس کی پشت پناہی حاصل ہے**          | Anthropic                       | Anthropic                               | OpenAI                            | OpenAI + Vercel                     | Community + Anthropic SDK                 |
-
----
-
-## سودے بازی اور حقیقی دنیا کی کارکردگی کے نوٹس
-
-کوئی ایک ایجنٹ ہر منظرنامے میں نہیں جیتتا — 2026 کے اوائل کی user reports اور internal benchmarks کی بنیاد پر چند فوری trade-offs یہ ہیں:  
-- Claude Code interactive speed اور step-by-step reasoning میں آگے ہے (اکثر multi-file refactors میں 20–40% زیادہ کامیابی)، مگر one-shot tasks میں کبھی کبھی یہ زیادہ "chatty" محسوس ہوتا ہے۔  
-- Codex (GPT-5.3-Codex) cloud mode میں long-horizon planning اور parallel subtasks میں بہترین ہے (پیچیدہ architectures میں 5× تک token efficiency)، مگر مقامی CLI mode میں latency کے لحاظ سے Claude Code سے پیچھے رہتا ہے۔  
-- OpenClaw ہمیشہ فعال ذاتی automation کے لیے بہترین ہے (5,700+ community skills)، مگر Claude Code جتنی out-of-box reliability حاصل کرنے کے لیے اسے زیادہ prompt engineering درکار ہوتی ہے۔  
-- NanoClaw کچھ رفتار قربان کر کے فولادی سیکیورٹی دیتا ہے (sealed mode میں صفر unintended network calls)، اسی لیے regulated industries میں یہی ترجیحی انتخاب بنتا ہے۔  
-- Cowork غیر technical workflows (Excel + Gmail + /schedule automation) میں غالب ہے، مگر Claude Code یا Codex جیسی گہری code understanding نہیں رکھتا۔  
-
-حقیقی لاگت مختلف ہوتی ہے: بھاری Claude Code fleets عموماً $25–60/ماہ رہتی ہیں؛ اگر DeepSeek-backed OpenClaw ملائی جائے تو یہ $10–25 تک آ سکتی ہے۔ failure modes خود ضرور آزمائیں — زیادہ تر users 2–4 ہفتوں تک A/B fleets چلاتے ہیں۔
+|  | <span dir="ltr">Claude Cowork</span> | <span dir="ltr">Claude Code</span> | <span dir="ltr">Codex</span> | <span dir="ltr">OpenClaw</span> | <span dir="ltr">NanoClaw</span> |
+| --- | --- | --- | --- | --- | --- |
+| **زمرہ** | عام ایجنٹ | عام ایجنٹ | عام ایجنٹ | ذاتی اے آئی ملازم | ذاتی اے آئی ملازم |
+| **ایک سطر میں** | کاروباری کام کے لیے ادارہ جاتی اے آئی | آپ کے کمپیوٹر پر ہمہ مقصدی اے آئی | مشکل انجینئرنگ کے لیے طاقتور اے آئی | آپ کی میسجنگ ایپس میں ذاتی اے آئی | بند کنٹینرز میں محفوظ اے آئی |
+| **بہترین کس کے لیے** | کاروباری پیشہ ور افراد | ڈویلپرز اور ماہر صارفین | پیچیدہ کوڈنگ اور معماری | ہر شخص | سیکیورٹی کو ترجیح دینے والی ٹیمیں |
+| **آپ اس سے کیسے بات کرتے ہیں** | <span dir="ltr">Claude Desktop</span> ایپ | آپ کے کمپیوٹر کے ٹرمینل یا کوڈ ایڈیٹر کے ذریعے | ٹرمینل، کوڈ ایڈیٹر، یا ویب ایپ | <span dir="ltr">WhatsApp</span>، <span dir="ltr">Telegram</span>، <span dir="ltr">Slack</span>، <span dir="ltr">50+</span> ایپس | <span dir="ltr">WhatsApp</span>، <span dir="ltr">Telegram</span>، <span dir="ltr">Slack</span>، <span dir="ltr">Discord</span>، <span dir="ltr">Gmail</span> |
+| **کیا یہ کھلے ماخذ پر ہے؟** | نہیں | نہیں | صرف مقامی ٹول | ہاں (<span dir="ltr">MIT license</span>) | ہاں |
+| **کس کی پشت پناہی حاصل ہے** | <span dir="ltr">Anthropic</span> | <span dir="ltr">Anthropic</span> | <span dir="ltr">OpenAI</span> | <span dir="ltr">OpenAI + Vercel</span> | کمیونٹی + <span dir="ltr">Anthropic SDK</span> |
 
 ---
 
-## بڑی تصویر: آپ کا Agent Fleet
+## خوبیاں، حدود، اور حقیقی دنیا کی کارکردگی کے نوٹس
 
-کوئی بھی شخص صرف ایک اے آئی ملازم استعمال نہیں کرتا۔ 2026 میں سب سے مؤثر setup ایک فلیٹ ہے — روزمرہ کام سنبھالنے والے عام ایجنٹس، اور آپ کی میسجنگ ایپس اور کاروباری workflows میں خودمختار انداز میں چلنے والے ذاتی اے آئی ملازمین۔
+کوئی ایک ایجنٹ ہر منظرنامے میں بہترین ثابت نہیں ہوتا۔ 2026 کے اوائل کی صارف رپورٹوں اور داخلی معیار پیمائی کی بنیاد پر چند اہم توازن یہ ہیں:
 
-فلیٹ کا مطلب یہ نہیں کہ آپ ہر روز ہر ٹول استعمال کریں۔ عملی طور پر اکثر لوگوں کے پاس ایک روزمرہ کا بنیادی ٹول اور ایک specialist ہوتا ہے: مثلاً Claude Code کے ساتھ OpenClaw، یا Cowork کے ساتھ NanoClaw، یا Claude Code کے ساتھ Codex۔ مقصد ٹولز جمع کرنا نہیں۔ مقصد coverage ہے: ایک ایجنٹ آپ کے default workflow کے لیے، اور ایک اُن کاموں کے لیے جن کے لیے آپ کا default ٹول بنایا ہی نہیں گیا۔
+- <span dir="ltr">Claude Code</span> تعامل کی رفتار اور مرحلہ وار استدلال میں آگے ہے، اور اکثر کثیر-فائلی ریفیکٹرنگ میں <span dir="ltr">20–40%</span> زیادہ کامیابی دکھاتا ہے، مگر ایک بار کے کاموں میں کبھی کبھی ضرورت سے زیادہ باتونی محسوس ہوتا ہے۔
+- <span dir="ltr">Codex</span> (<span dir="ltr">GPT-5.3-Codex</span>) کلاؤڈ موڈ میں طویل المدت منصوبہ بندی اور متوازی ذیلی کاموں کے لیے بہترین ہے، اور پیچیدہ معماریاتی کاموں میں کبھی <span dir="ltr">5×</span> تک بہتر ٹوکن کفایت دکھاتا ہے، مگر مقامی <span dir="ltr">CLI</span> موڈ میں تاخیر کے لحاظ سے <span dir="ltr">Claude Code</span> سے پیچھے رہ سکتا ہے۔
+- <span dir="ltr">OpenClaw</span> ہمیشہ فعال ذاتی خودکار عمل کے لیے بہت مؤثر ہے (<span dir="ltr">5,700+</span> کمیونٹی اسکلز)، مگر <span dir="ltr">Claude Code</span> جیسی ابتدائی قابلِ اعتماد کارکردگی حاصل کرنے کے لیے اسے زیادہ پرامپٹ انجینئرنگ درکار ہوتی ہے۔
+- <span dir="ltr">NanoClaw</span> کچھ رفتار قربان کر کے فولادی سیکیورٹی دیتا ہے (بند موڈ میں صفر غیر ارادی نیٹ ورک کالز)، اسی لیے ضابطہ بند صنعتوں میں یہی ترجیحی انتخاب بنتا ہے۔
+- <span dir="ltr">Cowork</span> غیر تکنیکی کام کے بہاؤ (<span dir="ltr">Excel + Gmail + /schedule automation</span>) میں مضبوط ہے، مگر <span dir="ltr">Claude Code</span> یا <span dir="ltr">Codex</span> جیسی گہری کوڈ سمجھ نہیں رکھتا۔
 
-عام ایجنٹس وہ ہیں جنہیں آپ *استعمال* کرتے ہیں۔ ذاتی اے آئی ملازمین وہ ہیں جنہیں آپ *بناتے اور تعینات* کرتے ہیں — اور آخرکار، فروخت بھی کرتے ہیں۔ یہ کتاب آپ کو دونوں پہلو سکھاتی ہے: آج Claude Code، Cowork، اور Codex سے زیادہ سے زیادہ leverage کیسے لیا جائے، اور OpenClaw اور NanoClaw کے ذریعے اپنے ایسے ڈیجیٹل فل ٹائم ایکویولنٹس (Digital FTEs) کیسے بنائے جائیں جنہیں استعمال کرنے کے لیے دوسرے لوگ ادائیگی کریں۔
-
----
-
-## منتقلی اور Fleet Evolution
-
-آپ کا فلیٹ وقت کے ساتھ بدلتا رہے گا — چھوٹے آغاز سے شروع کریں، پھر پرتیں بڑھاتے جائیں۔ ایک عام راستہ یہ ہے: Day 1 = OpenClaw + Claude Code/Cowork → Month 3 = مشکل engineering کے لیے Codex شامل کریں → Month 6 = حساس tasks کے لیے NanoClaw متعارف کرائیں یا SKILL.md/SOUL.md کے ذریعے custom agents بنائیں۔
-
-منتقلی کے چند مشورے: agents کے درمیان SKILL.md patterns کو export/import کریں؛ ClawHub کی community skills کو ایک پل کے طور پر استعمال کریں؛ token spend کو ہفتہ وار monitor کریں (باب 3 میں optimization scripts کا احاطہ کیا گیا ہے)۔ بہت سے قارئین نے 3+ agents کو ملا کر 2–3× productivity gains کی اطلاع دی ہے، مگر tools کی بے قابو بڑھوتری سے بچیں — core tools کو 4–5 تک محدود رکھیں، الا یہ کہ آپ clients کے لیے build کر رہے ہوں۔
+حقیقی لاگت استعمال کے انداز کے ساتھ بدلتی ہے: بھاری <span dir="ltr">Claude Code</span> فلیٹس عموماً <span dir="ltr">$25–60/month</span> رہتے ہیں؛ اگر <span dir="ltr">DeepSeek</span> سے چلنے والا <span dir="ltr">OpenClaw</span> شامل کیا جائے تو یہ <span dir="ltr">$10–25</span> تک آ سکتی ہے۔ ناکامی کے طریقے خود ضرور آزمائیں — زیادہ تر صارفین <span dir="ltr">2–4</span> ہفتے تک دو مختلف فلیٹس ساتھ چلا کر موازنہ کرتے ہیں۔
 
 ---
 
-## بنیادی Fleet سے آگے: متبادل راستوں کی تلاش
+## بڑی تصویر: آپ کا ایجنٹ فلیٹ
 
-اگرچہ Claude Code، Cowork، اور NanoClaw ایک مضبوط بنیاد فراہم کرتے ہیں، مگر 2026 کا agent landscape اس سے کہیں زیادہ متنوع ہے۔ Gemini CLI، Qwen Code، OpenAI Agents SDK، اور Claude Agents SDK جیسے کھلے ماخذ والے frameworks پیچیدہ orchestration کے لیے multi-agent fleets چلاتے ہیں، اور DeepSeek یا Qwen جیسے models کے ساتھ مل کر اکثر کم لاگت میں کام کرتے ہیں۔ بغیر کوڈ/کم کوڈ بنانے والے پلیٹ فارمز (Vellum، Microsoft Copilot Studio، Zapier Central، Salesforce Agentforce) غیر technical teams کو SDKs یا terminals کے بغیر بھی agents تیزی سے تعینات کرنے دیتے ہیں۔
+کوئی بھی شخص صرف ایک اے آئی ملازم استعمال نہیں کرتا۔ 2026 میں سب سے مؤثر بندوبست ایک فلیٹ ہے — روزمرہ کام سنبھالنے والے عام ایجنٹس، اور آپ کی میسجنگ ایپس اور کاروباری کام کے بہاؤ میں خودمختار انداز میں چلنے والے ذاتی اے آئی ملازمین۔
 
-اگر آپ مکمل طور پر کھلے ماڈلز کے حامی ہیں، تو Llama 4، DeepSeek، Mistral، یا Gemma پر بنے tools آپ کو مکمل local یا self-hosted راستے دیتے ہیں، جن میں کلاؤڈ پر کوئی انحصار نہیں ہوتا — یہ اس صورت میں مثالی ہیں جب رفتار سے زیادہ پرائیویسی اہم ہو۔ یہ کتاب Claude Code اور اس کے ساتھیوں پر اس لیے توجہ دیتی ہے کہ آج کے وقت میں یہی زیادہ تر قارئین کے لیے سب سے زیادہ leverage فراہم کرتے ہیں، مگر اپنے فلیٹ کو مستقبل کے لیے تیار رکھنے کے لیے ہر quarter میں کم از کم ایک alternative ضرور آزمائیں۔
+فلیٹ کا مطلب یہ نہیں کہ آپ ہر روز ہر ٹول استعمال کریں۔ عملی طور پر اکثر لوگوں کے پاس ایک روزمرہ کا بنیادی ٹول اور ایک ماہر معاون ہوتا ہے: مثلاً <span dir="ltr">Claude Code</span> کے ساتھ <span dir="ltr">OpenClaw</span>، یا <span dir="ltr">Cowork</span> کے ساتھ <span dir="ltr">NanoClaw</span>، یا <span dir="ltr">Claude Code</span> کے ساتھ <span dir="ltr">Codex</span>۔ مقصد ٹولز جمع کرنا نہیں۔ مقصد دائرہ کار مکمل کرنا ہے: ایک ایجنٹ آپ کے بنیادی کام کے بہاؤ کے لیے، اور ایک اُن کاموں کے لیے جن کے لیے آپ کا بنیادی ٹول بنایا ہی نہیں گیا۔
+
+عام ایجنٹس وہ ہیں جنہیں آپ *استعمال* کرتے ہیں۔ ذاتی اے آئی ملازمین وہ ہیں جنہیں آپ *بناتے اور تعینات* کرتے ہیں — اور آخرکار فروخت بھی کرتے ہیں۔ یہ کتاب آپ کو دونوں پہلو سکھاتی ہے: آج <span dir="ltr">Claude Code</span>، <span dir="ltr">Cowork</span>، اور <span dir="ltr">Codex</span> سے زیادہ سے زیادہ عملی فائدہ کیسے لیا جائے، اور <span dir="ltr">OpenClaw</span> اور <span dir="ltr">NanoClaw</span> کے ذریعے اپنے ایسے ڈیجیٹل فل ٹائم ایکویولنٹس (**<span dir="ltr">Digital FTEs</span>**) کیسے بنائے جائیں جنہیں استعمال کرنے کے لیے دوسرے لوگ ادائیگی کریں۔
+
+---
+
+## منتقلی اور فلیٹ کی تدریجی ترقی
+
+آپ کا فلیٹ وقت کے ساتھ بدلتا رہے گا — چھوٹے آغاز سے شروع کریں، پھر رفتہ رفتہ پرتیں بڑھاتے جائیں۔ ایک عام راستہ یہ ہے:
+
+**پہلا دن:** <span dir="ltr">OpenClaw</span> + <span dir="ltr">Claude Code</span>/<span dir="ltr">Cowork</span>  
+**تیسرا مہینہ:** مشکل انجینئرنگ کے لیے <span dir="ltr">Codex</span> شامل کریں  
+**چھٹا مہینہ:** حساس کاموں کے لیے <span dir="ltr">NanoClaw</span> متعارف کرائیں، یا <span dir="ltr">SKILL.md</span>/<span dir="ltr">SOUL.md</span> کے ذریعے حسبِ ضرورت ایجنٹس بنائیں
+
+منتقلی کے چند مشورے: ایجنٹس کے درمیان <span dir="ltr">SKILL.md</span> میں لکھے گئے پیٹرنز منتقل کریں؛ <span dir="ltr">ClawHub</span> کی کمیونٹی اسکلز کو ایک پل کے طور پر استعمال کریں؛ اور ٹوکن خرچ کی ہفتہ وار نگرانی کریں (باب 3 میں بہتر کاری کے اسکرپٹس شامل ہیں)۔ بہت سے قارئین نے <span dir="ltr">3+</span> ایجنٹس کو ملا کر پیداواری صلاحیت میں <span dir="ltr">2–3×</span> اضافہ رپورٹ کیا ہے، مگر ٹولز کی بے قابو بڑھوتری سے بچیں — بنیادی ٹولز کو <span dir="ltr">4–5</span> تک محدود رکھیں، الا یہ کہ آپ کلائنٹس کے لیے حل تیار کر رہے ہوں۔
+
+---
+
+## بنیادی فلیٹ سے آگے: متبادل راستوں کی تلاش
+
+اگرچہ <span dir="ltr">Claude Code</span>، <span dir="ltr">Cowork</span>، اور <span dir="ltr">NanoClaw</span> ایک مضبوط بنیاد فراہم کرتے ہیں، مگر 2026 میں ایجنٹس کی دنیا اس سے کہیں زیادہ متنوع ہے۔ <span dir="ltr">Gemini CLI</span>، <span dir="ltr">Qwen Code</span>، <span dir="ltr">OpenAI Agents SDK</span>، اور <span dir="ltr">Claude Agents SDK</span> جیسے کھلے ماخذ کے فریم ورکس پیچیدہ ہم آہنگی کے لیے کثیر ایجنٹ فلیٹس چلاتے ہیں، اور <span dir="ltr">DeepSeek</span> یا <span dir="ltr">Qwen</span> جیسے ماڈلز کے ساتھ جوڑنے پر اکثر کم لاگت میں کام کرتے ہیں۔ بغیر کوڈ/کم کوڈ پلیٹ فارمز (<span dir="ltr">Vellum</span>، <span dir="ltr">Microsoft Copilot Studio</span>، <span dir="ltr">Zapier Central</span>، <span dir="ltr">Salesforce Agentforce</span>) غیر تکنیکی ٹیموں کو <span dir="ltr">SDKs</span> یا ٹرمینلز کے بغیر بھی ایجنٹس تیزی سے تعینات کرنے دیتے ہیں۔
+
+اگر آپ مکمل طور پر کھلے ماڈلز کو ترجیح دیتے ہیں، تو <span dir="ltr">Llama 4</span>، <span dir="ltr">DeepSeek</span>، <span dir="ltr">Mistral</span>، یا <span dir="ltr">Gemma</span> پر مبنی ٹولز آپ کو مکمل مقامی یا خود میزبانی والے راستے دیتے ہیں، جن میں کلاؤڈ پر کوئی انحصار نہیں ہوتا — یہ اس صورت میں مثالی ہیں جب رفتار سے زیادہ پرائیویسی اہم ہو۔ یہ کتاب <span dir="ltr">Claude Code</span> اور اس کے ساتھیوں پر اس لیے توجہ دیتی ہے کہ آج کے وقت میں یہی زیادہ تر قارئین کے لیے سب سے زیادہ عملی فائدہ فراہم کرتے ہیں، مگر اپنے فلیٹ کو مستقبل کے لیے تیار رکھنے کے لیے ہر سہ ماہی میں کم از کم ایک متبادل ضرور آزمائیں۔
 
 _آخری تازہ کاری: مارچ 2026_
