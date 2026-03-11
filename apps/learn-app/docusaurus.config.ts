@@ -244,7 +244,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "ur"],
+    locales: ["en", "ur", "zh-Hans"],
     localeConfigs: {
       en: {
         label: "English",
@@ -258,6 +258,13 @@ const config: Config = {
         htmlLang: "ur-PK",
         calendar: "gregory",
         path: "ur",
+      },
+      "zh-Hans": {
+        label: "简体中文",
+        direction: "ltr",
+        htmlLang: "zh-CN",
+        calendar: "gregory",
+        path: "zh-Hans",
       },
     },
   },
