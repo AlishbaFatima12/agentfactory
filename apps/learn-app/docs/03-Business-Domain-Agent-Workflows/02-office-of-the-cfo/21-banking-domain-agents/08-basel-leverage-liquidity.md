@@ -260,34 +260,19 @@ Inflows:
 Jurisdiction: UK PRA
 ```
 
-The agent routes through `liquidity-lcr` and responds:
+The agent routes through `liquidity-lcr` to produce an LCR calculation.
 
-```
-GOVERNING STANDARD: Basel III — UK PRA
-DOMAIN: Liquidity Coverage Ratio
-JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+**What to expect:** The agent produces an HQLA classification, net cash outflow calculation, and LCR result. Your output will vary based on your inputs, but look for these sections:
 
-HQLA (after haircuts)
-  Level 1: GBP 800.0M (420 + 380, no haircut)
-  Level 2A: GBP 131.75M (95 x 85% + 60 x 85%)
-  Level 2 cap check: 131.75 / 931.75 = 14.1% (below 40% cap)
-  Total HQLA: GBP 931.75M
+| Section             | Intent                                                       | What to Verify                                                                                              |
+| ------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| HQLA classification | Assigns assets to Level 1, 2A, 2B with haircuts              | Correct level assignment and haircut percentages; Level 2 cap check (combined Level 2 <= 40% of total HQLA) |
+| Net cash outflows   | Applies run-off rates to funding categories and caps inflows | Run-off rates match Basel standards for each category; inflows capped at 75% of outflows                    |
+| LCR result          | Divides HQLA by net outflows and compares to 100% minimum    | LCR >= 100%; PASS/FAIL status with headroom quantified                                                      |
 
-NET CASH OUTFLOWS
-  Total outflows: GBP 462.0M
-  Total inflows: GBP 102.5M
-  Inflow cap (75% of outflows): GBP 346.5M
-  Inflows within cap: GBP 102.5M (applied in full)
-  Net outflows: GBP 359.5M
-
-LCR = GBP 931.75M / GBP 359.5M = 259.2%
-Minimum: 100%
-Status: PASS — substantial headroom
-
-NOTE: The professional reviews the HQLA classifications
-and run-off rate assumptions; the agent calculated the
-haircuts, cap checks, and final LCR.
-```
+:::note Your output will vary
+The specific HQLA amounts and LCR ratio depend on your asset composition and funding structure. The teaching point is the HQLA classification hierarchy and the inflow cap mechanism — verify that Level 2 caps are checked and run-off rates are appropriate, not that specific numbers match.
+:::
 
 Nadia reviews whether the covered bonds genuinely qualify at Level 2A (AAA-rated, meeting the covered bond directive criteria) and confirms that the run-off rates applied to wholesale financial deposits reflect her bank's PRA-agreed assumptions.
 

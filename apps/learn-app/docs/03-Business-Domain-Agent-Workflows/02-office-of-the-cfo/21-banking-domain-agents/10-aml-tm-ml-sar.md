@@ -300,40 +300,20 @@ Customer history: Zero cash deposits exceeding GBP 500
 Jurisdiction: UK NCA
 ```
 
-The agent routes through `aml-typologies` and `aml-sar-drafting` and responds:
+The agent routes through `aml-typologies` and `aml-sar-drafting` to produce a typology analysis and SAR narrative draft.
 
-```
-GOVERNING STANDARD: AML — UK POCA 2002
-DOMAIN: Transaction Monitoring — Typology Analysis + SAR Draft
-JURISDICTION: United Kingdom — NCA (National Crime Agency)
+**What to expect:** The agent produces a typology match assessment and a draft SAR narrative for MLRO review. Your output will vary based on the transaction pattern, but look for these sections:
 
-TYPOLOGY MATCH
-  Primary: STRUCTURING (confidence: HIGH)
-  Pattern: 14 cash deposits averaging GBP 9,400 over 18 days,
-    all below GBP 10,000 enhanced CDD threshold
-  Behavioural anomaly: Customer has no prior cash deposit
-    history. Activity inconsistent with salaried profile.
-  Total deposited: GBP 131,600
+| Section              | Intent                                                               | What to Verify                                                                                                   |
+| -------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Typology match       | Identifies the money laundering typology with confidence level       | Correct typology (structuring, layering, round-tripping, etc.); pattern description matches the transaction data |
+| Behavioural anomaly  | Flags deviations from the customer's established profile             | Current activity compared against historical baseline; inconsistency clearly stated                              |
+| SAR narrative draft  | Drafts a narrative covering what, when, how much, and why suspicious | Narrative is specific (dates, amounts, patterns) and cites the typology; marked as draft requiring MLRO review   |
+| Tipping-off reminder | Warns against customer contact before filing decision                | POCA 2002 s333A referenced; explicit prohibition on disclosing suspicion                                         |
 
-SAR NARRATIVE (DRAFT — requires MLRO review)
-  Subject deposited GBP 131,600 in cash across 14
-  transactions over 18 business days. All deposits fell
-  between GBP 8,900 and GBP 9,800, below the GBP 10,000
-  threshold. Subject's account history shows monthly salary
-  of GBP 3,800 and no cash deposits exceeding GBP 500 in
-  the preceding 36 months. The pattern is consistent with
-  the structuring typology — deliberate splitting of cash
-  deposits to avoid enhanced scrutiny thresholds.
-
-  IMPORTANT: Do NOT contact the customer regarding this
-  activity prior to MLRO filing decision (tipping-off
-  prohibition — POCA 2002 s333A).
-
-NOTE: The professional (MLRO) reviews the narrative and
-makes the SAR filing decision; the agent identified the
-typology and drafted the narrative. The agent must never
-file the SAR or disclose its existence.
-```
+:::note Your output will vary
+The specific typology match and narrative content depend on the transaction pattern you provide. The teaching point is the agent boundary — the agent identifies typologies and drafts narratives, but the MLRO makes the filing decision (personal criminal liability) and the agent must never file a SAR or disclose its existence.
+:::
 
 Thomas reviews the typology match and narrative accuracy, then escalates the draft to the MLRO for the filing decision -- a step that carries personal criminal liability and must always be made by a human.
 

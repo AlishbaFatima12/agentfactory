@@ -237,30 +237,20 @@ PD (12m): 1.2%, LGD: 35%, EAD: GBP 10,000,000
 Jurisdiction: UK PRA
 ```
 
-The agent routes through `ifrs9-staging` and `ifrs9-ecl` and responds:
+The agent routes through `ifrs9-staging` and `ifrs9-ecl` to produce a staging assessment and ECL calculation.
 
-```
-GOVERNING STANDARD: IFRS 9 — UK PRA
-DOMAIN: IFRS 9 ECL — Stage Assessment + ECL Calculation
-JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+**What to expect:** The agent produces a staging result with SICR rationale followed by an ECL calculation. Your output will vary based on your specific inputs, but look for these sections:
 
-STAGING RESULT
-Facility: Hartfield Engineering Ltd — GBP 10M term loan
-Stage: 2 (SICR detected)
-SICR trigger: Rating downgrade of 3 notches since origination
-  (originated BBB, current BB-)
+| Section                             | Intent                                                          | What to Verify                                                                        |
+| ----------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Governing standard and jurisdiction | Confirms IFRS 9 and the applicable local rulebook               | Correct standard and jurisdiction identified                                          |
+| Staging result                      | Classifies the facility into Stage 1, 2, or 3 with SICR trigger | Stage assignment matches your SICR criteria (rating downgrade, DPD, qualitative)      |
+| ECL calculation                     | Computes ECL using the appropriate measurement basis            | Stage 1 uses 12-month ECL; Stage 2/3 uses lifetime ECL with PD term structure         |
+| Provision impact                    | Shows the change from prior staging                             | Magnitude of the staging cliff effect is reasonable for the measurement window change |
 
-ECL CALCULATION
-Measurement: Lifetime ECL (Stage 2)
-PD term structure applied over 4-year remaining life
-Lifetime ECL: GBP 397,889
-Previous Stage 1 ECL (12-month): GBP 42,000
-Provision increase: GBP 355,889 (+847%)
-
-NOTE: The professional reviews the SICR trigger rationale
-and the PD term structure assumptions; the agent calculated
-the staging classification and lifetime ECL.
-```
+:::note Your output will vary
+The specific ECL amounts depend on the PD term structure, LGD, and EAD you provide. The teaching point is the staging classification logic and the cliff effect when measurement changes from 12-month to lifetime — verify the structure and reasoning, not specific numbers.
+:::
 
 Sarah reviews the staging trigger (the 3-notch downgrade is a clear SICR indicator) and validates that the PD term structure the agent applied is consistent with her bank's internal rating model calibration. The next two lessons build the PD, LGD, and EAD components in depth (Lesson 4) and add macroeconomic scenario weighting (Lesson 5).
 

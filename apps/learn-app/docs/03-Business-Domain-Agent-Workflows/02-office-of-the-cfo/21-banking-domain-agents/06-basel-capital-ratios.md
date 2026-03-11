@@ -265,35 +265,19 @@ D-SIB buffer: 1.0%
 Jurisdiction: UK PRA
 ```
 
-The agent routes through `basel-capital` and responds:
+The agent routes through `basel-capital` to produce a capital adequacy assessment.
 
-```
-GOVERNING STANDARD: Basel III — UK PRA
-DOMAIN: Capital Adequacy — Ratio Calculation
-JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+**What to expect:** The agent produces a capital stack build, ratio calculation, and buffer assessment. Your output will vary based on your inputs, but look for these sections:
 
-CAPITAL STACK
-  Gross CET1: GBP 293.0M (120 + 65 + 100 + 8)
-  Deductions:  GBP 42.0M (25 + 12 + 5)
-  Net CET1:    GBP 251.0M
-  Tier 1:      GBP 296.0M (251 + 45 AT1)
-  Total Capital: GBP 356.0M (296 + 60 T2)
+| Section           | Intent                                                               | What to Verify                                                                           |
+| ----------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Capital stack     | Classifies instruments into CET1, AT1, Tier 2 and applies deductions | All deductions applied (goodwill, intangibles, DTAs); net CET1 = gross minus deductions  |
+| Capital ratios    | Computes CET1, Tier 1, and Total Capital ratios against RWA          | Ratios use correct numerators (CET1, CET1+AT1, CET1+AT1+T2) and same RWA denominator     |
+| Buffer assessment | Compares CET1 ratio to combined buffer requirement                   | Combined buffer = minimum + CCB + applicable systemic buffer; surplus/deficit identified |
 
-RATIOS (RWA = GBP 1,510.5M)
-  CET1 Ratio:     16.6%  (minimum 4.5%)
-  Tier 1 Ratio:   19.6%  (minimum 6.0%)
-  Total Capital:  23.6%  (minimum 8.0%)
-
-BUFFER ASSESSMENT
-  CET1 minimum + CCB + D-SIB = 4.5% + 2.5% + 1.0% = 8.0%
-  CET1 surplus above combined buffer: 8.6pp
-  Status: All ratios exceed requirements with significant
-  headroom. No distribution constraints apply.
-
-NOTE: The professional reviews the instrument classifications
-and deduction completeness; the agent calculated the ratios
-and buffer compliance.
-```
+:::note Your output will vary
+The specific ratios depend on your capital instruments, deductions, and RWA. The teaching point is the capital stack hierarchy and the buffer compliance framework — verify that instrument classifications and deductions are complete, not that specific ratios match.
+:::
 
 James reviews whether the AT1 CoCos meet the perpetuity and non-cumulative criteria for AT1 classification, and confirms that no additional deductions (such as significant investments) have been omitted from the calculation.
 
