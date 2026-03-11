@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies at least one fabricated agent output block (Defect 1)",
+      "passed": true,
+      "evidence": "Found 1 instance at lines 165-168 (labelled **Output:**). Classified as borderline/CRITICAL — correctly noted it's factual accounting content but flagged the misleading label."
+    },
+    {
+      "text": "Does NOT flag prompt code blocks (student input) as fabricated output",
+      "passed": true,
+      "evidence": "Report explicitly lists all code blocks and categorizes them. Exercise Step prompts and Try With AI prompts correctly identified as student input, not flagged as defects."
+    },
+    {
+      "text": "Does NOT flag framework tables or scoring models as fabricated output",
+      "passed": true,
+      "evidence": "No framework tables flagged. ZATCA formula definitions and journal entry templates were not classified as fabricated output."
+    },
+    {
+      "text": "Produces a summary table with Line Range, Defect Type, and Recommended Fix columns",
+      "passed": true,
+      "evidence": "Summary table at top with Defect Type/Count/Severity. Detailed findings tables include Line Range, Current Content, and Recommended Fix columns for each defect."
+    },
+    {
+      "text": "Recommended fixes use intent table format with Section/Intent/What to Verify columns",
+      "passed": false,
+      "evidence": "Recommended relabelling (**Output:** → **Accounting treatment:**) instead of intent table, reasoning that intent table would be 'overkill' for deterministic factual content. This is arguably the better fix for this edge case, but doesn't match the assertion."
+    },
+    {
+      "text": "Includes a :::note Your output will vary disclaimer in the fix",
+      "passed": false,
+      "evidence": "No :::note disclaimer included. Since the fix was relabelling (not intent table replacement), no disclaimer was needed. Agent correctly determined the content is deterministic, not variable agent output."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+      "passed": true,
+      "evidence": "Non-Defects section explicitly states: '\"Claude in Excel\" References (Frontmatter) — NOT a defect. Five occurrences of \"Claude in Excel\" in YAML frontmatter and teaching metadata. All correctly contrast Ch17's embedded assistant product with Cowork. Per cowork-content.md: \"Ch 17 correctly uses 'Claude in Excel' because that chapter teaches that product.\"' D6 count is 0."
+    },
+    {
+      "text": "Identifies inline data injection or paste-based patterns in exercise prompts",
+      "passed": true,
+      "evidence": "Found 3 CRITICAL D1 defects where specific fabricated data was embedded inline in the lesson narrative: D1-1 (reconciliation workpaper with $2,180/$840/$400 breakdown), D1-2 (journal entry with fabricated $840 and account names), D1-3 (variance analysis with fabricated 7% price decline and promotional discounting explanation). The skill correctly identified these as inline fabricated data that students would see but the agent would not reproduce. The practice data prompt (lines 139-154) was separately examined and correctly cleared as student-generated data."
+    },
+    {
+      "text": "Checks for missing skill names in exercise prompts",
+      "passed": true,
+      "evidence": "D2 (Missing Skill Name in Prompt) count is 0. Non-Defects section explicitly explains: 'Exercises 5-7 correctly use /command-name format for Cowork plugin commands. Commands are the correct invocation pattern for this chapter (not skills with \"Use the X skill to...\" phrasing). No D2 defect.' This demonstrates the skill actively checked for this defect class and made a reasoned judgment that commands (not skills) are the correct pattern for Ch17."
+    },
+    {
+      "text": "Produces a prioritised defect summary (Defect 1 highest priority)",
+      "passed": true,
+      "evidence": "Report includes a 'Priority-Ordered Fix List' table with columns Priority/Defect/Line Range/Fix Type/Effort. Priority 1 is D1-1 (lines 212-219, 'Replace table with intent table + disclaimer', Medium effort). Priorities 2-6 follow in descending order. Additionally, the summary table at the top shows counts by defect type with severity ratings (CRITICAL for D1, MEDIUM for D5)."
+    },
+    {
+      "text": "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)",
+      "passed": true,
+      "evidence": "The report explicitly recognizes the Ch17 context: 'Per cowork-content.md: \"Ch 17 correctly uses 'Claude in Excel' because that chapter teaches that product.\"' D6 (Plugin/Tool Terminology) count is 0. The report also correctly uses 'Cowork plugin commands' when referring to the broader Cowork platform features used in exercises, showing awareness of the distinction between the two products."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": 6,
+    "errors_encountered": 0,
+    "output_chars": 11279,
+    "transcript_chars": 11279
+  },
+  "timing": {
+    "executor_duration_seconds": 45,
+    "grader_duration_seconds": null,
+    "total_duration_seconds": null
+  },
+  "claims": [
+    {
+      "claim": "Five occurrences of 'Claude in Excel' in YAML frontmatter and teaching metadata",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Cannot verify without reading the source lesson file. The count is specific and plausible but unverifiable from the audit report alone."
+    },
+    {
+      "claim": "D1 defects are concentrated in the month-end close walkthrough (lines 200-254)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "All three D1 defects reference lines within this range: D1-1 (212-219), D1-2 (228), D1-3 (236-237). Consistent with the claim."
+    },
+    {
+      "claim": "Three of the D5 defects share sentences with D1 defects",
+      "type": "factual",
+      "verified": true,
+      "evidence": "D5-2 states 'This is the same line as D1-2' (line 228) and D5-3 states 'This is the same passage as D1-3' (line 236). D5-1 (lines 220-221) is the only standalone D5 fix. Internal consistency checks out."
+    },
+    {
+      "claim": "Practice data prompt specifies $3,420 total discrepancy but NOT the breakdown",
+      "type": "factual",
+      "verified": true,
+      "evidence": "The report quotes the practice data prompt as specifying '$892,000 deposits, $876,580 withdrawals, $3,420 discrepancy' and notes it specifies 'timing differences, a bank charge not yet posted to the GL, and one unidentified item' (categories) but not specific counts, dollar amounts per category, or descriptions. The borderline judgment note confirms the categories are seeded but the decomposition is fabricated."
+    },
+    {
+      "claim": "Commands (not skills) are the correct invocation pattern for Ch17",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The report explains that Exercises 5-7 use /command-name format for Cowork plugin commands and that this is correct for Ch17. This is consistent with the plugin architecture where commands are the user-facing invocation method."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Identifies inline data injection or paste-based patterns in exercise prompts",
+        "reason": "This assertion is somewhat ambiguous — it could mean D3 (inline data injection into prompts) or the broader pattern of fabricated data embedded in lesson content. The skill found D1 (fabricated output) rather than D3, which is arguably a different defect class. The assertion would be more discriminating if it specified: 'Identifies fabricated agent output embedded in lesson narrative (D1 defects)' vs 'Identifies raw data pasted into prompts instead of file references (D3 defects)'. As written, a skill that found only D3 issues OR only D1 issues would pass, but these are different quality problems."
+      },
+      {
+        "reason": "No assertion checks whether the recommended fixes preserve the pedagogical intent of the original content. The audit report's suggested replacements (intent tables, generalised narrative) are high quality, but an audit that simply deleted the fabricated content without replacement would also pass all 5 assertions. Consider adding: 'Recommended fixes include replacement content that preserves the teaching objective (not just deletion).'"
+      }
+    ],
+    "overall": "Assertions are well-targeted for this eval case. The Ch17/Ch18+ terminology distinction (expectations 1 and 5) is the strongest discriminator — it tests domain-specific judgment that a generic audit would fail. The main gap is that no assertion verifies the quality of recommended fixes."
+  }
+}

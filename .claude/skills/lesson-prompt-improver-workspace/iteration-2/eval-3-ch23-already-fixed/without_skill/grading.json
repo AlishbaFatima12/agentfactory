@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+      "passed": true,
+      "evidence": "Notes 'the prior two exercises (Meridian DM and Meridian email) correctly use intent tables instead of fabricated output' in Issue 1 discussion. Recognises the intent table pattern exists."
+    },
+    {
+      "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+      "passed": false,
+      "evidence": "Flagged Hamza DM as Issue 1 (HIGH severity): 'Fabricated agent output in Compliance Gap section.' Despite acknowledging the :::note Illustrative example disclaimer, still classified it as the lesson's primary defect. The with-skill agent correctly excluded this."
+    },
+    {
+      "text": "Does NOT flag the intent tables themselves as fabricated output",
+      "passed": true,
+      "evidence": "Intent tables not flagged. Mentioned positively as correct replacements in Issue 1 discussion."
+    },
+    {
+      "text": "Identifies the lesson as mostly clean / low defect count",
+      "passed": false,
+      "evidence": "Found 7 issues across 4 severity tiers (1 HIGH, 3 MEDIUM, 3 LOW). Frames the lesson as having significant remaining issues, not as 'mostly clean'. The HIGH-severity Hamza DM flag inflates the apparent defect count."
+    },
+    {
+      "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+      "passed": false,
+      "evidence": "Uses own categories: Fabricated Output, Terminology, Terminology (Cowork rule), Missing Prompt, Consistency, Voice Consistency, Redundancy. Does NOT use the skill's 6-defect taxonomy (Fabricated Agent Output, Missing Skill Name, Inline Data Injection, Fiction-Researching, Narrative References, Plugin/Tool Terminology)."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 3,
+    "total": 5,
+    "pass_rate": 0.4
+  }
+}

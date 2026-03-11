@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+      "passed": true,
+      "evidence": "The report identifies 'Claude in Excel' as a terminology violation citing cowork-content.md ('Ch 18+ must use Cowork, not Claude in Excel. The two are separate products.'). The Checklist Summary table lists 'Terminology (Cowork vs Claude in Excel)' as the 6th row with result FAIL. While the report's own issue numbering places it at Issue 1, the 6-category checklist maps it to the 6th defect category. The Ch18-vs-Ch17 distinction is explicitly explained."
+    },
+    {
+      "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+      "passed": true,
+      "evidence": "The report identifies exactly 4 incorrect instances: Violation 1a (line 95, teaching_guide), Violation 1b (line 143, body text), Violation 1c (line 179, exercise section), Violation 1d (line 189, Try With AI intro). It also correctly distinguishes 1 contextually correct reference at line 70 as a legitimate Ch 17 cross-reference. 4 > 3."
+    },
+    {
+      "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+      "passed": true,
+      "evidence": "Each violation includes a 'Should be' replacement using 'Cowork'. The Recommendations table states: 'Replace with \"Cowork\" per cowork-content.md rules'. The report explicitly cites the rule: 'The cowork-content rule specifies the exact phrasing: \"Use these prompts in Cowork or your preferred AI assistant.\"'"
+    },
+    {
+      "text": "Produces a summary table organized by the 6-defect taxonomy",
+      "passed": true,
+      "evidence": "The 'Checklist Summary' table at the end has 6 rows: (1) Fabricated agent outputs, (2) Missing skill names, (3) Inline data injection, (4) Fiction-researching prompts, (5) Narrative references fabricated content, (6) Terminology. Each row has Check, Result, and Details columns. This covers 6 defect categories systematically."
+    },
+    {
+      "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+      "passed": true,
+      "evidence": "The report explicitly states 'the lesson content and pedagogy are sound'. No issues are raised about the lesson's framework tables, conceptual models, or teaching approach. Only terminology violations and a minor narrative prediction concern are flagged. The report correctly marks Issues 2-5 (fabricated outputs, skill names, data injection, fiction-researching prompts) as clean passes or N/A."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": 7,
+    "total_tool_calls": 7,
+    "errors_encountered": 0,
+    "output_chars": 5511,
+    "transcript_chars": 5511
+  },
+  "timing": {
+    "executor_duration_seconds": 53,
+    "grader_duration_seconds": null,
+    "total_duration_seconds": null
+  },
+  "claims": [
+    {
+      "claim": "5 terminology violations found",
+      "type": "factual",
+      "verified": false,
+      "evidence": "The report summary says '5 terminology violations' but then distinguishes 4 incorrect usages and 1 contextually correct reference (line 70). It would be more accurate to say 4 violations + 1 correct usage = 5 instances examined. The '5 violations' count in the summary is slightly misleading since the line 70 reference is explicitly marked 'No change needed.'"
+    },
+    {
+      "claim": "Line numbers cited (95, 143, 179, 189, 70, 151) correspond to actual violations in the source file",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Cannot verify without reading the actual lesson file. The line numbers are plausible and the quoted text is contextually appropriate, but exact line-level accuracy is unverifiable from the audit report alone."
+    },
+    {
+      "claim": "L01 is a pre-skill lesson where no skill references are expected",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Consistent with cowork-content.md which states L01-L02 are conceptual and skill invocation begins at L03."
+    },
+    {
+      "claim": "The lesson uses generic formula examples that are self-contained",
+      "type": "quality",
+      "verified": false,
+      "evidence": "Cannot verify without reading the source lesson file. The claim is plausible given the quoted formula examples."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+        "reason": "The expectation conflates two things: (1) identifying it as a terminology defect, and (2) numbering it as 'Defect 6'. The report uses its own issue numbering (Issue 1) but maps it to the 6th row in the taxonomy checklist. Consider splitting into 'identifies terminology violations' and 'maps to the correct defect category in the taxonomy' for clearer signal."
+      },
+      {
+        "reason": "No expectation checks whether the report correctly distinguishes legitimate Ch 17 cross-references from incorrect Ch 18 terminology. The without_skill run correctly identified line 70 as a valid cross-reference — this discrimination is a quality signal worth asserting on, since a naive 'find and replace' approach would flag all instances incorrectly."
+      }
+    ],
+    "overall": "The expectations are well-designed and discriminating for this eval case. The without_skill baseline performs surprisingly well here — it passes all 5 expectations, which raises the question of whether this eval case can distinguish skill-vs-no-skill performance. Consider adding expectations around the specific defect taxonomy labels or the precision of the recommendations to create more separation."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+      "passed": true,
+      "evidence": "Found 5 instances of Defect 6, all 'Claude in Excel' -> 'Cowork'. Explicitly references cowork-content.md rules and explains Ch18+ must use 'Cowork'."
+    },
+    {
+      "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+      "passed": true,
+      "evidence": "Found 5 instances: 3 high-priority (lines 143, 179, 189), 1 medium (line 95 YAML), 1 low/borderline (line 70 cross-reference)."
+    },
+    {
+      "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+      "passed": true,
+      "evidence": "Each instance has a specific recommended fix with exact replacement text. References canonical Try With AI setup line from cowork-content.md."
+    },
+    {
+      "text": "Produces a summary table organized by the 6-defect taxonomy",
+      "passed": true,
+      "evidence": "Summary table at top lists all 5 defects. Detailed analysis section covers all 6 defect types with explicit CLEAN/FOUND status for each."
+    },
+    {
+      "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+      "passed": true,
+      "evidence": "8-row exclusion table documents why each content block was NOT flagged: formula code block (prompt input), Concept Box (framework definition), Business Cost table (framework table), all 3 prompt blocks (student input), behavioral prediction narrative (qualitative, not fabricated numbers)."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

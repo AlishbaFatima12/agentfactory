@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+      "passed": true,
+      "evidence": "Report section 'D6: Plugin/Tool Terminology' explicitly states: 'Per .claude/rules/cowork-content.md, Ch18+ is a Cowork chapter. \"Claude in Excel\" is a separate product taught in Ch17. All references in Ch18 should say \"Cowork\" unless they are explicit cross-references to the Ch17 product.' The summary table classifies these under D6 with Count=4."
+    },
+    {
+      "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+      "passed": true,
+      "evidence": "Report identifies exactly 4 instances in a numbered table: (1) line 95, (2) line 143, (3) line 179, (4) line 189. Additionally, the report correctly excludes line 70 as a legitimate cross-reference to Ch17, demonstrating genuine understanding rather than pattern-matching all occurrences."
+    },
+    {
+      "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+      "passed": true,
+      "evidence": "Each of the 4 defect rows includes a 'Recommended Fix' column showing the exact replacement text with 'Cowork'. Example: line 143 fix is 'Open Cowork (or your preferred AI assistant)'. The report also cites .claude/rules/cowork-content.md as the authoritative source for this rule."
+    },
+    {
+      "text": "Produces a summary table organized by the 6-defect taxonomy",
+      "passed": true,
+      "evidence": "Summary section contains a markdown table with columns 'Defect Type | Count | Severity' listing all six types: D1 (Fabricated Agent Output, 0), D2 (Missing Skill Name, 0 N/A), D3 (Inline Data Injection, 0), D4 (Fiction-Researching Prompt, 0), D5 (Narrative Referencing Fabricated, 0), D6 (Plugin/Tool Terminology, 4 Medium). Total line reads 'Total defects: 4 (all terminology)'."
+    },
+    {
+      "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+      "passed": true,
+      "evidence": "All five non-terminology defect types are marked CLEAN or NOT APPLICABLE with explanations. D1 analysis enumerates all 5 code blocks and classifies each correctly (student input or prompt blocks, not agent output). D2 explains why skill names don't apply to L01. The report explicitly states 'This lesson is a clean conceptual introduction with well-structured prompts. The only issue is the terminology debt.' No false positives on conceptual content."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "output_chars": 4836,
+    "transcript_chars": 4836
+  },
+  "timing": {
+    "executor_duration_seconds": 45,
+    "total_duration_seconds": 45
+  },
+  "claims": [
+    {
+      "claim": "4 instances of 'Claude in Excel' need fixing at lines 95, 143, 179, 189",
+      "type": "factual",
+      "verified": "unverifiable",
+      "evidence": "Line numbers and content are internally consistent within the report, but cannot be verified without reading the actual lesson file. The specificity (exact line numbers, quoted text, recommended replacements) suggests genuine analysis rather than fabrication."
+    },
+    {
+      "claim": "Line 70 in YAML frontmatter is a legitimate cross-reference to Ch17 and does NOT need fixing",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The quoted text 'Students enter from Chapter 17 with hands-on experience using Claude in Excel and Cowork' is a cross-reference describing what students learned in Ch17. Per cowork-content.md rules, Ch17 references to 'Claude in Excel' are correct since that chapter teaches that specific product."
+    },
+    {
+      "claim": "No fabricated agent output exists in the lesson's code blocks",
+      "type": "factual",
+      "verified": "unverifiable",
+      "evidence": "Report analyzed all 5 code blocks with line references and classifications. Cannot verify line content without reading the source file, but the analysis is detailed and internally consistent."
+    },
+    {
+      "claim": "L01 is a conceptual introduction where no Cowork plugin skills exist yet",
+      "type": "factual",
+      "verified": true,
+      "evidence": "This aligns with cowork-content.md which states L03-L08 is when skills first appear via auto-activation trigger phrases. L01 as a conceptual intro would precede skill usage."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+        "reason": "This assertion is well-calibrated — it requires finding a specific minimum count, not just mentioning the term. However, it doesn't verify the instances are real. Consider adding a ground-truth check: pre-count the actual occurrences in the lesson file and assert the report's count matches within tolerance (e.g., 4 actual → report finds 3-5)."
+      },
+      {
+        "reason": "No assertion checks whether the report correctly EXCLUDES legitimate cross-references (like line 70's Ch17 reference). The report did this correctly, which is arguably harder and more valuable than finding the defects. An assertion like 'Does not flag legitimate Ch17 cross-references as defects' would catch false-positive prone implementations."
+      }
+    ],
+    "overall": "Strong eval set for this use case. The five assertions cover detection, classification, remediation, output format, and false-positive avoidance. The main gap is verifiability — assertions trust the report's line numbers without ground-truth comparison. For a terminology-focused eval, adding a ground-truth count assertion would make it more discriminating."
+  }
+}
