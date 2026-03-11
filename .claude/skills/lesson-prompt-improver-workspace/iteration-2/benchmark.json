@@ -1,0 +1,421 @@
+{
+  "metadata": {
+    "skill_name": "lesson-prompt-improver",
+    "skill_path": "/Users/mjs/Documents/code/panaversity-official/tutorsgpt/ag2/.claude/skills/lesson-prompt-improver",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-11T14:00:00Z",
+    "evals_run": [1, 2, 3, 4],
+    "runs_per_configuration": 1
+  },
+
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "ch18-terminology",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 108.0,
+        "tokens": 46195,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+          "passed": true,
+          "evidence": "Found 5 instances, all correctly classified as Defect 6"
+        },
+        {
+          "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+          "passed": true,
+          "evidence": "Found 5 instances: lines 143, 179, 189, 95, 70"
+        },
+        {
+          "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+          "passed": true,
+          "evidence": "Each instance has specific replacement text referencing canonical form"
+        },
+        {
+          "text": "Produces a summary table organized by the 6-defect taxonomy",
+          "passed": true,
+          "evidence": "All 6 defect types analyzed with CLEAN/FOUND status"
+        },
+        {
+          "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+          "passed": true,
+          "evidence": "8-row exclusion table documenting each correctly excluded block"
+        }
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "ch18-terminology",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 3,
+        "failed": 2,
+        "total": 5,
+        "time_seconds": 88.2,
+        "tokens": 37703,
+        "tool_calls": 4,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+          "passed": true,
+          "evidence": "Found terminology issues and referenced cowork-content.md"
+        },
+        {
+          "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+          "passed": true,
+          "evidence": "Found 5 instances across Issues 1, 2, 3, 7"
+        },
+        {
+          "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+          "passed": true,
+          "evidence": "Provided replacement table with before/after text"
+        },
+        {
+          "text": "Produces a summary table organized by the 6-defect taxonomy",
+          "passed": false,
+          "evidence": "Used severity-based categories (HIGH/MEDIUM/LOW), NOT 6-defect taxonomy"
+        },
+        {
+          "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+          "passed": false,
+          "evidence": "Flagged lines 149-153 (behavioral prediction narrative) as 'Fabricated agent output narrative' at MEDIUM severity"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "ch17-data-injection",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 154.8,
+        "tokens": 49591,
+        "tool_calls": 8,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+          "passed": true,
+          "evidence": "Explicitly states: 'Correct for Ch17. Checked 60+ terminology instances.'"
+        },
+        {
+          "text": "Identifies inline data injection or paste-based patterns in exercise prompts",
+          "passed": true,
+          "evidence": "Identified data pattern at lines 136-156, classified as different pattern (folder-based), found CLEAN"
+        },
+        {
+          "text": "Checks for missing skill names in exercise prompts",
+          "passed": true,
+          "evidence": "Examined all prompt blocks, found slash commands present (/reconciliation etc.)"
+        },
+        {
+          "text": "Produces a prioritised defect summary (Defect 1 highest priority)",
+          "passed": true,
+          "evidence": "Structured Defect 1-6 in priority order. 0 actionable defects."
+        },
+        {
+          "text": "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)",
+          "passed": true,
+          "evidence": "Explicitly maps product names to line ranges, noting both terms used correctly in assistant-to-agent comparison"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "ch17-data-injection",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 3,
+        "failed": 2,
+        "total": 5,
+        "time_seconds": 125.5,
+        "tokens": 43659,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+          "passed": true,
+          "evidence": "No 'Claude in Excel' flagged as terminology defect"
+        },
+        {
+          "text": "Identifies inline data injection or paste-based patterns in exercise prompts",
+          "passed": true,
+          "evidence": "Found circular $3,420 data injection pattern as Issue 4 (HIGH)"
+        },
+        {
+          "text": "Checks for missing skill names in exercise prompts",
+          "passed": true,
+          "evidence": "Found missing tool references in Issues 7, 9, 10, 11"
+        },
+        {
+          "text": "Produces a prioritised defect summary (Defect 1 highest priority)",
+          "passed": false,
+          "evidence": "Own priority matrix puts data injection above fabricated output, not Defect 1 first"
+        },
+        {
+          "text": "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)",
+          "passed": false,
+          "evidence": "No explicit discussion of Ch17 vs Ch18+ terminology distinction"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "ch23-already-fixed",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 120.3,
+        "tokens": 46775,
+        "tool_calls": 12,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+          "passed": true,
+          "evidence": "Opening statement: 'Fabricated outputs have already been replaced with intent tables'"
+        },
+        {
+          "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+          "passed": true,
+          "evidence": "Explicitly excluded: 'deliberate anti-pattern example for Compliance Gap error type'"
+        },
+        {
+          "text": "Does NOT flag the intent tables themselves as fabricated output",
+          "passed": true,
+          "evidence": "Intent tables identified as 'properly formed intent table replacement'"
+        },
+        {
+          "text": "Identifies the lesson as mostly clean / low defect count",
+          "passed": true,
+          "evidence": "'This lesson is CLEAN.' Total: 2 minor defects, 0 critical"
+        },
+        {
+          "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+          "passed": true,
+          "evidence": "Line 348 = Defect 6, Line 300 = Defect 2"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "ch23-already-fixed",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.4,
+        "passed": 2,
+        "failed": 3,
+        "total": 5,
+        "time_seconds": 150.2,
+        "tokens": 53665,
+        "tool_calls": 17,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+          "passed": true,
+          "evidence": "Notes intent tables exist in Issue 1 discussion"
+        },
+        {
+          "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+          "passed": false,
+          "evidence": "Flagged as Issue 1 (HIGH severity) despite acknowledging the disclaimer"
+        },
+        {
+          "text": "Does NOT flag the intent tables themselves as fabricated output",
+          "passed": true,
+          "evidence": "Intent tables not flagged, mentioned positively"
+        },
+        {
+          "text": "Identifies the lesson as mostly clean / low defect count",
+          "passed": false,
+          "evidence": "Found 7 issues (1 HIGH, 3 MEDIUM, 3 LOW) — framed as having significant issues"
+        },
+        {
+          "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+          "passed": false,
+          "evidence": "Used own categories (Fabricated Output, Terminology, Missing Prompt, Consistency, etc.)"
+        }
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "saudi-arabia-full-audit",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 116.3,
+        "tokens": 46986,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Checks for all 6 defect types",
+          "passed": true,
+          "evidence": "All 6 analyzed with CLEAN/FOUND status"
+        },
+        {
+          "text": "Identifies **Output:** blocks",
+          "passed": true,
+          "evidence": "Found line 177 borderline, recommended removing label"
+        },
+        {
+          "text": "Checks for natural skill names",
+          "passed": true,
+          "evidence": "Found 6 instances of Defect 2 across E7-S1 through E7-S6"
+        },
+        {
+          "text": "Checks for inline data injection",
+          "passed": true,
+          "evidence": "Defect 3 checked, found CLEAN with explanation"
+        },
+        {
+          "text": "Produces prioritised summary",
+          "passed": true,
+          "evidence": "Summary in Defect 1-6 order, recommendations prioritized"
+        },
+        {
+          "text": "Correctly excludes anti-patterns and frameworks",
+          "passed": true,
+          "evidence": "ZATCA formula, comparison table, journal entries, prompts, answer key all excluded with documentation"
+        }
+      ]
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "saudi-arabia-full-audit",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.67,
+        "passed": 4,
+        "failed": 2,
+        "total": 6,
+        "time_seconds": 271.2,
+        "tokens": 72018,
+        "tool_calls": 24,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Checks for all 6 defect types",
+          "passed": true,
+          "evidence": "6-type taxonomy covering similar ground (different names)"
+        },
+        {
+          "text": "Identifies **Output:** blocks",
+          "passed": true,
+          "evidence": "Found line 177, correctly assessed as non-fabricated, recommended renaming"
+        },
+        {
+          "text": "Checks for natural skill names",
+          "passed": false,
+          "evidence": "Checked for jurisdiction/framework prefixes, not natural skill names"
+        },
+        {
+          "text": "Checks for inline data injection",
+          "passed": true,
+          "evidence": "Most thorough data analysis of any agent — found 3 HIGH, 1 MEDIUM missing data issues"
+        },
+        {
+          "text": "Produces prioritised summary",
+          "passed": false,
+          "evidence": "Own impact-based ordering, not Defect 1-6"
+        },
+        {
+          "text": "Correctly excludes anti-patterns and frameworks",
+          "passed": true,
+          "evidence": "All framework content correctly excluded with documentation"
+        }
+      ]
+    }
+  ],
+
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": { "mean": 1.0, "stddev": 0.0, "min": 1.0, "max": 1.0 },
+      "time_seconds": {
+        "mean": 124.9,
+        "stddev": 17.8,
+        "min": 108.0,
+        "max": 154.8
+      },
+      "tokens": { "mean": 47387, "stddev": 1274, "min": 46195, "max": 49591 }
+    },
+    "without_skill": {
+      "pass_rate": { "mean": 0.57, "stddev": 0.1, "min": 0.4, "max": 0.67 },
+      "time_seconds": {
+        "mean": 158.8,
+        "stddev": 66.5,
+        "min": 88.2,
+        "max": 271.2
+      },
+      "tokens": { "mean": 51761, "stddev": 12930, "min": 37703, "max": 72018 }
+    },
+    "delta": {
+      "pass_rate": "+0.43",
+      "time_seconds": "-33.9",
+      "tokens": "-4374"
+    }
+  },
+
+  "iteration_comparison": {
+    "iteration_1": {
+      "with_skill": 0.62,
+      "without_skill": 0.35,
+      "delta": "+0.27"
+    },
+    "iteration_2": {
+      "with_skill": 1.0,
+      "without_skill": 0.57,
+      "delta": "+0.43"
+    },
+    "improvement": "Skill pass rate improved from 62% to 100% (+38pp). Delta over baseline improved from +27pp to +43pp."
+  },
+
+  "notes": [
+    "PERFECT SCORE: With-skill achieves 100% pass rate across all 4 evals (21/21 expectations passed). This is up from 62% in iteration 1.",
+    "Eval 1 (Ch18 terminology) is a strong discriminator: with-skill correctly excludes behavioral prediction narrative while baseline flags it as fabricated output. Both find the terminology defects.",
+    "Eval 2 (Ch17 data injection) tests the critical Ch17-vs-Ch18 distinction. With-skill explicitly maps product names to line ranges and explains why both 'Claude in Excel' and 'Cowork' are correct. Baseline misses this distinction entirely.",
+    "Eval 3 (Ch23 already-fixed) is the STRONGEST discriminator: with-skill recognizes intent tables and preserved anti-patterns as intentional (5/5). Baseline flags the Hamza DM as a HIGH defect despite its disclaimer (2/5).",
+    "Eval 4 (Saudi Arabia) retained from iteration 1 — with-skill maintains perfect score (6/6 vs 6/6 in iter-1). Baseline improved slightly (4/6 vs 2/6 in iter-1) due to better eval calibration.",
+    "With-skill is FASTER (125s vs 159s avg) and uses FEWER tokens (47K vs 52K avg). The structured taxonomy prevents exploratory tangents.",
+    "Baseline's common failure modes: (1) no 6-defect taxonomy → uses ad-hoc categories, (2) no Ch17/Ch18 distinction → misses terminology context, (3) no anti-pattern exception rule → false positives on teaching examples.",
+    "KEY INSIGHT: The skill's three core advantages are: (a) structured 6-type taxonomy with priority ordering, (b) exception rules for anti-patterns/frameworks/student-generated data, (c) chapter-context awareness (Ch17 vs Ch18+ terminology rules). All three produce measurable improvements."
+  ]
+}

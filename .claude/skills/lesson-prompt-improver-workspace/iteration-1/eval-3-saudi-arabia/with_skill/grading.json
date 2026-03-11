@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Checks for all 6 defect types, not just fabricated output",
+      "passed": true,
+      "evidence": "Summary table lists all 6 defect types with explicit CLEAN/FOUND status for each. Detailed analysis covers every type in order."
+    },
+    {
+      "text": "Identifies any fabricated output blocks preceded by **Output:**",
+      "passed": true,
+      "evidence": "Found **Output:** label on line 177 and analyzed it. Correctly classified as borderline (factual accounting treatment, not variable agent output). Recommended relabelling to avoid ambiguity."
+    },
+    {
+      "text": "Checks whether exercise prompts include natural skill names",
+      "passed": true,
+      "evidence": "Found 6 instances of Defect 2 across Exercise 7 Steps 1-6. Provided specific fix for each: prefix with 'Use the saudi-arabia jurisdiction skill.' Also noted Try With AI Prompt 1 needs the skill name."
+    },
+    {
+      "text": "Checks for inline data injection patterns (Read demo-data.md outside L01)",
+      "passed": true,
+      "evidence": "Explicitly checked Defect 3 and found CLEAN. Noted lesson uses exercise data files via download link in admonition block, not inline injection."
+    },
+    {
+      "text": "Produces a prioritised summary (Defect 1 first, then 2-6)",
+      "passed": true,
+      "evidence": "Summary table at top in exact priority order (Defect 1 through 6). Detailed analysis follows same order. Priority recommendations table at bottom."
+    },
+    {
+      "text": "Anti-pattern examples and framework tables are correctly excluded from defect list",
+      "passed": true,
+      "evidence": "Explicitly excluded: ZATCA zakat formula (lines 134-143) as framework specification, journal entry templates (lines 165-168, 172-175) as accounting templates, all prompt code blocks as student input, error detection step (E7-S6) as legitimate pedagogical pattern."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

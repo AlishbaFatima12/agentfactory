@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+      "passed": true,
+      "evidence": "Found 'Claude in Excel' terminology issues at lines 143, 179, 189, 95, and 70. Correctly references cowork-content.md rules."
+    },
+    {
+      "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+      "passed": true,
+      "evidence": "Found 5 instances across Issues 1, 2, 3, and 7. Lines 143, 179, 189 (body text), line 95 (YAML), line 70 (YAML)."
+    },
+    {
+      "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+      "passed": true,
+      "evidence": "Each issue recommends replacing with 'Cowork'. Provides a replacement table with exact before/after text."
+    },
+    {
+      "text": "Produces a summary table organized by the 6-defect taxonomy",
+      "passed": false,
+      "evidence": "Summary table uses severity-based categories (HIGH/MEDIUM/LOW) with custom types (Terminology, Prompt Quality, Missing Reference) — NOT the skill's 6-defect taxonomy."
+    },
+    {
+      "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+      "passed": false,
+      "evidence": "Flagged lines 149-153 (pedagogical narrative about Claude's expected behavior) as Issue 4 'Fabricated agent output narrative' at MEDIUM severity. This is conceptual teaching content — a qualitative prediction, not fabricated output with specific fake numbers. The with-skill agent correctly excluded this."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 2,
+    "total": 5,
+    "pass_rate": 0.6
+  }
+}

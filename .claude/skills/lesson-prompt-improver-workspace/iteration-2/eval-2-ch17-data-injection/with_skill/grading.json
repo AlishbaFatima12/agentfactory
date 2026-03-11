@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+      "passed": true,
+      "evidence": "Defect 6 section explicitly states: 'Terminology is correct throughout. Claude in Excel used correctly in contexts describing the embedded assistant product. This is the correct product name for Ch17.' Checked 60+ terminology instances."
+    },
+    {
+      "text": "Identifies inline data injection or paste-based patterns in exercise prompts",
+      "passed": true,
+      "evidence": "In Defect 3 analysis, identified the data pattern: 'This lesson uses a different data pattern: students generate practice data into a connected Cowork folder (lines 136-156), and commands read from that folder.' Classified as CLEAN (not a redundant injection), which is a defensible interpretation."
+    },
+    {
+      "text": "Checks for missing skill names in exercise prompts",
+      "passed": true,
+      "evidence": "Defect 2 section examines all prompt blocks and correctly finds slash commands present (/reconciliation, /journal-entry, etc.). Notes Try With AI prompts appropriately omit skill names as conceptual exploration."
+    },
+    {
+      "text": "Produces a prioritised defect summary (Defect 1 highest priority)",
+      "passed": true,
+      "evidence": "Report structured with Defect 1 through 6 analyzed in priority order. Summary states '0 actionable defects' with recommendations ordered by priority."
+    },
+    {
+      "text": "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)",
+      "passed": true,
+      "evidence": "Explicitly distinguishes: 'Claude in Excel used correctly in contexts describing the embedded assistant product (lines 5, 32, 52...)' vs 'Cowork used correctly in contexts describing the orchestrating agent platform (lines 4, 8, 106...)'. Notes 'Both terms used together correctly in the assistant-to-agent comparison.'"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

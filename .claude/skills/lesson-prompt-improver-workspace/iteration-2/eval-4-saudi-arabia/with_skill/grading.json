@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Checks for all 6 defect types, not just fabricated output",
+      "passed": true,
+      "evidence": "All 6 defect types analyzed with explicit CLEAN/FOUND status: Defect 1 (FOUND borderline), Defect 2 (FOUND 6 instances), Defects 3-6 (all CLEAN)."
+    },
+    {
+      "text": "Identifies any fabricated output blocks preceded by **Output:**",
+      "passed": true,
+      "evidence": "Found **Output:** label at line 177. Analyzed as borderline — factual narrative, not fabricated numbers. Recommended removing the misleading label."
+    },
+    {
+      "text": "Checks whether exercise prompts include natural skill names",
+      "passed": true,
+      "evidence": "Found 6 instances of Defect 2 across all 6 exercise steps (E7-S1 through E7-S6). Each classified as a primary exercise prompt needing the skill name. Also noted Try With AI Prompt 1 should include skill name."
+    },
+    {
+      "text": "Checks for inline data injection patterns",
+      "passed": true,
+      "evidence": "Defect 3 explicitly checked and found CLEAN. Notes: 'The exercise prompts embed data directly in the prompt text rather than referencing external data files via inline injection.' Correctly identifies this as the appropriate pattern for Ch20."
+    },
+    {
+      "text": "Produces a prioritised summary (Defect 1 first, then 2-6)",
+      "passed": true,
+      "evidence": "Summary table lists defects in order. Detailed analysis covers Defect 1 through 6 sequentially. Recommendations prioritized with Defect 2 first (6 fixes) then Defect 1 (1 fix) — count-based priority within the defect ordering."
+    },
+    {
+      "text": "Anti-pattern examples and framework tables are correctly excluded from defect list",
+      "passed": true,
+      "evidence": "Extensive exclusion documentation: ZATCA formula (framework definition), ZATCA vs AAOIFI comparison table, journal entry templates with placeholders, all prompt blocks (student input), exercise prompts (student-generated data), Check your work section (answer key), Saudi Accounting Framework table."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  }
+}

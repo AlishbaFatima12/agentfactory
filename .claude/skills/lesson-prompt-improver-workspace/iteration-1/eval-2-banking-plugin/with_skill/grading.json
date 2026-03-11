@@ -1,0 +1,44 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies fabricated agent output containing specific fake numbers",
+      "passed": false,
+      "evidence": "Determined NO fabricated output exists. Applied the skill's exception rule for 'student-generated data' — the query trace numbers (300 Stage 2, 11700 Stage 1, $150M after-tax) are deterministic arithmetic from the prompt parameters, not invented agent output. This classification is ARGUABLY CORRECT but fails the assertion which assumes fabricated output exists. NOTE: The assertion may be poorly calibrated for this file."
+    },
+    {
+      "text": "Does NOT flag plugin architecture tables or directory trees as defects",
+      "passed": true,
+      "evidence": "Explicitly reviewed architecture content and found clean. Skill library table, directory trees, and hook descriptions all correctly excluded."
+    },
+    {
+      "text": "Replaces fabricated output with intent table showing expected sections",
+      "passed": false,
+      "evidence": "No intent table produced since no fabricated output was identified. Agent correctly determined the content falls under the student-generated data exception."
+    },
+    {
+      "text": "Intent table has 4-7 rows matching the skill's actual output structure",
+      "passed": false,
+      "evidence": "No intent table produced (see above)."
+    },
+    {
+      "text": "Generalises any narrative that references specific fabricated numbers",
+      "passed": false,
+      "evidence": "No narrative generalization needed since no fabricated output was identified. Agent noted narrative references query's own parameters, which remain valid."
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 4,
+    "total": 5,
+    "pass_rate": 0.2
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Identifies fabricated agent output containing specific fake numbers",
+        "reason": "The with-skill agent correctly applied the exception rule (student-generated data from deterministic arithmetic). The assertion assumes fabricated output exists, but it may not. This test case may be better suited for testing EXCEPTION HANDLING rather than defect detection."
+      }
+    ],
+    "overall": "Eval 2 assertions are miscalibrated. The banking lesson's query traces use deterministic math from prompt parameters — the with-skill agent correctly classifies them as exceptions. Assertions should test whether the agent correctly distinguishes student-generated data from fabricated output, not assume fabrication exists."
+  }
+}

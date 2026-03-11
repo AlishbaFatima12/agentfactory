@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+      "passed": true,
+      "evidence": "Opening assessment states: 'Fabricated outputs have already been replaced with intent tables.' Identifies both intent tables at lines 206-215 and 221-232 as 'properly formed intent table replacement' with correct :::note disclaimers."
+    },
+    {
+      "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+      "passed": true,
+      "evidence": "Explicitly states: 'The Hamza Qureshi LinkedIn DM is a deliberate anti-pattern example used to teach the Compliance Gap error type.' Listed in exclusion table with full justification. Verdict: 'Correctly preserved. This is NOT a fabricated output defect.'"
+    },
+    {
+      "text": "Does NOT flag the intent tables themselves as fabricated output",
+      "passed": true,
+      "evidence": "Intent tables explicitly identified as 'properly formed intent table replacement' in Defect 1 analysis. Not flagged as defects."
+    },
+    {
+      "text": "Identifies the lesson as mostly clean / low defect count",
+      "passed": true,
+      "evidence": "Overall assessment: 'This lesson is CLEAN.' Total defects: 2 (0 critical, 2 minor). Verdict: 'Lesson quality: HIGH.'"
+    },
+    {
+      "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+      "passed": true,
+      "evidence": "Both remaining defects correctly categorised: Line 348 = Defect 6 (Plugin/Tool Terminology), Line 300 = Defect 2 (Missing Skill Name). Both are minor."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}
