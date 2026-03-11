@@ -45,16 +45,16 @@ class LearnerProfile:
     industry: str
     tools_in_use: list[str]
 
-    # Communication preferences
-    language_complexity: str  # simple, technical, academic
+    # Communication preferences (aligned with canonical learner-profile-api schema)
+    language_complexity: str  # plain, professional, technical, expert
     preferred_structure: str  # problem-first, concept-first, example-first
-    verbosity: str  # concise, detailed, comprehensive
+    verbosity: str  # concise, moderate, detailed
     tone: str  # formal, conversational, encouraging
     wants_check_in_questions: bool
 
     # Delivery preferences
     include_code_samples: bool
-    code_verbosity: str  # minimal, moderate, comprehensive
+    code_verbosity: str  # minimal, annotated, fully-explained
 
     # Accessibility
     screen_reader: bool
@@ -116,7 +116,7 @@ class LearnerProfile:
             current_role="professional",
             industry="technology",
             tools_in_use=[],
-            language_complexity="simple",
+            language_complexity="plain",
             preferred_structure="problem-first",
             verbosity="detailed",
             tone="encouraging",
@@ -128,13 +128,37 @@ class LearnerProfile:
         )
 
 
+# Profile cache: {auth_token: (profile, timestamp)}
+# TTL of 5 minutes - profiles rarely change mid-session
+_profile_cache: dict[str, tuple[LearnerProfile, float]] = {}
+_PROFILE_CACHE_TTL = 300  # 5 minutes in seconds
+
+# Reusable httpx client for connection pooling (type: httpx.AsyncClient)
+_http_client: Any = None
+
+
+def _get_http_client() -> Any:
+    """Get or create reusable HTTP client for connection pooling.
+
+    Returns an httpx.AsyncClient instance.
+    """
+    global _http_client
+    if _http_client is None:
+        import httpx
+        _http_client = httpx.AsyncClient(timeout=10.0)
+    return _http_client
+
+
 async def fetch_learner_profile(
     auth_token: str | None = None,
 ) -> LearnerProfile | None:
-    """Fetch learner profile from the Learner Profile API.
+    """Fetch learner profile from the Learner Profile API with caching.
 
     Uses the /api/v1/profiles/me endpoint which identifies the user
     from the JWT (JSON Web Token) in the Authorization header.
+
+    Caches profiles for 5 minutes to avoid repeated HTTP calls within
+    the same conversation.
 
     Args:
         auth_token: JWT auth token (required for production)
@@ -143,38 +167,50 @@ async def fetch_learner_profile(
         LearnerProfile if found, None otherwise
     """
     import os
-
-    import httpx
+    import time
 
     # Require auth token for production
     if not auth_token:
         logger.info("[TeachSkill] No auth token provided, cannot fetch profile")
         return None
 
+    # Check cache first
+    if auth_token in _profile_cache:
+        profile, cached_at = _profile_cache[auth_token]
+        if time.time() - cached_at < _PROFILE_CACHE_TTL:
+            logger.debug("[TeachSkill] Using cached learner profile")
+            return profile
+        else:
+            # Cache expired, remove it
+            del _profile_cache[auth_token]
+
     # Get API URL from environment
     api_url = os.getenv("LEARNER_PROFILE_API_URL", "http://localhost:8004")
 
     try:
-        async with httpx.AsyncClient(timeout=10.0) as client:
-            headers = {"Authorization": auth_token}
+        client = _get_http_client()
+        headers = {"Authorization": auth_token}
 
-            response = await client.get(
-                f"{api_url}/api/v1/profiles/me",
-                headers=headers,
+        response = await client.get(
+            f"{api_url}/api/v1/profiles/me",
+            headers=headers,
+        )
+
+        if response.status_code == 200:
+            data = response.json()
+            profile = LearnerProfile.from_api_response(data)
+            # Cache the profile
+            _profile_cache[auth_token] = (profile, time.time())
+            logger.info("[TeachSkill] Loaded and cached learner profile from API")
+            return profile
+        elif response.status_code == 404:
+            logger.info("[TeachSkill] No profile found for current user")
+            return None
+        else:
+            logger.warning(
+                f"[TeachSkill] Profile API returned {response.status_code}"
             )
-
-            if response.status_code == 200:
-                data = response.json()
-                logger.info("[TeachSkill] Loaded learner profile from API")
-                return LearnerProfile.from_api_response(data)
-            elif response.status_code == 404:
-                logger.info("[TeachSkill] No profile found for current user")
-                return None
-            else:
-                logger.warning(
-                    f"[TeachSkill] Profile API returned {response.status_code}"
-                )
-                return None
+            return None
 
     except Exception as e:
         logger.warning(f"[TeachSkill] Failed to fetch profile: {e}")
@@ -261,8 +297,8 @@ def build_teaching_skill_prompt(ctx: TeachingContext) -> str:
 
     verbosity_adapt = {
         "concise": "2-4 sentences, get to the point",
-        "detailed": "4-6 sentences, balance depth with clarity",
-        "comprehensive": "Thorough with context and implications",
+        "moderate": "4-6 sentences, balance depth with clarity",
+        "detailed": "Thorough with context and implications",
     }.get(p.verbosity, "4-6 sentences")
 
     structure_adapt = {
@@ -556,53 +592,3 @@ def create_teaching_agent(profile: LearnerProfile | None = None) -> Agent[Teachi
         instructions=dynamic_instructions,
         tools=[],  # No tools - just teaching
     )
-
-
-# =============================================================================
-# CONVENIENCE FUNCTION
-# =============================================================================
-
-async def teach_lesson(
-    lesson_title: str,
-    lesson_content: str,
-    user_message: str,
-    profile: LearnerProfile | None = None,
-    thread_id: str = "",
-) -> str:
-    """Teach a lesson to a student with a single call.
-
-    This is the simplest interface:
-    - Provide lesson content
-    - Provide user message
-    - Get teaching response
-
-    Args:
-        lesson_title: Title of the lesson
-        lesson_content: Full lesson content (or YAML frontmatter)
-        user_message: What the student said
-        profile: Learner profile (uses mock if not provided)
-        thread_id: For logging
-
-    Returns:
-        Teaching response as string
-    """
-    from agents import Runner
-
-    # Use default profile if not provided
-    if profile is None:
-        profile = LearnerProfile.mock()
-        logger.info("[TeachSkill] Using default learner profile")
-
-    # Build context
-    ctx = TeachingContext(
-        profile=profile,
-        lesson_title=lesson_title,
-        lesson_content=lesson_content,
-        thread_id=thread_id,
-    )
-
-    # Create and run agent
-    agent = create_teaching_agent(profile)
-    result = await Runner.run(agent, user_message, context=ctx)
-
-    return str(result.final_output) if result.final_output else ""

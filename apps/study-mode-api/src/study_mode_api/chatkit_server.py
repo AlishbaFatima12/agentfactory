@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import logging
 from collections.abc import AsyncIterator
 from datetime import datetime
@@ -306,8 +307,6 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
 
         Now also receives conversation history (items) to maintain context.
         """
-        from agents import Runner
-
         from .fte.teach_skill import (
             TeachingContext,
             create_teaching_agent,
@@ -398,7 +397,7 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 await metering_hooks.release_on_error(agent_context)
             # Log the error for debugging
             error_str = str(e)
-            logger.error(f"[ChatKit] v4 Stream error: {type(e).__name__}: {error_str}")
+            logger.exception(f"[ChatKit] v4 Stream error: {type(e).__name__}: {error_str}")
 
             # Create error message to maintain conversation history consistency
             # This prevents consecutive UserMessages which breaks Gemini
@@ -473,11 +472,23 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 f"lesson={lesson_path}, mode={mode}"
             )
 
-            # Load lesson content
-            content_data = await load_lesson_content(lesson_path)
+            # Load lesson content and thread items in parallel (independent I/O)
+            content_task = load_lesson_content(lesson_path)
+            items_task = self.store.load_thread_items(
+                thread.id,
+                after=None,
+                limit=MAX_RECENT_ITEMS,
+                order="desc",
+                context=context,
+            )
+            content_data, previous_items = await asyncio.gather(
+                content_task, items_task
+            )
+
             content = content_data.get("content", "")
             title = content_data.get("title", "Unknown")
             cached = content_data.get("cached", False)
+            items = list(reversed(previous_items.data))
 
             logger.info(
                 f"[ChatKit] Content: title='{title}', "
@@ -486,16 +497,6 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
 
             if not content:
                 logger.warning(f"[ChatKit] No content for: {lesson_path}")
-
-            # Get previous messages from thread for context
-            previous_items = await self.store.load_thread_items(
-                thread.id,
-                after=None,
-                limit=MAX_RECENT_ITEMS,
-                order="desc",
-                context=context,
-            )
-            items = list(reversed(previous_items.data))
 
             # FIX: Ensure current user message is included in items
             # Race condition: add_user_message may not have saved to store yet
@@ -555,6 +556,22 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                     is_first_message=is_first_message,
                 ):
                     yield event
+
+                # DELETE TRIGGER MESSAGE: If this was an auto-start trigger,
+                # remove it so only the AI greeting shows
+                if _is_trigger_message(user_text) and input_user_message:
+                    try:
+                        await self.store.delete_thread_item(
+                            thread.id,
+                            input_user_message.id,
+                            context,
+                        )
+                        logger.info(
+                            f"[ChatKit] Deleted trigger message {input_user_message.id} "
+                            f"from teach thread {thread.id}"
+                        )
+                    except Exception as del_err:
+                        logger.warning(f"[ChatKit] Failed to delete trigger: {del_err}")
                 return
 
             # ASK MODE: Use ask_agent with DeepSeek for direct answers

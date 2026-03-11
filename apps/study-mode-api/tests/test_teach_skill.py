@@ -43,7 +43,7 @@ class TestLearnerProfileMock:
         # Encouraging tone for beginners
         assert profile.tone == "encouraging"
         # Simple language complexity
-        assert profile.language_complexity == "simple"
+        assert profile.language_complexity == "plain"
 
 
 class TestLearnerProfileFromApiResponse:
