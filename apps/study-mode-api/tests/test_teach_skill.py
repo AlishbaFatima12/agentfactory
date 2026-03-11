@@ -340,6 +340,7 @@ class TestModelProvider:
 class TestGetLearnerProfile:
     """Tests for get_learner_profile() function."""
 
+    @pytest.mark.asyncio
     @patch("study_mode_api.fte.teach_skill.fetch_learner_profile")
     async def test_returns_api_profile_when_available(self, mock_fetch):
         """Should return profile from API when available."""
@@ -354,6 +355,7 @@ class TestGetLearnerProfile:
         assert result.name == "API User"
         mock_fetch.assert_called_once_with("valid-token")
 
+    @pytest.mark.asyncio
     @patch("study_mode_api.fte.teach_skill.fetch_learner_profile")
     async def test_falls_back_to_mock_when_api_fails(self, mock_fetch):
         """Should fall back to mock profile when API returns None."""
@@ -367,6 +369,7 @@ class TestGetLearnerProfile:
         # Should use the fallback name
         assert result.name == "Fallback Name"
 
+    @pytest.mark.asyncio
     @patch("study_mode_api.fte.teach_skill.fetch_learner_profile")
     async def test_uses_generic_name_when_no_fallback(self, mock_fetch):
         """Should use generic name when no user_name provided."""

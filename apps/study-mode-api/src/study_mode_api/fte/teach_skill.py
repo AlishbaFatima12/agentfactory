@@ -489,8 +489,11 @@ Skip to step 3-5. Give direct explanation without preamble.
 class ModelProvider:
     """Singleton provider for the teaching model.
 
-    Thread-safe lazy initialization of the LiteLLM model (unified LLM API wrapper
+    Event-loop-safe lazy initialization of the LiteLLM model (unified LLM API wrapper
     that provides consistent interface across providers like OpenAI, Gemini, etc.).
+
+    Note: This is safe within a single asyncio event loop but not truly thread-safe.
+    For multi-threaded scenarios, add a threading.Lock.
 
     Avoids global mutable state while maintaining single instance.
 

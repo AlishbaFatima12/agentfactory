@@ -2,28 +2,20 @@
 
 from __future__ import annotations
 
-# Load environment variables first, before any imports that need them
-from pathlib import Path
+import logging
+import os
+from collections.abc import AsyncIterator
+from datetime import datetime
+from typing import Any
 
-from dotenv import load_dotenv
-
-# Load from study-mode-api/.env (parent of src/)
-_env_path = Path(__file__).parent.parent.parent / ".env"
-load_dotenv(_env_path)
-
-import logging  # noqa: E402
-from collections.abc import AsyncIterator  # noqa: E402
-from datetime import datetime  # noqa: E402
-from typing import Any  # noqa: E402
-
-from agents import Runner, RunResultStreaming  # noqa: E402
-from chatkit.agents import (  # noqa: E402
+from agents import Runner, RunResultStreaming
+from chatkit.agents import (
     AgentContext,
     simple_to_agent_input,
     stream_agent_response,
 )
-from chatkit.server import ChatKitServer  # noqa: E402
-from chatkit.types import (  # noqa: E402
+from chatkit.server import ChatKitServer
+from chatkit.types import (
     AssistantMessageContent,
     AssistantMessageContentPartTextDelta,
     AssistantMessageItem,
@@ -36,20 +28,15 @@ from chatkit.types import (  # noqa: E402
     UserMessageItem,
     UserMessageTextContent,
 )
-from fastapi import HTTPException  # noqa: E402
+from fastapi import HTTPException
 
-from .chatkit_store import (  # noqa: E402
+from .chatkit_store import (
     CachedPostgresStore,
     PostgresStore,
     RequestContext,
 )
-from .fte.answer_verification import detect_special_request  # noqa: E402
-from .metering import create_metering_hooks  # noqa: E402
-from .services.content_loader import load_lesson_content  # noqa: E402
-
-# Enable skill-based teaching (v4) - simplified approach
-# Uses skill prompt + learner profile + lesson content (no state machine)
-USE_SKILL_BASED_TEACH = True
+from .metering import create_metering_hooks
+from .services.content_loader import load_lesson_content
 
 logger = logging.getLogger(__name__)
 
@@ -430,7 +417,8 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 content=[AssistantMessageContent(text=error_text, annotations=[])],
             )
             yield ThreadItemDoneEvent(item=error_message)
-            return
+            # Re-raise to ensure error is logged/monitored (don't silently swallow)
+            raise
 
         logger.info(f"[ChatKit] v4: Done for thread {thread.id}")
 
@@ -464,11 +452,6 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
             if not user_text:
                 logger.warning("[ChatKit] Empty user message")
                 return
-
-            # Check for special requests (hint, skip, option_confusion)
-            special_request = detect_special_request(user_text)
-            if special_request:
-                logger.info(f"[ChatKit] Special request detected: {special_request}")
 
             # Get metadata from context
             lesson_path = context.metadata.get("lesson_path", "")
@@ -517,10 +500,10 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
 
             # FIX: Ensure current user message is included in items
             # Race condition: add_user_message may not have saved to store yet
+            # Note: temp_ prefixed IDs are used only for in-memory context building
+            # and don't persist to storage (Gemini needs contiguous conversation)
             last_item_text = _get_last_item_text(items)
             if user_text and user_text.strip() and user_text != last_item_text:
-                # Create a temporary UserMessageItem for the current message
-                from datetime import datetime
                 current_msg = UserMessageItem(
                     id=f"temp_{thread.id}_{len(items)}",
                     thread_id=thread.id,
@@ -546,8 +529,7 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 f"has_assistant={has_assistant_response}, is_first={is_first_message}"
             )
 
-            # ROUTING: Choose handler based on mode and flags
-            logger.info(f"[ChatKit] MODE CHECK: SKILL={USE_SKILL_BASED_TEACH}, mode='{mode}'")
+            # ROUTING: Choose handler based on mode
 
             # Set thread title for new threads (common to all modes)
             if is_first_message and mode == "teach":
@@ -557,9 +539,9 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                     context.metadata["title"] = _generate_thread_title(user_text)
                 await self.store.save_thread(thread, context)
 
-            # SKILL-BASED MODE (v4): Simplified approach - agent as a tool
+            # TEACH MODE: Skill-based teaching - agent as a tool
             # Three inputs: learner profile + skill prompt + lesson content
-            if USE_SKILL_BASED_TEACH and mode == "teach":
+            if mode == "teach":
                 logger.info("[ChatKit] >>> ROUTING TO SKILL-BASED MODE (v4) <<<")
 
                 async for event in self.handle_teach_skill(
