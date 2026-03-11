@@ -1,0 +1,80 @@
+deck:
+  id: "ch22-08-litigation-support"
+  title: "Litigation Support, Legal Hold, and Canned Responses"
+  description: "Legal hold workflows with /respond, preservation notices, custodian tracking, the absolute litigation strategy governance boundary, seven canned response categories, and universal escalation triggers"
+  tags: ["legal-ops", "litigation", "legal-hold", "canned-responses", "chapter-22"]
+  version: 1
+
+cards:
+  - id: "ch22-08-litigation-001"
+    front: "What is a legal hold (litigation hold)?"
+    back: "A directive issued by an organisation's legal department requiring preservation of all documents, electronically stored information (ESI), and other materials that may be relevant to a pending or reasonably anticipated legal dispute. Once triggered, the organisation must suspend routine document destruction policies including automated deletion schedules."
+    difficulty: "basic"
+    tags: ["legal-hold"]
+
+  - id: "ch22-08-litigation-002"
+    front: "When is a legal hold triggered — what events create the preservation obligation?"
+    back: "A legal hold is triggered when litigation is 'reasonably anticipated' — not when a lawsuit is actually filed. Triggering events include: a demand letter, a regulatory investigation notice, or a significant customer complaint. The obligation attaches at the point of reasonable anticipation, not at the point of filing."
+    difficulty: "intermediate"
+    tags: ["trigger-events"]
+
+  - id: "ch22-08-litigation-003"
+    front: "What four outputs does the /respond litigation-hold workflow produce?"
+    back: "1. Hold notice — formal preservation notice for custodian distribution\n2. Custodian list — identified from matter scope, cross-referenced against directory, flags departed employees\n3. Acknowledgement tracker — with escalation triggers at 3 days (reminder), 5 days (manager), 7 days (General Counsel)\n4. IT suspension notice — request to suspend automated deletion for email, documents, chat, backups"
+    difficulty: "intermediate"
+    tags: ["hold-workflow"]
+
+  - id: "ch22-08-litigation-004"
+    front: "What is the absolute governance boundary in litigation support?"
+    back: "The agent may draft hold notices, track custodian acknowledgements, compile document indices, and prepare chronologies. The agent must NEVER: assess merits of a claim, recommend settlement positions, draft legal arguments or pleadings, advise on privilege assertions, communicate with opposing counsel or the court, or determine which documents are responsive to discovery."
+    difficulty: "intermediate"
+    tags: ["governance-boundary"]
+
+  - id: "ch22-08-litigation-005"
+    front: "What are the consequences of failing to preserve relevant materials under a legal hold?"
+    back: "Sanctions, adverse inference instructions (where the court assumes destroyed evidence was unfavourable to the party that destroyed it), monetary penalties, and in severe cases, default judgment. Spoliation of evidence can transform a defensible case into a losing one."
+    difficulty: "intermediate"
+    why: "Why would a court assume destroyed evidence was unfavourable rather than neutral?"
+    tags: ["preservation-failure"]
+
+  - id: "ch22-08-litigation-006"
+    front: "What are the seven categories of canned responses handled by /respond?"
+    back: "1. Discovery hold — preservation notices\n2. Privacy inquiry — routine privacy questions\n3. DSAR response — data subject access request acknowledgement\n4. Vendor question — contract term clarifications, renewal queries\n5. NDA request — standard NDA routing\n6. Subpoena/legal process — acknowledgement and routing\n7. Insurance notification — incident notification to carriers"
+    difficulty: "intermediate"
+    tags: ["canned-responses"]
+
+  - id: "ch22-08-litigation-007"
+    front: "What six universal escalation triggers cause /respond to stop the templated response and route to an attorney?"
+    back: "1. Potential litigation — sender considering legal action\n2. Regulator inquiry — communication from a regulatory body\n3. Binding commitments — response would create contractual obligations\n4. Criminal liability — potential criminal exposure\n5. Media attention — matter involves or may attract press coverage\n6. Unprecedented situation — no template exists for this inquiry type"
+    difficulty: "intermediate"
+    tags: ["escalation-triggers"]
+
+  - id: "ch22-08-litigation-008"
+    front: "In the DataFlow Systems worked example, what five parameters were provided to /respond for the litigation hold?"
+    back: "1. type: 'litigation-hold'\n2. matter: 'CloudMesh v DataFlow — Patent Infringement Claim'\n3. scope: all documents relating to AutoPipeline feature, January 2024 to present\n4. trigger: demand letter received 14 March 2026 alleging patent infringement\n5. instructing-attorney: 'Priya Sharma, General Counsel'"
+    difficulty: "basic"
+    tags: ["respond-parameters"]
+
+  - id: "ch22-08-litigation-009"
+    front: "What does ESI stand for and what categories does it cover in a litigation hold?"
+    back: "Electronically Stored Information. Categories include: email, documents, chat messages (Slack, Teams), code repositories, database records, backup tapes, calendar entries, and any other electronic records within the hold's scope."
+    difficulty: "basic"
+    tags: ["esi"]
+
+  - id: "ch22-08-litigation-010"
+    front: "Why must the IT suspension request be part of every litigation hold package?"
+    back: "Organisations have routine automated deletion policies — email retention limits, backup tape rotation, document lifecycle management. Without an explicit IT suspension, these automated systems will continue deleting potentially relevant materials even after custodians are notified. The IT suspension halts automated destruction within the hold scope."
+    difficulty: "intermediate"
+    tags: ["it-suspension"]
+
+  - id: "ch22-08-litigation-011"
+    front: "What is the custodian acknowledgement escalation timeline?"
+    back: "Day 3: Automated reminder sent to non-responding custodians.\nDay 5: Escalation to custodian's manager.\nDay 7: Escalation to General Counsel.\nThis ensures every custodian confirms receipt and understanding of their preservation obligations."
+    difficulty: "basic"
+    tags: ["acknowledgement-tracking"]
+
+  - id: "ch22-08-litigation-012"
+    front: "Why is litigation strategy exclusively attorney work rather than something the agent can assist with?"
+    back: "Litigation strategy involves functions protected by legal professional privilege and governed by rules of professional conduct: assessing claim merits, recommending settlement, drafting pleadings, advising on privilege, and communicating with opposing counsel or the court. The agent's role is purely operational — providing administrative and logistical infrastructure so attorneys can focus on strategy."
+    difficulty: "intermediate"
+    tags: ["privilege", "governance"]
