@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-11
+- fix: Ch20-22 prompt quality audit — replace fabricated outputs, fix terminology ([#852](https://github.com/panaversity/agentfactory/pull/852))
+
+### 2026-03-11
 
 - Ch22 Legal Operations full chapter rewrite — 14 lessons ([#849](https://github.com/panaversity/agentfactory/pull/849))
 
