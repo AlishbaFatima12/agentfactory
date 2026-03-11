@@ -277,37 +277,20 @@ Annual turnover: GBP 85M
 Jurisdiction: UK FCA
 ```
 
-The agent routes through `aml-cdd-edd` and `kyc-risk-rating` and responds:
+The agent routes through `aml-cdd-edd` and `kyc-risk-rating` to produce a risk classification.
 
-```
-GOVERNING STANDARD: AML/KYC — UK FCA / JMLSG Guidance
-DOMAIN: Customer Due Diligence — Risk Classification
-JURISDICTION: United Kingdom — FCA Handbook / POCA 2002
+**What to expect:** The agent produces a risk factor analysis and CDD/EDD classification. Your output will vary based on the customer profile, but look for these sections:
 
-RISK FACTORS IDENTIFIED
-  1. PEP: Former Minister of Energy (Nigeria) — 25% shareholder
-     PEP status: Active (left office 2019, within extended
-     monitoring period)
-  2. High-risk jurisdictions: Nigeria, Kenya, Zambia
-     (elevated ML/TF risk per FATF mutual evaluations)
-  3. Complex ownership: Cayman Islands PE fund requires
-     UBO identification through to natural persons
-  4. High-value facility: GBP 150M project finance
+| Section                 | Intent                                                                   | What to Verify                                                                                |
+| ----------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| Risk factors identified | Lists all detected risk indicators (PEP, jurisdiction, ownership, value) | All relevant triggers identified; PEP status includes time-since-office assessment            |
+| Risk rating             | Assigns an overall risk level (Low/Medium/High)                          | Rating reflects the cumulative effect of all identified risk factors                          |
+| CDD/EDD classification  | Determines whether standard CDD or enhanced EDD is required              | Any single EDD trigger (PEP, high-risk jurisdiction, complex ownership) is sufficient         |
+| EDD requirements        | Lists the additional due diligence steps required                        | Senior management approval, source of wealth, beneficial ownership chain, enhanced monitoring |
 
-RISK RATING: HIGH
-CLASSIFICATION: Enhanced Due Diligence (EDD) required
-
-EDD REQUIREMENTS
-  - Senior management approval for onboarding
-  - Source of wealth verification for PEP shareholder
-  - Full beneficial ownership chain for Cayman PE fund
-  - Enhanced ongoing transaction monitoring
-  - Annual EDD review cycle
-
-NOTE: The professional makes the onboarding accept/reject
-decision and the EDD conclusions; the agent screened for
-risk factors and classified the due diligence level.
-```
+:::note Your output will vary
+The specific risk factors depend on the customer profile you provide. The teaching point is the classification methodology — any single EDD trigger mandates enhanced due diligence, and the agent identifies triggers but the human makes the onboarding accept/reject decision.
+:::
 
 Rachel reviews the PEP screening result against her bank's PEP database and confirms the risk rating, then escalates the file to senior management for the onboarding approval decision -- which the agent cannot make.
 

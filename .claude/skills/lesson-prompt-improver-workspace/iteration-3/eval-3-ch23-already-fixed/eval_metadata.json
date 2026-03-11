@@ -1,0 +1,13 @@
+{
+  "eval_id": 3,
+  "eval_name": "ch23-already-fixed",
+  "prompt": "Audit this already-fixed Ch23 lesson for any remaining issues. This file was recently updated to replace fabricated outputs with intent tables: apps/learn-app/docs/03-Business-Domain-Agent-Workflows/04-the-growth-engine/23-sales-revops-marketing/05-the-five-laws-of-outreach.md",
+  "expected_output": "Should confirm the lesson is mostly clean (fabricated outputs already replaced). Should correctly identify the preserved anti-pattern examples (Hamza DM for compliance gap teaching) as intentional and NOT flag them. May find minor remaining issues.",
+  "expectations": [
+    "Recognises that fabricated outputs have already been replaced with intent tables",
+    "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+    "Does NOT flag the intent tables themselves as fabricated output",
+    "Identifies the lesson as mostly clean / low defect count",
+    "If any defects remain, correctly categorises them using the 6-type taxonomy"
+  ]
+}

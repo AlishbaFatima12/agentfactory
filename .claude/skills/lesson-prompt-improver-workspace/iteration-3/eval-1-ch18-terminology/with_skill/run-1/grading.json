@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+      "passed": true,
+      "evidence": "Summary table classifies all defects under 'D6: Plugin/Tool Terminology'. Each defect detail (D6-1 through D6-4) explicitly states the rationale: 'This is Ch 18 content' and 'Claude in Excel is the Ch 17 product name; Ch 18+ uses Cowork per .claude/rules/cowork-content.md'."
+    },
+    {
+      "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+      "passed": true,
+      "evidence": "Found 4 instances: D6-1 (line 95, YAML teaching_tips), D6-2 (line 143, 'Feel the Problem' section), D6-3 (line 179, exercise section), D6-4 (line 189, Try With AI header). Additionally, the report correctly identified a borderline case at line 70 ('Students enter from Chapter 17 with hands-on experience using Claude in Excel and Cowork') and ruled it ACCEPTABLE as a legitimate cross-reference — demonstrating discriminating judgment rather than over-flagging."
+    },
+    {
+      "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+      "passed": true,
+      "evidence": "All 4 defects include a 'Recommended fix' block replacing 'Claude in Excel' with 'Cowork'. D6-4 matches the exact pattern from cowork-content.md: 'Use these prompts in Cowork or your preferred AI assistant.' Each rationale cites the cowork-content rules explicitly."
+    },
+    {
+      "text": "Produces a summary table organized by the 6-defect taxonomy",
+      "passed": true,
+      "evidence": "The Summary section contains a markdown table with all 6 defect types (D1: Fabricated Agent Output, D2: Missing Skill Name, D3: Inline Data Injection, D4: Fiction-Researching Prompt, D5: Narrative Referencing Fabricated, D6: Plugin/Tool Terminology) with Count and Severity columns. D1-D5 show 0 count, D6 shows 4 with Medium severity."
+    },
+    {
+      "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+      "passed": true,
+      "evidence": "The 'Items Reviewed but Clean' section explicitly marks D1-D5 as CLEAN or N/A. The formula example is correctly identified as 'a teaching device — student input, not agent output.' The Recommendations section states 'No structural changes needed — the lesson's prompt architecture is sound' and calls the lesson 'a good reference' for exercise design. Zero defects were raised against conceptual content, framework tables, or pedagogical structure."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": 5,
+    "total_tool_calls": 5,
+    "errors_encountered": 0,
+    "output_chars": 4821,
+    "transcript_chars": 4821
+  },
+  "timing": {
+    "executor_duration_seconds": 45,
+    "total_duration_seconds": 45
+  },
+  "claims": [
+    {
+      "claim": "4 D6 terminology defects found in the lesson",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Report lists 4 distinct defects (D6-1 through D6-4) at lines 95, 143, 179, and 189, each quoting the original text and providing a replacement. Count in summary table matches."
+    },
+    {
+      "claim": "Line 70 cross-reference to Ch17 is acceptable",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Line 70 references 'Claude in Excel and Cowork' as two distinct products students used in Ch17. This is a legitimate prerequisite description naming both tools accurately. The report's judgment to accept this is correct per cowork-content.md which states Ch17 refs are intentional."
+    },
+    {
+      "claim": "No fabricated agent output exists in the lesson",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Report states 'The lesson contains no code blocks pretending to show agent output with fabricated numbers or scores' and correctly identifies the formula as student input, not agent output. The narrative description of Claude's behavior is described in prose, not fabricated output blocks."
+    },
+    {
+      "claim": "D6-4 recommended fix matches the exact cowork-content.md pattern",
+      "type": "factual",
+      "verified": true,
+      "evidence": "The recommended fix 'Use these prompts in Cowork or your preferred AI assistant.' matches the exact pattern specified in .claude/rules/cowork-content.md: 'Use these prompts in Cowork or your preferred AI assistant.'"
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+        "reason": "This assertion checks quantity but not precision. An overzealous auditor that also flags the legitimate line 70 cross-reference would still pass (3+ instances found) but would demonstrate poor judgment. Consider adding an assertion like 'Does NOT flag the line 70 YAML cross-reference as a defect' to test discriminating judgment. The current run happened to get this right, but the assertion doesn't verify it."
+      },
+      {
+        "reason": "No assertion checks whether the recommended replacements are correct (e.g., D6-4 should match the exact cowork-content.md canonical pattern). An auditor that flags the right lines but suggests wrong replacements (e.g., 'Claude Cowork' instead of 'Cowork') would pass all current assertions. Consider: 'At least one recommended fix quotes the canonical cowork-content.md pattern verbatim.'"
+      }
+    ],
+    "overall": "Assertions cover the key dimensions well — detection, classification, recommendation direction, taxonomy structure, and false-positive avoidance. The two suggestions above would tighten precision checking: discriminating judgment on borderline cases, and correctness of recommended fixes (not just their existence)."
+  }
+}

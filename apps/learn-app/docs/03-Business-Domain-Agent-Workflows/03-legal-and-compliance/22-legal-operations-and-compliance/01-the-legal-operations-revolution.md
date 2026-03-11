@@ -190,88 +190,21 @@ Now run:
 /review-contract
 ```
 
-**Expected output:**
+**What to expect:** The agent produces a clause-by-clause risk analysis with a header, an overall assessment, and a three-tier classification. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-     ATTORNEY REVIEW: REQUIRED
-     Contract Review — CloudStack Inc. MSA
-     Generated: 2026-03-11
-══════════════════════════════════════════════════════════════
+| Section | Intent | What to Verify |
+| ------- | ------ | -------------- |
+| ATTORNEY REVIEW: REQUIRED header | Governance boundary — appears on every Legal Plugin output | Confirm this header is present at the top |
+| Overall assessment | Summary recommendation (proceed / proceed with modifications / escalate) | Compare against your prediction |
+| GREEN clauses | Clauses acceptable as written | Should include standard boilerplate clauses |
+| YELLOW clauses | Clauses to negotiate before signing | Look for auto-renewal notice period, late payment interest rate, one-sided indemnification |
+| RED clauses | Clauses requiring attorney escalation | Look for liability cap, unrestricted data transfer, IP ownership of customisations, no data return on termination, governing law forcing foreign litigation |
 
-OVERALL ASSESSMENT: PROCEED WITH MODIFICATIONS
-7 clauses require attention before execution.
+:::note Your output will vary
+The specific clause classifications, recommendations, and redline language depend on the plugin version and your playbook configuration. Focus on the structure: GREEN/YELLOW/RED tiers with clause-by-clause analysis. The teaching point is the three-tier classification system and the ATTORNEY REVIEW: REQUIRED governance boundary — not the specific numbers or recommendations.
+:::
 
-─────────────────────────────────────────────────────────────
-CLAUSE-BY-CLAUSE ANALYSIS
-─────────────────────────────────────────────────────────────
-
-GREEN — Acceptable as Written
-┌──────────────────────────────────────────────────────────┐
-│ § 1. Services         Standard service description       │
-│ § 10. Entire Agreement  Standard integration clause      │
-└──────────────────────────────────────────────────────────┘
-
-YELLOW — Negotiate Before Signing
-┌──────────────────────────────────────────────────────────┐
-│ § 2. Auto-Renewal     30-day notice is short for a       │
-│                       24-month commitment. Industry       │
-│                       standard: 60-90 days.              │
-│                                                          │
-│ § 3. Late Payment     1.5% per month (18% annualised)    │
-│                       exceeds typical commercial rates.   │
-│                       Recommend: cap at SBP policy rate   │
-│                       + 2%.                               │
-│                                                          │
-│ § 5. Indemnification  One-sided. Customer indemnifies     │
-│                       Provider but not vice versa.        │
-│                       Recommend: mutual indemnification.  │
-└──────────────────────────────────────────────────────────┘
-
-RED — Escalate to Attorney
-┌──────────────────────────────────────────────────────────┐
-│ § 4. Liability Cap    3 months' fees is significantly     │
-│                       below market standard (12 months).  │
-│                       On a PKR 4.8M annual contract,      │
-│                       this caps liability at PKR 1.2M.    │
-│                       RECOMMENDATION: Reject. Negotiate   │
-│                       to 12 months' fees minimum.         │
-│                                                          │
-│ § 6. Data Transfer    "Any jurisdiction where Provider    │
-│                       maintains facilities" has no        │
-│                       restrictions. Potential PDPA 2023   │
-│                       conflict for Pakistani data         │
-│                       subjects. Requires adequacy         │
-│                       assessment or SCCs.                 │
-│                                                          │
-│ § 7. IP Ownership     All IP including "customisations    │
-│                       or configurations created for       │
-│                       Customer" belongs to Provider.      │
-│                       This means custom integrations      │
-│                       built for Noor are not yours.       │
-│                       RECOMMENDATION: Carve out           │
-│                       customer-specific configurations.   │
-│                                                          │
-│ § 8. Data on          No obligation to return or migrate  │
-│      Termination      Customer data. Combined with § 7,   │
-│                       Customer loses both IP and data     │
-│                       upon termination.                   │
-│                       RECOMMENDATION: Add 90-day data     │
-│                       migration period, data return in    │
-│                       standard format.                    │
-│                                                          │
-│ § 9. Governing Law    Delaware law + Wilmington           │
-│                       arbitration. Pakistani company      │
-│                       forced to litigate in US.           │
-│                       RECOMMENDATION: Negotiate to        │
-│                       Pakistan-seated arbitration or      │
-│                       English law neutral venue.          │
-└──────────────────────────────────────────────────────────┘
-
-══════════════════════════════════════════════════════════════
-```
-
-**Calibration.** Compare your prediction to the actual output. Most students predict "proceed" because the agreement looks standard at first read. The RED flags surprise them. Five of ten clauses require attention. The liability cap, data transfer, IP ownership, data on termination, and governing law clauses each carry material risk that a quick manual read could miss.
+**Calibration.** Compare your prediction to the actual output. Most students predict "proceed" because the agreement looks standard at first read. The RED flags surprise them — several clauses carry material risk that a quick manual read could miss.
 
 Notice the header at the top of the output: **ATTORNEY REVIEW: REQUIRED**. That header appears on every output the Legal Plugin produces. It is not optional and it cannot be removed.
 

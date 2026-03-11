@@ -1,0 +1,87 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+      "passed": true,
+      "evidence": "D6 section explicitly states: 'This is Ch17, where \"Claude in Excel\" is the correct term for the embedded assistant product. All references to \"Claude in Excel\" appear in proper context (contrasting the embedded assistant with Cowork as an orchestrating agent).' D6 count is 0 — no terminology defects flagged."
+    },
+    {
+      "text": "Identifies inline data injection or paste-based patterns in exercise prompts",
+      "passed": false,
+      "evidence": "The skill checked D3 (Inline Data Injection) and marked it CLEAN. It identified the data-generation prompt at lines 139-154 but classified it as 'a legitimate data-generation prompt where the student specifies parameters' rather than a defective injection pattern. The eval's expected_output states 'Identifies inline data injection patterns (paste-based data injection in prompts)' — implying such patterns should be surfaced as defects. The skill found the candidate but dismissed it. Without the source file to verify whether the classification is correct, the skill did not produce the expected finding."
+    },
+    {
+      "text": "Checks for missing skill names in exercise prompts",
+      "passed": true,
+      "evidence": "D2 section explicitly addresses this: 'All exercise prompts correctly use slash-command syntax (/reconciliation, /journal-entry, /variance-analysis, /income-statement, /sox-testing). This is appropriate because the exercises invoke Cowork commands, not skills.' The skill checked and found no missing skill names, with specific evidence of what it verified."
+    },
+    {
+      "text": "Produces a prioritised defect summary (Defect 1 highest priority)",
+      "passed": true,
+      "evidence": "The 'Fix Priority' section lists defects in explicit priority order: 1. D1-1 (CRITICAL), 2. D1-2 (CRITICAL), 3. D1-3 + D5-2 (CRITICAL), 4. D5-1 (Medium). The highest-severity defect (fabricated reconciliation table) is listed first. The summary table at the top also shows defect counts by type with severity ratings."
+    },
+    {
+      "text": "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)",
+      "passed": true,
+      "evidence": "D6 section states: 'This is Ch17, where \"Claude in Excel\" is the correct term for the embedded assistant product... \"Cowork\" is used correctly throughout for the orchestrating agent platform.' The skill explicitly contextualises the distinction between Ch17 (Claude in Excel = correct) and the Cowork platform, demonstrating awareness of the boundary."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 1,
+    "total": 5,
+    "pass_rate": 0.80
+  },
+  "execution_metrics": {
+    "tool_calls": 5,
+    "errors": 0,
+    "output_chars": 6711,
+    "transcript_chars": 6711
+  },
+  "timing": {
+    "executor_duration_seconds": 45,
+    "tokens": 12500
+  },
+  "claims": [
+    {
+      "claim": "The data-generation prompt at lines 139-154 is legitimate, not a data injection defect",
+      "type": "quality",
+      "verified": "unverifiable",
+      "evidence": "The skill classified the prompt as 'a legitimate data-generation prompt where the student specifies parameters' and distinguished it from 'a redundant Read demo-data.md injection.' Without access to the source lesson file, this classification cannot be independently verified."
+    },
+    {
+      "claim": "All exercise prompts use correct slash-command syntax for skill invocation",
+      "type": "factual",
+      "verified": "unverifiable",
+      "evidence": "The skill lists /reconciliation, /journal-entry, /variance-analysis, /income-statement, /sox-testing as the commands found. Cannot verify completeness without the source file."
+    },
+    {
+      "claim": "Three instances of fabricated agent output exist (D1-1, D1-2, D1-3)",
+      "type": "factual",
+      "verified": "unverifiable",
+      "evidence": "The skill provides specific line numbers and quoted content for each instance, but the source lesson file was not available to the grader for verification."
+    },
+    {
+      "claim": "Passive skill activations (close-management, journal-entry-prep) are correctly described as automatic",
+      "type": "quality",
+      "verified": "unverifiable",
+      "evidence": "Stated in D2 section but cannot be verified without the source lesson."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Identifies inline data injection or paste-based patterns in exercise prompts",
+        "reason": "This assertion is ambiguous — 'identifies' could mean 'checks for' (which the skill did) or 'finds and flags' (which it didn't). If the eval expects the skill to find data injection defects, the eval should specify what constitutes injection in this lesson so grading is deterministic. If the lesson genuinely has no D3 defects, this assertion should be reworded to 'Checks for inline data injection patterns and correctly classifies legitimate data-generation prompts.'"
+      },
+      {
+        "reason": "No assertion tests whether the D1 (fabricated output) findings are accurate. The skill found 3 critical D1 defects and 2 D5 defects — these are the main findings — but no expectation validates their correctness. An assertion like 'Correctly identifies fabricated agent output in reconciliation/journal/variance sections' would test the skill's primary value."
+      },
+      {
+        "reason": "The eval could benefit from an assertion testing whether recommended fixes are actionable and structurally sound (e.g., intent tables replace fabricated output tables). The skill's fix recommendations are detailed but no assertion evaluates their quality."
+      }
+    ],
+    "overall": "The eval is strong on Ch17-specific terminology testing (expectations 1 and 5) but weak on validating the skill's primary findings (D1 fabricated output). Three of five expectations test the same concept (Claude in Excel vs Cowork distinction). Consider rebalancing toward testing whether the skill's defect detection is accurate."
+  }
+}

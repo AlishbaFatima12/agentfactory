@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies fabricated agent output containing specific fake numbers",
+      "passed": true,
+      "evidence": "Flagged both query trace sections as HIGH-severity fabricated outputs with specific numbers ('300 downgraded accounts as Stage 2', '$150 million'). However, these may be FALSE POSITIVES — the numbers are deterministic from the prompt parameters."
+    },
+    {
+      "text": "Does NOT flag plugin architecture tables or directory trees as defects",
+      "passed": true,
+      "evidence": "Did not flag architecture tables, directory trees, or hook descriptions. Only flagged query traces and prompt design."
+    },
+    {
+      "text": "Replaces fabricated output with intent table showing expected sections",
+      "passed": false,
+      "evidence": "Suggested reframing as 'expected outcome' or adding variability notes, but did not produce intent tables with Section/Intent/What to Verify columns."
+    },
+    {
+      "text": "Intent table has 4-7 rows matching the skill's actual output structure",
+      "passed": false,
+      "evidence": "No intent tables produced."
+    },
+    {
+      "text": "Generalises any narrative that references specific fabricated numbers",
+      "passed": false,
+      "evidence": "Recommended adding variability notes but did not generalize existing narrative text."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 3,
+    "total": 5,
+    "pass_rate": 0.4
+  }
+}

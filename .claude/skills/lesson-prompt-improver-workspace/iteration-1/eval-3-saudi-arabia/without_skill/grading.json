@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Checks for all 6 defect types, not just fabricated output",
+      "passed": true,
+      "evidence": "Used its own 6-defect taxonomy (Vague, Jurisdiction Anchoring, Verification, Hallucination, Pedagogy, Format) covering similar ground but with DIFFERENT defect types than the skill's framework."
+    },
+    {
+      "text": "Identifies any fabricated output blocks preceded by **Output:**",
+      "passed": false,
+      "evidence": "Did NOT identify the **Output:** label on line 177. Its taxonomy does not include a 'fabricated output' category. The **Output:** block was not mentioned in the report."
+    },
+    {
+      "text": "Checks whether exercise prompts include natural skill names",
+      "passed": false,
+      "evidence": "No mention of skill names anywhere in the report. Did not check whether prompts reference which skill activates."
+    },
+    {
+      "text": "Checks for inline data injection patterns (Read demo-data.md outside L01)",
+      "passed": false,
+      "evidence": "Did not check for data injection patterns. No mention of 'Read demo-data.md' or folder instruction architecture."
+    },
+    {
+      "text": "Produces a prioritised summary (Defect 1 first, then 2-6)",
+      "passed": false,
+      "evidence": "Produced summary organized by its own taxonomy, not the skill's priority order. Fabricated output (the skill's #1 priority) is not represented at all."
+    },
+    {
+      "text": "Anti-pattern examples and framework tables are correctly excluded from defect list",
+      "passed": true,
+      "evidence": "Did not incorrectly flag frameworks or anti-patterns. Error detection step discussed as format issue (answer key exposed), not as content defect."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 4,
+    "total": 6,
+    "pass_rate": 0.33
+  }
+}

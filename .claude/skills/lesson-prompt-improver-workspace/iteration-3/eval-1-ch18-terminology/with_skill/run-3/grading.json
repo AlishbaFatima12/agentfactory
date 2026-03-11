@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+      "passed": true,
+      "evidence": "Summary table shows 'D6: Plugin/Tool Terminology | 5 | Medium'. All 5 defects are labeled D6-1 through D6-5. Report explicitly states: 'Ch18 is a Cowork chapter. Per .claude/rules/cowork-content.md, \"Claude in Excel\" and \"Cowork\" are separate products.'"
+    },
+    {
+      "text": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+      "passed": true,
+      "evidence": "Found exactly 5 instances: D6-1 (line 95, teaching_tips), D6-2 (line 70, cognitive_load), D6-3 (line 143, exercise instructions), D6-4 (line 179, exercise instructions), D6-5 (line 189, Try With AI header). 5 >= 3."
+    },
+    {
+      "text": "Recommends replacing with 'Cowork' per cowork-content rules",
+      "passed": true,
+      "evidence": "Each of the 5 defect entries includes a 'Recommended fix' block showing 'Cowork' replacing 'Claude in Excel'. Recommendations section #1 states: 'Replace \"Claude in Excel\" with \"Cowork\" in lines 95, 70, 143, 179, and 189. This is a straightforward terminology fix aligned with the cowork-content.md rule that Ch18+ uses \"Cowork.\"'"
+    },
+    {
+      "text": "Produces a summary table organized by the 6-defect taxonomy",
+      "passed": true,
+      "evidence": "Summary section contains a markdown table with all 6 rows: D1 (Fabricated Agent Output, 0), D2 (Missing Skill Name, 0), D3 (Inline Data Injection, 0), D4 (Fiction-Researching Prompt, 0), D5 (Narrative Referencing Fabricated Content, 0), D6 (Plugin/Tool Terminology, 5). Includes Count and Severity columns plus a Total row."
+    },
+    {
+      "text": "Does NOT flag the lesson's conceptual content or framework tables as defects",
+      "passed": true,
+      "evidence": "The 'Defects NOT Found (Clean Areas)' section explicitly marks D1 as CLEAN ('uses a formula example as a pedagogical input, not a fabricated output'), D2 as NOT APPLICABLE ('conceptual foundation, no domain skills being invoked'), D3-D5 as CLEAN. Recommendations note: 'No structural prompt issues — The lesson's prompt architecture is sound.' No conceptual content, framework tables, or pedagogical design elements were flagged as defects."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": 5,
+    "errors_encountered": 0,
+    "output_chars": 6772,
+    "transcript_chars": 6772
+  },
+  "timing": {
+    "executor_duration_seconds": 45,
+    "grader_duration_seconds": null,
+    "total_duration_seconds": null
+  },
+  "claims": [
+    {
+      "claim": "5 instances of 'Claude in Excel' terminology violations found",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Report lists 5 distinct instances at lines 95, 70, 143, 179, and 189, each with quoted source text showing 'Claude in Excel' usage"
+    },
+    {
+      "claim": "Line 70 is a borderline case (legitimate cross-reference to Ch17)",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Report correctly identifies that line 70 mentions both products ('Claude in Excel and Cowork') and acknowledges this 'could be read as a legitimate cross-reference.' The recommended fix still improves clarity by making the transition explicit rather than deleting the Ch17 reference."
+    },
+    {
+      "claim": "No D1-D5 defects exist in this lesson",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Each clean area includes a specific reason: D1 has no fabricated output blocks, D2 has no skill invocations (conceptual lesson), D3 has no data injection patterns, D4 has no fictional company research, D5 has no narrative referencing fabricated content. These claims are consistent with L01 being a conceptual foundation lesson."
+    },
+    {
+      "claim": "The compliance table checks cowork-content.md rules",
+      "type": "process",
+      "verified": true,
+      "evidence": "Report includes a 'Compliance with Cowork Content Rules' table checking 5 rules from cowork-content.md: terminology, exercise pattern, Named Ranges, plugin setup, skill invocation format. Correctly marks non-applicable rules as N/A for this L01 lesson."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+        "reason": "The threshold of 3 is low — this lesson has 5 instances and a weak audit finding only 2 would fail. Consider checking for a specific count or that ALL instances are found. You could verify against the actual source file to confirm whether additional instances were missed."
+      },
+      {
+        "reason": "No assertion checks whether the audit correctly handles the borderline case at line 70 (cross-reference to Ch17). The skill's nuanced handling — flagging it but noting it as low severity — is a sign of quality that goes untested. Consider an assertion like 'Acknowledges at least one instance as a legitimate Ch17 cross-reference while still recommending a fix.'"
+      }
+    ],
+    "overall": "Assertions are well-designed for this eval — they test the right taxonomy classification (D6), quantity threshold, remedy, structured output, and false-positive avoidance. The two suggestions above would add precision without over-specifying."
+  }
+}

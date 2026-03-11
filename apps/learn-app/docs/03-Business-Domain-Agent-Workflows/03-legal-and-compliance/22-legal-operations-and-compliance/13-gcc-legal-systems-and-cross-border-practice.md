@@ -101,17 +101,7 @@ payment transaction data for Saudi consumers.
 
 Before reading the output, predict: will the jurisdiction header show one overlay or more than one? Think about where PayStream is based, where CloudVault is registered, and where the data subjects live.
 
-The jurisdiction header shows:
-
-```
-JURISDICTION: DIFC Law (DIFC common law overlay loaded)
-              CROSS-BORDER DETECTED:
-              - Customer jurisdiction: Saudi Arabia (saudi-law overlay loaded)
-              - Data processing: DIFC (DIFC data protection overlay)
-              - Data subjects: Saudi Arabia (Saudi PDPL applies)
-```
-
-Two different data protection frameworks loaded simultaneously. Why? Because the UAE is not one legal system. It is at least three.
+The jurisdiction header should show multiple overlays loaded simultaneously -- the governing law overlay (DIFC common law), the customer jurisdiction overlay (Saudi law), and the applicable data protection regimes (DIFC Data Protection Law and Saudi PDPL). Two different data protection frameworks loaded simultaneously. Why? Because the UAE is not one legal system. It is at least three.
 
 **Mainland UAE** operates under a civil law system influenced by Egyptian and French legal traditions. The primary governing statute for contracts is the UAE Civil Code (Federal Law No. 5 of 1985). Article 390 allows courts to reduce liquidated damages they consider excessive. Arabic is the official court language, and the Arabic version of a contract may prevail over the English version in mainland courts.
 
@@ -155,40 +145,23 @@ Scenarios 3 and 4 are not single-zone answers. Cross-zone contracts within the U
 
 ## Worked Example: PayStream + CloudVault -- Riyadh Deployment
 
-Return to the review output. The agent identified three clauses requiring attention. Here is the most critical:
+Return to the review output. The agent identified three clauses requiring attention. Here is the most critical -- the data processing and localisation clause.
 
-```
-CLAUSE:     Data Processing and Localisation (Section 7)
-STATUS:     RED -- ESCALATE
-CURRENT:    "CloudVault shall process Customer Data in its DIFC
-             data centres. CloudVault may transfer data to its
-             disaster recovery facility in [location not specified]."
-ISSUE:      Two overlapping data protection regimes apply:
-            (1) DIFC Data Protection Law 2020 governs CloudVault's
-                processing in the DIFC -- CloudVault is the processor.
-            (2) Saudi PDPL (Royal Decree M/19 of 2021) applies because
-                the data subjects are Saudi residents and PayStream
-                is a Saudi controller.
-            Saudi PDPL contains data localisation provisions for
-            sensitive data. Payment transaction data for Saudi
-            consumers is likely classified as sensitive personal data.
-            The unspecified DR facility location creates a potential
-            violation if data is transferred outside approved
-            jurisdictions.
-            Additionally, SAMA Outsourcing Regulations may impose
-            specific requirements on where regulated financial data
-            may be processed and stored.
-REDLINE:    "CloudVault shall process Customer Data exclusively
-             within its DIFC data centres. Disaster recovery
-             facilities shall be located within the UAE (DIFC or
-             ADGM only) or within Saudi Arabia. No Customer Data
-             shall be transferred to any facility outside the UAE
-             or Saudi Arabia without prior written consent of
-             PayStream and confirmation that such transfer complies
-             with the Saudi Personal Data Protection Law and
-             applicable SAMA regulations."
-PRIORITY:   Must-have
-```
+**What to expect:** The agent produces a detailed clause analysis showing overlapping data protection regimes. Your output will vary, but look for these elements:
+
+| Section                              | Intent                                                                     | What to Verify                                                                                                    |
+| ------------------------------------ | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Clause identification and RED status | Names the data processing clause and escalates to RED                      | Confirm the agent identifies the specific contract section and assigns the highest severity                       |
+| Dual data protection regime analysis | Identifies both DIFC Data Protection Law 2020 and Saudi PDPL as applicable | Confirm the agent explains WHY two regimes apply (DIFC processor + Saudi controller with Saudi data subjects)     |
+| Data localisation flag               | Flags Saudi PDPL data localisation provisions for sensitive personal data  | Confirm the agent identifies payment transaction data as likely sensitive under PDPL                              |
+| Unspecified DR facility risk         | Identifies the unspecified disaster recovery location as a compliance gap  | Confirm the agent flags the transfer risk created by an unnamed DR facility location                              |
+| SAMA regulatory overlay              | Identifies SAMA Outsourcing Regulations as an additional requirement layer | Confirm the agent flags regulated financial data processing requirements beyond general data protection law       |
+| Proposed redline language            | Drafts replacement clause text restricting data to UAE/Saudi facilities    | Confirm the redline addresses both PDPL localisation and SAMA requirements with consent and compliance mechanisms |
+| Priority classification              | Assigns must-have priority to this clause revision                         | Confirm the agent treats this as non-negotiable given the regulatory overlap                                      |
+
+:::note Your output will vary
+The specific legal citations and redline language depend on the agent's jurisdiction overlay data. Focus on whether the agent identifies the dual-regime overlap (DIFC data protection + Saudi PDPL) and treats the unspecified DR facility as a compliance gap requiring immediate redline attention. The teaching point is that cross-zone contracts within the GCC create the same dual-overlay complexity as cross-border contracts between different countries.
+:::
 
 This RED flag exists because the contract crosses the DIFC-Saudi boundary. A review under DIFC law alone would have checked CloudVault's processing against DIFC Data Protection Law 2020 -- and the clause would pass. A review under Saudi law alone would have applied Saudi contract law analysis instead of DIFC common law. The dual overlay catches what neither jurisdiction alone would flag: the Saudi PDPL data localisation requirement applied to data processed by a DIFC entity.
 
