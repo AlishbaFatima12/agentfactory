@@ -92,9 +92,8 @@ The Sales plugin provides six skills and three commands (`/call-summary`, `/fore
 Verify everything is connected by running this prompt in Cowork:
 
 ```
-Research Sarah Chen, VP Operations at Meridian Logistics, Leeds.
-I sell workflow automation for logistics companies. I want to
-understand fit, timing, and the best outreach angle.
+List all my sales and marketing skills and tell me which
+plugin each one comes from.
 ```
 
 If the extension is active, the output includes an **ICP MATCH** header at the top of the research brief. If you see only a plain research brief without the ICP section, reinstall the Sales RevOps Marketing plugin from the Cowork sidebar.
@@ -160,115 +159,68 @@ Format: structured markdown with clear headers.
 
 ## Your First Research Brief
 
-You are NexaFlow Technologies. Your top prospect is Meridian Logistics in Leeds. Sarah Chen is their VP Operations -- she was promoted six months ago, she recently won a major new contract, and she has been posting on LinkedIn about scaling operations without adding headcount.
+You are NexaFlow Technologies. Your top prospect is Meridian Logistics in Leeds — prospect #1 in the demo dataset you just generated.
 
-Run:
+Run this prompt. It activates the `prospect-research` and `persona-icp` skills from the extension to produce a structured brief with ICP scoring:
 
 ```
+Read demo-data.md for my company profile (NexaFlow Technologies)
+and the Meridian Logistics prospect record.
+
 Research Sarah Chen, VP Operations at Meridian Logistics, Leeds.
-I sell workflow automation for logistics companies. I want to
-understand fit, timing, and the best outreach angle.
+I sell workflow automation for logistics companies. Generate a full
+prospect research brief with ICP match scoring, timing signals,
+and a recommended outreach angle.
 ```
 
-**Expected output:**
+:::tip Skill Not Activating?
+If your output is a plain text response without structured sections (ICP MATCH, WHO, WHAT, etc.), the research skill did not activate. Try prefixing your prompt with `/prospect-research` to invoke it directly — you will learn more about explicit skill invocation in Lesson 9.
+:::
 
-```
-══════════════════════════════════════════════════════════════
-          PROSPECT RESEARCH BRIEF
-          Meridian Logistics Ltd — Leeds, UK
-          Generated: 2026-03-10
-══════════════════════════════════════════════════════════════
+**What to expect:** The agent reads your demo data and produces a structured brief. The exact content varies between runs, but look for these sections:
 
-ICP MATCH
-─────────────────────────────────────────────────────────────
-Match Score:       87/100 — STRONG FIT
-Company Size:      380 employees ✓ (within 50-400 ICP range)
-Industry:          Regional 3PL — warehousing + last-mile ✓
-Pain Signal:       Scaling without headcount (LinkedIn posts) ✓✓
-Timing Signal:     New contract win + VP promoted 6 months ago ✓
+| Section       | What It Contains                                                                                                                                |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ICP MATCH** | Scores Meridian against your ICP criteria (company size, industry, buyer persona). If the extension is active, this section appears at the top. |
+| **WHO**       | Sarah Chen's background — sourced from your demo dataset, potentially embellished                                                               |
+| **WHAT**      | Company profile for Meridian Logistics                                                                                                          |
+| **WHEN**      | Timing signals (promotion, contract win, LinkedIn activity)                                                                                     |
+| **PAIN**      | Primary pain points the agent identifies for this prospect                                                                                      |
+| **HOOK**      | Recommended opening angle based on pain + timing                                                                                                |
 
-WHO
-─────────────────────────────────────────────────────────────
-Contact:           Sarah Chen, VP Operations
-Tenure:            18 months at Meridian, promoted to VP 6 months ago
-Background:        Previously Director of Logistics at Parcelhub
-                   (3 years), Operations Manager at DPD (5 years)
-LinkedIn:          Active — 3 posts in last month about operational
-                   scaling and warehouse automation
-
-WHAT
-─────────────────────────────────────────────────────────────
-Company:           Meridian Logistics Ltd
-Founded:           2014
-Headquarters:      Leeds, UK
-Employees:         380
-Revenue:           £45-60M (estimated)
-Sector:            Regional 3PL — warehousing + last-mile delivery
-
-WHEN
-─────────────────────────────────────────────────────────────
-Timing Score:      HIGH
-Trigger Events:
-  • New major contract win announced Feb 2026
-  • VP Ops promoted 6 months ago (mandate to change)
-  • 12 open positions on LinkedIn (scaling rapidly)
-  • Posted about "doing more with same headcount" (3 weeks ago)
-
-PAIN
-─────────────────────────────────────────────────────────────
-Primary:           Manual coordination across 380+ staff for
-                   warehouse picking, fleet dispatch, last-mile
-                   tracking — no unified workflow system
-Secondary:         SLA compliance tracking done via spreadsheets;
-                   missed SLA penalties increasing with volume
-Tertiary:          Onboarding new warehouse staff takes 3 weeks;
-                   scaling headcount is too slow for contract ramp
-
-HOOK
-─────────────────────────────────────────────────────────────
-Opening Angle:     "I saw your post about scaling without adding
-                   headcount. Our logistics clients typically
-                   reduce coordination overhead by 40% within
-                   the first quarter — I'd like to show you how
-                   that maps to your warehouse-to-delivery flow."
-
-Avoid:             Generic automation pitch. She has heard it.
-                   Lead with her specific pain (SLA tracking at
-                   scale) not your product features.
-
-══════════════════════════════════════════════════════════════
-```
+The agent combines your demo data with web research. Since Meridian Logistics is fictional, the web research returns nothing useful — the agent fills gaps from your dataset and its own inferences. This is exactly the setup for the next section.
 
 Read the full output. It is structured, specific, and professional. It looks like something Farah would produce after 45 minutes of deep research.
 
-And at least one claim in it cannot be verified.
+And at least one claim in it will go beyond your demo data.
 
 ## Hallucination Detection
 
-Look at the revenue figure: **£45-60M (estimated)**. Can you verify this from a public source?
+Open `demo-data.md` and read the Meridian Logistics prospect record. Now compare it to the agent's brief, claim by claim.
 
-Try it. Go to Companies House (find-and-update.company-information.service.gov.uk) and search for "Meridian Logistics." UK companies file annual accounts, but most private companies of this size file abbreviated accounts that do not include revenue. The agent generated a plausible revenue range based on employee count, industry benchmarks, and location -- but it did not retrieve this number from any source. It is an inference presented as an estimate.
+Your dataset contains specific facts you generated: company name, location, employee count, contact name and title, recent signals. The agent's brief includes these — but it also includes claims that go **beyond** your data. Revenue estimates, career history embellishments, internal process descriptions, LinkedIn post specifics — details the agent inferred to make the brief sound authoritative.
 
-Some claims in the brief are verifiable. Some are not. The skill you need before every subsequent lesson is the ability to tell them apart before you act.
+Since Meridian Logistics is fictional, your `demo-data.md` is the only source of truth. Any claim not traceable to that file is an agent embellishment. The skill you need before every subsequent lesson is the ability to tell them apart before you act on them.
 
-### Verifiable Claims
+### Claims From Your Data
 
-| Claim                                      | Why Verifiable                       | How to Check                                              |
-| ------------------------------------------ | ------------------------------------ | --------------------------------------------------------- |
-| Company registration (Founded 2014, Leeds) | Public record at Companies House     | Search find-and-update.company-information.service.gov.uk |
-| Open positions on LinkedIn                 | Publicly visible job postings        | Search LinkedIn Jobs for "Meridian Logistics"             |
-| Sarah Chen's LinkedIn posts about scaling  | Public social media activity         | Visit Sarah Chen's LinkedIn profile                       |
-| Sarah Chen's background (Parcelhub, DPD)   | Employment history on public profile | LinkedIn profile, if privacy settings allow               |
+| Claim Type                        | Example                            | Why Trustworthy                                   |
+| --------------------------------- | ---------------------------------- | ------------------------------------------------- |
+| Company name, location, employees | Directly from your prospect record | You generated this data — it is your ground truth |
+| Contact name and title            | Sarah Chen, VP Operations          | Specified in the generation prompt                |
+| Recent signals you specified      | Contract win, scaling challenges   | You defined these as part of the prospect profile |
 
-These claims reference public, searchable information. A rep can verify each one in under two minutes. Verified claims become conversation openers: "I noticed you are hiring rapidly and just won a major contract -- are you rebuilding your operations workflow?"
+These claims are your ground truth. In a real sales workflow, the equivalent is data from your CRM, LinkedIn, or Companies House — sources you can independently verify. Verified claims become conversation openers: "I noticed you are scaling rapidly after a major contract win — are you rebuilding your operations workflow?"
 
-### Unverifiable Claims
+### Claims Beyond Your Data
 
-| Claim                                             | Why Suspect                                                                                                                                                                  | The Tell                                                                                                                           |
-| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Revenue £45-60M (estimated)                       | Private companies in the UK rarely disclose revenue unless they exceed filing thresholds at Companies House. The agent inferred this from headcount and industry benchmarks. | **Private financials stated as estimates.** Revenue for private companies is not public unless voluntarily disclosed.              |
-| SLA compliance done via spreadsheets              | This describes internal operations that no public source would reveal. The agent inferred a common pain pattern for logistics companies of this size.                        | **Internal process presented as intelligence.** No external observer can see how a company tracks its SLAs.                        |
-| "Scaling headcount is too slow for contract ramp" | This is an interpretation of LinkedIn activity, not a confirmed statement from Sarah Chen.                                                                                   | **Inference dressed as observation.** The agent connected hiring activity with a contract win and generated a plausible narrative. |
+| Claim Type                                                | Why Suspect                                                                                                    | The Tell                                                                                                                       |
+| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Revenue or financial estimates                            | Your demo data may not include revenue, or the agent adjusted the figure to sound precise                      | **Private financials stated as estimates.** Revenue for private companies is not public unless voluntarily disclosed.          |
+| Internal processes (e.g. "SLA tracking via spreadsheets") | No source — not in your demo data, not discoverable via web search for a fictional company                     | **Internal process presented as intelligence.** The agent inferred a common pain pattern for logistics companies of this size. |
+| Specific career timeline or LinkedIn post content         | Your demo data has a brief background; the agent may add employers, dates, or post topics it cannot have found | **Inference dressed as observation.** The agent expanded sparse data into a plausible, specific narrative.                     |
+
+Look for these in your own output. Identify at least two claims that are not in `demo-data.md`. For each one, decide: is it a reasonable inference, or is it presented as fact?
 
 ### The Three Rules
 
@@ -339,8 +291,10 @@ The extension includes a local configuration template. In your connected working
 Save the file and run the same research prompt again:
 
 ```
+Read demo-data.md for the Meridian Logistics prospect record.
 Research Sarah Chen, VP Operations at Meridian Logistics, Leeds.
-I sell workflow automation for logistics companies.
+I sell workflow automation for logistics companies. Generate a full
+prospect research brief with ICP match scoring.
 ```
 
 Compare the output to the first brief. The ICP MATCH section now scores Meridian against NexaFlow's specific profile -- 50-400 employees, 3PL operators, VP Ops persona, scaling pain. The HOOK section references NexaFlow's value proposition instead of generic automation language. The recommended approach filters through your brand voice: direct, practical, no jargon.
@@ -352,7 +306,7 @@ This skeleton will be completed in Lesson 2 when you analyse your closed-won dea
 1. All three plugins installed and verified -- Sales, Marketing, and the RevOps extension
 2. Demo business dataset (NexaFlow Technologies) generated with 20 closed-won deals, 5 target prospects, 10 pipeline deals, campaign history, and competitor intelligence
 3. First prospect research brief on Meridian Logistics / Sarah Chen with structured WHO / WHAT / WHEN / PAIN / HOOK sections
-4. Hallucination detection skill -- you can distinguish verifiable claims (job postings, LinkedIn activity, Companies House records) from unverifiable ones (revenue estimates, internal pain points, inferred connections)
+4. Hallucination detection skill -- you can distinguish claims traceable to your demo data from agent embellishments (revenue estimates, internal process descriptions, career timeline expansions)
 5. sales-marketing.local.md skeleton configured with NexaFlow's ICP
 
 ## Flashcards Study Aid
@@ -368,12 +322,16 @@ Test your understanding of the key concepts from this lesson.
 ### Prompt 1: Reproduce
 
 ```
+Read demo-data.md for my company profile (NexaFlow Technologies)
+and the Meridian Logistics prospect record.
+
 Research Sarah Chen, VP Operations at Meridian Logistics, Leeds.
-I sell workflow automation for logistics companies. I want to
-understand fit, timing, and the best outreach angle.
+I sell workflow automation for logistics companies. Generate a full
+prospect research brief with ICP match scoring, timing signals,
+and a recommended outreach angle.
 ```
 
-**What you're learning:** How the prospect-research skill structures intelligence into actionable sections (ICP MATCH / WHO / WHAT / WHEN / PAIN / HOOK). Compare your output to the reference brief in this lesson. The structure should match even if specific details vary between runs -- the agent produces different claims each time, which is itself a lesson in why verification matters.
+**What you're learning:** How the `prospect-research` and `persona-icp` skills structure intelligence into actionable sections (ICP MATCH / WHO / WHAT / WHEN / PAIN / HOOK). Run this prompt twice and compare the two outputs. The structure should match but specific claims will differ between runs — the agent produces different embellishments each time, which is itself a lesson in why verification matters.
 
 ### Prompt 2: Adapt
 
