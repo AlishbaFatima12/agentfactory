@@ -264,11 +264,11 @@ The agent routes through `liquidity-lcr` to produce an LCR calculation.
 
 **What to expect:** The agent produces an HQLA classification, net cash outflow calculation, and LCR result. Your output will vary based on your inputs, but look for these sections:
 
-| Section             | Intent                                                       | What to Verify                                                                                              |
-| ------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| HQLA classification | Assigns assets to Level 1, 2A, 2B with haircuts              | Correct level assignment and haircut percentages; Level 2 cap check (combined Level 2 <= 40% of total HQLA) |
-| Net cash outflows   | Applies run-off rates to funding categories and caps inflows | Run-off rates match Basel standards for each category; inflows capped at 75% of outflows                    |
-| LCR result          | Divides HQLA by net outflows and compares to 100% minimum    | LCR >= 100%; PASS/FAIL status with headroom quantified                                                      |
+| Section             | Intent                                                       | What to Verify                                                                                             |
+| ------------------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| HQLA classification | Assigns assets to Level 1, 2A, 2B with haircuts              | Correct level assignment and haircut percentages; Level 2 cap check (combined Level 2 ≤ 40% of total HQLA) |
+| Net cash outflows   | Applies run-off rates to funding categories and caps inflows | Run-off rates match Basel standards for each category; inflows capped at 75% of outflows                   |
+| LCR result          | Divides HQLA by net outflows and compares to 100% minimum    | LCR >= 100%; PASS/FAIL status with headroom quantified                                                     |
 
 :::note Your output will vary
 The specific HQLA amounts and LCR ratio depend on your asset composition and funding structure. The teaching point is the HQLA classification hierarchy and the inflow cap mechanism — verify that Level 2 caps are checked and run-off rates are appropriate, not that specific numbers match.
