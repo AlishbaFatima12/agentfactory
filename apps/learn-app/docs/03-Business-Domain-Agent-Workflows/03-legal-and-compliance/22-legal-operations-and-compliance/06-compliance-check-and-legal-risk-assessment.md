@@ -248,23 +248,23 @@ A **5x5 risk matrix** plots the **severity** of a risk (how bad it would be) aga
 
 ### The Severity Scale
 
-| Score | Level      | Financial Impact         | Description                                                |
-| ----- | ---------- | ------------------------ | ---------------------------------------------------------- |
-| 1     | Negligible | <1% of relevant value    | Minor administrative issue, no regulatory consequence      |
-| 2     | Minor      | 1-5% of relevant value   | Procedural gap, correctable without external impact        |
-| 3     | Moderate   | 5-10% of relevant value  | Regulatory notice likely, remediation required             |
-| 4     | Major      | 10-25% of relevant value | Enforcement action probable, material financial impact     |
-| 5     | Critical   | >25% of relevant value   | Criminal liability, licence revocation, existential threat |
+| Score | Level      | Financial Impact          | Description                                                |
+| ----- | ---------- | ------------------------- | ---------------------------------------------------------- |
+| 1     | Negligible | &lt;1% of relevant value  | Minor administrative issue, no regulatory consequence      |
+| 2     | Minor      | 1-5% of relevant value    | Procedural gap, correctable without external impact        |
+| 3     | Moderate   | 5-10% of relevant value   | Regulatory notice likely, remediation required             |
+| 4     | Major      | 10-25% of relevant value  | Enforcement action probable, material financial impact     |
+| 5     | Critical   | &gt;25% of relevant value | Criminal liability, licence revocation, existential threat |
 
 ### The Likelihood Scale
 
 | Score | Level          | Probability | Description                            |
 | ----- | -------------- | ----------- | -------------------------------------- |
-| 1     | Remote         | <5%         | Requires exceptional circumstances     |
+| 1     | Remote         | &lt;5%      | Requires exceptional circumstances     |
 | 2     | Unlikely       | 5-20%       | Possible but not expected              |
 | 3     | Possible       | 20-50%      | Could occur under normal conditions    |
 | 4     | Likely         | 50-80%      | Expected to occur without intervention |
-| 5     | Almost Certain | >80%        | Will occur unless actively prevented   |
+| 5     | Almost Certain | &gt;80%     | Will occur unless actively prevented   |
 
 ### Risk Score Classification
 
