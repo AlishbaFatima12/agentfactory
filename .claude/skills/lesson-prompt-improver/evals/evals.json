@@ -1,0 +1,58 @@
+{
+  "skill_name": "lesson-prompt-improver",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit this Ch18 lesson for prompt quality issues — it's from a Cowork chapter so watch for terminology problems: apps/learn-app/docs/03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/18-intent-driven-financial-architecture/01-the-coordinate-trap.md",
+      "expected_output": "Identifies multiple 'Claude in Excel' terminology violations (Defect 6) since this is Ch18 (should say 'Cowork'). May also find inline data injection and missing skill names.",
+      "files": [],
+      "expectations": [
+        "Identifies 'Claude in Excel' as Defect 6 (terminology) since this is Ch18, not Ch17",
+        "Finds at least 3 instances of incorrect 'Claude in Excel' usage",
+        "Recommends replacing with 'Cowork' per cowork-content rules",
+        "Produces a summary table organized by the 6-defect taxonomy",
+        "Does NOT flag the lesson's conceptual content or framework tables as defects"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review this Ch17 lesson for prompt defects — check all six types: apps/learn-app/docs/03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/17-finance-domain-agents/04-from-assistant-to-agent.md",
+      "expected_output": "Identifies inline data injection patterns (paste-based data injection in prompts) and possibly missing skill names. Should NOT flag 'Claude in Excel' as wrong since Ch17 uses it correctly.",
+      "files": [],
+      "expectations": [
+        "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+        "Identifies inline data injection or paste-based patterns in exercise prompts",
+        "Checks for missing skill names in exercise prompts",
+        "Produces a prioritised defect summary (Defect 1 highest priority)",
+        "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Audit this already-fixed Ch23 lesson for any remaining issues. This file was recently updated to replace fabricated outputs with intent tables: apps/learn-app/docs/03-Business-Domain-Agent-Workflows/04-the-growth-engine/23-sales-revops-marketing/05-the-five-laws-of-outreach.md",
+      "expected_output": "Should confirm the lesson is mostly clean (fabricated outputs already replaced). Should correctly identify the preserved anti-pattern examples (Hamza DM for compliance gap teaching) as intentional and NOT flag them. May find minor remaining issues.",
+      "files": [],
+      "expectations": [
+        "Recognises that fabricated outputs have already been replaced with intent tables",
+        "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+        "Does NOT flag the intent tables themselves as fabricated output",
+        "Identifies the lesson as mostly clean / low defect count",
+        "If any defects remain, correctly categorises them using the 6-type taxonomy"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Run a full prompt quality audit on this lesson — check all six defect types: apps/learn-app/docs/03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/20-islamic-finance-domain-agents/10-saudi-arabia.md",
+      "expected_output": "A comprehensive audit checking all 6 defect types. Should find missing skill names (Defect 2) as the main issue. Should correctly exclude ZATCA formulas and journal entry templates from defect list.",
+      "files": [],
+      "expectations": [
+        "Checks for all 6 defect types, not just fabricated output",
+        "Identifies any fabricated output blocks preceded by **Output:**",
+        "Checks whether exercise prompts include natural skill names",
+        "Checks for inline data injection patterns",
+        "Produces a prioritised summary (Defect 1 first, then 2-6)",
+        "Anti-pattern examples and framework tables are correctly excluded from defect list"
+      ]
+    }
+  ]
+}
