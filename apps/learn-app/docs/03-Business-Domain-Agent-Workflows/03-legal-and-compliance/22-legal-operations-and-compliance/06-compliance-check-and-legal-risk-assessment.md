@@ -134,105 +134,24 @@ Processing details:
 - Third parties: OCR processing via cloud API (US-based provider)
 ```
 
-**Expected output:**
+**What to expect:** The agent produces a compliance assessment. Your output will vary, but look for these sections:
 
-```
-COMPLIANCE ASSESSMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Organisation:     Noor Technologies (Pvt) Ltd
-Assessment Date:  [Date]
-Planned Action:   AI-powered document processing for textile exporters
-Playbook:         Noor Technologies Playbook v2.1
+| Section                | Intent                                                                   | What to Verify                                                                                                                       |
+| ---------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Recommendation header  | Overall assessment: Proceed / Proceed with conditions / Requires review  | Compare against your prediction — most students predict "Proceed" but the assessment typically returns "Proceed with conditions"     |
+| Applicable regulations | Lists each regulation that applies, why it applies, and key requirements | Should identify data protection regimes for all three jurisdictions (Pakistan, UAE, UK) plus any electronic transactions legislation |
+| Requirements checklist | Specific compliance actions needed before launch                         | Should include cross-border transfer mechanisms, impact assessments, and processor agreements                                        |
+| Risk analysis          | HIGH/MEDIUM/LOW classification of compliance gaps                        | Look for cross-border data transfer as the highest-risk item                                                                         |
+| Priority actions       | Ordered list of pre-launch steps                                         | Should prioritise items that address multiple jurisdictions simultaneously                                                           |
+| Attorney review footer | Governance boundary reminder                                             | Confirm the footer is present                                                                                                        |
 
-RECOMMENDATION:   PROCEED WITH CONDITIONS
-                  4 regulatory requirements must be addressed before launch
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-APPLICABLE REGULATIONS
-──────────────────────────────────────────────────────────
-1. Pakistan PDPA 2023 (Personal Data Protection Act)
-   Applies because: Processing personal data of Pakistani residents
-   Key requirements:
-   - Lawful basis for processing (consent or legitimate interest)
-   - Data subject rights (access, correction, erasure)
-   - Data breach notification within 72 hours
-   - Cross-border transfer safeguards for data sent to US OCR provider
-   - Potential data localisation requirement (verify with counsel)
-   Penalty: Up to PKR 25 million
-
-2. UAE PDPL (Federal Decree-Law No. 45 of 2021)
-   Applies because: Processing data of UAE-based export partners
-   Key requirements:
-   - Consent or contractual necessity for processing
-   - Data processing register
-   - Cross-border transfer mechanism (UAE→Pakistan)
-   - Right to erasure and data portability
-   Penalty: Up to AED 5 million
-
-3. UK GDPR (UK General Data Protection Regulation)
-   Applies because: Processing data of UK-based export partners
-   Key requirements:
-   - Lawful basis under Article 6
-   - International data transfer mechanism (UK→Pakistan)
-   - Data Protection Impact Assessment (DPIA) required for
-     large-scale processing of personal data using new technology
-   - ICO registration
-   Penalty: Up to £17.5 million or 4% of global turnover
-
-4. Pakistan Electronic Transactions Ordinance 2002
-   Applies because: Electronic processing of commercial documents
-   Key requirements:
-   - Legal recognition of electronic records
-   - Integrity requirements for digitally processed documents
-   - Retention obligations for original documents
-
-──────────────────────────────────────────────────────────
-
-REQUIREMENTS CHECKLIST
-──────────────────────────────────────────────────────────
-☐ Data Processing Impact Assessment (UK GDPR — mandatory for
-  AI-based processing at scale)
-☐ Cross-border transfer mechanism for Pakistan→US data flow
-  (OCR provider)
-☐ Cross-border transfer mechanism for UAE→Pakistan data flow
-☐ Privacy policy updated to cover AI document processing
-☐ Consent mechanism for personal data extraction
-☐ Data retention policy for processed documents
-☐ Processor agreement with US-based OCR provider
-☐ ICO registration (UK operations)
-☐ Internal data processing register
-
-RISK ANALYSIS
-──────────────────────────────────────────────────────────
-HIGH:   Cross-border data transfer to US OCR provider without
-        adequate safeguards — affects all three jurisdictions
-MEDIUM: No DPIA conducted — UK GDPR requires this for AI
-        processing at scale
-MEDIUM: UAE data processing register not established
-LOW:    Pakistan ETO document retention — verify current
-        retention policy covers electronic originals
-
-PRIORITY ACTIONS (before launch)
-──────────────────────────────────────────────────────────
-1. Execute processor agreement with OCR provider (addresses
-   cross-border transfer for all 3 jurisdictions)
-2. Conduct DPIA (UK GDPR requirement, good practice for all)
-3. Establish UAE data processing register
-4. Update privacy policy and consent mechanisms
-5. Verify Pakistan data localisation position with counsel
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
-```
+:::note Your output will vary
+The specific regulations identified, risk ratings, and priority ordering depend on the business action described and your playbook configuration. Focus on whether the assessment identifies the correct jurisdictions and surfaces regulations you did not anticipate. The teaching point is proactive compliance — identifying regulatory requirements before launch, not after.
+:::
 
 ### Calibration
 
-Compare your prediction to the output.
-
-Most students predict "Proceed" because the service processes business documents, not sensitive personal data. The assessment returns "Proceed with conditions" because business documents contain personal data -- names, addresses, phone numbers, bank details -- that trigger data protection requirements in three jurisdictions.
-
-If you predicted all three data protection regimes (PDPA 2023, UAE PDPL, UK GDPR), you have strong regulatory awareness. If you missed the Electronic Transactions Ordinance, that is exactly the value of proactive assessment -- it surfaces regulations you did not anticipate.
+Compare your prediction to the output. Most students predict "Proceed" because the service processes business documents, not sensitive personal data. The assessment typically returns "Proceed with conditions" because business documents contain personal data -- names, addresses, phone numbers, bank details -- that trigger data protection requirements in three jurisdictions. If you missed any applicable regulation, that is exactly the value of proactive assessment -- it surfaces requirements you did not anticipate.
 
 :::warning The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.
 A compliance assessment is a structured starting point for attorney review, not a substitute for legal advice. The assessment identifies applicable regulations and flags requirements. Your attorney confirms the analysis, verifies the regulatory interpretation, and signs off on the compliance plan.
@@ -286,51 +205,20 @@ above and score each risk using the 5x5 severity-by-likelihood
 matrix.
 ```
 
-**Expected output:**
+**What to expect:** The agent produces a risk matrix scoring each compliance gap. Your output will vary, but look for these sections:
 
-```
-LEGAL RISK MATRIX — Noor Technologies AI Document Processing
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+| Section                                 | Intent                                                                | What to Verify                                                                                   |
+| --------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Per-risk severity and likelihood scores | Quantifies each compliance gap on the 5x5 scale                       | Check that the severity rationale references the correct regulatory penalty range                |
+| Risk score calculation                  | Severity x Likelihood = score, mapped to GREEN/YELLOW/ORANGE/RED band | Verify the arithmetic is correct and the band assignment matches the score range table above     |
+| Action recommendation per risk          | Specific mitigation step for each risk                                | Should distinguish between items that block launch (RED) and items that need monitoring (YELLOW) |
+| Summary with overall recommendation     | Aggregated risk profile                                               | Should reflect the highest-severity item as the gating factor                                    |
 
-RISK 1: Cross-border data transfer to US OCR provider
-        without adequate safeguards
-Severity:    4 (Major — potential enforcement across 3 jurisdictions)
-Likelihood:  4 (Likely — transfer occurs with every document processed)
-Score:       16 — RED
-Action:      STOP. Execute processor agreement with US provider before
-             any data flows. Include Standard Contractual Clauses for
-             UK GDPR, and equivalent mechanisms for PDPA and UAE PDPL.
+:::note Your output will vary
+The specific risk scores depend on how the agent assesses severity and likelihood for your scenario. Focus on whether the scoring rationale is defensible and whether the action recommendations are proportionate to the risk level. The teaching point is the 5x5 framework itself — transforming subjective risk judgment into quantified, prioritised action.
+:::
 
-RISK 2: No DPIA conducted for AI processing at scale
-Severity:    3 (Moderate — ICO enforcement notice, remediation order)
-Likelihood:  3 (Possible — depends on ICO enforcement priorities
-             for Pakistan-based processors serving UK customers)
-Score:       9 — YELLOW
-Action:      MONITOR. Conduct DPIA before UK market launch. Can proceed
-             with Pakistan-only launch while DPIA is in progress.
-
-RISK 3: UAE data processing register not established
-Severity:    2 (Minor — administrative penalty, correctable)
-Likelihood:  4 (Likely — UAE PDPL enforcement increasing since 2024)
-Score:       8 — YELLOW
-Action:      MONITOR. Establish register before processing UAE partner
-             data. Low complexity, high compliance value.
-
-RISK 4: Document retention gap under Pakistan ETO
-Severity:    2 (Minor — procedural gap, no personal data impact)
-Likelihood:  2 (Unlikely — ETO enforcement is minimal for B2B)
-Score:       4 — GREEN
-Action:      ACCEPT. Update retention policy to cover electronic
-             originals. Include in next policy review cycle.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SUMMARY: 1 RED | 2 YELLOW | 1 GREEN
-OVERALL: PROCEED WITH CONDITIONS — address RED item before launch
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
-```
-
-The risk matrix transforms the compliance assessment from a checklist into a prioritised action plan. Risk 1 is RED -- it must be resolved before launch. Risks 2 and 3 are YELLOW -- they need attention but do not block a phased rollout. Risk 4 is GREEN -- handle it in the normal course of business.
+The risk matrix transforms the compliance assessment from a checklist into a prioritised action plan. RED items must be resolved before launch. YELLOW items need attention but do not block a phased rollout. GREEN items can be handled in the normal course of business.
 
 ## Worked Example: PayGulf Compliance Assessment
 
@@ -350,54 +238,19 @@ Regulatory context: PayGulf is DFSA-regulated (DIFC).
 Expanding service to Saudi Arabia for the first time.
 ```
 
-**Expected output:**
+**What to expect:** The agent produces a compliance assessment for PayGulf's regulated scenario. Your output will vary, but look for these sections:
 
-```
-COMPLIANCE ASSESSMENT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Organisation:     PayGulf Technologies Ltd (DIFC)
-Planned Action:   Cross-border payment feature — Saudi merchants
+| Section                      | Intent                                                                      | What to Verify                                                                                  |
+| ---------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Recommendation header        | Overall assessment — likely "Requires review" given regulated entity status | Check whether the agent escalates beyond "Proceed with conditions" given DFSA-regulated context |
+| SAMA outsourcing rules       | Saudi regulatory requirements for outsourcing payment processing            | Should identify SAMA approval requirements and data localisation obligations                    |
+| Saudi PDPL requirements      | Data protection for Saudi residents                                         | Should flag data localisation and cross-border transfer requirements                            |
+| DFSA regulatory requirements | Home regulator obligations for material business changes                    | Should identify notification requirements and systems/controls obligations                      |
+| Industry-specific standards  | Payment card data security requirements                                     | Should reference PCI DSS given payment data processing                                          |
 
-RECOMMENDATION:   REQUIRES REVIEW
-                  Regulatory complexity exceeds standard assessment.
-                  Specialist counsel required for SAMA and DFSA matters.
-
-APPLICABLE REGULATIONS
-──────────────────────────────────────────────────────────
-1. SAMA (Saudi Arabian Monetary Authority) — Outsourcing Rules
-   Applies because: Saudi merchants outsourcing payment
-   processing to a DIFC-regulated entity
-   Key requirements:
-   - SAMA approval for outsourcing material functions
-   - Saudi data localisation (transaction data must be
-     stored or mirrored in Saudi Arabia)
-   - Contingency planning and exit strategy
-   - Annual audit requirements
-
-2. Saudi PDPL (Royal Decree M/19 of 2021)
-   Applies because: Processing personal data of Saudi residents
-   Key requirements:
-   - Data localisation — personal data of Saudi citizens
-     must be stored in Saudi Arabia unless exempted
-   - Cross-border transfer requires adequate protection
-   - Consent requirements for financial data processing
-
-3. DFSA Regulations (Dubai Financial Services Authority)
-   Applies because: PayGulf is DFSA-regulated
-   Key requirements:
-   - Notification of material change in business model
-   - Cross-border activity approval
-   - Systems and controls for new payment corridor
-
-4. PCI DSS v4.0 (Payment Card Industry Data Security Standard)
-   Applies because: Processing card payment data
-   Key requirements:
-   - Encryption of cardholder data in transit and at rest
-   - Annual PCI compliance assessment
-   - Incident response plan for payment data breaches
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
-```
+:::note Your output will vary
+PayGulf's regulated status means the compliance assessment should be materially more severe than Noor's. A regulated entity faces both commercial law requirements and sector-specific regulatory obligations. Focus on whether the agent identifies the layered regulatory complexity — not just data protection, but financial services regulation and payment industry standards.
+:::
 
 Fatima applies the risk matrix to PayGulf's four identified risks:
 

@@ -97,111 +97,21 @@ based in Lahore, Pakistan. We want to ensure the agreement is
 enforceable and compliant in both jurisdictions.
 ```
 
-**Expected output:**
+**What to expect:** The agent produces a clause-by-clause review with employment-specific analysis. Your output will vary, but look for these sections:
 
-```
-TASK:         Contract Review -- Employment Agreement
-JURISDICTION: English Law (UK overlay loaded)
-              CROSS-BORDER DETECTED:
-              - Employee jurisdiction: Pakistan (pakistan-law overlay loaded)
-PLAYBOOK:     Brightpath Employment Playbook v1.0
-ATTORNEY REVIEW REQUIRED: YES
+| Section                                        | Intent                                                                            | What to Verify                                                                                                                |
+| ---------------------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Jurisdiction header with CROSS-BORDER DETECTED | Identifies both the governing law and the employee's jurisdiction                 | Confirm the agent loads overlays for both jurisdictions (e.g., UK law + Pakistan employment law)                              |
+| Employment contract alert                      | Warns that mandatory statutory protections apply regardless of governing law      | Should state that the employer's chosen governing law does not override the employee jurisdiction's mandatory employment law  |
+| Employer registration/structure clause         | Identifies whether the employer has a legal entity in the employee's jurisdiction | Should flag the absence of local registration (EOBI, FBR, provincial social security) as RED if no entity exists              |
+| Non-compete clause                             | Evaluates enforceability against both jurisdictions' reasonableness tests         | Should reference the employee jurisdiction's specific restraint-of-trade rules (e.g., Pakistan Contract Act 1872, Section 27) |
+| IP assignment clause                           | Checks whether IP assignment is effective under both jurisdictions' copyright law | Should flag where copyright law differs between jurisdictions and recommend a belt-and-braces approach                        |
+| Tax and social security                        | Identifies mandatory statutory obligations not addressed in the contract          | Should list each specific obligation (tax withholding, pension contributions, social security) as RED if missing              |
+| Holistic risk summary                          | Overall recommendation with negotiation priority                                  | Should recommend escalation if structural issues (no local entity) create non-compliance from day one                         |
 
-EMPLOYMENT CONTRACT ALERT: Employment agreements are subject to
-mandatory statutory protections in the employee's jurisdiction.
-English governing law does not override Pakistan mandatory
-employment law for a Pakistan-based employee.
-
-CLAUSE:     Employer Registration and Structure
-STATUS:     RED -- ESCALATE
-ISSUE:      Brightpath has no legal entity in Pakistan. Without
-            a Pakistani entity, Brightpath cannot:
-            (1) Register as employer with EOBI (Employees Old Age
-                Benefits Institution) -- mandatory for all employers
-            (2) Deduct and remit income tax to FBR (Federal Board
-                of Revenue) -- employer withholding obligation
-            (3) Register for provincial social security (PESSI in
-                Punjab, where Lahore is located)
-            Operating a direct employment relationship without
-            local registration creates tax and regulatory exposure.
-REDLINE:    [Structural issue. Options for attorney:
-             (a) Engage via Employer of Record (EOR) with Pakistan entity
-             (b) Restructure as independent contractor (only if
-                 relationship genuinely meets contractor criteria)
-             (c) Establish Pakistan subsidiary or branch office
-             Escalate to employment counsel with Pakistan expertise.]
-PRIORITY:   Must-have -- structural
-
-CLAUSE:     Non-Compete (Section 11)
-STATUS:     RED -- ESCALATE
-CURRENT:    "For 12 months following termination, the Employee
-             shall not engage in any competing business worldwide."
-ISSUE:      Under Pakistan Contract Act 1872, Section 27, agreements
-            in restraint of trade are void unless reasonable. Pakistani
-            courts typically enforce 6-12 months maximum, geographically
-            limited to Pakistan, restricted to the specific type of
-            work performed. A worldwide 12-month restriction is
-            unlikely to be enforceable against a Pakistan-based
-            employee. Under English law, 12 months worldwide may also
-            fail the reasonableness test for a developer role.
-REDLINE:    "For 6 months following termination, the Employee shall
-             not, within Pakistan and the United Kingdom, engage
-             directly as an employee or contractor with the companies
-             listed in Schedule [X] (Direct Competitors). This
-             restriction applies only to work substantially similar
-             to the Employee's role at the Company."
-FALLBACK:   If broader protection needed, use reinforced
-            confidentiality + IP assignment instead of non-compete.
-RATIONALE:  "Narrower non-compete is more likely to be enforced in
-             both jurisdictions. Overly broad restrictions risk the
-             entire clause being struck down."
-PRIORITY:   Must-have
-
-CLAUSE:     Intellectual Property Assignment (Section 8)
-STATUS:     YELLOW -- NEGOTIATE
-CURRENT:    "All intellectual property created in the course of
-             employment shall be the exclusive property of the Company."
-ISSUE:      Under English law (CDPA 1988, s.11(2)), copyright in
-            works created in the course of employment vests in the
-            employer automatically. For a Pakistan-based employee,
-            Pakistani copyright law (Copyright Ordinance 1962) applies
-            to the act of creation. Under Pakistani law, copyright
-            vests in the author unless assigned in writing.
-            The current clause may work as a contractual assignment,
-            but a standalone IP assignment deed executed under both
-            English and Pakistani law would provide greater certainty.
-REDLINE:    Add: "The Employee hereby assigns to the Company, by way
-            of present assignment of future rights, all intellectual
-            property rights (including copyright) in all works created
-            in the course of employment, in all jurisdictions worldwide.
-            The Employee agrees to execute further documents as
-            reasonably required to perfect this assignment."
-RATIONALE:  "Belt-and-braces approach ensures assignment is effective
-             under both English and Pakistani IP law."
-PRIORITY:   Nice-to-have
-
-CLAUSE:     Tax and Social Security (not addressed in contract)
-STATUS:     RED -- ESCALATE
-ISSUE:      The contract does not address:
-            (1) Pakistan income tax withholding (FBR requirement)
-            (2) EOBI contributions (mandatory)
-            (3) PESSI Punjab (mandatory for Punjab-based employees)
-            (4) UK tax implications (potential permanent establishment)
-            These are statutory obligations, not optional.
-REDLINE:    [Escalate to tax counsel in both jurisdictions.
-             Employment structure must be compliant before start date.]
-PRIORITY:   Must-have -- regulatory
-
-HOLISTIC RISK SUMMARY
-Total: 2 GREEN | 1 YELLOW | 3 RED
-Most material risk: No Pakistan entity creates tax and regulatory
-                    non-compliance from day one.
-Recommendation: ESCALATE -- Do not execute in current form.
-Negotiation priority: (1) Structure/EOR, (2) Tax compliance,
-                      (3) Non-compete scope, (4) IP assignment.
-
-ALL OUTPUTS REQUIRE REVIEW BY LICENSED ATTORNEY
-```
+:::note Your output will vary
+The specific clauses flagged and the applicable employment statutes depend on the jurisdictions involved. Focus on whether the agent identifies mandatory statutory protections in the employee's jurisdiction and treats them as non-negotiable — unlike commercial contracts where every clause is potentially negotiable. The teaching point is that employment contracts trigger an entirely different set of RED flags because they intersect with mandatory statutory protections that do not exist in commercial law.
+:::
 
 Compare this output to the vendor contract review you ran in Lesson 3. The CloudStack SaaS review flagged a limitation of liability cap and an auto-renewal clause. This employment review flags employer registration, tax withholding, and non-compete enforceability. The difference is not complexity -- it is category. Employment contracts trigger an entirely different set of RED flags because they intersect with mandatory statutory protections that do not exist in commercial law.
 
