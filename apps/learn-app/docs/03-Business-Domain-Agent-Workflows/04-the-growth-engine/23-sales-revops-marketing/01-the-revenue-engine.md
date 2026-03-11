@@ -79,43 +79,24 @@ This chapter gives every rep Farah's research depth in under four minutes. The *
 
 ## Install All Three Plugins
 
-Open Claude Code and run these three commands:
+If you have not already set up Cowork, follow the instructions in the [Chapter 17 prerequisites](../../../03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/17-finance-domain-agents/README.md) first.
 
-```
-claude plugin install sales@knowledge-work-plugins
-```
+Install the three plugin layers from the Cowork sidebar:
 
-```
-claude plugin install marketing@knowledge-work-plugins
-```
-
-```
-claude plugin install sales-revops-marketing@agentfactory-business
-```
-
-**Output (after third install):**
-
-```
-Installed plugin: sales-revops-marketing@agentfactory-business (v1.0.0)
-  Extension for: sales@knowledge-work-plugins, marketing@knowledge-work-plugins
-  Added: sales-marketing.local.md template, ICP configuration, jurisdiction overlays
-  Skills: 15 active (router, prospect-research, lead-scoring, crm-enrichment,
-          outreach, sequence, pre-call-brief, follow-up, pipeline, content-creation,
-          campaign-planning, copywriting, performance-analysis, content-calendar,
-          persona-icp)
-  Agents: 5 active
-```
+1. **Sales plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → find **Sales** (from `knowledge-work-plugins`) → click **Install**.
+2. **Marketing plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → find **Marketing** (from `knowledge-work-plugins`) → click **Install**.
+3. **Sales RevOps Marketing plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Sales RevOps Marketing** → click **Install**.
 
 The Sales plugin provides six skills and three commands (`/call-summary`, `/forecast`, `/pipeline-review`). The Marketing plugin provides five skills and seven commands (`/draft-content`, `/campaign-plan`, `/brand-review`, `/competitive-brief`, `/performance-report`, `/seo-audit`, `/email-sequence`). The extension adds fifteen skills that enhance both base plugins with business-specific configuration.
 
-Verify the skills are loaded:
+Verify everything is connected by running this prompt in Cowork:
 
 ```
 List all my sales and marketing skills and tell me which
 plugin each one comes from.
 ```
 
-You should see skills from all three layers: six from the Sales plugin (including `account-research` and `call-summary`), five from Marketing (including `content-creation` and `campaign-planning`), and fifteen from the extension (including `prospect-research`, `lead-scoring`, `persona-icp`, and `crm-enrichment`). If you see only base-plugin skills without the extension additions, re-run the third installation command.
+If the extension is active, the output includes an **ICP MATCH** header at the top of the research brief. If you see only a plain research brief without the ICP section, reinstall the Sales RevOps Marketing plugin from the Cowork sidebar.
 
 ## Connect Your Tools (Optional)
 
@@ -134,7 +115,7 @@ If you have a free HubSpot account, the agent works with your real CRM data from
 
 ## Generate Your Demo Business
 
-NexaFlow Technologies is the company you will operate as throughout this chapter. It is a 38-person workflow automation startup in Karachi, selling to mid-market logistics companies across Pakistan, UAE, and the UK. Copy this prompt and run it in Claude Code:
+NexaFlow Technologies is the company you will operate as throughout this chapter. It is a 38-person workflow automation startup in Karachi, selling to mid-market logistics companies across Pakistan, UAE, and the UK. Copy this prompt and run it in Cowork:
 
 ```
 Generate a complete demo dataset for a company called NexaFlow Technologies,
@@ -280,13 +261,7 @@ LOWEST CONFIDENCE
 
 ## Configure sales-marketing.local.md
 
-The extension ships with a template file. Copy it to your project root:
-
-```
-cp $(claude plugin path sales-revops-marketing@agentfactory-business)/sales-marketing.local.md.template ./sales-marketing.local.md
-```
-
-Open `sales-marketing.local.md` and fill in the NexaFlow ICP skeleton:
+The extension includes a local configuration template. In your connected working folder, create a new file called `sales-marketing.local.md` and paste the NexaFlow ICP skeleton:
 
 ```markdown
 # Sales & Marketing Local Configuration
@@ -342,7 +317,7 @@ Test your understanding of the key concepts from this lesson.
 
 ## Try With AI
 
-**Setup:** Use these prompts in Claude Code with the Sales, Marketing, and RevOps extension plugins installed.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant with the Sales, Marketing, and RevOps extension plugins installed.
 
 ### Prompt 1: Reproduce
 
