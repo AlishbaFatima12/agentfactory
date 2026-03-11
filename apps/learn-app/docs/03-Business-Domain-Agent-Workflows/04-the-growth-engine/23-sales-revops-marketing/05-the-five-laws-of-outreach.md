@@ -202,76 +202,34 @@ capacity by 40%.
 
 The `outreach` skill auto-activates and enforces the Five Laws:
 
-**Output:**
+**What to expect:** The agent produces a LinkedIn DM with an automatic Five Laws audit. Your output will vary, but look for these sections:
 
-```
-LinkedIn DM — Sarah Chen, VP Operations, Meridian Logistics
+| Section    | Intent                                                  | What to Verify                                                 |
+| ---------- | ------------------------------------------------------- | -------------------------------------------------------------- |
+| DM body    | Personalised message referencing prospect-specific data | Opens with the prospect's situation, not NexaFlow's product    |
+| Word count | Channel-appropriate length check                        | Under 100 words for LinkedIn DM                                |
+| Law check  | Per-law pass/fail against all Five Laws                 | All 5 laws marked; any failure includes the specific violation |
 
-Hi Sarah,
+:::note Your output will vary
+The DM content depends on your research brief and enrichment data from earlier lessons. The teaching point is the _audit_ — checking each law against the output — not the specific message text. If all five laws pass, the skill is consuming your research brief effectively. If any fail, iterate before moving on.
+:::
 
-Your 40% Leeds warehouse expansion and the 8 new ops roles on
-LinkedIn this month suggest Meridian is scaling fulfilment capacity
-ahead of a major contract cycle.
+Run the audit yourself — do not trust the agent's self-check alone. If all five laws pass, the skill is consuming your research brief effectively. When the input is rich, the output is sharp.
 
-When 3PL networks expand warehouse capacity before demand catches
-up, the gap between capacity cost and utilisation rate is where
-margin erodes fastest. We helped a regional 3PL in Manchester
-close that gap by front-loading demand modelling — 23% utilisation
-improvement in the first quarter.
+Now generate a follow-up email for the same prospect — different channel, same Five Laws:
 
-One question: are you modelling demand fill-rate before or after
-the expanded capacity goes live?
+**What to expect:** The agent produces a follow-up email with the same Five Laws enforcement. Your output will vary, but look for these sections:
 
-— Amir
+| Section      | Intent                                       | What to Verify                                     |
+| ------------ | -------------------------------------------- | -------------------------------------------------- |
+| Subject line | Specific to the prospect's situation         | Not generic ("Following up") — references the hook |
+| Email body   | Same research, different framing from the DM | Adds a new angle or evidence point                 |
+| Word count   | Cold email length check                      | Under 150 words                                    |
+| Law check    | Per-law pass/fail                            | All 5 laws satisfied                               |
 
----
-Word count: 89/100
-Law check: 1 ✓ | 2 ✓ | 3 ✓ | 4 ✓ | 5 ✓
-```
-
-### Law-by-Law Audit
-
-| Law                                      | Status | Evidence                                                                                            |
-| ---------------------------------------- | ------ | --------------------------------------------------------------------------------------------------- |
-| **Law 1: Specific Verifiable Reference** | PASS   | "40% Leeds warehouse expansion" and "8 new ops roles on LinkedIn this month" -- both verifiable     |
-| **Law 2: Lead with Prospect**            | PASS   | First sentence is entirely about Meridian's expansion. Sender not mentioned until paragraph 2       |
-| **Law 3: One Ask**                       | PASS   | One question: "are you modelling demand fill-rate before or after the expanded capacity goes live?" |
-| **Law 4: Hard Word Limits**              | PASS   | 89 words. LinkedIn DM limit is 100. Within bounds                                                   |
-| **Law 5: Zero Jargon**                   | PASS   | No banned words. "Utilisation rate" and "demand modelling" are domain terms Sarah uses daily        |
-
-All five laws satisfied. The skill produced a clean draft because it consumed the enriched research brief from Lesson 4. When the input is rich, the output is sharp.
-
-Now generate a follow-up email for the same prospect -- different channel, same Five Laws:
-
-**Output:**
-
-```
-Subject: Leeds warehouse utilisation modelling
-
-Hi Sarah,
-
-Following up on my LinkedIn note about your 40% Leeds expansion.
-
-Meridian's 8 new fulfilment roles suggest you are scaling
-operations ahead of demand — the same pattern we saw at a
-Manchester 3PL before they hit a 31% utilisation gap in Q2.
-
-We built a demand model that closed that gap to under 8% within
-90 days. The approach was specific to 3PL warehouse networks
-with multiple depot handoffs.
-
-Would a 15-minute call on Tuesday or Wednesday work to compare
-your capacity plan against the demand modelling approach?
-
-Best,
-Amir
-
----
-Word count: 97/150
-Law check: 1 ✓ | 2 ✓ | 3 ✓ | 4 ✓ | 5 ✓
-```
-
-Two messages, two channels, same Five Laws discipline. The LinkedIn DM is 89 words. The email is 97 words. Both reference the same hook (Leeds expansion) but use different framing -- the DM asks a diagnostic question, the email offers a comparison.
+:::note Your output will vary
+Compare your DM and email side by side. They should reference the same prospect data but frame it differently — the DM asks a diagnostic question, the email typically offers proof or a specific next step. Same Five Laws discipline, different execution per channel.
+:::
 
 ## The Compliance Gap
 
@@ -309,6 +267,10 @@ handling the compliance documentation load for KPT?
 Word count: 92/100
 Law check: 1 ✓ | 2 ✓ | 3 ✓ | 4 ✓ | 5 ✓
 ```
+
+:::note Illustrative example
+This output is shown for teaching purposes. Your agent will produce different content, but the pattern is the same: a message that passes all Five Laws on content quality but may fail on cultural or jurisdictional appropriateness. Read it as Hamza would read it — that is the diagnostic exercise.
+:::
 
 All five laws pass. The content is clean. But read it again as Hamza would read it.
 

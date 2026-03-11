@@ -132,26 +132,19 @@ Karachi. Use the research brief from Step 1.
 
 The `lead-scoring` skill evaluates three dimensions — Fit, Timing, and Engagement — using the ICP you built in Lesson 2.
 
-**Sample Output:**
+**What to expect:** The agent produces a three-dimension score with classification and routing. Your output will vary, but look for these sections:
 
-```
-LEAD SCORE — Crescent Freight
-════════════════════════════════════════
-Fit:         32/40 — Regional freight forwarder, 180 employees,
-             Pakistan geography. Strong ICP match.
-Timing:      26/30 — Hiring operations manager (LinkedIn, 2 weeks
-             ago). New warehouse in Port Qasim announced.
-Engagement:  18/30 — No direct inbound signal. Attended PIFFA
-             conference where NexaFlow exhibited.
-────────────────────────────────────────
-TOTAL:       76/100 — HOT
-ROUTING:     Proceed to outreach
-════════════════════════════════════════
-```
+| Section                | Intent                                          | What to Verify                                       |
+| ---------------------- | ----------------------------------------------- | ---------------------------------------------------- |
+| Fit score              | ICP match based on industry, size, geography    | References Crescent's actual demo-data.md profile    |
+| Timing score           | Active buying signals                           | Hiring, expansion, or contract signals from research |
+| Engagement score       | Prior interaction with NexaFlow                 | Likely lower — Crescent has not reached out to you   |
+| Total + Classification | Composite score with HOT/WARM/CULTIVATE/NOT YET | Matches the threshold table from Lesson 3            |
+| Routing recommendation | Next pipeline action                            | Should match the classification tier                 |
 
-The score says HOT. The routing says proceed. But examine the dimensions. Engagement is the weakest at 18/30 — Crescent has not reached out to you. The conference attendance is a passive signal. This means your outreach needs to work harder to establish relevance, because Crescent is not already looking for you.
-
-Compare this to Meridian Logistics from Lesson 7, which scored 94 with a meeting already booked. Meridian's pipeline was easier because engagement was high. Crescent's pipeline requires you to create the engagement through outreach quality.
+:::note Your output will vary
+The scores depend on your demo-data.md content and ICP configuration. The teaching point is the _dimension analysis_ — which dimension is weakest and what that means for your outreach strategy. If Engagement is lowest, your outreach needs to work harder to establish relevance. Compare this score to your Meridian score from Lesson 7 to see how engagement level changes the outreach challenge.
+:::
 
 **Routing decision: HOT — proceed to outreach.**
 

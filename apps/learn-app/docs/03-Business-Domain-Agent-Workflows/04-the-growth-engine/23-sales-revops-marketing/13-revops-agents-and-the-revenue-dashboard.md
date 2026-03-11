@@ -175,77 +175,21 @@ Include deal-level health scores.
 
 The base Sales plugin's `/pipeline-review` command produces a structured pipeline overview. When the RevOps extension is installed, the extension's pipeline skill auto-activates, adding three-dimension scoring integration (Fit + Timing + Engagement from Lesson 3) and deal-level health scores.
 
-**Output:**
+**What to expect:** The `/pipeline-review` produces a deal-level health assessment. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          PIPELINE REVIEW — NexaFlow Technologies
-          Date: 2026-03-11
-          Active Deals: 10 | Total Value: $1,680,000
-══════════════════════════════════════════════════════════════
+| Section            | Intent                                                    | What to Verify                                             |
+| ------------------ | --------------------------------------------------------- | ---------------------------------------------------------- |
+| Deal health scores | Per-deal score with Fit/Timing/Engagement breakdown       | Each deal scored on three dimensions from Lesson 3         |
+| Stage and risk     | Current pipeline stage with risk rating (LOW/MEDIUM/HIGH) | High-risk deals show long stage duration or low engagement |
+| At-risk deals      | Deals requiring immediate attention                       | Stalled deals, silent contacts, missing champions flagged  |
+| Strongest closes   | Deals most likely to close this quarter                   | High health scores with active engagement                  |
+| Forecast gap       | Weighted pipeline vs quarterly target                     | Shows whether current pipeline covers the target           |
 
-DEAL HEALTH SCORES
-─────────────────────────────────────────────────────────────
-Deal                    Value      Stage       Health  Risk
-─────────────────────────────────────────────────────────────
-Meridian Logistics      $180,000   Proposal    92/100  LOW
-  Fit: 38/40  Timing: 34/40  Engagement: 20/20
-  Champion: Sarah Chen (VP Ops). Proposal sent Mar 5.
+:::note Your output will vary
+The pipeline data depends on your demo-data.md content and the deals you have been working throughout this chapter. The teaching point is _interpreting deal health in context_: a deal stalled in Proposal for 30+ days with no engagement is not "in progress" — it is silent. A deal with high Fit but low Timing may close next quarter, not this one. The agent scores deals on data it can measure. You evaluate deals on context it cannot.
+:::
 
-Gulf Express LLC        $95,000    Negotiation 85/100  LOW
-  Fit: 30/40  Timing: 35/40  Engagement: 20/20
-  Active engagement. VP posted about fleet modernisation.
-
-DataForge Solutions     $120,000   Discovery   78/100  MEDIUM
-  Fit: 32/40  Timing: 32/40  Engagement: 14/20
-  Hiring for logistics integration roles. Early stage.
-
-Crescent Freight        $200,000   Proposal    45/100  HIGH
-  Fit: 35/40  Timing: 8/40   Engagement: 2/20
-  34 days in stage. No response to proposal. No champion.
-
-BridgePoint UK          $90,000    Discovery   38/100  HIGH
-  Fit: 28/40  Timing: 6/40   Engagement: 4/20
-  42 days in discovery. No next step scheduled.
-
-ThetaPharma Lahore      $150,000   Qualifying  52/100  HIGH
-  Fit: 30/40  Timing: 12/40  Engagement: 10/20
-  High value but low engagement. Contact went quiet Feb 7.
-
-Kaizen Supply Co.       $85,000    Discovery   65/100  MEDIUM
-  Fit: 25/40  Timing: 25/40  Engagement: 15/20
-  Expanding to UAE. Warm signal from Dawn Business article.
-
-AlphaRoute Dubai        $110,000   Qualifying  70/100  MEDIUM
-  Fit: 28/40  Timing: 22/40  Engagement: 20/20
-  Visited pricing page twice. No meeting scheduled yet.
-
-TransPak Logistics      $350,000   Proposal    73/100  MEDIUM
-  Fit: 38/40  Timing: 20/40  Engagement: 15/20
-  Large deal. Mutual connection through KCCI. Slow cycle.
-
-Metro Delivery ISB      $100,000   Qualifying  55/100  MEDIUM
-  Fit: 22/40  Timing: 18/40  Engagement: 15/20
-  Mid-market. Reasonable engagement but weak fit score.
-─────────────────────────────────────────────────────────────
-
-AT-RISK DEALS (3)
-  Crescent Freight:   $200K — 34 days stalled in Proposal
-  BridgePoint UK:     $90K  — 42 days stalled in Discovery
-  ThetaPharma Lahore: $150K — Contact unresponsive since Feb 7
-
-STRONGEST CLOSES (2)
-  Meridian Logistics:  $180K — 92/100 health, proposal active
-  Gulf Express LLC:    $95K  — 85/100 health, in negotiation
-
-FORECAST GAP
-  Weighted pipeline: $565,000
-  Quarterly target:  $750,000
-  Gap: $185,000 (24.7%)
-══════════════════════════════════════════════════════════════
-```
-
-Three deals are at risk. Crescent Freight is the largest deal in the pipeline at $200,000, sitting in Proposal for 34 days with zero engagement. That is not a deal in progress -- it is a deal that has gone silent. BridgePoint UK has been in Discovery for 42 days with no next step. ThetaPharma's contact went quiet five weeks ago. Each requires a different human intervention: Crescent needs a new champion or a different approach; BridgePoint needs qualification; ThetaPharma needs re-engagement or disqualification.
+Review the output for three categories: deals that need immediate intervention (stalled, silent, or missing a champion), deals that are your strongest closes (high health, active engagement), and the gap between your weighted pipeline and quarterly target.
 
 Meridian Logistics and Gulf Express are the strongest closes. Meridian has a champion (Sarah Chen), an active proposal, and scores of 92/100. Gulf Express is in negotiation with high engagement. These two deals represent $275,000 in near-term revenue.
 
@@ -262,53 +206,19 @@ Show best, likely, and worst case scenarios.
 
 The base Sales plugin's `/forecast` command produces a revenue projection model. It has no extension equivalent -- `/forecast` runs from the base plugin directly.
 
-**Output:**
+**What to expect:** The `/forecast` produces scenario-based revenue projections. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          SALES FORECAST — NexaFlow Technologies
-          Quarter: Q1 2026 (Jan-Mar)
-          Generated: 2026-03-11
-══════════════════════════════════════════════════════════════
+| Section              | Intent                               | What to Verify                                                   |
+| -------------------- | ------------------------------------ | ---------------------------------------------------------------- |
+| Per-deal probability | Best/likely/worst case for each deal | Probability reflects deal stage, engagement, and signal strength |
+| Scenario totals      | Aggregate revenue for each scenario  | Best case shows ceiling, worst case shows floor                  |
+| Target comparison    | Scenarios vs quarterly target        | Shows which scenario meets target and which falls short          |
 
-SCENARIO MODELLING
-─────────────────────────────────────────────────────────────
-                  Best Case    Likely      Worst Case
-─────────────────────────────────────────────────────────────
-Meridian          $180,000     $180,000    $180,000
-  Probability:    95%          90%         85%
-  Rationale:      Champion active, proposal reviewed
+:::note Your output will vary
+The forecast depends on your pipeline data. The teaching point is _evaluating assumptions_: Does the agent's probability estimate for your largest deal match your knowledge of the procurement cycle? Is a 40% "likely" probability realistic for a deal with a slow decision-maker? The gap between your assessment and the agent's is where your judgment adds value. The agent calculates. You contextualise.
+:::
 
-Gulf Express      $95,000      $95,000     $0
-  Probability:    85%          70%         40%
-  Rationale:      In negotiation, but pricing not agreed
-
-DataForge         $120,000     $60,000     $0
-  Probability:    70%          50%         20%
-  Rationale:      Early stage, hiring signals strong
-
-TransPak          $350,000     $175,000    $0
-  Probability:    60%          40%         15%
-  Rationale:      Large deal, slow cycle, KCCI connection
-
-Crescent Freight  $200,000     $0          $0
-  Probability:    30%          10%         5%
-  Rationale:      34 days stalled, no champion identified
-
-Others (5 deals)  $385,000     $120,000    $45,000
-─────────────────────────────────────────────────────────────
-TOTAL             $1,330,000   $630,000    $225,000
-─────────────────────────────────────────────────────────────
-Quarterly Target: $750,000
-Best Case:        $1,330,000  (177% of target)  ✓
-Likely Case:      $630,000   (84% of target)    ⚠ Gap: $120K
-Worst Case:       $225,000   (30% of target)    ✗
-══════════════════════════════════════════════════════════════
-```
-
-The likely case falls $120,000 short of target. The gap depends almost entirely on three swing deals: DataForge ($60,000 in likely), TransPak ($175,000 in likely), and Crescent Freight ($0 in likely). If TransPak closes at full value, NexaFlow exceeds target. If Crescent Freight re-engages, the quarter is comfortable. If both stall, the team needs to accelerate Gulf Express and pull forward deals from next quarter.
-
-Evaluate the assumptions. TransPak at 40% likely probability reflects the KCCI mutual connection and NexaFlow's strong fit score, but the slow cycle makes Q1 closure uncertain. Is 40% realistic for a $350,000 deal with a procurement timeline that could extend into Q2? That judgment is yours, not the agent's.
+Evaluate the assumptions. For your swing deals — the ones where probability estimates determine whether you hit target — ask whether the agent's probability reflects what you know about the procurement timeline, competitive dynamics, and champion strength. That judgment is yours, not the agent's.
 
 ## Building the Revenue Dashboard
 
@@ -332,47 +242,16 @@ Include all seven metrics. Then produce a weekly executive email --
 five bullets, maximum 150 words.
 ```
 
-**Output:**
+**What to expect:** The agent produces a weekly dashboard with metrics and executive summary. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          WEEKLY REVENUE DASHBOARD
-          NexaFlow Technologies — Week of Mar 3-9, 2026
-══════════════════════════════════════════════════════════════
+| Section                       | Intent                                   | What to Verify                                      |
+| ----------------------------- | ---------------------------------------- | --------------------------------------------------- |
+| Seven metrics table           | This week vs last week with trend arrows | Each metric shows direction (up/down) and magnitude |
+| Executive summary (5 bullets) | 150-word email for CEO or VP             | Each bullet drives a specific decision or action    |
 
-METRIC                          THIS WEEK    LAST WEEK   TREND
-─────────────────────────────────────────────────────────────
-HOT Leads Generated             3            1           ▲ +200%
-Lead-to-SAL Conversion          18%          15%         ▲ +3pp
-Pipeline Created                $230,000     $110,000    ▲ +109%
-Average Deal Size               $168,000     $155,000    ▲ +8%
-Pipeline at Risk                $440,000     $290,000    ▲ +52%
-Close Rate (90-day trailing)    28%          31%         ▼ -3pp
-CAC by Channel (avg)            $134         $128        ▲ +5%
-─────────────────────────────────────────────────────────────
-
-EXECUTIVE SUMMARY — 5 BULLETS
-─────────────────────────────────────────────────────────────
-1. Three new HOT signals this week (DataForge hiring,
-   Gulf Express LinkedIn activity, Kaizen UAE expansion)
-   — all require rep follow-up by Wednesday.
-
-2. Pipeline created doubled to $230K driven by TransPak
-   Logistics ($350K deal entered Proposal stage).
-
-3. At-risk pipeline grew to $440K. Crescent Freight ($200K)
-   and BridgePoint UK ($90K) need immediate intervention
-   or disqualification.
-
-4. Close rate dropped 3 points to 28%. Two deals lost in
-   qualifying stage — review disqualification criteria.
-
-5. Likely forecast: $630K against $750K target. Gap closes
-   if TransPak or Crescent re-engage this quarter.
-─────────────────────────────────────────────────────────────
-```
-
-That executive email takes thirty seconds to read. A CEO scanning it on Monday morning sees the headline: pipeline is growing, but at-risk deals are growing faster, and the forecast has a gap. Three specific actions emerge: follow up on HOT signals, intervene on stalled deals, and review why the close rate dropped. No jargon. No dashboards to navigate. Five bullets that drive five decisions.
+:::note Your output will vary
+The dashboard depends on your pipeline data and campaign metrics. The teaching point is the _executive summary_: a CEO scanning it on Monday morning should see the headline in 30 seconds — pipeline health, at-risk deals, forecast status, and the 3 actions that matter this week. No jargon, no dashboards to navigate. Five bullets that drive five decisions.
+:::
 
 ## The Daily Briefing
 
@@ -382,53 +261,18 @@ The Sales plugin includes a `daily-briefing` skill that produces a morning snaps
 Give me today's sales briefing for NexaFlow.
 ```
 
-**Output:**
+**What to expect:** The `daily-briefing` skill produces a morning snapshot. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          DAILY SALES BRIEFING — NexaFlow Technologies
-          Tuesday, March 11, 2026
-══════════════════════════════════════════════════════════════
+| Section                 | Intent                                      | What to Verify                                                    |
+| ----------------------- | ------------------------------------------- | ----------------------------------------------------------------- |
+| Deals closing this week | Urgent pipeline items with required actions | Each deal includes the specific next step for today               |
+| Meetings today          | Today's calls with prep context             | Each meeting references the research brief and engagement history |
+| Signals to act on       | New intelligence requiring attention        | Buying signals, stalled deals, or competitive alerts flagged      |
+| Pipeline snapshot       | Quick metrics summary                       | Active deals, at-risk count, HOT signals, weighted pipeline       |
 
-DEALS CLOSING THIS WEEK
-─────────────────────────────────────────────────────────────
-• Meridian Logistics — $180K — Proposal review scheduled
-  Thursday. Sarah Chen confirmed attendance. Prepare ROI
-  comparison vs. their current Descartes contract.
-
-• Gulf Express LLC — $95K — Pricing negotiation in progress.
-  VP responded to revised quote yesterday. Follow up today
-  for final terms.
-
-MEETINGS TODAY
-─────────────────────────────────────────────────────────────
-• 10:00 AM — AlphaRoute Dubai (qualifying call)
-  Context: Visited pricing page twice. First live conversation.
-  Prep: Review research brief. Key question: fleet size and
-  current route optimisation approach.
-
-• 14:30 PM — DataForge Solutions (discovery)
-  Context: Hiring for logistics integration roles. Early stage.
-  Prep: Ask about integration timeline and budget approval
-  process. This is a B1 qualification conversation.
-
-SIGNALS TO ACT ON
-─────────────────────────────────────────────────────────────
-• Kaizen Supply Co. (Lahore) — Dawn Business reported UAE
-  expansion plans. Warm signal. Consider outreach this week
-  using the Pakistan overlay (WhatsApp, KCCI connection).
-
-• Crescent Freight — 34 days in Proposal with zero engagement.
-  Decision point: escalate to different contact or disqualify.
-
-PIPELINE SNAPSHOT
-─────────────────────────────────────────────────────────────
-Active Deals: 10 | At Risk: 3 | HOT Signals: 3
-Weighted Pipeline: $565,000 | Gap to Target: $185,000
-══════════════════════════════════════════════════════════════
-```
-
-Configure this as the rep's morning routine. Before opening email, before checking Slack, the daily briefing tells you: what is closing this week, who you are meeting today (with context), and what signals need attention. The briefing composes skills from across the chapter -- research briefs from Lesson 2, scoring from Lesson 3, meeting context from Lesson 7, and pipeline data from the Revenue Reporting Agent. It is a single view that replaces fifteen minutes of manual CRM checking.
+:::note Your output will vary
+The briefing composes skills from across the chapter — research briefs from Lesson 2, scoring from Lesson 3, meeting context from Lesson 7, and pipeline data from the Revenue Reporting Agent. The teaching point is that this single view replaces fifteen minutes of manual CRM checking. Configure it as the rep's morning routine: before opening email, before checking Slack, the daily briefing tells you what is closing, who you are meeting, and what signals need attention.
+:::
 
 ## Configuring Agent Schedules
 

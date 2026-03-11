@@ -154,35 +154,19 @@ Run the base Marketing plugin's brand review command on the cornerstone article:
 
 This command runs without the extension. It analyses the article for brand consistency, tone alignment, and suggests adjustments.
 
-**Sample Output:**
+**What to expect:** The `/brand-review` command produces a brand consistency analysis. Your output will vary, but look for these sections:
 
-```
-BRAND REVIEW — LinkedIn Article
-════════════════════════════════════════════════════
-Consistency Score:  82/100
-Tone:               Mostly direct and operator-level.
-                    Paragraph 4 shifts to aspirational language
-                    ("transformative potential") — inconsistent
-                    with brand guide.
-Pillar Coverage:    Operational excellence: STRONG
-                    Sector intelligence: MODERATE
-                    Technology: WEAK — no integration references
-Persona Match:      VP Ops targeting confirmed. Two sentences
-                    read more like CEO positioning.
-────────────────────────────────────────────────────
-RECOMMENDATIONS:
-1. Replace "transformative potential" (para 4) with
-   specific throughput improvement data
-2. Add one technology integration reference (SAP, WMS,
-   or TMS mention)
-3. Tighten final section — shift from vision to
-   operational next steps
-════════════════════════════════════════════════════
-```
+| Section           | Intent                                | What to Verify                                                      |
+| ----------------- | ------------------------------------- | ------------------------------------------------------------------- |
+| Consistency score | Overall brand alignment rating        | Score reflects how well the article matches your brand voice config |
+| Tone analysis     | Paragraph-level tone assessment       | Flags specific paragraphs that drift from your configured tone      |
+| Pillar coverage   | Content pillar alignment check        | Identifies which pillars are strong, moderate, or weak              |
+| Persona match     | Audience targeting evaluation         | Confirms article targets the right persona (VP Ops vs CEO vs CFO)   |
+| Recommendations   | Specific fixes to improve consistency | Each recommendation references a specific paragraph or phrase       |
 
-Compare the base `/brand-review` to the extension's content-creation output. The base command scores the article against general brand guidelines. The extension's skill wrote the article using ICP-filtered brand voice from the start. The base reviews what exists; the extension shapes what gets created.
-
-Apply the recommendations. Run `/brand-review` again. The goal is a consistency score above 90 before moving to multiplication.
+:::note Your output will vary
+The consistency score depends on your brand voice configuration from earlier in this lesson. The teaching point is the _iterate loop_: run `/brand-review`, apply recommendations, run again. The goal is a consistency score above 90 before moving to multiplication. If the tone feels too polished or too generic, iterate on the config, not the article — the article is a symptom, the config is the cause.
+:::
 
 ---
 
@@ -267,59 +251,32 @@ current WMS approaching capacity at 850K parcels/month.
 
 The `create-an-asset` skill produces an interactive HTML deliverable — not a flat document but something with expandable sections, embedded calculations, or comparison tables that Meridian's team can navigate.
 
-**Sample Output:**
+**What to expect:** The `create-an-asset` skill produces an interactive HTML deliverable. Your output will vary, but look for these sections:
 
-```
-ASSET GENERATED: nexaflow-meridian-one-pager.html
+| Section                 | Intent                                  | What to Verify                                         |
+| ----------------------- | --------------------------------------- | ------------------------------------------------------ |
+| Asset metadata          | File name, type, format, file size      | Single-page HTML with no external dependencies         |
+| The Challenge           | Prospect-specific problem statement     | Uses YOUR prospect's metrics from demo-data.md         |
+| How We Solve It         | Expandable product capabilities section | Capabilities mapped to the prospect's specific pain    |
+| Prospect-Specific ROI   | Auto-calculated savings or impact       | Numbers derived from prospect data, not generic claims |
+| Implementation Timeline | Week-by-week rollout plan               | Realistic for the prospect's scale and complexity      |
+| Next Step               | Clear CTA with calendar link or contact | Low-friction action the prospect can take immediately  |
 
-TYPE: Interactive Sales One-Pager
-FORMAT: Single-page HTML with expandable sections
-
-SECTIONS:
-  1. The Challenge
-     Meridian's 3 UK distribution centres process 850K
-     parcels/month. At 12% YoY growth, current WMS hits
-     capacity by Q3. Scaling the existing system requires
-     re-architecture. Scaling NexaFlow requires a config
-     change.
-
-  2. How NexaFlow Solves It (expandable)
-     - Capacity: handles 850K → 2M parcels without
-       re-architecture
-     - Multi-site: unified dashboard across 3 centres
-     - Growth mode: auto-scales with volume, no manual
-       provisioning
-
-  3. Meridian-Specific ROI (auto-calculated)
-     - Current WMS scaling cost: GBP 340K (re-architecture)
-     - NexaFlow annual cost: GBP 96K
-     - 24-month saving: GBP 584K
-     - Break-even: Month 3
-
-  4. Implementation Timeline
-     - Week 1-2: Integration with existing WMS
-     - Week 3: Parallel run (both systems)
-     - Week 4: Cutover, existing WMS becomes backup
-
-  5. Next Step
-     "Book a 30-minute technical walkthrough with our
-     logistics team → [calendar link]"
-
-STYLING: NexaFlow brand colours applied
-FILE SIZE: 38KB (no external dependencies)
-```
+:::note Your output will vary
+The one-pager content depends entirely on which prospect you chose and what data exists in your demo-data.md. The teaching point is the _comparison_ between text-based content multiplication (volume play — seconds to produce for every prospect) and interactive assets (precision play — minutes to produce for high-value shortlist deals).
+:::
 
 **Compare the two sales assets:**
 
-| Dimension         | Text One-Pager (Step 5)              | Interactive One-Pager (create-an-asset)        |
+| Dimension         | Text One-Pager (from multiplication) | Interactive One-Pager (create-an-asset)        |
 | ----------------- | ------------------------------------ | ---------------------------------------------- |
 | Format            | Flat text, PDF-ready                 | Interactive HTML with expandable sections      |
-| Prospect-specific | Generic — works for any logistics co | Specific — Meridian's metrics, locations, pain |
+| Prospect-specific | Generic — works for any logistics co | Specific — prospect's metrics, locations, pain |
 | Shareable         | Email attachment                     | Link or embedded in proposal                   |
 | Differentiation   | Low — competitors send similar PDFs  | High — interactive format stands out           |
 | Production time   | 30 seconds (from multiplication)     | 2 minutes (from create-an-asset)               |
 
-The text one-pager from content multiplication is a volume play — produce it for every prospect in seconds. The interactive one-pager from `create-an-asset` is a precision play — produce it for high-value enterprise prospects where differentiation justifies the extra two minutes. Farah uses text one-pagers for the pipeline. She uses interactive one-pagers for shortlist deals like Meridian.
+The text one-pager from content multiplication is a volume play — produce it for every prospect in seconds. The interactive one-pager from `create-an-asset` is a precision play — produce it for high-value enterprise prospects where differentiation justifies the extra two minutes.
 
 ---
 

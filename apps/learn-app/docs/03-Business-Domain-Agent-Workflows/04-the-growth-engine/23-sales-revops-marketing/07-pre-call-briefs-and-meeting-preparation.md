@@ -115,112 +115,25 @@ TransGlobal case study helpful and wants to discuss the
 consolidation diagnostic.
 ```
 
-The pre-call-brief skill auto-activates. Here is the complete output:
+**What to expect:** The agent produces a structured pre-call brief. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          PRE-CALL BRIEF
-          Prospect: Sarah Chen, VP Operations
-          Company: Meridian Logistics (Leeds)
-          Call: Discovery | 30 min | Tuesday 10:00 GMT
-══════════════════════════════════════════════════════════════
+| Section                      | Intent                                     | What to Verify                                                                |
+| ---------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------- |
+| Quick Context                | Prospect summary with relationship history | References your outreach sequence and the prospect's response                 |
+| Call Goal                    | One-sentence success definition            | Specific and measurable — not "have a good conversation"                      |
+| Discovery Questions (4-6)    | Questions tailored to prospect's situation | Each question references data from your research brief, not generic discovery |
+| Anticipated Objections (2-3) | Likely pushbacks with prepared responses   | Responses are specific to the prospect's context, not boilerplate             |
+| Success Criteria             | What "yes" looks like                      | Concrete next step (e.g., schedule diagnostic, confirm pilot)                 |
 
-QUICK CONTEXT
-─────────────────────────────────────────────────────────────
-• Meridian Logistics — mid-market freight and warehousing,
-  UK + Gulf routes, ~800 employees
-• Completed BrightPath acquisition Q3 2025 — supply chain
-  consolidation behind schedule
-• Sarah posted on LinkedIn about WMS integration challenges
-  (two Tier 1 platforms serving overlapping regions)
-• Responded to Touch 4 of our 6-touch sequence — found
-  TransGlobal case study helpful
-• Interested in the 2-hour consolidation diagnostic we
-  offered in Touch 5
-
-CALL GOAL
-─────────────────────────────────────────────────────────────
-Qualify Meridian for the WMS consolidation diagnostic.
-Confirm scope, timeline, and decision-making authority.
-If qualified: schedule the 2-hour diagnostic for the
-following week.
-
-DISCOVERY QUESTIONS
-─────────────────────────────────────────────────────────────
-1. "You mentioned the TransGlobal brief was helpful — which
-   part of their 11-week consolidation timeline resonated
-   most with where Meridian is right now?"
-
-2. "Your Q3 update mentioned integration synergies expected
-   in H1. Is the WMS consolidation part of those synergies,
-   or is it a separate initiative?"
-
-3. "How many active SKUs are running across both WMS
-   platforms? The overlap volume usually determines whether
-   a parallel-run or direct-cutover approach makes more
-   sense."
-
-4. "Who else on your team would need to be in the room for
-   the consolidation diagnostic? We find that including
-   someone from IT infrastructure and one warehouse ops
-   lead gives us the most complete picture."
-
-5. "What does your internal timeline look like for making
-   a consolidation approach decision? Are you evaluating
-   other vendors or approaches in parallel?"
-
-6. "If the diagnostic shows that consolidation can be done
-   in under 12 weeks, what would need to happen internally
-   for Meridian to move forward?"
-
-ANTICIPATED OBJECTIONS
-─────────────────────────────────────────────────────────────
-Objection 1: "We're too busy with the acquisition to
-take on another project right now."
-→ Response: "That's exactly why the diagnostic is 2 hours,
-  not 2 weeks. It gives you a clear scope document you can
-  use to plan the consolidation when the timing is right —
-  without committing to a project today. Most teams find
-  the diagnostic actually reduces planning load because it
-  maps the overlap they'd otherwise spend weeks discovering."
-
-Objection 2: "We already have a WMS vendor — we might
-just extend the existing contract."
-→ Response: "That's a valid path. The diagnostic is vendor-
-  neutral — it maps the overlap between your two systems and
-  flags the three highest-risk data conflicts regardless of
-  who does the consolidation. If extending your existing
-  vendor is the right answer, the diagnostic will confirm
-  that. If it's not, you'll know before committing."
-
-Objection 3: "We're not ready to buy anything."
-→ Response: "Understood — and the diagnostic isn't a sales
-  pitch. It's a technical assessment. No proposal, no SOW.
-  The output is a consolidation readiness report that your
-  team can use internally. If NexaFlow is the right fit for
-  the implementation, that conversation happens later. If
-  we're not, you still have the report."
-
-SUCCESS CRITERIA
-─────────────────────────────────────────────────────────────
-✅ Sarah confirms WMS consolidation is an active priority
-   (not a "someday" project)
-✅ You understand the decision-making process (who else
-   needs to approve, what budget cycle applies)
-✅ The 2-hour consolidation diagnostic is scheduled with
-   a confirmed date and attendee list
-✅ You have a clear next step — even if the next step is
-   "Sarah takes the diagnostic proposal to her VP"
-══════════════════════════════════════════════════════════════
-```
+:::note Your output will vary
+The brief quality depends on the research you feed in. The teaching point is the _specificity of the discovery questions_. Check: could these questions be asked to a random logistics company? If yes, the brief is generic. If every question references your prospect's specific situation (acquisition, expansion, hiring patterns), the brief is research-informed.
+:::
 
 ### Evaluating the Brief
 
-Read through the discovery questions. Are they good?
+Read through the discovery questions. Are they good? Check whether each question references specific details from your research brief — the prospect's recent acquisition, their public filings, their LinkedIn activity, their technology challenges. Questions that reference prospect-specific data signal a research-informed brief. Questions like "tell me about your current workflow" signal a generic call sheet.
 
-Question 1 references the TransGlobal case study — specific to the conversation history. Question 2 references the Q3 earnings mention — specific to Meridian's public filings. Question 3 asks about SKU overlap — a technical qualifier that moves the conversation from "interested" to "qualified." Question 4 identifies additional stakeholders — essential for enterprise sales where the person you are speaking to rarely decides alone. Questions 5 and 6 probe timeline and internal decision process.
-
-None of these questions could be asked to a random logistics company. Every one references Meridian's specific situation. That is the difference between a research-informed brief and a generic call sheet.
+The best discovery questions also serve double duty — they qualify the opportunity while demonstrating that you did the research. A question about how many active SKUs run across both WMS platforms simultaneously qualifies the technical scope AND shows you understand their post-acquisition integration challenge.
 
 ## Adding a Competitive Battlecard
 
@@ -232,66 +145,21 @@ optimisation? Meridian is evaluating options for WMS
 consolidation.
 ```
 
-The competitive-intelligence skill auto-activates:
+**What to expect:** The agent produces a competitive battlecard. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          COMPETITIVE BATTLECARD
-          NexaFlow vs TrackFlow — Logistics Platform
-══════════════════════════════════════════════════════════════
+| Section                | Intent                                          | What to Verify                                                     |
+| ---------------------- | ----------------------------------------------- | ------------------------------------------------------------------ |
+| Differentiation matrix | Feature/capability comparison table             | Claims are verifiable — pricing, features, coverage                |
+| Where we win           | NexaFlow's advantages over the competitor       | Advantages are relevant to THIS prospect's situation               |
+| Where they win         | Competitor's genuine strengths                  | Honest assessment — not dismissive of competitor                   |
+| Talk tracks            | Conversation guides for the meeting             | Reference the specific prospect's needs, not generic sales pitches |
+| Where we lose          | Scenarios where competitor is the better choice | Acknowledges real disadvantages                                    |
 
-DIFFERENTIATION MATRIX
-─────────────────────────────────────────────────────────────
-                     NexaFlow          TrackFlow
-Geographic coverage  UK, Gulf, Pak     UK, Europe only
-Min. commitment      3 months          12 months
-Setup fee            $0                £5,000
-WMS integration      API-first         SAP TM native
-Free trial           10 vehicles       None
-Driver comms         WhatsApp + app    In-app only
+:::note Your output will vary
+Competitive intelligence from an agent is a starting point, not a script. Verify pricing, feature claims, and partnership status against current public sources before using any claim in a meeting. The teaching point is integrating competitive positioning INTO the pre-call brief — you walk in prepared for two conversations: the one you plan and the one the prospect redirects to.
+:::
 
-WHERE WE WIN
-─────────────────────────────────────────────────────────────
-• Multi-region logistics (Gulf + South Asia routes)
-• Lower commitment risk (3 months vs 12)
-• Faster onboarding (no setup fee, API integration)
-• Driver communication in markets where WhatsApp is
-  standard (Pakistan, UAE, Saudi Arabia)
-
-WHERE THEY WIN
-─────────────────────────────────────────────────────────────
-• Deep SAP TM integration for enterprises already on SAP
-• Larger European customer base with enterprise references
-• ISO 27001 certification (matters for procurement)
-
-TALK TRACKS FOR MERIDIAN
-─────────────────────────────────────────────────────────────
-• Meridian operates UK + Gulf routes. Ask: "How does your
-  current routing handle Dubai-to-Abu Dhabi corridors?"
-  TrackFlow's algorithms are calibrated for European road
-  networks.
-
-• Meridian's VP of Ops likely wants quick wins post-
-  acquisition. NexaFlow's 3-month commitment vs TrackFlow's
-  12-month lock-in reduces adoption risk.
-
-• If Sarah mentions SAP TM integration as a requirement,
-  acknowledge TrackFlow's strength. Compete on total cost
-  and geographic coverage, not ERP integration.
-
-WHERE WE LOSE
-─────────────────────────────────────────────────────────────
-• If Meridian's entire tech stack is SAP and integration
-  speed is the top priority, TrackFlow's native connector
-  gives them an advantage we cannot match in Q1.
-
-• If Meridian only operates UK routes and has no Gulf or
-  South Asian expansion plans, our multi-region advantage
-  does not apply.
-══════════════════════════════════════════════════════════════
-```
-
-Now integrate this into your pre-call brief. The battlecard tells you that if Sarah mentions evaluating TrackFlow, your angle is geographic coverage and commitment flexibility. If she mentions SAP TM as a hard requirement, you have a disadvantage to acknowledge honestly. Walking into the call with both the brief and the battlecard means you are prepared for two conversations: the one you plan and the one the prospect redirects to.
+Now integrate this into your pre-call brief. The battlecard tells you where NexaFlow has an advantage and where to acknowledge a competitor's strength honestly. Walking into the call with both the brief and the battlecard means you are prepared for the conversation the prospect controls, not just the one you planned.
 
 :::tip The agent researches, drafts, and recommends. The sales professional decides and sends.
 Review every claim in the battlecard before using it in a meeting. Competitive intelligence from an agent is a starting point, not a script. Verify pricing, feature claims, and partnership status against current public sources.
@@ -461,69 +329,20 @@ discovery call with Sarah Chen:
 - Sarah asked for NexaFlow's SOC 2 report
 ```
 
-**Output:**
+**What to expect:** The `/call-summary` command produces a structured call summary. Your output will vary, but look for these sections:
 
-```
-══════════════════════════════════════════════════════════════
-          CALL SUMMARY
-          Meridian Logistics — Discovery Call
-          Sarah Chen | 30 min | 10:00 GMT
-══════════════════════════════════════════════════════════════
+| Section               | Intent                                         | What to Verify                                                             |
+| --------------------- | ---------------------------------------------- | -------------------------------------------------------------------------- |
+| Internal summary      | Quick narrative for your team                  | Captures the key qualification signals from the call                       |
+| Qualification status  | BANT or similar framework applied              | Budget, authority, need, and timeline addressed                            |
+| Action items          | Numbered list with owners and due dates        | Each item assigned to YOU or the PROSPECT with a deadline                  |
+| Draft follow-up email | Ready-to-send email referencing call specifics | References specific conversation points, not generic "thanks for the call" |
 
-INTERNAL SUMMARY (for your team)
-─────────────────────────────────────────────────────────────
-Strong discovery call. Sarah confirmed WMS consolidation is
-an H1 priority with budget authority up to £50K. Two WMS
-platforms (HighJump + Manhattan Associates) with 15,000 SKUs
-and 40% overlap. Evaluating TrackFlow but concerned about
-12-month commitment — our 3-month terms are a differentiator.
+:::note Your output will vary
+The summary quality depends on the call notes you provide. The teaching point is the _loop_: the pre-call brief set the goal, the call achieved (or didn't achieve) it, and the summary captures the commitments and generates the follow-up. If the follow-up references specific conversation points, the loop is working. If it reads like a generic template, you need to provide richer call notes.
+:::
 
-Qualification: CONFIRMED
-  ✅ Budget: £50K without VP approval
-  ✅ Authority: Sarah is decision-maker for sub-£50K
-  ✅ Need: WMS consolidation is active priority
-  ✅ Timeline: Before end of March
-
-ACTION ITEMS
-─────────────────────────────────────────────────────────────
-1. [YOU] Send SOC 2 report to Sarah — she requested it
-   during the call. Due: today.
-2. [SARAH] Confirm availability of Raj Patel (IT) and
-   Lisa Wong (warehouse ops) for the diagnostic. Due:
-   by Thursday.
-3. [YOU] Prepare the diagnostic agenda tailored to
-   HighJump ↔ Manhattan Associates migration. Include
-   SKU overlap analysis methodology. Due: before
-   diagnostic session.
-4. [YOU] Update CRM: move Meridian to "Diagnostic
-   Scheduled" stage. Add Raj Patel and Lisa Wong as
-   contacts.
-
-DRAFT FOLLOW-UP EMAIL
-─────────────────────────────────────────────────────────────
-Subject: Re: WMS Consolidation Diagnostic — Next Steps
-
-Sarah,
-
-Great speaking with you this morning. To confirm the next
-steps from our conversation:
-
-1. I'll send over NexaFlow's SOC 2 report today.
-2. Once you confirm Raj and Lisa's availability, I'll
-   send a calendar invite for the 2-hour diagnostic.
-3. I'll prepare the diagnostic agenda focused on the
-   HighJump ↔ Manhattan Associates overlap — specifically
-   the 15,000 SKU reconciliation and the 40% overlap
-   mapping.
-
-If there's anything else your team needs before the
-diagnostic, just reply here.
-
-— Farah
-══════════════════════════════════════════════════════════════
-```
-
-The `/call-summary` output connects the brief to the follow-up. The pre-call brief set the goal (schedule the diagnostic). The call achieved it. The summary captures the commitments and generates the follow-up — closing the loop from preparation to execution.
+The `/call-summary` output connects the brief to the follow-up. The pre-call brief set the goal. The call achieved it (or uncovered why it couldn't). The summary captures the commitments and generates the follow-up — closing the loop from preparation to execution.
 
 ## What You Built
 
