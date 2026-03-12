@@ -1,19 +1,25 @@
 import { useState } from "react";
 
+// Maps to site's OKLCH design system (custom.css)
+// Light: --primary is deep navy, --background is white, --card is white
+// Dark: --primary is lighter blue, --background is near-black, --card is dark
 const palette = {
-  bg: "#faf5ef",
-  card: "#fff8f0",
-  cardBorder: "#e8d5c4",
-  accent: "#c0582a",
-  accentLight: "#e87a45",
-  accentPale: "#f5ddd0",
-  dark: "#2c1810",
-  mid: "#5a3e2b",
-  codeBg: "#2c1810",
-  codeText: "#f0dcc8",
-  tagBg: "#c0582a",
-  tagText: "#fff",
-  highlight: "#fff3e6",
+  bg: "var(--background)",
+  card: "var(--card)",
+  cardBorder: "var(--border)",
+  accent: "var(--primary)",
+  accentLight: "color-mix(in oklab, var(--primary) 75%, white)",
+  accentPale: "color-mix(in oklab, var(--primary) 10%, var(--background))",
+  accentFg: "var(--primary-foreground)",
+  muted: "var(--muted)",
+  mutedFg: "var(--muted-foreground)",
+  dark: "var(--foreground)",
+  mid: "var(--muted-foreground)",
+  codeBg: "oklch(0.145 0 0)",
+  codeText: "oklch(0.85 0 0)",
+  tagBg: "var(--primary)",
+  tagText: "var(--primary-foreground)",
+  highlight: "var(--muted)",
 };
 
 const Code = ({ children }) => (
@@ -21,9 +27,8 @@ const Code = ({ children }) => (
     style={{
       background: palette.codeBg,
       color: palette.codeText,
-      borderRadius: 4,
       padding: "4px 7px",
-      fontFamily: "'JetBrains Mono', 'Fira Code', 'Courier New', monospace",
+      fontFamily: "var(--font-mono)",
       fontSize: 9.5,
       lineHeight: 1.4,
       overflowX: "auto",
@@ -41,7 +46,6 @@ const Tag = ({ children, color }) => (
       display: "inline-block",
       background: color || palette.tagBg,
       color: palette.tagText,
-      borderRadius: 3,
       padding: "1px 6px",
       fontSize: 8.5,
       fontWeight: 700,
@@ -98,7 +102,7 @@ const RefRow = ({ cmd, desc }) => (
   >
     <code
       style={{
-        fontFamily: "'JetBrains Mono', monospace",
+        fontFamily: "var(--font-mono)",
         fontSize: 9,
         color: palette.accent,
         fontWeight: 700,
@@ -117,7 +121,6 @@ const SectionCard = ({ number, title, children, span = 1 }) => (
     style={{
       background: palette.card,
       border: `1px solid ${palette.cardBorder}`,
-      borderRadius: 6,
       padding: "7px 9px 7px 9px",
       gridColumn: span > 1 ? `span ${span}` : undefined,
       position: "relative",
@@ -132,7 +135,6 @@ const SectionCard = ({ number, title, children, span = 1 }) => (
         width: 3,
         height: "100%",
         background: palette.accent,
-        borderRadius: "6px 0 0 6px",
       }}
     />
     <div
@@ -146,16 +148,15 @@ const SectionCard = ({ number, title, children, span = 1 }) => (
       <div
         style={{
           background: palette.accent,
-          color: "#fff",
+          color: palette.accentFg,
           width: 18,
           height: 18,
-          borderRadius: 4,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           fontWeight: 900,
           fontSize: 9.5,
-          fontFamily: "'Georgia', serif",
+          fontFamily: "var(--font-sans)",
           flexShrink: 0,
         }}
       >
@@ -167,7 +168,7 @@ const SectionCard = ({ number, title, children, span = 1 }) => (
           fontSize: 11.5,
           fontWeight: 800,
           color: palette.dark,
-          fontFamily: "'Georgia', serif",
+          fontFamily: "var(--font-sans)",
           letterSpacing: -0.3,
         }}
       >
@@ -193,16 +194,16 @@ export default function ClaudeCodeCheatsheet() {
         }
       `}</style>
       <div
-        className="cheatsheet-root"
+        className="allow-rounded cheatsheet-root"
         style={{
           background: palette.bg,
-          fontFamily: "'Segoe UI', 'Helvetica Neue', sans-serif",
+          fontFamily: "var(--font-sans)",
         }}
       >
         {/* Header */}
         <div
           style={{
-            background: `linear-gradient(135deg, ${palette.codeBg} 0%, #4a2a18 100%)`,
+            background: palette.accent,
             padding: "10px 20px 8px",
             textAlign: "center",
           }}
@@ -210,21 +211,20 @@ export default function ClaudeCodeCheatsheet() {
           <h1
             style={{
               margin: 0,
-              fontFamily: "'Georgia', serif",
+              fontFamily: "var(--font-sans)",
               fontSize: 22,
               fontWeight: 900,
               letterSpacing: -0.5,
-              color: "#fff",
+              color: palette.accentFg,
             }}
           >
             Claude Code{" "}
-            <span style={{ color: palette.accentLight }}>
-              Workflow Cheatsheet
-            </span>
+            <span style={{ opacity: 0.85 }}>Workflow Cheatsheet</span>
           </h1>
           <div
             style={{
-              color: palette.codeText,
+              color: palette.accentFg,
+              opacity: 0.7,
               fontSize: 9,
               marginTop: 3,
               letterSpacing: 1.5,
@@ -292,9 +292,9 @@ claude
                 flexWrap: "wrap",
               }}
             >
-              <Tag color="#3a6ea5">WHAT</Tag>
-              <Tag color="#5a8a3c">WHY</Tag>
-              <Tag color="#7a5a8a">HOW</Tag>
+              <Tag color="var(--chart-2)">WHAT</Tag>
+              <Tag color="var(--chart-3)">WHY</Tag>
+              <Tag color="var(--chart-4)">HOW</Tag>
             </div>
             <Bullet>
               <strong>What</strong> — tech stack, directory map, architecture
@@ -344,14 +344,13 @@ npm run dev / test / lint
                   gap: 6,
                   padding: "3px 6px",
                   background:
-                    i % 2 === 0 ? palette.accentPale : palette.highlight,
-                  borderRadius: 4,
-                  marginBottom: 3,
+                    i % 2 === 0 ? palette.muted : palette.highlight,
+                                    marginBottom: 3,
                 }}
               >
                 <code
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
+                    fontFamily: "var(--font-mono)",
                     fontSize: 8.5,
                     color: palette.accent,
                     fontWeight: 700,
@@ -437,8 +436,7 @@ Use factory mocks`}</Code>
                 marginTop: 4,
                 padding: "4px 6px",
                 background: palette.highlight,
-                borderRadius: 4,
-              }}
+                              }}
             >
               <Bullet>
                 <strong>description</strong> field is critical for
@@ -470,9 +468,9 @@ Use factory mocks`}</Code>
                 flexWrap: "wrap",
               }}
             >
-              <Tag color="#3a6ea5">PreToolUse</Tag>
-              <Tag color="#3a6ea5">PostToolUse</Tag>
-              <Tag color="#5a8a3c">Notification</Tag>
+              <Tag color="var(--chart-2)">PreToolUse</Tag>
+              <Tag color="var(--chart-2)">PostToolUse</Tag>
+              <Tag color="var(--chart-3)">Notification</Tag>
             </div>
             <Code>{`"hooks": {
   "PreToolUse": [{
@@ -557,9 +555,8 @@ Use factory mocks`}</Code>
                   marginBottom: 3,
                   padding: "4px 6px",
                   background:
-                    i % 2 === 0 ? palette.accentPale : palette.highlight,
-                  borderRadius: 4,
-                }}
+                    i % 2 === 0 ? palette.muted : palette.highlight,
+                                  }}
               >
                 <span
                   style={{
@@ -592,8 +589,7 @@ Use factory mocks`}</Code>
                 marginTop: 5,
                 padding: "4px 6px",
                 background: palette.highlight,
-                borderRadius: 4,
-              }}
+                              }}
             >
               <Bullet>
                 Each layer builds on the one below — start with L1, add layers
@@ -622,9 +618,8 @@ Use factory mocks`}</Code>
                   gap: 6,
                   padding: "2px 6px",
                   background:
-                    i % 2 === 0 ? palette.accentPale : palette.highlight,
-                  borderRadius: 4,
-                  marginBottom: 2,
+                    i % 2 === 0 ? palette.muted : palette.highlight,
+                                    marginBottom: 2,
                 }}
               >
                 <span
@@ -645,7 +640,7 @@ Use factory mocks`}</Code>
                     color: i === 0 ? palette.dark : palette.mid,
                     fontWeight: i === 0 ? 700 : 400,
                     fontFamily:
-                      i === 0 ? "'JetBrains Mono', monospace" : "inherit",
+                      i === 0 ? "var(--font-mono)" : "inherit",
                   }}
                 >
                   {step}
@@ -665,8 +660,8 @@ Use factory mocks`}</Code>
               }}
             >
               <Tag>Interactive</Tag>
-              <Tag color="#3a6ea5">Plan Mode</Tag>
-              <Tag color="#7a5a8a">Extended Thinking</Tag>
+              <Tag color="var(--chart-2)">Plan Mode</Tag>
+              <Tag color="var(--chart-4)">Extended Thinking</Tag>
             </div>
             <KV k="claude-opus-4-6" v="Most capable — deep reasoning" />
             <KV k="claude-sonnet-4-6" v="Balanced — daily coding" />
@@ -677,8 +672,7 @@ Use factory mocks`}</Code>
                 marginTop: 5,
                 padding: "4px 6px",
                 background: palette.highlight,
-                borderRadius: 4,
-              }}
+                              }}
             >
               <Bullet>⌥P to switch models — context preserved</Bullet>
               <Bullet>⌥T to toggle extended thinking</Bullet>
@@ -757,8 +751,8 @@ claude -p "review" \\
               }}
             >
               <Tag>Subagents</Tag>
-              <Tag color="#3a6ea5">Agent Teams</Tag>
-              <Tag color="#5a8a3c">Scheduled</Tag>
+              <Tag color="var(--chart-2)">Agent Teams</Tag>
+              <Tag color="var(--chart-3)">Scheduled</Tag>
             </div>
             <KV k="Subagents" v="Parallel workers via Agent tool, isolated" />
             <KV
@@ -834,8 +828,7 @@ Review for OWASP top 10...`}</Code>
                 marginTop: 5,
                 padding: "4px 6px",
                 background: palette.highlight,
-                borderRadius: 4,
-              }}
+                              }}
             >
               <Bullet>
                 <strong>Rule of thumb</strong> — <code>/compact</code> first; if
@@ -860,7 +853,7 @@ Review for OWASP top 10...`}</Code>
                     fontWeight: 800,
                     color: palette.dark,
                     marginBottom: 4,
-                    fontFamily: "'Georgia', serif",
+                    fontFamily: "var(--font-sans)",
                   }}
                 >
                   Core Commands
@@ -883,7 +876,7 @@ Review for OWASP top 10...`}</Code>
                     fontWeight: 800,
                     color: palette.dark,
                     marginBottom: 4,
-                    fontFamily: "'Georgia', serif",
+                    fontFamily: "var(--font-sans)",
                   }}
                 >
                   Key Shortcuts
@@ -905,7 +898,7 @@ Review for OWASP top 10...`}</Code>
                     fontWeight: 800,
                     color: palette.dark,
                     marginBottom: 4,
-                    fontFamily: "'Georgia', serif",
+                    fontFamily: "var(--font-sans)",
                   }}
                 >
                   When to Use
@@ -929,12 +922,12 @@ Review for OWASP top 10...`}</Code>
             padding: "6px 0 8px",
             fontSize: 9.5,
             color: palette.mid,
-            fontFamily: "'Georgia', serif",
+            fontFamily: "var(--font-sans)",
           }}
         >
           Claude Code Workflow Cheatsheet — Created {new Date().getFullYear()}
           <br />
-          <span style={{ fontSize: 9, color: "#a08a76" }}>
+          <span style={{ fontSize: 9, color: palette.mutedFg }}>
             {"Anthropic's agentic coding CLI & IDE extensions"}
           </span>
         </div>
