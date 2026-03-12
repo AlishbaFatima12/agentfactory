@@ -7,7 +7,7 @@
     "validate-flashcards": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npx tsx scripts/validate-flashcards.ts",
+        "command": "pnpm exec tsx scripts/validate-flashcards.ts",
         "cwd": "apps/learn-app"
       }
     },
