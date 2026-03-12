@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cheatsheet Renderer</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #faf5ef; }
+    #error-display {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #ff4444;
+      color: white;
+      padding: 16px;
+      font-family: monospace;
+      font-size: 14px;
+      white-space: pre-wrap;
+      z-index: 9999;
+      max-height: 50vh;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <div id="error-display"></div>
+  <script>
+    // Load JSX from URL param: ?file=path/to/output.jsx
+    // Or paste JSX content into the textarea
+    const params = new URLSearchParams(window.location.search);
+    const filePath = params.get('file');
+
+    function showError(msg) {
+      const el = document.getElementById('error-display');
+      el.style.display = 'block';
+      el.textContent = msg;
+      console.error('RENDER_ERROR:', msg);
+    }
+
+    function renderJSX(jsxCode) {
+      try {
+        // Transform JSX to JS
+        const transformed = Babel.transform(jsxCode, {
+          presets: ['react'],
+          plugins: [],
+        }).code;
+
+        // Create a module scope
+        const moduleExports = {};
+        const moduleFunc = new Function(
+          'React', 'useState', 'exports',
+          transformed.replace('export default function', 'exports.default = function')
+        );
+
+        moduleFunc(React, React.useState, moduleExports);
+
+        const Component = moduleExports.default;
+        if (!Component) {
+          showError('No default export found in JSX file');
+          return;
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(React.createElement(Component));
+        console.log('RENDER_SUCCESS');
+      } catch (err) {
+        showError(`Render error: ${err.message}\n\nStack: ${err.stack}`);
+      }
+    }
+
+    // If file path provided, we'll need it loaded externally
+    // For now, expose renderJSX globally so we can call it from console
+    window.renderJSX = renderJSX;
+    window.showError = showError;
+
+    if (filePath) {
+      // Try to fetch local file (won't work with file:// protocol but works with a server)
+      fetch(filePath)
+        .then(r => r.text())
+        .then(renderJSX)
+        .catch(err => showError(`Failed to load ${filePath}: ${err.message}`));
+    }
+  </script>
+</body>
+</html>

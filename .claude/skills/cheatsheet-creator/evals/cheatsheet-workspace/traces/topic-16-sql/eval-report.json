@@ -1,0 +1,24 @@
+{
+  "topic": "topic-16-sql",
+  "prompt": "SQL reference cheatsheet, i switch between postgres and mysql a lot and keep getting the syntax mixed up",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 54KB HTML, 2870px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 4,
+      "notes": "24 sections, 1 thin. 1 total check failures.",
+      "channel": "D"
+    }
+  },
+  "composite": 4.6,
+  "pass": true,
+  "timestamp": "2026-03-11T13:07:46.608Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

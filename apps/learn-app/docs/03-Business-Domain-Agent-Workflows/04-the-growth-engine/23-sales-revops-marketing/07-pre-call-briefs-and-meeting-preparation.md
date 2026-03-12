@@ -135,6 +135,8 @@ Read through the discovery questions. Are they good? Check whether each question
 
 The best discovery questions also serve double duty — they qualify the opportunity while demonstrating that you did the research. A question about how many active SKUs run across both WMS platforms simultaneously qualifies the technical scope AND shows you understand their post-acquisition integration challenge.
 
+Discovery questions have a hard limit of 5 total, structured in this order: 1 opening question, 2-3 depth questions, 1 qualification question. The brief must only use data from the input provided — no substitution, no fabrication. If information is missing, output "UNKNOWN" rather than inventing plausible details.
+
 ## Adding a Competitive Battlecard
 
 Before the call, you want to know where NexaFlow stands against competitors Meridian might be evaluating. Run the competitive-intelligence skill:

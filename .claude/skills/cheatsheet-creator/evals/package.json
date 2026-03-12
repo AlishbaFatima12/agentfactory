@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@babel/parser": "^7.29.0",
+    "puppeteer": "^24.39.0"
+  }
+}

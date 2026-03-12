@@ -6,19 +6,19 @@ This document contains the exact design system for all cheatsheets. Copy these c
 
 ```javascript
 const palette = {
-  bg: "#faf5ef",          // Page background — warm parchment
-  card: "#fff8f0",        // Card background — cream
-  cardBorder: "#e8d5c4",  // Card border — soft tan
-  accent: "#c0582a",      // Primary accent — burnt orange
+  bg: "#faf5ef", // Page background — warm parchment
+  card: "#fff8f0", // Card background — cream
+  cardBorder: "#e8d5c4", // Card border — soft tan
+  accent: "#c0582a", // Primary accent — burnt orange
   accentLight: "#e87a45", // Lighter accent — for hover/active states
-  accentPale: "#f5ddd0",  // Pale accent — alternating row backgrounds
-  dark: "#2c1810",        // Primary text — espresso
-  mid: "#5a3e2b",         // Secondary text — warm brown
-  codeBg: "#2c1810",      // Code block background — espresso
-  codeText: "#f0dcc8",    // Code block text — warm cream
-  tagBg: "#c0582a",       // Default tag background
-  tagText: "#fff",        // Tag text — always white
-  highlight: "#fff3e6",   // Highlight background — soft peach
+  accentPale: "#f5ddd0", // Pale accent — alternating row backgrounds
+  dark: "#2c1810", // Primary text — espresso
+  mid: "#5a3e2b", // Secondary text — warm brown
+  codeBg: "#2c1810", // Code block background — espresso
+  codeText: "#f0dcc8", // Code block text — warm cream
+  tagBg: "#c0582a", // Default tag background
+  tagText: "#fff", // Tag text — always white
+  highlight: "#fff3e6", // Highlight background — soft peach
 };
 ```
 
@@ -97,6 +97,7 @@ const Tag = ({ children, color }) => (
 
 Usage: Category labels, status badges, version indicators, difficulty levels.
 Use varied colors for different categories. **ONLY use these approved secondary colors — never invent new hex values:**
+
 - Green: `"#5a8a3c"`
 - Blue: `"#3a6ea5"`
 - Purple: `"#7a5a8a"`
@@ -121,7 +122,9 @@ const Bullet = ({ children }) => (
       alignItems: "flex-start",
     }}
   >
-    <span style={{ color: palette.accent, fontWeight: 700, marginTop: -1 }}>○</span>
+    <span style={{ color: palette.accent, fontWeight: 700, marginTop: -1 }}>
+      ○
+    </span>
     <span style={{ flex: 1 }}>{children}</span>
   </div>
 );
@@ -202,7 +205,14 @@ const SectionCard = ({ number, title, children, span = 1 }) => (
         borderRadius: "10px 0 0 10px",
       }}
     />
-    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+        marginBottom: 10,
+      }}
+    >
       <div
         style={{
           background: palette.accent,
@@ -240,6 +250,7 @@ const SectionCard = ({ number, title, children, span = 1 }) => (
 ```
 
 Props:
+
 - `number` — Section number displayed in the badge (string)
 - `title` — Section heading text
 - `span` — How many grid columns to span (default 1, use 2 or 3 for wide sections)
@@ -250,12 +261,14 @@ Props:
 Use this inline style block for tips, warnings, or grouped secondary content:
 
 ```jsx
-<div style={{
-  marginTop: 8,
-  padding: "6px 8px",
-  background: palette.highlight,
-  borderRadius: 6,
-}}>
+<div
+  style={{
+    marginTop: 8,
+    padding: "6px 8px",
+    background: palette.highlight,
+    borderRadius: 6,
+  }}
+>
   {/* Content here */}
 </div>
 ```
@@ -263,12 +276,14 @@ Use this inline style block for tips, warnings, or grouped secondary content:
 ### Alternating Row — For lists of items with visual rhythm
 
 ```jsx
-<div style={{
-  padding: "5px 8px",
-  background: i % 2 === 0 ? palette.accentPale : palette.highlight,
-  borderRadius: 5,
-  marginBottom: 5,
-}}>
+<div
+  style={{
+    padding: "5px 8px",
+    background: i % 2 === 0 ? palette.accentPale : palette.highlight,
+    borderRadius: 5,
+    marginBottom: 5,
+  }}
+>
   {/* Row content */}
 </div>
 ```
@@ -277,8 +292,10 @@ Use this inline style block for tips, warnings, or grouped secondary content:
 
 ```jsx
 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 3 }}>
-  {items.map(item => (
-    <div key={item} style={{ fontSize: 11.5, color: palette.mid }}>○ {item}</div>
+  {items.map((item) => (
+    <div key={item} style={{ fontSize: 11.5, color: palette.mid }}>
+      ○ {item}
+    </div>
   ))}
 </div>
 ```
@@ -295,11 +312,13 @@ export default function TopicCheatsheet() {
   const pages = ["Page 1: Foundations", "Page 2: Advanced"];
 
   return (
-    <div style={{
-      background: palette.bg,
-      minHeight: "100vh",
-      fontFamily: "'Segoe UI', 'Helvetica Neue', sans-serif",
-    }}>
+    <div
+      style={{
+        background: palette.bg,
+        minHeight: "100vh",
+        fontFamily: "'Segoe UI', 'Helvetica Neue', sans-serif",
+      }}
+    >
       {/* Header */}
       {/* Page Content */}
       {/* Footer */}
@@ -311,40 +330,48 @@ export default function TopicCheatsheet() {
 ### Header
 
 ```jsx
-<div style={{
-  background: `linear-gradient(135deg, ${palette.codeBg} 0%, #4a2a18 100%)`,
-  padding: "22px 28px 16px",
-  textAlign: "center",
-}}>
-  <h1 style={{
-    margin: 0,
-    fontFamily: "'Georgia', serif",
-    fontSize: 30,
-    fontWeight: 900,
-    letterSpacing: -0.5,
-    color: "#fff",
-  }}>
-    Topic Name{" "}
-    <span style={{ color: palette.accentLight }}>Cheatsheet</span>
+<div
+  style={{
+    background: `linear-gradient(135deg, ${palette.codeBg} 0%, #4a2a18 100%)`,
+    padding: "22px 28px 16px",
+    textAlign: "center",
+  }}
+>
+  <h1
+    style={{
+      margin: 0,
+      fontFamily: "'Georgia', serif",
+      fontSize: 30,
+      fontWeight: 900,
+      letterSpacing: -0.5,
+      color: "#fff",
+    }}
+  >
+    Topic Name <span style={{ color: palette.accentLight }}>Cheatsheet</span>
   </h1>
-  <div style={{
-    color: palette.codeText,
-    fontSize: 12,
-    marginTop: 6,
-    letterSpacing: 2,
-    textTransform: "uppercase",
-    fontWeight: 600,
-  }}>
+  <div
+    style={{
+      color: palette.codeText,
+      fontSize: 12,
+      marginTop: 6,
+      letterSpacing: 2,
+      textTransform: "uppercase",
+      fontWeight: 600,
+    }}
+  >
     Subtitle · Key Areas · Separated by Dots — Year Edition
   </div>
   {/* Page Tabs (only if multi-page) */}
-  <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 14 }}>
+  <div
+    style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 14 }}
+  >
     {pages.map((label, i) => (
       <button
         key={i}
         onClick={() => setPage(i)}
         style={{
-          background: page === i ? palette.accentLight : "rgba(255,255,255,0.12)",
+          background:
+            page === i ? palette.accentLight : "rgba(255,255,255,0.12)",
           color: "#fff",
           border: "none",
           borderRadius: 6,
@@ -365,14 +392,16 @@ export default function TopicCheatsheet() {
 ### Content Grid
 
 ```jsx
-<div style={{
-  display: "grid",
-  gridTemplateColumns: "repeat(3, 1fr)",
-  gap: 12,
-  padding: "16px 18px",
-  maxWidth: 1050,
-  margin: "0 auto",
-}}>
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: 12,
+    padding: "16px 18px",
+    maxWidth: 1050,
+    margin: "0 auto",
+  }}
+>
   {/* SectionCards go here */}
 </div>
 ```
@@ -382,13 +411,15 @@ Each page should have 9-12 SectionCards arranged in the 3-column grid. Use `span
 ### Footer
 
 ```jsx
-<div style={{
-  textAlign: "center",
-  padding: "14px 0 18px",
-  fontSize: 12,
-  color: palette.mid,
-  fontFamily: "'Georgia', serif",
-}}>
+<div
+  style={{
+    textAlign: "center",
+    padding: "14px 0 18px",
+    fontSize: 12,
+    color: palette.mid,
+    fontFamily: "'Georgia', serif",
+  }}
+>
   Topic Cheatsheet — Created {new Date().getFullYear()}
   <br />
   <span style={{ fontSize: 10.5, color: "#a08a76" }}>
@@ -402,6 +433,7 @@ Each page should have 9-12 SectionCards arranged in the 3-column grid. Use `span
 ## Content Composition Patterns
 
 ### Pattern A — Intro text + Bullets
+
 Good for: best practices, tips, feature overviews.
 
 ```jsx
@@ -410,12 +442,17 @@ Good for: best practices, tips, feature overviews.
     Brief introductory sentence about this section.
   </div>
   <Bullet>First important point</Bullet>
-  <Bullet>Second point with <code>inline code</code></Bullet>
-  <Bullet><strong>Bold lead</strong> followed by explanation</Bullet>
+  <Bullet>
+    Second point with <code>inline code</code>
+  </Bullet>
+  <Bullet>
+    <strong>Bold lead</strong> followed by explanation
+  </Bullet>
 </SectionCard>
 ```
 
 ### Pattern B — Code block + KV pairs
+
 Good for: installation, config, setup instructions.
 
 ```jsx
@@ -430,12 +467,15 @@ cd project && npm start`}</Code>
 ```
 
 ### Pattern C — Tags + Code + Bullets
+
 Good for: API references, feature categories.
 
 ```jsx
 <SectionCard number="3" title="API Methods">
   <div style={{ display: "flex", gap: 4, marginBottom: 8, flexWrap: "wrap" }}>
-    <Tag>GET</Tag><Tag color="#5a8a3c">POST</Tag><Tag color="#a53a3a">DELETE</Tag>
+    <Tag>GET</Tag>
+    <Tag color="#5a8a3c">POST</Tag>
+    <Tag color="#a53a3a">DELETE</Tag>
   </div>
   <Code>{`GET /api/users/:id
 POST /api/users { name, email }`}</Code>
@@ -444,6 +484,7 @@ POST /api/users { name, email }`}</Code>
 ```
 
 ### Pattern D — RefRow table
+
 Good for: commands, shortcuts, quick lookups.
 
 ```jsx
@@ -455,6 +496,7 @@ Good for: commands, shortcuts, quick lookups.
 ```
 
 ### Pattern E — Alternating rows
+
 Good for: hierarchies, layer architectures, priority lists.
 
 ```jsx
@@ -464,14 +506,38 @@ Good for: hierarchies, layer architectures, priority lists.
     { l: "L2", name: "Business", desc: "Domain logic" },
     { l: "L3", name: "Data", desc: "Persistence" },
   ].map(({ l, name, desc }, i) => (
-    <div key={l} style={{
-      display: "flex", alignItems: "center", gap: 8, marginBottom: 5,
-      padding: "5px 8px",
-      background: i % 2 === 0 ? palette.accentPale : palette.highlight,
-      borderRadius: 5,
-    }}>
-      <span style={{ fontWeight: 900, color: palette.accent, fontSize: 12, width: 24 }}>{l}</span>
-      <span style={{ fontWeight: 700, color: palette.dark, fontSize: 12, width: 80 }}>{name}</span>
+    <div
+      key={l}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+        marginBottom: 5,
+        padding: "5px 8px",
+        background: i % 2 === 0 ? palette.accentPale : palette.highlight,
+        borderRadius: 5,
+      }}
+    >
+      <span
+        style={{
+          fontWeight: 900,
+          color: palette.accent,
+          fontSize: 12,
+          width: 24,
+        }}
+      >
+        {l}
+      </span>
+      <span
+        style={{
+          fontWeight: 700,
+          color: palette.dark,
+          fontSize: 12,
+          width: 80,
+        }}
+      >
+        {name}
+      </span>
       <span style={{ fontSize: 11.5, color: palette.mid }}>{desc}</span>
     </div>
   ))}
@@ -479,22 +545,41 @@ Good for: hierarchies, layer architectures, priority lists.
 ```
 
 ### Pattern F — Full-width decision guide
+
 Good for: comparison tables, decision matrices, summary cards.
 
 ```jsx
 <SectionCard number="6" title="When to Use What" span={3}>
-  <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
+  <div
+    style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}
+  >
     {items.map(({ title, when, best, icon }) => (
-      <div key={title} style={{
-        background: palette.highlight,
-        borderRadius: 8,
-        padding: "10px 12px",
-        border: `1px solid ${palette.cardBorder}`,
-      }}>
+      <div
+        key={title}
+        style={{
+          background: palette.highlight,
+          borderRadius: 8,
+          padding: "10px 12px",
+          border: `1px solid ${palette.cardBorder}`,
+        }}
+      >
         <div style={{ fontSize: 18, marginBottom: 4 }}>{icon}</div>
-        <div style={{ fontSize: 12.5, fontWeight: 800, color: palette.dark }}>{title}</div>
-        <div style={{ fontSize: 10.5, color: palette.accent, fontWeight: 600, marginTop: 2 }}>{when}</div>
-        <div style={{ fontSize: 10.5, color: palette.mid, marginTop: 3 }}>{best}</div>
+        <div style={{ fontSize: 12.5, fontWeight: 800, color: palette.dark }}>
+          {title}
+        </div>
+        <div
+          style={{
+            fontSize: 10.5,
+            color: palette.accent,
+            fontWeight: 600,
+            marginTop: 2,
+          }}
+        >
+          {when}
+        </div>
+        <div style={{ fontSize: 10.5, color: palette.mid, marginTop: 3 }}>
+          {best}
+        </div>
       </div>
     ))}
   </div>
@@ -503,20 +588,77 @@ Good for: comparison tables, decision matrices, summary cards.
 
 ---
 
+## Responsive Design
+
+Since inline styles cannot use `@media` queries, add an embedded `<style>` tag inside the component for responsive breakpoints. This is self-contained and doesn't violate the "no CSS files" rule.
+
+### Required Responsive Pattern
+
+Add this `<style>` tag at the start of the component's return JSX, wrapping everything in a Fragment:
+
+```jsx
+return (
+  <>
+    <style>{`
+      @media (max-width: 900px) {
+        .cheatsheet-grid { grid-template-columns: repeat(2, 1fr) !important; }
+      }
+      @media (max-width: 600px) {
+        .cheatsheet-grid { grid-template-columns: 1fr !important; }
+        .cheatsheet-grid > div { grid-column: span 1 !important; }
+      }
+    `}</style>
+    <div
+      style={
+        {
+          /* main wrapper */
+        }
+      }
+    >
+      ...
+    </div>
+  </>
+);
+```
+
+Add `className="cheatsheet-grid"` to every content grid div:
+
+```jsx
+<div className="cheatsheet-grid" style={{
+  display: "grid",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gap: 12,
+  padding: "16px 18px",
+  maxWidth: 1050,
+  margin: "0 auto",
+}}>
+```
+
+**Key rules:**
+
+- The `<style>` tag is inside the JSX, not a separate CSS file — this is allowed
+- Use `!important` to override inline styles from the `style` prop
+- At 600px and below, force ALL sections to single column (override `span={2}` and `span={3}`)
+- Use `className="cheatsheet-grid"` on EVERY content grid (each page's grid)
+- Wrap the entire return in a Fragment `<>...</>` to accommodate both `<style>` and the main wrapper
+
+---
+
 ## Rules and Constraints
 
 1. **Single file only.** Every cheatsheet is one `.jsx` file with a default export.
-2. **Inline styles only.** No CSS imports, no Tailwind, no styled-components.
+2. **Inline styles only.** No CSS imports, no Tailwind, no styled-components. (Embedded `<style>` tags for responsive breakpoints are the only exception.)
 3. **Only `useState` from React.** No other hooks or libraries.
 4. **Zero required props.** The component is completely self-contained.
 5. **All data is hardcoded.** No fetching, no localStorage, no external data.
-6. **Minimum 12 sections** across all pages. Aim for 18-24 for comprehensive topics.
-7. **Maximum 2 pages.** If content exceeds 24 sections, prioritize and condense.
+6. **Target 12-16 sections** across all pages. 12 focused, workflow-oriented sections are better than 24 scattered reference sections. Only go above 16 if every section genuinely earns its place for a working professional.
+7. **Maximum 2 pages.** If content exceeds 16 sections, prioritize and condense rather than adding a page.
 8. **Every section must be substantive.** Minimum 4 content items per section — this means 4+ Bullet, KV, RefRow, Code blocks, or styled data rows. Sections with only 2-3 items should be merged into adjacent sections or expanded. No exceptions for "overview" or "intro" sections.
 9. **Code examples must be correct.** Verify syntax, commands, and API signatures.
 10. **Use web search** for any topic where you need to verify current commands, versions, or features.
-11. **Section numbers are sequential** across pages (Page 1: 1-12, Page 2: 13-24).
+11. **Section numbers are sequential** across pages (Page 1: 1-12, Page 2: 13-16).
 12. **One `span={3}` section max per page** (for decision guides or summary tables).
 13. **Define ALL primitive components** (Code, Tag, Bullet, KV, RefRow, SectionCard) at the top of every cheatsheet, even for non-technical topics that may not use all of them. This ensures structural consistency.
 14. **Only use palette colors.** Every hex color in the file must come from the `palette` object or the approved Tag secondary colors. Never invent new hex values.
 15. **JSX escaping.** All special characters (`${}`, `\`, `<`, `>`, `{`, `}`, quotes) in text content must be properly escaped for JSX. See SKILL.md for the complete escaping rules. This is the #1 cause of render failures.
+16. **Responsive design is required.** Every cheatsheet must include the `<style>` tag with media queries and use `className="cheatsheet-grid"` on content grids. See the Responsive Design section above.

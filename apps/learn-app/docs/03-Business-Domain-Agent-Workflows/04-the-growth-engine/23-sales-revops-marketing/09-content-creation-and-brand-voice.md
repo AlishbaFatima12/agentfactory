@@ -234,6 +234,8 @@ Not every asset will pass brand voice on first generation. The pattern Zara has 
 
 Run `/brand-review` on any asset rated NEEDS EDITING or REDO. The assets requiring the most iteration are the ones furthest from the cornerstone format. Short-form content (subject lines, ad copy, CEO posts) loses brand nuance because compression strips context.
 
+Before finalizing any content piece, scan the output for every banned word (leverage, synergy, robust, seamless, game-changing, etc.) and replace with concrete alternatives — "solution" becomes the actual product name, "robust" becomes the specific quality being described. If the prompt specifies a particular CTA, use that exact CTA; do not substitute a generic alternative.
+
 ---
 
 ## Build an Interactive Sales Asset

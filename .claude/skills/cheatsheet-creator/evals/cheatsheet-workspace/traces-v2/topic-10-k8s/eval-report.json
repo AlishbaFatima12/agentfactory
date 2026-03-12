@@ -1,0 +1,85 @@
+{
+  "topic": "topic-10-k8s",
+  "prompt": "k8s debugging cheatsheet. when pods crash, how to figure out wtf is happening",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 30KB HTML, 1605px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "18 sections, 5 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional usability. The two-page structure is well-motivated — triage/logs first, deep diagnosis second — creating a natural start-here-go-deeper flow that mirrors how a real debugging session unfolds. Section ordering is excellent: status decoder → first commands → describe → logs → crash codes → OOM → image issues → exec → events. Page 2 continues logically into network, init containers, probes, nodes, RBAC, storage. The Decision Flowchart in section 18 is a standout — it is the first thing a panicking engineer needs and it gets full-width span treatment. RefRow provides excellent command scannability. Tag colors meaningfully encode severity (red=crash, amber=pending, green=running). Code blocks are copy-pasteable and include inline comments explaining what to look for. The highlight-box pro tips (--previous for CrashLoopBackOff, distroless debug containers) add practical depth without cluttering. Section 9 four-column card grid breaks nicely from the wall-of-RefRows pattern. Information density is well-calibrated throughout — almost every section has 4-6 items plus a code block, hitting the substantive-but-digestible sweet spot. Minor nitpick: Section 13 mixes RefRows and Bullets in the highlight box, slightly inconsistent, but not distracting.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensive coverage precisely aligned with the prompt's intent. Hits every major crash scenario: CrashLoopBackOff with exit code dictionary (1/137/139/126/127), OOMKilled with JVM/Node.js-specific guidance, ImagePullBackOff, init container hangs, probe misconfiguration loops. Goes beyond the literal prompt in high-value ways: RBAC/forbidden errors, ConfigMap/Secret mount failures, PVC storage issues, NetworkPolicy debugging, node-level pressure — all real production pain points that cause pod crashes but get overlooked in basic guides. The Decision Flowchart synthesizes the whole cheatsheet into a triage tree. The ephemeral debug container tip for distroless images is an expert-level extra most cheatsheets omit. Section 14 error message decoder (FailedScheduling, FailedMount, FailedCreate, BackOff, Unhealthy, NetworkNotReady) with cause and fix columns is exactly what a practitioner reaches for under pressure. No meaningful gaps for the stated use case — covers the full debugging lifecycle from what-is-the-status to I-am-inside-the-container-testing-DNS.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "This is a high-quality, accurate cheatsheet. All core debugging commands, exit codes, probe behaviors, and syntax are factually correct. The one practical concern is that `kubectl drain <node>` (shown bare in Section 13) will fail on most real clusters without `--ignore-daemonsets` — a user copy-pasting it would hit an error. Exit code 126 is described slightly narrowly (\"permission denied; entrypoint not executable\") when the standard definition is broader (\"command found but not executable\"), though the permission angle is the most common real-world cause. Everything else checked out cleanly against official Kubernetes documentation.",
+      "verified_claims": [
+        {
+          "claim": "Exit Code 137 = OOMKilled or SIGKILL; container exceeded memory limit",
+          "verdict": "correct",
+          "evidence": "Confirmed by multiple sources including official Kubernetes docs: when a container exceeds its cgroup memory limit, the kernel sends SIGKILL (signal 9), producing exit code 137, and kubelet reports reason OOMKilled. See komodor.com/learn/how-to-fix-oomkilled-exit-code-137/",
+          "severity": "high"
+        },
+        {
+          "claim": "Exit Code 139 = Segfault; binary crash, bad native dependency",
+          "verdict": "correct",
+          "evidence": "Confirmed: exit code 139 corresponds to SIGSEGV (segmentation fault), a process termination due to illegal memory access. Komodor's complete exit code guide and seifrajhi.github.io both confirm this. 'Bad native dependency' is a plausible cause. See komodor.com/learn/exit-codes-in-containers-and-kubernetes-the-complete-guide/",
+          "severity": "medium"
+        },
+        {
+          "claim": "Exit Code 126 = Permission denied; entrypoint not executable",
+          "verdict": "correct",
+          "evidence": "Broadly correct but slightly narrowed. Official/community sources define exit code 126 as 'command found but cannot be invoked/executed,' with permission denial (non-executable file) being the primary/most common reason. The cheatsheet's phrasing captures the dominant real-world cause. See komodor.com/learn/exit-codes-in-containers-and-kubernetes-the-complete-guide/",
+          "severity": "low"
+        },
+        {
+          "claim": "kubectl debug -it <pod> --image=busybox --target=<container> for distroless/ephemeral debug containers",
+          "verdict": "correct",
+          "evidence": "Official Kubernetes docs at kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/ and kubectl_debug reference confirm this exact syntax. The --target flag shares the target container's process namespace. Example from docs: `kubectl debug -it ephemeral-demo --image=busybox:1.28 --target=ephemeral-demo`",
+          "severity": "high"
+        },
+        {
+          "claim": "kubectl get events --sort-by=.metadata.creationTimestamp sorts cluster events by time",
+          "verdict": "correct",
+          "evidence": "Both .metadata.creationTimestamp and .lastTimestamp are valid sort fields for kubectl get events. The cheatsheet's use of .metadata.creationTimestamp is correct and widely documented. Note: .lastTimestamp is often preferred for recurring events (shows most recent recurrence), but creationTimestamp is not wrong. See shellhacks.com/kubectl-get-events-sort-by-time/ and kubernetes GitHub issue #90482.",
+          "severity": "medium"
+        },
+        {
+          "claim": "readinessProbe failing = pod removed from Service endpoints (no traffic)",
+          "verdict": "correct",
+          "evidence": "Exactly confirmed by official Kubernetes docs at kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/: 'If the readiness probe fails, the EndpointSlice controller removes the Pod's IP address from the EndpointSlices of all Services that match the Pod.' The container keeps running.",
+          "severity": "high"
+        },
+        {
+          "claim": "kubectl drain <node> — Evict all pods before maintenance (shown bare, no flags)",
+          "verdict": "incorrect",
+          "evidence": "The command as shown (`kubectl drain <node>` with no flags) will FAIL on virtually all real clusters. Official docs at kubernetes.io/docs/reference/kubectl/generated/kubectl_drain/ state it refuses to proceed without --ignore-daemonsets if DaemonSet pods exist, and won't delete unmanaged pods without --force. Users copy-pasting the bare command will get an error. At minimum --ignore-daemonsets is required.",
+          "severity": "high"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.7,
+  "pass": true,
+  "timestamp": "2026-03-11T13:19:53.938Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

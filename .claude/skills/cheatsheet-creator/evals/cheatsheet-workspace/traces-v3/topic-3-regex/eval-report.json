@@ -1,0 +1,85 @@
+{
+  "topic": "topic-3-regex",
+  "prompt": "regex reference card please. the kind of thing you'd tape to your monitor",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 48KB HTML, 1709px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 5 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional usability. The two-page structure (Core Syntax / Advanced & Engine-Specific) is exactly right for a topic this broad — page 1 is the monitor-tape reference, page 2 is the deeper dive. Sections flow logically from primitives → classes → anchors → quantifiers → groups → lookarounds → flags → patterns, which mirrors how a practitioner thinks. The visual variety is excellent: RefRow for quick symbol lookups, Code blocks for multi-line examples with real output, KV pairs for the lookbehind engine table, inline highlight boxes for caveats, and alternating-stripe tables for the cross-engine comparison grids. Section sizes feel right — substantive but not bloated. Color-coded Tags (greedy/lazy/possessive, ASCII/Unicode) add orientation without being decorative noise. Named-group syntax by engine and replacement syntax by engine are presented as structured tables rather than prose, which is the right call. One very minor issue: the RefRow cmd width is fixed at 130px, and a few entries like '.\\  ^  $  |  ?  *  +  ( )  [ ]  { }' may wrap awkwardly in narrow layouts — negligible at the intended 1050px max-width. Overall this reads exactly like something you'd tape to a monitor.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensive and well-targeted. The prompt asked for 'the kind of thing you'd tape to your monitor,' implying practical day-to-day coverage — and the cheatsheet delivers on every axis a regex practitioner would expect. Core syntax: literals, metacharacters, character classes, shorthands, anchors, quantifiers (with greedy/lazy/possessive distinction), groups (capturing, non-capturing, named, atomic), alternation, lookaheads/lookbehinds, flags — all present and accurate. The lookbehind engine comparison (Python fixed-length, JS V8 variable, Java 13+ variable but potentially buggy, PCRE2 10.43+ bounded) is notably accurate and prevents real-world bugs. Page 2 covers JS API, Python re module, greedy vs lazy with concrete examples, backreferences, cross-engine replacement syntax, lookaround recipes, atomic groups with ReDoS warning, named group syntax by engine, inline modifiers, a 6-engine comparison matrix, and debugging tips. Unicode properties with per-engine notes is a useful extra many cheatsheets omit. The common patterns section (email, IPv4, URL, ISO date) with the caveat to prefer dedicated parsers is appropriately practical. The ReDoS/catastrophic backtracking callout is a valuable extra the user did not ask for. No meaningful gaps: POSIX character classes ([[:alpha:]]) and recursive patterns ((?R)) are the only notable absences, both niche enough to reasonably omit from a desk reference.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "This is a high-quality, technically detailed regex cheatsheet. 6 of 7 verified claims are fully correct, including precise, nuanced information about PCRE2 version numbers, Python 3.11 additions, and JS/V8 lookbehind behavior. The one confirmed factual error is in the engine comparison table (Section 23): Perl is described as supporting \"Fixed-length lookbehind only,\" which was true before Perl 5.30 but is inaccurate for modern Perl (5.30+), which added variable-length lookbehind (up to 255 chars) as an experimental feature. This would mislead a user copy-pasting a Perl regex with a variable-length lookbehind pattern. All other complex claims — PCRE2 10.43 bounded variable-length lookbehind, Java `${name}` named group replacement, JS requiring `/g` for `matchAll`/`replaceAll`, Python `re` fixed-length lookbehind restriction, and Python 3.11 atomic/possessive additions — are accurate. The Perl error is significant enough to drop from a 5 to a 4, but the overall quality is excellent.",
+      "verified_claims": [
+        {
+          "claim": "JavaScript matchAll() and replaceAll() require the /g flag and throw TypeError without it",
+          "verdict": "correct",
+          "evidence": "MDN documents this explicitly: 'If pattern is a regex, then it must have the global (g) flag set, or a TypeError is thrown.' The error page is titled 'TypeError: matchAll/replaceAll must be called with a global RegExp'. Confirmed at developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Requires_global_RegExp",
+          "severity": "high"
+        },
+        {
+          "claim": "Python re module supports fixed-length lookbehind only",
+          "verdict": "correct",
+          "evidence": "Python official docs confirm: 'The contained pattern must only match strings of some fixed length, meaning that abc or a|b are allowed, but a* and a{3,4} are not.' The third-party `regex` module supports variable-length, but the standard `re` module does not. Confirmed at docs.python.org/3/library/re.html",
+          "severity": "high"
+        },
+        {
+          "claim": "Python 3.11 added atomic groups (?>...) and possessive quantifiers to the re module",
+          "verdict": "correct",
+          "evidence": "Confirmed by CPython commit 345b390 and multiple sources: 'Atomic grouping ((?>...)) and possessive quantifiers (*+, ++, ?+, {m,n}+) are now supported in regular expressions... added in version 3.11.' learnbyexample.github.io/python-regex-possessive-quantifier confirms the 3.11 version.",
+          "severity": "medium"
+        },
+        {
+          "claim": "JavaScript (V8) supports variable-length lookbehind (full regex allowed)",
+          "verdict": "correct",
+          "evidence": "V8 blog confirms: 'the lookbehind pattern can take advantage of the full regular expression syntax and match patterns of arbitrary length.' ES2018 standardized this. The V8 engine matches the lookbehind backwards, enabling arbitrary-length patterns. v8.dev/blog/regexp-lookbehind-assertions",
+          "severity": "high"
+        },
+        {
+          "claim": "PCRE2 10.43+ supports variable-length lookbehind with an upper bound",
+          "verdict": "correct",
+          "evidence": "Confirmed by PCRE2 NEWS on GitHub and PHP.Watch docs for PHP 8.4: 'PCRE2 10.43 supports variable-length lookbehind assertions as long as there is a maximum length... lookbehind assertions such as (?<=a?) and (?<=a{1,20}) are allowed.' php.watch/versions/8.4/pcre2-regexp-syntax-changes",
+          "severity": "medium"
+        },
+        {
+          "claim": "Java named group replacement syntax uses ${name} (Section 18 engine table)",
+          "verdict": "correct",
+          "evidence": "Oracle Java Matcher documentation confirms: 'backreferences to the capturing groups can be used by their names, using the syntax ${name}.' Example: issueMatcher.replaceAll(\"${project} ${num}\"). docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/regex/Matcher.html",
+          "severity": "medium"
+        },
+        {
+          "claim": "Perl supports 'Fixed-length lookbehind only' (Section 23 engine comparison)",
+          "verdict": "incorrect",
+          "evidence": "Perl 5.30 added experimental variable-length lookbehind (up to 255 characters). Perldoc states: 'Prior to Perl 5.30, lookbehind assertions only worked for fixed-width patterns, but starting in Perl 5.30, variable-length lookbehinds can handle variable lengths from 1 to 255 characters as an experimental feature.' The cheatsheet's claim was true before 5.30 but is outdated for modern Perl. perldoc.perl.org/perlre",
+          "severity": "medium"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.7,
+  "pass": true,
+  "timestamp": "2026-03-11T16:26:47.988Z",
+  "version": "v3",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}
