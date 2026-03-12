@@ -82,6 +82,7 @@ export default function ExplorerPage() {
   if (fullscreen && ActiveComponent) {
     return (
       <div
+        className="allow-rounded"
         data-theme="dark"
         style={{
           position: "fixed",
@@ -186,7 +187,7 @@ export default function ExplorerPage() {
             Exit
           </button>
         </div>
-        {/* Explorer fills remaining space */}
+        {/* Sim lab fills remaining space */}
         <div style={{ flex: 1, minHeight: 0 }}>
           <ActiveComponent />
         </div>
@@ -196,7 +197,7 @@ export default function ExplorerPage() {
 
   // Inline fallback (non-fullscreen or no component)
   return (
-    <div>
+    <div className="allow-rounded">
       <div
         style={{
           display: "flex",
@@ -262,7 +263,7 @@ export default function ExplorerPage() {
           }}
         >
           <p style={{ color: "#555", fontSize: 15, marginBottom: 16 }}>
-            This explorer works best in fullscreen.
+            This sim lab works best in fullscreen.
           </p>
           <button
             onClick={() => {
@@ -280,7 +281,7 @@ export default function ExplorerPage() {
               cursor: "pointer",
             }}
           >
-            Launch Fullscreen Explorer
+            Launch Fullscreen
           </button>
         </div>
       ) : (
@@ -292,7 +293,7 @@ export default function ExplorerPage() {
             fontSize: 14,
           }}
         >
-          This explorer is coming soon.
+          This sim lab is coming soon.
         </div>
       )}
     </div>

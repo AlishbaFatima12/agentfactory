@@ -185,6 +185,7 @@ export default function ClaudeCodeCheatsheetV2() {
         }
       `}</style>
       <div
+        className="allow-rounded"
         style={{
           background: palette.bg,
           minHeight: "100vh",
