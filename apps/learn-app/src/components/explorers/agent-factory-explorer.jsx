@@ -1752,6 +1752,7 @@ export default function AgentFactoryExplorer() {
   };
   return (
     <div
+      className="allow-rounded"
       data-explorer-root=""
       data-theme="dark"
       style={{

@@ -565,11 +565,11 @@ drop   bad1234  Remove debug logs`}</Code>
             <div style={{ fontSize: 12.5, color: palette.mid, marginBottom: 6 }}>
               Conflicts happen when Git cannot auto-merge. The mental model: you are the arbitrator between two versions.
             </div>
-            <Code>{`<<<<<<< HEAD (your changes)
+            <Code>{`\u003c\u003c\u003c\u003c\u003c\u003c\u003c HEAD (your changes)
 const x = "current branch code";
-=======
+\u003d\u003d\u003d\u003d\u003d\u003d\u003d
 const x = "incoming branch code";
->>>>>>> feature-branch`}</Code>
+\u003e\u003e\u003e\u003e\u003e\u003e\u003e feature-branch`}</Code>
             <Bullet><strong>Step 1:</strong> open conflicted files and look for the marker lines</Bullet>
             <Bullet><strong>Step 2:</strong> choose one side, both, or write something new</Bullet>
             <Bullet><strong>Step 3:</strong> remove all conflict markers, then <code>git add</code> the resolved file</Bullet>

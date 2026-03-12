@@ -1,6 +1,15 @@
 import { useState, useEffect, useCallback } from "react";
 import ClaudeCodeCheatsheet from "./claude-code-cheatsheet";
 
+const palette = {
+  accent: "#c0582a",
+  accentLight: "#e87a45",
+  dark: "#2c1810",
+  mid: "#5a3e2b",
+  cardBorder: "#e8d5c4",
+  highlight: "#fff3e6",
+};
+
 const topics = [
   {
     id: "claude-code",
@@ -66,8 +75,8 @@ export default function CheatsheetPage() {
         alignItems: "center",
         gap: 4,
         padding: "5px 16px",
-        background: "var(--foreground)",
-        borderBottom: "1px solid var(--border)",
+        background: palette.dark,
+        borderBottom: `1px solid ${palette.cardBorder}30`,
         flexShrink: 0,
       }}
     >
@@ -79,21 +88,16 @@ export default function CheatsheetPage() {
             key={id}
             onClick={() => component && navigate(id)}
             style={{
-              background: isActive
-                ? "oklch(1 0 0 / 12%)"
-                : "transparent",
+              background: isActive ? palette.accentLight + "18" : "transparent",
               border: isActive
-                ? "1px solid oklch(1 0 0 / 25%)"
+                ? `1px solid ${palette.accentLight}60`
                 : "1px solid transparent",
+              borderRadius: 5,
               padding: "7px 18px",
               fontSize: 13,
               fontWeight: isActive ? 700 : 500,
-              fontFamily: "var(--font-sans)",
-              color: isDisabled
-                ? "oklch(1 0 0 / 30%)"
-                : isActive
-                  ? "var(--background)"
-                  : "oklch(1 0 0 / 65%)",
+              fontFamily: "'Georgia', serif",
+              color: isDisabled ? "#665544" : isActive ? "#fff" : "#c4a88a",
               cursor: isDisabled ? "default" : "pointer",
               opacity: isDisabled ? 0.45 : 1,
               transition: "all 0.15s",
@@ -101,14 +105,14 @@ export default function CheatsheetPage() {
             }}
             onMouseEnter={(e) => {
               if (!isDisabled && !isActive) {
-                e.currentTarget.style.background = "oklch(1 0 0 / 6%)";
-                e.currentTarget.style.color = "oklch(1 0 0 / 80%)";
+                e.currentTarget.style.background = palette.accentLight + "10";
+                e.currentTarget.style.color = "#e0c8b0";
               }
             }}
             onMouseLeave={(e) => {
               if (!isDisabled && !isActive) {
                 e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "oklch(1 0 0 / 65%)";
+                e.currentTarget.style.color = "#c4a88a";
               }
             }}
           >
@@ -118,13 +122,14 @@ export default function CheatsheetPage() {
                 style={{
                   fontSize: 8,
                   fontWeight: 700,
-                  background: "oklch(1 0 0 / 8%)",
-                  color: "oklch(1 0 0 / 35%)",
+                  background: "#4a3828",
+                  color: "#887766",
+                  borderRadius: 3,
                   padding: "2px 6px",
                   marginLeft: 7,
                   textTransform: "uppercase",
                   letterSpacing: 0.6,
-                  fontFamily: "var(--font-sans)",
+                  fontFamily: "'Segoe UI', sans-serif",
                 }}
               >
                 Soon
@@ -139,21 +144,22 @@ export default function CheatsheetPage() {
         title={fullscreen ? "Exit fullscreen" : "Fullscreen"}
         style={{
           background: "none",
-          border: "1px solid oklch(1 0 0 / 15%)",
+          border: "1px solid #4a3a2a",
+          borderRadius: 4,
           padding: "5px 14px",
           fontSize: 11,
-          color: "oklch(1 0 0 / 55%)",
+          color: "#a08a76",
           cursor: "pointer",
-          fontFamily: "var(--font-mono)",
+          fontFamily: "'JetBrains Mono', monospace",
           transition: "all 0.15s",
         }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.borderColor = "oklch(1 0 0 / 30%)";
-          e.currentTarget.style.color = "oklch(1 0 0 / 80%)";
+          e.currentTarget.style.borderColor = palette.accentLight + "80";
+          e.currentTarget.style.color = palette.accentLight;
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.borderColor = "oklch(1 0 0 / 15%)";
-          e.currentTarget.style.color = "oklch(1 0 0 / 55%)";
+          e.currentTarget.style.borderColor = "#4a3a2a";
+          e.currentTarget.style.color = "#a08a76";
         }}
       >
         {fullscreen ? "Exit" : "Fullscreen"}
@@ -171,7 +177,7 @@ export default function CheatsheetPage() {
           zIndex: 9999,
           display: "flex",
           flexDirection: "column",
-          background: "var(--background)",
+          background: "#faf5ef",
         }}
       >
         {toolbar}
@@ -193,7 +199,7 @@ export default function CheatsheetPage() {
           style={{
             textAlign: "center",
             padding: "60px 20px",
-            color: "var(--muted-foreground)",
+            color: palette.mid,
             fontSize: 14,
           }}
         >

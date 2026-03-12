@@ -427,11 +427,11 @@ cat .git/HEAD
             <div style={{ fontSize: 12.5, color: palette.mid, marginBottom: 6 }}>
               Conflicts happen when two branches changed the same lines. Git can't decide which to keep.
             </div>
-            <Code>{`<<<<<<< HEAD (your changes)
+            <Code>{`\u003c\u003c\u003c\u003c\u003c\u003c\u003c HEAD (your changes)
 const x = "local version";
-=======
+\u003d\u003d\u003d\u003d\u003d\u003d\u003d
 const x = "incoming version";
->>>>>>> feature-branch`}</Code>
+\u003e\u003e\u003e\u003e\u003e\u003e\u003e feature-branch`}</Code>
             <Bullet><strong>Step 1:</strong> Edit the file — remove markers, keep the correct code</Bullet>
             <Bullet><strong>Step 2:</strong> <code>git add</code> the resolved file to mark it as resolved</Bullet>
             <Bullet><strong>Step 3:</strong> <code>git commit</code> (or <code>git rebase --continue</code> during rebase)</Bullet>
