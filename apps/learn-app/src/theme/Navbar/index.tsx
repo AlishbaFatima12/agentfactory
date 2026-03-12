@@ -177,6 +177,7 @@ export default function Navbar() {
                           Resources
                         </Link>
                       </Button>
+
                     </nav>
                   )}
                 </div>
