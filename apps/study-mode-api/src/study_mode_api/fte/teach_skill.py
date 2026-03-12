@@ -11,13 +11,20 @@ No phases, no QUICK_START parsing, no complex state machines.
 Canonical skill definition: .claude/skills/teach-lesson/SKILL.md
 """
 
+import hashlib
+import json
 import logging
 import os
 from dataclasses import dataclass
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from agents import Agent, RunContextWrapper
 from agents.extensions.models.litellm_model import LitellmModel
+
+from api_infra.core.redis_cache import safe_redis_get, safe_redis_set
+
+if TYPE_CHECKING:
+    import httpx
 
 logger = logging.getLogger(__name__)
 
@@ -128,16 +135,15 @@ class LearnerProfile:
         )
 
 
-# Profile cache: {auth_token: (profile, timestamp)}
-# TTL of 5 minutes - profiles rarely change mid-session
-_profile_cache: dict[str, tuple[LearnerProfile, float]] = {}
+# Profile cache TTL - 5 minutes (profiles rarely change mid-session)
+# Cache is stored in Redis to avoid memory leaks and survive restarts
 _PROFILE_CACHE_TTL = 300  # 5 minutes in seconds
 
-# Reusable httpx client for connection pooling (type: httpx.AsyncClient)
-_http_client: Any = None
+# Reusable httpx client for connection pooling
+_http_client: "httpx.AsyncClient | None" = None
 
 
-def _get_http_client() -> Any:
+def _get_http_client() -> "httpx.AsyncClient":
     """Get or create reusable HTTP client for connection pooling.
 
     Returns an httpx.AsyncClient instance.
@@ -149,16 +155,30 @@ def _get_http_client() -> Any:
     return _http_client
 
 
+async def close_http_client() -> None:
+    """Close the httpx client on shutdown.
+
+    Called from lifespan.py to ensure clean shutdown without
+    httpx warnings about unclosed connections.
+    """
+    global _http_client
+    if _http_client is not None:
+        await _http_client.aclose()
+        _http_client = None
+        logger.info("[TeachSkill] HTTP client closed")
+
+
 async def fetch_learner_profile(
     auth_token: str | None = None,
 ) -> LearnerProfile | None:
-    """Fetch learner profile from the Learner Profile API with caching.
+    """Fetch learner profile from the Learner Profile API with Redis caching.
 
     Uses the /api/v1/profiles/me endpoint which identifies the user
     from the JWT (JSON Web Token) in the Authorization header.
 
-    Caches profiles for 5 minutes to avoid repeated HTTP calls within
-    the same conversation.
+    Caches profiles in Redis for 5 minutes to avoid repeated HTTP calls
+    within the same conversation. Uses token hash as cache key to avoid
+    memory leaks from storing full JWTs.
 
     Args:
         auth_token: JWT auth token (required for production)
@@ -166,23 +186,23 @@ async def fetch_learner_profile(
     Returns:
         LearnerProfile if found, None otherwise
     """
-    import os
-    import time
-
     # Require auth token for production
     if not auth_token:
         logger.info("[TeachSkill] No auth token provided, cannot fetch profile")
         return None
 
-    # Check cache first
-    if auth_token in _profile_cache:
-        profile, cached_at = _profile_cache[auth_token]
-        if time.time() - cached_at < _PROFILE_CACHE_TTL:
-            logger.debug("[TeachSkill] Using cached learner profile")
-            return profile
-        else:
-            # Cache expired, remove it
-            del _profile_cache[auth_token]
+    # Cache key from token hash (16 chars of SHA256 = 64 bits, collision-safe)
+    cache_key = f"learner_profile:{hashlib.sha256(auth_token.encode()).hexdigest()[:16]}"
+
+    # Check Redis cache first
+    try:
+        cached = await safe_redis_get(cache_key)
+        if cached:
+            logger.debug("[TeachSkill] Using cached learner profile from Redis")
+            return LearnerProfile.from_api_response(json.loads(cached))
+    except Exception as e:
+        # Redis failure should not block profile fetch
+        logger.warning(f"[TeachSkill] Redis cache read failed: {e}")
 
     # Get API URL from environment
     api_url = os.getenv("LEARNER_PROFILE_API_URL", "http://localhost:8004")
@@ -199,9 +219,12 @@ async def fetch_learner_profile(
         if response.status_code == 200:
             data = response.json()
             profile = LearnerProfile.from_api_response(data)
-            # Cache the profile
-            _profile_cache[auth_token] = (profile, time.time())
-            logger.info("[TeachSkill] Loaded and cached learner profile from API")
+            # Cache the profile in Redis
+            try:
+                await safe_redis_set(cache_key, json.dumps(data), _PROFILE_CACHE_TTL)
+                logger.info("[TeachSkill] Loaded and cached learner profile in Redis")
+            except Exception as e:
+                logger.warning(f"[TeachSkill] Redis cache write failed: {e}")
             return profile
         elif response.status_code == 404:
             logger.info("[TeachSkill] No profile found for current user")

@@ -1,7 +1,7 @@
 """Tests for the teach_skill module."""
 
 import os
-from unittest.mock import patch
+from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 
@@ -10,6 +10,7 @@ from study_mode_api.fte.teach_skill import (
     ModelProvider,
     TeachingContext,
     build_teaching_skill_prompt,
+    close_http_client,
     get_learner_profile,
 )
 
@@ -381,3 +382,33 @@ class TestGetLearnerProfile:
         )
 
         assert result.name == "there"  # Generic default
+
+
+class TestCloseHttpClient:
+    """Tests for close_http_client() cleanup function."""
+
+    @pytest.mark.asyncio
+    async def test_close_when_client_exists(self):
+        """Should close client when it exists."""
+        import study_mode_api.fte.teach_skill as teach_skill
+
+        # Create a mock client
+        mock_client = AsyncMock()
+        teach_skill._http_client = mock_client
+
+        await close_http_client()
+
+        mock_client.aclose.assert_called_once()
+        assert teach_skill._http_client is None
+
+    @pytest.mark.asyncio
+    async def test_close_when_no_client(self):
+        """Should handle None client gracefully."""
+        import study_mode_api.fte.teach_skill as teach_skill
+
+        teach_skill._http_client = None
+
+        # Should not raise
+        await close_http_client()
+
+        assert teach_skill._http_client is None

@@ -395,7 +395,7 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
         except Exception as e:
             if metering_hooks:
                 await metering_hooks.release_on_error(agent_context)
-            # Log the error for debugging
+            # Log the error for debugging (logger.exception includes traceback)
             error_str = str(e)
             logger.exception(f"[ChatKit] v4 Stream error: {type(e).__name__}: {error_str}")
 
@@ -415,8 +415,9 @@ class StudyModeChatKitServer(ChatKitServer[RequestContext]):
                 content=[AssistantMessageContent(text=error_text, annotations=[])],
             )
             yield ThreadItemDoneEvent(item=error_message)
-            # Re-raise to ensure error is logged/monitored (don't silently swallow)
-            raise
+            # Don't re-raise: user already got error message, logger.exception
+            # captured traceback for monitoring. Re-raising risks double error
+            # handling if caller wraps in try/except. Consistent with ask mode.
 
         logger.info(f"[ChatKit] v4: Done for thread {thread.id}")
 

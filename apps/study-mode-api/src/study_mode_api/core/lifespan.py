@@ -110,6 +110,10 @@ async def lifespan(app: FastAPI):
         logger.info("SHUTDOWN")
         logger.info("=" * 60)
 
+        # Close httpx client used by teach_skill (prevent unclosed connection warnings)
+        from ..fte.teach_skill import close_http_client
+        await close_http_client()
+
         await stop_redis()
 
         if _postgres_store:
