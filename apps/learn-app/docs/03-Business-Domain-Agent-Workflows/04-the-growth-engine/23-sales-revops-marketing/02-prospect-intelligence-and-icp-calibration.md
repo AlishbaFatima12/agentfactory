@@ -153,27 +153,23 @@ Review the output against the closed-won analysis. Does the ICP capture the patt
 
 ## Completing sales-marketing.local.md
 
-The ICP is the largest section of the configuration file, but the Revenue Engine needs more context. Open `sales-marketing.local.md` and add the remaining sections:
+The skeleton from Lesson 1 already gives you the company profile and a starter configuration. Now use a prompt so the agent updates the file from the ICP section onward instead of you editing from memory:
 
 ```markdown
-# Sales & Marketing Local Configuration — NexaFlow Technologies
+Now based on these insights, open `sales-marketing.local.md` and add the
+remaining sections starting with:
 
-## Company Profile
+## Ideal Customer Profile
 
-- **Company:** NexaFlow Technologies (Pvt) Ltd
-- **Product:** Workflow automation platform for mid-market logistics companies
-- **Market:** B2B SaaS, mid-market logistics operators
-- **Geography:** Pakistan (70%), UAE (20%), UK expansion (10%)
+[Paste the full ICP YAML from the previous section]
+
+Then continue with:
 
 ## Brand Voice
 
 - **Tone:** Direct, practical, no jargon. "We speak like operators, not vendors."
 - **Avoid:** Buzzwords, "digital transformation", "synergy", "leverage"
 - **Mirror:** Use the prospect's operational language — routes, dispatch, on-time rates
-
-## Ideal Customer Profile
-
-[Paste the full ICP YAML from the previous section]
 
 ## Competitor Intelligence
 
@@ -187,9 +183,11 @@ The ICP is the largest section of the configuration file, but the Revenue Engine
 - **Cycle length:** 45-60 days average
 - **Decision makers:** VP Operations, Director of Operations
 - **Champions:** Operations Managers frustrated with manual processes
+
+Apply these changes directly to the file.
 ```
 
-Save the file. Every skill in the Revenue Engine — prospect research, lead scoring, `/competitive-brief` — now reads this configuration and filters its output through NexaFlow's context.
+Run that prompt and let the agent update `sales-marketing.local.md` directly. Every skill in the Revenue Engine — prospect research, lead scoring, `/competitive-brief` — now reads this configuration and filters its output through NexaFlow's context.
 
 ## Validating the ICP Against Known Deals
 
@@ -262,7 +260,28 @@ Notice Deal 2 — Gulf Chain scored lower on technographics because they had a m
 
 ## Deep Research on 5 Prospects
 
-With a validated ICP, turn to NexaFlow's actual pipeline. Run research briefs for 5 target prospects and rank them.
+With a validated ICP, turn to NexaFlow's actual pipeline. At this point, keep the three entity types separate:
+
+- **Closed-won deals** are historical customers used to build and validate the ICP.
+- **Target prospects** are the 5 open opportunities in `demo-data.md` that you now research and rank.
+- **Competitors** are alternative vendors (RouteMaster Pro, FleetOps AI) that you analyse later for positioning.
+
+You are still working as NexaFlow throughout. The only thing changing is what you are analysing: past customers, current prospects, or competitors.
+
+Start by re-running Meridian Logistics, the same prospect from Lesson 1, so you can see how the calibrated ICP changes the brief. Then run the same workflow for the other 4 prospects in `demo-data.md`.
+
+Use this prompt pattern for each prospect:
+
+```
+Read demo-data.md and find one target prospect.
+Generate a full research brief with:
+- ICP fit score
+- timing signals
+- data availability assessment
+- recommended outreach angle
+```
+
+For example:
 
 ```
 Research TransPak Logistics — build a full intelligence brief.
@@ -271,7 +290,7 @@ TransPak Logistics, Karachi. Regional 3PL specialising in
 pharmaceutical cold chain. ~150 employees.
 ```
 
-Repeat for all 5 demo prospects. Then compare two briefs side by side: NexaFlow's Karachi-based prospect versus Meridian Logistics in Leeds.
+After you have all 5 briefs, compare two of them side by side: Meridian Logistics in Leeds (prospect #1 from Lesson 1) versus TransPak Logistics in Karachi. The purpose of this comparison is not to choose between two companies at random. It is to see how data availability changes brief quality across markets even when both prospects may fit the ICP.
 
 ### Comparing Data Availability: Karachi vs Leeds
 
@@ -343,7 +362,9 @@ The ranking reveals something counterintuitive. Meridian — a UK company outsid
 
 ## Competitive Positioning
 
-One piece remains. NexaFlow's sales team needs to know how they stack up against RouteMaster Pro and FleetOps AI. Run:
+One piece remains. NexaFlow's sales team needs to know how they stack up against RouteMaster Pro and FleetOps AI. This is a separate task from prospect research: prospect briefs tell you **who to prioritise**, while competitor briefs tell you **how to position** when those prospects evaluate alternatives.
+
+Start with RouteMaster Pro:
 
 ```
 /competitive-brief RouteMaster Pro
@@ -382,7 +403,22 @@ POSITIONING vs NexaFlow
     - Prospect values vendor longevity over speed
 ```
 
-Add the competitive intelligence to `sales-marketing.local.md` under the Competitor Intelligence section. Every subsequent research brief and outreach draft will reference this positioning automatically.
+Then run the same command for FleetOps AI. After reviewing both outputs, update your configuration with a prompt instead of editing from memory:
+
+```markdown
+Open `sales-marketing.local.md` and update the `## Competitor Intelligence`
+section using the competitive briefs for RouteMaster Pro and FleetOps AI.
+
+Keep this structure:
+- **Primary competitor:** RouteMaster Pro
+- **Secondary:** FleetOps AI
+- **Positioning:** Short summary of where NexaFlow wins, where each
+  competitor wins, and which differences should shape outreach
+
+Apply the update directly to the file.
+```
+
+Run that prompt and let the agent update `sales-marketing.local.md` directly. Every subsequent research brief and outreach draft will reference this positioning automatically.
 
 ## What You Built
 
