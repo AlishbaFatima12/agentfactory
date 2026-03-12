@@ -24,7 +24,6 @@ const cardWithWhy: FlashcardCardType = {
 
 describe("FlashcardCard", () => {
   beforeEach(() => {
-    // Reset matchMedia to default (no reduced motion)
     Object.defineProperty(window, "matchMedia", {
       writable: true,
       value: vi.fn().mockImplementation((query: string) => ({
@@ -86,22 +85,22 @@ describe("FlashcardCard", () => {
     expect(screen.queryByText("Why?")).not.toBeInTheDocument();
   });
 
-  it("reduced-motion: no flipped class applied", () => {
-    // Mock prefers-reduced-motion to match
-    Object.defineProperty(window, "matchMedia", {
-      writable: true,
-      value: vi.fn().mockImplementation((query: string) => ({
-        matches: query === "(prefers-reduced-motion: reduce)",
-        media: query,
-        onchange: null,
-        addEventListener: vi.fn(),
-        removeEventListener: vi.fn(),
-        dispatchEvent: vi.fn(),
-        addListener: vi.fn(),
-        removeListener: vi.fn(),
-      })),
-    });
+  it("renders only the active side of the card", () => {
+    render(
+      <FlashcardCard
+        card={baseCard}
+        isFlipped={false}
+        onFlip={vi.fn()}
+        cardNumber={1}
+        totalCards={5}
+      />,
+    );
 
+    expect(screen.getByText(baseCard.front)).toBeInTheDocument();
+    expect(screen.queryByText(baseCard.back)).not.toBeInTheDocument();
+  });
+
+  it("shows the answer without leaving the question rendered underneath", () => {
     render(
       <FlashcardCard
         card={baseCard}
@@ -112,9 +111,7 @@ describe("FlashcardCard", () => {
       />,
     );
 
-    const region = screen.getByRole("region");
-    // The inner card div should not have the "flipped" class when reduced motion is preferred
-    const cardDiv = region.querySelector("[class*='card']")!;
-    expect(cardDiv.className).not.toContain("flipped");
+    expect(screen.getByText(baseCard.back)).toBeInTheDocument();
+    expect(screen.queryByText(baseCard.front)).not.toBeInTheDocument();
   });
 });

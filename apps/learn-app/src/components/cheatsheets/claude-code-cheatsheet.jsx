@@ -8,9 +8,9 @@ const palette = {
   accentLight: "#e87a45",
   accentPale: "#f5ddd0",
   dark: "#2c1810",
-  mid: "#5a3e2b",
+  mid: "#3d2518",
   codeBg: "#2c1810",
-  codeText: "#f0dcc8",
+  codeText: "#fff",
   tagBg: "#c0582a",
   tagText: "#fff",
   highlight: "#fff3e6",
@@ -24,7 +24,7 @@ const Code = ({ children }) => (
       borderRadius: 4,
       padding: "4px 7px",
       fontFamily: "'JetBrains Mono', 'Fira Code', 'Courier New', monospace",
-      fontSize: 9.5,
+      fontSize: 10,
       lineHeight: 1.4,
       overflowX: "auto",
       whiteSpace: "pre",
@@ -61,7 +61,7 @@ const Bullet = ({ children }) => (
       display: "flex",
       gap: 4,
       marginBottom: 1,
-      fontSize: 10,
+      fontSize: 10.5,
       lineHeight: 1.35,
       color: palette.mid,
       alignItems: "flex-start",
@@ -82,7 +82,7 @@ const Bullet = ({ children }) => (
 );
 
 const KV = ({ k, v }) => (
-  <div style={{ fontSize: 10, marginBottom: 1, color: palette.mid }}>
+  <div style={{ fontSize: 10.5, marginBottom: 1, color: palette.mid }}>
     <strong style={{ color: palette.dark }}>{k}</strong> — {v}
   </div>
 );
@@ -99,7 +99,7 @@ const RefRow = ({ cmd, desc }) => (
     <code
       style={{
         fontFamily: "'JetBrains Mono', monospace",
-        fontSize: 9,
+        fontSize: 9.5,
         color: palette.accent,
         fontWeight: 700,
         width: 100,
@@ -108,7 +108,7 @@ const RefRow = ({ cmd, desc }) => (
     >
       {cmd}
     </code>
-    <span style={{ fontSize: 9.5, color: palette.mid }}>{desc}</span>
+    <span style={{ fontSize: 10, color: palette.mid }}>{desc}</span>
   </div>
 );
 
@@ -225,7 +225,7 @@ export default function ClaudeCodeCheatsheet() {
           <div
             style={{
               color: palette.codeText,
-              fontSize: 9,
+              fontSize: 9.5,
               marginTop: 3,
               letterSpacing: 1.5,
               textTransform: "uppercase",
@@ -250,12 +250,13 @@ export default function ClaudeCodeCheatsheet() {
         >
           {/* 1. Getting Started */}
           <SectionCard number="1" title="Getting Started">
-            <Code>{`# Install (requires Node 18+)
-curl -fsSL \\
-  https://claude.ai/install.sh | bash
+            <Code>{`# Native install (recommended)
+# macOS / Linux / WSL
+curl -fsSL https://claude.ai/install.sh | bash
+# Windows (PowerShell)
+irm https://claude.ai/install.ps1 | iex
 
-cd your-project
-claude
+cd your-project && claude
 /init`}</Code>
             <div
               style={{
@@ -927,14 +928,14 @@ Review for OWASP top 10...`}</Code>
           style={{
             textAlign: "center",
             padding: "6px 0 8px",
-            fontSize: 9.5,
+            fontSize: 10,
             color: palette.mid,
             fontFamily: "'Georgia', serif",
           }}
         >
           Claude Code Workflow Cheatsheet — Created {new Date().getFullYear()}
           <br />
-          <span style={{ fontSize: 9, color: "#a08a76" }}>
+          <span style={{ fontSize: 9, color: palette.mid }}>
             {"Anthropic's agentic coding CLI & IDE extensions"}
           </span>
         </div>

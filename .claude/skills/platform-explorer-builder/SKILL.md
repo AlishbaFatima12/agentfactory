@@ -147,6 +147,18 @@ Quick reference:
 - **macOS traffic lights** in title bar
 - **Tab-style navigation** for Welcome vs file content
 
+### Accessibility: Dark Surface Contrast Rules (MANDATORY)
+
+All text on dark backgrounds (#0e0c08, #0c0a06, #0a0806) MUST meet WCAG 4.5:1 contrast:
+
+- **Body/instructional text**: use `#e0d8cc` or lighter (near-white with warm tint)
+- **Secondary/meta text** (labels, descriptions): use at least `#c8b8a8`
+- **Active interactive elements**: use `#fff` or platform accent at full opacity
+- **Disabled text**: use at least `#b8a898` (never below 4.5:1)
+- **Accent colors** (copper, brand colors): reserve for headings, active states, and interactive highlights ONLY — never for body/instructional copy on dark surfaces
+- **"How to use this lab" block**: REQUIRED inside the artifact — either as a welcome page section or an onboarding overlay. Users must understand how to interact with the three panels before exploring.
+- **Product label**: Use the full descriptive name (e.g., "Claude Code Simulation Lab"), not just the platform name ("Claude Code")
+
 ## Technical Requirements
 
 The output is a single React JSX artifact. Constraints:

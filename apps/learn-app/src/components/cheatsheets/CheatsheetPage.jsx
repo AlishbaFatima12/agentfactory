@@ -97,7 +97,7 @@ export default function CheatsheetPage() {
               fontSize: 13,
               fontWeight: isActive ? 700 : 500,
               fontFamily: "'Georgia', serif",
-              color: isDisabled ? "#665544" : isActive ? "#fff" : "#c4a88a",
+              color: isDisabled ? "#ddd" : isActive ? "#fff" : "#f0ebe4",
               cursor: isDisabled ? "default" : "pointer",
               opacity: isDisabled ? 0.45 : 1,
               transition: "all 0.15s",
@@ -106,13 +106,13 @@ export default function CheatsheetPage() {
             onMouseEnter={(e) => {
               if (!isDisabled && !isActive) {
                 e.currentTarget.style.background = palette.accentLight + "10";
-                e.currentTarget.style.color = "#e0c8b0";
+                e.currentTarget.style.color = "#fff";
               }
             }}
             onMouseLeave={(e) => {
               if (!isDisabled && !isActive) {
                 e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "#c4a88a";
+                e.currentTarget.style.color = "#f0ebe4";
               }
             }}
           >
@@ -123,7 +123,7 @@ export default function CheatsheetPage() {
                   fontSize: 8,
                   fontWeight: 700,
                   background: "#4a3828",
-                  color: "#887766",
+                  color: "#f0ebe4",
                   borderRadius: 3,
                   padding: "2px 6px",
                   marginLeft: 7,
@@ -148,7 +148,7 @@ export default function CheatsheetPage() {
           borderRadius: 4,
           padding: "5px 14px",
           fontSize: 11,
-          color: "#a08a76",
+          color: "#f0ebe4",
           cursor: "pointer",
           fontFamily: "'JetBrains Mono', monospace",
           transition: "all 0.15s",
@@ -159,7 +159,7 @@ export default function CheatsheetPage() {
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.borderColor = "#4a3a2a";
-          e.currentTarget.style.color = "#a08a76";
+          e.currentTarget.style.color = "#f0ebe4";
         }}
       >
         {fullscreen ? "Exit" : "Fullscreen"}
