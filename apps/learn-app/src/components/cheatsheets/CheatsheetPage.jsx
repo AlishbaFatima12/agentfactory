@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import ClaudeCodeCheatsheet from "./claude-code-cheatsheet";
+import CoworkCheatsheet from "./cowork-cheatsheet";
 
 const palette = {
   accent: "#c0582a",
@@ -17,7 +18,12 @@ const topics = [
     label: "Claude Code",
     component: ClaudeCodeCheatsheet,
   },
-  { id: "cowork", hash: "cowork", label: "Cowork", component: null },
+  {
+    id: "cowork",
+    hash: "cowork",
+    label: "Cowork",
+    component: CoworkCheatsheet,
+  },
   { id: "openclaw", hash: "openclaw", label: "OpenClaw", component: null },
 ];
 
