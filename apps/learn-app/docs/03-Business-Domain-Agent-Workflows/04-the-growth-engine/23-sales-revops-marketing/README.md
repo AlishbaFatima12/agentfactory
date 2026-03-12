@@ -1,27 +1,67 @@
 ---
 title: "Chapter 23 — Sales, RevOps & Marketing"
 sidebar_position: 0
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-23/revenue-engine-blueprint.pdf"
+  title: "Revenue Engine Blueprint"
+  height: 700
 ---
 
 # Chapter 23 — Sales, RevOps & Marketing
 
 ### Scaling the Judgment of Your Top 1% Across the Entire Organisation
 
-Every sales team has a top 1%. They close more, retain more, and generate more pipeline from fewer touches. They are not the most charismatic or the most experienced — they are the most prepared. This chapter teaches you to encode that preparation into a SKILL.md library and a coordinated set of Claude plugins so that every rep on the team operates with the research depth, personalisation quality, and timing precision of your best closer.
+Every sales team has a top 1%. They close more, retain more, and generate more pipeline from fewer touches. They are not the most charismatic or the most experienced — they are the most prepared. This chapter teaches you to operate a coordinated set of Claude plugins so that every rep on the team works with the research depth, personalisation quality, and timing precision of your best closer.
 
 The chapter spans three interconnected domains — sales execution, revenue operations (RevOps), and marketing — because the handoff between marketing-generated leads and sales-worked pipeline is where most revenue is lost. A unified plugin architecture means the prospect intelligence built by marketing enrichment flows directly into the sales rep's research brief, with no re-entry, no data loss, and no context switching.
 
-| #   | Lesson                                        | Key Focus                                                                                                                        |
-| --- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | The One-Percent Problem                       | Why AI in sales matters; the cognitive capacity gap; the RevOps framework; overview of the 14 plugin commands                    |
-| 2   | Installing the Plugins                        | Dual-path installation (Anthropic + Agent Factory); verification; sales-marketing.local.md configuration; skill collisions        |
-| 3   | Prospect Research and ICP                     | The `/research` command workflow; ICP configuration in YAML; deep prospect intelligence briefs                                   |
-| 4   | Lead Scoring and CRM Enrichment               | Three-dimension scoring model; the `/score` command; CRM enrichment pipeline; data quality and decay                             |
-| 5   | The Five Laws of Outreach                     | Five Laws framework; `/outreach`, `/sequence`, `/follow-up`, `/copy` commands; WhatsApp B2B outreach                             |
-| 6   | Campaign Optimisation and the Content Factory | `/campaign`, `/content`, `/calendar` commands; content multiplication; PKR budget for emerging markets                           |
-| 7   | ABM and Attribution Modeling                  | Account-Based Marketing orchestration; first-touch/last-touch/multi-touch attribution; B2B vs B2C; CAC and ROI                   |
-| 8   | Outreach Compliance and Regional Context      | CAN-SPAM, GDPR, PECA jurisdiction compliance; regional sales culture; ethical outreach; budget localisation                      |
-| 9   | RevOps Agents                                 | Lead Intelligence, CRM Hygiene, Outreach Sequencing, Marketing Performance, and Revenue Reporting agents                         |
-| 10  | The Skill Library                             | Global router; product skills; local configuration template; plugin architecture; extending the library                          |
-| 11  | Extending Plugins for Your Market             | Jurisdiction overlays; skill collision resolution (wrapper/override/delegation); multi-market config; South Asian B2B extension   |
-| 12  | Applied Exercises                             | 8 exercises: ICP config, research sprint, lead scoring, outreach sequences, campaigns, content factory, pipeline, dashboard      |
+Every lesson delivers a working workflow where you evaluate real agent output with your domain expertise, diagnose errors using the Agent Output Taxonomy, and configure the system for your business.
+
+### Prerequisites: Cowork Access
+
+This chapter requires **Cowork** (set up in Chapter 17) and three plugin layers.
+
+1. **Install the Sales plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → find **Sales** (from `knowledge-work-plugins`) → click **Install**.
+2. **Install the Marketing plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → find **Marketing** (from `knowledge-work-plugins`) → click **Install**.
+3. **Install the Sales RevOps Marketing plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Sales RevOps Marketing** → click **Install**.
+4. **Connect a working folder** for practice files, same as Chapter 17.
+
+## 📚 Teaching Aid
+
+### Lesson Map
+
+| #   | Lesson                                     | Key Focus                                                                                  |
+| --- | ------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| 1   | The Revenue Engine                         | Install 3 plugins; first research brief; hallucination detection; demo data generation     |
+| 2   | Prospect Intelligence and ICP Calibration  | `persona-icp` skill; ICP from closed-won data; `/competitive-brief`; 5 research briefs     |
+| 3   | Lead Scoring                               | Three-dimension scoring (Fit + Timing + Engagement); routing rules; calibration            |
+| 4   | CRM Enrichment and Data Decay              | `crm-enrichment` skill; timing signal refresh; enrichment schedule                         |
+| 5   | The Five Laws of Outreach                  | Five Laws as constraints; 17 banned words; `outreach` skill; compliance gap discovery      |
+| 6   | Multi-Touch Sequences and Follow-Up        | 6-touch sequence; `/email-sequence`; over-automation discovery; exit conditions            |
+| 7   | Pre-Call Briefs and Meeting Preparation    | `pre-call-brief`; `competitive-intelligence` battlecards; `/call-summary`; context loss    |
+| 8   | The Prospect-to-Meeting Pipeline           | End-to-end: research → score → outreach → brief → follow-up; config quality amplification  |
+| 9   | Content Creation and Brand Voice           | `create-an-asset` interactive HTML; `/brand-review`; `/seo-audit`; 10 assets from 1 piece  |
+| 10  | Campaign Strategy and the Content Calendar | `/campaign-plan`; `/email-sequence`; content calendar; measurement framework               |
+| 11  | Campaign Performance Analysis              | `/performance-report`; extension analysis comparison; `/competitive-brief`; weekly cadence |
+| 12  | Outreach Compliance and Regional Context   | PECA, GDPR, UAE data law; jurisdiction overlays; 3-market compliant outreach               |
+| 13  | RevOps Agents and the Revenue Dashboard    | 5 agents; `/pipeline-review`; `/forecast`; `daily-briefing`; revenue dashboard             |
+| 14  | The Revenue Engine Sprint                  | Full sprint: ICP → research → score → outreach → campaign → dashboard (capstone)           |
+
+### Agent Output Taxonomy
+
+Errors are discovered progressively across lessons. By L14, you can diagnose all five:
+
+| Error Type            | Discovered | Diagnostic Question                                        |
+| --------------------- | ---------- | ---------------------------------------------------------- |
+| Hallucinated Data     | L01        | "Can you verify this claim from the research brief?"       |
+| Miscalibrated Scoring | L03        | "Does this score match what you know about this prospect?" |
+| Compliance Gap        | L05        | "Is this outreach legal in the prospect's jurisdiction?"   |
+| Over-Automation       | L06        | "Should the agent have stopped before touch #5?"           |
+| Context Loss          | L07        | "Did the follow-up reference the research brief?"          |
+
+### Case Studies
+
+| Case Study                         | Role                  | Purpose                                              |
+| ---------------------------------- | --------------------- | ---------------------------------------------------- |
+| **NexaFlow Technologies, Karachi** | Learner's peer (~60%) | Emerging market, PKR budgets, relationship-heavy B2B |
+| **Meridian Logistics, Leeds**      | Expert model (~40%)   | Enterprise, GDPR, mature RevOps                      |

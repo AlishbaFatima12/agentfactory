@@ -1,0 +1,74 @@
+deck:
+  id: "ch22-07-ip-protection"
+  title: "Intellectual Property Protection"
+  description: "Patent landscape research with /brief, trademark monitoring, freedom-to-operate governance boundary, Nice Classification, open-source licence hierarchy, and IP configuration as a Cowork skill"
+  tags: ["legal-ops", "intellectual-property", "patents", "trademarks", "chapter-22"]
+  version: 1
+
+cards:
+  - id: "ch22-07-ip-protection-001"
+    front: "What is a Freedom to Operate (FTO) analysis?"
+    back: "An FTO analysis determines whether a product or technology can be commercialised without infringing existing patents. A full FTO analysis by a specialist IP attorney costs USD 15,000-50,000 and takes 4-8 weeks. The Legal Plugin produces FTO preliminary research — landscape analysis and claim mapping — reducing attorney work from 40+ hours to 10-15 hours."
+    difficulty: "intermediate"
+    tags: ["fto"]
+
+  - id: "ch22-07-ip-protection-002"
+    front: "What is the governance boundary between agent-produced IP research and a qualified IP attorney's FTO opinion?"
+    back: "Agent output is explicitly labelled 'preliminary research scaffolding, not an FTO opinion.' FTO opinions are privileged legal documents that only qualified IP counsel can sign. Agent research reduces cost and time but cannot replace the attorney's opinion, which creates attorney-client privilege and professional liability protection."
+    difficulty: "intermediate"
+    why: "What happens if a company launches a product based solely on agent FTO research and receives a patent infringement demand letter?"
+    tags: ["governance-boundary"]
+
+  - id: "ch22-07-ip-protection-003"
+    front: "What is prior art, and why is finding it valuable?"
+    back: "Prior art is any evidence that an invention was already known before a patent application's filing date — published patents, scientific papers, product manuals, conference presentations, even YouTube videos. Finding the right prior art can invalidate a competitor's patent, saving millions in licensing fees or litigation costs, or protect your own applications from challenge."
+    difficulty: "basic"
+    tags: ["prior-art"]
+
+  - id: "ch22-07-ip-protection-004"
+    front: "What is the Nice Classification system for trademarks?"
+    back: "The international system maintained by WIPO for classifying goods and services for trademark registration. It consists of 45 classes (34 for goods, 11 for services). For example: Class 9 = software, Class 42 = SaaS services, Class 36 = financial services. Each additional class increases filing cost. Registering in the wrong classes leaves gaps in protection."
+    difficulty: "basic"
+    tags: ["nice-classification"]
+
+  - id: "ch22-07-ip-protection-005"
+    front: "What four outputs does a /brief patent landscape analysis produce?"
+    back: "1. Landscape summary — key patent holders, filing trends, white spaces\n2. Freedom-to-operate flags — potentially relevant patents requiring attorney analysis\n3. Prior art candidates — publicly available prior art relevant to your filings or competitor challenges\n4. Competitor monitoring — new filings by named competitors in the previous 90 days"
+    difficulty: "intermediate"
+    tags: ["patent-landscape"]
+
+  - id: "ch22-07-ip-protection-006"
+    front: "What four types of trademark similarity does the agent monitor?"
+    back: "1. Phonetic similarity — marks that sound alike\n2. Visual similarity — marks that look alike (structural match >60%)\n3. Conceptual similarity — marks that convey the same meaning\n4. Domain name conflicts — use of your marks in domain registrations"
+    difficulty: "basic"
+    tags: ["trademark-monitoring"]
+
+  - id: "ch22-07-ip-protection-007"
+    front: "What are the four risk levels in the open-source licence hierarchy?"
+    back: "Low (MIT, BSD, Apache-2.0) — attribution only, safe for proprietary use.\nMedium (LGPL, MPL-2.0) — modifications to library must be shared; your code stays proprietary.\nHigh (GPL-2.0, GPL-3.0) — combined work must be distributed under GPL; requires IP counsel review.\nCritical (AGPL-3.0) — network use triggers distribution obligation; escalate to IP counsel immediately."
+    difficulty: "intermediate"
+    tags: ["open-source-licences"]
+
+  - id: "ch22-07-ip-protection-008"
+    front: "Why should GPL or AGPL components be escalated to IP counsel rather than relying on the agent's assessment?"
+    back: "Licence interpretation depends on linking method, distribution model, and jurisdiction — this is attorney work. Whether a component triggers copyleft obligations is a nuanced legal question that the agent cannot reliably determine. AGPL is especially critical because network use (SaaS deployment) triggers the distribution obligation."
+    difficulty: "intermediate"
+    tags: ["copyleft-escalation"]
+
+  - id: "ch22-07-ip-protection-009"
+    front: "What five sections should an IP configuration Cowork skill contain?"
+    back: "1. Registered Marks — mark name, Nice class, jurisdictions, registration numbers\n2. Pending Applications — filed marks with application numbers\n3. Monitoring Parameters — similarity threshold, priority jurisdictions, scan frequency\n4. Patent Portfolio — core technology areas, FTO escalation rule\n5. Copyright — open-source compliance and DMCA workflow"
+    difficulty: "intermediate"
+    tags: ["ip-configuration"]
+
+  - id: "ch22-07-ip-protection-010"
+    front: "In the SpectraAI worked example, what 'white spaces' did the patent landscape analysis identify?"
+    back: "1. Nastaliq-specific OCR (distinct from standard Arabic naskh script) — only 2 patents, neither covering legal documents\n2. Pakistani legal entity recognition (NER for SECP-registered companies, courts, regulatory bodies) — no patents found\n3. Clause classification under Contract Act 1872 — no existing patents reference Pakistani contract law structure"
+    difficulty: "intermediate"
+    tags: ["white-spaces", "worked-example"]
+
+  - id: "ch22-07-ip-protection-011"
+    front: "How does AI transform IP protection from its traditional model?"
+    back: "Traditionally, IP protection was expensive, slow, and reactive — a specialist billable-hour function. AI transforms it into a continuous, proactive capability: patent searches take minutes instead of weeks, trademark monitoring replaces subscription watching services, and FTO research that required 40+ attorney hours can be pre-screened to 10-15 hours."
+    difficulty: "basic"
+    tags: ["transformation"]

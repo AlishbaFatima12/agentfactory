@@ -13,7 +13,7 @@ Ensures consistent translation of technical terms across all files translated to
 | **Keep in English** | Terms marked with `[EN]` should remain in English |
 | **Transliterate** | Terms marked with `[TR]` should be transliterated (phonetic approximation) |
 | **Translate** | Terms marked with `[TL]` should be fully translated |
-| **First use** | On first occurrence, show: `translated-term (English term)` |
+| **First use** | Use the translated term by default. Add `(English term)` on first occurrence only when clarity, searchability, or repo convention requires it. |
 
 ## Core Technical Terms
 

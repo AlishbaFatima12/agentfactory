@@ -27,7 +27,7 @@ keywords:
   fontWeight: '600',
   color: 'var(--ifm-color-emphasis-900)'
 }}>
-In the AI era, the most valuable companies won't sell software—they'll manufacture <em>AI employees</em>: role-based systems that compose tools, spawn specialist agents, and deliver outcomes at scale.
+In the AI era, the most valuable companies won't sell software—they'll manufacture <em>AI employees</em>: role-based systems that compose tools, spawn specialist agents, and deliver outcomes at scale. And these AI employees are on the verge of becoming something more: <strong>fully-fledged economic actors</strong> that autonomously buy services, procure compute, and acquire data in the course of accomplishing high-level goals. We are one to two years away from seeing this at scale.
 </p>
 
 <p style={{
@@ -37,7 +37,7 @@ In the AI era, the most valuable companies won't sell software—they'll manufac
   color: 'var(--ifm-color-emphasis-800)',
   marginTop: '2rem'
 }}>
-The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers define intent. Agents execute. Humans supervise and verify. This model industrializes execution through machine-readable specs, reusable skills, Standard Tool Protocols (MCP: a shared tool-connection standard), and cloud-native infrastructure—shifting the focus from manual workflows to <strong>capability on demand</strong>.
+The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers define intent. Agents execute. Humans supervise and verify. Soon, agents won't just <em>do</em> the work—they'll <em>source what they need</em> to do it, dynamically purchasing resources within budgets and permission envelopes set by their human supervisors. This model industrializes execution through machine-readable specs, reusable skills, Standard Tool Protocols (MCP: a shared tool-connection standard), and cloud-native infrastructure—shifting the focus from manual workflows to <strong>capability on demand</strong>.
 </p>
 
 <p style={{
@@ -51,11 +51,16 @@ The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers def
 What remains: Intent. Verification. Outcome.
 </p>
 
+Intent doesn't type itself into a spec. It comes from a person — their judgment, their domain knowledge, their values. But as AI employees multiply, no professional can orchestrate them all by hand. They'll act through a personal agent that reflects their judgment and delegates on their behalf — what Don Tapscott calls identic AI.¹ The Agent Factory manufactures the workforce; identic AI is how each human commands it.
+
+![Factory_Era](../static/img/factory-era.png)
+
+
 </div>
 
 ## 📚 Teaching Aid
 
-<PDFViewer src="https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-0/chapter-00/agent-factory-thesis.pdf" title="The Agent Factory Thesis" height={700} />
+[🖥️ Fullscreen](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-0/chapter-00/agent-factory-thesis.pdf)
 
 ---
 
@@ -66,6 +71,7 @@ What remains: Intent. Verification. Outcome.
 | **Product**         | Software Tools             | AI Employees                               |
 | **Value Metric**    | Per-Seat Subscriptions     | Per-Outcome Results                        |
 | **Execution Model** | Manual & Visible           | Automated & Industrialized                 |
+| **Resource Acquisition** | Humans procure tools & services | Agents buy compute, data & services autonomously |
 | **Human Role**      | Operator                   | Supervisor & Verifier                      |
 | **Integration**     | Rigid, point-to-point APIs | Standard Tool Protocols (MCP)              |
 | **Focus**           | How the work is done       | _That_ the work is done—verifiably correct |
@@ -84,21 +90,64 @@ A traditional factory takes raw materials, runs them through a series of special
 
 Three mechanisms power the factory: specs define the work, skills package how it gets done, and feedback loops ensure it improves—with MCP as the universal protocol that connects every agent to every tool.
 
+### Agents as Economic Actors
+
+Today's agents execute tasks. Tomorrow's agents will participate in markets. The thesis opens with this claim because it represents the next great inflection: the shift from agent-as-tool to agent-as-buyer.
+
+![Ecnomic_Actors](../static/img/economic-actor.png)
+
+Consider an agent assigned a high-level goal—"reduce customer churn by 15%." It will autonomously purchase the compute to train a model, negotiate an API contract for enrichment data, and provision cloud services to deploy the solution—all within a budget and permission envelope set by its human supervisor. The primitives are already in place: agents can call APIs, manage credentials, and make decisions under constraints. What remains is the trust infrastructure—payment rails, audit trails, and liability frameworks—that lets organizations safely delegate purchasing authority to non-human actors.
+
+When agents become buyers, the economics of the Agent Factory shift fundamentally. The factory no longer just _consumes_ resources allocated by humans; it dynamically _sources_ them. Compute, data, and specialist services become inputs that agents discover, evaluate, and acquire in real time—turning the factory into a self-provisioning system that optimizes not just for task completion, but for cost, speed, and quality simultaneously.
+
+The implication for builders: design your agents and your infrastructure for economic participation from day one. Agents need budgets, not just permissions. Outcome contracts, not just API keys. And the organizations that master this shift will capture the next wave of value, just as the companies that moved from SaaS subscriptions to outcome-based pricing are capturing this one.
+
 ### The Human in the Loop
 
 A common fear: agents replace people. The evidence says otherwise. For most tasks, AI paired with a human outperforms either one working alone. The Agent Factory doesn't eliminate the human—it promotes them. From operator to supervisor. From typist to editor. From coder to architect of outcomes.
+
+![Technology_Roles](../static/img/tech-role.png)
 
 This changes what it means to be a "tech professional." A web developer or mobile developer is not just someone who writes React or Swift. They are a **technology expert**—someone who understands systems, data flows, APIs, and user needs. In the Agent Factory era, that expertise becomes far more valuable, because it is no longer spent hand-coding screens. It is spent designing, deploying, and supervising agents that deliver entire products.
 
 The developer doesn't disappear. The developer does _more_.
 
+### Personal Agents and the Enterprise Interface
+
+AI employees are how work gets done. Identic AI is how humans will increasingly direct, govern, and interface with that AI workforce on their own behalf. The Agent Factory manufactures role-based AI employees to execute tasks, coordinate workflows, and deliver verified outcomes at scale, but the human remains the principal who defines purpose, values, constraints, and accountability. Identic AI adds a new personal layer: a self-sovereign agent—owned by the individual, not the platform—that understands an individual’s context, judgment, and preferences, and can translate human intent into delegated action across the enterprise.¹ In this model, enterprise AI employees are the execution fabric, while identic AI is the human’s representative and orchestration layer, enabling people to supervise direction rather than perform routine execution themselves. The future firm will therefore operate across two connected layers: AI employees inside the factory, and personal agents at the edge, with humans setting intent and verifying outcomes across both.
+
+We call this the **Two-Layer Model**:
+
+![Two_Layer_Model](../static/img/two-layers.png)
+
+
+| Layer | What It Is | Who It Serves | What It Does |
+| --- | --- | --- | --- |
+| **Factory Layer** | Role-based AI employees | The enterprise | Executes tasks, coordinates workflows, delivers verified outcomes |
+| **Edge Layer** | Personal Identic agents | The individual | Translates human intent, delegates to factory agents, governs on behalf of the principal |
+
+Neither layer works alone. A factory without personal agents at the edge forces humans back into manual orchestration. Personal agents without an industrialized factory behind them are digital assistants with no workforce to command. The Two-Layer Model is what makes the Agent Factory thesis complete: manufacturing at the core, human sovereignty at the edge, and specs as the contract language between them.
+
+
+**Notes**
+
+¹ Don Tapscott, interview on HBR IdeaCast, “[With Rise of Agents, We Are Entering the World of Identic AI](https://hbr.org/podcast/2026/02/with-rise-of-agents-we-are-entering-the-world-of-identic-ai)”, Harvard Business Review, February 17, 2026.
+
+
 ### The Workforce Opportunity
 
 AI will unbundle jobs into tasks. Some of those tasks will be automated entirely. But unbundling also creates new combinations—new roles, new businesses, new markets that didn't exist when work was locked inside rigid job titles.
 
+![Workforce_Opportunity](../static/img/workforce.png)
+
 The future workforce must build **dynamic skill portfolios** rather than rely on fixed career paths. Professionals who learn to think with AI, build using AI tools daily, and collaborate with AI as a digital teammate won't just survive the transition—they'll thrive in it.
 
-The SaaS era created millions of jobs for developers, designers, and product managers. The Agent Factory era will create millions more—for agent designers, outcome architects, verification specialists, and domain experts who teach machines what "correct" looks like in their field.
+The SaaS era created millions of jobs for developers, designers, and product managers. The Agent Factory era will create millions more—for agent designers, outcome architects, verification specialists, and domain experts who teach machines what "correct" looks like in their field. **It is also one of the largest workforce training opportunities in history**: by 2030, 59 out of every 100 workers globally are expected to require reskilling or upskilling to adapt to new technologies and ways of working.²
+
+![Training Opportunity](../static/img/training.png)
+
+² World Economic Forum, Future of Jobs Report 2025, January 2025.
+https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/
 
 **The opportunity is not smaller. It is broader, and it rewards those who adapt.**
 

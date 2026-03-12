@@ -74,7 +74,7 @@ cognitive_load:
   assessment: "7 concepts spanning A2 (conceptual understanding) to B1 (applied exercise). At the upper boundary for A2 but appropriate because 3 concepts are concrete examples of the Gen-AI category introduced in Lesson 1, reducing novelty. The practice exercise applies concepts rather than introducing new ones."
 
 differentiation:
-  extension_for_advanced: "After completing the Practice Exercise, draft a one-page specification for a month-end close SKILL.md that encodes the judgment calls Claude flagged. Include: which assumptions should be hard-coded, which should prompt the user, and which should be escalated automatically."
+  extension_for_advanced: "After completing the Practice Exercise, draft a one-page specification for a month-end close skill that encodes the judgment calls Claude flagged. Include: which assumptions should be hard-coded, which should prompt the user, and which should be escalated automatically."
   remedial_for_struggling: "Focus on the three Gen-AI categories. For each, write one sentence describing what the AI does and one sentence describing what the human still does. If you can articulate the human role in each, you have understood the core lesson."
 
 teaching_guide:
@@ -86,7 +86,7 @@ teaching_guide:
     - "Three Gen-AI capabilities are production-ready today: financial statement drafting, disclosure drafting, and accounting research"
     - "The IFRS vs US GAAP distinction is not academic — it directly affects the quality and reliability of AI-generated accounting output"
     - "The autonomous financial reporting agent and autonomous transactions recording agent represent the agentic frontier — the shift from AI-assisted to AI-executed accounting"
-    - "The Practice Exercise maps the boundary between agent-executable work and professional judgment — every assumption Claude flags is a future SKILL.md encoding decision"
+    - "The Practice Exercise maps the boundary between agent-executable work and professional judgment — every assumption Claude flags is a future skill encoding decision"
   misconceptions:
     - "Students may assume AI replaces the entire month-end close — in reality, Gen-AI automates the drafting and routine computation while professional judgment on estimates, classifications, and non-standard transactions remains human"
     - "Students may think IFRS and US GAAP are interchangeable for AI purposes — the principles vs rules distinction creates measurably different AI output quality"
@@ -235,7 +235,7 @@ At the service level, fully automated reporting platforms are emerging as a busi
    credit entries.
    ```
 
-5. Review the output. For each item where Claude has flagged an assumption or uncertainty, write a one-sentence instruction that would resolve it — this is the raw material for a month-end close SKILL.md.
+5. Review the output. For each item where Claude has flagged an assumption or uncertainty, write a one-sentence instruction that would resolve it — this is the raw material for a month-end close skill.
 
 **Check your work:** You should have a draft income statement and balance sheet, a list of reconciliations with data sources, a set of proposed month-end journal entries, and a list of assumption-resolution instructions. The assumption list is the most valuable output — it maps the exact boundary between what an agent can execute and what requires your professional judgment.
 
@@ -272,7 +272,7 @@ intensive and what information you would need from the client
 to draft it properly.
 ```
 
-**What you are learning:** The standard vs non-standard distinction is the practical boundary of Gen-AI capability in disclosure work. By classifying disclosures for your specific entity type and jurisdiction, you identify exactly where AI drafting saves time and where it requires professional oversight — the foundation for building domain-specific SKILL.md extensions later in this chapter.
+**What you are learning:** The standard vs non-standard distinction is the practical boundary of Gen-AI capability in disclosure work. By classifying disclosures for your specific entity type and jurisdiction, you identify exactly where AI drafting saves time and where it requires professional oversight — the foundation for building domain-specific Cowork skills later in this chapter.
 
 ### Prompt 2: Autonomous Agent Oversight Design
 
@@ -322,8 +322,6 @@ Give me a 90-day development plan.
 ```
 
 **What you are learning:** The practitioner implications section of this lesson is abstract until you apply it to your own career. By mapping your current tasks against the automation categories and building a personal development plan, you convert domain knowledge into career strategy — the most valuable output of this entire chapter.
-
-
 
 ## Flashcards Study Aid
 

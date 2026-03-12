@@ -17,6 +17,42 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-11
+- fix: Ch20-22 prompt quality audit — replace fabricated outputs, fix terminology ([#852](https://github.com/panaversity/agentfactory/pull/852))
+
+### 2026-03-11
+
+- Ch22 Legal Operations full chapter rewrite — 14 lessons ([#849](https://github.com/panaversity/agentfactory/pull/849))
+
+### 2026-03-10
+
+- docs: ch23 full chapter rewrite — 16 lessons ([#847](https://github.com/panaversity/agentfactory/pull/847))
+
+### 2026-03-09
+- docs: enhance Ch 30 PRIMM-AI+ with visuals and content polish ([#846](https://github.com/panaversity/agentfactory/pull/846))
+
+### 2026-03-09
+- fix: Ch20-23 content review — Try With AI, Cowork-native skills, dedup, renumbering ([#845](https://github.com/panaversity/agentfactory/pull/845))
+
+### 2026-03-09
+- fix: rewrite L08-L09 Try With AI from creation to application ([#839](https://github.com/panaversity/agentfactory/pull/839))
+
+### 2026-03-09
+- feat: Ch19 Cowork-native skill creation rewrite ([#838](https://github.com/panaversity/agentfactory/pull/838))
+
+### 2026-03-09
+- fix: add blank lines in Ch 30 admonition blocks for proper rendering ([#836](https://github.com/panaversity/agentfactory/pull/836))
+
+### 2026-03-09
+- docs: complete Ch 30 PRIMM-AI+ Framework — 4 lessons, quiz, summaries, editorial polish ([#835](https://github.com/panaversity/agentfactory/pull/835))
+
+### 2026-03-09
+- docs: polish Ch 30 formatting and update writing methodology to v2.0 ([#834](https://github.com/panaversity/agentfactory/pull/834))
+
+### 2026-03-09
+
+- Add Ch 30 PRIMM-AI+ (3 lessons) + Ch 32 L4 + Part 4 renumbering ([#832](https://github.com/panaversity/agentfactory/pull/832))
+
 ### 2026-03-07
 
 - Part2/minor fixes ([#833](https://github.com/panaversity/agentfactory/pull/833))

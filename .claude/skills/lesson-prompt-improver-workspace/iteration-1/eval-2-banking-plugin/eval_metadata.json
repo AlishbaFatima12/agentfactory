@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "banking-plugin-audit",
+  "prompt": "Review the banking plugin architecture lesson for prompt defects and fix any fabricated outputs: apps/learn-app/docs/03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/21-banking-domain-agents/02-plugin-architecture.md",
+  "assertions": [
+    "Identifies fabricated agent output containing specific fake numbers",
+    "Does NOT flag plugin architecture tables or directory trees as defects",
+    "Replaces fabricated output with intent table showing expected sections",
+    "Intent table has 4-7 rows matching the skill's actual output structure",
+    "Generalises any narrative that references specific fabricated numbers"
+  ]
+}

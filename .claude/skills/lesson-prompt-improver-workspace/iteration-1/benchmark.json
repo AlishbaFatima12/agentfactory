@@ -1,0 +1,329 @@
+{
+  "metadata": {
+    "skill_name": "lesson-prompt-improver",
+    "skill_path": "/Users/mjs/Documents/code/panaversity-official/tutorsgpt/ag2/.claude/skills/lesson-prompt-improver",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-11T12:00:00Z",
+    "evals_run": [1, 2, 3],
+    "runs_per_configuration": 1
+  },
+
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "malaysia-sukuk-audit",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.67,
+        "passed": 4,
+        "failed": 2,
+        "total": 6,
+        "time_seconds": 122.2,
+        "tokens": 51811,
+        "tool_calls": 10,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies at least one fabricated agent output block (Defect 1)",
+          "passed": true,
+          "evidence": "Found 1 borderline instance at lines 165-168"
+        },
+        {
+          "text": "Does NOT flag prompt code blocks as fabricated output",
+          "passed": true,
+          "evidence": "Prompts correctly categorized as student input"
+        },
+        {
+          "text": "Does NOT flag framework tables as fabricated output",
+          "passed": true,
+          "evidence": "No false positives on frameworks"
+        },
+        {
+          "text": "Produces a summary table with Line Range, Defect Type, and Recommended Fix",
+          "passed": true,
+          "evidence": "Structured tables per defect type"
+        },
+        {
+          "text": "Recommended fixes use intent table format",
+          "passed": false,
+          "evidence": "Recommended relabelling instead — arguably correct for edge case"
+        },
+        {
+          "text": "Includes :::note Your output will vary disclaimer",
+          "passed": false,
+          "evidence": "No disclaimer needed since fix was relabelling, not intent table"
+        }
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "malaysia-sukuk-audit",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.33,
+        "passed": 2,
+        "failed": 4,
+        "total": 6,
+        "time_seconds": 123.4,
+        "tokens": 43694,
+        "tool_calls": 3,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies at least one fabricated agent output block (Defect 1)",
+          "passed": false,
+          "evidence": "Did NOT identify any fabricated output blocks"
+        },
+        {
+          "text": "Does NOT flag prompt code blocks as fabricated output",
+          "passed": true,
+          "evidence": "No false positives (but used different framework)"
+        },
+        {
+          "text": "Does NOT flag framework tables as fabricated output",
+          "passed": true,
+          "evidence": "No frameworks flagged"
+        },
+        {
+          "text": "Produces a summary table with Line Range, Defect Type, and Recommended Fix",
+          "passed": false,
+          "evidence": "Table used different columns, different taxonomy"
+        },
+        {
+          "text": "Recommended fixes use intent table format",
+          "passed": false,
+          "evidence": "No intent tables anywhere"
+        },
+        {
+          "text": "Includes :::note Your output will vary disclaimer",
+          "passed": false,
+          "evidence": "No disclaimers"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "banking-plugin-audit",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.2,
+        "passed": 1,
+        "failed": 4,
+        "total": 5,
+        "time_seconds": 96.0,
+        "tokens": 45111,
+        "tool_calls": 4,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies fabricated agent output with specific fake numbers",
+          "passed": false,
+          "evidence": "Correctly applied exception rule (student-generated data). Assertion is miscalibrated."
+        },
+        {
+          "text": "Does NOT flag architecture tables/directory trees as defects",
+          "passed": true,
+          "evidence": "Architecture content explicitly reviewed and cleared"
+        },
+        {
+          "text": "Replaces fabricated output with intent table",
+          "passed": false,
+          "evidence": "No fabricated output identified (exception applied)"
+        },
+        {
+          "text": "Intent table has 4-7 rows",
+          "passed": false,
+          "evidence": "No intent table produced"
+        },
+        {
+          "text": "Generalises narrative referencing fabricated numbers",
+          "passed": false,
+          "evidence": "No generalization needed (no fabricated output)"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "banking-plugin-audit",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.4,
+        "passed": 2,
+        "failed": 3,
+        "total": 5,
+        "time_seconds": 138.9,
+        "tokens": 47471,
+        "tool_calls": 12,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies fabricated agent output with specific fake numbers",
+          "passed": true,
+          "evidence": "Flagged both query traces as HIGH fabricated output — possible false positive"
+        },
+        {
+          "text": "Does NOT flag architecture tables/directory trees as defects",
+          "passed": true,
+          "evidence": "Architecture content not flagged"
+        },
+        {
+          "text": "Replaces fabricated output with intent table",
+          "passed": false,
+          "evidence": "Suggested reframing, not intent tables"
+        },
+        {
+          "text": "Intent table has 4-7 rows",
+          "passed": false,
+          "evidence": "No intent tables"
+        },
+        {
+          "text": "Generalises narrative referencing fabricated numbers",
+          "passed": false,
+          "evidence": "Recommended variability notes, not narrative generalization"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "saudi-arabia-full-audit",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 99.6,
+        "tokens": 43974,
+        "tool_calls": 5,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Checks for all 6 defect types",
+          "passed": true,
+          "evidence": "All 6 covered with CLEAN/FOUND status"
+        },
+        {
+          "text": "Identifies **Output:** blocks",
+          "passed": true,
+          "evidence": "Found line 177 borderline, recommended relabelling"
+        },
+        {
+          "text": "Checks for natural skill names",
+          "passed": true,
+          "evidence": "Found 6 instances of Defect 2"
+        },
+        {
+          "text": "Checks for inline data injection",
+          "passed": true,
+          "evidence": "Checked and found CLEAN"
+        },
+        {
+          "text": "Produces prioritised summary",
+          "passed": true,
+          "evidence": "Summary table in priority order"
+        },
+        {
+          "text": "Correctly excludes anti-patterns and frameworks",
+          "passed": true,
+          "evidence": "ZATCA formulas, templates, prompts all excluded"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "saudi-arabia-full-audit",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.33,
+        "passed": 2,
+        "failed": 4,
+        "total": 6,
+        "time_seconds": 156.7,
+        "tokens": 43566,
+        "tool_calls": 4,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Checks for all 6 defect types",
+          "passed": true,
+          "evidence": "Used own 6-type taxonomy covering similar ground"
+        },
+        {
+          "text": "Identifies **Output:** blocks",
+          "passed": false,
+          "evidence": "Did NOT identify the **Output:** label on line 177"
+        },
+        {
+          "text": "Checks for natural skill names",
+          "passed": false,
+          "evidence": "No mention of skill names anywhere"
+        },
+        {
+          "text": "Checks for inline data injection",
+          "passed": false,
+          "evidence": "No check for data injection patterns"
+        },
+        {
+          "text": "Produces prioritised summary",
+          "passed": false,
+          "evidence": "Own taxonomy order, not skill's priority"
+        },
+        {
+          "text": "Correctly excludes anti-patterns and frameworks",
+          "passed": true,
+          "evidence": "No false positives on frameworks"
+        }
+      ]
+    }
+  ],
+
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": { "mean": 0.62, "stddev": 0.33, "min": 0.2, "max": 1.0 },
+      "time_seconds": {
+        "mean": 105.9,
+        "stddev": 11.5,
+        "min": 96.0,
+        "max": 122.2
+      },
+      "tokens": { "mean": 46965, "stddev": 3310, "min": 43974, "max": 51811 }
+    },
+    "without_skill": {
+      "pass_rate": { "mean": 0.35, "stddev": 0.03, "min": 0.33, "max": 0.4 },
+      "time_seconds": {
+        "mean": 139.7,
+        "stddev": 13.6,
+        "min": 123.4,
+        "max": 156.7
+      },
+      "tokens": { "mean": 44910, "stddev": 1735, "min": 43566, "max": 47471 }
+    },
+    "delta": {
+      "pass_rate": "+0.27",
+      "time_seconds": "-33.8",
+      "tokens": "+2055"
+    }
+  },
+
+  "notes": [
+    "Eval 2 (banking-plugin) assertions are MISCALIBRATED. The with-skill agent correctly applied the student-generated-data exception, but assertions assumed fabricated output exists. Baseline 'wins' on this eval by false-positiving. Recommend rewriting Eval 2 assertions to test exception handling accuracy.",
+    "Eval 3 (saudi-arabia) is the strongest discriminator: with-skill scores 100% vs baseline 33%. The skill's 6-defect taxonomy, exception rules, and priority ordering all produce measurably better results.",
+    "Eval 1 (malaysia-sukuk) shows the skill makes better classification decisions (borderline labelling vs no detection) but its fix recommendations are more conservative (relabelling vs intent table), which 'fails' assertions designed for typical fabricated outputs.",
+    "With-skill runs are FASTER on average (106s vs 140s) despite slightly more tokens, likely because the structured taxonomy prevents exploratory tangents.",
+    "Both with-skill and without-skill agents correctly avoid false positives on framework tables and prompt blocks — this assertion doesn't differentiate skill value.",
+    "KEY INSIGHT: The skill's primary value is in CLASSIFICATION PRECISION (what is/isn't fabricated, exception handling) and STRUCTURED TAXONOMY (consistent 6-type framework), not just in knowing about intent tables."
+  ]
+}

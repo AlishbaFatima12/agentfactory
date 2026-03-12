@@ -7,7 +7,7 @@
 | **[EN]** | Keep in English |
 | **[TR]** | Transliterate to Arabic script |
 | **[TL]** | Fully translate to Arabic |
-| **First use** | Show: `الترجمة (English term)` on first occurrence |
+| **First use** | Use the Arabic term by default. Add `(English term)` on first occurrence only when clarity, searchability, or repo convention requires it. |
 
 ## BiDi (Bidirectional) Text Conventions
 

@@ -7,7 +7,7 @@
 | **[EN]** | Keep in English |
 | **[TR]** | Transliterate to Urdu script |
 | **[TL]** | Fully translate to Urdu |
-| **First use** | Show: `ترجمہ (English term)` on first occurrence |
+| **First use** | اردو اصطلاح کو بطورِ پیش فرض استعمال کریں۔ `(English term)` صرف اسی وقت پہلی بار شامل کریں جب وضاحت، تلاش پذیری، یا repo convention اس کا تقاضا کرے۔ |
 
 ## BiDi (Bidirectional) Text Conventions
 

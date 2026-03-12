@@ -262,40 +262,22 @@ and our base macro was calibrated at $80/bbl, now $60/bbl.
 Jurisdiction: UK PRA
 ```
 
-The agent routes through `ifrs9-scenarios` and responds:
+The agent routes through `ifrs9-scenarios` to produce a probability-weighted ECL and PMA draft.
 
-```
-GOVERNING STANDARD: IFRS 9 — UK PRA
-DOMAIN: IFRS 9 ECL — Scenario Weighting + PMA
-JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+**What to expect:** The agent produces a scenario weighting calculation and a PMA documentation draft. Your output will vary based on your inputs, but look for these sections:
 
-PROBABILITY-WEIGHTED ECL
-  Upside:  15% x GBP 28M  = GBP 4.20M
-  Base:    40% x GBP 45M  = GBP 18.00M
-  Adverse: 30% x GBP 78M  = GBP 23.40M
-  Severe:  15% x GBP 145M = GBP 21.75M
-  Weighted ECL: GBP 67.35M
+| Section | Intent | What to Verify |
+| ------- | ------ | -------------- |
+| Probability-weighted ECL | Multiplies each scenario ECL by its weight and sums | Weights sum to 100%; weighted ECL exceeds base case ECL (non-linearity check) |
+| Non-linearity analysis | Quantifies how much the weighted ECL exceeds the base case | Adverse scenarios contribute disproportionately due to ECL convexity |
+| PMA draft | Documents the rationale, methodology, and governance for a management overlay | Rationale identifies a specific model limitation; quantum has a methodology, not just a guess |
+| Governance requirements | Specifies approval, time-limiting, and review schedule | Committee approval, expiry date, and quarterly review are all present |
 
-Non-linearity impact: Weighted ECL is 49% above base case
-ECL (GBP 45M) due to disproportionate adverse tail.
+:::note Your output will vary
+The specific ECL amounts and PMA quantum depend on your portfolio data, scenario weights, and the identified model limitation. The teaching point is the non-linearity principle (weighted ECL > base case ECL) and PMA governance discipline — verify the structure and governance completeness, not specific numbers.
+:::
 
-PMA DRAFT
-Type: Sector PMA — Oil price shock
-Rationale: Base macro calibrated at $80/bbl; current
-  spot $60/bbl (-25%). CRE portfolio has 18% exposure
-  to energy-dependent tenants. Model does not incorporate
-  oil price as an explicit variable.
-Suggested PMA: GBP 3.2M (methodology: stress the
-  energy-linked sub-portfolio PDs by 1.5x CCA uplift)
-Governance: Requires credit committee approval,
-  quarterly review, 6-month expiry.
-
-NOTE: The professional reviews the scenario weights
-and the PMA quantum; the agent calculated the weighted
-ECL and drafted the PMA documentation.
-```
-
-Priya reviews the scenario weights against the bank's latest economic outlook and validates the PMA quantum by cross-checking the energy-linked sub-portfolio exposure against her internal concentration report.
+Priya reviews the scenario weights against her bank's latest economic outlook and validates the PMA quantum by cross-checking the sub-portfolio exposure against her internal concentration report.
 
 ## Try With AI
 

@@ -1,0 +1,85 @@
+deck:
+  id: "ch19-10-accounting-reporting-practice-lab"
+  title: "Accounting & Reporting Practice Lab"
+  description: "Autonomous bookkeeping, IFRS financial statements, scheduled month-end close with exception handling, and multi-entity consolidation with intercompany elimination"
+  tags: ["ca-cpa", "practice-lab", "accounting", "consolidation", "ifrs"]
+  version: 1
+  lesson: 10
+  chapter: 19
+
+cards:
+  - id: "ch19-10-accounting-reporting-practice-lab-001"
+    front: "What are the four exercises in the Accounting & Reporting Practice Lab?"
+    back: "Exercise 8: Autonomous bookkeeping (50 min). Exercise 9: IFRS financial statements (60 min). Exercise 10: Scheduled month-end close (40 min). Exercise 11: Multi-entity consolidation (55 min)."
+    tags: ["lab-exercises", "overview"]
+    difficulty: "basic"
+
+  - id: "ch19-10-accounting-reporting-practice-lab-002"
+    front: "What is the deliberate error in the Exercise 9 trial balance, and what is the missing item?"
+    back: "The trial balance totals do not balance (307,700 debit vs 325,900 credit). The missing item is a deferred tax liability of PKR 18,200."
+    tags: ["exercise-9", "trial-balance", "suspense"]
+    difficulty: "intermediate"
+
+  - id: "ch19-10-accounting-reporting-practice-lab-003"
+    front: "What four intercompany elimination types does Exercise 11 require?"
+    back: "1. Investment elimination\n2. Intercompany loan elimination\n3. Intercompany trading elimination\n4. Unrealised profit in inventory elimination"
+    tags: ["exercise-11", "consolidation", "intercompany-elimination"]
+    difficulty: "basic"
+
+  - id: "ch19-10-accounting-reporting-practice-lab-004"
+    front: "Why is Exercise 10's Step 5 (exception escalation rules) described as more important than Step 4 (the scheduled task itself)?"
+    back: "A scheduled task without robust exception handling is silent failure — the agent runs autonomously and produces wrong answers without alerting anyone. Exception conditions encode the professional judgment embedded in the workflow."
+    tags: ["exercise-10", "exception-handling", "scheduled-tasks"]
+    difficulty: "intermediate"
+
+  - id: "ch19-10-accounting-reporting-practice-lab-005"
+    front: "Why does a bookkeeping agent that never flags ambiguous transactions cause a worse outcome than one that asks questions?"
+    back: "Never flagging means the agent codes uncertain transactions autonomously without alerting the CA/CPA. BECAUSE the CA/CPA's value is in answering questions the agent cannot answer — silent miscoding is harder to detect than explicit uncertainty."
+    tags: ["exercise-8", "bookkeeping", "professional-judgment"]
+    difficulty: "intermediate"
+    why: "How would you design an extension that reduces false flags without suppressing legitimate judgment escalations?"
+
+  - id: "ch19-10-accounting-reporting-practice-lab-006"
+    front: "In the consolidation, the parent sold PKR 12,000 to the subsidiary with a 25% gross margin. PKR 4,000 of that inventory remains unsold. What is the unrealised profit elimination amount?"
+    back: "PKR 1,000 — which is 25% gross margin on PKR 4,000 of unsold inventory. Debit cost of sales, credit inventory."
+    tags: ["exercise-11", "unrealised-profit", "consolidation"]
+    difficulty: "intermediate"
+
+  - id: "ch19-10-accounting-reporting-practice-lab-007"
+    front: "What happens to the unrealised profit elimination in the following year?"
+    back: "It reverses when the subsidiary sells the inventory to a third party — the profit is then realised from the group's perspective and no longer needs to be eliminated from consolidated statements."
+    tags: ["exercise-11", "unrealised-profit", "reversal"]
+    difficulty: "intermediate"
+    why: "What is the consequence of failing to reverse the prior-year unrealised profit elimination in the following year's consolidation?"
+
+  - id: "ch19-10-accounting-reporting-practice-lab-008"
+    front: "Under IFRS (IAS 7), what is the starting point for the indirect method cash flow statement?"
+    back: "Profit before tax — then add back non-cash items and working capital movements to calculate cash from operations."
+    tags: ["exercise-9", "cash-flow", "ias-7"]
+    difficulty: "basic"
+
+  - id: "ch19-10-accounting-reporting-practice-lab-009"
+    front: "What four exception conditions cause the scheduled month-end close to stop and alert immediately?"
+    back: "a) Trial balance does not balance. b) Any reconciliation difference exceeds PKR 50,000. c) Revenue more than 30% above or below same month last year. d) Any account that was zero last month now exceeds PKR 100,000."
+    tags: ["exercise-10", "exception-conditions", "scheduled-tasks"]
+    difficulty: "intermediate"
+
+  - id: "ch19-10-accounting-reporting-practice-lab-010"
+    front: "Why does Exercise 11 identify the unrealised profit elimination as the step most frequently done incorrectly?"
+    back: "It requires understanding the IFRS 10 principle — all traces of intra-group profit must be eliminated until goods are sold to a third party — not just mechanical rule application. It involves temporal reasoning across accounting periods."
+    tags: ["exercise-11", "unrealised-profit", "ifrs-10"]
+    difficulty: "advanced"
+    why: "How does the unrealised profit elimination change if only 80% of the subsidiary is owned, and a non-controlling interest exists?"
+
+  - id: "ch19-10-accounting-reporting-practice-lab-011"
+    front: "What is the investment elimination journal entry in a 100% owned subsidiary consolidation?"
+    back: "Debit parent's investment in subsidiary (PKR 40,000), Credit subsidiary's share capital (PKR 40,000) — removing both the asset and the equity it represents from the consolidated view."
+    tags: ["exercise-11", "investment-elimination", "ifrs-10"]
+    difficulty: "intermediate"
+
+  - id: "ch19-10-accounting-reporting-practice-lab-012"
+    front: "What is the key difference between US GAAP and IFRS for classification of interest in the cash flow statement?"
+    back: "IFRS (IAS 7): interest may be in operating or financing activities. US GAAP (ASC 230): interest must be in operating activities."
+    tags: ["exercise-9", "ifrs-vs-gaap", "cash-flow"]
+    difficulty: "intermediate"
+    why: "Why does this classification difference matter for a company preparing both IFRS and US GAAP statements?"

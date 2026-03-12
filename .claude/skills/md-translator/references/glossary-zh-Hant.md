@@ -7,7 +7,7 @@
 | **[EN]** | Keep in English |
 | **[TR]** | Transliterate to Chinese characters (phonetic approximation) |
 | **[TL]** | Fully translate to Traditional Chinese |
-| **First use** | Show: `翻譯詞 (English term)` on first occurrence |
+| **First use** | Use the translated term by default. Add `(English term)` on first occurrence only when clarity, searchability, or repo convention requires it. |
 
 ## Notes on Traditional Chinese
 

@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+      "passed": true,
+      "evidence": "Did not flag any 'Claude in Excel' usage as a terminology defect. Issue 5 discusses plugin naming inconsistency but does not claim 'Claude in Excel' is wrong for Ch17."
+    },
+    {
+      "text": "Identifies inline data injection or paste-based patterns in exercise prompts",
+      "passed": true,
+      "evidence": "Found the circular data injection pattern (Issue 4, HIGH severity): practice data prompt seeds $3,420 discrepancy, then worked example 'discovers' the exact same amount. Identified as the 'core defect' of the lesson."
+    },
+    {
+      "text": "Checks for missing skill names in exercise prompts",
+      "passed": true,
+      "evidence": "Issues 7, 9, 10, 11 flag missing tool references: close-management skill claims without evidence, skill inspection paths missing, command argument format unexplained, undocumented command argument."
+    },
+    {
+      "text": "Produces a prioritised defect summary (Defect 1 highest priority)",
+      "passed": false,
+      "evidence": "Produced priority matrix (Must Fix/Should Fix/Nice to Fix) but ordered by own severity assessment. Data injection (Issue 4) is prioritized above fabricated output (Issues 1, 2) in the 'Must Fix' section — does not follow Defect 1 > Defect 2 > ... ordering."
+    },
+    {
+      "text": "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)",
+      "passed": false,
+      "evidence": "No explicit discussion of Ch17 vs Ch18+ terminology distinction. Does not mention that 'Claude in Excel' is correct for this chapter. The cowork-content.md rules are referenced only in Issue 8 (skill auto-activation) but not for terminology."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 2,
+    "total": 5,
+    "pass_rate": 0.6
+  }
+}

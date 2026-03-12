@@ -15,7 +15,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, BookOpen, Layers, Lightbulb, Github, X } from "lucide-react";
+import { Menu, BookOpen, Layers, Lightbulb, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
@@ -97,21 +97,6 @@ export default function Navbar() {
 
           {/* RIGHT: Actions */}
           <div className="flex items-center gap-2">
-            {/* GitHub - Hidden on Homepage, shows at 997px+ */}
-            {!isHomepage && (
-              <Button
-                variant="ghost"
-                size="icon"
-                asChild
-                className="hidden docs:inline-flex"
-              >
-                <Link to="https://github.com/panaversity/ai-native-software-development">
-                  <Github className="w-5 h-5" />
-                  <span className="sr-only">GitHub</span>
-                </Link>
-              </Button>
-            )}
-
             {/* Theme Toggle - Already uses Button variant="ghost" size="icon" */}
             <ModeToggle />
 
@@ -190,19 +175,6 @@ export default function Navbar() {
                         <Link to="/docs/preface-agent-native">
                           <Lightbulb className="w-5 h-5" />
                           Resources
-                        </Link>
-                      </Button>
-
-                      <div className="h-px bg-border my-2" />
-
-                      <Button
-                        variant="ghost"
-                        asChild
-                        className="justify-start h-12 text-muted-foreground"
-                      >
-                        <Link to="https://github.com/panaversity/ai-native-software-development">
-                          <Github className="w-5 h-5" />
-                          Source Code
                         </Link>
                       </Button>
                     </nav>

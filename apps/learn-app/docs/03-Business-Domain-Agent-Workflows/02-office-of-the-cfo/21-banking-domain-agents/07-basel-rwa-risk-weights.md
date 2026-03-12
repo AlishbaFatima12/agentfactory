@@ -264,41 +264,21 @@ CET1: GBP 1,200M
 Jurisdiction: UK PRA
 ```
 
-The agent routes through `basel-rwa-credit` and responds:
+The agent routes through `basel-rwa-credit` to produce an SA RWA calculation and output floor assessment.
 
-```
-GOVERNING STANDARD: Basel III/IV — UK PRA
-DOMAIN: Credit Risk RWA — SA + Output Floor
-JURISDICTION: United Kingdom — PRA Rulebook / UK CRR
+**What to expect:** The agent produces an asset-class-level RWA breakdown and output floor analysis. Your output will vary based on your portfolio, but look for these sections:
 
-SA RWA CALCULATION
-  Sovereign (0%):     GBP 0M
-  Corporate A (75%):  GBP 1,875M
-  Corporate unrated (100%): GBP 1,800M
-  Mortgage <=80% (35%): GBP 1,925M
-  Mortgage >80% (50%):  GBP 600M
-  Retail unsecured (75%): GBP 1,500M
-  CRE <=60% (60%):   GBP 480M
-  Past-due (150%):    GBP 300M
-  Total SA RWA:       GBP 8,480M
+| Section            | Intent                                              | What to Verify                                                        |
+| ------------------ | --------------------------------------------------- | --------------------------------------------------------------------- |
+| SA RWA calculation | Applies prescribed risk weights to each asset class | Risk weights match the SA table for each asset class and rating       |
+| Output floor       | Compares IRB RWA to 72.5% of SA RWA                 | Floor = 72.5% x SA RWA; reported RWA = max(IRB RWA, floor)            |
+| CET1 ratios        | Computes ratios under SA, IRB, and floored RWA      | Three ratios show the floor's impact on the reported capital position |
 
-OUTPUT FLOOR (72.5% fully phased)
-  Floor RWA: 72.5% x GBP 8,480M = GBP 6,148M
-  IRB RWA:   GBP 4,920M
-  Floor binds: YES (IRB < Floor)
-  Reported RWA: GBP 6,148M
+:::note Your output will vary
+The specific RWA amounts depend on your portfolio composition and asset class assignments. The teaching point is that the output floor constrains IRB banks from reporting RWA far below SA levels — verify the risk weight assignments and floor calculation methodology, not specific numbers.
+:::
 
-CET1 RATIOS
-  Under SA:          14.2%
-  Under IRB (raw):   24.4%
-  Under IRB (floored): 19.5%
-
-NOTE: The professional reviews the risk weight assignments
-and asset class mappings; the agent calculated the SA RWA,
-floor impact, and adjusted capital ratios.
-```
-
-Fatima reviews the asset class assignments -- particularly whether the A-rated corporates have valid external ratings that support the 75% weight rather than 100% -- and validates that the floor impact of 4.9 percentage points is consistent with her capital planning projections.
+Fatima reviews the asset class assignments — particularly whether rated corporates have valid external ratings that support the assigned weight — and validates that the floor impact is consistent with her capital planning projections.
 
 ## Try With AI
 

@@ -1,0 +1,13 @@
+{
+  "eval_id": 3,
+  "eval_name": "saudi-arabia-full-audit",
+  "prompt": "Run a full prompt quality audit on this lesson — check all six defect types: apps/learn-app/docs/03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/20-islamic-finance-domain-agents/10-saudi-arabia.md",
+  "assertions": [
+    "Checks for all 6 defect types, not just fabricated output",
+    "Identifies any fabricated output blocks preceded by **Output:**",
+    "Checks whether exercise prompts include natural skill names",
+    "Checks for inline data injection patterns (Read demo-data.md outside L01)",
+    "Produces a prioritised summary (Defect 1 first, then 2-6)",
+    "Anti-pattern examples and framework tables are correctly excluded from defect list"
+  ]
+}

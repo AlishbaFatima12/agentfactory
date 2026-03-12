@@ -1,0 +1,105 @@
+{
+  "expectations": [
+    {
+      "text": "Checks for all 6 defect types, not just fabricated output",
+      "passed": true,
+      "evidence": "The report has six explicit sections titled 'Defect 1: Fabricated Agent Output' through 'Defect 6: Plugin/Tool Terminology', each with a status assessment (CLEAN or findings). All six defect types from the lesson-prompt-improver skill are covered."
+    },
+    {
+      "text": "Identifies any fabricated output blocks preceded by **Output:**",
+      "passed": false,
+      "evidence": "Line 177 of the lesson contains a bold '**Output:**' marker followed by explanatory text ('Zakat is recognised as an expense in the Saudi IFI's income statement. It is filed with ZATCA annually, within 120 days of fiscal year-end.'). The audit report did NOT identify or mention this **Output:** marker at all. While the content after it is explanatory prose rather than fabricated numbers, the audit should have flagged the marker's presence and explicitly analyzed whether it constitutes a defect. The report only references code blocks at 'lines 134-143' and 'lines 165-175' in its Defect 1 analysis, completely missing the **Output:** tag on line 177."
+    },
+    {
+      "text": "Checks whether exercise prompts include natural skill names",
+      "passed": true,
+      "evidence": "Defect 2 section (lines 53-99) systematically reviews all 6 exercise prompts (E7-S1 through E7-S6) and all 3 TWA prompts, noting that none reference skill names. The report identifies the Islamic Finance plugin's 13 skills and 4 commands, then flags 5 exercise prompts and 1 TWA prompt as needing skill name additions. E7-S6 is correctly exempted as an error-detection exercise."
+    },
+    {
+      "text": "Checks for inline data injection patterns",
+      "passed": true,
+      "evidence": "Defect 3 section (lines 103-111) explicitly checks for 'Read demo-data.md' and similar data file injection instructions. The report correctly notes that E7-S2's in-prompt data (Share capital SAR 20B, etc.) is the correct pattern — the data IS the prompt. It also verifies that the exercise data reference is correctly placed in the ':::info Exercise Requirements' block, not inside prompt code blocks."
+    },
+    {
+      "text": "Produces a prioritised summary (Defect 1 first, then 2-6)",
+      "passed": true,
+      "evidence": "The main report sections are ordered sequentially: 'Defect 1: Fabricated Agent Output' → 'Defect 2: Missing Skill Name in Prompt' → 'Defect 3: Inline Data Injection' → 'Defect 4: Fiction-Researching Prompt' → 'Defect 5: Narrative Referencing Fabricated Content' → 'Defect 6: Plugin/Tool Terminology'. The summary table (lines 188-196) maintains this ordering. The 'Top Priority Fixes' section (lines 213-222) further prioritizes by impact severity."
+    },
+    {
+      "text": "Anti-pattern examples and framework tables are correctly excluded from defect list",
+      "passed": true,
+      "evidence": "The report correctly excludes: (1) the ZATCA formula code block (lines 134-143 of lesson) — noted as 'a framework definition, not fabricated output'; (2) journal entry templates (lines 165-175) — noted as 'accounting notation patterns, not agent output'; (3) the ZATCA vs AAOIFI comparison table (lines 150-158 of lesson) is not flagged as a defect. The report also correctly identifies Try With AI prompt blocks as 'student inputs, not agent outputs'."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 1,
+    "total": 6,
+    "pass_rate": 0.83
+  },
+  "execution_metrics": {
+    "tool_calls": 10,
+    "total_tool_calls": 10,
+    "errors_encountered": 0,
+    "output_chars": 15969,
+    "transcript_chars": 15969
+  },
+  "timing": {
+    "executor_duration_seconds": 30,
+    "total_duration_seconds": 30
+  },
+  "claims": [
+    {
+      "claim": "The lesson does not contain any **Output:** or **Sample Output:** code blocks with fake agent-generated numbers",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Line 177 of the lesson contains '**Output:**' followed by explanatory text. While not a code block and not containing fake numbers, the claim that there are no **Output:** markers is incorrect — there is one. The report should have identified it and analyzed whether it constitutes a defect."
+    },
+    {
+      "claim": "5 exercise prompts and 1 Try With AI prompt need skill name additions",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Verified against lesson source: E7-S1 through E7-S5 use 'Ask your AI assistant:' without naming any skill. TWA-1 through TWA-3 also lack skill names. The report correctly identifies E7-S6 as exempt (error detection). The count of 5 exercise prompts + 1 TWA prompt needing fixes is accurate."
+    },
+    {
+      "claim": "The ZATCA formula (lines 134-143) is a framework definition, not fabricated output",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Verified in lesson source: lines 134-143 contain the ZATCA zakat base formula with variable placeholders (Share Capital, Statutory Reserves, etc.) and the multiplication formula. This is a structural definition, not fake agent output."
+    },
+    {
+      "claim": "Exercise data reference is correctly placed in the :::info Exercise Requirements block (lines 200-204)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Lines 200-204 of the lesson contain ':::info Exercise Requirements' with plugin and exercise data references. The exercise data link is properly placed outside the prompt blocks."
+    },
+    {
+      "claim": "3 fiction-researching prompts identified (E7-S1, E7-S4, TWA-2)",
+      "type": "quality",
+      "verified": true,
+      "evidence": "E7-S1 asks 'Based on publicly available information about Al Rajhi Bank's financial reporting' — asks agent to recall specific financial statement details. E7-S4 asks 'What ESG/sustainability disclosures does SAMA encourage' — asks agent to report on evolving regulatory guidance. TWA-2 asks 5 questions about Al Rajhi's specific financial statement structure. All three patterns would likely produce hallucinated or outdated information."
+    },
+    {
+      "claim": "E7-S2 (ZATCA Zakat Computation) is exemplary — provides all necessary data inline with verifiable numerical answers",
+      "type": "quality",
+      "verified": true,
+      "evidence": "E7-S2 provides complete numerical inputs (Share capital SAR 20B, Statutory reserves SAR 4.5B, Retained earnings SAR 3.2B, Fixed assets SAR 1.8B, Long-term sukuk investments SAR 5.0B) and the 'Check your work' section provides the correct answer (SAR 20.9B base, SAR 522.5M obligation). This is indeed a well-structured, self-contained prompt."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Identifies any fabricated output blocks preceded by **Output:**",
+        "reason": "This assertion is well-designed and caught a genuine miss. The audit failed to notice the **Output:** marker on line 177 of the lesson. Even though the content after it is not fabricated numbers, a thorough audit should flag every **Output:** marker and analyze it. This is a discriminating assertion."
+      },
+      {
+        "reason": "No assertion checks whether the fiction-researching analysis is correct — i.e., whether the prompts flagged as fiction-researching genuinely would cause hallucination vs. prompts that are safe. E7-S1 references 'publicly available information about Al Rajhi Bank' which is a real company with published reports. The distinction between 'fiction-researching' (fictional entities) and 'hallucination-prone factual recall' (real entities, specific details) is important but not tested by any assertion."
+      },
+      {
+        "reason": "No assertion checks whether the report correctly handles the TWA-3 prompt (Vision 2030 PIF sukuk portfolio). TWA-3 asks about SAMA prudential requirements for sukuk concentration limits — this has the same fiction-researching characteristics as E7-S4 (asking about specific regulatory guidance the agent would likely fabricate) but the audit report marks TWA-3 as clean. This inconsistency goes unchecked."
+      }
+    ],
+    "overall": "The assertions cover the main dimensions well, particularly the prioritized ordering and anti-pattern exclusion checks. The **Output:** identification assertion proved discriminating. Two gaps: (1) no assertion validates whether fiction-researching findings are internally consistent, and (2) no assertion checks whether the report's severity ratings are appropriate."
+  }
+}

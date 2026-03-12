@@ -5,7 +5,7 @@ description: "This skill should be used when translating Markdown (.md) and MDX 
 
 # Markdown & MDX Translator Skill
 
-**Version**: 2.1.0
+**Version**: 2.2.0
 **Pattern**: Rules-Based Translation Pipeline
 **Type**: Automation (file-in, file-out)
 
@@ -48,15 +48,17 @@ Gather context to ensure successful implementation:
 | **Codebase** | `i18n/` directory, `docusaurus.config.js` i18n config | If `i18n.locales` exists, use those locale codes. If custom docs path, adjust mirror path. |
 | **Conversation** | Target language, source file path, formality preferences | If language already mentioned in conversation, don't re-ask. |
 | **Skill References** | `references/translation-rules.md`, `references/glossary-{lang}.md` | Load glossary before translating. If no glossary exists, proceed without. |
-| **Existing Translations** | `i18n/{lang-code}/` for previously translated files | Match terminology from existing translations for consistency. |
+| **Existing Translations** | `i18n/{lang-code}/` for previously translated files | Read 2-3 nearby translated files first. Match terminology, tone, heading style, and RTL/LTR conventions from the repo, not from abstract defaults. |
 | **Docusaurus version** | Check `package.json` for `@docusaurus/core` version | v2 vs v3 may differ in i18n path structure. See `references/docusaurus-i18n.md`. |
 
-```bash
+```powershell
 # Discovery commands — run before translating:
-ls i18n/ 2>/dev/null                          # Existing i18n structure
-grep -l "i18n" docusaurus.config.* 2>/dev/null # i18n config
-ls .claude/skills/md-translator/references/glossary-*.md 2>/dev/null  # Glossaries
-grep '"@docusaurus/core"' package.json 2>/dev/null  # Docusaurus version
+Get-ChildItem i18n -ErrorAction SilentlyContinue
+rg -n "i18n|localeConfigs|direction" docusaurus.config.*
+Get-ChildItem .agents/skills/md-translator/references/glossary-*.md -ErrorAction SilentlyContinue
+rg -n '"@docusaurus/core"' package.json
+# For RTL locales, inspect nearby translations for inline LTR span usage:
+rg -n '<span dir="ltr">' i18n/{lang-code} -g '*.md' -g '*.mdx'
 ```
 
 ---
@@ -80,7 +82,7 @@ grep '"@docusaurus/core"' package.json 2>/dev/null  # Docusaurus version
 | Input | Default | Rationale |
 |-------|---------|-----------|
 | Formality | Match source tone | Preserves author intent |
-| Technical terms | Keep in English + parenthetical on first use | Standard in technical translation |
+| Technical terms | Follow glossary and repo precedent. Keep branded/product terms in English, but translate generic prose terms naturally. | Prevents over-English translation that reads like source text |
 | Batch mode | Single file | Safer default |
 | Output path | `i18n/{locale}/docusaurus-plugin-content-docs/current/{mirror-path}` | Docusaurus convention |
 | Glossary | Use `references/glossary-{lang}.md` if exists, else proceed without | Graceful degradation |
@@ -99,7 +101,8 @@ grep '"@docusaurus/core"' package.json 2>/dev/null  # Docusaurus version
    - Code blocks — fenced (``` ), indented, AND nested (quadruple-backtick wrapping triple-backtick)
    - Inline code (backtick-wrapped)
    - Import/export statements
-   - JSX component names, props, and expressions (`{variable}`, `<Component />`)
+   - JSX component names and structural syntax (`<Component />`)
+   - JSX/MDX prop keys, JS object keys, commas, braces, booleans, numbers, and expressions (`{variable}`, `{count + 1}`)
    - URLs and file paths
    - Anchor IDs and internal references
    - HTML tag names and attributes (except visible text content)
@@ -111,6 +114,7 @@ grep '"@docusaurus/core"' package.json 2>/dev/null  # Docusaurus version
    - Link display text `[This Text](url)`, image alt text `![This Text](path)`
    - Table cell content
    - JSX text nodes (visible text inside components)
+   - Human-readable string literal values inside JSX/MDX props and JS data structures, such as `title="..."`, `label="..."`, `question: "..."`, `options: ["..."]`, `explanation: "..."`, `source: "..."` when they are rendered to users
    - YAML frontmatter string values: `title`, `description`, `sidebar_label`
    - YAML multiline block scalars (`|` and `>`) that contain prose
 6. **Detect text direction** — if target language is RTL (Arabic, Urdu, Hebrew, Persian), note for output
@@ -123,12 +127,16 @@ Apply all 50 rules from `references/translation-rules.md` while translating each
 - Rules 1-18: Meaning over words, natural grammar, correct formality, no false friends
 - Rules 19-21: Preserve formatting structure, emphasis, numbering
 - Rules 22-28: Markdown syntax untouched, code blocks untouched, links preserved
-- Rules 29-35: JSX/MDX components untouched, only text nodes translated
+- Rules 29-35: JSX/MDX structure untouched; translate only user-facing text nodes and string literals
 - Rules 36-38: File safety, no compilation breakage, special chars intact
 - Rules 39-42: Native fluency, contextual accuracy, consistency, master rule
 - Rules 43-50: **BiDi text safety** (RTL languages only) — paragraph starts, punctuation buffering, inline code placement, mandatory BiDi scan
 
 **Process each zone independently** to avoid cross-contamination between protected and translatable content.
+
+**MDX data rule**: In components such as `Quiz`, `Tabs`, `TabItem`, `Steps`, or any prop containing arrays/objects, translate only user-facing string values. Preserve keys, quotes, commas, braces, brackets, booleans, numeric values, and component syntax exactly.
+
+**Repo-convention rule**: If existing translations in the same locale already use a project convention for mixed RTL/LTR text, follow that convention. In this repo, Urdu docs often wrap mixed-script inline terms with `<span dir="ltr">...</span>` for stable rendering. Prefer repo consistency over generic defaults.
 
 ### Phase 3: Quality Validation
 
@@ -171,7 +179,7 @@ Translate the text content. Preserve the `>` or `|` scalar indicator.
 - Changing `slug`, `id`, `tags`, `skills`, or `keywords` values
 - Translating code comments inside code blocks
 - Translating component names (`<Alert>` stays `<Alert>`)
-- Translating prop values (`type="warning"` stays as-is)
+- Translating structural prop values or identifiers (`type="warning"`, `value="cli"`, `variant="secondary"` stay as-is)
 - Word-for-word literal translation that sounds unnatural
 - Mixing formality levels within a single file
 - Translating file names without explicit instruction
@@ -279,6 +287,14 @@ After translating, scan every paragraph and verify:
 - Do NOT add `dir="rtl"` to individual elements — Docusaurus handles this at the page level
 - **Exception**: If a specific block renders incorrectly even with page-level RTL (e.g., a mixed-direction table), use `<div dir="rtl">` as a targeted fix and document why
 
+### When `<span dir="ltr">...</span>` Is Needed
+
+- Some repos intentionally wrap inline English product names, acronyms, and mixed-script phrases with `<span dir="ltr">...</span>` inside RTL prose
+- Before translating RTL content, inspect nearby existing translations and match the local convention
+- In this repo, if nearby Urdu docs use inline LTR spans, apply them consistently in headings, paragraphs, and tables for mixed-script inline terms
+- Do NOT wrap code blocks, inline code, URLs, JSX identifiers, prop keys, or pure RTL text
+- Use repo convention first; use Unicode control characters only as a last resort
+
 ---
 
 ## Output Format
@@ -287,11 +303,7 @@ The translated file must:
 1. Be a valid `.md` or `.mdx` file (same type as source)
 2. Have identical structure to the source (same number of headings, lists, code blocks)
 3. Compile without errors (for MDX)
-4. Include a translation metadata comment at the top (after frontmatter):
-
-```markdown
-<!-- Translated from English to [Language] | Source: [source-path] | Date: [YYYY-MM-DD] -->
-```
+4. Match repo conventions for comments and metadata. Do NOT add translation metadata comments unless the repo already uses them or the user explicitly asks for them.
 
 ---
 
@@ -317,6 +329,12 @@ Before delivering any translation, verify ALL items:
 - [ ] YAML frontmatter keys unchanged (only values translated)
 - [ ] `slug`, `id`, `tags`, `skills`, `keywords` values unchanged
 - [ ] Nested code blocks (quadruple-backtick) preserved correctly
+
+### Component/Data Integrity
+- [ ] Same number of JSX/MDX data entries as source (arrays, objects, prop lists)
+- [ ] Same number of question objects, option strings, explanations, sources, and `correctOption` entries for quizzes/assessments
+- [ ] No prop keys, object keys, braces, brackets, commas, or quotes removed or reordered accidentally
+- [ ] Human-readable string literals translated without breaking surrounding JS/MDX syntax
 
 ### Translation Quality
 - [ ] No untranslated human-readable text left behind
@@ -391,7 +409,7 @@ When translating an entire chapter directory:
 
 | File | When to Read |
 |------|--------------|
-| `references/translation-rules.md` | Always — contains full 42-rule set |
+| `references/translation-rules.md` | Always — contains full 50-rule set |
 | `references/glossary-{lang}.md` | When translating to that language — term consistency |
 | `references/glossary-template.md` | When adding a new language — copy and fill in |
 | `references/docusaurus-i18n.md` | When setting up i18n directory structure or resolving output paths |

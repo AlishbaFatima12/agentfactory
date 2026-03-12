@@ -1,0 +1,93 @@
+{
+  "expectations": [
+    {
+      "text": "Recognises that fabricated outputs have already been replaced with intent tables",
+      "passed": true,
+      "evidence": "Under D1, the report states: 'The two Meridian Logistics outputs (lines 206-215 and 222-232) are already converted to intent tables. Clean.' The D1 count is 0 and the summary table shows 'D1: Fabricated Agent Output | 0'."
+    },
+    {
+      "text": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+      "passed": true,
+      "evidence": "The report explicitly exempts this: 'Why this is NOT a defect: This is a deliberate anti-pattern example for teaching the Compliance Gap... Per the skill\u2019s exception rules, anti-pattern examples used for teaching contrast are exempt.' D1 count remains 0."
+    },
+    {
+      "text": "Does NOT flag the intent tables themselves as fabricated output",
+      "passed": true,
+      "evidence": "The intent tables are described as 'already converted to intent tables. Clean.' under D1. They are not counted as fabricated output — D1 count is 0."
+    },
+    {
+      "text": "Identifies the lesson as mostly clean / low defect count",
+      "passed": true,
+      "evidence": "Summary states 'Overall: 4 low-severity issues remain. No critical defects.' Verdict says 'The lesson is in good shape post-fix. The four remaining issues are all LOW severity.' Zero critical or high severity findings."
+    },
+    {
+      "text": "If any defects remain, correctly categorises them using the 6-type taxonomy",
+      "passed": true,
+      "evidence": "All 4 remaining issues are categorised using the D1-D6 taxonomy: D2 (Missing Skill Name in Prompt, 2 instances at lines 239 and 300) and D6 (Plugin/Tool Terminology, 2 instances at line 348). The summary table lists all 6 defect types with correct counts. Categories are applied correctly — D2 for missing skill names in primary exercise prompts, D6 for 'Claude' vs 'Cowork' terminology and incomplete plugin suite name."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": 5,
+    "errors_encountered": 0,
+    "output_chars": 3842,
+    "transcript_chars": 3842
+  },
+  "timing": {
+    "executor_duration_seconds": 45,
+    "total_duration_seconds": 45
+  },
+  "claims": [
+    {
+      "claim": "Lines 246-269 contain a fabricated LinkedIn DM for Hamza Qureshi used as a Compliance Gap anti-pattern",
+      "type": "factual",
+      "verified": "unverifiable",
+      "evidence": "Cannot verify line numbers without the source lesson file, but the auditor cites specific lines and the content description is consistent with a Compliance Gap teaching example"
+    },
+    {
+      "claim": "Lines 271-273 include a :::note Illustrative example disclaimer",
+      "type": "factual",
+      "verified": "unverifiable",
+      "evidence": "Specific line reference; cannot cross-check without source file but auditor was consistent in citing line numbers throughout"
+    },
+    {
+      "claim": "Two Meridian Logistics outputs (lines 206-215 and 222-232) are already converted to intent tables",
+      "type": "factual",
+      "verified": "unverifiable",
+      "evidence": "Consistent with the eval context that Ch23 was recently fixed in commits 4a92156b and 75906eee which 'replace fabricated outputs with intent tables'"
+    },
+    {
+      "claim": "4 low-severity issues remain with no critical defects",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Arithmetic checks out: 2 D2 instances + 2 D6 instances = 4 total. All marked LOW severity. No D1/D3/D4/D5 defects found."
+    },
+    {
+      "claim": "D6: Try With AI setup line should use 'Cowork' not 'Claude' per cowork-content.md",
+      "type": "factual",
+      "verified": true,
+      "evidence": "The cowork-content.md rule file (loaded in project rules) confirms: 'Use these prompts in Cowork or your preferred AI assistant' is the correct pattern for Ch18+"
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Does NOT flag the preserved anti-pattern example (Hamza DM / compliance gap) as a defect",
+        "reason": "This is a strong discriminating assertion — it tests whether the skill understands the exemption for pedagogical anti-patterns, which is a nuanced judgment. Good as-is."
+      },
+      {
+        "reason": "Consider adding an assertion that checks whether the D2 and D6 findings are actionable — i.e., do the recommended fixes make sense and are they specific enough to implement? The current assertions verify classification but not recommendation quality. In this run, the recommendations were specific and correct (e.g., exact replacement text for D6), but that quality isn't being tested."
+      },
+      {
+        "reason": "Assertion 1 ('Recognises intent tables') and assertion 3 ('Does NOT flag intent tables as fabricated') overlap significantly — both essentially check that the skill correctly handles intent tables. Consider merging or differentiating: assertion 1 could check for explicit acknowledgment of the prior fix, while assertion 3 could check that intent tables aren't miscategorised under any defect type (not just D1)."
+      }
+    ],
+    "overall": "Strong eval set for this scenario. The assertions cover the key discrimination challenge (distinguishing preserved anti-patterns from defects, recognising already-fixed content). The overlap between assertions 1 and 3 is minor. The main gap is that recommendation quality goes untested."
+  }
+}

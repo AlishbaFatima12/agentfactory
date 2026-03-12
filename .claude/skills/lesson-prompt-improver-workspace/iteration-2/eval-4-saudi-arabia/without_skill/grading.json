@@ -1,0 +1,40 @@
+{
+  "expectations": [
+    {
+      "text": "Checks for all 6 defect types, not just fabricated output",
+      "passed": true,
+      "evidence": "Used 6-type taxonomy: Fabricated Output, Missing Skill/Tool Refs, Missing/Redundant Data, Hallucination-Prone, Pedagogical Weakness, Format/Structural. Different names but covers similar ground."
+    },
+    {
+      "text": "Identifies any fabricated output blocks preceded by **Output:**",
+      "passed": true,
+      "evidence": "Found **Output:** block at line 177. Correctly assessed as 'explanatory annotation about accounting effect of journal entries... NOT fabricated agent output.' Recommended renaming to 'Accounting Effect:' for clarity."
+    },
+    {
+      "text": "Checks whether exercise prompts include natural skill names",
+      "passed": false,
+      "evidence": "Checked for 'Jurisdiction/Framework prefix' patterns (routing signals) rather than natural skill names like 'Use the islamic-finance skill...' The skill's Defect 2 checks for skill name prefixes; the baseline checks for jurisdiction routing triggers — a different concept."
+    },
+    {
+      "text": "Checks for inline data injection patterns",
+      "passed": true,
+      "evidence": "Thoroughly checked all 9 prompts for data injection. Found 3 HIGH (E7-S1, E7-S4, E7-S5 missing data), 1 MEDIUM (E7-S3 partially injected). Most thorough data analysis of any agent."
+    },
+    {
+      "text": "Produces a prioritised summary (Defect 1 first, then 2-6)",
+      "passed": false,
+      "evidence": "Prioritised recommendations ordered by own impact assessment: jurisdiction prefix > data injection > hallucination reduction > answer key > SAMA question > code blocks. Does not follow Defect 1 > 2 > 3 > 4 > 5 > 6 ordering."
+    },
+    {
+      "text": "Anti-pattern examples and framework tables are correctly excluded from defect list",
+      "passed": true,
+      "evidence": "Correctly excluded: **Output:** block (line 177), ZATCA formula code block, ZATCA vs AAOIFI comparison table, journal entry templates, Al Rajhi benchmark bullets. Listed in 'Correctly Excluded' section."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 2,
+    "total": 6,
+    "pass_rate": 0.67
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "expectations": [
+    {
+      "text": "Does NOT flag 'Claude in Excel' as a terminology defect (Ch17 uses it correctly)",
+      "passed": true,
+      "evidence": "D6 section explicitly states: \"'Claude in Excel' is used correctly in Ch17 (it refers to the specific product taught in this chapter).\" D6 count is 0 in the summary table. The skill correctly recognized Ch17's legitimate use of the term."
+    },
+    {
+      "text": "Identifies inline data injection or paste-based patterns in exercise prompts",
+      "passed": false,
+      "evidence": "The audit report marks D3 as CLEAN, stating 'No instances of Read demo-data.md or similar patterns.' However, Prompt 3 (lines 351-368 of the lesson) contains a clear paste-based data injection pattern: the student is instructed to paste fabricated reconciliation items ('3 timing differences totalling $5,200', '1 bank charge of $150 not posted to GL', '1 unidentified item of $780') directly into a prompt. This is inline data injection — fabricated numbers hardcoded into a prompt for the student to copy-paste. The skill only checked for file-reference patterns (Read demo-data.md) and missed the paste-based variant."
+    },
+    {
+      "text": "Checks for missing skill names in exercise prompts",
+      "passed": true,
+      "evidence": "D2 section explicitly states: 'Exercises use explicit /command-name invocations (correct for commands). Try With AI prompts are conceptual/educational, not triggering specific skills. No skill-name additions needed.' The skill correctly identified that this lesson uses slash commands (/reconciliation, /journal-entry, /variance-analysis, /income-statement, /sox-testing) rather than skills, so skill-name additions are not applicable. This is a reasonable assessment."
+    },
+    {
+      "text": "Produces a prioritised defect summary (Defect 1 highest priority)",
+      "passed": true,
+      "evidence": "The report begins with a summary table listing all six defect types (D1-D6) with counts and severities. D1 (Fabricated Agent Output) is listed first as the highest-priority finding (borderline, Low severity). Detailed findings section leads with D1, followed by D5 (conditional on D1). Clean findings are grouped at the end under 'Defects Not Found.'"
+    },
+    {
+      "text": "Correctly distinguishes between Ch17 (Claude in Excel is correct) and Ch18+ (should be Cowork)",
+      "passed": true,
+      "evidence": "D6 section states: \"'Claude in Excel' is used correctly in Ch17 (it refers to the specific product taught in this chapter). 'Cowork' is used correctly when referring to the Cowork platform. The lesson correctly describes the architectural shift between the two products.\" The skill explicitly understood the Ch17 vs Ch18+ distinction."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 1,
+    "total": 5,
+    "pass_rate": 0.8
+  },
+  "execution_metrics": {
+    "tool_calls": 5,
+    "total_tool_calls": 5,
+    "errors_encountered": 0,
+    "output_chars": 6874,
+    "transcript_chars": 6874
+  },
+  "timing": {
+    "executor_duration_seconds": 45,
+    "total_duration_seconds": 45
+  },
+  "claims": [
+    {
+      "claim": "No instances of inline data injection found (D3 CLEAN)",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Prompt 3 (lesson lines 351-368) contains paste-based data injection: hardcoded fabricated reconciliation items with specific dollar amounts ($5,200, $150, $780) that the student is told to copy into the AI. The skill's D3 check only looked for file-reference patterns (Read demo-data.md), not paste-based injection."
+    },
+    {
+      "claim": "The one borderline defect involves a worked-example table whose numbers are partially student-seeded but partially fabricated",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The D1 analysis correctly identifies that the practice data prompt (lines 139-154) seeds $3,420 total and categories, but the specific breakdown ($2,180/$840/$400) and item counts (4 checks, 2 bank charges) are fabricated. The borderline classification is reasonable — the total and categories are student-seeded but the specific numbers are not."
+    },
+    {
+      "claim": "Exercises use explicit /command-name invocations (correct for commands)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Exercises 5-7 all use explicit slash commands: /reconciliation, /journal-entry, /variance-analysis, /income-statement, /sox-testing. These are commands, not skills, so skill-name invocations are not applicable."
+    },
+    {
+      "claim": "Try With AI prompts are conceptual/educational, not triggering specific skills",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Prompts 1-3 in the Try With AI section are educational exploration prompts. None require a specific skill to be loaded. However, Prompt 3's inline data injection was missed as a separate defect type."
+    },
+    {
+      "claim": "The lesson correctly describes the architectural shift between Claude in Excel and Cowork",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The lesson's narrative (lines 106-110) accurately describes the shift from embedded assistant (single workbook) to orchestrating agent (cross-application). The terminology usage is correct throughout."
+    },
+    {
+      "claim": "The worked example narrative (Day 5, line 236) contains additional fabricated output",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Line 236 states 'volume was on plan, but average selling price fell 7% due to promotional discounting in one product line' — these specific percentages and explanations are fabricated agent output not seeded by the practice data prompt. The audit report did not flag this as a separate D1 instance, only identifying the Day 3 reconciliation table."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Identifies inline data injection or paste-based patterns in exercise prompts",
+        "reason": "This assertion correctly caught a real miss: the skill only checked for file-reference injection (Read demo-data.md) but missed paste-based injection in Prompt 3. The assertion is well-designed and discriminating — it catches a genuine blind spot in the skill's D3 detection logic."
+      },
+      {
+        "reason": "No assertion checks whether the skill catches ALL instances of fabricated agent output in the narrative. The skill found the Day 3 reconciliation table (lines 212-219) but missed the Day 5 variance explanation (line 236: 'volume was on plan, but average selling price fell 7% due to promotional discounting in one product line') which is also fabricated output not seeded by the practice data. An assertion like 'Identifies all fabricated agent output instances, not just the most prominent one' would catch incomplete D1 scanning."
+      }
+    ],
+    "overall": "The eval set is well-designed. The terminology assertion (expectation 1) and the Ch17/Ch18+ distinction (expectation 5) are both discriminating — they test whether the skill understands the domain-specific exception rather than applying a blanket rule. The data injection assertion (expectation 2) correctly caught a real skill deficiency. Consider adding coverage for completeness of D1 detection across the full lesson narrative."
+  }
+}

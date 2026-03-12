@@ -1,0 +1,74 @@
+deck:
+  id: "ch22-05-nda-triage"
+  title: "NDA Triage and Management"
+  description: "Three-tier NDA triage system, /triage-nda workflow, residuals clause escalation, playbook configuration, and attorney time savings"
+  tags: ["legal-ops", "nda", "triage", "chapter-22"]
+  version: 1
+
+cards:
+  - id: "ch22-05-nda-triage-001"
+    front: "What is an NDA (Non-Disclosure Agreement)?"
+    back: "A contract in which one or both parties agree not to disclose specified confidential information. Also called a confidentiality agreement, mutual CA, or CDA. A typical mutual NDA defines 'Confidential Information,' specifies a term (usually 2-5 years), includes carve-outs for publicly available information, and sets out remedies for breach."
+    difficulty: "basic"
+    tags: ["nda-definition"]
+
+  - id: "ch22-05-nda-triage-002"
+    front: "What are the three tiers of the NDA triage system and their target percentages?"
+    back: "Tier 1 — Standard Approval (60-70%): No attorney review required. NDAs substantially identical to standard form.\nTier 2 — Counsel Review (20-30%): Attorney review, no negotiation expected. Deviations within acceptable range.\nTier 3 — Full Review (10-15%): Attorney review + likely negotiation. RED deviations or unusual structures."
+    difficulty: "basic"
+    tags: ["three-tier-triage"]
+
+  - id: "ch22-05-nda-triage-003"
+    front: "What are the SLA response targets for each NDA triage tier?"
+    back: "Tier 1: 1 business day, no attorney involvement (business-unit manager approval).\nTier 2: 2 business days, reviewing attorney (~15 minutes).\nTier 3: 5 business days, senior counsel (full review + negotiation)."
+    difficulty: "basic"
+    tags: ["sla-targets"]
+
+  - id: "ch22-05-nda-triage-004"
+    front: "What is a residuals clause in an NDA, and why does it trigger automatic Tier 3 escalation?"
+    back: "A residuals clause permits a party to use information 'retained in the unaided memory' of its personnel after the NDA terminates. It sounds innocuous but creates an enormous loophole — any information an employee can remember, they can use freely. In practice, it can render the entire NDA unenforceable for protecting trade secrets and proprietary methodologies."
+    difficulty: "intermediate"
+    why: "If you shared your product roadmap under an NDA with a competitor who had a residuals clause, what protection would you actually have?"
+    tags: ["residuals-clause"]
+
+  - id: "ch22-05-nda-triage-005"
+    front: "Name five of the nine automatic RED flags that trigger Tier 3 NDA escalation."
+    back: "Any five of: (1) Residuals clause, (2) No carve-out for publicly available information, (3) Non-compete provisions of any scope, (4) Asymmetric injunctive relief, (5) Perpetual confidentiality with no sunset, (6) Unilateral NDA where mutual expected, (7) Unrestricted disclosure to affiliates, (8) Governing law in non-English-speaking jurisdiction without summary, (9) Survival period exceeding 7 years."
+    difficulty: "intermediate"
+    tags: ["red-flags"]
+
+  - id: "ch22-05-nda-triage-006"
+    front: "How much attorney time does NDA triage save per month for an organisation receiving 30 NDAs?"
+    back: "Without triage: 30 NDAs x 35 minutes = 17.5+ hours/month of attorney time. With triage (65% Tier 1, 25% Tier 2, 10% Tier 3): approximately 3-4 hours/month. The saved 13-14 hours is capacity released for higher-value legal work."
+    difficulty: "intermediate"
+    tags: ["business-case"]
+
+  - id: "ch22-05-nda-triage-007"
+    front: "What three sections should the NDA Configuration in legal.local.md contain?"
+    back: "1. Standard Form Reference — filenames or document IDs for standard mutual and unilateral NDAs.\n2. Tier 1 Automatic Approval Criteria — specific deviations safe to auto-approve (e.g., term 2-5 years, minor formatting).\n3. Tier 2 and Tier 3 criteria — deviations requiring counsel review vs. senior counsel escalation."
+    difficulty: "intermediate"
+    tags: ["playbook-configuration"]
+
+  - id: "ch22-05-nda-triage-008"
+    front: "What context questions does /triage-nda ask before reviewing an NDA?"
+    back: "1. Mutual or unilateral?\n2. Purpose (vendor evaluation, partnership, M&A, other)?\n3. Counterparty type?\n4. Urgency?\n5. Any known concerns?"
+    difficulty: "basic"
+    tags: ["triage-nda"]
+
+  - id: "ch22-05-nda-triage-009"
+    front: "In the Al-Madinah Cloud Solutions worked example, why was the NDA classified as Tier 2 instead of Tier 1?"
+    back: "Two YELLOW deviations were identified: (1) Governing law was Saudi law instead of the standard Pakistani or English law, and (2) the confidentiality period was 5 years post-termination instead of the standard 3 years. Both were within acceptable range but required attorney confirmation."
+    difficulty: "intermediate"
+    tags: ["worked-example"]
+
+  - id: "ch22-05-nda-triage-010"
+    front: "Why are NDAs described as 'the gateway contract of business development'?"
+    back: "Every prospective partnership, vendor evaluation, acquisition conversation, and strategic discussion begins with an NDA. In an active organisation, NDAs arrive at 10-50 per month. Without a triage system, they all land in the same queue as genuinely complex agreements, making legal the bottleneck that slows business development."
+    difficulty: "basic"
+    tags: ["nda-volume"]
+
+  - id: "ch22-05-nda-triage-011"
+    front: "What does the triage report output include for each deviation from the standard NDA form?"
+    back: "For each deviation: the specific clause, a GREEN/YELLOW/RED status indicator, a description of the deviation, and for YELLOW/RED items a proposed position and fallback. The report also includes automatic checks for residuals clause, non-compete provisions, and public information carve-out."
+    difficulty: "intermediate"
+    tags: ["triage-report"]

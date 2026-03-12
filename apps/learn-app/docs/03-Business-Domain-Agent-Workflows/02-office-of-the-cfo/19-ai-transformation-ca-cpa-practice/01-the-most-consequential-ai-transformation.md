@@ -67,7 +67,7 @@ cognitive_load:
     - "Agentic AI as autonomous multi-step executor in professional services"
     - "Five CA/CPA practice domains as a classification framework"
     - "AI impact ranking across the five domains"
-  assessment: "5 concepts at A2 level — at the upper boundary of the 5-7 cognitive limit for this tier. Students enter from Chapters 17-18 with strong familiarity with Cowork, plugins, and SKILL.md architecture; this lesson introduces a new professional domain (CA/CPA) rather than new technical tools."
+  assessment: "5 concepts at A2 level — at the upper boundary of the 5-7 cognitive limit for this tier. Students enter from Chapters 17-18 with strong familiarity with Cowork, plugins, and skill architecture; this lesson introduces a new professional domain (CA/CPA) rather than new technical tools."
 
 differentiation:
   extension_for_advanced: "For each of the five domains, write one sentence describing a task you currently perform that falls in the Gen-AI category and one that would require Agentic AI. Which domain has the largest gap between what Gen-AI can do now and what Agentic AI will enable?"
@@ -150,7 +150,7 @@ The table below summarises AI impact across the five CA/CPA practice domains, ra
 | 5    | **Governance, Risk and Compliance Advisory**       | Governance, risk management, internal controls, compliance        | **Moderate** — monitoring automatable; advisory judgment remains human            |
 
 :::info Downloadable Reference
-Save the five-domain table above as your chapter reference card. Every subsequent lesson deepens one domain or builds tools across all five. When you reach the Practice Labs in Lessons 11-14, this table tells you which domain each exercise targets.
+Save the five-domain table above as your chapter reference card. Every subsequent lesson deepens one domain or builds tools across all five. When you reach the Practice Labs in Lessons 10-13, this table tells you which domain each exercise targets.
 :::
 
 ## What This Chapter Builds
@@ -159,9 +159,9 @@ This chapter does three things, each building on the skills you developed in Cha
 
 **Domain Analysis (Lessons 2-6).** A rigorous examination of AI impact across all five CA/CPA practice domains. For each domain, you will learn what Gen-AI capabilities are available now, what agentic capabilities are approaching production, which real-world platforms are leading deployment, and what the practitioner and service implications are.
 
-**Cowork Deployment (Lessons 7-10).** How to deploy Anthropic Cowork and its plugin ecosystem across each domain. You will install plugins, build workflows, and create domain-specific SKILL.md extensions that encode your jurisdiction's requirements — using the same Cowork platform and SKILL.md methodology from Chapters 15-18.
+**Cowork Deployment (Lessons 7-9).** How to deploy Anthropic Cowork and its plugin ecosystem across each domain. You will install plugins, build workflows, and create domain-specific Cowork skills that encode your jurisdiction's requirements — using the same Cowork platform and skill-building methodology from Chapters 15-18.
 
-**Domain Agents (Lessons 11-16).** Practice labs, cross-domain capstones, and a full practice deployment that integrates everything. By the end of the chapter, you will have a working AI-augmented CA/CPA practice environment with domain agents for each of the five practice areas.
+**Domain Agents (Lessons 10-15).** Practice labs, cross-domain capstones, and a full practice deployment that integrates everything. By the end of the chapter, you will have a working AI-augmented CA/CPA practice environment with domain agents for each of the five practice areas.
 
 ## Try With AI
 
@@ -232,8 +232,6 @@ oversight checkpoint you would require before deployment.
 ```
 
 **What you are learning:** The Gen-AI vs Agentic AI distinction is not binary — it is a spectrum with clear markers. By classifying real tasks and designing oversight checkpoints, you build the judgment framework you will apply throughout every domain lesson in this chapter.
-
-
 
 ## Flashcards Study Aid
 

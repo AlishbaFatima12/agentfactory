@@ -139,15 +139,15 @@ The routing logic follows a strict protocol: (1) identify jurisdiction, (2) iden
 
 ## Exercise 15: Full SKILL.md Library Build (90 min)
 
-### Step 1 — Audit the Full Skills Library
+### Step 1 — Review the Installed Plugin's Skills Library
 
-Verify the complete 25-file library exists and is structurally complete. For each file, confirm:
+Open Cowork's **Skills panel** and review the installed Islamic finance plugin's skill library. For each of the 25 skills (12 products + 13 jurisdictions), verify:
 
 ```
-Audit the Islamic finance SKILL.md library. For each of the 25
-files (12 products + 13 jurisdictions), verify:
+Review the Islamic finance plugin's installed skills in Cowork.
+For each skill, confirm:
 
-(1) The file exists and is non-empty
+(1) The skill is listed and active in the Skills panel
 (2) It specifies the governing standard (AAOIFI FAS number or
     IFRS standard)
 (3) It includes the key accounting instructions (recognition,
@@ -158,47 +158,23 @@ files (12 products + 13 jurisdictions), verify:
 (5) It includes the SSB escalation triggers — what questions must
     be escalated to the Shariah Supervisory Board
 
-Report any gaps or incomplete files.
+Report any gaps or incomplete skills.
 ```
 
-### Step 2 — Build/Verify the Global Routing Master SKILL.md
+### Step 2 — Create the Global Routing Skill
 
-The routing skill is the control layer that ensures the correct product and jurisdiction files are loaded:
+The routing skill is the control layer that ensures the correct product and jurisdiction skills are loaded. Create it using **Write skill instructions** in Cowork's Skills panel:
 
-```yaml
----
-name: islamic-finance-global-router
-description: >
-  Activate whenever any Islamic finance term appears in a query:
-  murabaha, ijarah, musharaka, mudaraba, sukuk, takaful, zakat,
-  AAOIFI, FAS, Shariah-compliant, Islamic banking, non-interest
-  banking, halal finance, riba, gharar.
-  Before any output: identify jurisdiction and product, then load
-  appropriate product SKILL.md and jurisdiction overlay SKILL.md.
----
+- **Skill name:** `islamic-finance-global-router`
+- **Description:** Activate whenever any Islamic finance term appears in a query: murabaha, ijarah, musharaka, mudaraba, sukuk, takaful, zakat, AAOIFI, FAS, Shariah-compliant, Islamic banking, non-interest banking, halal finance, riba, gharar. Before any output: identify jurisdiction and product, then load the appropriate product skill and jurisdiction overlay skill.
+- **Instructions:** Enter the routing rules:
+  - Step 1: Identify jurisdiction from query context. If no jurisdiction specified: ask the user before proceeding. NEVER assume IFRS without confirming jurisdiction. AAOIFI jurisdictions (mandatory): Bahrain, Qatar, Sudan. MFRS jurisdictions: Malaysia. IFRS jurisdictions: UAE, Saudi Arabia, Kuwait, Oman, UK, Nigeria, Kenya, South Africa, Turkey.
+  - Step 2: Identify product from query context. Load the corresponding product skill.
+  - Step 3: Load the jurisdiction overlay skill.
+  - Step 4: Apply product rules first, then jurisdiction overlay.
+  - Step 5: Before generating any journal entry or financial statement: confirm the governing standard in the response header, label income consistently with jurisdiction requirements, NEVER use "interest income" in any Islamic finance context, NEVER use "loans and advances" in AAOIFI regime outputs.
 
-## Routing Rules
-Step 1: Identify jurisdiction from query context.
-  - If no jurisdiction specified: ask the user before proceeding.
-  - NEVER assume IFRS without confirming jurisdiction.
-  - AAOIFI jurisdictions (mandatory): Bahrain, Qatar, Sudan.
-  - MFRS jurisdictions: Malaysia.
-  - IFRS jurisdictions: UAE, Saudi Arabia, Kuwait, Oman, UK,
-    Nigeria, Kenya, South Africa, Turkey.
-
-Step 2: Identify product from query context.
-  - Load the corresponding product SKILL.md.
-
-Step 3: Load the jurisdiction overlay SKILL.md.
-
-Step 4: Apply product rules first, then jurisdiction overlay.
-
-Step 5: Before generating any journal entry or financial statement:
-  - Confirm the governing standard in the response header.
-  - Label income consistently with jurisdiction requirements.
-  - NEVER use "interest income" in any Islamic finance context.
-  - NEVER use "loans and advances" in AAOIFI regime outputs.
-```
+Click **Create**.
 
 Verify the routing logic handles edge cases: what happens when a query mentions two jurisdictions (consolidation)? When a product is not in the library (new fintech structure)? When the jurisdiction uses a local standard not in the library (Iran, Bangladesh)?
 
@@ -217,26 +193,13 @@ If you choose a jurisdiction from the AAOIFI mandatory group (Sudan, Jordan), co
 
 ### Step 4 — Build the Extension: New Jurisdiction Overlay
 
-Using the Method B document analysis pattern, build a new jurisdiction overlay SKILL.md for the jurisdiction you identified in Step 3:
+Build a new jurisdiction overlay skill for the jurisdiction you identified in Step 3. Use one of two approaches:
 
-```
-I am building a jurisdiction overlay SKILL.md for [JURISDICTION].
-Here are the key regulatory requirements from [SOURCE DOCUMENT]:
+**Option A — Create with Claude:** Open Cowork's Skills panel, select **Create with Claude**, and tell Cowork: "Help me build a jurisdiction overlay skill for [JURISDICTION]. Here are the key regulatory requirements: [PASTE KEY REQUIREMENTS from the regulator's website or published framework]. The skill should cover: primary accounting framework, AAOIFI role, accounting treatment differences from default IFRS, required Shariah disclosures, regulatory-specific requirements, NEVER rules, and SSB escalation triggers." Review Claude's draft, refine, and save.
 
-[PASTE KEY REQUIREMENTS — from the regulator's website or published framework]
+**Option B — Upload a skill:** If the companion repository includes a reference overlay for your chosen jurisdiction, use **Upload a skill** in the Skills panel to import it, then customise the instructions for any jurisdiction-specific requirements you identified in Step 3.
 
-Extract the following into SKILL.md instruction format:
-(1) Primary accounting framework and governing body
-(2) AAOIFI role (mandatory / supplemental / voluntary)
-(3) Key accounting treatment differences from default IFRS
-(4) Required Shariah disclosures
-(5) Regulatory-specific requirements (capital adequacy, reporting
-    frequencies, unique local rules)
-(6) NEVER rules — what must never appear in this jurisdiction's output
-(7) SSB escalation triggers specific to this jurisdiction
-```
-
-Save the result as a SKILL.md file. Compare its structure against the existing Bahrain or Malaysia overlay from the installed plugin — does it follow the same format? Does it contain the same section headings?
+Compare the resulting skill's structure against the existing Bahrain or Malaysia overlay from the installed plugin — does it follow the same format? Does it contain the same section headings?
 
 ### Step 5 — Test Your Extension
 

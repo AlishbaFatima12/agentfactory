@@ -7,7 +7,7 @@
 | **[EN]** | Keep in English |
 | **[TR]** | Use Spanish phonetic adaptation |
 | **[TL]** | Fully translate to Spanish |
-| **First use** | Show: `traduccion (English term)` on first occurrence |
+| **First use** | Use the Spanish term by default. Add `(English term)` on first occurrence only when clarity, searchability, or repo convention requires it. |
 
 ## Core Technical Terms
 

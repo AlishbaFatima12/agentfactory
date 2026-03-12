@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "eval_name": "malaysia-sukuk-audit",
+  "prompt": "Audit this lesson for prompt quality issues and show me what needs fixing: apps/learn-app/docs/03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/20-islamic-finance-domain-agents/09-malaysia-sukuk.md",
+  "assertions": [
+    "Identifies at least one fabricated agent output block (Defect 1)",
+    "Does NOT flag prompt code blocks (student input) as fabricated output",
+    "Does NOT flag framework tables or scoring models as fabricated output",
+    "Produces a summary table with Line Range, Defect Type, and Recommended Fix columns",
+    "Recommended fixes use intent table format with Section/Intent/What to Verify columns",
+    "Includes a :::note Your output will vary disclaimer in the fix"
+  ]
+}

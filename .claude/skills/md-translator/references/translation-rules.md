@@ -1,4 +1,4 @@
-# Universal Translation Rules (42 Rules)
+# Universal Translation Rules (50 Rules)
 
 ## Section 1: Core Translation Rules (Rules 1-18)
 
@@ -95,11 +95,11 @@ Never break internal references or anchor IDs.
 **Rule 29: Do Not Translate JSX Syntax**
 Never translate `<Component />` or `<Component prop="value" />`.
 
-**Rule 30: Do Not Modify Props**
-Never change prop names, variable names, or component names.
+**Rule 30: Do Not Modify Structural Props or JS Syntax**
+Never change prop names, object keys, variable names, component names, booleans, numbers, braces, brackets, commas, or quotes.
 
-**Rule 31: Translate Only Text Nodes**
-Translate only human-readable text inside JSX components.
+**Rule 31: Translate User-Facing Text Nodes and String Literals**
+Translate human-readable text inside JSX components AND user-facing string literal values inside JSX/MDX props or JS data structures.
 
 ```mdx
 <!-- Source -->
@@ -115,6 +115,20 @@ Translate only human-readable text inside JSX components.
 
 Translate: "This action is permanent."
 Do NOT translate: `Alert`, `type`, `warning`.
+
+```mdx
+<!-- Source -->
+<Quiz
+  title="Assessment"
+  questions={[{
+    question: "What is Agent Factory?",
+    options: ["A framework", "A database"]
+  }]}
+/>
+```
+
+Translate: `"Assessment"`, `"What is Agent Factory?"`, and the option strings.
+Do NOT translate: `Quiz`, `title`, `questions`, `question`, `options`, braces, brackets, commas, or quotes.
 
 **Rule 32: Do Not Break JavaScript Expressions**
 Never modify `{variable}`, `{count + 1}`, `{user.name}`, or any JS expression.

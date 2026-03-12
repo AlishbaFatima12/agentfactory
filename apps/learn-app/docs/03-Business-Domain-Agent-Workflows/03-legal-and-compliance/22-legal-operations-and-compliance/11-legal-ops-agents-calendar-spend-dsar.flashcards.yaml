@@ -1,0 +1,81 @@
+deck:
+  id: "ch22-11-calendar-spend-dsar"
+  title: "Legal Ops Agents: Calendar, Spend, and DSAR"
+  description: "Compliance Calendar Agent escalation logic, Legal Spend Analytics with anomaly detection, DSAR Agent 30-day workflow, jurisdiction response windows, and redaction assessment categories"
+  tags: ["legal-ops", "compliance-calendar", "legal-spend", "dsar", "chapter-22"]
+  version: 1
+
+cards:
+  - id: "ch22-11-calendar-spend-dsar-001"
+    front: "What is the Compliance Calendar Agent's escalation sequence for approaching deadlines?"
+    back: "60 days: Add to upcoming obligations dashboard\n30 days: Email notification to obligation owner\n14 days: Notify obligation owner + their manager\n7 days: Notify General Counsel; add to weekly brief\n1 day: Emergency alert to CFO (financial) or GC (legal/regulatory)\nDay of (if missed): Log as compliance incident; trigger remediation workflow"
+    difficulty: "intermediate"
+    tags: ["escalation-sequence"]
+
+  - id: "ch22-11-calendar-spend-dsar-002"
+    front: "What four categories of obligations does the Compliance Calendar Agent track?"
+    back: "1. Contract obligations — deliverables, payments, audit rights, renewal notice deadlines\n2. Regulatory filings — annual returns, licence renewals, certification renewals\n3. Internal compliance reviews — policy review schedules, DPIAs, third-party risk reviews\n4. Litigation deadlines — limitation periods (always escalate to counsel immediately)"
+    difficulty: "basic"
+    tags: ["obligation-categories"]
+
+  - id: "ch22-11-calendar-spend-dsar-003"
+    front: "What is the auto-renewal risk that the Compliance Calendar Agent is designed to prevent?"
+    back: "Contracts with auto-renewal clauses renew automatically unless non-renewal notice is given within a specified window (e.g., 60 days before renewal date). Missing the notice deadline locks the organisation into another full term at the current price. The agent's escalation sequence ensures decisions are made before the window closes."
+    difficulty: "intermediate"
+    why: "What is the financial impact of accidentally auto-renewing a contract you intended to renegotiate or terminate?"
+    tags: ["auto-renewal"]
+
+  - id: "ch22-11-calendar-spend-dsar-004"
+    front: "What three types of anomalies does the Legal Spend Analytics Agent detect?"
+    back: "1. Rate variance — effective hourly rate deviating from agreed rate (e.g., billed at partner rate instead of senior associate rate)\n2. Matter budget overrun — invoiced amount exceeding approved budget without authorisation\n3. Billing pattern anomaly — disproportionate billing concentration in a single period (e.g., 72% of matter billing in the final month)"
+    difficulty: "intermediate"
+    tags: ["spend-anomalies"]
+
+  - id: "ch22-11-calendar-spend-dsar-005"
+    front: "What are the jurisdiction-specific response windows for data subject access requests?"
+    back: "UK GDPR: 30 calendar days\nEU GDPR: 30 calendar days\nCCPA (California): 45 days, extendable by 45 days with notice\nPIPEDA (Canada): 30 days\nOther: Escalate to Privacy Counsel immediately to determine applicable law"
+    difficulty: "intermediate"
+    tags: ["dsar-response-windows"]
+
+  - id: "ch22-11-calendar-spend-dsar-006"
+    front: "What are the seven steps of the DSAR Agent workflow?"
+    back: "1. Log request, start response clock, set internal alerts (day 7, 21, 28)\n2. Generate and send acknowledgement letter\n3. Send data discovery requests to all relevant system owners\n4. Collate responses; prepare redaction checklist for attorney review\n5. Draft complete response letter for attorney review\n6. Route to reviewing attorney for final approval and sending\n7. Log completion; store in compliance archive"
+    difficulty: "intermediate"
+    tags: ["dsar-workflow"]
+
+  - id: "ch22-11-calendar-spend-dsar-007"
+    front: "What are the three redaction assessment categories in a DSAR?"
+    back: "Must Disclose — personal data about the requester, including opinions about them (e.g., 'difficult customer' in sales notes is personal data under Art. 4(1)).\nRedact — third-party personal data (e.g., support agent names, other customer names).\nAttorney Review Required — borderline items (e.g., commercially sensitive data that might be withheld under Recital 63 exemption)."
+    difficulty: "intermediate"
+    tags: ["redaction-assessment"]
+
+  - id: "ch22-11-calendar-spend-dsar-008"
+    front: "Why must a DSAR acknowledgement letter NOT confirm or deny what personal data is held?"
+    back: "Data discovery has not yet been completed at the acknowledgement stage. Confirming data holdings before discovery is complete could lead to inaccurate statements. The acknowledgement should only confirm receipt, state the statutory deadline, describe the identity verification process, and provide contact details for queries."
+    difficulty: "intermediate"
+    tags: ["acknowledgement-rules"]
+
+  - id: "ch22-11-calendar-spend-dsar-009"
+    front: "In the Sarah Johnson DSAR worked example, why were sales rep notes calling her a 'difficult customer' classified as Must Disclose?"
+    back: "Under Art. 4(1) of UK GDPR, opinions about data subjects are personal data. The ICO has confirmed that subjective opinions relating to an identified individual must be disclosed in a subject access request. The note 'difficult customer — always pushes for discounts' relates to Sarah and constitutes an opinion about her."
+    difficulty: "intermediate"
+    why: "How might this disclosure change a company's culture around internal notes about customers?"
+    tags: ["opinions-as-personal-data"]
+
+  - id: "ch22-11-calendar-spend-dsar-010"
+    front: "What five metrics does the Legal Spend Analytics Agent provide for each law firm?"
+    back: "1. Total spend for the period\n2. Effective hourly rate (actual vs. agreed)\n3. Variance against approved budget (percentage)\n4. Number of active matters\n5. Anomaly flags with RED/YELLOW classification and recommended actions"
+    difficulty: "basic"
+    tags: ["firm-metrics"]
+
+  - id: "ch22-11-calendar-spend-dsar-011"
+    front: "What five safety rules ('NEVER DO THESE') apply to the DSAR Agent?"
+    back: "1. NEVER confirm data holdings before discovery is complete\n2. NEVER send data to requester without attorney review of full package\n3. NEVER miss the response window — alert Privacy Counsel 7 days before deadline\n4. NEVER reject a request without attorney sign-off on rejection grounds\n5. NEVER apply a fee without attorney confirmation it is lawful (manifestly unfounded/excessive threshold only)"
+    difficulty: "intermediate"
+    tags: ["dsar-safety-rules"]
+
+  - id: "ch22-11-calendar-spend-dsar-012"
+    front: "How much time did the DSAR Agent save in the Sarah Johnson worked example?"
+    back: "The entire DSAR was managed within the 30-day window with 6 hours of coordinated human work (discovery coordination, attorney review, final quality check) instead of the typical 20-30 hours of manual processing — a 70-80% reduction in human effort while maintaining compliance."
+    difficulty: "basic"
+    tags: ["time-savings"]

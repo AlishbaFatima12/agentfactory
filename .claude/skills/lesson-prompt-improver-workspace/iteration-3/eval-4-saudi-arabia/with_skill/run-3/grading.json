@@ -1,0 +1,97 @@
+{
+  "expectations": [
+    {
+      "text": "Checks for all 6 defect types, not just fabricated output",
+      "passed": true,
+      "evidence": "The 'Defect-by-Defect Analysis' section (audit report lines 90-126) has explicit subsections for D1 through D6: 'D1: Fabricated Agent Output — CLEAN', 'D2: Missing Skill Name — 2 DEFECTS', 'D3: Inline Data Injection — CLEAN', 'D4: Fiction-Researching Prompt — CLEAN', 'D5: Narrative Referencing Fabricated Content — CLEAN', 'D6: Plugin/Tool Terminology — CLEAN'. Each is evaluated individually with evidence."
+    },
+    {
+      "text": "Identifies any fabricated output blocks preceded by **Output:**",
+      "passed": true,
+      "evidence": "The report identifies the '**Output:**' label at source line 177 under 'Minor Issue: Misleading \"Output:\" Label' (audit report lines 68-85). It correctly analyzes that this is NOT fabricated output — it's a factual accounting statement ('Zakat is recognised as an expense...'), not a code block pretending to be agent output. It recommends relabelling to '**Accounting treatment:**' for clarity. This is a nuanced, correct judgment."
+    },
+    {
+      "text": "Checks whether exercise prompts include natural skill names",
+      "passed": true,
+      "evidence": "Two D2 defects identified: (1) D2-1 at source line 214 — Step 1 exercise prompt begins 'Jurisdiction: Saudi Arabia...' without naming the skill. (2) D2-2 at source line 245 — Try With AI Prompt 1 begins 'Compare the ZATCA zakat calculation...' without naming the skill. The report correctly notes that Steps 2-6 and Try With AI Prompts 2-3 are follow-ups and do NOT require skill names. Verified against source: both flagged prompts lack skill references."
+    },
+    {
+      "text": "Checks for inline data injection patterns",
+      "passed": true,
+      "evidence": "D3 section (audit report lines 109-111) explicitly checks for 'Read demo-data.md', 'Read sales-marketing.local.md', and '[Paste or reference the...]' patterns. Reports none found and notes the lesson uses a zip file download (source line 203) with parameters provided directly in prompts. Verified against source: no inline data injection patterns present."
+    },
+    {
+      "text": "Produces a prioritised summary (Defect 1 first, then 2-6)",
+      "passed": true,
+      "evidence": "Summary table (audit report lines 13-21) lists defects D1 through D6 in order with counts and severity. The 'Defect-by-Defect Analysis' section then presents D1 first (lines 90-98), D2 second (lines 100-106), D3 through D6 following in sequence. Priority ordering is D1-first throughout."
+    },
+    {
+      "text": "Anti-pattern examples and framework tables are correctly excluded from defect list",
+      "passed": true,
+      "evidence": "Under D1 analysis (audit report lines 92-98), the report explicitly lists exclusions: 'ZATCA formula (lines 134-144): Framework definition — exception applies', 'Journal entries (lines 165-175): Standard accounting entry templates — exception applies', 'Exercise prompts (lines 216-234): Student-typed instructions with explicit parameters — exception applies', 'Try With AI prompts (lines 245-330): Student-typed prompts — these are inputs, not fabricated outputs'. The ZATCA vs AAOIFI comparison table (source lines 148-161) and Saudi Accounting Framework table (source lines 117-125) are also correctly not flagged."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": 7,
+    "errors_encountered": 0,
+    "output_chars": 6142,
+    "transcript_chars": 6142
+  },
+  "timing": {
+    "executor_duration_seconds": 50,
+    "grader_duration_seconds": null,
+    "total_duration_seconds": null
+  },
+  "claims": [
+    {
+      "claim": "0 fabricated agent outputs found in lesson",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Reviewed all code blocks in source file: ZATCA formula (lines 134-144) is a definition, journal entries (lines 165-175) are templates, exercise prompts (lines 216-234) are student inputs, Try With AI prompts (lines 245-330) are student inputs. None pretend to be agent output."
+    },
+    {
+      "claim": "2 D2 defects for missing skill names (Step 1 and Try With AI Prompt 1)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Source line 214: Step 1 prompt starts 'Jurisdiction: Saudi Arabia...' — no skill name. Source line 245: Try With AI Prompt 1 starts 'Compare the ZATCA zakat calculation...' — no skill name. Both confirmed."
+    },
+    {
+      "claim": "The 'Output:' label at line 177 is not fabricated output but a misleading label",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Source line 177-179: '**Output:** Zakat is recognised as an expense in the Saudi IFI's income statement...' — this is a plain-text factual statement about accounting treatment, not a code block mimicking agent response. The audit report's judgment to flag as cosmetic rather than D1 defect is correct."
+    },
+    {
+      "claim": "Check your work section references student-provided parameters, not fabricated data",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Source line 236 references SAR 20B + 4.5B + 3.2B - 1.8B - 5.0B = 20.9B. These match exactly the parameters given in the Step 2 prompt at source line 220: 'Share capital SAR 20B, Statutory reserves SAR 4.5B, Retained earnings SAR 3.2B, Fixed assets SAR 1.8B, Long-term sukuk investments SAR 5.0B.'"
+    },
+    {
+      "claim": "No 'Claude in Excel' terminology found — correct for Ch 20",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Searched source file for 'Claude in Excel' — not present. Uses 'Cowork or Claude (any plan)' at line 210 and 'Cowork or your preferred AI assistant' at line 240."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Identifies any fabricated output blocks preceded by **Output:**",
+        "reason": "This assertion is well-constructed — it specifically tests for the most common false-negative pattern (an 'Output:' label that looks like a defect but isn't). The Saudi Arabia lesson has exactly this edge case at line 177, making it a genuinely discriminating test. However, the assertion would be stronger if it also tested that a real fabricated output IS flagged — currently it only tests the detection direction, not the accuracy of classification."
+      },
+      {
+        "assertion": "Checks whether exercise prompts include natural skill names",
+        "reason": "Good assertion, but could be more discriminating. The current test passes if the report mentions skill names at all. A stronger version would check that the report correctly distinguishes which prompts need skill names (primary/first prompts) from which don't (follow-up prompts). This report happens to make that distinction correctly, but the assertion doesn't verify it."
+      }
+    ],
+    "overall": "Solid eval set. The six expectations cover the full defect taxonomy, output format, and edge cases (anti-pattern exclusion). The Saudi Arabia lesson is a good test case because it has the 'Output:' label edge case and clean D1/D3/D4/D5/D6 sections, testing the skill's ability to correctly identify clean categories rather than just finding defects."
+  }
+}

@@ -1,0 +1,83 @@
+deck:
+  id: "ch19-15-full-practice-deployment-reflection"
+  title: "Full Practice Deployment and Reflection"
+  description: "Complete AI-augmented CA/CPA practice stack deployment, stress-testing with currency conversion and multi-entity consolidation, capabilities statement, and the Chapter Contract reflection"
+  tags: ["ca-cpa", "deployment", "reflection", "professional-judgment", "value-proposition"]
+  version: 1
+  lesson: 15
+  chapter: 19
+
+cards:
+  - id: "ch19-15-full-practice-deployment-reflection-001"
+    front: "What eight steps does Exercise 24 follow to deploy the full AI-augmented CA/CPA practice stack?"
+    back: "1. Install plugin stack. 2. Configure global instructions. 3. Validate each domain workflow. 4. Set up scheduled tasks. 5. Test cross-domain board pack. 6. Document deployment. 7. Stress-test edge cases. 8. Integrated reflection."
+    tags: ["exercise-24", "deployment-steps", "overview"]
+    difficulty: "basic"
+
+  - id: "ch19-15-full-practice-deployment-reflection-002"
+    front: "What nine global instruction fields does Exercise 24 configure for a Pakistani CA/CPA practice?"
+    back: "Default currency (PKR), tax authority (FBR), primary tax legislation (ITO 2001), corporate regulator (SECP), central bank (SBP), accounting standards (IFRS/ICAP), audit standards (ISAs/ICAP), financial year (1 Jul-30 Jun), materiality benchmark (1% revenue or 5% pre-tax profit)."
+    tags: ["exercise-24", "global-instructions", "pakistan"]
+    difficulty: "intermediate"
+
+  - id: "ch19-15-full-practice-deployment-reflection-003"
+    front: "What is the dependency chain for the three monthly scheduled tasks in Exercise 24?"
+    back: "Month-end close (1st) produces management accounts. Board pack (10th) builds from those accounts. Management commentary (11th) adds narrative to the completed board pack."
+    tags: ["exercise-24", "scheduled-tasks", "dependency-chain"]
+    difficulty: "intermediate"
+
+  - id: "ch19-15-full-practice-deployment-reflection-004"
+    front: "Under IAS 21, at what rates must the currency conversion stress test in Exercise 24 apply?"
+    back: "Transaction date rate for initial recognition. Closing rate for revaluation of monetary items at month-end. Exchange difference goes to profit or loss."
+    tags: ["exercise-24", "ias-21", "currency-conversion"]
+    difficulty: "intermediate"
+
+  - id: "ch19-15-full-practice-deployment-reflection-005"
+    front: "In Exercise 24's multi-entity consolidation stress test, what NCI percentages apply to the two subsidiaries?"
+    back: "25% NCI for Subsidiary A (Alpha Holdings owns 75%) and 40% NCI for Subsidiary B (Alpha Holdings owns 60%)."
+    tags: ["exercise-24", "nci", "consolidation"]
+    difficulty: "intermediate"
+
+  - id: "ch19-15-full-practice-deployment-reflection-006"
+    front: "What are the five components of the AI practice capabilities statement in Exercise 24?"
+    back: "1. Specific workflows AI handles. 2. Professional judgment the CA/CPA retains. 3. Quality assurance process. 4. Data security and confidentiality. 5. How AI augments rather than replaces professional advice."
+    tags: ["exercise-24", "capabilities-statement", "client-communication"]
+    difficulty: "basic"
+
+  - id: "ch19-15-full-practice-deployment-reflection-007"
+    front: "What tone does the lesson prescribe for the AI practice capabilities statement, and why?"
+    back: "Confident and professional, not defensive — because a defensive tone implies AI use is something to apologise for rather than a capability that enhances service quality."
+    tags: ["exercise-24", "capabilities-statement", "tone"]
+    difficulty: "basic"
+
+  - id: "ch19-15-full-practice-deployment-reflection-008"
+    front: "What six elements must the AI deployment documentation pack contain?"
+    back: "Plugin stack, global instructions, skill library, scheduled tasks (with inputs/outputs/exception handling), quality review procedures, and error reporting process."
+    tags: ["exercise-24", "documentation", "deployment"]
+    difficulty: "intermediate"
+
+  - id: "ch19-15-full-practice-deployment-reflection-009"
+    front: "Why does the chapter distinguish 'what only a CA/CPA could do' from 'what only a human could do'?"
+    back: "The CA/CPA question targets professional qualification, legal liability, and regulatory authority — forming audit opinions, signing tax returns, advising on regulated matters. BECAUSE many humans can do bookkeeping; only a CA/CPA carries the designation, liability, and regulatory standing."
+    tags: ["reflection", "professional-judgment", "value-proposition"]
+    difficulty: "intermediate"
+    why: "What specific regulatory action can a CA/CPA take that a competent non-qualified professional cannot?"
+
+  - id: "ch19-15-full-practice-deployment-reflection-010"
+    front: "What three-month structure does Part C of Step 8 prescribe for the 90-day implementation plan?"
+    back: "Month 1: Automate highest-volume, lowest-judgment workflows. Month 2: Quality validation through parallel runs, peer review, client feedback. Month 3: Client communication — capabilities statement, engagement letters, fee adjustments."
+    tags: ["reflection", "90-day-plan", "implementation"]
+    difficulty: "intermediate"
+
+  - id: "ch19-15-full-practice-deployment-reflection-011"
+    front: "How does the chapter synthesis describe the consistent pattern of AI automation across all five CA/CPA domains?"
+    back: "AI automates execution of rules against data. Professional judgment remains with humans where rules are ambiguous, data is incomplete, stakes are high, or client relationships require a human presence."
+    tags: ["chapter-synthesis", "automation-pattern", "five-domains"]
+    difficulty: "basic"
+
+  - id: "ch19-15-full-practice-deployment-reflection-012"
+    front: "Why is stress-testing described as a professional obligation rather than an optional quality step?"
+    back: "Edge cases like multi-currency consolidation and cross-jurisdiction translation are where AI systems produce errors that look correct but are wrong. THEREFORE identifying these failure modes before they reach a client deliverable is professional responsibility, not best practice."
+    tags: ["exercise-24", "stress-testing", "professional-responsibility"]
+    difficulty: "advanced"
+    why: "What specific failure mode in currency translation would look numerically plausible but be technically wrong under IAS 21?"
