@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import ClaudeCodeCheatsheet from "./claude-code-cheatsheet";
 import CoworkCheatsheet from "./cowork-cheatsheet";
+import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 
 const palette = {
   accent: "#c0582a",
@@ -24,7 +25,6 @@ const topics = [
     label: "Cowork",
     component: CoworkCheatsheet,
   },
-  { id: "openclaw", hash: "openclaw", label: "OpenClaw", component: null },
 ];
 
 function getActiveFromHash() {
@@ -77,99 +77,89 @@ export default function CheatsheetPage() {
     <div
       className="cheatsheet-toolbar"
       style={{
-        display: "flex",
-        alignItems: "center",
-        gap: 4,
-        padding: "5px 16px",
-        background: palette.dark,
-        borderBottom: `1px solid ${palette.cardBorder}30`,
-        flexShrink: 0,
+        display: "inline-flex",
+        marginBottom: "8px",
+        alignSelf: "flex-start",
       }}
     >
-      {topics.map(({ id, label, component }) => {
-        const isActive = active === id;
-        const isDisabled = !component;
-        return (
-          <button
-            key={id}
-            onClick={() => component && navigate(id)}
-            style={{
-              background: isActive ? palette.accentLight + "18" : "transparent",
-              border: isActive
-                ? `1px solid ${palette.accentLight}60`
-                : "1px solid transparent",
-              borderRadius: 5,
-              padding: "7px 18px",
-              fontSize: 13,
-              fontWeight: isActive ? 700 : 500,
-              fontFamily: "'Georgia', serif",
-              color: isDisabled ? "#ddd" : isActive ? "#fff" : "#f0ebe4",
-              cursor: isDisabled ? "default" : "pointer",
-              opacity: isDisabled ? 0.45 : 1,
-              transition: "all 0.15s",
-              letterSpacing: 0.2,
-            }}
-            onMouseEnter={(e) => {
-              if (!isDisabled && !isActive) {
-                e.currentTarget.style.background = palette.accentLight + "10";
-                e.currentTarget.style.color = "#fff";
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (!isDisabled && !isActive) {
-                e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "#f0ebe4";
-              }
-            }}
-          >
-            {label}
-            {isDisabled && (
-              <span
+      <style>{`
+        .cheatsheet-tab-list {
+          background: rgba(0,0,0,0.05) !important;
+          border-radius: 6px !important;
+          padding: 3px !important;
+          border: 1px solid rgba(0,0,0,0.04) !important;
+        }
+        .cheatsheet-tab-trigger[data-state="active"] {
+          background-color: #ffffff !important;
+          color: ${palette.dark} !important;
+          border-radius: 4px !important;
+          box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04) !important;
+        }
+        .cheatsheet-tab-trigger:not([data-state="active"]):hover {
+          background-color: rgba(255,255,255,0.4) !important;
+          color: ${palette.dark} !important;
+        }
+        .cheatsheet-tab-trigger {
+          background-color: transparent !important; 
+          color: rgba(0,0,0,0.75) !important;
+          border-radius: 4px !important;
+        }
+        html[data-theme='dark'] .cheatsheet-tab-list {
+          background: rgba(255,255,255,0.05) !important;
+          border-color: rgba(255,255,255,0.03) !important;
+        }
+        html[data-theme='dark'] .cheatsheet-tab-trigger[data-state="active"] {
+          background-color: rgba(255,255,255,0.1) !important;
+          color: rgba(255,255,255,0.9) !important;
+          box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.08) !important;
+        }
+        html[data-theme='dark'] .cheatsheet-tab-trigger:not([data-state="active"]):hover {
+          background-color: rgba(255,255,255,0.05) !important;
+          color: #ffffff !important;
+        }
+        html[data-theme='dark'] .cheatsheet-tab-trigger:not([data-state="active"]) {
+          color: rgba(255,255,255,0.65) !important;
+        }
+      `}</style>
+      <Tabs value={active} onValueChange={navigate}>
+        <TabsList
+          className="cheatsheet-tab-list"
+          style={{
+            display: "inline-flex",
+            gap: "2px",
+            padding: 0,
+            margin: 0,
+          }}
+        >
+          {topics.map(({ id, label, component }) => {
+            const isDisabled = !component;
+            return (
+              <TabsTrigger
+                key={id}
+                value={id}
+                disabled={isDisabled}
+                className="cheatsheet-tab-trigger"
                 style={{
-                  fontSize: 8,
-                  fontWeight: 700,
-                  background: "#4a3828",
-                  color: "#f0ebe4",
-                  borderRadius: 3,
-                  padding: "2px 6px",
-                  marginLeft: 7,
-                  textTransform: "uppercase",
-                  letterSpacing: 0.6,
+                  padding: "6px 20px",
                   fontFamily: "'Segoe UI', sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  transition: "all 0.15s ease",
+                  outline: "none",
+                  cursor: "pointer",
+                  position: "relative",
+                  ...(active === id && {
+                    // Inject a psuedo-element style underline effect via inline box-shadow on top of the flattening shadow
+                    boxShadow: `0 1px 2px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04), 0 -2.5px 0 0 ${palette.accent} inset !important`, 
+                  })
                 }}
               >
-                Soon
-              </span>
-            )}
-          </button>
-        );
-      })}
-      <div style={{ flex: 1 }} />
-      <button
-        onClick={() => setFullscreen(!fullscreen)}
-        title={fullscreen ? "Exit fullscreen" : "Fullscreen"}
-        style={{
-          background: "none",
-          border: "1px solid #4a3a2a",
-          borderRadius: 4,
-          padding: "5px 14px",
-          fontSize: 11,
-          color: "#f0ebe4",
-          cursor: "pointer",
-          fontFamily: "'JetBrains Mono', monospace",
-          transition: "all 0.15s",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.borderColor = palette.accentLight + "80";
-          e.currentTarget.style.color = palette.accentLight;
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.borderColor = "#4a3a2a";
-          e.currentTarget.style.color = "#f0ebe4";
-        }}
-      >
-        {fullscreen ? "Exit" : "Fullscreen"}
-      </button>
+                {label}
+              </TabsTrigger>
+            );
+          })}
+        </TabsList>
+      </Tabs>
     </div>
   );
 
@@ -196,7 +186,7 @@ export default function CheatsheetPage() {
 
   // Inline mode
   return (
-    <div>
+    <div style={{ marginTop: "-0.5rem", display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
       {toolbar}
       {ActiveComponent ? (
         <ActiveComponent />

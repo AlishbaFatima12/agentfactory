@@ -3,11 +3,11 @@ import { useState } from "react";
 const palette = {
   bg: "#faf5ef",
   card: "#fff8f0",
-  cardBorder: "#e8d5c4",
+  cardBorder: "#d8c0ab", // Darkened for better contrast
   accent: "#c0582a",
   accentLight: "#e87a45",
   accentPale: "#f5ddd0",
-  dark: "#2c1810",
+  dark: "#140a06", // Darkened for bolder headings
   mid: "#3d2518",
   codeBg: "#2c1810",
   codeText: "#fff",
@@ -76,6 +76,32 @@ const Bullet = ({ children }) => (
       }}
     >
       ○
+    </span>
+    <span style={{ flex: 1 }}>{children}</span>
+  </div>
+);
+
+const Check = ({ children }) => (
+  <div
+    style={{
+      display: "flex",
+      gap: 4,
+      marginBottom: 1,
+      fontSize: 10.5,
+      lineHeight: 1.35,
+      color: palette.mid,
+      alignItems: "flex-start",
+    }}
+  >
+    <span
+      style={{
+        color: "#5a8a3c",
+        fontWeight: 700,
+        marginTop: -2,
+        fontSize: 10,
+      }}
+    >
+      ✔
     </span>
     <span style={{ flex: 1 }}>{children}</span>
   </div>
@@ -249,14 +275,27 @@ export default function CoworkCheatsheet() {
           }}
         >
           {/* 1. Quick Start */}
-          <SectionCard number="1" title="Quick Start">
+          <SectionCard number="1" title="⚡ Quick Start">
             <KV k="Plans" v="Pro, Max, Team Premium, or Enterprise" />
             <KV
               k="macOS"
               v="Apple Silicon required (Intel = Chat + Code only)"
             />
             <KV k="Windows" v="x64 only (ARM not supported)" />
-            <KV k="Install" v="claude.ai/download → Claude Desktop app" />
+            <div
+              style={{
+                marginTop: 4,
+                marginBottom: 4,
+                padding: "3px 6px",
+                background: palette.highlight,
+                borderRadius: 4,
+              }}
+            >
+              <div style={{ fontSize: 10, fontWeight: "bold", color: palette.dark, fontFamily: "'Georgia', serif", letterSpacing: -0.3 }}>Install Desktop App:</div>
+              <Bullet>Visit <strong>claude.ai/download</strong> in your browser</Bullet>
+              <Bullet>Download and install for macOS or Windows</Bullet>
+              <Bullet>Sign in with your Claude account</Bullet>
+            </div>
             <KV k="Model" v="Select Opus 4.6 + toggle Extended Thinking" />
             <div
               style={{
@@ -275,7 +314,7 @@ export default function CoworkCheatsheet() {
           </SectionCard>
 
           {/* 2. Workspace Setup */}
-          <SectionCard number="2" title="Workspace Setup">
+          <SectionCard number="2" title="📁 Workspace Setup">
             <div
               style={{
                 fontSize: 10,
@@ -291,16 +330,14 @@ export default function CoworkCheatsheet() {
 ├── TEMPLATES/    ← reusable formats
 └── OUTPUTS/      ← Claude's deliverables`}</Code>
             <div style={{ marginTop: 4 }}>
-              <Bullet>Grant folder access when Cowork prompts</Bullet>
-              <Bullet>
-                Never share your home directory — specific folders only
-              </Bullet>
-              <Bullet>One workspace per domain (finance, legal, etc.)</Bullet>
+              <Check>Grant workspace access</Check>
+              <Check>Never share home directory</Check>
+              <Check>One workspace per domain</Check>
             </div>
           </SectionCard>
 
           {/* 3. Context Files */}
-          <SectionCard number="3" title="Context Files">
+          <SectionCard number="3" title="📄 Context Files">
             <div
               style={{
                 fontSize: 10,
@@ -325,7 +362,7 @@ export default function CoworkCheatsheet() {
           </SectionCard>
 
           {/* 4. Permission Modes */}
-          <SectionCard number="4" title="Permission Modes">
+          <SectionCard number="4" title="🔒 Permission Modes">
             <div
               style={{
                 fontSize: 10,
@@ -394,7 +431,7 @@ export default function CoworkCheatsheet() {
           </SectionCard>
 
           {/* 5. Built-in Document Skills */}
-          <SectionCard number="5" title="Built-in Document Skills">
+          <SectionCard number="5" title="⚙️ Built-in Document Skills">
             <div
               style={{
                 display: "flex",
@@ -420,7 +457,7 @@ export default function CoworkCheatsheet() {
           </SectionCard>
 
           {/* 6. Cross-App Orchestration */}
-          <SectionCard number="6" title="Cross-App Orchestration">
+          <SectionCard number="6" title="🔗 Cross-App Orchestration">
             <div
               style={{
                 fontSize: 10,
@@ -470,7 +507,7 @@ export default function CoworkCheatsheet() {
           </SectionCard>
 
           {/* 7. Effective Prompting */}
-          <SectionCard number="7" title="Effective Prompting">
+          <SectionCard number="7" title="💬 Effective Prompting">
             <div
               style={{
                 fontSize: 10,
@@ -498,7 +535,7 @@ new questions. Do not guess."`}</Code>
           </SectionCard>
 
           {/* 8. Plugins */}
-          <SectionCard number="8" title="Plugins">
+          <SectionCard number="8" title="🔌 Plugins">
             <div
               style={{
                 fontSize: 10,
@@ -561,7 +598,7 @@ new questions. Do not guess."`}</Code>
           </SectionCard>
 
           {/* 9. Connectors & Data Sources */}
-          <SectionCard number="9" title="Connectors & Data Sources">
+          <SectionCard number="9" title="🔗 Connectors & Data Sources">
             <div
               style={{
                 display: "flex",
@@ -586,7 +623,7 @@ new questions. Do not guess."`}</Code>
           </SectionCard>
 
           {/* 10. Instructions & Scheduling */}
-          <SectionCard number="10" title="Instructions & Scheduling">
+          <SectionCard number="10" title="🕒 Instructions & Scheduling">
             <KV
               k="Global"
               v="Settings → Cowork → Edit Instructions"
@@ -611,7 +648,7 @@ without approval."`}</Code>
           </SectionCard>
 
           {/* 11. Review & Approve Workflow */}
-          <SectionCard number="11" title="Review & Approve Workflow">
+          <SectionCard number="11" title="👀 Review & Approve Workflow">
             <Bullet>
               <strong>Visual diffs</strong> — review changes with inline
               comments
@@ -662,7 +699,7 @@ without approval."`}</Code>
           </SectionCard>
 
           {/* 12. Parallel Sessions & Sub-agents */}
-          <SectionCard number="12" title="Parallel Sessions & Sub-agents">
+          <SectionCard number="12" title="🤖 Parallel Sessions & Sub-agents">
             <Bullet>
               <strong>Multiple sessions</strong> — run tasks in parallel
             </Bullet>
@@ -689,7 +726,7 @@ without approval."`}</Code>
           </SectionCard>
 
           {/* 13. Daily File Operations */}
-          <SectionCard number="13" title="Daily File Operations">
+          <SectionCard number="13" title="📂 Daily File Operations">
             <Code>{`"Organize files by type: docs/
  office/ images/ — YYYY-MM-DD names"
 
@@ -708,7 +745,7 @@ without approval."`}</Code>
           </SectionCard>
 
           {/* 14. Safety & Limitations */}
-          <SectionCard number="14" title="Safety & Limitations">
+          <SectionCard number="14" title="⚠️ Safety & Limitations">
             <Bullet>
               <strong>No memory</strong> across sessions — use context files
             </Bullet>
@@ -741,7 +778,7 @@ without approval."`}</Code>
           </SectionCard>
 
           {/* 15. Troubleshooting */}
-          <SectionCard number="15" title="Troubleshooting">
+          <SectionCard number="15" title="🛠️ Troubleshooting">
             <KV
               k="No Cowork tab"
               v="Update app, verify paid plan, check Apple Silicon"
@@ -760,7 +797,7 @@ without approval."`}</Code>
           </SectionCard>
 
           {/* 16. Quick Reference */}
-          <SectionCard number="16" title="Quick Reference" span={3}>
+          <SectionCard number="16" title="📌 Quick Reference" span={3}>
             <div
               style={{
                 display: "flex",
