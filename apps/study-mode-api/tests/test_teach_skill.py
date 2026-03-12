@@ -1,7 +1,7 @@
 """Tests for the teach_skill module."""
 
 import os
-from unittest.mock import AsyncMock, MagicMock, patch
+from unittest.mock import AsyncMock, patch
 
 import pytest
 
