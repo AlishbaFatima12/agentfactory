@@ -1,0 +1,91 @@
+{
+  "topic": "topic-15-tailwind",
+  "prompt": "tailwind v4 cheatsheet -- just switched from v3, need the new stuff",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 43KB HTML, 2097px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 5 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Excellent organization from basics to advanced with migration content properly sequenced. Outstanding scannability via numbered cards, Tags, and RefRow tables. The 3-column v3→v4 Quick Reference is a standout desk-reference artifact. Visual variety is strong throughout — Code, RefRow, Bullet, KV, and custom metric/strikethrough tables all appear. Information density is well-calibrated; no filler, no walls of text. Minor deductions prevented by borderline thinness in Sections 18 and 21, but overall this is immediately bookmarkable by a working developer.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 4,
+      "notes": "Covers all major v4 paradigm shifts a v3 migrator needs: CSS-first config, @theme, @utility, @custom-variant, @plugin, container queries, 3D transforms, gradient overhaul, new variants, dark mode changes, and a concrete migration checklist with the upgrade tool. Useful extras like @reference, @source not, named containers, and oklch context exceed the prompt. Gaps: @config for incremental v3 compatibility deserves its own section (only a bullet tip); CSS variable shorthand in arbitrary values missing; @import 'tailwindcss/utilities' selective import not covered; theme() function behavior change absent; renamed utility list is illustrative rather than comprehensive.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 5,
+      "notes": "All 8 verified claims are accurate against official Tailwind CSS v4 documentation. Installation commands, CSS-first config directives (@import, @theme, @source not, @utility, @custom-variant with @slot), gradient renames (bg-gradient-to-* → bg-linear-to-*), container queries built into core, the upgrade tool (npx @tailwindcss/upgrade), and performance benchmarks (≤10x full, ≤100x incremental) are all confirmed. One minor imprecision: the @screen → @media replacement shows a hardcoded pixel value (width >= 768px) where the idiomatic v4 form would reference the theme token via theme(--breakpoint-md), but this is a copy-paste-safe value and not a breaking error. No hallucinated flags, no invented APIs, no outdated v3 patterns mislabeled as v4.",
+      "verified_claims": [
+        {
+          "claim": "Install Tailwind v4 with Vite using: npm install tailwindcss @tailwindcss/vite",
+          "verdict": "correct",
+          "evidence": "Matches the official Tailwind CSS v4 Vite installation guide at tailwindcss.com exactly. The @tailwindcss/vite package and the install command are confirmed.",
+          "severity": "high"
+        },
+        {
+          "claim": "Single @import \"tailwindcss\" replaces all three @tailwind base/components/utilities directives",
+          "verdict": "correct",
+          "evidence": "Confirmed by official v4 docs and the v4.0 release blog. The CSS-first import is the documented replacement for the three-directive pattern.",
+          "severity": "high"
+        },
+        {
+          "claim": "@source not \"../legacy\" syntax excludes paths from content scanning",
+          "verdict": "correct",
+          "evidence": "Confirmed in the official 'Detecting classes in source files' documentation page at tailwindcss.com/docs/detecting-classes-in-source-files.",
+          "severity": "high"
+        },
+        {
+          "claim": "bg-linear-to-* replaces bg-gradient-to-*; bg-radial and bg-conic are new gradient types",
+          "verdict": "correct",
+          "evidence": "Confirmed by the v4.0 release blog and upgrade guide at tailwindcss.com. The rename is part of the documented breaking changes and the new gradient types are official v4 additions.",
+          "severity": "high"
+        },
+        {
+          "claim": "Container queries are built into v4 core (no plugin needed), using @container class and @container/name for named containers",
+          "verdict": "correct",
+          "evidence": "Confirmed by the v4.0 release blog: 'container queries have been added directly to core'. Previously required @tailwindcss/container-queries plugin in v3.2. Named container syntax also confirmed.",
+          "severity": "high"
+        },
+        {
+          "claim": "@custom-variant uses @slot to mark where utility styles are injected",
+          "verdict": "correct",
+          "evidence": "Confirmed in official 'Adding custom styles' docs at tailwindcss.com/docs/adding-custom-styles. The @slot placeholder and shorthand syntax shown in the cheatsheet both match the documented API.",
+          "severity": "medium"
+        },
+        {
+          "claim": "npx @tailwindcss/upgrade automates the v3 → v4 migration",
+          "verdict": "correct",
+          "evidence": "Confirmed by the official upgrade guide at tailwindcss.com/docs/upgrade-guide. The tool name, command, and description of what it handles all match.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Performance: full builds up to 10x faster, incremental builds up to 100x faster",
+          "verdict": "correct",
+          "evidence": "Official benchmarks corroborate: full rebuilds 3.5–10x faster, incremental rebuilds >100x faster (some sources cite 182x). The cheatsheet's figures are within the documented range and are not exaggerated.",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.75,
+  "pass": true,
+  "timestamp": "2026-03-11T13:28:11.704Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

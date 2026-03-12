@@ -1,0 +1,91 @@
+{
+  "topic": "topic-3-regex",
+  "prompt": "regex reference card please. the kind of thing you'd tape to your monitor",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 35KB HTML, 1194px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "18 sections, 5 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional desk reference. Flows naturally from foundations to advanced across two pages. RefRow gives a consistent 130px code column making sections trivially scannable. Code blocks appear judiciously for non-obvious examples without cluttering. Section 18 decision guide (spanning 3 cols) is a standout addition. Density is well-calibrated throughout. Minor redundancy in Section 12. Visual variety is high: RefRow, Code, Bullet, KV, Tag, and custom card grid all appear.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Covers all core syntax, character classes, quantifiers, greedy/lazy, groups, lookarounds, flags, anchors. Dedicated JS and Python sections with full method APIs. Extras beyond the prompt: POSIX classes, copy-paste common patterns (email/URL/IPv4/date), substitution tokens, common pitfalls section, advanced PCRE constructs. Decision guide is unrequested but valuable. Only possible gap is Unicode property escapes (\\p{}) but that is an edge case for a monitor reference. Depth is consistent across sections.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 3,
+      "notes": "The cheatsheet is well-structured and mostly accurate, but contains two significant errors that would directly break user workflows: (1) The JavaScript named-group replacement syntax is shown as `${name}` when the correct MDN-specified syntax is `$<name>` — a user copying this would get a literal `${name}` string in their output. (2) Python's standard `re` module also requires fixed-width lookbehinds; only the third-party `regex` module lifts this restriction — the cheatsheet's claim that Python is an exception is incorrect and would mislead users. Additionally, `\\w` is presented as strictly `[a-zA-Z0-9_]` without noting this is only true in ASCII/bytes mode — in default Unicode string mode it matches far more characters. The `matchAll` entry omits the mandatory `g`-flag requirement (a TypeError without it), which is a notable omission for a copy-paste reference. The remaining claims (metacharacters, anchors, `\\Z`, POSIX classes, atomic group JS limitation, Python named group syntax, `\\s` characters) are all accurate.",
+      "verified_claims": [
+        {
+          "claim": "JavaScript named group replacement syntax shown as `${name}` in the substitution patterns section",
+          "verdict": "incorrect",
+          "evidence": "MDN documents the correct syntax as `$<name>` (angle brackets), not `${name}` (curly braces). Using `${name}` would produce a literal string rather than the captured group value. See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace",
+          "severity": "high"
+        },
+        {
+          "claim": "Lookbehind fixed-width restriction: 'except .NET, Python'",
+          "verdict": "incorrect",
+          "evidence": "Python's standard `re` module also requires fixed-width lookbehinds. Only the third-party `regex` module supports variable-length lookbehinds. The cheatsheet incorrectly lists Python alongside .NET as an exception to the fixed-width rule. See: https://docs.python.org/3/library/re.html and https://discuss.python.org/t/alternative-for-variable-length-lookbehind/24323",
+          "severity": "high"
+        },
+        {
+          "claim": "`\\w` matches `[a-zA-Z0-9_]`",
+          "verdict": "incorrect",
+          "evidence": "This is only true in bytes mode or when the `re.ASCII` flag is used. In default string mode, Python's `\\w` matches all Unicode alphanumeric characters and underscore, which is a significantly broader set. Presenting it as simply `[a-zA-Z0-9_]` without qualification is misleading for a general-purpose reference. See: https://docs.python.org/3/library/re.html",
+          "severity": "medium"
+        },
+        {
+          "claim": "`str.matchAll(re)` described as 'Iterator of all match objects' with no mention of the `g` flag requirement",
+          "verdict": "incorrect",
+          "evidence": "MDN states that `matchAll()` throws a TypeError if the regex does not have the global (`g`) flag set. Omitting this on a copy-paste reference card is a significant error — users will encounter an immediate runtime error. See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll",
+          "severity": "medium"
+        },
+        {
+          "claim": "`\\Z` matches absolute end of string in PCRE/Python",
+          "verdict": "correct",
+          "evidence": "Confirmed by Python docs: `\\Z` matches only at the very end of the string and is unaffected by `re.MULTILINE`. Also supported in PCRE2. See: https://docs.python.org/3/library/re.html",
+          "severity": "low"
+        },
+        {
+          "claim": "Python named group syntax `(?P<name>...)`",
+          "verdict": "correct",
+          "evidence": "Confirmed as the correct Python-specific extension syntax in official Python documentation. See: https://docs.python.org/3/library/re.html",
+          "severity": "low"
+        },
+        {
+          "claim": "Atomic groups `(?>...)` are not available in basic JavaScript",
+          "verdict": "correct",
+          "evidence": "Confirmed by multiple sources including regular-expressions.info: JavaScript lacks native atomic grouping. The statement is accurate. See: https://www.regular-expressions.info/atomic.html",
+          "severity": "low"
+        },
+        {
+          "claim": "`\\s` matches `[ \\t\\n\\r\\f]`",
+          "verdict": "correct",
+          "evidence": "Confirmed by Python docs and standard regex references: `\\s` matches space, tab, newline, carriage return, and form feed. The listed set is accurate for ASCII mode. See: https://docs.python.org/3/library/re.html",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.4,
+  "pass": true,
+  "timestamp": "2026-03-11T13:34:32.570Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

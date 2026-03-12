@@ -1,0 +1,91 @@
+{
+  "topic": "topic-2-docker",
+  "prompt": "docker cheatsheet, include compose v2 stuff and the newer buildkit features. i always mix up the old and new syntax",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 39KB HTML, 1936px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 4,
+      "notes": "24 sections, 1 thin. 1 total check failures.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Excellent organization across two well-named pages (Core & Build / Compose V2 & Production) with a logical flow from fundamentals to advanced. Section 11 (Old vs New Syntax Guide) directly addresses the user's stated pain point ('I always mix up the old and new syntax') with a two-column legacy/modern comparison — a standout design choice. Visual variety is strong throughout: RefRows for command references, Code blocks for copy-pasteable examples, Bullets for conceptual notes, KV pairs for flag glossaries, and the card grid in Section 24 for decision guidance. Information density is well-calibrated — nearly every section has 5–7 items plus a code block, hitting the substantive-but-digestible sweet spot. The highlight-background tip callouts add helpful scannable asides without bloating sections. The Section 24 'When to Use What' grid is a professional-grade desk reference addition. Minor deduction not warranted — this is bookmark-worthy.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensively covers everything the prompt asked for and then some. Core CLI (Sections 1–3) and Dockerfile essentials (4) provide solid grounding. BuildKit is covered at two depths: fundamentals (5) and advanced cache/secret/SSH mounts (6) — exactly the kind of detail practitioners need. Multi-stage builds (7) is thorough with cross-stage COPY patterns. Compose V2 gets five dedicated sections: CLI differences (12), file structure with healthcheck conditions (13), service config (14), networking with internal: true (15), volumes with long syntax (16), build config with cache_from/cache_to (17), profiles & overrides (18), and the new `develop.watch` feature (19). The old-vs-new syntax comparison directly answers the user's stated confusion. Bonus coverage of multi-platform buildx (20), logging/debugging (21), security best practices (22), resource constraints (23), and the decision guide (24) are all genuinely useful extras. No meaningful gaps: healthchecks, restart policies, secrets, env/ARG, tmpfs, network aliases, and registry operations are all present.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 5,
+      "notes": "All 8 verified claims matched official Docker documentation exactly. The cheatsheet is technically precise across BuildKit, Compose V2, lifecycle signals, Compose Watch, multi-platform builds, and file naming conventions. No invented flags, no outdated syntax presented as current, no incorrect API signatures. The one minor imprecision — describing `docker kill` as \"immediate SIGKILL\" without noting it accepts `--signal` — is harmless since the default is indeed SIGKILL and the description won't break any user workflow. The Compose Watch `develop.watch` actions (`sync`, `rebuild`, `sync+restart`) are all confirmed correct per the Compose Develop Specification. The `--platform linux/amd64,linux/arm64` multi-platform buildx syntax is correct. Overall, this is an exceptionally accurate cheatsheet with no meaningful errors found across all 8 targeted verifications.",
+      "verified_claims": [
+        {
+          "claim": "BuildKit is enabled by default in Docker Desktop and Docker 23.0+",
+          "verdict": "correct",
+          "evidence": "Docker Engine 23.0 release notes confirm: 'Docker v23.0 now uses BuildKit by default to build Linux images.' Confirmed at docs.docker.com/build/buildkit/ and docs.docker.com/engine/release-notes/23.0/",
+          "severity": "medium"
+        },
+        {
+          "claim": "docker compose (V2) is a CLI plugin — no separate binary needed",
+          "verdict": "correct",
+          "evidence": "Docker docs confirm Compose V2 'functions as a Docker CLI plugin' installed to $DOCKER_CONFIG/cli-plugins/, included by default in Docker Desktop. docs.docker.com/compose/install/",
+          "severity": "medium"
+        },
+        {
+          "claim": "compose.yaml is the recommended filename, replacing docker-compose.yml",
+          "verdict": "correct",
+          "evidence": "Docker Compose spec confirms: 'The default path for a Compose file is compose.yaml (preferred)... Compose also supports docker-compose.yaml and docker-compose.yml for backwards compatibility.' docs.docker.com/compose/intro/compose-application-model/",
+          "severity": "low"
+        },
+        {
+          "claim": "docker stop sends SIGTERM first, then SIGKILL after grace period",
+          "verdict": "correct",
+          "evidence": "Docker docs: 'The main process inside the container will receive SIGTERM, and after a grace period, SIGKILL.' Default timeout is 10s on Linux. docs.docker.com/reference/cli/docker/container/stop/",
+          "severity": "high"
+        },
+        {
+          "claim": "depends_on supports condition: service_healthy in Compose V2",
+          "verdict": "correct",
+          "evidence": "Docker Compose docs confirm service_healthy condition: 'Compose guarantees dependency services marked with service_healthy are healthy before starting a dependent service.' docs.docker.com/compose/how-tos/startup-order/",
+          "severity": "medium"
+        },
+        {
+          "claim": "compose.override.yaml is automatically merged on top of compose.yaml",
+          "verdict": "correct",
+          "evidence": "Docker docs: 'By default, Compose reads two files, a compose.yaml and an optional compose.override.yaml file. When you run docker compose up it reads the overrides automatically.' docs.docker.com/compose/how-tos/multiple-compose-files/merge/",
+          "severity": "medium"
+        },
+        {
+          "claim": "Compose Watch supports three actions: sync, rebuild, and sync+restart",
+          "verdict": "correct",
+          "evidence": "Compose Develop Specification confirms all three actions with exact descriptions matching the cheatsheet. docs.docker.com/reference/compose-file/develop/ and docs.docker.com/compose/how-tos/file-watch/",
+          "severity": "high"
+        },
+        {
+          "claim": "docker buildx build --platform linux/amd64,linux/arm64 --push for multi-arch images",
+          "verdict": "correct",
+          "evidence": "Docker multi-platform docs confirm: 'docker buildx build --platform linux/amd64,linux/arm64 .' is the correct syntax. Comma-separated list matches what the cheatsheet's line-continuation renders. docs.docker.com/build/building/multi-platform/",
+          "severity": "high"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.9,
+  "pass": true,
+  "timestamp": "2026-03-11T13:33:07.429Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

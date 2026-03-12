@@ -1,0 +1,91 @@
+{
+  "topic": "topic-17-sourdough",
+  "prompt": "can you make a cheatsheet for sourdough bread? like the whole process from starter maintenance to baking. i keep screwing up the timing",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 30KB HTML, 1575px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "18 sections, 4 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional usability. Organization flows perfectly: fundamentals → starter science → maintenance → mixing → bulk fermentation → shaping → baking → troubleshooting, exactly the mental model a sourdough baker needs. Two-page structure is well-chosen with each page fitting comfortably. Scannability is excellent: numbered sections, color-coded status Tags (green/yellow/red for health signals and proof tests), alternating row backgrounds on tabular data, highlighted callout boxes for warnings. Information density hits the sweet spot — Code blocks show real formulas, KV pairs handle gear and ratios concisely, Bullets handle narrative steps, custom table rows handle timelines. The temperature vs. timing grid (Section 9) and full process timeline (Section 18) are standout practical tools. Visual variety is high: Tags, Code blocks, KV pairs, Bullets, custom table rows, and multi-column grids all appear. Warm brown/terracotta palette suits the artisan baking topic. Minor nitpick: Section 18 schedule cards pack a lot of free-form prose into small boxes, which gets dense — but the content value justifies it.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensive coverage of exactly what the user asked for — the whole process from starter maintenance to baking plus help with timing — plus valuable extras. Starter maintenance: Sections 2-4 cover anatomy, daily/weekly feeding ratios with real code examples, and a health signals diagnostic table. Timing issues (the user's stated pain point): Section 9's temperature vs. timing grid is precisely what a baker who keeps screwing up timing needs, and Section 18 provides three concrete scheduling options. Mixing and fermentation: Sections 5-8 cover baker's math, flour selection, autolyse, and bulk fermentation with clear done-signals and failure modes. Shaping: Sections 10-11 cover preshaping, bench rest, boule vs batard. Proofing: Sections 12-13 cover cold retard parameters and the four-level poke test diagnostic. Baking: Sections 14-15 cover scoring and Dutch oven method. Troubleshooting: Section 17 hits 7 common failure modes with clear root causes. Extras the user did not explicitly ask for but will appreciate: baker's math formula, flour selection guide, three scheduling templates, and a no-Dutch-oven workaround. No meaningful gaps — even edge cases like acetone smell, pink streaks, and over-proofed recovery are covered. Temperatures, hydration ratios, times, and internal temp targets all appear accurate.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "This sourdough cheatsheet is mostly excellent — practical advice on timing, temperatures, scoring, and cold retard is well-calibrated against authoritative baking sources. Two issues prevent a perfect score: (1) The \"Saccharomyces\" label for sourdough wild yeast is oversimplified and increasingly inaccurate — current microbiology research consistently identifies Kazachstania humilis (and other Kazachstania spp.) as the dominant wild yeast in most home sourdough starters, not Saccharomyces. While S. cerevisiae does appear in some starters, calling the wild yeast simply \"Saccharomyces\" perpetuates a common misconception. (2) The 50-75% bulk rise target is presented as universal, but authoritative sources (The Sourdough Journey, King Arthur Baking) show this target is temperature-dependent: ~75% at 70°F, ~50% at 75°F, ~30% at 80°F. The fixed range will mislead bakers in warm (85°F+) kitchens into over-fermenting. Neither error is workflow-breaking, and the rest of the cheatsheet (scoring angle, depth, internal temp, cold retard duration/temp, LAB acid production, fermentation timing tables) checks out accurately.",
+      "verified_claims": [
+        {
+          "claim": "Wild yeast in sourdough is 'Saccharomyces — produces CO2 gas for rise'",
+          "verdict": "incorrect",
+          "evidence": "Multiple peer-reviewed studies (eLife, ASM, MicrobialFoods.org) find that Kazachstania humilis and other Kazachstania spp. are the most commonly dominant wild yeast in home sourdough starters, not Saccharomyces. S. cerevisiae (commercial baker's yeast) can appear in some starters but is not the typical wild yeast. The cheatsheet's label is an oversimplification that contradicts current sourdough microbiology.",
+          "severity": "medium"
+        },
+        {
+          "claim": "LAB bacteria 'Lactobacillus — creates lactic and acetic acids for flavor'",
+          "verdict": "correct",
+          "evidence": "Confirmed by Frontiers in Microbiology, ASM, and PubMed sources. Lactobacillus (and its reclassified genera) are the dominant LAB in sourdough, producing both lactic acid (fresh acidity) and acetic acid (sharp acidity) as primary metabolites.",
+          "severity": "low"
+        },
+        {
+          "claim": "Peak activity: starter doubles in 4-6 hours after feeding at 75-78°F",
+          "verdict": "correct",
+          "evidence": "King Arthur Baking and Brod & Taylor confirm that 75-78°F is within the ideal range and doubling in 4-6 hours is typical at standard (1:1:1) ratios. The 1:5:5 ratio used in the cheatsheet's code block may take slightly longer (6-10 hrs), but this is a minor caveat and the claim is broadly accurate.",
+          "severity": "low"
+        },
+        {
+          "claim": "Bulk fermentation goal: 'Dough should rise 50-75% in volume (not double!)'",
+          "verdict": "incorrect",
+          "evidence": "The Sourdough Journey and King Arthur Baking document that bulk rise targets are temperature-dependent: ~75% rise at 70°F dough temp, ~50% at 75°F, ~30% at 80°F. The cheatsheet presents 50-75% as a universal target, which would cause over-fermentation in warm kitchens. The nuance is critical and commonly misunderstood by beginners.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Internal temperature target of 205°F signals doneness",
+          "verdict": "correct",
+          "evidence": "King Arthur Baking, ThermoWorks, and The Sourdough Journey all cite 205-210°F as the target range. 205°F is at the lower end but valid — it yields a slightly softer crumb. The claim is accurate.",
+          "severity": "low"
+        },
+        {
+          "claim": "Score at 30-45° angle for an ear",
+          "verdict": "correct",
+          "evidence": "King Arthur Baking, Heartbeet Kitchen, and multiple sourdough scoring guides confirm 30-45° as the standard angle range. 30° is the classic angle for a curved lame; 45° is used for baguette-style and some boule cuts. The range given is accurate.",
+          "severity": "low"
+        },
+        {
+          "claim": "Score 1/4 to 1/2 inch deep",
+          "verdict": "correct",
+          "evidence": "Confirmed by King Arthur Baking and multiple scoring technique guides. ¼ to ½ inch (approx. 6-12mm) is the standard recommended scoring depth for sourdough bread.",
+          "severity": "low"
+        },
+        {
+          "claim": "Cold retard at 38-40°F for 8-16 hours",
+          "verdict": "correct",
+          "evidence": "The Pantry Mama, Breadtopia, and The Sourdough Journey all confirm 8-16 hours as standard cold retard duration. 38-40°F falls within the normal home refrigerator range (34-41°F) cited by baking sources.",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.7,
+  "pass": true,
+  "timestamp": "2026-03-11T13:31:44.758Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

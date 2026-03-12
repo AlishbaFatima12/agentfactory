@@ -305,6 +305,8 @@ The difference is structural, not a reflection of company quality. UK companies 
 
 This matters for your sales process. For the Karachi prospect, the agent supplements public data with inference — and inference means higher hallucination risk. Apply the three detection rules from Lesson 1 more aggressively on briefs with thin public data. For the London prospect, the agent has richer verified sources, so the brief is more reliable — but you still check financial claims against Companies House filings rather than trusting the agent's numbers.
 
+When the AE provides information that cannot be independently verified (e.g., "he came from Stripe I think"), the brief must either verify it with a source or explicitly flag it as user-provided and requiring verification. Never present unverified AE input as confirmed fact.
+
 ### Ranking the 5 Prospects
 
 After running all 5 briefs, rank them:

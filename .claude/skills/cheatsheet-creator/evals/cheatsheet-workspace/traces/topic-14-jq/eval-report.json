@@ -1,0 +1,24 @@
+{
+  "topic": "topic-14-jq",
+  "prompt": "jq cheatsheet? i can only ever remember the dot operator lol",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 50KB HTML, 2472px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 3,
+      "notes": "12 sections, 0 thin. 0 total check failures.",
+      "channel": "D"
+    }
+  },
+  "composite": 4.2,
+  "pass": true,
+  "timestamp": "2026-03-11T13:07:41.504Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

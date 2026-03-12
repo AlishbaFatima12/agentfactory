@@ -1,0 +1,91 @@
+{
+  "topic": "topic-16-sql",
+  "prompt": "SQL reference cheatsheet, i switch between postgres and mysql a lot and keep getting the syntax mixed up",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 51KB HTML, 2778px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 5 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional usability. The side-by-side PG vs MySQL framing is perfectly tuned to the user's stated pain point. Blue/green color-coding for MySQL/PostgreSQL is consistent throughout and makes dialect identity scannable at a glance. Organization flows logically: connect → DDL → DML → types → functions → admin → advanced. Section 12 (Quick Syntax Lookup) and Section 23 (Admin Commands Side-by-Side) are excellent desk-reference anchors. The two-page split keeps each page digestible. Visual variety is excellent: Code blocks, RefRows, KV pairs, Bullets, a zebra-striped comparison table (Section 3), a 3-column grid (Section 12), and a 2x3 gotcha grid (Section 24). No section feels monotonous. Information density is well-calibrated. Migration Gotchas (Section 24) directly addresses the user's frustration of mixing things up. Version callouts (PG 9.5+, MySQL 8.0.18+, etc.) add real practical value.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensive coverage that directly serves the stated use case. Core SQL operations covered: INSERT/UPSERT, UPDATE/DELETE joins, LIMIT/OFFSET, TRUNCATE. DDL covered: CREATE TABLE with identity/auto-increment, ALTER TABLE, indexes. Types covered: Section 3 type comparison table is thorough — boolean, UUID, JSON, arrays, enum. Functions covered: string and date/time. Advanced features covered: window functions, CTEs with optimization behavior differences, JSON ops, full-text search, arrays, materialized views, stored procedures. Admin covered: user/privilege management, EXPLAIN, transactions/isolation, admin commands. The user did not explicitly ask for all of these, but a practitioner switching dialects would need every one of them. Migration Gotchas (Section 24) directly addresses the 'keep getting syntax mixed up' prompt. The only minor omission is FOREIGN KEY and constraint syntax differences, but given the breadth of everything else this is negligible. Version coverage is explicitly stated (PG 17, MySQL 8.x/9.x).",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 5,
+      "notes": "This is an exceptionally accurate cheatsheet. All 7 verifiable, high-stakes claims checked out against official PostgreSQL and MySQL documentation. Version numbers are precise (PG 10+ for IDENTITY, PG 12 for CTE inlining, MySQL 8.0.18 for EXPLAIN ANALYZE, MySQL 8.0.19 for UPSERT row alias, MySQL 8.0.20 for VALUES() deprecation, PG 11 for CREATE PROCEDURE, MySQL 8.0 for window functions). Behavioral descriptions (default isolation levels, TRUNCATE transactionality, DDL in transactions, JSONB vs JSON indexing) are all accurate. The only observation worth noting is cosmetic: the cheatsheet labels the MySQL UPSERT alias as `new_row` (a user-chosen alias name) while the MySQL docs use `new` in examples — but since the alias name is arbitrary SQL syntax chosen by the author, this is not an error. No invented flags, no hallucinated syntax, no deprecated features misrepresented as current.",
+      "verified_claims": [
+        {
+          "claim": "GENERATED ALWAYS AS IDENTITY is SQL-standard and available in PG 10+",
+          "verdict": "correct",
+          "evidence": "PostgreSQL 10 release notes (postgresql.org/docs/10/release-10.html) and the PG 10 CREATE TABLE docs confirm identity columns were introduced in PG 10, implementing SQL:2011 feature T174.",
+          "severity": "medium"
+        },
+        {
+          "claim": "MySQL ON DUPLICATE KEY UPDATE row alias syntax (AS new_row) is available from 8.0.19+",
+          "verdict": "correct",
+          "evidence": "MySQL 8.0.19 release notes (dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-19.html) confirm row alias support was introduced in 8.0.19. The alias name 'new_row' is user-defined; official examples use 'new', but any alias is valid.",
+          "severity": "high"
+        },
+        {
+          "claim": "Older MySQL VALUES(col) syntax in ON DUPLICATE KEY UPDATE is deprecated since 8.0.20",
+          "verdict": "correct",
+          "evidence": "MySQL 8.0.20 release notes and worklog WL#13325 (dev.mysql.com) explicitly state VALUES() was deprecated in 8.0.20 in favor of the row alias syntax added in 8.0.19.",
+          "severity": "medium"
+        },
+        {
+          "claim": "PostgreSQL has had window functions since version 8.4 (2009)",
+          "verdict": "correct",
+          "evidence": "PostgreSQL 8.4 documentation (postgresql.org/docs/8.4/functions-window.html) lists window functions, and the PostgreSQL wiki PDF on window functions is dated 2009, confirming both the version and year.",
+          "severity": "medium"
+        },
+        {
+          "claim": "PG 12+ non-recursive, side-effect-free CTEs referenced once are inlined by the planner; use AS MATERIALIZED to force old fence behavior",
+          "verdict": "correct",
+          "evidence": "PostgreSQL 12 docs (postgresql.org/docs/12/queries-with.html) and the commit message confirm that PG 12 changed the default CTE behavior to inline eligible CTEs, and added AS MATERIALIZED / NOT MATERIALIZED keywords to control it explicitly.",
+          "severity": "high"
+        },
+        {
+          "claim": "MySQL EXPLAIN ANALYZE was added in 8.0.18",
+          "verdict": "correct",
+          "evidence": "MySQL 8.0.18 release notes (dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-18.html) and the MySQL EXPLAIN ANALYZE blog post confirm EXPLAIN ANALYZE was introduced in exactly MySQL 8.0.18.",
+          "severity": "high"
+        },
+        {
+          "claim": "PostgreSQL added CREATE PROCEDURE (with transactions) in PG 11; before that, only functions",
+          "verdict": "correct",
+          "evidence": "PostgreSQL 11 press kit and docs (postgresql.org/about/press/presskit11/en/ and postgresql.org/docs/11/sql-createprocedure.html) confirm CREATE PROCEDURE with transaction management was a new feature in PG 11.",
+          "severity": "medium"
+        },
+        {
+          "claim": "MySQL default transaction isolation level is REPEATABLE READ; PostgreSQL default is READ COMMITTED",
+          "verdict": "correct",
+          "evidence": "MySQL InnoDB documentation (dev.mysql.com/doc/refman/8.0/en/innodb-transaction-isolation-levels.html) states REPEATABLE READ is InnoDB's default across all documented versions. PostgreSQL's READ COMMITTED default is well-established in PG docs.",
+          "severity": "high"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 5,
+  "pass": true,
+  "timestamp": "2026-03-11T16:25:01.496Z",
+  "version": "v3",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

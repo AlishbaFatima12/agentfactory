@@ -1,0 +1,24 @@
+{
+  "topic": "topic-7-parenting",
+  "prompt": "cheat sheet for child development milestones, like what to expect at each age? my kid is 2 and i have no idea what's normal lol",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 48KB HTML, 2020px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 1,
+      "notes": "Component \"Code\" not defined; Component \"RefRow\" not defined",
+      "channel": "D"
+    }
+  },
+  "composite": 3.4,
+  "pass": false,
+  "timestamp": "2026-03-11T13:08:02.270Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

@@ -132,6 +132,8 @@ Read through your six touches and notice the progression. This is not six versio
 
 Touch 3 is content, not pitch. Touch 6 is a graceful close, not a last-ditch ask. The sequence earns attention by delivering value at every step — case studies, data points, diagnostic offers — rather than repeating the same request with increasing desperation.
 
+Each touch must use a distinct hook, proof point, or angle not present in any previous touch. Plan the distribution of available hooks across touches before writing — do not front-load all proof points into Touch 1. Reserve your strongest proof point (case study, customer result) for Touch 3-4, not Touch 1 — social proof converts better after rapport is established.
+
 ## Sales Sequences vs Marketing Sequences
 
 The sequence you just built is a **sales sequence** — personalised to Sarah Chen, informed by her research brief, tailored to her specific situation. Now compare it to a marketing sequence.
@@ -257,6 +259,8 @@ needs. Please let us know a time that works.
 ```
 
 The difference is stark. The context-aware follow-up references the TransGlobal brief, the inventory-masters-first approach, and provides a specific diagnostic agenda. The generic follow-up could be sent to anyone. The sequence built context over 21 days. The follow-up skill uses that context to make the response feel like a continuation of a conversation, not a cold start.
+
+Follow-ups must be sent within 2 hours of the call ending. The "What I heard" section must use the prospect's exact phrases from call notes — quoted verbatim, not paraphrased. Every commitment made by either side must be listed with the exact date agreed, not approximations. If the call notes don't contain a detail, it cannot appear in the follow-up.
 
 ## Exit Conditions
 

@@ -1,0 +1,91 @@
+{
+  "topic": "topic-5-cognitive-biases",
+  "prompt": "make me a cognitive biases cheatsheet -- like the really important ones for decision making, not all 180 of them",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 41KB HTML, 1569px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "22 sections, 4 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional usability. Two-page structure keeps each page scannable. Every bias card follows Tags then KV Definition then Bullets then Countermeasure, creating instant predictability. Visual variety is excellent: Tags, KV pairs, Bullets, RefRows, a bespoke Dunning-Kruger table, a quad-panel matrix, and a Tag-indexed category summary. The span-3 Quick-Reference Matrix on page 2 reframes all prior content into a when-to-watch-for-it mental model. Information density is well-calibrated at 5 to 6 items per card. The Debiasing Toolkit using RefRows is practical and copy-pasteable.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Fully honors the prompt spirit of important ones for decision making, not all 180. The ~20 biases selected are high-signal and high-impact with no obscure filler. Anchoring, Confirmation, Availability, Sunk Cost, Loss Aversion, Overconfidence, Dunning-Kruger, Framing, Status Quo, Bandwagon, Hindsight, Groupthink, Survivorship, Planning Fallacy, Halo, Peak-End Rule, Recency and Primacy, and Attribution Error are all canonical picks. The sheet goes beyond listing biases by including a Debiasing Toolkit with 8 actionable techniques, a grouping taxonomy, a situational quick-reference matrix, and a System 1 vs 2 framing section. Each bias includes a countermeasure, transforming the sheet from passive reference to actionable guide.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "This is a well-researched cheatsheet on cognitive biases. 7 of 8 verified claims are factually accurate and match primary sources. The one notable factual error is the Sydney Opera House duration: the cheatsheet states \"16 years\" but construction ran from 1959–1973 = 14 years (multiple sources confirm). The $7M → $102M AUD figures are correct. All other high-stakes claims — Asch's 75% conformity rate, Svenson's 93% drivers, Buehler et al.'s 34/56-day thesis figures, Tversky & Kahneman's spinning wheel study, loss aversion ratio range of 1.5:1–2.5:1, and Abraham Wald's WWII armor insight — are accurate and traceable to primary sources. The organ donation \"12% to 99%\" framing is a simplification (real country data spans a range, with some opt-in countries closer to 15–42% and some opt-out approaching 99%) but is not misleading in context. The Dunning-Kruger confidence/competence curve description is a reasonable qualitative summary, though recent replications have challenged the original finding — this does not rise to an error given the cheatsheet's framing. Overall: strong factual quality with one specific numeric error (16 vs. 14 years) that a citing user would get wrong.",
+      "verified_claims": [
+        {
+          "claim": "Anchoring bias: 'Tversky & Kahneman — random number on a wheel influenced UN country estimates'",
+          "verdict": "correct",
+          "evidence": "Confirmed in Tversky & Kahneman (1974). A wheel rigged to stop on 10 or 65 influenced estimates of the percentage of African countries in the UN. Participants who landed on 10 guessed ~25%; those who landed on 65 guessed ~45%.",
+          "severity": "low"
+        },
+        {
+          "claim": "Bandwagon Effect: 'Asch conformity — people gave obviously wrong answers to match the group (75% conformed at least once)'",
+          "verdict": "correct",
+          "evidence": "Wikipedia and Simply Psychology both confirm: ~75% of participants conformed at least once across the 12 critical trials. Average conformity rate per trial was ~32%. The '75% at least once' figure is the canonical result.",
+          "severity": "low"
+        },
+        {
+          "claim": "Loss Aversion: 'Most studies find a loss-to-gain ratio of approximately 1.5:1 to 2.5:1'",
+          "verdict": "correct",
+          "evidence": "Tversky & Kahneman (1992) found λ = 2.25 in cumulative prospect theory. The broader literature supports a range of roughly 1.5–2.5, making the cheatsheet's stated range accurate and well-calibrated.",
+          "severity": "low"
+        },
+        {
+          "claim": "Overconfidence Bias: '93% of US drivers rate themselves above average'",
+          "verdict": "correct",
+          "evidence": "Svenson (1981) surveyed US and Swedish students; 93% of the US sample placed themselves in the top 50% for driving skill. The cheatsheet's phrasing 'above average' is semantically equivalent to 'top 50%' in this context.",
+          "severity": "low"
+        },
+        {
+          "claim": "Status Quo Bias: 'Organ donation rates swing from 12% to 99% based solely on default checkbox'",
+          "verdict": "correct",
+          "evidence": "Johnson & Goldstein (2003, Science) documented opt-in countries falling below ~15% and some opt-out countries exceeding 99%. The 12%–99% range is a reasonable summary of the cross-country data, though individual country rates vary. The core directional claim is well-supported.",
+          "severity": "low"
+        },
+        {
+          "claim": "Survivorship Bias: 'Abraham Wald realized you should armor where returning planes were NOT hit (the ones hit there never returned)'",
+          "verdict": "correct",
+          "evidence": "Confirmed by the American Mathematical Society feature column and multiple historical sources. Wald worked at the Statistical Research Group at Columbia University and correctly identified that bullet holes on returning planes marked survivable damage zones, not critical ones.",
+          "severity": "low"
+        },
+        {
+          "claim": "Planning Fallacy: 'Sydney Opera House: estimated 7 years and $7M, took 16 years and $102M'",
+          "verdict": "incorrect",
+          "evidence": "Multiple sources (Wikipedia, Quartz, Beyond Software) confirm construction ran from 1959 to 1973 = 14 years, not 16 years. The $7M and $102M AUD figures are correct. The duration is off by 2 years.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Planning Fallacy: 'Students estimated 34 days to finish thesis; actual average was 56 days'",
+          "verdict": "correct",
+          "evidence": "Buehler, Griffin & Ross (1994) reported a mean student estimate of 33.9 days (~34) and actual average completion of 55.5 days (~56). The cheatsheet's figures match the published study data precisely.",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.7,
+  "pass": true,
+  "timestamp": "2026-03-11T13:38:42.882Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

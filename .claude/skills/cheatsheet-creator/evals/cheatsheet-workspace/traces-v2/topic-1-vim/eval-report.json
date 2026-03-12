@@ -1,0 +1,91 @@
+{
+  "topic": "topic-1-vim",
+  "prompt": "vim cheatsheet -- i keep forgetting the basics every time i have to edit something on a remote server",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 48KB HTML, 1468px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 4,
+      "notes": "20 sections, 1 thin. 1 total check failures.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Excellent desk reference. Two-page structure (Essentials / Power User) is a smart split that matches the stated use case — someone who needs basics fast gets them on page 1 without scrolling past advanced content. The 3-column grid is dense but not overwhelming; each card feels self-contained and scannable. RefRow is used consistently for commands throughout, making it trivial to scan left-column keys against right-column descriptions. Code blocks appear where examples add value (search/replace, text objects, macros, survival workflows) rather than everywhere. The Vim Grammar card (section 20) uses a custom alternating-row table — a nice visual break from pure RefRow lists. The 'Survival Workflows' card (section 19) using a 2×2 sub-grid of real-world scenarios is standout — directly matches the user's stated pain point of 'editing on a remote server.' Tag components are used meaningfully (mode labels, Visual sub-mode labels) rather than decoratively. Highlight callout boxes in sections 1 and 6 add practical tips without cluttering the main flow. The only very minor critique: section 17 (Dot Command) is almost entirely Bullets rather than RefRows — slightly harder to scan than neighboring sections — but the explanation-heavy content justifies it.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensive coverage of exactly what a practitioner needs, with smart extras the user didn't ask for. The explicit ask ('i keep forgetting the basics') is fully satisfied by page 1: modes, open/close, navigation, insert, edit/delete, copy/paste/undo, search/replace. Page 2 goes further in all the right directions: window splits, indentation, marks/jumps, registers/macros, the dot command, .vimrc bootstrap, and survival workflows. The survival workflows section is a standout addition — four concrete server-editing scenarios (edit config, find/replace, append to file, comment out a block) speak directly to the remote-server context. Text objects (section 9) and Vim grammar (section 20) are the kind of 'things you didn't know to ask for' that meaningfully level up a beginner's mental model. The .vimrc section is a practical bonus that prevents the common new-user frustration of Vim feeling hostile without configuration. No significant gaps: the cheatsheet covers modes, motion, operators, visual mode, search, buffers, tabs, splits, marks, macros, and workflow. One could argue for a folding section or spell-check commands, but those are genuinely edge cases for remote server editing — their absence is a correct prioritization choice, not an omission.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "The cheatsheet is generally excellent — nearly all commands, motions, text objects, and workflows are factually correct and would work as written. The one notable inaccuracy is describing `:x` as \"same as :wq\", when `:x` only writes the file if the buffer has been modified (it does not unconditionally write like `:wq`). This same conflation causes a downstream imprecision for `ZZ` (which the cheatsheet says equals `:wq` but actually equals `:x`). These are the most practically significant errors. All other verified claims — visual mode commands, jump list navigation, macro replay, text objects, block-comment workflow, `gv`, and `.vimrc` options — are accurate and match official documentation.",
+      "verified_claims": [
+        {
+          "claim": "`:x` — Write and quit (same as :wq)",
+          "verdict": "incorrect",
+          "evidence": "`:x` writes only when changes have been made, unlike `:wq` which always writes unconditionally. The distinction matters because `:wq` updates the file's mtime even when no edits occurred; `:x` does not. Multiple sources including vim.rtorr.com, evanhahn.com, and Hacker News discussion citing Vim's own help text confirm this difference.",
+          "severity": "medium"
+        },
+        {
+          "claim": "`ZZ` — Write and quit from Normal mode",
+          "verdict": "incorrect",
+          "evidence": "`ZZ` is equivalent to `:x`, not `:wq` — it writes only if the buffer was modified. The cheatsheet's label is technically imprecise (ZZ will not write if nothing changed). Confirmed by linuxize.com and vim/vim GitHub issue #6054 which explicitly addresses this discrepancy.",
+          "severity": "low"
+        },
+        {
+          "claim": "`Ctrl+v` enters Block (column) visual mode",
+          "verdict": "correct",
+          "evidence": "Official Vim documentation (vimdoc.sourceforge.net/htmldoc/visual.html) confirms CTRL-V starts blockwise visual mode, shown as -- VISUAL BLOCK -- in the status bar.",
+          "severity": "high"
+        },
+        {
+          "claim": "Block comment workflow: `Ctrl+v`, select lines, `I`, type `#`, `Esc` applies to all lines",
+          "verdict": "correct",
+          "evidence": "Vim Tips Wiki and multiple sources confirm: enter block visual mode with Ctrl+v, select lines with j, press Shift+I to insert at block start, type the comment character, then Esc applies the insertion to all selected lines.",
+          "severity": "high"
+        },
+        {
+          "claim": "`gv` — Re-select last visual selection",
+          "verdict": "correct",
+          "evidence": "Confirmed by VimTricks, Vim Tips Wiki, and `:help gv`. Vim tracks the previous visual selection bounds in the `<` and `>` marks; `gv` restores that selection.",
+          "severity": "medium"
+        },
+        {
+          "claim": "`Ctrl+o` — Jump back to previous position; `Ctrl+i` — Jump forward to next position",
+          "verdict": "correct",
+          "evidence": "Confirmed by Vim jump list documentation: Ctrl+O moves backward through the jumplist, Ctrl+I (same as Tab) moves forward. The jumplist stores up to 100 positions per window.",
+          "severity": "high"
+        },
+        {
+          "claim": "`@@` — Replay last macro",
+          "verdict": "correct",
+          "evidence": "Official Vim repeat documentation (vimdoc.sourceforge.net/htmldoc/repeat.html) confirms `@@` executes the last `@{register}` that was used, allowing quick replay without retyping the register name.",
+          "severity": "medium"
+        },
+        {
+          "claim": "`set smartcase` — Case-sensitive search '...unless uppercase used' (combined with `set ignorecase`)",
+          "verdict": "correct",
+          "evidence": "Vim documentation confirms: with both `ignorecase` and `smartcase` set, searches are case-insensitive when the pattern is all lowercase, but become case-sensitive when any uppercase letter appears in the pattern. The cheatsheet correctly sets `ignorecase` on the preceding line.",
+          "severity": "medium"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.6,
+  "pass": true,
+  "timestamp": "2026-03-11T13:18:20.052Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

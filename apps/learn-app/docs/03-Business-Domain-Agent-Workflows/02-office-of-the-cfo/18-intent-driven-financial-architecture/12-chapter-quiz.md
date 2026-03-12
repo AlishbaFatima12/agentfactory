@@ -552,6 +552,18 @@ explanation: "The Chapter 18 README and bridge text from Chapter 17 establish th
 source: "Chapter 18 README and Lesson 2"
 },
 {
+question: "An agent audits a financial model and reports: 'Cell D7 contains a hardcoded value 0.60 instead of a Named Range reference. This violates Guardrail 1.' A second agent audits the same model and reports: 'Cell D7 hardcodes COGS at 60%, but the Assumptions layer sets Inp_COGS_Pct_Y1 to 0.55. At $6.4M revenue, this 5-percentage-point discrepancy overstates COGS by $320K and understates Gross Profit by the same amount.' Which audit finding is more useful and why?",
+options: [
+"The second — it quantifies the dollar impact of the violation, which tells the CFO the business magnitude of the error rather than just its technical location",
+"The first — it correctly identifies the guardrail violation, which is the agent's job",
+"Both are equally useful — one is technical, the other is financial",
+"Neither — the agent should fix the error automatically instead of reporting it"
+],
+correctOption: 0,
+explanation: "The IDFA skill's Audit Dollar-Impact Rule requires the agent to quantify the business magnitude of every hardcoded value that diverges from stated assumptions. '$320K COGS overstatement' moves a CFO to action; 'hardcoded value in D7' does not. This protocol emerged from eval iterations where technically correct audit reports failed to communicate business risk.",
+source: "Lesson 9: The IDFA Skill (Audit Dollar-Impact Rule)"
+},
+{
 question: "Which statement best captures IDFA's core principle?",
 options: [
 "Define WHAT, not WHERE — a formula that reads =Revenue_Y3 - COGS_Y3 is a business rule; a formula that reads =D8-C8 is a coordinate. IDFA ensures every formula is the first kind.",
