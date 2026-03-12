@@ -1,0 +1,91 @@
+{
+  "topic": "topic-14-jq",
+  "prompt": "jq cheatsheet? i can only ever remember the dot operator lol",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 44KB HTML, 1759px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 5 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional usability. The two-page structure (Foundations → Advanced) gives a natural progression arc. RefRow is used consistently for quick-scan operator tables, Code blocks are copy-pasteable and well-annotated with comments, and visual variety is high — alternating-row tables (arithmetic, format strings), tag clouds (types, regex engine), highlight boxes for gotchas, and KV pairs for semantics. Section density feels right: every card has 6–12 items, none feel padded or crushed. Gotcha callouts (\"Missing keys return null\", \"type ordering\", \"null is identity for +\") are surfaced as Bullets beneath the tables rather than buried in prose. The header subtitle doubles as a quick TL;DR. The only minor quibble: page 1 has 12 sections in a 3-column grid which is slightly tall, but the tab navigation makes it manageable.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensive coverage from an author who clearly knows jq deeply. The prompt was a casual \"I can only ever remember the dot operator\" — the response correctly infers the user needs the full picture, not just dots. Page 1 nails foundations: identity, field access, array slicing, iteration/recursion, pipe/comma, types, strings, interpolation, object construction, arithmetic, comparison, conditionals. Page 2 covers advanced territory that a practitioner would absolutely want: map/select, sort_by/group_by/unique_by, regex (named captures!), path functions, reduce/foreach, advanced iteration (while/until/recurse/walk/limit/first/last), math, flatten/transpose, I/O & debugging ($ENV, halt_error, builtins), SQL-style operators (INDEX/IN/JOIN — often omitted from cheatsheets), format strings (all 10 @-formats), and CLI flags. Notable extras: @urid (v1.8 addition), $__loc__, isinfinite/isnan, combinations, isempty, walk — all real but rarely documented in competing cheatsheets. No meaningful gaps detected.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 5,
+      "notes": "This is an exceptionally accurate jq cheatsheet. All 8 verified claims matched official jqlang.org documentation. The `trim` and `@urid` builtins — the two most likely to be hallucinated as they're new in 1.8 — are both confirmed in the 1.8.0 release notes. The `recurse` shorthand definition (`recurse(.[]?)`), `foreach` 3-arg EXTRACT form, type ordering, `indices` function name, and Oniguruma description all check out against the official manual. The sole imprecision is \"v1.8\" in the header/footer when the latest patch is actually 1.8.1, but this is cosmetic (patch versions typically don't affect filter syntax). No invented functions, no incorrect flags, no fabricated behavior. Users copying filters from this sheet will get correct results.",
+      "verified_claims": [
+        {
+          "claim": "Current stable version is jq 1.8",
+          "verdict": "outdated",
+          "evidence": "jq 1.8.0 released June 2025, but jq 1.8.1 (a security patch fixing CVE-2025-49014) was released July 2025 and is the current latest. The sheet says 'v1.8' throughout. Functionally equivalent — no filter syntax changed — but patch version is imprecise.",
+          "severity": "low"
+        },
+        {
+          "claim": "`trim` removes leading/trailing whitespace and is a v1.8+ builtin",
+          "verdict": "correct",
+          "evidence": "Confirmed in jq 1.8.0 release notes on GitHub: 'Use trim/0 to remove leading and trailing white spaces.' Not present in v1.7 or earlier manuals. https://github.com/jqlang/jq/releases/tag/jq-1.8.0",
+          "severity": "high"
+        },
+        {
+          "claim": "`@urid` percent-decodes URLs and was added in v1.8+",
+          "verdict": "correct",
+          "evidence": "Confirmed in jq 1.8.0 release notes: 'Add @urid format. Reverse of @uri.' It is the reverse of the `@uri` encoder. https://github.com/jqlang/jq/releases/tag/jq-1.8.0",
+          "severity": "high"
+        },
+        {
+          "claim": "`recurse` (no args) is shorthand for `recurse(.[]?)`",
+          "verdict": "correct",
+          "evidence": "Official jq manual (all versions 1.5+): 'When called without an argument, recurse is equivalent to recurse(.[]?).' Also confirmed the deprecated alias `recurse_down` exists. https://jqlang.org/manual/",
+          "severity": "medium"
+        },
+        {
+          "claim": "Type ordering: null < false < true < numbers < strings < arrays < objects",
+          "verdict": "correct",
+          "evidence": "Matches the official jq manual exactly: 'Objects have a more complex ordering. An earlier type in this list is always less than a later type.' The sequence null, false, true, numbers, strings, arrays, objects is correct. https://jqlang.org/manual/",
+          "severity": "medium"
+        },
+        {
+          "claim": "`foreach` supports a 3-argument form `(INIT; UPDATE; EXTRACT)` for custom extraction",
+          "verdict": "correct",
+          "evidence": "Official jq manual documents `foreach EXP as $var (INIT; UPDATE; EXTRACT)` as a valid form. The 2-arg form defaults EXTRACT to `.`. Confirmed by GitHub issue #1148 discussion and manual. https://jqlang.org/manual/",
+          "severity": "medium"
+        },
+        {
+          "claim": "`indices(val)` returns all positions of val in an array or string",
+          "verdict": "correct",
+          "evidence": "Official jq manual documents `indices(s)`, `index(s)`, and `rindex(s)` as distinct functions. `indices` (plural) returns all occurrences; `index`/`rindex` return first/last. The cheatsheet uses the correct plural form. https://jqlang.org/manual/",
+          "severity": "medium"
+        },
+        {
+          "claim": "jq uses the Oniguruma regex engine, described as 'Perl v5.8 compatible'",
+          "verdict": "correct",
+          "evidence": "Official jq manual states Oniguruma is used and is 'largely compatible with Perl v5.8 regexes.' The cheatsheet simplification ('Perl v5.8 compatible') accurately conveys this. The manual uses the 'Perl NG' flavor designation internally. https://jqlang.org/manual/",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 5,
+  "pass": true,
+  "timestamp": "2026-03-11T16:23:40.622Z",
+  "version": "v3",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

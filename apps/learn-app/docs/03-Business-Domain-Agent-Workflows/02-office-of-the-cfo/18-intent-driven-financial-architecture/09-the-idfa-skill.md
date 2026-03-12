@@ -119,19 +119,16 @@ Here is how the methodology skill opens:
 ---
 name: idfa-financial-architect
 description: >-
-  Apply the Intent-Driven Financial Architecture (IDFA) when building,
-  auditing, retrofitting, or analysing Excel financial models. Activate when
-  the user mentions: financial model, spreadsheet, Excel formula, named ranges,
-  cell references, formula tracing, model audit, COGS, revenue projection,
-  gross profit, EBITDA, DCF, LBO, comps, three-statement model, budget,
-  forecast, variance analysis, what-if analysis, scenario modelling, goal
-  seeking, Monte Carlo simulation, model review, or model handover.
-  Also activate when the user says "the model is a black box",
-  "I inherited this model", "I need to audit this spreadsheet",
-  or any similar phrase indicating confusion about how a financial
-  model works. Do NOT activate for general accounting questions,
-  tax advice, investment recommendations, or tasks unrelated to
-  the structure and logic of financial spreadsheets.
+  Use this skill for hands-on Excel financial model work: building models
+  from scratch (SaaS, three-statement, revenue/COGS/EBITDA), auditing a
+  spreadsheet for formula errors, explaining or mapping out model logic,
+  converting cell references to named ranges, running what-if or scenario
+  analysis, goal-seeking (what input value produces a target output?), or
+  running Monte Carlo simulations. Also use when someone has inherited an
+  unfamiliar model, calls it a "black box", or needs a specific formula
+  (like WACC) checked. The trigger is a user who has a spreadsheet and
+  needs to do something with it. Do NOT use for accounting theory, tax
+  questions, investment advice, or finance questions with no model attached.
 license: Proprietary
 metadata:
   author: Panaversity
@@ -140,7 +137,7 @@ metadata:
 ---
 ```
 
-The YAML frontmatter tells the agent when to activate. The `description` field lists every trigger phrase — financial model, model audit, what-if analysis, "I inherited this model" — that causes the agent to load the full IDFA methodology. Below the frontmatter, the SKILL.md contains the Core Principle, the Three Layers, all Four Guardrails with compliance tests, the Naming Conventions, the Worked Example, the Agent Decision Table, Common Mistakes, and Trigger Phrase mappings. It is the complete methodology in a machine-readable format.
+The YAML frontmatter tells the agent when to activate. The `description` field describes the categories of hands-on spreadsheet work — building, auditing, explaining, retrofitting, what-if, goal-seeking, Monte Carlo — that cause the agent to load the full IDFA methodology. Below the frontmatter, the SKILL.md contains the Core Principle, the Three Layers, all Four Guardrails with compliance tests, the Naming Conventions, the Worked Example, the Agent Decision Table, Common Mistakes, and Trigger Phrase mappings. It is the complete methodology in a machine-readable format.
 
 The `references/` directory contains the extended reference guide — enterprise governance standards, the five capability tests, retrofitting guidance, complex formula reference (WACC, NPV, Terminal Value, IRR), and sector-specific naming extensions. The agent loads this when the main SKILL.md is insufficient for an advanced task.
 
@@ -194,15 +191,16 @@ The agentskills.io standard means the methodology is identical everywhere. The p
 
 The Agent Decision Table is the operational core of the skill. It tells the agent exactly what to do for every category of financial modelling task. Here is how it works when the skill is active:
 
-| Task                        | What the Agent Does Automatically                                                                                                                                                      |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Building a new model        | Extracts every input from the intent statement, names each with `Inp_`, writes all calculations in Named Range notation, verifies complex formulas in LaTeX, and attaches Intent Notes |
-| Auditing an existing model  | Inspects the model, checks every Calculation layer formula for coordinate references, flags violations, and reports compliance percentage                                              |
-| Retrofitting a legacy model | Inspects the model, identifies all hardcoded values, proposes Named Ranges, rewrites formulas one at a time, and validates that outputs match at each step                             |
-| What-if analysis            | Writes the assumption to the model, lets the spreadsheet engine recalculate, and reads back the results — never calculates internally                                                  |
-| Goal-seeking                | Iterates writing assumptions and reading results until the target output is reached, then reports the required input value                                                             |
-| Explaining a formula        | Reads the formula from the model, states the business rule in plain English, and checks for an Intent Note                                                                             |
-| Checking compliance         | Verifies all four guardrails: Named Ranges, LaTeX verification, Intent Notes, and Delegated Calculation workflow                                                                       |
+| Task                        | What the Agent Does Automatically                                                                                                                                                                                                                                                                                      |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Building a new model        | Extracts every input from the intent statement, names each with `Inp_`, writes all calculations in Named Range notation, verifies complex formulas in LaTeX, and attaches Intent Notes                                                                                                                                 |
+| Auditing an existing model  | Inspects the model, checks every Calculation layer formula for coordinate references, flags violations, reports compliance percentage, and quantifies the dollar impact of any hardcoded values that diverge from stated assumptions — "$352K COGS overstatement" gets CFO attention; "hardcoded value in D7" does not |
+| Retrofitting a legacy model | Inspects the model, identifies all hardcoded values, proposes Named Ranges, uses `idfa_ops.py create-range` for every new Named Range (audit trail), rewrites formulas one at a time, and validates that outputs match at each step                                                                                    |
+| What-if analysis            | Writes the assumption to the model, lets the spreadsheet engine recalculate, and reads back the results — never calculates internally                                                                                                                                                                                  |
+| Goal-seeking                | Iterates writing assumptions and reading results until the target output is reached, then reports the required input value                                                                                                                                                                                             |
+| Stochastic simulation       | Identifies uncertain inputs, defines distributions with the user, iterates N times via write → recalculate → read, analyses the distribution of outputs, and restores the model to its base case                                                                                                                       |
+| Explaining a formula        | Reads the formula from the model, states the business rule in plain English, and checks for an Intent Note                                                                                                                                                                                                             |
+| Checking compliance         | Verifies all four guardrails: Named Ranges, LaTeX verification, Intent Notes, and Delegated Calculation workflow                                                                                                                                                                                                       |
 
 Without the skill installed, you would need to prompt for each of these behaviours explicitly. With the plugin installed, the agent applies the correct workflow based on what you ask it to do.
 
@@ -220,7 +218,7 @@ The `description` field in the YAML frontmatter lists specific phrases that acti
 
 The trigger phrases are not rigid pattern matches. They are examples that teach the agent the category of request. "This spreadsheet makes no sense" will activate the skill just as "this model is a black box" does — because the agent understands the intent behind the phrase.
 
-## The Five Common Mistakes
+## Common Mistakes
 
 These mistakes appear in the SKILL.md as a safeguard. When the skill is active, the agent checks its own output against these rules:
 
@@ -233,6 +231,24 @@ These mistakes appear in the SKILL.md as a safeguard. When the skill is active, 
 4. **Never retrofit by deleting and rebuilding.** The skill enforces one-formula-at-a-time conversion with output validation at each step.
 
 5. **Never name a range with spaces.** `Inp_Rev_Y1`, not `Inp Rev Y1`. Excel rejects spaces in formula references; the skill prevents the agent from creating them.
+
+6. **Never create Named Ranges via raw openpyxl during retrofit.** Always use `idfa_ops.py create-range` so that every structural change is logged in the audit trail. Direct openpyxl calls bypass the traceability that makes retrofits reviewable.
+
+7. **Never reference a cell coordinate for a prior-year value.** In multi-year layouts, `=B6*(1+Inp_Rev_Growth)` violates Guardrail 1 even though only one reference is a coordinate. The prior-year cell must also be a Named Range — `=Rev_Y1*(1+Inp_Rev_Growth)` — so every term in the formula carries intent.
+
+## Beyond the Four Guardrails
+
+Through eval-driven iteration, the IDFA skill has grown beyond the original four guardrails to include specialised protocols for advanced workflows:
+
+| Protocol                           | What It Does                                                                                                                                | Why It Matters                                                                                                                               |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Audit Dollar-Impact Rule**       | Quantifies the dollar impact of hardcoded values that diverge from assumptions                                                              | Audit findings need business magnitude — "$352K COGS overstatement" moves a CFO; "hardcoded value in D7" does not                            |
+| **Goal-Seeking Protocol**          | Binary search via the write → recalculate → read delegation loop until a target output is reached                                           | Formalises the iterative delegation pattern so the agent never solves for the input algebraically                                            |
+| **Stochastic Simulation Protocol** | Monte Carlo via delegated calculation — write each trial's inputs, recalculate, read the output, repeat N times, then restore the base case | Demonstrates why `eval()` in Python defeats IDFA — only the spreadsheet engine's output is audit-valid                                       |
+| **Output Expectations**            | Every analysis produces a `.md` results file alongside the model                                                                            | The `.xlsx` alone is not reviewable without Excel; the Markdown summary makes findings portable                                              |
+| **Graceful Degradation**           | Defines behaviour when LibreOffice is unavailable for recalculation                                                                         | Teaches the distinction between "estimated via formula tracing" and "model-verified" — the agent must disclose which mode it is operating in |
+
+These protocols emerged from real eval failures: audits that flagged violations without quantifying their impact, goal-seeking prompts that the agent tried to solve algebraically, and Monte Carlo runs where the agent used Python `eval()` instead of delegating to the spreadsheet engine. Each protocol closes a gap that the original four guardrails left open.
 
 ## Exercise: Three Ways to Activate the IDFA Skill
 

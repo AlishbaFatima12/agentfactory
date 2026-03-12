@@ -1,0 +1,91 @@
+{
+  "topic": "topic-9-aws-s3",
+  "prompt": "s3 cheatsheet - cli commands, the main sdk methods, IAM permissions, and lifecycle policies. basically everything i need to stop looking stuff up",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 33KB HTML, 1656px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 3,
+      "notes": "24 sections, 4 thin. 1 total check failures.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Excellent organization across two logically structured pages, strong visual variety using all five content primitives appropriately, copy-pasteable code examples covering real workhorse patterns (paginated list, batch delete, presigned URL, lifecycle config), and well-calibrated depth for a practitioner audience. The alternating-row tables in Storage Classes and Lifecycle Transitions are particularly effective for dense tabular data. The span-3 'When to Use What' decision guide is a standout addition.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 4,
+      "notes": "All four explicitly requested topics (CLI, SDK, IAM, lifecycle) are thoroughly covered with working examples. Strong bonus coverage of versioning, replication, encryption, event notifications, performance, access points, and monitoring. Minor gaps: no coverage of Block Public Access settings (a common footgun), CORS configuration (needed for browser uploads), and Object Lock/WORM. The aws s3 vs aws s3api distinction is hinted at via Tags but not explained.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "The cheatsheet is factually strong overall — 7 of 8 verified claims are correct, including the nuanced presigned URL expiry rules, SDK copy_object limits, per-prefix throughput figures, and the April 2023 ACL default change. The single error is the path-style URL deprecation date (\"Sept 2023\"), which is wrong — the AWS-documented cutoff is September 30, 2020. This is a notable inaccuracy because it misdates a well-known AWS change by three years, but it doesn't break any workflow (path-style still works for old buckets). No invented flags, API methods, or IAM actions were found. Storage class descriptions and lifecycle rules are accurate.",
+      "verified_claims": [
+        {
+          "claim": "Max Object Size is 5 TB; use multipart upload for files over 5 GB",
+          "verdict": "correct",
+          "evidence": "AWS S3 multipart upload limits page (docs.aws.amazon.com/AmazonS3/latest/userguide/qfacts.html) confirms 5 TB max object size. Single PUT is capped at 5 GB, making multipart required above that threshold.",
+          "severity": "high"
+        },
+        {
+          "claim": "aws s3 presign generates presigned URL with default 1hr expiry",
+          "verdict": "correct",
+          "evidence": "AWS CLI reference for 'aws s3 presign' (docs.aws.amazon.com/cli/latest/reference/s3/presign.html) confirms default expiry is 3600 seconds (1 hour).",
+          "severity": "high"
+        },
+        {
+          "claim": "S3 scales to 3,500 PUT/COPY/POST/DELETE and 5,500 GET/HEAD requests per prefix per second",
+          "verdict": "correct",
+          "evidence": "AWS S3 performance optimization docs (docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html) confirm exactly these baseline per-prefix throughput figures.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Presigned URLs max expiry: 7 days (IAM user) or session duration (role)",
+          "verdict": "correct",
+          "evidence": "AWS presigned URL docs confirm IAM user credentials allow up to 7-day expiry; role-based credentials expire when the role session ends, regardless of the requested URL expiry.",
+          "severity": "high"
+        },
+        {
+          "claim": "copy_object works for objects up to 5 GB; use multipart copy above that",
+          "verdict": "correct",
+          "evidence": "AWS CopyObject API docs (docs.aws.amazon.com/AmazonS3/latest/API/API_CopyObject.html) explicitly state you can copy objects up to 5 GB in a single operation; larger objects require UploadPartCopy.",
+          "severity": "high"
+        },
+        {
+          "claim": "Path-style URLs deprecated for new buckets after Sept 2023",
+          "verdict": "incorrect",
+          "evidence": "AWS blog posts and documentation reference September 30, 2020 as the cutoff date for new-bucket path-style URL support — not 2023. AWS delayed the broader deprecation from 2020 but the new-bucket cutoff remained tied to 2020 in official communications. No AWS source documents a Sept 2023 milestone.",
+          "severity": "medium"
+        },
+        {
+          "claim": "New buckets default to ACLs disabled since April 2023",
+          "verdict": "correct",
+          "evidence": "AWS docs (docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-faq.html and about-object-ownership.html) confirm April 2023 rollout of BucketOwnerEnforced as the default for new buckets, disabling ACLs.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Bucket policy max size is 20 KB",
+          "verdict": "correct",
+          "evidence": "AWS S3 bucket quotas page (docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html) confirms the 20 KB limit for bucket policies.",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.25,
+  "pass": true,
+  "timestamp": "2026-03-11T13:45:08.895Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

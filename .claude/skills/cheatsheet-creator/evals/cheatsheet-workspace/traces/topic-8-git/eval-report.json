@@ -1,0 +1,24 @@
+{
+  "topic": "topic-8-git",
+  "prompt": "git cheat sheet but not just commands -- i want the mental model stuff too. like when to rebase vs merge, how to think about branches",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 43KB HTML, 1998px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 5 primitive types, no issues.",
+      "channel": "D"
+    }
+  },
+  "composite": 5,
+  "pass": true,
+  "timestamp": "2026-03-11T13:08:04.576Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}
