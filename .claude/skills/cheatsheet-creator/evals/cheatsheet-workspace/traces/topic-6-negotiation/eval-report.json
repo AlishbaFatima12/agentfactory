@@ -1,0 +1,24 @@
+{
+  "topic": "topic-6-negotiation",
+  "prompt": "quick reference for negotiation techniques. im reading 'never split the difference' and want something to glance at before calls",
+  "scores": {
+    "render": {
+      "score": 1,
+      "notes": "Failed to render. Render error: unknown: Unexpected token (495:67)\n\n  493 |\n  494 |           {/* 10 — \"That's Right\" */}\n> 495 |           <SectionCard number=\"10\" title='Getting to \"That\\'s Right\"'>\n      |                                                                    ^\n  496 |             <div style={{ display: \"flex\", gap: 4, marginBottom: 8, flexWrap: \"wrap\" }}>\n  497 |               <Tag>BREAKTHROUGH</Tag>\n  498 |               <Tag color=\"#5a8a3c\">GOAL</Tag>; No content rendered",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 1,
+      "notes": "JSX parse error",
+      "channel": "D"
+    }
+  },
+  "composite": 1,
+  "pass": false,
+  "timestamp": "2026-03-11T13:08:00.101Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

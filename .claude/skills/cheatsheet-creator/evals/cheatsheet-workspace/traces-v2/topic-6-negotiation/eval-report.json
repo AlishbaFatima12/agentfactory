@@ -1,0 +1,91 @@
+{
+  "topic": "topic-6-negotiation",
+  "prompt": "quick reference for negotiation techniques. im reading 'never split the difference' and want something to glance at before calls",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 29KB HTML, 1293px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 4,
+      "notes": "18 sections, 1 thin. 1 total check failures.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional usability. The two-page structure is exactly right for the scope — keeps each page digestible without cramming. Section numbering (1–18) gives a clear spine. The pre-call checklist (§16) and 'Which Technique When?' decision guide (§18) are the killer features for someone glancing before a call — precisely what the prompt asked for. Visual variety is excellent: Code blocks with real dialogue examples (mirroring, triggering 'No'), RefRows for labeled stems and calibrated questions, KV pairs for negotiator types, inline highlight boxes for 'KEY INSIGHT' / 'NEVER SAY' / 'AVOID WHY' callouts, and alternating-background tables for multi-step models. No section feels monotonous. The tag system (CORE SKILL, ANTI-PATTERNS, PRACTICAL, etc.) adds scannability without clutter. Information density is well-calibrated — Ackerman's 5-step model needs the row-based layout it gets; mirroring needs the code example it gets. The 'That's right vs. You're right' comparison table with check/X indicators is particularly high-value and scannable. One small knock: the span-2 decision guide (§18) uses a 3-column sub-grid inside a 3-column outer grid, which could reflow awkwardly at narrower widths — but this is minor.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Covers the full NSTD canon with no meaningful gaps. Core techniques: tactical empathy (§2), mirroring (§3), labeling (§4), accusation audit (§5), 'That's right' (§6), calibrated questions (§7), voice tones (§8), power of No (§9) — all eight major tools from the book are present and substantive. Advanced: anchoring/framing (§10), Ackerman bargaining model (§11), Black Swans (§12), 7-38-55 rule (§13), negotiator types (§14) — the five major advanced frameworks are all here. Applied sections go beyond what the user asked: salary negotiation (§15) is a useful extra; the pre-call checklist (§16) directly answers the 'glance before calls' use case; common mistakes (§17) and the situation-based decision guide (§18) are valuable additions the user didn't think to request. The opening 'Voss Method at a Glance' (§1) provides a great mental model anchor. BATNA is mentioned in the checklist. Loss aversion framing is touched in §10. The only arguable omission is silence tactics as a standalone section, but §3 and §8 cover silence explicitly and substantively.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 3,
+      "notes": "The cheatsheet is largely faithful to Chris Voss's \"Never Split the Difference\" and gets the core techniques right. However, it contains one significant factual inversion on the voice tone usage percentages (which voice to use most of the time), and presents the contested Mehrabian 7-38-55 statistic as a universal truth without any qualification — a claim that communication researchers widely criticize as a misapplication of limited 1967 studies. A user following the voice tone guidance (~80% Late-Night FM DJ) would be doing the opposite of what Voss actually teaches (~80% Positive/Playful). The rest of the content — Ackerman model steps, mirroring word count, the \"That's right\" distinction, accusation audit, and three negotiator types — is accurate and well-sourced.",
+      "verified_claims": [
+        {
+          "claim": "The Late-Night FM DJ voice should be used ~80% of the time, Positive/Playful ~15%, Direct/Assertive ~5% (Section 8)",
+          "verdict": "incorrect",
+          "evidence": "Voss's MasterClass and book summaries consistently state the Positive/Playful voice should be used approximately 80% of the time, while the Late-Night FM DJ voice is deployed selectively for calming and authority — not as the dominant default. The cheatsheet inverts the two most-used voices, which would lead a reader to use the wrong primary tone.",
+          "severity": "high"
+        },
+        {
+          "claim": "93% of communication is tone and body language (Section 8 header)",
+          "verdict": "incorrect",
+          "evidence": "This uncaveated use of Mehrabian's 7-38-55 rule is widely documented as a misapplication. Mehrabian's 1967 studies applied only to the communication of feelings/attitudes when words and tone are incongruent — not to general communication. Mehrabian himself has stated the generalized rule is incorrect. Academic papers label it 'an urban legend.' Voss references it in the book but presenting it as a universal fact is factually misleading.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Ackerman Model: 65% → 85% → 95% → 100% (non-round) offer steps (Section 11)",
+          "verdict": "correct",
+          "evidence": "Confirmed by multiple summaries of Never Split the Difference (Shortform, Mentorist, independent book notes): the model proceeds at exactly 65%, 85%, 95%, then 100% with a precise non-round final number. The description of tapering increments and adding a non-monetary item at the end is also accurate.",
+          "severity": "high"
+        },
+        {
+          "claim": "Mirroring is repeating the last 1–3 critical words, then going silent for 4+ seconds (Section 3)",
+          "verdict": "correct",
+          "evidence": "Confirmed by Voss's MasterClass and multiple book summaries: mirroring is 'the simple repetition of one to three words, typically the last one to three words.' The 4-second silence recommendation is also consistent with Voss's teaching.",
+          "severity": "high"
+        },
+        {
+          "claim": "\"That's right\" = breakthrough/genuine understanding; \"You're right\" = dismissal with no real buy-in (Section 6)",
+          "verdict": "correct",
+          "evidence": "Confirmed by MindTools, YouExec, and multiple book summaries. 'You're right' is described as a polite way to end a conversation with no commitment; 'That's right' signals the counterpart feels fully understood — a genuine breakthrough moment.",
+          "severity": "high"
+        },
+        {
+          "claim": "Three negotiator types: Analyst (methodical, data-driven), Accommodator (relationship-focused), Assertive (direct, competitive) (Section 14)",
+          "verdict": "correct",
+          "evidence": "Confirmed across Inc., HuffPost, YouExec, and Renegade Marketing summaries of the book. All three type names and their key characteristics (Analyst hates surprises, Accommodator values rapport, Assertive values respect and being heard) match the book accurately.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Accusation Audit: list every terrible thing the other side could say about you before they do (Section 5)",
+          "verdict": "correct",
+          "evidence": "Confirmed by MasterClass, Shortform, and HowCommunicationWorks. The technique is accurately described: pre-emptively voicing the counterpart's likely complaints to disarm them and often trigger a corrective 'No, that's not true' response in your favor.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Mirroring subtitled '(Isopraxis)' — term used in the book for the mirroring reflex (Section 3 title)",
+          "verdict": "correct",
+          "evidence": "Multiple sources confirm 'isopraxis' or 'isopraxism' is the technical psychological term Voss uses in connection with the mirroring technique, referring to the natural human bonding reflex of imitating others. The term is used (slightly variantly) but is not invented.",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.3,
+  "pass": true,
+  "timestamp": "2026-03-11T13:40:44.745Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "topic": "topic-7-parenting",
+  "prompt": "cheat sheet for child development milestones, like what to expect at each age? my kid is 2 and i have no idea what's normal lol",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 36KB HTML, 1410px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 3 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional on every usability dimension. The two-page structure is smart — age-by-age milestones on page 1, deep dives on page 2 — giving the reader a mental map before they even look at content. The highlighted 'YOUR KID IS HERE!' callout in Section 7 is a standout touch that directly addresses the prompt's context (2-year-old) without burying it. Color-coded domain tags (MOTOR, LANGUAGE, SOCIAL, COGNITIVE) are used consistently throughout and explained in Section 11, creating a scannable visual grammar. Information density is well-balanced: most sections use a mix of KV pairs and Bullets rather than monotonous lists, and the Section 24 matrix on page 2 provides a rapid-skim summary for someone who just wants the highlights. The page 2 timeline tables (Sections 13 and 14) use alternating-row backgrounds for scannability without needing headers. The pediatrician red-flag section (12) is perfectly placed at the end of page 1 — the last thing a parent sees before flipping pages, which is the right emotional cadence. Minor deduction considered but not warranted: Section 22 (Myths) uses KV pairs with quoted keys that are a bit long, slightly harder to scan than the others, but it's a minor stylistic tradeoff for expressiveness.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Remarkable breadth for a parenting cheatsheet. The prompt asked for 'what to expect at each age' with a 2-year-old context, and the sheet delivers that core ask across all four developmental domains, with age ranges spanning birth through 5 years. But it goes well beyond the ask in genuinely useful ways: sleep expectations by age (Section 17) and feeding milestones (Section 18) are things every parent of a 2-year-old needs but wouldn't think to request. Play stages (Section 19, Parten's taxonomy) adds intellectual depth that a pediatrician would recognize. Screen time AAP guidelines (Section 20) are timely and practical. The myths section (Section 22) preemptively addresses the common misinformation parents encounter online. The resources section (Section 23) gives the reader actionable next steps. The red-flag section (Section 12) is the single most important completeness win — it answers the unasked but critical question 'when should I actually worry?' The only possible gap is temperament/sensory processing, but that's a specialized enough topic that its omission is reasonable for a general reference.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "This is a well-researched cheatsheet on child development milestones that is broadly accurate and safe for parents to use. The content is clearly grounded in CDC, AAP, and WHO sources. The most notable issue is one outdated claim that directly affects the \"when to talk to your pediatrician\" section: the \"fewer than 50 words by 24 months\" red flag reflects pre-2022 CDC language. The CDC's 2022 milestone revision moved away from specific word counts and now frames the 2-year language milestone as \"says at least two words together.\" Using \"50 words\" as a red-flag threshold could lead a parent to delay seeking evaluation if their child says 20-49 words but no 2-word phrases — or conversely, reassure a parent whose child says 50 isolated words but isn't combining them. The AAP screen time tag says \"2024\" when the policy was issued in 2016 and reaffirmed in 2022 — a minor labeling inaccuracy that doesn't affect the content. Everything else (sleep ranges, play stages, motor milestones, walker safety, social-emotional timing) checks out against authoritative sources.",
+      "verified_claims": [
+        {
+          "claim": "Section 12 red flag: 'By 24 months: Fewer than 50 words; no 2-word phrases'",
+          "verdict": "outdated",
+          "evidence": "The CDC's 2022 revised milestone checklists replaced the older '50-word' threshold. The current CDC 2-year checklist milestone is 'says at least two words together, like More milk' — not a word count. The cheatsheet's 50-word threshold reflects older pre-2022 guidance that was deliberately retired. Section 7 also uses the '50+ words by 24 months' figure as an expected milestone, compounding the issue.",
+          "severity": "high"
+        },
+        {
+          "claim": "Section 20: AAP screen time guidelines labeled 'AAP 2024' — under 18 months avoid screens except video calls; 2-5 years 1 hour/day max",
+          "verdict": "correct",
+          "evidence": "The substantive content matches AAP policy exactly: <18 months avoid screens except video chats; 18-24 months high-quality programming with co-viewing; 2-5 years limit to 1 hr/day. Confirmed via AAP HealthyChildren.org and aap.org. However, the 'AAP 2024' year tag is inaccurate — this policy was originally published in 2016 (Pediatrics, vol. 138) and reaffirmed July 2022, not updated in 2024.",
+          "severity": "low"
+        },
+        {
+          "claim": "Section 12 red flag: 'By 18 months: No single words; not walking'",
+          "verdict": "correct",
+          "evidence": "CDC's 18-month milestone checklist confirms walking independently is expected by 18 months. The CDC also lists 'tries to say three or more words besides mama or dada' as an 18-month milestone, so 'no single words' by 18 months is an appropriate and confirmed concern threshold.",
+          "severity": "high"
+        },
+        {
+          "claim": "Section 22 myth: Baby walkers 'can actually delay walking and are a safety hazard'",
+          "verdict": "correct",
+          "evidence": "Confirmed by multiple AAP sources. AAP Grand Rounds article explicitly titled 'Baby Walkers Delay Motor and Mental Development.' HealthyChildren.org states walkers 'do not help a child learn to walk; indeed, they can delay normal motor and mental development.' AAP has formally called for a ban on wheeled baby walkers.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Section 17 sleep ranges: Newborn 14-17 hrs; 4-12 months 12-16 hrs; 1-2 years 11-14 hrs; 3-5 years 10-13 hrs",
+          "verdict": "correct",
+          "evidence": "Matches AAP-endorsed AASM recommendations exactly. AAP/HealthyChildren.org confirms: infants 12-16 hrs, toddlers 11-14 hrs, preschool 10-13 hrs. The newborn range of 14-17 hrs is consistent with published guidance (some sources say 16-17, some say 14-17; the broader range is appropriate).",
+          "severity": "medium"
+        },
+        {
+          "claim": "Section 19 Parten's play stages with age ranges (Unoccupied 0-3 mo, Solitary 3-18 mo, Onlooker 18-24 mo, Parallel 2-3 yr, Associative 3-4 yr, Cooperative 4-5 yr)",
+          "verdict": "correct",
+          "evidence": "Parten's six stages (unoccupied, solitary, onlooker, parallel, associative, cooperative) are confirmed via Wikipedia and multiple academic sources. The age ranges applied here are reasonable extensions consistent with contemporary developmental literature, though Parten's original 1929 research focused on ages 2-5. The infant/toddler age assignments for the early stages are commonly used in modern applications of the framework.",
+          "severity": "low"
+        },
+        {
+          "claim": "Section 18: 'Introduce solids at 6 months — purees or soft finger foods (BLW)'; '12+ months: Whole milk OK'",
+          "verdict": "correct",
+          "evidence": "AAP recommends introducing solid foods around 6 months, consistent with WHO guidance. Both pureed and baby-led weaning (BLW) finger food approaches are recognized. Whole cow's milk is recommended starting at 12 months per AAP — formula/breast milk before that. These claims are accurate.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Section 8: 'Strangers understand ~75% [of speech] by age 3'",
+          "verdict": "correct",
+          "evidence": "This figure (75% intelligibility by age 3 to unfamiliar listeners) is a widely cited clinical benchmark in speech-language pathology, consistent with ASHA and AAP guidance. By age 4, intelligibility is expected to reach ~100% for unfamiliar listeners. This claim is accurate.",
+          "severity": "medium"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.7,
+  "pass": true,
+  "timestamp": "2026-03-11T13:42:26.822Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

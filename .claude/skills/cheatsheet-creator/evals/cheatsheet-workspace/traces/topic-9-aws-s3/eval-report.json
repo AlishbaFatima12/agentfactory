@@ -1,0 +1,24 @@
+{
+  "topic": "topic-9-aws-s3",
+  "prompt": "s3 cheatsheet - cli commands, the main sdk methods, IAM permissions, and lifecycle policies. basically everything i need to stop looking stuff up",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 37KB HTML, 1961px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 3,
+      "notes": "24 sections, 9 thin. 1 total check failures.",
+      "channel": "D"
+    }
+  },
+  "composite": 4.2,
+  "pass": true,
+  "timestamp": "2026-03-11T13:08:06.718Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

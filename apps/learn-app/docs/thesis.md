@@ -53,7 +53,7 @@ What remains: Intent. Verification. Outcome.
 
 Intent doesn't type itself into a spec. It comes from a person — their judgment, their domain knowledge, their values. But as AI employees multiply, no professional can orchestrate them all by hand. They'll act through a personal agent that reflects their judgment and delegates on their behalf — what Don Tapscott calls identic AI.¹ The Agent Factory manufactures the workforce; identic AI is how each human commands it.
 
-![Factory_Era](/img/factory-era.png)
+![Factory_Era](../static/img/factory-era.png)
 
 
 </div>
@@ -94,7 +94,7 @@ Three mechanisms power the factory: specs define the work, skills package how it
 
 Today's agents execute tasks. Tomorrow's agents will participate in markets. The thesis opens with this claim because it represents the next great inflection: the shift from agent-as-tool to agent-as-buyer.
 
-![Ecnomic_Actors](/img/economic-actor.png)
+![Ecnomic_Actors](../static/img/economic-actor.png)
 
 Consider an agent assigned a high-level goal—"reduce customer churn by 15%." It will autonomously purchase the compute to train a model, negotiate an API contract for enrichment data, and provision cloud services to deploy the solution—all within a budget and permission envelope set by its human supervisor. The primitives are already in place: agents can call APIs, manage credentials, and make decisions under constraints. What remains is the trust infrastructure—payment rails, audit trails, and liability frameworks—that lets organizations safely delegate purchasing authority to non-human actors.
 
@@ -106,7 +106,7 @@ The implication for builders: design your agents and your infrastructure for eco
 
 A common fear: agents replace people. The evidence says otherwise. For most tasks, AI paired with a human outperforms either one working alone. The Agent Factory doesn't eliminate the human—it promotes them. From operator to supervisor. From typist to editor. From coder to architect of outcomes.
 
-![Technology_Roles](/img/tech-role.png)
+![Technology_Roles](../static/img/tech-role.png)
 
 This changes what it means to be a "tech professional." A web developer or mobile developer is not just someone who writes React or Swift. They are a **technology expert**—someone who understands systems, data flows, APIs, and user needs. In the Agent Factory era, that expertise becomes far more valuable, because it is no longer spent hand-coding screens. It is spent designing, deploying, and supervising agents that deliver entire products.
 
@@ -118,7 +118,7 @@ AI employees are how work gets done. Identic AI is how humans will increasingly 
 
 We call this the **Two-Layer Model**:
 
-![Two_Layer_Model](/img/two-layers.png)
+![Two_Layer_Model](../static/img/two-layers.png)
 
 
 | Layer | What It Is | Who It Serves | What It Does |
@@ -138,13 +138,13 @@ Neither layer works alone. A factory without personal agents at the edge forces 
 
 AI will unbundle jobs into tasks. Some of those tasks will be automated entirely. But unbundling also creates new combinations—new roles, new businesses, new markets that didn't exist when work was locked inside rigid job titles.
 
-![Workforce_Opportunity](/img/workforce.png)
+![Workforce_Opportunity](../static/img/workforce.png)
 
 The future workforce must build **dynamic skill portfolios** rather than rely on fixed career paths. Professionals who learn to think with AI, build using AI tools daily, and collaborate with AI as a digital teammate won't just survive the transition—they'll thrive in it.
 
 The SaaS era created millions of jobs for developers, designers, and product managers. The Agent Factory era will create millions more—for agent designers, outcome architects, verification specialists, and domain experts who teach machines what "correct" looks like in their field. **It is also one of the largest workforce training opportunities in history**: by 2030, 59 out of every 100 workers globally are expected to require reskilling or upskilling to adapt to new technologies and ways of working.²
 
-![Training Opportunity](/img/training.png)
+![Training Opportunity](../static/img/training.png)
 
 ² World Economic Forum, Future of Jobs Report 2025, January 2025.
 https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/
@@ -157,7 +157,7 @@ Data centers are devouring copper and electricity at industrial scale: a single 
 
 The factories of the Agent era are not hypothetical. They are under construction.
 
-![U.S. private construction spending: general office declining from $60B to $44B while data center surges from near zero to $42B, converging in 2025](/img/data-center-vs-office-construction.png)
+![U.S. private construction spending: general office declining from $60B to $44B while data center surges from near zero to $42B, converging in 2025](../static/img/data-center-vs-office-construction.png)
 
 _Source: U.S. Census Bureau, Value of Construction Put in Place Survey (SAAR)_
 

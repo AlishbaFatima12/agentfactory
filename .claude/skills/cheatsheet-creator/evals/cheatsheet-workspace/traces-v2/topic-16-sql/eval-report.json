@@ -1,0 +1,85 @@
+{
+  "topic": "topic-16-sql",
+  "prompt": "SQL reference cheatsheet, i switch between postgres and mysql a lot and keep getting the syntax mixed up",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 45KB HTML, 1956px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 4 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional desk reference. The color-coded tag system (blue=PG, teal=MySQL, purple=Both, red=Gotcha) gives instant visual orientation. The two-page structure is smart: core types/DDL on page 1, advanced patterns on page 2, with the wide-span Section 24 decision matrix as a killer summary. Sections mix RefRow tables, side-by-side dialect Code blocks, and highlighted gotcha callouts — no monotonous content. Code examples are realistic and copy-pasteable. Section 24 grid (8 most-confused patterns) is a standout. Minor: the SQL Standard tag color in sections 14-15 is absent from the header legend.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Directly addresses the stated pain point comprehensively. All critical areas covered: data types, DDL, DML, querying patterns, admin, and stored procedures. Section 24 is a bonus the user did not request but is exactly what they need. Particularly strong on gotcha content: pipe-pipe vs CONCAT, CHECK constraint history, FLUSH PRIVILEGES, TINYINT booleans, interval quoting, CTE optimization fences. Modern version context noted throughout. Minor gaps: no EXPLAIN/ANALYZE differences, no transaction isolation syntax — genuinely secondary to what was asked.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 3,
+      "notes": "The cheatsheet is broadly accurate on syntax, types, and version numbers. However it contains one outright factual error (FLUSH PRIVILEGES) and one misleading/inverted statement (CTE optimization fence hint). The FLUSH PRIVILEGES claim is a copy-paste risk: users following the cheatsheet would add an unnecessary — and in automation contexts, potentially disruptive — statement; worse, the comment implies it's always required, which contradicts official MySQL docs. The CTE hint (\"use NOT MATERIALIZED if needed\") is ambiguous-to-wrong: NOT MATERIALIZED pushes the query *away* from fence behavior (makes it inline), not toward it, so a user who wants to restore fence behavior for a specific CTE would need MATERIALIZED, not NOT MATERIALIZED. All other verified claims — LATERAL versions, CHECK constraint enforcement version, VALUES() deprecation version, recursive CTE version, PG LATERAL version — are accurate and match official documentation precisely.",
+      "verified_claims": [
+        {
+          "claim": "MySQL `FLUSH PRIVILEGES` needed after direct `GRANT` statements (Section 22 bullet: 'FLUSH PRIVILEGES needed after direct grant table edits (not after GRANT)')",
+          "verdict": "incorrect",
+          "evidence": "The cheatsheet code example shows FLUSH PRIVILEGES immediately after a GRANT statement with no annotation restricting it to direct table edits. The accompanying bullet says it is only needed after 'direct grant table edits', but the code example misleads by placing it after a GRANT. More importantly, the bullet wording 'after direct grant table edits' is technically correct in isolation, but the code example directly contradicts this by pairing FLUSH PRIVILEGES with a GRANT command — which is a common anti-pattern that the official MySQL docs (dev.mysql.com/doc/refman/8.0/en/privilege-changes.html) explicitly warn against, stating FLUSH PRIVILEGES is NOT needed after GRANT/REVOKE/CREATE USER.",
+          "severity": "high"
+        },
+        {
+          "claim": "PG CTE optimization fence behavior: 'PG defaults CTEs as optimization fences (pre-v12); use NOT MATERIALIZED if needed'",
+          "verdict": "incorrect",
+          "evidence": "The claim is inverted. Pre-v12, PG always materialized CTEs (they were optimization fences). In v12+, PG changed the default to inline non-recursive CTEs (no longer fences by default). The hint 'use NOT MATERIALIZED if needed' is backwards: NOT MATERIALIZED forces inlining (removes the fence), while MATERIALIZED forces the old fence behavior. A user who wants to restore fence semantics in v12+ needs MATERIALIZED, not NOT MATERIALIZED. Source: enterprisedb.com/blog/8-major-improvements-postgresql-12, knowledge.enterprisedb.com/hc/en-us/articles/15157254341276",
+          "severity": "medium"
+        },
+        {
+          "claim": "MySQL VALUES(col) in ON DUPLICATE KEY UPDATE deprecated in 8.0.20+ — use alias syntax instead",
+          "verdict": "correct",
+          "evidence": "Confirmed by official MySQL 8.0.20 release notes (dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-20.html) and the INSERT...ON DUPLICATE KEY UPDATE reference manual page. VALUES() in this context was deprecated in 8.0.20; the alias syntax (AS new_row) was introduced in 8.0.19.",
+          "severity": "low"
+        },
+        {
+          "claim": "MySQL LATERAL derived tables supported since MySQL 8.0.14",
+          "verdict": "correct",
+          "evidence": "Confirmed by official MySQL blog (dev.mysql.com/blog-archive/support-for-lateral-derived-tables-added-to-mysql-8-0-14/) and MySQL 8.0 Reference Manual section 15.2.15.9, and MySQL 8.0.14 release notes.",
+          "severity": "low"
+        },
+        {
+          "claim": "MySQL CHECK constraints were ignored/parsed-but-not-enforced before MySQL 8.0.16",
+          "verdict": "correct",
+          "evidence": "Confirmed by official MySQL documentation (dev.mysql.com/doc/refman/8.0/en/create-table-check-constraints.html) and MySQL 8.0.16 release notes. The official MySQL blog post 'MySQL 8.0.16 Introducing CHECK constraint' confirms they were previously parsed but ignored.",
+          "severity": "low"
+        },
+        {
+          "claim": "PostgreSQL LATERAL join support since PG 9.3",
+          "verdict": "correct",
+          "evidence": "Confirmed by the official PostgreSQL 9.3 'What's New' wiki page and multiple authoritative sources. LATERAL was introduced in PostgreSQL 9.3.",
+          "severity": "low"
+        },
+        {
+          "claim": "MySQL recursive CTEs available since MySQL 8.0 only",
+          "verdict": "correct",
+          "evidence": "Confirmed by official MySQL 8.0 Reference Manual (dev.mysql.com/doc/refman/8.0/en/with.html) and MySQL blog. Recursive CTEs (WITH RECURSIVE) were introduced in MySQL 8.0 (specifically 8.0.1 lab release, GA in 8.0).",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.4,
+  "pass": true,
+  "timestamp": "2026-03-11T13:29:30.094Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

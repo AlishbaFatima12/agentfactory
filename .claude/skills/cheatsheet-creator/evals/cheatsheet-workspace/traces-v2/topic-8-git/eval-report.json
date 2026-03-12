@@ -1,0 +1,85 @@
+{
+  "topic": "topic-8-git",
+  "prompt": "git cheat sheet but not just commands -- i want the mental model stuff too. like when to rebase vs merge, how to think about branches",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 41KB HTML, 1835px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 5 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional usability. Two-page structure is well-chosen: mental models and foundations on page 1, advanced workflows on page 2, mirroring how a practitioner learns and references Git. Section titles are precise and scannable. The 3-column grid uses space efficiently without crowding. Visual variety is excellent with all five primitives used appropriately: Code blocks for command sequences and ASCII diagrams, RefRow for command references, Bullet for conceptual points, KV pairs for terminology, Tag chips for categorical labeling. The two span-3 wide sections (rebase/merge decision guide, team workflow patterns) break up grid rhythm and give complex topics more breathing room. PRO TIP and RECOMMENDATION callout boxes add practical editorial voice. Information density is well-calibrated throughout — almost no section feels thin or padded. Minor note: the branch ASCII diagram in section 3 relies on spacing that may render slightly off in some fonts, but this is a cosmetic edge case.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "The prompt asked specifically for mental model content alongside commands — rebase vs merge thinking, how to think about branches — and this is delivered comprehensively. Sections 1 and 3 address conceptual framing directly. Section 4 is the centerpiece the user asked for and goes beyond a simple list, providing four decision quadrants with real criteria plus the golden rule. Useful extras beyond the prompt include: section 9 (Commit Graph / DAG mental model), section 17 (Bisect), section 18 (Refs and Detached HEAD), section 21 (Reflog as safety net), section 24 (Performance and Large Repos). Team workflow patterns cover all four major paradigms. All key daily-use areas are present: staging, committing, undoing, remotes, stashing, tagging, .gitignore, hooks, interactive rebase, cherry-pick, conflict resolution. The only plausible gap is git worktree, but that is niche enough that its absence does not hurt a practitioner-level reference.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "The cheatsheet is largely accurate and well-sourced in its mental models. All major claims check out against official Git documentation — the snapshot model, the 41-byte branch pointer, reflog's 90-day default, cherry-pick range exclusivity, HEAD^2 parent syntax, and sparse-checkout all verify correctly. Two minor issues drag it below a 5: (1) the reflog expiry claim omits that *unreachable* entries expire after 30 days (not 90), which is a meaningful distinction for recovery scenarios; and (2) `git reset HEAD <file>` is taught in Section 6 without any note that `git restore --staged` is the modern equivalent introduced in Git 2.23 (2019), while `git restore` appears separately in Section 10 only in the context of discarding working-directory changes — creating a subtle inconsistency that could confuse beginners. Neither error would break a user's workflow, making this a solid Grade 4.",
+      "verified_claims": [
+        {
+          "claim": "Git stores full snapshots of your project at each commit, not deltas between versions",
+          "verdict": "correct",
+          "evidence": "Confirmed by Git's official documentation and the Pro Git book (git-scm.com). Git stores blob objects representing full file contents; identical files share the same blob object. This is a well-established Git internals fact.",
+          "severity": "high"
+        },
+        {
+          "claim": "A branch is just 41 bytes — a file containing a SHA-1 hash pointing to a commit",
+          "verdict": "correct",
+          "evidence": "Confirmed: a branch ref file contains the 40-character SHA-1 checksum plus a trailing newline = 41 bytes. Referenced in the official Pro Git book (git-scm.com/book) and dev.to community post citing the same source.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Reflog entries expire after 90 days by default",
+          "verdict": "correct",
+          "evidence": "Confirmed for reachable entries: gc.reflogExpire defaults to 90 days per git-scm.com/docs/git-reflog. However, the cheatsheet omits that *unreachable* reflog entries expire after only 30 days (gc.reflogExpireUnreachable). The 90-day figure is accurate but incomplete for a recovery-focused section.",
+          "severity": "low"
+        },
+        {
+          "claim": "git cherry-pick A..B applies a range of commits (exclusive of A)",
+          "verdict": "correct",
+          "evidence": "Confirmed by git-scm.com/docs/git-cherry-pick: the two-dot range A..B excludes A and includes B. To include A, the syntax A^..B must be used. The cheatsheet's description matches official behavior.",
+          "severity": "high"
+        },
+        {
+          "claim": "git reset HEAD file — Unstage a file (keep working dir changes)",
+          "verdict": "correct",
+          "evidence": "Functionally correct per git-scm.com docs — git reset <pathspec> updates only the index, equivalent to git restore --staged. However, git restore --staged was introduced as the modern recommended replacement in Git 2.23 (2019). The cheatsheet uses the old form in Section 6 without noting its legacy status, while listing the modern git restore separately in Section 10 only for working-dir discards — an inconsistency but not an error.",
+          "severity": "low"
+        },
+        {
+          "claim": "git sparse-checkout init --cone followed by git sparse-checkout set <paths>",
+          "verdict": "correct",
+          "evidence": "Confirmed by git-scm.com/docs/git-sparse-checkout. The --cone flag enables cone mode which accepts directory paths instead of gitignore patterns. The subsequent 'set' subcommand syntax shown is correct. In newer Git versions (2.37+) cone mode is the default, but --cone remains valid.",
+          "severity": "medium"
+        },
+        {
+          "claim": "HEAD^2 — Second parent of HEAD (used with merge commits)",
+          "verdict": "correct",
+          "evidence": "Confirmed by the official Pro Git book's Revision Selection chapter (git-scm.com/book/en/v2/Git-Tools-Revision-Selection): the caret suffix ^N selects the Nth parent of a commit. HEAD^2 is the second parent — the branch that was merged in, as opposed to HEAD^1 (the branch you were on).",
+          "severity": "medium"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.7,
+  "pass": true,
+  "timestamp": "2026-03-11T13:43:43.344Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "topic": "topic-claude-code",
+  "prompt": "Create a comprehensive cheatsheet for topic claude code",
+  "scores": {
+    "usability": {
+      "score": 5,
+      "notes": "Excellent across every usability dimension. The two-page structure (Core Workflows / Power Patterns) creates a logical progression from basics to advanced without overwhelming. Visual variety is strong: Code blocks, RefRows, KV pairs, Tags, and Bullet components are all used purposefully — no monotonous lists. Information density is well-calibrated; every section feels substantive without becoming a wall of text. The alternating row backgrounds in troubleshooting and context-management sections aid scannability. Section 8 'When to Use Which Mode' is a standout — a 4-column decision grid that lets a professional glance and immediately pick the right approach. Keyboard shortcut sections use RefRow for consistency. Code examples are copy-pasteable and realistic. Minor nitpick: 'Alt+T' for extended thinking lists '(run /terminal-setup first)' as a parenthetical — that dependency deserves slightly more prominence. The numbered section badges and Georgia-serif header give it a polished desk-reference feel. A professional would genuinely bookmark this.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Covers the essential 80/20 comprehensively with good depth balance. Installation, authentication, slash commands, keyboard shortcuts, CLAUDE.md project setup, context management, permission modes, session resumption, subagents, hooks, MCP servers, CI/CD headless mode, debugging, and best practices are all present — the full practitioner surface area. The Project Setup directory tree is exactly what someone needs when onboarding a new project. The Debugging section covers the 6 most common failure modes. Section 14 best practices includes non-obvious gems like competing worktrees and Skills-vs-commands distinction. Minor omissions: environment variables (ANTHROPIC_API_KEY), the --add-dir flag, and full output format options beyond json/stream-json. None are glaring — curation is smart and depth is genuine rather than superficial.",
+      "channel": "C"
+    },
+    "workflow_orientation": {
+      "score": 5,
+      "notes": "Every section maps to a real practitioner task. Section 1 is 'Quick Start' not 'Installation.' Section 2 is 'Daily Workflow Shortcuts' not 'Keyboard Bindings.' Section 5 'Managing Context' is organized around strategies rather than feature categories. Section 8 'When to Use Which Mode' is a pure decision guide — the highest-value section, directly answering the question practitioners ask constantly. Section 13 is structured as problem→fix pairs, not a feature catalog. The page split itself is workflow-oriented: Page 1 = daily needs, Page 2 = power patterns. Section 14 best practices are curated heuristics not a feature dump. The only slight concession to reference-style is the slash command listing in Section 3 — but even that pairs each command with a clear use-case description rather than just a definition. Exemplary workflow orientation throughout.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "The cheatsheet is largely accurate and clearly grounded in real Claude Code documentation. Seven claims were verified against official sources. Six are correct or only trivially imprecise; one is a clear, user-facing error (the `Alt+P` shortcut for switching models). The model name used in code examples (`claude-sonnet-4-20250514`) is technically valid but is now a legacy model identifier — it still works but is out of date as of 2026. Everything else — install command, Shift+Tab cycling, Esc Esc checkpointing, all 8 hook event names, macOS Seatbelt / Linux bubblewrap sandboxing, and MCP file locations — checks out against official docs. The cheatsheet earns a 4: good overall accuracy with one clear error that wouldn't block workflows but would confuse users trying to use the keyboard shortcut.",
+      "verified_claims": [
+        {
+          "claim": "Install command: `curl -fsSL https://claude.ai/install.sh | bash` — native binary, no Node required",
+          "verdict": "correct",
+          "evidence": "Confirmed by official docs at code.claude.com/docs/en/setup and Anthropic's own Threads post: 'Claude Code's native installer is now generally available. It's simpler, more stable, and doesn't require Node.js.' The exact curl URL and no-Node claim are accurate.",
+          "severity": "high"
+        },
+        {
+          "claim": "Shift+Tab cycles: Normal → Auto-Accept → Plan mode",
+          "verdict": "correct",
+          "evidence": "Confirmed by official docs and claudefa.st/blog/guide/mechanics/planning-modes. Shift+Tab cycles through the three modes. A known Windows-specific bug (issue #17344) means Plan mode is skipped there, but the cycling behavior described is correct on macOS/Linux. The cheatsheet doesn't claim Windows support for this shortcut, so no deduction.",
+          "severity": "high"
+        },
+        {
+          "claim": "Alt+P — Switch model without clearing your prompt",
+          "verdict": "incorrect",
+          "evidence": "The official keyboard shortcuts reference (code.claude.com/docs/en/keybindings) does not list Alt+P as a shortcut for switching models. Model switching is done via the /model slash command or the mode selector. No authoritative source could confirm Alt+P as a valid keybinding for this action. This shortcut appears to be fabricated or conflated with another tool.",
+          "severity": "high"
+        },
+        {
+          "claim": "Esc Esc — Rewind to a previous checkpoint in conversation",
+          "verdict": "correct",
+          "evidence": "Confirmed by official Claude Code Checkpointing docs (code.claude.com/docs/en/checkpointing). Double-Esc opens the rewind/checkpoint menu. Checkpoints are created before each file edit. Users can restore code, conversation, or both.",
+          "severity": "high"
+        },
+        {
+          "claim": "Hook events listed: PreToolUse, PostToolUse, SessionStart, SessionEnd, Stop, SubagentStop, UserPromptSubmit, Notification",
+          "verdict": "correct",
+          "evidence": "All 8 events confirmed against the official Hooks Reference at code.claude.com/docs/en/hooks. SessionStart, SessionEnd, SubagentStop, and UserPromptSubmit are all documented events. The full list matches the official 8-event set.",
+          "severity": "high"
+        },
+        {
+          "claim": "Sandbox: macOS uses Seatbelt, Linux uses bubblewrap for OS-level filesystem and network isolation",
+          "verdict": "correct",
+          "evidence": "Confirmed by official sandboxing docs (code.claude.com/docs/en/sandboxing) and Anthropic engineering blog. macOS uses sandbox-exec (Apple Seatbelt framework); Linux uses bubblewrap with Linux namespaces. The claim is precise and accurate.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Model identifier `claude-sonnet-4-20250514` used in code examples; MCP user-level config is `~/.claude.json`",
+          "verdict": "outdated",
+          "evidence": "The model ID `claude-sonnet-4-20250514` is a real, valid identifier but is now a legacy model — Anthropic's migration guide lists it as a model to migrate *from*, with claude-sonnet-4-5/4-6 as the current generation as of 2026. The `~/.claude.json` user-level MCP config is confirmed accurate by official MCP docs (code.claude.com/docs/en/mcp). Splitting verdict: model name is outdated (minor), MCP path is correct.",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.67,
+  "pass": true,
+  "timestamp": "2026-03-12T00:45:06.503Z",
+  "version": "v1",
+  "channels_run": [
+    "B",
+    "C"
+  ]
+}

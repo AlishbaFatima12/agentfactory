@@ -162,6 +162,8 @@ Read the brief with three questions:
 
 **Are the KPIs leading indicators or vanity metrics?** LinkedIn follower growth (300) is a vanity metric — it measures awareness, not pipeline. Cost per lead ($500) is a leading indicator — it tells you whether the campaign economics work before you reach the 50-lead target. Pipeline value ($250K+) is a lagging indicator — you will not know this until deals progress through the funnel. The brief mixes all three types, which is correct. A brief with only vanity metrics (impressions, clicks, followers) would signal a weak measurement plan.
 
+Every channel allocation must include a rationale connecting to what has worked or not worked historically. Channels with evidence of ROI earn more budget. Channels that failed previously are excluded or minimized with explicit reference to why.
+
 ## Building the Email Nurture Track
 
 Every campaign needs an email nurture track — the sequence of emails that keeps prospects engaged between the first click and the sales conversation. Run `/email-sequence` from the base marketing plugin:
@@ -247,6 +249,8 @@ Three things to evaluate in the calendar:
 **Persona balance.** Count the VP Ops entries versus the COO entries. If 80% target VP Ops, the campaign under-serves the COO persona. Both personas appear in the target audience. Each should see content that speaks to their specific pain — operational efficiency for VP Ops, cost reduction for COO.
 
 **Market-specific content.** The UK blog post (week 3) references post-Brexit supply chain challenges. The UAE LinkedIn article references free zones. The PK WhatsApp broadcast targets fleet operators. Each market gets content calibrated to its regulatory and operational context. If all 36+ entries used the same generic messaging, the calendar would waste budget on content that does not resonate locally.
+
+The calendar must include event-driven content architecture: tag tentpole moments (conferences, product launches, earnings) and build pre-event, during-event, and post-event content around each. When planning for multiple personas, distribute content so each persona appears in at least 30% of pieces. Workload baseline: 1 writer (full-time, AI-assisted) can produce 6-9 pieces per week. Never add a channel not explicitly listed in the brief as committed.
 
 ## Defining the Measurement Framework
 

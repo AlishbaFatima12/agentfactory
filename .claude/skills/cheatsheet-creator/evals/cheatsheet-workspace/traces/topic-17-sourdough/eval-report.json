@@ -1,0 +1,24 @@
+{
+  "topic": "topic-17-sourdough",
+  "prompt": "can you make a cheatsheet for sourdough bread? like the whole process from starter maintenance to baking. i keep screwing up the timing",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 50KB HTML, 2085px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 3 primitive types, no issues.",
+      "channel": "D"
+    }
+  },
+  "composite": 5,
+  "pass": true,
+  "timestamp": "2026-03-11T13:07:49.001Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

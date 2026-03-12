@@ -21,7 +21,7 @@ Before writing any code, understand the topic deeply:
 1. If the topic is a technology/tool, web-search for the latest features, commands, and best practices to ensure the cheatsheet is current and complete.
 2. **Verify specific syntax against official docs.** Do NOT rely on memory for CLI flags, API syntax, configuration directives, or version-specific features. If you haven't confirmed a command or syntax via web search, search before including it.
 3. **Check for deprecations.** Features that were deprecated or sunset in the last 2 years should be flagged or omitted. Web-search "[feature] deprecated" for any feature you're unsure about.
-4. Identify **all major sections** the cheatsheet needs. Aim for 12–24 sections across 1–2 pages. Think about what a working professional would need at a glance.
+4. Identify the **core workflows** a professional does with this topic. Aim for 12–16 focused sections across 1–2 pages. Prioritize the 80/20 — the 20% of features that cover 80% of daily use.
 5. Group sections into logical pages if content exceeds 12 sections.
 
 **Accuracy anti-hallucination rules (CRITICAL — accuracy is the #1 quality differentiator):**
@@ -35,21 +35,66 @@ These are the specific patterns that cause accuracy failures. Follow every rule:
 - **Cross-dialect claims need per-dialect verification.** When comparing dialects (SQL, regex engines, etc.), verify each claim for each dialect separately. Don't assume behavior is the same across MySQL/PostgreSQL/SQLite or across JS/Python/PCRE regex engines.
 - **Non-technical topics need source verification too.** For psychology, negotiation, cooking, parenting — verify claims against the original source (book, medical guideline, established reference). Don't paraphrase from memory in ways that change the specifics.
 
+### Curation Philosophy (CRITICAL — this determines whether the output is useful or not)
+
+The #1 failure mode is producing a **reference dump** — listing every feature, flag, and option. Reference dumps score high on raw completeness but are unusable. A great cheatsheet is a **workflow guide** that teaches professionals HOW to work, not just WHAT exists.
+
+**Workflow-oriented vs Reference-oriented:**
+
+| Reference Dump (BAD)                          | Workflow Guide (GOOD)                                      |
+| --------------------------------------------- | ---------------------------------------------------------- |
+| "Installation" listing 4 install methods      | "Quick Start" showing THE recommended path + first command |
+| "All Slash Commands" listing every command    | "Daily Workflow" showing the 5 commands you use constantly |
+| "Configuration Options" listing every setting | "Project Setup" showing the config that matters on day 1   |
+| 24 sections covering every feature            | 12-16 sections covering the workflows that matter          |
+| Organized by feature category                 | Organized by task/workflow                                 |
+
+**The curation test:** For every section ask: "Would a working professional look at this section at their desk?" If the answer is "only during initial setup" or "only for rare edge cases" — cut it or fold it into a broader section.
+
+**What to leave out:**
+
+- Rarely-used features that users would Google anyway
+- Exhaustive option lists (show the 3-5 most common, not all 20)
+- Features that are self-explanatory from the UI
+- Deep configuration that only matters for advanced users (unless the prompt asks for it)
+
+**What to include instead:**
+
+- Decision guides: "When to use X vs Y"
+- Workflow patterns: "Daily workflow", "Project setup flow", "Debugging flow"
+- Mental models: Architecture diagrams, layer explanations
+- Best practices and anti-patterns
+- The 80/20 — the 20% of features that cover 80% of use cases
+
 ### Step 2 — Plan the Sections
 
-Write a section plan before coding. Each section needs:
+Write a section plan before coding. **Think in workflows, not features.**
+
+**Planning process:**
+
+1. Identify the 3-5 core workflows a professional does with this topic (e.g., for a CLI tool: setup, daily use, debugging, team collaboration, advanced patterns)
+2. For each workflow, identify what the professional needs to know
+3. Group into sections of 4-8 items each
+4. Add 1-2 cross-cutting sections (decision guides, best practices, architecture)
+5. Target **12-16 sections** on 1-2 pages. 12 focused sections > 24 scattered ones.
+
+Each section needs:
+
 - A number (1, 2, 3...)
-- A short punchy title
+- A short punchy title **that implies action** (e.g., "Daily Workflow" not "Commands", "Project Setup" not "Configuration")
 - The key content (bullets, code blocks, tables, tags, key-value pairs)
 - Estimated density (light / medium / heavy)
 
 Balance the grid: mix heavy code-block sections with lighter bullet-point sections so the layout feels even.
+
+**Section title quality check:** Read your section titles as a list. Do they tell a story? A professional should be able to read just the titles and understand the tool's workflow. Bad: "Installation, Commands, Settings, Features, API". Good: "Quick Start, Daily Workflow, Project Setup, Debugging, Team Patterns".
 
 ### Step 3 — Build the React Component
 
 Read the design system reference file at `references/design-system.md` — it contains the exact color palette, component library, and layout rules. Follow it precisely.
 
 **Critical rules:**
+
 - Output a single `.jsx` file with a default export
 - Use only inline styles (no CSS files, no Tailwind classes that need compilation)
 - Import only `{ useState } from "react"` — no other dependencies
@@ -70,9 +115,14 @@ JSX has strict rules about special characters. Violating these produces silent p
 
 **When in doubt, wrap any special character in a `{'...'}` string expression.** This is always safe.
 
+**Responsive Design (REQUIRED):**
+
+Every cheatsheet must be mobile-responsive. Since inline styles cannot use `@media` queries, add an embedded `<style>` tag at the start of the component's return JSX. See `references/design-system.md` for the exact responsive pattern. The grid must collapse from 3 columns → 2 columns (at 900px) → 1 column (at 600px).
+
 ### Step 4 — Content Quality Checklist
 
 Before finishing, verify EVERY item:
+
 - [ ] Every section has real, accurate, useful content (no placeholder text)
 - [ ] Code examples are syntactically correct and runnable
 - [ ] Commands/shortcuts are verified against current versions
@@ -80,6 +130,9 @@ Before finishing, verify EVERY item:
 - [ ] Keyboard shortcuts, CLI commands, and config snippets use the `<Code>` component
 - [ ] Tags/badges are used for categories, labels, and status indicators — **only use colors from the design system palette** (the 6 secondary Tag colors: green #5a8a3c, blue #3a6ea5, purple #7a5a8a, gold #8a6a3a, teal #2a7a7a, red #a53a3a, or the default burnt-orange). Never invent new hex colors.
 - [ ] The cheatsheet would genuinely help a professional working with this topic
+- [ ] **WORKFLOW ORIENTATION:** Read your section titles as a list. Do they describe workflows/tasks or just feature categories? If more than 2 sections are pure feature lists (e.g., "All Commands", "Configuration Options"), restructure them around HOW a professional uses those features. Apply the curation test to every section.
+- [ ] **CURATION CHECK:** Count your sections. If you have more than 16, ask: "Which sections would a professional NEVER look up at their desk?" Cut or merge those. 12 focused sections > 18 scattered ones.
+- [ ] **RESPONSIVE:** Verify the `<style>` tag with media queries is present and the grid uses `className="cheatsheet-grid"`.
 - [ ] **JSX SAFETY:** Scan for unescaped `${}`, backslash sequences in JSX text, quotes-in-quotes in attributes, and raw `<`/`>` in text content. Any of these will silently break rendering.
 - [ ] **CONTENT ACCURACY — Final verification pass.** Re-read the entire cheatsheet and for each section ask: "Is there any function name, flag, default value, numeric claim, or behavioral description I did NOT verify via web search?" If yes, search for it now or remove it. Pay special attention to:
   - Function/method names that might not exist (search "[tool] [function name]")
@@ -98,9 +151,10 @@ The full design system is in `references/design-system.md`. Here's the quick sum
 
 **Palette:** Warm parchment background (#faf5ef), cream cards (#fff8f0), burnt-orange accent (#c0582a), dark espresso text (#2c1810).
 
-**Layout:** CSS Grid, 3 columns, 12px gap. Pages toggled via useState tabs.
+**Layout:** CSS Grid, 3 columns (responsive: 2 at 900px, 1 at 600px), 12px gap. Pages toggled via useState tabs.
 
 **Components used inside sections:**
+
 - `<Code>` — dark code blocks with monospace font
 - `<Tag>` — colored badge pills for categories
 - `<Bullet>` — circle-prefixed list items
