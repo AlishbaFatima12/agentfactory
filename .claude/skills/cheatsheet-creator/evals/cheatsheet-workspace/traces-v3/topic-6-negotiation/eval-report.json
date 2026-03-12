@@ -1,0 +1,85 @@
+{
+  "topic": "topic-6-negotiation",
+  "prompt": "quick reference for negotiation techniques. im reading 'never split the difference' and want something to glance at before calls",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 34KB HTML, 1454px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "20 sections, 4 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional usability. Two-page structure (Core Techniques → Advanced Tactics) is logical and well-sequenced, mirroring how a practitioner would progress. Every section has a numbered card, a color-tagged classification, and consistent internal structure — extremely scannable. Visual variety is strong throughout: Tag badges for category context, Bullets for conceptual points, RefRows for phrase quick-lookup, inline example boxes in highlight background, KV pairs for comparisons, and alternating-stripe tables for multi-item data (Ackerman steps, voice tones, negotiator types). Information density is well-calibrated — no section feels padded or overwhelming. The Pre-Call Checklist (Section 10) and Key Phrases Quick Reference (Section 20) are both full-width span-3 cards that serve as the 'glance before a call' anchor the user specifically asked for. Inline EXAMPLE boxes in Sections 2 and 5 make the techniques immediately actionable. The footer attribution and page navigation are clean. Minor nitpick: Section 16 (7-38-55 Rule) includes a useful caveat about Mehrabian's research that, while intellectually honest, slightly interrupts the 'quick glance' flow — but this is a very minor trade-off.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensive coverage of the book's core framework with no meaningful gaps. All major NSTD techniques are present: Tactical Empathy, Mirroring, Labeling, Accusation Audit, Calibrated Questions (with the signature 'How am I supposed to do that?'), Rule of Three, That's Right vs You're Right distinction, The Three Voice Tones, Ackerman Model, Black Swans, Negotiator Types, Deadlines/Time Pressure, Bending Reality, and 7-38-55. The user's specific prompt ('before calls') is directly served by the Pre-Call Checklist in Section 10 — a purpose-built pre-game card. Bonus coverage the user didn't ask for but would find valuable: Email/Async Negotiation (Section 19), Guarantee Execution (Section 18), and Spotting Deception (Section 17) — all practically relevant for professional contexts. The Key Phrases Quick Reference on Page 2 is particularly strong as a glance-worthy lookup. The only technique one might note as slightly underweighted is 'the Ackerman' in terms of when *not* to anchor first, but this is covered implicitly in Section 12. Overall, this is the most complete 2-page NSTD reference a practitioner could reasonably want.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 5,
+      "notes": "Exceptionally well-researched cheatsheet. All 7 verified claims match authoritative sources precisely. Notably, the 7-38-55 rule section includes the correct scholarly caveat (applies only to feelings/attitudes, not all communication) — this is a nuance that most popular summaries of the book omit or get wrong. The Ackerman model percentages (65/85/95/100), the three types of yes (counterfeit/confirmation/commitment), the three negotiator types (Analyst/Accommodator/Assertive), the \"never start with I\" labeling rule, and the \"That's right\" vs \"You're right\" distinction are all verbatim accurate. The one micro-imprecision is that \"typically three Black Swans in any negotiation\" technically elides Voss's precise framing that *each side* holds at least three — but this is inconsequential for a user reference and does not mislead. No invented flags, no hallucinated techniques, no incorrect percentages.",
+      "verified_claims": [
+        {
+          "claim": "7-38-55 rule: 7% words, 38% tone, 55% body language — with the caveat that it applies specifically to communication of feelings and attitudes, not all communication",
+          "verdict": "correct",
+          "evidence": "Mehrabian's original research confirms these percentages and this exact scope limitation. The cheatsheet's caveat ('this ratio applies specifically to communication of feelings and attitudes, not all communication') is precisely what Mehrabian himself has stated and what researchers note is widely misapplied. The cheatsheet handles this better than most popular summaries.",
+          "severity": "low"
+        },
+        {
+          "claim": "Ackerman model offer sequence: 1st offer at 65%, then 85%, 95%, 100% of target price",
+          "verdict": "correct",
+          "evidence": "Multiple sources citing the book directly confirm this exact sequence: 65% → 85% → 95% → 100%. Shortform, CoachingWithWisdom, and other book summaries all confirm this verbatim.",
+          "severity": "high"
+        },
+        {
+          "claim": "Labeling technique: 'Never start with I' — use 'It seems like...', 'It sounds like...', 'It looks like...' instead",
+          "verdict": "correct",
+          "evidence": "Confirmed by Voss's MasterClass, multiple book summaries, and legal.io's detailed breakdown. The 'I' framing makes it about you and triggers defensiveness; neutral third-person openers are the prescribed form.",
+          "severity": "high"
+        },
+        {
+          "claim": "Three negotiator types: Analyst (methodical, needs data), Accommodator (relationship-focused), Assertive (direct, time-is-money, needs to be heard)",
+          "verdict": "correct",
+          "evidence": "Confirmed by Black Swan Ltd (Voss's own company), HuffPost summary, and multiple book review sources. The trait descriptions for each type match the book's characterizations precisely.",
+          "severity": "medium"
+        },
+        {
+          "claim": "'That's right' signals genuine breakthrough; 'You're right' is a dismissal/brush-off meaning 'shut up and go away'",
+          "verdict": "correct",
+          "evidence": "Confirmed by CNBC interview with Voss, Good Karma Brands breakdown, and multiple book summaries. Voss calls 'that's right' the 'sweetest two words in negotiation' and explicitly warns that 'you're right' is the brush-off.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Three types of yes: counterfeit (to get rid of you), confirmation (reflexive), and commitment (real)",
+          "verdict": "correct",
+          "evidence": "Confirmed by Black Swan Ltd's own newsletter, Brainy Quote citing Voss directly, and multiple independent book summaries. All three labels and their definitions match exactly.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Black Swans: 'Voss says there are typically three in any negotiation'",
+          "verdict": "correct",
+          "evidence": "Voss states each side has 'at least three' Black Swans. The cheatsheet says 'typically three in any negotiation' — technically omitting that it's three per *each side*, but this is a trivial framing difference rather than a factual error. The number three and the concept are accurate.",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 5,
+  "pass": true,
+  "timestamp": "2026-03-11T16:30:20.409Z",
+  "version": "v3",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

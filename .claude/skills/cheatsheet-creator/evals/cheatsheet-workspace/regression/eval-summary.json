@@ -1,0 +1,115 @@
+{
+  "run_timestamp": "2026-03-12T07:07:04.134Z",
+  "version": "v1",
+  "traces_evaluated": 1,
+  "traces_passed": 1,
+  "traces_failed": 0,
+  "average_composite": 4.6,
+  "dimension_averages": {
+    "render": 5,
+    "accuracy": 4,
+    "workflow_orientation": 5,
+    "completeness": 4,
+    "usability": 5,
+    "efficiency": 5
+  },
+  "failures": [],
+  "traces": [
+    {
+      "topic": "claude-code",
+      "prompt": "Create a comprehensive cheatsheet for claude code",
+      "scores": {
+        "render": {
+          "score": 5,
+          "notes": "Renders perfectly. 50KB HTML, 2222px tall.",
+          "channel": "A"
+        },
+        "efficiency": {
+          "score": 5,
+          "notes": "16 sections, 5 primitive types, no issues.",
+          "channel": "D"
+        },
+        "usability": {
+          "score": 5,
+          "notes": "Excellent visual variety: Code blocks, Tag badges, Bullet lists, KV pairs, and RefRow components are all used appropriately and contextually — not randomly. Sections are logically sequenced from installation → configuration → architecture → workflows → reference. The 3-column grid with a full-width Quick Reference footer is an ideal desk reference layout. Information density is well-calibrated: code examples are short and copy-pasteable, explanatory text is brief, and no section feels like a wall. The progressive disclosure from concrete (commands) to conceptual (4-layer architecture) to operational (daily workflow) matches how a new-to-intermediate user actually learns. Section 16's tri-column Quick Reference is particularly strong as a standalone scan target. One minor issue: Section 8 ('4-Layer Architecture') is conceptual and slightly out of place between setup sections and workflow sections, but it's small enough not to hurt.",
+          "channel": "C"
+        },
+        "completeness": {
+          "score": 4,
+          "notes": "Covers the essential practitioner surface area well: install, CLAUDE.md, memory hierarchy, file structure, skills, hooks, permissions, modes, CI/non-interactive, MCP, multi-agent, git workflows, context management, and quick reference. The 80/20 is respected — high-frequency tasks are front and center. Notable gaps that keep this from a 5: (1) Custom slash commands get mentioned in the file structure section but never get their own section explaining how to author them (just a directory entry); (2) The /resume command for resuming sessions is absent from quick reference; (3) The 'Esc Esc to rewind' in the daily workflow step list is never explained — it appears in both section 9 and quick reference without enough context for a new user to understand what 'rewind' means; (4) Extended thinking toggle shortcut (⌥T) is mentioned but what extended thinking IS isn't explained. These are useful-extras gaps, not core workflow gaps — the essentials are solid.",
+          "channel": "C"
+        },
+        "workflow_orientation": {
+          "score": 5,
+          "notes": "This cheatsheet is strongly workflow-first. Section 9 ('Daily Workflow Pattern') is the centerpiece — an 8-step numbered sequence that maps directly to a real coding session. Sections are mostly ordered as a practitioner would encounter them: start → configure → understand structure → add power features → understand architecture → run workflows. The 'When to Use' column in Quick Reference section 16 is an excellent decision-support addition (Interactive vs -p flag vs Plan mode vs Multi-agent vs thinking). Sections 11 and 13 are titled around use-cases ('Non-Interactive & CI', 'Multi-Agent Parallel Work') rather than feature categories. The action-oriented framing is consistent — 'Setting Up Hooks', 'Adding Skills (The Superpower)', 'Git & PR Workflows' all imply tasks, not categories. The 4-layer architecture section (8) is the only section that reads more like a conceptual reference than a workflow guide, but it's brief and positioned as 'how to grow your setup' scaffolding, which retains workflow intent.",
+          "channel": "C"
+        },
+        "accuracy": {
+          "score": 4,
+          "notes": "The cheatsheet is largely accurate and useful. Installation commands, model names, MCP config format, CLAUDE.md hierarchy, and keyboard shortcuts all check out against official documentation. The one meaningful inaccuracy is the hook exit-code table, which presents an oversimplified and misleading model: \"0 → allow, 2 → block\" is incorrect. Exit code 2 does not mean \"block\" — it causes Claude Code to ignore all JSON/stdout and surface stderr as an error message; the actual allow/deny/block decisions are conveyed via JSON fields in exit-0 output, and the behavior differs between PreToolUse and PostToolUse. A user writing a hook guard based on this cheatsheet's description would produce incorrect behavior. Everything else is either correct or a minor imprecision (e.g., Shift+Tab cycling description in the daily workflow omits the intermediate Auto-Accept step before reaching Plan Mode, though the Quick Reference correctly labels it \"Cycle mode\"). The /cost command could not be confirmed in official slash command lists but its absence may reflect doc incompleteness rather than hallucination. Overall: one significant error in the hooks section prevents a 5.",
+          "verified_claims": [
+            {
+              "claim": "Install command: curl -fsSL https://claude.ai/install.sh | bash",
+              "verdict": "correct",
+              "evidence": "Official Anthropic setup docs confirm this exact curl command as the primary/recommended native installation method. NPM install is noted as deprecated.",
+              "severity": "high"
+            },
+            {
+              "claim": "Hook exit codes: 0 → allow, 2 → block",
+              "verdict": "incorrect",
+              "evidence": "Official hooks reference (docs.anthropic.com/en/docs/claude-code/hooks) states that exit code 2 causes Claude Code to ignore stdout/JSON and treat stderr as an error message — it does NOT universally mean 'block'. Blocking decisions (deny/block) are conveyed via JSON fields (e.g. permissionDecision: 'deny', decision: 'block') on exit 0. The behavior also differs between PreToolUse and PostToolUse. The cheatsheet's binary '0=allow / 2=block' model is misleading and would cause users to write incorrect hook scripts.",
+              "severity": "high"
+            },
+            {
+              "claim": "Shift+Tab cycles through modes (used to enter Plan Mode)",
+              "verdict": "correct",
+              "evidence": "Official interactive mode docs confirm: Shift+Tab in Normal Mode first enters Auto-Accept Mode, then a second Shift+Tab enters Plan Mode. The cheatsheet's Quick Reference labels it 'Cycle mode' (accurate), though the Step 2 workflow item implies a single press goes directly to Plan Mode — a minor imprecision, not a meaningful error.",
+              "severity": "medium"
+            },
+            {
+              "claim": "Model names: claude-opus-4-6 (most capable), claude-sonnet-4-6 (balanced), claude-haiku-4-5 (fastest)",
+              "verdict": "correct",
+              "evidence": "Anthropic release announcements confirm all three model names exist: claude-opus-4-6, claude-sonnet-4-6, and claude-haiku-4-5. Their tier descriptions (capable/balanced/fast) match Anthropic's own positioning.",
+              "severity": "high"
+            },
+            {
+              "claim": "MCP config lives in .mcp.json at project root with mcpServers key",
+              "verdict": "correct",
+              "evidence": "Official MCP docs (docs.anthropic.com/en/docs/claude-code/mcp) confirm .mcp.json at the project root with an mcpServers object is the correct format for project-scoped MCP server configuration, designed to be checked into version control.",
+              "severity": "high"
+            },
+            {
+              "claim": "CLAUDE.md hierarchy: ~/.claude/CLAUDE.md (global), CLAUDE.md (project), .claude/CLAUDE.md (project alt), ./src/CLAUDE.md (subfolder)",
+              "verdict": "correct",
+              "evidence": "Official memory docs (docs.anthropic.com/en/docs/claude-code/memory) confirm user-global, project-root, and subdirectory CLAUDE.md file locations. Subdirectory files load on demand when Claude accesses files in those directories. The four-level hierarchy shown is accurate.",
+              "severity": "medium"
+            },
+            {
+              "claim": "Slash commands /compact, /clear, /cost, /model all exist",
+              "verdict": "correct",
+              "evidence": "/compact, /clear, and /model are confirmed in official slash command documentation. /cost is referenced in the official best practices blog and interactive mode docs as a valid command for checking session spend. All four appear to exist.",
+              "severity": "medium"
+            },
+            {
+              "claim": "Hooks section lists only three hook types: PreToolUse, PostToolUse, Notification",
+              "verdict": "incorrect",
+              "evidence": "Official hooks reference documents additional hook events beyond the three listed: Stop and UserPromptSubmit are also documented lifecycle events. The cheatsheet omits these, which is incomplete rather than wrong, but could mislead users into thinking the hook system is more limited than it is.",
+              "severity": "low"
+            }
+          ],
+          "channel": "B"
+        }
+      },
+      "composite": 4.6,
+      "pass": true,
+      "timestamp": "2026-03-12T07:07:02.554Z",
+      "version": "v1",
+      "channels_run": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    }
+  ]
+}

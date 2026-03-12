@@ -1,0 +1,24 @@
+{
+  "topic": "topic-4-ffmpeg",
+  "prompt": "i need an ffmpeg cheatsheet. every time i need to convert something i spend 20 min googling the flags",
+  "scores": {
+    "render": {
+      "score": 1,
+      "notes": "Failed to render. Render error: unknown: Unexpected token (728:33)\n\n  726 |   ffmpeg -i $_.Name -c:v libx264 \"$($_.BaseName).mp4\"\n  727 | }`}</Code>\n> 728 |             <Bullet><strong>\\${f%.avi}</strong> strips the .avi extension in Bash</Bullet>\n      |                                  ^\n  729 |             <Bullet><strong>GNU parallel</strong> uses all CPU cores for faster batch jobs</Bullet>\n  730 |             <Bullet>Add <strong>-n</strong> flag to skip files that already exist</Bullet>\n  731 |             <Bullet>Use <strong>-loglevel error</strong> for cleaner batch output</Bullet>; No content rendered",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 1,
+      "notes": "JSX parse error",
+      "channel": "D"
+    }
+  },
+  "composite": 1,
+  "pass": false,
+  "timestamp": "2026-03-11T13:07:55.727Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

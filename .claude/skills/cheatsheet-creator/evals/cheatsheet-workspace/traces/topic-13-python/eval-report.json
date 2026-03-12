@@ -1,0 +1,24 @@
+{
+  "topic": "topic-13-python",
+  "prompt": "python cheatsheet",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 38KB HTML, 2219px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 3,
+      "notes": "24 sections, 3 thin. 1 total check failures.",
+      "channel": "D"
+    }
+  },
+  "composite": 4.2,
+  "pass": true,
+  "timestamp": "2026-03-11T13:07:39.095Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

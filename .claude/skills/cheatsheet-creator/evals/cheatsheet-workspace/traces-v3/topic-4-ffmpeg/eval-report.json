@@ -1,0 +1,91 @@
+{
+  "topic": "topic-4-ffmpeg",
+  "prompt": "i need an ffmpeg cheatsheet. every time i need to convert something i spend 20 min googling the flags",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 33KB HTML, 1728px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 5 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional desk reference. The two-page layout (Essentials / Advanced) is a smart organizing choice — conversion, trimming, audio extraction, and GIF creation land on page 1 where a panicked Googler needs them most, while two-pass encoding, streaming, and concat live on page 2. Section numbering (1–24) aids navigation. Visual variety is excellent: Code blocks carry the heavy lifting for copy-paste commands, RefRow grids appear in the filter-catalog sections (19, 20) where scanning a flag list beats reading prose, and KV pairs cleanly document flag semantics without competing with the code. Tags add color-coded context (codec names, platform labels, SOFT/HARD subs) without feeling decorative. The highlight-box callouts for non-obvious gotchas (deprecated -vol flag, filter chaining syntax) are well-placed. Density is consistently substantive — most sections have a real code snippet plus 3–5 KV or Bullet annotations, never just a list of bullet points. The preset pill-row in section 5 is a nice scannable affordance. Minor nitpick: section 24 (codec flags quick ref) uses icon labels like V/A and BR that feel slightly redundant when the title already says the flag — but this is very minor.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Hits every scenario a typical FFmpeg user encounters. The prompt's core need — convert something without Googling flags — is answered immediately in sections 1–3. Beyond that, coverage is genuinely comprehensive: format conversion (2), audio extraction (4), H.264 (5), H.265/VP9 (6), resize (7), speed change (8), audio filters (9), crop/rotate (10), GIF (11), ffprobe inspection (12), concat (13), subtitles (14), watermark (15), two-pass (16), screen capture with all three OSes (17), batch processing for bash and PowerShell (18), filter catalogs (19–20), stream selection with -map (21), frame/thumbnail extraction (22), RTMP streaming and piping (23), and a codec-flag quick reference (24). The inclusion of ffprobe, the -map deep dive, and thumbnail grid generation are exactly the kinds of extras that make a cheatsheet worth bookmarking. The two-pass bitrate formula (target_MB * 8192 / duration_sec) is a practical bonus most cheatsheets omit. Hardware encoding (NVENC, VideoToolbox) is absent but is a reasonable advanced-tier omission, not an expected gap for this prompt. Nothing obvious is missing for the stated use case.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "The FFmpeg cheatsheet is highly accurate overall. 7 of 8 verified claims are fully correct, including some technically nuanced ones (transpose values, atempo range history, -ss placement semantics, VP9 CRF range). The one real issue is in the two-pass encoding section (Section 16): Pass 1 is shown as `-f mp4 /dev/null` without the `-an` flag, whereas the official FFmpeg H.264 encoding wiki and all canonical guides use `-an -f null /dev/null`. The `-an` flag matters because without it FFmpeg may attempt to encode audio on pass 1, wasting time. The `-f mp4` vs `-f null` difference is less critical (both technically work since output is discarded) but `-f null` is the standard. This is a \"copy-paste and get unexpected behavior\" error — a user could get a slow or errored pass 1 depending on their input. Everything else — CRF defaults, codec syntax, filter semantics, GIF workflow, loudnorm, screen capture devices, concat methods — is accurate and well-described. Scored 4 (Good): one minor-to-moderate inaccuracy that doesn't break the workflow in most cases but diverges from official guidance in a way that could confuse users.",
+      "verified_claims": [
+        {
+          "claim": "atempo range is '0.5 to 100.0 (newer ffmpeg)'; chain at 2.0 max for best quality",
+          "verdict": "correct",
+          "evidence": "FFmpeg 7.1.1 atempo filter docs confirm range [0.5, 100.0]. Older versions (e.g., 3.2) were limited to [0.5, 2.0]. Values >2.0 use sample skipping rather than blending, which is why chaining at 2.0 is recommended for quality — exactly as stated.",
+          "severity": "low"
+        },
+        {
+          "claim": "transpose=0 is 90° counter-clockwise + vertical flip; transpose=1 is 90° clockwise; transpose=2 is 90° counter-clockwise; transpose=3 is 90° clockwise + vertical flip",
+          "verdict": "correct",
+          "evidence": "FFmpeg filter documentation confirms: 0=cclock_flip (90° CCW + vflip), 1=clock (90° CW), 2=cclock (90° CCW), 3=clock_flip (90° CW + vflip). Matches the cheatsheet exactly.",
+          "severity": "low"
+        },
+        {
+          "claim": "libx264 CRF default is 23, range 0–51; libx265 CRF default is 28, range 0–51",
+          "verdict": "correct",
+          "evidence": "Confirmed by FFmpeg Codecs documentation and the authoritative slhck CRF guide. x264 default CRF=23 (range 0–51), x265 default CRF=28 (range 0–51). Both match the cheatsheet.",
+          "severity": "low"
+        },
+        {
+          "claim": "VP9 CRF range is 0–63; use -b:v 0 for constant quality mode",
+          "verdict": "correct",
+          "evidence": "WebM Project's official VP9 encoding guide and Google Developer docs confirm CRF range 0–63 for libvpx-vp9. Constant quality mode requires -b:v 0 paired with -crf, exactly as shown.",
+          "severity": "low"
+        },
+        {
+          "claim": "Two-pass encoding Pass 1: ffmpeg -i input.mp4 -c:v libx264 -b:v 1000k -pass 1 -f mp4 /dev/null",
+          "verdict": "incorrect",
+          "evidence": "The official FFmpeg H.264 encoding wiki and all canonical guides use `-an -f null /dev/null` for pass 1, not `-f mp4 /dev/null`. The cheatsheet omits `-an` (disable audio) and uses the wrong container format. Omitting `-an` can cause unnecessary audio encoding on pass 1. The correct form is: `ffmpeg -i input.mp4 -c:v libx264 -b:v 1000k -pass 1 -an -f null /dev/null`",
+          "severity": "medium"
+        },
+        {
+          "claim": "-ss before -i = input seeking (fast, seeks to nearest keyframe); -ss after -i = output seeking (slower, frame-accurate)",
+          "verdict": "correct",
+          "evidence": "Official FFmpeg Seeking wiki (trac.ffmpeg.org/wiki/Seeking) confirms this distinction. Input seeking is fast but snaps to nearest keyframe for -c copy; output seeking decodes from start frame-by-frame. Note: since FFmpeg 2.1, input seeking with re-encoding is also frame-accurate via accurate_seek (enabled by default), which the cheatsheet's phrasing slightly undersells but doesn't contradict.",
+          "severity": "low"
+        },
+        {
+          "claim": "loudnorm implements EBU R128 loudness normalization",
+          "verdict": "correct",
+          "evidence": "FFmpeg 7.x and 8.0 loudnorm filter documentation explicitly states it implements the EBU R128 loudness standard, supporting IL (Integrated Loudness), LRA, and true peak targets.",
+          "severity": "low"
+        },
+        {
+          "claim": "GIF creation: single-command palettegen/paletteuse via filter_complex with split [a][b]; [a] palettegen [p]; [b][p] paletteuse",
+          "verdict": "correct",
+          "evidence": "This is the canonical single-command GIF approach documented across official FFmpeg examples, Giphy's engineering blog, and community guides. The split→palettegen→paletteuse chain syntax in the cheatsheet is correct.",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.7,
+  "pass": true,
+  "timestamp": "2026-03-11T16:28:37.650Z",
+  "version": "v3",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

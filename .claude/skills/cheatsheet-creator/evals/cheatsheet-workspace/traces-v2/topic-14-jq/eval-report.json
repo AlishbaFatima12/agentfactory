@@ -1,0 +1,91 @@
+{
+  "topic": "topic-14-jq",
+  "prompt": "jq cheatsheet? i can only ever remember the dot operator lol",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 44KB HTML, 1902px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 4 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Excellent organization — page 1 flows naturally from basics (what is jq, invocation) through core filters, arrays, pipes, and construction, then page 2 escalates cleanly to advanced topics. The 3-column grid with numbered section cards is highly scannable. Visual variety is strong: Code blocks carry executable examples, RefRows create clean quick-lookup tables, Bullets handle prose explanations, Tags add categorical context, and the Section 24 icon-grid decision guide is a standout. Density is well-calibrated — most sections have 5-8 items plus at least one runnable code example. The gotchas section uses alternating-background rows that make it especially glanceable. One very minor note: Section 11 (Reduce) leans slightly heavier on prose than code, but remains useful. A professional would absolutely keep this open in a tab.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensive coverage that directly responds to the prompt's spirit ('I can only remember the dot operator') by building outward from identity/basic filters progressively. All key practitioner areas are present: identity and dot operator, array slicing, pipes and comma combinator, object/array construction, all major built-ins (length, keys, values, type, empty), string functions including regex, array functions (map, select, sort, group_by, unique), conditionals, reduce, type conversions and format strings (@base64, @csv, @uri), variable binding with --arg/--argjson/--slurpfile, path expressions, recursion and walk, object manipulation (to_entries/from_entries/with_entries/del), string interpolation, error handling (try/catch/?//), and streaming for large files. Strong extras the user did not ask for but would value: 6 practical recipes, user-defined functions (def), common gotchas, and a decision guide for when to use each major feature. The only conceivable omission is @sh format string, but @base64/@uri/@csv/@tsv/@html are all covered. No meaningful gaps for a working daily reference.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 2,
+      "notes": "The cheatsheet contains two invented/wrong function behaviors and one false limitation that would actively mislead users. The `ascii` builtin does not exist in jq (the real functions are `explode`/`implode`), `flatten` without arguments flattens ALL levels not just one, and the claim that string interpolation cannot be nested is false. Combined with a minor imprecision on `-e`, that's 3 outright errors — two of which are copy-paste breaking (a user writing `jq 'ascii'` gets an error, a user relying on `flatten` for one-level flattening gets a fully-flattened result). The rest of the cheatsheet (pipes, path expressions, walk, @base64d, --rawfile, keys, etc.) is accurate and well-described, which saves it from a 1. Score: 2 — multiple errors that would mislead users.",
+      "verified_claims": [
+        {
+          "claim": "'-e' flag: 'Exit with error if output is false or null'",
+          "verdict": "correct",
+          "evidence": "Official jq manual confirms -e/--exit-status sets exit code 1 when last output is false or null, and exit code 4 when no valid result is produced. The cheatsheet description is directionally correct; it omits the exit-4 (no output) case but isn't wrong.",
+          "severity": "low"
+        },
+        {
+          "claim": "'flatten' — 'Flatten nested arrays one level'",
+          "verdict": "incorrect",
+          "evidence": "Per the official jq manual and source, bare `flatten` (no argument) flattens ALL nesting levels recursively into a single flat array. Only `flatten(1)` limits flattening to one level. A user relying on this description would get unexpected fully-flattened output.",
+          "severity": "high"
+        },
+        {
+          "claim": "'ascii' — 'Convert char to/from ASCII code point'",
+          "verdict": "incorrect",
+          "evidence": "No builtin named `ascii` exists in jq. The official manual lists `explode` (converts string to array of Unicode codepoint numbers) and `implode` (the inverse). Running `jq 'ascii'` produces a compile error. This appears to be a hallucinated function name.",
+          "severity": "high"
+        },
+        {
+          "claim": "'@base64d' — 'Decode base64 to string'",
+          "verdict": "correct",
+          "evidence": "Confirmed by the official jq manual: @base64d is the inverse of @base64, decoding input per RFC 4648. The description is accurate.",
+          "severity": "low"
+        },
+        {
+          "claim": "'walk(f)' — 'Apply f to every value bottom-up'",
+          "verdict": "correct",
+          "evidence": "Official jq 1.7/1.8 manual confirms walk applies f recursively, processing children before parents (post-order / bottom-up traversal). The cheatsheet description matches the documented behavior.",
+          "severity": "low"
+        },
+        {
+          "claim": "'--rawfile k f' — 'Bind raw file contents to $k as string'",
+          "verdict": "correct",
+          "evidence": "Official jq manual documents --rawfile variable filename as reading the named file and binding its text content as a string to the given variable. The cheatsheet's description is accurate.",
+          "severity": "low"
+        },
+        {
+          "claim": "'keys' — 'Array of an object's keys (sorted)'",
+          "verdict": "correct",
+          "evidence": "Official jq manual states: 'The keys are sorted alphabetically, by unicode codepoint order.' The cheatsheet description is accurate.",
+          "severity": "low"
+        },
+        {
+          "claim": "String interpolation 'Cannot be nested — use variable binding for complex cases'",
+          "verdict": "incorrect",
+          "evidence": "jq does support nested string interpolation (e.g., \"\\(\"outer \\(\"inner\")\")\" is valid syntax). The official manual does not state this restriction, and multiple sources demonstrate complex nested expressions inside \\(...). This false claim would cause users to add unnecessary complexity to their filters.",
+          "severity": "medium"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.1,
+  "pass": true,
+  "timestamp": "2026-03-11T13:26:28.510Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

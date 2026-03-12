@@ -1,0 +1,24 @@
+{
+  "topic": "topic-12-flexbox-grid",
+  "prompt": "flexbox and grid comparison cheatsheet. i can never remember which properties go on the container vs the item",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 47KB HTML, 2065px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 3,
+      "notes": "23 sections, 5 thin. 1 total check failures.",
+      "channel": "D"
+    }
+  },
+  "composite": 4.2,
+  "pass": true,
+  "timestamp": "2026-03-11T13:07:36.703Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

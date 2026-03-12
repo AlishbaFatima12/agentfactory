@@ -1,0 +1,91 @@
+{
+  "topic": "topic-4-ffmpeg",
+  "prompt": "i need an ffmpeg cheatsheet. every time i need to convert something i spend 20 min googling the flags",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 39KB HTML, 2087px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 5 primitive types, no issues.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional usability. The two-page structure (Foundations / Advanced) creates a natural progression that matches how someone actually learns FFmpeg. Page 1 front-loads the most-reached-for content (syntax, codecs, trimming, scaling) while Page 2 handles power-user territory. Numbered cards (1-24) make navigation instant. Visual variety is excellent: Code blocks dominate correctly (this is a command-line tool), RefRows give clean scannable flag references, KV pairs handle codec/format comparisons, Bullets handle caveats and gotchas, and the color-tagged codec sections add helpful visual anchoring. The Format Quick Reference (Section 12, full-width 4-column grid) is a standout — eight use-case tiles answer the which-format question at a glance, which is exactly the cognitive problem the user described. Common Recipes (Section 23) is equally practical, with copy-pasteable full commands for real-world scenarios. The CRF reference table and Preset speed/size inline table in Section 24 are smartly scannable. Minor note: the 3-column grid is somewhat dense on narrow screens, but at desk-reference sizing it reads cleanly. Highlight callout boxes add useful tips without cluttering the main flow.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensive coverage that well exceeds the prompt's implied scope. The user asked for convert-something help — the cheatsheet delivers that core (trimming, scaling, codecs, containers, stream copy, CRF) and anticipates needs they did not know to ask for: hardware acceleration is invaluable for slow encode complaints; GIF creation is a perennial FFmpeg pain point; batch processing is the natural next step once someone has the basics; ffprobe is often forgotten but essential for diagnosing problems; PiP/overlay and subtitles cover common post-production needs. Common Recipes directly addresses the stated pain — WhatsApp conversion, email compression, web-ready output, MP3 extraction are the four tasks people google most. No meaningful gaps: HLS/streaming, metadata, screenshots/thumbnails, filters, and concatenation are all covered. The CRF explanation with per-codec equivalences (x264 CRF 23 roughly equal to x265 CRF 28) and the -ss before vs. after -i precision note are the kind of nuanced, frequently-googled details that elevate this above a generic reference.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 3,
+      "notes": "The cheatsheet is largely accurate on mainstream FFmpeg usage (core syntax, CRF values, codec names, container guidance, NVENC presets, concat demuxer). However it contains one significant factual error (atempo range stated as 0.5–100 when the real range is 0.5–2.0), one deprecated-as-current error (-vol 256 is a removed option not present in FFmpeg 7.x despite the \"2026 Edition\" branding), and a broken copy-paste code block in the two-pass GIF recipe (missing [0:v] input label in filter_complex). The atempo error is particularly impactful because the RefRow explicitly says \"(range: 0.5 to 100)\" — a user who tries atempo=3.0 or atempo=50 expecting it to work will get an error, and they'll be confused because the cheatsheet told them it was in-range. The -vol issue will silently produce an \"unrecognized option\" error on any modern FFmpeg build. These two together push the sheet from a 4 to a 3.",
+      "verified_claims": [
+        {
+          "claim": "CRF 23 is the default for libx264",
+          "verdict": "correct",
+          "evidence": "FFmpeg source code (libx264.c) sets the default CRF to -1 (unset), causing x264's own internal default of 23 to apply. This is universally confirmed by FFmpeg's encoding guides and the x264 project. The cheatsheet's RefRow 'CRF 23 — Default for x264' is accurate.",
+          "severity": "low"
+        },
+        {
+          "claim": "CRF 28 is the default for libx265 and is 'equivalent to x264 CRF 23'",
+          "verdict": "correct",
+          "evidence": "The official FFmpeg H.265 encoding wiki (fftrac-bg.ffmpeg.org/wiki/Encode/H.265) states: 'The default CRF value for libx265 is 28, and it should be visually comparable in quality to x264 video at CRF 23.' Both the default value and the equivalence claim are accurate.",
+          "severity": "low"
+        },
+        {
+          "claim": "atempo filter accepts a range of 0.5 to 100 (RefRow: 'atempo=2.0 — 2x audio speed (range: 0.5 to 100)')",
+          "verdict": "incorrect",
+          "evidence": "Per the FFmpeg atempo source code (af_atempo.c) and confirmed by FFmpeg Trac search results, the atempo filter validates 'if (tempo < 0.5 || tempo > 2.0)' and rejects values outside this range with an error. The actual range is 0.5–2.0, not 0.5–100. The cheatsheet correctly notes that chaining atempo (atempo=2.0,atempo=2.0) achieves higher speeds as a workaround — but the stated range of 100 is fabricated and will mislead users who try e.g. atempo=4.0 directly.",
+          "severity": "high"
+        },
+        {
+          "claim": "-vol 256 sets normal volume (512 = 2x, 128 = 0.5x)",
+          "verdict": "outdated",
+          "evidence": "The -vol option existed in old FFmpeg and did use a vol/256 scale (so 256 = unity, 512 = 2x), making the arithmetic correct in historical context. However, -vol was deprecated and removed from modern FFmpeg long before version 7.x. Running this option on any current FFmpeg build (which this cheatsheet claims to cover — 'FFmpeg 7.x') will produce 'Unrecognized option vol'. The modern replacement is '-af volume=2.0'. Presenting it as a current copy-paste command is a significant usability error.",
+          "severity": "high"
+        },
+        {
+          "claim": "h264_nvenc uses -preset p7 and -cq for quality control",
+          "verdict": "correct",
+          "evidence": "FFmpeg NVENC source (nvenc.c) and user mailing list confirm p1–p7 presets exist for the newer NVENC preset system (p4 = medium default, p7 = slowest/best quality). The -cq parameter (range 0–51, 0 = auto) is the correct constant quality option for NVENC. Both flags are accurate for FFmpeg 7.x.",
+          "severity": "low"
+        },
+        {
+          "claim": "concat demuxer with -f concat -safe 0 -i files.txt -c copy",
+          "verdict": "correct",
+          "evidence": "The FFmpeg formats documentation confirms the concat demuxer accepts a -safe option (default 1); -safe 0 disables path safety checks and allows absolute paths. The file list format ('file path') and the full command syntax are correct.",
+          "severity": "low"
+        },
+        {
+          "claim": "Two-pass high-quality GIF: second pass filter_complex 'fps=15,scale=480:-1:flags=lanczos[x];[x][1:v]paletteuse'",
+          "verdict": "incorrect",
+          "evidence": "The second-pass filter_complex is missing the required '[0:v]' input label before the fps/scale chain. The correct pattern, confirmed by FFmpeg's canonical palettegen/paletteuse documentation and multiple official examples, is: '[0:v]fps=15,scale=480:-1:flags=lanczos[x];[x][1:v]paletteuse'. As written, FFmpeg will error on the unlabeled filtergraph input. This is a copy-paste-breaking syntax error.",
+          "severity": "medium"
+        },
+        {
+          "claim": "libvpx-vp9 GIF command uses -crf 30 for WebM output",
+          "verdict": "correct",
+          "evidence": "FFmpeg's VP9 encoding documentation (trac.ffmpeg.org/wiki/Encode/VP9) confirms that -crf is a valid quality control flag for libvpx-vp9, with the range 0–63 (lower = better). CRF 30 is a reasonable mid-range value. The command syntax is accurate.",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.4,
+  "pass": true,
+  "timestamp": "2026-03-11T13:36:59.034Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

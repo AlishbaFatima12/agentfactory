@@ -191,6 +191,8 @@ The pipeline data depends on your demo-data.md content and the deals you have be
 
 Review the output for three categories: deals that need immediate intervention (stalled, silent, or missing a champion), deals that are your strongest closes (high health, active engagement), and the gap between your weighted pipeline and quarterly target.
 
+Weighted pipeline calculation must show the per-deal math: multiply each deal value by its stage probability (Discovery=20%, Qualification=40%, Proposal=60%, Negotiation=80%), then sum all weighted values. For each stalled deal, calculate what percentage of the remaining quota gap that deal represents — this quantifies the impact of losing it and determines whether replacement pipeline is needed.
+
 Meridian Logistics and Gulf Express are the strongest closes. Meridian has a champion (Sarah Chen), an active proposal, and scores of 92/100. Gulf Express is in negotiation with high engagement. These two deals represent $275,000 in near-term revenue.
 
 ## Sales Forecast

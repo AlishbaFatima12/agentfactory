@@ -1,0 +1,91 @@
+{
+  "topic": "topic-11-http-status",
+  "prompt": "http status codes cheatsheet",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 32KB HTML, 1454px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 4,
+      "notes": "18 sections, 1 thin. 1 total check failures.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Excellent organization with a natural flow: how codes work → 1xx → 2xx → 3xx → 4xx (split sensibly into common/extended) → 5xx → categories summary → headers. Page 2 pivots cleanly to practical application. Scannability is outstanding — RefRows make the code+description pattern highly skimmable, KV pairs work well for headers/auth distinctions, and Code blocks are placed exactly where a practitioner would want a real example (caching, auth, rate limiting, WebSocket). Visual variety is strong: all five primitives (Code, Tag, Bullet, KV, RefRow) are used and none feel forced. Section 15's 4-column redirect decision grid is particularly well-designed — someone making a redirect decision can glance at it and choose instantly. Information density is well-balanced; no section feels padded or truncated. The two-page structure prevents overwhelm while keeping related content together. Color-coded Tags per category (blue=info, green=success, brown=redirect, red=error) add a useful visual signal layer. A web professional would genuinely keep this open as a tab reference.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensive coverage with no meaningful gaps. Core codes across all five classes are catalogued including less-common but practically relevant ones like 102, 103, 206, 207, 410, 412, 422, 451, 507. The cheatsheet goes well beyond a naive code-list to cover what practitioners actually need: the 301/302/307/308 redirect decision guide solves a real confusion point; the 401 vs 403 section addresses one of the most common API design mistakes; the rate-limiting headers block (X-RateLimit-*) is immediately copy-pasteable. RFC 7807 error body format is a useful extra most cheatsheets omit. Required response headers per code (Location, Retry-After, WWW-Authenticate, Allow, ETag, Content-Range) are called out explicitly. WebSocket/HTTP2 upgrade codes and security notes (CORS, HSTS, 451 legal) add real depth. The footer cites RFC 9110, RFC 7807, and RFC 6585. The only things one might wish for are gRPC status mappings or GraphQL 200-always patterns, but those are genuinely out of scope for an HTTP status code cheatsheet.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "The cheatsheet is broadly accurate and well-sourced (RFC 9110, RFC 7807, RFC 7725). Most claims about status code semantics, required headers, and redirect method-preservation behavior are correct. Two issues found: (1) HTTP 451's `Link` header description is factually wrong — the RFC says `Link` identifies the *blocking entity* (ISP, intermediary) with `rel=\"blocked-by\"`, not the legal authority; this is a significant error that could mislead developers implementing 451. (2) HTTP 102 is presented as current/active without noting it was removed from WebDAV in RFC 4918 and is now deprecated — a minor omission. All other verified claims (302 method-change behavior, 307 method preservation, WWW-Authenticate requirement for 401, Allow header requirement for 405, RFC 7807 field names and usage, 103 Early Hints description) are correct per official specifications. The RFC 7807 example code shows correct field semantics (`detail` as human-readable string, `instance` as URI). Score is 4 — one significant error (451 Link header misdescription) and one minor omission (102 deprecation), but nothing that would break core workflows for typical HTTP API consumers.",
+      "verified_claims": [
+        {
+          "claim": "102 Processing — 'request received, still working (WebDAV)'",
+          "verdict": "outdated",
+          "evidence": "102 was originally defined in WebDAV RFC 2518, but was explicitly removed from WebDAV in RFC 4918. MDN now marks 102 as deprecated. Presenting it without any deprecation caveat is misleading, though the WebDAV origin is historically accurate.",
+          "severity": "low"
+        },
+        {
+          "claim": "103 Early Hints — 'preload resources while server prepares response'",
+          "verdict": "correct",
+          "evidence": "RFC 8297 and MDN confirm: 103 allows servers to send Link headers while preparing the final response, enabling browsers to preload resources. The description is accurate.",
+          "severity": "low"
+        },
+        {
+          "claim": "302 Found — 'method may change to GET'",
+          "verdict": "correct",
+          "evidence": "RFC 9110 and MDN confirm that user agents MAY change the request method from POST to GET on a 302 redirect. The cheatsheet accurately describes this behavior and the rationale for preferring 307.",
+          "severity": "low"
+        },
+        {
+          "claim": "WWW-Authenticate header — 'Required for 401 responses per spec'",
+          "verdict": "correct",
+          "evidence": "RFC 9110 Section 11.6 states a server generating a 401 response MUST send a WWW-Authenticate header field containing at least one challenge. The cheatsheet claim is correct.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Allow header — 'Required for 405 — lists valid methods'",
+          "verdict": "correct",
+          "evidence": "RFC 9110 states the origin server MUST generate an Allow header field in a 405 response containing a list of the target resource's currently supported methods. The claim is correct.",
+          "severity": "medium"
+        },
+        {
+          "claim": "RFC 7807 Problem Details format — fields type, title, status, detail, instance with the example usage shown",
+          "verdict": "correct",
+          "evidence": "RFC 7807 defines exactly these five members. The cheatsheet's example code uses them correctly: 'detail' as a human-readable string ('Email format invalid') and 'instance' as a URI ('/users/signup'), which matches the RFC specification.",
+          "severity": "medium"
+        },
+        {
+          "claim": "451 Unavailable for Legal Reasons — 'include Link header to legal authority'",
+          "verdict": "incorrect",
+          "evidence": "RFC 7725 specifies the Link header should identify the *entity implementing the blocking* (e.g., ISP, caching proxy) using rel='blocked-by' — NOT the legal authority mandating the block. The cheatsheet says 'Link header to legal authority', which inverts the intent. Developers following this advice would implement the header incorrectly.",
+          "severity": "high"
+        },
+        {
+          "claim": "207 Multi-Status — 'batch results with per-item status (WebDAV)'",
+          "verdict": "correct",
+          "evidence": "RFC 4918 (WebDAV) defines 207 Multi-Status for conveying information about multiple resources in situations where multiple status codes might otherwise be appropriate. The description is accurate.",
+          "severity": "low"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.6,
+  "pass": true,
+  "timestamp": "2026-03-11T13:21:52.022Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

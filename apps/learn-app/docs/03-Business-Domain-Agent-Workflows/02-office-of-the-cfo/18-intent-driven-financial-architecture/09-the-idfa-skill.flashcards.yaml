@@ -38,7 +38,7 @@ cards:
 
   - id: "ch18-09-the-idfa-skill-006"
     front: "How do trigger phrases work in a SKILL.md?"
-    back: "The description field lists phrases (like 'financial model', 'model audit') that activate the skill. The agent understands intent behind variations — 'this spreadsheet makes no sense' also triggers."
+    back: "The description field describes categories of hands-on spreadsheet work (building, auditing, explaining, retrofitting, what-if, goal-seeking, Monte Carlo) that activate the skill. The agent understands intent behind variations — 'this spreadsheet makes no sense' also triggers."
     tags: ["trigger-phrases", "activation"]
     difficulty: "intermediate"
 
@@ -55,8 +55,8 @@ cards:
     difficulty: "intermediate"
 
   - id: "ch18-09-the-idfa-skill-009"
-    front: "What are the five common mistakes the IDFA skill prevents agents from making?"
-    back: "1. Mixing layers (hardcoded constants in formulas)\n2. Calculating internally instead of delegating to the spreadsheet engine\n3. Skipping LaTeX for WACC/IRR/NPV/DCF\n4. Retrofitting by delete-and-rebuild\n5. Naming ranges with spaces"
+    front: "What are the common mistakes the IDFA skill prevents agents from making?"
+    back: "1. Mixing layers (hardcoded constants in formulas)\n2. Calculating internally instead of delegating to the spreadsheet engine\n3. Skipping LaTeX for WACC/IRR/NPV/DCF\n4. Retrofitting by delete-and-rebuild\n5. Naming ranges with spaces\n6. Creating Named Ranges via raw openpyxl instead of idfa_ops.py create-range (audit trail)\n7. Referencing a cell coordinate for a prior-year value in multi-year layouts"
     tags: ["common-mistakes", "guardrails"]
     difficulty: "intermediate"
 

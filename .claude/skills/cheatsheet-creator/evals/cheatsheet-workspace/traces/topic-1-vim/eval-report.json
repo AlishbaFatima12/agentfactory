@@ -1,0 +1,24 @@
+{
+  "topic": "topic-1-vim",
+  "prompt": "vim cheatsheet -- i keep forgetting the basics every time i have to edit something on a remote server",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 58KB HTML, 1833px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 5,
+      "notes": "24 sections, 5 primitive types, no issues.",
+      "channel": "D"
+    }
+  },
+  "composite": 5,
+  "pass": true,
+  "timestamp": "2026-03-11T13:07:29.964Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

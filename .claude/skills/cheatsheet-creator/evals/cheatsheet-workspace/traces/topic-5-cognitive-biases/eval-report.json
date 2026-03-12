@@ -1,0 +1,24 @@
+{
+  "topic": "topic-5-cognitive-biases",
+  "prompt": "make me a cognitive biases cheatsheet -- like the really important ones for decision making, not all 180 of them",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 39KB HTML, 1865px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 1,
+      "notes": "Component \"Code\" not defined; Component \"RefRow\" not defined",
+      "channel": "D"
+    }
+  },
+  "composite": 3.4,
+  "pass": false,
+  "timestamp": "2026-03-11T13:07:57.977Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

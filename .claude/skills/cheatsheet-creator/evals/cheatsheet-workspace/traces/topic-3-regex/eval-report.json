@@ -1,0 +1,24 @@
+{
+  "topic": "topic-3-regex",
+  "prompt": "regex reference card please. the kind of thing you'd tape to your monitor",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 46KB HTML, 1556px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 4,
+      "notes": "22 sections, 1 thin. 1 total check failures.",
+      "channel": "D"
+    }
+  },
+  "composite": 4.6,
+  "pass": true,
+  "timestamp": "2026-03-11T13:07:53.644Z",
+  "version": "v1",
+  "channels_run": [
+    "A",
+    "D"
+  ]
+}

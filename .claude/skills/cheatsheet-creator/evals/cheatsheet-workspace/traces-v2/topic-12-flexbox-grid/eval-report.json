@@ -1,0 +1,91 @@
+{
+  "topic": "topic-12-flexbox-grid",
+  "prompt": "flexbox and grid comparison cheatsheet. i can never remember which properties go on the container vs the item",
+  "scores": {
+    "render": {
+      "score": 5,
+      "notes": "Renders perfectly. 50KB HTML, 2084px tall.",
+      "channel": "A"
+    },
+    "efficiency": {
+      "score": 4,
+      "notes": "24 sections, 1 thin. 1 total check failures.",
+      "channel": "D"
+    },
+    "usability": {
+      "score": 5,
+      "notes": "Exceptional usability. The color-coded CONTAINER/ITEM tag system directly solves the user's stated pain point and is applied consistently across all 24 sections. The two-page structure (Foundations → Advanced) is logically sound. Section 12's full-width property matrix is a genuine desk-reference artifact. Visual variety is high: Code, RefRow, KV, Bullet, highlight boxes, and a custom decision matrix all appear. Section 21's per-property Flexbox vs Grid alignment comparison is precisely the kind of high-density reference a professional bookmarks. Minor deductions: align-items values aren't enumerated in Section 4 while justify-content values are (inconsistent depth), and a few RefRow-heavy sections (3, 9, 15) are slightly dense without visual breaks. These are small flaws in an otherwise excellent layout.",
+      "channel": "C"
+    },
+    "completeness": {
+      "score": 5,
+      "notes": "Comprehensive coverage of everything implied by the prompt, plus valuable extras. Container vs item distinction is the core ask — addressed with color tags, Section 12 matrix, and consistent labeling throughout all 24 sections. Both layout systems are covered symmetrically: activation, direction/axis, wrapping, alignment, sizing, placement, and implicit track behavior. Advanced extras that practitioners actually forget are present: RAM pattern, auto-fill vs auto-fit distinction, flex-basis priority order, min-width:0 gotcha, subgrid status, and the responsive-without-media-queries section. The decision matrix on Page 2 adds genuine decision-support value. Only very minor omissions: place-items/place-content shorthands aren't explicitly documented (mentioned once in passing), and grid-template shorthand appears in code but isn't explained. These are edge cases that don't meaningfully reduce practical coverage.",
+      "channel": "C"
+    },
+    "accuracy": {
+      "score": 4,
+      "notes": "This is a high-quality, technically accurate CSS Flexbox & Grid cheatsheet. The vast majority of claims — flex shorthand values, grid-area syntax order, alignment property behavior, gap support timing, subgrid Chrome version — are all verified correct against MDN and official sources. There is one clear factual error (masonry being described as \"Firefox flag only,\" when Firefox was never the main implementer and the feature is now experimental across WebKit/Chrome under a new spec), and one minor phrasing awkwardness around subgrid browser support. The flex shorthand comment `/* 1 1 0% */` is accurate to browser behavior (even though the spec says `0`, browsers implement `0%`). The justify-items/justify-self claim is functionally correct. No copy-paste commands would break a user's workflow from any verified error. Score 4: 1 meaningful factual error, 1 minor phrasing issue, everything else solid.",
+      "verified_claims": [
+        {
+          "claim": "flex: 1 expands to /* 1 1 0% */",
+          "verdict": "correct",
+          "evidence": "MDN confirms flex: 1 resolves to flex: 1 1 0 per spec, and browsers implement it as flex: 1 1 0% (i.e., 0%). The cheatsheet annotation matches browser reality.",
+          "severity": "high"
+        },
+        {
+          "claim": "flex: auto expands to /* 1 1 auto */",
+          "verdict": "correct",
+          "evidence": "MDN flex page explicitly states: 'flex: auto is the same as flex: 1 1 auto'.",
+          "severity": "high"
+        },
+        {
+          "claim": "flex: none expands to /* 0 0 auto */",
+          "verdict": "correct",
+          "evidence": "MDN flex page explicitly states: 'flex: none is as if you wrote flex: 0 0 auto'.",
+          "severity": "high"
+        },
+        {
+          "claim": "grid-area shorthand order: row-start / col-start / row-end / col-end",
+          "verdict": "correct",
+          "evidence": "MDN grid-area page confirms: 'grid-row-start is set to first value, grid-column-start to second, grid-row-end to third, grid-column-end to fourth.' The cheatsheet's order is exactly right.",
+          "severity": "high"
+        },
+        {
+          "claim": "justify-items and justify-self 'Does not exist in Flexbox'",
+          "verdict": "correct",
+          "evidence": "MDN box alignment in flexbox confirms: 'justify-items is ignored' and 'justify-self does not apply on the main axis in flexbox.' The properties technically exist in CSS but have no effect in flex containers, so the cheatsheet's practical guidance is accurate.",
+          "severity": "medium"
+        },
+        {
+          "claim": "gap in Flexbox is newer — supported since Safari 14.1+ (2021)",
+          "verdict": "correct",
+          "evidence": "Caniuse (caniuse.com/flexbox-gap) and CSS-Tricks both confirm Safari 14.1 was the first Safari release to support the gap property in flexbox, released in 2021.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Subgrid only in Firefox and Safari — Chrome 117+",
+          "verdict": "correct",
+          "evidence": "Chrome Developers blog for Chrome 117 explicitly confirms: 'The much anticipated subgrid value for grid-template-columns and grid-template-rows is now implemented in Chrome as of Chrome 117.' The framing is slightly confusing but Chrome 117+ is accurate.",
+          "severity": "medium"
+        },
+        {
+          "claim": "Masonry layout is still experimental — Firefox flag only",
+          "verdict": "incorrect",
+          "evidence": "As of early 2026, masonry is NOT Firefox-flag-only. The CSS WG adopted a new 'grid-lanes' syntax in January 2025. Chrome has experimental support in Chrome 140 (July 2025, flagged). WebKit/Safari shipped it in Safari Technology Preview 234 (December 2025). Firefox was never the primary implementer. The claim misstates both the lead browser and the current multi-browser experimental status.",
+          "severity": "medium"
+        }
+      ],
+      "channel": "B"
+    }
+  },
+  "composite": 4.6,
+  "pass": true,
+  "timestamp": "2026-03-11T13:23:50.346Z",
+  "version": "v2",
+  "channels_run": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}
