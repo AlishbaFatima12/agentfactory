@@ -86,7 +86,7 @@ export default function CheatsheetPage() {
         .cheatsheet-tab-list {
           background: rgba(0,0,0,0.05) !important;
           border-radius: 6px !important;
-          padding: 3px !important;
+          padding: 0 !important;
           border: 1px solid rgba(0,0,0,0.04) !important;
         }
         .cheatsheet-tab-trigger[data-state="active"] {
@@ -186,7 +186,7 @@ export default function CheatsheetPage() {
 
   // Inline mode
   return (
-    <div style={{ marginTop: "-0.5rem", display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+    <div style={{ marginTop: "-0.5rem", display: "flex", flexDirection: "column", alignItems: "flex-start", position: "relative", left: "-1px" }}>
       {toolbar}
       {ActiveComponent ? (
         <ActiveComponent />
