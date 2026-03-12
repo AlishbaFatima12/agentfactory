@@ -114,7 +114,7 @@ var TREE = [
 var BADGES = {
   config: { bg: "#3a2a1a", color: "#d4a574", border: "#5a3a2a" },
   hooks: { bg: "#3a1a2a", color: "#d474a5", border: "#5a1a3a" },
-  personal: { bg: "#2a2a2a", color: "#999", border: "#444" },
+  personal: { bg: "#2a2a2a", color: "#c0b8b0", border: "#555" },
   deprecated: { bg: "#3a2020", color: "#c07060", border: "#5a3030" },
   skill: { bg: "#1a3a2a", color: "#74d4a5", border: "#1a5a3a" },
   agents: { bg: "#1a2a3a", color: "#74a5d4", border: "#1a3a5a" },
@@ -1098,7 +1098,7 @@ function colorize(t, l) {
     );
   }
   if (l === "md" && t.startsWith("```"))
-    return <span style={{ color: "#555" }}>{t}</span>;
+    return <span style={{ color: "#c8c0b0" }}>{t}</span>;
   var re = /("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*')/g;
   var p = [];
   var li = 0;
@@ -1161,7 +1161,7 @@ function TreeNode(p) {
         {isF ? (
           <span
             style={{
-              color: "#666",
+              color: "#998877",
               fontSize: 9,
               width: 10,
               display: "inline-block",
@@ -1260,15 +1260,15 @@ function WelcomePage(p) {
           lineHeight: 1.15,
         }}
       >
-        {"Learn "}
-        <span style={{ color: "#c47a50" }}>The Agent Factory</span>
+        {"Claude Code "}
+        <span style={{ color: "#c47a50" }}>Project Lab</span>
         <br />
-        {"by exploring it."}
+        {"Explore a real Agent Factory project."}
       </h1>
       <p
         style={{
           fontSize: 15,
-          color: "#998877",
+          color: "#f0ebe4",
           lineHeight: 1.7,
           margin: "20px 0 12px",
           maxWidth: 620,
@@ -1307,7 +1307,7 @@ function WelcomePage(p) {
       <p
         style={{
           fontSize: 14,
-          color: "#776655",
+          color: "#fff",
           fontStyle: "italic",
           marginBottom: 32,
         }}
@@ -1367,7 +1367,7 @@ function WelcomePage(p) {
                   </span>
                 )}
               </div>
-              <div style={{ fontSize: 12, color: "#887766", lineHeight: 1.5 }}>
+              <div style={{ fontSize: 12, color: "#fff", lineHeight: 1.5 }}>
                 {c.desc}
               </div>
             </div>
@@ -1414,7 +1414,7 @@ function FileView(p) {
                     width: 44,
                     textAlign: "right",
                     paddingRight: 12,
-                    color: "#3a3428",
+                    color: "#7a7060",
                     userSelect: "none",
                     flexShrink: 0,
                   }}
@@ -1448,7 +1448,7 @@ function FileView(p) {
                       background: "#c47a5008",
                       borderRadius: "0 6px 6px 0",
                       fontSize: 12.5,
-                      color: "#9a8870",
+                      color: "#fff",
                       lineHeight: 1.6,
                     }}
                   >
@@ -1533,29 +1533,26 @@ function TerminalPanel() {
           <span
             style={{
               fontSize: 11,
-              color: "#776655",
+              color: "#fff",
               letterSpacing: 1.5,
               textTransform: "uppercase",
             }}
           >
-            The Agent Factory
+            Claude Code Project Lab
           </span>
         </div>
         <div style={{ fontWeight: 700, lineHeight: 1.05, marginBottom: 16 }}>
-          <div style={{ fontSize: 26, color: "#c47a5020", letterSpacing: 4 }}>
-            EXPLORE
+          <div style={{ fontSize: 26, color: "#c47a5050", letterSpacing: 4 }}>
+            PROJECT
           </div>
           <div style={{ fontSize: 20, color: "#c47a50", letterSpacing: 3 }}>
-            THE AGENT
-          </div>
-          <div style={{ fontSize: 20, color: "#c47a50", letterSpacing: 3 }}>
-            FACTORY
+            LAB
           </div>
         </div>
         <p
           style={{
             fontSize: 11,
-            color: "#776655",
+            color: "#fff",
             lineHeight: 1.5,
             margin: "0 0 14px",
           }}
@@ -1567,7 +1564,7 @@ function TerminalPanel() {
         <div
           style={{
             fontSize: 10,
-            color: "#554433",
+            color: "#f0ebe4",
             letterSpacing: 1.5,
             marginBottom: 6,
             textTransform: "uppercase",
@@ -1575,7 +1572,7 @@ function TerminalPanel() {
         >
           Quick Start
         </div>
-        <div style={{ fontSize: 12, color: "#776655", lineHeight: 2 }}>
+        <div style={{ fontSize: 12, color: "#fff", lineHeight: 2 }}>
           <span style={{ color: "#c47a50" }}>/help</span>
           {" - list commands"}
           <br />
@@ -1594,7 +1591,7 @@ function TerminalPanel() {
         <div
           style={{
             fontSize: 10,
-            color: "#554433",
+            color: "#f0ebe4",
             letterSpacing: 1.5,
             margin: "14px 0 6px",
             textTransform: "uppercase",
@@ -1602,7 +1599,7 @@ function TerminalPanel() {
         >
           How to Explore
         </div>
-        <div style={{ fontSize: 12, color: "#776655", lineHeight: 1.8 }}>
+        <div style={{ fontSize: 12, color: "#fff", lineHeight: 1.8 }}>
           {"① Browse files on the left"}
           <br />
           {"② Click to learn what it does"}
@@ -1615,18 +1612,18 @@ function TerminalPanel() {
             marginTop: 14,
             paddingTop: 10,
             fontSize: 11,
-            color: "#443322",
+            color: "#ddd8d0",
             lineHeight: 1.8,
           }}
         >
           {"› version  "}
-          <span style={{ color: "#776655" }}>2.1.0</span>
+          <span style={{ color: "#fff" }}>2.1.0</span>
           <br />
           {"› model    "}
-          <span style={{ color: "#776655" }}>claude-opus-4-6</span>
+          <span style={{ color: "#fff" }}>claude-opus-4-6</span>
           <br />
           {"› project  "}
-          <span style={{ color: "#776655" }}>digital-fte-finance</span>
+          <span style={{ color: "#fff" }}>digital-fte-finance</span>
         </div>
       </div>
       <div
@@ -1649,7 +1646,7 @@ function TerminalPanel() {
               {e.t === "o" && (
                 <div
                   style={{
-                    color: "#887766",
+                    color: "#bbaa99",
                     margin: 0,
                     whiteSpace: "pre-wrap",
                     fontFamily: "inherit",
@@ -1661,7 +1658,7 @@ function TerminalPanel() {
               {e.t === "e" && (
                 <div
                   style={{
-                    color: "#a05040",
+                    color: "#d47060",
                     margin: 0,
                     whiteSpace: "pre-wrap",
                     fontFamily: "inherit",
@@ -1769,7 +1766,9 @@ export default function AgentFactoryExplorer() {
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
         rel="stylesheet"
       />
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         [data-explorer-root] {
           color-scheme: dark;
         }
@@ -1790,7 +1789,9 @@ export default function AgentFactoryExplorer() {
           background: transparent !important;
           border: none !important;
         }
-      ` }} />
+      `,
+        }}
+      />
       <div
         style={{
           display: "flex",
@@ -1830,7 +1831,7 @@ export default function AgentFactoryExplorer() {
         <span
           style={{
             fontSize: 12,
-            color: "#776655",
+            color: "#fff",
             fontFamily: "'JetBrains Mono',monospace",
           }}
         >
@@ -1842,7 +1843,7 @@ export default function AgentFactoryExplorer() {
           rel="noopener noreferrer"
           style={{
             fontSize: 11,
-            color: "#554433",
+            color: "#f0ebe4",
             textDecoration: "none",
             padding: "3px 10px",
             borderRadius: 4,
@@ -1869,7 +1870,7 @@ export default function AgentFactoryExplorer() {
               style={{
                 fontSize: 10,
                 letterSpacing: 1.5,
-                color: "#554433",
+                color: "#f0ebe4",
                 textTransform: "uppercase",
               }}
             >
