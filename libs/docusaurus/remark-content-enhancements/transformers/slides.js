@@ -40,35 +40,98 @@ function normalizePath(source) {
   return source.startsWith('/') ? source : `/${source}`;
 }
 
-/**
- * Find injection point in AST based on placement strategy
- */
-function findInjectionPoint(tree, placement) {
+function getHeadingText(node) {
+  if (!Array.isArray(node.children)) {
+    return '';
+  }
+
+  return node.children
+    .map((child) => {
+      if (typeof child.value === 'string') {
+        return child.value;
+      }
+
+      if (Array.isArray(child.children)) {
+        return getHeadingText(child);
+      }
+
+      return '';
+    })
+    .join('')
+    .trim()
+    .toLowerCase();
+}
+
+function findHeadingIndex(tree, matcher, offset = 0) {
   let targetIndex = -1;
 
   visit(tree, 'heading', (node, index, parent) => {
-    if (targetIndex !== -1) return; // Already found
+    if (targetIndex !== -1) {
+      return visit.EXIT;
+    }
 
-    if (placement === 'before-what-you-learn') {
-      // Find "What You'll Learn" heading
-      if (node.depth === 2) {
-        // Check if heading text contains "what you'll learn"
-        const text = node.children?.map(c => c.value || c.children?.map(cc => cc.value).join('') || '').join('').toLowerCase() || '';
-        if (text.includes("what you'll learn") || text.includes("what you will learn")) {
-          targetIndex = index;
-          return visit.EXIT;
-        }
-      }
-    } else if (placement === 'after-intro') {
-      // Find first h2 heading
-      if (node.depth === 2) {
-        targetIndex = index;
-        return visit.EXIT;
-      }
+    if (!Array.isArray(parent?.children) || typeof index !== 'number') {
+      return;
+    }
+
+    if (matcher(node)) {
+      targetIndex = index + offset;
+      return visit.EXIT;
     }
   });
 
   return targetIndex;
+}
+
+function hasExistingPDFViewer(tree) {
+  let found = false;
+
+  visit(tree, 'mdxJsxFlowElement', (node) => {
+    if (node.name === 'PDFViewer') {
+      found = true;
+      return visit.EXIT;
+    }
+  });
+
+  return found;
+}
+
+/**
+ * Find injection point in AST based on placement strategy
+ */
+function findInjectionPoint(tree, placement) {
+  if (placement === 'before-what-you-learn') {
+    const whatYouLearnIndex = findHeadingIndex(
+      tree,
+      (node) => {
+        if (node.depth !== 2) {
+          return false;
+        }
+
+        const text = getHeadingText(node);
+        return (
+          text.includes("what you'll learn") ||
+          text.includes('what you will learn')
+        );
+      },
+    );
+
+    if (whatYouLearnIndex !== -1) {
+      return whatYouLearnIndex;
+    }
+
+    return findHeadingIndex(
+      tree,
+      (node) => node.depth === 2 && getHeadingText(node).includes('teaching aid'),
+      1,
+    );
+  }
+
+  if (placement === 'after-intro') {
+    return findHeadingIndex(tree, (node) => node.depth === 2);
+  }
+
+  return -1;
 }
 
 /**
@@ -139,6 +202,13 @@ function transform(tree, file, slidesMetadata, config = {}) {
       height: slidesMetadata.height || config.defaultHeight || 700,
       title: slidesMetadata.title || 'Chapter Slides',
     };
+  }
+
+  if (hasExistingPDFViewer(tree)) {
+    console.log(
+      `[Slides Transformer] Skipped ${slides.source} because PDFViewer already exists in ${file.path || 'unknown file'}`,
+    );
+    return;
   }
 
   // Find where to inject
