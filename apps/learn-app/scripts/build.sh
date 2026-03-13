@@ -21,14 +21,15 @@ set -euo pipefail
 # Change to learn-app directory (parent of scripts/)
 cd "$(dirname "$0")/.."
 
-# Cross-platform sharp fix: when building on Linux (WSL or CI) from a
-# Windows-installed node_modules, the linux-x64 sharp binary is missing.
-# Install it on-the-fly if not already present.
+# Cross-platform sharp check: when building on Linux (WSL or CI) from a
+# Windows-installed node_modules, the linux-x64 sharp binary may be missing.
+# Fail loudly so the developer/CI can fix their environment setup.
 if [ "$(uname -s)" = "Linux" ]; then
   SHARP_LINUX_DIR=$(find ../../node_modules/.pnpm -maxdepth 1 -name '@img+sharp-linux-x64@*' 2>/dev/null | head -1)
   if [ -z "$SHARP_LINUX_DIR" ]; then
-    echo "==> Installing sharp linux-x64 platform binary..."
-    pnpm add -w --save-optional @img/sharp-linux-x64 2>/dev/null || npm install --no-save @img/sharp-linux-x64 2>/dev/null || true
+    echo "ERROR: sharp linux-x64 platform binary is missing."
+    echo "Run 'pnpm add -w --save-optional @img/sharp-linux-x64' before building."
+    exit 1
   fi
 fi
 
