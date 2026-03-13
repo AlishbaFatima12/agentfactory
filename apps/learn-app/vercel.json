@@ -1,6 +1,6 @@
 {
   "installCommand": "cd ../.. && npx -y pnpm@9.15.9 install --no-frozen-lockfile",
-  "buildCommand": "bash scripts/build.sh",
+  "buildCommand": "if [ ! -d ../../.git ]; then cd ../.. && git init && git add -A && git commit -m 'vercel build' --allow-empty; cd apps/learn-app; fi && bash scripts/build.sh",
   "outputDirectory": "build",
   "cleanUrls": true,
   "trailingSlash": false,
