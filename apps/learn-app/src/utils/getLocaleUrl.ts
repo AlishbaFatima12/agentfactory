@@ -18,7 +18,7 @@ export function getLocaleUrl({
   currentLocale: string;
   targetLocale: string;
   defaultLocale: string;
-  localeConfigs: Record<string, { path?: string }>;
+  localeConfigs: Record<string, { path?: string; [key: string]: unknown }>;
   baseUrl?: string;
 }): string {
   // For the current locale, use the configured path or fallback to locale name
