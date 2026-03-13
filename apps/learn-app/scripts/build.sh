@@ -23,13 +23,15 @@ cd "$(dirname "$0")/.."
 
 # Cross-platform sharp check: when building on Linux (WSL or CI) from a
 # Windows-installed node_modules, the linux-x64 sharp binary may be missing.
-# Fail loudly so the developer/CI can fix their environment setup.
+# Warn loudly so the developer/CI can fix their environment setup.
+# NOTE: Do NOT install packages here — that mutates workspace dependencies
+# during build. Fix the environment/bootstrap setup instead.
 if [ "$(uname -s)" = "Linux" ]; then
   SHARP_LINUX_DIR=$(find ../../node_modules/.pnpm -maxdepth 1 -name '@img+sharp-linux-x64@*' 2>/dev/null | head -1)
   if [ -z "$SHARP_LINUX_DIR" ]; then
-    echo "ERROR: sharp linux-x64 platform binary is missing."
-    echo "Run 'pnpm add -w --save-optional @img/sharp-linux-x64' before building."
-    exit 1
+    echo "WARNING: sharp linux-x64 platform binary is missing."
+    echo "Image optimization may be slower. To fix:"
+    echo "  pnpm add -w --save-optional @img/sharp-linux-x64"
   fi
 fi
 

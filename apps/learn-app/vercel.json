@@ -1,4 +1,7 @@
 {
+  "installCommand": "cd ../.. && pnpm install --frozen-lockfile",
+  "buildCommand": "bash scripts/build.sh",
+  "outputDirectory": "build",
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
