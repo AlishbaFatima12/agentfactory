@@ -77,9 +77,11 @@ export default function CheatsheetPage() {
     <div
       className="cheatsheet-toolbar"
       style={{
-        display: "inline-flex",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
         marginBottom: "8px",
-        alignSelf: "flex-start",
+        width: "100%",
       }}
     >
       <style>{`
@@ -120,6 +122,36 @@ export default function CheatsheetPage() {
         html[data-theme='dark'] .cheatsheet-tab-trigger:not([data-state="active"]) {
           color: rgba(255,255,255,0.65) !important;
         }
+        .cheatsheet-expand-btn {
+          background: transparent;
+          border: 1px solid rgba(0,0,0,0.15);
+          border-radius: 6px;
+          padding: 5px 14px;
+          font-size: 13px;
+          font-weight: 500;
+          font-family: 'Segoe UI', sans-serif;
+          color: rgba(0,0,0,0.55);
+          cursor: pointer;
+          transition: all 0.15s ease;
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          line-height: 1;
+        }
+        .cheatsheet-expand-btn:hover {
+          border-color: rgba(0,0,0,0.3);
+          color: rgba(0,0,0,0.8);
+          background: rgba(0,0,0,0.03);
+        }
+        html[data-theme='dark'] .cheatsheet-expand-btn {
+          border-color: rgba(255,255,255,0.12);
+          color: rgba(255,255,255,0.45);
+        }
+        html[data-theme='dark'] .cheatsheet-expand-btn:hover {
+          border-color: rgba(255,255,255,0.25);
+          color: rgba(255,255,255,0.75);
+          background: rgba(255,255,255,0.05);
+        }
       `}</style>
       <Tabs value={active} onValueChange={navigate}>
         <TabsList
@@ -149,7 +181,6 @@ export default function CheatsheetPage() {
                   cursor: "pointer",
                   position: "relative",
                   ...(active === id && {
-                    // Inject a psuedo-element style underline effect via inline box-shadow on top of the flattening shadow
                     boxShadow: `0 1px 2px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04), 0 -2.5px 0 0 ${palette.accent} inset !important`, 
                   })
                 }}
@@ -160,6 +191,28 @@ export default function CheatsheetPage() {
           })}
         </TabsList>
       </Tabs>
+      <button
+        className="cheatsheet-expand-btn"
+        onClick={() => setFullscreen(!fullscreen)}
+        title={fullscreen ? "Exit fullscreen" : "View fullscreen"}
+      >
+        {fullscreen ? (
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="4 14 10 14 10 20" />
+            <polyline points="20 10 14 10 14 4" />
+            <line x1="14" y1="10" x2="21" y2="3" />
+            <line x1="3" y1="21" x2="10" y2="14" />
+          </svg>
+        ) : (
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 3 21 3 21 9" />
+            <polyline points="9 21 3 21 3 15" />
+            <line x1="21" y1="3" x2="14" y2="10" />
+            <line x1="3" y1="21" x2="10" y2="14" />
+          </svg>
+        )}
+        {fullscreen ? "Collapse" : "Expand"}
+      </button>
     </div>
   );
 
