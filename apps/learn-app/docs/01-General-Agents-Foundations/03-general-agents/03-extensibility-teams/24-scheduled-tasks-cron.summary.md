@@ -1,0 +1,10 @@
+The `/loop` bundled skill is the quickest path to recurring prompts in Claude Code -- one line with an optional interval and a prompt, and Claude handles the cron conversion. Intervals support leading (`/loop 5m ...`), trailing (`/loop ... every 2 hours`), or default (10 minutes when omitted) formats with units of seconds (rounded to minutes), minutes, hours, and days. For one-shot needs, natural language reminders (`remind me at 3pm to push the release`) schedule a single fire that auto-deletes. The `/loop` prompt can itself be a slash command or skill invocation (`/loop 20m /review-pr 1234`), enabling reuse of packaged workflows.
+
+Under the hood, `/loop` calls CronCreate, CronList, and CronDelete -- three tools that manage the full lifecycle of session-scoped tasks. Each task gets an 8-character ID visible through CronList, and CronDelete cancels by ID. CronCreate accepts standard 5-field cron expressions for precise control, though `/loop` handles the conversion for common cases. The scheduler checks every second for due tasks, fires them between turns at low priority, and adds jitter (up to 10% of the period, capped at 15 minutes) to prevent API thundering herd effects.
+
+The critical architectural constraint is session scope: scheduled tasks live in the current Claude Code process, do not survive exit or restart, expire after 3 days for recurring tasks, and cap at 50 per session. There is no catch-up for missed fires -- if Claude is busy when a task comes due, it fires once when idle, not once per missed interval. For durable scheduling that persists across restarts, use Desktop scheduled tasks or GitHub Actions with a schedule trigger. The power combos with Remote Control (Lesson 23) and Agent Teams (Lesson 20) extend session-scoped scheduling to mobile monitoring and multi-agent coordination workflows.
+
+**Key connections:**
+
+- **Builds on**: Hooks (Lesson 15) for event-driven automation concepts, Ralph Wiggum Loop (Lesson 17) for autonomous iteration patterns
+- **Leads to**: Claude Cowork (Lesson 25) which offers Desktop scheduled tasks for persistent scheduling beyond session scope
