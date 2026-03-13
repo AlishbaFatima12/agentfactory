@@ -19,4 +19,4 @@ Safe, effective Cowork use rests on one security principle — folder access is 
 
 ### Connections
 - **Builds on**: Lessons 24-28 (full Cowork chapter — agentic tasks, Skills, browser integration, Plugins)
-- **Leads to**: Lesson 30 (Cowork built-in skills)
+- **Leads to**: Lesson 31 (Cowork built-in skills)

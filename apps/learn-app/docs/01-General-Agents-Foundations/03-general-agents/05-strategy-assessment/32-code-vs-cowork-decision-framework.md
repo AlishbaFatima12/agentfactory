@@ -1,9 +1,9 @@
 ---
 slug: /General-Agents-Foundations/general-agents/code-vs-cowork-decision-framework
 title: "Code vs. Cowork: A Decision Framework"
-sidebar_position: 31
+sidebar_position: 32
 chapter: 3
-lesson: 31
+lesson: 32
 duration_minutes: 16
 chapter_type: Concept
 running_example_id: decision-framework
@@ -398,7 +398,7 @@ The differences are:
 
 ## What's Next
 
-You've completed the Cowork content. The remaining lessons cover the business side—how to monetize your Skills (Lesson 32) and a chapter quiz (Lesson 34) that tests your understanding of both Claude Code and Claude Cowork.
+You've completed the Cowork content. The remaining lessons cover the business side—how to monetize your Skills (Lesson 33) and a chapter quiz (Lesson 35) that tests your understanding of both Claude Code and Claude Cowork.
 
 
 ## Flashcards Study Aid

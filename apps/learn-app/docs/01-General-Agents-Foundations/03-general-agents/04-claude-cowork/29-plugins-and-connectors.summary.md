@@ -26,5 +26,5 @@ Plugins are the primary organizational unit in Cowork's extension ecosystem — 
 
 ### Connections
 
-- **Builds on**: Lesson 12 (MCP fundamentals), Lesson 27 (browser integration)
-- **Leads to**: Lesson 29 (Cowork safety, limitations, and upcoming features)
+- **Builds on**: Lesson 12 (MCP fundamentals), Lesson 28 (browser integration)
+- **Leads to**: Lesson 30 (Cowork safety, limitations, and upcoming features)

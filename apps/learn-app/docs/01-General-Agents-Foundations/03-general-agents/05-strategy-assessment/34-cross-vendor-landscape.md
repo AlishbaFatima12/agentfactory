@@ -1,11 +1,11 @@
 ---
 slug: /General-Agents-Foundations/general-agents/cross-vendor-landscape
-sidebar_position: 33
+sidebar_position: 34
 title: "The Cross-Vendor Landscape: Your Skills Are Portable"
 description: "See how Claude Code concepts map to OpenAI Codex, Google Gemini CLI, and emerging industry standards — your agent-building skills transfer everywhere."
 keywords: [openai codex, gemini cli, agents.md, mcp, agentic ai foundation, cross-vendor, portable skills]
 chapter: 3
-lesson: 33
+lesson: 34
 duration_minutes: 25
 chapter_type: Concept
 
@@ -81,7 +81,7 @@ teaching_guide:
     - "Project the Concept Mapping Table and walk through it row by row — for each row, connect back to the specific Chapter 3 lesson where students first learned that concept"
     - "Use the Three Philosophies table as a group exercise: assign each group a philosophy and have them argue why their tool is best for a given scenario"
     - "For the SWE-bench section, show how the same model can score differently on Verified vs Pro to teach critical benchmark literacy"
-    - "As this is the chapter closer, explicitly tie the full arc together: Lesson 1 (what are agents) through Lesson 33 (your skills transfer everywhere) — the chapter thesis is that agent-building patterns are universal, not vendor-specific"
+    - "As this is the chapter closer, explicitly tie the full arc together: Lesson 1 (what are agents) through Lesson 34 (your skills transfer everywhere) — the chapter thesis is that agent-building patterns are universal, not vendor-specific"
   assessment_quick_check:
     - "Name the three founding projects of the Agentic AI Foundation and what each standardizes."
     - "What is the SKILL.md directory path in Claude Code vs Codex vs Gemini CLI?"
@@ -273,7 +273,7 @@ The AI model and market landscape change rapidly. Figures in this lesson reflect
 
 ## What's Next
 
-You've completed the full Chapter 3 journey -- from your first Claude Code session through skills, MCP, hooks, plugins, agent teams, and now cross-vendor fluency. Next up: the **Chapter Quiz** (Lesson 34) to test your understanding across all 33 lessons.
+You've completed the full Chapter 3 journey -- from your first Claude Code session through skills, MCP, hooks, plugins, agent teams, and now cross-vendor fluency. Next up: the **Chapter Quiz** (Lesson 35) to test your understanding across all 34 lessons.
 
 
 ## Flashcards Study Aid

@@ -45,12 +45,13 @@ By the end of this chapter, you'll have:
 - **Agent Teams Exercises** — 10 hands-on exercises practicing team creation, task coordination, quality hooks, and multi-agent workflows (Lesson 21)
 - **Worktrees** — Parallel agent isolation using git worktrees for safe, independent workstreams (Lesson 22)
 - **Remote Control** — Sessions without boundaries: control local Claude Code from any device via secure relay (Lesson 23)
-- **Claude Cowork Fundamentals** — From terminal to desktop (Lesson 24), getting started (Lesson 25), and practical workflows (Lesson 26)
-- **Browser Integration** — Claude in Chrome (Lesson 27) for web-based automation
-- **Plugins and Connectors** — (Lesson 28): pre-built integrations with Google Workspace, Notion, Slack, and more
-- **Safety, Limitations & What's Coming** — Understanding boundaries, responsible use, and the future of agentic AI (Lesson 29)
-- **Built-in Document Skills** — Working with docx, xlsx, pptx, and pdf files (Lesson 30)
-- **Decision Framework** — Choosing between Code and Cowork (Lesson 31)
-- **From Skills to Business** — Understanding how Skills become monetizable products (Lesson 32), the Digital FTE model, and the path to revenue
-- **Cross-Vendor Landscape** — How Claude Code concepts (CLAUDE.md, Skills, MCP, hooks, teams) map to OpenAI Codex, Google Gemini CLI, and emerging industry standards (Lesson 33)
-- **Chapter Quiz** — 50-question interactive assessment (Lesson 34) covering all chapter concepts
+- **Scheduled Tasks** — The /loop skill for recurring checks, one-time reminders, and cron tool lifecycle management (Lesson 24)
+- **Claude Cowork Fundamentals** — From terminal to desktop (Lesson 25), getting started (Lesson 26), and practical workflows (Lesson 27)
+- **Browser Integration** — Claude in Chrome (Lesson 28) for web-based automation
+- **Plugins and Connectors** — (Lesson 29): pre-built integrations with Google Workspace, Notion, Slack, and more
+- **Safety, Limitations & What's Coming** — Understanding boundaries, responsible use, and the future of agentic AI (Lesson 30)
+- **Built-in Document Skills** — Working with docx, xlsx, pptx, and pdf files (Lesson 31)
+- **Decision Framework** — Choosing between Code and Cowork (Lesson 32)
+- **From Skills to Business** — Understanding how Skills become monetizable products (Lesson 33), the Digital FTE model, and the path to revenue
+- **Cross-Vendor Landscape** — How Claude Code concepts (CLAUDE.md, Skills, MCP, hooks, teams) map to OpenAI Codex, Google Gemini CLI, and emerging industry standards (Lesson 34)
+- **Chapter Quiz** — 50-question interactive assessment (Lesson 35) covering all chapter concepts

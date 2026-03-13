@@ -1,9 +1,9 @@
 ---
 slug: /General-Agents-Foundations/general-agents/cowork-built-in-skills
 title: "Built-in Skills: Documents, Spreadsheets, Presentations"
-sidebar_position: 30
+sidebar_position: 31
 chapter: 3
-lesson: 30
+lesson: 31
 duration_minutes: 18
 chapter_type: Practical
 running_example_id: built-in-skills
@@ -93,7 +93,7 @@ teaching_guide:
 
 # Legacy compatibility (Docusaurus)
 prerequisites:
-  - "Completion of Lesson 29: Safety, Limitations, and What's Coming"
+  - "Completion of Lesson 30: Safety, Limitations, and What's Coming"
   - "Working Claude Cowork installation"
   - "Basic familiarity with Office documents"
 ---
@@ -309,7 +309,7 @@ An open-source community is also building and sharing Skills at [github.com/anth
 - Built-in capabilities don't cover your use case
 - You want to encode expertise that applies across document types
 
-**Skills within the Plugin architecture:** Skills are now one component within Cowork's Plugin system. A Plugin can bundle multiple Skills — both built-in and custom — together with Connectors and slash commands into a complete workflow package. For example, a "Legal Review" Plugin might combine the built-in docx Skill with a custom contract-analysis Skill and a court-filing Connector. See Lesson 28 for how Plugins, Skills, and Connectors fit together.
+**Skills within the Plugin architecture:** Skills are now one component within Cowork's Plugin system. A Plugin can bundle multiple Skills — both built-in and custom — together with Connectors and slash commands into a complete workflow package. For example, a "Legal Review" Plugin might combine the built-in docx Skill with a custom contract-analysis Skill and a court-filing Connector. See Lesson 29 for how Plugins, Skills, and Connectors fit together.
 
 ### Cross-App Orchestration
 
