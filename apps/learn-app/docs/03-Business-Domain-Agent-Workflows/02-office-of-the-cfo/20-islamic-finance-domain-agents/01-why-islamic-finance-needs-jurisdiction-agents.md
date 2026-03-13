@@ -135,9 +135,9 @@ Chapter 19 taught you to build domain agents for single-jurisdiction practice ar
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Apply the Jurisdiction Pattern to a New Product
+### Prompt 1: Reproduce
 
 ```
 This lesson showed how a murabaha transaction produces different
@@ -167,7 +167,7 @@ identical), or is the ijara case structurally different?
 
 **What you are learning:** The jurisdiction problem is not unique to murabaha. By applying the same three-jurisdiction analysis to a different product, you test whether you have understood the pattern — not just memorised the murabaha example. If you can predict where the labels diverge for ijara before seeing the answer, you have internalised the framework.
 
-### Prompt 2: Predict a New Jurisdiction's Regime
+### Prompt 2: Adapt
 
 ```
 This lesson introduced three accounting regimes for Islamic finance:
@@ -194,7 +194,7 @@ Based on these facts:
 
 **What you are learning:** Classifying a NEW jurisdiction into the three regimes tests whether you understand what determines regime membership — not just which countries belong where. If you can reason about Kazakhstan's likely approach from the structural clues (IFRS-based regulation, GCC investment attraction), you have the analytical framework, not just a memorised list.
 
-### Prompt 3: The Three Pillars in Practice
+### Prompt 3: Apply
 
 ```
 Islamic finance is built on three prohibitions (riba, gharar,

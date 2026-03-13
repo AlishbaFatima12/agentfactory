@@ -238,11 +238,15 @@ The following deviations may be approved without attorney review:
 The specific deviations depend on the NDA you upload and your playbook configuration. Focus on whether the triage tier is justified by the deviations found, and whether each deviation includes a clear recommendation.
 :::
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Design Your NDA Triage Configuration
+### Prompt 1: Reproduce
 
 ```
 I need to configure NDA triage criteria for a 200-person
@@ -271,7 +275,7 @@ month? Compare to 30 NDAs x 35 minutes without triage.
 
 **What you are learning:** Designing triage criteria forces you to make explicit risk judgments that most organisations leave implicit. The calculation at the end quantifies the business case -- the difference between 17+ hours of attorney time and 3-4 hours is the capacity released for higher-value legal work.
 
-### Prompt 2: Triage a Cross-Border NDA with a New Jurisdiction Pair
+### Prompt 2: Adapt
 
 ```
 I am running /triage-nda on a mutual NDA from a potential
@@ -309,7 +313,7 @@ Produce a full NDA Triage Report and verify:
 
 **What you are learning:** Testing a UK-Singapore jurisdiction pair forces the agent to apply a different data protection regime and restraint-of-trade analysis than the lesson's Pakistan-Saudi example. Verifying the agent's output against the correct jurisdiction-specific rules builds your ability to spot when the agent defaults to generic analysis instead of applying the loaded overlay.
 
-### Prompt 3: The Residuals Clause Trap
+### Prompt 3: Apply
 
 ```
 In NDA triage, one of the most commonly escalated clauses

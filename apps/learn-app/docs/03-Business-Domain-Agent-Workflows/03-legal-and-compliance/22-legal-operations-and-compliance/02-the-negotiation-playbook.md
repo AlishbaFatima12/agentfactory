@@ -306,11 +306,15 @@ You configured connectors as an optional step in Lesson 1. If you skipped that s
 2. Tested the playbook against the CloudStack agreement and compared before/after output -- seeing generic YELLOW flags become specific RED escalations with PKR-denominated analysis
 3. Understanding of MCP connector categories and the `~~category` placeholder system that makes the plugin provider-agnostic
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-**Setup:** Use these prompts in Cowork or your preferred AI assistant with the Legal Plugin installed.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Build Your First Clause Position
+### Prompt 1: Reproduce
 
 ```
 I am configuring a Legal Plugin negotiation playbook for
@@ -332,7 +336,7 @@ into legal.local.md.
 
 **What you are learning:** The playbook is not a template you fill in abstractly -- it encodes real institutional knowledge. The questions the AI asks mirror the expert interview methodology legal operations professionals use to extract negotiation positions from senior counsel. Learning to answer these questions is learning to articulate your organisation's risk profile.
 
-### Prompt 2: Compare Generic vs Playbook-Calibrated Reviews
+### Prompt 2: Adapt
 
 ```
 I want to understand the difference between a generic contract
@@ -355,3 +359,23 @@ the issue identified, and the proposed redline language.
 ```
 
 **What you are learning:** The playbook does not just change a label from YELLOW to RED -- it changes the specificity and quality of the entire analysis. A generic review says "this seems low." A playbook-calibrated review says "this is PKR 600,000 against your minimum of PKR 2,400,000 -- 75% below your floor -- and here is the exact replacement language." The playbook transforms observations into instructions.
+
+### Prompt 3: Apply
+
+```
+Take a real contract or vendor agreement from your own organisation.
+Build a negotiation playbook entry for the clause type that causes
+the most friction in your reviews (liability cap, indemnity,
+governing law, or IP ownership).
+
+For your chosen clause:
+1. Define your ideal position
+2. Define your acceptable fallback
+3. Define your walk-away threshold
+4. Write the agent instruction that encodes these three positions
+
+Compare the result against a /review-contract run on the same
+agreement — does the playbook change the agent's classification?
+```
+
+**What you are learning:** The gap between a generic playbook and one calibrated to your organisation's actual risk appetite. A liability cap that is RED for a startup may be GREEN for an enterprise with insurance coverage. Your playbook entries encode institutional knowledge that no generic plugin can replicate.

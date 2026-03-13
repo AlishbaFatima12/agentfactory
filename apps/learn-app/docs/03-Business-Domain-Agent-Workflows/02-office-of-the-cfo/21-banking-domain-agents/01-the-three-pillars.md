@@ -188,9 +188,9 @@ CECL matters because US banks report under a different standard -- if you encoun
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: The Three Pillars on One Loan
+### Prompt 1: Reproduce
 
 ```
 I am learning about banking regulation. A bank holds a
@@ -214,7 +214,7 @@ simultaneously, not just one?
 
 **What you are learning:** The three-pillar framework is the organising principle for this entire chapter. By seeing all three applied to the same portfolio, you understand why a single-pillar agent gives you only one-third of the picture — and why the banking plugin routes queries across pillars.
 
-### Prompt 2: The Cross-Pillar Cascade
+### Prompt 2: Adapt
 
 ```
 A bank discovers that a $50 million corporate borrower has
@@ -234,7 +234,7 @@ that applies.
 
 **What you are learning:** Cross-pillar cascades are the reason this chapter builds a multi-skill architecture rather than isolated calculators. By tracing a real cascade, you internalise the connections between pillars — which prepares you for the cross-pillar integration lesson later in this chapter.
 
-### Prompt 3: Pillar Identification
+### Prompt 3: Apply
 
 ```
 For each of the following banking scenarios, identify which

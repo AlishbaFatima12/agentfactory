@@ -253,11 +253,15 @@ Notice the structural difference. The vendor negotiation briefing focused on tal
 3. Action item tracking system with priority-based follow-up cadence (daily/weekly/monthly) and dependency mapping
 4. Board meeting briefing template showing how the same skill adapts to a different meeting type and audience
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant with the Legal plugins installed.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Reproduce the CloudStack Briefing
+### Prompt 1: Reproduce
 
 ```
 Prepare for my contract renegotiation meeting with CloudStack Inc.
@@ -269,7 +273,7 @@ an 85-person SaaS company in Karachi.
 
 **What you are learning:** How the meeting-briefing skill converts unstructured meeting context into a structured negotiation preparation document. Compare your output to the reference briefing in this lesson. The structure (background, open issues, talking points, red lines, preparation gaps) should match even if specific phrasing differs. If your output is missing red lines or preparation gaps, add more context to your prompt -- the skill produces better output when you tell it what you need to negotiate and what your constraints are.
 
-### Prompt 2: Adapt to a Regulatory Discussion
+### Prompt 2: Adapt
 
 ```
 Prepare for a regulatory discussion meeting with the Pakistan
@@ -285,7 +289,7 @@ documentation we should bring, and what our compliance gaps are.
 
 **What you are learning:** Regulatory discussions produce a different briefing structure than vendor negotiations. The skill focuses on compliance documentation, potential exposure areas, and what NOT to volunteer versus what to disclose proactively. Compare the regulatory discussion output to the CloudStack vendor negotiation output -- notice how the talking points shift from "what we want" to "what we can demonstrate."
 
-### Prompt 3: Apply to Your Own Organisation
+### Prompt 3: Apply
 
 ```
 Think of a meeting you have scheduled in the next two weeks —

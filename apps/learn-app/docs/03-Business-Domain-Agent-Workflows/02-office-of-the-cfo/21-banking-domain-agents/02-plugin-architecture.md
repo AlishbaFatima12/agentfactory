@@ -240,9 +240,9 @@ The banking plugin's pillar-aware routing and the Islamic finance plugin's juris
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Single-Pillar Routing
+### Prompt 1: Reproduce
 
 ```
 I have the banking plugin installed. Here is my query:
@@ -262,7 +262,7 @@ Show the arithmetic step by step.
 
 **What you are learning:** Single-pillar routing is the simplest case — one pillar, one skill, one calculation. By tracing the routing yourself, you verify that you understand both the architecture and the underlying calculation. This prepares you for Lesson 3, where you build the ECL formula in depth.
 
-### Prompt 2: Cross-Pillar Routing
+### Prompt 2: Adapt
 
 ```
 A regulator sends a bank this question:
@@ -283,7 +283,7 @@ this question?
 
 **What you are learning:** Cross-pillar routing is the banking plugin's distinctive capability. By tracing a cross-pillar query, you see why the router chains skills rather than loading them independently — and why the output from one skill becomes the input to the next.
 
-### Prompt 3: Skill Inventory
+### Prompt 3: Apply
 
 ```
 List all 16 product skills in the banking plugin, grouped

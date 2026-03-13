@@ -371,11 +371,15 @@ The DSAR Agent identifies which regime applies based on two factors: the data su
 
 :::
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Design Your Compliance Calendar Escalation
+### Prompt 1: Reproduce
 
 ```
 I am the Legal Operations Manager at a 120-person company with
@@ -405,7 +409,7 @@ a 90-day notice window.
 
 **What you are learning:** Escalation logic must be calibrated to the specific notice window in each contract. A 90-day notice window requires earlier first-contact than a 60-day window. The exercise builds your ability to adapt the pattern to different contractual requirements rather than applying a one-size-fits-all template.
 
-### Prompt 2: Analyse a Legal Spend Report
+### Prompt 2: Adapt
 
 ```
 I am reviewing our Q1 legal spend report. Here are the facts:
@@ -437,7 +441,7 @@ For each firm:
 
 **What you are learning:** Legal spend analytics is not just about totals -- it is about patterns. A firm billing 76% of its fees in the final month of a quarter may be doing legitimate work, or it may be clearing work-in-progress before a reporting deadline. The skill is distinguishing normal variation from anomalies that require investigation.
 
-### Prompt 3: DSAR Redaction Decision Exercise
+### Prompt 3: Apply
 
 ```
 I am processing a data subject access request under UK GDPR.

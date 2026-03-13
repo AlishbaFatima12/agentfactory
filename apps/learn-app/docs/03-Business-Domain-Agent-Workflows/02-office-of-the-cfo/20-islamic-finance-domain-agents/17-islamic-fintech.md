@@ -103,7 +103,6 @@ Traditional Islamic finance products were structured by banks, regulated by cent
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex13-islamic-fintech-scenarios.md`
 :::
 
 ## Exercise 14: Four Fintech Scenarios (40 min)
@@ -213,7 +212,9 @@ Distribution comes from solar energy revenue.
 
 ## Try With AI
 
-### Prompt 1: Your Own Fintech Analysis
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
+
+### Prompt 1: Reproduce
 
 ```
 I am advising an Islamic fintech that plans to offer [DESCRIBE YOUR
@@ -233,7 +234,7 @@ For this product:
 
 **What you are learning:** Islamic fintech advisory is not about recalling specific rules — no specific rules exist for most of these products. It is about reasoning from the three Islamic finance principles (asset-backing, risk-sharing, ethical screening) and the applicable accounting standards (IFRS 9, 15, 16, 17) to develop defensible technical positions. This is the highest-value skill a CA/CPA can offer in this market.
 
-### Prompt 2: Regulatory Gap Analysis
+### Prompt 2: Adapt
 
 ```
 Compare the regulatory treatment of Islamic fintech across three
@@ -251,6 +252,32 @@ For each jurisdiction:
 ```
 
 **What you are learning:** Regulatory arbitrage is a real factor in Islamic fintech — platforms choose their jurisdiction partly based on regulatory clarity. Understanding which jurisdictions have addressed Islamic fintech specifically (Malaysia leads) and which have gaps (UK P2P framework) is essential knowledge for advising fintech clients on where to domicile and which authorisations to seek.
+
+### Prompt 3: Apply
+
+```
+Identify one Islamic fintech product available in your own market
+or jurisdiction — a digital murabaha platform, a Shariah-compliant
+robo-adviser, a P2P Islamic financing app, or a tokenised sukuk
+offering.
+
+For the product you identified:
+1. What is the underlying Shariah structure (murabaha, ijarah,
+   wakala, musharaka, or hybrid)?
+2. How should the platform recognise revenue under IFRS 15 —
+   is its performance obligation satisfied over time or at a
+   point in time?
+3. What local regulatory authorisation does the platform hold
+   or require in your jurisdiction?
+4. Where is the Shariah compliance question genuinely uncertain
+   — what would you escalate to an SSB?
+5. Draft a one-paragraph accounting policy recommendation for
+   the platform, clearly distinguishing where you are applying
+   established rules from where you are reasoning from first
+   principles.
+```
+
+**What you are learning:** Applying fintech accounting analysis to a product in your own market forces you to move beyond textbook scenarios. The gap between what the standards explicitly address and what these products actually do is where the CA/CPA adds value — by developing well-reasoned positions grounded in existing principles rather than waiting for the standard-setters to catch up.
 
 ## Flashcards Study Aid
 

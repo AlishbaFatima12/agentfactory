@@ -300,9 +300,9 @@ Pakistan's AML framework is governed by the Anti-Money Laundering Act 2010 (AMLA
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to deepen your understanding of AML/KYC frameworks.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Three Lines in Practice
+### Prompt 1: Reproduce
 
 ```
 I am learning the three lines of defence model for bank AML
@@ -327,7 +327,7 @@ implications for the compliance analyst and the MLRO.
 
 **What you are learning:** The three lines model is not theoretical -- each line has specific, concrete responsibilities. When a line fails, the consequences cascade. Understanding these cascades is essential for building AI agents that operate within the compliance framework rather than accidentally undermining it.
 
-### Prompt 2: PEP Risk Classification
+### Prompt 2: Adapt
 
 ```
 A private bank is onboarding the following individuals.
@@ -351,7 +351,7 @@ determination or whether it requires human judgment.
 
 **What you are learning:** PEP classification requires both database screening (which AI handles well) and contextual judgment (which requires human input). The boundary between "clearly a PEP" and "arguably a PEP close associate" is where AI agents must escalate rather than decide. Learning to identify this boundary is a critical skill for designing banking AI systems.
 
-### Prompt 3: Beneficial Ownership Investigation
+### Prompt 3: Apply
 
 ```
 You are investigating the beneficial ownership of a corporate

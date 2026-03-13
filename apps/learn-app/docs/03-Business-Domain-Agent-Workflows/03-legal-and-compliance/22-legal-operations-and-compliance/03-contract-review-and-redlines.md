@@ -269,11 +269,15 @@ When your contracts involve parties, performance, or data flows across multiple 
 
 ---
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Apply Contract Review to a Different Agreement Type
+### Prompt 1: Reproduce
 
 ```
 I am practising with the Claude Legal Plugin. The lesson walked
@@ -311,7 +315,7 @@ you agree and where would you override?
 
 **What you are learning:** Applying contract review to a SaaS subscription agreement tests whether you can transfer the classification framework to a different contract type. The service modification clause is the kind of risk that a generic review might miss but a jurisdiction-aware review with a mature playbook should catch -- it has real business impact even though it is not a traditional "legal risk" clause.
 
-### Prompt 2: Obligation Tracking After Execution
+### Prompt 2: Adapt
 
 ```
 A company has just executed a 12-month SaaS agreement with these
@@ -332,7 +336,7 @@ produce for this contract. Include:
 
 **What you are learning:** A signed contract is the beginning, not the end, of legal work. Designing the obligation tracking output teaches you to think about contracts as ongoing relationships with active requirements -- the mindset that prevents missed renewals, overlooked audit rights, and compliance gaps.
 
-### Prompt 3: Apply to Your Organisation
+### Prompt 3: Apply
 
 ```
 Take a real vendor agreement from your organisation (or use a

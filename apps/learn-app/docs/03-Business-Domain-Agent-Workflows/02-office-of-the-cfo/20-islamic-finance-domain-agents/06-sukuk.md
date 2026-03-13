@@ -196,7 +196,6 @@ The purchase undertaking is the most contested issue in global sukuk accounting 
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex03-gcc-sukuk-issuance.md`
 :::
 
 ## Practice Exercise 3: GCC Sukuk Issuance — Multi-Jurisdiction Accounting
@@ -229,9 +228,9 @@ The purchase undertaking is the most contested issue in global sukuk accounting 
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: SPPI Test Comparison Across Sukuk Types
+### Prompt 1: Reproduce
 
 ```
 Apply the IFRS 9 SPPI test to three different sukuk structures:
@@ -259,7 +258,7 @@ Present the results in a comparison table.
 
 **What you are learning:** The SPPI test is the gateway to sukuk classification. Understanding which structures pass and which fail determines whether investors report stable amortised cost balances or volatile fair value changes. The wakala sukuk (Sukuk C) is the most interesting — the partial capital protection and target return create a genuinely ambiguous SPPI analysis that requires professional judgment.
 
-### Prompt 2: Green Sukuk Advisory
+### Prompt 2: Adapt
 
 ```
 A Malaysian corporation wants to issue a MYR 2 billion green
@@ -283,6 +282,37 @@ the issuer's board of directors.
 ```
 
 **What you are learning:** Green sukuk represent the convergence of Islamic finance and sustainable finance — two movements with natural alignment (both require asset-backing, ethical screening, and real economic activity). The accounting treatment is unchanged, but the disclosure and reporting obligations are significantly expanded. This is one of the fastest-growing segments of the global sukuk market and a high-value advisory niche.
+
+### Prompt 3: Apply
+
+```
+You are an institutional investor (pension fund, takaful
+operator, or asset manager) in YOUR jurisdiction. Your
+investment committee is evaluating a USD 500 million 7-year
+ijarah sukuk issued by a GCC sovereign.
+
+Distribution rate: 5.50% semi-annual. Purchase undertaking
+at face value. Listed on your local exchange and Nasdaq Dubai.
+
+1. Which accounting framework governs your sukuk investment
+   — AAOIFI FAS 25, IFRS 9, MFRS 9, or another standard?
+2. Apply the SPPI test under your framework. Does this sukuk
+   pass? Classify: amortised cost, FVOCI, or FVTPL.
+3. Your investment committee holds USD 100 million of this
+   sukuk. Generate the journal entries for initial recognition
+   and the first semi-annual distribution using the correct
+   income labels for your jurisdiction.
+4. At Year 3, credit concerns emerge about the sovereign
+   issuer. Apply the ECL model under your framework — what
+   triggers a Stage 2 migration? What provision do you book?
+5. If AAOIFI Draft Standard 62 is adopted, how does it
+   affect your holding? Would the sukuk still qualify as
+   asset-based, or would restructuring be required?
+
+Present your analysis as an investment committee memo.
+```
+
+**What you are learning:** Sukuk investment analysis differs by jurisdiction because classification frameworks, income labels, and impairment approaches vary. Applying the analysis to your own institutional context — with your regulator, your framework, and your income labels — bridges the gap between textbook sukuk accounting and the real decisions that investment committees make. The Draft Standard 62 question forces you to assess forward-looking regulatory risk, not just current-state accounting.
 
 ## Flashcards Study Aid
 

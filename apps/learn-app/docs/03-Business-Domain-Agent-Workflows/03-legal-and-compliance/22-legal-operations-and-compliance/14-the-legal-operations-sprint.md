@@ -469,11 +469,15 @@ The division of labour that runs through every lesson: the agent reviews, triage
 
 ---
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant with your legal plugins installed.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Reproduce the Sprint
+### Prompt 1: Reproduce
 
 ```
 I want to run the complete legal operations sprint. Here is my setup:
@@ -499,7 +503,7 @@ At the end, tell me:
 
 **What you are learning:** Execution speed and error detection under pressure. The first time through this sprint, you will likely spend 40-50 minutes. The second time, with a tuned playbook and familiar pipeline, it should take 20-25 minutes. The gap between first and second run measures how much of the sprint is setup versus execution.
 
-### Prompt 2: Transfer to a Different Organisation
+### Prompt 2: Adapt
 
 ```
 I have been running the legal operations engine for a mid-market
@@ -522,3 +526,28 @@ that needs to change, and what the change is.
 ```
 
 **What you are learning:** Legal operations engine portability. The command structure and triage methodology are universal. The playbook positions, jurisdiction overlays, and compliance requirements are organisation-specific. Understanding what transfers and what requires reconfiguration is the difference between rebuilding from scratch for each client and reconfiguring an existing system in an afternoon.
+
+### Prompt 3: Apply
+
+```
+Run the legal operations sprint for your own organisation.
+
+My organisation: [describe your company, size, and industry]
+My legal team: [size and structure]
+My jurisdictions: [where you operate]
+My biggest legal ops bottleneck: [what takes the most time today]
+
+Adapt the sprint exercises to my context:
+1. Review a real vendor agreement from my files
+2. Triage an NDA I am currently negotiating
+3. Run a compliance check for my primary jurisdiction
+4. Build a compliance calendar for my next quarter
+5. Produce a legal spend analysis for my department
+
+At the end, tell me:
+- Which exercise produced the most immediately useful output
+- Which exercise revealed the biggest gap in my current process
+- What one change I should make to my legal ops workflow tomorrow
+```
+
+**What you are learning:** The gap between the Noor Technologies demo and your own organisation. Demo data is clean and structured. Your real contracts have inconsistent formatting, missing clauses, and jurisdictional edge cases the demo never encounters. Running the sprint against real data reveals which workflows are robust and which need configuration before deployment.

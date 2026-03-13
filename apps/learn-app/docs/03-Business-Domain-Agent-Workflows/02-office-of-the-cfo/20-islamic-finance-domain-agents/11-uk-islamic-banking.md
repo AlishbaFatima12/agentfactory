@@ -202,7 +202,6 @@ This matters because the risk-weighted asset (RWA) calculation for a DM home fin
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex07-uk-al-rayan-bank.md`
 :::
 
 ## Practice Exercise 8: Al Rayan Bank — UK Islamic Banking (50 min)
@@ -237,9 +236,9 @@ This matters because the risk-weighted asset (RWA) calculation for a DM home fin
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Triple Characterisation Deep-Dive
+### Prompt 1: Reproduce
 
 ```
 Al Rayan Bank's diminishing musharaka home finance product
@@ -264,7 +263,7 @@ client, not an academic audience.
 
 **What you are learning:** The triple characterisation is not a contradiction — each framework asks a different question about the same product. Shariah asks "Is this religiously permissible?" IFRS asks "What is the economic substance for financial reporting?" HMRC asks "What is the tax-equivalent treatment?" Being able to explain all three without contradiction is a professional advisory skill.
 
-### Prompt 2: PRA Level Playing Field Analysis
+### Prompt 2: Adapt
 
 ```
 The PRA applies identical Basel III capital requirements to
@@ -296,7 +295,7 @@ Analyze the implications:
 
 **What you are learning:** The PRA's level playing field approach means Islamic banks compete on product design and customer service, not on regulatory arbitrage. The question of whether the DM structure justifies a different risk weight is analytically interesting but practically settled — the PRA treats it identically. Understanding why this matters prepares you for regulatory advisory work.
 
-### Prompt 3: HMRC vs Accounting — When Labels Diverge
+### Prompt 3: Apply
 
 ```
 A UK Islamic bank reports the following in its IFRS

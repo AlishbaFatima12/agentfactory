@@ -348,9 +348,9 @@ Kenji investigates discrepancies by checking the correspondent's fee schedule, c
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to work through reconciliation exercises.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Nostro Reconciliation Matching
+### Prompt 1: Reproduce
 
 ```
 Match these nostro entries and classify all breaks:
@@ -379,7 +379,7 @@ For each break:
 
 **What you are learning:** Nostro reconciliation is the foundation of all bank reconciliation. The GBP 1,500 difference between M006 and S006 could be a fee deduction, an FX adjustment, or a data error — each has a different resolution path. The custody fee (S008) is a statement-only item that needs booking in the bank's records. By classifying breaks, you build the skill of systematic exception handling that applies to all five reconciliation categories.
 
-### Prompt 2: Four-Way Provision Reconciliation
+### Prompt 2: Adapt
 
 ```
 Reconcile these IFRS 9 provision figures across four sources:
@@ -400,7 +400,7 @@ issue, determine the "correct" figure, and recommend adjustments.
 
 **What you are learning:** The four-way provision reconciliation is where IFRS 9 meets operational reality. Models run at different times. GL postings have processing lags. Regulatory disclosures use different rounding conventions. Each break has a logical explanation — but finding that explanation requires understanding how data flows between systems. This is the operational competence that ensures the ECL figures you calculated in Lessons 3-5 actually reach the financial statements correctly.
 
-### Prompt 3: Suspense Clearance Strategy
+### Prompt 3: Apply
 
 ```
 I have 12 suspense items across 3 accounts (Payments, Fees,

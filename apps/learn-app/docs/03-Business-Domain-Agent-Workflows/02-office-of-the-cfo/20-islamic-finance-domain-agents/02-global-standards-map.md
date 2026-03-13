@@ -99,8 +99,8 @@ This table is the most important single reference in this chapter. Every AI agen
 | **Jordan**         | AAOIFI partial           | Supplemental                                | Central Bank of Jordan             | AAOIFI partially adopted                              |
 | **Sudan**          | AAOIFI                   | Mandatory                                   | Central Bank of Sudan              | Full Islamic banking system                           |
 
-:::info Downloadable Reference
-Download the printable Global Standards Map from the [plugin repository](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) — use `islamic-finance-exercise-data.zip` and find `references/global-standards-map.md`. Keep it alongside your skill files — the router checks it on every query.
+:::info Reference
+Keep the Global Standards Map alongside your skill files — the router checks it on every query.
 :::
 
 ## The Three Accounting Regimes
@@ -170,9 +170,9 @@ This is why the jurisdiction overlay SKILL.md is not optional — it is the comp
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Test the Agent Against the Standards Map
+### Prompt 1: Reproduce
 
 ```
 Install the Islamic Finance Domain Agents plugin (see Lesson 3
@@ -203,7 +203,7 @@ accounting mechanics), or the overlay (wrong labels).
 
 **What you are learning:** Looking up jurisdictions in a table is recall. Testing whether an agent correctly applies those standards is application. By running a real query and checking the output against the map, you practise the verification skill you will use every time you deploy a jurisdiction-aware agent.
 
-### Prompt 2: Multi-Jurisdiction Consolidated Reporting Conflict
+### Prompt 2: Adapt
 
 ```
 A multinational Islamic banking group has operations in three
@@ -237,7 +237,7 @@ The group must produce consolidated financial statements.
 
 **What you are learning:** Classifying jurisdictions into regimes is the starting point, not the end. The real professional challenge is what happens when a single group spans multiple regimes and the labels, classifications, and disclosure requirements conflict in consolidated reporting. This scenario tests whether you can apply the regime framework to a practical multi-jurisdiction problem.
 
-### Prompt 3: The Compliance-vs-Calculation Distinction
+### Prompt 3: Apply
 
 ```
 A murabaha transaction has these economics:

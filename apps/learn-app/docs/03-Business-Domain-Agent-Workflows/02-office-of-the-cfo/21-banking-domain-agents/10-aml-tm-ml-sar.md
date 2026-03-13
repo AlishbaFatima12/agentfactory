@@ -319,9 +319,9 @@ Thomas reviews the typology match and narrative accuracy, then escalates the dra
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to deepen your understanding of transaction monitoring and SAR filing.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Structuring Detection
+### Prompt 1: Reproduce
 
 ```
 A bank customer's account shows the following cash deposit
@@ -349,7 +349,7 @@ Do NOT include any information that could identify a real person.
 
 **What you are learning:** Writing a TM rule forces you to think precisely about detection parameters. Writing a SAR narrative forces you to articulate suspicion clearly. Both skills transfer directly to building AI agents that generate investigation narratives -- an agent that produces vague narratives ("the activity seems unusual") is useless, while one that produces specific narratives ("14 cash deposits averaging GBP 9,407 over 18 days, all below the GBP 10,000 threshold, from a customer with zero prior cash deposit history") is operationally valuable.
 
-### Prompt 2: Rules vs ML Trade-Offs
+### Prompt 2: Adapt
 
 ```
 A bank is deciding between upgrading its rules-based TM system
@@ -374,7 +374,7 @@ Justify with specific trade-offs.
 
 **What you are learning:** The rules-vs-ML decision is not binary. Most production deployments use a hybrid approach -- rules for known typologies (high explainability), ML for anomaly detection (high adaptability). Understanding this architectural decision is essential for building banking AI agents that integrate with existing compliance infrastructure rather than replacing it.
 
-### Prompt 3: Tipping-Off Scenario Analysis
+### Prompt 3: Apply
 
 ```
 A bank has filed a SAR on a business customer. The following

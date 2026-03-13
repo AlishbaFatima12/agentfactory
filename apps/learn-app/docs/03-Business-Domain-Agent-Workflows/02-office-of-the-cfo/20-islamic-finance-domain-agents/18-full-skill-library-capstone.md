@@ -134,7 +134,6 @@ The routing logic follows a strict protocol: (1) identify jurisdiction, (2) iden
 :::info Capstone Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Full materials:** Download [`islamic-finance-full.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) for everything in one package.
 :::
 
 ## Exercise 15: Full SKILL.md Library Build (90 min)
@@ -296,7 +295,9 @@ Return to the five questions from the Chapter 20 README. You should now be able 
 
 ## Try With AI
 
-### Prompt 1: Extend the Library
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
+
+### Prompt 1: Reproduce
 
 ```
 I need to add a new jurisdiction to the Islamic finance SKILL.md
@@ -317,7 +318,7 @@ Research the jurisdiction and produce:
 
 **What you are learning:** The library is designed to be extensible. Adding a jurisdiction is not a custom development project — it is Method B document analysis applied to a new regulatory source, followed by a test query to validate. This is the pattern for extending any domain agent library to new contexts.
 
-### Prompt 2: Cross-Domain Transfer
+### Prompt 2: Adapt
 
 ```
 The router-to-product-to-overlay architecture used in this chapter
@@ -340,6 +341,35 @@ Design the skill library structure for this domain.
 ```
 
 **What you are learning:** The architectural contribution of this chapter is not limited to Islamic finance. The router-to-product-to-overlay pattern transfers to any domain where the same transaction or process has different rules by jurisdiction. Tax, legal, healthcare, and regulatory compliance all share this structure. Recognising the pattern across domains is the meta-skill that makes you an architect, not just a domain specialist.
+
+### Prompt 3: Apply
+
+```
+Choose a real Islamic finance scenario from your own practice,
+institution, or jurisdiction. It could be a murabaha facility
+you have worked on, a sukuk issuance in your market, a zakat
+computation for a client, or a Shariah screening question for
+a portfolio you manage.
+
+Run the scenario through the full skill library:
+1. Which product skill does the router select?
+2. Which jurisdiction overlay loads?
+3. Does the output use the correct income labels, disclosure
+   references, and regulatory framework for your jurisdiction?
+4. Where does the agent produce output that you would need to
+   adjust based on your professional judgment or local practice?
+5. Identify one gap — a rule, label, or disclosure requirement
+   specific to your context that the library does not yet cover.
+   Draft the addition you would make to the relevant overlay
+   skill to close this gap.
+
+Conclude with your assessment: does the deployed library handle
+your real-world scenario accurately, or does it require extension?
+What is the boundary between what the agent executed correctly and
+what required your professional intervention?
+```
+
+**What you are learning:** Testing the library against your own practice is the definitive validation. A library that handles textbook scenarios but fails on your actual work is incomplete. By identifying gaps and drafting extensions, you are practising the same skill maintenance workflow that keeps any domain agent library current as regulations, standards, and practice evolve.
 
 ## Flashcards Study Aid
 

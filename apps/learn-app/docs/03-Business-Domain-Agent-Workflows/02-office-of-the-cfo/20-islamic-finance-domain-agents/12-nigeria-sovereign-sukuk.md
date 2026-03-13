@@ -208,7 +208,6 @@ This principle applies broadly: a supplier to an Islamic bank does not adjust it
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex08-nigeria-fgn-sukuk.md`
 :::
 
 ## Practice Exercise 9: FGN Sovereign Sukuk — N300B Ijarah (45 min)
@@ -249,9 +248,9 @@ Exercise Step 4 teaches a principle worth remembering for all future Islamic fin
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Sovereign Sukuk — Asset-Based vs Asset-Backed
+### Prompt 1: Reproduce
 
 ```
 The FGN issues ijarah sukuk backed by road infrastructure.
@@ -287,7 +286,7 @@ sukuk structuring.
 
 **What you are learning:** The asset-based vs asset-backed distinction is the most debated structural question in global sukuk markets. Most sovereign sukuk globally are asset-based — the purchase undertaking means the investor's real exposure is to the sovereign, not to the specific assets. Understanding this distinction prepares you for advisory work on sukuk structuring and for the potential impact of AAOIFI Draft Standard 62 on existing sukuk programmes.
 
-### Prompt 2: Contractor Independence — Broader Applications
+### Prompt 2: Adapt
 
 ```
 The Nigeria lesson teaches that Julius Berger (the road
@@ -320,7 +319,7 @@ boundary of Islamic finance accounting.
 
 **What you are learning:** The contractor independence principle is not specific to Nigeria or to sukuk — it is a general scope boundary rule for all Islamic finance accounting. By applying it to three different scenarios across three jurisdictions, you internalise the rule: ask "Is this party a signatory to the Shariah contract?" If not, standard accounting applies without Islamic modification. This prevents the common error of over-applying Islamic accounting to parties who are not part of the Islamic finance arrangement.
 
-### Prompt 3: African Sukuk Market — Investment Opportunity Analysis
+### Prompt 3: Apply
 
 ```
 You are an investment analyst at a London-based Islamic

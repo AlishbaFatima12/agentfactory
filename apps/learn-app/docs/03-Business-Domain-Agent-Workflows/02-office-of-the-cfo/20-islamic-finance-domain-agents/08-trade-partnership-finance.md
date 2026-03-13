@@ -204,7 +204,6 @@ Cr: Musharaka Investment | Bank's capital proportion (reduces carrying value)
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex05-trade-partnership-finance.md`
 :::
 
 ## Practice Exercise 5: Trade & Partnership Finance — Construction Project Across Jurisdictions
@@ -241,9 +240,9 @@ Cr: Musharaka Investment | Bank's capital proportion (reduces carrying value)
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Salam vs Istisna'a Decision
+### Prompt 1: Reproduce
 
 ```
 A client needs financing for a large order of industrial equipment.
@@ -265,7 +264,7 @@ Work through this for a UAE entity using IFRS.
 
 **What you are learning:** The choice between salam and istisna'a is one of the most important structuring decisions in Islamic trade finance. Salam requires full advance payment and works for fungible commodities; istisna'a allows staged payment and works for manufactured or constructed assets. Understanding when to use each — and the risk profile each creates — is a core competency for Islamic finance practitioners.
 
-### Prompt 2: Mudaraba Profit Pool Worked Example
+### Prompt 2: Adapt
 
 ```
 An Islamic bank has the following mudaraba investment pool:
@@ -295,7 +294,7 @@ Show all intermediate calculations.
 
 **What you are learning:** The mudaraba profit pool is the engine of Islamic deposit-taking. Unlike conventional interest calculation (straightforward rate x principal x time), mudaraba distribution involves a multi-step waterfall with reserves. PER smooths returns across periods; IRR protects capital. Understanding this calculation is essential because it drives the returns that IAH actually receive — and it is the primary source of Shariah audit findings when banks make errors in weightage application or reserve calculations.
 
-### Prompt 3: Musharaka IFRS Classification Challenge
+### Prompt 3: Apply
 
 ```
 A bank enters a musharaka arrangement with a real estate developer:

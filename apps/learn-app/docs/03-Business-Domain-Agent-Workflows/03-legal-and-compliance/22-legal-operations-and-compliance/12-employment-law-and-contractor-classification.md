@@ -205,11 +205,15 @@ Option C is available only if the working relationship genuinely changes -- proj
 2. Contractor vs employee classification analysis applying five indicators to the Brightpath/Tariq scenario
 3. Recommendation memo with three structural options (subsidiary, EoR, contractor) including risks, costs, and timelines for each
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Classification Analysis
+### Prompt 1: Reproduce
 
 ```
 I am a Legal Operations Manager. Analyse this working relationship
@@ -236,7 +240,7 @@ Then give me an overall assessment:
 
 **What you are learning:** The label on a contract does not determine classification -- the economic reality does. This exercise builds the analytical skill of applying substance-over-form tests to real working relationships. The agent's analysis mirrors the exact triage the Legal Ops plugin performs when it flags classification risk in a `/review-contract` output.
 
-### Prompt 2: Non-Compete Enforceability Comparison
+### Prompt 2: Adapt
 
 ```
 Compare the enforceability of this non-compete clause across
@@ -257,3 +261,25 @@ maximum scope courts typically enforce? What alternative protections
 ```
 
 **What you are learning:** Non-compete enforceability is the clearest example of why jurisdiction overlays are essential. The same clause is standard practice in DIFC, subject to a reasonableness test in Pakistan, and void entirely in California. Understanding this variation is what separates a legal ops professional who can evaluate agent output from one who accepts it uncritically.
+
+### Prompt 3: Apply
+
+```
+Your organisation engages contractors in [your jurisdiction or
+pick Pakistan, UAE, or UK]. Take one of your actual contractor
+agreements (or describe the arrangement in 3-4 sentences).
+
+Ask the agent to:
+1. Classify the arrangement as employee or contractor under the
+   jurisdiction's test (economic reality, mutuality of obligation,
+   or control test — whichever applies)
+2. Identify the top 3 reclassification risk factors
+3. Recommend specific contract clauses that would reduce
+   reclassification risk without changing the commercial arrangement
+
+Compare the agent's classification against your own judgment.
+Where do you disagree, and what additional facts would resolve
+the disagreement?
+```
+
+**What you are learning:** Contractor classification is one of the highest-risk areas in employment law because the consequences of getting it wrong — back taxes, benefits liability, penalties — are severe and retroactive. The agent applies the jurisdiction's legal test, but classification ultimately depends on the reality of the working relationship, not the contract language. Your judgment about the actual working arrangement is information the agent cannot access.
