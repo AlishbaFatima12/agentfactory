@@ -347,7 +347,7 @@ This gives you: isolated branch work (worktree) + persistent process (tmux) + mo
 
 ### What's Next
 
-The next section covers **Claude Cowork** -- Claude's desktop application that brings a visual interface to everything you have been doing in the terminal. Where Remote Control extends your terminal session to other devices, Cowork replaces the terminal entirely with a desktop-native experience.
+Next up: **Scheduled Tasks** (Lesson 24). You have learned to monitor sessions remotely -- now you will learn to schedule recurring checks and one-time reminders with `/loop` and Claude Code's cron tools, so Claude polls deployments, babysits PRs, and nudges you at the right moment without manual intervention. Combined with Remote Control, you get mobile-monitored background automation.
 
 ---
 

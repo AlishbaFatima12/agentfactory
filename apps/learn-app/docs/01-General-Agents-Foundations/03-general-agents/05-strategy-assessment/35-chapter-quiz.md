@@ -723,6 +723,54 @@ options: [
 correctOption: 2,
 explanation: "Option C is correct because it optimizes for each role's needs: developers benefit from Code's terminal integration and git support, while knowledge workers benefit from Cowork's document Skills and visual interface. Both interfaces share the same underlying AI and Skills, so expertise transfers across the team. Option A forces non-technical staff to use terminals, creating unnecessary barriers. Option B limits developers by removing tools optimized for their work. Option D bases the decision on popularity rather than fit-for-purpose. The principle is right tool for the job: different roles have different needs, and that's okay.",
 source: "Lesson 32: Code vs. Cowork: A Decision Framework"
+},
+{
+question: "You set up `/loop 5m check the deployment status` and then exit Claude Code to grab coffee. When you return and start a new session, what happened to your scheduled task?",
+options: [
+"The task continued running in the background and will resume when you reconnect",
+"The task was saved to disk and automatically restored when you started the new session",
+"The task was permanently lost — scheduled tasks are session-scoped and do not survive exit",
+"The task was paused and can be resumed by running `/loop resume`"
+],
+correctOption: 2,
+explanation: "Option C is correct: scheduled tasks are session-scoped, meaning they live only in the current Claude Code process. When you exit, all tasks are gone — no persistence, no recovery. This is by design, not a bug. Option A is wrong because there is no background daemon; the scheduler runs inside the Claude Code process. Option B is wrong because tasks are never written to disk. Option D is wrong because there is no resume mechanism. For tasks that need to survive restarts, use Desktop scheduled tasks or GitHub Actions with a schedule trigger.",
+source: "Lesson 24: Scheduled Tasks: The Loop Skill and Cron Tools"
+},
+{
+question: "You type `/loop 30s check the logs` expecting a check every 30 seconds. Instead, it fires every minute. What explains this behavior?",
+options: [
+"The `/loop` skill has a minimum interval of 1 minute for performance reasons",
+"The underlying cron system has one-minute granularity, so seconds are rounded up to the nearest minute",
+"You need to use `/loop 0.5m check the logs` instead of seconds notation",
+"The 30-second interval only works with the CronCreate tool, not the /loop skill"
+],
+correctOption: 1,
+explanation: "Option B is correct: the cron scheduling system operates at one-minute granularity. When you specify seconds, they are rounded up to the nearest minute. This is a fundamental constraint of cron, not a limitation of the /loop skill. Option A gives a plausible but incorrect reason — it's cron granularity, not a performance limit. Option C is wrong because fractional minutes are not a supported format. Option D is wrong because CronCreate also uses cron expressions which have the same one-minute minimum.",
+source: "Lesson 24: Scheduled Tasks: The Loop Skill and Cron Tools"
+},
+{
+question: "You have been running `/loop` tasks all day and Claude refuses to create a new one, saying the limit has been reached. What is the maximum number of scheduled tasks per session, and what should you do?",
+options: [
+"10 tasks maximum — close and reopen Claude Code to reset the counter",
+"50 tasks maximum — list your tasks and cancel ones you no longer need",
+"100 tasks maximum — upgrade to a Max plan for higher limits",
+"25 tasks maximum — wait for the 3-day expiry to free up slots"
+],
+correctOption: 1,
+explanation: "Option B is correct: each session supports up to 50 scheduled tasks. The fix is to ask Claude to list your tasks (CronList) and cancel ones you no longer need (CronDelete). Option A has the wrong limit. Option C is wrong — the limit is not plan-dependent. Option D has the wrong limit and waiting 3 days is impractical when you can just cancel unneeded tasks immediately.",
+source: "Lesson 24: Scheduled Tasks: The Loop Skill and Cron Tools"
+},
+{
+question: "Claude is busy with a 20-minute refactoring task. During that time, your `/loop 5m check the build` task was supposed to fire 4 times. What actually happens?",
+options: [
+"All 4 missed checks fire immediately in sequence as soon as Claude finishes",
+"The task fires once when Claude becomes idle — there is no catch-up for missed intervals",
+"The task fires twice: once for the first missed interval and once for the last",
+"Claude pauses the refactoring to handle each scheduled check as it comes due"
+],
+correctOption: 1,
+explanation: "Option B is correct: scheduled tasks fire between turns at low priority. If Claude is busy when a task comes due, it fires once when Claude becomes idle — not once per missed interval. There is no backlog. Option A is wrong because there is no catch-up mechanism. Option C is wrong because there is no partial catch-up either. Option D is wrong because scheduled tasks never interrupt active work — they queue at low priority and wait.",
+source: "Lesson 24: Scheduled Tasks: The Loop Skill and Cron Tools"
 }
 ]}
 />
