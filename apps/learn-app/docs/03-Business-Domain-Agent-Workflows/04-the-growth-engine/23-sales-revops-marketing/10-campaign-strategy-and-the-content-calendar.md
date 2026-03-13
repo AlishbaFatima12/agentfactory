@@ -269,7 +269,7 @@ A campaign without a measurement framework is guesswork with a budget. Define th
 
 Without thresholds, you review metrics and feel good or bad. With thresholds, you take action. "LinkedIn CPL is $380" is data. "LinkedIn CPL is $380, which is below the $400 pause threshold, so we continue" is a decision. "LinkedIn CPL is $420 for the second consecutive week, which triggers the pause threshold, so we pause UK LinkedIn and reallocate $2,500 to Google Search" is an operational decision with a specific budget consequence.
 
-The measurement framework connects to Lesson 13's RevOps dashboard. The metrics defined here become the data feeds that the `daily-briefing` agent reports on. When you build the revenue dashboard in L13, these thresholds become automated alerts instead of manual weekly checks.
+The measurement framework connects to Lesson 13's RevOps dashboard. The metrics defined here become data feeds for the Marketing Performance Agent and the Revenue Reporting Agent. When you build the revenue dashboard in L13, these thresholds become automated alerts instead of manual weekly checks.
 
 Notice that different channels have different pause thresholds. UK LinkedIn has a higher CPL threshold ($750) than PK/UAE LinkedIn ($400) because the UK market has higher advertising costs. A $500 CPL in the UK is normal; a $500 CPL in Pakistan signals overspending. Market-specific thresholds prevent you from pausing a channel that is performing well by local standards.
 

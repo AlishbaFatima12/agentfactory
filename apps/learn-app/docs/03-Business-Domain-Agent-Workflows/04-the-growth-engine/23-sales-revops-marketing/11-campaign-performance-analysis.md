@@ -291,7 +291,7 @@ Friday runs the full performance report because you need a complete week of data
 
 ### Connecting to L13's Revenue Dashboard
 
-In Lesson 13, you will build a RevOps dashboard with automated agents. The Monday-Wednesday-Friday cadence becomes the human rhythm that the dashboard automates. The `daily-briefing` agent (L13) replaces Monday's manual metric review. The `/pipeline-review` command (L13) replaces Wednesday's alignment meeting. The `/performance-report` stays a human-driven analysis because recommendations need domain judgment before execution.
+In Lesson 13, you will express this cadence through real plugin assets. The Lead Intelligence Agent and Revenue Reporting Agent replace much of Monday's manual scan. The `pipeline` skill or `/pipeline-review` sharpens Wednesday's alignment meeting. `pre-call-brief` handles meeting prep when a live deal needs context. The `/performance-report` stays human-driven because recommendations need domain judgment before execution.
 
 ## What You Built
 

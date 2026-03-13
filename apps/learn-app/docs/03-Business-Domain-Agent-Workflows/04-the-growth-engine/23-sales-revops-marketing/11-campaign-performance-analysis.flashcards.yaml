@@ -98,7 +98,7 @@ cards:
 
   - id: "ch23-11-performance-analysis-015"
     front: "How does the Monday-Wednesday-Friday cadence connect to L13's RevOps dashboard?"
-    back: "The daily-briefing agent replaces Monday's manual metric review. The /pipeline-review replaces Wednesday's alignment meeting. Friday's /performance-report stays human-driven because recommendations need domain judgment."
+    back: "Lead Intelligence Agent and Revenue Reporting Agent replace much of Monday's manual metric review. The `pipeline` skill or `/pipeline-review` sharpens Wednesday's alignment meeting. Friday's `/performance-report` stays human-driven because recommendations need domain judgment."
     difficulty: "intermediate"
     tags: ["revops-connection"]
 

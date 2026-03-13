@@ -1,14 +1,16 @@
 ---
 sidebar_position: 13
 title: "RevOps Agents and the Revenue Dashboard"
-description: "Configure five schedule-driven RevOps agents, run pipeline analysis and sales forecasts, build a weekly revenue dashboard with executive summary, and set up a daily sales briefing as the rep's morning routine"
+description: "Configure five RevOps agents, invoke real plugin skills and agents from Cowork prompts, run pipeline analysis and sales forecasts, and build a weekly revenue dashboard"
 keywords:
   [
     "RevOps agents",
     "revenue dashboard",
     "pipeline review",
     "sales forecast",
-    "daily briefing",
+    "pipeline skill",
+    "Cowork prompts",
+    "pre-call-brief",
     "lead intelligence agent",
     "CRM hygiene agent",
     "outreach sequencing agent",
@@ -49,10 +51,10 @@ skills:
     measurable_at_this_level: "Student can assess whether a revenue dashboard's seven metrics accurately represent pipeline health and produce a five-bullet executive summary that a non-technical reader can act on"
 
 learning_objectives:
-  - objective: "Configure five RevOps agents with appropriate cadence, data sources, and output format for a B2B sales operation"
+  - objective: "Configure five RevOps agents with appropriate cadence, data sources, related skills, and output format for a B2B sales operation"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student maps each agent to a day of the week and explains why the chosen cadence matches the data freshness requirement"
+    assessment_method: "Student maps each agent to a day of the week, names the skills it uses, and explains why the chosen cadence matches the data freshness requirement"
 
   - objective: "Run pipeline analysis and sales forecast commands, interpret deal-level health scores, and identify at-risk deals"
     proficiency_level: "B1"
@@ -68,17 +70,17 @@ cognitive_load:
   new_concepts: 7
   concepts_list:
     - "Five RevOps agents as a coordinated system (not isolated tools)"
-    - "Outreach Sequencing Agent (event-driven, continuous monitoring)"
+    - "Agent-to-skill mapping in the real plugin"
     - "/pipeline-review with three-dimension scoring integration"
     - "/forecast with best/worst/likely scenario modelling"
-    - "Daily sales briefing as morning routine"
+    - "Direct invocation of plugin skills and agents from Cowork prompts"
     - "Revenue dashboard with seven core metrics"
     - "Agent schedule mapped to business rhythm (daily/weekly cadence)"
-  assessment: "7 concepts at B1 level. The five agents share a common pattern from L12's monitoring architecture, reducing novelty. Pipeline review, forecast, and dashboard are new analytical outputs. The daily briefing is a practical configuration exercise."
+  assessment: "7 concepts at B1 level. The five agents share a common pattern from L12's monitoring architecture, reducing novelty. Pipeline review, forecast, and dashboard are new analytical outputs. The direct use of real skills and agents from Cowork is the key operational pattern."
 
 differentiation:
-  extension_for_advanced: "Add a sixth agent — a Competitor Intelligence Agent that scans industry news and competitor product updates weekly. Define its data sources, alert thresholds, and how its output integrates with the Lead Intelligence Agent's signals."
-  remedial_for_struggling: "Focus on the daily briefing and one agent (Lead Intelligence). If you can configure one agent's cadence, run the daily briefing, and read the pipeline review output, you have the core pattern. Add agents incrementally."
+  extension_for_advanced: "Add a sixth agent -- a Competitor Intelligence Agent that scans industry news and competitor product updates weekly. Define its data sources, alert thresholds, and how its output integrates with the Lead Intelligence Agent's signals."
+  remedial_for_struggling: "Focus on one agent (Lead Intelligence) and one skill (`pipeline`). If you can prompt each one directly in Cowork and explain when to use them, you have the core pattern. Add the other agents incrementally."
 ---
 
 # RevOps Agents and the Revenue Dashboard
@@ -87,22 +89,44 @@ In Lesson 12, you built jurisdiction-compliant outreach for three markets. Every
 
 That works when you have fifteen prospects and one rep. It breaks when NexaFlow has fifty active deals, three markets, and a sales team that needs pipeline intelligence before their first coffee. What if the system ran these workflows automatically, on schedule, without waiting for anyone to remember?
 
-RevOps agents run on cadence. They monitor signals, enrich CRM data, manage sequences, analyse campaign performance, and report on pipeline health. They produce digests. They never take autonomous action. The rep who reads the daily briefing and decides to call Meridian Logistics first is exercising judgment the agent cannot replicate. The agent identified the signal. The human chose the response.
+RevOps agents run on cadence. They monitor signals, enrich CRM data, manage sequences, analyse campaign performance, and report on pipeline health. They produce digests. They never take autonomous action. The rep who sees a fresh signal, reviews a revenue report, and decides to call Meridian Logistics first is exercising judgment the agent cannot replicate. The agent surfaced the change. The human chose the response.
+
+In the actual `sales-revops-marketing` plugin, you work with two asset types:
+
+1. **Skills** in `skills/`, such as `pipeline`, `crm-enrichment`, `sequence`, and `pre-call-brief`
+2. **Agents** in `agents/`, such as `lead-intelligence-agent` and `revenue-reporting-agent`
+
+Cowork can invoke either one from a natural-language prompt. The practical difference is scope: skills handle bounded tasks, while agents represent an operating role with a cadence, checklist, and output format.
+
+:::info Real-Life Constraint
+In this chapter, you already have the working data context: Lesson 1 generated `demo-data.md`, and the folder instructions tell Cowork to keep using it throughout the chapter. To make these agents operational in Cowork, you mainly need two things: `sales-marketing.local.md` for ICP and pipeline rules, and `/schedule` when you want Cowork to run an agent task later on a cadence instead of immediately.
+:::
 
 ## The Five RevOps Agents
 
 Each agent serves a distinct operational function. Together, they form a coordinated monitoring and reporting system that keeps NexaFlow's revenue engine running without manual prompts.
 
+:::tip How To Read This Lesson
+For each agent below, do two things:
+
+1. Prompt it directly in Cowork so you see what the asset actually does
+2. Decide where it belongs in the weekly operating rhythm
+
+This keeps the lesson grounded in the real plugin: named skills, named agents, and prompts that invoke those actual assets.
+:::
+
 ### Agent 1: Lead Intelligence Agent
 
 The Lead Intelligence Agent watches for buying signals across your pipeline and alerts reps when something changes.
 
-| Property     | Configuration                                                                               |
-| ------------ | ------------------------------------------------------------------------------------------- |
-| **Monitors** | Funding announcements, leadership changes, contract wins, hiring surges, social media posts |
-| **Trigger**  | Any HOT signal generates an alert within 2 hours                                            |
-| **Schedule** | Daily scan at 06:00 UTC, weekly digest every Monday                                         |
-| **Output**   | Priority-sorted signal digest with score impact                                             |
+| Property       | Configuration |
+| -------------- | ------------- |
+| **Monitors**   | Funding announcements, leadership changes, contract wins, hiring surges, social media posts |
+| **Related skills** | `prospect-research` + `lead-scoring` |
+| **Trigger**    | Any HOT signal generates an alert within 2 hours |
+| **Schedule**   | Daily scan at 06:00 UTC, weekly digest every Monday |
+| **Output**     | Priority-sorted signal digest with score impact |
+| **Prompt it directly** | `Use the lead-intelligence-agent to scan NexaFlow's watch list for new HOT or WARM signals since yesterday. Update scores and recommend the next rep action for each HOT signal.` |
 
 When DataForge Solutions in Karachi posts two engineering roles mentioning "logistics integration" on Rozee.pk, the agent flags it as HOT. When Gulf Express in Dubai's VP of Operations posts about modernising fleet management on LinkedIn, the agent catches it within hours. Neither signal required a rep to remember to check.
 
@@ -110,12 +134,14 @@ When DataForge Solutions in Karachi posts two engineering roles mentioning "logi
 
 The CRM Hygiene Agent scans your database for data quality issues that degrade scoring accuracy and pipeline reliability.
 
-| Property     | Configuration                                                                             |
-| ------------ | ----------------------------------------------------------------------------------------- |
-| **Monitors** | Stale records (no update in 30+ days), duplicate entries, conflicting data across sources |
-| **Action**   | Automatic enrichment of outdated fields, role change flagging, duplicate detection        |
-| **Schedule** | Weekly for Tier 1 accounts, monthly for all accounts                                      |
-| **Output**   | Categorised issue report with recommended actions                                         |
+| Property       | Configuration |
+| -------------- | ------------- |
+| **Monitors**   | Stale records (no update in 30+ days), duplicate entries, conflicting data across sources |
+| **Related skills** | `crm-enrichment` + `lead-scoring` |
+| **Action**     | Automatic enrichment of outdated fields, role change flagging, duplicate detection |
+| **Schedule**   | Weekly for Tier 1 accounts, monthly for all accounts |
+| **Output**     | Categorised issue report with recommended actions |
+| **Prompt it directly** | `Use the crm-hygiene-agent to audit NexaFlow's HOT and WARM leads with last enrichment older than 7 days. Refresh stale records, flag role changes, and report the data-quality issues that need rep review.` |
 
 A CRM where Kaizen Supply Co. shows 120 employees while LinkedIn shows 340 produces inaccurate Fit scores. The Hygiene Agent catches the discrepancy and recommends the update. A rep who relies on the old figure underestimates the deal size and under-invests in the relationship.
 
@@ -123,12 +149,14 @@ A CRM where Kaizen Supply Co. shows 120 employees while LinkedIn shows 340 produ
 
 The Outreach Sequencing Agent monitors active sequences and manages touch progression based on prospect behaviour.
 
-| Property     | Configuration                                                                |
-| ------------ | ---------------------------------------------------------------------------- |
-| **Monitors** | Sequence progress, email opens, link clicks, replies, bounces                |
-| **Action**   | Triggers next touch on schedule, pauses on reply, stops on bounce or opt-out |
-| **Schedule** | Continuous (event-driven, not time-driven)                                   |
-| **Output**   | Sequence status report with engagement metrics                               |
+| Property       | Configuration |
+| -------------- | ------------- |
+| **Monitors**   | Sequence progress, email opens, link clicks, replies, bounces |
+| **Related skills** | `sequence` + `outreach` |
+| **Action**     | Triggers next touch on schedule, pauses on reply, stops on bounce or opt-out |
+| **Schedule**   | Continuous (event-driven, not time-driven) |
+| **Output**     | Sequence status report with engagement metrics |
+| **Prompt it directly** | `Use the outreach-sequencing-agent to review NexaFlow's active HOT and WARM sequences. Show which prospects need the next touch, which sequences must pause because of replies or bounces, and what the next approved touch should be.` |
 
 This agent is different from the others. It runs continuously, reacting to events rather than waiting for a schedule. When a prospect opens email three in a six-touch sequence and clicks the case study link, the agent advances to touch four. When a prospect replies "not interested," the agent pauses the sequence immediately. When an email bounces, the sequence stops and the CRM record gets flagged for the Hygiene Agent to investigate.
 
@@ -138,12 +166,14 @@ The over-automation risk from Lesson 6 applies here. An agent that sends touch f
 
 The Marketing Performance Agent evaluates campaign results across channels and identifies where budget is working and where it is not.
 
-| Property     | Configuration                                                                                |
-| ------------ | -------------------------------------------------------------------------------------------- |
-| **Monitors** | LinkedIn Ads, email nurture, content/SEO, Google Ads, events                                 |
-| **Action**   | Weekly analysis report with channel comparison, CPL trends, and optimisation recommendations |
-| **Schedule** | Every Friday                                                                                 |
-| **Output**   | Channel performance digest with budget status                                                |
+| Property       | Configuration |
+| -------------- | ------------- |
+| **Monitors**   | LinkedIn Ads, email nurture, content/SEO, Google Ads, events |
+| **Related skills** | `performance-analysis` |
+| **Action**     | Weekly analysis report with channel comparison, CPL trends, and optimisation recommendations |
+| **Schedule**   | Every Friday |
+| **Output**     | Channel performance digest with budget status |
+| **Prompt it directly** | `Use the marketing-performance-agent to analyse NexaFlow's last 7 days of campaign performance against targets. Compare to the prior week and recommend the top 3 optimisations.` |
 
 NexaFlow's email nurture campaign delivers leads at $9.50 CPL with 4.8% conversion. Google Ads delivers leads at $387.50 CPL with 0.9% conversion. The Marketing Performance Agent flags the disparity. But the recommendation to "pause Google Ads" requires context the agent does not have -- if Google Ads targets enterprise logistics directors while email targets mid-market operations managers, comparing CPL across them is misleading. The agent compares numbers. You compare strategy.
 
@@ -151,31 +181,34 @@ NexaFlow's email nurture campaign delivers leads at $9.50 CPL with 4.8% conversi
 
 The Revenue Reporting Agent aggregates pipeline metrics, tracks deal velocity, and produces the weekly revenue dashboard.
 
-| Property     | Configuration                                                                        |
-| ------------ | ------------------------------------------------------------------------------------ |
-| **Monitors** | Pipeline value, conversion rates, deal velocity, forecast accuracy, stage stagnation |
-| **Action**   | Weekly revenue dashboard with executive summary                                      |
-| **Schedule** | Every Monday                                                                         |
-| **Output**   | Dashboard with seven core metrics plus five-bullet executive email                   |
+| Property       | Configuration |
+| -------------- | ------------- |
+| **Monitors**   | Pipeline value, conversion rates, deal velocity, forecast accuracy, stage stagnation |
+| **Related skills** | `pipeline` |
+| **Action**     | Weekly revenue dashboard with executive summary |
+| **Schedule**   | Every Monday |
+| **Output**     | Dashboard with seven core metrics plus five-bullet executive email |
+| **Prompt it directly** | `Use the revenue-reporting-agent to build NexaFlow's weekly revenue dashboard. Include pipeline coverage, at-risk deals, lead velocity, marketing contribution, and forecast versus quarterly target.` |
 
 :::info Connector Note
-With HubSpot, Close, or another CRM connected via MCP, plus Slack and Google Calendar integrations, these agents can monitor a live pipeline, send real Slack alerts, and schedule calendar events. Without connectors, agents produce text-based reports that you review manually. The workflows are identical -- only the delivery channel changes.
+For this chapter, you do not need Slack, email, or other external delivery tools to make the lesson work. If you run `/schedule` in Cowork and assign one of these agent tasks, Cowork executes that task at the scheduled time using the workspace context you already set up in Lesson 1. External CRM or calendar connectors can enrich the workflow later, but they are not required for the core pattern here.
 :::
 
-## Pipeline Analysis
+## The `pipeline` Skill: Analysis and Forecasting
 
-NexaFlow's pipeline has ten active deals. Before you build the dashboard, you need to understand the pipeline's health at the deal level.
+NexaFlow's pipeline has ten active deals. The main skill asset for deal analysis in this lesson is `pipeline`. You can invoke it directly from Cowork, or, if the base Sales plugin is installed, use `/pipeline-review` and `/forecast` as familiar entry points into the same working context.
 
-### Running /pipeline-review
+### Prompting the `pipeline` Skill
 
+```text
+Use the `pipeline` skill to review NexaFlow's active pipeline.
+Show deal-level health scores, weighted pipeline, stalled deals,
+and realistic forecast this quarter.
 ```
-Run /pipeline-review for NexaFlow's active pipeline.
-Include deal-level health scores.
-```
 
-The base Sales plugin's `/pipeline-review` command produces a structured pipeline overview. When the RevOps extension is installed, the extension's pipeline skill auto-activates, adding three-dimension scoring integration (Fit + Timing + Engagement from Lesson 3) and deal-level health scores.
+If the base Sales plugin is also installed, Cowork may surface similar analysis through `/pipeline-review` and `/forecast`. The important plugin asset in this lesson is the extension's `pipeline` skill, which adds three-dimension scoring integration (Fit + Timing + Engagement from Lesson 3) and deal-level health logic.
 
-**What to expect:** The `/pipeline-review` produces a deal-level health assessment. Your output will vary, but look for these sections:
+**What to expect:** The `pipeline` skill produces a deal-level health assessment. Your output will vary, but look for these sections:
 
 | Section            | Intent                                                    | What to Verify                                             |
 | ------------------ | --------------------------------------------------------- | ---------------------------------------------------------- |
@@ -186,29 +219,31 @@ The base Sales plugin's `/pipeline-review` command produces a structured pipelin
 | Forecast gap       | Weighted pipeline vs quarterly target                     | Shows whether current pipeline covers the target           |
 
 :::note Your output will vary
-The pipeline data depends on your demo-data.md content and the deals you have been working throughout this chapter. The teaching point is _interpreting deal health in context_: a deal stalled in Proposal for 30+ days with no engagement is not "in progress" — it is silent. A deal with high Fit but low Timing may close next quarter, not this one. The agent scores deals on data it can measure. You evaluate deals on context it cannot.
+The pipeline data depends on your demo-data.md content and the deals you have been working throughout this chapter. The teaching point is _interpreting deal health in context_: a deal stalled in Proposal for 30+ days with no engagement is not "in progress" -- it is silent. A deal with high Fit but low Timing may close next quarter, not this one. The agent scores deals on data it can measure. You evaluate deals on context it cannot.
 :::
 
 Review the output for three categories: deals that need immediate intervention (stalled, silent, or missing a champion), deals that are your strongest closes (high health, active engagement), and the gap between your weighted pipeline and quarterly target.
 
-Weighted pipeline calculation must show the per-deal math: multiply each deal value by its stage probability (Discovery=20%, Qualification=40%, Proposal=60%, Negotiation=80%), then sum all weighted values. For each stalled deal, calculate what percentage of the remaining quota gap that deal represents — this quantifies the impact of losing it and determines whether replacement pipeline is needed.
+Weighted pipeline calculation must show the per-deal math: multiply each deal value by its stage probability (Discovery=20%, Qualification=40%, Proposal=60%, Negotiation=80%), then sum all weighted values. For each stalled deal, calculate what percentage of the remaining quota gap that deal represents -- this quantifies the impact of losing it and determines whether replacement pipeline is needed.
 
 Meridian Logistics and Gulf Express are the strongest closes. Meridian has a champion (Sarah Chen), an active proposal, and scores of 92/100. Gulf Express is in negotiation with high engagement. These two deals represent $275,000 in near-term revenue.
 
 ## Sales Forecast
 
-With the pipeline reviewed, run the forecast to model revenue scenarios.
+With the pipeline reviewed, use the same `pipeline` skill to model revenue scenarios.
 
-### Running /forecast
+### Forecast Prompt
 
-```
-Run /forecast for NexaFlow's pipeline.
+```text
+Use the `pipeline` skill to forecast NexaFlow's current quarter.
 Show best, likely, and worst case scenarios.
+
+If the base Sales plugin is installed, compare this with `/forecast`.
 ```
 
-The base Sales plugin's `/forecast` command produces a revenue projection model. It has no extension equivalent -- `/forecast` runs from the base plugin directly.
+`/forecast` belongs to the base Sales plugin. In the chapter stack, it complements the extension's `pipeline` skill. In direct plugin use, you can still ask the `pipeline` skill for committed, likely, upside, or best/likely/worst scenario logic.
 
-**What to expect:** The `/forecast` produces scenario-based revenue projections. Your output will vary, but look for these sections:
+**What to expect:** The `pipeline` skill or `/forecast` produces scenario-based revenue projections. Your output will vary, but look for these sections:
 
 | Section              | Intent                               | What to Verify                                                   |
 | -------------------- | ------------------------------------ | ---------------------------------------------------------------- |
@@ -220,11 +255,11 @@ The base Sales plugin's `/forecast` command produces a revenue projection model.
 The forecast depends on your pipeline data. The teaching point is _evaluating assumptions_: Does the agent's probability estimate for your largest deal match your knowledge of the procurement cycle? Is a 40% "likely" probability realistic for a deal with a slow decision-maker? The gap between your assessment and the agent's is where your judgment adds value. The agent calculates. You contextualise.
 :::
 
-Evaluate the assumptions. For your swing deals — the ones where probability estimates determine whether you hit target — ask whether the agent's probability reflects what you know about the procurement timeline, competitive dynamics, and champion strength. That judgment is yours, not the agent's.
+Evaluate the assumptions. For your swing deals -- the ones where probability estimates determine whether you hit target -- ask whether the agent's probability reflects what you know about the procurement timeline, competitive dynamics, and champion strength. That judgment is yours, not the agent's.
 
 ## Building the Revenue Dashboard
 
-The revenue dashboard consolidates pipeline health, forecast, and operational metrics into a single weekly view. Define seven core metrics.
+The revenue dashboard consolidates pipeline health, forecast, and operational metrics into a single weekly view. In Cowork, you can invoke the `revenue-reporting-agent` directly with a prompt. That agent then frames the reporting role for Monday morning RevOps.
 
 | #   | Metric                          | Source                      | What It Reveals             |
 | --- | ------------------------------- | --------------------------- | --------------------------- |
@@ -232,16 +267,16 @@ The revenue dashboard consolidates pipeline health, forecast, and operational me
 | 2   | Lead-to-SAL conversion rate     | CRM + Scoring data          | Qualification effectiveness |
 | 3   | Pipeline created (this week)    | CRM new opportunities       | Growth trajectory           |
 | 4   | Average deal size               | Pipeline data               | Market positioning          |
-| 5   | Pipeline at risk ($ value)      | /pipeline-review            | Revenue exposure            |
+| 5   | Pipeline at risk ($ value)      | `pipeline` skill / `/pipeline-review` | Revenue exposure     |
 | 6   | Close rate (trailing 90 days)   | CRM closed-won/closed-lost  | Sales effectiveness         |
 | 7   | CAC by channel                  | Marketing Performance Agent | Budget efficiency           |
 
 ### Running the Dashboard
 
-```
-Build NexaFlow's weekly revenue dashboard using the demo pipeline data.
-Include all seven metrics. Then produce a weekly executive email --
-five bullets, maximum 150 words.
+```text
+Use the `revenue-reporting-agent` to build NexaFlow's weekly revenue dashboard.
+Include all seven metrics below. Then produce a weekly executive email
+in five bullets, maximum 150 words.
 ```
 
 **What to expect:** The agent produces a weekly dashboard with metrics and executive summary. Your output will vary, but look for these sections:
@@ -252,60 +287,88 @@ five bullets, maximum 150 words.
 | Executive summary (5 bullets) | 150-word email for CEO or VP             | Each bullet drives a specific decision or action    |
 
 :::note Your output will vary
-The dashboard depends on your pipeline data and campaign metrics. The teaching point is the _executive summary_: a CEO scanning it on Monday morning should see the headline in 30 seconds — pipeline health, at-risk deals, forecast status, and the 3 actions that matter this week. No jargon, no dashboards to navigate. Five bullets that drive five decisions.
+The dashboard depends on your pipeline data and campaign metrics. The teaching point is the _executive summary_: a CEO scanning it on Monday morning should see the headline in 30 seconds -- pipeline health, at-risk deals, forecast status, and the 3 actions that matter this week. No jargon, no dashboards to navigate. Five bullets that drive five decisions.
 :::
 
-## The Daily Briefing
+## A Real Morning Workflow in Cowork
 
-The Sales plugin includes a `daily-briefing` skill that produces a morning snapshot for each rep. This is the first thing a rep reads before their first meeting.
+There is no standalone `daily-briefing` skill in this plugin. A rep's morning routine is a short sequence of prompts against the real assets that do exist.
 
+### Prompt 1: Check New Signals
+
+```text
+Use the `lead-intelligence-agent` to show any new HOT or WARM signals
+for NexaFlow accounts since yesterday. Include the recommended next action.
 ```
-Give me today's sales briefing for NexaFlow.
+
+### Prompt 2: Check Pipeline Risk
+
+```text
+Use the `revenue-reporting-agent` to show this week's at-risk deals,
+weighted pipeline, and forecast gap for NexaFlow.
 ```
 
-**What to expect:** The `daily-briefing` skill produces a morning snapshot. Your output will vary, but look for these sections:
+### Prompt 3: Prepare for the Top Meeting
 
-| Section                 | Intent                                      | What to Verify                                                    |
-| ----------------------- | ------------------------------------------- | ----------------------------------------------------------------- |
-| Deals closing this week | Urgent pipeline items with required actions | Each deal includes the specific next step for today               |
-| Meetings today          | Today's calls with prep context             | Each meeting references the research brief and engagement history |
-| Signals to act on       | New intelligence requiring attention        | Buying signals, stalled deals, or competitive alerts flagged      |
-| Pipeline snapshot       | Quick metrics summary                       | Active deals, at-risk count, HOT signals, weighted pipeline       |
+```text
+Use the `pre-call-brief` skill to prepare me for today's highest-priority
+meeting. If it is Meridian Logistics, build the brief for that deal.
+```
 
-:::note Your output will vary
-The briefing composes skills from across the chapter — research briefs from Lesson 2, scoring from Lesson 3, meeting context from Lesson 7, and pipeline data from the Revenue Reporting Agent. The teaching point is that this single view replaces fifteen minutes of manual CRM checking. Configure it as the rep's morning routine: before opening email, before checking Slack, the daily briefing tells you what is closing, who you are meeting, and what signals need attention.
+If sequence exceptions matter today, prompt the `outreach-sequencing-agent` next.
+
+:::note Why this is more coherent
+This is the real plugin workflow. Cowork invokes named agents and named skills that are actually present in `agents/` and `skills/`. You can save these prompts, reuse them, or chain them into a team routine, but you do not need to invent a new plugin asset to explain the workflow.
 :::
 
 ## Configuring Agent Schedules
 
 Map each agent to the business rhythm. Not every agent runs every day. The schedule reflects when each type of intelligence is most valuable.
 
-| Day            | Agent                                     | Why This Day                                                       |
-| -------------- | ----------------------------------------- | ------------------------------------------------------------------ |
-| **Monday**     | Revenue dashboard + /forecast             | Start the week knowing pipeline health and forecast status         |
-| **Wednesday**  | CRM Hygiene report                        | Mid-week data quality check catches issues before Friday reporting |
-| **Friday**     | Marketing Performance analysis            | End-of-week campaign review informs next week's budget decisions   |
-| **Daily**      | Sales briefing + Lead Intelligence alerts | Reps need signal intelligence before their first meeting           |
-| **Continuous** | Outreach Sequencing Agent                 | Event-driven -- responds to prospect behaviour in real time        |
+In Cowork, this is where `/schedule` fits. You define the task in natural language, assign the cadence, and Cowork runs that agent task at the chosen time against the same chapter workspace.
+
+| Cadence        | Asset                      | Related skills                     | Why It Matters                                                     |
+| -------------- | -------------------------- | ---------------------------------- | ------------------------------------------------------------------ |
+| **Monday**     | Revenue Reporting Agent    | `pipeline`                         | Start the week knowing pipeline health and forecast status         |
+| **Wednesday**  | CRM Hygiene Agent          | `crm-enrichment` + `lead-scoring`  | Mid-week data quality check catches issues before Friday reporting |
+| **Friday**     | Marketing Performance Agent | `performance-analysis`            | End-of-week campaign review informs next week's budget decisions   |
+| **Daily**      | Lead Intelligence Agent    | `prospect-research` + `lead-scoring` | Reps need new buying signals before the day starts               |
+| **Continuous** | Outreach Sequencing Agent  | `sequence` + `outreach`            | Event-driven -- responds to prospect behaviour in real time        |
+| **On demand**  | `pipeline` skill           | none                               | Deep deal review and forecasting before commit calls or QBRs       |
+| **On demand**  | `pre-call-brief` skill     | prospect and deal context          | Meeting prep for the deals surfaced by the agents                  |
 
 This schedule means a NexaFlow rep's week looks like this:
 
-**Monday morning:** Read the revenue dashboard (30 seconds) and daily briefing (2 minutes). Know the forecast gap, the at-risk deals, and today's meetings.
+**Monday morning:** Prompt the Revenue Reporting Agent. Know the forecast gap, the at-risk deals, and where leadership attention is required.
 
 **Wednesday:** CRM Hygiene report arrives. Review flagged records, merge duplicates, update stale data. Ten minutes of maintenance that keeps scoring accurate.
 
 **Friday afternoon:** Marketing Performance report arrives. See which channels delivered this week. Decide whether to adjust budget for next week before leaving for the weekend.
 
-**Every morning:** Daily briefing. Deals closing, meetings today, signals to act on. The rep starts the day informed, not scrambling.
+**Every morning:** Check the Lead Intelligence Agent. Before any important call, run `pre-call-brief`. If sequences need attention, prompt the Outreach Sequencing Agent. The rep starts the day informed, not scrambling.
 
 **All week:** Outreach Sequencing Agent handles touch progression automatically. The rep focuses on conversations, not on remembering which prospect needs touch four.
 
+### Example `/schedule` Prompts
+
+```text
+/schedule
+Every Monday at 9:00 AM, use the revenue-reporting-agent to build NexaFlow's
+weekly revenue dashboard from demo-data.md and my current chapter workspace.
+```
+
+```text
+/schedule
+Every weekday at 8:00 AM, use the lead-intelligence-agent to check for new HOT
+or WARM signals in NexaFlow's target accounts and report the next action.
+```
+
 ## What You Built
 
-1. Five RevOps agents understood and configured -- each with a clear purpose, schedule, and output format
+1. Five RevOps agents understood and configured -- each with a clear purpose, schedule, output format, and skill mapping
 2. Pipeline health audit with deal-level health scores and three-dimension scoring, identifying the 3 highest-risk and 2 strongest deals
 3. Sales forecast with three scenarios (best/likely/worst), revealing a $120,000 gap to quarterly target
-4. Daily sales briefing configured as the rep's morning routine, composing skills from across the chapter
+4. A real Cowork routine using `lead-intelligence-agent`, `revenue-reporting-agent`, and `pre-call-brief` instead of a fictional standalone briefing skill
 5. Weekly revenue dashboard with seven metrics and a 150-word executive summary
 6. Agent schedule mapped to NexaFlow's business rhythm -- Monday through Friday, daily and continuous
 
@@ -315,7 +378,7 @@ Use these prompts in your preferred AI assistant.
 
 **Prompt 1: Pipeline Analysis**
 
-```
+```text
 Run /pipeline-review and /forecast on NexaFlow's demo pipeline data
 (or your own pipeline if you have one).
 
@@ -324,14 +387,14 @@ From the output, identify:
 2. The 2 most likely to close this quarter and why
 3. The gap between likely forecast and quarterly target
 4. One deal where you disagree with the agent's probability
-   estimate — explain why your assessment differs
+   estimate -- explain why your assessment differs
 ```
 
 **What you are learning:** Pipeline analysis is not about reading numbers. It is about interpreting deal health in context. The agent scores deals on data it can measure (stage duration, engagement, signals). You evaluate deals on context it cannot measure (relationship strength, procurement cycles, competitive dynamics). The disagreement between your assessment and the agent's is where your judgment adds value.
 
 **Prompt 2: Dashboard for a Different Metric**
 
-```
+```text
 NexaFlow's revenue dashboard tracks 7 metrics focused on pipeline
 and acquisition. Reconfigure the Revenue Reporting Agent to produce
 a dashboard focused on customer retention instead of pipeline.
@@ -350,27 +413,30 @@ NexaFlow's business context.
 
 **What you are learning:** Dashboard design is metric selection. Changing from pipeline to retention changes every data source, every threshold, and every recommendation. The underlying agent architecture (schedule-driven, digest-producing, stateless) stays the same. By rebuilding the dashboard for a different business question, you internalise the pattern: agents are configurable instruments, not fixed reports.
 
-**Prompt 3: Daily Briefing in Practice**
+**Prompt 3: Direct Agent and Skill Workflow**
 
-```
-Run "Give me today's sales briefing" for NexaFlow's pipeline
-(or your own pipeline if available).
+```text
+In Cowork, run this sequence for NexaFlow:
 
-After reading the briefing:
+1. Use the `lead-intelligence-agent` to show new HOT/WARM signals since yesterday
+2. Use the `revenue-reporting-agent` to show at-risk deals, weighted pipeline, and forecast gap
+3. Use the `pre-call-brief` skill for the highest-priority meeting today
+
+After reviewing the outputs:
 1. Write down the 3 actions you would take today based on
-   what the briefing told you
+   what these outputs told you
 2. Now think about what you would have done this morning
-   WITHOUT the briefing — would your priorities have been
+   WITHOUT these outputs -- would your priorities have been
    the same?
-3. Identify one signal in the briefing that changes your
+3. Identify one signal or risk in the outputs that changes your
    plan for today. What would you have missed without it?
 
-If using your own data: which section of the briefing was
-most valuable? Which was noise? How would you configure the
-agent to show more of what matters and less of what does not?
+If using your own data: which agent or skill output was
+most valuable? Which was noise? How would you change the
+prompting routine to show more of what matters and less of what does not?
 ```
 
-**What you are learning:** The value of a daily briefing is not information delivery -- it is priority realignment. Without the briefing, you start the day with yesterday's mental model. With it, you start with today's signals. The third question forces you to identify the specific moment where the agent's output changed your behaviour. That is the measurable value of automation: not time saved, but decisions improved.
+**What you are learning:** The value of this routine is not information delivery -- it is priority realignment. Without these outputs, you start the day with yesterday's mental model. With them, you start with today's signals, risks, and meeting context. The third question forces you to identify the specific moment where a real plugin asset changed your behaviour. That is the measurable value of automation: not time saved, but decisions improved.
 
 ## Flashcards Study Aid
 

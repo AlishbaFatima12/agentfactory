@@ -2,8 +2,8 @@
 title: "Chapter 23 — Sales, RevOps & Marketing"
 sidebar_position: 0
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-23/revenue-engine-blueprint.pdf"
-  title: "Revenue Engine Blueprint"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-23/the-revenue-engine.pdf"
+  title: "The Revenue Engine"
   height: 700
 ---
 
@@ -44,7 +44,7 @@ This chapter requires **Cowork** (set up in Chapter 17) and three plugin layers.
 | 10  | Campaign Strategy and the Content Calendar | `/campaign-plan`; `/email-sequence`; content calendar; measurement framework               |
 | 11  | Campaign Performance Analysis              | `/performance-report`; extension analysis comparison; `/competitive-brief`; weekly cadence |
 | 12  | Outreach Compliance and Regional Context   | PECA, GDPR, UAE data law; jurisdiction overlays; 3-market compliant outreach               |
-| 13  | RevOps Agents and the Revenue Dashboard    | 5 agents; `/pipeline-review`; `/forecast`; `daily-briefing`; revenue dashboard             |
+| 13  | RevOps Agents and the Revenue Dashboard    | 5 agents; `pipeline` skill; direct Cowork prompts; revenue dashboard                         |
 | 14  | The Revenue Engine Sprint                  | Full sprint: ICP → research → score → outreach → campaign → dashboard (capstone)           |
 
 ### Agent Output Taxonomy
