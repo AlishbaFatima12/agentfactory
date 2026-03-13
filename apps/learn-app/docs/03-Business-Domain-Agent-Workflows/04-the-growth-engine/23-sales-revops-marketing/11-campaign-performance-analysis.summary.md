@@ -31,5 +31,5 @@ Campaign analysis turns data into decisions, not dashboards. The base /performan
 
 - Directly applies L10's measurement framework thresholds as the decision criteria for pause/continue/realloc actions
 - ICP-filtered analysis connects back to L02 (ICP calibration) and L03 (scoring dimensions)
-- The Monday-Wednesday-Friday cadence sets up L13's automated RevOps agents — the daily-briefing agent replaces Monday's manual check, /pipeline-review replaces Wednesday's alignment
+- The Monday-Wednesday-Friday cadence sets up L13's real plugin assets -- Lead Intelligence Agent and Revenue Reporting Agent replace much of Monday's manual scan, while `pipeline` or `/pipeline-review` sharpens Wednesday's alignment
 - Competitive brief output feeds directly into content calendar adjustments from L10

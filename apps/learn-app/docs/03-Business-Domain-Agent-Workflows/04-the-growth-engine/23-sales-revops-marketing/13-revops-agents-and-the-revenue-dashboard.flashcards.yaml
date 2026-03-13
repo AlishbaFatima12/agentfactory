@@ -1,7 +1,7 @@
 deck:
   id: "ch23-13-revops-agents"
   title: "RevOps Agents and the Revenue Dashboard"
-  description: "Five RevOps agents, pipeline analysis, sales forecasting, revenue dashboard, and the daily briefing"
+  description: "Five RevOps agents, the pipeline skill, sales forecasting, and the revenue dashboard"
   tags: ["sales", "revops", "marketing", "chapter-23", "revops-agents"]
   version: 1
 
@@ -56,15 +56,15 @@ cards:
     tags: ["crm-hygiene"]
 
   - id: "ch23-13-revops-agents-009"
-    front: "How does the daily sales briefing compose skills from across the chapter?"
-    back: "It assembles research briefs (L02), scoring data (L03), meeting context (L07), and pipeline data from the Revenue Reporting Agent into a single morning view — replacing 15 minutes of manual CRM checking."
+    front: "What are the two plugin asset types used in Lesson 13, and how are they invoked?"
+    back: "Skills and agents. Cowork can invoke either one from a natural-language prompt. Skills handle bounded tasks like `pipeline` or `pre-call-brief`; agents represent operating roles like lead intelligence or revenue reporting."
     difficulty: "intermediate"
-    why: "What is lost if a rep starts the day without the briefing?"
-    tags: ["daily-briefing"]
+    why: "Why does it matter to name the real asset type correctly?"
+    tags: ["skills-vs-agents"]
 
   - id: "ch23-13-revops-agents-010"
-    front: "What agent runs on Monday, and why that day?"
-    back: "Revenue dashboard + /forecast. Monday starts the week with pipeline health and forecast status, so the team knows the gap and at-risk deals before taking any action."
+    front: "What runs on Monday, and why that day?"
+    back: "The Revenue Reporting Agent runs on Monday. It uses the `pipeline` skill to surface pipeline health and forecast status before the team starts taking action for the week."
     difficulty: "basic"
     tags: ["agent-schedule"]
 
@@ -102,8 +102,8 @@ cards:
     tags: ["forecast"]
 
   - id: "ch23-13-revops-agents-016"
-    front: "What is the value of the daily briefing beyond information delivery?"
-    back: "Priority realignment. Without the briefing, a rep starts with yesterday's mental model. With it, they start with today's signals — the measurable value is decisions improved, not just time saved."
+    front: "If there is no daily briefing skill, what should a rep actually prompt in the morning?"
+    back: "Prompt the Lead Intelligence Agent for new signals, the Revenue Reporting Agent for at-risk deals and forecast context, and `pre-call-brief` for the highest-priority meeting. Add the Outreach Sequencing Agent if sequence exceptions need attention."
     difficulty: "advanced"
-    why: "How would you measure whether the daily briefing actually changes rep behaviour?"
-    tags: ["daily-briefing"]
+    why: "Why is this more realistic than inventing a new briefing asset?"
+    tags: ["real-workflow"]
