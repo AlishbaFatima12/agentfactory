@@ -168,7 +168,6 @@ In AAOIFI disclosures, the amount and recipient charity must be disclosed and co
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex09-global-zakat-comparison.md`
 :::
 
 ## Exercise 10: Global Zakat Comparison
@@ -273,7 +272,9 @@ Click **Create**.
 
 ## Try With AI
 
-### Prompt 1: Zakat Arbitrage Analysis
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
+
+### Prompt 1: Reproduce
 
 ```
 I am advising an Islamic banking group with subsidiaries in Saudi
@@ -292,7 +293,7 @@ between the two jurisdictions?
 
 **What you are learning:** The two formulas can produce materially different zakat obligations from identical balance sheet data. This is not arbitrage in the Shariah sense — zakat is obligatory regardless — but it has real capital planning implications for multi-jurisdiction Islamic banking groups.
 
-### Prompt 2: Non-Shariah Income Purification Workflow
+### Prompt 2: Adapt
 
 ```
 An Islamic bank in Bahrain received BHD 450,000 of inadvertent
@@ -310,7 +311,7 @@ recurrence?
 
 **What you are learning:** Non-Shariah income purification is a separate obligation from zakat. The purification amount must be donated to charity and **cannot** be offset against the bank's zakat obligation or included in retained earnings. The internal controls question connects accounting treatment to operational governance.
 
-### Prompt 3: Pakistan 2028 Conversion Impact on Zakat
+### Prompt 3: Apply
 
 ```
 Pakistan has mandated full conversion of the banking system to

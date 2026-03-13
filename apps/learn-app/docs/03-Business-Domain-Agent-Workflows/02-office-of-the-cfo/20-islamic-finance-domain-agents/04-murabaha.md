@@ -162,8 +162,37 @@ The practical significance for a CA/CPA: if the jurisdiction's Shariah Superviso
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex01-murabaha-bahrain-malaysia.md`
 :::
+
+## Generate Your Demo Practice Data
+
+This is the first exercise lesson. Instead of downloading exercise data, generate it with a prompt. Copy this into Cowork:
+
+```
+Generate demo exercise data for a murabaha transaction exercise:
+
+1. BAHRAIN ENTITY (AAOIFI FAS 2/FAS 28)
+   - Islamic bank: Gulf Islamic Bank BSC, Bahrain
+   - Asset: Commercial vehicle, cost price USD 1,000,000
+   - Mark-up: 20% (USD 200,000)
+   - Tenure: 24 months, equal monthly instalments
+   - Customer: Al Jazeera Trading Company WLL
+
+2. MALAYSIA ENTITY (MFRS 9)
+   - Islamic bank: Bank Islam Malaysia Berhad
+   - Same asset, same pricing, same tenure, same customer type
+   - But different labels and classification under MFRS 9
+
+For each entity, generate:
+- Full amortisation schedule (24 months)
+- Month 1 journal entries under the applicable framework
+- Balance sheet presentation at Month 1 and Month 12
+
+Format: structured markdown with clear section headers.
+Save the output as islamic-finance-demo-data.md in my working folder.
+```
+
+**Output:** A structured dataset containing dual-framework murabaha schedules. Save this file — subsequent exercise lessons build on this data pattern. Each lesson's exercise prompt generates its own scenario data inline.
 
 ## Practice Exercise 1: Murabaha Income Schedule — Bahrain (AAOIFI) vs Malaysia (MFRS)
 
@@ -199,9 +228,9 @@ The practical significance for a CA/CPA: if the jurisdiction's Shariah Superviso
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Murabaha Default Scenario
+### Prompt 1: Reproduce
 
 ```
 A customer defaults on a murabaha receivable after paying 6 of 18
@@ -225,7 +254,7 @@ impairment treatment.
 
 **What you are learning:** The Shariah constraint on default — no additional charges on overdue amounts — is one of the most important practical differences between Islamic and conventional banking. In conventional banking, late payment fees and penalty interest are standard revenue sources. In Islamic banking, they are prohibited. This changes the economics of credit risk management and makes the ECL provisioning exercise more consequential, because the bank cannot recover additional income from defaulting customers.
 
-### Prompt 2: Commodity Murabaha Cash Flow Analysis
+### Prompt 2: Adapt
 
 ```
 A customer needs 1,000,000 in cash. The bank structures a
@@ -248,6 +277,34 @@ finance principles but has not structured a tawarruq before.
 ```
 
 **What you are learning:** Commodity murabaha exposes the tension between Shariah form and economic substance. The accounting is identical to asset murabaha. The economic outcome for the customer — receiving cash now and repaying more later — resembles a conventional loan. The Shariah validity depends on whether the commodity transactions are genuinely separate. This is the kind of judgment that distinguishes a competent Islamic finance practitioner from one who merely follows templates.
+
+### Prompt 3: Apply
+
+```
+You are a CA/CPA advising an Islamic bank in YOUR jurisdiction
+(pick your home country or the country you plan to practise in).
+
+A corporate client wants murabaha financing of USD 2,000,000
+for industrial machinery. Tenure: 36 months, equal monthly
+instalments. Mark-up: 22%.
+
+1. Identify which accounting regime governs your jurisdiction
+   (AAOIFI primary, IFRS with Islamic guidance, or local
+   standards). Name the specific standard that applies.
+2. Generate the four-step journal entry sequence using the
+   correct income labels for your jurisdiction.
+3. Build the first 6 months of the amortisation schedule
+   with jurisdiction-appropriate column headers.
+4. Identify one compliance risk specific to your jurisdiction
+   that would not apply in Bahrain or Malaysia.
+5. If the client also has a subsidiary in Bahrain, what
+   changes when you prepare the subsidiary's entries under
+   AAOIFI FAS 28?
+
+Present your work as a client advisory memo.
+```
+
+**What you are learning:** Textbook examples use Bahrain and Malaysia because they are clean reference cases. Real practice happens in your jurisdiction, where the regime may be less clearly defined. Applying murabaha accounting to your own regulatory context forces you to navigate the gap between the three-regime framework and the specifics of your local standard-setter — exactly the skill that makes jurisdiction-aware agents valuable.
 
 ## Flashcards Study Aid
 

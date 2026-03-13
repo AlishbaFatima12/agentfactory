@@ -245,9 +245,9 @@ For example, Al-Jazira Steel (BB+, TTC PD 1.8%):
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to work through these exercises.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Staging a Different Portfolio
+### Prompt 1: Reproduce
 
 ```
 I have completed an IFRS 9 staging exercise for a UK mortgage
@@ -273,7 +273,7 @@ for retail mortgage?
 
 **What you are learning:** Staging principles are the same across asset classes, but the qualitative indicators change. SME lending introduces sector risk, revenue volatility, and complex security types that mortgages do not. By staging a different portfolio, you test whether you understand the SICR framework versus having memorised the mortgage answers.
 
-### Prompt 2: Oil Price Shock Stress Test
+### Prompt 2: Adapt
 
 ```
 I have built an ECL model for a GCC corporate portfolio
@@ -297,7 +297,7 @@ For this stress scenario:
 
 **What you are learning:** Stress testing reveals whether your ECL model captures tail risk. The oil price shock is the defining stress scenario for GCC banks because it cascades through government revenue, corporate earnings, property values, and consumer spending. By designing the stress yourself (rather than using pre-built parameters), you learn how macroeconomic variables translate into credit risk parameters.
 
-### Prompt 3: Sensitivity and PMA Design
+### Prompt 3: Apply
 
 ```
 Using the GCC corporate ECL model results, answer:

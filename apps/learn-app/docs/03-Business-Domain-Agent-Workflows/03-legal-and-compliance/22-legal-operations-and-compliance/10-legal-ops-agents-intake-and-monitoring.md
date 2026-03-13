@@ -287,11 +287,15 @@ The specific regulatory updates depend on the jurisdictions configured, the date
 
 The Compliance Officer reviews this briefing in 20 minutes on Monday morning, forwards the HIGH PRIORITY items to the GC with recommended actions, and adds the MONITOR items to the quarterly compliance review agenda. Before the agent, producing this briefing took 4-6 hours of manual research each week.
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Agent vs. Tool Classification Exercise
+### Prompt 1: Reproduce
 
 ```
 I am learning about Legal Ops Agents. For each of the following
@@ -314,7 +318,7 @@ or an agent (persistent, multi-step, state-maintaining).
 
 **What you are learning:** The distinction between tools and agents is not about complexity of output -- it is about whether the system maintains state, makes routing decisions, and manages a process over time. Understanding this distinction determines whether you are automating a task or transforming a function.
 
-### Prompt 2: Design Your Own Contract Intake Workflow
+### Prompt 2: Adapt
 
 ```
 I am building a Contract Intake Agent for a 50-person technology
@@ -337,7 +341,7 @@ Design a Contract Intake Agent workflow for us. Include:
 
 **What you are learning:** The Contract Intake Agent workflow must be calibrated to your organisation's size, team capacity, and contract volume. A 2-person team needs different SLA timelines and escalation paths than a 15-person legal department. The exercise builds your ability to adapt the pattern to your specific context.
 
-### Prompt 3: Interpreting a Regulatory Briefing
+### Prompt 3: Apply
 
 ```
 I am a Compliance Officer at a fintech company based in Karachi,

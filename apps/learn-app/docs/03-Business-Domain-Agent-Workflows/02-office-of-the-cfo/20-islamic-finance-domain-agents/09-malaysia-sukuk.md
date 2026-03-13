@@ -223,7 +223,6 @@ The green designation is an **additional disclosure overlay**, not an accounting
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex05-malaysia-corporate-sukuk.md`
 :::
 
 ## Practice Exercise 6: Malaysia Corporate Sukuk — Tenaga Nasional Berhad (55 min)
@@ -266,9 +265,9 @@ Explore the regulatory framework discussed in this lesson:
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: SPPI Test Deep-Dive for Malaysian Sukuk Variants
+### Prompt 1: Reproduce
 
 ```
 I hold three different Malaysian sukuk in my portfolio:
@@ -293,7 +292,7 @@ Explain why sukuk #3 fails the SPPI test while #1 and #2 pass.
 
 **What you are learning:** The SPPI test is the gatekeeper for amortised cost classification. By comparing three sukuk with different cash flow structures, you develop the analytical judgment to distinguish between sukuk that are economically debt-like (SPPI pass) and sukuk that are genuinely equity-like (SPPI fail). This distinction determines measurement, income recognition timing, and P&L volatility for the investor's entire holding period.
 
-### Prompt 2: Green Sukuk vs Conventional Sukuk — Accounting Differences
+### Prompt 2: Adapt
 
 ```
 A Malaysian corporation is deciding whether to issue its
@@ -315,7 +314,7 @@ for choosing green over standard?
 
 **What you are learning:** The distinction between accounting measurement (unchanged) and disclosure obligations (additional) is a professional judgment that matters in practice. Issuers sometimes assume that "green" changes their financial statements. It does not change the numbers — it changes what they must report about how proceeds are used and what impact was achieved. Understanding this distinction prevents both over-engineering the accounting and under-estimating the disclosure obligations.
 
-### Prompt 3: Write Your Own — Cross-Border Sukuk Listing
+### Prompt 3: Apply
 
 **Do not copy a pre-written prompt.** Write your own prompt from scratch for this scenario:
 

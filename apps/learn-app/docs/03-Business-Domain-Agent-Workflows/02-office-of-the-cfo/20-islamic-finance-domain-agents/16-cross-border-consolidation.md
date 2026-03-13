@@ -115,7 +115,6 @@ The exercise that follows works through each of these systematically.
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex12-cross-border-consolidation.md`
 :::
 
 ## Exercise 13: 4-Entity Group Consolidation (75 min)
@@ -242,7 +241,9 @@ the dual-framework approach.
 
 ## Try With AI
 
-### Prompt 1: Your Own Group Structure
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
+
+### Prompt 1: Reproduce
 
 ```
 I need to consolidate an Islamic banking group with the following
@@ -264,7 +265,7 @@ Recommend the group consolidation framework and explain why.
 
 **What you are learning:** The consolidation challenge scales with the number of jurisdictions and frameworks. By designing your own group structure, you practise the jurisdiction identification step that must precede any consolidation work. The pattern — identify frameworks, map differences, determine group policy, produce adjustments — transfers to any multi-jurisdiction professional engagement, not only Islamic banking.
 
-### Prompt 2: IAH Fund Deep Dive
+### Prompt 2: Adapt
 
 ```
 Explain the Investment Account Holder (IAH) funds classification
@@ -286,7 +287,7 @@ finance accounting.
 
 **What you are learning:** The IAH classification is not merely a presentation choice — it affects capital adequacy ratios, risk-weighted asset calculations, and regulatory compliance. Understanding why AAOIFI and IFRS reach different conclusions about the same instrument develops your ability to evaluate substance-over-form arguments, a skill that extends well beyond Islamic finance.
 
-### Prompt 3: Consolidation Workflow Design
+### Prompt 3: Apply
 
 ```
 Design a multi-session consolidation workflow for an Islamic banking

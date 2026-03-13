@@ -232,11 +232,15 @@ The plugin is infrastructure. Infrastructure gets commoditised. Institutional kn
 4. Understanding that efficiency gains do not change professional obligations -- the attorney's duty of care, privilege protections, and judgment requirements remain unchanged
 5. The infrastructure vs. institutional knowledge distinction -- your playbook, SKILL.md library, and contract repository are the product; the plugin is the platform
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Reproduce the Zone Classification
+### Prompt 1: Reproduce
 
 ```
 I am learning about the GCC dual legal system. Present me with
@@ -261,7 +265,7 @@ would invalidate the entire contract review.
 
 **What you are learning:** The dual legal system produces materially different legal analysis for the same clause in the same city. A limitation of liability cap evaluated under DIFC common law (reasonableness test) reaches a different conclusion than the same cap evaluated under mainland UAE civil law (where Article 390 allows judicial reduction). The zone identification step is the most critical decision in any GCC contract review, and understanding why trains you to ask the right question before any analysis begins.
 
-### Prompt 2: Build Your Own Transformation Model
+### Prompt 2: Adapt
 
 ```
 I want to estimate the time and cost savings of deploying the
@@ -287,7 +291,7 @@ summary of total hours saved and cost impact.
 
 **What you are learning:** The transformation tables are a planning tool, not a hypothetical exercise. Building your own version forces you to assess your current legal operations capacity honestly and identify the specific functions where the plugin delivers the most immediate value. Organisations with high DSAR volume see the largest per-item savings. Organisations with high NDA volume see the largest aggregate savings because triage automation eliminates the most repetitive work.
 
-### Prompt 3: Cross-Border GCC Scenario
+### Prompt 3: Apply
 
 ```
 Two companies are negotiating a technology services contract:

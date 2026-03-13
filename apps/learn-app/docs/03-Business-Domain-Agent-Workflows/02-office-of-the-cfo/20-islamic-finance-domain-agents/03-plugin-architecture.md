@@ -206,9 +206,9 @@ If the same query said "Maybank Islamic in Malaysia," the overlay would change t
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Predict the Routing for a Mixed Transaction
+### Prompt 1: Reproduce
 
 ```
 The lesson traced routing for a straightforward query: one
@@ -239,7 +239,7 @@ it only address one component?
 
 **What you are learning:** Single-product, single-jurisdiction queries are the easy case. Real Islamic finance transactions often combine multiple products. By predicting the routing for a mixed transaction and then verifying against the actual agent output, you test both your understanding of the architecture and the agent's ability to handle complexity beyond the worked example.
 
-### Prompt 2: Product Skill vs Jurisdiction Overlay
+### Prompt 2: Adapt
 
 ```
 Explain the difference between a product skill file and
@@ -259,7 +259,7 @@ Explain why this separation makes the architecture extensible.
 
 **What you are learning:** The separation of concerns — arithmetic in product skills, labels in overlays — is what makes the architecture scale. By understanding why they are separated, you can apply the same pattern to any multi-jurisdiction domain.
 
-### Prompt 3: The Fundamental Limitation
+### Prompt 3: Apply
 
 ```
 The Islamic finance agent architecture has a "fundamental

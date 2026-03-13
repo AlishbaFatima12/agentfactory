@@ -198,7 +198,6 @@ This IAS 37 analysis is the most analytically demanding issue in takaful account
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex04-takaful-ifrs17.md`
 :::
 
 ## Practice Exercise 4: Global Takaful Operator — IFRS 17 and Wakala Model
@@ -229,9 +228,9 @@ This IAS 37 analysis is the most analytically demanding issue in takaful account
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Takaful Surplus Distribution Analysis
+### Prompt 1: Reproduce
 
 ```
 A general takaful operator in Malaysia reports the following
@@ -261,7 +260,7 @@ Questions:
 
 **What you are learning:** The surplus distribution question reveals the fundamental economics of takaful. The operator earns fees, not underwriting profit. Growth must come from scale (more participants, more contributions, more wakala fees) rather than from underwriting margins. This changes how you advise a takaful operator on business strategy compared to a conventional insurer — and explains why the hybrid model (adding mudaraba investment income sharing) is commercially preferred.
 
-### Prompt 2: Family Takaful IFRS 17 GMM Application
+### Prompt 2: Adapt
 
 ```
 A family takaful operator offers a 20-year savings and
@@ -289,6 +288,40 @@ it to takaful before.
 ```
 
 **What you are learning:** Family takaful under the GMM is the most complex intersection of Islamic finance and insurance accounting. The CSM creates a mechanism for recognising profit over the coverage period — but in takaful, the "profit" belongs to different parties depending on the operating model. Understanding the GMM for family takaful positions you to advise on the IFRS 17 transition for the long-term takaful industry, which is still in early stages in many jurisdictions.
+
+### Prompt 3: Apply
+
+```
+You are advising a takaful operator in YOUR jurisdiction
+(pick your home country or a country where you plan to
+practise). The operator runs general takaful (motor, property,
+medical) under the wakala model. Wakala fee: 30%.
+
+Participants' Fund for the current year:
+- Contributions received: USD 120 million
+- Wakala fee deducted: USD 36 million
+- Claims paid: USD 62 million
+- Retakaful ceded: USD 18 million
+- Investment income: USD 9 million
+
+1. Does your jurisdiction have specific takaful regulatory
+   guidance equivalent to BNM Malaysia's framework? If not,
+   how does the operator determine whether IFRS 17 applies?
+2. Calculate the Participants' Fund surplus or deficit.
+3. If the fund were in deficit by USD 5 million instead,
+   generate the qard hasan journal entries in both the
+   operator's books and the Participants' Fund.
+4. Apply IAS 37 to the operator's qard commitment: before
+   the deficit materialised, should the operator have
+   recognised a provision or disclosed a contingent liability?
+5. How does your jurisdiction's regulator treat the qard
+   obligation for solvency and capital adequacy purposes?
+
+Present your analysis as a regulatory compliance memo for
+the operator's board.
+```
+
+**What you are learning:** Takaful regulation varies enormously by jurisdiction. Malaysia has the most detailed framework; many other jurisdictions have minimal guidance. Applying the IFRS 17 and IAS 37 analysis to your own regulatory context reveals whether your jurisdiction provides clarity or leaves the operator to make professional judgments without a regulatory safety net — a distinction that matters for both audit risk assessment and advisory work.
 
 ## Flashcards Study Aid
 

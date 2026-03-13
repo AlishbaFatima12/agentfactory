@@ -184,7 +184,6 @@ The most professionally important concept in Shariah screening is that different
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex10-shariah-screening-amana.md`
 :::
 
 ## Exercise 11: Saturna Capital Amana Income Fund — Global Screening
@@ -296,7 +295,9 @@ rather than waiting for the quarterly report.
 
 ## Try With AI
 
-### Prompt 1: ESG-Shariah Convergence Analysis
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
+
+### Prompt 1: Reproduce
 
 ```
 Compare the SC Malaysia Shariah screening methodology with the
@@ -314,7 +315,7 @@ ESG-compliant, what is the combined exclusion list?
 
 **What you are learning:** The convergence between Islamic ethical investing and conventional ESG investing is one of the fastest-growing areas in global capital markets. Both frameworks share a values-based approach to investment screening, but the specific values differ. Understanding where they overlap enables the practitioner to advise on products that serve both Muslim investors seeking Shariah compliance and non-Muslim investors seeking ESG alignment.
 
-### Prompt 2: Market Cap Volatility and Screening Stability
+### Prompt 2: Adapt
 
 ```
 A technology company has total debt of $5B. Its total assets are
@@ -334,7 +335,7 @@ address this volatility problem?
 
 **What you are learning:** The denominator choice is not a technicality — it determines how stable a company's Shariah status is over market cycles. A fund that uses market-cap-based screening will experience more turnover (and more transaction costs) during market downturns, as companies breach thresholds not because their debt increased but because their share price fell. The trailing average approach smooths this volatility but introduces a lag.
 
-### Prompt 3: Build a Personal Shariah Screening Skill
+### Prompt 3: Apply
 
 Build a personal Shariah screening skill in Cowork using **Create with Claude**. Tell Cowork your scenario:
 

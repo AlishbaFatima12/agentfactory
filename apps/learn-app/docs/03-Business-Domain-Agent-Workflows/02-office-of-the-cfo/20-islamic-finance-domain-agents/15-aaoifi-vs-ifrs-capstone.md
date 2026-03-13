@@ -135,7 +135,6 @@ Before building the financial statements, understand the five differences that d
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex11-aaoifi-vs-ifrs-capstone.md`
 :::
 
 ## Exercise 12: ABC Islamic Bank (Bahrain) — $8B Total Assets
@@ -281,7 +280,9 @@ Click **Create**, then test by running a transaction through the plugin with the
 
 ## Try With AI
 
-### Prompt 1: Investor Ratio Adjustment
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
+
+### Prompt 1: Reproduce
 
 ```
 I am a UK institutional investor comparing two Islamic banks:
@@ -305,7 +306,7 @@ AAOIFI-reporting and IFRS-reporting Islamic banks?
 
 **What you are learning:** The ROE comparison between AAOIFI and IFRS banks is the most common analytical trap in global Islamic banking. The 6.3 percentage point difference in this example is almost entirely caused by the IAH classification — not by any difference in profitability. An investor who does not adjust for framework differences will systematically undervalue AAOIFI-reporting banks and overvalue IFRS-reporting banks. The CA/CPA who can produce this adjustment is providing genuine analytical value.
 
-### Prompt 2: Dual-Framework Consolidation Challenge
+### Prompt 2: Adapt
 
 ```
 Al Baraka Banking Group (Bahrain, AAOIFI primary) consolidates
@@ -327,7 +328,7 @@ auditors issued IFRS-based opinions?
 
 **What you are learning:** The dual-framework consolidation is the frontier challenge of global Islamic banking practice. Every multi-jurisdiction Islamic banking group faces this: the parent's regulator requires one framework, the subsidiaries' regulators require another, and international investors want IFRS comparability. The pragmatic industry solution — IFRS primary for consolidated statements with AAOIFI supplementary disclosures — requires the exact reconciliation skills you built in this exercise.
 
-### Prompt 3: AAOIFI FAS 30 vs IFRS 9 ECL Deep Dive
+### Prompt 3: Apply
 
 ```
 ABC Islamic Bank has a murabaha portfolio of $3.6B. Under AAOIFI

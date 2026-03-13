@@ -278,6 +278,44 @@ Combine all three components for a complete facility-level ECL:
 
 This is the provision the bank would book for this single facility under Stage 1. If the facility migrated to Stage 2, the lifetime ECL would be calculated using the full PD term structure, annual LGD and EAD estimates, and discount factors — as demonstrated in Lesson 3.
 
+## Generate Your Demo Practice Data
+
+This is the first exercise lesson. Generate practice data with a prompt instead of downloading files. Copy this into Cowork:
+
+```
+Generate demo exercise data for a banking regulatory exercise set.
+I need data for a mid-sized commercial bank called "Horizon Bank"
+(total assets USD 25 billion, UK-regulated, PRA-supervised).
+
+Generate the following:
+
+1. RETAIL MORTGAGE PORTFOLIO (for IFRS 9 ECL exercises)
+   - 20 mortgage loans with: borrower name, original balance,
+     current balance, LTV ratio, origination date, interest rate,
+     days past due, credit score at origination, current credit score,
+     any significant increase in credit risk indicators
+   - Mix: 14 Stage 1, 4 Stage 2, 2 Stage 3
+
+2. COMMERCIAL LOAN PORTFOLIO (for Basel capital exercises)
+   - 10 corporate loans with: borrower name, industry, balance,
+     risk rating (AAA to CCC), maturity, collateral type and value,
+     facility type (term loan, revolving, guarantee)
+
+3. BANK CAPITAL STRUCTURE
+   - CET1: USD 2.1B, AT1: USD 400M, Tier 2: USD 600M
+   - Total RWA: USD 18B (Credit: 14B, Market: 2.5B, Operational: 1.5B)
+
+4. TRANSACTION MONITORING DATA (for AML exercises)
+   - 10 recent transactions with: customer name, type (deposit/
+     transfer/withdrawal), amount, currency, counterparty, country,
+     date, any suspicious indicators
+
+Format: structured markdown with clear section headers.
+Save as banking-demo-data.md in my working folder.
+```
+
+**Output:** A structured dataset for Horizon Bank containing mortgage and commercial loan portfolios, capital structure, and transaction monitoring data. Save this file -- subsequent exercise lessons reference this data.
+
 ## Exercise 1: Portfolio Staging and ECL
 
 Apply your knowledge to this portfolio of 8 facilities. Classify each into an IFRS 9 stage and calculate the 12-month ECL for Stage 1 facilities:
@@ -337,9 +375,9 @@ David reviews the CCA against his bank's latest credit cycle model output and co
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: PD Term Structure Construction
+### Prompt 1: Reproduce
 
 ```
 Build a PD term structure for a BB-rated corporate borrower
@@ -359,7 +397,7 @@ Show me:
 
 **What you are learning:** PD term structures are the input to every lifetime ECL calculation. By constructing one yourself, you understand how the `ifrs9-ecl` skill generates marginal PDs for each future period — and you can verify whether the skill's term structure is reasonable for a given rating grade and economic environment.
 
-### Prompt 2: Downturn LGD Stress
+### Prompt 2: Adapt
 
 ```
 A bank holds a residential mortgage portfolio with an
@@ -382,7 +420,7 @@ rather than current-market LGD?
 
 **What you are learning:** LGD sensitivity to property values is the reason mortgage ECL provisions swing dramatically in property downturns. By calculating LGD across scenarios, you see how a 30% property decline can transform a low-LGD portfolio into a high-LGD portfolio — which is exactly what happened in 2008 and what IFRS 9's downturn requirement is designed to capture.
 
-### Prompt 3: EAD and CCF Impact
+### Prompt 3: Apply
 
 ```
 Calculate the EAD for each of these three facilities:

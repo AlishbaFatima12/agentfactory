@@ -251,9 +251,9 @@ The router does not simply run all skills in parallel. It sequences them because
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore cross-pillar integration.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: The Full Fraud Cascade
+### Prompt 1: Reproduce
 
 ```
 A bank discovers GBP 50M in fraudulent corporate loans. Trace the
@@ -273,7 +273,7 @@ would load and why.
 
 **What you are learning:** The cascade is not abstract — it is arithmetic. Each pillar produces a number that feeds the next pillar. By calculating each step, you see that a GBP 50M fraud does not cost GBP 50M. It costs the provision charge plus the capital impact plus the investigation costs plus the regulatory scrutiny. This is why integrated analysis matters.
 
-### Prompt 2: The IRB Shortfall Calculation
+### Prompt 2: Adapt
 
 ```
 A bank has the following position:
@@ -295,7 +295,7 @@ Show all working and explain why the 0.6% cap exists.
 
 **What you are learning:** The IRB shortfall/excess mechanism is how Basel and IFRS 9 interact at the most granular level. When IFRS 9 provisions exceed regulatory EL, the bank has extra capital cushion (up to a cap). When they fall short, the bank must deduct the shortfall from capital. Understanding this mechanism tells you why provision changes have different capital impacts for SA banks versus IRB banks.
 
-### Prompt 3: Pillar Isolation Failure Analysis
+### Prompt 3: Apply
 
 ```
 A bank has three separate AI agents — one for IFRS 9, one for

@@ -181,7 +181,6 @@ The difference between holding a physical asset and holding a receivable affects
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex02-ijarah-four-jurisdictions.md`
 :::
 
 ## Practice Exercise 2: Ijarah Accounting Across Four Jurisdictions
@@ -212,9 +211,9 @@ The difference between holding a physical asset and holding a receivable affects
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: IMB Ownership Transfer Accounting
+### Prompt 1: Reproduce
 
 ```
 An Islamic bank in Bahrain has an IMB asset originally costing
@@ -239,7 +238,7 @@ Questions:
 
 **What you are learning:** The AAOIFI depreciation policy — useful life, not lease term — creates a deliberate book loss on ownership transfer. This is not an error. It reflects the Shariah position that the lessor genuinely owns the asset and must depreciate it as an owner would. The total economics (rental income over the lease term minus total depreciation and transfer loss) should still be profitable — but the profit is distributed differently across the income statement over time compared to IFRS 16 treatment.
 
-### Prompt 2: Write Your Own — Dual-Framework Consolidation
+### Prompt 2: Adapt
 
 This prompt tests your ability to construct an effective AI query for a complex accounting scenario. **Do not copy a pre-written prompt.** Instead, write your own prompt from scratch based on this scenario:
 
@@ -250,6 +249,37 @@ This prompt tests your ability to construct an effective AI query for a complex 
 **After you get the output**, evaluate it: Did the AI correctly distinguish between AAOIFI on-balance-sheet treatment and IFRS 16 derecognition? Did it produce adjustment entries that would actually produce a correct consolidated balance sheet?
 
 **What you are learning:** Writing effective prompts for multi-jurisdiction consolidation is harder than it appears. The prompt must specify both frameworks, both entity perspectives, and the consolidation direction (AAOIFI → IFRS, not the reverse). If your prompt was ambiguous, the AI may consolidate in the wrong direction. Compare your prompt and output with a classmate's — did the same scenario produce different outputs based on how you framed the question?
+
+### Prompt 3: Apply
+
+```
+You work at an Islamic bank or financial institution in YOUR
+jurisdiction (pick your home country or target market).
+
+Your bank has just acquired a fleet of 50 commercial vehicles
+(total cost: USD 10 million) to offer under IMB to corporate
+customers. Average lease term: 5 years. Average useful life
+of vehicles: 8 years. Monthly rental per vehicle: USD 25,000.
+Ownership transfers by gift at end of each lease.
+
+1. Which accounting framework governs ijarah in your
+   jurisdiction — AAOIFI FAS 32, IFRS 16, or a local standard?
+2. From the LESSOR perspective: does the asset stay on your
+   bank's balance sheet or get derecognised? Explain why.
+3. Generate the journal entries for initial recognition of
+   the full fleet and the first month's rental income using
+   the correct labels for your jurisdiction.
+4. Calculate the depreciation: useful life (8 years) or
+   lease term (5 years)? What is the annual depreciation
+   charge for the fleet?
+5. At the end of Year 5 when ownership transfers, what is
+   the remaining book value? What loss does your bank
+   recognise on transfer?
+6. How does this ijarah fleet affect your bank's regulatory
+   capital ratios in your jurisdiction?
+```
+
+**What you are learning:** The AAOIFI/IFRS ijarah divergence has real consequences for bank balance sheets and regulatory capital. Applying it to your own jurisdiction forces you to determine which side of the divergence your regulator falls on — and to calculate the concrete financial impact. The fleet scale (USD 10 million) makes the balance sheet and capital ratio effects meaningful rather than theoretical.
 
 ## Flashcards Study Aid
 

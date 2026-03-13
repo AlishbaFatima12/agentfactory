@@ -406,9 +406,9 @@ Three payments require sanctions screening. For each, determine: true match, fal
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to work through these exercises.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Capital Impact of a Loan Book Acquisition
+### Prompt 1: Reproduce
 
 ```
 A UK bank (the one from Exercise 10) is considering acquiring
@@ -436,7 +436,7 @@ Questions:
 
 **What you are learning:** Capital planning is not just about meeting minimums — it is about maintaining buffers through growth. An acquisition that looks profitable on an earnings basis can destroy capital headroom if the RWA impact is not modelled in advance. By calculating the capital impact before the deal closes, you practise the discipline that bank treasury teams apply to every balance sheet decision.
 
-### Prompt 2: Funnel Account Investigation
+### Prompt 2: Adapt
 
 ```
 Investigate this AML alert involving a suspected funnel account:
@@ -469,7 +469,7 @@ Pattern over 90 days:
 
 **What you are learning:** Funnel accounts are a different typology from the structuring and trade-based patterns in Exercise 12. They use a domestic collection network (often recruited via social media) to aggregate small amounts into a personal account, then transfer the pooled funds internationally. By investigating a new typology, you test whether you can apply the AML investigation framework to unfamiliar patterns rather than relying on recognition of the Exercise 12 scenarios.
 
-### Prompt 3: Sanctions Screening Decision
+### Prompt 3: Apply
 
 ```
 Screen these three payments against UK, EU, and OFAC sanctions:

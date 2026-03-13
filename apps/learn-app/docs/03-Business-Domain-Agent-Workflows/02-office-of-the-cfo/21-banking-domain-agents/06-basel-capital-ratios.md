@@ -287,9 +287,9 @@ GCC regulators apply the standard Basel III minimums (4.5% CET1, 8.0% Total Capi
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to deepen your understanding of capital adequacy.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Capital Classification
+### Prompt 1: Reproduce
 
 ```
 I am learning Basel III capital adequacy. A bank has the following
@@ -309,7 +309,7 @@ For item 6, explain which tier it can count toward and any limits.
 
 **What you are learning:** Capital classification is the foundational skill for computing all three ratios. By justifying each classification, you internalise the qualifying criteria -- permanence for CET1, perpetuity for AT1, subordination for Tier 2 -- rather than memorising a list.
 
-### Prompt 2: Buffer Analysis
+### Prompt 2: Adapt
 
 ```
 A bank's CET1 ratio is 9.2%. The applicable requirements are:
@@ -332,7 +332,7 @@ and breaching the hard minimum.
 
 **What you are learning:** The buffer framework creates a graduated response -- not a binary pass/fail. Understanding the distribution constraint mechanics tells you how capital pressure translates to operational restrictions before reaching the hard minimum where regulatory intervention begins.
 
-### Prompt 3: Deduction Rationale
+### Prompt 3: Apply
 
 ```
 A bank reports GBP 2.1 billion in shareholders' equity on its

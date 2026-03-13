@@ -60,33 +60,12 @@ By the end of this chapter, you should be able to answer these five questions:
 4. How would you build a jurisdiction-specific SKILL.md extension for a new country using the Knowledge Extraction Method?
 5. Where is the boundary between agent execution and Shariah Supervisory Board judgment — what can the agent do autonomously and what must it escalate?
 
-## Plugin & Companion Materials
+### Prerequisites: Cowork Access
 
-Install the Islamic Finance Domain Agents plugin once — it activates automatically on all Islamic finance queries:
+This chapter requires **Cowork** (set up in Chapter 17) and the Islamic Finance plugin.
 
-**Claude Code CLI:**
-
-```bash
-claude plugin install islamic-finance@agentfactory-business
-```
-
-**Cowork:** Sidebar → Customize → Browse plugins → + → Add marketplace from GitHub → `panaversity/agentfactory-business-plugins` → Install "islamic-finance"
-
-Downloads (from the [latest release](https://github.com/panaversity/agentfactory-business-plugins/releases/latest)):
-
-- `islamic-finance-exercise-data.zip` — Scenario data for Exercises 1-15 + AAOIFI reference tables
-- `islamic-finance-workflow-recipes.zip` — Scheduled task configurations (daily, monthly, quarterly, annual)
-- `islamic-finance-full.zip` — Everything in one package (Exercise 15 capstone)
-
-Repository contents (inside `islamic-finance/`):
-
-- `skills/` — 13 skills: 1 router + 12 products (auto-loaded by agent)
-- `skills/islamic-finance-router/references/jurisdictions/` — 13 jurisdiction overlays (loaded on-demand)
-- `commands/` — 4 domain commands: `/if-journal`, `/if-compare`, `/if-screen`, `/if-zakat`
-- `hooks/` — SessionStart (capability announcement) + PostToolUse (framework label validation)
-- `exercises/` — Scenario data per exercise
-- `workflow-recipes/` — Operational playbooks
-- `references/` — AAOIFI FAS reference table
+1. **Install the Islamic Finance plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Islamic Finance** → click **Install**.
+2. **Connect a working folder** for practice files, same as Chapter 17.
 
 ## After Chapter 20
 

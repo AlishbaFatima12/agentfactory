@@ -260,9 +260,9 @@ The State Bank of Pakistan (SBP) mandated IFRS 9 adoption with a staggered timel
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Staging Classification
+### Prompt 1: Reproduce
 
 ```
 I have a portfolio of 6 commercial loans. Classify each
@@ -283,7 +283,7 @@ and what evidence would be required.
 
 **What you are learning:** Staging classification is the first step in every ECL calculation. By classifying facilities yourself, you develop the judgment the `ifrs9-staging` skill encodes — and you can verify whether the skill is staging correctly when you use it on real data.
 
-### Prompt 2: The Staging Cliff Effect
+### Prompt 2: Adapt
 
 ```
 A bank holds a 20-year residential mortgage with these
@@ -311,7 +311,7 @@ for bank financial reporting.
 
 **What you are learning:** The staging cliff effect is the most consequential feature of IFRS 9 for bank earnings. A portfolio migrating from Stage 1 to Stage 2 can produce provision increases of 5-10x, directly reducing reported profit. Understanding this cliff helps you interpret bank financial statements and evaluate whether staging decisions are reasonable.
 
-### Prompt 3: IFRS 9 vs IAS 39
+### Prompt 3: Apply
 
 ```
 Explain to a non-technical board member why IFRS 9's

@@ -198,11 +198,15 @@ The agent stops the templated response and routes to an attorney when any of the
 Before running `/respond type:"discovery-hold"` for the DataFlow scenario, predict: what sections will the template include? What will it refuse to include — and why? The governance boundary means the agent will produce the operational infrastructure but will not touch litigation strategy.
 :::
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Execute a Litigation Hold for a Regulatory Investigation
+### Prompt 1: Reproduce
 
 ```
 I am General Counsel at a 200-person fintech company. This
@@ -246,7 +250,7 @@ to a generic preservation template.
 
 **What you are learning:** A regulatory investigation imposes externally defined preservation obligations -- you do not get to choose the scope the way you might with a commercial dispute. Running the workflow against a specific FCA notice tests whether you can verify the agent's output against a defined regulatory requirement, which is a fundamentally different skill from designing a policy from scratch.
 
-### Prompt 2: Preservation Failure Consequences
+### Prompt 2: Adapt
 
 ```
 A 200-person technology company received a patent infringement
@@ -275,7 +279,7 @@ Warburg, Pension Committee v. Banc of America Securities).
 
 **What you are learning:** Understanding the consequences of failing to preserve evidence makes the litigation hold workflow concrete rather than abstract. The sanctions regime -- monetary penalties, adverse inference instructions, even default judgment -- demonstrates why the operational infrastructure the agent provides (notices, tracking, IT suspension) is not administrative overhead but litigation risk management.
 
-### Prompt 3: Operational vs. Strategic -- Where Is the Line?
+### Prompt 3: Apply
 
 ```
 In a patent infringement dispute, classify each of the

@@ -281,9 +281,9 @@ Priya reviews the scenario weights against her bank's latest economic outlook an
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: The Non-Linearity Demonstration
+### Prompt 1: Reproduce
 
 ```
 A bank's ECL under three scenarios is:
@@ -304,7 +304,7 @@ credit loss under the expected scenario?
 
 **What you are learning:** The non-linearity principle is the reason IFRS 9 requires multiple scenarios. By calculating and explaining the difference between the base case and weighted ECL, you build the ability to communicate IFRS 9 provisioning decisions to non-technical stakeholders — a critical professional skill for credit risk officers and finance directors.
 
-### Prompt 2: PMA Design and Governance
+### Prompt 2: Adapt
 
 ```
 A bank has $500M in hospitality sector loans (hotels,
@@ -329,7 +329,7 @@ external audit engagement.
 
 **What you are learning:** PMAs are where professional judgment meets quantitative modelling. By designing a PMA yourself, you develop the ability to bridge the gap between what models produce and what the financial statements should reflect. This is the highest-value skill in IFRS 9 practice — it requires both technical knowledge (what the model misses) and governance awareness (how to document management judgment defensibly).
 
-### Prompt 3: Scenario Weight Sensitivity
+### Prompt 3: Apply
 
 ```
 A bank reports these ECL amounts under four scenarios:

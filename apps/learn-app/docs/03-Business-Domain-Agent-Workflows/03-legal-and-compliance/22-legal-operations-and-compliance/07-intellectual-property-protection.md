@@ -218,11 +218,15 @@ When the agent scans your codebase for OSS components, it applies a risk hierarc
 If the agent identifies GPL or AGPL components in a product intended for proprietary distribution or SaaS deployment, escalate to IP counsel immediately. Do not rely on the agent's assessment of whether the component triggers copyleft obligations. Licence interpretation depends on linking method, distribution model, and jurisdiction — this is attorney work.
 :::
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Patent Landscape Analysis for Your Technology
+### Prompt 1: Reproduce
 
 ```
 I am Head of Product at an AI startup. We have developed a
@@ -249,7 +253,7 @@ For the output, provide:
 
 **What you are learning:** Patent landscape analysis demonstrates the agent's ability to search, organise, and present complex public data -- and the critical governance rule that this research requires attorney review before you act on it. Writing the cover memo practises the skill of correctly scoping agent output for professional review. The distinction between research scaffolding and privileged legal opinion is not academic -- it determines what you can and cannot rely on for business decisions.
 
-### Prompt 2: Trademark Monitoring Configuration
+### Prompt 2: Adapt
 
 ```
 My company has these registered trademarks:
@@ -272,7 +276,7 @@ in Class 9 in the US.
 
 **What you are learning:** Configuring trademark monitoring requires defining what "similar enough to flag" means for your specific marks. The Nice Classification system determines which classes to monitor -- registering in Class 9 (software) but not Class 42 (SaaS) leaves a gap. The weekly brief template ensures consistent, actionable output that your IP attorney can review efficiently.
 
-### Prompt 3: FTO Research vs. FTO Opinion
+### Prompt 3: Apply
 
 ```
 Explain the difference between a freedom-to-operate (FTO)

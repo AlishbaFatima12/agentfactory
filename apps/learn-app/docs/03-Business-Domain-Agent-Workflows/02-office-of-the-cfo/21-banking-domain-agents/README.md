@@ -59,33 +59,12 @@ By the end of this chapter, you should be able to answer these five questions:
 4. What are the three lines of defence in AML/KYC, and where does the boundary lie between AI-automatable transaction monitoring and human-required SAR filing decisions?
 5. How does four-way provision reconciliation (GL provision, risk system provision, regulatory return, IFRS 9 model output) ensure data integrity across a bank's systems?
 
-## Plugin & Companion Materials
+### Prerequisites: Cowork Access
 
-Install the Banking Domain Agents plugin once — it activates automatically on all banking regulatory queries:
+This chapter requires **Cowork** (set up in Chapter 17) and the Banking plugin.
 
-**Claude Code CLI:**
-
-```bash
-claude plugin install banking@agentfactory-business
-```
-
-**Cowork:** Sidebar > Customize > Browse plugins > + > Add marketplace from GitHub > `panaversity/agentfactory-business-plugins` > Install "banking"
-
-Downloads (from the [latest release](https://github.com/panaversity/agentfactory-business-plugins/releases/latest)):
-
-- `banking-exercise-data.zip` — Scenario data for Exercises 1-18 + regulatory reference tables
-- `banking-workflow-recipes.zip` — Scheduled task configurations (daily recon, monthly ECL, quarterly ICAAP, annual SREP)
-- `banking-full.zip` — Everything in one package (Lesson 15 capstone)
-
-Repository contents (inside `banking/`):
-
-- `skills/` — 17 skills: 1 router + 16 product skills (auto-loaded by agent)
-- `skills/banking-global-router/references/` — Regulatory reference tables (Basel schedules, IFRS 9 staging criteria, AML typologies)
-- `commands/` — Domain commands: `/bank-ecl`, `/bank-capital`, `/bank-recon`, `/bank-aml`
-- `hooks/` — SessionStart (pillar detection) + PostToolUse (regulatory label validation)
-- `exercises/` — Scenario data per exercise
-- `workflow-recipes/` — Operational playbooks (daily, monthly, quarterly, annual)
-- `references/` — Basel framework summaries, IFRS 9 application guidance, FATF recommendations
+1. **Install the Banking plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Banking** → click **Install**.
+2. **Connect a working folder** for practice files, same as Chapter 17.
 
 ## After Chapter 21
 

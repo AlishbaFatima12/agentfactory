@@ -290,9 +290,9 @@ US banks operate under a different but parallel framework. Instead of IFRS 9's t
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to deepen your understanding of leverage and liquidity requirements.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: HQLA Classification Practice
+### Prompt 1: Reproduce
 
 ```
 I am learning the Basel III Liquidity Coverage Ratio. Classify
@@ -316,7 +316,7 @@ the Level 2 caps are breached.
 
 **What you are learning:** HQLA classification requires understanding what makes an asset "liquid" in a crisis. Central bank reserves are the ultimate liquid asset (Level 1, no haircut) because they are already cash at the central bank. Commercial property is not HQLA because you cannot sell a building in 30 days at fair value. This classification logic is critical for AI agents that compute liquidity ratios from a bank's balance sheet.
 
-### Prompt 2: Capital vs Liquidity Failure
+### Prompt 2: Adapt
 
 ```
 Northern Rock (UK, 2007) had a Tier 1 capital ratio above 10%
@@ -339,7 +339,7 @@ but illiquid? Can it be liquid but undercapitalised?
 
 **What you are learning:** Capital and liquidity are independent dimensions of bank resilience. A bank can fail from either one. Understanding this distinction is essential for building AI agents in the banking domain -- an agent that reports only capital ratios gives a dangerously incomplete picture. The strongest banking agents monitor all four dimensions (CET1, leverage, LCR, NSFR) simultaneously.
 
-### Prompt 3: NSFR Structural Analysis
+### Prompt 3: Apply
 
 ```
 A bank funds GBP 10 billion in 25-year residential mortgages

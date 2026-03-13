@@ -282,9 +282,9 @@ This chapter covered three regulatory pillars, 18 exercises, and a full cross-pi
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to complete the capstone.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: Building the Skill Library
+### Prompt 1: Reproduce
 
 ```
 Help me create 4 banking skills. For each, I will describe the
@@ -314,7 +314,7 @@ criteria that I can paste into the skill creation form.
 
 **What you are learning:** Building skills from your own expertise is the expert interview approach from Chapter 15. By structuring what you learned in Lessons 3-10 into reusable Cowork skills, you transform knowledge into operational capability. The skill does not replace your judgment — it packages your analytical framework so that routine calculations are automated and edge cases are flagged for human review.
 
-### Prompt 2: Executing the Capstone Scenario
+### Prompt 2: Adapt
 
 ```
 Execute a Board Risk Report for this bank:
@@ -343,7 +343,7 @@ message for each slide.
 
 **What you are learning:** The Board Risk Report is the ultimate cross-pillar deliverable. It forces you to integrate ECL, capital, liquidity, and AML into a single narrative that a non-technical board member can understand. The integrated stress test (adverse macro combined with AML fine) demonstrates why cross-pillar analysis matters — a bank that stress-tests ECL and AML separately misses the compounding effect of simultaneous shocks.
 
-### Prompt 3: Validating the Five Principles
+### Prompt 3: Apply
 
 ```
 For each of the five principles of banking domain AI, provide:

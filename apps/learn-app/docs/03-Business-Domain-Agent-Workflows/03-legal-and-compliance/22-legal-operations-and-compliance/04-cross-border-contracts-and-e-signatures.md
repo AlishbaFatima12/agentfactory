@@ -254,9 +254,13 @@ Run `/vendor-check NexGen-AlFaisal` after execution and you will see the same st
 4. E-signature routing with pre-flight verification using `/signature-request`
 5. Post-execution obligation extraction connecting the signed contract to `/vendor-check` monitoring
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-**Setup:** Use these prompts in Cowork or your preferred AI assistant with the Legal Plugin installed.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
 ### Prompt 1: Reproduce
 
@@ -277,7 +281,7 @@ For each classification, explain which jurisdiction creates the risk.
 
 **What you are learning:** Applying the five-pitfall framework systematically. Compare the agent's output to the worked example in this lesson. The classifications should be similar -- data protection and tax withholding as RED, IP and language precedence as YELLOW, arbitration as GREEN. If they differ, examine why. Differences reveal how the agent weights risks, which teaches you to calibrate your own judgment.
 
-### Prompt 2: Adapt Jurisdiction
+### Prompt 2: Adapt
 
 ```
 Change the worked example: the vendor is now in Lahore, Pakistan,
@@ -296,7 +300,7 @@ Which combination has more RED items?
 
 **What you are learning:** Jurisdiction combinations change risk profiles. DIFC (common law, English-language) produces different results from UAE mainland (civil law, Arabic court language). UK GDPR creates different data transfer requirements from Saudi PDPL. Running the same framework against different jurisdictions builds the pattern recognition that lets you anticipate issues before the agent flags them.
 
-### Prompt 3: Apply to Your Organisation
+### Prompt 3: Apply
 
 ```
 Take a real cross-border contract from your organisation — or

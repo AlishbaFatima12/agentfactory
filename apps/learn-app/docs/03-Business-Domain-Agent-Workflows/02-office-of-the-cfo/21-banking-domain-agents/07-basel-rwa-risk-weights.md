@@ -282,9 +282,9 @@ Fatima reviews the asset class assignments — particularly whether rated corpor
 
 ## Try With AI
 
-Use these prompts in Claude or your preferred AI assistant to deepen your understanding of risk-weighted assets.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: SA Risk Weight Assignment
+### Prompt 1: Reproduce
 
 ```
 I am learning Basel III risk-weighted assets. Calculate the total
@@ -307,7 +307,7 @@ and calculate total RWA.
 
 **What you are learning:** Assigning risk weights is a lookup skill, but understanding the rationale behind each weight builds intuition. Cash at 0% reflects zero credit risk. Past-due loans at 150% reflect observed distress. Mortgages at 35% reflect collateral protection. This intuition matters when reviewing AI-generated capital calculations.
 
-### Prompt 2: Output Floor Impact Analysis
+### Prompt 2: Adapt
 
 ```
 An IRB bank has the following situation:
@@ -331,7 +331,7 @@ at full phase-in?
 
 **What you are learning:** The output floor is not a one-time adjustment -- it tightens over five years. Banks must plan capital trajectories against a rising floor. This prompt develops the analytical skill of projecting regulatory capital impact over time, which is essential for any banking AI agent that produces forward-looking capital adequacy assessments.
 
-### Prompt 3: SA vs IRB Regulatory Rationale
+### Prompt 3: Apply
 
 ```
 The Basel Committee introduced the output floor because IRB banks

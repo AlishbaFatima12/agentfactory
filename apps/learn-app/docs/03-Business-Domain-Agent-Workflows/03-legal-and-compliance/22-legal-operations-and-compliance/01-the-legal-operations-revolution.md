@@ -105,20 +105,63 @@ Find **Legal Ops** in the marketplace list and click **Install**.
 
 Cowork can read and create Office, PDF, and text files directly through built-in file skills -- no connectors needed for document review. If your workflows need to reach enterprise systems, open **Customize** and select **Connectors** to link your tools.
 
-| Category          | Recommended Server          | What It Enables                                                |
-| ----------------- | --------------------------- | -------------------------------------------------------------- |
-| **Email**         | Gmail                       | Agent reads your legal inbox for intake and correspondence     |
-| **Calendar**      | Google Calendar              | Agent reads meeting context for briefing prep                  |
-| **Chat**          | Slack                       | Agent posts alerts and escalation notices to your channels     |
-| **Cloud storage** | Box or Egnyte               | Agent accesses your document management system                 |
-| **E-signature**   | DocuSign                    | Agent routes documents for e-signature (Lesson 4 onward)      |
-| **Project tracker** | Atlassian (Jira/Confluence) | Agent logs matters and tracks obligations                     |
-| **CRM**           | Salesforce or HubSpot       | Agent cross-references vendor and client records               |
-| **Office suite**  | Microsoft 365               | Agent reads and creates Word, Excel, and PowerPoint files      |
+| Category            | Recommended Server          | What It Enables                                            |
+| ------------------- | --------------------------- | ---------------------------------------------------------- |
+| **Email**           | Gmail                       | Agent reads your legal inbox for intake and correspondence |
+| **Calendar**        | Google Calendar             | Agent reads meeting context for briefing prep              |
+| **Chat**            | Slack                       | Agent posts alerts and escalation notices to your channels |
+| **Cloud storage**   | Box or Egnyte               | Agent accesses your document management system             |
+| **E-signature**     | DocuSign                    | Agent routes documents for e-signature (Lesson 4 onward)   |
+| **Project tracker** | Atlassian (Jira/Confluence) | Agent logs matters and tracks obligations                  |
+| **CRM**             | Salesforce or HubSpot       | Agent cross-references vendor and client records           |
+| **Office suite**    | Microsoft 365               | Agent reads and creates Word, Excel, and PowerPoint files  |
 
 **Minimum recommended:** Gmail and Google Calendar. Both are free and unlock meeting prep and email-based intake in later lessons.
 
 If you have these accounts, connect them now. If you do not, skip this section entirely. Both paths produce the same quality output -- with connectors the agent reads live data, without them you upload documents and provide context in prompts.
+
+## Generate Your Demo Practice Data
+
+Every lesson in this chapter uses Noor Technologies as the practice company. Generate your demo dataset with this prompt in Cowork:
+
+```
+Generate a complete demo dataset for a company called Noor Technologies,
+an 85-person cloud ERP company in Karachi, Pakistan that builds
+production planning and export documentation software for textile
+manufacturers.
+
+Generate the following:
+
+1. VENDOR AGREEMENTS (3 contracts)
+   - CloudStack Technologies (US): Cloud infrastructure SaaS,
+     USD 48,000/year, Delaware law, auto-renewal, data processing
+   - DataSecure Ltd (UK): Cybersecurity monitoring, GBP 24,000/year,
+     English law, 2-year term, GDPR data processing addendum
+   - PayGulf Technologies (UAE/DIFC): Payment processing,
+     USD 36,000/year, DIFC law, volume-based pricing
+
+   For each: parties, effective date, term, auto-renewal clause,
+   liability cap, indemnity, governing law, data handling, termination
+
+2. NDAs (2 samples)
+   - Standard bilateral NDA with a UK technology partner
+   - One-way NDA from a potential investor (Singapore)
+   For each: parties, purpose, duration, residuals clause,
+   non-solicitation, governing law
+
+3. COMPANY LEGAL PROFILE
+   - Active contracts: 37 (12 vendor, 8 customer, 6 NDA, 5 employment,
+     3 lease, 3 other)
+   - Jurisdictions: Pakistan, UAE, UK, US
+   - Compliance obligations: GDPR (EU customers), PDPA 2023 (Pakistan),
+     DIFC Data Protection Law
+   - Legal team: Ayesha Malik (GC), Bilal Ahmad (Legal Ops)
+
+Format: structured markdown with clear section headers.
+Save as legal-demo-data.md in my working folder.
+```
+
+**Output:** A structured dataset containing 3 vendor agreements, 2 NDAs, and a company legal profile. Save this file — every subsequent lesson references Noor Technologies and these agreements.
 
 ## Your First Contract Review
 
@@ -192,13 +235,13 @@ Now run:
 
 **What to expect:** The agent produces a clause-by-clause risk analysis with a header, an overall assessment, and a three-tier classification. Your output will vary, but look for these sections:
 
-| Section | Intent | What to Verify |
-| ------- | ------ | -------------- |
-| ATTORNEY REVIEW: REQUIRED header | Governance boundary — appears on every Legal Plugin output | Confirm this header is present at the top |
-| Overall assessment | Summary recommendation (proceed / proceed with modifications / escalate) | Compare against your prediction |
-| GREEN clauses | Clauses acceptable as written | Should include standard boilerplate clauses |
-| YELLOW clauses | Clauses to negotiate before signing | Look for auto-renewal notice period, late payment interest rate, one-sided indemnification |
-| RED clauses | Clauses requiring attorney escalation | Look for liability cap, unrestricted data transfer, IP ownership of customisations, no data return on termination, governing law forcing foreign litigation |
+| Section                          | Intent                                                                   | What to Verify                                                                                                                                              |
+| -------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ATTORNEY REVIEW: REQUIRED header | Governance boundary — appears on every Legal Plugin output               | Confirm this header is present at the top                                                                                                                   |
+| Overall assessment               | Summary recommendation (proceed / proceed with modifications / escalate) | Compare against your prediction                                                                                                                             |
+| GREEN clauses                    | Clauses acceptable as written                                            | Should include standard boilerplate clauses                                                                                                                 |
+| YELLOW clauses                   | Clauses to negotiate before signing                                      | Look for auto-renewal notice period, late payment interest rate, one-sided indemnification                                                                  |
+| RED clauses                      | Clauses requiring attorney escalation                                    | Look for liability cap, unrestricted data transfer, IP ownership of customisations, no data return on termination, governing law forcing foreign litigation |
 
 :::note Your output will vary
 The specific clause classifications, recommendations, and redline language depend on the plugin version and your playbook configuration. Focus on the structure: GREEN/YELLOW/RED tiers with clause-by-clause analysis. The teaching point is the three-tier classification system and the ATTORNEY REVIEW: REQUIRED governance boundary — not the specific numbers or recommendations.
@@ -214,13 +257,13 @@ Before this plugin existed, how would Ayesha handle 37 contracts with a two-pers
 
 These five bottlenecks appear in virtually every legal department that operates without automation:
 
-| Bottleneck                        | The Problem                                                                                                        | Plugin Command That Addresses It |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
-| **Contract review queues**        | Standard vendor agreements sit unreviewed for days because every clause needs attorney time                          | `/review-contract`               |
-| **NDA backlogs**                  | Incoming confidentiality agreements pile up while the team handles higher-priority matters                           | `/triage-nda`                    |
-| **Compliance monitoring gaps**    | Regulatory changes tracked manually with no systematic process for identifying which policies need updating          | `/compliance-check`              |
-| **Knowledge management failures** | Institutional knowledge about past deals and standard positions locked in individual email inboxes                   | Negotiation playbook (Lesson 2)  |
-| **Reporting blind spots**         | No visibility into contract pipeline, approval cycle times, or clause-level risk exposure                            | `/brief`                         |
+| Bottleneck                        | The Problem                                                                                                 | Plugin Command That Addresses It |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| **Contract review queues**        | Standard vendor agreements sit unreviewed for days because every clause needs attorney time                 | `/review-contract`               |
+| **NDA backlogs**                  | Incoming confidentiality agreements pile up while the team handles higher-priority matters                  | `/triage-nda`                    |
+| **Compliance monitoring gaps**    | Regulatory changes tracked manually with no systematic process for identifying which policies need updating | `/compliance-check`              |
+| **Knowledge management failures** | Institutional knowledge about past deals and standard positions locked in individual email inboxes          | Negotiation playbook (Lesson 2)  |
+| **Reporting blind spots**         | No visibility into contract pipeline, approval cycle times, or clause-level risk exposure                   | `/brief`                         |
 
 The contract review you ran a moment ago addressed the first bottleneck. A review that would have taken Ayesha 45 minutes of close reading produced a structured risk analysis in under two minutes. Multiply that across 37 contracts.
 
@@ -244,13 +287,13 @@ In Pakistan, the Pakistan Bar Council and provincial bar councils regulate legal
 
 In every jurisdiction, the principle holds: the agent assists, the licensed professional decides.
 
-| What the Agent Does                  | What the Attorney Does             |
-| ------------------------------------ | ---------------------------------- |
-| Reviews contracts clause-by-clause   | Makes the commercial judgment call |
-| Classifies risk as GREEN/YELLOW/RED  | Decides which RED items to accept  |
-| Drafts redline suggestions           | Reviews and sends the redline      |
-| Flags regulatory compliance issues   | Interprets the regulatory impact   |
-| Produces briefings and summaries     | Signs off on advice to business    |
+| What the Agent Does                 | What the Attorney Does             |
+| ----------------------------------- | ---------------------------------- |
+| Reviews contracts clause-by-clause  | Makes the commercial judgment call |
+| Classifies risk as GREEN/YELLOW/RED | Decides which RED items to accept  |
+| Drafts redline suggestions          | Reviews and sends the redline      |
+| Flags regulatory compliance issues  | Interprets the regulatory impact   |
+| Produces briefings and summaries    | Signs off on advice to business    |
 
 ## What You Built
 
@@ -260,9 +303,13 @@ In every jurisdiction, the principle holds: the agent assists, the licensed prof
 4. Understanding of the governing principle -- discovered through the ATTORNEY REVIEW: REQUIRED header, not told as a lecture
 5. Five pre-AI bottlenecks identified and mapped to the plugin commands that address each
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-**Setup:** Use these prompts in Cowork with the Legal Plugin and Legal Ops extension installed.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
 ### Prompt 1: Reproduce
 

@@ -270,9 +270,13 @@ PayGulf's assessment is more severe than Noor's. Two RED risks -- both requiring
 3. Priority actions list for pre-launch compliance, ordered by risk score
 4. PayGulf comparison assessment demonstrating how regulated entities face higher compliance thresholds (2 RED risks vs. Noor's 1 RED)
 
+## Flashcards Study Aid
+
+<Flashcards />
+
 ## Try With AI
 
-**Setup:** Use these prompts in Cowork or your preferred AI assistant with the Legal and Legal Ops plugins installed.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
 ### Prompt 1: Reproduce
 
@@ -288,7 +292,7 @@ UAE/UK export customers. OCR processing via US-based cloud API.
 
 **What you are learning:** How `/compliance-check` structures a regulatory assessment into applicable regulations, a requirements checklist, risk analysis, and priority actions. Compare your output to the reference in this lesson. The regulation list should be consistent across runs. The priority ordering may vary -- that variation shows you where professional judgment shapes compliance planning.
 
-### Prompt 2: Adapt to a Different Jurisdiction
+### Prompt 2: Adapt
 
 ```
 /compliance-check
@@ -307,7 +311,7 @@ RED (16-25).
 
 **What you are learning:** Changing the jurisdiction pair (DIFC to Saudi Arabia) and the business action (invoice factoring with AI credit scoring) tests whether you can apply the same compliance framework to a different scenario. SAMA's outsourcing rules and Saudi PDPL data localisation should appear again -- but the AI credit scoring model introduces new regulatory considerations (algorithmic fairness, explainability requirements) that the document processing scenario did not trigger.
 
-### Prompt 3: Apply to Your Organisation
+### Prompt 3: Apply
 
 ```
 Think of a product launch, market expansion, or business process

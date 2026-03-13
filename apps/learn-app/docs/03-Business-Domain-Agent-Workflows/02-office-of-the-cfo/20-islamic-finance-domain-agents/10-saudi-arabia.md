@@ -200,7 +200,6 @@ Saudi Arabia's Public Investment Fund (PIF) has issued multiple tranches of suku
 :::info Exercise Requirements
 
 **Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
-**Exercise data:** Download [`islamic-finance-exercise-data.zip`](https://github.com/panaversity/agentfactory-business-plugins/releases/latest) and find `exercises/ex06-saudi-ifi-alinma.md`
 :::
 
 ## Practice Exercise 7: Saudi IFI — Alinma Bank Accounting Review (55 min)
@@ -237,9 +236,9 @@ Saudi Arabia's Public Investment Fund (PIF) has issued multiple tranches of suku
 
 ## Try With AI
 
-Use these prompts in Cowork or your preferred AI assistant to explore this lesson's concepts.
+**Setup:** Use these prompts in Cowork or your preferred AI assistant.
 
-### Prompt 1: ZATCA vs Hanafi Zakat — Numerical Comparison
+### Prompt 1: Reproduce
 
 ```
 Compare the ZATCA zakat calculation with the Hanafi/AAOIFI
@@ -271,7 +270,7 @@ Saudi zakat.
 
 **What you are learning:** The numerical comparison reveals that the two formulas can produce materially different zakat obligations for the same bank. For this bank with SAR 20B in long-term investments (deducted under ZATCA but not under Hanafi), the difference is substantial. This is not a theoretical distinction — it determines how much a Saudi IFI actually pays to ZATCA annually.
 
-### Prompt 2: Al Rajhi Bank Financial Statement Analysis
+### Prompt 2: Adapt
 
 ```
 Al Rajhi Bank is the world's largest Islamic bank by capital.
@@ -303,7 +302,7 @@ statements.
 
 **What you are learning:** Al Rajhi's financial statements are the de facto benchmark for Saudi Islamic banking IFRS presentation. By understanding Al Rajhi's specific line items and captions, you build the reference framework that Saudi auditors and regulators expect. Any departure from Al Rajhi's presentation conventions by a smaller Saudi IFI requires justification.
 
-### Prompt 3: Vision 2030 Financing — PIF Sukuk Portfolio Strategy
+### Prompt 3: Apply
 
 ```
 A Saudi Islamic bank is building its sukuk investment portfolio
