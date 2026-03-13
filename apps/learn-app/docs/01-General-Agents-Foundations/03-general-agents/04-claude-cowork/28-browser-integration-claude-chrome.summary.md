@@ -23,5 +23,5 @@ The Claude Chrome extension pairs with Claude Desktop to extend agentic workflow
 
 ### Connections
 
-- **Builds on**: Cowork's propose-approve-execute pattern from Lesson 26
-- **Leads to**: Plugins and Connectors, integrating external data sources beyond local files and the open web (Lesson 28)
+- **Builds on**: Cowork's propose-approve-execute pattern from Lesson 27
+- **Leads to**: Plugins and Connectors, integrating external data sources beyond local files and the open web (Lesson 29)

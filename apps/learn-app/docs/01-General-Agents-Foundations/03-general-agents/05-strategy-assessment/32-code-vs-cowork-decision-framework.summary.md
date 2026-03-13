@@ -1,4 +1,4 @@
-# Lesson 31: Code vs. Cowork - A Decision Framework
+# Lesson 32: Code vs. Cowork - A Decision Framework
 
 ## Quick Reference
 

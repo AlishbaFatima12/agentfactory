@@ -1,9 +1,9 @@
 ---
 slug: /General-Agents-Foundations/general-agents/safety-limitations-whats-coming
 title: "Safety, Limitations, and What's Coming"
-sidebar_position: 29
+sidebar_position: 30
 chapter: 3
-lesson: 29
+lesson: 30
 duration_minutes: 14
 chapter_type: Concept
 running_example_id: safety-and-limitations
@@ -241,7 +241,7 @@ Some features that were "upcoming" when Cowork launched have now shipped. Here i
 The connector ecosystem has matured significantly:
 
 - **50+ Connectors** spanning productivity, communication, design, engineering, finance, and healthcare
-- **Plugins layer**: Bundles connectors with skills, slash commands, and sub-agents into workflow packages (see Lesson 28)
+- **Plugins layer**: Bundles connectors with skills, slash commands, and sub-agents into workflow packages (see Lesson 29)
 - **Enterprise features**: Organization marketplaces, OpenTelemetry tracking, per-user provisioning
 - **13 new enterprise connectors** (February 2026): Google Workspace suite, DocuSign, Apollo, and others
 

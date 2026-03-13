@@ -1,9 +1,9 @@
 ---
 slug: /General-Agents-Foundations/general-agents/from-skills-to-business
 title: "From Skills to Business: Monetizing Agent Expertise"
-sidebar_position: 32
+sidebar_position: 33
 chapter: 3
-lesson: 32
+lesson: 33
 duration_minutes: 20
 chapter_type: Concept
 running_example_id: digital-fte-model
