@@ -13,67 +13,12 @@ Cache invalidation:
 """
 
 import logging
-import os
-from pathlib import Path
 
 import httpx
 
 from api_infra.core.redis_cache import cache_response, safe_redis_get
 
 from ..config import settings
-
-
-def _find_project_root() -> Path | None:
-    """Find the project root by searching for marker files.
-
-    Searches upward from current file for .git directory or pnpm-workspace.yaml
-    which indicates the monorepo root.
-
-    Returns:
-        Path to project root, or None if not found
-    """
-    current = Path(__file__).resolve().parent
-
-    # Search up to 10 levels to prevent infinite loop if markers not found
-    for _ in range(10):
-        # Check for monorepo markers
-        if (current / ".git").exists() or (current / "pnpm-workspace.yaml").exists():
-            return current
-        parent = current.parent
-        if parent == current:  # Reached filesystem root
-            break
-        current = parent
-
-    return None
-
-
-def _get_local_docs_path() -> Path | None:
-    """Get local docs path for development fallback.
-
-    Checks LOCAL_DOCS_PATH env var first, then searches for project root.
-
-    Returns:
-        Path to docs directory, or None if not available
-    """
-    # Environment variable override (useful for containers/testing)
-    env_path = os.getenv("LOCAL_DOCS_PATH")
-    if env_path:
-        path = Path(env_path)
-        if path.exists():
-            return path
-
-    # Find project root and construct docs path
-    root = _find_project_root()
-    if root:
-        docs_path = root / "apps" / "learn-app" / "docs"
-        if docs_path.exists():
-            return docs_path
-
-    return None
-
-
-# Lazy-initialized local docs path
-LOCAL_DOCS_PATH = _get_local_docs_path()
 
 logger = logging.getLogger(__name__)
 
@@ -136,19 +81,6 @@ async def fetch_from_github(lesson_path: str) -> tuple[str, bool]:
         except Exception as e:
             logger.warning(f"Failed to fetch from GitHub {url}: {e}")
             continue
-
-    # Fallback: Try local file system (for development)
-    if LOCAL_DOCS_PATH is not None:
-        for ext in extensions if extensions != [""] else [".md", ".mdx"]:
-            local_path = LOCAL_DOCS_PATH / f"{lesson_path.strip('/')}{ext}"
-            if local_path.exists():
-                try:
-                    content = local_path.read_text(encoding="utf-8")
-                    logger.info(f"Loaded content from local file: {local_path}")
-                    return content, True
-                except Exception as e:
-                    logger.warning(f"Failed to read local file {local_path}: {e}")
-                    continue
 
     return "", False
 
