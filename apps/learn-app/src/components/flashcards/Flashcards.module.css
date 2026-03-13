@@ -658,8 +658,7 @@
 }
 
 .contentSettling .safeCenter,
-.contentSettling .whySection,
-.contentSettling .seeAnswerHint {
+.contentSettling .whySection {
   animation: flashcardContentSettle var(--flashcard-content-settle-duration) cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
