@@ -81,7 +81,7 @@ This chapter gives Ayesha's two-person team the operational capacity of six. By 
 
 ## Install Both Plugins
 
-This chapter uses two plugin layers in Cowork: the **Anthropic Legal Plugin** (base) and the **Agent Factory Legal Ops extension** (ours). The base plugin provides seven commands and six skills for contract review, NDA triage, compliance, briefings, and templated responses. The extension adds nine skills, four commands, and six jurisdiction overlays for cross-border legal work.
+This chapter uses two plugin layers in Cowork: the **Anthropic Legal Plugin** (base) and the **Agent Factory Legal Ops extension** (ours). The base plugin provides nine commands for contract review, NDA triage, compliance, briefings, and templated responses. The extension adds one agent, six skills, and six jurisdiction overlays for cross-border legal work.
 
 **Prerequisites:** The Claude desktop app with Cowork enabled. Cowork is available on Pro, Max, Team, and Enterprise plans.
 

@@ -69,13 +69,13 @@ cognitive_load:
   assessment: "5 concepts at B1-B2 level -- within the 5-7 cognitive limit. Students have already learned the playbook architecture and contract review workflows in earlier lessons; this lesson builds on that foundation by introducing the agent paradigm that orchestrates those tools into end-to-end processes."
 
 differentiation:
-  extension_for_advanced: "Design a Contract Intake Agent SKILL.md for your own organisation, specifying the document types you receive, the triage tiers appropriate to your team size, and the SLA timelines that match your business requirements. Consider what happens when the agent encounters a document type it has never seen before."
+  extension_for_advanced: "Design a contract-intake agent .md file for your own organisation, specifying the document types you receive, the triage tiers appropriate to your team size, and the SLA timelines that match your business requirements. Consider what happens when the agent encounters a document type it has never seen before."
   remedial_for_struggling: "Focus on the concept box distinguishing agents from tools, and then trace the Gulf Digital worked example step by step. If you can explain why the Etisalat MSA went to Tier 3 and what the agent did at each step, you have the core understanding."
 ---
 
 # Legal Ops Agents: Intake and Monitoring
 
-In Lessons 3 through 9, you used commands and skills to review contracts, triage NDAs, assess compliance, manage IP, handle litigation, and prepare for meetings. Each was a single-task workflow. Now you will build agents that manage entire processes end-to-end — receiving inputs, making routing decisions, and tracking progress across the contract lifecycle.
+In Lessons 3 through 9, you used Anthropic's Legal Plugin commands and skills to review contracts, triage NDAs, assess compliance, manage IP, handle litigation, and prepare for meetings. Each was a single-task workflow. Now you will work with agents that manage entire processes end-to-end — receiving inputs, making routing decisions, and tracking progress across the contract lifecycle. The Agent Factory Legal Ops extension provides two such agents: the **contract-intake** agent and the **legal-ops-router** agent.
 
 :::tip Connector Integration
 If you connected Gmail, Slack, and Atlassian MCP servers in Lesson 1, the Intake Agent can receive contracts via email, post routing notifications to Slack channels, and log matters in Jira. If not, the agent works with manually uploaded documents — you provide the trigger, the agent handles everything after.
@@ -173,13 +173,9 @@ The specific metadata, triage results, and routing decisions depend on the contr
 
 The GC receives the escalation within minutes of the email arriving. Without the intake agent, the email would sit in the legal inbox until someone opened it, read it, realised it was urgent, and forwarded it manually. Typical delay without automation: 4-8 hours on a good day.
 
-**Creating the Contract Intake Agent as a Cowork Skill:**
+**The Contract Intake Agent in the Legal Ops Extension:**
 
-To create this skill in Cowork: open **Skills** → **+** → **Write skill instructions**. Set:
-
-- **Skill name:** `contract-intake-agent`
-- **Description:** `Activate for: incoming contract, contract routing, contract triage, new NDA received, vendor agreement intake, legal intake, new contract.`
-- **Instructions:** the rules below
+The Agent Factory Legal Ops extension includes a pre-built **contract-intake** agent at `agents/contract-intake.md`. This agent auto-activates when you mention incoming contracts, contract routing, contract triage, new NDAs received, or legal intake. You do not need to invoke a command — the agent recognises trigger phrases and activates automatically. Below are the rules it follows:
 
 ```markdown
 ## INTAKE SEQUENCE — EXECUTE IN ORDER
@@ -250,13 +246,15 @@ This adds processing time compared to Gulf Digital's workflow, but the alternati
 
 **Purpose:** Track regulatory changes across relevant jurisdictions daily; assess impact on internal policies and contracts; produce weekly GC briefing.
 
+The **regulatory-monitoring** skill in the Legal Ops extension auto-activates when you ask about regulatory changes, compliance updates, or regulatory briefings. The router skill detects the jurisdictions involved and loads the appropriate overlays before the skill executes.
+
 ```
-/brief type:"regulatory-monitoring"
-      jurisdictions:"UK, EU, US"
-      topics:"data protection, AI regulation, employment law,
-              company law, sector-specific: SaaS/cloud"
-      since:"[last run date]"
-      output:"weekly briefing with RAG status per area"
+Produce a weekly regulatory monitoring briefing:
+Jurisdictions: UK, EU, US
+Topics: data protection, AI regulation, employment law,
+        company law, sector-specific: SaaS/cloud
+Period: since [last run date]
+Output: weekly briefing with RAG status per area
 ```
 
 **Agent workflow:**

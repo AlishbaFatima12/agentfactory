@@ -93,10 +93,13 @@ If you connected Google Calendar in Lesson 1, the Compliance Calendar Agent can 
 - Internal compliance reviews -- policy review schedules, DPIAs, third-party risk reviews
 - Litigation deadlines -- limitation periods (always escalate to counsel immediately)
 
+The **compliance-calendar** skill in the Legal Ops extension auto-activates when you ask about compliance deadlines, contract renewals, regulatory filings, or obligation tracking. The router skill loads the appropriate jurisdiction overlay for cross-border obligations.
+
 ```
-/compliance-calendar scope:"all active contracts"
-                    filter:"obligations due within 60 days"
-                    output:"compliance calendar by owner and deadline"
+Run a compliance calendar check:
+Scope: all active contracts
+Filter: obligations due within 60 days
+Output: compliance calendar by owner and deadline
 ```
 
 **Integration architecture:**
@@ -161,12 +164,14 @@ Connected to accounts payable via MCP, the agent produces:
 - Benchmarking against published market rate surveys
 - Anomaly alerts: invoices deviating significantly from matter budget or historical billing patterns
 
+The **legal-spend** skill in the Legal Ops extension auto-activates when you ask about legal spend analysis, billing anomalies, outside counsel costs, or matter budgets. The router skill loads jurisdiction overlays for benchmarking against local market rates.
+
 ```
-/brief topic:"legal-spend-analysis"
-      period:"Q1 2026"
-      compare-to:"Q1 2025"
-      flag-anomalies:true
-      benchmark:"published market rates [jurisdiction]"
+Run a legal spend analysis:
+Period: Q1 2026
+Compare to: Q1 2025
+Flag anomalies: yes
+Benchmark: published market rates [jurisdiction]
 ```
 
 ### Worked Example: Anomaly Detection at Noor Technologies

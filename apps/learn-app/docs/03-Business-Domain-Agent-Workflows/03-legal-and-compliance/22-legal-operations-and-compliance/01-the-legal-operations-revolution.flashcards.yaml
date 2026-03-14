@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch22-01-legal-ops-revolution-001"
     front: "What are the two plugin layers required for the Legal Operations chapter in Cowork?"
-    back: "1. The Anthropic Legal Plugin (base) — provides seven commands and six skills for contract review, NDA triage, compliance, briefings, and templated responses.\n2. The Agent Factory Legal Ops extension — adds nine skills, four commands, and six jurisdiction overlays for cross-border legal work."
+    back: "1. The Anthropic Legal Plugin (base) — provides nine commands for contract review, NDA triage, compliance, briefings, and templated responses.\n2. The Agent Factory Legal Ops extension — adds one agent, six skills, and six jurisdiction overlays for cross-border legal work."
     difficulty: "basic"
     tags: ["plugin-installation"]
 
