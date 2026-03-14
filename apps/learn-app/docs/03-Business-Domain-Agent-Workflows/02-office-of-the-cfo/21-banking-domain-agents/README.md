@@ -2,6 +2,10 @@
 slug: /Business-Domain-Agent-Workflows/banking-domain-agents
 sidebar_position: 21
 title: "Chapter 21: Banking-Specific AI"
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-21/integrated-banking-regulatory-ai.pdf"
+  title: "Integrated Banking Regulatory AI"
+  height: 700
 description: "Build regulatory-aware AI agents for banking practitioners — covering IFRS 9 expected credit loss, Basel III/IV capital adequacy, AML/KYC financial crime, and bank reconciliation — using a 17-skill plugin architecture that routes queries to the correct regulatory framework and produces audit-ready outputs"
 chapter_number: 21
 part_number: 3
@@ -10,6 +14,8 @@ status: draft
 ---
 
 # Chapter 21: Banking-Specific AI
+
+## 📚 Teaching Aid
 
 > _"A bank's balance sheet is not an accounting artefact. It is a regulatory instrument — shaped simultaneously by IFRS 9 provisioning, Basel III capital floors, and AML surveillance obligations. The banking practitioner who can operate across all three pillars commands a career advantage that no single-domain specialist can match. The AI agent that can do the same becomes a Digital FTE worth deploying."_
 
