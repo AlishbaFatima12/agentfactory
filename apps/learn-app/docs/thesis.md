@@ -37,7 +37,7 @@ In the AI era, the most valuable companies won't sell software—they'll manufac
   color: 'var(--ifm-color-emphasis-800)',
   marginTop: '2rem'
 }}>
-The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers define intent. Agents execute. Humans supervise and verify. Soon, agents won't just <em>do</em> the work—they'll <em>source what they need</em> to do it, dynamically purchasing resources within budgets and permission envelopes set by their human supervisors. This model industrializes execution through machine-readable specs, reusable skills, Standard Tool Protocols (MCP: a shared tool-connection standard), and cloud-native infrastructure—shifting the focus from manual workflows to <strong>capability on demand</strong>.
+The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers define intent. Agents execute. Humans supervise and verify. In practice, the AI workforce works best when humans own the first 10 percent of direction, AI handles the middle 80 percent of execution, and humans return for the final 10 percent of judgment and verification. Soon, agents won't just <em>do</em> the work—they'll <em>source what they need</em> to do it, dynamically purchasing resources within budgets and permission envelopes set by their human supervisors. This model industrializes execution through machine-readable specs, reusable skills, Standard Tool Protocols (MCP: a shared tool-connection standard), and cloud-native infrastructure—shifting the focus from manual workflows to <strong>capability on demand</strong>.
 </p>
 
 <p style={{
