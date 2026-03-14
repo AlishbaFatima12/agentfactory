@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/banking-domain-agents/full-skill-library-capstone
 sidebar_position: 15
 title: "Full Banking Agent — Skill Library Build and Capstone"
-description: "Build the complete 17-skill banking plugin, set up 6 scheduled operational tasks, execute a comprehensive cross-pillar capstone scenario producing a 10-slide Board Risk Report, and validate the system with 11 cross-domain queries"
+description: "Build the complete 17-skill banking plugin, set up 8 scheduled operational tasks, execute a comprehensive cross-pillar capstone scenario producing a 10-slide Board Risk Report, and validate the system with 11 cross-domain queries"
 keywords:
   [
     "banking plugin capstone",
@@ -47,7 +47,7 @@ learning_objectives:
   - objective: "Build 4 banking skills using Cowork's skill creation workflow and validate the complete skill library with cross-domain queries"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student builds ifrs9-ecl, ifrs9-staging, basel-rwa-credit, and aml-typologies skills, sets up 6 scheduled tasks, and all 11 validation queries produce correct results"
+    assessment_method: "Student builds ifrs9-ecl, ifrs9-staging, basel-rwa-credit, and aml-typologies skills, sets up 8 scheduled tasks, and all 11 validation queries produce correct results"
 
   - objective: "Execute the capstone scenario and produce a Board Risk Report covering ECL, capital, liquidity, AML, and integrated stress testing"
     proficiency_level: "B2"
@@ -68,7 +68,7 @@ cognitive_load:
   assessment: "3 new concepts at B2 level — within the B2 limit of 10. This capstone integrates all prior concepts rather than introducing many new ones. The cognitive challenge is synthesis across 14 prior lessons into a coherent operational system."
 
 differentiation:
-  extension_for_advanced: "Add a sixth scheduled task: a weekly model performance monitor that compares predicted PDs against observed default rates (back-testing). Design the skill that would automate this and specify what threshold of PD deviation should trigger a model review."
+  extension_for_advanced: "Add a ninth scheduled task: a weekly model performance monitor that compares predicted PDs against observed default rates (back-testing). Design the skill that would automate this and specify what threshold of PD deviation should trigger a model review."
   remedial_for_struggling: "Focus on Exercise 18 (Board Risk Report) Phase 1 (ECL Movement) and Phase 2 (Capital Dashboard). If you can produce these two dashboards with correct numbers, you have demonstrated the core cross-pillar competence."
 ---
 
@@ -132,18 +132,68 @@ Create the skill for AML typology identification. The instructions should specif
 - Returns identified typologies with confidence level and red flags
 - Flags the agent boundary: typology identification is automated; SAR filing decision is human
 
-### Setting Up 6 Scheduled Tasks
+### Setting Up 8 Scheduled Tasks
 
-After building the skills, configure these operational tasks:
+After building the skills, configure these operational tasks using Cowork's `/schedule` feature. Each task runs automatically at the specified frequency — the router loads the correct skills and jurisdiction overlays.
 
-| Task                        | Frequency                | Skills Used                  | Output                                                           |
-| --------------------------- | ------------------------ | ---------------------------- | ---------------------------------------------------------------- |
-| 1. Staging monitor          | Daily                    | `ifrs9-staging`              | Flag any facilities where SICR indicators changed since last run |
-| 2. ECL calculation          | Quarterly (or on-demand) | `ifrs9-ecl`                  | Full portfolio ECL with scenario weighting                       |
-| 3. Capital ratio            | Daily                    | `basel-capital`, `basel-rwa` | CET1, Tier 1, Total Capital ratios                               |
-| 4. LCR calculation          | Daily                    | `liquidity-lcr`              | LCR with HQLA breakdown                                          |
-| 5. AML alert prioritisation | Daily                    | `aml-typologies`             | Prioritised alert queue with typology tags                       |
-| 6. Sanctions batch screen   | Daily                    | `aml-cdd-edd`                | Screen all new payments against UK/EU/OFAC lists                 |
+| Task                        | Frequency                | Skills Used                         | Output                                                           |
+| --------------------------- | ------------------------ | ----------------------------------- | ---------------------------------------------------------------- |
+| 1. Staging monitor          | Daily (08:00)            | `ifrs9-staging`                     | Flag any facilities where SICR indicators changed since last run |
+| 2. ECL calculation          | Quarterly (or on-demand) | `ifrs9-ecl`, `ifrs9-scenarios`      | Full portfolio ECL with scenario weighting                       |
+| 3. Capital ratio            | Daily (07:30)            | `basel-capital`, `basel-rwa-credit` | CET1, Tier 1, Total Capital ratios vs minimums + buffers         |
+| 4. LCR calculation          | Daily (07:30)            | `liquidity-lcr`                     | LCR with HQLA breakdown, distance to 100% minimum                |
+| 5. AML alert prioritisation | Daily (08:00)            | `aml-typologies`                    | Prioritised alert queue with typology tags and risk scores       |
+| 6. Sanctions batch screen   | Daily (07:00)            | `sanctions-screening`               | Screen new customers/counterparties against UK/EU/OFAC lists     |
+| 7. Nostro reconciliation    | Every 2 hours (intraday) | `bank-reconciliation`               | Match mirror vs SWIFT MT940; flag breaks > USD 100K immediately  |
+| 8. GL-to-risk recon         | Daily (07:00)            | `bank-reconciliation`, `ifrs9-ecl`  | Compare IFRS 9 provision (risk system) vs GL provision account   |
+
+To configure task 1 in Cowork:
+
+```
+Set up a daily scheduled task: IFRS 9 Staging Monitor
+
+Frequency: Every business day at 08:00
+Action: Read the latest loan tape. Apply SICR criteria from the
+  ifrs9-staging skill. Flag any facilities where:
+  - DPD has crossed 30 days (rebuttable presumption trigger)
+  - Rating has been downgraded 2+ notches since origination
+  - A financial covenant breach has been notified
+  - Watchlist status has changed
+Output: Morning watch-list additions with SICR rationale per facility.
+Escalation: If any Stage 1 → Stage 3 direct migration detected,
+  notify Head of Credit Risk immediately.
+```
+
+For task 2 (quarterly ECL), the scheduled task chains multiple skills:
+
+```
+Set up a quarterly scheduled task: Full Portfolio ECL Calculation
+
+Frequency: Last business day of each quarter
+Action:
+  Step 1 — Run ifrs9-staging on the full loan tape (stage classification)
+  Step 2 — Apply ifrs9-scenarios (current macro forecasts, probability weights)
+  Step 3 — Run ifrs9-ecl (PD × LGD × EAD, scenario-weighted)
+  Step 4 — Generate provision movement table (opening → closing reconciliation)
+  Step 5 — Draft IFRS 7 disclosure notes via ifrs9-disclosure
+Output: Complete ECL package for IFRS 9 Governance Committee review.
+Escalation: If total ECL movement exceeds 10% of prior quarter, flag for
+  CFO and CRO immediate review before committee meeting.
+```
+
+For tasks 7-8 (reconciliation), the escalation rules follow the ageing SLA from L14:
+
+```
+Set up an intraday scheduled task: Nostro Reconciliation
+
+Frequency: Every 2 hours during business day
+Action: Match latest mirror updates vs SWIFT MT940 confirmations
+  using the bank-reconciliation skill matching hierarchy.
+Escalation:
+  - New break > USD 100,000 → notify Operations desk immediately
+  - Any break aged > 3 days → notify account owner
+  - Any break aged > 15 days → notify CFO; provision assessment required
+```
 
 ### Validation: 11 Cross-Domain Queries
 
