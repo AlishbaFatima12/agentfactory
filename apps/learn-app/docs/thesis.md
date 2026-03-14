@@ -112,6 +112,31 @@ This changes what it means to be a "tech professional." A web developer or mobil
 
 The developer doesn't disappear. The developer does _more_.
 
+---
+
+### The 10-80-10 Rule: The Operating Rhythm of the AI Workforce
+
+Steve Jobs famously followed what's known as the 10-80-10 rule: spend 10% of your time setting the vision, let your team execute for 80%, then return for the final 10% to polish and perfect. Tech entrepreneur Dan Martell breaks it down as 10% ideation, 80% execution, and 10% refinement and integration. Jobs evolved from a micromanager who personally dictated every pixel of the Mac's calculator to a leader who trusted talented people with the middle 80% — and Apple became the most valuable company on Earth because of that shift.
+
+Now replace "talented people" with "AI employees," and you have the operating rhythm of the Agent Factory:
+
+| Phase | Jobs's Apple | The Agent Factory |
+|-------|-------------|-------------------|
+| **First 10% — Intent** | Jobs sets the vision and constraints | Human defines the spec: goals, constraints, budget, permissions |
+| **Middle 80% — Execution** | Apple's teams build the product | AI employees execute: compose tools, spawn sub-agents, deliver outcomes |
+| **Final 10% — Verification** | Jobs polishes and says "ship it" | Human reviews, refines, and approves the verified outcome |
+
+![10_80_10_rule](../static/img/rule.png)
+
+This is not a coincidence. The pattern works because it allocates human attention where it is irreplaceable — at the boundaries — while letting execution scale without bottlenecks. The first 10% is where critical thinking, context setting, and clear prompting matter. The middle 80% is the heavy lifting — summarizing, generating, analyzing, formatting. The final 10% is where human expertise shapes the output into something sharp, usable, and high-quality.
+
+The Agent Factory thesis already states: *"Buyers define intent. Agents execute. Humans supervise and verify."* The 10-80-10 rule is the quantified version of that sentence. It tells every professional exactly how their day changes: you stop spending 80% of your time on execution and start spending 100% of your attention on the 20% that only a human can do — setting direction and guaranteeing quality.
+
+The leaders who internalize this shift won't just manage AI employees. They'll manage them the way Jobs managed Apple's best teams: with a clear spec at the start, trust in the middle, and uncompromising standards at the end.
+
+---
+
+
 ### Personal Agents and the Enterprise Interface
 
 AI employees are how work gets done. Identic AI is how humans will increasingly direct, govern, and interface with that AI workforce on their own behalf. The Agent Factory manufactures role-based AI employees to execute tasks, coordinate workflows, and deliver verified outcomes at scale, but the human remains the principal who defines purpose, values, constraints, and accountability. Identic AI adds a new personal layer: a self-sovereign agent—owned by the individual, not the platform—that understands an individual’s context, judgment, and preferences, and can translate human intent into delegated action across the enterprise.¹ In this model, enterprise AI employees are the execution fabric, while identic AI is the human’s representative and orchestration layer, enabling people to supervise direction rather than perform routine execution themselves. The future firm will therefore operate across two connected layers: AI employees inside the factory, and personal agents at the edge, with humans setting intent and verifying outcomes across both.
