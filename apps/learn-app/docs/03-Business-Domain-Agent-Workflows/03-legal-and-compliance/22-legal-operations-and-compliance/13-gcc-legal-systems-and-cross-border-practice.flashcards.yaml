@@ -68,7 +68,7 @@ cards:
 
   - id: "ch22-13-gcc-011"
     front: "What is the key distinction between 'the plugin is infrastructure' and 'the playbook is the product'?"
-    back: "Infrastructure (the plugin) provides commands and skills — contract review, triage, compliance. Infrastructure gets commoditised. The product (the playbook) encodes institution-specific risk tolerance, negotiated positions, regulatory obligations, and accumulated institutional knowledge. Two organisations deploy the same plugin; the one with a mature, validated playbook gets a transformed legal function, while the other gets only a better tool producing generic output."
+    back: "Infrastructure (the plugin) provides agents and skills — contract review, triage, compliance. Infrastructure gets commoditised. The product (the playbook) encodes institution-specific risk tolerance, negotiated positions, regulatory obligations, and accumulated institutional knowledge. Two organisations deploy the same plugin; the one with a mature, validated playbook gets a transformed legal function, while the other gets only a better tool producing generic output."
     difficulty: "intermediate"
     tags: ["infrastructure-vs-product", "institutional-knowledge"]
 
