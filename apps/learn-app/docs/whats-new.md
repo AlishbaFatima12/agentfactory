@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-14
+- feat: Introduce 'Part 0 Prelude: Thinking is the Curriculum' and Isla… ([#858](https://github.com/panaversity/agentfactory/pull/858))
+
+### 2026-03-14
 - fix: expand Ch 20 L18 scheduled tasks with /schedule instructions ([#857](https://github.com/panaversity/agentfactory/pull/857))
 
 ### 2026-03-14
