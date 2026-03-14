@@ -54,4 +54,5 @@ By the end of this chapter, you'll have:
 - **Decision Framework** — Choosing between Code and Cowork (Lesson 32)
 - **From Skills to Business** — Understanding how Skills become monetizable products (Lesson 33), the Digital FTE model, and the path to revenue
 - **Cross-Vendor Landscape** — How Claude Code concepts (CLAUDE.md, Skills, MCP, hooks, teams) map to OpenAI Codex, Google Gemini CLI, and emerging industry standards (Lesson 34)
-- **Chapter Quiz** — 50-question interactive assessment (Lesson 35) covering all chapter concepts
+- **Business Strategy with AI** — 10 MBA-level frameworks (Porter's Five Forces, disruption analysis, financial statements, leadership) applied to your business using Claude and the StratArts plugin (Lesson 35)
+- **Chapter Quiz** — 50-question interactive assessment (Lesson 36) covering all chapter concepts

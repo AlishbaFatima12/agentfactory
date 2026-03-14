@@ -3,7 +3,16 @@ slug: /General-Agents-Foundations/general-agents/cross-vendor-landscape
 sidebar_position: 34
 title: "The Cross-Vendor Landscape: Your Skills Are Portable"
 description: "See how Claude Code concepts map to OpenAI Codex, Google Gemini CLI, and emerging industry standards — your agent-building skills transfer everywhere."
-keywords: [openai codex, gemini cli, agents.md, mcp, agentic ai foundation, cross-vendor, portable skills]
+keywords:
+  [
+    openai codex,
+    gemini cli,
+    agents.md,
+    mcp,
+    agentic ai foundation,
+    cross-vendor,
+    portable skills,
+  ]
 chapter: 3
 lesson: 34
 duration_minutes: 25
@@ -117,11 +126,11 @@ Codex CLI is open source, built in Rust, installable via `npm i -g @openai/codex
 
 ### Tier 2: Strong Contenders
 
-| Tool | Key Stat | Positioning |
-|------|----------|-------------|
-| **Cursor** | ~$1B ARR, ~$29.3B valuation (analyst est., [Sacra](https://sacra.com/c/cursor/)) | Fastest SaaS growth in history ([SaaStr](https://www.saastr.com/cursor-hit-1b-arr-in-17-months-the-fastest-b2b-to-scale-ever-and-its-not-even-close/)). IDE-first experience. |
-| **GitHub Copilot** | 68% developer usage, ~$400M revenue 2025 ([a16z](https://a16z.com/the-trillion-dollar-ai-software-development-stack/)) | Agent mode GA. Massive distribution via GitHub ecosystem. |
-| **Google Gemini CLI** | Open source (Apache 2.0), free tier (1,000 req/day), 1M token context | Accessible, open, enormous context window. |
+| Tool                  | Key Stat                                                                                                               | Positioning                                                                                                                                                                   |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Cursor**            | ~$1B ARR, ~$29.3B valuation (analyst est., [Sacra](https://sacra.com/c/cursor/))                                       | Fastest SaaS growth in history ([SaaStr](https://www.saastr.com/cursor-hit-1b-arr-in-17-months-the-fastest-b2b-to-scale-ever-and-its-not-even-close/)). IDE-first experience. |
+| **GitHub Copilot**    | 68% developer usage, ~$400M revenue 2025 ([a16z](https://a16z.com/the-trillion-dollar-ai-software-development-stack/)) | Agent mode GA. Massive distribution via GitHub ecosystem.                                                                                                                     |
+| **Google Gemini CLI** | Open source (Apache 2.0), free tier (1,000 req/day), 1M token context                                                  | Accessible, open, enormous context window.                                                                                                                                    |
 
 ### Tier 3: Emerging Players
 
@@ -133,18 +142,18 @@ Amazon Q Developer and Devin (which acquired the Windsurf product and brand) rou
 
 This is the most important table in this lesson. Everything you learned in Chapter 3 has equivalents across the industry:
 
-| What You Learned | Claude Code | OpenAI Codex | Google Gemini CLI | Open Standard |
-|---|---|---|---|---|
-| Project instructions | CLAUDE.md | AGENTS.md | GEMINI.md | AGENTS.md (AAIF) |
-| Agent Skills | `.claude/skills/SKILL.md` | `.agents/skills/SKILL.md` | `.gemini/skills/SKILL.md` | Agent Skills spec (agentskills.io) |
-| Tool connectivity | MCP servers in settings.json | MCP servers in config.toml | MCP servers in settings.json | MCP (Linux Foundation) |
-| Human-in-the-loop control | allowedTools, permissions | Approval modes (suggest / auto-edit / full-auto) | Tool approval prompts | Vendor-specific (no standard yet) |
-| Context hierarchy | Global, Project, Directory | Global, Project | Global, Project, Directory | Vendor-specific (no standard yet) |
-| Subagents | Task tool with subagent_type | Cloud sandbox tasks | Not yet available | Vendor-specific (no standard yet) |
-| Agent Teams | TeamCreate, TaskCreate, SendMessage | macOS app parallel agents | Not yet available | Vendor-specific (no standard yet) |
-| Hooks | Pre/Post tool hooks in settings.json | Not yet available | Not yet available | Vendor-specific (no standard yet) |
-| IDE integration | VS Code extension | VS Code extension | VS Code extension | Vendor-specific (no standard yet) |
-| Desktop app | Claude Desktop / Cowork | Codex macOS app | Not yet available | Vendor-specific (no standard yet) |
+| What You Learned          | Claude Code                          | OpenAI Codex                                     | Google Gemini CLI            | Open Standard                      |
+| ------------------------- | ------------------------------------ | ------------------------------------------------ | ---------------------------- | ---------------------------------- |
+| Project instructions      | CLAUDE.md                            | AGENTS.md                                        | GEMINI.md                    | AGENTS.md (AAIF)                   |
+| Agent Skills              | `.claude/skills/SKILL.md`            | `.agents/skills/SKILL.md`                        | `.gemini/skills/SKILL.md`    | Agent Skills spec (agentskills.io) |
+| Tool connectivity         | MCP servers in settings.json         | MCP servers in config.toml                       | MCP servers in settings.json | MCP (Linux Foundation)             |
+| Human-in-the-loop control | allowedTools, permissions            | Approval modes (suggest / auto-edit / full-auto) | Tool approval prompts        | Vendor-specific (no standard yet)  |
+| Context hierarchy         | Global, Project, Directory           | Global, Project                                  | Global, Project, Directory   | Vendor-specific (no standard yet)  |
+| Subagents                 | Task tool with subagent_type         | Cloud sandbox tasks                              | Not yet available            | Vendor-specific (no standard yet)  |
+| Agent Teams               | TeamCreate, TaskCreate, SendMessage  | macOS app parallel agents                        | Not yet available            | Vendor-specific (no standard yet)  |
+| Hooks                     | Pre/Post tool hooks in settings.json | Not yet available                                | Not yet available            | Vendor-specific (no standard yet)  |
+| IDE integration           | VS Code extension                    | VS Code extension                                | VS Code extension            | Vendor-specific (no standard yet)  |
+| Desktop app               | Claude Desktop / Cowork              | Codex macOS app                                  | Not yet available            | Vendor-specific (no standard yet)  |
 
 The pattern: what you know transfers. The directory name changes (`.claude/` vs `.agents/` vs `.gemini/`), but the concepts are the same.
 
@@ -156,11 +165,11 @@ In December 2025, the biggest companies in AI did something unusual: they agreed
 
 The **Agentic AI Foundation (AAIF)** formed under the [Linux Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) with platinum members including Anthropic, OpenAI, Google, Microsoft, AWS, Block, Bloomberg, and Cloudflare. The foundation governs three founding projects:
 
-| Project | Created By | What It Standardizes | Adoption |
-|---------|-----------|---------------------|----------|
-| [**MCP**](https://modelcontextprotocol.io/) (Model Context Protocol) | Anthropic ([donated](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation)) | Tool connectivity -- how agents talk to external services | 10,000+ active public servers, 97M monthly SDK downloads |
-| [**AGENTS.md**](https://agents.md/) | OpenAI (donated) | Project instructions -- how agents understand your codebase | 60,000+ open source projects |
-| **goose** | Block (donated) | Open agent runtime -- reference implementation for agentic workflows | Open source agent framework |
+| Project                                                              | Created By                                                                                                                              | What It Standardizes                                                 | Adoption                                                 |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
+| [**MCP**](https://modelcontextprotocol.io/) (Model Context Protocol) | Anthropic ([donated](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation)) | Tool connectivity -- how agents talk to external services            | 10,000+ active public servers, 97M monthly SDK downloads |
+| [**AGENTS.md**](https://agents.md/)                                  | OpenAI (donated)                                                                                                                        | Project instructions -- how agents understand your codebase          | 60,000+ open source projects                             |
+| **goose**                                                            | Block (donated)                                                                                                                         | Open agent runtime -- reference implementation for agentic workflows | Open source agent framework                              |
 
 A fourth standard, **Agent Skills** (the SKILL.md format), was created by Anthropic on December 18, 2025, and has been adopted by OpenAI, Microsoft (GitHub Copilot), Cursor, Atlassian, and Figma. The specification lives at [agentskills.io](https://agentskills.io/).
 
@@ -172,14 +181,14 @@ A fourth standard, **Agent Skills** (the SKILL.md format), was created by Anthro
 
 Each tool reflects a different design philosophy. None is universally "best" -- they excel at different work.
 
-| | Claude Code | OpenAI Codex | Gemini CLI |
-|---|---|---|---|
-| **Philosophy** | "Measure twice, cut once" | "Move fast, iterate" | "Open and accessible" |
-| **Execution** | Local terminal | Cloud sandbox + local | Local CLI + cloud inference |
-| **Strengths** | Deep reasoning, accuracy, self-correction | Parallel tasks, async delegation, speed | Free tier, 1M context, open source |
-| **Best for** | Complex refactoring, architecture work | Batch operations, exploration | Budget-conscious teams, large codebases |
-| **Pricing** | $20+/month subscription | $20-$200/month (via ChatGPT) | Free (1,000 req/day) |
-| **Open source** | No | CLI is open source (Rust) | Yes (Apache 2.0) |
+|                 | Claude Code                               | OpenAI Codex                            | Gemini CLI                              |
+| --------------- | ----------------------------------------- | --------------------------------------- | --------------------------------------- |
+| **Philosophy**  | "Measure twice, cut once"                 | "Move fast, iterate"                    | "Open and accessible"                   |
+| **Execution**   | Local terminal                            | Cloud sandbox + local                   | Local CLI + cloud inference             |
+| **Strengths**   | Deep reasoning, accuracy, self-correction | Parallel tasks, async delegation, speed | Free tier, 1M context, open source      |
+| **Best for**    | Complex refactoring, architecture work    | Batch operations, exploration           | Budget-conscious teams, large codebases |
+| **Pricing**     | $20+/month subscription                   | $20-$200/month (via ChatGPT)            | Free (1,000 req/day)                    |
+| **Open source** | No                                        | CLI is open source (Rust)               | Yes (Apache 2.0)                        |
 
 Professional developers increasingly use multiple tools for different strengths. Claude Code for the careful architecture work. Codex for parallelized bulk tasks. Gemini CLI for quick queries against massive codebases. This is "poly-agentic" development -- choosing the right tool for each task, not committing to one forever.
 
@@ -193,14 +202,14 @@ Multiple variants exist with different difficulty levels. **SWE-bench Verified**
 
 ### SWE-bench Verified Leaderboard (February 2026, [source](https://www.marc0.dev/en/leaderboard))
 
-| Rank | Model | Score |
-|------|-------|-------|
-| 1 | Claude Opus 4.5 | 80.9% |
-| 2 | Claude Opus 4.6 | 80.8% |
-| 3 | GPT-5.2 | 80.0% |
-| 4 | Gemini 3 Flash | 78.0% |
-| 5 | Claude Sonnet 4.5 | 77.2% |
-| 6 | Gemini 3 Pro | 76.2% |
+| Rank | Model             | Score |
+| ---- | ----------------- | ----- |
+| 1    | Claude Opus 4.5   | 80.9% |
+| 2    | Claude Opus 4.6   | 80.8% |
+| 3    | GPT-5.2           | 80.0% |
+| 4    | Gemini 3 Flash    | 78.0% |
+| 5    | Claude Sonnet 4.5 | 77.2% |
+| 6    | Gemini 3 Pro      | 76.2% |
 
 **Important caveat**: Companies report scores on different benchmark variants, making direct comparisons tricky. GPT-5.3-Codex scores 56.8% on SWE-bench Pro -- which is a harder test, not a worse score. When comparing models, always check which variant was used.
 
@@ -273,8 +282,7 @@ The AI model and market landscape change rapidly. Figures in this lesson reflect
 
 ## What's Next
 
-You've completed the full Chapter 3 journey -- from your first Claude Code session through skills, MCP, hooks, plugins, agent teams, and now cross-vendor fluency. Next up: the **Chapter Quiz** (Lesson 35) to test your understanding across all 34 lessons.
-
+You know how the tools work and how they compare across vendors. Next up: **Business Strategy with AI** (Lesson 35) -- 10 MBA-level frameworks (Porter's Five Forces, disruption analysis, financial statements, leadership) applied to your own business using Claude and the StratArts plugin. Then the **Chapter Quiz** (Lesson 36) tests your understanding across all 35 lessons.
 
 ## Flashcards Study Aid
 
