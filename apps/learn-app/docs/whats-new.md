@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-14
+- fix: Ch 21 L15 — expand scheduled tasks, absorb recipe content ([#856](https://github.com/panaversity/agentfactory/pull/856))
+
+### 2026-03-14
 
 - fix: align Ch 22 with legal-ops plugin v2.0.0 dedup ([#855](https://github.com/panaversity/agentfactory/pull/855))
 
