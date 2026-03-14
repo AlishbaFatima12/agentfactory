@@ -2,6 +2,10 @@
 slug: /Business-Domain-Agent-Workflows/legal-operations-and-compliance
 sidebar_position: 22
 title: "Chapter 22 — Legal Operations & Compliance"
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-22/legal-ops-blueprint.pdf"
+  title: "Legal Operations Blueprint"
+  height: 700
 description: "Build jurisdiction-aware legal AI workflows for contract review, NDA triage, compliance assessment, IP protection, litigation hold, meeting prep, DSAR management, legal spend analysis, and compliance calendar tracking using Anthropic's Legal Plugin and the Agent Factory Legal Ops extension with 1 agent, 6 skills, and 6 jurisdiction overlays"
 chapter_number: 22
 part_number: 3
@@ -10,6 +14,8 @@ status: draft
 ---
 
 # Chapter 22 — Legal Operations & Compliance
+
+## 📚 Teaching Aid
 
 ### Giving a Two-Person Legal Team the Operational Capacity of Six
 
