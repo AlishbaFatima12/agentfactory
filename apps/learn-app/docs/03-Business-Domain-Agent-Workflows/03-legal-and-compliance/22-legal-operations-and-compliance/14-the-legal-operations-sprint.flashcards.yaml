@@ -1,7 +1,7 @@
 deck:
   id: "ch22-14-legal-operations-sprint"
   title: "The Legal Operations Sprint"
-  description: "Capstone sprint assembling all Legal Plugin commands, skills, and jurisdiction overlays into a timed end-to-end exercise — playbook validation, contract review sprint, NDA triage, compliance assessment, meeting prep, DSAR processing, and legal ops dashboard"
+  description: "Capstone sprint assembling all Legal Plugin commands, agents, skills, and jurisdiction overlays into a timed end-to-end exercise — playbook validation, contract review sprint, NDA triage, compliance assessment, meeting prep, DSAR processing, and legal ops dashboard"
   tags: ["legal-ops", "capstone", "sprint", "chapter-22"]
   version: 1
 
@@ -31,16 +31,16 @@ cards:
     tags: ["nda-triage", "calibration"]
 
   - id: "ch22-14-sprint-005"
-    front: "Name the seven Legal Plugin commands and their primary use."
-    back: "1. /review-contract — full contract review vs playbook.\n2. /triage-nda — NDA pre-screening and tier routing.\n3. /vendor-check — obligation and status check.\n4. /brief — research, regulatory monitoring, IP analysis.\n5. /respond — DSAR, legal holds, routine responses.\n6. /compliance-check — proactive regulatory assessment.\n7. /signature-request — e-signature routing via DocuSign."
+    front: "Name the nine Anthropic Legal Plugin commands and their primary use."
+    back: "1. /review-contract — full contract review vs playbook.\n2. /triage-nda — NDA pre-screening and tier routing.\n3. /vendor-check — vendor assessment and due diligence.\n4. /brief — research and briefing documents.\n5. /compliance-check — proactive regulatory assessment.\n6. /legal-risk-assessment — risk evaluation and scoring.\n7. /meeting-briefing — meeting preparation.\n8. /legal-response — DSAR, legal holds, routine responses.\n9. /signature-request — e-signature routing."
     difficulty: "basic"
     tags: ["commands", "quick-reference"]
 
   - id: "ch22-14-sprint-006"
-    front: "Name the three Agent Factory Legal Ops Extension commands."
-    back: "1. /contract-intake — orchestrated intake: classify, route via Layer 1, track SLA.\n2. /compliance-calendar — obligation tracking, renewal calendar, deadline management.\n3. /legal-brief — IP, regulatory, spend, DSAR research with jurisdiction overlays."
+    front: "Name the Agent Factory Legal Ops Extension agent and six skills."
+    back: "Agent:\n1. contract-intake — classification, triage routing via Layer 1, SLA tracking.\n\nSkills:\n1. legal-global-router — jurisdiction detection, overlay loading, skill routing.\n2. compliance-calendar — obligation tracking, renewal calendar, deadline management.\n3. dsar-privacy — 30-day DSAR workflow with multi-jurisdiction support.\n4. ip-protection — patent landscape, trademark watch, FTO scaffolding.\n5. legal-spend — spend tracking, anomaly detection, benchmarking.\n6. regulatory-monitoring — weekly regulatory brief with impact assessment."
     difficulty: "basic"
-    tags: ["extension-commands", "quick-reference"]
+    tags: ["extension-agent-skills", "quick-reference"]
 
   - id: "ch22-14-sprint-007"
     front: "What six jurisdiction overlays are available in the Legal Ops extension?"
@@ -68,7 +68,7 @@ cards:
 
   - id: "ch22-14-sprint-011"
     front: "When transferring the legal operations engine to a new organisation, what transfers directly and what requires reconfiguration?"
-    back: "Transfers directly: command structure, triage methodology, dashboard framework, DSAR workflow.\nRequires reconfiguration: playbook clause positions, jurisdiction overlays, compliance calendar deadlines, risk thresholds.\nOrganisation-specific (does not transfer): unique regulatory requirements, practice area specialisations, professional conduct rules."
+    back: "Transfers directly: agent/skill structure, triage methodology, dashboard framework, DSAR workflow.\nRequires reconfiguration: playbook clause positions, jurisdiction overlays, compliance calendar deadlines, risk thresholds.\nOrganisation-specific (does not transfer): unique regulatory requirements, practice area specialisations, professional conduct rules."
     difficulty: "advanced"
     tags: ["transferability", "reconfiguration"]
 

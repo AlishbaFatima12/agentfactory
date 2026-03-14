@@ -302,13 +302,13 @@ source: "Lesson 14: The Legal Operations Sprint"
 {
 question: "The Legal Operations Sprint tests engine transferability — which components transfer universally to a new organisation and which require reconfiguration. A consultant plans to deploy the legal engine at a new client in 48 hours, assuming everything transfers. What does Chapter 22 identify as the components requiring reconfiguration?",
 options: [
-"Everything transfers — the command structure, playbook positions, jurisdiction overlays, and compliance requirements are all universal",
-"Command structure, triage methodology, and dashboard metrics transfer universally; playbook positions, jurisdiction overlays, and compliance requirements are organisation-specific and require reconfiguration — the difference determines whether adaptation takes an afternoon or a month",
+"Everything transfers — the agent/skill structure, playbook positions, jurisdiction overlays, and compliance requirements are all universal",
+"Agent/skill structure, triage methodology, and dashboard metrics transfer universally; playbook positions, jurisdiction overlays, and compliance requirements are organisation-specific and require reconfiguration — the difference determines whether adaptation takes an afternoon or a month",
 "Nothing transfers — every component must be rebuilt from scratch for each new organisation",
 "Only the jurisdiction overlays require reconfiguration because they contain country-specific legal rules"
 ],
 correctOption: 1,
-explanation: "Lesson 14 establishes the engine transferability framework: universal components include command structure (same /review-contract, /triage-nda commands), triage methodology (same Tier 1/2/3 classification), and dashboard metrics (same KPIs). Organisation-specific components include playbook positions (each firm's risk tolerance and standard positions), jurisdiction overlays (the specific jurisdictions the firm operates in), and compliance requirements (the regulations applicable to the firm's industry and markets). The distinction determines deployment timeline — universal components work immediately while organisation-specific components require calibration.",
+explanation: "Lesson 14 establishes the engine transferability framework: universal components include the agent/skill structure (same router agent, same Anthropic commands like /review-contract and /triage-nda), triage methodology (same Tier 1/2/3 classification), and dashboard metrics (same KPIs). Organisation-specific components include playbook positions (each firm's risk tolerance and standard positions), jurisdiction overlays (the specific jurisdictions the firm operates in), and compliance requirements (the regulations applicable to the firm's industry and markets). The distinction determines deployment timeline — universal components work immediately while organisation-specific components require calibration.",
 source: "Lesson 14: The Legal Operations Sprint"
 },
 {

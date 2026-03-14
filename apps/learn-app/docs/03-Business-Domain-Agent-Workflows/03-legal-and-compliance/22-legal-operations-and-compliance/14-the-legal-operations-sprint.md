@@ -397,51 +397,36 @@ The division of labour that runs through every lesson: the agent reviews, triage
 
 ## Quick Reference
 
-### Anthropic Legal Plugin Commands (7)
+### Anthropic Legal Plugin Commands (9)
 
-| Command              | Primary Use                          | Output                                |
-| -------------------- | ------------------------------------ | ------------------------------------- |
-| `/review-contract`   | Full contract review vs playbook     | GREEN/YELLOW/RED analysis + redlines  |
-| `/triage-nda`        | NDA pre-screening                    | Tier 1/2/3 routing recommendation     |
-| `/vendor-check`      | Obligation and status check          | Obligation summary + renewal calendar |
-| `/brief`             | Research, regulatory monitoring, IP  | Structured briefing or analysis       |
-| `/respond`           | DSAR, legal holds, routine responses | Draft for attorney review             |
-| `/compliance-check`  | Proactive regulatory assessment      | Risk assessment + action items        |
-| `/signature-request` | E-signature routing via DocuSign     | Pre-flight checklist + routing        |
+| Command                  | Primary Use                          | Output                                |
+| ------------------------ | ------------------------------------ | ------------------------------------- |
+| `/review-contract`       | Full contract review vs playbook     | GREEN/YELLOW/RED analysis + redlines  |
+| `/triage-nda`            | NDA pre-screening                    | Tier 1/2/3 routing recommendation     |
+| `/vendor-check`          | Vendor assessment and due diligence  | Obligation summary + renewal calendar |
+| `/brief`                 | Research and briefing documents      | Structured briefing or analysis       |
+| `/compliance-check`      | Proactive regulatory assessment      | Risk assessment + action items        |
+| `/legal-risk-assessment` | Risk scenario analysis               | 5x5 severity-likelihood matrix        |
+| `/meeting-briefing`      | Meeting preparation                  | Structured prep document              |
+| `/legal-response`        | DSAR, legal holds, routine responses | Draft from template library           |
+| `/signature-request`     | E-signature routing via DocuSign     | Pre-flight checklist + routing        |
 
-### Anthropic Legal Plugin Skills (9)
+### Agent Factory Legal Ops Extension — Agent (1)
 
-| Skill                   | Trigger Pattern                    | Output                         |
-| ----------------------- | ---------------------------------- | ------------------------------ |
-| `review-contract`       | Upload contract + context          | Seven-phase analysis           |
-| `triage-nda`            | NDA document + playbook ref        | Tier classification            |
-| `compliance-check`      | Regulatory question + jurisdiction | Compliance assessment          |
-| `legal-response`        | Response category + context        | Draft from template library    |
-| `legal-risk-assessment` | Risk scenario description          | 5x5 severity-likelihood matrix |
-| `meeting-briefing`      | Meeting type + attendees + agenda  | Structured prep document       |
-| `vendor-check`          | Vendor name or contract scope      | Obligation summary + calendar  |
-| `brief`                 | Topic + context                    | Structured briefing            |
-| `signature-request`     | Contract + signatories             | Pre-flight + routing           |
+| Agent             | Capability                                            |
+| ----------------- | ----------------------------------------------------- |
+| `contract-intake` | Classification, routing, SLA tracking, post-execution |
 
-### Agent Factory Legal Ops Extension Commands (3)
+### Agent Factory Legal Ops Extension — Skills (6)
 
-| Command                | Primary Use                                                     | Layer |
-| ---------------------- | --------------------------------------------------------------- | ----- |
-| `/contract-intake`     | Orchestrated intake: classify, route via Layer 1, track SLA     | L2    |
-| `/compliance-calendar` | Obligation tracking, renewal calendar, deadline management      | L2    |
-| `/legal-brief`         | IP, regulatory, spend, DSAR research with jurisdiction overlays | L2    |
-
-### Agent Factory Legal Ops Extension Skills (7)
-
-| Skill                   | Capability                                          |
-| ----------------------- | --------------------------------------------------- |
-| `legal-global-router`   | Jurisdiction detection and overlay loading (router) |
-| `contract-intake-agent` | Classification, routing, SLA tracking               |
-| `ip-protection`         | Patent landscape, trademark watch, FTO scaffolding  |
-| `regulatory-monitoring` | Weekly regulatory brief with impact assessment      |
-| `compliance-calendar`   | Filing deadlines, renewals, audit schedules         |
-| `legal-spend`           | Spend tracking, budget variance, trend analysis     |
-| `dsar-privacy`          | 30-day workflow with multi-system discovery         |
+| Skill                   | Capability                                             |
+| ----------------------- | ------------------------------------------------------ |
+| `legal-global-router`   | Jurisdiction detection, overlay loading, skill routing |
+| `compliance-calendar`   | Filing deadlines, renewals, escalation sequences       |
+| `dsar-privacy`          | 30-day DSAR workflow with multi-jurisdiction support   |
+| `ip-protection`         | Patent landscape, trademark watch, FTO scaffolding     |
+| `legal-spend`           | Spend tracking, anomaly detection, benchmarking        |
+| `regulatory-monitoring` | Weekly regulatory brief with impact assessment         |
 
 ### Jurisdiction Overlays (6)
 
@@ -454,14 +439,9 @@ The division of labour that runs through every lesson: the agent reviews, triage
 | `uae-law.md`      | UAE Civil Code, DIFC, ADGM, mainland federal law       |
 | `gcc-law.md`      | GCC-wide: Saudi PDPL, Bahrain CBB, Kuwait, Oman, Qatar |
 
-### `/brief` vs `/legal-brief` — Scope Boundary
+### How the Router Skill Works
 
-| Command        | Owner       | Preferred Scope                                        | Added Value                          |
-| -------------- | ----------- | ------------------------------------------------------ | ------------------------------------ |
-| `/brief`       | Anthropic   | Daily briefings, topic briefings, incident briefs      | General-purpose, no overlay loading  |
-| `/legal-brief` | Panaversity | Legal ops domain research: IP, regulatory, spend, DSAR | Jurisdiction overlay + domain skills |
-
-These are **different commands** with **different preferred entrypoints and owners**. `/brief` (Anthropic) is the general briefing tool — daily briefings, topic summaries, incident briefs. `/legal-brief` (Panaversity) is a specialized legal-ops research wrapper that routes through the jurisdiction-aware router before invoking ip-protection, regulatory-monitoring, legal-spend, or dsar-privacy skills. Both can handle IP and regulatory topics; `/legal-brief` adds jurisdiction overlay loading and domain-specific output formats.
+When you ask a legal question involving a specific jurisdiction, the **legal-global-router** skill auto-activates. It identifies the jurisdiction from your query, loads the appropriate overlay (uk-law.md, eu-law.md, etc.), and routes to the correct product skill or Anthropic command. For domain-specific research — IP, regulatory monitoring, legal spend, DSAR — the router activates the appropriate extension skill with jurisdiction context. For contract review, NDA triage, and compliance checks, the router loads the overlay and then defers to Anthropic's built-in commands. You do not need to invoke the router explicitly; it activates from trigger phrases in your natural-language prompts.
 
 ### MCP Connectors (8)
 
