@@ -17,6 +17,10 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-14
+
+- fix: align Ch 22 with legal-ops plugin v2.0.0 dedup ([#855](https://github.com/panaversity/agentfactory/pull/855))
+
 ### 2026-03-12
 
 - feat: add cheatsheets, explorers, and platform-explorer-builder skill ([#854](https://github.com/panaversity/agentfactory/pull/854))
