@@ -308,10 +308,10 @@ The agent drafts discovery requests to each system owner. Note which systems hol
 
 You have built a playbook, reviewed contracts, triaged NDAs, assessed compliance, prepared meetings, routed signatures, and processed DSARs. This exercise ties them together into the dashboard Ayesha needs to run the legal function strategically.
 
-**Step 1 — Vendor health check:**
+**Step 1 — Compliance calendar check:**
 
 ```
-/vendor-check
+/compliance-calendar
 Run an obligation and renewal check for Noor Technologies' active
 vendor contracts. Flag:
 - Contracts with renewal dates within 60 days
@@ -360,7 +360,7 @@ End-to-end contract lifecycle. A new vendor agreement arrives at Noor Technologi
 3. **Triage decision** — Tier classification determines routing
 4. **Negotiate** — Meeting briefing for negotiation session
 5. **Execute** — `/signature-request` to route for signatures
-6. **Post-execution** — `/vendor-check` adds to obligation tracking
+6. **Post-execution** — `/compliance-calendar` adds to obligation tracking
 7. **Dashboard** — Contract appears in compliance calendar
 
 **Time target:** 60 minutes for the full lifecycle.
@@ -409,50 +409,59 @@ The division of labour that runs through every lesson: the agent reviews, triage
 | `/compliance-check`  | Proactive regulatory assessment      | Risk assessment + action items        |
 | `/signature-request` | E-signature routing via DocuSign     | Pre-flight checklist + routing        |
 
-### Anthropic Legal Plugin Skills (6)
+### Anthropic Legal Plugin Skills (9)
 
 | Skill                   | Trigger Pattern                    | Output                         |
 | ----------------------- | ---------------------------------- | ------------------------------ |
-| `contract-review`       | Upload contract + context          | Seven-phase analysis           |
-| `nda-triage`            | NDA document + playbook ref        | Tier classification            |
-| `compliance`            | Regulatory question + jurisdiction | Compliance assessment          |
+| `review-contract`       | Upload contract + context          | Seven-phase analysis           |
+| `triage-nda`            | NDA document + playbook ref        | Tier classification            |
+| `compliance-check`      | Regulatory question + jurisdiction | Compliance assessment          |
+| `legal-response`        | Response category + context        | Draft from template library    |
 | `legal-risk-assessment` | Risk scenario description          | 5x5 severity-likelihood matrix |
 | `meeting-briefing`      | Meeting type + attendees + agenda  | Structured prep document       |
-| `canned-responses`      | Response category + context        | Draft from template library    |
+| `vendor-check`          | Vendor name or contract scope      | Obligation summary + calendar  |
+| `brief`                 | Topic + context                    | Structured briefing            |
+| `signature-request`     | Contract + signatories             | Pre-flight + routing           |
 
-### Agent Factory Legal Ops Extension Commands (4)
+### Agent Factory Legal Ops Extension Commands (3)
 
-| Command                | Primary Use                                     |
-| ---------------------- | ----------------------------------------------- |
-| `/legal-brief`         | Extended research with jurisdiction overlays    |
-| `/legal-hold`          | Litigation hold package with custodian tracking |
-| `/contract-intake`     | Automated classification and routing            |
-| `/compliance-calendar` | Deadline tracking with escalation logic         |
+| Command                | Primary Use                                                     | Layer |
+| ---------------------- | --------------------------------------------------------------- | ----- |
+| `/contract-intake`     | Orchestrated intake: classify, route via Layer 1, track SLA     | L2    |
+| `/compliance-calendar` | Obligation tracking, renewal calendar, deadline management      | L2    |
+| `/legal-brief`         | IP, regulatory, spend, DSAR research with jurisdiction overlays | L2    |
 
-### Agent Factory Legal Ops Extension Skills (9)
+### Agent Factory Legal Ops Extension Skills (7)
 
-| Skill                   | Capability                                         |
-| ----------------------- | -------------------------------------------------- |
-| `legal-global-router`   | Jurisdiction detection and overlay loading         |
-| `contract-intake-agent` | Classification, routing, SLA tracking              |
-| `regulatory-monitor`    | Weekly regulatory brief with impact assessment     |
-| `compliance-calendar`   | Filing deadlines, renewals, audit schedules        |
-| `legal-spend-analytics` | Spend tracking, budget variance, trend analysis    |
-| `dsar-manager`          | 30-day workflow with multi-system discovery        |
-| `employment-law`        | Contract review, contractor classification         |
-| `ip-monitor`            | Patent landscape, trademark watch, FTO scaffolding |
-| `litigation-support`    | Legal hold, document preservation, privilege log   |
+| Skill                   | Capability                                          |
+| ----------------------- | --------------------------------------------------- |
+| `legal-global-router`   | Jurisdiction detection and overlay loading (router) |
+| `contract-intake-agent` | Classification, routing, SLA tracking               |
+| `ip-protection`         | Patent landscape, trademark watch, FTO scaffolding  |
+| `regulatory-monitoring` | Weekly regulatory brief with impact assessment      |
+| `compliance-calendar`   | Filing deadlines, renewals, audit schedules         |
+| `legal-spend`           | Spend tracking, budget variance, trend analysis     |
+| `dsar-privacy`          | 30-day workflow with multi-system discovery         |
 
 ### Jurisdiction Overlays (6)
 
-| Overlay            | Coverage                                   |
-| ------------------ | ------------------------------------------ |
-| `uk-overlay`       | English law, UCTA, UK GDPR, Companies Act  |
-| `uae-overlay`      | UAE Civil Code, mainland federal law       |
-| `difc-overlay`     | DIFC law, DFSA regulations, DIFC Courts    |
-| `pakistan-overlay` | Contract Act 1872, PDPA, SECP requirements |
-| `saudi-overlay`    | Saudi law, PDPL, SAMA regulations          |
-| `gcc-overlay`      | GCC-wide commercial registration, VAT      |
+| Overlay File      | Coverage                                               |
+| ----------------- | ------------------------------------------------------ |
+| `uk-law.md`       | English law, UCTA, UK GDPR, Companies Act              |
+| `eu-law.md`       | EU law, EU GDPR, EU AI Act, Continental European norms |
+| `us-law.md`       | US federal/state law, CCPA, UCC, CISG exclusion        |
+| `pakistan-law.md` | Contract Act 1872, PDPA, SECP requirements             |
+| `uae-law.md`      | UAE Civil Code, DIFC, ADGM, mainland federal law       |
+| `gcc-law.md`      | GCC-wide: Saudi PDPL, Bahrain CBB, Kuwait, Oman, Qatar |
+
+### `/brief` vs `/legal-brief` — Scope Boundary
+
+| Command        | Owner       | Preferred Scope                                        | Added Value                          |
+| -------------- | ----------- | ------------------------------------------------------ | ------------------------------------ |
+| `/brief`       | Anthropic   | Daily briefings, topic briefings, incident briefs      | General-purpose, no overlay loading  |
+| `/legal-brief` | Panaversity | Legal ops domain research: IP, regulatory, spend, DSAR | Jurisdiction overlay + domain skills |
+
+These are **different commands** with **different preferred entrypoints and owners**. `/brief` (Anthropic) is the general briefing tool — daily briefings, topic summaries, incident briefs. `/legal-brief` (Panaversity) is a specialized legal-ops research wrapper that routes through the jurisdiction-aware router before invoking ip-protection, regulatory-monitoring, legal-spend, or dsar-privacy skills. Both can handle IP and regulatory topics; `/legal-brief` adds jurisdiction overlay loading and domain-specific output formats.
 
 ### MCP Connectors (8)
 

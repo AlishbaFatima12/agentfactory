@@ -25,10 +25,10 @@ This chapter requires the **Claude desktop app** with **Cowork** enabled (Pro, M
 
 1. **Install the Claude desktop app** from [claude.ai/download](https://claude.ai/download).
 2. **Open the Cowork tab** in the Claude desktop app.
-3. **Install the Legal plugin** (Anthropic base): Cowork sidebar → **Customize** → **Browse plugins** → find **Legal** → **Install**.
-4. **Install the Legal Ops extension** (ours): Cowork sidebar → **Customize** → **Browse plugins** → **Personal** → **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Legal Ops** → **Install**.
+3. **Install Layer 1 — Anthropic's Legal Plugin**: Cowork sidebar → **Customize** → **Browse plugins** → find **Legal** → **Install**. This gives you `/review-contract`, `/triage-nda`, `/vendor-check`, `/brief`, `/respond`, `/compliance-check`, `/signature-request`.
+4. **Install Layer 2 — Agent Factory Legal Ops extension** (ours): Cowork sidebar → **Customize** → **Browse plugins** → **Personal** → **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Legal Ops** → **Install**. This gives you `/contract-intake`, `/compliance-calendar`, `/legal-brief`, 6 jurisdiction overlays, and 6 unique domain skills.
 5. **Connect a working folder** for practice files (e.g., `legal-practice/`).
-6. **Verify**: type `/review-contract` in the Cowork chat — it should auto-complete.
+6. **Verify**: type `/contract-intake` in the Cowork chat — it should auto-complete.
 
 ### Lesson Map
 

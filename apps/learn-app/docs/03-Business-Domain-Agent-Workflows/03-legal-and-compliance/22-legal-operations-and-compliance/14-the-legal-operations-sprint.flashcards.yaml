@@ -37,14 +37,14 @@ cards:
     tags: ["commands", "quick-reference"]
 
   - id: "ch22-14-sprint-006"
-    front: "Name the four Agent Factory Legal Ops Extension commands."
-    back: "1. /legal-brief — extended research with jurisdiction overlays.\n2. /legal-hold — litigation hold package with custodian tracking.\n3. /contract-intake — automated classification and routing.\n4. /compliance-calendar — deadline tracking with escalation logic."
+    front: "Name the three Agent Factory Legal Ops Extension commands."
+    back: "1. /contract-intake — orchestrated intake: classify, route via Layer 1, track SLA.\n2. /compliance-calendar — obligation tracking, renewal calendar, deadline management.\n3. /legal-brief — IP, regulatory, spend, DSAR research with jurisdiction overlays."
     difficulty: "basic"
     tags: ["extension-commands", "quick-reference"]
 
   - id: "ch22-14-sprint-007"
-    front: "What six jurisdiction overlays are available in the Legal Plugin?"
-    back: "1. uk-overlay — English law, UCTA, UK GDPR, Companies Act.\n2. uae-overlay — UAE Civil Code, mainland federal law.\n3. difc-overlay — DIFC law, DFSA regulations, DIFC Courts.\n4. pakistan-overlay — Contract Act 1872, PDPA, SECP requirements.\n5. saudi-overlay — Saudi law, PDPL, SAMA regulations.\n6. gcc-overlay — GCC-wide commercial registration, VAT."
+    front: "What six jurisdiction overlays are available in the Legal Ops extension?"
+    back: "1. uk-law.md — English law, UCTA, UK GDPR, Companies Act.\n2. eu-law.md — EU law, EU GDPR, EU AI Act, Continental European norms.\n3. us-law.md — US federal/state law, CCPA, UCC, CISG exclusion.\n4. pakistan-law.md — Contract Act 1872, PDPA, SECP requirements.\n5. uae-law.md — UAE Civil Code, DIFC, ADGM, mainland federal law.\n6. gcc-law.md — GCC-wide: Saudi PDPL, Bahrain CBB, Kuwait, Oman, Qatar."
     difficulty: "basic"
     tags: ["jurisdiction-overlays", "quick-reference"]
 
