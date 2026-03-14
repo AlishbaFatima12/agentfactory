@@ -11,7 +11,7 @@ The complete banking agent deploys a 17-skill library (1 router + 16 product ski
 
 - The capstone scenario traces a GBP 4.2B bank through all five phases: ECL movement analysis (GBP 14M increase driven by CRE concentration), capital dashboard (CET1 declining from 11.2% to 10.8%), liquidity assessment (NSFR headroom thin at 8pp), AML dashboard (alert volume up 12%, 2 MRAs outstanding), and integrated stress test (adverse scenario + GBP 50M AML fine producing combined CET1 impact of GBP 79.5M)
 - The Board Risk Report assembles cross-pillar analysis into 10 slides: executive summary, ECL movement, stage migration, capital adequacy, liquidity, AML/financial crime, integrated stress test, concentration risk, recommendations, and appendix
-- Six scheduled tasks span three frequencies: daily (staging monitor, capital ratios, LCR, AML alerts, sanctions screening), quarterly (full portfolio ECL with scenario weighting), establishing an operational rhythm
+- Eight scheduled tasks span three frequencies: daily (staging monitor, capital ratios, LCR, AML alerts, sanctions screening, GL-to-risk recon), intraday (nostro reconciliation every 2 hours), quarterly (full portfolio ECL with scenario weighting), establishing an operational rhythm
 
 ### Common Mistakes
 

@@ -26,8 +26,8 @@ cards:
     why: "What other banking decisions should remain on the human side of the agent boundary?"
 
   - id: "ch21-15-full-skill-library-capstone-004"
-    front: "Name any 4 of the 6 scheduled operational tasks in the banking plugin?"
-    back: "1. Staging monitor (daily)\n2. ECL calculation (quarterly)\n3. Capital ratio (daily)\n4. LCR calculation (daily)\n5. AML alert prioritisation (daily)\n6. Sanctions batch screen (daily)"
+    front: "Name any 4 of the 8 scheduled operational tasks in the banking plugin?"
+    back: "1. Staging monitor (daily)\n2. ECL calculation (quarterly)\n3. Capital ratio (daily)\n4. LCR calculation (daily)\n5. AML alert prioritisation (daily)\n6. Sanctions batch screen (daily)\n7. Nostro reconciliation (intraday, every 2 hours)\n8. GL-to-risk reconciliation (daily)"
     tags: ["scheduled-tasks", "operations"]
     difficulty: "intermediate"
 
