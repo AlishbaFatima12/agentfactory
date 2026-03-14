@@ -210,7 +210,7 @@ Test your new jurisdiction overlay by running 3 queries against it:
 
 If any query produces incorrect output, identify whether the gap is in the product skill (unlikely — these are universal) or in your jurisdiction overlay (the labels, disclosure references, or regulatory requirements you specified). Fix the overlay and re-test.
 
-Also verify the scheduled task architecture would work for your jurisdiction:
+Also verify the scheduled task architecture would work for your jurisdiction. Configure these operational tasks using Cowork's `/schedule` feature. Each task runs automatically at the specified frequency — the router loads the correct skills and jurisdiction overlays.
 
 | Frequency     | Task                        | What It Does                                                                              |
 | ------------- | --------------------------- | ----------------------------------------------------------------------------------------- |
@@ -223,6 +223,105 @@ Also verify the scheduled task architecture would work for your jurisdiction:
 | **Quarterly** | Shariah portfolio screen    | Re-screens investment portfolio against adopted Shariah methodology                       |
 | **Quarterly** | SSB quarterly report        | Produces quarterly Shariah compliance report for SSB review                               |
 | **Annual**    | AAOIFI-IFRS reconciliation  | For groups with both AAOIFI and IFRS entities — produces full reconciliation              |
+
+To configure the daily murabaha profit recognition task in Cowork:
+
+```
+Set up a daily scheduled task: Murabaha Profit Recognition
+
+Frequency: Every business day at 17:00
+Action: Calculate and record daily profit accrual on all active
+  murabaha facilities using the murabaha skill.
+  For each facility:
+  - Extract: facility ID, cost price, selling price, total deferred
+    profit, tenure, outstanding receivable, ECL stage, jurisdiction
+  - AAOIFI jurisdictions (Bahrain, Qatar): apply proportional
+    allocation — monthly income = (total deferred profit / total
+    instalments) × instalments due. Label: "Murabaha Income"
+  - MFRS jurisdictions (Malaysia): apply effective profit rate
+    method. Label: "Profit from Islamic Financing"
+  - IFRS jurisdictions (UAE, Saudi, UK, others): apply effective
+    profit rate method. Label: "Income from Islamic Financing"
+  - Stage 3 facilities: suspend accrual recognition, reverse any
+    accrued income not yet received in cash
+  - Generate journal entries per facility with jurisdiction-compliant
+    labels — NEVER use "interest income" in any jurisdiction
+Output: Daily accrual journal entries with governing framework
+  header, deferred income movement schedule, and non-performing
+  facility report.
+Escalation: If any facility has unrecognised profit > 5 days, flag
+  for Operations review. If any Stage 1 facility transitions
+  directly to Stage 3, notify Head of Islamic Finance immediately.
+```
+
+For the monthly Shariah income check, the task chains screening with escalation:
+
+```
+Set up a monthly scheduled task: Non-Shariah Income Monitoring
+
+Frequency: Last business day of each month
+Action:
+  Step 1 — Extract all income lines from the general ledger for
+    the period using the shariah-screening-global skill
+  Step 2 — Classify each income line as Shariah-compliant or
+    non-Shariah-compliant (conventional interest received on
+    nostro balances, penalty income, late-payment charges)
+  Step 3 — Calculate non-Shariah-compliant income as a percentage
+    of total income
+  Step 4 — Compare against the institution's adopted threshold:
+    - SC Malaysia methodology: 5% of total revenue
+    - AAOIFI Governance Standard 21: per SSB resolution
+    - Fund-level: per prospectus or offering circular
+  Step 5 — For any non-Shariah income identified, draft the
+    purification entry: Dr Retained Earnings (or Charity Payable),
+    Cr Non-Shariah Income Suspense
+Output: Monthly Shariah income purity report with percentage,
+  breakdown by category, purification journal entries, and
+  trend chart (rolling 12 months).
+Escalation: If non-Shariah income exceeds the adopted threshold,
+  escalate to SSB chair immediately with full breakdown and
+  recommended purification action.
+```
+
+For the annual zakat computation, the task spans multiple jurisdictions with different methodologies:
+
+```
+Set up an annual scheduled task: Institutional Zakat Computation
+
+Frequency: Aligned with fiscal year-end (or 1st Ramadan for
+  Pakistan entities)
+Action:
+  Step 1 — Determine applicable methodology per jurisdiction
+    using the zakat-global skill:
+    - Saudi Arabia: ZATCA balance sheet formula (mandatory)
+    - Pakistan: Zakat & Ushr Ordinance 1980 (deduction at source)
+    - Malaysia: Hanafi net zakatable assets (voluntary, SSB-approved)
+    - UK/UAE/Bahrain: per Shariah board adopted method (voluntary)
+  Step 2 — Extract financial data from audited statements:
+    - Saudi: share capital, reserves, retained earnings, provisions,
+      less fixed assets and long-term investments → net ZATCA base
+    - Pakistan: eligible deposit balances as of 1st Ramadan,
+      less exemption certificates → net deposits subject to zakat
+    - Malaysia/UK: cash, financing receivables, sukuk investments,
+      liquid trade assets, less current liabilities → net zakatable
+      wealth, then nisab check
+  Step 3 — Calculate zakat at 2.5% of net base per jurisdiction
+  Step 4 — Generate journal entries:
+    - Saudi: Dr Zakat Expense (P&L), Cr Zakat Payable — ZATCA
+    - Pakistan: Dr Customer Deposits, Cr Zakat Collected — CZF
+    - Malaysia: Dr Retained Earnings (appropriation), Cr Zakat
+      Payable — NOT a P&L expense
+    - UK: footnote disclosure only (most common) or expense per
+      SSB resolution
+  Step 5 — Draft jurisdiction-specific disclosure notes and
+    prepare filing where required (ZATCA portal, SBP reporting)
+Output: Zakat computation workbook per jurisdiction, journal
+  entries, disclosure note drafts, and filing-ready returns.
+Escalation: If ZATCA zakat base differs > 5% from prior year,
+  flag for tax manager review before filing. If any jurisdiction's
+  zakat methodology requires SSB re-approval, escalate to SSB
+  chair before computation.
+```
 
 ### Step 6 — Multi-Jurisdiction Test Suite
 
