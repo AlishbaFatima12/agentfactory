@@ -110,7 +110,9 @@ A common fear: agents replace people. The evidence says otherwise. For most task
 
 This changes what it means to be a "tech professional." A web developer or mobile developer is not just someone who writes React or Swift. They are a **technology expert**—someone who understands systems, data flows, APIs, and user needs. In the Agent Factory era, that expertise becomes far more valuable, because it is no longer spent hand-coding screens. It is spent designing, deploying, and supervising agents that deliver entire products.
 
-The developer doesn't disappear. The developer does _more_.
+The developer doesn't disappear. The developer does _more_. 
+
+Steve Jobs figured out the operating rhythm for this decades ago — though he was managing humans, not agents.
 
 ---
 
