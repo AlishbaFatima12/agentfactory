@@ -1,6 +1,6 @@
 {
-  "installCommand": "cd ../.. && npx -y pnpm@9.15.9 install --no-frozen-lockfile",
-  "buildCommand": "if [ ! -d ../../.git ]; then cd ../.. && git init && git add -A && git commit -m 'vercel build' --allow-empty; cd apps/learn-app; fi && bash scripts/build.sh",
+  "installCommand": "cd ../.. && npx -y pnpm@9.15.9 install --frozen-lockfile",
+  "buildCommand": "if [ ! -d ../../.git ]; then echo 'WARNING: .git missing — creating minimal git history for Docusaurus lastUpdatedAt' && cd ../.. && git init && git add apps/ libs/ packages/ nx.json pnpm-workspace.yaml package.json && git commit -m 'vercel build' --allow-empty; cd apps/learn-app; fi && bash scripts/build.sh",
   "outputDirectory": "build",
   "cleanUrls": true,
   "trailingSlash": false,

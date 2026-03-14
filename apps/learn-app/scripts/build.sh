@@ -68,10 +68,28 @@ const fs = require('fs');
 const src = fs.readFileSync('docusaurus.config.ts', 'utf8');
 // Match the locales: [...] array (handles both single-line and multi-line)
 const m = src.match(/locales:\s*\[([\s\S]*?)\]/);
-if (!m) { console.log(''); process.exit(0); }
+if (!m) { console.error('ERROR: Could not parse locales array from docusaurus.config.ts'); process.exit(1); }
 const tokens = m[1].match(/[\"']([\w-]+)[\"']/g) || [];
+if (tokens.length === 0) { console.error('ERROR: locales array is empty in docusaurus.config.ts'); process.exit(1); }
 console.log(tokens.map(t => t.replace(/[\"']/g, '')).join(' '));
 ")
+
+if [ -z "$ALL_LOCALES" ]; then
+  echo "ERROR: Failed to detect locales from docusaurus.config.ts. Refusing to build English-only silently."
+  exit 1
+fi
+
+# Validate that each non-default locale has a matching i18n/ directory
+for locale in ${ALL_LOCALES}; do
+  if [ "${locale}" = "${DEFAULT_LOCALE}" ]; then
+    continue
+  fi
+  if [ ! -d "i18n/${locale}" ]; then
+    echo "ERROR: Locale '${locale}' declared in config but i18n/${locale}/ directory is missing."
+    echo "Run: pnpm docusaurus write-translations --locale ${locale}"
+    exit 1
+  fi
+done
 
 echo "==> Detected locales: ${ALL_LOCALES}  (default: ${DEFAULT_LOCALE})"
 
