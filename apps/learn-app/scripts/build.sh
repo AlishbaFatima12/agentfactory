@@ -20,6 +20,17 @@ set -euo pipefail
 
 # Change to learn-app directory (parent of scripts/)
 cd "$(dirname "$0")/.."
+REPO_ROOT="../.."
+
+# ---------------------------------------------------------------------------
+# Ensure .git exists (Docusaurus lastUpdatedAt needs git history).
+# On Vercel, .git is not cloned — create a minimal throwaway repo.
+# Only stage known project directories to avoid capturing unexpected files.
+# ---------------------------------------------------------------------------
+if [ ! -d "${REPO_ROOT}/.git" ]; then
+  echo "WARNING: .git missing — creating minimal git history for Docusaurus lastUpdatedAt"
+  (cd "$REPO_ROOT" && git init && git add apps/ libs/ packages/ nx.json pnpm-workspace.yaml package.json && git commit -m 'vercel build' --allow-empty)
+fi
 
 # Cross-platform sharp check: when building on Linux (WSL or CI) from a
 # Windows-installed node_modules, the linux-x64 sharp binary may be missing.
