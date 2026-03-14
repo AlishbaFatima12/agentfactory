@@ -94,9 +94,9 @@ If you connected Google Calendar in Lesson 1, the Compliance Calendar Agent can 
 - Litigation deadlines -- limitation periods (always escalate to counsel immediately)
 
 ```
-/vendor-check scope:"all active contracts"
-              filter:"obligations due within 60 days"
-              output:"compliance calendar by owner and deadline"
+/compliance-calendar scope:"all active contracts"
+                    filter:"obligations due within 60 days"
+                    output:"compliance calendar by owner and deadline"
 ```
 
 **Integration architecture:**
