@@ -1,6 +1,6 @@
 ---
 slug: /General-Agents-Foundations/general-agents/chapter-quiz
-sidebar_position: 35
+sidebar_position: 36
 title: "Chapter 3: Claude Code and Cowork Quiz"
 proficiency_level: B1
 layer: 1
@@ -771,6 +771,42 @@ options: [
 correctOption: 1,
 explanation: "Option B is correct: scheduled tasks fire between turns at low priority. If Claude is busy when a task comes due, it fires once when Claude becomes idle — not once per missed interval. There is no backlog. Option A is wrong because there is no catch-up mechanism. Option C is wrong because there is no partial catch-up either. Option D is wrong because scheduled tasks never interrupt active work — they queue at low priority and wait.",
 source: "Lesson 24: Scheduled Tasks: The Loop Skill and Cron Tools"
+},
+{
+question: "You're analyzing a market where there are many suppliers, customers have lots of alternatives, and three large companies control 80% of market share. Using Porter's Five Forces, which force is MOST favorable for a new entrant?",
+options: [
+"Competitive rivalry — the market is concentrated, so there's less competition",
+"Bargaining power of suppliers — many suppliers means they can't dictate terms",
+"Threat of substitutes — customers having alternatives means the market is dynamic and growing",
+"Bargaining power of buyers — concentrated market means buyers have fewer choices"
+],
+correctOption: 1,
+explanation: "Option B is correct: when there are many suppliers, no single supplier can dictate terms or prices — this is favorable for any business buying from them. Option A is wrong — three companies controlling 80% means intense rivalry for the remaining share, which is unfavorable. Option C confuses market dynamism with favorability — many substitutes actually increase price pressure. Option D is wrong — concentrated markets with alternatives give buyers more negotiating power, not less. Porter's Five Forces rates each force as favorable or unfavorable; understanding which forces work for and against you determines strategic positioning.",
+source: "Lesson 35: Business Strategy with AI"
+},
+{
+question: "A successful enterprise software company keeps adding advanced features requested by its largest customers. Meanwhile, a startup offers a simpler, cheaper version that satisfies 80% of small business needs. Which concept from Christensen's disruption theory best explains what's happening?",
+options: [
+"The incumbent is executing a Blue Ocean strategy by moving upmarket",
+"The startup is exploiting low-end disruption while the incumbent over-serves its best customers",
+"The incumbent has stronger competitive rivalry because it serves larger customers",
+"The startup is using Porter's cost leadership strategy to undercut on price"
+],
+correctOption: 1,
+explanation: "Option B correctly identifies the classic disruption pattern: the incumbent over-serves (adds features nobody asked for) while focusing on its most profitable customers, creating an opening for a simpler, cheaper alternative that satisfies the majority. This is the core of the Innovator's Dilemma. Option A misidentifies the pattern — moving upmarket to serve existing customers is sustaining innovation, not Blue Ocean. Option C uses the wrong framework (Porter, not Christensen). Option D also uses the wrong framework — disruption theory explains WHY cheap alternatives succeed, while Porter's cost leadership is a strategic choice, not a disruption mechanism.",
+source: "Lesson 35: Business Strategy with AI"
+},
+{
+question: "A company reports $5M in annual profit but is running out of cash and may not make payroll next month. What financial concept explains this seemingly contradictory situation?",
+options: [
+"The company must be committing accounting fraud since profit and cash should always match",
+"Profit is an accounting concept based on accrual rules, while cash reflects actual money available — they can diverge significantly",
+"The income statement must contain errors because a profitable company cannot run out of cash",
+"The balance sheet is more important than the income statement in all circumstances"
+],
+correctOption: 1,
+explanation: "Option B is correct: profit is an accounting opinion (calculated under accrual rules where revenue is recognized when earned, not when cash arrives), while cash is a fact. A company can show profits while running out of cash if customers pay late (accounts receivable grows), inventory ties up capital, or debt payments consume operating cash flow. This is why the cash flow statement exists alongside the income statement — they tell different stories. Option A is wrong — divergence between profit and cash is normal, not fraudulent. Option C is wrong — profitable companies go bankrupt regularly when they mismanage cash. Option D overgeneralizes — all three statements are important for different purposes.",
+source: "Lesson 35: Business Strategy with AI"
 }
 ]}
 />

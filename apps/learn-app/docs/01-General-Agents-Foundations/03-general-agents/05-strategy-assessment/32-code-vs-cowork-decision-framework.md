@@ -398,7 +398,7 @@ The differences are:
 
 ## What's Next
 
-You've completed the Cowork content. The remaining lessons cover the business side—how to monetize your Skills (Lesson 33) and a chapter quiz (Lesson 35) that tests your understanding of both Claude Code and Claude Cowork.
+You've completed the Cowork content. The remaining lessons cover the business side—how to monetize your Skills (Lesson 33) and a chapter quiz (Lesson 36) that tests your understanding of both Claude Code and Claude Cowork.
 
 
 ## Flashcards Study Aid
