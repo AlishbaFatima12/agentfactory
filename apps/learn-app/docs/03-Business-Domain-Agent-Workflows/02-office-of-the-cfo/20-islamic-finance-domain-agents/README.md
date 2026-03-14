@@ -2,6 +2,10 @@
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents
 sidebar_position: 20
 title: "Chapter 20: Islamic Finance Domain Agents"
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-20/global-islamic-finance-ai.pdf"
+  title: "Global Islamic Finance AI"
+  height: 700
 description: "Build jurisdiction-aware AI agents for global Islamic finance using a router, product skill, and jurisdiction overlay architecture that handles AAOIFI, IFRS, and local standards across 20 jurisdictions — ensuring the same transaction produces the correct accounting output under every framework"
 chapter_number: 20
 part_number: 3
@@ -10,6 +14,8 @@ status: draft
 ---
 
 # Chapter 20: Islamic Finance Domain Agents
+
+## 📚 Teaching Aid
 
 > _"Islamic finance is not a Muslim-only market. It is a global industry present in more than 80 countries, governed by at least five different accounting frameworks, structured around eight distinct product families. The CA/CPA who understands it commands a practice niche that is simultaneously under-served, rapidly expanding, and impossible to enter without preparation."_
 
@@ -49,6 +55,7 @@ By the end of this chapter, you will be able to:
 | [L16](./16-cross-border-consolidation.md)                    | Cross-Border Islamic Banking Group — Consolidation                      | 75 min   | Exercise 13: 4-entity group consolidation across AAOIFI + IFRS jurisdictions                             |
 | [L17](./17-islamic-fintech.md)                               | Islamic Fintech — Accounting for New Structures                         | 40 min   | Exercise 14: 4 fintech scenarios — digital murabaha, robo-adviser, P2P, climate sukuk                    |
 | [L18](./18-full-skill-library-capstone.md)                   | Full Islamic Finance Agent — SKILL.md Library Build                     | 90 min   | Exercise 15: Full 25-file skill library deployment, testing, and documentation                           |
+| [Quiz](./19-chapter-quiz.md)                                 | Chapter 20 Quiz                                                         | 30 min   | 50-question assessment covering all chapter concepts                                                     |
 
 ## Chapter Contract
 

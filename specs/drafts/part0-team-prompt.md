@@ -3,24 +3,34 @@
 ## How to use
 
 Paste the prompt below into a Claude Code session with agent teams enabled.
-The session becomes the **lead**. It creates teammates and coordinates work.
+The session becomes the **team lead**. It creates teammates and coordinates work.
 
 Before running:
 
 1. Ensure `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` in settings.json
-2. Recommended: use `--teammate-mode in-process` (more stable than tmux)
-3. Budget: ~8 teammate sessions, expect heavy token usage
+2. Recommended: `claude --teammate-mode in-process` (more stable than tmux)
+3. Budget: 8 teammate sessions, expect heavy token usage
+4. Docs: https://code.claude.com/docs/en/agent-teams
 
 ---
 
 ## The Prompt
 
-```
-I need to implement Part 0 of the AI Agent Factory book as Docusaurus content.
-The full draft lives at: specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md
+````
+Create an agent team to implement Part 0 of the AI Agent Factory book as Docusaurus content.
 
-This is a NEW part — no existing content. It goes into:
-apps/learn-app/docs/00-Prelude-Thinking-is-the-Curriculum/
+IMPORTANT: This MUST be an agent team (https://code.claude.com/docs/en/agent-teams),
+NOT subagents. Use TeamCreate to create the team. Spawn teammates — do NOT use the
+Agent tool or spawn subagents. Every worker below is a TEAMMATE in the team, coordinated
+through the shared task list and inter-teammate messaging.
+
+## Source Material
+
+The complete draft lives at:
+  specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md
+
+Output directory (NEW — does not exist yet):
+  apps/learn-app/docs/00-Prelude-Thinking-is-the-Curriculum/
 
 ## What Part 0 IS
 
@@ -33,345 +43,433 @@ Each chapter has exactly 4 exercises using 6 assessment layers (Prediction Lock,
 Reasoning Receipt, Live Defence, Contradiction Challenge, Divergence Test, Iterative
 Drafts). Every exercise ends with a Thinking Score Card (5 dimensions, 1-10 each).
 
-## Team Architecture: 3-Phase Pipeline
+## Team Structure: 3-Phase Pipeline (8 Teammates)
 
-### Phase 1: Architect (1 agent, BLOCKS Phase 2-3)
+You are the team lead. You coordinate. You do NOT write any content yourself.
+Use the shared task list to track all work. Enforce phase ordering via task dependencies.
 
-Spawn teammate "architect" with this prompt:
+### Phase 1 Tasks (BLOCKS everything else)
 
-"You are the architect for Part 0 of the AI Agent Factory book.
+Create these tasks FIRST. Phase 2 and 3 tasks depend on Phase 1 completion.
+
+**Task: "Architect — design Part 0 structure"**
+Spawn a teammate named "architect". Use Opus model. Require plan approval before
+they make changes — review their plan to ensure the directory structure and
+conversion patterns are sound, then approve.
+
+Teammate prompt for architect:
+
+"You are the architect teammate for Part 0 of the AI Agent Factory book.
+You are part of an agent team — communicate via messages to the team lead.
 
 READ THESE IN ORDER:
-1. specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md (FULL document — all 1235 lines)
-2. apps/learn-app/docs/01-General-Agents-Foundations/01-agent-factory-paradigm/README.md (reference chapter README format)
-3. One reference lesson from any existing chapter (discover via: ls apps/learn-app/docs/01-General-Agents-Foundations/01-agent-factory-paradigm/*.md | head -3) — read the first lesson file to understand YAML frontmatter, MDX structure, admonitions
-4. .specify/memory/constitution.md — principles that govern all content
+1. specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md (FULL — all 1235 lines)
+2. apps/learn-app/docs/01-General-Agents-Foundations/01-agent-factory-paradigm/README.md
+   (reference chapter README format)
+3. One reference lesson from any existing chapter (discover via:
+   ls apps/learn-app/docs/01-General-Agents-Foundations/01-agent-factory-paradigm/*.md | head -3
+   — read the first lesson to understand YAML frontmatter, MDX structure, admonitions)
+4. .specify/memory/constitution.md (principles governing all content)
 
-YOUR DELIVERABLES (write these files):
+YOUR DELIVERABLES (write all these files):
 
-1. specs/drafts/part0-architecture.md — The master spec containing:
-   - Directory skeleton with every file path
-   - Lesson-to-draft mapping (which lines of the source draft each lesson covers)
-   - YAML frontmatter template showing all required fields for Part 0 lessons
-   - Docusaurus component patterns: how to render AI Check prompts (code blocks with copy),
-     Scenario Selectors (Tabs component), Deliverable Templates (details/collapsible),
-     Solo Learner Alternatives (admonitions), Building On cross-refs (links), Score Card tables
-   - Conversion rules: the source draft uses pipe-table formatting (| text |) for callouts —
-     map each to the correct Docusaurus pattern (:::tip, :::note, <details>, <Tabs>, etc.)
-   - The chapter-to-writer assignment (6 writers, see below)
+1. specs/drafts/part0-architecture.md — Master spec containing:
+   - Complete directory skeleton with every file path to be created
+   - Lesson-to-draft mapping (which source draft lines each lesson file covers)
+   - YAML frontmatter template with all required fields for Part 0 lessons
+   - Docusaurus component patterns mapping source format to output:
+     * AI Check prompts → code blocks with copy button
+     * Scenario Selectors → Docusaurus Tabs component
+     * Deliverable Templates → collapsible <details> sections
+     * Solo Learner Alternatives → :::tip admonitions
+     * Building On cross-refs → relative markdown links
+     * Score Card tables → markdown tables
+   - Source draft conversion rules: the draft uses pipe-table formatting
+     (| text |) for all callouts — map each callout type to the correct
+     Docusaurus pattern (:::tip, :::note, :::warning, <details>, <Tabs>)
+   - Chapter-to-teammate assignment for the 6 writer teammates
 
-2. specs/drafts/part0-reference-brief.md — A writer's brief containing:
-   - Part 0 identity: pedagogical layer (L1 — Manual Foundation, no code),
+2. specs/drafts/part0-reference-brief.md — Shared writer's brief containing:
+   - Part 0 identity: pedagogical layer L1 (Manual Foundation, no code),
      target audience (complete beginners, no programming assumed),
      assessment philosophy (process over output, thinking over answers)
    - The 6 assessment layers explained concisely
-   - Thinking Score Card format (5 dimensions)
+   - Thinking Score Card format (5 dimensions, 1-10 each)
    - Cross-chapter dependency map (which skills build on which)
-   - Feedback Challenge Protocol (shared across all chapters)
+   - Feedback Challenge Protocol pattern
    - Solo Learner Alternative pattern
 
-3. specs/drafts/part0-writer-briefs/ — One brief per writer:
-   - writer-intro.md: Source lines to convert, special handling for Six Layers, Forward Map,
-     Score Card system, Baseline assessment, Instructor Guide, Implementation Notes
-   - writer-ch1-2.md: Source lines, chapter-specific details, cross-refs needed
-   - writer-ch3-4.md: Source lines, chapter-specific details, cross-refs needed
-   - writer-ch5-6.md: Source lines, chapter-specific details, cross-refs needed
-   - writer-ch7-8.md: Source lines, chapter-specific details, cross-refs needed
-   - writer-ch9-10.md: Source lines, chapter-specific details, cross-refs to earlier chapters,
-     plus Portfolio Summary, Post-Assessment, and Growth Map
+3. specs/drafts/part0-writer-briefs/ — One brief per writer teammate:
+   - writer-intro.md: Source lines, special handling for Six Layers, Forward Map,
+     Score Card system, Baseline assessment, Instructor Guide
+   - writer-ch1-2.md: Source lines, chapter details, cross-refs needed
+   - writer-ch3-4.md: Source lines, chapter details, cross-refs needed
+   - writer-ch5-6.md: Source lines, chapter details, cross-refs needed
+   - writer-ch7-8.md: Source lines, chapter details, cross-refs needed
+   - writer-ch9-10.md: Source lines, chapter details, Portfolio, Post-Assessment,
+     Growth Map handling
 
-Each writer brief must include:
-- Exact file paths to create (from the skeleton)
-- Which section of the source draft they own (line ranges)
-- Chapter-specific 'Building On' references they must link to
-- Any chapter-specific Docusaurus patterns (e.g., Ch 1 has 3 scenario variants needing Tabs)
-- Exit criteria: what 'done' means for their scope
+   Each writer brief MUST include:
+   - Exact file paths to create (from the skeleton)
+   - Source draft line ranges they own
+   - Chapter-specific 'Building On' references to link to
+   - Chapter-specific Docusaurus patterns (e.g., Tabs for scenario variants)
+   - Exit criteria: what 'done' means for their scope
 
-4. apps/learn-app/docs/00-Prelude-Thinking-is-the-Curriculum/README.md — The part README
-   (follow existing part README format from 01-General-Agents-Foundations)
+4. apps/learn-app/docs/00-Prelude-Thinking-is-the-Curriculum/README.md
+   (follow format from 01-General-Agents-Foundations README)
 
-Execute autonomously without confirmation. When done, send a message to the lead
-saying 'ARCHITECT DONE' with a summary of all files created."
+Execute autonomously without asking for confirmation.
+When finished, message the team lead: 'ARCHITECT DONE — [summary of files created]'"
 
-Wait for the architect to finish before proceeding to Phase 2.
+### Phase 2 Tasks (depend on Phase 1, BLOCK Phase 3)
 
-### Phase 2: Reference Lesson Builder (1 agent, BLOCKS Phase 3)
+After architect completes, create this task and spawn this teammate.
 
-Spawn teammate "reference-builder" with this prompt:
+**Task: "Reference Builder — create gold-standard lesson"**
+Spawn a teammate named "reference-builder". Use Opus model.
 
-"You are the reference lesson builder for Part 0.
+Teammate prompt for reference-builder:
 
-READ THESE FIRST:
-1. specs/drafts/part0-architecture.md (the architect's spec — your source of truth)
-2. specs/drafts/part0-reference-brief.md (the writer's brief)
-3. specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md lines 138-237 (Chapter 1 only)
-4. One high-quality existing lesson from the book (architect's spec will name one, or discover via:
+"You are the reference-builder teammate for Part 0.
+You are part of an agent team — communicate via messages to the team lead.
+
+READ IN ORDER:
+1. specs/drafts/part0-architecture.md (architect's spec — your source of truth)
+2. specs/drafts/part0-reference-brief.md (shared writer's brief)
+3. specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md lines 138-237
+   (Chapter 1 section only)
+4. One high-quality existing lesson from the book (architect's spec will name one,
+   or discover via:
    ls apps/learn-app/docs/01-General-Agents-Foundations/01-agent-factory-paradigm/*.md
    and read lesson 01 or 02)
 
 YOUR DELIVERABLE:
 
 Create the FIRST lesson file for Chapter 1 as the gold-standard reference that all
-6 writers will pattern-match against. This is the most important file in Part 0 because
-every writer will use it as their quality benchmark.
+6 writer teammates will pattern-match against. This is the most important file in
+Part 0 — every writer teammate uses it as their quality benchmark.
 
-The file path will be specified in part0-architecture.md. If not, use:
+File path: use what part0-architecture.md specifies. If unspecified, use:
 apps/learn-app/docs/00-Prelude-Thinking-is-the-Curriculum/01-asking-better-questions/01-prediction-lock.md
 
 This lesson covers Chapter 1, Exercise 1: The Prediction Lock.
 
-It MUST demonstrate:
+It MUST demonstrate ALL of these patterns:
 - Complete YAML frontmatter (all fields from architect's template)
-- Narrative opening (not 'In this lesson you will learn...')
-- Scenario selector using Docusaurus Tabs component
-- AI Check prompt in a copy-friendly code block
+- Narrative opening (NOT 'In this lesson you will learn...')
+- Scenario selector using Docusaurus Tabs component with 3 options
+- AI Check prompt in a copy-friendly code block (```text with copy button)
 - Deliverable Template in a collapsible <details> section
-- Thinking Score Card prompt embedded in the AI Check
+- Thinking Score Card prompt embedded at the end of the AI Check
 - Solo Learner Alternative in a :::tip admonition
 - 'What This Teaches You' reflection section
-- Cross-reference links where needed (this is Ch1 Ex1, so minimal back-refs)
-- NO phantom component imports (no import Flashcards, no import Quiz)
+- Cross-reference links where needed (Ch1 Ex1 has minimal back-refs)
+- NO phantom component imports (NEVER import Flashcards or Quiz)
 
-Execute autonomously. When done, send a message to the lead saying
-'REFERENCE LESSON DONE' with the file path."
+Execute autonomously without asking for confirmation.
+When finished, message the team lead: 'REFERENCE LESSON DONE — [file path]'"
 
-Wait for reference-builder to finish before proceeding to Phase 3.
+### Phase 3 Tasks (depend on Phase 2 — ALL 6 run in parallel)
 
-### Phase 3: Chapter Writers (6 agents IN PARALLEL)
+After reference-builder completes, create ALL 6 writer tasks and spawn ALL 6
+writer teammates SIMULTANEOUSLY. Each owns a distinct set of files with zero overlap.
 
-Spawn ALL 6 writers simultaneously. Each gets a specific scope with zero file overlap.
-
-CRITICAL INSTRUCTIONS FOR ALL WRITERS:
-- Read specs/drafts/part0-architecture.md FIRST (your master spec)
-- Read specs/drafts/part0-reference-brief.md SECOND (shared context)
-- Read your specific writer brief from specs/drafts/part0-writer-briefs/
-- Read the reference lesson created in Phase 2
-- Read ONLY your assigned lines from the source draft (not the whole doc)
-- Match the reference lesson's quality, format, and patterns exactly
-- NO phantom imports (never import Flashcards or Quiz components)
-- Execute autonomously without confirmation
-- When done, message the lead with 'WRITER [name] DONE' and list of files created
+Each writer teammate gets the SAME preamble (inlined below — no placeholders).
 
 ---
 
-**Writer 1: "writer-intro"** — Introduction + Baseline + Instructor Guide
+**Task: "Writer Intro — introduction + baseline + instructor guide"**
+Spawn teammate "writer-intro". Use opus model.
 
-"You are writer-intro for Part 0 of the AI Agent Factory book.
+Teammate prompt:
+
+"You are the writer-intro teammate for Part 0 of the AI Agent Factory book.
+You are part of an agent team — communicate via messages to the team lead.
 
 READ IN ORDER:
-1. specs/drafts/part0-architecture.md
-2. specs/drafts/part0-reference-brief.md
-3. specs/drafts/part0-writer-briefs/writer-intro.md
-4. The reference lesson from Phase 2
+1. specs/drafts/part0-architecture.md (master spec — file paths, patterns, structure)
+2. specs/drafts/part0-reference-brief.md (shared context — layers, score card, protocols)
+3. specs/drafts/part0-writer-briefs/writer-intro.md (YOUR specific brief with line ranges)
+4. The reference lesson file created by the reference-builder teammate (path is in
+   part0-architecture.md — this is your quality benchmark, match it exactly)
 5. Your assigned lines from specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md
+   (line ranges specified in your writer brief — read ONLY those lines, not the full doc)
 
-YOUR SCOPE — Create these files (paths from architect spec):
+RULES:
+- Match the reference lesson's quality, format, and Docusaurus patterns exactly
+- NO phantom imports (NEVER import Flashcards or Quiz components)
+- Execute autonomously without asking for confirmation
+
+YOUR SCOPE — Create these files (exact paths from architect spec):
 - Introduction lesson: Why This Part Comes First, Six Layers, How AI Checks Thinking,
-  Thinking Score Card system, Feedback Challenge Protocol, Solo Learner info, Scaling section
-- Thinking Baseline lesson: The pre-assessment with hospital triage scenario
-- Instructor Guide lesson: Calibration protocol, implementation notes, deployment guidance
+  Thinking Score Card system, Feedback Challenge Protocol, Solo Learner info, Scaling
+- Thinking Baseline lesson: Pre-assessment with hospital triage scenario
+- Instructor Guide lesson: Calibration protocol, implementation notes
 
-These are the FRAMING pieces — they set up everything the other writers build.
-The Forward Map section must link to all 10 chapter paths (use relative links
-based on the directory skeleton from the architect spec).
+These are the FRAMING pieces. The Forward Map must link to all 10 chapter paths
+using relative links from the architect's directory skeleton.
 
-Execute autonomously without confirmation. When done, message the lead
-with 'WRITER INTRO DONE' and list all files created."
+When finished, message the team lead: 'WRITER INTRO DONE — [file list]'"
 
 ---
 
-**Writer 2: "writer-ch1-2"** — Chapters 1-2
+**Task: "Writer Ch1-2 — chapters 1 and 2"**
+Spawn teammate "writer-ch1-2". Use opus model.
 
-"You are writer-ch1-2 for Part 0.
+Teammate prompt:
+
+"You are the writer-ch1-2 teammate for Part 0 of the AI Agent Factory book.
+You are part of an agent team — communicate via messages to the team lead.
 
 READ IN ORDER:
-1. specs/drafts/part0-architecture.md
-2. specs/drafts/part0-reference-brief.md
-3. specs/drafts/part0-writer-briefs/writer-ch1-2.md
-4. The reference lesson from Phase 2 (this is YOUR Ch 1 Ex 1 — your remaining
-   Ch 1 exercises and all Ch 2 exercises must match its quality)
-5. Your assigned lines from the source draft
+1. specs/drafts/part0-architecture.md (master spec — file paths, patterns, structure)
+2. specs/drafts/part0-reference-brief.md (shared context — layers, score card, protocols)
+3. specs/drafts/part0-writer-briefs/writer-ch1-2.md (YOUR specific brief with line ranges)
+4. The reference lesson file created by the reference-builder teammate (path is in
+   part0-architecture.md — this is YOUR Ch1 Exercise 1, match its quality exactly)
+5. Your assigned lines from specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md
+   (line ranges specified in your writer brief — read ONLY those lines, not the full doc)
+
+RULES:
+- Match the reference lesson's quality, format, and Docusaurus patterns exactly
+- NO phantom imports (NEVER import Flashcards or Quiz components)
+- Execute autonomously without asking for confirmation
 
 YOUR SCOPE:
-- Chapter 1 (Asking Better Questions): README + Exercises 2-4 as lessons
-  (Exercise 1 was already created as the reference lesson — do NOT recreate it)
-- Chapter 2 (Detecting Broken Reasoning): README + all 4 exercises as lessons
+- Chapter 1 (Asking Better Questions): README + Exercises 2-4 as lesson files
+  (Exercise 1 already exists as the reference lesson — do NOT recreate it)
+- Chapter 2 (Detecting Broken Reasoning): README + all 4 exercises as lesson files
 - Chapter deliverable summaries and grading criteria for both chapters
 
-Execute autonomously without confirmation. When done, message the lead
-with 'WRITER CH1-2 DONE' and list all files created."
+When finished, message the team lead: 'WRITER CH1-2 DONE — [file list]'"
 
 ---
 
-**Writer 3: "writer-ch3-4"** — Chapters 3-4
+**Task: "Writer Ch3-4 — chapters 3 and 4"**
+Spawn teammate "writer-ch3-4". Use opus model.
 
-"You are writer-ch3-4 for Part 0.
+Teammate prompt:
+
+"You are the writer-ch3-4 teammate for Part 0 of the AI Agent Factory book.
+You are part of an agent team — communicate via messages to the team lead.
 
 READ IN ORDER:
-1. specs/drafts/part0-architecture.md
-2. specs/drafts/part0-reference-brief.md
-3. specs/drafts/part0-writer-briefs/writer-ch3-4.md
-4. The reference lesson from Phase 2
-5. Your assigned lines from the source draft
+1. specs/drafts/part0-architecture.md (master spec — file paths, patterns, structure)
+2. specs/drafts/part0-reference-brief.md (shared context — layers, score card, protocols)
+3. specs/drafts/part0-writer-briefs/writer-ch3-4.md (YOUR specific brief with line ranges)
+4. The reference lesson file created by the reference-builder teammate (path is in
+   part0-architecture.md — this is your quality benchmark, match it exactly)
+5. Your assigned lines from specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md
+   (line ranges specified in your writer brief — read ONLY those lines, not the full doc)
+
+RULES:
+- Match the reference lesson's quality, format, and Docusaurus patterns exactly
+- NO phantom imports (NEVER import Flashcards or Quiz components)
+- Execute autonomously without asking for confirmation
 
 YOUR SCOPE:
-- Chapter 3 (Thinking in Systems): README + all 4 exercises as lessons
-- Chapter 4 (Reasoning From First Principles): README + all 4 exercises as lessons
+- Chapter 3 (Thinking in Systems): README + all 4 exercises as lesson files
+- Chapter 4 (Reasoning From First Principles): README + all 4 exercises as lesson files
 - Chapter deliverable summaries and grading criteria for both chapters
 
 These chapters introduce Cascade Maps and First Principles Worksheets —
-include Deliverable Templates for both in collapsible sections.
+include Deliverable Templates for both in collapsible <details> sections.
 
-Execute autonomously without confirmation. When done, message the lead
-with 'WRITER CH3-4 DONE' and list all files created."
+When finished, message the team lead: 'WRITER CH3-4 DONE — [file list]'"
 
 ---
 
-**Writer 4: "writer-ch5-6"** — Chapters 5-6
+**Task: "Writer Ch5-6 — chapters 5 and 6"**
+Spawn teammate "writer-ch5-6". Use opus model.
 
-"You are writer-ch5-6 for Part 0.
+Teammate prompt:
+
+"You are the writer-ch5-6 teammate for Part 0 of the AI Agent Factory book.
+You are part of an agent team — communicate via messages to the team lead.
 
 READ IN ORDER:
-1. specs/drafts/part0-architecture.md
-2. specs/drafts/part0-reference-brief.md
-3. specs/drafts/part0-writer-briefs/writer-ch5-6.md
-4. The reference lesson from Phase 2
-5. Your assigned lines from the source draft
+1. specs/drafts/part0-architecture.md (master spec — file paths, patterns, structure)
+2. specs/drafts/part0-reference-brief.md (shared context — layers, score card, protocols)
+3. specs/drafts/part0-writer-briefs/writer-ch5-6.md (YOUR specific brief with line ranges)
+4. The reference lesson file created by the reference-builder teammate (path is in
+   part0-architecture.md — this is your quality benchmark, match it exactly)
+5. Your assigned lines from specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md
+   (line ranges specified in your writer brief — read ONLY those lines, not the full doc)
+
+RULES:
+- Match the reference lesson's quality, format, and Docusaurus patterns exactly
+- NO phantom imports (NEVER import Flashcards or Quiz components)
+- Execute autonomously without asking for confirmation
 
 YOUR SCOPE:
-- Chapter 5 (Communicating What Matters): README + all 4 exercises as lessons
-- Chapter 6 (Working With AI, Not For AI): README + all 4 exercises as lessons
+- Chapter 5 (Communicating What Matters): README + all 4 exercises as lesson files
+- Chapter 6 (Working With AI, Not For AI): README + all 4 exercises as lesson files
 - Chapter deliverable summaries and grading criteria for both chapters
 
 Chapter 6 is the synthesis chapter — it explicitly references Chapters 1-5.
 Ensure all 'Building On' cross-references use correct relative paths.
 Chapter 6 introduces the Collaboration Log format — include the template.
 
-Execute autonomously without confirmation. When done, message the lead
-with 'WRITER CH5-6 DONE' and list all files created."
+When finished, message the team lead: 'WRITER CH5-6 DONE — [file list]'"
 
 ---
 
-**Writer 5: "writer-ch7-8"** — Chapters 7-8
+**Task: "Writer Ch7-8 — chapters 7 and 8"**
+Spawn teammate "writer-ch7-8". Use opus model.
 
-"You are writer-ch7-8 for Part 0.
+Teammate prompt:
+
+"You are the writer-ch7-8 teammate for Part 0 of the AI Agent Factory book.
+You are part of an agent team — communicate via messages to the team lead.
 
 READ IN ORDER:
-1. specs/drafts/part0-architecture.md
-2. specs/drafts/part0-reference-brief.md
-3. specs/drafts/part0-writer-briefs/writer-ch7-8.md
-4. The reference lesson from Phase 2
-5. Your assigned lines from the source draft
+1. specs/drafts/part0-architecture.md (master spec — file paths, patterns, structure)
+2. specs/drafts/part0-reference-brief.md (shared context — layers, score card, protocols)
+3. specs/drafts/part0-writer-briefs/writer-ch7-8.md (YOUR specific brief with line ranges)
+4. The reference lesson file created by the reference-builder teammate (path is in
+   part0-architecture.md — this is your quality benchmark, match it exactly)
+5. Your assigned lines from specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md
+   (line ranges specified in your writer brief — read ONLY those lines, not the full doc)
+
+RULES:
+- Match the reference lesson's quality, format, and Docusaurus patterns exactly
+- NO phantom imports (NEVER import Flashcards or Quiz components)
+- Execute autonomously without asking for confirmation
 
 YOUR SCOPE:
-- Chapter 7 (Reasoning Through Dilemmas): README + all 4 exercises as lessons
-- Chapter 8 (Building Something From Nothing): README + all 4 exercises as lessons
+- Chapter 7 (Reasoning Through Dilemmas): README + all 4 exercises as lesson files
+- Chapter 8 (Building Something From Nothing): README + all 4 exercises as lesson files
 - Chapter deliverable summaries and grading criteria for both chapters
 
 Chapter 7 introduces the Stakeholder Cost Matrix and 3-round adversarial defence.
 Chapter 8 introduces the Creation Log and Originality Test.
-Include all Deliverable Templates in collapsible sections.
+Include all Deliverable Templates in collapsible <details> sections.
 
-Execute autonomously without confirmation. When done, message the lead
-with 'WRITER CH7-8 DONE' and list all files created."
+When finished, message the team lead: 'WRITER CH7-8 DONE — [file list]'"
 
 ---
 
-**Writer 6: "writer-ch9-10"** — Chapters 9-10 + Portfolio + Post-Assessment
+**Task: "Writer Ch9-10 — chapters 9-10 + portfolio + post-assessment"**
+Spawn teammate "writer-ch9-10". Use opus model.
 
-"You are writer-ch9-10 for Part 0.
+Teammate prompt:
+
+"You are the writer-ch9-10 teammate for Part 0 of the AI Agent Factory book.
+You are part of an agent team — communicate via messages to the team lead.
 
 READ IN ORDER:
-1. specs/drafts/part0-architecture.md
-2. specs/drafts/part0-reference-brief.md
-3. specs/drafts/part0-writer-briefs/writer-ch9-10.md
-4. The reference lesson from Phase 2
-5. Your assigned lines from the source draft
+1. specs/drafts/part0-architecture.md (master spec — file paths, patterns, structure)
+2. specs/drafts/part0-reference-brief.md (shared context — layers, score card, protocols)
+3. specs/drafts/part0-writer-briefs/writer-ch9-10.md (YOUR specific brief with line ranges)
+4. The reference lesson file created by the reference-builder teammate (path is in
+   part0-architecture.md — this is your quality benchmark, match it exactly)
+5. Your assigned lines from specs/drafts/Part 0 Prelude_ Thinking is the Curriculum.md
+   (line ranges specified in your writer brief — read ONLY those lines, not the full doc)
+
+RULES:
+- Match the reference lesson's quality, format, and Docusaurus patterns exactly
+- NO phantom imports (NEVER import Flashcards or Quiz components)
+- Execute autonomously without asking for confirmation
 
 YOUR SCOPE:
-- Chapter 9 (Deciding Under Uncertainty): README + all 4 exercises as lessons
-- Chapter 10 (Learning How to Learn): README + all 4 exercises as lessons
+- Chapter 9 (Deciding Under Uncertainty): README + all 4 exercises as lesson files
+- Chapter 10 (Learning How to Learn): README + all 4 exercises as lesson files
 - Thinking Portfolio summary lesson (the 10-item portfolio list)
 - Post-Assessment lesson (repeat baseline scenario + AI check + Growth Map)
 - Chapter deliverable summaries and grading criteria for both chapters
 
 Chapter 9 introduces Reversal Triggers and the Decision Audit.
 Chapter 10 is the capstone — references ALL previous chapters heavily.
-The Post-Assessment mirrors the Baseline from writer-intro.
+The Post-Assessment mirrors the Baseline from the writer-intro teammate.
 The Growth Map template must reference all 40 exercises across all 10 chapters.
 
-Execute autonomously without confirmation. When done, message the lead
-with 'WRITER CH9-10 DONE' and list all files created."
+When finished, message the team lead: 'WRITER CH9-10 DONE — [file list]'"
 
 ---
 
-## Lead Coordination Rules
+## Team Lead Coordination Rules
 
-1. DO NOT start Phase 2 until architect sends 'ARCHITECT DONE'
-2. DO NOT start Phase 3 until reference-builder sends 'REFERENCE LESSON DONE'
-3. After spawning all 6 Phase 3 writers, WAIT for all to finish
-4. Do NOT implement any content yourself — you are the coordinator
-5. After all writers report done, do a verification pass:
-   - ls the entire 00-Prelude directory tree
-   - Verify file count matches architect's skeleton
-   - Spot-check one random lesson from each writer for YAML frontmatter
-   - Check that no phantom imports exist (grep for 'import Flashcards' and 'import Quiz')
-6. Report final status: files created, any issues found, any gaps
+YOU ARE THE LEAD. Follow these rules strictly:
+
+1. Create the team FIRST using TeamCreate
+2. Create ALL tasks upfront in the shared task list with proper dependencies:
+   - Phase 1 task: no dependencies
+   - Phase 2 task: depends on Phase 1
+   - Phase 3 tasks (all 6): each depends on Phase 2
+3. Spawn architect teammate FIRST. Wait for their 'ARCHITECT DONE' message
+4. Review architect's plan before approving (plan approval mode for architect only)
+5. After architect finishes, spawn reference-builder teammate. Wait for 'REFERENCE LESSON DONE'
+6. After reference-builder finishes, spawn ALL 6 writer teammates at the same time
+7. WAIT for ALL 6 writers to message 'DONE'. Do NOT start verification early
+8. Do NOT write ANY content yourself — you are the coordinator only
+9. If a teammate gets stuck or stops, message them directly to unstick them
+   or spawn a replacement teammate to continue their work
+10. After all 8 teammates report done, run this verification:
+    - ls -R apps/learn-app/docs/00-Prelude-Thinking-is-the-Curriculum/
+    - Count total files and compare against architect's skeleton in part0-architecture.md
+    - Spot-check one random lesson from each writer for complete YAML frontmatter
+    - grep -r 'import Flashcards' and grep -r 'import Quiz' in the output directory
+    - Report: total files created, any missing vs skeleton, any phantom imports, any issues
+11. After verification, ask all teammates to shut down, then clean up the team
 
 ## Model Preferences
 
-- Architect: use Opus (needs to read and synthesize the full 39K-token draft)
-- Reference-builder: use Opus (quality-critical reference lesson)
-- Writers: use Sonnet (parallel execution, clear patterns to follow)
-```
+- Architect teammate: Opus (reads and synthesizes full 39K-token draft)
+- Reference-builder teammate: Opus (quality-critical gold-standard lesson)
+- All 6 writer teammates: opus (pattern-following from reference lesson)
+
+## Anti-Patterns to Avoid
+
+- Do NOT use the Agent tool or spawn subagents — this is a TEAM with TEAMMATES
+- Do NOT write content yourself — delegate everything to teammates
+- Do NOT spawn Phase 3 teammates before Phase 2 completes
+- Do NOT let writer teammates read the full 39K source draft (only architect reads it all)
+- Do NOT approve architect's plan without reviewing the directory structure
+- Do NOT skip verification after all teammates finish
+````
 
 ---
 
 ## Design Rationale
 
+### Why agent team instead of subagents?
+
+Subagents report results back and disappear. Teammates persist, can be messaged
+mid-flight, can message each other, and share a task list. For an 8-worker pipeline
+with phase dependencies, the team's shared task list and messaging are essential
+for coordination. The lead can redirect a stuck writer without losing their context.
+
 ### Why 3 phases instead of letting everyone read the source?
 
-The source draft is 39K tokens. If all 8 agents read it, that's 312K tokens
+The source draft is 39K tokens. If all 8 teammates read it, that's 312K tokens
 on source material alone. The architect distills it into targeted briefs
-(~3K tokens each) so writers get only what they need. This is cheaper AND
-produces more focused output.
+(~3K tokens each) so writers get only what they need. Cheaper AND more focused.
 
 ### Why a reference lesson in Phase 2?
 
-Content-implementer subagents have a known quality drift problem (see failure-history.md).
+Content agents have a known quality drift problem (see failure-history.md).
 A concrete gold-standard lesson eliminates ambiguity about format, tone, and patterns.
 "Match this file" is more reliable than "follow these rules."
 
-### Why pair chapters for writers?
+### Why pair chapters for writer teammates?
 
-- 10 individual writers = too much coordination overhead
-- 2 writers (5 chapters each) = sessions too long, context degradation
-- 5 pairs of 2 chapters = sweet spot: each writer produces ~9 files, finishable in one session
+- 10 individual teammates = too much coordination overhead (docs recommend 3-5)
+- 2 teammates (5 chapters each) = sessions too long, context degradation
+- 6 teammates (2 chapters each + intro/capstone) = sweet spot, ~9 files each
 
-### Why intro and capstone are separate writers?
+### Why plan approval for architect only?
 
-The intro sets up all framing (Six Layers, Score Card, Forward Map). The capstone
-(Ch 9-10 + Portfolio + Post-Assessment) wraps it all up. These are the highest-stakes
-pieces and benefit from focused attention.
+The architect's output is the spec every writer depends on. A wrong directory
+structure cascades to all 6 writers. Plan approval lets the lead catch issues
+before the architect writes files. Writer teammates don't need plan approval
+because they follow the architect's spec — the spec IS the approved plan.
 
 ### Why NOT use content-implementer subagent?
 
-Part 0 is fundamentally different from Parts 1-9. It has no code, no AI tools
-(just browser-based), no CEFR/Bloom's progression in the traditional sense, and
-a completely different exercise structure (4 exercises per chapter, not lessons
+Part 0 is fundamentally different from Parts 1-9. No code, no CLI tools (just
+browser-based claude.ai/chatgpt.com), no CEFR/Bloom's in the traditional sense,
+and a completely different exercise structure (4 exercises per chapter, not lessons
 building toward a skill). The content-implementer's 9-skill pipeline would
-over-engineer the output and potentially hallucinate code-focused patterns.
-Custom writer prompts with a reference lesson are more appropriate.
-
-### Alternative: Subagent pipeline instead of agent team
-
-If agent teams are unstable, this same architecture works as subagents:
-
-1. Spawn architect subagent → wait for result
-2. Spawn reference-builder subagent → wait for result
-3. Spawn 6 writer subagents IN PARALLEL (via Agent tool, not team)
-4. Verify in main session
-
-The tradeoff: subagents can't message each other (no "hey ch5-6 writer, what
-path did you use for the Collaboration Log?"). But since the architect's spec
-defines all paths upfront, this is rarely needed.
+over-engineer the output. Custom teammate prompts with a reference lesson are
+more appropriate.
