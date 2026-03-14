@@ -38,7 +38,7 @@ cards:
 
   - id: "ch22-14-sprint-006"
     front: "Name the Agent Factory Legal Ops Extension agent and six skills."
-    back: "Agent:\n1. contract-intake — classification, triage routing via Layer 1, SLA tracking.\n\nSkills:\n1. legal-global-router — jurisdiction detection, overlay loading, skill routing.\n2. compliance-calendar — obligation tracking, renewal calendar, deadline management.\n3. dsar-privacy — 30-day DSAR workflow with multi-jurisdiction support.\n4. ip-protection — patent landscape, trademark watch, FTO scaffolding.\n5. legal-spend — spend tracking, anomaly detection, benchmarking.\n6. regulatory-monitoring — weekly regulatory brief with impact assessment."
+    back: "Agent:\n1. contract-intake — classification, triage routing, SLA tracking.\n\nSkills:\n1. legal-global-router — jurisdiction detection, overlay loading.\n2. compliance-calendar — obligation tracking, deadline management.\n3. dsar-privacy — 30-day DSAR workflow, multi-jurisdiction.\n4. ip-protection — patent landscape, trademark watch, FTO.\n5. legal-spend — spend tracking, anomaly detection.\n6. regulatory-monitoring — weekly regulatory brief, impact assessment."
     difficulty: "basic"
     tags: ["extension-agent-skills", "quick-reference"]
 
