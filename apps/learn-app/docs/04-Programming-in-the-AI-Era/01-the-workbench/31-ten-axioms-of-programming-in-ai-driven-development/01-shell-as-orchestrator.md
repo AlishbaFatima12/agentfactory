@@ -132,11 +132,11 @@ What makes this relevant to agentic development specifically is that AI agents r
 
 ## From Principle to Axiom
 
-In Chapter 4, you learned **Principle 1: Bash is the Key** — terminal access is the fundamental capability that makes AI agentic rather than passive. That principle answered the question: *What enables agency?*
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/bash-is-the-key), you learned **Principle 1: Bash is the Key** — terminal access is the fundamental capability that makes AI agentic rather than passive. You saw how Vercel's AI agent became 3.5x faster and went from 80% to 100% success rate simply by giving it basic shell commands instead of complex custom tools. That principle answered the question: *What enables agency?*
 
 This axiom answers a different question: *How should the shell be used once you have it?*
 
-| | Principle 1 | Axiom I |
+| | Principle 1 (Chapter 6) | Axiom I (this lesson) |
 |---|-------------|---------|
 | **Question** | What enables agency? | How should the agent use the shell? |
 | **Answer** | Terminal access | As an orchestration layer |
@@ -144,7 +144,7 @@ This axiom answers a different question: *How should the shell be used once you 
 | **Level** | "Can I act?" | "How should I act?" |
 | **Metaphor** | Having a key to the building | Knowing which rooms to use for what |
 
-The principle gave you access. The axiom gives you discipline. An agent that has terminal access but uses it for 500-line computation scripts is like a conductor who grabs a violin mid-performance — technically capable, architecturally wrong.
+The principle gave you access. The axiom gives you discipline. Chapter 6 showed that giving an AI terminal access turns it from a chatbot into an agent — it can now *do* things. But what should it do? This axiom says: use the terminal to call specialized tools (run tests, build the app, deploy), not to write hundreds of lines of logic inside the terminal itself. An agent that has terminal access but uses it for 500-line computation scripts is like a conductor who grabs a violin mid-performance — technically capable, architecturally wrong.
 
 ---
 
@@ -153,6 +153,10 @@ The principle gave you access. The axiom gives you discipline. An agent that has
 ### Composition Primitives
 
 When James asked Emma how the 12-line Makefile could replace 400 lines of bash, Emma's answer was almost embarrassingly simple: "I didn't write anything. I just connected programs that already existed." The Makefile used no framework, no libraries, no custom tooling. It used three primitives that the shell has shipped since 1973.
+
+:::tip Reading for the Pattern, Not the Commands
+The bash commands below demonstrate three shell primitives: pipes, exit codes, and redirection. You do not need to memorize them — focus on the *pattern* each one illustrates: connecting programs, checking results, and routing data. You will use these commands hands-on in later chapters.
+:::
 
 **Pipes** are the oldest and most elegant. One program's output becomes another program's input, with nothing in between but a `|` character.
 
@@ -214,6 +218,10 @@ Notice what the Makefile does NOT do:
 - It does not manage Kubernetes rollout strategy (kubectl handles that)
 
 The Makefile's only job: **sequence the programs and respect their exit codes.** This is orchestration in its purest form.
+
+:::tip Don't worry about Makefile syntax
+You will learn Makefiles later. For now, ignore details like `.PHONY` and the tab indentation. Focus on the structure: each named section (`test`, `build`, `deploy`) calls a tool and nothing else. The line `build: test` means "run `build` only after `test` succeeds" — that is orchestration expressed in two words.
+:::
 
 ### The Shell in Agent Workflows
 
@@ -344,91 +352,191 @@ The Mega-Script is the most common anti-pattern, but not the only one. Here are 
 
 ## Try With AI
 
-### Prompt 1: Classify Orchestration vs Computation
+### Prompt 1: Classify Orchestration vs Work
 
 ```
-I'm learning about shell orchestration. Look at this shell script and classify each section as either ORCHESTRATION (coordination between programs) or COMPUTATION (logic that should be a program):
+I'm learning about the difference between orchestration (coordination) and work (producing results).
 
-#!/bin/bash
-set -e
+Here are 8 steps involved in publishing a school newsletter:
 
-# Section A
-export DB_URL="postgres://localhost/myapp"
-export REDIS_URL="redis://localhost:6379"
+1. Decide which articles to include
+2. Write the lead article
+3. Edit all articles for grammar
+4. Choose the layout template
+5. Design the cover image
+6. Arrange articles into the template
+7. Decide the publication date
+8. Print and distribute copies
 
-# Section B
-python -m pytest tests/ && npm run test
+For each step, classify it as ORCHESTRATION (coordination — deciding what happens, in what order, and who does it) or WORK (producing a specific result). Explain your reasoning for each.
 
-# Section C
-for f in $(find src/ -name "*.ts"); do
-  lines=$(wc -l < "$f")
-  if [ "$lines" -gt 300 ]; then
-    imports=$(grep -c "^import" "$f")
-    ratio=$((lines / (imports + 1)))
-    if [ "$ratio" -gt 50 ]; then
-      echo "WARN: $f may need splitting ($lines lines, $imports imports)"
-    fi
-  fi
-done
-
-# Section D
-docker build -t myapp . && docker push myapp:latest
-
-For each section, explain your classification and suggest how to refactor any computation into a proper program.
+Then answer: if the editor-in-chief also writes all the articles, edits them, AND designs the cover, what problems would this cause? What is the orchestration principle being violated?
 ```
 
-**What you're learning:** How to see the architectural boundary between coordination and computation in real shell code. You are developing the pattern recognition to identify when shell usage has crossed from orchestration (its strength) into computation (where proper programs belong).
+**What you're learning:** How to see the architectural boundary between coordination and work. You are developing the pattern recognition to identify when someone responsible for orchestration has taken on too much work — the same failure mode that caused James's 400-line deployment script.
 
-### Prompt 2: Design a Makefile Orchestration Layer
-
-```
-I have a project with these manual steps that I currently run by hand:
-
-1. Lint Python code with ruff
-2. Run Python tests with pytest
-3. Check TypeScript types with tsc --noEmit
-4. Run frontend tests with vitest
-5. Build the Docker image
-6. Run integration tests against the container
-7. Push the image to registry if all tests pass
-8. Deploy to staging with kubectl
-
-Help me design a Makefile that orchestrates these steps. Requirements:
-- Each target should be one or two lines (pure orchestration)
-- Dependencies between targets should be explicit
-- Failing at any step must stop the pipeline
-- I want to be able to run individual targets (just lint, just test)
-
-After showing the Makefile, explain which parts are orchestration and confirm that no target contains computation logic.
-```
-
-**What you're learning:** How to express workflow coordination declaratively using Make's dependency graph. You are practicing the discipline of keeping each target to pure orchestration — calling programs rather than implementing logic — and making the sequencing explicit through target dependencies.
-
-### Prompt 3: Design an Orchestration Layer for Your Own Project
+### Prompt 2: Design a Workflow for a Real Process
 
 ```
-I want to apply the "Shell as Orchestrator" axiom to my own workflow. Here is what I currently do manually when working on my project:
+I want to understand how to design a workflow where the coordinator only coordinates and never does the work.
 
-[Describe your project and list 4-8 steps you repeat regularly. For example:]
-- Check code formatting
-- Run unit tests
-- Run type checking
-- Build the application
-- Run integration tests against the build
-- Generate documentation
-- Package for distribution
+Here is a scenario: A student club is organizing a charity fundraiser. The steps include:
+- Book a venue
+- Design and print posters
+- Set up an online donation page
+- Recruit volunteers
+- Buy supplies for the event
+- Send thank-you emails after the event
+- Write a summary report of how much was raised
 
-Help me design an orchestration layer for this workflow:
+Help me design a coordination plan:
+1. For each step, who should do the WORK? (Name a role: venue team, design team, finance team, etc.)
+2. What is the COORDINATOR'S only job for each step? (Assign, check, decide — never do)
+3. What is the correct ORDER? Which steps depend on other steps finishing first?
+4. What happens if the coordinator also tries to design the posters AND recruit volunteers personally?
 
-1. For each step, identify what PROGRAM should handle it (not bash logic)
-2. Map the dependencies between steps (what must finish before what starts?)
-3. Write a Makefile (or Justfile) that orchestrates these programs
-4. Identify any step where I might be tempted to write computation in the shell, and show me the proper program alternative
-
-Important: every target in the orchestration file should be 1-3 lines maximum. If a target needs more, that is computation leaking into orchestration.
+Show me the plan as a table with columns: Step, Worker, Coordinator's Job, Depends On.
 ```
 
-**What you're learning:** How to apply Axiom I to your own work, not just analyze someone else's. You are making the architectural decision about what belongs in the orchestration layer versus what belongs in programs — the core skill this axiom teaches. By working with your actual project steps, you build the habit of thinking "orchestration or computation?" every time you reach for the shell.
+**What you're learning:** How to express workflow coordination where the coordinator only decides, assigns, and checks — never produces the result. You are practicing the discipline that makes orchestration scalable: one coordinator directing many workers, rather than one person doing everything.
+
+### Prompt 3: Apply Orchestration to Your Own Life
+
+```
+I want to apply the orchestration principle to a process I manage in my own life.
+
+[Describe a process you coordinate regularly. For example:]
+- Planning a family dinner or gathering
+- Organizing a study group session
+- Managing a group project for school
+- Coordinating a move to a new apartment
+
+Help me analyze my process:
+1. List every step involved
+2. For each step, identify: is this ORCHESTRATION (deciding, sequencing, checking) or WORK (producing something)?
+3. Am I currently doing both coordination AND work for any steps? Which ones?
+4. Redesign my process so that coordination and work are clearly separated — even if I am the only person, I should know which hat I am wearing at each moment
+
+Then help me understand: why does separating these roles matter even when I am the only person involved?
+```
+
+**What you're learning:** How to apply Axiom I to your own life, not just analyze someone else's. You are making the architectural decision about what belongs in the coordination role versus what belongs in the worker role — the core skill this axiom teaches. By working with your actual process, you build the habit of thinking "am I coordinating or working?" every time you manage something.
+
+---
+
+## PRIMM-AI+ Practice: Shell as Orchestrator
+
+This axiom teaches one distinction: **coordination vs. work**. Before you start the exercises, make sure you understand the difference:
+
+- **Work** means producing a specific result — running tests, packaging code, pushing files to a server. A worker takes an input and produces an output. It does not care what happened before it or what happens after it.
+- **Coordination** means deciding the sequence, handling failures, and routing between workers — choosing which step runs first, stopping the process when a step fails, notifying people when something goes wrong. A coordinator never produces the result itself; it tells workers when to start, checks whether they succeeded, and decides what happens next.
+
+Here is one example to anchor the difference: "Run all the tests and report which ones passed" is **work** — a testing tool does that. "If any test failed, stop the whole process" is **coordination** — that is a decision about what happens next based on a worker's result.
+
+### Predict [AI-FREE]
+
+Close your AI assistant. You are in James's shoes. Your team needs to ship an update to the app. Here are six things that must happen before the update goes live:
+
+1. Run all the tests and report which ones passed or failed
+2. Stop the entire process if any test failed
+3. Package the app into a single file that can be installed on the server
+4. Make sure tests run first, packaging runs second, and deployment runs last
+5. Push the packaged file to the live server
+6. Send a notification to the team if anything failed along the way
+
+Classify each as **coordination** or **work**. Write your classifications down before continuing. Rate your confidence from 1 (guessing) to 5 (certain).
+
+*Hint: some tasks are trickier than they look. Task 6, for example — is sending a notification "work" (a messaging tool sends the message) or "coordination" (someone decided that a failure should trigger a notification)? Think carefully about whether the task is producing a result or making a decision about what should happen.*
+
+### Run
+
+Now ask your AI assistant: *"My team needs to ship an app update. Classify each of these six tasks as coordination or work: (1) run all tests and report results, (2) stop the process if any test failed, (3) package the app into an installable file, (4) ensure tests run before packaging and packaging before deployment, (5) push the package to the live server, (6) send a notification if anything failed."*
+
+Compare the AI's classifications to yours. Pay special attention to task 6 — did the AI classify it the same way you did? If you disagreed, can you see the reasoning behind the other answer?
+
+<details>
+<summary><strong>Answer Key (check after comparing with AI)</strong></summary>
+
+| Task | Classification | Why |
+|------|---------------|-----|
+| 1. Run all tests and report results | **Work** | A testing tool produces a result (pass/fail report). It does not decide what happens next. |
+| 2. Stop the process if any test failed | **Coordination** | This is a decision — "if failure, then stop." It produces no result itself. |
+| 3. Package the app into an installable file | **Work** | A build tool takes code and produces a package. It does not care what runs before or after. |
+| 4. Ensure tests → packaging → deployment order | **Coordination** | This is pure sequencing — deciding what runs in what order. |
+| 5. Push the package to the live server | **Work** | A deployment tool takes a package and installs it. It produces a result. |
+| 6. Send a notification if anything failed | **Both** | This is the tricky one. The *decision* to send a notification on failure is coordination (routing based on a result). The *act* of sending the message is work (a messaging tool does it). In a well-designed system, these are two separate steps: the coordinator decides "something failed, trigger the notification tool," and the notification tool does the sending. |
+
+If you got 5 out of 6 correct, your mental model is solid. If task 6 tripped you up, that is expected — it is genuinely two things wrapped into one sentence, and recognizing that is exactly what this axiom teaches.
+
+</details>
+
+### Investigate
+
+Think back to James's story. His 400-line deployment script tangled coordination and work together. At 2am, when the deployment broke, nobody could figure out what went wrong. Emma replaced it with 12 lines that only coordinated — each line called a specialized tool and checked whether it succeeded.
+
+Write in your own words — without asking AI — the answer to this specific question: **Why was the 12-line version easier to debug at 2am than the 400-line version?** Think about what you would see when you open each file during an emergency.
+
+Then ask your AI: *"James had a 400-line deployment script that mixed coordination with computation. Emma replaced it with 12 lines that only coordinated — each line called a tool and checked its result. Why is the 12-line version easier to debug, test, and understand? Give specific reasons."*
+
+Apply the **Error Taxonomy**: tangling coordination with work = **orchestration error**. James's script failed not because the tools were broken, but because the coordination logic — what runs in what order, what stops when something fails — was buried inside hundreds of lines of computation. When something went wrong, finding the "stop if tests fail" decision inside all that code was like finding one sentence in a 400-page book.
+
+### Parsons Problem
+
+Emma is rewriting James's broken deployment process. Here are the five steps in scrambled order. Put them in the correct sequence:
+
+- (A) The testing tool runs all tests and reports pass or fail
+- (B) The orchestration file checks the test result — if tests failed, stop here
+- (C) The build tool packages the application into a deployable file
+- (D) Emma triggers the deployment process
+- (E) The deployment tool pushes the package to the live server
+
+Write your sequence (e.g., D, A, B, C, E) before checking.
+
+Then answer two questions:
+1. Which steps are **coordination** and which are **work**?
+2. In James's original script, step B did not exist — the process kept going even when tests failed. This is exactly what caused the 2am outage. Why does removing one coordination step break the entire process?
+
+### Modify
+
+In James's original 400-line script, the step that checked whether tests passed did not just check — it also did all of this:
+
+- Read through the entire test output file
+- Counted how many tests failed and how many passed
+- Calculated a pass percentage (e.g., "94% passed")
+- Formatted the results into a readable summary table
+- Composed a notification message with the summary attached
+
+That was 40 lines of computation crammed into what should have been one coordination decision: "Did the tests pass? Yes or no."
+
+Emma replaced all 40 lines with the equivalent of a single question: **"Did the testing tool report success or failure?"** The testing tool already knows how many tests passed. The notification tool already knows how to send messages. The orchestration file does not need to do any of that — it just needs the answer: pass or fail.
+
+Why is Emma's approach better? What goes wrong when the orchestration file starts doing computation that the tools already handle?
+
+### Make [Mastery Gate]
+
+Think about a multi-step process you go through regularly — submitting a school assignment, publishing a social media post, preparing a presentation, or setting up for a study session. Write a **5-step plan** using this format.
+
+In this exercise, **you are the coordinator** — like Emma's 12-line Makefile. Your job is to check results and decide what happens next. The tools and apps do the actual work. You never do the work that a tool could do for you, just as the Makefile never ran tests itself — it told pytest to run them and checked whether pytest reported success.
+
+Here is an example for "submitting a homework assignment":
+
+| Step | Work (what happens) | Tool that does it | You (the coordinator) decide... |
+|------|-------------------|-------------|-------------------|
+| 1 | Check spelling and grammar | Spell-check tool | Are there errors left? If yes, fix them before moving on. |
+| 2 | Check that all required sections are included | Checklist / rubric | Does the assignment meet every requirement? If not, stop and fill the gaps. |
+| 3 | Convert to PDF | File converter | Did the conversion succeed? Is the formatting correct? |
+| 4 | Upload to the submission portal | Upload tool | Did the portal confirm the upload? If it failed, retry. |
+| 5 | Send confirmation to yourself | Email app | Only trigger this if steps 1-4 all succeeded. |
+
+Notice: **you never do what the tools do.** You do not manually check every word for typos (the spell-checker does that). You do not convert the file format yourself (the converter does that). You only look at each tool's result and decide: *move forward, stop, or retry?* That is coordination.
+
+Now write your own 5-step plan for a different process. For each step, ask yourself: "Am I doing the work, or am I checking a result and making a decision?" If you are doing the work, name the tool or person who should do it instead. If no tool exists, that step is genuinely work — but the coordinator's job is still just to check whether it succeeded before moving to the next step.
+
+Your plan is your mastery gate — you should be able to explain what would go wrong if the coordinator started doing the work (like James's 400-line script did).
+
+:::tip Verification Ladder Preview
+You just predicted which tasks are coordination and which are work, then checked your prediction against reality. That predict-then-check habit is **Rung 1 of the Verification Ladder** — the foundation that every other verification practice builds on.
+:::
 
 ---
 

@@ -14,7 +14,7 @@ skills:
     category: "Technical"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can implement structured logging with appropriate log levels, JSON formatting, and correlation IDs for production Python applications"
+    measurable_at_this_level: "Student can explain why structured logging (with levels, machine-readable formats, and correlation IDs) is essential for diagnosing production issues that pre-deployment tests cannot catch"
 
   - name: "Three Pillars Integration"
     proficiency_level: "B1"
@@ -31,17 +31,17 @@ skills:
     measurable_at_this_level: "Student can design monitoring for AI agent systems covering token usage, response quality, error rates, and cost per operation"
 
   - name: "Verification Spectrum Reasoning"
-    proficiency_level: "B2"
+    proficiency_level: "B1"
     category: "Conceptual"
-    bloom_level: "Evaluate"
+    bloom_level: "Analyze"
     digcomp_area: "Computational Thinking"
-    measurable_at_this_level: "Student can evaluate a system's verification coverage across the full pre-deployment to post-deployment spectrum and identify gaps"
+    measurable_at_this_level: "Student can distinguish pre-deployment verification (tests, types, CI) from post-deployment verification (logs, metrics, traces) and explain why both are necessary"
 
 learning_objectives:
-  - objective: "Implement structured logging in Python using structlog with appropriate levels and JSON output"
+  - objective: "Explain why structured logging with appropriate levels and machine-readable output is essential for production observability"
     proficiency_level: "B1"
-    bloom_level: "Apply"
-    assessment_method: "Student writes Python code using structlog that produces machine-parseable JSON logs with correlation IDs, appropriate log levels, and contextual data"
+    bloom_level: "Understand"
+    assessment_method: "Student can describe why 'print debugging' fails in production and explain how structured logging with levels, JSON output, and correlation IDs enables diagnosis of issues that tests alone cannot catch"
 
   - objective: "Distinguish the three pillars of observability and explain their complementary roles"
     proficiency_level: "B1"
@@ -54,13 +54,13 @@ learning_objectives:
     assessment_method: "Given an AI agent specification, student produces a monitoring plan covering token usage, quality metrics, error rates, and cost tracking"
 
   - objective: "Map all ten axioms into a coherent agentic development system"
-    proficiency_level: "B2"
-    bloom_level: "Evaluate"
-    assessment_method: "Student can trace a feature from shell orchestration through production monitoring, identifying which axiom governs each phase"
+    proficiency_level: "B1"
+    bloom_level: "Analyze"
+    assessment_method: "Student can trace a feature through the three axiom groups (Structure, Data, Verification) and identify which axiom governs each phase"
 
 cognitive_load:
   new_concepts: 7
-  assessment: "7 concepts (verification spectrum, three pillars, structured logging, log levels, metrics, traces, feedback loop) at upper limit of B1-B2 range (5-7) -- justified by synthesis role of final axiom lesson"
+  assessment: "7 concepts (verification spectrum, three pillars, structured logging, log levels, metrics, traces, feedback loop) at upper limit of B1 range (5-7) -- justified by synthesis role of final axiom lesson"
 
 differentiation:
   extension_for_advanced: "Implement a full OpenTelemetry pipeline with custom spans, Prometheus metrics, and Grafana dashboards for an AI agent system; explore distributed tracing across microservices."
@@ -121,11 +121,11 @@ A system with only pre-deployment verification is like a car that passes inspect
 
 ## From Principle to Axiom
 
-In Chapter 4, Principle 7 introduced observability as **visibility into what AI is doing** — seeing agent actions, understanding rationale, tracing execution. That principle focused on trust: if you cannot see what the agent does, you cannot trust it.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/observability), Principle 7 introduced observability as **visibility into what AI is doing**. Remember the "Black Box Problem" — the agent that silently failed, producing no output and no error, because nobody had instrumented it to report what it was doing? And the "2-Minute Audit" that taught you to check: Can I see what the agent did? Can I tell if it succeeded? Can I trace *why* it chose that approach? That principle focused on trust: if you cannot see what the agent does, you cannot trust it.
 
 Axiom X takes this further. The principle is about human-AI collaboration transparency. The axiom is about **production engineering discipline**:
 
-| Principle 7 (Chapter 4) | Axiom X (This Lesson) |
+| Principle 7 (Chapter 6) | Axiom X (This Lesson) |
 |--------------------------|----------------------|
 | See what the AI did | Monitor what the system is doing continuously |
 | Activity logs for debugging | Structured logs, metrics, traces for operations |
@@ -147,6 +147,10 @@ James's `print("Processing order...")` was neither monitoring nor observability.
 </details>
 
 ## The Three Pillars of Observability
+
+:::tip Focus on What Each Tool Does, Not How It's Written
+The sections below show Python code using libraries like `structlog`, `prometheus_client`, and `opentelemetry`. You do not need to understand the syntax — focus on **what problem each tool solves**: logs tell you what happened, metrics tell you how much, and traces tell you where time went. The code is here to show that these concepts have real implementations, not for you to memorize right now.
+:::
 
 ![Observability Cycle: Collect Data, Analyze Data, Diagnose Issues, Optimize Performance, and Enhance User Experience in a continuous feedback loop](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-14/10-three-pillars-observability.png)
 
@@ -252,7 +256,15 @@ A trace from this code might reveal: "Order ord-7891 took 4.2 seconds total — 
 | "Is something broken?" | Shows error messages | Shows error rate is 5% | Shows which service fails | Full picture: what errors, how widespread, and the exact failure path |
 | "How much does this cost?" | Shows per-request token counts | Shows total token usage trend | Shows which operations consume tokens | Full picture: cost per user, per feature, trending over time |
 
+:::tip Reading Checkpoint
+This is a natural stopping point. If you need a break, bookmark this spot and return when you are ready. Everything above covers the core concept; everything below applies it through exercises and practice.
+:::
+
 ## Python Observability Toolkit
+
+:::tip Advanced Implementation Details Ahead
+This section shows production-level Python code for structured logging, correlation IDs, and configuration. These are professional patterns you will implement in hands-on chapters. For now, read for the **concepts**: why JSON logs beat print statements, why log levels matter, and why every request needs a unique ID to trace its journey through the system.
+:::
 
 After understanding the three pillars conceptually, James was ready to implement them. Emma showed him the tools he would use for his order management system.
 
@@ -332,6 +344,10 @@ Now every log entry in that order's lifecycle shares the same `correlation_id`. 
 ## Observability for AI Agents
 
 As James integrated more AI-generated code into his order management system, he discovered that AI agents introduce observability challenges that traditional web applications do not face. The AI that generated his shipping calculator and discount logic had its own failure modes — and monitoring them required new dimensions.
+
+:::tip Focus on the Four Dimensions, Not the Code
+The code blocks below show how James tracks AI agent behavior in production. You do not need to understand the Python or Prometheus syntax — focus on the **four dimensions** being monitored: token usage (cost), response quality (correctness), error rates (failures), and cost per operation (budget). Each dimension catches a different kind of AI-specific problem that traditional monitoring misses. You will implement these patterns yourself in hands-on chapters.
+:::
 
 ### Dimension 1: Token Usage Tracking
 
@@ -517,96 +533,6 @@ This was James's order management system at 2:47 AM — and it is every system t
 | Metrics without baselines | "Is 200ms shipping calculation time good or bad?" — you cannot answer without history | Establish baselines first; alert on deviation, not absolute values |
 | Monitoring only happy paths | You only track successful orders; failed shipping calculations are invisible | Instrument error paths with the same rigor as success paths |
 
-## Try With AI
-
-### Prompt 1: Replace Print Statements with Structured Logging
-
-```
-I have a Python order processing function that uses print statements for debugging,
-just like James had before his 2:47 AM incident. Help me refactor it to use structlog
-with proper production observability.
-
-Here is my current code:
-
-def process_order(order):
-    print(f"Processing order {order.id}")
-    if order.total > 1000:
-        print("Large order detected!")
-    try:
-        shipping = calculate_shipping(order)
-        print(f"Shipping calculated: {shipping}")
-        result = charge_payment(order, shipping)
-        print(f"Payment successful: {result}")
-    except Exception as e:
-        print(f"ERROR: Payment failed: {e}")
-    print("Order processing complete")
-
-For each print statement, help me understand:
-1. What log level should this be? (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-2. What structured context should I add? (order_id, customer_id, amounts, durations)
-3. Why is the structured version better when debugging a 2 AM production incident?
-
-Then show me the complete refactored version using structlog with JSON output.
-```
-
-**What you're learning**: The difference between development-time debugging (`print` statements) and production-grade observability (structured logging). Each log statement has an audience (developer vs. log aggregation system) and a purpose (debugging vs. monitoring vs. alerting). James's `print("Processing order...")` told him nothing at 2:47 AM — your structured version would tell you exactly which order failed, why, and how many others were affected.
-
-### Prompt 2: Design AI Agent Monitoring
-
-```
-I am building an AI agent that helps customers with product recommendations.
-Help me design a comprehensive observability strategy.
-
-The agent:
-- Receives natural language queries from customers
-- Searches a product catalog (vector database)
-- Generates personalized recommendations using an LLM
-- Tracks which recommendations led to purchases
-
-For each of the three observability pillars, help me define:
-
-LOGS: What events should I log? At what levels? With what context?
-METRICS: What numerical measurements matter? What are healthy baselines?
-TRACES: What spans should I create? Where are the likely bottlenecks?
-
-Also help me think about AI-specific monitoring:
-- How do I detect when the agent is giving poor recommendations?
-- How do I track cost per recommendation?
-- What alerts should wake me up at 2 AM vs. notify me in the morning?
-
-Walk me through the design decisions, explaining why each choice matters.
-```
-
-**What you're learning**: How to design observability for AI-specific systems where "correctness" is harder to define than in traditional software. James's order system had clear pass/fail criteria, but AI agents can be "up" while producing poor results. You are learning to think about quality signals, cost tracking, and silent failure modes — the same blindness James experienced at 2:47 AM, but in the AI dimension.
-
-### Prompt 3: The Full Verification Spectrum
-
-```
-I want to understand how all ten axioms of agentic development work together
-by tracing a concrete feature through each one.
-
-Take an order management system (like the one in this chapter) that needs a new
-feature: "apply promotional discounts to international orders." Trace this feature
-through all ten axioms:
-
-1. Shell as Orchestrator: How does Claude Code coordinate this work?
-2. Knowledge is Markdown: Where do the discount requirements live?
-3. Programs Over Scripts: How is the discount logic structured?
-4. Composition Over Monoliths: What composable functions make up this feature?
-5. Types Are Guardrails: What type contracts exist between discount and shipping?
-6. Data is Relational: How are promotions and order data stored?
-7. Tests Are the Specification: What TDG tests define "correct" discount behavior?
-8. Version Control is Memory: How are discount changes tracked and reversible?
-9. Verification is a Pipeline: What does CI check before the discount code deploys?
-10. Observability Extends Verification: What do you monitor to confirm discounts
-    work correctly for real customers under real load?
-
-For each axiom, give me a concrete example specific to this feature.
-Then show me: what breaks if I skip any single axiom?
-```
-
-**What you're learning**: Systems thinking — how individual engineering practices compose into a coherent development methodology. The ten axioms are not separate rules but an interconnected system where each axiom addresses a gap that the others leave open. Skip types and discount calculations silently corrupt. Skip tests and you have no definition of "correct." Skip observability and your correct code fails silently under production load. This is the core insight of agentic development: rigorous engineering practices applied systematically, not selectively.
-
 ### The Log Avalanche
 
 There is a trap that catches developers right after they learn observability, and Emma warned James about it the same week he instrumented his order system: **The Log Avalanche** — logging everything at maximum detail because "more data is always better."
@@ -628,6 +554,164 @@ She had him write this on a sticky note:
 "If everything is important, nothing is."
 
 The Log Avalanche extends beyond volume. Production logs may contain customer data — order details, shipping addresses, payment references. James learned to apply data minimization: log what you need for debugging and monitoring, never personally identifiable information. Apply retention policies — not every log entry needs to live forever. And remember that observability infrastructure itself needs security: access to production logs should be as controlled as access to the production database.
+
+## Try With AI
+
+### Prompt 1: Design a Feedback System for an Event You Hosted
+
+```
+You organized a school event (a fundraiser, a talent show, a club meeting).
+You planned everything carefully: venue booked, schedule set, volunteers
+assigned, supplies purchased. Everything on your checklist was done.
+
+But AFTER the event, you got mixed feedback:
+- Some attendees said it was too crowded
+- The food ran out halfway through
+- Two activities overlapped and people had to choose
+- A few people said it was the best event they'd attended
+
+Your planning notes say: "Event completed."
+
+Design a feedback and monitoring system so that NEXT time, you can answer:
+1. How many people actually attended vs how many you planned for?
+2. Which activities were most popular and which were empty?
+3. When exactly did problems happen (food running out, overcrowding)?
+4. What is the difference between "3 people complained" and "half the
+   attendees had a bad experience"?
+5. What would you record DURING the event (not just before or after)
+   to catch problems while you can still fix them?
+
+For each piece of information, explain: could you have caught this
+problem with better PLANNING (pre-event checks), or did you need
+MONITORING (watching what happens during the event)?
+```
+
+**What you're learning:** The difference between pre-event verification (your planning checklist) and real-time observability (watching what actually happens). Some problems — like food running out — could have been caught with better planning (count RSVPs, order 20% extra). Others — like unexpected crowding at one activity — can only be caught by watching the event unfold. This maps directly to James's experience: his CI pipeline (planning checks) caught code errors, but only production observability (real-time monitoring) could catch the 2:47 AM shipping failure under actual load.
+
+### Prompt 2: Build a Monitoring Plan for a Study Routine
+
+```
+A student has a study plan: study 2 hours per day, review notes weekly,
+do practice problems before each test. The plan looks perfect on paper.
+But their grades are not improving.
+
+The student says: "I followed my plan! I studied every day!"
+
+Help me design a monitoring system that answers:
+- Did they actually study for 2 hours, or did they sit at a desk for
+  2 hours while checking their phone?
+- Which subjects did they spend time on? Are they over-studying easy
+  topics and under-studying hard ones?
+- Are the practice problems they're doing similar to what appears on tests?
+- Is their understanding actually improving, or are they re-reading
+  without retaining?
+
+For the monitoring system, define:
+1. What to RECORD daily (the equivalent of logs — what happened?)
+2. What to MEASURE weekly (the equivalent of metrics — how much? how well?)
+3. What to TRACE monthly (the equivalent of traces — where does time go?)
+
+Then explain: why is "I studied every day" as useless as James's
+"Processing order..." log message? What specific information is missing?
+```
+
+**What you're learning:** The three pillars of observability applied to a personal system. "I studied every day" is the study equivalent of `print("Processing order...")` — it confirms the process ran but tells you nothing about quality, effectiveness, or where time was actually spent. Logs (daily records) tell you what happened in each session. Metrics (weekly measurements) tell you whether understanding is improving. Traces (monthly reviews) show where your time went across subjects. No single pillar answers all the questions — just as James needed logs AND metrics AND traces to diagnose his 2:47 AM incident.
+
+### Prompt 3: Trace a Real-Life Project Through All Ten Axioms
+
+```
+Pick a project you know well — organizing an event, running a club,
+managing a group assignment, or planning a trip. Trace it through all
+ten axioms using plain language:
+
+1. Shell as Orchestrator: Who coordinates the work? What is their ONLY job?
+2. Knowledge is Markdown: Where are the plans and decisions written down?
+3. Programs Over Scripts: Is there a structured plan or just a loose idea?
+4. Composition Over Monoliths: Is the work broken into independent tasks?
+5. Types Are Guardrails: What labels or categories prevent mix-ups?
+6. Data is Relational: Is information stored in one place or duplicated?
+7. Tests Are the Specification: How do you define "done" before starting?
+8. Version Control is Memory: How do you track what changed and why?
+9. Verification is a Pipeline: What checks happen before you "ship"?
+10. Observability Extends Verification: How do you know it ACTUALLY
+    worked after delivery?
+
+For each axiom, give a specific example from YOUR project.
+Then identify: which axiom is your project WEAKEST on? What would
+go wrong because of that gap?
+```
+
+**What you're learning:** Systems thinking — the ten axioms are not separate rules but an interconnected system. When you trace your own project through all ten, you discover gaps you never noticed. Maybe you planned well (Axioms I-IV) but never defined "done" (Axiom VII). Maybe you tracked changes (Axiom VIII) but never monitored whether the result actually worked (Axiom X). The axioms work together because real projects are systems — and systems need complete coverage to be reliable. This is the same insight James reached: each axiom covers a gap that the others leave open.
+
+## PRIMM-AI+ Practice: Observability Extends Verification
+
+### Predict [AI-FREE]
+
+Close your AI assistant. A patient has knee surgery. Every pre-operation check passed: blood work normal, imaging confirmed the problem, anesthesia plan approved, surgical team briefed. The surgery itself goes perfectly — procedure completed on schedule, no complications in the operating room.
+
+The patient is discharged. The medical record says: *"Surgery complete."*
+
+A week later, the patient calls with severe swelling and pain. The doctor opens the record.
+
+Predict:
+- Can the doctor figure out WHAT went wrong from *"Surgery complete"*?
+- Can they tell WHETHER the swelling started on day 2 or day 6?
+- Can they tell WHICH part of recovery failed — was it the physical therapy, the medication, an infection, or something else?
+- What specific information is missing from "Surgery complete" that would help diagnose the problem?
+
+Write your answers. Rate your confidence from 1 to 5.
+
+### Run
+
+Ask your AI assistant: *"Why is 'Surgery complete' a useless medical record when a patient calls with complications a week later? What should a doctor's post-surgery monitoring plan include so that when something goes wrong during recovery, they can trace exactly what happened? Give me at least 5 specific things to track."*
+
+Compare. Did the AI suggest the same missing information you identified?
+
+<details>
+<summary>**Answer Key: What to Look For**</summary>
+
+The AI should identify that "Surgery complete" is useless because it records zero recovery information. A useful post-surgery monitoring plan should track at least these 5 things:
+
+- **Vital signs over time**: Temperature, blood pressure, heart rate — recorded daily, not just at discharge. A fever on day 3 means something very different from a fever on day 7. Without a timeline, you cannot tell when the problem started.
+- **Pain levels and location**: Is pain increasing or decreasing? Is it at the surgical site or somewhere new? "Patient reports pain" is useless without severity (1-10), location, and trend over days.
+- **Physical recovery milestones**: Can the patient bend the knee 30 degrees by day 3? 60 degrees by day 7? Without expected milestones, you cannot tell if recovery is on track or falling behind.
+- **Medication compliance**: Did the patient take antibiotics on schedule? Did they stop pain medication early? Non-compliance is a common cause of complications that "Surgery complete" would never reveal.
+- **Warning sign thresholds**: What level of swelling is normal vs. concerning? What temperature triggers a call to the doctor? Without defined thresholds, patients do not know when to report problems, and doctors cannot distinguish routine recovery from emerging complications.
+
+If your prediction identified at least 3 of these categories, your instinct for post-delivery monitoring is strong. Notice how "Surgery complete" is exactly as useless as James's `print("Processing order...")` — both confirm the process ran but provide zero information when something goes wrong afterward.
+
+</details>
+
+### Investigate
+
+Write in your own words the difference between "checking before surgery" (verification — pre-op tests, imaging, team briefing) and "monitoring after surgery" (observability — tracking vitals, pain, recovery milestones). Why do you need both? Why is passing all the pre-op checks not enough?
+
+Now connect this to James's story. His CI pipeline — formatting, linting, types, tests, security — all passed. Every pre-deployment check was green. But at 2:47 AM, his shipping calculator failed under real production load with real customers. His checks verified that the code was *correct*. They could not verify that the code was *resilient* under conditions no test anticipated. This is exactly like the surgery passing every pre-op check but the patient developing complications at home under real-world recovery conditions that the operating room never simulated. Both James and the surgeon did everything right *before delivery* — and both were blind to what happened *after*.
+
+Apply the **Error Taxonomy**: the surgery passing all pre-op checks but the patient developing complications at home = **data/edge-case error**. The procedure was verified under controlled conditions (the operating room), but not under real-world recovery (the patient's home, their activity level, their medication compliance). The checks verified the procedure; observability would have caught the recovery failure early.
+
+### Modify
+
+The doctor now tracks all five recovery dimensions (vitals, pain, milestones, medication, warning thresholds). But the patient reports *"I feel fine, everything is great"* at every check-in — and still shows up a week later with severe swelling.
+
+What went wrong? The monitoring plan relied entirely on **self-reported data** — the patient's own assessment. Design a modification: what **objective signals** could the doctor monitor that do not depend on the patient's honesty or self-awareness? How would the doctor distinguish between "the patient is genuinely recovering well" and "the patient is underreporting problems"? Think about the difference between asking someone "how do you feel?" and measuring something that cannot be faked.
+
+### Make [Mastery Gate — Capstone]
+
+Pick any process from your life that you have "verified" (checked beforehand) but never "observed" (monitored after completion). Examples: a study routine (you followed the plan but did not track whether you actually retained the material), a budget (you planned spending but did not track actual expenses), a workout plan (you did the exercises but did not measure results).
+
+Write a **monitoring plan**:
+- **What would you watch AFTER the process runs?** (What signals tell you whether it is actually working?)
+- **What signals tell you something is wrong** even when all the upfront checks passed?
+- **How would you tell the difference** between "one person had a bad experience" and "everyone has this problem"?
+
+This monitoring plan is your mastery gate — and it is the capstone for all ten axioms.
+
+:::tip Verification Ladder
+This completes the ladder. **Rung 1** (Predict) through **Rung 4** (Pipeline) checked things BEFORE delivery. **Rung 5** (Observability) watches what happens AFTER. You need both halves — pre-delivery verification catches the errors you can anticipate; post-delivery observability catches the ones you cannot.
+:::
+
+---
 
 ## Key Takeaways
 
@@ -656,3 +740,47 @@ Then came the verification stack. Test-Driven Generation gave him fifty-three sp
 "You didn't just learn ten rules," Emma told him. "You built a system. Each axiom covers a gap the others leave open. That is what agentic development means — not AI writing code for you, but AI and engineering discipline working together, from the first shell command to the last production metric."
 
 James nodded. The 2:47 AM incident had been the worst night of his career. It had also been the beginning of everything he built after.
+
+---
+
+## PRIMM-AI+ Thread: How the Framework Operated Across All Ten Axioms
+
+Throughout this chapter, PRIMM-AI+ was not a section you read — it was a method you practiced. Here is how each stage operated across the ten axioms:
+
+**Predict [AI-FREE]**: In every axiom, you closed your AI assistant and committed to an answer with a confidence score. You classified tasks as coordination or work (Axiom I), predicted which knowledge formats would fail (Axiom II), anticipated what breaks at scale (Axiom III), reasoned about restaurant staffing failures (Axiom IV), caught type errors by reasoning about form fields (Axiom V), counted how many updates duplicated data requires (Axiom VI), identified specification gaps in a pilot's pre-flight checklist (Axiom VII), diagnosed missing information in file versions (Axiom VIII), prioritized assignment checks under time pressure (Axiom IX), and found the gaps in a useless post-surgery record (Axiom X). Each prediction built the habit of thinking before checking.
+
+**Run**: After each prediction, you asked your AI assistant the same question and compared. Sometimes you were right. Sometimes the AI identified failure modes you missed. Sometimes you caught things the AI overlooked. The comparison — not the AI's answer — was the learning event.
+
+**Investigate**: You wrote explanations in your own words, then applied the Error Taxonomy to classify why things go wrong. You now recognize five error types: type errors (wrong data shape), logic errors (wrong reasoning), specification errors (ambiguous requirements), data/edge-case errors (unexpected inputs), and orchestration errors (tangled responsibilities). This vocabulary gives you precision when diagnosing problems.
+
+**Modify**: You changed scenarios and reasoned about what breaks — the field trip organizer who packs lunches, the napkin plan scaled to 100 guests, the restaurant cook who also handles billing, the cake spec that missed quality requirements. Each modification built the instinct to ask "what could go wrong?" before it does.
+
+**Make [Mastery Gate]**: You created artifacts — a coordination plan, a structured decision document, a "program" version of a routine, a task breakdown, a form specification, a relationship map, a spec with checklist, a version history, an ordered checklist, and a monitoring plan. These are not homework. They are proof that you internalized each axiom well enough to apply it independently.
+
+The Verification Ladder climbed with you: prediction (Rung 1) in every exercise, types (Rung 2) in Axiom V, tests (Rung 3) in Axiom VII, pipelines (Rung 4) in Axiom IX, and observability (Rung 5) in Axiom X. You did not just learn about verification — you practiced it at progressively higher levels.
+
+---
+
+## Chapter-End Self-Assessment Rubric
+
+Use this rubric to evaluate your own understanding across the ten axioms. For each dimension, honestly assess where you fall. The goal is not to score "Fluent" in everything immediately — it is to identify where you are strong and where you need more practice.
+
+In this chapter, your mastery gates are conceptual artifacts — coordination plans, decision documents, form specifications, relationship maps, ordered checklists, and monitoring plans. In the hands-on chapters that follow, you will apply these same axioms to real code, tests, and configurations.
+
+| Dimension | Developing | Competent | Fluent |
+|-----------|-----------|-----------|--------|
+| **Prediction Accuracy** | Predictions are often wrong; confidence scores do not match actual accuracy | Predictions are roughly correct; confidence scores track reality within ±1 | Predictions are consistently accurate; confidence scores reliably reflect true understanding |
+| **Error Taxonomy** | Can name the five error types but struggles to classify real scenarios | Correctly classifies most scenarios; occasionally confuses similar types (e.g., specification vs. logic error) | Classifies errors quickly and accurately; spontaneously applies taxonomy when encountering new problems |
+| **Explanation Quality** | Explanations restate the axiom rather than demonstrating understanding | Explanations use own words and connect the axiom to personal experience | Explanations teach the concept to someone else using original analogies and examples |
+| **Modification Reasoning** | Identifies that something breaks but cannot explain the mechanism | Identifies what breaks AND explains why the modification causes the failure | Anticipates cascading effects — predicts not just the first failure but second-order consequences |
+| **Mastery Gate Quality** | Artifacts are incomplete or generic (could apply to any axiom) | Artifacts are complete and specific to the axiom, with clear structure | Artifacts demonstrate original thinking — the plan, spec, or checklist reveals genuine understanding beyond what was taught |
+| **PRIMM-AI+ Engagement** | Skipped Predict or copied AI answers without comparing to own prediction | Completed all five stages; comparisons between prediction and AI response show genuine reflection | Used the framework independently — applied Predict-Run-Investigate-Modify-Make to a new problem without prompting |
+
+---
+
+## What Comes Next
+
+You now know *what* professional AI-driven development looks like — ten axioms that form a complete engineering system. In the next two chapters, you will move from understanding to doing:
+
+- **Chapter 32: Development Environment** — You will install and configure the exact tools James uses throughout this chapter: uv for dependency management, pyright for type checking, ruff for formatting and linting, pytest for testing, and git for version control. By the end, you will have a working environment where Axiom IX's verification pipeline runs on your own machine.
+- **Chapter 33: Reading Python** — You will read your first real Python programs through the PRIMM-AI+ lens. Every skill you practiced here — predicting outcomes, classifying errors, reasoning about modifications — transfers directly to reading code. The axioms become your engineering standards; PRIMM-AI+ becomes your method for meeting them.

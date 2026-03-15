@@ -1,8 +1,8 @@
 # Python for the New AI Era: Course Architecture Plan
 
-**Version:** 2.15
+**Version:** 2.16
 **Status:** Draft
-**Date:** 2026-03-09
+**Date:** 2026-03-15
 **Branch:** `learn-python`
 
 ---
@@ -135,6 +135,39 @@ When you encounter new Python syntax in this chapter, use the PRIMM-AI+ method f
 ```
 
 By Phase 5, students will have internalized the method and the callout can be dropped or reduced to a single sentence. The goal is to make PRIMM-AI+ a reflex, not a lesson to revisit.
+
+### PRIMM-AI+ Track A vs Track B
+
+PRIMM-AI+ exercises come in two tracks, determined by what students know at that point in the book:
+
+| Track | When Used | Exercise Style | Example Chapters |
+|-------|-----------|---------------|-----------------|
+| **Track B: Conceptual Reasoning** | Before students know programming tools | Plain-English scenarios, real-world analogies, no code | Ch 30 (PRIMM-AI+), Ch 31 (Ten Axioms) |
+| **Track A: Code Exercises** | After students have the discipline stack | Typed Python, pytest, pyright, actual code artifacts | Ch 33+ (all Python programming chapters) |
+
+**Why this matters**: Chapter 31's PRIMM-AI+ exercises use school plays, birthday parties, cake orders, and form fields — NOT Makefiles, pytest, SQL, or Docker. Students don't have those tools yet. Track B builds conceptual understanding of each axiom; Track A applies them to real code starting when students have the tools. An earlier attempt to add code-based PRIMM-AI+ to Chapter 31 (PR #853) failed precisely because it used Track A exercises before students had the prerequisite knowledge.
+
+**Chapter author directive**: Before writing PRIMM-AI+ exercises, check what the student knows at that chapter. If the student has NOT yet installed the discipline stack (uv, pyright, pytest, ruff), use Track B. If they have, use Track A. Never reference tools, commands, or syntax the student hasn't learned yet.
+
+### PRIMM-AI+ Structural Requirements
+
+Every PRIMM-AI+ Practice section must include these structural elements:
+
+1. **Answer Key**: After every Predict section, include a collapsible `<details>` block with the correct answer. Students must never be left guessing whether their prediction was right. Format:
+   ```html
+   <details>
+   <summary>Answer Key — Check Your Prediction</summary>
+   [Correct answers with brief explanation]
+   </details>
+   ```
+
+2. **Error Taxonomy Classification**: Every Investigate section must ask the student to classify the error/issue using the 5-category Error Taxonomy (Type, Logic, Specification, Data/Edge-Case, Orchestration). Format: "Apply Error Taxonomy: [description] = [category] error."
+
+3. **Mastery Gate**: Every Make section must produce a concrete artifact that proves understanding. Label it explicitly: "This [artifact] is your mastery gate."
+
+4. **Confidence Scoring**: Every Predict section must include "Rate your confidence (1-5)" or "Confidence score."
+
+5. **Verification Ladder** (selective): Only 5 of 10 axioms get a Verification Ladder rung (I=Prediction, V=Types, VII=Tests, IX=Pipeline, X=Observability). Do NOT add rungs to every axiom.
 
 ---
 
@@ -1198,6 +1231,28 @@ Ch 23 (Phase 7): FastAPI dependency injection → OOP applied to async services 
 6. **Dual-track callouts** — "If you're new" and "If you've coded before" notes
 7. **Syntax Card** — half-page reference at the end of every chapter (see Section 14)
 
+### Beginner Accessibility Rules
+
+Every example, exercise, and analogy must match the student's knowledge level at that chapter. These rules prevent the mistake of using professional tools in exercises before students have learned them:
+
+1. **Match examples to student knowledge** — never reference tools, syntax, commands, or frameworks the student hasn't learned yet. If the student doesn't know pytest, don't put pytest in a PRIMM-AI+ exercise.
+2. **Ground exercises in the lesson narrative** — if the lesson tells a story (e.g., James's startup), the PRIMM-AI+ exercises should reference characters and situations from that story, not introduce disconnected scenarios.
+3. **Never leave predictions unresolved** — every Predict section must have a collapsible answer key (`<details>` block) so students get closure.
+4. **Avoid run-on analogies** — if an analogy exceeds 3 lines, break it into a bulleted list. One idea per sentence.
+5. **Add `:::tip` blocks for unfamiliar syntax** — when showing code syntax students haven't learned yet (e.g., Makefile syntax in Chapter 31), wrap it in a tip block explaining "you'll learn this later; focus on the concept, not the syntax."
+6. **"From Principle to Axiom" pattern** — when a chapter references concepts from earlier chapters, use a proper Docusaurus link, a concrete callback to a memorable example from that earlier chapter, and a comparison table showing what the earlier chapter taught vs what this chapter adds. Never just say "as we saw in Chapter N" without a link and specific reference.
+
+### Iterative Evaluation Pattern
+
+Every chapter and lesson should be evaluated using the iterative refinement cycle before publication:
+
+1. **Evaluate** — Rate the lesson/chapter out of 10, identifying specific issues with line numbers
+2. **Fix** — Apply targeted fixes to each identified issue
+3. **Re-evaluate** — Rate again after fixes; if below 8.5/10, repeat the cycle
+4. **Target** — A lesson is publication-ready at 8.5/10 or above
+
+This pattern is documented in `chapter-writing-methodology.md` (Section 6) and should be applied to every lesson before merge.
+
 ### Every Code Example Must
 
 1. Have full type annotations
@@ -1215,7 +1270,8 @@ Ch 23 (Phase 7): FastAPI dependency injection → OOP applied to async services 
 | *Python Crash Course* (Matthes, 2023) | Reference for traditional Python feature coverage (beginner-friendly) |
 | *Learning Python* (Lutz, 2025) | Reference for deep OOP, object model, advanced patterns (1,270 pages) |
 | *The Lindy-AI Software Manifesto* v2.0 | Philosophical foundation and axioms |
-| Chapter 31: Ten Axioms of Agentic Development | Bridge chapter connecting principles to practice (early in Part 4) |
+| Chapter 31: Ten Axioms of Agentic Development | Bridge chapter connecting principles to practice (early in Part 4). Includes PRIMM-AI+ Track B integration with conceptual exercises, answer keys, Error Taxonomy, Verification Ladder, and mastery gates. |
+| `chapter-writing-methodology.md` v3.0 | Writing methodology for all chapters — Track A/B, answer keys, beginner accessibility, iterative evaluation |
 | Python 3.12+ documentation | Language reference |
 | Pyright documentation | Type checking rules |
 | pytest documentation | Testing patterns |
@@ -1718,6 +1774,8 @@ quizforge/
 - [x] ~~"When Not to Use AI" chapter?~~ → Resolved: Yes, Ch 26. Judgment about AI assistance spectrum, preventing AI dependency.
 - [x] ~~Split Production Systems phase?~~ → Resolved: Yes. Phase 7 (CLI + Concurrency) and Phase 8 (CI/CD + Security) — separate building from shipping.
 - [x] ~~Axioms at start vs end?~~ → Resolved: Keep near start. Chapter 31 (Ten Axioms) already exists and serves as the bridge from Part 3 into Part 4 (after PRIMM-AI+). No duplicate needed.
+- [x] ~~PRIMM-AI+ exercise style for pre-coding chapters?~~ → Resolved: Track B (conceptual reasoning with plain-English scenarios). Track A (code exercises) starts when students have the discipline stack (Ch 33+). PR #853 proved that code-based exercises in Chapter 31 fail because students don't know the tools yet.
+- [x] ~~Answer keys in PRIMM-AI+ exercises?~~ → Resolved: Mandatory. Every Predict section gets a collapsible `<details>` answer key. Students must never be left guessing whether their prediction was correct.
 
 ---
 
@@ -1742,3 +1800,4 @@ quizforge/
 | 2.13 | 2026-03-06 | Added Chapter 1: The PRIMM-AI Framework as the dedicated conceptual chapter. PRIMM-AI is now formally positioned above the Ten Axioms as the meta-learning framework ("PRIMM-AI is the operating system; the Axioms are the first application that runs on it"). Expanded from 26 to 27 chapters. Renumbered all chapters +1: old Ch 1-26 → Ch 2-27. Phase 1 now has 4 chapters (Ch 1-4): PRIMM-AI → Dev Environment → Reading Python → First TDG. Updated all cross-references: feature maps, OOP progression, exercise thread, SmartNotes phases, Lutz coverage map, Syntax Cards, open questions. PRIMM Recall Directive now references Ch 1 (PRIMM-AI) and Ch 3 (Reading Python). Book-level: Chapter 30 becomes PRIMM-AI; Ten Axioms shifts to Chapter 31. |
 | 2.14 | 2026-03-08 | Upgraded PRIMM-AI → PRIMM-AI+ throughout. Chapter 1 now has 3 lessons: L1 (The PRIMM Framework — with [AI-FREE] Predict and confidence scoring), L2 (PRIMM-AI+: Your Learning Operating System — AI permissions table, AI-free checkpoints, mastery gates, verification ladder, confidence scoring, error taxonomy preview, chapter-end rubric preview, PRIMM-AI+ at a Glance), L3 (The Complete Teaching and Learning System — four embedded teaching methods, classroom vs solo mode, 5-step lesson architecture). Updated PRIMM Recall Directive callout to PRIMM-AI+ with [AI-FREE] and confidence scoring. Updated all cross-references. |
 | 2.15 | 2026-03-09 | L3 lesson architecture corrected from 6 steps to 5 steps (one per PRIMM stage). Parsons Problems folded into Investigate step with a blockquote callout explaining placement. Replaced regional names (Amara→Sarah, Karachi→London) across Ch 30 for international accessibility. Added bold highlighting of key insight sentences across all 3 lessons. |
+| 2.16 | 2026-03-15 | Aligned with chapter-writing-methodology v3.0. Added PRIMM-AI+ Track A/B distinction (Section 3): Track B (conceptual reasoning) for pre-coding chapters (Ch 30-31), Track A (code exercises) for Ch 33+. Added PRIMM-AI+ Structural Requirements (Section 3): mandatory answer keys, Error Taxonomy classification, mastery gates, confidence scoring, selective Verification Ladder. Added Beginner Accessibility Rules (Section 10): match examples to student knowledge, ground exercises in narrative, never leave predictions unresolved, avoid run-on analogies, add :::tip for unfamiliar syntax, "From Principle to Axiom" cross-reference pattern. Added Iterative Evaluation Pattern (Section 10): evaluate → fix → re-evaluate cycle targeting 8.5/10. Updated Reference Materials (Section 11): Chapter 31 entry expanded with PRIMM-AI+ Track B details, added chapter-writing-methodology v3.0 as reference. Resolved open questions: Track B for pre-coding chapters, mandatory answer keys. |
