@@ -89,15 +89,15 @@ This axiom draws a clear line: scripts serve exploration and experimentation; pr
 
 ## From Principle to Axiom
 
-In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/code-as-universal-interface), you learned **Principle 2: Code as Universal Interface** — the idea that code solves problems precisely where prose fails. You saw this concretely when an agent was given a vague English instruction ("process the files") and produced ambiguous results, but given a typed function signature (`def process(files: list[Path]) -> Report`), it produced exactly what was specified. Code is unambiguous. Code is executable. Code is the language machines understand natively.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/code-as-universal-interface), you learned **Principle 2: Code as Universal Interface** — the idea that code solves problems precisely where prose fails. You saw this concretely when Sarah said "organize my files" and got nothing useful, but when she described exactly what she wanted — *PDFs to a 'PDFs' folder, images to 'Images', files older than one year into an 'Archive' subfolder* — the agent wrote code that handled 3,000 photos perfectly. The more specific the description, the better the code.
 
-Axiom III builds on that foundation: if code is your universal interface, then the **quality** of that code determines the reliability of your interface. Chapter 6 showed that code beats prose. This axiom shows that *disciplined* code beats *sloppy* code — and that the gap between the two is the gap between James's 15-line script and the program that would have handled the Unicode crash.
+Axiom III builds on that foundation: if code is your universal interface, then the **quality** of that code determines the reliability of your interface. Chapter 6 showed that *specific descriptions* produce better code than vague ones. This axiom shows that *disciplined code* beats *sloppy code* — and that the gap between the two is the gap between James's 15-line script and the program that would have handled the Unicode crash.
 
 | Principle 2 (Chapter 6) | Axiom III (this lesson) |
 |---|---|
 | Use code instead of prose | Make that code worthy of what it solves |
 | Code is the right *medium* | Types, tests, and error handling are the right *discipline* |
-| An agent given code produces precise results | An agent given *typed, tested* code produces *reliable* results |
+| A specific description produces precise code | *Typed, tested* code produces *reliable* results |
 | Chose the interface | Hardened the interface |
 
 ![Fragile Scripts versus Robust Programs: comparing maintainability, reliability, scalability, collaboration, and structured programming principles](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-14/03-programs-over-scripts.png)
@@ -304,6 +304,10 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 ```
+
+:::tip Already learned the shell? Great. New to it? No problem.
+You used bash commands in [Chapter 11: Linux Operations](/docs/Agent-Workflow-Primitives/linux-mastery/) back in Part 2. The commands below (`uv sync`, `uv run pyright`, etc.) follow the same pattern — type a command, read the output. If you skipped Chapter 11 or need a refresher, revisit it before continuing. You will set up `uv` and this full discipline stack in Chapter 32. Python syntax itself starts in Chapter 33.
+:::
 
 Running the full stack:
 
