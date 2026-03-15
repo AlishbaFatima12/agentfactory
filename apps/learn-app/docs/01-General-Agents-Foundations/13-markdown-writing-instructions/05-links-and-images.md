@@ -3,7 +3,7 @@ title: "Links and Images"
 description: "Adding hyperlinks and images to markdown documents for richer communication"
 sidebar_label: "Links and Images"
 sidebar_position: 5
-chapter: 2
+chapter: 13
 lesson: 5
 duration_minutes: 35
 proficiency: "A2"
@@ -827,7 +827,7 @@ No tasks yet. Use option 1 to add a task.
 
 ### What's Next?
 
-In the **Chapter Quiz**, you'll test your markdown knowledge. Then in **Chapter 3**, you'll use these markdown skills to write real specifications for AI agents — turning structured documents into working software.
+In the **Chapter Quiz**, you'll test your markdown knowledge. Then in **Chapter 14**, you'll use these markdown skills to write real specifications for AI agents — turning structured documents into working software.
 
 
 ## Flashcards Study Aid

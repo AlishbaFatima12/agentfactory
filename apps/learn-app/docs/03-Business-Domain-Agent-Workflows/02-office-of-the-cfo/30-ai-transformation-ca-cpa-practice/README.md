@@ -1,23 +1,23 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice
-sidebar_position: 19
-title: "Chapter 19: AI Transformation of CA/CPA Practice Areas"
+sidebar_position: 30
+title: "Chapter 30: AI Transformation of CA/CPA Practice Areas"
 description: "Map the five CA/CPA practice domains against the Gen-AI and Agentic AI spectrum, deploy Cowork plugins for accounting, tax, audit, management accounting, and GRC workflows, and build domain-specific Cowork skills that encode your jurisdiction's professional requirements into production-ready agent instructions"
-chapter_number: 19
+chapter_number: 30
 part_number: 3
 version: 1.0
 status: draft
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-19/the-agentic-accountant.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-30/the-agentic-accountant.pdf"
   title: "The Agentic Accountant"
   height: 700
 ---
 
-# Chapter 19: AI Transformation of CA/CPA Practice Areas
+# Chapter 30: AI Transformation of CA/CPA Practice Areas
 
 > _"The question is not whether AI will transform the accounting profession. The question is which practitioners will lead the transformation and which will be displaced by it."_
 
-Chapter 18 gave you the Intent-Driven Financial Architecture — the methodology for encoding financial logic into Named Range structures that AI agents can read, reason about, and extend. This chapter applies that foundation, along with everything you have learned about Cowork plugins (Chapter 15), knowledge extraction (Chapter 16), and finance domain agents (Chapter 17), to the profession where the stakes are highest: chartered accountancy and certified public accounting.
+Chapter 29 gave you the Intent-Driven Financial Architecture — the methodology for encoding financial logic into Named Range structures that AI agents can read, reason about, and extend. This chapter applies that foundation, along with everything you have learned about Cowork plugins (Chapter 26), knowledge extraction (Chapter 27), and finance domain agents (Chapter 28), to the profession where the stakes are highest: chartered accountancy and certified public accounting.
 
 The CA/CPA profession sits at the intersection of three forces: regulatory severity (errors carry legal consequences), high volume of routine work (ripe for automation), and an agentic AI transition already underway (major firms are deploying autonomous workflows). This chapter maps all five practice domains against the Gen-AI and Agentic AI spectrum, shows you exactly where automation replaces routine work and where professional judgment becomes more valuable, then builds the domain-specific agents for each.
 
@@ -62,7 +62,7 @@ By the end of this chapter, you should be able to answer these five questions:
 1. What are the five CA/CPA practice domains ranked by AI transformation impact, and what distinguishes a Gen-AI capability (available now) from an Agentic AI capability (approaching) in each?
 2. How do the Cowork knowledge-work-plugins/finance and financial-services-plugins differ in scope, and which plugin commands serve which practice domains?
 3. What are the five domain agent extensions (jurisdiction tax, chart of accounts, audit methodology, client entity, compliance calendar) and why can't generic plugins replace them?
-4. How would you apply the Knowledge Extraction Method (Chapter 16) to encode a senior practitioner's judgment about audit materiality or tax advisory into a Cowork skill?
+4. How would you apply the Knowledge Extraction Method (Chapter 27) to encode a senior practitioner's judgment about audit materiality or tax advisory into a Cowork skill?
 5. Where is the boundary between AI execution and professional judgment in each of the five domains — what work can an agent do autonomously, and what requires a qualified practitioner's sign-off?
 
 ## Companion Repository
@@ -74,7 +74,7 @@ Exercise data, reference skill examples, and workflow recipe templates for this 
 - `reference-skills/` — Five reference SKILL.md files (Pakistan defaults) to study before building your own skills in Lessons 8-9
 - `workflow-recipes/` — Natural language scheduling templates for month-end close, board pack, compliance monitoring, and other recurring workflows
 
-## After Chapter 19
+## After Chapter 30
 
 When you finish this chapter, your perspective shifts:
 

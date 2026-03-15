@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-chapter: 8
+chapter: 19
 lesson: 6
 layer: L2
 title: "Search & Discovery Workflow"

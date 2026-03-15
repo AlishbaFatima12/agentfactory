@@ -1,7 +1,7 @@
 ---
 sidebar_position: 9
 title: "NanoClaw and the Agent Factory"
-chapter: 7
+chapter: 18
 lesson: 9
 duration_minutes: 25
 description: "Explore NanoClaw -- an AI Employee architecture optimized for container isolation -- and discover why the Intelligence Layer is the real moat in building AI Employees for every profession"
@@ -141,7 +141,7 @@ On January 31, 2026, a developer named Gavriel Cohen released NanoClaw. Where Op
 
 Here is how the two architectures differ -- not better or worse, but optimized for different threat models:
 
-| Property             | OpenClaw (Your Chapter 7 Experience)               | NanoClaw                                                                          |
+| Property             | OpenClaw (Your Chapter 18 Experience)               | NanoClaw                                                                          |
 | -------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------- |
 | **Codebase**         | 430,000+ lines, 52+ modules, 45+ dependencies      | ~500 lines core, handful of files, minimal dependencies                           |
 | **Isolation model**  | Application-level (allowlists, pairing codes)      | OS-level containers (Docker by default; Apple Containers as alternative on macOS) |
@@ -293,7 +293,7 @@ This is what this book is about. Not just using AI Employees -- building them. A
 **Setup:** Use Claude Code or any AI assistant.
 
 ```
-I learned 6 universal AI Employee patterns in Chapter 7 by using OpenClaw
+I learned 6 universal AI Employee patterns in Chapter 18 by using OpenClaw
 (gateway, channels, memory, skills, scheduling, delegation). Now I've
 seen NanoClaw's Body + Brain architecture. Map each of the 6 patterns
 to where they live in NanoClaw's six-layer reference architecture.

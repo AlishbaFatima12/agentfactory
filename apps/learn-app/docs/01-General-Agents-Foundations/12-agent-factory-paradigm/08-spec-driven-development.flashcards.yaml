@@ -1,5 +1,5 @@
 deck:
-  id: ch01-spec-driven-dev
+  id: ch12-spec-driven-dev
   title: Spec-Driven Development
   description: Flashcards covering the SDD methodology, its six-phase workflow, specification quality, and when to use SDD vs Vibe Coding.
   tags:
@@ -10,7 +10,7 @@ deck:
   - development-methodology
   version: 1
 cards:
-- id: ch01-spec-driven-dev-001
+- id: ch12-spec-driven-dev-001
   type: recall
   difficulty: basic
   front: What is Spec-Driven Development (SDD)?
@@ -18,7 +18,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-002
+- id: ch12-spec-driven-dev-002
   type: recall
   difficulty: basic
   front: What is the Core Equation of SDD for a vague idea given to AI?
@@ -26,7 +26,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-003
+- id: ch12-spec-driven-dev-003
   type: recall
   difficulty: basic
   front: What is the Core Equation of SDD for a clear specification given to AI?
@@ -34,7 +34,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-004
+- id: ch12-spec-driven-dev-004
   type: thinking
   difficulty: intermediate
   front: Why did SDD become practical only with the rise of AI coding assistants?
@@ -43,7 +43,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-005
+- id: ch12-spec-driven-dev-005
   type: recall
   difficulty: basic
   front: What are the four elements of a specification in SDD Phase 1 (Specify)?
@@ -51,7 +51,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-006
+- id: ch12-spec-driven-dev-006
   type: recall
   difficulty: basic
   front: What does the Intent element of an SDD specification answer?
@@ -59,7 +59,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-007
+- id: ch12-spec-driven-dev-007
   type: thinking
   difficulty: intermediate
   front: Why must the Clarify phase be done by the human, not delegated to AI?
@@ -69,7 +69,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-008
+- id: ch12-spec-driven-dev-008
   type: recall
   difficulty: intermediate
   front: What four outputs does the Plan phase (Phase 3) of SDD produce?
@@ -77,7 +77,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-009
+- id: ch12-spec-driven-dev-009
   type: recall
   difficulty: basic
   front: What must every task include in SDD Phase 4 (Tasks)?
@@ -85,7 +85,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-010
+- id: ch12-spec-driven-dev-010
   type: thinking
   difficulty: intermediate
   front: Why is human-in-the-loop review essential during SDD Phase 5 (Implement)?
@@ -94,7 +94,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-011
+- id: ch12-spec-driven-dev-011
   type: thinking
   difficulty: intermediate
   front: Why is the Validate phase necessary even when all tests pass during implementation?
@@ -104,7 +104,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-012
+- id: ch12-spec-driven-dev-012
   type: recall
   difficulty: basic
   front: What are the six phases of SDD in order?
@@ -112,7 +112,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-013
+- id: ch12-spec-driven-dev-013
   type: recall
   difficulty: intermediate
   front: What are the four qualities of a good specification?
@@ -120,7 +120,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-014
+- id: ch12-spec-driven-dev-014
   type: thinking
   difficulty: intermediate
   front: Why does clarity in a specification require measurable criteria instead of adjectives?
@@ -129,7 +129,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-015
+- id: ch12-spec-driven-dev-015
   type: thinking
   difficulty: intermediate
   front: Why are Non-Goals as important as goals in an SDD specification?
@@ -139,7 +139,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-016
+- id: ch12-spec-driven-dev-016
   type: thinking
   difficulty: advanced
   front: Why do vague success criteria like 'good performance' cause SDD to fail?
@@ -148,7 +148,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-017
+- id: ch12-spec-driven-dev-017
   type: thinking
   difficulty: intermediate
   front: How does SDD change the nature of iteration compared to Vibe Coding?
@@ -157,7 +157,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-018
+- id: ch12-spec-driven-dev-018
   type: recall
   difficulty: basic
   front: When is Vibe Coding an appropriate approach?
@@ -165,7 +165,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-019
+- id: ch12-spec-driven-dev-019
   type: recall
   difficulty: intermediate
   front: When is full SDD essential?
@@ -173,7 +173,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-020
+- id: ch12-spec-driven-dev-020
   type: recall
   difficulty: basic
   front: When should you skip SDD entirely?
@@ -181,7 +181,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-021
+- id: ch12-spec-driven-dev-021
   type: thinking
   difficulty: advanced
   front: How does SDD transform AI from a chatbot into an implementation partner?
@@ -191,7 +191,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-022
+- id: ch12-spec-driven-dev-022
   type: thinking
   difficulty: intermediate
   front: Why does writing a specification after the code defeats the purpose of SDD?
@@ -200,7 +200,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-023
+- id: ch12-spec-driven-dev-023
   type: thinking
   difficulty: advanced
   front: Why does skipping Non-Goals lead to scope creep in AI-assisted projects?
@@ -209,7 +209,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-024
+- id: ch12-spec-driven-dev-024
   type: thinking
   difficulty: advanced
   front: Why should specifications be treated as living documents rather than static artifacts?
@@ -218,7 +218,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-025
+- id: ch12-spec-driven-dev-025
   type: recall
   difficulty: intermediate
   front: What is the time distribution difference between Vibe Coding and SDD?
@@ -226,7 +226,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-026
+- id: ch12-spec-driven-dev-026
   type: thinking
   difficulty: intermediate
   front: Why does each SDD phase require quality gates before proceeding to the next?
@@ -236,7 +236,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-027
+- id: ch12-spec-driven-dev-027
   type: recall
   difficulty: intermediate
   front: What three categories does the completeness checklist cover for specifications?
@@ -244,7 +244,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-028
+- id: ch12-spec-driven-dev-028
   type: thinking
   difficulty: intermediate
   front: Why does testability require every success criterion to be measurable?
@@ -253,7 +253,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-029
+- id: ch12-spec-driven-dev-029
   type: thinking
   difficulty: advanced
   front: How does the Developer A vs Developer B comparison demonstrate that process matters more than skill?
@@ -263,7 +263,7 @@ cards:
   tags:
   - sdd
   - specifications
-- id: ch01-spec-driven-dev-031
+- id: ch12-spec-driven-dev-031
   type: thinking
   difficulty: advanced
   front: Why does the Clarify phase happen before the Plan phase in SDD?

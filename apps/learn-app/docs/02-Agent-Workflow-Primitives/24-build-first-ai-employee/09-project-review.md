@@ -13,7 +13,7 @@ keywords:
     "reflection",
     "deliverables",
   ]
-chapter: 13
+chapter: 24
 lesson: 9
 duration_minutes: 25
 

@@ -1,15 +1,15 @@
 ---
 slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/chapter-quiz
 sidebar_position: 12
-title: "Chapter 18: Intent-Driven Financial Architecture Quiz"
+title: "Chapter 29: Intent-Driven Financial Architecture Quiz"
 ---
 
-# Chapter 18: Intent-Driven Financial Architecture Quiz
+# Chapter 29: Intent-Driven Financial Architecture Quiz
 
 Test your understanding of the Intent-Driven Financial Architecture (IDFA) — from the Coordinate Trap through the four deterministic guardrails to the five Finance Domain Agent capabilities.
 
 <Quiz
-title="Chapter 18: Intent-Driven Financial Architecture Assessment"
+title="Chapter 29: Intent-Driven Financial Architecture Assessment"
 questions={[
 {
 question: "A new analyst inherits a financial model and finds the formula =B14-(C14*$F$8+D$3). They ask Claude to explain what it calculates. Claude responds with: 'This formula subtracts the product of C14 times the absolute reference F8, plus D3, from B14.' Why is this response unhelpful for financial analysis?",
@@ -48,7 +48,7 @@ explanation: "Lesson 2 demonstrates that the same formula written in coordinate 
 source: "Lesson 2: What Changes When AI Reads the Model"
 },
 {
-question: "A finance team is debating whether to convert their models to IDFA. A sceptic argues: 'The AI gives the same answers either way — Named Ranges are just cosmetic.' What is the strongest counterargument from Chapter 18?",
+question: "A finance team is debating whether to convert their models to IDFA. A sceptic argues: 'The AI gives the same answers either way — Named Ranges are just cosmetic.' What is the strongest counterargument from Chapter 29?",
 options: [
 "Named Ranges change what the agent CAN DO with the model — enabling Intent Synthesis, Deterministic What-If, Logic De-compilation, Goal-Seeking, and Stochastic Simulation — capabilities that are impossible with coordinate-based formulas",
 "Named Ranges make the spreadsheet look more professional for client presentations",
@@ -477,7 +477,7 @@ options: [
 ],
 correctOption: 0,
 explanation: "IDFA translates the broader principles of spec-driven, logic-first design — central to the Agent Factory methodology — into a concrete, deployable architecture for financial modelling. Just as specifications define intent before implementation in software, IDFA ensures formulas express business rules (what) rather than cell locations (where). This is what the chapter's epigraph means: 'The model is in the analyst's head. The tragedy is that the model never leaves.'",
-source: "Chapter 18 Overview and Lesson 1"
+source: "Chapter 29 Overview and Lesson 1"
 },
 {
 question: "A team has been using IDFA for six months. They want to validate their deployment. Which of the five capabilities should they test FIRST to establish baseline compliance?",
@@ -528,7 +528,7 @@ explanation: "Logic De-compilation requires the agent to reconstruct business ru
 source: "Lessons 4 and 11: Named Range Priority and The Five Capabilities"
 },
 {
-question: "A CFO asks: 'What is the ROI of adopting IDFA across our finance team?' Based on Chapter 18, which four business outcomes would you cite?",
+question: "A CFO asks: 'What is the ROI of adopting IDFA across our finance team?' Based on Chapter 29, which four business outcomes would you cite?",
 options: [
 "Audit duration compresses (weeks to days), analyst onboarding time drops, regulatory confidence increases, and institutional memory compounds over time as Intent Notes accumulate",
 "Model calculation speed improves, Excel file sizes decrease, fewer licenses are needed, and printing costs drop",
@@ -540,16 +540,16 @@ explanation: "Lesson 10 frames IDFA governance benefits at the CFO level: audit 
 source: "Lesson 10: Enterprise Governance"
 },
 {
-question: "Chapter 17 taught Cowork plugins and MCP connectors. Chapter 18 teaches IDFA. What is the relationship between them?",
+question: "Chapter 28 taught Cowork plugins and MCP connectors. Chapter 29 teaches IDFA. What is the relationship between them?",
 options: [
 "IDFA transforms the FOUNDATION those tools operate on — the same Cowork gives categorically different results when the model underneath uses Named Range business rules instead of coordinate formulas",
-"IDFA replaces the tools from Chapter 17 with a new methodology",
+"IDFA replaces the tools from Chapter 28 with a new methodology",
 "IDFA is an alternative to using Cowork",
-"IDFA requires different MCP connectors than those configured in Chapter 17"
+"IDFA requires different MCP connectors than those configured in Chapter 28"
 ],
 correctOption: 0,
-explanation: "The Chapter 18 README and bridge text from Chapter 17 establish that IDFA does not replace the tools — it transforms the architecture they work on. The same Cowork, the same MCP connectors, the same plugins. But when the model uses Named Ranges instead of coordinates, those tools can perform Intent Synthesis, Deterministic What-If, Logic De-compilation, Goal-Seeking, and Stochastic Simulation — capabilities impossible with coordinate-based models.",
-source: "Chapter 18 README and Lesson 2"
+explanation: "The Chapter 29 README and bridge text from Chapter 28 establish that IDFA does not replace the tools — it transforms the architecture they work on. The same Cowork, the same MCP connectors, the same plugins. But when the model uses Named Ranges instead of coordinates, those tools can perform Intent Synthesis, Deterministic What-If, Logic De-compilation, Goal-Seeking, and Stochastic Simulation — capabilities impossible with coordinate-based models.",
+source: "Chapter 29 README and Lesson 2"
 },
 {
 question: "An agent audits a financial model and reports: 'Cell D7 contains a hardcoded value 0.60 instead of a Named Range reference. This violates Guardrail 1.' A second agent audits the same model and reports: 'Cell D7 hardcodes COGS at 60%, but the Assumptions layer sets Inp_COGS_Pct_Y1 to 0.55. At $6.4M revenue, this 5-percentage-point discrepancy overstates COGS by $320K and understates Gross Profit by the same amount.' Which audit finding is more useful and why?",

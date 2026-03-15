@@ -17,7 +17,7 @@ keywords:
     "copyright compliance",
     "DMCA workflow",
   ]
-chapter: 22
+chapter: 33
 lesson: 7
 duration_minutes: 20
 

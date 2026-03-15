@@ -1,6 +1,6 @@
 ### Core Concept
 
-The Knowledge Extraction Method from Chapter 16 applied to a CFO's monthly close workflow surfaces the firm-specific tacit knowledge that generic finance plugins cannot encode — materiality thresholds calibrated to this business, seasonal baseline adjustments, account-level attention patterns, and the sequencing logic that prevents recurring close errors. The gap between a generic plugin and a production-ready finance agent is filled by this extracted knowledge, translated into a SKILL.md with a functional Persona, scoped Questions section, and testable Principles.
+The Knowledge Extraction Method from Chapter 27 applied to a CFO's monthly close workflow surfaces the firm-specific tacit knowledge that generic finance plugins cannot encode — materiality thresholds calibrated to this business, seasonal baseline adjustments, account-level attention patterns, and the sequencing logic that prevents recurring close errors. The gap between a generic plugin and a production-ready finance agent is filled by this extracted knowledge, translated into a SKILL.md with a functional Persona, scoped Questions section, and testable Principles.
 
 ### Key Mental Models
 
@@ -22,5 +22,5 @@ The Knowledge Extraction Method from Chapter 16 applied to a CFO's monthly close
 
 ### Connections
 
-- **Builds on**: Chapter 16 Lessons 2-6 provided the Five Questions, interview technique, and SKILL.md writing method; Lesson 4 of this chapter introduced the generic finance plugin whose limitations this lesson addresses
+- **Builds on**: Chapter 27 Lessons 2-6 provided the Five Questions, interview technique, and SKILL.md writing method; Lesson 4 of this chapter introduced the generic finance plugin whose limitations this lesson addresses
 - **Leads to**: Lessons 9-10 extend the extraction pattern to eleven enterprise areas (credit risk, regulatory reporting, treasury, FP&A, and more), each following the same Five Questions → extraction → SKILL.md pipeline

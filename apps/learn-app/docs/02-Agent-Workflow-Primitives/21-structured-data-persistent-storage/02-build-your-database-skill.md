@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: "Build Your Database Skill"
-chapter: 10
+chapter: 21
 lesson: 1
 duration_minutes: 20
 description: "Prove persistence in under 5 minutes, then capture reusable database workflow patterns"

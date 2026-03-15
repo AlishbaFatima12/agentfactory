@@ -1,5 +1,5 @@
 deck:
-  id: ch06-02-code-as-universal-interface
+  id: ch17-02-code-as-universal-interface
   title: 'Principle 2: Code as the Universal Interface'
   description: Flashcards covering why general agents write code to solve any computational task, the Five Powers of code, the specialist trap, and how to describe problems effectively for agent collaboration.
   tags:
@@ -11,7 +11,7 @@ deck:
   - universal-compatibility
   version: 2
 cards:
-- id: ch06-02-code-as-universal-interface-001
+- id: ch17-02-code-as-universal-interface-001
   type: recall
   difficulty: basic
   front: In the Seven Principles framework, what role does code serve for general agents?
@@ -19,7 +19,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-002
+- id: ch17-02-code-as-universal-interface-002
   type: thinking
   difficulty: intermediate
   front: Why did Sarah's general agent succeed where three photo apps failed?
@@ -28,7 +28,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-003
+- id: ch17-02-code-as-universal-interface-003
   type: recall
   difficulty: basic
   front: In the Bash-vs-Code distinction, what analogy describes each principle's role?
@@ -36,7 +36,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-004
+- id: ch17-02-code-as-universal-interface-004
   type: thinking
   difficulty: intermediate
   front: How does an agent with only Bash differ from one that can also write code?
@@ -45,7 +45,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-005
+- id: ch17-02-code-as-universal-interface-005
   type: recall
   difficulty: basic
   front: What are the Five Powers that code gives to general agents?
@@ -61,7 +61,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-006
+- id: ch17-02-code-as-universal-interface-006
   type: thinking
   difficulty: intermediate
   front: Why does code produce more reliable calculations than language-based reasoning?
@@ -70,7 +70,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-007
+- id: ch17-02-code-as-universal-interface-007
   type: recall
   difficulty: intermediate
   front: In the Workflow Orchestration power, what analogy contrasts coded workflows with manual step-by-step interaction?
@@ -78,7 +78,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-008
+- id: ch17-02-code-as-universal-interface-008
   type: thinking
   difficulty: advanced
   front: Why does workflow orchestration reduce the need for human involvement during multi-step tasks?
@@ -87,7 +87,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-009
+- id: ch17-02-code-as-universal-interface-009
   type: recall
   difficulty: intermediate
   front: In the Five Powers framework, what provides agents with Organized Memory?
@@ -95,7 +95,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-010
+- id: ch17-02-code-as-universal-interface-010
   type: thinking
   difficulty: intermediate
   front: How did code solve Aisha's event planning problem across four incompatible data sources?
@@ -105,7 +105,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-011
+- id: ch17-02-code-as-universal-interface-011
   type: recall
   difficulty: basic
   front: What does the Instant Tool Creation power allow agents to do?
@@ -113,7 +113,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-012
+- id: ch17-02-code-as-universal-interface-012
   type: thinking
   difficulty: intermediate
   front: Why does describing outcomes produce better agent solutions than specifying methods?
@@ -123,7 +123,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-013
+- id: ch17-02-code-as-universal-interface-013
   type: recall
   difficulty: intermediate
   front: What three problems does the Specialist Trap identify with using separate specialized agents?
@@ -135,7 +135,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-014
+- id: ch17-02-code-as-universal-interface-014
   type: thinking
   difficulty: advanced
   front: Why is LLM-generated code powerful yet inherently risky?
@@ -145,7 +145,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-015
+- id: ch17-02-code-as-universal-interface-015
   type: recall
   difficulty: basic
   front: Who observed that 'all agents will become coding agents,' and what was his role?
@@ -153,7 +153,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-016
+- id: ch17-02-code-as-universal-interface-016
   type: thinking
   difficulty: advanced
   front: How does problem specificity affect the quality of agent-generated code?
@@ -163,7 +163,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-017
+- id: ch17-02-code-as-universal-interface-017
   type: recall
   difficulty: intermediate
   front: What four steps make up the human-agent collaboration loop when code is the interface?
@@ -177,7 +177,7 @@ cards:
   tags:
   - code-as-interface
   - general-agents
-- id: ch06-02-code-as-universal-interface-018
+- id: ch17-02-code-as-universal-interface-018
   type: thinking
   difficulty: intermediate
   front: Why did Anthropic's discovery about Claude Code usage patterns support the 'code as universal interface' principle?

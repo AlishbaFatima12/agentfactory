@@ -4,7 +4,7 @@ A validation scenario set with four categories at defined proportions — standa
 ### Key Mental Models
 - **Four Scenario Categories**: Standard cases test core function (does the agent do its job?). Edge cases test boundary awareness (does it know where its scope ends?). Adversarial cases test principle robustness under pressure (can its instructions be circumvented?). High-stakes cases test escalation mechanisms (does it route to a human when the consequences are serious?).
 - **Three Scoring Components**: Accuracy (factual and analytical correctness), calibration (appropriate confidence language), boundary compliance (scope adherence and escalation). All three must pass for a scenario to pass. An output can be accurate but poorly calibrated — correct figures with wrong confidence language.
-- **Two 95% Gates**: Scenario testing at 95% earns entry into shadow mode. Production accuracy at 95% over 30 days (from Chapter 15) earns exit from shadow mode into autonomous operation. Same number, different stages, validating different things.
+- **Two 95% Gates**: Scenario testing at 95% earns entry into shadow mode. Production accuracy at 95% over 30 days (from Chapter 26) earns exit from shadow mode into autonomous operation. Same number, different stages, validating different things.
 
 ### Critical Patterns
 - The proportions reflect frequency and criticality: standard cases are most common, high-stakes are least common but most consequential

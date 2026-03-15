@@ -1,23 +1,23 @@
 ---
 slug: /Business-Domain-Agent-Workflows/finance-domain-agents
-sidebar_position: 17
-title: "Chapter 17: Finance Domain Agents"
+sidebar_position: 28
+title: "Chapter 28: Finance Domain Agents"
 description: "Learn to deploy Claude as a financial analysis assistant inside Excel, orchestrate multi-application finance workflows through Cowork plugins, and build enterprise extensions that encode your organisation's specific financial expertise into production-ready SKILL.md files"
-chapter_number: 17
+chapter_number: 28
 part_number: 3
 version: 1.0
 status: draft
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-17/finance-agent-architecture.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-28/finance-agent-architecture.pdf"
   title: "Finance Agent Architecture"
   height: 700
 ---
 
-# Chapter 17: Finance Domain Agents
+# Chapter 28: Finance Domain Agents
 
 > _"Excel is not a spreadsheet application. It is the operating system of the financial profession. Everything else — the presentations, the memos, the reports — is built from what lives in a spreadsheet first."_
 
-Chapter 16 gave you the Knowledge Extraction Method — the structured process for surfacing tacit professional knowledge and translating it into SKILL.md files that produce agents genuinely useful in production contexts. This chapter applies that methodology to the first domain: finance.
+Chapter 27 gave you the Knowledge Extraction Method — the structured process for surfacing tacit professional knowledge and translating it into SKILL.md files that produce agents genuinely useful in production contexts. This chapter applies that methodology to the first domain: finance.
 
 Finance is distinctive because a single application — Excel — sits at the centre of almost everything professionals do. This creates a natural two-layer teaching structure. First, you learn what Claude can do inside the workbook: understanding inherited models, testing scenarios, debugging formula errors, and building model structures from plain-language descriptions. Second, you learn what Claude can do across applications: the Cowork finance plugins that orchestrate multi-step workflows spanning Excel, PowerPoint, and connected enterprise systems — from the corporate finance plugin through the investment professional suite with its 39 commands, 42 skills, and 11 data integrations. Third, you apply the Knowledge Extraction Method to encode your own financial expertise into enterprise extensions that make the generic plugins yours.
 
@@ -32,7 +32,7 @@ By the end of this chapter, you will be able to:
 - Use plugin commands (`/comps`, `/dcf`, `/lbo`, `/earnings`, `/cim`, `/source`, and more) to produce professional financial deliverables with live market data from 11 data providers
 - Understand why the same data connectors serve both Claude in Excel and Cowork, with the difference being scope (single-workbook assistant vs multi-app agent orchestration)
 - Execute cross-application workflows that carry analysis context from Excel to PowerPoint without manual copy-paste
-- Apply the Knowledge Extraction Method (Chapter 16) to a finance domain expert, producing a SKILL.md that encodes firm-specific financial judgment
+- Apply the Knowledge Extraction Method (Chapter 27) to a finance domain expert, producing a SKILL.md that encodes firm-specific financial judgment
 - Design and prioritise enterprise extensions across eleven extension areas covering credit risk, regulatory reporting, treasury, FP&A, and portfolio management
 
 ## Lesson Flow
@@ -62,7 +62,7 @@ By the end of this chapter, you should be able to answer these five questions:
 4. How would you apply the Knowledge Extraction Method (Method A) to extract a CFO's tacit knowledge about monthly close judgment, and what would the resulting SKILL.md look like?
 5. Given the eleven enterprise extension areas, how do you prioritise which one to build first for your organisation?
 
-## After Chapter 17
+## After Chapter 28
 
 When you finish this chapter, your perspective shifts:
 

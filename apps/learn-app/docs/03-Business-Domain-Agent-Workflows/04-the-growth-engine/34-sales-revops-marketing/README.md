@@ -1,13 +1,13 @@
 ---
-title: "Chapter 23 — Sales, RevOps & Marketing"
+title: "Chapter 34 — Sales, RevOps & Marketing"
 sidebar_position: 0
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-23/the-revenue-engine.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-34/the-revenue-engine.pdf"
   title: "The Revenue Engine"
   height: 700
 ---
 
-# Chapter 23 — Sales, RevOps & Marketing
+# Chapter 34 — Sales, RevOps & Marketing
 
 ### Scaling the Judgment of Your Top 1% Across the Entire Organisation
 
@@ -19,12 +19,12 @@ Every lesson delivers a working workflow where you evaluate real agent output wi
 
 ### Prerequisites: Cowork Access
 
-This chapter requires **Cowork** (set up in Chapter 17) and three plugin layers.
+This chapter requires **Cowork** (set up in Chapter 28) and three plugin layers.
 
 1. **Install the Sales plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → find **Sales** (from `knowledge-work-plugins`) → click **Install**.
 2. **Install the Marketing plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → find **Marketing** (from `knowledge-work-plugins`) → click **Install**.
 3. **Install the Sales RevOps Marketing plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Sales RevOps Marketing** → click **Install**.
-4. **Connect a working folder** for practice files, same as Chapter 17.
+4. **Connect a working folder** for practice files, same as Chapter 28.
 
 ## 📚 Teaching Aid
 

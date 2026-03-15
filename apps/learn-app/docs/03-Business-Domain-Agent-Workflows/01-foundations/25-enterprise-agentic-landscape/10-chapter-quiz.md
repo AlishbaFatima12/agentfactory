@@ -1,15 +1,15 @@
 ---
 slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape/chapter-quiz
 sidebar_position: 10
-title: "Chapter 14: The Enterprise Agentic Landscape Quiz"
+title: "Chapter 25: The Enterprise Agentic Landscape Quiz"
 ---
 
-# Chapter 14: The Enterprise Agentic Landscape Quiz
+# Chapter 25: The Enterprise Agentic Landscape Quiz
 
 Test your understanding of the enterprise agentic landscape — from the Pilot Trap to platform selection, monetisation models, maturity assessment, and domain mapping.
 
 <Quiz
-title="Chapter 14: The Enterprise Agentic Landscape Assessment"
+title="Chapter 25: The Enterprise Agentic Landscape Assessment"
 questions={[
 {
 question: "A large insurance company has been running an AI chatbot pilot for 14 months. The team presents impressive demo slides to leadership every quarter, but no agent has been deployed into production workflows. A vendor attends every strategy meeting. Which pattern best describes this organisation's situation?",
@@ -500,7 +500,7 @@ options: [
 "Because financial regulators require more documentation than other domains"
 ],
 correctOption: 1,
-explanation: "Finance and Banking spans five chapters because the domain encompasses genuinely distinct sub-domains: foundational FP&A and valuation (Ch 17), intent-driven financial architecture (Ch 18), CA/CPA practice areas (Ch 19), Islamic finance across seven jurisdictions (Ch 20), and banking-specific regulation covering IFRS 9, Basel III/IV, and AML/KYC (Ch 21). Each requires its own expertise and compliance frameworks. Option A confuses budget size with domain complexity. Option C and D are not the reasons given in the lesson.",
+explanation: "Finance and Banking spans five chapters because the domain encompasses genuinely distinct sub-domains: foundational FP&A and valuation (Ch 28), intent-driven financial architecture (Ch 29), CA/CPA practice areas (Ch 30), Islamic finance across seven jurisdictions (Ch 31), and banking-specific regulation covering IFRS 9, Basel III/IV, and AML/KYC (Ch 32). Each requires its own expertise and compliance frameworks. Option A confuses budget size with domain complexity. Option C and D are not the reasons given in the lesson.",
 source: "Lesson 7: The Seven Domains"
 },
 {

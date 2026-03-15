@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: "Locking the Door"
-chapter: 11
+chapter: 22
 lesson: 5
 layer: L2
 duration_minutes: 30
@@ -76,7 +76,7 @@ cognitive_load:
     - "File permission model (three levels of keycards)"
     - "SSH keys vs passwords (fingerprints vs house keys)"
     - "Least privilege (mailbox key, not front door key)"
-  assessment: "4 concepts at A2-B1 boundary — connects back to L2 permission reading and forward to Ch13 deployment security"
+  assessment: "4 concepts at A2-B1 boundary — connects back to L2 permission reading and forward to Ch24 deployment security"
 
 differentiation:
   extension_for_advanced: "Explore UFW (Uncomplicated Firewall) to restrict which ports accept connections. Set up fail2ban to automatically block IP addresses after repeated failed login attempts."
@@ -182,19 +182,19 @@ In Lesson 2, you learned to read `drwxr-xr-x`. Now that reading pays off.
 
 Every file on Linux has three levels of access for three groups of people:
 
-| Group | Who | Analogy |
-|-------|-----|---------|
-| **Owner** | The user who owns the file | Master keycard holder |
-| **Group** | Users in the same group | Department keycard holders |
-| **Others** | Everyone else on the system | Visitor badge holders |
+| Group      | Who                         | Analogy                    |
+| ---------- | --------------------------- | -------------------------- |
+| **Owner**  | The user who owns the file  | Master keycard holder      |
+| **Group**  | Users in the same group     | Department keycard holders |
+| **Others** | Everyone else on the system | Visitor badge holders      |
 
 Each group can have three types of access:
 
-| Permission | Letter | Meaning |
-|-----------|--------|---------|
-| Read | `r` | Can see the contents |
-| Write | `w` | Can change the contents |
-| Execute | `x` | Can run it as a program |
+| Permission | Letter | Meaning                 |
+| ---------- | ------ | ----------------------- |
+| Read       | `r`    | Can see the contents    |
+| Write      | `w`    | Can change the contents |
+| Execute    | `x`    | Can run it as a program |
 
 So `rwxr-xr-x` means: owner can do everything, group can read and execute, others can read and execute. And `-rw-r--r--` means: owner can read and write, everyone else can only read.
 
@@ -265,6 +265,7 @@ ssh-keygen -t ed25519 -C "ali@laptop"
 ```
 
 This creates two files:
+
 - `~/.ssh/id_ed25519` — Your private key. Never share this. Never move this.
 - `~/.ssh/id_ed25519.pub` — Your public key. Safe to share. Put it on every server you need access to.
 
@@ -294,12 +295,12 @@ Before disabling password authentication, make SURE your SSH key works. Test by 
 
 Every decision in this lesson follows one principle: **give the minimum access needed and nothing more**.
 
-| Instead of... | Do this | Why |
-|---------------|---------|-----|
-| Running agent as root | Create agentuser | If compromised, attacker gets one directory, not the whole server |
-| Password SSH | SSH keys only | Eliminates brute-force attacks entirely |
-| `.env` readable by everyone | `chmod 600` | Secrets are visible only to the service that needs them |
-| Agent can write anywhere | `chmod 750` on its directory | Agent can't modify system files even if exploited |
+| Instead of...               | Do this                      | Why                                                               |
+| --------------------------- | ---------------------------- | ----------------------------------------------------------------- |
+| Running agent as root       | Create agentuser             | If compromised, attacker gets one directory, not the whole server |
+| Password SSH                | SSH keys only                | Eliminates brute-force attacks entirely                           |
+| `.env` readable by everyone | `chmod 600`                  | Secrets are visible only to the service that needs them           |
+| Agent can write anywhere    | `chmod 750` on its directory | Agent can't modify system files even if exploited                 |
 
 This is the principle of **least privilege**: give the delivery driver a key to the mailbox, not the front door.
 

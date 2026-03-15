@@ -19,7 +19,7 @@ keywords:
     "enterprise agent",
     "agentskills.io",
   ]
-chapter: 15
+chapter: 26
 lesson: 5
 duration_minutes: 30
 
@@ -96,7 +96,7 @@ teaching_guide:
     - "Read the full SKILL.md example aloud or invite a student to do so before discussing the annotations — experiencing it as a whole first helps students understand the tone and coherence before breaking it into parts"
     - "The annotations are designed to be read alongside the code blocks, not separately. Encourage students to move back and forth between example and annotation as they read"
     - "The question 'Is this a rule or an identity statement?' is useful for any Persona students draft in the Try With AI section. Apply it as a self-check."
-    - "Connect the Source Integrity principle back to the knowledge transfer gap from Chapter 14 — the whole reason domain-specific data source rules exist is to prevent the agent from substituting general training knowledge for grounded domain knowledge"
+    - "Connect the Source Integrity principle back to the knowledge transfer gap from Chapter 25 — the whole reason domain-specific data source rules exist is to prevent the agent from substituting general training knowledge for grounded domain knowledge"
   assessment_checks:
     - question: "Where is the most important constraint in the financial research SKILL.md stated, and why is it in that section?"
       expected_response: "In the Persona section, as the statement 'You are not an investment adviser.' It is in the Persona because identity constraints govern behaviour across all contexts — including situations no individual rule anticipated. A rule can be argued around; a professional identity cannot."

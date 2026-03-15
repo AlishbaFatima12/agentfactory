@@ -16,7 +16,7 @@ keywords:
     "stage migration capital",
     "cross-pillar banking AI",
   ]
-chapter: 21
+chapter: 32
 lesson: 11
 duration_minutes: 45
 

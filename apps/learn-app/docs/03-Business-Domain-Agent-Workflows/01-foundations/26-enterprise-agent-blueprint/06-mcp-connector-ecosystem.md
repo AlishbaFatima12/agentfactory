@@ -18,7 +18,7 @@ keywords:
     "data access",
     "enterprise AI",
   ]
-chapter: 15
+chapter: 26
 lesson: 6
 duration_minutes: 25
 
@@ -187,7 +187,7 @@ For legal workflows, LegalZoom and DocuSign cover document creation and contract
 
 The marketplace covers the systems that appear on most enterprise software inventories. But enterprise environments are not homogeneous. Many organisations run systems that are either too niche for a generalised connector to be viable, or configured in ways that are specific enough to require a connector built for their particular installation.
 
-The Revit connector listed in the table is an example. Revit is Autodesk's building information modelling software, used heavily in architecture, engineering, and construction. There is no generalised Revit connector in the marketplace, because each organisation's Revit environment is structured differently — different project hierarchies, different custom parameters, different data schemas. A developer builds a custom Revit MCP server tailored to the specific organisation's Revit installation, exposing BIM data as queryable structured data. The knowledge worker who uses that connector experiences it the same way as any marketplace connector — they specify what they need in their SKILL.md and the agent queries it — but the connector itself was built specifically for their environment. Chapter 22 covers the construction and engineering domain in detail, including the Revit connector architecture.
+The Revit connector listed in the table is an example. Revit is Autodesk's building information modelling software, used heavily in architecture, engineering, and construction. There is no generalised Revit connector in the marketplace, because each organisation's Revit environment is structured differently — different project hierarchies, different custom parameters, different data schemas. A developer builds a custom Revit MCP server tailored to the specific organisation's Revit installation, exposing BIM data as queryable structured data. The knowledge worker who uses that connector experiences it the same way as any marketplace connector — they specify what they need in their SKILL.md and the agent queries it — but the connector itself was built specifically for their environment. Chapter 33 covers the construction and engineering domain in detail, including the Revit connector architecture.
 
 The commissioning process for a custom connector follows a consistent pattern. The knowledge worker specifies what they need in plain language: which system to connect to, what data should be accessible, what query types the agent will need to run, and what permissions are appropriate. The developer takes that specification and builds. The knowledge worker does not write code; they write requirements.
 

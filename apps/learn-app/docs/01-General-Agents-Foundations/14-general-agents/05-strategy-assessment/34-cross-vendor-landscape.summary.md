@@ -32,6 +32,6 @@ The skills you learned in this chapter aren't Claude Code-specific—they're ind
 - Ignoring that AI writes ~30% of Microsoft code and 25%+ of Google code—this isn't experimental, it's the new baseline
 
 ### Connections
-- **Builds on**: All Chapter 3 concepts (CLAUDE.md, Skills, MCP, hooks, plugins, subagents, teams) are now understood as portable industry patterns
+- **Builds on**: All Chapter 14 concepts (CLAUDE.md, Skills, MCP, hooks, plugins, subagents, teams) are now understood as portable industry patterns
 - **Leads to**: Chapter Quiz (Lesson 36) testing understanding across all 35 lessons, then application in later chapters
 - **Career Impact**: Investment in these patterns compounds across every tool you touch—learning one deeply means learning the underlying architecture of all agentic coding tools

@@ -25,4 +25,4 @@ Every deployment begins with a conversation, and the quality of that conversatio
 ### Connections
 
 - **Builds on**: Maturity model (Lesson 6) as the qualification tool; monetisation models (Lesson 5) as stakeholder-specific framing; platform landscape (Lesson 4) for positioning; domain profiles (Lesson 7) for scoping
-- **Leads to**: Chapter Summary (Lesson 9) connecting all frameworks into a decision system; Chapter 15 providing the technical architecture that the conversation prepares the stakeholder to understand
+- **Leads to**: Chapter Summary (Lesson 9) connecting all frameworks into a decision system; Chapter 26 providing the technical architecture that the conversation prepares the stakeholder to understand

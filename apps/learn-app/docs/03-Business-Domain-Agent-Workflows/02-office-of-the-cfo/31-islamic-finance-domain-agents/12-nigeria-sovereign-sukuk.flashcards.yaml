@@ -1,82 +1,82 @@
 deck:
-  id: "ch20-12-nigeria-sovereign-sukuk"
+  id: "ch31-12-nigeria-sovereign-sukuk"
   title: "Nigeria Sovereign Sukuk — African Infrastructure Finance"
   description: "Key concepts from Nigeria's sovereign sukuk programme, the contractor independence principle, CBN Non-Interest Banking Framework, ECL staging for sovereign risk, and the African sukuk landscape."
   tags: ["nigeria", "sovereign-sukuk", "contractor-independence", "cbn"]
   version: 1
 
 cards:
-  - id: "ch20-12-nigeria-sovereign-sukuk-001"
+  - id: "ch31-12-nigeria-sovereign-sukuk-001"
     front: "What structure does the FGN sovereign sukuk programme use, and what assets back it?"
     back: "Ijarah structure backed by federal road infrastructure assets."
     tags: ["fgn-sukuk", "ijarah", "road-infrastructure"]
     difficulty: "basic"
 
-  - id: "ch20-12-nigeria-sovereign-sukuk-002"
+  - id: "ch31-12-nigeria-sovereign-sukuk-002"
     front: "The FGN provides a purchase undertaking at face value for its ijarah sukuk. Why does this cause failed derecognition under IFRS 9?"
     back: "The purchase undertaking means the FGN still bears the value risk of the road assets — if the roads deteriorate, the FGN repurchases at face value regardless. Risks and rewards have not been transferred to the SPV, so the assets remain on the FGN's balance sheet."
     tags: ["derecognition", "purchase-undertaking", "ifrs-9"]
     difficulty: "intermediate"
     why: "What structural change would be needed for the FGN to achieve genuine derecognition?"
 
-  - id: "ch20-12-nigeria-sovereign-sukuk-003"
+  - id: "ch31-12-nigeria-sovereign-sukuk-003"
     front: "Julius Berger builds roads financed by FGN sukuk. Does the sukuk structure affect Julius Berger's IFRS 15 revenue recognition?"
     back: "It does not. Julius Berger accounts under IFRS 15 identically whether the FGN finances via sukuk, conventional bonds, or tax revenue."
     tags: ["contractor-independence", "ifrs-15", "julius-berger"]
     difficulty: "basic"
 
-  - id: "ch20-12-nigeria-sovereign-sukuk-004"
+  - id: "ch31-12-nigeria-sovereign-sukuk-004"
     front: "A supplier provides services to an Islamic bank. Why does the contractor independence principle mean the supplier does not apply Islamic accounting?"
     back: "Islamic finance structures affect only parties to the Shariah contract. The supplier has a commercial contract with the bank, not a Shariah contract. Only the Shariah contract signatories — issuer, SPV, and investors — adjust their accounting for the Islamic structure."
     tags: ["contractor-independence", "scope-boundary"]
     difficulty: "intermediate"
     why: "How would you determine the scope boundary for any Islamic finance transaction?"
 
-  - id: "ch20-12-nigeria-sovereign-sukuk-005"
+  - id: "ch31-12-nigeria-sovereign-sukuk-005"
     front: "What is the CBN Non-Interest Banking Framework, and what does it require?"
     back: "The CBN framework governs all Islamic banking in Nigeria. It requires AAOIFI Shariah Standards for product structuring and IFRS for financial reporting."
     tags: ["cbn", "non-interest-banking", "nigeria"]
     difficulty: "basic"
 
-  - id: "ch20-12-nigeria-sovereign-sukuk-006"
+  - id: "ch31-12-nigeria-sovereign-sukuk-006"
     front: "What is Jaiz Bank's significance in Nigerian Islamic finance?"
     back: "Nigeria's first fully-fledged non-interest (Islamic) bank and the reference case for the CBN framework."
     tags: ["jaiz-bank", "nigeria"]
     difficulty: "basic"
 
-  - id: "ch20-12-nigeria-sovereign-sukuk-007"
+  - id: "ch31-12-nigeria-sovereign-sukuk-007"
     front: "Jaiz Bank holds FGN sovereign sukuk. Under IFRS 9, what ECL stage applies and why is the provision measurable rather than negligible?"
     back: "Stage 1 (12-month ECL) for newly originated sukuk without credit deterioration. Nigeria is typically rated sub-investment grade, so the sovereign probability of default produces a measurable provision — unlike AAA-rated sovereign sukuk where Stage 1 ECL is minimal."
     tags: ["ecl", "sovereign-risk", "ifrs-9"]
     difficulty: "intermediate"
     why: "What event would trigger a move from Stage 1 to Stage 2 for Nigerian sovereign sukuk?"
 
-  - id: "ch20-12-nigeria-sovereign-sukuk-008"
+  - id: "ch31-12-nigeria-sovereign-sukuk-008"
     front: "What is Africa's estimated annual infrastructure financing gap?"
     back: "$100 billion annually."
     tags: ["infrastructure-gap", "africa"]
     difficulty: "basic"
 
-  - id: "ch20-12-nigeria-sovereign-sukuk-009"
+  - id: "ch31-12-nigeria-sovereign-sukuk-009"
     front: "Name any 3 of the 5 most active African sovereign sukuk issuers."
     back: "Nigeria, Senegal, Ivory Coast, South Africa, and Egypt."
     tags: ["african-sukuk", "sovereign-issuers"]
     difficulty: "intermediate"
 
-  - id: "ch20-12-nigeria-sovereign-sukuk-010"
+  - id: "ch31-12-nigeria-sovereign-sukuk-010"
     front: "The FGN ijarah sukuk has a purchase undertaking at face value. Is this sukuk 'asset-based' or 'asset-backed,' and what does the distinction mean for investors?"
     back: "Asset-based, because the purchase undertaking means investors have recourse to the sovereign's creditworthiness, not solely to the specific road assets. The investor's real exposure is to FGN sovereign credit risk, not to the condition of the roads."
     tags: ["asset-based-vs-backed", "sovereign-sukuk", "investor-risk"]
     difficulty: "advanced"
     why: "How would AAOIFI Draft Standard 62's requirement for genuine asset transfer change this structure?"
 
-  - id: "ch20-12-nigeria-sovereign-sukuk-011"
+  - id: "ch31-12-nigeria-sovereign-sukuk-011"
     front: "What are the five steps in the FGN ijarah sukuk structure?"
     back: "1. FGN identifies road assets\n2. Assets transfer to sukuk SPV\n3. SPV issues certificates to investors\n4. FGN leases assets back (rental = distributions)\n5. FGN repurchases at maturity (purchase undertaking)"
     tags: ["ijarah-structure", "fgn-sukuk"]
     difficulty: "intermediate"
 
-  - id: "ch20-12-nigeria-sovereign-sukuk-012"
+  - id: "ch31-12-nigeria-sovereign-sukuk-012"
     front: "Nigeria uses IFRS for financial reporting. How does the Nigerian framework treat AAOIFI?"
     back: "AAOIFI is referenced for Shariah product structuring guidance only. IFRS governs all financial reporting for both Islamic and conventional banks."
     tags: ["nigeria", "ifrs", "aaoifi"]

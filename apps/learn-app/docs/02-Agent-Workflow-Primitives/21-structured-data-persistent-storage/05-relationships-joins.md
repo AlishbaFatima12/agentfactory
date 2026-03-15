@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: "Relationships & Joins"
-chapter: 10
+chapter: 21
 lesson: 4
 duration_minutes: 30
 description: "Describe entity relationships in plain English and direct an agent to query linked data correctly"

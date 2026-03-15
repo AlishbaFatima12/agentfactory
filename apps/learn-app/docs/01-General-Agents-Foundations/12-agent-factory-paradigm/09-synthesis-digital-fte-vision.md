@@ -2,7 +2,7 @@
 title: "Synthesis - The Digital FTE Vision"
 sidebar_label: "Synthesis - Digital FTE Vision"
 sidebar_position: 9
-chapter: 1
+chapter: 12
 lesson: 9
 duration_minutes: 10
 proficiency: "A1"
@@ -258,7 +258,7 @@ You now have the mental models for AI-native development—and the business stra
 Ask Claude Code (or your preferred AI assistant):
 
 ```
-I just completed Chapter 1 on the Agent Factory paradigm and the difference
+I just completed Chapter 12 on the Agent Factory paradigm and the difference
 between Vibe Coding and Spec-Driven Development.
 
 Help me reflect:
@@ -279,7 +279,7 @@ Be specific. Give me concrete examples from my answers.
 Ask Claude Code:
 
 ```
-I've learned these concepts from Chapter 1:
+I've learned these concepts from Chapter 12:
 - The Five Powers (See, Hear, Reason, Act, Remember)
 - The AI Stack (Frontier Models → AI-First IDEs → Development Agents)
 - AIFF Standards (AGENTS.md, Agent Skills, MCP)

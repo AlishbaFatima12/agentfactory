@@ -1,19 +1,19 @@
 ---
 slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape
-sidebar_position: 14
-title: "Chapter 14: The Enterprise Agentic Landscape"
+sidebar_position: 25
+title: "Chapter 25: The Enterprise Agentic Landscape"
 description: "Understand why enterprise AI stalled, what changed in 2026, and why knowledge workers — not developers — are the central figures in the enterprise agentic era"
-chapter_number: 14
+chapter_number: 25
 part_number: 3
 version: 1.0
 status: draft
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-14/enterprise-agentic-blueprint.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-25/enterprise-agentic-blueprint.pdf"
   title: "The Enterprise Agentic Landscape"
   height: 700
 ---
 
-# Chapter 14: The Enterprise Agentic Landscape
+# Chapter 25: The Enterprise Agentic Landscape
 
 > _"The enterprise doesn't have an AI problem. It has a knowledge transfer problem. The technology arrived years ago. The institutions that could use it most are still waiting for someone to tell them where to begin."_
 
@@ -60,7 +60,7 @@ By the end of this chapter, you should be able to answer these five questions:
 4. Which of the four monetisation models applies to your domain, and what does the pricing architecture look like?
 5. At what maturity level does your organisation sit today, and what would need to change to move to the next level?
 
-## After Chapter 14
+## After Chapter 25
 
 When you finish this chapter, your perspective shifts:
 

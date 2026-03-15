@@ -2,7 +2,17 @@
 sidebar_position: 2
 title: "Axiom II: Knowledge is Markdown"
 description: "Why markdown is the universal knowledge format for agentic development — human-readable, version-controllable, AI-parseable, and tool-agnostic"
-keywords: ["markdown", "knowledge format", "CLAUDE.md", "ADR", "specifications", "YAML frontmatter", "documentation", "version control"]
+keywords:
+  [
+    "markdown",
+    "knowledge format",
+    "CLAUDE.md",
+    "ADR",
+    "specifications",
+    "YAML frontmatter",
+    "documentation",
+    "version control",
+  ]
 chapter: 31
 lesson: 2
 duration_minutes: 20
@@ -57,11 +67,11 @@ differentiation:
 
 # Axiom II: Knowledge is Markdown
 
-Axiom I solved how to organize commands — the shell coordinates, programs compute. But code is only half of what a team produces. The other half is knowledge: *why* did we choose this database? *What* conventions do we follow? *How* is the system designed? That knowledge has to live somewhere every developer and every AI agent can find it. Should you write it in a Google Doc? A Slack message? A Confluence wiki? A markdown file in the repository? The choice of format determines whether that knowledge survives or disappears — and this axiom makes the choice for you.
+Axiom I solved how to organize commands — the shell coordinates, programs compute. But code is only half of what a team produces. The other half is knowledge: _why_ did we choose this database? _What_ conventions do we follow? _How_ is the system designed? That knowledge has to live somewhere every developer and every AI agent can find it. Should you write it in a Google Doc? A Slack message? A Confluence wiki? A markdown file in the repository? The choice of format determines whether that knowledge survives or disappears — and this axiom makes the choice for you.
 
 Six months before Emma's rewrite, her team had made a critical architecture decision: event-driven messaging over synchronous REST. The discussion happened across four Slack threads, two Zoom calls, a Google Doc that three people edited simultaneously, and a Confluence page that nobody could find anymore. When a new developer named James joined, he looked at the codebase, saw REST calls everywhere except in the user service, and assumed it was an oversight. Nobody told him otherwise — because nobody could find the reasoning. The Google Doc had conflicting comments. The Confluence page referenced a Slack thread that had been archived. So James spent two weeks building a REST integration for the user service. Clean code. Good tests. A pull request that undid three months of deliberate architecture.
 
-Emma caught it during code review. "We moved to event-driven for a reason," she said. "What reason?" James asked. Silence. Nobody could reconstruct the full rationale. They knew the decision was right, but the knowledge about *why* — the N+1 query analysis, the mobile traffic data, the RFC from the September standup — had been scattered across formats that could not be searched, versioned, or read by an AI agent.
+Emma caught it during code review. "We moved to event-driven for a reason," she said. "What reason?" James asked. Silence. Nobody could reconstruct the full rationale. They knew the decision was right, but the knowledge about _why_ — the N+1 query analysis, the mobile traffic data, the RFC from the September standup — had been scattered across formats that could not be searched, versioned, or read by an AI agent.
 
 Two weeks of James's work, discarded. Not because the decision was bad. Because the knowledge was lost.
 
@@ -75,14 +85,14 @@ You know that knowledge must live in files. But **what format should those files
 
 Without a format standard, teams persist knowledge in whatever seems convenient at the moment:
 
-| Format | Example | Problem |
-|--------|---------|---------|
-| Google Docs | Architecture decisions shared via link | Can't be read by CI, can't be diffed in git, requires authentication |
-| Confluence wiki | Team knowledge base | Vendor lock-in, no version control integration, search quality degrades over time |
-| Slack messages | "Hey, we decided to use Postgres because..." | Disappears into archive, unsearchable after 90 days on free plans |
-| Word documents | `requirements_v3_FINAL_v2.docx` | Binary format, merge conflicts impossible to resolve, requires specific software |
-| YAML/JSON files | Configuration stored as pure data | Not human-friendly for prose, no narrative structure, poor for explaining "why" |
-| Plain text | `notes.txt` with no structure | No headers, no hierarchy, not parseable by tools expecting structure |
+| Format          | Example                                      | Problem                                                                           |
+| --------------- | -------------------------------------------- | --------------------------------------------------------------------------------- |
+| Google Docs     | Architecture decisions shared via link       | Can't be read by CI, can't be diffed in git, requires authentication              |
+| Confluence wiki | Team knowledge base                          | Vendor lock-in, no version control integration, search quality degrades over time |
+| Slack messages  | "Hey, we decided to use Postgres because..." | Disappears into archive, unsearchable after 90 days on free plans                 |
+| Word documents  | `requirements_v3_FINAL_v2.docx`              | Binary format, merge conflicts impossible to resolve, requires specific software  |
+| YAML/JSON files | Configuration stored as pure data            | Not human-friendly for prose, no narrative structure, poor for explaining "why"   |
+| Plain text      | `notes.txt` with no structure                | No headers, no hierarchy, not parseable by tools expecting structure              |
 
 Each format works in isolation. None works as a **system**. This is exactly the landscape James walked into — the event-driven messaging decision existed in all of these formats simultaneously, and therefore effectively existed in none of them. AI agents could not read the Slack threads. Git could not track changes to the Google Doc. New team members could not find the Confluence page. The knowledge was technically "persisted" but practically lost.
 
@@ -94,7 +104,7 @@ This axiom doesn't say "documentation should be in markdown." It says **all pers
 
 ## From Principle to Axiom: The Format Decision
 
-In Chapter 6, Principle 5 taught you that persisting state in files is essential for AI collaboration. You learned to create CLAUDE.md files, write ADRs, and structure projects for reproducibility. That principle answered **whether** to persist knowledge (yes, always) and **where** to persist it (in version-controlled files).
+In Chapter 17, Principle 5 taught you that persisting state in files is essential for AI collaboration. You learned to create CLAUDE.md files, write ADRs, and structure projects for reproducibility. That principle answered **whether** to persist knowledge (yes, always) and **where** to persist it (in version-controlled files).
 
 Axiom II answers the next question: **how** to format that knowledge.
 
@@ -121,33 +131,33 @@ The markdown repository is the only library where every reader — human develop
 
 ## Why Markdown?
 
-After the incident, Emma told James: "We need to write down every decision." James agreed — but the question was not whether to write things down. It was *how*. If the team had written `docs/adr/007-event-driven-messaging.md` on the day they made the decision, James would have found his answer in thirty seconds. But why markdown specifically? Why not a JSON file, a YAML config, or a well-organized text file?
+After the incident, Emma told James: "We need to write down every decision." James agreed — but the question was not whether to write things down. It was _how_. If the team had written `docs/adr/007-event-driven-messaging.md` on the day they made the decision, James would have found his answer in thirty seconds. But why markdown specifically? Why not a JSON file, a YAML config, or a well-organized text file?
 
 Markdown wins not because it is the most powerful format, but because it satisfies all four requirements simultaneously. No other format does.
 
 ### The Four Properties
 
-| Property | What It Means | Why It Matters for Agents |
-|----------|---------------|--------------------------|
-| **Human-readable** | You can read raw markdown without any special tool | Developers edit knowledge directly; no rendering step required |
-| **Version-controllable** | Plain text diffs cleanly in git | Every knowledge change has a commit, author, and timestamp |
-| **AI-parseable** | LLMs process markdown natively — headers, lists, tables, code blocks | AI agents extract structured information without custom parsers |
-| **Tool-agnostic** | Works with any editor, any platform, any operating system | No vendor lock-in; knowledge survives tool migrations |
+| Property                 | What It Means                                                        | Why It Matters for Agents                                       |
+| ------------------------ | -------------------------------------------------------------------- | --------------------------------------------------------------- |
+| **Human-readable**       | You can read raw markdown without any special tool                   | Developers edit knowledge directly; no rendering step required  |
+| **Version-controllable** | Plain text diffs cleanly in git                                      | Every knowledge change has a commit, author, and timestamp      |
+| **AI-parseable**         | LLMs process markdown natively — headers, lists, tables, code blocks | AI agents extract structured information without custom parsers |
+| **Tool-agnostic**        | Works with any editor, any platform, any operating system            | No vendor lock-in; knowledge survives tool migrations           |
 
 ### The Comparison
 
 Every alternative format fails on at least one property. This is not a matter of taste — it is a testable claim:
 
-| Format | Human-Readable | Version-Controllable | AI-Parseable | Tool-Agnostic |
-|--------|:-:|:-:|:-:|:-:|
-| **Markdown** | Yes | Yes | Yes | Yes |
-| YAML | Partial (data only, not prose) | Yes | Yes | Yes |
-| JSON | No (noise from braces/quotes) | Yes | Yes | Yes |
-| Word (.docx) | Yes (rendered) | No (binary) | Partial | No (requires Office) |
-| Google Docs | Yes (rendered) | No (proprietary history) | No (requires API auth) | No (requires Google) |
-| Confluence | Yes (rendered) | No (database-backed) | No (requires API auth) | No (requires Atlassian) |
-| Plain text | Yes | Yes | Partial (no structure) | Yes |
-| HTML | Partial (tag noise) | Yes | Yes | Yes |
+| Format       |         Human-Readable         |   Version-Controllable   |      AI-Parseable      |      Tool-Agnostic      |
+| ------------ | :----------------------------: | :----------------------: | :--------------------: | :---------------------: |
+| **Markdown** |              Yes               |           Yes            |          Yes           |           Yes           |
+| YAML         | Partial (data only, not prose) |           Yes            |          Yes           |           Yes           |
+| JSON         | No (noise from braces/quotes)  |           Yes            |          Yes           |           Yes           |
+| Word (.docx) |         Yes (rendered)         |       No (binary)        |        Partial         |  No (requires Office)   |
+| Google Docs  |         Yes (rendered)         | No (proprietary history) | No (requires API auth) |  No (requires Google)   |
+| Confluence   |         Yes (rendered)         |   No (database-backed)   | No (requires API auth) | No (requires Atlassian) |
+| Plain text   |              Yes               |           Yes            | Partial (no structure) |           Yes           |
+| HTML         |      Partial (tag noise)       |           Yes            |          Yes           |           Yes           |
 
 Markdown is the only format that scores "Yes" on all four. HTML comes close but fails human-readability — raw HTML is cluttered with tags that obscure the content. Plain text fails AI-parseability — without headers and structure, an agent cannot distinguish a section title from body text.
 
@@ -158,7 +168,7 @@ Markdown is the only format that scores "Yes" on all four. HTML comes close but 
 
 This is not an accident. Markdown was created in 2004 by John Gruber, a writer and blogger, with substantial contributions from Aaron Swartz — who was seventeen years old at the time and had already created atx, a precursor format, two years earlier.
 
-Their design goal was radical in its simplicity: create a format that reads as well *before* rendering as it does after. Unlike HTML, where `<h1>Title</h1>` obscures the content behind tags, markdown's `# Title` is immediately legible. The format drew directly from conventions people had already been using for decades in plain-text email — asterisks for emphasis, dashes for lists, blank lines for paragraphs. Gruber and Swartz did not invent a new syntax. They formalized the one that humans had already converged on naturally.
+Their design goal was radical in its simplicity: create a format that reads as well _before_ rendering as it does after. Unlike HTML, where `<h1>Title</h1>` obscures the content behind tags, markdown's `# Title` is immediately legible. The format drew directly from conventions people had already been using for decades in plain-text email — asterisks for emphasis, dashes for lists, blank lines for paragraphs. Gruber and Swartz did not invent a new syntax. They formalized the one that humans had already converged on naturally.
 
 This origin explains the comparison table above. Markdown was designed for human readability first, and machines turned out to be able to parse it too. Twenty years later, that design decision is what makes markdown the natural interface between human developers and AI agents — both can read the same file with the same ease, because readability was the original and only design constraint.
 
@@ -185,6 +195,7 @@ We chose Postgres.
 ```
 
 An AI agent reading this file can:
+
 - Identify the decision by finding the `## Decision` header
 - Extract alternatives from the table
 - Understand reasoning from the `## Context` prose
@@ -206,25 +217,30 @@ This is an Architecture Decision Record (ADR) — the kind of file that would ha
 # ADR-007: Use Event-Driven Messaging Over REST
 
 ## Status
+
 Accepted
 
 ## Context
+
 Our user service sends notifications to three other services whenever
 a user updates their profile. The current approach (direct REST calls)
 means the user service must know about all three services and wait
 for each one to respond before confirming the update.
 
 ## Decision
+
 Switch to event-driven messaging: the user service publishes an event,
 and each downstream service listens for it independently.
 
 ## Consequences
+
 - Positive: User service no longer needs to know about downstream services
 - Positive: Adding a new listener does not require changing existing code
 - Negative: Harder to debug when an event is lost or delayed
 - Negative: Team needs to learn a new messaging tool
 
 ## Alternatives Considered
+
 - Keep REST: Simpler, but creates tight coupling between services
 - Shared database: Services read from the same table, but creates contention
 ```
@@ -239,13 +255,16 @@ You do not need to understand REST, events, or messaging yet. Focus on the **str
 # CLAUDE.md
 
 ## Project Overview
+
 A to-do list app where users can create, complete, and delete tasks.
 
 ## How to Run
+
 - `python app.py` → Start the app
 - `python -m pytest` → Run the tests
 
 ## Project Rules
+
 - Each feature gets its own file in `src/`
 - Every feature has a matching test file in `tests/`
 - Write a test before writing the feature code
@@ -255,11 +274,11 @@ A to-do list app where users can create, complete, and delete tasks.
 
 Setup guides, how-to instructions, reference pages — all markdown, all in the repo. A `docs/guides/setup.md` file with headers, code blocks, and tables serves the same purpose as a Confluence page but without the vendor lock-in, authentication walls, or staleness that plagues wiki platforms.
 
-All four knowledge types — spec, decision, context, documentation — use the same format. They live in the same repository. They are tracked by the same version control. They are readable by the same AI agents. This is what makes markdown a *system*, not just a file format.
+All four knowledge types — spec, decision, context, documentation — use the same format. They live in the same repository. They are tracked by the same version control. They are readable by the same AI agents. This is what makes markdown a _system_, not just a file format.
 
 ## YAML Frontmatter: The Metadata Layer
 
-As Emma's team migrated their knowledge into markdown, James noticed a gap. The ADR captured the *reasoning* behind a decision, but he also wanted to record *when* it was made, *who* approved it, and *what status* it had — structured data that did not belong in prose paragraphs. Raw markdown provides structure through headers, lists, and tables. But some knowledge is better expressed as structured data: lesson duration, skill proficiency levels, creation dates, taxonomy categories. This is where YAML frontmatter adds a metadata layer on top of markdown content.
+As Emma's team migrated their knowledge into markdown, James noticed a gap. The ADR captured the _reasoning_ behind a decision, but he also wanted to record _when_ it was made, _who_ approved it, and _what status_ it had — structured data that did not belong in prose paragraphs. Raw markdown provides structure through headers, lists, and tables. But some knowledge is better expressed as structured data: lesson duration, skill proficiency levels, creation dates, taxonomy categories. This is where YAML frontmatter adds a metadata layer on top of markdown content.
 
 ```markdown
 ---
@@ -280,10 +299,10 @@ The lesson content begins here...
 
 The frontmatter block (between `---` delimiters) contains machine-processable metadata. The body contains human-readable prose. Together, they give you the best of both worlds:
 
-| Layer | Format | Purpose | Processed By |
-|-------|--------|---------|--------------|
-| Frontmatter | YAML | Structured metadata (dates, tags, numbers) | Build tools, CI, search indexes |
-| Body | Markdown | Narrative content (explanations, examples, decisions) | Humans, AI agents, documentation generators |
+| Layer       | Format   | Purpose                                               | Processed By                                |
+| ----------- | -------- | ----------------------------------------------------- | ------------------------------------------- |
+| Frontmatter | YAML     | Structured metadata (dates, tags, numbers)            | Build tools, CI, search indexes             |
+| Body        | Markdown | Narrative content (explanations, examples, decisions) | Humans, AI agents, documentation generators |
 
 This pattern appears throughout professional tooling: Jekyll blogs, Docusaurus documentation, Hugo sites, Obsidian notes, and Astro pages all use YAML frontmatter on markdown files. The pattern works because it respects the boundary between data and narrative.
 
@@ -295,11 +314,11 @@ The knowledge existed. It was written down. It was even shared. But it was scatt
 
 Here are the most common ways knowledge gets trapped:
 
-| Anti-Pattern | What Happens | The Fix |
-|--------------|-------------|---------|
-| **Decisions in Slack** | Knowledge archived after 90 days; unsearchable; no structure | Write an ADR in `docs/adr/` and commit it |
-| **Specs in Google Docs** | AI can't read without authentication; merge conflicts impossible to resolve | Write specs as markdown in the repo |
-| **Docs in Confluence** | Vendor lock-in; pages go stale; separate from the code they describe | Co-locate docs with code as markdown |
+| Anti-Pattern              | What Happens                                                                        | The Fix                                       |
+| ------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------- |
+| **Decisions in Slack**    | Knowledge archived after 90 days; unsearchable; no structure                        | Write an ADR in `docs/adr/` and commit it     |
+| **Specs in Google Docs**  | AI can't read without authentication; merge conflicts impossible to resolve         | Write specs as markdown in the repo           |
+| **Docs in Confluence**    | Vendor lock-in; pages go stale; separate from the code they describe                | Co-locate docs with code as markdown          |
 | **Notes without headers** | AI can't parse sections; search returns the whole file instead of the relevant part | Use `#` headers to create parseable structure |
 
 The common thread: every anti-pattern breaks at least one of the four properties. Slack breaks version-controllability. Google Docs breaks tool-agnosticism. Plain text without headers breaks AI-parseability. Proprietary formats break all four.
@@ -415,24 +434,24 @@ Close your AI assistant. Your team made a big decision last month about which to
 - A **phone call** between two team members
 - A **shared Google Doc**
 
-Six months later, a new member joins and asks: *"Why did you pick that tool?"*
+Six months later, a new member joins and asks: _"Why did you pick that tool?"_
 
 Consider these four properties: **(1) human-readable**, **(2) version-controllable**, **(3) AI-parseable**, **(4) tool-agnostic**. For each format (WhatsApp, phone call, Google Doc), predict which of the four properties it violates. Write your answer down. Rate your confidence from 1 to 5.
 
 ### Run
 
-Ask your AI assistant: *"Evaluate WhatsApp group chats, phone calls, and Google Docs against these four properties: human-readable, version-controllable, AI-parseable, and tool-agnostic. Which properties does each format violate?"*
+Ask your AI assistant: _"Evaluate WhatsApp group chats, phone calls, and Google Docs against these four properties: human-readable, version-controllable, AI-parseable, and tool-agnostic. Which properties does each format violate?"_
 
 Compare the AI's evaluation to your predictions. Did you catch all the violations? Were there any you missed?
 
 <details>
 <summary><strong>Answer Key (check after comparing with AI)</strong></summary>
 
-| Format | Human-Readable | Version-Controllable | AI-Parseable | Tool-Agnostic |
-|--------|:-:|:-:|:-:|:-:|
-| **WhatsApp group** | Yes (you can read it) | No (no change history, no diffs) | No (requires app login, no API for agents) | No (requires WhatsApp) |
-| **Phone call** | No (nothing written down) | No (no record exists) | No (nothing for AI to read) | No (no artifact at all) |
-| **Google Doc** | Yes (rendered text) | Partial (proprietary version history, not diffable in git) | No (requires Google authentication) | No (requires Google account) |
+| Format             |      Human-Readable       |                    Version-Controllable                    |                AI-Parseable                |        Tool-Agnostic         |
+| ------------------ | :-----------------------: | :--------------------------------------------------------: | :----------------------------------------: | :--------------------------: |
+| **WhatsApp group** |   Yes (you can read it)   |              No (no change history, no diffs)              | No (requires app login, no API for agents) |    No (requires WhatsApp)    |
+| **Phone call**     | No (nothing written down) |                   No (no record exists)                    |        No (nothing for AI to read)         |   No (no artifact at all)    |
+| **Google Doc**     |    Yes (rendered text)    | Partial (proprietary version history, not diffable in git) |    No (requires Google authentication)     | No (requires Google account) |
 
 The phone call is the worst — it violates all four properties because no artifact exists at all. WhatsApp is slightly better (the text exists) but still fails three properties. Google Docs is the best of the three but still fails version-controllability (you cannot diff it in git), AI-parseability (an AI agent cannot read it without API authentication), and tool-agnosticism (you need a Google account).
 
@@ -446,11 +465,11 @@ Think back to James's story. He spent two weeks building a REST integration — 
 
 Write in your own words — without asking AI — the answer to this question: **Why didn't the existing written records save James?** The decision was documented in three different places. That is more documentation than most teams produce. So what specifically failed? Which of the four properties did each format violate, and which violation is the one that actually caused James to miss the decision?
 
-Apply the **Error Taxonomy**: knowledge stored in the wrong format = **specification error**. The decision *was* specified — people wrote it down — but the specification was unfindable when it mattered. The distinction matters: this is not a case of "nobody wrote it down." It is a case of "everyone wrote it down and it still did not work." That is what makes format — not just existence — the issue.
+Apply the **Error Taxonomy**: knowledge stored in the wrong format = **specification error**. The decision _was_ specified — people wrote it down — but the specification was unfindable when it mattered. The distinction matters: this is not a case of "nobody wrote it down." It is a case of "everyone wrote it down and it still did not work." That is what makes format — not just existence — the issue.
 
 ### Modify
 
-Your team writes the ADR in a markdown file — good. But instead of committing it to the repository, they save it in a shared Google Drive folder. A new team member joins and asks their AI coding assistant: *"What architecture decisions has this team made?"* The AI searches the repository and finds nothing.
+Your team writes the ADR in a markdown file — good. But instead of committing it to the repository, they save it in a shared Google Drive folder. A new team member joins and asks their AI coding assistant: _"What architecture decisions has this team made?"_ The AI searches the repository and finds nothing.
 
 What went wrong? Which of the four properties did the Google Drive location break? What would change if the same file were committed to `docs/adr/` in the repo?
 

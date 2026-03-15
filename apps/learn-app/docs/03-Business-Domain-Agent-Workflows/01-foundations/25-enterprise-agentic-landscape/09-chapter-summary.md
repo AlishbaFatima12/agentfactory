@@ -10,7 +10,7 @@ keywords:
   - deployment readiness
   - strategic vocabulary
   - knowledge transfer
-chapter: 14
+chapter: 25
 lesson: 9
 duration_minutes: 15
 
@@ -111,7 +111,7 @@ Three core insights tie the entire chapter together.
 
 ## Self-Assessment Checklist
 
-Before moving to Chapter 15, test whether you can answer these questions. If you can answer all of them with specificity -- not generalities -- you have the strategic vocabulary this chapter aimed to build.
+Before moving to Chapter 26, test whether you can answer these questions. If you can answer all of them with specificity -- not generalities -- you have the strategic vocabulary this chapter aimed to build.
 
 - [ ] **The Pilot Trap**: Can you explain why enterprise AI stalled in 2024-2025 and identify the structural problem (not the technology problem)?
 - [ ] **Platform Landscape**: Can you describe when Cowork is the right choice and when Frontier is the right choice, based on scope, procurement model, and knowledge type?
@@ -126,7 +126,7 @@ If any of these feel uncertain, revisit the relevant lesson before continuing. T
 
 ## What Comes Next
 
-Chapter 15 opens the blueprint. Where this chapter gave you the strategic vocabulary to evaluate, qualify, and frame enterprise AI deployments, Chapter 15 gives you the technical architecture that makes deployment real. You will see what a Cowork plugin looks like from the inside: how your expertise becomes agent instructions, how connectors attach to your organisation's systems, and how governance controls ensure the agent operates within the constraints you defined.
+Chapter 26 opens the blueprint. Where this chapter gave you the strategic vocabulary to evaluate, qualify, and frame enterprise AI deployments, Chapter 26 gives you the technical architecture that makes deployment real. You will see what a Cowork plugin looks like from the inside: how your expertise becomes agent instructions, how connectors attach to your organisation's systems, and how governance controls ensure the agent operates within the constraints you defined.
 
 The strategic vocabulary does not become obsolete. It becomes the language you use to explain what the technical architecture is doing and why.
 
@@ -137,7 +137,7 @@ Use these prompts in Anthropic Cowork or your preferred AI assistant to explore 
 ### Prompt 1: Personal Application
 
 ```
-I have just completed Chapter 14 on the enterprise agentic landscape.
+I have just completed Chapter 25 on the enterprise agentic landscape.
 Help me create a personal deployment roadmap. Here is my context:
 I work as [YOUR ROLE] in [YOUR INDUSTRY], my organisation is at
 approximately Level [your estimate] maturity, and the institutional
@@ -166,7 +166,7 @@ the same decision framework produces different answers for each case.
 ### Prompt 3: Domain Research
 
 ```
-The seven domains in Chapter 14 do not include education,
+The seven domains in Chapter 25 do not include education,
 manufacturing, or real estate. Pick one of these unlisted domains and
 apply the chapter's framework to it: What institutional knowledge is
 at risk? Which monetisation model would fit? What maturity level would

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 12
-title: "Chapter 4: Context Engineering Quiz"
+title: "Chapter 15: Context Engineering Quiz"
 description: "Diagnostic assessment testing decision-making, tradeoff reasoning, and failure detection in real-world context engineering scenarios"
 keywords:
   [
@@ -15,21 +15,21 @@ keywords:
     "instruction drift",
     "diagnostic assessment",
   ]
-chapter: 4
+chapter: 15
 proficiency_level: B2
 layer: 2
 estimated_time: "60 mins"
 chapter_type: Assessment
 ---
 
-# Chapter 4 Quiz: Context Engineering
+# Chapter 15 Quiz: Context Engineering
 
 This diagnostic assessment evaluates your judgment in real-world context engineering scenarios. Each question presents a situation requiring you to reason about tradeoffs, identify failure modes, and select appropriate interventions.
 
 **Target audience:** Practitioners who will architect long-running agent systems.
 
 <Quiz
-title="Chapter 4: Context Engineering Diagnostic Assessment"
+title="Chapter 15: Context Engineering Diagnostic Assessment"
 questionsPerBatch={30}
 questions={[
 {

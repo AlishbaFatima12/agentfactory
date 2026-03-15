@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: "The Testing Loop"
-chapter: 9
+chapter: 20
 lesson: 2
 layer: L2
 duration_minutes: 25

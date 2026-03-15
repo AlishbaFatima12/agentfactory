@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/free-claude-setup
 title: "Free Claude Code Setup"
 sidebar_position: 3
-chapter: 3
+chapter: 14
 lesson: 3
 duration_minutes: 15
 

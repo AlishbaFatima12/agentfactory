@@ -18,7 +18,7 @@ keywords:
     "plugin architecture",
     "GL reconciliation",
   ]
-chapter: 17
+chapter: 28
 lesson: 4
 duration_minutes: 45
 
@@ -43,7 +43,7 @@ skills:
     category: "Technical"
     bloom_level: "Analyze"
     digcomp_area: "Digital Content"
-    measurable_at_this_level: "Student can explain the category placeholder system (~~erp, ~~data warehouse) and articulate why this design separates workflow knowledge from connector configuration, connecting it to Chapter 15's division of responsibility between knowledge workers and IT"
+    measurable_at_this_level: "Student can explain the category placeholder system (~~erp, ~~data warehouse) and articulate why this design separates workflow knowledge from connector configuration, connecting it to Chapter 26's division of responsibility between knowledge workers and IT"
 
 learning_objectives:
   - objective: "Explain the architectural difference between Claude as an embedded assistant with native workbook access and Claude as an orchestrating agent that uses connectors to reach across multiple applications"
@@ -182,7 +182,7 @@ The `knowledge-work-plugins/finance` plugin serves corporate FP&A teams, control
 Six passive skills complement these commands: journal-entry-prep, reconciliation, financial-statements, variance-analysis, close-management, and audit-support. The close-management skill is particularly important -- it activates whenever you are in a close context and applies the close checklist lens automatically, flagging whether items are resolved, whether they block downstream tasks, and who owns them.
 
 :::info Category Placeholders
-The plugin uses category placeholders (`~~erp`, `~~data warehouse`, `~~analytics`) instead of naming specific products. The SKILL.md files say "pull the trial balance from ~~erp" without caring whether the ERP is NetSuite or SAP. IT configures `.mcp.json` to map each placeholder to a specific system. This separates workflow knowledge (owned by the knowledge worker) from connector configuration (owned by IT) -- Chapter 15's division of responsibility made concrete.
+The plugin uses category placeholders (`~~erp`, `~~data warehouse`, `~~analytics`) instead of naming specific products. The SKILL.md files say "pull the trial balance from ~~erp" without caring whether the ERP is NetSuite or SAP. IT configures `.mcp.json` to map each placeholder to a specific system. This separates workflow knowledge (owned by the knowledge worker) from connector configuration (owned by IT) -- Chapter 26's division of responsibility made concrete.
 :::
 
 > **What Is a GL Reconciliation?**

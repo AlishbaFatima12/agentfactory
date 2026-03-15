@@ -19,7 +19,7 @@ keywords:
     "audit-valid",
     "intent-driven financial architecture",
   ]
-chapter: 18
+chapter: 29
 lesson: 7
 duration_minutes: 30
 

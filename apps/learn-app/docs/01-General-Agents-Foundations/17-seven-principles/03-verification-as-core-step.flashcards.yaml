@@ -1,5 +1,5 @@
 deck:
-  id: ch06-03-verification-as-core-step
+  id: ch17-03-verification-as-core-step
   title: Verification as Core Step
   description: Why verification must be continuous in agentic workflows, how to calibrate trust across four zones, and how to apply risk-based verification strategies.
   tags:
@@ -11,7 +11,7 @@ deck:
   - risk-assessment
   version: 2
 cards:
-- id: ch06-03-verification-as-core-step-001
+- id: ch17-03-verification-as-core-step-001
   type: recall
   difficulty: basic
   front: What is the confidence trap when working with AI-generated code?
@@ -19,7 +19,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-002
+- id: ch17-03-verification-as-core-step-002
   type: thinking
   difficulty: intermediate
   front: Why does immediate verification turn the CSV parser bug into a cheap fix?
@@ -28,7 +28,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-003
+- id: ch17-03-verification-as-core-step-003
   type: recall
   difficulty: basic
   front: What three red flags should you always scan for in AI-generated code?
@@ -40,7 +40,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-004
+- id: ch17-03-verification-as-core-step-004
   type: thinking
   difficulty: intermediate
   front: Why are AI systems described as pattern-completers rather than truth-tellers?
@@ -50,7 +50,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-005
+- id: ch17-03-verification-as-core-step-005
   type: recall
   difficulty: basic
   front: What is the difference between verification and validation?
@@ -60,7 +60,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-006
+- id: ch17-03-verification-as-core-step-006
   type: thinking
   difficulty: advanced
   front: A CSV parser passes all tests but sorts by date instead of size. Why did verification succeed while validation failed?
@@ -70,7 +70,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-007
+- id: ch17-03-verification-as-core-step-007
   type: recall
   difficulty: basic
   front: What does continuous verification look like compared to waterfall verification?
@@ -80,7 +80,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-008
+- id: ch17-03-verification-as-core-step-008
   type: thinking
   difficulty: intermediate
   front: Why does batching all verification to the end cause errors to compound?
@@ -89,7 +89,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-009
+- id: ch17-03-verification-as-core-step-009
   type: recall
   difficulty: intermediate
   front: What are the four verification strategies in order of increasing depth and time?
@@ -103,7 +103,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-010
+- id: ch17-03-verification-as-core-step-010
   type: thinking
   difficulty: intermediate
   front: How does the risk assessment matrix determine verification depth?
@@ -113,7 +113,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-011
+- id: ch17-03-verification-as-core-step-011
   type: recall
   difficulty: intermediate
   front: What are the four trust zones and their required verification actions?
@@ -127,7 +127,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-012
+- id: ch17-03-verification-as-core-step-012
   type: thinking
   difficulty: advanced
   front: Why does Zone 4 never earn full trust regardless of track record?
@@ -137,7 +137,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-013
+- id: ch17-03-verification-as-core-step-013
   type: recall
   difficulty: intermediate
   front: What does the automated verification checklist cover and how long does it take?
@@ -145,7 +145,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-014
+- id: ch17-03-verification-as-core-step-014
   type: thinking
   difficulty: intermediate
   front: Why is starting strict and accelerating verification safer than starting lenient and tightening later?
@@ -155,7 +155,7 @@ cards:
   tags:
   - verification
   - testing
-- id: ch06-03-verification-as-core-step-015
+- id: ch17-03-verification-as-core-step-015
   type: recall
   difficulty: basic
   front: For critical systems, what role must a human always play according to the human-in-the-loop principle?

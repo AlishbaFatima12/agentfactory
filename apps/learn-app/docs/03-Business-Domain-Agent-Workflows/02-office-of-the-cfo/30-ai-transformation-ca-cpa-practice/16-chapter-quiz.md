@@ -1,18 +1,18 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/chapter-quiz
 sidebar_position: 16
-title: "Chapter 19: AI Transformation of CA/CPA Practice Quiz"
+title: "Chapter 30: AI Transformation of CA/CPA Practice Quiz"
 ---
 
-# Chapter 19: AI Transformation of CA/CPA Practice Quiz
+# Chapter 30: AI Transformation of CA/CPA Practice Quiz
 
 Test your understanding of the five CA/CPA practice domains, the Cowork plugin ecosystem, Cowork skills, workflow automation, and the professional judgment boundaries that define the AI-augmented practice.
 
 <Quiz
-title="Chapter 19: AI Transformation of CA/CPA Practice Assessment"
+title="Chapter 30: AI Transformation of CA/CPA Practice Assessment"
 questions={[
 {
-question: "A mid-tier accounting firm automates its compliance work using agentic AI. Compliance fees drop to near-zero marginal cost. A partner argues this will destroy firm revenue. What does Chapter 19 identify as the correct strategic response?",
+question: "A mid-tier accounting firm automates its compliance work using agentic AI. Compliance fees drop to near-zero marginal cost. A partner argues this will destroy firm revenue. What does Chapter 30 identify as the correct strategic response?",
 options: [
 "Raise compliance fees to offset the cost of AI tooling investment",
 "Reduce headcount proportionally to match declining compliance revenue",
@@ -24,7 +24,7 @@ explanation: "Lesson 1 establishes that as compliance costs approach zero, value
 source: "Lesson 1: The Most Consequential AI Transformation"
 },
 {
-question: "A firm is evaluating which practice area to automate first for maximum impact. The five domains are ranked by AI disruption potential in Chapter 19. Which ranking reflects the correct order from highest to lowest AI impact?",
+question: "A firm is evaluating which practice area to automate first for maximum impact. The five domains are ranked by AI disruption potential in Chapter 30. Which ranking reflects the correct order from highest to lowest AI impact?",
 options: [
 "Accounting and Financial Reporting, Tax and Advisory, Assurance, Management Accounting, GRC Advisory",
 "Assurance Services, Tax and Advisory, GRC Advisory, Management Accounting, Accounting and Reporting",
@@ -36,7 +36,7 @@ explanation: "Lesson 1 ranks the five CA/CPA domains by AI disruption potential:
 source: "Lesson 1: The Most Consequential AI Transformation"
 },
 {
-question: "An AI tool drafts a tax return by collecting data, applying rates, computing liability, and filing electronically without human intervention between steps. Another AI tool answers a partner's question about depreciation rates. Which distinction does Chapter 19 draw between these two capabilities?",
+question: "An AI tool drafts a tax return by collecting data, applying rates, computing liability, and filing electronically without human intervention between steps. Another AI tool answers a partner's question about depreciation rates. Which distinction does Chapter 30 draw between these two capabilities?",
 options: [
 "Both are generative AI capabilities operating at different complexity levels",
 "The first is a generative AI tool and the second is an agentic AI tool",
@@ -72,7 +72,7 @@ explanation: "Lesson 2 explains that US GAAP is rules-based — the agent can lo
 source: "Lesson 2: Domain 1 — Accounting and Financial Reporting"
 },
 {
-question: "After implementing an autonomous financial reporting agent, a firm finds its month-end close compresses from five days to one day. The managing partner asks what the role of junior accountants becomes. What does Chapter 19 identify as the restructured role?",
+question: "After implementing an autonomous financial reporting agent, a firm finds its month-end close compresses from five days to one day. The managing partner asks what the role of junior accountants becomes. What does Chapter 30 identify as the restructured role?",
 options: [
 "Junior accountants shift from preparing financial statements to reviewing agent output and owning exception resolution",
 "Junior accountants are no longer needed because the agent handles all routine tasks",
@@ -84,7 +84,7 @@ explanation: "Lesson 2 describes the role restructuring pattern: from preparer t
 source: "Lesson 2: Domain 1 — Accounting and Financial Reporting"
 },
 {
-question: "A tax practice automates return preparation. Partners notice that compliance revenue margins compress while advisory revenue grows. A junior partner proposes investing entirely in advisory and abandoning compliance. Why does Chapter 19 suggest this would be a mistake?",
+question: "A tax practice automates return preparation. Partners notice that compliance revenue margins compress while advisory revenue grows. A junior partner proposes investing entirely in advisory and abandoning compliance. Why does Chapter 30 suggest this would be a mistake?",
 options: [
 "Compliance work provides the data foundation and client access that feeds advisory opportunities",
 "Compliance is legally required so the firm must continue offering it regardless of margins",
@@ -120,7 +120,7 @@ explanation: "Lesson 3 covers restructuring simulation agents that model scenari
 source: "Lesson 3: Domain 2 — Tax and Non-Assurance Advisory"
 },
 {
-question: "A traditional audit tests a sample of 60 transactions from a population of 10,000 and finds no errors. An AI-powered audit tests all 10,000 transactions and flags 12 anomalies. A client asks which audit provides stronger assurance. What does Chapter 19 identify as the fundamental shift?",
+question: "A traditional audit tests a sample of 60 transactions from a population of 10,000 and finds no errors. An AI-powered audit tests all 10,000 transactions and flags 12 anomalies. A client asks which audit provides stronger assurance. What does Chapter 30 identify as the fundamental shift?",
 options: [
 "Both provide equivalent assurance because the sample was statistically valid",
 "The AI audit is weaker because flagging anomalies is not the same as confirming correctness",
@@ -132,7 +132,7 @@ explanation: "Lesson 4 identifies an epistemological shift from sampling to popu
 source: "Lesson 4: Domain 3 — Assurance Services"
 },
 {
-question: "A firm deploys a continuous audit agent that monitors client transactions in real time and flags anomalies as they occur. The audit committee asks how this changes the audit engagement. Which response best reflects Chapter 19's analysis?",
+question: "A firm deploys a continuous audit agent that monitors client transactions in real time and flags anomalies as they occur. The audit committee asks how this changes the audit engagement. Which response best reflects Chapter 30's analysis?",
 options: [
 "Continuous monitoring replaces the annual audit entirely because all transactions are already tested",
 "It shifts the audit from a periodic retrospective exercise to ongoing assurance with real-time exception detection",
@@ -168,7 +168,7 @@ explanation: "Lesson 5 explains that IDFA methodology (prefix-based naming conve
 source: "Lesson 5: Domain 4 — Management Accounting and Financial Management"
 },
 {
-question: "A financial analyst spends 80% of time maintaining models and 20% on strategic analysis. After AI implementation, the analyst's model maintenance drops to near zero. Chapter 19 identifies two possible career trajectories. Which pair does it describe?",
+question: "A financial analyst spends 80% of time maintaining models and 20% on strategic analysis. After AI implementation, the analyst's model maintenance drops to near zero. Chapter 30 identifies two possible career trajectories. Which pair does it describe?",
 options: [
 "Promotion to partner or lateral move to technology consulting",
 "Model maintenance specialist or data scientist",
@@ -180,7 +180,7 @@ explanation: "Lesson 5 describes professional bifurcation: analysts focused on m
 source: "Lesson 5: Domain 4 — Management Accounting and Financial Management"
 },
 {
-question: "A firm designs a continuous controls monitoring agent for its client's purchase-to-pay cycle. The agent must specify what each control prevents, what evidence proves execution, what anomaly reveals failure, and what the agent does when failure is detected. Which framework from Chapter 19 defines this four-part structure?",
+question: "A firm designs a continuous controls monitoring agent for its client's purchase-to-pay cycle. The agent must specify what each control prevents, what evidence proves execution, what anomaly reveals failure, and what the agent does when failure is detected. Which framework from Chapter 30 defines this four-part structure?",
 options: [
 "The COSO Enterprise Risk Management framework applied to automated controls",
 "The ISA 315 risk assessment methodology for audit planning purposes",
@@ -192,7 +192,7 @@ explanation: "Lesson 6 introduces a specific control design thinking framework w
 source: "Lesson 6: Domain 5 — Governance, Risk and Compliance Advisory"
 },
 {
-question: "The IIA updated the Three Lines of Defence model in 2020, renaming it the Three Lines Model. A GRC consultant explains the three lines to a client board. Which description correctly maps AI capabilities to each line as described in Chapter 19?",
+question: "The IIA updated the Three Lines of Defence model in 2020, renaming it the Three Lines Model. A GRC consultant explains the three lines to a client board. Which description correctly maps AI capabilities to each line as described in Chapter 30?",
 options: [
 "All three lines use the same AI agents because GRC monitoring is uniform across the organisation",
 "First line embeds AI in operations for risk management, second line uses monitoring agents for policy compliance, third line uses AI for independent testing and anomaly detection",
@@ -204,7 +204,7 @@ explanation: "Lesson 6 maps AI transformation across the Three Lines Model: Firs
 source: "Lesson 6: Domain 5 — Governance, Risk and Compliance Advisory"
 },
 {
-question: "A GRC advisory partner argues that AI will have minimal impact on their practice because the core product is judgment about what a specific organisation needs. Chapter 19 agrees that GRC advisory is judgment-resilient but identifies a significant area of disruption. What is it?",
+question: "A GRC advisory partner argues that AI will have minimal impact on their practice because the core product is judgment about what a specific organisation needs. Chapter 30 agrees that GRC advisory is judgment-resilient but identifies a significant area of disruption. What is it?",
 options: [
 "The monitoring and testing components of GRC are highly automatable even though advisory judgment remains human-intensive",
 "Client relationship management in GRC will be replaced by AI chatbots",
@@ -216,7 +216,7 @@ explanation: "Lesson 6 positions GRC as the most judgment-resilient domain — i
 source: "Lesson 6: Domain 5 — Governance, Risk and Compliance Advisory"
 },
 {
-question: "A CA/CPA installs the knowledge-work-plugins/finance package in Cowork. This provides commands for journal entries, reconciliations, income statements, variance analysis, and SOX testing. The practitioner asks which CA/CPA domains these commands serve. What is the correct mapping from Chapter 19?",
+question: "A CA/CPA installs the knowledge-work-plugins/finance package in Cowork. This provides commands for journal entries, reconciliations, income statements, variance analysis, and SOX testing. The practitioner asks which CA/CPA domains these commands serve. What is the correct mapping from Chapter 30?",
 options: [
 "All five commands serve all five domains equally without specialisation",
 "Only Domain 1 Accounting because all commands relate to financial reporting",
@@ -228,7 +228,7 @@ explanation: "Lesson 7 maps plugin commands to specific domains: /journal-entry 
 source: "Lesson 7: The CA/CPA Plugin Ecosystem"
 },
 {
-question: "Chapter 19 describes a two-layer plugin architecture for CA/CPA practice. A practitioner asks what distinguishes Layer 1 from Layer 2 and when they need each layer. What is the correct distinction?",
+question: "Chapter 30 describes a two-layer plugin architecture for CA/CPA practice. A practitioner asks what distinguishes Layer 1 from Layer 2 and when they need each layer. What is the correct distinction?",
 options: [
 "Layer 1 is free and Layer 2 is paid requiring a premium subscription tier",
 "Layer 1 handles core accounting across Domains 1, 3, 4, and 5 while Layer 2 handles investment-facing work for Domain 2",
@@ -240,7 +240,7 @@ explanation: "Lesson 7 defines the two-layer architecture: Layer 1 (knowledge-wo
 source: "Lesson 7: The CA/CPA Plugin Ecosystem"
 },
 {
-question: "A firm implements the month-end close workflow described in Chapter 19 using Cowork. The old process took five days with four staff members. The new process uses scheduled tasks and interactive workflows. A partner asks how many professional staff are needed for the automated close. What does Chapter 19 specify?",
+question: "A firm implements the month-end close workflow described in Chapter 30 using Cowork. The old process took five days with four staff members. The new process uses scheduled tasks and interactive workflows. A partner asks how many professional staff are needed for the automated close. What does Chapter 30 specify?",
 options: [
 "Zero staff because the entire close is fully automated end-to-end",
 "Four staff members working alongside the agent to maintain quality control",
@@ -264,7 +264,7 @@ explanation: "Lesson 8 explains that global instructions establish persistent pr
 source: "Lesson 7: The CA/CPA Plugin Ecosystem"
 },
 {
-question: "A firm's Pakistan jurisdiction extension encodes the instruction: 'When dividend income is received from a Pakistani company, apply 15% withholding tax for filer status.' A generic plugin without this extension processes the same transaction. What does Chapter 19 call the difference between these two outputs?",
+question: "A firm's Pakistan jurisdiction extension encodes the instruction: 'When dividend income is received from a Pakistani company, apply 15% withholding tax for filer status.' A generic plugin without this extension processes the same transaction. What does Chapter 30 call the difference between these two outputs?",
 options: [
 "The institutional knowledge gap — generic plugins produce structurally correct but contextually wrong output",
 "The compliance gap — generic plugins cannot handle tax calculations at all",
@@ -276,7 +276,7 @@ explanation: "Lesson 8 introduces the institutional knowledge gap as the core pr
 source: "Lesson 8: Building Jurisdiction and Entity Extensions"
 },
 {
-question: "A practitioner writes a Cowork skill with the instruction: 'Apply the correct withholding tax rate.' An experienced colleague reviews it and says the instruction will not activate reliably. What is wrong with the instruction according to Chapter 19's extension design principles?",
+question: "A practitioner writes a Cowork skill with the instruction: 'Apply the correct withholding tax rate.' An experienced colleague reviews it and says the instruction will not activate reliably. What is wrong with the instruction according to Chapter 30's extension design principles?",
 options: [
 "The instruction uses technical jargon that the agent cannot parse correctly",
 "The instruction is too short and needs at least three sentences to be effective",
@@ -300,7 +300,7 @@ explanation: "Lesson 9 establishes that methodology extensions encode the firm's
 source: "Lesson 9: Building Methodology and Compliance Extensions"
 },
 {
-question: "A senior manager wants to encode their tacit knowledge into a client entity extension. Chapter 19 describes a systematic approach for extracting this knowledge. The approach uses three core questions. Which set of questions matches the Method A interview framework?",
+question: "A senior manager wants to encode their tacit knowledge into a client entity extension. Chapter 30 describes a systematic approach for extracting this knowledge. The approach uses three core questions. Which set of questions matches the Method A interview framework?",
 options: [
 "What are the client's financial targets? What systems do they use? Who are the key contacts?",
 "What standards apply? What deadlines exist? What penalties apply for non-compliance?",
@@ -312,7 +312,7 @@ explanation: "Lesson 9 introduces the Method A interview framework with three qu
 source: "Lesson 9: Building Methodology and Compliance Extensions"
 },
 {
-question: "A compliance extension includes a RAG status system for monitoring filing deadlines. A deadline is 15 days away and shows Amber status. A partner asks what the Amber threshold means and what action it triggers. What does Chapter 19 specify?",
+question: "A compliance extension includes a RAG status system for monitoring filing deadlines. A deadline is 15 days away and shows Amber status. A partner asks what the Amber threshold means and what action it triggers. What does Chapter 30 specify?",
 options: [
 "Amber means 8 to 21 days remain requiring preparation to begin and information gathering to start",
 "Amber means the deadline is overdue and the filing must be submitted immediately with penalty mitigation",
@@ -336,7 +336,7 @@ explanation: "Lesson 10 establishes that the agent handles mechanical mapping bu
 source: "Lesson 10: Accounting & Reporting Practice Lab"
 },
 {
-question: "A practitioner uses the agent to prepare a consolidated financial statement for a parent company with two subsidiaries. The agent must perform elimination entries. Chapter 19 identifies four types of consolidation eliminations. A subsidiary sold inventory to the parent at a 25% markup and PKR 10M of that inventory remains unsold at year-end. Which elimination type applies?",
+question: "A practitioner uses the agent to prepare a consolidated financial statement for a parent company with two subsidiaries. The agent must perform elimination entries. Chapter 30 identifies four types of consolidation eliminations. A subsidiary sold inventory to the parent at a 25% markup and PKR 10M of that inventory remains unsold at year-end. Which elimination type applies?",
 options: [
 "Investment elimination removing the parent's cost of investment against subsidiary equity",
 "Intercompany loan elimination removing balances between group entities",
@@ -408,7 +408,7 @@ explanation: "Lesson 12 covers escalation threshold calibration — balancing de
 source: "Lesson 12: Assurance Practice Lab"
 },
 {
-question: "An internal audit finding states: 'Purchase orders above PKR 5M require dual approval per the procurement policy. Testing revealed 8 of 120 purchase orders above PKR 5M had single approval only. The root cause is that the approval workflow system does not enforce dual approval for amounts above the threshold. The consequence is that material purchases could be authorised by a single individual without oversight.' This finding follows a specific structure from Chapter 19. What is it called?",
+question: "An internal audit finding states: 'Purchase orders above PKR 5M require dual approval per the procurement policy. Testing revealed 8 of 120 purchase orders above PKR 5M had single approval only. The root cause is that the approval workflow system does not enforce dual approval for amounts above the threshold. The consequence is that material purchases could be authorised by a single individual without oversight.' This finding follows a specific structure from Chapter 30. What is it called?",
 options: [
 "The audit risk assessment framework identifying inherent and control risk",
 "The management letter format required by ISA 265 for control deficiency communication",
@@ -432,7 +432,7 @@ explanation: "Lesson 13 models the receipts waterfall where customer payment pat
 source: "Lesson 13: Management Accounting & GRC Practice Lab"
 },
 {
-question: "A firm uses Cowork to generate a board pack by orchestrating data from Excel financial models into PowerPoint presentations. The agent produces numerical slides with P&L summaries, ratio dashboards, and cash flow bridges. The CFO reviews the pack and says the management commentary reads like a data summary rather than a CFO perspective. What distinction does Chapter 19 draw?",
+question: "A firm uses Cowork to generate a board pack by orchestrating data from Excel financial models into PowerPoint presentations. The agent produces numerical slides with P&L summaries, ratio dashboards, and cash flow bridges. The CFO reviews the pack and says the management commentary reads like a data summary rather than a CFO perspective. What distinction does Chapter 30 draw?",
 options: [
 "Management commentary should contain only positive news to maintain board confidence",
 "The agent cannot write management commentary so it must always be written manually from scratch",
@@ -444,7 +444,7 @@ explanation: "Lesson 13 distinguishes data summaries ('revenue increased 8%') fr
 source: "Lesson 13: Management Accounting & GRC Practice Lab"
 },
 {
-question: "A practitioner builds a risk register using the COSO Enterprise Risk Management framework. The register includes five risk categories. A board member asks why reputational risk is separate from operational risk when reputational damage often results from operational failures. What is the correct explanation from Chapter 19?",
+question: "A practitioner builds a risk register using the COSO Enterprise Risk Management framework. The register includes five risk categories. A board member asks why reputational risk is separate from operational risk when reputational damage often results from operational failures. What is the correct explanation from Chapter 30?",
 options: [
 "Reputational risk is separated because it requires a different risk owner than operational risk",
 "Reputational risk has different likelihood and impact scales that cannot be measured on the same framework",
@@ -492,7 +492,7 @@ explanation: "Lesson 14 positions Cowork skill creation as an onboarding step be
 source: "Lesson 14: Cross-Domain Capstones"
 },
 {
-question: "In the Full Practice Deployment lesson, a practitioner performs a parallel run comparing AI-generated output against manually prepared output. The AI-generated month-end close completes in 2 hours. The manual close takes 4 days. A manager asks if the parallel run is necessary given the time savings. What does Chapter 19 identify as the purpose?",
+question: "In the Full Practice Deployment lesson, a practitioner performs a parallel run comparing AI-generated output against manually prepared output. The AI-generated month-end close completes in 2 hours. The manual close takes 4 days. A manager asks if the parallel run is necessary given the time savings. What does Chapter 30 identify as the purpose?",
 options: [
 "Parallel runs satisfy regulatory requirements for AI validation in professional practice engagements",
 "Parallel runs verify that the AI output matches manual quality before the firm relies on it for client deliverables ensuring no quality degradation despite speed improvement",
@@ -504,7 +504,7 @@ explanation: "Lesson 15 describes the parallel run methodology as a quality vali
 source: "Lesson 15: Full Practice Deployment and Reflection"
 },
 {
-question: "A firm prepares an AI capabilities statement for clients describing how AI augments their practice. A partner drafts: 'We use AI to fully automate all accounting, tax, and audit work.' A senior manager reviews and says this statement creates professional liability risk. What should the statement communicate instead according to Chapter 19?",
+question: "A firm prepares an AI capabilities statement for clients describing how AI augments their practice. A partner drafts: 'We use AI to fully automate all accounting, tax, and audit work.' A senior manager reviews and says this statement creates professional liability risk. What should the statement communicate instead according to Chapter 30?",
 options: [
 "The statement should avoid mentioning AI entirely to prevent client concerns about quality",
 "The statement should list every AI tool by name so clients can independently verify the technology",
@@ -528,7 +528,7 @@ explanation: "Lesson 15 covers stress-testing edge cases including currency conv
 source: "Lesson 15: Full Practice Deployment and Reflection"
 },
 {
-question: "Chapter 19 concludes with a 90-day implementation plan for deploying AI across a CA/CPA practice. The three months are sequenced deliberately. Month 1 focuses on automating high-volume activities, Month 2 on quality validation, and Month 3 on client communication. A partner asks why client communication comes last instead of first. What is the reasoning?",
+question: "Chapter 30 concludes with a 90-day implementation plan for deploying AI across a CA/CPA practice. The three months are sequenced deliberately. Month 1 focuses on automating high-volume activities, Month 2 on quality validation, and Month 3 on client communication. A partner asks why client communication comes last instead of first. What is the reasoning?",
 options: [
 "Client communication comes last because the firm needs proven results and validated quality before making claims about AI-augmented delivery to clients",
 "Clients are not interested in AI capabilities so communication can be deferred indefinitely",
@@ -540,7 +540,7 @@ explanation: "Lesson 15 sequences the 90-day plan deliberately: Month 1 automate
 source: "Lesson 15: Full Practice Deployment and Reflection"
 },
 {
-question: "A CA/CPA reflects on Chapter 19's core thesis about the professional value proposition in an AI-augmented practice. The firm has automated compliance work, deployed practice extensions, and validated quality. The practitioner asks: what work justifies premium fees when AI handles execution? What does Chapter 19 identify as the enduring professional value?",
+question: "A CA/CPA reflects on Chapter 30's core thesis about the professional value proposition in an AI-augmented practice. The firm has automated compliance work, deployed practice extensions, and validated quality. The practitioner asks: what work justifies premium fees when AI handles execution? What does Chapter 30 identify as the enduring professional value?",
 options: [
 "Managing and maintaining the AI systems requires technical expertise that commands premium fees",
 "Speed of delivery is the primary value because AI-augmented practices deliver results faster than competitors",
@@ -552,7 +552,7 @@ explanation: "Lesson 15 frames the professional value proposition through the ju
 source: "Lesson 15: Full Practice Deployment and Reflection"
 },
 {
-question: "An audit firm transitions from sampling-based testing to AI-powered population testing. A regulator asks whether the firm still needs to set materiality thresholds when every transaction is tested. What is the correct answer according to Chapter 19?",
+question: "An audit firm transitions from sampling-based testing to AI-powered population testing. A regulator asks whether the firm still needs to set materiality thresholds when every transaction is tested. What is the correct answer according to Chapter 30?",
 options: [
 "Materiality is no longer needed because population testing eliminates the risk of missing material misstatements",
 "Materiality is still needed because it determines which flagged anomalies require professional attention and which are too small to affect decisions",
@@ -564,7 +564,7 @@ explanation: "Lesson 4 explains that even with population testing, materiality r
 source: "Lesson 4: Domain 3 — Assurance Services"
 },
 {
-question: "A CA/CPA practice installs both knowledge-work-plugins/finance and financial-services-plugins in Cowork. The agent produces a working paper with detailed calculations and classifications. A trainee asks whether the plugin output can be sent directly to the client. What does Chapter 19 say about the professional review requirement?",
+question: "A CA/CPA practice installs both knowledge-work-plugins/finance and financial-services-plugins in Cowork. The agent produces a working paper with detailed calculations and classifications. A trainee asks whether the plugin output can be sent directly to the client. What does Chapter 30 say about the professional review requirement?",
 options: [
 "Plugin output is pre-validated and can be sent directly to clients without additional review",
 "Plugin output requires only formatting adjustments before client delivery to ensure branding consistency",
@@ -576,7 +576,7 @@ explanation: "Lesson 7 establishes the plugin output and professional review pat
 source: "Lesson 7: The CA/CPA Plugin Ecosystem"
 },
 {
-question: "A firm's month-end close workflow uses Cowork to orchestrate Excel analysis into a PowerPoint board presentation. The agent reads the financial model, creates slides with P&L summaries and ratio dashboards, and saves both files. A partner asks what manual process this replaces. What does Chapter 19 estimate as the time saving?",
+question: "A firm's month-end close workflow uses Cowork to orchestrate Excel analysis into a PowerPoint board presentation. The agent reads the financial model, creates slides with P&L summaries and ratio dashboards, and saves both files. A partner asks what manual process this replaces. What does Chapter 30 estimate as the time saving?",
 options: [
 "It replaces approximately one hour of skilled manual work including chart exports and slide formatting",
 "It replaces a full day of work because PowerPoint presentations require extensive design expertise",

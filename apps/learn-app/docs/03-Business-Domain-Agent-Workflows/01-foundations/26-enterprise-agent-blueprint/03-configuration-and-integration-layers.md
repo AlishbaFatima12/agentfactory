@@ -15,7 +15,7 @@ keywords:
     "infrastructure literacy",
     "plugin architecture",
   ]
-chapter: 15
+chapter: 26
 lesson: 3
 duration_minutes: 25
 

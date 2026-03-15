@@ -14,7 +14,7 @@ keywords:
     automation,
     polling,
   ]
-chapter: 3
+chapter: 14
 lesson: 24
 duration_minutes: 12
 

@@ -1,9 +1,9 @@
 ---
 sidebar_position: 7
-title: "Chapter 7: Meet Your First AI Employee - OpenClaw"
+title: "Chapter 18: Meet Your First AI Employee - OpenClaw"
 description: "Experience a working AI Employee for free, understand the universal patterns, assess what works and what remains unsolved, then bridge to building your own"
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-1/chapter-07/meet-your-ai-employee.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-1/chapter-18/meet-your-ai-employee.pdf"
   title: "Meet Your AI Employee"
   height: 700
 keywords:
@@ -24,7 +24,7 @@ keywords:
   ]
 ---
 
-# Chapter 7: Meet Your First AI Employee - OpenClaw
+# Chapter 18: Meet Your First AI Employee - OpenClaw
 
 By February 2026, OpenClaw had crossed 209,000 GitHub stars — the fastest-growing repository in history. It proved something the industry had been debating: **AI Employees are real, they work, and people want them.**
 

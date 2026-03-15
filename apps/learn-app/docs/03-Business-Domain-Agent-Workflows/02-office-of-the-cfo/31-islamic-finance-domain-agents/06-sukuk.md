@@ -20,7 +20,7 @@ keywords:
     "derecognition analysis",
     "Islamic capital markets",
   ]
-chapter: 20
+chapter: 31
 lesson: 6
 duration_minutes: 60
 

@@ -2,7 +2,20 @@
 sidebar_position: 2
 title: "PRIMM-AI+: AI as Your Learning Partner"
 description: "How AI integrates into each PRIMM stage -- AI roles, permissions, AI-free checkpoints, mastery gates, mandatory trace artifacts, a complete walkthrough, and the five rules that keep AI as partner, not crutch."
-keywords: ["PRIMM-AI+", "PRIMM-AI", "AI-assisted learning", "AI-free checkpoints", "mastery gates", "AI permissions", "predict run investigate modify make", "Claude Code", "learning framework", "coding education", "AI questioning partner"]
+keywords:
+  [
+    "PRIMM-AI+",
+    "PRIMM-AI",
+    "AI-assisted learning",
+    "AI-free checkpoints",
+    "mastery gates",
+    "AI permissions",
+    "predict run investigate modify make",
+    "Claude Code",
+    "learning framework",
+    "coding education",
+    "AI questioning partner",
+  ]
 chapter: 30
 lesson: 2
 duration_minutes: 15
@@ -53,33 +66,33 @@ That changes the partner, not the method. PRIMM with an AI coding assistant as y
 
 Here is what PRIMM-AI looks like -- the same five stages, now with an AI partner:
 
-| Stage | You | AI |
-|-------|-----|-----|
-| **Predict** | Read the code, write your prediction | Generates code samples at the right difficulty |
-| **Run** | Compare prediction to actual output | Executes the program, shows raw output |
-| **Investigate** | Ask targeted questions, trace variables | Answers questions, generates trace tables |
-| **Modify** | Change the code yourself | Compares your version, suggests alternatives |
-| **Make** | Write a spec, then implement | Reviews your spec and completed code |
+| Stage           | You                                     | AI                                             |
+| --------------- | --------------------------------------- | ---------------------------------------------- |
+| **Predict**     | Read the code, write your prediction    | Generates code samples at the right difficulty |
+| **Run**         | Compare prediction to actual output     | Executes the program, shows raw output         |
+| **Investigate** | Ask targeted questions, trace variables | Answers questions, generates trace tables      |
+| **Modify**      | Change the code yourself                | Compares your version, suggests alternatives   |
+| **Make**        | Write a spec, then implement            | Reviews your spec and completed code           |
 
 This is a solid foundation. But nothing in this table prevents you from asking AI to explain the code during Predict, or to write the full solution during Make. **The boundaries are implied, not enforced. That is the gap.**
 
 **PRIMM-AI+** closes that gap. It keeps everything from PRIMM-AI -- every stage, every AI role, every rule -- and adds nine structural enhancements:
 
-| # | Enhancement | What It Adds |
-|---|------------|-------------|
-| 1 | **AI-Free Checkpoints** | Moments where AI is explicitly not allowed -- diagnostic, not punitive |
-| 2 | **Stage-by-Stage AI Permissions** | Exact rules for what AI may and may not do at each stage |
-| 3 | **Mandatory Trace Artifacts** | You must produce something visible (trace table, explanation, or failure note) during Investigate |
-| 4 | **Mastery Gates** | You must earn the right to proceed to the next stage |
-| 5 | **Verification Ladder** | Five steps connecting learning predictions to production observability |
-| 6 | **Error Taxonomy** | Five categories of bugs, so you diagnose before you fix |
-| 7 | **Confidence Scoring** | Rate your certainty 1-5 before each prediction -- reveals false confidence |
-| 8 | **Classroom and Solo Modes** | Same framework works for both -- this book uses solo mode |
-| 9 | **Chapter-End Rubric** | Five-dimension self-assessment at the end of every programming chapter |
+| #   | Enhancement                       | What It Adds                                                                                      |
+| --- | --------------------------------- | ------------------------------------------------------------------------------------------------- |
+| 1   | **AI-Free Checkpoints**           | Moments where AI is explicitly not allowed -- diagnostic, not punitive                            |
+| 2   | **Stage-by-Stage AI Permissions** | Exact rules for what AI may and may not do at each stage                                          |
+| 3   | **Mandatory Trace Artifacts**     | You must produce something visible (trace table, explanation, or failure note) during Investigate |
+| 4   | **Mastery Gates**                 | You must earn the right to proceed to the next stage                                              |
+| 5   | **Verification Ladder**           | Five steps connecting learning predictions to production observability                            |
+| 6   | **Error Taxonomy**                | Five categories of bugs, so you diagnose before you fix                                           |
+| 7   | **Confidence Scoring**            | Rate your certainty 1-5 before each prediction -- reveals false confidence                        |
+| 8   | **Classroom and Solo Modes**      | Same framework works for both -- this book uses solo mode                                         |
+| 9   | **Chapter-End Rubric**            | Five-dimension self-assessment at the end of every programming chapter                            |
 
 You will learn enhancements 1-4 in this lesson (the core mechanics of working with AI at each stage) and enhancements 5-9 across the next two lessons — self-assessment tools and professional connections in Lesson 3, and teaching methods with classroom and solo modes in Lesson 4.
 
-PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- the boundaries work the same way regardless of which AI coding assistant you use. **The method is the constant. The AI tool is the variable.** This book uses Claude Code as the primary partner because it integrates with the Spec-Driven Development workflow you learned in Chapter 5, but every principle transfers.
+PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- the boundaries work the same way regardless of which AI coding assistant you use. **The method is the constant. The AI tool is the variable.** This book uses Claude Code as the primary partner because it integrates with the Spec-Driven Development workflow you learned in Chapter 16, but every principle transfers.
 
 ---
 
@@ -93,7 +106,7 @@ Emma stops him. "What did you just learn?"
 
 James thinks. "I learned... what the program does?"
 
-"No. You learned what the AI *says* the program does. You skipped Predict entirely. Your brain did zero work." She closes his AI assistant. "Let's talk about when you're allowed to open this."
+"No. You learned what the AI _says_ the program does. You skipped Predict entirely. Your brain did zero work." She closes his AI assistant. "Let's talk about when you're allowed to open this."
 
 Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically -- what the AI must not do. The "must not" rules exist because AI is eager to help. **Helpfulness without boundaries destroys the learning that each stage is designed to produce.**
 
@@ -103,7 +116,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What the AI does:** Generates programs at the right difficulty level for your current stage. Provides code for you to analyze.
 
-**What the AI must NOT do:** Explain the code before you have predicted. If the AI tells you what a program does before you think about it, the Predict stage produces nothing -- you are reading an explanation, not building a mental model. You can ask your AI assistant something like: *"Generate a short Python program that uses variables and print. Include type hints. Do not explain the code -- just show it to me."* The key instruction is "do not explain" -- that preserves your prediction space.
+**What the AI must NOT do:** Explain the code before you have predicted. If the AI tells you what a program does before you think about it, the Predict stage produces nothing -- you are reading an explanation, not building a mental model. You can ask your AI assistant something like: _"Generate a short Python program that uses variables and print. Include type hints. Do not explain the code -- just show it to me."_ The key instruction is "do not explain" -- that preserves your prediction space.
 
 ### Run -- AI Executes, You Compare
 
@@ -117,7 +130,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What you do:** Write your own explanation of how the program works first. Then ask specific questions about what you observed. Focus on the parts that surprised you during Run. Probe the mechanics you do not yet understand.
 
-**What the AI does:** Answers your questions directly. Generates trace tables showing variable values at each step. Suggests investigation questions you might not have thought to ask. You direct the conversation: *"Trace through this program and show me the value of each variable after every line. Present it as a table."*
+**What the AI does:** Answers your questions directly. Generates trace tables showing variable values at each step. Suggests investigation questions you might not have thought to ask. You direct the conversation: _"Trace through this program and show me the value of each variable after every line. Present it as a table."_
 
 **What the AI must NOT do:** Provide unsolicited explanations. If you ask about line 3, the AI answers about line 3 -- it does not explain the entire program. The investigation is yours to direct.
 
@@ -127,7 +140,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What you do:** Change the program yourself. Add a feature, fix a limitation, extend the behavior. You write the modification first, then ask for feedback.
 
-**What the AI does:** After you modify, shows an alternative approach. Compares your version to the original. Explains tradeoffs between approaches. Can provide a minimal hint or point out the specific lines to change if you are stuck -- but not a complete rewrite. You might say: *"I rearranged the variables but the output order is wrong. What am I missing?"*
+**What the AI does:** After you modify, shows an alternative approach. Compares your version to the original. Explains tradeoffs between approaches. Can provide a minimal hint or point out the specific lines to change if you are stuck -- but not a complete rewrite. You might say: _"I rearranged the variables but the output order is wrong. What am I missing?"_
 
 **What the AI must NOT do:** Modify the code for you. **The moment AI writes the modification, you are in Make territory without having done the thinking that Modify requires.** Your hands produce the change; AI evaluates it afterward.
 
@@ -135,7 +148,7 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 **What you do:** Build something new from a specification you write. Define what the program should do, then implement it yourself.
 
-**What the AI does:** Reviews your specification for completeness. Answers specific syntax questions. Reviews your completed code for correctness and style. A typical Make interaction has two parts: first you ask AI to review your spec (*"Does this cover all edge cases?"*), then after implementing, you ask AI to review your code (*"Review for correctness. Do not rewrite -- just point out issues."*).
+**What the AI does:** Reviews your specification for completeness. Answers specific syntax questions. Reviews your completed code for correctness and style. A typical Make interaction has two parts: first you ask AI to review your spec (_"Does this cover all edge cases?"_), then after implementing, you ask AI to review your code (_"Review for correctness. Do not rewrite -- just point out issues."_).
 
 **What the AI must NOT do:** Write the solution. If AI writes the program and you submit it, **you have produced output without learning.** The Make stage proves you can apply what you learned in the previous four stages independently.
 
@@ -145,13 +158,13 @@ Each PRIMM-AI+ stage defines what the AI does, what you do, and -- critically --
 
 The table below makes the boundaries concrete. The Right column shows prompts that keep AI as a partner. The Wrong column shows prompts that turn it into a crutch.
 
-| Stage | AI Permission | Right Interaction | Wrong Interaction |
-|-------|--------------|-------------------|-------------------|
-| **Predict** | AI may generate the code sample. AI must not reveal the answer or explain the code. | "Generate a short Python program using variables and print. Do not explain the code." | "What will this code print?" |
-| **Run** | AI may execute the program and display output. No restrictions. | "Run this program and show the output." | (No wrong interaction at this stage) |
-| **Investigate** | AI may explain and trace, but only after the learner provides a first explanation. | "What does the + operator do when I use it to join two strings?" (after writing own trace) | "Explain everything about this code." |
-| **Modify** | AI may provide a minimal hint or targeted diff. Not a complete rewrite. | "I am trying to add a second print line but it is not showing. What am I missing?" | "Add a second print line to this program for me." |
-| **Make** | AI may review the specification and completed solution. AI must not write the solution. | "Review my greeting program for correctness. Do not rewrite it." | "Write a program that prints a greeting with a name." |
+| Stage           | AI Permission                                                                           | Right Interaction                                                                          | Wrong Interaction                                     |
+| --------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
+| **Predict**     | AI may generate the code sample. AI must not reveal the answer or explain the code.     | "Generate a short Python program using variables and print. Do not explain the code."      | "What will this code print?"                          |
+| **Run**         | AI may execute the program and display output. No restrictions.                         | "Run this program and show the output."                                                    | (No wrong interaction at this stage)                  |
+| **Investigate** | AI may explain and trace, but only after the learner provides a first explanation.      | "What does the + operator do when I use it to join two strings?" (after writing own trace) | "Explain everything about this code."                 |
+| **Modify**      | AI may provide a minimal hint or targeted diff. Not a complete rewrite.                 | "I am trying to add a second print line but it is not showing. What am I missing?"         | "Add a second print line to this program for me."     |
+| **Make**        | AI may review the specification and completed solution. AI must not write the solution. | "Review my greeting program for correctness. Do not rewrite it."                           | "Write a program that prints a greeting with a name." |
 
 When you catch yourself about to use a prompt from the Wrong column, pause and rephrase. **The Right column prompts produce learning. The Wrong column prompts produce output.**
 
@@ -179,20 +192,20 @@ There is a large gap between truly understanding something and merely recognizin
 
 James finishes reading a program and reaches for the keyboard. "I get it. Let me jump straight to modifying it."
 
-Emma holds up a hand. "Can you explain how the greeting message gets built — not what it prints, but *how* the pieces connect?"
+Emma holds up a hand. "Can you explain how the greeting message gets built — not what it prints, but _how_ the pieces connect?"
 
 James hesitates. "It... puts the words together?"
 
-"That's *what*. How does the `+` operator join them? Why does the comma appear where it does? What controls the order?" She waits. James cannot answer. "That's why we have gates. You're not ready for Modify yet."
+"That's _what_. How does the `+` operator join them? Why does the comma appear where it does? What controls the order?" She waits. James cannot answer. "That's why we have gates. You're not ready for Modify yet."
 
 Each stage transition has a formal requirement. You cannot (or rather, should not) move to the next stage until the gate condition is met:
 
-| Transition | Mastery Gate | Why It Exists |
-|-----------|-------------|---------------|
-| Before Run | Written prediction exists (not just a mental one) | A vague sense of "it probably prints something" is not a prediction. Writing forces commitment. |
-| Before Investigate | Comparison of prediction to actual output recorded | Without recording the gap, you lose the learning signal. |
-| Before Modify | Can explain how the program works, not just what it does | "It prints a greeting" is *what*. "It joins two strings with a comma separator using the + operator" is *how*. |
-| Before Make | Written specification exists | Spec-first is not optional. Defining expected behavior before coding is the professional habit PRIMM-AI+ builds. |
+| Transition         | Mastery Gate                                             | Why It Exists                                                                                                    |
+| ------------------ | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Before Run         | Written prediction exists (not just a mental one)        | A vague sense of "it probably prints something" is not a prediction. Writing forces commitment.                  |
+| Before Investigate | Comparison of prediction to actual output recorded       | Without recording the gap, you lose the learning signal.                                                         |
+| Before Modify      | Can explain how the program works, not just what it does | "It prints a greeting" is _what_. "It joins two strings with a comma separator using the + operator" is _how_.   |
+| Before Make        | Written specification exists                             | Spec-first is not optional. Defining expected behavior before coding is the professional habit PRIMM-AI+ builds. |
 
 These gates feel unnecessary when a lesson is going well. They prove their value when a lesson is not -- when you discover at the Modify gate that you cannot actually explain how the program works, only what it outputs. That discovery saves you from writing confused code in the Make stage.
 
@@ -216,7 +229,7 @@ Every Investigate stage must produce something visible. A vague sense of "I thin
 
 The third option matters most. If you cannot trace the program or explain it, that is not a sign of failure -- it is a diagnostic signal. A failure note that says "I do not understand why `str(score)` is needed before joining with `+`" gives you an exact target for your AI investigation questions. **Without the artifact requirement, you would skip past the confusion and carry it silently into Modify.**
 
-The trace table from the walkthrough below is an example of a mandatory artifact. The mastery gate for Investigate ("can explain *how*, not just *what*") depends on having produced one.
+The trace table from the walkthrough below is an example of a mandatory artifact. The mastery gate for Investigate ("can explain _how_, not just _what_") depends on having produced one.
 
 ---
 
@@ -268,13 +281,13 @@ First, write your own explanation of how the program works. Even a rough version
 
 Now probe the mechanics. Focus on whatever surprised you during Run. Ask your AI assistant targeted questions:
 
-- *"Trace through this program and show me the value of each variable after every line."* -- The AI returns a trace table. Verify it yourself: after line 4, `result` should hold `"Sarah scored 95 in Python"`.
-- *"What happens if I remove `str()` and write `name + " scored " + score` instead?"* -- Explore the error. Python cannot join a string and an integer with `+`. Understanding *why* `str()` is needed is the key insight.
-- *"What if `name` is an empty string?"* -- Test the edge case. The output would be `" scored 95 in Python"` -- a sentence with no name but the spaces still appear.
+- _"Trace through this program and show me the value of each variable after every line."_ -- The AI returns a trace table. Verify it yourself: after line 4, `result` should hold `"Sarah scored 95 in Python"`.
+- _"What happens if I remove `str()` and write `name + " scored " + score` instead?"_ -- Explore the error. Python cannot join a string and an integer with `+`. Understanding _why_ `str()` is needed is the key insight.
+- _"What if `name` is an empty string?"_ -- Test the edge case. The output would be `" scored 95 in Python"` -- a sentence with no name but the spaces still appear.
 
 Each question sharpens your understanding of how the program behaves under different conditions. The AI answers; you verify by checking the logic yourself. This verification instinct — which you will see formalized as Rule 2 below — is the most important habit PRIMM-AI+ builds.
 
-**Mastery gate check:** Can you explain *how* the program works, not just *what* it does? Can you describe why `str()` is needed and what the `+` operator does with strings? If yes, proceed to Modify.
+**Mastery gate check:** Can you explain _how_ the program works, not just _what_ it does? Can you describe why `str()` is needed and what the `+` operator does with strings? If yes, proceed to Modify.
 
 ### Stage 4: Modify
 
@@ -284,13 +297,13 @@ Change the program yourself. Two challenges:
 
 **Challenge B:** Add a third print line that shows just the score by itself: `Score: 95`.
 
-Attempt both modifications before asking AI for any help. If you get stuck, ask for a hint -- not a solution: *"I rearranged the variables but the output order is wrong. What am I missing?"*
+Attempt both modifications before asking AI for any help. If you get stuck, ask for a hint -- not a solution: _"I rearranged the variables but the output order is wrong. What am I missing?"_
 
 After you write your modifications, show both versions to your AI assistant and ask it to compare them. The AI might point out a simpler way to build the string -- a learning opportunity, not a failure.
 
 ### Stage 5: Make [AI-FREE start]
 
-Build something new. Write a specification first -- without AI: *"Create a program that stores a person's name, city, and age, then prints a profile line like 'Sarah lives in London, age 25' and a second line that says 'Welcome, Sarah!'"*
+Build something new. Write a specification first -- without AI: _"Create a program that stores a person's name, city, and age, then prints a profile line like 'Sarah lives in London, age 25' and a second line that says 'Welcome, Sarah!'"_
 
 **Mastery gate check:** Do you have a written specification? If yes, implement it.
 
@@ -312,7 +325,7 @@ These rules are operational discipline, not suggestions. Each one prevents a spe
 
 **Rule 3: Modify before you make.** **Modification is easier on your brain than creation.** When you modify an existing program, you have a working reference, a known structure, and a safety net. When you create from scratch, you have nothing. Modification builds the skills that creation requires.
 
-**Rule 4: Write the spec before the code.** This is Spec-Driven Development from Chapter 5, applied to learning. Defining what your program should do -- inputs, outputs, edge cases, success criteria -- before writing a single line of code forces you to think about the problem before the solution. AI is dramatically better at generating correct code when the specification is clear.
+**Rule 4: Write the spec before the code.** This is Spec-Driven Development from Chapter 16, applied to learning. Defining what your program should do -- inputs, outputs, edge cases, success criteria -- before writing a single line of code forces you to think about the problem before the solution. AI is dramatically better at generating correct code when the specification is clear.
 
 **Rule 5: Use AI as a partner, not a crutch.** The test is simple. After an AI interaction, do you understand more than you did before? If yes -- partner. Do you have working code but understand the same amount? If yes -- crutch. **Partner interactions grow your capability. Crutch interactions grow your dependency.**
 
@@ -337,7 +350,7 @@ This structure mirrors professional code review: read the PR, understand the log
 - PRIMM-AI+ keeps all five stages from PRIMM and adds an AI partner with clear boundaries at each stage — what AI may do, what it must not do, and when it must be closed entirely.
 - The AI Permissions Table defines exactly what AI may and may not do at each stage -- use it to distinguish partner interactions from crutch interactions.
 - AI-free checkpoints are diagnostic, not punitive — they reveal whether you truly understand or merely recognize AI's explanations.
-- Mastery gates prevent you from skipping ahead: written prediction before Run, recorded comparison before Investigate, explanation of *how* before Modify, written spec before Make.
+- Mastery gates prevent you from skipping ahead: written prediction before Run, recorded comparison before Investigate, explanation of _how_ before Modify, written spec before Make.
 - The five rules (predict before running, test every explanation, modify before making, spec before code, partner not crutch) are operational discipline that prevents AI dependency.
 
 ---
@@ -403,7 +416,7 @@ example of a partner interaction and a crutch interaction.
 
 You now have the structural safeguards that make AI a learning partner instead of a crutch: AI-free checkpoints that reveal what you actually know, mastery gates that earn you the right to proceed, and five rules that keep the balance between assistance and dependency. The permissions table is your reference card — return to it whenever you are unsure what AI should or should not do at a given stage.
 
-James looks at the AI Permissions Table and the five rules. "I know *how* to work with AI now. But how do I know if I'm actually getting better? And does any of this matter once I'm past the exercises?"
+James looks at the AI Permissions Table and the five rules. "I know _how_ to work with AI now. But how do I know if I'm actually getting better? And does any of this matter once I'm past the exercises?"
 
 "Both questions have concrete answers," Emma says. "The next lesson gives you the tools to measure your own growth — and shows you that the habits you're building now are exactly what professionals use every day."
 
@@ -411,8 +424,8 @@ James looks at the AI Permissions Table and the five rules. "I know *how* to wor
 
 ## References and Further Reading
 
-- Sentance, S., Waite, J., and Kallia, M. (2019). "Teaching computer programming with PRIMM: a sociocultural perspective." *Computer Science Education*, 29(2-3), 136-176. DOI: 10.1080/08993408.2019.1608781
-- Sentance, S., Waite, J., and Kallia, M. (2019). "Teachers' Experiences of using PRIMM to Teach Programming in School." *Proceedings of SIGCSE '19*, 476-482. DOI: 10.1145/3287324.3287477
-- Sentance, S. and Waite, J. (2017). "PRIMM: Exploring pedagogical approaches for teaching text-based programming in school." *Proceedings of WiPSCE '17*, 113-114.
+- Sentance, S., Waite, J., and Kallia, M. (2019). "Teaching computer programming with PRIMM: a sociocultural perspective." _Computer Science Education_, 29(2-3), 136-176. DOI: 10.1080/08993408.2019.1608781
+- Sentance, S., Waite, J., and Kallia, M. (2019). "Teachers' Experiences of using PRIMM to Teach Programming in School." _Proceedings of SIGCSE '19_, 476-482. DOI: 10.1145/3287324.3287477
+- Sentance, S. and Waite, J. (2017). "PRIMM: Exploring pedagogical approaches for teaching text-based programming in school." _Proceedings of WiPSCE '17_, 113-114.
 - PRIMM Portal: https://primmportal.com
 - Computing Education Research: https://computingeducationresearch.org/projects/primm/

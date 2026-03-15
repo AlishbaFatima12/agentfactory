@@ -1,7 +1,7 @@
 ---
 slug: /General-Agents-Foundations/general-agents/chapter-quiz
 sidebar_position: 36
-title: "Chapter 3: Claude Code and Cowork Quiz"
+title: "Chapter 14: Claude Code and Cowork Quiz"
 proficiency_level: B1
 layer: 1
 estimated_time: "20 mins"
@@ -9,12 +9,12 @@ chapter_type: Concept
 running_example_id: claude-code-quiz
 ---
 
-# Chapter 3: Claude Code and Cowork Quiz
+# Chapter 14: Claude Code and Cowork Quiz
 
 Test your understanding of Claude Code and Claude Cowork's architecture, extensibility features, and workflow patterns. This assessment covers installation, configuration, MCP integration, subagents, skills, hooks, settings hierarchy, plugin architecture, browser integration, connectors, and built-in document Skills.
 
 <Quiz
-title="Chapter 3: Claude Code Features and Workflows Assessment"
+title="Chapter 14: Claude Code Features and Workflows Assessment"
 questionsPerBatch={30}
 questions={[ {
 question: "A developer notices that Claude Code sometimes generates boilerplate code patterns but doesn't understand the project's specific architectural constraints. What does this observation reveal about the fundamental limitation Claude Code was designed to address?",

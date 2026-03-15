@@ -1,82 +1,82 @@
 deck:
-  id: "ch19-13-management-accounting-grc-practice-lab"
+  id: "ch30-13-management-accounting-grc-practice-lab"
   title: "Management Accounting & GRC Practice Lab"
   description: "13-week rolling cash flow forecast, full board pack automation, enterprise risk register with COSO framework, and regulatory compliance calendar with RAG status tracking"
   tags: ["ca-cpa", "practice-lab", "management-accounting", "grc", "cash-flow"]
   version: 1
   lesson: 13
-  chapter: 19
+  chapter: 30
 
 cards:
-  - id: "ch19-13-management-accounting-grc-practice-lab-001"
+  - id: "ch30-13-management-accounting-grc-practice-lab-001"
     front: "What are the four exercises in the Management Accounting & GRC Practice Lab?"
     back: "Exercise 18: 13-week rolling cash flow forecast (50 min). Exercise 19: Full board pack automation cross-app (55 min). Exercise 20: Enterprise risk register (45 min). Exercise 21: Regulatory compliance calendar (40 min)."
     tags: ["lab-exercises", "overview"]
     difficulty: "basic"
 
-  - id: "ch19-13-management-accounting-grc-practice-lab-002"
+  - id: "ch30-13-management-accounting-grc-practice-lab-002"
     front: "What payment profile does the 13-week cash flow forecast use for trade debtor receipts?"
     back: "30% in Month 0 (current month), 50% in Month 1, 15% in Month 2, and 5% bad debt provision."
     tags: ["exercise-18", "receipts-waterfall", "cash-flow"]
     difficulty: "intermediate"
 
-  - id: "ch19-13-management-accounting-grc-practice-lab-003"
+  - id: "ch30-13-management-accounting-grc-practice-lab-003"
     front: "What revolving credit facility is modelled in Exercise 18, and how much is drawn?"
     back: "PKR 50M revolving credit facility limit with PKR 22M currently drawn down."
     tags: ["exercise-18", "revolving-credit", "cash-flow"]
     difficulty: "basic"
 
-  - id: "ch19-13-management-accounting-grc-practice-lab-004"
+  - id: "ch30-13-management-accounting-grc-practice-lab-004"
     front: "What two stress scenarios does Exercise 18 require testing on the 13-week forecast?"
     back: "Collections slow to 20% Month 0 / 55% Month 1 / 20% Month 2, and Q4 revenue drops 15%."
     tags: ["exercise-18", "stress-testing", "cash-flow"]
     difficulty: "intermediate"
 
-  - id: "ch19-13-management-accounting-grc-practice-lab-005"
+  - id: "ch30-13-management-accounting-grc-practice-lab-005"
     front: "What cross-application workflow does Exercise 19 automate for the board pack?"
     back: "Excel management accounts feed into PowerPoint board pack generation, with professional CFO management commentary added as a separate layer."
     tags: ["exercise-19", "board-pack", "cross-app"]
     difficulty: "basic"
 
-  - id: "ch19-13-management-accounting-grc-practice-lab-006"
+  - id: "ch30-13-management-accounting-grc-practice-lab-006"
     front: "How does Exercise 19 distinguish management commentary from a summary?"
     back: "Commentary interprets numbers — explaining why variances occurred and what the business implication is. BECAUSE a summary merely restates numbers the board already has; interpretation is the professional value-add."
     tags: ["exercise-19", "management-commentary", "professional-judgment"]
     difficulty: "intermediate"
     why: "What would a board member likely ask if the commentary only restated numbers already in the pack?"
 
-  - id: "ch19-13-management-accounting-grc-practice-lab-007"
+  - id: "ch30-13-management-accounting-grc-practice-lab-007"
     front: "What framework and risk count does Exercise 20 use for the enterprise risk register?"
     back: "COSO framework with 20 risks across 5 categories for a pharmaceutical distributor."
     tags: ["exercise-20", "coso-framework", "risk-register"]
     difficulty: "basic"
 
-  - id: "ch19-13-management-accounting-grc-practice-lab-008"
+  - id: "ch30-13-management-accounting-grc-practice-lab-008"
     front: "What two heat maps does Exercise 20 require, and what is the grid size?"
     back: "5x5 inherent risk heat map (before controls) and 5x5 residual risk heat map (after controls)."
     tags: ["exercise-20", "heat-maps", "risk-register"]
     difficulty: "basic"
 
-  - id: "ch19-13-management-accounting-grc-practice-lab-009"
+  - id: "ch30-13-management-accounting-grc-practice-lab-009"
     front: "What three RAG status thresholds does Exercise 21 use for compliance deadline monitoring?"
     back: "Green: more than 21 days to deadline. Amber: 8-21 days. Red: 0-7 days."
     tags: ["exercise-21", "rag-status", "compliance-calendar"]
     difficulty: "intermediate"
 
-  - id: "ch19-13-management-accounting-grc-practice-lab-010"
+  - id: "ch30-13-management-accounting-grc-practice-lab-010"
     front: "What four regulatory authorities does Exercise 21's compliance calendar cover for a Pakistani listed company?"
     back: "SECP (corporate regulator), PSX (stock exchange), FBR (tax authority), SBP (central bank), and EOBI (employee benefits)."
     tags: ["exercise-21", "regulatory-authorities", "pakistan"]
     difficulty: "intermediate"
 
-  - id: "ch19-13-management-accounting-grc-practice-lab-011"
+  - id: "ch30-13-management-accounting-grc-practice-lab-011"
     front: "Why is the CFO management commentary in Exercise 19 the step most frequently done incorrectly when professionals first use AI for board packs?"
     back: "The agent defaults to summarising numbers rather than interpreting them. THEREFORE the professional must explicitly instruct the agent to explain causes and implications — not restate figures the board can already read."
     tags: ["exercise-19", "management-commentary", "agent-default"]
     difficulty: "intermediate"
     why: "How would you write a skill instruction that prevents the agent from producing summary-style commentary?"
 
-  - id: "ch19-13-management-accounting-grc-practice-lab-012"
+  - id: "ch30-13-management-accounting-grc-practice-lab-012"
     front: "Why does the compliance calendar extension have higher practical value when combined with a scheduled weekly task than as a standalone document?"
     back: "A standalone calendar is consulted manually and can be overlooked. BECAUSE a scheduled weekly task runs autonomously, checks upcoming deadlines against the RAG thresholds, and alerts automatically — turning calendar knowledge into active monitoring."
     tags: ["exercise-21", "compliance-calendar", "scheduled-tasks"]

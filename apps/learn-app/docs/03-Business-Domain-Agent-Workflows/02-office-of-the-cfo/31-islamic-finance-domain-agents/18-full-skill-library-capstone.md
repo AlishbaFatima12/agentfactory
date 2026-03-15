@@ -20,7 +20,7 @@ keywords:
     "Islamic banking automation",
     "agent capstone",
   ]
-chapter: 20
+chapter: 31
 lesson: 18
 duration_minutes: 90
 
@@ -360,7 +360,7 @@ The final paragraph must define the boundary:
 
 ---
 
-## Five Key Insights From Chapter 20
+## Five Key Insights From Chapter 31
 
 These five structural insights from this chapter deserve to be carried forward into every future engagement:
 
@@ -378,7 +378,7 @@ These five structural insights from this chapter deserve to be carried forward i
 
 ## Chapter Contract — Revisited
 
-Return to the five questions from the Chapter 20 README. You should now be able to answer each from direct experience:
+Return to the five questions from the Chapter 31 README. You should now be able to answer each from direct experience:
 
 1. **What are the three accounting regimes?** You worked through all three — AAOIFI primary (L04-L06, L14), IFRS with Islamic guidance (L08-L11), and applied them comparatively in every exercise.
 
@@ -476,4 +476,4 @@ what required your professional intervention?
 
 ---
 
-Return to [Chapter 20 Overview](./README.md) to review the Chapter Contract questions.
+Return to [Chapter 31 Overview](./README.md) to review the Chapter Contract questions.

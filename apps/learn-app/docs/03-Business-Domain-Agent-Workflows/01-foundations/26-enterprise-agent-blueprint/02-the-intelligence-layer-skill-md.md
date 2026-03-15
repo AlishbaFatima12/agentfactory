@@ -17,7 +17,7 @@ keywords:
     "knowledge worker",
     "agentskills.io",
   ]
-chapter: 15
+chapter: 26
 lesson: 2
 duration_minutes: 30
 
@@ -150,7 +150,7 @@ The `description` field deserves attention. Agents load only the `name` and `des
 | Code that executes when the agent runs            | Text that the agent reads and applies to every interaction                       |
 | A technical artefact managed by IT                | A professional document managed by the knowledge worker who owns the domain      |
 
-This distinction matters because it determines who can build useful agents. A senior compliance officer can write a SKILL.md. A project architect can write a SKILL.md. A clinical pharmacist can write a SKILL.md. None of them can write a Python class, configure an API, or train a model. The SKILL.md is what closes the knowledge transfer gap that Chapter 14 described: it is the pathway through which domain expertise reaches a deployed system.
+This distinction matters because it determines who can build useful agents. A senior compliance officer can write a SKILL.md. A project architect can write a SKILL.md. A clinical pharmacist can write a SKILL.md. None of them can write a Python class, configure an API, or train a model. The SKILL.md is what closes the knowledge transfer gap that Chapter 25 described: it is the pathway through which domain expertise reaches a deployed system.
 
 ## The Persona–Questions–Principles Framework
 
@@ -249,7 +249,7 @@ The Principles section is also where domain-specific data sourcing rules live. F
 
 The common thread across all three sections is specificity. A vague Persona produces inconsistent behaviour. A Questions section without out-of-scope boundaries produces overreaching. Generic Principles produce unpredictable outputs.
 
-Writing a production-quality SKILL.md is therefore not a formatting exercise. It is a knowledge extraction exercise. The domain expert writing a SKILL.md must articulate, often for the first time in explicit form, the professional standards, decision-making logic, and escalation thresholds that ordinarily exist as institutional memory and professional judgement. This is difficult work. It is also, as Chapter 16 will show, a learnable process with structured techniques.
+Writing a production-quality SKILL.md is therefore not a formatting exercise. It is a knowledge extraction exercise. The domain expert writing a SKILL.md must articulate, often for the first time in explicit form, the professional standards, decision-making logic, and escalation thresholds that ordinarily exist as institutional memory and professional judgement. This is difficult work. It is also, as Chapter 27 will show, a learnable process with structured techniques.
 
 The good news is that the difficulty of writing a SKILL.md is the difficulty of articulating domain expertise — not the difficulty of learning to code. The compliance officer who has spent a career developing a feel for which clauses represent genuine risk does not need to learn Python to encode that expertise in a SKILL.md. They need to learn how to make their tacit knowledge explicit. That is a different skill, and one they already have more than they realise.
 

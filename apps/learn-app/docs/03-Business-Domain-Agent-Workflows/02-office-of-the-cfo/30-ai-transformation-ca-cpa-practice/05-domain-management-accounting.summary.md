@@ -20,5 +20,5 @@ Management Accounting (FP&A, performance management, treasury) is where AI most 
 
 ### Connections
 
-- **Builds on**: Chapter 18's IDFA methodology for structuring financial analysis, and Lesson 1's five-domain framework.
+- **Builds on**: Chapter 29's IDFA methodology for structuring financial analysis, and Lesson 1's five-domain framework.
 - **Leads to**: Lesson 13's management accounting practice lab (cash flow forecasting, board pack automation) and Lesson 7's /variance-analysis plugin command.

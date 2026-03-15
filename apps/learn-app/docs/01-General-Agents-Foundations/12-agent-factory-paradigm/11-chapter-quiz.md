@@ -1,6 +1,6 @@
 ---
 sidebar_position: 11
-title: "Chapter 1: The AI Agent Factory Paradigm Quiz"
+title: "Chapter 12: The AI Agent Factory Paradigm Quiz"
 proficiency_level: A2
 layer: 1
 estimated_time: "50 mins"
@@ -8,12 +8,12 @@ chapter_type: Concept
 running_example_id: agent-factory-paradigm-quiz
 ---
 
-# Chapter 1: The AI Agent Factory Paradigm Quiz
+# Chapter 12: The AI Agent Factory Paradigm Quiz
 
-Test your understanding of the foundational concepts that define AI-Driven Development and the Digital FTE vision. This assessment covers all 10 lessons in Chapter 1.
+Test your understanding of the foundational concepts that define AI-Driven Development and the Digital FTE vision. This assessment covers all 10 lessons in Chapter 12.
 
 <Quiz
-title="Chapter 1: The AI Agent Factory Paradigm Assessment"
+title="Chapter 12: The AI Agent Factory Paradigm Assessment"
 questionsPerBatch={30}
 questions={[
 {
@@ -339,7 +339,7 @@ explanation: "Everything compounds: clear specs lead to precise AI execution, wh
 source: "Lesson 9: Synthesis - The Digital FTE Vision"
 },
 {
-question: "According to Chapter 1, what is the fundamental choice developers face?",
+question: "According to Chapter 12, what is the fundamental choice developers face?",
 options: ["Whether to adopt open-source or proprietary AI tools for daily development work", "Path A (treat AI as faster keyboard, vibe code) vs Path B (master Agent Factory paradigm, build Digital FTEs)", "Which programming language to prioritize learning as AI reshapes the industry landscape", "Whether to work remotely or in-office as AI changes team collaboration dynamics"],
 correctOption: 1,
 explanation: "Path A: Treat AI as a faster keyboard, vibe code, watch technical debt compound while competitors build systematic capabilities. Path B: Master the Agent Factory paradigm, clear specifications, build Digital FTEs, multiply capacity systematically. This book teaches Path B.",

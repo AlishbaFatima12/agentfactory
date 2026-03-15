@@ -14,7 +14,7 @@ keywords:
     "product-led growth",
     "enterprise sales",
   ]
-chapter: 14
+chapter: 25
 lesson: 4
 duration_minutes: 30
 
@@ -123,7 +123,7 @@ A plugin bundles the domain expertise, tool connections, and workflows a specifi
 
 The SKILL.md is the part only you can write. It is a natural-language instruction document that tells the agent who it is, what it knows, what it must never do, and how it should respond. It is not code. It is not configuration in the traditional sense. It is your institutional knowledge, made executable.
 
-Plugins arrive as ready-made packages. Your contribution is customising the skills -- encoding how _your_ organisation actually works. Chapter 15 covers plugin anatomy in detail.
+Plugins arrive as ready-made packages. Your contribution is customising the skills -- encoding how _your_ organisation actually works. Chapter 26 covers plugin anatomy in detail.
 
 ### Production Connectors
 

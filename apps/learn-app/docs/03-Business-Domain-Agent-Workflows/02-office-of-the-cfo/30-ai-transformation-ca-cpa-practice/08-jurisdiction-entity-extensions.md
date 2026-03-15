@@ -18,7 +18,7 @@ keywords:
     "Create with Claude",
     "Write skill instructions",
   ]
-chapter: 19
+chapter: 30
 lesson: 8
 duration_minutes: 30
 
@@ -120,15 +120,15 @@ Cowork provides three native methods for creating domain skills. You will use al
 
 Open the Cowork sidebar → **Customize** → **Skills** to see your current skills panel:
 
-![Cowork Skills panel showing user-created domain skills](/img/ch19-cowork-skills-panel.png)
+![Cowork Skills panel showing user-created domain skills](/img/ch30-cowork-skills-panel.png)
 
 Click the **+** button to see the three creation methods:
 
-![Cowork skill creation menu showing Create with Claude, Write skill instructions, and Upload a skill](/img/ch19-cowork-skills-create-menu.png)
+![Cowork skill creation menu showing Create with Claude, Write skill instructions, and Upload a skill](/img/ch30-cowork-skills-create-menu.png)
 
 **Write skill instructions.** Select **Write skill instructions** from the menu. A form appears with three fields:
 
-![Cowork Write skill instructions form with Skill name, Description, and Instructions fields](/img/ch19-cowork-write-skill-form.png)
+![Cowork Write skill instructions form with Skill name, Description, and Instructions fields](/img/ch30-cowork-write-skill-form.png)
 
 | Field            | What to enter                                                      | Example                                                                                                                                                      |
 | ---------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -155,7 +155,7 @@ The finance plugins in Cowork — `/journal-entry`, `/reconciliation`, `/income-
 - **Your documentation standards.** Some accounts in your system require board resolutions before posting. Others require attached bank statements. The plugins generate the entry — your team adds the paperwork.
 
 :::info The Skill Extension Principle
-Generic plugins provide the framework. Domain skills encode the institutional knowledge. This is the same principle established in Chapter 17 for finance domain agents — and for CA/CPA practice, this skill layer is not optional. It is the difference between an agent that assists and an agent that performs.
+Generic plugins provide the framework. Domain skills encode the institutional knowledge. This is the same principle established in Chapter 28 for finance domain agents — and for CA/CPA practice, this skill layer is not optional. It is the difference between an agent that assists and an agent that performs.
 :::
 
 :::tip Reference Implementations

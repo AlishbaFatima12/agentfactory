@@ -18,7 +18,7 @@ keywords:
     "zakat journal entry",
     "global Islamic finance",
   ]
-chapter: 20
+chapter: 31
 lesson: 13
 duration_minutes: 40
 

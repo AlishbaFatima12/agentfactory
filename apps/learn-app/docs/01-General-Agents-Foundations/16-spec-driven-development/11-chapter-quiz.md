@@ -1,9 +1,9 @@
 ---
 sidebar_position: 11
-title: "Chapter 5: Spec-Driven Development Quiz"
+title: "Chapter 16: Spec-Driven Development Quiz"
 ---
 
-# Chapter 5 Quiz
+# Chapter 16 Quiz
 
 Test your understanding of Spec-Driven Development with Claude Code. This quiz covers all concepts from the chapter including vibe coding failure modes, the three SDD levels, the project constitution, the four-phase workflow, and the decision framework.
 

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: "Principle 5: Persisting State in Files"
-chapter: 6
+chapter: 17
 lesson: 5
 duration_minutes: 25
 description: "Why file-based state management is the key to effective AI collaboration and reproducible workflows"

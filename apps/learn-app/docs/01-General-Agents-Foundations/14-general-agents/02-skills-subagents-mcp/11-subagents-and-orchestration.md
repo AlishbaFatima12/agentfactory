@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/subagents-and-orchestration
 title: "Subagents and Orchestration"
 sidebar_position: 11
-chapter: 3
+chapter: 14
 lesson: 11
 duration_minutes: 12
 
@@ -58,7 +58,7 @@ teaching_guide:
   key_points:
     - "Subagents have isolated context windows — this is the key architectural concept, not just a convenience feature, and it directly prevents the context pollution problem"
     - "The /agents command reveals built-in agents students already have — no setup required, which removes the barrier to first use"
-    - "Parallel invocation (using Explore AND Plan in one prompt) is the first exposure to orchestration, which scales to agent teams in Chapter 4 Lesson 9"
+    - "Parallel invocation (using Explore AND Plan in one prompt) is the first exposure to orchestration, which scales to agent teams in Chapter 15 Lesson 9"
     - "Custom subagents live as markdown files in .claude/agents/ — same simplicity principle as skills (SKILL.md), reinforcing that AI customization is just structured text"
   misconceptions:
     - "Students think subagents are persistent like chatbots — emphasize the one-task-one-completion model where subagents return results and terminate"
@@ -412,7 +412,7 @@ Now that you understand both skills (Lesson 08) and subagents, when do you choos
 
 ### What's Next
 
-Subagents are one-shot workers that report back to the caller. But what happens when workers need to talk to _each other_? In Chapter 4, Lesson 9, you'll learn about **Agent Teams**—multiple Claude Code instances that communicate directly, share a task list, and self-coordinate. Same context isolation principles, but with inter-agent collaboration.
+Subagents are one-shot workers that report back to the caller. But what happens when workers need to talk to _each other_? In Chapter 15, Lesson 9, you'll learn about **Agent Teams**—multiple Claude Code instances that communicate directly, share a task list, and self-coordinate. Same context isolation principles, but with inter-agent collaboration.
 
 Lesson 12 introduces **MCP Integration**—connecting Claude to external systems like web browsers, databases, and documentation servers. Where subagents give you coordination between AI specialists, MCP gives you access to the outside world.
 

@@ -3,7 +3,7 @@ title: "Context Engineering Exercises"
 practice_exercise: ch4-context
 sidebar_label: "Context Exercises"
 sidebar_position: 11
-chapter: 4
+chapter: 15
 lesson: 11
 duration_minutes: 240
 

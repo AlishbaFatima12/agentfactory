@@ -10,7 +10,7 @@ Part 3 is organised around seven enterprise deployment domains chosen because th
 
 ### Critical Patterns
 
-- Each domain has a specific type of expertise at risk: analyst judgment and regulatory materiality (Finance, Ch 17--21), qualification heuristics and outreach personalisation (Sales, Ch 22), vendor judgment and logistics optimisation (Supply Chain, Ch 23), discovery-to-delivery synthesis (Product Management, Ch 24), policy intent and institutional memory (People & Operations, Ch 25--27), clause pattern recognition and jurisdictional risk (Legal, Ch 28), venture creation judgment (Innovation, Ch 29)
+- Each domain has a specific type of expertise at risk: analyst judgment and regulatory materiality (Finance, Ch 28--21), qualification heuristics and outreach personalisation (Sales, Ch 33), vendor judgment and logistics optimisation (Supply Chain, Ch 34), discovery-to-delivery synthesis (Product Management, Ch 24), policy intent and institutional memory (People & Operations, Ch 25--27), clause pattern recognition and jurisdictional risk (Legal, Ch 28), venture creation judgment (Innovation, Ch 29)
 - Finance and Banking is the largest section with five chapters covering foundational finance, IDFA, CA/CPA practice, Islamic finance, and banking regulation
 - People & Organisational Operations spans three chapters including the integration layer (Ch 27) that connects all domain agents into a coherent agentic office
 - Most professionals will recognise their work in one or two domains; cross-domain mapping is normal and expected
@@ -25,4 +25,4 @@ Part 3 is organised around seven enterprise deployment domains chosen because th
 ### Connections
 
 - **Builds on**: Maturity model (Lesson 6) determining readiness for domain deployment; monetisation models (Lesson 5) mapping to specific domains; platform landscape (Lesson 4) providing deployment infrastructure
-- **Leads to**: Starting the Conversation (Lesson 8) using domain profiles as vocabulary in deployment discussions; Chapter 15 providing the technical blueprint for deploying within a domain; domain-specific sections (Chapters 17--29) providing detailed deployment guides
+- **Leads to**: Starting the Conversation (Lesson 8) using domain profiles as vocabulary in deployment discussions; Chapter 26 providing the technical blueprint for deploying within a domain; domain-specific sections (Chapters 17--29) providing detailed deployment guides

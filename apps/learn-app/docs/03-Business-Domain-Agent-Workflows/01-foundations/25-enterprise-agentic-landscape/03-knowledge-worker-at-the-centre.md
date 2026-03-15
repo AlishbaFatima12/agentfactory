@@ -13,7 +13,7 @@ keywords:
     "domain expertise",
     "enterprise AI strategy",
   ]
-chapter: 14
+chapter: 25
 lesson: 3
 duration_minutes: 20
 

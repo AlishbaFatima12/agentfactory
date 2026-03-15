@@ -3,7 +3,7 @@ title: "Why Markdown Matters for AI Communication?"
 description: "Understanding markdown's role as the specification language in AI-driven development"
 sidebar_label: "Why Markdown Matters for AI Communication?"
 sidebar_position: 1
-chapter: 2
+chapter: 13
 lesson: 1
 duration_minutes: 35
 proficiency: "A1"
@@ -86,7 +86,7 @@ version: "1.0.0"
 ---
 # Why Markdown Matters for AI Communication?
 
-In Chapter 1, you learned about the Agent Factory paradigm — turning domain expertise into AI-powered digital employees. But how do you actually *tell* an AI agent what to build? You need a language that both you and the AI understand. That language is **markdown**.
+In Chapter 12, you learned about the Agent Factory paradigm — turning domain expertise into AI-powered digital employees. But how do you actually *tell* an AI agent what to build? You need a language that both you and the AI understand. That language is **markdown**.
 
 Imagine you want to build a mobile app. You write a long email to an AI agent:
 

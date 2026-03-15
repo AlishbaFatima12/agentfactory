@@ -1,81 +1,81 @@
 deck:
-  id: "ch20-09-malaysia-sukuk"
+  id: "ch31-09-malaysia-sukuk"
   title: "Malaysia Sukuk — The World's Largest Market"
   description: "Key concepts from Malaysia's sukuk market architecture, MFRS 9 classification, IAS 32 analysis, the SRI Sukuk Framework, and EPF investor accounting."
   tags: ["malaysia", "sukuk", "mfrs-9", "sri-sukuk"]
   version: 1
 
 cards:
-  - id: "ch20-09-malaysia-sukuk-001"
+  - id: "ch31-09-malaysia-sukuk-001"
     front: "What share of global sukuk issuance does Malaysia account for annually?"
     back: "Approximately 35-40%."
     tags: ["malaysia", "sukuk-market"]
     difficulty: "basic"
 
-  - id: "ch20-09-malaysia-sukuk-002"
+  - id: "ch31-09-malaysia-sukuk-002"
     front: "Which three institutions govern Malaysian sukuk, and what is each one's role?"
     back: "SC Malaysia: regulates Islamic capital markets\nBNM: regulates Islamic banks\nMASB: sets accounting standards (MFRS = IFRS-equivalent)"
     tags: ["malaysia", "regulatory-framework"]
     difficulty: "basic"
 
-  - id: "ch20-09-malaysia-sukuk-003"
+  - id: "ch31-09-malaysia-sukuk-003"
     front: "Does Malaysia use AAOIFI or MFRS for sukuk accounting?"
     back: "MFRS (the Malaysian equivalent of IFRS). AAOIFI is used only as voluntary Shariah reference."
     tags: ["malaysia", "mfrs", "aaoifi"]
     difficulty: "basic"
 
-  - id: "ch20-09-malaysia-sukuk-004"
+  - id: "ch31-09-malaysia-sukuk-004"
     front: "A sukuk musharakah has fixed quarterly distributions and redemption at face value. Despite the partnership label, why is it classified as a financial liability under IAS 32?"
     back: "IAS 32 classifies by economic substance, not Shariah legal form. Fixed distributions and mandatory redemption create contractual obligations to deliver cash, which is the definition of a financial liability regardless of the musharakah label."
     tags: ["ias-32", "sukuk-musharakah", "substance-over-form"]
     difficulty: "intermediate"
     why: "What features would a sukuk musharakah need to qualify as equity under IAS 32?"
 
-  - id: "ch20-09-malaysia-sukuk-005"
+  - id: "ch31-09-malaysia-sukuk-005"
     front: "What income label must a Malaysian sukuk issuer use for periodic distributions?"
     back: "\"Finance Cost — Sukuk Distribution\" or \"Profit Paid on Sukuk\" — never \"Interest Expense.\""
     tags: ["malaysia", "income-labels", "sukuk"]
     difficulty: "basic"
 
-  - id: "ch20-09-malaysia-sukuk-006"
+  - id: "ch31-09-malaysia-sukuk-006"
     front: "For an investor applying the MFRS 9 SPPI test, what determines whether a sukuk musharakah passes or fails?"
     back: "Fixed distributions + purchase undertaking at face value = SPPI pass (economically debt-like). Genuinely profit-contingent distributions with no fixed redemption = SPPI fail (FVTPL)."
     tags: ["sppi-test", "mfrs-9", "sukuk"]
     difficulty: "intermediate"
 
-  - id: "ch20-09-malaysia-sukuk-007"
+  - id: "ch31-09-malaysia-sukuk-007"
     front: "EPF classifies sukuk at amortised cost under MFRS 9. Why do other Malaysian institutional investors follow EPF's approach?"
     back: "EPF is Malaysia's largest retirement fund and one of the world's largest institutional sukuk investors. Its classification decisions set a market reference because other investors — takaful operators, Islamic unit trusts — treat EPF's approach as the benchmark for similar instruments."
     tags: ["epf", "amortised-cost", "market-benchmark"]
     difficulty: "intermediate"
     why: "What risk does a smaller investor take if it classifies the same sukuk differently from EPF?"
 
-  - id: "ch20-09-malaysia-sukuk-008"
+  - id: "ch31-09-malaysia-sukuk-008"
     front: "What four requirements does the SC Malaysia SRI Sukuk Framework impose?"
     back: "1. Eligible project categories\n2. Use-of-proceeds allocation\n3. Impact reporting\n4. SC Malaysia verification"
     tags: ["sri-sukuk", "green-sukuk", "disclosure"]
     difficulty: "intermediate"
 
-  - id: "ch20-09-malaysia-sukuk-009"
+  - id: "ch31-09-malaysia-sukuk-009"
     front: "A corporation considers issuing green sukuk instead of standard sukuk. How does the green designation affect MFRS 9 recognition and measurement?"
     back: "It does not change recognition or measurement at all. Green designation is an additional disclosure overlay — it changes what the issuer must report about how proceeds are used, not the accounting numbers."
     tags: ["green-sukuk", "disclosure-vs-measurement"]
     difficulty: "intermediate"
     why: "Why do issuers sometimes mistakenly assume green designation changes their financial statements?"
 
-  - id: "ch20-09-malaysia-sukuk-010"
+  - id: "ch31-09-malaysia-sukuk-010"
     front: "Under IAS 32, what single test determines whether a sukuk is classified as financial liability or equity for the issuer?"
     back: "Whether the issuer has a contractual obligation to deliver cash (periodic distributions or principal redemption)."
     tags: ["ias-32", "liability-vs-equity", "sukuk"]
     difficulty: "intermediate"
 
-  - id: "ch20-09-malaysia-sukuk-011"
+  - id: "ch31-09-malaysia-sukuk-011"
     front: "Sukuk distributions classified as financial liability are reported as what in the income statement?"
     back: "A finance cost (P&L charge), not an equity distribution."
     tags: ["sukuk", "income-statement", "finance-cost"]
     difficulty: "basic"
 
-  - id: "ch20-09-malaysia-sukuk-012"
+  - id: "ch31-09-malaysia-sukuk-012"
     front: "Malaysia uses MFRS rather than creating separate Islamic accounting standards. How does Islamic finance accounting differ from conventional accounting under this approach?"
     back: "The difference is in income labels and supplementary Shariah disclosures, not in the measurement methodology. MFRS 9 and IAS 32 apply identically to Islamic and conventional instruments."
     tags: ["malaysia", "mfrs", "accounting-approach"]

@@ -19,7 +19,7 @@ keywords:
     "consulting AI workflow",
     "professional AI tools",
   ]
-chapter: 4
+chapter: 15
 lesson: 6
 duration_minutes: 45
 
@@ -118,7 +118,7 @@ Now comes the operational question: **What do you actually DO when context becom
 
 Whether you're a lawyer deep into contract review, a marketer building a campaign, a researcher synthesizing literature, or a developer debugging code—the principles are identical. Context fills up. Quality degrades. You need to decide: reset or compress?
 
-You've seen `/clear` and `/compact` in Chapter 3. You know they exist. But knowing commands isn't the same as knowing strategy. Should you clear now or compact? Should you preserve this tangent or let it go? Is 65% utilization fine or concerning?
+You've seen `/clear` and `/compact` in Chapter 14. You know they exist. But knowing commands isn't the same as knowing strategy. Should you clear now or compact? Should you preserve this tangent or let it go? Is 65% utilization fine or concerning?
 
 This lesson gives you the decision frameworks for context lifecycle management—when to reset, when to compress, how to customize compaction, and how to persist work across sessions.
 

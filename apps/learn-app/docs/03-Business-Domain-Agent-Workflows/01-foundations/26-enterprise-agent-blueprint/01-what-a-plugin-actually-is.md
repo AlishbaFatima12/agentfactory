@@ -19,7 +19,7 @@ keywords:
     "agentskills.io",
     "enterprise readiness",
   ]
-chapter: 15
+chapter: 26
 lesson: 1
 duration_minutes: 20
 
@@ -68,7 +68,7 @@ cognitive_load:
     - "Three-layer model (generic format → knowledge-work specialisation → enterprise readiness evaluation)"
     - "Plugin package structure (skills, connectors, commands, agents, hooks, manifest)"
     - "Transparency as an architectural property (not incidental)"
-  assessment: "3 concepts at A1-A2 level — well within the 5-7 cognitive limit for this tier. Students already know SKILL.md and MCP connectors at surface level from Chapter 14 Lesson 4; this lesson deepens the conceptual model by distinguishing Anthropic's plugin format from knowledge-work specialisation and Panaversity's enterprise readiness evaluation framework."
+  assessment: "3 concepts at A1-A2 level — well within the 5-7 cognitive limit for this tier. Students already know SKILL.md and MCP connectors at surface level from Chapter 25 Lesson 4; this lesson deepens the conceptual model by distinguishing Anthropic's plugin format from knowledge-work specialisation and Panaversity's enterprise readiness evaluation framework."
 
 differentiation:
   extension_for_advanced: "Identify a domain agent you have seen described in industry press or your own organisation. Using the enterprise readiness framework from this lesson, assess how many of the five properties are visible to you. Which properties are opaque? What would need to change for the plugin to be fully inspectable? Document your analysis in a short note."
@@ -82,7 +82,7 @@ teaching_guide:
     - "A Cowork plugin has three layers students must keep distinct: the generic format (a directory of components), the knowledge-work specialisation (domain expertise + enterprise connectors), and enterprise readiness evaluation (Panaversity's five-property framework). Conflating these layers leads to misattribution."
     - "The plugin package structure maps cleanly to two primary roles: knowledge worker (skills) and plugin developer/IT (connectors, commands, agents, hooks, manifest). This ownership clarity is a feature, not an incidental detail."
     - "Transparency is architectural, not incidental. Every plugin property is inspectable by design. This is what makes plugins deployable in regulated industries — not trust, but verifiability."
-    - "Students have already encountered SKILL.md and connectors in Chapter 14 Lesson 4 (which introduced the full plugin package). This lesson moves from surface recognition to conceptual understanding of what each component actually does."
+    - "Students have already encountered SKILL.md and connectors in Chapter 25 Lesson 4 (which introduced the full plugin package). This lesson moves from surface recognition to conceptual understanding of what each component actually does."
   misconceptions:
     - "Students may think a 'plugin' is just a chatbot add-on. Correct this early: the plugin format is a general-purpose extension system, but knowledge-work plugins use it to create domain-specialist agents with real enterprise connections — not UI widgets."
     - "Students may assume transparency means 'visible to everyone'. Clarify: transparency means every property is inspectable by the right role (knowledge worker reads SKILL.md, IT reads .mcp.json and plugin.json, admin sees audit logs). The point is that no property is a black box."
@@ -107,13 +107,13 @@ teaching_guide:
 
 > _"The black box is not a technical problem — it is a governance problem. Once you can inspect everything the agent does, you can deploy it anywhere an auditor can follow."_
 
-In Chapter 14, you established that the knowledge worker, not the developer, is the central figure in enterprise AI deployment. You identified the knowledge transfer gap — the structural barrier between domain expertise and deployed agents — and recognised the platform that closes it. Now the question becomes concrete: what, precisely, is the thing you are going to build?
+In Chapter 25, you established that the knowledge worker, not the developer, is the central figure in enterprise AI deployment. You identified the knowledge transfer gap — the structural barrier between domain expertise and deployed agents — and recognised the platform that closes it. Now the question becomes concrete: what, precisely, is the thing you are going to build?
 
 The word "plugin" carries baggage from its previous life in software. Browser plugins, email plugins, productivity suite plugins — add-ons that bolt a feature onto a product someone else built. A Cowork plugin is something more capable than that, but to understand what it actually is, you need to separate three things that are easy to conflate: the plugin format itself, what knowledge-work plugins do with it, and how enterprises evaluate whether the result is production-ready.
 
 This lesson gives you all three layers, plus the architectural property that makes the whole thing deployable in environments that do not tolerate black boxes.
 
-![8 Steps to Set Up Your Entire Claude Cowork — from downloading the app through writing your context files, setting instructions, installing plugins, and connecting tools](/img/ch15-eight-steps-cowork-setup.png)
+![8 Steps to Set Up Your Entire Claude Cowork — from downloading the app through writing your context files, setting instructions, installing plugins, and connecting tools](/img/ch26-eight-steps-cowork-setup.png)
 
 ## Layer 1: What a Plugin Is
 
@@ -142,7 +142,7 @@ Additional optional components include `settings.json` for default configuration
 
 The division of labour here is intentional and significant. The knowledge worker writes the intelligence — the SKILL.md files that encode domain expertise — but does not build the integration infrastructure. The plugin developer or IT builds and maintains the connectors, commands, agents, hooks, and manifest. Plugins arrive from the marketplace as ready-made packages. Your contribution is the part no one else can write: the SKILL.md that encodes how _your_ organisation actually works.
 
-This separation is not bureaucratic overhead. It is what makes a plugin governable. When something goes wrong — and in production, something eventually goes wrong — the ownership model tells you immediately which layer is responsible and who can fix it. This chapter and Chapter 16 will go deep on each component in turn. What matters here is the model: the knowledge worker owns the intelligence layer, everyone else owns the infrastructure.
+This separation is not bureaucratic overhead. It is what makes a plugin governable. When something goes wrong — and in production, something eventually goes wrong — the ownership model tells you immediately which layer is responsible and who can fix it. This chapter and Chapter 27 will go deep on each component in turn. What matters here is the model: the knowledge worker owns the intelligence layer, everyone else owns the infrastructure.
 
 ## Layer 3: Evaluating Enterprise Readiness
 
@@ -186,7 +186,7 @@ This is the architectural property that everything in the rest of this chapter r
 
 This lesson has established the definition and the foundational model. The lessons that follow build the architecture from the inside out. Lesson 2 goes deep on the SKILL.md — the intelligence layer you, as a knowledge worker, will author. Lesson 3 covers the configuration and integration layers. Lessons 4 and 5 introduce the context hierarchy and show a complete, annotated plugin example. Lessons 6 and 7 cover the connector ecosystem and the governance layer in detail.
 
-By the end of this chapter, you will be able to define, understand, and describe every layer of the architecture. Chapter 16 will then teach you how to extract and encode your domain expertise into the first layer — the one that is yours to write.
+By the end of this chapter, you will be able to define, understand, and describe every layer of the architecture. Chapter 27 will then teach you how to extract and encode your domain expertise into the first layer — the one that is yours to write.
 
 ## Try With AI
 
@@ -204,7 +204,7 @@ For each property, ask me one diagnostic question, then assess whether the tool
 I describe meets the standard or falls short.
 ```
 
-**What you're learning:** The enterprise readiness framework is analytical, not just descriptive. By applying it to tools you already use, you are practising the diagnostic skill that Chapter 15 is building toward — the ability to assess whether an agent deployment is a genuine plugin or a prototype dressed as one.
+**What you're learning:** The enterprise readiness framework is analytical, not just descriptive. By applying it to tools you already use, you are practising the diagnostic skill that Chapter 26 is building toward — the ability to assess whether an agent deployment is a genuine plugin or a prototype dressed as one.
 
 ### Prompt 2: Framework Analysis
 

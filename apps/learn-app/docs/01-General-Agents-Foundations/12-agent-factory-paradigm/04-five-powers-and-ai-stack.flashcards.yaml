@@ -1,5 +1,5 @@
 deck:
-  id: ch01-five-powers-ai-stack
+  id: ch12-five-powers-ai-stack
   title: Five Powers and the Modern AI Stack
   description: Covers the UX-to-Intent paradigm shift, the Five Powers of AI agents, the three-layer modern AI stack, MCP as universal connector, and the evolution from prompt engineering to skill authoring.
   tags:
@@ -11,7 +11,7 @@ deck:
   - agent-skills
   version: 1
 cards:
-- id: ch01-five-powers-ai-stack-001
+- id: ch12-five-powers-ai-stack-001
   type: recall
   difficulty: basic
   front: What paradigm shift does agentic AI introduce in how humans interact with software?
@@ -19,7 +19,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-002
+- id: ch12-five-powers-ai-stack-002
   type: recall
   difficulty: basic
   front: What is the interaction model for traditional software UX?
@@ -27,7 +27,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-003
+- id: ch12-five-powers-ai-stack-003
   type: recall
   difficulty: basic
   front: What is the interaction model for agentic UX?
@@ -35,7 +35,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-004
+- id: ch12-five-powers-ai-stack-004
   type: recall
   difficulty: basic
   front: In the hotel booking comparison, how many manual steps does traditional UX require versus agentic UX exchanges?
@@ -43,7 +43,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-005
+- id: ch12-five-powers-ai-stack-005
   type: recall
   difficulty: basic
   front: What are the three phases of AI evolution in chronological order?
@@ -51,7 +51,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-006
+- id: ch12-five-powers-ai-stack-006
   type: recall
   difficulty: basic
   front: What does Predictive AI do, and what is a well-known example?
@@ -59,7 +59,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-007
+- id: ch12-five-powers-ai-stack-007
   type: recall
   difficulty: basic
   front: What does Generative AI do, and what is a well-known example?
@@ -67,7 +67,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-008
+- id: ch12-five-powers-ai-stack-008
   type: thinking
   difficulty: intermediate
   front: Why does Agentic AI represent a bigger shift than Generative AI?
@@ -76,7 +76,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-009
+- id: ch12-five-powers-ai-stack-009
   type: recall
   difficulty: basic
   front: What are the Five Powers of AI agents?
@@ -84,7 +84,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-010
+- id: ch12-five-powers-ai-stack-010
   type: thinking
   difficulty: intermediate
   front: Why is the 'See' power essential for agents that interact with existing software?
@@ -94,7 +94,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-011
+- id: ch12-five-powers-ai-stack-011
   type: thinking
   difficulty: intermediate
   front: Why does the 'Hear' power go beyond simple speech-to-text transcription?
@@ -104,7 +104,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-012
+- id: ch12-five-powers-ai-stack-012
   type: thinking
   difficulty: intermediate
   front: How does the 'Reason' power differ from simple rule-based automation?
@@ -113,7 +113,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-013
+- id: ch12-five-powers-ai-stack-013
   type: recall
   difficulty: intermediate
   front: What does the 'Act' power enable an AI agent to do?
@@ -121,7 +121,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-014
+- id: ch12-five-powers-ai-stack-014
   type: thinking
   difficulty: intermediate
   front: How does the 'Remember' power differ from an LLM's built-in memory?
@@ -130,7 +130,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-015
+- id: ch12-five-powers-ai-stack-015
   type: thinking
   difficulty: intermediate
   front: Why does the hotel booking agent infer transportation needs without being asked?
@@ -139,7 +139,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-016
+- id: ch12-five-powers-ai-stack-016
   type: thinking
   difficulty: advanced
   front: Why do the Five Powers create autonomous orchestration only when combined?
@@ -149,7 +149,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-017
+- id: ch12-five-powers-ai-stack-017
   type: recall
   difficulty: intermediate
   front: What are the three layers of the modern AI stack?
@@ -157,7 +157,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-018
+- id: ch12-five-powers-ai-stack-018
   type: recall
   difficulty: intermediate
   front: What role do Frontier Models serve in the AI stack (Layer 1)?
@@ -165,7 +165,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-019
+- id: ch12-five-powers-ai-stack-019
   type: thinking
   difficulty: intermediate
   front: Why are AI-First IDEs called 'Context Orchestrators' rather than just code editors?
@@ -174,7 +174,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-020
+- id: ch12-five-powers-ai-stack-020
   type: thinking
   difficulty: intermediate
   front: Why did the industry shift from building 'Custom Agents' to building 'Modular Skills' at Layer 3?
@@ -183,7 +183,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-021
+- id: ch12-five-powers-ai-stack-021
   type: thinking
   difficulty: advanced
   front: How does progressive disclosure work in the Agent Skills standard?
@@ -192,7 +192,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-022
+- id: ch12-five-powers-ai-stack-022
   type: thinking
   difficulty: intermediate
   front: Why does skill portability matter for the agent ecosystem?
@@ -201,7 +201,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-023
+- id: ch12-five-powers-ai-stack-023
   type: recall
   difficulty: basic
   front: In the modern AI stack analogy, what does MCP correspond to?
@@ -209,7 +209,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-024
+- id: ch12-five-powers-ai-stack-024
   type: recall
   difficulty: intermediate
   front: In the modern AI stack analogy, what do Agent Skills correspond to?
@@ -217,7 +217,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-025
+- id: ch12-five-powers-ai-stack-025
   type: thinking
   difficulty: advanced
   front: Why is MCP's bidirectional sampling a significant breakthrough?
@@ -226,7 +226,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-026
+- id: ch12-five-powers-ai-stack-026
   type: thinking
   difficulty: advanced
   front: Why is MCP classified as a protocol rather than a product?
@@ -235,7 +235,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-027
+- id: ch12-five-powers-ai-stack-027
   type: recall
   difficulty: intermediate
   front: What were two key problems with the 2024 pre-MCP 'Tool Silos' approach?
@@ -243,7 +243,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-028
+- id: ch12-five-powers-ai-stack-028
   type: thinking
   difficulty: advanced
   front: Why did skill authoring replace prompt engineering as the core design challenge by 2026?
@@ -252,7 +252,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-029
+- id: ch12-five-powers-ai-stack-029
   type: thinking
   difficulty: advanced
   front: How do skills give agents permanent capabilities compared to one-time prompts?
@@ -261,7 +261,7 @@ cards:
   tags:
   - five-powers
   - ai-stack
-- id: ch01-five-powers-ai-stack-030
+- id: ch12-five-powers-ai-stack-030
   type: recall
   difficulty: intermediate
   front: What standard does agentskills.io provide for AI agents?

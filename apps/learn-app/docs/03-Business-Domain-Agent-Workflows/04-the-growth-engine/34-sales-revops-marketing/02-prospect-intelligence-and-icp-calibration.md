@@ -20,7 +20,7 @@ keywords:
     "lead scoring",
     "research brief",
   ]
-chapter: 23
+chapter: 34
 lesson: 2
 duration_minutes: 25
 

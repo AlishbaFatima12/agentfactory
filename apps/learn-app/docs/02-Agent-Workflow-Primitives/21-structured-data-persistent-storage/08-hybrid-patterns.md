@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
 title: "Hybrid Patterns - When Tools Work Together"
-chapter: 10
+chapter: 21
 lesson: 7
 duration_minutes: 30
 description: "Use SQL as primary path and independent verification as a risk-based release gate"

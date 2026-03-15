@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: "Making Your Agent Unkillable"
-chapter: 11
+chapter: 22
 lesson: 4
 layer: L2
 duration_minutes: 35
@@ -76,7 +76,7 @@ cognitive_load:
     - "systemd unit files (the service job description)"
     - "Restart policies (what happens when the agent crashes)"
     - "Resource limits (preventing runaway memory usage)"
-  assessment: "4 concepts at the A2-B1 boundary — the most critical lesson in the chapter for Ch13 dependency"
+  assessment: "4 concepts at the A2-B1 boundary — the most critical lesson in the chapter for Ch24 dependency"
 
 differentiation:
   extension_for_advanced: "Explore systemd timers as an alternative to cron for scheduled agent execution. Compare Type=simple vs Type=forking for different agent architectures."
@@ -88,7 +88,7 @@ teaching_guide:
   session_title: "Making Agents Production-Ready"
   key_points:
     - "The process-vs-service distinction is the core insight — everything else follows from understanding why the OS needs to manage your agent"
-    - "The annotated unit file is the lesson centerpiece — every line matters and students will reference this in Ch13"
+    - "The annotated unit file is the lesson centerpiece — every line matters and students will reference this in Ch24"
     - "The drama moment (close terminal, reconnect, agent still alive) is the emotional peak — let students feel the triumph"
     - "Resource limits prevent a single buggy agent from taking down the entire server — this is production thinking"
   misconceptions:
@@ -314,19 +314,19 @@ For agents that run 24/7, systemd is the right tool. tmux keeps a session alive.
 
 You'll direct Claude Code to use these. You don't need to memorize them, but recognizing them helps you understand the output.
 
-| Command | What it does |
-|---------|-------------|
-| `systemctl start <service>` | Start the service now |
-| `systemctl stop <service>` | Stop the service now |
-| `systemctl restart <service>` | Stop then start |
-| `systemctl status <service>` | Show current state, PID, memory |
-| `systemctl enable <service>` | Start automatically on boot |
+| Command                       | What it does                    |
+| ----------------------------- | ------------------------------- |
+| `systemctl start <service>`   | Start the service now           |
+| `systemctl stop <service>`    | Stop the service now            |
+| `systemctl restart <service>` | Stop then start                 |
+| `systemctl status <service>`  | Show current state, PID, memory |
+| `systemctl enable <service>`  | Start automatically on boot     |
 
 And one for viewing logs:
 
-| Command | What it does |
-|---------|-------------|
-| `journalctl -u <service>` | Show all logs for this service |
+| Command                      | What it does                                |
+| ---------------------------- | ------------------------------------------- |
+| `journalctl -u <service>`    | Show all logs for this service              |
 | `journalctl -u <service> -f` | Follow logs in real time (like a live feed) |
 
 ---

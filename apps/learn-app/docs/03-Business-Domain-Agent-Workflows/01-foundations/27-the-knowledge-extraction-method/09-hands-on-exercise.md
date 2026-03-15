@@ -16,7 +16,7 @@ keywords:
     "practice exercise",
     "credit analyst",
   ]
-chapter: 16
+chapter: 27
 lesson: 9
 duration_minutes: 150
 
@@ -34,7 +34,7 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Content Creation"
-    measurable_at_this_level: "Student can translate interview notes into a structured SKILL.md with a functional Persona (addressing Chapter 15's four structural elements through three extraction-focused writing questions), a precise Questions section (in-scope and out-of-scope), and testable Principles derived from their extraction material"
+    measurable_at_this_level: "Student can translate interview notes into a structured SKILL.md with a functional Persona (addressing Chapter 26's four structural elements through three extraction-focused writing questions), a precise Questions section (in-scope and out-of-scope), and testable Principles derived from their extraction material"
 
   - name: "Design and Score Validation Scenarios"
     proficiency_level: "B1"
@@ -52,7 +52,7 @@ learning_objectives:
   - objective: "Write a complete first-draft SKILL.md with all three sections at a specificity level that can be tested against scenarios"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student produces a SKILL.md where the Persona addresses Chapter 15's four structural elements through three extraction-focused writing questions, the Questions section has both in-scope and out-of-scope categories, and every Principle passes the testability criterion"
+    assessment_method: "Student produces a SKILL.md where the Persona addresses Chapter 26's four structural elements through three extraction-focused writing questions, the Questions section has both in-scope and out-of-scope categories, and every Principle passes the testability criterion"
 
   - objective: "Identify the gap between tacit knowledge and written instruction through scenario scoring and targeted rewriting"
     proficiency_level: "B1"

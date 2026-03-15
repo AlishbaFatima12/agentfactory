@@ -16,7 +16,7 @@ keywords:
     "integrated stress test",
     "banking AI operations",
   ]
-chapter: 21
+chapter: 32
 lesson: 15
 duration_minutes: 90
 
@@ -362,7 +362,7 @@ key decision rules, input/output specification, and validation
 criteria that I can paste into the skill creation form.
 ```
 
-**What you are learning:** Building skills from your own expertise is the expert interview approach from Chapter 15. By structuring what you learned in Lessons 3-10 into reusable Cowork skills, you transform knowledge into operational capability. The skill does not replace your judgment — it packages your analytical framework so that routine calculations are automated and edge cases are flagged for human review.
+**What you are learning:** Building skills from your own expertise is the expert interview approach from Chapter 26. By structuring what you learned in Lessons 3-10 into reusable Cowork skills, you transform knowledge into operational capability. The skill does not replace your judgment — it packages your analytical framework so that routine calculations are automated and edge cases are flagged for human review.
 
 ### Prompt 2: Adapt
 
@@ -399,7 +399,7 @@ message for each slide.
 For each of the five principles of banking domain AI, provide:
 
 1. A one-sentence explanation of the principle
-2. A specific example from the Chapter 21 exercises that
+2. A specific example from the Chapter 32 exercises that
    demonstrates it
 3. What goes wrong if the principle is violated
 

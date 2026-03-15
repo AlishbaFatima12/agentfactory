@@ -12,7 +12,7 @@ keywords:
     "context management",
     "on-demand loading",
   ]
-chapter: 4
+chapter: 15
 lesson: 3
 duration_minutes: 25
 
@@ -91,7 +91,7 @@ teaching_guide:
 
 # Context Architecture: The Complete System
 
-You learned HOW to create CLAUDE.md files, Skills, Subagents, and Hooks in Chapter 3. This lesson teaches WHY each exists and WHEN to use each one—as parts of a complete context management system.
+You learned HOW to create CLAUDE.md files, Skills, Subagents, and Hooks in Chapter 14. This lesson teaches WHY each exists and WHEN to use each one—as parts of a complete context management system.
 
 ## Four Tools, Four Loading Patterns
 

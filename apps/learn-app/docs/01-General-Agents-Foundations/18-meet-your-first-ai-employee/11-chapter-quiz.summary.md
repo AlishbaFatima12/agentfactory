@@ -4,7 +4,7 @@ sidebar_label: "Summary"
 sidebar_position: 11
 ---
 
-# Summary: Chapter 7 Quiz & What Comes Next
+# Summary: Chapter 18 Quiz & What Comes Next
 
 ## Key Takeaways
 

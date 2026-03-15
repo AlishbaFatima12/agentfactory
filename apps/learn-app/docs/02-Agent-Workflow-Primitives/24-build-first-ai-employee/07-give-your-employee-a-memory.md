@@ -1,11 +1,22 @@
 ---
 sidebar_position: 7
 title: "Give Your Employee a Memory"
-chapter: 13
+chapter: 24
 lesson: 7
 duration_minutes: 40
 description: "Add persistent memory using SQLite tables for action logging, knowledge storage, and correction capture — a closed feedback loop where your employee learns from its mistakes"
-keywords: ["persistent memory", "SQLite", "action log", "knowledge store", "correction capture", "feedback loop", "NanoClaw", "observability", "structured data"]
+keywords:
+  [
+    "persistent memory",
+    "SQLite",
+    "action log",
+    "knowledge store",
+    "correction capture",
+    "feedback loop",
+    "NanoClaw",
+    "observability",
+    "structured data",
+  ]
 
 skills:
   - name: "Structured Persistent State"
@@ -13,7 +24,7 @@ skills:
     category: "Technical"
     bloom_level: "Create"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student designs and implements SQLite tables for action logging and knowledge storage within NanoClaw, applying Ch10 schema design primitives to a real agent system"
+    measurable_at_this_level: "Student designs and implements SQLite tables for action logging and knowledge storage within NanoClaw, applying Ch21 schema design primitives to a real agent system"
 
   - name: "Correction-Driven Learning"
     proficiency_level: "B1"
@@ -33,7 +44,7 @@ learning_objectives:
   - objective: "Design SQLite tables for action logging and knowledge storage within NanoClaw"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student produces memory-config.md with two table schemas (action_log, knowledge) using appropriate constraints from Ch10"
+    assessment_method: "Student produces memory-config.md with two table schemas (action_log, knowledge) using appropriate constraints from Ch21"
 
   - objective: "Implement a correction capture workflow where user feedback persists to structured storage"
     proficiency_level: "B1"
@@ -52,7 +63,7 @@ cognitive_load:
     - "Knowledge store table (subject-predicate-object triples for learned facts)"
     - "Correction-to-knowledge pipeline (extracting structured data from user feedback)"
     - "Log querying for observability (answering 'what did you do?' from data)"
-  assessment: "4 concepts within B1-B2 limit. Schema design concepts (column types, constraints, CRUD) transfer from Ch10's PostgreSQL/SQLAlchemy work, though the engine is SQLite (simpler syntax, no ORM). The new element is applying database skills to agent memory."
+  assessment: "4 concepts within B1-B2 limit. Schema design concepts (column types, constraints, CRUD) transfer from Ch21's PostgreSQL/SQLAlchemy work, though the engine is SQLite (simpler syntax, no ORM). The new element is applying database skills to agent memory."
 
 differentiation:
   extension_for_advanced: "Add a confidence_score column to knowledge rows. When the employee acts on low-confidence knowledge, it flags the action for review. Implement a 'knowledge audit' command listing stored knowledge sorted by confidence."
@@ -206,25 +217,25 @@ Document the two tables you created:
 
 Action log table:
 
-| Column | Type | Constraints | Purpose |
-|--------|------|-------------|---------|
-| id | INTEGER | PRIMARY KEY AUTOINCREMENT | Unique row identifier |
-| action_type | TEXT | NOT NULL | Category: "report", "message", "categorization", etc. |
-| target | TEXT | NOT NULL | What the action operated on |
-| trust_level | TEXT | NOT NULL, CHECK(trust_level IN ('auto','approved','flagged')) | Whether this was auto-approved or needed review |
-| result | TEXT | | Outcome or summary of what happened |
-| timestamp | TEXT | NOT NULL DEFAULT (datetime('now')) | When the action occurred |
+| Column      | Type    | Constraints                                                   | Purpose                                               |
+| ----------- | ------- | ------------------------------------------------------------- | ----------------------------------------------------- |
+| id          | INTEGER | PRIMARY KEY AUTOINCREMENT                                     | Unique row identifier                                 |
+| action_type | TEXT    | NOT NULL                                                      | Category: "report", "message", "categorization", etc. |
+| target      | TEXT    | NOT NULL                                                      | What the action operated on                           |
+| trust_level | TEXT    | NOT NULL, CHECK(trust_level IN ('auto','approved','flagged')) | Whether this was auto-approved or needed review       |
+| result      | TEXT    |                                                               | Outcome or summary of what happened                   |
+| timestamp   | TEXT    | NOT NULL DEFAULT (datetime('now'))                            | When the action occurred                              |
 
 Knowledge table:
 
-| Column | Type | Constraints | Purpose |
-|--------|------|-------------|---------|
-| id | INTEGER | PRIMARY KEY AUTOINCREMENT | Unique row identifier |
-| subject | TEXT | NOT NULL | Who or what the fact is about |
-| predicate | TEXT | NOT NULL | The relationship or attribute |
-| object | TEXT | NOT NULL | The value or preference |
-| source | TEXT | NOT NULL | Where this knowledge came from ("user correction", "observation") |
-| timestamp | TEXT | NOT NULL DEFAULT (datetime('now')) | When the knowledge was recorded |
+| Column    | Type    | Constraints                        | Purpose                                                           |
+| --------- | ------- | ---------------------------------- | ----------------------------------------------------------------- |
+| id        | INTEGER | PRIMARY KEY AUTOINCREMENT          | Unique row identifier                                             |
+| subject   | TEXT    | NOT NULL                           | Who or what the fact is about                                     |
+| predicate | TEXT    | NOT NULL                           | The relationship or attribute                                     |
+| object    | TEXT    | NOT NULL                           | The value or preference                                           |
+| source    | TEXT    | NOT NULL                           | Where this knowledge came from ("user correction", "observation") |
+| timestamp | TEXT    | NOT NULL DEFAULT (datetime('now')) | When the knowledge was recorded                                   |
 
 **Step 3: Add CLAUDE.md instructions**
 
@@ -236,12 +247,14 @@ Add these sections to your `groups/main/CLAUDE.md`. Be explicit — your employe
 Database: /workspace/group/memory.db (SQLite)
 
 ### Action Logging
+
 After every autonomous action (sending a message, generating a report,
 categorizing data, or any task completed without user prompting), log it:
 
 sqlite3 /workspace/group/memory.db "INSERT INTO action_log (action_type, target, trust_level, result) VALUES ('<type>', '<target>', '<auto|approved|flagged>', '<what happened>')"
 
 ### Correction Capture
+
 When the user corrects your output or states a preference (phrases like
 "no, actually...", "I prefer...", "always do X", "never do Y"):
 
@@ -251,6 +264,7 @@ When the user corrects your output or states a preference (phrases like
 4. Confirm what you stored
 
 ### Knowledge Querying
+
 Before generating output for a specific person, client, or context, check
 for relevant knowledge:
 
@@ -259,6 +273,7 @@ sqlite3 /workspace/group/memory.db "SELECT subject, predicate, object FROM knowl
 Apply any matching preferences to your output.
 
 ### Observability
+
 When asked "what did you do today?" or similar, query and present:
 
 sqlite3 /workspace/group/memory.db "SELECT action_type, target, result, timestamp FROM action_log WHERE date(timestamp) = date('now') ORDER BY timestamp"

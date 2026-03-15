@@ -1,11 +1,12 @@
 ---
 sidebar_position: 2
-chapter: 12
+chapter: 23
 lesson: 2
 title: "Testing AI Safely with Branches"
 description: "Use branches to test multiple ideas without risking your working project — your agent's tool for parallel experimentation"
 duration_minutes: 45
-keywords: [git branches, parallel testing, merge, feature branch, experimentation]
+keywords:
+  [git branches, parallel testing, merge, feature branch, experimentation]
 
 # HIDDEN SKILLS METADATA
 skills:
@@ -120,11 +121,11 @@ In the real world, you'd make two copies of the file. In Git, you create two **b
 
 ## What Is a Branch?
 
-You've used Track Changes to compare different versions of a document. Branches take that idea further. Instead of tracking changes to one file, a branch creates a parallel version of your *entire project*.
+You've used Track Changes to compare different versions of a document. Branches take that idea further. Instead of tracking changes to one file, a branch creates a parallel version of your _entire project_.
 
 Your `main` branch is the "real" version — the one you trust. When you create a new branch, Git creates a new label pointing to the current snapshot. It feels like a copy because you can edit safely without touching `main`. If the changes work, you merge them back. If they don't, you throw away the branch name. The original is untouched.
 
-![Branch diagram showing main branch (stable) with feature branches diverging for development, then merging back after review](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-2/chapter-09/branch-workflow-diagram.png)
+![Branch diagram showing main branch (stable) with feature branches diverging for development, then merging back after review](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-2/chapter-20/branch-workflow-diagram.png)
 
 ---
 
@@ -244,7 +245,7 @@ Fast-forward
  1 file changed, 2 insertions(+)
 ```
 
-"Fast-forward" means `main` hadn't changed since you branched off — Git simply moved `main` forward to include the new commits. No merging was needed because there was nothing to merge *with*.
+"Fast-forward" means `main` hadn't changed since you branched off — Git simply moved `main` forward to include the new commits. No merging was needed because there was nothing to merge _with_.
 
 The casual flyer now exists on `main`. Verify:
 
@@ -263,7 +264,7 @@ The branch names are deleted. The commits from `casual-flyer` are preserved in `
 
 :::tip
 
-`git branch -d` only deletes the branch name, not the work. After merging, the commits live on in `main`. If you try to delete a branch you *haven't* merged, Git warns you. Use `-D` (capital D) only if you're sure you want to throw away unmerged work.
+`git branch -d` only deletes the branch name, not the work. After merging, the commits live on in `main`. If you try to delete a branch you _haven't_ merged, Git warns you. Use `-D` (capital D) only if you're sure you want to throw away unmerged work.
 
 :::
 
@@ -286,12 +287,14 @@ Bad names like `branch1` or `test` tell you nothing in a week. Name branches by 
 Not every change needs a branch.
 
 **Use a branch when:**
+
 - You're testing two or more approaches
 - The change might break something
 - You want to review before merging
 - Someone else might be working on the same project
 
 **Commit directly to main when:**
+
 - You're confident the change is small and correct
 - You're the only person working on the project
 - The change is a quick fix, not an experiment

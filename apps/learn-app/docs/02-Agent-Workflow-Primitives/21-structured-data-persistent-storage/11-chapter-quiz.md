@@ -1,6 +1,6 @@
 ---
 sidebar_position: 11
-title: "Chapter 10: Structured Data & Persistent Storage Quiz"
+title: "Chapter 21: Structured Data & Persistent Storage Quiz"
 proficiency_level: A2
 layer: 2
 estimated_time: "30 mins"
@@ -8,7 +8,7 @@ chapter_type: Technical
 running_example_id: structured-data-persistent-storage-quiz-v3
 ---
 
-# Chapter 10: Structured Data & Persistent Storage Quiz
+# Chapter 21: Structured Data & Persistent Storage Quiz
 
 Twenty-two questions. No tricks. If you've done the work in this chapter, you'll know these answers. If some questions stump you, that's not failure -- it's feedback. Check the source reference, revisit that lesson, and come back.
 
@@ -66,7 +66,7 @@ Outcome IDs:
 | Q22      | O6              |
 
 <Quiz
-title="Chapter 10: Structured Data & Persistent Storage Assessment (v3)"
+title="Chapter 21: Structured Data & Persistent Storage Assessment (v3)"
 questionsPerBatch={5}
 questions={[
 {
@@ -322,7 +322,7 @@ explanation: "An unexplained mismatch in a high-stakes report is a release block
 source: "Lesson 7/8"
 },
 {
-question: "Which statement best reflects Chapter 10 mastery?",
+question: "Which statement best reflects Chapter 21 mastery?",
 options: [
 "Memorize ORM syntax for every SQLAlchemy method call",
 "Apply reusable design and verification decisions under failure risk",
@@ -330,7 +330,7 @@ options: [
 "Avoid debugging by writing more code to cover edge cases"
 ],
 correctOption: 1,
-explanation: "Chapter 10 mastery is not about SQLAlchemy syntax -- syntax is searchable. The durable outcome is engineering judgment: knowing when to escalate tools, how to model data relationally, why transactions matter for correctness, and what evidence constitutes release readiness. These decisions transfer to any database, any ORM, any project.",
+explanation: "Chapter 21 mastery is not about SQLAlchemy syntax -- syntax is searchable. The durable outcome is engineering judgment: knowing when to escalate tools, how to model data relationally, why transactions matter for correctness, and what evidence constitutes release readiness. These decisions transfer to any database, any ORM, any project.",
 source: "Capstone"
 }
 ]}

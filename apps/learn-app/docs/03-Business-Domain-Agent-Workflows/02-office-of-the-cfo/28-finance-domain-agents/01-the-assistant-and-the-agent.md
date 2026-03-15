@@ -16,7 +16,7 @@ keywords:
     "Agent Skills",
     "cross-app orchestration",
   ]
-chapter: 17
+chapter: 28
 lesson: 1
 duration_minutes: 18
 
@@ -66,7 +66,7 @@ cognitive_load:
     - "Claude in Excel's two layers (general workbook intelligence and pre-built Agent Skills)"
     - "Data connectors as a shared ecosystem serving both environments at different scope"
     - "The chapter's three-part structure mapping to different professional needs"
-  assessment: "4 concepts at A2 level — within the 5-7 cognitive limit for this tier. Students enter from Chapter 16 with a clear understanding of SKILL.md architecture and the Knowledge Extraction Method; this lesson shifts to a new domain (finance) and a new platform distinction (assistant vs agent)."
+  assessment: "4 concepts at A2 level — within the 5-7 cognitive limit for this tier. Students enter from Chapter 27 with a clear understanding of SKILL.md architecture and the Knowledge Extraction Method; this lesson shifts to a new domain (finance) and a new platform distinction (assistant vs agent)."
 
 differentiation:
   extension_for_advanced: "Compare the assistant-vs-agent distinction in finance to a domain you know. Where in your professional workflow would an embedded assistant suffice, and where would cross-application orchestration change the quality or speed of your output? Write two sentences describing each scenario."
@@ -105,7 +105,7 @@ teaching_guide:
 
 > _"Excel is not a spreadsheet application. It is the operating system of the financial profession. Everything else — the presentations, the memos, the reports — is built from what lives in a spreadsheet first."_
 
-In Chapter 16, you learned the Knowledge Extraction Method — the structured process for surfacing tacit professional knowledge and encoding it in a SKILL.md that produces reliable agent behaviour. Now you will apply that methodology to the domain where AI agents have the most immediate, measurable impact on professional output: finance.
+In Chapter 27, you learned the Knowledge Extraction Method — the structured process for surfacing tacit professional knowledge and encoding it in a SKILL.md that produces reliable agent behaviour. Now you will apply that methodology to the domain where AI agents have the most immediate, measurable impact on professional output: finance.
 
 Every finance professional knows the feeling. The corporate controller reconciles accounts in Excel. The investment banker builds deal models in Excel. The equity research analyst updates earnings forecasts in Excel. The FP&A manager presents variance analysis to the board from a PowerPoint deck built from an Excel model. If you work in finance, accounting, treasury, or investment management, Excel is the medium through which your professional judgement is expressed. This chapter begins there — not because Excel is the only tool that matters, but because it is the tool where the distinction between an AI _assistant_ and an AI _agent_ becomes concrete and consequential.
 
@@ -173,7 +173,7 @@ This chapter is structured in three parts, each serving a different professional
 
 **Part Two: Cowork Finance Plugins — The Orchestrating Agent.** Covers the Cowork platform's finance capabilities — the corporate finance plugin, the financial services plugin suite, data connectors, and cross-app orchestration from Excel to PowerPoint. This part matters when your deliverables span multiple applications and your workflow involves carrying analysis from a spreadsheet into a presentation, memo, or report.
 
-**Part Three: Enterprise Extensions.** Covers how to extend the pre-built capabilities with custom SKILL.md files for your firm's specific needs — applying the Knowledge Extraction Method from Chapter 16 to finance domain expertise. This part connects everything: the platform capabilities from Parts One and Two, the extraction methodology from Chapter 16, and the agent architecture from Chapter 15.
+**Part Three: Enterprise Extensions.** Covers how to extend the pre-built capabilities with custom SKILL.md files for your firm's specific needs — applying the Knowledge Extraction Method from Chapter 27 to finance domain expertise. This part connects everything: the platform capabilities from Parts One and Two, the extraction methodology from Chapter 27, and the agent architecture from Chapter 26.
 
 ## Getting Started
 
@@ -201,7 +201,7 @@ A sidebar opens on the right side of your Excel window. Sign in with your Claude
 
 **Step 4 — Open a practice workbook.** Download the chapter practice workbook to follow along with the exercises in this chapter:
 
-<a href="/downloads/ch17/ch17_veeva_practice_workbook.xlsx" download>Download Practice Workbook (ch17_veeva_practice_workbook.xlsx)</a>
+<a href="/downloads/ch28/ch28_veeva_practice_workbook.xlsx" download>Download Practice Workbook (ch28_veeva_practice_workbook.xlsx)</a>
 
 Open the workbook in Excel (desktop or web), then open the Claude panel using the shortcut above.
 

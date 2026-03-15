@@ -18,7 +18,7 @@ keywords:
     "PayGulf Technologies",
     "legal AI deployment",
   ]
-chapter: 22
+chapter: 33
 lesson: 14
 duration_minutes: 35
 

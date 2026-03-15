@@ -18,7 +18,7 @@ keywords:
     "CA/CPA",
     "AI tax automation",
   ]
-chapter: 19
+chapter: 30
 lesson: 3
 duration_minutes: 35
 
@@ -250,7 +250,7 @@ For the standard corporate tax return in this jurisdiction:
 Structure this as a specification that could be encoded as a Cowork skill.
 ```
 
-**What you are learning:** Designing an autonomous agent forces you to make explicit what you know tacitly. The escalation conditions in point 3 are the most valuable output — they encode the professional judgment boundaries that distinguish a safe autonomous system from a dangerous one. This is the specification skill that Chapter 5 introduced, applied to tax domain expertise.
+**What you are learning:** Designing an autonomous agent forces you to make explicit what you know tacitly. The escalation conditions in point 3 are the most valuable output — they encode the professional judgment boundaries that distinguish a safe autonomous system from a dangerous one. This is the specification skill that Chapter 27 introduced, applied to tax domain expertise.
 
 ### Prompt 3: Advisory Value Proposition
 

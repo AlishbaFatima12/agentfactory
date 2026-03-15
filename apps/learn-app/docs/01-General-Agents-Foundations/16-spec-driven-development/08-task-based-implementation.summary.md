@@ -22,5 +22,5 @@ Task-based implementation transforms Claude from a solo coder into an orchestrat
 
 ### Connections
 
-- **Builds on**: Refined specification (Lesson 7), context isolation (Chapter 4, Lesson 9), Tasks system (Chapter 4, Lesson 4)
+- **Builds on**: Refined specification (Lesson 7), context isolation (Chapter 15, Lesson 9), Tasks system (Chapter 15, Lesson 4)
 - **Leads to**: Decision framework for when to use SDD vs simpler approaches (Lesson 9)

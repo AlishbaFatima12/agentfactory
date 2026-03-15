@@ -21,7 +21,7 @@ keywords:
     "Meridian Logistics",
     "ethical outreach",
   ]
-chapter: 23
+chapter: 34
 lesson: 12
 duration_minutes: 25
 

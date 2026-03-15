@@ -1,13 +1,13 @@
 ---
 sidebar_position: 6
-title: "Chapter 6: The Seven Principles of General Agent Problem Solving"
+title: "Chapter 17: The Seven Principles of General Agent Problem Solving"
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-1/chapter-06/agent-director-strategy.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-1/chapter-17/agent-director-strategy.pdf"
   title: "Agent Director Strategy"
   height: 700
 ---
 
-# Chapter 6: The Seven Principles of General Agent Problem Solving
+# Chapter 17: The Seven Principles of General Agent Problem Solving
 
 You've learned the tools—Claude Code, CLAUDE.md, Skills, Subagents. You've learned context engineering. But here's what separates productive sessions from frustrating ones: **workflow discipline**.
 
@@ -36,9 +36,9 @@ Each principle addresses a specific failure mode:
 
 This chapter builds directly on:
 
-- **Chapter 3** — You learned Claude Code's core capabilities: CLAUDE.md for persistent memory (Lesson 5), Skills (Lesson 7-8), and Subagent orchestration (Lesson 9)
-- **Chapter 4** — You learned context engineering: why context quality determines agent reliability, and the Tasks system for persistent state
-- **Chapter 5** — You learned Spec-Driven Development: the four-phase workflow that structures AI collaboration
+- **Chapter 14** — You learned Claude Code's core capabilities: CLAUDE.md for persistent memory (Lesson 5), Skills (Lesson 7-8), and Subagent orchestration (Lesson 9)
+- **Chapter 15** — You learned context engineering: why context quality determines agent reliability, and the Tasks system for persistent state
+- **Chapter 16** — You learned Spec-Driven Development: the four-phase workflow that structures AI collaboration
 
 The Seven Principles provide the **conceptual framework** that explains _why_ these capabilities work together effectively.
 

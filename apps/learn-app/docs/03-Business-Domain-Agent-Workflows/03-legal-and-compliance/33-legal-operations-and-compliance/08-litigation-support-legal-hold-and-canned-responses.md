@@ -17,7 +17,7 @@ keywords:
     "litigation governance",
     "patent infringement",
   ]
-chapter: 22
+chapter: 33
 lesson: 8
 duration_minutes: 30
 

@@ -3,7 +3,7 @@ title: "Lists - Organizing Ideas"
 description: "Learning to use unordered and ordered lists to structure requirements and sequential steps"
 sidebar_label: "Lists - Organizing Ideas"
 sidebar_position: 3
-chapter: 2
+chapter: 13
 lesson: 3
 duration_minutes: 40
 proficiency: "A2"

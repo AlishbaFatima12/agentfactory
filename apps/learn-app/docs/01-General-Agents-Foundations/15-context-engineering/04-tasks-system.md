@@ -15,7 +15,7 @@ keywords:
     "cross-session coordination",
     "CLAUDE_CODE_TASK_LIST_ID",
   ]
-chapter: 4
+chapter: 15
 lesson: 4
 duration_minutes: 25
 

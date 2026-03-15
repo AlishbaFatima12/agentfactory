@@ -18,7 +18,7 @@ keywords:
     "regulated industries",
     "95% accuracy threshold",
   ]
-chapter: 15
+chapter: 26
 lesson: 7
 duration_minutes: 30
 
@@ -178,7 +178,7 @@ Domain examples make this concrete.
 | **Healthcare (clinical)**        | Administrative summaries, scheduling optimisation, billing pre-review       | Clinical decision outputs, medication recommendations, diagnostic summaries reaching patients          |
 | **Architecture and engineering** | Drawing annotation, specification cross-referencing, regulatory code lookup | Design sign-off, structural calculations requiring professional stamp, safety-critical recommendations |
 
-The healthcare row in that table deserves a specific note. Clinical accuracy requirements for HITL gate configuration are covered in depth in Chapter 21, which addresses the healthcare domain specifically. The clinical context introduces additional considerations — regulatory requirements, professional liability standards, patient safety thresholds — that go beyond what the standard governance layer covers. Healthcare organisations should treat Chapter 21 as required reading before configuring HITL gates for clinical use cases.
+The healthcare row in that table deserves a specific note. Clinical accuracy requirements for HITL gate configuration are covered in depth in Chapter 32, which addresses the healthcare domain specifically. The clinical context introduces additional considerations — regulatory requirements, professional liability standards, patient safety thresholds — that go beyond what the standard governance layer covers. Healthcare organisations should treat Chapter 32 as required reading before configuring HITL gates for clinical use cases.
 
 What makes a HITL gate non-negotiable is not that the agent is likely to get it wrong. It is that the action carries consequences — reputational, legal, clinical, or organisational — that require a human to be accountable in a way an agent cannot be. A board presentation reaching the board carries the imprimatur of the person who presents it. A contract clause flagged for renegotiation carries the professional judgment of the lawyer who flags it. These are not tasks the agent can take over simply by becoming more accurate. The accountability requirement is structural, not a function of performance.
 

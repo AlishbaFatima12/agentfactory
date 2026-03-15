@@ -18,7 +18,7 @@ keywords:
     "murabaha receivable",
     "Islamic finance accounting",
   ]
-chapter: 20
+chapter: 31
 lesson: 4
 duration_minutes: 35
 

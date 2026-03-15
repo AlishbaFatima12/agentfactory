@@ -18,7 +18,7 @@ keywords:
     "SKILL.md",
     "credit analyst",
   ]
-chapter: 16
+chapter: 27
 lesson: 2
 duration_minutes: 30
 

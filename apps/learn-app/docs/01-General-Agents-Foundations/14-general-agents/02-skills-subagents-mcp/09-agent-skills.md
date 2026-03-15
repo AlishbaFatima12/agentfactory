@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/agent-skills
 title: "Building Your Own Skills"
 sidebar_position: 9
-chapter: 3
+chapter: 14
 lesson: 9
 duration_minutes: 15
 
@@ -92,7 +92,7 @@ prerequisites:
   - "Lesson 07: Teach Claude Your Way of Working"
   - "Lesson 08: The Concept Behind Skills"
   - "A procedure mapped and ready for encoding"
-  - "Chapter 2: Markdown basics (headings, lists, code blocks, YAML frontmatter)"
+  - "Chapter 13: Markdown basics (headings, lists, code blocks, YAML frontmatter)"
 ---
 
 # Building Your Own Skills
@@ -104,7 +104,7 @@ You've experienced skills in action. You've mapped a procedure worth encoding. N
 This lesson takes you from understanding skills to creating them. By the end, you'll have a working skill in your `.claude/skills/` folder—and know how to use Claude itself to create more.
 
 :::tip Markdown Refresher
-Skills are written in Markdown with YAML frontmatter. If you're not comfortable with headings, bullet points, code blocks, or YAML syntax, take 15 minutes to review **Chapter 2: Markdown for AI-Native Development** before continuing. You'll write better skills with that foundation.
+Skills are written in Markdown with YAML frontmatter. If you're not comfortable with headings, bullet points, code blocks, or YAML syntax, take 15 minutes to review **Chapter 13: Markdown for AI-Native Development** before continuing. You'll write better skills with that foundation.
 :::
 
 ---

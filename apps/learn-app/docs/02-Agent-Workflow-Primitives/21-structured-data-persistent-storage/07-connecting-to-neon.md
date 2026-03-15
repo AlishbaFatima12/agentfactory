@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: "Connecting to Neon"
-chapter: 10
+chapter: 21
 lesson: 6
 duration_minutes: 25
 description: "Deploy SQLAlchemy models to Neon with secure config and reliable connection behavior"

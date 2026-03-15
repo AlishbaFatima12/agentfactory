@@ -16,7 +16,7 @@ keywords:
     "interview technique",
     "credit analyst",
   ]
-chapter: 16
+chapter: 27
 lesson: 3
 duration_minutes: 20
 

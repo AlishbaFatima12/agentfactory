@@ -1,15 +1,15 @@
 ---
 slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/chapter-quiz
 sidebar_position: 11
-title: "Chapter 16: The Knowledge Extraction Method Quiz"
+title: "Chapter 27: The Knowledge Extraction Method Quiz"
 ---
 
-# Chapter 16: The Knowledge Extraction Method Quiz
+# Chapter 27: The Knowledge Extraction Method Quiz
 
 Test your understanding of the Knowledge Extraction Method — from tacit knowledge and the articulation gap through dual extraction methods, SKILL.md translation, validation scenario design, and shadow mode deployment.
 
 <Quiz
-title="Chapter 16: The Knowledge Extraction Method Assessment"
+title="Chapter 27: The Knowledge Extraction Method Assessment"
 questions={[
 {
 question: "A product manager at a fintech company says: 'We do not need a structured extraction process. Our senior credit analyst can just write down what she knows and we will paste it into the SKILL.md.' A colleague who has studied the Knowledge Extraction Method disagrees. What is the most precise reason the colleague gives?",
@@ -192,7 +192,7 @@ explanation: "This is a direct application of the reconciliation principle from 
 source: "Lesson 5: Choosing and Combining Methods"
 },
 {
-question: "A knowledge worker has completed both Method A and Method B extractions for an operations management agent. She now needs to write the Persona section of the SKILL.md. Chapter 15 taught that a finished Persona contains answers to four structural questions. Lesson 6 teaches three extraction-focused writing questions that organise interview material into functional Persona language. What are those three writing questions?",
+question: "A knowledge worker has completed both Method A and Method B extractions for an operations management agent. She now needs to write the Persona section of the SKILL.md. Chapter 26 taught that a finished Persona contains answers to four structural questions. Lesson 6 teaches three extraction-focused writing questions that organise interview material into functional Persona language. What are those three writing questions?",
 options: [
 "What is the agent's name? What department does it belong to? Who is its supervisor?",
 "What is this agent's professional level and authority? What does this agent value in its own outputs — what quality standards does it hold itself to? What does this agent do when it does not know?",
@@ -200,7 +200,7 @@ options: [
 "What documents has the agent read? What training data was used? What sources does it cite?"
 ],
 correctOption: 1,
-explanation: "Chapter 15 taught that a finished Persona contains answers to four structural questions: professional standing, relationship to the user, characteristic tone, and what the agent will never claim to be. Lesson 6 teaches that when writing a Persona from extraction outputs, three different questions organise the work more effectively: (1) What is this agent's professional level and authority? (2) What does this agent value in its own outputs — what quality standards does it hold itself to? (3) What does this agent do when it does not know? These three writing questions translate interview material into functional Persona language that addresses the four structural elements. Option A confuses organisational assignment with professional identity. Option C describes technical configuration, not Persona. Option D describes data sources, not identity.",
+explanation: "Chapter 26 taught that a finished Persona contains answers to four structural questions: professional standing, relationship to the user, characteristic tone, and what the agent will never claim to be. Lesson 6 teaches that when writing a Persona from extraction outputs, three different questions organise the work more effectively: (1) What is this agent's professional level and authority? (2) What does this agent value in its own outputs — what quality standards does it hold itself to? (3) What does this agent do when it does not know? These three writing questions translate interview material into functional Persona language that addresses the four structural elements. Option A confuses organisational assignment with professional identity. Option C describes technical configuration, not Persona. Option D describes data sources, not identity.",
 source: "Lesson 6: From Extraction to SKILL.md"
 },
 {
@@ -416,7 +416,7 @@ options: [
 "The Persona uses first person, which is not permitted in SKILL.md files"
 ],
 correctOption: 1,
-explanation: "Lesson 6 teaches three extraction-focused writing questions that translate interview material into functional Persona language addressing Chapter 15's four structural elements. 'Helpful assistant for HR queries' fails all three: (1) It does not define a professional level and authority — 'helpful assistant' is not a professional role with a seniority level, specialisation, or domain context. (2) It does not state what the agent values in its own outputs — there are no quality standards or tradeoffs specified. (3) It does not establish uncertainty behaviour — there is no statement of what the agent does when it does not know, which means it will fill gaps with confident-sounding approximations. A production Persona might read: 'I am a senior HR compliance specialist with expertise in UK employment law and internal grievance procedures. I prioritise regulatory accuracy over speed. When a policy question falls outside my documented sources, I state the limitation and recommend consulting employment counsel.' Option A confuses Persona with technical configuration. Option C imposes an arbitrary length requirement. Option D is incorrect; first person is standard for Persona sections.",
+explanation: "Lesson 6 teaches three extraction-focused writing questions that translate interview material into functional Persona language addressing Chapter 26's four structural elements. 'Helpful assistant for HR queries' fails all three: (1) It does not define a professional level and authority — 'helpful assistant' is not a professional role with a seniority level, specialisation, or domain context. (2) It does not state what the agent values in its own outputs — there are no quality standards or tradeoffs specified. (3) It does not establish uncertainty behaviour — there is no statement of what the agent does when it does not know, which means it will fill gaps with confident-sounding approximations. A production Persona might read: 'I am a senior HR compliance specialist with expertise in UK employment law and internal grievance procedures. I prioritise regulatory accuracy over speed. When a policy question falls outside my documented sources, I state the limitation and recommend consulting employment counsel.' Option A confuses Persona with technical configuration. Option C imposes an arbitrary length requirement. Option D is incorrect; first person is standard for Persona sections.",
 source: "Lesson 6: From Extraction to SKILL.md"
 },
 {

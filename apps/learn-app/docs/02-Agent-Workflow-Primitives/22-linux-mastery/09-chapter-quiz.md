@@ -1,6 +1,6 @@
 ---
 sidebar_position: 9
-title: "Chapter 11: Linux Operations for Agent Deployment Quiz"
+title: "Chapter 22: Linux Operations for Agent Deployment Quiz"
 proficiency_level: B1
 layer: 2
 estimated_time: "20 mins"
@@ -8,12 +8,12 @@ chapter_type: Applied
 running_example_id: linux-operations-quiz
 ---
 
-# Chapter 11: Linux Operations for Agent Deployment Quiz
+# Chapter 22: Linux Operations for Agent Deployment Quiz
 
 Test your understanding of Linux operations for deploying and managing AI agents on production servers.
 
 <Quiz
-title="Chapter 11: Linux Operations for Agent Deployment Assessment"
+title="Chapter 22: Linux Operations for Agent Deployment Assessment"
 questionsPerBatch={18}
 questions={[
 {
@@ -629,7 +629,7 @@ explanation: "Dying after reboot specifically points to the service not being en
 source: "Lesson 7: Capstone: Zero to Production"
 },
 {
-question: "Throughout Chapter 11, Ali directs Claude Code to run commands rather than typing them himself. What skill is this teaching?",
+question: "Throughout Chapter 22, Ali directs Claude Code to run commands rather than typing them himself. What skill is this teaching?",
 options: [
 "How to memorize Linux commands through repetition",
 "How to describe intentions to an AI agent and interpret the results -- the same skill used when directing agents in production",

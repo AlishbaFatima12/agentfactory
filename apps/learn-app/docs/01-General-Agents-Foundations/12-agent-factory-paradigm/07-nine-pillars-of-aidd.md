@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: "Nine Pillars of AIDD"
-chapter: 1
+chapter: 12
 lesson: 7
 duration_minutes: 30
 
@@ -82,7 +82,7 @@ teaching_guide:
 
 # Generation metadata
 generated_by: "content-implementer v3.0.0"
-source_spec: "consolidated from 6 lessons in Chapter 4"
+source_spec: "consolidated from 6 lessons in Chapter 15"
 created: "2025-01-22"
 version: "1.0.0"
 ---

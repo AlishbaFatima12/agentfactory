@@ -1,107 +1,107 @@
 deck:
-  id: "ch23-13-revops-agents"
+  id: "ch34-13-revops-agents"
   title: "RevOps Agents and the Revenue Dashboard"
   description: "Five RevOps agents, the pipeline skill, sales forecasting, and the revenue dashboard"
-  tags: ["sales", "revops", "marketing", "chapter-23", "revops-agents"]
+  tags: ["sales", "revops", "marketing", "chapter-34", "revops-agents"]
   version: 1
 
 cards:
-  - id: "ch23-13-revops-agents-001"
+  - id: "ch34-13-revops-agents-001"
     front: "What are the five RevOps agents and their primary functions?"
     back: "1. Lead Intelligence — buying signal alerts\n2. CRM Hygiene — data quality\n3. Outreach Sequencing — touch progression\n4. Marketing Performance — campaign analysis\n5. Revenue Reporting — pipeline dashboard"
     difficulty: "basic"
     tags: ["five-agents"]
 
-  - id: "ch23-13-revops-agents-002"
+  - id: "ch34-13-revops-agents-002"
     front: "How does the Outreach Sequencing Agent differ from the other four RevOps agents in scheduling?"
     back: "It runs continuously and is event-driven (reacting to opens, clicks, replies, bounces), while the other four run on time-based schedules (daily, weekly, or monthly)."
     difficulty: "intermediate"
     tags: ["event-driven"]
 
-  - id: "ch23-13-revops-agents-003"
+  - id: "ch34-13-revops-agents-003"
     front: "Why does the Marketing Performance Agent's recommendation to 'pause Google Ads' require human judgment?"
     back: "The agent compares CPL numbers ($387.50 vs $9.50) but lacks context: Google Ads may target enterprise logistics directors while email targets mid-market operations managers. Comparing CPL across different audience tiers is misleading without strategic context."
     difficulty: "intermediate"
     why: "When is it valid to compare CPL across two different channels?"
     tags: ["human-judgment"]
 
-  - id: "ch23-13-revops-agents-004"
+  - id: "ch34-13-revops-agents-004"
     front: "What does the /pipeline-review command with the extension add beyond the base plugin?"
     back: "Three-dimension scoring integration (Fit + Timing + Engagement) and deal-level health scores for each active deal."
     difficulty: "basic"
     tags: ["pipeline-review"]
 
-  - id: "ch23-13-revops-agents-005"
+  - id: "ch34-13-revops-agents-005"
     front: "Crescent Freight scores 45/100 with 34 days in Proposal and zero engagement. What does this pipeline data tell you?"
     back: "The deal has gone silent — it is not in progress. It needs a new champion, a different approach, or disqualification. The low score reflects stalled timing and absent engagement, not poor fit."
     difficulty: "intermediate"
     tags: ["at-risk-deals"]
 
-  - id: "ch23-13-revops-agents-006"
+  - id: "ch34-13-revops-agents-006"
     front: "What three scenarios does /forecast model, and what was NexaFlow's likely case gap to target?"
     back: "Best case, likely case, and worst case. NexaFlow's likely case was $630,000 against a $750,000 target — a gap of $120,000."
     difficulty: "basic"
     tags: ["forecast"]
 
-  - id: "ch23-13-revops-agents-007"
+  - id: "ch34-13-revops-agents-007"
     front: "Name any 4 of the 7 core revenue dashboard metrics?"
     back: "HOT leads generated, lead-to-SAL conversion rate, pipeline created, average deal size, pipeline at risk, close rate (trailing 90 days), CAC by channel."
     difficulty: "intermediate"
     tags: ["dashboard-metrics"]
 
-  - id: "ch23-13-revops-agents-008"
+  - id: "ch34-13-revops-agents-008"
     front: "Why does the CRM Hygiene Agent scan Tier 1 accounts weekly but all accounts monthly?"
     back: "Tier 1 accounts have the highest revenue impact, so data freshness matters more. Monthly scans for all accounts balance data quality against processing cost."
     difficulty: "intermediate"
     tags: ["crm-hygiene"]
 
-  - id: "ch23-13-revops-agents-009"
+  - id: "ch34-13-revops-agents-009"
     front: "What are the two plugin asset types used in Lesson 13, and how are they invoked?"
     back: "Skills and agents. Cowork can invoke either one from a natural-language prompt. Skills handle bounded tasks like `pipeline` or `pre-call-brief`; agents represent operating roles like lead intelligence or revenue reporting."
     difficulty: "intermediate"
     why: "Why does it matter to name the real asset type correctly?"
     tags: ["skills-vs-agents"]
 
-  - id: "ch23-13-revops-agents-010"
+  - id: "ch34-13-revops-agents-010"
     front: "What runs on Monday, and why that day?"
     back: "The Revenue Reporting Agent runs on Monday. It uses the `pipeline` skill to surface pipeline health and forecast status before the team starts taking action for the week."
     difficulty: "basic"
     tags: ["agent-schedule"]
 
-  - id: "ch23-13-revops-agents-011"
+  - id: "ch34-13-revops-agents-011"
     front: "The CRM shows Crescent Freight at 60% probability but the agent says 35%. Why is the gap valuable?"
     back: "The CRM stores the rep's subjective estimate. The agent applies objective criteria (34 days stalled, zero engagement). A 25-point gap means someone needs to investigate — neither assessment is always right, but the discrepancy triggers review."
     difficulty: "advanced"
     why: "When should you trust the agent's probability over the rep's?"
     tags: ["probability-gap"]
 
-  - id: "ch23-13-revops-agents-012"
+  - id: "ch34-13-revops-agents-012"
     front: "What does the executive email format require?"
     back: "Maximum 5 bullets, maximum 150 words. Lead with the most important pipeline change; close with the one action the sales team needs to take."
     difficulty: "basic"
     tags: ["executive-email"]
 
-  - id: "ch23-13-revops-agents-013"
+  - id: "ch34-13-revops-agents-013"
     front: "Why do RevOps agents produce digests but never take autonomous action?"
     back: "Agents identify signals and surface intelligence, but the decision to act — calling a prospect, pausing a channel, disqualifying a deal — requires human judgment the agent cannot replicate. The boundary is inform versus act."
     difficulty: "intermediate"
     why: "What risks emerge if an agent is given permission to send outreach autonomously?"
     tags: ["inform-vs-act"]
 
-  - id: "ch23-13-revops-agents-014"
+  - id: "ch34-13-revops-agents-014"
     front: "What does the weighted pipeline metric represent in the dashboard?"
     back: "Pipeline value adjusted by probability of closing. NexaFlow's total pipeline was $1,680,000 but weighted pipeline was $565,000."
     difficulty: "intermediate"
     tags: ["weighted-pipeline"]
 
-  - id: "ch23-13-revops-agents-015"
+  - id: "ch34-13-revops-agents-015"
     front: "TransPak Logistics is a $350,000 deal at 40% likely probability. Why might this estimate need human review?"
     back: "The KCCI mutual connection and strong fit score support 40%, but the slow deal cycle makes Q1 closure uncertain. A $350K deal with a procurement timeline that could extend into Q2 may need a lower Q1 probability — that judgment requires knowledge of the buying process the agent does not have."
     difficulty: "advanced"
     why: "How does deal size typically correlate with forecast accuracy?"
     tags: ["forecast"]
 
-  - id: "ch23-13-revops-agents-016"
+  - id: "ch34-13-revops-agents-016"
     front: "If there is no daily briefing skill, what should a rep actually prompt in the morning?"
     back: "Prompt the Lead Intelligence Agent for new signals, the Revenue Reporting Agent for at-risk deals and forecast context, and `pre-call-brief` for the highest-priority meeting. Add the Outreach Sequencing Agent if sequence exceptions need attention."
     difficulty: "advanced"

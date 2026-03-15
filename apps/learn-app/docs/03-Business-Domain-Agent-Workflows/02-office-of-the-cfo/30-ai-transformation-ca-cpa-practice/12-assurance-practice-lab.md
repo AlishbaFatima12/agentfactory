@@ -16,7 +16,7 @@ keywords:
     "assurance services",
     "CA/CPA practice lab",
   ]
-chapter: 19
+chapter: 30
 lesson: 12
 duration_minutes: 70
 

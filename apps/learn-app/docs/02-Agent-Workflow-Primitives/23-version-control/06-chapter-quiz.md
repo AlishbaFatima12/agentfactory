@@ -1,14 +1,14 @@
 ---
 sidebar_position: 6
-title: "Chapter 12: Git & GitHub for AI-Driven Development Quiz"
+title: "Chapter 23: Git & GitHub for AI-Driven Development Quiz"
 ---
 
-# Chapter 12: Git & GitHub for AI-Driven Development Quiz
+# Chapter 23: Git & GitHub for AI-Driven Development Quiz
 
 Test your understanding of Git and GitHub as safety mechanisms for AI-driven development. This assessment focuses on practical scenarios you'll encounter when experimenting with AI-generated code.
 
 <Quiz
-title="Chapter 12: Git & GitHub for AI-Driven Development Assessment"
+title="Chapter 23: Git & GitHub for AI-Driven Development Assessment"
 questions={[
 {
 question: "You've initialized a new Git repository with `git init`. You create three files: `index.html`, `style.css`, and `script.js`. When you run `git status`, all three files appear as 'untracked'. What does this indicate about Git's tracking behavior?",

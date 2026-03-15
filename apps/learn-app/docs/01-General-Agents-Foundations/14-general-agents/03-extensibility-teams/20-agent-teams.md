@@ -14,7 +14,7 @@ keywords:
     claude code,
     business analysis,
   ]
-chapter: 3
+chapter: 14
 lesson: 20
 duration_minutes: 45
 

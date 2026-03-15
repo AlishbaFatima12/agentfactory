@@ -17,7 +17,7 @@ keywords:
     "domain knowledge",
     "institutional memory",
   ]
-chapter: 4
+chapter: 15
 lesson: 5
 duration_minutes: 60
 
@@ -844,7 +844,7 @@ Create the actual artifacts:
 1. **Update your AI instructions** (CLAUDE.md or equivalent) with critical constraints from your extraction
 2. **Create context docs** for AI consumption (see Strategy 1 format)
 3. **Start a memories file** with preferences that emerged
-4. **Create a skill** if the knowledge is complex enough (see Chapter 3)
+4. **Create a skill** if the knowledge is complex enough (see Chapter 14)
 
 **Step 6: Test (15 minutes)**
 

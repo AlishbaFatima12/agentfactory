@@ -1,19 +1,19 @@
 ---
 slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture
-sidebar_position: 18
-title: "Chapter 18: Intent-Driven Financial Architecture"
+sidebar_position: 29
+title: "Chapter 29: Intent-Driven Financial Architecture"
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-18/intent-driven-financial-architecture.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-29/intent-driven-financial-architecture.pdf"
   title: "Intent-Driven Financial Architecture"
   height: 700
 description: "Learn the Intent-Driven Financial Architecture (IDFA) — Panaversity original research that replaces coordinate-based formulas with Named Range business rules, making every financial model human-readable, AI-operable, and mathematically audit-proof through four deterministic guardrails and five Finance Domain Agent capabilities"
-chapter_number: 18
+chapter_number: 29
 part_number: 3
 version: 1.0
 status: draft
 ---
 
-# Chapter 18: Intent-Driven Financial Architecture
+# Chapter 29: Intent-Driven Financial Architecture
 
 > _"A spreadsheet is not a model. It is a grid. The model is in the analyst's head. The tragedy of most financial work is that the model never leaves."_
 
@@ -23,20 +23,20 @@ The Intent-Driven Financial Architecture (IDFA) is original research developed b
 
 :::
 
-Chapter 17 taught you to use the tools that exist today: Claude in Excel, the financial-services plugins, the Cowork orchestration layer. Every skill, every command, every example in that chapter was built on an assumption that goes mostly unexamined: that the spreadsheets those tools operate on are designed the way spreadsheets have always been designed.
+Chapter 28 taught you to use the tools that exist today: Claude in Excel, the financial-services plugins, the Cowork orchestration layer. Every skill, every command, every example in that chapter was built on an assumption that goes mostly unexamined: that the spreadsheets those tools operate on are designed the way spreadsheets have always been designed.
 
 This chapter examines that assumption. And then it dismantles it.
 
-The tools in Chapter 17 are powerful. But they are working on a foundation with a structural flaw that has been present in financial modelling for forty years. That flaw is called the **Coordinate-First paradigm** — and it is the reason financial models are opaque, fragile, and extraordinarily difficult to audit. IDFA replaces that paradigm with a **Logic-First** architecture: every formula reads as a business rule, every input is a Named Range, every AI-generated calculation carries an Intent Note, and every result comes from the model — never from an agent's internal arithmetic.
+The tools in Chapter 28 are powerful. But they are working on a foundation with a structural flaw that has been present in financial modelling for forty years. That flaw is called the **Coordinate-First paradigm** — and it is the reason financial models are opaque, fragile, and extraordinarily difficult to audit. IDFA replaces that paradigm with a **Logic-First** architecture: every formula reads as a business rule, every input is a Named Range, every AI-generated calculation carries an Intent Note, and every result comes from the model — never from an agent's internal arithmetic.
 
 The same Claude in Excel. The same MCP connectors. A fundamentally different architecture underneath. That is what changes everything.
 
 :::caution Prerequisites
-This chapter requires **Cowork** (set up in Chapter 17) and the **IDFA plugin**.
+This chapter requires **Cowork** (set up in Chapter 28) and the **IDFA plugin**.
 
 1. **Install the IDFA plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **IDFA Financial Architect** → click **Install**.
 2. The plugin includes two skills: the IDFA methodology (activates automatically on financial model conversations) and IDFA Operations (provides the tools Claude uses to read, write, and audit Excel models programmatically). Once installed, just mention a financial model in conversation — the skills activate automatically. No manual invocation needed.
-3. **Connect a working folder** for practice files, same as Chapter 17.
+3. **Connect a working folder** for practice files, same as Chapter 28.
    :::
 
 ## 📚 Teaching Aid
@@ -83,7 +83,7 @@ By the end of this chapter, you should be able to answer these five questions:
 4. What is the five-phase process for retrofitting an existing coordinate-based model to IDFA compliance, and what is the critical principle that governs it?
 5. What are the five Finance Domain Agent capabilities, and what does each capability test validate about an IDFA deployment?
 
-## After Chapter 18
+## After Chapter 29
 
 When you finish this chapter, your perspective shifts:
 

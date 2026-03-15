@@ -16,7 +16,7 @@ keywords:
     "multi-app workflow",
     "copy-paste risk",
   ]
-chapter: 17
+chapter: 28
 lesson: 7
 duration_minutes: 25
 

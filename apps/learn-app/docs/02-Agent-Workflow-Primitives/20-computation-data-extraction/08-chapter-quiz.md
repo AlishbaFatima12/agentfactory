@@ -1,16 +1,16 @@
 ---
 sidebar_position: 8
-title: "Chapter 9: Computation & Data Extraction Quiz"
+title: "Chapter 20: Computation & Data Extraction Quiz"
 ---
 
-# Chapter 9 Quiz
+# Chapter 20 Quiz
 
 Test your understanding of computation workflows, verification patterns, CSV parsing, composable tools, and data wrangling. Each session presents a random batch of questions with immediate feedback.
 
 <Quiz
-  title="Computation & Data Extraction Assessment"
-  questions={[    {
-      question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleague says 'just remove the decimals and divide later.' What is the biggest risk with that workaround?",
+title="Computation & Data Extraction Assessment"
+questions={[ {
+question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleague says 'just remove the decimals and divide later.' What is the biggest risk with that workaround?",
       options: [
         "The command runs slower without decimals",
         "Bash requires special flags for division",
@@ -415,200 +415,200 @@ Test your understanding of computation workflows, verification patterns, CSV par
       ],
       correctOption: 0,
       explanation: "The Vancouver Stock Exchange truncated to three decimal places silently, and Bash truncates to zero decimal places silently ($((10/3)) returns 3). Both produce plausible-looking wrong results without errors or warnings. Python was not involved in either case. Neither was fixed by a language upgrade — the VSE recalculated, and Bash's design is intentional. Neither was detected immediately — the VSE error ran for 22 months undetected.",
-      source: "Lesson 1: From Broken Math to Your First Tool"
-    },
-    {
-      question: "You have three expense receipts from lunch totaling about $35. Should you build a Python script to sum them?",
-      options: [
-        "Yes, because all calculations require verified Python scripts",
-        "No, use direct prompting for low-stakes one-time calculations",
-        "No, because Python cannot handle amounts under fifty dollars",
-        "Yes, to practice building tools on every possible occasion"
-      ],
-      correctOption: 1,
-      explanation: "For three low-stakes receipts, asking the AI directly is appropriate — even if it is off by a cent, nobody cares. Scripts pay for themselves when data is too large to sanity-check manually, or when being wrong has consequences. Not all calculations need scripts (B). Python handles any amount (C). Building unnecessary tools wastes time (D). The rule: if the calculation is repeated, financial at scale, or high-stakes, build the script. Otherwise, prompt directly.",
-      source: "Lesson 1: From Broken Math to Your First Tool"
-    },
-    {
-      question: "Your script uses sys.exit(1) when no input arrives and writes the error message to sys.stderr. Why does the error go to stderr instead of stdout?",
-      options: [
-        "stdout cannot display text strings in Python 3",
-        "stdout is reserved for system-level kernel messages only",
-        "Python requires all print statements to use stderr by default",
-        "stderr messages bypass the pipe and appear in the terminal"
-      ],
-      correctOption: 3,
-      explanation: "stderr is a separate output stream from stdout. In a pipeline, stdout flows to the next command while stderr appears directly in the terminal. This prevents error messages from polluting the data stream. stdout displays text fine (A). Python defaults to stdout for print (C). stdout is not reserved for kernel messages (D). Using stderr ensures that downstream tools receive clean data while the user sees diagnostic messages.",
-      source: "Lesson 2: The Testing Loop"
-    },
-    {
-      question: "You test filter.py with inputs 10, -5, 20 and the condition '< 0'. It correctly returns only -5. A colleague says one test proves the script works. What is wrong with this conclusion?",
-      options: [
-        "Single tests miss edge cases like zero, decimals, and empty input",
-        "Filter scripts require at least one hundred test inputs",
-        "The colleague should write the tests instead of reviewing yours",
-        "Filter conditions only work with greater-than comparisons"
-      ],
-      correctOption: 0,
-      explanation: "One passing test only proves the script works for that specific input. Edge cases like zero (is 0 less than 0?), decimal values (does -0.01 pass?), and empty input (does the script crash?) remain untested. One hundred inputs (A) is an arbitrary number — diverse edge cases matter more than volume. Who writes tests (C) is irrelevant to test coverage. Filter conditions work with any comparison (D). Multiple targeted tests with diverse inputs provide meaningful confidence.",
-      source: "Lesson 2: The Testing Loop"
-    },
-    {
-      question: "Python's csv module handles quoting, escaped quotes, and different line endings. Your bank CSV works fine with awk today. Why might you still choose the csv module?",
-      options: [
-        "awk is deprecated and will be removed from future operating systems",
-        "csv module runs significantly faster than awk on all inputs",
-        "Future data exports might introduce quoted fields with commas",
-        "Python csv module is the only way to read CSV header rows"
-      ],
-      correctOption: 2,
-      explanation: "Even if today's data is clean, external data sources can change their export format without notice. A bank might start quoting merchant names containing commas, breaking awk silently. awk is not deprecated — it remains a standard Unix tool. The csv module is not inherently faster — awk is often faster for simple cases. awk can read CSV headers just fine. The defensive choice accounts for future data changes from sources you do not control.",
-      source: "Lesson 3: Parsing Real Data"
-    },
-    {
-      question: "You built tax-categorize.py in your project folder. From a different directory, you get 'command not found.' What two steps make a Python script into a permanent shell command?",
-      options: [
-        "Copy the script to every directory where you might need it",
-        "Rename the file extension from .py to .sh and restart your terminal",
-        "Upload the script to PyPI and install it with pip globally",
-        "Move it to ~/tools and create a shell alias in your config file"
-      ],
-      correctOption: 3,
-      explanation: "Moving to ~/tools organizes your scripts, and creating an alias (e.g., alias tax-prep='python3 ~/tools/tax-categorize.py') in ~/.zshrc or ~/.bashrc makes it available from any directory. Renaming to .sh (B) does not make Python code run as a shell script. PyPI publishing (C) is extreme overkill for personal tools. Copying everywhere (D) creates maintenance nightmares with multiple versions. The alias approach is the standard pattern for personal Unix tools.",
-      source: "Lesson 3: Parsing Real Data"
-    },
-    {
-      question: "sum-expenses.py does four things: reads CSV, extracts a column, filters negatives, and sums. You split it into three tools. When would you still use the original monolithic script?",
-      options: [
-        "Never — monolithic scripts should always be deleted after decomposition",
-        "As a convenient shortcut for the common expense-total use case",
-        "Only when the decomposed tools produce different numerical results",
-        "Only when running on operating systems that lack pipe support"
-      ],
-      correctOption: 1,
-      explanation: "The original script is a convenient shortcut for the most common question — total expenses. You keep both: the monolithic script for quick answers and the decomposed tools for questions sum-expenses cannot answer. Deleting working code (A) is wasteful. If both produce different results (B), one has a bug. All modern operating systems support pipes (D). The decomposition does not replace the original — it reveals the composable architecture hiding inside it.",
-      source: "Lesson 4: One Tool, One Job"
-    },
-    {
-      question: "You built extract-column, filter, and stats as separate tools. Which Principle explains why a bug in filter.py has a small blast radius?",
-      options: [
-        "Persisting State in Files keeps backups of tool output",
-        "Observability means all bugs are logged to a central server",
-        "Small Reversible Decomposition makes each tool independently testable",
-        "Bash is the Key prevents Python scripts from causing damage"
-      ],
-      correctOption: 2,
-      explanation: "Principle 4 (Small, Reversible Decomposition) means each tool is small enough to test independently with simple input. A bug in filter.py is found by running echo -e '10\\n-5\\n20' | filter '< 0' — no other tools involved. Persisting State in Files is about saving scripts and results, not blast radius. Observability is about seeing output, not centralized logging. Bash is the Key refers to shell orchestration, not preventing Python bugs.",
-      source: "Lesson 4: One Tool, One Job"
-    },
-    {
-      question: "Your categorizer correctly identifies DR MARTINEZ MEDICAL as a medical expense after adding the DR PEPPER false positive guard. Why does DR MARTINEZ still match?",
-      options: [
-        "DR MARTINEZ matches via the MEDICAL keyword, not the DR keyword",
-        "The false positive guard has a bug that skips some DR patterns",
-        "Python regex processes patterns in reverse alphabetical order",
-        "Word boundaries do not apply to names containing spaces"
-      ],
-      correctOption: 0,
-      explanation: "DR MARTINEZ MEDICAL contains the standalone word MEDICAL, which matches the medical category keyword \\bMEDICAL\\b. The DR PEPPER guard only blocks descriptions matching the specific DR PEPPER pattern, not all descriptions containing DR. The guard is working correctly (A). Python does not process in reverse alphabetical order (C). Word boundaries work fine with spaces (D) — spaces are non-word characters that create valid boundaries.",
-      source: "Lesson 5: Data Wrangling & Domain Transfer"
-    },
-    {
-      question: "You are building a categorizer for a new domain. The first version 'looks right' on casual inspection. Based on the chapter's iterative workflow, what should you do before trusting it?",
-      options: [
-        "Deploy it to production and monitor for user complaints",
-        "Ask the AI to confirm that the categorization is correct",
-        "Increase the number of regex patterns until coverage reaches 100%",
-        "Inspect output line by line to find false positives manually"
-      ],
-      correctOption: 3,
-      explanation: "The iterative refinement loop requires manual inspection of categorized output to find false positives that look plausible but are wrong — like Dr. Pepper appearing as medical. Deploying without review (A) pushes silent errors to production. AI self-confirmation (B) lacks independent verification. Adding more patterns without reviewing output (D) may increase false positives rather than reducing them. Human inspection is the verification step that catches what automation misses.",
-      source: "Lesson 5: Data Wrangling & Domain Transfer"
-    },
-    {
-      question: "The capstone report shows Medical: $219.12, Charitable: $100.00, Business: $89.50, and POTENTIAL DEDUCTIONS: $408.62. Your hand-calculated total before running the tool was also $408.62. What verification principle does this demonstrate?",
-      options: [
-        "Exit code validation confirms mathematical correctness",
-        "Known-answer verification compares output against independent baseline",
-        "Automated testing eliminates the need for manual calculation",
-        "Running the tool twice guarantees consistent results"
-      ],
-      correctOption: 1,
-      explanation: "You calculated expected totals by hand before running the tool, then compared the tool output against your independent baseline. This is the zero-trust verification pattern from Lesson 2 applied to the full workflow. Exit codes (A) only indicate no crash. Automated testing supplements but does not eliminate manual verification (B). Running twice (D) proves consistency, not correctness — a consistently wrong tool would pass that test.",
-      source: "Lesson 6: Capstone: Tax Season Prep"
-    },
-    {
-      question: "The capstone reflection states 'the agent wrote all the code, you made all the decisions that mattered.' Which decision could only a human make?",
-      options: [
-        "Deciding that DR PEPPER should not be a medical expense",
-        "Writing the regex pattern for word boundary matching",
-        "Choosing Python over JavaScript for the implementation",
-        "Selecting the csv module instead of manual string parsing"
-      ],
-      correctOption: 0,
-      explanation: "Whether a soda brand constitutes a medical expense is domain judgment that requires real-world knowledge the agent does not have. The agent can implement the guard once told, but it cannot independently decide that DR PEPPER is not medical. Language choice (A) is a tool decision the agent can make. Regex syntax (B) is implementation. csv module selection (C) is a technical choice. The human's irreplaceable contribution is domain knowledge about what is correct.",
-      source: "Lesson 6: Capstone: Tax Season Prep"
-    },
-    {
-      question: "The chapter teaches that every tool should read from stdin and write to stdout. Which term best describes this design characteristic?",
-      options: [
-        "Object-oriented polymorphism for data types",
-        "Functional programming with immutable state variables",
-        "Composability through standardized input and output interfaces",
-        "Microservice architecture with API gateway routing"
-      ],
-      correctOption: 2,
-      explanation: "Tools that read stdin and write stdout are composable — they connect to any other tool through pipes without modification. This standardized interface is the Unix philosophy's core design principle. Object-oriented polymorphism (A) relates to class inheritance, not pipe interfaces. Functional programming (C) is about immutability, not stdin/stdout. Microservice architecture (D) involves network APIs, not shell pipes. Composability through standard interfaces is the precise concept.",
-      source: "Lesson 4: One Tool, One Job"
-    },
-    {
-      question: "You run echo $((10 / 3)) in Bash and get the result 3. There is no error message. Why is this more dangerous than a syntax error?",
-      options: [
-        "Syntax errors are harder to debug than wrong answers",
-        "Silent truncation produces plausible output that looks correct",
-        "Bash displays wrong answers in a misleading green color",
-        "Division operations are never needed in real-world scripts"
-      ],
-      correctOption: 1,
-      explanation: "Bash silently returns 3 instead of 3.333, which looks like a valid answer. You might not realize it is wrong because there is no error message or warning. A syntax error forces you to stop and investigate. Syntax errors are actually easier to find (A) because they halt execution. Bash does not use colored output for wrong answers (B). Division is common in scripts (D). Silent truncation is the most dangerous failure mode because it produces results that pass casual inspection.",
-      source: "Lesson 1: From Broken Math to Your First Tool"
-    },
-    {
-      question: "Your bank CSV has a Debit column and a Credit column instead of a single Amount column. You tell Claude Code about your specific format. What director skill does this demonstrate?",
-      options: [
-        "Memorizing Python's csv module API documentation",
-        "Writing the implementation code before describing the problem",
-        "Testing the agent by giving intentionally wrong requirements",
-        "Providing domain-specific data knowledge the agent lacks"
-      ],
-      correctOption: 3,
-      explanation: "Describing your bank's specific schema (Debit and Credit columns instead of Amount) provides domain knowledge that the agent cannot discover on its own. The agent adapts the implementation to match your data. Memorizing APIs (A) is the agent's role. Writing code first (B) reverses the workflow. Giving wrong requirements (D) wastes time. Your irreplaceable contribution is knowing what your actual data looks like — the agent handles the code.",
-      source: "Lesson 3: Parsing Real Data"
-    },
-    {
-      question: "The chapter's central rule is: 'If it is math, ask AI to write code that calculates — never ask AI to calculate.' Which scenario correctly applies this rule?",
-      options: [
-        "Ask the AI to build a script that sums amounts from stdin",
-        "Ask the AI to sum 200 invoice amounts in a spreadsheet",
-        "Ask the AI to estimate your monthly average spending",
-        "Ask the AI to round each transaction to the nearest dollar"
-      ],
-      correctOption: 0,
-      explanation: "Asking the AI to build a script that calculates follows the rule — the computation happens in verified code, not in the AI's token prediction. Asking the AI to sum directly (A) relies on unreliable head-math at scale. Estimating spending (C) is a prediction, not precise computation. Rounding via AI (D) is still asking the AI to compute rather than write code that computes. The distinction is between executing arithmetic and predicting arithmetic.",
-      source: "Lesson 1: From Broken Math to Your First Tool"
-    },
-    {
-      question: "Your categorizer handles bank data well. A colleague asks you to categorize employee expense reports that use different merchant naming conventions. What is the most efficient way to adapt your workflow?",
-      options: [
-        "Rewrite the entire categorizer from scratch for expense reports",
-        "Use awk instead of Python since expense reports are simpler",
-        "Keep the same build-verify-guard workflow but update the keyword patterns",
-        "Skip verification since the categorizer already proved correct on bank data"
-      ],
-      correctOption: 2,
-      explanation: "The build-verify-guard workflow transfers to any categorization domain — only the patterns and false positive guards need updating for new data. Rewriting from scratch (A) discards proven architecture. awk (C) still has the same CSV quoting issues with external data. Skipping verification (D) violates the zero-trust principle — new data may contain patterns your tests never covered. The workflow is the transferable asset; the patterns are domain-specific.",
-      source: "Lesson 5: Data Wrangling & Domain Transfer"
-    }
-  ]}
-  questionsPerBatch={18}
+source: "Lesson 1: From Broken Math to Your First Tool"
+},
+{
+question: "You have three expense receipts from lunch totaling about $35. Should you build a Python script to sum them?",
+options: [
+"Yes, because all calculations require verified Python scripts",
+"No, use direct prompting for low-stakes one-time calculations",
+"No, because Python cannot handle amounts under fifty dollars",
+"Yes, to practice building tools on every possible occasion"
+],
+correctOption: 1,
+explanation: "For three low-stakes receipts, asking the AI directly is appropriate — even if it is off by a cent, nobody cares. Scripts pay for themselves when data is too large to sanity-check manually, or when being wrong has consequences. Not all calculations need scripts (B). Python handles any amount (C). Building unnecessary tools wastes time (D). The rule: if the calculation is repeated, financial at scale, or high-stakes, build the script. Otherwise, prompt directly.",
+source: "Lesson 1: From Broken Math to Your First Tool"
+},
+{
+question: "Your script uses sys.exit(1) when no input arrives and writes the error message to sys.stderr. Why does the error go to stderr instead of stdout?",
+options: [
+"stdout cannot display text strings in Python 3",
+"stdout is reserved for system-level kernel messages only",
+"Python requires all print statements to use stderr by default",
+"stderr messages bypass the pipe and appear in the terminal"
+],
+correctOption: 3,
+explanation: "stderr is a separate output stream from stdout. In a pipeline, stdout flows to the next command while stderr appears directly in the terminal. This prevents error messages from polluting the data stream. stdout displays text fine (A). Python defaults to stdout for print (C). stdout is not reserved for kernel messages (D). Using stderr ensures that downstream tools receive clean data while the user sees diagnostic messages.",
+source: "Lesson 2: The Testing Loop"
+},
+{
+question: "You test filter.py with inputs 10, -5, 20 and the condition '< 0'. It correctly returns only -5. A colleague says one test proves the script works. What is wrong with this conclusion?",
+options: [
+"Single tests miss edge cases like zero, decimals, and empty input",
+"Filter scripts require at least one hundred test inputs",
+"The colleague should write the tests instead of reviewing yours",
+"Filter conditions only work with greater-than comparisons"
+],
+correctOption: 0,
+explanation: "One passing test only proves the script works for that specific input. Edge cases like zero (is 0 less than 0?), decimal values (does -0.01 pass?), and empty input (does the script crash?) remain untested. One hundred inputs (A) is an arbitrary number — diverse edge cases matter more than volume. Who writes tests (C) is irrelevant to test coverage. Filter conditions work with any comparison (D). Multiple targeted tests with diverse inputs provide meaningful confidence.",
+source: "Lesson 2: The Testing Loop"
+},
+{
+question: "Python's csv module handles quoting, escaped quotes, and different line endings. Your bank CSV works fine with awk today. Why might you still choose the csv module?",
+options: [
+"awk is deprecated and will be removed from future operating systems",
+"csv module runs significantly faster than awk on all inputs",
+"Future data exports might introduce quoted fields with commas",
+"Python csv module is the only way to read CSV header rows"
+],
+correctOption: 2,
+explanation: "Even if today's data is clean, external data sources can change their export format without notice. A bank might start quoting merchant names containing commas, breaking awk silently. awk is not deprecated — it remains a standard Unix tool. The csv module is not inherently faster — awk is often faster for simple cases. awk can read CSV headers just fine. The defensive choice accounts for future data changes from sources you do not control.",
+source: "Lesson 3: Parsing Real Data"
+},
+{
+question: "You built tax-categorize.py in your project folder. From a different directory, you get 'command not found.' What two steps make a Python script into a permanent shell command?",
+options: [
+"Copy the script to every directory where you might need it",
+"Rename the file extension from .py to .sh and restart your terminal",
+"Upload the script to PyPI and install it with pip globally",
+"Move it to ~/tools and create a shell alias in your config file"
+],
+correctOption: 3,
+explanation: "Moving to ~/tools organizes your scripts, and creating an alias (e.g., alias tax-prep='python3 ~/tools/tax-categorize.py') in ~/.zshrc or ~/.bashrc makes it available from any directory. Renaming to .sh (B) does not make Python code run as a shell script. PyPI publishing (C) is extreme overkill for personal tools. Copying everywhere (D) creates maintenance nightmares with multiple versions. The alias approach is the standard pattern for personal Unix tools.",
+source: "Lesson 3: Parsing Real Data"
+},
+{
+question: "sum-expenses.py does four things: reads CSV, extracts a column, filters negatives, and sums. You split it into three tools. When would you still use the original monolithic script?",
+options: [
+"Never — monolithic scripts should always be deleted after decomposition",
+"As a convenient shortcut for the common expense-total use case",
+"Only when the decomposed tools produce different numerical results",
+"Only when running on operating systems that lack pipe support"
+],
+correctOption: 1,
+explanation: "The original script is a convenient shortcut for the most common question — total expenses. You keep both: the monolithic script for quick answers and the decomposed tools for questions sum-expenses cannot answer. Deleting working code (A) is wasteful. If both produce different results (B), one has a bug. All modern operating systems support pipes (D). The decomposition does not replace the original — it reveals the composable architecture hiding inside it.",
+source: "Lesson 4: One Tool, One Job"
+},
+{
+question: "You built extract-column, filter, and stats as separate tools. Which Principle explains why a bug in filter.py has a small blast radius?",
+options: [
+"Persisting State in Files keeps backups of tool output",
+"Observability means all bugs are logged to a central server",
+"Small Reversible Decomposition makes each tool independently testable",
+"Bash is the Key prevents Python scripts from causing damage"
+],
+correctOption: 2,
+explanation: "Principle 4 (Small, Reversible Decomposition) means each tool is small enough to test independently with simple input. A bug in filter.py is found by running echo -e '10\\n-5\\n20' | filter '< 0' — no other tools involved. Persisting State in Files is about saving scripts and results, not blast radius. Observability is about seeing output, not centralized logging. Bash is the Key refers to shell orchestration, not preventing Python bugs.",
+source: "Lesson 4: One Tool, One Job"
+},
+{
+question: "Your categorizer correctly identifies DR MARTINEZ MEDICAL as a medical expense after adding the DR PEPPER false positive guard. Why does DR MARTINEZ still match?",
+options: [
+"DR MARTINEZ matches via the MEDICAL keyword, not the DR keyword",
+"The false positive guard has a bug that skips some DR patterns",
+"Python regex processes patterns in reverse alphabetical order",
+"Word boundaries do not apply to names containing spaces"
+],
+correctOption: 0,
+explanation: "DR MARTINEZ MEDICAL contains the standalone word MEDICAL, which matches the medical category keyword \\bMEDICAL\\b. The DR PEPPER guard only blocks descriptions matching the specific DR PEPPER pattern, not all descriptions containing DR. The guard is working correctly (A). Python does not process in reverse alphabetical order (C). Word boundaries work fine with spaces (D) — spaces are non-word characters that create valid boundaries.",
+source: "Lesson 5: Data Wrangling & Domain Transfer"
+},
+{
+question: "You are building a categorizer for a new domain. The first version 'looks right' on casual inspection. Based on the chapter's iterative workflow, what should you do before trusting it?",
+options: [
+"Deploy it to production and monitor for user complaints",
+"Ask the AI to confirm that the categorization is correct",
+"Increase the number of regex patterns until coverage reaches 100%",
+"Inspect output line by line to find false positives manually"
+],
+correctOption: 3,
+explanation: "The iterative refinement loop requires manual inspection of categorized output to find false positives that look plausible but are wrong — like Dr. Pepper appearing as medical. Deploying without review (A) pushes silent errors to production. AI self-confirmation (B) lacks independent verification. Adding more patterns without reviewing output (D) may increase false positives rather than reducing them. Human inspection is the verification step that catches what automation misses.",
+source: "Lesson 5: Data Wrangling & Domain Transfer"
+},
+{
+question: "The capstone report shows Medical: $219.12, Charitable: $100.00, Business: $89.50, and POTENTIAL DEDUCTIONS: $408.62. Your hand-calculated total before running the tool was also $408.62. What verification principle does this demonstrate?",
+options: [
+"Exit code validation confirms mathematical correctness",
+"Known-answer verification compares output against independent baseline",
+"Automated testing eliminates the need for manual calculation",
+"Running the tool twice guarantees consistent results"
+],
+correctOption: 1,
+explanation: "You calculated expected totals by hand before running the tool, then compared the tool output against your independent baseline. This is the zero-trust verification pattern from Lesson 2 applied to the full workflow. Exit codes (A) only indicate no crash. Automated testing supplements but does not eliminate manual verification (B). Running twice (D) proves consistency, not correctness — a consistently wrong tool would pass that test.",
+source: "Lesson 6: Capstone: Tax Season Prep"
+},
+{
+question: "The capstone reflection states 'the agent wrote all the code, you made all the decisions that mattered.' Which decision could only a human make?",
+options: [
+"Deciding that DR PEPPER should not be a medical expense",
+"Writing the regex pattern for word boundary matching",
+"Choosing Python over JavaScript for the implementation",
+"Selecting the csv module instead of manual string parsing"
+],
+correctOption: 0,
+explanation: "Whether a soda brand constitutes a medical expense is domain judgment that requires real-world knowledge the agent does not have. The agent can implement the guard once told, but it cannot independently decide that DR PEPPER is not medical. Language choice (A) is a tool decision the agent can make. Regex syntax (B) is implementation. csv module selection (C) is a technical choice. The human's irreplaceable contribution is domain knowledge about what is correct.",
+source: "Lesson 6: Capstone: Tax Season Prep"
+},
+{
+question: "The chapter teaches that every tool should read from stdin and write to stdout. Which term best describes this design characteristic?",
+options: [
+"Object-oriented polymorphism for data types",
+"Functional programming with immutable state variables",
+"Composability through standardized input and output interfaces",
+"Microservice architecture with API gateway routing"
+],
+correctOption: 2,
+explanation: "Tools that read stdin and write stdout are composable — they connect to any other tool through pipes without modification. This standardized interface is the Unix philosophy's core design principle. Object-oriented polymorphism (A) relates to class inheritance, not pipe interfaces. Functional programming (C) is about immutability, not stdin/stdout. Microservice architecture (D) involves network APIs, not shell pipes. Composability through standard interfaces is the precise concept.",
+source: "Lesson 4: One Tool, One Job"
+},
+{
+question: "You run echo $((10 / 3)) in Bash and get the result 3. There is no error message. Why is this more dangerous than a syntax error?",
+options: [
+"Syntax errors are harder to debug than wrong answers",
+"Silent truncation produces plausible output that looks correct",
+"Bash displays wrong answers in a misleading green color",
+"Division operations are never needed in real-world scripts"
+],
+correctOption: 1,
+explanation: "Bash silently returns 3 instead of 3.333, which looks like a valid answer. You might not realize it is wrong because there is no error message or warning. A syntax error forces you to stop and investigate. Syntax errors are actually easier to find (A) because they halt execution. Bash does not use colored output for wrong answers (B). Division is common in scripts (D). Silent truncation is the most dangerous failure mode because it produces results that pass casual inspection.",
+source: "Lesson 1: From Broken Math to Your First Tool"
+},
+{
+question: "Your bank CSV has a Debit column and a Credit column instead of a single Amount column. You tell Claude Code about your specific format. What director skill does this demonstrate?",
+options: [
+"Memorizing Python's csv module API documentation",
+"Writing the implementation code before describing the problem",
+"Testing the agent by giving intentionally wrong requirements",
+"Providing domain-specific data knowledge the agent lacks"
+],
+correctOption: 3,
+explanation: "Describing your bank's specific schema (Debit and Credit columns instead of Amount) provides domain knowledge that the agent cannot discover on its own. The agent adapts the implementation to match your data. Memorizing APIs (A) is the agent's role. Writing code first (B) reverses the workflow. Giving wrong requirements (D) wastes time. Your irreplaceable contribution is knowing what your actual data looks like — the agent handles the code.",
+source: "Lesson 3: Parsing Real Data"
+},
+{
+question: "The chapter's central rule is: 'If it is math, ask AI to write code that calculates — never ask AI to calculate.' Which scenario correctly applies this rule?",
+options: [
+"Ask the AI to build a script that sums amounts from stdin",
+"Ask the AI to sum 200 invoice amounts in a spreadsheet",
+"Ask the AI to estimate your monthly average spending",
+"Ask the AI to round each transaction to the nearest dollar"
+],
+correctOption: 0,
+explanation: "Asking the AI to build a script that calculates follows the rule — the computation happens in verified code, not in the AI's token prediction. Asking the AI to sum directly (A) relies on unreliable head-math at scale. Estimating spending (C) is a prediction, not precise computation. Rounding via AI (D) is still asking the AI to compute rather than write code that computes. The distinction is between executing arithmetic and predicting arithmetic.",
+source: "Lesson 1: From Broken Math to Your First Tool"
+},
+{
+question: "Your categorizer handles bank data well. A colleague asks you to categorize employee expense reports that use different merchant naming conventions. What is the most efficient way to adapt your workflow?",
+options: [
+"Rewrite the entire categorizer from scratch for expense reports",
+"Use awk instead of Python since expense reports are simpler",
+"Keep the same build-verify-guard workflow but update the keyword patterns",
+"Skip verification since the categorizer already proved correct on bank data"
+],
+correctOption: 2,
+explanation: "The build-verify-guard workflow transfers to any categorization domain — only the patterns and false positive guards need updating for new data. Rewriting from scratch (A) discards proven architecture. awk (C) still has the same CSV quoting issues with external data. Skipping verification (D) violates the zero-trust principle — new data may contain patterns your tests never covered. The workflow is the transferable asset; the patterns are domain-specific.",
+source: "Lesson 5: Data Wrangling & Domain Transfer"
+}
+]}
+questionsPerBatch={18}
 />

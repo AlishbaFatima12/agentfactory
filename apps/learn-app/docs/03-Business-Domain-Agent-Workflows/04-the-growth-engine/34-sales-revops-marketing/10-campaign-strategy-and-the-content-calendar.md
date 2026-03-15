@@ -17,7 +17,7 @@ keywords:
     "NexaFlow",
     "Meridian",
   ]
-chapter: 23
+chapter: 34
 lesson: 10
 duration_minutes: 25
 

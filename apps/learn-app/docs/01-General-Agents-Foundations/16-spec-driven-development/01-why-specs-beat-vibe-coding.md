@@ -13,7 +13,7 @@ keywords:
     "AI coding",
     "Claude Code",
   ]
-chapter: 5
+chapter: 16
 lesson: 1
 duration_minutes: 15
 
@@ -78,7 +78,7 @@ teaching_guide:
   key_points:
     - "Three failure modes (context loss, assumption drift, pattern violations) are the chapter's diagnostic framework — students reference them in every subsequent lesson"
     - "Vibe coding fails structurally, not from bad prompts — the compounding table (turns vs severity) is the key visual"
-    - "Specs solve all three failure modes by front-loading context — this connects directly to Chapter 4's context engineering principles"
+    - "Specs solve all three failure modes by front-loading context — this connects directly to Chapter 15's context engineering principles"
   misconceptions:
     - "Students think vibe coding fails because they wrote bad prompts — emphasize the structural inevitability shown in the compounding table"
     - "Students assume specs are only for coding — the report-writing example deliberately shows specs apply to any AI-assisted work"
@@ -90,7 +90,7 @@ teaching_guide:
     - "Start with the report-writing scenario in paragraph 1 — every student has experienced this exact frustration"
     - "The compounding table (Turn 1-5 through 16+) is worth drawing on a whiteboard to show how failure modes reinforce each other"
     - "Have students try Prompt 1 live and experience the drift firsthand before explaining the three failure modes"
-    - "Connect the Context Engineering table back to Chapter 4 — students should recognize these principles"
+    - "Connect the Context Engineering table back to Chapter 15 — students should recognize these principles"
   assessment_quick_check:
     - "Name the three failure modes of vibe coding and give a one-sentence example of each"
     - "Explain why giving Claude more instructions mid-conversation can make output worse, not better"
@@ -206,15 +206,15 @@ The further you go, the harder correction becomes. This is why vibe coding works
 
 ## The Context Engineering Connection
 
-In Chapter 4, you learned that context quality determines agent reliability. The three vibe coding failure modes are actually **context engineering failures**:
+In Chapter 15, you learned that context quality determines agent reliability. The three vibe coding failure modes are actually **context engineering failures**:
 
 | Failure Mode       | Context Engineering Problem                         |
 | ------------------ | --------------------------------------------------- |
-| Context loss       | Violates persistence principle (Ch 4, Lesson 7)     |
-| Assumption drift   | Missing constraints in context (Ch 4, Lesson 5)     |
-| Pattern violations | Architecture not in working memory (Ch 4, Lesson 2) |
+| Context loss       | Violates persistence principle (Ch 15, Lesson 7)     |
+| Assumption drift   | Missing constraints in context (Ch 15, Lesson 5)     |
+| Pattern violations | Architecture not in working memory (Ch 15, Lesson 2) |
 
-Specifications solve these by applying context engineering systematically—front-loading the context Claude needs rather than discovering it through iteration. The spec becomes the **persistent, high-signal context** that Chapter 4 taught you to build.
+Specifications solve these by applying context engineering systematically—front-loading the context Claude needs rather than discovering it through iteration. The spec becomes the **persistent, high-signal context** that Chapter 15 taught you to build.
 
 ## The Insight: Claude Needs the Complete Picture Upfront
 

@@ -17,5 +17,5 @@ The Pilot Trap is the organisational condition in which AI investment produces d
 - Confusing wrappers with agents and claiming AI has been "deployed"
 
 ### Connections
-- **Builds on**: This is the first lesson of Part 3 and Chapter 14; it establishes the problem that the rest of the chapter addresses
+- **Builds on**: This is the first lesson of Part 3 and Chapter 25; it establishes the problem that the rest of the chapter addresses
 - **Leads to**: Lesson 2 (What Changed in 2026) explains the platform shift that began to close the knowledge transfer gap

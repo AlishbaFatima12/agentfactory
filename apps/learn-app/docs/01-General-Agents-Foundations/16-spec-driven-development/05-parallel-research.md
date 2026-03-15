@@ -12,7 +12,7 @@ keywords:
     "reference implementation",
     "research pattern",
   ]
-chapter: 5
+chapter: 16
 lesson: 5
 duration_minutes: 30
 
@@ -175,7 +175,7 @@ With parallel research, Agent 1 might recommend approach A while Agent 3 recomme
 
 **Revision stays surgical.** If you discover Agent 2's WebSocket analysis missed something critical, you re-run Agent 2. Agents 1, 3, and 4 are unaffected. In sequential research, late-stage discoveries often invalidate earlier work because of accumulated assumptions.
 
-> **Beyond subagents:** For research tasks where investigators need to _challenge each other's findings_ rather than report independently, Claude Code's **Agent Teams** (Chapter 4, Lesson 9) enable direct inter-agent communication. Subagents work well when only the result matters. Agent teams work better when the debate between investigators produces the real insight.
+> **Beyond subagents:** For research tasks where investigators need to _challenge each other's findings_ rather than report independently, Claude Code's **Agent Teams** (Chapter 15, Lesson 9) enable direct inter-agent communication. Subagents work well when only the result matters. Agent teams work better when the debate between investigators produces the real insight.
 
 ## Constructing Effective Research Requests
 

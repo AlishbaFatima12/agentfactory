@@ -1,14 +1,14 @@
 ---
-sidebar_position: 9
-title: "Chapter 9: Computation & Data Extraction Workflow"
+sidebar_position: 20
+title: "Chapter 20: Computation & Data Extraction Workflow"
 description: "Build Unix-styled Python utilities that process bank statements and prepare tax reports with 100% accuracy"
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-2/chapter-09/computation-data-extraction.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-2/chapter-20/computation-data-extraction.pdf"
   title: "Computation & Data Extraction Workflow"
   height: 700
 ---
 
-# Chapter 9: Computation & Data Extraction Workflow
+# Chapter 20: Computation & Data Extraction Workflow
 
 > "You already command files with Bash. Now command computation with Python — same pipes, same principles, zero syntax memorization."
 
@@ -24,14 +24,14 @@ This chapter breaks through that wall. You'll build Python scripts that slot int
 
 A personal library of Unix-styled Python commands in `~/tools`:
 
-| Tool | What It Does |
-|------|-------------|
-| `sum.py` | Sums decimal numbers from stdin |
-| `sum-expenses.py` | Parses real bank CSVs with quoted fields |
-| `extract-column.py` | Pulls one column from any CSV |
-| `filter.py` | Keeps numbers matching a condition |
-| `stats.py` | Prints sum, count, average, min, max |
-| `tax-prep` | Categorizes and totals deductible expenses |
+| Tool                | What It Does                               |
+| ------------------- | ------------------------------------------ |
+| `sum.py`            | Sums decimal numbers from stdin            |
+| `sum-expenses.py`   | Parses real bank CSVs with quoted fields   |
+| `extract-column.py` | Pulls one column from any CSV              |
+| `filter.py`         | Keeps numbers matching a condition         |
+| `stats.py`          | Prints sum, count, average, min, max       |
+| `tax-prep`          | Categorizes and totals deductible expenses |
 
 By the end: `cat ~/finances/2025/*.csv | tax-prep` produces a categorized report your accountant can use. One command. Every year.
 
@@ -107,13 +107,13 @@ Your hand-calculated expense total (all 28 debits, excluding the two credits): *
 
 ## Chapter Structure
 
-| Lesson | Title                                | Duration | Key Skill                              |
-| ------ | ------------------------------------ | -------- | -------------------------------------- |
-| 1      | From Broken Math to Your First Tool  | 30 min   | Build a Python utility from scratch    |
-| 2      | The Testing Loop                     | 25 min   | Verify with exit codes and test data   |
-| 3      | Parsing Real Data                    | 30 min   | Parse CSV, install permanently |
-| 4      | One Tool, One Job                    | 25 min   | Decompose into composable Unix tools   |
-| 5      | Data Wrangling & Domain Transfer     | 40 min   | Categorize with regex, prove it transfers to server logs |
-| 6      | Capstone: Tax Season Prep            | 40 min   | Generate tax-ready report              |
+| Lesson | Title                               | Duration | Key Skill                                                |
+| ------ | ----------------------------------- | -------- | -------------------------------------------------------- |
+| 1      | From Broken Math to Your First Tool | 30 min   | Build a Python utility from scratch                      |
+| 2      | The Testing Loop                    | 25 min   | Verify with exit codes and test data                     |
+| 3      | Parsing Real Data                   | 30 min   | Parse CSV, install permanently                           |
+| 4      | One Tool, One Job                   | 25 min   | Decompose into composable Unix tools                     |
+| 5      | Data Wrangling & Domain Transfer    | 40 min   | Categorize with regex, prove it transfers to server logs |
+| 6      | Capstone: Tax Season Prep           | 40 min   | Generate tax-ready report                                |
 
 **Total Duration**: 190 minutes (~3.2 hours)

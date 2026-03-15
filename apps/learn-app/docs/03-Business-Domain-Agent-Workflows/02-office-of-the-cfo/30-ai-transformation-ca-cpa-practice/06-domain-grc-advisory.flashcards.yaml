@@ -1,89 +1,89 @@
 deck:
-  id: "ch19-06-domain-grc-advisory"
+  id: "ch30-06-domain-grc-advisory"
   title: "Domain 5 — Governance, Risk and Compliance Advisory"
   description: "The Three Lines Model, continuous controls monitoring, GRC advisory resilience, and ServiceNow/IBM watsonx deployments"
   tags: ["ca-cpa", "grc", "three-lines-model", "coso", "compliance"]
   version: 1
   lesson: 6
-  chapter: 19
+  chapter: 30
 
 cards:
-  - id: "ch19-06-domain-grc-advisory-001"
+  - id: "ch30-06-domain-grc-advisory-001"
     front: "What are the three lines in the updated Three Lines Model (IIA 2020)?"
     back: "First Line: operational management (owns and manages risk). Second Line: oversight functions (sets policy, monitors first line). Third Line: independent assurance (internal audit)."
     tags: ["three-lines-model", "iia-2020"]
     difficulty: "basic"
 
-  - id: "ch19-06-domain-grc-advisory-002"
+  - id: "ch30-06-domain-grc-advisory-002"
     front: "Which GRC sub-discipline has the lowest AI automation potential?"
     back: "Governance Advisory — highly contextual, organisation-specific advisory on board governance, audit committee guidance, and governance best practice."
     tags: ["governance-advisory", "ai-automation-potential"]
     difficulty: "basic"
 
-  - id: "ch19-06-domain-grc-advisory-003"
+  - id: "ch30-06-domain-grc-advisory-003"
     front: "What are the three Gen-AI capabilities already serving GRC workflows?"
     back: "1. Policy drafting\n2. Risk assessment\n3. Compliance reporting"
     tags: ["gen-ai-capabilities", "grc"]
     difficulty: "basic"
 
-  - id: "ch19-06-domain-grc-advisory-004"
+  - id: "ch30-06-domain-grc-advisory-004"
     front: "What are the two agentic AI capabilities representing the most significant near-term GRC transformation?"
     back: "1. Continuous controls monitoring agent\n2. Autonomous compliance agent"
     tags: ["agentic-ai", "grc"]
     difficulty: "basic"
 
-  - id: "ch19-06-domain-grc-advisory-005"
+  - id: "ch30-06-domain-grc-advisory-005"
     front: "Where does an AI continuous controls monitoring agent sit in the Three Lines Model?"
     back: "Primarily in the second line — monitoring whether first-line controls are operating effectively. Can also support third-line internal audit with continuous transaction data."
     tags: ["three-lines-model", "monitoring-agent"]
     difficulty: "intermediate"
 
-  - id: "ch19-06-domain-grc-advisory-006"
+  - id: "ch30-06-domain-grc-advisory-006"
     front: "What did ServiceNow launch at Knowledge 2025 for AI agent governance?"
     back: "AI Control Tower — a centralised command for governing AI agents across the enterprise."
     tags: ["servicenow", "real-world-platforms"]
     difficulty: "basic"
 
-  - id: "ch19-06-domain-grc-advisory-007"
+  - id: "ch30-06-domain-grc-advisory-007"
     front: "IBM watsonx.governance was named a Leader in which 2025 report, and which regulations does it cover?"
     back: "2025 IDC MarketScape for Unified AI Governance Platforms. Compliance accelerators cover the EU AI Act, ISO 42001, and NIST AI RMF."
     tags: ["ibm-watsonx", "real-world-platforms"]
     difficulty: "intermediate"
 
-  - id: "ch19-06-domain-grc-advisory-008"
+  - id: "ch30-06-domain-grc-advisory-008"
     front: "Why is GRC advisory the CA/CPA domain least directly threatened by AI automation?"
     back: "Its core product is advisory judgment — understanding what a specific organisation needs, not applying a standard process to standard inputs. BECAUSE this contextual judgment is not a retrieval or rule-application task that AI executes reliably."
     tags: ["advisory-resilience", "grc"]
     difficulty: "intermediate"
     why: "What conditions would have to change for GRC advisory judgment to become automatable in the future?"
 
-  - id: "ch19-06-domain-grc-advisory-009"
+  - id: "ch30-06-domain-grc-advisory-009"
     front: "What four elements must a control specification include for an AI monitoring agent to monitor it effectively?"
     back: "1. Prevention objective (what it prevents)\n2. Evidence data (what proves execution)\n3. Failure anomaly (what indicates failure)\n4. Agent response (what the agent does when anomaly detected)"
     tags: ["control-design", "monitoring-specification"]
     difficulty: "intermediate"
 
-  - id: "ch19-06-domain-grc-advisory-010"
+  - id: "ch30-06-domain-grc-advisory-010"
     front: "How does the professional GRC role transform from the periodic model to the continuous monitoring model?"
     back: "From testing controls periodically to designing and overseeing AI agents that monitor controls continuously — requiring monitoring programme design, threshold calibration, and agent governance skills."
     tags: ["role-transformation", "continuous-monitoring"]
     difficulty: "intermediate"
     why: "What new governance layer is created when AI agents themselves need to be governed for GRC compliance?"
 
-  - id: "ch19-06-domain-grc-advisory-011"
+  - id: "ch30-06-domain-grc-advisory-011"
     front: "How does the COSO 2013 framework's Monitoring Activities component change when AI handles continuous monitoring?"
     back: "AI continuous monitoring agents directly transform Monitoring Activities — executing real-time checks that formerly happened periodically. The Control Environment (governance culture, tone at the top) remains a human responsibility."
     tags: ["coso", "monitoring-activities"]
     difficulty: "advanced"
     why: "Which of the five COSO components is most resistant to AI transformation, and why?"
 
-  - id: "ch19-06-domain-grc-advisory-012"
+  - id: "ch30-06-domain-grc-advisory-012"
     front: "Pakistan's SECP Code requires listed companies to have which three governance functions?"
     back: "Audit committees, internal audit functions, and risk management frameworks — all governed under Companies Act 2017 and Code of Corporate Governance."
     tags: ["pakistan-regulatory", "secp"]
     difficulty: "basic"
 
-  - id: "ch19-06-domain-grc-advisory-013"
+  - id: "ch30-06-domain-grc-advisory-013"
     front: "Compliance monitoring vs governance advisory: which responds differently to continuous AI monitoring and why?"
     back: "Compliance monitoring becomes largely automated — agents track obligations and flag gaps continuously. Governance advisory remains judgment-intensive BECAUSE advising boards on what findings mean and how to respond requires contextual and relational judgment."
     tags: ["compliance-monitoring", "governance-advisory", "ai-impact"]

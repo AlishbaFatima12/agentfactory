@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
 title: "Spec-Driven Development"
-chapter: 1
+chapter: 12
 lesson: 8
 duration_minutes: 30
 

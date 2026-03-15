@@ -184,20 +184,20 @@ Present to user BEFORE reading lessons:
 
 | Chapter | Lessons | Role | Weight | Rationale |
 |---------|---------|------|--------|-----------|
-| Ch 3: General Agents | 52 | core-practical | 35% | Primary hands-on chapter |
-| Ch 6: Seven Principles | 20 | core-conceptual | 20% | Synthesis chapter |
-| Ch 4: Context Engineering | 22 | core-conceptual | 20% | Quality discipline |
-| Ch 1: Agent Factory | 22 | supporting | 15% | Foundational concepts |
-| Ch 5: SDD | 10 | supporting | 8% | Methodology |
-| Ch 2: Markdown | 12 | prerequisite | 2% | Format only |
+| Ch 14: General Agents | 52 | core-practical | 35% | Primary hands-on chapter |
+| Ch 17: Seven Principles | 20 | core-conceptual | 20% | Synthesis chapter |
+| Ch 15: Context Engineering | 22 | core-conceptual | 20% | Quality discipline |
+| Ch 12: Agent Factory | 22 | supporting | 15% | Foundational concepts |
+| Ch 16: SDD | 10 | supporting | 8% | Methodology |
+| Ch 13: Markdown | 12 | prerequisite | 2% | Format only |
 
 **Proposed question distribution (150 total):**
-- Ch 3: 52 questions
-- Ch 6: 30 questions
-- Ch 4: 30 questions
-- Ch 1: 23 questions
-- Ch 5: 12 questions
-- Ch 2: 3 questions
+- Ch 14: 52 questions
+- Ch 17: 30 questions
+- Ch 15: 30 questions
+- Ch 12: 23 questions
+- Ch 16: 12 questions
+- Ch 13: 3 questions
 
 Proceed with this weighting?
 ```
@@ -206,12 +206,12 @@ User can adjust weights before lesson reading begins.
 
 ### Why This Matters
 
-| Without Phase 0                                    | With Phase 0                       |
-| -------------------------------------------------- | ---------------------------------- |
-| Ch 2 (Markdown) gets 12 lessons × 2 = 24 questions | Ch 2 gets 2% = 3 questions         |
-| Lesson count drives distribution                   | Book goals drive distribution      |
-| Supporting chapters over-weighted                  | Core chapters properly prioritized |
-| Prerequisite skills tested heavily                 | Prerequisites minimally tested     |
+| Without Phase 0                                     | With Phase 0                       |
+| --------------------------------------------------- | ---------------------------------- |
+| Ch 13 (Markdown) gets 12 lessons × 2 = 24 questions | Ch 13 gets 2% = 3 questions        |
+| Lesson count drives distribution                    | Book goals drive distribution      |
+| Supporting chapters over-weighted                   | Core chapters properly prioritized |
+| Prerequisite skills tested heavily                  | Prerequisites minimally tested     |
 
 ---
 
@@ -420,24 +420,24 @@ FOR each chapter:
 
 ```
 Phase 0 determined chapter weights:
-  Ch 3: 35% (core-practical, 52 lessons)
-  Ch 4: 20% (core-conceptual, 22 lessons)
-  Ch 6: 20% (core-conceptual, 20 lessons)
-  Ch 1: 15% (supporting, 22 lessons)
-  Ch 5: 8%  (supporting, 10 lessons)
-  Ch 2: 2%  (prerequisite, 12 lessons)
+  Ch 14: 35% (core-practical, 52 lessons)
+  Ch 15: 20% (core-conceptual, 22 lessons)
+  Ch 17: 20% (core-conceptual, 20 lessons)
+  Ch 12: 15% (supporting, 22 lessons)
+  Ch 16: 8%  (supporting, 10 lessons)
+  Ch 13: 2%  (prerequisite, 12 lessons)
 
 Total = 150 questions (T2)
 
 Chapter allocation:
-  Ch 3: 150 * 0.35 = 52 questions
-  Ch 4: 150 * 0.20 = 30 questions
-  Ch 6: 150 * 0.20 = 30 questions
-  Ch 1: 150 * 0.15 = 23 questions
-  Ch 5: 150 * 0.08 = 12 questions
-  Ch 2: 150 * 0.02 = 3 questions
+  Ch 14: 150 * 0.35 = 52 questions
+  Ch 15: 150 * 0.20 = 30 questions
+  Ch 17: 150 * 0.20 = 30 questions
+  Ch 12: 150 * 0.15 = 23 questions
+  Ch 16: 150 * 0.08 = 12 questions
+  Ch 13: 150 * 0.02 = 3 questions
 
-Within Ch 2 (3 questions for 12 lessons):
+Within Ch 13 (3 questions for 12 lessons):
   - 2 core lessons get 1 question each
   - 10 intro/supporting lessons get 0-1 questions
   - Total: 3 questions (matches chapter allocation)
@@ -953,8 +953,8 @@ Phase 0 Complete (Curriculum Context):
   - Chapters in scope: {N}
   - Chapter weights:
     | Chapter | Role | Weight | Questions |
-    | Ch 3 | core-practical | 35% | 52 |
-    | Ch 6 | core-conceptual | 20% | 30 |
+    | Ch 14 | core-practical | 35% | 52 |
+    | Ch 17 | core-conceptual | 20% | 30 |
     ...
   - User confirmed: {yes/adjusted to X}
 

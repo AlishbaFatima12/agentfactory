@@ -11,7 +11,7 @@ The Cowork Plugin Marketplace is a distribution mechanism for generalisable doma
 - The marketplace solves the discovery and deployment problem — without it, a well-designed SKILL.md stops at the organisation that built it
 - Selling general domain best practice does not mean selling competitive advantage — publishable knowledge is knowledge a competitor could independently arrive at from public sources and professional training
 - Both categories (skill packs and connector packages) require subscriber customisation — the marketplace provides the scaffold, not the finished agent
-- The economics connect to the Marketplace monetisation model from Chapter 14 Lesson 5 — the model is most attractive when domain expertise is valuable across many organisations but not dependent on any single organisation's proprietary context
+- The economics connect to the Marketplace monetisation model from Chapter 25 Lesson 5 — the model is most attractive when domain expertise is valuable across many organisations but not dependent on any single organisation's proprietary context
 
 ### Common Mistakes
 - Assuming published expertise is proprietary competitive advantage — publishable knowledge by definition is not proprietary
@@ -20,4 +20,4 @@ The Cowork Plugin Marketplace is a distribution mechanism for generalisable doma
 
 ### Connections
 - **Builds on**: Lesson 8 established the ownership model for bespoke plugins; this lesson addresses what happens when SKILL.md expertise is generalisable
-- **Leads to**: Lesson 10 synthesises the full chapter architecture; Chapter 16 teaches the Knowledge Extraction Method for producing a production-quality SKILL.md
+- **Leads to**: Lesson 10 synthesises the full chapter architecture; Chapter 27 teaches the Knowledge Extraction Method for producing a production-quality SKILL.md

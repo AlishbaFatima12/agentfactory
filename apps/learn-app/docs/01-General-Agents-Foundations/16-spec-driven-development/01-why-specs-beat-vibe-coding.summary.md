@@ -6,7 +6,7 @@ Vibe coding fails systematically for substantial work because three failure mode
 
 - **Three Failure Modes**: Context loss (earlier decisions fade), assumption drift (reasonable defaults diverge from intent), and pattern violations (generated output ignores your standards)—these are diagnostic categories you apply to any broken AI interaction
 - **Compounding Severity**: Failure modes amplify each other over turns—context loss leaves gaps, assumption drift fills them with wrong defaults, pattern violations make the defaults conflict with your architecture
-- **Context Engineering Connection**: The three failure modes map directly to context engineering problems from Chapter 4—persistence, constraints, and working memory
+- **Context Engineering Connection**: The three failure modes map directly to context engineering problems from Chapter 15—persistence, constraints, and working memory
 
 ### Critical Patterns
 
@@ -22,5 +22,5 @@ Vibe coding fails systematically for substantial work because three failure mode
 
 ### Connections
 
-- **Builds on**: Context engineering principles (Chapter 4)
+- **Builds on**: Context engineering principles (Chapter 15)
 - **Leads to**: The three SDD implementation levels (Lesson 2) and project constitutions (Lesson 3)

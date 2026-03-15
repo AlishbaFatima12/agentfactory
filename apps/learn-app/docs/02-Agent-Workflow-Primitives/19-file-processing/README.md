@@ -1,14 +1,14 @@
 ---
-sidebar_position: 8
-title: "Chapter 8: File Processing Workflows"
+sidebar_position: 19
+title: "Chapter 19: File Processing Workflows"
 description: "Direct Claude Code to solve real file organization problems while observing the Seven Principles in action"
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-2/chapter-08/file-processing-workflows.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-2/chapter-19/file-processing-workflows.pdf"
   title: "File Processing Workflows"
   height: 700
 ---
 
-# Chapter 8: File Processing Workflows
+# Chapter 19: File Processing Workflows
 
 You have 847 files in your Downloads folder. You need one of them by Friday. Three of them are duplicates eating 4 GB of space. And the file your boss asked about? It's in there somewhere.
 
@@ -18,7 +18,7 @@ But here's what this chapter is _actually_ about: it's not about files. Files ar
 
 By the end, you'll have a reusable prompt toolkit and — more importantly — the instinct to demand safety, verification, and scripts from every agent interaction. Most people prompt blindly and hope for the best. You're about to learn the systematic approach.
 
-In Chapter 6, you learned the Four-Phase Workflow for Claude Code sessions: **Explore → Plan → Implement → Commit**. File processing expands this into a seven-step framework: **Survey → Backup → Design Rules → Test → Execute → Verify → Document**. The extra steps exist because file operations are irreversible — a moved file is moved, a renamed file is renamed. The Four-Phase Workflow assumed version control as your safety net. Here, your files don't have `git revert`, so backups, testing, and verification become explicit steps instead.
+In Chapter 17, you learned the Four-Phase Workflow for Claude Code sessions: **Explore → Plan → Implement → Commit**. File processing expands this into a seven-step framework: **Survey → Backup → Design Rules → Test → Execute → Verify → Document**. The extra steps exist because file operations are irreversible — a moved file is moved, a renamed file is renamed. The Four-Phase Workflow assumed version control as your safety net. Here, your files don't have `git revert`, so backups, testing, and verification become explicit steps instead.
 
 ## 📚 Teaching Aid
 

@@ -16,7 +16,7 @@ keywords:
     "Intent-Driven Financial Architecture",
     "IDFA plugin",
   ]
-chapter: 18
+chapter: 29
 lesson: 8
 duration_minutes: 35
 
@@ -330,13 +330,13 @@ The workflow is:
 
 This separation is what makes IDFA retrofits trustworthy. The first step is provably lossless. The second step is an informed decision. Mixing them produces neither.
 
-## Exercise: Retrofit the Chapter 17 Practice Workbook
+## Exercise: Retrofit the Chapter 28 Practice Workbook
 
-You will retrofit the coordinate-based practice workbook from Chapter 17. If you completed Chapter 17, you already know this model — it uses cell references like `=B14*C5` throughout. Now you will convert it to IDFA compliance.
+You will retrofit the coordinate-based practice workbook from Chapter 28. If you completed Chapter 28, you already know this model — it uses cell references like `=B14*C5` throughout. Now you will convert it to IDFA compliance.
 
 **Download the workbook if you do not have it:**
 
-<a href="/downloads/ch17/ch17_veeva_practice_workbook.xlsx" download>Download Practice Workbook (ch17_veeva_practice_workbook.xlsx)</a>
+<a href="/downloads/ch28/ch28_veeva_practice_workbook.xlsx" download>Download Practice Workbook (ch28_veeva_practice_workbook.xlsx)</a>
 
 ### Step 1 — Inspect the Model
 
@@ -350,7 +350,7 @@ cells it references. Then organise everything into two groups:
 Inputs (raw values) and Calculations (formulas).
 ```
 
-Review the inspection. Does Cowork's interpretation of each input match your understanding from Chapter 17? Correct any misinterpretations before proceeding — the Named Range names depend on accurate identification.
+Review the inspection. Does Cowork's interpretation of each input match your understanding from Chapter 28? Correct any misinterpretations before proceeding — the Named Range names depend on accurate identification.
 
 ### Step 2 — Retrofit Three Calculations
 

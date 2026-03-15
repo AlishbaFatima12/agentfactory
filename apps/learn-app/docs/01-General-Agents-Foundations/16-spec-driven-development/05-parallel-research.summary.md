@@ -22,5 +22,5 @@ Parallel research spawns 3-5 independent subagents that investigate different as
 
 ### Connections
 
-- **Builds on**: Four-phase workflow overview (Lesson 4), context isolation (Chapter 4, Lesson 9)
+- **Builds on**: Four-phase workflow overview (Lesson 4), context isolation (Chapter 15, Lesson 9)
 - **Leads to**: Writing specifications from research findings (Lesson 6)

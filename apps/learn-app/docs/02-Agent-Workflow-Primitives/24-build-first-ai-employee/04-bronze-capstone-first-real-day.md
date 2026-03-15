@@ -3,7 +3,7 @@ sidebar_position: 4
 title: "Bronze Capstone: First Real Day"
 description: "Put your AI employee through a structured evaluation with real professional tasks, testing identity, skill, connection, and clarification behavior."
 keywords: [nanoclaw, capstone, evaluation, ai employee, testing, professional tasks, bronze tier]
-chapter: 13
+chapter: 24
 lesson: 4
 duration_minutes: 45
 

@@ -11,7 +11,7 @@ keywords:
   - enterprise AI sales
   - knowledge-first deployment
   - monetisation framing
-chapter: 14
+chapter: 25
 lesson: 8
 duration_minutes: 20
 
@@ -159,7 +159,7 @@ This sequence works whether you are proposing a deployment to your own organisat
 
 ## What Comes Next
 
-Chapter 15 opens the blueprint. It describes what a Cowork plugin looks like from the inside -- the technical architecture that carries your expertise into enterprise operation. The strategic vocabulary you built in this chapter becomes the foundation for the practical deployment that follows.
+Chapter 26 opens the blueprint. It describes what a Cowork plugin looks like from the inside -- the technical architecture that carries your expertise into enterprise operation. The strategic vocabulary you built in this chapter becomes the foundation for the practical deployment that follows.
 
 ## Try With AI
 

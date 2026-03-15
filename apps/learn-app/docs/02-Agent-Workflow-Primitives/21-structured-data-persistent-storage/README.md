@@ -1,20 +1,20 @@
 ---
-sidebar_position: 10
-title: "Chapter 10: Structured Data & Persistent Storage"
+sidebar_position: 21
+title: "Chapter 21: Structured Data & Persistent Storage"
 description: "Move from one-off Python scripts to persistent PostgreSQL systems on Neon using SQLAlchemy"
-feature_name: "chapter-10-sql-neon"
-chapter_number: 10
+feature_name: "chapter-21-sql-neon"
+chapter_number: 21
 part_number: 2
 created_date: 2026-02-06
 version: 4.1
 status: published
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-2/chapter-10/structured-data-persistent-storage.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-2/chapter-21/structured-data-persistent-storage.pdf"
   title: "Structured Data & Persistent Storage"
   height: 700
 ---
 
-# Chapter 10: Structured Data & Persistent Storage
+# Chapter 21: Structured Data & Persistent Storage
 
 > SQL: 100% accuracy. $0.51. Forty-five seconds.
 > Bash: 52.7% accuracy. $3.34. Four hundred seconds.
@@ -76,7 +76,7 @@ A Computation & Data Extraction chapter scripts can be excellent and still hit h
 
 You can keep patching loops and tightening conventions. But when reliability depends on memory and discipline alone, the system will drift. (Ask anyone who has maintained a shared spreadsheet for more than six months.)
 
-## The Chapter 10 Promise
+## The Chapter 21 Promise
 
 By moving to SQLAlchemy + Neon PostgreSQL, you gain:
 
@@ -89,11 +89,11 @@ By moving to SQLAlchemy + Neon PostgreSQL, you gain:
 
 ## Escalation Map
 
-| Stage      | Primary Tool            | Strength                                                           | Breakpoint                                                     |
-| ---------- | ----------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------- |
-| File Processing                | Bash                    | File discovery, batch operations, workflow control                 | Weak for decimal computation and schema-aware querying         |
-| Computation & Data Extraction  | Python                  | Deterministic parsing and computation                              | Brittle for long-lived, multi-user, relationship-heavy queries |
-| Structured Data                | SQLAlchemy + PostgreSQL | Persistent structure, relational integrity, safe concurrent writes | High-stakes reports may still need independent verification    |
+| Stage                         | Primary Tool            | Strength                                                           | Breakpoint                                                     |
+| ----------------------------- | ----------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------- |
+| File Processing               | Bash                    | File discovery, batch operations, workflow control                 | Weak for decimal computation and schema-aware querying         |
+| Computation & Data Extraction | Python                  | Deterministic parsing and computation                              | Brittle for long-lived, multi-user, relationship-heavy queries |
+| Structured Data               | SQLAlchemy + PostgreSQL | Persistent structure, relational integrity, safe concurrent writes | High-stakes reports may still need independent verification    |
 
 This chapter does not replace earlier tools. It adds the right tool when the old tool reaches its boundary.
 
@@ -119,7 +119,7 @@ By chapter end, you should be able to answer these five questions:
 
 ## Seven Principles (Compact)
 
-| Principle                         | Chapter 10 Application                                                      |
+| Principle                         | Chapter 21 Application                                                      |
 | --------------------------------- | --------------------------------------------------------------------------- |
 | P1 Bash is the Key                | Operational glue for environment checks, diagnostics, and run orchestration |
 | P2 Code as Universal Interface    | Model code defines schema contracts that every tool follows                 |
@@ -131,17 +131,17 @@ By chapter end, you should be able to answer these five questions:
 
 ## Lesson Flow
 
-| Lesson                        | Outcome                                                        | Fast Visible Win                                                   |
-| ----------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------ |
-| L0 From CSV to Databases      | Decide when Computation & Data Extraction patterns should escalate to SQL          | Name 3 concrete breakpoints in your current workflow               |
-| L1 Build Your Database Skill  | Verify data survives after your agent's program exits          | Direct agent to prove persistence; read the verification output    |
-| L2 Models as Code             | Describe your data model clearly enough for an agent to build  | Review agent's schema output against your plain-English description |
-| L3 Creating and Reading Data  | Verify agent-written CRUD is safe and correct                  | Direct agent to store and retrieve one row; confirm the output     |
-| L4 Relationships and Joins    | Ask for linked data in English; verify the result              | Describe a join in business terms; verify the agent's query output |
-| L5 Transactions and Atomicity | Decide when operations need all-or-nothing guarantees          | Direct agent to simulate a failed transfer; verify zero partial rows |
-| L6 Connecting to Neon         | Direct the cloud deployment and verify the connection          | Verify `SELECT 1 → OK` after agent configures Neon connection      |
-| L7 Hybrid Patterns            | Decide when SQL-only is enough vs when verification is needed  | Catch a deliberate mismatch; decide whether to block release       |
-| L8 Capstone                   | Act as director: describe, verify, and make a release decision | Review agent's evidence bundle and make an explicit release call   |
+| Lesson                        | Outcome                                                                   | Fast Visible Win                                                     |
+| ----------------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| L0 From CSV to Databases      | Decide when Computation & Data Extraction patterns should escalate to SQL | Name 3 concrete breakpoints in your current workflow                 |
+| L1 Build Your Database Skill  | Verify data survives after your agent's program exits                     | Direct agent to prove persistence; read the verification output      |
+| L2 Models as Code             | Describe your data model clearly enough for an agent to build             | Review agent's schema output against your plain-English description  |
+| L3 Creating and Reading Data  | Verify agent-written CRUD is safe and correct                             | Direct agent to store and retrieve one row; confirm the output       |
+| L4 Relationships and Joins    | Ask for linked data in English; verify the result                         | Describe a join in business terms; verify the agent's query output   |
+| L5 Transactions and Atomicity | Decide when operations need all-or-nothing guarantees                     | Direct agent to simulate a failed transfer; verify zero partial rows |
+| L6 Connecting to Neon         | Direct the cloud deployment and verify the connection                     | Verify `SELECT 1 → OK` after agent configures Neon connection        |
+| L7 Hybrid Patterns            | Decide when SQL-only is enough vs when verification is needed             | Catch a deliberate mismatch; decide whether to block release         |
+| L8 Capstone                   | Act as director: describe, verify, and make a release decision            | Review agent's evidence bundle and make an explicit release call     |
 
 ## Prerequisites
 
@@ -161,7 +161,7 @@ No simplification is allowed to remove:
 
 If a rewrite makes content shorter but drops any of these, it is a regression.
 
-## After Chapter 10
+## After Chapter 21
 
 When you finish this chapter, your engineering posture changes:
 

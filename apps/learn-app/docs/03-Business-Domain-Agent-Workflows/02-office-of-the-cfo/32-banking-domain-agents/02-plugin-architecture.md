@@ -18,7 +18,7 @@ keywords:
     "bank-recon command",
     "bank-aml command",
   ]
-chapter: 21
+chapter: 32
 lesson: 2
 duration_minutes: 25
 
@@ -66,7 +66,7 @@ cognitive_load:
   assessment: "6 concepts at B1 level — within the 7-10 cognitive limit for this tier. The lesson is a walkthrough of the plugin's architecture using concrete file listings and query traces, keeping cognitive load manageable through concrete examples rather than abstract theory."
 
 differentiation:
-  extension_for_advanced: "Compare the banking plugin's pillar-aware routing with Chapter 20's jurisdiction-aware routing. Both use a router to select specialised skills, but they route on different dimensions (pillar vs jurisdiction). Could a banking plugin also need jurisdiction-aware routing? Under what circumstances?"
+  extension_for_advanced: "Compare the banking plugin's pillar-aware routing with Chapter 31's jurisdiction-aware routing. Both use a router to select specialised skills, but they route on different dimensions (pillar vs jurisdiction). Could a banking plugin also need jurisdiction-aware routing? Under what circumstances?"
   remedial_for_struggling: "Focus on two things: the skill library table (which skills exist) and the query trace (how a query flows through the router to the right skill). If you can look at a banking question and predict which skill(s) the router will load, you understand the architecture."
 ---
 
@@ -76,7 +76,7 @@ In Lesson 1, you learned that every bank is simultaneously governed by three reg
 
 ## Installing the Banking Plugin
 
-The banking plugin installs the same way as the Islamic finance plugin from Chapter 20.
+The banking plugin installs the same way as the Islamic finance plugin from Chapter 31.
 
 **Claude Code CLI:**
 
@@ -126,7 +126,7 @@ These commands are convenience shortcuts. The router handles the same queries au
 
 ## How the Router Works
 
-The banking router operates differently from the Islamic finance router in Chapter 20. Where the Islamic finance router routes by **jurisdiction** (Bahrain vs Malaysia vs UK), the banking router routes by **pillar** (IFRS 9 vs Basel vs AML). The routing protocol has three steps.
+The banking router operates differently from the Islamic finance router in Chapter 31. Where the Islamic finance router routes by **jurisdiction** (Bahrain vs Malaysia vs UK), the banking router routes by **pillar** (IFRS 9 vs Basel vs AML). The routing protocol has three steps.
 
 **Step 1 — Detect the pillar.** The router reads the query for pillar signals:
 
@@ -177,7 +177,7 @@ This chaining is what single-pillar agents cannot do. An IFRS 9-only agent would
 
 ## The Plugin File Structure
 
-The banking plugin follows the same directory structure as the Islamic finance plugin from Chapter 20:
+The banking plugin follows the same directory structure as the Islamic finance plugin from Chapter 31:
 
 ```
 .claude/skills/
@@ -217,7 +217,7 @@ The banking plugin follows the same directory structure as the Islamic finance p
     └── SKILL.md              # Reconciliation procedures
 ```
 
-Each SKILL.md file follows the standard format from Chapter 15 — YAML frontmatter with `name` and `description`, followed by the skill's calculation rules, decision logic, and output templates. The key difference from Chapter 20 is the routing dimension: instead of routing by jurisdiction, the banking router routes by pillar.
+Each SKILL.md file follows the standard format from Chapter 26 — YAML frontmatter with `name` and `description`, followed by the skill's calculation rules, decision logic, and output templates. The key difference from Chapter 31 is the routing dimension: instead of routing by jurisdiction, the banking router routes by pillar.
 
 ## Worked Example: Monthly IFRS 9 ECL Workflow
 
@@ -234,8 +234,8 @@ To see how multiple skills chain in a real workflow, consider the monthly ECL ca
 
 The `/bank-ecl` command runs steps 1-5 automatically. Step 6 requires the `/bank-capital` command or a cross-pillar query that the router chains.
 
-:::tip Connection to Chapter 20
-The banking plugin's pillar-aware routing and the Islamic finance plugin's jurisdiction-aware routing are two instances of the same architectural pattern: a router that detects context, loads specialised skills, and chains outputs. If you mastered the three-layer architecture in Chapter 20, the banking plugin's architecture is the same pattern applied to a different routing dimension.
+:::tip Connection to Chapter 31
+The banking plugin's pillar-aware routing and the Islamic finance plugin's jurisdiction-aware routing are two instances of the same architectural pattern: a router that detects context, loads specialised skills, and chains outputs. If you mastered the three-layer architecture in Chapter 31, the banking plugin's architecture is the same pattern applied to a different routing dimension.
 :::
 
 ## Try With AI

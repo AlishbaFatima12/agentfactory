@@ -1,106 +1,106 @@
 deck:
-  id: "ch23-12-compliance"
+  id: "ch34-12-compliance"
   title: "Outreach Compliance and Regional Context"
   description: "PECA, GDPR, PECR, UAE PDPL compliance, jurisdiction overlays, and the three-tier compliance diagnostic"
-  tags: ["sales", "revops", "marketing", "chapter-23", "compliance"]
+  tags: ["sales", "revops", "marketing", "chapter-34", "compliance"]
   version: 1
 
 cards:
-  - id: "ch23-12-compliance-001"
+  - id: "ch34-12-compliance-001"
     front: "What regulation governs electronic outreach in Pakistan, and what is its consent model?"
     back: "PECA 2016 (Prevention of Electronic Crimes Act). Opt-out model — promotional messages must include an unsubscribe option."
     difficulty: "basic"
     tags: ["peca"]
 
-  - id: "ch23-12-compliance-002"
+  - id: "ch34-12-compliance-002"
     front: "Under UK GDPR + PECR, can you send cold B2B email to a corporate subscriber (Ltd, PLC, LLP)?"
     back: "Cold B2B email to corporate subscribers is permitted — PECR's electronic mail marketing rule does not apply. You must identify yourself and offer opt-out."
     difficulty: "basic"
     tags: ["uk-gdpr-pecr"]
 
-  - id: "ch23-12-compliance-003"
+  - id: "ch34-12-compliance-003"
     front: "Why is cold WhatsApp outreach to a UK prospect problematic under PECR?"
     back: "PECR classifies WhatsApp messages as electronic mail. Cold electronic mail to individual subscribers requires consent, which you do not have for a cold prospect."
     difficulty: "intermediate"
     tags: ["pecr-whatsapp"]
 
-  - id: "ch23-12-compliance-004"
+  - id: "ch34-12-compliance-004"
     front: "What is the UAE PDPL (Federal Decree-Law No. 45/2021) consent requirement for promotional content?"
     back: "Consent required for processing personal data for marketing purposes."
     difficulty: "basic"
     tags: ["uae-pdpl"]
 
-  - id: "ch23-12-compliance-005"
+  - id: "ch34-12-compliance-005"
     front: "What is the primary B2B outreach channel in each of NexaFlow's three markets?"
     back: "Pakistan: WhatsApp + referrals.\nUK: Email + LinkedIn.\nUAE: WhatsApp + email."
     difficulty: "basic"
     tags: ["channel-by-market"]
 
-  - id: "ch23-12-compliance-006"
+  - id: "ch34-12-compliance-006"
     front: "A legally compliant email sent to a Dubai prospect on Friday morning fails. Why?"
     back: "The UAE working week is Sunday through Thursday. Sending on Friday (the weekend) signals unfamiliarity with the market — a Tier 3 cultural failure, not a legal failure."
     difficulty: "intermediate"
     why: "What other cultural signals might indicate a sender does not understand the UAE market?"
     tags: ["uae-cultural"]
 
-  - id: "ch23-12-compliance-007"
+  - id: "ch34-12-compliance-007"
     front: "What are the three tiers of the compliance diagnostic?"
     back: "Tier 1: Letter of the law (legal compliance).\nTier 2: Spirit of the law (ethical compliance).\nTier 3: Cultural expectations (effectiveness)."
     difficulty: "basic"
     tags: ["three-tier-diagnostic"]
 
-  - id: "ch23-12-compliance-008"
+  - id: "ch34-12-compliance-008"
     front: "A message buries the opt-out link in a wall of text but technically includes it. Which compliance tier does this violate?"
     back: "Tier 2 — spirit of the law. It passes the Tier 1 checkbox (opt-out exists) but violates the intent of GDPR transparency by making the opt-out effectively invisible."
     difficulty: "intermediate"
     tags: ["tier-2-violation"]
 
-  - id: "ch23-12-compliance-009"
+  - id: "ch34-12-compliance-009"
     front: "Why does one outreach template across three markets guarantee failure in at least two?"
     back: "Pakistan demands WhatsApp with warm introduction. The UK demands email or LinkedIn with GDPR-compliant framing. The UAE demands formal titles and cultural awareness. Channel, tone, compliance, and relationship norms differ in each market."
     difficulty: "intermediate"
     why: "What is the minimum number of outreach variants needed for a three-market campaign?"
     tags: ["cross-market"]
 
-  - id: "ch23-12-compliance-010"
+  - id: "ch34-12-compliance-010"
     front: "What cultural markers should UAE outreach include?"
     back: "Arabic greeting ('As-salamu alaykum'), formal titles (Sheikh, Dr., Eng.), relationship-building before business proposition, and Sunday-Thursday delivery timing."
     difficulty: "intermediate"
     tags: ["uae-cultural-markers"]
 
-  - id: "ch23-12-compliance-011"
+  - id: "ch34-12-compliance-011"
     front: "How do jurisdiction overlays in the RevOps extension work?"
     back: "When you specify a market, the plugin applies the correct compliance layer — footer disclosures, consent mechanisms, and channel recommendations — without changing the message body."
     difficulty: "basic"
     tags: ["jurisdiction-overlays"]
 
-  - id: "ch23-12-compliance-012"
+  - id: "ch34-12-compliance-012"
     front: "In Pakistan's B2B culture, why does a message forwarded by a mutual contact carry far more weight than a cold email?"
     back: "Pakistani business culture is relationship-driven. A warm introduction through a shared connection establishes trust immediately, while cold email from an unknown sender lacks the social proof that drives business conversations in Karachi."
     difficulty: "intermediate"
     why: "How would you adapt an outreach strategy when you have no mutual connections in a new market?"
     tags: ["pakistan-culture"]
 
-  - id: "ch23-12-compliance-013"
+  - id: "ch34-12-compliance-013"
     front: "What must you check before making cold B2B calls to UK prospects?"
     back: "Screen against the Telephone Preference Service (TPS) and Corporate TPS registers. Check at least every 28 days."
     difficulty: "intermediate"
     tags: ["tps-check"]
 
-  - id: "ch23-12-compliance-014"
+  - id: "ch34-12-compliance-014"
     front: "What is the maximum penalty under UK GDPR for outreach compliance violations?"
     back: "Up to GBP 17.5 million or 4% of global turnover."
     difficulty: "basic"
     tags: ["uk-penalties"]
 
-  - id: "ch23-12-compliance-015"
+  - id: "ch34-12-compliance-015"
     front: "Why can the jurisdiction overlay handle legal compliance automatically but not cultural adaptation?"
     back: "Legal compliance follows explicit rules (opt-out requirements, consent language, disclosures) that can be codified. Cultural norms — like when 'bhai' is appropriate or whether an Arabic greeting is expected — require human judgment about context the agent cannot assess."
     difficulty: "advanced"
     why: "What would it take to encode cultural norms into a jurisdiction overlay?"
     tags: ["jurisdiction-overlays"]
 
-  - id: "ch23-12-compliance-016"
+  - id: "ch34-12-compliance-016"
     front: "A cold email to Karachi passes every PECA requirement. Why might it still fail to generate a response?"
     back: "PECA compliance does not guarantee effectiveness. Without a warm introduction through a mutual connection, the email lacks the relationship anchor that drives response rates in Pakistan's referral-driven B2B culture — a Tier 3 failure."
     difficulty: "advanced"

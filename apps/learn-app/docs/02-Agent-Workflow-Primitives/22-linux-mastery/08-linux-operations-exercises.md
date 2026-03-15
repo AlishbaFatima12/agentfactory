@@ -1,8 +1,8 @@
 ---
 title: "Linux Operations Exercises"
-practice_exercise: ch11-linux-operations
+practice_exercise: ch22-linux-operations
 sidebar_position: 8
-chapter: 11
+chapter: 22
 lesson: 8
 duration_minutes: 60
 
@@ -217,6 +217,7 @@ Ali tries to read a log file and gets "Permission denied." He tries to write to 
 
 **The Broken State:**
 Several files and directories have incorrect permissions:
+
 - A log file owned by root that Ali's user cannot read
 - A config directory with permissions set to `700` owned by another user
 - An executable script that is missing the execute permission
@@ -266,6 +267,7 @@ Ali comes back to a server where an intern set up a project directory, but sever
 
 **The Broken State:**
 The project at `/opt/agents/data-collector/` has these problems:
+
 - The `.env` file exists but has permissions `644` (world-readable -- anyone on the server can read the API keys)
 - The `logs/` directory does not exist at all (the agent crashes trying to write logs)
 - The source code is in the root of the project instead of a `src/` subdirectory
@@ -306,6 +308,7 @@ Ali's competitor-tracker service was working yesterday. This morning, `systemctl
 
 **The Broken State:**
 The service fails to start. The symptoms are:
+
 - `systemctl status competitor-tracker` shows "failed" with exit code 1
 - The unit file references a Python path that no longer exists (someone moved the virtualenv)
 - The `.env` file is missing a required `DATABASE_URL` variable (someone deleted it during "cleanup")
@@ -345,6 +348,7 @@ Ali audits a server that another team has been using. He finds an agent running 
 
 **The Broken State:**
 The agent at `/opt/agents/report-generator/` has these security problems:
+
 - The systemd service runs as `User=root`
 - The `.env` file has permissions `666` (everyone can read AND write the API keys)
 - Password authentication is enabled on SSH (the server accepts password logins from the internet)
@@ -375,6 +379,7 @@ Ali checks his competitor-tracker Monday morning. The systemd service shows "act
 
 **The Broken State:**
 The LNPS investigation will reveal:
+
 - **Logs**: The last log entry says "Waiting for database connection..." repeated every 30 seconds since Friday at 11pm
 - **Network**: The database server (port 5432) is unreachable -- a firewall rule was changed Friday evening during maintenance
 - **Process**: The agent process is alive and consuming CPU (it is stuck in a connection retry loop)
@@ -398,6 +403,7 @@ Ali wakes up to three alerts at once. The competitor-tracker is down. The social
 
 **The Broken State:**
 The LNPS investigation across all three agents will reveal:
+
 - **competitor-tracker logs**: "OSError: [Errno 28] No space left on device" -- cannot write to logs
 - **social-monitor logs**: "PermissionError: [Errno 13] Permission denied: '/opt/agents/social-monitor/data/output.json'" -- cannot write output
 - **report-generator logs**: "ConnectionError: database disk image is malformed" -- SQLite database corrupted
@@ -437,6 +443,7 @@ Ali wrote a deployment spec and handed it to Claude Code. The deployment complet
 
 **The Broken State:**
 The deployment at `/opt/agents/price-watcher/` was executed from a spec, but:
+
 - The spec says the service runs as `price-watcher` user, but `systemctl show -p User price-watcher` shows `User=root` (the unit file was written correctly but `systemctl daemon-reload` was never run after editing)
 - The spec says `.env` has permissions `600`, but `ls -la` shows `644` (the `chmod` command was applied to the wrong file)
 - The spec says the service starts on boot, but `systemctl is-enabled price-watcher` shows "disabled" (the `systemctl enable` step was skipped)

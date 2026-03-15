@@ -18,7 +18,7 @@ keywords:
     "named ranges",
     "intent-driven financial architecture",
   ]
-chapter: 18
+chapter: 29
 lesson: 5
 duration_minutes: 25
 

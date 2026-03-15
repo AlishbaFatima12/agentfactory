@@ -11,7 +11,7 @@ keywords:
     pricing models,
     value proposition,
   ]
-chapter: 1
+chapter: 12
 lesson: 10
 duration_minutes: 45
 

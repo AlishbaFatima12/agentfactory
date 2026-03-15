@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: "Capstone: Tax Season Prep"
-chapter: 9
+chapter: 20
 lesson: 6
 layer: L2
 duration_minutes: 40

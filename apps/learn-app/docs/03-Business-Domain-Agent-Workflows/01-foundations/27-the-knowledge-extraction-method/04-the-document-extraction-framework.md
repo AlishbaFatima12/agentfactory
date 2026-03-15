@@ -17,7 +17,7 @@ keywords:
     "SKILL.md",
     "institutional knowledge",
   ]
-chapter: 16
+chapter: 27
 lesson: 4
 duration_minutes: 25
 

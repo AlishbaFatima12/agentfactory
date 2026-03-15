@@ -18,7 +18,7 @@ keywords:
     "LGD collateral haircut",
     "forced sale value",
   ]
-chapter: 21
+chapter: 32
 lesson: 4
 duration_minutes: 45
 

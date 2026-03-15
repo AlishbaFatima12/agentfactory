@@ -16,7 +16,7 @@ keywords:
     "PRA capital requirements",
     "OFAC sanctions",
   ]
-chapter: 21
+chapter: 32
 lesson: 13
 duration_minutes: 55
 

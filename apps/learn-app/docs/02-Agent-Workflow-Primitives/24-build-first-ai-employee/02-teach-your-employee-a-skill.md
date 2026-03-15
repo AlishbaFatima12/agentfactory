@@ -3,7 +3,7 @@ sidebar_position: 2
 title: "Teach Your Employee a Skill"
 description: "Encode your professional expertise into a NanoClaw skill with YAML frontmatter and domain decision rules so your AI employee thinks like a domain expert"
 keywords: ["NanoClaw", "SKILL.md", "agent skills", "domain expertise", "YAML frontmatter", "decision rules"]
-chapter: 13
+chapter: 24
 lesson: 2
 duration_minutes: 40
 

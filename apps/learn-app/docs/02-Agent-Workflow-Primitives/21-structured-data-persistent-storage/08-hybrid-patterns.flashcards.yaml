@@ -1,5 +1,5 @@
 deck:
-  id: ch10-07-hybrid-patterns
+  id: ch21-07-hybrid-patterns
   title: "Hybrid Patterns - When Tools Work Together"
   description: Flashcards covering true vs false hybrid verification, independence checklists, tolerance thresholds, mismatch policies, and risk-based tool selection.
   tags:
@@ -9,7 +9,7 @@ deck:
   - risk-based
   version: 1
 cards:
-- id: ch10-07-hybrid-patterns-001
+- id: ch21-07-hybrid-patterns-001
   type: recall
   difficulty: basic
   front: What is a false hybrid verification?
@@ -17,7 +17,7 @@ cards:
   tags:
   - false-hybrid
   - verification
-- id: ch10-07-hybrid-patterns-002
+- id: ch21-07-hybrid-patterns-002
   type: recall
   difficulty: basic
   front: What is a true hybrid verification?
@@ -25,7 +25,7 @@ cards:
   tags:
   - true-hybrid
   - verification
-- id: ch10-07-hybrid-patterns-003
+- id: ch21-07-hybrid-patterns-003
   type: thinking
   difficulty: intermediate
   front: "Your SQL query has a wrong date boundary. You run it twice and get the same number both times. Why didn't this catch the bug?"
@@ -34,7 +34,7 @@ cards:
   tags:
   - false-hybrid
   - independence
-- id: ch10-07-hybrid-patterns-004
+- id: ch21-07-hybrid-patterns-004
   type: recall
   difficulty: intermediate
   front: What are the five items on the independence checklist for hybrid verification?
@@ -42,7 +42,7 @@ cards:
   tags:
   - independence
   - checklist
-- id: ch10-07-hybrid-patterns-005
+- id: ch21-07-hybrid-patterns-005
   type: recall
   difficulty: basic
   front: What is tolerance in hybrid verification?
@@ -50,7 +50,7 @@ cards:
   tags:
   - tolerance
   - verification
-- id: ch10-07-hybrid-patterns-006
+- id: ch21-07-hybrid-patterns-006
   type: recall
   difficulty: basic
   front: What should a mismatch policy do when SQL and raw paths disagree?
@@ -58,7 +58,7 @@ cards:
   tags:
   - mismatch-policy
   - release-gate
-- id: ch10-07-hybrid-patterns-007
+- id: ch21-07-hybrid-patterns-007
   type: thinking
   difficulty: intermediate
   front: "Your SQL path is user-scoped but your CSV verification path sums all users. Why is this comparison invalid?"
@@ -67,7 +67,7 @@ cards:
   tags:
   - scope-parity
   - independence
-- id: ch10-07-hybrid-patterns-008
+- id: ch21-07-hybrid-patterns-008
   type: thinking
   difficulty: advanced
   front: "Why are most mismatches caused by scope and normalization issues rather than SQL engine bugs?"
@@ -76,7 +76,7 @@ cards:
   tags:
   - debugging
   - mismatch-policy
-- id: ch10-07-hybrid-patterns-009
+- id: ch21-07-hybrid-patterns-009
   type: recall
   difficulty: intermediate
   front: "SQL-only is sufficient for dashboards and ad-hoc queries. When should you add hybrid verification?"
@@ -84,7 +84,7 @@ cards:
   tags:
   - risk-based
   - verification
-- id: ch10-07-hybrid-patterns-010
+- id: ch21-07-hybrid-patterns-010
   type: thinking
   difficulty: intermediate
   front: "A CSV column contains 'Coffee, large' and you parse with split(','). What goes wrong?"
@@ -93,7 +93,7 @@ cards:
   tags:
   - csv-parsing
   - silent-failure
-- id: ch10-07-hybrid-patterns-011
+- id: ch21-07-hybrid-patterns-011
   type: thinking
   difficulty: advanced
   front: "Why is a mismatch policy that blocks release more valuable than one that merely logs a warning?"
@@ -102,7 +102,7 @@ cards:
   tags:
   - mismatch-policy
   - release-gate
-- id: ch10-07-hybrid-patterns-012
+- id: ch21-07-hybrid-patterns-012
   type: recall
   difficulty: intermediate
   front: "What are the four steps in the release decision template?"

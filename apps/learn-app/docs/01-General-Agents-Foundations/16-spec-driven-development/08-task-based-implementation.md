@@ -14,7 +14,7 @@ keywords:
     "backpressure",
     "task system",
   ]
-chapter: 5
+chapter: 16
 lesson: 8
 duration_minutes: 35
 
@@ -165,11 +165,11 @@ The main agent orchestrates. The subagents execute. Tasks provide the coordinati
 
 ## Why Context Isolation Matters
 
-Chapter 4 (Lesson 9) introduced context isolation—why subagents use clean slates. Here we see that principle in action, solving two named problems from the SDD research literature:
+Chapter 15 (Lesson 9) introduced context isolation—why subagents use clean slates. Here we see that principle in action, solving two named problems from the SDD research literature:
 
 **Agent Amnesia**: Starting a new session mid-task loses all progress unless documented. The specification and task list persist across sessions, providing external memory that survives restarts. This is why Phase 2 produces a written spec—it's your insurance against amnesia.
 
-**Context Pollution**: A full context window causes agents to drop discovered bugs instead of tracking them. Fresh subagent context per task prevents accumulated errors from propagating. The Tasks system you learned in Chapter 4 (Lesson 4) enables this—persistent state that coordinates isolated subagents.
+**Context Pollution**: A full context window causes agents to drop discovered bugs instead of tracking them. Fresh subagent context per task prevents accumulated errors from propagating. The Tasks system you learned in Chapter 15 (Lesson 4) enables this—persistent state that coordinates isolated subagents.
 
 Consider what happens without isolation:
 

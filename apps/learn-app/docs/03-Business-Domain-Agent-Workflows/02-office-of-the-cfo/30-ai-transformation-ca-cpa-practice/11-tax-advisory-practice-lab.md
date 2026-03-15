@@ -18,7 +18,7 @@ keywords:
     "working capital analysis",
     "CA/CPA exercises",
   ]
-chapter: 19
+chapter: 30
 lesson: 11
 duration_minutes: 75
 

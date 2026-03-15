@@ -33,6 +33,6 @@ The negotiation playbook (`legal.local.md`) transforms the Legal Plugin from a g
 
 - The playbook built here drives every classification in the clause-by-clause review demonstrated in **L03** and calibrates cross-border reviews in **L04**
 - The NDA Tier 1/2/3 configuration maps directly to the `/triage-nda` workflow in **L05**
-- The PayGulf comparison demonstrates why the same plugin produces different output for different organisations -- a pattern that recurs in every domain chapter (banking in Ch 21, Islamic finance in Ch 20)
+- The PayGulf comparison demonstrates why the same plugin produces different output for different organisations -- a pattern that recurs in every domain chapter (banking in Ch 32, Islamic finance in Ch 31)
 - MCP connector categories introduced here enable the connected workflows in **L09** (vendor management), **L10** (contract intake agent), and **L11** (compliance calendar)
 - The governing principle from **L01** is reinforced: the playbook makes the agent's output more specific, but the attorney still reviews every RED flag and makes the commercial judgment call

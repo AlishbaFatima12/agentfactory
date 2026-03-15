@@ -1,102 +1,102 @@
 deck:
-  id: "ch21-05-ifrs9-macro-pma"
+  id: "ch32-05-ifrs9-macro-pma"
   title: "Macroeconomic Scenarios and Post-Model Adjustments"
   description: "Key concepts from IFRS 9 macroeconomic scenario design, probability-weighted ECL, the non-linearity principle, and Post-Model Adjustment governance."
   tags: ["macro-scenarios", "probability-weighted-ecl", "pma", "ifrs9", "non-linearity"]
   version: 1
 
 cards:
-  - id: "ch21-05-ifrs9-macro-pma-001"
+  - id: "ch32-05-ifrs9-macro-pma-001"
     front: "What is the non-linearity principle in IFRS 9 ECL calculation?"
     back: "The expected credit loss is NOT the credit loss under the expected scenario. Adverse scenarios contribute disproportionately because credit losses accelerate non-linearly with economic deterioration."
     tags: ["non-linearity", "ecl", "ifrs9"]
     difficulty: "intermediate"
     why: "How does simultaneous collapse of default rates and recovery rates create non-linearity?"
 
-  - id: "ch21-05-ifrs9-macro-pma-002"
+  - id: "ch32-05-ifrs9-macro-pma-002"
     front: "What is the formula for probability-weighted ECL across multiple scenarios?"
     back: "Probability-Weighted ECL = sum of (Weight x ECL) across all scenarios."
     tags: ["probability-weighted-ecl", "formula"]
     difficulty: "basic"
 
-  - id: "ch21-05-ifrs9-macro-pma-003"
+  - id: "ch32-05-ifrs9-macro-pma-003"
     front: "A bank's base case ECL is $45M (40% weight), adverse is $78M (30%), and severe is $145M (15%). Why is the weighted ECL 49% higher than the base case?"
     back: "The adverse and severe scenarios contribute disproportionately because their ECL amounts are much larger than the base case. Even though the base case has the highest weight, the tail scenarios pull the weighted average to $67.35M -- demonstrating non-linearity."
     tags: ["non-linearity", "probability-weighting", "worked-example"]
     difficulty: "intermediate"
     why: "What would happen to the weighted ECL if the bank shifted 10% weight from base to severe?"
 
-  - id: "ch21-05-ifrs9-macro-pma-004"
+  - id: "ch32-05-ifrs9-macro-pma-004"
     front: "What is the minimum number of macroeconomic scenarios IFRS 9 requires for ECL calculation?"
     back: "Minimum two: base plus at least one adverse."
     tags: ["scenario-requirements", "ifrs9"]
     difficulty: "basic"
 
-  - id: "ch21-05-ifrs9-macro-pma-005"
+  - id: "ch32-05-ifrs9-macro-pma-005"
     front: "Why does a single-scenario ECL -- even a 'most likely' scenario -- violate IFRS 9 paragraph 5.5.17?"
     back: "IFRS 9 requires ECL to reflect an unbiased, probability-weighted range of possible outcomes. A single scenario fails to capture the asymmetric distribution of credit losses, where adverse outcomes produce disproportionately larger losses than the base case improvement."
     tags: ["single-scenario", "ifrs9-compliance", "non-linearity"]
     difficulty: "advanced"
     why: "How does asymmetric loss distribution differ from a normal bell curve?"
 
-  - id: "ch21-05-ifrs9-macro-pma-006"
+  - id: "ch32-05-ifrs9-macro-pma-006"
     front: "What are Post-Model Adjustments (PMAs) in IFRS 9?"
     back: "Management overlays applied on top of model ECL to capture risks that models cannot quantify."
     tags: ["pma", "management-overlay"]
     difficulty: "basic"
 
-  - id: "ch21-05-ifrs9-macro-pma-007"
+  - id: "ch32-05-ifrs9-macro-pma-007"
     front: "Name any 4 of the 5 types of Post-Model Adjustments used in IFRS 9?"
     back: "1. Technical PMA (model limitation)\n2. Event PMA (emerging risk)\n3. Sector PMA (concentration)\n4. Data PMA (quality issue)\n5. Climate PMA (transition risk)"
     tags: ["pma", "pma-types"]
     difficulty: "intermediate"
 
-  - id: "ch21-05-ifrs9-macro-pma-008"
+  - id: "ch32-05-ifrs9-macro-pma-008"
     front: "Why are PMAs the primary focus of external auditors in IFRS 9 reporting?"
     back: "PMAs represent management override of quantitative models, making them inherently subjective. A bank could use PMAs to artificially increase or decrease provisions for earnings management. Auditors challenge the rationale, quantum, and continued relevance of every material PMA."
     tags: ["pma", "audit", "governance"]
     difficulty: "intermediate"
     why: "How would an auditor detect if a bank was using PMAs to smooth earnings across quarters?"
 
-  - id: "ch21-05-ifrs9-macro-pma-009"
+  - id: "ch32-05-ifrs9-macro-pma-009"
     front: "What constraint must probability weights satisfy across all macroeconomic scenarios?"
     back: "They must sum to 1.0 (100%)."
     tags: ["probability-weights", "scenario-design"]
     difficulty: "basic"
 
-  - id: "ch21-05-ifrs9-macro-pma-010"
+  - id: "ch32-05-ifrs9-macro-pma-010"
     front: "How did the Covid-19 pandemic expose limitations in IFRS 9 ECL models, requiring massive PMAs?"
     back: "ECL models lacked pandemic calibration data, December 2019 scenarios excluded pandemics, and government support schemes obscured true credit quality. Banks applied $1-10 billion PMAs that took 18-24 months to release as models were recalibrated."
     tags: ["covid-19", "pma", "model-limitation"]
     difficulty: "advanced"
     why: "Why did releasing Covid-19 PMAs take 18-24 months rather than happening immediately once lockdowns ended?"
 
-  - id: "ch21-05-ifrs9-macro-pma-011"
+  - id: "ch32-05-ifrs9-macro-pma-011"
     front: "Name any 4 of the 6 PMA governance requirements needed for audit defence?"
     back: "1. Documented rationale\n2. Committee approval\n3. Quantified impact\n4. Time-limited with expiry\n5. Quarterly review\n6. Back-testing against outcomes"
     tags: ["pma-governance", "audit"]
     difficulty: "intermediate"
 
-  - id: "ch21-05-ifrs9-macro-pma-012"
+  - id: "ch32-05-ifrs9-macro-pma-012"
     front: "How does changing probability weights from optimistic to pessimistic affect a bank's reported provisions?"
     back: "Shifting weight from base/upside to adverse/severe scenarios increases the probability-weighted ECL materially. In the lesson's sensitivity example, the range between most optimistic and most pessimistic weight schemes was approximately 30%, which is why auditors and regulators scrutinise weight assignments."
     tags: ["probability-weights", "sensitivity", "provisions"]
     difficulty: "intermediate"
     why: "What stops a bank from consistently assigning optimistic weights to report lower provisions?"
 
-  - id: "ch21-05-ifrs9-macro-pma-013"
+  - id: "ch32-05-ifrs9-macro-pma-013"
     front: "Name any 3 of the 5 macroeconomic variables that drive IFRS 9 scenario design?"
     back: "1. GDP growth\n2. Unemployment rate\n3. Property prices\n4. Interest rates\n5. Oil/commodity prices"
     tags: ["macro-variables", "scenario-design"]
     difficulty: "basic"
 
-  - id: "ch21-05-ifrs9-macro-pma-014"
+  - id: "ch32-05-ifrs9-macro-pma-014"
     front: "What is the final reported ECL under IFRS 9 after all steps are complete?"
     back: "Final reported ECL = probability-weighted ECL + Post-Model Adjustments."
     tags: ["final-ecl", "ifrs9", "pma"]
     difficulty: "basic"
 
-  - id: "ch21-05-ifrs9-macro-pma-015"
+  - id: "ch32-05-ifrs9-macro-pma-015"
     front: "Why can the banking plugin's agent draft PMA documentation but not determine the PMA amount?"
     back: "PMAs require professional judgment about risks that models cannot quantify. The agent can calculate probability-weighted ECL and draft governance documentation using the ifrs9-scenarios skill, but the quantum and rationale must come from management because they represent subjective assessment of unmodelled risks."
     tags: ["pma", "agent-limitation", "professional-judgment"]

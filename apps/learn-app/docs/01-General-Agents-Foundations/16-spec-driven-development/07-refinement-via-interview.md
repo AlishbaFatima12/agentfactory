@@ -12,7 +12,7 @@ keywords:
     "interview pattern",
     "implementation planning",
   ]
-chapter: 5
+chapter: 16
 lesson: 7
 duration_minutes: 20
 

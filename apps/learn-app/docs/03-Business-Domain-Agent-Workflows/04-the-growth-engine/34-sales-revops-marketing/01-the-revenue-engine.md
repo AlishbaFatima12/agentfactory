@@ -17,7 +17,7 @@ keywords:
     "AI sales agent",
     "NexaFlow Technologies",
   ]
-chapter: 23
+chapter: 34
 lesson: 1
 duration_minutes: 25
 
@@ -79,7 +79,7 @@ This chapter gives every rep Farah's research depth in under four minutes. The *
 
 ## Install All Three Plugins
 
-If you have not already set up Cowork, follow the instructions in the [Chapter 17 prerequisites](../../../03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/17-finance-domain-agents/README.md) first.
+If you have not already set up Cowork, follow the instructions in the [Chapter 28 prerequisites](../../../03-Business-Domain-Agent-Workflows/02-office-of-the-cfo/28-finance-domain-agents/README.md) first.
 
 Install the three plugin layers from the Cowork sidebar:
 

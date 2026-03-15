@@ -28,6 +28,6 @@ Productive Claude Code sessions require workflow discipline, not AI knowledge. T
 
 ### Connections
 
-- **Builds on**: Chapter 4's context engineering fundamentals (`/clear`, `/compact`, context window)
+- **Builds on**: Chapter 15's context engineering fundamentals (`/clear`, `/compact`, context window)
 - **Leads to**: The Seven Principles that explain *why* these operational patterns work
 - **Plan Mode = Principle 6**: Read-only constraint that prevents changes until you're ready

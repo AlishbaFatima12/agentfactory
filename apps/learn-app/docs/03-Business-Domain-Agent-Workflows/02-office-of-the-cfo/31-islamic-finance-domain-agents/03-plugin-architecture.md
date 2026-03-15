@@ -16,7 +16,7 @@ keywords:
     "Bahrain overlay",
     "Cowork Islamic finance",
   ]
-chapter: 20
+chapter: 31
 lesson: 3
 duration_minutes: 25
 
@@ -74,7 +74,7 @@ In Lesson 2, you examined the Global Standards Map and saw how 20 jurisdictions 
 
 ## The Three-Layer Stack
 
-The Islamic finance agent architecture extends the base finance plugin from Chapter 17 with two additional layers:
+The Islamic finance agent architecture extends the base finance plugin from Chapter 28 with two additional layers:
 
 ```
 Layer 3:  Jurisdiction Overlays     (labels, presentation, disclosure)
@@ -85,7 +85,7 @@ Layer 1:  Base Finance Plugin       (journal-entry, reconciliation, income-state
               ↑ foundation
 ```
 
-**Layer 1** is the base finance plugin you installed in Chapter 17. It provides the fundamental accounting commands — `/journal-entry`, `/reconciliation`, `/income-statement` — that work for any accounting domain.
+**Layer 1** is the base finance plugin you installed in Chapter 28. It provides the fundamental accounting commands — `/journal-entry`, `/reconciliation`, `/income-statement` — that work for any accounting domain.
 
 **Layer 2** is the product skill library. Each Islamic finance product has its own SKILL.md file containing the recognition rules, measurement methods, and journal entry sequences that are common across all jurisdictions. The murabaha skill knows the four-step journal entry sequence. The ijarah skill knows the lease accounting mechanics. The sukuk skill knows the SPPI test. The arithmetic lives here.
 

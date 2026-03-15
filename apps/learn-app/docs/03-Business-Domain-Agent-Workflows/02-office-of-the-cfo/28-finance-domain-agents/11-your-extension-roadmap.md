@@ -18,7 +18,7 @@ keywords:
     "Agent Skills",
     "extension prioritisation",
   ]
-chapter: 17
+chapter: 28
 lesson: 11
 duration_minutes: 25
 
@@ -82,7 +82,7 @@ teaching_guide:
     - "Prioritisation is about sequencing, not selecting — all eleven extensions may eventually matter, but building three in the first quarter is the practical starting point"
     - "The four criteria are not equally weighted: regulatory exposure overrides other criteria when compliance is at stake"
     - "The chapter's central architectural insight is that the same data connectors serve Claude in Excel and Cowork at different scope — assistant in one workbook vs agent across applications"
-    - "The Knowledge Extraction Method from Chapter 16 is what converts each generic extension area into an organisation-specific SKILL.md"
+    - "The Knowledge Extraction Method from Chapter 27 is what converts each generic extension area into an organisation-specific SKILL.md"
   misconceptions:
     - "Students may think the three parts of the chapter (Claude in Excel, Cowork, enterprise extensions) are separate systems — they are layers of the same architecture sharing the same connector ecosystem"
     - "Students may try to build all eleven extensions simultaneously — the framework exists to force sequencing based on evidence"
@@ -175,7 +175,7 @@ For your highest-priority extension, write a one-paragraph specification:
 - What data sources does it need?
 - What three test scenarios would validate it?
 
-This specification is the starting point for a real deployment. It is the input to the Knowledge Extraction Method you learned in Chapter 16 — the five interview questions, the document extraction framework, and the validation scenario set all begin from this paragraph.
+This specification is the starting point for a real deployment. It is the input to the Knowledge Extraction Method you learned in Chapter 27 — the five interview questions, the document extraction framework, and the validation scenario set all begin from this paragraph.
 
 ## Chapter Summary
 
@@ -191,7 +191,7 @@ Lessons 4 through 7 shifted from assistant to agent. You learned the architectur
 
 ### Part Three: Enterprise Extensions — Making Generic Plugins Yours
 
-Lessons 8 through 11 applied the Knowledge Extraction Method from Chapter 16 to the finance domain. You learned to extract domain-specific knowledge through expert interviews, translate it into SKILL.md instructions, and validate those instructions against domain-specific scenarios. The eleven enterprise extension areas — credit risk, regulatory reporting, treasury, FP&A, M&A integration, IPS compliance, sector-specific valuation, board and IR packs, multi-entity consolidation, credit portfolio monitoring, and the Finance Business Partner persona — represent the institutional knowledge that generic plugins cannot provide. The key insight from Part Three: the Knowledge Extraction Method does not change across domains; what changes is the professional knowledge it surfaces.
+Lessons 8 through 11 applied the Knowledge Extraction Method from Chapter 27 to the finance domain. You learned to extract domain-specific knowledge through expert interviews, translate it into SKILL.md instructions, and validate those instructions against domain-specific scenarios. The eleven enterprise extension areas — credit risk, regulatory reporting, treasury, FP&A, M&A integration, IPS compliance, sector-specific valuation, board and IR packs, multi-entity consolidation, credit portfolio monitoring, and the Finance Business Partner persona — represent the institutional knowledge that generic plugins cannot provide. The key insight from Part Three: the Knowledge Extraction Method does not change across domains; what changes is the professional knowledge it surfaces.
 
 ### The Unifying Architecture
 
@@ -205,7 +205,7 @@ Every tool you used in this chapter — Claude in Excel, the Cowork finance plug
 
 What if that foundation is the bottleneck?
 
-Chapter 18 introduces the **Intent-Driven Financial Architecture (IDFA)** — Panaversity original research that replaces coordinate-based formulas with Named Range business rules, making every model human-readable, AI-operable, and mathematically audit-proof. IDFA does not replace the tools from Chapter 17. It transforms the foundation those tools operate on — and the result is a categorical improvement in what your finance domain agents can do.
+Chapter 29 introduces the **Intent-Driven Financial Architecture (IDFA)** — Panaversity original research that replaces coordinate-based formulas with Named Range business rules, making every model human-readable, AI-operable, and mathematically audit-proof. IDFA does not replace the tools from Chapter 28. It transforms the foundation those tools operate on — and the result is a categorical improvement in what your finance domain agents can do.
 
 The same Claude in Excel. The same data connectors. A fundamentally different architecture underneath. That is what changes everything.
 
@@ -218,7 +218,7 @@ Use these prompts in Anthropic Cowork or your preferred AI assistant to apply th
 ```
 I work as [YOUR ROLE] at [YOUR ORGANISATION TYPE — e.g., corporate bank,
 asset manager, multi-entity group, insurance company]. I have just
-completed Chapter 17 on Finance Domain Agents.
+completed Chapter 28 on Finance Domain Agents.
 
 Help me apply the extension prioritisation framework to my context.
 For each of the eleven enterprise extension areas from the chapter:
@@ -237,7 +237,7 @@ document collection, or data access request).
 ### Prompt 2: Chapter Architecture Synthesis
 
 ```
-Explain the architecture of Chapter 17 (Finance Domain Agents) as three
+Explain the architecture of Chapter 28 (Finance Domain Agents) as three
 layers of the same system, not three separate tools. Cover:
 
 1. Claude in Excel: what it does, what connectors it uses, what scope
@@ -251,7 +251,7 @@ Focus on the relationship between the layers — especially why the same
 data connectors serve both Claude in Excel and Cowork, and what
 "same connectors, different scope" means architecturally.
 
-Then explain how the Knowledge Extraction Method (Chapter 16) connects
+Then explain how the Knowledge Extraction Method (Chapter 27) connects
 to the enterprise extension layer.
 ```
 
@@ -260,10 +260,10 @@ to the enterprise extension layer.
 ### Prompt 3: Architectural Foundation Analysis
 
 ```
-I have just completed Chapter 17 on Finance Domain Agents — Claude in
+I have just completed Chapter 28 on Finance Domain Agents — Claude in
 Excel, Cowork plugins, data connectors, and enterprise extensions.
 
-Chapter 18 introduces the Intent-Driven Financial Architecture (IDFA),
+Chapter 29 introduces the Intent-Driven Financial Architecture (IDFA),
 which replaces coordinate-based formulas with Named Range business rules.
 
 Before I start, help me understand the gap:
@@ -275,12 +275,12 @@ Before I start, help me understand the gap:
 3. What capabilities become possible when every formula in a model
    reads as a business rule rather than a coordinate reference?
 4. How would this change the quality of the tools I learned in
-   Chapter 17 — scenario testing, error debugging, model comprehension?
+   Chapter 28 — scenario testing, error debugging, model comprehension?
 
 Help me see why architecture transforms the tools I already have.
 ```
 
-**What you're learning:** How the foundation underneath your tools determines their ceiling. The same Claude in Excel reading `=B14-(C14*$F$8)` versus `=Revenue_Y2 - (Revenue_Y2 * COGS_Pct_Y2)` gives categorically different answers — not because the agent changed, but because the model became readable. This prompt builds the mental bridge to Chapter 18's central argument: architecture is the multiplier.
+**What you're learning:** How the foundation underneath your tools determines their ceiling. The same Claude in Excel reading `=B14-(C14*$F$8)` versus `=Revenue_Y2 - (Revenue_Y2 * COGS_Pct_Y2)` gives categorically different answers — not because the agent changed, but because the model became readable. This prompt builds the mental bridge to Chapter 29's central argument: architecture is the multiplier.
 
 ## Flashcards Study Aid
 

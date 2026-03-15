@@ -18,7 +18,7 @@ keywords:
     "credit impairment",
     "ifrs9-staging skill",
   ]
-chapter: 21
+chapter: 32
 lesson: 3
 duration_minutes: 40
 

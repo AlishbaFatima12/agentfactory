@@ -40,7 +40,7 @@ Boris Cherny's (Claude Code creator) workflow demonstrates how chapter concepts 
 
 ### Connections
 
-- **Synthesizes**: All Chapter 3 lessons—Origin Story (agency), CLAUDE.md (context), Skills (expertise), MCP (tools), Subagents (delegation), Hooks (automation), Settings (configuration)
+- **Synthesizes**: All Chapter 14 lessons—Origin Story (agency), CLAUDE.md (context), Skills (expertise), MCP (tools), Subagents (delegation), Hooks (automation), Settings (configuration)
 - **Demonstrates**: Real-world workflow at Anthropic production scale
 - **Leads to**: Part 3 (Spec-Driven Development), Part 6 (Custom Agent SDKs), Part 7 (Digital FTE Deployment)
 - **Digital FTE Link**: Each capability maps to productizable agent components—skills become assets, CLAUDE.md becomes team memory, subagents become orchestration patterns

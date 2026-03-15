@@ -1,16 +1,28 @@
 ---
-sidebar_position: 11
-title: "Chapter 11: Linux Operations for Agent Deployment"
+sidebar_position: 22
+title: "Chapter 22: Linux Operations for Agent Deployment"
 description: "Learn to deploy, manage, and troubleshoot AI agents on Linux servers by directing Claude Code — from first SSH login to production systemd service."
-keywords: ["linux", "ssh", "systemd", "deployment", "server", "agent operations", "production", "debugging", "security"]
+keywords:
+  [
+    "linux",
+    "ssh",
+    "systemd",
+    "deployment",
+    "server",
+    "agent operations",
+    "production",
+    "debugging",
+    "security",
+  ]
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-2/chapter-11/linux-mastery.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-2/chapter-22/linux-mastery.pdf"
   title: "Linux Operations for Agent Deployment"
   height: 700
 ---
-# Chapter 11: Linux Operations for Agent Deployment
 
-Ali built a competitor-analysis agent in Chapters 9 and 10. It scrapes pricing data, stores results in a database, and generates daily summaries. He runs it on his laptop. It works — when his laptop is open.
+# Chapter 22: Linux Operations for Agent Deployment
+
+Ali built a competitor-analysis agent in Chapters 20 and 21. It scrapes pricing data, stores results in a database, and generates daily summaries. He runs it on his laptop. It works — when his laptop is open.
 
 Sunday night. His biggest client has a board meeting Monday morning. The agent was supposed to generate a weekend pricing report. Ali opens his laptop and checks the dashboard. The agent has not run since Friday. Three days of missing data. Board meeting in twelve hours.
 
@@ -43,8 +55,8 @@ This is a real deployment, not a toy example.
 
 Before starting this chapter, you should have completed:
 
-- **Chapter 6: Seven Principles of Agent Work** — Especially Principle 1 (Bash is the Key) and Principle 5 (Persisting State in Files)
-- **Chapters 8–10** — You've built agent workflows for file processing, Python, and SQL
+- **Chapter 17: Seven Principles of Agent Work** — Especially Principle 1 (Bash is the Key) and Principle 5 (Persisting State in Files)
+- **Chapters 19–21** — You've built agent workflows for file processing, Python, and SQL
 
 **No prior Linux experience is required.** Lesson 1 starts from a blinking cursor.
 
@@ -54,8 +66,8 @@ If you're on Windows, you need WSL2 (Windows Subsystem for Linux). Run `wsl --in
 
 ## Lessons Overview
 
-| Lesson                                        | Title                        | Duration | Focus                                   |
-| --------------------------------------------- | ---------------------------- | -------- | --------------------------------------- |
+| Lesson                                           | Title                        | Duration | Focus                                   |
+| ------------------------------------------------ | ---------------------------- | -------- | --------------------------------------- |
 | [Lesson 1](./01-where-your-agent-lives.md)       | Where Your Agent Lives       | 30 min   | SSH, filesystem, server orientation     |
 | [Lesson 2](./02-reading-what-your-agent-does.md) | Reading What Your Agent Does | 30 min   | Command output, permissions, vocabulary |
 | [Lesson 3](./03-setting-up-your-agents-home.md)  | Setting Up Your Agent's Home | 30 min   | Directory structure, .env, logs         |
@@ -83,20 +95,20 @@ You will not type Linux commands from memory. You will direct an agent, watch wh
 
 New to Linux? These 12 terms appear throughout the chapter. Each definition is two sentences maximum.
 
-| Term                           | Plain English                                                                                                                              |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Shell**                | The program that reads your commands and tells the OS to run them. On Linux servers, this is almost always bash.                           |
-| **Terminal**             | The window application that shows your shell. Terminal is the glass, shell is the voice on the other end.                                  |
-| **Directory**            | What Windows calls a "folder." On Linux, we say "directory" — same concept, different word.                                               |
+| Term                     | Plain English                                                                                                                          |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Shell**                | The program that reads your commands and tells the OS to run them. On Linux servers, this is almost always bash.                       |
+| **Terminal**             | The window application that shows your shell. Terminal is the glass, shell is the voice on the other end.                              |
+| **Directory**            | What Windows calls a "folder." On Linux, we say "directory" — same concept, different word.                                            |
 | **Root**                 | Two meanings:`/` is the top of the filesystem tree, and `root` is the superuser account with unlimited power. Context tells you which. |
-| **Daemon**               | A service that runs in the background, started at boot, not attached to any terminal. Your agents become daemons in Lesson 4.              |
-| **Port**                 | A numbered channel for network communication. Your agent listens on a specific port (e.g., 8080) for incoming requests.                    |
-| **Process**              | Any running program. Your agent is a process with an ID number (PID).                                                                      |
-| **Pipe**                 | The `\|` character. Takes the output of one command and feeds it as input to the next.                                                    |
-| **Redirect**             | Sending output to a file (`>`) instead of the screen. `>>` appends; `>` overwrites.                                                  |
+| **Daemon**               | A service that runs in the background, started at boot, not attached to any terminal. Your agents become daemons in Lesson 4.          |
+| **Port**                 | A numbered channel for network communication. Your agent listens on a specific port (e.g., 8080) for incoming requests.                |
+| **Process**              | Any running program. Your agent is a process with an ID number (PID).                                                                  |
+| **Pipe**                 | The `\|` character. Takes the output of one command and feeds it as input to the next.                                                 |
+| **Redirect**             | Sending output to a file (`>`) instead of the screen. `>>` appends; `>` overwrites.                                                    |
 | **Absolute path**        | A file address starting from `/`. Works regardless of where you are (e.g., `/var/log/agent.log`).                                      |
-| **sudo**                 | "Run this as root." Grants temporary admin power for one command. Use sparingly; misuse causes real damage.                                |
-| **Environment variable** | A named value available to all processes in a session. Used for secrets, configuration, and API keys.                                      |
+| **sudo**                 | "Run this as root." Grants temporary admin power for one command. Use sparingly; misuse causes real damage.                            |
+| **Environment variable** | A named value available to all processes in a session. Used for secrets, configuration, and API keys.                                  |
 
 ## Let's Begin
 

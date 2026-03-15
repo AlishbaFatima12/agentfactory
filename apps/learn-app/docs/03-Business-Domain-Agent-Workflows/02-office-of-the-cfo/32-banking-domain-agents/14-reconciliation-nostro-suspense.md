@@ -16,7 +16,7 @@ keywords:
     "ageing SLA",
     "reconciliation automation",
   ]
-chapter: 21
+chapter: 32
 lesson: 14
 duration_minutes: 45
 

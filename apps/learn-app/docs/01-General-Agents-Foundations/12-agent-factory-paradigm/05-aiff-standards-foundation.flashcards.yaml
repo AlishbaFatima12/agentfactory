@@ -1,5 +1,5 @@
 deck:
-  id: ch01-aiff-standards
+  id: ch12-aiff-standards
   title: AIFF Standards - The Foundation
   description: Flashcards covering the five AAIF open standards (MCP, AGENTS.md, goose, Skills, MCP Apps) that enable portable, sellable Digital FTEs across AI platforms.
   tags:
@@ -14,7 +14,7 @@ deck:
   - portability
   version: 1
 cards:
-- id: ch01-aiff-standards-001
+- id: ch12-aiff-standards-001
   type: recall
   difficulty: basic
   front: What does AAIF stand for and what organization hosts it?
@@ -22,7 +22,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-002
+- id: ch12-aiff-standards-002
   type: thinking
   difficulty: intermediate
   front: Why did competitors like OpenAI, Anthropic, and Block donate technologies to neutral governance?
@@ -31,7 +31,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-003
+- id: ch12-aiff-standards-003
   type: recall
   difficulty: basic
   front: When was the Agentic AI Foundation officially announced?
@@ -39,7 +39,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-004
+- id: ch12-aiff-standards-004
   type: recall
   difficulty: basic
   front: What analogy does the lesson use to explain AAIF's role in AI agent standards?
@@ -47,7 +47,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-005
+- id: ch12-aiff-standards-005
   type: thinking
   difficulty: intermediate
   front: Why does the USB analogy apply to AAIF and AI agent portability?
@@ -56,7 +56,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-006
+- id: ch12-aiff-standards-006
   type: recall
   difficulty: intermediate
   front: What are the five standards governed by AAIF?
@@ -74,7 +74,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-007
+- id: ch12-aiff-standards-007
   type: thinking
   difficulty: intermediate
   front: How does MCP solve the M-times-N integration problem?
@@ -84,7 +84,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-008
+- id: ch12-aiff-standards-008
   type: recall
   difficulty: basic
   front: What are the three universal primitives defined by MCP?
@@ -92,7 +92,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-009
+- id: ch12-aiff-standards-009
   type: recall
   difficulty: intermediate
   front: 'What physical metaphor maps to each MCP primitive: Resources, Tools, and Prompts?'
@@ -106,7 +106,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-010
+- id: ch12-aiff-standards-010
   type: thinking
   difficulty: intermediate
   front: Why would exposing 'send email' as an MCP Resource instead of a Tool break a Digital FTE?
@@ -115,7 +115,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-011
+- id: ch12-aiff-standards-011
   type: recall
   difficulty: basic
   front: What are the three layers in MCP's architecture?
@@ -123,7 +123,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-012
+- id: ch12-aiff-standards-012
   type: recall
   difficulty: basic
   front: Which company originally created MCP and when was it open-sourced?
@@ -131,7 +131,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-013
+- id: ch12-aiff-standards-013
   type: thinking
   difficulty: advanced
   front: Why does AGENTS.md exist as a separate file from README.md?
@@ -141,7 +141,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-014
+- id: ch12-aiff-standards-014
   type: recall
   difficulty: intermediate
   front: What four categories of information belong in an AGENTS.md file?
@@ -157,7 +157,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-015
+- id: ch12-aiff-standards-015
   type: thinking
   difficulty: intermediate
   front: How does the AGENTS.md hierarchy rule enable monorepo support?
@@ -167,7 +167,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-016
+- id: ch12-aiff-standards-016
   type: recall
   difficulty: basic
   front: Which company created AGENTS.md and which company created goose?
@@ -175,7 +175,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-017
+- id: ch12-aiff-standards-017
   type: thinking
   difficulty: advanced
   front: Why should you study goose's source code when Claude Code already exists as a General Agent?
@@ -185,7 +185,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-018
+- id: ch12-aiff-standards-018
   type: recall
   difficulty: intermediate
   front: What percentage of Block engineers use goose, and how much time do they save weekly?
@@ -193,7 +193,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-019
+- id: ch12-aiff-standards-019
   type: thinking
   difficulty: intermediate
   front: Why is goose's local-first execution pattern important for enterprise clients?
@@ -203,7 +203,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-020
+- id: ch12-aiff-standards-020
   type: thinking
   difficulty: intermediate
   front: Why do Agent Skills and MCP serve complementary rather than competing purposes?
@@ -213,7 +213,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-021
+- id: ch12-aiff-standards-021
   type: recall
   difficulty: basic
   front: What file format packages domain expertise into a portable agent skill?
@@ -221,7 +221,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-022
+- id: ch12-aiff-standards-022
   type: thinking
   difficulty: advanced
   front: Why does progressive disclosure in Skills use three loading levels instead of loading everything at once?
@@ -231,7 +231,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-023
+- id: ch12-aiff-standards-023
   type: recall
   difficulty: intermediate
   front: What token cost does each progressive disclosure level use for Agent Skills?
@@ -245,7 +245,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-024
+- id: ch12-aiff-standards-024
   type: recall
   difficulty: intermediate
   front: What is the MCP Apps Extension specification number and what does it enable?
@@ -253,7 +253,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-025
+- id: ch12-aiff-standards-025
   type: thinking
   difficulty: advanced
   front: Why does chat alone limit a Digital FTE's competitive viability?
@@ -263,7 +263,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-026
+- id: ch12-aiff-standards-026
   type: recall
   difficulty: basic
   front: What URI scheme does MCP Apps Extension use for UI templates?
@@ -271,7 +271,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-027
+- id: ch12-aiff-standards-027
   type: thinking
   difficulty: advanced
   front: Why should you build on Apps SDK today while watching MCP Apps Extension for tomorrow?
@@ -281,7 +281,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-028
+- id: ch12-aiff-standards-028
   type: recall
   difficulty: intermediate
   front: Name four AAIF platinum member companies besides Anthropic, OpenAI, and Block?
@@ -289,7 +289,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-029
+- id: ch12-aiff-standards-029
   type: thinking
   difficulty: advanced
   front: How do AAIF standards transform a Digital FTE from a demo into a sellable product?
@@ -299,7 +299,7 @@ cards:
   tags:
   - AAIF
   - MCP
-- id: ch01-aiff-standards-030
+- id: ch12-aiff-standards-030
   type: thinking
   difficulty: intermediate
   front: How does the Stripe payment processing example illustrate the MCP-Skills relationship?

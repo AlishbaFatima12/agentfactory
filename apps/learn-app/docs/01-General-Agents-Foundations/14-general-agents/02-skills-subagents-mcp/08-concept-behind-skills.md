@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/concept-behind-skills
 title: "The Concept Behind Skills"
 sidebar_position: 8
-chapter: 3
+chapter: 14
 lesson: 8
 duration_minutes: 10
 

@@ -1,5 +1,5 @@
 deck:
-  id: ch01-three-core-llm-constraints
+  id: ch12-three-core-llm-constraints
   title: The Three Core Operational Constraints of LLMs
   description: Flashcards covering the three fundamental LLM constraints—statelessness, probabilistic outputs, and limited context—and how they shape AI-native development methodology.
   tags:
@@ -13,7 +13,7 @@ deck:
   - mcp
   version: 1
 cards:
-- id: ch01-three-core-llm-constraints-001
+- id: ch12-three-core-llm-constraints-001
   type: recall
   difficulty: basic
   front: What does it mean that LLMs are stateless?
@@ -21,7 +21,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-002
+- id: ch12-three-core-llm-constraints-002
   type: recall
   difficulty: basic
   front: When you send a new message in a chat, what does the application do with conversation history?
@@ -29,7 +29,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-003
+- id: ch12-three-core-llm-constraints-003
   type: thinking
   difficulty: intermediate
   front: Why does AGENTS.md exist as a persistent file?
@@ -38,7 +38,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-004
+- id: ch12-three-core-llm-constraints-004
   type: recall
   difficulty: basic
   front: What analogy describes the correct mental model for working with an LLM?
@@ -46,7 +46,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-005
+- id: ch12-three-core-llm-constraints-005
   type: thinking
   difficulty: intermediate
   front: Why are detailed specifications essential rather than optional when working with LLMs?
@@ -55,7 +55,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-006
+- id: ch12-three-core-llm-constraints-006
   type: recall
   difficulty: basic
   front: What does "probabilistic" mean in the context of LLM outputs?
@@ -63,7 +63,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-007
+- id: ch12-three-core-llm-constraints-007
   type: recall
   difficulty: intermediate
   front: How does an LLM generate each token in its response?
@@ -71,7 +71,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-008
+- id: ch12-three-core-llm-constraints-008
   type: recall
   difficulty: basic
   front: What does the temperature parameter control in an LLM?
@@ -79,7 +79,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-009
+- id: ch12-three-core-llm-constraints-009
   type: recall
   difficulty: intermediate
   front: What happens when temperature is set to 0 versus 0.7 versus 1.0+?
@@ -87,7 +87,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-010
+- id: ch12-three-core-llm-constraints-010
   type: thinking
   difficulty: intermediate
   front: Why is validation mandatory rather than optional when working with AI-generated code?
@@ -96,7 +96,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-011
+- id: ch12-three-core-llm-constraints-011
   type: thinking
   difficulty: intermediate
   front: How do clear specifications constrain probabilistic output variation?
@@ -105,7 +105,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-012
+- id: ch12-three-core-llm-constraints-012
   type: thinking
   difficulty: advanced
   front: Why does Test-Driven Development take on special importance with AI-generated code?
@@ -114,7 +114,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-013
+- id: ch12-three-core-llm-constraints-013
   type: thinking
   difficulty: intermediate
   front: How can probabilistic outputs be a strength rather than just a limitation?
@@ -123,7 +123,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-014
+- id: ch12-three-core-llm-constraints-014
   type: recall
   difficulty: basic
   front: What is an LLM's context window?
@@ -131,7 +131,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-015
+- id: ch12-three-core-llm-constraints-015
   type: recall
   difficulty: intermediate
   front: What are the approximate context window sizes for GPT-5.2, Claude Opus 4.5, and Gemini 3 Pro?
@@ -139,7 +139,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-016
+- id: ch12-three-core-llm-constraints-016
   type: recall
   difficulty: intermediate
   front: What five categories of content compete for space inside a context window?
@@ -147,7 +147,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-017
+- id: ch12-three-core-llm-constraints-017
   type: recall
   difficulty: intermediate
   front: What is the "lost in the middle" effect in large context windows?
@@ -155,7 +155,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-018
+- id: ch12-three-core-llm-constraints-018
   type: thinking
   difficulty: advanced
   front: Why is context engineering considered a core development skill?
@@ -164,7 +164,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-019
+- id: ch12-three-core-llm-constraints-019
   type: thinking
   difficulty: intermediate
   front: How do AI-first IDEs like Cursor address the limited context problem?
@@ -173,7 +173,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-020
+- id: ch12-three-core-llm-constraints-020
   type: thinking
   difficulty: intermediate
   front: Why do specifications compress intent more efficiently than conversations?
@@ -182,7 +182,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-021
+- id: ch12-three-core-llm-constraints-021
   type: thinking
   difficulty: advanced
   front: How do statelessness and limited context compound each other?
@@ -192,7 +192,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-022
+- id: ch12-three-core-llm-constraints-022
   type: thinking
   difficulty: advanced
   front: How do probabilistic outputs and statelessness compound each other?
@@ -202,7 +202,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-023
+- id: ch12-three-core-llm-constraints-023
   type: thinking
   difficulty: advanced
   front: How do probabilistic outputs and limited context compound each other?
@@ -212,7 +212,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-024
+- id: ch12-three-core-llm-constraints-024
   type: recall
   difficulty: intermediate
   front: What three methodological responses does Spec-Driven Development provide to the three constraints?
@@ -220,7 +220,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-025
+- id: ch12-three-core-llm-constraints-025
   type: recall
   difficulty: basic
   front: What is the incorrect mental model many developers have about AI?
@@ -228,7 +228,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-026
+- id: ch12-three-core-llm-constraints-026
   type: thinking
   difficulty: intermediate
   front: Why is hallucination not the same as the AI lying?
@@ -237,7 +237,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-027
+- id: ch12-three-core-llm-constraints-027
   type: thinking
   difficulty: intermediate
   front: Why does poor context management directly increase costs at scale?
@@ -247,7 +247,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-028
+- id: ch12-three-core-llm-constraints-028
   type: recall
   difficulty: basic
   front: What does MCP (Model Context Protocol) allow agents to do instead of requiring all context upfront?
@@ -255,7 +255,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-029
+- id: ch12-three-core-llm-constraints-029
   type: thinking
   difficulty: intermediate
   front: Why should you start a fresh conversation instead of continuing a long debugging session?
@@ -264,7 +264,7 @@ cards:
   tags:
   - llm-constraints
   - stateless
-- id: ch01-three-core-llm-constraints-030
+- id: ch12-three-core-llm-constraints-030
   type: recall
   difficulty: intermediate
   front: What three things should the correct developer mental model include when working with LLMs?

@@ -21,7 +21,7 @@ keywords:
     "Islamic capital markets",
     "sukuk accounting",
   ]
-chapter: 20
+chapter: 31
 lesson: 9
 duration_minutes: 55
 

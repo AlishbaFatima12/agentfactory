@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/creator-workflow
 title: "The Creator's Workflow: Claude Code Best Practices"
 sidebar_position: 18
-chapter: 3
+chapter: 14
 lesson: 18
 duration_minutes: 22
 estimated_time: "22 mins"

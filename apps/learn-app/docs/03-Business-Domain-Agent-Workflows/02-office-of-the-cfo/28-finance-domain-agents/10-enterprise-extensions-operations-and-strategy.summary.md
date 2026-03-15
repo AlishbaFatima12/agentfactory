@@ -24,5 +24,5 @@ Enterprise extensions bridge the gap between generic finance plugin capabilities
 
 ### Connections
 
-- **Builds on**: Chapter 16's Knowledge Extraction Method (extraction, SKILL.md writing, validation) and prior Chapter 17 lessons on generic finance plugins and the financial-services suite
+- **Builds on**: Chapter 27's Knowledge Extraction Method (extraction, SKILL.md writing, validation) and prior Chapter 28 lessons on generic finance plugins and the financial-services suite
 - **Leads to**: Chapter Summary (synthesising the complete finance domain agent architecture) and the extension roadmap exercise that serves as the starting point for real deployment

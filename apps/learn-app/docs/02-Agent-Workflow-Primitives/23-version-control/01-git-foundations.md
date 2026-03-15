@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-chapter: 12
+chapter: 23
 lesson: 1
 title: "Git Foundations"
 description: "Understand Git as a snapshot system for your entire project — learn how your agent tracks changes, stages files, and undoes mistakes"

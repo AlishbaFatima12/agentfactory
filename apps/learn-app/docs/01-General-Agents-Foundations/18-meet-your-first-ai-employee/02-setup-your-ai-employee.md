@@ -14,7 +14,7 @@ keywords:
     openclaw gateway,
     ai agent setup,
   ]
-chapter: 7
+chapter: 18
 lesson: 2
 duration_minutes: 45
 
@@ -83,7 +83,7 @@ teaching_guide:
   session_title: "Setting Up Your AI Employee"
   key_points:
     - "The universal setup pattern (install, configure intelligence, connect I/O, verify, secure) applies to every agent framework students will encounter"
-    - "Localhost binding (127.0.0.1) vs all-interfaces (0.0.0.0) is the single most important security concept in this lesson — it recurs in Lesson 5 and Chapter 11 deployment"
+    - "Localhost binding (127.0.0.1) vs all-interfaces (0.0.0.0) is the single most important security concept in this lesson — it recurs in Lesson 5 and Chapter 22 deployment"
     - "Three channels (TUI, messaging app, Control UI) sharing one agent demonstrates the channel adapter pattern from Lesson 1"
     - "The onboarding conversation where students name and personalize the agent is not cosmetic — it seeds persistent memory that shapes all future interactions"
   misconceptions:
@@ -417,7 +417,7 @@ A dedicated group is the cleanest way to use your AI Employee on WhatsApp -- eac
 :::
 
 :::tip Let Your General Agent Handle Configuration
-You do not need to memorize these policies. The full access policy documentation lives at [docs.openclaw.ai/gateway/security](https://docs.openclaw.ai/gateway/security). Ask Claude Code (your General Agent from Chapter 3) to read the docs and configure everything for you -- one prompt replaces reading an entire documentation page:
+You do not need to memorize these policies. The full access policy documentation lives at [docs.openclaw.ai/gateway/security](https://docs.openclaw.ai/gateway/security). Ask Claude Code (your General Agent from Chapter 14) to read the docs and configure everything for you -- one prompt replaces reading an entire documentation page:
 
 ```
 Read the OpenClaw access policy docs and configure my WhatsApp channel:
@@ -464,7 +464,7 @@ Approved telegram sender 1234567890.
 **If your bot does not reply at all** (no pairing code, nothing): check the gateway logs at `~/.openclaw/logs/gateway.log`. The most common cause is a mistyped bot token.
 
 :::tip Advanced Access Policies
-OpenClaw supports DM policies (`pairing`, `allowlist`, `open`, `disabled`) and group policies to control who your bot responds to. The defaults are safe -- `pairing` means only approved users get responses. To explore further, ask Claude Code (your General Agent from Chapter 3) to read the docs at [docs.openclaw.ai/gateway/security](https://docs.openclaw.ai/gateway/security) and configure the policies for you.
+OpenClaw supports DM policies (`pairing`, `allowlist`, `open`, `disabled`) and group policies to control who your bot responds to. The defaults are safe -- `pairing` means only approved users get responses. To explore further, ask Claude Code (your General Agent from Chapter 14) to read the docs at [docs.openclaw.ai/gateway/security](https://docs.openclaw.ai/gateway/security) and configure the policies for you.
 :::
 
 ::discord

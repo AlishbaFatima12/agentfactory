@@ -1,6 +1,6 @@
 ---
 sidebar_position: 9
-title: "Chapter 8: File Processing Workflows Quiz"
+title: "Chapter 19: File Processing Workflows Quiz"
 proficiency_level: A2
 layer: 2
 estimated_time: "75 mins"
@@ -8,12 +8,12 @@ chapter_type: Applied
 running_example_id: file-processing-quiz
 ---
 
-# Chapter 8: File Processing Workflows Quiz
+# Chapter 19: File Processing Workflows Quiz
 
-Test your understanding of agent-directed file processing workflows, safety patterns, batch operations, error recovery, and the Seven Principles in action. This assessment covers all 7 lessons in Chapter 8.
+Test your understanding of agent-directed file processing workflows, safety patterns, batch operations, error recovery, and the Seven Principles in action. This assessment covers all 7 lessons in Chapter 19.
 
 <Quiz
-title="Chapter 8: File Processing Workflows Assessment"
+title="Chapter 19: File Processing Workflows Assessment"
 questionsPerBatch={18}
 questions={[ {
 question: "What separates experts from beginners when working with General Agents?",

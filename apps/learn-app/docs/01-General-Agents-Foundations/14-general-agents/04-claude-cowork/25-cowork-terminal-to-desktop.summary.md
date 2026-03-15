@@ -22,5 +22,5 @@ Claude Cowork is agentic AI in the Claude Desktop app—it reads your files dire
 
 ### Connections
 
-- **Builds on**: Agentic AI concepts and the Claude Agent SDK from earlier lessons in Chapter 3
+- **Builds on**: Agentic AI concepts and the Claude Agent SDK from earlier lessons in Chapter 14
 - **Leads to**: Getting started with Cowork, practical workflows, and browser integration (Lessons 23–25)

@@ -12,7 +12,7 @@ keywords:
     claude code,
     subagent isolation,
   ]
-chapter: 3
+chapter: 14
 lesson: 22
 duration_minutes: 18
 

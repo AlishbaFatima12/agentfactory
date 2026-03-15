@@ -17,5 +17,5 @@ The knowledge that makes a domain agent genuinely useful is tacit — it resists
 - Treating the explicit part of expertise (checklists, procedures) as the whole of expertise
 
 ### Connections
-- **Builds on**: Chapter 15 taught the architecture of a Cowork plugin and what a SKILL.md contains; this lesson explains why filling that architecture with useful content requires structured extraction
+- **Builds on**: Chapter 26 taught the architecture of a Cowork plugin and what a SKILL.md contains; this lesson explains why filling that architecture with useful content requires structured extraction
 - **Leads to**: Lesson 2 introduces Method A — the five-question interview framework that surfaces tacit knowledge from expert heads

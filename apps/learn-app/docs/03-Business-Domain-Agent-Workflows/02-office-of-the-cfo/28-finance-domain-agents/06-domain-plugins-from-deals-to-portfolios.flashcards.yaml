@@ -1,78 +1,78 @@
 deck:
-  id: "ch17-06-domain-plugins"
+  id: "ch28-06-domain-plugins"
   title: "Domain Plugins: From Deals to Portfolios"
   description: "The four add-on plugins (investment-banking, equity-research, private-equity, wealth-management), two partner plugins (LSEG, S&P Global), key finance concepts, customisation dimensions, and non-negotiable boundaries."
   tags: ["financial-services-plugins", "add-on-plugins", "investment-banking", "equity-research", "private-equity", "wealth-management", "customisation"]
   version: 1
 
 cards:
-  - id: "ch17-06-addon-architecture-001"
+  - id: "ch28-06-addon-architecture-001"
     front: "Why must the core plugin (financial-analysis) be installed before any add-on plugin?"
     back: "All 11 data connectors are centralised in the core plugin. Add-on plugins inherit these connections automatically. Without the core, add-ons have no data sources to work with. The core also provides shared financial modelling commands (/comps, /dcf, /lbo) that add-ons build upon."
     tags: ["core-plugin", "install-order", "architecture"]
     difficulty: "basic"
 
-  - id: "ch17-06-four-addons-002"
+  - id: "ch28-06-four-addons-002"
     front: "Name the four add-on plugins in the financial-services-plugins suite and their target finance functions."
     back: "1. investment-banking -- sell-side and buy-side advisory (teasers, CIMs, buyer lists, merger models, deal tracking)\n2. equity-research -- sell-side research (earnings updates, initiating coverage, thesis tracking, morning notes)\n3. private-equity -- PE deal lifecycle (sourcing, diligence, unit economics, returns, IC memos, portfolio monitoring)\n4. wealth-management -- client-facing advisory (meeting prep, financial planning, rebalancing, tax-loss harvesting)"
     tags: ["four-addons", "plugin-overview"]
     difficulty: "basic"
 
-  - id: "ch17-06-teaser-003"
+  - id: "ch28-06-teaser-003"
     front: "What is an M&A teaser and what makes it effective?"
     back: "A teaser (blind profile) is the first document a buyer receives in an M&A process. It describes the business without naming it -- covering industry, key financials, competitive differentiation, and sale rationale. The buyer signs an NDA to receive the full CIM. A well-written teaser generates 15-25 NDA signings. The skill is saying enough to generate interest without revealing identity or negotiating leverage."
     tags: ["teaser", "investment-banking", "M&A"]
     difficulty: "intermediate"
 
-  - id: "ch17-06-ic-memo-004"
+  - id: "ch28-06-ic-memo-004"
     front: "What are the standard sections of an IC (Investment Committee) memo?"
     back: "1. Executive summary with recommendation\n2. Company and market overview\n3. Investment thesis -- why this company, why now\n4. Financial performance and projections\n5. Valuation\n6. Return analysis -- base, bull, bear case IRR and MOIC\n7. Key risks and mitigants\n8. Proposed deal structure\n\nThe plugin produces the framework and populates data; the thesis, risk assessment, and recommendation require professional judgment."
     tags: ["ic-memo", "private-equity"]
     difficulty: "intermediate"
 
-  - id: "ch17-06-due-diligence-005"
+  - id: "ch28-06-due-diligence-005"
     front: "What are three red flags to look for during financial due diligence?"
     back: "1. Customer concentration -- one customer is more than 20% of revenue (dependency risk)\n2. Receivables growing faster than revenue -- potential collection problems or aggressive revenue recognition\n3. Capex consistently below depreciation -- underinvestment in the asset base, potentially flattering short-term EBITDA at the expense of long-term capability"
     tags: ["due-diligence", "red-flags", "quality-of-earnings"]
     difficulty: "intermediate"
 
-  - id: "ch17-06-earnings-consensus-006"
+  - id: "ch28-06-earnings-consensus-006"
     front: "What is earnings consensus and why does the beat/miss framework matter?"
     back: "Consensus is the average of analyst forecasts for each financial metric. A 'beat' means actual results exceeded consensus; a 'miss' means they fell short. Stock price often moves on whether results are better or worse than already expected, not on the absolute quality of the numbers. The /earnings command automates the comparison; the analyst provides the judgment on what the numbers mean for the thesis."
     tags: ["earnings", "consensus", "equity-research"]
     difficulty: "basic"
 
-  - id: "ch17-06-initiating-coverage-007"
+  - id: "ch28-06-initiating-coverage-007"
     front: "What is an initiating coverage report and why is it important for a research analyst?"
     back: "A 25-50 page document introducing an analyst's view on a company for the first time. It includes investment thesis (bull/base/bear), business description, financial model, valuation, key risks, and price target. Initiating coverage is how research franchises are built -- the analyst's job is to supply the non-consensus insight that explains why the stock is mispriced."
     tags: ["initiating-coverage", "equity-research"]
     difficulty: "intermediate"
 
-  - id: "ch17-06-customisation-dims-008"
+  - id: "ch28-06-customisation-dims-008"
     front: "What are the five dimensions for customising the financial-services-plugins for your firm?"
     back: "1. Swap connectors -- edit .mcp.json to point at your data providers (e.g., Bloomberg instead of FactSet)\n2. Add firm context -- update skill files with your terminology and processes\n3. Bring templates -- register your branded PowerPoint with /ppt-template\n4. Adjust workflows -- modify skill instructions to match your team's process\n5. Build new plugins -- follow the standard structure to create entirely new plugins"
     tags: ["customisation", "firm-adaptation"]
     difficulty: "basic"
 
-  - id: "ch17-06-partner-plugins-009"
+  - id: "ch28-06-partner-plugins-009"
     front: "What do the two partner-built plugins (LSEG and S&P Global) provide?"
     back: "LSEG plugin: prices bonds, analyses yield curves, evaluates FX carry trades, values options, and builds macro dashboards -- 8 commands covering fixed income, FX, equities, and macro.\n\nS&P Global plugin: generates company tearsheets, earnings previews, and funding digests powered by Capital IQ data, supporting multiple audience types (equity research, IB/M&A, corporate development, sales)."
     tags: ["lseg", "spglobal", "partner-plugins"]
     difficulty: "basic"
 
-  - id: "ch17-06-non-negotiable-010"
+  - id: "ch28-06-non-negotiable-010"
     front: "What are the four non-negotiable boundaries that apply to every plugin in the suite?"
     back: "1. Claude does not provide investment advice -- recommendations are yours\n2. Claude makes mistakes and must be verified -- every number must be checked against source data\n3. Claude does not validate assumptions -- unreasonable inputs produce precise but wrong outputs\n4. Claude does not replace an audit -- compliance and fiduciary outputs require qualified professional review"
     tags: ["boundaries", "compliance", "professional-judgment"]
     difficulty: "basic"
 
-  - id: "ch17-06-ib-commands-011"
+  - id: "ch28-06-ib-commands-011"
     front: "What are the seven commands in the investment-banking plugin?"
     back: "/buyer-list -- identify strategic and financial buyers\n/cim -- Confidential Information Memorandum\n/deal-tracker -- milestone tracking across the deal process\n/merger-model -- accretion/dilution and synergy analysis\n/one-pager -- one-page company profile\n/process-letter -- bid process documentation\n/teaser -- anonymous buyer outreach document"
     tags: ["investment-banking", "commands"]
     difficulty: "intermediate"
 
-  - id: "ch17-06-wm-tlh-012"
+  - id: "ch28-06-wm-tlh-012"
     front: "What does the /tlh command in the wealth-management plugin do?"
     back: "Tax-loss harvesting: identifies positions with unrealised losses in the client's portfolio, runs offset analysis against realised gains, and checks wash-sale rule compliance before recommending any harvesting trades. The command handles the analytical work; the adviser provides the judgment on whether harvesting aligns with the client's overall tax strategy and portfolio objectives."
     tags: ["wealth-management", "tax-loss-harvesting"]

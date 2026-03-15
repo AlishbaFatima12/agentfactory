@@ -148,12 +148,13 @@ See the YAML Frontmatter section above. Every field is required.
 **NEVER add `import` statements for components that don't exist in `apps/learn-app/src/components/`.**
 
 Known non-existent components (DO NOT IMPORT):
+
 - `@site/src/components/Flashcards` — Flashcards are `.flashcards.yaml` sidecar files, NOT React components
 - `@site/src/components/Quiz` — Quizzes are generated via `/quiz-generator` skill, NOT imported components
 
 **Rule**: Before adding ANY `import` from `@site/src/components/`, verify the component exists: `ls apps/learn-app/src/components/`. If it doesn't exist, DO NOT import it. Invalid imports break the Docusaurus build.
 
-**Incident**: Ch 19 (2026-03-03) — 10 files shipped with phantom Flashcards/Quiz imports, broke Vercel production build.
+**Incident**: Ch 30 (2026-03-03) — 10 files shipped with phantom Flashcards/Quiz imports, broke Vercel production build.
 
 ---
 
@@ -210,10 +211,10 @@ Content was rewritten 6 times due to:
 
 ## Quality References
 
-| Content Type                         | Reference Lesson                                                              |
-| ------------------------------------ | ----------------------------------------------------------------------------- |
-| **Conceptual/Theory** (L1)           | Chapter 1, Lesson 1: `01-agent-factory-paradigm/01-digital-fte-revolution.md` |
-| **Technical/Skill-Building** (L3/L4) | Chapter 11, Lesson 1: `11-ai-native-ides/01-setup.md`                         |
+| Content Type                         | Reference Lesson                                                               |
+| ------------------------------------ | ------------------------------------------------------------------------------ |
+| **Conceptual/Theory** (L1)           | Chapter 12, Lesson 1: `12-agent-factory-paradigm/01-digital-fte-revolution.md` |
+| **Technical/Skill-Building** (L3/L4) | Chapter 22, Lesson 1: `22-ai-native-ides/01-setup.md`                          |
 
 Match the appropriate reference based on lesson type. Don't force skill-building lessons to match narrative theory style.
 

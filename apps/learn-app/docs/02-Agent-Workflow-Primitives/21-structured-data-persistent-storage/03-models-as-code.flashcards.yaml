@@ -1,5 +1,5 @@
 deck:
-  id: ch10-02-models-as-code
+  id: ch21-02-models-as-code
   title: "Models as Code"
   description: Flashcards covering SQLAlchemy model design, Float vs Numeric for money, nullable constraints, foreign keys, type selection, and the model file as an executable contract.
   tags:
@@ -10,7 +10,7 @@ deck:
   - constraints
   version: 1
 cards:
-- id: ch10-02-models-as-code-001
+- id: ch21-02-models-as-code-001
   type: recall
   difficulty: basic
   front: "In Python, what does 0.1 + 0.2 evaluate to?"
@@ -18,7 +18,7 @@ cards:
   tags:
   - float
   - numeric
-- id: ch10-02-models-as-code-002
+- id: ch21-02-models-as-code-002
   type: thinking
   difficulty: intermediate
   front: "Why can't you fix the Float money problem by rounding every calculation?"
@@ -27,7 +27,7 @@ cards:
   tags:
   - numeric
   - float
-- id: ch10-02-models-as-code-003
+- id: ch21-02-models-as-code-003
   type: recall
   difficulty: basic
   front: What does Numeric(10, 2) mean in SQLAlchemy?
@@ -35,7 +35,7 @@ cards:
   tags:
   - numeric
   - sqlalchemy
-- id: ch10-02-models-as-code-004
+- id: ch21-02-models-as-code-004
   type: recall
   difficulty: basic
   front: What does nullable=False enforce on a database column?
@@ -43,7 +43,7 @@ cards:
   tags:
   - constraints
   - nullable
-- id: ch10-02-models-as-code-005
+- id: ch21-02-models-as-code-005
   type: thinking
   difficulty: intermediate
   front: "Why is nullable=False more trustworthy than app-level validation for required fields?"
@@ -52,7 +52,7 @@ cards:
   tags:
   - constraints
   - nullable
-- id: ch10-02-models-as-code-006
+- id: ch21-02-models-as-code-006
   type: recall
   difficulty: intermediate
   front: Why does the Expense model store user_id (a ForeignKey) instead of the user's name directly?
@@ -60,7 +60,7 @@ cards:
   tags:
   - foreign-key
   - update-anomaly
-- id: ch10-02-models-as-code-007
+- id: ch21-02-models-as-code-007
   type: thinking
   difficulty: intermediate
   front: "Alice changes her email. You stored her name in 500 expense rows. What breaks?"
@@ -69,7 +69,7 @@ cards:
   tags:
   - foreign-key
   - update-anomaly
-- id: ch10-02-models-as-code-008
+- id: ch21-02-models-as-code-008
   type: thinking
   difficulty: advanced
   front: "How does a model file differ from documentation?"
@@ -78,7 +78,7 @@ cards:
   tags:
   - models
   - schema-contract
-- id: ch10-02-models-as-code-009
+- id: ch21-02-models-as-code-009
   type: recall
   difficulty: basic
   front: "In the budget tracker ER diagram, what are the three entities and their relationships?"
@@ -86,7 +86,7 @@ cards:
   tags:
   - models
   - foreign-key
-- id: ch10-02-models-as-code-010
+- id: ch21-02-models-as-code-010
   type: recall
   difficulty: intermediate
   front: "What SQLAlchemy type should you use for monetary values and why?"
@@ -94,7 +94,7 @@ cards:
   tags:
   - numeric
   - type-selection
-- id: ch10-02-models-as-code-011
+- id: ch21-02-models-as-code-011
   type: thinking
   difficulty: advanced
   front: "Why should you pick the type that makes invalid data impossible, not the type that is easiest to type?"
@@ -103,7 +103,7 @@ cards:
   tags:
   - type-selection
   - constraints
-- id: ch10-02-models-as-code-012
+- id: ch21-02-models-as-code-012
   type: recall
   difficulty: intermediate
   front: "Why should you never run create_all against a production database with real data?"

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "The 2025 Inflection Point and The Agent Maturity Model"
-chapter: 1
+chapter: 12
 lesson: 1
 duration_minutes: 30
 description: "Evidence for the 2026 transformation and the The Agent Maturity Model that structures AI-native development"
@@ -59,7 +59,7 @@ teaching_guide:
   session_group: 1
   session_title: "The AI Development Landscape"
   key_points:
-    - "Agent Maturity Model (Incubator→Specialist) is the central framework of this book — it recurs in every part from Chapter 3 through Part 7"
+    - "Agent Maturity Model (Incubator→Specialist) is the central framework of this book — it recurs in every part from Chapter 14 through Part 7"
     - "Convergent evidence pattern (academia + surveys + startups + acquisitions) teaches students how to evaluate tech claims — a skill used repeatedly in later lessons"
     - "General Agents BUILD Custom Agents — this is not a choice between two alternatives but an evolutionary progression, and misunderstanding this leads to premature specialization"
     - "The $3 trillion developer economy stat anchors the 'why this matters' — connect it to students' own careers"

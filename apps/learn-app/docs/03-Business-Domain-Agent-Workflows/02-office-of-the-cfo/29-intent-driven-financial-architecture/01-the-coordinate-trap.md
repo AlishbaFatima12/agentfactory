@@ -16,7 +16,7 @@ keywords:
     "IDFA",
     "Intent-Driven Financial Architecture",
   ]
-chapter: 18
+chapter: 29
 lesson: 1
 duration_minutes: 20
 
@@ -67,7 +67,7 @@ cognitive_load:
     - "Logic diffusion — the same assumption scattered across many cells"
     - "Audit burden — the cost of manually tracing every formula"
     - "AI opacity — why agents read coordinates but cannot infer intent"
-  assessment: "5 concepts at A2 level — within the 5-7 cognitive limit for this tier. Students enter from Chapter 17 with hands-on experience using Claude in Excel and Cowork; this lesson shifts from tool usage to examining the structural flaw in the models those tools operate on."
+  assessment: "5 concepts at A2 level — within the 5-7 cognitive limit for this tier. Students enter from Chapter 28 with hands-on experience using Claude in Excel and Cowork; this lesson shifts from tool usage to examining the structural flaw in the models those tools operate on."
 
 differentiation:
   extension_for_advanced: "Open a financial model you have built or inherited. Count the number of formulas that use coordinate references versus Named Ranges. Calculate the ratio. Then pick the three most complex formulas and rewrite them using descriptive variable names — not in Excel yet, just on paper. This exercise previews the IDFA methodology that Lesson 3 will teach formally."

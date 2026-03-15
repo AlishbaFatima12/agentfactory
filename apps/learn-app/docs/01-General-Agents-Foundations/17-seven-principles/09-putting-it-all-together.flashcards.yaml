@@ -1,5 +1,5 @@
 deck:
-  id: ch06-09-putting-it-all-together
+  id: ch17-09-putting-it-all-together
   title: 'Putting It All Together: Workflows in Practice'
   description: How the seven principles combine in real-world workflows, the Director's Loop mindset, principle selection by task type, and reusable workflow templates.
   tags:
@@ -11,7 +11,7 @@ deck:
   - meta-principle
   version: 2
 cards:
-- id: ch06-09-putting-it-all-together-001
+- id: ch17-09-putting-it-all-together-001
   type: recall
   difficulty: basic
   front: In the Director's Loop, what is your new role when working with an AI agent?
@@ -19,7 +19,7 @@ cards:
   tags:
   - workflows
   - seven-principles
-- id: ch06-09-putting-it-all-together-002
+- id: ch17-09-putting-it-all-together-002
   type: thinking
   difficulty: intermediate
   front: Why does treating the AI as a junior developer with infinite energy require all seven principles?
@@ -29,7 +29,7 @@ cards:
   tags:
   - workflows
   - seven-principles
-- id: ch06-09-putting-it-all-together-003
+- id: ch17-09-putting-it-all-together-003
   type: recall
   difficulty: basic
   front: What four things does an AI agent need from its human director?
@@ -37,7 +37,7 @@ cards:
   tags:
   - workflows
   - seven-principles
-- id: ch06-09-putting-it-all-together-004
+- id: ch17-09-putting-it-all-together-004
   type: thinking
   difficulty: intermediate
   front: Why does debugging prioritize Principles 1, 3, and 7 over the others?
@@ -47,7 +47,7 @@ cards:
   tags:
   - workflows
   - seven-principles
-- id: ch06-09-putting-it-all-together-005
+- id: ch17-09-putting-it-all-together-005
   type: recall
   difficulty: basic
   front: Which three principles are most critical for refactoring a large module?
@@ -55,7 +55,7 @@ cards:
   tags:
   - workflows
   - seven-principles
-- id: ch06-09-putting-it-all-together-006
+- id: ch17-09-putting-it-all-together-006
   type: thinking
   difficulty: advanced
   front: How does principle prioritization differ between a quick bug fix and a new feature?
@@ -65,7 +65,7 @@ cards:
   tags:
   - workflows
   - seven-principles
-- id: ch06-09-putting-it-all-together-007
+- id: ch17-09-putting-it-all-together-007
   type: recall
   difficulty: intermediate
   front: In the Quick Fix template, what does the AI do immediately after you describe the problem?
@@ -73,7 +73,7 @@ cards:
   tags:
   - workflows
   - seven-principles
-- id: ch06-09-putting-it-all-together-008
+- id: ch17-09-putting-it-all-together-008
   type: thinking
   difficulty: intermediate
   front: Why is a failed verification attempt valuable information rather than wasted effort?
@@ -82,7 +82,7 @@ cards:
   tags:
   - workflows
   - seven-principles
-- id: ch06-09-putting-it-all-together-009
+- id: ch17-09-putting-it-all-together-009
   type: recall
   difficulty: intermediate
   front: In Template 1b, what four-step recovery sequence follows a failed verification?
@@ -90,7 +90,7 @@ cards:
   tags:
   - workflows
   - seven-principles
-- id: ch06-09-putting-it-all-together-010
+- id: ch17-09-putting-it-all-together-010
   type: thinking
   difficulty: intermediate
   front: Why does the Feature Development template start with writing a test before any implementation?
@@ -99,7 +99,7 @@ cards:
   tags:
   - workflows
   - seven-principles
-- id: ch06-09-putting-it-all-together-011
+- id: ch17-09-putting-it-all-together-011
   type: recall
   difficulty: basic
   front: What is the first step in the Refactoring Pattern template?
@@ -107,7 +107,7 @@ cards:
   tags:
   - workflows
   - seven-principles
-- id: ch06-09-putting-it-all-together-012
+- id: ch17-09-putting-it-all-together-012
   type: thinking
   difficulty: advanced
   front: Why should someone scoring 0-2 on the self-assessment start with Verification and Observability specifically?
@@ -118,7 +118,7 @@ cards:
   - self-assessment
   - verification
   - observability
-- id: ch06-09-putting-it-all-together-013
+- id: ch17-09-putting-it-all-together-013
   type: recall
   difficulty: intermediate
   front: What four levels make up the Project Health Score on the 7-principle self-assessment?
@@ -132,7 +132,7 @@ cards:
   tags:
   - self-assessment
   - health-score
-- id: ch06-09-putting-it-all-together-014
+- id: ch17-09-putting-it-all-together-014
   type: thinking
   difficulty: intermediate
   front: How does explicitly naming principles in your prompts improve agent output?
@@ -142,7 +142,7 @@ cards:
   tags:
   - prompting
   - directors-loop
-- id: ch06-09-putting-it-all-together-015
+- id: ch17-09-putting-it-all-together-015
   type: recall
   difficulty: basic
   front: What is the meta-principle underlying all seven principles of agent work?
@@ -150,7 +150,7 @@ cards:
   tags:
   - meta-principle
   - synthesis
-- id: ch06-09-putting-it-all-together-016
+- id: ch17-09-putting-it-all-together-016
   type: thinking
   difficulty: advanced
   front: Why are file systems, shells, and version control foundations for agent workflows rather than limitations?

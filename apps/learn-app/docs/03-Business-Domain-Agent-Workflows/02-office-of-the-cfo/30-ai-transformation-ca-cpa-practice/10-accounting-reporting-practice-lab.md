@@ -18,7 +18,7 @@ keywords:
     "scheduled tasks",
     "CA/CPA exercises",
   ]
-chapter: 19
+chapter: 30
 lesson: 10
 duration_minutes: 90
 

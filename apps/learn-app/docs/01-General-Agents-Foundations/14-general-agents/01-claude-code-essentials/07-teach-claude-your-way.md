@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/teach-claude-your-way
 title: "Teach Claude Your Way of Working"
 sidebar_position: 7
-chapter: 3
+chapter: 14
 lesson: 7
 duration_minutes: 10
 

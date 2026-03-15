@@ -1,15 +1,15 @@
 ---
 slug: /Business-Domain-Agent-Workflows/banking-domain-agents/chapter-quiz
 sidebar_position: 16
-title: "Chapter 21: Banking-Specific AI Quiz"
+title: "Chapter 32: Banking-Specific AI Quiz"
 ---
 
-# Chapter 21: Banking-Specific AI Quiz
+# Chapter 32: Banking-Specific AI Quiz
 
 Test your understanding of the three regulatory pillars (IFRS 9, Basel III/IV, AML/KYC), pillar-aware routing, ECL calculation, capital adequacy, financial crime compliance, cross-pillar integration, and bank reconciliation.
 
 <Quiz
-title="Chapter 21: Banking-Specific AI Assessment"
+title="Chapter 32: Banking-Specific AI Assessment"
 questions={[
 {
 question: "A bank holds a $50 million corporate loan. The IFRS 9 model calculates a $2 million ECL provision. The Basel III model calculates a $4 million capital charge. A junior analyst asks why two different regulatory frameworks produce two different numbers for the same loan. What is the correct explanation?",
@@ -24,7 +24,7 @@ explanation: "Lesson 1 establishes that the three pillars ask different question
 source: "Lesson 1: The Three Regulatory Pillars of Modern Banking"
 },
 {
-question: "A fraud is discovered in a corporate loan on a bank's balance sheet. The AML team files a SAR. What cross-pillar cascade does Chapter 21 identify as the consequence?",
+question: "A fraud is discovered in a corporate loan on a bank's balance sheet. The AML team files a SAR. What cross-pillar cascade does Chapter 32 identify as the consequence?",
 options: [
 "The fraud evidence triggers SICR, migrating the loan from Stage 1 to Stage 3 with a provision increase of potentially 5-10x, which reduces retained earnings and therefore CET1 capital",
 "The fraud triggers only an AML investigation — IFRS 9 and Basel are unaffected until the investigation concludes with a formal finding",
@@ -108,7 +108,7 @@ explanation: "Lesson 4 identifies TTC-vs-PIT confusion as one of the most common
 source: "Lesson 4: PD, LGD, and EAD — Building the ECL Components"
 },
 {
-question: "A bank estimates LGD for a residential mortgage portfolio. The current market value of the properties provides 75% collateral coverage. The risk team uses this value directly in the ECL calculation. What principle does Chapter 21 identify as violated?",
+question: "A bank estimates LGD for a residential mortgage portfolio. The current market value of the properties provides 75% collateral coverage. The risk team uses this value directly in the ECL calculation. What principle does Chapter 32 identify as violated?",
 options: [
 "Current market values are correct for LGD estimation because IFRS 9 requires point-in-time calibration of all model inputs",
 "LGD should be set to zero for fully collateralised loans because the collateral eliminates all credit risk regardless of market conditions",
@@ -216,7 +216,7 @@ explanation: "Lesson 8 explains that the leverage ratio is a non-risk-weighted b
 source: "Lesson 8: Leverage Ratio, LCR, and NSFR"
 },
 {
-question: "A bank's compliance team discovers that a customer is a Politically Exposed Person (PEP) — the spouse of a current government minister. The relationship manager argues that PEP status does not indicate criminality and standard CDD should be sufficient. What does Chapter 21 say?",
+question: "A bank's compliance team discovers that a customer is a Politically Exposed Person (PEP) — the spouse of a current government minister. The relationship manager argues that PEP status does not indicate criminality and standard CDD should be sufficient. What does Chapter 32 say?",
 options: [
 "The relationship manager is correct that PEP status does not indicate criminality, but Enhanced Due Diligence is mandatory regardless — PEP status triggers EDD because of the elevated corruption and bribery risk associated with proximity to political power",
 "PEP status automatically prohibits the bank from maintaining the customer relationship under all major AML frameworks",
@@ -264,7 +264,7 @@ explanation: "Lesson 10 establishes the tipping-off prohibition: under POCA 2002
 source: "Lesson 10: Transaction Monitoring, ML, and SAR Filing"
 },
 {
-question: "A bank's MLRO receives a SAR recommendation from an analyst. The MLRO reviews the case and decides not to file, concluding the evidence is insufficient. Six months later, the account is linked to a major fraud. The MLRO asks whether personal liability applies. What does Chapter 21 say about the MLRO's position?",
+question: "A bank's MLRO receives a SAR recommendation from an analyst. The MLRO reviews the case and decides not to file, concluding the evidence is insufficient. Six months later, the account is linked to a major fraud. The MLRO asks whether personal liability applies. What does Chapter 32 say about the MLRO's position?",
 options: [
 "The MLRO has no personal liability because the analyst made the initial assessment and the MLRO merely reviewed the recommendation",
 "Personal liability only applies if the MLRO acted with deliberate intent to facilitate the fraud, not for a genuine professional judgment error",
@@ -336,7 +336,7 @@ explanation: "Lesson 14 traces four-way provision reconciliation breaks. The wri
 source: "Lesson 14: Bank Reconciliation"
 },
 {
-question: "A bank's suspense register shows an item aged 35 days with no identified owner and no documentation. The Operations team has been unable to determine the item's origin. What does Chapter 21's ageing SLA framework require?",
+question: "A bank's suspense register shows an item aged 35 days with no identified owner and no documentation. The Operations team has been unable to determine the item's origin. What does Chapter 32's ageing SLA framework require?",
 options: [
 "The item should be returned to the correspondent bank because unresolvable items are the correspondent's responsibility to identify and clear",
 "The item triggers the over-30-day protocol: write-off assessment, operational risk event logging, CFO notification, and formal decision to either resolve or write off to profit and loss",
@@ -348,7 +348,7 @@ explanation: "Lesson 14 defines the ageing SLA: items over 30 days require write
 source: "Lesson 14: Bank Reconciliation"
 },
 {
-question: "Chapter 21 identifies five principles of banking AI deployment. Principle 2 states that 'the SICR assessment is irreducibly human.' A CTO proposes fully automating the SICR assessment using machine learning models trained on historical default data. What does the chapter say about this approach?",
+question: "Chapter 32 identifies five principles of banking AI deployment. Principle 2 states that 'the SICR assessment is irreducibly human.' A CTO proposes fully automating the SICR assessment using machine learning models trained on historical default data. What does the chapter say about this approach?",
 options: [
 "Full automation is the correct goal because ML models trained on sufficient historical data can outperform human judgment on SICR classification",
 "SICR assessment should be entirely manual because any automation introduces model risk that banking regulators will not accept",
@@ -420,7 +420,7 @@ explanation: "Lesson 8 explains NSFR ASF factors: term funding >1 year receives 
 source: "Lesson 8: Leverage Ratio, LCR, and NSFR"
 },
 {
-question: "A bank's AI transaction monitoring system reduces false positives from 97% to 45% while maintaining the same detection rate. A senior manager proposes eliminating the human review step for alerts the ML model classifies as 'low confidence.' What risk does Chapter 21 identify?",
+question: "A bank's AI transaction monitoring system reduces false positives from 97% to 45% while maintaining the same detection rate. A senior manager proposes eliminating the human review step for alerts the ML model classifies as 'low confidence.' What risk does Chapter 32 identify?",
 options: [
 "Eliminating human review is acceptable for low-confidence alerts because the ML model's accuracy demonstrates it can reliably distinguish genuine from false alerts",
 "The ML model identifies patterns but the reasonable-grounds-to-suspect judgment required for SAR filing is a legal standard that must be applied by a qualified professional — automated dismissal may miss genuine suspicious activity that the model underweights",
@@ -456,7 +456,7 @@ explanation: "Lesson 14 establishes that the provision movement must reconcile e
 source: "Lesson 14: Bank Reconciliation"
 },
 {
-question: "In the banking AI hierarchy described in Chapter 21, Level 1 is Calculation Automation, Level 2 is Analytical Augmentation, and Level 3 is Autonomous Compliance Execution. A bank asks its AI agent to determine whether a borrower's credit quality has significantly increased since origination, justifying a cure from Stage 2 back to Stage 1. Which level is this task?",
+question: "In the banking AI hierarchy described in Chapter 32, Level 1 is Calculation Automation, Level 2 is Analytical Augmentation, and Level 3 is Autonomous Compliance Execution. A bank asks its AI agent to determine whether a borrower's credit quality has significantly increased since origination, justifying a cure from Stage 2 back to Stage 1. Which level is this task?",
 options: [
 "Level 1 because it involves applying the SICR criteria which are defined rules that can be computed deterministically",
 "Level 3 because it requires autonomous cross-pillar orchestration spanning both IFRS 9 and Basel frameworks simultaneously",
@@ -516,7 +516,7 @@ explanation: "Lesson 6 explains the buffer framework: the hard minimum (4.5%) is
 source: "Lesson 6: Basel III/IV Capital Adequacy"
 },
 {
-question: "The banking plugin uses pillar-aware routing rather than jurisdiction-aware routing. A practitioner who mastered the Islamic finance plugin from Chapter 20 asks how the two routing dimensions differ. Which comparison is correct?",
+question: "The banking plugin uses pillar-aware routing rather than jurisdiction-aware routing. A practitioner who mastered the Islamic finance plugin from Chapter 31 asks how the two routing dimensions differ. Which comparison is correct?",
 options: [
 "Both plugins route identically — the only difference is the domain terminology used in the routing tables",
 "The Islamic finance router uses skill chaining while the banking router loads only one skill per query to maintain simplicity",
@@ -540,7 +540,7 @@ explanation: "Lesson 10 and the exercises describe sanctions screening false pos
 source: "Lesson 10: Transaction Monitoring, ML, and SAR Filing"
 },
 {
-question: "Chapter 21's Principle 4 states that the Basel IV output floor will reshape the banking industry. A bank with heavily optimised IRB models asks its AI agent to forecast the capital impact. The EBA estimates an average 18-22% RWA increase for large EU/UK banks. For this specific bank with heavily optimised models, what range does Chapter 21 suggest?",
+question: "Chapter 32's Principle 4 states that the Basel IV output floor will reshape the banking industry. A bank with heavily optimised IRB models asks its AI agent to forecast the capital impact. The EBA estimates an average 18-22% RWA increase for large EU/UK banks. For this specific bank with heavily optimised models, what range does Chapter 32 suggest?",
 options: [
 "The impact may exceed 30% because banks with the most optimised IRB models face the largest absolute increase when the floor constrains their model-derived capital benefit",
 "The impact will be less than the 18-22% average because heavily optimised models are already closer to the regulatory floor",
@@ -564,7 +564,7 @@ explanation: "Lesson 14 explains the provision movement: write-offs simultaneous
 source: "Lesson 14: Bank Reconciliation"
 },
 {
-question: "A mid-size UK bank sets up eight scheduled operational tasks using the banking plugin. The daily staging monitor runs at 08:00 and flags a facility where SICR indicators changed overnight — a covenant breach notification was received. What should happen next according to Chapter 21?",
+question: "A mid-size UK bank sets up eight scheduled operational tasks using the banking plugin. The daily staging monitor runs at 08:00 and flags a facility where SICR indicators changed overnight — a covenant breach notification was received. What should happen next according to Chapter 32?",
 options: [
 "The staging monitor automatically moves the facility to Stage 2 and updates the provision without human intervention to ensure real-time balance sheet accuracy",
 "The staging monitor flags the covenant breach as a qualitative SICR trigger for credit officer review — the credit officer assesses whether the breach constitutes genuine credit deterioration and makes the staging decision",
@@ -576,7 +576,7 @@ explanation: "Lesson 15 describes scheduled tasks and Lesson 3 establishes SICR 
 source: "Lesson 15: Full Banking Agent — Capstone"
 },
 {
-question: "Principle 5 of banking AI deployment states that 'the interaction between pillars is where the insight lives.' An AML enforcement action results in a £50M fine. A risk analyst models this only as an operational risk charge. What dimensions does Chapter 21 say the analyst has missed?",
+question: "Principle 5 of banking AI deployment states that 'the interaction between pillars is where the insight lives.' An AML enforcement action results in a £50M fine. A risk analyst models this only as an operational risk charge. What dimensions does Chapter 32 say the analyst has missed?",
 options: [
 "The analyst has captured the complete impact because AML fines are classified exclusively as operational risk events under the Basel framework",
 "The fine should be excluded from all risk models because it is a one-time event that does not reflect ongoing operational risk",

@@ -18,7 +18,7 @@ keywords:
     "domain agent",
     "reconciliation principle",
   ]
-chapter: 16
+chapter: 27
 lesson: 10
 duration_minutes: 15
 
@@ -105,7 +105,7 @@ Each lesson answered a specific question. Each answer led directly to the next q
 | L03: Conducting the Expert Interview | How do you run the interview so the expert articulates rather than performs? | Briefing protocol; specific note-taking; north star summary |
 | L04: The Document Extraction Framework | How do you extract knowledge from institutional documents? | Three-pass framework: explicit rules, contradiction mapping, gap identification |
 | L05: Choosing and Combining Methods | Which method do you use for a given domain? | Domain-method mapping; reconciliation principle for A+B domains |
-| L06: From Extraction to SKILL.md | How do you translate extraction outputs into structured instructions? | Persona (Chapter 15's four structural elements addressed through three extraction-focused writing questions), Questions (capability + out-of-scope), Principles (testable) |
+| L06: From Extraction to SKILL.md | How do you translate extraction outputs into structured instructions? | Persona (Chapter 26's four structural elements addressed through three extraction-focused writing questions), Questions (capability + out-of-scope), Principles (testable) |
 | L07: Building the Validation Scenario Set | How do you test whether the instructions actually work? | Four scenario categories at defined proportions; three scoring components; 95% threshold |
 | L08: The Validation Loop | How do you turn test failures into improvements? | Failure pattern interpretation; targeted rewriting; shadow mode; graduated autonomy |
 | L09: Hands-On Exercise | Can I do this? | Complete extraction-to-validation cycle for a real domain |
@@ -128,7 +128,7 @@ Before continuing, verify that you can answer these questions with specificity. 
 - [ ] **Method A**: Can you state the five interview questions, explain what each one surfaces, and describe the briefing protocol that sets the collaborative mode?
 - [ ] **Method B**: Can you describe the three passes, name the three types of contradictions, and explain the two response patterns for gaps?
 - [ ] **Method selection**: Can you classify your domain as A-primary, B-primary, or A+B, and state the reconciliation principle for when expert judgement and documented standards conflict?
-- [ ] **SKILL.md translation**: Can you write a Persona that addresses Chapter 15's four structural elements through three extraction-focused writing questions, a Questions section with explicit out-of-scope boundaries, and Principles that are specific enough to test?
+- [ ] **SKILL.md translation**: Can you write a Persona that addresses Chapter 26's four structural elements through three extraction-focused writing questions, a Questions section with explicit out-of-scope boundaries, and Principles that are specific enough to test?
 - [ ] **Validation scenarios**: Can you design a twenty-scenario set with the correct proportions and score each output on accuracy, calibration, and boundary compliance?
 - [ ] **Shadow mode**: Can you state the entry criteria and explain why scenario testing and shadow mode validate different things?
 
@@ -180,9 +180,9 @@ This checklist consolidates the full Knowledge Extraction Method into a single r
 
 The methodology does not change. The five interview questions, the three-pass document extraction, the reconciliation principle, the SKILL.md structure, and the validation loop are the permanent toolkit. What changes in each domain chapter is the context in which they are applied.
 
-Chapter 17 opens with finance — the domain the credit analyst example has been preparing you for. Where this chapter used the credit analyst to teach the methodology, Chapter 17 uses the methodology to build a production-grade financial analysis agent. The extraction targets shift from general credit analysis to specific financial workflows. The validation scenarios shift from illustrative examples to domain-specific test cases grounded in real financial instruments and regulatory requirements. The shadow mode criteria shift from generic thresholds to metrics that a compliance function would accept.
+Chapter 28 opens with finance — the domain the credit analyst example has been preparing you for. Where this chapter used the credit analyst to teach the methodology, Chapter 28 uses the methodology to build a production-grade financial analysis agent. The extraction targets shift from general credit analysis to specific financial workflows. The validation scenarios shift from illustrative examples to domain-specific test cases grounded in real financial instruments and regulatory requirements. The shadow mode criteria shift from generic thresholds to metrics that a compliance function would accept.
 
-The architecture from Chapter 15 does not change. The methodology from Chapter 16 does not change. What the domain chapters add is the professional knowledge that makes the methodology produce a SKILL.md worth deploying.
+The architecture from Chapter 26 does not change. The methodology from Chapter 27 does not change. What the domain chapters add is the professional knowledge that makes the methodology produce a SKILL.md worth deploying.
 
 ## Try With AI
 
@@ -191,7 +191,7 @@ Use these prompts in Anthropic Cowork or your preferred AI assistant to integrat
 ### Prompt 1: Personal Methodology Mapping
 
 ```
-I have just completed Chapter 16 on the Knowledge Extraction Method.
+I have just completed Chapter 27 on the Knowledge Extraction Method.
 I work as [YOUR ROLE] in [YOUR INDUSTRY]. Help me map the full
 methodology to a specific domain agent I want to build:
 [DESCRIBE THE AGENT IN 2-3 SENTENCES].

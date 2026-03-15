@@ -21,7 +21,7 @@ keywords:
     "general takaful",
     "premium allocation approach",
   ]
-chapter: 20
+chapter: 31
 lesson: 7
 duration_minutes: 50
 

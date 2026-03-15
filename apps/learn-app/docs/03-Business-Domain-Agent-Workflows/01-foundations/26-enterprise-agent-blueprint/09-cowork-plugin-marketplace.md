@@ -17,7 +17,7 @@ keywords:
     "transferable knowledge",
     "knowledge-work-plugins",
   ]
-chapter: 15
+chapter: 26
 lesson: 9
 duration_minutes: 20
 
@@ -81,7 +81,7 @@ teaching_guide:
     - "Vertical skill packs are starting points, not finished products. The subscriber receives a well-structured SKILL.md and must customise it with their own jurisdiction settings, clause standards, and escalation routing. The marketplace provides architecture; the knowledge worker provides institutional knowledge."
     - "Connector packages reduce deployment friction by bundling the MCP connectors alongside the SKILL.md template. The subscriber still needs to configure API credentials and permission scopes, but the connector infrastructure is pre-built."
     - "The publishability test is a single question: is this knowledge general enough to be valuable to a practitioner at a different organisation without access to your proprietary context? General best practice = publishable. Specific institutional knowledge = not publishable."
-    - "The economics of marketplace publishing (from Chapter 14 Lesson 5) are most attractive when domain expertise is valuable across many organisations but does not depend on any single organisation's proprietary context."
+    - "The economics of marketplace publishing (from Chapter 25 Lesson 5) are most attractive when domain expertise is valuable across many organisations but does not depend on any single organisation's proprietary context."
   misconceptions:
     - "Students may think they are selling their organisation's competitive advantage. Clarify: publishable knowledge is general domain best practice, not proprietary institutional context. Publishing what your competitors already know is the model."
     - "Students may assume marketplace plugins are ready to deploy without customisation. Both categories require subscriber customisation — skill packs need institutional knowledge added, connector packages need API credentials and permission scopes configured."
@@ -91,7 +91,7 @@ teaching_guide:
     - "If you could publish one SKILL.md to the marketplace, what would it encode? Who would subscribe? What would the subscriber still need to customise themselves?"
   teaching_tips:
     - "The transferability question is the most important concept in this lesson. Spend time on concrete examples — walk through specific knowledge claims and classify them as publishable or not."
-    - "Connect the marketplace economics to Chapter 14 Lesson 5 explicitly, but do not re-explain the four models. The point here is to show which model applies (Marketplace) and why the economics are attractive."
+    - "Connect the marketplace economics to Chapter 25 Lesson 5 explicitly, but do not re-explain the four models. The point here is to show which model applies (Marketplace) and why the economics are attractive."
     - "The distinction between starting point and finished product is critical. Students who understand this will not be frustrated when they subscribe to a skill pack and discover it requires significant customisation. That customisation is the feature, not a defect."
   assessment_checks:
     - question: "What is a vertical skill pack?"
@@ -166,7 +166,7 @@ Non-transferable knowledge is knowledge that only has value in the context of yo
 
 The IP distinction is not complicated, but it requires honest self-assessment. The easiest test: could a practitioner at a competitor organisation, using only publicly available information and general professional training, arrive at the same knowledge independently? If yes, it is transferable. If the knowledge depends on access to your clients, your cases, your systems, or your internal documents to make sense, it is not transferable.
 
-This test also connects directly to the marketplace economics covered in [Chapter 14 Lesson 5](/docs/Business-Domain-Agent-Workflows/enterprise-agentic-landscape/four-monetisation-models). The Marketplace model is most economically attractive for domain expertise that is valuable across many organisations but not dependent on any single organisation's proprietary context. Revenue per subscriber runs in the range of hundreds of pounds per month. Marginal cost of each additional subscriber is effectively zero. The economic case is strong — but only for knowledge that genuinely qualifies.
+This test also connects directly to the marketplace economics covered in [Chapter 25 Lesson 5](/docs/Business-Domain-Agent-Workflows/enterprise-agentic-landscape/four-monetisation-models). The Marketplace model is most economically attractive for domain expertise that is valuable across many organisations but not dependent on any single organisation's proprietary context. Revenue per subscriber runs in the range of hundreds of pounds per month. Marginal cost of each additional subscriber is effectively zero. The economic case is strong — but only for knowledge that genuinely qualifies.
 
 ## Skill Packs Versus Connector Packages: A Summary
 

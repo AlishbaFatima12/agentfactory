@@ -20,5 +20,5 @@ Every banking institution is simultaneously governed by three regulatory pillars
 
 ### Connections
 
-- **Builds on**: Chapter 20's jurisdiction-aware domain agents for Islamic finance, which introduced the concept of domain-specialised AI agents with routing architectures
+- **Builds on**: Chapter 31's jurisdiction-aware domain agents for Islamic finance, which introduced the concept of domain-specialised AI agents with routing architectures
 - **Leads to**: Lesson 2's banking plugin architecture, which translates the three-pillar framework into a 17-skill agent with pillar-aware routing

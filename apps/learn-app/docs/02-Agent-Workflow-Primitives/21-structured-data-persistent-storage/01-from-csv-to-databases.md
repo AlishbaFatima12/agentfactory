@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "When Bash and Python Hit the Wall"
-chapter: 10
+chapter: 21
 lesson: 0
 duration_minutes: 20
 description: "Identify exactly when Computation & Data Extraction workflows should escalate to schema + relational storage"

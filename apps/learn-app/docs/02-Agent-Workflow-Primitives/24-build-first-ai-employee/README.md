@@ -1,9 +1,9 @@
 ---
-sidebar_position: 13
-title: "Chapter 13: Project - Build Your AI Employee"
+sidebar_position: 24
+title: "Chapter 24: Project - Build Your AI Employee"
 ---
 
-# Chapter 13: Project - Build Your AI Employee
+# Chapter 24: Project - Build Your AI Employee
 
 **You've learned the pieces. Now build something real.**
 
@@ -17,11 +17,11 @@ This is a **project**. You'll build a working AI Employee for YOUR profession us
 
 ## Three Achievement Tiers
 
-| Tier | Path | Time | What You Get |
-|------|------|------|--------------|
-| **Bronze** | The Project Brief through Bronze Capstone: First Real Day | ~3 hours | Working AI Employee: identity + skill + connection + proof |
-| **Silver** | The Project Brief through Prove Professional Value | ~6 hours | + autonomous monitoring + trust boundaries + persistent memory + domain report |
-| **Gold** | The Project Brief through Prove Professional Value (Gold track) | ~9 hours | + multi-group architecture with isolation + memory isolation |
+| Tier       | Path                                                            | Time     | What You Get                                                                   |
+| ---------- | --------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------ |
+| **Bronze** | The Project Brief through Bronze Capstone: First Real Day       | ~3 hours | Working AI Employee: identity + skill + connection + proof                     |
+| **Silver** | The Project Brief through Prove Professional Value              | ~6 hours | + autonomous monitoring + trust boundaries + persistent memory + domain report |
+| **Gold**   | The Project Brief through Prove Professional Value (Gold track) | ~9 hours | + multi-group architecture with isolation + memory isolation                   |
 
 Pick the tier that matches your available time and ambition. You can always come back for the next tier later.
 
@@ -29,33 +29,33 @@ Pick the tier that matches your available time and ambition. You can always come
 
 ### The Brief
 
-| Lesson | Duration |
-|--------|----------|
-| [The Project Brief](./00-the-project-brief.md) | 20 min |
+| Lesson                                         | Duration |
+| ---------------------------------------------- | -------- |
+| [The Project Brief](./00-the-project-brief.md) | 20 min   |
 
 ### Bronze Tier: Working AI Employee
 
-| Lesson | Duration |
-|--------|----------|
-| [Give Your Employee an Identity](./01-give-your-employee-an-identity.md) | 30 min |
-| [Teach Your Employee a Skill](./02-teach-your-employee-a-skill.md) | 40 min |
-| [Connect Your Employee to the World](./03-connect-your-employee-to-the-world.md) | 35 min |
-| [Bronze Capstone: First Real Day](./04-bronze-capstone-first-real-day.md) | 45 min |
+| Lesson                                                                           | Duration |
+| -------------------------------------------------------------------------------- | -------- |
+| [Give Your Employee an Identity](./01-give-your-employee-an-identity.md)         | 30 min   |
+| [Teach Your Employee a Skill](./02-teach-your-employee-a-skill.md)               | 40 min   |
+| [Connect Your Employee to the World](./03-connect-your-employee-to-the-world.md) | 35 min   |
+| [Bronze Capstone: First Real Day](./04-bronze-capstone-first-real-day.md)        | 45 min   |
 
 ### Silver Tier: Proactive + Trusted + Learning
 
-| Lesson | Duration |
-|--------|----------|
-| [Make Your Employee Proactive](./05-make-your-employee-proactive.md) | 40 min |
-| [Teach Your Employee Boundaries](./06-teach-your-employee-boundaries.md) | 40 min |
-| [Give Your Employee a Memory](./07-give-your-employee-a-memory.md) | 40 min |
-| [Prove Professional Value](./08-capstone-prove-professional-value.md) | 55 min |
+| Lesson                                                                   | Duration |
+| ------------------------------------------------------------------------ | -------- |
+| [Make Your Employee Proactive](./05-make-your-employee-proactive.md)     | 40 min   |
+| [Teach Your Employee Boundaries](./06-teach-your-employee-boundaries.md) | 40 min   |
+| [Give Your Employee a Memory](./07-give-your-employee-a-memory.md)       | 40 min   |
+| [Prove Professional Value](./08-capstone-prove-professional-value.md)    | 55 min   |
 
 ### Project Review
 
-| Lesson | Duration |
-|--------|----------|
-| [Project Review](./09-project-review.md) | 25 min |
+| Lesson                                   | Duration |
+| ---------------------------------------- | -------- |
+| [Project Review](./09-project-review.md) | 25 min   |
 
 ## Student Deliverables (GitHub Repo)
 

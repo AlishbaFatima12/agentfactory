@@ -1,15 +1,15 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/chapter-quiz
 sidebar_position: 19
-title: "Chapter 20: Islamic Finance Domain Agents Quiz"
+title: "Chapter 31: Islamic Finance Domain Agents Quiz"
 ---
 
-# Chapter 20: Islamic Finance Domain Agents Quiz
+# Chapter 31: Islamic Finance Domain Agents Quiz
 
 Test your understanding of the router-product-overlay architecture, AAOIFI vs IFRS divergence, product-specific accounting mechanics, jurisdiction routing, zakat formulas, Shariah screening, cross-border consolidation, and the agent-vs-SSB judgment boundary.
 
 <Quiz
-title="Chapter 20: Islamic Finance Domain Agents Assessment"
+title="Chapter 31: Islamic Finance Domain Agents Assessment"
 questions={[
 {
 question: "A bank in Bahrain executes a murabaha worth $1 million with a 20% mark-up over 24 months. The same bank executes an identical murabaha in its UK subsidiary. A trainee notices the income numbers are identical but the labels differ. What is the correct explanation?",

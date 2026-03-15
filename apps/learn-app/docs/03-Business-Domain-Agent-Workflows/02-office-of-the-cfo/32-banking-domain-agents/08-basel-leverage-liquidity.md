@@ -18,7 +18,7 @@ keywords:
     "banking regulation",
     "banking AI agents",
   ]
-chapter: 21
+chapter: 32
 lesson: 8
 duration_minutes: 35
 

@@ -1,5 +1,5 @@
 deck:
-  id: ch01-nine-pillars-aidd
+  id: ch12-nine-pillars-aidd
   title: Nine Pillars of AIDD
   description: Covers AIDD definition, nine characteristics, nine enabling pillars, pillar interdependencies, M-shaped developer profiles, and the completeness advantage.
   tags:
@@ -10,7 +10,7 @@ deck:
   - system-completeness
   version: 1
 cards:
-- id: ch01-nine-pillars-aidd-001
+- id: ch12-nine-pillars-aidd-001
   type: thinking
   difficulty: intermediate
   front: Why does AIDD transform developers into specification engineers rather than faster coders?
@@ -19,7 +19,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-002
+- id: ch12-nine-pillars-aidd-002
   type: thinking
   difficulty: intermediate
   front: Why did Maya build a full platform in one week without being a 10x engineer?
@@ -28,7 +28,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-003
+- id: ch12-nine-pillars-aidd-003
   type: recall
   difficulty: basic
   front: Name any 4 of the 9 enabling pillars of AIDD?
@@ -36,7 +36,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-004
+- id: ch12-nine-pillars-aidd-004
   type: recall
   difficulty: basic
   front: In AIDD, what does the Specification-Driven characteristic mean?
@@ -44,7 +44,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-005
+- id: ch12-nine-pillars-aidd-005
   type: thinking
   difficulty: basic
   front: Why does AIDD describe itself as AI-Augmented rather than AI-Automated?
@@ -53,7 +53,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-006
+- id: ch12-nine-pillars-aidd-006
   type: recall
   difficulty: basic
   front: What does Quality-Gated mean as an AIDD characteristic?
@@ -61,7 +61,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-007
+- id: ch12-nine-pillars-aidd-007
   type: thinking
   difficulty: intermediate
   front: Why does AIDD require human verification despite AI doing the implementation?
@@ -70,7 +70,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-008
+- id: ch12-nine-pillars-aidd-008
   type: thinking
   difficulty: intermediate
   front: Why does Pillar 1 (AI CLI Agents) remove the 'working alone' barrier rather than just speeding up coding?
@@ -80,7 +80,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-009
+- id: ch12-nine-pillars-aidd-009
   type: thinking
   difficulty: intermediate
   front: Why can Markdown serve as a programming language in AIDD?
@@ -89,7 +89,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-010
+- id: ch12-nine-pillars-aidd-010
   type: thinking
   difficulty: intermediate
   front: Why does treating Markdown as a programming language reduce cognitive load?
@@ -98,7 +98,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-011
+- id: ch12-nine-pillars-aidd-011
   type: recall
   difficulty: basic
   front: What analogy describes the MCP Standard (Pillar 3)?
@@ -106,7 +106,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-012
+- id: ch12-nine-pillars-aidd-012
   type: recall
   difficulty: intermediate
   front: What barrier does Pillar 3 (MCP Standard) remove?
@@ -114,7 +114,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-013
+- id: ch12-nine-pillars-aidd-013
   type: recall
   difficulty: intermediate
   front: Name two AI-First IDEs mentioned as examples of Pillar 4?
@@ -122,7 +122,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-014
+- id: ch12-nine-pillars-aidd-014
   type: recall
   difficulty: intermediate
   front: What barrier does Pillar 5 (Linux Universal Dev Environment) remove?
@@ -130,7 +130,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-015
+- id: ch12-nine-pillars-aidd-015
   type: thinking
   difficulty: intermediate
   front: Why is TDD (Pillar 6) especially critical when working with AI-generated code?
@@ -139,7 +139,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-016
+- id: ch12-nine-pillars-aidd-016
   type: recall
   difficulty: intermediate
   front: What barrier does Pillar 7 (SDD with Claude Code) remove?
@@ -147,7 +147,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-017
+- id: ch12-nine-pillars-aidd-017
   type: thinking
   difficulty: advanced
   front: How does Pillar 7 (SDD) relate to the other eight pillars?
@@ -157,7 +157,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-018
+- id: ch12-nine-pillars-aidd-018
   type: recall
   difficulty: intermediate
   front: What are Composable Vertical Skills (Pillar 8)?
@@ -165,7 +165,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-019
+- id: ch12-nine-pillars-aidd-019
   type: thinking
   difficulty: advanced
   front: Why can't Composable Skills (Pillar 8) work effectively without Pillars 2, 3, and 7?
@@ -175,7 +175,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-020
+- id: ch12-nine-pillars-aidd-020
   type: recall
   difficulty: basic
   front: What technologies does Pillar 9 (Universal Cloud Deployment) include?
@@ -183,7 +183,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-021
+- id: ch12-nine-pillars-aidd-021
   type: recall
   difficulty: basic
   front: What is an M-Shaped developer?
@@ -191,7 +191,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-022
+- id: ch12-nine-pillars-aidd-022
   type: thinking
   difficulty: intermediate
   front: Why was M-Shaped development nearly impossible before AI augmentation?
@@ -200,7 +200,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-023
+- id: ch12-nine-pillars-aidd-023
   type: recall
   difficulty: intermediate
   front: What distinguishes an M-Shaped developer from a Generalist?
@@ -208,7 +208,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-024
+- id: ch12-nine-pillars-aidd-024
   type: recall
   difficulty: intermediate
   front: What are the four developer profiles from least to most domains?
@@ -216,7 +216,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-025
+- id: ch12-nine-pillars-aidd-025
   type: thinking
   difficulty: advanced
   front: Why does partial pillar adoption (6 of 9) create bottlenecks rather than proportional gains?
@@ -225,7 +225,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-026
+- id: ch12-nine-pillars-aidd-026
   type: thinking
   difficulty: advanced
   front: How does the historical pattern of Cloud Computing adoption parallel AIDD adoption?
@@ -235,7 +235,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-027
+- id: ch12-nine-pillars-aidd-027
   type: recall
   difficulty: intermediate
   front: What are the three phases of the 18-month AIDD learning pathway?
@@ -243,7 +243,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-028
+- id: ch12-nine-pillars-aidd-028
   type: thinking
   difficulty: intermediate
   front: Why does the lesson list domain depth, domain compatibility, and organizational context as constraints on M-Shaped development?
@@ -253,7 +253,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-029
+- id: ch12-nine-pillars-aidd-029
   type: thinking
   difficulty: intermediate
   front: How do the nine AIDD characteristics differ from the nine enabling pillars?
@@ -263,7 +263,7 @@ cards:
   tags:
   - aidd
   - nine-pillars
-- id: ch01-nine-pillars-aidd-030
+- id: ch12-nine-pillars-aidd-030
   type: recall
   difficulty: basic
   front: In the Vertical SaaS Builder M-shaped profile, what four domains combine?

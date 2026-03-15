@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/cowork-getting-started
 title: "Getting Started with Cowork"
 sidebar_position: 26
-chapter: 3
+chapter: 14
 lesson: 26
 duration_minutes: 20
 chapter_type: Practical

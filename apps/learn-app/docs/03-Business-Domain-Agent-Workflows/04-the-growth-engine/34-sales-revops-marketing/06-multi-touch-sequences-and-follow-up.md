@@ -19,7 +19,7 @@ keywords:
     "Five Laws audit",
     "stop rules",
   ]
-chapter: 23
+chapter: 34
 lesson: 6
 duration_minutes: 25
 

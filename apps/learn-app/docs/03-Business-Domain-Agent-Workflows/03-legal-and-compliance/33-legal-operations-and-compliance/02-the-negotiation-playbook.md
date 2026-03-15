@@ -23,7 +23,7 @@ keywords:
     "NDA configuration",
     "legal plugin playbook",
   ]
-chapter: 22
+chapter: 33
 lesson: 2
 duration_minutes: 25
 

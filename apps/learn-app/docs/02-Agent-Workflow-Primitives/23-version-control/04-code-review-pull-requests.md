@@ -1,11 +1,21 @@
 ---
 sidebar_position: 4
-chapter: 12
+chapter: 23
 lesson: 4
 title: "Code Review, Pull Requests & Reusable Patterns"
 description: "Review changes before combining them, then master three patterns professionals follow every day"
 duration_minutes: 55
-keywords: [pull request, code review, diff, merge, github, collaboration, git patterns, workflow]
+keywords:
+  [
+    pull request,
+    code review,
+    diff,
+    merge,
+    github,
+    collaboration,
+    git patterns,
+    workflow,
+  ]
 
 # HIDDEN SKILLS METADATA
 skills:
@@ -126,7 +136,7 @@ Maya spent the weekend updating the volunteer list while Sarah redesigned the bu
 
 Sarah already made that mistake once — she merged a branch without looking at the changes and accidentally overwrote Maya's formatting. "I assumed it was fine," she told Maya. "I wrote it, so why would I need to check?"
 
-That instinct — *I wrote it, so it must be fine* — causes expensive failures. The 2012 Knight Capital incident is a famous example of unreviewed deployment changes causing massive losses. One review pause can prevent this class of mistake. ([Source](https://www.henricodolfing.ch/en/case-study-4-the-440-million-software-error-at-knight-capital/))
+That instinct — _I wrote it, so it must be fine_ — causes expensive failures. The 2012 Knight Capital incident is a famous example of unreviewed deployment changes causing massive losses. One review pause can prevent this class of mistake. ([Source](https://www.henricodolfing.ch/en/case-study-4-the-440-million-software-error-at-knight-capital/))
 
 > **"Never merge what you don't understand — even if you wrote it yesterday."**
 
@@ -152,9 +162,9 @@ The workflow:
 4. You review the changes
 5. You merge when satisfied
 
-![PR lifecycle showing creation, review phase, and merge decision](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-2/chapter-09/pull-request-lifecycle-workflow.png)
+![PR lifecycle showing creation, review phase, and merge decision](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-2/chapter-20/pull-request-lifecycle-workflow.png)
 
-**Why PRs matter**: Commits save snapshots. PRs force you to *evaluate* those snapshots before they reach `main`. It's the difference between writing and proofreading.
+**Why PRs matter**: Commits save snapshots. PRs force you to _evaluate_ those snapshots before they reach `main`. It's the difference between writing and proofreading.
 
 ---
 
@@ -351,13 +361,13 @@ A typical work session:
 
 These patterns aren't just Git habits. They're the [Seven Principles of General Agent Problem Solving](/docs/General-Agents-Foundations/seven-principles) applied to version control — you've been practicing them all chapter without labeling them.
 
-| Git Pattern | Principle It Applies | What You Did |
-| --- | --- | --- |
-| **Commit Before Experiment** | Small, Reversible Decomposition | Made atomic save points so any change can be undone |
-| **Branch-Test-Merge** | Constraints and Safety | Isolated risky work so it can't damage main |
-| **Push for Backup** | Persisting State in Files | Saved your project outside your computer so it survives failures |
-| `git status` before every action | Verification as Core Step | Checked the current state before making changes |
-| Clear commit messages and PR descriptions | Observability | Made your history readable so anyone can see what happened and why |
+| Git Pattern                               | Principle It Applies            | What You Did                                                       |
+| ----------------------------------------- | ------------------------------- | ------------------------------------------------------------------ |
+| **Commit Before Experiment**              | Small, Reversible Decomposition | Made atomic save points so any change can be undone                |
+| **Branch-Test-Merge**                     | Constraints and Safety          | Isolated risky work so it can't damage main                        |
+| **Push for Backup**                       | Persisting State in Files       | Saved your project outside your computer so it survives failures   |
+| `git status` before every action          | Verification as Core Step       | Checked the current state before making changes                    |
+| Clear commit messages and PR descriptions | Observability                   | Made your history readable so anyone can see what happened and why |
 
 Five of seven principles, embedded in your daily workflow. You didn't memorize them as theory — you practiced them as habits.
 

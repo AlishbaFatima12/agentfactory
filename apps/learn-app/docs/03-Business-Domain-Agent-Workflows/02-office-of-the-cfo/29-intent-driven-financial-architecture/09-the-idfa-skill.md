@@ -24,7 +24,7 @@ keywords:
     "IDFA",
     "Intent-Driven Financial Architecture",
   ]
-chapter: 18
+chapter: 29
 lesson: 9
 duration_minutes: 25
 
@@ -252,7 +252,7 @@ These protocols emerged from real eval failures: audits that flagged violations 
 
 ## Exercise: Three Ways to Activate the IDFA Skill
 
-You installed the IDFA plugin in the [Chapter 18 prerequisites](./README.md#prerequisites). In Lessons 3-8, the skill auto-activated when you mentioned financial models — you did not need to reference it by name. Now you will learn two more activation methods and understand when each is appropriate.
+You installed the IDFA plugin in the [Chapter 29 prerequisites](./README.md#prerequisites). In Lessons 3-8, the skill auto-activated when you mentioned financial models — you did not need to reference it by name. Now you will learn two more activation methods and understand when each is appropriate.
 
 ### Step 1 — Prompt: Auto-Activation (What You Have Been Doing)
 
@@ -344,13 +344,13 @@ One plugin install. Every agent. Every model interaction governed by the same fo
 
 Everything you learned in Lessons 1 through 8 is knowledge in your head. The IDFA plugin is knowledge in every agent you use. The investment is a single install command — the return is consistent IDFA compliance across every tool that supports the agentskills.io standard.
 
-This also connects back to Chapter 15, where you learned the plugin architecture for Agent Skills. The IDFA plugin is not a custom configuration — it is a standard-format skill that any skills-compatible agent can read. The same investment that makes Claude apply IDFA also makes Copilot, Codex, Gemini CLI, and future agents apply it. The skill travels with your project, not with any single tool.
+This also connects back to Chapter 26, where you learned the plugin architecture for Agent Skills. The IDFA plugin is not a custom configuration — it is a standard-format skill that any skills-compatible agent can read. The same investment that makes Claude apply IDFA also makes Copilot, Codex, Gemini CLI, and future agents apply it. The skill travels with your project, not with any single tool.
 
 ## Try With AI
 
 :::tip Setup
 
-Use these prompts in Cowork or your preferred AI assistant with the IDFA plugin installed (see [Chapter 18 prerequisites](./README.md#prerequisites) if you have not installed it yet). For the most reliable results, configure the Instructions pane as described in the exercise above. Start a fresh session so the skill is loaded.
+Use these prompts in Cowork or your preferred AI assistant with the IDFA plugin installed (see [Chapter 29 prerequisites](./README.md#prerequisites) if you have not installed it yet). For the most reliable results, configure the Instructions pane as described in the exercise above. Start a fresh session so the skill is loaded.
 
 :::
 

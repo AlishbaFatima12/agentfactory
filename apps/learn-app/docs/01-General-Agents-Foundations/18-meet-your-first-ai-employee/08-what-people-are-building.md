@@ -17,7 +17,7 @@ keywords:
     autonomous automation,
     HEARTBEAT.md,
   ]
-chapter: 7
+chapter: 18
 lesson: 8
 duration_minutes: 15
 
@@ -139,7 +139,7 @@ The Composability Map above is one you will return to throughout this book. Save
 
 A personal CRM that ingests Gmail, Calendar, and meeting transcripts. It auto-extracts action items from every email and meeting, tracks follow-up commitments, and reminds you before deadlines slip. Over weeks, it builds a relationship graph: who you talk to, what you discussed, what you owe them.
 
-**Chapter 7 Building Blocks:** L07 integrations (Gmail, Calendar, Drive access) + L03 scheduling (daily inbox scan, weekly relationship digest) + L04 memory (contact history, conversation context) + L05 skills (action item extraction, priority scoring)
+**Chapter 18 Building Blocks:** L07 integrations (Gmail, Calendar, Drive access) + L03 scheduling (daily inbox scan, weekly relationship digest) + L04 memory (contact history, conversation context) + L05 skills (action item extraction, priority scoring)
 
 **The Hard Part:** Memory coherence. After three months and 2,000 emails, your agent's context about each contact grows stale, contradictory, or bloated. The person who changed roles, the project that was cancelled, the priority that shifted -- your agent does not know unless you tell it. Maintaining accurate long-term memory at scale is an unsolved problem in every agent framework.
 
@@ -147,7 +147,7 @@ A personal CRM that ingests Gmail, Calendar, and meeting transcripts. It auto-ex
 
 Drop a link -- article, video, tweet thread -- and the AI Employee ingests it into a searchable knowledge base. It extracts key arguments, tags topics, generates summaries, and connects new content to what you saved before. Ask a question months later, and the agent retrieves relevant sources with context.
 
-**Chapter 7 Building Blocks:** L05 skills (content extraction, summarization, tagging) + L04 memory (vector storage, retrieval) + L06 delegation (multi-source ingestion where specialist agents handle different content types)
+**Chapter 18 Building Blocks:** L05 skills (content extraction, summarization, tagging) + L04 memory (vector storage, retrieval) + L06 delegation (multi-source ingestion where specialist agents handle different content types)
 
 **The Hard Part:** Two problems compound. First, vector database costs grow linearly with content volume -- storing and searching thousands of documents at useful quality is not free. Second, knowledge goes stale. The article you saved six months ago may be outdated, but your agent retrieves it with the same confidence as yesterday's. No agent framework has solved relevance decay at scale.
 
@@ -155,7 +155,7 @@ Drop a link -- article, video, tweet thread -- and the AI Employee ingests it in
 
 A council of expert agents analyzing your competitive landscape from multiple angles: one tracks competitor pricing, another monitors industry reports, a third analyzes your internal metrics. An orchestrator synthesizes their findings into ranked recommendations delivered before your Monday meeting.
 
-**Chapter 7 Building Blocks:** L06 delegation (parallel expert agents, orchestrator synthesis) + L03 scheduling (weekly analysis cycle) + L05 skills (competitor tracking, financial analysis, report generation)
+**Chapter 18 Building Blocks:** L06 delegation (parallel expert agents, orchestrator synthesis) + L03 scheduling (weekly analysis cycle) + L05 skills (competitor tracking, financial analysis, report generation)
 
 **The Hard Part:** Hallucinated analysis that sounds confident. When one expert agent fabricates a competitor's pricing change or invents a market trend, the orchestrator weaves that fabrication into its synthesis without question. The final report reads beautifully -- and contains claims no one verified. No agent framework has solved factual grounding at scale. The more agents in the chain, the more opportunities for confident fiction.
 
@@ -163,7 +163,7 @@ A council of expert agents analyzing your competitive landscape from multiple an
 
 Four specialist agents conduct nightly code reviews from different security perspectives: one checks for dependency vulnerabilities, another scans for credential exposure, a third validates access controls, a fourth tests error handling. Results compile into a morning security briefing. Encrypted backups run on schedule. Dependency updates happen automatically when safe.
 
-**Chapter 7 Building Blocks:** L03 scheduling (nightly execution, morning delivery) + L06 delegation (four specialist agents working in parallel) + L05 skills (vulnerability scanning, credential detection, compliance checking)
+**Chapter 18 Building Blocks:** L03 scheduling (nightly execution, morning delivery) + L06 delegation (four specialist agents working in parallel) + L05 skills (vulnerability scanning, credential detection, compliance checking)
 
 **The Hard Part:** A security agent with code access IS an attack vector. The agent guarding the castle also has the keys to the castle. If a malicious skill compromises one of the four specialists (remember ClawHavoc from Lesson 5), it now has the access needed to read your codebase, exfiltrate secrets, or modify security configurations. The lethal trifecta from Lesson 5 compounds with every agent you add to the system.
 
@@ -171,7 +171,7 @@ Four specialist agents conduct nightly code reviews from different security pers
 
 A food journal with image recognition. Photograph your meals and your agent logs nutritional estimates, tracks patterns across weeks, correlates food choices with energy levels and symptoms you report. Over months, it identifies patterns you would never notice yourself.
 
-**Chapter 7 Building Blocks:** L04 memory (meal history, symptom logs, pattern storage) + L05 skills (image analysis, nutritional estimation, correlation detection)
+**Chapter 18 Building Blocks:** L04 memory (meal history, symptom logs, pattern storage) + L05 skills (image analysis, nutritional estimation, correlation detection)
 
 **The Hard Part:** Medical-adjacent AI advice and liability. Your agent might identify a correlation between dairy intake and your afternoon headaches. That observation could be genuinely useful -- or it could be a spurious pattern from noisy data that leads you to make dietary changes you should discuss with a doctor. No skill can replace professional medical judgment, and no agent framework includes liability safeguards for health recommendations.
 
@@ -342,7 +342,7 @@ OpenClaw excels at this stage: one person or a small team customizing an AI Empl
 
 These patterns appear in every agent framework, not just OpenClaw. The names change. The architecture does not.
 
-| Chapter 7 Pattern | OpenClaw                         | AutoGPT               | CrewAI                    | Your Own (Later) |
+| Chapter 18 Pattern | OpenClaw                         | AutoGPT               | CrewAI                    | Your Own (Later) |
 | ----------------- | -------------------------------- | --------------------- | ------------------------- | ---------------- |
 | Scheduling (L03)  | Heartbeat + cron (see above)     | Continuous mode loop  | Task scheduling           | Your design      |
 | Memory (L04)      | MEMORY.md + conversation history | JSON file persistence | Shared memory object      | Your design      |
