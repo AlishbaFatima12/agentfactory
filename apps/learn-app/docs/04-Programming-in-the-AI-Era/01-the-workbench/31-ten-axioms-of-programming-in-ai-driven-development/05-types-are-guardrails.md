@@ -102,7 +102,7 @@ This contract is enforced by the type checker before your code ever runs. No tes
 
 ## From Principle to Axiom
 
-In Chapter 4, you learned **Principle 6: Constraints and Safety** — the insight that boundaries enable capability. You saw how permission models, sandboxing, and approval workflows create the safety that lets you give AI more autonomy. The paradox: **more constraints lead to more freedom**, because you trust the system enough to let it operate.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/constraints-and-safety), you learned **Principle 6: Constraints and Safety** — the insight that boundaries enable capability. You saw how permission models, sandboxing, and approval workflows create the safety that lets you give AI more autonomy. The paradox: **more constraints lead to more freedom**, because you trust the system enough to let it operate.
 
 Axiom V applies the same insight at the code level:
 
@@ -141,6 +141,10 @@ Python is dynamically typed — it does not require type annotations. But "does 
 Emma walked James through the three layers she used on every project — the same layers that would have caught his staging crash before the code ever left his machine.
 
 ![Python Type Safety Hierarchy: Type Hints at the base, Pyright static analysis in the middle, and Pydantic runtime validation at the top, forming a pyramid of increasing safety](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-14/05-type-safety-stack.png)
+
+:::tip Focus on the concept, not the syntax
+This lesson contains more Python than previous axioms — dataclasses, Pydantic models, Protocols, and Generics. You have not learned Python yet (that starts in Chapter 33, with tooling setup in Chapter 32). For now, focus on *what each code block is doing* conceptually: declaring the shape of data, catching mismatches, validating inputs. The specific syntax will make sense when you reach the Python chapters.
+:::
 
 ### Layer 1: Type Hints (The Annotations)
 
@@ -521,81 +525,145 @@ Protocols are particularly powerful with AI: you define the interface (Protocol)
 
 Use these prompts to explore type systems hands-on with your AI assistant. Each targets a different skill in the type discipline stack.
 
-### Prompt 1: Type the Untyped
+### Prompt 1: The Unlabeled Filing Cabinet
 
 ```
-Here's a Python function without type annotations. Help me add complete type hints,
-then explain what errors Pyright strict mode would catch if the types were wrong:
+I want to understand why labeling data with its type prevents errors.
 
-def process_users(users, filter_fn, limit):
-    results = []
-    for user in users:
-        if filter_fn(user):
-            results.append({"name": user.name, "score": user.calculate_score()})
-        if len(results) >= limit:
-            break
-    return results
+Imagine a filing cabinet with 4 drawers. In version A, every drawer is
+labeled "STUFF." In version B, each drawer is labeled specifically:
+"Invoices (numbers only)", "Contracts (signed PDFs)", "Employee Records
+(name + ID + start date)", "Meeting Notes (date + attendees + summary)."
 
-Walk me through your reasoning:
-1. What type should each parameter be?
-2. What does the return type look like?
-3. Should we use TypedDict for the dict, or a dataclass?
-4. What would Pyright catch if someone called this with wrong argument types?
+Help me explore:
+1. A new employee needs to file a document. How do they decide which
+   drawer to use in version A vs version B?
+2. Someone puts a meeting note in the Invoices drawer by mistake.
+   How quickly is this caught in version A vs version B?
+3. A manager asks "pull all invoices from Q3." How easy is this in
+   version A vs version B?
+4. Now connect this to software: what is the "drawer label" equivalent
+   in code? What happens when code has no labels (no types) and an AI
+   assistant tries to file data into the right place?
 ```
 
-**What you're learning**: How to read untyped code and infer the correct types from usage patterns. You're practicing the skill of converting implicit assumptions into explicit, machine-checkable contracts — the core discipline that makes AI collaboration safe.
+**What you're learning**: Types are labels that make the right action obvious and the wrong action impossible. An unlabeled filing cabinet is like untyped code — everything goes anywhere, and errors hide until someone needs to find something. James's staging crash happened because his code had no labels, so the AI filed dictionaries where typed objects were expected.
 
-### Prompt 2: Pydantic Boundary Design
-
-```
-I'm building an API endpoint that accepts task creation requests.
-The request has: title (required, 1-200 chars), description (optional),
-priority (1-5, default 3), tags (list of strings, max 5 tags, each max 50 chars),
-and due_date (optional ISO format date string).
-
-Help me design:
-1. A Pydantic model for the request validation
-2. A dataclass for the internal Task representation
-3. A conversion function from request to internal type
-4. A Pydantic model for the API response
-
-For each model, explain WHY certain fields have validators vs plain types.
-What would happen if I used a plain dataclass for the API request instead of Pydantic?
-Show me what invalid data would look like and how Pydantic catches it.
-```
-
-**What you're learning**: The boundary-vs-internal type distinction in practice. You're developing the judgment to know where validation belongs (edges of your system) versus where trust is appropriate (inside your system)---and understanding the consequences of getting this wrong.
-
-### Prompt 3: Type-Proof Your Own Code
+### Prompt 2: Spot the Type Errors in Everyday Life
 
 ```
-Take an untyped function from my codebase (or use this example):
+Here are five real-world scenarios where the wrong "type" of data was
+entered. For each one, identify what type was expected, what was actually
+provided, and what breaks:
 
-def process_data(data, config, output_path):
-    results = []
-    for item in data:
-        if config.get("filter") and not item.get("active"):
-            continue
-        transformed = {
-            "name": item["name"].upper(),
-            "score": item["value"] * config["multiplier"],
-        }
-        results.append(transformed)
-    with open(output_path, "w") as f:
-        json.dump(results, f)
-    return len(results)
+1. A spreadsheet column for "phone number" contains "call me later"
+2. A calendar event for "meeting duration" says "a couple hours"
+   instead of "2:00"
+3. A recipe calls for "2 cups flour" but someone enters "some flour"
+4. A shipping form asks for "ZIP code" and receives "New York"
+5. A survey asks "rate 1-5" and someone writes "pretty good"
 
-Help me:
-1. Add complete type annotations (parameters, return type, intermediate variables)
-2. Replace the dict types with dataclasses or TypedDicts
-3. Run through the logic as if you were Pyright — what errors would strict mode catch?
-4. Now regenerate the function body from ONLY the type signatures.
-   How much closer is the AI-generated version when it has types to work from?
+For each scenario:
+- What is the expected type (number, date, specific format)?
+- What was the actual input?
+- What breaks downstream when the system tries to USE this data?
+- How would you redesign the input to make the error IMPOSSIBLE?
 
-Compare: How much would an AI know about this function with vs without types?
+Then explain: James's AI generated code that treated API responses as
+objects when they were actually dictionaries. Which of these 5 scenarios
+is most similar to James's error, and why?
 ```
 
-**What you're learning**: The direct experience of what James discovered — that untyped code forces AI (and humans) to guess, while typed code gives them a specification. By regenerating a function from only its type signatures, you see firsthand how types constrain AI output toward correctness.
+**What you're learning**: Recognizing type errors in systems you already use. Every time data of the wrong shape enters a system, the same class of error occurs — whether it is a spreadsheet, a form, or AI-generated code. By identifying type mismatches in everyday contexts, you build the pattern recognition needed to catch them in code.
+
+### Prompt 3: Design a Data Specification
+
+```
+I want to practice the pattern from this lesson: define the shape of
+data BEFORE anyone (human or AI) works with it.
+
+Pick one of these scenarios:
+- A school wants to track student attendance (name, date, present/absent,
+  reason if absent)
+- A small business needs to record customer orders (customer name, items,
+  quantities, prices, date, payment status)
+- A sports league needs to store game results (teams, scores, date,
+  location, referee)
+
+For the one you choose, help me create a data specification:
+1. List every field with its exact type (text, whole number, decimal,
+   date, yes/no, list of items)
+2. For each field, define what values are valid and what should be
+   rejected
+3. Identify which fields are required vs optional
+4. Identify which fields come from outside (user input — need strict
+   validation) vs which are generated internally (trusted — need less
+   validation)
+
+Then explain: if I gave this specification to an AI assistant and asked
+it to build the system, how would the spec prevent the AI from making
+the kind of mistake James made?
+```
+
+**What you're learning**: The core discipline of Axiom V — defining data shapes before implementation. When you specify that "score" is a whole number between 0 and 100 (not a string, not a negative number, not blank), you have created exactly what Emma created for James: a machine-verifiable contract that catches errors automatically. You will apply this same thinking to Python types starting in Chapter 33.
+
+---
+
+## PRIMM-AI+ Practice: Types Are Guardrails
+
+### Predict [AI-FREE]
+
+Close your AI assistant. A form asks for your "age." Consider two scenarios:
+
+**Scenario A**: The form has an open text box. You type "twenty" instead of "20."
+**Scenario B**: The form has a number-only field with a dropdown that only allows digits.
+
+Predict: What goes wrong in Scenario A when a computer tries to calculate "twenty + 1"? Would the same error be possible in Scenario B? Write your predictions. Rate your confidence from 1 to 5.
+
+### Run
+
+Ask your AI assistant: *"What happens when a computer tries to add the word 'twenty' to the number 1? Why do forms use dropdowns and number-only fields instead of open text boxes for things like age?"*
+
+Compare the AI's explanation to your prediction. Did you correctly identify why the text input fails?
+
+<details>
+<summary>Answer Key — What actually happens</summary>
+
+**Scenario A fails** because a computer stores "twenty" as text (a sequence of characters), not as a number. When it tries to compute "twenty + 1," it has no idea that "twenty" represents the value 20 — it sees the letters t-w-e-n-t-y and cannot perform arithmetic on them. Depending on the system, this produces an error, a crash, or a nonsensical result like "twenty1" (string concatenation instead of addition).
+
+**Scenario B makes the error impossible.** A number-only field rejects "twenty" at the point of entry. The user can only input digits, so the system never encounters text where it expects a number. The constraint is structural — it is not a warning that can be ignored, but a restriction that physically prevents the wrong type of data from entering the system.
+
+**The key insight**: Scenario A tries to catch the error *after* it happens (and often fails). Scenario B prevents the error from *ever occurring*. This is the difference between validation ("check if it's right") and type safety ("make it impossible to be wrong").
+
+</details>
+
+### Investigate
+
+Write in your own words — without asking AI — why labeling things with their type (this is a number, this is text, this is a date) prevents errors. What is it about the label itself that makes the error impossible rather than just unlikely?
+
+Now connect this back to the lesson's story. James's untyped function was the **open text box** — it accepted any data in any shape, and the wrong shape crashed staging. Emma's dataclass was the **number-only dropdown** — it declared exactly what fields existed, what type each field must be, and what values were valid. The crash became impossible not because someone remembered to check, but because the structure itself rejected bad data.
+
+Apply the **Error Taxonomy**: putting text ("twenty") where a number (20) belongs = **type error**. The system expected data of one shape and received data of a different shape. James's staging crash was the same error at a larger scale — untyped data flowing through a function that assumed a specific shape. The dropdown (or the dataclass) prevents this by making it structurally impossible to enter the wrong type.
+
+### Modify
+
+A signup form has one open text field for "date of birth." A user types "June fifth" instead of "2005-06-05." What breaks downstream? (Think about sorting users by age, calculating eligibility, comparing dates.)
+
+Redesign the form field so this error is **impossible** — not just unlikely. What specific constraints would you add?
+
+### Make [Mastery Gate]
+
+Design a simple form for a school club registration with these five fields: **name, age, grade, email, number of years in the club**. For each field, specify:
+
+1. **What type of data** it accepts (text, number, date, email, etc.)
+2. **What format** it must be in (e.g., "whole number between 5 and 19")
+3. **What values are NOT allowed** (e.g., "age cannot be negative or over 120")
+
+This form specification is your mastery gate. A developer should be able to build the form from your spec and know exactly what to accept and reject — with zero ambiguity.
+
+:::tip Verification Ladder
+In the Predict step, you caught a type error by reasoning about what kind of data a field should accept. That is **Rung 2 of the Verification Ladder** — types catch structural errors before anything runs. You do not need to execute code to know that "twenty + 1" will fail.
+:::
 
 ---
 
