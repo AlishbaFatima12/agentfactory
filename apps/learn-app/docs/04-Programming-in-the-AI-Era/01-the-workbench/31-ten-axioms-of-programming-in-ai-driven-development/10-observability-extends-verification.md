@@ -31,11 +31,11 @@ skills:
     measurable_at_this_level: "Student can design monitoring for AI agent systems covering token usage, response quality, error rates, and cost per operation"
 
   - name: "Verification Spectrum Reasoning"
-    proficiency_level: "B2"
+    proficiency_level: "B1"
     category: "Conceptual"
-    bloom_level: "Evaluate"
+    bloom_level: "Analyze"
     digcomp_area: "Computational Thinking"
-    measurable_at_this_level: "Student can evaluate a system's verification coverage across the full pre-deployment to post-deployment spectrum and identify gaps"
+    measurable_at_this_level: "Student can distinguish pre-deployment verification (tests, types, CI) from post-deployment verification (logs, metrics, traces) and explain why both are necessary"
 
 learning_objectives:
   - objective: "Explain why structured logging with appropriate levels and machine-readable output is essential for production observability"
