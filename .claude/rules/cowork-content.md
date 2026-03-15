@@ -12,7 +12,7 @@
 | "Claude in Cowork"             | "Cowork"      |
 | "Open Claude in Excel"         | "Open Cowork" |
 
-**"Claude in Excel" and "Cowork" are SEPARATE products.** "Claude in Excel" is the Excel-specific assistant (Ch 17). "Cowork" is Claude's collaborative workspace with spreadsheet side panel. They are not the same thing — never substitute one for the other. Ch 17 correctly uses "Claude in Excel" because that chapter teaches that product. Ch 18+ teaches Cowork-based workflows and must never say "Claude in Excel" when it means Cowork.
+**"Claude in Excel" and "Cowork" are SEPARATE products.** "Claude in Excel" is the Excel-specific assistant (Ch 28). "Cowork" is Claude's collaborative workspace with spreadsheet side panel. They are not the same thing — never substitute one for the other. Ch 28 correctly uses "Claude in Excel" because that chapter teaches that product. Ch 29+ teaches Cowork-based workflows and must never say "Claude in Excel" when it means Cowork.
 
 **When writing Try With AI setups**: Use `"Use these prompts in Cowork or your preferred AI assistant."` — not platform-specific instructions.
 
@@ -116,11 +116,11 @@ The repo may contain dev artifacts for contributors, but students install the pl
 
 | Chapter                       | Files     | Occurrences | Priority                                                       |
 | ----------------------------- | --------- | ----------- | -------------------------------------------------------------- |
-| Ch 17 (Finance Domain Agents) | ~20 files | ~155        | **Correct** — Ch 17 teaches Claude in Excel (separate product) |
-| Ch 18 (IDFA) L01-L02 + README | 4 files   | ~12         | Medium — contextual references to Ch 17 tools                  |
-| Ch 19 (CA/CPA Practice)       | 4 files   | ~6          | Medium                                                         |
-| Ch 22 (Legal Ops)             | 1 file    | 1           | Low                                                            |
-| Ch 23 (Sales/RevOps)          | 1 file    | 1           | Low                                                            |
-| Ch 15 (Enterprise Blueprint)  | 2 files   | 2           | Low                                                            |
+| Ch 28 (Finance Domain Agents) | ~20 files | ~155        | **Correct** — Ch 28 teaches Claude in Excel (separate product) |
+| Ch 29 (IDFA) L01-L02 + README | 4 files   | ~12         | Medium — contextual references to Ch 28 tools                  |
+| Ch 30 (CA/CPA Practice)       | 4 files   | ~6          | Medium                                                         |
+| Ch 33 (Legal Ops)             | 1 file    | 1           | Low                                                            |
+| Ch 34 (Sales/RevOps)          | 1 file    | 1           | Low                                                            |
+| Ch 26 (Enterprise Blueprint)  | 2 files   | 2           | Low                                                            |
 
-**Ch 17 is correct** — "Claude in Excel" is the product Ch 17 teaches. The remaining ~32 occurrences in Ch 18-23 need review: some are legitimate cross-references to Ch 17's product, others should say "Cowork."
+**Ch 28 is correct** — "Claude in Excel" is the product Ch 28 teaches. The remaining ~32 occurrences in Ch 29-34 need review: some are legitimate cross-references to Ch 28's product, others should say "Cowork."

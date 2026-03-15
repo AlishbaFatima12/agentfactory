@@ -1,0 +1,83 @@
+deck:
+  id: "ch31-10-saudi-arabia"
+  title: "Saudi Arabia — Vision 2030, ZATCA Zakat, and Al Rajhi"
+  description: "Key concepts from Saudi Arabia's IFRS framework, ZATCA equity-based zakat formula, Al Rajhi Bank benchmarking, and PIF sukuk classification."
+  tags: ["saudi-arabia", "zatca", "zakat", "al-rajhi", "vision-2030"]
+  version: 1
+
+cards:
+  - id: "ch31-10-saudi-arabia-001"
+    front: "Does Saudi Arabia use AAOIFI or IFRS for financial reporting?"
+    back: "IFRS as adopted in the Kingdom of Saudi Arabia. AAOIFI is used for Shariah compliance guidance only."
+    tags: ["saudi-arabia", "ifrs", "aaoifi"]
+    difficulty: "basic"
+
+  - id: "ch31-10-saudi-arabia-002"
+    front: "What is the ZATCA zakat base formula for a Saudi Islamic bank?"
+    back: "Share Capital + Statutory Reserves + Other Reserves + Retained Earnings - Fixed Assets - Long-term Investments - Unamortised Financing Costs"
+    tags: ["zatca", "zakat-formula"]
+    difficulty: "intermediate"
+
+  - id: "ch31-10-saudi-arabia-003"
+    front: "ZATCA's zakat formula starts from equity; the AAOIFI/Hanafi formula starts from liquid assets. Why does this difference in starting point matter for banks?"
+    back: "Banks with large long-term investments see those deducted under ZATCA (lowering the zakat base) but included under Hanafi (raising it). Conversely, banks with predominantly liquid assets may face a higher ZATCA obligation. The starting point determines which assets drive the calculation."
+    tags: ["zatca", "aaoifi", "zakat-comparison"]
+    difficulty: "advanced"
+    why: "For which type of bank would the two formulas produce the most similar obligation?"
+
+  - id: "ch31-10-saudi-arabia-004"
+    front: "What zakat rate does ZATCA apply, and when must it be filed?"
+    back: "2.5% per lunar year, filed within 120 days of fiscal year-end."
+    tags: ["zatca", "zakat-rate"]
+    difficulty: "basic"
+
+  - id: "ch31-10-saudi-arabia-005"
+    front: "A Saudi bank has both Saudi and foreign shareholders. How are zakat and income tax allocated between them?"
+    back: "Saudi-owned equity pays ZATCA zakat at 2.5%. Foreign-owned equity pays income tax at 20% instead of zakat."
+    tags: ["saudi-arabia", "zakat-vs-tax"]
+    difficulty: "intermediate"
+
+  - id: "ch31-10-saudi-arabia-006"
+    front: "Why does zakat replace income tax for Saudi-owned companies rather than being charged alongside it?"
+    back: "Zakat is a religious obligation in Saudi Arabia that serves as the fiscal charge on Saudi nationals. Charging both would double-tax Saudi owners, so ZATCA administers zakat as the replacement for income tax on Saudi-owned equity."
+    tags: ["zakat", "tax-interaction", "saudi-arabia"]
+    difficulty: "intermediate"
+    why: "What happens when a Saudi bank acquires foreign subsidiaries — which charge applies to the consolidated entity?"
+
+  - id: "ch31-10-saudi-arabia-007"
+    front: "What institution serves as the global IFRS benchmark for Islamic banking presentation?"
+    back: "Al Rajhi Bank — the world's largest Islamic bank by capital."
+    tags: ["al-rajhi", "ifrs-benchmark"]
+    difficulty: "basic"
+
+  - id: "ch31-10-saudi-arabia-008"
+    front: "What income caption does Al Rajhi Bank use for murabaha income in its IFRS financial statements?"
+    back: "\"Income from Murabaha and Instalment Sales\" — never \"Interest Income.\""
+    tags: ["al-rajhi", "income-labels", "murabaha"]
+    difficulty: "intermediate"
+
+  - id: "ch31-10-saudi-arabia-009"
+    front: "How would you classify PIF ijarah sukuk with fixed distributions and redemption at face value under IFRS 9?"
+    back: "Amortised cost (if held-to-collect) or FVOCI (if held-to-collect-and-sell). Fixed distributions + face value redemption pass the SPPI test."
+    tags: ["pif-sukuk", "ifrs-9", "classification"]
+    difficulty: "intermediate"
+
+  - id: "ch31-10-saudi-arabia-010"
+    front: "If a bank holds PIF sukuk at FVOCI and market yields rise by 100 basis points, how does this affect the financial statements?"
+    back: "The unrealised loss appears in OCI (other comprehensive income) without flowing through profit or loss. The sukuk's carrying value decreases but the income statement is unaffected."
+    tags: ["fvoci", "oci", "yield-movement"]
+    difficulty: "intermediate"
+    why: "Why might a bank choose amortised cost over FVOCI to avoid this OCI volatility?"
+
+  - id: "ch31-10-saudi-arabia-011"
+    front: "A Saudi bank computed its ZATCA zakat base as Share Capital plus Retained Earnings only, omitting other items. What two categories of errors were made?"
+    back: "Failed to add statutory reserves and other reserves. Failed to deduct fixed assets and long-term investments."
+    tags: ["zatca", "zakat-errors", "error-detection"]
+    difficulty: "advanced"
+    why: "How would these omissions affect the zakat obligation — would it be overstated or understated?"
+
+  - id: "ch31-10-saudi-arabia-012"
+    front: "SAMA regulates Saudi banks. What is SAMA's full name?"
+    back: "Saudi Central Bank (formerly Saudi Arabian Monetary Authority)."
+    tags: ["sama", "saudi-regulator"]
+    difficulty: "basic"

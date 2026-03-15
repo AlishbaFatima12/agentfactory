@@ -5,7 +5,18 @@ chapter: 31
 lesson: 10
 duration_minutes: 25
 description: "Runtime monitoring extends pre-deployment verification into production, completing the verification system through structured logging, metrics, and tracing"
-keywords: ["observability", "monitoring", "structured logging", "metrics", "tracing", "production verification", "structlog", "OpenTelemetry", "AI agent monitoring"]
+keywords:
+  [
+    "observability",
+    "monitoring",
+    "structured logging",
+    "metrics",
+    "tracing",
+    "production verification",
+    "structlog",
+    "OpenTelemetry",
+    "AI agent monitoring",
+  ]
 
 # HIDDEN SKILLS METADATA
 skills:
@@ -69,7 +80,7 @@ differentiation:
 
 # Axiom X: Observability Extends Verification
 
-Axiom IX's pipeline verified everything *before* deployment — formatting, linting, types, tests, security, all green. James merged the pull request, the order management system deployed, and he went home. At 2:47 AM, his phone buzzed — his second middle-of-the-night crisis since joining the team. But this was different from the deployment script failure in Axiom I. That crisis was caused by bad orchestration. This one was caused by something no test suite could catch: a customer service ticket reporting that shipping rates were wrong for international orders during peak traffic.
+Axiom IX's pipeline verified everything _before_ deployment — formatting, linting, types, tests, security, all green. James merged the pull request, the order management system deployed, and he went home. At 2:47 AM, his phone buzzed — his second middle-of-the-night crisis since joining the team. But this was different from the deployment script failure in Axiom I. That crisis was caused by bad orchestration. This one was caused by something no test suite could catch: a customer service ticket reporting that shipping rates were wrong for international orders during peak traffic.
 
 He checked the test suite — all fifty-three TDG (Test-Driven Generation) specifications passed. He checked the CI pipeline — green across every stage. He checked the type system — zero errors. Everything his pre-deployment verification said was "this system works correctly." But in production, right now, under real load, it did not.
 
@@ -83,7 +94,7 @@ ERROR: something went wrong
 Processing order...
 ```
 
-`print("Processing order...")` — scattered through the code from his earliest development days. No timestamps. No request IDs. No indication of *which* order failed, *why* it failed, or *how many* orders were affected. He had no metrics to show whether the error rate was 0.1% or 50%. He had no traces to show where the request spent its time. His comprehensive test suite, his type system, his CI pipeline — none of them could tell him what was happening right now, in production, to real users.
+`print("Processing order...")` — scattered through the code from his earliest development days. No timestamps. No request IDs. No indication of _which_ order failed, _why_ it failed, or _how many_ orders were affected. He had no metrics to show whether the error rate was 0.1% or 50%. He had no traces to show where the request spent its time. His comprehensive test suite, his type system, his CI pipeline — none of them could tell him what was happening right now, in production, to real users.
 
 "Your tests verify that the code is correct," Emma told him the next morning. "But correct code can still fail in production. Load causes timeouts. Network hiccups drop connections. Memory fills up under traffic patterns your tests never simulated. You need a different kind of verification — one that watches the system while it runs."
 
@@ -104,43 +115,43 @@ This was powerful. But it all happened before the code reached users. Once deplo
 - Green on CI but silently timing out when the database connection pool was exhausted
 - Functioning perfectly for 95% of orders but failing for the 5% that hit an untested edge case in international surcharge calculation
 
-Pre-deployment verification answers: "Does this code work correctly?" Post-deployment observability answers: "Is this code working correctly *right now*?" Both questions matter. Neither answer substitutes for the other.
+Pre-deployment verification answers: "Does this code work correctly?" Post-deployment observability answers: "Is this code working correctly _right now_?" Both questions matter. Neither answer substitutes for the other.
 
 ## The Axiom Defined
 
 > **Axiom X: Observability Extends Verification.** Runtime monitoring extends pre-deployment verification. Tests verify behavior before deployment; observability verifies behavior in production. Together they form a complete verification system.
 
-The word "extends" is precise. Observability does not replace testing — it extends the verification boundary from "before deployment" to "always." James's TDG tests from Axiom VII verified that `calculate_shipping()` returned the right values for eleven specific inputs. Observability verifies that the same function returns the right values for *every* request, under *any* load, at *any* time:
+The word "extends" is precise. Observability does not replace testing — it extends the verification boundary from "before deployment" to "always." James's TDG tests from Axiom VII verified that `calculate_shipping()` returned the right values for eleven specific inputs. Observability verifies that the same function returns the right values for _every_ request, under _any_ load, at _any_ time:
 
-| Phase | Tools | What It Catches | When |
-|-------|-------|-----------------|------|
-| **Pre-deployment** | Linting, types, tests, CI | Logic errors, type mismatches, regressions | Before users see it |
+| Phase               | Tools                         | What It Catches                                          | When                      |
+| ------------------- | ----------------------------- | -------------------------------------------------------- | ------------------------- |
+| **Pre-deployment**  | Linting, types, tests, CI     | Logic errors, type mismatches, regressions               | Before users see it       |
 | **Post-deployment** | Logs, metrics, traces, alerts | Performance degradation, edge cases, real-world failures | While users experience it |
 
 A system with only pre-deployment verification is like a car that passes inspection but has no dashboard gauges. James's order management system had passed inspection. It had no gauges.
 
 ## From Principle to Axiom
 
-In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/observability), Principle 7 introduced observability as **visibility into what AI is doing**. Remember the "Black Box Problem" — the agent that silently failed, producing no output and no error, because nobody had instrumented it to report what it was doing? And the "2-Minute Audit" that taught you to check: Can I see what the agent did? Can I tell if it succeeded? Can I trace *why* it chose that approach? That principle focused on trust: if you cannot see what the agent does, you cannot trust it.
+In [Chapter 17](/docs/General-Agents-Foundations/seven-principles/observability), Principle 7 introduced observability as **visibility into what AI is doing**. Remember the "Black Box Problem" — the agent that silently failed, producing no output and no error, because nobody had instrumented it to report what it was doing? And the "2-Minute Audit" that taught you to check: Can I see what the agent did? Can I tell if it succeeded? Can I trace _why_ it chose that approach? That principle focused on trust: if you cannot see what the agent does, you cannot trust it.
 
 Axiom X takes this further. The principle is about human-AI collaboration transparency. The axiom is about **production engineering discipline**:
 
-| Principle 7 (Chapter 6) | Axiom X (This Lesson) |
-|--------------------------|----------------------|
-| See what the AI did | Monitor what the system is doing continuously |
-| Activity logs for debugging | Structured logs, metrics, traces for operations |
-| Trust through visibility | Confidence through measurement |
-| Developer experience | Production reliability |
-| "What happened?" | "What is happening right now, and is it normal?" |
+| Principle 7 (Chapter 17)    | Axiom X (This Lesson)                            |
+| --------------------------- | ------------------------------------------------ |
+| See what the AI did         | Monitor what the system is doing continuously    |
+| Activity logs for debugging | Structured logs, metrics, traces for operations  |
+| Trust through visibility    | Confidence through measurement                   |
+| Developer experience        | Production reliability                           |
+| "What happened?"            | "What is happening right now, and is it normal?" |
 
 Principle 7 gave you the mindset: make things visible. Axiom X gives you the engineering toolkit: structured observability as a first-class system concern, not an afterthought.
 
 <details>
 <summary>The Discipline That Preceded Observability</summary>
 
-The term "observability" — borrowed from control theory, where it means "the ability to infer a system's internal state from its external outputs" — entered software engineering through the DevOps movement. In 2016, Google published the *Site Reliability Engineering* book, codifying practices their teams had developed for running services at planetary scale. The book's core insight was that reliability is not a property of software — it is a property of *operations*. Code that passes tests can still fail in production if nobody is watching.
+The term "observability" — borrowed from control theory, where it means "the ability to infer a system's internal state from its external outputs" — entered software engineering through the DevOps movement. In 2016, Google published the _Site Reliability Engineering_ book, codifying practices their teams had developed for running services at planetary scale. The book's core insight was that reliability is not a property of software — it is a property of _operations_. Code that passes tests can still fail in production if nobody is watching.
 
-Charity Majors, co-founder of Honeycomb, popularized the distinction between *monitoring* (watching known metrics for known thresholds) and *observability* (understanding system behavior from its outputs, including behaviors you did not anticipate). Monitoring answers: "Is the error rate above 5%?" Observability answers: "Why are international orders from the UK failing at 3am?" — a question you did not know to ask until the system told you.
+Charity Majors, co-founder of Honeycomb, popularized the distinction between _monitoring_ (watching known metrics for known thresholds) and _observability_ (understanding system behavior from its outputs, including behaviors you did not anticipate). Monitoring answers: "Is the error rate above 5%?" Observability answers: "Why are international orders from the UK failing at 3am?" — a question you did not know to ask until the system told you.
 
 James's `print("Processing order...")` was neither monitoring nor observability. It was noise — unstructured text that disappeared when the process restarted and told him nothing about which orders failed or why.
 
@@ -182,7 +193,7 @@ Structured logs use key-value pairs instead of free-form strings. This makes the
 
 ### Pillar 2: Metrics (How Much? How Fast?)
 
-Metrics are numerical measurements over time. They tell you about system behavior in aggregate. "Logs tell you what happened to one order," Emma explained. "Metrics tell you what is happening to *all* orders."
+Metrics are numerical measurements over time. They tell you about system behavior in aggregate. "Logs tell you what happened to one order," Emma explained. "Metrics tell you what is happening to _all_ orders."
 
 ```python static
 from prometheus_client import Counter, Histogram, Gauge
@@ -250,11 +261,11 @@ A trace from this code might reveal: "Order ord-7891 took 4.2 seconds total — 
 
 ### Why All Three Together
 
-| Scenario | Logs Alone | Metrics Alone | Traces Alone | All Three |
-|----------|-----------|--------------|-------------|-----------|
-| "Why is the system slow?" | Shows individual slow requests | Shows 95th percentile is high | Shows where time is spent | Full picture: which requests, how many, and exactly why |
-| "Is something broken?" | Shows error messages | Shows error rate is 5% | Shows which service fails | Full picture: what errors, how widespread, and the exact failure path |
-| "How much does this cost?" | Shows per-request token counts | Shows total token usage trend | Shows which operations consume tokens | Full picture: cost per user, per feature, trending over time |
+| Scenario                   | Logs Alone                     | Metrics Alone                 | Traces Alone                          | All Three                                                             |
+| -------------------------- | ------------------------------ | ----------------------------- | ------------------------------------- | --------------------------------------------------------------------- |
+| "Why is the system slow?"  | Shows individual slow requests | Shows 95th percentile is high | Shows where time is spent             | Full picture: which requests, how many, and exactly why               |
+| "Is something broken?"     | Shows error messages           | Shows error rate is 5%        | Shows which service fails             | Full picture: what errors, how widespread, and the exact failure path |
+| "How much does this cost?" | Shows per-request token counts | Shows total token usage trend | Shows which operations consume tokens | Full picture: cost per user, per feature, trending over time          |
 
 :::tip Reading Checkpoint
 This is a natural stopping point. If you need a break, bookmark this spot and return when you are ready. Everything above covers the core concept; everything below applies it through exercises and practice.
@@ -296,20 +307,26 @@ logger = structlog.get_logger()
 This produces machine-parseable JSON output:
 
 ```json
-{"event": "request_processing_started", "request_id": "req-abc-123", "user_id": "user-456", "level": "info", "timestamp": "2025-06-15T14:32:15.123Z"}
+{
+  "event": "request_processing_started",
+  "request_id": "req-abc-123",
+  "user_id": "user-456",
+  "level": "info",
+  "timestamp": "2025-06-15T14:32:15.123Z"
+}
 ```
 
 ### Log Levels: Signal vs. Noise
 
 Choosing the right log level determines whether logs are useful or overwhelming. Emma taught James a simple rule: "Each level answers a different question for a different audience."
 
-| Level | Purpose | Example | Production Visibility |
-|-------|---------|---------|----------------------|
-| `DEBUG` | Development details | Variable values, loop iterations | Off in production |
-| `INFO` | Normal operations | Request started, task completed | Always visible |
-| `WARNING` | Unexpected but handled | Retry succeeded, fallback used | Always visible |
-| `ERROR` | Failures requiring attention | API call failed, invalid input | Triggers alert |
-| `CRITICAL` | System-level failures | Database down, out of memory | Wakes someone up |
+| Level      | Purpose                      | Example                          | Production Visibility |
+| ---------- | ---------------------------- | -------------------------------- | --------------------- |
+| `DEBUG`    | Development details          | Variable values, loop iterations | Off in production     |
+| `INFO`     | Normal operations            | Request started, task completed  | Always visible        |
+| `WARNING`  | Unexpected but handled       | Retry succeeded, fallback used   | Always visible        |
+| `ERROR`    | Failures requiring attention | API call failed, invalid input   | Triggers alert        |
+| `CRITICAL` | System-level failures        | Database down, out of memory     | Wakes someone up      |
 
 ```python static
 # Each level serves a distinct purpose in James's order system
@@ -492,7 +509,7 @@ Observability is not just about watching — it drives a continuous improvement 
    [Repeat]
 ```
 
-This is where observability and testing become a unified system. The 2:47 AM incident *discovered* a failure mode James's test suite never anticipated. That discovery became a new load test. The load test now prevents the same regression. And observability confirms, every night, that shipping calculations stay fast under real traffic. The verification system grows stronger with each cycle — observability feeds testing, testing feeds confidence, confidence feeds deployment, and observability watches the result.
+This is where observability and testing become a unified system. The 2:47 AM incident _discovered_ a failure mode James's test suite never anticipated. That discovery became a new load test. The load test now prevents the same regression. And observability confirms, every night, that shipping calculations stay fast under real traffic. The verification system grows stronger with each cycle — observability feeds testing, testing feeds confidence, confidence feeds deployment, and observability watches the result.
 
 ## The Complete System: All Ten Axioms
 
@@ -523,15 +540,15 @@ The developers check the logs and find `print("Processing order...")` repeated t
 
 This was James's order management system at 2:47 AM — and it is every system that treats observability as optional.
 
-| Anti-Pattern | Why It Fails | The Fix |
-|-------------|-------------|---------|
-| Print statements in production | Unstructured, no levels, no context, lost when process restarts — exactly what James had | Use structlog with JSON output and persistent log aggregation |
-| No error alerting | "We'll notice eventually" means customers notice first — James learned this at 2:47 AM | Define alert thresholds; wake someone for CRITICAL, notify for ERROR |
-| Logging everything at DEBUG | Noise overwhelms signal; storage costs explode | Use appropriate log levels; DEBUG off in production |
-| No correlation between requests | Impossible to trace a single order's journey through the system | Add correlation IDs; bind context at request start |
-| Observability as afterthought | "Add monitoring later" means after the first production incident — James added it *because* of his incident | Design observability into the system from the start, like testing |
-| Metrics without baselines | "Is 200ms shipping calculation time good or bad?" — you cannot answer without history | Establish baselines first; alert on deviation, not absolute values |
-| Monitoring only happy paths | You only track successful orders; failed shipping calculations are invisible | Instrument error paths with the same rigor as success paths |
+| Anti-Pattern                    | Why It Fails                                                                                                | The Fix                                                              |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Print statements in production  | Unstructured, no levels, no context, lost when process restarts — exactly what James had                    | Use structlog with JSON output and persistent log aggregation        |
+| No error alerting               | "We'll notice eventually" means customers notice first — James learned this at 2:47 AM                      | Define alert thresholds; wake someone for CRITICAL, notify for ERROR |
+| Logging everything at DEBUG     | Noise overwhelms signal; storage costs explode                                                              | Use appropriate log levels; DEBUG off in production                  |
+| No correlation between requests | Impossible to trace a single order's journey through the system                                             | Add correlation IDs; bind context at request start                   |
+| Observability as afterthought   | "Add monitoring later" means after the first production incident — James added it _because_ of his incident | Design observability into the system from the start, like testing    |
+| Metrics without baselines       | "Is 200ms shipping calculation time good or bad?" — you cannot answer without history                       | Establish baselines first; alert on deviation, not absolute values   |
+| Monitoring only happy paths     | You only track successful orders; failed shipping calculations are invisible                                | Instrument error paths with the same rigor as success paths          |
 
 ### The Log Avalanche
 
@@ -539,17 +556,17 @@ There is a trap that catches developers right after they learn observability, an
 
 James's first instinct after the 2:47 AM incident was to add DEBUG-level logging to every function. Within a day, his order system was generating 2GB of logs per hour. The storage costs spiked. The log aggregation system slowed to a crawl. And when he actually needed to find a specific error, it was buried under millions of irrelevant entries — the signal drowned by noise he created trying to see everything.
 
-"Observability is not about capturing everything," Emma told him. "It is about capturing the *right* things at the *right* level."
+"Observability is not about capturing everything," Emma told him. "It is about capturing the _right_ things at the _right_ level."
 
 She had him write this on a sticky note:
 
-| Level | When to Use | Example |
-|-------|------------|---------|
-| **DEBUG** | Local development only — never in production | Variable values inside loops |
-| **INFO** | Normal operations worth recording | `order_created`, `payment_processed` |
-| **WARNING** | Handled problems that may need attention | Retry succeeded on third attempt |
-| **ERROR** | Failures requiring investigation | Payment gateway returned 500 |
-| **CRITICAL** | System-level emergencies | Database connection pool exhausted |
+| Level        | When to Use                                  | Example                              |
+| ------------ | -------------------------------------------- | ------------------------------------ |
+| **DEBUG**    | Local development only — never in production | Variable values inside loops         |
+| **INFO**     | Normal operations worth recording            | `order_created`, `payment_processed` |
+| **WARNING**  | Handled problems that may need attention     | Retry succeeded on third attempt     |
+| **ERROR**    | Failures requiring investigation             | Payment gateway returned 500         |
+| **CRITICAL** | System-level emergencies                     | Database connection pool exhausted   |
 
 "If everything is important, nothing is."
 
@@ -649,12 +666,13 @@ go wrong because of that gap?
 
 Close your AI assistant. A patient has knee surgery. Every pre-operation check passed: blood work normal, imaging confirmed the problem, anesthesia plan approved, surgical team briefed. The surgery itself goes perfectly — procedure completed on schedule, no complications in the operating room.
 
-The patient is discharged. The medical record says: *"Surgery complete."*
+The patient is discharged. The medical record says: _"Surgery complete."_
 
 A week later, the patient calls with severe swelling and pain. The doctor opens the record.
 
 Predict:
-- Can the doctor figure out WHAT went wrong from *"Surgery complete"*?
+
+- Can the doctor figure out WHAT went wrong from _"Surgery complete"_?
 - Can they tell WHETHER the swelling started on day 2 or day 6?
 - Can they tell WHICH part of recovery failed — was it the physical therapy, the medication, an infection, or something else?
 - What specific information is missing from "Surgery complete" that would help diagnose the problem?
@@ -663,7 +681,7 @@ Write your answers. Rate your confidence from 1 to 5.
 
 ### Run
 
-Ask your AI assistant: *"Why is 'Surgery complete' a useless medical record when a patient calls with complications a week later? What should a doctor's post-surgery monitoring plan include so that when something goes wrong during recovery, they can trace exactly what happened? Give me at least 5 specific things to track."*
+Ask your AI assistant: _"Why is 'Surgery complete' a useless medical record when a patient calls with complications a week later? What should a doctor's post-surgery monitoring plan include so that when something goes wrong during recovery, they can trace exactly what happened? Give me at least 5 specific things to track."_
 
 Compare. Did the AI suggest the same missing information you identified?
 
@@ -686,13 +704,13 @@ If your prediction identified at least 3 of these categories, your instinct for 
 
 Write in your own words the difference between "checking before surgery" (verification — pre-op tests, imaging, team briefing) and "monitoring after surgery" (observability — tracking vitals, pain, recovery milestones). Why do you need both? Why is passing all the pre-op checks not enough?
 
-Now connect this to James's story. His CI pipeline — formatting, linting, types, tests, security — all passed. Every pre-deployment check was green. But at 2:47 AM, his shipping calculator failed under real production load with real customers. His checks verified that the code was *correct*. They could not verify that the code was *resilient* under conditions no test anticipated. This is exactly like the surgery passing every pre-op check but the patient developing complications at home under real-world recovery conditions that the operating room never simulated. Both James and the surgeon did everything right *before delivery* — and both were blind to what happened *after*.
+Now connect this to James's story. His CI pipeline — formatting, linting, types, tests, security — all passed. Every pre-deployment check was green. But at 2:47 AM, his shipping calculator failed under real production load with real customers. His checks verified that the code was _correct_. They could not verify that the code was _resilient_ under conditions no test anticipated. This is exactly like the surgery passing every pre-op check but the patient developing complications at home under real-world recovery conditions that the operating room never simulated. Both James and the surgeon did everything right _before delivery_ — and both were blind to what happened _after_.
 
 Apply the **Error Taxonomy**: the surgery passing all pre-op checks but the patient developing complications at home = **data/edge-case error**. The procedure was verified under controlled conditions (the operating room), but not under real-world recovery (the patient's home, their activity level, their medication compliance). The checks verified the procedure; observability would have caught the recovery failure early.
 
 ### Modify
 
-The doctor now tracks all five recovery dimensions (vitals, pain, milestones, medication, warning thresholds). But the patient reports *"I feel fine, everything is great"* at every check-in — and still shows up a week later with severe swelling.
+The doctor now tracks all five recovery dimensions (vitals, pain, milestones, medication, warning thresholds). But the patient reports _"I feel fine, everything is great"_ at every check-in — and still shows up a week later with severe swelling.
 
 What went wrong? The monitoring plan relied entirely on **self-reported data** — the patient's own assessment. Design a modification: what **objective signals** could the doctor monitor that do not depend on the patient's honesty or self-awareness? How would the doctor distinguish between "the patient is genuinely recovering well" and "the patient is underreporting problems"? Think about the difference between asking someone "how do you feel?" and measuring something that cannot be faked.
 
@@ -701,6 +719,7 @@ What went wrong? The monitoring plan relied entirely on **self-reported data** �
 Pick any process from your life that you have "verified" (checked beforehand) but never "observed" (monitored after completion). Examples: a study routine (you followed the plan but did not track whether you actually retained the material), a budget (you planned spending but did not track actual expenses), a workout plan (you did the exercises but did not measure results).
 
 Write a **monitoring plan**:
+
 - **What would you watch AFTER the process runs?** (What signals tell you whether it is actually working?)
 - **What signals tell you something is wrong** even when all the upfront checks passed?
 - **How would you tell the difference** between "one person had a bad experience" and "everyone has this problem"?
@@ -717,13 +736,13 @@ This completes the ladder. **Rung 1** (Predict) through **Rung 4** (Pipeline) ch
 
 1. **Pre-deployment verification is necessary but not sufficient.** James's tests, types, and CI pipeline all passed — and his system still failed at 2:47 AM under production load. Observability extends the verification boundary from "before deployment" to "always."
 
-2. **The three pillars answer different questions.** Logs tell you *what happened* to a specific order. Metrics tell you *how many* orders are affected and *how fast* the system is degrading. Traces tell you *where* in the request lifecycle time was spent. No single pillar replaces the others.
+2. **The three pillars answer different questions.** Logs tell you _what happened_ to a specific order. Metrics tell you _how many_ orders are affected and _how fast_ the system is degrading. Traces tell you _where_ in the request lifecycle time was spent. No single pillar replaces the others.
 
 3. **Structured logging replaces print statements.** `print("Processing order...")` is noise. `logger.info("order_processed", order_id="ord-7891", duration_ms=45)` is actionable intelligence. The difference is the difference between searching ten thousand identical lines and filtering by `order_id` to find the exact failure.
 
-4. **Observability drives a feedback loop.** The 2:47 AM incident *discovered* a failure mode. That discovery became a load test. The load test now prevents the same regression. And observability confirms, every night, that the fix holds. Each cycle makes the verification system stronger.
+4. **Observability drives a feedback loop.** The 2:47 AM incident _discovered_ a failure mode. That discovery became a load test. The load test now prevents the same regression. And observability confirms, every night, that the fix holds. Each cycle makes the verification system stronger.
 
-5. **The ten axioms are a system, not a checklist.** James traced his order management feature through every axiom — from shell orchestration through production monitoring. Skip any one, and a gap opens. The axioms work together because software development *is* a system, and systems need complete coverage to be reliable.
+5. **The ten axioms are a system, not a checklist.** James traced his order management feature through every axiom — from shell orchestration through production monitoring. Skip any one, and a gap opens. The axioms work together because software development _is_ a system, and systems need complete coverage to be reliable.
 
 ---
 
@@ -735,7 +754,7 @@ The distance between then and now was ten axioms.
 
 He had started with a shell that orchestrated his tools instead of manual copy-paste between windows. He had captured his requirements in markdown that both he and Claude Code could read. He had structured his discount calculator as a proper program with modules and imports, not a loose script. He had composed his system from small, focused functions — `calculate_shipping()`, `apply_discount()`, `validate_order()` — each doing one thing well. He had wrapped those functions in types that caught structural errors before they reached production. He had stored his orders and customers in properly normalized tables with foreign keys enforcing integrity.
 
-Then came the verification stack. Test-Driven Generation gave him fifty-three specifications that defined "correct" — and caught the $12,000 discount bug before a single customer saw it. Git gave him memory — every change tracked, reversible, attributable, with commit messages that explained *why*. His CI pipeline automated every check — formatting, linting, types, tests, security — so that nothing reached production without passing all of them. And finally, observability extended that verification into production itself — structured logs, metrics, and traces watching the system while real customers used it, alerting him when reality diverged from expectation.
+Then came the verification stack. Test-Driven Generation gave him fifty-three specifications that defined "correct" — and caught the $12,000 discount bug before a single customer saw it. Git gave him memory — every change tracked, reversible, attributable, with commit messages that explained _why_. His CI pipeline automated every check — formatting, linting, types, tests, security — so that nothing reached production without passing all of them. And finally, observability extended that verification into production itself — structured logs, metrics, and traces watching the system while real customers used it, alerting him when reality diverged from expectation.
 
 "You didn't just learn ten rules," Emma told him. "You built a system. Each axiom covers a gap the others leave open. That is what agentic development means — not AI writing code for you, but AI and engineering discipline working together, from the first shell command to the last production metric."
 
@@ -767,20 +786,20 @@ Use this rubric to evaluate your own understanding across the ten axioms. For ea
 
 In this chapter, your mastery gates are conceptual artifacts — coordination plans, decision documents, form specifications, relationship maps, ordered checklists, and monitoring plans. In the hands-on chapters that follow, you will apply these same axioms to real code, tests, and configurations.
 
-| Dimension | Developing | Competent | Fluent |
-|-----------|-----------|-----------|--------|
-| **Prediction Accuracy** | Predictions are often wrong; confidence scores do not match actual accuracy | Predictions are roughly correct; confidence scores track reality within ±1 | Predictions are consistently accurate; confidence scores reliably reflect true understanding |
-| **Error Taxonomy** | Can name the five error types but struggles to classify real scenarios | Correctly classifies most scenarios; occasionally confuses similar types (e.g., specification vs. logic error) | Classifies errors quickly and accurately; spontaneously applies taxonomy when encountering new problems |
-| **Explanation Quality** | Explanations restate the axiom rather than demonstrating understanding | Explanations use own words and connect the axiom to personal experience | Explanations teach the concept to someone else using original analogies and examples |
-| **Modification Reasoning** | Identifies that something breaks but cannot explain the mechanism | Identifies what breaks AND explains why the modification causes the failure | Anticipates cascading effects — predicts not just the first failure but second-order consequences |
-| **Mastery Gate Quality** | Artifacts are incomplete or generic (could apply to any axiom) | Artifacts are complete and specific to the axiom, with clear structure | Artifacts demonstrate original thinking — the plan, spec, or checklist reveals genuine understanding beyond what was taught |
-| **PRIMM-AI+ Engagement** | Skipped Predict or copied AI answers without comparing to own prediction | Completed all five stages; comparisons between prediction and AI response show genuine reflection | Used the framework independently — applied Predict-Run-Investigate-Modify-Make to a new problem without prompting |
+| Dimension                  | Developing                                                                  | Competent                                                                                                      | Fluent                                                                                                                      |
+| -------------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **Prediction Accuracy**    | Predictions are often wrong; confidence scores do not match actual accuracy | Predictions are roughly correct; confidence scores track reality within ±1                                     | Predictions are consistently accurate; confidence scores reliably reflect true understanding                                |
+| **Error Taxonomy**         | Can name the five error types but struggles to classify real scenarios      | Correctly classifies most scenarios; occasionally confuses similar types (e.g., specification vs. logic error) | Classifies errors quickly and accurately; spontaneously applies taxonomy when encountering new problems                     |
+| **Explanation Quality**    | Explanations restate the axiom rather than demonstrating understanding      | Explanations use own words and connect the axiom to personal experience                                        | Explanations teach the concept to someone else using original analogies and examples                                        |
+| **Modification Reasoning** | Identifies that something breaks but cannot explain the mechanism           | Identifies what breaks AND explains why the modification causes the failure                                    | Anticipates cascading effects — predicts not just the first failure but second-order consequences                           |
+| **Mastery Gate Quality**   | Artifacts are incomplete or generic (could apply to any axiom)              | Artifacts are complete and specific to the axiom, with clear structure                                         | Artifacts demonstrate original thinking — the plan, spec, or checklist reveals genuine understanding beyond what was taught |
+| **PRIMM-AI+ Engagement**   | Skipped Predict or copied AI answers without comparing to own prediction    | Completed all five stages; comparisons between prediction and AI response show genuine reflection              | Used the framework independently — applied Predict-Run-Investigate-Modify-Make to a new problem without prompting           |
 
 ---
 
 ## What Comes Next
 
-You now know *what* professional AI-driven development looks like — ten axioms that form a complete engineering system. In the next two chapters, you will move from understanding to doing:
+You now know _what_ professional AI-driven development looks like — ten axioms that form a complete engineering system. In the next two chapters, you will move from understanding to doing:
 
 - **Chapter 32: Development Environment** — You will install and configure the exact tools James uses throughout this chapter: uv for dependency management, pyright for type checking, ruff for formatting and linting, pytest for testing, and git for version control. By the end, you will have a working environment where Axiom IX's verification pipeline runs on your own machine.
 - **Chapter 33: Reading Python** — You will read your first real Python programs through the PRIMM-AI+ lens. Every skill you practiced here — predicting outcomes, classifying errors, reasoning about modifications — transfers directly to reading code. The axioms become your engineering standards; PRIMM-AI+ becomes your method for meeting them.

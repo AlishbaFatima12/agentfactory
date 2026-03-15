@@ -5,7 +5,16 @@ chapter: 31
 lesson: 4
 duration_minutes: 22
 description: "Complex systems are built from composable, focused units that communicate through well-defined interfaces—the Unix philosophy applied to software architecture"
-keywords: ["composition", "unix philosophy", "modularity", "interfaces", "dependency injection", "separation of concerns", "composable units"]
+keywords:
+  [
+    "composition",
+    "unix philosophy",
+    "modularity",
+    "interfaces",
+    "dependency injection",
+    "separation of concerns",
+    "composable units",
+  ]
 
 # HIDDEN SKILLS METADATA
 skills:
@@ -62,7 +71,7 @@ Axiom III turned James's fifteen-line script into a disciplined program — type
 James was about to find out. Emma assigned him to the company's order management system — the core platform that handled every customer purchase. This system would follow him through the rest of the chapter, growing more disciplined with each axiom.
 
 :::tip Focus on structure, not syntax
-From this lesson onward, code examples use Python features you have not learned yet — classes, decorators, type annotations, and more. That is fine. Focus on the *architecture*: how code is organized, what each piece does, and why it is separate. The syntax will make sense when you reach the Python lessons later in Part 4.
+From this lesson onward, code examples use Python features you have not learned yet — classes, decorators, type annotations, and more. That is fine. Focus on the _architecture_: how code is organized, what each piece does, and why it is separate. The syntax will make sense when you reach the Python lessons later in Part 4.
 :::
 
 "Before you touch the order system," Emma told him on his second month, "I need to warn you about `process_order()`."
@@ -83,14 +92,14 @@ James's `process_order()` was not written by a bad engineer. Like James's `deplo
 
 Here is the trajectory that James's team followed — and that every monolith follows:
 
-| Month | What Happens | Consequence |
-|-------|-------------|-------------|
-| 1 | Single function works perfectly for initial scope | Developer feels productive |
-| 3 | New requirements added inside the function | Function grows to 300 lines |
-| 6 | Bug fix touches unrelated code paths | Regression in seemingly unrelated feature |
-| 9 | New developer joins, cannot understand the function | Onboarding takes weeks instead of days |
-| 12 | AI assistant asked to modify function | AI hallucinates because context exceeds useful window |
-| 18 | Feature request requires architectural change | "We need to rewrite everything" |
+| Month | What Happens                                        | Consequence                                           |
+| ----- | --------------------------------------------------- | ----------------------------------------------------- |
+| 1     | Single function works perfectly for initial scope   | Developer feels productive                            |
+| 3     | New requirements added inside the function          | Function grows to 300 lines                           |
+| 6     | Bug fix touches unrelated code paths                | Regression in seemingly unrelated feature             |
+| 9     | New developer joins, cannot understand the function | Onboarding takes weeks instead of days                |
+| 12    | AI assistant asked to modify function               | AI hallucinates because context exceeds useful window |
+| 18    | Feature request requires architectural change       | "We need to rewrite everything"                       |
 
 The trajectory is predictable. Monoliths start convenient and become unmaintainable. Composed systems start with slightly more structure and remain maintainable indefinitely.
 
@@ -112,28 +121,28 @@ When these properties hold, units compose naturally — like LEGO bricks that sn
 
 ## From Principle to Axiom
 
-In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/small-reversible-decomposition), you learned **Principle 4: Small, Reversible Decomposition**—breaking problems into atomic steps that can be independently verified and rolled back. That principle governs your *process*: how you approach solving problems.
+In [Chapter 17](/docs/General-Agents-Foundations/seven-principles/small-reversible-decomposition), you learned **Principle 4: Small, Reversible Decomposition**—breaking problems into atomic steps that can be independently verified and rolled back. That principle governs your _process_: how you approach solving problems.
 
-Axiom IV governs your *architecture*: how you structure the solutions themselves.
+Axiom IV governs your _architecture_: how you structure the solutions themselves.
 
-| Aspect | Principle 4 (Process) | Axiom IV (Architecture) |
-|--------|----------------------|------------------------|
-| Focus | How you work | What you build |
-| Unit | A commit, a step | A function, a module |
-| Goal | Manageable progress | Maintainable systems |
-| Reversibility | Git revert a step | Swap out a component |
-| Scale | Task decomposition | System decomposition |
+| Aspect        | Principle 4 (Process) | Axiom IV (Architecture) |
+| ------------- | --------------------- | ----------------------- |
+| Focus         | How you work          | What you build          |
+| Unit          | A commit, a step      | A function, a module    |
+| Goal          | Manageable progress   | Maintainable systems    |
+| Reversibility | Git revert a step     | Swap out a component    |
+| Scale         | Task decomposition    | System decomposition    |
 
 The principle says: "Break your work into small steps." The axiom says: "Build your systems from small parts." One is about the journey; the other is about the destination. Together, they ensure both your process and your product remain manageable.
 
 <details>
 <summary>**The Paper That Changed Software Architecture**</summary>
 
-In Axiom I, you encountered Doug McIlroy's Unix philosophy: programs that do one thing well and work together through pipes. That philosophy governs how you compose *programs* through the shell. Axiom IV extends the same idea inside the programs themselves — to functions, modules, and systems. And the person who formalized this extension was not McIlroy, but a mathematician named David Parnas.
+In Axiom I, you encountered Doug McIlroy's Unix philosophy: programs that do one thing well and work together through pipes. That philosophy governs how you compose _programs_ through the shell. Axiom IV extends the same idea inside the programs themselves — to functions, modules, and systems. And the person who formalized this extension was not McIlroy, but a mathematician named David Parnas.
 
-In 1972, Parnas published a paper at Carnegie Mellon with a title that reads like an axiom itself: "On the Criteria To Be Used in Decomposing Systems into Modules." The paper examined a single problem — a keyword-in-context indexing system — and showed two ways to decompose it. The first decomposition followed the obvious approach: break the system into steps that mirror the processing flow (input, shift, alphabetize, output). The second decomposition followed a different principle: break the system so that each module *hides a design decision* from the others.
+In 1972, Parnas published a paper at Carnegie Mellon with a title that reads like an axiom itself: "On the Criteria To Be Used in Decomposing Systems into Modules." The paper examined a single problem — a keyword-in-context indexing system — and showed two ways to decompose it. The first decomposition followed the obvious approach: break the system into steps that mirror the processing flow (input, shift, alphabetize, output). The second decomposition followed a different principle: break the system so that each module _hides a design decision_ from the others.
 
-The first approach was what every programmer instinctively did. The second was what Parnas argued they *should* do. His reasoning was precise: when a design decision is hidden inside a module, changing that decision affects only that module. When a design decision is shared across modules, changing it cascades through the entire system.
+The first approach was what every programmer instinctively did. The second was what Parnas argued they _should_ do. His reasoning was precise: when a design decision is hidden inside a module, changing that decision affects only that module. When a design decision is shared across modules, changing it cascades through the entire system.
 
 Parnas called this principle **information hiding**. It is the theoretical foundation for Axiom IV. James's `process_order()` violated it completely — every design decision (how to validate, how to calculate tax, how to format receipts) was exposed to every other part of the function. Changing any decision cascaded through 1,400 lines. Emma's composed version hid each decision inside a focused unit. Changing tax calculation affected `calculate_tax()` and nothing else.
 
@@ -192,7 +201,7 @@ def process_order(order_data: dict) -> Receipt:
     return receipt
 ```
 
-Read the orchestrating function `process_order()` at the bottom. Six lines. Each line is one step. Each step is one function. Adding James's discount feature means inserting one line — `discounted = apply_discount(priced, code)` — between `calculate_total` and `process_payment`. Nothing else changes. Nothing else *can* break, because each function only sees its own inputs and outputs. This is Parnas's information hiding made concrete.
+Read the orchestrating function `process_order()` at the bottom. Six lines. Each line is one step. Each step is one function. Adding James's discount feature means inserting one line — `discounted = apply_discount(priced, code)` — between `calculate_total` and `process_payment`. Nothing else changes. Nothing else _can_ break, because each function only sees its own inputs and outputs. This is Parnas's information hiding made concrete.
 
 ### Scale 2: Modules
 
@@ -233,12 +242,12 @@ When James asked an AI agent to "add a discount code feature to `process_order()
 
 Composition solves this at the structural level:
 
-| With Monolith | With Composition |
-|---------------|-----------------|
-| AI receives 1,400 lines to add one feature | AI receives `calculate_total()` — 20 lines |
-| AI might modify unrelated sections | AI can only touch the unit it was given |
-| Testing requires full system state | Testing requires only the unit's inputs and outputs |
-| A bad AI generation breaks everything | A bad AI generation breaks one replaceable unit |
+| With Monolith                              | With Composition                                    |
+| ------------------------------------------ | --------------------------------------------------- |
+| AI receives 1,400 lines to add one feature | AI receives `calculate_total()` — 20 lines          |
+| AI might modify unrelated sections         | AI can only touch the unit it was given             |
+| Testing requires full system state         | Testing requires only the unit's inputs and outputs |
+| A bad AI generation breaks everything      | A bad AI generation breaks one replaceable unit     |
 
 **Context windows are finite.** Every AI model can hold a limited amount of text in working memory. A 1,400-line function consumes that window with code the AI does not need to see. Twenty composed functions, each 20-70 lines, give the AI exactly the context it needs — no more, no less.
 
@@ -251,10 +260,10 @@ Composition solves this at the structural level:
 ## Dependency Injection: Composition of Behavior
 
 :::tip Advanced pattern preview
-Dependency injection is a powerful technique you will use in later chapters. For now, focus on the *concept*: instead of permanently wiring a system to one specific tool, you make the tool swappable. Think of it like a restaurant that can switch food suppliers without retraining the chef. In the code below, `Callable` simply means "any function" — it is Python's way of saying "pass me a function and I will call it."
+Dependency injection is a powerful technique you will use in later chapters. For now, focus on the _concept_: instead of permanently wiring a system to one specific tool, you make the tool swappable. Think of it like a restaurant that can switch food suppliers without retraining the chef. In the code below, `Callable` simply means "any function" — it is Python's way of saying "pass me a function and I will call it."
 :::
 
-Emma showed James one more technique that made the composed version powerful in a way the monolith could never be: instead of hardcoding *which* payment processor or *which* database the function uses, you pass the implementation as a parameter.
+Emma showed James one more technique that made the composed version powerful in a way the monolith could never be: instead of hardcoding _which_ payment processor or _which_ database the function uses, you pass the implementation as a parameter.
 
 ```python static
 # Hardcoded: permanently bound to Stripe and PostgreSQL
@@ -291,12 +300,12 @@ It is the function that started as `handle_request()` and grew to 800 lines beca
 
 The God Object is the monolith at the code level — and like all monoliths, it was not built deliberately. It was grown, one convenience at a time, by developers who did not recognize the moment when "add it here" became "this needs to be its own thing."
 
-| Anti-Pattern | Symptom | Consequence | Composed Alternative |
-|-------------|---------|-------------|---------------------|
-| **God Class** | One class with 50+ methods handling unrelated concerns | Changes to any feature risk breaking all others | Split into focused classes, each with a single responsibility |
-| **Monolithic Function** | 500+ line function with multiple responsibilities | Cannot test, understand, or modify in isolation | Extract focused helper functions with clear interfaces |
-| **Tight Coupling** | Module A directly imports internals of Module B | Changes to B cascade as breaking changes to A | Define interfaces; A depends on the interface, not B's internals |
-| **Circular Dependencies** | Module A imports B, B imports A | Cannot understand either module in isolation; import errors | Extract shared logic to Module C; both A and B import C |
+| Anti-Pattern              | Symptom                                                | Consequence                                                 | Composed Alternative                                             |
+| ------------------------- | ------------------------------------------------------ | ----------------------------------------------------------- | ---------------------------------------------------------------- |
+| **God Class**             | One class with 50+ methods handling unrelated concerns | Changes to any feature risk breaking all others             | Split into focused classes, each with a single responsibility    |
+| **Monolithic Function**   | 500+ line function with multiple responsibilities      | Cannot test, understand, or modify in isolation             | Extract focused helper functions with clear interfaces           |
+| **Tight Coupling**        | Module A directly imports internals of Module B        | Changes to B cascade as breaking changes to A               | Define interfaces; A depends on the interface, not B's internals |
+| **Circular Dependencies** | Module A imports B, B imports A                        | Cannot understand either module in isolation; import errors | Extract shared logic to Module C; both A and B import C          |
 
 The test is simple: if you cannot explain what a class does in one sentence, it is a God Object. If modifying one feature requires understanding ten others, you are looking at a monolith. The fix is the same as Emma's — decompose until each unit does one thing, communicates through typed interfaces, and can be tested without setting up the entire world.
 
@@ -315,13 +324,13 @@ If any answer is "no," the code needs decomposition. Break it into smaller units
 
 After learning Axiom IV, James went through a phase that Emma had seen before. He decomposed everything. A 15-line function became five 3-line functions. A simple data transformation grew a three-layer abstraction. He created interfaces for components that would only ever have one implementation. The code was technically "composed" but harder to read than the original — because now you had to trace through five files to understand what used to be fifteen obvious lines.
 
-"Composition is a spectrum, not a religion," Emma told him. "The goal is not maximum decomposition. It is *appropriate* decomposition."
+"Composition is a spectrum, not a religion," Emma told him. "The goal is not maximum decomposition. It is _appropriate_ decomposition."
 
 The Decomposition Trap is the mirror image of the monolith. Where the monolith puts everything in one place, the over-decomposed system scatters simple logic across so many units that understanding the whole requires assembling a mental map of dozens of tiny pieces. Both fail for the same reason: they make the system harder to understand than it needs to be.
 
 The heuristic is simple. Compose when a function does multiple unrelated things, when you cannot test a behavior without setting up unrelated state, or when changes to one concern break unrelated concerns.
 
-Do not compose when the code is simple and unlikely to change, when the abstraction would be more complex than the duplication, or when you are designing for a future that may never arrive. A 20-line function that does one clear thing does not need to be split into four 5-line functions. A script that runs once does not need a plugin architecture. Parnas's principle is about hiding *design decisions that might change* — not about hiding everything.
+Do not compose when the code is simple and unlikely to change, when the abstraction would be more complex than the duplication, or when you are designing for a future that may never arrive. A 20-line function that does one clear thing does not need to be split into four 5-line functions. A script that runs once does not need a plugin architecture. Parnas's principle is about hiding _design decisions that might change_ — not about hiding everything.
 
 ## Try With AI
 
@@ -415,6 +424,7 @@ Close your AI assistant. Consider two hospitals:
 **Hospital B**: A composed emergency department — a triage nurse assesses urgency, an ER doctor diagnoses, a lab technician runs tests, a surgeon operates when needed, a pharmacist fills prescriptions, and a discharge coordinator handles paperwork. Each role has a clear responsibility and communicates through the patient's medical record (the "interface").
 
 Predict two scenarios:
+
 1. The surgeon is in a 3-hour operation when a new trauma patient arrives who also needs surgery. What happens in each hospital?
 2. A mass casualty event brings 40 patients at once. How does each hospital cope?
 
@@ -422,7 +432,7 @@ Write your predictions for both scenarios. Rate your confidence from 1 to 5.
 
 ### Run
 
-Ask your AI assistant: *"Compare two hospital models: (A) one doctor does everything for every patient — triage, diagnosis, lab tests, surgery, prescriptions, discharge — versus (B) separate specialists for each role who communicate through medical records. What happens when the surgeon is busy in a 3-hour operation and a new trauma patient arrives? What about a mass casualty event with 40 patients?"*
+Ask your AI assistant: _"Compare two hospital models: (A) one doctor does everything for every patient — triage, diagnosis, lab tests, surgery, prescriptions, discharge — versus (B) separate specialists for each role who communicate through medical records. What happens when the surgeon is busy in a 3-hour operation and a new trauma patient arrives? What about a mass casualty event with 40 patients?"_
 
 Compare. Did the AI identify failure modes you missed? Did you catch any that the AI did not mention?
 
@@ -430,10 +440,12 @@ Compare. Did the AI identify failure modes you missed? Did you catch any that th
 <summary><strong>Answer Key — Check Your Prediction</strong></summary>
 
 **When the surgeon is in a 3-hour operation and a new trauma arrives:**
+
 - **Hospital A** is paralyzed. The single doctor IS the surgeon — they cannot leave the operating table. The new trauma patient waits 3 hours with no triage, no diagnosis, no stabilization. Every other patient in the ER also waits, because the one doctor is unavailable for anything. Lives are at risk because one role (surgery) has blocked all other roles.
 - **Hospital B** continues functioning. The triage nurse assesses the new trauma patient immediately. The ER doctor stabilizes them. If surgery is urgent, an on-call surgeon is brought in — the role is swappable. Meanwhile, the lab technician, pharmacist, and discharge coordinator continue serving other patients without interruption. The surgeon's unavailability affects only surgical cases, not the entire department.
 
 **During a mass casualty event (40 patients):**
+
 - **Hospital A** collapses. One doctor cannot triage 40 patients, diagnose 40 conditions, run 40 sets of tests, and perform multiple surgeries. Patients queue in a single line behind one overwhelmed person. Critical patients wait behind non-critical ones because there is no parallel processing.
 - **Hospital B** scales by parallelizing. The triage nurse rapidly sorts 40 patients by severity (critical, urgent, stable). Multiple ER doctors work in parallel. Lab technicians process tests concurrently. The pharmacy fills prescriptions without waiting for discharge paperwork. Each role operates at its own capacity, and the hospital can add more staff to any role that becomes a bottleneck — a second triage nurse, an extra ER doctor — without restructuring the entire department.
 

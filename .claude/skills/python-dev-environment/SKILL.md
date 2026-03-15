@@ -1,17 +1,17 @@
 ---
 name: "python-dev-environment"
-description: "Expertise skill for Chapter 14.1 — The Development Environment. Contains verified facts about uv, pyright, ruff, pytest, and Git as a unified discipline stack. All data grounded from official documentation (Feb 2026)."
+description: "Expertise skill for Chapter 32.1 — The Development Environment. Contains verified facts about uv, pyright, ruff, pytest, and Git as a unified discipline stack. All data grounded from official documentation (Feb 2026)."
 category: "expertise"
-chapter: "14.1"
+chapter: "32.1"
 version: "1.0"
 grounded_date: "2026-02-20"
 ---
 
 # Python Development Environment Expertise Skill
 
-**Purpose**: Provides verified, grounded reference data for writing Chapter 14.1 lessons. Every command, version number, and config option below was extracted from official documentation on 2026-02-20.
+**Purpose**: Provides verified, grounded reference data for writing Chapter 32.1 lessons. Every command, version number, and config option below was extracted from official documentation on 2026-02-20.
 
-**Usage**: Content-implementer subagents MUST reference this skill when writing Ch 14.1 lessons. Never invent commands or config options — use only what is documented here.
+**Usage**: Content-implementer subagents MUST reference this skill when writing Ch 32.1 lessons. Never invent commands or config options — use only what is documented here.
 
 ---
 
@@ -134,16 +134,16 @@ uv run python -c "print('hi')"    # Run inline Python
 
 ### Why uv Over pip
 
-| Dimension | pip | uv |
-|-----------|-----|-----|
-| Speed | Baseline | 10-100x faster (Rust, parallel downloads, global cache) |
-| Scope | Package install only | All-in-one: Python install, venvs, deps, scripts, builds |
-| Virtual envs | Separate `python -m venv` step | Creates `.venv` automatically |
-| Lockfile | None (needs pip-tools) | `uv.lock` generated automatically |
-| Python versions | Need pyenv separately | Built-in: `uv python install 3.12` |
-| Uninstall cleanup | Leaves orphaned transitive deps | Removes transitive deps on uninstall |
-| Disk usage | Separate copies per venv | Global cache, up to 40% disk savings |
-| Replaces | Just pip | pip, pip-tools, pipx, poetry, pyenv, virtualenv |
+| Dimension         | pip                             | uv                                                       |
+| ----------------- | ------------------------------- | -------------------------------------------------------- |
+| Speed             | Baseline                        | 10-100x faster (Rust, parallel downloads, global cache)  |
+| Scope             | Package install only            | All-in-one: Python install, venvs, deps, scripts, builds |
+| Virtual envs      | Separate `python -m venv` step  | Creates `.venv` automatically                            |
+| Lockfile          | None (needs pip-tools)          | `uv.lock` generated automatically                        |
+| Python versions   | Need pyenv separately           | Built-in: `uv python install 3.12`                       |
+| Uninstall cleanup | Leaves orphaned transitive deps | Removes transitive deps on uninstall                     |
+| Disk usage        | Separate copies per venv        | Global cache, up to 40% disk savings                     |
+| Replaces          | Just pip                        | pip, pip-tools, pipx, poetry, pyenv, virtualenv          |
 
 **Axiom Callback**: uv = Axiom I (Shell as Orchestrator). One command replaces an entire ecosystem.
 
@@ -184,12 +184,12 @@ pythonVersion = "3.12"
 
 ### Type Checking Modes
 
-| Mode | Description |
-|------|-------------|
-| `"off"` | All type-checking disabled; syntax errors still reported |
-| `"basic"` | Minimal rule set |
-| `"standard"` | **Default (CLI).** Moderate coverage |
-| `"strict"` | Most rules enabled; requires complete type annotations |
+| Mode         | Description                                              |
+| ------------ | -------------------------------------------------------- |
+| `"off"`      | All type-checking disabled; syntax errors still reported |
+| `"basic"`    | Minimal rule set                                         |
+| `"standard"` | **Default (CLI).** Moderate coverage                     |
+| `"strict"`   | Most rules enabled; requires complete type annotations   |
 
 ### Running Pyright
 
@@ -216,6 +216,7 @@ uv run pyright src/main.py         # Check specific file
 Strict mode enables 28 rules that are `"none"` in standard but `"error"` in strict:
 
 **Missing annotations:**
+
 - `reportMissingParameterType` — parameters without type hints
 - `reportMissingTypeArgument` — generic classes without type args
 - `reportUnknownParameterType` — parameter type resolves to Unknown
@@ -225,6 +226,7 @@ Strict mode enables 28 rules that are `"none"` in standard but `"error"` in stri
 - `reportUnknownLambdaType` — lambda parameters Unknown
 
 **Code quality:**
+
 - `reportUnusedImport` — imported symbols not referenced
 - `reportUnusedVariable` — local variables not referenced
 - `reportUnusedFunction` — functions not referenced
@@ -235,6 +237,7 @@ Strict mode enables 28 rules that are `"none"` in standard but `"error"` in stri
 - `reportDeprecated` — deprecated features
 
 **Type safety:**
+
 - `reportUntypedBaseClass` — base class without types
 - `reportUntypedFunctionDecorator` — untyped decorators
 - `reportUntypedClassDecorator` — untyped class decorators
@@ -246,7 +249,7 @@ Strict mode enables 28 rules that are `"none"` in standard but `"error"` in stri
 - `reportUnnecessaryIsInstance` — unnecessary isinstance
 - `reportIncompleteStub`, `reportInconsistentConstructor`, `reportInvalidStubStatement`, `reportTypeCommentUsage`
 
-### Before/After Example (for Ch 14.1)
+### Before/After Example (for Ch 32.1)
 
 ```python
 # BEFORE: Passes standard, FAILS strict
@@ -312,18 +315,18 @@ indent-style = "space"
 
 ### Key Rule Categories (for Teaching)
 
-| Prefix | Name | What It Catches |
-|--------|------|-----------------|
-| **F** | Pyflakes | Undefined names, unused imports, unused variables |
-| **E** | pycodestyle (errors) | PEP 8 style violations (indentation, whitespace) |
-| **W** | pycodestyle (warnings) | PEP 8 warnings |
-| **I** | isort | Import sorting order |
-| **UP** | pyupgrade | Old syntax that can be modernized |
-| **B** | flake8-bugbear | Common programming mistakes |
-| **SIM** | flake8-simplify | Code that can be simplified |
-| **N** | pep8-naming | Naming conventions (CamelCase, snake_case) |
-| **S** | flake8-bandit | Security vulnerabilities |
-| **T20** | flake8-print | Print statements left in code |
+| Prefix  | Name                   | What It Catches                                   |
+| ------- | ---------------------- | ------------------------------------------------- |
+| **F**   | Pyflakes               | Undefined names, unused imports, unused variables |
+| **E**   | pycodestyle (errors)   | PEP 8 style violations (indentation, whitespace)  |
+| **W**   | pycodestyle (warnings) | PEP 8 warnings                                    |
+| **I**   | isort                  | Import sorting order                              |
+| **UP**  | pyupgrade              | Old syntax that can be modernized                 |
+| **B**   | flake8-bugbear         | Common programming mistakes                       |
+| **SIM** | flake8-simplify        | Code that can be simplified                       |
+| **N**   | pep8-naming            | Naming conventions (CamelCase, snake_case)        |
+| **S**   | flake8-bandit          | Security vulnerabilities                          |
+| **T20** | flake8-print           | Print statements left in code                     |
 
 **Default enabled rules**: `E4`, `E7`, `E9`, and `F` (minimal safe set).
 **Total rules**: 800+ built-in.
@@ -353,12 +356,12 @@ uv add --dev pytest                # Add as dev dependency
 
 ### Test Discovery Conventions
 
-| Element | Convention | Example |
-|---------|-----------|---------|
-| Files | `test_*.py` or `*_test.py` | `test_calculator.py` |
-| Functions | `test_*` prefix | `def test_addition():` |
-| Classes | `Test*` prefix (no `__init__`) | `class TestCalculator:` |
-| Methods | `test_*` inside `Test*` classes | `def test_add(self):` |
+| Element   | Convention                      | Example                 |
+| --------- | ------------------------------- | ----------------------- |
+| Files     | `test_*.py` or `*_test.py`      | `test_calculator.py`    |
+| Functions | `test_*` prefix                 | `def test_addition():`  |
+| Classes   | `Test*` prefix (no `__init__`)  | `class TestCalculator:` |
+| Methods   | `test_*` inside `Test*` classes | `def test_add(self):`   |
 
 ### Minimal Test File
 
@@ -401,13 +404,13 @@ test_example.py::test_answer PASSED                              [100%]
 
 **Output characters:**
 
-| Character | Meaning |
-|-----------|---------|
-| `.` | Passed |
-| `F` | Failed |
-| `E` | Error (exception in setup/teardown) |
-| `s` | Skipped |
-| `x` | Expected failure (xfail) |
+| Character | Meaning                             |
+| --------- | ----------------------------------- |
+| `.`       | Passed                              |
+| `F`       | Failed                              |
+| `E`       | Error (exception in setup/teardown) |
+| `s`       | Skipped                             |
+| `x`       | Expected failure (xfail)            |
 
 ### Configuration in `pyproject.toml`
 
@@ -501,7 +504,7 @@ testpaths = ["tests"]
 
 ---
 
-## 8. Chapter 14 Tone Reference (Condensed)
+## 8. Chapter 32Tone Reference (Condensed)
 
 ### Characters
 
@@ -521,7 +524,7 @@ testpaths = ["tests"]
 1. Title → Narrative opening (4-6 paragraphs)
 2. "The Problem Without This Tool" → pain point
 3. "The Tool Defined" → blockquote + table + image
-4. "From Axiom to Practice" → connects to Ch 14 axiom
+4. "From Axiom to Practice" → connects to Ch 32 axiom
 5. "Practical Application" → code examples, configs
 6. "Anti-Patterns" → narrative + table (3-4 columns)
 7. "Try With AI" → exactly 3 prompts with `**What you're learning:**`
@@ -580,27 +583,27 @@ differentiation:
 
 ---
 
-## 9. Axiom Callbacks (Ch 14.1 → Ch 14 Mapping)
+## 9. Axiom Callbacks (Ch 32.1 → Ch 32 Mapping)
 
-| Tool | Axiom | Connection |
-|------|-------|------------|
-| uv | I — Shell as Orchestrator | One command orchestrates entire ecosystem |
-| pyproject.toml | II — Knowledge is Markdown | Project config as single source of truth |
-| pyright | V — Types Are Guardrails | Compiler catches bugs before runtime |
-| ruff | IX — Verification is a Pipeline | Automated lint/format in CI |
-| pytest | VII — Tests Are the Specification | Tests define "correct" behavior |
-| Git | VIII — Version Control is Memory | Every change tracked and reversible |
+| Tool           | Axiom                             | Connection                                |
+| -------------- | --------------------------------- | ----------------------------------------- |
+| uv             | I — Shell as Orchestrator         | One command orchestrates entire ecosystem |
+| pyproject.toml | II — Knowledge is Markdown        | Project config as single source of truth  |
+| pyright        | V — Types Are Guardrails          | Compiler catches bugs before runtime      |
+| ruff           | IX — Verification is a Pipeline   | Automated lint/format in CI               |
+| pytest         | VII — Tests Are the Specification | Tests define "correct" behavior           |
+| Git            | VIII — Version Control is Memory  | Every change tracked and reversible       |
 
 ---
 
 ## 10. Confidence Assessment
 
-| Data Point | Status | Source |
-|-----------|--------|--------|
-| uv v0.10.4, commands, config | VERIFIED | docs.astral.sh/uv, PyPI, GitHub |
-| pyright v1.1.408, strict rules | VERIFIED | github.com/microsoft/pyright, PyPI |
-| ruff v0.15.2, rules, config | VERIFIED | docs.astral.sh/ruff, PyPI, GitHub |
-| pytest v9.0.2, conventions | VERIFIED | docs.pytest.org, PyPI, changelog |
-| `requires-python` default | NOTE | Shows `>=3.11` in docs but varies by detected Python |
-| Platform install differences | VERIFIED | Official docs for each tool |
-| Ch 14 tone and structure | VERIFIED | Read from actual lesson files |
+| Data Point                     | Status   | Source                                               |
+| ------------------------------ | -------- | ---------------------------------------------------- |
+| uv v0.10.4, commands, config   | VERIFIED | docs.astral.sh/uv, PyPI, GitHub                      |
+| pyright v1.1.408, strict rules | VERIFIED | github.com/microsoft/pyright, PyPI                   |
+| ruff v0.15.2, rules, config    | VERIFIED | docs.astral.sh/ruff, PyPI, GitHub                    |
+| pytest v9.0.2, conventions     | VERIFIED | docs.pytest.org, PyPI, changelog                     |
+| `requires-python` default      | NOTE     | Shows `>=3.11` in docs but varies by detected Python |
+| Platform install differences   | VERIFIED | Official docs for each tool                          |
+| Ch 32 tone and structure       | VERIFIED | Read from actual lesson files                        |

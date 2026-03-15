@@ -5,7 +5,7 @@ title: "Part 2: Agent Workflow Primitives"
 
 # Part 2: Agent Workflow Primitives
 
-You understand the paradigm. You know the Seven Principles. You've seen what an AI Employee can do (Chapter 7).
+You understand the paradigm. You know the Seven Principles. You've seen what an AI Employee can do (Chapter 18).
 
 **Now it's time to build the skills to create your own.**
 
@@ -13,7 +13,7 @@ This part is a progressive skills lab. Each chapter tackles a specific problem d
 
 ## The Progressive Arc
 
-Each chapter solves a real-world problem while explicitly applying the Seven Principles from Chapter 6.
+Each chapter solves a real-world problem while explicitly applying the Seven Principles from Chapter 17.
 
 ## Two Interfaces, One Agent
 

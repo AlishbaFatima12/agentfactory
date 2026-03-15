@@ -1,0 +1,84 @@
+deck:
+  id: "ch31-08-trade-partnership-finance"
+  title: "Trade & Partnership Finance — Salam, Istisna'a, Mudaraba, Musharaka"
+  description: "Key concepts from salam advance purchase, istisna'a construction finance, mudaraba profit-sharing, and musharaka joint venture accounting under AAOIFI and IFRS."
+  tags: ["salam", "istisna", "mudaraba", "musharaka", "trade-finance"]
+  version: 1
+
+cards:
+  - id: "ch31-08-trade-partnership-finance-001"
+    front: "What are the four Shariah requirements for a valid salam contract?"
+    back: "1. Full advance payment\n2. Fungible commodity\n3. Precise delivery terms\n4. Commodity may not yet exist"
+    tags: ["salam", "shariah-requirements"]
+    difficulty: "basic"
+
+  - id: "ch31-08-trade-partnership-finance-002"
+    front: "In a parallel salam, the bank hedges by entering a second salam as seller. Why must the two contracts be legally independent?"
+    back: "Linking them creates a prohibited back-to-back arrangement under Shariah. Legal independence ensures each contract stands on its own merits, preventing the structure from becoming a disguised interest-based loan."
+    tags: ["parallel-salam", "shariah-compliance"]
+    difficulty: "intermediate"
+    why: "What evidence would an auditor seek to confirm the two contracts are genuinely independent?"
+
+  - id: "ch31-08-trade-partnership-finance-003"
+    front: "What AAOIFI standard governs each product: salam, istisna'a, mudaraba, and musharaka?"
+    back: "Salam: FAS 7\nIstisna'a: FAS 10\nMudaraba: FAS 3\nMusharaka: FAS 4"
+    tags: ["aaoifi", "product-standards"]
+    difficulty: "basic"
+
+  - id: "ch31-08-trade-partnership-finance-004"
+    front: "What revenue recognition method does istisna'a use, and what additional AAOIFI requirement distinguishes it from IFRS 15?"
+    back: "Percentage of completion (identical to IFRS 15 over-time). AAOIFI FAS 10 additionally requires Shariah compliance confirmation at each milestone."
+    tags: ["istisna", "revenue-recognition", "aaoifi"]
+    difficulty: "intermediate"
+
+  - id: "ch31-08-trade-partnership-finance-005"
+    front: "Salam requires full advance payment; istisna'a allows staged payment. How does this difference determine which product to use?"
+    back: "Salam suits fungible commodities purchased upfront. Istisna'a suits manufactured or constructed assets where payment aligns with construction milestones, because the bank should not bear full commodity risk on a custom asset."
+    tags: ["salam", "istisna", "product-selection"]
+    difficulty: "intermediate"
+    why: "What risk does the bank bear in salam between payment and delivery that it avoids in istisna'a?"
+
+  - id: "ch31-08-trade-partnership-finance-006"
+    front: "In mudaraba, who are the two parties and who bears financial loss?"
+    back: "Rabb ul mal (capital provider) bears all financial loss. Mudarib (manager) provides labour and expertise."
+    tags: ["mudaraba", "roles"]
+    difficulty: "basic"
+
+  - id: "ch31-08-trade-partnership-finance-007"
+    front: "What do PER and IRR accomplish in mudaraba profit distribution?"
+    back: "PER (Profit Equalisation Reserve) smooths returns across periods. IRR (Investment Risk Reserve) buffers against future capital losses."
+    tags: ["per", "irr", "mudaraba"]
+    difficulty: "intermediate"
+
+  - id: "ch31-08-trade-partnership-finance-008"
+    front: "Where do investment account holder (IAH) funds appear on an Islamic bank's balance sheet?"
+    back: "As \"Equity of Investment Account Holders\" — a separate category between liabilities and equity."
+    tags: ["iah", "balance-sheet", "islamic-banking"]
+    difficulty: "basic"
+
+  - id: "ch31-08-trade-partnership-finance-009"
+    front: "In musharaka, profits are shared per an agreed ratio that may differ from the capital ratio. How are losses shared?"
+    back: "Losses are shared strictly in proportion to capital contribution — a non-negotiable Shariah rule."
+    tags: ["musharaka", "loss-sharing", "shariah"]
+    difficulty: "basic"
+
+  - id: "ch31-08-trade-partnership-finance-010"
+    front: "Most musharaka arrangements fail the IFRS 9 SPPI test. Why does profit-sharing cause this failure?"
+    back: "Musharaka returns depend on venture performance, not a contractual rate. SPPI requires solely payments of principal and interest — profit shares are fundamentally different from contractual interest, so the test fails."
+    tags: ["musharaka", "sppi", "ifrs-9"]
+    difficulty: "intermediate"
+    why: "What measurement consequence does SPPI failure create for the bank's income statement?"
+
+  - id: "ch31-08-trade-partnership-finance-011"
+    front: "SPPI failure forces musharaka to FVTPL under IFRS. Under AAOIFI FAS 4, the same investment is carried at historical cost. Why does this difference matter?"
+    back: "FVTPL requires mark-to-market accounting, creating income statement volatility absent under AAOIFI. The same venture produces different reported profit depending on whether IFRS or AAOIFI governs, because AAOIFI adjusts carrying value only for actual profit or loss distributions."
+    tags: ["musharaka", "fvtpl", "aaoifi-vs-ifrs"]
+    difficulty: "advanced"
+    why: "Which framework gives a more faithful representation of the venture's economic reality?"
+
+  - id: "ch31-08-trade-partnership-finance-012"
+    front: "In a parallel istisna'a, the bank sits between customer and contractor. Why does this usually require gross presentation on the balance sheet?"
+    back: "The bank recognises both the asset under construction and the receivable from the customer as separate items, because the bank acts as principal in two independent contracts. This significantly increases balance sheet size."
+    tags: ["parallel-istisna", "gross-presentation", "balance-sheet"]
+    difficulty: "intermediate"
+    why: "When could the bank argue for net presentation instead — what IFRS assessment determines this?"

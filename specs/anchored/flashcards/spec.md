@@ -176,7 +176,7 @@ flashcards.yaml    →     <Flashcards />                  .apkg export
 
 ```
 # Co-located with each lesson
-apps/learn-app/docs/01-General-Agents-Foundations/01-agent-factory-paradigm/
+apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/
 ├── 01-digital-fte-revolution.md
 ├── 01-digital-fte-revolution.flashcards.yaml   ← NEW
 ├── 02-another-lesson.md
@@ -670,7 +670,7 @@ The `<Flashcards />` component fetches `/flashcards/manifest.json` at mount time
 
   ```
   Example A — no frontmatter slug:
-    MDX path: apps/learn-app/docs/01-General-Agents-Foundations/01-agent-factory-paradigm/01-digital-fte-revolution.md
+    MDX path: apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/01-digital-fte-revolution.md
     normalizeToDocId → General-Agents-Foundations/agent-factory-paradigm/digital-fte-revolution
     SourceURL → https://agentfactory.panaversity.org/docs/General-Agents-Foundations/agent-factory-paradigm/digital-fte-revolution
 
