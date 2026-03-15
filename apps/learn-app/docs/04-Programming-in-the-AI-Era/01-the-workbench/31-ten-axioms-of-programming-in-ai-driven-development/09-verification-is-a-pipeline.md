@@ -21,14 +21,14 @@ skills:
     category: "Technical"
     bloom_level: "Apply"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can read and modify a GitHub Actions YAML workflow that runs linting, type checking, tests, and security audits"
+    measurable_at_this_level: "Student can explain the purpose and ordering of each layer in a verification pipeline (formatting, linting, type checking, tests, security) and describe why automated execution matters"
 
   - name: "Implementing Local CI with Makefiles"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can create and use a Makefile that mirrors the CI pipeline locally, running all verification steps before pushing code"
+    measurable_at_this_level: "Student can design a local verification checklist that mirrors the CI pipeline layers, explaining what each check catches and why the order matters"
 
   - name: "CI Culture and Anti-Pattern Recognition"
     proficiency_level: "B1"
@@ -46,12 +46,12 @@ learning_objectives:
   - objective: "Configure a GitHub Actions workflow that implements the full verification pyramid"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student can write a ci.yml file with formatting, linting, type checking, unit tests, and security audit steps"
+    assessment_method: "Student can describe the layers of a CI pipeline, explain what each layer catches, and reason about why order matters (fast checks first)"
 
   - objective: "Create a Makefile that mirrors CI checks locally for fast feedback"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student can run `make ci` locally and verify all checks pass before pushing to remote"
+    assessment_method: "Student can explain why running verification locally before pushing is essential and design a checklist that mirrors the CI pipeline"
 
 cognitive_load:
   new_concepts: 6
@@ -96,7 +96,7 @@ This axiom transforms verification from a human discipline problem into an infra
 
 ## From Principle to Axiom
 
-In Chapter 4, you learned **Principle 3: Verification as Core Step** — the mindset that every action should be verified. You learned to check that files exist after creating them, to confirm commands succeeded before moving on, to validate outputs before declaring victory.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/verification-as-core-step), you learned **Principle 3: Verification as Core Step** — the mindset that every action should be verified. You saw what happens without it: the CSV parser that looked correct but split `"Smith, John"` into two fields, the file operations accepted without confirming the output existed. That principle taught you to check that files exist after creating them, to confirm commands succeeded before moving on, to validate outputs before declaring victory.
 
 Axiom IX elevates that principle from personal discipline to **infrastructure enforcement**:
 
@@ -159,6 +159,10 @@ Emma walked James through each level, connecting it to a specific failure from h
 **Level 6 — Security Audit** catches the invisible threats. The AI had suggested `pip install requests==2.28.0` for James's order notification system. `pip-audit` flagged it: that version had a known vulnerability (PYSEC-2023-74). Three levels deep in the dependency tree, a package James had never heard of was compromised.
 
 ## GitHub Actions: Your Pipeline
+
+:::tip New to CI/CD?
+The sections below show real configuration files (YAML workflows and Makefiles) that professional teams use. You do not need to memorize this syntax — focus on **what each section accomplishes** (which check runs, what it catches, why it's in that order). If you covered version control in [Chapter 12](/docs/Agent-Workflow-Primitives/version-control), you already understand the push-and-merge workflow these pipelines protect.
+:::
 
 After understanding the pyramid, James was ready to build it. Emma showed him GitHub Actions — the CI platform that runs verification pipelines on every push and pull request, using YAML workflow files stored in the repository itself.
 
@@ -243,16 +247,19 @@ Each section serves a specific purpose:
 
 ### Branch Protection: Making CI Mandatory
 
-"A pipeline that runs but can be ignored is theater, not verification," Emma told James. She showed him how to make CI truly enforceable:
+"A pipeline that runs but can be ignored is theater, not verification," Emma told James. The concept is straightforward: you configure your repository so that the pipeline is not advisory — it is a gate. If CI fails, the merge button is disabled. No exceptions, no overrides.
 
-1. Go to your repository Settings > Branches > Branch protection rules
-2. Enable "Require status checks to pass before merging"
-3. Select the `verify` job as a required check
-4. Enable "Require branches to be up to date before merging"
+:::tip You Will Set This Up in Hands-On Chapters
+Branch protection is a setting you configure in your repository's hosting platform (like GitHub). The exact steps — which settings page to visit, which checkboxes to enable — are something you will walk through when you set up your own projects. What matters here is the *idea*: the pipeline should be **mandatory**, not optional. Infrastructure enforces what discipline alone cannot.
+:::
 
-Now the pipeline was not advisory — it was a gate. If CI failed, the merge button was disabled. No exceptions, no overrides. James could no longer push broken code to main even if he wanted to. The infrastructure enforced what discipline alone could not.
+With branch protection enabled, James could no longer push broken code to main even if he wanted to. The infrastructure enforced what discipline alone could not.
 
 ## Local CI: The Makefile
+
+:::tip Still Reading for the Idea, Not the Syntax
+A Makefile is a file that lets you run multiple commands with a single short command (like typing `make ci` instead of running six separate tools). The important thing below is **the concept** — running all your checks locally before pushing, so you catch problems in seconds rather than waiting minutes for a remote server. You will write your own Makefiles in hands-on chapters.
+:::
 
 After two days of waiting three minutes for GitHub Actions to tell him about formatting errors, James asked Emma if there was a faster way. "Run the same checks locally before pushing," she said. "A Makefile gives you a single command that mirrors your CI pipeline."
 
@@ -307,37 +314,39 @@ clean:
 
 ### The Workflow With Local CI
 
-James's daily development workflow became:
+:::tip Reading for the Pattern, Not the Commands
+The commands below show James's daily workflow. You do not need to memorize them — what matters is the **pattern**: quick check first, fix problems, full check, then push. Notice how each step builds confidence before the next one. You will run these exact commands yourself in hands-on chapters.
+:::
+
+James's daily development workflow became a consistent sequence:
+
+1. **Write tests first** (TDG from Axiom VII), then have AI generate the implementation
+2. **Quick check** — run just formatting and linting (catches 80% of issues in 2 seconds)
+3. **Auto-fix** — let the tools fix formatting and linting issues automatically
+4. **Full CI check** — run all checks locally before pushing (the same checks GitHub will run)
+5. **Push only if CI passes** — commit and push with confidence
 
 ```bash
-# 1. Write TDG tests, then have AI generate implementation
-# 2. Quick check — catches 80% of issues in 2 seconds
-make quick
-
-# 3. Fix any formatting/linting issues automatically
-make fix-format
-make fix-lint
-
-# 4. Full CI check before pushing
-make ci
-
-# 5. Only push if CI passes
+# The actual commands for each step:
+make quick                  # Step 2: fast check
+make fix-format && make fix-lint  # Step 3: auto-fix
+make ci                     # Step 4: full local CI
 git add src/shipping.py tests/test_shipping.py
 git commit -m "feat(shipping): add international surcharge calculation"
-git push
+git push                    # Step 5: push with confidence
 ```
 
 This workflow meant James almost never saw CI failures on GitHub. The pipeline became a safety net, not a bottleneck. He caught issues in five seconds locally rather than waiting three minutes for a remote failure.
 
 ### Why a Makefile?
 
-James asked Emma why a Makefile instead of a shell script. The Makefile has specific advantages:
+James asked Emma why a Makefile instead of a shell script. A Makefile is a standard way to define named tasks — think of it as a menu of commands where each item runs a specific job. The Makefile has specific advantages:
 
-- **Convention**: Most open-source projects use Makefiles. Developers know to look for one.
-- **Self-documenting**: Run `make` with no arguments to see available targets.
-- **Composable**: `ci` is just `format + lint + typecheck + test + security` chained together.
-- **Universal**: Make is installed on every Unix system. No extra dependencies.
-- **Matches CI exactly**: Each Makefile target corresponds to one pipeline step. If `make ci` passes locally, GitHub Actions will pass remotely.
+- **Convention**: Most open-source projects use Makefiles. When a developer joins a project, they know to look for one — the same way you know to look for a table of contents at the front of a book.
+- **Self-documenting**: Run `make` with no arguments to see all available tasks listed by name.
+- **Composable**: The `ci` task is just `format + lint + typecheck + test + security` chained together. Each small task can also run independently.
+- **Widely available**: Make comes pre-installed on most development systems. On Windows, it is included with common development setups you will configure in hands-on chapters.
+- **Matches CI exactly**: Each Makefile task corresponds to one pipeline step. If `make ci` passes locally, GitHub Actions will pass remotely — same checks, same order, same guarantee.
 
 ## Why CI Matters More With AI-Generated Code
 
@@ -424,95 +433,159 @@ James remembered the Permanent Record from Axiom VIII — once a secret is commi
 
 ## Try With AI
 
-### Prompt 1: Build Your CI Pipeline
+### Prompt 1: Design a Quality Checklist for a Team Project
 
 ```
-I have a Python order management project with this structure:
+A team of 4 students is submitting a 20-page research report. Before
+submission, they need to check for problems. Here are the types of
+checks they could run:
 
-order_management/
-├── src/
-│   └── orders/
-│       ├── __init__.py
-│       ├── models.py      (SQLModel Order, Customer classes)
-│       ├── discount.py    (discount calculation logic)
-│       ├── shipping.py    (shipping rate calculator)
-│       └── api.py         (FastAPI endpoints)
-├── tests/
-│   ├── test_discount.py   (TDG specs for discount logic)
-│   ├── test_shipping.py   (TDG specs for shipping rates)
-│   └── test_api.py        (integration tests)
-├── requirements.txt
-├── requirements-dev.txt
-├── pyproject.toml
-└── Makefile
+- Formatting: consistent fonts, headings, margins, page numbers
+- Spelling and grammar: no typos, proper sentence structure
+- Content accuracy: all facts cited, statistics verified, no plagiarism
+- Completeness: all required sections present, all questions answered
+- Consistency: no contradictions between sections written by different people
+- References: all citations formatted correctly, all sources accessible
 
-Help me create:
-1. A GitHub Actions workflow (.github/workflows/ci.yml) that implements the full
-   verification pyramid (formatting, linting, types, tests, security)
-2. A Makefile with targets for each level plus a combined `make ci`
-3. A pyproject.toml section configuring ruff and pyright
+Design a verification checklist that:
+1. Orders these checks from fastest to slowest
+2. Explains WHY each check should run in that position
+3. Identifies which checks should STOP the process if they fail
+   (no point checking citations if an entire section is missing)
+4. Assigns each check to the best person (the writer, a teammate, or everyone)
 
-For each file, explain what each section does and why it's there.
-Then show me how to add branch protection so CI is mandatory.
+Then explain: what goes wrong if they only check spelling and formatting
+but skip completeness and consistency?
 ```
 
-**What you're learning:** Translating the verification pyramid into actual infrastructure files. Each step in the YAML catches a different category of error: formatting caught James's tab-vs-space issue, linting caught his unused import, type checking caught his `Optional[float]` mismatch, tests would have caught the discount bug, and `pip-audit` caught the vulnerable dependency. You are learning to wire these tools into a pipeline that runs automatically on every push.
+**What you're learning:** The verification pyramid applied to a real team workflow. Notice how the ordering mirrors James's CI pipeline — fast, surface-level checks first (formatting), then structural checks (completeness), then deep checks (accuracy, consistency). The key insight is the same: skipping a layer creates a gap. A well-formatted report that contradicts itself across sections is worse than one with a few typos, because the deeper problem is harder to catch and more costly to fix.
 
-### Prompt 2: Diagnose CI Failures
-
-```
-My CI pipeline for an order management project is failing with these errors.
-Help me understand and fix each one:
-
-Error 1 (ruff format):
-  src/orders/shipping.py: would reformat
-
-Error 2 (ruff check):
-  src/orders/discount.py:3:1: F401 `os` imported but unused
-  src/orders/api.py:15:5: B006 Do not use mutable data structures for argument defaults
-
-Error 3 (pyright):
-  src/orders/shipping.py:42:12 - error: Return type "float | None" is not assignable
-    to declared return type "float"
-
-Error 4 (pytest):
-  FAILED tests/test_discount.py::test_fifteen_percent - AssertionError:
-    assert 15.0 == 85.0
-
-Error 5 (pip-audit):
-  Name     Version  ID             Fix Versions
-  requests 2.28.0   PYSEC-2023-74  2.31.0
-
-For each error:
-- What verification level caught it?
-- Why didn't a lower level catch it?
-- What's the fix?
-- What would have happened if this reached production?
-```
-
-**What you're learning:** Reading and interpreting CI failure messages across all pyramid levels. Notice that Error 4 is exactly James's discount bug — the test caught it because the TDG specification defined what "correct" means. You are building the diagnostic skill of understanding *which* tool catches *which* category of error, and why the layered approach matters.
-
-### Prompt 3: Extend Your Pipeline Beyond the Basics
+### Prompt 2: Diagnose What Went Wrong Without Checks
 
 ```
-My order management system's CI pipeline currently runs the standard verification
-pyramid (formatting, linting, types, unit tests, security). But I need more:
+A student submitted a school assignment and got a poor grade.
+The teacher's feedback listed these problems:
 
-- Integration tests that verify discount + shipping + invoicing work together
-- Database migration tests (does schema.sql apply cleanly to a fresh database?)
-- API contract tests (do endpoints return the expected response shapes?)
-- Performance checks (does calculate_shipping stay under 100ms for 1000 orders?)
+Problem 1: "The essay uses inconsistent formatting — some sections are
+double-spaced, others single-spaced, and the font changes twice."
 
-Help me design a tiered CI pipeline:
-1. Fast checks (< 2 min) — run on every push
-2. Medium checks (< 10 min) — run on PRs to main
-3. Slow checks (< 30 min) — run nightly or on release branches
+Problem 2: "You cited a statistic that says '73% of scientists agree'
+but the actual source says 37%. The digits are reversed."
 
-For each tier, explain what goes where and why. Show me the GitHub Actions
-YAML for all three tiers. How do I handle checks that need a database?
+Problem 3: "Your essay is about climate change but Question 3 asked
+about renewable energy. You answered the wrong question."
+
+Problem 4: "Your bibliography lists 8 sources but only 5 appear in
+the text. Three citations are missing from the essay body."
+
+Problem 5: "Section 2 says 'solar is the cheapest option' but Section 4
+says 'wind is the cheapest option.' These contradict each other."
+
+For each problem:
+- What type of check would have caught it? (formatting, content,
+  accuracy, completeness, or consistency)
+- Why didn't a simpler check catch it?
+- Which problem is the MOST costly (hardest to fix after submission)?
+- If the student could only run 3 checks, which 3 would have
+  prevented the most damage?
 ```
 
-**What you're learning:** Extending the verification pyramid beyond generic Python checks to domain-specific validation. James's pipeline caught formatting and type errors, but it did not test whether the discount, shipping, and invoicing modules worked *together*. You are practicing the architectural skill of designing pipelines that balance thoroughness with speed — catching real problems without making developers wait so long they bypass the checks.
+**What you're learning:** Diagnosing failures by category — the same skill James needed when his CI pipeline showed five different errors from five different tools. Problem 3 (wrong question) is the most costly because no amount of polishing fixes a fundamental specification error. This mirrors James's experience: his code was well-formatted and passed linting, but it returned the wrong values — a deeper problem that only tests could catch.
+
+### Prompt 3: Design a Verification System for a Group Project
+
+```
+You are leading a team of 5 students on a semester-long group project.
+Every week, each person submits their section to be merged into the
+main document. Last semester, a different team had these disasters:
+
+- Two people wrote about the same topic (duplicate work)
+- One section contradicted another (nobody compared them)
+- A major section was missing from the final submission (nobody checked)
+- The formatting was inconsistent (everyone used different styles)
+- A key statistic was wrong (nobody verified it)
+
+Design a verification system with THREE tiers:
+
+Tier 1 (Quick check, every submission): What do you check every
+single time someone submits work? These should take under 5 minutes.
+
+Tier 2 (Weekly review): What do you check once a week when merging
+everyone's work? These take 30-60 minutes.
+
+Tier 3 (Final check, before submission): What do you check once
+before the final deadline? These take 2-3 hours.
+
+For each tier, explain: what it catches, what it costs to skip,
+and who is responsible for running it.
+```
+
+**What you're learning:** Designing a tiered verification system where different checks run at different frequencies — the same architecture behind professional CI pipelines. Quick checks (formatting, completeness) run on every submission. Weekly checks (consistency, contradictions) catch cross-section problems. Final checks (accuracy, full review) are thorough but slow. This is exactly how James's pipeline evolved: fast checks on every push, deeper checks on pull requests, and comprehensive checks before release.
+
+## PRIMM-AI+ Practice: Verification is a Pipeline
+
+### Predict [AI-FREE]
+
+Close your AI assistant. Before submitting a school assignment, you could run these checks:
+
+- **(A)** Is it neat and properly formatted?
+- **(B)** Is the spelling correct?
+- **(C)** Does it actually answer the question that was asked?
+- **(D)** Are the facts and references accurate?
+- **(E)** Is it the right length (within the word limit)?
+
+You only have time for **3 checks**. Predict: Which 3 would you choose, and in what ORDER would you run them? What is the risk of skipping each of the two you leave out?
+
+Write your answers. Rate your confidence from 1 to 5.
+
+### Run
+
+Ask your AI assistant: *"If I can only do 3 checks on a school assignment before submitting — from these five: formatting, spelling, answers the question, facts are accurate, correct length — which 3 matter most and in what order? Why should quick checks like formatting come before slow checks like fact-checking?"*
+
+Compare. Did the AI prioritize the same checks you did? Did it explain the ordering in a way that changed your thinking?
+
+<details>
+<summary>**Answer Key: What to Look For**</summary>
+
+The AI should recommend a priority order something like this:
+
+1. **C — Does it answer the question?** This is the most critical check. A perfectly formatted, spell-checked, factually accurate essay that answers the *wrong question* gets a zero. This is the "specification check" — verifying you built the right thing before checking whether you built it well.
+2. **D — Are the facts accurate?** or **B — Spelling correct?** The order between these depends on the assignment type. For a research paper, facts matter more. For a cover letter, spelling matters more. Either way, both rank above formatting.
+3. **E — Right length?** or **A — Neat and formatted?** These are quick checks, but they matter less than content correctness.
+
+The key insight is **ordering by cost of failure**: answering the wrong question is catastrophic (zero marks), wrong facts lose significant marks, spelling errors lose some marks, and formatting issues lose few marks. Run the highest-stakes checks first so you don't waste time polishing work that has fundamental problems.
+
+If your prediction put C (answers the question) in the top 2, your instinct for verification ordering is strong. If you put formatting first, notice how that mirrors James's mistake — he ran pytest (one check) and assumed everything was fine, when the most damaging problems were in categories he never checked.
+
+</details>
+
+### Investigate
+
+Write in your own words why running checks in ORDER matters — why you should check formatting before content, and content before factual accuracy. What happens if you spend 30 minutes fact-checking an essay that does not even answer the assigned question?
+
+Now connect this to James's story. He ran pytest and saw green — one check, passed. But he never ran the formatter, the linter, the type checker, or the security auditor. His first push failed on *four different checks* he had never run. This is exactly like checking only spelling on your essay and discovering at submission time that you answered the wrong question, contradicted yourself, and forgot an entire section. James's mistake was not that he skipped verification — it was that he ran *one* check and assumed the others would pass. A single check is not a pipeline. A pipeline runs *every* check, *every* time, in order.
+
+Apply the **Error Taxonomy**: skipping the "does it answer the question" check = **specification error**. The work might be perfect in every other dimension — well-formatted, correctly spelled, factually accurate, right length — but if it answers the wrong question, none of that matters.
+
+### Modify
+
+Your assignment checking pipeline has 5 checks. A classmate says: *"I just check spelling and submit."* What risks are they taking? List at least 3 specific things that could go wrong. What is the **minimum set** of checks that still protects them from the most costly failures?
+
+### Make [Mastery Gate]
+
+Design a **5-step checklist** for something you submit regularly — homework, an email to a professor, a social media post, a job application. Order the checks from **fastest to slowest**. For each check, write:
+
+1. **What it catches** (the type of error this check prevents)
+2. **What slips through** if you skip it (what goes wrong without this check)
+3. **How long it takes** (seconds, minutes, or longer)
+
+This ordered checklist is your mastery gate. The ordering should ensure that fast, cheap checks run first so you do not waste time on slow checks for work that has basic problems.
+
+:::tip Verification Ladder
+This checklist IS **Rung 4 of the Verification Ladder** — multiple checks coordinated into a pipeline. Each check catches errors that the others miss. The ordering ensures you fail fast on cheap checks before investing in expensive ones.
+:::
+
+---
 
 ## Key Takeaways
 

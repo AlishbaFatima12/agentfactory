@@ -115,7 +115,7 @@ Three consequences follow:
 
 ## From Principle to Axiom
 
-In Chapter 4, you learned **Principle 3: Verification as Core Step**. That principle taught you to verify every action an agent takes, to never trust output without checking it, and to build verification into your workflow rather than treating it as optional cleanup.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/verification-as-core-step), you learned **Principle 3: Verification as Core Step**. Remember the CSV parser that looked correct but broke on quoted fields containing commas — `"Smith, John"` was split into two fields instead of one? You accepted the AI's code without checking edge cases, and it failed in production. That principle taught you to verify every action an agent takes, to never trust output without checking it, and to build verification into your workflow.
 
 Axiom VII takes that principle and sharpens it into a specific practice:
 
@@ -128,6 +128,8 @@ Axiom VII takes that principle and sharpens it into a specific practice:
 | Catches errors | Prevents errors from being accepted |
 
 The principle says: always verify. The axiom says: **design through verification**. Write the verification first, and it becomes the specification that guides generation.
+
+The bridge between these two is a shift in *timing*. Principle 3 taught you to verify after an action — check that the file exists, confirm the command succeeded. That habit is essential, but it is reactive. Axiom VII moves verification *before* the action: you write what "correct" looks like first, then let the AI generate code that must satisfy your definition. The mindset from Principle 3 (never trust without checking) becomes the method of Axiom VII (define "correct" before generation begins).
 
 This distinction matters in practice. James before the discount disaster followed Principle 3 — he verified by reading code. James after the disaster follows Axiom VII — he specifies by writing tests. The first approach is reactive: "Did this work?" The second is proactive: "What does working look like?"
 
@@ -171,6 +173,10 @@ Write failing test → Prompt AI with test + types → Run tests → Accept or R
 In TDG, you write the test yourself but the AI generates the implementation. If tests fail, you do not debug. You regenerate. The implementation is disposable because you can always get another one. The test is permanent because it encodes your requirements. This is the workflow Emma demonstrated to James after the discount disaster — and the one he never deviated from again.
 
 ### The TDG Workflow in Detail
+
+:::tip Focus on the workflow, not the syntax
+This lesson contains pytest and Python code you have not learned yet. Read the code blocks for the *pattern*: tests describe what a function should do (inputs and expected outputs), and the AI writes the code that satisfies those tests. The specific syntax (`assert`, `pytest.raises`, `@pytest.fixture`) will make sense when you reach the hands-on chapters.
+:::
 
 **Step 1: Write Failing Tests**
 
@@ -239,6 +245,10 @@ Constraints:
 
 **Step 3: Run Tests on AI Output**
 
+:::tip You will run this command yourself in the hands-on chapters
+`pytest` is the standard Python test runner. The `-v` flag means "verbose" — show each test name and whether it passed or failed. For now, focus on the *workflow*: you run the tests, and the results tell you whether the AI's code matches your specification.
+:::
+
 ```bash
 pytest test_shipping.py -v
 ```
@@ -283,6 +293,10 @@ def test_uses_heapq():
 ```
 
 The first test remains valid whether the function uses sorting, a heap, or a linear scan. The second test breaks if you refactor the internals, even if behavior is preserved. In TDG, implementation-coupled tests are especially harmful because they prevent the AI from choosing the best approach.
+
+:::tip Still reading for the idea, not the code
+The fixtures and parametrize patterns below are pytest features you will use hands-on later. For now, notice the concept: fixtures set up the "world" your tests run in, and parametrize tables express specifications as rows of input → expected output.
+:::
 
 ### Use pytest Fixtures for Shared State
 
@@ -406,6 +420,10 @@ Coverage tells you where your specification has gaps. When James ran coverage on
 
 But coverage is a floor, not a ceiling. 100% line coverage does not mean your specification is complete. A function can have every line executed but still be wrong for inputs you did not test. Coverage catches omissions. Good test design catches incorrect behavior.
 
+:::tip Reading Checkpoint
+This is a natural stopping point. If you need a break, bookmark this spot and return when you are ready. Everything above covers the core concept; everything below applies it through exercises and practice.
+:::
+
 ## Anti-Patterns
 
 There is a phrase that has killed more software projects than any technical debt: "We'll add tests later." Later never comes. The codebase grows, every AI-generated function gets merged after a visual review and a prayer, and "it worked when I ran it" substitutes for a specification.
@@ -453,94 +471,173 @@ The Green Bar Illusion is the belief that passing tests means production-ready c
 
 ## Try With AI
 
-### Prompt 1: Your First TDG Cycle (Experiencing the Workflow)
+### Prompt 1: The Vague Request vs the Written Spec
 
 ```
-I want to practice TDG. Here is my specification as pytest tests:
+I want to understand why written specifications prevent misunderstandings.
 
-```python static
-import pytest
-from converter import temperature_convert
+Imagine you ask three different people to "set up a room for a meeting."
+You give no other details.
 
-def test_celsius_to_fahrenheit():
-    assert temperature_convert(0, "C", "F") == 32.0
+Help me explore:
+1. Person A sets up 5 chairs around a small table. Person B sets up 30
+   chairs in rows facing a projector. Person C sets up beanbags and a
+   whiteboard. Are any of them WRONG? Why or why not?
+2. Now write a specification: "Meeting room for 12 people, rectangular
+   table, projector connected to HDMI, water glasses at each seat,
+   whiteboard with markers." Would the same three interpretations be
+   possible?
+3. For each requirement in the specification, explain what CHECK you
+   would do to verify it was met (e.g., "count chairs — are there 12?")
+4. What does this have to do with James asking AI to "write a discount
+   function" without specifying expected results?
 
-def test_fahrenheit_to_celsius():
-    assert temperature_convert(212, "F", "C") == 100.0
-
-def test_celsius_to_kelvin():
-    assert temperature_convert(0, "C", "K") == 273.15
-
-def test_invalid_unit_raises():
-    with pytest.raises(ValueError, match="Unknown unit"):
-        temperature_convert(100, "C", "X")
-
-def test_below_absolute_zero_raises():
-    with pytest.raises(ValueError, match="below absolute zero"):
-        temperature_convert(-300, "C", "K")
+Then explain: why is "check against a written specification" more reliable
+than "look at the room and decide if it seems good"?
 ```
 
-Write the implementation in converter.py that passes all 5 tests.
-Do NOT modify the tests. The tests are the specification.
-```
+**What you're learning**: The core insight of Axiom VII — vague instructions produce valid-but-wrong results because the builder fills in gaps with their own assumptions. A written specification with checkable requirements is what James needed before asking the AI to write `apply_discount()`. Each requirement acts as a test — a pass/fail check that catches mismatches before you accept the result.
 
-**What you're learning:** The core TDG rhythm. You wrote the specification (tests). The AI generates the implementation. You run the tests to verify. If they pass, you accept. If they fail, you regenerate. Notice how the tests precisely define behavior (including error messages) without dictating how the conversion is calculated internally.
-
-### Prompt 2: Specification Design (Writing Tests That Specify, Not Constrain)
+### Prompt 2: Spot the Missing Requirements
 
 ```
-I need to build a function called `summarize_scores(scores: list[int]) -> dict` that takes a
-list of student test scores (0-100) and returns a summary dictionary.
+Here are five vague instructions. For each one, identify what is MISSING
+that could lead to a wrong result, then add 3 specific requirements that
+would make the expected outcome unambiguous:
 
-Help me write pytest tests that SPECIFY the behavior without constraining the implementation.
-I want to test:
-- Normal case (mix of scores)
-- Empty list (edge case)
-- All same scores
-- Invalid scores (negative, above 100)
-- Single score
+1. "Make me a playlist of good songs" (Good for whom? What genre? How
+   many songs? How long?)
+2. "Clean my apartment" (Which rooms? How clean? Put things where?)
+3. "Write a summary of this article" (How long? What audience? What
+   key points must be included?)
+4. "Cook dinner for the family" (How many people? Dietary restrictions?
+   Budget? Cuisine?)
+5. "Plan a birthday party" (Indoor/outdoor? How many guests? Budget?
+   Theme? Food?)
 
-For each test, explain:
-1. What behavior am I specifying?
-2. Why is this a behavior test, not an implementation test?
-3. What implementation freedom does the AI retain?
+For each one:
+- What would go wrong if you gave this instruction to a helper with no
+  other context?
+- Write 3 specific, checkable requirements that eliminate ambiguity
+- For each requirement, write the CHECK: how would you verify it was met?
 
-Do NOT write the implementation yet. I want to understand specification design first.
+Then connect to this lesson: James said "write a discount function." What
+requirements should he have written FIRST to prevent the $12,000 bug?
 ```
 
-**What you're learning:** The difference between specifying behavior and constraining implementation. Good TDG tests say "given this input, produce this output" without saying "use this algorithm" or "call this internal method." You are learning to leave implementation freedom for the AI while being precise about what correctness means.
+**What you're learning**: Recognizing ambiguity in everyday instructions — the same ambiguity that caused James's discount bug. Every gap in a specification is a decision the builder makes on your behalf. By practicing "spot the missing requirement," you build the instinct to write complete specifications before asking anyone (human or AI) to build something.
 
-### Prompt 3: TDG for Your Domain (Applying to Real Work)
+### Prompt 3: Design a Specification for Your Own Project
 
 ```
-I'm building a pricing function for an order system — similar to this lesson's
-apply_discount() scenario. The function calculate_order_total() takes a list of
-items (each with price, quantity, and optional discount_pct) and returns the final
-total with tax applied.
+Pick something you need done — a real task from your life, school, or
+work. Examples:
+- Organize a study group session
+- Set up a display for a school event
+- Prepare a presentation for class
+- Design a schedule for a sports tournament
 
-Help me apply TDG:
+Help me write a COMPLETE specification:
 
-1. First, ask me 5 clarifying questions about the expected behavior:
-   - What are the inputs and their types?
-   - What are the outputs?
-   - What are the edge cases (empty cart, zero quantity, 100% discount)?
-   - What errors should be raised and when?
-   - What are the business rules (tax rate, rounding, discount stacking)?
+1. Start with the vague version — how would you naturally describe this
+   task in one sentence?
+2. List every assumption someone might make about your one-sentence
+   description. How many of those assumptions could be wrong?
+3. Now write 5-7 specific requirements with measurable expected results.
+   Each requirement should be checkable (pass/fail, not "looks good").
+4. For each requirement, write the ACCEPTANCE CHECK — exactly how you
+   would verify it was met.
+5. Now imagine you hand this specification to someone who has never done
+   this task before. Could they deliver exactly what you want? If not,
+   what is still missing?
 
-2. Based on my answers, write a complete pytest test file that serves as the
-   specification. Include: fixtures for sample items, parametrize for pricing
-   rule tables, edge case tests, error tests.
-
-3. Then generate the implementation that passes all tests.
-
-4. Finally, suggest 3 additional tests I might have missed that would make
-   my specification more complete.
-
-Walk me through each step so I understand the TDG process applied to real
-business logic where getting the math wrong has financial consequences.
+Finally: if you gave this spec to an AI assistant and asked it to create
+a plan, would the AI be more likely to match your expectations than if
+you just said your one-sentence description? Why?
 ```
 
-**What you're learning:** Applying TDG to real business logic where correctness has financial stakes — exactly the scenario James faced. The clarifying questions teach you what information a pricing specification needs (rounding rules, tax behavior, discount boundaries). The test file shows you how to structure a complete financial specification. The additional tests reveal the gaps that cause $12,000 weekends. This is the skill that transfers: learning to think in specifications rather than implementations, regardless of what you are building.
+**What you're learning**: How to apply specification thinking to your own domain. You are practicing the same discipline Emma taught James — writing expected results BEFORE anyone builds. The acceptance checks are your "tests" — pass/fail criteria that eliminate ambiguity. When you eventually write pytest tests in the hands-on chapters, you will already understand WHY tests exist: they are written specifications, not afterthoughts.
+
+---
+
+## PRIMM-AI+ Practice: Tests Are the Specification
+
+### Predict [AI-FREE]
+
+Close your AI assistant. Before every flight, a pilot runs a **pre-flight checklist** — a written list of pass/fail checks that must all pass before the plane leaves the ground. Consider two pilots:
+
+**Pilot A** walks around the plane, glances at the fuel gauge, kicks the tires, and says *"Looks good to me."*
+
+**Pilot B** opens a 30-item checklist and works through it systematically: fuel level ≥ 2,000 lbs? (check gauge — yes). Tire pressure within 180-220 PSI? (check each tire — yes). Navigation system responding? (test input — yes). Emergency exits functional? (test each — yes).
+
+Predict:
+- Both pilots say the plane is ready. Which one would you trust with your life? Why?
+- What happens when Pilot A misses something that "looked fine" but was actually failing?
+- If a new mechanic just serviced the engine, does Pilot A's "looks good" catch a mistake the mechanic made? Does Pilot B's checklist?
+
+Write your answers. Rate your confidence from 1 to 5.
+
+### Run
+
+Ask your AI assistant: *"Why is a pilot's pre-flight checklist more reliable than a visual inspection? What makes each checklist item a 'test'? And what can still go wrong even when every checklist item passes?"*
+
+Compare. Did you identify the same root cause — that "looks good" relies on subjective judgment, while a checklist uses objective pass/fail criteria?
+
+<details>
+<summary>Answer Key — What actually happens</summary>
+
+**Pilot A's "looks good" fails** because visual inspection relies on human judgment, which is inconsistent, biased by expectations, and prone to missing things that look normal but aren't. A fuel gauge reading 1,800 lbs "looks fine" if you're not checking against a specific minimum. Tire pressure at 170 PSI "looks inflated" to the eye but is below the safe threshold. Pilot A is doing what James did — reading the code and deciding it "looked correct."
+
+**Pilot B's checklist succeeds** because every item is a specific, objective test with a defined pass/fail threshold. Fuel ≥ 2,000 lbs is not a judgment call — it is a number you read and compare. The checklist exists BEFORE the flight (the specification comes first), is the SAME every time (the tests are permanent), and works regardless of which plane or mechanic is involved (the implementation is disposable).
+
+**What can still go wrong**: The checklist covers known risks, but not every possible failure. A bird strike during takeoff, unexpected turbulence, or a manufacturing defect not covered by any checklist item can still cause problems. This is why the checklist (functional tests) is one layer — not the only layer. Pilots also have real-time instruments (observability, Axiom X) and training for unexpected situations.
+
+</details>
+
+### Investigate
+
+Write in your own words why running a checklist with specific pass/fail criteria BEFORE an action is more reliable than inspecting the result afterward and deciding if it "seems right." What is it about the written checklist that catches things human eyes miss?
+
+Now connect this back to the lesson's story. Pilot A's "looks good" inspection is James reviewing AI-generated code by reading it — he scanned the discount function, saw a multiplication, and convinced himself it was correct. Pilot B's checklist is Emma's approach — writing `assert apply_discount(order, 0.15).total == 85.0` BEFORE the code exists. If James had a "pre-flight checklist" for his discount function — specific inputs with expected outputs — the AI's wrong interpretation (multiply by 0.15 instead of multiply by 0.85) would have failed the check immediately, not after $12,000 in losses.
+
+Apply the **Error Taxonomy**: Pilot A clearing a plane that has low tire pressure because it "looked fine" = **specification error**. There was no specification defining what "ready" means, so the pilot substituted judgment for measurement. James's discount bug was the same error — no test defined what "correct" meant, so the AI's assumption passed unchallenged.
+
+### Parsons Problem
+
+Here are five steps from a pilot's pre-flight process, in scrambled order:
+
+- (A) Taxi to the runway and prepare for takeoff
+- (B) Write the checklist: fuel ≥ 2,000 lbs, tire pressure 180-220 PSI, navigation system responding, emergency exits functional, engine temperature within range
+- (C) Walk through each checklist item and record pass/fail
+- (D) Receive the aircraft assignment for today's flight
+- (E) Review results — if ALL items pass, clear for takeoff; if ANY item fails, ground the plane
+
+Put them in the correct order. Then answer: Which step is the "test"? Which step is the "specification"? Why must the checklist exist before you inspect the plane?
+
+### Modify
+
+The pre-flight checklist passed — all 30 items green. The plane takes off. Fifteen minutes into the flight, a warning light signals that the hydraulic fluid pressure is dropping slowly. Nothing on the checklist tested for slow hydraulic leaks because the leak only appears under flight conditions, not on the ground.
+
+What did the checklist MISS? Add 2-3 checklist items or monitoring practices that would catch problems like this — things that only appear *during* operation, not *before*. (Hint: this connects to why Axiom X, Observability, exists alongside Axiom VII.)
+
+### Make [Mastery Gate]
+
+Pick a process you are responsible for — preparing for an exam, setting up an event, packing for a trip, submitting an assignment. Write a **pre-flight checklist** with at least 5 items. Each item must have:
+
+1. **What to check** (specific, not vague)
+2. **Pass criteria** (a measurable threshold, not "looks good")
+3. **Fail action** (what you do if this check fails)
+
+Example:
+- Check: "Presentation has at least 10 slides"
+- Pass: Count slides — 10 or more
+- Fail: Add missing slides before submitting
+
+This checklist is your mastery gate. If someone ran your checklist before doing the task, they should catch every common mistake — with no judgment calls required.
+
+:::tip Verification Ladder
+Your pre-flight checklist is **Rung 3 of the Verification Ladder** — tests define what "correct" means. Pilot A hopes the plane is ready. Pilot B verifies against explicit criteria. Without the checklist, you are hoping. With it, you are testing.
+:::
 
 ---
 
