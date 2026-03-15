@@ -211,10 +211,10 @@ Content was rewritten 6 times due to:
 
 ## Quality References
 
-| Content Type                         | Reference Lesson                                                               |
-| ------------------------------------ | ------------------------------------------------------------------------------ |
-| **Conceptual/Theory** (L1)           | Chapter 12, Lesson 1: `12-agent-factory-paradigm/01-digital-fte-revolution.md` |
-| **Technical/Skill-Building** (L3/L4) | Chapter 22, Lesson 1: `22-ai-native-ides/01-setup.md`                          |
+| Content Type                         | Reference Lesson                                                                                          |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| **Conceptual/Theory** (L1)           | Chapter 12, Lesson 1: `12-agent-factory-paradigm/01-digital-fte-revolution.md`                            |
+| **Technical/Skill-Building** (L3/L4) | Part 2 Ch 19, Lesson 1: `02-Agent-Workflow-Primitives/19-file-processing/01-your-first-agent-workflow.md` |
 
 Match the appropriate reference based on lesson type. Don't force skill-building lessons to match narrative theory style.
 

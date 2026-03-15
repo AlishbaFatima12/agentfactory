@@ -147,7 +147,7 @@ In [Chapter 17](/docs/General-Agents-Foundations/seven-principles/bash-is-the-ke
 
 This axiom answers a different question: _How should the shell be used once you have it?_
 
-|              | Principle 1 (Chapter 6)      | Axiom I (this lesson)               |
+|              | Principle 1 (Chapter 17)     | Axiom I (this lesson)               |
 | ------------ | ---------------------------- | ----------------------------------- |
 | **Question** | What enables agency?         | How should the agent use the shell? |
 | **Answer**   | Terminal access              | As an orchestration layer           |
@@ -155,7 +155,7 @@ This axiom answers a different question: _How should the shell be used once you 
 | **Level**    | "Can I act?"                 | "How should I act?"                 |
 | **Metaphor** | Having a key to the building | Knowing which rooms to use for what |
 
-The principle gave you access. The axiom gives you discipline. Chapter 6 showed that giving an AI terminal access turns it from a chatbot into an agent — it can now _do_ things. But what should it do? This axiom says: use the terminal to call specialized tools (run tests, build the app, deploy), not to write hundreds of lines of logic inside the terminal itself. An agent that has terminal access but uses it for 500-line computation scripts is like a conductor who grabs a violin mid-performance — technically capable, architecturally wrong.
+The principle gave you access. The axiom gives you discipline. Chapter 17 showed that giving an AI terminal access turns it from a chatbot into an agent — it can now _do_ things. But what should it do? This axiom says: use the terminal to call specialized tools (run tests, build the app, deploy), not to write hundreds of lines of logic inside the terminal itself. An agent that has terminal access but uses it for 500-line computation scripts is like a conductor who grabs a violin mid-performance — technically capable, architecturally wrong.
 
 ---
 

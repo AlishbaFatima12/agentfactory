@@ -147,9 +147,9 @@ Include: "Plugin commands and installation steps shown here reflect the current 
 
 ### Source Material
 
-- Governing artifact: `specs/ch-19/governing-artifact.md`
-- CSV data: `specs/ch-19/Impact of AI on CA Practice Areas - CA Domains AI Impact.csv`
-- Chapter plan: `specs/ch-19/plan.md`
+- Governing artifact: `specs/lightweight/ch-30/governing-artifact.md`
+- CSV data: `specs/lightweight/ch-30/Impact of AI on CA Practice Areas - CA Domains AI Impact.csv`
+- Chapter plan: `specs/lightweight/ch-30/plan.md`
 
 ### File Naming Convention
 
