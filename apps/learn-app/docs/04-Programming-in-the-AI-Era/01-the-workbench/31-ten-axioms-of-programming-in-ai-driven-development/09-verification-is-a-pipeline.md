@@ -247,14 +247,13 @@ Each section serves a specific purpose:
 
 ### Branch Protection: Making CI Mandatory
 
-"A pipeline that runs but can be ignored is theater, not verification," Emma told James. She showed him how to make CI truly enforceable:
+"A pipeline that runs but can be ignored is theater, not verification," Emma told James. The concept is straightforward: you configure your repository so that the pipeline is not advisory — it is a gate. If CI fails, the merge button is disabled. No exceptions, no overrides.
 
-1. Go to your repository Settings > Branches > Branch protection rules
-2. Enable "Require status checks to pass before merging"
-3. Select the `verify` job as a required check
-4. Enable "Require branches to be up to date before merging"
+:::tip You Will Set This Up in Hands-On Chapters
+Branch protection is a setting you configure in your repository's hosting platform (like GitHub). The exact steps — which settings page to visit, which checkboxes to enable — are something you will walk through when you set up your own projects. What matters here is the *idea*: the pipeline should be **mandatory**, not optional. Infrastructure enforces what discipline alone cannot.
+:::
 
-Now the pipeline was not advisory — it was a gate. If CI failed, the merge button was disabled. No exceptions, no overrides. James could no longer push broken code to main even if he wanted to. The infrastructure enforced what discipline alone could not.
+With branch protection enabled, James could no longer push broken code to main even if he wanted to. The infrastructure enforced what discipline alone could not.
 
 ## Local CI: The Makefile
 
@@ -315,37 +314,39 @@ clean:
 
 ### The Workflow With Local CI
 
-James's daily development workflow became:
+:::tip Reading for the Pattern, Not the Commands
+The commands below show James's daily workflow. You do not need to memorize them — what matters is the **pattern**: quick check first, fix problems, full check, then push. Notice how each step builds confidence before the next one. You will run these exact commands yourself in hands-on chapters.
+:::
+
+James's daily development workflow became a consistent sequence:
+
+1. **Write tests first** (TDG from Axiom VII), then have AI generate the implementation
+2. **Quick check** — run just formatting and linting (catches 80% of issues in 2 seconds)
+3. **Auto-fix** — let the tools fix formatting and linting issues automatically
+4. **Full CI check** — run all checks locally before pushing (the same checks GitHub will run)
+5. **Push only if CI passes** — commit and push with confidence
 
 ```bash
-# 1. Write TDG tests, then have AI generate implementation
-# 2. Quick check — catches 80% of issues in 2 seconds
-make quick
-
-# 3. Fix any formatting/linting issues automatically
-make fix-format
-make fix-lint
-
-# 4. Full CI check before pushing
-make ci
-
-# 5. Only push if CI passes
+# The actual commands for each step:
+make quick                  # Step 2: fast check
+make fix-format && make fix-lint  # Step 3: auto-fix
+make ci                     # Step 4: full local CI
 git add src/shipping.py tests/test_shipping.py
 git commit -m "feat(shipping): add international surcharge calculation"
-git push
+git push                    # Step 5: push with confidence
 ```
 
 This workflow meant James almost never saw CI failures on GitHub. The pipeline became a safety net, not a bottleneck. He caught issues in five seconds locally rather than waiting three minutes for a remote failure.
 
 ### Why a Makefile?
 
-James asked Emma why a Makefile instead of a shell script. The Makefile has specific advantages:
+James asked Emma why a Makefile instead of a shell script. A Makefile is a standard way to define named tasks — think of it as a menu of commands where each item runs a specific job. The Makefile has specific advantages:
 
-- **Convention**: Most open-source projects use Makefiles. Developers know to look for one.
-- **Self-documenting**: Run `make` with no arguments to see available targets.
-- **Composable**: `ci` is just `format + lint + typecheck + test + security` chained together.
-- **Universal**: Make is installed on every Unix system. No extra dependencies.
-- **Matches CI exactly**: Each Makefile target corresponds to one pipeline step. If `make ci` passes locally, GitHub Actions will pass remotely.
+- **Convention**: Most open-source projects use Makefiles. When a developer joins a project, they know to look for one — the same way you know to look for a table of contents at the front of a book.
+- **Self-documenting**: Run `make` with no arguments to see all available tasks listed by name.
+- **Composable**: The `ci` task is just `format + lint + typecheck + test + security` chained together. Each small task can also run independently.
+- **Widely available**: Make comes pre-installed on most development systems. On Windows, it is included with common development setups you will configure in hands-on chapters.
+- **Matches CI exactly**: Each Makefile task corresponds to one pipeline step. If `make ci` passes locally, GitHub Actions will pass remotely — same checks, same order, same guarantee.
 
 ## Why CI Matters More With AI-Generated Code
 
