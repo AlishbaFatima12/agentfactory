@@ -29,3 +29,4 @@ After completing all ten chapters, you assemble your Thinking Portfolio -- a doc
 | :----: | -------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 |   1    | [Portfolio Assembly and Post-Assessment](./01-portfolio-assembly.md) | Ten portfolio components, post-assessment task, AI comparison                |
 |   2    | [Growth Map](./02-growth-map.md)                                     | Score Card comparison template, 40-exercise trajectory, transition to Part 1 |
+|   3    | [Calibrating AI Prompts](./03-calibrating-ai-prompts.md)             | Instructor guide: semester calibration protocol, prompt maintenance          |
