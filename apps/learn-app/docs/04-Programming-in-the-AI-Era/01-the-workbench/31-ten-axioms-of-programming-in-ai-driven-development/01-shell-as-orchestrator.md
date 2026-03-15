@@ -132,11 +132,11 @@ What makes this relevant to agentic development specifically is that AI agents r
 
 ## From Principle to Axiom
 
-In Chapter 4, you learned **Principle 1: Bash is the Key** — terminal access is the fundamental capability that makes AI agentic rather than passive. That principle answered the question: *What enables agency?*
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/bash-is-the-key), you learned **Principle 1: Bash is the Key** — terminal access is the fundamental capability that makes AI agentic rather than passive. You saw how Vercel's AI agent became 3.5x faster and went from 80% to 100% success rate simply by giving it basic shell commands instead of complex custom tools. That principle answered the question: *What enables agency?*
 
 This axiom answers a different question: *How should the shell be used once you have it?*
 
-| | Principle 1 | Axiom I |
+| | Principle 1 (Chapter 6) | Axiom I (this lesson) |
 |---|-------------|---------|
 | **Question** | What enables agency? | How should the agent use the shell? |
 | **Answer** | Terminal access | As an orchestration layer |
@@ -144,7 +144,7 @@ This axiom answers a different question: *How should the shell be used once you 
 | **Level** | "Can I act?" | "How should I act?" |
 | **Metaphor** | Having a key to the building | Knowing which rooms to use for what |
 
-The principle gave you access. The axiom gives you discipline. An agent that has terminal access but uses it for 500-line computation scripts is like a conductor who grabs a violin mid-performance — technically capable, architecturally wrong.
+The principle gave you access. The axiom gives you discipline. Chapter 6 showed that giving an AI terminal access turns it from a chatbot into an agent — it can now *do* things. But what should it do? This axiom says: use the terminal to call specialized tools (run tests, build the app, deploy), not to write hundreds of lines of logic inside the terminal itself. An agent that has terminal access but uses it for 500-line computation scripts is like a conductor who grabs a violin mid-performance — technically capable, architecturally wrong.
 
 ---
 
@@ -214,6 +214,10 @@ Notice what the Makefile does NOT do:
 - It does not manage Kubernetes rollout strategy (kubectl handles that)
 
 The Makefile's only job: **sequence the programs and respect their exit codes.** This is orchestration in its purest form.
+
+:::tip Don't worry about Makefile syntax
+You will learn Makefiles later. For now, ignore details like `.PHONY` and the tab indentation. Focus on the structure: each named section (`test`, `build`, `deploy`) calls a tool and nothing else. The line `build: test` means "run `build` only after `test` succeeds" — that is orchestration expressed in two words.
+:::
 
 ### The Shell in Agent Workflows
 
