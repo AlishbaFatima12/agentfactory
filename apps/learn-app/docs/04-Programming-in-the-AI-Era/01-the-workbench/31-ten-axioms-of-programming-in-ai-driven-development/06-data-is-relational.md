@@ -98,7 +98,7 @@ This axiom makes three claims — each of which James learned the hard way:
 
 ## From Principle to Axiom
 
-In Part 1, Chapter 4, you learned **Principle 5: Persisting State in Files** — the general durability rule that work products must survive beyond a single session. James was already following this principle — his team's markdown knowledge base (Axiom II) and his typed Python modules (Axiom III) all persisted in files.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/persisting-state-in-files), you learned **Principle 5: Persisting State in Files** — the general durability rule that work products must survive beyond a single session. James was already following this principle — his team's markdown knowledge base (Axiom II) and his typed Python modules (Axiom III) all persisted in files.
 
 But Axiom VI refines this principle for a specific category of state: **structured data with relationships**. Not all persistent data belongs in the same format. The distinction matters:
 
@@ -162,6 +162,10 @@ An entity is a distinct "thing" in your domain. In James's order system:
 - **Product** — an item that can be ordered
 
 Each entity becomes a table. Each row is one instance. The key insight: in James's JSON file, these three entities were mashed into a single list of dictionaries. In a relational database, each lives in its own table with its own structure.
+
+:::tip Focus on what the code is doing, not the syntax
+This lesson introduces SQL and Python database code. You have not learned either language yet — SQL is new here, and Python starts in Chapter 33. Read these code blocks for the *concept*: what data is being defined, what constraints are being enforced, how tables connect to each other. The specific syntax will make sense when you reach the hands-on chapters.
+:::
 
 ### 2. Attributes (Columns)
 
@@ -337,6 +341,10 @@ This makes SQL ideal for AI-generated code. James could verify every AI-generate
 
 **Practical tip**: Keep a `schema.sql` file in your project's `docs/` directory — the same knowledge base from Axiom II. When an AI agent needs to work with your data, it reads one file and has the complete map: every table, every column, every relationship, every constraint. Emma called it "the system prompt for your database." James added his on the same day and never removed it — every AI prompt that touched the order system started with `@docs/schema.sql`.
 
+:::tip Still reading for concepts, not memorization
+The ORM code below shows how Python classes can mirror database tables. You will use these tools (SQLModel, Alembic) when you reach the hands-on chapters. For now, notice the *pattern*: one definition serves both your code and your database.
+:::
+
 ## ORMs: When to Use, When to Avoid
 
 James noticed that his Python code and his SQL schema were expressing the same structure in two languages — his `CustomerOrder` dataclass mirrored his `orders` table. An ORM (Object-Relational Mapper) bridges that gap, letting you define the structure once. In Python, SQLModel (built on SQLAlchemy) is the recommended choice for agentic development because it unifies Pydantic validation with SQLAlchemy's database layer:
@@ -488,83 +496,150 @@ Parameterized queries are not optional. They are a non-negotiable safety require
 
 Use these prompts to build practical understanding of relational data modeling and SQL for agent development.
 
-### Prompt 1: Schema Design (Relational Thinking)
+### Prompt 1: The Duplicated Contact List
 
 ```
-I'm building an order management system with these requirements:
-- Customers place orders
-- Orders contain multiple products (many-to-many via order_items)
-- Products have a name, price, and category
-- Orders have a status (pending/shipped/delivered), total amount, and creation date
-- Each order belongs to exactly one customer
+I want to understand why duplicating information causes problems.
 
-Design the SQLite schema for me. For each table, explain:
-1. Why each column exists
-2. What constraints protect data integrity (NOT NULL, UNIQUE, CHECK, REFERENCES)
-3. How foreign keys express relationships
+Imagine you manage a club with 50 members. You keep a spreadsheet where
+every row is an event attendance record: member name, phone number, email,
+event name, date, attended (yes/no).
 
-Then show me 3 queries that demonstrate relational power:
-- All pending orders for a specific customer with product details
-- Revenue by product category for the last 30 days
-- Customers who have never placed an order
+The same member's name, phone, and email appear on dozens of rows — one
+for every event.
 
-Use CREATE TABLE statements with full constraints.
+Help me explore:
+1. A member changes their phone number. How many rows need updating?
+   What happens if you miss one?
+2. You need a list of all members (just names and emails, no duplicates).
+   How hard is this to extract from the spreadsheet?
+3. You want to know: "Which members attended BOTH the March meeting AND
+   the April meeting?" Walk me through how painful this is with duplicated
+   data.
+4. Now redesign: what if you had TWO lists — a "Members" list (name,
+   phone, email, member ID) and an "Attendance" list (member ID, event
+   name, date)? How do the same three problems change?
+
+Connect this to James's orders.json story from this lesson — how is his
+duplicated customer name problem the same as the duplicated phone number
+problem?
 ```
 
-**What you're learning**: Relational thinking — how to decompose a domain into entities, identify relationships, and express constraints that prevent invalid data. The many-to-many relationship (orders-to-products) requires a junction table (`order_items`), which is a fundamental pattern you will use repeatedly. You are developing the eye for spotting when data needs to be a table versus a column — the same judgment James lacked when he put customer names inside order records.
+**What you're learning**: The core problem that relational thinking solves — data duplication creates inconsistency. When the same information exists in multiple places, updates become error-prone and queries become painful. By splitting data into separate lists connected by IDs, you store each fact once and link to it everywhere else. This is exactly what Emma did when she replaced James's `orders.json` with SQL tables.
 
-### Prompt 2: JSON-to-SQL Migration (Recognizing the Problem)
-
-```
-I have this JSON file that stores my project data:
-
-{
-  "tasks": [
-    {"id": 1, "title": "Design API", "project": "Backend", "assignee": "Alice", "status": "done"},
-    {"id": 2, "title": "Write tests", "project": "Backend", "assignee": "Bob", "status": "pending"},
-    {"id": 3, "title": "Deploy", "project": "Backend", "assignee": "Alice", "status": "pending"},
-    {"id": 4, "title": "UI mockup", "project": "Frontend", "assignee": "Carol", "status": "in_progress"}
-  ]
-}
-
-Show me:
-1. Three questions I CANNOT efficiently answer with this JSON structure
-2. The normalized SQL schema that fixes these problems
-3. The migration script (Python + sqlite3) that reads the JSON and populates the database
-4. The SQL queries that answer those three questions easily
-
-Explain what I gain by moving to SQL and what (if anything) I lose.
-```
-
-**What you're learning**: The concrete costs of non-relational storage and the practical process of migrating to SQL. You are also learning to recognize when your data has outgrown its format — a judgment you will apply repeatedly as projects evolve.
-
-### Prompt 3: Schema for Your Domain
+### Prompt 2: Spot the Relationships
 
 ```
-I work in [describe your domain: e-commerce, healthcare, education, logistics, etc.].
+Here are five real-world systems. For each one, identify the "things"
+(entities) and how they connect (relationships):
 
-Help me apply relational thinking to my specific context:
+1. A library: books, members, loans
+2. A school: students, teachers, classes, grades
+3. A hospital: patients, doctors, appointments, prescriptions
+4. A restaurant: customers, orders, menu items, tables
+5. A music streaming service: users, playlists, songs, artists
 
-1. What are the 3-5 core entities in my domain?
-   (In e-commerce: customers, orders, products. In education: students, courses, assignments.)
+For each system:
+- List the 3-4 main entities
+- For each pair of connected entities, say whether the relationship is
+  one-to-many (one teacher teaches many classes) or many-to-many (many
+  students take many classes)
+- Identify ONE piece of information that should be stored in only ONE
+  place (like a student's name) and explain what goes wrong if it is
+  duplicated instead
 
-2. What relationships connect them?
-   (One-to-many? Many-to-many? Which need junction tables?)
-
-3. Design a SQLite schema with full constraints (NOT NULL, REFERENCES, CHECK).
-
-4. Write 3 natural language questions a non-technical person might ask about this data,
-   then translate each to SQL.
-
-5. Now give me the same data as a JSON structure. Compare:
-   - How confident are you generating correct queries against the schema vs the JSON?
-   - What errors could happen with JSON that the schema prevents?
-   - Which format would you prefer as an AI agent, and why?
-
-Use [my specific technology stack or project type] for the examples.
+Then pick the system closest to a project you might build, and explain:
+if you stored all this data in a single flat list (like James's JSON
+file), what questions would be hard to answer?
 ```
 
-**What you're learning**: How to translate Axiom VI into your own domain. Every field has entities, relationships, and constraints — learning to recognize yours is what transforms the abstract principle into practical architecture. The schema-vs-JSON comparison gives you the direct experience of what James discovered: schemas are specifications that AI agents can reason about, while JSON is unstructured data that AI must guess about.
+**What you're learning**: Recognizing relational structure in everyday systems. Every domain has entities with connections — and once you see them, you understand why a flat list (or a JSON file) cannot represent them faithfully. The "stored in one place" exercise builds the instinct that prevented James's "Acme Corp" vs "Acme Corporation" disaster.
+
+### Prompt 3: Design a Data Organization Plan
+
+```
+Pick a domain you know well — your school, your workplace, a hobby, a
+side project, or one of these examples:
+- A small online store (products, customers, orders)
+- A sports league (teams, players, matches, scores)
+- A study group (members, subjects, sessions, notes)
+
+Help me design how to organize this data:
+
+1. What are the 3-5 main "things" (entities) in this domain?
+2. What information does each entity have (name, date, status, etc.)?
+3. Which pieces of information should NEVER be duplicated — and why?
+4. Draw the connections: which entity links to which, and how?
+   (e.g., "one customer places many orders")
+5. Now imagine someone searches for "all orders from last month by
+   customer X." Compare how easy this is when data is organized
+   relationally (separate linked lists) vs stored in one big flat list.
+
+Finally: if you gave this data organization plan to an AI assistant and
+asked it to answer questions about the data, would the AI do better with
+a flat list or with your organized structure? Why?
+```
+
+**What you're learning**: How to apply Axiom VI to your own domain. You are practicing the same skill Emma taught James — decomposing a messy data problem into clean, connected entities where each fact lives in one place. When you eventually learn SQL (in the hands-on chapters), you will already understand WHY tables, relationships, and constraints exist.
+
+---
+
+## PRIMM-AI+ Practice: Data is Relational
+
+### Predict [AI-FREE]
+
+Close your AI assistant. A teacher keeps student grades in a notebook. Each page has: the student's full name, the subject, and the grade. The student "Amara Johnson" appears on **12 different pages** (one for each assignment).
+
+One day, the teacher learns her legal name is actually "Amara K. Johnson."
+
+Predict:
+- How many pages need updating in the notebook system?
+- What happens if the teacher updates 11 pages but forgets page 7?
+- Now imagine a different system: each student has ONE index card with their name, and each grade page uses the student's **card number** instead of their name. How many places need updating when the name changes?
+
+Write your answers. Rate your confidence from 1 to 5.
+
+### Run
+
+Ask your AI assistant: *"Compare two ways of tracking student grades: (1) writing the student's full name on every grade page, versus (2) giving each student a unique ID number and writing only the ID on grade pages, with the name stored once on an index card. What happens in each system when a student's name changes? Which prevents data inconsistency?"*
+
+Compare. Did you correctly predict the number of updates needed in each system?
+
+<details>
+<summary>Answer Key — What actually happens</summary>
+
+**In the notebook system**, all 12 pages need updating — every page where "Amara Johnson" was written by hand. If the teacher updates 11 but forgets page 7, the system now contains two versions of the same student's name. Any search for "Amara K. Johnson" will miss the assignments on page 7. Any report grouping grades by student will show two separate students. The data is silently inconsistent, and nothing in the notebook warns the teacher.
+
+**In the card system**, exactly ONE place needs updating — Amara's index card. Every grade page references her card number (say, #42), not her name. When the name on card #42 changes, every grade page automatically reflects the correct name. It is impossible to have an inconsistent state because the name exists in only one location.
+
+**The key insight**: duplication creates the opportunity for inconsistency. Linking (referencing by ID instead of copying) eliminates that opportunity structurally — not by being careful, but by making the error impossible.
+
+</details>
+
+### Investigate
+
+Write in your own words why storing information in ONE place and LINKING to it (instead of copying it everywhere) prevents errors. What is the specific failure that duplication causes?
+
+Now connect this back to the lesson's story. The teacher's notebook is James's `orders.json` — customer names copied into every order record, with no way to keep them synchronized. When "Acme Corp" became "Acme Corporation," James updated one place but forgot the 47 order records that duplicated the old name. The card system is Emma's SQL schema — the customer name stored once in the `customers` table, referenced by `customer_id` everywhere else. Change the name once, and every order automatically reflects it.
+
+Apply the **Error Taxonomy**: duplicate data becoming inconsistent (11 pages say "Amara K. Johnson" but page 7 still says "Amara Johnson") = **data/edge-case error**. The system has no mechanism to ensure all copies stay synchronized. James's dashboard showing two separate customers — "Acme Corp" and "Acme Corporation" — was the same error at production scale.
+
+### Modify
+
+The teacher adds a new subject to the curriculum. In the notebook system, they write the student's full name again on a new page. In the card system, they just add a new grade line with the card number.
+
+Now a student transfers to another school. How many changes are needed in each system to remove all their records? What mistakes could happen in the notebook system that are impossible in the card system?
+
+### Make [Mastery Gate]
+
+Think of 3-5 things in your life that are connected to each other — for example: students and classes, friends and events, books and authors, recipes and ingredients, playlists and songs.
+
+Draw or describe the relationships:
+- Which thing connects to which?
+- Is the relationship one-to-many (one author writes many books) or many-to-many (many students take many classes)?
+- Where would you store each piece of information so it exists in **only ONE place**?
+
+This relationship map is your mastery gate. You should be able to explain why duplicating information (like writing a student's name on every grade page) causes problems that linking (using an ID number) prevents.
 
 ---
 
