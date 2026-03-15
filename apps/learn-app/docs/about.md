@@ -138,7 +138,7 @@ By the end of this book, you will not simply understand agentic AI as an idea. Y
 
 ## This Book Is Infrastructure, Not Just Text: Three Modes of Delivery
 
-Most books are written for one mode of consumption: a human reads page after page. This book is designed for three.
+Most books are written to be read. This book is written to be read, to teach through an AI tutor, and to guide an AI building partner — all from the same knowledge base. It is not just a book. It is the foundation of a learning and development ecosystem designed for three modes of delivery.
 
 **Mode 1: Human Reading.** The traditional path. You read the chapters, study the frameworks, complete the exercises, and build deployable artefacts. Every chapter in this book stands on its own as a self-contained unit of professional education. This mode is what the Reader Guide below describes.
 
