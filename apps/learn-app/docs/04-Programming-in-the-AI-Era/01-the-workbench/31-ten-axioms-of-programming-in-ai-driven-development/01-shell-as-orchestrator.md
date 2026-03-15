@@ -462,6 +462,22 @@ Now ask your AI assistant: *"My team needs to ship an app update. Classify each 
 
 Compare the AI's classifications to yours. Pay special attention to task 6 — did the AI classify it the same way you did? If you disagreed, can you see the reasoning behind the other answer?
 
+<details>
+<summary><strong>Answer Key (check after comparing with AI)</strong></summary>
+
+| Task | Classification | Why |
+|------|---------------|-----|
+| 1. Run all tests and report results | **Work** | A testing tool produces a result (pass/fail report). It does not decide what happens next. |
+| 2. Stop the process if any test failed | **Coordination** | This is a decision — "if failure, then stop." It produces no result itself. |
+| 3. Package the app into an installable file | **Work** | A build tool takes code and produces a package. It does not care what runs before or after. |
+| 4. Ensure tests → packaging → deployment order | **Coordination** | This is pure sequencing — deciding what runs in what order. |
+| 5. Push the package to the live server | **Work** | A deployment tool takes a package and installs it. It produces a result. |
+| 6. Send a notification if anything failed | **Both** | This is the tricky one. The *decision* to send a notification on failure is coordination (routing based on a result). The *act* of sending the message is work (a messaging tool does it). In a well-designed system, these are two separate steps: the coordinator decides "something failed, trigger the notification tool," and the notification tool does the sending. |
+
+If you got 5 out of 6 correct, your mental model is solid. If task 6 tripped you up, that is expected — it is genuinely two things wrapped into one sentence, and recognizing that is exactly what this axiom teaches.
+
+</details>
+
 ### Investigate
 
 Think back to James's story. His 400-line deployment script tangled coordination and work together. At 2am, when the deployment broke, nobody could figure out what went wrong. Emma replaced it with 12 lines that only coordinated — each line called a specialized tool and checked whether it succeeded.
@@ -506,21 +522,25 @@ Why is Emma's approach better? What goes wrong when the orchestration file start
 
 ### Make [Mastery Gate]
 
-Think about a multi-step process you go through regularly — submitting a school assignment, publishing a social media post, preparing a presentation, or setting up for a study session. Write a **5-step plan** using this format:
+Think about a multi-step process you go through regularly — submitting a school assignment, publishing a social media post, preparing a presentation, or setting up for a study session. Write a **5-step plan** using this format.
+
+In this exercise, **you are the coordinator** — like Emma's 12-line Makefile. Your job is to check results and decide what happens next. The tools and apps do the actual work. You never do the work that a tool could do for you, just as the Makefile never ran tests itself — it told pytest to run them and checked whether pytest reported success.
 
 Here is an example for "submitting a homework assignment":
 
-| Step | Work (what happens) | Who does it | Coordinator's job |
+| Step | Work (what happens) | Tool that does it | You (the coordinator) decide... |
 |------|-------------------|-------------|-------------------|
-| 1 | Write the essay | You | — (this is the work itself) |
-| 2 | Check spelling and grammar | Spell-check tool | Review the tool's result: any errors left? |
-| 3 | Convert to PDF | File converter | Check: did the conversion succeed? |
-| 4 | Upload to the submission portal | Upload tool | Check: did the upload confirm success? |
-| 5 | Send confirmation to yourself | Email app | Trigger only if all previous steps succeeded |
+| 1 | Check spelling and grammar | Spell-check tool | Are there errors left? If yes, fix them before moving on. |
+| 2 | Check that all required sections are included | Checklist / rubric | Does the assignment meet every requirement? If not, stop and fill the gaps. |
+| 3 | Convert to PDF | File converter | Did the conversion succeed? Is the formatting correct? |
+| 4 | Upload to the submission portal | Upload tool | Did the portal confirm the upload? If it failed, retry. |
+| 5 | Send confirmation to yourself | Email app | Only trigger this if steps 1-4 all succeeded. |
 
-Now write your own 5-step plan for a different process. For each step, make sure the coordinator **never does the work** — it only checks, decides, or triggers. If you find a step where the coordinator is also doing the work, split it into two steps: one for the work and one for the coordination decision.
+Notice: **you never do what the tools do.** You do not manually check every word for typos (the spell-checker does that). You do not convert the file format yourself (the converter does that). You only look at each tool's result and decide: *move forward, stop, or retry?* That is coordination.
 
-Your plan is your mastery gate — you should be able to explain what would go wrong if the coordinator started doing the work (like James's script did).
+Now write your own 5-step plan for a different process. For each step, ask yourself: "Am I doing the work, or am I checking a result and making a decision?" If you are doing the work, name the tool or person who should do it instead. If no tool exists, that step is genuinely work — but the coordinator's job is still just to check whether it succeeded before moving to the next step.
+
+Your plan is your mastery gate — you should be able to explain what would go wrong if the coordinator started doing the work (like James's 400-line script did).
 
 :::tip Verification Ladder Preview
 You just predicted which tasks are coordination and which are work, then checked your prediction against reality. That predict-then-check habit is **Rung 1 of the Verification Ladder** — the foundation that every other verification practice builds on.
