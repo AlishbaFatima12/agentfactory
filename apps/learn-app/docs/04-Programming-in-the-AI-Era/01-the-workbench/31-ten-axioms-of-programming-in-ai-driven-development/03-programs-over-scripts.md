@@ -87,33 +87,18 @@ The root cause is the same every time: code that grew beyond script-level comple
 
 This axiom draws a clear line: scripts serve exploration and experimentation; programs serve reliability and collaboration. Both are valuable. The failure mode is not writing scripts. The failure mode is shipping scripts as if they were programs.
 
-<details>
-<summary><strong>Historical Background: The Long Argument for Types (click to expand)</strong></summary>
-
-The debate between "move fast and break things" and "move carefully and prove things" is older than most developers realize. It traces back to the earliest days of programming language design, and the side that favors discipline has been winning — slowly, then all at once.
-
-In 1973, Robin Milner at the University of Edinburgh created ML, a programming language with a type system so precise that if your program compiled, entire categories of bugs were mathematically impossible. The idea was radical: let the machine verify your logic before you run it. Milner's work earned him the Turing Award in 1991 and launched a lineage of typed languages — Haskell, OCaml, F# — that influenced every modern language with a type system.
-
-For decades, Python existed on the opposite end of this spectrum. Guido van Rossum designed Python for readability and rapid prototyping, deliberately leaving out static types. The language thrived. It also accumulated a reputation: Python was where scripts became programs by accident, and where bugs hid until runtime because nothing checked your assumptions before execution.
-
-The turning point came in 2014, when Guido van Rossum — Python's creator himself — co-authored PEP 484, introducing optional type hints to the language. The proposal was not a concession. It was a recognition that Python had grown beyond scripting. Millions of lines of Python were running in production at Dropbox, Instagram, Google, and Netflix. At that scale, "run it and see if it crashes" was no longer an engineering strategy. Type hints let developers declare their intentions — `def process(data: list[Record]) -> Summary` — and let tools like mypy and later pyright verify those intentions before a single line executed.
-
-Python's journey from untyped scripting language to gradually typed systems language mirrors exactly what Axiom III teaches. The same forces that pushed Python toward types — growing codebases, production reliability, collaboration across teams — push every script toward program discipline once the stakes become real.
-
-</details>
-
----
-
 ## From Principle to Axiom
 
-In Chapter 3, you learned **Principle 2: Code as Universal Interface** -- the idea that code solves problems precisely where prose fails. Code is unambiguous. Code is executable. Code is the language machines understand natively.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/code-as-universal-interface), you learned **Principle 2: Code as Universal Interface** — the idea that code solves problems precisely where prose fails. You saw this concretely when an agent was given a vague English instruction ("process the files") and produced ambiguous results, but given a typed function signature (`def process(files: list[Path]) -> Report`), it produced exactly what was specified. Code is unambiguous. Code is executable. Code is the language machines understand natively.
 
-Axiom III builds on that foundation: if code is your universal interface, then the **quality** of that code determines the reliability of your interface. A vague specification is bad. A vague program is worse, because it compiles and runs -- giving the false appearance of correctness while hiding fragility beneath the surface.
+Axiom III builds on that foundation: if code is your universal interface, then the **quality** of that code determines the reliability of your interface. Chapter 6 showed that code beats prose. This axiom shows that *disciplined* code beats *sloppy* code — and that the gap between the two is the gap between James's 15-line script and the program that would have handled the Unicode crash.
 
-Principle 2 says: *use code to solve problems*.
-Axiom III says: *make that code worthy of the problems it solves*.
-
-The principle is about choosing the right medium. The axiom is about discipline within that medium.
+| Principle 2 (Chapter 6) | Axiom III (this lesson) |
+|---|---|
+| Use code instead of prose | Make that code worthy of what it solves |
+| Code is the right *medium* | Types, tests, and error handling are the right *discipline* |
+| An agent given code produces precise results | An agent given *typed, tested* code produces *reliable* results |
+| Chose the interface | Hardened the interface |
 
 ![Fragile Scripts versus Robust Programs: comparing maintainability, reliability, scalability, collaboration, and structured programming principles](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-14/03-programs-over-scripts.png)
 
@@ -132,6 +117,21 @@ James's mistake was not writing a script. His mistake was not recognizing when t
 | **Configuration** | Magic strings in source | Typed config objects or env vars |
 | **Documentation** | Comments (maybe) | Docstrings, README, usage examples |
 | **CI/CD** | None | Linted, type-checked, tested on every push |
+
+---
+
+<details>
+<summary><strong>Historical Background: Why Python Added Types (click to expand)</strong></summary>
+
+The "Type annotations" row in the table above reflects a fundamental shift in Python's history. For decades, Python existed as a dynamically typed language — Guido van Rossum designed it for readability and rapid prototyping, deliberately leaving out static types. Python thrived. It also accumulated a reputation: Python was where scripts became programs by accident, and where bugs hid until runtime because nothing checked your assumptions before execution.
+
+The turning point came in 2014, when Guido van Rossum — Python's creator himself — co-authored PEP 484, introducing optional type hints to the language. This was not a concession. It was a recognition that Python had grown beyond scripting. Millions of lines of Python were running in production at Dropbox, Instagram, Google, and Netflix. At that scale, "run it and see if it crashes" was no longer an engineering strategy. Type hints let developers declare their intentions — `def process(data: list[Record]) -> Summary` — and let tools like pyright verify those intentions before a single line executed.
+
+Python's journey from untyped scripting language to gradually typed systems language mirrors exactly what Axiom III teaches. The same forces that pushed Python toward types — growing codebases, production reliability, collaboration across teams — push every script toward program discipline once the stakes become real.
+
+</details>
+
+---
 
 ### When Does a Script Become a Program?
 
@@ -427,68 +427,137 @@ If you answered YES to any question, your code has moved past the script boundar
 
 ## Try With AI
 
-### Prompt 1: Transform a Script into a Program
+### Prompt 1: Script-to-Program Transformation
 
 ```
-Here is a Python script I wrote to [describe your actual script -- processing CSV data,
-calling an API, generating reports, etc.]:
+I want to understand the difference between a "script" and a "program."
 
-[paste your script here]
+Take this everyday example: someone writes quick instructions for watering
+their plants — "water all plants Tuesday and Friday." That is a script.
 
-Help me transform this into a proper program. Specifically:
-1. Add type annotations to all functions
-2. Replace bare except blocks with specific exceptions
-3. Add a typer CLI interface so I can pass arguments
-4. Write 3-5 pytest tests covering the main logic and one edge case
-5. Create a pyproject.toml with pyright and ruff configuration
+Now help me transform it into a "program" by adding:
+1. Specific conditions — what if a plant needs water daily? What if it is winter?
+2. Error handling — what if you are away for a week? What if a plant dies?
+3. A checklist to verify — how do you know the watering actually worked?
+4. Documentation — could someone else follow these instructions without calling you?
 
-Walk me through each change and explain what class of bug it prevents.
+Then explain: what is the equivalent of each of these in software?
+(conditions = types, error handling = exceptions, checklist = tests,
+documentation = docstrings). Walk me through the parallels.
 ```
 
-**What you're learning**: The mechanical process of applying program discipline to existing code. By watching the transformation step-by-step, you internalize which changes catch which categories of bugs, and you develop an intuition for what "production-ready" looks like compared to "it works on my machine."
+**What you're learning**: The conceptual transformation from informal instructions to reliable processes. Each addition you make to the plant-watering "script" maps directly to a program discipline: types declare expectations, error handling manages surprises, tests verify correctness, and documentation enables collaboration. You will apply these disciplines to real Python code starting in Chapter 33.
 
-### Prompt 2: Audit AI-Generated Code
-
-```
-I asked an AI to generate this Python function:
-
-```python static
-def fetch_user_data(user_id):
-    import requests
-    resp = requests.get(f"http://api.example.com/users/{user_id}")
-    data = resp.json()
-    return {"name": data["name"], "email": data["email"], "age": data["age"]}
-```
-
-Audit this code against the "Programs Over Scripts" axiom. For each issue you find:
-1. Name the specific anti-pattern
-2. Explain what could go wrong in production
-3. Show the fixed version with proper types, error handling, and structure
-
-Then write 3 pytest tests that would catch the most dangerous failure modes.
-```
-
-**What you're learning**: Critical evaluation of AI-generated code. You are building the skill of reading code skeptically -- identifying missing error handling, absent type information, and implicit assumptions. This is the core verification skill for AI-era development: the AI generates, you verify.
-
-### Prompt 3: Design a Discipline Stack for Your Project
+### Prompt 2: Spot the Missing Discipline
 
 ```
-I'm starting a new Python project that will [describe your project:
-a CLI tool for file processing / an API client / a data pipeline / etc.].
+Here is a real-world scenario. A student creates a shared spreadsheet to track
+club membership dues. It works great — until these things happen:
 
-Help me set up the complete Python discipline stack from scratch:
-1. Project structure (src layout with pyproject.toml)
-2. uv configuration for dependency management
-3. pyright configuration (what strictness level and why)
-4. ruff rules (which rule sets to enable for my use case)
-5. pytest setup with a single example test
-6. A pre-commit hook or Makefile that runs all four tools in sequence
+1. Someone types "twenty dollars" instead of "20" in the amount column
+2. A new treasurer takes over and does not know which columns are required
+3. The spreadsheet is accidentally sorted, and payment dates no longer match members
+4. Three months of data disappears because someone deleted rows by mistake
 
-Explain WHY each configuration choice matters -- don't just give me the config,
-help me understand what each setting protects against.
+For each failure, identify which "program discipline" is missing:
+- Types (labeling what kind of data each column accepts)
+- Error handling (what happens when someone enters the wrong thing)
+- Tests (how do you verify the spreadsheet is still correct)
+- Version control (how do you recover from mistakes)
+
+Then explain: how would James's image renaming script from this lesson
+have the same four categories of failure?
 ```
 
-**What you're learning**: Setting up verification infrastructure from the ground up. Understanding the "why" behind each tool configuration builds judgment about when to be strict (public APIs, shared code) versus lenient (prototypes, experiments). You are learning to create environments where bad code cannot survive.
+**What you're learning**: Recognizing missing program discipline in systems you already use. A spreadsheet without column types is like code without type annotations — both accept bad input silently. By mapping failures to discipline categories, you build the evaluation skill needed to audit any system, including AI-generated code.
+
+### Prompt 3: The Decision Framework in Your Life
+
+```
+I learned about the "script-to-program" decision framework with 5 questions:
+1. Will it run more than once?
+2. Will someone else use it?
+3. Does it handle important data?
+4. Will it run in an automated system?
+5. Did an AI generate it?
+
+Help me apply this framework to three examples from everyday life:
+- A recipe I cook regularly for family dinners
+- Directions I text to a friend visiting my house for the first time
+- A budget spreadsheet I use to track monthly expenses
+
+For each one, walk through all 5 questions. Based on the answers,
+is it a "script" (casual, just for me) or a "program" (needs structure,
+error handling, documentation)? What would I add to upgrade each one?
+```
+
+**What you're learning**: Applying the script-to-program decision framework to familiar scenarios. The five questions work for any process, not just code. By evaluating recipes, directions, and spreadsheets, you internalize the judgment of *when* something needs discipline — the same judgment that would have told James his 15-line script had crossed the boundary.
+
+## PRIMM-AI+ Practice: Programs Over Scripts
+
+### Predict [AI-FREE]
+
+Close your AI assistant. Two students are planning a birthday party:
+
+**Student A** writes the plan on a napkin: *"buy cake, invite people, decorate."*
+
+**Student B** writes it in a notebook with:
+- Guest list with phone numbers
+- Budget with items and prices
+- Timeline with who does what by when
+- Backup plan if it rains
+
+Predict: Which plan survives when something goes wrong? Specifically, what happens when Student A's napkin plan encounters an unexpected problem — the bakery is closed on the day of the party? Write your prediction. Rate your confidence from 1 to 5.
+
+### Run
+
+Ask your AI assistant: *"Compare a napkin plan ('buy cake, invite people, decorate') versus a structured notebook plan (with guest list, budget, timeline, and backup plan) for a birthday party. What can go wrong with each when something unexpected happens?"*
+
+Compare the AI's analysis to your prediction. Did you anticipate the same failure points?
+
+<details>
+<summary><strong>Answer Key — Check Your Prediction</strong></summary>
+
+**Student A's napkin plan** fails on multiple fronts when the bakery is closed:
+- No backup bakery listed (no error handling)
+- No way to know which guests were already invited vs not yet (no state tracking)
+- No budget to know if a more expensive bakery is affordable (no constraints defined)
+- No timeline to know if there is time to find another bakery (no schedule)
+- The entire party may be canceled because one step failed and there is no recovery path
+
+**Student B's notebook plan** survives because:
+- The backup plan section covers "what if the bakery is closed" explicitly
+- The budget shows how much flexibility exists for an alternative
+- The timeline shows how much time remains to pivot
+- The guest list with phone numbers means communication is possible even if plans change
+
+The napkin plan is a **script** — it works when everything goes right. The notebook plan is a **program** — it handles unexpected inputs and still produces a result.
+
+</details>
+
+### Investigate
+
+Think about James's image renaming script from the lesson opening. His script also "worked when everything went right" — just like Student A's napkin plan. Both failed when they hit unexpected input (a Unicode em-dash for James, a closed bakery for Student A).
+
+Write in your own words — without asking AI — the answer to this question: **Which specific quality from Student B's notebook plan would have prevented James's Unicode crash?** Map it directly: what is the notebook's "backup plan" equivalent in code?
+
+Apply the **Error Taxonomy**: the napkin plan failing when the bakery is closed = **data/edge-case error** — there was no plan for unexpected inputs. James's script crashing on a Unicode character is the same category. The notebook plan's backup section and the program's `try/except` block both handle this class of error by anticipating what could go wrong *before* it does.
+
+### Modify
+
+Student A's napkin plan worked fine for 3 small parties (5-10 guests). Now they are planning a 100-person event with catering, entertainment, and venue booking. What breaks? What must they add to their napkin plan to handle this scale? Be specific about at least 3 things that fail.
+
+### Make [Mastery Gate]
+
+Take something you do casually — a morning routine, cooking a meal, packing for a trip. Write it as a "program" instead of a "script":
+
+- **Specific steps** (not vague instructions like "get ready")
+- **What to do if something goes wrong** (what if you are out of coffee? what if it rains?)
+- **What to check before starting** (do you have all ingredients? is everything charged?)
+
+This plan is your mastery gate. Someone else should be able to follow it and handle unexpected situations without calling you for help.
+
+---
 
 ## The Prototype Trap
 
