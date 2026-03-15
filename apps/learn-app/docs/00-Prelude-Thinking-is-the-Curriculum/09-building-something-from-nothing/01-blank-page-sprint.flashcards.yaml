@@ -1,0 +1,72 @@
+deck:
+  id: "p0-ch08-blank-page-sprint"
+  title: "The Blank Page Sprint"
+  description: "Key concepts from the Blank Page Sprint exercise on unaugmented creation and raw thinking baselines"
+  tags: ["blank-page-sprint", "creation", "originality", "Part-0"]
+  version: 1
+
+cards:
+  - id: "p0-ch08-blank-page-sprint-001"
+    front: "How long is the Blank Page Sprint, and what tools are allowed?"
+    back: "60 minutes. No AI, no internet, no notes."
+    tags: ["blank-page-sprint", "constraints"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-blank-page-sprint-002"
+    front: "What four elements must your Blank Page Sprint Draft 1 contain?"
+    back: "1. Problem diagnosis\n2. Three distinct solutions\n3. Recommended approach with reasoning\n4. Gap list of unknowns"
+    tags: ["blank-page-sprint", "deliverable"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-blank-page-sprint-003"
+    front: "Why must the three solutions in the Blank Page Sprint be genuinely distinct rather than variations of one idea?"
+    back: "Because variations test depth within one approach, while distinct solutions test creative breadth. If all three are versions of 'build an app,' the student explored one direction, not three -- missing the creative divergence the exercise requires."
+    tags: ["distinct-solutions", "creative-breadth"]
+    difficulty: "intermediate"
+    why: "How can you tell whether your three solutions are genuinely distinct or just variations?"
+
+  - id: "p0-ch08-blank-page-sprint-004"
+    front: "What is a gap list in the context of the Blank Page Sprint?"
+    back: "A list of everything you do not know that you would need to know to implement your solution."
+    tags: ["gap-list", "self-awareness"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-blank-page-sprint-005"
+    front: "Why is the gap list as important as the solutions in the Blank Page Sprint?"
+    back: "Because knowing what you do not know is a higher-order thinking skill than knowing. An honest gap list demonstrates metacognitive awareness, while a short one suggests the student has not thought deeply about implementation realities."
+    tags: ["gap-list", "metacognition"]
+    difficulty: "intermediate"
+    why: "What does a gap list with only 1-2 items reveal about the student's thinking depth?"
+
+  - id: "p0-ch08-blank-page-sprint-006"
+    front: "Why does the Blank Page Sprint establish a baseline before AI collaboration?"
+    back: "Because you need to know what your raw thinking produces before you can understand what AI adds. Without this baseline, you cannot distinguish your contributions from AI's in later exercises."
+    tags: ["baseline", "raw-thinking"]
+    difficulty: "intermediate"
+    why: "What would happen if you skipped Draft 1 and went straight to AI collaboration?"
+
+  - id: "p0-ch08-blank-page-sprint-007"
+    front: "How does the AI Check in the Blank Page Sprint differ from typical AI feedback?"
+    back: "After evaluating the student's work, AI generates its own independent solution to the same problem. This sets up the Originality Test in Exercise 3 by providing a comparison baseline."
+    tags: ["AI-check", "originality-test"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch08-blank-page-sprint-008"
+    front: "Why is the time constraint essential to the Blank Page Sprint?"
+    back: "Because it prevents polishing and forces raw thinking onto the page. Without time pressure, students optimize for quality of output rather than honesty of process -- and the exercise measures process, not product."
+    tags: ["time-constraint", "raw-thinking"]
+    difficulty: "intermediate"
+    why: "How does time pressure change the nature of what students produce?"
+
+  - id: "p0-ch08-blank-page-sprint-009"
+    front: "What is the difference between creation and summarization, reorganization, or polishing?"
+    back: "Creation produces something new -- an argument nobody has made, a solution nobody has tried, a connection nobody has seen. The others rearrange existing material."
+    tags: ["creation", "core-skill"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-blank-page-sprint-010"
+    front: "Why does the chapter claim AI 'cannot originate'?"
+    back: "Because AI remixes patterns from training data rather than producing genuinely novel ideas. A student who can create something that did not exist before has the one skill AI cannot replicate -- original thought from lived experience and unique perspective."
+    tags: ["AI-limitations", "originality"]
+    difficulty: "advanced"
+    why: "When might AI produce output that appears original but is actually recombination?"

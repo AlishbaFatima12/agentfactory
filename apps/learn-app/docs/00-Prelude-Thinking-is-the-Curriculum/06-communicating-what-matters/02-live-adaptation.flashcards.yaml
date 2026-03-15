@@ -1,0 +1,52 @@
+deck:
+  id: "p0-ch05-live-adaptation"
+  title: "Live Adaptation"
+  description: "Key concepts from the live communication adaptation exercise"
+  tags: ["Part 0", "communication", "adaptation", "live-defence"]
+  version: 1
+
+cards:
+  - id: "p0-ch05-live-adaptation-001"
+    front: "What three dimensions does the peer Adaptation Scorecard rate?"
+    back: "1. Composure under surprise\n2. Relevance of improvised response\n3. Whether the stakeholder felt heard"
+    tags: ["assessment", "adaptation-scorecard"]
+    difficulty: "basic"
+
+  - id: "p0-ch05-live-adaptation-002"
+    front: "Why does the Live Adaptation exercise ban AI access during the adaptation phase?"
+    back: "Because real-time adaptation is a human reflex that only develops through practice. AI can help prepare, but cannot adapt for you when a stakeholder raises an unexpected concern in the room."
+    tags: ["adaptation", "AI-limitations"]
+    difficulty: "intermediate"
+    why: "What would a student miss if they could pause and consult AI during the surprise moment?"
+
+  - id: "p0-ch05-live-adaptation-003"
+    front: "According to the exercise, what percentage of communication success comes from preparation vs. adaptation?"
+    back: "Preparation gets 70%. The last 30% -- adaptation -- determines success or failure."
+    tags: ["communication", "preparation-vs-adaptation"]
+    difficulty: "basic"
+
+  - id: "p0-ch05-live-adaptation-004"
+    front: "A student delivers a polished pitch but freezes when the stakeholder raises a concern not in their preparation notes. Why did the pitch fail?"
+    back: "Because preparation without adaptation is incomplete. The student optimized for the expected scenario but had no reflex for handling the unexpected, which is where real communication succeeds or fails."
+    tags: ["adaptation", "communication"]
+    difficulty: "intermediate"
+    why: "How could the student build better adaptation reflexes before the next pitch?"
+
+  - id: "p0-ch05-live-adaptation-005"
+    front: "Which assessment layer does the Live Adaptation exercise primarily use?"
+    back: "Layer 3 (Live Defence)."
+    tags: ["assessment-layers"]
+    difficulty: "basic"
+
+  - id: "p0-ch05-live-adaptation-006"
+    front: "How does the Solo Learner Alternative adapt the Live Adaptation exercise for students without a peer?"
+    back: "The student records their pitch, then AI plays a skeptical stakeholder who reveals the unexpected concern. The student responds in writing under a 10-minute timer."
+    tags: ["solo-learner", "adaptation"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch05-live-adaptation-007"
+    front: "Why is composure under surprise a separate dimension on the Adaptation Scorecard, distinct from relevance of response?"
+    back: "Because a student can give a relevant answer while visibly panicking, or remain composed while saying something irrelevant. Both composure and relevance matter independently for effective communication."
+    tags: ["adaptation-scorecard", "communication"]
+    difficulty: "advanced"
+    why: "Which is more damaging to a stakeholder relationship -- poor composure with a good answer, or good composure with a poor answer?"

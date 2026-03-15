@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch06-override-test"
+  title: "The Override Test"
+  description: "Key concepts from the AI error detection and override challenge exercise"
+  tags: ["Part 0", "AI-collaboration", "override", "error-detection"]
+  version: 1
+
+cards:
+  - id: "p0-ch06-override-test-001"
+    front: "What four things must a student produce in the Override Challenge exercise?"
+    back: "1. Error identification\n2. Explanation of why AI made it\n3. Corrected analysis\n4. Redesigned prompt to prevent the error"
+    tags: ["override-challenge", "deliverable"]
+    difficulty: "basic"
+
+  - id: "p0-ch06-override-test-002"
+    front: "What is the 'override instinct' that this exercise trains?"
+    back: "The willingness and ability to say 'the AI is wrong here' and back it up with evidence and reasoning."
+    tags: ["override-instinct", "core-skill"]
+    difficulty: "basic"
+
+  - id: "p0-ch06-override-test-003"
+    front: "Why is the error in the AI-generated analysis deliberately subtle rather than obvious?"
+    back: "Because real AI errors in business contexts are rarely obvious. The exercise trains detection of logical flaws, outdated assumptions, and market errors that look plausible on the surface -- the kind students encounter in practice."
+    tags: ["exercise-design", "subtle-errors"]
+    difficulty: "intermediate"
+    why: "Would training with obvious errors build the same detection skill?"
+
+  - id: "p0-ch06-override-test-004"
+    front: "Why is the prompt redesign step the most valuable part of the Override Challenge?"
+    back: "Because it teaches prevention rather than just detection. A student who can redesign prompts to avoid error types has a transferable skill, while spotting one specific error is a one-time fix."
+    tags: ["prompt-redesign", "prevention"]
+    difficulty: "intermediate"
+    why: "How does redesigning one prompt improve all future AI interactions?"
+
+  - id: "p0-ch06-override-test-005"
+    front: "A student overrides every AI suggestion in a project. Why is this as problematic as accepting everything?"
+    back: "Because overriding randomly wastes good AI output and adds noise. Strategic override means targeted, justified correction of specific errors -- not blanket rejection."
+    tags: ["override-instinct", "balance"]
+    difficulty: "intermediate"
+    why: "How would you distinguish between justified overriding and reflexive rejection?"
+
+  - id: "p0-ch06-override-test-006"
+    front: "How does Chapter 2's Error Taxonomy serve as the student's 'override trigger' in this exercise?"
+    back: "The error detection framework from Chapter 2 gives students systematic categories for identifying what type of error AI made -- logical flaw, outdated data, or false assumption -- rather than relying on gut feeling."
+    tags: ["error-taxonomy", "cross-chapter"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch06-override-test-007"
+    front: "Which assessment layer does the Override Challenge exercise use?"
+    back: "Layer 4 (Contradiction Challenge)."
+    tags: ["assessment-layers"]
+    difficulty: "basic"
+
+  - id: "p0-ch06-override-test-008"
+    front: "Why is a systematic error-detection process more reliable than spotting errors by luck?"
+    back: "Because luck-based detection only catches errors that happen to match the student's existing knowledge. A systematic process checks for known error categories (logical flaws, outdated data, false correlations) regardless of domain expertise."
+    tags: ["systematic-detection", "reliability"]
+    difficulty: "advanced"
+    why: "What categories would you include in a personal AI error-detection checklist?"

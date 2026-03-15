@@ -1,0 +1,58 @@
+deck:
+  id: "p0-intro-baseline"
+  title: "Thinking Baseline"
+  description: "The pre-assessment snapshot using the hospital AI triage scenario"
+  tags: ["Part 0", "baseline", "pre-assessment", "hospital triage"]
+  version: 1
+
+cards:
+  - id: "p0-intro-baseline-001"
+    front: "What is the purpose of the Thinking Baseline assessment in Part 0?"
+    back: "To create an honest snapshot of thinking skills before any training, for comparison against the identical post-assessment after Chapter 10."
+    tags: ["baseline", "purpose"]
+    difficulty: "basic"
+
+  - id: "p0-intro-baseline-002"
+    front: "What are the five tasks in the Thinking Baseline assessment?"
+    back: "1. Write 5 diagnostic questions\n2. Analyze why '15% accuracy' may be misleading\n3. Map 3 second-order consequences\n4. Take an ethical position with stakeholder analysis\n5. Rate confidence and list missing information"
+    tags: ["baseline", "tasks"]
+    difficulty: "basic"
+
+  - id: "p0-intro-baseline-003"
+    front: "Which chapter's skill does each Thinking Baseline task preview?"
+    back: "Questions=Ch 1, Error Detection=Ch 2, Systems Thinking=Ch 3, Ethical Reasoning=Ch 7, Decision Under Uncertainty=Ch 9."
+    tags: ["baseline", "chapter-mapping"]
+    difficulty: "intermediate"
+
+  - id: "p0-intro-baseline-004"
+    front: "Why does the Thinking Baseline instruct students not to try to perform well?"
+    back: "A low honest starting point produces more dramatic measurable growth. The baseline is a mirror, not a test -- its value comes from being a genuine snapshot, because inflating it would reduce the visible improvement after Chapter 10."
+    tags: ["baseline", "honesty"]
+    difficulty: "intermediate"
+    why: "How would an artificially high baseline undermine the post-assessment comparison?"
+
+  - id: "p0-intro-baseline-005"
+    front: "How long is the Thinking Baseline assessment, and what tools are allowed?"
+    back: "30 minutes, no AI tools."
+    tags: ["baseline", "constraints"]
+    difficulty: "basic"
+
+  - id: "p0-intro-baseline-006"
+    front: "In the hospital triage scenario, what makes the '15% better accuracy' claim worth questioning?"
+    back: "The claim may be misleading because 40% of patients are elderly, have limited language proficiency, or are experiencing mental health crises -- populations the AI trial may not have adequately represented."
+    tags: ["baseline", "error-detection", "scenario"]
+    difficulty: "intermediate"
+
+  - id: "p0-intro-baseline-007"
+    front: "Why must students save both their baseline responses AND their AI Baseline Score?"
+    back: "Both are needed for the post-assessment comparison after Chapter 10 -- the responses show qualitative growth in thinking, the scores show quantitative growth across Score Card dimensions."
+    tags: ["baseline", "portfolio"]
+    difficulty: "intermediate"
+    why: "What would be lost if students only saved their scores but not their written responses?"
+
+  - id: "p0-intro-baseline-008"
+    front: "Why does the baseline test five different thinking skills rather than focusing deeply on one?"
+    back: "Each task previews a different chapter's skill (Ch 1, 2, 3, 7, 9), creating a cross-skill snapshot that reveals the student's relative strengths and weaknesses before training begins."
+    tags: ["baseline", "assessment-design"]
+    difficulty: "advanced"
+    why: "How would a single-skill baseline fail to capture what a five-skill baseline reveals?"

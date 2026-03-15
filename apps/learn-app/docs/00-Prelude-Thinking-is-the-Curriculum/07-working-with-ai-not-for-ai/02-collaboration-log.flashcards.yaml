@@ -1,0 +1,58 @@
+deck:
+  id: "p0-ch06-collaboration-log"
+  title: "The Collaboration Log"
+  description: "Key concepts from the collaboration logging and decision tracking exercise"
+  tags: ["Part 0", "AI-collaboration", "collaboration-log", "decision-tracking"]
+  version: 1
+
+cards:
+  - id: "p0-ch06-collaboration-log-001"
+    front: "What five columns does the Collaboration Log table contain?"
+    back: "1. Prompt Sent\n2. AI Response Summary\n3. Decision (Accept/Reject/Modify)\n4. Justification\n5. What I Added or Changed"
+    tags: ["collaboration-log", "format"]
+    difficulty: "basic"
+
+  - id: "p0-ch06-collaboration-log-002"
+    front: "What is the minimum number of interactions required in the Collaboration Log?"
+    back: "15 interactions."
+    tags: ["collaboration-log", "requirements"]
+    difficulty: "basic"
+
+  - id: "p0-ch06-collaboration-log-003"
+    front: "What four levels of collaboration maturity does the AI Check assess?"
+    back: "1. Passive (accept everything)\n2. Reactive (reject randomly)\n3. Strategic (deliberate, justified decisions)\n4. Expert (seamless integration)"
+    tags: ["collaboration-maturity", "assessment"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch06-collaboration-log-004"
+    front: "Why is the justification column the most important column in the Collaboration Log?"
+    back: "Because vague justifications like 'seemed right' indicate passive collaboration even when the decision was correct. Substantive justifications prove the student made deliberate, reasoned choices."
+    tags: ["collaboration-log", "justification"]
+    difficulty: "intermediate"
+    why: "How can you tell the difference between a justified accept and a lazy accept from the log alone?"
+
+  - id: "p0-ch06-collaboration-log-005"
+    front: "A student's log shows 95% accept rate. What does this pattern likely indicate?"
+    back: "The student is probably too passive -- accepting AI output habitually rather than evaluating it critically. A high accept rate without strong justifications suggests the student is working FOR AI rather than WITH it."
+    tags: ["collaboration-patterns", "passive-collaboration"]
+    difficulty: "intermediate"
+    why: "Is there a scenario where a 95% accept rate would be genuinely strategic?"
+
+  - id: "p0-ch06-collaboration-log-006"
+    front: "Why does the exercise assign a country the student is unfamiliar with for the market entry strategy?"
+    back: "To ensure the student genuinely needs AI rather than relying on existing knowledge. Unfamiliar territory makes AI collaboration necessary and the log meaningful."
+    tags: ["exercise-design", "unfamiliar-domain"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch06-collaboration-log-007"
+    front: "How does the AI Check catch students who game the log by artificially rejecting AI output?"
+    back: "By evaluating whether each reject decision was justified. Unjustified rejects are flagged as unnecessarily overriding -- the AI may have actually been right in cases the student rejected."
+    tags: ["gaming-detection", "AI-check"]
+    difficulty: "advanced"
+    why: "What would a student gain from gaming the log rather than engaging honestly?"
+
+  - id: "p0-ch06-collaboration-log-008"
+    front: "Which assessment layer does the Collaboration Log exercise use?"
+    back: "Layer 2 (Reasoning Receipt)."
+    tags: ["assessment-layers"]
+    difficulty: "basic"
