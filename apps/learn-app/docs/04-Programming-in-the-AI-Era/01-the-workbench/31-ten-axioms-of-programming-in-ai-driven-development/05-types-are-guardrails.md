@@ -143,7 +143,7 @@ Emma walked James through the three layers she used on every project — the sam
 ![Python Type Safety Hierarchy: Type Hints at the base, Pyright static analysis in the middle, and Pydantic runtime validation at the top, forming a pyramid of increasing safety](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-14/05-type-safety-stack.png)
 
 :::tip Focus on the concept, not the syntax
-This lesson contains more Python than previous axioms — dataclasses, Pydantic models, Protocols, and Generics. You have not learned Python yet (that starts in Chapter 33, with tooling setup in Chapter 32). For now, focus on *what each code block is doing* conceptually: declaring the shape of data, catching mismatches, validating inputs. The specific syntax will make sense when you reach the Python chapters.
+This lesson contains more Python than previous axioms — dataclasses, Pydantic models, Protocols, and Generics. You have not learned Python yet (that starts in Chapter 33). For now, focus on *what each code block is doing* conceptually: declaring the shape of data, catching mismatches, validating inputs. The specific syntax will make sense when you reach the Python chapters.
 :::
 
 ### Layer 1: Type Hints (The Annotations)

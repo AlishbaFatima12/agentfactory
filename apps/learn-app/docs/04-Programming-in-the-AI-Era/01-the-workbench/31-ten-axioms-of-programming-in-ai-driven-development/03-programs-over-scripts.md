@@ -306,7 +306,7 @@ testpaths = ["tests"]
 ```
 
 :::tip Already learned the shell? Great. New to it? No problem.
-You used bash commands in [Chapter 11: Linux Operations](/docs/Agent-Workflow-Primitives/linux-mastery/) back in Part 2. The commands below (`uv sync`, `uv run pyright`, etc.) follow the same pattern — type a command, read the output. If you skipped Chapter 11 or need a refresher, revisit it before continuing. You will set up `uv` and this full discipline stack in Chapter 32. Python syntax itself starts in Chapter 33.
+You used bash commands in [Chapter 11: Linux Operations](/docs/Agent-Workflow-Primitives/linux-mastery/) back in Part 2. The commands below (`uv sync`, `uv run pyright`, etc.) follow the same pattern — type a command, read the output. If you skipped Chapter 11 or need a refresher, revisit it before continuing. Python syntax itself starts in Chapter 33.
 :::
 
 Running the full stack:
