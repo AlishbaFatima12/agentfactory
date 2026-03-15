@@ -151,7 +151,7 @@ Together, these form the institutional memory that James's post-mortem was missi
 
 ## From Principle to Axiom
 
-In Chapter 4, you learned **Principle 5: Persisting State in Files**. That principle established a critical insight: AI systems are stateless between sessions, so all important context must live in files that AI can read.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/persisting-state-in-files), you learned **Principle 5: Persisting State in Files**. That principle established a critical insight: AI systems are stateless between sessions, so all important context must live in files that AI can read.
 
 Axiom VIII builds directly on that foundation:
 
@@ -186,6 +186,10 @@ James's `wip` commits squandered this power. Git was designed to be a complete i
 ---
 
 ## Git as System of Record
+
+:::tip New to Git?
+If these git commands look unfamiliar, [Chapter 12](/docs/Agent-Workflow-Primitives/version-control) covers version control foundations — commits, branches, and pull requests — from the ground up. Review that chapter first, then return here to see how those same tools become your project's memory system.
+:::
 
 ![Git branching workflow: main branch with a feature/discount branch forking off, commits, and a Pull Request + Review merge back](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-14/08-git-branching-workflow.png)
 
@@ -516,6 +520,10 @@ Each commit is a discrete memory. Each can be individually understood, reverted,
 
 ## Git as Time Machine
 
+:::tip Still Reading for the Idea, Not the Syntax
+This section shows commands like `git bisect`, `git revert`, and `git cherry-pick`. The important thing is **what they let you do** — find when something broke, safely undo a change, selectively apply a fix. Understanding the *capability* matters more than the command names right now.
+:::
+
 Git does not just record history — it lets you travel through it. Two weeks after adopting commit discipline, James experienced its first real payoff: his shipping calculator started returning wrong rates for international orders. Instead of reading through code to find the bug, Emma showed him how to let git find it.
 
 ### Bisect: Finding When Things Broke
@@ -600,10 +608,10 @@ If James had made an atomic commit for the original `apply_discount()` implement
 
 ## Try With AI
 
-### Prompt 1: Transform Bad Commits into Good Memory
+### Prompt 1: Transform Bad Version Labels into Good Memory
 
 ```
-I have these five commits from an order management project:
+I have five versions of a group project report, saved with these labels:
 
 1. "updated stuff"
 2. "fix"
@@ -611,61 +619,141 @@ I have these five commits from an order management project:
 4. "changes"
 5. "done"
 
-For each one, here is the actual diff summary. Rewrite each commit
-message using conventional commit format, explaining the WHY not the WHAT:
+Here is what actually changed in each version:
 
-1. Changed FREE_SHIPPING_THRESHOLD from 50.0 to 75.0 in shipping.py
-2. Added null check before accessing order.customer_id in discount.py
-3. Created new file tests/test_discount.py with 5 TDG specification tests
-4. Renamed "calculate_total" to "compute_order_total" across 4 files
-5. Added .env to .gitignore and removed hardcoded DB connection string
+1. Rewrote the introduction to focus on climate data instead of general pollution
+2. Fixed a wrong statistic — the original said 40% but the real number is 28%
+3. Added a new section comparing two solutions but it is not finished yet
+4. Renamed all references from "global warming" to "climate change" for consistency
+5. Removed a paragraph that contained an unverified claim from an unreliable source
 
-For each rewritten message, explain what future-you would learn from it
-that the original message failed to communicate.
+For each version, rewrite the label as a meaningful description that explains
+WHAT changed and WHY. Then explain: what would a new team member learn from
+your rewritten labels that the originals completely fail to communicate?
 ```
 
-**What you're learning:** The difference between commits as file-saves and commits as decisions. Notice how each rewritten message captures reasoning that would otherwise be lost — the same reasoning James could not reconstruct at his post-mortem. The original messages treat git as a backup tool; the rewrites treat it as institutional memory.
+**What you're learning:** The difference between saving copies and recording decisions. Notice how each rewritten label captures reasoning that would otherwise be lost — the same reasoning James could not reconstruct at his post-mortem. The original labels treat version history as a backup tool; the rewrites treat it as institutional memory. This is the core of Axiom VIII: the *why* behind every change is the most valuable information you can record.
 
-### Prompt 2: Design a Branching Strategy for AI Collaboration
-
-```
-I'm working on an order management system with one other developer
-and using Claude Code as my AI coding assistant. We deploy weekly.
-
-Design a branching strategy that:
-- Keeps main always deployable
-- Gives AI a safe space to experiment (like trying a new discount algorithm)
-- Makes AI contributions clearly identifiable in history
-- Allows easy rollback of AI-generated code specifically
-- Supports code review before AI changes reach main
-
-Show me the exact git commands for a typical workflow where AI generates
-the implementation for my TDG tests, I review it, and we merge to main.
-```
-
-**What you're learning:** Git as a collaboration protocol between human and AI. The branching strategy becomes a trust boundary — the AI works freely within branches, but human review gates the path to production. This is the workflow Emma taught James: human writes the specification, AI generates within a branch, tests verify, human merges.
-
-### Prompt 3: Investigate a Bug Using Git's Memory
+### Prompt 2: Design a Change Log for a Group Project
 
 ```
-My order management system's shipping calculator started returning
-wrong rates for international orders sometime in the last 50 commits.
-I know the tagged release v1.2.0 (50 commits ago) worked correctly.
+Four students are collaborating on a semester-long research project.
+They work on different sections, sometimes edit each other's work,
+and need to submit a final version in 8 weeks.
 
-Walk me through EXACTLY how to use git bisect to find the breaking
-commit. Show me:
-1. The exact commands to start bisecting
-2. What I test at each step (I have pytest tests for shipping)
-3. How to handle a commit that I can't easily test
-4. What to do once I find the bad commit
-5. How to safely fix the problem (revert vs fix-forward)
+Design a change tracking system that:
+- Makes it clear WHO changed WHAT and WHEN
+- Keeps a "known good" version that is always complete and correct
+- Gives each student a safe space to try changes without breaking
+  the main document
+- Requires someone to review changes before they become part of
+  the main version
+- Lets the team undo a specific change if it turns out to be wrong
 
-Then explain: why does atomic commit discipline make this process
-faster and more effective than if all 50 commits were giant
-"weekly update" commits?
+Describe the system using everyday language — folders, labels,
+review steps, and rules. Then explain: what goes wrong if the team
+skips the review step? What goes wrong if everyone edits the
+main document directly?
 ```
 
-**What you're learning:** Git as an investigative tool, not just a storage tool. Binary search through history only works when commits are atomic — each commit is a single hypothesis to test. This is exactly how James found his international shipping bug: bisect narrowed fifty commits to the one AI-generated change that introduced a rounding error. Giant commits make bisect useless because even finding the bad commit does not tell you which of its two hundred changes caused the problem.
+**What you're learning:** Version control as a collaboration protocol. The system you design — with a protected main version, separate workspaces, and review gates — mirrors exactly how professional teams use git. The review step is the trust boundary: work freely in your own space, but changes must be checked before they reach the shared version. This is the workflow Emma taught James: isolate work, review before merging, keep the main version always stable.
+
+### Prompt 3: Investigate a Mystery Using History
+
+```
+You are the editor of your school newspaper. Last month's issue was great.
+This month's issue has three problems: a headline with a typo, a photo
+with the wrong caption, and a paragraph that contradicts an earlier article.
+
+You have 20 versions of the document saved over the past month, each with
+a label describing what changed and why.
+
+Walk me through how you would use the version history to:
+1. Find WHEN each problem was introduced (which version?)
+2. Find WHO made each change and WHY they made it
+3. Decide for each problem: should you undo the change entirely,
+   or fix it forward with a new edit?
+4. Prevent these problems from happening in next month's issue
+
+Then explain: why is this investigation IMPOSSIBLE if all 20 versions
+were labeled "update", "edits", "final", "final2", "done"?
+```
+
+**What you're learning:** Version history as an investigative tool, not just a storage tool. Searching through history to find when something broke only works when each version is a meaningful record. This is exactly how James found his shipping bug — tracing through well-labeled commits to find the one that introduced the error. Meaningless labels like "update" make the investigation impossible, just as James's `wip` commits made his post-mortem impossible.
+
+---
+
+## PRIMM-AI+ Practice: Version Control is Memory
+
+### Predict [AI-FREE]
+
+Close your AI assistant. You have 5 versions of a school essay saved as:
+
+1. `essay.docx`
+2. `essay_final.docx`
+3. `essay_FINAL_v2.docx`
+4. `essay_REAL_final.docx`
+5. `essay_submitted.docx`
+
+Your teacher asks: *"What changed between version 2 and version 4? And WHY did you make those changes?"*
+
+Predict:
+- Can you answer the teacher's question from the filenames alone?
+- What information is missing that would let you answer?
+- How many of these files might actually be identical?
+
+Write your answers. Rate your confidence from 1 to 5.
+
+### Run
+
+Ask your AI assistant: *"What is wrong with naming files 'final_v2_REAL_final'? What information should each version of a document record to be useful as a history?"*
+
+Compare. Did the AI identify the same missing information you did?
+
+<details>
+<summary>**Answer Key: What to Look For**</summary>
+
+The AI should identify several problems with "final_v2_REAL_final" naming:
+
+- **No record of WHAT changed**: The filenames say "final" and "v2" but nothing about what was actually different between versions. Was it a new introduction? A restructured argument? Fixed citations?
+- **No record of WHY it changed**: Did the teacher give feedback? Did you find a better source? Did you change your thesis? The filenames carry zero reasoning.
+- **Possible duplicates**: Some "versions" might be identical — you cannot tell from the names alone. You might have 5 files but only 3 actual changes.
+- **No ordering guarantee**: Is "FINAL_v2" newer than "REAL_final"? The naming gives no reliable sequence.
+- **Useful history needs**: Each version should record what changed, why it changed, and when — like a journal, not just a stack of copies.
+
+If your prediction matched on at least 3 of these points, your instinct for what makes history useful is strong. If the AI caught something you missed, note which gap in your thinking it reveals.
+
+</details>
+
+### Investigate
+
+Write in your own words why recording WHAT changed and WHY for each version is more valuable than just saving copies with different names. What can you do with a meaningful version history that you cannot do with a pile of files named "final_v2"?
+
+Now connect this to James's story. His post-mortem failed for exactly the same reason your essay filenames fail — the history *existed* (he had three commits; you have five files) but it *told him nothing*. His team lead asked "What was the original bug?" and James could not answer, just as your teacher asks "What changed between version 2 and version 4?" and you cannot answer. In both cases, the problem is not missing saves — it is missing *reasoning*. Every version without a "why" is a memory with amnesia.
+
+Apply the **Error Taxonomy**: "wip" and "final_v2" commit messages without explanation = **orchestration error**. The history exists (the files are saved) but it tells you nothing — the coordination between past and present is broken because no reasoning was recorded.
+
+### Modify
+
+Rewrite these 5 file versions as meaningful save points. For each one, write **one sentence** explaining WHY the change was made:
+
+1. `essay.docx` → Version 1: ___
+2. `essay_final.docx` → Version 2: ___
+3. `essay_FINAL_v2.docx` → Version 3: ___
+4. `essay_REAL_final.docx` → Version 4: ___
+5. `essay_submitted.docx` → Version 5: ___
+
+For example: *"Version 2: Rewrote introduction to use a personal anecdote because teacher said the opening was too generic."*
+
+### Make [Mastery Gate]
+
+Think of a project you have worked on — an essay, a presentation, a design, a plan. Write a version history with 4-5 entries. Each entry must include:
+
+- **What changed** (be specific — "rewrote the conclusion" not "made edits")
+- **Why it changed** (what motivated the change — feedback? new idea? mistake found?)
+- **The date** (approximate is fine)
+
+This version history is your mastery gate. Someone reading it should understand the full evolution of your project — not just the final result, but the journey that produced it and the reasoning behind each change.
 
 ---
 
