@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch4-first-principles-vs-ai"
+  title: "First Principles vs. AI"
+  description: "Key concepts from the novel problem exercise — constraint identification, derivation chains, and comparing human vs. AI solution approaches."
+  tags: ["first-principles", "novel-problem", "constraint-identification"]
+  version: 1
+
+cards:
+  - id: "p0-ch4-first-principles-vs-ai-001"
+    front: "What is the difference between a base constraint and an assumption in first principles reasoning?"
+    back: "Constraints are true regardless of approach (limited supply, unequal need). Assumptions are choices the solver makes (equal access is fairest)."
+    tags: ["constraints", "assumptions", "definitions"]
+    difficulty: "basic"
+
+  - id: "p0-ch4-first-principles-vs-ai-002"
+    front: "What is a derivation chain in a First Principles Worksheet?"
+    back: "A logical sequence: 'From constraint X + assumption Y, it follows that Z. Therefore, the solution must include W.' It makes reasoning visible and auditable."
+    tags: ["derivation-chain", "first-principles-worksheet"]
+    difficulty: "basic"
+
+  - id: "p0-ch4-first-principles-vs-ai-003"
+    front: "Why is the derivation chain more important than the solution itself in first principles reasoning?"
+    back: "The chain IS the exercise — because the same constraints can produce different valid solutions depending on which assumptions are made, and only the chain reveals whether reasoning was principled or borrowed."
+    tags: ["derivation-chain", "assessment"]
+    difficulty: "intermediate"
+    why: "How would two students with the same constraints but different assumptions produce different solutions?"
+
+  - id: "p0-ch4-first-principles-vs-ai-004"
+    front: "Why does the novel problem exercise prohibit AI, internet, and reference materials?"
+    back: "The 45-minute constraint forces pure derivation from the problem statement alone — because access to patterns would short-circuit first principles reasoning and produce borrowed solutions."
+    tags: ["independent-reasoning", "novel-problem"]
+    difficulty: "intermediate"
+    why: "What specific thinking muscle does the discomfort of reasoning from nothing develop?"
+
+  - id: "p0-ch4-first-principles-vs-ai-005"
+    front: "What four components make up a First Principles Worksheet?"
+    back: "1. Base constraints identified\n2. Assumptions explicitly listed\n3. Derivation chain from constraints to solution\n4. Comparison against AI's approach"
+    tags: ["first-principles-worksheet", "structure"]
+    difficulty: "basic"
+
+  - id: "p0-ch4-first-principles-vs-ai-006"
+    front: "How does comparing student solutions against each other demonstrate the Divergence Test principle?"
+    back: "Students who reason from principles produce divergent solutions because different constraint prioritizations lead to different conclusions — whereas students who borrowed patterns converge on similar standard answers."
+    tags: ["divergence-test", "originality"]
+    difficulty: "intermediate"
+    why: "What would near-identical solutions across many students suggest about how they arrived at their answers?"
+
+  - id: "p0-ch4-first-principles-vs-ai-007"
+    front: "Why does constraint identification become foundational for the rest of the book?"
+    back: "Every design and architecture decision requires identifying what is truly non-negotiable vs. what is assumed — because building on unexamined assumptions produces solutions that break when conditions change."
+    tags: ["constraints", "foundational-skill"]
+    difficulty: "advanced"
+    why: "How does constraint identification connect to the variable shift exercise from Chapter 3?"
+
+  - id: "p0-ch4-first-principles-vs-ai-008"
+    front: "A novel problem has 'no established solution.' Why does this make first principles reasoning essential?"
+    back: "Without existing solutions to borrow, pattern-based reasoning has nothing to match against — only derivation from base constraints can produce a valid approach to genuinely unprecedented problems."
+    tags: ["novel-problem", "first-principles"]
+    difficulty: "intermediate"

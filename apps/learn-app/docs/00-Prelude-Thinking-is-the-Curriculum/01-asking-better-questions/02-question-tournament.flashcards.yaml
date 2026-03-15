@@ -1,0 +1,58 @@
+deck:
+  id: "p0-ch01-question-tournament"
+  title: "The Question Tournament"
+  description: "Key concepts from the Question Tournament exercise on evaluating and comparing question quality"
+  tags: ["Part 0", "question formulation", "question evaluation", "peer comparison"]
+  version: 1
+
+cards:
+  - id: "p0-ch01-question-tournament-001"
+    front: "In the Question Tournament, what do students do with their partner's 15 questions?"
+    back: "Rank them from most to least diagnostic, writing a one-sentence justification for each ranking."
+    tags: ["question-tournament", "peer-evaluation"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-question-tournament-002"
+    front: "What is the difference between a question marked 'useful/actionable' and one marked 'generic/filler' in the comparison table?"
+    back: "Useful/actionable questions produce specific, divergent answers that narrow the problem. Generic/filler questions produce responses any AI would give regardless of the question."
+    tags: ["question-quality", "actionable-vs-generic"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch01-question-tournament-003"
+    front: "Why does evaluating someone else's questions develop your skill faster than only evaluating your own?"
+    back: "Because you see questioning patterns invisible in your own work. Distance from authorship removes blind spots — you judge quality without defending ego."
+    tags: ["peer-evaluation", "blind-spots"]
+    difficulty: "intermediate"
+    why: "What specific blind spot could a partner's questions reveal that self-review cannot?"
+
+  - id: "p0-ch01-question-tournament-004"
+    front: "A well-phrased question produces a generic AI response. How is this possible?"
+    back: "Because phrasing and diagnostic power are different skills. A question can be grammatically clear but too broad or too obvious to generate novel insight — it asks what AI already covers by default."
+    tags: ["diagnostic-power", "question-quality"]
+    difficulty: "advanced"
+    why: "How would you redesign such a question to increase its diagnostic power?"
+
+  - id: "p0-ch01-question-tournament-005"
+    front: "How many questions does each student generate without AI in the Question Tournament?"
+    back: "15 questions."
+    tags: ["question-tournament", "exercise-format"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-question-tournament-006"
+    front: "After ranking, how many total questions are fed to both Claude and ChatGPT for comparison?"
+    back: "10 total — the top 5 from each student's list."
+    tags: ["question-tournament", "exercise-format"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-question-tournament-007"
+    front: "Why does the tournament format make the difference between a good question and a great question 'viscerally clear'?"
+    back: "Because direct side-by-side comparison of AI responses reveals which questions actually produce insight. Abstract quality judgments become concrete when you see one question unlock useful analysis while another produces generic filler."
+    tags: ["question-tournament", "comparative-evaluation"]
+    difficulty: "intermediate"
+    why: "Why is seeing the AI response to both questions more convincing than just discussing question quality in theory?"
+
+  - id: "p0-ch01-question-tournament-008"
+    front: "In the Solo Learner Alternative, how does the AI partner dynamic differ from a human partner?"
+    back: "AI is more consistent than a human partner — its questions follow predictable patterns. The skill of evaluating external questions still develops, but surprises are rarer."
+    tags: ["solo-learner", "ai-collaboration"]
+    difficulty: "intermediate"

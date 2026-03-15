@@ -134,6 +134,22 @@ It explains how to identify valuable AI employee opportunities, turn expert know
 
 By the end of this book, you will not simply understand agentic AI as an idea. You will understand how to manufacture dependable Digital FTEs as an organizational capability.
 
+---
+
+## This Book Is Infrastructure, Not Just Text: Three Modes of Delivery
+
+Most books are written to be read. This book is written to be read, to teach through an AI tutor, and to guide an AI building partner — all from the same knowledge base. It is not just a book. It is the foundation of a learning and development ecosystem designed for three modes of delivery.
+
+**Mode 1: Human Reading.** The traditional path. You read the chapters, study the frameworks, complete the exercises, and build deployable artefacts. Every chapter in this book stands on its own as a self-contained unit of professional education. This mode is what the Reader Guide below describes.
+
+**Mode 2: TutorClaw — Your Personal AI Tutor.** TutorClaw is a teaching agent that uses this book as its knowledge foundation. It runs 24/7 with persistent memory across WhatsApp, Telegram, and web — meeting you where you already are. It teaches you step-by-step. When you ask TutorClaw to explain IFRS 9 staging or walk you through a SKILL.md for contract review, it draws on the same domain knowledge, the same governance principles, and the same jurisdiction-aware frameworks that the chapters contain. But it adapts to your pace, your background, and your questions in real time. The book gives TutorClaw its expertise. TutorClaw gives the book a voice.
+
+**Mode 3: The FTE Development Plugin — Your AI Building Partner.** The FTE Development Plugin for Claude Code uses this book as its operational playbook. When you are building a Digital FTE — writing the spec, structuring the SKILL.md, defining escalation protocols, configuring MCP connectors — the plugin guides you through the development workflow step by step, drawing on the patterns, templates, and domain knowledge encoded in every chapter. Where TutorClaw teaches you the *theory*, the FTE Plugin walks beside you during *construction*. It is the difference between reading about how a factory works and having a foreman on the floor.
+
+**Why this matters.** The same knowledge base powers all three modes. When a chapter is updated — a new jurisdiction overlay for banking compliance, a refined escalation protocol for legal ops — the update propagates to TutorClaw's teaching and the FTE Plugin's guidance simultaneously. The book is not a static artefact. It is the single source of truth for an ecosystem: human learning, AI tutoring, and AI-assisted building, all drawing from one authoritative foundation.
+
+This is the [10-80-10 pattern](https://agentfactory.panaversity.org/docs/thesis#the-10-80-10-rule-the-operating-rhythm-of-the-ai-workforce) applied to education itself. The book sets the intent (the first 10% — the domain knowledge, the frameworks, the professional standards). TutorClaw and the FTE Plugin handle execution (the 80% — the personalised teaching, the step-by-step building guidance). You verify the outcome (the final 10% — the professional judgment that confirms the agent is correct, the deployment is safe, and the knowledge is sound).
+
 
 ---
 

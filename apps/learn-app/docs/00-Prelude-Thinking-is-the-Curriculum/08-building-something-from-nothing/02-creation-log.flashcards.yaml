@@ -1,0 +1,60 @@
+deck:
+  id: "p0-ch08-creation-log"
+  title: "The Creation Log"
+  description: "Key concepts from the Creation Log exercise on AI collaboration attribution and creative direction"
+  tags: ["creation-log", "AI-collaboration", "attribution", "Part-0"]
+  version: 1
+
+cards:
+  - id: "p0-ch08-creation-log-001"
+    front: "What are the three attribution categories in the Creation Log?"
+    back: "Human, AI, and Synthesis."
+    tags: ["creation-log", "attribution"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-creation-log-002"
+    front: "What does 'Synthesis' mean in the Creation Log attribution?"
+    back: "An idea that emerged from the human-AI interaction that neither would have produced alone."
+    tags: ["synthesis", "attribution"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-creation-log-003"
+    front: "How many interactions must the Creation Log document at minimum?"
+    back: "At least 10 interactions."
+    tags: ["creation-log", "requirements"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-creation-log-004"
+    front: "Why should true Synthesis attributions be rare in a Creation Log?"
+    back: "Because genuine synthesis -- ideas neither human nor AI would produce independently -- is uncommon. If more than 30% of entries are Synthesis, the student is likely misattributing AI-driven ideas to avoid acknowledging AI's contribution."
+    tags: ["synthesis", "intellectual-honesty"]
+    difficulty: "intermediate"
+    why: "How can you tell the difference between genuine synthesis and misattributed AI output?"
+
+  - id: "p0-ch08-creation-log-005"
+    front: "Why does the Creation Log ask students to identify the single most valuable contribution from themselves and from AI?"
+    back: "Because it forces honest assessment of relative strengths. Understanding where human value and AI value each peak in a collaboration reveals how to direct future partnerships more effectively."
+    tags: ["creation-log", "self-assessment"]
+    difficulty: "intermediate"
+    why: "What would it mean if the student cannot identify their own most valuable contribution?"
+
+  - id: "p0-ch08-creation-log-006"
+    front: "How can AI collaboration make a solution worse rather than better?"
+    back: "AI can make solutions more generic and less original by replacing unique human insights with common patterns from training data. The Creation Log helps identify where AI input diluted rather than improved the work."
+    tags: ["AI-collaboration", "generic-output"]
+    difficulty: "intermediate"
+    why: "How would you recognize the moment when AI is making your work more generic?"
+
+  - id: "p0-ch08-creation-log-007"
+    front: "What is the difference between leading AI collaboration and following AI's lead?"
+    back: "Leading means the student directs the process with specific prompts and evaluates output critically. Following means accepting AI suggestions passively. The Creation Log reveals which pattern dominated."
+    tags: ["creative-direction", "AI-collaboration"]
+    difficulty: "intermediate"
+    why: "Why does passive acceptance produce lower-quality collaborative outcomes?"
+
+  - id: "p0-ch08-creation-log-008"
+    front: "Why does the Creation Log become the default workflow for Parts 2-10 of the book?"
+    back: "Because it provides an operational framework for honest human-AI collaboration -- making invisible attribution visible -- that applies to any creative or analytical task, not just this exercise."
+    tags: ["creation-log", "reusable-workflow"]
+    difficulty: "advanced"
+    why: "How would you adapt the Creation Log format for a technical coding project?"
