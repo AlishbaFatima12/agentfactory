@@ -119,6 +119,38 @@ Let's start with the most basic question: when an AI agent has access to a termi
   height={700}
 />
 
+## How to Read This Chapter: PRIMM-AI+ in Action
+
+In Chapter 30, you learned the PRIMM-AI+ framework — Predict, Run, Investigate, Modify, Make — with AI-free checkpoints, confidence scoring, and mastery gates. This chapter is where you put that framework to work for the first time.
+
+Every axiom ends with a **PRIMM-AI+ Practice** section that gives you structured exercises following all five stages. These exercises use **real-world scenarios and plain-English reasoning**, not code. You will reason about software engineering concepts through familiar situations — shipping an app update like James does in the lesson, planning a birthday party, designing a registration form, tracking student grades, naming essay files. You do not need to write code. Coding applications of these axioms begin in Chapter 33 and beyond.
+
+Here is what each stage looks like in this chapter. To make it concrete, here is a preview using Axiom I (Shell as Orchestrator), where you step into James's shoes from the lesson:
+
+- **Predict [AI-FREE]**: You close your AI assistant and commit to a prediction with a confidence score. In Axiom I, your team needs to ship an app update. You see six tasks — "the testing tool checks the code," "someone decides if the process stops when tests fail," "the app gets packaged," and so on. You classify each task as *coordination* (deciding, sequencing, routing) or *work* (actually doing a specific job). You write your classifications down *before* asking AI. This protects the cognitive work that builds real understanding.
+- **Run**: You ask your AI assistant the same question and compare its answer to your prediction. You give AI the same six tasks and ask it to classify them as coordination or work. Maybe you agreed on five but disagreed on one. The learning happens in the *comparison* — not in the AI's answer alone.
+- **Investigate**: You write an explanation in your own words, then classify the problem using the **Error Taxonomy**. In Axiom I, you explain why James's 400-line deployment script broke: it tangled coordination with computation, which is an **orchestration error** — the script was simultaneously deciding *what to run next* and *doing the work itself*, so when something failed at 2am, nobody could find the sequencing logic buried inside hundreds of lines. The five error types you will learn to recognize across the chapter are: type error (wrong data shape), logic error (wrong reasoning), specification error (ambiguous requirements), data/edge-case error (unexpected inputs), and orchestration error (tangled responsibilities).
+- **Modify**: You change the scenario and reason about what breaks. In Axiom I, you learn that in James's original script, the step that checked whether tests passed also read all the test output, counted failures, calculated a pass percentage, and formatted a summary — 40 lines of computation crammed into the coordination layer. You explain why this is the core problem and what the orchestration file should do instead. This builds the instinct to ask "is this the right layer for this work?" before problems happen.
+- **Make [Mastery Gate]**: You create something new that demonstrates your understanding. In Axiom I, you write a 5-step plan for a process you go through regularly — submitting an assignment, publishing a post, preparing a presentation — where each step clearly separates *what happens* (the work), *who does it* (a person or tool), and *what the coordinator's only job is* (check, decide, trigger — never do the work). This is not optional — it is the gate that confirms you have internalized the axiom.
+
+Selected Practice sections also include **Parsons Problems** — scrambled steps that you reorder into the correct sequence. These appear in Axioms I (deployment steps), IV (sandwich shop process), and VII (custom T-shirt order).
+
+### The Verification Ladder
+
+As you work through the ten axioms, you will climb the **Verification Ladder** — five levels of checking that build on each other:
+
+| Rung | Name | Introduced At | What It Means |
+|------|------|--------------|---------------|
+| 1 | Prediction | Axiom I | Predict an outcome, then check if you were right |
+| 2 | Types | Axiom V | Catch errors by checking the *shape* of data (is this a number or text?) |
+| 3 | Tests | Axiom VII | Define what "correct" means *before* building, then verify against it |
+| 4 | Pipeline | Axiom IX | Run multiple checks in order — fast checks first, slow checks last |
+| 5 | Observability | Axiom X | Watch what happens *after* delivery to catch problems you could not anticipate |
+
+**Why only five axioms, not all ten?** The Verification Ladder tracks *methods of checking*. Five axioms introduce a new way to verify (prediction, types, tests, pipelines, observability). The other five axioms — knowledge format (II), programs vs scripts (III), composition (IV), relational data (VI), and version control (VIII) — teach you *what to build well*, but they do not introduce a new verification method. Those axioms still use Rung 1 (prediction) in every Predict step, but they do not add a new rung because their subject is structure, not verification.
+
+The ten axioms teach you *what* professional AI-driven development looks like. PRIMM-AI+ is *how* you make it yours.
+
 ## Prerequisites
 
 - **Part 1**: General Agents Foundations (Chapters 1-4)
