@@ -29,7 +29,7 @@ REPO_ROOT="../.."
 # ---------------------------------------------------------------------------
 if [ ! -d "${REPO_ROOT}/.git" ]; then
   echo "WARNING: .git missing — creating minimal git history for Docusaurus lastUpdatedAt"
-  (cd "$REPO_ROOT" && git init && git add apps/ libs/ packages/ nx.json pnpm-workspace.yaml package.json && git commit -m 'vercel build' --allow-empty)
+  (cd "$REPO_ROOT" && git init && git add apps/ libs/ packages/ nx.json pnpm-workspace.yaml package.json && git -c user.name='Vercel Build' -c user.email='noreply@vercel.com' commit -m 'vercel build' --allow-empty)
 fi
 
 # Cross-platform sharp check: when building on Linux (WSL or CI) from a

@@ -1,5 +1,6 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { useLocation } from '@docusaurus/router';
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -12,6 +13,7 @@ import { getLocaleUrl } from '../utils/getLocaleUrl';
 
 export function LocaleDropdown() {
   const { siteConfig, i18n } = useDocusaurusContext();
+  const location = useLocation();
 
   const defaultLocale = i18n.defaultLocale;
   const currentLocale = i18n.currentLocale;
@@ -19,12 +21,8 @@ export function LocaleDropdown() {
   const currentLabel = currentLocaleConfig?.label || 'English';
 
   const buildLocaleUrl = (targetLocale: string): string => {
-    const pathname = typeof window !== 'undefined' ? window.location.pathname : '/';
-    const search = typeof window !== 'undefined' ? window.location.search : '';
-    const hash = typeof window !== 'undefined' ? window.location.hash : '';
-
     const url = getLocaleUrl({
-      pathname,
+      pathname: location.pathname,
       currentLocale,
       targetLocale,
       defaultLocale,
@@ -32,6 +30,9 @@ export function LocaleDropdown() {
       baseUrl: siteConfig.baseUrl,
     });
 
+    // search/hash are only available client-side
+    const search = typeof window !== 'undefined' ? window.location.search : '';
+    const hash = typeof window !== 'undefined' ? window.location.hash : '';
     return url + search + hash;
   };
 

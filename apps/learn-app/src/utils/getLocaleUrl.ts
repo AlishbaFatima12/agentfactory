@@ -35,11 +35,6 @@ export function getLocaleUrl({
     }
   }
 
-  // Ensure we still have a leading slash if it became empty
-  if (!rootBasePath && baseUrl.startsWith('/')) {
-    rootBasePath = '';
-  }
-
   // Extract the part of pathname after the active base path
   const activeBasePath = baseUrl.replace(/\/$/, '');
   let pathAfterBase = pathname;
