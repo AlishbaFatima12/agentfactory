@@ -136,7 +136,7 @@ In [Chapter 17](/docs/General-Agents-Foundations/seven-principles/observability)
 
 Axiom X takes this further. The principle is about human-AI collaboration transparency. The axiom is about **production engineering discipline**:
 
-| Principle 7 (Chapter 6)     | Axiom X (This Lesson)                            |
+| Principle 7 (Chapter 17)    | Axiom X (This Lesson)                            |
 | --------------------------- | ------------------------------------------------ |
 | See what the AI did         | Monitor what the system is doing continuously    |
 | Activity logs for debugging | Structured logs, metrics, traces for operations  |

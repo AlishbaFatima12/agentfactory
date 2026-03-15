@@ -421,7 +421,7 @@ The chapter README needs:
 3. **L16 fix** — most critical lesson fix (wrong install commands)
 4. **L02-L06 improvements** — add plugin commands to exercises (minor edits)
 5. **L07-L15** — add download links, verify command references
-6. **Plugin spec rewrite** — update `specs/ch-19/plugin-spec.md` to match Option A
+6. **Plugin spec rewrite** — update `specs/lightweight/ch-30/plugin-spec.md` to match Option A
 7. **Plan.md update** — update to match Option A
 
 ---

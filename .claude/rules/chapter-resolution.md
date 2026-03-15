@@ -14,20 +14,28 @@
 
 ```
 apps/learn-app/docs/
-├── 00-Introduction-to-AI-Agents/              ← Part 0
-│   ├── 01-welcome/                            ← Chapter 1
-│   ├── 02-what-are-ai-agents/                 ← Chapter 2
-│   └── ...up to 11-calibrating-ai-prompts/    ← Chapter 11
+├── 00-Prelude-Thinking-is-the-Curriculum/     ← Part 0
+│   ├── 01-asking-better-questions/            ← Chapter 1
+│   ├── 02-detecting-broken-reasoning/         ← Chapter 2
+│   └── ...up to 11-thinking-portfolio/        ← Chapter 11
 ├── 01-General-Agents-Foundations/              ← Part 1
 │   ├── 12-agent-factory-paradigm/             ← Chapter 12
-│   ├── 13-general-agents/                     ← Chapter 13 (planned)
-│   └── ...up to 18-...                        ← Chapter 18
+│   ├── 13-markdown-writing-instructions/      ← Chapter 13
+│   └── ...up to 18-meet-your-first-ai-employee/ ← Chapter 18
 ├── 02-Agent-Workflow-Primitives/               ← Part 2
-│   ├── 19-build-your-first-personal-ai-employee/ ← Chapter 19
-│   └── ...up to 24-...                        ← Chapter 24
+│   ├── 19-file-processing/                    ← Chapter 19
+│   └── ...up to 24-build-first-ai-employee/   ← Chapter 24
 ├── 03-Business-Domain-Agent-Workflows/         ← Part 3
-│   ├── 25-enterprise-blueprint/               ← Chapter 25
-│   └── ...up to 40-...                        ← Chapter 40
+│   ├── 01-foundations/                        ← Section
+│   │   ├── 25-enterprise-agentic-landscape/   ← Chapter 25
+│   │   └── ...
+│   ├── 02-office-of-the-cfo/                 ← Section
+│   │   ├── 28-finance-domain-agents/          ← Chapter 28
+│   │   └── ...up to 32-banking-domain-agents/ ← Chapter 32
+│   ├── 03-legal-and-compliance/               ← Section
+│   │   └── 33-legal-operations-and-compliance/← Chapter 33
+│   └── 04-the-growth-engine/                  ← Section
+│       └── 34-sales-revops-marketing/         ← Chapter 34
 ├── 04-Programming-in-the-AI-Era/              ← Part 4
 │   └── ...
 └── ...
