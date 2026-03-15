@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 title: "Calibrating and Maintaining AI Prompts"
 description: "A semester-by-semester maintenance protocol for keeping Part 0's AI assessment prompts accurate as AI models evolve"
 keywords:

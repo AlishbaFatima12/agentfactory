@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-title: "Thinking Portfolio"
+title: "Chapter 11: Thinking Portfolio"
 slides:
   source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-0/chapter-12/cognitive-telemetry.pdf"
   title: "Cognitive Telemetry: Measuring Thinking Growth"
