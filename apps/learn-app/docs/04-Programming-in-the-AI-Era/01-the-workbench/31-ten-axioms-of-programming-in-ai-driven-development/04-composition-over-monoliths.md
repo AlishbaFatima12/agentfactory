@@ -112,7 +112,7 @@ When these properties hold, units compose naturally — like LEGO bricks that sn
 
 ## From Principle to Axiom
 
-In Chapter 4, you learned **Principle 4: Small, Reversible Decomposition**—breaking problems into atomic steps that can be independently verified and rolled back. That principle governs your *process*: how you approach solving problems.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/small-reversible-decomposition), you learned **Principle 4: Small, Reversible Decomposition**—breaking problems into atomic steps that can be independently verified and rolled back. That principle governs your *process*: how you approach solving problems.
 
 Axiom IV governs your *architecture*: how you structure the solutions themselves.
 
@@ -250,6 +250,10 @@ Composition solves this at the structural level:
 
 ## Dependency Injection: Composition of Behavior
 
+:::tip Advanced pattern preview
+Dependency injection is a powerful technique you will use in later chapters. For now, focus on the *concept*: instead of permanently wiring a system to one specific tool, you make the tool swappable. Think of it like a restaurant that can switch food suppliers without retraining the chef.
+:::
+
 Emma showed James one more technique that made the composed version powerful in a way the monolith could never be: instead of hardcoding *which* payment processor or *which* database the function uses, you pass the implementation as a parameter.
 
 ```python static
@@ -321,100 +325,149 @@ Do not compose when the code is simple and unlikely to change, when the abstract
 
 ## Try With AI
 
-### Prompt 1: Refactor a Monolith
+### Prompt 1: Spot the "God Employee"
 
 ```
-Here is a monolithic function. Help me decompose it into composable units.
+I want to understand why composition beats monoliths using a real-world
+scenario.
 
-[Paste a long function from your own code, or use this example:]
+Here is a small business where one person does everything:
+- Takes customer orders (phone, email, walk-in)
+- Manages inventory (tracking what is in stock, reordering)
+- Handles accounting (invoices, payments, tax records)
+- Does marketing (social media, flyers, promotions)
+- Provides customer support (complaints, returns, questions)
 
-def process_csv_report(filepath):
-    # Read file
-    with open(filepath) as f:
-        lines = f.readlines()
-    # Parse headers
-    headers = lines[0].strip().split(',')
-    # Parse rows
-    rows = []
-    for line in lines[1:]:
-        values = line.strip().split(',')
-        row = dict(zip(headers, values))
-        rows.append(row)
-    # Filter valid rows
-    valid = [r for r in rows if r.get('status') == 'active']
-    # Calculate totals
-    total = sum(float(r['amount']) for r in valid)
-    # Format output
-    report = f"Active records: {len(valid)}\nTotal amount: ${total:.2f}"
-    # Write report
-    with open('report.txt', 'w') as f:
-        f.write(report)
-    return report
+Help me "decompose" this business into focused roles:
+1. What is each role's single responsibility?
+2. What information does each role need from the others (the "interface")?
+3. What happens when the business grows from 10 to 100 customers per day?
+4. What happens if the single person gets sick for a week?
 
-For each composed unit you extract:
-1. What is its single responsibility?
-2. What are its inputs and outputs (the interface)?
-3. How would you test it independently?
-4. Could an AI regenerate just this unit without affecting the rest?
+Then explain: how does this map to software? What is the "god employee"
+equivalent in code?
 ```
 
-**What you're learning**: The practical skill of identifying composition boundaries in real code. You are developing an eye for where responsibilities separate and where interfaces naturally emerge—the core skill for writing AI-friendly, maintainable code.
+**What you're learning**: How to identify when a single unit has too many responsibilities and how to decompose it into focused, independent roles. The "god employee" is the real-world equivalent of a "god class" in code — one entity trying to do everything, becoming a bottleneck and a single point of failure.
 
-### Prompt 2: Design an Interface
-
-```
-I want to understand dependency injection and interface-based design.
-
-Take this tightly coupled function:
-
-def save_user_data(user):
-    db = PostgresConnection("localhost", 5432, "mydb")
-    db.insert("users", user)
-    logger = FileLogger("/var/log/app.log")
-    logger.info(f"User {user['name']} saved")
-    emailer = SmtpClient("smtp.gmail.com", 587)
-    emailer.send(user['email'], "Welcome!", "Account created.")
-
-Help me redesign this so that:
-- The storage mechanism is injectable (could be Postgres, SQLite, or in-memory)
-- The logging mechanism is injectable (could be file, console, or nothing)
-- The notification mechanism is injectable (could be email, SMS, or a test stub)
-
-Show me:
-1. The interface each dependency should satisfy
-2. The refactored function using dependency injection
-3. Three different compositions: production, testing, development
-4. Why this makes the code more AI-friendly
-```
-
-**What you're learning**: How to decouple behavior from implementation through interfaces and dependency injection. You are learning to think about *what* a component needs (its interface) separately from *how* that need is fulfilled (its implementation)—a fundamental skill for composable architecture.
-
-### Prompt 3: Composition in Your Domain
+### Prompt 2: The Swappability Test
 
 ```
-I work in [describe your domain: web development, data science, DevOps, mobile apps, etc.].
+I want to understand why "swappable parts" matter in any system.
 
-Help me apply the Composition Over Monoliths axiom to my specific context:
+Consider planning a school fundraiser with these tasks:
+- Food (currently: homemade baked goods)
+- Entertainment (currently: a student band)
+- Venue (currently: the school gym)
+- Tickets (currently: sold at the door)
+- Publicity (currently: posters in hallways)
 
-1. What are the "focused units" in my domain?
-   (In web dev: components, middleware, routes. In data science: transforms, models, pipelines.)
+For each task, answer:
+1. Can I swap the approach (e.g., switch from baked goods to a food truck)
+   WITHOUT changing how the other tasks work?
+2. If swapping one task forces changes to others, what is tangled together?
+3. What is the "interface" between tasks — what does each task need to
+   know about the others? (e.g., Food needs to know the venue capacity,
+   but NOT how tickets are sold)
 
-2. What are the "interfaces" between units?
-   (In web dev: props, request/response. In data science: DataFrames, arrays.)
-
-3. What does a "god class" look like in my domain?
-   (Show me a realistic anti-pattern I might encounter.)
-
-4. What does a well-composed system look like in my domain?
-   (Show me the same functionality decomposed into focused units.)
-
-5. How does composition specifically help AI tools in my domain?
-   (What can an AI do better when my code is composed vs. monolithic?)
-
-Use concrete examples from [my specific technology stack or project type].
+Then explain: why does this "swappability test" matter when you are
+building something with AI? What happens when an AI generates a new
+approach for one task but everything else breaks?
 ```
 
-**What you're learning**: How to translate the universal principle of composition into the specific patterns and practices of your domain. Every field has its own version of "focused units" and "interfaces"—learning to recognize yours is what transforms abstract knowledge into practical skill.
+**What you're learning**: The composition test in action — if you can swap one part without breaking others, your system is well-composed. If swapping forces cascading changes, your parts are tangled. This is the same test Emma taught James, applied to a system you already understand.
+
+### Prompt 3: Decompose Your Own "Monolith"
+
+```
+I want to apply the Composition Over Monoliths axiom to something I do.
+
+Think of a process in my life that has become a "monolith" — something
+where everything is tangled together. For example:
+- My morning routine where being late at one step makes everything cascade
+- A group project where one person's delay blocks everyone else
+- Planning a family event where changing one detail (venue, date, menu)
+  forces changes to everything else
+
+Help me decompose it:
+1. List all the responsibilities currently tangled together
+2. Group them into 4-6 focused "units" where each unit has one job
+3. Define the "interface" between units — what does each unit need
+   from the others?
+4. Apply the composition test: can each unit be swapped, tested,
+   or changed independently?
+5. What is the "god class" equivalent in my example — the one thing
+   that is doing too much?
+```
+
+**What you're learning**: How to apply composition thinking to any complex process. The pattern is universal — whether you are organizing a system of people, a household routine, or a software architecture, the same decomposition principles apply. Focused units with clear interfaces beat tangled monoliths every time.
+
+---
+
+## PRIMM-AI+ Practice: Composition Over Monoliths
+
+### Predict [AI-FREE]
+
+Close your AI assistant. Consider two restaurants:
+
+**Restaurant A**: One employee takes orders, cooks, serves food, washes dishes, AND handles billing.
+
+**Restaurant B**: Separate people handle each job — one takes orders, one cooks, one serves, one washes dishes, one handles billing.
+
+Predict: What happens in each restaurant when the cook is absent for the day? What about when they suddenly get 50 customers at once instead of the usual 10? Write your predictions for both scenarios. Rate your confidence from 1 to 5.
+
+### Run
+
+Ask your AI assistant: *"Compare two restaurant models: (A) one employee does everything (orders, cooking, serving, dishes, billing) versus (B) separate people for each job. What happens in each model when the cook is absent for the day? What about when 50 customers arrive at once?"*
+
+Compare. Did the AI identify failure modes you missed? Did you catch any that the AI did not mention?
+
+<details>
+<summary><strong>Answer Key — Check Your Prediction</strong></summary>
+
+**When the cook is absent for the day:**
+- **Restaurant A** shuts down completely. The single employee IS the cook, the server, the cashier — everything. There is no one to take over cooking while the other tasks continue. The entire restaurant closes, or the one person tries to cook while also taking orders and washing dishes, and quality collapses across the board.
+- **Restaurant B** loses only the cooking function. The order-taker, server, dishwasher, and cashier continue working. The owner can hire a temporary cook, or the remaining staff can adjust (the server helps with simple prep) without disrupting the other roles. One failure does not cascade.
+
+**When 50 customers arrive at once:**
+- **Restaurant A** bottlenecks immediately. One person cannot take 50 orders, cook 50 meals, serve 50 plates, wash 50 sets of dishes, and process 50 payments. Every task waits for every other task because they are all the same person. Customers wait in a single, growing queue.
+- **Restaurant B** scales naturally. The order-taker handles the queue while the cook works through orders in parallel. The server delivers completed meals while the cook starts the next batch. Each role operates at its own pace. You can even add a second cook without changing how orders are taken or how bills are paid.
+
+The key insight: Restaurant A is a **monolith** — everything is tangled into one unit, so any failure or surge affects everything. Restaurant B is **composed** — each role is independent, so failures are isolated and scaling is possible.
+
+</details>
+
+### Investigate
+
+Now connect the restaurant to the lesson. James changed the discount logic on line 712 of `process_order()` and the tax calculation broke. The cook in Restaurant A called in sick and the entire restaurant shut down. **What is the shared structural flaw?**
+
+Write in your own words — without asking AI — which specific quality of Restaurant B would have prevented James's cascading breakage. Map it directly: what is the restaurant's "separate cook" equivalent in Emma's composed version of `process_order()`?
+
+Apply the **Error Taxonomy**: James's 1,400-line function and Restaurant A share the same failure — **orchestration error**. Responsibilities are tangled together so that a change in one area (discount logic / cooking) cascades into unrelated areas (tax calculation / ordering, serving, billing). The fix in both cases is the same: give each responsibility its own unit with a clear boundary.
+
+### Parsons Problem
+
+A sandwich shop has five steps in its process, listed here in scrambled order:
+
+- (A) Wrap and hand the sandwich to the customer
+- (B) Toast the bread
+- (C) Take the customer's order
+- (D) Add the requested toppings
+- (E) Prepare the ingredients (slice meat, wash lettuce)
+
+Put them in the correct order. Then answer: if the shop adds a new "add sauce" step, where does it go in the sequence? Does adding this step require changing any of the other steps?
+
+### Modify
+
+The restaurant owner decides that the cook should also handle billing to "save money." What specific problems will this cause? Think about what happens during the lunch rush, when the cook is busy with five orders and a customer needs to pay.
+
+### Make [Mastery Gate]
+
+Pick a complex task you do regularly — cleaning your house, preparing for exams, organizing a trip with friends. Break it into **4-6 independent steps** where each step has one clear job. For each step, ask yourself: *Can I swap this step for a different approach without changing the others?*
+
+For example, if "clean the kitchen" is one step, could you swap "wipe counters by hand" for "use a cleaning service" without affecting "vacuum the living room"? If changing one step forces you to change others, they are not truly independent — try decomposing further.
+
+This breakdown is your mastery gate.
 
 ---
 
