@@ -408,66 +408,74 @@ Help me decompose it:
 
 ### Predict [AI-FREE]
 
-Close your AI assistant. Consider two restaurants:
+Close your AI assistant. Consider two hospitals:
 
-**Restaurant A**: One employee takes orders, cooks, serves food, washes dishes, AND handles billing.
+**Hospital A**: A single doctor handles every patient alone — triage, diagnosis, lab tests, surgery, prescriptions, AND discharge paperwork. Every patient waits for this one doctor to finish with the previous patient before anything happens.
 
-**Restaurant B**: Separate people handle each job — one takes orders, one cooks, one serves, one washes dishes, one handles billing.
+**Hospital B**: A composed emergency department — a triage nurse assesses urgency, an ER doctor diagnoses, a lab technician runs tests, a surgeon operates when needed, a pharmacist fills prescriptions, and a discharge coordinator handles paperwork. Each role has a clear responsibility and communicates through the patient's medical record (the "interface").
 
-Predict: What happens in each restaurant when the cook is absent for the day? What about when they suddenly get 50 customers at once instead of the usual 10? Write your predictions for both scenarios. Rate your confidence from 1 to 5.
+Predict two scenarios:
+1. The surgeon is in a 3-hour operation when a new trauma patient arrives who also needs surgery. What happens in each hospital?
+2. A mass casualty event brings 40 patients at once. How does each hospital cope?
+
+Write your predictions for both scenarios. Rate your confidence from 1 to 5.
 
 ### Run
 
-Ask your AI assistant: *"Compare two restaurant models: (A) one employee does everything (orders, cooking, serving, dishes, billing) versus (B) separate people for each job. What happens in each model when the cook is absent for the day? What about when 50 customers arrive at once?"*
+Ask your AI assistant: *"Compare two hospital models: (A) one doctor does everything for every patient — triage, diagnosis, lab tests, surgery, prescriptions, discharge — versus (B) separate specialists for each role who communicate through medical records. What happens when the surgeon is busy in a 3-hour operation and a new trauma patient arrives? What about a mass casualty event with 40 patients?"*
 
 Compare. Did the AI identify failure modes you missed? Did you catch any that the AI did not mention?
 
 <details>
 <summary><strong>Answer Key — Check Your Prediction</strong></summary>
 
-**When the cook is absent for the day:**
-- **Restaurant A** shuts down completely. The single employee IS the cook, the server, the cashier — everything. There is no one to take over cooking while the other tasks continue. The entire restaurant closes, or the one person tries to cook while also taking orders and washing dishes, and quality collapses across the board.
-- **Restaurant B** loses only the cooking function. The order-taker, server, dishwasher, and cashier continue working. The owner can hire a temporary cook, or the remaining staff can adjust (the server helps with simple prep) without disrupting the other roles. One failure does not cascade.
+**When the surgeon is in a 3-hour operation and a new trauma arrives:**
+- **Hospital A** is paralyzed. The single doctor IS the surgeon — they cannot leave the operating table. The new trauma patient waits 3 hours with no triage, no diagnosis, no stabilization. Every other patient in the ER also waits, because the one doctor is unavailable for anything. Lives are at risk because one role (surgery) has blocked all other roles.
+- **Hospital B** continues functioning. The triage nurse assesses the new trauma patient immediately. The ER doctor stabilizes them. If surgery is urgent, an on-call surgeon is brought in — the role is swappable. Meanwhile, the lab technician, pharmacist, and discharge coordinator continue serving other patients without interruption. The surgeon's unavailability affects only surgical cases, not the entire department.
 
-**When 50 customers arrive at once:**
-- **Restaurant A** bottlenecks immediately. One person cannot take 50 orders, cook 50 meals, serve 50 plates, wash 50 sets of dishes, and process 50 payments. Every task waits for every other task because they are all the same person. Customers wait in a single, growing queue.
-- **Restaurant B** scales naturally. The order-taker handles the queue while the cook works through orders in parallel. The server delivers completed meals while the cook starts the next batch. Each role operates at its own pace. You can even add a second cook without changing how orders are taken or how bills are paid.
+**During a mass casualty event (40 patients):**
+- **Hospital A** collapses. One doctor cannot triage 40 patients, diagnose 40 conditions, run 40 sets of tests, and perform multiple surgeries. Patients queue in a single line behind one overwhelmed person. Critical patients wait behind non-critical ones because there is no parallel processing.
+- **Hospital B** scales by parallelizing. The triage nurse rapidly sorts 40 patients by severity (critical, urgent, stable). Multiple ER doctors work in parallel. Lab technicians process tests concurrently. The pharmacy fills prescriptions without waiting for discharge paperwork. Each role operates at its own capacity, and the hospital can add more staff to any role that becomes a bottleneck — a second triage nurse, an extra ER doctor — without restructuring the entire department.
 
-The key insight: Restaurant A is a **monolith** — everything is tangled into one unit, so any failure or surge affects everything. Restaurant B is **composed** — each role is independent, so failures are isolated and scaling is possible.
+The key insight: Hospital A is a **monolith** — every responsibility is tangled into one person, so any blockage or surge brings everything to a halt. Hospital B is **composed** — each role is independent with clear interfaces (the medical record), so failures are isolated and the system scales by adding capacity to individual roles.
 
 </details>
 
 ### Investigate
 
-Now connect the restaurant to the lesson. James changed the discount logic on line 712 of `process_order()` and the tax calculation broke. The cook in Restaurant A called in sick and the entire restaurant shut down. **What is the shared structural flaw?**
+Now connect the hospital to the lesson. James changed the discount logic on line 712 of `process_order()` and the tax calculation broke. Hospital A's doctor was stuck in surgery and no other patient could be seen. **What is the shared structural flaw?**
 
-Write in your own words — without asking AI — which specific quality of Restaurant B would have prevented James's cascading breakage. Map it directly: what is the restaurant's "separate cook" equivalent in Emma's composed version of `process_order()`?
+Write in your own words — without asking AI — which specific quality of Hospital B would have prevented James's cascading breakage. Map it directly: what is Hospital B's "separate surgeon" equivalent in Emma's composed version of `process_order()`?
 
-Apply the **Error Taxonomy**: James's 1,400-line function and Restaurant A share the same failure — **orchestration error**. Responsibilities are tangled together so that a change in one area (discount logic / cooking) cascades into unrelated areas (tax calculation / ordering, serving, billing). The fix in both cases is the same: give each responsibility its own unit with a clear boundary.
+Apply the **Error Taxonomy**: James's 1,400-line function and Hospital A share the same failure — **orchestration error**. Responsibilities are tangled together so that a blockage in one area (discount logic / surgery) cascades into unrelated areas (tax calculation / triage, diagnosis, discharge). The fix in both cases is the same: give each responsibility its own unit with a clear boundary, communicating through a well-defined interface (typed function signatures / medical records).
 
 ### Parsons Problem
 
-A sandwich shop has five steps in its process, listed here in scrambled order:
+A patient arrives at Hospital B's emergency department. These five steps are in scrambled order:
 
-- (A) Wrap and hand the sandwich to the customer
-- (B) Toast the bread
-- (C) Take the customer's order
-- (D) Add the requested toppings
-- (E) Prepare the ingredients (slice meat, wash lettuce)
+- (A) Pharmacist fills the prescription
+- (B) Triage nurse assesses the patient's urgency
+- (C) Discharge coordinator completes paperwork and sends the patient home
+- (D) ER doctor examines the patient and makes a diagnosis
+- (E) Lab technician runs the ordered tests and returns results
 
-Put them in the correct order. Then answer: if the shop adds a new "add sauce" step, where does it go in the sequence? Does adding this step require changing any of the other steps?
+Put them in the correct order. Then answer: if the hospital adds a new "specialist consultation" step (e.g., a cardiologist reviews the case), where does it go in the sequence? Does adding this step require changing how the triage nurse, lab technician, or pharmacist do their jobs?
 
 ### Modify
 
-The restaurant owner decides that the cook should also handle billing to "save money." What specific problems will this cause? Think about what happens during the lunch rush, when the cook is busy with five orders and a customer needs to pay.
+The hospital administrator decides that the ER doctor should also fill prescriptions to "reduce staffing costs." What specific problems will this cause? Think about what happens during a busy night shift when the ER doctor is diagnosing a critical patient and three other patients are waiting for their prescriptions.
 
 ### Make [Mastery Gate]
 
-Pick a complex task you do regularly — cleaning your house, preparing for exams, organizing a trip with friends. Break it into **4-6 independent steps** where each step has one clear job. For each step, ask yourself: *Can I swap this step for a different approach without changing the others?*
+Pick a complex process you participate in — a group project at school, organizing a family event, or running a club activity. Break it into **4-6 independent roles** where each role has one clear responsibility. For each role, define:
 
-For example, if "clean the kitchen" is one step, could you swap "wipe counters by hand" for "use a cleaning service" without affecting "vacuum the living room"? If changing one step forces you to change others, they are not truly independent — try decomposing further.
+1. **What** is this role's single job?
+2. **What information** does it need from other roles (the "interface")?
+3. **Can this role be swapped** for a different person or approach without changing the others?
 
-This breakdown is your mastery gate.
+For example, in a group presentation: "researcher" gathers information, "slide designer" creates visuals, "presenter" delivers the talk, "editor" reviews for quality. Can you swap the slide designer without retraining the presenter? If changing one role forces changes to others, they are not truly independent — decompose further.
+
+This role breakdown is your mastery gate.
 
 ---
 
