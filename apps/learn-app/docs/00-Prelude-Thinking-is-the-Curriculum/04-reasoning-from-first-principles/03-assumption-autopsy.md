@@ -87,9 +87,13 @@ You will use the **Error Taxonomy** from [Chapter 2, Exercise 1](../02-detecting
 
 Take your solution from Exercise 2 and systematically expand your assumption list. First, try to find every hidden assumption yourself. Then feed your solution to both Claude and ChatGPT and ask each: "What assumptions am I making that I have not stated?" Compare the AI-identified assumptions against your own list. Create a merged assumption map.
 
+---
+
 :::info Your Deliverable
 Your expanded assumption list (written before AI). The AI-identified assumptions from both tools. A merged assumption map categorizing each assumption as: (a) found by you only, (b) found by AI only, (c) found by both, (d) found by neither but identified during the merge process. For each assumption, a brief note on whether it is reasonable, risky, or needs to be tested.
 :::
+
+---
 
 ```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
 I am doing an assumption autopsy on my own solution. I have listed my
@@ -116,6 +120,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

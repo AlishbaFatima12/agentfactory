@@ -96,13 +96,15 @@ import TabItem from "@theme/TabItem";
 
 Most students type the first thing that comes to mind into an AI tool and accept whatever comes back. This chapter trains you to treat question formulation as a disciplined practice. A vague question produces a vague answer. A precise, layered question produces insight. This is not about prompt engineering — it is about thinking clearly enough to know what you actually need to know.
 
+---
+
 ## Exercise 1: The Prediction Lock
 
 **Layers Used:** Layer 1 (Predict Before You Prompt), Layer 2 (Reasoning Receipt)
 
 ### What You Do
 
-You receive a business scenario. Before touching any AI tool, write down in a sealed document:
+You receive a scenario describing an unexpected outcome. Before touching any AI tool, write down in a sealed document:
 
 1. **(a)** Your initial diagnosis of what went wrong
 2. **(b)** The 10 most important questions you would ask to understand this problem, ranked by diagnostic power
@@ -131,6 +133,8 @@ Timestamp and submit this prediction lock. Only then open claude.ai or chatgpt.c
 
 Choose one. The exercises work identically regardless of which you pick.
 
+---
+
 :::info Your Deliverable
 A sealed prediction document (timestamped before AI use) containing your diagnosis, 10 ranked questions with predicted answers, followed by a reasoning receipt showing all 5 prompts sent to both Claude and ChatGPT, the responses received, and your accept/reject/modify decision for each with a one-sentence justification.
 :::
@@ -157,6 +161,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>
@@ -193,6 +199,8 @@ For each score, give a one-sentence justification.
 | 10       |             | ChatGPT |                  | Accept/Reject/Modify |               |
 
 </details>
+
+---
 
 ### What This Teaches You
 

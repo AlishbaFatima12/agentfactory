@@ -84,6 +84,8 @@ You will use the **Reasoning Receipt** format from [Chapter 1, Exercise 1](../01
 
 Ask both Claude and ChatGPT the same nuanced question where reasonable people disagree — for example: "Is remote work better for productivity than office work?" You will receive two confident, structured, partially contradictory answers. Your job: identify exactly where the two responses diverge, determine which claims are supported by evidence vs. asserted without support, and write your own third analysis (Draft 1) that is more rigorous than either AI output. Then submit your third analysis to AI for critique, revise based on the feedback (Draft 2), and submit the final version (Draft 3).
 
+---
+
 :::info Your Deliverable
 The two AI responses with divergence points highlighted and annotated ("Claude claims X, ChatGPT claims Y — the evidence favors..."). Your Draft 1 third analysis (written before AI feedback). Your Draft 2 (revised after AI critique). Your Draft 3 (final, after reflection). A brief evolution note for each draft explaining what changed and why.
 :::
@@ -115,6 +117,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

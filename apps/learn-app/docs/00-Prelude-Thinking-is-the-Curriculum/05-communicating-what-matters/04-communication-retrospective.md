@@ -85,6 +85,12 @@ teaching_guide:
 
 Role-play exercise with no AI access. You must deliver difficult news in a live 5-minute conversation with a peer: rejecting a vendor, giving negative performance feedback, or telling a client the project is delayed. The scenario is revealed 60 seconds before you begin. You cannot script it.
 
+:::tip Solo Learner Alternative
+Prompt AI: "You are playing [vendor/employee/client role]. I need to deliver difficult news: [scenario]. Respond naturally and emotionally as this person would. Stay in character for our entire conversation." Conduct 8-10 turns of dialogue. Then prompt AI to break character and rate your performance on empathy (1-10), clarity (1-10), honesty (1-10), and relationship preservation (1-10) with explanations.
+:::
+
+---
+
 :::info Your Deliverable
 Peer feedback form rating: empathy (1-10), clarity of the message (1-10), honesty (1-10), relationship preservation (1-10), and overall effectiveness (1-10) with written comments. Your post-exercise reflection (200 words) on what you did well, what you would change, and what was hardest.
 :::
@@ -116,9 +122,7 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
-:::tip Solo Learner Alternative
-Prompt AI: "You are playing [vendor/employee/client role]. I need to deliver difficult news: [scenario]. Respond naturally and emotionally as this person would. Stay in character for our entire conversation." Conduct 8-10 turns of dialogue. Then prompt AI to break character and rate your performance on empathy (1-10), clarity (1-10), honesty (1-10), and relationship preservation (1-10) with explanations.
-:::
+---
 
 ### What This Teaches You
 

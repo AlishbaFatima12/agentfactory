@@ -89,6 +89,12 @@ teaching_guide:
 
 Deliver a 10-minute teaching session to your peers on what you learned. The session is followed by 5 minutes of questions — questions that will go beyond what you prepared. No AI access during the session.
 
+:::tip Solo Learner Alternative
+Record yourself teaching the topic for 10 minutes (audio or video). Then prompt AI: "You are a student who knows nothing about [domain]. You just heard a 10-minute teaching session. Ask me 5 follow-up questions — mix basic comprehension with harder questions that test true understanding. Wait for my response to each before asking the next." Conduct the full Q&A and submit the transcript.
+:::
+
+---
+
 :::info Your Deliverable
 Your teaching session outline or slides (may use AI to help prepare, but document what you used). Peer feedback forms rating: clarity of explanation (1-10), depth of understanding demonstrated (1-10), ability to answer unexpected questions (1-10), and engagement (1-10). A list of every question you were asked, whether you could answer it, and for unanswered questions — your honest assessment of whether you genuinely did not know or knew but could not articulate.
 :::
@@ -119,9 +125,7 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
-:::tip Solo Learner Alternative
-Record yourself teaching the topic for 10 minutes (audio or video). Then prompt AI: "You are a student who knows nothing about [domain]. You just heard a 10-minute teaching session. Ask me 5 follow-up questions — mix basic comprehension with harder questions that test true understanding. Wait for my response to each before asking the next." Conduct the full Q&A and submit the transcript.
-:::
+---
 
 ### What This Teaches You
 

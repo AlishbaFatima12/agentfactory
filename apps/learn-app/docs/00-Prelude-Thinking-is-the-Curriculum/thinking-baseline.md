@@ -80,6 +80,8 @@ Read the following scenario:
 
 Without any AI tools, write responses to the following five tasks. Spend roughly 5-6 minutes on each. Do not overthink -- this is a snapshot, not a polished product.
 
+---
+
 :::info Thinking Baseline Task
 
 1. **Questions (Ch. 1 skill):** Write the 5 most important questions you would ask before making this decision.
@@ -88,6 +90,10 @@ Without any AI tools, write responses to the following five tasks. Spend roughly
 4. **Ethical Reasoning (Ch. 7 skill):** Take a position: should the hospital adopt the AI triage system? Identify who benefits, who is harmed, and what you would need to see to change your mind.
 5. **Decision Under Uncertainty (Ch. 9 skill):** Rate your confidence in your position (0-100%) and list the 3 pieces of missing information that would most change your decision.
    :::
+
+---
+
+## AI Baseline Check
 
 ```text title="AI Baseline Check -- Copy and paste into claude.ai or chatgpt.com"
 I am about to begin a 10-chapter course on thinking skills. Before I start,
@@ -117,6 +123,10 @@ I will repeat this exact exercise after completing all 10 chapters.
 
 Here are my responses: [paste all 5 responses].
 ```
+
+---
+
+## Save Your Work
 
 Save your baseline responses and your AI Baseline Score. You will need both after Chapter 10.
 

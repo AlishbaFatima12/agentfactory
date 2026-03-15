@@ -85,9 +85,13 @@ teaching_guide:
 This exercise uses the same structure as [Rebuild Under New Constraints](../04-reasoning-from-first-principles/04-rebuild-under-new-constraints.md) from Chapter 4. Your position is challenged, and you must adapt or defend.
 :::
 
+---
+
 ### What You Do
 
 Feed your position from Exercise 1 into Claude with a specific adversarial prompt. Receive AI counter-arguments. Respond in writing -- without AI. Feed your defence back to AI for a second round of attacks. Respond again. Three rounds total. If your position changes during the exercise, document the exact moment and reason.
+
+---
 
 :::info Your Deliverable
 The complete three-round exchange: Round 1 AI attack, then your defence (written without AI), then Round 2 AI attack, then your defence, then Round 3 AI attack, then your defence. A Position Tracker showing whether your position held, shifted, or reversed, with the exact reasoning at each round. A reflection (150 words) on which counter-argument was hardest to answer and why.

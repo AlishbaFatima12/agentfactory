@@ -87,9 +87,13 @@ You will use the same skill from [Chapter 2's Contradiction Test](../02-detectin
 
 The instructor changes one variable: "Now the bank is in a country where 60% of customers are unbanked and rely on personal relationships with loan officers." You must revise your merged cascade map into Draft 3. You cannot start from scratch — you must show which connections changed, which new ones appeared, and which old ones became irrelevant. Then ask AI to re-analyze with the new variable and compare its adaptation to yours.
 
+---
+
 :::info Your Deliverable
 Your revised cascade map (Draft 3) with every change visually marked: new connections (green), removed connections (red/strikethrough), modified connections (yellow). A "change log" listing every modification with a one-sentence explanation of why the variable shift caused this change. A comparison of your adaptation vs. AI's adaptation: where did you adapt better? Where did AI adapt better?
 :::
+
+---
 
 ```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
 I am learning to adapt systems thinking when conditions change.
@@ -121,6 +125,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

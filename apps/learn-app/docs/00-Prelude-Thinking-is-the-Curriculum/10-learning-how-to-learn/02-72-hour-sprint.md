@@ -100,6 +100,8 @@ You will use the **Collaboration Log** format from [Chapter 6, Exercise 2](../06
 
 You have 72 hours and full access to claude.ai, chatgpt.com, and the open web. Learn enough about your assigned domain to produce a competent analysis of a real problem within that domain (the instructor provides the specific problem at hour 0). Maintain a Learning Log throughout.
 
+---
+
 :::info Your Deliverable
 A competent analysis of the assigned problem in your new domain (500-800 words). A complete Learning Log in table format with at least 20 entries spanning the 72 hours. A mid-point reflection (written at hour 36) assessing: Am I on track? What needs to change?
 :::
@@ -138,6 +140,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

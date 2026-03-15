@@ -89,6 +89,8 @@ Chapter 2's error detection applied to AI's business analysis. Your Error Taxono
 
 Use AI to produce a competitive analysis for a product. The instructor has designed the prompt to produce an analysis with a specific subtle error (a logical flaw, a market assumption that does not hold, or an outdated data point). Without being told what the error is, you must: (a) identify it, (b) explain why AI made it, (c) produce a corrected version, and (d) design a prompt that would prevent this error in future.
 
+---
+
 :::info Your Deliverable
 The original AI-generated analysis. Your error identification with explanation of the error type, why AI made it, and its impact on the analysis. Your corrected analysis. Your redesigned prompt that would prevent the error. A brief explanation of your error-detection process -- how did you find it?
 :::
@@ -118,6 +120,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

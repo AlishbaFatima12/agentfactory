@@ -83,9 +83,13 @@ teaching_guide:
 
 The instructor removes or changes one foundational constraint: "Now assume the AI tutoring system has unlimited capacity but students have limited internet access — only 2 hours per day." Rebuild your solution. You cannot start from scratch — trace which of your first principles still hold and which collapsed. Then ask AI to rebuild under the same new constraints and compare adaptation strategies.
 
+---
+
 :::info Your Deliverable
 Your rebuilt solution with a clear "principle audit" showing: which first principles survived the constraint change (and why), which collapsed (and why), and which new principles emerged. A comparison of your rebuild approach vs. AI's rebuild approach. A reflection (200 words) answering: What did this exercise teach me about the difference between principles and patterns?
 :::
+
+---
 
 ```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
 I originally designed a solution using first principles for this
@@ -115,9 +119,13 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
+---
+
 ### What This Teaches You
 
 You learn the ultimate test of first principles reasoning: can you adapt when the ground shifts? A student who derived their solution from principles can rebuild because they know which principles were affected. A student who borrowed a pattern has to start from zero. This exercise makes that difference visible and teaches you to build adaptable solutions.
+
+---
 
 :::info Chapter Deliverable
 A **First Principles Portfolio** containing: (1) the contrarian argument (written without AI), (2) the novel problem First Principles Worksheet with AI comparison, (3) the merged assumption map, (4) the rebuilt solution with principle audit, and (5) all AI feedback with reflections.

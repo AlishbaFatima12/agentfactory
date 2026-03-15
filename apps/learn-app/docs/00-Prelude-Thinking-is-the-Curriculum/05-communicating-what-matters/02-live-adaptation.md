@@ -79,11 +79,17 @@ teaching_guide:
 
 ## Exercise 2: The Live Adaptation
 
-**Layers Used:** Layer 3 (Live Defence)
+**Layers Used:** Layer 3 (Live Defence), Layer 4 (Contradiction Challenge)
 
 ### What You Do
 
-Prepare a 3-minute pitch for the decision from Exercise 1 using any AI tools you want. Deliver it live to a peer playing a stakeholder role. Halfway through, the stakeholder reveals a concern you did not anticipate (the peer receives this concern from the instructor in advance). You must adapt in real-time with no AI access. After the exercise, document what happened.
+Prepare a 3-minute pitch for the migration decision using any AI tools you want. Deliver it live to a peer playing a stakeholder role. Halfway through, the stakeholder reveals a concern you did not anticipate (the peer receives this concern from the instructor in advance). You must adapt in real-time with no AI access. After the exercise, document what happened.
+
+:::tip Solo Learner Alternative
+Record your 3-minute pitch (audio or video). Then prompt AI: "You are a skeptical stakeholder. I am going to present a pitch to you. Halfway through my presentation, reveal this unexpected concern: [instructor provides concern]. I will adapt my response in writing under a 10-minute timer." Submit: your prepared pitch, the AI-revealed concern, and your timed written adaptation.
+:::
+
+---
 
 :::info Your Deliverable
 Your prepared pitch (can use AI to help draft). A post-exercise report containing: the unexpected concern revealed, how you adapted in the moment, what you wish you had said differently, and peer feedback on your adaptation quality. The peer fills out an Adaptation Scorecard rating: composure under surprise (1-10), relevance of improvised response (1-10), and whether they felt heard (1-10).
@@ -116,9 +122,7 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
-:::tip Solo Learner Alternative
-Record your 3-minute pitch (audio or video). Then prompt AI: "You are a skeptical stakeholder. I am going to present a pitch to you. Halfway through my presentation, reveal this unexpected concern: [instructor provides concern]. I will adapt my response in writing under a 10-minute timer." Submit: your prepared pitch, the AI-revealed concern, and your timed written adaptation.
-:::
+---
 
 ### What This Teaches You
 

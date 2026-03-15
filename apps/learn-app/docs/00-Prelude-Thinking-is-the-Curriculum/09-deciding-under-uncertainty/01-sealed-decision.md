@@ -111,7 +111,9 @@ You will use **Confidence Calibration** from [Chapter 2, Exercise 4](../02-detec
 
 ### What You Do
 
-You receive a scenario with deliberately missing information. Before touching any AI tool, make your decision and document everything.
+You receive a scenario with deliberately missing information. Before touching any AI tool, read the scenario, make your decision, and document everything.
+
+---
 
 ### Choose Your Scenario
 
@@ -136,6 +138,8 @@ You receive a scenario with deliberately missing information. Before touching an
 </Tabs>
 
 Choose one. The exercises work identically regardless of which you pick. You will use this same scenario for all four exercises in this chapter.
+
+---
 
 :::info Your Deliverable
 A Decision Document containing: your recommendation (one clear sentence), your reasoning (200-300 words), your confidence level (0-100%), the three pieces of missing information that would most change your decision (ranked by impact), and a **Reversal Trigger** ("I would change my recommendation if X turns out to be true" — be specific, not vague).
@@ -166,6 +170,8 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
+---
+
 <details>
 <summary>Deliverable Template (click to expand)</summary>
 
@@ -184,6 +190,8 @@ For each score, give a one-sentence justification.
   I would change my recommendation if: \_\_\_
 
 </details>
+
+---
 
 ### What This Teaches You
 

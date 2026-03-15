@@ -93,6 +93,8 @@ You will use the **Collaboration Log** format from [Chapter 6, Exercise 2](../06
 
 Now use Claude and ChatGPT to research and analyze the scenario from Exercise 1. The AI also has incomplete information because the scenario is fictional. Document where you chose to trust AI analysis vs. your own judgment. Update your decision and confidence level.
 
+---
+
 :::info Your Deliverable
 A Consultation Log documenting: every question you asked AI, every response received, and for each — whether you accepted it, what you noticed AI was fabricating or guessing, and how it changed (or did not change) your thinking. An updated Decision Document showing your revised recommendation, revised confidence level, and what specifically caused any changes. Both original and revised versions side by side.
 :::
@@ -122,6 +124,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

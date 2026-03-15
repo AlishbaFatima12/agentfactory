@@ -85,6 +85,8 @@ teaching_guide:
 
 Ask Claude and ChatGPT the same strategic question and receive two different recommendations. Act as arbitrator: which recommendation is better, why, and what would you take from each to build a superior third option? Document this as a structured Arbitration Brief.
 
+---
+
 :::info Your Deliverable
 The two AI recommendations side by side. Your Arbitration Brief containing: the key differences between the two recommendations, your evaluation of each (strengths and weaknesses), your verdict (which is stronger overall and why), and your synthesized third option that takes the best elements of each plus your own additions. A clear attribution for each element of your third option.
 :::
@@ -114,6 +116,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

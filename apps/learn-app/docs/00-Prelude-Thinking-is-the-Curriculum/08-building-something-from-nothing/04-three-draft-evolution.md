@@ -86,9 +86,13 @@ teaching_guide:
 
 **Layers Used:** Layer 6 (Iterative Drafts)
 
+---
+
 ### What You Do
 
 Produce your Draft 3 (final version) after reflecting on all AI feedback, peer discussion, and the originality test. Submit all three drafts together. The grade is the evolution between drafts, not the quality of any single draft.
+
+---
 
 :::info Your Deliverable
 All three drafts clearly labeled (Draft 1: unassisted, Draft 2: AI-collaborated, Draft 3: final reflection). An Evolution Tracker showing for each transition (1 to 2 and 2 to 3): what was added, what was removed, what was changed, and the reasoning for each change. A final reflection (200 words): What did you create that AI could not have? What does that teach you about where human value lives?

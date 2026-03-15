@@ -75,7 +75,7 @@ teaching_guide:
     - "Ask students: Were you surprised by anything AI found that you missed? What does that tell you about your own thinking patterns?"
 ---
 
-# Human vs. AI Systems Analysis
+# Exercise 2: AI vs. Human Systems Analysis
 
 **Layers Used:** Layer 2 (Reasoning Receipt), Layer 5 (Divergence Test)
 
@@ -87,9 +87,13 @@ You will use the **Error Taxonomy** from [Chapter 2, Exercise 1](../02-detecting
 
 Now prompt both Claude and ChatGPT with the same scenario and ask each for a comprehensive analysis of all consequences. Compare both AI outputs against your own cascade map. Typically, AI produces a broader but shallower analysis — more categories, fewer connections between them. Create a merged map (Draft 2) that combines the best of human and AI analysis with clear attribution for each insight.
 
+---
+
 :::info Your Deliverable
 A comparison document with three columns: "Effects only I found," "Effects only AI found," and "Effects we both found." The merged cascade map (Draft 2) with every insight color-coded or labeled by source: Human (H), Claude (C), ChatGPT (G), or Synthesis (S) for new insights that emerged from combining perspectives. A brief note explaining which category had the most valuable additions.
 :::
+
+---
 
 ```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
 I am comparing my systems analysis with AI-generated analyses of the
@@ -121,10 +125,11 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
+---
+
 ### What This Teaches You
 
 You learn exactly where human systems thinking adds value that AI misses (usually in feedback loops and cultural/political dynamics) and where AI adds value humans miss (usually in breadth of categories). The attribution exercise forces intellectual honesty — you cannot claim AI's insights as your own when the source is documented.
-
 
 ## Flashcards Study Aid
 

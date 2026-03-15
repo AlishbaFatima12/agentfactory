@@ -80,6 +80,8 @@ teaching_guide:
 
 The entire class receives the identical scenario and identical AI access. Each student independently develops their analysis by prompting AI with their own questions and building their own conclusions. Submit your final analysis along with your complete reasoning receipt showing every prompt and decision.
 
+---
+
 :::info Your Deliverable
 Your final analysis of the business scenario (500-800 words) and a complete reasoning receipt documenting every prompt sent, every AI response received, and every accept/reject/modify decision with justification. Additionally, a brief "uniqueness statement" (100 words) explaining what in your analysis reflects your own thinking rather than a generic AI output.
 :::
@@ -109,6 +111,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

@@ -80,6 +80,12 @@ teaching_guide:
 
 Use AI to generate a complete analysis of a topic you know well — your own field, your city, your industry. Because you have domain expertise, you can catch errors the AI makes that a non-expert would miss. Annotate the AI output line by line using the Error Taxonomy. Then pair with a student from a different domain. Exchange your annotated AI outputs. Attempt to verify your partner's annotations — can you confirm their error catches are real? Discuss in a live 10-minute session.
 
+:::tip Solo Learner Alternative
+If you cannot pair with a domain partner, choose two domains: one you know well and one you know nothing about. Generate AI analyses for both. Annotate errors in your expert domain (where you catch things AI gets wrong) and then attempt to annotate errors in the unfamiliar domain. Compare your detection rate. The gap between the two reveals exactly how much domain expertise matters for error detection.
+:::
+
+---
+
 :::info Your Deliverable
 The AI-generated analysis of your domain with line-by-line Error Taxonomy annotations. A separate document listing: errors you caught because of your domain expertise that a non-expert would miss, and errors you suspect exist but cannot confirm without more research. Your partner's annotated output with your verification notes. A reflection (200 words) on the difference between detecting errors in your domain vs. your partner's domain.
 :::
@@ -110,10 +116,8 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
+---
+
 ### What This Teaches You
 
 You learn that domain expertise is your most powerful error detection tool. In your own field, you catch things AI gets subtly wrong that outsiders would accept. In your partner's field, you discover how much harder error detection is without expertise. This teaches you to be cautious when using AI in domains you do not deeply understand — and to seek expert review when the stakes are high.
-
-:::tip Solo Learner Alternative
-If you cannot pair with a domain partner, choose two domains: one you know well and one you know nothing about. Generate AI analyses for both. Annotate errors in your expert domain (where you catch things AI gets wrong) and then attempt to annotate errors in the unfamiliar domain. Compare your detection rate. The gap between the two reveals exactly how much domain expertise matters for error detection.
-:::

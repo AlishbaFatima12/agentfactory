@@ -79,15 +79,19 @@ teaching_guide:
 
 ## Exercise 3: The Originality Test
 
-**Layers Used:** Layer 4 (Contradiction Challenge), Layer 5 (Divergence Test)
+**Layers Used:** Layer 5 (Divergence Test)
 
 :::note Building On Previous Chapters
 You will apply the **Assumption Autopsy** technique from [Chapter 4](../04-reasoning-from-first-principles/03-assumption-autopsy.md) to examine your assumptions about your own originality. Use the **Cascade Map** from [Chapter 3](../03-thinking-in-systems/01-cascade-mapping.md) to trace which ideas in your solution came from which source.
 :::
 
+---
+
 ### What You Do
 
 Submit your Draft 2. Ask AI the key originality question: could you have produced this output if given only the original problem? If AI generates something nearly identical to your Draft 2, your work lacked originality. If AI produces something substantially different, you added genuine creative value. Analyze the divergence.
+
+---
 
 :::info Your Deliverable
 Your Draft 2 (from Exercise 2). The AI-generated independent solution (produced without seeing your work). A Divergence Analysis (200-300 words) identifying: where your solution and AI's solution overlap (these are likely AI-driven ideas), where they diverge (these are your original contributions), and what your solution has that AI's does not (this is your unique creative value).

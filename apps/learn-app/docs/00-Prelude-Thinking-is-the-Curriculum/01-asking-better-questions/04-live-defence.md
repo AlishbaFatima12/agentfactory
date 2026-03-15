@@ -90,7 +90,15 @@ teaching_guide:
 
 ### What You Do
 
-Present your analysis to a peer panel (3-4 students). They have 10 minutes to question you: Why did you ask this question and not that one? What would change your diagnosis? Where did AI help and where did it mislead you? You have no AI access during the defence. After the defence, feed your analysis into AI with the prompt below to generate counter-arguments, then write a 200-word response to the strongest counter-argument.
+Present your analysis to a peer panel (3-4 students). They have 10 minutes to question you: Why did you ask this question and not that one? What would change your diagnosis? Where did AI help and where did it mislead you? You have no AI access during the defence.
+
+:::tip Solo Learner Alternative
+Submit your analysis to AI with this prompt: "You are a tough but fair examiner. Ask me 5 challenging questions about my analysis, one at a time. Wait for my response before asking the next question. Challenge weak answers. Do not let me off easy." Conduct the full Q&A exchange in a single multi-turn conversation. Submit the complete transcript as your defence record. Then proceed with the AI counter-argument exercise as written.
+:::
+
+After the defence, feed your analysis into AI with the prompt below to generate counter-arguments, then write a 200-word response to the strongest counter-argument.
+
+---
 
 :::info Your Deliverable
 Peer feedback form filled out by your panel (each panelist writes 2 strengths and 2 weaknesses they observed in your defence). Your written response (200 words) to the strongest AI-generated counter-argument to your analysis. A final reflection (150 words) on what you would change about your question formulation process based on everything you learned in this chapter.
@@ -121,13 +129,13 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
+---
+
 ### What This Teaches You
 
 You learn that understanding your own work is completely different from producing it. The live defence exposes whether you truly thought through your analysis or outsourced it to AI. The AI counter-arguments then push you further — can you defend your position against systematic attack? The combination of human questioning (unpredictable) and AI counter-arguments (systematic) tests your thinking from every angle.
 
-:::tip Solo Learner Alternative
-Submit your analysis to AI with this prompt: "You are a tough but fair examiner. Ask me 5 challenging questions about my analysis, one at a time. Wait for my response before asking the next question. Challenge weak answers. Do not let me off easy." Conduct the full Q&A exchange in a single multi-turn conversation. Submit the complete transcript as your defence record. Then proceed with the AI counter-argument exercise as written.
-:::
+---
 
 :::info Chapter Deliverable
 A Question Quality Portfolio containing: (1) the sealed prediction lock document, (2) the question tournament comparison table with rankings, (3) the final analysis with complete reasoning receipt and uniqueness statement, (4) peer defence feedback forms, (5) your written response to AI counter-arguments, and (6) your final reflection on your question formulation growth.

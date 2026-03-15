@@ -103,6 +103,8 @@ By completing all ten chapters, you have assembled a comprehensive Thinking Port
 
 Every item in this portfolio includes AI evaluations with specific scores and feedback. Over the course of ten chapters, you have received dozens of AI-generated assessments of your thinking. The trajectory of those assessments -- from your first prediction lock in Chapter 1 to your Personal Learning Framework in Chapter 10 -- is the most powerful evidence of your growth as a thinker.
 
+---
+
 ## Thinking Post-Assessment: Where You Are Now
 
 You have completed all ten chapters. Now return to the exact scenario from your Thinking Baseline and repeat it. The rules are identical: 30 minutes, no AI, same five tasks.
@@ -118,6 +120,10 @@ Return to the hospital AI triage scenario from your [Thinking Baseline](../think
 
 _Do not look at your baseline responses until after you finish._
 :::
+
+---
+
+### AI Post-Assessment Check
 
 ```text title="AI Post-Assessment Check -- Copy and paste into claude.ai or chatgpt.com"
 I just completed a 10-chapter course on thinking skills. Below are my

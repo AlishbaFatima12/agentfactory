@@ -104,6 +104,8 @@ Average Score Card across all 40 exercises:
 
 This Growth Map is the final item in your Thinking Portfolio. It is concrete, quantified evidence of what ten chapters of thinking practice produced. Carry this map -- and the awareness it gives you of your strengths and remaining gaps -- into every part that follows.
 
+---
+
 ## What Comes Next
 
 Part 0 has trained you in ten thinking skills that AI amplifies but cannot replace. Part 1 begins the technical journey: agent foundations, general agents, and the seven principles of agent work. Every architectural decision, every design choice, every debugging session in the parts ahead will draw on the questioning discipline, error detection, systems thinking, and decision-making skills you have built here.
