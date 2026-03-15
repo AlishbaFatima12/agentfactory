@@ -771,3 +771,12 @@ In this chapter, your mastery gates are conceptual artifacts — coordination pl
 | **Modification Reasoning** | Identifies that something breaks but cannot explain the mechanism | Identifies what breaks AND explains why the modification causes the failure | Anticipates cascading effects — predicts not just the first failure but second-order consequences |
 | **Mastery Gate Quality** | Artifacts are incomplete or generic (could apply to any axiom) | Artifacts are complete and specific to the axiom, with clear structure | Artifacts demonstrate original thinking — the plan, spec, or checklist reveals genuine understanding beyond what was taught |
 | **PRIMM-AI+ Engagement** | Skipped Predict or copied AI answers without comparing to own prediction | Completed all five stages; comparisons between prediction and AI response show genuine reflection | Used the framework independently — applied Predict-Run-Investigate-Modify-Make to a new problem without prompting |
+
+---
+
+## What Comes Next
+
+You now know *what* professional AI-driven development looks like — ten axioms that form a complete engineering system. In the next two chapters, you will move from understanding to doing:
+
+- **Chapter 32: Development Environment** — You will install and configure the exact tools James uses throughout this chapter: uv for dependency management, pyright for type checking, ruff for formatting and linting, pytest for testing, and git for version control. By the end, you will have a working environment where Axiom IX's verification pipeline runs on your own machine.
+- **Chapter 33: Reading Python** — You will read your first real Python programs through the PRIMM-AI+ lens. Every skill you practiced here — predicting outcomes, classifying errors, reasoning about modifications — transfers directly to reading code. The axioms become your engineering standards; PRIMM-AI+ becomes your method for meeting them.

@@ -1,11 +1,46 @@
 ---
 sidebar_position: 11
 title: "Chapter 31: Ten Axioms Quiz"
-proficiency_level: B1
-layer: 2
-estimated_time: "45 mins"
-chapter_type: Concept
-running_example_id: ten-axioms-quiz
+description: "Assess your understanding of the ten axioms of programming in AI-driven development through scenario-based questions following James's order management journey"
+keywords: ["ten axioms quiz", "agentic development assessment", "shell orchestrator", "markdown knowledge", "type safety", "composition", "observability", "verification pipeline", "version control", "test-driven generation"]
+chapter: 31
+lesson: 11
+duration_minutes: 45
+
+# HIDDEN SKILLS METADATA
+skills:
+  - name: "Axiom Application"
+    proficiency_level: "B1"
+    category: "Applied"
+    bloom_level: "Apply"
+    digcomp_area: "Problem Solving"
+    measurable_at_this_level: "Student can identify which axiom applies to a given software development scenario and explain why"
+
+  - name: "Anti-Pattern Recognition"
+    proficiency_level: "B1"
+    category: "Conceptual"
+    bloom_level: "Analyze"
+    digcomp_area: "Information Literacy"
+    measurable_at_this_level: "Student can recognize when a development practice violates a specific axiom and name the anti-pattern"
+
+learning_objectives:
+  - objective: "Apply the ten axioms to realistic software development scenarios"
+    proficiency_level: "B1"
+    bloom_level: "Apply"
+    assessment_method: "Student correctly identifies the applicable axiom and its implication in at least 70% of scenario-based questions"
+
+  - objective: "Recognize anti-patterns and traps associated with each axiom"
+    proficiency_level: "B1"
+    bloom_level: "Analyze"
+    assessment_method: "Student identifies named traps (Green Bar Illusion, Shallow Pipeline, etc.) and explains why they are dangerous"
+
+cognitive_load:
+  new_concepts: 0
+  assessment: "0 new concepts — this is a pure assessment of the 10 axioms taught in lessons 1-10"
+
+differentiation:
+  extension_for_advanced: "After completing the quiz, revisit any axiom where you scored below Competent and generate new scenarios with your AI assistant to test your understanding."
+  remedial_for_struggling: "Focus on the three axiom groups separately: Structure (I-IV), Data (V-VI), Verification (VII-X). Re-read the Key Takeaways of each axiom before retaking those questions."
 ---
 
 # Chapter 31: Ten Axioms of Programming in AI-Driven Development Quiz
@@ -31,11 +66,11 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
       question: "James needs to coordinate four steps for his order system deployment: run ruff formatting, run pyright type checking, run pytest, and build a Docker image. He writes a Python script that calls subprocess.run() for each step. What architectural problem does this introduce?",
       options: [
         "The subprocess.run() calls create a process-spawning chain where each command runs in a child process of Python, which is itself a child process, adding latency and making signal propagation unreliable across the process tree",
-        "He replaced the shell (the natural orchestrator) with a program, hiding sequential coordination logic inside Python code that is harder to inspect and modify than a Makefile or shell script",
         "The script will fail silently if any subprocess returns a non-zero exit code unless James explicitly passes check=True to each subprocess.run() call — a subtle bug that Makefile targets and shell set -e handle automatically",
+        "He replaced the shell (the natural orchestrator) with a program, hiding sequential coordination logic inside Python code that is harder to inspect and modify than a Makefile or shell script",
         "The Python script couples the deployment workflow to a specific Python version and its installed packages, creating a bootstrap problem where you need a working Python environment to set up the Python environment"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "Axiom I states that the shell is the natural orchestration layer — it coordinates programs. By wrapping shell orchestration inside Python (using subprocess.run), James hides the coordination logic inside a program, making it harder to read, modify, and debug. A Makefile or shell script would express this coordination more transparently: each step is visible, the flow is obvious, and any developer can understand or modify it without Python knowledge. The shell coordinates; programs compute. When your 'program' is just calling other programs in sequence, it should be shell orchestration. Option A identifies a real but minor concern — the overhead exists but isn't the architectural issue. Option C identifies a genuinely dangerous pitfall of subprocess.run() — silent failures are a real bug source — but it describes an implementation-level fix (add check=True) rather than the architectural mistake of using the wrong layer for coordination. Option D raises a valid practical concern about the bootstrap problem, but the core issue is layer confusion, not dependency management.",
       source: "Lesson 01: Shell as Orchestrator"
     },
@@ -78,12 +113,12 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "James asks Emma: 'Why do I need uv, pyright, ruff, AND pytest for my order system? Can't I just write Python and run it?' What is the best response based on Axiom III?",
       options: [
-        "Each tool catches a different error category: uv prevents environment drift, pyright catches type errors statically, ruff enforces style, and pytest verifies behavior — removing any layer leaves a gap",
-        "Start with pytest since it catches the highest-impact bugs (wrong behavior), then add pyright and ruff incrementally once the test suite is stable — uv can wait until the team grows beyond one developer",
         "Focus on pyright and Pydantic together since static type analysis combined with runtime validation at API boundaries covers both development-time and production-time errors comprehensively",
+        "Start with pytest since it catches the highest-impact bugs (wrong behavior), then add pyright and ruff incrementally once the test suite is stable — uv can wait until the team grows beyond one developer",
+        "Each tool catches a different error category: uv prevents environment drift, pyright catches type errors statically, ruff enforces style, and pytest verifies behavior — removing any layer leaves a gap",
         "For a small order system with one developer, the full stack adds overhead that slows iteration — start with just Python and ruff for formatting, then add the other tools when complexity justifies them"
       ],
-      correctOption: 0,
+      correctOption: 2,
       explanation: "Axiom III defines the Python discipline stack as a layered defense system where each tool serves a distinct purpose: uv ensures reproducible environments (no 'works on my machine'), pyright catches type errors at analysis time (wrong argument types, missing attributes), ruff enforces consistent style (readability, common mistakes), and pytest verifies behavior (correct outputs for given inputs). Removing any layer leaves a gap — without types, you get runtime AttributeError; without tests, you get undetected logic bugs; without dependency management, you get environment drift. Option B sounds pragmatic but 'incrementally adding later' rarely happens in practice — by the time complexity demands pyright, the codebase has accumulated type errors that are painful to retrofit. Option C covers two layers well but misses dependency management (environment drift) and testing (behavioral correctness). Option D's 'add tools when complexity justifies them' is the Prototype Trap from Axiom III — complexity arrives before the tools are in place.",
       source: "Lesson 03: Programs Over Scripts"
     },
@@ -128,10 +163,10 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
       options: [
         "They need stricter Pydantic validators with custom field validators, constrained types (conint, constr), and model validators that enforce business rules like 'discount percentage must be between 0 and 100'",
         "They should replace Pydantic with Python dataclasses combined with beartype for runtime type checking, which provides lighter-weight validation with less overhead than Pydantic's model initialization",
-        "They're missing the static analysis layer (Pyright in CI) which catches type mismatches across all code paths — including error handlers and untested branches — without executing the code",
-        "They need to add targeted unit tests for each error handler and rare code path using pytest parametrize to systematically cover the type combinations that Pydantic doesn't validate at the boundary"
+        "They need to add targeted unit tests for each error handler and rare code path using pytest parametrize to systematically cover the type combinations that Pydantic doesn't validate at the boundary",
+        "They're missing the static analysis layer (Pyright in CI) which catches type mismatches across all code paths — including error handlers and untested branches — without executing the code"
       ],
-      correctOption: 2,
+      correctOption: 3,
       explanation: "Axiom V defines a three-layer type stack: type hints (documentation), Pyright (static analysis), and Pydantic (runtime validation). Pydantic validates data at boundaries (API requests, external input) but only when that code path executes. Pyright analyzes ALL code paths statically — it finds type mismatches in error handlers, rare branches, and untested paths without running the code. The team has layer 1 (hints via Pydantic models) and layer 3 (runtime validation) but is missing layer 2 (static analysis). Adding Pyright to CI would catch the type errors in rare paths that Pydantic never sees because those paths haven't been triggered yet. Option A only covers runtime boundaries. Option B changes the tool but doesn't add static analysis. Option D helps but can't cover every path the way static analysis can.",
       source: "Lesson 05: Types Are Guardrails"
     },
@@ -174,12 +209,12 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "James's test suite shows 53 passing tests — all green. He feels confident and deploys his order system. But in production, the shipping calculator fails for orders over $10,000 because no test ever checked that boundary. What named trap from Axiom VII did he fall into?",
       options: [
-        "The Green Bar Illusion — 53 passing tests create false confidence when the test suite itself has coverage gaps, like the missing $10,000 boundary that no test ever checked despite the green bar suggesting everything works",
-        "The Shallow Pipeline — his verification pyramid was incomplete because it included unit tests but lacked integration tests that would exercise the shipping calculator with realistic order values",
         "The Circular Testing Trap — the AI generated both the implementation and the tests, so the tests verified the code's assumptions rather than independently defining what correct behavior should be",
-        "The Prototype Trap — the shipping calculator was built as a quick prototype with hardcoded assumptions about order sizes, then deployed to production without being rewritten as a proper program"
+        "The Shallow Pipeline — his verification pyramid was incomplete because it included unit tests but lacked integration tests that would exercise the shipping calculator with realistic order values",
+        "The Prototype Trap — the shipping calculator was built as a quick prototype with hardcoded assumptions about order sizes, then deployed to production without being rewritten as a proper program",
+        "The Green Bar Illusion — 53 passing tests create false confidence when the test suite itself has coverage gaps, like the missing $10,000 boundary that no test ever checked despite the green bar suggesting everything works"
       ],
-      correctOption: 0,
+      correctOption: 3,
       explanation: "The Green Bar Illusion is the belief that 'all tests pass' means 'the system is correct.' It confuses test count with behavioral coverage. James's 53 tests verified 53 specific scenarios — but none tested orders above $10,000, so the boundary failure was invisible. The fix is to think about what the tests DON'T cover: edge cases, boundary values, error paths, and load conditions. A green bar means 'all specified behaviors work' — not 'all possible behaviors work.' Option B identifies a real concern (integration tests might have caught this) but the root cause isn't the pipeline's depth — it's that the specification itself (the tests) was incomplete, which is a testing problem, not a CI structure problem. Option C describes a real trap from Axiom VII but doesn't match this scenario — James's tests weren't AI-generated alongside the code, they simply didn't cover the boundary. Option D describes a different trap (Axiom III) about prototypes graduating to production — the issue here is test coverage, not code maturity.",
       source: "Lesson 07: Tests Are the Specification"
     },
@@ -187,11 +222,11 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
       question: "James fixes the $12,000 discount bug, updates the FREE_SHIPPING_THRESHOLD constant, and refactors three TDG test files — all in a single commit with the message 'fix: various updates.' During a post-mortem the next week, his team needs to find exactly when the shipping threshold changed. They cannot. Which axiom did he violate?",
       options: [
         "Knowledge is Markdown — he should have written a CHANGELOG.md entry for each change with the date, reason, and impact assessment, so the team can search the changelog independently of git history",
-        "Version Control is Memory — each change should be its own atomic commit with a conventional message explaining the 'why', forming searchable project memory",
         "Observability Extends Verification — he should have added a structured log entry that records configuration changes at startup, like `log.info('config_loaded', free_shipping_threshold=75, previous=50)`, so runtime changes are traceable",
+        "Version Control is Memory — each change should be its own atomic commit with a conventional message explaining the 'why', forming searchable project memory",
         "Tests Are the Specification — each change should have had its own test commit first (failing test for the bug, test for the new threshold, tests for the refactored modules) before the implementation commits"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "Axiom VIII (Version Control is Memory) requires atomic commits — one logical change per commit — with conventional messages that explain reasoning. James mixed three unrelated changes into one commit, so `git log --grep='shipping'` finds nothing, and reverting the discount fix also reverts the threshold change. Proper practice: three separate commits — `fix(orders): cap discount to never exceed order total`, `feat(shipping): raise FREE_SHIPPING_THRESHOLD to $75`, `refactor(tests): reorganize TDG fixtures for discount module`. Option A is useful supplementary documentation but a changelog is a manual duplicate of what git history should provide natively — if commits are atomic and well-messaged, the changelog writes itself via `git log`. Option C provides valuable runtime observability but tracks when the application loads config, not when the developer changed the code — different questions answered by different systems. Option D describes a TDG-aligned workflow (test-first commits) but the fundamental problem is mixing unrelated changes in one commit, not the absence of test-first ordering.",
       source: "Lesson 08: Version Control is Memory"
     },
@@ -258,12 +293,12 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "Emma's Makefile for the order system chains three programs together: a data exporter, a validator, and a report generator. She didn't write any of these programs — they come from different teams and languages. Yet her Makefile coordinates them seamlessly using pipes and exit codes. What principle of Axiom I does this demonstrate?",
       options: [
-        "The shell's composition primitives (pipes, exit codes, redirection) let it connect programs it didn't create, enabling coordination without requiring shared language or authorship",
-        "The Makefile acts as a program that wraps three scripts in a unified interface, replacing the need for each team to maintain their own deployment process",
         "The shell automatically handles data format conversion between programs written in different languages, removing the need for standardized input and output formats",
+        "The Makefile acts as a program that wraps three scripts in a unified interface, replacing the need for each team to maintain their own deployment process",
+        "The shell's composition primitives (pipes, exit codes, redirection) let it connect programs it didn't create, enabling coordination without requiring shared language or authorship",
         "Exit codes allow the Makefile to retry failed programs automatically, providing built-in error recovery that eliminates the need for error handling inside each program"
       ],
-      correctOption: 0,
+      correctOption: 2,
       explanation: "Axiom I's composition primitives — pipes (|), exit codes (&&), and redirection (<, >, 2>) — are the shell's power. They allow the shell to route data between programs regardless of who wrote them or what language they use. The shell doesn't need to understand the programs' internals; it just connects their inputs and outputs. Option C is tempting because the shell does pass data between programs, but it doesn't convert formats automatically — programs must agree on text stream conventions. The shell routes data; it doesn't transform it.",
       source: "Lesson 01: Shell as Orchestrator"
     },
@@ -271,11 +306,11 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
       question: "James writes a bash script that starts at 15 lines of straightforward coordination but over two months grows to include a for-loop parsing CSV fields, nested if-else blocks for validation, and string manipulation for formatting output. When should he have moved this logic out of the shell?",
       options: [
         "When the script exceeded 100 lines, since shorter scripts can handle loops and conditionals effectively as long as they use functions and local variables",
-        "When the script began performing computation — loops, string parsing, nested conditionals — because these belong in a typed, testable program regardless of line count",
+        "When the script started failing intermittently, since working scripts should not be refactored until they demonstrate instability in a production environment",
         "When a second developer needed to modify the script, since collaboration requires version-controlled programs but solo developers can use scripts of any complexity",
-        "When the script started failing intermittently, since working scripts should not be refactored until they demonstrate instability in a production environment"
+        "When the script began performing computation — loops, string parsing, nested conditionals — because these belong in a typed, testable program regardless of line count"
       ],
-      correctOption: 1,
+      correctOption: 3,
       explanation: "Axiom I defines the complexity threshold not by line count alone but by what the script does. Loops, string parsing, nested conditionals, and data structures are computation — they belong in a proper program with a debugger, type system, and test suite. The shell should coordinate programs, not perform computation itself. Option A focuses on line count (100 lines) as the trigger, but a 30-line script with nested conditionals and string manipulation has already crossed the threshold. The nature of the work, not its length, determines when to move to a program.",
       source: "Lesson 01: Shell as Orchestrator"
     },
@@ -294,12 +329,12 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "James considers storing his project's coding standards in HTML because it supports rich formatting, or in plain text because it is simple. Emma explains that markdown is better than both. Which of markdown's four properties do HTML and plain text each fail to satisfy?",
       options: [
-        "HTML fails human-readability because tag noise makes raw files hard to scan, and plain text fails AI-parseability because it lacks structural markers like headers and sections",
-        "HTML fails version-controllability because binary rendering data creates unreadable diffs, and plain text fails tool-agnosticism because it requires specialized editors to display properly",
         "HTML fails AI-parseability because language models cannot process HTML tags, and plain text fails version-controllability because whitespace changes create noisy diffs",
+        "HTML fails version-controllability because binary rendering data creates unreadable diffs, and plain text fails tool-agnosticism because it requires specialized editors to display properly",
+        "HTML fails human-readability because tag noise makes raw files hard to scan, and plain text fails AI-parseability because it lacks structural markers like headers and sections",
         "HTML fails tool-agnosticism because it requires a browser to render properly, and plain text fails human-readability because it has no formatting for emphasis or hierarchy"
       ],
-      correctOption: 0,
+      correctOption: 2,
       explanation: "Markdown satisfies four properties simultaneously: human-readable, version-controllable, AI-parseable, and tool-agnostic. HTML fails human-readability — raw HTML is cluttered with tags like <h1>, <p>, <div> that obscure the actual content. Plain text fails AI-parseability — without structural markers (# headers, ## subheaders), AI cannot identify sections, parse specific parts, or navigate the document meaningfully. Option D is tempting because plain text does lack formatting, but readability of flat text is fine for humans — the issue is that AI cannot parse structure from unstructured text.",
       source: "Lesson 02: Knowledge is Markdown"
     },
@@ -318,24 +353,24 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "James writes a note in Slack: 'We chose PostgreSQL over SQLite because we might need concurrent writes later.' Three months later, when the team debates switching databases, nobody can find this reasoning. Emma suggests writing an Architecture Decision Record instead. What makes an ADR more effective than a Slack message?",
       options: [
-        "ADRs use a structured format (Status, Context, Decision, Consequences, Alternatives) that captures complete reasoning in a findable, version-controlled markdown file in the repository",
-        "ADRs are automatically indexed by search engines and internal documentation tools, making them discoverable through keyword search across the organization's knowledge base",
         "ADRs require approval from senior engineers before being merged, ensuring that architectural decisions are reviewed and validated before they become part of the record",
+        "ADRs are automatically indexed by search engines and internal documentation tools, making them discoverable through keyword search across the organization's knowledge base",
+        "ADRs use a structured format (Status, Context, Decision, Consequences, Alternatives) that captures complete reasoning in a findable, version-controlled markdown file in the repository",
         "ADRs are written in a formal technical style that eliminates ambiguity, while Slack messages use casual language that can be interpreted differently by different team members"
       ],
-      correctOption: 0,
+      correctOption: 2,
       explanation: "Axiom II warns that decisions in Slack are archived after 90 days, unsearchable by AI agents, and not version-controlled. ADRs solve all three problems: they use a structured format (Status, Context, Decision, Consequences, Alternatives Considered) that captures complete reasoning, live in the repository as markdown files where AI agents can read them, and are version-controlled so the decision's evolution is tracked. Option D is tempting — formality does reduce ambiguity — but the ADR's advantage is structure and location (in the repo, version-controlled), not writing style.",
       source: "Lesson 02: Knowledge is Markdown"
     },
     {
       question: "James built a Jupyter notebook that calculates shipping costs for his order system. It started as a quick exploration tool, but now three team members rely on it daily and it runs on a cron job every morning. The notebook has no tests, no type hints, and cell execution order matters. What Axiom III concept describes this situation?",
       options: [
-        "The Prototype Trap — the notebook solved an immediate problem but graduated to production use without gaining the discipline (types, tests, error handling) that production code requires",
+        "The Complexity Threshold — the notebook has crossed from shell territory into program territory and should be rewritten as a Makefile that coordinates typed Python scripts",
         "The Mega-Script — the notebook grew too large and should be split into multiple smaller notebooks, each handling one step of the shipping calculation pipeline",
         "The Shallow Pipeline — the notebook bypasses the CI verification pipeline because notebooks cannot be linted, type-checked, or tested in the same way as Python modules",
-        "The Complexity Threshold — the notebook has crossed from shell territory into program territory and should be rewritten as a Makefile that coordinates typed Python scripts"
+        "The Prototype Trap — the notebook solved an immediate problem but graduated to production use without gaining the discipline (types, tests, error handling) that production code requires"
       ],
-      correctOption: 0,
+      correctOption: 3,
       explanation: "The Prototype Trap from Axiom III describes exactly this pattern: a script (or notebook) solves an immediate problem, someone asks to use it, and months later it has multiple users and a cron job — but no types, no tests, no error messages to debug when it fails. The fix is to extract the notebook's logic into a proper Python module with the full discipline stack. Option C is tempting because notebooks do bypass CI, but the root problem is not the pipeline's limitations — it is that the code was never designed for production use. The notebook needs to graduate to a program, not just get added to CI.",
       source: "Lesson 03: Programs Over Scripts"
     },
@@ -354,12 +389,12 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "James has a small utility function that renames files in a directory. It is 12 lines long and works perfectly. Emma says it does not need the full discipline stack yet. Under Axiom III, when is bash still the appropriate tool for a task like this?",
       options: [
-        "Bash is appropriate when the task is simple orchestration — linear coordination under 20 lines with no loops, string parsing, or complex error handling logic",
+        "Bash is appropriate when only one developer will ever run the script, since multi-user scripts require the portability guarantees that only typed programs can provide",
         "Bash is appropriate for any task under 50 lines as long as the developer adds comments explaining each step and uses descriptive variable names throughout the script",
         "Bash is always appropriate for file operations because the shell has native file manipulation commands that are faster and more reliable than Python equivalents",
-        "Bash is appropriate when only one developer will ever run the script, since multi-user scripts require the portability guarantees that only typed programs can provide"
+        "Bash is appropriate when the task is simple orchestration — linear coordination under 20 lines with no loops, string parsing, or complex error handling logic"
       ],
-      correctOption: 0,
+      correctOption: 3,
       explanation: "Axiom III does not say 'never use bash.' The complexity threshold defines when shell is appropriate: under 20 lines of linear coordination without loops, string parsing, nested conditionals, or complex error handling. Simple orchestration — running commands in sequence, checking exit codes, piping output — is the shell's strength. Option B focuses on line count (50 lines) and documentation as the criteria, but well-commented bash with loops and string parsing is still the wrong tool. The nature of the task, not its length or documentation, determines appropriateness.",
       source: "Lesson 03: Programs Over Scripts"
     },
@@ -391,11 +426,11 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
       question: "After learning about composition, James enthusiastically splits every function in his order system into the smallest possible units — a function to add two numbers, a function to format a single string, a function to check if a value is None. Emma warns him he has fallen into a trap. Which one?",
       options: [
         "The God Class trap — by creating too many tiny functions, James has effectively created a coordination class that does nothing but call other functions, which is just a different form of monolith",
-        "The Decomposition Trap — over-decomposition scatters simple logic across so many units that understanding the whole requires assembling a mental map of dozens of tiny pieces",
+        "The Circular Testing Trap — each tiny function needs its own test, and the tests for trivial functions end up restating the implementation rather than specifying meaningful behavior",
         "The Prototype Trap — James is treating his production code like an experiment by constantly restructuring it instead of stabilizing the architecture and adding proper tests",
-        "The Circular Testing Trap — each tiny function needs its own test, and the tests for trivial functions end up restating the implementation rather than specifying meaningful behavior"
+        "The Decomposition Trap — over-decomposition scatters simple logic across so many units that understanding the whole requires assembling a mental map of dozens of tiny pieces"
       ],
-      correctOption: 1,
+      correctOption: 3,
       explanation: "Axiom IV warns that the Decomposition Trap — over-decomposition — is as harmful as no decomposition. Splitting a three-line calculation into three one-line functions creates indirection without benefit. Understanding the system requires tracing through dozens of tiny pieces instead of reading straightforward code. Compose when concerns genuinely separate; leave simple things simple. Option D raises a valid testing concern, but the root problem is architectural — the decomposition itself is wrong, not the testing approach that follows from it.",
       source: "Lesson 04: Composition Over Monoliths"
     },
@@ -510,12 +545,12 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "James makes a commit with the message: 'Updated shipping calculation.' Emma reviews it and says the message is insufficient. According to Axiom VIII's conventional commit format, what should the message look like?",
       options: [
-        "A prefix like feat, fix, or refactor that categorizes the change at a glance, followed by a scope and a description that explains what kind of change was made to which component",
+        "A timestamp and the developer's name appended to the message, so that git blame shows both who made the change and when it was committed without running a separate command",
         "A detailed paragraph explaining every line that changed in the shipping calculation, including the old values, the new values, and the mathematical formulas used in each step",
         "A reference to the GitHub issue or Jira ticket number that requested the shipping change, followed by a one-line summary that links the commit to the project management system",
-        "A timestamp and the developer's name appended to the message, so that git blame shows both who made the change and when it was committed without running a separate command"
+        "A prefix like feat, fix, or refactor that categorizes the change at a glance, followed by a scope and a description that explains what kind of change was made to which component"
       ],
-      correctOption: 0,
+      correctOption: 3,
       explanation: "Axiom VIII prescribes conventional commit format: a structured prefix (feat, fix, refactor, test, docs) tells you what KIND of change at a glance. A properly formatted message might be: `fix(shipping): correct international rate calculation for orders over $10K`. The prefix categorizes it, the scope narrows the domain, and the description explains the change. Option B is tempting because more detail sounds better, but the diff already shows what changed line-by-line — the commit message's job is to explain the WHY and categorize the WHAT, not restate the diff.",
       source: "Lesson 08: Version Control is Memory"
     },
@@ -546,24 +581,24 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "James sets up a CI pipeline for his order system. He puts the integration tests (which take 2 minutes) first in the pipeline, followed by ruff formatting checks (which take 3 seconds). Most failed runs wait 2 minutes before discovering a simple formatting error. According to Axiom IX, how should the pipeline be ordered?",
       options: [
-        "Fast checks first, slow checks last — formatting (seconds) and linting (seconds) should run before type checking (seconds) and tests (minutes), so trivial errors are caught immediately",
+        "The ordering does not matter as long as all checks must pass before merging — the pipeline is a gate, and whether it takes 2 minutes or 3 minutes total does not affect the final outcome",
         "Most critical checks first, least critical last — integration tests catch the most impactful bugs and should run first even if they are slower, because catching serious errors early is more important",
         "All checks should run in parallel rather than sequentially, so that formatting errors and test failures are discovered simultaneously regardless of individual check duration",
-        "The ordering does not matter as long as all checks must pass before merging — the pipeline is a gate, and whether it takes 2 minutes or 3 minutes total does not affect the final outcome"
+        "Fast checks first, slow checks last — formatting (seconds) and linting (seconds) should run before type checking (seconds) and tests (minutes), so trivial errors are caught immediately"
       ],
-      correctOption: 0,
+      correctOption: 3,
       explanation: "Axiom IX's verification pyramid runs fast, cheap checks at the base and slower, thorough checks at the top. Each level gates the next — if formatting fails in 3 seconds, there is no need to wait 2 minutes for integration tests. This ordering minimizes wasted time: most failures are caught by fast checks, and expensive checks only run on code that already passes basic standards. Option B sounds logical (catch serious bugs early) but wastes developer time on 2-minute waits for trivial errors. Option D is tempting because the final outcome is the same, but developer productivity depends on fast feedback — waiting 2 minutes to learn about a missing comma is a poor experience.",
       source: "Lesson 09: Verification is a Pipeline"
     },
     {
       question: "James's team has a CI pipeline that runs all checks, but developers can merge pull requests even when CI is red. They rely on developers' discipline to wait for green. Over time, more red merges slip through. What does Axiom IX say about this situation?",
       options: [
-        "Branch protection should make CI mandatory, not advisory — when CI fails, the merge button is disabled by infrastructure, because discipline alone cannot scale across a growing team",
+        "The team should require two approving code reviews in addition to CI passing, so that even if CI is bypassed, human reviewers catch the issues that the pipeline would have flagged",
         "The team should add a Slack notification that alerts the team channel when someone merges with red CI, creating social accountability that reinforces the discipline to wait for green",
         "The pipeline should automatically revert any merge that was made while CI was red, restoring the previous green state of the main branch without requiring human intervention",
-        "The team should require two approving code reviews in addition to CI passing, so that even if CI is bypassed, human reviewers catch the issues that the pipeline would have flagged"
+        "Branch protection should make CI mandatory, not advisory — when CI fails, the merge button is disabled by infrastructure, because discipline alone cannot scale across a growing team"
       ],
-      correctOption: 0,
+      correctOption: 3,
       explanation: "Axiom IX states: 'If it's not in CI, it's not enforced.' Making CI advisory rather than mandatory creates a discipline problem that worsens as teams grow. Branch protection makes CI a hard gate — if CI fails, the merge button is disabled. Infrastructure enforces what discipline alone cannot maintain under deadline pressure, fatigue, or growing team size. Option B is tempting because social accountability works in small teams, but it does not scale — notifications become noise, and the merge still happens. The solution is a hard gate, not a soft reminder.",
       source: "Lesson 09: Verification is a Pipeline"
     },
@@ -582,12 +617,12 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "After James's 2:47 AM incident, Emma explains the feedback loop: the production failure revealed an untested edge case (international shipping under concurrent load), which led to a new load test, which was added to CI, which now catches similar failures before deployment. What does Axiom X call this cycle?",
       options: [
-        "The feedback loop — observe production failures, gain insight into gaps, improve verification by adding tests, verify the fix passes CI, deploy, and observe again to confirm the fix holds",
+        "Continuous deployment — production failures trigger automatic rollbacks and re-deployment of the previous stable version, creating a self-healing cycle that minimizes downtime",
         "The verification pyramid — each production incident adds a new layer to the testing pyramid, gradually building comprehensive coverage from unit tests up through integration and end-to-end tests",
         "The observability stack — each incident adds a new monitoring dimension (logs, then metrics, then traces) until the system has complete visibility across all operational concerns",
-        "Continuous deployment — production failures trigger automatic rollbacks and re-deployment of the previous stable version, creating a self-healing cycle that minimizes downtime"
+        "The feedback loop — observe production failures, gain insight into gaps, improve verification by adding tests, verify the fix passes CI, deploy, and observe again to confirm the fix holds"
       ],
-      correctOption: 0,
+      correctOption: 3,
       explanation: "Axiom X describes the feedback loop as: observe (production failure detected) -> insight (untested edge case identified) -> improve (add load test) -> verify (fix passes CI) -> deploy -> observe (confirm fix holds under production load) -> repeat. Each cycle makes the verification system stronger. Option B is tempting because the pyramid does grow, but the feedback loop is broader — it encompasses observation, insight, improvement, and re-observation, not just test additions.",
       source: "Lesson 10: Observability Extends Verification"
     },
