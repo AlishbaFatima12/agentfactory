@@ -205,7 +205,7 @@ Files modified:
 
 ## Reference: High-Quality Example
 
-From Chapter 3, Lesson 1 (`01-origin-story.md`):
+From Chapter 14, Lesson 1 (`01-origin-story.md`):
 
 ```yaml
 teaching_guide:

@@ -22,7 +22,7 @@ Each chapter has a **two-level structure**:
   - Introduction paragraphs (2-3 paragraphs)
   - **What You'll Learn** section (bullet list of learning objectives)
 - Does NOT include lesson-specific content
-- Example: `01-Introducing-AI-Driven-Development/01-ai-development-revolution/readme.md`
+- Example: `01-General-Agents-Foundations/01-ai-development-revolution/readme.md`
 
 ### 2. **Lesson files** - Individual Teaching Units
 

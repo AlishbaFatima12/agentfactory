@@ -23,13 +23,13 @@ Read the entire lesson file. Note the lesson's position in the chapter (which ax
 
 ### Step 2: Score (1-10 Scale)
 
-| Score | Meaning |
-|-------|---------|
-| 9-10 | Publication-ready. Minor polish only. |
+| Score | Meaning                                                  |
+| ----- | -------------------------------------------------------- |
+| 9-10  | Publication-ready. Minor polish only.                    |
 | 8-8.5 | Strong. 1-2 minor issues that don't block understanding. |
-| 7-7.5 | Good foundation. 2-3 issues that need fixing. |
-| 6-6.5 | Needs work. Multiple issues affecting quality. |
-| < 6 | Significant revision needed. |
+| 7-7.5 | Good foundation. 2-3 issues that need fixing.            |
+| 6-6.5 | Needs work. Multiple issues affecting quality.           |
+| < 6   | Significant revision needed.                             |
 
 ### Step 3: Check These Dimensions
 
@@ -44,7 +44,7 @@ Run through each dimension. For each, note whether it passes or has issues.
 
 #### 3.2 Concrete Callback Accuracy (CRITICAL)
 
-The "From Principle to Axiom" section references a specific earlier chapter (usually Chapter 6). **You MUST verify the callback is accurate:**
+The "From Principle to Axiom" section references a specific earlier chapter (usually Chapter 17). **You MUST verify the callback is accurate:**
 
 1. Identify which chapter/lesson is referenced
 2. Read the actual source lesson file
@@ -57,16 +57,16 @@ The "From Principle to Axiom" section references a specific earlier chapter (usu
 
 Check each PRIMM stage:
 
-| Stage | Check |
-|-------|-------|
-| **Predict [AI-FREE]** | Scenario is concrete, relatable, and genuinely predictable. Not obvious. Includes confidence score prompt. |
-| **Run** | Prompt is specific enough to produce useful AI comparison. References the prediction. |
-| **Answer Key** | Present as collapsible `<details>` block after Run. Analyzes both predictions (what works, what fails). Not just restating the question. |
-| **Investigate** | Goes DEEP — not surface-level. Connects the analogy back to the lesson's main story/example. Applies Error Taxonomy (names the specific error type). |
-| **Parsons Problem** | (If present) Steps are genuinely scrambable. Answer is not obvious from reading. Includes follow-up question about modification. |
-| **Modify** | Extends the scenario meaningfully. Tests understanding, not recall. |
-| **Make [Mastery Gate]** | Produces a concrete artifact. Someone else could evaluate it. "This X is your mastery gate" statement present. |
-| **Verification Ladder** | (If applicable — Axioms I, V, VII, IX, X only) References the correct rung. |
+| Stage                   | Check                                                                                                                                                |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Predict [AI-FREE]**   | Scenario is concrete, relatable, and genuinely predictable. Not obvious. Includes confidence score prompt.                                           |
+| **Run**                 | Prompt is specific enough to produce useful AI comparison. References the prediction.                                                                |
+| **Answer Key**          | Present as collapsible `<details>` block after Run. Analyzes both predictions (what works, what fails). Not just restating the question.             |
+| **Investigate**         | Goes DEEP — not surface-level. Connects the analogy back to the lesson's main story/example. Applies Error Taxonomy (names the specific error type). |
+| **Parsons Problem**     | (If present) Steps are genuinely scrambable. Answer is not obvious from reading. Includes follow-up question about modification.                     |
+| **Modify**              | Extends the scenario meaningfully. Tests understanding, not recall.                                                                                  |
+| **Make [Mastery Gate]** | Produces a concrete artifact. Someone else could evaluate it. "This X is your mastery gate" statement present.                                       |
+| **Verification Ladder** | (If applicable — Axioms I, V, VII, IX, X only) References the correct rung.                                                                          |
 
 **Analogy coherence**: Does the PRIMM-AI+ analogy make sense throughout all stages? Does the same scenario thread from Predict through Make, or does it jump between unrelated examples?
 
@@ -77,6 +77,7 @@ Check each PRIMM stage:
 **Track A** (Chapters 33+): Code exercises with actual programming.
 
 Check:
+
 - All exercises use real-world analogies students understand
 - No Try With AI prompts assume Python/bash/tool knowledge beyond what's been taught
 - PRIMM-AI+ exercises are fully conceptual (for Ch 30-31)
@@ -92,6 +93,7 @@ Check:
 #### 3.6 Error Taxonomy Integration
 
 Every PRIMM-AI+ Investigate section should apply the Error Taxonomy, naming one of:
+
 - **Type error**: wrong data type/format
 - **Logic error**: correct types but wrong reasoning
 - **Specification error**: ambiguous or missing requirements
@@ -124,6 +126,7 @@ For each issue found, report:
 ```
 
 Severity levels:
+
 - **HIGH**: Factual inaccuracy, fabricated callback, Track A in Track B, missing answer key
 - **MEDIUM**: Flow interruption, shallow Investigate, missing `:::tip` for code blocks
 - **MEDIUM-LOW**: Weak analogy, generic Modify question
@@ -143,6 +146,7 @@ Issues: [N] total ([H] high, [M] medium, [L] low)
 ## Iterative Refinement Pattern
 
 After fixes are applied:
+
 1. Re-read the full lesson
 2. Verify each fix actually resolved the issue
 3. Check for new issues introduced by fixes
@@ -151,15 +155,15 @@ After fixes are applied:
 
 ## Cross-Reference Verification Sources
 
-| Axiom | References | Source File to Verify |
-|-------|-----------|----------------------|
-| I | Ch 6, Principle 1 (Bash is the Key) | `06-seven-principles/01-bash-is-the-key.md` |
-| II | Ch 6, Principle 5 (Persisting State) | `06-seven-principles/05-persisting-state-in-files.md` |
-| III | Ch 6, Principle 2 (Code as Universal Interface) | `06-seven-principles/02-code-as-universal-interface.md` |
-| IV | Ch 6, Principle 4 (Small Reversible Decomposition) | `06-seven-principles/04-small-reversible-decomposition.md` |
-| V | Ch 6, Principle 3 (Verification) | `06-seven-principles/03-verification-as-core-step.md` |
-| VI | (varies) | Verify against actual source |
-| VII | (varies) | Verify against actual source |
-| VIII | Ch 6, Principle 5 or Ch 12 | Verify against actual source |
-| IX | Ch 6, Principle 3 (Verification) | `06-seven-principles/03-verification-as-core-step.md` |
-| X | (varies) | Verify against actual source |
+| Axiom | References                                          | Source File to Verify                                      |
+| ----- | --------------------------------------------------- | ---------------------------------------------------------- |
+| I     | Ch 17, Principle 1 (Bash is the Key)                | `17-seven-principles/01-bash-is-the-key.md`                |
+| II    | Ch 17, Principle 5 (Persisting State)               | `17-seven-principles/05-persisting-state-in-files.md`      |
+| III   | Ch 17, Principle 2 (Code as Universal Interface)    | `17-seven-principles/02-code-as-universal-interface.md`    |
+| IV    | Ch 17, Principle 4 (Small Reversible Decomposition) | `17-seven-principles/04-small-reversible-decomposition.md` |
+| V     | Ch 17, Principle 3 (Verification)                   | `17-seven-principles/03-verification-as-core-step.md`      |
+| VI    | (varies)                                            | Verify against actual source                               |
+| VII   | (varies)                                            | Verify against actual source                               |
+| VIII  | Ch 17, Principle 5 or Ch 12                         | Verify against actual source                               |
+| IX    | Ch 17, Principle 3 (Verification)                   | `17-seven-principles/03-verification-as-core-step.md`      |
+| X     | (varies)                                            | Verify against actual source                               |
