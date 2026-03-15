@@ -388,6 +388,78 @@ When finished, message the team lead: 'WRITER CH9-10 DONE — [file list]'"
 
 ---
 
+### Phase 4 Task (depends on ALL Phase 3 tasks)
+
+After ALL 6 writers complete, spawn ONE quality reviewer teammate.
+
+**Task: "Quality Reviewer — PHPM compliance check"**
+Spawn teammate "quality-reviewer". Use Opus model.
+
+Teammate prompt:
+
+"You are the quality-reviewer teammate for Part 0 of the AI Agent Factory book.
+You are part of an agent team — communicate via messages to the team lead.
+
+YOUR ROLE: Review ALL content produced by the 6 writer teammates for quality
+compliance against the PHPM Author System Prompt Specification.
+
+READ IN ORDER:
+1. specs/drafts/PHPM Author System Prompt Spec.md (the quality standard — read FULLY)
+2. specs/drafts/part0-architecture.md (understand the structure)
+3. specs/drafts/part0-reference-brief.md (understand the content identity)
+4. The reference lesson from Phase 2 (the quality benchmark)
+5. THEN read every lesson file in apps/learn-app/docs/00-Prelude-Thinking-is-the-Curriculum/
+   (use: find apps/learn-app/docs/00-Prelude-Thinking-is-the-Curriculum -name '*.md' | sort)
+
+IMPORTANT: Part 0 has NO code, NO SmartNotes, NO PRIMM-AI+ stages. The PHPM spec
+is for Parts 4-5. Extract ONLY the universal quality patterns that apply to Part 0:
+
+UNIVERSAL CHECKS (apply to ALL parts):
+- Voice rules: tone (authoritative but warm), sentence length (15-25 avg, max 40),
+  paragraph length (3-5 sentences), forbidden phrases ('simply', 'obviously', 'just'),
+  encouraged phrases, analogy policy (everyday life, not programming)
+- Formatting: heading hierarchy (h1=chapter only, h2=sections, h3=subsections, never skip),
+  callout box consistency, code block formatting for AI prompts
+- Terminology introduction: bold on first use, define immediately, use 3x in next 2 paragraphs
+- Cross-chapter continuity: backward references (2+ per chapter), forward references with links
+- Exercise design quality: clear task descriptions, testable outcomes, scaffolding
+- Vocabulary budget: max 8-12 new terms per chapter, all bolded and defined
+
+PART 0-SPECIFIC CHECKS:
+- Every exercise has a Thinking Score Card prompt
+- Every AI Check prompt is in a copy-friendly code block
+- Scenario selectors use Tabs where the source has 3 options
+- Solo Learner Alternatives present where source has peer exercises
+- Deliverable Templates in collapsible sections
+- Building On cross-references are working relative links
+- No phantom component imports (Flashcards, Quiz)
+- YAML frontmatter is complete on every file
+
+YOUR DELIVERABLE:
+
+Write a quality report to: specs/drafts/part0-quality-review.md
+
+Structure:
+1. OVERALL SCORE: Pass / Pass with issues / Fail
+2. PER-WRITER SUMMARY: For each of the 6 writers, list:
+   - Files reviewed
+   - Voice compliance (Pass/Issues found)
+   - Formatting compliance (Pass/Issues found)
+   - Exercise quality (Pass/Issues found)
+   - Cross-reference integrity (Pass/Issues found)
+3. ISSUES LIST: Every issue found, with:
+   - File path and line reference
+   - Issue category (voice / formatting / exercise / continuity / PHPM violation)
+   - Severity (critical = blocks publish, minor = should fix, suggestion = nice to have)
+   - Specific fix recommendation
+4. TOP 5 PATTERNS: The 5 most common issues across all files (these indicate
+   systemic problems in the writer briefs or reference lesson)
+
+Execute autonomously without asking for confirmation.
+When finished, message the team lead: 'QUALITY REVIEW DONE — report at specs/drafts/part0-quality-review.md'"
+
+---
+
 ## Team Lead Coordination Rules
 
 YOU ARE THE LEAD. Follow these rules strictly:
@@ -397,36 +469,44 @@ YOU ARE THE LEAD. Follow these rules strictly:
    - Phase 1 task: no dependencies
    - Phase 2 task: depends on Phase 1
    - Phase 3 tasks (all 6): each depends on Phase 2
+   - Phase 4 task: depends on ALL 6 Phase 3 tasks
 3. Spawn architect teammate FIRST. Wait for their 'ARCHITECT DONE' message
 4. Review architect's plan before approving (plan approval mode for architect only)
 5. After architect finishes, spawn reference-builder teammate. Wait for 'REFERENCE LESSON DONE'
 6. After reference-builder finishes, spawn ALL 6 writer teammates at the same time
-7. WAIT for ALL 6 writers to message 'DONE'. Do NOT start verification early
-8. Do NOT write ANY content yourself — you are the coordinator only
-9. If a teammate gets stuck or stops, message them directly to unstick them
-   or spawn a replacement teammate to continue their work
-10. After all 8 teammates report done, run this verification:
+7. WAIT for ALL 6 writers to message 'DONE'. Do NOT start Phase 4 early
+8. After all writers finish, spawn quality-reviewer teammate. Wait for 'QUALITY REVIEW DONE'
+9. Do NOT write ANY content yourself — you are the coordinator only
+10. If a teammate gets stuck or stops, message them directly to unstick them
+    or spawn a replacement teammate to continue their work
+11. After quality-reviewer reports, read specs/drafts/part0-quality-review.md:
+    - If OVERALL SCORE is "Pass": proceed to verification
+    - If "Pass with issues": review the issues list, decide which are critical
+    - If "Fail": message the relevant writer teammates with specific fixes needed,
+      wait for them to fix, then re-run quality reviewer
+12. After quality review passes, run structural verification:
     - ls -R apps/learn-app/docs/00-Prelude-Thinking-is-the-Curriculum/
     - Count total files and compare against architect's skeleton in part0-architecture.md
-    - Spot-check one random lesson from each writer for complete YAML frontmatter
     - grep -r 'import Flashcards' and grep -r 'import Quiz' in the output directory
-    - Report: total files created, any missing vs skeleton, any phantom imports, any issues
-11. After verification, ask all teammates to shut down, then clean up the team
+    - Report: total files, missing files, phantom imports, quality review score
+13. After verification, ask all teammates to shut down, then clean up the team
 
 ## Model Preferences
 
 - Architect teammate: Opus (reads and synthesizes full 39K-token draft)
 - Reference-builder teammate: Opus (quality-critical gold-standard lesson)
-- All 6 writer teammates: opus (pattern-following from reference lesson)
+- All 6 writer teammates: Opus (pattern-following from reference lesson)
+- Quality reviewer teammate: Opus (reads PHPM spec + all output, needs deep reasoning)
 
 ## Anti-Patterns to Avoid
 
 - Do NOT use the Agent tool or spawn subagents — this is a TEAM with TEAMMATES
 - Do NOT write content yourself — delegate everything to teammates
 - Do NOT spawn Phase 3 teammates before Phase 2 completes
+- Do NOT spawn quality reviewer before ALL 6 writers complete
 - Do NOT let writer teammates read the full 39K source draft (only architect reads it all)
 - Do NOT approve architect's plan without reviewing the directory structure
-- Do NOT skip verification after all teammates finish
+- Do NOT skip quality review or structural verification
 ````
 
 ---

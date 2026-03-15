@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch4-rebuild-constraints"
+  title: "Rebuild Under New Constraints"
+  description: "Key concepts from the rebuild exercise — principle audits, constraint change propagation, and the principles vs. patterns distinction."
+  tags: ["first-principles", "constraint-change", "principle-audit"]
+  version: 1
+
+cards:
+  - id: "p0-ch4-rebuild-constraints-001"
+    front: "What is a principle audit in the context of a constraint change?"
+    back: "A systematic review of which first principles survived the change (and why), which collapsed (and why), and which new principles emerged."
+    tags: ["principle-audit", "definition"]
+    difficulty: "basic"
+
+  - id: "p0-ch4-rebuild-constraints-002"
+    front: "Why can a student who derived from principles rebuild when constraints change, while one who borrowed patterns cannot?"
+    back: "The principled student understands WHY each element of their solution exists — therefore they know which parts are affected by the change. The pattern borrower has no causal understanding and must start from zero."
+    tags: ["first-principles", "adaptability"]
+    difficulty: "intermediate"
+    why: "How is this the same dynamic as the variable shift exercise in Chapter 3?"
+
+  - id: "p0-ch4-rebuild-constraints-003"
+    front: "What three categories does a principle audit classify principles into?"
+    back: "1. Survived (still hold under new constraints)\n2. Collapsed (no longer valid)\n3. Emerged (new principles created by the constraint change)"
+    tags: ["principle-audit", "categories"]
+    difficulty: "basic"
+
+  - id: "p0-ch4-rebuild-constraints-004"
+    front: "Why does 'collapsed' not mean a principle was wrong?"
+    back: "Collapsed principles were correct under the old constraints — they simply do not apply to the new situation. The constraint change invalidated their context, not their logic."
+    tags: ["principle-audit", "misconceptions"]
+    difficulty: "intermediate"
+    why: "How would you distinguish a principle that collapsed due to context change from one that was flawed all along?"
+
+  - id: "p0-ch4-rebuild-constraints-005"
+    front: "How do human and AI rebuild strategies typically differ when constraints change?"
+    back: "Humans preserve core logic and selectively revise. AI tends to regenerate a complete new solution from scratch."
+    tags: ["human-ai-comparison", "adaptation"]
+    difficulty: "basic"
+
+  - id: "p0-ch4-rebuild-constraints-006"
+    front: "Why is superficially patching an old solution different from genuinely rebuilding from surviving principles?"
+    back: "Patching changes surface elements without tracing whether the underlying logic still holds — because genuine rebuilding requires re-deriving the solution from principles that survived the constraint change."
+    tags: ["rebuild", "depth-of-reasoning"]
+    difficulty: "intermediate"
+    why: "What specific evidence in a student's work would reveal patching vs. genuine rebuilding?"
+
+  - id: "p0-ch4-rebuild-constraints-007"
+    front: "What does the First Principles Portfolio contain at the end of Chapter 4?"
+    back: "1. Contrarian argument (no AI)\n2. First Principles Worksheet with AI comparison\n3. Merged assumption map\n4. Rebuilt solution with principle audit\n5. All AI feedback with reflections"
+    tags: ["portfolio", "chapter-deliverable"]
+    difficulty: "basic"
+
+  - id: "p0-ch4-rebuild-constraints-008"
+    front: "How does the rebuild exercise reveal the fundamental difference between principles and patterns?"
+    back: "Principles are derivable truths that can be audited under new conditions. Patterns are borrowed solutions that work only in the context where they originated — when context shifts, principles adapt while patterns break."
+    tags: ["first-principles", "patterns", "core-insight"]
+    difficulty: "advanced"
+    why: "In your own field, can you name one 'best practice' that is actually a pattern rather than a principle?"

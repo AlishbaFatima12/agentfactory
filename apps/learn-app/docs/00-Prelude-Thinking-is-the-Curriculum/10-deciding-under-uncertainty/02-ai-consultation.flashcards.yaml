@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch09-ai-consultation"
+  title: "The AI Consultation"
+  description: "Key concepts from consulting AI under uncertainty: detecting fabrication, trust calibration, and proportional decision updating after AI input."
+  tags: ["ai-consultation", "fabrication-detection", "trust-calibration", "decision-making"]
+  version: 1
+
+cards:
+  - id: "p0-ch09-ai-consultation-001"
+    front: "When consulting AI about a fictional scenario, what is the key danger to watch for?"
+    back: "AI will confidently fabricate specific details about the scenario as though it has real data."
+    tags: ["ai-fabrication", "uncertainty"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-ai-consultation-002"
+    front: "Why is AI fabrication especially dangerous when you are making decisions under uncertainty?"
+    back: "Uncertainty makes you hungry for data, so you are more likely to accept fabricated details as real information because they fill gaps you desperately want filled."
+    tags: ["ai-fabrication", "decision-making"]
+    difficulty: "intermediate"
+    why: "How would you design a process to catch AI fabrication before it influences your decision?"
+
+  - id: "p0-ch09-ai-consultation-003"
+    front: "What does the Consultation Log document for each AI interaction?"
+    back: "The question asked, the response received, whether it was accepted, what AI fabricated, and how it changed your thinking."
+    tags: ["consultation-log", "deliverable"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-ai-consultation-004"
+    front: "After AI consultation, a student completely changes their recommendation without examining whether the change was warranted. Why is this problematic?"
+    back: "Uncritical adoption of AI analysis replaces your reasoning with AI's, because proportional updating requires evaluating whether AI's input actually justifies the magnitude of change."
+    tags: ["proportional-updating", "critical-evaluation"]
+    difficulty: "intermediate"
+    why: "What signals would tell you that AI consultation improved versus degraded your judgment?"
+
+  - id: "p0-ch09-ai-consultation-005"
+    front: "What does the side-by-side comparison of pre- and post-consultation decisions reveal?"
+    back: "Whether AI consultation improved or degraded your judgment."
+    tags: ["decision-comparison", "meta-cognition"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-ai-consultation-006"
+    front: "How does the Consultation Log format differ from the Collaboration Log introduced in Chapter 6?"
+    back: "It adds trust-calibration fields: whether you noticed AI fabricating, and explicit documentation of where you trusted AI versus your own judgment."
+    tags: ["consultation-log", "collaboration-log"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch09-ai-consultation-007"
+    front: "AI gives a confident analysis of a fictional business scenario with specific revenue figures. How should you evaluate this?"
+    back: "Treat the specific figures as fabrication, because the scenario is fictional and AI has no real data. Evaluate only the analytical reasoning, not the invented numbers."
+    tags: ["ai-fabrication", "critical-evaluation"]
+    difficulty: "advanced"
+    why: "When AI analysis contains both genuine reasoning and fabricated data, how do you separate the two?"
+
+  - id: "p0-ch09-ai-consultation-008"
+    front: "Why must the updated Decision Document show both original and revised versions side by side?"
+    back: "Side-by-side comparison makes the change visible and forces explicit reasoning about what caused the update, because without it you cannot evaluate whether AI helped or hurt."
+    tags: ["decision-document", "proportional-updating"]
+    difficulty: "intermediate"
+    why: "What would a student miss if they only submitted the revised version?"

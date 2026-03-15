@@ -1,0 +1,58 @@
+deck:
+  id: "p0-instructor-calibration"
+  title: "Calibrating and Maintaining AI Prompts"
+  description: "The semester calibration protocol for keeping AI assessment prompts accurate over time"
+  tags: ["Part 0", "instructor guide", "calibration", "AI prompts", "maintenance"]
+  version: 1
+
+cards:
+  - id: "p0-instructor-calibration-001"
+    front: "What are the five steps of the Semester Calibration Protocol for Part 0's AI prompts?"
+    back: "1. Score Distribution Audit\n2. Prompt Spot-Testing\n3. Feedback Challenge Review\n4. Model Migration\n5. Scenario Refresh"
+    tags: ["calibration", "protocol"]
+    difficulty: "basic"
+
+  - id: "p0-instructor-calibration-002"
+    front: "In the Score Distribution Audit, what indicates AI prompts are too lenient?"
+    back: "More than 80% of students scoring 8+ on any dimension by Chapter 3."
+    tags: ["calibration", "score-distribution"]
+    difficulty: "intermediate"
+
+  - id: "p0-instructor-calibration-003"
+    front: "What is the healthy score distribution pattern across Part 0?"
+    back: "Chapter 1 averages of 4-6 rising to Chapter 10 averages of 6-8, with natural variance."
+    tags: ["calibration", "score-distribution"]
+    difficulty: "intermediate"
+
+  - id: "p0-instructor-calibration-004"
+    front: "Why does the calibration protocol distinguish between tuning prompts and changing Score Card dimensions?"
+    back: "The five dimensions (Independent Thinking, Critical Evaluation, Reasoning Depth, Originality, Self-Awareness) are permanent because they define what thinking means. Changing them would break cross-semester comparability. Only the prompt wording that measures them should be adjusted."
+    tags: ["calibration", "dimensions"]
+    difficulty: "advanced"
+    why: "What would happen to multi-semester growth data if Score Card dimensions were changed?"
+
+  - id: "p0-instructor-calibration-005"
+    front: "How does the Prompt Spot-Test work?"
+    back: "Take 5 student deliverables (1 strong, 1 weak, 3 average), submit to current AI models with current prompts, compare AI scores to instructor's independent assessment."
+    tags: ["calibration", "spot-test"]
+    difficulty: "intermediate"
+
+  - id: "p0-instructor-calibration-006"
+    front: "If students successfully challenge AI feedback more than 30% of the time, what does the calibration protocol recommend?"
+    back: "Prompts need tightening -- the AI is producing feedback that is too often inaccurate."
+    tags: ["calibration", "feedback-challenge"]
+    difficulty: "intermediate"
+    why: "Why might a 0% challenge rate also indicate a problem?"
+
+  - id: "p0-instructor-calibration-007"
+    front: "Why do small inaccuracies in individual AI scores not undermine the assessment system?"
+    back: "Over 40 exercises, individual noise washes out. Systematic bias does not -- and that is what the calibration protocol catches. The trajectory across 40 data points is meaningful even when any single score is imperfect."
+    tags: ["calibration", "statistics"]
+    difficulty: "advanced"
+    why: "How would you distinguish systematic bias from random noise in a set of AI scores?"
+
+  - id: "p0-instructor-calibration-008"
+    front: "What are the three common score drift patterns the calibration protocol warns about?"
+    back: "Score inflation (AI becomes more generous), compression (AI stops distinguishing mediocre from good), and new blind spots."
+    tags: ["calibration", "drift"]
+    difficulty: "intermediate"

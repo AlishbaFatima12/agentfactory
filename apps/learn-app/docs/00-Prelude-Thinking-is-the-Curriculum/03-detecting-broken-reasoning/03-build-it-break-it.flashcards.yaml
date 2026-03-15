@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch02-build-it-break-it"
+  title: "Build It, Then Break It"
+  description: "Key concepts from the Build It, Then Break It exercise on domain expertise as an error detection tool"
+  tags: ["Part 0", "error detection", "domain expertise", "cross-domain verification"]
+  version: 1
+
+cards:
+  - id: "p0-ch02-build-it-break-it-001"
+    front: "In Build It, Then Break It, why must students choose a topic they know well for AI analysis?"
+    back: "Because domain expertise lets them catch errors that a non-expert would miss — they can verify claims against knowledge AI cannot access."
+    tags: ["domain-expertise", "error-detection"]
+    difficulty: "basic"
+
+  - id: "p0-ch02-build-it-break-it-002"
+    front: "What do students exchange with their domain partner in this exercise?"
+    back: "Their annotated AI outputs — each student attempts to verify the other's error annotations from an unfamiliar domain."
+    tags: ["cross-domain", "peer-verification"]
+    difficulty: "basic"
+
+  - id: "p0-ch02-build-it-break-it-003"
+    front: "Why is domain expertise described as the 'most powerful error detection tool'?"
+    back: "Because experts catch subtle errors that AI gets wrong and outsiders would accept as correct. Without domain knowledge, many errors are invisible — they sound plausible and pass surface-level scrutiny."
+    tags: ["domain-expertise", "error-detection"]
+    difficulty: "intermediate"
+    why: "What type of AI error is most dangerous in a domain you know nothing about?"
+
+  - id: "p0-ch02-build-it-break-it-004"
+    front: "A student finds 12 errors in their expert domain but only 3 in their partner's domain. What does this gap reveal?"
+    back: "It reveals how much domain expertise matters for error detection. The gap teaches caution when using AI in unfamiliar domains — your detection rate drops dramatically without expertise."
+    tags: ["detection-rate-gap", "domain-expertise"]
+    difficulty: "intermediate"
+    why: "How should this gap change the way you use AI output in domains where you lack expertise?"
+
+  - id: "p0-ch02-build-it-break-it-005"
+    front: "What two categories of errors must students list separately in their deliverable?"
+    back: "1. Errors caught because of domain expertise that a non-expert would miss\n2. Errors suspected but not confirmable without more research"
+    tags: ["error-detection", "deliverable-format"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch02-build-it-break-it-006"
+    front: "Why does the exercise require a 200-word reflection comparing error detection across domains?"
+    back: "Because the reflection forces students to articulate the gap between expert and non-expert detection and commit to a concrete change in how they use AI outside their expertise — understanding the gap without acting on it is incomplete learning."
+    tags: ["reflection", "metacognition"]
+    difficulty: "intermediate"
+    why: "What concrete behavior change should the reflection produce?"
+
+  - id: "p0-ch02-build-it-break-it-007"
+    front: "Why can a non-expert's inability to verify a partner's error annotations NOT be treated as evidence that the annotations are wrong?"
+    back: "Because inability to verify reflects the verifier's knowledge gap, not the annotation's accuracy. The annotation may be correct — the non-expert simply lacks the domain knowledge to confirm it."
+    tags: ["cross-domain", "verification-limits"]
+    difficulty: "advanced"
+    why: "How does this principle apply when reading AI-generated content about an unfamiliar field?"
+
+  - id: "p0-ch02-build-it-break-it-008"
+    front: "How long is the live discussion session between domain partners?"
+    back: "10 minutes."
+    tags: ["exercise-format", "peer-discussion"]
+    difficulty: "basic"

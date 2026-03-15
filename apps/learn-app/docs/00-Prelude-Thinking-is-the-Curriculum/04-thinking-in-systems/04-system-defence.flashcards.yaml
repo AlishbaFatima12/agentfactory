@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch3-system-defence"
+  title: "Peer Cross-Examination"
+  description: "Key concepts from the peer cross-examination exercise — live defence, peer review value, and complementary feedback sources."
+  tags: ["systems-thinking", "peer-review", "live-defence"]
+  version: 1
+
+cards:
+  - id: "p0-ch3-system-defence-001"
+    front: "In the peer cross-examination, what three things must each student do when reviewing their partner's cascade map?"
+    back: "1. Identify at least 2 missing connections\n2. Challenge at least 1 feedback loop as unrealistic\n3. Defend their own map against challenges"
+    tags: ["peer-review", "cross-examination"]
+    difficulty: "basic"
+
+  - id: "p0-ch3-system-defence-002"
+    front: "Why do peers reveal different blind spots than AI tools in systems analysis?"
+    back: "Peers approach the same problem differently based on their unique background — because AI tools tend to converge on similar analyses, while humans diverge based on personal experience and perspective."
+    tags: ["peer-review", "blind-spots"]
+    difficulty: "intermediate"
+    why: "What type of feedback would you expect a peer from a completely different field to provide that AI cannot?"
+
+  - id: "p0-ch3-system-defence-003"
+    front: "Why must preparation notes be written before the live cross-examination session?"
+    back: "Pre-written notes force deep engagement with the partner's map — because improvised critique tends to be vague and shallow."
+    tags: ["peer-review", "preparation"]
+    difficulty: "intermediate"
+    why: "How would you design preparation notes that ensure substantive rather than superficial critique?"
+
+  - id: "p0-ch3-system-defence-004"
+    front: "Why is no AI access allowed during the live defence session?"
+    back: "The no-AI constraint tests whether the student genuinely understands their map — if they outsourced their thinking to AI, they cannot explain or defend the connections under questioning."
+    tags: ["live-defence", "independent-reasoning"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch3-system-defence-005"
+    front: "What does the Systems Thinking Portfolio contain at the end of Chapter 3?"
+    back: "1. Original cascade map (Draft 1)\n2. Comparison document and merged map (Draft 2)\n3. Revised map after variable shift (Draft 3)\n4. Peer cross-examination notes\n5. All AI feedback\n6. Final reflection"
+    tags: ["portfolio", "chapter-deliverable"]
+    difficulty: "basic"
+
+  - id: "p0-ch3-system-defence-006"
+    front: "How does peer review complement AI feedback in assessing systems thinking?"
+    back: "AI provides consistent, broad evaluation of completeness and logic. Peers provide divergent perspectives that surface blind spots AI's convergent analysis cannot find — together they cover both breadth and diversity of viewpoint."
+    tags: ["peer-review", "ai-feedback", "complementary"]
+    difficulty: "advanced"
+    why: "If you could only get feedback from one source — AI or a peer — which would be more valuable for systems thinking, and why?"
+
+  - id: "p0-ch3-system-defence-007"
+    front: "What should a 200-word post-session reflection address after peer cross-examination?"
+    back: "Three questions: What did my partner find that I missed? What challenge was hardest to defend? What would I add to my map based on this exchange?"
+    tags: ["reflection", "self-awareness"]
+    difficulty: "basic"
+
+  - id: "p0-ch3-system-defence-008"
+    front: "Why is discovering blind spots through peer critique more valuable than 'winning' the defence?"
+    back: "The goal is to improve systems thinking, not to prove existing work is flawless — because defending without openness to critique prevents learning from the perspectives that peers uniquely provide."
+    tags: ["peer-review", "growth-mindset"]
+    difficulty: "intermediate"
+    why: "How would you tell whether a student engaged genuinely with critique vs. just argued defensively?"

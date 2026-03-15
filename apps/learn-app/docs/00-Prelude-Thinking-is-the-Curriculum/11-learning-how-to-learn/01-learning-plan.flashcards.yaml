@@ -1,0 +1,71 @@
+deck:
+  id: "p0-ch10-learning-plan"
+  title: "The Learning Plan"
+  description: "Key concepts from designing a learning strategy: the Learning Plan as a Prediction Lock, resource prioritization, skip decisions, and defining testable competence."
+  tags: ["meta-learning", "learning-plan", "strategy-design", "prediction-lock"]
+  version: 1
+
+cards:
+  - id: "p0-ch10-learning-plan-001"
+    front: "In the meta-learning chapter, why is the Learning Plan described as a Prediction Lock?"
+    back: "It is a prediction about your own learning process, committed in writing before you start learning — just like the Chapter 1 Prediction Lock committed a diagnosis before AI."
+    tags: ["learning-plan", "prediction-lock"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-learning-plan-002"
+    front: "Why is the 'what to skip' decision as important as the 'what to learn' decision in a Learning Plan?"
+    back: "Beginners try to learn everything and end up mastering nothing, because time is finite and explicit skip decisions force prioritization of what actually matters for competence."
+    tags: ["skip-decisions", "prioritization"]
+    difficulty: "intermediate"
+    why: "How would you decide what to skip when everything in a new domain feels equally important?"
+
+  - id: "p0-ch10-learning-plan-003"
+    front: "What does a Learning Plan's 'definition of enough' require?"
+    back: "A testable competence threshold — what you can demonstrably do, calibrated to the available time."
+    tags: ["competence-definition", "learning-plan"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-learning-plan-004"
+    front: "A student defines 'enough' as 'know everything about pharmacology.' Why is this a bad definition for a 72-hour sprint?"
+    back: "It is untestable and unrealistic for the time available. A good definition specifies what you can demonstrably do, such as 'analyze a drug interaction case and identify the three most critical risks.'"
+    tags: ["competence-definition", "realistic-goals"]
+    difficulty: "intermediate"
+    why: "How would you calibrate your definition of 'enough' to match available time without aiming too low?"
+
+  - id: "p0-ch10-learning-plan-005"
+    front: "What five elements does the Learning Plan template require?"
+    back: "1. Phased time allocation\n2. Resource prioritization\n3. What to skip (and why)\n4. Definition of enough\n5. Predicted biggest challenge"
+    tags: ["learning-plan", "template"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-learning-plan-006"
+    front: "Why does the Learning Plan exercise make you plan BEFORE learning anything about the domain?"
+    back: "Planning first creates a testable prediction about your learning process. Without a pre-learning plan, you cannot compare strategy versus reality in the retrospective — therefore you cannot improve your meta-learning skill."
+    tags: ["prediction-lock", "meta-learning"]
+    difficulty: "intermediate"
+    why: "What would be different about a plan written after 10 hours of studying?"
+
+  - id: "p0-ch10-learning-plan-007"
+    front: "What is the core skill trained in the Learning How to Learn chapter?"
+    back: "Meta-learning — the process of mastering subjects you have never encountered before."
+    tags: ["meta-learning", "core-skill"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-learning-plan-008"
+    front: "Why is meta-learning called 'the skill underneath all the others' in this capstone chapter?"
+    back: "Every tool, framework, and best practice will eventually become obsolete. Meta-learning is the only skill that stays relevant indefinitely, because it teaches you how to acquire whatever comes next."
+    tags: ["meta-learning", "capstone"]
+    difficulty: "advanced"
+    why: "How does having a meta-learning framework change your response when your entire tech stack becomes obsolete?"
+
+  - id: "p0-ch10-learning-plan-009"
+    front: "What common mistake do beginners make with time allocation in a Learning Plan?"
+    back: "Allocating equal time to all phases instead of front-loading foundations."
+    tags: ["time-allocation", "common-mistakes"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch10-learning-plan-010"
+    front: "How does the AI Check for the Learning Plan help improve your strategy before you start learning?"
+    back: "AI identifies common beginner mistakes in your chosen domain, evaluates whether your resources and time allocation are realistic, and suggests the five most important concepts to master in order."
+    tags: ["ai-check", "learning-strategy"]
+    difficulty: "intermediate"

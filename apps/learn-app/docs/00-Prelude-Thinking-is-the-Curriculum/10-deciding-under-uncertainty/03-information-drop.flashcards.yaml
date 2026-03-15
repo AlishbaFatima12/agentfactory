@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch09-information-drop"
+  title: "The Information Drop"
+  description: "Key concepts from the time-pressured decision revision exercise: proportional updating, anchoring bias, overreaction, and confidence recalibration across multiple stages."
+  tags: ["information-drop", "proportional-updating", "anchoring", "time-pressure"]
+  version: 1
+
+cards:
+  - id: "p0-ch09-information-drop-001"
+    front: "What are the three common responses when contradictory information arrives mid-decision?"
+    back: "1. Anchoring (refuse to change)\n2. Overreaction (abandon everything)\n3. Proportional updating (change as much as evidence warrants)"
+    tags: ["decision-responses", "proportional-updating"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-information-drop-002"
+    front: "Why is proportional updating better than both anchoring and overreaction when new information contradicts your position?"
+    back: "Anchoring ignores relevant evidence while overreaction discards valid prior analysis. Proportional updating preserves what still holds and changes only what the new evidence actually invalidates."
+    tags: ["proportional-updating", "decision-quality"]
+    difficulty: "intermediate"
+    why: "How would you determine exactly how much to change when new information arrives?"
+
+  - id: "p0-ch09-information-drop-003"
+    front: "What is anchoring bias in decision-making?"
+    back: "Refusing to change a decision despite relevant new evidence that contradicts it."
+    tags: ["anchoring-bias", "cognitive-bias"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-information-drop-004"
+    front: "A student receives contradictory information and completely abandons their original analysis within minutes. Why might this be a problem?"
+    back: "This is overreaction — treating new information as the only thing that matters, because the original analysis may still be partially valid and abandoning it wastes sound prior reasoning."
+    tags: ["overreaction", "decision-quality"]
+    difficulty: "intermediate"
+    why: "How do you distinguish between appropriate reversal and panic-driven abandonment?"
+
+  - id: "p0-ch09-information-drop-005"
+    front: "What does the Calibration Check in the Information Drop exercise compare?"
+    back: "Three confidence levels: original, post-consultation, and post-drop."
+    tags: ["calibration-check", "confidence"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-information-drop-006"
+    front: "Why does the Information Drop exercise enforce a strict 20-minute time limit?"
+    back: "Real-world decisions almost always have time constraints. The pressure reveals whether you anchor, overreact, or update proportionally — patterns invisible without time pressure."
+    tags: ["time-pressure", "decision-making"]
+    difficulty: "intermediate"
+    why: "How does time pressure change the quality of your decision process compared to unlimited time?"
+
+  - id: "p0-ch09-information-drop-007"
+    front: "How does the Reversal Trigger from Exercise 1 connect to the Information Drop in Exercise 3?"
+    back: "The new contradictory information tests whether it matches the trigger condition. If it does, the student should consider reversing — but still with judgment, not automatically."
+    tags: ["reversal-trigger", "information-drop"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch09-information-drop-008"
+    front: "Why is changing your mind based on evidence a strength rather than a weakness in decision-making?"
+    back: "Updating based on evidence demonstrates intellectual honesty and adaptive thinking, because rigid positions that ignore new data lead to worse outcomes than calibrated revision."
+    tags: ["proportional-updating", "meta-cognition"]
+    difficulty: "advanced"
+    why: "What is the difference between changing your mind because of evidence and changing it because of panic?"

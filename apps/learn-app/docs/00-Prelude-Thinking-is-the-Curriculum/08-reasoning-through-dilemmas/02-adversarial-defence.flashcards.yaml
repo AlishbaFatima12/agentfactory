@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch07-adversarial-defence"
+  title: "The Adversarial Defence"
+  description: "Key concepts from the Adversarial Defence exercise on surviving systematic counter-arguments"
+  tags: ["adversarial-defence", "ethical-reasoning", "contradiction-challenge", "Part-0"]
+  version: 1
+
+cards:
+  - id: "p0-ch07-adversarial-defence-001"
+    front: "How many rounds does the Adversarial Defence exercise require?"
+    back: "Three rounds of AI attack and human defence."
+    tags: ["adversarial-defence", "structure"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-adversarial-defence-002"
+    front: "In the Adversarial Defence, who writes the defence responses -- the student or AI?"
+    back: "The student writes all defences without AI assistance."
+    tags: ["adversarial-defence", "rules"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-adversarial-defence-003"
+    front: "Why must defence responses in the Adversarial Defence be written without AI?"
+    back: "Because the exercise tests genuine understanding of the position. AI-assisted defences would mask whether the student truly comprehends their own arguments or is outsourcing reasoning under pressure."
+    tags: ["adversarial-defence", "layer-4"]
+    difficulty: "intermediate"
+    why: "What would be revealed if a student could defend their position with AI but collapsed without it?"
+
+  - id: "p0-ch07-adversarial-defence-004"
+    front: "What does the Position Tracker document across the three rounds?"
+    back: "Whether the position held, shifted, or reversed at each round, with the exact reasoning."
+    tags: ["position-tracker", "adversarial-defence"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-adversarial-defence-005"
+    front: "A student's position never changes across all three rounds. How should you interpret this?"
+    back: "It could mean the position is genuinely strong, or the student is being stubborn rather than engaging. The key test is whether they addressed counter-arguments substantively or merely restated their original position."
+    tags: ["position-tracker", "intellectual-honesty"]
+    difficulty: "advanced"
+    why: "How can you distinguish between a well-defended position and defensive stubbornness?"
+
+  - id: "p0-ch07-adversarial-defence-006"
+    front: "Why does the three-round format build intellectual stamina?"
+    back: "Because each round forces deeper reasoning -- surface-level arguments collapse early, so surviving three rounds requires understanding the position at its foundations, not just restating opinions louder."
+    tags: ["adversarial-defence", "intellectual-stamina"]
+    difficulty: "intermediate"
+    why: "What happens to a position built on habit rather than thought when it faces systematic attack?"
+
+  - id: "p0-ch07-adversarial-defence-007"
+    front: "What should a student do if their position genuinely changes during the Adversarial Defence?"
+    back: "Document the exact moment and reason for the change in the Position Tracker."
+    tags: ["position-tracker", "intellectual-honesty"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch07-adversarial-defence-008"
+    front: "How does the Adversarial Defence use Layer 4 (Contradiction Challenge)?"
+    back: "The student's position is fed to AI with instructions to attack aggressively. The student then defends without AI, creating a genuine test of whether their conviction is grounded in understanding."
+    tags: ["layer-4", "contradiction-challenge"]
+    difficulty: "intermediate"
+    why: "Why is AI uniquely suited to play the adversarial role in this exercise?"

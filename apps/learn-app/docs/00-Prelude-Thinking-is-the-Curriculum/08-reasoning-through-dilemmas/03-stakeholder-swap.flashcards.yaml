@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch07-stakeholder-swap"
+  title: "The Stakeholder Swap"
+  description: "Key concepts from the Stakeholder Swap exercise on perspective reversal and empathetic argumentation"
+  tags: ["stakeholder-swap", "perspective-reversal", "ethical-reasoning", "Part-0"]
+  version: 1
+
+cards:
+  - id: "p0-ch07-stakeholder-swap-001"
+    front: "What does the Stakeholder Swap exercise require you to argue?"
+    back: "The opposite position from the one you chose in Exercise 1."
+    tags: ["stakeholder-swap", "perspective-reversal"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-stakeholder-swap-002"
+    front: "Can you use AI during the live Stakeholder Swap presentation?"
+    back: "AI can help with preparation, but there is no AI access during the 5-minute presentation."
+    tags: ["stakeholder-swap", "rules"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-stakeholder-swap-003"
+    front: "Why is arguing a position you disagree with the highest test of ethical reasoning?"
+    back: "Because it proves you understand the dilemma deeply enough to construct the strongest case for any side. Surface understanding cannot survive a live presentation of the opposing view."
+    tags: ["perspective-reversal", "ethical-reasoning"]
+    difficulty: "intermediate"
+    why: "What is the difference between understanding a position and agreeing with it?"
+
+  - id: "p0-ch07-stakeholder-swap-004"
+    front: "What three dimensions do peers rate during the Stakeholder Swap presentation?"
+    back: "1. Argument strength (1-10)\n2. Apparent conviction (1-10)\n3. Empathy for the other side (1-10)"
+    tags: ["peer-feedback", "stakeholder-swap"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-stakeholder-swap-005"
+    front: "Why is 'apparent conviction' the key metric in the Stakeholder Swap peer feedback?"
+    back: "Because it measures whether the student internalized the opposing perspective deeply enough to be convincing, not just whether they memorized arguments. Low conviction reveals surface-level understanding."
+    tags: ["apparent-conviction", "peer-feedback"]
+    difficulty: "intermediate"
+    why: "How would you distinguish between a student who understands the opposing view and one who is just performing?"
+
+  - id: "p0-ch07-stakeholder-swap-006"
+    front: "A student prepares strong arguments for the opposite position but delivers them unconvincingly. Why might this happen?"
+    back: "They understood the arguments intellectually but did not internalize the values and experiences that make someone genuinely hold that position. Empathetic understanding goes deeper than logical comprehension."
+    tags: ["empathetic-argumentation", "perspective-reversal"]
+    difficulty: "advanced"
+    why: "How could a student improve their ability to argue positions they disagree with?"
+
+  - id: "p0-ch07-stakeholder-swap-007"
+    front: "In the Solo Learner Alternative, how does AI substitute for the live audience?"
+    back: "The student writes a 400-word essay arguing the opposite position, then AI rates it on strength, conviction, and empathy, and asks 3 follow-up questions."
+    tags: ["solo-learner", "stakeholder-swap"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch07-stakeholder-swap-008"
+    front: "How does the 200-word reflection after the Stakeholder Swap reveal learning?"
+    back: "It forces the student to articulate whether arguing the other side changed their understanding of the dilemma -- genuine perspective shifts indicate deep engagement, while unchanged views may indicate surface-level performance."
+    tags: ["reflection", "perspective-reversal"]
+    difficulty: "intermediate"
+    why: "Why is a short word limit more revealing than a long one for reflection exercises?"
