@@ -1,5 +1,5 @@
 ---
-sidebar_position: 0
+sidebar_position: 0.6
 title: "Part 0: Thinking is the Curriculum"
 ---
 
