@@ -1,0 +1,58 @@
+deck:
+  id: "p0-ch4-assumption-autopsy"
+  title: "Assumption Autopsy"
+  description: "Key concepts from the assumption autopsy exercise — hidden assumptions, categorization by source, and complementary human-AI blind spots."
+  tags: ["first-principles", "assumptions", "human-ai-collaboration"]
+  version: 1
+
+cards:
+  - id: "p0-ch4-assumption-autopsy-001"
+    front: "What is an assumption autopsy?"
+    back: "A systematic process of uncovering hidden assumptions in your own solution, then comparing against AI-identified assumptions to create a categorized merged map."
+    tags: ["assumption-autopsy", "definition"]
+    difficulty: "basic"
+
+  - id: "p0-ch4-assumption-autopsy-002"
+    front: "What are the four categories in a merged assumption map?"
+    back: "(a) Found by you only\n(b) Found by AI only\n(c) Found by both\n(d) Found by neither but identified during merge"
+    tags: ["assumption-map", "categories"]
+    difficulty: "basic"
+
+  - id: "p0-ch4-assumption-autopsy-003"
+    front: "Why is category (d) — found by neither until the merge process — the most valuable?"
+    back: "Category (d) assumptions emerge only from genuine synthesis of human and AI perspectives — they represent blind spots that neither source could surface independently, therefore demonstrating that the merge process itself generates insight."
+    tags: ["assumption-map", "synthesis"]
+    difficulty: "intermediate"
+    why: "What conditions during the merge process are most likely to surface category (d) assumptions?"
+
+  - id: "p0-ch4-assumption-autopsy-004"
+    front: "What types of assumptions do humans typically catch that AI misses?"
+    back: "Contextual assumptions — cultural, personal, and professional biases that shape the solution but are invisible to AI's structural analysis."
+    tags: ["human-ai-comparison", "blind-spots"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch4-assumption-autopsy-005"
+    front: "What types of assumptions does AI typically catch that humans miss?"
+    back: "Structural assumptions — logical and systemic patterns the solver takes for granted because they seem too obvious to question."
+    tags: ["human-ai-comparison", "blind-spots"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch4-assumption-autopsy-006"
+    front: "Why is listing assumptions different from evaluating them?"
+    back: "Listing identifies what was assumed. Evaluating assesses risk — what happens to the solution if each assumption is wrong — because a listed but unevaluated assumption provides no actionable insight."
+    tags: ["assumption-evaluation", "risk-assessment"]
+    difficulty: "intermediate"
+    why: "How would you prioritize which assumptions to test first when resources are limited?"
+
+  - id: "p0-ch4-assumption-autopsy-007"
+    front: "How does the assumption autopsy connect to the cascade map from Chapter 3?"
+    back: "Assumptions are invisible inputs to every causal chain in a system — finding hidden assumptions reveals why some cascade connections may be weaker than they appear."
+    tags: ["assumption-autopsy", "cascade-map", "connections"]
+    difficulty: "advanced"
+    why: "What would happen to a cascade map if you discovered that one of its key assumptions was false?"
+
+  - id: "p0-ch4-assumption-autopsy-008"
+    front: "Why does using both Claude and ChatGPT for assumption identification produce better results than using one?"
+    back: "Different AI tools have different analytical patterns — each surfaces assumptions the other misses, expanding the total assumption coverage beyond what any single tool provides."
+    tags: ["human-ai-collaboration", "assumption-identification"]
+    difficulty: "basic"

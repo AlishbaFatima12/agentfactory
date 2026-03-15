@@ -1,0 +1,72 @@
+deck:
+  id: "p0-ch07-position-lock"
+  title: "The Position Lock"
+  description: "Key concepts from the Position Lock exercise on ethical reasoning and stakeholder cost analysis"
+  tags: ["ethical-reasoning", "position-lock", "stakeholder-analysis", "Part-0"]
+  version: 1
+
+cards:
+  - id: "p0-ch07-position-lock-001"
+    front: "In the Position Lock exercise, what four elements must your sealed document contain?"
+    back: "1. Position statement\n2. Three strongest arguments\n3. Stakeholder Cost Matrix\n4. Confidence Statement with reversal trigger"
+    tags: ["position-lock", "deliverable"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-position-lock-002"
+    front: "What is a Stakeholder Cost Matrix?"
+    back: "A table listing every group affected by a decision, classifying each as benefiting or harmed, with magnitude ratings."
+    tags: ["stakeholder-cost-matrix", "ethical-reasoning"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-position-lock-003"
+    front: "Why does the Position Lock require you to commit your position BEFORE consulting AI?"
+    back: "Because AI gives balanced, non-committal answers to ethical questions. Committing first forces genuine independent reasoning that cannot be retroactively influenced by AI's diplomatic framing."
+    tags: ["position-lock", "layer-1"]
+    difficulty: "intermediate"
+    why: "What would a student lose if they read AI's analysis before forming their own position?"
+
+  - id: "p0-ch07-position-lock-004"
+    front: "What is a reversal trigger in the context of ethical reasoning?"
+    back: "A specific, testable condition under which you would change your position."
+    tags: ["reversal-trigger", "intellectual-honesty"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-position-lock-005"
+    front: "A student writes '40% confident' with three strong arguments. How should you evaluate their confidence calibration?"
+    back: "Low confidence despite strong arguments suggests underconfidence. Calibrated confidence should match argument strength -- the student may be conflating uncertainty about the dilemma with weakness in their reasoning."
+    tags: ["confidence-calibration", "ethical-reasoning"]
+    difficulty: "advanced"
+    why: "How does overconfidence differ from underconfidence in its effect on ethical decision-making?"
+
+  - id: "p0-ch07-position-lock-006"
+    front: "Why is ethical reasoning different from finding the 'right answer'?"
+    back: "Because ethical dilemmas involve conflicting values where every option has a cost. The skill is navigating tradeoffs with full stakeholder awareness, not discovering a single correct solution."
+    tags: ["ethical-reasoning", "core-skill"]
+    difficulty: "intermediate"
+    why: "How can two students take opposite positions on the same dilemma and both score highly?"
+
+  - id: "p0-ch07-position-lock-007"
+    front: "A student's Stakeholder Cost Matrix lists only groups they sympathize with. What is missing?"
+    back: "Groups the student does not care about or finds inconvenient. A complete matrix must include ALL affected groups, not just those the student favors, because honest cost analysis requires acknowledging uncomfortable impacts."
+    tags: ["stakeholder-cost-matrix", "completeness"]
+    difficulty: "intermediate"
+    why: "Why is the tendency to omit unsympathetic stakeholders a sign of weak ethical reasoning?"
+
+  - id: "p0-ch07-position-lock-008"
+    front: "What does the Confidence Statement percentage (0-100%) represent in a Position Lock?"
+    back: "How certain the student is of their position, paired with what would change their mind."
+    tags: ["confidence-statement", "position-lock"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-position-lock-009"
+    front: "Why do AI tools tend to present 'both sides' without committing on ethical dilemmas?"
+    back: "Because AI is trained to be balanced and diplomatic. This makes AI useful for identifying arguments but insufficient for ethical reasoning, which requires taking a position and owning its costs."
+    tags: ["AI-limitations", "ethical-reasoning"]
+    difficulty: "intermediate"
+    why: "When is AI's balanced approach helpful, and when does it become a limitation?"
+
+  - id: "p0-ch07-position-lock-010"
+    front: "What three magnitude levels are used in the Stakeholder Cost Matrix?"
+    back: "Low, Medium, and High (L/M/H)."
+    tags: ["stakeholder-cost-matrix", "format"]
+    difficulty: "basic"

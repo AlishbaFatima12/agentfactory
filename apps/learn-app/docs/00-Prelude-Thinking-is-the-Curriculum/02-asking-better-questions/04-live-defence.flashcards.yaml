@@ -1,0 +1,71 @@
+deck:
+  id: "p0-ch01-live-defence"
+  title: "Live Defence"
+  description: "Key concepts from the Live Defence exercise on defending analysis under questioning and responding to AI counter-arguments"
+  tags: ["Part 0", "question formulation", "live defence", "counter-arguments"]
+  version: 1
+
+cards:
+  - id: "p0-ch01-live-defence-001"
+    front: "How long is the live defence session with the peer panel?"
+    back: "10 minutes."
+    tags: ["live-defence", "exercise-format"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-live-defence-002"
+    front: "What rule applies to AI access during the live defence?"
+    back: "AI access is completely prohibited during the defence."
+    tags: ["live-defence", "assessment-rules"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-live-defence-003"
+    front: "Why does the live defence expose whether a student outsourced their thinking to AI?"
+    back: "Because defending analysis requires deep understanding of the reasoning behind each claim. A student who copied AI can state conclusions but cannot explain why they hold, defend against challenges, or adapt under pressure."
+    tags: ["live-defence", "independent-thinking"]
+    difficulty: "intermediate"
+    why: "What specific types of questions would cause a student who outsourced their thinking to collapse?"
+
+  - id: "p0-ch01-live-defence-004"
+    front: "After the live defence, what does the student do with the AI-generated counter-arguments?"
+    back: "Write a 200-word response to the strongest counter-argument."
+    tags: ["counter-arguments", "exercise-format"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-live-defence-005"
+    front: "Why does the exercise combine human questioning (peer panel) with AI counter-arguments?"
+    back: "Because human questioning is unpredictable and tests real-time thinking, while AI counter-arguments are systematic and attack weakest assumptions. Together they test thinking from every angle — no single approach covers all blind spots."
+    tags: ["live-defence", "counter-arguments", "peer-evaluation"]
+    difficulty: "intermediate"
+    why: "What kinds of weaknesses would peers catch that AI would miss, and vice versa?"
+
+  - id: "p0-ch01-live-defence-006"
+    front: "How does the Chapter 1 grading criteria weight the business scenario answer itself?"
+    back: "0% — the thinking process is the entire grade."
+    tags: ["grading-criteria", "process-over-output"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch01-live-defence-007"
+    front: "What three types of questions should peer panelists ask during the defence?"
+    back: "1. Why did you ask this question and not that one?\n2. What would change your diagnosis?\n3. Where did AI help and where did it mislead you?"
+    tags: ["live-defence", "peer-evaluation"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch01-live-defence-008"
+    front: "Why is understanding your own work 'completely different from producing it'?"
+    back: "Because production can rely on external tools and borrowed reasoning. Understanding requires internalizing the logic enough to explain it, defend it, and adapt it when challenged — skills that cannot be outsourced."
+    tags: ["live-defence", "independent-thinking"]
+    difficulty: "advanced"
+    why: "How could an instructor design a defence question that instantly reveals borrowed reasoning?"
+
+  - id: "p0-ch01-live-defence-009"
+    front: "What does the Chapter 1 portfolio contain?"
+    back: "1. Sealed prediction lock\n2. Tournament comparison table\n3. Final analysis with reasoning receipt\n4. Peer defence feedback\n5. AI counter-argument response\n6. Final reflection"
+    tags: ["chapter-portfolio", "deliverables"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-live-defence-010"
+    front: "Why is the final reflection on question formulation growth graded, not just the exercises themselves?"
+    back: "Because metacognition — knowing what you learned and what still needs work — is the skill that drives future improvement. Without reflection, students complete exercises without internalizing the growth pattern."
+    tags: ["metacognition", "reflection"]
+    difficulty: "advanced"
+    why: "What would a weak reflection look like compared to a strong one?"

@@ -1,0 +1,71 @@
+deck:
+  id: "p0-ch02-confidence-calibration"
+  title: "Confidence Calibration"
+  description: "Key concepts from the Confidence Calibration exercise on quantifying trust in AI accuracy under time pressure"
+  tags: ["Part 0", "error detection", "confidence calibration", "metacognition"]
+  version: 1
+
+cards:
+  - id: "p0-ch02-confidence-calibration-001"
+    front: "How many AI-generated claims does the Confidence Calibration exercise present?"
+    back: "20 claims across different topics (science, history, current events, technology, geography, law)."
+    tags: ["confidence-calibration", "exercise-format"]
+    difficulty: "basic"
+
+  - id: "p0-ch02-confidence-calibration-002"
+    front: "How much time does a student have to assess each AI claim in the Confidence Calibration exercise?"
+    back: "90 seconds per claim."
+    tags: ["confidence-calibration", "time-pressure"]
+    difficulty: "basic"
+
+  - id: "p0-ch02-confidence-calibration-003"
+    front: "What are the three calibration categories for each claim assessment?"
+    back: "Calibrated (confidence matches reality), overconfident (high confidence + wrong), underconfident (low confidence + right)."
+    tags: ["confidence-calibration", "definition"]
+    difficulty: "basic"
+
+  - id: "p0-ch02-confidence-calibration-004"
+    front: "Why are smart people described as 'systematically overconfident' about AI accuracy?"
+    back: "Because intelligence creates a false sense of ability to judge claims across all domains. Smart people trust their judgment even in unfamiliar fields, but AI errors in those fields are invisible without domain expertise."
+    tags: ["overconfidence", "metacognition"]
+    difficulty: "intermediate"
+    why: "How does the Dunning-Kruger effect relate to confidence calibration with AI?"
+
+  - id: "p0-ch02-confidence-calibration-005"
+    front: "What does a Confidence Calibration Chart plot?"
+    back: "Confidence ratings (0-100%) against verified reality (accurate / inaccurate / partially accurate)."
+    tags: ["confidence-calibration", "calibration-chart"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch02-confidence-calibration-006"
+    front: "Why does the exercise use time pressure rather than unlimited verification time?"
+    back: "Because real-world AI use involves quick assessments without time to verify everything. Time pressure simulates actual decision-making conditions — the skill of rapid, calibrated judgment is more useful than careful verification of every claim."
+    tags: ["time-pressure", "real-world-application"]
+    difficulty: "intermediate"
+    why: "How would unlimited verification time produce a different (and less useful) calibration result?"
+
+  - id: "p0-ch02-confidence-calibration-007"
+    front: "What is the difference between 'getting claims right' and 'being well-calibrated'?"
+    back: "Getting claims right means correct answers. Being calibrated means your confidence matches reality — high confidence on things that are true, low confidence on things that are false. A calibrated person knows what they do not know."
+    tags: ["confidence-calibration", "accuracy-vs-calibration"]
+    difficulty: "intermediate"
+    why: "Why is calibration a more valuable skill than accuracy for someone who uses AI daily?"
+
+  - id: "p0-ch02-confidence-calibration-008"
+    front: "Why is this exercise repeated at the end of the book?"
+    back: "To measure how much calibration improves after completing all 10 chapters — the baseline established here becomes the comparison point for growth."
+    tags: ["confidence-calibration", "growth-measurement"]
+    difficulty: "basic"
+
+  - id: "p0-ch02-confidence-calibration-009"
+    front: "A student rates 80%+ confidence on 15 claims but only 9 are correct. What does this pattern indicate?"
+    back: "Systematic overconfidence — the student trusts AI output (or their own judgment of it) far more than the evidence warrants. Only 60% accuracy at 80%+ confidence means their high-confidence threshold is not reliable."
+    tags: ["overconfidence", "calibration-patterns"]
+    difficulty: "advanced"
+    why: "What specific calibration strategy would help this student improve?"
+
+  - id: "p0-ch02-confidence-calibration-010"
+    front: "What does the Chapter 2 portfolio contain?"
+    back: "1. Sealed error prediction\n2. Two annotated AI responses with Error Taxonomy\n3. Three-draft contradiction analysis\n4. Domain expertise annotation with partner verification\n5. Confidence Calibration Chart\n6. All AI feedback with reflections"
+    tags: ["chapter-portfolio", "deliverables"]
+    difficulty: "intermediate"

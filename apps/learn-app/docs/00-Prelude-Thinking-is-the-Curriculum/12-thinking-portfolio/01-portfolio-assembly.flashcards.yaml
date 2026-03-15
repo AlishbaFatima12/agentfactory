@@ -1,0 +1,59 @@
+deck:
+  id: "p0-portfolio-assembly"
+  title: "Portfolio Assembly and Post-Assessment"
+  description: "Assembling the Thinking Portfolio and repeating the baseline assessment to measure growth"
+  tags: ["Part 0", "portfolio", "post-assessment", "growth"]
+  version: 1
+
+cards:
+  - id: "p0-portfolio-assembly-001"
+    front: "What are the ten portfolio components assembled from Part 0's ten chapters?"
+    back: "Name any 4 of 10:\n1. Question Quality\n2. Error Detection\n3. Systems Thinking\n4. First Principles\n5. Communication\n6. AI Collaboration\n7. Ethical Reasoning\n8. Creation\n9. Decision-Making\n10. Meta-Learning"
+    tags: ["portfolio", "chapters"]
+    difficulty: "basic"
+
+  - id: "p0-portfolio-assembly-002"
+    front: "In the post-assessment, what rules are identical to the baseline?"
+    back: "30 minutes, no AI, same hospital triage scenario, same five tasks."
+    tags: ["post-assessment", "rules"]
+    difficulty: "basic"
+
+  - id: "p0-portfolio-assembly-003"
+    front: "Why must students complete the post-assessment before looking at their baseline responses?"
+    back: "Looking at baseline responses would contaminate the post-assessment by letting students match rather than independently produce answers. The comparison only measures genuine growth if both snapshots are independent."
+    tags: ["post-assessment", "methodology"]
+    difficulty: "intermediate"
+    why: "How would reviewing baseline responses change the nature of the post-assessment?"
+
+  - id: "p0-portfolio-assembly-004"
+    front: "What does the AI Post-Assessment Check compare across the baseline and post-assessment?"
+    back: "Each Score Card dimension's baseline vs. post score, the dimension with most improvement, the dimension with least improvement, and a 150-word Thinking Growth Summary."
+    tags: ["post-assessment", "AI-check"]
+    difficulty: "intermediate"
+
+  - id: "p0-portfolio-assembly-005"
+    front: "Why is the Thinking Portfolio described as a 'foundation' rather than an 'assignment to complete and forget'?"
+    back: "Every skill documented in the portfolio -- prediction locks, reasoning receipts, cascade maps, reversal triggers -- is called upon by name in Parts 1-10 when building AI agents and making technical decisions."
+    tags: ["portfolio", "forward-value"]
+    difficulty: "intermediate"
+    why: "How would a student without a portfolio approach Part 5 differently than one with a complete portfolio?"
+
+  - id: "p0-portfolio-assembly-006"
+    front: "What makes the AI evaluation trajectory across 40 exercises harder to fake than a single assessment?"
+    back: "Growth visible across dozens of independent AI evaluations, predictions, defences, and reflections creates a pattern that cannot be manufactured retroactively. One score can be gamed; a consistent trajectory across 40 data points cannot."
+    tags: ["portfolio", "assessment-integrity"]
+    difficulty: "advanced"
+    why: "What would a fabricated portfolio's score trajectory look like compared to a genuine one?"
+
+  - id: "p0-portfolio-assembly-007"
+    front: "The post-assessment adds a 'reversal trigger' to task 4 compared to the baseline. Why?"
+    back: "By Chapter 10, students have learned the Reversal Trigger concept from Chapter 9. Including it in the post-assessment tests whether they now naturally identify conditions that would change their position."
+    tags: ["post-assessment", "reversal-trigger"]
+    difficulty: "intermediate"
+    why: "What does the presence or absence of a reversal trigger reveal about a student's growth?"
+
+  - id: "p0-portfolio-assembly-008"
+    front: "How many AI-generated assessments does a student receive across the full Part 0 portfolio?"
+    back: "Dozens -- one per exercise across 40 exercises, plus the baseline and post-assessment checks."
+    tags: ["portfolio", "assessment-count"]
+    difficulty: "basic"

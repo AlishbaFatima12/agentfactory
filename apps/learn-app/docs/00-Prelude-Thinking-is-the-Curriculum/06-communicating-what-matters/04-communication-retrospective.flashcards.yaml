@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch05-hard-conversation"
+  title: "The Hard Conversation"
+  description: "Key concepts from the difficult conversation role-play exercise"
+  tags: ["Part 0", "communication", "difficult-conversations", "leadership"]
+  version: 1
+
+cards:
+  - id: "p0-ch05-hard-conversation-001"
+    front: "What five dimensions does the peer feedback form rate in the Hard Conversation exercise?"
+    back: "1. Empathy\n2. Clarity of message\n3. Honesty\n4. Relationship preservation\n5. Overall effectiveness"
+    tags: ["peer-feedback", "assessment"]
+    difficulty: "basic"
+
+  - id: "p0-ch05-hard-conversation-002"
+    front: "Why does the Hard Conversation exercise give students only 60 seconds of preparation?"
+    back: "Because the 60-second window forces reliance on instinct and principles rather than scripts. Real difficult conversations rarely come with preparation time."
+    tags: ["exercise-design", "difficult-conversations"]
+    difficulty: "intermediate"
+    why: "What would the exercise lose if students had 30 minutes to prepare instead of 60 seconds?"
+
+  - id: "p0-ch05-hard-conversation-003"
+    front: "Why is delivering difficult news face-to-face a skill that AI cannot replace?"
+    back: "Because it requires reading the other person's reaction in real-time and adjusting -- sensing when to pause, when to push through, and when to acknowledge emotion. AI can draft the email but cannot sit across from someone."
+    tags: ["difficult-conversations", "AI-limitations"]
+    difficulty: "intermediate"
+    why: "Could AI ever fully replicate this skill, or is there something fundamentally human about it?"
+
+  - id: "p0-ch05-hard-conversation-004"
+    front: "A student scores 9/10 on honesty but 3/10 on relationship preservation. What does this gap reveal?"
+    back: "The student prioritized delivering the message over maintaining the relationship. Effective difficult conversations require both -- honesty without empathy damages trust even when the message is correct."
+    tags: ["difficult-conversations", "feedback-analysis"]
+    difficulty: "advanced"
+    why: "Is it possible to be fully honest AND preserve the relationship, or is there always a tradeoff?"
+
+  - id: "p0-ch05-hard-conversation-005"
+    front: "Which assessment layer does the Hard Conversation exercise use?"
+    back: "Layer 3 (Live Defence)."
+    tags: ["assessment-layers"]
+    difficulty: "basic"
+
+  - id: "p0-ch05-hard-conversation-006"
+    front: "How does the Solo Learner Alternative simulate the Hard Conversation exercise?"
+    back: "AI plays the stakeholder role (vendor, employee, or client) in character for 8-10 turns of dialogue. After the conversation, AI breaks character and rates the student's performance."
+    tags: ["solo-learner", "AI-role-play"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch05-hard-conversation-007"
+    front: "Why are the gaps between self-reflection and peer feedback the most important learning in this exercise?"
+    back: "Because those gaps reveal blind spots -- places where the student's self-perception of their communication does not match how others actually experience it. Closing these gaps is the path to improvement."
+    tags: ["self-awareness", "feedback-analysis"]
+    difficulty: "intermediate"
+    why: "How would you close a gap if you disagreed with your peer's feedback?"
+
+  - id: "p0-ch05-hard-conversation-008"
+    front: "What are the five grading criteria weights for the Communication chapter portfolio?"
+    back: "Audience prediction: 15%\nLive adaptation (peer scores): 25%\nEmail diagnosis: 20%\nHard conversation (peer scores): 25%\nAI feedback integration: 15%"
+    tags: ["grading", "chapter-deliverable"]
+    difficulty: "basic"

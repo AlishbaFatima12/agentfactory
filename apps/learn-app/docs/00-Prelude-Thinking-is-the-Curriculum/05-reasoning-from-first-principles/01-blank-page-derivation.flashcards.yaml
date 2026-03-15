@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch4-blank-page-derivation"
+  title: "Defend the Opposite (No AI)"
+  description: "Key concepts from the contrarian argument exercise — first principles reasoning, principles vs. examples distinction, and independent derivation."
+  tags: ["first-principles", "contrarian-argument", "independent-reasoning"]
+  version: 1
+
+cards:
+  - id: "p0-ch4-blank-page-derivation-001"
+    front: "What is the difference between reasoning from first principles and reasoning by analogy?"
+    back: "First principles strips a problem to base truths and rebuilds from there. Analogy borrows what worked elsewhere and applies it to the current situation."
+    tags: ["first-principles", "analogy", "definition"]
+    difficulty: "basic"
+
+  - id: "p0-ch4-blank-page-derivation-002"
+    front: "Why does AI typically reason by analogy rather than from first principles?"
+    back: "AI's training data consists of patterns from existing solutions — it tells you what has worked before, not what will work when nothing has been tried before, because pattern matching is its structural mechanism."
+    tags: ["first-principles", "ai-limitations"]
+    difficulty: "intermediate"
+    why: "In what situations would AI's pattern-based reasoning actually be more useful than first principles?"
+
+  - id: "p0-ch4-blank-page-derivation-003"
+    front: "What distinguishes a principle-based failure condition from an example-based one?"
+    back: "Principle-based: 'In markets where trust is the primary barrier, an unfinished product destroys credibility permanently.' Example-based: 'Company X tried MVP and lost customers.'"
+    tags: ["first-principles", "principles-vs-examples"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch4-blank-page-derivation-004"
+    front: "Why must students write a contrarian argument without AI before comparing against AI output?"
+    back: "Writing without AI reveals what the student can derive independently — because comparing afterwards shows exactly where independent reasoning was strong and where it relied on borrowed patterns."
+    tags: ["independent-reasoning", "prediction-lock"]
+    difficulty: "intermediate"
+    why: "How would the exercise's value change if students used AI while writing their argument?"
+
+  - id: "p0-ch4-blank-page-derivation-005"
+    front: "What makes a contrarian argument rigorous rather than merely contrary?"
+    back: "Identifying specific conditions under which the best practice fails, derived from base constraints — not disagreeing reflexively or citing isolated counter-examples."
+    tags: ["contrarian-argument", "rigor"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch4-blank-page-derivation-006"
+    front: "In first principles reasoning, what is a base constraint?"
+    back: "A fact that is true regardless of the approach chosen — the foundational truth from which solutions must be derived."
+    tags: ["first-principles", "base-constraints"]
+    difficulty: "basic"
+
+  - id: "p0-ch4-blank-page-derivation-007"
+    front: "A student argues against MVP by listing three companies that failed using it. Why is this not first principles reasoning?"
+    back: "Listing failures is reasoning from counter-examples (what happened), not from principles (WHY it fails under certain structural conditions) — therefore the argument cannot predict new failure conditions, only catalog past ones."
+    tags: ["first-principles", "principles-vs-examples"]
+    difficulty: "advanced"
+    why: "How would you convert an example-based argument into a principle-based one?"
+
+  - id: "p0-ch4-blank-page-derivation-008"
+    front: "Why does picking a scenario outside your expertise make first principles reasoning easier, not harder?"
+    back: "Fewer stored examples means less temptation to reason by analogy — the student is forced to derive from constraints because they have no patterns to borrow."
+    tags: ["first-principles", "independent-reasoning"]
+    difficulty: "advanced"
+    why: "What does this suggest about the relationship between expertise and originality?"
