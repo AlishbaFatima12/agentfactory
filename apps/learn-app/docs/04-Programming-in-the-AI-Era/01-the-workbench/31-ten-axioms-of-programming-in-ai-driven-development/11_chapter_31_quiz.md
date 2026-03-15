@@ -8,12 +8,12 @@ chapter_type: Concept
 running_example_id: ten-axioms-quiz
 ---
 
-# Chapter 31: Ten Axioms of Agentic Development Quiz
+# Chapter 31: Ten Axioms of Programming in AI-Driven Development Quiz
 
-Test your understanding of the ten axioms that govern effective agentic software development — from shell orchestration through production observability. These questions follow James's journey building an order management system, the same running example from the chapter lessons.
+Test your understanding of the ten axioms that govern effective AI-driven software development — from shell orchestration through production observability. These questions follow James's journey building an order management system, the same running example from the chapter lessons.
 
 <Quiz
-  title="Chapter 31: Ten Axioms of Agentic Development Assessment"
+  title="Chapter 31: Ten Axioms of Programming in AI-Driven Development"
   questions={[
     {
       question: "James has an 80-line bash script that fetches order data from an API, transforms it with jq, filters results with grep, and writes output to a file. The script has nested if-else blocks for error handling and retry logic. Emma reviews it and says it needs restructuring. What should James do?",
