@@ -66,6 +66,8 @@ Running through all sixteen chapters of Part 3 is a single principle that every 
 
 > **The agent automates execution. The professional makes judgments.**
 
+This is the 10-80-10 rhythm introduced in the [thesis](https://agentfactory.panaversity.org/docs/thesis#the-10-80-10-rule-the-operating-rhythm-of-the-ai-workforce): 10% human intent (the spec, the constraints, the domain judgment that frames the task), 80% agent execution (the computation, the drafting, the analysis), 10% human verification (the professional call that no model can make). Every domain workflow in Part 3 follows this pattern.
+
 This is not a limitation of current AI capability. It is the correct architecture for enterprise deployment. The IFRS 9 SICR assessment for a borderline credit — whether a loan has suffered a significant increase in credit risk — involves qualitative information no model can fully capture. The SAR filing decision under the Proceeds of Crime Act is a legal obligation that cannot be delegated to software. The closing audit opinion requires a licensed professional's signature. The contract negotiation strategy requires an attorney's judgment.
 
 In every one of these cases, AI agents can dramatically reduce the time and effort required to reach the point where judgment is needed. They can run the ECL calculation, draft the SAR narrative, prepare the audit workpaper, and summarise the contract risk profile. But the professional makes the call.
