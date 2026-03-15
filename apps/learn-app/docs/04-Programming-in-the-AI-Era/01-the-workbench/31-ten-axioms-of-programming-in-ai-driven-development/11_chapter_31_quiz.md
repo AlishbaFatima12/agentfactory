@@ -712,7 +712,7 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
 
 | Score | Proficiency Level | Interpretation |
 |-------|------------------|----------------|
-| 45-50 | B2 (Advanced) | Strong understanding of all ten axioms and their practical application |
+| 45-50 | Strong B1 | Excellent understanding of all ten axioms — you are well prepared for the hands-on chapters ahead |
 | 35-44 | B1 (Intermediate) | Good understanding with some gaps in applying axioms to real scenarios |
 | 25-34 | A2 (Elementary) | Basic understanding of axioms but needs more practice with application |
 | 0-24 | A1 (Beginner) | Review the lessons and work through the "Try With AI" exercises |
