@@ -1,8 +1,13 @@
 ---
 sidebar_position: 31
 title: "Chapter 31: Ten Axioms of Programming in the Era of AI Driven Development"
+description: "A complete, battle-tested engineering system of ten axioms that turns AI from a source of unpredictable complexity into your most powerful and reliable collaborator"
+keywords: ["ten axioms", "agentic development", "AI-driven development", "shell orchestrator", "markdown knowledge", "type safety", "composition", "observability", "verification pipeline", "version control"]
+chapter: 31
+lesson: 0
+duration_minutes: 15
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-4/chapter-14/the-agentic-engineering-system.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-4/chapter-31/the-agentic-engineering-system.pdf"
   title: "The Agentic Engineering System"
   height: 700
 ---
@@ -114,7 +119,7 @@ Let's start with the most basic question: when an AI agent has access to a termi
 ## 📚 Teaching Aid
 
 <PDFViewer
-  src="https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-4/chapter-14/the-agentic-engineering-system.pdf"
+  src="https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-4/chapter-31/the-agentic-engineering-system.pdf"
   title="The Agentic Engineering System"
   height={700}
 />
@@ -156,3 +161,4 @@ The ten axioms teach you *what* professional AI-driven development looks like. P
 - **Part 1**: General Agents Foundations (Chapters 1-4)
 - **Part 2**: Agent Workflow Primitives (Chapters 5-10)
 - **Part 3**: Applied Domain Workflows (Chapters 11-13)
+- **Chapter 30**: The PRIMM-AI+ Framework — this chapter uses PRIMM-AI+ exercises throughout every axiom

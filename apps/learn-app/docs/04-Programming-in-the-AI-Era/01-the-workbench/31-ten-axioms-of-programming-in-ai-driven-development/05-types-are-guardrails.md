@@ -451,7 +451,12 @@ def process_data(data: ApiResponse) -> str:
 
 The typed version requires more structure. That structure *is* the specification. When you give this to an AI, it knows exactly what `data` contains, what operations are valid, and what the function must return. When James added `Any` to "get things working quickly," he was removing the guardrail that would have saved him hours.
 
-## Generics and Protocols: Flexible but Safe
+<details>
+<summary>**Advanced Preview: Generics and Protocols — Flexible but Safe**</summary>
+
+:::tip This Section Is a Preview
+Generics and Protocols are advanced type system features you will explore in depth when you learn Python. For now, the key concept is simple: types do not make code rigid — they can be **flexible AND safe** at the same time. Skim for the idea; do not worry about the syntax.
+:::
 
 James initially worried that types meant rigid code — that every function would need a specific class for every parameter. Emma showed him that Python's type system offers flexibility without sacrificing safety, through two mechanisms: generics and protocols.
 
@@ -524,6 +529,8 @@ complete_all([Task("Write tests"), Milestone("v1.0")])
 ```
 
 Protocols are particularly powerful with AI: you define the interface (Protocol), and AI generates implementations that must satisfy it. The type checker verifies conformance automatically.
+
+</details>
 
 ## Try With AI
 

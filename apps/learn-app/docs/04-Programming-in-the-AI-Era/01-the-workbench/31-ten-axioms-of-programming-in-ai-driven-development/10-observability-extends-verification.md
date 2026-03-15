@@ -14,7 +14,7 @@ skills:
     category: "Technical"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can implement structured logging with appropriate log levels, JSON formatting, and correlation IDs for production Python applications"
+    measurable_at_this_level: "Student can explain why structured logging (with levels, machine-readable formats, and correlation IDs) is essential for diagnosing production issues that pre-deployment tests cannot catch"
 
   - name: "Three Pillars Integration"
     proficiency_level: "B1"
@@ -38,10 +38,10 @@ skills:
     measurable_at_this_level: "Student can evaluate a system's verification coverage across the full pre-deployment to post-deployment spectrum and identify gaps"
 
 learning_objectives:
-  - objective: "Implement structured logging in Python using structlog with appropriate levels and JSON output"
+  - objective: "Explain why structured logging with appropriate levels and machine-readable output is essential for production observability"
     proficiency_level: "B1"
-    bloom_level: "Apply"
-    assessment_method: "Student writes Python code using structlog that produces machine-parseable JSON logs with correlation IDs, appropriate log levels, and contextual data"
+    bloom_level: "Understand"
+    assessment_method: "Student can describe why 'print debugging' fails in production and explain how structured logging with levels, JSON output, and correlation IDs enables diagnosis of issues that tests alone cannot catch"
 
   - objective: "Distinguish the three pillars of observability and explain their complementary roles"
     proficiency_level: "B1"
@@ -121,7 +121,7 @@ A system with only pre-deployment verification is like a car that passes inspect
 
 ## From Principle to Axiom
 
-In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/observability), Principle 7 introduced observability as **visibility into what AI is doing** — seeing agent actions, understanding rationale, tracing execution. That principle focused on trust: if you cannot see what the agent does, you cannot trust it.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/observability), Principle 7 introduced observability as **visibility into what AI is doing**. Remember the "Black Box Problem" — the agent that silently failed, producing no output and no error, because nobody had instrumented it to report what it was doing? And the "2-Minute Audit" that taught you to check: Can I see what the agent did? Can I tell if it succeeded? Can I trace *why* it chose that approach? That principle focused on trust: if you cannot see what the agent does, you cannot trust it.
 
 Axiom X takes this further. The principle is about human-AI collaboration transparency. The axiom is about **production engineering discipline**:
 
@@ -341,6 +341,10 @@ Now every log entry in that order's lifecycle shares the same `correlation_id`. 
 
 As James integrated more AI-generated code into his order management system, he discovered that AI agents introduce observability challenges that traditional web applications do not face. The AI that generated his shipping calculator and discount logic had its own failure modes — and monitoring them required new dimensions.
 
+:::tip Focus on the Four Dimensions, Not the Code
+The code blocks below show how James tracks AI agent behavior in production. You do not need to understand the Python or Prometheus syntax — focus on the **four dimensions** being monitored: token usage (cost), response quality (correctness), error rates (failures), and cost per operation (budget). Each dimension catches a different kind of AI-specific problem that traditional monitoring misses. You will implement these patterns yourself in hands-on chapters.
+:::
+
 ### Dimension 1: Token Usage Tracking
 
 When James used Claude Code to generate his shipping calculator, each generation consumed tokens — and costs varied dramatically depending on how he prompted. Tokens are both your cost driver and your quality signal.
@@ -525,6 +529,28 @@ This was James's order management system at 2:47 AM — and it is every system t
 | Metrics without baselines | "Is 200ms shipping calculation time good or bad?" — you cannot answer without history | Establish baselines first; alert on deviation, not absolute values |
 | Monitoring only happy paths | You only track successful orders; failed shipping calculations are invisible | Instrument error paths with the same rigor as success paths |
 
+### The Log Avalanche
+
+There is a trap that catches developers right after they learn observability, and Emma warned James about it the same week he instrumented his order system: **The Log Avalanche** — logging everything at maximum detail because "more data is always better."
+
+James's first instinct after the 2:47 AM incident was to add DEBUG-level logging to every function. Within a day, his order system was generating 2GB of logs per hour. The storage costs spiked. The log aggregation system slowed to a crawl. And when he actually needed to find a specific error, it was buried under millions of irrelevant entries — the signal drowned by noise he created trying to see everything.
+
+"Observability is not about capturing everything," Emma told him. "It is about capturing the *right* things at the *right* level."
+
+She had him write this on a sticky note:
+
+| Level | When to Use | Example |
+|-------|------------|---------|
+| **DEBUG** | Local development only — never in production | Variable values inside loops |
+| **INFO** | Normal operations worth recording | `order_created`, `payment_processed` |
+| **WARNING** | Handled problems that may need attention | Retry succeeded on third attempt |
+| **ERROR** | Failures requiring investigation | Payment gateway returned 500 |
+| **CRITICAL** | System-level emergencies | Database connection pool exhausted |
+
+"If everything is important, nothing is."
+
+The Log Avalanche extends beyond volume. Production logs may contain customer data — order details, shipping addresses, payment references. James learned to apply data minimization: log what you need for debugging and monitoring, never personally identifiable information. Apply retention policies — not every log entry needs to live forever. And remember that observability infrastructure itself needs security: access to production logs should be as controlled as access to the production database.
+
 ## Try With AI
 
 ### Prompt 1: Design a Feedback System for an Event You Hosted
@@ -613,28 +639,6 @@ go wrong because of that gap?
 
 **What you're learning:** Systems thinking — the ten axioms are not separate rules but an interconnected system. When you trace your own project through all ten, you discover gaps you never noticed. Maybe you planned well (Axioms I-IV) but never defined "done" (Axiom VII). Maybe you tracked changes (Axiom VIII) but never monitored whether the result actually worked (Axiom X). The axioms work together because real projects are systems — and systems need complete coverage to be reliable. This is the same insight James reached: each axiom covers a gap that the others leave open.
 
-### The Log Avalanche
-
-There is a trap that catches developers right after they learn observability, and Emma warned James about it the same week he instrumented his order system: **The Log Avalanche** — logging everything at maximum detail because "more data is always better."
-
-James's first instinct after the 2:47 AM incident was to add DEBUG-level logging to every function. Within a day, his order system was generating 2GB of logs per hour. The storage costs spiked. The log aggregation system slowed to a crawl. And when he actually needed to find a specific error, it was buried under millions of irrelevant entries — the signal drowned by noise he created trying to see everything.
-
-"Observability is not about capturing everything," Emma told him. "It is about capturing the *right* things at the *right* level."
-
-She had him write this on a sticky note:
-
-| Level | When to Use | Example |
-|-------|------------|---------|
-| **DEBUG** | Local development only — never in production | Variable values inside loops |
-| **INFO** | Normal operations worth recording | `order_created`, `payment_processed` |
-| **WARNING** | Handled problems that may need attention | Retry succeeded on third attempt |
-| **ERROR** | Failures requiring investigation | Payment gateway returned 500 |
-| **CRITICAL** | System-level emergencies | Database connection pool exhausted |
-
-"If everything is important, nothing is."
-
-The Log Avalanche extends beyond volume. Production logs may contain customer data — order details, shipping addresses, payment references. James learned to apply data minimization: log what you need for debugging and monitoring, never personally identifiable information. Apply retention policies — not every log entry needs to live forever. And remember that observability infrastructure itself needs security: access to production logs should be as controlled as access to the production database.
-
 ## PRIMM-AI+ Practice: Observability Extends Verification
 
 ### Predict [AI-FREE]
@@ -684,7 +688,9 @@ Apply the **Error Taxonomy**: the surgery passing all pre-op checks but the pati
 
 ### Modify
 
-Redesign the discharge record. Instead of "Surgery complete," what **5 things** would you include in a post-surgery monitoring plan so that when the patient calls with complications, the doctor can trace exactly what happened? Think about: what to measure daily, what thresholds trigger a call, what milestones indicate normal recovery, and what warning signs mean "come back immediately."
+The doctor now tracks all five recovery dimensions (vitals, pain, milestones, medication, warning thresholds). But the patient reports *"I feel fine, everything is great"* at every check-in — and still shows up a week later with severe swelling.
+
+What went wrong? The monitoring plan relied entirely on **self-reported data** — the patient's own assessment. Design a modification: what **objective signals** could the doctor monitor that do not depend on the patient's honesty or self-awareness? How would the doctor distinguish between "the patient is genuinely recovering well" and "the patient is underreporting problems"? Think about the difference between asking someone "how do you feel?" and measuring something that cannot be faked.
 
 ### Make [Mastery Gate — Capstone]
 
@@ -755,6 +761,8 @@ The Verification Ladder climbed with you: prediction (Rung 1) in every exercise,
 
 Use this rubric to evaluate your own understanding across the ten axioms. For each dimension, honestly assess where you fall. The goal is not to score "Fluent" in everything immediately — it is to identify where you are strong and where you need more practice.
 
+In this chapter, your mastery gates are conceptual artifacts — coordination plans, decision documents, form specifications, relationship maps, ordered checklists, and monitoring plans. In the hands-on chapters that follow, you will apply these same axioms to real code, tests, and configurations.
+
 | Dimension | Developing | Competent | Fluent |
 |-----------|-----------|-----------|--------|
 | **Prediction Accuracy** | Predictions are often wrong; confidence scores do not match actual accuracy | Predictions are roughly correct; confidence scores track reality within ±1 | Predictions are consistently accurate; confidence scores reliably reflect true understanding |
@@ -762,3 +770,4 @@ Use this rubric to evaluate your own understanding across the ten axioms. For ea
 | **Explanation Quality** | Explanations restate the axiom rather than demonstrating understanding | Explanations use own words and connect the axiom to personal experience | Explanations teach the concept to someone else using original analogies and examples |
 | **Modification Reasoning** | Identifies that something breaks but cannot explain the mechanism | Identifies what breaks AND explains why the modification causes the failure | Anticipates cascading effects — predicts not just the first failure but second-order consequences |
 | **Mastery Gate Quality** | Artifacts are incomplete or generic (could apply to any axiom) | Artifacts are complete and specific to the axiom, with clear structure | Artifacts demonstrate original thinking — the plan, spec, or checklist reveals genuine understanding beyond what was taught |
+| **PRIMM-AI+ Engagement** | Skipped Predict or copied AI answers without comparing to own prediction | Completed all five stages; comparisons between prediction and AI response show genuine reflection | Used the framework independently — applied Predict-Run-Investigate-Modify-Make to a new problem without prompting |
