@@ -1,9 +1,9 @@
 # Chapter Writing Methodology: Python for the New AI Era
 
-**Version:** 2.0
-**Date:** 2026-03-08
+**Version:** 3.0
+**Date:** 2026-03-15
 **Purpose:** Comprehensive reference for how every chapter in the Python course is written — from research to publication.
-**Companion to:** `python-new-era-plan.md` (v2.15)
+**Companion to:** `python-new-era-plan.md` (v2.16)
 
 ---
 
@@ -15,10 +15,24 @@ Writing educational content about fast-moving tools (uv, pyright, ruff, pytest, 
 - Outdated config options (pyright adds new strictness rules regularly)
 - Incorrect version numbers (ruff releases weekly)
 - Hallucinated features (tools we think exist but don't)
+- Wrong chapter cross-references (the Seven Principles are in Chapter 6, not Chapter 4 or 7)
 
 This happened in Chapter 2 of the main book (the "Chapter 2 Incident" — 6 rewrites due to hallucinated facts). This document ensures that never happens again.
 
-**The core principle**: Every command, every config option, every version number shown to students must be verified against official documentation before it appears in a lesson.
+**The core principle**: Every command, every config option, every version number, and every chapter cross-reference shown to students must be verified before it appears in a lesson.
+
+### Chapter Numbering Clarification
+
+This methodology document uses the **book chapter numbers** (as they appear in `apps/learn-app/docs/`):
+
+| This Document Says | Refers To | Book Path |
+|---|---|---|
+| Chapter 30 | PRIMM-AI+ Framework | `30-the-primm-ai-framework/` |
+| Chapter 31 | Ten Axioms of Programming | `31-ten-axioms-of-programming-in-ai-driven-development/` |
+| Chapter 6 | Seven Principles | `06-seven-principles/` |
+| Chapter 33+ | Python programming chapters | Future chapters |
+
+**Rule**: Always verify chapter numbers against the filesystem using `ls -d apps/learn-app/docs/*/NN-*/` before referencing them. Never guess.
 
 ---
 
@@ -61,7 +75,7 @@ Step 4: Cross-verify
 
 ### Grounding Table Per Chapter
 
-Every chapter gets a grounding table before writing begins. Example for Chapter 14.1:
+Every chapter gets a grounding table before writing begins. Example:
 
 | Topic | MCP Source | What to Extract | Verified? |
 |-------|-----------|-----------------|-----------|
@@ -77,9 +91,26 @@ Every chapter gets a grounding table before writing begins. Example for Chapter 
 
 ---
 
-## 3. The PRIMM-AI+ Lesson and Chapter Architecture
+## 3. The PRIMM-AI+ Framework: Two Tracks
 
 Every lesson and every chapter in Parts 4 and 5 follows the PRIMM-AI+ framework defined in Chapter 30. This is not optional — it is the structural backbone of the entire course.
+
+### Track A vs Track B
+
+The critical distinction learned from Chapter 31 (v2 rewrite after PR #853 failure):
+
+| Dimension | Track A: Code Exercises | Track B: Conceptual Reasoning |
+|-----------|------------------------|------------------------------|
+| **Used when** | Students know the programming tools | Students are learning concepts before code |
+| **Exercises use** | Real code, real tools (pytest, pyright, etc.) | Real-world scenarios, plain-English reasoning |
+| **Predict stage** | Predict code output | Classify, categorize, or reason about a scenario |
+| **Run stage** | Run code, compare output | Ask AI, compare to prediction |
+| **Investigate stage** | Trace tables, variable tracking | Written explanation, Error Taxonomy classification |
+| **Modify stage** | Change code, observe behavior change | Change scenario, reason about what breaks |
+| **Make stage** | Write new code from spec | Write structured plan, checklist, or document |
+| **Chapters** | Chapter 33+ (Python programming) | Chapters 30-31 (conceptual foundations) |
+
+**The PR #853 Lesson**: The first attempt at Chapter 31 PRIMM-AI+ used Track A exercises (Makefiles, pytest, SQL, Docker, git commands) for students who didn't know those tools yet. Every exercise was inaccessible. The v2 rewrite switched to Track B — all exercises use real-world scenarios and plain-English reasoning, not code. **Always match the track to what students actually know at that point in the book.**
 
 ### The Five-Step Lesson Architecture
 
@@ -87,15 +118,81 @@ Every lesson follows the same five steps — one for each PRIMM stage:
 
 | Step | PRIMM Stage | What Happens | AI Permission |
 |------|-------------|-------------|---------------|
-| 1 | **Predict** | Lesson presents a worked example (complete program). Student writes prediction + confidence score (1-5). | AI-free |
-| 2 | **Run** | Student runs the code and compares output to prediction. Records where prediction matched/diverged. | AI allowed |
-| 3 | **Investigate** | Student produces a trace table or explanation. Optional Parsons problem tests structural understanding. | AI after student's first explanation |
-| 4 | **Modify** | Student changes the existing program to add a feature or fix a problem. | AI for hints only |
-| 5 | **Make** | Student writes a specification first (AI-free), attempts the solution, then uses AI for review only. | AI for review only |
+| 1 | **Predict** | Lesson presents a scenario or worked example. Student writes prediction + confidence score (1-5). | AI-free |
+| 2 | **Run** | Student runs code (Track A) or asks AI (Track B) and compares to prediction. | AI allowed |
+| 3 | **Investigate** | Student produces a trace table, explanation, or Error Taxonomy classification. Optional Parsons Problem. | AI after student's first explanation |
+| 4 | **Modify** | Student changes the scenario or code to add a feature or break something. | AI for hints only |
+| 5 | **Make** | Student creates something new that demonstrates understanding (Mastery Gate). | AI for review only |
 
 **Core progression**: You understand before you change, and you change before you create.
 
-> **Where do Parsons Problems fit?** Parsons problems — scrambled lines you reorder into a working program — are a bridge between Investigate and Modify. They appear inside Step 3 (Investigate) when a lesson needs to test structural understanding before free modifications. Not every lesson includes one.
+### Answer Keys (Mandatory)
+
+Every Predict section must have a resolution. Students should never be left guessing whether their prediction was correct.
+
+**Pattern**: Add a collapsible `<details>` answer key after the Run section:
+
+```markdown
+<details>
+<summary><strong>Answer Key (check after comparing with AI)</strong></summary>
+
+| Item | Classification | Why |
+|------|---------------|-----|
+| Task 1 | Work | A tool produces a result... |
+| Task 2 | Coordination | A decision about sequence... |
+
+</details>
+```
+
+**Why this matters**: Without an answer key, students who disagree with the AI have no authoritative resolution. The Axiom I answer key revealed that Task 6 was "Both" — a nuance that neither students nor AI consistently catch. The learning happens in the comparison + resolution, not in the AI's answer alone.
+
+### Error Taxonomy (Every Investigate Section)
+
+Every Investigate section applies one of five error types from the Error Taxonomy:
+
+| Error Type | What It Means | Example |
+|-----------|---------------|---------|
+| **Type error** | Wrong data shape | Text where a number belongs |
+| **Logic error** | Wrong reasoning | Correct types but wrong calculation |
+| **Specification error** | Ambiguous requirements | "Make it good" producing the wrong thing |
+| **Data/edge-case error** | Unexpected inputs | Plan fails when bakery is closed |
+| **Orchestration error** | Tangled responsibilities | Director also builds the set |
+
+**Pattern**: After the student writes their explanation, add: "Apply the **Error Taxonomy**: [specific situation] = **[error type]**. [One sentence explaining why.]"
+
+### Verification Ladder (Chapter-Spanning Arc)
+
+Five axioms introduce a new **method of checking**. These are announced progressively:
+
+| Rung | Name | Introduced At | What It Means |
+|------|------|--------------|---------------|
+| 1 | Prediction | Axiom I | Predict an outcome, then check if you were right |
+| 2 | Types | Axiom V | Catch errors by checking the *shape* of data |
+| 3 | Tests | Axiom VII | Define what "correct" means *before* building |
+| 4 | Pipeline | Axiom IX | Run multiple checks in order — fast first, slow last |
+| 5 | Observability | Axiom X | Watch what happens *after* delivery |
+
+**Why only five axioms, not all ten?** The other five axioms (II, III, IV, VI, VIII) teach *what to build well*, but they do not introduce a new verification method. They still use Rung 1 (prediction) in every Predict step. Only add a Verification Ladder callout to the axioms that introduce a new rung.
+
+**Pattern**: Add a `:::tip Verification Ladder` at the end of the Make section for rungs 1, 2, 3, 4, and 5.
+
+### Mastery Gates (Every Make Section)
+
+The Make section is not optional practice — it is a **gate**. The student must produce an artifact that demonstrates understanding. The artifact format depends on the track:
+
+| Track | Mastery Gate Artifact |
+|-------|--------------------|
+| Track A (code) | Working code that passes tests |
+| Track B (conceptual) | Written plan, structured document, checklist, or relationship map |
+
+**Pattern**: End every Make section with explicit guidance on what the artifact should contain and how the student can self-check it.
+
+### Parsons Problems (Selected Lessons Only)
+
+Parsons Problems — scrambled steps students reorder into the correct sequence — appear in specific lessons, not all of them. In Chapter 31 they appear in Axioms I, IV, and VII only.
+
+**Track A**: Scrambled code lines reordered into a working program.
+**Track B**: Scrambled process steps reordered into the correct sequence, with follow-up questions about which steps are coordination vs work.
 
 ### The Chapter-Level PRIMM-AI+ Pattern
 
@@ -103,13 +200,13 @@ The five-step sequence also governs the chapter as a whole, at a larger scale:
 
 | Chapter Element | PRIMM-AI+ Connection | What Happens |
 |----------------|----------------------|-------------|
-| Chapter Opening | Worked Example + Predict and Run | Complete programs, predict their output with confidence scoring, then run them |
-| Core Lessons | Investigate with Artifacts | Trace variables, test edge cases, produce visible artifacts |
-| Structural Bridge | Parsons Problems | Scrambled-code exercises test structural understanding |
-| Exercises | Modify | Change existing programs to add features or fix issues |
-| Capstone | Make with Spec-Driven Development | Build something new from a specification, with AI as reviewer |
+| Chapter Opening | Worked Example + Predict and Run | Complete programs or scenarios, predict outcomes with confidence scoring |
+| Core Lessons | Investigate with Artifacts | Trace variables (Track A) or explain reasoning (Track B), apply Error Taxonomy |
+| Structural Bridge | Parsons Problems | Scrambled-code (A) or scrambled-process (B) exercises test structural understanding |
+| Exercises | Modify | Change existing programs or scenarios to add features or break things |
+| Capstone | Make with Mastery Gate | Build something new from a specification, with AI as reviewer |
 
-**Students are never dropped into a Make exercise cold.** By the time a chapter asks them to write code from scratch, they have predicted, run, investigated, and modified programs using the same concepts.
+**Students are never dropped into a Make exercise cold.** By the time a chapter asks them to create from scratch, they have predicted, run, investigated, and modified using the same concepts.
 
 ### Four Embedded Teaching Methods
 
@@ -117,8 +214,8 @@ Four research-backed teaching methods are woven into the PRIMM-AI+ stages — no
 
 | Method | What It Is | Where It Fits in PRIMM-AI+ |
 |--------|-----------|---------------------------|
-| **Worked Examples** | Complete programs students study before writing | Predict and Investigate |
-| **Parsons Problems** | Scrambled code lines students reorder | Between Investigate and Modify |
+| **Worked Examples** | Complete programs or scenarios students study before acting | Predict and Investigate |
+| **Parsons Problems** | Scrambled code/steps students reorder | Between Investigate and Modify |
 | **Live Coding** | Real-time coding with narrated thinking (classroom) | Investigate and Modify |
 | **Peer Instruction** | Individual thinking, then group discussion | Across all stages |
 
@@ -131,15 +228,15 @@ This book is designed for solo mode. Every technique works with just the student
 - **AI-free checkpoints**: Predict is always AI-free. Make begins AI-free.
 - **Confidence scoring**: Students rate certainty 1-5 before seeing results. False confidence is the most dangerous state.
 - **Mastery gates**: Students must earn the right to proceed (written prediction exists, comparison recorded, can explain how not just what, written spec exists).
-- **Mandatory trace artifacts**: Every Investigate stage must produce something visible (trace table, explanation, or failure note).
+- **Mandatory trace artifacts**: Every Investigate stage must produce something visible (trace table, explanation, or Error Taxonomy classification).
 
 ---
 
 ## 4. Tone and Narrative Continuity
 
-### Chapter 14's Established Pattern
+### Chapter 31's Established Pattern
 
-Chapter 14 (Ten Axioms of Programming in AI-Driven Development) is the bridge chapter that students complete right before entering the Python course. It establishes:
+Chapter 31 (Ten Axioms of Programming in AI-Driven Development) is the bridge chapter that students complete right before entering the Python course. It establishes:
 
 **Characters:**
 - **James** — The learner. Enthusiastic, sometimes rushes ahead, makes the mistakes students will make. He represents the student's journey.
@@ -159,28 +256,39 @@ Chapter 14 (Ten Axioms of Programming in AI-Driven Development) is the bridge ch
 - Practical — every concept connects to something the student will actually do
 - Respectful — assumes the student is smart but new to this specific topic
 
-**Named Anti-patterns:** Chapter 14 names specific mistakes (Circular Testing Trap, Green Bar Illusion, Prototype Trap, etc.). These become recurring vocabulary students recognize.
+**Named Anti-patterns:** Chapter 31 names specific mistakes (Circular Testing Trap, Green Bar Illusion, Prototype Trap, etc.). These become recurring vocabulary students recognize.
 
-### The Bridge from Chapter 14 to Chapter 14.1
+### The "From Principle to Axiom" Cross-Reference Pattern
 
-Chapter 14 ends with students understanding the TEN AXIOMS — the principles that govern how you work with AI-generated code. They know the WHY. But they haven't done anything yet. Their laptop is still unconfigured.
+Every axiom lesson in Chapter 31 connects back to Chapter 6 (Seven Principles) with a comparison table. The pattern:
 
-**Chapter 14.1 is where theory becomes reality.**
+1. Reference the principle with a **Docusaurus link**: `In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/bash-is-the-key), you learned **Principle 1: Bash is the Key**`
+2. Add a **concrete callback** to what students learned (e.g., the Vercel d0 case study)
+3. Show a **comparison table** with labeled columns: `Principle N (Chapter 6)` vs `Axiom N (this lesson)`
+4. Bridge paragraph explaining what the principle gave them vs what the axiom adds
+
+**Chapter reference accuracy rule**: Always verify chapter numbers against the filesystem before referencing them. The Seven Principles are in Chapter 6, not Chapter 4 or 7. Run `ls -d apps/learn-app/docs/*/06-*/` to confirm.
+
+### The Bridge from Chapter 31 to Python Chapters
+
+Chapter 31 ends with students understanding the TEN AXIOMS — the principles that govern how you work with AI-generated code. They know the WHY. But they haven't done anything yet. Their laptop is still unconfigured.
+
+**The first Python chapter is where theory becomes reality.**
 
 The narrative bridge should feel like this progression:
 
 ```
-Ch 14 (final words): "You now have ten axioms — a complete engineering system.
+Ch 31 (final words): "You now have ten axioms — a complete engineering system.
                        But axioms on paper don't ship software.
                        It's time to build the workbench."
 
-Ch 14.1 (opening):    James opens his laptop. Empty terminal. No Python tools.
+Python L1 (opening):  James opens his laptop. Empty terminal. No Python tools.
                        Emma: "Every craftsperson starts by setting up their bench.
                        Let's install each tool — and I'll show you which axiom
                        it enforces."
 ```
 
-**The key insight**: Chapter 14.1 is NOT a generic "install Python" tutorial. It is the PHYSICAL MANIFESTATION of the axioms. Every tool installed ties back to a specific axiom:
+**The key insight**: The first Python chapter is NOT a generic "install Python" tutorial. It is the PHYSICAL MANIFESTATION of the axioms. Every tool installed ties back to a specific axiom:
 
 | Tool Being Installed | Axiom It Enforces | Connection |
 |---------------------|-------------------|------------|
@@ -193,9 +301,9 @@ Ch 14.1 (opening):    James opens his laptop. Empty terminal. No Python tools.
 
 **This axiom-callback pattern is what makes our chapter different from every other Python setup tutorial.** Students don't just install tools — they understand WHY each tool exists in the context of the engineering system they just learned.
 
-### Tone Shift: Ch 14 → Ch 14.1
+### Tone Shift: Ch 31 → Python Chapters
 
-| Dimension | Ch 14 (Axioms) | Ch 14.1 (Workbench) |
+| Dimension | Ch 31 (Axioms) | Python Chapters |
 |-----------|----------------|---------------------|
 | **Mode** | Philosophical, conceptual | Hands-on, terminal-driven |
 | **Student action** | Read, understand, predict | Run commands, read output, verify |
@@ -208,7 +316,102 @@ Ch 14.1 (opening):    James opens his laptop. Empty terminal. No Python tools.
 
 ---
 
-## 5. Chapter Structure Methodology
+## 5. Beginner Accessibility Rules
+
+These rules were established through iterative refinement of Chapter 31. They prevent the most common accessibility failures.
+
+### Rule 1: Match Examples to Student Knowledge
+
+**Never use professional tools in examples that target students who don't know those tools.**
+
+| Wrong (students don't know these yet) | Right (students can relate) |
+|---------------------------------------|---------------------------|
+| ADR about SQLModel vs SQLAlchemy vs Tortoise ORM | ADR about event-driven messaging (connects to James's story) |
+| CLAUDE.md with uvicorn, alembic, dependency injection | CLAUDE.md with `python app.py` and `python -m pytest` |
+| "We decided to use Redis for caching" | "We decided to use Google Slides instead of PowerPoint" |
+
+**When professional tools appear in code examples**, add a `:::tip` block:
+
+```markdown
+:::tip Don't worry about the technical details
+You do not need to understand REST, events, or messaging yet. Focus on the
+**structure** — Status, Context, Decision, Consequences, Alternatives. That
+structure is what makes the reasoning findable six months later.
+:::
+```
+
+### Rule 2: Ground PRIMM-AI+ Exercises in the Lesson Narrative
+
+**Never create exercises that exist in a vacuum.** Every exercise should connect to the lesson's story:
+
+| Wrong | Right |
+|-------|-------|
+| "Classify these 6 generic tasks as coordination or work" | "You're in James's shoes. Your team needs to ship an update. Classify these 6 deployment tasks..." |
+| "Think of a process and break it into steps" | "Think about a multi-step process you go through regularly — submitting an assignment, publishing a post..." |
+
+### Rule 3: Never Leave Predictions Unresolved
+
+Every Predict section must have an answer key (see Section 3). Students who predict and never learn the right answer develop false confidence or silent confusion — both are worse than never predicting at all.
+
+### Rule 4: Avoid Jargon-Dense Run-On Sentences
+
+Long sentences with multiple analogies overwhelm beginners. Break them into bulleted lists or short sentences:
+
+| Wrong | Right |
+|-------|-------|
+| "A Google Doc is X, a Slack message is Y, a Confluence page is Z, and markdown is W — all in one sentence." | A bulleted list with one format per bullet, each 1-2 lines. |
+
+### Rule 5: Add Syntax Tips for Unfamiliar Code
+
+When showing code that students haven't learned yet (Makefiles, Python, shell scripts), add a `:::tip` explaining what to focus on:
+
+```markdown
+:::tip Don't worry about Makefile syntax
+You will learn Makefiles later. For now, ignore details like `.PHONY` and
+the tab indentation. Focus on the structure: each named section calls a
+tool and nothing else.
+:::
+```
+
+---
+
+## 6. The Iterative Evaluation Pattern
+
+Every lesson should be evaluated before finalizing. This pattern was established during Chapter 31 refinement.
+
+### The Evaluation Rubric
+
+Rate each lesson out of 10 from a beginner student's perspective. Evaluate these dimensions:
+
+| Dimension | What to Check |
+|-----------|--------------|
+| **Narrative hook** | Does the opening create stakes? Is it relatable? |
+| **Concept clarity** | Can a beginner understand the core idea without prior knowledge? |
+| **Example accessibility** | Do examples use tools/concepts students already know? |
+| **PRIMM-AI+ quality** | Does every Predict have an answer key? Are Investigate/Modify specific (not vague)? |
+| **Cross-references** | Are chapter numbers correct? Do links point to the right lessons? |
+| **Cognitive load** | Are there too many new concepts at once? Any dense paragraphs that need breaking up? |
+| **Progression** | Does each section build on the previous one? |
+| **Takeaways** | Do key takeaways cover all major concepts without redundancy? |
+
+### The Fix Cycle
+
+1. Evaluate → identify specific issues with line numbers
+2. Fix issues → edit the file
+3. Re-evaluate → confirm the rating improved
+4. Repeat until rating ≥ 8.5/10
+
+**Common issues found during Chapter 31 evaluation:**
+- No answer key in PRIMM-AI+ (found in Axiom II)
+- Professional tool references beginners don't know (found in Axioms I, II)
+- Vague Investigate questions that just restate the axiom (found in Axiom II)
+- Wrong chapter cross-references (found in all 10 axioms — Chapter 4/7 → Chapter 6)
+- Run-on sentences with multiple analogies (found in Axiom II)
+- Makefile syntax unexplained (found in Axiom I)
+
+---
+
+## 7. Chapter Structure Methodology
 
 ### Lesson Breakdown for Any Chapter
 
@@ -221,25 +424,6 @@ Chapter N: [Title]
 ├── Lesson N+1: [Synthesis / putting it together]
 └── Quiz: [Assessment]
 ```
-
-### For Chapter 14.1 Specifically
-
-```
-Chapter 14.1: The Development Environment
-├── L1: Why This Workbench (bridge from Ch 14 axioms to tools)
-├── L2: uv — The Package Manager for the AI Era
-├── L3: The Discipline Stack — pyright and ruff
-├── L4: pytest — Your First Verification
-├── L5: Your First Project — Putting It All Together
-└── Quiz: Development Environment Assessment
-```
-
-**Why this order?**
-- L1 bridges from axioms (conceptual) to tools (practical)
-- L2 starts with uv because EVERYTHING else depends on it (you can't run pyright without uv)
-- L3 groups pyright + ruff because they're both "static analysis" tools that run before your code executes
-- L4 introduces pytest as the verification step (the most important tool in TDG)
-- L5 combines everything into one project setup — the student's first complete workbench
 
 ### Per-Lesson Internal Structure
 
@@ -259,22 +443,53 @@ Narrative Opening (2-3 paragraphs)
 ├── Connect to what student already knows
 └── Set up what this lesson will solve
 
-Core Content — follows the five-step PRIMM-AI+ cycle:
-├── Step 1 (Predict): Present a worked example + AI-free prediction with confidence score
-├── Step 2 (Run): Show actual output, student compares to prediction
-├── Step 3 (Investigate): Trace tables, targeted questions, optional Parsons problem
-├── Step 4 (Modify): Student changes existing program, AI for hints only
-├── Step 5 (Make): Student writes spec first (AI-free), then implements
-├── "Before vs After" comparison where applicable
-├── Platform-specific callouts (Windows / Mac / Linux) as needed
-├── Bold highlighting of key insight sentences (see Section 15)
-└── Tables comparing options, diagrams where helpful
+The Problem Without This Axiom
+├── Show the pain / failure mode
+└── Connect back to narrative
+
+The Axiom/Concept Defined
+├── Formal statement (blockquote)
+├── Table separating key distinctions
+└── Image/diagram where applicable
+
+Historical Background (collapsible <details> block)
+└── Optional — for concepts with interesting origins
+
+From Principle to Axiom (for axiom chapters)
+├── Link to Chapter 6 principle with Docusaurus URL
+├── Concrete callback to what students learned
+├── Comparison table: Principle (Chapter 6) vs Axiom (this lesson)
+└── Bridge paragraph
+
+Practical Application
+├── Core content with verified examples
+├── :::tip blocks for unfamiliar syntax
+├── Tables comparing options
+└── Code examples (with comments explaining orchestration vs computation, etc.)
+
+Anti-Patterns
+└── Table: What It Looks Like | Why It Fails | The Fix
 
 Try With AI Section (3 prompts)
-├── Prompt 1: Exploration prompt (understand the tool)
-├── Prompt 2: Application prompt (use the tool for a task)
+├── Prompt 1: Exploration prompt (understand the concept)
+├── Prompt 2: Application prompt (apply to a scenario)
 ├── Prompt 3: Domain connection prompt (apply to student's own context)
-└── Each has "What you're learning:" explanation
+├── Each has "What you're learning:" explanation
+└── Beginner-accessible examples in prompt instructions
+
+PRIMM-AI+ Practice Section
+├── Definitions block (anchor key terms before exercises)
+├── Predict [AI-FREE] with confidence score
+├── Run (compare with AI)
+├── Answer Key (<details> collapsible)
+├── Investigate (specific question + Error Taxonomy)
+├── Parsons Problem (selected lessons only)
+├── Modify (harder scenario that reveals new insight)
+├── Make [Mastery Gate] (worked example + self-check guidance)
+└── Verification Ladder tip (selected lessons only: I, V, VII, IX, X)
+
+Named Trap/Illusion Section (where applicable)
+└── Specific anti-pattern with narrative example
 
 Key Takeaways (5 bullets)
 └── Core insights, connection to next lesson
@@ -283,11 +498,11 @@ Looking Ahead (1-2 paragraphs)
 └── Bridge to next lesson
 ```
 
-**Note**: Not every lesson includes all five PRIMM steps. Conceptual lessons (like Ch 30 L1-L3) may focus on specific stages. Programming lessons (Ch 33+) include the full five-step cycle.
+**Note**: Not every lesson includes all sections. Conceptual lessons (like Ch 30 L1-L3) may focus on specific stages. Programming lessons (Ch 33+) include the full five-step code cycle.
 
 ---
 
-## 6. The Complete Writing Pipeline
+## 8. The Complete Writing Pipeline
 
 ### Phase A: Build Expertise Skill (Research)
 
@@ -329,20 +544,21 @@ Looking Ahead (1-2 paragraphs)
 **Process**:
 
 ```
-1. READ Chapter 14 (or previous chapter) for tone/style reference
+1. READ Chapter 31 (or previous chapter) for tone/style reference
    └── Note: characters, narrative patterns, exercise style, pacing
 
 2. PLAN lesson breakdown
    ├── chapter-planner subagent → pedagogical arc
    ├── Define lessons (titles, goals, content outline)
+   ├── Determine Track A or Track B for PRIMM-AI+ exercises
    └── Map exercises to lesson positions
 
 3. DEFINE learning objectives
    ├── /learning-objectives skill → measurable outcomes per lesson
-   └── /skills-proficiency-mapper → CEFR level (A1 for Ch 14.1), Bloom's taxonomy
+   └── /skills-proficiency-mapper → CEFR level, Bloom's taxonomy
 
 4. VALIDATE cognitive load
-   ├── Count new concepts per lesson (target: 3-5 for A1 level)
+   ├── Count new concepts per lesson (target: 3-5 for A1 level, up to 7 for B1)
    └── Ensure progressive complexity within the chapter
 
 5. APPROVE plan with user before proceeding to writing
@@ -362,18 +578,19 @@ Looking Ahead (1-2 paragraphs)
 1. PROMPT the content-implementer subagent with:
    ├── The expertise skill (grounded knowledge)
    ├── The lesson plan (objectives, concepts, exercises)
-   ├── A reference lesson from Ch 14 (for tone matching)
+   ├── A reference lesson from Ch 31 (for tone matching)
    ├── Character context (James/Emma, their dynamic)
    ├── The axiom callback for this lesson's tools
+   ├── Track A or Track B for PRIMM-AI+ exercises
    ├── Full YAML frontmatter requirements
    └── Output path (absolute, specific)
 
 2. SUBAGENT WRITES the lesson
    ├── Opens with narrative (James/Emma)
    ├── Covers all planned content with verified commands
-   ├── Includes inline exercises
+   ├── Includes PRIMM-AI+ Practice section with answer key
    ├── Includes 3 Try With AI prompts
-   ├── Adds Syntax Card if applicable
+   ├── Adds :::tip blocks for unfamiliar syntax
    └── Outputs complete .md file
 
 3. VALIDATE in parallel:
@@ -381,8 +598,10 @@ Looking Ahead (1-2 paragraphs)
    ├── factual-verifier subagent → all commands/versions/claims verified
    └── /content-evaluation-framework skill → 6-category rubric scoring
 
-4. FIX any issues found by validators
-   └── Re-run content-implementer if needed for specific sections
+4. EVALUATE using iterative evaluation pattern (Section 6)
+   ├── Rate out of 10 from beginner perspective
+   ├── Fix issues until ≥ 8.5/10
+   └── Common fixes: answer keys, beginner examples, chapter references
 
 5. COMMIT the lesson
    └── git add + commit with descriptive message
@@ -401,13 +620,14 @@ Looking Ahead (1-2 paragraphs)
 2. CREATE chapter README.md (overview, prerequisites, lesson list)
 3. CREATE quiz using /quiz-generator skill
 4. RUN final content-evaluation-framework on full chapter
-5. UPDATE progress tracking
-6. COMMIT chapter as complete unit
+5. VERIFY all cross-references (chapter numbers, Docusaurus links)
+6. UPDATE progress tracking
+7. COMMIT chapter as complete unit
 ```
 
 ---
 
-## 7. Pedagogical Layer System
+## 9. Pedagogical Layer System
 
 Every chapter maps to a pedagogical layer from the course plan. This determines what students DO in that chapter.
 
@@ -415,38 +635,41 @@ Every chapter maps to a pedagogical layer from the course plan. This determines 
 
 ```
 L1 (Manual Foundation): Student learns the concept manually first
-    → Used in: Phase 1-2 chapters (Ch 14.1 through Ch 14.7)
+    → Used in: Early programming chapters
     → Student action: Read, run commands, predict output
     → AI role: Minimal — generates scaffolding for student to read
+    → PRIMM-AI+ Track: A (code) with heavy guidance
 
 L2 (AI Collaboration): Student knows the concept, now works WITH AI
-    → Used in: Phase 3-4 chapters (Ch 14.8 through Ch 14.15)
+    → Used in: Intermediate chapters
     → Student action: Write specs/tests, AI implements, student verifies
     → AI role: Active partner — Three Roles Framework applies
+    → PRIMM-AI+ Track: A (code) with increasing independence
 
 L3 (Skill Building): Pattern recurs, student builds reusable skills
-    → Used in: Phase 5-6 chapters (Ch 14.16 through Ch 14.21)
+    → Used in: Advanced chapters
     → Student action: Design systems, orchestrate AI, ship software
     → AI role: Tool in student's workflow
+    → PRIMM-AI+ Track: A (code) with full autonomy
 
 L4 (Spec-Driven): Student drives full spec → implement → verify cycle
-    → Used in: Phase 7 capstone (Ch 14.22-14.23)
+    → Used in: Capstone chapters
     → Student action: Full architect role
     → AI role: Implementation engine
+    → PRIMM-AI+ Track: A (code) — student orchestrates everything
 ```
 
-### Chapter 14.1 = L1 (Manual Foundation)
+### Conceptual Chapters (Ch 30-31) = Pre-L1
 
-This means:
-- Students READ and RUN, they don't write Python code yet
-- Every command has expected output shown — student verifies they see the same
-- Exercises are Type 1 (Read & Predict) and Type 2 (Spot the Bug)
-- The chapter feels like a guided workshop, not a coding session
-- Success = "my terminal shows the same output as the book"
+Chapters 30-31 are **conceptual foundations** before any programming:
+- Students READ and REASON, they don't write code
+- PRIMM-AI+ Track B: plain-English exercises with real-world scenarios
+- Exercises are classification, structured writing, and reasoning — not coding
+- Success = "I can explain the concept and apply it to a new scenario"
 
 ---
 
-## 8. Quality Gates
+## 10. Quality Gates
 
 Every lesson must pass through these gates before it's considered done:
 
@@ -469,6 +692,7 @@ Checked by: `factual-verifier` subagent
 - Are all version numbers current?
 - Are all config file formats correct?
 - Are all expected outputs accurate?
+- **Are all chapter cross-references correct?** (verify against filesystem)
 
 **If FAIL**: Specific claims flagged for correction.
 
@@ -491,15 +715,28 @@ Checked by: `/content-evaluation-framework` skill
 Checked by: Main agent (manual review)
 
 - Are James/Emma in character?
-- Does the tone match Chapter 14?
+- Does the tone match Chapter 31?
 - Are axiom callbacks natural (not forced)?
 - Does each lesson flow into the next?
 
+### Gate 5: Beginner Accessibility (NEW)
+
+Checked by: Iterative evaluation pattern (Section 6)
+
+- Are all examples accessible to students at this chapter's level?
+- Does every PRIMM-AI+ Predict section have an answer key?
+- Are Investigate questions specific (not vague restatements of the axiom)?
+- Are Modify scenarios harder than Predict (not trivial variations)?
+- Are :::tip blocks present for unfamiliar syntax?
+- Are all chapter cross-references verified against the filesystem?
+
+**Target**: 8.5/10 or higher on the evaluation rubric.
+
 ---
 
-## 9. The "Before vs After" Teaching Pattern
+## 11. The "Before vs After" Teaching Pattern
 
-This is Chapter 14's signature teaching technique and we carry it into every Python chapter.
+This is Chapter 31's signature teaching technique and we carry it into every Python chapter.
 
 ### How It Works
 
@@ -534,7 +771,7 @@ Example for pyright:
 
 ---
 
-## 10. One Running Example Per Chapter
+## 12. One Running Example Per Chapter
 
 ### The Problem with Multiple Examples
 
@@ -542,29 +779,11 @@ Most tutorials use a different example for each concept. By the end, students ha
 
 ### Our Approach: One Project Per Chapter
 
-Each chapter uses ONE project that grows across all lessons:
-
-- **Ch 14.1**: `smartnotes-starter` — a starter project that students initialize and configure
-- **Ch 14.2**: The same project, now with typed variables and expressions
-- **Ch 14.3**: The same project, now with its first TDG cycle
-
-This connects to the **SmartNotes running project** from the course plan. Students aren't doing disconnected exercises — they're building one real thing.
-
-### For Chapter 14.1 Specifically
-
-```
-L1: Why This Workbench        → No project yet, just context
-L2: uv — Package Manager      → `uv init smartnotes` (project created!)
-L3: pyright + ruff             → Configure tools for the smartnotes project
-L4: pytest                     → Add first test to smartnotes
-L5: Putting It Together        → Run full pipeline on smartnotes, verify all green
-```
-
-By the end of Ch 14.1, students have a real project directory on their machine with all tools configured. This is THEIR project that they'll evolve across 22 more chapters.
+Each chapter uses ONE project that grows across all lessons. Students aren't doing disconnected exercises — they're building one real thing.
 
 ---
 
-## 11. Platform-Specific Handling
+## 13. Platform-Specific Handling
 
 ### The Problem
 
@@ -589,23 +808,45 @@ We do NOT write three versions of each lesson. Instead:
 
 ---
 
-## 12. Exercise Design for Phase 1 Chapters
+## 14. Exercise Design
 
-### Exercise Type Distribution (Phase 1 = Reader)
+### Track B Exercises (Conceptual Chapters — Ch 30-31)
+
+```
+Predict & Classify     — 50% (classify tasks, predict properties, categorize)
+Parsons Problems       — 15% (reorder process steps, selected lessons only)
+Structured Writing     — 20% (ADRs, plans, checklists, specifications)
+Scenario Reasoning     — 15% (what breaks if you change X?)
+```
+
+### Track A Exercises (Programming Chapters — Ch 33+)
 
 ```
 Type 1: Read & Predict     — 60% of exercises (PRIMARY)
 Type 2: Spot the Bug       — 15% of exercises
 Type 3: Parsons Problem    — 15% (scrambled code, reorder for correct program)
 Type 4: Write the Test     — 10% (very simple, introduced late)
-Type 5: TDG Cycle          — 0% (not yet)
-Type 6: Build It            — 0% (not yet)
+Type 5: TDG Cycle          — 0% in Phase 1 (introduced in Phase 2+)
+Type 6: Build It           — 0% in Phase 1 (introduced in Phase 2+)
 ```
 
 ### What Parsons Problems Look Like
 
-Parsons problems are scrambled code lines that students reorder into a working program. They bridge Investigate and Modify — testing structural understanding (data flow, execution order) without requiring code writing.
+**Track B** (conceptual):
+```markdown
+Emma is rewriting James's broken deployment process. Here are the five steps
+in scrambled order. Put them in the correct sequence:
 
+- (A) The testing tool runs all tests and reports pass or fail
+- (B) The orchestration file checks the test result — if tests failed, stop here
+- (C) The build tool packages the application into a deployable file
+- (D) Emma triggers the deployment process
+- (E) The deployment tool pushes the package to the live server
+
+Then answer: Which steps are coordination and which are work?
+```
+
+**Track A** (code):
 ```markdown
 **Parsons Problem**: These four lines are scrambled. What is the correct order?
 
@@ -619,119 +860,31 @@ city: str = "London"
 Rearrange them so the program outputs: `London: 32C`
 ```
 
-The student must reason about data flow: `city` must exist before `label` can use it, `temp` must exist before `label` can use it, and `label` must exist before `print` can display it.
-
-### What Read & Predict Looks Like in Ch 14.1
-
-```markdown
-**Read & Predict**: Look at this `pyproject.toml` file:
-
-​```toml
-[project]
-name = "smartnotes"
-version = "0.1.0"
-requires-python = ">=3.12"
-dependencies = []
-
-[tool.pyright]
-typeCheckingMode = "strict"
-​```
-
-Questions:
-1. What Python version does this project require?
-2. What happens if you try to use Python 3.11?
-3. What does `typeCheckingMode = "strict"` tell pyright to do?
-```
-
-### What Spot the Bug Looks Like in Ch 14.1
-
-```markdown
-**Spot the Bug**: James ran `uv init` and then tried to run his tests:
-
-​```bash
-$ pytest
-command not found: pytest
-​```
-
-What did James forget? (Hint: think about how uv manages tools)
-```
-
-Answer: He should use `uv run pytest`, not bare `pytest`. uv manages the virtual environment — tools aren't available globally.
-
 ---
 
-## 13. The Checkpoint Pattern
+## 15. The Checkpoint Pattern
 
 ### End-of-Chapter Verification
 
-Every chapter ends with a single checkpoint command that verifies everything taught in that chapter is working:
+Every programming chapter ends with a single checkpoint command that verifies everything taught in that chapter is working:
 
-**Ch 14.1 Checkpoint:**
+**Example Checkpoint:**
 ```bash
 uv run ruff check . && uv run pyright && uv run pytest
 ```
 
-All three must pass (green output). If any fails, the student knows exactly which lesson to revisit.
+All must pass (green output). If any fails, the student knows exactly which lesson to revisit.
 
 ### Why This Matters
 
 1. **Binary success**: Either it's green or it's not. No ambiguity.
-2. **Pipeline preview**: This is a miniature version of the CI pipeline they'll build in Ch 14.21 (CI/CD chapter).
+2. **Pipeline preview**: This is a miniature version of the CI pipeline.
 3. **Axiom IX in action**: "Verification is a Pipeline" — demonstrated on day one.
 4. **Confidence builder**: Seeing three tools all pass on YOUR project is motivating.
 
 ---
 
-## 14. Summary: The Complete Pipeline
-
-```
-┌─────────────────────────────────────────────────────┐
-│                  CHAPTER WRITING PIPELINE            │
-├─────────────────────────────────────────────────────┤
-│                                                     │
-│  1. MCP GROUNDING                                   │
-│     ├── Context7 → Official docs                    │
-│     ├── Firecrawl → Changelogs, blogs               │
-│     └── WebSearch → Community patterns              │
-│                                                     │
-│  2. EXPERTISE SKILL                                 │
-│     ├── Persona, Logic, Context                     │
-│     ├── Data/Knowledge (from MCP)                   │
-│     ├── Safety/Guardrails                           │
-│     └── Tested on real project                      │
-│                                                     │
-│  3. CHAPTER PLANNING                                │
-│     ├── chapter-planner subagent                    │
-│     ├── /learning-objectives skill                  │
-│     ├── /skills-proficiency-mapper skill            │
-│     └── User approval                              │
-│                                                     │
-│  4. CONTENT CREATION (per lesson)                   │
-│     ├── content-implementer subagent                │
-│     │   ├── Expertise skill as input                │
-│     │   ├── Reference lesson for tone               │
-│     │   ├── James/Emma characters                   │
-│     │   └── Full YAML frontmatter                   │
-│     │                                               │
-│     ├── PARALLEL VALIDATION                         │
-│     │   ├── educational-validator                   │
-│     │   ├── factual-verifier                        │
-│     │   └── /content-evaluation-framework           │
-│     │                                               │
-│     └── COMMIT per lesson                           │
-│                                                     │
-│  5. CHAPTER ASSEMBLY                                │
-│     ├── README.md (overview)                        │
-│     ├── Quiz (/quiz-generator)                      │
-│     ├── Final quality score                         │
-│     └── COMMIT chapter                              │
-│                                                     │
-└─────────────────────────────────────────────────────┘
-```
-
----
-
-## 15. Bold Highlighting Pattern
+## 16. Bold Highlighting Pattern
 
 Every lesson uses inline bold text to create a "concept runway" — reading all bold statements in sequence tells the lesson's skeleton. This pattern comes from Part 1 and must be applied consistently across all chapters.
 
@@ -763,26 +916,28 @@ Every lesson uses inline bold text to create a "concept runway" — reading all 
 | ~500 lines | ~25-35 key insight bolds |
 | ~600+ lines | ~35-45 key insight bolds |
 
-This count includes structural bolds (stage names, sub-section labels) plus the key insight bolds. The goal is that a reader skimming only the bold text gets the lesson's complete argument.
-
 ---
 
-## 16. Key Rules (Non-Negotiable)
+## 17. Key Rules (Non-Negotiable)
 
 1. **Never write lesson prose directly** — always use content-implementer subagent
 2. **Never show unverified commands** — MCP ground everything first
 3. **Never show untyped Python** — every code example has type annotations
 4. **Never skip YAML frontmatter** — full skills, objectives, cognitive load metadata
-5. **Never introduce a tool without axiom callback** — every tool connects to Ch 14
+5. **Never introduce a tool without axiom callback** — every tool connects to Ch 31
 6. **Never use multiple disconnected examples** — one running project per chapter
 7. **Never drop students into Make cold** — every Make is preceded by Predict, Run, Investigate, and Modify on the same concepts
 8. **Always follow the five-step PRIMM-AI+ lesson architecture** — Predict (AI-free) → Run → Investigate → Modify → Make (spec-first)
 9. **Always show "Before vs After"** — pain first, solution second
 10. **Always include 3 Try With AI prompts** — each targeting a different skill
-11. **Always end with checkpoint command** — binary pass/fail verification
-12. **Always match Chapter 14's tone** — James/Emma, practical, respectful, problem-first
-13. **Always bold key insight sentences** — inline, short, punchy, ~1 per 14 lines (see Section 15)
+11. **Always end programming chapters with checkpoint command** — binary pass/fail verification
+12. **Always match Chapter 31's tone** — James/Emma, practical, respectful, problem-first
+13. **Always bold key insight sentences** — inline, short, punchy, ~1 per 14 lines (see Section 16)
 14. **Always include Parsons problems** — at least one per programming chapter, between Investigate and Modify
+15. **Always include answer keys** — every Predict section gets a collapsible `<details>` resolution
+16. **Always verify chapter cross-references** — run `ls -d` against filesystem, never guess chapter numbers
+17. **Always match PRIMM-AI+ track to student knowledge** — Track B for conceptual chapters, Track A for programming chapters
+18. **Never use professional tool examples for students who don't know those tools** — add `:::tip` blocks when showing unfamiliar syntax
 
 ---
 
@@ -790,5 +945,6 @@ This count includes structural bolds (stage names, sub-section labels) plus the 
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 2.0 | 2026-03-08 | Major update: Added Section 3 (PRIMM-AI+ lesson and chapter architecture from Ch 30 L3), Section 15 (bold highlighting pattern from Part 1), added Parsons Problems to exercise design, aligned per-lesson structure with five-step PRIMM-AI+ cycle, added four embedded teaching methods, added classroom/solo mode distinction, added 4 new key rules (#7 no cold Make, #8 follow five-step architecture, #13 bold key insights, #14 include Parsons problems), renumbered all sections, bumped companion reference to v2.15 |
+| 3.0 | 2026-03-15 | Major update based on Chapter 31 v2 refinement: Added Track A/B distinction (Section 3), answer key pattern with `<details>`, Error Taxonomy and Verification Ladder as standard tools, beginner accessibility rules (Section 5), iterative evaluation pattern (Section 6), Gate 5 (beginner accessibility), "From Principle to Axiom" cross-reference pattern, chapter numbering clarification table, 4 new key rules (#15-#18), updated all "Chapter 14" references to "Chapter 31", updated per-lesson structure template with PRIMM-AI+ Practice section details |
+| 2.0 | 2026-03-08 | Added Section 3 (PRIMM-AI+ lesson and chapter architecture from Ch 30 L3), Section 15 (bold highlighting pattern from Part 1), added Parsons Problems to exercise design, aligned per-lesson structure with five-step PRIMM-AI+ cycle, added four embedded teaching methods, added classroom/solo mode distinction, added 4 new key rules (#7 no cold Make, #8 follow five-step architecture, #13 bold key insights, #14 include Parsons problems), renumbered all sections |
 | 1.0 | 2026-02-20 | Initial methodology document covering MCP grounding, narrative continuity, writing pipeline, quality gates, exercise design, and platform handling |
