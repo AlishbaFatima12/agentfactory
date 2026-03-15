@@ -54,13 +54,13 @@ learning_objectives:
     assessment_method: "Given an AI agent specification, student produces a monitoring plan covering token usage, quality metrics, error rates, and cost tracking"
 
   - objective: "Map all ten axioms into a coherent agentic development system"
-    proficiency_level: "B2"
-    bloom_level: "Evaluate"
-    assessment_method: "Student can trace a feature from shell orchestration through production monitoring, identifying which axiom governs each phase"
+    proficiency_level: "B1"
+    bloom_level: "Analyze"
+    assessment_method: "Student can trace a feature through the three axiom groups (Structure, Data, Verification) and identify which axiom governs each phase"
 
 cognitive_load:
   new_concepts: 7
-  assessment: "7 concepts (verification spectrum, three pillars, structured logging, log levels, metrics, traces, feedback loop) at upper limit of B1-B2 range (5-7) -- justified by synthesis role of final axiom lesson"
+  assessment: "7 concepts (verification spectrum, three pillars, structured logging, log levels, metrics, traces, feedback loop) at upper limit of B1 range (5-7) -- justified by synthesis role of final axiom lesson"
 
 differentiation:
   extension_for_advanced: "Implement a full OpenTelemetry pipeline with custom spans, Prometheus metrics, and Grafana dashboards for an AI agent system; explore distributed tracing across microservices."
@@ -255,6 +255,10 @@ A trace from this code might reveal: "Order ord-7891 took 4.2 seconds total — 
 | "Why is the system slow?" | Shows individual slow requests | Shows 95th percentile is high | Shows where time is spent | Full picture: which requests, how many, and exactly why |
 | "Is something broken?" | Shows error messages | Shows error rate is 5% | Shows which service fails | Full picture: what errors, how widespread, and the exact failure path |
 | "How much does this cost?" | Shows per-request token counts | Shows total token usage trend | Shows which operations consume tokens | Full picture: cost per user, per feature, trending over time |
+
+:::tip Reading Checkpoint
+This is a natural stopping point. If you need a break, bookmark this spot and return when you are ready. Everything above covers the core concept; everything below applies it through exercises and practice.
+:::
 
 ## Python Observability Toolkit
 

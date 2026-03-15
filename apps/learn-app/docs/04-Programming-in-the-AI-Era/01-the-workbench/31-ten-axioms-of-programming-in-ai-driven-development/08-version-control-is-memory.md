@@ -370,6 +370,10 @@ Ref: PRODUCT-2025-047"
 
 Six months from now, when someone asks "why is the threshold 75 and not 50?", the commit message answers immediately — it was a product decision backed by analytics, not an arbitrary choice. No Slack archaeology required. This is what James's post-mortem was missing — the *why* behind every change.
 
+:::tip Reading Checkpoint
+This is a natural stopping point. If you need a break, bookmark this spot and return when you are ready. Everything above covers the core concept; everything below applies it through exercises and practice.
+:::
+
 ---
 
 ## Git and AI: The Collaboration Protocol
