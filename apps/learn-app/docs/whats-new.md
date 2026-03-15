@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-15
+- refactor: renumber Parts 1-3 chapters to continuous global numbering ([#862](https://github.com/panaversity/agentfactory/pull/862))
+
+### 2026-03-15
 - docs: add PRIMM-AI+ integration to Chapter 31 (Ten Axioms) ([#860](https://github.com/panaversity/agentfactory/pull/860))
 
 ### 2026-03-15
