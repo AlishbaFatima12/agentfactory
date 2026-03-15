@@ -22,7 +22,7 @@ keywords:
     "domain agent",
     "extension roadmap",
   ]
-chapter: 17
+chapter: 28
 lesson: 10
 duration_minutes: 35
 
@@ -73,7 +73,7 @@ cognitive_load:
   assessment: "7 concepts at B1-B2 level. Each concept is a self-contained domain with its own SKILL.md requirements. Students select the domains relevant to their context rather than mastering all seven — cognitive load is managed through selective engagement, not sequential coverage."
 
 differentiation:
-  extension_for_advanced: "Select two extensions from different domains. For each, write a complete SKILL.md section (Persona, Questions, Principles) using the Chapter 16 methodology. Then design a four-scenario validation set (standard, edge, adversarial, high-stakes) and run the first two scenarios against your draft."
+  extension_for_advanced: "Select two extensions from different domains. For each, write a complete SKILL.md section (Persona, Questions, Principles) using the Chapter 27 methodology. Then design a four-scenario validation set (standard, edge, adversarial, high-stakes) and run the first two scenarios against your draft."
   remedial_for_struggling: "Focus on one extension only — the one closest to your professional context. Read the concept box, identify three things the generic plugin cannot do, and write one SKILL.md instruction for each gap. Check that each instruction is specific enough to test."
 
 teaching_guide:
@@ -106,7 +106,7 @@ teaching_guide:
 
 In the previous lessons, you built finance agent capabilities that work across organisations — model comprehension, scenario testing, variance analysis, and the financial-services plugin suite. Each of those capabilities applies general financial logic. Now you confront the limitation: general financial logic does not know your treasury policy, your tax provision methodology, your CFO's preferred variance bridge format, or your fund's NAV calculation rules. This lesson covers seven enterprise extension domains where the gap between generic capability and organisation-specific requirement is widest.
 
-The pattern is consistent across all seven. Identify what the generic plugin lacks. Name the institutional knowledge the extension must encode. Write the SKILL.md instructions that close the gap. The methodology is the same one Chapter 16 taught — what changes is the professional context in which you apply it.
+The pattern is consistent across all seven. Identify what the generic plugin lacks. Name the institutional knowledge the extension must encode. Write the SKILL.md instructions that close the gap. The methodology is the same one Chapter 27 taught — what changes is the professional context in which you apply it.
 
 ## Extension 3: Treasury and Cash Management
 

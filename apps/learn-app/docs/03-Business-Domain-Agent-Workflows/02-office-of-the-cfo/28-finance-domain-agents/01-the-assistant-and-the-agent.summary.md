@@ -10,7 +10,7 @@ Finance is the domain where the distinction between an AI assistant and an AI ag
 
 ### Critical Patterns
 
-- The chapter is structured in three parts: Part One covers Claude in Excel (the embedded assistant), Part Two covers Cowork finance plugins (the orchestrating agent), and Part Three covers enterprise extensions using the Knowledge Extraction Method from Chapter 16
+- The chapter is structured in three parts: Part One covers Claude in Excel (the embedded assistant), Part Two covers Cowork finance plugins (the orchestrating agent), and Part Three covers enterprise extensions using the Knowledge Extraction Method from Chapter 27
 - Claude in Excel supports multiple platforms: web, Windows (365), Mac (16.46+), and iPad (2.51+)
 - Spreadsheets from untrusted sources carry prompt injection risks — Claude reads cell values, formulas, and comments, so malicious instructions can be hidden in workbooks shared during deal processes and audits
 
@@ -22,5 +22,5 @@ Finance is the domain where the distinction between an AI assistant and an AI ag
 
 ### Connections
 
-- **Builds on**: Chapter 16 taught the Knowledge Extraction Method for surfacing tacit knowledge; Chapter 15 taught SKILL.md architecture and the Agent Skills Pattern — this lesson applies both to the finance domain
+- **Builds on**: Chapter 27 taught the Knowledge Extraction Method for surfacing tacit knowledge; Chapter 26 taught SKILL.md architecture and the Agent Skills Pattern — this lesson applies both to the finance domain
 - **Leads to**: Lesson 2 begins hands-on work with Claude in Excel's general workbook intelligence — understanding models you did not build

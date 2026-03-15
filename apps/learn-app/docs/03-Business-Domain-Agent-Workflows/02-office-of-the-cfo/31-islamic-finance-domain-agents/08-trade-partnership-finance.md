@@ -22,7 +22,7 @@ keywords:
     "Islamic trade finance",
     "Islamic partnership finance",
   ]
-chapter: 20
+chapter: 31
 lesson: 8
 duration_minutes: 45
 

@@ -21,7 +21,7 @@ keywords:
     "framework tension",
     "capstone accounting",
   ]
-chapter: 20
+chapter: 31
 lesson: 15
 duration_minutes: 90
 
@@ -85,7 +85,7 @@ teaching_guide:
   session_group: 5
   session_title: "AAOIFI vs IFRS — Full Financial Statements (Capstone)"
   key_points:
-    - "This is the capstone accounting exercise of Chapter 20 — it integrates every product and jurisdiction concept from the chapter"
+    - "This is the capstone accounting exercise of Chapter 31 — it integrates every product and jurisdiction concept from the chapter"
     - "The IAH classification difference is the single most material AAOIFI/IFRS divergence for Islamic banks — it directly affects reported equity, ROE, and capital adequacy ratios"
     - "The auditor's risk assessment in Step 5 is the most professionally important deliverable — it demonstrates the ability to identify where accounting framework choices create genuine audit risk"
   misconceptions:

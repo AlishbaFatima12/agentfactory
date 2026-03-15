@@ -20,7 +20,7 @@ keywords:
     "PayGulf Technologies",
     "PayStream CloudVault",
   ]
-chapter: 22
+chapter: 33
 lesson: 13
 duration_minutes: 30
 

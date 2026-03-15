@@ -3,7 +3,7 @@ sidebar_position: 1
 title: "Give Your Employee an Identity"
 description: "Configure your AI employee's profession-specific identity, behavioral rules, domain vocabulary, and boundary conditions using NanoClaw's CLAUDE.md system"
 keywords: ["NanoClaw", "CLAUDE.md", "agent identity", "behavioral rules", "domain configuration", "AI employee"]
-chapter: 13
+chapter: 24
 lesson: 1
 duration_minutes: 30
 

@@ -1,106 +1,106 @@
 deck:
-  id: "ch23-07-meeting-prep"
+  id: "ch34-07-meeting-prep"
   title: "Pre-Call Briefs and Meeting Preparation"
   description: "Pre-call brief structure, competitive battlecards, Context Loss error type, call summaries, and objection handling"
-  tags: ["sales", "revops", "marketing", "chapter-23"]
+  tags: ["sales", "revops", "marketing", "chapter-34"]
   version: 1
 
 cards:
-  - id: "ch23-07-meeting-prep-001"
+  - id: "ch34-07-meeting-prep-001"
     front: "What are the five elements of a pre-call brief?"
     back: "1. Quick Context\n2. Call Goal\n3. Discovery Questions\n4. Anticipated Objections\n5. Success Criteria"
     difficulty: "basic"
     tags: ["pre-call-brief"]
 
-  - id: "ch23-07-meeting-prep-002"
+  - id: "ch34-07-meeting-prep-002"
     front: "Why does Ahmed spend the first ten minutes of every discovery call asking questions he could have answered beforehand?"
     back: "He has no pre-call brief. He reads a one-line CRM note and improvises, wasting half the meeting on information that was publicly available — because preparation is the work he skips."
     difficulty: "intermediate"
     why: "What does the prospect conclude about Ahmed's professionalism when he asks questions a brief would have answered?"
     tags: ["preparation-gap"]
 
-  - id: "ch23-07-meeting-prep-003"
+  - id: "ch34-07-meeting-prep-003"
     front: "What is Context Loss as an agent error type?"
     back: "The agent produces generic output because it does not have access to research built in earlier sessions. Prior context exists but was not fed into the current prompt."
     difficulty: "intermediate"
     tags: ["context-loss"]
 
-  - id: "ch23-07-meeting-prep-004"
+  - id: "ch34-07-meeting-prep-004"
     front: "A pre-call brief for Pinnacle Analytics produced questions like 'Tell me about your current workflow.' What diagnostic question identifies this as Context Loss?"
     back: "Did the brief reference the research from earlier sessions? If not, the agent operated without context that exists elsewhere in the workflow."
     difficulty: "intermediate"
     tags: ["context-loss"]
 
-  - id: "ch23-07-meeting-prep-005"
+  - id: "ch34-07-meeting-prep-005"
     front: "How do you fix Context Loss in a pre-call brief?"
     back: "Feed the prior research brief and scoring data into the current prompt. The agent does not remember across sessions — you manage the memory."
     difficulty: "basic"
     tags: ["context-loss"]
 
-  - id: "ch23-07-meeting-prep-006"
+  - id: "ch34-07-meeting-prep-006"
     front: "What are the five agent error types discovered across Lessons 1-7?"
     back: "1. Hallucinated Data (L01)\n2. Miscalibrated Scoring (L03)\n3. Compliance Gap (L05)\n4. Over-Automation (L06)\n5. Context Loss (L07)"
     difficulty: "intermediate"
     tags: ["error-taxonomy"]
 
-  - id: "ch23-07-meeting-prep-007"
+  - id: "ch34-07-meeting-prep-007"
     front: "What does a competitive battlecard contain?"
     back: "Differentiation matrix, where you win, where they win, talk tracks for the specific prospect, and where you lose."
     difficulty: "basic"
     tags: ["battlecard"]
 
-  - id: "ch23-07-meeting-prep-008"
+  - id: "ch34-07-meeting-prep-008"
     front: "NexaFlow has a 3-month minimum commitment versus TrackFlow's 12 months. Why does this matter for the Meridian meeting?"
     back: "Meridian's VP likely wants quick wins post-acquisition. A shorter commitment reduces adoption risk — because 3 months allows a low-stakes evaluation while 12 months requires a bigger organisational commitment."
     difficulty: "intermediate"
     why: "How would you frame the 3-month commitment if Sarah raises concern about implementation speed?"
     tags: ["battlecard"]
 
-  - id: "ch23-07-meeting-prep-009"
+  - id: "ch34-07-meeting-prep-009"
     front: "A prospect says 'We already have a WMS vendor.' How does Farah handle this competitive objection?"
     back: "She does not attack the incumbent. She positions the diagnostic as vendor-neutral: it maps overlap between the two WMS platforms regardless of who does the consolidation."
     difficulty: "intermediate"
     tags: ["objection-handling"]
 
-  - id: "ch23-07-meeting-prep-010"
+  - id: "ch34-07-meeting-prep-010"
     front: "Why does Farah respond to 'We're not ready to buy' by separating the diagnostic from the purchase decision?"
     back: "The prospect assumes every meeting leads to a pitch. By removing the pitch — no proposal, no SOW — the objection evaporates, because the perceived commitment drops to zero."
     difficulty: "intermediate"
     why: "What other objections dissolve when you reduce the perceived commitment of the next step?"
     tags: ["objection-handling"]
 
-  - id: "ch23-07-meeting-prep-011"
+  - id: "ch34-07-meeting-prep-011"
     front: "What does the /call-summary command produce from a call transcript?"
     back: "An internal summary, qualification status, action items with owners and due dates, and a draft follow-up email."
     difficulty: "basic"
     tags: ["call-summary"]
 
-  - id: "ch23-07-meeting-prep-012"
+  - id: "ch34-07-meeting-prep-012"
     front: "How do discovery questions differ between a discovery call and a demo call for the same prospect?"
     back: "Discovery questions qualify the opportunity (Is this a priority? Who decides?). Demo questions validate technical fit (What scenarios should we demo? What integration matters most?)."
     difficulty: "intermediate"
     tags: ["call-types"]
 
-  - id: "ch23-07-meeting-prep-013"
+  - id: "ch34-07-meeting-prep-013"
     front: "Why should every claim in a competitive battlecard be verified before using it in a meeting?"
     back: "Agent-generated competitive intelligence is a starting point, not a script. Pricing, features, and partnerships change — citing outdated competitor information in a meeting undermines credibility."
     difficulty: "intermediate"
     tags: ["battlecard"]
 
-  - id: "ch23-07-meeting-prep-014"
+  - id: "ch34-07-meeting-prep-014"
     front: "What is the difference between explicit and implicit commitments in a call summary?"
     back: "Explicit: clearly stated ('I will send the report today'). Implicit: inferred from conversation ('Let me look into that'). The agent captures explicit commitments reliably but often misses implicit ones."
     difficulty: "intermediate"
     why: "Which type of missed commitment damages trust more, and why?"
     tags: ["call-summary"]
 
-  - id: "ch23-07-meeting-prep-015"
+  - id: "ch34-07-meeting-prep-015"
     front: "A prospect says 'We're too busy with the acquisition.' Is this a rejection or a timing objection?"
     back: "A timing objection. Farah reframes the diagnostic as saving time rather than consuming it — 2 hours, not 2 weeks."
     difficulty: "basic"
     tags: ["objection-handling"]
 
-  - id: "ch23-07-meeting-prep-016"
+  - id: "ch34-07-meeting-prep-016"
     front: "Why does Farah define success criteria before every call instead of evaluating afterward?"
     back: "Without pre-defined success criteria, you cannot recognise success during the call and risk leaving without a concrete next step. Post-hoc evaluation allows rationalisation of a mediocre outcome."
     difficulty: "advanced"

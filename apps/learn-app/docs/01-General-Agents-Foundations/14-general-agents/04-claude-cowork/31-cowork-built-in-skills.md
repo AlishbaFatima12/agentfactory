@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/cowork-built-in-skills
 title: "Built-in Skills: Documents, Spreadsheets, Presentations"
 sidebar_position: 31
-chapter: 3
+chapter: 14
 lesson: 31
 duration_minutes: 18
 chapter_type: Practical

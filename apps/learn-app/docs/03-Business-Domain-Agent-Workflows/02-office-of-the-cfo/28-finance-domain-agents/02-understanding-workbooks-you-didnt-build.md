@@ -18,7 +18,7 @@ keywords:
     "model audit",
     "FP&A",
   ]
-chapter: 17
+chapter: 28
 lesson: 2
 duration_minutes: 25
 

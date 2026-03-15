@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: "The Three Core Operational Constraints of LLMs"
-chapter: 1
+chapter: 12
 lesson: 2
 duration_minutes: 25
 description: "Understanding the fundamental constraints of Large Language Models—statelessness, probabilistic outputs, and limited context—that shape every AI-native development methodology"

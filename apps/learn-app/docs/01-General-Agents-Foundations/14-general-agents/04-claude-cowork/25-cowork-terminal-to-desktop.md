@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/cowork-terminal-to-desktop
 title: "From Terminal to Desktop: The Cowork Story"
 sidebar_position: 25
-chapter: 3
+chapter: 14
 lesson: 25
 duration_minutes: 15
 chapter_type: Concept

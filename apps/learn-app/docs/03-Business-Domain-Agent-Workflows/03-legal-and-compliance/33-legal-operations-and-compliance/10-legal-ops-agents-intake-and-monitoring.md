@@ -15,7 +15,7 @@ keywords:
     "regulatory briefing",
     "legal process automation",
   ]
-chapter: 22
+chapter: 33
 lesson: 10
 duration_minutes: 25
 

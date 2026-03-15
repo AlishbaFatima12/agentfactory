@@ -1,5 +1,5 @@
 deck:
-  id: ch04-05-tacit-knowledge
+  id: ch15-05-tacit-knowledge
   title: 'The Two-Way Problem: Getting Tacit Knowledge In and Out'
   description: Flashcards covering the bidirectional knowledge transfer challenge between professionals and AI—tacit knowledge encoding strategies, memory systems, and understanding extraction techniques.
   tags:
@@ -10,7 +10,7 @@ deck:
   - two-way-problem
   version: 1
 cards:
-- id: ch04-05-tacit-knowledge-001
+- id: ch15-05-tacit-knowledge-001
   type: recall
   difficulty: basic
   front: What is the Two-Way Problem in AI collaboration?
@@ -18,7 +18,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-002
+- id: ch15-05-tacit-knowledge-002
   type: recall
   difficulty: basic
   front: What are the two directions of the Two-Way Problem?
@@ -28,7 +28,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-003
+- id: ch15-05-tacit-knowledge-003
   type: thinking
   difficulty: intermediate
   front: Why do most professionals neglect the AI-to-Professional direction?
@@ -37,7 +37,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-004
+- id: ch15-05-tacit-knowledge-004
   type: recall
   difficulty: basic
   front: What is tacit knowledge?
@@ -45,7 +45,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-005
+- id: ch15-05-tacit-knowledge-005
   type: recall
   difficulty: intermediate
   front: Name three categories of tacit knowledge a professional might carry?
@@ -57,7 +57,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-006
+- id: ch15-05-tacit-knowledge-006
   type: thinking
   difficulty: intermediate
   front: Why can AI read documentation but still miss what makes expertise valuable?
@@ -66,7 +66,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-007
+- id: ch15-05-tacit-knowledge-007
   type: recall
   difficulty: basic
   front: What are four things that tacit knowledge is NOT?
@@ -80,7 +80,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-008
+- id: ch15-05-tacit-knowledge-008
   type: thinking
   difficulty: advanced
   front: How does the indemnification clause example illustrate tacit knowledge failure?
@@ -90,7 +90,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-009
+- id: ch15-05-tacit-knowledge-009
   type: thinking
   difficulty: intermediate
   front: Why must context documents for AI be structurally different from human documents?
@@ -100,7 +100,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-010
+- id: ch15-05-tacit-knowledge-010
   type: thinking
   difficulty: intermediate
   front: How do documents written for AI differ from documents written for humans?
@@ -110,7 +110,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-011
+- id: ch15-05-tacit-knowledge-011
   type: recall
   difficulty: intermediate
   front: What three characteristics do effective AI-consumable context documents share?
@@ -122,7 +122,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-012
+- id: ch15-05-tacit-knowledge-012
   type: recall
   difficulty: basic
   front: What is Strategy 2 for encoding tacit knowledge into AI?
@@ -130,7 +130,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-013
+- id: ch15-05-tacit-knowledge-013
   type: thinking
   difficulty: intermediate
   front: Why are example-based preferences more effective than rule-based ones?
@@ -139,7 +139,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-014
+- id: ch15-05-tacit-knowledge-014
   type: recall
   difficulty: basic
   front: What are the four steps of the OpenAI Memory Lifecycle?
@@ -153,7 +153,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-015
+- id: ch15-05-tacit-knowledge-015
   type: recall
   difficulty: intermediate
   front: What happens during the 'inject' phase of the memory lifecycle?
@@ -161,7 +161,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-016
+- id: ch15-05-tacit-knowledge-016
   type: thinking
   difficulty: intermediate
   front: Why does the memory lifecycle include both distill and consolidate phases?
@@ -171,7 +171,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-017
+- id: ch15-05-tacit-knowledge-017
   type: thinking
   difficulty: intermediate
   front: Why should 'we are reviewing the Johnson contract' be session memory, not global?
@@ -180,7 +180,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-018
+- id: ch15-05-tacit-knowledge-018
   type: recall
   difficulty: basic
   front: What is the difference between global memory and session memory?
@@ -188,7 +188,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-019
+- id: ch15-05-tacit-knowledge-019
   type: thinking
   difficulty: advanced
   front: Why is incorrect memory scoping dangerous in both directions?
@@ -198,7 +198,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-020
+- id: ch15-05-tacit-knowledge-020
   type: recall
   difficulty: intermediate
   front: What is the 'require explanations' strategy for extracting understanding from AI?
@@ -206,7 +206,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-021
+- id: ch15-05-tacit-knowledge-021
   type: thinking
   difficulty: intermediate
   front: How does requiring explanations before the deliverable change your review process?
@@ -215,7 +215,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-022
+- id: ch15-05-tacit-knowledge-022
   type: recall
   difficulty: intermediate
   front: What four elements should structured output from AI include?
@@ -229,7 +229,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-023
+- id: ch15-05-tacit-knowledge-023
   type: thinking
   difficulty: intermediate
   front: How does progressive review improve understanding of AI-generated work?
@@ -239,7 +239,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-024
+- id: ch15-05-tacit-knowledge-024
   type: thinking
   difficulty: advanced
   front: Why is reviewing a 20-page AI deliverable at once worse than progressive review?
@@ -249,7 +249,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-025
+- id: ch15-05-tacit-knowledge-025
   type: recall
   difficulty: basic
   front: What is the Rubber Duck Test for AI-generated work?
@@ -257,7 +257,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-026
+- id: ch15-05-tacit-knowledge-026
   type: thinking
   difficulty: intermediate
   front: Why does the Rubber Duck Test reveal gaps in understanding?
@@ -266,7 +266,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-027
+- id: ch15-05-tacit-knowledge-027
   type: thinking
   difficulty: advanced
   front: How does tacit knowledge connect to the signal-vs-noise ratio from Lesson 4?
@@ -276,7 +276,7 @@ cards:
   tags:
   - tacit-knowledge
   - context-engineering
-- id: ch04-05-tacit-knowledge-028
+- id: ch15-05-tacit-knowledge-028
   type: recall
   difficulty: intermediate
   front: In the lab's tacit knowledge extraction protocol, what are the five sections of the extraction document?

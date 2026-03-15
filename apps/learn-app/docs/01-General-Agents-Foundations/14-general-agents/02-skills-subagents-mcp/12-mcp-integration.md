@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/mcp-integration
 title: "MCP Integration"
 sidebar_position: 12
-chapter: 3
+chapter: 14
 lesson: 12
 duration_minutes: 14
 

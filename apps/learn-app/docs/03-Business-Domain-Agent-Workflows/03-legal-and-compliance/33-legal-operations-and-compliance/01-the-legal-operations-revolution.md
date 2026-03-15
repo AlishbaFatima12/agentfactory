@@ -19,7 +19,7 @@ keywords:
     "Noor Technologies",
     "legal plugin installation",
   ]
-chapter: 22
+chapter: 33
 lesson: 1
 duration_minutes: 25
 

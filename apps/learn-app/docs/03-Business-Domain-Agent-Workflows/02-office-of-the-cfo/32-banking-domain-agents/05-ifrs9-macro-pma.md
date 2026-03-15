@@ -18,7 +18,7 @@ keywords:
     "climate risk PMA",
     "ifrs9-scenarios skill",
   ]
-chapter: 21
+chapter: 32
 lesson: 5
 duration_minutes: 40
 

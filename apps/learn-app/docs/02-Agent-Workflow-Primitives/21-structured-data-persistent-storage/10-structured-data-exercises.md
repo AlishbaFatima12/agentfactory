@@ -1,8 +1,8 @@
 ---
 title: "Practice: Structured Data Exercises"
-practice_exercise: ch10-structured-data
+practice_exercise: ch21-structured-data
 sidebar_position: 10
-chapter: 10
+chapter: 21
 lesson: 10
 duration_minutes: 180
 
@@ -158,13 +158,13 @@ This framework applies to every data-driven application, not just these exercise
 
 For each exercise, evaluate yourself on:
 
-| Criteria | Beginner (1) | Developing (2) | Proficient (3) | Advanced (4) |
-| --- | :-: | :-: | :-: | :-: |
-| **Schema Quality** | Missing constraints | Basic types, some constraints | Full constraints with foreign keys | Indexes, validation, edge-case handling |
-| **Operation Safety** | No error handling | Basic try/except | Proper session lifecycle and rollback | Atomic transactions with savepoints |
-| **Query Correctness** | Raw SQL strings | Basic ORM queries | Joins and relationship navigation | Optimized queries, N+1 prevention |
-| **Problem Diagnosis** | Guesses at bugs | Identifies obvious errors | Traces root cause systematically | Identifies root cause AND prevents recurrence |
-| **Verification Discipline** | No testing | Runs tests once | Tests after each change | Tests + edge cases + failure paths |
+| Criteria                    |    Beginner (1)     |        Developing (2)         |            Proficient (3)             |                 Advanced (4)                  |
+| --------------------------- | :-----------------: | :---------------------------: | :-----------------------------------: | :-------------------------------------------: |
+| **Schema Quality**          | Missing constraints | Basic types, some constraints |  Full constraints with foreign keys   |    Indexes, validation, edge-case handling    |
+| **Operation Safety**        |  No error handling  |       Basic try/except        | Proper session lifecycle and rollback |      Atomic transactions with savepoints      |
+| **Query Correctness**       |   Raw SQL strings   |       Basic ORM queries       |   Joins and relationship navigation   |       Optimized queries, N+1 prevention       |
+| **Problem Diagnosis**       |   Guesses at bugs   |   Identifies obvious errors   |   Traces root cause systematically    | Identifies root cause AND prevents recurrence |
+| **Verification Discipline** |     No testing      |        Runs tests once        |        Tests after each change        |      Tests + edge cases + failure paths       |
 
 ---
 
@@ -374,7 +374,7 @@ Run the tests. The failures will range from clear (`NoReferencedTableError`) to 
 
 **Better Prompt (Build Toward This):**
 
-After running the tests: "Run `test_relationships.py` against `broken_blog.py`. Show me all failures. I expect 5 relationship bugs: (1) a back_populates mismatch, (2) a missing cascade setting, (3) a wrong model name, (4) a wrong table name in a FK, (5) a missing __tablename__. For each: show the failing test, trace to the exact line in `broken_blog.py`, explain why it's wrong, and fix it. Re-run tests after each fix."
+After running the tests: "Run `test_relationships.py` against `broken_blog.py`. Show me all failures. I expect 5 relationship bugs: (1) a back_populates mismatch, (2) a missing cascade setting, (3) a wrong model name, (4) a wrong table name in a FK, (5) a missing **tablename**. For each: show the failing test, trace to the exact line in `broken_blog.py`, explain why it's wrong, and fix it. Re-run tests after each fix."
 
 **Reflection Questions:**
 

@@ -12,7 +12,7 @@ keywords:
     "SDD",
     "spec-driven development",
   ]
-chapter: 5
+chapter: 16
 lesson: 6
 duration_minutes: 30
 

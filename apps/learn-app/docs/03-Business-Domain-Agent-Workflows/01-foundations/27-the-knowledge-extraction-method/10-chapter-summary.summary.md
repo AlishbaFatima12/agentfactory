@@ -19,4 +19,4 @@ The Knowledge Extraction Method is a connected chain, not a checklist: each stag
 
 ### Connections
 - **Builds on**: Synthesises all of Lessons 1-9 into a coherent end-to-end methodology
-- **Leads to**: Chapter 17 (Finance Domain Agents) applies the methodology to a specific professional context
+- **Leads to**: Chapter 28 (Finance Domain Agents) applies the methodology to a specific professional context

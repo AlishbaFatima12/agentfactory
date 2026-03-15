@@ -19,7 +19,7 @@ keywords:
     "Excel Named Ranges",
     "model structure",
   ]
-chapter: 18
+chapter: 29
 lesson: 3
 duration_minutes: 25
 
@@ -215,7 +215,7 @@ Notice what is not here: there is no `Revenue_Y2`, no `Gross_Profit_Y3`, no form
 ## Exercise: Build the Assumptions Layer
 
 :::tip Plugin Setup Reminder
-This exercise requires the **IDFA Financial Architect** plugin installed in Cowork. If you have not set it up yet, follow the instructions in the [Chapter 18 prerequisites](./README.md#prerequisites) before continuing.
+This exercise requires the **IDFA Financial Architect** plugin installed in Cowork. If you have not set it up yet, follow the instructions in the [Chapter 29 prerequisites](./README.md#prerequisites) before continuing.
 :::
 
 You will build the Assumptions layer for the GP Waterfall using Cowork. The goal is not just to produce a spreadsheet — it is to evaluate what the agent builds against the IDFA principles you just learned.

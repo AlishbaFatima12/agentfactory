@@ -1,29 +1,29 @@
 ---
 slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint
-sidebar_position: 15
-title: "Chapter 15: The Enterprise Agent Blueprint"
+sidebar_position: 26
+title: "Chapter 26: The Enterprise Agent Blueprint"
 description: "Understand the anatomy of a Cowork plugin — SKILL.md files, the plugin package structure, MCP connectors, the governance layer, ownership model, and marketplace that make enterprise agent deployment possible"
-chapter_number: 15
+chapter_number: 26
 part_number: 3
 version: 1.0
 status: draft
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-15/enterprise-agent-blueprint.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-26/enterprise-agent-blueprint.pdf"
   title: "The Enterprise Agent Blueprint"
   height: 700
 ---
 
-# Chapter 15: The Enterprise Agent Blueprint
+# Chapter 26: The Enterprise Agent Blueprint
 
 > _"Most technology failures in organisations are not technical failures. They are ownership failures. Nobody knew whose job it was. The blueprint solves that problem before the technology has a chance to create it."_
 
-Chapter 14 established why the enterprise agentic era arrived when it did, who the central figures are, and which platforms and models apply to which organisational contexts. It left one question deliberately unanswered: what, precisely, is a Cowork plugin? What does it contain, who builds each part of it, and what keeps it operating reliably once deployed? This chapter answers those questions in full.
+Chapter 25 established why the enterprise agentic era arrived when it did, who the central figures are, and which platforms and models apply to which organisational contexts. It left one question deliberately unanswered: what, precisely, is a Cowork plugin? What does it contain, who builds each part of it, and what keeps it operating reliably once deployed? This chapter answers those questions in full.
 
 A Cowork plugin is a bundled package that contains everything a domain agent needs: SKILL.md files that encode the expertise of the knowledge worker, MCP connector declarations (.mcp.json) that wire the agent to enterprise systems, slash commands, agents, hooks, and a manifest (plugin.json). The knowledge worker's contribution is the SKILL.md — the intelligence layer that carries institutional knowledge. Everything else is infrastructure built by developers, the community, or Anthropic. An administrator governs the deployment through organisational settings. These layers are independent by design, and that independence is what makes the system maintainable, diagnosable, and scalable.
 
-![8 Steps to Set Up Your Entire Claude Cowork](/img/ch15-eight-steps-cowork-setup.png)
+![8 Steps to Set Up Your Entire Claude Cowork](/img/ch26-eight-steps-cowork-setup.png)
 
-This chapter describes the anatomy of a Cowork plugin in terms a knowledge worker can act on. It explains the three-level context system that determines which instructions the agent follows. It walks through a complete, annotated SKILL.md so you can recognise the difference between a production-ready file and an amateur one. It maps the MCP connector ecosystem available for the major professional domains. And it covers the governance mechanisms — permissions, audit trails, shadow mode, and human-in-the-loop gates — that make enterprise deployment of autonomous agents defensible in regulated industries. By the end, you will have the architectural vocabulary that Chapter 16 assumes.
+This chapter describes the anatomy of a Cowork plugin in terms a knowledge worker can act on. It explains the three-level context system that determines which instructions the agent follows. It walks through a complete, annotated SKILL.md so you can recognise the difference between a production-ready file and an amateur one. It maps the MCP connector ecosystem available for the major professional domains. And it covers the governance mechanisms — permissions, audit trails, shadow mode, and human-in-the-loop gates — that make enterprise deployment of autonomous agents defensible in regulated industries. By the end, you will have the architectural vocabulary that Chapter 27 assumes.
 
 ## 📚 Teaching Aid
 
@@ -54,7 +54,7 @@ By the end of this chapter, you will be able to:
 | [L07](./07-governance-layer.md)                     | The Governance Layer              | 30 min   | The four governance mechanisms and the precise shadow mode protocol                          |
 | [L08](./08-division-of-responsibility.md)           | The Division of Responsibility    | 20 min   | The three-way ownership model and how to assign any problem to the correct layer             |
 | [L09](./09-cowork-plugin-marketplace.md)            | The Cowork Plugin Marketplace     | 20 min   | The distinction between vertical skill packs and connector packages, and the publishing path |
-| [L10](./10-chapter-summary.md)                      | Chapter Summary                   | 15 min   | Synthesis of the full plugin architecture, ready for Chapter 16                              |
+| [L10](./10-chapter-summary.md)                      | Chapter Summary                   | 15 min   | Synthesis of the full plugin architecture, ready for Chapter 27                              |
 | [Quiz](./11-chapter-quiz.md)                        | Chapter Quiz                      | 50 min   | 50 questions covering all ten lessons                                                        |
 
 ## Chapter Contract
@@ -67,7 +67,7 @@ By the end of this chapter, you should be able to answer these five questions:
 4. What is shadow mode, and what is the standard protocol for transitioning from shadow operation to autonomous operation?
 5. What distinguishes a vertical skill pack from a connector package in the marketplace, and what makes expertise publishable rather than proprietary?
 
-## After Chapter 15
+## After Chapter 26
 
 When you finish this chapter, your perspective shifts:
 

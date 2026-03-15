@@ -16,7 +16,7 @@ keywords:
     "Pakistan Islamic finance",
     "three accounting regimes",
   ]
-chapter: 20
+chapter: 31
 lesson: 2
 duration_minutes: 20
 

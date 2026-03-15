@@ -21,7 +21,7 @@ keywords:
     "Shariah-compliant fintech",
     "Islamic digital banking",
   ]
-chapter: 20
+chapter: 31
 lesson: 17
 duration_minutes: 40
 

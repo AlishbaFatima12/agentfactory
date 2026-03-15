@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "Where Your Agent Lives"
-chapter: 11
+chapter: 22
 lesson: 1
 layer: L2
 duration_minutes: 30

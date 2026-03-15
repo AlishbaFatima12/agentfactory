@@ -18,7 +18,7 @@ keywords:
     "Pakistan PDPA",
     "playbook calibration",
   ]
-chapter: 22
+chapter: 33
 lesson: 3
 duration_minutes: 30
 

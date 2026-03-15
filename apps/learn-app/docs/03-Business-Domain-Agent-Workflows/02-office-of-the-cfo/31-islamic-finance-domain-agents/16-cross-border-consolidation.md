@@ -19,7 +19,7 @@ keywords:
     "Pakistan transfer pricing",
     "dual-framework reporting",
   ]
-chapter: 20
+chapter: 31
 lesson: 16
 duration_minutes: 75
 

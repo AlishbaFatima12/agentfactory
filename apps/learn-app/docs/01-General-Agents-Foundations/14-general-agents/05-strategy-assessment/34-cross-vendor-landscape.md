@@ -13,7 +13,7 @@ keywords:
     cross-vendor,
     portable skills,
   ]
-chapter: 3
+chapter: 14
 lesson: 34
 duration_minutes: 25
 chapter_type: Concept
@@ -73,7 +73,7 @@ teaching_guide:
   session_group: 11
   session_title: "Business Models and Industry Landscape"
   key_points:
-    - "Every concept from Chapter 3 (CLAUDE.md, Skills, MCP, hooks, subagents, teams) has direct equivalents in Codex and Gemini CLI — the Concept Mapping Table is the proof"
+    - "Every concept from Chapter 14 (CLAUDE.md, Skills, MCP, hooks, subagents, teams) has direct equivalents in Codex and Gemini CLI — the Concept Mapping Table is the proof"
     - "The Agentic AI Foundation (AAIF) governs three donated projects (MCP, AGENTS.md, goose) plus the Agent Skills spec — this is why skills are portable"
     - "The three philosophies (Claude: accuracy-first, Codex: async delegation, Gemini: open and accessible) are complementary, not competing — professionals use multiple tools"
     - "SWE-bench scores require context: different variants (Verified vs Pro) produce different numbers, making naive comparisons misleading"
@@ -85,9 +85,9 @@ teaching_guide:
   discussion_prompts:
     - "Looking at the Concept Mapping Table, which row surprised you most — which concept did you think was Claude-specific but turns out to be an industry pattern?"
     - "If you were advising a company choosing between Claude Code, Codex, and Gemini CLI, what three questions would you ask them before making a recommendation?"
-    - "Reflecting on the full Chapter 3 journey — from your first Claude Code session to cross-vendor fluency — which single concept do you think will matter most in your career five years from now?"
+    - "Reflecting on the full Chapter 14 journey — from your first Claude Code session to cross-vendor fluency — which single concept do you think will matter most in your career five years from now?"
   teaching_tips:
-    - "Project the Concept Mapping Table and walk through it row by row — for each row, connect back to the specific Chapter 3 lesson where students first learned that concept"
+    - "Project the Concept Mapping Table and walk through it row by row — for each row, connect back to the specific Chapter 14 lesson where students first learned that concept"
     - "Use the Three Philosophies table as a group exercise: assign each group a philosophy and have them argue why their tool is best for a given scenario"
     - "For the SWE-bench section, show how the same model can score differently on Verified vs Pro to teach critical benchmark literacy"
     - "As this is the chapter closer, explicitly tie the full arc together: Lesson 1 (what are agents) through Lesson 34 (your skills transfer everywhere) — the chapter thesis is that agent-building patterns are universal, not vendor-specific"
@@ -140,7 +140,7 @@ Amazon Q Developer and Devin (which acquired the Windsurf product and brand) rou
 
 ## The Concept Mapping Table
 
-This is the most important table in this lesson. Everything you learned in Chapter 3 has equivalents across the industry:
+This is the most important table in this lesson. Everything you learned in Chapter 14 has equivalents across the industry:
 
 | What You Learned          | Claude Code                          | OpenAI Codex                                     | Google Gemini CLI            | Open Standard                      |
 | ------------------------- | ------------------------------------ | ------------------------------------------------ | ---------------------------- | ---------------------------------- |

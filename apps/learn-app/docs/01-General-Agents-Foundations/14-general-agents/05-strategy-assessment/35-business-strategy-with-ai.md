@@ -15,7 +15,7 @@ keywords:
     Claude Code,
     StratArts,
   ]
-chapter: 3
+chapter: 14
 lesson: 35
 duration_minutes: 18
 

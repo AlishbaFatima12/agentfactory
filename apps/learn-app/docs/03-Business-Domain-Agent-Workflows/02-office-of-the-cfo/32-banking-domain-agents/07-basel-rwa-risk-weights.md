@@ -19,7 +19,7 @@ keywords:
     "PRA Basel 3.1",
     "banking AI agents",
   ]
-chapter: 21
+chapter: 32
 lesson: 7
 duration_minutes: 50
 

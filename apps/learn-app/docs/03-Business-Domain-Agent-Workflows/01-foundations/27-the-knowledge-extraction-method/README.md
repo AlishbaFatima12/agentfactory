@@ -1,23 +1,23 @@
 ---
 slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method
-sidebar_position: 16
-title: "Chapter 16: The Knowledge Extraction Method"
+sidebar_position: 27
+title: "Chapter 27: The Knowledge Extraction Method"
 description: "Learn the structured methodology for surfacing tacit professional knowledge from expert heads and institutional documents, translating it into production-ready SKILL.md files, and validating through scenario testing and shadow mode deployment"
-chapter_number: 16
+chapter_number: 27
 part_number: 3
 version: 1.0
 status: draft
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-16/knowledge-extraction-method.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-27/knowledge-extraction-method.pdf"
   title: "The Knowledge Extraction Method"
   height: 700
 ---
 
-# Chapter 16: The Knowledge Extraction Method
+# Chapter 27: The Knowledge Extraction Method
 
-> *"The knowledge that makes a domain agent genuinely useful is the knowledge the expert cannot easily write down. The Knowledge Extraction Method is the structured process for getting it out of their head and into a SKILL.md that works."*
+> _"The knowledge that makes a domain agent genuinely useful is the knowledge the expert cannot easily write down. The Knowledge Extraction Method is the structured process for getting it out of their head and into a SKILL.md that works."_
 
-Chapter 15 established the complete architecture of a Cowork plugin — the three-component model, the Agent Skills Pattern, the context hierarchy, the governance layer, and the ownership model. It left one question deliberately unanswered: how do you actually write a production-quality SKILL.md? The architecture tells you what goes in each section. It does not tell you how to extract the domain expertise that belongs there. This chapter answers that question with a structured methodology.
+Chapter 26 established the complete architecture of a Cowork plugin — the three-component model, the Agent Skills Pattern, the context hierarchy, the governance layer, and the ownership model. It left one question deliberately unanswered: how do you actually write a production-quality SKILL.md? The architecture tells you what goes in each section. It does not tell you how to extract the domain expertise that belongs there. This chapter answers that question with a structured methodology.
 
 The answer has two modes. Method A extracts knowledge from expert heads through a five-question interview framework designed to surface the tacit professional knowledge that makes the difference between a generic agent and a genuinely useful one. Method B extracts knowledge from institutional documents through a three-pass framework — explicit rule extraction, contradiction mapping, and gap identification — that converts policy manuals, handbooks, and standard operating procedures into SKILL.md instructions while surfacing the problems that naive extraction misses. Most professional domains require both methods, and the reconciliation principle determines which takes precedence when expert judgement and documented standards conflict.
 
@@ -33,26 +33,26 @@ By the end of this chapter, you will be able to:
 - Conduct a Method A expert interview using the five-question framework to surface decision-making logic, exceptions, and escalation conditions
 - Execute a Method B three-pass document extraction on a policy corpus, including contradiction mapping and gap identification
 - Choose and combine Methods A and B based on where a domain's critical knowledge lives, and apply the reconciliation principle when they conflict
-- Translate extraction outputs into a SKILL.md with a Persona that addresses Chapter 15's four structural elements through three extraction-focused writing questions, a Questions section with explicit scope boundaries, and Principles that are specific enough to test
+- Translate extraction outputs into a SKILL.md with a Persona that addresses Chapter 26's four structural elements through three extraction-focused writing questions, a Questions section with explicit scope boundaries, and Principles that are specific enough to test
 - Build a validation scenario set with four categories at defined proportions and score outputs on three components
 - Run the Validation Loop — interpret failure patterns, execute targeted rewrites, enter shadow mode, and manage the transition to autonomous operation
 - Complete a full extraction-to-validation cycle for a professional domain
 
 ## Lesson Flow
 
-| Lesson | Title | Duration | What You'll Walk Away With |
-| --- | --- | --- | --- |
-| [L01](./01-the-problem-that-no-platform-solves.md) | The Problem That No Platform Solves | 20 min | Understanding of tacit vs explicit knowledge, the articulation gap, and why structured extraction is necessary |
-| [L02](./02-the-five-questions.md) | The Five Questions — Expert Interview Framework | 30 min | The five interview questions, what each one surfaces, and how they map to SKILL.md sections |
-| [L03](./03-conducting-the-expert-interview.md) | Conducting the Expert Interview | 20 min | The briefing protocol, note-taking approach, and north star summary that make an interview produce usable material |
-| [L04](./04-the-document-extraction-framework.md) | The Document Extraction Framework | 25 min | The three-pass framework for extracting SKILL.md instructions from institutional documents |
-| [L05](./05-choosing-and-combining-methods.md) | Choosing and Combining Methods | 15 min | The domain-method mapping and reconciliation principle for multi-method extraction |
-| [L06](./06-from-extraction-to-skill-md.md) | From Extraction to SKILL.md | 25 min | How to translate extraction outputs into Persona, Questions, and Principles sections |
-| [L07](./07-building-the-validation-scenario-set.md) | Building the Validation Scenario Set | 25 min | The four scenario categories, three scoring components, and 95% threshold |
-| [L08](./08-the-validation-loop.md) | The Validation Loop — From Draft to Production | 25 min | Failure pattern interpretation, targeted rewriting, shadow mode, and graduated autonomy |
-| [L09](./09-hands-on-exercise.md) | Hands-On Exercise — First Extraction and SKILL.md Draft | 150 min | A complete extraction-to-validation cycle for a real professional domain |
-| [L10](./10-chapter-summary.md) | Chapter Summary | 15 min | Synthesis of the full methodology, ready for the domain chapters |
-| [Quiz](./11-chapter-quiz.md) | Chapter Quiz | 50 min | 50 questions covering all ten lessons |
+| Lesson                                              | Title                                                   | Duration | What You'll Walk Away With                                                                                         |
+| --------------------------------------------------- | ------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
+| [L01](./01-the-problem-that-no-platform-solves.md)  | The Problem That No Platform Solves                     | 20 min   | Understanding of tacit vs explicit knowledge, the articulation gap, and why structured extraction is necessary     |
+| [L02](./02-the-five-questions.md)                   | The Five Questions — Expert Interview Framework         | 30 min   | The five interview questions, what each one surfaces, and how they map to SKILL.md sections                        |
+| [L03](./03-conducting-the-expert-interview.md)      | Conducting the Expert Interview                         | 20 min   | The briefing protocol, note-taking approach, and north star summary that make an interview produce usable material |
+| [L04](./04-the-document-extraction-framework.md)    | The Document Extraction Framework                       | 25 min   | The three-pass framework for extracting SKILL.md instructions from institutional documents                         |
+| [L05](./05-choosing-and-combining-methods.md)       | Choosing and Combining Methods                          | 15 min   | The domain-method mapping and reconciliation principle for multi-method extraction                                 |
+| [L06](./06-from-extraction-to-skill-md.md)          | From Extraction to SKILL.md                             | 25 min   | How to translate extraction outputs into Persona, Questions, and Principles sections                               |
+| [L07](./07-building-the-validation-scenario-set.md) | Building the Validation Scenario Set                    | 25 min   | The four scenario categories, three scoring components, and 95% threshold                                          |
+| [L08](./08-the-validation-loop.md)                  | The Validation Loop — From Draft to Production          | 25 min   | Failure pattern interpretation, targeted rewriting, shadow mode, and graduated autonomy                            |
+| [L09](./09-hands-on-exercise.md)                    | Hands-On Exercise — First Extraction and SKILL.md Draft | 150 min  | A complete extraction-to-validation cycle for a real professional domain                                           |
+| [L10](./10-chapter-summary.md)                      | Chapter Summary                                         | 15 min   | Synthesis of the full methodology, ready for the domain chapters                                                   |
+| [Quiz](./11-chapter-quiz.md)                        | Chapter Quiz                                            | 50 min   | 50 questions covering all ten lessons                                                                              |
 
 ## Chapter Contract
 
@@ -64,7 +64,7 @@ By the end of this chapter, you should be able to answer these five questions:
 4. How do you choose between Method A and Method B, and what is the reconciliation principle when both apply?
 5. What are the four validation scenario categories, the three scoring components, and the threshold for shadow mode entry?
 
-## After Chapter 16
+## After Chapter 27
 
 When you finish this chapter, your perspective shifts:
 

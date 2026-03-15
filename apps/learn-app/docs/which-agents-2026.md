@@ -23,7 +23,6 @@ keywords:
   margin: '0 auto'
 }}>
 
-
 <p style={{
   fontSize: '1.1rem',
   lineHeight: '1.8',
@@ -45,14 +44,13 @@ The simplest way to choose your first AI employee is to ask four questions: Wher
 
 You don't need all five tools on day one. Find yourself below, and start there.
 
-| You Are...                                                        | Start With                       | Why                                                                                                                                                                                         |
-| ----------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **A developer or engineer** who builds software                   | **Claude Code** + **OpenClaw**   | Claude Code is your all-purpose AI employee — it works right from your computer. OpenClaw adds a personal AI assistant on your phone and messaging apps.                                    |
-| **A domain expert** in finance, law, operations, or another field | **Claude Cowork** + **OpenClaw** | Cowork handles your business workflows — reports, analysis, documents — without requiring any technical setup. OpenClaw manages your daily tasks through WhatsApp or Slack.                 |
-| **An executive or team leader** guiding AI adoption               | **Claude Cowork**                | Cowork connects to your team's existing tools (Google Drive, Gmail, Excel, DocuSign) and runs scheduled tasks automatically. Start here to experience what AI employees actually feel like. |
-| **A product manager or architect** designing AI-powered systems   | **Claude Code** + **Codex**      | Claude Code for general-purpose work and prototyping. Codex when you need heavy-duty reasoning through complex system designs.                                                              |
-| **Someone who cares deeply about security and data control**      | **Cowork, Claude Code, NanoClaw**                     | NanoClaw runs every AI employee inside a sealed container on your machine. Nothing leaks out. The codebase is small enough to read and audit yourself.                                      |
-
+| You Are...                                                        | Start With                        | Why                                                                                                                                                                                         |
+| ----------------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A developer or engineer** who builds software                   | **Claude Code** + **OpenClaw**    | Claude Code is your all-purpose AI employee — it works right from your computer. OpenClaw adds a personal AI assistant on your phone and messaging apps.                                    |
+| **A domain expert** in finance, law, operations, or another field | **Claude Cowork** + **OpenClaw**  | Cowork handles your business workflows — reports, analysis, documents — without requiring any technical setup. OpenClaw manages your daily tasks through WhatsApp or Slack.                 |
+| **An executive or team leader** guiding AI adoption               | **Claude Cowork**                 | Cowork connects to your team's existing tools (Google Drive, Gmail, Excel, DocuSign) and runs scheduled tasks automatically. Start here to experience what AI employees actually feel like. |
+| **A product manager or architect** designing AI-powered systems   | **Claude Code** + **Codex**       | Claude Code for general-purpose work and prototyping. Codex when you need heavy-duty reasoning through complex system designs.                                                              |
+| **Someone who cares deeply about security and data control**      | **Cowork, Claude Code, NanoClaw** | NanoClaw runs every AI employee inside a sealed container on your machine. Nothing leaks out. The codebase is small enough to read and audit yourself.                                      |
 
 ---
 
@@ -68,10 +66,10 @@ You don't need all five tools on day one. Find yourself below, and start there.
 
 Running a fleet of AI employees requires managing API and subscription costs. Here is what you should expect to spend:
 
-*   **OpenClaw & NanoClaw (Free + API Costs):** The software is fully open-source (MIT License). However, because they run locally but process reasoning in the cloud, you will pay per-token API costs to [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing), [OpenAI](https://openai.com/api/pricing/), or [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing). For heavy daily use, expect to spend **$15 to $40/month** in API credits.
-*   **Claude Code (Free + Subscription):** The CLI tool is free, but minimum subscription of **$20/user/month** for the [Pro Plan](https://claude.com/pricing) is required. Refer to Chapter 3 for reducing the cost.
-*   **Claude Cowork (Subscription):** Cowork is included in [Anthropic's higher-tier plans](https://claude.com/pricing) (typically Pro, Max or Enterprise, starting around **$20/user/month**) to a max of **$200/user/month**). It provides deep desktop file access without per-token API billing. **Using these plans you can use both Claude Code and Claude Cowork**. Refer to Chapter 3 for reducing the cost.
-*   **Codex / GPT-5.4-Codex (Subscription/API):** OpenAI's cloud-mode engineering environments require a [premium OpenAI subscription](https://developers.openai.com/codex/pricing/) or heavy API usage, which can scale up depending on the complexity of your system architecture tasks.
+- **OpenClaw & NanoClaw (Free + API Costs):** The software is fully open-source (MIT License). However, because they run locally but process reasoning in the cloud, you will pay per-token API costs to [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing), [OpenAI](https://openai.com/api/pricing/), or [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing). For heavy daily use, expect to spend **$15 to $40/month** in API credits.
+- **Claude Code (Free + Subscription):** The CLI tool is free, but minimum subscription of **$20/user/month** for the [Pro Plan](https://claude.com/pricing) is required. Refer to Chapter 3 for reducing the cost.
+- **Claude Cowork (Subscription):** Cowork is included in [Anthropic's higher-tier plans](https://claude.com/pricing) (typically Pro, Max or Enterprise, starting around **$20/user/month**) to a max of **$200/user/month**). It provides deep desktop file access without per-token API billing. **Using these plans you can use both Claude Code and Claude Cowork**. Refer to Chapter 3 for reducing the cost.
+- **Codex / GPT-5.4-Codex (Subscription/API):** OpenAI's cloud-mode engineering environments require a [premium OpenAI subscription](https://developers.openai.com/codex/pricing/) or heavy API usage, which can scale up depending on the complexity of your system architecture tasks.
 
 ---
 
@@ -97,7 +95,7 @@ Claude Code is built by Anthropic and runs on your computer. Despite the name, i
 
 Claude Code is the primary tool you'll use throughout this book. Its skills system (reusable instruction files called SKILL.md) and its ability to spawn specialized sub-employees are the building blocks of the Agent Factory method.
 
-_Chapter 5 introduces Spec-Driven Development with Claude Code as the engine. You'll use it in every part of the book._
+_Chapter 16 introduces Spec-Driven Development with Claude Code as the engine. You'll use it in every part of the book._
 
 ---
 
@@ -123,7 +121,7 @@ Created by Peter Steinberger and backed by **OpenAI** and **Vercel**, OpenClaw b
 
 OpenClaw is fully open source (MIT license). You run it on your own machine, pick your own AI model (Claude, GPT, DeepSeek, or others), and extend it with over 5,700 community-built skills from the ClawHub marketplace. Its personality is configured through a simple Markdown file called SOUL.md — the same format you'll learn to write specifications in throughout this book.
 
-_Chapter 7 walks you through setting up your first AI employee with OpenClaw._
+_Chapter 18 walks you through setting up your first AI employee with OpenClaw._
 
 ---
 
@@ -147,13 +145,13 @@ Security remains a top concern in 2026. NanoClaw's sealed-container approach (no
 
 ## Your Journey Through the Book
 
-| Book Section                              | What You're Learning                              | Primary AI Employee | Supporting  |
-| ----------------------------------------- | ------------------------------------------------- | ------------------- | ----------- |
-| **Part 1** — Foundations                  | What AI employees are and how to work with them   | Claude Code         | OpenClaw    |
-| **Part 2** — Workflow Primitives          | File processing, data extraction, version control | Claude Code         | —           |
-| **Part 3** — Business Domains             | Finance, legal, marketing, operations workflows   | Claude Cowork       | Claude Code |
-| **Part 4** — Natural Language Programming                  | Typescript, Python development, testing, debugging            | Claude Code         | Codex       |
-| **Part 5** — Building Custom AI Employees | Frameworks, tool protocols, databases, evaluation | Claude Code         | NanoClaw    |
+| Book Section                              | What You're Learning                               | Primary AI Employee | Supporting  |
+| ----------------------------------------- | -------------------------------------------------- | ------------------- | ----------- |
+| **Part 1** — Foundations                  | What AI employees are and how to work with them    | Claude Code         | OpenClaw    |
+| **Part 2** — Workflow Primitives          | File processing, data extraction, version control  | Claude Code         | —           |
+| **Part 3** — Business Domains             | Finance, legal, marketing, operations workflows    | Claude Cowork       | Claude Code |
+| **Part 4** — Natural Language Programming | Typescript, Python development, testing, debugging | Claude Code         | Codex       |
+| **Part 5** — Building Custom AI Employees | Frameworks, tool protocols, databases, evaluation  | Claude Code         | NanoClaw    |
 
 ---
 
@@ -174,15 +172,15 @@ This comparison is not ranking these tools from “best” to “worst.” It co
 
 ## Trade-offs & Real-World Performance Notes
 
-No single agent wins every scenario — here are quick trade-offs based on early 2026 user reports and internal benchmarks:  
-- Claude Code leads in interactive speed and step-by-step reasoning (often 20–40% higher success on multi-file refactors), but can feel "chatty" for one-shot tasks.  
-- Codex (GPT-5.3-Codex) excels at long-horizon planning and parallel subtasks in cloud mode (up to 5× token efficiency on complex architectures), yet local CLI mode lags behind Claude Code on latency.  
-- OpenClaw shines for always-on personal automation (5,700+ community skills), but requires more prompt engineering to match Claude Code's out-of-box reliability.  
-- NanoClaw trades some speed for ironclad security (zero unintended network calls in sealed mode), making it the go-to for regulated industries.  
-- Cowork dominates non-technical workflows (Excel + Gmail + /schedule automation), but lacks the deep code understanding of Claude Code or Codex.  
+No single agent wins every scenario — here are quick trade-offs based on early 2026 user reports and internal benchmarks:
+
+- Claude Code leads in interactive speed and step-by-step reasoning (often 20–40% higher success on multi-file refactors), but can feel "chatty" for one-shot tasks.
+- Codex (GPT-5.3-Codex) excels at long-horizon planning and parallel subtasks in cloud mode (up to 5× token efficiency on complex architectures), yet local CLI mode lags behind Claude Code on latency.
+- OpenClaw shines for always-on personal automation (5,700+ community skills), but requires more prompt engineering to match Claude Code's out-of-box reliability.
+- NanoClaw trades some speed for ironclad security (zero unintended network calls in sealed mode), making it the go-to for regulated industries.
+- Cowork dominates non-technical workflows (Excel + Gmail + /schedule automation), but lacks the deep code understanding of Claude Code or Codex.
 
 Real costs vary: heavy Claude Code fleets average $25–60/month; mixing DeepSeek-backed OpenClaw drops that to $10–25. Test failure modes yourself — most users run A/B fleets for 2–4 weeks.
-
 
 ---
 
@@ -192,7 +190,7 @@ Nobody uses just one AI employee. The most effective setup in 2026 is a fleet �
 
 A fleet does not mean using every tool every day. In practice, most people will have one daily driver and one specialist: for example, Claude Code plus OpenClaw, or Cowork plus NanoClaw, or Claude Code plus Codex. The goal is not tool collection. The goal is coverage: one agent for your default workflow, and one agent for the jobs your default tool is not built to do.
 
-General Agents are what you *use*. Personal AI Employees are what you *build and deploy* — and eventually, sell. This book teaches you both sides: how to get maximum leverage from Claude Code, Cowork, and Codex today, and how to build your own Digital FTEs with OpenClaw and NanoClaw that other people will pay to use.
+General Agents are what you _use_. Personal AI Employees are what you _build and deploy_ — and eventually, sell. This book teaches you both sides: how to get maximum leverage from Claude Code, Cowork, and Codex today, and how to build your own Digital FTEs with OpenClaw and NanoClaw that other people will pay to use.
 
 ---
 

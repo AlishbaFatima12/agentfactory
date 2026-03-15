@@ -1,18 +1,18 @@
 ---
-sidebar_position: 12
-title: "Chapter 12: Version Control & Safe Experimentation"
+sidebar_position: 23
+title: "Chapter 23: Version Control & Safe Experimentation"
 description: "Understand the safety system your AI agent already uses — snapshots, branches, cloud backup, and code review"
-chapter_number: 12
+chapter_number: 23
 part_number: 2
 version: 2.0
 status: review
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-2/chapter-12/version-control.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-2/chapter-23/version-control.pdf"
   title: "Version Control & Safe Experimentation"
   height: 700
 ---
 
-# Chapter 12: Version Control & Safe Experimentation
+# Chapter 23: Version Control & Safe Experimentation
 
 > In 1998, Pixar accidentally deleted 90% of Toy Story 2. Their backup had silently failed. The film was saved only because one employee had a copy on her home computer.
 > One command. Two years of work. Gone in seconds.
@@ -21,7 +21,7 @@ Every Claude Code session runs `git` commands behind the scenes. When you told i
 
 **What happens when it can't protect you?** When you're working outside Claude Code — editing files manually, moving folders, collaborating with someone — there's no safety net. One bad change overwrites an hour of work. One accidental delete loses a week of progress.
 
-This chapter teaches you the system your agent already uses. Not to memorize commands — your agent handles those. To understand the *concepts* so you can direct your agent's safety features intentionally, not accidentally.
+This chapter teaches you the system your agent already uses. Not to memorize commands — your agent handles those. To understand the _concepts_ so you can direct your agent's safety features intentionally, not accidentally.
 
 ### Meet Sarah
 
@@ -85,12 +85,12 @@ This isn't creating an account. It's a label that appears in your commit history
 
 In [The Seven Principles of General Agent Problem Solving](/docs/General-Agents-Foundations/seven-principles), you learned the operational patterns that make AI collaboration reliable. This chapter puts four of them into practice — Git is where those principles become muscle memory.
 
-| Principle | How It Applies in Git |
-| --- | --- |
+| Principle                           | How It Applies in Git                                     |
+| ----------------------------------- | --------------------------------------------------------- |
 | **Small, Reversible Decomposition** | Commit small changes you can undo; branch for experiments |
-| **Verification as Core Step** | Check status before and after every operation |
-| **Constraints and Safety** | Branches isolate experiments; never push untested code |
-| **Observability** | Git log shows exactly what changed, when, and why |
+| **Verification as Core Step**       | Check status before and after every operation             |
+| **Constraints and Safety**          | Branches isolate experiments; never push untested code    |
+| **Observability**                   | Git log shows exactly what changed, when, and why         |
 
 ## 📚 Teaching Aid
 
@@ -107,26 +107,26 @@ By the end of this chapter, you'll be able to:
 
 ## Lesson Flow
 
-| Lesson | Title | Fast Visible Win |
-| --- | --- | --- |
-| [L01](./01-git-foundations.md) | Git Foundations | Break a file, recover it in one command |
-| [L02](./02-testing-ai-safely-with-branches.md) | Testing AI Safely with Branches | Watch a file disappear when you switch branches — and reappear when you switch back |
-| [L03](./03-cloud-backup-portfolio.md) | Cloud Backup & Portfolio | Clone your project to a new folder and prove your backup works |
-| [L04](./04-code-review-pull-requests.md) | Code Review, Pull Requests & Reusable Patterns | Create your first PR and name the three patterns professionals follow daily |
-| [Exercises](./05-version-control-exercises.md) | Exercises (Optional) | 15 hands-on challenges across 6 modules |
-| [Quiz](./06-chapter-quiz.md) | Chapter Quiz (Optional) | Test your understanding |
+| Lesson                                         | Title                                          | Fast Visible Win                                                                    |
+| ---------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [L01](./01-git-foundations.md)                 | Git Foundations                                | Break a file, recover it in one command                                             |
+| [L02](./02-testing-ai-safely-with-branches.md) | Testing AI Safely with Branches                | Watch a file disappear when you switch branches — and reappear when you switch back |
+| [L03](./03-cloud-backup-portfolio.md)          | Cloud Backup & Portfolio                       | Clone your project to a new folder and prove your backup works                      |
+| [L04](./04-code-review-pull-requests.md)       | Code Review, Pull Requests & Reusable Patterns | Create your first PR and name the three patterns professionals follow daily         |
+| [Exercises](./05-version-control-exercises.md) | Exercises (Optional)                           | 15 hands-on challenges across 6 modules                                             |
+| [Quiz](./06-chapter-quiz.md)                   | Chapter Quiz (Optional)                        | Test your understanding                                                             |
 
 ## Chapter Contract
 
 By chapter end, you should be able to answer these five questions:
 
-1. What is a commit, and why does it snapshot your *entire* project — not just one file?
+1. What is a commit, and why does it snapshot your _entire_ project — not just one file?
 2. You made a bad edit, staged the wrong file, and committed a mistake. What's the correct undo for each?
 3. Why do branches let you test risky ideas without endangering your working project?
-4. What must you do *before* your first push to GitHub — and why can't you fix it after?
+4. What must you do _before_ your first push to GitHub — and why can't you fix it after?
 5. What are the three patterns professionals follow daily, and when do you use each one?
 
-## After Chapter 12
+## After Chapter 23
 
 When you finish this chapter, your working habits change:
 

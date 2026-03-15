@@ -3,7 +3,7 @@ sidebar_position: 6
 title: "Digital FTE Business Strategy"
 description: "Transform your domain expertise into a defensible AI product: competitive positioning, economics, monetization models, market entry strategy, and guardrails."
 reading_time: "15 minutes"
-chapter: 1
+chapter: 12
 lesson: 6
 duration_minutes: 40
 
@@ -99,7 +99,7 @@ teaching_guide:
 
 # Generation metadata
 generated_by: "content-implementer consolidation"
-source_lessons: "10 lessons consolidated (Chapter 3: Digital FTE Strategy)"
+source_lessons: "10 lessons consolidated (Chapter 14: Digital FTE Strategy)"
 created: "2025-01-22"
 version: "1.0.0"
 ---

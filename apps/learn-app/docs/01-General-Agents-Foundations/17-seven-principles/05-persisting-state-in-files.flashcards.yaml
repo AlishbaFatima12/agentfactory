@@ -1,5 +1,5 @@
 deck:
-  id: ch06-05-persisting-state-in-files
+  id: ch17-05-persisting-state-in-files
   title: 'Principle 5: Persisting State in Files'
   description: Why file-based state management is the key to effective AI collaboration and reproducible workflows.
   tags:
@@ -10,7 +10,7 @@ deck:
   - reproducibility
   version: 2
 cards:
-- id: ch06-05-persisting-state-in-files-001
+- id: ch17-05-persisting-state-in-files-001
   type: recall
   difficulty: basic
   front: What fundamental limitation forces you to re-explain project conventions to AI every session?
@@ -18,7 +18,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-002
+- id: ch17-05-persisting-state-in-files-002
   type: thinking
   difficulty: intermediate
   front: Why does writing CLAUDE.md once save more time than it costs?
@@ -27,7 +27,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-003
+- id: ch17-05-persisting-state-in-files-003
   type: recall
   difficulty: basic
   front: What are the four levels of the state hierarchy from most to least volatile?
@@ -41,7 +41,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-004
+- id: ch17-05-persisting-state-in-files-004
   type: thinking
   difficulty: intermediate
   front: Why should ephemeral state like 'currently debugging login bug' not go in CLAUDE.md?
@@ -50,7 +50,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-005
+- id: ch17-05-persisting-state-in-files-005
   type: recall
   difficulty: basic
   front: What does Claude Code automatically do when it finds a CLAUDE.md file in your project root?
@@ -58,7 +58,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-006
+- id: ch17-05-persisting-state-in-files-006
   type: thinking
   difficulty: intermediate
   front: How does CLAUDE.md differ from a standard README.md in what it communicates to AI?
@@ -68,7 +68,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-007
+- id: ch17-05-persisting-state-in-files-007
   type: recall
   difficulty: intermediate
   front: What is the purpose of an Architecture Decision Record (ADR)?
@@ -76,7 +76,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-008
+- id: ch17-05-persisting-state-in-files-008
   type: thinking
   difficulty: advanced
   front: Why are ADRs especially valuable for AI collaboration, not just human teams?
@@ -86,7 +86,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-009
+- id: ch17-05-persisting-state-in-files-009
   type: recall
   difficulty: intermediate
   front: What five elements make a project fully reproducible from its files alone?
@@ -102,7 +102,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-010
+- id: ch17-05-persisting-state-in-files-010
   type: thinking
   difficulty: intermediate
   front: Why must context file updates be committed in the same commit as code changes?
@@ -111,7 +111,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-011
+- id: ch17-05-persisting-state-in-files-011
   type: recall
   difficulty: basic
   front: What is the session journal pattern in AI collaboration?
@@ -119,7 +119,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-012
+- id: ch17-05-persisting-state-in-files-012
   type: thinking
   difficulty: intermediate
   front: Why is documenting semicolons and indentation in CLAUDE.md an anti-pattern?
@@ -129,7 +129,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-013
+- id: ch17-05-persisting-state-in-files-013
   type: recall
   difficulty: intermediate
   front: What is the golden rule for CLAUDE.md length?
@@ -137,7 +137,7 @@ cards:
   tags:
   - state-persistence
   - claude-md
-- id: ch06-05-persisting-state-in-files-013b
+- id: ch17-05-persisting-state-in-files-013b
   type: recall
   difficulty: intermediate
   front: What should you do when CLAUDE.md exceeds 200 lines?
@@ -145,7 +145,7 @@ cards:
   tags:
   - claude-md
   - context-engineering
-- id: ch06-05-persisting-state-in-files-014
+- id: ch17-05-persisting-state-in-files-014
   type: thinking
   difficulty: advanced
   front: How does file-based state persistence produce compounding rather than linear knowledge gains?

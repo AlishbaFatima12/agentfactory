@@ -8,8 +8,8 @@ sidebar_position: 5.5
 
 ## Key Concepts
 
-- **AI-Generated Skills**: Your AI Employee can create SKILL.md files on request -- you shift from writer (Chapter 3) to reviewer
-- **Skill Evaluation Checklist**: Activation specificity, instruction clarity, output format, error handling -- the same criteria from Chapter 3, now applied as judgment
+- **AI-Generated Skills**: Your AI Employee can create SKILL.md files on request -- you shift from writer (Chapter 14) to reviewer
+- **Skill Evaluation Checklist**: Activation specificity, instruction clarity, output format, error handling -- the same criteria from Chapter 14, now applied as judgment
 - **From Trust to Threat**: You trust skills your employee creates. The same trust breaks when skills come from strangers on ClawHub
 - **ClawHavoc**: Coordinated campaign of 335 malicious skills deploying Atomic Stealer (AMOS) via fake prerequisite error messages on ClawHub
 - **CVE-2026-25253**: Critical (CVSS 8.8) WebSocket origin bypass enabling one-click remote code execution on OpenClaw instances

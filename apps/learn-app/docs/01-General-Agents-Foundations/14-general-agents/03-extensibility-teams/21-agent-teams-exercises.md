@@ -4,7 +4,7 @@ title: "Agent Teams Exercises: Business Problem-Solving with Multi-Agent Teams"
 practice_exercise: ch3-agent-teams
 sidebar_label: "Agent Teams Exercises"
 sidebar_position: 21
-chapter: 3
+chapter: 14
 lesson: 21
 duration_minutes: 90
 

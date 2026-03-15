@@ -16,7 +16,7 @@ keywords:
     "CA/CPA domain agent",
     "escalation rules",
   ]
-chapter: 19
+chapter: 30
 lesson: 9
 duration_minutes: 45
 
@@ -48,7 +48,7 @@ skills:
     category: "Applied"
     bloom_level: "Analyze"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can use the Method A interview framework from Chapter 16 to systematically extract tacit professional knowledge and convert it into structured Cowork skill instructions"
+    measurable_at_this_level: "Student can use the Method A interview framework from Chapter 27 to systematically extract tacit professional knowledge and convert it into structured Cowork skill instructions"
 
 learning_objectives:
   - objective: "Create an audit methodology skill in Cowork that encodes materiality calculation, sampling requirements, documentation standards, and escalation conditions for a specific firm"
@@ -66,7 +66,7 @@ learning_objectives:
     bloom_level: "Apply"
     assessment_method: "Student produces a compliance calendar skill with at least three return types, their deadlines, lead times, and penalty calculations"
 
-  - objective: "Apply the Method A interview framework from Chapter 16 to extract tacit professional knowledge and convert it into skill instructions"
+  - objective: "Apply the Method A interview framework from Chapter 27 to extract tacit professional knowledge and convert it into skill instructions"
     proficiency_level: "B1"
     bloom_level: "Analyze"
     assessment_method: "Student demonstrates the Method A process by identifying three common errors in their practice area, converting each into a skill instruction, and asking Claude to identify gaps in their coverage"
@@ -95,7 +95,7 @@ teaching_guide:
     - "An audit methodology skill encodes your firm's specific standards — materiality calculation, sampling minimums, documentation requirements, and escalation conditions — so every audit programme the agent generates follows your firm's approach"
     - "A client entity skill encodes one client's business model, seasonal patterns, related party relationships, and risk areas — the agent applies this context to every analysis it produces for that client"
     - "A compliance calendar skill encodes every regulatory obligation by entity type — combined with Cowork scheduled tasks, this enables automated deadline monitoring"
-    - "The Method A interview framework from Chapter 16 is the systematic process for extracting the tacit knowledge that these skills encode"
+    - "The Method A interview framework from Chapter 27 is the systematic process for extracting the tacit knowledge that these skills encode"
   misconceptions:
     - "Students may think audit methodology skills replace professional judgment — they encode the firm's standards so the agent applies them consistently, but the engagement partner still makes the final judgment calls"
     - "Students may try to build one massive client skill covering all clients — each significant client should have its own skill, because entity-specific knowledge varies"
@@ -104,7 +104,7 @@ teaching_guide:
     - "Think about the last audit where a junior team member calculated materiality differently from your firm's methodology. How much time did the rework take? That is the problem the audit methodology skill solves — encoding the methodology once so every computation follows it."
     - "Consider your top three clients. What does your team know about each one that is not written down anywhere — seasonal patterns, the CFO's reporting preferences, known risk areas? That tacit knowledge is what client entity skills encode."
   teaching_tips:
-    - "The Method A connection is critical — students learned knowledge extraction in Chapter 16 and this lesson shows them applying it to their own practice area. Draw the connection explicitly."
+    - "The Method A connection is critical — students learned knowledge extraction in Chapter 27 and this lesson shows them applying it to their own practice area. Draw the connection explicitly."
     - "Exercise 7 is the most important hands-on activity in the skill-building sequence. Encourage students to choose the skill type most relevant to their practice."
     - "The compliance calendar skill has immediate practical value — students often report that this is the skill they create first after completing the chapter"
   assessment_checks:
@@ -412,7 +412,7 @@ penalty to date, and the recommended remediation action.
 
 ## Building Skills with the Method A Interview Framework
 
-In Chapter 16, you learned the Method A interview framework — a structured process for extracting tacit professional knowledge and converting it into actionable instructions. That framework applies directly to building the five skills covered in Lessons 8 and 9.
+In Chapter 27, you learned the Method A interview framework — a structured process for extracting tacit professional knowledge and converting it into actionable instructions. That framework applies directly to building the five skills covered in Lessons 8 and 9.
 
 The three core Method A questions for skill building:
 

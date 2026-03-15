@@ -1,68 +1,68 @@
 deck:
-  id: "ch18-07-mcp-dependency"
+  id: "ch29-07-mcp-dependency"
   title: "Delegated Calculation — Guardrail 4"
   description: "The Write-Calculate-Read workflow, how the IDFA plugin gives the agent hands to interact with Excel, why agents must never calculate internally, and how Delegated Calculation enables What-If and Goal-Seeking."
   tags: ["delegated-calculation", "guardrail-4", "IDFA", "write-calculate-read", "what-if", "goal-seeking", "idfa-plugin"]
   version: 3
 
 cards:
-  - id: "ch18-07-mcp-dependency-001"
+  - id: "ch29-07-mcp-dependency-001"
     front: "What does Guardrail 4 (Delegated Calculation) prohibit a Finance Domain Agent from doing?"
     back: "Performing calculations internally. The agent must delegate all arithmetic to the spreadsheet engine — writing assumptions to the model, letting Excel recalculate, and reading back the results."
     tags: ["delegated-calculation", "guardrail-4", "definition"]
     difficulty: "basic"
 
-  - id: "ch18-07-mcp-dependency-002"
+  - id: "ch29-07-mcp-dependency-002"
     front: "What are the three steps of the Write-Calculate-Read workflow?"
     back: "1. Agent writes the input assumption to the model\n2. The spreadsheet engine recalculates all dependent cells\n3. Agent reads back the result from the model and reports it"
     tags: ["write-calculate-read", "workflow"]
     difficulty: "basic"
 
-  - id: "ch18-07-mcp-dependency-003"
+  - id: "ch29-07-mcp-dependency-003"
     front: "Why is an agent's internal calculation categorically different from a model's deterministic output?"
     back: "The agent's arithmetic may be incomplete, outdated, or missing conditional overrides. The model's output uses actual formulas with actual current values — only model results are audit-valid."
     tags: ["internal-calculation", "audit", "deterministic"]
     difficulty: "intermediate"
     why: "What specific model features could cause an agent's internal calculation to diverge from the model's result?"
 
-  - id: "ch18-07-mcp-dependency-004"
+  - id: "ch29-07-mcp-dependency-004"
     front: "When the IDFA plugin is active, what operations can the agent perform on the model?"
     back: "Write an assumption (change a Named Range value), recalculate (trigger the spreadsheet engine), read a result (get the current value of a Named Range), inspect the model (list all Named Ranges, values, and dependencies), and read a formula (return the formula assigned to a Named Range)."
     tags: ["idfa-plugin", "operations"]
     difficulty: "basic"
 
-  - id: "ch18-07-mcp-dependency-005"
+  - id: "ch29-07-mcp-dependency-005"
     front: "What is the most dangerous violation of Guardrail 4?"
     back: "Calculating a result internally and reporting it as if it came from the model. Internal and model results can differ due to rounding, conditionals, or changed assumptions."
     tags: ["guardrail-4", "violation", "danger"]
     difficulty: "intermediate"
 
-  - id: "ch18-07-mcp-dependency-006"
+  - id: "ch29-07-mcp-dependency-006"
     front: "How does an agent perform goal-seeking under Delegated Calculation?"
     back: "By iterating: write an input to the model, read back the target output, compare to the goal, adjust input, repeat until convergence. The agent never solves algebraically."
     tags: ["goal-seeking", "iteration"]
     difficulty: "intermediate"
 
-  - id: "ch18-07-mcp-dependency-007"
+  - id: "ch29-07-mcp-dependency-007"
     front: "In a what-if scenario, what does the agent contribute versus what does the spreadsheet engine contribute?"
     back: "The agent contributes reasoning — selecting the right Named Range and test value. The spreadsheet engine contributes mathematics — recalculating every formula deterministically."
     tags: ["what-if", "agent-vs-engine"]
     difficulty: "intermediate"
     why: "Why can't the agent shortcut the process by computing the what-if result from the formula it already read?"
 
-  - id: "ch18-07-mcp-dependency-008"
+  - id: "ch29-07-mcp-dependency-008"
     front: "What two Finance Domain Agent capabilities does Delegated Calculation directly enable?"
     back: "Capability 2 — Deterministic What-If\nCapability 4 — Strategic Goal-Seeking"
     tags: ["capabilities", "what-if", "goal-seeking"]
     difficulty: "intermediate"
 
-  - id: "ch18-07-mcp-dependency-009"
+  - id: "ch29-07-mcp-dependency-009"
     front: "If a CFO asks 'where did these numbers come from?' after a what-if analysis, what is the correct answer?"
     back: "The model calculated them. The agent wrote assumptions to Named Ranges, the spreadsheet engine recalculated, and the agent read back results. No number was estimated by the agent."
     tags: ["audit-trail", "accountability"]
     difficulty: "intermediate"
 
-  - id: "ch18-07-mcp-dependency-010"
+  - id: "ch29-07-mcp-dependency-010"
     front: "Why is multi-variable sensitivity analysis especially dangerous without Delegated Calculation?"
     back: "Multiple variables changing simultaneously create compounding interactions that internal arithmetic cannot reliably account for. Delegating to the spreadsheet engine routes everything through the model, which handles compound effects deterministically."
     tags: ["sensitivity-analysis", "compound-effects"]

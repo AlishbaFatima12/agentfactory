@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/settings-hierarchy
 title: "Settings Hierarchy"
 sidebar_position: 14
-chapter: 3
+chapter: 14
 lesson: 14
 duration_minutes: 8
 

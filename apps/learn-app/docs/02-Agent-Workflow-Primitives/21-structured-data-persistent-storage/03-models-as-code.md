@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: "Models as Code"
-chapter: 10
+chapter: 21
 lesson: 2
 duration_minutes: 25
 description: "Describe your data requirements in plain English so an agent builds a correct database schema"

@@ -22,7 +22,7 @@ keywords:
     "banking AI agents",
     "financial crime",
   ]
-chapter: 21
+chapter: 32
 lesson: 10
 duration_minutes: 40
 

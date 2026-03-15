@@ -2,7 +2,7 @@
 title: "Practical SDD Exercises"
 practice_exercise: ch5-sdd
 sidebar_position: 10
-chapter: 5
+chapter: 16
 lesson: 10
 duration_minutes: 120
 
@@ -934,4 +934,4 @@ Unlike Capstones A and B, this one has real stakes. The SDD cycle applied to you
 
 ## What's Next
 
-You've practiced the three core SDD skills — specification writing, research-driven refinement, and task delegation — across 27 exercises. These skills compound: each exercise builds intuition for transforming vague intentions into precise, executable plans. The SDD workflow you practiced here isn't just for software development — it's a general methodology for any complex project where "just figure it out" leads to rework. Up next is the Chapter 5 Quiz, where you'll test your conceptual understanding of everything from vibe coding failure modes to the four-phase workflow and the decision framework.
+You've practiced the three core SDD skills — specification writing, research-driven refinement, and task delegation — across 27 exercises. These skills compound: each exercise builds intuition for transforming vague intentions into precise, executable plans. The SDD workflow you practiced here isn't just for software development — it's a general methodology for any complex project where "just figure it out" leads to rework. Up next is the Chapter 16 Quiz, where you'll test your conceptual understanding of everything from vibe coding failure modes to the four-phase workflow and the decision framework.

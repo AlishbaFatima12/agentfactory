@@ -1,5 +1,5 @@
 deck:
-  id: ch10-00-from-csv-to-databases
+  id: ch21-00-from-csv-to-databases
   title: "When Bash and Python Hit the Wall"
   description: Flashcards covering the escalation from CSV scripts to relational databases, schema clarity, foreign keys, and when to escalate from Computation & Data Extraction patterns.
   tags:
@@ -10,7 +10,7 @@ deck:
   - relational-database
   version: 1
 cards:
-- id: ch10-00-from-csv-to-databases-001
+- id: ch21-00-from-csv-to-databases-001
   type: recall
   difficulty: basic
   front: What is a schema in the context of databases?
@@ -18,7 +18,7 @@ cards:
   tags:
   - schema
   - relational-database
-- id: ch10-00-from-csv-to-databases-002
+- id: ch21-00-from-csv-to-databases-002
   type: thinking
   difficulty: intermediate
   front: Your CSV script passes all tests but silently produces wrong monthly totals. How does this happen?
@@ -27,7 +27,7 @@ cards:
   tags:
   - csv-limits
   - silent-failure
-- id: ch10-00-from-csv-to-databases-003
+- id: ch21-00-from-csv-to-databases-003
   type: recall
   difficulty: basic
   front: What is a foreign key?
@@ -35,7 +35,7 @@ cards:
   tags:
   - foreign-keys
   - relational-database
-- id: ch10-00-from-csv-to-databases-004
+- id: ch21-00-from-csv-to-databases-004
   type: thinking
   difficulty: intermediate
   front: Why is the escalation trigger "every new question requires a new loop" a sign your data model is failing?
@@ -44,7 +44,7 @@ cards:
   tags:
   - escalation
   - csv-limits
-- id: ch10-00-from-csv-to-databases-005
+- id: ch21-00-from-csv-to-databases-005
   type: recall
   difficulty: basic
   front: In the Braintrust/Vercel benchmark, what was the SQL agent's accuracy vs the Bash agent's accuracy on structured data queries?
@@ -52,7 +52,7 @@ cards:
   tags:
   - benchmark
   - sql
-- id: ch10-00-from-csv-to-databases-006
+- id: ch21-00-from-csv-to-databases-006
   type: thinking
   difficulty: advanced
   front: "SQL scored 100% accuracy in the benchmark, yet the lesson says hybrid verification is still needed. Why?"
@@ -61,7 +61,7 @@ cards:
   tags:
   - benchmark
   - hybrid-verification
-- id: ch10-00-from-csv-to-databases-007
+- id: ch21-00-from-csv-to-databases-007
   type: recall
   difficulty: intermediate
   front: "CSV World relies on hope for consistency. What does the Relational World rely on instead?"
@@ -69,7 +69,7 @@ cards:
   tags:
   - schema
   - relational-database
-- id: ch10-00-from-csv-to-databases-008
+- id: ch21-00-from-csv-to-databases-008
   type: thinking
   difficulty: intermediate
   front: Why does the lesson say re-running the same SQL query is not independent verification?
@@ -78,7 +78,7 @@ cards:
   tags:
   - hybrid-verification
   - escalation
-- id: ch10-00-from-csv-to-databases-009
+- id: ch21-00-from-csv-to-databases-009
   type: recall
   difficulty: intermediate
   front: "According to the escalation matrix, name two situations where you should stay with Computation & Data Extraction patterns?"
@@ -86,7 +86,7 @@ cards:
   tags:
   - escalation
   - csv-limits
-- id: ch10-00-from-csv-to-databases-010
+- id: ch21-00-from-csv-to-databases-010
   type: thinking
   difficulty: intermediate
   front: "Two scripts handle dates differently: one uses calendar months, another uses rolling 30 days. Why is this a CSV-world failure mode?"
@@ -95,7 +95,7 @@ cards:
   tags:
   - csv-limits
   - schema
-- id: ch10-00-from-csv-to-databases-011
+- id: ch21-00-from-csv-to-databases-011
   type: recall
   difficulty: intermediate
   front: What are three failure signals that your script-based workflow should escalate to a database?
@@ -103,7 +103,7 @@ cards:
   tags:
   - escalation
   - failure-signals
-- id: ch10-00-from-csv-to-databases-012
+- id: ch21-00-from-csv-to-databases-012
   type: thinking
   difficulty: advanced
   front: Why do teams typically escalate from scripts to databases too late?
@@ -112,7 +112,7 @@ cards:
   tags:
   - escalation
   - csv-limits
-- id: ch10-00-from-csv-to-databases-013
+- id: ch21-00-from-csv-to-databases-013
   type: recall
   difficulty: basic
   front: What is a relational database?

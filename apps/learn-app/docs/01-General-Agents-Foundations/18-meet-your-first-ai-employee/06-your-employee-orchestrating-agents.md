@@ -18,7 +18,7 @@ keywords:
     openclaw claude code,
     agent factory thesis,
   ]
-chapter: 7
+chapter: 18
 lesson: 6
 duration_minutes: 25
 
@@ -85,7 +85,7 @@ teaching_guide:
   session_title: "Agent Delegation and Verification"
   key_points:
     - "ACP is a protocol for delegation — it replaces ad-hoc natural language instructions with managed sessions that have verifiable state"
-    - "The two-tier delegation pattern (you manage, employee coordinates, harness executes) is the concrete manifestation of the Agent Factory thesis from Chapter 1"
+    - "The two-tier delegation pattern (you manage, employee coordinates, harness executes) is the concrete manifestation of the Agent Factory thesis from Chapter 12"
     - "Verification over trust is the critical habit — /acp status proves a session exists; output file checks prove the work is correct"
     - "The hallucination problem with delegation is why protocols matter — natural language can claim actions it never took; ACP cannot"
   misconceptions:
@@ -96,11 +96,11 @@ teaching_guide:
   discussion_prompts:
     - "Why does a protocol-based approach to delegation matter more than natural language instructions? What can go wrong with 'just tell it to use Claude Code'?"
     - "In Exercise 3, your employee did research (its strength) then delegated coding (Claude Code's strength). What other task combinations follow this two-tool pattern?"
-    - "Compare this lesson to Chapter 3 where you used Claude Code directly. What did you gain by adding ACP as a coordination layer? What did you lose?"
+    - "Compare this lesson to Chapter 14 where you used Claude Code directly. What did you gain by adding ACP as a coordination layer? What did you lose?"
   teaching_tips:
     - "Have students run /acp status BEFORE telling them whether delegation worked — the discovery moment when they see a real session (or nothing) is the most memorable part of this lesson"
     - "Demo Exercise 3 live: show the research phase in the messaging channel, then the approval step, then /acp status showing the harness running — the transition from conversation to managed session makes delegation tangible"
-    - "Draw the three-layer delegation table on the whiteboard and have students fill in who does what — this reinforces the Agent Factory thesis without requiring re-reading Chapter 1"
+    - "Draw the three-layer delegation table on the whiteboard and have students fill in who does what — this reinforces the Agent Factory thesis without requiring re-reading Chapter 12"
     - "For the hallucination discussion, contrast: before ACP your employee could CLAIM it ran Claude Code; with ACP either a session exists or it does not — no middle ground"
   assessment_quick_check:
     - "Ask students: How do you verify your employee actually delegated work? (/acp status for session existence, output file checks for correctness)"
@@ -114,13 +114,13 @@ Your employee has been handling tasks on its own: creating files, setting up mor
 
 But what happens when you need actual code written? A Python script, a data processing tool, a file organizer? Your employee is not a coding specialist. It will try -- and it may produce something -- but it is not the right tool for the job.
 
-You already have the right tool. Claude Code is on your machine from Chapter 3. Before continuing, confirm it is still working:
+You already have the right tool. Claude Code is on your machine from Chapter 14. Before continuing, confirm it is still working:
 
 ```bash
 claude --version
 ```
 
-If you get a version number, you are ready. If you get "command not found," revisit the Claude Code installation in Chapter 3 before proceeding.
+If you get a version number, you are ready. If you get "command not found," revisit the Claude Code installation in Chapter 14 before proceeding.
 
 In this lesson, you will teach your employee to delegate coding work to external coding harnesses through the **Agent Client Protocol (ACP)** -- then verify the delegation is real.
 
@@ -135,7 +135,7 @@ The fix is a protocol. Let's set it up and get something working.
 ## Setting Up ACP
 
 :::info Prerequisites
-You need at least one coding harness installed on your machine. If you have **Claude Code** from Chapter 3, you are ready. If you have Codex, Gemini CLI, or another harness, that works too.
+You need at least one coding harness installed on your machine. If you have **Claude Code** from Chapter 14, you are ready. If you have Codex, Gemini CLI, or another harness, that works too.
 :::
 
 :::note[Why You Run Setup, Not Your Employee]
@@ -164,7 +164,7 @@ openclaw plugins install @openclaw/acpx
 openclaw config set plugins.entries.acpx.enabled true
 
 # Set a default harness so NLP dispatch knows where to send tasks
-# Use "claude" if you installed Claude Code in Chapter 3
+# Use "claude" if you installed Claude Code in Chapter 14
 openclaw config set acp.defaultAgent "claude"
 
 # Restart the gateway to load everything
@@ -235,7 +235,7 @@ Then send your task.
 
 - `ACP agent "claude" is not allowed by policy` → The harness is not in the allowed list. Ask your employee: "add claude to the ACP allowed agents and restart."
 - `ACP runtime backend is not configured` → Run `/acp install` then `/acp doctor` for the exact fix.
-- Harness command not found → That coding tool is not installed on your machine. Make sure Claude Code (Chapter 3), Codex, or another harness is installed.
+- Harness command not found → That coding tool is not installed on your machine. Make sure Claude Code (Chapter 14), Codex, or another harness is installed.
 - No response after a minute → Run `/acp status` to check if a session started. If not, try the explicit `/acp spawn claude --mode oneshot` command instead of NLP dispatch.
   :::
 
@@ -353,7 +353,7 @@ The acpx backend ships with five built-in harness targets:
 
 | Harness    | What It Is                                         |
 | ---------- | -------------------------------------------------- |
-| `claude`   | Claude Code -- the same tool you used in Chapter 3 |
+| `claude`   | Claude Code -- the same tool you used in Chapter 14 |
 | `codex`    | OpenAI's Codex CLI                                 |
 | `pi`       | Pi coding assistant                                |
 | `opencode` | Open-source coding agent                           |
@@ -434,7 +434,7 @@ You built a real delegation chain:
 | **Your Employee** (OpenClaw) | Coordinator | Routed coding tasks through ACP to the right harness        |
 | **Coding Harness** (via ACP) | Coder       | Wrote actual code in a managed, verifiable session          |
 
-This is the **two-tier delegation pattern** from Chapter 1. You managed, your employee coordinated, and the harness executed.
+This is the **two-tier delegation pattern** from Chapter 12. You managed, your employee coordinated, and the harness executed.
 
 ---
 

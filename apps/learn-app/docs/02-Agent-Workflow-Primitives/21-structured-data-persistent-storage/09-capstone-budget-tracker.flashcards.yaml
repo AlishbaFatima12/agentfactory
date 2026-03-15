@@ -1,7 +1,7 @@
 deck:
-  id: ch10-08-capstone-budget-tracker
+  id: ch21-08-capstone-budget-tracker
   title: "Capstone - Budget Tracker Complete App"
-  description: Flashcards covering the evidence bundle, five-gate evidence pipeline, release readiness language, and integration of all Chapter 10 primitives.
+  description: Flashcards covering the evidence bundle, five-gate evidence pipeline, release readiness language, and integration of all Chapter 21 primitives.
   tags:
   - capstone
   - evidence-bundle
@@ -9,7 +9,7 @@ deck:
   - integration
   version: 1
 cards:
-- id: ch10-08-capstone-budget-tracker-001
+- id: ch21-08-capstone-budget-tracker-001
   type: recall
   difficulty: basic
   front: What is an evidence bundle in the context of release readiness?
@@ -17,7 +17,7 @@ cards:
   tags:
   - evidence-bundle
   - release-gate
-- id: ch10-08-capstone-budget-tracker-002
+- id: ch21-08-capstone-budget-tracker-002
   type: recall
   difficulty: intermediate
   front: What are the five gates in the capstone evidence pipeline, in order?
@@ -25,7 +25,7 @@ cards:
   tags:
   - evidence-pipeline
   - gates
-- id: ch10-08-capstone-budget-tracker-003
+- id: ch21-08-capstone-budget-tracker-003
   type: recall
   difficulty: basic
   front: "What is the difference between 'ready for demo' and 'ready for release'?"
@@ -33,7 +33,7 @@ cards:
   tags:
   - release-readiness
   - gate-language
-- id: ch10-08-capstone-budget-tracker-004
+- id: ch21-08-capstone-budget-tracker-004
   type: thinking
   difficulty: intermediate
   front: "A team publishes a financial report despite a 'blocked' verification status. What kind of failure is this?"
@@ -42,7 +42,7 @@ cards:
   tags:
   - mismatch-policy
   - release-gate
-- id: ch10-08-capstone-budget-tracker-005
+- id: ch21-08-capstone-budget-tracker-005
   type: recall
   difficulty: basic
   front: What is a release gate?
@@ -50,7 +50,7 @@ cards:
   tags:
   - release-gate
   - deployment
-- id: ch10-08-capstone-budget-tracker-006
+- id: ch21-08-capstone-budget-tracker-006
   type: thinking
   difficulty: intermediate
   front: "Why does the capstone introduce no new concepts despite being the final lesson?"
@@ -59,16 +59,16 @@ cards:
   tags:
   - capstone
   - integration
-- id: ch10-08-capstone-budget-tracker-007
+- id: ch21-08-capstone-budget-tracker-007
   type: thinking
   difficulty: advanced
   front: "Why should another engineer be able to rerun your evidence bundle without asking you any questions?"
   back: "BECAUSE verbal claims are not verifiable and depend on one person's availability, THEREFORE a self-contained evidence artifact lets anyone independently verify readiness — reproducibility replaces trust."
-  why: "How does this principle connect to the broader Chapter 10 theme of enforcement over convention?"
+  why: "How does this principle connect to the broader Chapter 21 theme of enforcement over convention?"
   tags:
   - evidence-bundle
   - reproducibility
-- id: ch10-08-capstone-budget-tracker-008
+- id: ch21-08-capstone-budget-tracker-008
   type: recall
   difficulty: intermediate
   front: "How does the capstone's monthly summary avoid the N+1 problem?"
@@ -76,7 +76,7 @@ cards:
   tags:
   - n-plus-one
   - query-patterns
-- id: ch10-08-capstone-budget-tracker-009
+- id: ch21-08-capstone-budget-tracker-009
   type: thinking
   difficulty: advanced
   front: "Why is proving failure paths (forced rollback, mismatch detection) as important as proving happy paths?"
@@ -85,7 +85,7 @@ cards:
   tags:
   - failure-paths
   - evidence-bundle
-- id: ch10-08-capstone-budget-tracker-010
+- id: ch21-08-capstone-budget-tracker-010
   type: recall
   difficulty: intermediate
   front: "What are the four capstone self-review questions?"

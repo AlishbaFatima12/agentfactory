@@ -12,7 +12,7 @@ keywords:
     "context management",
     "context rot",
   ]
-chapter: 4
+chapter: 15
 lesson: 1
 duration_minutes: 20
 
@@ -97,7 +97,7 @@ What's different?
 
 **The answer: context quality.**
 
-In Chapter 1, you learned that Digital FTEs are AI agents that work 24/7, delivering consistent results at a fraction of human cost. But here's the uncomfortable truth: those same AI models are available to everyone. Your competitors have access to Claude, GPT, and Gemini too. They can spin up the same frontier model in minutes.
+In Chapter 12, you learned that Digital FTEs are AI agents that work 24/7, delivering consistent results at a fraction of human cost. But here's the uncomfortable truth: those same AI models are available to everyone. Your competitors have access to Claude, GPT, and Gemini too. They can spin up the same frontier model in minutes.
 
 The model isn't your moat. **Context engineering is.**
 

@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/origin-story
 title: "Claude Code Origin Story"
 sidebar_position: 1
-chapter: 3
+chapter: 14
 lesson: 1
 duration_minutes: 18
 
@@ -61,7 +61,7 @@ teaching_guide:
   session_group: 1
   session_title: "Getting Started with Claude Code"
   key_points:
-    - "OODA loop is foundational — referenced again in Chapters 5, 11, and 13"
+    - "OODA loop is foundational — referenced again in Chapters 16, 22, and 24"
     - "Product Overhang explains why capability existed before the product — this mental model recurs throughout the book"
     - "General Agent vs Custom Agent distinction is the entire thesis of the book"
   misconceptions:
@@ -237,7 +237,6 @@ The rest of this chapter covers both interfaces. You'll learn when to use each, 
 **What you're learning:** Transferring the paradigm shift to your specific context. The goal isn't just understanding Claude Code—it's recognizing where agentic AI transforms YOUR work.
 
 **Note:** Start with non-sensitive projects. Review changes before accepting.
-
 
 ## Flashcards Study Aid
 

@@ -2,7 +2,7 @@
 
 ## Core Concept
 
-Chapter 13 uses the two real asset types in the plugin: `skills/` and `agents/`. Cowork can invoke both from natural-language prompts. The five RevOps agents handle recurring monitoring and reporting, while the `pipeline` skill handles deep deal analysis and forecasting. The lesson assumes the `demo-data.md` created in Lesson 1 is already present in the workspace, and Cowork's `/schedule` turns these prompts into timed task execution without requiring Slack or email delivery.
+Chapter 24 uses the two real asset types in the plugin: `skills/` and `agents/`. Cowork can invoke both from natural-language prompts. The five RevOps agents handle recurring monitoring and reporting, while the `pipeline` skill handles deep deal analysis and forecasting. The lesson assumes the `demo-data.md` created in Lesson 1 is already present in the workspace, and Cowork's `/schedule` turns these prompts into timed task execution without requiring Slack or email delivery.
 
 ## Key Mental Models
 

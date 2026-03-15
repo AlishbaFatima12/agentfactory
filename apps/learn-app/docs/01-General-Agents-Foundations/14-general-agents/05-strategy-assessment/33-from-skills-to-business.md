@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/from-skills-to-business
 title: "From Skills to Business: Monetizing Agent Expertise"
 sidebar_position: 33
-chapter: 3
+chapter: 14
 lesson: 33
 duration_minutes: 20
 chapter_type: Concept
@@ -86,7 +86,7 @@ teaching_guide:
   assessment_quick_check:
     - "Name the four revenue models for AI agents from this lesson."
     - "What is a Digital FTE, and why is its cost-per-task lower than a human employee?"
-    - "What can you sell today after Chapter 3, and what requires Part 6?"
+    - "What can you sell today after Chapter 14, and what requires Part 6?"
 
 # Legacy compatibility (Docusaurus)
 prerequisites:
@@ -181,7 +181,7 @@ The OpenAI Apps marketplace (chatgpt.com/apps) has 800M+ users and no traditiona
 
 ## Three Revenue Models You Can Use Today
 
-After Chapter 3, you can sell:
+After Chapter 14, you can sell:
 
 **1. Skill Licenses ($500-5K)**
 Create a SKILL.md solving a specific problem (e.g., "Financial Report Analyzer"). Package, document, license to others.

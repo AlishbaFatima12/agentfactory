@@ -19,7 +19,7 @@ keywords:
     "documented standards",
     "SKILL.md",
   ]
-chapter: 16
+chapter: 27
 lesson: 5
 duration_minutes: 15
 

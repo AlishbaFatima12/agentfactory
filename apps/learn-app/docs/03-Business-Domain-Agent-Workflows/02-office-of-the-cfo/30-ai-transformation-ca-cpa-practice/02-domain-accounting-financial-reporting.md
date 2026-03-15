@@ -18,7 +18,7 @@ keywords:
     "trial balance AI",
     "Cowork accounting",
   ]
-chapter: 19
+chapter: 30
 lesson: 2
 duration_minutes: 45
 
@@ -240,7 +240,7 @@ At the service level, fully automated reporting platforms are emerging as a busi
 **Check your work:** You should have a draft income statement and balance sheet, a list of reconciliations with data sources, a set of proposed month-end journal entries, and a list of assumption-resolution instructions. The assumption list is the most valuable output — it maps the exact boundary between what an agent can execute and what requires your professional judgment.
 
 :::tip Plugin Bridge — From Prompts to Commands
-Steps 3 and 4 used conversational prompts. If you have `finance@knowledge-work-plugins` installed from Chapter 17, try the same tasks using structured plugin commands and compare the output:
+Steps 3 and 4 used conversational prompts. If you have `finance@knowledge-work-plugins` installed from Chapter 28, try the same tasks using structured plugin commands and compare the output:
 
 - `/income-statement monthly` — produces a standardised income statement from the same trial balance data
 - `/journal-entry "Record depreciation and accruals for month-end close"` — generates structured journal entries as in Step 4

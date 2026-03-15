@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/plugins-and-connectors
 title: "Plugins and Connectors: Extending Cowork's Reach"
 sidebar_position: 29
-chapter: 3
+chapter: 14
 lesson: 29
 duration_minutes: 16
 chapter_type: Concept

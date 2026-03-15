@@ -20,7 +20,7 @@ keywords:
     "lessee accounting",
     "Islamic finance lease",
   ]
-chapter: 20
+chapter: 31
 lesson: 5
 duration_minutes: 50
 

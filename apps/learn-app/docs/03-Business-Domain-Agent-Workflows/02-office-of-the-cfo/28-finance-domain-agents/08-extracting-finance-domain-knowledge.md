@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/finance-domain-agents/extracting-finance-domain-knowledge
 sidebar_position: 8
 title: "Extracting Finance Domain Knowledge"
-description: "Apply the Knowledge Extraction Method from Chapter 16 to a CFO's monthly close judgment, walking through the Five Questions with finance-specific examples and producing a first-draft SKILL.md for firm-specific close workflows"
+description: "Apply the Knowledge Extraction Method from Chapter 27 to a CFO's monthly close judgment, walking through the Five Questions with finance-specific examples and producing a first-draft SKILL.md for firm-specific close workflows"
 keywords:
   [
     "knowledge extraction",
@@ -19,7 +19,7 @@ keywords:
     "deferred revenue",
     "enterprise extensions",
   ]
-chapter: 17
+chapter: 28
 lesson: 8
 duration_minutes: 30
 
@@ -30,7 +30,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can take the Five Questions framework from Chapter 16 and adapt each question to a finance-specific context, producing interview material that surfaces firm-specific judgment rather than generic accounting knowledge"
+    measurable_at_this_level: "Student can take the Five Questions framework from Chapter 27 and adapt each question to a finance-specific context, producing interview material that surfaces firm-specific judgment rather than generic accounting knowledge"
 
   - name: "Author a Finance Domain SKILL.md"
     proficiency_level: "B2"
@@ -47,7 +47,7 @@ skills:
     measurable_at_this_level: "Student can examine a finance workflow and identify the elements that are firm-specific tacit knowledge versus industry-standard practices, and explain why encoding the firm-specific elements produces a SKILL.md that a generic plugin cannot replicate"
 
 learning_objectives:
-  - objective: "Adapt the Five Questions from Chapter 16 to a finance domain context, producing interview material that surfaces firm-specific close judgment rather than generic accounting knowledge"
+  - objective: "Adapt the Five Questions from Chapter 27 to a finance domain context, producing interview material that surfaces firm-specific close judgment rather than generic accounting knowledge"
     proficiency_level: "B1"
     bloom_level: "Apply"
     assessment_method: "Given a finance role and workflow, student can write finance-specific versions of each of the Five Questions and explain what firm-specific knowledge each question targets"
@@ -93,12 +93,12 @@ teaching_guide:
     - "If you gave a generic finance agent your close checklist, what would it get right and what would it get wrong? The wrong answers reveal the firm-specific knowledge."
   teaching_tips:
     - "The variance analysis example — $50K in revenue is noise, $5K in a dormant account is a fraud signal — is the most effective illustration of why firm-specific thresholds matter. Use it as the anchor."
-    - "Connect each of the Five Questions back to the credit analyst examples from Chapter 16 so students see the pattern transfer, not just the finance application."
+    - "Connect each of the Five Questions back to the credit analyst examples from Chapter 27 so students see the pattern transfer, not just the finance application."
     - "The SKILL.md draft at the end should feel like a natural output of the extraction, not a template exercise — emphasise that the Principles come from the interview, not from a textbook."
   assessment_checks:
     - question: "Why is a generic finance plugin insufficient for a firm's monthly close workflow?"
       expected_response: "Because the generic plugin uses industry-standard materiality thresholds and variance rules. Every firm has specific thresholds, seasonal patterns, and judgment calls that differ from the standard. A $50K variance in revenue might be noise at one firm but significant at another. The CFO's tacit knowledge about which variances matter at this firm is what the extraction encodes."
-    - question: "How does Question 1 of the Five Questions apply differently in finance than in the credit analyst example from Chapter 16?"
+    - question: "How does Question 1 of the Five Questions apply differently in finance than in the credit analyst example from Chapter 27?"
       expected_response: "The structure is identical — 'What do you do that no manual captures?' — but the content is domain-specific. For the credit analyst, it surfaced cashflow reading heuristics. For the CFO, it surfaces materiality judgment: which variances matter, which seasonal distortions to expect, and which account patterns signal problems versus normal business cycles."
     - question: "What makes a finance SKILL.md Principle testable?"
       expected_response: "It specifies a particular financial condition, a particular response, and the reasoning. 'Flag material variances' is untestable. 'When a dormant account shows any activity above $1,000, flag for investigation regardless of the firm-wide materiality threshold, because dormant account activity is a potential indicator of unauthorised transactions' is testable — you can run a scenario and confirm the agent follows it."
@@ -110,7 +110,7 @@ In Lesson 4, you installed the `knowledge-work-plugins/finance` plugin and saw w
 
 The generic plugin applies the same materiality thresholds to every company. It uses textbook variance analysis that treats a five percent deviation in revenue the same way it treats a five percent deviation in a dormant travel expense account. It produces management bridges in a standard format that may not match the format your CFO presents to the board. The plugin is useful. It is not yours.
 
-The gap between "useful" and "production-ready" is filled by the kind of knowledge that lives in the CFO's head: which variances actually matter at this firm, what seasonal patterns distort standard analysis, which accounts deserve scrutiny regardless of their dollar magnitude, and what the board expects to see in the variance bridge. This lesson applies the Knowledge Extraction Method from Chapter 16 to surface that knowledge, and walks through the translation from extraction outputs to a first-draft SKILL.md that encodes firm-specific close judgment.
+The gap between "useful" and "production-ready" is filled by the kind of knowledge that lives in the CFO's head: which variances actually matter at this firm, what seasonal patterns distort standard analysis, which accounts deserve scrutiny regardless of their dollar magnitude, and what the board expects to see in the variance bridge. This lesson applies the Knowledge Extraction Method from Chapter 27 to surface that knowledge, and walks through the translation from extraction outputs to a first-draft SKILL.md that encodes firm-specific close judgment.
 
 ## Why Generic Plugins Fall Short
 
@@ -125,11 +125,11 @@ Consider variance analysis. The generic plugin flags any line item that deviates
 | COGS up 8% in Q4                               | Flags as unfavourable                | Expected — seasonal raw material pricing; the CFO adjusts the baseline before comparing                         |
 | Deferred revenue down 15%                      | Flags as unfavourable                | Triggers a call to the VP of Sales — at this firm, deferred revenue drops precede revenue misses by one quarter |
 
-The CFO's responses are not random departures from the standard. They are the product of years of experience with this specific business, its seasonal patterns, its risk profile, and its historical failure modes. This is the tacit knowledge that Chapter 16's extraction methodology is designed to surface.
+The CFO's responses are not random departures from the standard. They are the product of years of experience with this specific business, its seasonal patterns, its risk profile, and its historical failure modes. This is the tacit knowledge that Chapter 27's extraction methodology is designed to surface.
 
 ## The Five Questions Applied to Finance
 
-Chapter 16 Lesson 2 introduced the Five Questions that structure a Method A interview. Each question targets a different layer of tacit knowledge. Here is what each one surfaces when applied to a CFO's monthly close workflow.
+Chapter 27 Lesson 2 introduced the Five Questions that structure a Method A interview. Each question targets a different layer of tacit knowledge. Here is what each one surfaces when applied to a CFO's monthly close workflow.
 
 ### Question 1: What do you do that no manual or policy document captures?
 
@@ -169,7 +169,7 @@ The extraction material above — gathered from a single sixty-minute interview 
 
 ### The Persona
 
-Using the three Persona writing questions from Chapter 16 Lesson 6:
+Using the three Persona writing questions from Chapter 27 Lesson 6:
 
 **What is this agent's professional level and authority?** A senior controller with ten years of experience at this specific firm, reporting directly to the CFO. The agent operates with the authority to approve standard close entries and flag non-standard items for CFO review. It does not have authority to approve adjustments above $250K or to override established accounting policies.
 
@@ -208,13 +208,13 @@ These Principles are drafted directly from the extraction material. Each one pas
 
 5. **Aging distribution as leading indicator:** When the 60-90 day bucket of accounts receivable increases by more than 5 percentage points as a share of total receivables over two consecutive months, flag as a potential credit stress signal even if the aggregate DSO metric remains within acceptable range.
 
-This draft is a first draft — it encodes the extraction material faithfully but has not been tested against the range of scenarios the agent will encounter. The Validation Loop from Chapter 16 Lessons 7 and 8 is the next step.
+This draft is a first draft — it encodes the extraction material faithfully but has not been tested against the range of scenarios the agent will encounter. The Validation Loop from Chapter 27 Lessons 7 and 8 is the next step.
 
 ## Extracting from Close Documents
 
 Method B — document extraction — complements the interview by surfacing knowledge that lives in institutional documents rather than in the expert's memory. For a finance close workflow, three document categories contain extractable knowledge.
 
-**The close checklist.** Apply the three-pass framework from Chapter 16 Lesson 4. Pass One extracts the explicit rules — the sequence of close activities, the sign-off requirements, the deadline structure. Pass Two identifies contradictions between the documented procedure and actual practice — the CFO's interview may reveal that certain checklist items are always done out of order or that some sign-offs are treated as formalities. Pass Three identifies gaps — close scenarios that the checklist does not address, such as how to handle a close when the subsidiary's ERP system is being migrated.
+**The close checklist.** Apply the three-pass framework from Chapter 27 Lesson 4. Pass One extracts the explicit rules — the sequence of close activities, the sign-off requirements, the deadline structure. Pass Two identifies contradictions between the documented procedure and actual practice — the CFO's interview may reveal that certain checklist items are always done out of order or that some sign-offs are treated as formalities. Pass Three identifies gaps — close scenarios that the checklist does not address, such as how to handle a close when the subsidiary's ERP system is being migrated.
 
 **The accounting policies manual.** This document contains the firm's interpretations of accounting standards — revenue recognition policy, capitalisation thresholds, lease classification criteria. The explicit rules from Pass One translate into Principles. The contradictions from Pass Two — where practice diverges from documented policy — are some of the most valuable extraction material because they reveal where professional judgment fills the gap between policy and reality.
 

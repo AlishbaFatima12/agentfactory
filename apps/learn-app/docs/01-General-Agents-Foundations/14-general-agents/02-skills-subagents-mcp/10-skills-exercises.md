@@ -3,7 +3,7 @@ slug: /General-Agents-Foundations/general-agents/skills-exercises
 title: "Agent Skills Exercises"
 practice_exercise: ch3-skills
 sidebar_position: 10
-chapter: 3
+chapter: 14
 lesson: 10
 duration_minutes: 120
 

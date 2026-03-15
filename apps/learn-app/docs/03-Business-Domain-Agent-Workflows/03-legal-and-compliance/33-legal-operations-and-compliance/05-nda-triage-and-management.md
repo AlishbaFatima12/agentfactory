@@ -17,7 +17,7 @@ keywords:
     "residuals clause",
     "Saudi NDA",
   ]
-chapter: 22
+chapter: 33
 lesson: 5
 duration_minutes: 20
 

@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/cowork-practical-workflows
 title: "Cowork in Action: Practical Workflows"
 sidebar_position: 27
-chapter: 3
+chapter: 14
 lesson: 27
 duration_minutes: 25
 chapter_type: Practical

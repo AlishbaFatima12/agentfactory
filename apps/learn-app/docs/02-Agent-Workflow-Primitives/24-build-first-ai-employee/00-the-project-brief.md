@@ -3,7 +3,7 @@ sidebar_position: 0
 title: "The Project Brief"
 description: "Frame your AI employee project, choose an achievement tier, and set up your repository structure using the NanoClaw platform you installed in the NanoClaw Hands-On Setup lesson"
 keywords: ["NanoClaw", "AI employee", "project scoping", "WhatsApp agent", "Layer 3 design", "project tiers"]
-chapter: 13
+chapter: 24
 lesson: 0
 duration_minutes: 20
 

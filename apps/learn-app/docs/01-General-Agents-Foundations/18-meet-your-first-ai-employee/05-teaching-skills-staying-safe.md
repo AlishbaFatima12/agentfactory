@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: "Teaching Skills & Staying Safe"
-description: "Ask your AI Employee to create skills, review them using Chapter 3 knowledge, then understand the security threats every agent operator must know"
+description: "Ask your AI Employee to create skills, review them using Chapter 14 knowledge, then understand the security threats every agent operator must know"
 keywords:
   [
     openclaw skills,
@@ -15,7 +15,7 @@ keywords:
     lethal trifecta,
     skill evaluation,
   ]
-chapter: 7
+chapter: 18
 lesson: 5
 duration_minutes: 30
 
@@ -43,7 +43,7 @@ skills:
     measurable_at_this_level: "Student can evaluate a third-party skill for security risks and apply the security checklist before installation"
 
 learning_objectives:
-  - objective: "Evaluate AI-generated skills using Chapter 3 criteria (activation, instructions, output, error handling) and iterate to improve them"
+  - objective: "Evaluate AI-generated skills using Chapter 14 criteria (activation, instructions, output, error handling) and iterate to improve them"
     proficiency_level: "B1"
     bloom_level: "Evaluate"
     assessment_method: "Student reviews a skill created by their AI Employee, identifies at least one issue, and successfully iterates to fix it"
@@ -111,11 +111,11 @@ teaching_guide:
 
 In Lesson 4, you mapped the architecture that powers your AI Employee. Now you will put that architecture to work by teaching it new capabilities -- and learning why those capabilities demand caution.
 
-Skills are what make your AI Employee **yours**. Anyone can install OpenClaw and connect a free LLM. What separates your employee from everyone else's is the domain expertise you encode into skills -- for your workflow, your industry, your specific needs. In Chapter 3, you learned how to write `SKILL.md` files by hand. Now your employee writes them for you. But you still need that Chapter 3 knowledge, because judging whether a skill is good requires the same expertise as writing one.
+Skills are what make your AI Employee **yours**. Anyone can install OpenClaw and connect a free LLM. What separates your employee from everyone else's is the domain expertise you encode into skills -- for your workflow, your industry, your specific needs. In Chapter 14, you learned how to write `SKILL.md` files by hand. Now your employee writes them for you. But you still need that Chapter 14 knowledge, because judging whether a skill is good requires the same expertise as writing one.
 
 ## Your Employee Creates Skills For You
 
-In Chapter 3, you built skills manually -- writing frontmatter, crafting instructions, defining output formats. That was essential for understanding the format. But in practice, your AI Employee can draft skills too, and it already knows your context.
+In Chapter 14, you built skills manually -- writing frontmatter, crafting instructions, defining output formats. That was essential for understanding the format. But in practice, your AI Employee can draft skills too, and it already knows your context.
 
 Tell your AI Employee to create a skill for your actual work. Pick one of these prompts and adapt it to your role:
 
@@ -158,7 +158,7 @@ Ask your employee to show you the skill:
 Show me the SKILL.md you just created. I want to review it.
 ```
 
-Now apply what you learned in Chapter 3. Read every line. Check these four things:
+Now apply what you learned in Chapter 14. Read every line. Check these four things:
 
 | Check            | What to Look For                                            | Fix If...                                                              |
 | ---------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -195,7 +195,7 @@ Prepare for my meeting about [REAL TOPIC] with [REAL PEOPLE]
 
 Watch the output. Did it follow the steps in order? Did the format match what you specified? Where it deviated, the instructions were ambiguous. Fix those spots and test again. One or two rounds of iteration is normal.
 
-**Takeaway:** In Chapter 3, you wrote skills by hand. Now your employee writes them for you. But you still need Chapter 3 knowledge to **judge** whether the skill is good. The human's role shifts from writer to reviewer -- the same delegation pattern you practiced in Lesson 3.
+**Takeaway:** In Chapter 14, you wrote skills by hand. Now your employee writes them for you. But you still need Chapter 14 knowledge to **judge** whether the skill is good. The human's role shifts from writer to reviewer -- the same delegation pattern you practiced in Lesson 3.
 
 ---
 

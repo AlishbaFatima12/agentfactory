@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
 title: "NanoClaw Hands-On Setup"
-chapter: 7
+chapter: 18
 lesson: 10
 duration_minutes: 40
 description: "Install NanoClaw, connect WhatsApp, run the same tasks from Lesson 3, and discover what changes when your AI Employee runs inside container isolation"
@@ -362,7 +362,7 @@ This is the capstone exercise for the entire chapter. In Lesson 9, you saw the s
 - What data must NEVER leave the container boundary? ******\_\_\_******
 - Why? (Regulation, privacy, competitive sensitivity) ******\_\_\_******
 
-This exercise is not optional. It is where everything in Chapter 7 comes together: the universal patterns from Lesson 4, the skills from Lesson 5, the security realities from Lesson 5, the Body + Brain architecture from Lesson 9, and the portability standards you just experienced. Your Layer 3 design is the first step toward building an AI Employee for your profession -- and because Skills and MCP are open standards, this design works on any platform.
+This exercise is not optional. It is where everything in Chapter 18 comes together: the universal patterns from Lesson 4, the skills from Lesson 5, the security realities from Lesson 5, the Body + Brain architecture from Lesson 9, and the portability standards you just experienced. Your Layer 3 design is the first step toward building an AI Employee for your profession -- and because Skills and MCP are open standards, this design works on any platform.
 
 ---
 

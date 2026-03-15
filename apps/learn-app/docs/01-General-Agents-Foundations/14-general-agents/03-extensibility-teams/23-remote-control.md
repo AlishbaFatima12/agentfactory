@@ -12,7 +12,7 @@ keywords:
     session management,
     tmux,
   ]
-chapter: 3
+chapter: 14
 lesson: 23
 duration_minutes: 15
 

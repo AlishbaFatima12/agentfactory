@@ -16,7 +16,7 @@ keywords:
     "Islamic finance domain agents",
     "multi-jurisdiction accounting",
   ]
-chapter: 20
+chapter: 31
 lesson: 1
 duration_minutes: 15
 
@@ -60,7 +60,7 @@ cognitive_load:
     - "The Three Pillars (Riba, Gharar, Maysir prohibitions and Asset-backing, Risk-sharing, Ethical screening principles)"
     - "Three accounting regimes (AAOIFI primary, IFRS with Islamic guidance, Local standards)"
     - "Router to product to overlay architecture concept"
-  assessment: "5 concepts at A2 level — within the 5-7 cognitive limit for this tier. Students enter from Chapter 19 with strong familiarity with domain agents and SKILL.md architecture. This lesson introduces a new professional domain (Islamic finance) with its jurisdictional complexity rather than new technical tools."
+  assessment: "5 concepts at A2 level — within the 5-7 cognitive limit for this tier. Students enter from Chapter 30 with strong familiarity with domain agents and SKILL.md architecture. This lesson introduces a new professional domain (Islamic finance) with its jurisdictional complexity rather than new technical tools."
 
 differentiation:
   extension_for_advanced: "Research one additional jurisdiction not mentioned in the lesson (e.g., Turkey, Indonesia, or Sudan) and determine which of the three accounting regimes it falls under. Explain your reasoning by identifying the primary standard, the AAOIFI role, and the regulator."
@@ -69,9 +69,9 @@ differentiation:
 
 # Why Islamic Finance Needs Jurisdiction-Aware Agents
 
-In Chapter 19, you built domain-specific agents for the five CA/CPA practice areas — accounting, tax, assurance, management accounting, and governance. Each agent operated within a single regulatory framework. This chapter confronts what happens when a single professional domain spans multiple regulatory frameworks simultaneously, and the same transaction produces different accounting outputs depending on which country you are working in.
+In Chapter 30, you built domain-specific agents for the five CA/CPA practice areas — accounting, tax, assurance, management accounting, and governance. Each agent operated within a single regulatory framework. This chapter confronts what happens when a single professional domain spans multiple regulatory frameworks simultaneously, and the same transaction produces different accounting outputs depending on which country you are working in.
 
-Islamic finance is that domain. It is a global industry present in more than 80 countries, with total assets that have reached approximately $4.5 trillion. It is governed by at least three different accounting regimes, structured around eight distinct product families, and growing at approximately 10% per year. The CA/CPA who understands it commands a practice niche that is simultaneously under-served, rapidly expanding, and demanding of precisely the kind of jurisdiction-aware automation that this book has been building toward since Chapter 14.
+Islamic finance is that domain. It is a global industry present in more than 80 countries, with total assets that have reached approximately $4.5 trillion. It is governed by at least three different accounting regimes, structured around eight distinct product families, and growing at approximately 10% per year. The CA/CPA who understands it commands a practice niche that is simultaneously under-served, rapidly expanding, and demanding of precisely the kind of jurisdiction-aware automation that this book has been building toward since Chapter 25.
 
 ## The Core Problem: Same Transaction, Different Outputs
 
@@ -109,7 +109,7 @@ These principles are universal across all jurisdictions. What varies — and wha
 
 ## Why Generic Finance Agents Fail
 
-The domain agents you built in Chapter 19 worked because each operated within a single, well-defined regulatory framework. A tax agent for Pakistan applies FBR rules. An audit agent for the UK applies FRC standards. The mapping is one-to-one.
+The domain agents you built in Chapter 30 worked because each operated within a single, well-defined regulatory framework. A tax agent for Pakistan applies FBR rules. An audit agent for the UK applies FRC standards. The mapping is one-to-one.
 
 Islamic finance breaks this model in three ways.
 
@@ -129,8 +129,8 @@ This chapter constructs a **router to product skill to jurisdiction overlay** ar
 
 This architecture is not limited to Islamic finance. Any domain with jurisdictional variation — tax, legal, healthcare — can use the same pattern. Islamic finance is the teaching case because it has the most clearly defined variation: three distinct regimes, 20 reference jurisdictions, and eight product families that interact with each regime differently.
 
-:::tip Connection to Chapter 19
-Chapter 19 taught you to build domain agents for single-jurisdiction practice areas. Chapter 20 teaches you to build domain agents that **route across jurisdictions** — a pattern that transfers to any multi-jurisdiction domain. The skill files you examine in this chapter use the same SKILL.md format from Chapters 15-17, extended with jurisdiction-aware routing logic.
+:::tip Connection to Chapter 30
+Chapter 30 taught you to build domain agents for single-jurisdiction practice areas. Chapter 31 teaches you to build domain agents that **route across jurisdictions** — a pattern that transfers to any multi-jurisdiction domain. The skill files you examine in this chapter use the same SKILL.md format from Chapters 15-17, extended with jurisdiction-aware routing logic.
 :::
 
 ## Try With AI

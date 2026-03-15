@@ -16,7 +16,7 @@ keywords:
     "Knowledge Extraction Method",
     "enterprise AI",
   ]
-chapter: 16
+chapter: 27
 lesson: 1
 duration_minutes: 20
 
@@ -65,7 +65,7 @@ cognitive_load:
     - "Tacit vs explicit knowledge (the invisible expertise that makes an expert irreplaceable)"
     - "The articulation gap (why experts cannot easily describe what they know)"
     - "The Knowledge Extraction Method as a two-mode solution (Method A for heads, Method B for documents)"
-  assessment: "3 concepts at A2 level — well within the 5-7 cognitive limit for this tier. Students enter with a clear understanding of SKILL.md architecture from Chapter 15; this lesson shifts from structure to the knowledge problem that structure alone cannot solve."
+  assessment: "3 concepts at A2 level — well within the 5-7 cognitive limit for this tier. Students enter with a clear understanding of SKILL.md architecture from Chapter 26; this lesson shifts from structure to the knowledge problem that structure alone cannot solve."
 
 differentiation:
   extension_for_advanced: "Identify a specific professional task you perform where your judgement diverges from what the documented methodology prescribes. Write two sentences: one describing what the methodology says, one describing what you actually do and why. The gap between them is the tacit knowledge this chapter teaches you to extract."
@@ -104,7 +104,7 @@ teaching_guide:
 
 > *"The knowledge that makes an expert irreplaceable is almost never the knowledge they think makes them irreplaceable. The visible expertise — the frameworks, the models, the tools — is the part that gets documented. The invisible expertise — the judgement, the pattern recognition, the instinct for which rule to break and when — is the part that makes the difference. That is exactly what you are trying to extract."*
 
-Chapter 15 gave you the architecture. You understand what a SKILL.md is, what the Agent Skills Pattern produces, and how the three components of a Cowork plugin fit together. You could, at this point, open a text editor and begin writing a SKILL.md for your domain. Most people who try that produce an agent that is roughly useful in obvious situations and unreliable in the ones that matter.
+Chapter 26 gave you the architecture. You understand what a SKILL.md is, what the Agent Skills Pattern produces, and how the three components of a Cowork plugin fit together. You could, at this point, open a text editor and begin writing a SKILL.md for your domain. Most people who try that produce an agent that is roughly useful in obvious situations and unreliable in the ones that matter.
 
 The reason is not a formatting error or a misconfigured connector. It is the problem that sits at the heart of every domain agent deployment and that no platform, no model improvement, and no prompt engineering technique can solve on its own: the knowledge that makes an agent genuinely useful in a professional domain is not the knowledge that is easy to articulate. It is the knowledge that professionals have spent years accumulating precisely because it resists articulation.
 

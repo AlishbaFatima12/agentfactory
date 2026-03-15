@@ -1,8 +1,8 @@
 ---
 title: "Version Control Exercises"
-practice_exercise: ch12-version-control
+practice_exercise: ch23-version-control
 sidebar_position: 5
-chapter: 12
+chapter: 23
 lesson: 5
 duration_minutes: 120
 
@@ -297,9 +297,10 @@ Fix each scenario using the appropriate recovery tool. Scenario A requires `git 
 Lesson 1 taught `git reset HEAD~1` to undo a commit on your own machine. `git revert` is the safer alternative when history has been shared (pushed to GitHub) -- instead of erasing the commit, it creates a new commit that reverses the changes. Both undo committed mistakes, but `git revert` preserves the full history so collaborators don't lose work.
 
 **When to use which:**
+
 - `git reset HEAD~1` -- You haven't pushed yet. Erases the commit locally.
 - `git revert` -- You've already pushed, or you're working with others. Creates an "undo commit."
-:::
+  :::
 
 **The Recovery Decision Tree:**
 

@@ -19,7 +19,7 @@ keywords:
     "banking AI agents",
     "capital stack",
   ]
-chapter: 21
+chapter: 32
 lesson: 6
 duration_minutes: 45
 

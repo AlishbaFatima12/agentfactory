@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/safety-limitations-whats-coming
 title: "Safety, Limitations, and What's Coming"
 sidebar_position: 30
-chapter: 3
+chapter: 14
 lesson: 30
 duration_minutes: 14
 chapter_type: Concept

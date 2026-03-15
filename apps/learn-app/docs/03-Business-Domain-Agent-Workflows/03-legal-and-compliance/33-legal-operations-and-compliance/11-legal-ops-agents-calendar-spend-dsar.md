@@ -15,7 +15,7 @@ keywords:
     "GDPR compliance",
     "legal process automation",
   ]
-chapter: 22
+chapter: 33
 lesson: 11
 duration_minutes: 30
 

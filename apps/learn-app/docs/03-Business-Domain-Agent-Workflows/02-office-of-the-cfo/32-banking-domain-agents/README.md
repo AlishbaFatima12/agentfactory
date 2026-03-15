@@ -1,27 +1,27 @@
 ---
 slug: /Business-Domain-Agent-Workflows/banking-domain-agents
-sidebar_position: 21
-title: "Chapter 21: Banking-Specific AI"
+sidebar_position: 32
+title: "Chapter 32: Banking-Specific AI"
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-21/integrated-banking-regulatory-ai.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-32/integrated-banking-regulatory-ai.pdf"
   title: "Integrated Banking Regulatory AI"
   height: 700
 description: "Build regulatory-aware AI agents for banking practitioners — covering IFRS 9 expected credit loss, Basel III/IV capital adequacy, AML/KYC financial crime, and bank reconciliation — using a 17-skill plugin architecture that routes queries to the correct regulatory framework and produces audit-ready outputs"
-chapter_number: 21
+chapter_number: 32
 part_number: 3
 version: 1.0
 status: draft
 ---
 
-# Chapter 21: Banking-Specific AI
+# Chapter 32: Banking-Specific AI
 
 ## 📚 Teaching Aid
 
 > _"A bank's balance sheet is not an accounting artefact. It is a regulatory instrument — shaped simultaneously by IFRS 9 provisioning, Basel III capital floors, and AML surveillance obligations. The banking practitioner who can operate across all three pillars commands a career advantage that no single-domain specialist can match. The AI agent that can do the same becomes a Digital FTE worth deploying."_
 
-Chapter 20 built jurisdiction-aware agents for Islamic finance — routing the same transaction through different accounting frameworks by country. This chapter confronts a different kind of complexity: **pillar complexity**. In banking, a single loan portfolio is governed simultaneously by three regulatory pillars — solvency (Basel III/IV), accounting (IFRS 9), and financial crime (AML/KYC) — each with its own models, thresholds, reporting cycles, and regulatory bodies. A credit risk agent that ignores capital adequacy produces incomplete output. An AML agent that ignores IFRS 9 staging misses the provisioning impact of suspicious transactions. This chapter builds the agents that work across all three pillars.
+Chapter 31 built jurisdiction-aware agents for Islamic finance — routing the same transaction through different accounting frameworks by country. This chapter confronts a different kind of complexity: **pillar complexity**. In banking, a single loan portfolio is governed simultaneously by three regulatory pillars — solvency (Basel III/IV), accounting (IFRS 9), and financial crime (AML/KYC) — each with its own models, thresholds, reporting cycles, and regulatory bodies. A credit risk agent that ignores capital adequacy produces incomplete output. An AML agent that ignores IFRS 9 staging misses the provisioning impact of suspicious transactions. This chapter builds the agents that work across all three pillars.
 
-The architectural contribution extends Chapter 20's router-product-overlay pattern into a **pillar-aware routing architecture** where the banking plugin's 17 skills span solvency, accounting, and financial crime — and the router determines which pillar (or combination of pillars) a query requires before loading the correct skill chain.
+The architectural contribution extends Chapter 31's router-product-overlay pattern into a **pillar-aware routing architecture** where the banking plugin's 17 skills span solvency, accounting, and financial crime — and the router determines which pillar (or combination of pillars) a query requires before loading the correct skill chain.
 
 ## What You'll Learn
 
@@ -67,12 +67,12 @@ By the end of this chapter, you should be able to answer these five questions:
 
 ### Prerequisites: Cowork Access
 
-This chapter requires **Cowork** (set up in Chapter 17) and the Banking plugin.
+This chapter requires **Cowork** (set up in Chapter 28) and the Banking plugin.
 
 1. **Install the Banking plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Banking** → click **Install**.
-2. **Connect a working folder** for practice files, same as Chapter 17.
+2. **Connect a working folder** for practice files, same as Chapter 28.
 
-## After Chapter 21
+## After Chapter 32
 
 When you finish this chapter, your perspective shifts:
 

@@ -28,7 +28,7 @@ keywords:
     "edge cases",
     "chapter contract",
   ]
-chapter: 19
+chapter: 30
 lesson: 15
 duration_minutes: 100
 
@@ -127,7 +127,7 @@ The answer is not academic. It is your value proposition.
 
 **Domain:** Cross-domain
 **What you need:** Cowork (Team or Enterprise), the Anthropic finance plugins from Chapters 17-18, your five locally-built Cowork skills from Lessons 8-9, and a real or representative client base. Download companion materials from the [companion repository](https://github.com/panaversity/ca-cpa-practice-agents): [`reference-skills/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/reference-skills) for skill examples and [`workflow-recipes/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/workflow-recipes) for scheduling templates.
-**This is the final capstone exercise for Chapter 19.**
+**This is the final capstone exercise for Chapter 30.**
 
 ### Step 1 — Verify the Complete Stack
 
@@ -142,7 +142,7 @@ finance@knowledge-work-plugins                   installed
 financial-analysis@financial-services-plugins    installed
 equity-research@financial-services-plugins       installed
 private-equity@financial-services-plugins        installed
-idfa-financial-architect                         installed  (from Ch 18)
+idfa-financial-architect                         installed  (from Ch 29)
 ```
 
 Verify your five Cowork skills exist in the Skills panel:

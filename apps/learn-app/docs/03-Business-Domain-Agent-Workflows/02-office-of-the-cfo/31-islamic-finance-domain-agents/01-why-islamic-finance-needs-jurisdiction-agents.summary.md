@@ -20,5 +20,5 @@ Islamic finance spans 80+ countries and three distinct accounting regimes, so th
 
 ### Connections
 
-- **Builds on**: Chapter 19's single-jurisdiction domain agents for CA/CPA practice areas
+- **Builds on**: Chapter 30's single-jurisdiction domain agents for CA/CPA practice areas
 - **Leads to**: Lesson 2's Global Standards Map, which maps all 20 reference jurisdictions to their specific regime

@@ -21,7 +21,7 @@ keywords:
     "board pack automation",
     "Cowork global instructions",
   ]
-chapter: 19
+chapter: 30
 lesson: 7
 duration_minutes: 65
 
@@ -232,7 +232,7 @@ The **equity-research plugin** provides earnings analysis and sector research ca
 
 The **private-equity plugin** provides deal sourcing, IC memo, and portfolio monitoring capabilities directly relevant to due diligence and corporate finance work in Domain 2.
 
-You explored the full financial-services-plugins architecture in Chapter 17, Lessons 5 and 6. The key point for CA/CPA practice is that these plugins extend your capabilities beyond core accounting into the advisory and financial services work that Domain 2 (Tax and Non-Assurance Advisory) covers.
+You explored the full financial-services-plugins architecture in Chapter 28, Lessons 5 and 6. The key point for CA/CPA practice is that these plugins extend your capabilities beyond core accounting into the advisory and financial services work that Domain 2 (Tax and Non-Assurance Advisory) covers.
 
 ## Mapping Plugins to Practice Domains
 

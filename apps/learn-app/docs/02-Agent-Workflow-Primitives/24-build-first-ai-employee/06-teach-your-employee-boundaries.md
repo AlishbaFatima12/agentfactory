@@ -14,7 +14,7 @@ keywords:
     "AI safety",
     "risk assessment",
   ]
-chapter: 13
+chapter: 24
 lesson: 6
 duration_minutes: 40
 

@@ -3,7 +3,7 @@ sidebar_position: 3
 title: "Connect Your Employee to the World"
 description: "Add a communication channel or MCP server to your NanoClaw AI employee, extending its reach beyond WhatsApp into the tools your profession actually uses."
 keywords: [nanoclaw, channels, mcp, telegram, gmail, slack, discord, integration, ai employee]
-chapter: 13
+chapter: 24
 lesson: 3
 duration_minutes: 35
 

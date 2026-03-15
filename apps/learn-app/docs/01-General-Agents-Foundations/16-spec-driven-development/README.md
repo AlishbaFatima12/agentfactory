@@ -1,13 +1,13 @@
 ---
 sidebar_position: 5
-title: "Chapter 5: Spec-Driven Development with Claude Code"
+title: "Chapter 16: Spec-Driven Development with Claude Code"
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-1/chapter-05/spec-driven-development.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-1/chapter-16/spec-driven-development.pdf"
   title: "Spec-Driven Development"
   height: 700
 ---
 
-# Chapter 5: Spec-Driven Development with Claude Code
+# Chapter 16: Spec-Driven Development with Claude Code
 
 Spec-Driven Development (SDD) represents a paradigm shift in how software is created with AI assistance. Rather than treating AI coding agents as sophisticated autocomplete tools, SDD establishes specifications as the primary artifact of software development, with code becoming a generated output derived from these human-authored specifications.
 
@@ -25,8 +25,8 @@ Spec-Driven Development emerged as a response to these challenges. Rather than i
 
 This chapter builds directly on:
 
-- **Chapter 3** — You learned Claude Code's core capabilities: CLAUDE.md for persistent memory (Lesson 5), Subagent orchestration (Lesson 9), and the foundational tools that enable agentic workflows
-- **Chapter 4** — You learned context engineering: why context quality determines agent reliability, context isolation patterns (Lesson 9), and the Tasks system for persistent state (Lesson 4)
+- **Chapter 14** — You learned Claude Code's core capabilities: CLAUDE.md for persistent memory (Lesson 5), Subagent orchestration (Lesson 9), and the foundational tools that enable agentic workflows
+- **Chapter 15** — You learned context engineering: why context quality determines agent reliability, context isolation patterns (Lesson 9), and the Tasks system for persistent state (Lesson 4)
 
 SDD is the **methodology** that orchestrates these capabilities into production-ready workflows.
 

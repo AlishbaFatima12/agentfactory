@@ -7,7 +7,7 @@ This lesson provides a structured prioritisation framework for selecting which o
 - **Prioritisation as Sequencing, Not Selection**: All eleven extensions may eventually matter. The framework determines order, not inclusion. Run three in parallel in the first quarter: highest-volume workflow, highest-risk compliance area, and most at-risk knowledge.
 - **Same Connectors, Different Scope**: Claude in Excel and Cowork share the same data connector ecosystem. The difference is scope — single-workbook assistant vs multi-application agent — not infrastructure. Enterprise extensions add institutional knowledge on top of both layers through SKILL.md files.
 - **Regulatory Override Rule**: An extension addressing compliance requirements moves to the front of the queue regardless of its composite score, because non-compliance is a risk cost, not a friction cost.
-- **Knowledge Extraction as the Bridge**: The methodology from Chapter 16 is what converts each generic extension area into an organisation-specific SKILL.md. The extension roadmap is the input; the Knowledge Extraction Method is the process; the validated SKILL.md is the output.
+- **Knowledge Extraction as the Bridge**: The methodology from Chapter 27 is what converts each generic extension area into an organisation-specific SKILL.md. The extension roadmap is the input; the Knowledge Extraction Method is the process; the validated SKILL.md is the output.
 
 ### Critical Patterns
 
@@ -23,5 +23,5 @@ This lesson provides a structured prioritisation framework for selecting which o
 
 ### Connections
 
-- **Builds on**: Lessons 9-10 (enterprise extension areas), Lesson 8 (knowledge extraction applied to finance), Chapter 16 (the Knowledge Extraction Method)
-- **Leads to**: Chapter 18 (Legal and Compliance Domain Agents) applies the same methodology to a different domain with stricter governance requirements
+- **Builds on**: Lessons 9-10 (enterprise extension areas), Lesson 8 (knowledge extraction applied to finance), Chapter 27 (the Knowledge Extraction Method)
+- **Leads to**: Chapter 29 (Legal and Compliance Domain Agents) applies the same methodology to a different domain with stricter governance requirements

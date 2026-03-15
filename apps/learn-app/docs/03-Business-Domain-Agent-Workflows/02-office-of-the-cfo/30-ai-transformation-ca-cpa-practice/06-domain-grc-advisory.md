@@ -20,7 +20,7 @@ keywords:
     "UK Corporate Governance Code",
     "CA CPA AI",
   ]
-chapter: 19
+chapter: 30
 lesson: 6
 duration_minutes: 35
 

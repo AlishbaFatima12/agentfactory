@@ -24,7 +24,7 @@ keywords:
     "delegated calculation",
     "production-ready",
   ]
-chapter: 18
+chapter: 29
 lesson: 11
 duration_minutes: 45
 

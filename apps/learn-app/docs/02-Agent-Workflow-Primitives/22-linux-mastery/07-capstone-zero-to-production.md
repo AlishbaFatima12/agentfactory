@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: "Capstone: Zero to Production"
-chapter: 11
+chapter: 22
 lesson: 7
 layer: L2
 duration_minutes: 45

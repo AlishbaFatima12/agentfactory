@@ -20,5 +20,5 @@ CA/CPA practice faces the highest AI transformation stakes of any profession bec
 
 ### Connections
 
-- **Builds on**: Chapter 18's IDFA methodology and the broader Agent Factory paradigm of domain-specific AI agents.
+- **Builds on**: Chapter 29's IDFA methodology and the broader Agent Factory paradigm of domain-specific AI agents.
 - **Leads to**: Deep dives into each of the five CA/CPA domains (Lessons 2-6) and hands-on plugin/workflow implementation (Lessons 7-16).

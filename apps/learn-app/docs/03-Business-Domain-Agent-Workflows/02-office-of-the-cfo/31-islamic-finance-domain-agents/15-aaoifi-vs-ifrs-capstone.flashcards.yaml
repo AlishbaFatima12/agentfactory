@@ -1,97 +1,97 @@
 deck:
-  id: "ch20-15-aaoifi-vs-ifrs-capstone"
+  id: "ch31-15-aaoifi-vs-ifrs-capstone"
   title: "AAOIFI vs IFRS Full Financial Statements"
   description: "The five material AAOIFI/IFRS differences, IAH classification impact on ROE, ijarah treatment divergence, reconciliation methodology, and framework-tension audit risks."
   tags: ["aaoifi", "ifrs", "islamic-accounting", "capstone"]
   version: 1
 
 cards:
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-001"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-001"
     front: "What are the five material AAOIFI/IFRS differences for an Islamic bank?"
     back: "1. IAH classification\n2. Ijarah treatment\n3. Income labels\n4. Impairment method\n5. Zakat treatment"
     tags: ["aaoifi-ifrs", "differences"]
     difficulty: "basic"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-002"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-002"
     front: "How does AAOIFI classify IAH funds on the balance sheet versus IFRS?"
     back: "AAOIFI: separate category between liabilities and equity.\nIFRS: financial liability under IAS 32."
     tags: ["iah", "classification"]
     difficulty: "basic"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-003"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-003"
     front: "A Bahrain AAOIFI bank and a UAE IFRS bank have identical profitability. Why does the AAOIFI bank report lower ROE?"
     back: "Under AAOIFI, IAH funds enlarge the apparent equity base, lowering ROE. Under IFRS, IAH funds are liabilities, making equity smaller and ROE higher. The gap is an accounting artefact."
     tags: ["roe", "iah", "framework-artefact"]
     difficulty: "advanced"
     why: "How should an investor adjust the comparison to make their ROE figures comparable?"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-004"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-004"
     front: "How does ijarah asset treatment differ between AAOIFI FAS 32 and IFRS 16?"
     back: "AAOIFI: on lessor's balance sheet, depreciated.\nIFRS 16: derecognise asset, recognise net investment in lease."
     tags: ["ijarah", "fas-32", "ifrs-16"]
     difficulty: "intermediate"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-005"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-005"
     front: "Why is the IAH classification the most material AAOIFI/IFRS divergence for Islamic banks?"
     back: "For a typical Islamic bank, 65% of funding comes from IAH. Reclassifying this amount changes reported leverage, equity base, and all equity-denominated ratios because the largest funding source shifts categories."
     tags: ["iah", "materiality"]
     difficulty: "intermediate"
     why: "What are the consequences for capital adequacy ratios when IAH funds are reclassified?"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-006"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-006"
     front: "What four financial statements must a Bahraini Islamic bank produce under AAOIFI?"
     back: "1. Financial position\n2. Income\n3. Changes in equity of IAH\n4. Cash flows"
     tags: ["aaoifi", "financial-statements"]
     difficulty: "basic"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-007"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-007"
     front: "Why does AAOIFI require product-specific income labels like 'Murabaha Income' instead of generic terms?"
     back: "Each Islamic product has a distinct Shariah structure, so labels must reflect the actual contract type. Generic or interest-based labels obscure the Shariah nature and violate AAOIFI presentation requirements."
     tags: ["income-labels", "aaoifi"]
     difficulty: "intermediate"
     why: "What compliance error occurs if an AAOIFI bank uses 'Net Interest Income'?"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-008"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-008"
     front: "What income statement labels are prohibited in AAOIFI financial statements?"
     back: "\"Net Interest Income\" and any interest-based labels."
     tags: ["aaoifi", "prohibited-labels"]
     difficulty: "basic"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-009"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-009"
     front: "How does AAOIFI FAS 30 impairment differ from IFRS 9 ECL in practice?"
     back: "Both use staging, but IFRS 9's forward-looking ECL model may recognise provisions earlier — particularly at the Stage 1/Stage 2 boundary where forward-looking expectations matter most."
     tags: ["impairment", "fas-30", "ifrs-9"]
     difficulty: "intermediate"
     why: "What third provisioning layer do Bahraini banks face beyond both FAS 30 and IFRS 9?"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-010"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-010"
     front: "Why does AAOIFI prohibit the label 'Loans and Advances' on an Islamic bank's balance sheet?"
     back: "Each Islamic product has a distinct Shariah structure (murabaha, ijarah, musharaka), so AAOIFI requires product-specific line items. Lumping them as 'loans' obscures the contractual differences that define Islamic finance."
     tags: ["aaoifi", "compliance-error"]
     difficulty: "intermediate"
     why: "What happens if an auditor finds IFRS-default labels in an AAOIFI-primary bank's statements?"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-011"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-011"
     front: "How does framework choice affect reported total assets for a bank with a large ijarah portfolio?"
     back: "Under AAOIFI, ijarah assets stay on balance sheet at depreciated cost. Under IFRS, finance leases are derecognised and replaced by lease receivables — changing asset composition even if totals are similar."
     tags: ["ijarah", "total-assets", "framework-choice"]
     difficulty: "advanced"
     why: "Which framework's presentation better reflects the economic substance of ijarah?"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-012"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-012"
     front: "What is the pragmatic industry solution for dual AAOIFI/IFRS reporting?"
     back: "IFRS primary for consolidated statements with AAOIFI supplementary disclosures."
     tags: ["dual-framework", "reporting"]
     difficulty: "intermediate"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-013"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-013"
     front: "Why does AAOIFI-to-IFRS reconciliation require more than relabelling?"
     back: "IAH reclassification changes leverage and equity ratios. Ijarah treatment changes asset composition. These are substantive balance sheet restructurings reflecting different views of economic substance, not label swaps."
     tags: ["reconciliation", "aaoifi-ifrs"]
     difficulty: "advanced"
     why: "What does this mean for an auditor who must sign off on both sets of statements?"
 
-  - id: "ch20-15-aaoifi-vs-ifrs-capstone-014"
+  - id: "ch31-15-aaoifi-vs-ifrs-capstone-014"
     front: "What balance sheet line item exists in AAOIFI statements but has no IFRS equivalent?"
     back: "Equity of Investment Account Holders (separate section)."
     tags: ["iah", "aaoifi", "balance-sheet"]

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: "How Your Employee Works"
-chapter: 7
+chapter: 18
 lesson: 4
 duration_minutes: 30
 description: "Open the hood on your AI Employee to discover 7 architectural components and 6 universal patterns, understand why each is essential, and see how they map across every agent framework"
@@ -131,7 +131,7 @@ One gateway per host. That is the design. It owns all messaging connections -- W
 **The pattern: Orchestration.**
 
 :::tip Claude Code for Gateway Troubleshooting
-If you have Claude Code from Chapter 3, you can ask it to diagnose gateway issues: "Read my OpenClaw gateway logs and tell me why the last message failed" or "Check if my gateway service is running and restart it if needed." The manual commands in this lesson are what you need to understand -- Claude Code accelerates the operational work once you do.
+If you have Claude Code from Chapter 14, you can ask it to diagnose gateway issues: "Read my OpenClaw gateway logs and tell me why the last message failed" or "Check if my gateway service is running and restart it if needed." The manual commands in this lesson are what you need to understand -- Claude Code accelerates the operational work once you do.
 :::
 
 ## Channels -- Your Employee's Communication Layer
@@ -333,7 +333,7 @@ Before auto-compaction, OpenClaw runs a **silent memory flush** -- a hidden agen
 
 ## Skills -- Your Employee's Teachable Abilities
 
-You built skills in Chapter 3 -- SKILL.md files with YAML frontmatter and Markdown instructions. OpenClaw uses the exact same format. Skills load from three locations with workspace skills (highest priority) overriding managed and bundled defaults:
+You built skills in Chapter 14 -- SKILL.md files with YAML frontmatter and Markdown instructions. OpenClaw uses the exact same format. Skills load from three locations with workspace skills (highest priority) overriding managed and bundled defaults:
 
 ```
 ~/.openclaw/workspace/skills/   # Your custom skills (highest priority)

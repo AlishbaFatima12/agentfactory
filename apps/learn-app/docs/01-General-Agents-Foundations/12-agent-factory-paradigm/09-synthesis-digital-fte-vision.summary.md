@@ -28,4 +28,4 @@ Custom Agents become Digital Full-Time Employees (Digital FTEs) -- specialized d
 
 ### Connections
 - **Builds on**: All previous lessons -- this is the synthesis lesson that ties together the inflection point evidence, orchestrator role, Five Powers, AIFF Standards, business strategy, Nine Pillars, and SDD methodology into a unified vision
-- **Leads to**: Chapter 2 (deeper dive into AIFF standards for practical Digital FTE building); the rest of the book which teaches Path B -- mastering the Agent Factory paradigm through hands-on implementation of specifications, skills, and Custom Agents
+- **Leads to**: Chapter 13 (deeper dive into AIFF standards for practical Digital FTE building); the rest of the book which teaches Path B -- mastering the Agent Factory paradigm through hands-on implementation of specifications, skills, and Custom Agents

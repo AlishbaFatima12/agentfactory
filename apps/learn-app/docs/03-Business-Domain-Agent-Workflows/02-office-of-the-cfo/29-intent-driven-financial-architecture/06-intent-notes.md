@@ -19,7 +19,7 @@ keywords:
     "model audit",
     "finance domain agent",
   ]
-chapter: 18
+chapter: 29
 lesson: 6
 duration_minutes: 25
 

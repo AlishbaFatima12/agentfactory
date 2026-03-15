@@ -1,13 +1,13 @@
 ---
 sidebar_position: 4
-title: "Chapter 4: Effective Context Engineering with General Agents"
+title: "Chapter 15: Effective Context Engineering with General Agents"
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-1/chapter-04/context-engineering-blueprint.pdf"
-  title: "Chapter 4: Context Engineering Blueprint"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-1/chapter-15/context-engineering-blueprint.pdf"
+  title: "Chapter 15: Context Engineering Blueprint"
   height: 700
 ---
 
-# Chapter 4: Effective Context Engineering with General Agents
+# Chapter 15: Effective Context Engineering with General Agents
 
 You've learned how to use Claude Code and Cowork. You know the tools—CLAUDE.md, Skills, Subagents, Hooks, MCP. Now comes a harder question: **Why do some agents work brilliantly while others fail?**
 

@@ -1,5 +1,5 @@
 deck:
-  id: ch01-selling-agentic-ai
+  id: ch12-selling-agentic-ai
   title: Selling Agentic AI Services to Enterprises
   description: Flashcards covering enterprise sales positioning, pricing models, market landscape, and consultative selling strategies for Digital FTE solutions in the agentic AI market.
   tags:
@@ -11,7 +11,7 @@ deck:
   - market-strategy
   version: 1
 cards:
-- id: ch01-selling-agentic-ai-001
+- id: ch12-selling-agentic-ai-001
   type: recall
   difficulty: basic
   front: According to Robert Herjavec, what is the most important skill that makes a founder successful?
@@ -19,7 +19,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-002
+- id: ch12-selling-agentic-ai-002
   type: recall
   difficulty: basic
   front: What is the Gen AI Paradox?
@@ -27,7 +27,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-003
+- id: ch12-selling-agentic-ai-003
   type: thinking
   difficulty: intermediate
   front: Why does the Gen AI Paradox create a sales opportunity for agentic AI providers?
@@ -36,7 +36,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-004
+- id: ch12-selling-agentic-ai-004
   type: recall
   difficulty: basic
   front: What is the estimated incremental spending on agentic AI services by the end of the decade?
@@ -44,7 +44,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-005
+- id: ch12-selling-agentic-ai-005
   type: thinking
   difficulty: intermediate
   front: Why does agentic AI cause 20-30% contraction in core tech services while creating new value pools?
@@ -54,7 +54,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-006
+- id: ch12-selling-agentic-ai-006
   type: recall
   difficulty: basic
   front: What percentage of C-suite executives are already running agentic AI pilots according to McKinsey's 2025 survey?
@@ -62,7 +62,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-007
+- id: ch12-selling-agentic-ai-007
   type: thinking
   difficulty: intermediate
   front: Why must service providers navigate both market compression and new value pools simultaneously?
@@ -72,7 +72,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-008
+- id: ch12-selling-agentic-ai-008
   type: recall
   difficulty: basic
   front: What is the estimated size of the agentic AI workflow services opportunity?
@@ -80,7 +80,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-009
+- id: ch12-selling-agentic-ai-009
   type: recall
   difficulty: intermediate
   front: What are the four key enterprise investment areas for agentic AI?
@@ -88,7 +88,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-010
+- id: ch12-selling-agentic-ai-010
   type: thinking
   difficulty: intermediate
   front: Why is 70%+ of the agentic AI opportunity concentrated in just five industries?
@@ -98,7 +98,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-011
+- id: ch12-selling-agentic-ai-011
   type: recall
   difficulty: intermediate
   front: Name any 3 of the 6 core factors enterprises cite when choosing an agentic AI service provider.
@@ -116,7 +116,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-012
+- id: ch12-selling-agentic-ai-012
   type: thinking
   difficulty: advanced
   front: Why has buying power for AI services shifted from IT departments to business units?
@@ -126,7 +126,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-013
+- id: ch12-selling-agentic-ai-013
   type: recall
   difficulty: basic
   front: What are the four value propositions for agentic AI service providers identified by McKinsey?
@@ -134,7 +134,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-014
+- id: ch12-selling-agentic-ai-014
   type: thinking
   difficulty: intermediate
   front: How do the four McKinsey value propositions connect to Lesson 6's Snakes and Ladders framework?
@@ -144,7 +144,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-015
+- id: ch12-selling-agentic-ai-015
   type: recall
   difficulty: basic
   front: What are the three core challenges that prevent enterprises from scaling agentic AI?
@@ -152,7 +152,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-016
+- id: ch12-selling-agentic-ai-016
   type: thinking
   difficulty: intermediate
   front: Why is integration complexity the top challenge enterprises face when scaling agentic AI?
@@ -162,7 +162,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-017
+- id: ch12-selling-agentic-ai-017
   type: recall
   difficulty: intermediate
   front: What five foundational capabilities does McKinsey say distinguish leading agentic AI service providers?
@@ -170,7 +170,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-018
+- id: ch12-selling-agentic-ai-018
   type: thinking
   difficulty: advanced
   front: Why does consultative selling outperform product selling in the agentic AI market?
@@ -180,7 +180,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-019
+- id: ch12-selling-agentic-ai-019
   type: recall
   difficulty: basic
   front: What percentage of enterprises prefer outcome-based pricing over traditional time-and-materials models?
@@ -188,7 +188,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-020
+- id: ch12-selling-agentic-ai-020
   type: recall
   difficulty: intermediate
   front: What are the three new pricing models for agentic AI services?
@@ -196,7 +196,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-021
+- id: ch12-selling-agentic-ai-021
   type: thinking
   difficulty: intermediate
   front: How does gain-share pricing align provider and client incentives?
@@ -206,7 +206,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-022
+- id: ch12-selling-agentic-ai-022
   type: thinking
   difficulty: intermediate
   front: Why can small specialized companies compete effectively in the enterprise agentic AI market?
@@ -216,7 +216,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-023
+- id: ch12-selling-agentic-ai-023
   type: recall
   difficulty: intermediate
   front: What four types of partners does an agentic AI service provider need from day one?
@@ -224,7 +224,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-024
+- id: ch12-selling-agentic-ai-024
   type: thinking
   difficulty: advanced
   front: How should a sales pitch to a CFO differ from a pitch to a CEO?
@@ -234,7 +234,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-025
+- id: ch12-selling-agentic-ai-025
   type: recall
   difficulty: intermediate
   front: What is a human-agent delivery pod?
@@ -242,7 +242,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-026
+- id: ch12-selling-agentic-ai-026
   type: recall
   difficulty: intermediate
   front: What is the purpose of an Agent Operation Center?
@@ -250,7 +250,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-027
+- id: ch12-selling-agentic-ai-027
   type: thinking
   difficulty: advanced
   front: Why should FTE productivity be delinked from commercial models as agentic AI scales?
@@ -260,7 +260,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-028
+- id: ch12-selling-agentic-ai-028
   type: recall
   difficulty: basic
   front: What percentage of current roles' work could be handled by agents within three years according to enterprise estimates?
@@ -268,7 +268,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-029
+- id: ch12-selling-agentic-ai-029
   type: thinking
   difficulty: advanced
   front: How does a consultative domain-driven go-to-market model differ from traditional product sales?
@@ -278,7 +278,7 @@ cards:
   tags:
   - enterprise-sales
   - digital-fte
-- id: ch01-selling-agentic-ai-030
+- id: ch12-selling-agentic-ai-030
   type: thinking
   difficulty: advanced
   front: Why is domain specificity a critical success factor rather than positioning AI as a horizontal capability?

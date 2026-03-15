@@ -1,5 +1,5 @@
 deck:
-  id: ch06-06-constraints-and-safety
+  id: ch17-06-constraints-and-safety
   title: Constraints and Safety
   description: Risk categories, defense-in-depth layers, permission models, sandboxing strategies, trust gradualism, and the safety paradox that constraints enable autonomy.
   tags:
@@ -12,7 +12,7 @@ deck:
   - defense-in-depth
   version: 2
 cards:
-- id: ch06-06-constraints-and-safety-001
+- id: ch17-06-constraints-and-safety-001
   type: recall
   difficulty: basic
   front: What is the Safety Mantra for local AI work?
@@ -20,7 +20,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-002
+- id: ch17-06-constraints-and-safety-002
   type: thinking
   difficulty: intermediate
   front: Why does defense in depth use five layers instead of one strong safeguard?
@@ -29,7 +29,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-003
+- id: ch17-06-constraints-and-safety-003
   type: recall
   difficulty: basic
   front: Name any three of the five risk categories on the AI risk spectrum?
@@ -37,7 +37,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-004
+- id: ch17-06-constraints-and-safety-004
   type: thinking
   difficulty: intermediate
   front: How does the safety paradox explain that constraints enable autonomy?
@@ -46,7 +46,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-005
+- id: ch17-06-constraints-and-safety-005
   type: recall
   difficulty: basic
   front: What are the five layers of defense in depth, from innermost to outermost?
@@ -62,7 +62,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-006
+- id: ch17-06-constraints-and-safety-006
   type: thinking
   difficulty: advanced
   front: Why does skipping trust gradualism and jumping straight to full AI autonomy backfire?
@@ -72,7 +72,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-007
+- id: ch17-06-constraints-and-safety-007
   type: recall
   difficulty: intermediate
   front: What are the three permission models and when is each best used?
@@ -84,7 +84,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-008
+- id: ch17-06-constraints-and-safety-008
   type: thinking
   difficulty: intermediate
   front: Why is a git branch considered sufficient sandboxing for most AI work?
@@ -93,7 +93,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-009
+- id: ch17-06-constraints-and-safety-009
   type: recall
   difficulty: basic
   front: What four emergency commands should you memorize for when AI makes unwanted changes?
@@ -101,7 +101,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-010
+- id: ch17-06-constraints-and-safety-010
   type: thinking
   difficulty: intermediate
   front: Why must the guardrail prompt template include an uncertainty rule alongside forbidden actions?
@@ -110,7 +110,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-011
+- id: ch17-06-constraints-and-safety-011
   type: recall
   difficulty: intermediate
   front: What are the four phases of trust gradualism and their timeframes?
@@ -124,7 +124,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-012
+- id: ch17-06-constraints-and-safety-012
   type: thinking
   difficulty: advanced
   front: How does the wrong-directory deletion incident illustrate all five defense layers?
@@ -134,7 +134,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-013
+- id: ch17-06-constraints-and-safety-013
   type: recall
   difficulty: intermediate
   front: What four trust signals should you track to decide when to increase AI autonomy?
@@ -142,7 +142,7 @@ cards:
   tags:
   - safety
   - constraints
-- id: ch06-06-constraints-and-safety-014
+- id: ch17-06-constraints-and-safety-014
   type: thinking
   difficulty: intermediate
   front: Why do even Permissive mode users still need approval for destructive operations?

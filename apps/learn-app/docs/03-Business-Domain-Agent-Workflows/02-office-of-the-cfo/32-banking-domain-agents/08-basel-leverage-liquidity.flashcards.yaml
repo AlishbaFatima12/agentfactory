@@ -1,95 +1,95 @@
 deck:
-  id: "ch21-08-basel-leverage-liquidity"
+  id: "ch32-08-basel-leverage-liquidity"
   title: "Leverage Ratio, LCR, and NSFR"
   description: "Key concepts from the leverage ratio backstop, HQLA classification, Liquidity Coverage Ratio, net cash outflows, and Net Stable Funding Ratio."
   tags: ["leverage-ratio", "lcr", "nsfr", "hqla", "liquidity"]
   version: 1
 
 cards:
-  - id: "ch21-08-basel-leverage-liquidity-001"
+  - id: "ch32-08-basel-leverage-liquidity-001"
     front: "What is the formula for the Basel III Liquidity Coverage Ratio (LCR)?"
     back: "LCR = Stock of HQLA / Total Net Cash Outflows over 30 Days >= 100%."
     tags: ["lcr", "liquidity"]
     difficulty: "basic"
 
-  - id: "ch21-08-basel-leverage-liquidity-002"
+  - id: "ch32-08-basel-leverage-liquidity-002"
     front: "Northern Rock reported a Tier 1 ratio above 10% in 2006 but collapsed in September 2007. Why did strong capital ratios fail to prevent failure?"
     back: "Northern Rock was 75x leveraged in absolute terms with almost no liquid asset buffer. When wholesale funding markets froze, it could not fund its assets, because risk-weighted capital ratios masked the concentration in low-risk-weight assets."
     tags: ["northern-rock", "leverage-ratio", "liquidity-crisis"]
     difficulty: "advanced"
     why: "Which Basel III measure -- leverage ratio, LCR, or NSFR -- would have most directly flagged Northern Rock's vulnerability?"
 
-  - id: "ch21-08-basel-leverage-liquidity-003"
+  - id: "ch32-08-basel-leverage-liquidity-003"
     front: "What three categories make up HQLA, and what haircut applies to each?"
     back: "Level 1: 0% haircut (cash, reserves, sovereign bonds).\nLevel 2A: 15% haircut (covered bonds, IG corporates).\nLevel 2B: 25-50% haircut (lower-rated bonds, equities, RMBS)."
     tags: ["hqla", "lcr"]
     difficulty: "intermediate"
 
-  - id: "ch21-08-basel-leverage-liquidity-004"
+  - id: "ch32-08-basel-leverage-liquidity-004"
     front: "What is the cap on Level 2 assets in the HQLA stock?"
     back: "Combined Level 2 capped at 40% of total HQLA. Level 2B alone capped at 15%."
     tags: ["hqla", "level-2-cap"]
     difficulty: "intermediate"
 
-  - id: "ch21-08-basel-leverage-liquidity-005"
+  - id: "ch32-08-basel-leverage-liquidity-005"
     front: "Why is combined Level 2 HQLA capped at 40% of total HQLA?"
     back: "Level 2 assets carry higher price volatility and lower liquidity than Level 1. Capping them ensures the buffer is anchored in the most reliable liquid assets (cash and sovereign bonds), because Level 2 assets may lose value rapidly in a crisis."
     tags: ["hqla", "level-2-cap", "regulatory-design"]
     difficulty: "intermediate"
     why: "How would a bank with 60% Level 2A assets in its HQLA portfolio be exposed differently than one with 80% Level 1?"
 
-  - id: "ch21-08-basel-leverage-liquidity-006"
+  - id: "ch32-08-basel-leverage-liquidity-006"
     front: "How are total net cash outflows calculated for the LCR?"
     back: "Total outflows minus min(total inflows, 75% of total outflows)."
     tags: ["lcr", "net-cash-outflows"]
     difficulty: "intermediate"
 
-  - id: "ch21-08-basel-leverage-liquidity-007"
+  - id: "ch32-08-basel-leverage-liquidity-007"
     front: "Why does the LCR cap inflow recognition at 75% of total outflows?"
     back: "The cap prevents banks from relying entirely on expected inflows to meet the ratio, because inflows may not materialise during a severe stress event. It forces banks to hold a minimum stock of liquid assets regardless of expected cash receipts."
     tags: ["lcr", "inflow-cap"]
     difficulty: "intermediate"
     why: "What would happen if a bank with high expected inflows but minimal HQLA faced a sudden market freeze?"
 
-  - id: "ch21-08-basel-leverage-liquidity-008"
+  - id: "ch32-08-basel-leverage-liquidity-008"
     front: "What run-off rate applies to wholesale deposits from financial institutions under LCR stress?"
     back: "100% run-off rate assumed."
     tags: ["lcr", "run-off-rates", "wholesale-funding"]
     difficulty: "basic"
 
-  - id: "ch21-08-basel-leverage-liquidity-009"
+  - id: "ch32-08-basel-leverage-liquidity-009"
     front: "Why do wholesale financial institution deposits carry a 100% run-off rate while stable retail deposits carry only 3-5%?"
     back: "Financial institutions monitor counterparty risk actively and withdraw funding at the first sign of stress, because they are sophisticated and uninsured. Retail deposits are insured and sticky, therefore depositors are slower to withdraw."
     tags: ["run-off-rates", "deposit-behaviour"]
     difficulty: "advanced"
     why: "How did this difference in deposit behaviour play out during the 2023 Silicon Valley Bank collapse?"
 
-  - id: "ch21-08-basel-leverage-liquidity-010"
+  - id: "ch32-08-basel-leverage-liquidity-010"
     front: "What is the formula for the Net Stable Funding Ratio (NSFR)?"
     back: "NSFR = Available Stable Funding / Required Stable Funding >= 100%."
     tags: ["nsfr", "structural-funding"]
     difficulty: "basic"
 
-  - id: "ch21-08-basel-leverage-liquidity-011"
+  - id: "ch32-08-basel-leverage-liquidity-011"
     front: "How can a bank pass LCR but fail NSFR?"
     back: "A bank may hold plenty of liquid assets for a 30-day stress (high LCR) while funding long-term mortgages with short-term wholesale debt. The maturity mismatch means its structural funding is inadequate over a 1-year horizon, therefore NSFR fails."
     tags: ["lcr-vs-nsfr", "maturity-mismatch"]
     difficulty: "advanced"
     why: "Why is maturity mismatch considered the fundamental banking risk that has caused failures for centuries?"
 
-  - id: "ch21-08-basel-leverage-liquidity-012"
+  - id: "ch32-08-basel-leverage-liquidity-012"
     front: "What four components make up the total exposure measure in the leverage ratio denominator?"
     back: "1. On-balance-sheet assets\n2. Derivative exposures\n3. Securities financing transactions (SFTs)\n4. Off-balance-sheet items"
     tags: ["leverage-ratio", "total-exposure-measure"]
     difficulty: "intermediate"
 
-  - id: "ch21-08-basel-leverage-liquidity-013"
+  - id: "ch32-08-basel-leverage-liquidity-013"
     front: "What is the leverage ratio minimum under Basel III and under UK PRA rules?"
     back: "Basel: 3.0%. UK PRA: 3.25% for deposit-takers with over GBP 75 billion in retail deposits."
     tags: ["leverage-ratio", "uk-pra"]
     difficulty: "basic"
 
-  - id: "ch21-08-basel-leverage-liquidity-014"
+  - id: "ch32-08-basel-leverage-liquidity-014"
     front: "How does the leverage ratio catch risks that risk-weighted capital ratios miss?"
     back: "It uses total exposure without risk weights, so a bank concentrated in 0%-risk-weighted assets (e.g., sovereign bonds) cannot report a strong ratio while being dangerously leveraged. The leverage ratio reveals the true ratio of capital to total assets."
     tags: ["leverage-ratio", "risk-weighted-ratios"]

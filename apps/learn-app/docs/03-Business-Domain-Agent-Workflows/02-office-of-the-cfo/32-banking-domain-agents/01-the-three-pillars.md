@@ -18,7 +18,7 @@ keywords:
     "banking plugin",
     "regulatory compliance AI",
   ]
-chapter: 21
+chapter: 32
 lesson: 1
 duration_minutes: 20
 
@@ -62,7 +62,7 @@ cognitive_load:
     - "Basel III/IV as the solvency pillar — capital adequacy against unexpected losses"
     - "AML/KYC as the financial crime pillar — detecting and reporting illicit activity"
     - "Pillar interaction — the same portfolio requires simultaneous treatment under all three"
-  assessment: "5 concepts at A2 level — within the 5-7 cognitive limit for this tier. Students enter from Chapter 20 with strong familiarity with domain agent architecture. This lesson introduces a new professional domain (banking regulation) rather than new technical tools."
+  assessment: "5 concepts at A2 level — within the 5-7 cognitive limit for this tier. Students enter from Chapter 31 with strong familiarity with domain agent architecture. This lesson introduces a new professional domain (banking regulation) rather than new technical tools."
 
 differentiation:
   extension_for_advanced: "Research the Basel Committee on Banking Supervision's history — why were Basel I, II, and III each created? What crisis prompted each revision? This historical context explains why the current regulatory framework has three pillars rather than one unified standard."
@@ -71,7 +71,7 @@ differentiation:
 
 # The Three Regulatory Pillars of Modern Banking
 
-In Chapter 20, you built jurisdiction-aware agents for Islamic finance — a domain where the same transaction produces different accounting outputs depending on which country you are working in. This chapter confronts a different kind of complexity: a domain where the same asset is simultaneously governed by three separate regulatory frameworks, each asking different questions, requiring different calculations, and producing different outputs. Banking is that domain.
+In Chapter 31, you built jurisdiction-aware agents for Islamic finance — a domain where the same transaction produces different accounting outputs depending on which country you are working in. This chapter confronts a different kind of complexity: a domain where the same asset is simultaneously governed by three separate regulatory frameworks, each asking different questions, requiring different calculations, and producing different outputs. Banking is that domain.
 
 Consider a single corporate loan of $50 million sitting on a bank's balance sheet. At this moment, three separate regulatory frameworks are governing that loan simultaneously. The accounting framework (IFRS 9) asks: "How much should the bank provision for expected losses on this loan?" The solvency framework (Basel III) asks: "How much capital must the bank hold against this loan to survive unexpected losses?" The financial crime framework (AML/KYC) asks: "Is this loan being used to launder money, finance terrorism, or evade sanctions?" Each framework produces a different number, a different report, and a different regulatory filing. An AI agent that addresses only one pillar gives you one-third of the answer.
 

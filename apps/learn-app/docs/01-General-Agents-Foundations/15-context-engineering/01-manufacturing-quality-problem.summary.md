@@ -17,5 +17,5 @@ Context engineering is the discipline of controlling what your AI sees to produc
 - Ignoring baseline cost: much of your context is consumed before you type anything
 
 ### Connections
-- **Builds on**: Chapter 1's Digital FTE concept (consistent agents require consistent context)
+- **Builds on**: Chapter 12's Digital FTE concept (consistent agents require consistent context)
 - **Leads to**: Signal vs Noise audit for quality control (Lesson 2)

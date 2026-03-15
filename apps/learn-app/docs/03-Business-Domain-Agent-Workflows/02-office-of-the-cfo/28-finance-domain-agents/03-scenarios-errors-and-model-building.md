@@ -20,7 +20,7 @@ keywords:
     "model building",
     "formula debugging",
   ]
-chapter: 17
+chapter: 28
 lesson: 3
 duration_minutes: 35
 

@@ -1,82 +1,82 @@
 deck:
-  id: "ch19-11-tax-advisory-practice-lab"
+  id: "ch30-11-tax-advisory-practice-lab"
   title: "Tax & Advisory Practice Lab"
   description: "Corporate tax computation under ITO 2001, M&A due diligence with DCF/comps, and restructuring scenario modelling with creditor waterfall analysis"
   tags: ["ca-cpa", "practice-lab", "tax", "due-diligence", "restructuring"]
   version: 1
   lesson: 11
-  chapter: 19
+  chapter: 30
 
 cards:
-  - id: "ch19-11-tax-advisory-practice-lab-001"
+  - id: "ch30-11-tax-advisory-practice-lab-001"
     front: "What are the three exercises in the Tax & Advisory Practice Lab?"
     back: "Exercise 12: Corporate tax computation under Pakistan ITO 2001 (45 min). Exercise 13: M&A financial due diligence with /dcf and /comps (60 min). Exercise 14: Restructuring scenario modelling (45 min)."
     tags: ["lab-exercises", "overview"]
     difficulty: "basic"
 
-  - id: "ch19-11-tax-advisory-practice-lab-002"
+  - id: "ch30-11-tax-advisory-practice-lab-002"
     front: "What is the Pakistan corporate tax rate for a private (unlisted) manufacturing company used in Exercise 12?"
     back: "29% on adjusted taxable income."
     tags: ["exercise-12", "pakistan-tax", "corporate-rate"]
     difficulty: "basic"
 
-  - id: "ch19-11-tax-advisory-practice-lab-003"
+  - id: "ch30-11-tax-advisory-practice-lab-003"
     front: "What is the purpose of the Section 113 minimum tax check in the Pakistan corporate tax computation?"
     back: "When regular tax is lower than the minimum tax threshold, the company owes the higher minimum tax amount — so a company with large add-backs could owe more than the regular computation suggests."
     tags: ["exercise-12", "minimum-tax", "section-113"]
     difficulty: "intermediate"
 
-  - id: "ch19-11-tax-advisory-practice-lab-004"
+  - id: "ch30-11-tax-advisory-practice-lab-004"
     front: "What does EBITDA normalisation do in M&A due diligence, and why is it the professional's judgment call?"
     back: "Normalisation removes one-off items to reveal sustainable earnings — the basis for valuation multiples. The professional judges which items are genuinely non-recurring versus which the seller wants removed to inflate the implied multiple."
     tags: ["exercise-13", "ebitda-normalisation", "due-diligence"]
     difficulty: "intermediate"
 
-  - id: "ch19-11-tax-advisory-practice-lab-005"
+  - id: "ch30-11-tax-advisory-practice-lab-005"
     front: "In the Exercise 13 target, what is the normalised Y3 EBITDA after removing the three adjustments?"
     back: "PKR 84M — from reported Y3 EBITDA of PKR 82M, adding back PKR 8M one-off legal settlement (Y2 but tested in the model), normalising PKR 4M excess owner salary, removing PKR 6M pre-acquisition fees: net adjusted Y3 EBITDA = PKR 84M."
     tags: ["exercise-13", "ebitda-normalisation", "valuation"]
     difficulty: "intermediate"
 
-  - id: "ch19-11-tax-advisory-practice-lab-006"
+  - id: "ch30-11-tax-advisory-practice-lab-006"
     front: "What does the cash conversion cycle analysis in Exercise 13 reveal about the target company's working capital?"
     back: "Debtor days increased 42→67 days; inventory days increased 38→52 days over three years; creditor days stable at 45 days — worsening cash conversion cycle requires additional working capital investment that adjusts the enterprise value."
     tags: ["exercise-13", "working-capital", "cash-conversion-cycle"]
     difficulty: "intermediate"
 
-  - id: "ch19-11-tax-advisory-practice-lab-007"
+  - id: "ch30-11-tax-advisory-practice-lab-007"
     front: "What are the three restructuring scenarios modelled in Exercise 14 for the distressed Pakistan manufacturer?"
     back: "1. Consensual bank restructuring (30% haircut, trade creditors 18-month terms). 2. Voluntary arrangement (40% haircut on unsecured creditors, 24-month moratorium). 3. Asset sale to strategic buyer (5x EBITDA) with remaining entity wound down."
     tags: ["exercise-14", "restructuring-scenarios"]
     difficulty: "basic"
 
-  - id: "ch19-11-tax-advisory-practice-lab-008"
+  - id: "ch30-11-tax-advisory-practice-lab-008"
     front: "Why does the distressed entity in Exercise 14 have a going concern problem given EBITDA of PKR 22M and interest of PKR 24M?"
     back: "Interest exceeds EBITDA — the company cannot service its debt from operations. This creates negative interest coverage, making the current capital structure unsustainable without restructuring."
     tags: ["exercise-14", "going-concern", "interest-coverage"]
     difficulty: "intermediate"
 
-  - id: "ch19-11-tax-advisory-practice-lab-009"
+  - id: "ch30-11-tax-advisory-practice-lab-009"
     front: "Why is Step 7 (professional recommendation) the most important output in Exercise 14, even though Steps 2-4 take more time?"
     back: "Quantitative modelling cannot determine which scenario is achievable without understanding creditor dynamics, management credibility, and operational viability. BECAUSE the three scenarios provide the quantitative foundation; the recommendation requires judgment about what is achievable in practice."
     tags: ["exercise-14", "professional-recommendation", "judgment"]
     difficulty: "intermediate"
     why: "What specific information about creditor relationships would most change your restructuring recommendation between scenarios?"
 
-  - id: "ch19-11-tax-advisory-practice-lab-010"
+  - id: "ch30-11-tax-advisory-practice-lab-010"
     front: "In Exercise 12, which step requires professional judgment that no tax computation tool can make autonomously?"
     back: "Step 6 — identifying disclosure obligations: positions that are arguable or where a specific schedule must be filed. Whether a position is aggressive enough to require disclosure is professional judgment encoding the firm's risk appetite."
     tags: ["exercise-12", "disclosure-obligations", "professional-judgment"]
     difficulty: "advanced"
     why: "How would two firms with different risk appetites encode the same arguable tax position differently in their skill?"
 
-  - id: "ch19-11-tax-advisory-practice-lab-011"
+  - id: "ch30-11-tax-advisory-practice-lab-011"
     front: "In the Exercise 13 DCF, what WACC is used and why does it reflect Pakistan risk?"
     back: "WACC of 14% — reflecting a Pakistan risk premium on top of a standard cost of capital, higher than equivalent analyses in lower-risk markets due to country risk, currency risk, and market liquidity."
     tags: ["exercise-13", "dcf", "wacc-pakistan"]
     difficulty: "intermediate"
 
-  - id: "ch19-11-tax-advisory-practice-lab-012"
+  - id: "ch30-11-tax-advisory-practice-lab-012"
     front: "How does the Section 21(l) entertainment expense disallowance work in Exercise 12?"
     back: "Of PKR 850,000 entertainment expenses, PKR 350,000 relates to a private family dinner — disallowed because it fails the 'wholly and exclusively for business' test under ITO 2001 Section 21(l)."
     tags: ["exercise-12", "entertainment-expenses", "section-21"]

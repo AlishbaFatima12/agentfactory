@@ -1,14 +1,14 @@
 ---
 sidebar_position: 6
-title: "Chapter 2: Markdown - Writing Instructions Quiz"
+title: "Chapter 13: Markdown - Writing Instructions Quiz"
 ---
 
-# Chapter 2: Markdown - Writing Instructions Quiz
+# Chapter 13: Markdown - Writing Instructions Quiz
 
 Test your understanding of markdown as a structured communication language for AI collaboration. This quiz focuses on conceptual understanding and practical application.
 
 <Quiz
-title="Chapter 2: Markdown - Writing Instructions Assessment"
+title="Chapter 13: Markdown - Writing Instructions Assessment"
 questions={[ {
 question: "You write a project specification in plain text without any markdown formatting. What problem will AI most likely encounter when trying to implement your requirements?",
 options: [

@@ -23,7 +23,7 @@ keywords:
     "weighted pipeline",
     "deal velocity",
   ]
-chapter: 23
+chapter: 34
 lesson: 13
 duration_minutes: 30
 

@@ -26,6 +26,6 @@ BASH (terminal/shell) access is the fundamental capability that transforms AI fr
 - Building custom solutions when battle-tested Unix tools already exist (why build a "context retrieval tool" when `grep` works?)
 
 ### Connections
-- **Builds on**: The OODA loop concept from Chapter 1 (Observe, Orient, Decide, Act requires the ability to act)
+- **Builds on**: The OODA loop concept from Chapter 12 (Observe, Orient, Decide, Act requires the ability to act)
 - **Leads to**: Principle 2 (Code as Universal Interface). Once the agent can act on files, code becomes the shared language for precise communication
 - **Foundation for**: All seven principles. Terminal access is what makes verification possible, enables small reversible steps, allows state to persist in files, and makes observability meaningful

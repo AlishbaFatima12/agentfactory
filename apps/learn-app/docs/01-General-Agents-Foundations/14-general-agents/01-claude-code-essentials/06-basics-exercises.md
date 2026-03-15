@@ -3,7 +3,7 @@ slug: /General-Agents-Foundations/general-agents/basics-exercises
 title: "Practical Problem-Solving Exercises"
 practice_exercise: ch3-basics
 sidebar_position: 6
-chapter: 3
+chapter: 14
 lesson: 6
 duration_minutes: 120
 

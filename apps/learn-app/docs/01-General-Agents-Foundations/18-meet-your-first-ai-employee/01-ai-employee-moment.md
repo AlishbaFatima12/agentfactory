@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "The AI Employee Moment"
-chapter: 7
+chapter: 18
 lesson: 1
 duration_minutes: 20
 description: "Understand the AI Employee paradigm through OpenClaw's unprecedented rise, distinguish chatbots from AI Employees across six dimensions, and preview the architecture that makes autonomous agents work"
@@ -84,7 +84,7 @@ teaching_guide:
 
 # The AI Employee Moment
 
-In Chapters 1 through 6, you learned the Agent Factory paradigm, how to write clear instructions, how to work with General Agents, context engineering, spec-driven development, and the Seven Principles. Now something concrete brings it all together.
+In Chapters 12 through 17, you learned the Agent Factory paradigm, how to write clear instructions, how to work with General Agents, context engineering, spec-driven development, and the Seven Principles. Now something concrete brings it all together.
 
 In late January 2026, a weekend project by Peter Steinberger -- the Austrian engineer who founded PSPDFKit and spent 13 years building developer tools used by nearly a billion people -- went viral in a way the open-source world had rarely seen. His AI agent, originally called Clawdbot, accumulated GitHub stars at unprecedented speed. By mid-February 2026, the project (now renamed OpenClaw after an Anthropic trademark dispute) had crossed 209,000 stars, making it one of the fastest-growing repositories in GitHub history.
 
@@ -223,7 +223,7 @@ OpenClaw is not the destination. It is the most accessible on-ramp to understand
 
 ## Why This Matters for You
 
-In Chapter 1, you learned the Agent Factory thesis: companies will manufacture AI Employees, not just sell software. OpenClaw is a living example -- Steinberger used General Agents (Claude) to incubate the project, the project itself became a platform for Custom Agents, and now inside OpenAI he will build the next generation of Agent Factory infrastructure.
+In Chapter 12, you learned the Agent Factory thesis: companies will manufacture AI Employees, not just sell software. OpenClaw is a living example -- Steinberger used General Agents (Claude) to incubate the project, the project itself became a platform for Custom Agents, and now inside OpenAI he will build the next generation of Agent Factory infrastructure.
 
 But this is not about OpenClaw specifically. It is about you understanding what an AI Employee **feels like** before you build one. There is a difference between reading about autonomous agents and experiencing one that messages you at 7 AM with a summary of overnight work it completed on your behalf.
 

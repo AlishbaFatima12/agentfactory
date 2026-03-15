@@ -15,7 +15,7 @@ keywords:
     "meeting types",
     "follow-up cadence",
   ]
-chapter: 22
+chapter: 33
 lesson: 9
 duration_minutes: 25
 

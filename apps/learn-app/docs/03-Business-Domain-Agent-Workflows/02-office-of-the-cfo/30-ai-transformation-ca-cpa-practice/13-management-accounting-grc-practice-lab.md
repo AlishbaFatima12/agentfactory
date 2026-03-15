@@ -16,7 +16,7 @@ keywords:
     "regulatory compliance",
     "CA/CPA practice lab",
   ]
-chapter: 19
+chapter: 30
 lesson: 13
 duration_minutes: 85
 
@@ -27,7 +27,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can construct a 13-week rolling cash flow forecast with receipts waterfall, disbursements modelling, revolving credit facility logic, and stress testing — using Named Ranges and IDFA conventions from Chapter 18"
+    measurable_at_this_level: "Student can construct a 13-week rolling cash flow forecast with receipts waterfall, disbursements modelling, revolving credit facility logic, and stress testing — using Named Ranges and IDFA conventions from Chapter 29"
 
   - name: "Orchestrate Cross-App Board Pack Workflows"
     proficiency_level: "B2"
@@ -82,7 +82,7 @@ cognitive_load:
     - "COSO Enterprise Risk Management framework — five risk categories"
     - "Risk heat map — inherent vs residual risk visualisation"
     - "Risk-stratified compliance management — prioritising by penalty severity, not just deadline proximity"
-  assessment: "8 concepts at B1-B2 level. Students select 1-2 exercises from four, so effective cognitive load per session is 3-4 concepts. Prior lessons covered management accounting domain analysis (L05), GRC domain analysis (L06), plugin commands (L07), extension building (L08-L09), and IDFA methodology (Ch 18). This lab applies those foundations to complete professional deliverables."
+  assessment: "8 concepts at B1-B2 level. Students select 1-2 exercises from four, so effective cognitive load per session is 3-4 concepts. Prior lessons covered management accounting domain analysis (L05), GRC domain analysis (L06), plugin commands (L07), extension building (L08-L09), and IDFA methodology (Ch 29). This lab applies those foundations to complete professional deliverables."
 
 differentiation:
   extension_for_advanced: "Complete all four exercises. In Exercise 18, add a third stress scenario based on a specific business risk you identify. In Exercise 19, extend the board pack with a working capital dashboard slide. In Exercise 20, add an emerging risk analysis section. In Exercise 21, research and add the filing obligations for a second jurisdiction alongside Pakistan."
@@ -123,7 +123,7 @@ teaching_guide:
 
 > _"A cash flow forecast is not a prediction. It is a controlled experiment — you test what happens to the business under conditions you design, and the quality of the experiment depends entirely on the quality of the conditions you choose."_
 
-In Lessons 5 and 6, you mapped management accounting and GRC advisory across the Gen-AI and Agentic AI spectrum. In Chapter 18, you learned the IDFA methodology for building intent-driven financial models with Named Ranges. Now you will apply those foundations to four complete professional deliverables that span the management accountant's most critical output and the compliance advisor's most operationally valuable tool.
+In Lessons 5 and 6, you mapped management accounting and GRC advisory across the Gen-AI and Agentic AI spectrum. In Chapter 29, you learned the IDFA methodology for building intent-driven financial models with Named Ranges. Now you will apply those foundations to four complete professional deliverables that span the management accountant's most critical output and the compliance advisor's most operationally valuable tool.
 
 This lab contains four exercises across two domains. Exercises 18-19 cover management accounting — the 13-week cash flow forecast and the monthly board pack. Exercises 20-21 cover governance, risk and compliance — the enterprise risk register and the regulatory compliance calendar. Choose one or two exercises to complete fully. Review all four to understand how AI agents transform both the operational and advisory dimensions of CA/CPA practice.
 
@@ -143,7 +143,7 @@ This lab contains four exercises across two domains. Exercises 18-19 cover manag
 
 **What you'll build:** A fully automated 13-week rolling cash flow model with receipts waterfall, disbursements schedule, revolving credit facility logic, stress testing, and weekly automated updates.
 
-**Requirements:** Cowork with `finance@knowledge-work-plugins` installed. Familiarity with IDFA Named Range conventions from Chapter 18.
+**Requirements:** Cowork with `finance@knowledge-work-plugins` installed. Familiarity with IDFA Named Range conventions from Chapter 29.
 
 **Company context:** A manufacturing company. Monthly invoicing: PKR 45M. Revolving credit facility: PKR 50M limit, PKR 22M current drawdown. Minimum operating cash requirement: PKR 2M.
 
@@ -151,7 +151,7 @@ This lab contains four exercises across two domains. Exercises 18-19 cover manag
 
 1. **Design the cash flow categories.** Before building the model, ask Cowork to design cash flow categories using the direct method: (a) Receipts — all categories of cash in, including customer receipts by payment term bucket (current, 30 days, 60 days overdue); (b) Disbursements — all categories of cash out in standard weekly order; (c) Financing — bank facility drawdowns and repayments. For each category, specify the driver that determines the weekly amount.
 
-2. **Build the model structure in Excel.** Ask Cowork to create the model at `/outputs/13-week-cashflow.xlsx` using IDFA conventions from Chapter 18. Use Named Ranges for all inputs. Structure: Row 1 = Week labels (W1 to W13 with dates); Column A = Cash flow categories; Named Range inputs for customer payment terms, supplier payment terms, payroll frequency, VAT payment month, and bank facility parameters.
+2. **Build the model structure in Excel.** Ask Cowork to create the model at `/outputs/13-week-cashflow.xlsx` using IDFA conventions from Chapter 29. Use Named Ranges for all inputs. Structure: Row 1 = Week labels (W1 to W13 with dates); Column A = Cash flow categories; Named Range inputs for customer payment terms, supplier payment terms, payroll frequency, VAT payment month, and bank facility parameters.
 
 3. **Build the receipts forecast.** Model weekly customer receipts using a receipts waterfall. Payment profile: 30% received in the month of invoice, 50% one month later, 15% two months later, 5% bad debt. Build a waterfall that tracks invoice cohorts week by week. Use Named Ranges for all percentage assumptions.
 

@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/installation-and-authentication
 title: "Installing and Authenticating Claude Code"
 sidebar_position: 2
-chapter: 3
+chapter: 14
 lesson: 2
 duration_minutes: 20
 

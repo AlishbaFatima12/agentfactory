@@ -20,7 +20,7 @@ keywords:
     "Saturna Capital",
     "Amana Income Fund",
   ]
-chapter: 20
+chapter: 31
 lesson: 14
 duration_minutes: 45
 

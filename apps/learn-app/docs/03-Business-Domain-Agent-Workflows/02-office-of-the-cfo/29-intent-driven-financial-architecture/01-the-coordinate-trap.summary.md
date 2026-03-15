@@ -23,5 +23,5 @@ Every financial model built in the last forty years encodes business logic as ce
 
 ### Connections
 
-- **Builds on**: Chapter 17 taught students to use Claude in Excel and Cowork on existing financial models — this lesson examines the structural flaw in the models those tools operate on
+- **Builds on**: Chapter 28 taught students to use Claude in Excel and Cowork on existing financial models — this lesson examines the structural flaw in the models those tools operate on
 - **Leads to**: Lesson 2 introduces the core distinction between Coordinate-First and Logic-First modelling and demonstrates the difference through side-by-side Claude analysis of the same business rule in both paradigms

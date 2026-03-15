@@ -1,27 +1,27 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents
-sidebar_position: 20
-title: "Chapter 20: Islamic Finance Domain Agents"
+sidebar_position: 31
+title: "Chapter 31: Islamic Finance Domain Agents"
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-20/global-islamic-finance-ai.pdf"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-31/global-islamic-finance-ai.pdf"
   title: "Global Islamic Finance AI"
   height: 700
 description: "Build jurisdiction-aware AI agents for global Islamic finance using a router, product skill, and jurisdiction overlay architecture that handles AAOIFI, IFRS, and local standards across 20 jurisdictions — ensuring the same transaction produces the correct accounting output under every framework"
-chapter_number: 20
+chapter_number: 31
 part_number: 3
 version: 1.0
 status: draft
 ---
 
-# Chapter 20: Islamic Finance Domain Agents
+# Chapter 31: Islamic Finance Domain Agents
 
 ## 📚 Teaching Aid
 
 > _"Islamic finance is not a Muslim-only market. It is a global industry present in more than 80 countries, governed by at least five different accounting frameworks, structured around eight distinct product families. The CA/CPA who understands it commands a practice niche that is simultaneously under-served, rapidly expanding, and impossible to enter without preparation."_
 
-Chapter 19 mapped the five CA/CPA practice domains and built domain-specific agents for each. This chapter applies that capability to the most jurisdictionally complex vertical in global finance: Islamic finance. The same murabaha transaction produces different accounting outputs in Bahrain (AAOIFI), Malaysia (MFRS), Saudi Arabia (IFRS), and the UK (IFRS) — different labels, different balance sheet presentation, different disclosures. A generic finance agent defaults to one framework and gets it wrong in every other jurisdiction. This chapter builds the agents that get it right everywhere.
+Chapter 30 mapped the five CA/CPA practice domains and built domain-specific agents for each. This chapter applies that capability to the most jurisdictionally complex vertical in global finance: Islamic finance. The same murabaha transaction produces different accounting outputs in Bahrain (AAOIFI), Malaysia (MFRS), Saudi Arabia (IFRS), and the UK (IFRS) — different labels, different balance sheet presentation, different disclosures. A generic finance agent defaults to one framework and gets it wrong in every other jurisdiction. This chapter builds the agents that get it right everywhere.
 
-The architectural contribution is new to the book: the **router to product skill to jurisdiction overlay** pattern. Chapters 17-19 taught single-jurisdiction agents. Chapter 20 teaches multi-jurisdiction routing — a pattern that transfers to any domain with jurisdictional variation (tax, legal, healthcare).
+The architectural contribution is new to the book: the **router to product skill to jurisdiction overlay** pattern. Chapters 17-19 taught single-jurisdiction agents. Chapter 31 teaches multi-jurisdiction routing — a pattern that transfers to any domain with jurisdictional variation (tax, legal, healthcare).
 
 ## What You'll Learn
 
@@ -29,7 +29,7 @@ By the end of this chapter, you will be able to:
 
 - Explain the three accounting regimes in global Islamic finance (AAOIFI primary, IFRS with Islamic guidance, local standards) and why the same transaction produces different outputs under each
 - Deploy the router to product skill to jurisdiction overlay architecture that ensures an agent never applies the wrong accounting framework
-- Build jurisdiction-specific SKILL.md extensions for any of the 20 reference jurisdictions using the Knowledge Extraction Method from Chapter 16
+- Build jurisdiction-specific SKILL.md extensions for any of the 20 reference jurisdictions using the Knowledge Extraction Method from Chapter 27
 - Execute 15 practice exercises spanning murabaha, ijarah, sukuk, takaful, salam, istisna'a, mudaraba, musharaka, zakat, Shariah screening, full financial statements, cross-border consolidation, and Islamic fintech
 - Articulate the boundary between agent execution and Shariah Supervisory Board judgment — what the agent does autonomously and what it must escalate
 
@@ -55,7 +55,7 @@ By the end of this chapter, you will be able to:
 | [L16](./16-cross-border-consolidation.md)                    | Cross-Border Islamic Banking Group — Consolidation                      | 75 min   | Exercise 13: 4-entity group consolidation across AAOIFI + IFRS jurisdictions                             |
 | [L17](./17-islamic-fintech.md)                               | Islamic Fintech — Accounting for New Structures                         | 40 min   | Exercise 14: 4 fintech scenarios — digital murabaha, robo-adviser, P2P, climate sukuk                    |
 | [L18](./18-full-skill-library-capstone.md)                   | Full Islamic Finance Agent — SKILL.md Library Build                     | 90 min   | Exercise 15: Full 25-file skill library deployment, testing, and documentation                           |
-| [Quiz](./19-chapter-quiz.md)                                 | Chapter 20 Quiz                                                         | 30 min   | 50-question assessment covering all chapter concepts                                                     |
+| [Quiz](./19-chapter-quiz.md)                                 | Chapter 31 Quiz                                                         | 30 min   | 50-question assessment covering all chapter concepts                                                     |
 
 ## Chapter Contract
 
@@ -69,18 +69,18 @@ By the end of this chapter, you should be able to answer these five questions:
 
 ### Prerequisites: Cowork Access
 
-This chapter requires **Cowork** (set up in Chapter 17) and the Islamic Finance plugin.
+This chapter requires **Cowork** (set up in Chapter 28) and the Islamic Finance plugin.
 
 1. **Install the Islamic Finance plugin.** In the Cowork sidebar: **Customize** → **Browse plugins** → **Personal** → click **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Islamic Finance** → click **Install**.
-2. **Connect a working folder** for practice files, same as Chapter 17.
+2. **Connect a working folder** for practice files, same as Chapter 28.
 
-## After Chapter 20
+## After Chapter 31
 
 When you finish this chapter, your perspective shifts:
 
 1. **You see jurisdictional complexity as a solvable architecture problem.** The router to product to overlay pattern handles any domain where the same transaction has different outputs by jurisdiction — Islamic finance, tax, legal, healthcare.
 2. **You have a working 25-file skill library.** The product skills, jurisdiction overlays, and global router are installed, tested, and deployable across any jurisdiction in the reference set.
 3. **You understand the boundary.** The agent executes accounting treatment, generates journal entries, produces disclosures, and flags compliance risks. The Shariah Supervisory Board judges Shariah compliance. This boundary is non-negotiable and clearly encoded in every skill file.
-4. **You can extend.** The Knowledge Extraction Method from Chapter 16, applied to a new jurisdiction's regulatory framework, produces a new overlay SKILL.md that plugs into the existing architecture without modification.
+4. **You can extend.** The Knowledge Extraction Method from Chapter 27, applied to a new jurisdiction's regulatory framework, produces a new overlay SKILL.md that plugs into the existing architecture without modification.
 
 Start with [Lesson 1: Why Islamic Finance Needs Jurisdiction-Aware Agents](./01-why-islamic-finance-needs-jurisdiction-agents.md).

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: "Creating & Reading Data"
-chapter: 10
+chapter: 21
 lesson: 3
 duration_minutes: 25
 description: "Verify agent-written store and retrieve operations by reading terminal output and directing failure tests"

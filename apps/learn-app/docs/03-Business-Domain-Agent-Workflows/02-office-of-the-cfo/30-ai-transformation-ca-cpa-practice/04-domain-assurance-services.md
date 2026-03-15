@@ -20,7 +20,7 @@ keywords:
     "CA/CPA",
     "AI audit automation",
   ]
-chapter: 19
+chapter: 30
 lesson: 4
 duration_minutes: 40
 
@@ -204,7 +204,7 @@ The economics change significantly. An audit that currently requires 500 staff h
 
    Cowork creates the skill as a file artifact. This is the key insight: **the skill crystallises from practitioner work, not from a blank-page writing exercise.** The conversation you just had — identifying real risks, specifying real thresholds, designing real monitoring logic — is what gives the skill its substance.
 
-   ![A Cowork session showing the audit risk assessment conversation — the entity profile, trial balance, and risk analysis are in the project context, and the skill emerges as a file artifact from the analysis](/img/ch19-cowork-audit-risk-session.png)
+   ![A Cowork session showing the audit risk assessment conversation — the entity profile, trial balance, and risk analysis are in the project context, and the skill emerges as a file artifact from the analysis](/img/ch30-cowork-audit-risk-session.png)
 
 5. **Review and customise.** Open **Customize → Skills** in the Cowork sidebar. Your new skill appears under **My Skills**. Read its description and examine what Cowork encoded — the risk categories, the elevation indicators, the detection thresholds. Ask yourself:
    - Are the thresholds specific enough? (e.g., "revenue spike > 2.5 standard deviations from trailing 30-day average" vs. "unusual revenue increase")
@@ -213,7 +213,7 @@ The economics change significantly. An audit that currently requires 500 staff h
 
    Edit anything that needs tightening. The skill is yours to refine.
 
-   ![The Customize → Skills panel showing the textile-audit-risk-id skill under My Skills — the skill description, elevation indicators, and detection thresholds are visible and editable](/img/ch19-cowork-skill-in-customize.png)
+   ![The Customize → Skills panel showing the textile-audit-risk-id skill under My Skills — the skill description, elevation indicators, and detection thresholds are visible and editable](/img/ch30-cowork-skill-in-customize.png)
 
 6. **Test reusability.** Start a new Cowork task for a different company or sector. Invoke your skill and ask Cowork to run a risk identification using it. Does the skill generalise, or is it too narrowly tied to the original entity? If it breaks on a new engagement, that tells you which parts encode genuine sector expertise and which parts were entity-specific details that should have been parameterised.
 
@@ -283,7 +283,7 @@ Structure this as a Cowork skill specification. Include at least
 three escalation conditions where human judgment is essential.
 ```
 
-**What you are learning:** Specifying an autonomous audit agent forces you to decompose a familiar audit procedure into explicit steps with decision criteria. The escalation conditions are the most valuable part — they encode the professional judgment boundaries that prevent the agent from making decisions that require human expertise. This is the same specification discipline from Chapter 5, applied to the audit domain.
+**What you are learning:** Specifying an autonomous audit agent forces you to decompose a familiar audit procedure into explicit steps with decision criteria. The escalation conditions are the most valuable part — they encode the professional judgment boundaries that prevent the agent from making decisions that require human expertise. This is the same specification discipline from Chapter 27, applied to the audit domain.
 
 ### Prompt 3: Continuous Assurance Business Case
 

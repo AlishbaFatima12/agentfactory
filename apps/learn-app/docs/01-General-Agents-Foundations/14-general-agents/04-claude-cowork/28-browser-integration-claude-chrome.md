@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/browser-integration-claude-chrome
 title: "Browser Integration: Claude in Chrome"
 sidebar_position: 28
-chapter: 3
+chapter: 14
 lesson: 28
 duration_minutes: 18
 chapter_type: Practical

@@ -22,7 +22,7 @@ keywords:
     "agent session logs",
     "IDFA plugin",
   ]
-chapter: 18
+chapter: 29
 lesson: 10
 duration_minutes: 30
 

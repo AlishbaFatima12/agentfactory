@@ -2,7 +2,19 @@
 sidebar_position: 6
 title: "Axiom VI: Data is Relational"
 description: "Why structured data follows relational patterns, SQL as the universal data language, and how to choose between SQLite and PostgreSQL for agentic development"
-keywords: ["SQL", "relational database", "SQLite", "PostgreSQL", "ORM", "SQLModel", "data modeling", "schema", "migrations", "agentic development"]
+keywords:
+  [
+    "SQL",
+    "relational database",
+    "SQLite",
+    "PostgreSQL",
+    "ORM",
+    "SQLModel",
+    "data modeling",
+    "schema",
+    "migrations",
+    "agentic development",
+  ]
 chapter: 31
 lesson: 6
 duration_minutes: 22
@@ -57,13 +69,13 @@ differentiation:
 
 # Axiom VI: Data is Relational
 
-Axiom V gave James typed dataclasses for orders, customers, and products — Pyright catching structural errors before runtime. But types describe individual objects. A `CustomerOrder` knows its own shape. It knows nothing about the customer who placed it, the products inside it, or the fifty other orders that customer has made. When the team asked James to build a dashboard showing order history *by customer*, with filters for date range, status, and product category, he hit a wall that types alone could not solve. His data had *relationships*, and nothing in his system understood them.
+Axiom V gave James typed dataclasses for orders, customers, and products — Pyright catching structural errors before runtime. But types describe individual objects. A `CustomerOrder` knows its own shape. It knows nothing about the customer who placed it, the products inside it, or the fifty other orders that customer has made. When the team asked James to build a dashboard showing order history _by customer_, with filters for date range, status, and product category, he hit a wall that types alone could not solve. His data had _relationships_, and nothing in his system understood them.
 
 His data lived in a JSON file: `orders.json`. Each order was a dictionary with a `customer_name` string, a `product_name` string, and a `status` field. To find all orders for "Acme Corp," he loaded the entire file into memory and looped through every record. To find overdue orders across all customers, he looped again. To count how many orders each customer had placed, he looped a third time, building a dictionary by hand. The file was 2,000 records. The dashboard took eleven seconds to load.
 
 Then the product team changed a customer's name from "Acme Corp" to "Acme Corporation." James updated the customer record. He forgot to update the 47 orders that referenced the old name. Now the dashboard showed two customers — "Acme Corp" with 47 historical orders and "Acme Corporation" with zero. The data was inconsistent, and the JSON file had no way to tell him.
 
-"Your data has relationships," Emma told him. "Customers *have* orders. Orders *contain* products. Products *belong to* categories. You are storing relational data in a format that does not understand relationships. That is like writing typed code without a type checker — the structure is there, but nothing enforces it."
+"Your data has relationships," Emma told him. "Customers _have_ orders. Orders _contain_ products. Products _belong to_ categories. You are storing relational data in a format that does not understand relationships. That is like writing typed code without a type checker — the structure is there, but nothing enforces it."
 
 She opened a terminal and typed twelve lines of SQL. The same dashboard query that took eleven seconds and forty lines of Python returned in three milliseconds. The customer name lived in one place. The relationships were enforced by the database. The data could not become inconsistent because the system would not allow it.
 
@@ -73,16 +85,16 @@ The difference between JSON-as-database and a relational database is Axiom VI.
 
 James's `orders.json` was not a beginner's mistake. It was the path every developer follows when data starts simple and grows relational. The trajectory is predictable:
 
-| Stage | What Happens | Consequence |
-|-------|-------------|-------------|
-| Week 1 | JSON file stores 20 records | Fast, simple, readable |
-| Month 2 | File grows to 500 records | Queries require loading everything into memory |
-| Month 4 | Second entity added (customers separate from orders) | Relationships expressed by duplicating strings |
-| Month 6 | Name change breaks data consistency | No constraints, no validation, no way to detect the problem |
-| Month 9 | Dashboard needs cross-entity queries | 40 lines of Python to do what SQL does in 3 |
-| Month 12 | AI agent asked to query the data | Agent writes custom loops because JSON has no query language |
+| Stage    | What Happens                                         | Consequence                                                  |
+| -------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| Week 1   | JSON file stores 20 records                          | Fast, simple, readable                                       |
+| Month 2  | File grows to 500 records                            | Queries require loading everything into memory               |
+| Month 4  | Second entity added (customers separate from orders) | Relationships expressed by duplicating strings               |
+| Month 6  | Name change breaks data consistency                  | No constraints, no validation, no way to detect the problem  |
+| Month 9  | Dashboard needs cross-entity queries                 | 40 lines of Python to do what SQL does in 3                  |
+| Month 12 | AI agent asked to query the data                     | Agent writes custom loops because JSON has no query language |
 
-Without recognizing that structured data is inherently relational, developers fall into three traps. **The JSON Graveyard**: projects accumulate JSON files — `orders.json`, `customers.json`, `products.json` — with no way to express relationships between them. James was building one. **The Flat File Spiral**: as complexity grows, developers invent ad-hoc query languages, build custom indexing, implement their own transaction logic — slowly reinventing a database, badly. **The NoSQL Trap**: developers reach for document stores because the API feels familiar, but when the data *is* relational, fighting its nature creates complexity that a relational database handles natively.
+Without recognizing that structured data is inherently relational, developers fall into three traps. **The JSON Graveyard**: projects accumulate JSON files — `orders.json`, `customers.json`, `products.json` — with no way to express relationships between them. James was building one. **The Flat File Spiral**: as complexity grows, developers invent ad-hoc query languages, build custom indexing, implement their own transaction logic — slowly reinventing a database, badly. **The NoSQL Trap**: developers reach for document stores because the API feels familiar, but when the data _is_ relational, fighting its nature creates complexity that a relational database handles natively.
 
 Each path leads to the same destination: a system that cannot answer basic questions about its own data without heroic effort from the developer.
 
@@ -92,33 +104,33 @@ Each path leads to the same destination: a system that cannot answer basic quest
 
 This axiom makes three claims — each of which James learned the hard way:
 
-1. **Structured data is relational by nature.** When you have entities with attributes and connections between them, you have relational data — whether or not you store it relationally. James's JSON file *contained* relational data. It just could not *enforce* the relationships.
+1. **Structured data is relational by nature.** When you have entities with attributes and connections between them, you have relational data — whether or not you store it relationally. James's JSON file _contained_ relational data. It just could not _enforce_ the relationships.
 2. **SQL is the default choice.** Not the only choice, but the one you should deviate from consciously with good reason.
 3. **The ORM serves you, not the reverse.** If your ORM hides the SQL so completely that you cannot reason about what queries execute, it has become an obstacle.
 
 ## From Principle to Axiom
 
-In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/persisting-state-in-files), you learned **Principle 5: Persisting State in Files** — the general durability rule that work products must survive beyond a single session. James was already following this principle — his team's markdown knowledge base (Axiom II) and his typed Python modules (Axiom III) all persisted in files.
+In [Chapter 17](/docs/General-Agents-Foundations/seven-principles/persisting-state-in-files), you learned **Principle 5: Persisting State in Files** — the general durability rule that work products must survive beyond a single session. James was already following this principle — his team's markdown knowledge base (Axiom II) and his typed Python modules (Axiom III) all persisted in files.
 
 But Axiom VI refines this principle for a specific category of state: **structured data with relationships**. Not all persistent data belongs in the same format. The distinction matters:
 
-| State Type | Storage | Why |
-|-----------|---------|-----|
-| Knowledge, documentation, specs | Markdown files | Human-readable, version-controlled, AI-parseable |
-| Configuration | YAML/TOML files | Declarative, mergeable, environment-specific |
-| Structured entities with relationships | SQL database | Queryable, constrained, normalized, concurrent-safe |
-| Binary assets | File system | Git LFS or object storage for large files |
+| State Type                             | Storage         | Why                                                 |
+| -------------------------------------- | --------------- | --------------------------------------------------- |
+| Knowledge, documentation, specs        | Markdown files  | Human-readable, version-controlled, AI-parseable    |
+| Configuration                          | YAML/TOML files | Declarative, mergeable, environment-specific        |
+| Structured entities with relationships | SQL database    | Queryable, constrained, normalized, concurrent-safe |
+| Binary assets                          | File system     | Git LFS or object storage for large files           |
 
 Principle 5 tells you to persist state. Axiom VI tells you HOW to persist structured data: relationally, with SQL, using the right engine for the job.
 
 <details>
 <summary>**The Paper That Gave Data a Theory**</summary>
 
-In 1970, an English mathematician named Edgar F. Codd published a paper at IBM's San Jose Research Laboratory: "A Relational Model of Data for Large Shared Data Banks." At the time, databases were navigational — programs traversed pointers from record to record, like walking through a maze. If the structure of the maze changed, every program that navigated it broke. Codd proposed something radical: separate the *logical* structure of data from its *physical* storage. Define data as tables with rows and columns. Express queries as mathematical operations on those tables. Let the database — not the programmer — figure out how to retrieve the data efficiently.
+In 1970, an English mathematician named Edgar F. Codd published a paper at IBM's San Jose Research Laboratory: "A Relational Model of Data for Large Shared Data Banks." At the time, databases were navigational — programs traversed pointers from record to record, like walking through a maze. If the structure of the maze changed, every program that navigated it broke. Codd proposed something radical: separate the _logical_ structure of data from its _physical_ storage. Define data as tables with rows and columns. Express queries as mathematical operations on those tables. Let the database — not the programmer — figure out how to retrieve the data efficiently.
 
 IBM's own database team resisted. They had built IMS, a hierarchical database that powered most of the company's revenue. Codd's relational model threatened that product. IBM delayed implementation for years. But a young programmer named Larry Ellison read Codd's paper, saw its implications, and in 1977 founded a company to build the first commercial relational database. He called it Oracle.
 
-The relational model won because it solved James's exact problem at industrial scale: when data has relationships, a system that *understands* relationships will always outperform one that does not. Codd's tables, foreign keys, and constraints are the reason Emma's twelve-line SQL query returned in three milliseconds what James's forty-line Python loop took eleven seconds to produce. The database optimizer — the component Codd's model made possible — chose the execution path. James did not have to.
+The relational model won because it solved James's exact problem at industrial scale: when data has relationships, a system that _understands_ relationships will always outperform one that does not. Codd's tables, foreign keys, and constraints are the reason Emma's twelve-line SQL query returned in three milliseconds what James's forty-line Python loop took eleven seconds to produce. The database optimizer — the component Codd's model made possible — chose the execution path. James did not have to.
 
 More than half a century later, SQL remains the dominant language for structured data. It has survived the rise and fall of object databases (1990s), the XML movement (2000s), the NoSQL revolution (2010s), and the graph database wave (2020s). Each found legitimate niches. None displaced SQL for general-purpose structured data, because Codd's insight addresses a property of data itself: when entities have relationships, a relational system is the natural fit.
 
@@ -126,14 +138,14 @@ More than half a century later, SQL remains the dominant language for structured
 
 ### Why SQL Works
 
-| Property | What It Means | Why It Matters |
-|----------|---------------|----------------|
-| **Declarative** | You say WHAT you want, not HOW to get it | The database optimizer chooses the execution strategy |
-| **Relational** | Data is organized into related tables | Reflects how real-world entities connect |
-| **Constrained** | Schema enforces structure, types, and relationships | Invalid data is rejected before it enters the system |
-| **Optimized** | Decades of query planner research | Complex queries execute efficiently without manual tuning |
-| **Transactional** | ACID guarantees (Atomicity, Consistency, Isolation, Durability) | Data is never left in a half-updated state |
-| **Universal** | One language across SQLite, PostgreSQL, MySQL, SQL Server | Skills transfer between databases |
+| Property          | What It Means                                                   | Why It Matters                                            |
+| ----------------- | --------------------------------------------------------------- | --------------------------------------------------------- |
+| **Declarative**   | You say WHAT you want, not HOW to get it                        | The database optimizer chooses the execution strategy     |
+| **Relational**    | Data is organized into related tables                           | Reflects how real-world entities connect                  |
+| **Constrained**   | Schema enforces structure, types, and relationships             | Invalid data is rejected before it enters the system      |
+| **Optimized**     | Decades of query planner research                               | Complex queries execute efficiently without manual tuning |
+| **Transactional** | ACID guarantees (Atomicity, Consistency, Isolation, Durability) | Data is never left in a half-updated state                |
+| **Universal**     | One language across SQLite, PostgreSQL, MySQL, SQL Server       | Skills transfer between databases                         |
 
 The declarative nature deserves emphasis. This is why Emma's query was so much shorter than James's Python loop. When you write:
 
@@ -164,12 +176,12 @@ An entity is a distinct "thing" in your domain. In James's order system:
 Each entity becomes a table. Each row is one instance. The key insight: in James's JSON file, these three entities were mashed into a single list of dictionaries. In a relational database, each lives in its own table with its own structure.
 
 :::tip Focus on what the code is doing, not the syntax
-This lesson introduces SQL and Python database code. You have not learned either language yet — SQL is new here, and Python has not been covered yet. Read these code blocks for the *concept*: what data is being defined, what constraints are being enforced, how tables connect to each other. The specific syntax will make sense when you reach the hands-on chapters.
+This lesson introduces SQL and Python database code. You have not learned either language yet — SQL is new here, and Python has not been covered yet. Read these code blocks for the _concept_: what data is being defined, what constraints are being enforced, how tables connect to each other. The specific syntax will make sense when you reach the hands-on chapters.
 :::
 
 ### 2. Attributes (Columns)
 
-Each entity has typed properties — and this is where Axiom V meets Axiom VI. The schema *is* a type definition for your data:
+Each entity has typed properties — and this is where Axiom V meets Axiom VI. The schema _is_ a type definition for your data:
 
 ```sql
 CREATE TABLE customers (
@@ -213,16 +225,16 @@ Compare this to JSON, where nothing prevents `"customer_id": 999` even if no suc
 
 "Which database should I use?" James asked. Emma's answer was a decision framework, not a preference. The axiom specifies two databases — here is when to use each:
 
-| Factor | SQLite | PostgreSQL |
-|--------|--------|------------|
-| **Writers** | Single process | Many concurrent users |
-| **Deployment** | Embedded in your application | Separate server process |
-| **Setup** | Zero configuration (just a file) | Requires installation and configuration |
-| **Size** | Up to ~1 TB practical | Petabytes with proper architecture |
-| **Concurrency** | Single-writer, multiple readers | Full MVCC (Multi-Version Concurrency Control) — concurrent reads and writes without blocking |
-| **Use case** | CLI tools, mobile apps, prototypes, embedded | Web apps, APIs, multi-user systems |
-| **Backup** | Copy the file | pg_dump or streaming replication |
-| **AI agent work** | Local projects, personal tools | Production deployments |
+| Factor            | SQLite                                       | PostgreSQL                                                                                   |
+| ----------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **Writers**       | Single process                               | Many concurrent users                                                                        |
+| **Deployment**    | Embedded in your application                 | Separate server process                                                                      |
+| **Setup**         | Zero configuration (just a file)             | Requires installation and configuration                                                      |
+| **Size**          | Up to ~1 TB practical                        | Petabytes with proper architecture                                                           |
+| **Concurrency**   | Single-writer, multiple readers              | Full MVCC (Multi-Version Concurrency Control) — concurrent reads and writes without blocking |
+| **Use case**      | CLI tools, mobile apps, prototypes, embedded | Web apps, APIs, multi-user systems                                                           |
+| **Backup**        | Copy the file                                | pg_dump or streaming replication                                                             |
+| **AI agent work** | Local projects, personal tools               | Production deployments                                                                       |
 
 ### The Decision Framework
 
@@ -346,7 +358,7 @@ This is a natural stopping point. If you need a break, bookmark this spot and re
 :::
 
 :::tip Still reading for concepts, not memorization
-The ORM code below shows how Python classes can mirror database tables. You will use these tools (SQLModel, Alembic) when you reach the hands-on chapters. For now, notice the *pattern*: one definition serves both your code and your database.
+The ORM code below shows how Python classes can mirror database tables. You will use these tools (SQLModel, Alembic) when you reach the hands-on chapters. For now, notice the _pattern_: one definition serves both your code and your database.
 :::
 
 ## ORMs: When to Use, When to Avoid
@@ -399,12 +411,12 @@ The axiom says: **"Use an ORM only when it doesn't obscure the SQL."**
 
 This means:
 
-| Use the ORM When | Avoid the ORM When |
-|-------------------|---------------------|
-| CRUD operations (Create, Read, Update, Delete) | Complex analytical queries with multiple JOINs |
+| Use the ORM When                                  | Avoid the ORM When                                           |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| CRUD operations (Create, Read, Update, Delete)    | Complex analytical queries with multiple JOINs               |
 | Type safety matters (Python type hints on models) | Performance-critical paths where you need query plan control |
-| Schema definition (models as documentation) | You cannot explain what SQL the ORM generates |
-| Migrations (Alembic integrates with SQLAlchemy) | The ORM syntax is more complex than raw SQL |
+| Schema definition (models as documentation)       | You cannot explain what SQL the ORM generates                |
+| Migrations (Alembic integrates with SQLAlchemy)   | The ORM syntax is more complex than raw SQL                  |
 
 The test is simple: **Can you explain the SQL that your ORM code generates?** If yes, the ORM is adding value. If no, write the SQL directly. A useful heuristic: if you spend more than two minutes reading ORM documentation to express a `JOIN` or `GROUP BY`, the ORM has become the obstacle. Write the SQL.
 
@@ -470,14 +482,14 @@ It is the system where a developer once changed a customer name and broke six mo
 
 The JSON graveyard was not built by bad developers. It was built by developers who started with twenty records and did not recognize the moment when their data became relational.
 
-| Anti-Pattern | What Goes Wrong | The Fix |
-|-------------|-----------------|---------|
-| **JSON files as database** | No queries, no relations, no constraints, loads everything into memory | Use SQLite — same simplicity, relational power |
-| **NoSQL as default** | Fighting relational data with document model, denormalization headaches | Start relational. Move to NoSQL only for genuinely non-relational data (logs, events, documents) |
-| **Raw string SQL** | SQL injection vulnerabilities, crashes on special characters | Always use parameterized queries (`?` placeholders) |
-| **No migrations** | Manual schema changes, inconsistent environments, no rollback | Use Alembic or equivalent migration tool |
-| **Ignoring indexes** | Queries slow to a crawl as data grows (full table scans) | Index columns used in WHERE, JOIN, and ORDER BY |
-| **Over-normalization** | Dozens of tables for simple domains, JOIN-heavy queries for basic reads | Normalize to 3NF, denormalize consciously with measured justification |
+| Anti-Pattern               | What Goes Wrong                                                         | The Fix                                                                                          |
+| -------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **JSON files as database** | No queries, no relations, no constraints, loads everything into memory  | Use SQLite — same simplicity, relational power                                                   |
+| **NoSQL as default**       | Fighting relational data with document model, denormalization headaches | Start relational. Move to NoSQL only for genuinely non-relational data (logs, events, documents) |
+| **Raw string SQL**         | SQL injection vulnerabilities, crashes on special characters            | Always use parameterized queries (`?` placeholders)                                              |
+| **No migrations**          | Manual schema changes, inconsistent environments, no rollback           | Use Alembic or equivalent migration tool                                                         |
+| **Ignoring indexes**       | Queries slow to a crawl as data grows (full table scans)                | Index columns used in WHERE, JOIN, and ORDER BY                                                  |
+| **Over-normalization**     | Dozens of tables for simple domains, JOIN-heavy queries for basic reads | Normalize to 3NF, denormalize consciously with measured justification                            |
 
 ## The String Concatenation Trap
 
@@ -600,6 +612,7 @@ Close your AI assistant. A teacher keeps student grades in a notebook. Each page
 One day, the teacher learns her legal name is actually "Amara K. Johnson."
 
 Predict:
+
 - How many pages need updating in the notebook system?
 - What happens if the teacher updates 11 pages but forgets page 7?
 - Now imagine a different system: each student has ONE index card with their name, and each grade page uses the student's **card number** instead of their name. How many places need updating when the name changes?
@@ -608,7 +621,7 @@ Write your answers. Rate your confidence from 1 to 5.
 
 ### Run
 
-Ask your AI assistant: *"Compare two ways of tracking student grades: (1) writing the student's full name on every grade page, versus (2) giving each student a unique ID number and writing only the ID on grade pages, with the name stored once on an index card. What happens in each system when a student's name changes? Which prevents data inconsistency?"*
+Ask your AI assistant: _"Compare two ways of tracking student grades: (1) writing the student's full name on every grade page, versus (2) giving each student a unique ID number and writing only the ID on grade pages, with the name stored once on an index card. What happens in each system when a student's name changes? Which prevents data inconsistency?"_
 
 Compare. Did you correctly predict the number of updates needed in each system?
 
@@ -642,6 +655,7 @@ Now a student transfers to another school. How many changes are needed in each s
 Think of 3-5 things in your life that are connected to each other — for example: students and classes, friends and events, books and authors, recipes and ingredients, playlists and songs.
 
 Draw or describe the relationships:
+
 - Which thing connects to which?
 - Is the relationship one-to-many (one author writes many books) or many-to-many (many students take many classes)?
 - Where would you store each piece of information so it exists in **only ONE place**?
@@ -664,4 +678,4 @@ James's `orders.json` — 2,000 records, eleven-second queries, inconsistent cus
 
 Your shell orchestrates programs. Your knowledge lives in markdown. Your programs have types and tests. Your systems are composed from focused units. Your types catch structural errors. Your data lives in relational tables with enforced constraints. But how do you know that all of these pieces actually work together? How do you verify that the composed function returns the right result, that the type-checked code handles edge cases, that the SQL query produces correct output — and keeps producing it as the system evolves?
 
-James had types, composition, and relational data. He still shipped a bug that no type checker or database constraint could catch: a function that returned the wrong *value* with the right *type*. In Axiom VII, you will discover that tests are not afterthoughts — they are the specification that defines what "correct" means, and the only layer that catches logical errors before they reach users.
+James had types, composition, and relational data. He still shipped a bug that no type checker or database constraint could catch: a function that returned the wrong _value_ with the right _type_. In Axiom VII, you will discover that tests are not afterthoughts — they are the specification that defines what "correct" means, and the only layer that catches logical errors before they reach users.

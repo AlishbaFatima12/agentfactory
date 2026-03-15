@@ -18,7 +18,7 @@ keywords:
     "finance domain agents",
     "risk framework",
   ]
-chapter: 17
+chapter: 28
 lesson: 9
 duration_minutes: 35
 
@@ -84,7 +84,7 @@ teaching_guide:
   key_points:
     - "Generic plugins compute ratios correctly — extensions encode which ratios matter and what the thresholds mean in your specific context"
     - "The gap between a generic plugin and an enterprise extension is institutional knowledge: the sector-specific thresholds, the governance sequences, the judgment calls that experienced professionals make"
-    - "Every extension follows the same pattern: identify what the generic plugin lacks, then write SKILL.md instructions using Chapter 16's Persona-Questions-Principles structure"
+    - "Every extension follows the same pattern: identify what the generic plugin lacks, then write SKILL.md instructions using Chapter 27's Persona-Questions-Principles structure"
     - "Regulatory extensions carry the highest compliance urgency because applying the wrong jurisdiction's methodology produces materially incorrect filings"
   misconceptions:
     - "Students may think extensions replace the generic plugins — they layer on top, adding institutional specificity to the generic foundation"
@@ -109,7 +109,7 @@ teaching_guide:
 
 In Lessons 1 through 8, you learned how Claude in Excel and Cowork's finance plugins handle standard financial workflows: model comprehension, scenario testing, comparable company analysis, and domain-specific commands for investment banking, equity research, private equity, and wealth management. These generic plugins compute ratios correctly, build structurally sound models, and produce professionally formatted deliverables. What they do not encode is what makes your firm's analysis distinctive — the sector-specific leverage thresholds your credit officers apply, the regulatory return formats your compliance team files, the IPS constraints your wealth advisors must verify before every recommendation.
 
-This lesson covers four enterprise extensions that address the most common gaps between generic plugin capability and institutional need. Each follows the same pattern you learned in Chapter 16: identify what the generic plugin lacks, then write SKILL.md instructions using the Persona-Questions-Principles structure to close that gap. The extensions covered here — credit risk, regulatory reporting, IPS compliance, and portfolio attribution — represent the highest-impact areas where institutional knowledge encoded as SKILL.md instructions creates measurable operational value.
+This lesson covers four enterprise extensions that address the most common gaps between generic plugin capability and institutional need. Each follows the same pattern you learned in Chapter 27: identify what the generic plugin lacks, then write SKILL.md instructions using the Persona-Questions-Principles structure to close that gap. The extensions covered here — credit risk, regulatory reporting, IPS compliance, and portfolio attribution — represent the highest-impact areas where institutional knowledge encoded as SKILL.md instructions creates measurable operational value.
 
 ## What Enterprise Extensions Are
 
@@ -178,7 +178,7 @@ Variance analysis compares actual results against a plan (budget or forecast) or
 
 **What you need:** 30 minutes. No software required.
 
-Apply the interview framework from Chapter 16 to a credit scenario you have observed.
+Apply the interview framework from Chapter 27 to a credit scenario you have observed.
 
 1. Describe a credit situation — real or hypothetical — where the outcome was better or worse than expected. Write 200 words covering the key signals and the decision that was made.
 

@@ -14,7 +14,7 @@ keywords:
   - supply chain agents
   - product management agents
   - intrapreneurship agents
-chapter: 14
+chapter: 25
 lesson: 7
 duration_minutes: 35
 
@@ -126,7 +126,7 @@ The seven domains that follow are where this problem is most acute -- and where 
 
 Five chapters -- the largest section in Part 3. The expertise at risk here is not the ability to run a financial model -- any competent analyst can do that. The expertise at risk is the senior analyst's understanding of which data sources to trust under which conditions, the banker's calibration for which risk signals actually predict credit events versus which are noise, and the CFO's judgment about which regulatory requirements are material versus which are compliance theatre.
 
-Chapter 17 builds the foundational finance agent for FP&A and valuation. Chapter 18 extends it into intent-driven financial architecture -- agents that reason about strategic intent, not just data retrieval. Chapter 19 deploys across the full range of CA and CPA practice areas: audit, tax, advisory, and client service. Chapter 20 provides the most comprehensive treatment of Islamic finance AI in any curriculum -- 26 SKILL.md files across seven jurisdiction overlays covering Murabaha, Ijarah, Sukuk, Takaful, and Zakat. Chapter 21 addresses banking-specific regulation: IFRS 9 expected credit loss models, Basel III/IV capital adequacy, and AML/KYC financial crime prevention.
+Chapter 28 builds the foundational finance agent for FP&A and valuation. Chapter 29 extends it into intent-driven financial architecture -- agents that reason about strategic intent, not just data retrieval. Chapter 30 deploys across the full range of CA and CPA practice areas: audit, tax, advisory, and client service. Chapter 31 provides the most comprehensive treatment of Islamic finance AI in any curriculum -- 26 SKILL.md files across seven jurisdiction overlays covering Murabaha, Ijarah, Sukuk, Takaful, and Zakat. Chapter 32 addresses banking-specific regulation: IFRS 9 expected credit loss models, Basel III/IV capital adequacy, and AML/KYC financial crime prevention.
 
 A new analyst joining a finance team can learn the tools in weeks. Learning which numbers to believe takes years.
 
@@ -134,7 +134,7 @@ A new analyst joining a finance team can learn the tools in weeks. Learning whic
 
 Lead qualification, pipeline management, outreach personalisation, CRM data enrichment, and campaign performance analysis. The expertise at risk is the top performer's qualification logic: the signals, heuristics, and pattern recognitions that distinguish a prospect worth pursuing from one that will consume resources without converting. Every sales team has someone who "just knows" which leads are real. That knowledge is the deployment target.
 
-Chapter 23 builds agents that scale this judgment across the entire go-to-market organisation -- from prospecting and ICP matching through pipeline forecasting to cross-channel campaign optimisation and revenue attribution.
+Chapter 34 builds agents that scale this judgment across the entire go-to-market organisation -- from prospecting and ICP matching through pipeline forecasting to cross-channel campaign optimisation and revenue attribution.
 
 ### Supply Chain & Procurement
 
@@ -160,7 +160,7 @@ Chapter 28 is the integration chapter -- it connects the domain agents from Chap
 
 Contract lifecycle management, legal operations, regulatory compliance monitoring, jurisdiction-specific risk assessment, and IP protection. The expertise at risk is the experienced lawyer's understanding of which clause patterns are genuinely dangerous in which contexts. A standard non-compete clause might be enforceable in one jurisdiction and meaningless in another. A data processing agreement might be compliant in Europe and insufficient in California. The senior lawyer carries this jurisdictional map in their head.
 
-Chapter 22 gives significant treatment to Legal Operations Agents -- the emerging practice of deploying AI specifically within legal department workflows. The governance principle in this domain is non-negotiable: certain decisions must always involve a qualified attorney regardless of how accurate an agent becomes.
+Chapter 33 gives significant treatment to Legal Operations Agents -- the emerging practice of deploying AI specifically within legal department workflows. The governance principle in this domain is non-negotiable: certain decisions must always involve a qualified attorney regardless of how accurate an agent becomes.
 
 ### Innovation & Intrapreneurship
 

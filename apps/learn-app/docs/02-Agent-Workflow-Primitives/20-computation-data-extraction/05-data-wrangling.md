@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: "Data Wrangling & Domain Transfer"
-chapter: 9
+chapter: 20
 lesson: 5
 layer: L2
 duration_minutes: 40

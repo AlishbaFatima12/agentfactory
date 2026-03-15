@@ -1,7 +1,7 @@
 ---
 sidebar_position: 9
 title: "Capstone - Budget Tracker Complete App"
-chapter: 10
+chapter: 21
 lesson: 8
 duration_minutes: 40
 description: "Integrate schema, CRUD, relationships, transactions, Neon, and high-stakes verification in one app"

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 11
-title: "Chapter 6: The Seven Principles Quiz"
+title: "Chapter 17: The Seven Principles Quiz"
 proficiency_level: B1
 layer: 1
 estimated_time: "25 mins"
@@ -8,12 +8,12 @@ chapter_type: Concept
 running_example_id: seven-principles-quiz
 ---
 
-# Chapter 6: The Seven Principles of General Agent Problem Solving Quiz
+# Chapter 17: The Seven Principles of General Agent Problem Solving Quiz
 
 Test your understanding of the seven principles that make agentic AI workflows effective: bash as universal interface, code as universal interface, verification as core step, small reversible decomposition, persisting state in files, constraints and safety, and observability.
 
 <Quiz
-title="Chapter 6: The Seven Principles Assessment"
+title="Chapter 17: The Seven Principles Assessment"
 questionsPerBatch={30}
 questions={[
 {
@@ -373,7 +373,7 @@ options: [
 "Project patterns aren't in CLAUDE.md Zone 1, so they lose attention as context fills"
 ],
 correctOption: 3,
-explanation: "This combines Principle 5 (State Persistence) with context engineering from Chapter 4. When patterns are in Zone 2 (middle) of CLAUDE.md, they receive ~30% less attention. At 20% context utilization, there's enough attention for everything. At 85%, attention is strained, and middle-positioned content gets deprioritized. The solution: move critical patterns to Zone 1 (beginning) where primacy ensures consistent attention regardless of utilization. The AI model doesn't vary (A), and dropped instructions (C) would cause different symptoms. The lesson: position affects reliability, especially under context pressure.",
+explanation: "This combines Principle 5 (State Persistence) with context engineering from Chapter 15. When patterns are in Zone 2 (middle) of CLAUDE.md, they receive ~30% less attention. At 20% context utilization, there's enough attention for everything. At 85%, attention is strained, and middle-positioned content gets deprioritized. The solution: move critical patterns to Zone 1 (beginning) where primacy ensures consistent attention regardless of utilization. The AI model doesn't vary (A), and dropped instructions (C) would cause different symptoms. The lesson: position affects reliability, especially under context pressure.",
 source: "Lesson 05: Persisting State in Files"
 },
 {

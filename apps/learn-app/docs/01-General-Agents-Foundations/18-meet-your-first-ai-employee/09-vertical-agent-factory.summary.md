@@ -35,5 +35,5 @@ Container isolation, multi-channel presence (WhatsApp + extensible), per-group m
 - Treating NanoClaw as a replacement for OpenClaw -- it is a different architectural approach (container isolation vs shared memory), not a direct upgrade
 - Building vertical intelligence tied to a single platform instead of using portable standards (Agent Skills + MCP)
 - Overlooking Programmatic Tool Calling as essential for regulated industries -- sending raw patient data or financial records through external LLM APIs violates HIPAA, SOX, and similar regulations
-- Thinking NanoClaw concepts are disconnected from Chapter 7 -- every concept (container isolation, Agent Swarms, portable skills, per-group memory) grows directly from patterns learned in Lessons 1-8
+- Thinking NanoClaw concepts are disconnected from Chapter 18 -- every concept (container isolation, Agent Swarms, portable skills, per-group memory) grows directly from patterns learned in Lessons 1-8
 - Treating the six-layer architecture as all-or-nothing -- start with the layers you need and add complexity as requirements demand

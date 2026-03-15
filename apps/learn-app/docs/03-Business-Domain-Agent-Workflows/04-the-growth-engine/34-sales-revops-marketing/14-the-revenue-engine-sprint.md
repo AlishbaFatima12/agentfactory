@@ -18,7 +18,7 @@ keywords:
     "full sprint",
     "RevOps",
   ]
-chapter: 23
+chapter: 34
 lesson: 14
 duration_minutes: 45
 

@@ -1,5 +1,5 @@
 deck:
-  id: ch04-06-context-lifecycle
+  id: ch15-06-context-lifecycle
   title: 'Context Lifecycle: Knowing When to Reset vs Compress'
   description: Flashcards covering the Context Zones framework, /clear vs /compact decision criteria, custom compaction instructions, session persistence commands, and the save checkpoint pattern.
   tags:
@@ -11,7 +11,7 @@ deck:
   - compaction
   version: 1
 cards:
-- id: ch04-06-context-lifecycle-001
+- id: ch15-06-context-lifecycle-001
   type: recall
   difficulty: basic
   front: What are the five Context Zones and their utilization ranges?
@@ -27,7 +27,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-002
+- id: ch15-06-context-lifecycle-002
   type: recall
   difficulty: basic
   front: What action is required in the Green context zone (0-50%)?
@@ -35,7 +35,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-003
+- id: ch15-06-context-lifecycle-003
   type: recall
   difficulty: intermediate
   front: What action is required in the Orange context zone (70-85%)?
@@ -43,7 +43,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-004
+- id: ch15-06-context-lifecycle-004
   type: thinking
   difficulty: intermediate
   front: Why is 70% utilization considered the critical cliff for context quality?
@@ -52,7 +52,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-005
+- id: ch15-06-context-lifecycle-005
   type: recall
   difficulty: basic
   front: What command checks your current context utilization zone?
@@ -60,7 +60,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-006
+- id: ch15-06-context-lifecycle-006
   type: recall
   difficulty: intermediate
   front: Name any 3 of 5 conditions when /clear is the right choice?
@@ -76,7 +76,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-007
+- id: ch15-06-context-lifecycle-007
   type: recall
   difficulty: intermediate
   front: Name any 3 of 4 conditions when /compact is the right choice?
@@ -90,7 +90,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-008
+- id: ch15-06-context-lifecycle-008
   type: thinking
   difficulty: advanced
   front: Why is compacting poisoned context worse than clearing it?
@@ -100,7 +100,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-009
+- id: ch15-06-context-lifecycle-009
   type: recall
   difficulty: basic
   front: What is context poisoning?
@@ -108,7 +108,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-010
+- id: ch15-06-context-lifecycle-010
   type: thinking
   difficulty: intermediate
   front: How should you decide between /clear and /compact at 70%+ utilization?
@@ -118,7 +118,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-011
+- id: ch15-06-context-lifecycle-011
   type: thinking
   difficulty: intermediate
   front: How does /compact maintain session continuity while reducing size?
@@ -127,7 +127,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-012
+- id: ch15-06-context-lifecycle-012
   type: thinking
   difficulty: intermediate
   front: Why are custom compaction instructions called the 'power move'?
@@ -137,7 +137,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-013
+- id: ch15-06-context-lifecycle-013
   type: recall
   difficulty: basic
   front: What is the structure for custom compaction instructions?
@@ -145,7 +145,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-014
+- id: ch15-06-context-lifecycle-014
   type: recall
   difficulty: intermediate
   front: Where can you encode default compaction priorities so they apply automatically?
@@ -153,7 +153,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-015
+- id: ch15-06-context-lifecycle-015
   type: recall
   difficulty: basic
   front: What does 'claude --continue' do?
@@ -161,7 +161,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-016
+- id: ch15-06-context-lifecycle-016
   type: thinking
   difficulty: intermediate
   front: Why are three separate session persistence commands needed instead of one?
@@ -171,7 +171,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-017
+- id: ch15-06-context-lifecycle-017
   type: recall
   difficulty: basic
   front: What is the 3-day rule for session viability?
@@ -179,7 +179,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-018
+- id: ch15-06-context-lifecycle-018
   type: thinking
   difficulty: intermediate
   front: Why do sessions become un-resumable after roughly 3 days?
@@ -188,7 +188,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-019
+- id: ch15-06-context-lifecycle-019
   type: thinking
   difficulty: advanced
   front: How does the save checkpoint pattern protect against compaction losses?
@@ -197,7 +197,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-020
+- id: ch15-06-context-lifecycle-020
   type: recall
   difficulty: intermediate
   front: What are the six steps of the save checkpoint pattern?
@@ -215,7 +215,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-021
+- id: ch15-06-context-lifecycle-021
   type: thinking
   difficulty: intermediate
   front: Why is monitoring at 50% utilization important even though quality is still fine?
@@ -225,7 +225,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-022
+- id: ch15-06-context-lifecycle-022
   type: thinking
   difficulty: advanced
   front: Why is /clear safer than /compact in the Black zone (95%+)?
@@ -235,7 +235,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-023
+- id: ch15-06-context-lifecycle-023
   type: recall
   difficulty: basic
   front: What exception allows sessions older than 3 days to remain viable?
@@ -243,7 +243,7 @@ cards:
   tags:
   - context-lifecycle
   - context-zones
-- id: ch04-06-context-lifecycle-024
+- id: ch15-06-context-lifecycle-024
   type: thinking
   difficulty: intermediate
   front: How does a marketing professional's rejected campaign tangent illustrate the compaction tradeoff?

@@ -17,7 +17,7 @@ keywords:
     "project management",
     "professional workflow",
   ]
-chapter: 4
+chapter: 15
 lesson: 7
 duration_minutes: 90
 

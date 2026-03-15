@@ -13,7 +13,7 @@ Enterprise extensions close the gap between generic finance plugins and institut
 
 - Every extension layers on top of a generic plugin — it does not replace it
 - Regulatory extensions are jurisdiction-specific by design: SBP, Basel III, SEC, and EBA implementations produce different results from the same underlying data
-- SKILL.md instructions must reference specific ratios, thresholds, and signals — generic directives like "analyze credit risk carefully" fail the testability criterion from Chapter 16
+- SKILL.md instructions must reference specific ratios, thresholds, and signals — generic directives like "analyze credit risk carefully" fail the testability criterion from Chapter 27
 - Governance gates (mandatory sign-off sequences) are unconditional routing rules, not guidelines — they appear as non-negotiable escalation conditions in every compliance-sensitive extension
 
 ### Common Mistakes
@@ -25,5 +25,5 @@ Enterprise extensions close the gap between generic finance plugins and institut
 
 ### Connections
 
-- **Builds on**: Chapter 16's Knowledge Extraction Method (Persona-Questions-Principles structure for SKILL.md writing), Lessons 4-8 (generic finance plugin workflows that extensions layer on top of)
+- **Builds on**: Chapter 27's Knowledge Extraction Method (Persona-Questions-Principles structure for SKILL.md writing), Lessons 4-8 (generic finance plugin workflows that extensions layer on top of)
 - **Leads to**: Lesson 10 (operations and strategy extensions), and the practical deployment of enterprise extensions in the reader's own organisation

@@ -21,7 +21,7 @@ keywords:
     "tax equivalence",
     "construction finance",
   ]
-chapter: 20
+chapter: 31
 lesson: 11
 duration_minutes: 50
 

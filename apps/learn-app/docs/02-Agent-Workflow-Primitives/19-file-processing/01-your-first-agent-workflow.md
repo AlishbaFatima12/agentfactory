@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "Your First Agent Workflow"
-chapter: 8
+chapter: 19
 lesson: 1
 layer: L2
 duration_minutes: 25
@@ -72,7 +72,7 @@ teaching_guide:
   key_points:
     - "The 'Help me understand [problem], show me [what I need]' prompt pattern is the foundation for all file-processing workflows in this chapter"
     - "Division of labor is the core insight: human judgment (what matters) + agent execution (how to get it) — neither can do the other's job"
-    - "Agent self-correction (23 items vs 847 files) demonstrates OODA in action — students saw this principle in Ch 3 and now see it live"
+    - "Agent self-correction (23 items vs 847 files) demonstrates OODA in action — students saw this principle in Ch 14 and now see it live"
     - "The rule of thumb 'describe faster than do = agent, do faster than describe = manual' sets the decision boundary for the entire chapter"
   misconceptions:
     - "Students think agents are always faster — lesson explicitly shows single-file lookup is faster manually, agents win at scale (847 files)"

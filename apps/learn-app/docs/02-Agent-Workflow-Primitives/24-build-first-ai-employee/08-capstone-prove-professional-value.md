@@ -14,7 +14,7 @@ keywords:
     "isolation",
     "scheduled reporting",
   ]
-chapter: 13
+chapter: 24
 lesson: 8
 duration_minutes: 55
 

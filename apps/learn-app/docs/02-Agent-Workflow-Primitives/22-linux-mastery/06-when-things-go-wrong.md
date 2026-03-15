@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: "When Things Go Wrong"
-chapter: 11
+chapter: 22
 lesson: 6
 layer: L2
 duration_minutes: 35

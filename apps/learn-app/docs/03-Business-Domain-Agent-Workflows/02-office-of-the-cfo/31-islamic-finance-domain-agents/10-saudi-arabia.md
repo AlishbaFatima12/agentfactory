@@ -21,7 +21,7 @@ keywords:
     "equity-based zakat",
     "Islamic finance Saudi",
   ]
-chapter: 20
+chapter: 31
 lesson: 10
 duration_minutes: 55
 

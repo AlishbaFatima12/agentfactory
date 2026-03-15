@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: "Transactions & Atomicity"
-chapter: 10
+chapter: 21
 lesson: 5
 duration_minutes: 30
 description: "Protect multi-step writes with commit/rollback boundaries"

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
 title: "Operational Best Practices"
-chapter: 6
+chapter: 17
 lesson: 8
 duration_minutes: 25
 description: "Operational workflows and patterns for productive Claude Code sessions"
@@ -202,7 +202,7 @@ Your context, conversation, and progress are preserved. You don't start from scr
 
 ### Context Management (Reference)
 
-When your context window fills with irrelevant information, quality degrades. Chapter 4, Lesson 6 covers context lifecycle commands in detail:
+When your context window fills with irrelevant information, quality degrades. Chapter 15, Lesson 6 covers context lifecycle commands in detail:
 
 - `/clear`: Start fresh with empty context
 - `/compact`: Summarize and compress existing context

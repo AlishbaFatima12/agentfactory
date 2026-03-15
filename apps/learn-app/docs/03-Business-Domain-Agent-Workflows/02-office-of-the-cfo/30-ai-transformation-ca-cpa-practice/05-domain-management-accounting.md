@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/domain-management-accounting
 sidebar_position: 5
 title: "Domain 4 -- Management Accounting and Financial Management"
-description: "Explore how AI transforms the internal finance function -- FP&A, performance management, and treasury -- shifting CA/CPA professionals from model maintenance to strategic business partnering, with direct connections to the IDFA methodology from Chapter 18"
+description: "Explore how AI transforms the internal finance function -- FP&A, performance management, and treasury -- shifting CA/CPA professionals from model maintenance to strategic business partnering, with direct connections to the IDFA methodology from Chapter 29"
 keywords:
   [
     "management accounting",
@@ -20,7 +20,7 @@ keywords:
     "business partnering",
     "CA CPA AI",
   ]
-chapter: 19
+chapter: 30
 lesson: 5
 duration_minutes: 40
 
@@ -38,7 +38,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can apply the IDFA naming conventions and Named Range architecture from Chapter 18 to a management accounting workflow, specifically structuring a variance analysis model with Inp_ prefixes and business-rule formulas"
+    measurable_at_this_level: "Student can apply the IDFA naming conventions and Named Range architecture from Chapter 29 to a management accounting workflow, specifically structuring a variance analysis model with Inp_ prefixes and business-rule formulas"
 
   - name: "Evaluate Professional Role Transformation in FP&A"
     proficiency_level: "A2"
@@ -53,7 +53,7 @@ learning_objectives:
     bloom_level: "Understand"
     assessment_method: "Student can describe at least two Gen-AI use cases in management accounting and identify the judgment component that remains with the professional in each case"
 
-  - objective: "Apply the IDFA methodology from Chapter 18 to structure a management accounting variance analysis, using Inp_ naming conventions and Named Range design to separate inputs from business-rule calculations"
+  - objective: "Apply the IDFA methodology from Chapter 29 to structure a management accounting variance analysis, using Inp_ naming conventions and Named Range design to separate inputs from business-rule calculations"
     proficiency_level: "B1"
     bloom_level: "Apply"
     assessment_method: "Student completes Practice Exercise 4, producing an IDFA-compliant variance model with correctly named inputs and formula-driven decomposition"
@@ -71,7 +71,7 @@ cognitive_load:
     - "Autonomous FP&A agent architecture: data collection to management reporting pack"
     - "IDFA methodology applied to management accounting (Inp_ naming, Named Ranges for budget assumptions)"
     - "Business partnering as the resilient professional role in AI-augmented FP&A"
-  assessment: "5 concepts at A2-B1 level -- within the 5-7 cognitive limit. Students arrive with IDFA methodology and Cowork fluency from Ch 17-18; this lesson applies those tools to the management accounting domain rather than introducing entirely new architecture."
+  assessment: "5 concepts at A2-B1 level -- within the 5-7 cognitive limit. Students arrive with IDFA methodology and Cowork fluency from Ch 28-18; this lesson applies those tools to the management accounting domain rather than introducing entirely new architecture."
 
 differentiation:
   extension_for_advanced: "Build a rolling 13-week cash flow forecast model using the IDFA Named Range methodology. Structure treasury assumptions as Inp_ variables and forecast formulas as named business rules. Compare your model structure to the approach used in Exercise 18 (Lesson 13)."
@@ -112,7 +112,7 @@ In Lesson 4, you examined how AI transforms assurance services by shifting audit
 
 Management accounting and financial management encompasses Financial Planning and Analysis (FP&A), performance management, and treasury. Unlike financial reporting (Domain 1), which produces external-facing regulatory documents, and audit (Domain 3), which provides independent assurance, management accounting is primarily internal-facing and strategic. It produces the budgets, forecasts, variance analyses, and management reporting packs that drive business decisions. This distinction matters because the AI transformation pattern is different: management accounting faces moderate-high AI impact on its mechanical components, but the strategic interpretation layer -- challenging assumptions, stress-testing plans, partnering with the business -- is where professional value concentrates.
 
-If you completed Chapter 18, this lesson will feel like coming home. The IDFA methodology, the Named Range architecture, the Inp\_ naming conventions -- these are not abstract tools when applied to management accounting. They are the specific discipline of separating budget assumptions from variance calculations, inputs from business rules, mechanical assembly from professional judgment.
+If you completed Chapter 29, this lesson will feel like coming home. The IDFA methodology, the Named Range architecture, the Inp\_ naming conventions -- these are not abstract tools when applied to management accounting. They are the specific discipline of separating budget assumptions from variance calculations, inputs from business rules, mechanical assembly from professional judgment.
 
 ## What This Domain Covers
 
@@ -195,11 +195,11 @@ The practical implication: a management accountant who spends 80% of their time 
 
 ## The IDFA Connection
 
-This is the domain where the IDFA methodology from Chapter 18 becomes concrete practice rather than abstract architecture.
+This is the domain where the IDFA methodology from Chapter 29 becomes concrete practice rather than abstract architecture.
 
 When you structure a variance analysis model using IDFA conventions, you are doing management accounting. The Inp\_ prefix is a budget assumption. The Named Range formula is a variance calculation that reads as a business rule. The what-if workflow is a scenario analysis. The skill instruction that encodes the CFO's preferred variance bridge format is a management accounting deliverable specification.
 
-Step 4 of Practice Exercise 4 makes this explicit: the skill instruction you draft is the CFO's preferred format -- the volume/price/mix decomposition, the within/outside-management-control distinction, the forward implication structure -- encoded as a reusable agent instruction. This is management accounting knowledge extraction applied through the methodology you learned in Chapter 18.
+Step 4 of Practice Exercise 4 makes this explicit: the skill instruction you draft is the CFO's preferred format -- the volume/price/mix decomposition, the within/outside-management-control distinction, the forward implication structure -- encoded as a reusable agent instruction. This is management accounting knowledge extraction applied through the methodology you learned in Chapter 29.
 
 ### Practice Exercise 4: FP&A Workflow with Cowork (30 min)
 
@@ -207,7 +207,7 @@ Step 4 of Practice Exercise 4 makes this explicit: the skill instruction you dra
 
 **Requirements:** Cowork, a financial dataset (actual vs. budget P&L for any period). If you need ready-made data, [**download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and use the Crescent Textiles trial balance (`exercises/trial-balances/textile-manufacturer-tb.csv`) as your "actual" figures and the entity profile (`exercises/entity-profiles/crescent-textiles.md`) to generate a budget scenario.
 
-1. Place your P&L data in a Cowork folder. If you have `finance@knowledge-work-plugins` installed from Chapter 17, start with `/variance-analysis "Compare actual vs budget for this period"` to generate a structured baseline. Then refine with the IDFA naming conventions from Chapter 18 — ask Claude: _"Structure this P&L data as an IDFA-compliant variance analysis model. Name all inputs using the Inp\_ prefix convention. For the revenue and gross margin lines, decompose variances into volume, price, and mix components."_
+1. Place your P&L data in a Cowork folder. If you have `finance@knowledge-work-plugins` installed from Chapter 28, start with `/variance-analysis "Compare actual vs budget for this period"` to generate a structured baseline. Then refine with the IDFA naming conventions from Chapter 29 — ask Claude: _"Structure this P&L data as an IDFA-compliant variance analysis model. Name all inputs using the Inp\_ prefix convention. For the revenue and gross margin lines, decompose variances into volume, price, and mix components."_
 
 2. Ask: _"Write the CFO-ready narrative for this variance. The CFO wants: the three most significant drivers of the overall P&L variance, whether each driver is within or outside management control, and the forward implication -- does this variance change the full-year forecast?"_
 
@@ -217,7 +217,7 @@ Step 4 of Practice Exercise 4 makes this explicit: the skill instruction you dra
 
 **Check your work:** You should have (a) an IDFA-compliant model with Inp\_ named inputs, (b) a CFO narrative covering the three biggest drivers with controllability classification, (c) a forward-looking scenario, and (d) a draft skill that captures the CFO's preferred format as reusable agent instructions.
 
-**The key learning:** The IDFA architecture from Chapter 18 is not abstract when applied to management accounting -- it is the specific discipline of separating the budget assumption (an input) from the calculation of the variance (a formula that must read as a business rule). Step 4 makes this concrete: the skill instruction you draft is the CFO's preferred format encoded as reusable agent instruction.
+**The key learning:** The IDFA architecture from Chapter 29 is not abstract when applied to management accounting -- it is the specific discipline of separating the budget assumption (an input) from the calculation of the variance (a formula that must read as a business rule). Step 4 makes this concrete: the skill instruction you draft is the CFO's preferred format encoded as reusable agent instruction.
 
 ## Try With AI
 

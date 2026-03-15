@@ -1,5 +1,5 @@
 deck:
-  id: ch10-04-relationships-joins
+  id: ch21-04-relationships-joins
   title: "Relationships & Joins"
   description: Flashcards covering SQLAlchemy relationships, back_populates, cascade policies, the N+1 problem, selectinload, and when to use relationship navigation vs explicit joins.
   tags:
@@ -10,7 +10,7 @@ deck:
   - cascade
   version: 1
 cards:
-- id: ch10-04-relationships-joins-001
+- id: ch21-04-relationships-joins-001
   type: recall
   difficulty: basic
   front: "In SQLAlchemy, what does back_populates do?"
@@ -18,7 +18,7 @@ cards:
   tags:
   - relationships
   - back-populates
-- id: ch10-04-relationships-joins-002
+- id: ch21-04-relationships-joins-002
   type: thinking
   difficulty: intermediate
   front: "User.expenses has back_populates='user', but Expense.user has back_populates='expense'. What happens?"
@@ -27,7 +27,7 @@ cards:
   tags:
   - back-populates
   - silent-bugs
-- id: ch10-04-relationships-joins-003
+- id: ch21-04-relationships-joins-003
   type: recall
   difficulty: intermediate
   front: "What does cascade='all, delete-orphan' mean on a relationship?"
@@ -35,7 +35,7 @@ cards:
   tags:
   - cascade
   - relationships
-- id: ch10-04-relationships-joins-004
+- id: ch21-04-relationships-joins-004
   type: thinking
   difficulty: intermediate
   front: "Why is cascade='all, delete-orphan' correct for User.expenses but dangerous for Category.expenses?"
@@ -44,7 +44,7 @@ cards:
   tags:
   - cascade
   - business-logic
-- id: ch10-04-relationships-joins-005
+- id: ch21-04-relationships-joins-005
   type: recall
   difficulty: basic
   front: What is the N+1 problem in database queries?
@@ -52,7 +52,7 @@ cards:
   tags:
   - n-plus-one
   - performance
-- id: ch10-04-relationships-joins-006
+- id: ch21-04-relationships-joins-006
   type: recall
   difficulty: intermediate
   front: "How many queries does a loop over 100 users accessing user.expenses fire without selectinload?"
@@ -60,7 +60,7 @@ cards:
   tags:
   - n-plus-one
   - performance
-- id: ch10-04-relationships-joins-007
+- id: ch21-04-relationships-joins-007
   type: thinking
   difficulty: intermediate
   front: "Your app works fine with 5 users but crawls with 500. What do you check first?"
@@ -69,7 +69,7 @@ cards:
   tags:
   - n-plus-one
   - debugging
-- id: ch10-04-relationships-joins-008
+- id: ch21-04-relationships-joins-008
   type: recall
   difficulty: basic
   front: "What SQLAlchemy feature fixes the N+1 problem in one line?"
@@ -77,7 +77,7 @@ cards:
   tags:
   - selectinload
   - n-plus-one
-- id: ch10-04-relationships-joins-009
+- id: ch21-04-relationships-joins-009
   type: recall
   difficulty: basic
   front: "When should you use relationship attributes (user.expenses) vs explicit .join() queries?"
@@ -85,7 +85,7 @@ cards:
   tags:
   - relationships
   - joins
-- id: ch10-04-relationships-joins-010
+- id: ch21-04-relationships-joins-010
   type: thinking
   difficulty: advanced
   front: "How does the ForeignKey column differ from the relationship declaration in SQLAlchemy?"
@@ -94,7 +94,7 @@ cards:
   tags:
   - foreign-key
   - relationships
-- id: ch10-04-relationships-joins-011
+- id: ch21-04-relationships-joins-011
   type: thinking
   difficulty: intermediate
   front: "A teammate adds a report loop that prints user.expenses for each user. What two questions should you ask?"
@@ -103,7 +103,7 @@ cards:
   tags:
   - n-plus-one
   - code-review
-- id: ch10-04-relationships-joins-012
+- id: ch21-04-relationships-joins-012
   type: recall
   difficulty: basic
   front: "With selectinload, how many queries are needed to load 100 users and all their expenses?"

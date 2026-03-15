@@ -18,7 +18,7 @@ keywords:
     secrets audit,
     real work,
   ]
-chapter: 7
+chapter: 18
 lesson: 7
 duration_minutes: 35
 

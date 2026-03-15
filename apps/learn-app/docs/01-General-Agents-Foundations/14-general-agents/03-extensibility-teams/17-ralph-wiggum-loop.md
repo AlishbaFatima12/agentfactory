@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/ralph-wiggum-loop
 title: "Ralph Wiggum Loop: Autonomous Iteration Workflows"
 sidebar_position: 17
-chapter: 3
+chapter: 14
 lesson: 17
 duration_minutes: 15
 
@@ -751,7 +751,7 @@ This is the pattern behind sellable AI agents:
 
 **Paradigm Connection**:
 
-You learned in Chapter 1 that AI shifts work from "executing" to "orchestrating." Ralph Loop embodies this:
+You learned in Chapter 12 that AI shifts work from "executing" to "orchestrating." Ralph Loop embodies this:
 
 - **You orchestrate**: Define goal, set guardrails, review results
 - **Claude executes**: Iterates toward completion without hand-holding

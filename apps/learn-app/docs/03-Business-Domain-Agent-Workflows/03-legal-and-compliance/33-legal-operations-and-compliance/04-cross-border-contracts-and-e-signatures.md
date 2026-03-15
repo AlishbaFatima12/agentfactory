@@ -20,7 +20,7 @@ keywords:
     "pre-signature checklist",
     "post-execution obligations",
   ]
-chapter: 22
+chapter: 33
 lesson: 4
 duration_minutes: 25
 

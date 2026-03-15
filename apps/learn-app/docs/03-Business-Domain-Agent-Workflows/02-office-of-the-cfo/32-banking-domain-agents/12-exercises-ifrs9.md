@@ -16,7 +16,7 @@ keywords:
     "IFRS 7 disclosure",
     "banking AI exercises",
   ]
-chapter: 21
+chapter: 32
 lesson: 12
 duration_minutes: 60
 

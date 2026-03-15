@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/code-vs-cowork-decision-framework
 title: "Code vs. Cowork: A Decision Framework"
 sidebar_position: 32
-chapter: 3
+chapter: 14
 lesson: 32
 duration_minutes: 16
 chapter_type: Concept

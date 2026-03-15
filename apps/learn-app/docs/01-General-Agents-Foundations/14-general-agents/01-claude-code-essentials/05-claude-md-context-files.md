@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/claude-md-context-files
 title: "CLAUDE.md Context Files"
 sidebar_position: 5
-chapter: 3
+chapter: 14
 lesson: 5
 duration_minutes: 8
 
@@ -126,7 +126,7 @@ Think of it as a **persistent project brief** that travels with your code:
 
 When Claude Code starts a new session, it reads CLAUDE.md automatically. Claude **immediately understands your project** without you saying a word.
 
-![Four-layer context architecture showing Working Directory (base), CLAUDE.md (project knowledge), Message History (conversation state), and Current Tools (active capabilities), with information flow arrows](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-1/chapter-03/context-claude.png)
+![Four-layer context architecture showing Working Directory (base), CLAUDE.md (project knowledge), Message History (conversation state), and Current Tools (active capabilities), with information flow arrows](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-1/chapter-14/context-claude.png)
 
 #### 💬 AI Colearning Prompt
 

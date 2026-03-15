@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "From Broken Math to Your First Tool"
-chapter: 9
+chapter: 20
 lesson: 1
 duration_minutes: 30
 layer: L1

@@ -20,7 +20,7 @@ keywords:
     "business automation",
     "domain expert AI",
   ]
-chapter: 4
+chapter: 15
 lesson: 10
 duration_minutes: 120
 
@@ -122,11 +122,11 @@ More importantly, you'll connect everything back to the thesis that drives this 
 
 ## Back to the Thesis
 
-In Chapter 1, you learned the Agent Factory paradigm: domain experts manufacturing Digital FTEs powered by AI. The thesis:
+In Chapter 12, you learned the Agent Factory paradigm: domain experts manufacturing Digital FTEs powered by AI. The thesis:
 
 > General Agents BUILD Custom Agents.
 
-You've spent three chapters learning the tools (Chapter 3) and the physics (this chapter). Now answer the question that actually matters:
+You've spent three chapters learning the tools (Chapter 14) and the physics (this chapter). Now answer the question that actually matters:
 
 **What separates a $50/month agent from a $5,000/month agent?**
 
@@ -811,7 +811,7 @@ As you make choices about your agent's behavior, record them:
   - Alternative rejected: Test-after (too often skipped)
 
 - Decision: Use specific file paths, never relative
-  - Rationale: Subagents need absolute paths (Chapter 3 lesson)
+  - Rationale: Subagents need absolute paths (Chapter 14 lesson)
   - Alternative rejected: Context-dependent paths (error-prone)
 ```
 
@@ -1013,7 +1013,7 @@ You now understand:
 
 Without context engineering discipline, "persisting state in files" is cargo cult. With it, file-based state becomes a superpower.
 
-In Chapter 6, you'll learn Principle 5 explicitly, along with the other six principles of general agent problem solving. This chapter gave you the physics. Chapter 6 gives you the practices.
+In Chapter 17, you'll learn Principle 5 explicitly, along with the other six principles of general agent problem solving. This chapter gave you the physics. Chapter 17 gives you the practices.
 
 ## What You Learned
 

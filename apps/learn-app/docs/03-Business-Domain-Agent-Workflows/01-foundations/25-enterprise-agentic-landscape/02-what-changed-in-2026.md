@@ -13,7 +13,7 @@ keywords:
     "agent deployment",
     "2026 AI",
   ]
-chapter: 14
+chapter: 25
 lesson: 2
 duration_minutes: 25
 

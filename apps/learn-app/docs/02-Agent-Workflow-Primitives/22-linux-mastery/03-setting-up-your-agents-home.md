@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: "Setting Up Your Agent's Home"
-chapter: 11
+chapter: 22
 lesson: 3
 layer: L2
 duration_minutes: 30

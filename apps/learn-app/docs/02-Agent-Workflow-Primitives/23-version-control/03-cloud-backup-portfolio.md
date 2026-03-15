@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-chapter: 12
+chapter: 23
 lesson: 3
 title: "Cloud Backup & Portfolio"
 description: "Push your project to GitHub for cloud backup and career showcase — because a backup you've never tested doesn't exist"

@@ -1,15 +1,15 @@
 ---
 slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/chapter-quiz
 sidebar_position: 11
-title: "Chapter 15: The Enterprise Agent Blueprint Quiz"
+title: "Chapter 26: The Enterprise Agent Blueprint Quiz"
 ---
 
-# Chapter 15: The Enterprise Agent Blueprint Quiz
+# Chapter 26: The Enterprise Agent Blueprint Quiz
 
 Test your understanding of the enterprise agent blueprint — from plugin architecture and the PQP Framework to governance, ownership, and the marketplace.
 
 <Quiz
-title="Chapter 15: The Enterprise Agent Blueprint Assessment"
+title="Chapter 26: The Enterprise Agent Blueprint Assessment"
 questions={[
 {
 question: "A senior procurement manager says: 'Our AI tool is just a chatbot add-on to our ERP system — it answers questions when we ask it.' A colleague replies: 'That is not what a Cowork plugin is at all.' What is the most precise distinction the colleague is making?",
@@ -572,7 +572,7 @@ options: [
 "The platform-level context automatically enables shadow mode for all clinical deployments, so no configuration is required"
 ],
 correctOption: 1,
-explanation: "Lesson 7 explains that shadow mode serves two purposes: quality validation and organisational confidence-building. In clinical contexts, the lesson notes specifically that 'clinical accuracy requirements for HITL gate configuration are covered in depth in Chapter 21... The clinical context introduces additional considerations — regulatory requirements, professional liability standards, patient safety thresholds — that go beyond what the standard governance layer covers.' The 30-day period ensures the evidence base covers diverse input types, and the 95% threshold must be calibrated to clinical standards (which may be higher than 95% for certain clinical outputs). Option A is weaker — a consistent policy for clinical plugins is preferable. Option C is wrong; HITL gates govern autonomous action boundaries, not the evidence-building process. Option D invents a platform-level clinical automation.",
+explanation: "Lesson 7 explains that shadow mode serves two purposes: quality validation and organisational confidence-building. In clinical contexts, the lesson notes specifically that 'clinical accuracy requirements for HITL gate configuration are covered in depth in Chapter 32... The clinical context introduces additional considerations — regulatory requirements, professional liability standards, patient safety thresholds — that go beyond what the standard governance layer covers.' The 30-day period ensures the evidence base covers diverse input types, and the 95% threshold must be calibrated to clinical standards (which may be higher than 95% for certain clinical outputs). Option A is weaker — a consistent policy for clinical plugins is preferable. Option C is wrong; HITL gates govern autonomous action boundaries, not the evidence-building process. Option D invents a platform-level clinical automation.",
 source: "Lesson 7: The Governance Layer"
 },
 {

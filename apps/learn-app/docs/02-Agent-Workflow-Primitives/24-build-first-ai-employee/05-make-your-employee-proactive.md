@@ -3,7 +3,7 @@ sidebar_position: 5
 title: "Make Your Employee Proactive"
 description: "Transform your reactive AI employee into a proactive one by designing and deploying a scheduled task that monitors, analyzes, and delivers domain-relevant information without being asked."
 keywords: [nanoclaw, scheduled tasks, proactive, automation, monitoring, ai employee, silver tier]
-chapter: 13
+chapter: 24
 lesson: 5
 duration_minutes: 40
 

@@ -12,7 +12,7 @@ keywords:
     openclaw tasks,
     output iteration,
   ]
-chapter: 7
+chapter: 18
 lesson: 3
 duration_minutes: 33
 

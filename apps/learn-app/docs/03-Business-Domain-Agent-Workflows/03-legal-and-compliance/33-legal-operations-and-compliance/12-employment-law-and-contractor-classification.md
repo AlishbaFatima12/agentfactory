@@ -20,7 +20,7 @@ keywords:
     "Section 27 Contract Act",
     "misclassification risk",
   ]
-chapter: 22
+chapter: 33
 lesson: 12
 duration_minutes: 25
 

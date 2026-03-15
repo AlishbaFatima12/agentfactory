@@ -21,7 +21,7 @@ keywords:
     "sensitivity analysis",
     "WACC",
   ]
-chapter: 17
+chapter: 28
 lesson: 5
 duration_minutes: 35
 

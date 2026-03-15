@@ -19,7 +19,7 @@ This part establishes the mental models and practical skills you need for AI-nat
 
 Part 1 consists of seven chapters that build from concepts to communication to tools to engineering discipline to specifications to principles to proof:
 
-### Chapter 1: The AI Agent Factory Paradigm (Conceptual Foundation)
+### Chapter 12: The AI Agent Factory Paradigm (Conceptual Foundation)
 
 **Foundational Concepts (Lessons 1-3)**: You'll examine concrete evidence proving 2025 is a genuine inflection point—ICPC perfect scores, 84% developer adoption, $3 trillion economy transformation. You'll understand the three core operational constraints of LLMs (statelessness, probabilistic outputs, context limits) that shape all AI-native development, and learn how your role evolves from coder to orchestrator through the OODA Loop.
 
@@ -31,15 +31,15 @@ Part 1 consists of seven chapters that build from concepts to communication to t
 
 **Enterprise Sales (Lesson 10)**: You'll learn how to sell your Digital FTE solutions to enterprise customers in the $100-400 billion agentic AI market. You'll understand the four value propositions (Enabler, Implementer, Custom Developer, Workflow Disruptor), master consultative selling and outcome-based pricing, and learn to position yourself for the six factors enterprises prioritize when choosing AI service providers.
 
-### Chapter 2: Markdown - Writing Instructions
+### Chapter 13: Markdown - Writing Instructions
 
 Before you can work with AI agents effectively, you need to write clear instructions. Markdown is the format used for CLAUDE.md files, project documentation, and agent instructions throughout this book.
 
 **Markdown Syntax (Lessons 1-5)**: You'll learn headings for document structure, lists for organizing information, code blocks for showing examples, and links and images for connecting to resources. Each element is taught through practical examples that mirror the files you'll write in subsequent chapters.
 
-### Chapter 3: General Agents - Claude Code & Cowork
+### Chapter 14: General Agents - Claude Code & Cowork
 
-Now that you understand _why_ AI-driven development matters and _how_ to write clear instructions, Chapter 3 teaches you how to work with Claude's General Agents in practice.
+Now that you understand _why_ AI-driven development matters and _how_ to write clear instructions, Chapter 14 teaches you how to work with Claude's General Agents in practice.
 
 **Claude Code Essentials (Lessons 1-8)**: You'll install and configure Claude Code, master the CLI interface, learn persistent project context with CLAUDE.md files, create custom instructions, build Agent Skills, and understand subagent orchestration.
 
@@ -49,9 +49,9 @@ Now that you understand _why_ AI-driven development matters and _how_ to write c
 
 **Business Application (Lessons 22-26)**: You'll understand safety limitations and what's coming, master built-in document skills, learn the Code vs. Cowork decision framework, and discover how Skills become monetizable products.
 
-### Chapter 4: Effective Context Engineering with General Agents
+### Chapter 15: Effective Context Engineering with General Agents
 
-You've learned the tools. Now learn WHY they work and WHEN to use each one. Chapter 4 introduces **Context Engineering**—the quality control discipline for Digital FTE manufacturing.
+You've learned the tools. Now learn WHY they work and WHEN to use each one. Chapter 15 introduces **Context Engineering**—the quality control discipline for Digital FTE manufacturing.
 
 **Foundation (Lessons 1-3)**: You'll understand why context quality determines agent value, learn the U-shaped attention curve and 70% threshold, and discover why Claude "forgets" things in the middle of long conversations (position sensitivity research).
 
@@ -61,9 +61,9 @@ You've learned the tools. Now learn WHY they work and WHEN to use each one. Chap
 
 **Integration (Lesson 10)**: You'll apply the full context engineering toolkit to build a production-quality specialized agent worth selling.
 
-### Chapter 5: Spec-Driven Development with Claude Code
+### Chapter 16: Spec-Driven Development with Claude Code
 
-Chapter 5 introduces **Spec-Driven Development (SDD)**—the methodology that transforms AI coding assistants from sophisticated autocomplete tools into production-grade development partners.
+Chapter 16 introduces **Spec-Driven Development (SDD)**—the methodology that transforms AI coding assistants from sophisticated autocomplete tools into production-grade development partners.
 
 **From Vibe Coding to Specifications**: You'll understand why conversational "vibe coding" breaks down for production systems and how specifications as primary artifacts solve context loss, assumption drift, and architectural inconsistency.
 
@@ -71,17 +71,17 @@ Chapter 5 introduces **Spec-Driven Development (SDD)**—the methodology that tr
 
 **Practical Patterns**: You'll master prompt patterns that reduce approval fatigue, front-load review at specification phase gates, and enable parallel execution of research and implementation tasks.
 
-### Chapter 6: The Seven Principles of General Agent Problem Solving
+### Chapter 17: The Seven Principles of General Agent Problem Solving
 
-Chapter 6 synthesizes learnings from Chapters 1-5 into actionable problem-solving principles that generalize across all General Agent workflows.
+Chapter 17 synthesizes learnings from Chapters 12-16 into actionable problem-solving principles that generalize across all General Agent workflows.
 
 **The Principles (Lessons 1-7)**: You'll master Bash is the Key, Code as Universal Interface, Verification as Core Step, Small Reversible Decomposition, Persisting State in Files, Constraints and Safety, and Observability. Each principle is explored in both Claude Code (terminal) and Claude Cowork (desktop) contexts—showing how these are truly _General Agent_ principles, not tool-specific tricks.
 
 **Integration (Lesson 8)**: You'll discover the Meta-Principle underlying all seven (general agents leverage computing fundamentals), see how principles combine in real-world workflows, and learn a decision framework for choosing between Code and Cowork based on task characteristics.
 
-### Chapter 7: Meet Your First AI Employee
+### Chapter 18: Meet Your First AI Employee
 
-Before you build domain skills, experience what you're building toward. Chapter 7 introduces OpenClaw — the fastest-growing AI Employee project with 209,000+ GitHub stars. You'll install it, delegate real tasks via WhatsApp or Telegram, explore its architecture (six universal agent patterns), and understand the security implications. This isn't a demo — it's a working system that validates everything you learned in Chapters 1-6.
+Before you build domain skills, experience what you're building toward. Chapter 18 introduces OpenClaw — the fastest-growing AI Employee project with 209,000+ GitHub stars. You'll install it, delegate real tasks via WhatsApp or Telegram, explore its architecture (six universal agent patterns), and understand the security implications. This isn't a demo — it's a working system that validates everything you learned in Chapters 12-17.
 
 ## The Agent Factory Paradigm
 

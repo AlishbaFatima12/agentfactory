@@ -13,7 +13,7 @@ keywords:
     "enterprise agents",
     "AI stagnation",
   ]
-chapter: 14
+chapter: 25
 lesson: 1
 duration_minutes: 25
 

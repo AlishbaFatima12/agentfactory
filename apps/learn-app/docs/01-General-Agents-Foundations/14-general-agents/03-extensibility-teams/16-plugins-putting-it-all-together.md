@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/plugins-putting-it-all-together
 title: "Plugins: Discover and Install"
 sidebar_position: 16
-chapter: 3
+chapter: 14
 lesson: 16
 duration_minutes: 12
 

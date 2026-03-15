@@ -1,13 +1,13 @@
 ---
 sidebar_position: 3
-title: "Chapter 3: Working with General Agents: Claude Code and Cowork"
+title: "Chapter 14: Working with General Agents: Claude Code and Cowork"
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-1/chapter-03/agentic-ai-digital-fte.pdf"
-  title: "Chapter 3: Agentic AI - The Digital FTE"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-1/chapter-14/agentic-ai-digital-fte.pdf"
+  title: "Chapter 14: Agentic AI - The Digital FTE"
   height: 700
 ---
 
-# Chapter 3: Working with General Agents: Claude Code and Cowork
+# Chapter 14: Working with General Agents: Claude Code and Cowork
 
 You know _why_ AI-driven development matters—and that it's happening right now, in 2026. But understanding transformation and experiencing it are two different things.
 

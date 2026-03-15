@@ -18,7 +18,7 @@ keywords:
     "sales preparation",
     "pre-call-brief skill",
   ]
-chapter: 23
+chapter: 34
 lesson: 7
 duration_minutes: 25
 

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 11
-title: "Chapter 7: Meet Your First AI Employee Quiz"
+title: "Chapter 18: Meet Your First AI Employee Quiz"
 proficiency_level: B1
 layer: 2
 estimated_time: "25 mins"
@@ -8,12 +8,12 @@ chapter_type: Applied
 running_example_id: ai-employee-quiz
 ---
 
-# Chapter 7: Meet Your First AI Employee Quiz
+# Chapter 18: Meet Your First AI Employee Quiz
 
 Test your understanding of the AI Employee paradigm, OpenClaw's architecture and universal patterns, security realities, Claude Code delegation via tmux, Google Workspace integration, and NanoClaw and the Agent Factory blueprint. This assessment covers setup, the agent loop, 6 universal patterns, skills, security, explicit delegation and verification, productivity tool integration, Body + Brain separation, and portable vertical intelligence.
 
 <Quiz
-title="Chapter 7: Meet Your First AI Employee Assessment"
+title="Chapter 18: Meet Your First AI Employee Assessment"
 questionsPerBatch={19}
 questions={[
 {
@@ -461,7 +461,7 @@ explanation: "Programmatic Tool Calling means the Brain (Claude Agent SDK) gener
 source: "Lesson 9: NanoClaw and the Agent Factory"
 },
 {
-question: "You've completed Chapter 7 and are preparing to build your own AI Employee. You're drafting a specification. Which approach to specification writing produces the best results?",
+question: "You've completed Chapter 18 and are preparing to build your own AI Employee. You're drafting a specification. Which approach to specification writing produces the best results?",
 options: [
 "Keep the specification intentionally broad and open-ended so that you retain maximum flexibility to adapt the entire implementation direction during the build phase without being constrained by any premature technical decisions",
 "Focus exclusively on selecting the technology stack first, and only then determine concrete real-world use cases once you fully understand what your chosen technologies make technically feasible and straightforward to implement well",
@@ -469,7 +469,7 @@ options: [
 "Copy OpenClaw's existing specification document exactly as written and then selectively modify only the sections that obviously do not apply, since it has already been thoroughly proven and validated at significant production scale"
 ],
 correctOption: 2,
-explanation: "Specification-driven design means defining what you need before building anything. Vague specifications ('help with email') produce vague agents that don't work well for any specific task. Specific specifications ('summarize my top 10 unread emails each morning and flag anything from my manager') give you clear acceptance criteria: either the agent does this correctly or it doesn't. This specificity drives architectural decisions: you know you need Gmail access (not all 6 services), morning scheduling (autonomous invocation), and sender-priority logic (a custom skill). Each requirement maps to a pattern from Chapter 7. Broad specifications sound flexible but actually create scope creep and unclear success criteria. Define success first, then build to that definition.",
+explanation: "Specification-driven design means defining what you need before building anything. Vague specifications ('help with email') produce vague agents that don't work well for any specific task. Specific specifications ('summarize my top 10 unread emails each morning and flag anything from my manager') give you clear acceptance criteria: either the agent does this correctly or it doesn't. This specificity drives architectural decisions: you know you need Gmail access (not all 6 services), morning scheduling (autonomous invocation), and sender-priority logic (a custom skill). Each requirement maps to a pattern from Chapter 18. Broad specifications sound flexible but actually create scope creep and unclear success criteria. Define success first, then build to that definition.",
 source: "Lesson 10: Chapter Quiz"
 }
 ]}
@@ -521,7 +521,7 @@ In Part 2, you'll build the individual skills (file processing, computation, dat
 ### Prompt 1: Personal AI Employee Planning
 
 ```
-I completed Chapter 7 (6 universal agent patterns, coding delegation,
+I completed Chapter 18 (6 universal agent patterns, coding delegation,
 Google Workspace integration). Help me plan my own AI Employee for
 which 3 tasks first, which patterns I need immediately
 vs. can wait, and what security boundaries to set. Start by asking
@@ -551,11 +551,11 @@ worst realistic outcome if I skip security boundaries, and a "chaos
 test" of 3 messages that would expose my weakest point.
 ```
 
-**What you're learning:** Threat modeling before building is what separates production systems from demos. By designing failure scenarios for your own project, you internalize the security and reliability lessons from Chapter 7 as concrete design constraints -- not abstract principles you will forget under implementation pressure.
+**What you're learning:** Threat modeling before building is what separates production systems from demos. By designing failure scenarios for your own project, you internalize the security and reliability lessons from Chapter 18 as concrete design constraints -- not abstract principles you will forget under implementation pressure.
 
 ---
 
-You started Chapter 7 with a question: what is an AI Employee? You end with an answer that goes deeper than you expected. An AI Employee is not just a chatbot that does more. It is an autonomous system built on universal patterns, with real security implications and unsolved problems that the industry is still working through. And with NanoClaw's Body + Brain architecture, portable Agent Skills + MCP standards, and agents building agents, you now see the Agent Factory blueprint for building AI Employees for every profession.
+You started Chapter 18 with a question: what is an AI Employee? You end with an answer that goes deeper than you expected. An AI Employee is not just a chatbot that does more. It is an autonomous system built on universal patterns, with real security implications and unsolved problems that the industry is still working through. And with NanoClaw's Body + Brain architecture, portable Agent Skills + MCP standards, and agents building agents, you now see the Agent Factory blueprint for building AI Employees for every profession.
 
 You experienced this firsthand. You understood the architecture. You built a skill. You confronted the security realities. You designed and verified real delegation from your employee to Claude Code via tmux. You connected it to your actual productivity tools. You assessed what works and what does not. And you saw how NanoClaw's container isolation, portable intelligence standards, and six-layer reference architecture address the hard problems OpenClaw left unsolved.
 

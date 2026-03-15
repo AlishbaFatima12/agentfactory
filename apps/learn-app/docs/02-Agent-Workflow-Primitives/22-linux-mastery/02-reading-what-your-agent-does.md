@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: "Reading What Your Agent Does"
-chapter: 11
+chapter: 22
 lesson: 2
 layer: L2
 duration_minutes: 30

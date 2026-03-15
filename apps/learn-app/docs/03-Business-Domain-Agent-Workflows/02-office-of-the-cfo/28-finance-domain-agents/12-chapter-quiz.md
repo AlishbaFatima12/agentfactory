@@ -1,18 +1,18 @@
 ---
 slug: /Business-Domain-Agent-Workflows/finance-domain-agents/chapter-quiz
 sidebar_position: 12
-title: "Chapter 17: Finance Domain Agents Quiz"
+title: "Chapter 28: Finance Domain Agents Quiz"
 ---
 
-# Chapter 17: Finance Domain Agents Quiz
+# Chapter 28: Finance Domain Agents Quiz
 
 Test your understanding of finance domain agents — from Claude in Excel as an embedded assistant through Cowork as an orchestrating agent to enterprise extensions that encode your institution's specific knowledge.
 
 <Quiz
-title="Chapter 17: Finance Domain Agents Assessment"
+title="Chapter 28: Finance Domain Agents Assessment"
 questions={[
 {
-question: "A junior analyst asks: 'What is the difference between Claude in Excel and Cowork? They both use AI for finance.' A senior colleague who has completed Chapter 17 gives a precise architectural answer. Which response is correct?",
+question: "A junior analyst asks: 'What is the difference between Claude in Excel and Cowork? They both use AI for finance.' A senior colleague who has completed Chapter 28 gives a precise architectural answer. Which response is correct?",
 options: [
 "Claude in Excel is an embedded assistant operating within a single workbook; Cowork is an orchestrating agent operating across multiple applications — they share the same data connector ecosystem but operate at different scope",
 "Claude in Excel is a free tool while Cowork is a paid enterprise product with different underlying technology",
@@ -276,7 +276,7 @@ explanation: "Lesson 7 states that cross-app orchestration is available on Cowor
 source: "Lesson 7: Cross-App Orchestration"
 },
 {
-question: "A consulting firm wants to apply the Knowledge Extraction Method (KEM) to their finance practice. Lesson 8 adapts the Five Questions from Chapter 16 to a finance context. What is the first question, and why is it adapted differently for finance?",
+question: "A consulting firm wants to apply the Knowledge Extraction Method (KEM) to their finance practice. Lesson 8 adapts the Five Questions from Chapter 27 to a finance context. What is the first question, and why is it adapted differently for finance?",
 options: [
 "'Walk me through your most recent monthly close from start to finish' — it is adapted to finance because monthly close is the recurring, high-stakes workflow that surfaces the most tacit knowledge about an institution's specific accounting practices",
 "'What financial software do you use?' — technology inventory comes first because the SKILL.md needs to reference specific tools",
@@ -456,7 +456,7 @@ explanation: "Lesson 11 explains that the three recommended parallel extensions 
 source: "Lesson 11: Your Extension Roadmap and Chapter Summary"
 },
 {
-question: "The chapter summary describes a 'unifying architecture' across the three parts of Chapter 17. A colleague says: 'Claude in Excel, Cowork, and enterprise extensions are three separate products.' How does the chapter correct this?",
+question: "The chapter summary describes a 'unifying architecture' across the three parts of Chapter 28. A colleague says: 'Claude in Excel, Cowork, and enterprise extensions are three separate products.' How does the chapter correct this?",
 options: [
 "They are three layers of the same architecture sharing the same data connector ecosystem — Claude in Excel uses connectors at workbook scope, Cowork uses the same connectors at multi-application scope, and enterprise extensions add institutional knowledge on top of both layers through SKILL.md files",
 "They are three separate products that happen to be made by the same company",

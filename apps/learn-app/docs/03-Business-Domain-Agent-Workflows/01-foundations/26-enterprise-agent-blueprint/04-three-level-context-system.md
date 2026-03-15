@@ -16,7 +16,7 @@ keywords:
     "diagnostic sequence",
     "enterprise agent",
   ]
-chapter: 15
+chapter: 26
 lesson: 4
 duration_minutes: 20
 

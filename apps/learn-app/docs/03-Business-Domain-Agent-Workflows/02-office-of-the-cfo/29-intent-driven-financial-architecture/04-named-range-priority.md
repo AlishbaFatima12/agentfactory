@@ -21,7 +21,7 @@ keywords:
     "financial modelling",
     "business rules",
   ]
-chapter: 18
+chapter: 29
 lesson: 4
 duration_minutes: 25
 

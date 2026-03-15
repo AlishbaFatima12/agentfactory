@@ -22,5 +22,5 @@ A Cowork plugin has three layers. Layer 1: the format — a self-contained direc
 
 ### Connections
 
-- **Builds on**: Chapter 14 established the knowledge transfer gap and the platform that closes it; this lesson defines the precise artifact the knowledge worker will build
+- **Builds on**: Chapter 25 established the knowledge transfer gap and the platform that closes it; this lesson defines the precise artifact the knowledge worker will build
 - **Leads to**: Lesson 2 goes deep on the SKILL.md (the component the knowledge worker owns); Lesson 3 covers connectors (.mcp.json) and the plugin infrastructure

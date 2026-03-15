@@ -20,7 +20,7 @@ keywords:
     "claude code agent teams",
     "parallel agents",
   ]
-chapter: 4
+chapter: 15
 lesson: 9
 duration_minutes: 75
 
@@ -661,7 +661,7 @@ Three strategies to work around it:
 
 ### Strategy 1: Preload Skills with Domain Knowledge
 
-Create Skills (from Chapter 3) that encode domain-specific knowledge:
+Create Skills (from Chapter 14) that encode domain-specific knowledge:
 
 **Legal Professional:**
 

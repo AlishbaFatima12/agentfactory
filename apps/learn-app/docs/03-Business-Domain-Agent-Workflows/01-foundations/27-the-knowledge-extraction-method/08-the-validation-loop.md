@@ -17,7 +17,7 @@ keywords:
     "95 percent threshold",
     "credit analyst",
   ]
-chapter: 16
+chapter: 27
 lesson: 8
 duration_minutes: 25
 

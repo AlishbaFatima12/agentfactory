@@ -22,7 +22,7 @@ keywords:
     "tax-loss harvesting",
     "plugin customisation",
   ]
-chapter: 17
+chapter: 28
 lesson: 6
 duration_minutes: 45
 

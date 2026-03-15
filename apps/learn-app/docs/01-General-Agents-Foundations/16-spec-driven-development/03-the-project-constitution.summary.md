@@ -23,5 +23,5 @@ A project constitution (CLAUDE.md) defines immutable governance principles—arc
 
 ### Connections
 
-- **Builds on**: Three SDD levels (Lesson 2), CLAUDE.md memory system (Chapter 3)
+- **Builds on**: Three SDD levels (Lesson 2), CLAUDE.md memory system (Chapter 14)
 - **Leads to**: Four-phase workflow (Lesson 4), where constitution governs all phases

@@ -1,107 +1,107 @@
 deck:
-  id: "ch23-01-revenue-engine"
+  id: "ch34-01-revenue-engine"
   title: "The Revenue Engine"
   description: "Plugin architecture, prospect research briefs, hallucination detection, and ICP configuration"
-  tags: ["sales", "revops", "marketing", "chapter-23"]
+  tags: ["sales", "revops", "marketing", "chapter-34"]
   version: 1
 
 cards:
-  - id: "ch23-01-revenue-engine-001"
+  - id: "ch34-01-revenue-engine-001"
     front: "What are the three plugin layers that make up the Revenue Engine?"
     back: "1. Sales plugin\n2. Marketing plugin\n3. Agent Factory RevOps extension"
     difficulty: "basic"
     tags: ["plugin-architecture"]
 
-  - id: "ch23-01-revenue-engine-002"
+  - id: "ch34-01-revenue-engine-002"
     front: "How does the RevOps extension signal that it is active in a prospect research brief?"
     back: "It adds an ICP MATCH header at the top of the research brief."
     difficulty: "basic"
     tags: ["plugin-verification"]
 
-  - id: "ch23-01-revenue-engine-003"
+  - id: "ch34-01-revenue-engine-003"
     front: "Why does Farah close at 340% of quota while other reps average 60%?"
     back: "Farah spends 45 minutes researching each prospect, building verified intelligence before contact. The gap is preparation depth, not talent or charisma — because thorough research produces personalised openers that earn trust."
     difficulty: "intermediate"
     why: "How would you quantify the cost of giving 460 out of 500 accounts the four-minute research version?"
     tags: ["preparation-depth"]
 
-  - id: "ch23-01-revenue-engine-004"
+  - id: "ch34-01-revenue-engine-004"
     front: "What are the six structured sections of a prospect research brief?"
     back: "ICP MATCH, WHO, WHAT, WHEN, PAIN, HOOK"
     difficulty: "basic"
     tags: ["research-brief"]
 
-  - id: "ch23-01-revenue-engine-005"
+  - id: "ch34-01-revenue-engine-005"
     front: "In prospect research, what does the Rule 'Private financials are always suspect' mean?"
     back: "Revenue, ARR, burn rate, and other financials for private companies are fabricated by the agent unless publicly disclosed in a filing or press release."
     difficulty: "intermediate"
     tags: ["hallucination-detection"]
 
-  - id: "ch23-01-revenue-engine-006"
+  - id: "ch34-01-revenue-engine-006"
     front: "A research brief states a private UK logistics company has '£45-60M estimated revenue.' How would you classify this claim?"
     back: "Suspect — because most private UK companies file abbreviated accounts at Companies House that omit revenue. The agent inferred a plausible range from headcount and benchmarks, not from an actual source."
     difficulty: "intermediate"
     why: "What would happen to your credibility if you cited this figure in a meeting and the prospect knew it was wrong?"
     tags: ["hallucination-detection"]
 
-  - id: "ch23-01-revenue-engine-007"
+  - id: "ch34-01-revenue-engine-007"
     front: "What are the three rules for detecting hallucinated data in prospect research briefs?"
     back: "1. Private financials are always suspect\n2. The more specific the unverifiable claim, the more likely it is hallucinated\n3. Inferred connections are not confirmed connections"
     difficulty: "intermediate"
     tags: ["hallucination-detection"]
 
-  - id: "ch23-01-revenue-engine-008"
+  - id: "ch34-01-revenue-engine-008"
     front: "How does the Verification Hierarchy rank claim confidence from highest to lowest?"
     back: "Cited sources → Public records → Public events → Career history → Financial estimates → Internal processes → Business relationships"
     difficulty: "intermediate"
     tags: ["verification-hierarchy"]
 
-  - id: "ch23-01-revenue-engine-009"
+  - id: "ch34-01-revenue-engine-009"
     front: "Why is 'SLA compliance done via spreadsheets' an unverifiable claim in a research brief?"
     back: "It describes internal operations that no external observer can see. The agent inferred a common industry pattern, not an observed fact — because internal processes are never publicly documented."
     difficulty: "intermediate"
     why: "How would you test this hypothesis during a discovery call without revealing you guessed?"
     tags: ["hallucination-detection"]
 
-  - id: "ch23-01-revenue-engine-010"
+  - id: "ch34-01-revenue-engine-010"
     front: "What is the difference between a verifiable claim and a plausible claim in a research brief?"
     back: "A verifiable claim can be confirmed from a public source in under two minutes. A plausible claim sounds reasonable but has no confirmable source."
     difficulty: "basic"
     tags: ["verification"]
 
-  - id: "ch23-01-revenue-engine-011"
+  - id: "ch34-01-revenue-engine-011"
     front: "A rep cites an agent-generated revenue figure in a meeting that turns out to be fabricated. Why is the damage worse than simply being wrong?"
     back: "The prospect concludes the rep fabricates research, tainting every subsequent accurate insight. Trust in the entire conversation collapses — because credibility, once lost to a specific lie, cannot be restored by unrelated truths."
     difficulty: "advanced"
     why: "How would you structure your meeting prep to ensure no unverified claim is ever stated aloud?"
     tags: ["credibility-risk"]
 
-  - id: "ch23-01-revenue-engine-012"
+  - id: "ch34-01-revenue-engine-012"
     front: "What does the sales-marketing.local.md file configure for the Revenue Engine?"
     back: "Company profile, ICP definition, brand voice, and business-specific context that filters all agent output."
     difficulty: "basic"
     tags: ["configuration"]
 
-  - id: "ch23-01-revenue-engine-013"
+  - id: "ch34-01-revenue-engine-013"
     front: "How should unverified claims from a research brief be used during a prospect meeting?"
     back: "They stay in notes as hypotheses to test during conversation, never stated aloud as confirmed facts."
     difficulty: "intermediate"
     tags: ["verification"]
 
-  - id: "ch23-01-revenue-engine-014"
+  - id: "ch34-01-revenue-engine-014"
     front: "Why do data-scarce markets produce more hallucinated claims in research briefs than data-rich markets?"
     back: "With fewer public sources available, the agent fills gaps with inferred data instead of retrieved facts. Less public information means more fabrication — because the agent always generates complete-looking output regardless of source availability."
     difficulty: "advanced"
     why: "How should you adjust your verification effort when researching a prospect in an emerging market versus the UK?"
     tags: ["data-availability"]
 
-  - id: "ch23-01-revenue-engine-015"
+  - id: "ch34-01-revenue-engine-015"
     front: "What does NexaFlow Technologies sell, and what is its employee count and primary geography?"
     back: "Workflow automation for mid-market logistics companies. 38 employees, based in Karachi, Pakistan."
     difficulty: "basic"
     tags: ["demo-data"]
 
-  - id: "ch23-01-revenue-engine-016"
+  - id: "ch34-01-revenue-engine-016"
     front: "How does configuring ICP data in sales-marketing.local.md change research brief output?"
     back: "The ICP MATCH section scores prospects against NexaFlow's specific profile, and the HOOK section uses the configured brand voice instead of generic automation language."
     difficulty: "intermediate"

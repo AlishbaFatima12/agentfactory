@@ -13,7 +13,7 @@ keywords:
     "task delegation",
     "subagents",
   ]
-chapter: 5
+chapter: 16
 lesson: 4
 duration_minutes: 25
 

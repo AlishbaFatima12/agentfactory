@@ -17,7 +17,7 @@ keywords:
     "severity likelihood matrix",
     "risk classification",
   ]
-chapter: 22
+chapter: 33
 lesson: 6
 duration_minutes: 25
 

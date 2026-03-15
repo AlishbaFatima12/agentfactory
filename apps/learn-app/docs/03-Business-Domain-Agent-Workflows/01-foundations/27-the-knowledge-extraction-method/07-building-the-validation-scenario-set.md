@@ -19,7 +19,7 @@ keywords:
     "credit analyst",
     "SKILL.md testing",
   ]
-chapter: 16
+chapter: 27
 lesson: 7
 duration_minutes: 25
 
@@ -195,7 +195,7 @@ Any high-stakes failure triggers a return to the SKILL.md for targeted rewriting
 
 Below ninety-five percent, the SKILL.md has too many gaps to deploy in production context, even with human review of every output. The gaps revealed by the failing scenarios need to be addressed through targeted rewriting before the scenario set is re-run.
 
-At or above ninety-five percent, the agent is ready for shadow mode — production deployment with human review of every output. Note that this is the first of two ninety-five percent gates in the full deployment pipeline. This gate — scenario testing at ninety-five percent — earns entry into shadow mode. The second gate — production accuracy at ninety-five percent over a minimum of thirty days, as described in Chapter 15's governance layer — earns exit from shadow mode into graduated autonomous operation. Both gates use the same number, but they validate different things: constructed scenarios versus real production inputs. Shadow mode serves a different validation purpose: where scenario testing validates the SKILL.md against constructed inputs, shadow mode validates it against real production inputs that the scenario set could not fully anticipate. Lesson 8 covers the shadow mode process and the transition to autonomous operation.
+At or above ninety-five percent, the agent is ready for shadow mode — production deployment with human review of every output. Note that this is the first of two ninety-five percent gates in the full deployment pipeline. This gate — scenario testing at ninety-five percent — earns entry into shadow mode. The second gate — production accuracy at ninety-five percent over a minimum of thirty days, as described in Chapter 26's governance layer — earns exit from shadow mode into graduated autonomous operation. Both gates use the same number, but they validate different things: constructed scenarios versus real production inputs. Shadow mode serves a different validation purpose: where scenario testing validates the SKILL.md against constructed inputs, shadow mode validates it against real production inputs that the scenario set could not fully anticipate. Lesson 8 covers the shadow mode process and the transition to autonomous operation.
 
 ## Try With AI
 

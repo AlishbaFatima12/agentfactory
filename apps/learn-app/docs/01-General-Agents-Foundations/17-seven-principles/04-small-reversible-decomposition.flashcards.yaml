@@ -1,5 +1,5 @@
 deck:
-  id: ch06-04-small-reversible-decomposition
+  id: ch17-04-small-reversible-decomposition
   title: Small, Reversible Decomposition
   description: Breaking problems into small, reversible steps to manage complexity, enable fast debugging, and support safe experimentation in agentic workflows.
   tags:
@@ -12,7 +12,7 @@ deck:
   - agentic-workflow
   version: 2
 cards:
-- id: ch06-04-small-reversible-decomposition-001
+- id: ch17-04-small-reversible-decomposition-001
   type: recall
   difficulty: basic
   front: What is small, reversible decomposition?
@@ -20,7 +20,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-002
+- id: ch17-04-small-reversible-decomposition-002
   type: thinking
   difficulty: intermediate
   front: Why do large code changes reliably produce bugs, regardless of developer skill?
@@ -29,7 +29,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-003
+- id: ch17-04-small-reversible-decomposition-003
   type: recall
   difficulty: basic
   front: According to the debugging cost table, what is the expected debugging time for 10 lines vs 10,000 lines changed?
@@ -37,7 +37,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-004
+- id: ch17-04-small-reversible-decomposition-004
   type: thinking
   difficulty: intermediate
   front: Why are ten 10-line changes faster to debug than one 100-line change?
@@ -47,7 +47,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-005
+- id: ch17-04-small-reversible-decomposition-005
   type: recall
   difficulty: basic
   front: What four properties of AI amplify the need for small decomposition steps?
@@ -61,7 +61,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-006
+- id: ch17-04-small-reversible-decomposition-006
   type: thinking
   difficulty: advanced
   front: Why does AI-generated code require smaller steps than human-written code?
@@ -70,7 +70,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-007
+- id: ch17-04-small-reversible-decomposition-007
   type: recall
   difficulty: basic
   front: What three criteria define an atomic change?
@@ -82,7 +82,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-008
+- id: ch17-04-small-reversible-decomposition-008
   type: thinking
   difficulty: intermediate
   front: How does the Lego vs clay analogy explain why atomic changes are safer than monolithic ones?
@@ -92,7 +92,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-009
+- id: ch17-04-small-reversible-decomposition-009
   type: recall
   difficulty: intermediate
   front: What does the 'revert, don't fix' mindset recommend when code breaks?
@@ -100,7 +100,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-010
+- id: ch17-04-small-reversible-decomposition-010
   type: thinking
   difficulty: intermediate
   front: Why is reverting broken code a strategic advantage rather than a sign of failure?
@@ -109,7 +109,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-011
+- id: ch17-04-small-reversible-decomposition-011
   type: recall
   difficulty: intermediate
   front: What are the four decomposition strategies for breaking down problems?
@@ -123,7 +123,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-012
+- id: ch17-04-small-reversible-decomposition-012
   type: thinking
   difficulty: intermediate
   front: How does vertical slicing optimize for something different than horizontal slicing?
@@ -133,7 +133,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-013
+- id: ch17-04-small-reversible-decomposition-013
   type: recall
   difficulty: intermediate
   front: What are the three decomposition anti-patterns and their fixes?
@@ -145,7 +145,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-014
+- id: ch17-04-small-reversible-decomposition-014
   type: thinking
   difficulty: advanced
   front: Why do bad commit boundaries break reversibility even when individual commits are small?
@@ -155,7 +155,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-015
+- id: ch17-04-small-reversible-decomposition-015
   type: recall
   difficulty: basic
   front: What is the Step Zero prompt pattern for AI-assisted decomposition?
@@ -163,7 +163,7 @@ cards:
   tags:
   - decomposition
   - reversibility
-- id: ch06-04-small-reversible-decomposition-016
+- id: ch17-04-small-reversible-decomposition-016
   type: thinking
   difficulty: intermediate
   front: Why does the small iteration approach finish in 2-3 days while large batches take 7 days?

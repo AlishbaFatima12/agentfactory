@@ -1,5 +1,5 @@
 deck:
-  id: ch06-08-operational-best-practices
+  id: ch17-08-operational-best-practices
   title: Operational Best Practices
   description: Flashcards covering the four-phase workflow, course correction tools, permission configuration, the interview pattern, and five failure patterns for productive Claude Code sessions.
   tags:
@@ -13,7 +13,7 @@ deck:
   - golden-reset
   version: 2
 cards:
-- id: ch06-08-operational-best-practices-001
+- id: ch17-08-operational-best-practices-001
   type: recall
   difficulty: basic
   front: What are the four phases of the structured Claude Code workflow, in order?
@@ -21,7 +21,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-002
+- id: ch17-08-operational-best-practices-002
   type: thinking
   difficulty: intermediate
   front: Why is course correction cheap during planning but expensive during implementation?
@@ -30,7 +30,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-003
+- id: ch17-08-operational-best-practices-003
   type: recall
   difficulty: basic
   front: In Claude Code, what does pressing Esc do while Claude is mid-response?
@@ -38,7 +38,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-004
+- id: ch17-08-operational-best-practices-004
   type: thinking
   difficulty: intermediate
   front: How do automatic checkpoints transform the risk of trying experimental approaches?
@@ -47,7 +47,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-005
+- id: ch17-08-operational-best-practices-005
   type: recall
   difficulty: basic
   front: What is the difference between single Esc and double Esc (or /rewind) in Claude Code?
@@ -55,7 +55,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-006
+- id: ch17-08-operational-best-practices-006
   type: thinking
   difficulty: intermediate
   front: A developer is unsure whether a task needs the planning phase. How should they decide?
@@ -64,7 +64,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-007
+- id: ch17-08-operational-best-practices-007
   type: recall
   difficulty: intermediate
   front: What three choices does a user have when Claude Code shows a permission prompt?
@@ -72,7 +72,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-008
+- id: ch17-08-operational-best-practices-008
   type: thinking
   difficulty: intermediate
   front: Why are loose permissions inside a sandbox considered safe rather than reckless?
@@ -81,7 +81,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-009
+- id: ch17-08-operational-best-practices-009
   type: recall
   difficulty: basic
   front: What three categories of commands make up the standard safe permission allowlist?
@@ -89,7 +89,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-010
+- id: ch17-08-operational-best-practices-010
   type: thinking
   difficulty: advanced
   front: Why does the Golden Reset often produce better code than continuing the same session?
@@ -99,7 +99,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-011
+- id: ch17-08-operational-best-practices-011
   type: recall
   difficulty: intermediate
   front: What is the interview pattern's one-liner prompt?
@@ -107,7 +107,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-012
+- id: ch17-08-operational-best-practices-012
   type: thinking
   difficulty: intermediate
   front: Why does the Kitchen Sink Session cause quality to degrade?
@@ -116,7 +116,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-013
+- id: ch17-08-operational-best-practices-013
   type: recall
   difficulty: intermediate
   front: What is the Rule of Two for correction loops?
@@ -124,7 +124,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-014
+- id: ch17-08-operational-best-practices-014
   type: thinking
   difficulty: advanced
   front: Why does a third correction attempt usually fail worse than starting over?
@@ -133,7 +133,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-015
+- id: ch17-08-operational-best-practices-015
   type: recall
   difficulty: intermediate
   front: What is the recommended maximum length for CLAUDE.md, and where should excess knowledge go?
@@ -141,7 +141,7 @@ cards:
   tags:
   - plan-mode
   - checkpoints
-- id: ch06-08-operational-best-practices-016
+- id: ch17-08-operational-best-practices-016
   type: thinking
   difficulty: advanced
   front: Why is "it looks right" insufficient as verification for AI-generated output?
