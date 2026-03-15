@@ -138,7 +138,7 @@ Here is what each stage looks like in this chapter. To make it concrete, here is
 - **Modify**: You change the scenario and reason about what breaks. In Axiom I, you learn that in James's original script, the step that checked whether tests passed also read all the test output, counted failures, calculated a pass percentage, and formatted a summary — 40 lines of computation crammed into the coordination layer. You explain why this is the core problem and what the orchestration file should do instead. This builds the instinct to ask "is this the right layer for this work?" before problems happen.
 - **Make [Mastery Gate]**: You create something new that demonstrates your understanding. In Axiom I, you write a 5-step plan for a process you go through regularly — submitting an assignment, publishing a post, preparing a presentation — where each step clearly separates *what happens* (the work), *who does it* (a person or tool), and *what the coordinator's only job is* (check, decide, trigger — never do the work). This is not optional — it is the gate that confirms you have internalized the axiom.
 
-Selected Practice sections also include **Parsons Problems** — scrambled steps that you reorder into the correct sequence. These appear in Axioms I (deployment steps), IV (sandwich shop process), and VII (custom T-shirt order).
+Selected Practice sections also include **Parsons Problems** — scrambled steps that you reorder into the correct sequence. These appear in Axioms I (deployment steps), IV (hospital emergency department process), and VII (custom T-shirt order).
 
 ### The Verification Ladder
 
