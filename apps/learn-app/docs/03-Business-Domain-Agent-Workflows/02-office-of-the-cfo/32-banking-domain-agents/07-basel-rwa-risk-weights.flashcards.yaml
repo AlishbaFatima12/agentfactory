@@ -1,0 +1,97 @@
+deck:
+  id: "ch32-07-basel-rwa-risk-weights"
+  title: "Risk-Weighted Assets -- SA and IRB Approaches"
+  description: "Key concepts from the Standardised Approach risk weight table, Internal Ratings-Based approach, Foundation vs Advanced IRB, and the Basel IV output floor."
+  tags: ["rwa", "standardised-approach", "irb", "output-floor", "basel-iv"]
+  version: 1
+
+cards:
+  - id: "ch32-07-basel-rwa-risk-weights-001"
+    front: "Under the Standardised Approach, what risk weight applies to residential mortgages with LTV between 50% and 80%?"
+    back: "35% risk weight under SA."
+    tags: ["standardised-approach", "risk-weights", "mortgages"]
+    difficulty: "basic"
+
+  - id: "ch32-07-basel-rwa-risk-weights-002"
+    front: "Why can two banks with identical loan portfolios report different risk-weighted assets?"
+    back: "One may use the Standardised Approach (fixed regulatory weights) while the other uses IRB (model-derived weights). IRB typically produces lower RWA because models can reflect collateral and borrower quality more granularly."
+    tags: ["sa-vs-irb", "rwa"]
+    difficulty: "intermediate"
+    why: "What systemic risk does this comparability problem create for regulators and investors?"
+
+  - id: "ch32-07-basel-rwa-risk-weights-003"
+    front: "What are the four inputs to the IRB risk-weight function?"
+    back: "1. PD (Probability of Default)\n2. LGD (Loss Given Default)\n3. EAD (Exposure at Default)\n4. M (Effective Maturity)"
+    tags: ["irb", "risk-weight-function"]
+    difficulty: "basic"
+
+  - id: "ch32-07-basel-rwa-risk-weights-004"
+    front: "In Foundation IRB, the bank estimates PD. Who sets LGD, EAD, and maturity?"
+    back: "The regulator (supervisory values). Maturity is fixed at 2.5 years."
+    tags: ["f-irb", "irb"]
+    difficulty: "intermediate"
+
+  - id: "ch32-07-basel-rwa-risk-weights-005"
+    front: "What does the Basel IV output floor rule state?"
+    back: "IRB RWA cannot fall below 72.5% of Standardised Approach RWA for the same portfolio."
+    tags: ["output-floor", "basel-iv"]
+    difficulty: "basic"
+
+  - id: "ch32-07-basel-rwa-risk-weights-006"
+    front: "Why did Basel IV introduce the output floor for IRB banks?"
+    back: "Before the floor, IRB banks used optimised models to report RWA 40-60% lower than SA, making capital ratios incomparable across banks and allowing some to be genuinely under-capitalised despite strong reported ratios."
+    tags: ["output-floor", "basel-iv", "model-risk"]
+    difficulty: "intermediate"
+    why: "Why does model risk in IRB create a systemic problem rather than just a firm-specific one?"
+
+  - id: "ch32-07-basel-rwa-risk-weights-007"
+    front: "The output floor is phased in over time. What are the starting level and the fully-phased level?"
+    back: "Starting at 50% (2025), fully phased at 72.5% (2030)."
+    tags: ["output-floor", "phase-in"]
+    difficulty: "basic"
+
+  - id: "ch32-07-basel-rwa-risk-weights-008"
+    front: "Under SA, what risk weight applies to past-due exposures (Stage 3 / over 90 days)?"
+    back: "150% risk weight under SA."
+    tags: ["standardised-approach", "risk-weights", "past-due"]
+    difficulty: "basic"
+
+  - id: "ch32-07-basel-rwa-risk-weights-009"
+    front: "A bank's IRB models produce GBP 10B RWA, but SA would produce GBP 16B. How does the output floor change the reported RWA?"
+    back: "Floor = 72.5% x GBP 16B = GBP 11.6B. The bank reports GBP 11.6B because IRB RWA (GBP 10B) falls below the floor."
+    tags: ["output-floor", "rwa-calculation"]
+    difficulty: "intermediate"
+    why: "How does the rising floor from 50% to 72.5% affect a bank's capital planning over 2025-2030?"
+
+  - id: "ch32-07-basel-rwa-risk-weights-010"
+    front: "Why not simply require all banks to use the Standardised Approach instead of allowing IRB?"
+    back: "SA uses one-size-fits-all weights that are less risk-sensitive. IRB is more accurate for well-modelled portfolios because it reflects actual borrower quality and collateral, therefore it rewards better risk management."
+    tags: ["sa-vs-irb", "regulatory-design"]
+    difficulty: "advanced"
+    why: "What incentive would banks lose if the only option were fixed regulatory risk weights?"
+
+  - id: "ch32-07-basel-rwa-risk-weights-011"
+    front: "What SA risk weight applies to AAA-rated sovereign bonds and to unrated corporate exposures?"
+    back: "Sovereign AAA: 0%.\nUnrated corporate: 100%."
+    tags: ["standardised-approach", "risk-weights"]
+    difficulty: "basic"
+
+  - id: "ch32-07-basel-rwa-risk-weights-012"
+    front: "How does a Credit Conversion Factor (CCF) work for off-balance-sheet items?"
+    back: "The CCF converts an off-balance-sheet exposure to an on-balance-sheet equivalent before applying the risk weight. Example: 50% CCF on a GBP 100M facility = GBP 50M credit equivalent."
+    tags: ["ccf", "off-balance-sheet"]
+    difficulty: "intermediate"
+    why: "Why do unconditionally cancellable commitments receive a lower CCF (10%) than guarantees (100%)?"
+
+  - id: "ch32-07-basel-rwa-risk-weights-013"
+    front: "How does the output floor affect a mortgage-heavy IRB bank's CET1 ratio?"
+    back: "Mortgage IRB weights can be 10-15% versus 35% SA. The floor forces RWA up toward 72.5% of SA, increasing the denominator and therefore reducing the reported CET1 ratio, potentially by several percentage points."
+    tags: ["output-floor", "mortgages", "capital-impact"]
+    difficulty: "advanced"
+    why: "Why are mortgage-heavy banks disproportionately affected compared to banks with diversified portfolios?"
+
+  - id: "ch32-07-basel-rwa-risk-weights-014"
+    front: "In the IRB approach, what does the asset correlation parameter (R) represent?"
+    back: "How correlated defaults are within an asset class -- higher for corporates, lower for retail."
+    tags: ["irb", "asset-correlation"]
+    difficulty: "intermediate"

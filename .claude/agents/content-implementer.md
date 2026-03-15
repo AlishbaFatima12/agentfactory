@@ -774,7 +774,7 @@ differentiation:
 Before writing, read and match quality of:
 
 ```
-apps/learn-app/docs/01-Introducing-AI-Driven-Development/01-agent-factory-paradigm/01-digital-fte-revolution.md
+apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/01-digital-fte-revolution.md
 ```
 
 ### Concept Distinction (Critical)

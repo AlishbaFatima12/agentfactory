@@ -9,7 +9,7 @@ description: This skill should be used when content teaches patterns (skills, su
 
 Prevent format drift by verifying content follows authoritative canonical sources. When teaching a pattern that exists elsewhere in the platform (skills, subagents, ADRs, etc.), this skill ensures the taught format matches the canonical source.
 
-**Why this matters**: The Chapter 14 format drift failure occurred because the lesson taught skill format differently from Chapter 5 (canonical source). Students learned incorrect patterns that contradicted earlier chapters.
+**Why this matters**: The Chapter 14 format drift failure occurred because the lesson taught skill format differently from Chapter 16 (canonical source). Students learned incorrect patterns that contradicted earlier chapters.
 
 ## When to Use This Skill
 
@@ -140,7 +140,7 @@ Check the lesson/content for format consistency:
 2. Line 52: Update example to show directory creation with `mkdir`
 3. Line 60: Add YAML frontmatter example with required fields
 
-**Cross-Reference**: Chapter 5, Lesson 7 (agent-skills.md) is canonical source
+**Cross-Reference**: Chapter 16, Lesson 7 (agent-skills.md) is canonical source
 ```
 
 **If Format Compliant**:

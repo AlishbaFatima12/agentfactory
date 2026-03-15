@@ -1,0 +1,116 @@
+deck:
+  id: "ch32-06-basel-capital-ratios"
+  title: "Basel III/IV Capital Adequacy -- CET1, Tier 1, Total Capital"
+  description: "Key concepts from the Basel III/IV capital stack, regulatory deductions, capital ratios, buffers, and the leverage ratio backstop."
+  tags: ["basel-iii", "capital-adequacy", "cet1", "banking-regulation"]
+  version: 1
+
+cards:
+  - id: "ch32-06-basel-capital-ratios-001"
+    front: "What are the three tiers of the Basel III capital stack, from highest to lowest loss absorption?"
+    back: "1. CET1 (Common Equity Tier 1)\n2. AT1 (Additional Tier 1)\n3. Tier 2"
+    tags: ["capital-stack", "basel-iii"]
+    difficulty: "basic"
+
+  - id: "ch32-06-basel-capital-ratios-002"
+    front: "A bank holds CoCo bonds that convert to equity when CET1 drops. Which capital tier do they belong to?"
+    back: "Additional Tier 1 (AT1)."
+    tags: ["at1", "contingent-convertibles"]
+    difficulty: "basic"
+
+  - id: "ch32-06-basel-capital-ratios-003"
+    front: "Why does Basel III require goodwill to be deducted from CET1 capital?"
+    back: "Goodwill cannot be sold to raise cash in a crisis, so it cannot absorb losses. Deducting it ensures CET1 reflects only genuinely realisable loss-absorbing capital."
+    tags: ["regulatory-deductions", "goodwill", "cet1"]
+    difficulty: "intermediate"
+    why: "What other balance sheet items might look valuable in normal times but become worthless under stress?"
+
+  - id: "ch32-06-basel-capital-ratios-004"
+    front: "What four components make up CET1 capital?"
+    back: "1. Ordinary shares (fully paid)\n2. Share premium\n3. Retained earnings\n4. Accumulated other comprehensive income (AOCI)"
+    tags: ["cet1", "capital-components"]
+    difficulty: "basic"
+
+  - id: "ch32-06-basel-capital-ratios-005"
+    front: "Why is CET1 treated as the primary loss-absorbing buffer rather than AT1 or Tier 2?"
+    back: "CET1 is permanent and cannot be redeemed, and dividends can be cancelled. Because it absorbs losses first without contractual triggers, it provides the most reliable protection for depositors."
+    tags: ["cet1", "loss-absorption"]
+    difficulty: "intermediate"
+    why: "How does the ability to cancel dividends give regulators a tool that debt instruments lack?"
+
+  - id: "ch32-06-basel-capital-ratios-006"
+    front: "What are the four items Basel III requires banks to deduct from CET1?"
+    back: "1. Goodwill and intangible assets\n2. Deferred tax assets (future-profitability dependent)\n3. Significant investments in unconsolidated FIs\n4. Cash flow hedge reserve"
+    tags: ["regulatory-deductions", "cet1"]
+    difficulty: "intermediate"
+
+  - id: "ch32-06-basel-capital-ratios-007"
+    front: "What is the Basel III minimum CET1 ratio, and what is its formula?"
+    back: "CET1 / Risk-Weighted Assets >= 4.5%."
+    tags: ["cet1-ratio", "capital-ratios"]
+    difficulty: "basic"
+
+  - id: "ch32-06-basel-capital-ratios-008"
+    front: "What are the Basel III minimums for the Tier 1 ratio and the Total Capital ratio?"
+    back: "Tier 1 ratio >= 6.0%.\nTotal Capital ratio >= 8.0%."
+    tags: ["capital-ratios", "tier1", "total-capital"]
+    difficulty: "basic"
+
+  - id: "ch32-06-basel-capital-ratios-009"
+    front: "A large domestic bank must hold CET1 for the minimum, CCB, and D-SIB buffer. What is the typical effective CET1 requirement?"
+    back: "4.5% + 2.5% (CCB) + 1.0% (D-SIB) = 8.0% CET1."
+    tags: ["capital-buffers", "ccb", "d-sib"]
+    difficulty: "intermediate"
+
+  - id: "ch32-06-basel-capital-ratios-010"
+    front: "Why is the practical CET1 operating level around 8% rather than the 4.5% hard minimum?"
+    back: "The Capital Conservation Buffer (2.5%) and D-SIB buffer (1.0%+) stack on top of the minimum. Breaching the combined buffer restricts dividends, bonuses, and buybacks, therefore banks target well above 4.5%."
+    tags: ["capital-buffers", "ccb", "d-sib"]
+    difficulty: "intermediate"
+    why: "How do buffer restrictions create market pressure even before a bank approaches the hard minimum?"
+
+  - id: "ch32-06-basel-capital-ratios-011"
+    front: "What happens when a bank's CET1 ratio falls into the buffer zone above the hard minimum?"
+    back: "The Maximum Distributable Amount (MDA) mechanism caps dividends, bonuses, and buybacks. The deeper into the buffer, the lower the MDA, reaching zero if the full buffer is consumed."
+    tags: ["mda", "capital-buffers"]
+    difficulty: "intermediate"
+    why: "Why is a graduated restriction more effective than a binary pass/fail approach?"
+
+  - id: "ch32-06-basel-capital-ratios-012"
+    front: "What is the Basel III leverage ratio formula and its minimum?"
+    back: "Tier 1 Capital / Total Exposure Measure >= 3.0%."
+    tags: ["leverage-ratio", "basel-iii"]
+    difficulty: "basic"
+
+  - id: "ch32-06-basel-capital-ratios-013"
+    front: "A bank holds GBP 50B in sovereign bonds (0% risk weight) and reports a CET1 ratio of 15%. Why might regulators still be concerned?"
+    back: "The leverage ratio could be dangerously low because 0%-risk-weighted assets inflate capital ratios while the bank is still highly leveraged in absolute terms. The leverage ratio catches this because it ignores risk weights."
+    tags: ["leverage-ratio", "risk-weights"]
+    difficulty: "advanced"
+    why: "What type of asset portfolio would produce the largest gap between a bank's capital ratio and its leverage ratio?"
+
+  - id: "ch32-06-basel-capital-ratios-014"
+    front: "AT1 instruments must meet two key criteria to qualify. What are they?"
+    back: "Perpetual (no maturity date) and non-cumulative (missed coupons are not paid later)."
+    tags: ["at1", "qualifying-criteria"]
+    difficulty: "intermediate"
+
+  - id: "ch32-06-basel-capital-ratios-015"
+    front: "Tier 2 capital absorbs losses only in a specific circumstance. When?"
+    back: "In resolution or insolvency (gone-concern)."
+    tags: ["tier2", "loss-absorption"]
+    difficulty: "basic"
+
+  - id: "ch32-06-basel-capital-ratios-016"
+    front: "Why do shareholders' equity and regulatory capital differ?"
+    back: "Accountants measure book value; regulators measure loss-absorbing capacity. Regulatory deductions strip out items with book value (goodwill, DTAs) that cannot be converted to cash under stress, therefore regulatory capital is lower."
+    tags: ["regulatory-deductions", "accounting-vs-prudential"]
+    difficulty: "advanced"
+    why: "How does this distinction affect AI agents that must produce output for both accounting and regulatory audiences?"
+
+  - id: "ch32-06-basel-capital-ratios-017"
+    front: "How does a contingent convertible bond (CoCo) absorb losses?"
+    back: "It automatically converts to equity or writes down in value when the bank's CET1 ratio falls below a contractual trigger, typically 5.125% or 7%."
+    tags: ["contingent-convertibles", "at1", "loss-absorption"]
+    difficulty: "intermediate"
+    why: "Why do CoCos absorb losses before taxpayer bailout becomes necessary?"

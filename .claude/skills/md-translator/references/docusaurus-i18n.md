@@ -29,7 +29,7 @@ apps/learn-app/i18n/<locale>/
 │   └── current/                                 # Translated docs (mirrors docs/)
 │       ├── thesis.md
 │       ├── 01-General-Agents-Foundations/
-│       │   └── 01-agent-factory-paradigm/
+│       │   └── 12-agent-factory-paradigm/
 │       │       ├── 01-the-2025-inflection-point.md
 │       │       └── ...
 │       └── ...
@@ -69,10 +69,10 @@ apps/learn-app/translation-work/
 
 **Example path chain:**
 ```
-Source:     docs/01-General-Agents-Foundations/01-agent-factory-paradigm/01-the-2025-inflection-point.md
+Source:     docs/01-General-Agents-Foundations/12-agent-factory-paradigm/01-the-2025-inflection-point.md
 Segments:  translation-work/ur/01-the-2025-inflection-point_ur_segments.json
 Translated: translation-work/ur/01-the-2025-inflection-point_ur_translated.json
-Output:    i18n/ur/docusaurus-plugin-content-docs/current/01-General-Agents-Foundations/01-agent-factory-paradigm/01-the-2025-inflection-point.md
+Output:    i18n/ur/docusaurus-plugin-content-docs/current/01-General-Agents-Foundations/12-agent-factory-paradigm/01-the-2025-inflection-point.md
 ```
 
 ## Important Notes

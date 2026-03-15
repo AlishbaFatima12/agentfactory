@@ -1,0 +1,85 @@
+deck:
+  id: "ch30-05-domain-management-accounting"
+  title: "Domain 4 — Management Accounting and Financial Management"
+  description: "FP&A automation, IDFA methodology in management accounting, autonomous FP&A agents, and the shift from model maintenance to business partnering"
+  tags: ["ca-cpa", "management-accounting", "fp-and-a", "variance-analysis", "idfa"]
+  version: 1
+  lesson: 5
+  chapter: 30
+
+cards:
+  - id: "ch30-05-domain-management-accounting-001"
+    front: "What distinguishes management accounting from financial reporting in terms of audience and purpose?"
+    back: "Management accounting: internal-facing, supports management decisions, not governed by IFRS. Financial reporting: external-facing, accountability to investors and regulators, governed by accounting standards."
+    tags: ["management-accounting", "financial-reporting", "distinction"]
+    difficulty: "basic"
+
+  - id: "ch30-05-domain-management-accounting-002"
+    front: "What are the three sub-domains of management accounting and financial management?"
+    back: "1. Financial Planning and Analysis (FP&A)\n2. Performance Management\n3. Treasury"
+    tags: ["sub-domains", "management-accounting"]
+    difficulty: "basic"
+
+  - id: "ch30-05-domain-management-accounting-003"
+    front: "What are the three variance components AI decomposes in a revenue variance analysis?"
+    back: "1. Volume variance (units sold vs budget)\n2. Price variance (average selling price vs budget)\n3. Mix variance (product mix shift impact)"
+    tags: ["variance-analysis", "gen-ai-capabilities"]
+    difficulty: "basic"
+
+  - id: "ch30-05-domain-management-accounting-004"
+    front: "What does an autonomous FP&A agent do, and what does it not do?"
+    back: "Does: collects actuals, updates rolling forecast, identifies variances, generates commentary, distributes reporting pack. Does not: challenge assumptions, stress-test plans, or make business partnering recommendations."
+    tags: ["autonomous-fpa-agent", "agentic-ai"]
+    difficulty: "basic"
+
+  - id: "ch30-05-domain-management-accounting-005"
+    front: "Pigment was named a Visionary in which 2025 Gartner report?"
+    back: "2025 Gartner Magic Quadrant for Financial Planning Software."
+    tags: ["pigment", "real-world-platforms"]
+    difficulty: "basic"
+
+  - id: "ch30-05-domain-management-accounting-006"
+    front: "How does IDFA methodology apply concretely in management accounting?"
+    back: "Inp_ prefix = budget assumption (input). Named Range formula = variance calculation (business rule). The variance model separates inputs from calculations the same way IDFA separates specs from implementation."
+    tags: ["idfa-methodology", "management-accounting"]
+    difficulty: "intermediate"
+
+  - id: "ch30-05-domain-management-accounting-007"
+    front: "Financial Analyst vs Strategic Finance roles: which faces displacement from AI and why?"
+    back: "Financial Analyst (model maintenance): high displacement — data consolidation, routine variance reporting, and model updates are the mechanical steps AI automates first. Strategic Finance: low displacement — judgment and business context are resilient."
+    tags: ["role-transformation", "displacement"]
+    difficulty: "intermediate"
+
+  - id: "ch30-05-domain-management-accounting-008"
+    front: "Oracle was named a Leader in which 2025 Gartner report, and what does its Planning Agent do?"
+    back: "2025 Gartner Magic Quadrant for Financial Planning Software. Planning Agent provides real-time trend and variance analysis via natural-language interactions and guides what-if simulations."
+    tags: ["oracle", "real-world-platforms"]
+    difficulty: "intermediate"
+
+  - id: "ch30-05-domain-management-accounting-009"
+    front: "Why does variance analysis rank as one of the strongest Gen-AI use cases in management accounting?"
+    back: "The decomposition into volume, price, and mix is mechanical — AI executes it reliably. BECAUSE interpretation (why the variance happened, what it means for the business) requires context the AI lacks without human input."
+    tags: ["variance-analysis", "gen-ai-strength"]
+    difficulty: "intermediate"
+    why: "What specific business context must a management accountant add to an AI-drafted variance narrative that AI cannot supply?"
+
+  - id: "ch30-05-domain-management-accounting-010"
+    front: "Why does management accounting have more freedom to adopt AI outputs than financial reporting?"
+    back: "Management accounting's internal audience can challenge and refine AI outputs. THEREFORE it is not constrained by the prescriptive accounting standards that govern external financial reporting — giving practitioners more latitude to adopt AI-generated analysis directly."
+    tags: ["management-accounting", "ai-adoption"]
+    difficulty: "intermediate"
+    why: "What governance controls should a CFO put in place when adopting AI-generated management reports directly?"
+
+  - id: "ch30-05-domain-management-accounting-011"
+    front: "A management accountant currently spends 80% on assembly, 20% on interpretation. How does an autonomous FP&A agent change this split?"
+    back: "Assembly time drops significantly as the agent handles data consolidation, formatting, and variance identification — shifting professional time toward interpretation, assumption challenge, and business partnering."
+    tags: ["time-allocation", "role-transformation"]
+    difficulty: "intermediate"
+    why: "What new skills does a management accountant need to spend 80% of their time on interpretation rather than assembly?"
+
+  - id: "ch30-05-domain-management-accounting-012"
+    front: "Pigment's agentic roadmap includes three agents. Name them and what each does."
+    back: "Analyst Agent: automates forecasting and performance analysis. Modeler Agent: autonomously builds and adapts planning models. Planner Agent: simulates scenarios and recommends strategic actions."
+    tags: ["pigment", "agentic-roadmap"]
+    difficulty: "advanced"
+    why: "Which of the three Pigment agents introduces the most significant governance challenge for finance teams?"
