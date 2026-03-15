@@ -406,6 +406,10 @@ The rule is simple: **Pydantic at the edges, dataclasses at the core.** Data ent
 The Python code below shows common mistakes and how to fix them. Focus on the *pattern* — what goes wrong when types are missing, and what changes when they are added. You will write Python yourself in the hands-on chapters.
 :::
 
+:::tip Reading Checkpoint
+This is a natural stopping point. If you need a break, bookmark this spot and return when you are ready. Everything above covers the core concept; everything below applies it through exercises and practice.
+:::
+
 ## Anti-Patterns: How Types Get Undermined
 
 You have seen the untyped codebase. Every team has one. It is the project where every function accepts `data` and returns `result`, where `dict[str, Any]` is the universal type, where the AI generates beautiful code that crashes at runtime because nothing in the codebase told it what shape anything is.
