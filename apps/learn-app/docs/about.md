@@ -148,7 +148,7 @@ Most books are written for one mode of consumption: a human reads page after pag
 
 **Why this matters.** The same knowledge base powers all three modes. When a chapter is updated — a new jurisdiction overlay for banking compliance, a refined escalation protocol for legal ops — the update propagates to TutorClaw's teaching and the FTE Plugin's guidance simultaneously. The book is not a static artefact. It is the single source of truth for an ecosystem: human learning, AI tutoring, and AI-assisted building, all drawing from one authoritative foundation.
 
-This is the 10-80-10 pattern applied to education itself. The book sets the intent (the first 10% — the domain knowledge, the frameworks, the professional standards). TutorClaw and the FTE Plugin handle execution (the 80% — the personalised teaching, the step-by-step building guidance). You verify the outcome (the final 10% — the professional judgment that confirms the agent is correct, the deployment is safe, and the knowledge is sound).
+This is the [10-80-10 pattern](https://agentfactory.panaversity.org/docs/thesis#the-10-80-10-rule-the-operating-rhythm-of-the-ai-workforce) applied to education itself. The book sets the intent (the first 10% — the domain knowledge, the frameworks, the professional standards). TutorClaw and the FTE Plugin handle execution (the 80% — the personalised teaching, the step-by-step building guidance). You verify the outcome (the final 10% — the professional judgment that confirms the agent is correct, the deployment is safe, and the knowledge is sound).
 
 
 ---
