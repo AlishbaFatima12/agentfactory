@@ -402,6 +402,10 @@ def create_task(request: TaskCreateRequest) -> Task:
 
 The rule is simple: **Pydantic at the edges, dataclasses at the core.** Data entering your system gets validated. Data inside your system is already trusted.
 
+:::tip Still reading for the idea, not the syntax
+The Python code below shows common mistakes and how to fix them. Focus on the *pattern* — what goes wrong when types are missing, and what changes when they are added. You will write Python yourself starting in Chapter 33.
+:::
+
 ## Anti-Patterns: How Types Get Undermined
 
 You have seen the untyped codebase. Every team has one. It is the project where every function accepts `data` and returns `result`, where `dict[str, Any]` is the universal type, where the AI generates beautiful code that crashes at runtime because nothing in the codebase told it what shape anything is.
