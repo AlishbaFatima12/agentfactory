@@ -306,7 +306,7 @@ testpaths = ["tests"]
 ```
 
 :::tip Already learned the shell? Great. New to it? No problem.
-You used bash commands in [Chapter 11: Linux Operations](/docs/Agent-Workflow-Primitives/linux-mastery/) back in Part 2. The commands below (`uv sync`, `uv run pyright`, etc.) follow the same pattern — type a command, read the output. If you skipped Chapter 11 or need a refresher, revisit it before continuing. Python syntax itself starts in Chapter 33.
+You used bash commands in [Chapter 11: Linux Operations](/docs/Agent-Workflow-Primitives/linux-mastery/) back in Part 2. The commands below (`uv sync`, `uv run pyright`, etc.) follow the same pattern — type a command, read the output. If you skipped Chapter 11 or need a refresher, revisit it before continuing.
 :::
 
 Running the full stack:
@@ -450,7 +450,7 @@ Then explain: what is the equivalent of each of these in software?
 documentation = docstrings). Walk me through the parallels.
 ```
 
-**What you're learning**: The conceptual transformation from informal instructions to reliable processes. Each addition you make to the plant-watering "script" maps directly to a program discipline: types declare expectations, error handling manages surprises, tests verify correctness, and documentation enables collaboration. You will apply these disciplines to real Python code starting in Chapter 33.
+**What you're learning**: The conceptual transformation from informal instructions to reliable processes. Each addition you make to the plant-watering "script" maps directly to a program discipline: types declare expectations, error handling manages surprises, tests verify correctness, and documentation enables collaboration. You will apply these disciplines to real Python code in the hands-on chapters.
 
 ### Prompt 2: Spot the Missing Discipline
 

@@ -164,7 +164,7 @@ An entity is a distinct "thing" in your domain. In James's order system:
 Each entity becomes a table. Each row is one instance. The key insight: in James's JSON file, these three entities were mashed into a single list of dictionaries. In a relational database, each lives in its own table with its own structure.
 
 :::tip Focus on what the code is doing, not the syntax
-This lesson introduces SQL and Python database code. You have not learned either language yet — SQL is new here, and Python starts in Chapter 33. Read these code blocks for the *concept*: what data is being defined, what constraints are being enforced, how tables connect to each other. The specific syntax will make sense when you reach the hands-on chapters.
+This lesson introduces SQL and Python database code. You have not learned either language yet — SQL is new here, and Python has not been covered yet. Read these code blocks for the *concept*: what data is being defined, what constraints are being enforced, how tables connect to each other. The specific syntax will make sense when you reach the hands-on chapters.
 :::
 
 ### 2. Attributes (Columns)
