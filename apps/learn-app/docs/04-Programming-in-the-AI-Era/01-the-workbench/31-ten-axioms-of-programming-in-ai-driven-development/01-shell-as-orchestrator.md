@@ -432,6 +432,102 @@ Important: every target in the orchestration file should be 1-3 lines maximum. I
 
 ---
 
+## PRIMM-AI+ Practice: Shell as Orchestrator
+
+This axiom teaches one distinction: **coordination vs. work**. Before you start the exercises, make sure you understand the difference:
+
+- **Work** means producing a specific result — running tests, packaging code, pushing files to a server. A worker takes an input and produces an output. It does not care what happened before it or what happens after it.
+- **Coordination** means deciding the sequence, handling failures, and routing between workers — choosing which step runs first, stopping the process when a step fails, notifying people when something goes wrong. A coordinator never produces the result itself; it tells workers when to start, checks whether they succeeded, and decides what happens next.
+
+Here is one example to anchor the difference: "Run all the tests and report which ones passed" is **work** — a testing tool does that. "If any test failed, stop the whole process" is **coordination** — that is a decision about what happens next based on a worker's result.
+
+### Predict [AI-FREE]
+
+Close your AI assistant. You are in James's shoes. Your team needs to ship an update to the app. Here are six things that must happen before the update goes live:
+
+1. Run all the tests and report which ones passed or failed
+2. Stop the entire process if any test failed
+3. Package the app into a single file that can be installed on the server
+4. Make sure tests run first, packaging runs second, and deployment runs last
+5. Push the packaged file to the live server
+6. Send a notification to the team if anything failed along the way
+
+Classify each as **coordination** or **work**. Write your classifications down before continuing. Rate your confidence from 1 (guessing) to 5 (certain).
+
+*Hint: some tasks are trickier than they look. Task 6, for example — is sending a notification "work" (a messaging tool sends the message) or "coordination" (someone decided that a failure should trigger a notification)? Think carefully about whether the task is producing a result or making a decision about what should happen.*
+
+### Run
+
+Now ask your AI assistant: *"My team needs to ship an app update. Classify each of these six tasks as coordination or work: (1) run all tests and report results, (2) stop the process if any test failed, (3) package the app into an installable file, (4) ensure tests run before packaging and packaging before deployment, (5) push the package to the live server, (6) send a notification if anything failed."*
+
+Compare the AI's classifications to yours. Pay special attention to task 6 — did the AI classify it the same way you did? If you disagreed, can you see the reasoning behind the other answer?
+
+### Investigate
+
+Think back to James's story. His 400-line deployment script tangled coordination and work together. At 2am, when the deployment broke, nobody could figure out what went wrong. Emma replaced it with 12 lines that only coordinated — each line called a specialized tool and checked whether it succeeded.
+
+Write in your own words — without asking AI — the answer to this specific question: **Why was the 12-line version easier to debug at 2am than the 400-line version?** Think about what you would see when you open each file during an emergency.
+
+Then ask your AI: *"James had a 400-line deployment script that mixed coordination with computation. Emma replaced it with 12 lines that only coordinated — each line called a tool and checked its result. Why is the 12-line version easier to debug, test, and understand? Give specific reasons."*
+
+Apply the **Error Taxonomy**: tangling coordination with work = **orchestration error**. James's script failed not because the tools were broken, but because the coordination logic — what runs in what order, what stops when something fails — was buried inside hundreds of lines of computation. When something went wrong, finding the "stop if tests fail" decision inside all that code was like finding one sentence in a 400-page book.
+
+### Parsons Problem
+
+Emma is rewriting James's broken deployment process. Here are the five steps in scrambled order. Put them in the correct sequence:
+
+- (A) The testing tool runs all tests and reports pass or fail
+- (B) The orchestration file checks the test result — if tests failed, stop here
+- (C) The build tool packages the application into a deployable file
+- (D) Emma triggers the deployment process
+- (E) The deployment tool pushes the package to the live server
+
+Write your sequence (e.g., D, A, B, C, E) before checking.
+
+Then answer two questions:
+1. Which steps are **coordination** and which are **work**?
+2. In James's original script, step B did not exist — the process kept going even when tests failed. This is exactly what caused the 2am outage. Why does removing one coordination step break the entire process?
+
+### Modify
+
+In James's original 400-line script, the step that checked whether tests passed did not just check — it also did all of this:
+
+- Read through the entire test output file
+- Counted how many tests failed and how many passed
+- Calculated a pass percentage (e.g., "94% passed")
+- Formatted the results into a readable summary table
+- Composed a notification message with the summary attached
+
+That was 40 lines of computation crammed into what should have been one coordination decision: "Did the tests pass? Yes or no."
+
+Emma replaced all 40 lines with the equivalent of a single question: **"Did the testing tool report success or failure?"** The testing tool already knows how many tests passed. The notification tool already knows how to send messages. The orchestration file does not need to do any of that — it just needs the answer: pass or fail.
+
+Why is Emma's approach better? What goes wrong when the orchestration file starts doing computation that the tools already handle?
+
+### Make [Mastery Gate]
+
+Think about a multi-step process you go through regularly — submitting a school assignment, publishing a social media post, preparing a presentation, or setting up for a study session. Write a **5-step plan** using this format:
+
+Here is an example for "submitting a homework assignment":
+
+| Step | Work (what happens) | Who does it | Coordinator's job |
+|------|-------------------|-------------|-------------------|
+| 1 | Write the essay | You | — (this is the work itself) |
+| 2 | Check spelling and grammar | Spell-check tool | Review the tool's result: any errors left? |
+| 3 | Convert to PDF | File converter | Check: did the conversion succeed? |
+| 4 | Upload to the submission portal | Upload tool | Check: did the upload confirm success? |
+| 5 | Send confirmation to yourself | Email app | Trigger only if all previous steps succeeded |
+
+Now write your own 5-step plan for a different process. For each step, make sure the coordinator **never does the work** — it only checks, decides, or triggers. If you find a step where the coordinator is also doing the work, split it into two steps: one for the work and one for the coordination decision.
+
+Your plan is your mastery gate — you should be able to explain what would go wrong if the coordinator started doing the work (like James's script did).
+
+:::tip Verification Ladder Preview
+You just predicted which tasks are coordination and which are work, then checked your prediction against reality. That predict-then-check habit is **Rung 1 of the Verification Ladder** — the foundation that every other verification practice builds on.
+:::
+
+---
+
 ## The Responsibility of Orchestration
 
 The shell's strength as a universal coordinator comes with a risk: when the orchestration is wrong, everything downstream breaks — not just one piece, but the entire pipeline.
