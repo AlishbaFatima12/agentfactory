@@ -281,12 +281,12 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "After the 2:47 AM incident, James adds DEBUG-level logging to every function in his order system. Within a day, logs generate 2GB per hour — storage costs spike and when a new error occurs, it is buried under millions of irrelevant entries. What named trap from Axiom X did he fall into?",
       options: [
-        "The Shallow Pipeline — his observability stack has logging but lacks metrics and tracing, so he's compensating with excessive log volume instead of using the right pillar for each question (how much, what happened, where)",
+        "The Log Avalanche — logging everything at DEBUG level drowns signal in noise, making observability worse because important errors are buried under millions of irrelevant entries",
         "The Permanent Record — his logs capture sensitive customer data (email addresses, shipping addresses, order amounts) at DEBUG level, creating compliance and privacy risks alongside the storage cost problem",
         "The Green Bar Illusion — his 2GB of hourly logs create the appearance of comprehensive observability, but the sheer volume means critical errors pass unnoticed, giving false confidence in system health",
-        "The Log Avalanche — logging everything at DEBUG level drowns signal in noise, making observability worse because important errors are buried under millions of irrelevant entries"
+        "The Shallow Pipeline — his observability stack has logging but lacks metrics and tracing, so he's compensating with excessive log volume instead of using the right pillar for each question (how much, what happened, where)"
       ],
-      correctOption: 3,
+      correctOption: 0,
       explanation: "The Log Avalanche is a named trap from Axiom X: the overcorrection of adding maximum logging everywhere after experiencing an observability gap. James went from zero visibility (`print('Processing order...')`) to maximum noise (DEBUG on everything) — neither extreme works. Effective observability requires the right data at the right level: DEBUG for development only (off in production), INFO for normal operations, WARNING for handled anomalies, ERROR for failures requiring attention, CRITICAL for system-level emergencies. As Emma told James: 'If everything is important, nothing is.' Option A makes a valid architectural point (he should add metrics and traces too) but the immediate problem isn't missing pillars — it's that the one pillar he's using (logging) is misconfigured with excessive volume. Option B identifies a real secondary risk of DEBUG logging (sensitive data exposure) but the question focuses on the primary problem — signal drowning in noise, not privacy compliance. Option C sounds plausible but the Green Bar Illusion is specifically about test coverage creating false confidence (Axiom VII) — here the problem isn't false confidence, it's that he literally can't find errors in the noise.",
       source: "Lesson 10: Observability Extends Verification"
     },
@@ -545,12 +545,12 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "James makes a commit with the message: 'Updated shipping calculation.' Emma reviews it and says the message is insufficient. According to Axiom VIII's conventional commit format, what should the message look like?",
       options: [
-        "A timestamp and the developer's name appended to the message, so that git blame shows both who made the change and when it was committed without running a separate command",
+        "A prefix like feat, fix, or refactor that categorizes the change at a glance, followed by a scope and a description that explains what kind of change was made to which component",
         "A detailed paragraph explaining every line that changed in the shipping calculation, including the old values, the new values, and the mathematical formulas used in each step",
         "A reference to the GitHub issue or Jira ticket number that requested the shipping change, followed by a one-line summary that links the commit to the project management system",
-        "A prefix like feat, fix, or refactor that categorizes the change at a glance, followed by a scope and a description that explains what kind of change was made to which component"
+        "A timestamp and the developer's name appended to the message, so that git blame shows both who made the change and when it was committed without running a separate command"
       ],
-      correctOption: 3,
+      correctOption: 0,
       explanation: "Axiom VIII prescribes conventional commit format: a structured prefix (feat, fix, refactor, test, docs) tells you what KIND of change at a glance. A properly formatted message might be: `fix(shipping): correct international rate calculation for orders over $10K`. The prefix categorizes it, the scope narrows the domain, and the description explains the change. Option B is tempting because more detail sounds better, but the diff already shows what changed line-by-line — the commit message's job is to explain the WHY and categorize the WHAT, not restate the diff.",
       source: "Lesson 08: Version Control is Memory"
     },
@@ -676,7 +676,7 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
 | 17 | A | Axiom IX: Verification is a Pipeline |
 | 18 | B | Axiom IX: Verification is a Pipeline |
 | 19 | C | Axiom X: Observability Extends Verification |
-| 20 | D | Axiom X: Observability Extends Verification |
+| 20 | A | Axiom X: Observability Extends Verification |
 | 21 | C | Axiom I: Shell as Orchestrator |
 | 22 | D | Axiom I: Shell as Orchestrator |
 | 23 | B | Axiom I: Shell as Orchestrator |
@@ -698,7 +698,7 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
 | 39 | B | Axiom VII: Tests Are the Specification |
 | 40 | A | Axiom VII: Tests Are the Specification |
 | 41 | C | Axiom VII: Tests Are the Specification |
-| 42 | D | Axiom VIII: Version Control is Memory |
+| 42 | A | Axiom VIII: Version Control is Memory |
 | 43 | B | Axiom VIII: Version Control is Memory |
 | 44 | B | Axiom VIII: Version Control is Memory |
 | 45 | D | Axiom IX: Verification is a Pipeline |
