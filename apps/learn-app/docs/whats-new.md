@@ -17,6 +17,10 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-15
+
+- feat: add Part 0 — Prelude: Thinking is the Curriculum ([#859](https://github.com/panaversity/agentfactory/pull/859))
+
 ### 2026-03-14
 - feat: Introduce 'Part 0 Prelude: Thinking is the Curriculum' and Isla… ([#858](https://github.com/panaversity/agentfactory/pull/858))
 

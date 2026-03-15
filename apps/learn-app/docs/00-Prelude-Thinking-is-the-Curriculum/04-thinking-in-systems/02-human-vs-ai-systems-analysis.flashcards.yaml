@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch3-human-vs-ai-systems"
+  title: "Human vs. AI Systems Analysis"
+  description: "Key concepts from comparing human and AI systems analysis — attribution, synthesis, and complementary blind spots."
+  tags: ["systems-thinking", "human-ai-comparison", "attribution"]
+  version: 1
+
+cards:
+  - id: "p0-ch3-human-vs-ai-systems-001"
+    front: "In systems analysis, what is the typical difference between human and AI output?"
+    back: "Humans produce deeper analysis (feedback loops, cultural dynamics). AI produces broader analysis (more categories, standard effects)."
+    tags: ["human-ai-comparison", "systems-thinking"]
+    difficulty: "basic"
+
+  - id: "p0-ch3-human-vs-ai-systems-002"
+    front: "What do the four attribution labels H, C, G, and S mean in a merged cascade map?"
+    back: "H = Human-sourced insight\nC = Claude-sourced insight\nG = ChatGPT-sourced insight\nS = Synthesis (new insight from combining)"
+    tags: ["attribution", "merged-map"]
+    difficulty: "basic"
+
+  - id: "p0-ch3-human-vs-ai-systems-003"
+    front: "Why are Synthesis (S) insights the most valuable category in a merged cascade map?"
+    back: "Synthesis insights emerge only when human and AI perspectives are genuinely combined — they represent novel connections that no single source produced independently, therefore demonstrating genuine integration rather than copy-paste."
+    tags: ["synthesis", "merged-map"]
+    difficulty: "intermediate"
+    why: "How would you distinguish a genuine synthesis insight from one that is just a rephrased version of an AI insight?"
+
+  - id: "p0-ch3-human-vs-ai-systems-004"
+    front: "Why does honest attribution matter when merging human and AI analyses?"
+    back: "Attribution forces intellectual honesty — because claiming AI's insights as your own is invisible in the output but prevents you from knowing where your actual thinking contributed value."
+    tags: ["attribution", "intellectual-honesty"]
+    difficulty: "intermediate"
+    why: "What pattern would you expect in the attribution ratios of a student who outsourced most of their thinking to AI?"
+
+  - id: "p0-ch3-human-vs-ai-systems-005"
+    front: "How does using both Claude and ChatGPT improve a systems analysis compared to using just one AI tool?"
+    back: "Different AI tools have different blind spots — comparing both reveals that AI-to-AI divergence exists, not just human-to-AI divergence, therefore expanding the range of perspectives in the merged map."
+    tags: ["human-ai-comparison", "divergence"]
+    difficulty: "intermediate"
+    why: "What would it mean if both AI tools produced nearly identical analyses?"
+
+  - id: "p0-ch3-human-vs-ai-systems-006"
+    front: "What does 'merging' human and AI analyses actually require beyond combining lists?"
+    back: "Judgment about what to include and discard. A genuine merge creates something better than any source alone — it requires evaluating, not just concatenating."
+    tags: ["synthesis", "critical-thinking"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch3-human-vs-ai-systems-007"
+    front: "A student's merged map has zero Synthesis (S) entries. Why is this a problem?"
+    back: "Zero synthesis means the student listed sources side-by-side without integrating them — because genuine combination should produce new connections that no single source identified independently."
+    tags: ["synthesis", "merged-map"]
+    difficulty: "advanced"
+    why: "What specific step in the merge process is most likely to generate synthesis insights?"
+
+  - id: "p0-ch3-human-vs-ai-systems-008"
+    front: "In systems analysis, what types of effects do humans typically catch that AI misses?"
+    back: "Feedback loops, cultural dynamics, and political consequences."
+    tags: ["human-ai-comparison", "blind-spots"]
+    difficulty: "basic"

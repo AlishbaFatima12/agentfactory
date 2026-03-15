@@ -1,0 +1,71 @@
+deck:
+  id: "p0-ch02-error-prediction"
+  title: "The Error Prediction"
+  description: "Key concepts from the Error Prediction exercise on the Error Taxonomy and predicting AI failure modes"
+  tags: ["Part 0", "error detection", "error taxonomy", "AI verification"]
+  version: 1
+
+cards:
+  - id: "p0-ch02-error-prediction-001"
+    front: "What are the 8 categories in the Error Taxonomy?"
+    back: "1. Factual error\n2. Logical gap\n3. False confidence\n4. Missing context\n5. Correlation-causation confusion\n6. Outdated information\n7. Fabricated citation\n8. Cultural blind spot"
+    tags: ["error-taxonomy", "definition"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch02-error-prediction-002"
+    front: "What is a 'factual error' in the Error Taxonomy?"
+    back: "A claim that is demonstrably false."
+    tags: ["error-taxonomy", "factual-error"]
+    difficulty: "basic"
+
+  - id: "p0-ch02-error-prediction-003"
+    front: "What is 'false confidence' in the Error Taxonomy?"
+    back: "Stating uncertain information with unjustified certainty."
+    tags: ["error-taxonomy", "false-confidence"]
+    difficulty: "basic"
+
+  - id: "p0-ch02-error-prediction-004"
+    front: "What is the difference between a 'logical gap' and a 'correlation-causation confusion'?"
+    back: "A logical gap is any conclusion that does not follow from its premises. Correlation-causation confusion is a specific type: treating a statistical correlation as proof that one thing caused another."
+    tags: ["error-taxonomy", "logical-gap", "correlation-causation"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch02-error-prediction-005"
+    front: "Why does predicting AI errors BEFORE prompting build a stronger internal model than catching errors after the fact?"
+    back: "Because prediction forces you to reason about where AI fails as a system, not just react to individual mistakes. Over time, your predictions become more accurate — you develop an anticipatory model of AI limitations."
+    tags: ["error-prediction", "anticipatory-model"]
+    difficulty: "intermediate"
+    why: "How would a student with a strong internal model of AI failures use AI differently than one without?"
+
+  - id: "p0-ch02-error-prediction-006"
+    front: "What is a 'fabricated citation' and why is it particularly dangerous?"
+    back: "A reference to a source that does not exist. It is dangerous because it looks authoritative — a reader who trusts it cannot verify the underlying claim, and the false authority discourages further investigation."
+    tags: ["error-taxonomy", "fabricated-citation"]
+    difficulty: "intermediate"
+    why: "How would you verify whether a citation in AI output is real without reading the full source?"
+
+  - id: "p0-ch02-error-prediction-007"
+    front: "What is a 'cultural blind spot' in AI output?"
+    back: "Assuming one cultural context applies universally — for example, treating US legal norms as global standards."
+    tags: ["error-taxonomy", "cultural-blind-spot"]
+    difficulty: "basic"
+
+  - id: "p0-ch02-error-prediction-008"
+    front: "Why is 'don't trust AI' described as vague skepticism rather than useful error detection?"
+    back: "Because it provides no actionable framework. The Error Taxonomy replaces vague distrust with precise categories — a student who knows the 8 error types can systematically check for each one, while a student told 'be skeptical' does not know what to look for."
+    tags: ["error-taxonomy", "systematic-detection"]
+    difficulty: "intermediate"
+    why: "How does having specific error categories change the way you read AI output?"
+
+  - id: "p0-ch02-error-prediction-009"
+    front: "An AI response uses correlational data to argue that a policy caused an outcome. Which Error Taxonomy category applies?"
+    back: "Correlation-causation confusion — treating a correlation as proof of causation."
+    tags: ["error-taxonomy", "correlation-causation"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch02-error-prediction-010"
+    front: "Why does the exercise require annotating AI output line by line rather than giving an overall assessment?"
+    back: "Because line-by-line annotation forces precise identification of where errors occur and what type each one is. Overall assessments like 'mostly accurate' hide specific failures that only granular analysis reveals."
+    tags: ["annotation", "error-detection"]
+    difficulty: "advanced"
+    why: "What would an instructor learn from a student's line-by-line annotations that a summary assessment would hide?"
