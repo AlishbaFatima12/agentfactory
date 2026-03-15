@@ -142,6 +142,10 @@ We aren't just building AI. We are replacing **high-cost, slow software dependen
 
 While the "Software Giants" are losing valuation, the firms building Custom Digital Workers are **capturing** that lost value. This is disruption alpha—the opportunity gap between the old world dying and the new world scaling.
 
+To understand how fast value is concentrating in agent-native companies, compare Anthropic's March 15, 2026 valuation with India's largest listed IT firms.
+
+![How Big Is Anthropic? A Market Cap Comparison With India's IT Giants](../static/img/anthropic_15_march_market_cap.png)
+
 ### How to Pivot
 
 **1. Stop buying "Seats."** Reduce reliance on software that requires manual human input. Every seat-based subscription is a liability in the agentic era.
