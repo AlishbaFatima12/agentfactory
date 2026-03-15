@@ -123,7 +123,7 @@ Let's start with the most basic question: when an AI agent has access to a termi
 
 In Chapter 30, you learned the PRIMM-AI+ framework — Predict, Run, Investigate, Modify, Make — with AI-free checkpoints, confidence scoring, and mastery gates. This chapter is where you put that framework to work for the first time.
 
-Every axiom ends with a **PRIMM-AI+ Practice** section that gives you structured exercises following all five stages. These exercises use **real-world scenarios and plain-English reasoning**, not code. You will reason about software engineering concepts through familiar situations — shipping an app update like James does in the lesson, planning a birthday party, designing a registration form, tracking student grades, naming essay files. You do not need to write code. Coding applications of these axioms begin in Chapter 33 and beyond.
+Every axiom ends with a **PRIMM-AI+ Practice** section that gives you structured exercises following all five stages. These exercises use **real-world scenarios and plain-English reasoning**, not code. You will reason about software engineering concepts through familiar situations — shipping an app update like James does in the lesson, planning a birthday party, designing a registration form, tracking student grades, naming essay files. You do not need to write code. Coding applications of these axioms begin in the hands-on chapters that follow.
 
 Here is what each stage looks like in this chapter. To make it concrete, here is a preview using Axiom I (Shell as Orchestrator), where you step into James's shoes from the lesson:
 

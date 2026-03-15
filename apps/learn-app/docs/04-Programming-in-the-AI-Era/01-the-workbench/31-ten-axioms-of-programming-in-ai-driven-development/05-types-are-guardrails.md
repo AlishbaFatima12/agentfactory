@@ -143,7 +143,7 @@ Emma walked James through the three layers she used on every project — the sam
 ![Python Type Safety Hierarchy: Type Hints at the base, Pyright static analysis in the middle, and Pydantic runtime validation at the top, forming a pyramid of increasing safety](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-14/05-type-safety-stack.png)
 
 :::tip Focus on the concept, not the syntax
-This lesson contains more Python than previous axioms — dataclasses, Pydantic models, Protocols, and Generics. You have not learned Python yet (that starts in Chapter 33). For now, focus on *what each code block is doing* conceptually: declaring the shape of data, catching mismatches, validating inputs. The specific syntax will make sense when you reach the Python chapters.
+This lesson contains more Python than previous axioms — dataclasses, Pydantic models, Protocols, and Generics. You have not learned Python yet. For now, focus on *what each code block is doing* conceptually: declaring the shape of data, catching mismatches, validating inputs. The specific syntax will make sense when you reach the Python chapters.
 :::
 
 ### Layer 1: Type Hints (The Annotations)
@@ -403,7 +403,7 @@ def create_task(request: TaskCreateRequest) -> Task:
 The rule is simple: **Pydantic at the edges, dataclasses at the core.** Data entering your system gets validated. Data inside your system is already trusted.
 
 :::tip Still reading for the idea, not the syntax
-The Python code below shows common mistakes and how to fix them. Focus on the *pattern* — what goes wrong when types are missing, and what changes when they are added. You will write Python yourself starting in Chapter 33.
+The Python code below shows common mistakes and how to fix them. Focus on the *pattern* — what goes wrong when types are missing, and what changes when they are added. You will write Python yourself in the hands-on chapters.
 :::
 
 ## Anti-Patterns: How Types Get Undermined
@@ -609,7 +609,7 @@ it to build the system, how would the spec prevent the AI from making
 the kind of mistake James made?
 ```
 
-**What you're learning**: The core discipline of Axiom V — defining data shapes before implementation. When you specify that "score" is a whole number between 0 and 100 (not a string, not a negative number, not blank), you have created exactly what Emma created for James: a machine-verifiable contract that catches errors automatically. You will apply this same thinking to Python types starting in Chapter 33.
+**What you're learning**: The core discipline of Axiom V — defining data shapes before implementation. When you specify that "score" is a whole number between 0 and 100 (not a string, not a negative number, not blank), you have created exactly what Emma created for James: a machine-verifiable contract that catches errors automatically. You will apply this same thinking to Python types in the hands-on chapters.
 
 ---
 
