@@ -658,37 +658,37 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
 | Question | Correct Answer | Axiom Tested |
 |----------|---------------|--------------|
 | 1 | D | Axiom I: Shell as Orchestrator |
-| 2 | B | Axiom I: Shell as Orchestrator |
+| 2 | C | Axiom I: Shell as Orchestrator |
 | 3 | A | Axiom II: Knowledge is Markdown |
 | 4 | C | Axiom II: Knowledge is Markdown |
 | 5 | B | Axiom III: Programs Over Scripts |
-| 6 | A | Axiom III: Programs Over Scripts |
+| 6 | C | Axiom III: Programs Over Scripts |
 | 7 | C | Axiom IV: Composition Over Monoliths |
 | 8 | D | Axiom IV: Composition Over Monoliths |
 | 9 | A | Axiom V: Types Are Guardrails |
-| 10 | C | Axiom V: Types Are Guardrails |
+| 10 | D | Axiom V: Types Are Guardrails |
 | 11 | D | Axiom VI: Data is Relational |
 | 12 | B | Axiom VI: Data is Relational |
 | 13 | C | Axiom VII: Tests Are the Specification |
-| 14 | A | Axiom VII: Tests Are the Specification |
-| 15 | B | Axiom VIII: Version Control is Memory |
+| 14 | D | Axiom VII: Tests Are the Specification |
+| 15 | C | Axiom VIII: Version Control is Memory |
 | 16 | D | Axiom VIII: Version Control is Memory |
 | 17 | A | Axiom IX: Verification is a Pipeline |
 | 18 | B | Axiom IX: Verification is a Pipeline |
 | 19 | C | Axiom X: Observability Extends Verification |
 | 20 | D | Axiom X: Observability Extends Verification |
-| 21 | A | Axiom I: Shell as Orchestrator |
-| 22 | B | Axiom I: Shell as Orchestrator |
+| 21 | C | Axiom I: Shell as Orchestrator |
+| 22 | D | Axiom I: Shell as Orchestrator |
 | 23 | B | Axiom I: Shell as Orchestrator |
-| 24 | A | Axiom II: Knowledge is Markdown |
+| 24 | C | Axiom II: Knowledge is Markdown |
 | 25 | B | Axiom II: Knowledge is Markdown |
-| 26 | A | Axiom II: Knowledge is Markdown |
-| 27 | A | Axiom III: Programs Over Scripts |
+| 26 | C | Axiom II: Knowledge is Markdown |
+| 27 | D | Axiom III: Programs Over Scripts |
 | 28 | A | Axiom III: Programs Over Scripts |
-| 29 | A | Axiom III: Programs Over Scripts |
+| 29 | D | Axiom III: Programs Over Scripts |
 | 30 | A | Axiom IV: Composition Over Monoliths |
 | 31 | B | Axiom IV: Composition Over Monoliths |
-| 32 | B | Axiom IV: Composition Over Monoliths |
+| 32 | D | Axiom IV: Composition Over Monoliths |
 | 33 | B | Axiom V: Types Are Guardrails |
 | 34 | A | Axiom V: Types Are Guardrails |
 | 35 | B | Axiom V: Types Are Guardrails |
@@ -698,13 +698,13 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
 | 39 | B | Axiom VII: Tests Are the Specification |
 | 40 | A | Axiom VII: Tests Are the Specification |
 | 41 | C | Axiom VII: Tests Are the Specification |
-| 42 | A | Axiom VIII: Version Control is Memory |
+| 42 | D | Axiom VIII: Version Control is Memory |
 | 43 | B | Axiom VIII: Version Control is Memory |
 | 44 | B | Axiom VIII: Version Control is Memory |
-| 45 | A | Axiom IX: Verification is a Pipeline |
-| 46 | A | Axiom IX: Verification is a Pipeline |
+| 45 | D | Axiom IX: Verification is a Pipeline |
+| 46 | D | Axiom IX: Verification is a Pipeline |
 | 47 | A | Axiom IX: Verification is a Pipeline |
-| 48 | A | Axiom X: Observability Extends Verification |
+| 48 | D | Axiom X: Observability Extends Verification |
 | 49 | A | Axiom X: Observability Extends Verification |
 | 50 | B | Axiom X: Observability Extends Verification |
 
@@ -719,10 +719,10 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
 
 ## Next Steps
 
-Based on your performance, focus on the group where you missed the most questions. The ten axioms fall into three groups (the same groups introduced in the chapter overview):
+Based on your performance, identify which axioms you missed the most questions on using the "Axiom Tested" column in the answer key above. Then focus your review on the corresponding axiom group:
 
-- **Axioms I-IV (Structure)**: If you missed questions 1-20, review shell orchestration (the complexity threshold between shell and program), markdown knowledge (complete reasoning, not just decisions), the Python discipline stack (uv, pyright, ruff, pytest), and composition patterns (composable monolith vs. microservices). These axioms govern how your code is organized. Questions 1-8 cover the foundational concepts, while questions 21-32 probe deeper into composition primitives, the complexity threshold, information hiding, dependency injection, and the decomposition trap.
-- **Axioms V-VI (Data)**: If you missed questions 21-30, study the three-layer type stack (hints, Pyright, Pydantic) and relational data modeling (SQLite vs. PostgreSQL). These axioms make sure information stays correct as it moves through your system. Questions 9-12 cover foundational type and data concepts, while questions 33-38 explore the Any type trap, dataclass vs. Pydantic boundaries, AI hallucination verification, SQL injection, normalization, and SQL as an agent-native language.
-- **Axioms VII-X (Verification)**: If you missed questions 31-50, revisit Test-Driven Generation (the Circular Testing Trap, the test pyramid, and persistent specification), git as memory (conventional commits, Co-Authored-By attribution, the WHY rule), CI/CD pipelines (pipeline ordering, branch protection, and enforcement vs. discipline), and observability practices (the feedback loop, the complete system, and pre- vs. post-deployment verification). These axioms create a chain of verification — from writing the first test to monitoring the live system.
+- **Axioms I–IV (Structure)** — If you missed questions on Axioms I through IV, review: shell orchestration and the coordinator vs. worker distinction (Lesson 1), markdown as the knowledge format (Lesson 2), the complexity threshold between scripts and programs (Lesson 3), and composition patterns that keep systems manageable (Lesson 4). These axioms govern how your code is organized.
+- **Axioms V–VI (Data)** — If you missed questions on Axioms V or VI, review: the type discipline stack and why labels prevent errors (Lesson 5), and relational data modeling with the "one fact, one place" principle (Lesson 6). These axioms make sure information stays correct as it moves through your system.
+- **Axioms VII–X (Verification)** — If you missed questions on Axioms VII through X, review: Test-Driven Generation and writing specs before code (Lesson 7), version control as project memory (Lesson 8), CI/CD pipelines that enforce quality automatically (Lesson 9), and observability that watches what happens after deployment (Lesson 10). These axioms create a chain of verification — from the first test to monitoring the live system.
 
 Remember: The ten axioms build upon each other — shell orchestrates programs (I, III), programs are composed (IV) with types (V) and relational data (VI), tested via TDG (VII), tracked in git (VIII), verified in CI (IX), and monitored in production (X). Master each group before advancing to the next.
