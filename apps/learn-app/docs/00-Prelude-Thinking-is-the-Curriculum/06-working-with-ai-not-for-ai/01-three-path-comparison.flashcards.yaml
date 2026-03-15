@@ -1,0 +1,65 @@
+deck:
+  id: "p0-ch06-three-path-comparison"
+  title: "The Three-Path Comparison"
+  description: "Key concepts from the three-path problem-solving comparison exercise"
+  tags: ["Part 0", "AI-collaboration", "three-path", "divergence-test"]
+  version: 1
+
+cards:
+  - id: "p0-ch06-three-path-comparison-001"
+    front: "What are the three paths in the Three-Path Comparison exercise?"
+    back: "1. Solo (no AI, 45 min)\n2. Pure AI (accept everything, 20 min)\n3. Collaboration (prompt, evaluate, override, iterate, 30 min)"
+    tags: ["three-path", "exercise-structure"]
+    difficulty: "basic"
+
+  - id: "p0-ch06-three-path-comparison-002"
+    front: "Why does the pure AI path require accepting the first response with no overrides?"
+    back: "To create a controlled baseline showing what AI produces without human judgment. If students edit AI output, the comparison cannot isolate what AI adds versus what the student adds."
+    tags: ["three-path", "experimental-design"]
+    difficulty: "intermediate"
+    why: "What would the comparison lose if students were allowed to make minor edits to the pure AI version?"
+
+  - id: "p0-ch06-three-path-comparison-003"
+    front: "What do most students discover when comparing solo, pure AI, and collaboration solutions?"
+    back: "Pure AI output is competent but generic. Solo output is original but incomplete. Genuine collaboration produces the best results -- but only when the human applies real judgment."
+    tags: ["three-path", "key-insight"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch06-three-path-comparison-004"
+    front: "Why might the solo version sometimes capture insights that neither AI version does?"
+    back: "Because deep thinking without the shortcut of prompting can produce original insights. AI availability can actually reduce originality by channeling thinking toward prompt-worthy questions rather than unexpected connections."
+    tags: ["solo-thinking", "originality"]
+    difficulty: "advanced"
+    why: "How would you know when to deliberately avoid AI to preserve originality?"
+
+  - id: "p0-ch06-three-path-comparison-005"
+    front: "Which assessment layers does the Three-Path Comparison exercise use?"
+    back: "Layer 6 (Iterative Drafts) and Layer 5 (Divergence Test)."
+    tags: ["assessment-layers"]
+    difficulty: "basic"
+
+  - id: "p0-ch06-three-path-comparison-006"
+    front: "What does 'genuine collaboration' mean in the Three-Path exercise, as opposed to 'using AI'?"
+    back: "Prompting, evaluating responses, modifying output, re-prompting with refinements, overriding when AI is wrong, and iterating -- not just accepting AI output with minor edits."
+    tags: ["collaboration", "definition"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch06-three-path-comparison-007"
+    front: "Why is Chapter 6 called the 'pivot chapter' of Part 0?"
+    back: "Because it shifts from 'thinking without AI' (Chapters 1-5) to 'thinking with AI.' It establishes the mental model for all future AI collaboration."
+    tags: ["chapter-structure", "pivot"]
+    difficulty: "intermediate"
+    why: "Why was it important to train solo thinking skills in Chapters 1-5 before introducing AI collaboration?"
+
+  - id: "p0-ch06-three-path-comparison-008"
+    front: "Why are strict time limits enforced across the three paths (45, 20, 30 minutes)?"
+    back: "To make the comparison fair. Without limits, students could spend unlimited time on any version, making it impossible to compare the value each approach adds within realistic constraints."
+    tags: ["exercise-design", "time-limits"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch06-three-path-comparison-009"
+    front: "The AI Check reveals that a student's collaboration intervention made some elements worse. Why is this a valuable finding?"
+    back: "Because it teaches that human intervention is not automatically beneficial. Knowing WHERE your judgment adds value and where it subtracts value is the core of strategic AI collaboration."
+    tags: ["collaboration", "self-awareness"]
+    difficulty: "advanced"
+    why: "How should a student change their collaboration approach after discovering they made some elements worse?"

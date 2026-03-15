@@ -1,0 +1,72 @@
+deck:
+  id: "p0-ch01-prediction-lock"
+  title: "The Prediction Lock"
+  description: "Key concepts from the Prediction Lock exercise on question formulation and reasoning receipts"
+  tags: ["Part 0", "question formulation", "prediction lock", "reasoning receipt"]
+  version: 1
+
+cards:
+  - id: "p0-ch01-prediction-lock-001"
+    front: "What is a Prediction Lock in Part 0's assessment framework?"
+    back: "A timestamped document written BEFORE using AI, sealing your diagnosis and predictions."
+    tags: ["prediction-lock", "definition"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-prediction-lock-002"
+    front: "What are the three sections of a Prediction Lock document?"
+    back: "1. Initial diagnosis\n2. 10 ranked questions with predicted answers\n3. Reasoning receipt"
+    tags: ["prediction-lock", "structure"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-prediction-lock-003"
+    front: "What does 'diagnostic power' mean when ranking questions?"
+    back: "How likely a question is to reveal the root cause or distinguish between competing explanations."
+    tags: ["diagnostic-power", "question-ranking"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch01-prediction-lock-004"
+    front: "Why must the Prediction Lock be written BEFORE touching AI?"
+    back: "Because it creates a genuine baseline of independent thinking. Writing it after AI would contaminate the record — you could not distinguish your ideas from AI's."
+    tags: ["prediction-lock", "independent-thinking"]
+    difficulty: "intermediate"
+    why: "What would be lost if a student wrote their prediction after seeing AI output?"
+
+  - id: "p0-ch01-prediction-lock-005"
+    front: "In a Reasoning Receipt, what are the three decision categories for each AI response?"
+    back: "Accept, Reject, or Modify."
+    tags: ["reasoning-receipt", "definition"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-prediction-lock-006"
+    front: "Why does ranking questions by diagnostic power produce better thinking than listing every question you can think of?"
+    back: "Ranking forces you to evaluate which questions eliminate more hypotheses. Listing produces quantity without quality — a diagnostic question distinguishes between competing explanations."
+    tags: ["diagnostic-power", "question-ranking"]
+    difficulty: "intermediate"
+    why: "How would you tell the difference between a question that is 'interesting' and one that is 'diagnostic'?"
+
+  - id: "p0-ch01-prediction-lock-007"
+    front: "A student's Reasoning Receipt shows 'Accept' for every AI response. What does this pattern reveal?"
+    back: "It reveals passive acceptance rather than critical engagement. A genuine thinker would reject or modify at least some responses, because AI output is never uniformly correct."
+    tags: ["reasoning-receipt", "critical-engagement"]
+    difficulty: "advanced"
+    why: "How could an instructor distinguish a genuine 'all accept' from uncritical copying?"
+
+  - id: "p0-ch01-prediction-lock-008"
+    front: "How does comparing your prediction against AI output improve your thinking over time?"
+    back: "The comparison reveals specific blind spots — where your thinking was strong and where it was lazy. Repeated cycles build an internal model of your own weaknesses, which targeted practice can fix."
+    tags: ["prediction-lock", "blind-spots", "metacognition"]
+    difficulty: "intermediate"
+    why: "Why can't you identify your own blind spots without an external comparison point?"
+
+  - id: "p0-ch01-prediction-lock-009"
+    front: "What is the difference between a diagnostic question and a decorative question?"
+    back: "A diagnostic question distinguishes between competing explanations. A decorative question sounds relevant but produces generic answers that do not narrow the problem."
+    tags: ["diagnostic-power", "question-quality"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch01-prediction-lock-010"
+    front: "Why is question formulation described as a disciplined practice rather than prompt engineering?"
+    back: "Because it trains clear thinking about what you need to know, not just how to phrase requests. Better questions produce better answers from AI, colleagues, and data — the skill transfers everywhere."
+    tags: ["question-formulation", "critical-thinking"]
+    difficulty: "advanced"
+    why: "What happens to someone who masters prompt engineering but never improves their question formulation?"
