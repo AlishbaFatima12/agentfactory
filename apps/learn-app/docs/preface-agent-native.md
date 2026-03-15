@@ -476,16 +476,6 @@ This is what you'll learn to build.
 | **3. License**      | Annual fee to use your proprietary agent logic              | Enterprises needing data in-house (healthcare, finance, defense) |
 | **4. Marketplace**  | Sell via OpenAI Apps to millions of users                   | Volume play, brand building around niche expertise               |
 
-### The License Model Deep Dive
-
-In Spec-Driven Development, the "License" isn't just for software—it's for the Skill folder and Agents:
-
-| License Type                | What Is Being Sold                                          | Revenue Style            |
-| --------------------------- | ----------------------------------------------------------- | ------------------------ |
-| **White-Label**             | The right to rebrand your Agent Skill as their own          | High upfront + royalty   |
-| **Enterprise Site License** | Unlimited use of a Skill and Agents across an organization  | Annual Recurring Revenue |
-| **Developer License**       | The right to use your Skill as a sub-module in their agents | Usage-based or flat tier |
-
 ### The Distribution Breakthrough
 
 Traditional enterprise sales takes 6 months and a 500-person sales team. The OpenAI Apps marketplace changes this:
@@ -557,74 +547,6 @@ Strategic restraint is as important as bold adoption:
 
 **Without these foundations, you can't build sellable Digital FTEs.**
 
-### The Nine Pillars of AI-Native Development
-
-These skills rest on a broader foundation—the **Nine Pillars** that define modern AI development:
-
-1. **AI CLI & Coding Agents** — Claude Code, Gemini CLI, GPT Codex
-2. **Markdown as Programming Language** — Specifications become executable
-3. **MCP Standard** — Universal protocol for tool integration
-4. **AI-First IDEs** — Editors built for AI collaboration
-5. **Linux Universal Dev Environment** — Standardized development
-6. **Test-Driven Development** — Quality confidence at scale, plus Evals for reasoning testing
-7. **Spec-Driven Development** — Intent before implementation
-8. **Composable Vertical Skills** — Reusable domain expertise
-9. **Universal Cloud-Native Deployment** — Kubernetes, Docker, Dapr
-
-This book teaches you to master each pillar systematically.
-
-### The Journey This Book Takes You On
-
-| Phase                      | What You Learn                                             | What You Build                                |
-| -------------------------- | ---------------------------------------------------------- | --------------------------------------------- |
-| **Foundation** (Parts 1-5) | Spec writing, AI collaboration, MCP, testing               | Your first working agent                      |
-| **Products** (Parts 6-9)   | Agent Frameworks, multi-agent orchestration, build vs. buy | Custom or Pre-Built Agents for real workflows |
-| **Revenue** (Parts 10-13)  | Deployment, operations, marketplace                        | Sellable Digital FTEs                         |
-
-Each phase builds on the previous. The skills from Part 1 become the building blocks for Part 6. The agents from Part 6 become the products you deploy in Part 10.
-
-**Honest timeline:** Building your first sellable Digital FTE takes weeks to months of focused learning—not days. The skills compound with each project, but there are no shortcuts to mastery.
-
----
-
-## Who This Book Is For
-
-### Domain Experts Who Want to Productize Knowledge
-
-If you can describe a job, you can build an AI employee to do it. No coding required—just your domain expertise.
-
-- **Sales professionals** → Build Digital SDRs that qualify leads 24/7
-- **Legal experts** → Create contract review agents for law firms
-- **Finance specialists** → Develop compliance monitoring Digital FTEs
-- **Healthcare professionals** → Design scheduling and documentation assistants
-- **Educators** → Build adaptive learning systems with domain-specific pedagogy
-- **Accountants** → Create agents that auto-reconcile transactions and flag audit risks
-
-**Your domain knowledge + AI execution = competitive moat.** This book teaches you to encode your expertise into Digital FTEs—whether you build them from scratch or configure pre-built ones—that generate recurring revenue.
-
-### Developers Who Want to Build Sellable AI Products
-
-- **Transform your workflow** — from writing code to writing specifications
-- **Master the Agent Framework ecosystem** — OpenAI, Claude, Google ADK
-- **Build production systems** — not toy demos, but deployable products
-- **Create recurring revenue** — from Digital FTE subscriptions
-
-**If you're already coding:** You have a massive advantage. You can validate AI-generated output immediately, spot subtle bugs, and architect robust systems. This book shows you how to package that capability into sellable products.
-
-### Entrepreneurs Building AI-Native Startups
-
-- **Solo founders can compete** — build enterprise-scale products without large teams
-- **Ship faster than competitors** — specification-first development compresses iteration cycles
-- **Focus on product-market fit** — let AI handle implementation details
-- **Build the "micro-unicorn"** — small team, massive reach through marketplace distribution
-- **Choose build or buy strategically** — custom-build for your unique moat, onboard pre-built for commodity capabilities
-
-### The Common Thread
-
-Whether you're a domain expert, developer, or entrepreneur—**you want to build AI products you can sell, not just learn theory.** This book is your complete, practical blueprint.
-
----
-
 ## The Paradigm Shift: From Coding to Orchestrating
 
 ### The Developer as Conductor
@@ -650,62 +572,6 @@ This three-role partnership creates outcomes **better than either could produce 
 A specification is no longer static documentation. It's a **living contract** between you and your AI collaborator. When you write a spec: AI generates implementation, tests derive from acceptance criteria, documentation stays synchronized, and changes propagate consistently.
 
 **The insight:** Your success depends on how well you can describe problems, constraints, and goals to intelligent systems.
-
----
-
-## How to Read This Book
-
-### If You're a Domain Expert (New to Coding)
-
-**Path:** Read all parts sequentially. Don't skip chapters.
-
-**Your advantage:** Your domain expertise is the valuable ingredient. The technical skills are learnable; your knowledge of sales/legal/finance/healthcare is not easily replicated.
-
-### If You're a Developer
-
-**Path:** Skim Parts 1-3 for paradigm context. Deep dive into Parts 4-9. Skim Parts 10-13 for operations.
-
-**Your advantage:** You can validate AI output immediately. Focus on the monetization and product-building aspects—that's likely what's new for you.
-
-### If You're a Technical Leader or Founder
-
-**Path:** Read Part 1 for strategy. Parts 2-3 for team capability assessment. Parts 10-13 for scaling decisions.
-
-**Focus:** Decision-making context, not technical deep-dives. Understand what your team needs to learn and how to evaluate their progress.
-
-### Universal Rule
-
-Each part builds on previous ones. Don't skip ahead to "the monetization part." Understanding the foundation makes everything else possible.
-
----
-
-## The Questions You're Asking
-
-### "Is this realistic, or is it hype?"
-
-The CoCounsel acquisition in 2023—$650 million for encoded legal expertise—was the early signal. The SaaSpocalypse in February 2026—nearly $1 trillion erased from software stocks—was the market-wide confirmation. Investors are pricing in a structural shift, not a trend.
-
-### "Do I need to be a programmer?"
-
-No. But you need to learn specification writing, AI collaboration, and basic technical concepts. The "buy" path (Pre-Built AI Employees) requires even less technical depth—you're configuring and managing, not architecting. But to build custom agents that encode your unique expertise, you'll need the skills this book teaches.
-
-If you can write clear requirements and think systematically, you can build Digital FTEs.
-
-### "How long until I can sell something?"
-
-Honest answer: weeks to months, depending on your starting point and how much time you invest. The first few parts establish foundations. By Part 6, you're building Custom Agents or evaluating Pre-Built ones. By Part 10, you're deploying them.
-
-There are no shortcuts, but the path is clearly marked.
-
-### "Will this replace human workers?"
-
-Digital FTEs handle the work humans don't have time for—high-volume processing, overnight monitoring, repetitive tasks. They augment human capability rather than replace human judgment.
-
-The enterprises buying Digital FTEs aren't firing their teams; they're expanding what their teams can accomplish.
-
-### "What if my agent makes mistakes?"
-
-This is why the book teaches Agent Evaluations alongside Agent Building. You don't deploy without a Golden Dataset of 50+ real-world test scenarios and a 97%+ accuracy threshold. Start in shadow mode—the agent recommends, humans execute—and graduate to autonomy after proving reliability over 30 days.
 
 ---
 
