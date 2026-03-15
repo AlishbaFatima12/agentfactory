@@ -13,7 +13,7 @@ Chapter number or path. Examples:
 
 - `/exercise-pack ch 4`
 - `/exercise-pack "chapter 6"`
-- `/exercise-pack apps/learn-app/docs/01-General-Agents-Foundations/05-spec-driven-development/`
+- `/exercise-pack apps/learn-app/docs/01-General-Agents-Foundations/16-spec-driven-development/`
 
 ## Workflow Overview
 

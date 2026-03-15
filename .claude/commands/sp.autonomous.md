@@ -754,7 +754,7 @@ Before ANY lesson is considered complete, verify:
 
 ```
 Match quality of reference lesson at:
-apps/learn-app/docs/01-Introducing-AI-Driven-Development/01-agent-factory-paradigm/01-digital-fte-revolution.md
+apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/01-digital-fte-revolution.md
 
 Required elements:
 - Full YAML frontmatter (skills, learning_objectives, cognitive_load, differentiation)

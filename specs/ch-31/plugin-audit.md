@@ -1,12 +1,12 @@
-# Ch 20 Islamic Finance Plugin Audit
+# Ch 31 Islamic Finance Plugin Audit
 
 **Date**: 2026-03-15
 **Auditor**: Claude (automated)
 **Three sources compared**:
 
-1. Governing artifact (spec): `specs/lightweight/chapter 20 islamic finance/Chapter20_Islamic_Finance_Agents_Global.md`
+1. Governing artifact (spec): `specs/lightweight/chapter 31 islamic finance/Chapter20_Islamic_Finance_Agents_Global.md`
 2. Plugin (actual): `agentfactory-business-plugins/islamic-finance/`
-3. Chapter (actual): `apps/learn-app/docs/.../20-islamic-finance-domain-agents/`
+3. Chapter (actual): `apps/learn-app/docs/.../31-islamic-finance-domain-agents/`
 
 **Comparison baseline**: Banking plugin (Ch 21), which has already been cleaned up.
 
@@ -225,13 +225,13 @@ The chapter README prerequisites section tells students to install the Islamic F
 Line 12 of `skills/islamic-finance-router/SKILL.md` contains:
 
 ```
-$(cat "/Users/mjs/Documents/code/panaversity-official/tutorsgpt/ag2/specs/chapter 20 islamic finance/islamic-finance-skills/islamic-finance-global-router.md" | tail -n +16)
+$(cat "/Users/mjs/Documents/code/panaversity-official/tutorsgpt/ag2/specs/chapter 31 islamic finance/islamic-finance-skills/islamic-finance-global-router.md" | tail -n +16)
 ```
 
 This is a **hardcoded local path shell expansion** that:
 
 1. References a path on the developer's machine (will fail for any other user)
-2. Points to a path that may not even exist anymore (`specs/chapter 20 islamic finance/...`)
+2. Points to a path that may not even exist anymore (`specs/chapter 31 islamic finance/...`)
 3. Means the router SKILL.md body is EMPTY for anyone who installs the plugin -- only the YAML frontmatter and jurisdiction overlay links are present
 
 **This is the most critical bug in the plugin.** The router skill effectively has no routing rules for any user who installs the plugin.
@@ -296,7 +296,7 @@ These are plugin infrastructure (not teaching content). They are not duplicated 
 
 ### 8. Fix exercise numbering documentation
 
-If exercises are kept (against recommendation), the README's "How Each Folder Maps to Chapter 20 Lessons" table needs updating because the chapter has 15 exercises (with the inserted Exercise 5 for L08), making the plugin's ex05-ex14 off by one from the chapter's Exercise 6-15.
+If exercises are kept (against recommendation), the README's "How Each Folder Maps to Chapter 31 Lessons" table needs updating because the chapter has 15 exercises (with the inserted Exercise 5 for L08), making the plugin's ex05-ex14 off by one from the chapter's Exercise 6-15.
 
 ---
 

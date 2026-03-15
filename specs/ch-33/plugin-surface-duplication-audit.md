@@ -1,11 +1,11 @@
-# Chapter 22 Plugin Surface Duplication Audit
+# Chapter 33 Plugin Surface Duplication Audit
 
 Date: 2026-03-14
 
 Scope:
 - Anthropic base plugin: `anthropics/knowledge-work-plugins/legal`
 - Panaversity extension plugin: `panaversity/agentfactory-business-plugins/legal-ops`
-- Chapter 22 curriculum surface in `apps/learn-app/docs/.../22-legal-operations-and-compliance/`
+- Chapter 33 curriculum surface in `apps/learn-app/docs/.../33-legal-operations-and-compliance/`
 
 Working assumption:
 - In Cowork, same-named skills and commands collapse into the same user-facing slash surface.
@@ -20,23 +20,23 @@ Open runtime question:
 1. If Anthropic and Panaversity expose the same slash name, assign one canonical owner.
 2. If Panaversity changes the behavior of a same-name command, rename it or remove it.
 3. Panaversity should focus on extension value: jurisdiction routing, overlays, legal ops agents, and supporting materials.
-4. Chapter 22 should teach one public command name per capability.
+4. Chapter 33 should teach one public command name per capability.
 
 ## Command Matrix
 
-| Capability | Chapter 22 Usage | Anthropic Surface | Panaversity Surface | Relationship | Recommendation |
+| Capability | Chapter 33 Usage | Anthropic Surface | Panaversity Surface | Relationship | Recommendation |
 | --- | --- | --- | --- | --- | --- |
 | `/review-contract` | Heavy; core lesson flow; used across L01, L02, L03, L04, L10, L13, L14 | `skills/review-contract/SKILL.md` | `commands/review-contract.md` plus `skills/jurisdiction-contract-review/SKILL.md` | Duplicate public entrypoint; Panaversity adds routing/overlay layer to the same core workflow | Anthropic should own `/review-contract`. Remove Panaversity's duplicate public command and make Panaversity an internal router/overlay extension to that workflow. |
 | `/triage-nda` | Heavy; core lesson flow; used across L05, L10, L14 | `skills/triage-nda/SKILL.md` | `commands/triage-nda.md` plus `skills/jurisdiction-nda-triage/SKILL.md` | Duplicate public entrypoint; Panaversity adapts the same workflow with jurisdiction handling | Anthropic should own `/triage-nda`. Remove Panaversity's duplicate public command and keep only extension logic. |
 | `/vendor-check` | Heavy; taught as obligation dashboard in L03, L09, L14 | `skills/vendor-check/SKILL.md` | `commands/vendor-check.md` routing to `skills/compliance-calendar/SKILL.md` | Same name, different meaning. Anthropic checks vendor agreement status across systems; Panaversity produces a compliance calendar dashboard. | Do not keep the Panaversity command under this name. Rename the Panaversity workflow or remove the command and teach it as a distinct legal ops capability. |
-| `/brief` | Heavy; used for benchmarking, IP research, regulatory monitoring, legal spend | `skills/brief/SKILL.md` | No same-name command, but Panaversity introduces `/legal-brief` for overlapping research use cases | Boundary blur rather than direct name collision | Pick one research command surface. Either keep Anthropic `/brief` as canonical everywhere or intentionally migrate Panaversity research flows to `/legal-brief` and rewrite Chapter 22 accordingly. |
+| `/brief` | Heavy; used for benchmarking, IP research, regulatory monitoring, legal spend | `skills/brief/SKILL.md` | No same-name command, but Panaversity introduces `/legal-brief` for overlapping research use cases | Boundary blur rather than direct name collision | Pick one research command surface. Either keep Anthropic `/brief` as canonical everywhere or intentionally migrate Panaversity research flows to `/legal-brief` and rewrite Chapter 33 accordingly. |
 | `/respond` | Heavy; L08 and L14 | `skills/legal-response/SKILL.md` | None | Anthropic-only | Keep Anthropic as canonical. Chapter is aligned here. |
 | `/compliance-check` | Heavy; L06 and L14 | `skills/compliance-check/SKILL.md` | None | Anthropic-only | Keep Anthropic as canonical. Chapter is aligned here. |
 | `/signature-request` | Medium; L04 and L14 | `skills/signature-request/SKILL.md` | None | Anthropic-only | Keep Anthropic as canonical. Chapter is aligned here. |
 | `/legal-brief` | Low explicit usage, but intended as Panaversity research entrypoint | None | `commands/legal-brief.md` routing to router, IP, regulatory, spend, and DSAR skills | Panaversity-only, but conceptually overlaps with Anthropic `/brief` | Keep only if Panaversity owns a separate research surface. Otherwise remove and fold the content into Anthropic `/brief` usage plus hidden routing. |
-| `/contract-intake` | Mentioned in L14 sprint table and flashcards | None | No command shipped; nearest surface is `skills/contract-intake-agent/SKILL.md` | Documentation drift | Either add a real `/contract-intake` command or remove the slash reference from Chapter 22 and teach this as a skill/agent only. |
-| `/compliance-calendar` | Mentioned in L14 sprint table and flashcards | None | No command shipped; nearest surface is `skills/compliance-calendar/SKILL.md` | Documentation drift | Either add a real `/compliance-calendar` command or remove the slash reference from Chapter 22 and use the actual supported entrypoint. |
-| `/legal-hold` | Mentioned in L14 sprint table and flashcards | None; Anthropic uses `/respond type:"litigation-hold"` | No command shipped | Documentation drift | Replace `/legal-hold` in Chapter 22 with `/respond type:"litigation-hold"` unless a real command is added. |
+| `/contract-intake` | Mentioned in L14 sprint table and flashcards | None | No command shipped; nearest surface is `skills/contract-intake-agent/SKILL.md` | Documentation drift | Either add a real `/contract-intake` command or remove the slash reference from Chapter 33 and teach this as a skill/agent only. |
+| `/compliance-calendar` | Mentioned in L14 sprint table and flashcards | None | No command shipped; nearest surface is `skills/compliance-calendar/SKILL.md` | Documentation drift | Either add a real `/compliance-calendar` command or remove the slash reference from Chapter 33 and use the actual supported entrypoint. |
+| `/legal-hold` | Mentioned in L14 sprint table and flashcards | None; Anthropic uses `/respond type:"litigation-hold"` | No command shipped | Documentation drift | Replace `/legal-hold` in Chapter 33 with `/respond type:"litigation-hold"` unless a real command is added. |
 
 ## Skill Matrix
 
@@ -51,7 +51,7 @@ Open runtime question:
 | `legal-response` | Partial DSAR overlap via `dsar-privacy` | Different responsibilities. Anthropic handles templated responses and legal holds; Panaversity handles DSAR/privacy workflow detail. | Keep both, but document boundaries clearly. |
 | `signature-request` | None | Anthropic-only | Keep Anthropic-only. |
 | `legal-global-router` | None | Panaversity-only extension | Keep. This is real extension value. |
-| `ip-protection` | Partial use of Anthropic `/brief` for research pattern | Panaversity-only domain extension | Keep, but fix how Chapter 22 names and invokes it. |
+| `ip-protection` | Partial use of Anthropic `/brief` for research pattern | Panaversity-only domain extension | Keep, but fix how Chapter 33 names and invokes it. |
 | `regulatory-monitoring` | Partial overlap with Anthropic `/brief` and `/compliance-check` | Panaversity-only domain extension | Keep, but decide whether entrypoint is `/brief` or `/legal-brief`. |
 | `dsar-privacy` | Partial overlap with Anthropic `/respond` and `compliance-check` | Panaversity-only DSAR/privacy depth | Keep, but document when to use it vs `/respond`. |
 | `legal-spend` | None | Panaversity-only | Keep. |
@@ -70,7 +70,7 @@ Panaversity meaning:
 - Obligation extraction and compliance calendar dashboard.
 - Escalation timeline, overdue tracking, renewal reminders.
 
-This is the cleanest example of why same-name ownership must be resolved before Chapter 22 is finalized.
+This is the cleanest example of why same-name ownership must be resolved before Chapter 33 is finalized.
 
 ### 2. `/review-contract` and `/triage-nda` are near-duplicate surfaces
 
@@ -85,7 +85,7 @@ That makes these capabilities layered extensions, not independent products. The 
 
 ### 3. Research workflows are split across `/brief` and `/legal-brief`
 
-Chapter 22 currently teaches Anthropic `/brief` for:
+Chapter 33 currently teaches Anthropic `/brief` for:
 - negotiation benchmarking
 - regulatory monitoring
 - patent landscape research
@@ -144,7 +144,7 @@ Use Panaversity for:
 
 Implications:
 - Remove or rename Panaversity's duplicate public commands.
-- Rewrite Chapter 22 so each shared capability points to Anthropic's canonical command.
+- Rewrite Chapter 33 so each shared capability points to Anthropic's canonical command.
 - Expose Panaversity as the behind-the-scenes extension layer plus a small set of clearly unique entrypoints.
 
 ### Option B: Panaversity Owns a Separate Legal Ops Surface
@@ -152,13 +152,13 @@ Implications:
 Keep Panaversity as a visibly separate product, but then:
 - Rename all colliding commands.
 - Stop teaching Anthropic and Panaversity capabilities under the same slash names.
-- Accept that Chapter 22 becomes a two-command-system chapter.
+- Accept that Chapter 33 becomes a two-command-system chapter.
 
 This is cleaner technically than ambiguous collision, but it is worse pedagogically and likely worse for student UX.
 
 ### Recommended Path
 
-Option A is the better Chapter 22 design:
+Option A is the better Chapter 33 design:
 - one canonical owner per public command
 - Panaversity as extension, not shadow plugin
 - Chapter text aligned to actual shipped surfaces
@@ -178,5 +178,5 @@ If the team wants to make a final keep/remove decision by reading the real files
 
 1. Decide canonical owner for `/review-contract`, `/triage-nda`, `/vendor-check`, and research (`/brief` vs `/legal-brief`).
 2. Remove or rename duplicate Panaversity public commands based on that decision.
-3. Rewrite Chapter 22 so every referenced command or skill actually exists.
+3. Rewrite Chapter 33 so every referenced command or skill actually exists.
 4. Add one runtime validation pass in Cowork/Claude Code with both plugins installed to confirm slash precedence and auto-activation behavior.
