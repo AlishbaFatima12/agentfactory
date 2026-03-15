@@ -151,7 +151,7 @@ Together, these form the institutional memory that James's post-mortem was missi
 
 ## From Principle to Axiom
 
-In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/persisting-state-in-files), you learned **Principle 5: Persisting State in Files**. That principle established a critical insight: AI systems are stateless between sessions, so all important context must live in files that AI can read.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/persisting-state-in-files), you learned **Principle 5: Persisting State in Files**. Remember the comparison: re-explaining your project conventions every session wastes 10 minutes each time — over 20 sessions, that is 3+ hours lost. Writing a single CLAUDE.md file once takes 20 minutes but saves every future session from starting at zero. That principle established a critical insight: AI systems are stateless between sessions, so all important context must live in files that AI can read.
 
 Axiom VIII builds directly on that foundation:
 
@@ -273,6 +273,10 @@ Without blame, that `75.0` would be a magic number — nobody would know where i
 
 The power of git-as-memory depends entirely on commit quality. James's `wip` commits were not just lazy — they were *destroying information*. Every time he bundled three unrelated changes into one commit with no message, he was erasing the decisions that produced those changes. Emma called this "voluntary amnesia."
 
+:::tip Reading Git Commands for the Concept
+The sections below show many git commands — `git add`, `git commit`, `git log`, `git tag`. Focus on *what each command achieves* (save a change, describe why, search history, mark a stable version) rather than memorizing the syntax. You will practice these commands yourself when you set up version control in hands-on chapters.
+:::
+
 ### Atomic Commits: One Logical Change
 
 Each commit should contain exactly one logical change. Emma gave James a simple test: if you have to use "and" to describe it, split it:
@@ -308,6 +312,10 @@ Five specification tests covering domestic, international, free shipping
 threshold, and boundary conditions. Written before AI implementation
 per TDG workflow (Axiom VII)."
 ```
+
+:::tip Reading git commands for the pattern, not the syntax
+The git commands in this section (`git add`, `git commit -m`, `git log`) are tools you will use hands-on in later chapters. For now, focus on *what information* each commit records — the prefix type, the scope, the "why" — not the command syntax.
+:::
 
 ### Conventional Commits: Structured Prefixes
 
@@ -731,7 +739,9 @@ Write in your own words why recording WHAT changed and WHY for each version is m
 
 Now connect this to James's story. His post-mortem failed for exactly the same reason your essay filenames fail — the history *existed* (he had three commits; you have five files) but it *told him nothing*. His team lead asked "What was the original bug?" and James could not answer, just as your teacher asks "What changed between version 2 and version 4?" and you cannot answer. In both cases, the problem is not missing saves — it is missing *reasoning*. Every version without a "why" is a memory with amnesia.
 
-Apply the **Error Taxonomy**: "wip" and "final_v2" commit messages without explanation = **orchestration error**. The history exists (the files are saved) but it tells you nothing — the coordination between past and present is broken because no reasoning was recorded.
+Apply the **Error Taxonomy**: every commit message is a **specification** of what changed and why. "wip" and "final_v2" are **specification errors** — they look like specifications (a commit message *should* describe the change) but they specify nothing. When the teacher asks "what changed between v2 and v4?", the missing specification makes the question unanswerable. The history exists, but the specifications are empty. Compare this to a test that says `assert result == True` without stating *what* result is expected — the form of a specification is there, but the content is missing.
+
+Now go deeper: imagine your teacher not only asks what changed, but asks you to **undo version 3** because it introduced a mistake. With "essay_FINAL_v2.docx" naming, can you do that safely? What information would you need in each version's record to make a selective undo possible? Connect this to James's post-mortem — his team wanted to undo one specific change, but "fix stuff" told them nothing about what that change contained.
 
 ### Modify
 

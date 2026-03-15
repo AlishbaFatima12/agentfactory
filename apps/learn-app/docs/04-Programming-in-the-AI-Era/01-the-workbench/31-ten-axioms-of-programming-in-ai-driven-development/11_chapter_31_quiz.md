@@ -3,7 +3,7 @@ sidebar_position: 11
 title: "Chapter 31: Ten Axioms Quiz"
 proficiency_level: B1
 layer: 2
-estimated_time: "30 mins"
+estimated_time: "45 mins"
 chapter_type: Concept
 running_example_id: ten-axioms-quiz
 ---
@@ -254,6 +254,366 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
       correctOption: 3,
       explanation: "The Log Avalanche is a named trap from Axiom X: the overcorrection of adding maximum logging everywhere after experiencing an observability gap. James went from zero visibility (`print('Processing order...')`) to maximum noise (DEBUG on everything) — neither extreme works. Effective observability requires the right data at the right level: DEBUG for development only (off in production), INFO for normal operations, WARNING for handled anomalies, ERROR for failures requiring attention, CRITICAL for system-level emergencies. As Emma told James: 'If everything is important, nothing is.' Option A makes a valid architectural point (he should add metrics and traces too) but the immediate problem isn't missing pillars — it's that the one pillar he's using (logging) is misconfigured with excessive volume. Option B identifies a real secondary risk of DEBUG logging (sensitive data exposure) but the question focuses on the primary problem — signal drowning in noise, not privacy compliance. Option C sounds plausible but the Green Bar Illusion is specifically about test coverage creating false confidence (Axiom VII) — here the problem isn't false confidence, it's that he literally can't find errors in the noise.",
       source: "Lesson 10: Observability Extends Verification"
+    },
+    {
+      question: "Emma's Makefile for the order system chains three programs together: a data exporter, a validator, and a report generator. She didn't write any of these programs — they come from different teams and languages. Yet her Makefile coordinates them seamlessly using pipes and exit codes. What principle of Axiom I does this demonstrate?",
+      options: [
+        "The shell's composition primitives (pipes, exit codes, redirection) let it connect programs it didn't create, enabling coordination without requiring shared language or authorship",
+        "The Makefile acts as a program that wraps three scripts in a unified interface, replacing the need for each team to maintain their own deployment process",
+        "The shell automatically handles data format conversion between programs written in different languages, removing the need for standardized input and output formats",
+        "Exit codes allow the Makefile to retry failed programs automatically, providing built-in error recovery that eliminates the need for error handling inside each program"
+      ],
+      correctOption: 0,
+      explanation: "Axiom I's composition primitives — pipes (|), exit codes (&&), and redirection (<, >, 2>) — are the shell's power. They allow the shell to route data between programs regardless of who wrote them or what language they use. The shell doesn't need to understand the programs' internals; it just connects their inputs and outputs. Option C is tempting because the shell does pass data between programs, but it doesn't convert formats automatically — programs must agree on text stream conventions. The shell routes data; it doesn't transform it.",
+      source: "Lesson 01: Shell as Orchestrator"
+    },
+    {
+      question: "James writes a bash script that starts at 15 lines of straightforward coordination but over two months grows to include a for-loop parsing CSV fields, nested if-else blocks for validation, and string manipulation for formatting output. When should he have moved this logic out of the shell?",
+      options: [
+        "When the script exceeded 100 lines, since shorter scripts can handle loops and conditionals effectively as long as they use functions and local variables",
+        "When the script began performing computation — loops, string parsing, nested conditionals — because these belong in a typed, testable program regardless of line count",
+        "When a second developer needed to modify the script, since collaboration requires version-controlled programs but solo developers can use scripts of any complexity",
+        "When the script started failing intermittently, since working scripts should not be refactored until they demonstrate instability in a production environment"
+      ],
+      correctOption: 1,
+      explanation: "Axiom I defines the complexity threshold not by line count alone but by what the script does. Loops, string parsing, nested conditionals, and data structures are computation — they belong in a proper program with a debugger, type system, and test suite. The shell should coordinate programs, not perform computation itself. Option A focuses on line count (100 lines) as the trigger, but a 30-line script with nested conditionals and string manipulation has already crossed the threshold. The nature of the work, not its length, determines when to move to a program.",
+      source: "Lesson 01: Shell as Orchestrator"
+    },
+    {
+      question: "When Claude Code helps James build his order system, it runs shell commands to list files, execute tests, and coordinate tools. It does not directly write to the Python runtime or invoke functions inside James's program. Why does the AI agent operate at the shell layer rather than the program layer?",
+      options: [
+        "AI agents lack the ability to execute Python code directly, so the shell is a technical limitation they work around by calling programs as external processes",
+        "The shell layer maximizes capability by composing existing tools (ls, pytest, git) without writing custom code, matching Axiom I's principle that coordination belongs in the shell",
+        "Operating at the shell layer allows the AI agent to run multiple programs simultaneously using background processes, which is faster than sequential Python execution",
+        "The shell layer provides a security sandbox that prevents the AI agent from accessing sensitive data inside the Python runtime, protecting credentials and user information"
+      ],
+      correctOption: 1,
+      explanation: "AI coding agents independently converged on shell orchestration because it maximizes capability while minimizing fragile custom code. The shell gives the agent access to every installed tool — formatters, type checkers, test runners, version control — through composition primitives. Option A is tempting because it frames shell usage as a limitation, but agents use the shell by design, not by constraint. Vercel's AI agent became 3.5x faster by switching to shell commands instead of custom tools, proving the shell layer is a strategic advantage.",
+      source: "Lesson 01: Shell as Orchestrator"
+    },
+    {
+      question: "James considers storing his project's coding standards in HTML because it supports rich formatting, or in plain text because it is simple. Emma explains that markdown is better than both. Which of markdown's four properties do HTML and plain text each fail to satisfy?",
+      options: [
+        "HTML fails human-readability because tag noise makes raw files hard to scan, and plain text fails AI-parseability because it lacks structural markers like headers and sections",
+        "HTML fails version-controllability because binary rendering data creates unreadable diffs, and plain text fails tool-agnosticism because it requires specialized editors to display properly",
+        "HTML fails AI-parseability because language models cannot process HTML tags, and plain text fails version-controllability because whitespace changes create noisy diffs",
+        "HTML fails tool-agnosticism because it requires a browser to render properly, and plain text fails human-readability because it has no formatting for emphasis or hierarchy"
+      ],
+      correctOption: 0,
+      explanation: "Markdown satisfies four properties simultaneously: human-readable, version-controllable, AI-parseable, and tool-agnostic. HTML fails human-readability — raw HTML is cluttered with tags like <h1>, <p>, <div> that obscure the actual content. Plain text fails AI-parseability — without structural markers (# headers, ## subheaders), AI cannot identify sections, parse specific parts, or navigate the document meaningfully. Option D is tempting because plain text does lack formatting, but readability of flat text is fine for humans — the issue is that AI cannot parse structure from unstructured text.",
+      source: "Lesson 02: Knowledge is Markdown"
+    },
+    {
+      question: "James's repository contains a CLAUDE.md file that explains the project structure, lists run commands, and states coding conventions. When Claude Code opens the project, it reads this file first. What role does this markdown file serve according to Axiom II?",
+      options: [
+        "It replaces the need for onboarding documentation by serving as an interactive tutorial that guides the AI through each feature of the codebase step by step",
+        "It acts as a context file that answers 'how to work here' — giving the AI agent project overview, commands, and rules directly from the repository without external access",
+        "It functions as a test specification that defines the expected behavior of the codebase, allowing the AI to verify whether the project meets its own stated requirements",
+        "It serves as a configuration file that controls the AI agent's permissions, limiting which files it can read and which commands it can execute within the project"
+      ],
+      correctOption: 1,
+      explanation: "Axiom II identifies context files (CLAUDE.md, README.md) as markdown documents that answer 'how to work here' — project overview, run commands, and rules — sitting in the repository alongside code. Any AI agent can read them directly with standard file access, no authentication needed. Option A is tempting because CLAUDE.md does help onboarding, but it is not an interactive tutorial — it is a static reference document. The key insight is that context files use markdown's four properties to make project knowledge accessible to both humans and AI agents.",
+      source: "Lesson 02: Knowledge is Markdown"
+    },
+    {
+      question: "James writes a note in Slack: 'We chose PostgreSQL over SQLite because we might need concurrent writes later.' Three months later, when the team debates switching databases, nobody can find this reasoning. Emma suggests writing an Architecture Decision Record instead. What makes an ADR more effective than a Slack message?",
+      options: [
+        "ADRs use a structured format (Status, Context, Decision, Consequences, Alternatives) that captures complete reasoning in a findable, version-controlled markdown file in the repository",
+        "ADRs are automatically indexed by search engines and internal documentation tools, making them discoverable through keyword search across the organization's knowledge base",
+        "ADRs require approval from senior engineers before being merged, ensuring that architectural decisions are reviewed and validated before they become part of the record",
+        "ADRs are written in a formal technical style that eliminates ambiguity, while Slack messages use casual language that can be interpreted differently by different team members"
+      ],
+      correctOption: 0,
+      explanation: "Axiom II warns that decisions in Slack are archived after 90 days, unsearchable by AI agents, and not version-controlled. ADRs solve all three problems: they use a structured format (Status, Context, Decision, Consequences, Alternatives Considered) that captures complete reasoning, live in the repository as markdown files where AI agents can read them, and are version-controlled so the decision's evolution is tracked. Option D is tempting — formality does reduce ambiguity — but the ADR's advantage is structure and location (in the repo, version-controlled), not writing style.",
+      source: "Lesson 02: Knowledge is Markdown"
+    },
+    {
+      question: "James built a Jupyter notebook that calculates shipping costs for his order system. It started as a quick exploration tool, but now three team members rely on it daily and it runs on a cron job every morning. The notebook has no tests, no type hints, and cell execution order matters. What Axiom III concept describes this situation?",
+      options: [
+        "The Prototype Trap — the notebook solved an immediate problem but graduated to production use without gaining the discipline (types, tests, error handling) that production code requires",
+        "The Mega-Script — the notebook grew too large and should be split into multiple smaller notebooks, each handling one step of the shipping calculation pipeline",
+        "The Shallow Pipeline — the notebook bypasses the CI verification pipeline because notebooks cannot be linted, type-checked, or tested in the same way as Python modules",
+        "The Complexity Threshold — the notebook has crossed from shell territory into program territory and should be rewritten as a Makefile that coordinates typed Python scripts"
+      ],
+      correctOption: 0,
+      explanation: "The Prototype Trap from Axiom III describes exactly this pattern: a script (or notebook) solves an immediate problem, someone asks to use it, and months later it has multiple users and a cron job — but no types, no tests, no error messages to debug when it fails. The fix is to extract the notebook's logic into a proper Python module with the full discipline stack. Option C is tempting because notebooks do bypass CI, but the root problem is not the pipeline's limitations — it is that the code was never designed for production use. The notebook needs to graduate to a program, not just get added to CI.",
+      source: "Lesson 03: Programs Over Scripts"
+    },
+    {
+      question: "Axiom III defines a discipline stack with four layers: uv for dependency management, ruff for style enforcement, pyright for type checking, and pytest for behavior verification. James asks why he cannot just use pytest alone since it catches the most impactful bugs. What is Emma's response?",
+      options: [
+        "Each layer catches a different defect class that the others miss — dependency conflicts, style violations, type mismatches, and logic errors require separate specialized tools to detect",
+        "The four tools must run in a specific order where each tool's output feeds into the next, creating a verification chain that would break if any middle link were removed",
+        "Running all four tools generates a compliance report that stakeholders and auditors require before production deployment, making the full stack a business requirement",
+        "Using only pytest creates a false sense of security because passing tests prove the code works correctly, eliminating the need for manual code review entirely"
+      ],
+      correctOption: 0,
+      explanation: "Axiom III's discipline stack is layered defense: uv prevents 'works on my machine' environment drift, ruff catches unused imports and formatting issues, pyright finds type mismatches in untested code paths, and pytest verifies behavioral correctness. Remove any layer and a class of defects goes undetected. Option B is tempting because the tools do run in sequence in CI, but they are independent checkers, not a chain where output feeds input. Each catches errors the others cannot — pyright will never catch wrong logic, and pytest will never catch wrong types.",
+      source: "Lesson 03: Programs Over Scripts"
+    },
+    {
+      question: "James has a small utility function that renames files in a directory. It is 12 lines long and works perfectly. Emma says it does not need the full discipline stack yet. Under Axiom III, when is bash still the appropriate tool for a task like this?",
+      options: [
+        "Bash is appropriate when the task is simple orchestration — linear coordination under 20 lines with no loops, string parsing, or complex error handling logic",
+        "Bash is appropriate for any task under 50 lines as long as the developer adds comments explaining each step and uses descriptive variable names throughout the script",
+        "Bash is always appropriate for file operations because the shell has native file manipulation commands that are faster and more reliable than Python equivalents",
+        "Bash is appropriate when only one developer will ever run the script, since multi-user scripts require the portability guarantees that only typed programs can provide"
+      ],
+      correctOption: 0,
+      explanation: "Axiom III does not say 'never use bash.' The complexity threshold defines when shell is appropriate: under 20 lines of linear coordination without loops, string parsing, nested conditionals, or complex error handling. Simple orchestration — running commands in sequence, checking exit codes, piping output — is the shell's strength. Option B focuses on line count (50 lines) and documentation as the criteria, but well-commented bash with loops and string parsing is still the wrong tool. The nature of the task, not its length or documentation, determines appropriateness.",
+      source: "Lesson 03: Programs Over Scripts"
+    },
+    {
+      question: "James's order system has a ShippingCalculator module that directly imports and calls internal methods from the InventoryManager module. When the inventory team refactors their internal data structures, James's shipping code breaks even though the shipping logic itself did not change. What principle from Axiom IV explains why this happened?",
+      options: [
+        "Information Hiding (Parnas 1972) — when a module exposes its internal design decisions, changes to those internals cascade as breaking changes to every module that depends on them",
+        "Fractal Composition — the shipping and inventory modules should repeat the same internal structure at every level so that refactoring one automatically refactors the other",
+        "The Decomposition Trap — the system was split into too many small modules, creating a web of dependencies that makes any change impossible without affecting multiple components",
+        "Dependency Injection — the ShippingCalculator should receive the InventoryManager as a constructor parameter so that the shipping module controls when inventory methods are called"
+      ],
+      correctOption: 0,
+      explanation: "Parnas's 1972 principle of Information Hiding states: break systems so each module hides a design decision from others. When a decision is hidden inside a module, changing it affects only that module. When shared across modules, changes cascade. James's ShippingCalculator imported internal methods of InventoryManager, coupling it to implementation details rather than a stable interface. Option D describes a useful technique (dependency injection) but does not explain WHY the breakage occurred — the root cause is violated information hiding, not the absence of injection.",
+      source: "Lesson 04: Composition Over Monoliths"
+    },
+    {
+      question: "Emma refactors James's order system so that the payment processing component is passed into the order pipeline as a parameter rather than hardcoded. In production it uses Stripe, in tests it uses a fake that returns predetermined responses, and in development it logs calls without charging. What Axiom IV pattern is this?",
+      options: [
+        "Fractal Composition — the same payment interface pattern repeats at the function level, module level, and service level, creating self-similar structure throughout the architecture",
+        "Dependency Injection — swapping components by passing implementations as parameters, so the orchestration logic stays the same while the behavior changes based on context",
+        "The Verification Pyramid — each environment (production, test, development) runs a different level of the verification stack to match its specific reliability requirements",
+        "Information Hiding — the payment component hides its internal processing details from the order pipeline, so switching providers does not require changes to order logic"
+      ],
+      correctOption: 1,
+      explanation: "Dependency injection composes behavior by passing implementations as parameters rather than hardcoding them. The same orchestration logic works with Stripe in production, fakes in testing, and logging in development — the pipeline does not change, only the injected component does. Option D is tempting because information hiding is also at play (the payment component does hide internals), but the specific pattern being demonstrated is injection — the ability to swap components without changing the orchestrating code.",
+      source: "Lesson 04: Composition Over Monoliths"
+    },
+    {
+      question: "After learning about composition, James enthusiastically splits every function in his order system into the smallest possible units — a function to add two numbers, a function to format a single string, a function to check if a value is None. Emma warns him he has fallen into a trap. Which one?",
+      options: [
+        "The God Class trap — by creating too many tiny functions, James has effectively created a coordination class that does nothing but call other functions, which is just a different form of monolith",
+        "The Decomposition Trap — over-decomposition scatters simple logic across so many units that understanding the whole requires assembling a mental map of dozens of tiny pieces",
+        "The Prototype Trap — James is treating his production code like an experiment by constantly restructuring it instead of stabilizing the architecture and adding proper tests",
+        "The Circular Testing Trap — each tiny function needs its own test, and the tests for trivial functions end up restating the implementation rather than specifying meaningful behavior"
+      ],
+      correctOption: 1,
+      explanation: "Axiom IV warns that the Decomposition Trap — over-decomposition — is as harmful as no decomposition. Splitting a three-line calculation into three one-line functions creates indirection without benefit. Understanding the system requires tracing through dozens of tiny pieces instead of reading straightforward code. Compose when concerns genuinely separate; leave simple things simple. Option D raises a valid testing concern, but the root problem is architectural — the decomposition itself is wrong, not the testing approach that follows from it.",
+      source: "Lesson 04: Composition Over Monoliths"
+    },
+    {
+      question: "James writes a function `def process_payment(data: dict[str, Any])` and uses the Any type for the dictionary values to 'get things working quickly.' The function accepts any data shape without complaint, and Claude Code generates code that passes dictionaries with inconsistent key names. What does Axiom V say about this approach?",
+      options: [
+        "The Any type is acceptable during prototyping but should be replaced with specific types before the code enters the CI pipeline, where pyright strict mode would flag it",
+        "Every Any annotation is a hole where AI hallucinations pass through unchecked — it removes all type information and disables the static analysis that would catch inconsistent data shapes",
+        "The Any type should be replaced with Union types that enumerate every possible value type, giving pyright enough information to verify each branch of the processing logic",
+        "Using Any is fine for internal functions as long as Pydantic models validate the data at the system boundary before it reaches the function, catching inconsistencies at entry"
+      ],
+      correctOption: 1,
+      explanation: "Axiom V identifies the Any anti-pattern: every Any in code is a hole where AI hallucinations pass through unchecked. dict[str, Any] loses all type information — pyright cannot verify that keys exist, that values have the right type, or that the AI generated consistent structures. Option D is tempting because boundary validation (Pydantic) does catch some errors, but if the internal function uses Any, the type checker cannot verify what happens after the boundary. The contract disappears inside the function, and AI-generated code within it goes unverified.",
+      source: "Lesson 05: Types Are Guardrails"
+    },
+    {
+      question: "Emma explains to James that his order system should use dataclasses for internal data structures and Pydantic models at the API boundary. James asks why he cannot use Pydantic everywhere since it does more. What is the key distinction Axiom V draws between these two tools?",
+      options: [
+        "Dataclasses are faster to instantiate because they skip validation overhead, while Pydantic models perform runtime validation on every field — internal data that is already trusted does not need re-validation",
+        "Dataclasses support inheritance and composition patterns that Pydantic models cannot replicate, making them essential for building complex internal type hierarchies within the order system",
+        "Pydantic models generate automatic API documentation from their field definitions, which is useful at boundaries but unnecessary noise for internal data structures that no external consumer sees",
+        "Dataclasses are part of Python's standard library and require no external dependencies, while Pydantic adds a third-party package that increases the project's dependency surface area"
+      ],
+      correctOption: 0,
+      explanation: "Axiom V defines the boundary vs internal distinction: Pydantic validates data at the edges where errors enter (API requests, external input, user submissions), performing runtime checks on every field. Dataclasses structure trusted internal data without validation overhead. Once data passes the Pydantic boundary, it is trusted — re-validating it internally wastes computation. Option D is tempting because the dependency concern is real, but Axiom V's reasoning is architectural (validation belongs at boundaries, not everywhere), not about minimizing dependencies.",
+      source: "Lesson 05: Types Are Guardrails"
+    },
+    {
+      question: "James asks Claude Code to generate a function for his order system without providing type annotations. The AI produces code that calls customer.get_orders() — a method that does not exist on the Customer class. If James had provided type annotations, how would the outcome differ according to Axiom V?",
+      options: [
+        "The AI would have generated different code because type annotations in the prompt constrain the AI's output, reducing the statistical likelihood of hallucinating nonexistent methods",
+        "The AI might still hallucinate the method, but pyright would immediately flag customer.get_orders() as an error because the Customer type has no such attribute — catching it before runtime",
+        "The AI would have refused to generate the function entirely, since type-annotated codebases trigger stricter generation modes that prevent the AI from inventing new method signatures",
+        "The type annotations would have caused a runtime error at import time rather than at execution time, giving James faster feedback but not fundamentally preventing the hallucination"
+      ],
+      correctOption: 1,
+      explanation: "Axiom V states that types matter MORE with AI-generated code because type annotations give the static checker (pyright) a machine-readable specification to verify against. The AI might still hallucinate customer.get_orders(), but pyright would immediately flag it as an error — the Customer type has no such attribute. Without types, the hallucination reaches runtime unchecked. Option A is tempting because types in prompts do help guide AI generation, but Axiom V's emphasis is on verification after generation, not on preventing hallucination during generation.",
+      source: "Lesson 05: Types Are Guardrails"
+    },
+    {
+      question: "James builds a search feature for his order system using an f-string: `query = f\"SELECT * FROM orders WHERE customer = '{name}'\"`. Emma immediately flags this as dangerous. A user enters `'; DROP TABLE orders; --` in the search box. What happens, and what does Axiom VI prescribe?",
+      options: [
+        "The query executes the DROP TABLE command, deleting all orders — Axiom VI prescribes using parameterized queries with placeholders so user input is never treated as executable SQL",
+        "The query fails with a syntax error because SQLite does not allow semicolons within string literals, but Emma is right that the pattern is still unsafe for other database engines",
+        "The query returns no results because the injected text does not match any customer name, but the f-string pattern should be replaced with an ORM that handles escaping automatically",
+        "The database rejects the query because modern SQL databases have built-in injection protection that detects and blocks malicious patterns in string-concatenated queries"
+      ],
+      correctOption: 0,
+      explanation: "The string concatenation trap is a critical anti-pattern from Axiom VI. When user input is inserted directly into SQL via f-strings, the database cannot distinguish between the query and the injected command. The DROP TABLE executes, deleting all data. Axiom VI prescribes parameterized queries with placeholders (? in SQLite) where user input is always treated as data, never as executable SQL. Option D is tempting — one might assume modern databases have protections — but SQL injection via string concatenation works on every database engine. Parameterized queries are the non-negotiable defense.",
+      source: "Lesson 06: Data is Relational"
+    },
+    {
+      question: "James stores customer names directly in each order record: order #101 says 'Acme Corp' and order #102 says 'Acme Corporation' for the same customer. When he queries total revenue by customer, the report shows two separate entries. What relational principle from Axiom VI does this violate?",
+      options: [
+        "'One Fact, One Place' — the customer name should be stored once in a customers table and referenced by customer_id in orders, so a name change applies everywhere automatically",
+        "'Schema as Type Definition' — the orders table should have a CHECK constraint that validates customer names against a predefined list of approved company name formats",
+        "'SQL as Declarative Language' — the report query should use GROUP BY with a fuzzy matching function to merge similar customer names into a single aggregated row",
+        "'Migrations as Version Control' — a database migration should normalize existing customer names by finding and correcting all variations before adding a uniqueness constraint"
+      ],
+      correctOption: 0,
+      explanation: "Axiom VI's 'One Fact, One Place' principle states: store each fact exactly once. Customer names belong in a customers table, referenced by customer_id in the orders table. When the name is stored once, changing it in one place updates every reference automatically. Duplicated names across records inevitably drift — 'Acme Corp' vs 'Acme Corporation' — creating inconsistency that no query can reliably resolve. Option C is tempting because fuzzy matching can merge similar names in a report, but it treats the symptom (inconsistent names) rather than the cause (duplicated storage).",
+      source: "Lesson 06: Data is Relational"
+    },
+    {
+      question: "James asks Claude Code to query his order database. The AI generates a correct 12-line SQL query that replaces James's 40-line Python loop. Emma points out that SQL's constrained vocabulary makes it particularly effective for AI-generated queries. Why does Axiom VI call SQL 'agent-native'?",
+      options: [
+        "SQL databases provide built-in query explanation tools (EXPLAIN) that let AI agents verify their own generated queries before execution, creating a self-checking feedback loop",
+        "SQL's constrained vocabulary of roughly 30 keywords reduces hallucination opportunities compared to Python's thousands of library functions — fewer valid choices mean fewer wrong choices",
+        "SQL queries return structured tabular results that AI agents can parse directly without data transformation, while Python loops produce unstructured output requiring additional processing",
+        "SQL databases maintain schema metadata that AI agents can query to discover table structures automatically, eliminating the need for documentation about the data model"
+      ],
+      correctOption: 1,
+      explanation: "Axiom VI identifies SQL as agent-native because its constrained vocabulary — roughly 30 keywords (SELECT, FROM, WHERE, JOIN, GROUP BY, etc.) — drastically reduces the space of possible hallucinations. Python has thousands of library functions an AI might misuse; SQL has a small, well-defined set of operations. Fewer valid choices mean fewer wrong choices. Option D is tempting because schema discovery is real and useful, but the 'agent-native' designation specifically refers to the constrained vocabulary advantage, not the metadata access.",
+      source: "Lesson 06: Data is Relational"
+    },
+    {
+      question: "James asks Claude Code to generate both a discount calculation function and its test suite at the same time. The AI produces code where a 15% discount multiplies the price by 0.15 (instead of subtracting 15%), and the test asserts the same wrong formula. All tests pass. What Axiom VII trap is this?",
+      options: [
+        "The Green Bar Illusion — the tests pass but do not cover enough edge cases, so the boundary between correct and incorrect behavior remains untested and unspecified",
+        "The Circular Testing Trap — the AI encoded the same misunderstanding in both the implementation and the tests, so neither catches the other's error and everything appears correct",
+        "The Annotation Illusion — the code has proper type annotations that make it look structurally sound, masking the fact that the logic is mathematically wrong despite correct types",
+        "Happy-path-only testing — the tests verify the expected discount scenario but do not test edge cases like zero-percent discounts, 100-percent discounts, or negative order totals"
+      ],
+      correctOption: 1,
+      explanation: "The Circular Testing Trap is Axiom VII's most dangerous anti-pattern: when the AI generates both code AND tests, the same misunderstanding produces wrong code AND wrong tests that validate each other. The 15% discount bug passes all tests because the test encodes the same flawed formula. This is why Axiom VII insists: you write the tests (the specification), and the AI writes the implementation. Option A is tempting because the Green Bar Illusion also involves false confidence from passing tests, but the distinction is critical — the Green Bar Illusion is about coverage gaps, while the Circular Testing Trap is about systematically wrong specifications.",
+      source: "Lesson 07: Tests Are the Specification"
+    },
+    {
+      question: "Emma explains the test pyramid to James: 70% unit tests, 20% integration tests, 10% end-to-end tests. James asks why he cannot just write end-to-end tests since they cover the most functionality per test. What does Axiom VII say about this distribution?",
+      options: [
+        "End-to-end tests are slow, fragile, and provide vague failure messages — unit tests are fast, precise specifications that pinpoint exactly which behavior broke and why",
+        "End-to-end tests require a full production environment to run, making them impractical for the CI pipeline where fast feedback loops are essential for developer productivity",
+        "End-to-end tests cannot be used with Test-Driven Generation because they exercise the entire system, while TDG requires focused tests that specify individual function behavior",
+        "End-to-end tests create a maintenance burden because any UI change breaks multiple tests simultaneously, while unit tests are isolated from presentation layer changes"
+      ],
+      correctOption: 0,
+      explanation: "Axiom VII positions unit tests as the most effective specifications in the pyramid: they are fast (milliseconds), precise (one test per behavior), and provide clear failure messages that pinpoint exactly what broke. End-to-end tests cover broad functionality but are slow (seconds to minutes), fragile (break when any component changes), and give vague failures ('order flow failed' doesn't tell you whether the discount, shipping, or payment calculation is wrong). The 70/20/10 distribution reflects this tradeoff. Option C is tempting because TDG does emphasize focused tests, but end-to-end tests can be part of a TDG workflow — they just should not dominate it.",
+      source: "Lesson 07: Tests Are the Specification"
+    },
+    {
+      question: "James finishes a coding session with Claude Code. The AI generated three functions for his order system. James reviews them visually and they look correct — clean structure, good docstrings, sensible variable names. He commits without writing tests. According to Axiom VII, what has he lost?",
+      options: [
+        "He has lost the ability to refactor safely, since without tests there is no automated way to verify that future changes preserve the current behavior of those three functions",
+        "He has lost the performance baseline, since without test benchmarks there is no way to detect if future changes cause the functions to run slower than their original implementation",
+        "He has lost persistent specification — the natural language prompts that guided the AI do not survive the session, but tests would have permanently encoded what 'correct' means for each function",
+        "He has lost the audit trail, since without test coverage reports there is no documentation proving that the AI-generated code was reviewed and validated before being committed"
+      ],
+      correctOption: 2,
+      explanation: "Axiom VII emphasizes that tests are persistent specification — they outlive the AI session. The natural language prompts James used ('implement a discount calculator') disappear when the session ends. Tests like `assert calculate_discount(200, 0.15) == 30.0` permanently encode what correct behavior means, surviving across sessions, developers, and future AI regenerations. Option A is also true (tests enable safe refactoring), but the question specifically asks what was lost from the AI session context — the answer is the persistent specification that would have captured the session's intent.",
+      source: "Lesson 07: Tests Are the Specification"
+    },
+    {
+      question: "James makes a commit with the message: 'Updated shipping calculation.' Emma reviews it and says the message is insufficient. According to Axiom VIII's conventional commit format, what should the message look like?",
+      options: [
+        "A prefix like feat, fix, or refactor that categorizes the change at a glance, followed by a scope and a description that explains what kind of change was made to which component",
+        "A detailed paragraph explaining every line that changed in the shipping calculation, including the old values, the new values, and the mathematical formulas used in each step",
+        "A reference to the GitHub issue or Jira ticket number that requested the shipping change, followed by a one-line summary that links the commit to the project management system",
+        "A timestamp and the developer's name appended to the message, so that git blame shows both who made the change and when it was committed without running a separate command"
+      ],
+      correctOption: 0,
+      explanation: "Axiom VIII prescribes conventional commit format: a structured prefix (feat, fix, refactor, test, docs) tells you what KIND of change at a glance. A properly formatted message might be: `fix(shipping): correct international rate calculation for orders over $10K`. The prefix categorizes it, the scope narrows the domain, and the description explains the change. Option B is tempting because more detail sounds better, but the diff already shows what changed line-by-line — the commit message's job is to explain the WHY and categorize the WHAT, not restate the diff.",
+      source: "Lesson 08: Version Control is Memory"
+    },
+    {
+      question: "Emma adds `Co-Authored-By: Claude <noreply@anthropic.com>` to every commit where Claude Code generated or substantially modified the code. James asks why this matters. What does Axiom VIII say about AI commit attribution?",
+      options: [
+        "Attribution satisfies open-source license requirements that mandate disclosure when code is generated by AI systems rather than written entirely by human developers",
+        "Attribution enables accountability and audit — the team can filter AI-generated commits to review them with appropriate scrutiny and track patterns in AI-assisted contributions",
+        "Attribution allows the AI provider to collect usage metrics about how their model's code performs in production, helping improve future model training and code generation quality",
+        "Attribution protects the developer from liability by establishing that the code was AI-generated, shifting responsibility for any bugs or security issues to the AI provider"
+      ],
+      correctOption: 1,
+      explanation: "Axiom VIII prescribes Co-Authored-By attribution for accountability, learning, and audit. The team can filter commits to see which were AI-assisted, review them with appropriate scrutiny, and identify patterns — for example, 'AI commits in the shipping module have a higher defect rate.' This supports informed code review rather than treating all commits identically. Option D is tempting because liability feels important, but Axiom VIII's reasoning is about enabling informed review and accountability within the team, not about legal responsibility shifting.",
+      source: "Lesson 08: Version Control is Memory"
+    },
+    {
+      question: "James writes a commit message: 'Changed FREE_SHIPPING_THRESHOLD from 50 to 75.' Emma says this describes WHAT changed but not WHY. According to Axiom VIII's WHY rule, what should the message convey instead?",
+      options: [
+        "The message should include the git diff statistics (files changed, insertions, deletions) so reviewers can assess the scope of the change without opening the commit details",
+        "The message should explain the reasoning behind the change — for example, that shipping costs below $75 were unprofitable based on Q3 margin analysis — because the diff already shows what changed",
+        "The message should list all files modified by the change so that developers working on related features can quickly identify whether the commit affects their work in progress",
+        "The message should include the test results confirming the threshold change works correctly, proving that the new value was validated before the commit was created"
+      ],
+      correctOption: 1,
+      explanation: "Axiom VIII's WHY rule states: commit messages explain WHY (the reasoning, context, and trade-offs), not WHAT (the diff already shows what changed). 'Changed threshold from 50 to 75' restates the diff — anyone can see the number change. But WHY was it changed? 'Shipping costs below $75 were unprofitable per Q3 margin analysis' gives the context that the diff cannot capture. Six months later, this reasoning tells the team whether the threshold can be changed again or whether the margin constraint still applies. Option A is tempting because scope information helps reviewers, but git already shows diff stats — the message should add information the diff cannot provide.",
+      source: "Lesson 08: Version Control is Memory"
+    },
+    {
+      question: "James sets up a CI pipeline for his order system. He puts the integration tests (which take 2 minutes) first in the pipeline, followed by ruff formatting checks (which take 3 seconds). Most failed runs wait 2 minutes before discovering a simple formatting error. According to Axiom IX, how should the pipeline be ordered?",
+      options: [
+        "Fast checks first, slow checks last — formatting (seconds) and linting (seconds) should run before type checking (seconds) and tests (minutes), so trivial errors are caught immediately",
+        "Most critical checks first, least critical last — integration tests catch the most impactful bugs and should run first even if they are slower, because catching serious errors early is more important",
+        "All checks should run in parallel rather than sequentially, so that formatting errors and test failures are discovered simultaneously regardless of individual check duration",
+        "The ordering does not matter as long as all checks must pass before merging — the pipeline is a gate, and whether it takes 2 minutes or 3 minutes total does not affect the final outcome"
+      ],
+      correctOption: 0,
+      explanation: "Axiom IX's verification pyramid runs fast, cheap checks at the base and slower, thorough checks at the top. Each level gates the next — if formatting fails in 3 seconds, there is no need to wait 2 minutes for integration tests. This ordering minimizes wasted time: most failures are caught by fast checks, and expensive checks only run on code that already passes basic standards. Option B sounds logical (catch serious bugs early) but wastes developer time on 2-minute waits for trivial errors. Option D is tempting because the final outcome is the same, but developer productivity depends on fast feedback — waiting 2 minutes to learn about a missing comma is a poor experience.",
+      source: "Lesson 09: Verification is a Pipeline"
+    },
+    {
+      question: "James's team has a CI pipeline that runs all checks, but developers can merge pull requests even when CI is red. They rely on developers' discipline to wait for green. Over time, more red merges slip through. What does Axiom IX say about this situation?",
+      options: [
+        "Branch protection should make CI mandatory, not advisory — when CI fails, the merge button is disabled by infrastructure, because discipline alone cannot scale across a growing team",
+        "The team should add a Slack notification that alerts the team channel when someone merges with red CI, creating social accountability that reinforces the discipline to wait for green",
+        "The pipeline should automatically revert any merge that was made while CI was red, restoring the previous green state of the main branch without requiring human intervention",
+        "The team should require two approving code reviews in addition to CI passing, so that even if CI is bypassed, human reviewers catch the issues that the pipeline would have flagged"
+      ],
+      correctOption: 0,
+      explanation: "Axiom IX states: 'If it's not in CI, it's not enforced.' Making CI advisory rather than mandatory creates a discipline problem that worsens as teams grow. Branch protection makes CI a hard gate — if CI fails, the merge button is disabled. Infrastructure enforces what discipline alone cannot maintain under deadline pressure, fatigue, or growing team size. Option B is tempting because social accountability works in small teams, but it does not scale — notifications become noise, and the merge still happens. The solution is a hard gate, not a soft reminder.",
+      source: "Lesson 09: Verification is a Pipeline"
+    },
+    {
+      question: "James argues that his team does not need a CI pipeline because they run all checks manually before each commit — 'I always run pytest and pyright locally before pushing.' Emma disagrees. What principle from Axiom IX does she invoke?",
+      options: [
+        "'If it's not in CI, it's not enforced' — manual checks depend on individual discipline and will be skipped under deadline pressure, after late-night fixes, or by new team members unfamiliar with the process",
+        "'The Verification Pyramid' — manual checks only cover the top levels (tests and types) but miss the base levels (formatting and linting) that developers consider too trivial to run every time",
+        "'Local CI mirrors remote CI' — the point of CI is not to replace local testing but to provide a standardized environment where OS-specific and Python-version-specific differences are eliminated",
+        "'The Shallow Pipeline' — running only pytest and pyright manually is equivalent to a shallow pipeline that misses dependency auditing, security scanning, and integration testing layers"
+      ],
+      correctOption: 0,
+      explanation: "Axiom IX's core principle is: 'If it's not in CI, it's not enforced.' James may run checks diligently today, but manual processes fail under pressure — deadline crunches, late-night hotfixes, new team members who do not know the process. CI automates enforcement so the pipeline catches issues regardless of who committed, when they committed, or how rushed they were. Option C makes a valid point about standardized environments, but the primary argument is about enforcement reliability, not environment consistency.",
+      source: "Lesson 09: Verification is a Pipeline"
+    },
+    {
+      question: "After James's 2:47 AM incident, Emma explains the feedback loop: the production failure revealed an untested edge case (international shipping under concurrent load), which led to a new load test, which was added to CI, which now catches similar failures before deployment. What does Axiom X call this cycle?",
+      options: [
+        "The feedback loop — observe production failures, gain insight into gaps, improve verification by adding tests, verify the fix passes CI, deploy, and observe again to confirm the fix holds",
+        "The verification pyramid — each production incident adds a new layer to the testing pyramid, gradually building comprehensive coverage from unit tests up through integration and end-to-end tests",
+        "The observability stack — each incident adds a new monitoring dimension (logs, then metrics, then traces) until the system has complete visibility across all operational concerns",
+        "Continuous deployment — production failures trigger automatic rollbacks and re-deployment of the previous stable version, creating a self-healing cycle that minimizes downtime"
+      ],
+      correctOption: 0,
+      explanation: "Axiom X describes the feedback loop as: observe (production failure detected) -> insight (untested edge case identified) -> improve (add load test) -> verify (fix passes CI) -> deploy -> observe (confirm fix holds under production load) -> repeat. Each cycle makes the verification system stronger. Option B is tempting because the pyramid does grow, but the feedback loop is broader — it encompasses observation, insight, improvement, and re-observation, not just test additions.",
+      source: "Lesson 10: Observability Extends Verification"
+    },
+    {
+      question: "Emma reviews James's complete order management system and notes that he has implemented nine of the ten axioms but skipped observability. She warns that the system is incomplete. According to Axiom X, why is no single axiom sufficient on its own?",
+      options: [
+        "Each axiom covers a specific phase of the development lifecycle — from code structure through deployment to production — and skipping any one leaves a gap that the others cannot fill",
+        "The axioms are ordered by importance, with observability being the capstone that validates all previous axioms, making it the most critical single axiom to implement correctly",
+        "The axioms create redundant verification layers so that any three axioms together provide sufficient coverage, but implementing all ten provides the maximum possible protection",
+        "Each axiom addresses a different programming language or tool in the development stack, and skipping one means that tool is used without the discipline the axiom prescribes"
+      ],
+      correctOption: 0,
+      explanation: "Axiom X's 'Complete System' concept states that all ten axioms work together — shell orchestrates programs (I), knowledge lives in markdown (II), programs are disciplined (III), composed from units (IV), types enforce contracts (V), data is relational (VI), tests specify behavior (VII), git remembers everything (VIII), the pipeline verifies (IX), and production is observed (X). Skip any one and a gap opens that the others cannot cover. Option B is tempting because observability is the final axiom, but it is not a capstone of importance — it is one link in a chain, and any broken link weakens the whole system.",
+      source: "Lesson 10: Observability Extends Verification"
+    },
+    {
+      question: "James's order system passes all tests and the CI pipeline is green. He deploys to production. Three days later, a rarely-triggered code path causes incorrect tax calculations for orders from a specific region. No test anticipated this edge case. What distinction does Axiom X draw between tests and observability?",
+      options: [
+        "Tests are unnecessary once observability is in place, because structured logging and metrics can detect any failure that tests would have caught, with the added benefit of real production data",
+        "Tests catch anticipated errors before deployment (known edge cases, defined specifications), while observability catches unanticipated errors during production (real-world conditions no test predicted)",
+        "Tests verify code logic while observability verifies infrastructure, so the tax calculation error would require a new test but the observability system would detect unrelated server-level failures",
+        "Tests run in an isolated environment while observability monitors the integrated system, so the tax error was caused by environment differences that only production observability could have detected"
+      ],
+      correctOption: 1,
+      explanation: "Axiom X draws a clear line: pre-deployment verification (tests, types, CI) catches anticipated errors — the edge cases you thought of and wrote specifications for. Post-deployment verification (logs, metrics, traces) catches unanticipated errors — the failures that emerge under real-world conditions no test predicted. The tax calculation error for a specific region was unanticipated — no test covered it because nobody anticipated the edge case. Observability detects it in production through error logging and metric anomalies. Option A is dangerously wrong — tests and observability are complementary, not substitutes. Each catches what the other cannot.",
+      source: "Lesson 10: Observability Extends Verification"
     }
   ]}
 />
@@ -282,22 +642,52 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
 | 18 | B | Axiom IX: Verification is a Pipeline |
 | 19 | C | Axiom X: Observability Extends Verification |
 | 20 | D | Axiom X: Observability Extends Verification |
+| 21 | A | Axiom I: Shell as Orchestrator |
+| 22 | B | Axiom I: Shell as Orchestrator |
+| 23 | B | Axiom I: Shell as Orchestrator |
+| 24 | A | Axiom II: Knowledge is Markdown |
+| 25 | B | Axiom II: Knowledge is Markdown |
+| 26 | A | Axiom II: Knowledge is Markdown |
+| 27 | A | Axiom III: Programs Over Scripts |
+| 28 | A | Axiom III: Programs Over Scripts |
+| 29 | A | Axiom III: Programs Over Scripts |
+| 30 | A | Axiom IV: Composition Over Monoliths |
+| 31 | B | Axiom IV: Composition Over Monoliths |
+| 32 | B | Axiom IV: Composition Over Monoliths |
+| 33 | B | Axiom V: Types Are Guardrails |
+| 34 | A | Axiom V: Types Are Guardrails |
+| 35 | B | Axiom V: Types Are Guardrails |
+| 36 | A | Axiom VI: Data is Relational |
+| 37 | A | Axiom VI: Data is Relational |
+| 38 | B | Axiom VI: Data is Relational |
+| 39 | B | Axiom VII: Tests Are the Specification |
+| 40 | A | Axiom VII: Tests Are the Specification |
+| 41 | C | Axiom VII: Tests Are the Specification |
+| 42 | A | Axiom VIII: Version Control is Memory |
+| 43 | B | Axiom VIII: Version Control is Memory |
+| 44 | B | Axiom VIII: Version Control is Memory |
+| 45 | A | Axiom IX: Verification is a Pipeline |
+| 46 | A | Axiom IX: Verification is a Pipeline |
+| 47 | A | Axiom IX: Verification is a Pipeline |
+| 48 | A | Axiom X: Observability Extends Verification |
+| 49 | A | Axiom X: Observability Extends Verification |
+| 50 | B | Axiom X: Observability Extends Verification |
 
 ## Scoring Guide
 
 | Score | Proficiency Level | Interpretation |
 |-------|------------------|----------------|
-| 18-20 | B2 (Advanced) | Strong understanding of all ten axioms and their practical application |
-| 14-17 | B1 (Intermediate) | Good understanding with some gaps in applying axioms to real scenarios |
-| 10-13 | A2 (Elementary) | Basic understanding of axioms but needs more practice with application |
-| 0-9 | A1 (Beginner) | Review the lessons and work through the "Try With AI" exercises |
+| 45-50 | B2 (Advanced) | Strong understanding of all ten axioms and their practical application |
+| 35-44 | B1 (Intermediate) | Good understanding with some gaps in applying axioms to real scenarios |
+| 25-34 | A2 (Elementary) | Basic understanding of axioms but needs more practice with application |
+| 0-24 | A1 (Beginner) | Review the lessons and work through the "Try With AI" exercises |
 
 ## Next Steps
 
 Based on your performance, focus on the group where you missed the most questions. The ten axioms fall into three groups (the same groups introduced in the chapter overview):
 
-- **Axioms I-IV (Structure)**: If you missed questions 1-8, review shell orchestration (the complexity threshold between shell and program), markdown knowledge (complete reasoning, not just decisions), the Python discipline stack (uv, pyright, ruff, pytest), and composition patterns (composable monolith vs. microservices). These axioms govern how your code is organized.
-- **Axioms V-VI (Data)**: If you missed questions 9-12, study the three-layer type stack (hints, Pyright, Pydantic) and relational data modeling (SQLite vs. PostgreSQL). These axioms make sure information stays correct as it moves through your system.
-- **Axioms VII-X (Verification)**: If you missed questions 13-20, revisit Test-Driven Generation (the $12,000 discount bug and the Green Bar Illusion), git as memory (atomic commits, the Permanent Record trap), CI/CD pipelines (the verification pyramid and the Shallow Pipeline trap), and observability practices (the three pillars and the Log Avalanche). These axioms create a chain of verification — from writing the first test to monitoring the live system.
+- **Axioms I-IV (Structure)**: If you missed questions 1-20, review shell orchestration (the complexity threshold between shell and program), markdown knowledge (complete reasoning, not just decisions), the Python discipline stack (uv, pyright, ruff, pytest), and composition patterns (composable monolith vs. microservices). These axioms govern how your code is organized. Questions 1-8 cover the foundational concepts, while questions 21-32 probe deeper into composition primitives, the complexity threshold, information hiding, dependency injection, and the decomposition trap.
+- **Axioms V-VI (Data)**: If you missed questions 21-30, study the three-layer type stack (hints, Pyright, Pydantic) and relational data modeling (SQLite vs. PostgreSQL). These axioms make sure information stays correct as it moves through your system. Questions 9-12 cover foundational type and data concepts, while questions 33-38 explore the Any type trap, dataclass vs. Pydantic boundaries, AI hallucination verification, SQL injection, normalization, and SQL as an agent-native language.
+- **Axioms VII-X (Verification)**: If you missed questions 31-50, revisit Test-Driven Generation (the Circular Testing Trap, the test pyramid, and persistent specification), git as memory (conventional commits, Co-Authored-By attribution, the WHY rule), CI/CD pipelines (pipeline ordering, branch protection, and enforcement vs. discipline), and observability practices (the feedback loop, the complete system, and pre- vs. post-deployment verification). These axioms create a chain of verification — from writing the first test to monitoring the live system.
 
 Remember: The ten axioms build upon each other — shell orchestrates programs (I, III), programs are composed (IV) with types (V) and relational data (VI), tested via TDG (VII), tracked in git (VIII), verified in CI (IX), and monitored in production (X). Master each group before advancing to the next.

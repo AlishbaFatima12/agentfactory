@@ -115,7 +115,7 @@ Three consequences follow:
 
 ## From Principle to Axiom
 
-In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/verification-as-core-step), you learned **Principle 3: Verification as Core Step**. That principle taught you to verify every action an agent takes, to never trust output without checking it, and to build verification into your workflow rather than treating it as optional cleanup.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/verification-as-core-step), you learned **Principle 3: Verification as Core Step**. Remember the CSV parser that looked correct but broke on quoted fields containing commas — `"Smith, John"` was split into two fields instead of one? You accepted the AI's code without checking edge cases, and it failed in production. That principle taught you to verify every action an agent takes, to never trust output without checking it, and to build verification into your workflow.
 
 Axiom VII takes that principle and sharpens it into a specific practice:
 
@@ -128,6 +128,8 @@ Axiom VII takes that principle and sharpens it into a specific practice:
 | Catches errors | Prevents errors from being accepted |
 
 The principle says: always verify. The axiom says: **design through verification**. Write the verification first, and it becomes the specification that guides generation.
+
+The bridge between these two is a shift in *timing*. Principle 3 taught you to verify after an action — check that the file exists, confirm the command succeeded. That habit is essential, but it is reactive. Axiom VII moves verification *before* the action: you write what "correct" looks like first, then let the AI generate code that must satisfy your definition. The mindset from Principle 3 (never trust without checking) becomes the method of Axiom VII (define "correct" before generation begins).
 
 This distinction matters in practice. James before the discount disaster followed Principle 3 — he verified by reading code. James after the disaster follows Axiom VII — he specifies by writing tests. The first approach is reactive: "Did this work?" The second is proactive: "What does working look like?"
 
@@ -242,6 +244,10 @@ Constraints:
 ```
 
 **Step 3: Run Tests on AI Output**
+
+:::tip You will run this command yourself in the hands-on chapters
+`pytest` is the standard Python test runner. The `-v` flag means "verbose" — show each test name and whether it passed or failed. For now, focus on the *workflow*: you run the tests, and the results tell you whether the AI's code matches your specification.
+:::
 
 ```bash
 pytest test_shipping.py -v

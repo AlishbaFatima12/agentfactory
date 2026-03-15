@@ -71,7 +71,7 @@ The difference between these two scenarios is Axiom II.
 
 ## The Problem Without This Axiom
 
-In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/persisting-state-in-files), you learned Principle 5: "Persist State in Files." That principle established that files are the durable memory layer for agentic work — the antidote to AI's statelessness. But Principle 5 left a question unanswered: **what format should those files use?**
+You know that knowledge must live in files. But **what format should those files use?**
 
 Without a format standard, teams persist knowledge in whatever seems convenient at the moment:
 

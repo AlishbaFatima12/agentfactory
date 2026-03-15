@@ -21,14 +21,14 @@ skills:
     category: "Technical"
     bloom_level: "Apply"
     digcomp_area: "Digital Content Creation"
-    measurable_at_this_level: "Student can read and modify a GitHub Actions YAML workflow that runs linting, type checking, tests, and security audits"
+    measurable_at_this_level: "Student can explain the purpose and ordering of each layer in a verification pipeline (formatting, linting, type checking, tests, security) and describe why automated execution matters"
 
   - name: "Implementing Local CI with Makefiles"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can create and use a Makefile that mirrors the CI pipeline locally, running all verification steps before pushing code"
+    measurable_at_this_level: "Student can design a local verification checklist that mirrors the CI pipeline layers, explaining what each check catches and why the order matters"
 
   - name: "CI Culture and Anti-Pattern Recognition"
     proficiency_level: "B1"
@@ -46,12 +46,12 @@ learning_objectives:
   - objective: "Configure a GitHub Actions workflow that implements the full verification pyramid"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student can write a ci.yml file with formatting, linting, type checking, unit tests, and security audit steps"
+    assessment_method: "Student can describe the layers of a CI pipeline, explain what each layer catches, and reason about why order matters (fast checks first)"
 
   - objective: "Create a Makefile that mirrors CI checks locally for fast feedback"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student can run `make ci` locally and verify all checks pass before pushing to remote"
+    assessment_method: "Student can explain why running verification locally before pushing is essential and design a checklist that mirrors the CI pipeline"
 
 cognitive_load:
   new_concepts: 6
@@ -96,7 +96,7 @@ This axiom transforms verification from a human discipline problem into an infra
 
 ## From Principle to Axiom
 
-In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/verification-as-core-step), you learned **Principle 3: Verification as Core Step** — the mindset that every action should be verified. You learned to check that files exist after creating them, to confirm commands succeeded before moving on, to validate outputs before declaring victory.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/verification-as-core-step), you learned **Principle 3: Verification as Core Step** — the mindset that every action should be verified. You saw what happens without it: the CSV parser that looked correct but split `"Smith, John"` into two fields, the file operations accepted without confirming the output existed. That principle taught you to check that files exist after creating them, to confirm commands succeeded before moving on, to validate outputs before declaring victory.
 
 Axiom IX elevates that principle from personal discipline to **infrastructure enforcement**:
 

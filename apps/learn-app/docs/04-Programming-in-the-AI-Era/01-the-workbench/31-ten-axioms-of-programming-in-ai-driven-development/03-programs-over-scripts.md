@@ -89,7 +89,7 @@ This axiom draws a clear line: scripts serve exploration and experimentation; pr
 
 ## From Principle to Axiom
 
-In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/code-as-universal-interface), you learned **Principle 2: Code as Universal Interface** — the idea that code solves problems precisely where prose fails. You saw this concretely when Sarah said "organize my files" and got nothing useful, but when she described exactly what she wanted — *PDFs to a 'PDFs' folder, images to 'Images', files older than one year into an 'Archive' subfolder* — the agent wrote code that handled 3,000 photos perfectly. The more specific the description, the better the code.
+In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/code-as-universal-interface), you learned **Principle 2: Code as Universal Interface** — the idea that code solves problems precisely where prose fails. You saw this concretely when Sarah had 3,000 photos scattered across three folders with meaningless names like `IMG_4521.jpg`. She described exactly what she wanted — photos organized by country and city based on location data, with dates in filenames, duplicates removed — and the agent wrote code that handled all 3,000 perfectly. The more specific the description, the better the code.
 
 Axiom III builds on that foundation: if code is your universal interface, then the **quality** of that code determines the reliability of your interface. Chapter 6 showed that *specific descriptions* produce better code than vague ones. This axiom shows that *disciplined code* beats *sloppy code* — and that the gap between the two is the gap between James's 15-line script and the program that would have handled the Unicode crash.
 
@@ -120,19 +120,6 @@ James's mistake was not writing a script. His mistake was not recognizing when t
 
 ---
 
-<details>
-<summary><strong>Historical Background: Why Python Added Types (click to expand)</strong></summary>
-
-The "Type annotations" row in the table above reflects a fundamental shift in Python's history. For decades, Python existed as a dynamically typed language — Guido van Rossum designed it for readability and rapid prototyping, deliberately leaving out static types. Python thrived. It also accumulated a reputation: Python was where scripts became programs by accident, and where bugs hid until runtime because nothing checked your assumptions before execution.
-
-The turning point came in 2014, when Guido van Rossum — Python's creator himself — co-authored PEP 484, introducing optional type hints to the language. This was not a concession. It was a recognition that Python had grown beyond scripting. Millions of lines of Python were running in production at Dropbox, Instagram, Google, and Netflix. At that scale, "run it and see if it crashes" was no longer an engineering strategy. Type hints let developers declare their intentions — `def process(data: list[Record]) -> Summary` — and let tools like pyright verify those intentions before a single line executed.
-
-Python's journey from untyped scripting language to gradually typed systems language mirrors exactly what Axiom III teaches. The same forces that pushed Python toward types — growing codebases, production reliability, collaboration across teams — push every script toward program discipline once the stakes become real.
-
-</details>
-
----
-
 ### When Does a Script Become a Program?
 
 A script should become a program when any of these conditions become true:
@@ -142,6 +129,17 @@ A script should become a program when any of these conditions become true:
 3. **It processes important data.** If the input or output matters (client files, financial records, deployment artifacts), silent failures are unacceptable.
 4. **It grew beyond 50 lines.** This is not a strict threshold, but complexity compounds. Beyond 50 lines, you cannot hold the full logic in your head while debugging.
 5. **An AI generated it.** AI-generated code deserves extra scrutiny because you did not write it line-by-line. Types and tests become your verification layer.
+
+<details>
+<summary><strong>Historical Background: Why Python Added Types (click to expand)</strong></summary>
+
+The "Type annotations" row in the continuum table above reflects a fundamental shift in Python's history. For decades, Python existed as a dynamically typed language — Guido van Rossum designed it for readability and rapid prototyping, deliberately leaving out static types. Python thrived. It also accumulated a reputation: Python was where scripts became programs by accident, and where bugs hid until runtime because nothing checked your assumptions before execution.
+
+The turning point came in 2014, when Guido van Rossum — Python's creator himself — co-authored PEP 484, introducing optional type hints to the language. This was not a concession. It was a recognition that Python had grown beyond scripting. Millions of lines of Python were running in production at Dropbox, Instagram, Google, and Netflix. At that scale, "run it and see if it crashes" was no longer an engineering strategy. Type hints let developers declare their intentions — `def process(data: list[Record]) -> Summary` — and let tools like pyright verify those intentions before a single line executed.
+
+Python's journey from untyped scripting language to gradually typed systems language mirrors exactly what Axiom III teaches. The same forces that pushed Python toward types — growing codebases, production reliability, collaboration across teams — push every script toward program discipline once the stakes become real.
+
+</details>
 
 ## A Script Becomes a Program: James's Fifteen Lines
 
@@ -278,6 +276,10 @@ Layer 1: uv         → Are the dependencies resolved and reproducible?
 
 ### How They Work Together
 
+:::tip Configuration Files Are Just Settings
+The `pyproject.toml` below is a configuration file — it tells the tools what settings to use. You do not need to memorize TOML syntax. Notice the *pattern*: one file configures your project name, Python version, linting rules, and test paths. You will create your own `pyproject.toml` in hands-on chapters.
+:::
+
 A minimal `pyproject.toml` that activates the full stack:
 
 ```toml
@@ -365,6 +367,10 @@ When a future AI edit accidentally changes `normalize_filename` to strip hyphens
 ### 3. CI Enforces Standards Across Sessions
 
 You might forget to run pyright before committing. The AI certainly will not remind you. CI (Continuous Integration) enforces the discipline stack on every push, regardless of who or what wrote the code:
+
+:::tip This Is a CI Configuration File
+The YAML below defines an automated pipeline that runs on every code push. You do not need to understand YAML syntax or GitHub Actions yet — notice the *concept*: every push triggers the same four checks (install, type check, lint, test) automatically. You will set up your own CI pipeline in hands-on chapters.
+:::
 
 ```yaml
 # .github/workflows/check.yml
@@ -549,7 +555,15 @@ Apply the **Error Taxonomy**: the napkin plan failing when the bakery is closed 
 
 ### Modify
 
-Student A's napkin plan worked fine for 3 small parties (5-10 guests). Now they are planning a 100-person event with catering, entertainment, and venue booking. What breaks? What must they add to their napkin plan to handle this scale? Be specific about at least 3 things that fail.
+Student A's napkin plan worked fine for 3 small parties (5-10 guests). Now they are planning a 100-person event with catering, entertainment, and venue booking.
+
+Apply the lesson's five crossing-point signals to this scenario:
+
+1. **Someone else depends on it** — Student A now has a catering company, a DJ, and a venue manager all relying on the plan. What happens when the caterer calls at 9 PM asking "how many vegetarian meals?"
+2. **It runs more than once** — The plan needs to coordinate setup day, event day, and cleanup day. What breaks when "buy cake" has no timeline?
+3. **It processes important data** — The guest list now includes dietary restrictions, seating preferences, and RSVPs. Where does that data live on a napkin?
+
+What must Student A add to survive this scale? Be specific about at least 3 things that the napkin plan cannot handle that a structured "program" plan would.
 
 ### Make [Mastery Gate]
 

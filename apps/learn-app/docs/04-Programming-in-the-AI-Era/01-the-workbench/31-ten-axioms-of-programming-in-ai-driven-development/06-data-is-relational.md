@@ -352,7 +352,7 @@ James noticed that his Python code and his SQL schema were expressing the same s
 ```python static
 from sqlmodel import SQLModel, Field, Session, create_engine, select
 from typing import Optional
-from datetime import datetime
+from datetime import UTC, datetime
 
 class Customer(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
@@ -364,7 +364,7 @@ class Order(SQLModel, table=True):
     status: str = Field(default="pending")
     total_amount: float
     customer_id: int = Field(foreign_key="customer.id")
-    created_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
 # Create database and tables
 engine = create_engine("sqlite:///orders.db")
@@ -424,7 +424,8 @@ cursor.execute("""
 """)
 ```
 
-## Migrations: Schema Evolution Over Time
+<details>
+<summary>**Preview: Migrations — Schema Evolution Over Time**</summary>
 
 Three months after migrating to SQL, James needed to add a `priority` column to the orders table. He could not just edit the `CREATE TABLE` statement — the database already existed with real data. Emma showed him **migrations**: versioned scripts that transform your schema from one state to the next — like version control for your database structure.
 
@@ -453,7 +454,9 @@ def downgrade():
     op.drop_column('tasks', 'priority')
 ```
 
-This migration adds a `priority` column and an index. If something goes wrong, `downgrade()` reverses it cleanly. The migration file lives in version control alongside your code — schema and application evolve together.
+This migration adds a `priority` column and an index. If something goes wrong, `downgrade()` reverses it cleanly. The migration file lives in version control alongside your code — schema and application evolve together. You will use Alembic in hands-on chapters when you build your own database-backed applications.
+
+</details>
 
 ## Anti-Patterns
 

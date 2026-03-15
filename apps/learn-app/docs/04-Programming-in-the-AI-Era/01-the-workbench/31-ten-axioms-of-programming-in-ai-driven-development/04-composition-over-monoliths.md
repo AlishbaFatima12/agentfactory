@@ -251,7 +251,7 @@ Composition solves this at the structural level:
 ## Dependency Injection: Composition of Behavior
 
 :::tip Advanced pattern preview
-Dependency injection is a powerful technique you will use in later chapters. For now, focus on the *concept*: instead of permanently wiring a system to one specific tool, you make the tool swappable. Think of it like a restaurant that can switch food suppliers without retraining the chef.
+Dependency injection is a powerful technique you will use in later chapters. For now, focus on the *concept*: instead of permanently wiring a system to one specific tool, you make the tool swappable. Think of it like a restaurant that can switch food suppliers without retraining the chef. In the code below, `Callable` simply means "any function" — it is Python's way of saying "pass me a function and I will call it."
 :::
 
 Emma showed James one more technique that made the composed version powerful in a way the monolith could never be: instead of hardcoding *which* payment processor or *which* database the function uses, you pass the implementation as a parameter.
