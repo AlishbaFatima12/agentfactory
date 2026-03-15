@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch01-divergence-test"
+  title: "The Divergence Test"
+  description: "Key concepts from the Divergence Test exercise on producing original analysis when everyone has the same AI tools"
+  tags: ["Part 0", "question formulation", "originality", "divergence test"]
+  version: 1
+
+cards:
+  - id: "p0-ch01-divergence-test-001"
+    front: "What is the Divergence Test in Part 0's assessment framework?"
+    back: "An exercise where the entire class gets the same scenario and AI access, then compares outputs to measure originality."
+    tags: ["divergence-test", "definition"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-divergence-test-002"
+    front: "What is a 'uniqueness statement' in the Divergence Test?"
+    back: "A 100-word explanation of what in your analysis reflects your own thinking rather than generic AI output."
+    tags: ["divergence-test", "uniqueness-statement"]
+    difficulty: "basic"
+
+  - id: "p0-ch01-divergence-test-003"
+    front: "Why does giving everyone the same AI tools make originality measurable?"
+    back: "Because identical inputs to the same tools produce similar outputs. Divergence from that baseline is a measurable signal of genuine human thinking — the more your analysis differs, the more you actually thought."
+    tags: ["divergence-test", "originality"]
+    difficulty: "intermediate"
+    why: "What would near-identical outputs from two students tell an instructor about how they used AI?"
+
+  - id: "p0-ch01-divergence-test-004"
+    front: "How does the AI Check distinguish genuine originality from longer word count?"
+    back: "By identifying specific insights that go beyond what a standard AI response would produce, and flagging sections that read like generic AI output — length is irrelevant if the content is AI pass-through."
+    tags: ["originality", "ai-evaluation"]
+    difficulty: "intermediate"
+    why: "Why might a shorter analysis score higher on originality than a longer one?"
+
+  - id: "p0-ch01-divergence-test-005"
+    front: "What is the difference between using AI as a 'thinking partner' and using AI as an 'answer machine'?"
+    back: "A thinking partner: student prompts, evaluates, modifies, and builds on AI output. An answer machine: student accepts AI output with minimal engagement and presents it as their own."
+    tags: ["ai-collaboration", "critical-engagement"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch01-divergence-test-006"
+    front: "Why is the Reasoning Receipt graded for 'genuine critical engagement' rather than just completeness?"
+    back: "Because a complete receipt with all 'Accept' decisions proves passive copying, not thinking. Critical engagement means the receipt shows reject and modify decisions with justified reasoning."
+    tags: ["reasoning-receipt", "critical-engagement"]
+    difficulty: "intermediate"
+    why: "How would a reasoning receipt full of 'Modify' decisions differ from one full of 'Accept' decisions?"
+
+  - id: "p0-ch01-divergence-test-007"
+    front: "A student submits a polished 800-word analysis but their reasoning receipt shows only 2 prompts. What does this suggest?"
+    back: "It suggests the student accepted large AI outputs with minimal interaction. Genuine AI collaboration produces more prompts because the student iterates, challenges, and refines — not just copies."
+    tags: ["reasoning-receipt", "passive-acceptance"]
+    difficulty: "advanced"
+    why: "How many prompts would you expect in a reasoning receipt that shows genuine critical engagement?"
+
+  - id: "p0-ch01-divergence-test-008"
+    front: "What target word count does the Divergence Test specify for the final analysis?"
+    back: "500-800 words."
+    tags: ["divergence-test", "exercise-format"]
+    difficulty: "basic"

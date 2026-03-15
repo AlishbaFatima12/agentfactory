@@ -1,0 +1,65 @@
+deck:
+  id: "p0-ch10-72-hour-sprint"
+  title: "The 72-Hour Sprint"
+  description: "Key concepts from the learning sprint: Learning Log documentation, mid-point reflection, AI as learning accelerator vs. crutch, and the difference between studying and learning."
+  tags: ["meta-learning", "72-hour-sprint", "learning-log", "mid-point-reflection"]
+  version: 1
+
+cards:
+  - id: "p0-ch10-72-hour-sprint-001"
+    front: "What is the minimum number of entries required in the Learning Log for the 72-hour sprint?"
+    back: "At least 20 entries spanning the full 72 hours."
+    tags: ["learning-log", "requirements"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-72-hour-sprint-002"
+    front: "Why is the Learning Log the primary assessment instrument rather than the domain analysis?"
+    back: "The analysis shows what you learned, but the Learning Log reveals how you learned — its efficiency, waste, breakthroughs, and self-corrections. Process evidence matters more than output quality."
+    tags: ["learning-log", "assessment"]
+    difficulty: "intermediate"
+    why: "How would two students with identical domain analyses but different Learning Logs receive different grades?"
+
+  - id: "p0-ch10-72-hour-sprint-003"
+    front: "When must the mid-point reflection be written during the 72-hour sprint?"
+    back: "At hour 36 — it is mandatory, not optional."
+    tags: ["mid-point-reflection", "requirements"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-72-hour-sprint-004"
+    front: "Why is the mid-point reflection at hour 36 rather than at the end of the sprint?"
+    back: "At hour 36 you can still change your strategy. At hour 72 you can only wish you had, because mid-course corrections require remaining time to implement."
+    tags: ["mid-point-reflection", "strategic-adjustment"]
+    difficulty: "intermediate"
+    why: "What specific changes could a student make at hour 36 that would be impossible at hour 72?"
+
+  - id: "p0-ch10-72-hour-sprint-005"
+    front: "What is the difference between using AI as a learning accelerator and using it as a crutch?"
+    back: "Accelerator: AI explains concepts you then verify and internalize. Crutch: AI produces the analysis and you copy it without understanding."
+    tags: ["ai-usage", "learning-quality"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-72-hour-sprint-006"
+    front: "How does the Learning Log format build on Chapter 6's Collaboration Log?"
+    back: "Same structure (tracking every interaction with accept/reject/modify decisions) but now applied to a learning process instead of a business problem."
+    tags: ["learning-log", "collaboration-log"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch10-72-hour-sprint-007"
+    front: "A student's mid-point reflection says 'everything is going fine.' Why does the exercise design suggest this is a problem?"
+    back: "If everything feels fine at hour 36, the student is not pushing hard enough. Genuine learning in an unfamiliar domain should produce confusion and course corrections, not smooth sailing."
+    tags: ["mid-point-reflection", "self-assessment"]
+    difficulty: "intermediate"
+    why: "What would a genuinely honest mid-point reflection look like for someone learning an unfamiliar domain?"
+
+  - id: "p0-ch10-72-hour-sprint-008"
+    front: "What seven columns does each Learning Log entry require?"
+    back: "Time, What I Studied, Resource Used, Key Insight, Confusion or Error, Self-Correction, AI Usage."
+    tags: ["learning-log", "format"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-72-hour-sprint-009"
+    front: "Why does the exercise distinguish between 'studying' and 'learning'?"
+    back: "Studying is consuming information. Learning is internalizing it well enough to apply. The Learning Log reveals which one you actually did, because entries showing self-correction and confusion indicate real learning."
+    tags: ["studying-vs-learning", "meta-cognition"]
+    difficulty: "advanced"
+    why: "How would a Learning Log look different for someone who studied versus someone who learned?"

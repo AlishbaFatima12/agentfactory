@@ -1,0 +1,58 @@
+deck:
+  id: "p0-ch09-decision-audit"
+  title: "The Decision Audit"
+  description: "Key concepts from the decision audit exercise: meta-cognitive self-assessment, heuristic identification, calibration accuracy, and the Decision Audit as a reusable tool."
+  tags: ["decision-audit", "meta-cognition", "self-assessment", "heuristics"]
+  version: 1
+
+cards:
+  - id: "p0-ch09-decision-audit-001"
+    front: "What is a Decision Audit?"
+    back: "A retrospective analysis of your own decision process across multiple stages, evaluating calibration accuracy and identifying which heuristics helped or hurt."
+    tags: ["decision-audit", "meta-cognition"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-decision-audit-002"
+    front: "Why must the Decision Audit be written WITHOUT AI before getting AI feedback?"
+    back: "Writing without AI forces genuine self-reflection, because AI feedback first would anchor your self-assessment to AI's evaluation rather than your own honest analysis."
+    tags: ["self-assessment", "independent-thinking"]
+    difficulty: "intermediate"
+    why: "What would change about your self-assessment if you saw AI's evaluation before writing your own?"
+
+  - id: "p0-ch09-decision-audit-003"
+    front: "What is the difference between a bad decision and a bad decision process?"
+    back: "A good process can produce bad outcomes (unlucky), and a bad process can produce good outcomes (lucky). The audit evaluates process quality, not outcome."
+    tags: ["decision-process", "meta-cognition"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch09-decision-audit-004"
+    front: "What does meta-cognitive accuracy mean in the context of decision-making?"
+    back: "How well you understand your own decision-making patterns — neither too harsh nor too generous in self-assessment."
+    tags: ["meta-cognition", "self-assessment"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-decision-audit-005"
+    front: "A student's self-audit says 'I need to be more careful next time.' Why is this a weak improvement recommendation?"
+    back: "It is too vague to act on. Actionable recommendations specify what to do differently, such as 'I will write reversal triggers before consulting AI' — because without specificity, nothing changes."
+    tags: ["improvement-recommendations", "actionability"]
+    difficulty: "intermediate"
+    why: "How would you test whether an improvement recommendation is specific enough?"
+
+  - id: "p0-ch09-decision-audit-006"
+    front: "What is the risk of post-hoc rationalization in a Decision Audit?"
+    back: "Identifying heuristics you think you used rather than the ones you actually used, making the audit a narrative rather than an honest analysis."
+    tags: ["post-hoc-rationalization", "self-assessment"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch09-decision-audit-007"
+    front: "Why is the Decision Audit described as a reusable meta-cognitive tool for Parts 2-10?"
+    back: "Every project involves decisions under uncertainty. The audit process — examining calibration, heuristics, and improvement — transfers to any domain because it evaluates how you think, not what you think about."
+    tags: ["transferable-skill", "meta-cognition"]
+    difficulty: "advanced"
+    why: "How would you adapt the Decision Audit format for a technical architecture decision versus a business strategy decision?"
+
+  - id: "p0-ch09-decision-audit-008"
+    front: "What six components make up the Chapter 9 Decision-Making Portfolio?"
+    back: "1. Sealed Decision Document\n2. Consultation Log with updated decision\n3. Post-information-drop revision\n4. Decision Audit (self + AI)\n5. All AI feedback"
+    tags: ["chapter-deliverable", "portfolio"]
+    difficulty: "basic"

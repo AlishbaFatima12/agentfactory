@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch08-originality-test"
+  title: "The Originality Test"
+  description: "Key concepts from the Originality Test exercise on measuring creative divergence from AI output"
+  tags: ["originality-test", "divergence-analysis", "creative-value", "Part-0"]
+  version: 1
+
+cards:
+  - id: "p0-ch08-originality-test-001"
+    front: "What is the key question the Originality Test asks AI?"
+    back: "Could you have produced this output if given only the original problem?"
+    tags: ["originality-test", "meta-question"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-originality-test-002"
+    front: "In the Originality Test, what do overlapping elements between your solution and AI's independent solution indicate?"
+    back: "Ideas that were likely AI-driven during collaboration, not original human contributions."
+    tags: ["divergence-analysis", "overlap"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch08-originality-test-003"
+    front: "Why must the Originality Test be run in a fresh AI conversation with no prior context?"
+    back: "Because AI in the original conversation was influenced by the student's prompts. A fresh conversation produces a genuinely independent solution, making the divergence measurement valid rather than contaminated by prior interaction."
+    tags: ["originality-test", "methodology"]
+    difficulty: "intermediate"
+    why: "What would be invalid about running the test in the same conversation used for collaboration?"
+
+  - id: "p0-ch08-originality-test-004"
+    front: "What three categories does the Divergence Analysis identify?"
+    back: "1. Overlap (likely AI-driven ideas)\n2. Divergence (original human contributions)\n3. Unique elements (your creative value that AI lacks)"
+    tags: ["divergence-analysis", "categories"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-originality-test-005"
+    front: "A student's solution has 90% overlap with AI's independent output. How should they interpret this?"
+    back: "Most of their solution was shaped by AI during collaboration rather than by original thinking. The 10% divergence -- not the 90% overlap -- represents where their genuine creative value lives."
+    tags: ["divergence-analysis", "interpretation"]
+    difficulty: "intermediate"
+    why: "Is high overlap always a sign of outsourced thinking, or could it indicate the problem has a convergent solution?"
+
+  - id: "p0-ch08-originality-test-006"
+    front: "Why is deliberately making your solution weird not the same as originality?"
+    back: "Because originality is genuine insight AI would not produce, not artificial weirdness added to game the test. Deliberate weirdness produces low-quality divergence, while genuine originality produces high-value divergence."
+    tags: ["originality", "gaming"]
+    difficulty: "advanced"
+    why: "How can you distinguish between genuine creative insight and manufactured uniqueness?"
+
+  - id: "p0-ch08-originality-test-007"
+    front: "How does the Originality Test establish a reusable self-check for creative work?"
+    back: "It teaches students to ask 'Could AI have produced this?' about any output. Elements AI could replicate are commodity; elements it cannot are where professional value lives."
+    tags: ["originality-test", "self-check"]
+    difficulty: "intermediate"
+    why: "When in a professional workflow would this self-check be most valuable?"
+
+  - id: "p0-ch08-originality-test-008"
+    front: "What does the Divergence Analysis length need to be?"
+    back: "200-300 words."
+    tags: ["divergence-analysis", "format"]
+    difficulty: "basic"
