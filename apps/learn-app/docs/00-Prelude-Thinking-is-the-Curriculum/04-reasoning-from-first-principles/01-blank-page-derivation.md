@@ -115,9 +115,13 @@ You receive a widely accepted best practice. Without AI access, write a 500-word
 
 Choose the best practice closest to your field and argue against it.
 
+---
+
 :::info Your Deliverable
 A 500-word contrarian argument (written without AI) identifying at least 3 specific conditions under which the best practice fails, with reasoning for each. A clear statement of the first principles you used to derive these conditions (e.g., "In markets where trust is the primary barrier, an unfinished product destroys credibility permanently").
 :::
+
+---
 
 ```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
 I wrote a contrarian argument against the common advice that "startups
@@ -144,6 +148,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

@@ -92,6 +92,10 @@ AI collaboration is an operational skill, not a philosophical stance. It means k
 
 **Layers Used:** Layer 6 (Iterative Drafts), Layer 5 (Divergence Test)
 
+:::note Building On
+Every chapter so far. This exercise explicitly compares what you can do alone vs. with AI -- measuring the value of all previous skills.
+:::
+
 ### What You Do
 
 You receive a complex business problem. Solve it three times under strict time limits:
@@ -103,6 +107,8 @@ You receive a complex business problem. Solve it three times under strict time l
 **(c)** In genuine collaboration -- prompt, evaluate, modify, re-prompt, override, iterate, 30 minutes -- timer running.
 
 The time limits are enforced. Submit all three solutions with timestamps showing you stayed within limits.
+
+---
 
 ### Choose Your Scenario
 
@@ -123,6 +129,8 @@ The time limits are enforced. Submit all three solutions with timestamps showing
 </Tabs>
 
 Choose one. The exercises work identically regardless of which you pick.
+
+---
 
 :::info Your Deliverable
 Three separate solutions clearly labeled: Solo (no AI), Pure AI (no overrides), and Collaboration (full iteration). A comparison analysis (300-400 words) answering: Where was the solo version stronger? Where did pure AI fail? Where did collaboration outperform both? What specific value did your human judgment add in the collaboration version that was absent from the pure AI version?
@@ -156,6 +164,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

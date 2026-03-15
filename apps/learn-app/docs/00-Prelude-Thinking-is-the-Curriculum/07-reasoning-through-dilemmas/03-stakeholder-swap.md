@@ -85,9 +85,17 @@ teaching_guide:
 You will use the **Cascade Map** technique from [Chapter 3](../03-thinking-in-systems/01-cascade-mapping.md) to trace the consequences of the opposing position. Your **Audience Analysis** skill from [Chapter 5](../05-communicating-what-matters/01-audience-prediction.md) and **Live Adaptation** skill from [Chapter 5](../05-communicating-what-matters/02-live-adaptation.md) will help you present persuasively to a skeptical audience.
 :::
 
+---
+
 ### What You Do
 
 You are randomly assigned to argue the opposite position from the one you chose in Exercise 1. In a live 5-minute presentation to peers, build the best possible case for a view you personally disagree with. No AI access during the presentation.
+
+:::tip Solo Learner Alternative
+Write a 400-word persuasive essay arguing the opposite position. Then prompt AI: "You are an audience member hearing someone argue [opposite position]. Rate this argument on: strength (1-10), apparent conviction (1-10), empathy for this perspective (1-10). Then ask me 3 tough follow-up questions that test whether I genuinely understand this side or am just going through the motions." Answer each question in writing.
+:::
+
+---
 
 :::info Your Deliverable
 Your preparation notes for the opposite position (you may use AI to help prepare, but document what you used). Peer feedback scores: Argument strength (1-10), Apparent conviction (1-10), Empathy for the other side (1-10). A reflection (200 words) answering: Did arguing the other side change your view at all? What did you understand about the dilemma that you did not understand before?
@@ -124,10 +132,6 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
-
-:::tip Solo Learner Alternative
-Write a 400-word persuasive essay arguing the opposite position. Then prompt AI: "You are an audience member hearing someone argue [opposite position]. Rate this argument on: strength (1-10), apparent conviction (1-10), empathy for this perspective (1-10). Then ask me 3 tough follow-up questions that test whether I genuinely understand this side or am just going through the motions." Answer each question in writing.
-:::
 
 ### What This Teaches You
 

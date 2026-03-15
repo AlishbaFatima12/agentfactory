@@ -97,15 +97,21 @@ Creation is not summarization, reorganization, or polishing. It is the act of pr
 
 ## Exercise 1: The Blank Page Sprint (No AI)
 
-**Layers Used:** Layer 1 (Predict Before You Prompt), Layer 5 (Divergence Test)
+**Layers Used:** Layer 1 (Predict Before You Prompt), Layer 6 (Iterative Drafts)
+
+**Building On:** Chapter 1's Prediction Lock (your blank page sprint is the rawest form of prediction) + Chapter 4's First Principles Worksheet.
 
 :::warning Time Constraint
 This exercise has a strict **60-minute time limit**. No AI, no internet, no notes. Set a timer before you begin. The constraint is the point -- it forces raw thinking onto the page.
 :::
 
+---
+
 ### What You Do
 
-You receive a problem. 60 minutes. No AI, no internet, no notes. Produce: a problem diagnosis, three possible solutions, a recommended approach, and an honest assessment of what you do not know. This is Draft 1.
+You receive a design problem. 60 minutes. No AI, no internet, no notes. Produce: a problem diagnosis, three possible solutions, a recommended approach, and an honest assessment of what you do not know. This is Draft 1.
+
+---
 
 ### Choose Your Scenario
 
@@ -127,6 +133,8 @@ You receive a problem. 60 minutes. No AI, no internet, no notes. Produce: a prob
 </Tabs>
 
 Choose one. The exercises work identically regardless of which you pick.
+
+---
 
 :::info Your Deliverable
 Your Draft 1 containing: problem diagnosis (what causes the problem and why), three distinct solution approaches (not variations of one idea), your recommended approach with reasoning for why you chose it over the other two, and a "gap list" -- everything you do not know that you would need to know to implement this. Minimum 400 words.

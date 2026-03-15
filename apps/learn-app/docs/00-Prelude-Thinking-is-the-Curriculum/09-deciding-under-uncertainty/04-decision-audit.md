@@ -93,6 +93,8 @@ The Decision Audit uses your **Confidence Calibration** skills from [Chapter 2, 
 
 After all information is revealed, conduct a full retrospective audit of your decision process. Where was your confidence calibrated correctly? Where was it miscalibrated? What heuristics served you well and which led you astray? Write this audit without AI — then use AI to check your self-assessment.
 
+---
+
 :::info Your Deliverable
 A Decision Audit (300-400 words, written without AI) analyzing: your calibration accuracy at each stage, the heuristics you relied on (and whether they helped or hurt), and your specific recommendations to yourself for improving your next decision under uncertainty. After completing the self-audit, include an AI assessment of your self-assessment.
 :::
@@ -121,6 +123,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

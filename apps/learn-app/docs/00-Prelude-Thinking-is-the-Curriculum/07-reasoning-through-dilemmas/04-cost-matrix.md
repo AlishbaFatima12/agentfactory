@@ -87,9 +87,13 @@ teaching_guide:
 
 **Layers Used:** Layer 2 (Reasoning Receipt), Layer 6 (Iterative Drafts)
 
+---
+
 ### What You Do
 
 After all three exercises, write a formal Decision Memo (500-700 words): your final position on the dilemma, the strongest arguments for and against, the stakeholders who bear the cost, and the specific conditions under which you would reverse your position. This memo is your Draft 1. Submit it to AI for review, revise (Draft 2), then finalize (Draft 3).
+
+---
 
 :::info Your Deliverable
 Draft 1 Decision Memo (before AI review). Draft 2 (after AI review). Draft 3 (final). An evolution tracker showing what changed between each draft and why. A final Confidence Statement: has your confidence increased, decreased, or stayed the same since Exercise 1, and why?

@@ -99,9 +99,15 @@ Ethical reasoning is not about memorizing rules. It is about navigating situatio
 
 **Layers Used:** Layer 1 (Predict Before You Prompt)
 
+**Building On:** Chapter 3's Stakeholder Cost Matrix (now applied to ethical terrain) + Chapter 4's first principles (strip the dilemma to base values).
+
+---
+
 ### What You Do
 
-You receive a dilemma. Before touching any AI tool, write your position (use it, ban it, modify it, or something else), your three strongest arguments, and explicitly identify who bears the cost of your decision. Seal and submit.
+You receive an ethical dilemma where values conflict and every option has a cost. Before AI: write your position (use it, ban it, modify it, or something else), your three strongest arguments, and explicitly identify who bears the cost of your decision. Seal and submit.
+
+---
 
 ### Choose Your Scenario
 
@@ -124,6 +130,8 @@ You receive a dilemma. Before touching any AI tool, write your position (use it,
 </Tabs>
 
 Choose one. The exercises work identically regardless of which you pick.
+
+---
 
 :::info Your Deliverable
 A Position Lock document containing: your clear position statement (one sentence), your three strongest arguments with evidence or reasoning for each, a Stakeholder Cost Matrix listing every stakeholder group and how your decision affects them (who benefits, who is harmed, who is ignored), and a Confidence Statement rating how certain you are (0-100%) with an explanation of what would change your mind.

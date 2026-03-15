@@ -79,18 +79,22 @@ teaching_guide:
 
 ## Exercise 2: The AI Collaboration Draft
 
-**Layers Used:** Layer 6 (Iterative Drafts)
+**Layers Used:** Layer 2 (Reasoning Receipt)
 
 :::note Building On Previous Chapters
 You will use the **Collaboration Log** format from [Chapter 6](../06-working-with-ai-not-for-ai/02-collaboration-log.md). Same structure, now applied to creative work instead of strategic analysis.
 :::
 
+---
+
 ### What You Do
 
 Using your Draft 1 as a starting point, collaborate with Claude and ChatGPT to develop your solution further. Maintain a Creation Log: every idea that came from you, every idea that came from AI, and every idea that emerged from the interaction that neither would have produced alone. This produces Draft 2.
 
+---
+
 :::info Your Deliverable
-Your Draft 2 (the improved solution after AI collaboration). The full Creation Log in table format showing at least 10 interactions. A brief note (100 words) identifying the single most valuable contribution AI made and the single most valuable contribution you made.
+Your Draft 2 (the improved solution after AI collaboration). The full Creation Log in table format: Interaction # | My Prompt | AI Response Summary | Decision (Accept/Reject/Modify/New Idea) | Attribution (Human/AI/Synthesis) | What I Added or Changed. The log must show at least 10 interactions. A brief note (100 words) identifying the single most valuable contribution AI made and the single most valuable contribution you made.
 :::
 
 ```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"

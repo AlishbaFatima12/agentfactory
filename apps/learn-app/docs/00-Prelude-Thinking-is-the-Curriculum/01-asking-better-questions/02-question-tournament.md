@@ -80,6 +80,12 @@ teaching_guide:
 
 Working in pairs, each student generates 15 questions about the same scenario without AI. Swap question lists with your partner. Rank their 15 questions from most to least diagnostic and write a one-sentence justification for each ranking. Then take the top 5 from each list (10 total), feed them to both Claude and ChatGPT, and compare: which questions actually produced useful, divergent, actionable answers, and which produced generic filler?
 
+:::tip Solo Learner Alternative
+Generate your 15 questions, then prompt AI: "You are my study partner. Generate 15 diagnostic questions for this scenario that are different from mine. Do not see my questions first." Once AI generates its 15, rank AI's questions and have AI rank yours. Then proceed with the comparison table. The dynamic is different — AI is more consistent than a human partner — but the skill of evaluating someone else's questions still develops.
+:::
+
+---
+
 :::info Your Deliverable
 Your 15 original questions (written without AI). Your partner's 15 questions with your ranking and justification for each. A comparison table showing the top 10 questions, the AI responses from both tools, and a column marking each as "useful/actionable" or "generic/filler" with explanation.
 :::
@@ -111,10 +117,8 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
+---
+
 ### What This Teaches You
 
 You learn that question quality is a skill you can evaluate and improve, not an innate talent. By seeing your partner's questions and having AI compare both sets, you discover questioning patterns you would never notice in your own work. The tournament format makes the difference between a good question and a great question viscerally clear.
-
-:::tip Solo Learner Alternative
-Generate your 15 questions, then prompt AI: "You are my study partner. Generate 15 diagnostic questions for this scenario that are different from mine. Do not see my questions first." Once AI generates its 15, rank AI's questions and have AI rank yours. Then proceed with the comparison table. The dynamic is different — AI is more consistent than a human partner — but the skill of evaluating someone else's questions still develops.
-:::

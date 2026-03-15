@@ -85,6 +85,8 @@ teaching_guide:
 
 You receive a project: build a market entry strategy for an AI product in a country you are unfamiliar with. You must use AI throughout. Maintain a real-time Collaboration Log -- every prompt, every response, every decision (accept/reject/modify) with a one-sentence justification for each decision. Complete the strategy.
 
+---
+
 :::info Your Deliverable
 The completed market entry strategy. The full Collaboration Log in a table format with columns: Prompt Sent | AI Response Summary | Decision (Accept/Reject/Modify) | Justification | What I Added or Changed. The log must contain at least 15 interactions. A summary (150 words) of your collaboration pattern -- what percentage did you accept, reject, modify?
 :::
@@ -115,6 +117,8 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
+---
+
 <details>
 <summary>Deliverable Template (click to expand)</summary>
 
@@ -137,6 +141,8 @@ For each score, give a one-sentence justification.
 - My collaboration pattern: \_\_\_
 
 </details>
+
+---
 
 ### What This Teaches You
 

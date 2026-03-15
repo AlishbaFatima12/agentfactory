@@ -89,6 +89,8 @@ teaching_guide:
 
 Compare your original Learning Plan to what actually happened. Write a Strategy Retrospective analyzing your meta-learning process. Then create a **Personal Learning Framework** — a reusable document describing how you approach learning new domains, to be carried through the rest of the book.
 
+---
+
 :::info Your Deliverable
 A Strategy Retrospective (300-400 words) comparing: your planned strategy vs. actual strategy, where your plan worked, where it failed, and what you would do differently next time. A **Personal Learning Framework** (one page) that you will use for every new domain encounter in the rest of the book, containing: your optimal learning sequence, your resource prioritization criteria, your "confusion protocol" (what to do when stuck), your AI usage guidelines (when AI helps vs. hinders learning), and your self-assessment triggers (how to know when you have learned enough).
 :::
@@ -120,6 +122,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

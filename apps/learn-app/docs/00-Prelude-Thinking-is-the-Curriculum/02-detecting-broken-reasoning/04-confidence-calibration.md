@@ -82,6 +82,8 @@ This exercise uses a different format: rapid-fire timed rounds. You receive 20 A
 
 The time pressure simulates real-world decision-making where you must quickly assess AI output without unlimited time to verify.
 
+---
+
 :::info Your Deliverable
 A table with 20 rows: the AI claim, your confidence rating (0-100%), the verified truth status (accurate / inaccurate / partially accurate), your source for verification, and whether your confidence was calibrated (correct), overconfident (high confidence + wrong), or underconfident (low confidence + right). A Confidence Calibration Chart plotting your ratings against reality. A reflection (200 words) analyzing your calibration patterns.
 :::
@@ -112,9 +114,13 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
+---
+
 ### What This Teaches You
 
 You learn that most people — especially smart people — are systematically overconfident about AI accuracy. By quantifying your calibration, you get a precise map of where your trust in AI is well-placed and where it is dangerous. This exercise is repeated at the end of the book to measure how much your calibration improves after completing all 10 chapters.
+
+---
 
 :::info Chapter Deliverable
 An Error Detection Portfolio containing: (1) the sealed error prediction document, (2) two annotated AI responses with full Error Taxonomy markup, (3) the three-draft contradiction analysis with evolution notes, (4) the domain expertise annotation with partner verification, (5) the 20-claim Confidence Calibration Chart with analysis, and (6) all AI feedback responses with your reflections on each.

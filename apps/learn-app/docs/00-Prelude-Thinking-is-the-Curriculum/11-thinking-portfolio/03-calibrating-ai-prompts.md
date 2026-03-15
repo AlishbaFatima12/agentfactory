@@ -69,6 +69,8 @@ teaching_guide:
 
 The AI check prompts in this part are designed for the current generation of AI tools (Claude and ChatGPT as of early 2026). AI capabilities will evolve. What counts as a rigorous evaluation today may need adjustment as models improve, change behavior, or develop new failure modes. This section provides a maintenance protocol to keep the assessment system accurate over time.
 
+---
+
 ## Semester Calibration Protocol
 
 <details>
@@ -115,6 +117,8 @@ Review exercise scenarios for continued relevance. Scenarios based on emerging t
 The exercise structure and AI prompts remain the same -- only the scenario content changes.
 
 </details>
+
+---
 
 The goal of calibration is not perfect AI scoring -- that is impossible. The goal is consistent scoring that reliably distinguishes strong thinking from weak thinking, so that the Score Card trajectory is meaningful across 40 exercises. Small inaccuracies on individual scores wash out over 40 data points. Systematic bias does not -- and that is what the calibration protocol catches.
 

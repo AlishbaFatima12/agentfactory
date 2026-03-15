@@ -77,15 +77,23 @@ teaching_guide:
 
 # Peer Cross-Examination
 
-**Layers Used:** Layer 3 (Live Defence), Layer 6 (Iterative Drafts)
+**Layers Used:** Layer 3 (Live Defence)
 
 ### What You Do
 
 Pair up with another student. Exchange your final cascade maps (Draft 3). In a live 15-minute session, each student must: (a) identify at least 2 missing connections in their partner's map, (b) challenge at least 1 feedback loop as unrealistic, and (c) defend their own map against their partner's challenges. No AI access during the session.
 
+:::tip Solo Learner Alternative
+Submit your final cascade map to AI with this prompt: "You are a critical peer reviewer examining my systems thinking map. Identify 3 gaps — missing connections, implausible causal chains, or feedback loops I missed. Then challenge one of my feedback loops as unrealistic and explain why. I will defend my reasoning in writing." Conduct a multi-turn defence and submit the full transcript.
+:::
+
+---
+
 :::info Your Deliverable
 Your written preparation notes identifying gaps and challenges in your partner's map (written before the live session). Your partner's written feedback on your map. A post-session reflection (200 words) answering: What did my partner find that I missed? What challenge was hardest to defend? What would I add to my map based on this exchange?
 :::
+
+---
 
 ```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
 I just completed a peer cross-examination of my systems thinking
@@ -115,13 +123,13 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
-:::tip Solo Learner Alternative
-Submit your final cascade map to AI with this prompt: "You are a critical peer reviewer examining my systems thinking map. Identify 3 gaps — missing connections, implausible causal chains, or feedback loops I missed. Then challenge one of my feedback loops as unrealistic and explain why. I will defend my reasoning in writing." Conduct a multi-turn defence and submit the full transcript.
-:::
+---
 
 ### What This Teaches You
 
 You learn that systems thinking is tested by other humans, not just by AI. A peer who approaches the same problem differently reveals blind spots that AI — which tends to converge on similar analyses — cannot find. The live format tests whether you understand your map deeply enough to explain and defend the connections you drew.
+
+---
 
 :::info Chapter Deliverable
 A **Systems Thinking Portfolio** containing: (1) the original cascade map (Draft 1, before AI), (2) the comparison document and merged map (Draft 2, with attribution), (3) the revised map after variable shift (Draft 3, with change log), (4) peer cross-examination notes and feedback, (5) all AI feedback responses, and (6) a final reflection on your systems thinking growth.
@@ -140,7 +148,6 @@ A **Systems Thinking Portfolio** containing: (1) the original cascade map (Draft
 | Reflection quality                                                |  10%   |
 
 </details>
-
 
 ## Flashcards Study Aid
 

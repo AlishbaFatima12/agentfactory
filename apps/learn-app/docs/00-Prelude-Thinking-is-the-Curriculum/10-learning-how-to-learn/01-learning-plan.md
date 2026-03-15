@@ -103,6 +103,8 @@ Your learning plan is a **Prediction Lock** — a prediction about your own lear
 
 You are assigned a domain you have never studied: pharmacology for a developer, supply chain logistics for an accountant, constitutional law for a designer. Before learning anything, write a Learning Plan: how will you approach this? What will you learn first? What resources will you prioritize? How will you know when you know enough? What will you explicitly skip?
 
+---
+
 :::info Your Deliverable
 A Learning Plan (300-400 words) containing: the domain assigned, your current knowledge level (be honest), your learning strategy (what first, what next, what skip), the resources you will use (and why these over others), your definition of "enough" (what competence looks like for this exercise), a time allocation plan for your 72 hours, and your predicted biggest challenge.
 :::
@@ -131,6 +133,8 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
+---
+
 <details>
 <summary>Deliverable Template (click to expand)</summary>
 
@@ -151,6 +155,8 @@ For each score, give a one-sentence justification.
   - Will avoid AI for: \_\_\_
 
 </details>
+
+---
 
 ### What This Teaches You
 

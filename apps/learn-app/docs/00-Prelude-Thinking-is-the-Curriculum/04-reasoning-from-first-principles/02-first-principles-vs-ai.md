@@ -108,9 +108,13 @@ You receive a problem with no established solution. No AI, no internet. 45 minut
 
 Choose one.
 
+---
+
 :::info Your Deliverable
 A First Principles Worksheet containing: (1) the base constraints you identified (e.g., limited supply, unequal need, multiple definitions of fairness), (2) every assumption you made -- explicitly listed, (3) your derived solution with a clear logical chain from constraints to design, (4) a comparison document showing your solution alongside AI's solution, with annotations on where they converge and diverge.
 :::
+
+---
 
 ```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
 I solved a novel problem using first principles reasoning without any
@@ -140,6 +144,8 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
 
+---
+
 <details>
 <summary>Deliverable Template (click to expand)</summary>
 
@@ -161,6 +167,8 @@ For each score, give a one-sentence justification.
 - **WHAT I DO NOT KNOW:** \_\_\_
 
 </details>
+
+---
 
 ### What This Teaches You
 

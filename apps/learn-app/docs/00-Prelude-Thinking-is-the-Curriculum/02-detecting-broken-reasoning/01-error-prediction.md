@@ -98,6 +98,8 @@ This chapter trains you to become a systematic error detector. Not vague skeptic
 | Fabricated citation             | Referencing a source that does not exist                 |
 | Cultural blind spot             | Assuming one cultural context applies universally        |
 
+---
+
 ## Exercise 1: The Error Prediction
 
 **Layers Used:** Layer 1 (Predict Before You Prompt), Layer 2 (Reasoning Receipt)
@@ -129,6 +131,8 @@ You receive a complex question. Before prompting any AI, write down: (a) what yo
 
 Choose one.
 
+---
+
 :::info Your Deliverable
 Your sealed prediction document (before AI) listing expected AI strengths and weaknesses. Two annotated AI responses with every sentence labeled using the Error Taxonomy categories. A comparison table showing: your predicted errors vs. actual errors found, your predicted strengths vs. actual strengths. A count of each error type found across both tools.
 :::
@@ -159,6 +163,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

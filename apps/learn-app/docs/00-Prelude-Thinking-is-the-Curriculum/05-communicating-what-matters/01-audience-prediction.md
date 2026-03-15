@@ -94,7 +94,9 @@ Communication is not writing. Writing is what AI does. Communication is understa
 
 ### What You Do
 
-You receive a technical decision. Before AI, write audience profiles for three stakeholders. For each, predict: what they care about most, their likely objection, and the one argument most likely to persuade them. Then ask AI to write a persuasive brief for each audience and compare against your predictions.
+You receive a technical decision that affects multiple stakeholders. Before AI, write audience profiles for three stakeholders who each have different priorities. For each, predict: what they care about most, their likely objection, and the one argument most likely to persuade them. Then ask AI to write a persuasive brief for each audience and compare against your predictions.
+
+---
 
 ### Choose Your Scenario
 
@@ -118,6 +120,8 @@ You receive a technical decision. Before AI, write audience profiles for three s
 
 Choose one. The exercises work identically regardless of which you pick.
 
+---
+
 :::info Your Deliverable
 Three audience profiles (written without AI) each containing: the stakeholder's priorities, their predicted objection, and the persuasion strategy you would use. Three AI-generated persuasive briefs (one per audience). A comparison document showing: where AI's audience model matched yours, where it differed, and where you believe your audience reading was more accurate than AI's (with reasoning).
 :::
@@ -127,7 +131,7 @@ I predicted three audience profiles for a technical decision, then had AI
 generate persuasive briefs for each. Please:
 
 (1) Rate my audience profiles -- did I correctly identify what each stakeholder
-    cares about?
+    (skeptical CTO, cost-conscious CFO, non-technical CEO) cares about?
 (2) Rate my predicted objections -- are these realistic? Did I miss any likely
     objections?
 (3) Compare my persuasion strategy vs. the AI-generated brief for each
@@ -145,6 +149,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 

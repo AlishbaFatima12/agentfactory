@@ -113,9 +113,13 @@ You receive a single decision. Without AI, draw a cascade map on paper or in a d
 
 Choose one. The exercises work identically regardless of which you pick.
 
+---
+
 :::info Your Deliverable
 A cascade map (hand-drawn scan or digital document) showing: the central decision, at least 5 domains affected, first-order effects in each domain, at least 3 second-order effects, at least 3 third-order effects, and at least 3 feedback loops clearly labeled (e.g., "cost savings leads to reduced service quality leads to customer churn leads to reduced revenue leads to negated cost savings"). Each effect should have a one-sentence explanation of the mechanism.
 :::
+
+---
 
 ```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
 I am a student learning systems thinking. I was given this scenario:
@@ -142,6 +146,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>
@@ -170,6 +176,8 @@ For each score, give a one-sentence justification.
 - **FEEDBACK LOOP 3:** \_\_\_
 
 </details>
+
+---
 
 ### What This Teaches You
 

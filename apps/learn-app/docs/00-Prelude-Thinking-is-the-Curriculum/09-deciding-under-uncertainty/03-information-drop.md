@@ -80,6 +80,7 @@ teaching_guide:
 
 **Layers Used:** Layer 4 (Contradiction Challenge), Layer 6 (Iterative Drafts)
 
+{/* Editorial addition: Building On not in source draft, but these cross-references from the writer brief add pedagogical value */}
 :::note Building On Previous Exercises
 This exercise tests your ability to handle contradictory input under pressure, building on the **Adversarial Defence** from [Chapter 7, Exercise 2](../07-reasoning-through-dilemmas/02-adversarial-defence.md) and **Rebuild Under New Constraints** from [Chapter 4, Exercise 4](../04-reasoning-from-first-principles/04-rebuild-under-new-constraints.md).
 :::
@@ -92,9 +93,12 @@ The instructor releases new information that directly contradicts the most popul
 You have exactly 20 minutes (timed, enforced) to revise your decision. The exercise is designed to test your reaction under realistic pressure: do you anchor to your first answer, overreact and abandon everything, or adapt proportionally?
 :::
 
+{/* Editorial addition: Solo alternative not in source draft, but necessary for self-study students who have no instructor to release information */}
 :::tip Solo Learner Alternative
 If you are working alone, generate your own contradictory information by prompting AI: "Given this scenario [paste], generate one piece of new information that would directly contradict the most common recommendation. Make it specific and credible." Then start your 20-minute timer.
 :::
+
+---
 
 :::info Your Deliverable
 Your revised Decision Document (Draft 3) showing your response to the new information. A Process Document answering: Did the new information trigger your Reversal Trigger? Did you update proportionally (not overreact)? Did you integrate the new information with your existing analysis or start from scratch? A Calibration Check comparing your original confidence level, your post-consultation confidence level, and your post-drop confidence level.
@@ -128,6 +132,8 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 ```
+
+---
 
 ### What This Teaches You
 
