@@ -1,5 +1,5 @@
 ---
-sidebar_position: 0.5
+sidebar_position: -1
 title: "Thinking Baseline"
 description: "A 30-minute ungraded pre-assessment using a hospital AI triage scenario to snapshot your thinking skills before any training begins"
 keywords:
