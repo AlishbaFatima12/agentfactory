@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch08-three-draft-evolution"
+  title: "The Three-Draft Evolution"
+  description: "Key concepts from the Three-Draft Evolution exercise on iterative creation and creative process metacognition"
+  tags: ["three-draft-evolution", "iterative-drafts", "creative-process", "Part-0"]
+  version: 1
+
+cards:
+  - id: "p0-ch08-three-draft-evolution-001"
+    front: "What are the three drafts in the Three-Draft Evolution, and what characterizes each?"
+    back: "Draft 1: entirely unassisted\nDraft 2: AI-collaborated\nDraft 3: final reflection after all feedback"
+    tags: ["three-draft-evolution", "structure"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-three-draft-evolution-002"
+    front: "What does the Evolution Tracker document for each draft transition?"
+    back: "What was added, what was removed, what was changed, and the reasoning for each change."
+    tags: ["evolution-tracker", "format"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-three-draft-evolution-003"
+    front: "Why does the Three-Draft Evolution grade the process rather than the final product?"
+    back: "Because visible intellectual maturation across stages demonstrates genuine learning. A brilliant final product could come from AI; a documented evolution from rough to refined can only come from a thinking human engaging with feedback."
+    tags: ["three-draft-evolution", "grading"]
+    difficulty: "intermediate"
+    why: "What does it reveal if Draft 1 and Draft 3 are nearly identical?"
+
+  - id: "p0-ch08-three-draft-evolution-004"
+    front: "What is the difference between cosmetic revision and intellectual evolution between drafts?"
+    back: "Cosmetic revision improves writing quality (grammar, formatting, flow). Intellectual evolution changes the reasoning (deeper arguments, new connections, revised conclusions). Only intellectual evolution counts."
+    tags: ["intellectual-evolution", "revision"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch08-three-draft-evolution-005"
+    front: "How does AI rate the student's overall creative process in Exercise 4?"
+    back: "On a three-level scale: Passive (AI did the thinking), Active (student directed, AI assisted), or Generative (student created, AI refined)."
+    tags: ["creative-process", "self-assessment"]
+    difficulty: "basic"
+
+  - id: "p0-ch08-three-draft-evolution-006"
+    front: "Why is the 200-word reflection intentionally short?"
+    back: "Because brevity forces precision. Students who write vague platitudes like 'AI helped me think better' hit the limit without citing specific evidence from their evolution. The constraint rewards concrete insight over generic claims."
+    tags: ["reflection", "word-limit"]
+    difficulty: "intermediate"
+    why: "How does a word limit change the quality of self-reflection?"
+
+  - id: "p0-ch08-three-draft-evolution-007"
+    front: "Why might Draft 3 sometimes be worse than Draft 2?"
+    back: "Because over-revision can dilute strong elements. AI feedback may push toward generic 'improvements' that remove the student's most original contributions. Recognizing when to stop revising is itself a creative skill."
+    tags: ["over-revision", "creative-judgment"]
+    difficulty: "advanced"
+    why: "How can you tell whether a revision improved your work or made it more generic?"
+
+  - id: "p0-ch08-three-draft-evolution-008"
+    front: "Why does the Three-Draft Evolution become the default creation workflow for Parts 2-10?"
+    back: "Because it structures creation as an iterative process: independent thinking first, AI collaboration second, reflective synthesis third. This sequence maximizes both human originality and AI augmentation without either dominating."
+    tags: ["three-draft-evolution", "reusable-workflow"]
+    difficulty: "intermediate"
+    why: "What would happen if you reversed the order and started with AI collaboration?"

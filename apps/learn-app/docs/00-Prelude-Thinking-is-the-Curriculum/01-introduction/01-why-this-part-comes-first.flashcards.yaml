@@ -1,0 +1,104 @@
+deck:
+  id: "p0-intro-why-first"
+  title: "Why This Part Comes First"
+  description: "Six layers of thinking-proof assessment, AI feedback protocols, and the foundational principles of Part 0"
+  tags: ["Part 0", "introduction", "six layers", "assessment", "thinking skills"]
+  version: 1
+
+cards:
+  - id: "p0-intro-why-first-001"
+    front: "In Part 0, what is the foundational principle governing every exercise?"
+    back: "The deliverable is never the answer -- it is the documented evidence of thinking."
+    tags: ["foundational-principle", "Part 0"]
+    difficulty: "basic"
+
+  - id: "p0-intro-why-first-002"
+    front: "What are the six layers of thinking-proof assessment in Part 0?"
+    back: "1. Predict Before You Prompt\n2. Reasoning Receipt\n3. Live Defence\n4. Contradiction Challenges\n5. Divergence Test\n6. Iterative Drafts"
+    tags: ["six-layers", "assessment"]
+    difficulty: "basic"
+
+  - id: "p0-intro-why-first-003"
+    front: "In Part 0's Layer 1, what must a student do before opening any AI tool?"
+    back: "Commit to a position in writing, timestamped and sealed."
+    tags: ["prediction-lock", "Layer 1"]
+    difficulty: "basic"
+
+  - id: "p0-intro-why-first-004"
+    front: "Why is designing thinking-proof exercises more effective than banning AI from the classroom?"
+    back: "Banning AI only removes a tool. Thinking-proof exercises make AI useless for cheating because the deliverable is the student's cognitive process, which AI cannot produce on their behalf."
+    tags: ["assessment-philosophy", "AI"]
+    difficulty: "intermediate"
+    why: "What specific part of a student's deliverable can AI not fake?"
+
+  - id: "p0-intro-why-first-005"
+    front: "In Part 0's assessment, what does a student submit instead of answers?"
+    back: "A reasoning trail: every prompt, every AI response, every accept/reject/modify decision."
+    tags: ["reasoning-receipt", "Layer 2"]
+    difficulty: "basic"
+
+  - id: "p0-intro-why-first-006"
+    front: "A student submits polished AI-generated work but cannot answer basic questions about it. Which layer catches this?"
+    back: "Layer 3 (Live Defence). Without AI access, a student who outsourced thinking collapses under questioning because they never built the understanding needed to defend their work."
+    tags: ["live-defence", "Layer 3"]
+    difficulty: "intermediate"
+    why: "Why is oral examination suddenly the most AI-proof assessment method?"
+
+  - id: "p0-intro-why-first-007"
+    front: "How does Layer 4 (Contradiction Challenges) test whether a student genuinely understands their own work?"
+    back: "The student's work is fed to AI with 'argue against this,' and the student must respond in real-time. Someone who copied from AI cannot defend against AI's own counter-arguments because they lack the understanding to improvise."
+    tags: ["contradiction-challenge", "Layer 4"]
+    difficulty: "intermediate"
+    why: "Why is defending against AI harder than defending against a human examiner?"
+
+  - id: "p0-intro-why-first-008"
+    front: "In Part 0's Layer 5, 30 students receive the same problem and AI tools. What measurable signal reveals who actually thought?"
+    back: "Originality. Students who outsourced to AI produce nearly identical outputs; those who thought independently diverge."
+    tags: ["divergence-test", "Layer 5"]
+    difficulty: "intermediate"
+
+  - id: "p0-intro-why-first-009"
+    front: "In Part 0's Layer 6, students submit three drafts. What are they?"
+    back: "Before AI, after AI collaboration, and after reflection."
+    tags: ["iterative-drafts", "Layer 6"]
+    difficulty: "basic"
+
+  - id: "p0-intro-why-first-010"
+    front: "Why is no single assessment layer sufficient to verify genuine thinking on its own?"
+    back: "Each layer has a bypass. Together they close all gaps: the prediction lock creates a baseline the reasoning receipt must match, which the live defence interrogates, which the contradiction challenge attacks, which the divergence test cross-checks."
+    tags: ["six-layers", "assessment-design"]
+    difficulty: "advanced"
+    why: "Which layer would be easiest to fake if used alone, and why?"
+
+  - id: "p0-intro-why-first-011"
+    front: "In Part 0's AI feedback cycle, what happens in step 4 after AI grades your work?"
+    back: "You reflect on the gap between your self-assessment and AI's assessment -- that gap is where the deepest learning happens."
+    tags: ["AI-feedback", "reflection"]
+    difficulty: "intermediate"
+
+  - id: "p0-intro-why-first-012"
+    front: "What are the five steps of the Feedback Challenge Protocol?"
+    back: "1. Identify the disputed point\n2. Write a counter-argument (100-150 words)\n3. Submit counter-argument to AI\n4. Include the full exchange in your portfolio\n5. This is graded as bonus critical thinking"
+    tags: ["feedback-challenge", "protocol"]
+    difficulty: "intermediate"
+
+  - id: "p0-intro-why-first-013"
+    front: "Why is challenging AI feedback graded as bonus evidence of critical thinking rather than penalized?"
+    back: "AI feedback is powerful but imperfect. A student who identifies and argues against a flawed AI evaluation demonstrates exactly the critical thinking Part 0 teaches, because accepting bad feedback uncritically misses the entire point."
+    tags: ["feedback-challenge", "critical-thinking"]
+    difficulty: "advanced"
+    why: "What would it mean if no student ever challenged AI feedback across an entire semester?"
+
+  - id: "p0-intro-why-first-014"
+    front: "In Part 0's three-tier assessment, why do instructors only spot-check flagged portfolios instead of reviewing every one?"
+    back: "AI provides immediate personalized feedback at unlimited scale (Tier 1) and peers review per chapter (Tier 2), so instructor attention is directed where it matters most: score divergences, similarity flags, and challenged AI feedback."
+    tags: ["three-tier", "scaling"]
+    difficulty: "advanced"
+    why: "How does this three-tier system change the instructor's role compared to traditional grading?"
+
+  - id: "p0-intro-why-first-015"
+    front: "Part 0 offers solo learner alternatives for peer exercises. How does the solo path differ from the peer path?"
+    back: "Peers provide unpredictability, social pressure, and unanticipated perspectives. AI provides consistency, tirelessness, and adversarial challenges on demand. Neither is inferior -- they develop different aspects of thinking."
+    tags: ["solo-learner", "peer-vs-AI"]
+    difficulty: "intermediate"
+    why: "When would combining both paths produce better results than either alone?"

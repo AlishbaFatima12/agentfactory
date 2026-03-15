@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch06-cross-tool-arbitration"
+  title: "Cross-Tool Arbitration"
+  description: "Key concepts from the cross-tool arbitration and synthesis exercise"
+  tags: ["Part 0", "AI-collaboration", "arbitration", "synthesis"]
+  version: 1
+
+cards:
+  - id: "p0-ch06-cross-tool-arbitration-001"
+    front: "What four elements must an Arbitration Brief contain?"
+    back: "1. Key differences between recommendations\n2. Evaluation of each (strengths/weaknesses)\n3. Verdict (which is stronger and why)\n4. Synthesized third option with attribution"
+    tags: ["arbitration-brief", "deliverable"]
+    difficulty: "basic"
+
+  - id: "p0-ch06-cross-tool-arbitration-002"
+    front: "Why is disagreement between AI tools one of the most valuable signals a student can get?"
+    back: "Because disagreement means the question has genuine complexity requiring human judgment. Agreement might mean the answer is straightforward or both tools share the same blind spot."
+    tags: ["AI-disagreement", "signal"]
+    difficulty: "intermediate"
+    why: "When two AI tools agree, does that guarantee the answer is correct?"
+
+  - id: "p0-ch06-cross-tool-arbitration-003"
+    front: "What is the difference between synthesis and averaging when combining two AI recommendations?"
+    back: "Averaging takes half from each, producing a diluted middle ground. Synthesis creates something genuinely better than either input by selecting the strongest elements and adding original human judgment."
+    tags: ["synthesis", "arbitration"]
+    difficulty: "intermediate"
+    why: "How can you tell from the final output whether a student synthesized or just averaged?"
+
+  - id: "p0-ch06-cross-tool-arbitration-004"
+    front: "Why must the synthesized third option include clear attribution for each element?"
+    back: "To distinguish what came from Claude, what from ChatGPT, and what from the student's own judgment. Without attribution, there is no evidence of genuine human synthesis."
+    tags: ["attribution", "synthesis"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch06-cross-tool-arbitration-005"
+    front: "Which assessment layers does the Cross-Tool Arbitration exercise use?"
+    back: "Layer 4 (Contradiction Challenge) and Layer 2 (Reasoning Receipt)."
+    tags: ["assessment-layers"]
+    difficulty: "basic"
+
+  - id: "p0-ch06-cross-tool-arbitration-006"
+    front: "Why does the arbitration require a clear verdict on which recommendation is stronger, rather than diplomatic neutrality?"
+    back: "Because effective judgment requires taking a position and defending it. Saying 'both have merit' avoids the core skill -- evaluating competing options and making a reasoned choice under uncertainty."
+    tags: ["verdict", "judgment"]
+    difficulty: "intermediate"
+    why: "When is it genuinely appropriate to declare a tie rather than picking a winner?"
+
+  - id: "p0-ch06-cross-tool-arbitration-007"
+    front: "What are the five grading criteria weights for the AI Collaboration chapter portfolio?"
+    back: "Three-path comparison: 20%\nCollaboration Log: 25%\nOverride challenge: 25%\nArbitration Brief: 15%\nAI feedback integration: 15%"
+    tags: ["grading", "chapter-deliverable"]
+    difficulty: "basic"
+
+  - id: "p0-ch06-cross-tool-arbitration-008"
+    front: "A student's synthesis takes the first half from Claude and the second half from ChatGPT. Why is this averaging rather than synthesis?"
+    back: "Because no element was evaluated, selected for strength, or improved by human judgment. True synthesis evaluates each element independently, keeps the strongest regardless of source, and adds original ideas where both tools fell short."
+    tags: ["synthesis-vs-averaging", "anti-pattern"]
+    difficulty: "advanced"
+    why: "What original contribution should a student's synthesis always include beyond what either AI provided?"

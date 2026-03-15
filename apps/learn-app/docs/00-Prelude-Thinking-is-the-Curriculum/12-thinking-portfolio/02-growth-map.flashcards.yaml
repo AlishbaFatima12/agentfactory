@@ -1,0 +1,46 @@
+deck:
+  id: "p0-growth-map"
+  title: "Growth Map"
+  description: "Quantifying cognitive growth across Score Card dimensions and transitioning to Part 1"
+  tags: ["Part 0", "growth map", "score card", "transition"]
+  version: 1
+
+cards:
+  - id: "p0-growth-map-001"
+    front: "What two comparison types does the Growth Map contain?"
+    back: "1. Baseline vs. post-assessment Score Card comparison (5 dimensions + average)\n2. 40-exercise trajectory averages across all exercises"
+    tags: ["growth-map", "structure"]
+    difficulty: "basic"
+
+  - id: "p0-growth-map-002"
+    front: "Why is the 40-exercise trajectory more reliable than the baseline/post comparison alone?"
+    back: "Individual assessments contain noise. Averaging across 40 data points washes out single-exercise inaccuracies and reveals genuine skill trends that any one score might miss."
+    tags: ["growth-map", "statistics"]
+    difficulty: "intermediate"
+    why: "What kind of growth pattern would be visible in the trajectory but invisible in a simple pre/post comparison?"
+
+  - id: "p0-growth-map-003"
+    front: "In the Growth Map, why is identifying your 'biggest remaining gap' as important as your 'strongest improvement'?"
+    back: "The remaining gap tells you where to focus attention in Parts 2-10. Awareness of weaknesses is itself a form of growth and directs future practice where it matters most."
+    tags: ["growth-map", "self-awareness"]
+    difficulty: "intermediate"
+    why: "How would a student use their biggest gap differently than their strongest improvement when starting Part 1?"
+
+  - id: "p0-growth-map-004"
+    front: "What is the Growth Map's role in the Thinking Portfolio?"
+    back: "It is the final item -- concrete, quantified evidence of what ten chapters of thinking practice produced."
+    tags: ["growth-map", "portfolio"]
+    difficulty: "basic"
+
+  - id: "p0-growth-map-005"
+    front: "Why does Part 0 describe the difference between 'a developer who builds AI agents' and 'a thinker who builds AI agents'?"
+    back: "The thinking skills from Part 0 (questioning, error detection, systems thinking, ethical reasoning, decision-making) are what separate building with AI from building on top of AI. These skills determine whether technical decisions are sound, not just functional."
+    tags: ["transition", "Part-1"]
+    difficulty: "advanced"
+    why: "What specific situation in agent development would require thinking skills that coding skills alone cannot provide?"
+
+  - id: "p0-growth-map-006"
+    front: "What tools from Part 0 does the Growth Map say students carry into Parts 2-10?"
+    back: "Prediction locks, reasoning receipts, cascade maps, assumption autopsies, and reversal triggers."
+    tags: ["growth-map", "tools", "transition"]
+    difficulty: "intermediate"

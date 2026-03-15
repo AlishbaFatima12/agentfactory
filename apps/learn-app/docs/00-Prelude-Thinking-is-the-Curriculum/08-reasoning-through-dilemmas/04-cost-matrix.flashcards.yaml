@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch07-decision-memo"
+  title: "The Decision Memo"
+  description: "Key concepts from the Decision Memo exercise on ethical synthesis and three-draft evolution"
+  tags: ["decision-memo", "ethical-reasoning", "iterative-drafts", "Part-0"]
+  version: 1
+
+cards:
+  - id: "p0-ch07-decision-memo-001"
+    front: "What is the recommended length for a Decision Memo in Exercise 4?"
+    back: "500-700 words."
+    tags: ["decision-memo", "format"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-decision-memo-002"
+    front: "What five elements must a Decision Memo contain?"
+    back: "1. Final position\n2. Strongest arguments for\n3. Strongest arguments against\n4. Stakeholder cost analysis\n5. Reversal conditions"
+    tags: ["decision-memo", "structure"]
+    difficulty: "basic"
+
+  - id: "p0-ch07-decision-memo-003"
+    front: "In the Decision Memo exercise, what determines the grade -- draft quality or draft evolution?"
+    back: "Draft evolution. The grade lives in the visible maturation between Draft 1, 2, and 3, not the quality of any single draft."
+    tags: ["iterative-drafts", "grading"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch07-decision-memo-004"
+    front: "Why does a weak Draft 1 that becomes a strong Draft 3 score higher than a polished Draft 1 that barely changes?"
+    back: "Because visible intellectual evolution demonstrates genuine learning. A polished Draft 1 that stays unchanged suggests the student either did not engage with feedback or outsourced the initial thinking to AI."
+    tags: ["iterative-drafts", "ethical-reasoning"]
+    difficulty: "intermediate"
+    why: "What does it reveal if a student's Draft 1 is already as strong as their Draft 3?"
+
+  - id: "p0-ch07-decision-memo-005"
+    front: "What is the difference between a specific reversal condition and a vague one?"
+    back: "Specific: 'if a controlled study showed bias below 2% statistical significance.' Vague: 'if new evidence emerged.' Specific conditions are testable; vague ones are evasion."
+    tags: ["reversal-conditions", "intellectual-honesty"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch07-decision-memo-006"
+    front: "Why is honestly representing counter-arguments critical in a Decision Memo?"
+    back: "Because building straw men -- weak versions of opposing arguments -- signals shallow ethical reasoning. A strong memo steels-mans the opposition, demonstrating the position survives the strongest possible challenge."
+    tags: ["decision-memo", "straw-man"]
+    difficulty: "intermediate"
+    why: "How can you tell whether a student's counter-arguments are genuine or deliberately weakened?"
+
+  - id: "p0-ch07-decision-memo-007"
+    front: "How does the Decision Memo synthesize all four exercises in Chapter 7?"
+    back: "It integrates the Position Lock (initial stance), Adversarial Defence (pressure-tested reasoning), Stakeholder Swap (perspective from the other side), and AI feedback into a single coherent ethical judgment across three drafts."
+    tags: ["decision-memo", "chapter-synthesis"]
+    difficulty: "advanced"
+    why: "Why is the final memo stronger for having gone through adversarial challenge and perspective reversal first?"
+
+  - id: "p0-ch07-decision-memo-008"
+    front: "What does it mean if a student's confidence decreased between Exercise 1 and Exercise 4?"
+    back: "It typically indicates intellectual growth -- the student now understands the dilemma's complexity more fully and recognizes legitimate uncertainty they previously ignored."
+    tags: ["confidence-calibration", "ethical-reasoning"]
+    difficulty: "advanced"
+    why: "When might decreased confidence be a sign of confusion rather than growth?"
