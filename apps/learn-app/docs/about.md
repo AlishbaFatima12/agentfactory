@@ -136,17 +136,13 @@ By the end of this book, you will not simply understand agentic AI as an idea. Y
 
 ---
 
-This is a significant architectural idea — the book itself becomes infrastructure, not just content. Here's where to place it and what to write.
-
----
-
 ## This Book Is Infrastructure, Not Just Text: Three Modes of Delivery
 
 Most books are written for one mode of consumption: a human reads page after page. This book is designed for three.
 
-**Mode 1: Human Reading.** The traditional path. You read the chapters, study the frameworks, complete the exercises, and build deployable artefacts. Every chapter in this book stands on its own as a self-contained unit of professional education. This mode is what the "How to Read This Book" section below describes.
+**Mode 1: Human Reading.** The traditional path. You read the chapters, study the frameworks, complete the exercises, and build deployable artefacts. Every chapter in this book stands on its own as a self-contained unit of professional education. This mode is what the Reader Guide below describes.
 
-**Mode 2: TutorClaw — Your Personal AI Tutor.** TutorClaw is a teaching agent that uses this book as its knowledge foundation. It runs 24/7 with persistent memory across WhatsApp, Telegram, and web — meeting you where you already are. It teachs you step-by-step given your background. When you ask TutorClaw to explain IFRS 9 staging or walk you through a SKILL.md for contract review, it draws on the same domain knowledge, the same governance principles, and the same jurisdiction-aware frameworks that the chapters contain. But it adapts to your pace, your background, and your questions in real time. The book gives TutorClaw its expertise. TutorClaw gives the book a voice.
+**Mode 2: TutorClaw — Your Personal AI Tutor.** TutorClaw is a teaching agent that uses this book as its knowledge foundation. It runs 24/7 with persistent memory across WhatsApp, Telegram, and web — meeting you where you already are. It teaches you step-by-step. When you ask TutorClaw to explain IFRS 9 staging or walk you through a SKILL.md for contract review, it draws on the same domain knowledge, the same governance principles, and the same jurisdiction-aware frameworks that the chapters contain. But it adapts to your pace, your background, and your questions in real time. The book gives TutorClaw its expertise. TutorClaw gives the book a voice.
 
 **Mode 3: The FTE Development Plugin — Your AI Building Partner.** The FTE Development Plugin for Claude Code uses this book as its operational playbook. When you are building a Digital FTE — writing the spec, structuring the SKILL.md, defining escalation protocols, configuring MCP connectors — the plugin guides you through the development workflow step by step, drawing on the patterns, templates, and domain knowledge encoded in every chapter. Where TutorClaw teaches you the *theory*, the FTE Plugin walks beside you during *construction*. It is the difference between reading about how a factory works and having a foreman on the floor.
 
