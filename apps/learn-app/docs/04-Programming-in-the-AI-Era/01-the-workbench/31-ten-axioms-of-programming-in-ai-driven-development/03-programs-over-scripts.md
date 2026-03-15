@@ -551,7 +551,7 @@ Think about James's image renaming script from the lesson opening. His script al
 
 Write in your own words — without asking AI — the answer to this question: **Which specific quality from Student B's notebook plan would have prevented James's Unicode crash?** Map it directly: what is the notebook's "backup plan" equivalent in code?
 
-Apply the **Error Taxonomy**: the napkin plan failing when the bakery is closed = **data/edge-case error** — there was no plan for unexpected inputs. James's script crashing on a Unicode character is the same category. The notebook plan's backup section and the program's `try/except` block both handle this class of error by anticipating what could go wrong *before* it does.
+Apply the **Error Taxonomy**: the napkin plan failing when the bakery is closed = **data/edge-case error** — there was no plan for unexpected inputs. James's script crashing on a Unicode character is the same category. The notebook plan's backup section and the program's `try/except` block both handle this class of error by anticipating what could go wrong *before* it does. Now consider a second failure: Student A's napkin says "buy cake" but doesn't specify *how much* cake for the number of guests — buying one cake for 50 people is a **logic error**, where the reasoning itself is flawed even though every step executes correctly. Scripts fail the same way: the commands run fine, but the *logic* connecting them produces wrong results at scale.
 
 ### Modify
 
