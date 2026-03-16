@@ -428,6 +428,29 @@
   color: var(--ifm-color-emphasis-800);
 }
 
+.submittedDetails {
+  margin-top: 0.75rem;
+}
+
+.submittedDetailsSummary {
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-600);
+  padding: 0.3rem 0;
+  user-select: none;
+}
+
+.submittedDetailsSummary:hover {
+  color: var(--ifm-color-primary);
+}
+
+.submittedDetails[open] .promptBody {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  opacity: 0.85;
+}
+
 .xpEarned {
   font-size: 0.8rem;
   font-weight: 700;

@@ -510,7 +510,7 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
     state === "submitting" ||
     state === "error";
 
-  // ── Already Submitted (static display) ──
+  // ── Already Submitted (static display + expandable prompt) ──
   if (state === "submitted" && !response) {
     return (
       <div
@@ -526,6 +526,12 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
             </div>
           </div>
         </div>
+        <details className={styles.submittedDetails}>
+          <summary className={styles.submittedDetailsSummary}>
+            View exercise prompt
+          </summary>
+          <div className={styles.promptBody}>{children}</div>
+        </details>
       </div>
     );
   }
