@@ -206,7 +206,7 @@ Instead of a peer panel questioning your work, you submit your deliverable to AI
 The solo path is not inferior to the peer path — it is different. Peers provide unpredictability, social pressure, and perspectives you cannot anticipate. AI provides consistency, tirelessness, and the ability to generate adversarial challenges on demand. If possible, combine both.
 
 <details>
-<summary>How This Scales: Assessment for 16,000 Students (Instructor Reference)</summary>
+<summary>How This Scales: Assessment for Tens of Thousands of Students (Instructor Reference)</summary>
 
 **Tier 1 — AI First-Pass (every student, every exercise):**
 Every exercise includes an exact AI check prompt. The student submits their work, receives AI-generated scores and feedback, and includes this in their portfolio. This provides immediate, personalized feedback at unlimited scale. AI scores serve as the baseline assessment.
