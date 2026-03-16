@@ -16,7 +16,7 @@ keywords:
     "test-driven generation",
     "TDG preview",
   ]
-chapter: 33
+chapter: 45
 lesson: 4
 duration_minutes: 15
 

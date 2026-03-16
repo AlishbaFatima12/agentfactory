@@ -111,7 +111,7 @@ James leans in. "What if I don't know Python yet?"
 
 "That's the point," Emma says. "You're learning the *process*, not the syntax. Ready?"
 
-> **About the code below:** You have not learned Python yet. That is the point. You are seeing what the PRIMM process looks like with real code. Focus on the *process*, not the syntax. When you encounter Python in Chapter 33, you will already know how to approach it.
+> **About the code below:** You have not learned Python yet. That is the point. You are seeing what the PRIMM process looks like with real code. Focus on the *process*, not the syntax. When you encounter Python in Chapter 45, you will already know how to approach it.
 
 ### Stage 1: Predict [AI-FREE]
 

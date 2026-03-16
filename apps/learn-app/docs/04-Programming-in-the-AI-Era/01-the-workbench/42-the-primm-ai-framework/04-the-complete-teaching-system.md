@@ -173,7 +173,7 @@ James has a question that every student asks: "What exactly happens when I open 
 
 Emma walks him through it. "Every lesson follows the same five steps — one for each PRIMM stage. Once you've done it twice, you'll stop thinking about the process and just focus on the code."
 
-Here is what a typical lesson looks like when all the pieces work together. You will recognize this pattern starting in Chapter 33.
+Here is what a typical lesson looks like when all the pieces work together. You will recognize this pattern starting in Chapter 45.
 
 **Step 1: Predict.** The lesson presents a compact, complete program (a worked example). You write your prediction and confidence score without AI assistance. This is the worked example method combined with the AI-free checkpoint from Lesson 2.
 
@@ -285,7 +285,7 @@ tell me which step we are on and what I should do. Start by
 showing the code and asking me to predict.
 ```
 
-**What you are learning:** How the five-step lesson architecture feels in practice. By experiencing all five steps with AI guiding the process, you will recognize the pattern immediately when you encounter it in Chapter 33 and beyond.
+**What you are learning:** How the five-step lesson architecture feels in practice. By experiencing all five steps with AI guiding the process, you will recognize the pattern immediately when you encounter it in Chapter 45 and beyond.
 
 ---
 

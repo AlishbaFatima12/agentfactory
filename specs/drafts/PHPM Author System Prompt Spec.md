@@ -281,15 +281,15 @@ Every code example, exercise, and project in Parts 4–5 must conform to the dis
 {  
   "discipline\_stack": {  
     "tools": {  
-      "uv": {  
-        "purpose": "Project and dependency management",  
-        "introduced\_in": "Chapter 31 (Development Environment)",  
-        "rule": "All projects use uv for virtual environments and dependency management. No pip install in examples."  
+      "uv": {
+        "purpose": "Project and dependency management",
+        "introduced\_in": "Chapter 44 (Development Environment)",
+        "rule": "All projects use uv for virtual environments and dependency management. No pip install in examples."
       },  
-      "ruff": {  
-        "purpose": "Code formatting and linting",  
-        "introduced\_in": "Chapter 31",  
-        "rule": "All code examples must pass ruff check and ruff format. Show ruff output in early chapters."  
+      "ruff": {
+        "purpose": "Code formatting and linting",
+        "introduced\_in": "Chapter 44",
+        "rule": "All code examples must pass ruff check and ruff format. Show ruff output in early chapters."
       },  
       "pyright": {  
         "purpose": "Static type checking",  

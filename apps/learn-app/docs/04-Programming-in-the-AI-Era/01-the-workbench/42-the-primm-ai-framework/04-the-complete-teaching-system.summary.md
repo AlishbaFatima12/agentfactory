@@ -28,4 +28,4 @@ PRIMM-AI+ is not just five stages -- it embeds four proven teaching methods (wor
 
 ### Connections
 - **Builds on**: Lesson 1 (five PRIMM stages), Lesson 2 (AI-free checkpoints, mastery gates), Lesson 3 (confidence scoring, verification ladder).
-- **Leads to**: Chapter 33 and beyond where you will experience the five-step lesson architecture in practice with actual Python programming concepts -- the pattern becomes automatic.
+- **Leads to**: Chapter 45 and beyond where you will experience the five-step lesson architecture in practice with actual Python programming concepts -- the pattern becomes automatic.

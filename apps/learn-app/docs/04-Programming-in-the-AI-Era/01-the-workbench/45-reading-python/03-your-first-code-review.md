@@ -18,7 +18,7 @@ keywords:
     "verification",
     "static analysis",
   ]
-chapter: 33
+chapter: 45
 lesson: 3
 duration_minutes: 30
 
@@ -219,7 +219,7 @@ The trace table makes the problem visible. Row 12 shows `bonus_points` holding a
 
 ## Step 2: Run
 
-Now run the buggy code. Pyright is a *static type checker* -- it reads your code *without running it* and checks whether the types make sense. You installed it in Chapter 32 as part of your discipline stack. Run Pyright first, then Python:
+Now run the buggy code. Pyright is a *static type checker* -- it reads your code *without running it* and checks whether the types make sense. You installed it in Chapter 44 as part of your discipline stack. Run Pyright first, then Python:
 
 ```
 $ uv run pyright main.py

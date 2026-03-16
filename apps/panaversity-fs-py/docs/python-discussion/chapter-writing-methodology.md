@@ -30,7 +30,7 @@ This methodology document uses the **book chapter numbers** (as they appear in `
 | Chapter 42 | PRIMM-AI+ Framework | `42-the-primm-ai-framework/` |
 | Chapter 43 | Ten Axioms of Programming | `43-ten-axioms-of-programming-in-ai-driven-development/` |
 | Chapter 6 | Seven Principles | `06-seven-principles/` |
-| Chapter 33+ | Python programming chapters | Future chapters |
+| Chapter 45+ | Python programming chapters | Future chapters |
 
 **Rule**: Always verify chapter numbers against the filesystem using `ls -d apps/learn-app/docs/*/NN-*/` before referencing them. Never guess.
 
@@ -108,7 +108,7 @@ The critical distinction learned from Chapter 43 (v2 rewrite after PR #853 failu
 | **Investigate stage** | Trace tables, variable tracking | Written explanation, Error Taxonomy classification |
 | **Modify stage** | Change code, observe behavior change | Change scenario, reason about what breaks |
 | **Make stage** | Write new code from spec | Write structured plan, checklist, or document |
-| **Chapters** | Chapter 33+ (Python programming) | Chapters 30-31 (conceptual foundations) |
+| **Chapters** | Chapter 45+ (Python programming) | Chapters 42-43 (conceptual foundations) |
 
 **The PR #853 Lesson**: The first attempt at Chapter 43 PRIMM-AI+ used Track A exercises (Makefiles, pytest, SQL, Docker, git commands) for students who didn't know those tools yet. Every exercise was inaccessible. The v2 rewrite switched to Track B — all exercises use real-world scenarios and plain-English reasoning, not code. **Always match the track to what students actually know at that point in the book.**
 
@@ -498,7 +498,7 @@ Looking Ahead (1-2 paragraphs)
 └── Bridge to next lesson
 ```
 
-**Note**: Not every lesson includes all sections. Conceptual lessons (like Ch 42 L1-L3) may focus on specific stages. Programming lessons (Ch 33+) include the full five-step code cycle.
+**Note**: Not every lesson includes all sections. Conceptual lessons (like Ch 42 L1-L3) may focus on specific stages. Programming lessons (Ch 45+) include the full five-step code cycle.
 
 ---
 
@@ -819,7 +819,7 @@ Structured Writing     — 20% (ADRs, plans, checklists, specifications)
 Scenario Reasoning     — 15% (what breaks if you change X?)
 ```
 
-### Track A Exercises (Programming Chapters — Ch 33+)
+### Track A Exercises (Programming Chapters — Ch 45+)
 
 ```
 Type 1: Read & Predict     — 60% of exercises (PRIMARY)

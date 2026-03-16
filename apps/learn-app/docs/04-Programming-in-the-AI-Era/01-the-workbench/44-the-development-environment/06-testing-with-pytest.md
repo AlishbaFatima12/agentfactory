@@ -3,7 +3,7 @@ sidebar_position: 6
 title: "Testing With pytest"
 description: "Write your first pytest test for the SmartNotes project, run it, and learn to read pass/fail output to verify that code does what it is supposed to do."
 keywords: ["pytest", "testing", "assert", "test output", "pass fail", "test discovery", "naming conventions", "SmartNotes", "verification"]
-chapter: 32
+chapter: 44
 lesson: 6
 duration_minutes: 18
 

@@ -130,7 +130,7 @@ James stares at the error. "I... don't know how to tell."
 
 "That's what this table is for."
 
-When your code does not work, the first question is: *what kind of problem is this?* Not all bugs are the same. Knowing which kind you are looking at tells you where to search. You do not need to memorize this table now -- just know it exists. You will practice finding each kind starting in Chapter 33.
+When your code does not work, the first question is: *what kind of problem is this?* Not all bugs are the same. Knowing which kind you are looking at tells you where to search. You do not need to memorize this table now -- just know it exists. You will practice finding each kind starting in Chapter 45.
 
 | Kind of Bug | What Went Wrong | Simple Example |
 |-------------|----------------|----------------|
@@ -174,7 +174,7 @@ By the time you finish Parts 4 and 5, these habits will be automatic. You will r
 
 "Every programming chapter ends with a self-check," Emma says. "Five questions. Honest answers. It takes two minutes and tells you exactly where you stand."
 
-Starting in Chapter 33, every programming chapter ends with a self-assessment against five dimensions. Here is the rubric you will use:
+Starting in Chapter 45, every programming chapter ends with a self-assessment against five dimensions. Here is the rubric you will use:
 
 | Dimension | What It Measures |
 |-----------|-----------------|
@@ -282,8 +282,8 @@ of bug it is before showing me the fix.
 
 ## Looking Ahead
 
-You now have the measurement tools that close the loop: confidence scoring that trains honest self-assessment, a verification ladder that shows how today's predictions connect to tomorrow's production systems, diagnostic vocabulary for five kinds of bugs, and a professional practice mapping that proves every exercise has a real-world payoff. The chapter-end rubric will be your checkpoint starting in Chapter 33.
+You now have the measurement tools that close the loop: confidence scoring that trains honest self-assessment, a verification ladder that shows how today's predictions connect to tomorrow's production systems, diagnostic vocabulary for five kinds of bugs, and a professional practice mapping that proves every exercise has a real-world payoff. The chapter-end rubric will be your checkpoint starting in Chapter 45.
 
 James sits back. "I know the stages, the rules, the checkpoints, and now the tools to measure myself. But what does a real lesson actually *feel* like when all of this is running at once?"
 
-"That's what the final lesson shows you," Emma says. "The exact architecture that every programming chapter in this book follows. Once you see it, you'll recognize the pattern the moment you hit Chapter 33."
+"That's what the final lesson shows you," Emma says. "The exact architecture that every programming chapter in this book follows. Once you see it, you'll recognize the pattern the moment you hit Chapter 45."

@@ -29,4 +29,4 @@ PRIMM-AI+ includes five measurement and growth tools that connect learning exerc
 
 ### Connections
 - **Builds on**: Lesson 2's PRIMM-AI+ cycle with roles, boundaries, checkpoints, gates, and five rules — this lesson adds the measurement and scaling tools that complete the framework
-- **Leads to**: Lesson 4 covers the final enhancement (classroom and solo modes) and the practical lesson architecture that governs every programming chapter from Chapter 33 forward, showing how all these tools work together in real lessons
+- **Leads to**: Lesson 4 covers the final enhancement (classroom and solo modes) and the practical lesson architecture that governs every programming chapter from Chapter 45 forward, showing how all these tools work together in real lessons

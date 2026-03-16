@@ -20,7 +20,7 @@ keywords:
     "f-strings",
     "boolean logic",
   ]
-chapter: 33
+chapter: 45
 lesson: 1
 duration_minutes: 20
 
@@ -74,7 +74,7 @@ differentiation:
 
 # The PRIMM Method -- Predict, Run, Investigate
 
-In Chapter 32, you built the workbench -- uv, pyright, ruff, pytest, and Git. Every tool is installed, every configuration file is in place, and SmartNotes has a clean foundation. Now you use it. This chapter is where you meet Python for the first time -- not by writing it, but by reading it.
+In Chapter 44, you built the workbench -- uv, pyright, ruff, pytest, and Git. Every tool is installed, every configuration file is in place, and SmartNotes has a clean foundation. Now you use it. This chapter is where you meet Python for the first time -- not by writing it, but by reading it.
 
 Before you see a single line of Python, you need to know the method you will use to read it. That method is called PRIMM, and it is the backbone of this entire course.
 
@@ -172,7 +172,7 @@ Time to practice. For each block, you will ask your AI assistant to generate a s
 $ uv run python main.py
 ```
 
-`uv` is the package manager you installed in Chapter 32. `uv run python main.py` tells it to execute your Python file.
+`uv` is the package manager you installed in Chapter 44. `uv run python main.py` tells it to execute your Python file.
 
 ---
 

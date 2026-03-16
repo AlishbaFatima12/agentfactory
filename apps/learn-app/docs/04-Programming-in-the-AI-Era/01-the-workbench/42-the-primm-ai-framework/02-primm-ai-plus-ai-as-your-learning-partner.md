@@ -53,7 +53,7 @@ cognitive_load:
 
 differentiation:
   extension_for_advanced: "Compare PRIMM-AI+ boundaries with pair programming protocols (driver/navigator) and formal code review practices. Analyze how the AI Permissions Table maps to specific failure modes in AI-assisted development."
-  remedial_for_struggling: "Focus exclusively on the five rules and the lesson walkthrough. Treat AI permissions and mastery gates as reference material to revisit when starting Chapter 33."
+  remedial_for_struggling: "Focus exclusively on the five rules and the lesson walkthrough. Treat AI permissions and mastery gates as reference material to revisit when starting Chapter 45."
 ---
 
 # PRIMM-AI+: AI as Your Learning Partner

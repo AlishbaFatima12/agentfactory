@@ -3,7 +3,7 @@ sidebar_position: 1
 title: "Why the Toolchain Comes First"
 description: "Professional Python development starts with five tools, not with syntax. Learn the discipline stack and how each tool connects to the axioms from Chapter 43."
 keywords: ["python toolchain", "discipline stack", "uv", "pyright", "ruff", "pytest", "git", "development environment", "package manager", "static analysis"]
-chapter: 32
+chapter: 44
 lesson: 1
 duration_minutes: 20
 
