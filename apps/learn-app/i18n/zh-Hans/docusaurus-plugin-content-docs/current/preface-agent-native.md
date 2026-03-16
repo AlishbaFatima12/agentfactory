@@ -146,7 +146,7 @@ SaaSpocalypse 并不是凭空发生的。它只是市场终于追上了一个早
 
 为了理解价值正以多快的速度向 agent-native 公司集中，请把 Anthropic 2026 年 3 月 15 日的估值，与印度市值最高的上市 IT 公司做个对比。
 
-![Anthropic 有多大？与印度 IT 巨头的市值对比](../static/img/anthropic_15_march_market_cap.png)
+![Anthropic 有多大？与印度 IT 巨头的市值对比](/img/anthropic_15_march_market_cap.png)
 
 ### 如何转向
 

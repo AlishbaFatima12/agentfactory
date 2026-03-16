@@ -146,7 +146,7 @@ _یہ تازہ ترین درجہ بندی کا فریم ورک ہے۔ اس می�
 
 یہ سمجھنے کے لیے کہ <span dir="ltr">agent-native</span> کمپنیوں میں قدر کتنی تیزی سے مرتکز ہو رہی ہے، 15 مارچ 2026 کو <span dir="ltr">Anthropic</span> کی قدر کا موازنہ بھارت کی سب سے بڑی فہرست شدہ <span dir="ltr">IT</span> کمپنیوں سے کریں۔
 
-![Anthropic کتنا بڑا ہے؟ بھارت کے IT giants کے ساتھ market cap کا موازنہ](../static/img/anthropic_15_march_market_cap.png)
+![Anthropic کتنا بڑا ہے؟ بھارت کے IT giants کے ساتھ market cap کا موازنہ](/img/anthropic_15_march_market_cap.png)
 
 ### رخ کیسے موڑیں
 
