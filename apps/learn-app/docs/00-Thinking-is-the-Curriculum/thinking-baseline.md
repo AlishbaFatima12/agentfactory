@@ -66,6 +66,12 @@ teaching_guide:
     - "This is the last lesson before Chapter 1. Make the transition explicit: 'You now know your starting point. Chapter 1 begins training your first thinking skill: question formulation'"
   assessment_quick_check:
     - "Verify every student has saved their baseline responses AND their AI Baseline Score Card before moving to Chapter 1 -- this is a hard gate, not optional"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # Thinking Baseline: Where You Start
