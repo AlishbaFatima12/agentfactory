@@ -9,9 +9,11 @@ title: "Part 0: Thinking is the Curriculum"
 
 **AI did not create a thinking crisis. It exposed one.**
 
+Everyone is telling you to reskill. Learn AI tools or get left behind. They are right, but they are solving the wrong problem. The tools are easy. Thinking is hard. A twelve-year-old can prompt ChatGPT. The hard part is knowing whether what it gave you is true. The hard part is asking the question it would never ask itself. The hard part is thinking. AI does not reward people who can use it. AI rewards people who can think clearly enough to direct it, question it, and know when it is wrong. Our education systems spent twenty years giving us knowledge and never once taught us how to think with it. Part 0 fixes that.
+
 Millions of students can now generate essays, analyses, code, and business plans in seconds. Almost none of them can tell whether what AI produced is correct. They cannot ask the question that AI never thought to ask. They cannot spot the reasoning flaw buried in a fluent paragraph. They cannot look at a system and see the second-order consequence that breaks everything. They have the most powerful cognitive tool in human history — and no idea how to think with it.
 
-This is not their fault. They were never taught to think in a world where thinking can be outsourced. **Every AI curriculum on earth starts in the wrong place.** They start with tools. Prompts. APIs. Frameworks. They teach people to _operate_ AI. Not one of them puts thinking first.
+This is not their fault. They were never taught to think in a world where thinking can be outsourced. **Every AI curriculum on earth starts in the wrong place.** They start with tools. Prompts. APIs. Frameworks. They teach people to *operate* AI. Not one of them puts thinking first.
 
 **Part 0 puts thinking first.**
 
@@ -21,13 +23,13 @@ The rest of this book will make you powerful. This part determines whether you u
 
 **The Unsolved Problem**
 
-Every university, every bootcamp, every corporate training program is asking the same question: _If students have access to AI, how do we know they actually learned to think?_
+Every university, every bootcamp, every corporate training program is asking the same question: *If students have access to AI, how do we know they actually learned to think?*
 
 The honest answer, until now, has been: we don't.
 
 Some institutions ban AI. That is denial. Some allow AI and grade the output. That is grading AI, not the student. Some add oral exams on top. That helps, but does not scale.
 
-Part 0 is a different answer. It introduces **six assessment layers** — prediction locks, reasoning receipts, live defence, contradiction challenges, divergence tests, and iterative drafts — engineered so that passing all six _requires_ genuine human thinking. No single layer is cheat-proof. All six together are. This is not a policy. It is an architecture.
+Part 0 is a different answer. It introduces **six assessment layers** — prediction locks, reasoning receipts, live defence, contradiction challenges, divergence tests, and iterative drafts — engineered so that passing all six *requires* genuine human thinking. No single layer is cheat-proof. All six together are. This is not a policy. It is an architecture.
 
 **And it scales.** AI gives every student instant, personalized feedback on every exercise. Peer review circles add human judgment. Instructors intervene only on flagged cases. The result: rigorous thinking assessment for tens of thousands of students — with no multiple-choice exams, no essay mills, and no guesswork about who actually learned.
 
@@ -37,7 +39,29 @@ Eleven chapters. Ten thinking skills. Forty exercises. One rule:
 
 You will not be graded on what you produced. You will be graded on whether you can prove you thought.
 
+:::info What This Looks Like in Practice
+
+**Exercise:** Should a startup build a custom AI agent or use an off-the-shelf tool?
+
+**Step 1 — Prediction Lock (before you touch AI):**
+Write your position and seal it. You cannot change it later.
+> "I predict custom-built wins for companies with unique workflows. Confidence: 55%. I'd change my mind if off-the-shelf tools handle customization better than I expect."
+
+**Step 2 — AI Research (now you open AI):**
+Give the same question to Claude and ChatGPT. Read their arguments. Do not copy them. Decide what you agree with, what you reject, and why.
+
+**Step 3 — Reasoning Receipt (document your decisions):**
+> "AI argued that off-the-shelf saves 6 months. I agreed on speed but rejected its assumption that the startup's workflow is standard. My confidence shifted from 55% to 70%."
+
+**Step 4 — AI Grades Your Thinking (not your answer):**
+Submit your prediction lock and reasoning receipt to AI using the prompt provided in the exercise. AI scores you on five dimensions: independent thinking, critical evaluation, reasoning depth, originality, and self-awareness. The grade is on *how* you thought — not *what* you concluded.
+
+The student who copied AI's answer scores low. The student who disagreed with AI and explained why scores high — even if their final answer is the same.
+
+:::
+
 > _Part 0 teaches humans how to thrive in the AI era. The rest of the book builds the era itself._
+
 
 ## What You Need
 
