@@ -428,6 +428,10 @@ The Shallow Pipeline is the CI equivalent of the Green Bar Illusion from Axiom V
 
 The fix is the full verification pyramid. Every level exists because it catches problems invisible to the levels below it. A pipeline without tests is like a spell-checker without grammar-checking — it catches some problems but misses the ones that matter most.
 
+:::tip Reading Checkpoint
+This is a natural stopping point. If you need a break, bookmark this spot and return when you are ready. Everything above covers the core concept; everything below applies it through exercises and practice.
+:::
+
 CI secrets are also part of pipeline discipline. Never put secrets directly in workflow files:
 
 ```yaml

@@ -178,6 +178,10 @@ This origin explains the comparison table above. Markdown was designed for human
 
 ### The Structure Advantage
 
+:::tip Reading for the Format, Not the Syntax
+The code blocks in this lesson show markdown formatting examples and project file structures. You do not need to memorize any syntax — focus on *why* structured text is better than unstructured conversation for preserving knowledge.
+:::
+
 This is where markdown's design genius — and its relevance to James's situation — becomes concrete. It provides just enough structure to be parseable without becoming a data format that sacrifices readability:
 
 ```text

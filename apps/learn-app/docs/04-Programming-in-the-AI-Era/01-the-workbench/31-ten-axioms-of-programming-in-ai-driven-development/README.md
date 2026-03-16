@@ -18,6 +18,29 @@ keywords:
 chapter: 31
 lesson: 0
 duration_minutes: 15
+
+skills:
+  - name: "Chapter Navigation"
+    proficiency_level: "A2"
+    category: "Conceptual"
+    bloom_level: "Remember"
+    digcomp_area: "Information Literacy"
+    measurable_at_this_level: "Student can identify which axiom group (Structure, Data, Verification) a given engineering concern belongs to"
+
+learning_objectives:
+  - objective: "Identify the three axiom groups and their purposes"
+    proficiency_level: "A2"
+    bloom_level: "Remember"
+    assessment_method: "Student can name the three groups and list which axioms belong to each"
+
+cognitive_load:
+  new_concepts: 3
+  assessment: "3 concepts (three axiom groups, PRIMM-AI+ preview, Verification Ladder overview) well within A2 range"
+
+differentiation:
+  extension_for_advanced: "Preview all 10 axioms and predict which ones will be most relevant to your own projects before reading the lessons."
+  remedial_for_struggling: "Focus only on the three-group structure (Structure, Data, Verification) and read one axiom at a time rather than all ten sequentially."
+
 slides:
   source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-4/chapter-31/the-agentic-engineering-system.pdf"
   title: "The Agentic Engineering System"

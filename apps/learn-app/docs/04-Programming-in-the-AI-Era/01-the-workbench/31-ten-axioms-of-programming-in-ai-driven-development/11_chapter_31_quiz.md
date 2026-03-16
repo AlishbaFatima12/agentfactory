@@ -485,12 +485,12 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
     {
       question: "James stores customer names directly in each order record: order #101 says 'Acme Corp' and order #102 says 'Acme Corporation' for the same customer. When he queries total revenue by customer, the report shows two separate entries. What relational principle from Axiom VI does this violate?",
       options: [
-        "'One Fact, One Place' — the customer name should be stored once in a customers table and referenced by customer_id in orders, so a name change applies everywhere automatically",
-        "'Schema as Type Definition' — the orders table should have a CHECK constraint that validates customer names against a predefined list of approved company name formats",
         "'SQL as Declarative Language' — the report query should use GROUP BY with a fuzzy matching function to merge similar customer names into a single aggregated row",
+        "'Schema as Type Definition' — the orders table should have a CHECK constraint that validates customer names against a predefined list of approved company name formats",
+        "'One Fact, One Place' — the customer name should be stored once in a customers table and referenced by customer_id in orders, so a name change applies everywhere automatically",
         "'Migrations as Version Control' — a database migration should normalize existing customer names by finding and correcting all variations before adding a uniqueness constraint"
       ],
-      correctOption: 0,
+      correctOption: 2,
       explanation: "Axiom VI's 'One Fact, One Place' principle states: store each fact exactly once. Customer names belong in a customers table, referenced by customer_id in the orders table. When the name is stored once, changing it in one place updates every reference automatically. Duplicated names across records inevitably drift — 'Acme Corp' vs 'Acme Corporation' — creating inconsistency that no query can reliably resolve. Option C is tempting because fuzzy matching can merge similar names in a report, but it treats the symptom (inconsistent names) rather than the cause (duplicated storage).",
       source: "Lesson 06: Data is Relational"
     },
@@ -693,7 +693,7 @@ Test your understanding of the ten axioms that govern effective AI-driven softwa
 | 34 | A | Axiom V: Types Are Guardrails |
 | 35 | B | Axiom V: Types Are Guardrails |
 | 36 | A | Axiom VI: Data is Relational |
-| 37 | A | Axiom VI: Data is Relational |
+| 37 | C | Axiom VI: Data is Relational |
 | 38 | B | Axiom VI: Data is Relational |
 | 39 | B | Axiom VII: Tests Are the Specification |
 | 40 | A | Axiom VII: Tests Are the Specification |
