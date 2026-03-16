@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useProgress } from "@/contexts/ProgressContext";
 import { submitExercise, ExerciseSubmitError } from "@/lib/progress-api";
@@ -9,6 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
+  DialogFooter,
 } from "@/components/ui/dialog";
 import {
   Select,
@@ -20,20 +22,24 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { FileUp, Loader2, CheckCircle2 } from "lucide-react";
+import {
+  FileUp,
+  Loader2,
+  CheckCircle2,
+  Sparkles,
+  AlertCircle,
+  Send,
+} from "lucide-react";
 import styles from "./SubmissionDialog.module.css";
 
-// Provider display names
-const PROVIDER_LABELS: Record<string, string> = {
-  chatgpt: "ChatGPT",
-  claude: "Claude",
-  gemini: "Gemini",
-  grok: "Grok",
-  "claude-code": "Claude Code",
-  cowork: "Cowork",
-};
+const PROVIDERS: { value: string; label: string }[] = [
+  { value: "chatgpt", label: "ChatGPT" },
+  { value: "claude", label: "Claude" },
+  { value: "gemini", label: "Gemini" },
+  { value: "grok", label: "Grok" },
+  { value: "claude-code", label: "Claude Code" },
+  { value: "cowork", label: "Cowork" },
+];
 
 interface SubmissionConfig {
   type: string;
@@ -50,6 +56,15 @@ interface SubmissionDialogProps {
 }
 
 type DialogState = "idle" | "open" | "submitting" | "submitted" | "error";
+
+const spring = { type: "spring" as const, stiffness: 400, damping: 30 };
+const stagger = {
+  animate: { transition: { staggerChildren: 0.07 } },
+};
+const fadeUp = {
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0, transition: spring },
+};
 
 export default function SubmissionDialog({
   chapterSlug,
@@ -75,8 +90,6 @@ export default function SubmissionDialog({
   const [response, setResponse] = useState<ExerciseSubmitResponse | null>(null);
 
   const xp = submission.xp_bonus || 50;
-
-  // If already completed on a return visit, show done state
   const effectiveState =
     alreadyCompleted && state === "idle" ? "submitted" : state;
 
@@ -93,7 +106,7 @@ export default function SubmissionDialog({
   }, []);
 
   const handleClose = useCallback(() => {
-    if (state === "submitting") return; // Don't close while submitting
+    if (state === "submitting") return;
     setState("idle");
   }, [state]);
 
@@ -141,167 +154,216 @@ export default function SubmissionDialog({
     setErrorMessage("");
   }, []);
 
+  const availableProviders = PROVIDERS.filter((p) =>
+    submission.providers.includes(p.value),
+  );
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.divider} />
 
-      {effectiveState === "submitted" ? (
-        <div className={styles.submittedSection}>
-          <div className={styles.doneRow}>
-            <CheckCircle2 className={styles.checkIcon} />
-            <span className={styles.doneText}>
-              Submitted
-              {response?.xp_earned ? (
-                <Badge variant="secondary" className={styles.xpBadgeGreen}>
-                  +{response.xp_earned} XP
-                </Badge>
-              ) : null}
-            </span>
-          </div>
-          {response?.scores && <ScoreCardDisplay scores={response.scores} />}
-        </div>
-      ) : effectiveState === "error" ? (
-        <div className={styles.errorRow}>
-          <span className={styles.errorText}>{errorMessage}</span>
-          <Button variant="destructive" size="sm" onClick={handleRetry}>
-            Try again
-          </Button>
-        </div>
-      ) : (
-        <>
-          <Button
-            variant="outline"
-            onClick={handleOpen}
-            disabled={effectiveState === "submitting"}
+      <AnimatePresence mode="wait">
+        {effectiveState === "submitted" ? (
+          <motion.div
+            key="submitted"
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={spring}
+            className={styles.submittedCard}
           >
-            <FileUp />
-            Submit Your AI Check
-            <Badge variant="secondary" className={styles.xpBadgeGreen}>
-              {xp} XP
-            </Badge>
-          </Button>
-
-          <Dialog
-            open={effectiveState === "open" || effectiveState === "submitting"}
-            onOpenChange={(open) => {
-              if (!open) handleClose();
-            }}
+            <div className={styles.submittedHeader}>
+              <motion.div
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ ...spring, stiffness: 300 }}
+              >
+                <CheckCircle2 className={styles.checkIcon} />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -12 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.15, ...spring }}
+                className={styles.submittedMeta}
+              >
+                <span className={styles.submittedTitle}>
+                  Exercise Submitted
+                </span>
+                {response?.xp_earned ? (
+                  <span className={styles.xpEarned}>
+                    +{response.xp_earned} XP
+                  </span>
+                ) : null}
+              </motion.div>
+            </div>
+            {response?.scores && (
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25, ...spring }}
+              >
+                <ScoreCardDisplay scores={response.scores} />
+              </motion.div>
+            )}
+          </motion.div>
+        ) : effectiveState === "error" ? (
+          <motion.div
+            key="error"
+            initial={{ opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            className={styles.errorCard}
           >
-            <DialogContent className="sm:max-w-[540px] max-h-[85vh] overflow-y-auto">
-              <DialogHeader>
-                <DialogTitle>Submit Your AI Check</DialogTitle>
-                <DialogDescription>
-                  Paste your prompt/answers and the AI&apos;s evaluation below.
-                </DialogDescription>
-              </DialogHeader>
+            <AlertCircle size={18} />
+            <span>{errorMessage}</span>
+            <Button variant="outline" size="sm" onClick={handleRetry}>
+              Try again
+            </Button>
+          </motion.div>
+        ) : (
+          <motion.div key="trigger" {...fadeUp}>
+            <button
+              onClick={handleOpen}
+              disabled={effectiveState === "submitting"}
+              className={styles.triggerBtn}
+            >
+              <FileUp size={18} />
+              <span>Submit Your AI Check</span>
+              <span className={styles.xpPill}>{xp} XP</span>
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-              <div className={styles.formGrid}>
-                {/* Provider select */}
-                <div className={styles.fieldGroup}>
-                  <Label>AI Provider</Label>
-                  <Select
-                    value={provider}
-                    onValueChange={setProvider}
-                    disabled={effectiveState === "submitting"}
-                  >
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {submission.providers.map((p) => (
-                        <SelectItem key={p} value={p}>
-                          {PROVIDER_LABELS[p] || p}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
+      <Dialog
+        open={effectiveState === "open" || effectiveState === "submitting"}
+        onOpenChange={(open) => {
+          if (!open) handleClose();
+        }}
+      >
+        <DialogContent className={styles.dialogContent}>
+          <DialogHeader className={styles.dialogHeader}>
+            <DialogTitle className={styles.dialogTitle}>
+              <Sparkles size={18} className={styles.sparkle} />
+              Submit Your AI Check
+            </DialogTitle>
+            <DialogDescription className={styles.dialogDesc}>
+              Paste your work and the AI&apos;s evaluation to earn{" "}
+              <strong className={styles.xpInline}>{xp} XP</strong>
+            </DialogDescription>
+          </DialogHeader>
 
-                {/* Student input */}
-                <div className={styles.fieldGroup}>
-                  <Label>Your Submission</Label>
-                  <p className={styles.fieldHint}>
-                    Paste the prompt you sent and your answers
-                  </p>
-                  <Textarea
-                    className="min-h-[120px] resize-y"
-                    value={studentInput}
-                    onChange={(e) => setStudentInput(e.target.value)}
-                    placeholder="Paste your prompt + answers here..."
-                    disabled={effectiveState === "submitting"}
-                    maxLength={25000}
-                  />
-                  <CharCount current={studentInput.length} max={25000} />
-                </div>
+          <motion.div
+            className={styles.formBody}
+            variants={stagger}
+            initial="initial"
+            animate="animate"
+          >
+            {/* Provider */}
+            <motion.div variants={fadeUp} className={styles.providerRow}>
+              <Label className={styles.labelSm}>AI Provider</Label>
+              <Select
+                value={provider}
+                onValueChange={setProvider}
+                disabled={effectiveState === "submitting"}
+              >
+                <SelectTrigger className={styles.providerTrigger}>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {availableProviders.map((p) => (
+                    <SelectItem key={p.value} value={p.value}>
+                      {p.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </motion.div>
 
-                {/* AI output */}
-                <div className={styles.fieldGroup}>
-                  <Label>AI&apos;s Evaluation</Label>
-                  <p className={styles.fieldHint}>
-                    Paste the AI&apos;s complete response including the Score
-                    Card
-                  </p>
-                  <Textarea
-                    className="min-h-[120px] resize-y"
-                    value={aiOutput}
-                    onChange={(e) => setAiOutput(e.target.value)}
-                    placeholder="Paste the AI's evaluation here..."
-                    disabled={effectiveState === "submitting"}
-                    maxLength={25000}
-                  />
-                  <CharCount current={aiOutput.length} max={25000} />
-                </div>
-
-                {/* Feedback */}
-                <div className={styles.fieldGroup}>
-                  <Label>
-                    Feedback{" "}
-                    <span className={styles.fieldHint}>(optional)</span>
-                  </Label>
-                  <Textarea
-                    className="min-h-[60px] resize-y"
-                    value={feedback}
-                    onChange={(e) => setFeedback(e.target.value)}
-                    placeholder="Any thoughts on this exercise?"
-                    disabled={effectiveState === "submitting"}
-                    maxLength={500}
-                  />
-                  <CharCount current={feedback.length} max={500} />
-                </div>
-
-                {/* Dialog-level error */}
-                {errorMessage && effectiveState === "open" && (
-                  <div className={styles.dialogError}>{errorMessage}</div>
-                )}
-
-                {/* Submit */}
-                <Button
-                  className="w-full"
-                  onClick={handleSubmit}
-                  disabled={!canSubmit || effectiveState === "submitting"}
-                >
-                  {effectiveState === "submitting" ? (
-                    <>
-                      <Loader2 className="animate-spin" />
-                      Submitting...
-                    </>
-                  ) : (
-                    <>
-                      Submit{" "}
-                      <Badge
-                        variant="secondary"
-                        className={styles.xpBadgeGreen}
-                      >
-                        {xp} XP
-                      </Badge>
-                    </>
-                  )}
-                </Button>
+            {/* Step 1 */}
+            <motion.div variants={fadeUp} className={styles.stepCard}>
+              <div className={styles.stepHeader}>
+                <span className={styles.stepNum}>1</span>
+                <span className={styles.stepTitle}>Your Submission</span>
               </div>
-            </DialogContent>
-          </Dialog>
-        </>
-      )}
+              <p className={styles.stepHint}>
+                Paste the prompt you sent and your answers
+              </p>
+              <Textarea
+                className={styles.textarea}
+                value={studentInput}
+                onChange={(e) => setStudentInput(e.target.value)}
+                placeholder="Paste your prompt + answers here..."
+                disabled={effectiveState === "submitting"}
+                maxLength={25000}
+              />
+              <CharCount current={studentInput.length} max={25000} />
+            </motion.div>
+
+            {/* Step 2 */}
+            <motion.div variants={fadeUp} className={styles.stepCard}>
+              <div className={styles.stepHeader}>
+                <span className={styles.stepNum}>2</span>
+                <span className={styles.stepTitle}>AI&apos;s Evaluation</span>
+              </div>
+              <p className={styles.stepHint}>
+                Paste the AI&apos;s complete response including the Score Card
+              </p>
+              <Textarea
+                className={styles.textarea}
+                value={aiOutput}
+                onChange={(e) => setAiOutput(e.target.value)}
+                placeholder="Paste the AI's evaluation here..."
+                disabled={effectiveState === "submitting"}
+                maxLength={25000}
+              />
+              <CharCount current={aiOutput.length} max={25000} />
+            </motion.div>
+
+            {/* Feedback */}
+            <motion.div variants={fadeUp} className={styles.feedbackWrap}>
+              <Label className={styles.labelSm}>
+                Feedback <span className={styles.optional}>optional</span>
+              </Label>
+              <Textarea
+                className={styles.textareaSm}
+                value={feedback}
+                onChange={(e) => setFeedback(e.target.value)}
+                placeholder="Any thoughts on this exercise?"
+                disabled={effectiveState === "submitting"}
+                maxLength={500}
+              />
+              <CharCount current={feedback.length} max={500} />
+            </motion.div>
+
+            {errorMessage && effectiveState === "open" && (
+              <motion.div variants={fadeUp} className={styles.dialogError}>
+                <AlertCircle size={14} />
+                {errorMessage}
+              </motion.div>
+            )}
+          </motion.div>
+
+          <DialogFooter className={styles.dialogFooter}>
+            <button
+              onClick={handleSubmit}
+              disabled={!canSubmit || effectiveState === "submitting"}
+              className={styles.submitBtn}
+            >
+              {effectiveState === "submitting" ? (
+                <>
+                  <Loader2 size={16} className={styles.spinning} />
+                  Submitting...
+                </>
+              ) : (
+                <>
+                  <Send size={16} />
+                  Submit
+                  <span className={styles.xpPillBtn}>{xp} XP</span>
+                </>
+              )}
+            </button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
@@ -309,10 +371,10 @@ export default function SubmissionDialog({
 function CharCount({ current, max }: { current: number; max: number }) {
   if (current === 0) return null;
   const pct = current / max;
-  const cls =
-    pct >= 1 ? styles.charCountError : pct >= 0.9 ? styles.charCountWarn : "";
   return (
-    <span className={`${styles.charCount} ${cls}`}>
+    <span
+      className={`${styles.charCount} ${pct >= 1 ? styles.charCountError : pct >= 0.9 ? styles.charCountWarn : ""}`}
+    >
       {current.toLocaleString()}/{max.toLocaleString()}
     </span>
   );
@@ -328,26 +390,48 @@ function ScoreCardDisplay({ scores }: { scores: ScoreCard }) {
   ] as const;
 
   return (
-    <Card className={styles.scoreCardEnter}>
-      <CardHeader className="pb-2 pt-4 px-4">
-        <CardTitle className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-          Thinking Score Card
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="px-4 pb-4">
-        <div className={styles.scoreGrid}>
-          {dimensions.map(({ key, label }) => (
-            <div key={key} className={styles.scoreRow}>
-              <span className={styles.scoreDimension}>{label}</span>
-              <span className={styles.scoreValue}>{scores[key]}/10</span>
-            </div>
-          ))}
-          <div className={styles.scoreAverage}>
-            <span>Average</span>
-            <span>{scores.average}/10</span>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
+    <div className={styles.scoreCard}>
+      <div className={styles.scoreTitle}>Thinking Score Card</div>
+      <div className={styles.scoreList}>
+        {dimensions.map(({ key, label }, i) => {
+          const val = scores[key] as number;
+          return (
+            <motion.div
+              key={key}
+              className={styles.scoreRow}
+              initial={{ opacity: 0, x: -8 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 + i * 0.06, ...spring }}
+            >
+              <span className={styles.scoreDim}>{label}</span>
+              <div className={styles.scoreBar}>
+                <motion.div
+                  className={styles.scoreBarFill}
+                  initial={{ width: 0 }}
+                  animate={{ width: `${val * 10}%` }}
+                  transition={{
+                    delay: 0.4 + i * 0.08,
+                    duration: 0.6,
+                    ease: "easeOut",
+                  }}
+                />
+              </div>
+              <span className={styles.scoreVal}>{val}/10</span>
+            </motion.div>
+          );
+        })}
+      </div>
+      <div className={styles.scoreAvg}>
+        <span>Average</span>
+        <motion.span
+          className={styles.scoreAvgVal}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.8, ...spring }}
+        >
+          {scores.average}/10
+        </motion.span>
+      </div>
+    </div>
   );
 }
