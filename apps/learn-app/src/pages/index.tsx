@@ -874,6 +874,10 @@ function MonetizationModels() {
   const models = [
     {
       icon: "💼",
+      titleId: "homepage.monetize.model1.title",
+      priceId: "homepage.monetize.model1.price",
+      descId: "homepage.monetize.model1.description",
+      bestForId: "homepage.monetize.model1.bestFor",
       title: "Digital FTE Subscription",
       price: "$1k+/month",
       description:
@@ -882,6 +886,10 @@ function MonetizationModels() {
     },
     {
       icon: "🎯",
+      titleId: "homepage.monetize.model2.title",
+      priceId: "homepage.monetize.model2.price",
+      descId: "homepage.monetize.model2.description",
+      bestForId: "homepage.monetize.model2.bestFor",
       title: "Success Fee",
       price: "Pay-per-result",
       description:
@@ -890,6 +898,10 @@ function MonetizationModels() {
     },
     {
       icon: "📜",
+      titleId: "homepage.monetize.model3.title",
+      priceId: "homepage.monetize.model3.price",
+      descId: "homepage.monetize.model3.description",
+      bestForId: "homepage.monetize.model3.bestFor",
       title: "License the Recipe",
       price: "Annual/Perpetual",
       description:
@@ -898,6 +910,10 @@ function MonetizationModels() {
     },
     {
       icon: "🏪",
+      titleId: "homepage.monetize.model4.title",
+      priceId: "homepage.monetize.model4.price",
+      descId: "homepage.monetize.model4.description",
+      bestForId: "homepage.monetize.model4.bestFor",
       title: "Skill Marketplace",
       price: "Volume-based",
       description: "Sell modular expertise packs via OpenAI Apps or SkillPort.",
@@ -935,20 +951,20 @@ function MonetizationModels() {
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="text-4xl mb-4">{model.icon}</div>
                 <h3 className="text-lg font-bold text-foreground mb-1">
-                  {model.title}
+                  <Translate id={model.titleId}>{model.title}</Translate>
                 </h3>
                 <p className="text-primary font-semibold text-sm mb-3">
-                  {model.price}
+                  <Translate id={model.priceId}>{model.price}</Translate>
                 </p>
                 <p className="text-muted-foreground text-sm flex-grow mb-4">
-                  {model.description}
+                  <Translate id={model.descId}>{model.description}</Translate>
                 </p>
                 <div className="pt-3 border-t border-border/40">
                   <span className="text-xs text-muted-foreground">
                     Best for:{" "}
                   </span>
                   <span className="text-xs text-foreground font-medium">
-                    {model.bestFor}
+                    <Translate id={model.bestForId}>{model.bestFor}</Translate>
                   </span>
                 </div>
               </CardContent>

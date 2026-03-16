@@ -964,5 +964,69 @@
   "homepage.spectrum.example3": {
     "message": "کسٹمر سپورٹ ایجنٹ بنانا جو خود مختار طریقے سے ٹکٹس حل کرتا ہے",
     "description": "AI Native example"
+  },
+  "homepage.monetize.model1.title": {
+    "message": "ڈیجیٹل FTE رکنانہ",
+    "description": "Monetization model 1 title"
+  },
+  "homepage.monetize.model1.price": {
+    "message": "$1,000+/ماہ",
+    "description": "Monetization model 1 price"
+  },
+  "homepage.monetize.model1.description": {
+    "message": "مکمل طور پر منظم، ہوسٹ شدہ ایجنٹ۔ کلائنٹس کے لیے ہینڈس آف آٹومیشن۔",
+    "description": "Monetization model 1 description"
+  },
+  "homepage.monetize.model1.bestFor": {
+    "message": "ایجنسیاں، مشاورین",
+    "description": "Monetization model 1 best for"
+  },
+  "homepage.monetize.model2.title": {
+    "message": "کامیابی کی فیس",
+    "description": "Monetization model 2 title"
+  },
+  "homepage.monetize.model2.price": {
+    "message": "نتیجہ کے ساتھ ادا کریں",
+    "description": "Monetization model 2 price"
+  },
+  "homepage.monetize.model2.description": {
+    "message": "نتائج پر کمیشن۔ فی سرنامہ $5، شناخت کی گئی بچت کے 2%۔",
+    "description": "Monetization model 2 description"
+  },
+  "homepage.monetize.model2.bestFor": {
+    "message": "اعتماد کے ساتھ شراکتداری",
+    "description": "Monetization model 2 best for"
+  },
+  "homepage.monetize.model3.title": {
+    "message": "ترکہ کو لائسنس دیں",
+    "description": "Monetization model 3 title"
+  },
+  "homepage.monetize.model3.price": {
+    "message": "سالانہ/مسلسل",
+    "description": "Monetization model 3 price"
+  },
+  "homepage.monetize.model3.description": {
+    "message": "اپنی SKILL.md منطق انٹرپرائزز کو فروخت کریں جو اسے ان ہاؤس چلاتے ہیں۔",
+    "description": "Monetization model 3 description"
+  },
+  "homepage.monetize.model3.bestFor": {
+    "message": "دفاع، FinTech، صحت کی دیکھ بھال",
+    "description": "Monetization model 3 best for"
+  },
+  "homepage.monetize.model4.title": {
+    "message": "مہارت بازار",
+    "description": "Monetization model 4 title"
+  },
+  "homepage.monetize.model4.price": {
+    "message": "حجم پر مبنی",
+    "description": "Monetization model 4 price"
+  },
+  "homepage.monetize.model4.description": {
+    "message": "OpenAI ایپس یا SkillPort کے ذریعے ماڈیولر مہارت پیکیجز فروخت کریں۔",
+    "description": "Monetization model 4 description"
+  },
+  "homepage.monetize.model4.bestFor": {
+    "message": "نش میں مہارت پر پیمانہ",
+    "description": "Monetization model 4 best for"
   }
 }

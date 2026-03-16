@@ -968,5 +968,69 @@
   "homepage.spectrum.example3": {
     "message": "构建自主解决工单的客户支持代理",
     "description": "AI Native example"
+  },
+  "homepage.monetize.model1.title": {
+    "message": "数字 FTE 订阅",
+    "description": "Monetization model 1 title"
+  },
+  "homepage.monetize.model1.price": {
+    "message": "$1,000+/月",
+    "description": "Monetization model 1 price"
+  },
+  "homepage.monetize.model1.description": {
+    "message": "完全托管、托管的代理。为客户提供免动手自动化。",
+    "description": "Monetization model 1 description"
+  },
+  "homepage.monetize.model1.bestFor": {
+    "message": "代理机构、顾问",
+    "description": "Monetization model 1 best for"
+  },
+  "homepage.monetize.model2.title": {
+    "message": "成功费",
+    "description": "Monetization model 2 title"
+  },
+  "homepage.monetize.model2.price": {
+    "message": "按结果付费",
+    "description": "Monetization model 2 price"
+  },
+  "homepage.monetize.model2.description": {
+    "message": "结果佣金。每条线索 $5，确定节省的 2%。",
+    "description": "Monetization model 2 description"
+  },
+  "homepage.monetize.model2.bestFor": {
+    "message": "高信任度合作伙伴关系",
+    "description": "Monetization model 2 best for"
+  },
+  "homepage.monetize.model3.title": {
+    "message": "许可配方",
+    "description": "Monetization model 3 title"
+  },
+  "homepage.monetize.model3.price": {
+    "message": "年度/永久",
+    "description": "Monetization model 3 price"
+  },
+  "homepage.monetize.model3.description": {
+    "message": "将您的 SKILL.md 逻辑出售给在内部运行它的企业。",
+    "description": "Monetization model 3 description"
+  },
+  "homepage.monetize.model3.bestFor": {
+    "message": "国防、金融科技、医疗保健",
+    "description": "Monetization model 3 best for"
+  },
+  "homepage.monetize.model4.title": {
+    "message": "技能市场",
+    "description": "Monetization model 4 title"
+  },
+  "homepage.monetize.model4.price": {
+    "message": "基于体积",
+    "description": "Monetization model 4 price"
+  },
+  "homepage.monetize.model4.description": {
+    "message": "通过 OpenAI 应用或 SkillPort 销售模块化专业知识包。",
+    "description": "Monetization model 4 description"
+  },
+  "homepage.monetize.model4.bestFor": {
+    "message": "利基专业知识规模",
+    "description": "Monetization model 4 best for"
   }
 }
