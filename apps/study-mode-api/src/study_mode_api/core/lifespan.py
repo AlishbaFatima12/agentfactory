@@ -53,8 +53,9 @@ async def lifespan(app: FastAPI):
         logger.info(f"[ENV] OPENAI_API_KEY: {'SET' if openai_key else 'NOT SET'}")
         logger.info(f"[ENV] REDIS_URL: {'SET' if redis_url else 'NOT SET'}")
         logger.info(f"[ENV] DATABASE_URL: {'SET' if db_url else 'NOT SET'}")
-        logger.info(f"[ENV] GEMINI_API_KEY: {'SET' if gemini_key else 'NOT SET - teach mode will crash!'}")
-        logger.info(f"[ENV] LEARNER_PROFILE_API_URL: {profile_api or 'NOT SET - using localhost:8004'}")
+        gemini_status = "SET" if gemini_key else "NOT SET - teach mode will crash!"
+        logger.info(f"[ENV] GEMINI_API_KEY: {gemini_status}")
+        logger.info(f"[ENV] LEARNER_PROFILE_API_URL: {profile_api or 'NOT SET (localhost:8004)'}")
 
         # Initialize Redis (non-blocking - app works without it)
         logger.info("[INIT] Initializing Redis...")
