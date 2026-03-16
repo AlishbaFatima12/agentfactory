@@ -58,6 +58,8 @@ Submit your prediction lock and reasoning receipt to AI using the prompt provide
 
 The student who copied AI's answer scores low. The student who disagreed with AI and explained why scores high — even if their final answer is the same.
 
+![Six_Layers](../../static/img/worked-example.png)
+
 :::
 
 > _Part 0 teaches humans how to thrive in the AI era. The rest of the book builds the era itself._
@@ -112,6 +114,8 @@ _Applied in: Chapters 2, 3, 4, 6, 7, 8, 9, 10. The three-draft structure makes c
 ### How the Layers Work Together
 
 No single layer is sufficient on its own. But surviving all six simultaneously requires genuine thinking. The prediction lock creates a baseline the reasoning receipt must be consistent with. The reasoning receipt documents decisions the live defence will interrogate. The contradiction challenge attacks the position committed to in the prediction lock. The divergence test catches students who bypassed earlier layers. And iterative drafts make the entire trajectory visible.
+
+![Six_Layers](../../static/img/six-layers.png)
 
 ## How AI Checks Your Thinking in Every Exercise
 
