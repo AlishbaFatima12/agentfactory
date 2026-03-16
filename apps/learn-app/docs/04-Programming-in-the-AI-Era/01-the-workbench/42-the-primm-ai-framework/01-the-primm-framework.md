@@ -3,7 +3,7 @@ sidebar_position: 1
 title: "The PRIMM Framework"
 description: "Discover PRIMM -- the research-validated method that teaches you to read and understand code before you write it, with AI-free prediction and confidence scoring -- and why comprehension is the bottleneck skill of the AI era."
 keywords: ["PRIMM", "Predict Run Investigate Modify Make", "Sue Sentance", "Jane Waite", "code comprehension", "reading code", "AI era programming", "code literacy", "prediction-reality gap"]
-chapter: 30
+chapter: 42
 lesson: 1
 duration_minutes: 20
 

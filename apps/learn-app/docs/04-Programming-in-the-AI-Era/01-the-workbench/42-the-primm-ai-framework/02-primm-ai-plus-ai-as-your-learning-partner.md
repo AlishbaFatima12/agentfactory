@@ -16,7 +16,7 @@ keywords:
     "coding education",
     "AI questioning partner",
   ]
-chapter: 30
+chapter: 42
 lesson: 2
 duration_minutes: 15
 

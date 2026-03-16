@@ -3,7 +3,7 @@ sidebar_position: 3
 title: "The PRIMM-AI+ Toolkit"
 description: "The self-assessment and growth tools that complete PRIMM-AI+ -- the verification ladder, confidence scoring, error taxonomy, professional practice mapping, the chapter-end rubric, and a consolidated reference card."
 keywords: ["PRIMM-AI+", "verification ladder", "confidence scoring", "error taxonomy", "professional practice", "code review", "self-assessment", "chapter rubric", "predict run investigate modify make"]
-chapter: 30
+chapter: 42
 lesson: 3
 duration_minutes: 15
 

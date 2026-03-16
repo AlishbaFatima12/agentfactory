@@ -161,7 +161,7 @@ Let's start with the most basic question: when an AI agent has access to a termi
 
 ## How to Read This Chapter: PRIMM-AI+ in Action
 
-In Chapter 30, you learned the PRIMM-AI+ framework — Predict, Run, Investigate, Modify, Make — with AI-free checkpoints, confidence scoring, and mastery gates. This chapter is where you put that framework to work for the first time.
+In Chapter 42, you learned the PRIMM-AI+ framework — Predict, Run, Investigate, Modify, Make — with AI-free checkpoints, confidence scoring, and mastery gates. This chapter is where you put that framework to work for the first time.
 
 Every axiom ends with a **PRIMM-AI+ Practice** section that gives you structured exercises following all five stages. These exercises use **real-world scenarios and plain-English reasoning**, not code. You will reason about software engineering concepts through familiar situations — shipping an app update like James does in the lesson, planning a birthday party, designing a registration form, tracking student grades, naming essay files. You do not need to write code. Coding applications of these axioms begin in the hands-on chapters that follow.
 
@@ -196,4 +196,4 @@ The ten axioms teach you _what_ professional AI-driven development looks like. P
 - **Part 1**: General Agents Foundations (Chapters 1-4)
 - **Part 2**: Agent Workflow Primitives (Chapters 5-10)
 - **Part 3**: Applied Domain Workflows (Chapters 11-13)
-- **Chapter 30**: The PRIMM-AI+ Framework — this chapter uses PRIMM-AI+ exercises throughout every axiom
+- **Chapter 42**: The PRIMM-AI+ Framework — this chapter uses PRIMM-AI+ exercises throughout every axiom

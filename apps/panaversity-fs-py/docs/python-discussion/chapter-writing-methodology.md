@@ -27,7 +27,7 @@ This methodology document uses the **book chapter numbers** (as they appear in `
 
 | This Document Says | Refers To | Book Path |
 |---|---|---|
-| Chapter 30 | PRIMM-AI+ Framework | `30-the-primm-ai-framework/` |
+| Chapter 42 | PRIMM-AI+ Framework | `42-the-primm-ai-framework/` |
 | Chapter 31 | Ten Axioms of Programming | `31-ten-axioms-of-programming-in-ai-driven-development/` |
 | Chapter 6 | Seven Principles | `06-seven-principles/` |
 | Chapter 33+ | Python programming chapters | Future chapters |
@@ -93,7 +93,7 @@ Every chapter gets a grounding table before writing begins. Example:
 
 ## 3. The PRIMM-AI+ Framework: Two Tracks
 
-Every lesson and every chapter in Parts 4 and 5 follows the PRIMM-AI+ framework defined in Chapter 30. This is not optional — it is the structural backbone of the entire course.
+Every lesson and every chapter in Parts 4 and 5 follows the PRIMM-AI+ framework defined in Chapter 42. This is not optional — it is the structural backbone of the entire course.
 
 ### Track A vs Track B
 
@@ -498,7 +498,7 @@ Looking Ahead (1-2 paragraphs)
 └── Bridge to next lesson
 ```
 
-**Note**: Not every lesson includes all sections. Conceptual lessons (like Ch 30 L1-L3) may focus on specific stages. Programming lessons (Ch 33+) include the full five-step code cycle.
+**Note**: Not every lesson includes all sections. Conceptual lessons (like Ch 42 L1-L3) may focus on specific stages. Programming lessons (Ch 33+) include the full five-step code cycle.
 
 ---
 
@@ -659,7 +659,7 @@ L4 (Spec-Driven): Student drives full spec → implement → verify cycle
     → PRIMM-AI+ Track: A (code) — student orchestrates everything
 ```
 
-### Conceptual Chapters (Ch 30-31) = Pre-L1
+### Conceptual Chapters (Ch 31, Ch 42) = Pre-L1
 
 Chapters 30-31 are **conceptual foundations** before any programming:
 - Students READ and REASON, they don't write code
@@ -810,7 +810,7 @@ We do NOT write three versions of each lesson. Instead:
 
 ## 14. Exercise Design
 
-### Track B Exercises (Conceptual Chapters — Ch 30-31)
+### Track B Exercises (Conceptual Chapters — Ch 31, Ch 42)
 
 ```
 Predict & Classify     — 50% (classify tasks, predict properties, categorize)
@@ -946,5 +946,5 @@ Every lesson uses inline bold text to create a "concept runway" — reading all 
 | Version | Date | Changes |
 |---------|------|---------|
 | 3.0 | 2026-03-15 | Major update based on Chapter 31 v2 refinement: Added Track A/B distinction (Section 3), answer key pattern with `<details>`, Error Taxonomy and Verification Ladder as standard tools, beginner accessibility rules (Section 5), iterative evaluation pattern (Section 6), Gate 5 (beginner accessibility), "From Principle to Axiom" cross-reference pattern, chapter numbering clarification table, 4 new key rules (#15-#18), updated all "Chapter 14" references to "Chapter 31", updated per-lesson structure template with PRIMM-AI+ Practice section details |
-| 2.0 | 2026-03-08 | Added Section 3 (PRIMM-AI+ lesson and chapter architecture from Ch 30 L3), Section 15 (bold highlighting pattern from Part 1), added Parsons Problems to exercise design, aligned per-lesson structure with five-step PRIMM-AI+ cycle, added four embedded teaching methods, added classroom/solo mode distinction, added 4 new key rules (#7 no cold Make, #8 follow five-step architecture, #13 bold key insights, #14 include Parsons problems), renumbered all sections |
+| 2.0 | 2026-03-08 | Added Section 3 (PRIMM-AI+ lesson and chapter architecture from Ch 42 L3), Section 15 (bold highlighting pattern from Part 1), added Parsons Problems to exercise design, aligned per-lesson structure with five-step PRIMM-AI+ cycle, added four embedded teaching methods, added classroom/solo mode distinction, added 4 new key rules (#7 no cold Make, #8 follow five-step architecture, #13 bold key insights, #14 include Parsons problems), renumbered all sections |
 | 1.0 | 2026-02-20 | Initial methodology document covering MCP grounding, narrative continuity, writing pipeline, quality gates, exercise design, and platform handling |

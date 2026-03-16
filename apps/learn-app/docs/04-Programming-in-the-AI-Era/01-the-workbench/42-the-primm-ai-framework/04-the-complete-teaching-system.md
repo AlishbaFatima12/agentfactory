@@ -14,7 +14,7 @@ keywords:
     "solo mode",
     "lesson architecture",
   ]
-chapter: 30
+chapter: 42
 lesson: 4
 duration_minutes: 20
 

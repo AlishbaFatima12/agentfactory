@@ -1,5 +1,5 @@
 ---
-title: "Chapter 30: The PRIMM-AI+ Framework"
+title: "Chapter 42: The PRIMM-AI+ Framework"
 sidebar_position: 0
 description: "Learn the PRIMM-AI+ teaching framework -- Predict, Run, Investigate, Modify, Make with AI -- the research-validated method that teaches you to read and understand code before you write it, with AI-free checkpoints, mastery gates, and confidence scoring."
 keywords:
@@ -18,7 +18,7 @@ keywords:
   ]
 ---
 
-# Chapter 30: The PRIMM-AI+ Framework
+# Chapter 42: The PRIMM-AI+ Framework
 
 > _"The PRIMM approach recognises that starting with existing code and being able to explain what it does gives novice programmers the confidence to write their own programs."_
 > — Sentance, Waite, and Kallia (2019)

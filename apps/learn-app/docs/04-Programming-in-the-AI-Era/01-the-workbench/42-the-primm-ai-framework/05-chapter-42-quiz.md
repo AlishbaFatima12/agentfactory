@@ -1,14 +1,14 @@
 ---
 sidebar_position: 5
-title: "Chapter 30: The PRIMM-AI+ Framework Quiz"
+title: "Chapter 42: The PRIMM-AI+ Framework Quiz"
 ---
 
-# Chapter 30: The PRIMM-AI+ Framework Quiz
+# Chapter 42: The PRIMM-AI+ Framework Quiz
 
-Test your understanding of the PRIMM-AI+ framework — the teaching method that governs all programming instruction in this book. This assessment covers all 4 lessons in Chapter 30.
+Test your understanding of the PRIMM-AI+ framework — the teaching method that governs all programming instruction in this book. This assessment covers all 4 lessons in Chapter 42.
 
 <Quiz
-title="Chapter 30: The PRIMM-AI+ Framework Assessment"
+title="Chapter 42: The PRIMM-AI+ Framework Assessment"
 questionsPerBatch={18}
 questions={[
 {

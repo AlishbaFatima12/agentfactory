@@ -1070,7 +1070,7 @@ This Author’s System Prompt Specification is a companion to:
 
 * **The Personalized Hybrid Programming Model (PHPM): Complete Implementation Specification** — Zia Khan, Panaversity, 2026\. Defines the full PHPM teaching framework, JSON schemas, orchestration algorithms, and teaching agent system prompts.
 
-* **Chapter 30: Learning to Program in the Age of AI** — The AI Agent Factory. Defines the PRIMM-AI+ framework with all 9 enhancements and 4 embedded methods.
+* **Chapter 42: Learning to Program in the Age of AI** — The AI Agent Factory. Defines the PRIMM-AI+ framework with all 9 enhancements and 4 embedded methods.
 
 * **The Personalized Hybrid Model for AI-Led Teaching** — Panaversity, 2026\. Defines the PHM adaptive teaching architecture with 7 approaches and 8-dimensional learner profile.
 
