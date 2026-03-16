@@ -115,7 +115,7 @@ async def submit_exercise(
         text(
             "INSERT INTO exercise_submissions"
             " (user_id, chapter_slug, lesson_slug, evidence, scores, feedback, evidence_hash, xp_earned)"
-            " VALUES (:user_id, :chapter_slug, :lesson_slug, :evidence::jsonb, :scores::jsonb, :feedback, :evidence_hash, :xp_earned)"
+            " VALUES (:user_id, :chapter_slug, :lesson_slug, CAST(:evidence AS jsonb), CAST(:scores AS jsonb), :feedback, :evidence_hash, :xp_earned)"
             " ON CONFLICT (user_id, chapter_slug, lesson_slug) DO NOTHING"
             " RETURNING id"
         ),
