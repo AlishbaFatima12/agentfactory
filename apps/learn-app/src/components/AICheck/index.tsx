@@ -11,6 +11,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useProgress } from "@/contexts/ProgressContext";
 import { useAuth } from "@/contexts/AuthContext";
 import { submitExercise, ExerciseSubmitError } from "@/lib/progress-api";
+import { getAuthHeaders } from "@/lib/api-utils";
 import type { ExerciseSubmitResponse, ScoreCard } from "@/lib/progress-types";
 import { CheckCircle2, ExternalLink, Loader2, AlertCircle } from "lucide-react";
 import styles from "./AICheck.module.css";
@@ -423,8 +424,40 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
 
       setState("asked");
       setStep1Expanded(false);
+
+      // Fire intent tracking (fire-and-forget, non-blocking)
+      // Captures student field data + provider + device for funnel analytics.
+      // Cleared on successful submit. 60-day TTL for non-submitters.
+      if (isLoggedIn) {
+        const fieldsObj = Object.fromEntries(fieldValues);
+        fetch(`${progressApiUrl}/api/v1/exercise/intent`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            ...getAuthHeaders(),
+          },
+          body: JSON.stringify({
+            chapter_slug: chapterSlug,
+            lesson_slug: lessonSlug,
+            exercise_id: id,
+            provider,
+            step: "provider_clicked",
+            fields: fieldsObj,
+          }),
+        }).catch(() => {
+          // Silent — intent tracking is best-effort
+        });
+      }
     },
-    [children, fieldValues],
+    [
+      children,
+      fieldValues,
+      isLoggedIn,
+      progressApiUrl,
+      chapterSlug,
+      lessonSlug,
+      id,
+    ],
   );
 
   const handleAiOutputChange = useCallback(
