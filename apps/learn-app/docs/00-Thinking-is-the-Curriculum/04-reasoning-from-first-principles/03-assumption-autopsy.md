@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Name one assumption from each category (a through d). Which category was hardest to find examples for?"
     - "Ask students: If your highest-risk assumption turns out to be wrong, what happens to your solution?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # Assumption Autopsy

@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the most important thing your partner found in your map that you missed?"
     - "Ask students: Did the live defence change how you think about any of your feedback loops? Which one and why?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # Peer Cross-Examination

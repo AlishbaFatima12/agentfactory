@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: How would you describe your error-detection process? Was it systematic or did you get lucky?"
     - "Ask students: What is the difference between overriding AI because you are right and overriding AI because you are uncomfortable?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Override Test

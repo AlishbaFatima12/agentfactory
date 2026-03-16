@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Did your position change during the three rounds? If yes, what specifically changed your mind? If no, which counter-argument came closest?"
     - "Ask students to identify the difference between a defence that addresses the counter-argument and a defence that merely restates the original position"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Adversarial Defence

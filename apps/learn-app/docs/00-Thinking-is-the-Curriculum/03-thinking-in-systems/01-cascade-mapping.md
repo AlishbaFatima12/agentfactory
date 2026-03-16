@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between a second-order effect and a feedback loop?"
     - "Ask students to explain one of their feedback loops without looking at their map — if they cannot, they drew it without understanding it"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";

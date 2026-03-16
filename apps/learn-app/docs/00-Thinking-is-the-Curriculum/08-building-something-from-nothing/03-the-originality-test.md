@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: If you removed every element from your solution that AI independently produced, what would remain? Is that remainder valuable?"
     - "Ask students: Will you use this originality test on future work? When would it be most useful?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Originality Test

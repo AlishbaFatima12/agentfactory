@@ -70,6 +70,12 @@ teaching_guide:
   assessment_quick_check:
     - "Can the student point to a specific claim where they determined one AI was stronger than the other, and explain their evidence?"
     - "Does Draft 3 contain at least one substantive change (not just wording) from Draft 1?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Contradiction Test

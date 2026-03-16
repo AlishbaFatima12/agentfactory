@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: In which of the three versions did you learn the most? Why?"
     - "Ask students to name the single moment in their collaboration where their human judgment made the biggest difference"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";

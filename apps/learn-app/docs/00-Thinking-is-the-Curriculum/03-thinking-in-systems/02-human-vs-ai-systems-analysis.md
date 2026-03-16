@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Give me one example of a Synthesis insight — something that only emerged from combining your thinking with AI's"
     - "Ask students: Were you surprised by anything AI found that you missed? What does that tell you about your own thinking patterns?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # Exercise 2: AI vs. Human Systems Analysis

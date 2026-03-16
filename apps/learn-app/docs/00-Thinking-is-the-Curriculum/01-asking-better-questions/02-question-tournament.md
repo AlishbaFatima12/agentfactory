@@ -70,6 +70,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students to explain the difference between a question that is 'important' and a question that is 'diagnostic'"
     - "Ask students to identify one question from their partner's set that they wish they had asked themselves, and explain why"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Question Tournament

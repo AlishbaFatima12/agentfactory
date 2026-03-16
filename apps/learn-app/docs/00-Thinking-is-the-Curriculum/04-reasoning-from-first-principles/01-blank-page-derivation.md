@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: State one of your first principles in a single sentence. Now tell me — is that a principle (true regardless of context) or an observation (true in some contexts)?"
     - "Ask students: What is the difference between 'MVP fails because Company X lost customers' and 'MVP fails when trust is a prerequisite because incomplete products signal unreliability'?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";

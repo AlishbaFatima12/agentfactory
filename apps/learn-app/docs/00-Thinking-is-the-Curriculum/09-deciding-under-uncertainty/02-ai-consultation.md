@@ -79,6 +79,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Give me one example from your Consultation Log where AI fabricated something about the scenario. How did you identify it as fabrication?"
     - "Ask students: Did your confidence go up or down after AI consultation? Should it have?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 ## Exercise 2: The AI Consultation

@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between an idea that came from AI and an idea that emerged from the interaction?"
     - "Ask students to point to the single interaction in their log where they added the most value. What made that contribution uniquely human?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Creation Log

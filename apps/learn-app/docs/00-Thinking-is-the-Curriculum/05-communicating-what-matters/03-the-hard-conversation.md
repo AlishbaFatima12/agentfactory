@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between 'this email is poorly written' and 'this email will fail to achieve its purpose'?"
     - "Ask students to name the single most important strategic change in their rewrite and explain why it will change the recipient's behavior"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Rewrite Diagnosis

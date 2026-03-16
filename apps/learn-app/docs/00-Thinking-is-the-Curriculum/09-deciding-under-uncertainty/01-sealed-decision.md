@@ -86,6 +86,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between 'I would change my mind if things get worse' and 'I would change my mind if Q3 revenue drops below $2M'?"
     - "Ask students: Why does this exercise make you decide BEFORE consulting AI?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";

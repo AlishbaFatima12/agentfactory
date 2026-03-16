@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Did your synthesis create something genuinely new, or did you just combine pieces from each recommendation?"
     - "Ask students: What strategies should you use in the future when AI tools disagree?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # Cross-Tool Arbitration

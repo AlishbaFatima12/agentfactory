@@ -70,6 +70,12 @@ teaching_guide:
   assessment_quick_check:
     - "Can the student explain the difference between a 'factual error' and 'false confidence' with an example from their annotation?"
     - "Did the student's prediction document identify at least one error type that actually appeared in the AI output?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";

@@ -81,6 +81,30 @@ class ProgressClient:
             logger.error("[Progress] Complete failed: %s: %s", type(e).__name__, e)
             return {"completed": False, "xp_earned": 0}
 
+    async def submit_exercise(
+        self,
+        data: dict[str, Any],
+        auth_token: str | None = None,
+    ) -> dict[str, Any]:
+        """Submit exercise evidence via progress API."""
+        client = await self._get_client()
+        try:
+            headers = {}
+            if auth_token:
+                headers["Authorization"] = auth_token
+            response = await client.post("/api/v1/exercise/submit", json=data, headers=headers)
+            if response.status_code == 200:
+                return response.json()
+            else:
+                logger.error("[Progress] Exercise submit failed: status=%d, body=%s", response.status_code, response.text)
+                return {"submitted": False, "xp_earned": 0}
+        except httpx.TimeoutException as e:
+            logger.error("[Progress] Exercise submit timeout: %s", type(e).__name__)
+            return {"submitted": False, "xp_earned": 0}
+        except httpx.HTTPError as e:
+            logger.error("[Progress] Exercise submit failed: %s: %s", type(e).__name__, e)
+            return {"submitted": False, "xp_earned": 0}
+
     async def get_progress(
         self,
         auth_token: str | None = None,

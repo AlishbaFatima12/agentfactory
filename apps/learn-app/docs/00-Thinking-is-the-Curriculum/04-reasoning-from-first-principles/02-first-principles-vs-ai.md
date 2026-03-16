@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students to state their derivation chain in 3 sentences: From constraint X and assumption Y, it follows that Z. Therefore, the solution must include W."
     - "Ask students: Did AI approach the problem the same way you did? If not, where exactly did the approaches diverge?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";

@@ -82,6 +82,12 @@ teaching_guide:
   assessment_quick_check:
     - "Can the student explain the single biggest weakness in their own analysis without prompting?"
     - "Does the 200-word counter-argument response address the specific attack or deflect to a different point?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # Live Defence

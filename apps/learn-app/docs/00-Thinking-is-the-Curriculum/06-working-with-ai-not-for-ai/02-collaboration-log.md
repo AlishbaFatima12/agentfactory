@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between a justified accept and a lazy accept? How can you tell from the log?"
     - "Ask students to point to the single most important modify decision in their log and explain why it mattered"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Collaboration Log

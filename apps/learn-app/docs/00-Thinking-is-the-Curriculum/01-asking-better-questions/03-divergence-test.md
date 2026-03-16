@@ -70,6 +70,12 @@ teaching_guide:
   assessment_quick_check:
     - "Can the student point to a specific paragraph in their analysis that contains an insight AI did not suggest?"
     - "Does the reasoning receipt show at least one 'reject' or 'modify' decision, or was everything accepted?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Divergence Test

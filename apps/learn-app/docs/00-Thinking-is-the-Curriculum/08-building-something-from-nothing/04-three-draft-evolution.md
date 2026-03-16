@@ -78,6 +78,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the single biggest difference between Draft 1 and Draft 3? Was that change driven by AI or by your own reflection?"
     - "Ask students: If you used the three-draft evolution method on your next creative project, what would you do differently?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Three-Draft Evolution

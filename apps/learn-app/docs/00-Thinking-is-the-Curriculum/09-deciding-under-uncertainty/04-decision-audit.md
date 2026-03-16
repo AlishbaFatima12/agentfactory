@@ -79,6 +79,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Name one heuristic you relied on. Did it help or hurt? How do you know?"
     - "Ask students: What is the single most important improvement to your decision-making process? Is it specific enough to act on tomorrow?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 ## Exercise 4: The Decision Audit

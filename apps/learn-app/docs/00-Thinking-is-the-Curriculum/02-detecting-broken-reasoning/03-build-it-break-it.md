@@ -70,6 +70,12 @@ teaching_guide:
   assessment_quick_check:
     - "Can the student name one specific error they caught that a non-expert would miss, and explain what domain knowledge made it visible?"
     - "Does the reflection articulate a concrete change in how the student will use AI outside their domain?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # Build It, Then Break It

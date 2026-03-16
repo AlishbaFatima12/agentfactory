@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Name one principle that survived the constraint change and explain WHY it still holds"
     - "Ask students: What is the most important thing this chapter taught you about the difference between reasoning from principles and reasoning from patterns?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # Rebuild Under New Constraints

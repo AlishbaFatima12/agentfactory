@@ -79,6 +79,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Is your confidence higher or lower than in Exercise 1? What does that tell you about your understanding of this dilemma?"
     - "Ask students to read their reversal conditions aloud. If the class cannot imagine a real-world scenario that would trigger reversal, the conditions are too vague."
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Decision Memo

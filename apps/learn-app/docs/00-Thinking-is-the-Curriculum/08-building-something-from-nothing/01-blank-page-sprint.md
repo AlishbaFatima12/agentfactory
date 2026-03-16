@@ -78,6 +78,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Are your three solutions genuinely different approaches, or are they variations of one idea?"
     - "Ask students to read their gap list aloud. If it contains only 1-2 items, it is not honest enough."
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";

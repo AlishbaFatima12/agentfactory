@@ -74,6 +74,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Did your Reversal Trigger fire? If yes, did you actually reverse? If no, should it have?"
     - "Ask students: Is your post-drop confidence higher or lower than your post-consultation confidence? Is that change justified?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 ## Exercise 3: The Information Drop

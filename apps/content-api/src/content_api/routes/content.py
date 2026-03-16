@@ -13,6 +13,8 @@ from ..schemas.content import (
     BookTreeResponse,
     CompleteRequest,
     CompleteResponse,
+    ExerciseSubmitRequest,
+    ExerciseSubmitResponse,
     LessonContentResponse,
     LessonFrontmatter,
     ProgressResponse,
@@ -240,6 +242,25 @@ async def complete_lesson(
         completed=result.get("completed", False),
         xp_earned=result.get("xp_earned", 0),
     )
+
+
+@content_router.post("/exercise/submit", response_model=ExerciseSubmitResponse)
+@rate_limit("content_exercise_submit", max_requests=10, period_minutes=1)
+async def submit_exercise(
+    request: Request,
+    response: Response,
+    body: ExerciseSubmitRequest,
+    user: CurrentUser = Depends(get_current_user),
+) -> ExerciseSubmitResponse:
+    """Submit exercise evidence via progress API."""
+    progress = get_progress_client()
+    if not progress:
+        raise HTTPException(status_code=503, detail="Progress tracking service not configured")
+
+    auth_token = request.headers.get("Authorization")
+    result = await progress.submit_exercise(data=body.model_dump(), auth_token=auth_token)
+
+    return ExerciseSubmitResponse(**result)
 
 
 @content_router.get("/progress", response_model=ProgressResponse)

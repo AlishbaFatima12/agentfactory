@@ -86,6 +86,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Show me your mid-point reflection. What did you change about your plan after hour 36?"
     - "Ask students: In your Learning Log, point to one entry where you rejected AI output. Why did you reject it?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 ## Exercise 2: The 72-Hour Sprint

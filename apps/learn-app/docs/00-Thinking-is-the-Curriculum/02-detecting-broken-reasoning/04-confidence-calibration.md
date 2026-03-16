@@ -70,6 +70,12 @@ teaching_guide:
   assessment_quick_check:
     - "For claims the student rated at 80%+ confidence, what percentage were actually correct? (Good calibration: >80%)"
     - "Can the student name the specific topic area where they were most overconfident?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # Confidence Calibration

@@ -79,6 +79,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What are you explicitly choosing NOT to learn? Why?"
     - "Ask students: How will you know when you have learned 'enough'? Give me a specific, testable answer."
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # Learning How to Learn

@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Why can you not just start from scratch with the new variable? What does the revision process reveal that starting fresh would miss?"
     - "Ask students to name one connection that became MORE important after the variable shift and explain the mechanism"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Variable Shift

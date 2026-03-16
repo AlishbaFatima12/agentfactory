@@ -85,6 +85,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between a question that is 'interesting' and a question that is 'diagnostic'?"
     - "Ask students to explain why the prediction lock must be written BEFORE touching AI — what would be lost if they wrote it after?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";

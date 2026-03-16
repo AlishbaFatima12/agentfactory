@@ -79,6 +79,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Read me your confusion protocol — what do you do when you are stuck? Is it specific enough to actually follow?"
     - "Ask students: How is your framework different from generic advice like 'study hard and ask questions'?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 ## Exercise 4: Strategy Retrospective

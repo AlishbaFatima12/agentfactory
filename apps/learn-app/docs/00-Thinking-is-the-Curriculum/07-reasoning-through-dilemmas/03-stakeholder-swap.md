@@ -73,6 +73,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What did you understand about the dilemma after arguing the other side that you did not understand before?"
     - "Ask students: Was the hardest part finding arguments or genuinely feeling what it would be like to hold that position?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 # The Stakeholder Swap

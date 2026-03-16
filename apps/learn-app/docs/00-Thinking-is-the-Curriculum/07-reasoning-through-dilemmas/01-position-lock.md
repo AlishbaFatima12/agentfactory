@@ -78,6 +78,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between a position you hold because you thought it through and a position you hold because it feels right?"
     - "Ask students to name the stakeholder group most harmed by their decision -- if they cannot, their matrix is incomplete"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";

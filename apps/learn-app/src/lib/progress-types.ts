@@ -111,6 +111,36 @@ export interface LeaderboardResponse {
   total_users: number;
 }
 
+export interface ExerciseSubmitRequest {
+  chapter_slug: string;
+  lesson_slug: string;
+  evidence: {
+    type: "text";
+    provider: string;
+    student_input: string;
+    ai_output: string;
+  };
+  feedback?: string | null;
+}
+
+export interface ScoreCard {
+  independent_thinking: number;
+  critical_evaluation: number;
+  reasoning_depth: number;
+  originality: number;
+  self_awareness: number;
+  average: number;
+}
+
+export interface ExerciseSubmitResponse {
+  submitted: boolean;
+  already_submitted: boolean;
+  xp_earned: number;
+  total_xp: number;
+  scores: ScoreCard | null;
+  streak: StreakInfo;
+}
+
 export interface BadgeDefinition {
   id: string;
   name: string;

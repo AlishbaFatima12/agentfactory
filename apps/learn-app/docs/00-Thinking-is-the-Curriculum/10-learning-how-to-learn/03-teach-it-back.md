@@ -79,6 +79,12 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What was the hardest question you were asked? Why was it hard?"
     - "Ask students: For questions you could not answer, was the problem lack of knowledge or inability to explain?"
+submission:
+  type: "ai-check"
+  accept: ["text"]
+  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
+  default_provider: "chatgpt"
+  xp_bonus: 50
 ---
 
 ## Exercise 3: Teach It Back
