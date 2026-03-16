@@ -43,7 +43,7 @@ Eleven chapters. Ten thinking skills. Forty exercises. One rule:
 
 You will not be graded on what you produced. You will be graded on whether you can prove you thought.
 
-:::info What This Looks Like in Practice
+:::note What This Looks Like in Practice
 
 **Exercise:** Should a startup build a custom AI agent or use an off-the-shelf tool?
 
