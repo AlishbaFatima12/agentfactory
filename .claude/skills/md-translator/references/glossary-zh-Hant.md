@@ -51,6 +51,35 @@
 | MDX | MDX | [EN] | Format name |
 | YAML | YAML | [EN] | Format name |
 | JSON | JSON | [EN] | Format name |
+| LLM | LLM | [EN] | Acronym — Large Language Model |
+| Large Language Model | 大型語言模型 | [TL] | Full form of LLM |
+| Token | Token | [EN] | ML token — keep in English (Taiwan convention) |
+| Context Window | 上下文視窗 | [TL] | AI context window |
+| Model | 模型 | [TL] | In AI/ML context |
+| Tool | 工具 | [TL] | AI agent tool/function |
+| Agent Loop | 代理迴圈 | [TL] | Core agentic loop |
+| Orchestration | 協作編排 | [TL] | Multi-agent coordination |
+| Multi-agent | 多代理 | [TL] | Technical term |
+| Autonomy | 自主性 | [TL] | |
+| Inference | 推論 | [TL] | ML inference; 推理 also acceptable |
+| Debugging | 除錯 | [TL] | Taiwan standard |
+| Interface | 介面 | [TL] | Taiwan standard |
+| Integration | 整合 | [TL] | |
+| Automation | 自動化 | [TL] | |
+| Testing | 測試 | [TL] | |
+| Documentation | 文件 | [TL] | Taiwan standard |
+| Output | 輸出 | [TL] | |
+| Input | 輸入 | [TL] | |
+| Server | 伺服器 | [TL] | Taiwan standard |
+| Database | 資料庫 | [TL] | Taiwan standard |
+| Frontend | 前端 | [TL] | |
+| Backend | 後端 | [TL] | |
+| Software | 軟體 | [TL] | Taiwan standard |
+| Code | 程式碼 | [TL] | Taiwan standard |
+| Codebase | 程式碼庫 | [TL] | Taiwan standard |
+| Iteration | 迭代 | [TL] | |
+| Architecture | 架構 | [TL] | |
+| Template | 範本 | [TL] | Taiwan standard |
 
 ## Educational Terms
 
@@ -76,6 +105,13 @@
 | Bridge Book | Bridge Book | [EN] | Product concept |
 | General Agent | 通用代理 | [TL] | |
 | Reusable Intelligence | 可重用智慧 | [TL] | |
+| Agent-Native | Agent-Native | [EN] | Key book concept — never translate |
+| AI-Native | AI-Native | [EN] | Key book concept — never translate |
+| Domain Expert | 領域專家 | [TL] | |
+| Human-in-the-Loop | 人在迴圈中 | [TL] | |
+| Claude | Claude | [EN] | Product name — never translate |
+| Claude Code | Claude Code | [EN] | Product name — never translate |
+| Cowork | Cowork | [EN] | Product name — never translate |
 
 ## Taiwan vs Mainland Differences (Quick Reference)
 
@@ -98,3 +134,15 @@ Key terms where Taiwan (Traditional) and Mainland (Simplified) conventions diver
 | Data | 資料 | 數據 |
 | Network | 網路 | 網絡 |
 | Server | 伺服器 | 服務器 |
+| Database | 資料庫 | 数据库 |
+| Frontend | 前端 | 前端 |
+| Backend | 後端 | 后端 |
+| Code | 程式碼 | 代码 |
+| Codebase | 程式碼庫 | 代码库 |
+| Documentation | 文件 | 文档 |
+| Debugging | 除錯 | 调试 |
+| Interface | 介面 | 界面 |
+| Inference | 推論 | 推理 |
+| Template | 範本 | 模板 |
+| Architecture | 架構 | 架构 |
+| Context Window | 上下文視窗 | 上下文窗口 |

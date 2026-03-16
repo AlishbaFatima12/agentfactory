@@ -56,6 +56,35 @@ Urdu is RTL. English terms embedded in Urdu text trigger BiDi rendering issues. 
 | MDX | MDX | [EN] | Format name |
 | YAML | YAML | [EN] | Format name |
 | JSON | JSON | [EN] | Format name |
+| LLM | LLM | [EN] | Acronym — Large Language Model |
+| Large Language Model | بڑا زبانی ماڈل | [TL] | Full form of LLM |
+| Token | ٹوکن | [TR] | ML token |
+| Context Window | سیاق کی کھڑکی | [TL] | AI context window |
+| Model | ماڈل | [TR] | In AI/ML context |
+| Tool | ٹول | [TR] | AI agent tool/function |
+| Agent Loop | ایجنٹ لوپ | [TR] | Core agentic loop |
+| Orchestration | آرکیسٹریشن | [TR] | Multi-agent coordination |
+| Multi-agent | Multi-agent | [EN] | Technical term |
+| Autonomy | خودمختاری | [TL] | |
+| Inference | استنتاج | [TL] | ML inference |
+| Debugging | ڈیبگنگ | [TR] | |
+| Interface | انٹرفیس | [TR] | |
+| Integration | انضمام | [TL] | |
+| Automation | خودکاری | [TL] | |
+| Testing | جانچ | [TL] | |
+| Documentation | دستاویزات | [TL] | |
+| Output | آؤٹ پٹ | [TR] | |
+| Input | ان پٹ | [TR] | |
+| Server | سرور | [TR] | |
+| Database | ڈیٹابیس | [TR] | |
+| Frontend | Frontend | [EN] | |
+| Backend | Backend | [EN] | |
+| Software | سافٹ ویئر | [TR] | |
+| Code | کوڈ | [TR] | Programming code |
+| Codebase | کوڈ بیس | [TR] | |
+| Iteration | تکرار | [TL] | |
+| Architecture | آرکیٹیکچر | [TR] | |
+| Template | سانچہ | [TL] | |
 
 ## Educational Terms
 
@@ -81,3 +110,10 @@ Urdu is RTL. English terms embedded in Urdu text trigger BiDi rendering issues. 
 | Bridge Book | Bridge Book | [EN] | Product concept |
 | General Agent | عام ایجنٹ | [TL] | |
 | Reusable Intelligence | قابل استعمال ذہانت | [TL] | |
+| Agent-Native | Agent-Native | [EN] | Key book concept — never translate |
+| AI-Native | AI-Native | [EN] | Key book concept — never translate |
+| Domain Expert | شعبہ جاتی ماہر | [TL] | |
+| Human-in-the-Loop | Human-in-the-Loop | [EN] | Common AI term |
+| Claude | Claude | [EN] | Product name — never translate |
+| Claude Code | Claude Code | [EN] | Product name — never translate |
+| Cowork | Cowork | [EN] | Product name — never translate |

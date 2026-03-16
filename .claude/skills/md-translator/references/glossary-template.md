@@ -49,6 +49,35 @@ Ensures consistent translation of technical terms across all files translated to
 | MDX | | [EN] | Format name |
 | YAML | | [EN] | Format name |
 | JSON | | [EN] | Format name |
+| LLM | | [EN] | Acronym — Large Language Model |
+| Large Language Model | | [TL] | Full form of LLM |
+| Token | | [EN] | ML token — keep in English |
+| Context Window | | [TL] | AI context window |
+| Model | | [TL] | In AI/ML context |
+| Tool | | [TL] | AI agent tool/function |
+| Agent Loop | | [TL] | Core agentic loop |
+| Orchestration | | [TL] | Multi-agent coordination |
+| Multi-agent | | [EN] | Technical term |
+| Autonomy | | [TL] | |
+| Inference | | [TL] | ML inference |
+| Debugging | | [TL] | |
+| Interface | | [TL] | |
+| Integration | | [TL] | |
+| Automation | | [TL] | |
+| Testing | | [TL] | |
+| Documentation | | [TL] | |
+| Output | | [TL] | |
+| Input | | [TL] | |
+| Server | | [TL] | |
+| Database | | [TR] | |
+| Frontend | | [EN] | |
+| Backend | | [EN] | |
+| Software | | [TL] | |
+| Code | | [EN] | Programming code — keep in English |
+| Codebase | | [TL] | |
+| Iteration | | [TL] | |
+| Architecture | | [TL] | |
+| Template | | [TL] | |
 
 ## Educational Terms
 
@@ -74,3 +103,10 @@ Ensures consistent translation of technical terms across all files translated to
 | Bridge Book | | [EN] | Product concept |
 | General Agent | | [TL] | |
 | Reusable Intelligence | | [TL] | |
+| Agent-Native | | [EN] | Key book concept — never translate |
+| AI-Native | | [EN] | Key book concept — never translate |
+| Domain Expert | | [TL] | |
+| Human-in-the-Loop | | [EN] | Common AI safety/design term |
+| Claude | | [EN] | Product name — never translate |
+| Claude Code | | [EN] | Product name — never translate |
+| Cowork | | [EN] | Product name — never translate |

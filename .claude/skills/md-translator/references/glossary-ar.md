@@ -56,6 +56,35 @@ Arabic is RTL. English terms embedded in Arabic text trigger BiDi rendering issu
 | MDX | MDX | [EN] | Format name |
 | YAML | YAML | [EN] | Format name |
 | JSON | JSON | [EN] | Format name |
+| LLM | LLM | [EN] | Acronym — Large Language Model |
+| Large Language Model | نموذج لغوي كبير | [TL] | Full form of LLM |
+| Token | توكن | [TR] | ML token |
+| Context Window | نافذة السياق | [TL] | AI context window |
+| Model | نموذج | [TL] | In AI/ML context |
+| Tool | أداة | [TL] | AI agent tool/function |
+| Agent Loop | حلقة الوكيل | [TL] | Core agentic loop |
+| Orchestration | تنسيق | [TL] | Multi-agent coordination |
+| Multi-agent | متعدد الوكلاء | [TL] | Technical term |
+| Autonomy | استقلالية | [TL] | |
+| Inference | استنتاج | [TL] | ML inference |
+| Debugging | تصحيح الأخطاء | [TL] | |
+| Interface | واجهة | [TL] | |
+| Integration | تكامل | [TL] | |
+| Automation | أتمتة | [TL] | |
+| Testing | اختبار | [TL] | |
+| Documentation | توثيق | [TL] | |
+| Output | مخرجات | [TL] | |
+| Input | مدخلات | [TL] | |
+| Server | خادم | [TL] | |
+| Database | قاعدة بيانات | [TL] | |
+| Frontend | واجهة أمامية | [TL] | |
+| Backend | خلفية | [TL] | |
+| Software | برمجيات | [TL] | |
+| Code | كود | [TR] | Programming code |
+| Codebase | قاعدة الكود | [TL] | |
+| Iteration | تكرار | [TL] | |
+| Architecture | بنية | [TL] | |
+| Template | قالب | [TL] | |
 
 ## Educational Terms
 
@@ -81,3 +110,10 @@ Arabic is RTL. English terms embedded in Arabic text trigger BiDi rendering issu
 | Bridge Book | Bridge Book | [EN] | Product concept |
 | General Agent | وكيل عام | [TL] | |
 | Reusable Intelligence | ذكاء قابل لإعادة الاستخدام | [TL] | |
+| Agent-Native | Agent-Native | [EN] | Key book concept — never translate |
+| AI-Native | AI-Native | [EN] | Key book concept — never translate |
+| Domain Expert | خبير المجال | [TL] | |
+| Human-in-the-Loop | Human-in-the-Loop | [EN] | Common AI term |
+| Claude | Claude | [EN] | Product name — never translate |
+| Claude Code | Claude Code | [EN] | Product name — never translate |
+| Cowork | Cowork | [EN] | Product name — never translate |

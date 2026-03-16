@@ -69,8 +69,8 @@ Agent Factory 论纲认为，未来属于那些能够交付结果的 AI 员工�
 运行一组 AI 员工，意味着你需要管理 API 与订阅成本。大致可以这样预估：
 
 *   **OpenClaw 与 NanoClaw（免费 + API 成本）：** 这两款软件都完全开源（MIT 许可证）。但由于它们虽然本地运行，却在云端完成推理，所以你需要按 token 向 [Anthropic](https://platform.claude.com/docs/en/about-claude/pricing)、[OpenAI](https://openai.com/api/pricing/) 或 [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing) 支付 API 费用。若为高频日常使用，通常每月会花费 **$15 到 $40** 的 API 额度。
-*   **Claude Code（免费 + 订阅）：** CLI 工具本身免费，但至少需要订阅 [Pro Plan](https://claude.com/pricing)，最低为 **$20/用户/月**。如何降低这部分成本，可参见第 3 章。
-*   **Claude Cowork（订阅制）：** Cowork 包含在 [Anthropic 的高阶套餐](https://claude.com/pricing) 中（通常是 Pro、Max 或 Enterprise，起步价约 **$20/用户/月**，最高可到 **$200/用户/月**）。它提供对桌面文件的深度访问，且不按 token 单独计费。**订阅这些套餐后，你通常可以同时使用 Claude Code 和 Claude Cowork。** 降本方法同样可参考第 3 章。
+*   **Claude Code（免费 + 订阅）：** CLI 工具本身免费，但至少需要订阅 [Pro Plan](https://claude.com/pricing)，最低为 **$20/用户/月**。如何降低这部分成本，可参见第 14 章。
+*   **Claude Cowork（订阅制）：** Cowork 包含在 [Anthropic 的高阶套餐](https://claude.com/pricing) 中（通常是 Pro、Max 或 Enterprise，起步价约 **$20/用户/月**，最高可到 **$200/用户/月**）。它提供对桌面文件的深度访问，且不按 token 单独计费。**订阅这些套餐后，你通常可以同时使用 Claude Code 和 Claude Cowork。** 降本方法同样可参考第 14 章。
 *   **Codex / GPT-5.4-Codex（订阅/API）：** OpenAI 的云模式工程环境需要 [高阶 OpenAI 订阅](https://developers.openai.com/codex/pricing/) 或较重的 API 使用量，而成本会随着你的系统架构任务复杂度上升。
 
 ---
@@ -97,7 +97,7 @@ Claude Code 由 Anthropic 构建，运行在你的电脑上。尽管名字里有
 
 Claude Code 是你在本书中使用最多的主工具。它的技能系统（名为 SKILL.md 的可复用指令文件）以及它生成专门子员工的能力，共同构成了 Agent Factory 方法的基础积木。
 
-_第 5 章会以 Claude Code 为引擎，引入 Spec-Driven Development。你将在本书每个部分都用到它。_
+_第 16 章会以 Claude Code 为引擎，引入 Spec-Driven Development。你将在本书每个部分都用到它。_
 
 ---
 
@@ -123,7 +123,7 @@ OpenClaw 由 Peter Steinberger 创建，并获得 **OpenAI** 与 **Vercel** 支�
 
 OpenClaw 完全开源（MIT 许可证）。你在自己的机器上运行它，自由选择 AI 模型（Claude、GPT、DeepSeek 或其他模型），并通过 ClawHub 市场中 5700 多个社区构建技能来扩展它。它的个性由一个简单的 Markdown 文件 SOUL.md 配置，而这正是你将在本书中学习编写规格时接触到的同一种格式。
 
-_第 7 章会带你使用 OpenClaw 搭建你的第一位 AI 员工。_
+_第 18 章会带你使用 OpenClaw 搭建你的第一位 AI 员工。_
 
 ---
 
@@ -200,7 +200,7 @@ _第 5 部分会教你使用驱动 NanoClaw 的同一框架来构建定制 AI �
 
 你的智能体组合会不断演进：先从小处开始，再逐层叠加。一个常见路径是：第 1 天 = OpenClaw + Claude Code/Cowork -> 第 3 个月 = 针对高难工程任务加入 Codex -> 第 6 个月 = 为敏感任务引入 NanoClaw，或通过 SKILL.md/SOUL.md 构建定制智能体。
 
-迁移建议：在不同智能体之间导出/导入 SKILL.md 模式；把 ClawHub 的社区技能当作过渡桥梁；每周监控 token 消耗（第 3 章会介绍优化脚本）。许多读者在组合使用 3 个以上智能体后，报告生产力提高了 2 到 3 倍，但要避免工具蔓延，除非你是在为客户构建方案，否则核心工具最好控制在 4 到 5 个以内。
+迁移建议：在不同智能体之间导出/导入 SKILL.md 模式；把 ClawHub 的社区技能当作过渡桥梁；每周监控 token 消耗（第 14 章会介绍优化脚本）。许多读者在组合使用 3 个以上智能体后，报告生产力提高了 2 到 3 倍，但要避免工具蔓延，除非你是在为客户构建方案，否则核心工具最好控制在 4 到 5 个以内。
 
 ---
 

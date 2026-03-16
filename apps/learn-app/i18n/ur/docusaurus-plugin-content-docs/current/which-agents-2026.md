@@ -31,7 +31,7 @@ keywords:
   color: 'var(--ifm-color-emphasis-700)',
   marginBottom: '1.5rem'
 }}>
-<span dir="ltr">Agent Factory</span> کا بنیادی نظریہ یہ ہے کہ مستقبل اُن اے آئی ملازمین کا ہے جو محض گفتگو نہیں کرتے، بلکہ حقیقی نتائج فراہم کرتے ہیں۔ اس پوری کتاب میں آپ انہی پانچ ٹولز کے ساتھ کام کریں گے۔
+بنیادی نظریہ یہ ہے کہ مستقبل اُن اے آئی ملازمین کا ہے جو محض گفتگو نہیں کرتے، بلکہ حقیقی نتائج فراہم کرتے ہیں۔ اس پوری کتاب میں آپ انہی پانچ ٹولز کے ساتھ کام کریں گے۔
 </p>
 
 </div>
@@ -67,7 +67,7 @@ keywords:
 اے آئی ملازمین کے ایک فلیٹ کو چلانے کے لیے <span dir="ltr">API</span> اور رکنیتی لاگت کو ذہن میں رکھنا ضروری ہے۔ مجموعی طور پر آپ کو درج ذیل اخراجات متوقع رکھنے چاہییں:
 
 * **<span dir="ltr">OpenClaw</span> اور <span dir="ltr">NanoClaw</span> (مفت + <span dir="ltr">API</span> لاگت):** یہ سافٹ ویئر مکمل طور پر کھلے ماخذ پر مبنی ہے (<span dir="ltr">MIT License</span>)۔ تاہم، چونکہ یہ مقامی طور پر چلتے ہیں مگر استدلال کو کلاؤڈ میں انجام دیتے ہیں، اس لیے آپ [<span dir="ltr">Anthropic</span>](https://platform.claude.com/docs/en/about-claude/pricing)، [<span dir="ltr">OpenAI</span>](https://openai.com/api/pricing/)، یا [<span dir="ltr">DeepSeek</span>](https://api-docs.deepseek.com/quick_start/pricing) کو فی ٹوکن <span dir="ltr">API</span> لاگت ادا کریں گے۔ بھاری روزانہ استعمال کی صورت میں **<span dir="ltr">$15–$40 ماہانہ</span>** کے <span dir="ltr">API</span> کریڈٹس خرچ ہونے کی توقع رکھیں۔
-* **<span dir="ltr">Claude Code</span> (مفت + رکنیت):** <span dir="ltr">CLI</span> ٹول مفت ہے، مگر کم از کم **<span dir="ltr">$20 فی صارف ماہانہ</span>** کا [<span dir="ltr">Pro Plan</span>](https://claude.com/pricing) درکار ہے۔ لاگت کم کرنے کے طریقوں کے لیے باب 3 دیکھیں۔
+* **<span dir="ltr">Claude Code</span> (مفت + رکنیت):** <span dir="ltr">CLI</span> ٹول مفت ہے، مگر کم از کم **<span dir="ltr">$20 فی صارف ماہانہ</span>** کا [<span dir="ltr">Pro Plan</span>](https://claude.com/pricing) درکار ہے۔ لاگت کم کرنے کے طریقوں کے لیے باب 14 دیکھیں۔
 * **<span dir="ltr">Claude Cowork</span> (رکنیت):** <span dir="ltr">Cowork</span> [<span dir="ltr">Anthropic</span> کے اعلیٰ درجے کے منصوبوں](https://claude.com/pricing) میں شامل ہے (عموماً <span dir="ltr">Pro</span>، <span dir="ltr">Max</span>، یا <span dir="ltr">Enterprise</span>)، جن کی قیمت تقریباً **<span dir="ltr">$20</span>** سے شروع ہو کر **<span dir="ltr">$200 فی صارف ماہانہ</span>** تک جا سکتی ہے۔ یہ فی ٹوکن بلنگ کے بغیر ڈیسک ٹاپ فائلوں تک گہری رسائی فراہم کرتا ہے۔ **اسی منصوبے کے ذریعے آپ <span dir="ltr">Claude Code</span> اور <span dir="ltr">Claude Cowork</span> دونوں استعمال کر سکتے ہیں۔**
 * **<span dir="ltr">Codex / GPT-5.4-Codex</span> (رکنیت/<span dir="ltr">API</span>):** <span dir="ltr">OpenAI</span> کے کلاؤڈ موڈ انجینئرنگ ماحول کے لیے [اعلیٰ درجے کی <span dir="ltr">OpenAI</span> رکنیت](https://developers.openai.com/codex/pricing/) یا بھاری <span dir="ltr">API</span> استعمال درکار ہوتا ہے، اور آپ کے نظامی معمارتی کاموں کی پیچیدگی کے مطابق یہ لاگت تیزی سے بڑھ سکتی ہے۔
 
@@ -75,7 +75,7 @@ keywords:
 
 ## عام ایجنٹس
 
-### Cowork — آپ کا ادارہ جاتی اے آئی ملازم
+### ادارہ جاتی اے آئی ملازم: <span dir="ltr">Cowork</span>
 
 <span dir="ltr">Cowork</span>، <span dir="ltr">Anthropic</span> کا ایسا اے آئی ملازم ہے جو اُن کاروباری پیشہ ور افراد کے لیے بنایا گیا ہے جو ٹرمنل میں کام نہیں کرتے۔ یہ <span dir="ltr">macOS</span> اور <span dir="ltr">Windows</span> پر <span dir="ltr">Claude Desktop</span> ایپ کے اندر چلتا ہے۔
 
@@ -87,7 +87,7 @@ _حصہ 3 میں کاروباری شعبہ جاتی کام کے بہاؤ — م�
 
 ---
 
-### Claude Code — آپ کا ہمہ مقصدی عام ایجنٹ
+### ہمہ مقصدی عام ایجنٹ: <span dir="ltr">Claude Code</span>
 
 <span dir="ltr">Claude Code</span>، <span dir="ltr">Anthropic</span> کا بنایا ہوا ٹول ہے اور آپ کے کمپیوٹر پر چلتا ہے۔ نام کے باوجود، یہ صرف کوڈ لکھنے تک محدود نہیں۔ <span dir="ltr">Anthropic</span> نے اپنے بنیادی فریم ورک کا نام "<span dir="ltr">Claude Code SDK</span>" سے بدل کر **<span dir="ltr">Claude Agent SDK</span>** رکھا، کیونکہ ٹیمیں اسے تحقیق، ویڈیو تیاری، ڈیٹا کے تجزیے، نوٹ سازی، اور کوڈنگ سے باہر بھی درجنوں دوسرے کاموں کے لیے استعمال کر رہی تھیں۔
 
@@ -95,11 +95,11 @@ _حصہ 3 میں کاروباری شعبہ جاتی کام کے بہاؤ — م�
 
 اس پوری کتاب میں <span dir="ltr">Claude Code</span> وہ بنیادی ٹول ہوگا جسے آپ سب سے زیادہ استعمال کریں گے۔ اس کا مہارتی نظام—یعنی دوبارہ قابلِ استعمال ہدایتی فائلیں جنہیں <span dir="ltr">SKILL.md</span> کہا جاتا ہے—اور اس کی ذیلی ماہر معاون پیدا کرنے کی صلاحیت، <span dir="ltr">Agent Factory</span> طریقۂ کار کی بنیادی اینٹیں ہیں۔
 
-_باب 5 میں <span dir="ltr">Claude Code</span> کو مرکزی محرک بنا کر <span dir="ltr">Spec-Driven Development</span> متعارف کرائی گئی ہے۔ آپ اسے کتاب کے ہر حصے میں استعمال کریں گے۔_
+_باب 16 میں <span dir="ltr">Claude Code</span> کو مرکزی محرک بنا کر <span dir="ltr">Spec-Driven Development</span> متعارف کرائی گئی ہے۔ آپ اسے کتاب کے ہر حصے میں استعمال کریں گے۔_
 
 ---
 
-### Codex — آپ کا طاقتور انجینئرنگ اے آئی ملازم
+### طاقتور انجینئرنگ اے آئی ملازم: <span dir="ltr">Codex</span>
 
 <span dir="ltr">Codex</span>، <span dir="ltr">OpenAI</span> کا ایسا عام نوعیت کا اے آئی ایجنٹ ہے جو مشکل انجینئرنگ مسائل کے لیے بنایا گیا ہے۔ یہ دو طریقوں سے چلتا ہے: ایک کلاؤڈ موڈ، جس میں یہ ایک الگ تھلگ ماحول میں مکمل طور پر خود کام کرتا ہے، اور دوسرا ایک کمانڈ لائن ٹول، جو آپ کے کمپیوٹر پر مقامی طور پر چلتا ہے۔
 
@@ -113,7 +113,7 @@ _باب 5 میں <span dir="ltr">Claude Code</span> کو مرکزی محرک ب�
 
 ## ذاتی اے آئی ملازمین
 
-### OpenClaw — آپ کا ذاتی اے آئی ملازم
+### ذاتی اے آئی ملازم: <span dir="ltr">OpenClaw</span>
 
 <span dir="ltr">Peter Steinberger</span> کے تخلیق کردہ، اور **<span dir="ltr">OpenAI</span>** اور **<span dir="ltr">Vercel</span>** کی پشت پناہی رکھنے والے <span dir="ltr">OpenClaw</span> نے 2026 کے اوائل میں <span dir="ltr">GitHub</span> پر سب سے زیادہ ستارے حاصل کرنے والے سافٹ ویئر منصوبے کا مقام حاصل کیا، اور تقریباً 120 دنوں میں <span dir="ltr">250,000+</span> ستاروں سے آگے نکل گیا۔
 
@@ -121,11 +121,11 @@ _باب 5 میں <span dir="ltr">Claude Code</span> کو مرکزی محرک ب�
 
 <span dir="ltr">OpenClaw</span> مکمل طور پر کھلا ماخذ ہے (<span dir="ltr">MIT license</span>)۔ آپ اسے اپنے کمپیوٹر پر چلاتے ہیں، اپنی پسند کا اے آئی ماڈل منتخب کرتے ہیں (<span dir="ltr">Claude</span>، <span dir="ltr">GPT</span>، <span dir="ltr">DeepSeek</span>، یا دیگر)، اور <span dir="ltr">ClawHub</span> مارکیٹ پلیس سے دستیاب <span dir="ltr">5,700+</span> کمیونٹی کی بنائی ہوئی مہارتوں کے ذریعے اسے بڑھاتے ہیں۔ اس کی شخصیت ایک سادہ مارک ڈاؤن فائل <span dir="ltr">SOUL.md</span> کے ذریعے ترتیب دی جاتی ہے — یہی وہ فارمیٹ ہے جس میں آپ اس پوری کتاب کے دوران اسپیسفیکیشنز لکھنا سیکھیں گے۔
 
-_باب 7 میں <span dir="ltr">OpenClaw</span> کے ساتھ آپ کا پہلا اے آئی ملازم ترتیب دینے کا مرحلہ وار طریقہ دیا گیا ہے۔_
+_باب 18 میں <span dir="ltr">OpenClaw</span> کے ساتھ آپ کا پہلا اے آئی ملازم ترتیب دینے کا مرحلہ وار طریقہ دیا گیا ہے۔_
 
 ---
 
-### NanoClaw — آپ کا محفوظ اے آئی ملازم
+### محفوظ اے آئی ملازم: <span dir="ltr">NanoClaw</span>
 
 [<span dir="ltr">NanoClaw</span>](https://github.com/qwibitai/nanoclaw) <span dir="ltr">OpenClaw</span> کا ایک ہلکا پھلکا، سیکیورٹی کو ترجیح دینے والا متبادل ہے۔ جہاں <span dir="ltr">OpenClaw</span> میں تقریباً پانچ لاکھ سطورِ کوڈ ہیں، وہاں <span dir="ltr">NanoClaw</span> وہی بنیادی تجربہ — یعنی آپ کی میسجنگ ایپس میں ایک اے آئی معاون — ایک ایسے کوڈ بیس میں فراہم کرتا ہے جو اتنا مختصر ہے کہ آپ خود اسے پڑھ اور سمجھ سکیں۔
 
@@ -174,11 +174,11 @@ _حصہ 5 میں آپ اسی فریم ورک پر اپنے مطابق اے آئ�
 
 کوئی ایک ایجنٹ ہر منظرنامے میں بہترین ثابت نہیں ہوتا۔ 2026 کے اوائل کی صارف رپورٹوں اور داخلی معیار پیمائی کی بنیاد پر چند اہم توازن یہ ہیں:
 
-- <span dir="ltr">Claude Code</span> تعامل کی رفتار اور مرحلہ وار استدلال میں آگے ہے، اور اکثر کثیر-فائلی ریفیکٹرنگ میں <span dir="ltr">20–40%</span> زیادہ کامیابی دکھاتا ہے، مگر ایک بار کے کاموں میں کبھی کبھی ضرورت سے زیادہ باتونی محسوس ہوتا ہے۔
-- <span dir="ltr">Codex</span> (<span dir="ltr">GPT-5.3-Codex</span>) کلاؤڈ موڈ میں طویل المدت منصوبہ بندی اور متوازی ذیلی کاموں کے لیے بہترین ہے، اور پیچیدہ معماریاتی کاموں میں کبھی <span dir="ltr">5×</span> تک بہتر ٹوکن کفایت دکھاتا ہے، مگر مقامی <span dir="ltr">CLI</span> موڈ میں تاخیر کے لحاظ سے <span dir="ltr">Claude Code</span> سے پیچھے رہ سکتا ہے۔
-- <span dir="ltr">OpenClaw</span> ہمیشہ فعال ذاتی خودکار عمل کے لیے بہت مؤثر ہے (<span dir="ltr">5,700+</span> کمیونٹی اسکلز)، مگر <span dir="ltr">Claude Code</span> جیسی ابتدائی قابلِ اعتماد کارکردگی حاصل کرنے کے لیے اسے زیادہ پرامپٹ انجینئرنگ درکار ہوتی ہے۔
-- <span dir="ltr">NanoClaw</span> کچھ رفتار قربان کر کے فولادی سیکیورٹی دیتا ہے (بند موڈ میں صفر غیر ارادی نیٹ ورک کالز)، اسی لیے ضابطہ بند صنعتوں میں یہی ترجیحی انتخاب بنتا ہے۔
-- <span dir="ltr">Cowork</span> غیر تکنیکی کام کے بہاؤ (<span dir="ltr">Excel + Gmail + /schedule automation</span>) میں مضبوط ہے، مگر <span dir="ltr">Claude Code</span> یا <span dir="ltr">Codex</span> جیسی گہری کوڈ سمجھ نہیں رکھتا۔
+- رفتار اور مرحلہ وار استدلال کے اعتبار سے <span dir="ltr">Claude Code</span> آگے ہے، اور اکثر کثیر-فائلی ریفیکٹرنگ میں <span dir="ltr">20–40%</span> زیادہ کامیابی دکھاتا ہے، مگر ایک بار کے کاموں میں کبھی کبھی ضرورت سے زیادہ باتونی محسوس ہوتا ہے۔
+- طویل المدت منصوبہ بندی اور متوازی ذیلی کاموں کے لیے <span dir="ltr">Codex</span> (<span dir="ltr">GPT-5.3-Codex</span>) کلاؤڈ موڈ میں بہترین ہے، اور پیچیدہ معماریاتی کاموں میں کبھی <span dir="ltr">5×</span> تک بہتر ٹوکن کفایت دکھاتا ہے، مگر مقامی <span dir="ltr">CLI</span> موڈ میں تاخیر کے لحاظ سے <span dir="ltr">Claude Code</span> سے پیچھے رہ سکتا ہے۔
+- ہمیشہ فعال ذاتی خودکار عمل کے لیے <span dir="ltr">OpenClaw</span> بہت مؤثر ہے (<span dir="ltr">5,700+</span> کمیونٹی مہارتیں)، مگر <span dir="ltr">Claude Code</span> جیسی ابتدائی قابلِ اعتماد کارکردگی حاصل کرنے کے لیے اسے زیادہ پرامپٹ انجینئرنگ درکار ہوتی ہے۔
+- فولادی سیکیورٹی کے لحاظ سے <span dir="ltr">NanoClaw</span> کچھ رفتار قربان کر کے مضبوط تحفظ دیتا ہے (بند موڈ میں صفر غیر ارادی نیٹ ورک کالز)، اسی لیے ضابطہ بند صنعتوں میں یہی ترجیحی انتخاب بنتا ہے۔
+- غیر تکنیکی کام کے بہاؤ (<span dir="ltr">Excel + Gmail + /schedule automation</span>) میں <span dir="ltr">Cowork</span> مضبوط ہے، مگر <span dir="ltr">Claude Code</span> یا <span dir="ltr">Codex</span> جیسی گہری کوڈ سمجھ نہیں رکھتا۔
 
 حقیقی لاگت استعمال کے انداز کے ساتھ بدلتی ہے: بھاری <span dir="ltr">Claude Code</span> فلیٹس عموماً <span dir="ltr">$25–60/month</span> رہتے ہیں؛ اگر <span dir="ltr">DeepSeek</span> سے چلنے والا <span dir="ltr">OpenClaw</span> شامل کیا جائے تو یہ <span dir="ltr">$10–25</span> تک آ سکتی ہے۔ ناکامی کے طریقے خود ضرور آزمائیں — زیادہ تر صارفین <span dir="ltr">2–4</span> ہفتے تک دو مختلف فلیٹس ساتھ چلا کر موازنہ کرتے ہیں۔
 
@@ -202,7 +202,7 @@ _حصہ 5 میں آپ اسی فریم ورک پر اپنے مطابق اے آئ�
 **تیسرا مہینہ:** مشکل انجینئرنگ کے لیے <span dir="ltr">Codex</span> شامل کریں  
 **چھٹا مہینہ:** حساس کاموں کے لیے <span dir="ltr">NanoClaw</span> متعارف کرائیں، یا <span dir="ltr">SKILL.md</span>/<span dir="ltr">SOUL.md</span> کے ذریعے حسبِ ضرورت ایجنٹس بنائیں
 
-منتقلی کے چند مشورے: ایجنٹس کے درمیان <span dir="ltr">SKILL.md</span> میں لکھے گئے پیٹرنز منتقل کریں؛ <span dir="ltr">ClawHub</span> کی کمیونٹی اسکلز کو ایک پل کے طور پر استعمال کریں؛ اور ٹوکن خرچ کی ہفتہ وار نگرانی کریں (باب 3 میں بہتر کاری کے اسکرپٹس شامل ہیں)۔ بہت سے قارئین نے <span dir="ltr">3+</span> ایجنٹس کو ملا کر پیداواری صلاحیت میں <span dir="ltr">2–3×</span> اضافہ رپورٹ کیا ہے، مگر ٹولز کی بے قابو بڑھوتری سے بچیں — بنیادی ٹولز کو <span dir="ltr">4–5</span> تک محدود رکھیں، الا یہ کہ آپ کلائنٹس کے لیے حل تیار کر رہے ہوں۔
+منتقلی کے چند مشورے: ایجنٹس کے درمیان <span dir="ltr">SKILL.md</span> میں لکھے گئے پیٹرنز منتقل کریں؛ <span dir="ltr">ClawHub</span> کی کمیونٹی مہارتوں کو ایک پل کے طور پر استعمال کریں؛ اور ٹوکن خرچ کی ہفتہ وار نگرانی کریں (باب 14 میں بہتر کاری کے اسکرپٹس شامل ہیں)۔ بہت سے قارئین نے <span dir="ltr">3+</span> ایجنٹس کو ملا کر پیداواری صلاحیت میں <span dir="ltr">2–3×</span> اضافہ رپورٹ کیا ہے، مگر ٹولز کی بے قابو بڑھوتری سے بچیں — بنیادی ٹولز کو <span dir="ltr">4–5</span> تک محدود رکھیں، الا یہ کہ آپ کلائنٹس کے لیے حل تیار کر رہے ہوں۔
 
 ---
 

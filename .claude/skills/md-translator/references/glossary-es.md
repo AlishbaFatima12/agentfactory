@@ -43,6 +43,35 @@
 | MDX | MDX | [EN] | Format name |
 | YAML | YAML | [EN] | Format name |
 | JSON | JSON | [EN] | Format name |
+| LLM | LLM | [EN] | Acronym — Large Language Model |
+| Large Language Model | Modelo de lenguaje grande | [TL] | Full form of LLM |
+| Token | Token | [EN] | ML token — widely used in Spanish tech |
+| Context Window | Ventana de contexto | [TL] | AI context window |
+| Model | Modelo | [TL] | In AI/ML context |
+| Tool | Herramienta | [TL] | AI agent tool/function |
+| Agent Loop | Bucle del agente | [TL] | Core agentic loop |
+| Orchestration | Orquestacion | [TL] | Multi-agent coordination |
+| Multi-agent | Multi-agente | [TL] | Technical term |
+| Autonomy | Autonomia | [TL] | |
+| Inference | Inferencia | [TL] | ML inference |
+| Debugging | Depuracion | [TL] | |
+| Interface | Interfaz | [TL] | |
+| Integration | Integracion | [TL] | |
+| Automation | Automatizacion | [TL] | |
+| Testing | Pruebas | [TL] | |
+| Documentation | Documentacion | [TL] | |
+| Output | Salida | [TL] | |
+| Input | Entrada | [TL] | |
+| Server | Servidor | [TL] | |
+| Database | Base de datos | [TL] | |
+| Frontend | Frontend | [EN] | Widely used |
+| Backend | Backend | [EN] | Widely used |
+| Software | Software | [EN] | Widely used |
+| Code | Codigo | [TL] | Programming code |
+| Codebase | Base de codigo | [TL] | |
+| Iteration | Iteracion | [TL] | |
+| Architecture | Arquitectura | [TL] | |
+| Template | Plantilla | [TL] | |
 
 ## Educational Terms
 
@@ -68,3 +97,10 @@
 | Bridge Book | Bridge Book | [EN] | Product concept |
 | General Agent | Agente General | [TL] | |
 | Reusable Intelligence | Inteligencia Reutilizable | [TL] | |
+| Agent-Native | Agent-Native | [EN] | Key book concept — never translate |
+| AI-Native | AI-Native | [EN] | Key book concept — never translate |
+| Domain Expert | Experto en el dominio | [TL] | |
+| Human-in-the-Loop | Human-in-the-Loop | [EN] | Common AI term |
+| Claude | Claude | [EN] | Product name — never translate |
+| Claude Code | Claude Code | [EN] | Product name — never translate |
+| Cowork | Cowork | [EN] | Product name — never translate |
