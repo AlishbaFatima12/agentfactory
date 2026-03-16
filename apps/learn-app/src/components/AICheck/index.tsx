@@ -418,16 +418,21 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
       const action = getProviderAction(provider, prompt);
 
       if (action.copied) {
-        navigator.clipboard.writeText(prompt).then(() => {
-          setToast(
-            `Prompt copied to clipboard -- paste into ${PROVIDER_LABELS[provider] || provider}`,
-          );
-          setTimeout(() => setToast(null), 3000);
-        }).catch(() => {
-          // Clipboard API unavailable (non-HTTPS or unsupported browser)
-          setToast("Prompt is too long for URL -- copy it manually from above");
-          setTimeout(() => setToast(null), 5000);
-        });
+        navigator.clipboard
+          .writeText(prompt)
+          .then(() => {
+            setToast(
+              `Prompt copied to clipboard -- paste into ${PROVIDER_LABELS[provider] || provider}`,
+            );
+            setTimeout(() => setToast(null), 3000);
+          })
+          .catch(() => {
+            // Clipboard API unavailable (non-HTTPS or unsupported browser)
+            setToast(
+              "Prompt is too long for URL -- copy it manually from above",
+            );
+            setTimeout(() => setToast(null), 5000);
+          });
       }
 
       if (action.openUrl) {
@@ -452,9 +457,10 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
           // Anonymous: generate a persistent browser session ID
           let anonId = safeGet("aicheck:__anon_id");
           if (!anonId) {
-            const uuid = typeof crypto?.randomUUID === "function"
-              ? crypto.randomUUID()
-              : `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+            const uuid =
+              typeof crypto?.randomUUID === "function"
+                ? crypto.randomUUID()
+                : `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
             anonId = `anon-${uuid}`;
             safeSet("aicheck:__anon_id", anonId);
           }
@@ -830,11 +836,12 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
                 maxLength={MAX_AI_OUTPUT_LENGTH}
               />
               <CharCount current={aiOutput.length} max={MAX_AI_OUTPUT_LENGTH} />
-              {aiOutput.length > 0 && aiOutput.trim().length < MIN_AI_OUTPUT_LENGTH && (
-                <span className={styles.charHint}>
-                  Paste at least {MIN_AI_OUTPUT_LENGTH} characters to submit
-                </span>
-              )}
+              {aiOutput.length > 0 &&
+                aiOutput.trim().length < MIN_AI_OUTPUT_LENGTH && (
+                  <span className={styles.charHint}>
+                    Paste at least {MIN_AI_OUTPUT_LENGTH} characters to submit
+                  </span>
+                )}
             </div>
 
             {isLoggedIn ? (
@@ -971,7 +978,7 @@ function ScoreCardDisplay({
               >
                 <motion.div
                   className={styles.scoreBarFill}
-                  initial={{ width: 0 }}
+                  initial={prefersReducedMotion ? false : { width: 0 }}
                   animate={{ width: `${val * 10}%` }}
                   transition={
                     prefersReducedMotion

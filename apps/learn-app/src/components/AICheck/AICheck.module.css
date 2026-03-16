@@ -1,10 +1,20 @@
 /* ── AICheck — Unified AI Exercise Component ── */
 
-/* Override global border-radius: 0px !important from shadcn base layer */
-.aicheckCard,
-.aicheckCard * {
-  border-radius: revert !important;
-}
+/* Override global border-radius: 0px !important from shadcn base layer.
+   Use unset instead of revert — revert can cause layout issues on small elements. */
+.aicheckCard { border-radius: 12px !important; }
+.aicheckCard .scoreBar { border-radius: 100px !important; }
+.aicheckCard .scoreBarFill { border-radius: 100px !important; }
+.aicheckCard .submittedCard { border-radius: 12px !important; }
+.aicheckCard .submitBtn { border-radius: 10px !important; }
+.aicheckCard .providerBtn { border-radius: 10px !important; }
+.aicheckCard .xpEarned { border-radius: 100px !important; }
+.aicheckCard .xpPillBtn { border-radius: 100px !important; }
+.aicheckCard .stepNum { border-radius: 8px !important; }
+.aicheckCard .checkIcon + div { border-radius: 50% !important; }
+.aicheckCard .toast { border-radius: 10px !important; }
+.aicheckCard .errorCard { border-radius: 10px !important; }
+.aicheckCard .errorRetryBtn { border-radius: 6px !important; }
 
 /* ── Card Container ── */
 .aicheckCard {
