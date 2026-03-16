@@ -242,32 +242,10 @@ const config: Config = {
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "ur", "zh-Hans"],
-    localeConfigs: {
-      en: {
-        label: "English",
-        direction: "ltr",
-        htmlLang: "en-US",
-        calendar: "gregory",
-      },
-      ur: {
-        label: "اردو",
-        direction: "rtl",
-        htmlLang: "ur-PK",
-        calendar: "gregory",
-        path: "ur",
-      },
-      "zh-Hans": {
-        label: "简体中文",
-        direction: "ltr",
-        htmlLang: "zh-CN",
-        calendar: "gregory",
-        path: "zh-Hans",
-      },
-    },
-  },
+  // i18n config loaded from i18n-config.json — single source of truth
+  // for both docusaurus.config.ts and scripts/build.sh
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  i18n: require("./i18n-config.json"),
 
   presets: [
     [
@@ -278,7 +256,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // editUrl removed — repo is now private
           editUrl: undefined,
-          showLastUpdateTime: true,
+          showLastUpdateTime: !process.env.VERCEL,
           showLastUpdateAuthor: false,
           // Exclude .summary.md files from being rendered as pages
           // They are injected into lesson frontmatter by the summary injector plugin

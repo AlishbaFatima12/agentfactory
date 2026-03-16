@@ -14,8 +14,8 @@ set -euo pipefail
 # @docusaurus/faster flags (SWC + Lightning CSS) are enabled for speed.
 # rspackBundler is intentionally DISABLED — it leaks more memory per locale.
 #
-# Locales are discovered dynamically from docusaurus.config.ts — no hardcoding.
-# To add a new locale: register it in the config's i18n.locales array and run
+# Locales are read from i18n-config.json (shared with docusaurus.config.ts).
+# To add a new locale: update i18n-config.json and run
 # `pnpm docusaurus write-translations --locale <code>`. The next build picks it up.
 
 # Change to learn-app directory (parent of scripts/)
@@ -23,14 +23,9 @@ cd "$(dirname "$0")/.."
 REPO_ROOT="../.."
 
 # ---------------------------------------------------------------------------
-# Ensure .git exists (Docusaurus lastUpdatedAt needs git history).
-# On Vercel, .git is not cloned — create a minimal throwaway repo.
-# Only stage known project directories to avoid capturing unexpected files.
+# lastUpdatedAt is disabled on Vercel (via VERCEL env var check in
+# docusaurus.config.ts) so no fake git history is needed.
 # ---------------------------------------------------------------------------
-if [ ! -d "${REPO_ROOT}/.git" ]; then
-  echo "WARNING: .git missing — creating minimal git history for Docusaurus lastUpdatedAt"
-  (cd "$REPO_ROOT" && git init && git add apps/ libs/ packages/ nx.json pnpm-workspace.yaml package.json && git -c user.name='Vercel Build' -c user.email='noreply@vercel.com' commit -m 'vercel build' --allow-empty)
-fi
 
 # Cross-platform sharp check: when building on Linux (WSL or CI) from a
 # Windows-installed node_modules, the linux-x64 sharp binary may be missing.
@@ -63,30 +58,20 @@ fi
 export NODE_OPTIONS="$HEAP_SIZE $EXTRA_FLAGS"
 
 # ---------------------------------------------------------------------------
-# Dynamically read locales from docusaurus.config.ts
-# Reads i18n.defaultLocale and i18n.locales so adding a new locale to the
-# config is the only change needed — this script requires no edits.
+# Read locales from i18n-config.json — single source of truth shared with
+# docusaurus.config.ts. No regex parsing, no fragile string matching.
+# Adding a new locale: update i18n-config.json and run write-translations.
 # ---------------------------------------------------------------------------
-DEFAULT_LOCALE=$(node -e "
-const fs = require('fs');
-const src = fs.readFileSync('docusaurus.config.ts', 'utf8');
-const m = src.match(/defaultLocale:\s*[\"']([\w-]+)[\"']/);
-console.log(m ? m[1] : 'en');
-")
+DEFAULT_LOCALE=$(node -e "const c = require('./i18n-config.json'); console.log(c.defaultLocale)")
 
 ALL_LOCALES=$(node -e "
-const fs = require('fs');
-const src = fs.readFileSync('docusaurus.config.ts', 'utf8');
-// Match the locales: [...] array (handles both single-line and multi-line)
-const m = src.match(/locales:\s*\[([\s\S]*?)\]/);
-if (!m) { console.error('ERROR: Could not parse locales array from docusaurus.config.ts'); process.exit(1); }
-const tokens = m[1].match(/[\"']([\w-]+)[\"']/g) || [];
-if (tokens.length === 0) { console.error('ERROR: locales array is empty in docusaurus.config.ts'); process.exit(1); }
-console.log(tokens.map(t => t.replace(/[\"']/g, '')).join(' '));
+const c = require('./i18n-config.json');
+if (!c.locales || c.locales.length === 0) { console.error('ERROR: locales array is empty in i18n-config.json'); process.exit(1); }
+console.log(c.locales.join(' '));
 ")
 
 if [ -z "$ALL_LOCALES" ]; then
-  echo "ERROR: Failed to detect locales from docusaurus.config.ts. Refusing to build English-only silently."
+  echo "ERROR: Failed to detect locales from i18n-config.json. Refusing to build English-only silently."
   exit 1
 fi
 

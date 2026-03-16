@@ -1,5 +1,5 @@
 {
-  "installCommand": "cd ../.. && npx -y pnpm@9.15.9 install --no-frozen-lockfile",
+  "installCommand": "cd ../.. && npx -y pnpm@9.15.9 install --frozen-lockfile",
   "buildCommand": "bash scripts/build.sh",
   "outputDirectory": "build",
   "cleanUrls": true,
