@@ -51,7 +51,7 @@ const PROVIDER_URLS: Record<string, { base: string; query: string }> = {
   gemini: { base: "https://gemini.google.com/app", query: "q" },
 };
 
-const PROVIDERS = ["chatgpt", "claude", "gemini"] as const;
+const PROVIDERS = ["chatgpt", "claude"] as const;
 const URL_CHAR_LIMIT = 6000;
 
 const spring = { type: "spring" as const, stiffness: 400, damping: 30 };
@@ -1009,14 +1009,8 @@ function ProviderIcon({ provider }: { provider: string }) {
       );
     case "claude":
       return (
-        <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M4.709 15.955l4.71-2.724-1.89-3.276L2.82 12.68zm8.38-12.089L8.38 1.142 6.489 4.418l4.71 2.724zM20.07 8.592l-4.71 2.725 1.89 3.275 4.71-2.724zm-7.27 9.365l4.71 2.724 1.89-3.275-4.71-2.725zM12 7.318L7.29 10.042v5.45L12 18.215l4.71-2.724v-5.45z" />
-        </svg>
-      );
-    case "gemini":
-      return (
-        <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm0 2.824a9.176 9.176 0 1 1 0 18.352 9.176 9.176 0 0 1 0-18.352zM8.294 8.294h7.412v7.412H8.294z" />
+        <svg className={className} viewBox="0 0 46 32" fill="currentColor">
+          <path d="M33.12 0 18.456 28.8h7.992L41.112 0h-7.992ZM12.888 0 .384 24.768h7.992L20.88 0h-7.992Z" />
         </svg>
       );
     default:
