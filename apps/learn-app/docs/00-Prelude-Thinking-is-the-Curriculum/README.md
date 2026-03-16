@@ -7,15 +7,38 @@ title: "Part 0 Prelude: Thinking is the Curriculum"
 
 > _11 Chapters. 10 Skills. Every Exercise Requires You to Think Before AI Thinks for You._
 
-This part comes before agent foundations, before programming, before architecture, before deployment. It comes first because everything that follows depends on it.
+**AI did not create a skills crisis. It exposed one.**
 
-AI tools can retrieve facts, generate analyses, write code, and produce polished documents. What they cannot do is think. They cannot ask the right question. They cannot detect their own errors. They cannot reason from first principles when no pattern exists. They cannot decide under uncertainty, navigate ethical dilemmas, or create something genuinely new.
+Millions of students can now generate essays, analyses, code, and business plans in seconds. Almost none of them can tell whether what AI produced is correct. They cannot ask the question that AI never thought to ask. They cannot spot the reasoning flaw buried in a fluent paragraph. They cannot look at a system and see the second-order consequence that breaks everything. They have the most powerful cognitive tool in human history — and no idea how to think with it.
 
-These eleven chapters teach the skills that AI amplifies but cannot replace. But teaching thinking in the age of AI creates an immediate paradox: if students have access to AI tools, what stops them from letting AI do all the thinking? The answer is not to ban AI. The answer is to design exercises where AI cannot do the work — because the work is the student's own cognitive process, not the output.
+This is not their fault. They were never taught to think in a world where thinking can be outsourced. **Every AI curriculum on earth starts in the wrong place.** They start with tools. Prompts. APIs. Frameworks. They teach people to *operate* AI. Not one of them puts thinking first.
+
+**Part 0 puts thinking first.**
+
+This is not a warm-up. This is not "soft skills before the real stuff." This is the load-bearing foundation of everything that follows. Remove it, and every technical skill in this book becomes dangerous. A developer who cannot detect broken reasoning will ship broken agents. A business leader who cannot reason from first principles will automate the wrong processes. An architect who cannot think in systems will build AI that optimizes one metric and destroys three others.
+
+The rest of this book will make you powerful. This part determines whether you use that power well.
+
+**The Unsolved Problem**
+
+Every university, every bootcamp, every corporate training program is asking the same question: *If students have access to AI, how do we know they actually learned to think?*
+
+The honest answer, until now, has been: we don't.
+
+Some institutions ban AI. That is denial. Some allow AI and grade the output. That is grading AI, not the student. Some add oral exams on top. That helps, but does not scale.
+
+Part 0 is a different answer. It introduces **six assessment layers** — prediction locks, reasoning receipts, live defence, contradiction challenges, divergence tests, and iterative drafts — engineered so that passing all six *requires* genuine human thinking. No single layer is cheat-proof. All six together are. This is not a policy. It is an architecture.
+
+**And it scales.** AI gives every student instant, personalized feedback on every exercise. Peer review circles add human judgment. Instructors intervene only on flagged cases. The result: rigorous thinking assessment for 16,000 students — with no multiple-choice exams, no essay mills, and no guesswork about who actually learned.
+
+Eleven chapters. Ten thinking skills. Forty exercises. One rule:
 
 > _The deliverable is never the answer. The deliverable is the documented evidence of thinking._
 
-> _Part 0 is about how to teach humans to thrive in the future. The rest of the book is how to build the future._
+You will not be graded on what you produced. You will be graded on whether you can prove you thought.
+
+> _Part 0 teaches humans how to thrive in the AI era. The rest of the book builds the era itself._
+
 
 ## What You Need
 
