@@ -9,6 +9,8 @@ title: "Part 0 Prelude: Thinking is the Curriculum"
 
 **AI did not create a thinking crisis. It exposed one.**
 
+Everyone is telling you to reskill. Learn AI tools or get left behind. They are right, but they are solving the wrong problem. The tools are easy. Thinking is hard. A twelve-year-old can prompt ChatGPT. The hard part is knowing whether what it gave you is true. The hard part is asking the question it would never ask itself. The hard part is thinking. AI does not reward people who can use it. AI rewards people who can think clearly enough to direct it, question it, and know when it is wrong. Our education systems spent twenty years giving us knowledge and never once taught us how to think with it. Part 0 fixes that.
+
 Millions of students can now generate essays, analyses, code, and business plans in seconds. Almost none of them can tell whether what AI produced is correct. They cannot ask the question that AI never thought to ask. They cannot spot the reasoning flaw buried in a fluent paragraph. They cannot look at a system and see the second-order consequence that breaks everything. They have the most powerful cognitive tool in human history — and no idea how to think with it.
 
 This is not their fault. They were never taught to think in a world where thinking can be outsourced. **Every AI curriculum on earth starts in the wrong place.** They start with tools. Prompts. APIs. Frameworks. They teach people to *operate* AI. Not one of them puts thinking first.
