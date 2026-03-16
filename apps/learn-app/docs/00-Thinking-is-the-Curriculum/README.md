@@ -21,6 +21,8 @@ This is not a warm-up. This is not "soft skills before the real stuff." This is 
 
 The rest of this book will make you powerful. This part determines whether you use that power well.
 
+These are not academic exercises. Every chapter builds a thinking skill that commands a premium in technology, healthcare, operations, finance, education, and leadership because when AI can generate anything, the person who can actually think becomes the scarce one.
+
 **The Unsolved Problem**
 
 Every university, every bootcamp, every corporate training program is asking the same question: *If students have access to AI, how do we know they actually learned to think?*
