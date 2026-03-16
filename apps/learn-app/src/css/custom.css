@@ -178,7 +178,7 @@ html[data-theme='dark'] {
 @layer base {
     * {
         @apply border-border outline-ring/50;
-        /* border-radius: 0px removed — was nuking AICheck/SubmissionDialog styling */
+        border-radius: 0px !important;
     }
 
     html,

@@ -1,5 +1,11 @@
 /* ── Submission Dialog — Premium Design ── */
 
+/* Override global border-radius: 0px !important from shadcn base layer */
+.wrapper,
+.wrapper * {
+  border-radius: revert !important;
+}
+
 /* ── Wrapper ── */
 .wrapper {
   margin-top: 3rem;

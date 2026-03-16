@@ -1,5 +1,11 @@
 /* ── AICheck — Unified AI Exercise Component ── */
 
+/* Override global border-radius: 0px !important from shadcn base layer */
+.aicheckCard,
+.aicheckCard * {
+  border-radius: revert !important;
+}
+
 /* ── Card Container ── */
 .aicheckCard {
   margin: 1.5rem 0;

@@ -6,7 +6,7 @@ import re
 import time
 
 from fastapi import APIRouter, Depends, HTTPException, Request
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..core.auth import CurrentUser, get_current_user, get_optional_user
@@ -99,7 +99,14 @@ class ExerciseIntentRequest(BaseModel):
     exercise_id: str = Field(min_length=1, max_length=200)
     provider: str = Field(min_length=1, max_length=50)
     step: str = Field(default="provider_clicked", max_length=50)
-    fields: dict[str, str] = Field(default_factory=dict, max_length=MAX_INTENT_FIELDS)
+    fields: dict[str, str] = Field(default_factory=dict)
+
+    @field_validator("fields")
+    @classmethod
+    def limit_fields(cls, v: dict[str, str]) -> dict[str, str]:
+        if len(v) > MAX_INTENT_FIELDS:
+            raise ValueError(f"Maximum {MAX_INTENT_FIELDS} fields allowed")
+        return v
 
 
 @router.post("/exercise/intent", status_code=204)
