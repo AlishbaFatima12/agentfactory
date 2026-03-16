@@ -576,5 +576,285 @@
   "homepage.maturity.level5": {
     "message": "AI-First انٹرپرائز",
     "description": "Maturity level 5 title"
+  },
+  "homepage.maturity.level1.subtitle": {
+    "message": "تجربہ کاری",
+    "description": "Level 1 subtitle"
+  },
+  "homepage.maturity.level1.description": {
+    "message": "انفرادی ڈویلپرز AI کوڈنگ ٹولز کے ساتھ تجربہ کر رہے ہیں۔ AI کی معاونت والی ترقی کا ابتدائی دور۔",
+    "description": "Level 1 description"
+  },
+  "homepage.maturity.level1.approach": {
+    "message": "AI معاونت (انفرادی)",
+    "description": "Level 1 approach"
+  },
+  "homepage.maturity.level1.impact": {
+    "message": "10-20% پروڈکٹیویٹی میں اضافہ",
+    "description": "Level 1 impact"
+  },
+  "homepage.maturity.level2.subtitle": {
+    "message": "معیاری بنانا",
+    "description": "Level 2 subtitle"
+  },
+  "homepage.maturity.level2.description": {
+    "message": "تنظیم بھر میں AI کو اپنانا حکمت عملی کے ساتھ۔ قائم شدہ رہنمائیں اور سیکیورٹی پالیسیاں۔",
+    "description": "Level 2 description"
+  },
+  "homepage.maturity.level2.approach": {
+    "message": "AI معاونت (ٹیم)",
+    "description": "Level 2 approach"
+  },
+  "homepage.maturity.level2.impact": {
+    "message": "30-40% پروڈکٹیویٹی میں اضافہ",
+    "description": "Level 2 impact"
+  },
+  "homepage.maturity.level3.subtitle": {
+    "message": "ورکفلو کو تبدیل کرنا",
+    "description": "Level 3 subtitle"
+  },
+  "homepage.maturity.level3.description": {
+    "message": "AI-چلانے والی ترقی کی حکمت عملی۔ اسپیسز زندہ دستاویزات بن جاتی ہیں۔ ورکفلوز AI تعاون کے ارد گرد دوبارہ ڈیزائن کیے جاتے ہیں۔",
+    "description": "Level 3 description"
+  },
+  "homepage.maturity.level3.approach": {
+    "message": "AI چلایا جانے والا (ورکفلو)",
+    "description": "Level 3 approach"
+  },
+  "homepage.maturity.level3.impact": {
+    "message": "2-3x تیز ترقی",
+    "description": "Level 3 impact"
+  },
+  "homepage.maturity.level4.subtitle": {
+    "message": "ذہانت تعمیر کریں",
+    "description": "Level 4 subtitle"
+  },
+  "homepage.maturity.level4.description": {
+    "message": "مصنوعات جہاں AI/LLMs کے بنیادی اجزاء ہیں۔ ایجنٹ کا ہم آہنگی، قدرتی زبان انٹرفیسز، ذہین نظام۔",
+    "description": "Level 4 description"
+  },
+  "homepage.maturity.level4.approach": {
+    "message": "AI دیسی (مصنوع)",
+    "description": "Level 4 approach"
+  },
+  "homepage.maturity.level4.impact": {
+    "message": "نئی صلاحیتیں غیر مقفل",
+    "description": "Level 4 impact"
+  },
+  "homepage.maturity.level5.subtitle": {
+    "message": "مستقبل میں رہنا",
+    "description": "Level 5 subtitle"
+  },
+  "homepage.maturity.level5.description": {
+    "message": "مکمل تنظیم AI-دیسی۔ حسب ضرورت ماڈلز، خود بہتری والے نظام، ہر پہلو میں AI شامل۔",
+    "description": "Level 5 description"
+  },
+  "homepage.maturity.level5.approach": {
+    "message": "AI دیسی (انٹرپرائز)",
+    "description": "Level 5 approach"
+  },
+  "homepage.maturity.level5.impact": {
+    "message": "10x پروڈکٹیویٹی",
+    "description": "Level 5 impact"
+  },
+  "homepage.maturity.cta": {
+    "message": "یہ کتاب آپ کو سطریں 3-4 کے لیے تیار کرتی ہے:",
+    "description": "Maturity CTA prefix"
+  },
+  "homepage.maturity.ctaDescription": {
+    "message": "AI-چلایا گیا ورکفلو میں مہارت حاصل کریں اور AI-دیسی مصنوعات بنائیں",
+    "description": "Maturity CTA description"
+  },
+  "homepage.paradigm.badge": {
+    "message": "عظیم تبدیلی",
+    "description": "Paradigm shift badge"
+  },
+  "homepage.paradigm.title": {
+    "message": "آٹومیشن سے ذہانت تک",
+    "description": "Paradigm title line 1"
+  },
+  "homepage.paradigm.subtitle": {
+    "message": "کوڈنگ سے Co-Creating تک",
+    "description": "Paradigm title line 2"
+  },
+  "homepage.paradigm.description": {
+    "message": "AI-دیسی ترقی ڈویلپرز کو بدلنے کے بارے میں نہیں ہے—یہ ذہانت کو بڑھانے کے بارے میں ہے۔ وہ اداروں کے ساتھ تعاون کرنا سیکھیں جو آپ کے ساتھ سیکھتے ہیں۔",
+    "description": "Paradigm description"
+  },
+  "homepage.paradigm.traditional.heading": {
+    "message": "روایتی ترقی",
+    "description": "Traditional development section heading"
+  },
+  "homepage.paradigm.traditional.subtitle": {
+    "message": "آٹومیشن کا دور",
+    "description": "Traditional development subtitle"
+  },
+  "homepage.paradigm.aiNative.heading": {
+    "message": "AI-دیسی طریقہ",
+    "description": "AI Native section heading"
+  },
+  "homepage.paradigm.aiNative.subtitle": {
+    "message": "ذہانت کا دور",
+    "description": "AI Native subtitle"
+  },
+  "homepage.paradigm.item1.traditional": {
+    "message": "ہدایت پر مبنی",
+    "description": "Item 1 traditional title"
+  },
+  "homepage.paradigm.item1.desc": {
+    "message": "کمپیوٹرز کو بالکل بتائیں کہ درست نحو کے ساتھ کیا کریں",
+    "description": "Item 1 description"
+  },
+  "homepage.paradigm.item1.aiNative": {
+    "message": "مقصد پر مبنی",
+    "description": "Item 1 AI Native title"
+  },
+  "homepage.paradigm.item1.aiNativeDesc": {
+    "message": "بتائیں کہ آپ کیا چاہتے ہیں؛ AI سوچتا ہے کہ اسے کیسے بنانا ہے",
+    "description": "Item 1 AI Native description"
+  },
+  "homepage.paradigm.item2.traditional": {
+    "message": "اکیلا کوڈنگ",
+    "description": "Item 2 traditional title"
+  },
+  "homepage.paradigm.item2.desc": {
+    "message": "ڈویلپر ہر لائن دستی طور پر لکھتے ہیں",
+    "description": "Item 2 description"
+  },
+  "homepage.paradigm.item2.aiNative": {
+    "message": "Co-Learning شراکت داری",
+    "description": "Item 2 AI Native title"
+  },
+  "homepage.paradigm.item2.aiNativeDesc": {
+    "message": "آپ اور AI ایک دوسرے کو تکرار کے ذریعے سیکھتے ہیں",
+    "description": "Item 2 AI Native description"
+  },
+  "homepage.paradigm.item3.traditional": {
+    "message": "دستاویزات کو Afterthought کے طور پر",
+    "description": "Item 3 traditional title"
+  },
+  "homepage.paradigm.item3.desc": {
+    "message": "اسپیسز static معاہدے ہیں جو بعد میں لکھے جاتے ہیں",
+    "description": "Item 3 description"
+  },
+  "homepage.paradigm.item3.aiNative": {
+    "message": "خصوصیات کے طور پر زندہ نقشے",
+    "description": "Item 3 AI Native title"
+  },
+  "homepage.paradigm.item3.aiNativeDesc": {
+    "message": "خصوصیات کوڈ، ٹیسٹس، اور دستاویزات چلاتی ہیں",
+    "description": "Item 3 AI Native description"
+  },
+  "homepage.paradigm.item4.traditional": {
+    "message": "لکیری سیکھنا",
+    "description": "Item 4 traditional title"
+  },
+  "homepage.paradigm.item4.desc": {
+    "message": "نحو سیکھیں → سادہ منصوبے بنائیں → سست بڑھتے ہیں",
+    "description": "Item 4 description"
+  },
+  "homepage.paradigm.item4.aiNative": {
+    "message": "پروڈکشن-First سیکھنا",
+    "description": "Item 4 AI Native title"
+  },
+  "homepage.paradigm.item4.aiNativeDesc": {
+    "message": "پہلے دن سے حقیقی agentic نظام بنائیں",
+    "description": "Item 4 AI Native description"
+  },
+  "homepage.paradigm.item5.traditional": {
+    "message": "کوڈ-First",
+    "description": "Item 5 traditional title"
+  },
+  "homepage.paradigm.item5.desc": {
+    "message": "پہلے دن سے implementation کی تفصیلات پر توجہ دیں",
+    "description": "Item 5 description"
+  },
+  "homepage.paradigm.item5.aiNative": {
+    "message": "فن تعمیر-First",
+    "description": "Item 5 AI Native title"
+  },
+  "homepage.paradigm.item5.aiNativeDesc": {
+    "message": "ذہین تعاون ڈیزائن کریں، نہ کہ صرف کوڈ",
+    "description": "Item 5 AI Native description"
+  },
+  "homepage.fte.badge": {
+    "message": "خودمختاری کی ROI",
+    "description": "FTE comparison badge"
+  },
+  "homepage.fte.heading": {
+    "message": "انسانی FTE بمقابلہ ڈیجیٹل FTE",
+    "description": "FTE comparison heading"
+  },
+  "homepage.fte.description": {
+    "message": "ڈیجیٹل FTE 168 گھنٹے ہفتے میں کام کرتا ہے صفر تھکاوٹ کے ساتھ۔ یہ ہے",
+    "description": "FTE comparison description prefix"
+  },
+  "homepage.fte.output": {
+    "message": "4x زیادہ production",
+    "description": "FTE comparison output"
+  },
+  "homepage.fte.cost": {
+    "message": "لاگت کا ایک حصہ۔",
+    "description": "FTE comparison cost"
+  },
+  "homepage.fte.feature": {
+    "message": "خصوصیت",
+    "description": "FTE table feature header"
+  },
+  "homepage.fte.feature": {
+    "message": "خصوصیت",
+    "description": "FTE table feature header"
+  },
+  "homepage.fte.feature2": {
+    "message": "ماہانہ لاگت",
+    "description": "FTE table monthly cost"
+  },
+  "homepage.fte.feature3": {
+    "message": "تتیاری کا وقت",
+    "description": "FTE table ramp-up time"
+  },
+  "homepage.fte.feature4": {
+    "message": "مطابقت",
+    "description": "FTE table consistency"
+  },
+  "homepage.fte.feature5": {
+    "message": "تولید",
+    "description": "FTE table scaling"
+  },
+  "homepage.fte.feature6": {
+    "message": "فی کام لاگت",
+    "description": "FTE table cost per task"
+  },
+  "homepage.fte.item1.digital": {
+    "message": "168 گھنٹے/ہفتہ (24/7)",
+    "description": "FTE table digital availability"
+  },
+  "homepage.fte.item2.digital": {
+    "message": "$500 – $2,000",
+    "description": "FTE table digital monthly cost"
+  },
+  "homepage.fte.item3.digital": {
+    "message": "فوری deployment",
+    "description": "FTE table digital ramp-up time"
+  },
+  "homepage.fte.item4.digital": {
+    "message": "قابل پیش گوئی (99%+)",
+    "description": "FTE table digital consistency"
+  },
+  "homepage.fte.item5.digital": {
+    "message": "Exponential (فوری کلون)",
+    "description": "FTE table digital scaling"
+  },
+  "homepage.fte.item6.digital": {
+    "message": "$3 – $6",
+    "description": "FTE table digital cost per task"
+  },
+  "homepage.fte.human": {
+    "message": "انسانی FTE",
+    "description": "FTE table human header"
+  },
+  "homepage.fte.digital": {
+    "message": "ڈیجیٹل FTE",
+    "description": "FTE table digital header"
   }
 }

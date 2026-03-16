@@ -348,9 +348,7 @@ function AISpectrumSection() {
                 <Translate id="homepage.spectrum.aiDrivenDesc">
                   AI generates significant code from specifications. You act as
                   architect, director, and reviewer.
-                </Translate>mb-6 flex-grow">
-                AI generates significant code from specifications. You act as
-                architect, director, and reviewer.
+                </Translate>
               </p>
               <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
                 <li className="flex items-start">
@@ -390,28 +388,6 @@ function AISpectrumSection() {
                   Applications architected around AI capabilities. LLMs and agents
                   are core functional components.
                 </Translate>
-              </p>
-              <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Natural language
-                  interfaces
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Intelligent
-                  automation & reasoning
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Agent
-                  orchestration systems
-                </li>
-              </ul>
-              <div className="mt-auto pt-4 border-t text-xs text-muted-foreground">
-                <strong className="text-foreground">Example:</strong> Building a
-                customer support agent that autonomously resolves tickets
-              </div>
-            </CardContent>
-          </Card>
-        </div>
               </p>
               <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
                 <li className="flex items-start">
@@ -525,49 +501,44 @@ function MaturityLevelsSection() {
   const levels = [
     {
       number: 1,
-      title: "AI Awareness",
-      subtitle: "Experimenting",
-      impact: "10-20% productivity gains",
-      description:
-        "Individual developers experimenting with AI coding tools. Early AI Assisted Development.",
-      approach: "AI Assisted (Individual)",
+      title: <Translate id="homepage.maturity.level1">AI Awareness</Translate>,
+      subtitle: <Translate id="homepage.maturity.level1.subtitle">Experimenting</Translate>,
+      impact: <Translate id="homepage.maturity.level1.impact">10-20% productivity gains</Translate>,
+      description: <Translate id="homepage.maturity.level1.description">Individual developers experimenting with AI coding tools. Early AI Assisted Development.</Translate>,
+      approach: <Translate id="homepage.maturity.level1.approach">AI Assisted (Individual)</Translate>,
     },
     {
       number: 2,
-      title: "AI Adoption",
-      subtitle: "Standardizing",
-      impact: "30-40% productivity boost",
-      description:
-        "Organization-wide adoption with governance. Established guidelines and security policies.",
-      approach: "AI Assisted (Team)",
+      title: <Translate id="homepage.maturity.level2">AI Adoption</Translate>,
+      subtitle: <Translate id="homepage.maturity.level2.subtitle">Standardizing</Translate>,
+      impact: <Translate id="homepage.maturity.level2.impact">30-40% productivity boost</Translate>,
+      description: <Translate id="homepage.maturity.level2.description">Organization-wide adoption with governance. Established guidelines and security policies.</Translate>,
+      approach: <Translate id="homepage.maturity.level2.approach">AI Assisted (Team)</Translate>,
     },
     {
       number: 3,
-      title: "AI Integration",
-      subtitle: "Transforming Workflows",
-      impact: "2-3x faster development",
-      description:
-        "AI-Driven Development practices. Specs become living documentation. Workflows redesigned around AI collaboration.",
-      approach: "AI Driven (Workflow)",
+      title: <Translate id="homepage.maturity.level3">AI Integration</Translate>,
+      subtitle: <Translate id="homepage.maturity.level3.subtitle">Transforming Workflows</Translate>,
+      impact: <Translate id="homepage.maturity.level3.impact">2-3x faster development</Translate>,
+      description: <Translate id="homepage.maturity.level3.description">AI-Driven Development practices. Specs become living documentation. Workflows redesigned around AI collaboration.</Translate>,
+      approach: <Translate id="homepage.maturity.level3.approach">AI Driven (Workflow)</Translate>,
     },
     {
       number: 4,
-      title: "AI-Native Products",
-      subtitle: "Building Intelligence",
-      impact: "New capabilities unlocked",
-      description:
-        "Products where AI/LLMs are core components. Agent orchestration, natural language interfaces, intelligent systems.",
-      approach: "AI Native (Product)",
+      title: <Translate id="homepage.maturity.level4">AI-Native Products</Translate>,
+      subtitle: <Translate id="homepage.maturity.level4.subtitle">Building Intelligence</Translate>,
+      impact: <Translate id="homepage.maturity.level4.impact">New capabilities unlocked</Translate>,
+      description: <Translate id="homepage.maturity.level4.description">Products where AI/LLMs are core components. Agent orchestration, natural language interfaces, intelligent systems.</Translate>,
+      approach: <Translate id="homepage.maturity.level4.approach">AI Native (Product)</Translate>,
       focus: true,
     },
     {
       number: 5,
-      title: "AI-First Enterprise",
-      subtitle: "Living in the Future",
-      impact: "10x productivity",
-      description:
-        "Entire organization AI-native. Custom models, self-improving systems, AI embedded in every aspect.",
-      approach: "AI Native (Enterprise)",
+      title: <Translate id="homepage.maturity.level5">AI-First Enterprise</Translate>,
+      subtitle: <Translate id="homepage.maturity.level5.subtitle">Living in the Future</Translate>,
+      impact: <Translate id="homepage.maturity.level5.impact">10x productivity</Translate>,
+      description: <Translate id="homepage.maturity.level5.description">Entire organization AI-native. Custom models, self-improving systems, AI embedded in every aspect.</Translate>,
+      approach: <Translate id="homepage.maturity.level5.approach">AI Native (Enterprise)</Translate>,
     },
   ];
 
@@ -641,9 +612,9 @@ function MaturityLevelsSection() {
         <div className="mt-12 text-center">
           <p className="text-muted-foreground">
             <strong className="text-foreground">
-              This book prepares you for Levels 3-4:
+              <Translate id="homepage.maturity.cta">This book prepares you for Levels 3-4:</Translate>
             </strong>{" "}
-            Master AI-Driven workflows and build AI-Native products
+            <Translate id="homepage.maturity.ctaDescription">Master AI-Driven workflows and build AI-Native products</Translate>
           </p>
         </div>
       </div>
@@ -654,44 +625,47 @@ function MaturityLevelsSection() {
 function ParadigmShift() {
   const traditionalItems = [
     {
-      title: "Instruction-Based",
-      desc: "Tell computers exactly what to do with precise syntax",
-    },
-    { title: "Solo Coding", desc: "Developer writes every line manually" },
-    {
-      title: "Documentation as Afterthought",
-      desc: "Specs are static contracts written post-facto",
+      title: <Translate id="homepage.paradigm.item1.traditional">Instruction-Based</Translate>,
+      desc: <Translate id="homepage.paradigm.item1.desc">Tell computers exactly what to do with precise syntax</Translate>,
     },
     {
-      title: "Linear Learning",
-      desc: "Learn syntax → Build simple projects → Slowly scale",
+      title: <Translate id="homepage.paradigm.item2.traditional">Solo Coding</Translate>,
+      desc: <Translate id="homepage.paradigm.item2.desc">Developer writes every line manually</Translate>,
     },
     {
-      title: "Code-First",
-      desc: "Focus on implementation details from day one",
+      title: <Translate id="homepage.paradigm.item3.traditional">Documentation as Afterthought</Translate>,
+      desc: <Translate id="homepage.paradigm.item3.desc">Specs are static contracts written post-facto</Translate>,
+    },
+    {
+      title: <Translate id="homepage.paradigm.item4.traditional">Linear Learning</Translate>,
+      desc: <Translate id="homepage.paradigm.item4.desc">Learn syntax → Build simple projects → Slowly scale</Translate>,
+    },
+    {
+      title: <Translate id="homepage.paradigm.item5.traditional">Code-First</Translate>,
+      desc: <Translate id="homepage.paradigm.item5.desc">Focus on implementation details from day one</Translate>,
     },
   ];
 
   const aiNativeItems = [
     {
-      title: "Intent-Based",
-      desc: "Describe what you want; AI reasons how to build it",
+      title: <Translate id="homepage.paradigm.item1.aiNative">Intent-Based</Translate>,
+      desc: <Translate id="homepage.paradigm.item1.aiNativeDesc">Describe what you want; AI reasons how to build it</Translate>,
     },
     {
-      title: "Co-Learning Partnership",
-      desc: "You and AI teach each other through iteration",
+      title: <Translate id="homepage.paradigm.item2.aiNative">Co-Learning Partnership</Translate>,
+      desc: <Translate id="homepage.paradigm.item2.aiNativeDesc">You and AI teach each other through iteration</Translate>,
     },
     {
-      title: "Specs as Living Blueprints",
-      desc: "Specifications drive code, tests, and documentation",
+      title: <Translate id="homepage.paradigm.item3.aiNative">Specs as Living Blueprints</Translate>,
+      desc: <Translate id="homepage.paradigm.item3.aiNativeDesc">Specifications drive code, tests, and documentation</Translate>,
     },
     {
-      title: "Production-First Learning",
-      desc: "Build real agentic systems from day one",
+      title: <Translate id="homepage.paradigm.item4.aiNative">Production-First Learning</Translate>,
+      desc: <Translate id="homepage.paradigm.item4.aiNativeDesc">Build real agentic systems from day one</Translate>,
     },
     {
-      title: "Architecture-First",
-      desc: "Design intelligent collaborations, not just code",
+      title: <Translate id="homepage.paradigm.item5.aiNative">Architecture-First</Translate>,
+      desc: <Translate id="homepage.paradigm.item5.aiNativeDesc">Design intelligent collaborations, not just code</Translate>,
     },
   ];
 
@@ -701,17 +675,19 @@ function ParadigmShift() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">
-            The Great Shift
+            <Translate id="homepage.paradigm.badge">The Great Shift</Translate>
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            From Automation to Intelligence
+            <Translate id="homepage.paradigm.title">From Automation to Intelligence</Translate>
             <br />
-            <span className="text-primary">From Coding to Co-Creating</span>
+            <span className="text-primary"><Translate id="homepage.paradigm.subtitle">From Coding to Co-Creating</Translate></span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            AI-native development is not about replacing developers—it's about
-            amplifying intelligence. Learn to collaborate with reasoning
-            entities that learn with you.
+            <Translate id="homepage.paradigm.description">
+              AI-native development is not about replacing developers—it's about
+              amplifying intelligence. Learn to collaborate with reasoning
+              entities that learn with you.
+            </Translate>
           </p>
         </div>
 
@@ -722,10 +698,10 @@ function ParadigmShift() {
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-foreground">
-                  Traditional Development
+                  <Translate id="homepage.paradigm.traditional.heading">Traditional Development</Translate>
                 </h3>
                 <p className="text-muted-foreground uppercase text-xs font-medium tracking-wider mt-1">
-                  The automation era
+                  <Translate id="homepage.paradigm.traditional.subtitle">The automation era</Translate>
                 </p>
               </div>
               <ul className="space-y-4">
@@ -758,10 +734,10 @@ function ParadigmShift() {
               <Badge className="absolute top-4 right-4">The Future</Badge>
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-foreground">
-                  AI-Native Way
+                  <Translate id="homepage.paradigm.aiNative.heading">AI-Native Way</Translate>
                 </h3>
                 <p className="text-primary uppercase text-xs font-medium tracking-wider mt-1">
-                  The intelligence era
+                  <Translate id="homepage.paradigm.aiNative.subtitle">The intelligence era</Translate>
                 </p>
               </div>
               <ul className="space-y-4">
@@ -785,39 +761,39 @@ function ParadigmShift() {
 function DigitalFTEComparison() {
   const comparisonData = [
     {
-      feature: "Availability",
+      feature: <Translate id="homepage.fte.feature">Availability</Translate>,
       human: "40 hours/week",
-      digital: "168 hours/week (24/7)",
+      digital: <Translate id="homepage.fte.item1.digital">168 hours/week (24/7)</Translate>,
       highlight: true,
     },
     {
-      feature: "Monthly Cost",
+      feature: <Translate id="homepage.fte.feature2">Monthly Cost</Translate>,
       human: "$4,000 – $8,000+",
-      digital: "$500 – $2,000",
+      digital: <Translate id="homepage.fte.item2.digital">$500 – $2,000</Translate>,
       highlight: true,
     },
     {
-      feature: "Ramp-up Time",
+      feature: <Translate id="homepage.fte.feature3">Ramp-up Time</Translate>,
       human: "3 – 6 months",
-      digital: "Instant deployment",
+      digital: <Translate id="homepage.fte.item3.digital">Instant deployment</Translate>,
       highlight: false,
     },
     {
-      feature: "Consistency",
+      feature: <Translate id="homepage.fte.feature4">Consistency</Translate>,
       human: "Variable (85–95%)",
-      digital: "Predictable (99%+)",
+      digital: <Translate id="homepage.fte.item4.digital">Predictable (99%+)</Translate>,
       highlight: false,
     },
     {
-      feature: "Scaling",
+      feature: <Translate id="homepage.fte.feature5">Scaling</Translate>,
       human: "Linear (hire 10 for 10x)",
-      digital: "Exponential (instant clone)",
+      digital: <Translate id="homepage.fte.item5.digital">Exponential (instant clone)</Translate>,
       highlight: true,
     },
     {
-      feature: "Cost per Task",
+      feature: <Translate id="homepage.fte.feature6">Cost per Task</Translate>,
       human: "$30 – $60",
-      digital: "$3 – $6",
+      digital: <Translate id="homepage.fte.item6.digital">$3 – $6</Translate>,
       highlight: true,
     },
   ];
@@ -828,15 +804,15 @@ function DigitalFTEComparison() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">
-            The ROI of Autonomy
+            <Translate id="homepage.fte.badge">The ROI of Autonomy</Translate>
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Human FTE vs Digital FTE
+            <Translate id="homepage.fte.heading">Human FTE vs Digital FTE</Translate>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A Digital FTE works 168 hours a week with zero fatigue. That's{" "}
-            <span className="text-foreground font-semibold">4x the output</span>{" "}
-            at a fraction of the cost.
+            <Translate id="homepage.fte.description">A Digital FTE works 168 hours a week with zero fatigue. That's</Translate> {" "}
+            <span className="text-foreground font-semibold"><Translate id="homepage.fte.output">4x the output</Translate></span>{" "}
+            <Translate id="homepage.fte.cost">at a fraction of the cost.</Translate>
           </p>
         </div>
 
@@ -845,13 +821,13 @@ function DigitalFTEComparison() {
           <div className="grid grid-cols-3 gap-px bg-border/40 border border-border/40 overflow-hidden">
             {/* Header Row */}
             <div className="bg-muted/50 p-4 font-bold text-foreground text-sm uppercase tracking-wide">
-              Feature
+              <Translate id="homepage.fte.feature">Feature</Translate>
             </div>
             <div className="bg-muted/50 p-4 font-bold text-foreground text-sm uppercase tracking-wide text-center">
-              Human FTE
+              <Translate id="homepage.fte.human">Human FTE</Translate>
             </div>
             <div className="bg-primary/10 p-4 font-bold text-primary text-sm uppercase tracking-wide text-center border-l-2 border-primary">
-              Digital FTE
+              <Translate id="homepage.fte.digital">Digital FTE</Translate>
             </div>
 
             {/* Data Rows */}
