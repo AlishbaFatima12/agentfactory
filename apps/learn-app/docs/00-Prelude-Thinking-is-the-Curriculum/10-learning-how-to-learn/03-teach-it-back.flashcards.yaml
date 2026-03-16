@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch10-teach-it-back"
+  title: "Teach It Back"
+  description: "Key concepts from the teach-back exercise: teaching as understanding test, knowledge gap vs. articulation gap, peer feedback integration, and the Next 20 Hours learning plan."
+  tags: ["meta-learning", "teach-back", "live-defence", "knowledge-gaps"]
+  version: 1
+
+cards:
+  - id: "p0-ch10-teach-it-back-001"
+    front: "Why is teaching described as 'the ultimate test of understanding'?"
+    back: "If you can explain something to someone who knows nothing about it, you truly learned it. If you collapse under unexpected questions, you memorized without understanding."
+    tags: ["teaching", "understanding"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-teach-it-back-002"
+    front: "Why are unexpected questions more revealing than prepared presentation content?"
+    back: "Prepared content can be memorized without understanding, but unexpected questions force real-time reasoning that only works if you have genuine comprehension of the underlying concepts."
+    tags: ["unexpected-questions", "understanding"]
+    difficulty: "intermediate"
+    why: "How would you design questions to distinguish memorized knowledge from genuine understanding?"
+
+  - id: "p0-ch10-teach-it-back-003"
+    front: "What is the difference between a knowledge gap and an articulation gap?"
+    back: "Knowledge gap: you genuinely did not know the answer. Articulation gap: you knew but could not explain it clearly."
+    tags: ["knowledge-gaps", "articulation"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-teach-it-back-004"
+    front: "Why does the exercise require distinguishing between knowledge gaps and articulation gaps for unanswered questions?"
+    back: "Each requires a different remedy: knowledge gaps need more study, while articulation gaps need practice explaining. Misdiagnosing the gap type leads to wasted improvement effort."
+    tags: ["gap-diagnosis", "self-assessment"]
+    difficulty: "intermediate"
+    why: "How would you test whether a specific gap is knowledge or articulation?"
+
+  - id: "p0-ch10-teach-it-back-005"
+    front: "What four dimensions do peer feedback forms rate in the teach-back session?"
+    back: "1. Clarity of explanation\n2. Depth of understanding\n3. Ability to answer unexpected questions\n4. Engagement"
+    tags: ["peer-feedback", "assessment"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-teach-it-back-006"
+    front: "Why is no AI access allowed during the 10-minute teaching session?"
+    back: "Without AI, students must rely entirely on what they actually internalized, because looking things up would mask the gap between genuine understanding and surface memorization."
+    tags: ["no-ai", "live-defence"]
+    difficulty: "intermediate"
+    why: "What would allowing AI access during the session change about the assessment's validity?"
+
+  - id: "p0-ch10-teach-it-back-007"
+    front: "What is the 'Next 20 Hours' learning plan that AI generates after the teach-back?"
+    back: "A targeted plan identifying the student's most critical knowledge gaps and prescribing what to study to fill them with time estimates."
+    tags: ["next-20-hours", "ai-feedback"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-teach-it-back-008"
+    front: "A student prepared by memorizing facts but collapsed under 'why' and 'how' questions. What does this reveal about their learning approach?"
+    back: "They studied for recall without building understanding of connections and mechanisms. Memorization produces fragile knowledge that breaks under probing, because isolated facts lack the causal links that enable reasoning."
+    tags: ["memorization-vs-understanding", "learning-quality"]
+    difficulty: "advanced"
+    why: "How would you restructure your learning approach to build understanding rather than just recall?"

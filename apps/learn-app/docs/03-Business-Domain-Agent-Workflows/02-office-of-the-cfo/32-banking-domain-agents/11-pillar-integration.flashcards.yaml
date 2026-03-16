@@ -1,0 +1,91 @@
+deck:
+  id: "ch32-11-pillar-integration"
+  title: "Cross-Pillar Integration"
+  description: "How a single event cascades across IFRS 9, Basel, and AML pillars, and why integrated agent architectures outperform siloed ones."
+  tags: ["cross-pillar", "IFRS-9", "Basel", "AML", "banking-agents"]
+  version: 1
+
+cards:
+  - id: "ch32-11-pillar-integration-001"
+    front: "What is a cross-pillar cascade in banking regulation?"
+    back: "A single event triggering responses across all three regulatory pillars (AML, IFRS 9, Basel) simultaneously."
+    tags: ["cross-pillar", "regulatory-cascade"]
+    difficulty: "basic"
+
+  - id: "ch32-11-pillar-integration-002"
+    front: "How does a bank calculate the CET1 impact of an IFRS 9 provision increase?"
+    back: "CET1 Impact = Provision Increase x (1 - Tax Rate) / RWA. The tax adjustment matters because provisions are deductible expenses, so a 25% tax rate means only 75% flows through to CET1 reduction."
+    tags: ["CET1", "provision-impact", "IFRS-9"]
+    difficulty: "intermediate"
+    why: "Why does ignoring the tax adjustment overstate the capital impact of a provision charge?"
+
+  - id: "ch32-11-pillar-integration-003"
+    front: "In the fraud cascade example, what are the three pillar responses to discovering GBP 50M in fraudulent loans?"
+    back: "1. AML: SAR filed, enhanced monitoring, tipping-off restrictions\n2. IFRS 9: Stage 1 to Stage 3 migration, ECL jumps to GBP 42.5M\n3. Basel: CET1 reduced by GBP 31.8M (post-tax)"
+    tags: ["fraud-cascade", "cross-pillar"]
+    difficulty: "intermediate"
+
+  - id: "ch32-11-pillar-integration-004"
+    front: "A bank's IFRS 9 ECL is GBP 75.5M and its regulatory EL is GBP 42.0M. Is there a shortfall or excess, and why does it matter?"
+    back: "Excess of GBP 33.5M. This matters because excess provisions can be added to Tier 2 capital (capped at 0.6% of credit RWA), providing additional regulatory capital. A shortfall would instead be deducted from capital."
+    tags: ["IRB-shortfall", "IFRS-9", "Basel"]
+    difficulty: "intermediate"
+    why: "Why does the 0.6% cap exist on the Tier 2 add-back for excess provisions?"
+
+  - id: "ch32-11-pillar-integration-005"
+    front: "Under Basel rules, what is the cap on adding excess IFRS 9 provisions to Tier 2 capital?"
+    back: "0.6% of credit RWA."
+    tags: ["IRB-shortfall", "Tier-2", "Basel"]
+    difficulty: "basic"
+
+  - id: "ch32-11-pillar-integration-006"
+    front: "What are the IFRS 9 transitional add-back percentages over the 5-year phase-in?"
+    back: "Year 1: 95%\nYear 2: 85%\nYear 3: 70%\nYear 4: 50%\nYear 5: 25%"
+    tags: ["IFRS-9", "transitional-arrangements"]
+    difficulty: "basic"
+
+  - id: "ch32-11-pillar-integration-007"
+    front: "Why were IFRS 9 transitional arrangements introduced for bank capital?"
+    back: "To prevent a cliff-edge capital impact when IFRS 9 took effect. Without phasing, the Day 1 provision increase would have immediately reduced CET1, potentially causing widespread buffer breaches across the industry."
+    tags: ["IFRS-9", "transitional-arrangements", "CET1"]
+    difficulty: "intermediate"
+    why: "What happens to a bank's capital headroom as the transitional add-back diminishes each year?"
+
+  - id: "ch32-11-pillar-integration-008"
+    front: "An isolated IFRS 9 agent reports ECL of GBP 145.8M. An isolated Basel agent reports CET1 of 12.0%. Why are both correct yet misleading?"
+    back: "The ECL agent omits the capital impact of its own figure, and the Basel agent uses a stale ratio because it has not received the provision update. Only an integrated agent traces the cascade: higher ECL reduces CET1 to 11.1%."
+    tags: ["pillar-isolation", "integrated-agent"]
+    difficulty: "advanced"
+    why: "What organisational structure in real banks causes the same siloed analysis that isolated agents produce?"
+
+  - id: "ch32-11-pillar-integration-009"
+    front: "What are the three types of queries the banking plugin router handles?"
+    back: "1. Single-pillar (one skill)\n2. Cross-pillar (chained across two pillars)\n3. Full cascade (chained across all three pillars)"
+    tags: ["skill-chaining", "router"]
+    difficulty: "basic"
+
+  - id: "ch32-11-pillar-integration-010"
+    front: "Why does the banking router sequence skills rather than running them in parallel for cross-pillar queries?"
+    back: "Each skill's output is an input to the next skill. The AML finding determines the staging change, the staging change determines the ECL, and the ECL determines the capital impact -- parallel execution would lack the required data dependencies."
+    tags: ["skill-chaining", "router", "data-dependencies"]
+    difficulty: "intermediate"
+    why: "What would go wrong if the Basel capital skill ran before the IFRS 9 ECL skill in a cascade?"
+
+  - id: "ch32-11-pillar-integration-011"
+    front: "In the Exercise 9 worked example, how much does the CET1 ratio drop under the adverse scenario, and what caused it?"
+    back: "From 12.0% to 11.1% (90 basis points), caused by post-tax ECL charge of GBP 52.7M, partially offset by GBP 34M transitional add-back, plus GBP 52.5M additional RWA from NPL migration."
+    tags: ["CET1", "stress-test", "cross-pillar"]
+    difficulty: "intermediate"
+
+  - id: "ch32-11-pillar-integration-012"
+    front: "When Stage 3 non-performing loans migrate under the Standardised Approach, what risk weight applies?"
+    back: "150% risk weight for non-performing exposures."
+    tags: ["Basel", "risk-weight", "NPL"]
+    difficulty: "basic"
+
+  - id: "ch32-11-pillar-integration-013"
+    front: "A board receives separate ECL, capital, and AML reports. Why does this integrated-view gap change their decision-making?"
+    back: "Separate reports miss the cascade: sectors with the highest default rates also present the highest AML risk, and provision increases compress capital buffers. Without integration, the board cannot see that credit deterioration, capital erosion, and financial crime risk compound simultaneously."
+    tags: ["board-reporting", "cross-pillar", "integrated-agent"]
+    difficulty: "advanced"
+    why: "How would you design an agent architecture that prevents pillar isolation?"

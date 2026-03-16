@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch05-audience-prediction"
+  title: "The Audience Prediction"
+  description: "Key concepts from the audience prediction and stakeholder communication exercise"
+  tags: ["Part 0", "communication", "audience-analysis", "persuasion"]
+  version: 1
+
+cards:
+  - id: "p0-ch05-audience-prediction-001"
+    front: "What three elements should an audience profile contain for each stakeholder?"
+    back: "1. Priorities (what they care about)\n2. Predicted objection\n3. Persuasion strategy"
+    tags: ["audience-analysis", "stakeholder-communication"]
+    difficulty: "basic"
+
+  - id: "p0-ch05-audience-prediction-002"
+    front: "What is the difference between writing and communication?"
+    back: "Writing produces text. Communication means understanding an audience, anticipating objections, and adapting when the response is unexpected."
+    tags: ["communication", "core-skill"]
+    difficulty: "basic"
+
+  - id: "p0-ch05-audience-prediction-003"
+    front: "Why must audience profiles be written BEFORE asking AI to generate persuasive briefs?"
+    back: "Because writing profiles first forces genuine prediction of stakeholder priorities. Writing them after AI output would just be rationalizing what AI already said, not exercising independent judgment."
+    tags: ["audience-analysis", "prediction-lock"]
+    difficulty: "intermediate"
+    why: "How would you tell if someone wrote their profiles before or after seeing AI output?"
+
+  - id: "p0-ch05-audience-prediction-004"
+    front: "A CEO, CFO, and CTO all hear the same proposal. Why does each need a different argument?"
+    back: "Each stakeholder has different priorities, objections, and decision criteria. The same facts framed for cost savings persuade a CFO but bore a CTO who cares about technical debt."
+    tags: ["audience-analysis", "persuasion"]
+    difficulty: "intermediate"
+    why: "What happens when someone presents the same argument to all three stakeholders?"
+
+  - id: "p0-ch05-audience-prediction-005"
+    front: "In what dimensions does human audience reading typically outperform AI-generated briefs?"
+    back: "Political dynamics, emotional undercurrents, organizational history, and cultural context."
+    tags: ["audience-analysis", "AI-comparison"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch05-audience-prediction-006"
+    front: "Why might an AI-generated persuasive brief sound competent but still fail to land with a stakeholder?"
+    back: "Because AI lacks knowledge of the specific relationship, organizational politics, and personal history that determine whether a message is received or dismissed."
+    tags: ["communication", "AI-limitations"]
+    difficulty: "intermediate"
+    why: "What kind of information would you need to give AI to close this gap?"
+
+  - id: "p0-ch05-audience-prediction-007"
+    front: "Which assessment layers does the Audience Prediction exercise use?"
+    back: "Layer 1 (Predict Before You Prompt) and Layer 2 (Reasoning Receipt)."
+    tags: ["assessment-layers"]
+    difficulty: "basic"
+
+  - id: "p0-ch05-audience-prediction-008"
+    front: "How does the Error Taxonomy from Chapter 2 apply to communication exercises?"
+    back: "Students detect communication errors (wrong emphasis, audience mismatch, buried lead) instead of factual or logical errors."
+    tags: ["error-taxonomy", "communication"]
+    difficulty: "intermediate"
+    why: "What makes a communication error harder to detect than a factual error?"

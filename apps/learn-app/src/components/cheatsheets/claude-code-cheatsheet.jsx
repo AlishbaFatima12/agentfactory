@@ -3,14 +3,14 @@ import { useState } from "react";
 const palette = {
   bg: "#faf5ef",
   card: "#fff8f0",
-  cardBorder: "#e8d5c4",
+  cardBorder: "#d8c0ab", // Darkened for better contrast
   accent: "#c0582a",
   accentLight: "#e87a45",
   accentPale: "#f5ddd0",
-  dark: "#2c1810",
-  mid: "#5a3e2b",
+  dark: "#140a06", // Darkened for bolder headings
+  mid: "#3d2518",
   codeBg: "#2c1810",
-  codeText: "#f0dcc8",
+  codeText: "#fff",
   tagBg: "#c0582a",
   tagText: "#fff",
   highlight: "#fff3e6",
@@ -24,7 +24,7 @@ const Code = ({ children }) => (
       borderRadius: 4,
       padding: "4px 7px",
       fontFamily: "'JetBrains Mono', 'Fira Code', 'Courier New', monospace",
-      fontSize: 9.5,
+      fontSize: 10,
       lineHeight: 1.4,
       overflowX: "auto",
       whiteSpace: "pre",
@@ -61,7 +61,7 @@ const Bullet = ({ children }) => (
       display: "flex",
       gap: 4,
       marginBottom: 1,
-      fontSize: 10,
+      fontSize: 10.5,
       lineHeight: 1.35,
       color: palette.mid,
       alignItems: "flex-start",
@@ -81,8 +81,34 @@ const Bullet = ({ children }) => (
   </div>
 );
 
+const Check = ({ children }) => (
+  <div
+    style={{
+      display: "flex",
+      gap: 4,
+      marginBottom: 1,
+      fontSize: 10.5,
+      lineHeight: 1.35,
+      color: palette.mid,
+      alignItems: "flex-start",
+    }}
+  >
+    <span
+      style={{
+        color: "#5a8a3c",
+        fontWeight: 700,
+        marginTop: -2,
+        fontSize: 10,
+      }}
+    >
+      ✔
+    </span>
+    <span style={{ flex: 1 }}>{children}</span>
+  </div>
+);
+
 const KV = ({ k, v }) => (
-  <div style={{ fontSize: 10, marginBottom: 1, color: palette.mid }}>
+  <div style={{ fontSize: 10.5, marginBottom: 1, color: palette.mid }}>
     <strong style={{ color: palette.dark }}>{k}</strong> — {v}
   </div>
 );
@@ -99,7 +125,7 @@ const RefRow = ({ cmd, desc }) => (
     <code
       style={{
         fontFamily: "'JetBrains Mono', monospace",
-        fontSize: 9,
+        fontSize: 9.5,
         color: palette.accent,
         fontWeight: 700,
         width: 100,
@@ -108,7 +134,7 @@ const RefRow = ({ cmd, desc }) => (
     >
       {cmd}
     </code>
-    <span style={{ fontSize: 9.5, color: palette.mid }}>{desc}</span>
+    <span style={{ fontSize: 10, color: palette.mid }}>{desc}</span>
   </div>
 );
 
@@ -225,7 +251,7 @@ export default function ClaudeCodeCheatsheet() {
           <div
             style={{
               color: palette.codeText,
-              fontSize: 9,
+              fontSize: 9.5,
               marginTop: 3,
               letterSpacing: 1.5,
               textTransform: "uppercase",
@@ -249,13 +275,14 @@ export default function ClaudeCodeCheatsheet() {
           }}
         >
           {/* 1. Getting Started */}
-          <SectionCard number="1" title="Getting Started">
-            <Code>{`# Install (requires Node 18+)
-curl -fsSL \\
-  https://claude.ai/install.sh | bash
+          <SectionCard number="1" title="⚡ Getting Started">
+            <Code>{`# Native install (recommended)
+# macOS / Linux / WSL
+curl -fsSL https://claude.ai/install.sh | bash
+# Windows (PowerShell)
+irm https://claude.ai/install.ps1 | iex
 
-cd your-project
-claude
+cd your-project && claude
 /init`}</Code>
             <div
               style={{
@@ -273,7 +300,7 @@ claude
           </SectionCard>
 
           {/* 2. Understanding CLAUDE.md */}
-          <SectionCard number="2" title="Understanding CLAUDE.md">
+          <SectionCard number="2" title="🧠 Understanding CLAUDE.md">
             <div
               style={{
                 fontSize: 10,
@@ -317,7 +344,7 @@ npm run dev / test / lint
           </SectionCard>
 
           {/* 3. Memory File Hierarchy */}
-          <SectionCard number="3" title="Memory File Hierarchy">
+          <SectionCard number="3" title="📂 Memory File Hierarchy">
             {[
               {
                 file: "~/.claude/CLAUDE.md",
@@ -374,7 +401,7 @@ npm run dev / test / lint
           </SectionCard>
 
           {/* 4. Project File Structure */}
-          <SectionCard number="4" title="Project File Structure">
+          <SectionCard number="4" title="📁 Project File Structure">
             <Code>{`your-project/
 ├── CLAUDE.md
 ├── .claude/
@@ -410,7 +437,7 @@ npm run dev / test / lint
           </SectionCard>
 
           {/* 5. Adding Skills (The Superpower) */}
-          <SectionCard number="5" title="Adding Skills (The Superpower)">
+          <SectionCard number="5" title="⚙️ Adding Skills (The Superpower)">
             <div
               style={{
                 fontSize: 10,
@@ -451,7 +478,7 @@ Use factory mocks`}</Code>
           </SectionCard>
 
           {/* 6. Setting Up Hooks */}
-          <SectionCard number="6" title="Setting Up Hooks">
+          <SectionCard number="6" title="🪝 Setting Up Hooks">
             <div
               style={{
                 fontSize: 10,
@@ -494,7 +521,7 @@ Use factory mocks`}</Code>
           </SectionCard>
 
           {/* 7. Permissions & Safety */}
-          <SectionCard number="7" title="Permissions & Safety">
+          <SectionCard number="7" title="🔒 Permissions & Safety">
             <Code>{`{
   "permissions": {
     "allow": [
@@ -525,7 +552,7 @@ Use factory mocks`}</Code>
           </SectionCard>
 
           {/* 8. The 4-Layer Architecture */}
-          <SectionCard number="8" title="The 4-Layer Architecture">
+          <SectionCard number="8" title="🏗️ The 4-Layer Architecture">
             {[
               {
                 l: "L1",
@@ -603,7 +630,7 @@ Use factory mocks`}</Code>
           </SectionCard>
 
           {/* 9. Daily Workflow Pattern */}
-          <SectionCard number="9" title="Daily Workflow Pattern">
+          <SectionCard number="9" title="🔄 Daily Workflow Pattern">
             {[
               "cd project && claude",
               "Shift+Tab → Plan Mode",
@@ -655,7 +682,7 @@ Use factory mocks`}</Code>
           </SectionCard>
 
           {/* 10. Modes & Models */}
-          <SectionCard number="10" title="Modes & Models">
+          <SectionCard number="10" title="🧠 Modes & Models">
             <div
               style={{
                 display: "flex",
@@ -693,7 +720,7 @@ Use factory mocks`}</Code>
           </SectionCard>
 
           {/* 11. Non-Interactive & CI */}
-          <SectionCard number="11" title="Non-Interactive & CI">
+          <SectionCard number="11" title="🤖 Non-Interactive & CI">
             <Code>{`# Single-shot execution
 claude -p "add error handling"
 
@@ -718,7 +745,7 @@ claude -p "review" \\
           </SectionCard>
 
           {/* 12. MCP Servers */}
-          <SectionCard number="12" title="MCP Servers">
+          <SectionCard number="12" title="🔌 MCP Servers">
             <div
               style={{
                 fontSize: 10,
@@ -747,7 +774,7 @@ claude -p "review" \\
           </SectionCard>
 
           {/* 13. Multi-Agent Parallel Work */}
-          <SectionCard number="13" title="Multi-Agent Parallel Work">
+          <SectionCard number="13" title="🤖 Multi-Agent Parallel Work">
             <div
               style={{
                 display: "flex",
@@ -788,7 +815,7 @@ Review for OWASP top 10...`}</Code>
           </SectionCard>
 
           {/* 14. Git & PR Workflows */}
-          <SectionCard number="14" title="Git & PR Workflows">
+          <SectionCard number="14" title="🌿 Git & PR Workflows">
             <Bullet>
               <strong>Commits</strong> — auto-generates conventional commit
               messages from diff
@@ -814,7 +841,7 @@ Review for OWASP top 10...`}</Code>
           </SectionCard>
 
           {/* 15. Context & Cost Management */}
-          <SectionCard number="15" title="Context & Cost Management">
+          <SectionCard number="15" title="💰 Context & Cost Management">
             <Bullet>
               <strong>/compact</strong> — summarize and compress when context
               gets long
@@ -845,7 +872,7 @@ Review for OWASP top 10...`}</Code>
           </SectionCard>
 
           {/* 16. Quick Reference */}
-          <SectionCard number="16" title="Quick Reference" span={3}>
+          <SectionCard number="16" title="📌 Quick Reference" span={3}>
             <div
               style={{
                 display: "flex",
@@ -927,14 +954,14 @@ Review for OWASP top 10...`}</Code>
           style={{
             textAlign: "center",
             padding: "6px 0 8px",
-            fontSize: 9.5,
+            fontSize: 10,
             color: palette.mid,
             fontFamily: "'Georgia', serif",
           }}
         >
           Claude Code Workflow Cheatsheet — Created {new Date().getFullYear()}
           <br />
-          <span style={{ fontSize: 9, color: "#a08a76" }}>
+          <span style={{ fontSize: 9, color: palette.mid }}>
             {"Anthropic's agentic coding CLI & IDE extensions"}
           </span>
         </div>

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Markdown from "react-markdown";
 import type { FlashcardCard as FlashcardCardType } from "./types";
 import styles from "./Flashcards.module.css";
@@ -11,6 +11,14 @@ interface FlashcardCardProps {
   totalCards: number;
 }
 
+type VisibleSide = "front" | "back";
+type FlipDirection = "forward" | "backward" | null;
+
+const FLIP_DURATION_MS = 580;
+const FLIP_MIDPOINT_MS = 270;
+
+type ContentPhase = "steady" | "settling";
+
 export default function FlashcardCard({
   card,
   isFlipped,
@@ -21,6 +29,20 @@ export default function FlashcardCard({
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const [hasFlippedOnce, setHasFlippedOnce] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [visibleSide, setVisibleSide] = useState<VisibleSide>(
+    isFlipped ? "back" : "front",
+  );
+  const [shellTurned, setShellTurned] = useState(isFlipped);
+  const [flipDirection, setFlipDirection] = useState<FlipDirection>(null);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [contentPhase, setContentPhase] = useState<ContentPhase>("steady");
+  const hasMountedRef = useRef(false);
+  const timersRef = useRef<number[]>([]);
+
+  const clearFlipTimers = useCallback(() => {
+    timersRef.current.forEach((timer) => window.clearTimeout(timer));
+    timersRef.current = [];
+  }, []);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -33,8 +55,71 @@ export default function FlashcardCard({
 
   // Reset hasFlippedOnce when card changes
   useEffect(() => {
+    if (!hasMountedRef.current) {
+      hasMountedRef.current = true;
+      return;
+    }
     setHasFlippedOnce(false);
-  }, [card.id]);
+    setVisibleSide("front");
+    setShellTurned(false);
+    setFlipDirection(null);
+    setIsAnimating(false);
+    setContentPhase("steady");
+    clearFlipTimers();
+    setCopied(false);
+  }, [card.id, clearFlipTimers]);
+
+  useEffect(() => {
+    return () => clearFlipTimers();
+  }, [clearFlipTimers]);
+
+  useEffect(() => {
+    const targetSide: VisibleSide = isFlipped ? "back" : "front";
+
+    if (prefersReducedMotion) {
+      clearFlipTimers();
+      setVisibleSide(targetSide);
+      setShellTurned(isFlipped);
+      setFlipDirection(null);
+      setIsAnimating(false);
+      setContentPhase("steady");
+      return;
+    }
+
+    if (isAnimating) {
+      return;
+    }
+
+    if (shellTurned === isFlipped && visibleSide === targetSide) {
+      return;
+    }
+
+    clearFlipTimers();
+    setIsAnimating(true);
+    setFlipDirection(isFlipped ? "forward" : "backward");
+    setShellTurned(isFlipped);
+    setContentPhase("steady");
+
+    const midpointTimer = window.setTimeout(() => {
+      setVisibleSide(targetSide);
+      setContentPhase("settling");
+    }, FLIP_MIDPOINT_MS);
+
+    const settleTimer = window.setTimeout(() => {
+      setIsAnimating(false);
+      setFlipDirection(null);
+      setContentPhase("steady");
+    }, FLIP_DURATION_MS);
+
+    timersRef.current = [midpointTimer, settleTimer];
+  }, [
+    isFlipped,
+    prefersReducedMotion,
+    clearFlipTimers,
+    visibleSide,
+    shellTurned,
+    isAnimating,
+  ]);
 
   // Track first flip
   useEffect(() => {
@@ -46,7 +131,7 @@ export default function FlashcardCard({
   const handleCopy = useCallback(
     (e: React.MouseEvent) => {
       e.stopPropagation();
-      const text = isFlipped ? card.back : card.front;
+      const text = visibleSide === "back" ? card.back : card.front;
       navigator.clipboard.writeText(text).then(
         () => {
           setCopied(true);
@@ -57,12 +142,29 @@ export default function FlashcardCard({
         },
       );
     },
-    [isFlipped, card.front, card.back],
+    [visibleSide, card.front, card.back],
   );
 
+  const activeText = visibleSide === "back" ? card.back : card.front;
   const cardClasses = [
     styles.card,
-    isFlipped && !prefersReducedMotion ? styles.flipped : "",
+    visibleSide === "back" ? styles.cardRevealed : "",
+    isAnimating ? styles.cardAnimating : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const cardShellClasses = [
+    styles.cardShell,
+    shellTurned ? styles.cardShellTurned : "",
+    flipDirection === "forward" ? styles.cardShellForward : "",
+    flipDirection === "backward" ? styles.cardShellBackward : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const cardFaceClasses = [
+    styles.cardFace,
+    visibleSide === "back" ? styles.cardBackFace : styles.cardFrontFace,
+    contentPhase === "settling" ? styles.contentSettling : "",
   ]
     .filter(Boolean)
     .join(" ");
@@ -71,62 +173,50 @@ export default function FlashcardCard({
     <div className={styles.cardWrapper}>
       <div
         className={cardClasses}
-        onClick={onFlip}
+        onClick={() => {
+          if (!isAnimating) {
+            onFlip();
+          }
+        }}
         onKeyDown={(e) => {
+          if (isAnimating) {
+            return;
+          }
           if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
             onFlip();
           }
         }}
         role="region"
-        aria-label={`Flashcard ${cardNumber} of ${totalCards}`}
+        aria-label={`Flashcard ${cardNumber} of ${totalCards}${visibleSide === "back" ? ", answer" : ", question"}`}
         aria-live="polite"
         tabIndex={0}
       >
-        <div
-          className={`${styles.cardFace} ${styles.cardFront}`}
-          aria-hidden={isFlipped}
-        >
-          <button
-            className={styles.copyButton}
-            onClick={handleCopy}
-            aria-label="Copy card text"
-            title="Copy to clipboard"
-          >
-            {copied ? "\u2713" : "\u2398"}
-          </button>
-          <div className={styles.cardContent}>
-            <div className={styles.safeCenter}>
-              <Markdown>{card.front}</Markdown>
+        <div className={cardShellClasses}>
+          <div key={`${card.id}-${visibleSide}`} className={cardFaceClasses}>
+            <button
+              className={styles.copyButton}
+              onClick={handleCopy}
+              aria-label="Copy card text"
+              title="Copy to clipboard"
+            >
+              {copied ? "\u2713" : "\u2398"}
+            </button>
+            <div className={styles.cardContent}>
+              <div className={styles.safeCenter}>
+                <Markdown>{activeText}</Markdown>
+              </div>
             </div>
+            {visibleSide === "front" && !hasFlippedOnce && (
+              <div className={styles.seeAnswerHint}>Click to flip</div>
+            )}
+            {visibleSide === "back" && card.why && (
+              <div className={styles.whySection}>
+                <div className={styles.whyLabel}>Why?</div>
+                <Markdown>{card.why}</Markdown>
+              </div>
+            )}
           </div>
-          {!hasFlippedOnce && (
-            <div className={styles.seeAnswerHint}>Click to flip</div>
-          )}
-        </div>
-        <div
-          className={`${styles.cardFace} ${styles.cardBack}`}
-          aria-hidden={!isFlipped}
-        >
-          <button
-            className={styles.copyButton}
-            onClick={handleCopy}
-            aria-label="Copy card text"
-            title="Copy to clipboard"
-          >
-            {copied ? "\u2713" : "\u2398"}
-          </button>
-          <div className={styles.cardContent}>
-            <div className={styles.safeCenter}>
-              <Markdown>{card.back}</Markdown>
-            </div>
-          </div>
-          {card.why && (
-            <div className={styles.whySection}>
-              <div className={styles.whyLabel}>Why?</div>
-              <Markdown>{card.why}</Markdown>
-            </div>
-          )}
         </div>
       </div>
     </div>

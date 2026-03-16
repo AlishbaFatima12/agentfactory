@@ -13,7 +13,7 @@ Traditional Python education teaches bottom-up: syntax first, verification last.
 
 AI eliminated that bottleneck. Claude Code generates hundreds of lines of working code in seconds. The mechanical act of writing code is no longer the human's job. But someone must still define what the code should do, and someone must verify that it does it correctly. The AI handles the middle. You handle everything that matters.
 
-Part 3 used Claude Cowork to deploy agents without writing code. Part 4 switches to **Claude Code** -- your AI coding agent for the rest of the book. Every chapter, every exercise, and every project iteration uses Claude Code. Part 4 applies the Spec-Driven Development methodology from [Chapter 5](/docs/General-Agents-Foundations/spec-driven-development) to Python. The core teaching model is simple:
+Part 3 used Claude Cowork to deploy agents without writing code. Part 4 switches to **Claude Code** -- your AI coding agent for the rest of the book. Every chapter, every exercise, and every project iteration uses Claude Code. Part 4 applies the Spec-Driven Development methodology from [Chapter 16](/docs/General-Agents-Foundations/spec-driven-development) to Python. The core teaching model is simple:
 
 - **INPUT: You write specifications** -- descriptions of what the code should do, using type labels and checks (tests). Then you prompt Claude Code to generate the implementation.
 - **OUTPUT: You verify the result** -- you run automated tools to prove the generated code is correct. You never accept output on faith.
@@ -30,10 +30,10 @@ This part inverts the traditional order. You learn to read before you write. You
 
 Part 4 assumes no programming experience -- you do not need to have written code before. But it does build on skills from earlier parts of the book. If any of these are new to you, don't worry -- here's where to go first:
 
-- **Using a terminal** -- opening a terminal, navigating directories, running commands → [Part 2, Chapter 11](/docs/Applied-General-Agent-Workflows/linux-mastery)
+- **Using a terminal** -- opening a terminal, navigating directories, running commands → [Part 2, Chapter 22](/docs/Agent-Workflow-Primitives/linux-mastery)
 - **Driving Claude Code** -- writing clear prompts, evaluating responses, iterating → practiced throughout Parts 1 and 2
-- **Spec-Driven Development** -- writing specifications before code, the four-phase SDD workflow → [Chapter 5](/docs/General-Agents-Foundations/spec-driven-development) (required prerequisite)
-- **Version control basics** -- `git add`, `git commit`, `git push` → [Chapter 12](/docs/Applied-General-Agent-Workflows/version-control)
+- **Spec-Driven Development** -- writing specifications before code, the four-phase SDD workflow → [Chapter 16](/docs/General-Agents-Foundations/spec-driven-development) (required prerequisite)
+- **Version control basics** -- `git add`, `git commit`, `git push` → [Chapter 23](/docs/Agent-Workflow-Primitives/version-control)
 - **Building something with Claude Code** -- directing Claude Code to create a working project → Part 2 projects
 
 :::note If you've never written a line of code
@@ -50,22 +50,23 @@ NEW:  Requirements → Types → Failing Tests → Generate → Verify & Iterate
 
 These six steps are not sequential phases you hand off and forget. They are a loop -- and AI is present throughout. What changes across the steps is who is driving. Here is the full loop at a glance -- if some terms are unfamiliar, the note box below the table explains each one:
 
-| Step | What happens | Who leads | AI role |
-|------|-------------|-----------|---------|
-| Requirements | Decide what you're building -- what it does, what it accepts, what it returns | Human | Assists: spots gaps, challenges assumptions |
-| Types | Describe your data and functions precisely -- labels that tell AI the shape of your code | Human | Assists: suggests structures, validates design |
-| Failing Tests | Write checks that define "correct" -- they fail because nothing is built yet | Human | Assists: suggests cases you missed |
-| Generate | AI writes the code to pass your checks | AI | Leads: produces full implementation |
-| Verify & Iterate | Run your checks, read failures, debug, refine, repeat until everything passes | Human | Assists: explains errors, refines output |
-| Ship | Save your work, automated pipeline verifies, deploy | Human | Assists: security review, changelog |
+| Step             | What happens                                                                             | Who leads | AI role                                        |
+| ---------------- | ---------------------------------------------------------------------------------------- | --------- | ---------------------------------------------- |
+| Requirements     | Decide what you're building -- what it does, what it accepts, what it returns            | Human     | Assists: spots gaps, challenges assumptions    |
+| Types            | Describe your data and functions precisely -- labels that tell AI the shape of your code | Human     | Assists: suggests structures, validates design |
+| Failing Tests    | Write checks that define "correct" -- they fail because nothing is built yet             | Human     | Assists: suggests cases you missed             |
+| Generate         | AI writes the code to pass your checks                                                   | AI        | Leads: produces full implementation            |
+| Verify & Iterate | Run your checks, read failures, debug, refine, repeat until everything passes            | Human     | Assists: explains errors, refines output       |
+| Ship             | Save your work, automated pipeline verifies, deploy                                      | Human     | Assists: security review, changelog            |
 
 The key insight: you never start from a blank page, and you never accept output blindly. You start with a requirement and end with a passing test suite. Everything in between is a collaboration -- but the specification and the verification are yours.
 
 :::note If you're new to programming
 Some of these terms may be unfamiliar. Here is what they mean in plain English:
+
 - **Types** are labels that describe what kind of data something is -- text, a whole number, a decimal, true/false. You will learn these in Chapter 32.
 - **A test** is a short piece of code that checks whether another piece of code does what you expect. Think of it as a checklist: "If I give it 100 and 15%, I should get 115."
-- **A failing test** is a test you write *before* the code exists. It fails because there is nothing to check yet. Then AI writes the code to make it pass. That is the core idea of TDG.
+- **A failing test** is a test you write _before_ the code exists. It fails because there is nothing to check yet. Then AI writes the code to make it pass. That is the core idea of TDG.
 - **pytest** is the tool that runs your tests automatically and tells you which passed and which failed.
 
 You do not need to memorize any of this now. Each term gets its own lesson with step-by-step explanations.
@@ -119,7 +120,7 @@ Every Python feature in Part 4 follows a five-step progression that builds from 
 Steps 1--3 build your reading fluency. Steps 4--5 are the TDG cycle. By the end of Part 4, steps 4--5 feel as natural as steps 1--3 do now.
 
 :::note If you're new to programming
-Notice that you *see* and *read* before you are asked to *do* anything. This is deliberate. You will not be thrown into writing tests or specifying types without first understanding what they look like and how they work. Every new concept is shown to you, explained, and practiced through prediction exercises before you use it yourself.
+Notice that you _see_ and _read_ before you are asked to _do_ anything. This is deliberate. You will not be thrown into writing tests or specifying types without first understanding what they look like and how they work. Every new concept is shown to you, explained, and practiced through prediction exercises before you use it yourself.
 :::
 
 ## The SmartNotes Project
@@ -128,16 +129,16 @@ Notice that you *see* and *read* before you are asked to *do* anything. This is 
 
 You do not build nine throwaway exercises. You build SmartNotes once and grow it across Phases 1 through 8. Each phase adds a layer using the SDD workflow: you write the specification (types + tests), prompt Claude Code to generate the implementation, and verify the output. The project is the vehicle; TDG is the method. Phase 9 is different -- you build a completely new project from scratch to prove you can do it without scaffolding.
 
-| Phase | What You Add to SmartNotes | What You Learn |
-|-------|---------------------------|----------------|
-| 1 | Read and annotate a pre-built prototype | Reading code, setting up tools, your first code review |
-| 2 | Data structures for notes, tags, and collections | Describing your data precisely so AI builds the right thing |
-| 3 | Decision logic + 30 automated checks that prove it works | Writing tests before code exists |
-| 4 | Find and fix planted bugs, then do a full cycle solo | Debugging and working independently |
-| 5 | Organize code into objects with real behavior | Designing systems, not just scripts |
-| 6 | Database storage, file import/export, project organization | Building production-grade features |
-| 7 | A command-line tool + a web API with AI integration | Shipping tools other people can use |
-| 8 | Automated pipeline that verifies every change + security audit | Making sure nothing breaks and nothing is vulnerable |
+| Phase | What You Add to SmartNotes                                     | What You Learn                                              |
+| ----- | -------------------------------------------------------------- | ----------------------------------------------------------- |
+| 1     | Read and annotate a pre-built prototype                        | Reading code, setting up tools, your first code review      |
+| 2     | Data structures for notes, tags, and collections               | Describing your data precisely so AI builds the right thing |
+| 3     | Decision logic + 30 automated checks that prove it works       | Writing tests before code exists                            |
+| 4     | Find and fix planted bugs, then do a full cycle solo           | Debugging and working independently                         |
+| 5     | Organize code into objects with real behavior                  | Designing systems, not just scripts                         |
+| 6     | Database storage, file import/export, project organization     | Building production-grade features                          |
+| 7     | A command-line tool + a web API with AI integration            | Shipping tools other people can use                         |
+| 8     | Automated pipeline that verifies every change + security audit | Making sure nothing breaks and nothing is vulnerable        |
 
 Each phase produces a working version of SmartNotes. By the end of Phase 8, you have a polished, portfolio-grade project that demonstrates every skill you have learned. Then Phase 9 proves you can do it again -- on a brand-new project, from scratch, without guidance.
 
@@ -149,17 +150,17 @@ Part 4 is organized into nine phases. Each phase gives you a new capability, and
 Each phase takes roughly 1-2 weeks at a few hours per day. The full Part 4 is designed for 3-5 months of steady practice. Some phases (1 and 4) are shorter; others (5 and 6) are longer because they cover more ground. Go at your own pace -- building a strong foundation matters more than speed.
 :::
 
-| Phase | Title | Your Role | Chapters |
-|-------|-------|-----------|----------|
-| 1 | [The Workbench](the-workbench) | Reader | Ch 30-33 |
-| 2 | [Specify with Types](specify-with-types) | Specifier | Ch 34-37 |
-| 3 | [Tests as Specification](tests-as-specification) | Verifier | Ch 38-41 |
-| 4 | [Debug & Master](debug-and-master) | Debugger | Ch 42-43 |
-| 5 | [The Python Object Model](the-python-object-model) | Modeler | Ch 44-47 |
-| 6 | [Real-World Python](real-world-python) | Practitioner | Ch 48-50 |
-| 7 | [CLI & Concurrency](cli-and-concurrency) | Tool Builder | Ch 51-52 |
-| 8 | [Production Systems](production-systems) | Shipping Engineer | Ch 53-54 |
-| 9 | [Capstone](capstone) | Architect | Ch 55-56 |
+| Phase | Title                                              | Your Role         | Chapters |
+| ----- | -------------------------------------------------- | ----------------- | -------- |
+| 1     | [The Workbench](the-workbench)                     | Reader            | Ch 30-33 |
+| 2     | [Specify with Types](specify-with-types)           | Specifier         | Ch 34-37 |
+| 3     | [Tests as Specification](tests-as-specification)   | Verifier          | Ch 38-41 |
+| 4     | [Debug & Master](debug-and-master)                 | Debugger          | Ch 42-43 |
+| 5     | [The Python Object Model](the-python-object-model) | Modeler           | Ch 44-47 |
+| 6     | [Real-World Python](real-world-python)             | Practitioner      | Ch 48-50 |
+| 7     | [CLI & Concurrency](cli-and-concurrency)           | Tool Builder      | Ch 51-52 |
+| 8     | [Production Systems](production-systems)           | Shipping Engineer | Ch 53-54 |
+| 9     | [Capstone](capstone)                               | Architect         | Ch 55-56 |
 
 **Deliverables**: SDD specification documents, type definitions, object model diagram, passing test suites, AI-generated and human-verified implementation, security audit, green CI pipeline, and a deployed QuizForge application with CLI, API, and AI features. You finish Part 4 with two portfolio-grade projects -- SmartNotes (guided) and QuizForge (independent) -- proving you can drive the complete TDG cycle at production scale.
 
@@ -191,24 +192,24 @@ Refer back to this table whenever a term feels unfamiliar. You do not need to me
 <details>
 <summary>📖 Glossary</summary>
 
-| Term | Plain English |
-|------|--------------|
-| **Python** | A programming language -- the one you are learning in this part |
-| **Type** | A label that says what kind of data something is: text, whole number, decimal, or true/false |
-| **Type annotation** | A note in code that declares a variable's type, like `age: int = 25` (the `: int` part is the annotation) |
-| **Variable** | A named container that holds a value -- like a labeled jar |
-| **Function** | A reusable block of code with a name. You give it inputs, it gives you an output |
-| **Function signature** | The first line of a function that declares its name, inputs, and output type -- the contract |
-| **Test** | A short piece of code that checks whether another piece of code does what you expect |
-| **pytest** | The tool that runs your tests automatically and reports which passed and which failed |
-| **Pyright** | A tool that checks your type annotations and catches type mismatches before you run the code |
-| **Ruff** | A tool that checks code style and formatting -- like a spell-checker for code |
-| **uv** | The package manager that installs Python and your project's tools |
-| **Git** | A tool that tracks every change you make to your code, so you can undo mistakes and collaborate |
-| **SDD** | Spec-Driven Development -- write the specification first, then let AI generate the implementation (Chapter 5) |
-| **TDG** | Test-Driven Generation -- SDD applied to Python: your specification is types + tests, Claude Code generates, you verify |
-| **PRIMM** | Predict-Run-Investigate -- a method for reading code by predicting what it does before running it |
-| **Claude Code** | Your primary AI coding agent throughout Part 4 -- generates, explains, and reviews code based on your specifications |
+| Term                   | Plain English                                                                                                           |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Python**             | A programming language -- the one you are learning in this part                                                         |
+| **Type**               | A label that says what kind of data something is: text, whole number, decimal, or true/false                            |
+| **Type annotation**    | A note in code that declares a variable's type, like `age: int = 25` (the `: int` part is the annotation)               |
+| **Variable**           | A named container that holds a value -- like a labeled jar                                                              |
+| **Function**           | A reusable block of code with a name. You give it inputs, it gives you an output                                        |
+| **Function signature** | The first line of a function that declares its name, inputs, and output type -- the contract                            |
+| **Test**               | A short piece of code that checks whether another piece of code does what you expect                                    |
+| **pytest**             | The tool that runs your tests automatically and reports which passed and which failed                                   |
+| **Pyright**            | A tool that checks your type annotations and catches type mismatches before you run the code                            |
+| **Ruff**               | A tool that checks code style and formatting -- like a spell-checker for code                                           |
+| **uv**                 | The package manager that installs Python and your project's tools                                                       |
+| **Git**                | A tool that tracks every change you make to your code, so you can undo mistakes and collaborate                         |
+| **SDD**                | Spec-Driven Development -- write the specification first, then let AI generate the implementation (Chapter 16)          |
+| **TDG**                | Test-Driven Generation -- SDD applied to Python: your specification is types + tests, Claude Code generates, you verify |
+| **PRIMM**              | Predict-Run-Investigate -- a method for reading code by predicting what it does before running it                       |
+| **Claude Code**        | Your primary AI coding agent throughout Part 4 -- generates, explains, and reviews code based on your specifications    |
 
 </details>
 

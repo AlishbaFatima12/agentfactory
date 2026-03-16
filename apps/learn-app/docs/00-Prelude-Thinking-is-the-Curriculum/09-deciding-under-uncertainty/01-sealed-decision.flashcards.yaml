@@ -1,0 +1,72 @@
+deck:
+  id: "p0-ch09-incomplete-brief"
+  title: "The Incomplete Brief"
+  description: "Key concepts from the first decision-making exercise: deciding under uncertainty, reversal triggers, confidence calibration, and missing information ranking."
+  tags: ["decision-making", "uncertainty", "reversal-triggers", "confidence-calibration"]
+  version: 1
+
+cards:
+  - id: "p0-ch09-incomplete-brief-001"
+    front: "What is a Reversal Trigger in the context of decision-making under uncertainty?"
+    back: "A specific, testable condition under which you would change your decision."
+    tags: ["reversal-trigger", "decision-making"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-incomplete-brief-002"
+    front: "Why is a specific reversal trigger more valuable than a vague one, even if you never use it?"
+    back: "A specific trigger forces you to identify exactly what evidence matters, because vague triggers like 'if things change' provide no actionable decision criteria."
+    tags: ["reversal-trigger", "decision-quality"]
+    difficulty: "intermediate"
+    why: "How would you convert 'I'd change my mind if the market shifts' into a testable trigger?"
+
+  - id: "p0-ch09-incomplete-brief-003"
+    front: "In decision-making under uncertainty, what does confidence calibration mean?"
+    back: "Assigning a confidence percentage that accurately reflects how much you know, with justification."
+    tags: ["confidence-calibration", "uncertainty"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-incomplete-brief-004"
+    front: "A student assigns 90% confidence to a decision based on incomplete data. Another assigns 55%. The outcome matches both. Who demonstrated better thinking?"
+    back: "The 55% student, because their confidence accurately reflected the uncertainty. The 90% student was overconfident — right outcome does not equal good process."
+    tags: ["confidence-calibration", "meta-cognition"]
+    difficulty: "advanced"
+    why: "How can you distinguish good decision process from lucky outcomes?"
+
+  - id: "p0-ch09-incomplete-brief-005"
+    front: "When listing missing information for a decision, what should you rank by?"
+    back: "Decision impact — how much knowing each piece would change your recommendation."
+    tags: ["missing-information", "decision-making"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-incomplete-brief-006"
+    front: "Why does ranking missing information by impact produce better decisions than listing all unknowns by category?"
+    back: "There is always infinite missing information. Ranking by impact forces you to identify what would actually change the decision, because not all unknowns matter equally."
+    tags: ["missing-information", "decision-quality"]
+    difficulty: "intermediate"
+    why: "What happens when a decision-maker treats all information gaps as equally important?"
+
+  - id: "p0-ch09-incomplete-brief-007"
+    front: "What three components does a Decision Document require beyond the recommendation itself?"
+    back: "1. Confidence level (0-100%)\n2. Missing information ranked by impact\n3. A specific Reversal Trigger"
+    tags: ["decision-document", "deliverable"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-incomplete-brief-008"
+    front: "Why does this exercise require you to decide BEFORE consulting AI?"
+    back: "Deciding first creates a genuine baseline of independent thinking, because AI consultation after commitment reveals how your judgment compares — not how well you followed AI."
+    tags: ["prediction-lock", "independent-thinking"]
+    difficulty: "intermediate"
+    why: "What would be lost if you consulted AI before making your decision?"
+
+  - id: "p0-ch09-incomplete-brief-009"
+    front: "What is the core skill trained in the Deciding Under Uncertainty chapter?"
+    back: "Decision-making with incomplete information."
+    tags: ["core-skill", "uncertainty"]
+    difficulty: "basic"
+
+  - id: "p0-ch09-incomplete-brief-010"
+    front: "How does the Reversal Trigger concept transfer beyond this exercise to the rest of the book?"
+    back: "Every major decision in Parts 2-10 should include a Reversal Trigger, because it forces you to pre-commit to conditions for changing course rather than defending sunk costs."
+    tags: ["reversal-trigger", "transferable-skill"]
+    difficulty: "intermediate"
+    why: "What cognitive bias does a pre-committed Reversal Trigger help prevent?"

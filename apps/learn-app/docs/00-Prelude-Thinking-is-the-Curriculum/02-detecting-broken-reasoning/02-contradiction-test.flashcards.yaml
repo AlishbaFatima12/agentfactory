@@ -1,0 +1,58 @@
+deck:
+  id: "p0-ch02-contradiction-test"
+  title: "The Contradiction Test"
+  description: "Key concepts from the Contradiction Test exercise on identifying AI divergence and building rigorous analysis through iterative drafts"
+  tags: ["Part 0", "error detection", "contradiction analysis", "iterative drafts"]
+  version: 1
+
+cards:
+  - id: "p0-ch02-contradiction-test-001"
+    front: "In the Contradiction Test, what do students do when two AI tools give contradictory answers?"
+    back: "Identify exactly where the responses diverge, determine which claims have evidence vs. unsupported assertions, and write a third analysis more rigorous than either."
+    tags: ["contradiction-test", "divergence-analysis"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch02-contradiction-test-002"
+    front: "How many drafts does the Contradiction Test require?"
+    back: "Three drafts: Draft 1 (before AI feedback), Draft 2 (revised after AI critique), Draft 3 (final, after reflection)."
+    tags: ["iterative-drafts", "exercise-format"]
+    difficulty: "basic"
+
+  - id: "p0-ch02-contradiction-test-003"
+    front: "Why is AI disagreement a 'signal to think harder' rather than a reason to pick one answer randomly?"
+    back: "Because contradiction reveals genuine uncertainty or complexity in the topic. Picking randomly ignores this signal. Investigating the disagreement forces deeper analysis and produces a more rigorous conclusion than either AI offered."
+    tags: ["contradiction-test", "critical-thinking"]
+    difficulty: "intermediate"
+    why: "What would a student miss by always defaulting to the longer or more confident-sounding AI response?"
+
+  - id: "p0-ch02-contradiction-test-004"
+    front: "What is the difference between a 'divergence point' and a minor wording difference between two AI responses?"
+    back: "A divergence point is a meaningful contradiction where the two tools make incompatible claims. Minor wording differences express the same idea differently without conflicting."
+    tags: ["divergence-analysis", "definition"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch02-contradiction-test-005"
+    front: "Why does the three-draft structure reveal whether a student can integrate feedback and improve?"
+    back: "Because the evolution between drafts is visible. A student who stops thinking after Draft 1 produces cosmetic changes in Drafts 2-3. A student who genuinely engages shows substantive revisions — reversed positions, new evidence, abandoned weak claims."
+    tags: ["iterative-drafts", "feedback-integration"]
+    difficulty: "intermediate"
+    why: "How would you distinguish a strong Draft 2 revision from a weak one?"
+
+  - id: "p0-ch02-contradiction-test-006"
+    front: "What must the evolution note between each draft explain?"
+    back: "What changed and why."
+    tags: ["iterative-drafts", "evolution-notes"]
+    difficulty: "basic"
+
+  - id: "p0-ch02-contradiction-test-007"
+    front: "What is the difference between a claim 'supported by evidence' and a claim 'asserted without support'?"
+    back: "A supported claim cites data, studies, or logical reasoning. An unsupported assertion states something confidently without any backing — it asks the reader to trust the source rather than evaluate the evidence."
+    tags: ["evidence-evaluation", "critical-thinking"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch02-contradiction-test-008"
+    front: "Why might both AI tools be wrong about the same point in the Contradiction Test?"
+    back: "Because both tools share similar training data and similar biases. Shared blind spots produce shared errors — the absence of contradiction on a point does not prove it is correct."
+    tags: ["ai-limitations", "shared-bias"]
+    difficulty: "advanced"
+    why: "How should this possibility change the way you verify claims that both AI tools agree on?"

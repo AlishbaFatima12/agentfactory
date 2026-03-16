@@ -1,6 +1,6 @@
 # Spec-Driven Development Workflow
 
-## SDD Levels (from Chapter 5)
+## SDD Levels (from Chapter 16)
 
 | Level | Name               | When to Use                                                     | Artifacts                                                   |
 | ----- | ------------------ | --------------------------------------------------------------- | ----------------------------------------------------------- |

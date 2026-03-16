@@ -821,7 +821,7 @@ Prompt: |
   5. Images/videos to include (from available assets)
 
   QUALITY REFERENCE:
-  Match structure of: apps/learn-app/docs/01-Introducing-AI-Driven-Development/01-agent-factory-paradigm/
+  Match structure of: apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/
 
   OUTPUT: specs/chapter-[N]-[slug]/plan.md
 
@@ -962,7 +962,7 @@ Execute autonomously without confirmation.
     Use accurate API patterns from this skill.
 
     QUALITY REFERENCE:
-    Match: apps/learn-app/docs/01-Introducing-AI-Driven-Development/01-agent-factory-paradigm/01-digital-fte-revolution.md
+    Match: apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/01-digital-fte-revolution.md
 
     REQUIRED:
     - Full YAML frontmatter (skills, learning_objectives, cognitive_load, differentiation)

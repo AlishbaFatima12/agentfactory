@@ -16,10 +16,10 @@ const ID_TO_HASH = {
 const explorers = [
   {
     id: "agent-factory",
-    label: "Claude Code",
+    label: "Claude Code Project Lab",
     component: AgentFactoryExplorer,
   },
-  { id: "cowork", label: "Cowork", component: null },
+  { id: "cowork", label: "Cowork Project Lab", component: null },
 ];
 
 function getInitialFromHash() {
@@ -31,7 +31,7 @@ function getInitialFromHash() {
 export default function ExplorerPage() {
   const hashTarget = getInitialFromHash();
   const [active, setActive] = useState(hashTarget || "agent-factory");
-  const [fullscreen, setFullscreen] = useState(true);
+  const [fullscreen, setFullscreen] = useState(!!hashTarget);
 
   const ActiveComponent =
     explorers.find((t) => t.id === active)?.component || null;
@@ -123,10 +123,10 @@ export default function ExplorerPage() {
                 fontWeight: active === id ? 700 : 400,
                 fontFamily: "'JetBrains Mono', monospace",
                 color: !component
-                  ? "#443322"
+                  ? "#ddd"
                   : active === id
-                    ? "#c47a50"
-                    : "#776655",
+                    ? "#fff"
+                    : "#f0ebe4",
                 cursor: component ? "pointer" : "default",
                 opacity: component ? 1 : 0.5,
                 transition: "all 0.15s",
@@ -139,7 +139,7 @@ export default function ExplorerPage() {
                     fontSize: 9,
                     fontWeight: 600,
                     background: "#1a1814",
-                    color: "#554433",
+                    color: "#f0ebe4",
                     borderRadius: 3,
                     padding: "1px 5px",
                     marginLeft: 6,
@@ -169,18 +169,18 @@ export default function ExplorerPage() {
               padding: "4px 12px",
               marginRight: 12,
               fontSize: 11,
-              color: "#776655",
+              color: "#f0ebe4",
               cursor: "pointer",
               fontFamily: "'JetBrains Mono', monospace",
               transition: "all 0.15s",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#c47a5060";
-              e.currentTarget.style.color = "#c47a50";
+              e.currentTarget.style.borderColor = "#e8a07080";
+              e.currentTarget.style.color = "#e8a070";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.borderColor = "#2a2218";
-              e.currentTarget.style.color = "#776655";
+              e.currentTarget.style.color = "#d4b8a0";
             }}
             title="Exit fullscreen"
           >
@@ -263,7 +263,7 @@ export default function ExplorerPage() {
           }}
         >
           <p style={{ color: "#555", fontSize: 15, marginBottom: 16 }}>
-            This sim lab works best in fullscreen.
+            This simulation lab works best in fullscreen.
           </p>
           <button
             onClick={() => {
@@ -293,7 +293,7 @@ export default function ExplorerPage() {
             fontSize: 14,
           }}
         >
-          This sim lab is coming soon.
+          This simulation lab is coming soon.
         </div>
       )}
     </div>

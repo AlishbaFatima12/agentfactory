@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import ClaudeCodeCheatsheet from "./claude-code-cheatsheet";
+import CoworkCheatsheet from "./cowork-cheatsheet";
+import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 
 const palette = {
   accent: "#c0582a",
@@ -17,8 +19,12 @@ const topics = [
     label: "Claude Code",
     component: ClaudeCodeCheatsheet,
   },
-  { id: "cowork", hash: "cowork", label: "Cowork", component: null },
-  { id: "openclaw", hash: "openclaw", label: "OpenClaw", component: null },
+  {
+    id: "cowork",
+    hash: "cowork",
+    label: "Cowork",
+    component: CoworkCheatsheet,
+  },
 ];
 
 function getActiveFromHash() {
@@ -73,96 +79,139 @@ export default function CheatsheetPage() {
       style={{
         display: "flex",
         alignItems: "center",
-        gap: 4,
-        padding: "5px 16px",
-        background: palette.dark,
-        borderBottom: `1px solid ${palette.cardBorder}30`,
-        flexShrink: 0,
+        justifyContent: "space-between",
+        marginBottom: "8px",
+        width: "100%",
       }}
     >
-      {topics.map(({ id, label, component }) => {
-        const isActive = active === id;
-        const isDisabled = !component;
-        return (
-          <button
-            key={id}
-            onClick={() => component && navigate(id)}
-            style={{
-              background: isActive ? palette.accentLight + "18" : "transparent",
-              border: isActive
-                ? `1px solid ${palette.accentLight}60`
-                : "1px solid transparent",
-              borderRadius: 5,
-              padding: "7px 18px",
-              fontSize: 13,
-              fontWeight: isActive ? 700 : 500,
-              fontFamily: "'Georgia', serif",
-              color: isDisabled ? "#665544" : isActive ? "#fff" : "#c4a88a",
-              cursor: isDisabled ? "default" : "pointer",
-              opacity: isDisabled ? 0.45 : 1,
-              transition: "all 0.15s",
-              letterSpacing: 0.2,
-            }}
-            onMouseEnter={(e) => {
-              if (!isDisabled && !isActive) {
-                e.currentTarget.style.background = palette.accentLight + "10";
-                e.currentTarget.style.color = "#e0c8b0";
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (!isDisabled && !isActive) {
-                e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "#c4a88a";
-              }
-            }}
-          >
-            {label}
-            {isDisabled && (
-              <span
+      <style>{`
+        .cheatsheet-tab-list {
+          background: rgba(0,0,0,0.05) !important;
+          border-radius: 6px !important;
+          padding: 0 !important;
+          border: 1px solid rgba(0,0,0,0.04) !important;
+        }
+        .cheatsheet-tab-trigger[data-state="active"] {
+          background-color: #ffffff !important;
+          color: ${palette.dark} !important;
+          border-radius: 4px !important;
+          box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04) !important;
+        }
+        .cheatsheet-tab-trigger:not([data-state="active"]):hover {
+          background-color: rgba(255,255,255,0.4) !important;
+          color: ${palette.dark} !important;
+        }
+        .cheatsheet-tab-trigger {
+          background-color: transparent !important; 
+          color: rgba(0,0,0,0.75) !important;
+          border-radius: 4px !important;
+        }
+        html[data-theme='dark'] .cheatsheet-tab-list {
+          background: rgba(255,255,255,0.05) !important;
+          border-color: rgba(255,255,255,0.03) !important;
+        }
+        html[data-theme='dark'] .cheatsheet-tab-trigger[data-state="active"] {
+          background-color: rgba(255,255,255,0.1) !important;
+          color: rgba(255,255,255,0.9) !important;
+          box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.08) !important;
+        }
+        html[data-theme='dark'] .cheatsheet-tab-trigger:not([data-state="active"]):hover {
+          background-color: rgba(255,255,255,0.05) !important;
+          color: #ffffff !important;
+        }
+        html[data-theme='dark'] .cheatsheet-tab-trigger:not([data-state="active"]) {
+          color: rgba(255,255,255,0.65) !important;
+        }
+        .cheatsheet-expand-btn {
+          background: transparent;
+          border: 1px solid rgba(0,0,0,0.15);
+          border-radius: 6px;
+          padding: 5px 14px;
+          font-size: 13px;
+          font-weight: 500;
+          font-family: 'Segoe UI', sans-serif;
+          color: rgba(0,0,0,0.55);
+          cursor: pointer;
+          transition: all 0.15s ease;
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          line-height: 1;
+        }
+        .cheatsheet-expand-btn:hover {
+          border-color: rgba(0,0,0,0.3);
+          color: rgba(0,0,0,0.8);
+          background: rgba(0,0,0,0.03);
+        }
+        html[data-theme='dark'] .cheatsheet-expand-btn {
+          border-color: rgba(255,255,255,0.12);
+          color: rgba(255,255,255,0.45);
+        }
+        html[data-theme='dark'] .cheatsheet-expand-btn:hover {
+          border-color: rgba(255,255,255,0.25);
+          color: rgba(255,255,255,0.75);
+          background: rgba(255,255,255,0.05);
+        }
+      `}</style>
+      <Tabs value={active} onValueChange={navigate}>
+        <TabsList
+          className="cheatsheet-tab-list"
+          style={{
+            display: "inline-flex",
+            gap: "2px",
+            padding: 0,
+            margin: 0,
+          }}
+        >
+          {topics.map(({ id, label, component }) => {
+            const isDisabled = !component;
+            return (
+              <TabsTrigger
+                key={id}
+                value={id}
+                disabled={isDisabled}
+                className="cheatsheet-tab-trigger"
                 style={{
-                  fontSize: 8,
-                  fontWeight: 700,
-                  background: "#4a3828",
-                  color: "#887766",
-                  borderRadius: 3,
-                  padding: "2px 6px",
-                  marginLeft: 7,
-                  textTransform: "uppercase",
-                  letterSpacing: 0.6,
+                  padding: "6px 20px",
                   fontFamily: "'Segoe UI', sans-serif",
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  transition: "all 0.15s ease",
+                  outline: "none",
+                  cursor: "pointer",
+                  position: "relative",
+                  ...(active === id && {
+                    boxShadow: `0 1px 2px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04), 0 -2.5px 0 0 ${palette.accent} inset !important`, 
+                  })
                 }}
               >
-                Soon
-              </span>
-            )}
-          </button>
-        );
-      })}
-      <div style={{ flex: 1 }} />
+                {label}
+              </TabsTrigger>
+            );
+          })}
+        </TabsList>
+      </Tabs>
       <button
+        className="cheatsheet-expand-btn"
         onClick={() => setFullscreen(!fullscreen)}
-        title={fullscreen ? "Exit fullscreen" : "Fullscreen"}
-        style={{
-          background: "none",
-          border: "1px solid #4a3a2a",
-          borderRadius: 4,
-          padding: "5px 14px",
-          fontSize: 11,
-          color: "#a08a76",
-          cursor: "pointer",
-          fontFamily: "'JetBrains Mono', monospace",
-          transition: "all 0.15s",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.borderColor = palette.accentLight + "80";
-          e.currentTarget.style.color = palette.accentLight;
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.borderColor = "#4a3a2a";
-          e.currentTarget.style.color = "#a08a76";
-        }}
+        title={fullscreen ? "Exit fullscreen" : "View fullscreen"}
       >
-        {fullscreen ? "Exit" : "Fullscreen"}
+        {fullscreen ? (
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="4 14 10 14 10 20" />
+            <polyline points="20 10 14 10 14 4" />
+            <line x1="14" y1="10" x2="21" y2="3" />
+            <line x1="3" y1="21" x2="10" y2="14" />
+          </svg>
+        ) : (
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 3 21 3 21 9" />
+            <polyline points="9 21 3 21 3 15" />
+            <line x1="21" y1="3" x2="14" y2="10" />
+            <line x1="3" y1="21" x2="10" y2="14" />
+          </svg>
+        )}
+        {fullscreen ? "Collapse" : "Expand"}
       </button>
     </div>
   );
@@ -190,7 +239,7 @@ export default function CheatsheetPage() {
 
   // Inline mode
   return (
-    <div>
+    <div style={{ marginTop: "-0.5rem", display: "flex", flexDirection: "column", alignItems: "flex-start", position: "relative", left: "-1px" }}>
       {toolbar}
       {ActiveComponent ? (
         <ActiveComponent />

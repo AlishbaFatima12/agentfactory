@@ -17,6 +17,29 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-15
+- refactor: renumber Parts 1-3 chapters to continuous global numbering ([#862](https://github.com/panaversity/agentfactory/pull/862))
+
+### 2026-03-15
+- docs: add PRIMM-AI+ integration to Chapter 31 (Ten Axioms) ([#860](https://github.com/panaversity/agentfactory/pull/860))
+
+### 2026-03-15
+
+- feat: add Part 0 — Prelude: Thinking is the Curriculum ([#859](https://github.com/panaversity/agentfactory/pull/859))
+
+### 2026-03-14
+- feat: Introduce 'Part 0 Prelude: Thinking is the Curriculum' and Isla… ([#858](https://github.com/panaversity/agentfactory/pull/858))
+
+### 2026-03-14
+- fix: expand Ch 20 L18 scheduled tasks with /schedule instructions ([#857](https://github.com/panaversity/agentfactory/pull/857))
+
+### 2026-03-14
+- fix: Ch 21 L15 — expand scheduled tasks, absorb recipe content ([#856](https://github.com/panaversity/agentfactory/pull/856))
+
+### 2026-03-14
+
+- fix: align Ch 22 with legal-ops plugin v2.0.0 dedup ([#855](https://github.com/panaversity/agentfactory/pull/855))
+
 ### 2026-03-12
 
 - feat: add cheatsheets, explorers, and platform-explorer-builder skill ([#854](https://github.com/panaversity/agentfactory/pull/854))

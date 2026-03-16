@@ -43,12 +43,12 @@ Every lesson in this chapter follows the **Predict-Run-Investigate** method. You
 
 ## Chapter Lessons
 
-| Lesson | Title | What You Do |
-|--------|-------|-------------|
-| 1 | The PRIMM Method -- Predict, Run, Investigate | Learn the formal method for reading code, practice on short examples |
-| 2 | Trace Tables -- When Your Brain Takes Shortcuts | Track variable state line by line using trace tables |
-| 3 | Your First Code Review -- Catching a Bug | Apply PRIMM and trace tables to find a bug in SmartNotes code |
-| 4 | Reading a Test -- Two New Words | Recognize `def` and `assert` in test code, predict pass/fail |
+| Lesson | Title                                           | What You Do                                                          |
+| ------ | ----------------------------------------------- | -------------------------------------------------------------------- |
+| 1      | The PRIMM Method -- Predict, Run, Investigate   | Learn the formal method for reading code, practice on short examples |
+| 2      | Trace Tables -- When Your Brain Takes Shortcuts | Track variable state line by line using trace tables                 |
+| 3      | Your First Code Review -- Catching a Bug        | Apply PRIMM and trace tables to find a bug in SmartNotes code        |
+| 4      | Reading a Test -- Two New Words                 | Recognize `def` and `assert` in test code, predict pass/fail         |
 
 ## What This Chapter Uses
 
@@ -66,4 +66,4 @@ Functions, collections, imports, and control flow appear later in Phase 2. Lesso
 ## Prerequisites
 
 - **Chapter 32: The Development Environment** -- You must have the discipline stack installed (uv, pyright, ruff, pytest, Git) and a working SmartNotes project. Every lesson in this chapter runs code inside that project.
-- **[Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development)** -- You must understand why specifications come before code and how Claude Code serves as the AI coding agent that generates implementations. In this chapter, Claude Code generates the Python code blocks you read and verify -- the same workflow you will use throughout Part 4.
+- **[Chapter 16: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development)** -- You must understand why specifications come before code and how Claude Code serves as the AI coding agent that generates implementations. In this chapter, Claude Code generates the Python code blocks you read and verify -- the same workflow you will use throughout Part 4.

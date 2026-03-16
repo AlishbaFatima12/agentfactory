@@ -424,13 +424,18 @@ export default function Flashcards({ cards: deck }: FlashcardsProps) {
         </button>
       </div>
 
-      {isFlipped && (
-        <RatingButtons
-          onRate={handleRate}
-          missedCount={missedCount}
-          gotItCount={gotItCount}
-        />
-      )}
+      <div
+        className={styles.ratingSlot}
+        aria-hidden={!isFlipped}
+      >
+        {isFlipped && (
+          <RatingButtons
+            onRate={handleRate}
+            missedCount={missedCount}
+            gotItCount={gotItCount}
+          />
+        )}
+      </div>
 
       <div className={styles.progressRow}>
         <div className={styles.progressBar}>

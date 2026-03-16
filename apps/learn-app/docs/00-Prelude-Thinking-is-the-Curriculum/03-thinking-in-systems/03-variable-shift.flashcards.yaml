@@ -1,0 +1,58 @@
+deck:
+  id: "p0-ch3-variable-shift"
+  title: "The Variable Shift"
+  description: "Key concepts from the variable shift exercise — adapting systems analysis when conditions change, static vs. dynamic thinking."
+  tags: ["systems-thinking", "variable-shift", "adaptation"]
+  version: 1
+
+cards:
+  - id: "p0-ch3-variable-shift-001"
+    front: "What is a variable shift in systems thinking?"
+    back: "A deliberate change to one key variable in a scenario, requiring revision of the entire cascade map to trace how the change propagates."
+    tags: ["variable-shift", "definition"]
+    difficulty: "basic"
+
+  - id: "p0-ch3-variable-shift-002"
+    front: "Why must students revise their map rather than start from scratch after a variable shift?"
+    back: "Revision reveals which connections survived and which broke — because starting fresh hides whether the student understood the original mechanisms or just produced a static picture."
+    tags: ["variable-shift", "adaptation"]
+    difficulty: "intermediate"
+    why: "What would it mean if most of a student's connections survived a major variable shift unchanged?"
+
+  - id: "p0-ch3-variable-shift-003"
+    front: "What three types of changes should a revised cascade map visually mark?"
+    back: "1. New connections (green)\n2. Removed connections (red/strikethrough)\n3. Modified connections (yellow)"
+    tags: ["variable-shift", "change-tracking"]
+    difficulty: "basic"
+
+  - id: "p0-ch3-variable-shift-004"
+    front: "What is the difference between static analysis and dynamic systems thinking?"
+    back: "Static analysis produces a fixed snapshot. Dynamic systems thinking understands WHY each connection exists, enabling adaptation when conditions change."
+    tags: ["systems-thinking", "static-vs-dynamic"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch3-variable-shift-005"
+    front: "A student copied AI's cascade map but cannot revise it after a variable shift. Why not?"
+    back: "They never understood the mechanisms behind the connections — because copying produces a static picture without the causal understanding needed to trace how changes propagate through a system."
+    tags: ["variable-shift", "independent-reasoning"]
+    difficulty: "intermediate"
+    why: "How does the variable shift exercise make the difference between genuine and copied work undeniable?"
+
+  - id: "p0-ch3-variable-shift-006"
+    front: "Why is a change log as important as the revised map itself?"
+    back: "The change log explains WHY each modification occurred — it reveals whether the student understands causal mechanisms or just made surface-level label swaps."
+    tags: ["change-tracking", "assessment"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch3-variable-shift-007"
+    front: "How do human and AI adaptation strategies typically differ when a variable shifts?"
+    back: "Humans revise fewer connections but more deeply. AI tends to regenerate broadly but superficially."
+    tags: ["human-ai-comparison", "adaptation"]
+    difficulty: "basic"
+
+  - id: "p0-ch3-variable-shift-008"
+    front: "Why does the variable shift '60% unbanked customers relying on personal relationships' change the entire system, not just one domain?"
+    back: "In interconnected systems, changing the social fabric around trust and access propagates across all domains — because each domain's effects depend on the customer-institution relationship that the variable fundamentally altered."
+    tags: ["variable-shift", "systems-thinking"]
+    difficulty: "advanced"
+    why: "What other variable changes would cause similarly system-wide propagation?"

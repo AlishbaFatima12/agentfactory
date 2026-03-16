@@ -1,0 +1,84 @@
+deck:
+  id: "ch31-07-takaful-ifrs17"
+  title: "Takaful and IFRS 17 — Islamic Insurance"
+  description: "Key concepts from the takaful operating model, IFRS 17 application, qard hasan obligations, and dual financial statements across Malaysia, UAE, and UK jurisdictions."
+  tags: ["takaful", "ifrs-17", "islamic-insurance", "qard-hasan"]
+  version: 1
+
+cards:
+  - id: "ch31-07-takaful-ifrs17-001"
+    front: "In takaful, who bears the insurance risk — the takaful operator or the participants?"
+    back: "The participants collectively bear the insurance risk."
+    tags: ["takaful", "risk-bearing"]
+    difficulty: "basic"
+
+  - id: "ch31-07-takaful-ifrs17-002"
+    front: "A takaful operator earns fees but never bears insurance risk. Why does this create a fundamental question for IFRS 17 application?"
+    back: "IFRS 17 applies to entities that issue insurance contracts accepting significant insurance risk. Because the operator does not accept insurance risk, it is unclear whether IFRS 17 applies to the operator, the Participants' Fund, or both."
+    tags: ["ifrs-17", "takaful", "insurance-risk"]
+    difficulty: "intermediate"
+    why: "How does Malaysia's BNM resolve this ambiguity differently from the UAE and UK?"
+
+  - id: "ch31-07-takaful-ifrs17-003"
+    front: "What are the three takaful operating models?"
+    back: "1. Wakala (management fee)\n2. Mudaraba (investment income share)\n3. Hybrid (wakala + mudaraba)"
+    tags: ["takaful", "operating-models"]
+    difficulty: "basic"
+
+  - id: "ch31-07-takaful-ifrs17-004"
+    front: "How does a wakala-model takaful operator earn its revenue?"
+    back: "A fixed percentage of contributions as a management fee (typically 25-35%)."
+    tags: ["wakala", "takaful-revenue"]
+    difficulty: "basic"
+
+  - id: "ch31-07-takaful-ifrs17-005"
+    front: "Why does BNM Malaysia rule that IFRS 17 applies to the takaful operator, even though the operator does not accept insurance risk?"
+    back: "BNM views the operator as taking on insurance risk through its management role and its qard hasan obligation to fund deficits. The qard commitment effectively binds the operator to the fund's insurance outcomes."
+    tags: ["bnm", "ifrs-17", "takaful"]
+    difficulty: "intermediate"
+    why: "What happens to this argument in the UAE and UK where no equivalent regulatory ruling exists?"
+
+  - id: "ch31-07-takaful-ifrs17-006"
+    front: "Every takaful entity maintains two sets of financial statements. What does each set cover?"
+    back: "1. Operator's statements: wakala fee revenue, management expenses, qard positions\n2. Participants' Fund: contributions, claims, retakaful, investment income, surplus/deficit"
+    tags: ["takaful", "financial-statements"]
+    difficulty: "basic"
+
+  - id: "ch31-07-takaful-ifrs17-007"
+    front: "A takaful Participants' Fund enters deficit. Why is the qard hasan obligation a Shariah requirement rather than a commercial decision?"
+    back: "The wakala contract creates an obligation for the operator to restore solvency through an interest-free loan. Because qard hasan is mandatory under the contract, the operator cannot choose to let the fund fail."
+    tags: ["qard-hasan", "takaful", "shariah"]
+    difficulty: "intermediate"
+    why: "If qard is mandatory, does it become a financial liability under IAS 32 rather than a contingent liability under IAS 37?"
+
+  - id: "ch31-07-takaful-ifrs17-008"
+    front: "Under IAS 37, what determines whether a takaful operator recognises a qard provision or discloses a contingent liability?"
+    back: "If unconditionally committed to providing qard: recognise as a provision. If contingent on the fund actually entering deficit: disclose as contingent liability under IAS 37.86."
+    tags: ["ias-37", "qard-hasan", "contingent-liability"]
+    difficulty: "intermediate"
+
+  - id: "ch31-07-takaful-ifrs17-009"
+    front: "Which IFRS 17 measurement model applies to general takaful (motor, property, medical), and why?"
+    back: "Premium Allocation Approach (PAA), because coverage periods are typically 12 months or less."
+    tags: ["paa", "general-takaful", "ifrs-17"]
+    difficulty: "basic"
+
+  - id: "ch31-07-takaful-ifrs17-010"
+    front: "What are the three building blocks of the General Measurement Model (GMM) required for family takaful?"
+    back: "1. Present value of fulfilment cash flows\n2. Risk adjustment for non-financial risk\n3. Contractual Service Margin (CSM)"
+    tags: ["gmm", "family-takaful", "ifrs-17"]
+    difficulty: "intermediate"
+
+  - id: "ch31-07-takaful-ifrs17-011"
+    front: "A takaful operator's qard receivable from the Participants' Fund is at risk. How does impairment work under IFRS 9?"
+    back: "If the fund never recovers sufficient surplus to repay, the receivable must be impaired. Because recovery depends on future underwriting outcomes, the operator may need to write off the full amount as a loss."
+    tags: ["ifrs-9", "qard-hasan", "impairment"]
+    difficulty: "advanced"
+    why: "How does the uncertainty of repayment affect the operator's willingness to grow the takaful business?"
+
+  - id: "ch31-07-takaful-ifrs17-012"
+    front: "A takaful operator cannot retain underwriting surplus — it belongs to participants. How must the operator grow its business?"
+    back: "Growth must come from scale: more participants, more contributions, and therefore more wakala fees. The hybrid model adds mudaraba investment income sharing as a second revenue source."
+    tags: ["takaful", "business-model", "growth"]
+    difficulty: "advanced"
+    why: "Why does this explain the commercial preference for the hybrid model over pure wakala?"

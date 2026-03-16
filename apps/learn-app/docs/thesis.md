@@ -37,7 +37,7 @@ In the AI era, the most valuable companies won't sell software—they'll manufac
   color: 'var(--ifm-color-emphasis-800)',
   marginTop: '2rem'
 }}>
-The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers define intent. Agents execute. Humans supervise and verify. Soon, agents won't just <em>do</em> the work—they'll <em>source what they need</em> to do it, dynamically purchasing resources within budgets and permission envelopes set by their human supervisors. This model industrializes execution through machine-readable specs, reusable skills, Standard Tool Protocols (MCP: a shared tool-connection standard), and cloud-native infrastructure—shifting the focus from manual workflows to <strong>capability on demand</strong>.
+The SaaS era sold subscriptions; the Agent Factory era sells results. Buyers define intent. Agents execute. Humans supervise and verify. In practice, the AI workforce works best when humans own the first 10 percent of direction, AI handles the middle 80 percent of execution, and humans return for the final 10 percent of judgment and verification. Soon, agents won't just <em>do</em> the work—they'll <em>source what they need</em> to do it, dynamically purchasing resources within budgets and permission envelopes set by their human supervisors. This model industrializes execution through machine-readable specs, reusable skills, Standard Tool Protocols (MCP: a shared tool-connection standard), and cloud-native infrastructure—shifting the focus from manual workflows to <strong>capability on demand</strong>.
 </p>
 
 <p style={{
@@ -110,7 +110,34 @@ A common fear: agents replace people. The evidence says otherwise. For most task
 
 This changes what it means to be a "tech professional." A web developer or mobile developer is not just someone who writes React or Swift. They are a **technology expert**—someone who understands systems, data flows, APIs, and user needs. In the Agent Factory era, that expertise becomes far more valuable, because it is no longer spent hand-coding screens. It is spent designing, deploying, and supervising agents that deliver entire products.
 
-The developer doesn't disappear. The developer does _more_.
+The developer doesn't disappear. The developer does _more_. 
+
+Steve Jobs figured out the operating rhythm for this decades ago — though he was managing humans, not agents.
+
+---
+
+### The 10-80-10 Rule: The Operating Rhythm of the AI Workforce
+
+Steve Jobs famously followed what's known as the 10-80-10 rule: spend 10% of your time setting the vision, let your team execute for 80%, then return for the final 10% to polish and perfect. Tech entrepreneur Dan Martell breaks it down as 10% ideation, 80% execution, and 10% refinement and integration. Jobs evolved from a micromanager who personally dictated every pixel of the Mac's calculator to a leader who trusted talented people with the middle 80% — and Apple became the most valuable company on Earth because of that shift.
+
+Now replace "talented people" with "AI employees," and you have the operating rhythm of the Agent Factory:
+
+| Phase | Jobs's Apple | The Agent Factory |
+|-------|-------------|-------------------|
+| **First 10% — Intent** | Jobs sets the vision and constraints | Human defines the spec: goals, constraints, budget, permissions |
+| **Middle 80% — Execution** | Apple's teams build the product | AI employees execute: compose tools, spawn sub-agents, deliver outcomes |
+| **Final 10% — Verification** | Jobs polishes and says "ship it" | Human reviews, refines, and approves the verified outcome |
+
+![10_80_10_rule](../static/img/rule.png)
+
+This is not a coincidence. The pattern works because it allocates human attention where it is irreplaceable — at the boundaries — while letting execution scale without bottlenecks. The first 10% is where critical thinking, context setting, and clear prompting matter. The middle 80% is the heavy lifting — summarizing, generating, analyzing, formatting. The final 10% is where human expertise shapes the output into something sharp, usable, and high-quality.
+
+The Agent Factory thesis already states: *"Buyers define intent. Agents execute. Humans supervise and verify."* The 10-80-10 rule is the quantified version of that sentence. It tells every professional exactly how their day changes: you stop spending 80% of your time on execution and start spending 100% of your attention on the 20% that only a human can do — setting direction and guaranteeing quality.
+
+The leaders who internalize this shift won't just manage AI employees. They'll manage them the way Jobs managed Apple's best teams: with a clear spec at the start, trust in the middle, and uncompromising standards at the end.
+
+---
+
 
 ### Personal Agents and the Enterprise Interface
 

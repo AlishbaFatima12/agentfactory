@@ -8,9 +8,9 @@ title: "Chapter 30: The PRIMM-AI+ Framework Quiz"
 Test your understanding of the PRIMM-AI+ framework — the teaching method that governs all programming instruction in this book. This assessment covers all 4 lessons in Chapter 30.
 
 <Quiz
-  title="Chapter 30: The PRIMM-AI+ Framework Assessment"
-  questionsPerBatch={18}
-  questions={[
+title="Chapter 30: The PRIMM-AI+ Framework Assessment"
+questionsPerBatch={18}
+questions={[
 {
 question: "A student opens a Python program and immediately asks AI to explain every line before reading it themselves. Which PRIMM stage did they skip entirely?",
 options: ["Investigate — they should have traced variables first", "Run — they should have executed the code first", "Predict — they should have formed their own mental model first", "Make — they should have written their own version first"],
@@ -69,9 +69,9 @@ source: "Lesson 1: The PRIMM Framework"
 },
 {
 question: "In the Make stage, students write a specification before writing code. Which earlier chapter's concept does this directly apply?",
-options: ["Spec-Driven Development from Chapter 5 applied to learning exercises", "Context Engineering from Chapter 4 applied to code generation", "The Agent Factory paradigm from Chapter 1 applied to projects", "Version control workflows from Part 2 applied to code management"],
+options: ["Spec-Driven Development from Chapter 16 applied to learning exercises", "Context Engineering from Chapter 15 applied to code generation", "The Agent Factory paradigm from Chapter 12 applied to projects", "Version control workflows from Part 2 applied to code management"],
 correctOption: 0,
-explanation: "The Make stage uses Spec-Driven Development directly: define what the program should do (inputs, outputs, edge cases) before writing a single line of code. This is Chapter 5's core concept applied to learning. Context Engineering (Chapter 4) is about managing AI context, not specification. The Agent Factory paradigm is about building AI agents, not writing specs. Version control is a separate workflow concern.",
+explanation: "The Make stage uses Spec-Driven Development directly: define what the program should do (inputs, outputs, edge cases) before writing a single line of code. This is Chapter 16's core concept applied to learning. Context Engineering (Chapter 15) is about managing AI context, not specification. The Agent Factory paradigm is about building AI agents, not writing specs. Version control is a separate workflow concern.",
 source: "Lesson 1: The PRIMM Framework"
 },
 {

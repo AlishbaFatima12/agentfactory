@@ -1,0 +1,71 @@
+deck:
+  id: "p0-ch10-strategy-retrospective"
+  title: "Strategy Retrospective"
+  description: "Key concepts from the capstone exercise: strategy retrospective analysis, Personal Learning Framework creation, and the meta-learning cycle as an operating system for Parts 2-10."
+  tags: ["meta-learning", "strategy-retrospective", "personal-learning-framework", "capstone"]
+  version: 1
+
+cards:
+  - id: "p0-ch10-strategy-retrospective-001"
+    front: "What is the Personal Learning Framework?"
+    back: "A reusable, one-page document describing how you approach learning new domains — your operating system for the rest of the book."
+    tags: ["personal-learning-framework", "capstone"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-strategy-retrospective-002"
+    front: "What five components does the Personal Learning Framework contain?"
+    back: "1. Optimal learning sequence\n2. Resource prioritization criteria\n3. Confusion protocol (what to do when stuck)\n4. AI usage guidelines\n5. Self-assessment triggers"
+    tags: ["personal-learning-framework", "components"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-strategy-retrospective-003"
+    front: "Why is the Personal Learning Framework described as 'the single most important deliverable of Part 0'?"
+    back: "Parts 2-10 constantly introduce unfamiliar concepts and domains. The framework gives you a tested method for handling all of them, because domain knowledge expires but the meta-learning process transfers to everything."
+    tags: ["personal-learning-framework", "capstone"]
+    difficulty: "intermediate"
+    why: "How would your approach to Part 2 differ with versus without a Personal Learning Framework?"
+
+  - id: "p0-ch10-strategy-retrospective-004"
+    front: "What does the Strategy Retrospective compare?"
+    back: "Planned learning strategy versus actual execution — where the plan worked, where it failed, and what to do differently."
+    tags: ["strategy-retrospective", "plan-vs-reality"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-strategy-retrospective-005"
+    front: "A student's retrospective says 'everything went as planned.' Why does the skill design treat this as a red flag?"
+    back: "If the plan perfectly predicted learning in an unfamiliar domain, either the student is not reflecting honestly or they did not push hard enough, because genuine learning in unknown territory always produces surprises."
+    tags: ["strategy-retrospective", "honesty"]
+    difficulty: "intermediate"
+    why: "What would a genuinely honest retrospective look like after 72 hours in an unfamiliar domain?"
+
+  - id: "p0-ch10-strategy-retrospective-006"
+    front: "How do you tell if a Personal Learning Framework is too generic to be useful?"
+    back: "If it could apply to anyone learning anything (like 'study hard and ask questions'), it is not specific enough. A useful framework reflects your personal learning patterns and style."
+    tags: ["personal-learning-framework", "specificity"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch10-strategy-retrospective-007"
+    front: "What is a 'confusion protocol' in the Personal Learning Framework?"
+    back: "A specific, documented procedure for what to do when you are stuck — concrete steps, not vague advice like 'try harder.'"
+    tags: ["confusion-protocol", "meta-learning"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-strategy-retrospective-008"
+    front: "Why does the meta-learning cycle follow the sequence plan, execute, teach, reflect — rather than just plan and execute?"
+    back: "Teaching (Exercise 3) exposes gaps that studying missed, and reflecting (Exercise 4) extracts transferable principles. Without these steps, you learn the domain but not how you learn, because the meta-learning insight comes from analyzing the process."
+    tags: ["meta-learning-cycle", "capstone"]
+    difficulty: "advanced"
+    why: "What would a student miss about their own learning process if they skipped the teach-back and retrospective?"
+
+  - id: "p0-ch10-strategy-retrospective-009"
+    front: "What six components make up the Chapter 10 Meta-Learning Portfolio?"
+    back: "1. Learning Plan\n2. Domain analysis + Learning Log + mid-point reflection\n3. Teaching materials + peer feedback + question log\n4. Strategy Retrospective\n5. Personal Learning Framework\n6. All AI feedback"
+    tags: ["chapter-deliverable", "portfolio"]
+    difficulty: "basic"
+
+  - id: "p0-ch10-strategy-retrospective-010"
+    front: "Why must the Personal Learning Framework include AI usage guidelines specifying when AI helps versus hinders learning?"
+    back: "AI accelerates acquisition of facts but can prevent deep understanding if overused. Without explicit guidelines, students default to AI for everything, because the boundary between AI-as-accelerator and AI-as-crutch is invisible without deliberate reflection."
+    tags: ["ai-usage", "meta-learning"]
+    difficulty: "intermediate"
+    why: "How would you determine the optimal point to stop using AI and start struggling independently?"

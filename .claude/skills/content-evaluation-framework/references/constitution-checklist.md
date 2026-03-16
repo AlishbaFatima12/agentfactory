@@ -163,7 +163,7 @@ For each section, evaluate content and mark:
 - [ ] WHY design decisions made explained
 - [ ] Variations and related patterns shown
 - [ ] "Common Mistakes" section included (every chapter requirement)
-- [ ] "AI Exercise" included (requirement starting Ch 3)
+- [ ] "AI Exercise" included (requirement starting Ch 14)
 
 **Evidence Required**: Confirm show-then-explain pattern throughout
 
@@ -286,7 +286,7 @@ For each section, evaluate content and mark:
 - [ ] Provide working code examples with expected output (technical chapters)
 - [ ] Use Python 3.13+ modern syntax (technical chapters)
 - [ ] Include "Common Mistakes" section in every chapter
-- [ ] Include "AI Exercise" in every chapter (starting Ch 3)
+- [ ] Include "AI Exercise" in every chapter (starting Ch 14)
 - [ ] Validate against Constitution before publication
 - [ ] Assume readers know nothing (no gatekeeping)
 - [ ] Show both prompt/request and AI result

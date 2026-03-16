@@ -11,6 +11,6 @@ Section III addresses the function that sets the boundaries within which all ent
 
 > **Section philosophy:** AI agents in this domain do not replace legal judgment — they automate triage, analysis, and routing so that licensed attorneys can focus on the decisions that require their expertise. The agent reviews, triages, drafts, and flags. The attorney advises, decides, and signs.
 
-| #   | Chapter                                                                | Key Focus                                                   |
-| --- | ---------------------------------------------------------------------- | ----------------------------------------------------------- |
-| 22  | [Legal Operations and Compliance](legal-operations-and-compliance)     | Contract lifecycle, Legal Ops agents, regulatory monitoring |
+| #   | Chapter                                                            | Key Focus                                                   |
+| --- | ------------------------------------------------------------------ | ----------------------------------------------------------- |
+| 33  | [Legal Operations and Compliance](legal-operations-and-compliance) | Contract lifecycle, Legal Ops agents, regulatory monitoring |

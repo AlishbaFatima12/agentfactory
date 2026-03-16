@@ -1,11 +1,11 @@
 ---
 name: lesson-prompt-improver
-description: "Analyse and fix prompt quality issues in Part 3 (Business Domain Agent Workflows) lesson files. Use this skill whenever working on lesson prompt architecture, replacing fabricated agent outputs, adding skill names to prompts, removing inline data injections, or improving Try With AI sections. Triggers on: lesson prompt review, prompt architecture fix, fabricated output replacement, intent table conversion, prompt quality audit for chapters 14-23."
+description: "Analyse and fix prompt quality issues in Part 3 (Business Domain Agent Workflows) lesson files. Use this skill whenever working on lesson prompt architecture, replacing fabricated agent outputs, adding skill names to prompts, removing inline data injections, or improving Try With AI sections. Triggers on: lesson prompt review, prompt architecture fix, fabricated output replacement, intent table conversion, prompt quality audit for chapters 25-34."
 ---
 
 # Lesson Prompt Improver
 
-Analyse Part 3 lesson files for prompt quality issues and apply fixes following established patterns. This skill encodes the prompt architecture decisions from the Ch23 rewrite into a reusable workflow.
+Analyse Part 3 lesson files for prompt quality issues and apply fixes following established patterns. This skill encodes the prompt architecture decisions from the Ch34 rewrite into a reusable workflow.
 
 ## When to Use
 
@@ -124,7 +124,7 @@ Incorrect references to plugins, tools, or platforms.
 **Detection pattern:**
 
 - `"sales-marketing plugins"` → should be `"Sales, Marketing, and RevOps extension plugins"`
-- `"Claude in Excel"` in chapters 18+ → should be `"Cowork"` (Ch17 uses "Claude in Excel" correctly)
+- `"Claude in Excel"` in chapters 29+ → should be `"Cowork"` (Ch28 uses "Claude in Excel" correctly)
 
 **Fix:** Apply correct terminology per `.claude/rules/cowork-content.md`.
 

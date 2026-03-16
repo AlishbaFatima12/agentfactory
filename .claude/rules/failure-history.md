@@ -21,7 +21,7 @@ Every error becomes a rule. Review relevant sections before starting work.
 
 ---
 
-### 2025-11-27 Chapter 14: Format Drift
+### 2025-11-27 Chapter 25: Format Drift
 
 **Error**: Taught wrong skill file format — flat file instead of directory structure.
 
@@ -29,7 +29,7 @@ Every error becomes a rule. Review relevant sections before starting work.
 
 - Used flat file format instead of directory structure
 - Missing YAML frontmatter
-- Did NOT read Chapter 5 Lesson 7 which teaches correct format
+- Did NOT read Chapter 16 Lesson 7 which teaches correct format
 
 **Correct format**:
 
@@ -53,11 +53,12 @@ Every error becomes a rule. Review relevant sections before starting work.
 
 ---
 
-### 2026-03-03 Chapter 19: Phantom Component Imports
+### 2026-03-03 Chapter 30: Phantom Component Imports
 
 **Error**: content-implementer subagent added `import Flashcards from '@site/src/components/Flashcards'` and `import Quiz from '@site/src/components/Quiz'` to 10+ lesson files. These components DO NOT EXIST. Broke Vercel build.
 
 **What went wrong**:
+
 - Subagent hallucinated React component imports for Flashcards and Quiz
 - Flashcards are actually YAML sidecar files (`.flashcards.yaml`) processed at build time, NOT React components
 - Quizzes use the `/quiz-generator` skill to produce standalone content, NOT an imported `<Quiz>` component
@@ -69,7 +70,7 @@ Every error becomes a rule. Review relevant sections before starting work.
 
 ### Content Quick Reference
 
-- Confusing chapter and part numbers → `ch 11` ≠ `part 4` (always `ls -d` to discover)
+- Confusing chapter and part numbers → `ch 22` ≠ `part 4` (always `ls -d` to discover)
 - Skipping chapter README → Wrong pedagogical layer
 - Skipping reference lesson → ALWAYS read a reference lesson first
 - Teaching patterns without checking canonical source → Format drift

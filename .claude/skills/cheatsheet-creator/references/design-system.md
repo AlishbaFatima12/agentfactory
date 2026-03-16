@@ -13,9 +13,9 @@ const palette = {
   accentLight: "#e87a45", // Lighter accent — for hover/active states
   accentPale: "#f5ddd0", // Pale accent — alternating row backgrounds
   dark: "#2c1810", // Primary text — espresso
-  mid: "#5a3e2b", // Secondary text — warm brown
+  mid: "#3d2518", // Secondary text — rich espresso brown (darkened for readability)
   codeBg: "#2c1810", // Code block background — espresso
-  codeText: "#f0dcc8", // Code block text — warm cream
+  codeText: "#fff", // Code block text — white for maximum readability
   tagBg: "#c0582a", // Default tag background
   tagText: "#fff", // Tag text — always white
   highlight: "#fff3e6", // Highlight background — soft peach
@@ -23,6 +23,27 @@ const palette = {
 ```
 
 Never change these colors. They are the identity of the cheatsheet brand.
+
+### Accessibility: Dark Surface Contrast Rules
+
+The cheatsheet toolbar and header use dark backgrounds (`palette.codeBg` / `palette.dark`). When placing text on these dark surfaces:
+
+- **Code block text** on dark backgrounds: use `#fff` (white) for maximum readability
+- **Body/instructional text** on dark backgrounds: use `#e0d8cc` or lighter (must achieve ≥4.5:1 contrast ratio against the dark surface)
+- **Active/interactive elements**: use `#fff` (white)
+- **Disabled/muted text**: use at least `#b8a898` (never below 4.5:1)
+- **Copper accent colors** (`palette.accent`, `palette.accentLight`): reserve for headings, active states, and interactive highlights only — NOT for body text on dark
+- The light palette colors (`palette.mid`, `palette.dark`) are for use on light card backgrounds only — never on the dark toolbar/header
+
+### Accessibility: Light Mode Readability Rules
+
+On light card backgrounds (`palette.card`, `palette.bg`, `palette.highlight`):
+
+- **Body text** (`palette.mid = #3d2518`): Must achieve ≥9:1 contrast on card backgrounds for small text readability
+- **Bold/strong terms**: Use `palette.dark` (`#2c1810`) for maximum emphasis — the darkest brown in the palette
+- **Minimum font sizes**: Body text ≥10.5px, code blocks ≥10px, reference descriptions ≥10px. Never go below 9px for any text
+- **Inline `<code>`**: Use `palette.accent` (`#c0582a`) which achieves ~5:1 on cream — acceptable for bold monospace but never for body text
+- **Never use `palette.accent` for body text** on light backgrounds — it's too light for non-bold, non-monospace text at small sizes
 
 ## Font Stack
 
@@ -422,7 +443,7 @@ Each page should have 9-12 SectionCards arranged in the 3-column grid. Use `span
 >
   Topic Cheatsheet — Created {new Date().getFullYear()}
   <br />
-  <span style={{ fontSize: 10.5, color: "#a08a76" }}>
+  <span style={{ fontSize: 10.5, color: palette.mid }}>
     Source attribution or version note
   </span>
 </div>

@@ -1,0 +1,59 @@
+deck:
+  id: "p0-ch3-cascade-mapping"
+  title: "The Cascade Map"
+  description: "Key concepts from the cascade mapping exercise — systems thinking, feedback loops, and multi-domain effect tracing."
+  tags: ["systems-thinking", "cascade-map", "feedback-loops"]
+  version: 1
+
+cards:
+  - id: "p0-ch3-cascade-mapping-001"
+    front: "In systems thinking, what is a cascade map?"
+    back: "A diagram tracing effects of a decision across multiple domains, showing first, second, and third-order consequences plus feedback loops."
+    tags: ["cascade-map", "definition"]
+    difficulty: "basic"
+
+  - id: "p0-ch3-cascade-mapping-002"
+    front: "Why do AI tools typically miss feedback loops when analyzing decisions?"
+    back: "AI analyzes problems linearly, listing effects in isolated categories. Feedback loops require tracing circular dynamics where effects reinforce or counteract each other — a structural connection AI's list format does not capture."
+    tags: ["systems-thinking", "ai-limitations"]
+    difficulty: "intermediate"
+    why: "How would you verify whether an AI-generated analysis contains genuine feedback loops or just relabeled lists?"
+
+  - id: "p0-ch3-cascade-mapping-003"
+    front: "What are the five domains a cascade map should cover when analyzing a major organizational decision?"
+    back: "1. Employees\n2. Customers\n3. Competitors\n4. Regulators\n5. Internal knowledge base"
+    tags: ["cascade-map", "domains"]
+    difficulty: "basic"
+
+  - id: "p0-ch3-cascade-mapping-004"
+    front: "What distinguishes a first-order effect from a third-order effect in a cascade map?"
+    back: "First-order effects are direct, immediate consequences. Third-order effects are consequences of consequences of consequences — two causal steps removed from the decision."
+    tags: ["cascade-map", "effect-orders"]
+    difficulty: "basic"
+
+  - id: "p0-ch3-cascade-mapping-005"
+    front: "A cascade map has many effects listed but no circular connections. Why is it incomplete?"
+    back: "Without feedback loops, the map is a linear list, not a system. Real systems have effects that circle back to amplify or dampen the original decision — these circular dynamics drive long-term outcomes."
+    tags: ["feedback-loops", "systems-thinking"]
+    difficulty: "intermediate"
+    why: "What real-world outcome could a feedback loop predict that a linear list of effects would miss?"
+
+  - id: "p0-ch3-cascade-mapping-006"
+    front: "In a cascade map, what is the difference between an amplifying and a dampening feedback loop?"
+    back: "Amplifying loops reinforce the original effect, making it stronger. Dampening loops counteract the original effect, reducing its impact over time."
+    tags: ["feedback-loops", "definitions"]
+    difficulty: "intermediate"
+
+  - id: "p0-ch3-cascade-mapping-007"
+    front: "Why does mapping effects before consulting AI build stronger systems thinking than starting with AI?"
+    back: "Struggling to find connections independently builds the mental habit of asking 'and then what?' — because pattern recognition only develops through effortful practice, not passive consumption of AI output."
+    tags: ["systems-thinking", "independent-reasoning"]
+    difficulty: "intermediate"
+    why: "How would you tell whether a student derived their cascade map from genuine reasoning or copied it from AI?"
+
+  - id: "p0-ch3-cascade-mapping-008"
+    front: "How does mechanism quality differ from effect quantity in a cascade map?"
+    back: "A smaller map with well-explained mechanisms and genuine feedback loops is superior to a sprawling list — because understanding WHY each connection exists matters more than counting effects."
+    tags: ["cascade-map", "quality"]
+    difficulty: "advanced"
+    why: "What happens when a student with a large but shallow map tries to adapt it when conditions change?"
