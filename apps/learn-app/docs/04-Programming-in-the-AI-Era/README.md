@@ -18,7 +18,7 @@ Part 3 used Claude Cowork to deploy agents without writing code. Part 4 switches
 - **INPUT: You write specifications** -- descriptions of what the code should do, using type labels and checks (tests). Then you prompt Claude Code to generate the implementation.
 - **OUTPUT: You verify the result** -- you run automated tools to prove the generated code is correct. You never accept output on faith.
 
-This workflow -- specify first, generate second, verify third -- is called **Test-Driven Generation (TDG)**, the Python-specific form of SDD.
+This workflow -- specify first, generate second, verify third -- is called **Test-Driven Generation (TDG)**, the Python-specific form of Spec Driven Development (SDD).
 
 :::info The research behind this shift
 GitClear's 2025 analysis of 211 million lines of code from Google, Microsoft, Meta, and enterprise repositories found that code duplication quadrupled after widespread AI adoption, while refactoring dropped from 25% to under 10% of changes. Code generated fast, but revised just as fast -- 7.9% of newly added lines required changes within two weeks, up from 5.5% before AI tools. Separately, Qodo's State of AI Code Quality report found that 76% of developers using AI assistants fall into what researchers call the "red zone" -- frequent hallucinations paired with low confidence in shipping. The teams that escaped this pattern shared one trait: they used AI for testing and review, not just generation, and their confidence in code quality jumped from 27% to 61%. Speed without verification produces churn. Speed with verification produces software.
@@ -32,7 +32,7 @@ Part 4 assumes no programming experience -- you do not need to have written code
 
 - **Using a terminal** -- opening a terminal, navigating directories, running commands → [Part 2, Chapter 22](/docs/Agent-Workflow-Primitives/linux-mastery)
 - **Driving Claude Code** -- writing clear prompts, evaluating responses, iterating → practiced throughout Parts 1 and 2
-- **Spec-Driven Development** -- writing specifications before code, the four-phase SDD workflow → [Chapter 16](/docs/General-Agents-Foundations/spec-driven-development) (required prerequisite)
+- **Spec-Driven Development (SDD)** -- writing specifications before code, the four-phase SDD workflow → [Chapter 16](/docs/General-Agents-Foundations/spec-driven-development) (required prerequisite)
 - **Version control basics** -- `git add`, `git commit`, `git push` → [Chapter 23](/docs/Agent-Workflow-Primitives/version-control)
 - **Building something with Claude Code** -- directing Claude Code to create a working project → Part 2 projects
 
@@ -62,6 +62,9 @@ These six steps are not sequential phases you hand off and forget. They are a lo
 | Ship             | Save your work, automated pipeline verifies, deploy                                      | Human     | Assists: security review, changelog            |
 
 The key insight: you never start from a blank page, and you never accept output blindly. You start with a requirement and end with a passing test suite. Everything in between is a collaboration -- but the intent, the correctness criteria, and the final verification are yours.
+
+### Why do humans write the tests?
+In TDG, tests are not verification — they are specification. When you write assert total_with_tax(100.0, 0.15) == 115.0, you are not checking code that already exists. You are declaring what correct means before any implementation exists. That declaration is the requirement. If you delegate it to AI, you have delegated the requirement — and you are now verifying AI-generated code against AI-generated expectations. You have no independent signal. The test must come from a human mind that understands the domain, because the test is the only artifact in the entire cycle that defines ground truth. AI can suggest edge cases you missed. AI can help you write the test syntax. But the decision about what correct looks like is yours — that is the 10% that makes the other 90% trustworthy.
 
 :::note If you're new to programming
 Some of these terms may be unfamiliar. Here is what they mean in plain English:
