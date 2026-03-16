@@ -3,16 +3,19 @@
 import logging
 import uuid
 
+from fastapi import APIRouter, Depends, HTTPException, Request, Response
+
 from api_infra.auth import CurrentUser, get_current_user
 from api_infra.core.rate_limit import rate_limit
 from api_infra.core.redis_cache import get_redis
-from fastapi import APIRouter, Depends, HTTPException, Request, Response
 
 from ..metering.client import get_metering_client
 from ..schemas.content import (
     BookTreeResponse,
     CompleteRequest,
     CompleteResponse,
+    ExerciseSubmitRequest,
+    ExerciseSubmitResponse,
     LessonContentResponse,
     LessonFrontmatter,
     ProgressResponse,
@@ -177,11 +180,19 @@ async def get_lesson(
                 auth_token=auth_token,
             )
         except Exception as e:
-            logger.error("[Lesson] Metering deduct failed for reservation=%s: %s", reservation_id, e)
+            logger.error(
+                "[Lesson] Metering deduct failed for reservation=%s: %s",
+                reservation_id,
+                e,
+            )
             # Fail-closed: don't serve content if we can't confirm the charge
             raise HTTPException(
                 status_code=503,
-                detail="Credit deduction failed. Your reservation will be released automatically. Please try again.",
+                detail=(
+                    "Credit deduction failed."
+                    " Your reservation will be released automatically."
+                    " Please try again."
+                ),
             )
 
     # Set idempotency key (1 hour TTL)
@@ -240,6 +251,25 @@ async def complete_lesson(
         completed=result.get("completed", False),
         xp_earned=result.get("xp_earned", 0),
     )
+
+
+@content_router.post("/exercise/submit", response_model=ExerciseSubmitResponse)
+@rate_limit("content_exercise_submit", max_requests=10, period_minutes=1)
+async def submit_exercise(
+    request: Request,
+    response: Response,
+    body: ExerciseSubmitRequest,
+    user: CurrentUser = Depends(get_current_user),
+) -> ExerciseSubmitResponse:
+    """Submit exercise evidence via progress API."""
+    progress = get_progress_client()
+    if not progress:
+        raise HTTPException(status_code=503, detail="Progress tracking service not configured")
+
+    auth_token = request.headers.get("Authorization")
+    result = await progress.submit_exercise(data=body.model_dump(), auth_token=auth_token)
+
+    return ExerciseSubmitResponse(**result)
 
 
 @content_router.get("/progress", response_model=ProgressResponse)

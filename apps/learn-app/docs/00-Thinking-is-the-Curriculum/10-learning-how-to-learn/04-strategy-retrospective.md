@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Strategy Retrospective"
 description: "Compare your original Learning Plan to what actually happened, then create a Personal Learning Framework — your reusable operating system for mastering unfamiliar domains throughout the rest of this book"
 keywords:
@@ -95,33 +96,55 @@ Compare your original Learning Plan to what actually happened. Write a Strategy 
 A Strategy Retrospective (300-400 words) comparing: your planned strategy vs. actual strategy, where your plan worked, where it failed, and what you would do differently next time. A **Personal Learning Framework** (one page) that you will use for every new domain encounter in the rest of the book, containing: your optimal learning sequence, your resource prioritization criteria, your "confusion protocol" (what to do when stuck), your AI usage guidelines (when AI helps vs. hinders learning), and your self-assessment triggers (how to know when you have learned enough).
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="strategy-retrospective" xp={50}>
+
 I completed a full meta-learning cycle: planned, executed a 72-hour
 sprint, taught what I learned, and now I am writing a Strategy
 Retrospective and Personal Learning Framework. Please:
 
 (1) Compare my original plan to my actual execution -- am I being honest
-    about what worked and what did not?
+about what worked and what did not?
 (2) Rate my Personal Learning Framework: is it specific enough to be
-    actionable? Would it actually help me learn the next unfamiliar
-    domain more efficiently?
+actionable? Would it actually help me learn the next unfamiliar
+domain more efficiently?
 (3) What strategies do efficient learners use that are missing from my
-    framework?
+framework?
 (4) Rate my overall meta-learning skill development across this chapter
-    from Beginner / Developing / Proficient / Advanced.
+from Beginner / Developing / Proficient / Advanced.
 (5) Give me one personalized practice assignment I should complete before
-    starting Part 2 of this book to strengthen my weakest meta-learning
-    skill.
+starting Part 2 of this book to strengthen my weakest meta-learning
+skill.
 
-My original Learning Plan: [paste].
-My Strategy Retrospective: [paste].
-My Personal Learning Framework: [paste].
+My original Learning Plan:
+
+<AICheckField
+  name="original_learning_plan"
+  placeholder="Paste your original Learning Plan here..."
+  rows={6}
+/>
+
+My Strategy Retrospective:
+
+<AICheckField
+  name="strategy_retrospective"
+  placeholder="Paste your Strategy Retrospective here..."
+  rows={6}
+/>
+
+My Personal Learning Framework:
+
+<AICheckField
+  name="personal_learning_framework"
+  placeholder="Paste your Personal Learning Framework here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
@@ -146,3 +169,7 @@ A **Meta-Learning Portfolio** containing: (1) the original Learning Plan, (2) th
 | AI feedback integration                                                                 |  10%   | Did the student engage seriously with AI feedback across all exercises?                                        |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Prediction Lock"
 description: "Commit your diagnosis and questions before touching AI, then compare your thinking against machine output to reveal blind spots in your question formulation"
 keywords:
@@ -139,28 +140,43 @@ Choose one. The exercises work identically regardless of which you pick.
 A sealed prediction document (timestamped before AI use) containing your diagnosis, 10 ranked questions with predicted answers, followed by a reasoning receipt showing all 5 prompts sent to both Claude and ChatGPT, the responses received, and your accept/reject/modify decision for each with a one-sentence justification.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="prediction-lock" xp={50}>
+
 I am a student learning question formulation. Below is a business scenario,
 followed by my initial diagnosis and 10 ranked diagnostic questions.
 Please evaluate:
 
 (1) Rate each of my 10 questions on a scale of 1-10 for diagnostic power --
-    how likely is this question to reveal the root cause?
+how likely is this question to reveal the root cause?
 (2) Identify which of my questions are too vague, too narrow, or redundant.
 (3) Suggest 3 questions I missed that would have been more diagnostic than
-    my weakest 3.
+my weakest 3.
 (4) Evaluate my ranking -- did I put the highest-value questions at the top?
 (5) Rate my overall question formulation skill from
-    Beginner / Developing / Proficient / Advanced and explain why.
+Beginner / Developing / Proficient / Advanced and explain why.
 
-Here is the scenario: [paste scenario].
-Here is my work: [paste your prediction lock document].
+Here is the scenario:
+
+<AICheckField
+  name="scenario"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
+
+Here is my work:
+
+<AICheckField
+  name="prediction_lock_document"
+  placeholder="Paste your prediction lock document here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
@@ -205,3 +221,7 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn that the quality of your questions determines the quality of every answer you will ever get — from AI, from colleagues, from data. By predicting first and then comparing, you see exactly where your thinking was strong and where it was lazy. The AI grading reveals blind spots in your questioning that you cannot see yourself. Over time, you internalize what makes a question diagnostic rather than decorative.
+
+## Flashcards Study Aid
+
+<Flashcards />

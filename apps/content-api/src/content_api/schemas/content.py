@@ -93,6 +93,26 @@ class CompleteResponse(BaseModel):
     xp_earned: int = 0
 
 
+class ExerciseSubmitRequest(BaseModel):
+    """Request body for POST /content/exercise/submit."""
+
+    chapter_slug: str
+    lesson_slug: str
+    evidence: dict[str, Any]
+    feedback: str | None = Field(default=None, max_length=500)
+
+
+class ExerciseSubmitResponse(BaseModel):
+    """Response for POST /content/exercise/submit."""
+
+    submitted: bool = False
+    already_submitted: bool = False
+    xp_earned: int = 0
+    total_xp: int = 0
+    scores: dict[str, Any] | None = None
+    streak: dict[str, int] | None = None
+
+
 class ProgressResponse(BaseModel):
     """Response for GET /progress — passthrough from progress-api."""
 

@@ -113,3 +113,7 @@ Part 0 has trained you in ten thinking skills that AI amplifies but cannot repla
 The difference between a developer who builds AI agents and a thinker who builds AI agents is everything you have practiced in these ten chapters. You are not starting Part 1 as a blank slate. You are starting it with a documented record of your cognitive strengths, a clear map of your remaining gaps, and a set of tools -- prediction locks, reasoning receipts, cascade maps, assumption autopsies, reversal triggers -- that no AI tool can provide for you.
 
 > _Part 0 is about how to teach humans to thrive in the future. The rest of the book is how to build the future. Now turn the page and start building._
+
+## Flashcards Study Aid
+
+<Flashcards />

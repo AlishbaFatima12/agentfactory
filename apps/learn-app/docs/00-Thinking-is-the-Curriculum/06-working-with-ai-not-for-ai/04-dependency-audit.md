@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Cross-Tool Arbitration"
 description: "Ask two AI tools the same strategic question, act as arbitrator between their disagreements, and synthesize a superior third option -- building the cross-tool judgment skill"
 keywords:
@@ -91,31 +92,60 @@ Ask Claude and ChatGPT the same strategic question and receive two different rec
 The two AI recommendations side by side. Your Arbitration Brief containing: the key differences between the two recommendations, your evaluation of each (strengths and weaknesses), your verdict (which is stronger overall and why), and your synthesized third option that takes the best elements of each plus your own additions. A clear attribution for each element of your third option.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="dependency-audit" xp={50}>
+
 I asked two AI tools the same strategic question and received different
 recommendations. I then acted as arbitrator and created a synthesized third
 option. Please:
 
 (1) Rate my evaluation of each AI recommendation -- did I correctly identify
-    the strengths and weaknesses of each?
+the strengths and weaknesses of each?
 (2) Is my synthesized third option genuinely better than both originals, or did
-    I dilute the best elements by combining them?
+I dilute the best elements by combining them?
 (3) What elements of my synthesis came from genuine human judgment vs. simple
-    averaging of the two AI positions?
+averaging of the two AI positions?
 (4) Did I miss any opportunities to improve beyond what either AI suggested?
 (5) Rate my arbitration skill from Beginner / Developing / Proficient / Advanced.
 (6) What strategies should I use in the future when AI tools disagree?
 
-Question: [paste].
-Claude's recommendation: [paste].
-ChatGPT's recommendation: [paste].
-My Arbitration Brief: [paste].
+Question:
+
+<AICheckField
+  name="question"
+  placeholder="Paste your strategic question here..."
+  rows={2}
+/>
+
+Claude's recommendation:
+
+<AICheckField
+  name="claude_recommendation"
+  placeholder="Paste Claude's recommendation here..."
+  rows={6}
+/>
+
+ChatGPT's recommendation:
+
+<AICheckField
+  name="chatgpt_recommendation"
+  placeholder="Paste ChatGPT's recommendation here..."
+  rows={6}
+/>
+
+My Arbitration Brief:
+
+<AICheckField
+  name="arbitration_brief"
+  placeholder="Paste your Arbitration Brief here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
@@ -139,3 +169,7 @@ An AI Collaboration Portfolio containing: (1) the three-path comparison with ana
 | AI feedback integration                                                  |  15%   | Quality of reflection on AI feedback; evidence of incorporating feedback into future approach       |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

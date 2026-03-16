@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+aicheck: true
 title: "The Information Drop"
 description: "Receive contradictory new information mid-exercise and revise your decision under a strict 20-minute time limit, testing whether you anchor, overreact, or update proportionally"
 keywords:
@@ -104,37 +105,77 @@ If you are working alone, generate your own contradictory information by prompti
 Your revised Decision Document (Draft 3) showing your response to the new information. A Process Document answering: Did the new information trigger your Reversal Trigger? Did you update proportionally (not overreact)? Did you integrate the new information with your existing analysis or start from scratch? A Calibration Check comparing your original confidence level, your post-consultation confidence level, and your post-drop confidence level.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="information-drop" xp={50}>
+
 I made a decision under uncertainty, consulted AI, then received new
 contradictory information. I had 20 minutes to revise. Below is my
 complete decision trail: original -> post-consultation ->
 post-information-drop. Please:
 
 (1) Rate my adaptation: did I respond appropriately to the new
-    information?
+information?
 (2) Did I overreact (completely abandon my position), underreact (ignore
-    relevant evidence), or adapt proportionally?
+relevant evidence), or adapt proportionally?
 (3) Was my confidence calibration appropriate at each stage?
 (4) Did I anchor to my initial decision (bad) or revise based on evidence
-    (good)?
+(good)?
 (5) Rate my overall decision-making under uncertainty across all three
-    stages from Beginner / Developing / Proficient / Advanced, with
-    specific feedback.
+stages from Beginner / Developing / Proficient / Advanced, with
+specific feedback.
 
-Original decision: [paste].
-Post-consultation decision: [paste].
-New information: [paste].
-Post-drop decision: [paste].
-Process document: [paste].
+Original decision:
+
+<AICheckField
+  name="original_decision"
+  placeholder="Paste your original Decision Document here..."
+  rows={6}
+/>
+
+Post-consultation decision:
+
+<AICheckField
+  name="post_consultation_decision"
+  placeholder="Paste your post-consultation decision here..."
+  rows={6}
+/>
+
+New information:
+
+<AICheckField
+  name="new_information"
+  placeholder="Paste the new contradictory information here..."
+  rows={4}
+/>
+
+Post-drop decision:
+
+<AICheckField
+  name="post_drop_decision"
+  placeholder="Paste your post-drop revised decision here..."
+  rows={6}
+/>
+
+Process document:
+
+<AICheckField
+  name="process_document"
+  placeholder="Paste your Process Document here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn how you respond to information that contradicts your position. Most people either anchor (refuse to change) or overreact (abandon everything). The AI analysis reveals your specific pattern and teaches you to update proportionally — changing exactly as much as the evidence warrants.
+
+## Flashcards Study Aid
+
+<Flashcards />

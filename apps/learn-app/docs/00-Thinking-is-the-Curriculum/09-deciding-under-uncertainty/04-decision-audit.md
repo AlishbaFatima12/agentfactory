@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "The Decision Audit"
 description: "Conduct a full retrospective audit of your decision process across all four exercises, assess your calibration accuracy and heuristics, then use AI to check your self-assessment"
 keywords:
@@ -99,30 +100,45 @@ After all information is revealed, conduct a full retrospective audit of your de
 A Decision Audit (300-400 words, written without AI) analyzing: your calibration accuracy at each stage, the heuristics you relied on (and whether they helped or hurt), and your specific recommendations to yourself for improving your next decision under uncertainty. After completing the self-audit, include an AI assessment of your self-assessment.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="decision-audit" xp={50}>
+
 I completed an entire decision-making-under-uncertainty exercise across
 four stages and then wrote a self-audit of my process. Please:
 
 (1) Is my self-assessment accurate? Am I being too hard or too easy on
-    myself?
+myself?
 (2) Did I correctly identify my calibration strengths and weaknesses?
 (3) Are the heuristics I identified actually the ones I used, or am I
-    post-hoc rationalizing?
+post-hoc rationalizing?
 (4) Are my improvement recommendations specific and actionable, or vague?
 (5) Based on everything I submitted across this entire chapter, what is
-    the single most important improvement I should make to my
-    decision-making process?
+the single most important improvement I should make to my
+decision-making process?
 (6) Rate my meta-cognitive accuracy -- how well do I understand my own
-    decision-making patterns? (1-10).
+decision-making patterns? (1-10).
 
-My complete decision trail (all stages): [paste].
-My self-audit: [paste].
+My complete decision trail (all stages):
+
+<AICheckField
+  name="complete_decision_trail"
+  placeholder="Paste your complete decision trail from all stages here..."
+  rows={6}
+/>
+
+My self-audit:
+
+<AICheckField
+  name="self_audit"
+  placeholder="Paste your self-audit here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
@@ -147,3 +163,7 @@ A **Decision-Making Portfolio** containing: (1) the sealed initial Decision Docu
 | AI feedback integration                                       |  10%   | Did the student engage seriously with AI feedback across all exercises?                                      |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

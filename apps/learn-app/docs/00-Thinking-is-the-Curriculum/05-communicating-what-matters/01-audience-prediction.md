@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Audience Prediction"
 description: "Predict what three different stakeholders care about before asking AI to write for them, revealing the human judgment layer that separates communication from writing"
 keywords:
@@ -126,32 +127,58 @@ Choose one. The exercises work identically regardless of which you pick.
 Three audience profiles (written without AI) each containing: the stakeholder's priorities, their predicted objection, and the persuasion strategy you would use. Three AI-generated persuasive briefs (one per audience). A comparison document showing: where AI's audience model matched yours, where it differed, and where you believe your audience reading was more accurate than AI's (with reasoning).
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="audience-prediction" xp={50}>
+
 I predicted three audience profiles for a technical decision, then had AI
 generate persuasive briefs for each. Please:
 
 (1) Rate my audience profiles -- did I correctly identify what each stakeholder
-    (skeptical CTO, cost-conscious CFO, non-technical CEO) cares about?
+(skeptical CTO, cost-conscious CFO, non-technical CEO) cares about?
 (2) Rate my predicted objections -- are these realistic? Did I miss any likely
-    objections?
+objections?
 (3) Compare my persuasion strategy vs. the AI-generated brief for each
-    audience -- which approach would actually be more effective and why?
+audience -- which approach would actually be more effective and why?
 (4) Identify where my human audience reading adds value that AI missed
-    (e.g., political dynamics, emotional undercurrents, organizational history).
+(e.g., political dynamics, emotional undercurrents, organizational history).
 (5) Give me specific feedback on improving my weakest audience profile.
 
-Decision: [paste].
-My audience profiles: [paste].
-AI-generated briefs: [paste].
+Decision:
+
+<AICheckField
+  name="decision"
+  placeholder="Paste your chosen decision/scenario here..."
+  rows={2}
+/>
+
+My audience profiles:
+
+<AICheckField
+  name="audience_profiles"
+  placeholder="Paste your three audience profiles here..."
+  rows={6}
+/>
+
+AI-generated briefs:
+
+<AICheckField
+  name="ai_generated_briefs"
+  placeholder="Paste the AI-generated briefs here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that effective communication starts with audience modeling, not with writing. AI writes competent briefs but often misses the political, emotional, and cultural dimensions that determine whether a message actually lands. Your audience predictions, even when imperfect, train the skill that makes every future communication more effective.
+
+## Flashcards Study Aid
+
+<Flashcards />

@@ -106,24 +106,50 @@ def sample_github_tree_response():
             {"path": "apps/learn-app/docs/01-Foundations/01-intro", "type": "tree"},
             # Sectioned part: _category_.json signals section folders
             {
-                "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/_category_.json",
+                "path": (
+                    "apps/learn-app/docs"
+                    "/03-Business-Domain-Agent-Workflows"
+                    "/01-foundations/_category_.json"
+                ),
                 "type": "blob",
             },
             {
-                "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/14-enterprise-agentic-landscape/01-origin-story.md",
+                "path": (
+                    "apps/learn-app/docs"
+                    "/03-Business-Domain-Agent-Workflows"
+                    "/01-foundations"
+                    "/14-enterprise-agentic-landscape"
+                    "/01-origin-story.md"
+                ),
                 "type": "blob",
             },
             {
-                "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/14-enterprise-agentic-landscape/02-building-blocks.md",
+                "path": (
+                    "apps/learn-app/docs"
+                    "/03-Business-Domain-Agent-Workflows"
+                    "/01-foundations"
+                    "/14-enterprise-agentic-landscape"
+                    "/02-building-blocks.md"
+                ),
                 "type": "blob",
             },
             {
-                "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/15-enterprise-agent-blueprint/01-cowork-plugin.md",
+                "path": (
+                    "apps/learn-app/docs"
+                    "/03-Business-Domain-Agent-Workflows"
+                    "/01-foundations"
+                    "/15-enterprise-agent-blueprint"
+                    "/01-cowork-plugin.md"
+                ),
                 "type": "blob",
             },
             # Section-level files (must NOT create phantom chapters)
             {
-                "path": "apps/learn-app/docs/03-Business-Domain-Agent-Workflows/01-foundations/README.md",
+                "path": (
+                    "apps/learn-app/docs"
+                    "/03-Business-Domain-Agent-Workflows"
+                    "/01-foundations/README.md"
+                ),
                 "type": "blob",
             },
         ],

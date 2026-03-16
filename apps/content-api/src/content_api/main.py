@@ -11,11 +11,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from api_infra.core.rate_limit import rate_limit  # noqa: E402
-from api_infra.core.redis_cache import get_redis  # noqa: E402
 from fastapi import FastAPI, HTTPException, Request, Response  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
 from pydantic import BaseModel  # noqa: E402
+
+from api_infra.core.rate_limit import rate_limit  # noqa: E402
+from api_infra.core.redis_cache import get_redis  # noqa: E402
 
 from .config import settings  # noqa: E402
 from .core.lifespan import lifespan  # noqa: E402
@@ -114,7 +115,10 @@ async def invalidate_cache(
                         invalidated.extend([k for k in keys])
                     if cursor == 0:
                         break
-                logger.info("[Cache] Invalidated path: %s by %s", path, request.client.host if request.client else "unknown")
+                requester = request.client.host if request.client else "unknown"
+                logger.info(
+                    "[Cache] Invalidated path: %s by %s", path, requester
+                )
         else:
             # Invalidate book tree and all content
             await redis_client.delete("book_tree:v1")
@@ -127,7 +131,12 @@ async def invalidate_cache(
                     invalidated.extend([k for k in keys])
                 if cursor == 0:
                     break
-            logger.info("[Cache] Invalidated %d keys by %s", len(invalidated), request.client.host if request.client else "unknown")
+            requester = request.client.host if request.client else "unknown"
+            logger.info(
+                "[Cache] Invalidated %d keys by %s",
+                len(invalidated),
+                requester,
+            )
 
         return {
             "status": "ok",

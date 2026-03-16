@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+aicheck: true
 title: "The Divergence Test"
 description: "When everyone has the same AI tools, produce an original analysis that demonstrates independent thinking beyond generic AI output"
 keywords:
@@ -86,34 +87,60 @@ The entire class receives the identical scenario and identical AI access. Each s
 Your final analysis of the business scenario (500-800 words) and a complete reasoning receipt documenting every prompt sent, every AI response received, and every accept/reject/modify decision with justification. Additionally, a brief "uniqueness statement" (100 words) explaining what in your analysis reflects your own thinking rather than a generic AI output.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="divergence-test" xp={50}>
+
 I am a student in a class where everyone received the same business scenario
 and access to the same AI tools. Below is my analysis. Please:
 
 (1) Rate the originality of my analysis from 1-10 -- how much does this read
-    like something you would generate if prompted directly vs. something that
-    shows independent human thinking?
+like something you would generate if prompted directly vs. something that
+shows independent human thinking?
 (2) Identify the 2-3 most original insights in my analysis -- ideas that go
-    beyond what a standard AI response would produce.
+beyond what a standard AI response would produce.
 (3) Identify any sections that read like generic AI output -- where I likely
-    accepted AI's answer without adding my own thinking.
+accepted AI's answer without adding my own thinking.
 (4) Suggest how I could have pushed further beyond the AI's analysis in the
-    weaker sections.
+weaker sections.
 (5) Grade my reasoning receipt: does it show genuine critical engagement or
-    passive acceptance?
+passive acceptance?
 
-Scenario: [paste scenario].
-My analysis: [paste].
-My reasoning receipt: [paste].
+Scenario:
+
+<AICheckField
+  name="scenario"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
+
+My analysis:
+
+<AICheckField
+  name="analysis"
+  placeholder="Paste your analysis here..."
+  rows={6}
+/>
+
+My reasoning receipt:
+
+<AICheckField
+  name="reasoning_receipt"
+  placeholder="Paste your reasoning receipt here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that when everyone has the same AI tools, the only differentiator is your thinking. The divergence test reveals whether you used AI as a thinking partner or as an answer machine. The AI grading of your own originality is a mirror — it shows you honestly where your work added value and where it was just AI pass-through.
+
+## Flashcards Study Aid
+
+<Flashcards />

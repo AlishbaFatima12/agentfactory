@@ -29,6 +29,7 @@ import { getOAuthAuthorizationUrl } from "@/lib/auth-client";
 import { useVoiceReading } from "@/contexts/VoiceReadingContext";
 import { VoiceControlDock } from "@/components/VoiceControlDock";
 import LessonCompleteButton from "@/components/progress/LessonCompleteButton";
+import SubmissionDialog from "@/theme/SubmissionDialog";
 import { usePracticeServer } from "@/components/TerminalPanel/usePracticeServer";
 import { PracticeContext } from "@/contexts/PracticeContext";
 import { PracticeSetupCard } from "@/components/PracticeSetupCard";
@@ -686,6 +687,26 @@ export default function ContentWrapper(props: Props): React.ReactElement {
     frontMatter?.learning_objectives != null &&
     (frontMatter.learning_objectives as unknown[]).length > 0;
 
+  // Submission frontmatter — when present, replaces LessonCompleteButton
+  const submissionConfig = (
+    doc as {
+      frontMatter?: {
+        submission?: {
+          type: string;
+          accept: string[];
+          providers: string[];
+          default_provider: string;
+          xp_bonus: number;
+        };
+      };
+    }
+  ).frontMatter?.submission;
+
+  // AICheck frontmatter — when true, the inline AICheck component handles
+  // submission + lesson completion. No bottom button needed.
+  const hasAICheck = !!(doc as { frontMatter?: { aicheck?: boolean } })
+    .frontMatter?.aicheck;
+
   // Practice terminal state (gated by feature flag)
   const practiceEnabled = siteConfig.customFields?.practiceEnabled as
     | boolean
@@ -809,16 +830,25 @@ export default function ContentWrapper(props: Props): React.ReactElement {
         )}
         {isLoggedIn && <CompletenessBanner hideDuringOnboarding />}
         <Content {...props} />
-        {isLeafPage &&
-          isLoggedIn &&
+        {isLoggedIn &&
           hasValidSlug &&
           !isQuizPage &&
-          !isCategoryIndex && (
-            <LessonCompleteButton
+          !isCategoryIndex &&
+          !hasAICheck &&
+          (submissionConfig ? (
+            <SubmissionDialog
               chapterSlug={chapterSlug}
               lessonSlug={lessonSlug}
+              submission={submissionConfig}
             />
-          )}
+          ) : (
+            isLeafPage && (
+              <LessonCompleteButton
+                chapterSlug={chapterSlug}
+                lessonSlug={lessonSlug}
+              />
+            )
+          ))}
         {practiceOpen && practiceExerciseId && (
           <PracticeOverlay
             exerciseId={practiceExerciseId}
@@ -929,16 +959,25 @@ export default function ContentWrapper(props: Props): React.ReactElement {
       <LessonContent summaryElement={summaryElement}>
         <Content {...props} />
       </LessonContent>
-      {isLeafPage &&
-        isLoggedIn &&
+      {isLoggedIn &&
         hasValidSlug &&
         !isQuizPage &&
-        !isCategoryIndex && (
-          <LessonCompleteButton
+        !isCategoryIndex &&
+        !hasAICheck &&
+        (submissionConfig ? (
+          <SubmissionDialog
             chapterSlug={chapterSlug}
             lessonSlug={lessonSlug}
+            submission={submissionConfig}
           />
-        )}
+        ) : (
+          isLeafPage && (
+            <LessonCompleteButton
+              chapterSlug={chapterSlug}
+              lessonSlug={lessonSlug}
+            />
+          )
+        ))}
       {practiceOpen && practiceExerciseId && (
         <PracticeOverlay
           exerciseId={practiceExerciseId}

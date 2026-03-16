@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "The Contradiction Test"
 description: "When two AI tools give contradictory answers, identify the divergence points, evaluate the evidence, and build a more rigorous third analysis through three iterative drafts"
 keywords:
@@ -90,36 +91,76 @@ Ask both Claude and ChatGPT the same nuanced question where reasonable people di
 The two AI responses with divergence points highlighted and annotated ("Claude claims X, ChatGPT claims Y — the evidence favors..."). Your Draft 1 third analysis (written before AI feedback). Your Draft 2 (revised after AI critique). Your Draft 3 (final, after reflection). A brief evolution note for each draft explaining what changed and why.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="contradiction-test" xp={50}>
+
 I am learning to detect contradictions between AI outputs and build a more
 rigorous analysis. I asked two AI tools the same question and received
 contradictory responses. I then wrote my own analysis attempting to be more
 rigorous than either. Please:
 
 (1) Evaluate my identification of divergence points -- did I catch all the
-    meaningful contradictions between the two AI responses?
+meaningful contradictions between the two AI responses?
 (2) Rate my evidence assessment -- for each divergence point, did I
-    correctly identify which side had stronger evidence?
+correctly identify which side had stronger evidence?
 (3) Grade my third analysis on a scale of 1-10 for rigor, originality, and
-    evidence quality compared to the two AI responses.
+evidence quality compared to the two AI responses.
 (4) Identify the 3 weakest claims in my analysis and explain exactly what
-    would make them stronger.
+would make them stronger.
 (5) What did both AI tools get wrong that I also missed?
 
-Question: [paste question].
-AI Response 1: [paste].
-AI Response 2: [paste].
-My divergence annotations: [paste].
-My analysis (Draft 1): [paste].
+Question:
+
+<AICheckField
+  name="question"
+  placeholder="Paste your question here..."
+  rows={2}
+/>
+
+AI Response 1:
+
+<AICheckField
+  name="ai_response_1"
+  placeholder="Paste AI response 1 here..."
+  rows={6}
+/>
+
+AI Response 2:
+
+<AICheckField
+  name="ai_response_2"
+  placeholder="Paste AI response 2 here..."
+  rows={6}
+/>
+
+My divergence annotations:
+
+<AICheckField
+  name="divergence_annotations"
+  placeholder="Paste your divergence annotations here..."
+  rows={6}
+/>
+
+My analysis (Draft 1):
+
+<AICheckField
+  name="analysis_draft_1"
+  placeholder="Paste your analysis (Draft 1) here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that when two confident AI responses disagree, the disagreement is a signal to think harder, not a reason to pick one randomly. Building a third analysis that improves on both forces you into genuine thinking. The three-draft evolution reveals whether you can integrate feedback and improve — or whether you stop thinking after the first attempt.
+
+## Flashcards Study Aid
+
+<Flashcards />
