@@ -4,6 +4,7 @@ from datetime import datetime
 from typing import Any
 
 import sqlalchemy as sa
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlmodel import Column, DateTime, Field, SQLModel, text
 
 
@@ -24,8 +25,8 @@ class ExerciseSubmission(SQLModel, table=True):
     user_id: str = Field(foreign_key="users.id")
     chapter_slug: str
     lesson_slug: str
-    evidence: dict[str, Any] = Field(sa_column=Column(sa.JSON, nullable=False))
-    scores: dict[str, Any] | None = Field(sa_column=Column(sa.JSON, nullable=True), default=None)
+    evidence: dict[str, Any] = Field(sa_column=Column(JSONB, nullable=False))
+    scores: dict[str, Any] | None = Field(sa_column=Column(JSONB, nullable=True), default=None)
     feedback: str | None = None
     evidence_hash: str
     xp_earned: int = Field(default=50)

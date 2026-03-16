@@ -5,6 +5,7 @@ import logging
 from typing import Any
 
 import httpx
+from fastapi import HTTPException
 
 from ..config import settings
 
@@ -105,15 +106,12 @@ class ProgressClient:
                     error_body = response.json()
                 except Exception:
                     error_body = {"detail": response.text}
-                from fastapi import HTTPException
                 raise HTTPException(status_code=response.status_code, detail=error_body)
         except httpx.TimeoutException as e:
             logger.error("[Progress] Exercise submit timeout: %s", type(e).__name__)
-            from fastapi import HTTPException
             raise HTTPException(status_code=503, detail="Progress API timeout")
         except httpx.HTTPError as e:
             logger.error("[Progress] Exercise submit failed: %s: %s", type(e).__name__, e)
-            from fastapi import HTTPException
             raise HTTPException(status_code=503, detail="Progress API unavailable")
 
     async def get_progress(

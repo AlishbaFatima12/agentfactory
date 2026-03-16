@@ -103,7 +103,10 @@ class ExerciseIntentRequest(BaseModel):
     @classmethod
     def limit_fields(cls, v: dict[str, str]) -> dict[str, str]:
         if len(v) > MAX_INTENT_FIELDS:
-            raise ValueError(f"Maximum {MAX_INTENT_FIELDS} fields allowed")
+            raise ValueError(f"Max {MAX_INTENT_FIELDS} fields")
+        for key in v:
+            if len(key) > 100:
+                raise ValueError("Field name max 100 chars")
         return v
 
 

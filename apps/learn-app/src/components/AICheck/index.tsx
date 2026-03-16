@@ -419,6 +419,10 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
             `Prompt copied to clipboard -- paste into ${PROVIDER_LABELS[provider] || provider}`,
           );
           setTimeout(() => setToast(null), 3000);
+        }).catch(() => {
+          // Clipboard API unavailable (non-HTTPS or unsupported browser)
+          setToast("Prompt is too long for URL -- copy it manually from above");
+          setTimeout(() => setToast(null), 5000);
         });
       }
 
