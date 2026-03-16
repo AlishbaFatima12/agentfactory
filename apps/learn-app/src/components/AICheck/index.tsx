@@ -167,6 +167,24 @@ function clearAllStorage(id: string): void {
   safeRemove(storageKey(id, "__state"));
 }
 
+function saveResult(id: string, result: ExerciseSubmitResponse): void {
+  try {
+    safeSet(storageKey(id, "__result"), JSON.stringify(result));
+  } catch {
+    // Ignore
+  }
+}
+
+function loadCachedResult(id: string): ExerciseSubmitResponse | null {
+  const raw = safeGet(storageKey(id, "__result"));
+  if (!raw) return null;
+  try {
+    return JSON.parse(raw) as ExerciseSubmitResponse;
+  } catch {
+    return null;
+  }
+}
+
 // ── Prompt Composition ──
 
 function composePrompt(
@@ -295,7 +313,9 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
     );
     return hasAnyContent ? "filling" : "idle";
   });
-  const [response, setResponse] = useState<ExerciseSubmitResponse | null>(null);
+  const [response, setResponse] = useState<ExerciseSubmitResponse | null>(() =>
+    alreadyCompleted ? loadCachedResult(id) : null,
+  );
   const [errorMessage, setErrorMessage] = useState("");
   const [toast, setToast] = useState<string | null>(null);
   const [step1Expanded, setStep1Expanded] = useState(true);
@@ -438,6 +458,7 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
       setResponse(result);
       setState("submitted");
       clearAllStorage(id);
+      saveResult(id, result);
       refreshProgress();
     } catch (err) {
       if (err instanceof ExerciseSubmitError) {
@@ -510,34 +531,9 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
     state === "submitting" ||
     state === "error";
 
-  // ── Already Submitted (static display + expandable prompt) ──
-  if (state === "submitted" && !response) {
-    return (
-      <div
-        className={styles.aicheckCard}
-        role="region"
-        aria-label={`AI Check Exercise: ${id}`}
-      >
-        <div className={styles.submittedCard}>
-          <div className={styles.submittedHeader}>
-            <CheckCircle2 className={styles.checkIcon} />
-            <div className={styles.submittedMeta}>
-              <span className={styles.submittedTitle}>Exercise Submitted</span>
-            </div>
-          </div>
-        </div>
-        <details className={styles.submittedDetails}>
-          <summary className={styles.submittedDetailsSummary}>
-            View exercise prompt
-          </summary>
-          <div className={styles.promptBody}>{children}</div>
-        </details>
-      </div>
-    );
-  }
-
-  // ── Submitted with Score Card ──
-  if (state === "submitted" && response) {
+  // ── Submitted State (fresh or returning visit) ──
+  if (state === "submitted") {
+    const isReturning = !response?.xp_earned;
     return (
       <div
         className={styles.aicheckCard}
@@ -546,36 +542,31 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
       >
         <motion.div
           className={styles.submittedCard}
-          initial={{ opacity: 0, scale: 0.96 }}
+          initial={isReturning ? false : { opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={motionSpring}
           ref={scoreCardRef}
           tabIndex={-1}
         >
           <div className={styles.submittedHeader}>
-            <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={
-                prefersReducedMotion
-                  ? { duration: 0 }
-                  : { ...spring, stiffness: 300 }
-              }
-            >
+            {isReturning ? (
               <CheckCircle2 className={styles.checkIcon} />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: -12 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={
-                prefersReducedMotion
-                  ? { duration: 0 }
-                  : { delay: 0.15, ...spring }
-              }
-              className={styles.submittedMeta}
-            >
+            ) : (
+              <motion.div
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={
+                  prefersReducedMotion
+                    ? { duration: 0 }
+                    : { ...spring, stiffness: 300 }
+                }
+              >
+                <CheckCircle2 className={styles.checkIcon} />
+              </motion.div>
+            )}
+            <div className={styles.submittedMeta}>
               <span className={styles.submittedTitle}>Exercise Submitted</span>
-              {response.xp_earned ? (
+              {response?.xp_earned ? (
                 <motion.span
                   className={styles.xpEarned}
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -589,25 +580,21 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
                   +{response.xp_earned} XP
                 </motion.span>
               ) : null}
-            </motion.div>
+            </div>
           </div>
-          {response.scores && (
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={
-                prefersReducedMotion
-                  ? { duration: 0 }
-                  : { delay: 0.25, ...spring }
-              }
-            >
-              <ScoreCardDisplay
-                scores={response.scores}
-                prefersReducedMotion={prefersReducedMotion}
-              />
-            </motion.div>
+          {response?.scores && (
+            <ScoreCardDisplay
+              scores={response.scores}
+              prefersReducedMotion={isReturning || prefersReducedMotion}
+            />
           )}
         </motion.div>
+        <details className={styles.submittedDetails}>
+          <summary className={styles.submittedDetailsSummary}>
+            View exercise prompt
+          </summary>
+          <div className={styles.promptBody}>{children}</div>
+        </details>
       </div>
     );
   }
