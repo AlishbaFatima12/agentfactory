@@ -825,8 +825,7 @@ export default function ContentWrapper(props: Props): React.ReactElement {
         )}
         {isLoggedIn && <CompletenessBanner hideDuringOnboarding />}
         <Content {...props} />
-        {isLeafPage &&
-          isLoggedIn &&
+        {isLoggedIn &&
           hasValidSlug &&
           !isQuizPage &&
           !isCategoryIndex &&
@@ -837,10 +836,12 @@ export default function ContentWrapper(props: Props): React.ReactElement {
               submission={submissionConfig}
             />
           ) : (
-            <LessonCompleteButton
-              chapterSlug={chapterSlug}
-              lessonSlug={lessonSlug}
-            />
+            isLeafPage && (
+              <LessonCompleteButton
+                chapterSlug={chapterSlug}
+                lessonSlug={lessonSlug}
+              />
+            )
           ))}
         {practiceOpen && practiceExerciseId && (
           <PracticeOverlay

@@ -9,6 +9,11 @@
 @import "tailwindcss";
 @plugin "tailwindcss-animate";
 
+/* Prevent layout shift when dialogs open (scrollbar removal) */
+html {
+  scrollbar-gutter: stable;
+}
+
 /* Docusaurus Dark Mode Integration */
 @custom-variant dark (&:is([data-theme='dark'] *));
 
