@@ -252,14 +252,27 @@ When finished, message the team lead: 'CONTENT CH6-10 DONE — [file count]'"
    - Phase 3 tasks (both content): depend on Phase 2
 3. Spawn designer FIRST. Review and approve plan.
 4. After designer, spawn frontend. Wait for FRONTEND DONE.
-5. Convert ONE file yourself as reference for content team (01-prediction-lock.md)
-6. After frontend + reference done, spawn both content teammates
-7. After all done, run verification:
-   - Build: pnpm nx build learn-app
-   - Count: grep -r 'AICheck' docs/00-Thinking/ --include="*.md" -l | wc -l (should be 41)
-   - No old components: grep -r 'ExercisePrompt' docs/00-Thinking/ --include="*.md" -l | wc -l (should be 0)
-   - Test live: serve learn-app, open a lesson, verify AICheck renders
-8. Commit and push
+5. Have the frontend teammate also convert 01-prediction-lock.md as the
+   reference file (part of their deliverables — no lead code writing).
+6. After frontend done, spawn both content teammates simultaneously.
+7. After ALL teammates done, run FULL end-to-end verification:
+   a. Start all 3 services:
+      - pnpm nx serve sso (port 3001)
+      - uv run uvicorn progress_api.main:app --port 8002 (in apps/progress-api)
+      - pnpm nx serve learn-app (port 3000)
+   b. Open browser and navigate to a Part 0 exercise lesson
+   c. Verify AICheck component renders inline (not a dialog)
+   d. Fill in fields, click a provider button, verify it opens new tab
+   e. Paste test AI response with Score Card scores
+   f. Click Submit — verify XP awarded, score bars animate
+   g. Verify returned visit shows "Submitted" state
+   h. Check a NON-Part-0 lesson still has "Mark as Complete" (no AICheck)
+   i. Count files: grep -r 'AICheck' docs/00-Thinking/ --include="*.md" -l | wc -l (should be 41)
+   j. No old components: grep -r 'ExercisePrompt' docs/00-Thinking/ --include="*.md" -l | wc -l (should be 0)
+   k. Keep iterating on UX issues — fix what doesn't feel right
+   l. When satisfied, ask the user to test and share feedback
+8. Commit and push only after live verification passes
+9. Do NOT run pnpm nx build — test live with dev server instead
 
 ## Model Preferences
 
@@ -271,7 +284,7 @@ When finished, message the team lead: 'CONTENT CH6-10 DONE — [file count]'"
 ## Anti-Patterns to Avoid
 
 - Do NOT use the Agent tool or spawn subagents — this is a TEAM
-- Do NOT write code yourself (except the ONE reference file conversion)
+- Do NOT write code yourself — delegate everything to teammates
 - Do NOT spawn content teammates before frontend is done and verified
 - Do NOT keep SubmissionDialog as primary — it's FALLBACK only
 - Do NOT break the existing submission API — backend is unchanged
