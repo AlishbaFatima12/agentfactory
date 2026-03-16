@@ -38,6 +38,8 @@ interface AICheckProps {
 
 const STORAGE_PREFIX = "aicheck";
 const DEBOUNCE_MS = 500;
+const MIN_AI_OUTPUT_LENGTH = 50;
+const MAX_AI_OUTPUT_LENGTH = 25000;
 
 const PROVIDER_LABELS: Record<string, string> = {
   chatgpt: "ChatGPT",
@@ -336,7 +338,9 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
     return Array.from(fieldValues.values()).every((v) => v.trim().length > 0);
   }, [fieldValues]);
 
-  const canSubmit = aiOutput.trim().length >= 50 && aiOutput.length <= 25000;
+  const canSubmit =
+    aiOutput.trim().length >= MIN_AI_OUTPUT_LENGTH &&
+    aiOutput.length <= MAX_AI_OUTPUT_LENGTH;
 
   // ── Persistence (debounced) ──
   useEffect(() => {
@@ -526,6 +530,7 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
     }
   }, [
     canSubmit,
+    isLoggedIn,
     children,
     fieldValues,
     progressApiUrl,
@@ -822,12 +827,12 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
                 placeholder="Paste the AI's complete response here..."
                 disabled={state === "submitting"}
                 aria-label="Paste the AI's complete evaluation response"
-                maxLength={25000}
+                maxLength={MAX_AI_OUTPUT_LENGTH}
               />
-              <CharCount current={aiOutput.length} max={25000} />
-              {aiOutput.length > 0 && aiOutput.trim().length < 50 && (
+              <CharCount current={aiOutput.length} max={MAX_AI_OUTPUT_LENGTH} />
+              {aiOutput.length > 0 && aiOutput.trim().length < MIN_AI_OUTPUT_LENGTH && (
                 <span className={styles.charHint}>
-                  Paste at least 50 characters to submit
+                  Paste at least {MIN_AI_OUTPUT_LENGTH} characters to submit
                 </span>
               )}
             </div>

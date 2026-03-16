@@ -71,7 +71,7 @@ async def exercise_submit(
 
     Processes score extraction, dedup checking, XP award,
     and marks the lesson as complete.
-    Rate limited to 10 submissions per minute per user.
+    Rate limited to 10 submissions per 5 minutes per user.
     """
     await _check_rate_limit(user.id)
     result = await submit_exercise(session, user, request)
@@ -104,9 +104,11 @@ class ExerciseIntentRequest(BaseModel):
     def limit_fields(cls, v: dict[str, str]) -> dict[str, str]:
         if len(v) > MAX_INTENT_FIELDS:
             raise ValueError(f"Max {MAX_INTENT_FIELDS} fields")
-        for key in v:
+        for key, val in v.items():
             if len(key) > 100:
                 raise ValueError("Field name max 100 chars")
+            if len(val) > MAX_INTENT_FIELD_VALUE_LEN:
+                raise ValueError(f"Field value max {MAX_INTENT_FIELD_VALUE_LEN} chars")
         return v
 
 

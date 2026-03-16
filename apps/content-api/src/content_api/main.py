@@ -11,11 +11,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from api_infra.core.rate_limit import rate_limit  # noqa: E402
-from api_infra.core.redis_cache import get_redis  # noqa: E402
 from fastapi import FastAPI, HTTPException, Request, Response  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
 from pydantic import BaseModel  # noqa: E402
+
+from api_infra.core.rate_limit import rate_limit  # noqa: E402
+from api_infra.core.redis_cache import get_redis  # noqa: E402
 
 from .config import settings  # noqa: E402
 from .core.lifespan import lifespan  # noqa: E402
