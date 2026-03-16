@@ -37,7 +37,7 @@ Part 4 assumes no programming experience -- you do not need to have written code
 - **Building something with Claude Code** -- directing Claude Code to create a working project → Part 2 projects
 
 :::note If you've never written a line of code
-That is exactly who Phase 1 is designed for. Chapter 31 walks you through every installation step with exact commands and expected output. Chapter 32 teaches you to read Python from scratch -- no prior syntax knowledge required. You will not be asked to write code until you can read it confidently. The course meets you where you are.
+That is exactly who Phase 1 is designed for. Chapter 44 walks you through every installation step with exact commands and expected output. Chapter 45 teaches you to read Python from scratch -- no prior syntax knowledge required. You will not be asked to write code until you can read it confidently. The course meets you where you are.
 :::
 
 ## The New Workflow
@@ -64,7 +64,7 @@ The key insight: you never start from a blank page, and you never accept output 
 :::note If you're new to programming
 Some of these terms may be unfamiliar. Here is what they mean in plain English:
 
-- **Types** are labels that describe what kind of data something is -- text, a whole number, a decimal, true/false. You will learn these in Chapter 32.
+- **Types** are labels that describe what kind of data something is -- text, a whole number, a decimal, true/false. You will learn these in Chapter 45.
 - **A test** is a short piece of code that checks whether another piece of code does what you expect. Think of it as a checklist: "If I give it 100 and 15%, I should get 115."
 - **A failing test** is a test you write _before_ the code exists. It fails because there is nothing to check yet. Then AI writes the code to make it pass. That is the core idea of TDG.
 - **pytest** is the tool that runs your tests automatically and tells you which passed and which failed.
@@ -91,7 +91,7 @@ This is Test-Driven Generation (TDG) -- the method that defines programming in t
 3. You ask AI to write the actual calculation.
 4. You run your checks. If they pass, the calculation is correct. If they fail, you debug and iterate.
 
-That is all TDG is -- describe what you want, write checks, let AI do the math, verify the answer. You will learn the syntax piece by piece starting in Chapter 32. By the time you reach Chapter 33 (Your First TDG Cycle), you will see this cycle in real Python code and every line will make sense.
+That is all TDG is -- describe what you want, write checks, let AI do the math, verify the answer. You will learn the syntax piece by piece starting in Chapter 45. By the time you reach Your First TDG Cycle, you will see this cycle in real Python code and every line will make sense.
 
 &nbsp;
 
@@ -152,7 +152,7 @@ Each phase takes roughly 1-2 weeks at a few hours per day. The full Part 4 is de
 
 | Phase | Title                                              | Your Role         | Chapters |
 | ----- | -------------------------------------------------- | ----------------- | -------- |
-| 1     | [The Workbench](the-workbench)                     | Reader            | Ch 30-33 |
+| 1     | [The Workbench](the-workbench)                     | Reader            | Ch 42-45 |
 | 2     | [Specify with Types](specify-with-types)           | Specifier         | Ch 34-37 |
 | 3     | [Tests as Specification](tests-as-specification)   | Verifier          | Ch 38-41 |
 | 4     | [Debug & Master](debug-and-master)                 | Debugger          | Ch 42-43 |

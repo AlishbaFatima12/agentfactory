@@ -281,15 +281,15 @@ Every code example, exercise, and project in Parts 4–5 must conform to the dis
 {  
   "discipline\_stack": {  
     "tools": {  
-      "uv": {  
-        "purpose": "Project and dependency management",  
-        "introduced\_in": "Chapter 31 (Development Environment)",  
-        "rule": "All projects use uv for virtual environments and dependency management. No pip install in examples."  
+      "uv": {
+        "purpose": "Project and dependency management",
+        "introduced\_in": "Chapter 44 (Development Environment)",
+        "rule": "All projects use uv for virtual environments and dependency management. No pip install in examples."
       },  
-      "ruff": {  
-        "purpose": "Code formatting and linting",  
-        "introduced\_in": "Chapter 31",  
-        "rule": "All code examples must pass ruff check and ruff format. Show ruff output in early chapters."  
+      "ruff": {
+        "purpose": "Code formatting and linting",
+        "introduced\_in": "Chapter 44",
+        "rule": "All code examples must pass ruff check and ruff format. Show ruff output in early chapters."
       },  
       "pyright": {  
         "purpose": "Static type checking",  
@@ -1070,7 +1070,7 @@ This Author’s System Prompt Specification is a companion to:
 
 * **The Personalized Hybrid Programming Model (PHPM): Complete Implementation Specification** — Zia Khan, Panaversity, 2026\. Defines the full PHPM teaching framework, JSON schemas, orchestration algorithms, and teaching agent system prompts.
 
-* **Chapter 30: Learning to Program in the Age of AI** — The AI Agent Factory. Defines the PRIMM-AI+ framework with all 9 enhancements and 4 embedded methods.
+* **Chapter 42: Learning to Program in the Age of AI** — The AI Agent Factory. Defines the PRIMM-AI+ framework with all 9 enhancements and 4 embedded methods.
 
 * **The Personalized Hybrid Model for AI-Led Teaching** — Panaversity, 2026\. Defines the PHM adaptive teaching architecture with 7 approaches and 8-dimensional learner profile.
 
