@@ -20,7 +20,6 @@ set -euo pipefail
 
 # Change to learn-app directory (parent of scripts/)
 cd "$(dirname "$0")/.."
-REPO_ROOT="../.."
 
 # ---------------------------------------------------------------------------
 # lastUpdatedAt is disabled on Vercel (via VERCEL env var check in
@@ -33,7 +32,11 @@ REPO_ROOT="../.."
 # NOTE: Do NOT install packages here — that mutates workspace dependencies
 # during build. Fix the environment/bootstrap setup instead.
 if [ "$(uname -s)" = "Linux" ]; then
-  SHARP_LINUX_DIR=$(find ../../node_modules/.pnpm -maxdepth 1 -name '@img+sharp-linux-x64@*' 2>/dev/null | head -1)
+  if [ -d "../../node_modules/.pnpm" ]; then
+    SHARP_LINUX_DIR=$(find ../../node_modules/.pnpm -maxdepth 1 -name '@img+sharp-linux-x64@*' 2>/dev/null | head -1 || true)
+  else
+    SHARP_LINUX_DIR=""
+  fi
   if [ -z "$SHARP_LINUX_DIR" ]; then
     echo "WARNING: sharp linux-x64 platform binary is missing."
     echo "Image optimization may be slower. To fix:"

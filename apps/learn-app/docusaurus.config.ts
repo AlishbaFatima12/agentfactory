@@ -195,7 +195,7 @@ const config: Config = {
         async: "true",
       },
     },
-    // Google Fonts: Inter (UI/Body), JetBrains Mono (Code)
+    // Google Fonts: Inter (UI/Body), JetBrains Mono (Code), Noto Nastaliq Urdu (RTL)
     {
       tagName: "link",
       attributes: {
@@ -217,7 +217,7 @@ const config: Config = {
       attributes: {
         rel: "preload",
         as: "style",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Nastaliq+Urdu&display=swap",
         crossorigin: "anonymous",
       },
     },
@@ -225,7 +225,7 @@ const config: Config = {
       tagName: "link",
       attributes: {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Nastaliq+Urdu&display=swap",
         media: "print",
         onload: "this.media='all'",
       },
@@ -235,7 +235,7 @@ const config: Config = {
       tagName: "noscript",
       attributes: {},
       innerHTML:
-        '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">',
+        '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Nastaliq+Urdu&display=swap">',
     },
   ],
 
