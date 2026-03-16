@@ -1,0 +1,85 @@
+deck:
+  id: "ch31-11-uk-islamic-banking"
+  title: "UK Islamic Banking — IFRS, PRA/FCA, and HMRC"
+  description: "Key concepts from UK diminishing musharaka home finance, HMRC tax equivalence under Finance Act 2005, SDLT relief, PRA regulatory treatment, and the triple characterisation framework."
+  tags: ["uk-islamic-banking", "diminishing-musharaka", "hmrc", "pra"]
+  version: 1
+
+cards:
+  - id: "ch31-11-uk-islamic-banking-001"
+    front: "UK diminishing musharaka home finance has three simultaneous characterisations. What are they?"
+    back: "Shariah: co-ownership arrangement\nIFRS: financial asset at amortised cost\nHMRC: mortgage-equivalent for tax purposes"
+    tags: ["triple-characterisation", "diminishing-musharaka"]
+    difficulty: "basic"
+
+  - id: "ch31-11-uk-islamic-banking-002"
+    front: "What legislation provides tax equivalence for Islamic finance products in the UK?"
+    back: "Finance Act 2005 (Alternative Finance Arrangements)."
+    tags: ["finance-act-2005", "tax-equivalence"]
+    difficulty: "basic"
+
+  - id: "ch31-11-uk-islamic-banking-003"
+    front: "How does HMRC characterise diminishing musharaka rental payments for corporation tax purposes?"
+    back: "As interest-equivalent. The bank pays corporation tax on rental income as if it were interest income."
+    tags: ["hmrc", "rental-as-interest", "tax"]
+    difficulty: "intermediate"
+
+  - id: "ch31-11-uk-islamic-banking-004"
+    front: "Without SDLT relief, Islamic mortgage customers would pay stamp duty twice. Why would double taxation occur?"
+    back: "The bank purchases the property first (triggering SDLT), then transfers it to the customer at buyout completion (triggering SDLT again). Finance Act 2003 sections 71A-73 ensure SDLT is charged on one transfer only."
+    tags: ["sdlt", "double-taxation", "islamic-mortgage"]
+    difficulty: "intermediate"
+    why: "How would the absence of SDLT relief affect the competitiveness of Islamic mortgages against conventional ones?"
+
+  - id: "ch31-11-uk-islamic-banking-005"
+    front: "Under IFRS 9, how is a UK DM home finance arrangement classified, and what test determines this?"
+    back: "Financial asset at amortised cost. The business model is held-to-collect, and SPPI passes because cash flows represent principal plus a return consistent with a basic lending arrangement."
+    tags: ["ifrs-9", "sppi", "amortised-cost"]
+    difficulty: "intermediate"
+
+  - id: "ch31-11-uk-islamic-banking-006"
+    front: "The accounting label says 'Profit from Home Finance' while HMRC treats the same payment as interest. Why do these characterisations deliberately differ?"
+    back: "The accounting label reflects the product's Shariah-compliant form for financial reporting. The tax characterisation reflects economic equivalence to ensure Islamic products are neither tax-advantaged nor tax-disadvantaged compared to conventional products."
+    tags: ["accounting-vs-tax", "hmrc", "income-labels"]
+    difficulty: "intermediate"
+    why: "In which other jurisdictions do accounting labels and tax characterisations align rather than diverge?"
+
+  - id: "ch31-11-uk-islamic-banking-007"
+    front: "Which is the largest of the UK's five fully-fledged Islamic banks?"
+    back: "Al Rayan Bank."
+    tags: ["al-rayan", "uk-islamic-banks"]
+    difficulty: "basic"
+
+  - id: "ch31-11-uk-islamic-banking-008"
+    front: "Does the PRA grant any regulatory concessions or different capital requirements to UK Islamic banks?"
+    back: "The PRA grants zero concessions. Identical Basel III / UK CRR capital requirements, risk weights, and regulatory returns apply to Islamic and conventional banks alike."
+    tags: ["pra", "basel-iii", "level-playing-field"]
+    difficulty: "intermediate"
+    why: "Would a DM home finance portfolio ever justify a different risk weight because the bank co-owns the property?"
+
+  - id: "ch31-11-uk-islamic-banking-009"
+    front: "Under IFRS 9 amortised cost (EIR method), DM income is front-loaded. Under AAOIFI FAS 4, rental declines linearly. Why does the same facility produce different income profiles?"
+    back: "IFRS 9 applies the effective interest rate to a declining carrying value, concentrating income in early periods. AAOIFI FAS 4 ties rental to the current ownership share, which declines evenly. Total income is identical over the full term but timing differs."
+    tags: ["eir", "income-profile", "ifrs-vs-aaoifi"]
+    difficulty: "advanced"
+    why: "Which income profile would a bank's management prefer for quarterly reporting, and why?"
+
+  - id: "ch31-11-uk-islamic-banking-010"
+    front: "What income label must a UK Islamic bank use for DM home finance income?"
+    back: "\"Profit from Home Finance\" or \"Income from Islamic Financing\" — never \"Interest Income.\""
+    tags: ["income-labels", "uk", "diminishing-musharaka"]
+    difficulty: "basic"
+
+  - id: "ch31-11-uk-islamic-banking-011"
+    front: "A property developer asks whether Islamic construction finance (DM/wakala) costs more than conventional finance. What drives the comparison?"
+    back: "Total payments over the construction and buyout periods, HMRC treatment differences, and additional Shariah compliance certification costs. The underlying financing cost is designed to be competitive because HMRC ensures tax equivalence."
+    tags: ["construction-finance", "cost-comparison", "dm-wakala"]
+    difficulty: "advanced"
+    why: "If tax equivalence holds, what non-financial factors might influence a developer's choice of Islamic over conventional finance?"
+
+  - id: "ch31-11-uk-islamic-banking-012"
+    front: "Each characterisation of DM home finance answers a different question. What question does each address?"
+    back: "Shariah: Is this religiously permissible?\nIFRS: What is the economic substance for reporting?\nHMRC: What is the tax-equivalent treatment?"
+    tags: ["triple-characterisation", "frameworks"]
+    difficulty: "intermediate"
+    why: "Can all three characterisations be simultaneously correct without contradicting each other?"

@@ -2,7 +2,18 @@
 sidebar_position: 4
 title: "The Complete Teaching and Learning System"
 description: "How PRIMM-AI+ works in practice -- the four embedded teaching methods, classroom and solo modes, practical lesson architecture, and how every chapter in this book follows the same pattern."
-keywords: ["PRIMM-AI+", "worked examples", "Parsons problems", "live coding", "peer instruction", "teaching methods", "classroom mode", "solo mode", "lesson architecture"]
+keywords:
+  [
+    "PRIMM-AI+",
+    "worked examples",
+    "Parsons problems",
+    "live coding",
+    "peer instruction",
+    "teaching methods",
+    "classroom mode",
+    "solo mode",
+    "lesson architecture",
+  ]
 chapter: 30
 lesson: 4
 duration_minutes: 20
@@ -81,7 +92,7 @@ James opens a new chapter and sees a complete Python program at the top. He did 
 
 "Why don't I write it myself?" he asks.
 
-"Because you'd be solving two problems at once — figuring out *what* to write and figuring out *how* to write it," Emma explains. "The worked example separates those. Someone else handled the *what*. You focus entirely on the *how*."
+"Because you'd be solving two problems at once — figuring out _what_ to write and figuring out _how_ to write it," Emma explains. "The worked example separates those. Someone else handled the _what_. You focus entirely on the _how_."
 
 Every code block in this book is a worked example -- a complete, functioning program you study before writing your own. Instead of starting with a blank screen, you inspect a finished program, predict its output, run it, and analyze its structure. **Worked examples are easier on your brain because you do not have to invent everything at once.** You focus on understanding how the code works, not on producing it.
 
@@ -91,7 +102,7 @@ Where it fits: **Predict** (you study the example and commit to a prediction) an
 
 Emma shows James four lines of code, but they are in the wrong order. "Put these back in the right sequence."
 
-James stares at them. He knows what each line does — he traced through a similar program minutes ago. But arranging them correctly requires something deeper: understanding *why* the order matters.
+James stares at them. He knows what each line does — he traced through a similar program minutes ago. But arranging them correctly requires something deeper: understanding _why_ the order matters.
 
 A Parsons problem gives you the correct lines of code in scrambled order. Your job is to rearrange them into a working program. **This tests whether you truly understand the program's structure** -- the order of operations, the indentation, the data flow -- without requiring you to write code from scratch.
 
@@ -111,7 +122,7 @@ city: str = "London"
 London: 32C
 ```
 
-To solve this, you must reason about data flow: `city` must exist before `label` can use it, `temp` must exist before `label` can use it, and `label` must exist before `print` can display it. The correct order is `city`, then `temp`, then `label`, then `print`. If you can reorder these lines correctly, you understand the program's structure -- **not just what it does, but *why* the order matters.** In solo mode, your AI assistant can generate fresh Parsons problems from any program you have just studied — ask it to scramble the lines and quiz you.
+To solve this, you must reason about data flow: `city` must exist before `label` can use it, `temp` must exist before `label` can use it, and `label` must exist before `print` can display it. The correct order is `city`, then `temp`, then `label`, then `print`. If you can reorder these lines correctly, you understand the program's structure -- **not just what it does, but _why_ the order matters.** In solo mode, your AI assistant can generate fresh Parsons problems from any program you have just studied — ask it to scramble the lines and quiz you.
 
 ### Live Coding: Investigate and Modify
 
@@ -133,12 +144,12 @@ Where it fits: **All stages.** In classroom mode, it happens naturally through p
 
 ### Summary
 
-| Method | What It Is | Where It Fits in PRIMM-AI+ |
-|--------|-----------|---------------------------|
-| Worked Examples | Complete programs you study before writing | Predict and Investigate |
-| Parsons Problems | Scrambled code lines you reorder | Between Investigate and Modify |
-| Live Coding | Real-time coding with narrated thinking | Investigate and Modify |
-| Peer Instruction | Individual thinking, then group discussion | Across all stages |
+| Method           | What It Is                                 | Where It Fits in PRIMM-AI+     |
+| ---------------- | ------------------------------------------ | ------------------------------ |
+| Worked Examples  | Complete programs you study before writing | Predict and Investigate        |
+| Parsons Problems | Scrambled code lines you reorder           | Between Investigate and Modify |
+| Live Coding      | Real-time coding with narrated thinking    | Investigate and Modify         |
+| Peer Instruction | Individual thinking, then group discussion | Across all stages              |
 
 ---
 
@@ -172,29 +183,29 @@ Here is what a typical lesson looks like when all the pieces work together. You 
 
 **Step 4: Modify.** You perform a modification task, changing the existing program to add a feature or alter its behavior. In classroom mode, the teacher may follow with a live-coding demonstration of a more advanced change. You write the modification yourself; AI evaluates it afterward.
 
-**Step 5: Make.** You write a specification first (AI-free), attempt the solution yourself, and use AI only for review, debugging, or targeted syntax help after your first attempt exists. This is Spec-Driven Development from Chapter 5 applied to your own programs.
+**Step 5: Make.** You write a specification first (AI-free), attempt the solution yourself, and use AI only for review, debugging, or targeted syntax help after your first attempt exists. This is Spec-Driven Development from Chapter 16 applied to your own programs.
 
 Notice the progression: **you understand before you change, and you change before you create.** Every step earns you the right to attempt the next one.
 
-> **Where do Parsons Problems fit?** Parsons problems -- scrambled lines you reorder into a working program -- are a bridge between Investigate and Modify. They appear inside Step 3 (Investigate) when a lesson needs to test structural understanding before you attempt free modifications. Not every lesson includes one, but when you see scrambled code, that is a Parsons problem checking whether you understand *why* the code is ordered the way it is.
+> **Where do Parsons Problems fit?** Parsons problems -- scrambled lines you reorder into a working program -- are a bridge between Investigate and Modify. They appear inside Step 3 (Investigate) when a lesson needs to test structural understanding before you attempt free modifications. Not every lesson includes one, but when you see scrambled code, that is a Parsons problem checking whether you understand _why_ the code is ordered the way it is.
 
 ---
 
 ## How Every Chapter Follows PRIMM-AI+
 
-"So every *lesson* follows those five steps," James says. "But what about the chapter as a whole? Is there a pattern there too?"
+"So every _lesson_ follows those five steps," James says. "But what about the chapter as a whole? Is there a pattern there too?"
 
 "Same structure, bigger scale," Emma says. "A chapter opens with worked examples, moves through investigation lessons, bridges to modification exercises, and finishes with a capstone where you build something new. You'll never open a chapter wondering what to expect."
 
 The five-step sequence above is not just a lesson pattern -- it is the chapter pattern. **Every chapter in Parts 4 and 5 maps to the same structure at a larger scale.**
 
-| Chapter Element | PRIMM-AI+ Connection | What Happens |
-|----------------|----------------------|-------------|
-| Chapter Opening | Worked Example + Predict and Run | You see complete programs, predict their output with confidence scoring, then run them |
-| Core Lessons | Investigate with Artifacts | You trace variables, test edge cases, and produce visible artifacts |
-| Structural Bridge | Parsons Problems | Scrambled-code exercises test your structural understanding |
-| Exercises | Modify | You change existing programs to add features or fix issues |
-| Capstone | Make with Spec-Driven Development | You build something new from a specification, with AI as reviewer |
+| Chapter Element   | PRIMM-AI+ Connection              | What Happens                                                                           |
+| ----------------- | --------------------------------- | -------------------------------------------------------------------------------------- |
+| Chapter Opening   | Worked Example + Predict and Run  | You see complete programs, predict their output with confidence scoring, then run them |
+| Core Lessons      | Investigate with Artifacts        | You trace variables, test edge cases, and produce visible artifacts                    |
+| Structural Bridge | Parsons Problems                  | Scrambled-code exercises test your structural understanding                            |
+| Exercises         | Modify                            | You change existing programs to add features or fix issues                             |
+| Capstone          | Make with Spec-Driven Development | You build something new from a specification, with AI as reviewer                      |
 
 **You will never be dropped into a Make exercise cold.** By the time a chapter asks you to write code from scratch, you will have predicted, run, investigated, and modified programs using the same concepts. The structure is your safety net.
 

@@ -1,0 +1,109 @@
+deck:
+  id: "ch32-10-aml-tm-ml-sar"
+  title: "Transaction Monitoring, ML Evolution, and SAR Filing"
+  description: "Key concepts from rules-based and ML transaction monitoring, the alert-to-SAR pipeline, tipping-off prohibition, and AI agent safeguards in financial crime compliance."
+  tags: ["transaction-monitoring", "aml", "sar", "machine-learning", "tipping-off"]
+  version: 1
+
+cards:
+  - id: "ch32-10-aml-tm-ml-sar-001"
+    front: "What are the five common money laundering typologies detected by rules-based transaction monitoring?"
+    back: "1. Structuring\n2. Round-tripping\n3. Velocity\n4. Geographic\n5. Peer group anomaly"
+    tags: ["typologies", "rules-based-tm"]
+    difficulty: "basic"
+
+  - id: "ch32-10-aml-tm-ml-sar-002"
+    front: "How does the structuring typology work?"
+    back: "A customer splits cash deposits into multiple amounts just below the reporting threshold to avoid triggering Currency Transaction Reports. The pattern -- many deposits near but under the limit -- is the detection signal."
+    tags: ["structuring", "typologies"]
+    difficulty: "intermediate"
+    why: "Why can a sophisticated launderer defeat a fixed-threshold structuring rule, and how would ML detect the variant?"
+
+  - id: "ch32-10-aml-tm-ml-sar-003"
+    front: "What false positive rate do rules-based transaction monitoring systems typically produce?"
+    back: "95-99% of alerts are false positives."
+    tags: ["false-positives", "rules-based-tm"]
+    difficulty: "basic"
+
+  - id: "ch32-10-aml-tm-ml-sar-004"
+    front: "Why do ML-based transaction monitoring systems achieve lower false positive rates than rules-based systems?"
+    back: "Supervised ML learns from historical analyst decisions (which alerts were genuine vs false), therefore it can predict which new alerts are likely genuine. Rules apply static thresholds that cannot adapt to investigation outcomes."
+    tags: ["ml-tm", "false-positives"]
+    difficulty: "intermediate"
+    why: "What governance requirement does this learning mechanism create for regulators?"
+
+  - id: "ch32-10-aml-tm-ml-sar-005"
+    front: "Name the four ML approaches used in transaction monitoring?"
+    back: "1. Peer group analysis\n2. Network analysis\n3. Behavioural anomaly detection\n4. Supervised classification"
+    tags: ["ml-tm", "approaches"]
+    difficulty: "intermediate"
+
+  - id: "ch32-10-aml-tm-ml-sar-006"
+    front: "What are the four key limitations of rules-based transaction monitoring?"
+    back: "1. Static thresholds easily circumvented\n2. No adaptive learning from outcomes\n3. High false positive rates (95-99%)\n4. Limited pattern complexity for multi-step typologies"
+    tags: ["rules-based-tm", "limitations"]
+    difficulty: "intermediate"
+
+  - id: "ch32-10-aml-tm-ml-sar-007"
+    front: "Why do most production TM deployments use a hybrid rules-plus-ML approach rather than pure ML?"
+    back: "Rules provide high explainability for known typologies that regulators can examine directly. ML adds adaptability for novel patterns. Combining both satisfies regulatory transparency requirements while reducing false positives, therefore neither alone is sufficient."
+    tags: ["hybrid-tm", "rules-vs-ml"]
+    difficulty: "advanced"
+    why: "How would a regulator react to a pure ML system that could not explain why a specific alert was or was not generated?"
+
+  - id: "ch32-10-aml-tm-ml-sar-008"
+    front: "What are the five stages of the alert-to-SAR pipeline?"
+    back: "1. Alert generated (rules or ML)\n2. Triage (L1 analyst)\n3. Investigation (L2 analyst)\n4. MLRO review\n5. SAR filed with reporting authority"
+    tags: ["sar-workflow", "alert-pipeline"]
+    difficulty: "basic"
+
+  - id: "ch32-10-aml-tm-ml-sar-009"
+    front: "Which authority receives SARs in the UK, the USA, and Australia?"
+    back: "UK: National Crime Agency (NCA).\nUSA: FinCEN.\nAustralia: AUSTRAC."
+    tags: ["sar", "reporting-authorities"]
+    difficulty: "basic"
+
+  - id: "ch32-10-aml-tm-ml-sar-010"
+    front: "What is the SAR filing deadline in the USA versus Australia?"
+    back: "USA: within 30 calendar days of initial detection.\nAustralia: within 3 business days."
+    tags: ["sar", "filing-timelines"]
+    difficulty: "intermediate"
+
+  - id: "ch32-10-aml-tm-ml-sar-011"
+    front: "Why is tipping-off treated as a criminal offence rather than a compliance violation?"
+    back: "Disclosing a SAR's existence allows the suspect to destroy evidence, move funds, or flee. Criminal penalties deter disclosure because the damage to law enforcement investigations is irreversible and directly undermines the purpose of the SAR regime."
+    tags: ["tipping-off", "criminal-offence"]
+    difficulty: "intermediate"
+    why: "How does the severity of the penalty shape the design constraints for any customer-facing banking AI system?"
+
+  - id: "ch32-10-aml-tm-ml-sar-012"
+    front: "What is the maximum penalty for tipping-off on indictment under UK law?"
+    back: "Up to two years' imprisonment and/or an unlimited fine."
+    tags: ["tipping-off", "penalties", "poca"]
+    difficulty: "basic"
+
+  - id: "ch32-10-aml-tm-ml-sar-013"
+    front: "What four safeguards must be built into banking AI agents to prevent tipping-off?"
+    back: "1. Never include SAR status in customer-facing output\n2. Segregate investigation data from operational systems\n3. Use generic language for account restrictions\n4. Log SAR-related data in restricted-access systems"
+    tags: ["tipping-off", "ai-safeguards", "agent-design"]
+    difficulty: "intermediate"
+
+  - id: "ch32-10-aml-tm-ml-sar-014"
+    front: "Why must an AI agent never file a SAR, even if it has identified a clear typology match?"
+    back: "The SAR filing decision carries personal criminal liability for the MLRO. An AI system cannot bear personal legal accountability, therefore a human must review the evidence, make the judgment call, and accept responsibility for the filing decision."
+    tags: ["sar", "agent-boundary", "criminal-liability"]
+    difficulty: "advanced"
+    why: "What would happen to regulatory accountability if AI systems could autonomously file SARs?"
+
+  - id: "ch32-10-aml-tm-ml-sar-015"
+    front: "Why do regulators require explainability, back-testing, and documented validation for ML models in transaction monitoring?"
+    back: "Without governance, ML models could suppress genuine alerts through model drift or biased training data. Regulators need evidence that the model does not create blind spots, because undetected suspicious activity directly enables financial crime."
+    tags: ["ml-governance", "regulatory-requirements"]
+    difficulty: "advanced"
+    why: "How would a regulator detect that an ML model has developed a blind spot for a specific typology?"
+
+  - id: "ch32-10-aml-tm-ml-sar-016"
+    front: "What five elements must a SAR include?"
+    back: "1. Subject identification\n2. Transaction details\n3. Suspicion narrative\n4. Typology match\n5. Supporting evidence"
+    tags: ["sar", "content-requirements"]
+    difficulty: "intermediate"

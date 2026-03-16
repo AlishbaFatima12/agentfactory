@@ -35,7 +35,7 @@ In Chapter 31, you learned that AI generates code fast -- but speed without veri
 
 Claude Code can produce fifty lines of Python in seconds. Without the discipline stack, you have no way to check those fifty lines. Did the AI use the right types? Are there unused imports? Does the code do what you asked? You cannot answer those questions by reading alone -- not reliably, not at the speed Claude Code generates code. The five tools in this chapter answer them for you, automatically, every time.
 
-In Chapter 5, you learned Spec-Driven Development (SDD) -- the methodology for turning specifications into reliable implementations using Claude Code. The discipline stack is what makes SDD work for Python. Pyright enforces your type specifications. pytest verifies your test specifications. ruff keeps the generated code clean. Git tracks every change. Together, these tools form the verification layer that sits between your specification and Claude Code's output.
+In Chapter 16, you learned Spec-Driven Development (SDD) -- the methodology for turning specifications into reliable implementations using Claude Code. The discipline stack is what makes SDD work for Python. Pyright enforces your type specifications. pytest verifies your test specifications. ruff keeps the generated code clean. Git tracks every change. Together, these tools form the verification layer that sits between your specification and Claude Code's output.
 
 ## What You Will Learn
 
@@ -64,27 +64,27 @@ Lessons 4 through 6 include Python code that uses features you have not learned 
 
 Each tool in the discipline stack maps directly to an axiom you learned in Chapter 31. These are not abstract connections -- each tool is the concrete enforcement mechanism for its axiom.
 
-| Tool | Axiom | Why It Matters |
-|------|-------|----------------|
-| uv | I -- Shell as Orchestrator | One command orchestrates Python versions, virtual environments, and dependencies |
-| pyright | V -- Types Are Guardrails | Catches type errors before your code runs -- including errors in AI-generated code |
-| ruff | IX -- Verification is a Pipeline | First stage in the automated pipeline that chains ruff, pyright, and pytest into one command |
-| pytest | VII -- Tests Are the Specification | Tests define what "correct" means -- not just that code runs |
-| Git | VIII -- Version Control is Memory | Every change tracked, every decision reversible -- even AI-generated code you later regret |
+| Tool    | Axiom                              | Why It Matters                                                                               |
+| ------- | ---------------------------------- | -------------------------------------------------------------------------------------------- |
+| uv      | I -- Shell as Orchestrator         | One command orchestrates Python versions, virtual environments, and dependencies             |
+| pyright | V -- Types Are Guardrails          | Catches type errors before your code runs -- including errors in AI-generated code           |
+| ruff    | IX -- Verification is a Pipeline   | First stage in the automated pipeline that chains ruff, pyright, and pytest into one command |
+| pytest  | VII -- Tests Are the Specification | Tests define what "correct" means -- not just that code runs                                 |
+| Git     | VIII -- Version Control is Memory  | Every change tracked, every decision reversible -- even AI-generated code you later regret   |
 
 ## Chapter Lessons
 
-| Lesson | Title | What You Do |
-|--------|-------|-------------|
-| 1 | Why the Toolchain Comes First | Understand the five tools and their axiom connections |
-| 2 | Installing uv and Creating SmartNotes | Install uv, scaffold the project, explore generated files |
-| 3 | The pyproject.toml and the Discipline Stack | Configure the central project file, install dev tools |
-| 4 | Ruff -- Your Code Quality Guardian | Run the linter and formatter, read error output |
-| 5 | Pyright -- Your Type Safety Net | Run the type checker, compare typed vs untyped code |
-| 6 | Testing With pytest | Write your first test, run pytest, read pass/fail output |
-| 7 | Git -- Your Version Control Memory | Initialize Git, make your first commit, run the full pipeline |
+| Lesson | Title                                       | What You Do                                                   |
+| ------ | ------------------------------------------- | ------------------------------------------------------------- |
+| 1      | Why the Toolchain Comes First               | Understand the five tools and their axiom connections         |
+| 2      | Installing uv and Creating SmartNotes       | Install uv, scaffold the project, explore generated files     |
+| 3      | The pyproject.toml and the Discipline Stack | Configure the central project file, install dev tools         |
+| 4      | Ruff -- Your Code Quality Guardian          | Run the linter and formatter, read error output               |
+| 5      | Pyright -- Your Type Safety Net             | Run the type checker, compare typed vs untyped code           |
+| 6      | Testing With pytest                         | Write your first test, run pytest, read pass/fail output      |
+| 7      | Git -- Your Version Control Memory          | Initialize Git, make your first commit, run the full pipeline |
 
 ## Prerequisites
 
 - **Chapter 31: Ten Axioms of Programming in AI-Driven Development** -- This chapter assumes familiarity with all ten axioms. Each lesson references specific axioms by number and name.
-- **[Chapter 5: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development)** -- You must understand the SDD workflow (Research → Specification → Refinement → Implementation) and why specifications come before code. The discipline stack you install here is the verification layer for the SDD methodology you learned in Chapter 5. Claude Code is your primary development tool throughout Part 4.
+- **[Chapter 16: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development)** -- You must understand the SDD workflow (Research → Specification → Refinement → Implementation) and why specifications come before code. The discipline stack you install here is the verification layer for the SDD methodology you learned in Chapter 16. Claude Code is your primary development tool throughout Part 4.

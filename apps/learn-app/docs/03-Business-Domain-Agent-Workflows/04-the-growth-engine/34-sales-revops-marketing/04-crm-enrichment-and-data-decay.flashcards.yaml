@@ -1,0 +1,109 @@
+deck:
+  id: "ch34-04-crm-enrichment"
+  title: "CRM Enrichment and Data Decay"
+  description: "CRM enrichment workflows, timing signal refresh, data decay rates, and enrichment scheduling"
+  tags: ["sales", "revops", "marketing", "chapter-34"]
+  version: 1
+
+cards:
+  - id: "ch34-04-crm-enrichment-001"
+    front: "At what annual rate does CRM data typically decay according to industry research?"
+    back: "Roughly 30% per year."
+    difficulty: "basic"
+    tags: ["data-decay"]
+
+  - id: "ch34-04-crm-enrichment-002"
+    front: "NexaFlow has 340 CRM contacts and a 30% annual decay rate. How many contacts likely have at least one stale field right now?"
+    back: "Approximately 100 contacts."
+    difficulty: "basic"
+    tags: ["data-decay"]
+
+  - id: "ch34-04-crm-enrichment-003"
+    front: "What are the three field statuses in a CRM enrichment report?"
+    back: "Changed, Confirmed, and Stale (no new data found)."
+    difficulty: "basic"
+    tags: ["enrichment-report"]
+
+  - id: "ch34-04-crm-enrichment-004"
+    front: "Meridian Logistics was classified WARM (63) before enrichment and HOT (79) after. What drove the reclassification?"
+    back: "Fresh timing signals — a partnership announcement, new hiring wave, and Sarah Chen's LinkedIn post about automation pilot results. Fit changed only marginally — because enrichment primarily catches timing signals, not fit changes."
+    difficulty: "intermediate"
+    why: "Why does timing change faster than fit in most CRM records?"
+    tags: ["timing-refresh"]
+
+  - id: "ch34-04-crm-enrichment-005"
+    front: "Why does enrichment primarily reveal changes in timing rather than fit?"
+    back: "Fit dimensions (company size, industry, tech stack) evolve over months or years. Timing signals (contracts, promotions, RFPs) appear and disappear within weeks — so enrichment's primary value is catching fast-moving buying signals before they expire."
+    difficulty: "intermediate"
+    why: "What happens to a competitor who catches a timing signal one week before you do?"
+    tags: ["timing-vs-fit"]
+
+  - id: "ch34-04-crm-enrichment-006"
+    front: "TransGulf Freight was scored CULTIVATE (42) five months ago. After enrichment it scored WARM (67). Name any 3 of the new signals detected."
+    back: "Government contract win (AED 12M), Ahmad Khalil promoted to COO, 47% employee growth, 5 operations + 2 tech roles posted, RFP for warehouse management system, new Abu Dhabi office."
+    difficulty: "intermediate"
+    tags: ["hidden-hot-lead"]
+
+  - id: "ch34-04-crm-enrichment-007"
+    front: "A CULTIVATE prospect's timing score jumped from 12 to 32 after enrichment and they posted a public RFP. Why is immediate action warranted despite low engagement?"
+    back: "An active RFP means the prospect is buying now regardless of whether they know about you. Competitors will respond to the RFP — the window closes fast, making engagement score irrelevant compared to timing urgency."
+    difficulty: "advanced"
+    why: "How would you adjust routing rules to handle prospects with very low engagement but an active RFP?"
+    tags: ["hidden-hot-lead"]
+
+  - id: "ch34-04-crm-enrichment-008"
+    front: "What enrichment cadence is recommended for HOT leads (75+ score) in active pipeline?"
+    back: "Weekly (every Monday)."
+    difficulty: "basic"
+    tags: ["enrichment-schedule"]
+
+  - id: "ch34-04-crm-enrichment-009"
+    front: "What enrichment cadence is recommended for Tier 1 accounts (top 20 by deal value)?"
+    back: "Monthly (1st of each month)."
+    difficulty: "basic"
+    tags: ["enrichment-schedule"]
+
+  - id: "ch34-04-crm-enrichment-010"
+    front: "What triggers an immediate enrichment within 24 hours, outside the regular schedule?"
+    back: "Pricing page visit, case study download, funding announcement, LinkedIn title change, or company appearance in an RFP database."
+    difficulty: "intermediate"
+    tags: ["triggered-enrichment"]
+
+  - id: "ch34-04-crm-enrichment-011"
+    front: "A contact was added to the CRM 18 months ago as 'COO, TechBridge Solutions, Lahore.' Today they are VP Engineering at a different company in Islamabad. What cost does this stale record impose?"
+    back: "Wasted rep hours calling wrong numbers, emailing dead addresses, and pitching to people who left — because every field (title, company, city) is wrong and no one checked."
+    difficulty: "intermediate"
+    why: "How would you calculate the total cost of stale data across 340 contacts?"
+    tags: ["data-decay-cost"]
+
+  - id: "ch34-04-crm-enrichment-012"
+    front: "Why is enrichment without a schedule described as a 'one-time cleanup' rather than a system?"
+    back: "Data decays continuously. A single cleanup fixes today's staleness but decay resumes immediately — only a recurring schedule keeps the pipeline alive over time."
+    difficulty: "intermediate"
+    tags: ["enrichment-schedule"]
+
+  - id: "ch34-04-crm-enrichment-013"
+    front: "How does the enrichment-to-rescore cycle work as a complete workflow?"
+    back: "Enrich the record (pull current data) → identify changed fields and new signals → re-score the prospect → update classification → act on any classification change."
+    difficulty: "intermediate"
+    tags: ["enrichment-workflow"]
+
+  - id: "ch34-04-crm-enrichment-014"
+    front: "Why are timing signals described as the 'most volatile dimension' in enrichment?"
+    back: "Timing signals have the shortest lifespan — a funding announcement is actionable for weeks but becomes stale history within months, unlike fit dimensions that persist for years."
+    difficulty: "intermediate"
+    why: "How does this volatility affect how often you should enrich HOT versus CULTIVATE leads?"
+    tags: ["timing-volatility"]
+
+  - id: "ch34-04-crm-enrichment-015"
+    front: "What is the recommended enrichment cadence for WARM leads (55-74 score)?"
+    back: "Bi-weekly (every other Monday)."
+    difficulty: "basic"
+    tags: ["enrichment-schedule"]
+
+  - id: "ch34-04-crm-enrichment-016"
+    front: "Three of NexaFlow's reps waste 15+ hours monthly on stale CRM data. How does a systematic enrichment schedule convert that cost into revenue?"
+    back: "By keeping records current, reps contact the right person at the right company with current signals. Recovered hours go to qualified prospects instead of dead leads — because accurate data is the prerequisite for every productive sales activity."
+    difficulty: "advanced"
+    why: "What metric would you track to prove the ROI of an enrichment schedule to a VP of Sales?"
+    tags: ["enrichment-roi"]

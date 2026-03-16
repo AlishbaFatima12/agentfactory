@@ -2,7 +2,17 @@
 sidebar_position: 8
 title: "Axiom VIII: Version Control is Memory"
 description: "Git provides the persistent memory layer for all work — every decision, experiment, and evolution recorded as the system of record for software development."
-keywords: ["version control", "git", "memory", "commits", "branches", "agentic development", "AI collaboration", "conventional commits"]
+keywords:
+  [
+    "version control",
+    "git",
+    "memory",
+    "commits",
+    "branches",
+    "agentic development",
+    "AI collaboration",
+    "conventional commits",
+  ]
 chapter: 31
 lesson: 8
 duration_minutes: 22
@@ -66,7 +76,7 @@ differentiation:
 
 # Axiom VIII: Version Control is Memory
 
-Axiom VII gave James tests that define what "correct" means. But tests capture what the code *should do*. They say nothing about what the code *used to do*, why it changed, or who changed it. A week after the $12,000 discount fix, that gap became painfully clear.
+Axiom VII gave James tests that define what "correct" means. But tests capture what the code _should do_. They say nothing about what the code _used to do_, why it changed, or who changed it. A week after the $12,000 discount fix, that gap became painfully clear.
 
 James's team lead called a post-mortem. "Walk us through the original bug," she said. "Show us what the function looked like before the fix." James opened `apply_discount()` — but only the current version remained. The buggy implementation was gone, overwritten when the AI regenerated. He checked his git history:
 
@@ -100,7 +110,7 @@ commit d4e5f6g
     Impact: $12,000 loss over weekend. Post-mortem: PM-2025-003
 ```
 
-Same fix. But Emma's commit was a *memory*. It recorded not just what changed, but why it changed, what caused the original error, how it was caught, and where to find the broader context. Six months from now, anyone reading that commit would understand the full story without asking a single question.
+Same fix. But Emma's commit was a _memory_. It recorded not just what changed, but why it changed, what caused the original error, how it was caught, and where to find the broader context. Six months from now, anyone reading that commit would understand the full story without asking a single question.
 
 "Git is not a backup tool," Emma said. "It is the memory of your project. Every commit is a decision you are recording for your future self, your teammates, and your AI. If the memory is `wip`, you have amnesia."
 
@@ -110,17 +120,17 @@ This is Axiom VIII.
 
 ## The Problem Without This Axiom
 
-James's post-mortem exposed a pattern that every developer who uses AI will recognize. He had been productive — shipping features, fixing bugs, regenerating implementations through TDG. But his git history was a graveyard of meaningless messages: `wip`, `updates`, `fix stuff`, `changes`, `done`. Every commit recorded *that* something changed. None recorded *why*.
+James's post-mortem exposed a pattern that every developer who uses AI will recognize. He had been productive — shipping features, fixing bugs, regenerating implementations through TDG. But his git history was a graveyard of meaningless messages: `wip`, `updates`, `fix stuff`, `changes`, `done`. Every commit recorded _that_ something changed. None recorded _why_.
 
 The consequences compounded:
 
-| Situation | James's Experience | What Disciplined Git Provides |
-|-----------|-------------------|-----------------|
-| "What was the original bug?" | File overwritten, no record | `git show HEAD~3:src/discount.py` shows the buggy version |
-| "Which test caught the error?" | "I think it was the boundary test..." | Commit message names the specific assertion |
-| "When did shipping get slow?" | Manual log searching, guesswork | `git bisect` finds the exact commit |
-| "Can we undo the ORM change?" | Risky manual reversal | `git revert abc123` safely creates inverse commit |
-| AI asks "What's the project context?" | James explains from scratch every session | AI reads git log for recent decisions |
+| Situation                             | James's Experience                        | What Disciplined Git Provides                             |
+| ------------------------------------- | ----------------------------------------- | --------------------------------------------------------- |
+| "What was the original bug?"          | File overwritten, no record               | `git show HEAD~3:src/discount.py` shows the buggy version |
+| "Which test caught the error?"        | "I think it was the boundary test..."     | Commit message names the specific assertion               |
+| "When did shipping get slow?"         | Manual log searching, guesswork           | `git bisect` finds the exact commit                       |
+| "Can we undo the ORM change?"         | Risky manual reversal                     | `git revert abc123` safely creates inverse commit         |
+| AI asks "What's the project context?" | James explains from scratch every session | AI reads git log for recent decisions                     |
 
 The cost was invisible day-to-day but catastrophic at the post-mortem. Every undocumented decision became a question nobody could answer. Every unexplained change became a mystery. The team spent three hours reconstructing a story that disciplined commit messages would have told in three minutes.
 
@@ -130,7 +140,7 @@ The cost was invisible day-to-day but catastrophic at the post-mortem. Every und
 
 > **Axiom VIII: Version Control is Memory.** Git provides the persistent memory layer for all work. Every decision, every change, every experiment is recorded. Git is not just version control — it is the system of record for software evolution.
 
-This axiom elevates git from a tool (something you use to save work) to a *system* (the authoritative record of how and why your software became what it is). James had been using git as a save button — `git add . && git commit -m "wip"` — the way you might press Ctrl+S in a document editor. Emma taught him to use it as a journal — each entry recording a decision, its rationale, and its context.
+This axiom elevates git from a tool (something you use to save work) to a _system_ (the authoritative record of how and why your software became what it is). James had been using git as a save button — `git add . && git commit -m "wip"` — the way you might press Ctrl+S in a document editor. Emma taught him to use it as a journal — each entry recording a decision, its rationale, and its context.
 
 The key insight: **files give you current state; git gives you all past states and the story between them.**
 
@@ -138,12 +148,12 @@ The key insight: **files give you current state; git gives you all past states a
 
 When used with discipline, git captures four dimensions of project memory:
 
-| Dimension | Git Mechanism | What It Preserves |
-|-----------|--------------|-------------------|
-| **Decisions** | Commit messages | Why changes were made, what alternatives were rejected |
-| **Experiments** | Branches | Parallel approaches tried, including failed ones |
-| **Milestones** | Tags | Stable points you can always return to |
-| **Accountability** | Blame/Log | Who made each decision and when |
+| Dimension          | Git Mechanism   | What It Preserves                                      |
+| ------------------ | --------------- | ------------------------------------------------------ |
+| **Decisions**      | Commit messages | Why changes were made, what alternatives were rejected |
+| **Experiments**    | Branches        | Parallel approaches tried, including failed ones       |
+| **Milestones**     | Tags            | Stable points you can always return to                 |
+| **Accountability** | Blame/Log       | Who made each decision and when                        |
 
 Together, these form the institutional memory that James's post-mortem was missing — a record that survives team changes, context switches, and the passage of time.
 
@@ -151,33 +161,34 @@ Together, these form the institutional memory that James's post-mortem was missi
 
 ## From Principle to Axiom
 
-In Chapter 4, you learned **Principle 5: Persisting State in Files**. That principle established a critical insight: AI systems are stateless between sessions, so all important context must live in files that AI can read.
+In [Chapter 17](/docs/General-Agents-Foundations/seven-principles/persisting-state-in-files), you learned **Principle 5: Persisting State in Files**. Remember the comparison: re-explaining your project conventions every session wastes 10 minutes each time — over 20 sessions, that is 3+ hours lost. Writing a single CLAUDE.md file once takes 20 minutes but saves every future session from starting at zero. That principle established a critical insight: AI systems are stateless between sessions, so all important context must live in files that AI can read.
 
 Axiom VIII builds directly on that foundation:
 
-| Principle 5 | Axiom VIII |
-|-------------|------------|
-| Persist state in files | Manage that state with **history** |
-| Files give you current state | Git gives you all **past** states |
-| CLAUDE.md tells AI what to do now | Git log tells AI what was tried before |
-| Files are the interface | Git is the **memory** behind the interface |
-| Solves: "AI forgot my conventions" | Solves: "Nobody remembers why" |
+| Principle 5                        | Axiom VIII                                 |
+| ---------------------------------- | ------------------------------------------ |
+| Persist state in files             | Manage that state with **history**         |
+| Files give you current state       | Git gives you all **past** states          |
+| CLAUDE.md tells AI what to do now  | Git log tells AI what was tried before     |
+| Files are the interface            | Git is the **memory** behind the interface |
+| Solves: "AI forgot my conventions" | Solves: "Nobody remembers why"             |
 
-The relationship is complementary: Principle 5 says *where* to persist (files). Axiom VIII says *how* to manage persistence over time (version control). Files without git are snapshots. Files with git are a narrative.
+The relationship is complementary: Principle 5 says _where_ to persist (files). Axiom VIII says _how_ to manage persistence over time (version control). Files without git are snapshots. Files with git are a narrative.
 
 James experienced this progression firsthand:
+
 - **Before Principle 5**: His project conventions lived in his head. Every AI session started from zero.
 - **After Principle 5**: His conventions lived in CLAUDE.md. The AI could read current rules.
-- **After Axiom VIII**: His conventions lived in *versioned* CLAUDE.md. The AI could read not just the current rules, but the history of *why* each rule was added — including the $12,000 discount incident that prompted the TDG requirement.
+- **After Axiom VIII**: His conventions lived in _versioned_ CLAUDE.md. The AI could read not just the current rules, but the history of _why_ each rule was added — including the $12,000 discount incident that prompted the TDG requirement.
 
 <details>
 <summary>**The Discipline That Preceded Git**</summary>
 
 The idea that version control could serve as institutional memory has roots older than most developers realize. In April 2005, Linus Torvalds built Git's core in roughly two weeks — not as a side project, but out of necessity. The Linux kernel, the largest collaborative software project in history, had been using a proprietary tool called BitKeeper for version control. When BitKeeper revoked its free license, Torvalds needed a replacement that could handle thousands of distributed developers collaborating without a central server.
 
-The tools that preceded Git — CVS (1990) and Subversion (2000) — required a central server. Every commit went through a single point of failure. If the server was down, nobody could commit. If the server was lost, the history was lost. Torvalds designed Git to be *distributed*: every developer's copy contains the complete history. There is no single point of failure. The memory lives everywhere.
+The tools that preceded Git — CVS (1990) and Subversion (2000) — required a central server. Every commit went through a single point of failure. If the server was down, nobody could commit. If the server was lost, the history was lost. Torvalds designed Git to be _distributed_: every developer's copy contains the complete history. There is no single point of failure. The memory lives everywhere.
 
-But Torvalds's deeper insight was about what version control *records*. CVS tracked file changes. Git tracks *snapshots of the entire project state* — every commit captures the complete state of every file at that moment. This means you can reconstruct your project at any point in its history, not just individual files. The project's memory is not a collection of diffs. It is a sequence of complete states, each connected to the decision that produced it.
+But Torvalds's deeper insight was about what version control _records_. CVS tracked file changes. Git tracks _snapshots of the entire project state_ — every commit captures the complete state of every file at that moment. This means you can reconstruct your project at any point in its history, not just individual files. The project's memory is not a collection of diffs. It is a sequence of complete states, each connected to the decision that produced it.
 
 James's `wip` commits squandered this power. Git was designed to be a complete institutional memory. He had been using it as a save button.
 
@@ -187,6 +198,10 @@ James's `wip` commits squandered this power. Git was designed to be a complete i
 
 ## Git as System of Record
 
+:::tip New to Git?
+If these git commands look unfamiliar, [Chapter 23](/docs/Agent-Workflow-Primitives/version-control) covers version control foundations — commits, branches, and pull requests — from the ground up. Review that chapter first, then return here to see how those same tools become your project's memory system.
+:::
+
 ![Git branching workflow: main branch with a feature/discount branch forking off, commits, and a Pull Request + Review merge back](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-4/chapter-14/08-git-branching-workflow.png)
 
 After the post-mortem, Emma spent an afternoon teaching James how git actually works when used with discipline. "Git gives you four tools," she said. "Commits, branches, tags, and blame. Each one is a different kind of memory."
@@ -195,7 +210,7 @@ After the post-mortem, Emma spent an afternoon teaching James how git actually w
 
 Every commit should answer one question: **"What decision was made, and why?"**
 
-The code diff shows *what* changed. The commit message explains *why* it changed. Together, they form a decision record. Emma showed James how to query that record:
+The code diff shows _what_ changed. The commit message explains _why_ it changed. Together, they form a decision record. Emma showed James how to query that record:
 
 ```bash
 # Find all feature decisions this year
@@ -228,7 +243,7 @@ git branch -d experiment/try-sqlite-storage
 # The commits still exist in reflog for 90 days
 ```
 
-Even failed experiments have value. The commit history on a deleted branch records *what was tried and why it did not work* — preventing the team from repeating the same failed approach six months later. "Your team already tried Redis caching last quarter," Emma pointed out. "If they had kept the experiment branch, the new developer would not have spent two weeks rediscovering why it did not work."
+Even failed experiments have value. The commit history on a deleted branch records _what was tried and why it did not work_ — preventing the team from repeating the same failed approach six months later. "Your team already tried Redis caching last quarter," Emma pointed out. "If they had kept the experiment branch, the new developer would not have spent two weeks rediscovering why it did not work."
 
 ### Tags Are Milestones
 
@@ -267,7 +282,11 @@ Without blame, that `75.0` would be a magic number — nobody would know where i
 
 ## Commit Discipline
 
-The power of git-as-memory depends entirely on commit quality. James's `wip` commits were not just lazy — they were *destroying information*. Every time he bundled three unrelated changes into one commit with no message, he was erasing the decisions that produced those changes. Emma called this "voluntary amnesia."
+The power of git-as-memory depends entirely on commit quality. James's `wip` commits were not just lazy — they were _destroying information_. Every time he bundled three unrelated changes into one commit with no message, he was erasing the decisions that produced those changes. Emma called this "voluntary amnesia."
+
+:::tip Reading Git Commands for the Concept
+The sections below show many git commands — `git add`, `git commit`, `git log`, `git tag`. Focus on _what each command achieves_ (save a change, describe why, search history, mark a stable version) rather than memorizing the syntax. You will practice these commands yourself when you set up version control in hands-on chapters.
+:::
 
 ### Atomic Commits: One Logical Change
 
@@ -305,20 +324,24 @@ threshold, and boundary conditions. Written before AI implementation
 per TDG workflow (Axiom VII)."
 ```
 
+:::tip Reading git commands for the pattern, not the syntax
+The git commands in this section (`git add`, `git commit -m`, `git log`) are tools you will use hands-on in later chapters. For now, focus on _what information_ each commit records — the prefix type, the scope, the "why" — not the command syntax.
+:::
+
 ### Conventional Commits: Structured Prefixes
 
 After a week of writing atomic commits, James noticed a new problem: his messages were descriptive but unscannable. Reading twenty commit messages to find "the one where I changed the shipping logic" took too long. Emma introduced him to conventional commits — a structured prefix system that makes history scannable at a glance:
 
-| Prefix | Meaning | Example |
-|--------|---------|---------|
-| `feat:` | New feature | `feat(shipping): add international surcharge calculation` |
-| `fix:` | Bug fix | `fix(orders): correct discount calculation` |
-| `docs:` | Documentation | `docs(api): document order endpoints` |
-| `refactor:` | Code restructure (no behavior change) | `refactor(orders): extract discount logic to module` |
-| `test:` | Adding/fixing tests | `test(shipping): add TDG specs for free shipping threshold` |
-| `chore:` | Maintenance | `chore(deps): update fastapi to 0.109.0` |
-| `perf:` | Performance improvement | `perf(shipping): replace O(n^2) rate lookup with dict` |
-| `ci:` | CI/CD changes | `ci(github): add Python 3.12 to test matrix` |
+| Prefix      | Meaning                               | Example                                                     |
+| ----------- | ------------------------------------- | ----------------------------------------------------------- |
+| `feat:`     | New feature                           | `feat(shipping): add international surcharge calculation`   |
+| `fix:`      | Bug fix                               | `fix(orders): correct discount calculation`                 |
+| `docs:`     | Documentation                         | `docs(api): document order endpoints`                       |
+| `refactor:` | Code restructure (no behavior change) | `refactor(orders): extract discount logic to module`        |
+| `test:`     | Adding/fixing tests                   | `test(shipping): add TDG specs for free shipping threshold` |
+| `chore:`    | Maintenance                           | `chore(deps): update fastapi to 0.109.0`                    |
+| `perf:`     | Performance improvement               | `perf(shipping): replace O(n^2) rate lookup with dict`      |
+| `ci:`       | CI/CD changes                         | `ci(github): add Python 3.12 to test matrix`                |
 
 The format: `type(scope): description`
 
@@ -334,7 +357,7 @@ git log --oneline
 # f6g7h8i docs(orders): document discount business rules
 ```
 
-At a glance, James could see: a new shipping feature, the discount bug fix, TDG tests, a refactor, the performance fix for the O(n^2) shipping function from Axiom VII's Green Bar Illusion, and documentation. This is *scannable memory* — the table of contents for his project's story.
+At a glance, James could see: a new shipping feature, the discount bug fix, TDG tests, a refactor, the performance fix for the O(n^2) shipping function from Axiom VII's Green Bar Illusion, and documentation. This is _scannable memory_ — the table of contents for his project's story.
 
 ### The WHY Rule
 
@@ -356,7 +379,11 @@ New threshold reduces free shipping orders by 31%.
 Ref: PRODUCT-2025-047"
 ```
 
-Six months from now, when someone asks "why is the threshold 75 and not 50?", the commit message answers immediately — it was a product decision backed by analytics, not an arbitrary choice. No Slack archaeology required. This is what James's post-mortem was missing — the *why* behind every change.
+Six months from now, when someone asks "why is the threshold 75 and not 50?", the commit message answers immediately — it was a product decision backed by analytics, not an arbitrary choice. No Slack archaeology required. This is what James's post-mortem was missing — the _why_ behind every change.
+
+:::tip Reading Checkpoint
+This is a natural stopping point. If you need a break, bookmark this spot and return when you are ready. Everything above covers the core concept; everything below applies it through exercises and practice.
+:::
 
 ---
 
@@ -379,7 +406,7 @@ git log --follow --oneline src/discount.py
 git show abc123
 ```
 
-When James's CLAUDE.md said "always use TDG for business logic," the git history explained *why* — the $12,000 discount disaster. The AI could provide better suggestions because it understood the reasoning behind the rule, not just the rule itself.
+When James's CLAUDE.md said "always use TDG for business logic," the git history explained _why_ — the $12,000 discount disaster. The AI could provide better suggestions because it understood the reasoning behind the rule, not just the rule itself.
 
 ### AI Commits Should Be Clearly Labeled
 
@@ -396,6 +423,7 @@ Co-Authored-By: Claude <noreply@anthropic.com>"
 ```
 
 This matters for three reasons:
+
 1. **Accountability**: Code review knows which commits need extra scrutiny
 2. **Learning**: You can filter `git log --author="Claude"` to see AI contribution patterns
 3. **Audit**: In regulated environments, AI-generated code may require additional review
@@ -454,6 +482,7 @@ main (stable, protected)
 ```
 
 Key rules:
+
 - **main is always stable**: Never commit directly to main
 - **Feature branches isolate work**: Both human and AI changes go here
 - **Pull requests require review**: Especially for AI-generated code
@@ -473,16 +502,16 @@ This history is not missing information by accident. It is missing information b
 
 These specific patterns destroy git's value as memory. Recognize and avoid them:
 
-| Anti-Pattern | Why It Fails | Better Approach |
-|--------------|-------------|-----------------|
-| Giant commits ("fix everything") | Impossible to understand, revert, or bisect | One logical change per commit |
-| Empty messages ("wip", "stuff", "asdf") | Zero memory value; future you learns nothing | Explain WHY with conventional prefix |
-| Committing secrets/credentials | Security breach waiting to happen | Use `.gitignore` and environment variables |
-| Force-pushing shared branches | Rewrites other people's history | Only force-push your own unshared branches |
-| Not using branches for experiments | Experiments pollute main history | Branch first, merge only if successful |
-| Committing generated files | Noise in diffs, merge conflicts | `.gitignore` build outputs, `node_modules/`, etc. |
-| Squashing all commits on merge | Destroys the detailed decision history | Preserve atomic commits; only squash true "wip" |
-| Never tagging releases | No stable milestones to reference or rollback to | Tag every release and significant milestone |
+| Anti-Pattern                            | Why It Fails                                     | Better Approach                                   |
+| --------------------------------------- | ------------------------------------------------ | ------------------------------------------------- |
+| Giant commits ("fix everything")        | Impossible to understand, revert, or bisect      | One logical change per commit                     |
+| Empty messages ("wip", "stuff", "asdf") | Zero memory value; future you learns nothing     | Explain WHY with conventional prefix              |
+| Committing secrets/credentials          | Security breach waiting to happen                | Use `.gitignore` and environment variables        |
+| Force-pushing shared branches           | Rewrites other people's history                  | Only force-push your own unshared branches        |
+| Not using branches for experiments      | Experiments pollute main history                 | Branch first, merge only if successful            |
+| Committing generated files              | Noise in diffs, merge conflicts                  | `.gitignore` build outputs, `node_modules/`, etc. |
+| Squashing all commits on merge          | Destroys the detailed decision history           | Preserve atomic commits; only squash true "wip"   |
+| Never tagging releases                  | No stable milestones to reference or rollback to | Tag every release and significant milestone       |
 
 ### The "Giant Commit" Problem in Detail
 
@@ -496,7 +525,7 @@ Insertions: 2,391
 Deletions: 856
 ```
 
-This commit was *anti-memory*. It recorded that 47 files changed but provided no way to understand why. James could not revert part of it. He could not bisect through it. He could not explain any individual change at the post-mortem.
+This commit was _anti-memory_. It recorded that 47 files changed but provided no way to understand why. James could not revert part of it. He could not bisect through it. He could not explain any individual change at the post-mortem.
 
 Emma showed him what the same week's work should have looked like — 12 atomic commits:
 
@@ -515,6 +544,10 @@ Each commit is a discrete memory. Each can be individually understood, reverted,
 ---
 
 ## Git as Time Machine
+
+:::tip Still Reading for the Idea, Not the Syntax
+This section shows commands like `git bisect`, `git revert`, and `git cherry-pick`. The important thing is **what they let you do** — find when something broke, safely undo a change, selectively apply a fix. Understanding the _capability_ matters more than the command names right now.
+:::
 
 Git does not just record history — it lets you travel through it. Two weeks after adopting commit discipline, James experienced its first real payoff: his shipping calculator started returning wrong rates for international orders. Instead of reading through code to find the bug, Emma showed him how to let git find it.
 
@@ -577,7 +610,7 @@ git cherry-pick def456
 
 ### Viewing Past States
 
-After learning these commands, James realized he *could* have answered his team lead's post-mortem question — if his commits had been disciplined. With proper git history, recovering any past version is one command:
+After learning these commands, James realized he _could_ have answered his team lead's post-mortem question — if his commits had been disciplined. With proper git history, recovering any past version is one command:
 
 ```bash
 # See a file as it was at any point in history
@@ -600,10 +633,10 @@ If James had made an atomic commit for the original `apply_discount()` implement
 
 ## Try With AI
 
-### Prompt 1: Transform Bad Commits into Good Memory
+### Prompt 1: Transform Bad Version Labels into Good Memory
 
 ```
-I have these five commits from an order management project:
+I have five versions of a group project report, saved with these labels:
 
 1. "updated stuff"
 2. "fix"
@@ -611,61 +644,144 @@ I have these five commits from an order management project:
 4. "changes"
 5. "done"
 
-For each one, here is the actual diff summary. Rewrite each commit
-message using conventional commit format, explaining the WHY not the WHAT:
+Here is what actually changed in each version:
 
-1. Changed FREE_SHIPPING_THRESHOLD from 50.0 to 75.0 in shipping.py
-2. Added null check before accessing order.customer_id in discount.py
-3. Created new file tests/test_discount.py with 5 TDG specification tests
-4. Renamed "calculate_total" to "compute_order_total" across 4 files
-5. Added .env to .gitignore and removed hardcoded DB connection string
+1. Rewrote the introduction to focus on climate data instead of general pollution
+2. Fixed a wrong statistic — the original said 40% but the real number is 28%
+3. Added a new section comparing two solutions but it is not finished yet
+4. Renamed all references from "global warming" to "climate change" for consistency
+5. Removed a paragraph that contained an unverified claim from an unreliable source
 
-For each rewritten message, explain what future-you would learn from it
-that the original message failed to communicate.
+For each version, rewrite the label as a meaningful description that explains
+WHAT changed and WHY. Then explain: what would a new team member learn from
+your rewritten labels that the originals completely fail to communicate?
 ```
 
-**What you're learning:** The difference between commits as file-saves and commits as decisions. Notice how each rewritten message captures reasoning that would otherwise be lost — the same reasoning James could not reconstruct at his post-mortem. The original messages treat git as a backup tool; the rewrites treat it as institutional memory.
+**What you're learning:** The difference between saving copies and recording decisions. Notice how each rewritten label captures reasoning that would otherwise be lost — the same reasoning James could not reconstruct at his post-mortem. The original labels treat version history as a backup tool; the rewrites treat it as institutional memory. This is the core of Axiom VIII: the _why_ behind every change is the most valuable information you can record.
 
-### Prompt 2: Design a Branching Strategy for AI Collaboration
-
-```
-I'm working on an order management system with one other developer
-and using Claude Code as my AI coding assistant. We deploy weekly.
-
-Design a branching strategy that:
-- Keeps main always deployable
-- Gives AI a safe space to experiment (like trying a new discount algorithm)
-- Makes AI contributions clearly identifiable in history
-- Allows easy rollback of AI-generated code specifically
-- Supports code review before AI changes reach main
-
-Show me the exact git commands for a typical workflow where AI generates
-the implementation for my TDG tests, I review it, and we merge to main.
-```
-
-**What you're learning:** Git as a collaboration protocol between human and AI. The branching strategy becomes a trust boundary — the AI works freely within branches, but human review gates the path to production. This is the workflow Emma taught James: human writes the specification, AI generates within a branch, tests verify, human merges.
-
-### Prompt 3: Investigate a Bug Using Git's Memory
+### Prompt 2: Design a Change Log for a Group Project
 
 ```
-My order management system's shipping calculator started returning
-wrong rates for international orders sometime in the last 50 commits.
-I know the tagged release v1.2.0 (50 commits ago) worked correctly.
+Four students are collaborating on a semester-long research project.
+They work on different sections, sometimes edit each other's work,
+and need to submit a final version in 8 weeks.
 
-Walk me through EXACTLY how to use git bisect to find the breaking
-commit. Show me:
-1. The exact commands to start bisecting
-2. What I test at each step (I have pytest tests for shipping)
-3. How to handle a commit that I can't easily test
-4. What to do once I find the bad commit
-5. How to safely fix the problem (revert vs fix-forward)
+Design a change tracking system that:
+- Makes it clear WHO changed WHAT and WHEN
+- Keeps a "known good" version that is always complete and correct
+- Gives each student a safe space to try changes without breaking
+  the main document
+- Requires someone to review changes before they become part of
+  the main version
+- Lets the team undo a specific change if it turns out to be wrong
 
-Then explain: why does atomic commit discipline make this process
-faster and more effective than if all 50 commits were giant
-"weekly update" commits?
+Describe the system using everyday language — folders, labels,
+review steps, and rules. Then explain: what goes wrong if the team
+skips the review step? What goes wrong if everyone edits the
+main document directly?
 ```
 
-**What you're learning:** Git as an investigative tool, not just a storage tool. Binary search through history only works when commits are atomic — each commit is a single hypothesis to test. This is exactly how James found his international shipping bug: bisect narrowed fifty commits to the one AI-generated change that introduced a rounding error. Giant commits make bisect useless because even finding the bad commit does not tell you which of its two hundred changes caused the problem.
+**What you're learning:** Version control as a collaboration protocol. The system you design — with a protected main version, separate workspaces, and review gates — mirrors exactly how professional teams use git. The review step is the trust boundary: work freely in your own space, but changes must be checked before they reach the shared version. This is the workflow Emma taught James: isolate work, review before merging, keep the main version always stable.
+
+### Prompt 3: Investigate a Mystery Using History
+
+```
+You are the editor of your school newspaper. Last month's issue was great.
+This month's issue has three problems: a headline with a typo, a photo
+with the wrong caption, and a paragraph that contradicts an earlier article.
+
+You have 20 versions of the document saved over the past month, each with
+a label describing what changed and why.
+
+Walk me through how you would use the version history to:
+1. Find WHEN each problem was introduced (which version?)
+2. Find WHO made each change and WHY they made it
+3. Decide for each problem: should you undo the change entirely,
+   or fix it forward with a new edit?
+4. Prevent these problems from happening in next month's issue
+
+Then explain: why is this investigation IMPOSSIBLE if all 20 versions
+were labeled "update", "edits", "final", "final2", "done"?
+```
+
+**What you're learning:** Version history as an investigative tool, not just a storage tool. Searching through history to find when something broke only works when each version is a meaningful record. This is exactly how James found his shipping bug — tracing through well-labeled commits to find the one that introduced the error. Meaningless labels like "update" make the investigation impossible, just as James's `wip` commits made his post-mortem impossible.
+
+---
+
+## PRIMM-AI+ Practice: Version Control is Memory
+
+### Predict [AI-FREE]
+
+Close your AI assistant. You have 5 versions of a school essay saved as:
+
+1. `essay.docx`
+2. `essay_final.docx`
+3. `essay_FINAL_v2.docx`
+4. `essay_REAL_final.docx`
+5. `essay_submitted.docx`
+
+Your teacher asks: _"What changed between version 2 and version 4? And WHY did you make those changes?"_
+
+Predict:
+
+- Can you answer the teacher's question from the filenames alone?
+- What information is missing that would let you answer?
+- How many of these files might actually be identical?
+
+Write your answers. Rate your confidence from 1 to 5.
+
+### Run
+
+Ask your AI assistant: _"What is wrong with naming files 'final_v2_REAL_final'? What information should each version of a document record to be useful as a history?"_
+
+Compare. Did the AI identify the same missing information you did?
+
+<details>
+<summary>**Answer Key: What to Look For**</summary>
+
+The AI should identify several problems with "final_v2_REAL_final" naming:
+
+- **No record of WHAT changed**: The filenames say "final" and "v2" but nothing about what was actually different between versions. Was it a new introduction? A restructured argument? Fixed citations?
+- **No record of WHY it changed**: Did the teacher give feedback? Did you find a better source? Did you change your thesis? The filenames carry zero reasoning.
+- **Possible duplicates**: Some "versions" might be identical — you cannot tell from the names alone. You might have 5 files but only 3 actual changes.
+- **No ordering guarantee**: Is "FINAL_v2" newer than "REAL_final"? The naming gives no reliable sequence.
+- **Useful history needs**: Each version should record what changed, why it changed, and when — like a journal, not just a stack of copies.
+
+If your prediction matched on at least 3 of these points, your instinct for what makes history useful is strong. If the AI caught something you missed, note which gap in your thinking it reveals.
+
+</details>
+
+### Investigate
+
+Write in your own words why recording WHAT changed and WHY for each version is more valuable than just saving copies with different names. What can you do with a meaningful version history that you cannot do with a pile of files named "final_v2"?
+
+Now connect this to James's story. His post-mortem failed for exactly the same reason your essay filenames fail — the history _existed_ (he had three commits; you have five files) but it _told him nothing_. His team lead asked "What was the original bug?" and James could not answer, just as your teacher asks "What changed between version 2 and version 4?" and you cannot answer. In both cases, the problem is not missing saves — it is missing _reasoning_. Every version without a "why" is a memory with amnesia.
+
+Apply the **Error Taxonomy**: every commit message is a **specification** of what changed and why. "wip" and "final*v2" are **specification errors** — they look like specifications (a commit message \_should* describe the change) but they specify nothing. When the teacher asks "what changed between v2 and v4?", the missing specification makes the question unanswerable. The history exists, but the specifications are empty. Compare this to a test that says `assert result == True` without stating _what_ result is expected — the form of a specification is there, but the content is missing.
+
+Now go deeper: imagine your teacher not only asks what changed, but asks you to **undo version 3** because it introduced a mistake. With "essay_FINAL_v2.docx" naming, can you do that safely? What information would you need in each version's record to make a selective undo possible? Connect this to James's post-mortem — his team wanted to undo one specific change, but "fix stuff" told them nothing about what that change contained.
+
+### Modify
+
+Rewrite these 5 file versions as meaningful save points. For each one, write **one sentence** explaining WHY the change was made:
+
+1. `essay.docx` → Version 1: \_\_\_
+2. `essay_final.docx` → Version 2: \_\_\_
+3. `essay_FINAL_v2.docx` → Version 3: \_\_\_
+4. `essay_REAL_final.docx` → Version 4: \_\_\_
+5. `essay_submitted.docx` → Version 5: \_\_\_
+
+For example: _"Version 2: Rewrote introduction to use a personal anecdote because teacher said the opening was too generic."_
+
+### Make [Mastery Gate]
+
+Think of a project you have worked on — an essay, a presentation, a design, a plan. Write a version history with 4-5 entries. Each entry must include:
+
+- **What changed** (be specific — "rewrote the conclusion" not "made edits")
+- **Why it changed** (what motivated the change — feedback? new idea? mistake found?)
+- **The date** (approximate is fine)
+
+This version history is your mastery gate. Someone reading it should understand the full evolution of your project — not just the final result, but the journey that produced it and the reasoning behind each change.
 
 ---
 
@@ -702,6 +818,7 @@ export DATABASE_URL="postgresql://user:pass@host/db"
 ```
 
 If you accidentally commit a secret, as James did:
+
 1. **Rotate the credential immediately** — assume it is compromised
 2. Remove from current files and commit the removal
 3. For sensitive repositories, use `git filter-branch` or BFG Repo-Cleaner to purge from history
@@ -725,6 +842,6 @@ James's post-mortem failed because his git history was a collection of `wip` mes
 
 ## Looking Ahead
 
-Your shell orchestrates programs. Your knowledge lives in markdown. Your programs have types, tests, and relational data. Your systems are composed from focused units. Your git history records every decision. But how do you know that all of these pieces actually work *together*? James had tests for individual functions, but nothing that verified the full pipeline: data enters the system, flows through discount calculation, passes through shipping, produces an invoice, and sends a confirmation. Each piece worked in isolation. The pipeline had never been tested end-to-end.
+Your shell orchestrates programs. Your knowledge lives in markdown. Your programs have types, tests, and relational data. Your systems are composed from focused units. Your git history records every decision. But how do you know that all of these pieces actually work _together_? James had tests for individual functions, but nothing that verified the full pipeline: data enters the system, flows through discount calculation, passes through shipping, produces an invoice, and sends a confirmation. Each piece worked in isolation. The pipeline had never been tested end-to-end.
 
 In Axiom IX, you will discover that verification is not a single step — it is a pipeline, and every stage must pass before you trust the whole.

@@ -5,7 +5,7 @@ sidebar_position: 0
 
 # Section IV — The Growth Engine
 
-### Chapter 23: Scaling the Judgment of Your Top 1% Across the Entire Organisation
+### Chapter 34: Scaling the Judgment of Your Top 1% Across the Entire Organisation
 
 Section IV addresses the function that determines whether an enterprise grows or stagnates: go-to-market execution. Sales and marketing are domains where AI leverage is exceptionally high, because the core activities — identifying the right prospects, crafting the right message, analysing campaign performance — are pattern-recognition and personalisation tasks at which large language models excel.
 
@@ -13,4 +13,4 @@ The central insight of this section is a reframing: AI does not replace salespeo
 
 | #   | Chapter                   | Key Focus                                                      |
 | --- | ------------------------- | -------------------------------------------------------------- |
-| 23  | Sales, RevOps & Marketing | Prospecting, CRM enrichment, campaign optimisation _(Planned)_ |
+| 34  | Sales, RevOps & Marketing | Prospecting, CRM enrichment, campaign optimisation _(Planned)_ |

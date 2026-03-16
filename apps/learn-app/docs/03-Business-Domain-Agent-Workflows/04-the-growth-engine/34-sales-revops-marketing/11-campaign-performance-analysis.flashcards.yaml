@@ -1,0 +1,110 @@
+deck:
+  id: "ch34-11-performance-analysis"
+  title: "Campaign Performance Analysis"
+  description: "Performance reporting, ICP-filtered analysis, competitive briefs, and the weekly review cadence"
+  tags: ["sales", "revops", "marketing", "chapter-34", "performance"]
+  version: 1
+
+cards:
+  - id: "ch34-11-performance-analysis-001"
+    front: "What is the difference between observation-only reporting and actionable analysis?"
+    back: "Observation says 'CTR is 0.72%.' Actionable analysis says 'CTR is above the local Pakistan benchmark of 0.65% — the real problem is that 43% of downloads come from non-ICP contacts.'"
+    difficulty: "intermediate"
+    tags: ["actionable-analysis"]
+
+  - id: "ch34-11-performance-analysis-002"
+    front: "What three dimensions does the extension's performance-analysis skill add that the base /performance-report does not?"
+    back: "1. ICP-filtered lead quality analysis\n2. Regional benchmark comparison\n3. Three-dimension scoring integration (Fit/Timing/Engagement)"
+    difficulty: "basic"
+    tags: ["base-vs-extension"]
+
+  - id: "ch34-11-performance-analysis-003"
+    front: "The base report flags LinkedIn CTR at 0.72% as below the 0.80% target. Why does the extension disagree?"
+    back: "The base used a global benchmark (0.80%). The extension applied the local Pakistan B2B benchmark (0.65%), showing CTR is actually above the relevant benchmark. The global target was wrong for this market."
+    difficulty: "intermediate"
+    why: "What other metrics might be misjudged by applying global benchmarks to regional markets?"
+    tags: ["regional-benchmarks"]
+
+  - id: "ch34-11-performance-analysis-004"
+    front: "In NexaFlow's Week 5 data, 57% of whitepaper downloads are ICP-matched. Why is this a problem?"
+    back: "57% is below the 70% benchmark for targeted campaigns, meaning 43% of budget is spent reaching people the sales team will never work. LinkedIn targeting parameters may be too broad."
+    difficulty: "intermediate"
+    tags: ["icp-filtering"]
+
+  - id: "ch34-11-performance-analysis-005"
+    front: "What three questions should you ask before acting on any performance recommendation?"
+    back: "1. Is it specific enough to execute?\n2. Is the expected impact realistic?\n3. Can the team actually execute this?"
+    difficulty: "basic"
+    tags: ["recommendation-evaluation"]
+
+  - id: "ch34-11-performance-analysis-006"
+    front: "A recommendation says to pitch 2 trade press articles this week, but Zara is already at 3 content calendar entries. How should you respond?"
+    back: "Iterate: spread the pitches across two weeks (one per week) to match team capacity. Then ask the agent for the adjusted timeline to reaching the target."
+    difficulty: "intermediate"
+    why: "Why should performance recommendations be tested against team capacity before execution?"
+    tags: ["team-capacity"]
+
+  - id: "ch34-11-performance-analysis-007"
+    front: "What does /competitive-brief produce?"
+    back: "Positioning intelligence about a competitor: their key messages, content strategy, and messaging gaps that your campaign can exploit."
+    difficulty: "basic"
+    tags: ["competitive-brief"]
+
+  - id: "ch34-11-performance-analysis-008"
+    front: "LogiFlow avoids the AI conversation and leads with compliance. How does NexaFlow exploit this positioning gap?"
+    back: "NexaFlow positions AI automation as the differentiator LogiFlow lacks and frames itself as 'purpose-built for growing 3PLs, not retrofitted enterprise software' — countering LogiFlow's enterprise-and-compliance angle."
+    difficulty: "intermediate"
+    tags: ["competitive-positioning"]
+
+  - id: "ch34-11-performance-analysis-009"
+    front: "What is the Monday-Wednesday-Friday weekly review cadence?"
+    back: "Monday: channel metrics vs thresholds.\nWednesday: sales + marketing align on lead quality.\nFriday: full /performance-report with 3 recommendations."
+    difficulty: "basic"
+    tags: ["weekly-cadence"]
+
+  - id: "ch34-11-performance-analysis-010"
+    front: "Why does Monday's channel check happen before Friday's full report?"
+    back: "Monday catches any channel that hit a pause threshold immediately, before spending another week of budget. Friday needs a full week of data for comprehensive analysis, so the quick threshold scan must happen first."
+    difficulty: "intermediate"
+    why: "What is the financial cost of waiting until Friday to discover a channel exceeded its pause threshold on Monday?"
+    tags: ["weekly-cadence"]
+
+  - id: "ch34-11-performance-analysis-011"
+    front: "Why is Wednesday's sales-marketing alignment meeting critical for scoring accuracy?"
+    back: "Sales provides feedback on which HOT leads actually converted to meetings and which were dead ends. This feedback corrects the scoring model and ICP calibration — without it, marketing optimises for volume while sales complains about quality."
+    difficulty: "intermediate"
+    why: "What happens to lead scoring accuracy over time without a sales feedback loop?"
+    tags: ["sales-marketing-alignment"]
+
+  - id: "ch34-11-performance-analysis-012"
+    front: "The extension shows that Timing is the weakest scoring dimension for NexaFlow's 18 HOT leads. What does this mean operationally?"
+    back: "Leads match the ICP and engage with content, but few show active buying signals (fleet expansion, hiring, new warehouse). These leads may convert in Q3, not Q2. Add timing-signal enrichment to the top 10."
+    difficulty: "advanced"
+    why: "How would you distinguish a lead with low Timing from one that will never buy?"
+    tags: ["timing-dimension"]
+
+  - id: "ch34-11-performance-analysis-013"
+    front: "Why is competitive positioning market-specific rather than universal?"
+    back: "The same company needs different messaging in different markets. In Karachi, NexaFlow differentiates on AI automation. In Leeds, Meridian's competitors lead with post-Brexit customs compliance, where regulatory credibility matters more than AI capability."
+    difficulty: "advanced"
+    why: "How would you structure a competitive brief that covers multiple markets simultaneously?"
+    tags: ["competitive-positioning"]
+
+  - id: "ch34-11-performance-analysis-014"
+    front: "What is the email click rate problem in NexaFlow's Week 5 data, and what is the recommended fix?"
+    back: "Open rate is strong (28%) but click rate is weak (1.8% vs 3% benchmark). Recipients read emails but do not click CTAs. Fix: rewrite CTAs with specific value propositions instead of generic 'Learn more.'"
+    difficulty: "intermediate"
+    tags: ["email-optimisation"]
+
+  - id: "ch34-11-performance-analysis-015"
+    front: "How does the Monday-Wednesday-Friday cadence connect to L13's RevOps dashboard?"
+    back: "Lead Intelligence Agent and Revenue Reporting Agent replace much of Monday's manual metric review. The `pipeline` skill or `/pipeline-review` sharpens Wednesday's alignment meeting. Friday's `/performance-report` stays human-driven because recommendations need domain judgment."
+    difficulty: "intermediate"
+    tags: ["revops-connection"]
+
+  - id: "ch34-11-performance-analysis-016"
+    front: "NexaFlow's cost per HOT lead is $520, above the $500 target. Why might this not require immediate action?"
+    back: "The $20 overage is marginal and within normal variance. The more important metric is whether those HOT leads are ICP-matched — a $520 ICP-matched lead is more valuable than a $380 non-ICP lead."
+    difficulty: "advanced"
+    why: "When should you prioritise lead quality metrics over cost metrics?"
+    tags: ["cost-metrics"]

@@ -86,6 +86,7 @@ You own **Chapter 5: Communicating What Matters** and **Chapter 6: Working With 
 - **Ch 6 Ex1** (Three-Path Comparison) produces three separate deliverables that must be compared — make the deliverable structure crystal clear (three distinct sections: Solo Work, Pure AI, Collaboration)
 - **Ch 6** is the **pivot chapter** of Part 0 — it shifts from "thinking without AI" to "thinking with AI." The chapter intro should frame this transition clearly.
 - **Collaboration Log** is a reusable format — present it as a template that students will use repeatedly
+- **No scenario duplication**: For any exercise with a Scenario Selector (Tabs), the "What You Do" section must use GENERIC instructions without specific scenario text. Scenario details appear ONLY inside the Tabs — the reader encounters them there for the first time.
 
 ## Exit Criteria
 
@@ -98,4 +99,5 @@ You own **Chapter 5: Communicating What Matters** and **Chapter 6: Working With 
 - [ ] Solo Learner Alternatives in `:::tip` admonitions
 - [ ] Chapter Deliverables in `:::info` at end of Exercise 4 files
 - [ ] Grading Criteria in `<details>` collapsibles
+- [ ] No scenario text duplicated above Tabs — "What You Do" uses generic instructions only
 - [ ] No emojis in output

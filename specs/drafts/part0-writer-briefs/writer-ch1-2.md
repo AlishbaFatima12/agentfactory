@@ -92,6 +92,7 @@ You own **Chapter 1: Asking Better Questions** and **Chapter 2: Detecting Broken
 ## Chapter-Specific Patterns
 
 - **Ch 1 Ex1 and Ch 2 Ex1** both use Scenario Selectors (Tabs) — need MDX imports
+- **No scenario duplication**: The "What You Do" section must use GENERIC instructions (no specific scenario text). Scenario details appear ONLY inside the Tabs. The source draft includes specific scenario text in the "What You Do" prose — strip it out and keep instructions scenario-agnostic so the reader encounters the scenario for the first time inside the Tabs.
 - **Ch 1** has the heaviest deliverable template (Prediction Lock Template) — use `<details>` collapsible
 - **Ch 2 Ex2** has three-draft structure — make sure Draft 1/2/3 progression is clear in deliverable requirements
 - **Error Taxonomy** in Ch 2 Ex1 should be presented as a definition list or table, not buried in prose
@@ -100,6 +101,7 @@ You own **Chapter 1: Asking Better Questions** and **Chapter 2: Detecting Broken
 
 - [ ] All 8 files created with full YAML frontmatter
 - [ ] Scenario Selectors use proper `<Tabs>` component with correct imports
+- [ ] No scenario text duplicated above the Tabs — "What You Do" uses generic instructions only
 - [ ] All AI Check prompts in code blocks verbatim from source
 - [ ] All Building On references use correct relative links
 - [ ] Error Taxonomy clearly presented (table format recommended)

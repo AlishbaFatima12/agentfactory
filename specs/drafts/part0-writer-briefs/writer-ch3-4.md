@@ -87,6 +87,7 @@ You own **Chapter 3: Thinking in Systems** and **Chapter 4: Reasoning From First
 - **Variable Shift** (Ch 3 Ex3) tests what happens when you change one variable in a system — the three-draft structure (before shift, after shift, reflection) should be clearly delineated
 - **Blank Page Derivation** (Ch 4 Ex1) is the constraint where students derive something from scratch with NO reference material — emphasize the "no AI, no references" constraint
 - **Assumption Autopsy** (Ch 4 Ex3) has a unique deliverable: a merged assumption map with categories (a) found by you only, (b) found by AI only, (c) found by both, (d) found by neither but identified during merge
+- **No scenario duplication**: For any exercise with a Scenario Selector (Tabs), the "What You Do" section must use GENERIC instructions without specific scenario text. Scenario details appear ONLY inside the Tabs — the reader encounters them there for the first time.
 
 ## Exit Criteria
 
@@ -98,4 +99,5 @@ You own **Chapter 3: Thinking in Systems** and **Chapter 4: Reasoning From First
 - [ ] Solo Learner Alternatives in `:::tip` admonitions where present
 - [ ] Chapter Deliverables in `:::info` at end of Exercise 4 files
 - [ ] Grading Criteria in `<details>` collapsibles
+- [ ] No scenario text duplicated above Tabs — "What You Do" uses generic instructions only
 - [ ] No emojis in output

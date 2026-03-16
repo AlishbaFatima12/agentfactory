@@ -1,0 +1,97 @@
+deck:
+  id: "ch30-01-consequential-ai-transformation"
+  title: "The Most Consequential AI Transformation"
+  description: "Five CA/CPA domains, three structural risk factors, and the Gen-AI vs Agentic AI distinction"
+  tags: ["ca-cpa", "ai-transformation", "five-domains", "gen-ai", "agentic-ai"]
+  version: 1
+  lesson: 1
+  chapter: 30
+
+cards:
+  - id: "ch30-01-consequential-ai-transformation-001"
+    front: "What are the three structural reasons the CA/CPA profession faces higher AI stakes than most other knowledge work?"
+    back: "1. Severe regulatory and legal consequences of error\n2. Enormous volume of routine, rule-based work\n3. Agentic AI transition already in production"
+    tags: ["structural-reasons", "ca-cpa", "ai-risk"]
+    difficulty: "basic"
+
+  - id: "ch30-01-consequential-ai-transformation-002"
+    front: "How does Generative AI differ from Agentic AI in CA/CPA practice?"
+    back: "Gen-AI: one interaction at a time, human provides every input. Agentic AI: takes a goal, executes multi-step workflows autonomously across tools and data sources."
+    tags: ["gen-ai", "agentic-ai", "distinction"]
+    difficulty: "basic"
+
+  - id: "ch30-01-consequential-ai-transformation-003"
+    front: "Which CA/CPA practice domain is ranked highest for AI transformation impact?"
+    back: "Accounting and Financial Reporting"
+    tags: ["five-domains", "impact-ranking"]
+    difficulty: "basic"
+
+  - id: "ch30-01-consequential-ai-transformation-004"
+    front: "Which domain is ranked lowest in the five-domain AI impact ranking?"
+    back: "Governance, Risk and Compliance Advisory"
+    tags: ["five-domains", "impact-ranking"]
+    difficulty: "basic"
+
+  - id: "ch30-01-consequential-ai-transformation-005"
+    front: "Name all five CA/CPA practice domains in rank order of AI impact, from highest to lowest."
+    back: "1. Accounting and Financial Reporting\n2. Tax and Non-Assurance Advisory\n3. Assurance Services\n4. Management Accounting and Financial Management\n5. Governance, Risk and Compliance Advisory"
+    tags: ["five-domains", "impact-ranking"]
+    difficulty: "intermediate"
+
+  - id: "ch30-01-consequential-ai-transformation-006"
+    front: "Name three production AI platforms that evidence the agentic AI transition is already underway in CA/CPA practice."
+    back: "SAP Joule, KPMG Clara, Thomson Reuters CoCounsel"
+    tags: ["real-world-platforms", "agentic-ai"]
+    difficulty: "intermediate"
+
+  - id: "ch30-01-consequential-ai-transformation-007"
+    front: "Why does the CA/CPA profession face higher AI stakes from Agentic AI than from Gen-AI specifically?"
+    back: "Regulatory frameworks assume human professional decision-making at every step. Agentic AI executes autonomously, bypassing this model. Gen-AI still requires human initiation and review at each interaction."
+    tags: ["agentic-ai", "regulatory-risk", "professional-judgment"]
+    difficulty: "intermediate"
+    why: "What specific liability attaches when an agentic AI makes an error in a tax filing that a human professional would have caught?"
+
+  - id: "ch30-01-consequential-ai-transformation-008"
+    front: "A CA/CPA firm argues AI risk is the same for their practice as for a marketing agency. Why is this wrong?"
+    back: "In CA/CPA practice, AI errors carry regulatory penalties and professional liability — a wrong tax computation violates FBR rules, a missed audit risk triggers legal consequences. Marketing errors lack this severity."
+    tags: ["regulatory-consequences", "professional-liability"]
+    difficulty: "intermediate"
+    why: "Which of the three structural reasons is most unique to CA/CPA versus other knowledge work?"
+
+  - id: "ch30-01-consequential-ai-transformation-009"
+    front: "Why does the enormous volume of routine CA/CPA work create both opportunity and existential concern simultaneously?"
+    back: "Routine, rule-based tasks are exactly where AI excels, enabling massive efficiency gains. But if that work disappears from the profession, it raises a genuine question about the future composition and size of CA/CPA practice."
+    tags: ["routine-work-volume", "profession-future"]
+    difficulty: "advanced"
+    why: "How does the composition of CA/CPA work shift once the routine execution layer is automated?"
+
+  - id: "ch30-01-consequential-ai-transformation-010"
+    front: "Pakistan regulatory bodies: which governs tax, which governs corporate regulation, and which sets professional standards for CAs?"
+    back: "Tax: FBR (Federal Board of Revenue). Corporate: SECP. Professional standards: ICAP (Institute of Chartered Accountants of Pakistan)."
+    tags: ["pakistan-regulatory", "global-perspective"]
+    difficulty: "basic"
+
+  - id: "ch30-01-consequential-ai-transformation-011"
+    front: "Classifying CA/CPA tasks: is 'drafting a tax research memo using Claude' Gen-AI or Agentic AI?"
+    back: "Gen-AI — one interaction at a time, human provides the question, AI drafts the response, human reviews and decides next step."
+    tags: ["gen-ai", "classification"]
+    difficulty: "intermediate"
+
+  - id: "ch30-01-consequential-ai-transformation-012"
+    front: "Classifying CA/CPA tasks: is 'a compliance agent that files regulatory returns automatically when they fall due' Gen-AI or Agentic AI?"
+    back: "Agentic AI — the agent takes a goal, executes multi-step workflows autonomously, files without human prompting at each step."
+    tags: ["agentic-ai", "classification"]
+    difficulty: "intermediate"
+
+  - id: "ch30-01-consequential-ai-transformation-013"
+    front: "How does chapter 19 use the five-domain framework across Lessons 2-16?"
+    back: "Lessons 2-6 analyse AI impact per domain. Lessons 7-10 deploy Cowork and build Cowork skills. Lessons 11-16 are practice labs, capstones, and full deployment."
+    tags: ["chapter-structure", "five-domains"]
+    difficulty: "basic"
+
+  - id: "ch30-01-consequential-ai-transformation-014"
+    front: "Why is understanding the Gen-AI vs Agentic AI distinction described as 'the essential first step' before examining any CA/CPA domain?"
+    back: "Each represents architecturally different systems with different risk profiles. Confusing them causes practitioners to misunderstand both the opportunity and the regulatory compliance challenge."
+    tags: ["gen-ai", "agentic-ai", "risk-profile"]
+    difficulty: "intermediate"
+    why: "What happens at a firm level if practitioners deploy Agentic AI without understanding how it differs from Gen-AI?"

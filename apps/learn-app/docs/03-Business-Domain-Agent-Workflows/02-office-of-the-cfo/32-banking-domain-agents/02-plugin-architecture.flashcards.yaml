@@ -1,0 +1,97 @@
+deck:
+  id: "ch32-02-plugin-architecture"
+  title: "The Banking Plugin Architecture"
+  description: "Key concepts from the banking plugin's 17-skill architecture — pillar-aware routing, skill chaining, domain commands, and the separation of concerns between router and product skills."
+  tags: ["banking-plugin", "architecture", "routing", "skill-chaining"]
+  version: 1
+
+cards:
+  - id: "ch32-02-plugin-architecture-001"
+    front: "How many total skills does the banking plugin contain, and how are they divided?"
+    back: "17 skills: 1 router + 16 product skills."
+    tags: ["banking-plugin", "skill-library"]
+    difficulty: "basic"
+
+  - id: "ch32-02-plugin-architecture-002"
+    front: "A regulator asks about CET1 impact of an IFRS 9 provision increase. Why must the router chain two skills rather than loading one?"
+    back: "The query spans two pillars. The IFRS 9 skill calculates the provision impact, then its output becomes the Basel skill's input to recalculate the CET1 ratio. Neither skill alone has both capabilities."
+    tags: ["cross-pillar", "skill-chaining", "routing"]
+    difficulty: "intermediate"
+    why: "What would happen if the skills ran in parallel instead of in dependency order?"
+
+  - id: "ch32-02-plugin-architecture-003"
+    front: "What are the four domain commands in the banking plugin, and which pillar does each target?"
+    back: "/bank-ecl (IFRS 9)\n/bank-capital (Basel)\n/bank-recon (Reconciliation)\n/bank-aml (AML)"
+    tags: ["domain-commands", "banking-plugin"]
+    difficulty: "basic"
+
+  - id: "ch32-02-plugin-architecture-004"
+    front: "How does the banking router's routing dimension differ from the Islamic finance router in Chapter 31?"
+    back: "The banking router routes by pillar (IFRS 9 vs Basel vs AML), while the Islamic finance router routes by jurisdiction (Bahrain vs Malaysia vs UK). Both use the same architectural pattern of context detection and specialised skill loading."
+    tags: ["routing", "pillar-aware", "architecture"]
+    difficulty: "intermediate"
+    why: "Could a banking plugin also need jurisdiction-aware routing within a single pillar?"
+
+  - id: "ch32-02-plugin-architecture-005"
+    front: "Name the three steps in the banking router's routing protocol?"
+    back: "1. Detect the pillar\n2. Load the skill chain\n3. Apply hooks"
+    tags: ["routing-protocol", "router"]
+    difficulty: "basic"
+
+  - id: "ch32-02-plugin-architecture-006"
+    front: "Why do the four domain commands exist if the router handles the same queries automatically?"
+    back: "Commands guarantee the correct skill chain loads without requiring the router to parse the query. They are convenience shortcuts that bypass routing ambiguity, ensuring the right pillar is selected immediately."
+    tags: ["domain-commands", "routing"]
+    difficulty: "intermediate"
+    why: "When would a professional prefer using the router over a direct command?"
+
+  - id: "ch32-02-plugin-architecture-007"
+    front: "What does the PostToolUse hook validate in the banking plugin?"
+    back: "It validates that output uses correct regulatory terminology (e.g., 'Expected Credit Loss' not 'Allowance for Loan Losses'; 'CET1' and 'RWA' not informal terms)."
+    tags: ["hooks", "postToolUse", "terminology"]
+    difficulty: "intermediate"
+
+  - id: "ch32-02-plugin-architecture-008"
+    front: "If a query mentions 'ECL,' 'provision,' and 'CET1' simultaneously, how does the router classify it?"
+    back: "As a cross-pillar query spanning IFRS 9 (ECL, provision) and Basel (CET1). The router chains the relevant skills in dependency order rather than loading a single skill."
+    tags: ["cross-pillar", "signal-detection", "routing"]
+    difficulty: "intermediate"
+    why: "Why must the router load IFRS 9 skills before Basel skills in this scenario?"
+
+  - id: "ch32-02-plugin-architecture-009"
+    front: "How many product skills does the IFRS 9 pillar contain, and what are they?"
+    back: "4 skills: ifrs9-ecl, ifrs9-staging, ifrs9-scenarios, ifrs9-disclosure."
+    tags: ["ifrs9", "skill-library"]
+    difficulty: "basic"
+
+  - id: "ch32-02-plugin-architecture-010"
+    front: "What does the SessionStart hook do when a query says 'calculate the provision' without specifying IFRS 9 or US CECL?"
+    back: "The hook asks a clarifying question because it cannot determine the pillar. Like the Islamic finance router, it never defaults -- it requires explicit context before proceeding."
+    tags: ["hooks", "sessionStart", "routing"]
+    difficulty: "intermediate"
+    why: "Why is defaulting to IFRS 9 dangerous even though it covers 140+ countries?"
+
+  - id: "ch32-02-plugin-architecture-011"
+    front: "What is the name of the router that sits above all 16 product skills in the banking plugin?"
+    back: "banking-global-router."
+    tags: ["router", "banking-plugin"]
+    difficulty: "basic"
+
+  - id: "ch32-02-plugin-architecture-012"
+    front: "In the monthly IFRS 9 ECL workflow, what are the six steps from staging to capital impact?"
+    back: "1. Classify exposures into stages\n2. Calculate PD, LGD, EAD\n3. Apply macro scenarios\n4. Calculate final ECL\n5. Draft disclosure notes\n6. Assess capital impact"
+    tags: ["ecl-workflow", "ifrs9", "monthly"]
+    difficulty: "intermediate"
+
+  - id: "ch32-02-plugin-architecture-013"
+    front: "Why does the banking plugin separate calculation logic from routing logic instead of combining them?"
+    back: "Separation of concerns enables adding new skills without modifying existing ones. The router handles context detection while product skills handle domain calculations, so each can evolve independently."
+    tags: ["architecture", "separation-of-concerns"]
+    difficulty: "advanced"
+    why: "How would adding a new regulatory pillar (e.g., ESG reporting) affect the existing architecture?"
+
+  - id: "ch32-02-plugin-architecture-014"
+    front: "How many product skills does the Basel pillar contain in the banking plugin?"
+    back: "6 skills: basel-capital, basel-rwa-credit, basel-rwa-market, liquidity-lcr, liquidity-nsfr, stress-testing."
+    tags: ["basel", "skill-library"]
+    difficulty: "basic"

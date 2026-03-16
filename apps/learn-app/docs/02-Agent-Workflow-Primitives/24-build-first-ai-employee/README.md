@@ -1,0 +1,87 @@
+---
+sidebar_position: 24
+title: "Chapter 24: Project - Build Your AI Employee"
+---
+
+# Chapter 24: Project - Build Your AI Employee
+
+**You've learned the pieces. Now build something real.**
+
+This is a **project**. You'll build a working AI Employee for YOUR profession using [NanoClaw](https://github.com/qwibitai/nanoclaw) — the same tool you set up in the "NanoClaw Hands-On Setup" lesson from "Meet Your First AI Employee - OpenClaw". No new installations, no architecture lectures. Just challenges, acceptance criteria, and your professional expertise.
+
+## Prerequisites
+
+- **"NanoClaw Hands-On Setup" complete** (from "Meet Your First AI Employee - OpenClaw"): NanoClaw installed, running, WhatsApp connected
+- **Layer 3 design from "NanoClaw Hands-On Setup"**: Your blueprint with 3+ Agent Skills and 3+ MCP servers for your profession
+- **Part 2 foundations complete**: File Processing, Computation and Data Extraction, Structured Data and Persistent Storage, Linux Mastery, and Version Control
+
+## Three Achievement Tiers
+
+| Tier       | Path                                                            | Time     | What You Get                                                                   |
+| ---------- | --------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------ |
+| **Bronze** | The Project Brief through Bronze Capstone: First Real Day       | ~3 hours | Working AI Employee: identity + skill + connection + proof                     |
+| **Silver** | The Project Brief through Prove Professional Value              | ~6 hours | + autonomous monitoring + trust boundaries + persistent memory + domain report |
+| **Gold**   | The Project Brief through Prove Professional Value (Gold track) | ~9 hours | + multi-group architecture with isolation + memory isolation                   |
+
+Pick the tier that matches your available time and ambition. You can always come back for the next tier later.
+
+## Lessons
+
+### The Brief
+
+| Lesson                                         | Duration |
+| ---------------------------------------------- | -------- |
+| [The Project Brief](./00-the-project-brief.md) | 20 min   |
+
+### Bronze Tier: Working AI Employee
+
+| Lesson                                                                           | Duration |
+| -------------------------------------------------------------------------------- | -------- |
+| [Give Your Employee an Identity](./01-give-your-employee-an-identity.md)         | 30 min   |
+| [Teach Your Employee a Skill](./02-teach-your-employee-a-skill.md)               | 40 min   |
+| [Connect Your Employee to the World](./03-connect-your-employee-to-the-world.md) | 35 min   |
+| [Bronze Capstone: First Real Day](./04-bronze-capstone-first-real-day.md)        | 45 min   |
+
+### Silver Tier: Proactive + Trusted + Learning
+
+| Lesson                                                                   | Duration |
+| ------------------------------------------------------------------------ | -------- |
+| [Make Your Employee Proactive](./05-make-your-employee-proactive.md)     | 40 min   |
+| [Teach Your Employee Boundaries](./06-teach-your-employee-boundaries.md) | 40 min   |
+| [Give Your Employee a Memory](./07-give-your-employee-a-memory.md)       | 40 min   |
+| [Prove Professional Value](./08-capstone-prove-professional-value.md)    | 55 min   |
+
+### Project Review
+
+| Lesson                                   | Duration |
+| ---------------------------------------- | -------- |
+| [Project Review](./09-project-review.md) | 25 min   |
+
+## Student Deliverables (GitHub Repo)
+
+```
+nanoclaw-employee/
+├── groups/
+│   ├── global/CLAUDE.md               (shared rules)
+│   └── main/CLAUDE.md                 (profession-specific identity)
+├── .claude/skills/{domain-skill}/
+│   └── SKILL.md                       (from Layer 3 design)
+├── conversation-log.md                (Bronze: First Real Day)
+├── evaluation.md                      (Bronze: self-assessment)
+├── scheduler-config.md                (Silver: scheduled task design)
+├── hitl-boundaries.md                 (Silver: permission table)
+├── memory-config.md                   (Silver: action log + knowledge store schemas)
+└── domain-report-sample.md            (Silver: generated report)
+```
+
+Gold adds: 3-group config + isolation demo + system diagram + memory isolation test.
+
+## Design Philosophy
+
+This project doesn't teach NanoClaw — you already know it. Instead, each lesson gives you:
+
+1. **A challenge** with clear acceptance criteria
+2. **A use case gallery** with profession-specific examples
+3. **Graduated hints** (3 levels) for when you're stuck
+
+Your Layer 3 design from the "NanoClaw Hands-On Setup" lesson in "Meet Your First AI Employee - OpenClaw" is your blueprint. This project is where you execute it.

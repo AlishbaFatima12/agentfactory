@@ -1,0 +1,83 @@
+deck:
+  id: "ch31-02-global-standards-map"
+  title: "The Global Standards Map -- Three Regimes, One Transaction"
+  description: "Key concepts from the 20-jurisdiction standards map, three accounting regimes, four reference jurisdictions, and the murabaha comparison that makes jurisdiction variation concrete."
+  tags: ["islamic-finance", "standards-map", "accounting-regimes"]
+  version: 1
+
+cards:
+  - id: "ch31-02-global-standards-map-001"
+    front: "How many jurisdictions does the Global Standards Map cover, and what must an agent determine from it before producing output?"
+    back: "20 jurisdictions. The agent must determine which regime governs before producing any accounting output."
+    tags: ["standards-map", "routing"]
+    difficulty: "basic"
+
+  - id: "ch31-02-global-standards-map-002"
+    front: "Which jurisdictions belong to Regime 1 (AAOIFI Primary)?"
+    back: "Bahrain, Qatar, Sudan, and partially Jordan and Pakistan."
+    tags: ["regime-1", "aaoifi-primary"]
+    difficulty: "basic"
+
+  - id: "ch31-02-global-standards-map-003"
+    front: "Name any 4 of the Regime 2 (IFRS with Islamic guidance) jurisdictions."
+    back: "Malaysia, UAE, Saudi Arabia, Kuwait, UK, Turkey, Pakistan (listed entities), most of Africa."
+    tags: ["regime-2", "ifrs-islamic"]
+    difficulty: "intermediate"
+
+  - id: "ch31-02-global-standards-map-004"
+    front: "What characterises Regime 3 (Local Standards) jurisdictions?"
+    back: "A local standard-setter has issued standards incorporating both Islamic jurisprudence and local regulatory requirements, differing materially from both AAOIFI and IFRS."
+    tags: ["regime-3", "local-standards"]
+    difficulty: "intermediate"
+
+  - id: "ch31-02-global-standards-map-005"
+    front: "Why does having 20 different jurisdictions not require 20 separate routing paths in the agent?"
+    back: "The 20 jurisdictions resolve into three practical regimes based on their primary accounting framework. The agent routes by regime, then applies jurisdiction-specific labels through the overlay."
+    tags: ["routing", "three-regimes"]
+    difficulty: "intermediate"
+    why: "What additional jurisdiction-level detail does the overlay add beyond the regime classification?"
+
+  - id: "ch31-02-global-standards-map-006"
+    front: "Why is Bahrain considered the global reference case for AAOIFI accounting?"
+    back: "AAOIFI is headquartered in Bahrain, and the CBB requires all Islamic financial institutions to apply AAOIFI FAS as their primary framework. It is the purest AAOIFI jurisdiction."
+    tags: ["bahrain", "aaoifi", "reference-case"]
+    difficulty: "intermediate"
+    why: "How does Bahrain's status affect the way other jurisdictions benchmark their Islamic finance standards?"
+
+  - id: "ch31-02-global-standards-map-007"
+    front: "What primary standard does Malaysia use for Islamic finance, and what global distinction does it hold?"
+    back: "MFRS (substantively equivalent to IFRS). Malaysia is the world's most developed Islamic finance ecosystem outside the GCC and the global leader in sukuk issuance."
+    tags: ["malaysia", "mfrs", "sukuk"]
+    difficulty: "basic"
+
+  - id: "ch31-02-global-standards-map-008"
+    front: "Why does Pakistan straddle Regimes 1 and 2 instead of fitting neatly into one?"
+    back: "Pakistan uses IFRS as its primary accounting framework (Regime 2), but AAOIFI Shariah standards are mandatory via the SBP Shariah Governance Framework, and AAOIFI accounting is used supplementally. This creates a hybrid requiring IFRS measurement with AAOIFI-informed terminology."
+    tags: ["pakistan", "hybrid-regime"]
+    difficulty: "advanced"
+    why: "How does the Federal Shariat Court's 2028 riba elimination mandate add further complexity?"
+
+  - id: "ch31-02-global-standards-map-009"
+    front: "In the four-jurisdiction murabaha comparison, what income label does each jurisdiction use?"
+    back: "Bahrain: \"Murabaha Income\"\nMalaysia: \"Profit from Islamic Financing\"\nUK: \"Profit from Home Finance\"\nPakistan: \"Profit from Islamic Financing\""
+    tags: ["murabaha", "income-labels"]
+    difficulty: "intermediate"
+
+  - id: "ch31-02-global-standards-map-010"
+    front: "The murabaha comparison shows identical arithmetic across four jurisdictions. Why does the jurisdiction overlay still matter if the numbers are the same?"
+    back: "The compliance outcome depends on labels, classifications, and disclosures, not arithmetic. Using the wrong label (e.g., \"Interest Income\" in Bahrain) is a regulatory violation. The overlay is the compliance layer."
+    tags: ["compliance", "jurisdiction-overlay"]
+    difficulty: "advanced"
+    why: "Could an agent skip the overlay if it only needed to produce internal management reports?"
+
+  - id: "ch31-02-global-standards-map-011"
+    front: "What is the routing rule that every Islamic finance agent must follow before generating any journal entry?"
+    back: "Determine which regime applies first: \"I am in [Jurisdiction] under [Framework].\""
+    tags: ["routing-rule", "agent-design"]
+    difficulty: "basic"
+
+  - id: "ch31-02-global-standards-map-012"
+    front: "How does the UK handle Islamic finance taxation despite using IFRS for accounting?"
+    back: "HMRC has issued specific guidance ensuring Shariah-compliant structures are treated equivalently to conventional counterparts for tax purposes."
+    tags: ["uk", "hmrc", "tax-equivalence"]
+    difficulty: "intermediate"
