@@ -1,9 +1,9 @@
 ---
 sidebar_position: 0.6
-title: "Part 0 Prelude: Thinking is the Curriculum"
+title: "Part 0: Thinking is the Curriculum"
 ---
 
-# Part 0 Prelude: Thinking is the Curriculum
+# Part 0: Thinking is the Curriculum
 
 > _11 Chapters. 10 Skills. Every Exercise Requires You to Think Before AI Thinks for You._
 
@@ -11,7 +11,7 @@ title: "Part 0 Prelude: Thinking is the Curriculum"
 
 Millions of students can now generate essays, analyses, code, and business plans in seconds. Almost none of them can tell whether what AI produced is correct. They cannot ask the question that AI never thought to ask. They cannot spot the reasoning flaw buried in a fluent paragraph. They cannot look at a system and see the second-order consequence that breaks everything. They have the most powerful cognitive tool in human history — and no idea how to think with it.
 
-This is not their fault. They were never taught to think in a world where thinking can be outsourced. **Every AI curriculum on earth starts in the wrong place.** They start with tools. Prompts. APIs. Frameworks. They teach people to *operate* AI. Not one of them puts thinking first.
+This is not their fault. They were never taught to think in a world where thinking can be outsourced. **Every AI curriculum on earth starts in the wrong place.** They start with tools. Prompts. APIs. Frameworks. They teach people to _operate_ AI. Not one of them puts thinking first.
 
 **Part 0 puts thinking first.**
 
@@ -21,15 +21,15 @@ The rest of this book will make you powerful. This part determines whether you u
 
 **The Unsolved Problem**
 
-Every university, every bootcamp, every corporate training program is asking the same question: *If students have access to AI, how do we know they actually learned to think?*
+Every university, every bootcamp, every corporate training program is asking the same question: _If students have access to AI, how do we know they actually learned to think?_
 
 The honest answer, until now, has been: we don't.
 
 Some institutions ban AI. That is denial. Some allow AI and grade the output. That is grading AI, not the student. Some add oral exams on top. That helps, but does not scale.
 
-Part 0 is a different answer. It introduces **six assessment layers** — prediction locks, reasoning receipts, live defence, contradiction challenges, divergence tests, and iterative drafts — engineered so that passing all six *requires* genuine human thinking. No single layer is cheat-proof. All six together are. This is not a policy. It is an architecture.
+Part 0 is a different answer. It introduces **six assessment layers** — prediction locks, reasoning receipts, live defence, contradiction challenges, divergence tests, and iterative drafts — engineered so that passing all six _requires_ genuine human thinking. No single layer is cheat-proof. All six together are. This is not a policy. It is an architecture.
 
-**And it scales.** AI gives every student instant, personalized feedback on every exercise. Peer review circles add human judgment. Instructors intervene only on flagged cases. The result: rigorous thinking assessment for 16,000 students — with no multiple-choice exams, no essay mills, and no guesswork about who actually learned.
+**And it scales.** AI gives every student instant, personalized feedback on every exercise. Peer review circles add human judgment. Instructors intervene only on flagged cases. The result: rigorous thinking assessment for tens of thousands of students — with no multiple-choice exams, no essay mills, and no guesswork about who actually learned.
 
 Eleven chapters. Ten thinking skills. Forty exercises. One rule:
 
@@ -38,7 +38,6 @@ Eleven chapters. Ten thinking skills. Forty exercises. One rule:
 You will not be graded on what you produced. You will be graded on whether you can prove you thought.
 
 > _Part 0 teaches humans how to thrive in the AI era. The rest of the book builds the era itself._
-
 
 ## What You Need
 
@@ -207,7 +206,7 @@ Instead of a peer panel questioning your work, you submit your deliverable to AI
 The solo path is not inferior to the peer path — it is different. Peers provide unpredictability, social pressure, and perspectives you cannot anticipate. AI provides consistency, tirelessness, and the ability to generate adversarial challenges on demand. If possible, combine both.
 
 <details>
-<summary>How This Scales: Assessment for 16,000 Students (Instructor Reference)</summary>
+<summary>How This Scales: Assessment for Tens of Thousands of Students (Instructor Reference)</summary>
 
 **Tier 1 — AI First-Pass (every student, every exercise):**
 Every exercise includes an exact AI check prompt. The student submits their work, receives AI-generated scores and feedback, and includes this in their portfolio. This provides immediate, personalized feedback at unlimited scale. AI scores serve as the baseline assessment.
