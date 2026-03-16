@@ -31,7 +31,7 @@ apps/learn-app/docs/
 
 **Example from actual book** (Chapter 1: AI Development Revolution):
 ```
-01-Introducing-AI-Driven-Development/          # Part 1 (Title Case)
+01-General-Agents-Foundations/          # Part 1 (Title Case)
 ├── README.md                                   # Part intro (UPPERCASE)
 ├── 01-ai-development-revolution/               # Chapter 1 (lowercase)
 │   ├── readme.md                               # Chapter overview (LOWERCASE)
@@ -46,7 +46,7 @@ apps/learn-app/docs/
 ```
 
 **Key Rules**:
-- Part folders: **Title-Case-With-Hyphens** (e.g., `01-Introducing-AI-Driven-Development/`)
+- Part folders: **Title-Case-With-Hyphens** (e.g., `01-General-Agents-Foundations/`)
 - Part README: **UPPERCASE** (`README.md`)
 - Chapter folders: **lowercase-with-hyphens** (e.g., `01-ai-development-revolution/`)
 - Chapter readme: **LOWERCASE** (`readme.md`)
@@ -59,7 +59,7 @@ apps/learn-app/docs/
 ### Naming Conventions
 
 - **Part folder**: `NN-Part-Name/` where NN is two-digit part number
-  - Example: `01-Introducing-AI-Driven-Development/`, `05-Spec-Kit-Plus-Methodology/`
+  - Example: `01-General-Agents-Foundations/`, `05-Spec-Kit-Plus-Methodology/`
   - Note: Aspirational structure includes 13 parts (see `specs/book/chapter-index.md` for current status)
 
 - **Chapter directory**: `NN-chapter-name/` where NN is two-digit chapter number within part

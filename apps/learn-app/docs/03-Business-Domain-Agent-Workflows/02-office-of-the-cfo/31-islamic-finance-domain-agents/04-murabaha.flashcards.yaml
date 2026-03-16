@@ -1,0 +1,84 @@
+deck:
+  id: "ch31-04-murabaha"
+  title: "Murabaha -- Cost-Plus Financing Across Jurisdictions"
+  description: "Key concepts on murabaha as a sale transaction, the four-step journal entry sequence, effective profit rate, AAOIFI vs IFRS labelling, commodity murabaha, and Shariah compliance conditions."
+  tags: ["islamic-finance", "murabaha", "cost-plus-financing"]
+  version: 1
+
+cards:
+  - id: "ch31-04-murabaha-001"
+    front: "What is the foundational principle that governs all murabaha accounting treatment and terminology?"
+    back: "Murabaha is a sale transaction, not a loan. The bank is a merchant purchasing and reselling, not a lender charging interest."
+    tags: ["murabaha", "foundational-principle"]
+    difficulty: "basic"
+
+  - id: "ch31-04-murabaha-002"
+    front: "What are the four Shariah conditions for a valid murabaha contract?"
+    back: "1. Actual purchase by bank\n2. Disclosed mark-up\n3. Binding offer and acceptance\n4. Specified deferred payment terms"
+    tags: ["murabaha", "shariah-conditions"]
+    difficulty: "basic"
+
+  - id: "ch31-04-murabaha-003"
+    front: "In the universal four-step murabaha journal entry sequence, what happens at Step 2 when the bank sells the asset to the customer?"
+    back: "Dr: Murabaha Receivable (cost + mark-up)\nCr: Murabaha Asset (cost)\nCr: Deferred Murabaha Income (mark-up)"
+    tags: ["murabaha", "journal-entries"]
+    difficulty: "intermediate"
+
+  - id: "ch31-04-murabaha-004"
+    front: "What is the relationship between the effective profit rate and the IFRS 9 effective interest rate?"
+    back: "They are arithmetically identical. Both discount future cash flows to equal the initial receivable. Only the label differs."
+    tags: ["effective-profit-rate", "ifrs-9"]
+    difficulty: "basic"
+
+  - id: "ch31-04-murabaha-005"
+    front: "Why does complete price transparency distinguish murabaha from a conventional loan, even though the arithmetic may be similar?"
+    back: "In murabaha, the customer knows both the bank's cost and the mark-up. In a conventional loan, the borrower knows the interest rate but not the bank's cost of funds. Transparency is a Shariah requirement, not optional disclosure."
+    tags: ["murabaha", "price-transparency"]
+    difficulty: "intermediate"
+    why: "How does this transparency requirement affect the way agents present murabaha schedules?"
+
+  - id: "ch31-04-murabaha-006"
+    front: "In Step 3 of the murabaha sequence, what income label does AAOIFI use versus MFRS/IFRS?"
+    back: "AAOIFI: \"Murabaha Income\"\nMFRS/IFRS: \"Profit from Islamic Financing\" or \"Financing Income\""
+    tags: ["murabaha", "income-labels"]
+    difficulty: "basic"
+
+  - id: "ch31-04-murabaha-007"
+    front: "A Bahrain auditor finds a murabaha receivable classified under \"Loans and Advances.\" Why is this a compliance finding under AAOIFI?"
+    back: "AAOIFI requires each product to have its own classification (\"Murabaha Receivables\"). \"Loans and Advances\" is a conventional banking term prohibited in AAOIFI jurisdictions because murabaha is a sale, not a loan."
+    tags: ["aaoifi", "balance-sheet", "compliance"]
+    difficulty: "intermediate"
+    why: "Would the same classification be acceptable in Malaysia under MFRS 9?"
+
+  - id: "ch31-04-murabaha-008"
+    front: "What is commodity murabaha (tawarruq)?"
+    back: "A structure where the bank buys a commodity, sells it to the customer at mark-up, and the customer immediately sells to a third broker for cash. The customer receives cash; the bank holds a receivable."
+    tags: ["tawarruq", "commodity-murabaha"]
+    difficulty: "intermediate"
+
+  - id: "ch31-04-murabaha-009"
+    front: "Why do some Shariah scholars object to organised tawarruq despite its accounting being identical to asset murabaha?"
+    back: "In organised tawarruq, the two commodity sales are arranged as a single back-to-back transaction. The commodity serves no economic purpose; it merely creates a debt obligation resembling a conventional loan, which some scholars consider impermissible."
+    tags: ["tawarruq", "shariah-controversy"]
+    difficulty: "advanced"
+    why: "What distinguishes permissible classical tawarruq from impermissible organised tawarruq?"
+
+  - id: "ch31-04-murabaha-010"
+    front: "A customer defaults on a murabaha receivable. Why can the Islamic bank not charge additional profit on the overdue amount?"
+    back: "Additional charges on overdue amounts constitute riba (interest). The bank cannot profit from late payment because doing so converts the sale arrangement into interest-based lending, violating the prohibition of riba."
+    tags: ["default", "riba", "impairment"]
+    difficulty: "intermediate"
+    why: "How does this constraint change the bank's credit risk management compared to conventional banking?"
+
+  - id: "ch31-04-murabaha-011"
+    front: "What impairment model does AAOIFI use for murabaha versus IFRS?"
+    back: "AAOIFI uses FAS 30 (3-stage ECL model). IFRS uses the IFRS 9 ECL model. Both use the same staging concept."
+    tags: ["impairment", "fas-30", "ecl"]
+    difficulty: "intermediate"
+
+  - id: "ch31-04-murabaha-012"
+    front: "How does deferred murabaha income presentation differ between AAOIFI and IFRS?"
+    back: "AAOIFI: contra to gross receivable, or separate line item. IFRS: netted into amortised cost carrying value."
+    tags: ["deferred-income", "presentation"]
+    difficulty: "advanced"
+    why: "Why does this presentation difference matter for financial statement analysis?"

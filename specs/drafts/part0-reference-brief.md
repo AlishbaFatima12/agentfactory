@@ -192,8 +192,8 @@ Every exercise lesson follows this structure (in this order):
 2. **Title** (`# Exercise Title`)
 3. **Layers Used** line (e.g., "**Layers Used:** Layer 1 (Predict Before You Prompt), Layer 2 (Reasoning Receipt)")
 4. **Building On** admonition (if this exercise references earlier skills — check dependency map)
-5. **What You Do** section — clear instructions for the exercise
-6. **Scenario Selector** (if this exercise has scenario variants — Tabs component)
+5. **What You Do** section — clear, GENERIC instructions for the exercise. **DO NOT include specific scenario text here** — keep instructions scenario-agnostic so the reader encounters scenario details for the first time inside the Tabs.
+6. **Scenario Selector** (if this exercise has scenario variants — Tabs component. This is where the reader first sees specific scenario text.)
 7. **Your Deliverable** admonition (`:::info`)
 8. **AI Check Prompt** code block (with copy button, ending with Score Card request)
 9. **Deliverable Template** collapsible (if the source draft includes one)

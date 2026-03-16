@@ -536,7 +536,7 @@ Compare evaluated chapters against high-quality reference lessons. The skill sho
 
 Reference lesson patterns to look for:
 
-- `01-agent-factory-paradigm/01-digital-fte-revolution.md`
+- `12-agent-factory-paradigm/01-digital-fte-revolution.md`
 - `33-introduction-to-ai-agents/01-what-is-an-ai-agent.md`
 
 ## Resources

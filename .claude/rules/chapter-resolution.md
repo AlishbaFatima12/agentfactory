@@ -2,11 +2,11 @@
 
 **Problem**: "Chapter 5" and "Part 5" are different things. Ambiguous references cause wrong paths.
 
-| User Says              | Interpretation                | Example                    |
-| ---------------------- | ----------------------------- | -------------------------- |
-| `ch 11` / `chapter 11` | Chapter 11 (single chapter)   | AI-Native IDEs (in Part 3) |
+| User Says              | Interpretation                | Example                   |
+| ---------------------- | ----------------------------- | ------------------------- |
+| `ch 22` / `chapter 22` | Chapter 22 (single chapter)   | Linux Mastery (in Part 2) |
 | `part 4` / `p4`        | Part 4 (all chapters in part) | Programming in the AI Era |
-| `5` (bare number)      | **AMBIGUOUS**                 | Must ask user to clarify   |
+| `5` (bare number)      | **AMBIGUOUS**                 | Must ask user to clarify  |
 
 ## Authoritative Source: The Filesystem
 
@@ -14,15 +14,29 @@
 
 ```
 apps/learn-app/docs/
-├── 01-General-Agents-Foundations/             ← Part 1
-│   ├── 01-agent-factory-paradigm/            ← Chapter 1
-│   ├── 02-general-agents/                    ← Chapter 2
-│   └── 03-seven-principles/                  ← Chapter 3
-├── 02-Applied-General-Agent-Workflows/        ← Part 2
-│   ├── 06-build-your-first-personal-ai-employee/
-│   └── ...
-├── 03-SDD-RI-Fundamentals/                   ← Part 3
-│   ├── 11-ai-native-ides/                    ← Chapter 11
+├── 00-Prelude-Thinking-is-the-Curriculum/     ← Part 0
+│   ├── 01-asking-better-questions/            ← Chapter 1
+│   ├── 02-detecting-broken-reasoning/         ← Chapter 2
+│   └── ...up to 11-thinking-portfolio/        ← Chapter 11
+├── 01-General-Agents-Foundations/              ← Part 1
+│   ├── 12-agent-factory-paradigm/             ← Chapter 12
+│   ├── 13-markdown-writing-instructions/      ← Chapter 13
+│   └── ...up to 18-meet-your-first-ai-employee/ ← Chapter 18
+├── 02-Agent-Workflow-Primitives/               ← Part 2
+│   ├── 19-file-processing/                    ← Chapter 19
+│   └── ...up to 24-build-first-ai-employee/   ← Chapter 24
+├── 03-Business-Domain-Agent-Workflows/         ← Part 3
+│   ├── 01-foundations/                        ← Section
+│   │   ├── 25-enterprise-agentic-landscape/   ← Chapter 25
+│   │   └── ...
+│   ├── 02-office-of-the-cfo/                 ← Section
+│   │   ├── 28-finance-domain-agents/          ← Chapter 28
+│   │   └── ...up to 32-banking-domain-agents/ ← Chapter 32
+│   ├── 03-legal-and-compliance/               ← Section
+│   │   └── 33-legal-operations-and-compliance/← Chapter 33
+│   └── 04-the-growth-engine/                  ← Section
+│       └── 34-sales-revops-marketing/         ← Chapter 34
+├── 04-Programming-in-the-AI-Era/              ← Part 4
 │   └── ...
 └── ...
 ```
@@ -36,9 +50,9 @@ apps/learn-app/docs/
 ```bash
 # Step 1: Parse input and discover path
 
-# For "ch 11" / "chapter 11" → Find chapter folder:
-ls -d apps/learn-app/docs/*/11-*/
-# Returns: apps/learn-app/docs/03-SDD-RI-Fundamentals/11-ai-native-ides/
+# For "ch 22" / "chapter 22" → Find chapter folder:
+ls -d apps/learn-app/docs/*/22-*/
+# Returns: apps/learn-app/docs/02-Agent-Workflow-Primitives/22-linux-mastery/
 
 # For "part 4" / "p4" → Find part folder:
 ls -d apps/learn-app/docs/04-*/
@@ -51,7 +65,7 @@ ls -d apps/learn-app/docs/04-*/
 # Step 2: Validate and count contents
 
 # Count lessons in a chapter:
-ls apps/learn-app/docs/03-SDD-RI-Fundamentals/11-ai-native-ides/*.md | wc -l
+ls apps/learn-app/docs/02-Agent-Workflow-Primitives/22-linux-mastery/*.md | wc -l
 
 # Count chapters in a part:
 ls -d apps/learn-app/docs/04-Programming-in-the-AI-Era/*/ | wc -l
@@ -64,10 +78,10 @@ ls -d apps/learn-app/docs/04-Programming-in-the-AI-Era/*/ | wc -l
 **Example confirmation**:
 
 ```
-"You said 'ch 11'. I found:
-- Chapter 11: ai-native-ides
-- Path: apps/learn-app/docs/03-SDD-RI-Fundamentals/11-ai-native-ides/
-- Part: 03-SDD-RI-Fundamentals
+"You said 'ch 22'. I found:
+- Chapter 22: linux-mastery
+- Path: apps/learn-app/docs/02-Agent-Workflow-Primitives/22-linux-mastery/
+- Part: 02-Agent-Workflow-Primitives
 - Lessons: 17 files
 
 Is this correct?"
@@ -77,7 +91,7 @@ Is this correct?"
 
 Chapter numbers are **global across the book**, not local to parts.
 
-- `ch 11` → Chapter 11 (lives in Part 3, folder `11-*`)
+- `ch 22` → Chapter 22 (lives in Part 2, folder `22-*`)
 - `part 4` → Part 4 (folder `04-Programming-in-the-AI-Era/`)
 
 **`ch 4` ≠ `part 4`** — completely different locations!

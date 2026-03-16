@@ -32,13 +32,13 @@ Create, populate, and publish a companion GitHub repository for a chapter, then 
 
 ## Mode Selection
 
-**Mode A: Standalone Repo** (default, e.g., Ch19 `ca-cpa-practice-agents`)
+**Mode A: Standalone Repo** (default, e.g., Ch30 `ca-cpa-practice-agents`)
 
 - One repo per chapter under `panaversity/` org
 - Plugin metadata optional
 - Simple: clone/download and use
 
-**Mode B: Marketplace Plugin** (e.g., Ch20 `agentfactory-business-plugins/islamic-finance/`)
+**Mode B: Marketplace Plugin** (e.g., Ch31 `agentfactory-business-plugins/islamic-finance/`)
 
 - Plugin lives in a subfolder of a shared marketplace monorepo
 - Requires `.claude-plugin/plugin.json`, `marketplace.json` at repo root
@@ -65,7 +65,7 @@ Create, populate, and publish a companion GitHub repository for a chapter, then 
 
 Before invoking, gather:
 
-1. **Chapter number and title** — e.g., "Chapter 19: AI Transformation of CA/CPA Practice Areas"
+1. **Chapter number and title** — e.g., "Chapter 30: AI Transformation of CA/CPA Practice Areas"
 2. **Mode** — A (standalone repo) or B (marketplace plugin)
 3. **Repo name** — Mode A: short, kebab-case (e.g., `ca-cpa-domain-agents`). Mode B: marketplace repo + plugin subfolder (e.g., `agentfactory-business-plugins/islamic-finance`)
 4. **Content directories** — which of these apply:
@@ -78,7 +78,7 @@ Before invoking, gather:
    - `.claude-plugin/` — Claude plugin manifest (Mode B required)
 5. **Jurisdiction defaults** — primary jurisdiction for all examples (e.g., Pakistan/PKR)
 6. **Lesson directory path** — where the chapter's .md lesson files live
-7. **Content source** — where the scaffold content already exists (e.g., `specs/ch-20/`)
+7. **Content source** — where the scaffold content already exists (e.g., `specs/ch-31/`)
 
 ## Execution Steps
 

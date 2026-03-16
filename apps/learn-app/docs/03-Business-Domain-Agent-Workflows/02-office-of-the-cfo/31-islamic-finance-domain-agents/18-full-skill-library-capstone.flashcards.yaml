@@ -1,0 +1,98 @@
+deck:
+  id: "ch31-18-full-skill-library-capstone"
+  title: "Full Islamic Finance Agent Capstone"
+  description: "The complete 25-file SKILL.md library architecture, global routing protocol, knowledge extraction methods, multi-jurisdiction test suite design, and the agent-vs-SSB judgment boundary."
+  tags: ["skill-library", "agent-capstone", "islamic-finance"]
+  version: 1
+
+cards:
+  - id: "ch31-18-full-skill-library-capstone-001"
+    front: "What are the three layers of the Islamic finance SKILL.md library?"
+    back: "1. Global Router\n2. Product Skills (12 files)\n3. Jurisdiction Overlays (13 files)"
+    tags: ["library-architecture", "layers"]
+    difficulty: "basic"
+
+  - id: "ch31-18-full-skill-library-capstone-002"
+    front: "What five steps does the global routing protocol follow before generating output?"
+    back: "1. Identify jurisdiction\n2. Identify product\n3. Load product skill\n4. Load overlay\n5. Apply product then overlay"
+    tags: ["routing-protocol", "global-router"]
+    difficulty: "intermediate"
+
+  - id: "ch31-18-full-skill-library-capstone-003"
+    front: "Why must the global router ask for jurisdiction before proceeding when none is specified?"
+    back: "Different jurisdictions use different frameworks, labels, and disclosures. Assuming IFRS without confirming could produce wrong accounting treatment — for example, using IFRS labels for a Bahraini IFI that requires AAOIFI."
+    tags: ["routing", "jurisdiction"]
+    difficulty: "intermediate"
+    why: "What specific compliance error could result from assuming IFRS for a Bahraini IFI?"
+
+  - id: "ch31-18-full-skill-library-capstone-004"
+    front: "What is the difference between Method A and Method B knowledge extraction?"
+    back: "Method A: interview-based, from practitioner knowledge.\nMethod B: document analysis, from regulatory sources."
+    tags: ["knowledge-extraction", "method-a", "method-b"]
+    difficulty: "basic"
+
+  - id: "ch31-18-full-skill-library-capstone-005"
+    front: "Which jurisdictions require AAOIFI as the mandatory framework?"
+    back: "Bahrain, Qatar, and Sudan."
+    tags: ["aaoifi", "mandatory-jurisdictions"]
+    difficulty: "basic"
+
+  - id: "ch31-18-full-skill-library-capstone-006"
+    front: "How does the multi-jurisdiction test suite validate the routing system, and why is it essential?"
+    back: "It runs 13 queries (one per jurisdiction) verifying correct framework, labels, and disclosures. Without it, the library is an untested collection of files rather than a validated deployed system."
+    tags: ["test-suite", "validation"]
+    difficulty: "intermediate"
+    why: "What does a test failure in one jurisdiction reveal about the system?"
+
+  - id: "ch31-18-full-skill-library-capstone-007"
+    front: "Why must the agent capability statement explicitly define the execution-vs-judgment boundary?"
+    back: "Without a clear boundary, users may rely on agent output for Shariah permissibility decisions that require scholarly judgment. The boundary protects against compliance risk by making explicit what the agent does and does not determine."
+    tags: ["capability-statement", "boundary"]
+    difficulty: "intermediate"
+    why: "How does this boundary definition increase the professional's value proposition?"
+
+  - id: "ch31-18-full-skill-library-capstone-008"
+    front: "Why can no SKILL.md file determine whether a transaction is Shariah-permissible?"
+    back: "Shariah compliance requires Islamic jurisprudential reasoning by qualified scholars, not mechanical rule application. The agent can flag and document, but permissibility determinations need scholarly judgment that cannot be encoded."
+    tags: ["ssb-boundary", "shariah-judgment"]
+    difficulty: "advanced"
+    why: "How does defining this boundary precisely increase the professional value of AI-augmented practice?"
+
+  - id: "ch31-18-full-skill-library-capstone-009"
+    front: "What four task frequencies does the scheduled task architecture include?"
+    back: "Daily: profit/rental accrual.\nMonthly: profit distribution, zakat.\nQuarterly: screening, SSB report.\nAnnual: AAOIFI-IFRS reconciliation."
+    tags: ["scheduled-tasks", "frequencies"]
+    difficulty: "intermediate"
+
+  - id: "ch31-18-full-skill-library-capstone-010"
+    front: "Why does Draft AAOIFI Standard 62 pose a material risk for the sukuk market?"
+    back: "It proposes shifting from asset-based to asset-backed sukuk, which would require restructuring a significant portion of the global sukuk market. Practitioners advising on sukuk must assess this as a material contingent event."
+    tags: ["standard-62", "sukuk-risk"]
+    difficulty: "advanced"
+    why: "What is the structural difference between asset-based and asset-backed sukuk?"
+
+  - id: "ch31-18-full-skill-library-capstone-011"
+    front: "How many files comprise the complete Islamic finance agent library?"
+    back: "25 files: 12 product skills plus 13 jurisdiction overlays."
+    tags: ["library-size", "skill-md"]
+    difficulty: "basic"
+
+  - id: "ch31-18-full-skill-library-capstone-012"
+    front: "Why does the router-to-product-to-overlay architecture transfer to domains beyond Islamic finance?"
+    back: "Any domain where the same transaction has different rules by jurisdiction (tax, legal, healthcare) shares this structure. The pattern separates universal product logic from jurisdiction-specific modifications, making it domain-agnostic."
+    tags: ["cross-domain", "architecture"]
+    difficulty: "advanced"
+    why: "What is the equivalent of the SSB boundary in another domain like international tax?"
+
+  - id: "ch31-18-full-skill-library-capstone-013"
+    front: "What are the five key structural insights from Chapter 31?"
+    back: "1. Numbers identical, labels differ\n2. Convergence unfinished\n3. Standard 62 risk\n4. Fintech outpaces standards\n5. Agent executes, SSB judges"
+    tags: ["chapter-insights", "key-takeaways"]
+    difficulty: "intermediate"
+
+  - id: "ch31-18-full-skill-library-capstone-014"
+    front: "Why are NEVER rules as important as positive instructions in a SKILL.md file?"
+    back: "NEVER rules prevent the most damaging errors — like using 'interest income' in Islamic finance or 'Loans and Advances' in AAOIFI. Without explicit prohibitions, LLMs default to conventional terminology that creates compliance violations."
+    tags: ["skill-md", "never-rules"]
+    difficulty: "intermediate"
+    why: "What other categories of NEVER rules exist beyond label prohibitions?"

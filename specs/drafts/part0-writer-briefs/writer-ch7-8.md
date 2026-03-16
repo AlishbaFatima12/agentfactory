@@ -99,6 +99,7 @@ You own **Chapter 7: Reasoning Through Dilemmas** and **Chapter 8: Building Some
 - **Ch 7 Ex3** (Stakeholder Swap) requires students to argue FROM a position they disagree with — this is the hardest exercise in the chapter. Solo Learner Alternative has AI playing each stakeholder.
 - **Ch 8 Ex1** (Blank Page Sprint) is timed (the source specifies the time) — preserve the time constraint prominently
 - **Ch 8 Ex3** (Originality Test) is unique: the student asks AI to evaluate whether AI could have produced their work. This is a meta-assessment of value-add.
+- **No scenario duplication**: For any exercise with a Scenario Selector (Tabs), the "What You Do" section must use GENERIC instructions without specific scenario text. Scenario details appear ONLY inside the Tabs — the reader encounters them there for the first time.
 
 ## Exit Criteria
 
@@ -113,4 +114,5 @@ You own **Chapter 7: Reasoning Through Dilemmas** and **Chapter 8: Building Some
 - [ ] Solo Learner Alternatives in `:::tip` admonitions
 - [ ] Chapter Deliverables in `:::info` at end of Exercise 4 files
 - [ ] Grading Criteria in `<details>` collapsibles
+- [ ] No scenario text duplicated above Tabs — "What You Do" uses generic instructions only
 - [ ] No emojis in output

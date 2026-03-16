@@ -1,0 +1,85 @@
+deck:
+  id: "ch31-17-islamic-fintech"
+  title: "Islamic Fintech Accounting"
+  description: "Accounting challenges for digital murabaha, Shariah robo-advisers, P2P Islamic lending, and green impact sukuk when frameworks have not caught up with innovation."
+  tags: ["islamic-fintech", "accounting", "shariah-compliance"]
+  version: 1
+
+cards:
+  - id: "ch31-17-islamic-fintech-001"
+    front: "What four Islamic fintech structures does the lesson examine?"
+    back: "1. Digital murabaha platforms\n2. Shariah robo-advisers\n3. P2P Islamic lending\n4. Green impact sukuk"
+    tags: ["fintech-structures", "overview"]
+    difficulty: "basic"
+
+  - id: "ch31-17-islamic-fintech-002"
+    front: "Why does Islamic fintech create more accounting uncertainty than traditional Islamic products?"
+    back: "Traditional products have dedicated standards (e.g., FAS 2 for murabaha). Fintech requires first-principles reasoning because standards were written for banks, not platforms that may not own assets or operate across jurisdictions."
+    tags: ["accounting-uncertainty", "fintech"]
+    difficulty: "intermediate"
+    why: "What makes first-principles reasoning a higher-value skill than rule application?"
+
+  - id: "ch31-17-islamic-fintech-003"
+    front: "What distinguishes genuine digital murabaha from tawarruq?"
+    back: "Murabaha: real asset purchase/sale with delivery intent.\nTawarruq: commodity used purely as financing mechanism."
+    tags: ["murabaha", "tawarruq", "distinction"]
+    difficulty: "basic"
+
+  - id: "ch31-17-islamic-fintech-004"
+    front: "How does revenue recognition differ between a digital murabaha platform (agent) and the bank (financier)?"
+    back: "The platform earns a wakala fee under IFRS 15 for facilitating, while the bank earns murabaha income under IFRS 9 for bearing financing risk. Different roles trigger different standards."
+    tags: ["revenue-recognition", "digital-murabaha"]
+    difficulty: "intermediate"
+    why: "What changes in the accounting if the platform starts bearing financing risk itself?"
+
+  - id: "ch31-17-islamic-fintech-005"
+    front: "Why does a P2P Islamic lending platform raise the question of who qualifies as the IFI?"
+    back: "The platform does not take deposits or lend from its own balance sheet, but structures Islamic transactions. Whether the platform, each saver, or no party is the IFI determines regulatory requirements, SSB obligations, and the applicable accounting framework."
+    tags: ["p2p-lending", "ifi-classification"]
+    difficulty: "intermediate"
+    why: "What regulatory consequences follow from classifying the platform as an IFI versus a marketplace?"
+
+  - id: "ch31-17-islamic-fintech-006"
+    front: "Why was the FCA P2P lending framework not designed for Islamic P2P murabaha platforms?"
+    back: "Article 36H was designed for conventional peer-to-peer lending (direct loans). Whether a murabaha structure (asset purchase and resale) falls within this framework is genuinely uncertain because the Shariah structure differs fundamentally."
+    tags: ["fca", "p2p", "regulatory-gap"]
+    difficulty: "advanced"
+    why: "How should a CA/CPA advise an Islamic P2P platform seeking UK authorisation?"
+
+  - id: "ch31-17-islamic-fintech-007"
+    front: "How does the choice between ijarah and musharaka structure affect IFRS 9 classification of impact sukuk?"
+    back: "Ijarah sukuk (own and lease) likely pass the SPPI test for amortised cost. Musharaka sukuk (co-own with variable returns) likely fail SPPI and require FVTPL measurement because returns are equity-like."
+    tags: ["impact-sukuk", "ifrs-9", "sppi"]
+    difficulty: "advanced"
+    why: "What determines whether the SPPI test passes or fails for these sukuk?"
+
+  - id: "ch31-17-islamic-fintech-008"
+    front: "What three categories of regulatory clarity should a practitioner distinguish for fintech?"
+    back: "Clear (rule applies directly), interpretive (reasoning from principles), open (genuinely uncertain)."
+    tags: ["professional-judgment", "fintech"]
+    difficulty: "intermediate"
+
+  - id: "ch31-17-islamic-fintech-009"
+    front: "For a Shariah robo-adviser, who bears the purification obligation — the platform or the client?"
+    back: "An SSB design decision — platform executes for clients or leaves as personal obligation."
+    tags: ["robo-adviser", "purification"]
+    difficulty: "intermediate"
+
+  - id: "ch31-17-islamic-fintech-010"
+    front: "Why does developing fintech accounting positions now create professional value?"
+    back: "Islamic fintech outpaces standard-setters, so no specific rules exist. The practitioner who reasons from existing IFRS and AAOIFI principles to defensible positions becomes the sought-after adviser as the sector grows."
+    tags: ["professional-value", "fintech"]
+    difficulty: "intermediate"
+    why: "How does this differ from traditional advisory where rules already exist?"
+
+  - id: "ch31-17-islamic-fintech-011"
+    front: "What IFRS standards must practitioners apply to Islamic fintech structures?"
+    back: "IFRS 9, IFRS 15, and IFRS 16/17 as applicable."
+    tags: ["ifrs", "fintech-standards"]
+    difficulty: "basic"
+
+  - id: "ch31-17-islamic-fintech-012"
+    front: "What four dimensions distinguish fintech from traditional Islamic banking?"
+    back: "1. Platform vs bank ownership\n2. Varied vs central bank licensing\n3. Launch before SSB review\n4. Global from day one"
+    tags: ["traditional-vs-fintech", "disruption"]
+    difficulty: "intermediate"

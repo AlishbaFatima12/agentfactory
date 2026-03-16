@@ -207,6 +207,25 @@ For each score, give a one-sentence justification.
 
 ### Scenario Selector Pattern (Tabs)
 
+**CRITICAL: No Scenario Duplication.** The "What You Do" section MUST use generic instructions without revealing any specific scenario text. The scenario details appear ONLY inside the Tabs. The reader should encounter the scenario for the first time when they click/see their chosen tab.
+
+WRONG:
+```
+**What You Do**
+You receive a business scenario: "A retail company's online sales dropped 15%
+despite a 20% increase in marketing spend." Before touching any AI tool, write down...
+[Tabs with Business/Technical/Education scenarios]
+```
+
+RIGHT:
+```
+**What You Do**
+You receive a scenario relevant to your background. Before touching any AI tool,
+write down your initial diagnosis, your 10 most important questions ranked by
+diagnostic power, and your predicted answer to each question.
+[Tabs with Business/Technical/Education scenarios — first time reader sees details]
+```
+
 ```mdx
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";

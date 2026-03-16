@@ -1,0 +1,122 @@
+deck:
+  id: "ch30-07-ca-cpa-plugin-ecosystem"
+  title: "The CA/CPA Plugin Ecosystem"
+  description: "Cowork's four mechanisms, two-layer plugin architecture, five accounting commands, SOX Section 404, month-end close workflows, cross-app orchestration, and global instructions"
+  tags: ["ca-cpa", "plugins", "cowork", "knowledge-work-plugins", "financial-services-plugins", "cross-app-orchestration", "global-instructions"]
+  version: 1
+  lesson: 7
+  chapter: 30
+
+cards:
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-001"
+    front: "What are Cowork's four core mechanisms that distinguish it from a standard Claude conversation?"
+    back: "1. Direct local file access\n2. Sub-agent coordination\n3. Scheduled tasks\n4. Plugin ecosystem"
+    tags: ["cowork-mechanisms", "plugin-ecosystem"]
+    difficulty: "basic"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-002"
+    front: "What command installs the Layer 1 CA/CPA plugin?"
+    back: "`claude plugin install finance@knowledge-work-plugins`"
+    tags: ["plugin-installation", "layer-1"]
+    difficulty: "basic"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-003"
+    front: "What are the five plugin commands in knowledge-work-plugins/finance?"
+    back: "/journal-entry, /reconciliation, /income-statement, /variance-analysis, /sox-testing"
+    tags: ["layer-1-commands", "knowledge-work-plugins"]
+    difficulty: "basic"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-004"
+    front: "What did SOX (Sarbanes-Oxley Act) require of public companies, and when was it enacted?"
+    back: "Enacted 2002 after Enron/WorldCom scandals. Requires management to assess internal controls over financial reporting and external auditors to attest to that assessment."
+    tags: ["sox", "section-404"]
+    difficulty: "basic"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-005"
+    front: "Which Layer 1 command maps to Domain 3 (Assurance) and Domain 5 (GRC Advisory)?"
+    back: "/sox-testing — generates SOX control testing documentation including testing objective, evidence to gather, sample selection rationale, and documentation of results."
+    tags: ["sox-testing", "layer-1-commands"]
+    difficulty: "basic"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-006"
+    front: "What is the difference between Layer 1 and Layer 2 of the CA/CPA plugin stack?"
+    back: "Layer 1 (knowledge-work-plugins/finance): core accounting — journal entries, reconciliations, statements, variance analysis, SOX testing. Layer 2 (financial-services-plugins): advisory and financial services — /dcf, /comps, /lbo, equity research, private equity."
+    tags: ["two-layer-architecture", "plugin-ecosystem"]
+    difficulty: "intermediate"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-007"
+    front: "Which CA/CPA practice domain does NOT have a Layer 1 plugin command, requiring Layer 2?"
+    back: "Domain 2 (Tax and Non-Assurance Advisory) — corporate finance and M&A advisory uses Layer 2's financial-analysis plugin (/dcf, /comps, /lbo)."
+    tags: ["domain-mapping", "layer-2"]
+    difficulty: "intermediate"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-008"
+    front: "What professional judgment remains required even when /sox-testing automates the testing framework?"
+    back: "Assessing whether a control failure constitutes a material weakness — the agent produces the testing framework and documentation, not the professional assessment of significance."
+    tags: ["sox-testing", "professional-judgment"]
+    difficulty: "intermediate"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-009"
+    front: "How does Cowork's sub-agent coordination change the month-end close workflow?"
+    back: "Complex tasks break into parallel subtasks — reconciliation checking, journal entry preparation, and disclosure drafting can run simultaneously rather than sequentially, compressing the close cycle."
+    tags: ["sub-agent-coordination", "month-end-close"]
+    difficulty: "intermediate"
+    why: "What coordination challenges arise when parallel sub-agents produce outputs that depend on each other's results?"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-010"
+    front: "Why does a CA/CPA in general practice typically need only Layer 1, while a financial services CA needs both layers?"
+    back: "Layer 1 covers core accounting workflows across Domains 1, 3, 4, and 5. Domain 2's investment-facing work (M&A advisory, equity research, private equity) requires Layer 2 commands not in Layer 1."
+    tags: ["layer-1", "layer-2", "practice-type"]
+    difficulty: "intermediate"
+    why: "What Layer 1 command would a financial services CA use most frequently in their Domain 3 (audit) work?"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-011"
+    front: "What does the /reconciliation command produce as output?"
+    back: "A working paper showing matching items, unmatched items, timing differences, and flagged exceptions — not a summary, but the complete reconciliation showing the work."
+    tags: ["reconciliation-command", "layer-1-commands"]
+    difficulty: "basic"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-012"
+    front: "A CA/CPA firm installs only Layer 1 but has clients needing M&A due diligence. Why does this create a capability gap?"
+    back: "Layer 1 has no commands for DCF valuation, comparable company analysis, or LBO modelling — those are Layer 2 financial-analysis plugin commands. THEREFORE the firm cannot automate the computational work of Domain 2 advisory without Layer 2."
+    tags: ["capability-gap", "layer-2", "domain-2"]
+    difficulty: "advanced"
+    why: "How should a CA/CPA firm plan its plugin stack if its client portfolio may expand from compliance into M&A advisory?"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-013"
+    front: "How does the /income-statement command handle jurisdiction-specific presentation for a Pakistani CA?"
+    back: "For a Pakistani CA working under IFRS, the output follows IAS 1 presentation requirements — the command applies the relevant standard's presentation format automatically."
+    tags: ["income-statement-command", "ifrs", "pakistan"]
+    difficulty: "intermediate"
+    why: "What additional review step does a Pakistani CA perform on the /income-statement output that a US CPA would not?"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-014"
+    front: "How does the Cowork month-end close workflow compress the CA/CPA's total execution time?"
+    back: "From 7.5 hours of execution (reconciliations, journals, formatting, bridge) to 1 hour 45 minutes — mostly judgment and commentary."
+    tags: ["time-compression", "month-end-close"]
+    difficulty: "basic"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-015"
+    front: "What platform requirements are needed for cross-app Excel to PowerPoint orchestration in Cowork?"
+    back: "A paid plan (Pro, Max, Team, or Enterprise) on macOS or Windows with both Claude in Excel and Claude in PowerPoint installed. Cross-app is currently a research preview."
+    tags: ["cross-app-orchestration", "platform-requirements"]
+    difficulty: "basic"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-016"
+    front: "What six elements should a Cowork global instruction for a CA/CPA include?"
+    back: "Jurisdiction and regulatory bodies, reporting standards, reporting currency, financial year and reporting cycle, materiality threshold, variance analysis comparisons."
+    tags: ["global-instructions", "practice-context"]
+    difficulty: "intermediate"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-017"
+    front: "Why are global Cowork instructions more effective than specifying practice context in each session?"
+    back: "Global instructions persist across all sessions — ensuring jurisdiction, currency, reporting standards, and practice conventions apply to every workflow consistently without repeating them each time."
+    tags: ["global-instructions", "practice-context"]
+    difficulty: "basic"
+
+  - id: "ch30-07-ca-cpa-plugin-ecosystem-018"
+    front: "A cross-app workflow converts Excel P&L to a four-slide PowerPoint board update. What did this previously require vs what does it require now?"
+    back: "Previously: build Excel, export charts, manually format PowerPoint — an hour of skilled work. Now: a five-minute Cowork orchestration in natural language."
+    tags: ["cross-app-orchestration", "time-compression"]
+    difficulty: "intermediate"
+    why: "What quality control check should the CA/CPA perform on the AI-generated board slides before presenting to the board?"

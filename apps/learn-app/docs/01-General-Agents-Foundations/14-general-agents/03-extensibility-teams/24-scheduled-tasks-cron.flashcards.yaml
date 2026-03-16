@@ -1,0 +1,101 @@
+deck:
+  id: ch14-24-scheduled-tasks-cron
+  title: 'Scheduled Tasks: The Loop Skill and Cron Tools'
+  description: Flashcards covering /loop syntax, interval units, CronCreate/CronList/CronDelete, session scope, 50-task limit, 3-day expiry, jitter, and durable scheduling alternatives.
+  tags:
+  - scheduled-tasks
+  - loop-skill
+  - cron
+  - automation
+  - claude-code
+  version: 1
+cards:
+- id: ch14-24-scheduled-tasks-cron-001
+  difficulty: basic
+  front: What is the quickest way to schedule a recurring prompt in Claude Code?
+  back: 'The `/loop` bundled skill. Example: `/loop 5m check if the deployment finished`.'
+  tags:
+  - loop-skill
+  - basics
+- id: ch14-24-scheduled-tasks-cron-002
+  difficulty: basic
+  front: What is the default interval when you use /loop without specifying a time?
+  back: Every 10 minutes.
+  tags:
+  - loop-skill
+  - defaults
+- id: ch14-24-scheduled-tasks-cron-003
+  difficulty: basic
+  front: What four time units does /loop support?
+  back: '`s` (seconds), `m` (minutes), `h` (hours), `d` (days). Seconds are rounded up to the nearest minute.'
+  tags:
+  - loop-skill
+  - interval-units
+- id: ch14-24-scheduled-tasks-cron-004
+  difficulty: intermediate
+  front: Why does `/loop 30s check the logs` fire every minute instead of every 30 seconds?
+  back: BECAUSE the cron system has one-minute granularity, THEREFORE seconds are rounded up to the nearest minute. Sub-minute precision is not possible with scheduled tasks.
+  why: Understanding cron granularity prevents confusion when specifying small intervals.
+  tags:
+  - loop-skill
+  - cron-granularity
+- id: ch14-24-scheduled-tasks-cron-005
+  difficulty: basic
+  front: What three tools does /loop use under the hood?
+  back: 'CronCreate (schedule a new task), CronList (list all tasks with IDs), and CronDelete (cancel a task by ID).'
+  tags:
+  - cron-tools
+  - architecture
+- id: ch14-24-scheduled-tasks-cron-006
+  difficulty: intermediate
+  front: What happens to scheduled tasks when you exit Claude Code?
+  back: BECAUSE scheduled tasks are session-scoped, THEREFORE they all disappear when you exit. They do not survive restarts and cannot be recovered.
+  why: Session scope is the most important constraint to understand — it prevents both persistence expectations and forgotten runaway loops.
+  tags:
+  - session-scope
+  - limitations
+- id: ch14-24-scheduled-tasks-cron-007
+  difficulty: basic
+  front: How many scheduled tasks can one Claude Code session hold at once?
+  back: 50 tasks maximum.
+  tags:
+  - limits
+  - session-scope
+- id: ch14-24-scheduled-tasks-cron-008
+  difficulty: intermediate
+  front: What happens to a recurring scheduled task after 3 days?
+  back: BECAUSE Anthropic bounds how long forgotten loops can run, THEREFORE recurring tasks automatically expire 3 days after creation — they fire one final time, then delete themselves.
+  why: The 3-day expiry is a safety feature, not a bug. Cancel and recreate to extend.
+  tags:
+  - expiry
+  - safety
+- id: ch14-24-scheduled-tasks-cron-009
+  difficulty: intermediate
+  front: When does a scheduled task fire relative to Claude's activity?
+  back: BECAUSE scheduled prompts queue at low priority, THEREFORE they fire between turns when Claude is idle — never mid-response. If Claude is busy, the task waits until the current turn ends.
+  why: Understanding fire timing prevents confusion when tasks seem delayed during long operations.
+  tags:
+  - timing
+  - session-scope
+- id: ch14-24-scheduled-tasks-cron-010
+  difficulty: basic
+  front: How do you schedule a one-time reminder in Claude Code?
+  back: 'Use natural language: `remind me at 3pm to push the release branch` or `in 45 minutes, check the tests`. The task fires once and deletes itself.'
+  tags:
+  - reminders
+  - one-shot
+- id: ch14-24-scheduled-tasks-cron-011
+  difficulty: intermediate
+  front: What is jitter in the context of scheduled tasks, and why does it exist?
+  back: BECAUSE multiple sessions scheduling tasks at round times (e.g., every hour at :00) would all hit the API simultaneously, THEREFORE the scheduler adds a small deterministic offset — up to 10% of the period for recurring tasks (capped at 15 minutes), and up to 90 seconds early for one-shot tasks at :00 or :30.
+  why: Jitter prevents API thundering herd problems while keeping timing predictable per task (same ID = same offset).
+  tags:
+  - jitter
+  - timing
+- id: ch14-24-scheduled-tasks-cron-012
+  difficulty: basic
+  front: What environment variable disables the scheduler entirely?
+  back: '`CLAUDE_CODE_DISABLE_CRON=1`. The cron tools and /loop become unavailable, and already-scheduled tasks stop firing.'
+  tags:
+  - configuration
+  - disable

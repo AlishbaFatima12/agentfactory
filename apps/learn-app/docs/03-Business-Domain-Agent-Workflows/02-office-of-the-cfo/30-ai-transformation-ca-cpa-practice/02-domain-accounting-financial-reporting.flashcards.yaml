@@ -1,0 +1,99 @@
+deck:
+  id: "ch30-02-domain-accounting-financial-reporting"
+  title: "Domain 1 — Accounting and Financial Reporting"
+  description: "Gen-AI capabilities, IFRS vs US GAAP, autonomous agents, and role restructuring in the highest-impact CA/CPA domain"
+  tags: ["ca-cpa", "accounting", "financial-reporting", "ifrs", "agentic-ai"]
+  version: 1
+  lesson: 2
+  chapter: 30
+
+cards:
+  - id: "ch30-02-domain-accounting-financial-reporting-001"
+    front: "What are the three Gen-AI capability categories that are production-ready in accounting and financial reporting?"
+    back: "1. Financial statement drafting\n2. Disclosure drafting\n3. Accounting research"
+    tags: ["gen-ai-capabilities", "accounting", "domain-1"]
+    difficulty: "basic"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-002"
+    front: "Why is US GAAP more amenable to AI automation than IFRS?"
+    back: "US GAAP is rules-based — agents look up and apply specific rules. IFRS is principles-based — agents must exercise judgment applying broad principles, producing less reliable output."
+    tags: ["ifrs", "us-gaap", "ai-automation"]
+    difficulty: "basic"
+    why: "What does higher AI error risk under IFRS mean for Pakistani CAs who must review AI-drafted statements?"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-003"
+    front: "What does an autonomous financial reporting agent do?"
+    back: "Extracts trial balance, runs reconciliations, posts standard journal entries, prepares draft financial statements, flags exceptions."
+    tags: ["autonomous-agent", "month-end-close"]
+    difficulty: "basic"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-004"
+    front: "What does an autonomous transactions recording agent do?"
+    back: "Processes incoming invoices, receipts, and bank entries continuously — classifying to accounts and maintaining an updated general ledger."
+    tags: ["autonomous-agent", "transactions-recording"]
+    difficulty: "basic"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-005"
+    front: "What distinguishes standard from non-standard disclosures in AI-assisted financial reporting?"
+    back: "Standard: accounting policies, depreciation, revenue recognition — AI handles reliably. Non-standard: first-time IFRS adoptions, complex estimates — require significant professional judgment."
+    tags: ["disclosure-drafting", "professional-judgment"]
+    difficulty: "intermediate"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-006"
+    front: "Numeric raised USD 51 million in Series B in November 2025. What does it specifically focus on?"
+    back: "The financial close process — AI analysis of reconciliations, anomaly detection, and adjustment proposals."
+    tags: ["real-world-platforms", "numeric"]
+    difficulty: "basic"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-007"
+    front: "How does AI change the time allocation for a semi-senior accountant in financial statement preparation?"
+    back: "Time shifts from preparing statements (3-5 days) to reviewing AI-drafted output — checking classifications, estimates, and compliance with applicable standards."
+    tags: ["role-restructuring", "practitioner-impact"]
+    difficulty: "intermediate"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-008"
+    front: "Why does accounting research rank as a strong Gen-AI use case?"
+    back: "It is a standard retrieval and synthesis task — the AI navigates the body of IFRS or US GAAP standards and produces a structured memo. BECAUSE the research process is information lookup, not original judgment."
+    tags: ["accounting-research", "gen-ai-capabilities"]
+    difficulty: "intermediate"
+    why: "What part of the accounting research process still requires the professional's judgment even with AI assistance?"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-009"
+    front: "A CA/CPA firm still bills by the hour for month-end close work that AI can do in minutes. What is the business risk?"
+    back: "Competitors offering subscription-based reporting platforms will compress their margins. THEREFORE firms must shift to outcome-based pricing before they are undercut on the billing model itself."
+    tags: ["business-model", "pricing"]
+    difficulty: "advanced"
+    why: "How would you price a subscription-based reporting service that replaces hourly billing?"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-010"
+    front: "How do SAP Joule and Oracle Fusion Cloud ERP AI differ in their accounting AI offerings?"
+    back: "SAP Joule: embedded in SAP ERP with Accounting Accruals Agent and Cash Management Agent, Joule Studio GA in Q1 2026. Oracle: AI Agent Studio (expanded Oct 2025) with Payables Agent and Ledger Agent."
+    tags: ["real-world-platforms", "sap-joule", "oracle"]
+    difficulty: "intermediate"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-011"
+    front: "Why does Domain 1 rank highest among the five CA/CPA domains for AI impact?"
+    back: "It accounts for the largest proportion of staff time in most practices, and because so much of it is rule-based and document-intensive, it also contains the largest proportion of work AI can execute."
+    tags: ["domain-ranking", "ai-impact"]
+    difficulty: "intermediate"
+    why: "What would the second highest ranking domain need to surpass Domain 1 in AI impact?"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-012"
+    front: "Junior accountant role: before AI vs after AI in Domain 1?"
+    back: "Before: data entry, transaction recording, reconciliation. After: exception handling, data quality oversight."
+    tags: ["role-restructuring", "junior-accountant"]
+    difficulty: "basic"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-013"
+    front: "How does autonomous financial reporting change the scale of month-end close execution?"
+    back: "Routine execution drops from 5-8 working days with 3-4 people to hours of agent work, with professionals focused on judgment calls — estimates, accruals, non-standard transactions, management analysis."
+    tags: ["autonomous-agent", "efficiency-gains"]
+    difficulty: "intermediate"
+    why: "If month-end close takes hours instead of days, how does this affect how accounting firms structure their teams?"
+
+  - id: "ch30-02-domain-accounting-financial-reporting-014"
+    front: "IFRS is used by listed companies in Pakistan. What does this mean for AI-drafted financial statement quality versus a US GAAP jurisdiction?"
+    back: "Pakistani CAs must apply more careful review because IFRS principles leave more room for AI judgment calls that a professional might make differently than the AI did."
+    tags: ["pakistan-regulatory", "ifrs", "ai-quality"]
+    difficulty: "intermediate"
+    why: "What specific review step should a Pakistani CA add to their AI-assisted reporting workflow that a US CPA might not need?"
