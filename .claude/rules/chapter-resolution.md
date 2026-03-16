@@ -14,7 +14,7 @@
 
 ```
 apps/learn-app/docs/
-├── 00-Prelude-Thinking-is-the-Curriculum/     ← Part 0
+├── 00-Thinking-is-the-Curriculum/     ← Part 0
 │   ├── 01-asking-better-questions/            ← Chapter 1
 │   ├── 02-detecting-broken-reasoning/         ← Chapter 2
 │   └── ...up to 11-thinking-portfolio/        ← Chapter 11
