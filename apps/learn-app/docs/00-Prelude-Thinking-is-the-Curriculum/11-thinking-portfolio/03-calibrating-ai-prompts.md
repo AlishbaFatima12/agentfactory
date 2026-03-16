@@ -12,8 +12,8 @@ keywords:
     "score calibration",
     "assessment maintenance",
   ]
-chapter: 13
-lesson: 1
+chapter: 11
+lesson: 3
 duration_minutes: 30
 
 # HIDDEN SKILLS METADATA
@@ -41,7 +41,7 @@ differentiation:
 
 teaching_guide:
   lesson_type: "supplementary"
-  session_group: 13
+  session_group: 11
   session_title: "Instructor Calibration Protocol"
   key_points:
     - "The five Thinking Score Card dimensions are permanent -- only the prompt wording that elicits accurate scores should be tuned. Changing dimensions breaks cross-semester comparability"

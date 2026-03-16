@@ -1,17 +1,17 @@
 ---
 sidebar_position: 0.6
-title: "Part 0: Thinking is the Curriculum"
+title: "Part 0: Prelude — Thinking is the Curriculum"
 ---
 
-# Part 0: Thinking is the Curriculum
+# Part 0: Prelude — Thinking is the Curriculum
 
-> _10 Chapters. 10 Skills. Every Exercise Requires You to Think Before AI Thinks for You._
+> _11 Chapters. 10 Skills. Every Exercise Requires You to Think Before AI Thinks for You._
 
 This part comes before agent foundations, before programming, before architecture, before deployment. It comes first because everything that follows depends on it.
 
 AI tools can retrieve facts, generate analyses, write code, and produce polished documents. What they cannot do is think. They cannot ask the right question. They cannot detect their own errors. They cannot reason from first principles when no pattern exists. They cannot decide under uncertainty, navigate ethical dilemmas, or create something genuinely new.
 
-These ten chapters teach the skills that AI amplifies but cannot replace. But teaching thinking in the age of AI creates an immediate paradox: if students have access to AI tools, what stops them from letting AI do all the thinking? The answer is not to ban AI. The answer is to design exercises where AI cannot do the work — because the work is the student's own cognitive process, not the output.
+These eleven chapters teach the skills that AI amplifies but cannot replace. But teaching thinking in the age of AI creates an immediate paradox: if students have access to AI tools, what stops them from letting AI do all the thinking? The answer is not to ban AI. The answer is to design exercises where AI cannot do the work — because the work is the student's own cognitive process, not the output.
 
 > _The deliverable is never the answer. The deliverable is the documented evidence of thinking._
 
@@ -95,7 +95,7 @@ _Challenging AI feedback is not a sign of failure. It is the highest application
 
 ## The Thinking Score Card
 
-Every AI check prompt in this part ends with the same standardized scoring request: the Thinking Score Card. This gives you five consistent scores (each 1-10) across all 40 exercises, all 10 chapters, allowing you to track your growth on a single chart from Chapter 1, Exercise 1 to Chapter 10, Exercise 4.
+Every AI check prompt in this part ends with the same standardized scoring request: the Thinking Score Card. This gives you five consistent scores (each 1-10) across all 40 exercises in Chapters 1–10, allowing you to track your growth on a single chart from Chapter 1, Exercise 1 to Chapter 10, Exercise 4. Chapter 11 provides the final post-assessment comparison.
 
 :::note Five dimensions, scored 1-10, on every exercise:
 
@@ -159,20 +159,21 @@ At the end, calculate your average per dimension across all 40 exercises and com
 
 </details>
 
-## The Ten Chapters
+## Chapters
 
-| Chapter                                                                                                | Core Skill                   | What You Build                                                                                     |
-| ------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| [1. Asking Better Questions](./01-asking-better-questions/01-prediction-lock.md)                       | Question Formulation         | A Question Quality Portfolio with prediction locks, reasoning receipts, and AI-graded evaluations  |
-| [2. Detecting Broken Reasoning](./02-detecting-broken-reasoning/01-error-prediction.md)                | Verification and Discernment | An Error Detection Portfolio with annotated AI outputs, confidence calibration, and error taxonomy |
-| [3. Thinking in Systems](./03-thinking-in-systems/01-cascade-mapping.md)                               | Systems Thinking             | A Systems Thinking Portfolio with cascade maps, human-AI comparisons, and variable shift analyses  |
-| [4. Reasoning From First Principles](./04-reasoning-from-first-principles/01-blank-page-derivation.md) | First Principles Reasoning   | A First Principles Portfolio with derivations, assumption autopsies, and constraint rebuilds       |
-| [5. Communicating What Matters](./05-communicating-what-matters/01-audience-prediction.md)             | Communication Under Pressure | A Communication Portfolio with audience predictions, live adaptations, and hard conversations      |
-| [6. Working With AI, Not For AI](./06-working-with-ai-not-for-ai/01-three-path-comparison.md)          | AI Collaboration             | An AI Collaboration Portfolio with three-path comparisons, collaboration logs, and override tests  |
-| [7. Reasoning Through Dilemmas](./07-reasoning-through-dilemmas/01-position-lock.md)                   | Ethical Reasoning            | An Ethical Reasoning Portfolio with position locks, adversarial defences, and stakeholder swaps    |
-| [8. Building Something From Nothing](./08-building-something-from-nothing/01-blank-page-sprint.md)     | Creation and Originality     | A Creation Portfolio with blank page sprints, creation logs, and three-draft evolutions            |
-| [9. Deciding Under Uncertainty](./09-deciding-under-uncertainty/01-sealed-decision.md)                 | Decision-Making              | A Decision-Making Portfolio with sealed decisions, reversal triggers, and decision audits          |
-| [10. Learning How to Learn](./10-learning-how-to-learn/01-learning-plan.md)                            | Meta-Learning                | A Meta-Learning Portfolio with learning plans, 72-hour sprints, and a Personal Learning Framework  |
+| Chapter                                                                                                | Core Skill                   | What You Build                                                                                           |
+| ------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [1. Asking Better Questions](./01-asking-better-questions/01-prediction-lock.md)                       | Question Formulation         | A Question Quality Portfolio with prediction locks, reasoning receipts, and AI-graded evaluations        |
+| [2. Detecting Broken Reasoning](./02-detecting-broken-reasoning/01-error-prediction.md)                | Verification and Discernment | An Error Detection Portfolio with annotated AI outputs, confidence calibration, and error taxonomy       |
+| [3. Thinking in Systems](./03-thinking-in-systems/01-cascade-mapping.md)                               | Systems Thinking             | A Systems Thinking Portfolio with cascade maps, human-AI comparisons, and variable shift analyses        |
+| [4. Reasoning From First Principles](./04-reasoning-from-first-principles/01-blank-page-derivation.md) | First Principles Reasoning   | A First Principles Portfolio with derivations, assumption autopsies, and constraint rebuilds             |
+| [5. Communicating What Matters](./05-communicating-what-matters/01-audience-prediction.md)             | Communication Under Pressure | A Communication Portfolio with audience predictions, live adaptations, and hard conversations            |
+| [6. Working With AI, Not For AI](./06-working-with-ai-not-for-ai/01-three-path-comparison.md)          | AI Collaboration             | An AI Collaboration Portfolio with three-path comparisons, collaboration logs, and override tests        |
+| [7. Reasoning Through Dilemmas](./07-reasoning-through-dilemmas/01-position-lock.md)                   | Ethical Reasoning            | An Ethical Reasoning Portfolio with position locks, adversarial defences, and stakeholder swaps          |
+| [8. Building Something From Nothing](./08-building-something-from-nothing/01-blank-page-sprint.md)     | Creation and Originality     | A Creation Portfolio with blank page sprints, creation logs, and three-draft evolutions                  |
+| [9. Deciding Under Uncertainty](./09-deciding-under-uncertainty/01-sealed-decision.md)                 | Decision-Making              | A Decision-Making Portfolio with sealed decisions, reversal triggers, and decision audits                |
+| [10. Learning How to Learn](./10-learning-how-to-learn/01-learning-plan.md)                            | Meta-Learning                | A Meta-Learning Portfolio with learning plans, 72-hour sprints, and a Personal Learning Framework        |
+| [11. Thinking Portfolio](./11-thinking-portfolio/01-portfolio-assembly.md)                             | Portfolio Synthesis          | A Thinking Portfolio assembling all chapter deliverables, a post-assessment comparison, and a Growth Map |
 
 ## For Solo and Online Learners
 
@@ -200,14 +201,14 @@ _This three-tier system means every student gets personalized AI feedback within
 
 ## Before You Begin
 
-Complete the [Thinking Baseline](./thinking-baseline.md) — a 30-minute ungraded assessment that snapshots your current thinking skills. You will repeat it after Chapter 10 to measure your growth.
+Complete the [Thinking Baseline](./thinking-baseline.md) — a 30-minute ungraded assessment that snapshots your current thinking skills. You will repeat it in Chapter 11 to measure your growth.
 
 ## Learning Path
 
 ```
-Thinking Baseline → Chapters 1-10 → Portfolio Assembly → Post-Assessment → Growth Map
+Thinking Baseline → Chapters 1-10 → Chapter 11: Portfolio, Post-Assessment & Growth Map
 ```
 
-Each chapter builds on the previous. Skills introduced early (Prediction Lock, Reasoning Receipt, Error Taxonomy) recur throughout. By Chapter 10, you are using every skill from every preceding chapter simultaneously.
+Each chapter builds on the previous. Skills introduced early (Prediction Lock, Reasoning Receipt, Error Taxonomy) recur throughout. By Chapter 11, you are applying every skill from every preceding chapter simultaneously.
 
 > _The litmus test for every skill in this part: Does this make AI a more powerful tool in your hands, or does it make you a slower version of the tool?_
