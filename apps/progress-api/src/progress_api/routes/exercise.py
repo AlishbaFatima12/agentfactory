@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 router = APIRouter()
 
 RATE_LIMIT_MAX = 10  # max submissions per window
-RATE_LIMIT_WINDOW_SECS = 60  # 1 minute window
+RATE_LIMIT_WINDOW_SECS = 300  # 5 minute window
 INTENT_TTL_SECS = 60 * 60 * 24 * 60  # 60 days
 
 
@@ -131,12 +131,12 @@ async def exercise_intent(
         if not _ANON_ID_RE.match(identity):
             return  # Invalid/missing anon ID — skip silently (prevents key injection)
 
-    # Rate limit intents: 30/min per identity (prevent Redis key flooding)
+    # Rate limit intents: 30 per 5 minutes per identity (prevent Redis key flooding)
     rl_key = f"rate_limit:intent:{identity}"
     try:
         pipe = redis.pipeline()
         pipe.incr(rl_key)
-        pipe.expire(rl_key, 60)
+        pipe.expire(rl_key, 300)
         rl_results = await pipe.execute()
         if rl_results[0] > 30:
             return  # Silently drop — don't reveal rate limit to attacker
