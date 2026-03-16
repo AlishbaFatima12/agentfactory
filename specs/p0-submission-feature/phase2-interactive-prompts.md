@@ -126,10 +126,36 @@ ALTER TABLE exercise_submissions ADD COLUMN shadow_evaluated_at TIMESTAMPTZ;
 - Shadow evaluator service
 - LLM integration (which model? Claude API via our account?)
 
+## Design Findings (from lesson analysis)
+
+### Variable field count per exercise
+
+- L1 (Prediction Lock): 2 fields — `[paste scenario]`, `[paste your work]`
+- L2 (Question Tournament): 4 fields — `[paste scenario]`, `[paste my questions]`, `[paste partner's questions]`, `[paste comparison table]`
+- Each `[paste ...]` becomes a `<PromptField name="..." label="...">`
+- Component must handle 2-6 fields per exercise
+
+### Solo Learner Alternative is orthogonal
+
+- Solo option changes HOW students gather data (AI partner instead of human)
+- It does NOT change the AI Check prompt — same fields, same evaluation criteria
+- No need for conditional prompt rendering based on solo/pair mode
+
+### Scenario Tabs
+
+- L1 has `<Tabs>` with 3 scenarios (Business/Technical/Social)
+- The selected scenario is pasted into `[paste scenario]` field
+- ExercisePrompt could auto-fill the scenario field from the active tab selection
+- This requires ExercisePrompt to detect which Tab is active (or user manually pastes)
+
+### Claude URL pre-fill works
+
+- Already used in codebase: `claude.ai/new?q=` (DocPageActions line 545)
+- Spec was wrong — updated
+
 ## Open Questions
 
-1. Which LLM for shadow evaluation? Claude Haiku (cheap, fast) vs Sonnet (better quality)?
-2. Should shadow scores be visible to students eventually? Or always internal?
-3. Rate limiting on "Ask ChatGPT" button? (prevent spam-clicking)
-4. Should ExercisePrompt save state to localStorage? (so students don't lose typed answers on page reload)
-5. How to handle exercises with variable prompt structure? (some have tables, scenarios, etc.)
+1. Should ExercisePrompt auto-detect the active Tab for scenario? Or just let the user paste?
+2. localStorage persistence: yes — key structure `exercise_prompt:{docId}:{fieldName}` with 500ms debounce
+3. URL length fallback: clipboard + toast when encoded prompt > 6000 chars
+4. Phase 2C (shadow evaluation) deferred — not needed now
