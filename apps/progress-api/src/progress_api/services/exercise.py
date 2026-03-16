@@ -143,7 +143,7 @@ async def submit_exercise(
             " (user_id, chapter_slug, lesson_slug)"
             " VALUES (:user_id, :chapter_slug, :lesson_slug)"
             " ON CONFLICT (user_id, chapter_slug, lesson_slug) DO NOTHING"
-            " RETURNING id"
+            " RETURNING user_id"
         ),
         {
             "user_id": user.id,
