@@ -5,17 +5,63 @@ title: "Part 0: Thinking is the Curriculum"
 
 # Part 0: Thinking is the Curriculum
 
-> _10 Chapters. 10 Skills. Every Exercise Requires You to Think Before AI Thinks for You._
+> _11 Chapters. 10 Skills. Every Exercise Requires You to Think Before AI Thinks for You._
 
-This part comes before agent foundations, before programming, before architecture, before deployment. It comes first because everything that follows depends on it.
+**AI did not create a thinking crisis. It exposed one.**
 
-AI tools can retrieve facts, generate analyses, write code, and produce polished documents. What they cannot do is think. They cannot ask the right question. They cannot detect their own errors. They cannot reason from first principles when no pattern exists. They cannot decide under uncertainty, navigate ethical dilemmas, or create something genuinely new.
+Everyone is telling you to reskill. Learn AI tools or get left behind. They are right, but they are solving the wrong problem. The tools are easy. Thinking is hard. A twelve-year-old can prompt ChatGPT. The hard part is knowing whether what it gave you is true. The hard part is asking the question it would never ask itself. The hard part is thinking. AI does not reward people who can use it. AI rewards people who can think clearly enough to direct it, question it, and know when it is wrong. Our education systems spent twenty years giving us knowledge and never once taught us how to think with it. Part 0 fixes that.
 
-These ten chapters teach the skills that AI amplifies but cannot replace. But teaching thinking in the age of AI creates an immediate paradox: if students have access to AI tools, what stops them from letting AI do all the thinking? The answer is not to ban AI. The answer is to design exercises where AI cannot do the work — because the work is the student's own cognitive process, not the output.
+Millions of students can now generate essays, analyses, code, and business plans in seconds. Almost none of them can tell whether what AI produced is correct. They cannot ask the question that AI never thought to ask. They cannot spot the reasoning flaw buried in a fluent paragraph. They cannot look at a system and see the second-order consequence that breaks everything. They have the most powerful cognitive tool in human history — and no idea how to think with it.
+
+This is not their fault. They were never taught to think in a world where thinking can be outsourced. **Every AI curriculum on earth starts in the wrong place.** They start with tools. Prompts. APIs. Frameworks. They teach people to *operate* AI. Not one of them puts thinking first.
+
+**Part 0 puts thinking first.**
+
+This is not a warm-up. This is not "soft skills before the real stuff." This is the load-bearing foundation of everything that follows. Remove it, and every technical skill in this book becomes dangerous. A developer who cannot detect broken reasoning will ship broken agents. A business leader who cannot reason from first principles will automate the wrong processes. An architect who cannot think in systems will build AI that optimizes one metric and destroys three others.
+
+The rest of this book will make you powerful. This part determines whether you use that power well.
+
+**The Unsolved Problem**
+
+Every university, every bootcamp, every corporate training program is asking the same question: *If students have access to AI, how do we know they actually learned to think?*
+
+The honest answer, until now, has been: we don't.
+
+Some institutions ban AI. That is denial. Some allow AI and grade the output. That is grading AI, not the student. Some add oral exams on top. That helps, but does not scale.
+
+Part 0 is a different answer. It introduces **six assessment layers** — prediction locks, reasoning receipts, live defence, contradiction challenges, divergence tests, and iterative drafts — engineered so that passing all six *requires* genuine human thinking. No single layer is cheat-proof. All six together are. This is not a policy. It is an architecture.
+
+**And it scales.** AI gives every student instant, personalized feedback on every exercise. Peer review circles add human judgment. Instructors intervene only on flagged cases. The result: rigorous thinking assessment for tens of thousands of students — with no multiple-choice exams, no essay mills, and no guesswork about who actually learned.
+
+Eleven chapters. Ten thinking skills. Forty exercises. One rule:
 
 > _The deliverable is never the answer. The deliverable is the documented evidence of thinking._
 
-> _Part 0 is about how to teach humans to thrive in the future. The rest of the book is how to build the future._
+You will not be graded on what you produced. You will be graded on whether you can prove you thought.
+
+:::info What This Looks Like in Practice
+
+**Exercise:** Should a startup build a custom AI agent or use an off-the-shelf tool?
+
+**Step 1 — Prediction Lock (before you touch AI):**
+Write your position and seal it. You cannot change it later.
+> "I predict custom-built wins for companies with unique workflows. Confidence: 55%. I'd change my mind if off-the-shelf tools handle customization better than I expect."
+
+**Step 2 — AI Research (now you open AI):**
+Give the same question to Claude and ChatGPT. Read their arguments. Do not copy them. Decide what you agree with, what you reject, and why.
+
+**Step 3 — Reasoning Receipt (document your decisions):**
+> "AI argued that off-the-shelf saves 6 months. I agreed on speed but rejected its assumption that the startup's workflow is standard. My confidence shifted from 55% to 70%."
+
+**Step 4 — AI Grades Your Thinking (not your answer):**
+Submit your prediction lock and reasoning receipt to AI using the prompt provided in the exercise. AI scores you on five dimensions: independent thinking, critical evaluation, reasoning depth, originality, and self-awareness. The grade is on *how* you thought — not *what* you concluded.
+
+The student who copied AI's answer scores low. The student who disagreed with AI and explained why scores high — even if their final answer is the same.
+
+:::
+
+> _Part 0 teaches humans how to thrive in the AI era. The rest of the book builds the era itself._
+
 
 ## What You Need
 
@@ -95,7 +141,7 @@ _Challenging AI feedback is not a sign of failure. It is the highest application
 
 ## The Thinking Score Card
 
-Every AI check prompt in this part ends with the same standardized scoring request: the Thinking Score Card. This gives you five consistent scores (each 1-10) across all 40 exercises, all 10 chapters, allowing you to track your growth on a single chart from Chapter 1, Exercise 1 to Chapter 10, Exercise 4.
+Every AI check prompt in this part ends with the same standardized scoring request: the Thinking Score Card. This gives you five consistent scores (each 1-10) across all 40 exercises in Chapters 1–10, allowing you to track your growth on a single chart from Chapter 1, Exercise 1 to Chapter 10, Exercise 4. Chapter 11 provides the final post-assessment comparison.
 
 :::note Five dimensions, scored 1-10, on every exercise:
 
@@ -159,20 +205,21 @@ At the end, calculate your average per dimension across all 40 exercises and com
 
 </details>
 
-## The Ten Chapters
+## Chapters
 
-| Chapter                                                                                                | Core Skill                   | What You Build                                                                                     |
-| ------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| [1. Asking Better Questions](./01-asking-better-questions/01-prediction-lock.md)                       | Question Formulation         | A Question Quality Portfolio with prediction locks, reasoning receipts, and AI-graded evaluations  |
-| [2. Detecting Broken Reasoning](./02-detecting-broken-reasoning/01-error-prediction.md)                | Verification and Discernment | An Error Detection Portfolio with annotated AI outputs, confidence calibration, and error taxonomy |
-| [3. Thinking in Systems](./03-thinking-in-systems/01-cascade-mapping.md)                               | Systems Thinking             | A Systems Thinking Portfolio with cascade maps, human-AI comparisons, and variable shift analyses  |
-| [4. Reasoning From First Principles](./04-reasoning-from-first-principles/01-blank-page-derivation.md) | First Principles Reasoning   | A First Principles Portfolio with derivations, assumption autopsies, and constraint rebuilds       |
-| [5. Communicating What Matters](./05-communicating-what-matters/01-audience-prediction.md)             | Communication Under Pressure | A Communication Portfolio with audience predictions, live adaptations, and hard conversations      |
-| [6. Working With AI, Not For AI](./06-working-with-ai-not-for-ai/01-three-path-comparison.md)          | AI Collaboration             | An AI Collaboration Portfolio with three-path comparisons, collaboration logs, and override tests  |
-| [7. Reasoning Through Dilemmas](./07-reasoning-through-dilemmas/01-position-lock.md)                   | Ethical Reasoning            | An Ethical Reasoning Portfolio with position locks, adversarial defences, and stakeholder swaps    |
-| [8. Building Something From Nothing](./08-building-something-from-nothing/01-blank-page-sprint.md)     | Creation and Originality     | A Creation Portfolio with blank page sprints, creation logs, and three-draft evolutions            |
-| [9. Deciding Under Uncertainty](./09-deciding-under-uncertainty/01-sealed-decision.md)                 | Decision-Making              | A Decision-Making Portfolio with sealed decisions, reversal triggers, and decision audits          |
-| [10. Learning How to Learn](./10-learning-how-to-learn/01-learning-plan.md)                            | Meta-Learning                | A Meta-Learning Portfolio with learning plans, 72-hour sprints, and a Personal Learning Framework  |
+| Chapter                                                                                                | Core Skill                   | What You Build                                                                                           |
+| ------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [1. Asking Better Questions](./01-asking-better-questions/01-prediction-lock.md)                       | Question Formulation         | A Question Quality Portfolio with prediction locks, reasoning receipts, and AI-graded evaluations        |
+| [2. Detecting Broken Reasoning](./02-detecting-broken-reasoning/01-error-prediction.md)                | Verification and Discernment | An Error Detection Portfolio with annotated AI outputs, confidence calibration, and error taxonomy       |
+| [3. Thinking in Systems](./03-thinking-in-systems/01-cascade-mapping.md)                               | Systems Thinking             | A Systems Thinking Portfolio with cascade maps, human-AI comparisons, and variable shift analyses        |
+| [4. Reasoning From First Principles](./04-reasoning-from-first-principles/01-blank-page-derivation.md) | First Principles Reasoning   | A First Principles Portfolio with derivations, assumption autopsies, and constraint rebuilds             |
+| [5. Communicating What Matters](./05-communicating-what-matters/01-audience-prediction.md)             | Communication Under Pressure | A Communication Portfolio with audience predictions, live adaptations, and hard conversations            |
+| [6. Working With AI, Not For AI](./06-working-with-ai-not-for-ai/01-three-path-comparison.md)          | AI Collaboration             | An AI Collaboration Portfolio with three-path comparisons, collaboration logs, and override tests        |
+| [7. Reasoning Through Dilemmas](./07-reasoning-through-dilemmas/01-position-lock.md)                   | Ethical Reasoning            | An Ethical Reasoning Portfolio with position locks, adversarial defences, and stakeholder swaps          |
+| [8. Building Something From Nothing](./08-building-something-from-nothing/01-blank-page-sprint.md)     | Creation and Originality     | A Creation Portfolio with blank page sprints, creation logs, and three-draft evolutions                  |
+| [9. Deciding Under Uncertainty](./09-deciding-under-uncertainty/01-sealed-decision.md)                 | Decision-Making              | A Decision-Making Portfolio with sealed decisions, reversal triggers, and decision audits                |
+| [10. Learning How to Learn](./10-learning-how-to-learn/01-learning-plan.md)                            | Meta-Learning                | A Meta-Learning Portfolio with learning plans, 72-hour sprints, and a Personal Learning Framework        |
+| [11. Thinking Portfolio](./11-thinking-portfolio/01-portfolio-assembly.md)                             | Portfolio Synthesis          | A Thinking Portfolio assembling all chapter deliverables, a post-assessment comparison, and a Growth Map |
 
 ## For Solo and Online Learners
 
@@ -183,7 +230,7 @@ Instead of a peer panel questioning your work, you submit your deliverable to AI
 The solo path is not inferior to the peer path — it is different. Peers provide unpredictability, social pressure, and perspectives you cannot anticipate. AI provides consistency, tirelessness, and the ability to generate adversarial challenges on demand. If possible, combine both.
 
 <details>
-<summary>How This Scales: Assessment for 16,000 Students (Instructor Reference)</summary>
+<summary>How This Scales: Assessment for Tens of Thousands of Students (Instructor Reference)</summary>
 
 **Tier 1 — AI First-Pass (every student, every exercise):**
 Every exercise includes an exact AI check prompt. The student submits their work, receives AI-generated scores and feedback, and includes this in their portfolio. This provides immediate, personalized feedback at unlimited scale. AI scores serve as the baseline assessment.
@@ -200,14 +247,14 @@ _This three-tier system means every student gets personalized AI feedback within
 
 ## Before You Begin
 
-Complete the [Thinking Baseline](./thinking-baseline.md) — a 30-minute ungraded assessment that snapshots your current thinking skills. You will repeat it after Chapter 10 to measure your growth.
+Complete the [Thinking Baseline](./thinking-baseline.md) — a 30-minute ungraded assessment that snapshots your current thinking skills. You will repeat it in Chapter 11 to measure your growth.
 
 ## Learning Path
 
 ```
-Thinking Baseline → Chapters 1-10 → Portfolio Assembly → Post-Assessment → Growth Map
+Thinking Baseline → Chapters 1-10 → Chapter 11: Portfolio, Post-Assessment & Growth Map
 ```
 
-Each chapter builds on the previous. Skills introduced early (Prediction Lock, Reasoning Receipt, Error Taxonomy) recur throughout. By Chapter 10, you are using every skill from every preceding chapter simultaneously.
+Each chapter builds on the previous. Skills introduced early (Prediction Lock, Reasoning Receipt, Error Taxonomy) recur throughout. By Chapter 11, you are applying every skill from every preceding chapter simultaneously.
 
 > _The litmus test for every skill in this part: Does this make AI a more powerful tool in your hands, or does it make you a slower version of the tool?_
