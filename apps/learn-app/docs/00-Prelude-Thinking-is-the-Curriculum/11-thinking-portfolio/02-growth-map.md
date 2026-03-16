@@ -11,7 +11,7 @@ keywords:
     "score card comparison",
     "thinking trajectory",
   ]
-chapter: 12
+chapter: 11
 lesson: 2
 duration_minutes: 20
 
@@ -40,7 +40,7 @@ differentiation:
 
 teaching_guide:
   lesson_type: "capstone"
-  session_group: 12
+  session_group: 11
   session_title: "Growth Map and Transition"
   key_points:
     - "The Growth Map is concrete, quantified evidence of what ten chapters of thinking practice produced -- not a subjective self-assessment. Numbers replace feelings"

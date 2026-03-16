@@ -12,7 +12,7 @@ keywords:
     "cognitive growth",
     "hospital triage",
   ]
-chapter: 12
+chapter: 11
 lesson: 1
 duration_minutes: 45
 
@@ -53,7 +53,7 @@ differentiation:
 
 teaching_guide:
   lesson_type: "capstone"
-  session_group: 12
+  session_group: 11
   session_title: "Portfolio Assembly and Post-Assessment"
   key_points:
     - "The portfolio is not an assignment to complete and forget -- it is the foundation of everything students build in Parts 1-10. Every skill documented here (prediction locks, reasoning receipts, cascade maps, reversal triggers) is called upon by name later"
