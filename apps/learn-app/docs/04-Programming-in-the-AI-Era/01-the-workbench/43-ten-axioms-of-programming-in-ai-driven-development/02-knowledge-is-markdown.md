@@ -13,7 +13,7 @@ keywords:
     "documentation",
     "version control",
   ]
-chapter: 31
+chapter: 43
 lesson: 2
 duration_minutes: 20
 
@@ -287,7 +287,7 @@ As Emma's team migrated their knowledge into markdown, James noticed a gap. The 
 ```markdown
 ---
 title: "Axiom II: Knowledge is Markdown"
-chapter: 31
+chapter: 43
 lesson: 2
 duration_minutes: 20
 skills:

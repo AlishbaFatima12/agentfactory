@@ -13,7 +13,7 @@ keywords:
     "AI collaboration",
     "conventional commits",
   ]
-chapter: 31
+chapter: 43
 lesson: 8
 duration_minutes: 22
 

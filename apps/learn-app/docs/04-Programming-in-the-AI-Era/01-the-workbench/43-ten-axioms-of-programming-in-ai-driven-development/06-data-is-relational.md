@@ -15,7 +15,7 @@ keywords:
     "migrations",
     "agentic development",
   ]
-chapter: 31
+chapter: 43
 lesson: 6
 duration_minutes: 22
 

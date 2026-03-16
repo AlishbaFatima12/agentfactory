@@ -14,7 +14,7 @@ keywords:
     "type checking",
     "security audit",
   ]
-chapter: 31
+chapter: 43
 lesson: 9
 duration_minutes: 25
 

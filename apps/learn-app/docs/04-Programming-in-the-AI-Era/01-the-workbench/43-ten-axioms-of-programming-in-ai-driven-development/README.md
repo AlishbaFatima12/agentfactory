@@ -1,6 +1,6 @@
 ---
 sidebar_position: 31
-title: "Chapter 31: Ten Axioms of Programming in the Era of AI Driven Development"
+title: "Chapter 43: Ten Axioms of Programming in the Era of AI Driven Development"
 description: "A complete, battle-tested engineering system of ten axioms that turns AI from a source of unpredictable complexity into your most powerful and reliable collaborator"
 keywords:
   [
@@ -15,7 +15,7 @@ keywords:
     "verification pipeline",
     "version control",
   ]
-chapter: 31
+chapter: 43
 lesson: 0
 duration_minutes: 15
 
@@ -47,7 +47,7 @@ slides:
   height: 700
 ---
 
-# Chapter 31: Ten Axioms of Programming in the Era of AI Driven Development
+# Chapter 43: Ten Axioms of Programming in the Era of AI Driven Development
 
 In 2026, AI coding agents are no longer experimental tools—they are generating more production code than ever before. This shift does not diminish the importance of programming; it elevates it dramatically. The highest-leverage engineers are now those who have moved beyond typing lines of code to become expert orchestrators of AI agents, writers of precise specifications, designers of clean composable architectures, rigorous verifiers of correctness, and vigilant observers of live systems. This chapter presents the Ten Axioms of Programming in the Era of AI-Driven Development—a complete, battle-tested engineering system that turns AI from a source of unpredictable complexity into your most powerful and reliable collaborator. Master these axioms and you will not compete against AI; you will multiply your impact through it.
 

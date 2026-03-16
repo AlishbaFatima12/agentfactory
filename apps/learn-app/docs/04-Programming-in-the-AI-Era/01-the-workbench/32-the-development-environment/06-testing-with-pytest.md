@@ -99,7 +99,7 @@ A clean run shows dots. Any `F` means a test found a problem.
 
 ## Axiom VII in Action
 
-In Axiom VII from Chapter 31, you learned that tests are the specification. pytest does not check that code runs. The Python interpreter already does that. pytest checks that code does *what you specified it should do*.
+In Axiom VII from Chapter 43, you learned that tests are the specification. pytest does not check that code runs. The Python interpreter already does that. pytest checks that code does *what you specified it should do*.
 
 When James writes `assert format_title("hello world") == "Hello World"`, he is not writing a test. He is writing a specification: this piece of code, given this input, must produce this output. The `assert` keyword is the specification expressed as code. If the assertion is true, the test passes silently. If it is false, pytest reports exactly what went wrong -- what the code returned and what the test expected.
 

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: "Axiom IV: Composition Over Monoliths"
-chapter: 31
+chapter: 43
 lesson: 4
 duration_minutes: 22
 description: "Complex systems are built from composable, focused units that communicate through well-defined interfaces—the Unix philosophy applied to software architecture"

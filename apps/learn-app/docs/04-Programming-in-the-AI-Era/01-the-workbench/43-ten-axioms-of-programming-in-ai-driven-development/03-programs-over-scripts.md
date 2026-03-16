@@ -15,7 +15,7 @@ keywords:
     "agentic development",
     "production code",
   ]
-chapter: 31
+chapter: 43
 lesson: 3
 duration_minutes: 22
 

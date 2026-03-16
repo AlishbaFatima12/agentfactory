@@ -14,7 +14,7 @@ keywords:
     "coordination",
     "unix philosophy",
   ]
-chapter: 31
+chapter: 43
 lesson: 1
 duration_minutes: 20
 

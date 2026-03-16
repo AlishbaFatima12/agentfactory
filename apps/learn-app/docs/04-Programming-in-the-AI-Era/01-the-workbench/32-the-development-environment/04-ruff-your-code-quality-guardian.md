@@ -104,7 +104,7 @@ Linting finds problems. Formatting enforces style. A linting error might be a re
 
 ## Axiom IX in Action
 
-In Axiom IX from Chapter 31, you learned that verification is a pipeline -- not a manual checklist you remember to follow, but an automated sequence that runs every time you change code. Ruff is the first stage of that pipeline.
+In Axiom IX from Chapter 43, you learned that verification is a pipeline -- not a manual checklist you remember to follow, but an automated sequence that runs every time you change code. Ruff is the first stage of that pipeline.
 
 Consider what happens without ruff. James finishes writing code. He runs it. It works. He commits. He opens a pull request. Emma reads the code and notices an unused library on line 3. She leaves a comment. James fixes it and pushes again. Emma notices inconsistent spacing on line 17. Another comment. Another fix. Another push. Three rounds of review for problems that have nothing to do with logic or design.
 

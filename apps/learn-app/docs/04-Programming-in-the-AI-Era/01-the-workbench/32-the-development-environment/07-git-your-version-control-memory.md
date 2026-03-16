@@ -88,7 +88,7 @@ The common thread: every change is permanent. There is no undo beyond the editor
 
 ## Axiom VIII in Action
 
-In Axiom VIII from Chapter 31, you learned that version control is memory. Human memory is unreliable -- James could not remember the exact logic of his deleted `format_title` code after twenty minutes. Git memory is permanent -- every commit records the complete state of every file in the project.
+In Axiom VIII from Chapter 43, you learned that version control is memory. Human memory is unreliable -- James could not remember the exact logic of his deleted `format_title` code after twenty minutes. Git memory is permanent -- every commit records the complete state of every file in the project.
 
 This matters even more when working with AI assistants. An AI can generate fifty lines of code in seconds. If you experiment with that code, rewrite it, and lose the working version, the AI cannot reproduce the exact same output -- each generation is different. Git solves this by recording every version permanently.
 
@@ -275,7 +275,7 @@ Explain why commit messages matter by showing me:
 3. What is the one-line rule for commit messages and why does it matter?
 ```
 
-**What you're learning:** This prompt connects directly to Axiom VIII -- version control as memory. Good commit messages are the difference between a useful history and a useless one. James's story from Chapter 31 began with "wip" and "fix stuff" commits that told him nothing when he needed them. By studying good vs bad messages now, you build the habit before it costs you.
+**What you're learning:** This prompt connects directly to Axiom VIII -- version control as memory. Good commit messages are the difference between a useful history and a useless one. James's story from Chapter 43 began with "wip" and "fix stuff" commits that told him nothing when he needed them. By studying good vs bad messages now, you build the habit before it costs you.
 
 ### Prompt 3: Generate Code, Then Verify With the Full Pipeline
 

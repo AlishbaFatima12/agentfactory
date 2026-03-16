@@ -1,9 +1,9 @@
 ---
 sidebar_position: 11
-title: "Chapter 31: Ten Axioms Quiz"
+title: "Chapter 43: Ten Axioms Quiz"
 description: "Assess your understanding of the ten axioms of programming in AI-driven development through scenario-based questions following James's order management journey"
 keywords: ["ten axioms quiz", "agentic development assessment", "shell orchestrator", "markdown knowledge", "type safety", "composition", "observability", "verification pipeline", "version control", "test-driven generation"]
-chapter: 31
+chapter: 43
 lesson: 11
 duration_minutes: 45
 
@@ -43,12 +43,12 @@ differentiation:
   remedial_for_struggling: "Focus on the three axiom groups separately: Structure (I-IV), Data (V-VI), Verification (VII-X). Re-read the Key Takeaways of each axiom before retaking those questions."
 ---
 
-# Chapter 31: Ten Axioms of Programming in AI-Driven Development Quiz
+# Chapter 43: Ten Axioms of Programming in AI-Driven Development Quiz
 
 Test your understanding of the ten axioms that govern effective AI-driven software development — from shell orchestration through production observability. These questions follow James's journey building an order management system, the same running example from the chapter lessons.
 
 <Quiz
-  title="Chapter 31: Ten Axioms of Programming in AI-Driven Development"
+  title="Chapter 43: Ten Axioms of Programming in AI-Driven Development"
   questions={[
     {
       question: "James has an 80-line bash script that fetches order data from an API, transforms it with jq, filters results with grep, and writes output to a file. The script has nested if-else blocks for error handling and retry logic. Emma reviews it and says it needs restructuring. What should James do?",

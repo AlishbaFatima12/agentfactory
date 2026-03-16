@@ -28,7 +28,7 @@ This methodology document uses the **book chapter numbers** (as they appear in `
 | This Document Says | Refers To | Book Path |
 |---|---|---|
 | Chapter 42 | PRIMM-AI+ Framework | `42-the-primm-ai-framework/` |
-| Chapter 31 | Ten Axioms of Programming | `31-ten-axioms-of-programming-in-ai-driven-development/` |
+| Chapter 43 | Ten Axioms of Programming | `43-ten-axioms-of-programming-in-ai-driven-development/` |
 | Chapter 6 | Seven Principles | `06-seven-principles/` |
 | Chapter 33+ | Python programming chapters | Future chapters |
 
@@ -97,7 +97,7 @@ Every lesson and every chapter in Parts 4 and 5 follows the PRIMM-AI+ framework 
 
 ### Track A vs Track B
 
-The critical distinction learned from Chapter 31 (v2 rewrite after PR #853 failure):
+The critical distinction learned from Chapter 43 (v2 rewrite after PR #853 failure):
 
 | Dimension | Track A: Code Exercises | Track B: Conceptual Reasoning |
 |-----------|------------------------|------------------------------|
@@ -110,7 +110,7 @@ The critical distinction learned from Chapter 31 (v2 rewrite after PR #853 failu
 | **Make stage** | Write new code from spec | Write structured plan, checklist, or document |
 | **Chapters** | Chapter 33+ (Python programming) | Chapters 30-31 (conceptual foundations) |
 
-**The PR #853 Lesson**: The first attempt at Chapter 31 PRIMM-AI+ used Track A exercises (Makefiles, pytest, SQL, Docker, git commands) for students who didn't know those tools yet. Every exercise was inaccessible. The v2 rewrite switched to Track B — all exercises use real-world scenarios and plain-English reasoning, not code. **Always match the track to what students actually know at that point in the book.**
+**The PR #853 Lesson**: The first attempt at Chapter 43 PRIMM-AI+ used Track A exercises (Makefiles, pytest, SQL, Docker, git commands) for students who didn't know those tools yet. Every exercise was inaccessible. The v2 rewrite switched to Track B — all exercises use real-world scenarios and plain-English reasoning, not code. **Always match the track to what students actually know at that point in the book.**
 
 ### The Five-Step Lesson Architecture
 
@@ -189,7 +189,7 @@ The Make section is not optional practice — it is a **gate**. The student must
 
 ### Parsons Problems (Selected Lessons Only)
 
-Parsons Problems — scrambled steps students reorder into the correct sequence — appear in specific lessons, not all of them. In Chapter 31 they appear in Axioms I, IV, and VII only.
+Parsons Problems — scrambled steps students reorder into the correct sequence — appear in specific lessons, not all of them. In Chapter 43 they appear in Axioms I, IV, and VII only.
 
 **Track A**: Scrambled code lines reordered into a working program.
 **Track B**: Scrambled process steps reordered into the correct sequence, with follow-up questions about which steps are coordination vs work.
@@ -234,9 +234,9 @@ This book is designed for solo mode. Every technique works with just the student
 
 ## 4. Tone and Narrative Continuity
 
-### Chapter 31's Established Pattern
+### Chapter 43's Established Pattern
 
-Chapter 31 (Ten Axioms of Programming in AI-Driven Development) is the bridge chapter that students complete right before entering the Python course. It establishes:
+Chapter 43 (Ten Axioms of Programming in AI-Driven Development) is the bridge chapter that students complete right before entering the Python course. It establishes:
 
 **Characters:**
 - **James** — The learner. Enthusiastic, sometimes rushes ahead, makes the mistakes students will make. He represents the student's journey.
@@ -256,11 +256,11 @@ Chapter 31 (Ten Axioms of Programming in AI-Driven Development) is the bridge ch
 - Practical — every concept connects to something the student will actually do
 - Respectful — assumes the student is smart but new to this specific topic
 
-**Named Anti-patterns:** Chapter 31 names specific mistakes (Circular Testing Trap, Green Bar Illusion, Prototype Trap, etc.). These become recurring vocabulary students recognize.
+**Named Anti-patterns:** Chapter 43 names specific mistakes (Circular Testing Trap, Green Bar Illusion, Prototype Trap, etc.). These become recurring vocabulary students recognize.
 
 ### The "From Principle to Axiom" Cross-Reference Pattern
 
-Every axiom lesson in Chapter 31 connects back to Chapter 6 (Seven Principles) with a comparison table. The pattern:
+Every axiom lesson in Chapter 43 connects back to Chapter 6 (Seven Principles) with a comparison table. The pattern:
 
 1. Reference the principle with a **Docusaurus link**: `In [Chapter 6](/docs/General-Agents-Foundations/seven-principles/bash-is-the-key), you learned **Principle 1: Bash is the Key**`
 2. Add a **concrete callback** to what students learned (e.g., the Vercel d0 case study)
@@ -269,16 +269,16 @@ Every axiom lesson in Chapter 31 connects back to Chapter 6 (Seven Principles) w
 
 **Chapter reference accuracy rule**: Always verify chapter numbers against the filesystem before referencing them. The Seven Principles are in Chapter 6, not Chapter 4 or 7. Run `ls -d apps/learn-app/docs/*/06-*/` to confirm.
 
-### The Bridge from Chapter 31 to Python Chapters
+### The Bridge from Chapter 43 to Python Chapters
 
-Chapter 31 ends with students understanding the TEN AXIOMS — the principles that govern how you work with AI-generated code. They know the WHY. But they haven't done anything yet. Their laptop is still unconfigured.
+Chapter 43 ends with students understanding the TEN AXIOMS — the principles that govern how you work with AI-generated code. They know the WHY. But they haven't done anything yet. Their laptop is still unconfigured.
 
 **The first Python chapter is where theory becomes reality.**
 
 The narrative bridge should feel like this progression:
 
 ```
-Ch 31 (final words): "You now have ten axioms — a complete engineering system.
+Ch 43 (final words): "You now have ten axioms — a complete engineering system.
                        But axioms on paper don't ship software.
                        It's time to build the workbench."
 
@@ -301,9 +301,9 @@ Python L1 (opening):  James opens his laptop. Empty terminal. No Python tools.
 
 **This axiom-callback pattern is what makes our chapter different from every other Python setup tutorial.** Students don't just install tools — they understand WHY each tool exists in the context of the engineering system they just learned.
 
-### Tone Shift: Ch 31 → Python Chapters
+### Tone Shift: Ch 43 → Python Chapters
 
-| Dimension | Ch 31 (Axioms) | Python Chapters |
+| Dimension | Ch 43 (Axioms) | Python Chapters |
 |-----------|----------------|---------------------|
 | **Mode** | Philosophical, conceptual | Hands-on, terminal-driven |
 | **Student action** | Read, understand, predict | Run commands, read output, verify |
@@ -318,7 +318,7 @@ Python L1 (opening):  James opens his laptop. Empty terminal. No Python tools.
 
 ## 5. Beginner Accessibility Rules
 
-These rules were established through iterative refinement of Chapter 31. They prevent the most common accessibility failures.
+These rules were established through iterative refinement of Chapter 43. They prevent the most common accessibility failures.
 
 ### Rule 1: Match Examples to Student Knowledge
 
@@ -377,7 +377,7 @@ tool and nothing else.
 
 ## 6. The Iterative Evaluation Pattern
 
-Every lesson should be evaluated before finalizing. This pattern was established during Chapter 31 refinement.
+Every lesson should be evaluated before finalizing. This pattern was established during Chapter 43 refinement.
 
 ### The Evaluation Rubric
 
@@ -401,7 +401,7 @@ Rate each lesson out of 10 from a beginner student's perspective. Evaluate these
 3. Re-evaluate → confirm the rating improved
 4. Repeat until rating ≥ 8.5/10
 
-**Common issues found during Chapter 31 evaluation:**
+**Common issues found during Chapter 43 evaluation:**
 - No answer key in PRIMM-AI+ (found in Axiom II)
 - Professional tool references beginners don't know (found in Axioms I, II)
 - Vague Investigate questions that just restate the axiom (found in Axiom II)
@@ -544,7 +544,7 @@ Looking Ahead (1-2 paragraphs)
 **Process**:
 
 ```
-1. READ Chapter 31 (or previous chapter) for tone/style reference
+1. READ Chapter 43 (or previous chapter) for tone/style reference
    └── Note: characters, narrative patterns, exercise style, pacing
 
 2. PLAN lesson breakdown
@@ -578,7 +578,7 @@ Looking Ahead (1-2 paragraphs)
 1. PROMPT the content-implementer subagent with:
    ├── The expertise skill (grounded knowledge)
    ├── The lesson plan (objectives, concepts, exercises)
-   ├── A reference lesson from Ch 31 (for tone matching)
+   ├── A reference lesson from Ch 43 (for tone matching)
    ├── Character context (James/Emma, their dynamic)
    ├── The axiom callback for this lesson's tools
    ├── Track A or Track B for PRIMM-AI+ exercises
@@ -659,7 +659,7 @@ L4 (Spec-Driven): Student drives full spec → implement → verify cycle
     → PRIMM-AI+ Track: A (code) — student orchestrates everything
 ```
 
-### Conceptual Chapters (Ch 31, Ch 42) = Pre-L1
+### Conceptual Chapters (Ch 43, Ch 42) = Pre-L1
 
 Chapters 30-31 are **conceptual foundations** before any programming:
 - Students READ and REASON, they don't write code
@@ -715,7 +715,7 @@ Checked by: `/content-evaluation-framework` skill
 Checked by: Main agent (manual review)
 
 - Are James/Emma in character?
-- Does the tone match Chapter 31?
+- Does the tone match Chapter 43?
 - Are axiom callbacks natural (not forced)?
 - Does each lesson flow into the next?
 
@@ -736,7 +736,7 @@ Checked by: Iterative evaluation pattern (Section 6)
 
 ## 11. The "Before vs After" Teaching Pattern
 
-This is Chapter 31's signature teaching technique and we carry it into every Python chapter.
+This is Chapter 43's signature teaching technique and we carry it into every Python chapter.
 
 ### How It Works
 
@@ -810,7 +810,7 @@ We do NOT write three versions of each lesson. Instead:
 
 ## 14. Exercise Design
 
-### Track B Exercises (Conceptual Chapters — Ch 31, Ch 42)
+### Track B Exercises (Conceptual Chapters — Ch 43, Ch 42)
 
 ```
 Predict & Classify     — 50% (classify tasks, predict properties, categorize)
@@ -924,14 +924,14 @@ Every lesson uses inline bold text to create a "concept runway" — reading all 
 2. **Never show unverified commands** — MCP ground everything first
 3. **Never show untyped Python** — every code example has type annotations
 4. **Never skip YAML frontmatter** — full skills, objectives, cognitive load metadata
-5. **Never introduce a tool without axiom callback** — every tool connects to Ch 31
+5. **Never introduce a tool without axiom callback** — every tool connects to Ch 43
 6. **Never use multiple disconnected examples** — one running project per chapter
 7. **Never drop students into Make cold** — every Make is preceded by Predict, Run, Investigate, and Modify on the same concepts
 8. **Always follow the five-step PRIMM-AI+ lesson architecture** — Predict (AI-free) → Run → Investigate → Modify → Make (spec-first)
 9. **Always show "Before vs After"** — pain first, solution second
 10. **Always include 3 Try With AI prompts** — each targeting a different skill
 11. **Always end programming chapters with checkpoint command** — binary pass/fail verification
-12. **Always match Chapter 31's tone** — James/Emma, practical, respectful, problem-first
+12. **Always match Chapter 43's tone** — James/Emma, practical, respectful, problem-first
 13. **Always bold key insight sentences** — inline, short, punchy, ~1 per 14 lines (see Section 16)
 14. **Always include Parsons problems** — at least one per programming chapter, between Investigate and Modify
 15. **Always include answer keys** — every Predict section gets a collapsible `<details>` resolution
@@ -945,6 +945,6 @@ Every lesson uses inline bold text to create a "concept runway" — reading all 
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 3.0 | 2026-03-15 | Major update based on Chapter 31 v2 refinement: Added Track A/B distinction (Section 3), answer key pattern with `<details>`, Error Taxonomy and Verification Ladder as standard tools, beginner accessibility rules (Section 5), iterative evaluation pattern (Section 6), Gate 5 (beginner accessibility), "From Principle to Axiom" cross-reference pattern, chapter numbering clarification table, 4 new key rules (#15-#18), updated all "Chapter 14" references to "Chapter 31", updated per-lesson structure template with PRIMM-AI+ Practice section details |
+| 3.0 | 2026-03-15 | Major update based on Chapter 43 v2 refinement: Added Track A/B distinction (Section 3), answer key pattern with `<details>`, Error Taxonomy and Verification Ladder as standard tools, beginner accessibility rules (Section 5), iterative evaluation pattern (Section 6), Gate 5 (beginner accessibility), "From Principle to Axiom" cross-reference pattern, chapter numbering clarification table, 4 new key rules (#15-#18), updated all "Chapter 14" references to "Chapter 43", updated per-lesson structure template with PRIMM-AI+ Practice section details |
 | 2.0 | 2026-03-08 | Added Section 3 (PRIMM-AI+ lesson and chapter architecture from Ch 42 L3), Section 15 (bold highlighting pattern from Part 1), added Parsons Problems to exercise design, aligned per-lesson structure with five-step PRIMM-AI+ cycle, added four embedded teaching methods, added classroom/solo mode distinction, added 4 new key rules (#7 no cold Make, #8 follow five-step architecture, #13 bold key insights, #14 include Parsons problems), renumbered all sections |
 | 1.0 | 2026-02-20 | Initial methodology document covering MCP grounding, narrative continuity, writing pipeline, quality gates, exercise design, and platform handling |

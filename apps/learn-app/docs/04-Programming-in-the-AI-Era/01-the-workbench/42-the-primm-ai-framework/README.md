@@ -86,6 +86,6 @@ This chapter contains Python code examples. **You are not expected to understand
 
 ## The Complete System
 
-This chapter teaches you _how you will learn_. The next chapter (Chapter 31: Ten Axioms) teaches _what professional practice looks like_. Together they form one coherent system: PRIMM-AI+ provides the method — the sequence, the safeguards, the verification habits — and the Ten Axioms provide the standards you will apply that method to. The method without standards produces competent students. The standards without method produce frustrated ones. You need both, and they are designed to work together.
+This chapter teaches you _how you will learn_. The next chapter (Chapter 43: Ten Axioms) teaches _what professional practice looks like_. Together they form one coherent system: PRIMM-AI+ provides the method — the sequence, the safeguards, the verification habits — and the Ten Axioms provide the standards you will apply that method to. The method without standards produces competent students. The standards without method produce frustrated ones. You need both, and they are designed to work together.
 
 After this chapter, you will never open a programming lesson wondering what to do first. The operating system handles that. You focus on the code.

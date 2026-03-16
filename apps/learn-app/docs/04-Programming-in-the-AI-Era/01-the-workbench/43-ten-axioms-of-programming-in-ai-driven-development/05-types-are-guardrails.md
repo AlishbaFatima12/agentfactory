@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: "Axiom V: Types Are Guardrails"
-chapter: 31
+chapter: 43
 lesson: 5
 duration_minutes: 25
 description: "Type systems prevent errors before they happen. In the AI era, types give AI a specification to generate against and catch hallucinations at compile time."
