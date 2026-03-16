@@ -8,6 +8,7 @@ import re
 from datetime import date
 
 from sqlalchemy import select, text
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..core.auth import CurrentUser
@@ -114,29 +115,45 @@ async def submit_exercise(
     scores_response = ScoreCard(**scores_dict) if scores_dict else None
 
     # 6. INSERT exercise_submission (ON CONFLICT DO NOTHING for race safety)
-    insert_result = await session.execute(
-        text(
-            "INSERT INTO exercise_submissions"
-            " (user_id, chapter_slug, lesson_slug, evidence, scores, feedback, evidence_hash, xp_earned)"
-            " VALUES (:user_id, :chapter_slug, :lesson_slug, CAST(:evidence AS jsonb), CAST(:scores AS jsonb), :feedback, :evidence_hash, :xp_earned)"
-            " ON CONFLICT (user_id, chapter_slug, lesson_slug) DO NOTHING"
-            " RETURNING id"
-        ),
-        {
-            "user_id": user.id,
-            "chapter_slug": request.chapter_slug,
-            "lesson_slug": request.lesson_slug,
-            "evidence": json.dumps(request.evidence.model_dump()),
-            "scores": json.dumps(scores_dict) if scores_dict else None,
-            "feedback": request.feedback,
-            "evidence_hash": evidence_hash,
-            "xp_earned": 50,
-        },
-    )
+    # Two unique constraints exist:
+    #   - uq_exercise_user_chapter_lesson (user_id, chapter_slug, lesson_slug) → ON CONFLICT handles
+    #   - uq_exercise_evidence_hash (evidence_hash, chapter_slug, lesson_slug) → IntegrityError if race
+    try:
+        insert_result = await session.execute(
+            text(
+                "INSERT INTO exercise_submissions"
+                " (user_id, chapter_slug, lesson_slug, evidence, scores, feedback, evidence_hash, xp_earned)"
+                " VALUES (:user_id, :chapter_slug, :lesson_slug, CAST(:evidence AS jsonb), CAST(:scores AS jsonb), :feedback, :evidence_hash, :xp_earned)"
+                " ON CONFLICT (user_id, chapter_slug, lesson_slug) DO NOTHING"
+                " RETURNING id"
+            ),
+            {
+                "user_id": user.id,
+                "chapter_slug": request.chapter_slug,
+                "lesson_slug": request.lesson_slug,
+                "evidence": json.dumps(request.evidence.model_dump()),
+                "scores": json.dumps(scores_dict) if scores_dict else None,
+                "feedback": request.feedback,
+                "evidence_hash": evidence_hash,
+                "xp_earned": 50,
+            },
+        )
+    except IntegrityError as e:
+        # Race: another user's concurrent INSERT claimed this evidence_hash first
+        await session.rollback()
+        error_str = str(e.orig) if e.orig else str(e)
+        if "evidence_hash" in error_str:
+            raise ProgressAPIException(
+                status_code=409,
+                error_code="DUPLICATE_EVIDENCE",
+                message="This submission was already submitted by another student.",
+            ) from e
+        raise  # Unknown constraint — re-raise
+
     inserted_row = insert_result.first()
     if inserted_row is None:
-        # Race condition: another request inserted between our SELECT and INSERT.
-        # Rollback the failed transaction so SQLAlchemy starts a fresh implicit
+        # Race condition: same user's concurrent INSERT via ON CONFLICT DO NOTHING.
+        # Rollback the empty transaction so SQLAlchemy starts a fresh implicit
         # transaction for the idempotent response queries.
         await session.rollback()
         return await _build_idempotent_response(session, user, request, today)

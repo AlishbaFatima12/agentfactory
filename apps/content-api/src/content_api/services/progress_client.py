@@ -96,14 +96,22 @@ class ProgressClient:
             if response.status_code == 200:
                 return response.json()
             else:
+                # Forward the upstream error status and body instead of swallowing it
                 logger.error("[Progress] Exercise submit failed: status=%d, body=%s", response.status_code, response.text)
-                return {"submitted": False, "xp_earned": 0}
+                try:
+                    error_body = response.json()
+                except Exception:
+                    error_body = {"detail": response.text}
+                from fastapi import HTTPException
+                raise HTTPException(status_code=response.status_code, detail=error_body)
         except httpx.TimeoutException as e:
             logger.error("[Progress] Exercise submit timeout: %s", type(e).__name__)
-            return {"submitted": False, "xp_earned": 0}
+            from fastapi import HTTPException
+            raise HTTPException(status_code=503, detail="Progress API timeout")
         except httpx.HTTPError as e:
             logger.error("[Progress] Exercise submit failed: %s: %s", type(e).__name__, e)
-            return {"submitted": False, "xp_earned": 0}
+            from fastapi import HTTPException
+            raise HTTPException(status_code=503, detail="Progress API unavailable")
 
     async def get_progress(
         self,

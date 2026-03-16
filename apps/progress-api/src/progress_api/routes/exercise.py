@@ -32,12 +32,10 @@ async def _check_rate_limit(user_id: str) -> None:
 
     key = f"rate_limit:exercise_submit:{user_id}"
     try:
-        # Atomic pipeline: always set TTL alongside INCR (no orphan keys)
-        pipe = redis_client.pipeline()
-        pipe.incr(key)
-        pipe.expire(key, RATE_LIMIT_WINDOW_SECS)
-        results = await pipe.execute()
-        count = results[0]
+        count = await redis_client.incr(key)
+        if count == 1:
+            # Only set TTL on first increment (fixed window, not sliding)
+            await redis_client.expire(key, RATE_LIMIT_WINDOW_SECS)
 
         if count > RATE_LIMIT_MAX:
             ttl = await redis_client.ttl(key)
@@ -141,14 +139,13 @@ async def exercise_intent(
     # Rate limit intents: 30 per 5 minutes per identity (prevent Redis key flooding)
     rl_key = f"rate_limit:intent:{identity}"
     try:
-        pipe = redis.pipeline()
-        pipe.incr(rl_key)
-        pipe.expire(rl_key, 300)
-        rl_results = await pipe.execute()
-        if rl_results[0] > 30:
+        count = await redis.incr(rl_key)
+        if count == 1:
+            await redis.expire(rl_key, RATE_LIMIT_WINDOW_SECS)
+        if count > 30:
             return  # Silently drop — don't reveal rate limit to attacker
-    except Exception:
-        pass  # Best-effort
+    except Exception as e:
+        logger.warning("Intent rate limit check failed: %s", e)
 
     # Parse device from User-Agent
     ua = request.headers.get("user-agent", "")

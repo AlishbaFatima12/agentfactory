@@ -42,13 +42,11 @@ const DEBOUNCE_MS = 500;
 const PROVIDER_LABELS: Record<string, string> = {
   chatgpt: "ChatGPT",
   claude: "Claude",
-  gemini: "Gemini",
 };
 
 const PROVIDER_URLS: Record<string, { base: string; query: string }> = {
   chatgpt: { base: "https://chatgpt.com/", query: "q" },
   claude: { base: "https://claude.ai/new", query: "q" },
-  gemini: { base: "https://gemini.google.com/app", query: "q" },
 };
 
 const PROVIDERS = ["chatgpt", "claude"] as const;
