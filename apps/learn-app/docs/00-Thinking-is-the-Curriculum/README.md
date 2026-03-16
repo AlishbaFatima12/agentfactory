@@ -58,7 +58,7 @@ Submit your prediction lock and reasoning receipt to AI using the prompt provide
 
 The student who copied AI's answer scores low. The student who disagreed with AI and explained why scores high — even if their final answer is the same.
 
-![Six_Layers](../../static/img/worked-example.png)
+![Worked_Example](../../static/img/worked-example.png)
 
 :::
 
