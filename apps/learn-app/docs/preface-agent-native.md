@@ -93,6 +93,8 @@ _The updated classification framework. Covers the three paths to agentic AI auto
 
 February 2026 wasn't a random market fluctuation. It was a **repricing of the entire software industry** based on a single realization: agentic AI renders seat-based SaaS obsolete.
 
+By March, the verdict was official. Time Magazine called Anthropic "[the most disruptive company in the world](https://time.com/article/2026/03/11/anthropic-claude-disruptive-company-pentagon/)"—a company whose tools are "so good that each new release causes stock-market shocks, as investors grasp the likelihood the advances will upend entire categories, from law to software development." The numbers backed the headline: revenue nearly doubled to a $20 billion run rate in under three months; the share of U.S. companies paying for Claude tools hit 20% in January, up from 4% a year earlier. This wasn't a product launch. It was a market reclassification.
+
 **The Event.** Claude Cowork's eleven open-source plugins demonstrated that autonomous agents could perform the complex professional tasks—contract review, compliance tracking, financial analysis—that were the core business of platforms like Salesforce, ServiceNow, and Thomson Reuters.
 
 **The Shift.** Investors rotated from companies that sell tools to humans toward companies that deploy **Digital FTEs**—autonomous agents that do the work directly. This wasn't panic; it was a repricing of which business models survive the agentic era.
