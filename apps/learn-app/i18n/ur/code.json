@@ -362,99 +362,119 @@
     "description": "The title of the tag list page"
   },
   "homepage.badge.aiFirst": {
-    "message": "AI-FIRST FUTURE",
+    "message": "AI پہلی حکمت عملی",
     "description": "Homepage badge label"
   },
   "homepage.badge.buildMonetize": {
-    "message": "BUILD & MONETIZE DIGITAL FTEs",
+    "message": "ڈیجیٹل FTEs بنائیں اور منیٹائز کریں",
     "description": "Homepage badge tagline"
   },
   "homepage.title": {
-    "message": "THE AI AGENT FACTORY",
+    "message": "AI ایجنٹ",
     "description": "Main homepage heading"
   },
-  "homepage.subtitle": {
-    "message": "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs—Reliable AI Agents You Can Trust, Deploy, and Scale.",
-    "description": "Homepage main subtitle"
+  "homepage.title.factory": {
+    "message": "فیکٹری",
+    "description": "Factory part of homepage heading"
+  },
+  "homepage.subtitle.start": {
+    "message": "یہ",
+    "description": "Subtitle start"
+  },
+  "homepage.subtitle.specDriven": {
+    "message": "Spec-Driven Blueprint",
+    "description": "Spec-driven blueprint phrase"
+  },
+  "homepage.subtitle.for": {
+    "message": "ڈیجیٹل FTEs بنانے اور منیٹائز کرنے کے لیے—",
+    "description": "For building and monetizing"
+  },
+  "homepage.subtitle.reliable": {
+    "message": "معتبر AI ایجنٹس",
+    "description": "Reliable AI Agents"
+  },
+  "homepage.subtitle.you": {
+    "message": "جس پر آپ اعتماد کر سکیں، تعینات کر سکیں، اور پیمانہ کر سکیں۔",
+    "description": "You can trust, deploy, and scale"
   },
   "homepage.description": {
-    "message": "A practical framework for engineers, domain professionals (accountants, finance managers, marketing professions, etc.), enterprise leaders, startup founders, product architects, and operational teams building the next generation of AI-powered organizations.",
+    "message": "انجینئرز، ڈومین پروفیشنلز (اکاؤنٹنٹ، فنانس مینیجرز، مارکیٹنگ پروفیشنز وغیرہ)، انٹرپرائز لیڈرز، سٹارٹ اپ بانی، پروڈکٹ آرکیٹیکٹس، اور آپریشنل ٹیموں کے لیے ایک عملی فریم ورک جو AI سے چلنے والی نئی نسل کی تنظیمیں تعمیر کر رہے ہیں۔",
     "description": "Homepage description paragraph"
   },
   "homepage.button.startReading": {
-    "message": "START READING",
-    "description": "Call to action button to start reading"
+    "message": "پڑھنا شروع کریں",
+    "description": "Call to action button"
   },
   "homepage.button.explorePanaversity": {
-    "message": "Explore Panaversity",
+    "message": "Panaversity کی تلاش کریں",
     "description": "Button to explore Panaversity"
   },
   "homepage.learners": {
-    "message": "professionals learning",
+    "message": "پروفیشنلز تعلیم حاصل کر رہے ہیں",
     "description": "Label for learner count"
   },
   "homepage.liveReviews": {
-    "message": "Live AI Reviews",
+    "message": "لائیو AI جائزہ",
     "description": "Link to AI reviews"
   },
   "homepage.coAuthoredBy": {
-    "message": "Co-Authored by",
+    "message": "مشترکہ مصنف",
     "description": "Section label for co-authors"
   },
   "homepage.aiAgents": {
-    "message": "& AI Agents",
+    "message": "اور AI ایجنٹس",
     "description": "Label for AI agents in authors section"
   },
   "homepage.spectrum.title": {
-    "message": "Understanding AI Development",
+    "message": "AI ڈیولپمنٹ کو سمجھنا",
     "description": "Section title for AI development spectrum"
   },
   "homepage.spectrum.heading": {
-    "message": "The AI Development Spectrum",
+    "message": "AI ڈیولپمنٹ کا spectrum",
     "description": "Section heading for AI spectrum"
   },
   "homepage.spectrum.description": {
-    "message": "Three distinct approaches to AI in software development. This book teaches you both AI-Driven and AI-Native development.",
+    "message": "سافٹ وئیر ڈیولپمنٹ میں AI کے تین الگ الگ طریقے۔ یہ کتاب آپ کو AI-Driven اور AI-Native ڈیولپمنٹ دونوں سکھاتی ہے۔",
     "description": "Description of AI development spectrum"
   },
   "homepage.spectrum.aiAssisted": {
-    "message": "AI Assisted",
+    "message": "AI سے معاونت شدہ",
     "description": "AI Assisted approach title"
   },
   "homepage.spectrum.aiAssistedRole": {
-    "message": "AI as Helper",
+    "message": "AI ہیلپر کے طور پر",
     "description": "Role description for AI Assisted"
   },
   "homepage.spectrum.aiAssistedDesc": {
-    "message": "AI improves your productivity with code completion, debugging assistance, and documentation generation.",
+    "message": "AI کوڈ کی تکمیل، ڈیبگنگ میں مدد، اور دستاویزات کی تیاری سے آپ کی پروڈکٹیویٹی میں بہتری لاتا ہے۔",
     "description": "Description of AI Assisted approach"
   },
   "homepage.spectrum.aiDriven": {
-    "message": "AI Driven",
+    "message": "AI سے چلنے والا",
     "description": "AI Driven approach title"
   },
   "homepage.spectrum.aiDrivenRole": {
-    "message": "AI as Co-Creator",
+    "message": "AI Co-Creator کے طور پر",
     "description": "Role description for AI Driven"
   },
   "homepage.spectrum.aiDrivenDesc": {
-    "message": "AI generates significant code from specifications. You act as architect, director, and reviewer.",
+    "message": "AI وضاحتوں سے اہم کوڈ تیار کرتا ہے۔ آپ معمار، ڈائریکٹر، اور ریویور کے طور پر کام کرتے ہیں۔",
     "description": "Description of AI Driven approach"
   },
   "homepage.spectrum.aiNative": {
-    "message": "AI Native",
+    "message": "AI دیسی",
     "description": "AI Native approach title"
   },
   "homepage.spectrum.aiNativeRole": {
-    "message": "AI IS the Software",
+    "message": "AI ہی سافٹ وئیر ہے",
     "description": "Role description for AI Native"
   },
   "homepage.spectrum.aiNativeDesc": {
-    "message": "Applications architected around AI capabilities. LLMs and agents are core functional components.",
+    "message": "AI صلاحیتوں کے ارد گرد معماری شدہ ایپلیکیشنز۔ LLMs اور ایجنٹس بنیادی فعال اجزاء ہیں۔",
     "description": "Description of AI Native approach"
   },
   "homepage.flow.helper": {
-    "message": "Helper",
+    "message": "مددگار",
     "description": "Flow diagram label: Helper"
   },
   "homepage.flow.coCreator": {
@@ -462,19 +482,19 @@
     "description": "Flow diagram label: Co-Creator"
   },
   "homepage.flow.coreSystem": {
-    "message": "Core System",
+    "message": "بنیادی نظام",
     "description": "Flow diagram label: Core System"
   },
   "homepage.features.heading": {
-    "message": "What Makes This Book Different",
+    "message": "یہ کتاب کو کیا منفرد بناتا ہے",
     "description": "Features section heading"
   },
   "homepage.features.badge": {
-    "message": "Core Pillars",
+    "message": "بنیادی ستون",
     "description": "Features section badge"
   },
   "homepage.features.comment": {
-    "message": "A comprehensive, production-focused approach to co-learn with AI in spec-driven way",
+    "message": "AI کے ساتھ spec-driven طریقے سے co-learn کرنے کا جامع، پروڈکشن پر توجہ مرکوز انجام",
     "description": "Technical comment in features section"
   },
   "homepage.feature.coLearning": {
@@ -482,23 +502,23 @@
     "description": "Feature title"
   },
   "homepage.feature.coLearningDesc": {
-    "message": "Learn alongside AI agents. Not just using AI as a tool, but co-creating where both human and AI learn together.",
+    "message": "AI ایجنٹس کے ساتھ سیکھیں۔ صرف AI کو ٹول کے طور پر استعمال کرنا نہیں، بلکہ co-create کرنا جہاں انسان اور AI دونوں ایک ساتھ سیکھتے ہیں۔",
     "description": "Feature description"
   },
   "homepage.feature.dualLanguage": {
-    "message": "Dual Language Mastery",
+    "message": "دوہری زبان میں مہارت",
     "description": "Feature title"
   },
   "homepage.feature.dualLanguageDesc": {
-    "message": "Python for reasoning & intelligence, TypeScript for interaction & UI. Master the bilingual AI-native stack.",
+    "message": "استدلال اور ذہانت کے لیے Python، تفاعل اور UI کے لیے TypeScript۔ دوہری AI-native اسٹیک میں مہارت حاصل کریں۔",
     "description": "Feature description"
   },
   "homepage.feature.specDriven": {
-    "message": "Spec-Driven Development",
+    "message": "Spec-Driven ڈیولپمنٹ",
     "description": "Feature title"
   },
   "homepage.feature.specDrivenDesc": {
-    "message": "Write specifications that both humans and AI understand. Specs become executable blueprints for intelligent systems.",
+    "message": "ایسی وضاحتیں لکھیں جو انسان اور AI دونوں سمجھتے ہیں۔ Specs ذہین نظاموں کے لیے قابل عمل نقشے بن جاتی ہیں۔",
     "description": "Feature description"
   },
   "homepage.feature.agentic": {
@@ -506,55 +526,55 @@
     "description": "Feature title"
   },
   "homepage.feature.agenticDesc": {
-    "message": "Build with OpenAI Agents SDK and Google ADK. Create agents that reason, act, and collaborate autonomously.",
+    "message": "OpenAI Agents SDK اور Google ADK کے ساتھ بنائیں۔ ایسے ایجنٹس بنائیں جو خود مختار طریقے سے سوچتے ہیں، کام کرتے ہیں، اور تعاون کرتے ہیں۔",
     "description": "Feature description"
   },
   "homepage.feature.architecture": {
-    "message": "Production-Ready Architecture",
+    "message": "پروڈکشن-تیار آرکیٹیکچر",
     "description": "Feature title"
   },
   "homepage.feature.architectureDesc": {
-    "message": "Cloud-native deployment with Docker, Kubernetes, Dapr, and Ray. Scalable, secure, fault-tolerant systems.",
+    "message": "Docker، Kubernetes، Dapr، اور Ray کے ساتھ Cloud-native تعینات۔ قابل پیمائش، محفوظ، خرابی سہنے والے نظام۔",
     "description": "Feature description"
   },
   "homepage.feature.journey": {
-    "message": "Complete Learning Journey",
+    "message": "مکمل تعلیمی سفر",
     "description": "Feature title"
   },
   "homepage.feature.journeyDesc": {
-    "message": "46 comprehensive chapters from programming basics to deploying enterprise agentic AI systems in production.",
+    "message": "46 جامع ابواب بنیادی حد سے پروڈکشن میں enterprise agentic AI نظاموں کو تعینات کرنے تک۔",
     "description": "Feature description"
   },
   "homepage.maturity.badge": {
-    "message": "Your AI Journey",
+    "message": "آپ کا AI سفر",
     "description": "Maturity levels section badge"
   },
   "homepage.maturity.heading": {
-    "message": "Organizational AI Maturity Levels",
+    "message": "تنظیماتی AI پختگی کی سطریں",
     "description": "Maturity levels section heading"
   },
   "homepage.maturity.description": {
-    "message": "Where does your organization stand? Understanding these levels helps you chart your path forward.",
+    "message": "آپ کی تنظیم کہاں کھڑی ہے؟ ان سطروں کو سمجھنا آپ کو آگے بڑھنے کا راستہ تلاش کرنے میں مدد دیتا ہے۔",
     "description": "Maturity levels description"
   },
   "homepage.maturity.level1": {
-    "message": "AI Awareness",
+    "message": "AI شعور",
     "description": "Maturity level 1 title"
   },
   "homepage.maturity.level2": {
-    "message": "AI Adoption",
+    "message": "AI کو اپنانا",
     "description": "Maturity level 2 title"
   },
   "homepage.maturity.level3": {
-    "message": "AI Integration",
+    "message": "AI انضمام",
     "description": "Maturity level 3 title"
   },
   "homepage.maturity.level4": {
-    "message": "AI-Native Products",
+    "message": "AI-Native مصنوعات",
     "description": "Maturity level 4 title"
   },
   "homepage.maturity.level5": {
-    "message": "AI-First Enterprise",
+    "message": "AI-First انٹرپرائز",
     "description": "Maturity level 5 title"
   }
 }
