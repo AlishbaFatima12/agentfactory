@@ -17,6 +17,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { FileUp, Loader2, CheckCircle2 } from "lucide-react";
 import styles from "./SubmissionDialog.module.css";
 
 // Provider display names
@@ -140,23 +146,15 @@ export default function SubmissionDialog({
       <div className={styles.divider} />
 
       {effectiveState === "submitted" ? (
-        <div>
+        <div className={styles.submittedSection}>
           <div className={styles.doneRow}>
-            <svg
-              className={styles.checkIcon}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M20 6 9 17l-5-5" />
-            </svg>
+            <CheckCircle2 className={styles.checkIcon} />
             <span className={styles.doneText}>
               Submitted
               {response?.xp_earned ? (
-                <span className={styles.xpBadge}>+{response.xp_earned} XP</span>
+                <Badge variant="secondary" className={styles.xpBadgeGreen}>
+                  +{response.xp_earned} XP
+                </Badge>
               ) : null}
             </span>
           </div>
@@ -165,34 +163,23 @@ export default function SubmissionDialog({
       ) : effectiveState === "error" ? (
         <div className={styles.errorRow}>
           <span className={styles.errorText}>{errorMessage}</span>
-          <button className={styles.retryButton} onClick={handleRetry}>
+          <Button variant="destructive" size="sm" onClick={handleRetry}>
             Try again
-          </button>
+          </Button>
         </div>
       ) : (
         <>
-          <button
-            className={styles.triggerButton}
+          <Button
+            variant="outline"
             onClick={handleOpen}
             disabled={effectiveState === "submitting"}
           >
-            <svg
-              className={styles.icon}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <polyline points="14 2 14 8 20 8" />
-              <line x1="12" y1="18" x2="12" y2="12" />
-              <line x1="9" y1="15" x2="15" y2="15" />
-            </svg>
+            <FileUp />
             Submit Your AI Check
-            <span className={styles.xpBadge}>{xp} XP</span>
-          </button>
+            <Badge variant="secondary" className={styles.xpBadgeGreen}>
+              {xp} XP
+            </Badge>
+          </Button>
 
           <Dialog
             open={effectiveState === "open" || effectiveState === "submitting"}
@@ -211,7 +198,7 @@ export default function SubmissionDialog({
               <div className={styles.formGrid}>
                 {/* Provider select */}
                 <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>AI Provider</label>
+                  <Label>AI Provider</Label>
                   <Select
                     value={provider}
                     onValueChange={setProvider}
@@ -232,12 +219,12 @@ export default function SubmissionDialog({
 
                 {/* Student input */}
                 <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>Your Submission</label>
-                  <span className={styles.fieldHint}>
+                  <Label>Your Submission</Label>
+                  <p className={styles.fieldHint}>
                     Paste the prompt you sent and your answers
-                  </span>
-                  <textarea
-                    className={styles.textarea}
+                  </p>
+                  <Textarea
+                    className="min-h-[120px] resize-y"
                     value={studentInput}
                     onChange={(e) => setStudentInput(e.target.value)}
                     placeholder="Paste your prompt + answers here..."
@@ -249,15 +236,13 @@ export default function SubmissionDialog({
 
                 {/* AI output */}
                 <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>
-                    AI&apos;s Evaluation
-                  </label>
-                  <span className={styles.fieldHint}>
+                  <Label>AI&apos;s Evaluation</Label>
+                  <p className={styles.fieldHint}>
                     Paste the AI&apos;s complete response including the Score
                     Card
-                  </span>
-                  <textarea
-                    className={styles.textarea}
+                  </p>
+                  <Textarea
+                    className="min-h-[120px] resize-y"
                     value={aiOutput}
                     onChange={(e) => setAiOutput(e.target.value)}
                     placeholder="Paste the AI's evaluation here..."
@@ -269,12 +254,12 @@ export default function SubmissionDialog({
 
                 {/* Feedback */}
                 <div className={styles.fieldGroup}>
-                  <label className={styles.fieldLabel}>
+                  <Label>
                     Feedback{" "}
                     <span className={styles.fieldHint}>(optional)</span>
-                  </label>
-                  <textarea
-                    className={`${styles.textarea} ${styles.textareaSmall}`}
+                  </Label>
+                  <Textarea
+                    className="min-h-[60px] resize-y"
                     value={feedback}
                     onChange={(e) => setFeedback(e.target.value)}
                     placeholder="Any thoughts on this exercise?"
@@ -290,22 +275,28 @@ export default function SubmissionDialog({
                 )}
 
                 {/* Submit */}
-                <button
-                  className={styles.submitButton}
+                <Button
+                  className="w-full"
                   onClick={handleSubmit}
                   disabled={!canSubmit || effectiveState === "submitting"}
                 >
                   {effectiveState === "submitting" ? (
                     <>
-                      <span className={styles.spinner} />
+                      <Loader2 className="animate-spin" />
                       Submitting...
                     </>
                   ) : (
                     <>
-                      Submit <span className={styles.xpBadge}>{xp} XP</span>
+                      Submit{" "}
+                      <Badge
+                        variant="secondary"
+                        className={styles.xpBadgeGreen}
+                      >
+                        {xp} XP
+                      </Badge>
                     </>
                   )}
-                </button>
+                </Button>
               </div>
             </DialogContent>
           </Dialog>
@@ -337,20 +328,26 @@ function ScoreCardDisplay({ scores }: { scores: ScoreCard }) {
   ] as const;
 
   return (
-    <div className={styles.scoreCard}>
-      <div className={styles.scoreTitle}>Thinking Score Card</div>
-      <div className={styles.scoreGrid}>
-        {dimensions.map(({ key, label }) => (
-          <div key={key} className={styles.scoreRow}>
-            <span className={styles.scoreDimension}>{label}</span>
-            <span className={styles.scoreValue}>{scores[key]}/10</span>
+    <Card className={styles.scoreCardEnter}>
+      <CardHeader className="pb-2 pt-4 px-4">
+        <CardTitle className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+          Thinking Score Card
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="px-4 pb-4">
+        <div className={styles.scoreGrid}>
+          {dimensions.map(({ key, label }) => (
+            <div key={key} className={styles.scoreRow}>
+              <span className={styles.scoreDimension}>{label}</span>
+              <span className={styles.scoreValue}>{scores[key]}/10</span>
+            </div>
+          ))}
+          <div className={styles.scoreAverage}>
+            <span>Average</span>
+            <span>{scores.average}/10</span>
           </div>
-        ))}
-        <div className={styles.scoreAverage}>
-          <span>Average</span>
-          <span>{scores.average}/10</span>
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 }
