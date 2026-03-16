@@ -115,7 +115,10 @@ async def invalidate_cache(
                         invalidated.extend([k for k in keys])
                     if cursor == 0:
                         break
-                logger.info("[Cache] Invalidated path: %s by %s", path, request.client.host if request.client else "unknown")
+                requester = request.client.host if request.client else "unknown"
+                logger.info(
+                    "[Cache] Invalidated path: %s by %s", path, requester
+                )
         else:
             # Invalidate book tree and all content
             await redis_client.delete("book_tree:v1")
@@ -128,7 +131,12 @@ async def invalidate_cache(
                     invalidated.extend([k for k in keys])
                 if cursor == 0:
                     break
-            logger.info("[Cache] Invalidated %d keys by %s", len(invalidated), request.client.host if request.client else "unknown")
+            requester = request.client.host if request.client else "unknown"
+            logger.info(
+                "[Cache] Invalidated %d keys by %s",
+                len(invalidated),
+                requester,
+            )
 
         return {
             "status": "ok",

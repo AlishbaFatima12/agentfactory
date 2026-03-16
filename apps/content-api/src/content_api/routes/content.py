@@ -180,11 +180,19 @@ async def get_lesson(
                 auth_token=auth_token,
             )
         except Exception as e:
-            logger.error("[Lesson] Metering deduct failed for reservation=%s: %s", reservation_id, e)
+            logger.error(
+                "[Lesson] Metering deduct failed for reservation=%s: %s",
+                reservation_id,
+                e,
+            )
             # Fail-closed: don't serve content if we can't confirm the charge
             raise HTTPException(
                 status_code=503,
-                detail="Credit deduction failed. Your reservation will be released automatically. Please try again.",
+                detail=(
+                    "Credit deduction failed."
+                    " Your reservation will be released automatically."
+                    " Please try again."
+                ),
             )
 
     # Set idempotency key (1 hour TTL)

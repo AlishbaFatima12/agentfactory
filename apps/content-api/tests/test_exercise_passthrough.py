@@ -8,7 +8,6 @@ TDD RED PHASE: These tests will fail until the endpoint and schemas are implemen
 
 from unittest.mock import AsyncMock, patch
 
-import pytest
 from fastapi.testclient import TestClient
 
 from content_api.main import app
