@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "The Collaboration Log"
 description: "Maintain a real-time decision log of every AI interaction during a project, making your collaboration pattern visible and measurable"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between a justified accept and a lazy accept? How can you tell from the log?"
     - "Ask students to point to the single most important modify decision in their log and explain why it mattered"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Collaboration Log
@@ -97,7 +92,7 @@ You receive a project: build a market entry strategy for an AI product in a coun
 The completed market entry strategy. The full Collaboration Log in a table format with columns: Prompt Sent | AI Response Summary | Decision (Accept/Reject/Modify) | Justification | What I Added or Changed. The log must contain at least 15 interactions. A summary (150 words) of your collaboration pattern -- what percentage did you accept, reject, modify?
 :::
 
-<ExercisePrompt id="collaboration-log" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="collaboration-log" xp={50}>
 
 I completed a project using AI throughout and maintained a Collaboration Log
 documenting every interaction and decision. Please:
@@ -117,7 +112,7 @@ on my patterns.
 
 My strategy:
 
-<PromptField
+<AICheckField
   name="strategy"
   placeholder="Paste your market entry strategy here..."
   rows={6}
@@ -125,7 +120,7 @@ My strategy:
 
 My Collaboration Log:
 
-<PromptField
+<AICheckField
   name="collaboration_log"
   placeholder="Paste your full Collaboration Log here..."
   rows={6}
@@ -136,7 +131,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
@@ -168,3 +163,7 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn that AI collaboration is not about how much you use AI -- it is about the quality of your decisions about what to accept, reject, and modify. The log makes your collaboration pattern visible and measurable. AI feedback reveals whether your decisions were genuinely strategic or just habitual.
+
+## Flashcards Study Aid
+
+<Flashcards />

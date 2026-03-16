@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "The Three-Draft Evolution"
 description: "Produce your final Draft 3 after reflecting on all AI feedback and the originality test, then submit all three drafts with an Evolution Tracker showing how your thinking matured across stages"
 keywords:
@@ -78,12 +79,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the single biggest difference between Draft 1 and Draft 3? Was that change driven by AI or by your own reflection?"
     - "Ask students: If you used the three-draft evolution method on your next creative project, what would you do differently?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Three-Draft Evolution
@@ -104,7 +99,7 @@ Produce your Draft 3 (final version) after reflecting on all AI feedback, peer d
 All three drafts clearly labeled (Draft 1: unassisted, Draft 2: AI-collaborated, Draft 3: final reflection). An Evolution Tracker showing for each transition (1 to 2 and 2 to 3): what was added, what was removed, what was changed, and the reasoning for each change. A final reflection (200 words): What did you create that AI could not have? What does that teach you about where human value lives?
 :::
 
-<ExercisePrompt id="three-draft-evolution" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="three-draft-evolution" xp={50}>
 
 I produced three drafts of a solution: Draft 1 (entirely unassisted),
 Draft 2 (AI-collaborated), and Draft 3 (final, after reflection and
@@ -129,7 +124,7 @@ creative process?
 
 Draft 1:
 
-<PromptField
+<AICheckField
   name="draft_1"
   placeholder="Paste your Draft 1 here..."
   rows={6}
@@ -137,7 +132,7 @@ Draft 1:
 
 Draft 2:
 
-<PromptField
+<AICheckField
   name="draft_2"
   placeholder="Paste your Draft 2 here..."
   rows={6}
@@ -145,7 +140,7 @@ Draft 2:
 
 Draft 3:
 
-<PromptField
+<AICheckField
   name="draft_3"
   placeholder="Paste your Draft 3 here..."
   rows={6}
@@ -153,7 +148,7 @@ Draft 3:
 
 Evolution Tracker:
 
-<PromptField
+<AICheckField
   name="evolution_tracker"
   placeholder="Paste your Evolution Tracker here..."
   rows={6}
@@ -161,7 +156,7 @@ Evolution Tracker:
 
 Reflection:
 
-<PromptField
+<AICheckField
   name="reflection"
   placeholder="Paste your final reflection here..."
   rows={4}
@@ -172,7 +167,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>
@@ -219,3 +214,7 @@ A Creation Portfolio containing: (1) Draft 1 (blank page sprint, unassisted), (2
 | Final reflection depth                                                        |  15%   | Specific evidence cited, genuine insight into creative process, honest self-assessment  |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

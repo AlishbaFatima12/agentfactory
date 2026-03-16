@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "The Creation Log"
 description: "Collaborate with AI to improve your Draft 1 while maintaining a detailed Creation Log that tracks every idea's origin -- human, AI, or synthesis -- producing Draft 2"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between an idea that came from AI and an idea that emerged from the interaction?"
     - "Ask students to point to the single interaction in their log where they added the most value. What made that contribution uniquely human?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Creation Log
@@ -103,7 +98,7 @@ Using your Draft 1 as a starting point, collaborate with Claude and ChatGPT to d
 Your Draft 2 (the improved solution after AI collaboration). The full Creation Log in table format: Interaction # | My Prompt | AI Response Summary | Decision (Accept/Reject/Modify/New Idea) | Attribution (Human/AI/Synthesis) | What I Added or Changed. The log must show at least 10 interactions. A brief note (100 words) identifying the single most valuable contribution AI made and the single most valuable contribution you made.
 :::
 
-<ExercisePrompt id="creation-log" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="creation-log" xp={50}>
 
 I am comparing my original unassisted solution (Draft 1) with my
 AI-collaborated version (Draft 2). I also have a Creation Log
@@ -123,7 +118,7 @@ AI's lead?
 
 Draft 1:
 
-<PromptField
+<AICheckField
   name="draft_1"
   placeholder="Paste your Draft 1 here..."
   rows={6}
@@ -131,7 +126,7 @@ Draft 1:
 
 Draft 2:
 
-<PromptField
+<AICheckField
   name="draft_2"
   placeholder="Paste your Draft 2 here..."
   rows={6}
@@ -139,7 +134,7 @@ Draft 2:
 
 Creation Log:
 
-<PromptField
+<AICheckField
   name="creation_log"
   placeholder="Paste your Creation Log here..."
   rows={6}
@@ -150,7 +145,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>
@@ -179,3 +174,7 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn the anatomy of human-AI collaboration. The Creation Log makes the invisible visible -- exactly where you led, where AI led, and where something new emerged from the interaction. This is the operational understanding of collaboration that Chapter 6 introduced in theory.
+
+## Flashcards Study Aid
+
+<Flashcards />

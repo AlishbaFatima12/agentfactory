@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Peer Cross-Examination"
 description: "Defend your cascade map in a live peer cross-examination, testing whether you understand your systems analysis deeply enough to explain and justify every connection"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the most important thing your partner found in your map that you missed?"
     - "Ask students: Did the live defence change how you think about any of your feedback loops? Which one and why?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # Peer Cross-Examination
@@ -101,7 +96,7 @@ Your written preparation notes identifying gaps and challenges in your partner's
 
 ---
 
-<ExercisePrompt id="system-defence" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="system-defence" xp={50}>
 
 I just completed a peer cross-examination of my systems thinking
 cascade map. My partner identified gaps and challenged my feedback
@@ -122,7 +117,7 @@ weakest area.
 
 My final map:
 
-<PromptField
+<AICheckField
   name="final_map"
   placeholder="Paste your final cascade map here..."
   rows={6}
@@ -130,7 +125,7 @@ My final map:
 
 Partner's critique:
 
-<PromptField
+<AICheckField
   name="partners_critique"
   placeholder="Paste your partner's critique here..."
   rows={4}
@@ -138,7 +133,7 @@ Partner's critique:
 
 My reflection:
 
-<PromptField
+<AICheckField
   name="reflection"
   placeholder="Paste your reflection here..."
   rows={4}
@@ -149,7 +144,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 

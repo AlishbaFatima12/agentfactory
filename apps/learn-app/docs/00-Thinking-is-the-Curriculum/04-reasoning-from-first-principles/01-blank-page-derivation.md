@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "Defend the Opposite (No AI)"
 description: "Write a contrarian argument against a widely accepted best practice using only first principles reasoning, with no AI assistance, then compare your derivation against AI output"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: State one of your first principles in a single sentence. Now tell me — is that a principle (true regardless of context) or an observation (true in some contexts)?"
     - "Ask students: What is the difference between 'MVP fails because Company X lost customers' and 'MVP fails when trust is a prerequisite because incomplete products signal unreliability'?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";
@@ -129,7 +124,7 @@ A 500-word contrarian argument (written without AI) identifying at least 3 speci
 
 ---
 
-<ExercisePrompt id="blank-page-derivation" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="blank-page-derivation" xp={50}>
 
 I wrote a contrarian argument against the common advice that "startups
 should build an MVP before investing in scale." I wrote this entirely
@@ -150,7 +145,7 @@ genuinely fails.
 
 My argument:
 
-<PromptField
+<AICheckField
   name="argument"
   placeholder="Paste your 500-word argument here..."
   rows={6}
@@ -161,7 +156,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 

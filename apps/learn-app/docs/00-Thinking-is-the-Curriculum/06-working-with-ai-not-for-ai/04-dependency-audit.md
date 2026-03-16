@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Cross-Tool Arbitration"
 description: "Ask two AI tools the same strategic question, act as arbitrator between their disagreements, and synthesize a superior third option -- building the cross-tool judgment skill"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Did your synthesis create something genuinely new, or did you just combine pieces from each recommendation?"
     - "Ask students: What strategies should you use in the future when AI tools disagree?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # Cross-Tool Arbitration
@@ -97,7 +92,7 @@ Ask Claude and ChatGPT the same strategic question and receive two different rec
 The two AI recommendations side by side. Your Arbitration Brief containing: the key differences between the two recommendations, your evaluation of each (strengths and weaknesses), your verdict (which is stronger overall and why), and your synthesized third option that takes the best elements of each plus your own additions. A clear attribution for each element of your third option.
 :::
 
-<ExercisePrompt id="dependency-audit" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="dependency-audit" xp={50}>
 
 I asked two AI tools the same strategic question and received different
 recommendations. I then acted as arbitrator and created a synthesized third
@@ -115,7 +110,7 @@ averaging of the two AI positions?
 
 Question:
 
-<PromptField
+<AICheckField
   name="question"
   placeholder="Paste your strategic question here..."
   rows={2}
@@ -123,7 +118,7 @@ Question:
 
 Claude's recommendation:
 
-<PromptField
+<AICheckField
   name="claude_recommendation"
   placeholder="Paste Claude's recommendation here..."
   rows={6}
@@ -131,7 +126,7 @@ Claude's recommendation:
 
 ChatGPT's recommendation:
 
-<PromptField
+<AICheckField
   name="chatgpt_recommendation"
   placeholder="Paste ChatGPT's recommendation here..."
   rows={6}
@@ -139,7 +134,7 @@ ChatGPT's recommendation:
 
 My Arbitration Brief:
 
-<PromptField
+<AICheckField
   name="arbitration_brief"
   placeholder="Paste your Arbitration Brief here..."
   rows={6}
@@ -150,7 +145,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
@@ -174,3 +169,7 @@ An AI Collaboration Portfolio containing: (1) the three-path comparison with ana
 | AI feedback integration                                                  |  15%   | Quality of reflection on AI feedback; evidence of incorporating feedback into future approach       |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

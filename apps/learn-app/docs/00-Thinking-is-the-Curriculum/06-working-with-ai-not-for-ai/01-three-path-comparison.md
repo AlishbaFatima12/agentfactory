@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Three-Path Comparison"
 description: "Solve the same complex problem three ways -- solo, pure AI, and genuine collaboration -- to discover through direct comparison what AI adds and what you add"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: In which of the three versions did you learn the most? Why?"
     - "Ask students to name the single moment in their collaboration where their human judgment made the biggest difference"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";
@@ -142,7 +137,7 @@ Choose one. The exercises work identically regardless of which you pick.
 Three separate solutions clearly labeled: Solo (no AI), Pure AI (no overrides), and Collaboration (full iteration). A comparison analysis (300-400 words) answering: Where was the solo version stronger? Where did pure AI fail? Where did collaboration outperform both? What specific value did your human judgment add in the collaboration version that was absent from the pure AI version?
 :::
 
-<ExercisePrompt id="three-path-comparison" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="three-path-comparison" xp={50}>
 
 I solved the same business problem three ways: solo (no AI), pure AI (accepted
 everything), and collaboration (prompted, evaluated, overrode, iterated).
@@ -162,7 +157,7 @@ deferential to AI, too overriding, or well-balanced?
 
 Problem:
 
-<PromptField
+<AICheckField
   name="problem"
   placeholder="Paste your chosen scenario here..."
   rows={2}
@@ -170,7 +165,7 @@ Problem:
 
 Solo solution:
 
-<PromptField
+<AICheckField
   name="solo_solution"
   placeholder="Paste your solo solution here..."
   rows={6}
@@ -178,7 +173,7 @@ Solo solution:
 
 Pure AI solution:
 
-<PromptField
+<AICheckField
   name="pure_ai_solution"
   placeholder="Paste your pure AI solution here..."
   rows={6}
@@ -186,7 +181,7 @@ Pure AI solution:
 
 Collaboration solution:
 
-<PromptField
+<AICheckField
   name="collaboration_solution"
   placeholder="Paste your collaboration solution here..."
   rows={6}
@@ -194,7 +189,7 @@ Collaboration solution:
 
 My comparison:
 
-<PromptField
+<AICheckField
   name="comparison"
   placeholder="Paste your comparison analysis here..."
   rows={6}
@@ -205,10 +200,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn through direct comparison what AI adds and what you add. Most students discover that pure AI output is competent but generic, solo output is original but incomplete, and genuine collaboration produces the best results -- but only when the human applies real judgment. The AI self-check tells you honestly whether your collaboration actually improved things.
+
+## Flashcards Study Aid
+
+<Flashcards />

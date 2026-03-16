@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+aicheck: true
 title: "The Variable Shift"
 description: "Revise your cascade map when a key variable changes, revealing whether you understand the mechanisms behind your analysis or merely copied a static picture"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Why can you not just start from scratch with the new variable? What does the revision process reveal that starting fresh would miss?"
     - "Ask students to name one connection that became MORE important after the variable shift and explain the mechanism"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Variable Shift
@@ -101,7 +96,7 @@ Your revised cascade map (Draft 3) with every change visually marked: new connec
 
 ---
 
-<ExercisePrompt id="variable-shift" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="variable-shift" xp={50}>
 
 I am learning to adapt systems thinking when conditions change.
 The original scenario was: "A major bank replaces all loan officers
@@ -124,7 +119,7 @@ labels)?
 
 Original merged map:
 
-<PromptField
+<AICheckField
   name="original_merged_map"
   placeholder="Paste your original merged map here..."
   rows={6}
@@ -132,7 +127,7 @@ Original merged map:
 
 Variable shift:
 
-<PromptField
+<AICheckField
   name="variable_shift"
   placeholder="Paste the variable shift description here..."
   rows={2}
@@ -140,7 +135,7 @@ Variable shift:
 
 Revised map (Draft 3):
 
-<PromptField
+<AICheckField
   name="revised_map"
   placeholder="Paste your revised map (Draft 3) here..."
   rows={6}
@@ -148,7 +143,7 @@ Revised map (Draft 3):
 
 Change log:
 
-<PromptField
+<AICheckField
   name="change_log"
   placeholder="Paste your change log here..."
   rows={6}
@@ -159,7 +154,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 

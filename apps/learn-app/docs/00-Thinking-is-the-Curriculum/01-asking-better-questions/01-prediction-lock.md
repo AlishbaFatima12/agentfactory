@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Prediction Lock"
 description: "Commit your diagnosis and questions before touching AI, then compare your thinking against machine output to reveal blind spots in your question formulation"
 keywords:
@@ -85,12 +86,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between a question that is 'interesting' and a question that is 'diagnostic'?"
     - "Ask students to explain why the prediction lock must be written BEFORE touching AI — what would be lost if they wrote it after?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";
@@ -145,7 +140,7 @@ Choose one. The exercises work identically regardless of which you pick.
 A sealed prediction document (timestamped before AI use) containing your diagnosis, 10 ranked questions with predicted answers, followed by a reasoning receipt showing all 5 prompts sent to both Claude and ChatGPT, the responses received, and your accept/reject/modify decision for each with a one-sentence justification.
 :::
 
-<ExercisePrompt id="prediction-lock" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="prediction-lock" xp={50}>
 
 I am a student learning question formulation. Below is a business scenario,
 followed by my initial diagnosis and 10 ranked diagnostic questions.
@@ -162,7 +157,7 @@ Beginner / Developing / Proficient / Advanced and explain why.
 
 Here is the scenario:
 
-<PromptField
+<AICheckField
   name="scenario"
   placeholder="Paste your chosen scenario here..."
   rows={2}
@@ -170,7 +165,7 @@ Here is the scenario:
 
 Here is my work:
 
-<PromptField
+<AICheckField
   name="prediction_lock_document"
   placeholder="Paste your prediction lock document here..."
   rows={6}
@@ -181,7 +176,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
@@ -226,3 +221,7 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn that the quality of your questions determines the quality of every answer you will ever get — from AI, from colleagues, from data. By predicting first and then comparing, you see exactly where your thinking was strong and where it was lazy. The AI grading reveals blind spots in your questioning that you cannot see yourself. Over time, you internalize what makes a question diagnostic rather than decorative.
+
+## Flashcards Study Aid
+
+<Flashcards />

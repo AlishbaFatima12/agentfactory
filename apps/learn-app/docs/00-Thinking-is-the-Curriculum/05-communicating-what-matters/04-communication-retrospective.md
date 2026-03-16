@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "The Hard Conversation"
 description: "Deliver difficult news in a live role-play with no preparation and no AI, building the leadership communication skill that only develops through practice"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the single hardest thing about delivering difficult news in person?"
     - "Ask students to identify their lowest-rated area from peer feedback and name one specific thing they would do differently"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Hard Conversation
@@ -101,7 +96,7 @@ Prompt AI: "You are playing [vendor/employee/client role]. I need to deliver dif
 Peer feedback form rating: empathy (1-10), clarity of the message (1-10), honesty (1-10), relationship preservation (1-10), and overall effectiveness (1-10) with written comments. Your post-exercise reflection (200 words) on what you did well, what you would change, and what was hardest.
 :::
 
-<ExercisePrompt id="communication-retrospective" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="communication-retrospective" xp={50}>
 
 I just completed a hard conversation role-play exercise. I had to deliver
 difficult news with only 60 seconds of preparation and no AI access. Below is
@@ -121,7 +116,7 @@ observed, or am I blind to certain weaknesses?
 
 Scenario:
 
-<PromptField
+<AICheckField
   name="scenario"
   placeholder="Paste the scenario here..."
   rows={2}
@@ -129,7 +124,7 @@ Scenario:
 
 Peer feedback:
 
-<PromptField
+<AICheckField
   name="peer_feedback"
   placeholder="Paste your peer's scores and comments here..."
   rows={4}
@@ -137,7 +132,7 @@ Peer feedback:
 
 My reflection:
 
-<PromptField
+<AICheckField
   name="reflection"
   placeholder="Paste your reflection here..."
   rows={4}
@@ -148,7 +143,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
@@ -172,3 +167,7 @@ A Communication Portfolio containing: (1) three audience profiles with AI compar
 | AI feedback integration and reflections                |  15%   | Quality of reflection on AI feedback; specific plans for improvement                |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

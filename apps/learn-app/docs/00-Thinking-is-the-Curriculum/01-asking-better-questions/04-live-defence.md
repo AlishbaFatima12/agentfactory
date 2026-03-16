@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Live Defence"
 description: "Defend your analysis under live questioning without AI access, then respond to AI-generated counter-arguments to test the depth of your understanding"
 keywords:
@@ -82,12 +83,6 @@ teaching_guide:
   assessment_quick_check:
     - "Can the student explain the single biggest weakness in their own analysis without prompting?"
     - "Does the 200-word counter-argument response address the specific attack or deflect to a different point?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # Live Defence
@@ -110,7 +105,7 @@ After the defence, feed your analysis into AI with the prompt below to generate 
 Peer feedback form filled out by your panel (each panelist writes 2 strengths and 2 weaknesses they observed in your defence). Your written response (200 words) to the strongest AI-generated counter-argument to your analysis. A final reflection (150 words) on what you would change about your question formulation process based on everything you learned in this chapter.
 :::
 
-<ExercisePrompt id="live-defence" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="live-defence" xp={50}>
 
 Below is a student's analysis of a business scenario. Please:
 
@@ -129,7 +124,7 @@ in writing.
 
 Scenario:
 
-<PromptField
+<AICheckField
   name="scenario"
   placeholder="Paste your chosen scenario here..."
   rows={2}
@@ -137,7 +132,7 @@ Scenario:
 
 Student's analysis:
 
-<PromptField
+<AICheckField
   name="analysis"
   placeholder="Paste your analysis here..."
   rows={6}
@@ -148,7 +143,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
@@ -177,3 +172,7 @@ A Question Quality Portfolio containing: (1) the sealed prediction lock document
 Note: the final answer to the business scenario is worth 0%. The thinking process is the entire grade.
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

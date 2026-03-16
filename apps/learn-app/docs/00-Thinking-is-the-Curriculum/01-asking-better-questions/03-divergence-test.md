@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+aicheck: true
 title: "The Divergence Test"
 description: "When everyone has the same AI tools, produce an original analysis that demonstrates independent thinking beyond generic AI output"
 keywords:
@@ -70,12 +71,6 @@ teaching_guide:
   assessment_quick_check:
     - "Can the student point to a specific paragraph in their analysis that contains an insight AI did not suggest?"
     - "Does the reasoning receipt show at least one 'reject' or 'modify' decision, or was everything accepted?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Divergence Test
@@ -92,7 +87,7 @@ The entire class receives the identical scenario and identical AI access. Each s
 Your final analysis of the business scenario (500-800 words) and a complete reasoning receipt documenting every prompt sent, every AI response received, and every accept/reject/modify decision with justification. Additionally, a brief "uniqueness statement" (100 words) explaining what in your analysis reflects your own thinking rather than a generic AI output.
 :::
 
-<ExercisePrompt id="divergence-test" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="divergence-test" xp={50}>
 
 I am a student in a class where everyone received the same business scenario
 and access to the same AI tools. Below is my analysis. Please:
@@ -111,7 +106,7 @@ passive acceptance?
 
 Scenario:
 
-<PromptField
+<AICheckField
   name="scenario"
   placeholder="Paste your chosen scenario here..."
   rows={2}
@@ -119,7 +114,7 @@ Scenario:
 
 My analysis:
 
-<PromptField
+<AICheckField
   name="analysis"
   placeholder="Paste your analysis here..."
   rows={6}
@@ -127,7 +122,7 @@ My analysis:
 
 My reasoning receipt:
 
-<PromptField
+<AICheckField
   name="reasoning_receipt"
   placeholder="Paste your reasoning receipt here..."
   rows={6}
@@ -138,10 +133,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that when everyone has the same AI tools, the only differentiator is your thinking. The divergence test reveals whether you used AI as a thinking partner or as an answer machine. The AI grading of your own originality is a mirror — it shows you honestly where your work added value and where it was just AI pass-through.
+
+## Flashcards Study Aid
+
+<Flashcards />

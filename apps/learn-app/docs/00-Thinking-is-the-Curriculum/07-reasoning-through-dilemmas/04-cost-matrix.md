@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "The Decision Memo"
 description: "Synthesize an ethical position through three drafts -- from initial conviction through adversarial challenge and perspective shift to a formal Decision Memo with complete stakeholder cost analysis"
 keywords:
@@ -79,12 +80,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Is your confidence higher or lower than in Exercise 1? What does that tell you about your understanding of this dilemma?"
     - "Ask students to read their reversal conditions aloud. If the class cannot imagine a real-world scenario that would trigger reversal, the conditions are too vague."
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Decision Memo
@@ -105,7 +100,7 @@ After all three exercises, write a formal Decision Memo (500-700 words): your fi
 Draft 1 Decision Memo (before AI review). Draft 2 (after AI review). Draft 3 (final). An evolution tracker showing what changed between each draft and why. A final Confidence Statement: has your confidence increased, decreased, or stayed the same since Exercise 1, and why?
 :::
 
-<ExercisePrompt id="cost-matrix" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="cost-matrix" xp={50}>
 
 I have completed an entire ethical reasoning chapter: I locked a position,
 survived three rounds of adversarial challenge, argued the opposite side,
@@ -123,7 +118,7 @@ thinking matured? In what ways?
 
 My original Position Lock:
 
-<PromptField
+<AICheckField
   name="original_position_lock"
   placeholder="Paste your original Position Lock from Exercise 1 here..."
   rows={6}
@@ -131,7 +126,7 @@ My original Position Lock:
 
 My three-round adversarial exchange:
 
-<PromptField
+<AICheckField
   name="adversarial_exchange"
   placeholder="Paste key points from your adversarial exchange here..."
   rows={6}
@@ -139,7 +134,7 @@ My three-round adversarial exchange:
 
 My Draft 1 memo:
 
-<PromptField
+<AICheckField
   name="draft_1_memo"
   placeholder="Paste your Draft 1 Decision Memo here..."
   rows={6}
@@ -150,7 +145,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>
@@ -201,3 +196,7 @@ An Ethical Reasoning Portfolio containing: (1) the sealed Position Lock with Sta
 | AI feedback integration and reflections                      |  15%   | Evidence of engaging with AI feedback critically, not just accepting or ignoring it                       |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

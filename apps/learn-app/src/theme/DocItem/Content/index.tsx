@@ -32,11 +32,6 @@ import LessonCompleteButton from "@/components/progress/LessonCompleteButton";
 import SubmissionDialog from "@/theme/SubmissionDialog";
 import { usePracticeServer } from "@/components/TerminalPanel/usePracticeServer";
 import { PracticeContext } from "@/contexts/PracticeContext";
-import {
-  ExercisePromptContext,
-  ExercisePromptSetterContext,
-  type ExercisePromptContextType,
-} from "@/contexts/ExercisePromptContext";
 import { PracticeSetupCard } from "@/components/PracticeSetupCard";
 import { PracticeErrorCard } from "@/components/PracticeErrorCard";
 import { CompletenessBanner } from "@/components/profile/CompletenessBanner";
@@ -707,6 +702,11 @@ export default function ContentWrapper(props: Props): React.ReactElement {
     }
   ).frontMatter?.submission;
 
+  // AICheck frontmatter — when true, the inline AICheck component handles
+  // submission + lesson completion. No bottom button needed.
+  const hasAICheck = !!(doc as { frontMatter?: { aicheck?: boolean } })
+    .frontMatter?.aicheck;
+
   // Practice terminal state (gated by feature flag)
   const practiceEnabled = siteConfig.customFields?.practiceEnabled as
     | boolean
@@ -742,142 +742,130 @@ export default function ContentWrapper(props: Props): React.ReactElement {
     [practiceOpen],
   );
 
-  // ExercisePrompt context — allows ExercisePrompt (in MDX) to push
-  // composed prompt state up to SubmissionDialog
-  const [exercisePromptState, setExercisePromptState] =
-    useState<ExercisePromptContextType | null>(null);
-
   // If no summary, just render original content
   if (!summary) {
     return (
       <PracticeContext.Provider value={practiceContextValue}>
-        <ExercisePromptSetterContext.Provider value={setExercisePromptState}>
-          <ExercisePromptContext.Provider value={exercisePromptState}>
-            <ReadingProgress />
-            <div className="doc-content-header">
-              <ReadingTime />
-              <DocPageActions
-                onOpenTeachingGuide={
-                  hasTeachingData ? () => setTeachingGuideOpen(true) : undefined
-                }
-              />
-            </div>
-            {showUpdateMeta && (
-              <div className="doc-update-meta">
-                {isRealDate && (
-                  <div className="doc-update-meta__item">
-                    Updated {formatLastUpdated(lastUpdatedAt, locale)}
-                  </div>
-                )}
-                {historyUrl && (
-                  <div className="doc-update-meta__links">
-                    <a
-                      href={historyUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Version history
-                    </a>
-                  </div>
-                )}
+        <ReadingProgress />
+        <div className="doc-content-header">
+          <ReadingTime />
+          <DocPageActions
+            onOpenTeachingGuide={
+              hasTeachingData ? () => setTeachingGuideOpen(true) : undefined
+            }
+          />
+        </div>
+        {showUpdateMeta && (
+          <div className="doc-update-meta">
+            {isRealDate && (
+              <div className="doc-update-meta__item">
+                Updated {formatLastUpdated(lastUpdatedAt, locale)}
               </div>
             )}
-            {/* Floating action buttons - hidden when study mode panel is open */}
-            {!isStudyModeOpen && (
-              <div className="floating-actions">
-                <BackToTopButton />
-                <SpeakerFloatingButton />
-                <TeachMeFloatingButton
-                  isLoggedIn={isLoggedIn}
-                  openPanel={openPanel}
-                  handleLoginRedirect={handleLoginRedirect}
-                />
-                <AskFloatingButton
-                  isLoggedIn={isLoggedIn}
-                  openPanelInAskMode={openPanelInAskMode}
-                  handleLoginRedirect={handleLoginRedirect}
-                />
-                <button
-                  onClick={() => setZenMode(!zenMode)}
-                  className="zen-mode-toggle"
-                  title={zenMode ? "Exit Focus Mode" : "Focus Mode"}
-                  aria-label={zenMode ? "Exit Focus Mode" : "Enter Focus Mode"}
+            {historyUrl && (
+              <div className="doc-update-meta__links">
+                <a href={historyUrl} target="_blank" rel="noopener noreferrer">
+                  Version history
+                </a>
+              </div>
+            )}
+          </div>
+        )}
+        {/* Floating action buttons - hidden when study mode panel is open */}
+        {!isStudyModeOpen && (
+          <div className="floating-actions">
+            <BackToTopButton />
+            <SpeakerFloatingButton />
+            <TeachMeFloatingButton
+              isLoggedIn={isLoggedIn}
+              openPanel={openPanel}
+              handleLoginRedirect={handleLoginRedirect}
+            />
+            <AskFloatingButton
+              isLoggedIn={isLoggedIn}
+              openPanelInAskMode={openPanelInAskMode}
+              handleLoginRedirect={handleLoginRedirect}
+            />
+            <button
+              onClick={() => setZenMode(!zenMode)}
+              className="zen-mode-toggle"
+              title={zenMode ? "Exit Focus Mode" : "Focus Mode"}
+              aria-label={zenMode ? "Exit Focus Mode" : "Enter Focus Mode"}
+            >
+              {zenMode ? (
+                // Exit: Grid/sidebar icon
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
-                  {zenMode ? (
-                    // Exit: Grid/sidebar icon
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <rect x="3" y="3" width="7" height="7"></rect>
-                      <rect x="14" y="3" width="7" height="7"></rect>
-                      <rect x="14" y="14" width="7" height="7"></rect>
-                      <rect x="3" y="14" width="7" height="7"></rect>
-                    </svg>
-                  ) : (
-                    // Enter: Focus/center icon
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <circle cx="12" cy="12" r="3"></circle>
-                      <path d="M3 12h4m10 0h4M12 3v4m0 10v4"></path>
-                    </svg>
-                  )}
-                </button>
-              </div>
-            )}
-            {isLoggedIn && <CompletenessBanner hideDuringOnboarding />}
-            <Content {...props} />
-            {isLoggedIn &&
-              hasValidSlug &&
-              !isQuizPage &&
-              !isCategoryIndex &&
-              (submissionConfig ? (
-                <SubmissionDialog
-                  chapterSlug={chapterSlug}
-                  lessonSlug={lessonSlug}
-                  submission={submissionConfig}
-                />
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
               ) : (
-                isLeafPage && (
-                  <LessonCompleteButton
-                    chapterSlug={chapterSlug}
-                    lessonSlug={lessonSlug}
-                  />
-                )
-              ))}
-            {practiceOpen && practiceExerciseId && (
-              <PracticeOverlay
-                exerciseId={practiceExerciseId}
-                subExercise={practiceSubExercise}
-                onClose={() => setPracticeOpen(false)}
+                // Enter: Focus/center icon
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M3 12h4m10 0h4M12 3v4m0 10v4"></path>
+                </svg>
+              )}
+            </button>
+          </div>
+        )}
+        {isLoggedIn && <CompletenessBanner hideDuringOnboarding />}
+        <Content {...props} />
+        {isLoggedIn &&
+          hasValidSlug &&
+          !isQuizPage &&
+          !isCategoryIndex &&
+          !hasAICheck &&
+          (submissionConfig ? (
+            <SubmissionDialog
+              chapterSlug={chapterSlug}
+              lessonSlug={lessonSlug}
+              submission={submissionConfig}
+            />
+          ) : (
+            isLeafPage && (
+              <LessonCompleteButton
+                chapterSlug={chapterSlug}
+                lessonSlug={lessonSlug}
               />
-            )}
-            <VoiceControlDock />
-            {<TeachMePanel lessonPath={lessonPath} />}
+            )
+          ))}
+        {practiceOpen && practiceExerciseId && (
+          <PracticeOverlay
+            exerciseId={practiceExerciseId}
+            subExercise={practiceSubExercise}
+            onClose={() => setPracticeOpen(false)}
+          />
+        )}
+        <VoiceControlDock />
+        {<TeachMePanel lessonPath={lessonPath} />}
 
-            {hasTeachingData && frontMatter && (
-              <TeachingGuideSheet
-                open={teachingGuideOpen}
-                onOpenChange={setTeachingGuideOpen}
-                frontmatter={frontMatter}
-              />
-            )}
-          </ExercisePromptContext.Provider>
-        </ExercisePromptSetterContext.Provider>
+        {hasTeachingData && frontMatter && (
+          <TeachingGuideSheet
+            open={teachingGuideOpen}
+            onOpenChange={setTeachingGuideOpen}
+            frontmatter={frontMatter}
+          />
+        )}
       </PracticeContext.Provider>
     );
   }
@@ -886,133 +874,126 @@ export default function ContentWrapper(props: Props): React.ReactElement {
 
   return (
     <PracticeContext.Provider value={practiceContextValue}>
-      <ExercisePromptSetterContext.Provider value={setExercisePromptState}>
-        <ExercisePromptContext.Provider value={exercisePromptState}>
-          <ReadingProgress />
-          <div className="doc-content-header">
-            <ReadingTime />
-            <DocPageActions
-              onOpenTeachingGuide={
-                hasTeachingData ? () => setTeachingGuideOpen(true) : undefined
-              }
-            />
-          </div>
-          {showUpdateMeta && (
-            <div className="doc-update-meta">
-              {isRealDate && (
-                <div className="doc-update-meta__item">
-                  Updated {formatLastUpdated(lastUpdatedAt, locale)}
-                </div>
-              )}
-              {historyUrl && (
-                <div className="doc-update-meta__links">
-                  <a
-                    href={historyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Version history
-                  </a>
-                </div>
-              )}
+      <ReadingProgress />
+      <div className="doc-content-header">
+        <ReadingTime />
+        <DocPageActions
+          onOpenTeachingGuide={
+            hasTeachingData ? () => setTeachingGuideOpen(true) : undefined
+          }
+        />
+      </div>
+      {showUpdateMeta && (
+        <div className="doc-update-meta">
+          {isRealDate && (
+            <div className="doc-update-meta__item">
+              Updated {formatLastUpdated(lastUpdatedAt, locale)}
             </div>
           )}
-          {/* Floating action buttons - hidden when study mode panel is open */}
-          {!isStudyModeOpen && (
-            <div className="floating-actions">
-              <BackToTopButton />
-              <SpeakerFloatingButton />
-              <TeachMeFloatingButton
-                isLoggedIn={isLoggedIn}
-                openPanel={openPanel}
-                handleLoginRedirect={handleLoginRedirect}
-              />
-              <AskFloatingButton
-                isLoggedIn={isLoggedIn}
-                openPanelInAskMode={openPanelInAskMode}
-                handleLoginRedirect={handleLoginRedirect}
-              />
-              <button
-                onClick={() => setZenMode(!zenMode)}
-                className="zen-mode-toggle"
-                title={zenMode ? "Exit Focus Mode" : "Focus Mode"}
-                aria-label={zenMode ? "Exit Focus Mode" : "Enter Focus Mode"}
+          {historyUrl && (
+            <div className="doc-update-meta__links">
+              <a href={historyUrl} target="_blank" rel="noopener noreferrer">
+                Version history
+              </a>
+            </div>
+          )}
+        </div>
+      )}
+      {/* Floating action buttons - hidden when study mode panel is open */}
+      {!isStudyModeOpen && (
+        <div className="floating-actions">
+          <BackToTopButton />
+          <SpeakerFloatingButton />
+          <TeachMeFloatingButton
+            isLoggedIn={isLoggedIn}
+            openPanel={openPanel}
+            handleLoginRedirect={handleLoginRedirect}
+          />
+          <AskFloatingButton
+            isLoggedIn={isLoggedIn}
+            openPanelInAskMode={openPanelInAskMode}
+            handleLoginRedirect={handleLoginRedirect}
+          />
+          <button
+            onClick={() => setZenMode(!zenMode)}
+            className="zen-mode-toggle"
+            title={zenMode ? "Exit Focus Mode" : "Focus Mode"}
+            aria-label={zenMode ? "Exit Focus Mode" : "Enter Focus Mode"}
+          >
+            {zenMode ? (
+              // Exit: Grid/sidebar icon
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                {zenMode ? (
-                  // Exit: Grid/sidebar icon
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <rect x="3" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="14" width="7" height="7"></rect>
-                    <rect x="3" y="14" width="7" height="7"></rect>
-                  </svg>
-                ) : (
-                  // Enter: Focus/center icon
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="3"></circle>
-                    <path d="M3 12h4m10 0h4M12 3v4m0 10v4"></path>
-                  </svg>
-                )}
-              </button>
-            </div>
-          )}
-          <LessonContent summaryElement={summaryElement}>
-            <Content {...props} />
-          </LessonContent>
-          {isLoggedIn &&
-            hasValidSlug &&
-            !isQuizPage &&
-            !isCategoryIndex &&
-            (submissionConfig ? (
-              <SubmissionDialog
-                chapterSlug={chapterSlug}
-                lessonSlug={lessonSlug}
-                submission={submissionConfig}
-              />
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
             ) : (
-              isLeafPage && (
-                <LessonCompleteButton
-                  chapterSlug={chapterSlug}
-                  lessonSlug={lessonSlug}
-                />
-              )
-            ))}
-          {practiceOpen && practiceExerciseId && (
-            <PracticeOverlay
-              exerciseId={practiceExerciseId}
-              subExercise={practiceSubExercise}
-              onClose={() => setPracticeOpen(false)}
+              // Enter: Focus/center icon
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M3 12h4m10 0h4M12 3v4m0 10v4"></path>
+              </svg>
+            )}
+          </button>
+        </div>
+      )}
+      <LessonContent summaryElement={summaryElement}>
+        <Content {...props} />
+      </LessonContent>
+      {isLoggedIn &&
+        hasValidSlug &&
+        !isQuizPage &&
+        !isCategoryIndex &&
+        !hasAICheck &&
+        (submissionConfig ? (
+          <SubmissionDialog
+            chapterSlug={chapterSlug}
+            lessonSlug={lessonSlug}
+            submission={submissionConfig}
+          />
+        ) : (
+          isLeafPage && (
+            <LessonCompleteButton
+              chapterSlug={chapterSlug}
+              lessonSlug={lessonSlug}
             />
-          )}
-          <VoiceControlDock />
-          {<TeachMePanel lessonPath={lessonPath} />}
-          {hasTeachingData && frontMatter && (
-            <TeachingGuideSheet
-              open={teachingGuideOpen}
-              onOpenChange={setTeachingGuideOpen}
-              frontmatter={frontMatter}
-            />
-          )}
-        </ExercisePromptContext.Provider>
-      </ExercisePromptSetterContext.Provider>
+          )
+        ))}
+      {practiceOpen && practiceExerciseId && (
+        <PracticeOverlay
+          exerciseId={practiceExerciseId}
+          subExercise={practiceSubExercise}
+          onClose={() => setPracticeOpen(false)}
+        />
+      )}
+      <VoiceControlDock />
+      {<TeachMePanel lessonPath={lessonPath} />}
+      {hasTeachingData && frontMatter && (
+        <TeachingGuideSheet
+          open={teachingGuideOpen}
+          onOpenChange={setTeachingGuideOpen}
+          frontmatter={frontMatter}
+        />
+      )}
     </PracticeContext.Provider>
   );
 }

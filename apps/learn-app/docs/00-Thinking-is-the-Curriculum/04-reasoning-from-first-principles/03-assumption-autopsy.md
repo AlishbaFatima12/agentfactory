@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+aicheck: true
 title: "Assumption Autopsy"
 description: "Systematically uncover hidden assumptions in your own solution by comparing your assumption list against AI-identified assumptions, creating a merged map that reveals blind spots in both human and AI thinking"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Name one assumption from each category (a through d). Which category was hardest to find examples for?"
     - "Ask students: If your highest-risk assumption turns out to be wrong, what happens to your solution?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # Assumption Autopsy
@@ -101,7 +96,7 @@ Your expanded assumption list (written before AI). The AI-identified assumptions
 
 ---
 
-<ExercisePrompt id="assumption-autopsy" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="assumption-autopsy" xp={50}>
 
 I am doing an assumption autopsy on my own solution. I have listed my
 assumptions, and I also asked Claude and ChatGPT to identify
@@ -121,7 +116,7 @@ assumptions in future work.
 
 My solution:
 
-<PromptField
+<AICheckField
   name="solution"
   placeholder="Paste your solution here..."
   rows={6}
@@ -129,7 +124,7 @@ My solution:
 
 My assumption map:
 
-<PromptField
+<AICheckField
   name="assumption_map"
   placeholder="Paste your full merged assumption map with categories here..."
   rows={6}
@@ -140,7 +135,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 

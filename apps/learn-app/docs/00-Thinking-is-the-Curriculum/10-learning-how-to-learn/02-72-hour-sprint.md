@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "The 72-Hour Sprint"
 description: "Learn an unfamiliar domain in 72 hours using AI and open resources, maintaining a detailed Learning Log with at least 20 entries and a mandatory mid-point reflection at hour 36"
 keywords:
@@ -86,12 +87,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Show me your mid-point reflection. What did you change about your plan after hour 36?"
     - "Ask students: In your Learning Log, point to one entry where you rejected AI output. Why did you reject it?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 ## Exercise 2: The 72-Hour Sprint
@@ -120,7 +115,7 @@ A competent analysis of the assigned problem in your new domain (500-800 words).
 | Hour 3 |                |               |             |                    |                 |                                                   |
 | ...    |                |               |             |                    |                 |                                                   |
 
-<ExercisePrompt id="72-hour-sprint" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="72-hour-sprint" xp={50}>
 
 I have been learning an assigned domain for 72 hours from scratch. I
 produced an analysis of a specific problem and maintained a complete
@@ -140,7 +135,7 @@ Beginner / Developing / Proficient / Advanced.
 
 My analysis:
 
-<PromptField
+<AICheckField
   name="analysis"
   placeholder="Paste your domain analysis here..."
   rows={6}
@@ -148,7 +143,7 @@ My analysis:
 
 My Learning Log:
 
-<PromptField
+<AICheckField
   name="learning_log"
   placeholder="Paste your Learning Log here..."
   rows={6}
@@ -156,7 +151,7 @@ My Learning Log:
 
 Mid-point reflection:
 
-<PromptField
+<AICheckField
   name="midpoint_reflection"
   placeholder="Paste your mid-point reflection here..."
   rows={4}
@@ -167,10 +162,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn the difference between studying and learning. The Learning Log reveals your actual learning process — its efficiency, its waste, its breakthroughs. AI feedback on your domain analysis tells you honestly where you reached competence and where you are still a beginner pretending to understand.
+
+## Flashcards Study Aid
+
+<Flashcards />

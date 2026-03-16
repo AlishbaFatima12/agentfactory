@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Incomplete Brief"
 description: "Make a high-stakes decision with incomplete information, commit your confidence level and reversal triggers before consulting AI, then evaluate your decision-making under uncertainty"
 keywords:
@@ -86,12 +87,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between 'I would change my mind if things get worse' and 'I would change my mind if Q3 revenue drops below $2M'?"
     - "Ask students: Why does this exercise make you decide BEFORE consulting AI?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";
@@ -151,13 +146,13 @@ Choose one. The exercises work identically regardless of which you pick. You wil
 A Decision Document containing: your recommendation (one clear sentence), your reasoning (200-300 words), your confidence level (0-100%), the three pieces of missing information that would most change your decision (ranked by impact), and a **Reversal Trigger** ("I would change my recommendation if X turns out to be true" — be specific, not vague).
 :::
 
-<ExercisePrompt id="sealed-decision" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="sealed-decision" xp={50}>
 
 I made a business decision under uncertainty before consulting AI.
 
 The scenario:
 
-<PromptField
+<AICheckField
   name="scenario"
   placeholder="Paste your chosen scenario here..."
   rows={2}
@@ -179,7 +174,7 @@ I will compare our reasoning.
 
 My Decision Document:
 
-<PromptField
+<AICheckField
   name="decision_document"
   placeholder="Paste your Decision Document here..."
   rows={6}
@@ -190,7 +185,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
@@ -218,3 +213,7 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn that deciding under uncertainty is itself a skill. The AI check reveals whether your confidence is calibrated, whether your reversal triggers are actionable, and whether your reasoning is sound given what you know. The **Reversal Trigger** becomes a decision-making framework you use for the rest of the book and your career — every major decision should include one.
+
+## Flashcards Study Aid
+
+<Flashcards />

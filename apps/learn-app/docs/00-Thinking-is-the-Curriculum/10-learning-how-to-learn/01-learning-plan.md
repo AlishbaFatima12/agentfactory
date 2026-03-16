@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Learning Plan"
 description: "Design a learning strategy for an unfamiliar domain before learning anything, predict your own learning process, then use AI to evaluate whether your plan is efficient and realistic"
 keywords:
@@ -79,12 +80,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What are you explicitly choosing NOT to learn? Why?"
     - "Ask students: How will you know when you have learned 'enough'? Give me a specific, testable answer."
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # Learning How to Learn
@@ -115,7 +110,7 @@ You are assigned a domain you have never studied: pharmacology for a developer, 
 A Learning Plan (300-400 words) containing: the domain assigned, your current knowledge level (be honest), your learning strategy (what first, what next, what skip), the resources you will use (and why these over others), your definition of "enough" (what competence looks like for this exercise), a time allocation plan for your 72 hours, and your predicted biggest challenge.
 :::
 
-<ExercisePrompt id="learning-plan" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="learning-plan" xp={50}>
 
 I am about to learn a domain I have never studied. Before starting, I
 wrote a Learning Plan. Please:
@@ -134,7 +129,7 @@ I should master in order, with time estimates.
 
 My Learning Plan:
 
-<PromptField
+<AICheckField
   name="learning_plan"
   placeholder="Paste your Learning Plan here..."
   rows={6}
@@ -145,7 +140,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
@@ -175,3 +170,7 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn that learning itself requires a strategy. Most people dive in randomly. By planning first and checking that plan with AI, you develop the meta-skill of designing your own learning process — which will be essential every time you encounter new technology, new frameworks, or new domains in the rest of this book.
+
+## Flashcards Study Aid
+
+<Flashcards />

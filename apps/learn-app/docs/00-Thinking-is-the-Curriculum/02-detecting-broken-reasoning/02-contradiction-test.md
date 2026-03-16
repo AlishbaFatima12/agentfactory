@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "The Contradiction Test"
 description: "When two AI tools give contradictory answers, identify the divergence points, evaluate the evidence, and build a more rigorous third analysis through three iterative drafts"
 keywords:
@@ -70,12 +71,6 @@ teaching_guide:
   assessment_quick_check:
     - "Can the student point to a specific claim where they determined one AI was stronger than the other, and explain their evidence?"
     - "Does Draft 3 contain at least one substantive change (not just wording) from Draft 1?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Contradiction Test
@@ -96,7 +91,7 @@ Ask both Claude and ChatGPT the same nuanced question where reasonable people di
 The two AI responses with divergence points highlighted and annotated ("Claude claims X, ChatGPT claims Y — the evidence favors..."). Your Draft 1 third analysis (written before AI feedback). Your Draft 2 (revised after AI critique). Your Draft 3 (final, after reflection). A brief evolution note for each draft explaining what changed and why.
 :::
 
-<ExercisePrompt id="contradiction-test" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="contradiction-test" xp={50}>
 
 I am learning to detect contradictions between AI outputs and build a more
 rigorous analysis. I asked two AI tools the same question and received
@@ -115,7 +110,7 @@ would make them stronger.
 
 Question:
 
-<PromptField
+<AICheckField
   name="question"
   placeholder="Paste your question here..."
   rows={2}
@@ -123,7 +118,7 @@ Question:
 
 AI Response 1:
 
-<PromptField
+<AICheckField
   name="ai_response_1"
   placeholder="Paste AI response 1 here..."
   rows={6}
@@ -131,7 +126,7 @@ AI Response 1:
 
 AI Response 2:
 
-<PromptField
+<AICheckField
   name="ai_response_2"
   placeholder="Paste AI response 2 here..."
   rows={6}
@@ -139,7 +134,7 @@ AI Response 2:
 
 My divergence annotations:
 
-<PromptField
+<AICheckField
   name="divergence_annotations"
   placeholder="Paste your divergence annotations here..."
   rows={6}
@@ -147,7 +142,7 @@ My divergence annotations:
 
 My analysis (Draft 1):
 
-<PromptField
+<AICheckField
   name="analysis_draft_1"
   placeholder="Paste your analysis (Draft 1) here..."
   rows={6}
@@ -158,10 +153,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that when two confident AI responses disagree, the disagreement is a signal to think harder, not a reason to pick one randomly. Building a third analysis that improves on both forces you into genuine thinking. The three-draft evolution reveals whether you can integrate feedback and improve — or whether you stop thinking after the first attempt.
+
+## Flashcards Study Aid
+
+<Flashcards />

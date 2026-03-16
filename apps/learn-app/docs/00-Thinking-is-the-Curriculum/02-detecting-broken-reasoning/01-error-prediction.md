@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Error Prediction"
 description: "Predict where AI will fail before prompting it, then annotate AI responses line-by-line using an Error Taxonomy to build systematic error detection skill"
 keywords:
@@ -70,12 +71,6 @@ teaching_guide:
   assessment_quick_check:
     - "Can the student explain the difference between a 'factual error' and 'false confidence' with an example from their annotation?"
     - "Did the student's prediction document identify at least one error type that actually appeared in the AI output?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";
@@ -143,7 +138,7 @@ Choose one.
 Your sealed prediction document (before AI) listing expected AI strengths and weaknesses. Two annotated AI responses with every sentence labeled using the Error Taxonomy categories. A comparison table showing: your predicted errors vs. actual errors found, your predicted strengths vs. actual strengths. A count of each error type found across both tools.
 :::
 
-<ExercisePrompt id="error-prediction" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="error-prediction" xp={50}>
 
 I am learning to detect errors in AI-generated analysis. I asked both Claude
 and ChatGPT about a scenario question and then annotated both responses using
@@ -164,7 +159,7 @@ at catching and which do I consistently miss?
 
 Here are the AI responses with my annotations:
 
-<PromptField
+<AICheckField
   name="annotated_responses"
   placeholder="Paste your annotated responses here..."
   rows={6}
@@ -172,7 +167,7 @@ Here are the AI responses with my annotations:
 
 Here is my prediction document:
 
-<PromptField
+<AICheckField
   name="predictions"
   placeholder="Paste your predictions here..."
   rows={6}
@@ -183,10 +178,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that error detection is a trainable skill with specific categories, not just a vague feeling that something is off. By predicting AI errors before seeing them, you develop an internal model of where AI fails. The AI self-check reveals your own blind spots — the error types you consistently miss — which is exactly the information you need to improve.
+
+## Flashcards Study Aid
+
+<Flashcards />

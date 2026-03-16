@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+aicheck: true
 title: "The Stakeholder Swap"
 description: "Argue the opposite of your personal ethical position in a live presentation, testing whether you understand a dilemma deeply enough to defend any side"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What did you understand about the dilemma after arguing the other side that you did not understand before?"
     - "Ask students: Was the hardest part finding arguments or genuinely feeling what it would be like to hold that position?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Stakeholder Swap
@@ -107,7 +102,7 @@ Write a 400-word persuasive essay arguing the opposite position. Then prompt AI:
 Your preparation notes for the opposite position (you may use AI to help prepare, but document what you used). Peer feedback scores: Argument strength (1-10), Apparent conviction (1-10), Empathy for the other side (1-10). A reflection (200 words) answering: Did arguing the other side change your view at all? What did you understand about the dilemma that you did not understand before?
 :::
 
-<ExercisePrompt id="stakeholder-swap" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="stakeholder-swap" xp={50}>
 
 I was assigned to argue the OPPOSITE of my personal position on this
 ethical dilemma. I need to build the strongest possible case for a
@@ -115,7 +110,7 @@ position I disagree with.
 
 The dilemma:
 
-<PromptField
+<AICheckField
   name="dilemma"
   placeholder="Paste your chosen dilemma here..."
   rows={2}
@@ -123,7 +118,7 @@ The dilemma:
 
 My PERSONAL position is:
 
-<PromptField
+<AICheckField
   name="personal_position"
   placeholder="Paste your personal position here..."
   rows={4}
@@ -131,7 +126,7 @@ My PERSONAL position is:
 
 The position I must argue is:
 
-<PromptField
+<AICheckField
   name="assigned_position"
   placeholder="Paste the assigned position you must argue here..."
   rows={4}
@@ -151,8 +146,12 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ### What This Teaches You
 
 You learn that arguing a position you disagree with is the highest test of ethical reasoning. If you can build the best case for the other side, you understand the dilemma deeply enough to hold any position responsibly. AI helps you prepare, but the live delivery without AI tests whether you truly internalized the perspective.
+
+## Flashcards Study Aid
+
+<Flashcards />

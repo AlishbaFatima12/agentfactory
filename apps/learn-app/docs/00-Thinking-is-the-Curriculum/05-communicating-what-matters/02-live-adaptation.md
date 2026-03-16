@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "Live Adaptation"
 description: "Deliver a prepared pitch live, then adapt in real-time when a stakeholder reveals an unexpected concern -- building the communication reflexes no AI tool can provide"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Why is adaptation harder than preparation, even though preparation takes longer?"
     - "Ask students to name one thing they would do differently in their next live pitch based on this exercise"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # Live Adaptation
@@ -101,7 +96,7 @@ Record your 3-minute pitch (audio or video). Then prompt AI: "You are a skeptica
 Your prepared pitch (can use AI to help draft). A post-exercise report containing: the unexpected concern revealed, how you adapted in the moment, what you wish you had said differently, and peer feedback on your adaptation quality. The peer fills out an Adaptation Scorecard rating: composure under surprise (1-10), relevance of improvised response (1-10), and whether they felt heard (1-10).
 :::
 
-<ExercisePrompt id="live-adaptation" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="live-adaptation" xp={50}>
 
 I just completed a live communication adaptation exercise. I prepared a pitch
 with AI help, then had to adapt in real-time when a stakeholder raised an
@@ -120,7 +115,7 @@ and I will practice responding.
 
 My pitch:
 
-<PromptField
+<AICheckField
   name="pitch"
   placeholder="Paste your prepared pitch here..."
   rows={6}
@@ -128,7 +123,7 @@ My pitch:
 
 Unexpected concern:
 
-<PromptField
+<AICheckField
   name="unexpected_concern"
   placeholder="Paste the unexpected concern here..."
   rows={2}
@@ -136,7 +131,7 @@ Unexpected concern:
 
 My adaptation:
 
-<PromptField
+<AICheckField
   name="adaptation"
   placeholder="Paste your adaptation response here..."
   rows={4}
@@ -144,7 +139,7 @@ My adaptation:
 
 Peer feedback:
 
-<PromptField
+<AICheckField
   name="peer_feedback"
   placeholder="Paste your peer's scores and comments here..."
   rows={4}
@@ -155,10 +150,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that preparation gets you 70% of the way. The last 30% -- the part that determines success or failure -- is adaptation. AI can help you prepare but it cannot adapt for you in the room. This exercise builds the reflexes that no tool can provide.
+
+## Flashcards Study Aid
+
+<Flashcards />

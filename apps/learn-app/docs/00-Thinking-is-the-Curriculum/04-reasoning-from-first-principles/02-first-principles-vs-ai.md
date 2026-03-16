@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "First Principles vs. AI"
 description: "Solve a novel problem with no established solution using only first principles, then compare your derivation against AI's approach to reveal the difference between principled and pattern-based reasoning"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students to state their derivation chain in 3 sentences: From constraint X and assumption Y, it follows that Z. Therefore, the solution must include W."
     - "Ask students: Did AI approach the problem the same way you did? If not, where exactly did the approaches diverge?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";
@@ -122,7 +117,7 @@ A First Principles Worksheet containing: (1) the base constraints you identified
 
 ---
 
-<ExercisePrompt id="first-principles-vs-ai" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="first-principles-vs-ai" xp={50}>
 
 I solved a novel problem using first principles reasoning without any
 AI or internet assistance. The problem: "Design a fair system for
@@ -145,7 +140,7 @@ address?
 
 My worksheet:
 
-<PromptField
+<AICheckField
   name="worksheet"
   placeholder="Paste your First Principles Worksheet here..."
   rows={6}
@@ -156,7 +151,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 

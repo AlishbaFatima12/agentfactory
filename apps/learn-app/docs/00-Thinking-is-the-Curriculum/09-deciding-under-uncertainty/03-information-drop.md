@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+aicheck: true
 title: "The Information Drop"
 description: "Receive contradictory new information mid-exercise and revise your decision under a strict 20-minute time limit, testing whether you anchor, overreact, or update proportionally"
 keywords:
@@ -74,12 +75,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Did your Reversal Trigger fire? If yes, did you actually reverse? If no, should it have?"
     - "Ask students: Is your post-drop confidence higher or lower than your post-consultation confidence? Is that change justified?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 ## Exercise 3: The Information Drop
@@ -110,7 +105,7 @@ If you are working alone, generate your own contradictory information by prompti
 Your revised Decision Document (Draft 3) showing your response to the new information. A Process Document answering: Did the new information trigger your Reversal Trigger? Did you update proportionally (not overreact)? Did you integrate the new information with your existing analysis or start from scratch? A Calibration Check comparing your original confidence level, your post-consultation confidence level, and your post-drop confidence level.
 :::
 
-<ExercisePrompt id="information-drop" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="information-drop" xp={50}>
 
 I made a decision under uncertainty, consulted AI, then received new
 contradictory information. I had 20 minutes to revise. Below is my
@@ -130,7 +125,7 @@ specific feedback.
 
 Original decision:
 
-<PromptField
+<AICheckField
   name="original_decision"
   placeholder="Paste your original Decision Document here..."
   rows={6}
@@ -138,7 +133,7 @@ Original decision:
 
 Post-consultation decision:
 
-<PromptField
+<AICheckField
   name="post_consultation_decision"
   placeholder="Paste your post-consultation decision here..."
   rows={6}
@@ -146,7 +141,7 @@ Post-consultation decision:
 
 New information:
 
-<PromptField
+<AICheckField
   name="new_information"
   placeholder="Paste the new contradictory information here..."
   rows={4}
@@ -154,7 +149,7 @@ New information:
 
 Post-drop decision:
 
-<PromptField
+<AICheckField
   name="post_drop_decision"
   placeholder="Paste your post-drop revised decision here..."
   rows={6}
@@ -162,7 +157,7 @@ Post-drop decision:
 
 Process document:
 
-<PromptField
+<AICheckField
   name="process_document"
   placeholder="Paste your Process Document here..."
   rows={6}
@@ -173,10 +168,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn how you respond to information that contradicts your position. Most people either anchor (refuse to change) or overreact (abandon everything). The AI analysis reveals your specific pattern and teaches you to update proportionally — changing exactly as much as the evidence warrants.
+
+## Flashcards Study Aid
+
+<Flashcards />

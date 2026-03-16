@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Strategy Retrospective"
 description: "Compare your original Learning Plan to what actually happened, then create a Personal Learning Framework — your reusable operating system for mastering unfamiliar domains throughout the rest of this book"
 keywords:
@@ -79,12 +80,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Read me your confusion protocol — what do you do when you are stuck? Is it specific enough to actually follow?"
     - "Ask students: How is your framework different from generic advice like 'study hard and ask questions'?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 ## Exercise 4: Strategy Retrospective
@@ -101,7 +96,7 @@ Compare your original Learning Plan to what actually happened. Write a Strategy 
 A Strategy Retrospective (300-400 words) comparing: your planned strategy vs. actual strategy, where your plan worked, where it failed, and what you would do differently next time. A **Personal Learning Framework** (one page) that you will use for every new domain encounter in the rest of the book, containing: your optimal learning sequence, your resource prioritization criteria, your "confusion protocol" (what to do when stuck), your AI usage guidelines (when AI helps vs. hinders learning), and your self-assessment triggers (how to know when you have learned enough).
 :::
 
-<ExercisePrompt id="strategy-retrospective" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="strategy-retrospective" xp={50}>
 
 I completed a full meta-learning cycle: planned, executed a 72-hour
 sprint, taught what I learned, and now I am writing a Strategy
@@ -122,7 +117,7 @@ skill.
 
 My original Learning Plan:
 
-<PromptField
+<AICheckField
   name="original_learning_plan"
   placeholder="Paste your original Learning Plan here..."
   rows={6}
@@ -130,7 +125,7 @@ My original Learning Plan:
 
 My Strategy Retrospective:
 
-<PromptField
+<AICheckField
   name="strategy_retrospective"
   placeholder="Paste your Strategy Retrospective here..."
   rows={6}
@@ -138,7 +133,7 @@ My Strategy Retrospective:
 
 My Personal Learning Framework:
 
-<PromptField
+<AICheckField
   name="personal_learning_framework"
   placeholder="Paste your Personal Learning Framework here..."
   rows={6}
@@ -149,7 +144,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
@@ -174,3 +169,7 @@ A **Meta-Learning Portfolio** containing: (1) the original Learning Plan, (2) th
 | AI feedback integration                                                                 |  10%   | Did the student engage seriously with AI feedback across all exercises?                                        |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

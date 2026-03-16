@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "The Question Tournament"
 description: "Compete with a partner to generate and rank diagnostic questions, then use AI to reveal which questions actually produce useful answers"
 keywords:
@@ -70,12 +71,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students to explain the difference between a question that is 'important' and a question that is 'diagnostic'"
     - "Ask students to identify one question from their partner's set that they wish they had asked themselves, and explain why"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Question Tournament
@@ -96,7 +91,7 @@ Generate your 15 questions, then prompt AI: "You are my study partner. Generate 
 Your 15 original questions (written without AI). Your partner's 15 questions with your ranking and justification for each. A comparison table showing the top 10 questions, the AI responses from both tools, and a column marking each as "useful/actionable" or "generic/filler" with explanation.
 :::
 
-<ExercisePrompt id="question-tournament" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="question-tournament" xp={50}>
 
 I am learning to evaluate question quality. Below are two sets of questions
 about the same business scenario -- one set written by me and one by my
@@ -115,7 +110,7 @@ generic AI responses? Explain why this happened.
 
 Scenario:
 
-<PromptField
+<AICheckField
   name="scenario"
   placeholder="Paste your chosen scenario here..."
   rows={2}
@@ -123,7 +118,7 @@ Scenario:
 
 My questions:
 
-<PromptField
+<AICheckField
   name="my_questions"
   placeholder="Paste your questions here..."
   rows={6}
@@ -131,7 +126,7 @@ My questions:
 
 Partner's questions:
 
-<PromptField
+<AICheckField
   name="partners_questions"
   placeholder="Paste your partner's questions here..."
   rows={6}
@@ -139,7 +134,7 @@ Partner's questions:
 
 AI responses:
 
-<PromptField
+<AICheckField
   name="comparison_table"
   placeholder="Paste your comparison table here..."
   rows={6}
@@ -150,10 +145,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that question quality is a skill you can evaluate and improve, not an innate talent. By seeing your partner's questions and having AI compare both sets, you discover questioning patterns you would never notice in your own work. The tournament format makes the difference between a good question and a great question viscerally clear.
+
+## Flashcards Study Aid
+
+<Flashcards />

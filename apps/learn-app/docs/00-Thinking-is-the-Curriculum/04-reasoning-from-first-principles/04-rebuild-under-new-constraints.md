@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Rebuild Under New Constraints"
 description: "Rebuild your first-principles solution when a foundational constraint changes, testing whether you understand your principles deeply enough to know which survive and which collapse"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Name one principle that survived the constraint change and explain WHY it still holds"
     - "Ask students: What is the most important thing this chapter taught you about the difference between reasoning from principles and reasoning from patterns?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # Rebuild Under New Constraints
@@ -97,7 +92,7 @@ Your rebuilt solution with a clear "principle audit" showing: which first princi
 
 ---
 
-<ExercisePrompt id="rebuild-under-new-constraints" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="rebuild-under-new-constraints" xp={50}>
 
 I originally designed a solution using first principles for a problem.
 The constraint has now changed. I rebuilt my solution and documented
@@ -118,7 +113,7 @@ specific feedback on what to improve.
 
 My principle audit:
 
-<PromptField
+<AICheckField
   name="principle_audit"
   placeholder="Paste your principle audit here..."
   rows={6}
@@ -126,7 +121,7 @@ My principle audit:
 
 My rebuilt solution:
 
-<PromptField
+<AICheckField
   name="rebuilt_solution"
   placeholder="Paste your rebuilt solution here..."
   rows={6}
@@ -137,7 +132,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 

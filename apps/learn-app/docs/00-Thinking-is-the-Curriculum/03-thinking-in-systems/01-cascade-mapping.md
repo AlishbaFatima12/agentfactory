@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Cascade Map"
 description: "Map the cascading consequences of a major decision across multiple domains, identifying feedback loops that linear analysis misses"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between a second-order effect and a feedback loop?"
     - "Ask students to explain one of their feedback loops without looking at their map — if they cannot, they drew it without understanding it"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";
@@ -127,7 +122,7 @@ A cascade map (hand-drawn scan or digital document) showing: the central decisio
 
 ---
 
-<ExercisePrompt id="cascade-mapping" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="cascade-mapping" xp={50}>
 
 I am a student learning systems thinking. I was given this scenario:
 "A major bank decides to replace all loan officers with AI agents."
@@ -148,7 +143,7 @@ would not actually follow from the cause I described?
 
 Here is my cascade map:
 
-<PromptField
+<AICheckField
   name="cascade_map"
   placeholder="Paste or describe your cascade map in detail here..."
   rows={6}
@@ -159,7 +154,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 

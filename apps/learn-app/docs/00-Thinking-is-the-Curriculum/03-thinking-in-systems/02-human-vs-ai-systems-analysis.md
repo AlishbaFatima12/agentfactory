@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "Human vs. AI Systems Analysis"
 description: "Compare your cascade map against AI-generated analyses, creating a merged map with honest attribution to reveal where human and AI thinking complement each other"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Give me one example of a Synthesis insight — something that only emerged from combining your thinking with AI's"
     - "Ask students: Were you surprised by anything AI found that you missed? What does that tell you about your own thinking patterns?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # Exercise 2: AI vs. Human Systems Analysis
@@ -101,7 +96,7 @@ A comparison document with three columns: "Effects only I found," "Effects only 
 
 ---
 
-<ExercisePrompt id="human-vs-ai-systems-analysis" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="human-vs-ai-systems-analysis" xp={50}>
 
 I am comparing my systems analysis with AI-generated analyses of the
 same scenario. I have created a merged cascade map that combines
@@ -122,7 +117,7 @@ map?
 
 Scenario:
 
-<PromptField
+<AICheckField
   name="scenario"
   placeholder="Paste your chosen scenario here..."
   rows={2}
@@ -130,7 +125,7 @@ Scenario:
 
 My original map:
 
-<PromptField
+<AICheckField
   name="original_map"
   placeholder="Paste your original cascade map here..."
   rows={6}
@@ -138,7 +133,7 @@ My original map:
 
 Claude's analysis:
 
-<PromptField
+<AICheckField
   name="claude_analysis"
   placeholder="Paste Claude's analysis here..."
   rows={6}
@@ -146,7 +141,7 @@ Claude's analysis:
 
 ChatGPT's analysis:
 
-<PromptField
+<AICheckField
   name="chatgpt_analysis"
   placeholder="Paste ChatGPT's analysis here..."
   rows={6}
@@ -154,7 +149,7 @@ ChatGPT's analysis:
 
 Merged map with attribution:
 
-<PromptField
+<AICheckField
   name="merged_map"
   placeholder="Paste your merged map with attribution here..."
   rows={6}
@@ -165,7 +160,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+aicheck: true
 title: "Teach It Back"
 description: "Deliver a 10-minute teaching session on your newly learned domain without AI access, then handle 5 minutes of unexpected questions to reveal the depth of your understanding"
 keywords:
@@ -79,12 +80,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What was the hardest question you were asked? Why was it hard?"
     - "Ask students: For questions you could not answer, was the problem lack of knowledge or inability to explain?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 ## Exercise 3: Teach It Back
@@ -105,7 +100,7 @@ Record yourself teaching the topic for 10 minutes (audio or video). Then prompt 
 Your teaching session outline or slides (may use AI to help prepare, but document what you used). Peer feedback forms rating: clarity of explanation (1-10), depth of understanding demonstrated (1-10), ability to answer unexpected questions (1-10), and engagement (1-10). A list of every question you were asked, whether you could answer it, and for unanswered questions — your honest assessment of whether you genuinely did not know or knew but could not articulate.
 :::
 
-<ExercisePrompt id="teach-it-back" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="teach-it-back" xp={50}>
 
 I just completed a teach-back session after learning a domain from
 scratch in 72 hours. Below are my teaching materials, the questions I was
@@ -124,7 +119,7 @@ hours, what should I study to fill my most critical gaps?
 
 Teaching materials:
 
-<PromptField
+<AICheckField
   name="teaching_materials"
   placeholder="Paste your teaching materials here..."
   rows={6}
@@ -132,7 +127,7 @@ Teaching materials:
 
 Questions and my responses:
 
-<PromptField
+<AICheckField
   name="questions_and_responses"
   placeholder="Paste the questions and your responses here..."
   rows={6}
@@ -140,7 +135,7 @@ Questions and my responses:
 
 Peer feedback:
 
-<PromptField
+<AICheckField
   name="peer_feedback"
   placeholder="Paste peer feedback scores and comments here..."
   rows={4}
@@ -151,10 +146,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that teaching is the ultimate test of understanding. If you can explain something to someone who knows nothing about it, you have truly learned it. If you collapse under unexpected questions, you memorized without understanding. The AI-generated "Next 20 Hours" plan gives you a precise roadmap for continued learning.
+
+## Flashcards Study Aid
+
+<Flashcards />

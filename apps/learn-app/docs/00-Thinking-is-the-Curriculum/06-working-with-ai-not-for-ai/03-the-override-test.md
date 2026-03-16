@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+aicheck: true
 title: "The Override Test"
 description: "Find the deliberate subtle error in an AI-generated analysis without being told what it is, building the override instinct that separates strategic AI users from passive ones"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: How would you describe your error-detection process? Was it systematic or did you get lucky?"
     - "Ask students: What is the difference between overriding AI because you are right and overriding AI because you are uncomfortable?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Override Test
@@ -101,7 +96,7 @@ Use AI to produce a competitive analysis for a product. The instructor has desig
 The original AI-generated analysis. Your error identification with explanation of the error type, why AI made it, and its impact on the analysis. Your corrected analysis. Your redesigned prompt that would prevent the error. A brief explanation of your error-detection process -- how did you find it?
 :::
 
-<ExercisePrompt id="the-override-test" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="the-override-test" xp={50}>
 
 I was given an AI-generated competitive analysis that contains a deliberate
 subtle error. I identified the error, explained why AI made it, corrected the
@@ -119,7 +114,7 @@ lucky? How can I make my detection process more reliable?
 
 Original analysis:
 
-<PromptField
+<AICheckField
   name="original_analysis"
   placeholder="Paste the original AI-generated analysis here..."
   rows={6}
@@ -127,7 +122,7 @@ Original analysis:
 
 My error identification:
 
-<PromptField
+<AICheckField
   name="error_identification"
   placeholder="Paste your error identification here..."
   rows={4}
@@ -135,7 +130,7 @@ My error identification:
 
 My corrected analysis:
 
-<PromptField
+<AICheckField
   name="corrected_analysis"
   placeholder="Paste your corrected analysis here..."
   rows={6}
@@ -143,7 +138,7 @@ My corrected analysis:
 
 My redesigned prompt:
 
-<PromptField
+<AICheckField
   name="redesigned_prompt"
   placeholder="Paste your redesigned prompt here..."
   rows={4}
@@ -154,10 +149,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn the override instinct -- the willingness and ability to say "the AI is wrong here" and back it up. Most students either trust AI too much (never override) or override randomly (reject good output). This exercise trains the specific skill of knowing WHEN and WHY to override.
+
+## Flashcards Study Aid
+
+<Flashcards />

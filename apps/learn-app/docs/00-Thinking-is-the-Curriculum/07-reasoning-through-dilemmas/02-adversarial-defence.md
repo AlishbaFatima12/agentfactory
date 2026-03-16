@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "The Adversarial Defence"
 description: "Survive three rounds of AI counter-arguments against your ethical position, strengthening your reasoning or honestly revising your stance under systematic attack"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Did your position change during the three rounds? If yes, what specifically changed your mind? If no, which counter-argument came closest?"
     - "Ask students to identify the difference between a defence that addresses the counter-argument and a defence that merely restates the original position"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Adversarial Defence
@@ -103,7 +98,7 @@ Feed your position from Exercise 1 into Claude with a specific adversarial promp
 The complete three-round exchange: Round 1 AI attack, then your defence (written without AI), then Round 2 AI attack, then your defence, then Round 3 AI attack, then your defence. A Position Tracker showing whether your position held, shifted, or reversed, with the exact reasoning at each round. A reflection (150 words) on which counter-argument was hardest to answer and why.
 :::
 
-<ExercisePrompt id="adversarial-defence" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="adversarial-defence" xp={50}>
 
 ROUND 1: I hold the following position on an ethical dilemma. Attack this
 position as aggressively and specifically as possible. Do not be balanced.
@@ -112,7 +107,7 @@ each targeting a different vulnerability in my reasoning.
 
 Dilemma:
 
-<PromptField
+<AICheckField
   name="dilemma"
   placeholder="Paste your chosen dilemma here..."
   rows={2}
@@ -120,7 +115,7 @@ Dilemma:
 
 My position and arguments:
 
-<PromptField
+<AICheckField
   name="position_and_arguments"
   placeholder="Paste your position and arguments here..."
   rows={6}
@@ -134,7 +129,7 @@ the weakest points in my responses and press harder.
 
 My defence:
 
-<PromptField
+<AICheckField
   name="defence_summary"
   placeholder="Paste your defence summary here..."
   rows={6}
@@ -153,7 +148,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>
@@ -200,3 +195,7 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn that holding an ethical position under systematic attack requires deep understanding, not just opinion. Each round forces you to strengthen your reasoning or honestly revise your position. The three-round format builds intellectual stamina and reveals whether your conviction is grounded in thought or merely in habit.
+
+## Flashcards Study Aid
+
+<Flashcards />

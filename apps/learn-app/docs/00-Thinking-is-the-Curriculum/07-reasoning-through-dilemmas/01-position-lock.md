@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Position Lock"
 description: "Take a clear ethical position on a dilemma before consulting AI, building a Stakeholder Cost Matrix that maps who benefits, who is harmed, and who is ignored by your decision"
 keywords:
@@ -78,12 +79,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between a position you hold because you thought it through and a position you hold because it feels right?"
     - "Ask students to name the stakeholder group most harmed by their decision -- if they cannot, their matrix is incomplete"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";
@@ -143,13 +138,13 @@ Choose one. The exercises work identically regardless of which you pick.
 A Position Lock document containing: your clear position statement (one sentence), your three strongest arguments with evidence or reasoning for each, a Stakeholder Cost Matrix listing every stakeholder group and how your decision affects them (who benefits, who is harmed, who is ignored), and a Confidence Statement rating how certain you are (0-100%) with an explanation of what would change your mind.
 :::
 
-<ExercisePrompt id="position-lock" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="position-lock" xp={50}>
 
 I took a position on an ethical dilemma before consulting AI.
 
 The dilemma:
 
-<PromptField
+<AICheckField
   name="dilemma"
   placeholder="Paste your chosen dilemma here..."
   rows={2}
@@ -170,7 +165,7 @@ to be prepared to face?
 
 My Position Lock:
 
-<PromptField
+<AICheckField
   name="position_lock"
   placeholder="Paste your full Position Lock document here..."
   rows={6}
@@ -181,7 +176,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>
@@ -213,3 +208,7 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn to take an ethical position with full awareness of its costs. AI feedback reveals whether your arguments are as strong as you think and whether your stakeholder analysis is complete -- preparing you for the defence to come.
+
+## Flashcards Study Aid
+
+<Flashcards />

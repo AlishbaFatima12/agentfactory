@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "The Decision Audit"
 description: "Conduct a full retrospective audit of your decision process across all four exercises, assess your calibration accuracy and heuristics, then use AI to check your self-assessment"
 keywords:
@@ -79,12 +80,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Name one heuristic you relied on. Did it help or hurt? How do you know?"
     - "Ask students: What is the single most important improvement to your decision-making process? Is it specific enough to act on tomorrow?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 ## Exercise 4: The Decision Audit
@@ -105,7 +100,7 @@ After all information is revealed, conduct a full retrospective audit of your de
 A Decision Audit (300-400 words, written without AI) analyzing: your calibration accuracy at each stage, the heuristics you relied on (and whether they helped or hurt), and your specific recommendations to yourself for improving your next decision under uncertainty. After completing the self-audit, include an AI assessment of your self-assessment.
 :::
 
-<ExercisePrompt id="decision-audit" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="decision-audit" xp={50}>
 
 I completed an entire decision-making-under-uncertainty exercise across
 four stages and then wrote a self-audit of my process. Please:
@@ -124,7 +119,7 @@ decision-making patterns? (1-10).
 
 My complete decision trail (all stages):
 
-<PromptField
+<AICheckField
   name="complete_decision_trail"
   placeholder="Paste your complete decision trail from all stages here..."
   rows={6}
@@ -132,7 +127,7 @@ My complete decision trail (all stages):
 
 My self-audit:
 
-<PromptField
+<AICheckField
   name="self_audit"
   placeholder="Paste your self-audit here..."
   rows={6}
@@ -143,7 +138,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
@@ -168,3 +163,7 @@ A **Decision-Making Portfolio** containing: (1) the sealed initial Decision Docu
 | AI feedback integration                                       |  10%   | Did the student engage seriously with AI feedback across all exercises?                                      |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

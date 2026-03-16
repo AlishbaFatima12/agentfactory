@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "The AI Consultation"
 description: "Consult AI on your sealed decision from Exercise 1, document where you trust AI versus your own judgment, and learn to distinguish AI information from AI fabrication under uncertainty"
 keywords:
@@ -79,12 +80,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Give me one example from your Consultation Log where AI fabricated something about the scenario. How did you identify it as fabrication?"
     - "Ask students: Did your confidence go up or down after AI consultation? Should it have?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 ## Exercise 2: The AI Consultation
@@ -105,7 +100,7 @@ Now use Claude and ChatGPT to research and analyze the scenario from Exercise 1.
 A Consultation Log documenting: every question you asked AI, every response received, and for each — whether you accepted it, what you noticed AI was fabricating or guessing, and how it changed (or did not change) your thinking. An updated Decision Document showing your revised recommendation, revised confidence level, and what specifically caused any changes. Both original and revised versions side by side.
 :::
 
-<ExercisePrompt id="ai-consultation" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="ai-consultation" xp={50}>
 
 I made an initial decision under uncertainty, then consulted AI to gather
 more information. Below is my original decision and my updated decision
@@ -124,7 +119,7 @@ own analysis: Poor / Fair / Good / Excellent.
 
 Original decision:
 
-<PromptField
+<AICheckField
   name="original_decision"
   placeholder="Paste your original Decision Document here..."
   rows={6}
@@ -132,7 +127,7 @@ Original decision:
 
 Consultation Log:
 
-<PromptField
+<AICheckField
   name="consultation_log"
   placeholder="Paste your Consultation Log here..."
   rows={6}
@@ -140,7 +135,7 @@ Consultation Log:
 
 Updated decision:
 
-<PromptField
+<AICheckField
   name="updated_decision"
   placeholder="Paste your updated Decision Document here..."
   rows={6}
@@ -151,10 +146,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn the hardest part of AI consultation under uncertainty: distinguishing between information the AI actually has and information it is confidently fabricating. The side-by-side comparison of your decisions before and after AI shows you whether AI consultation improved or degraded your judgment.
+
+## Flashcards Study Aid
+
+<Flashcards />

@@ -1,5 +1,6 @@
 ---
 sidebar_position: -1
+aicheck: true
 title: "Thinking Baseline"
 description: "A 30-minute ungraded pre-assessment using a hospital AI triage scenario to snapshot your thinking skills before any training begins"
 keywords:
@@ -66,12 +67,6 @@ teaching_guide:
     - "This is the last lesson before Chapter 1. Make the transition explicit: 'You now know your starting point. Chapter 1 begins training your first thinking skill: question formulation'"
   assessment_quick_check:
     - "Verify every student has saved their baseline responses AND their AI Baseline Score Card before moving to Chapter 1 -- this is a hard gate, not optional"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # Thinking Baseline: Where You Start
@@ -101,7 +96,7 @@ Without any AI tools, write responses to the following five tasks. Spend roughly
 
 ## AI Baseline Check
 
-<ExercisePrompt id="thinking-baseline" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="thinking-baseline" xp={50}>
 
 I am about to begin a 10-chapter course on thinking skills. Before I start,
 I completed a baseline assessment with no AI help. Please evaluate each of
@@ -130,13 +125,13 @@ I will repeat this exact exercise after completing all 10 chapters.
 
 Here are my responses:
 
-<PromptField
+<AICheckField
   name="responses"
   placeholder="Paste all 5 responses here..."
   rows={6}
 />
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
@@ -145,3 +140,7 @@ Here are my responses:
 Save your baseline responses and your AI Baseline Score. You will need both after Chapter 10.
 
 > _Do not try to perform well on this baseline. The worse your honest starting point, the more dramatic your measurable growth will be. This is a mirror, not a test._
+
+## Flashcards Study Aid
+
+<Flashcards />

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Audience Prediction"
 description: "Predict what three different stakeholders care about before asking AI to write for them, revealing the human judgment layer that separates communication from writing"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: What is the difference between writing well and communicating well?"
     - "Ask students to explain why the same decision might require three completely different arguments for three different people"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";
@@ -132,7 +127,7 @@ Choose one. The exercises work identically regardless of which you pick.
 Three audience profiles (written without AI) each containing: the stakeholder's priorities, their predicted objection, and the persuasion strategy you would use. Three AI-generated persuasive briefs (one per audience). A comparison document showing: where AI's audience model matched yours, where it differed, and where you believe your audience reading was more accurate than AI's (with reasoning).
 :::
 
-<ExercisePrompt id="audience-prediction" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="audience-prediction" xp={50}>
 
 I predicted three audience profiles for a technical decision, then had AI
 generate persuasive briefs for each. Please:
@@ -149,7 +144,7 @@ audience -- which approach would actually be more effective and why?
 
 Decision:
 
-<PromptField
+<AICheckField
   name="decision"
   placeholder="Paste your chosen decision/scenario here..."
   rows={2}
@@ -157,7 +152,7 @@ Decision:
 
 My audience profiles:
 
-<PromptField
+<AICheckField
   name="audience_profiles"
   placeholder="Paste your three audience profiles here..."
   rows={6}
@@ -165,7 +160,7 @@ My audience profiles:
 
 AI-generated briefs:
 
-<PromptField
+<AICheckField
   name="ai_generated_briefs"
   placeholder="Paste the AI-generated briefs here..."
   rows={6}
@@ -176,10 +171,14 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that effective communication starts with audience modeling, not with writing. AI writes competent briefs but often misses the political, emotional, and cultural dimensions that determine whether a message actually lands. Your audience predictions, even when imperfect, train the skill that makes every future communication more effective.
+
+## Flashcards Study Aid
+
+<Flashcards />

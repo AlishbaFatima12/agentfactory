@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Confidence Calibration"
 description: "Rate your confidence in 20 AI-generated claims under time pressure, then measure your calibration accuracy to reveal systematic overconfidence and underconfidence patterns"
 keywords:
@@ -70,12 +71,6 @@ teaching_guide:
   assessment_quick_check:
     - "For claims the student rated at 80%+ confidence, what percentage were actually correct? (Good calibration: >80%)"
     - "Can the student name the specific topic area where they were most overconfident?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # Confidence Calibration
@@ -94,7 +89,7 @@ The time pressure simulates real-world decision-making where you must quickly as
 A table with 20 rows: the AI claim, your confidence rating (0-100%), the verified truth status (accurate / inaccurate / partially accurate), your source for verification, and whether your confidence was calibrated (correct), overconfident (high confidence + wrong), or underconfident (low confidence + right). A Confidence Calibration Chart plotting your ratings against reality. A reflection (200 words) analyzing your calibration patterns.
 :::
 
-<ExercisePrompt id="confidence-calibration" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="confidence-calibration" xp={50}>
 
 I am a student calibrating my ability to judge AI accuracy. I rated my
 confidence on 20 AI-generated claims, then verified each one. Below is my
@@ -114,7 +109,7 @@ my patterns.
 
 My calibration table:
 
-<PromptField
+<AICheckField
   name="calibration_table"
   placeholder="Paste your full calibration table with confidence ratings and verification results here..."
   rows={6}
@@ -125,7 +120,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ---
 
@@ -152,3 +147,7 @@ An Error Detection Portfolio containing: (1) the sealed error prediction documen
 | Reflection quality across all exercises                                              |  10%   | All exercises     |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

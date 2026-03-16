@@ -1,24 +1,26 @@
 import React, { useCallback } from "react";
-import styles from "./ExercisePrompt.module.css";
+import styles from "./AICheck.module.css";
 
-interface PromptFieldProps {
+interface AICheckFieldProps {
   name: string;
   placeholder: string;
   label?: string;
   rows?: number;
-  // Injected by ExercisePrompt parent
+  // Injected by AICheck parent
   value?: string;
   onChange?: (name: string, value: string) => void;
+  disabled?: boolean;
 }
 
-function PromptField({
+function AICheckField({
   name,
   placeholder,
   label,
   rows = 3,
   value = "",
   onChange,
-}: PromptFieldProps) {
+  disabled = false,
+}: AICheckFieldProps) {
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       onChange?.(name, e.target.value);
@@ -35,11 +37,13 @@ function PromptField({
         onChange={handleChange}
         placeholder={placeholder}
         rows={Math.max(1, Math.min(10, rows))}
+        disabled={disabled}
+        aria-label={label || placeholder}
       />
     </div>
   );
 }
 
-PromptField.displayName = "PromptField";
+AICheckField.displayName = "AICheckField";
 
-export default PromptField;
+export default AICheckField;

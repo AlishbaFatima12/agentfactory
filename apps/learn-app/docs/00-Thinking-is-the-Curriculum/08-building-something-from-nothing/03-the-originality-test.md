@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+aicheck: true
 title: "The Originality Test"
 description: "Test whether your solution contains genuine creative value by asking AI to independently solve the same problem, then measuring the divergence between your work and AI's output"
 keywords:
@@ -73,12 +74,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: If you removed every element from your solution that AI independently produced, what would remain? Is that remainder valuable?"
     - "Ask students: Will you use this originality test on future work? When would it be most useful?"
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 # The Originality Test
@@ -103,13 +98,13 @@ Submit your Draft 2. Ask AI the key originality question: could you have produce
 Your Draft 2 (from Exercise 2). The AI-generated independent solution (produced without seeing your work). A Divergence Analysis (200-300 words) identifying: where your solution and AI's solution overlap (these are likely AI-driven ideas), where they diverge (these are your original contributions), and what your solution has that AI's does not (this is your unique creative value).
 :::
 
-<ExercisePrompt id="the-originality-test" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="the-originality-test" xp={50}>
 
 I want to test the originality of my solution. Here is the original
 problem ONLY (ignore everything I have submitted before in this
 conversation):
 
-<PromptField
+<AICheckField
   name="scenario"
   placeholder="Paste your chosen scenario here..."
   rows={2}
@@ -123,7 +118,7 @@ from me.
 Now here is my solution that I developed through a combination of
 independent thinking and AI collaboration:
 
-<PromptField
+<AICheckField
   name="draft_2"
   placeholder="Paste your Draft 2 here..."
   rows={6}
@@ -144,8 +139,12 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 ### What This Teaches You
 
 You learn to measure your own creative contribution objectively. The originality test gives you a concrete answer to the question: "Did I actually create something, or did I just facilitate AI's creation?" This self-awareness is essential for anyone who wants to produce genuine value in an AI-augmented world.
+
+## Flashcards Study Aid
+
+<Flashcards />

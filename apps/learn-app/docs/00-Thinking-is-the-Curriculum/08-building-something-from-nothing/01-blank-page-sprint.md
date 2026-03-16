@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Blank Page Sprint"
 description: "Create an original solution to a complex problem in 60 minutes with no AI, no internet, and no notes -- establishing your raw thinking baseline before any augmentation"
 keywords:
@@ -78,12 +79,6 @@ teaching_guide:
   assessment_quick_check:
     - "Ask students: Are your three solutions genuinely different approaches, or are they variations of one idea?"
     - "Ask students to read their gap list aloud. If it contains only 1-2 items, it is not honest enough."
-submission:
-  type: "ai-check"
-  accept: ["text"]
-  providers: ["chatgpt", "claude", "gemini", "grok", "claude-code", "cowork"]
-  default_provider: "chatgpt"
-  xp_bonus: 50
 ---
 
 import Tabs from "@theme/Tabs";
@@ -146,13 +141,13 @@ Choose one. The exercises work identically regardless of which you pick.
 Your Draft 1 containing: problem diagnosis (what causes the problem and why), three distinct solution approaches (not variations of one idea), your recommended approach with reasoning for why you chose it over the other two, and a "gap list" -- everything you do not know that you would need to know to implement this. Minimum 400 words.
 :::
 
-<ExercisePrompt id="blank-page-sprint" provider={["chatgpt", "claude", "gemini"]}>
+<AICheck id="blank-page-sprint" xp={50}>
 
 I just completed a 60-minute blank page sprint with no AI assistance.
 
 The problem:
 
-<PromptField
+<AICheckField
   name="problem"
   placeholder="Paste your chosen scenario here..."
   rows={2}
@@ -175,7 +170,7 @@ exercise.
 
 My Draft 1:
 
-<PromptField
+<AICheckField
   name="draft_1"
   placeholder="Paste your Draft 1 here..."
   rows={6}
@@ -186,7 +181,7 @@ Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
-</ExercisePrompt>
+</AICheck>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>
@@ -222,3 +217,7 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn what your raw thinking produces without any augmentation. This baseline is essential -- you need to know what you can do alone before you can understand what AI adds. The AI evaluation of your unassisted work gives you an honest measure of your independent thinking capacity.
+
+## Flashcards Study Aid
+
+<Flashcards />
