@@ -977,8 +977,7 @@ export default function ContentWrapper(props: Props): React.ReactElement {
           <LessonContent summaryElement={summaryElement}>
             <Content {...props} />
           </LessonContent>
-          {isLeafPage &&
-            isLoggedIn &&
+          {isLoggedIn &&
             hasValidSlug &&
             !isQuizPage &&
             !isCategoryIndex &&
@@ -989,10 +988,12 @@ export default function ContentWrapper(props: Props): React.ReactElement {
                 submission={submissionConfig}
               />
             ) : (
-              <LessonCompleteButton
-                chapterSlug={chapterSlug}
-                lessonSlug={lessonSlug}
-              />
+              isLeafPage && (
+                <LessonCompleteButton
+                  chapterSlug={chapterSlug}
+                  lessonSlug={lessonSlug}
+                />
+              )
             ))}
           {practiceOpen && practiceExerciseId && (
             <PracticeOverlay
