@@ -95,9 +95,13 @@ class ExerciseIntentRequest(BaseModel):
 async def exercise_intent(
     body: ExerciseIntentRequest,
     request: Request,
-    user: CurrentUser = Depends(get_current_user),
+    user: CurrentUser = Depends(get_optional_user),
 ) -> None:
     """Record that a student clicked a provider button (funnel tracking).
+
+    Accepts both authenticated users and anonymous visitors:
+    - Authenticated: uses user.id from JWT
+    - Anonymous: uses X-Anon-ID header (browser-generated UUID)
 
     Stored in Redis with 60-day TTL. Cleared on successful submit.
     Captures: user fields, provider, device type, timestamp.
@@ -106,11 +110,21 @@ async def exercise_intent(
     if redis is None:
         return  # Silently skip if Redis is unavailable
 
+    # Determine user identity: authenticated user_id or anonymous session ID
+    if user and user.id:
+        identity = user.id
+        is_anon = False
+    else:
+        identity = request.headers.get("X-Anon-ID")
+        is_anon = True
+        if not identity:
+            return  # No identity available — skip silently
+
     # Parse device from User-Agent
     ua = request.headers.get("user-agent", "")
     device = "mobile" if any(k in ua.lower() for k in ("mobile", "android", "iphone", "ipad")) else "desktop"
 
-    key = f"intent:{user.id}:{body.chapter_slug}/{body.lesson_slug}"
+    key = f"intent:{identity}:{body.chapter_slug}/{body.lesson_slug}"
     intent_data = {
         "exercise_id": body.exercise_id,
         "provider": body.provider,
@@ -118,6 +132,7 @@ async def exercise_intent(
         "device": device,
         "timestamp": str(int(time.time())),
         "fields": json.dumps(body.fields),
+        "anonymous": str(is_anon),
     }
 
     try:

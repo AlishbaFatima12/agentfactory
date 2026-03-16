@@ -428,14 +428,26 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
       // Fire intent tracking (fire-and-forget, non-blocking)
       // Captures student field data + provider + device for funnel analytics.
       // Cleared on successful submit. 60-day TTL for non-submitters.
-      if (isLoggedIn) {
+      // Works for both logged-in (user_id) and anonymous (browser session ID).
+      {
         const fieldsObj = Object.fromEntries(fieldValues);
+        const headers: Record<string, string> = {
+          "Content-Type": "application/json",
+        };
+        if (isLoggedIn) {
+          Object.assign(headers, getAuthHeaders());
+        } else {
+          // Anonymous: generate a persistent browser session ID
+          let anonId = safeGet("aicheck:__anon_id");
+          if (!anonId) {
+            anonId = `anon-${crypto.randomUUID()}`;
+            safeSet("aicheck:__anon_id", anonId);
+          }
+          headers["X-Anon-ID"] = anonId;
+        }
         fetch(`${progressApiUrl}/api/v1/exercise/intent`, {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            ...getAuthHeaders(),
-          },
+          headers,
           body: JSON.stringify({
             chapter_slug: chapterSlug,
             lesson_slug: lessonSlug,
