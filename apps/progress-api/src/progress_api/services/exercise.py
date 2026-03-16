@@ -102,60 +102,48 @@ async def submit_exercise(
     existing_submission = result.scalar_one_or_none()
 
     if existing_submission is not None:
-        # Already submitted — return without modifying anything
-        activity_dates = await get_activity_dates(session, user.id)
-        current_streak, longest_streak = calculate_streak(activity_dates, today=today)
-
-        # Parse existing scores
-        scores_response = None
-        if existing_submission.scores:
-            try:
-                scores_response = ScoreCard(**existing_submission.scores)
-            except Exception:
-                pass
-
-        # Get current total_xp
-        from ..models.progress import UserProgress
-
-        prog_result = await session.execute(
-            select(UserProgress).where(UserProgress.user_id == user.id)
-        )
-        progress = prog_result.scalar_one_or_none()
-        total_xp = progress.total_xp if progress else 0
-
-        return ExerciseSubmitResponse(
-            submitted=True,
-            already_submitted=True,
-            xp_earned=0,
-            total_xp=total_xp,
-            scores=scores_response,
-            streak=StreakInfo(current=current_streak, longest=longest_streak),
-        )
+        return await _build_idempotent_response(session, user, request, today)
 
     # 5. Extract scores
     scores_dict = extract_scores(request.evidence.ai_output)
     scores_response = ScoreCard(**scores_dict) if scores_dict else None
 
     # 6. INSERT exercise_submission (ON CONFLICT DO NOTHING for race safety)
-    submission = ExerciseSubmission(
-        user_id=user.id,
-        chapter_slug=request.chapter_slug,
-        lesson_slug=request.lesson_slug,
-        evidence=request.evidence.model_dump(),
-        scores=scores_dict,
-        feedback=request.feedback,
-        evidence_hash=evidence_hash,
-        xp_earned=50,
+    import json as _json
+
+    insert_result = await session.execute(
+        text(
+            "INSERT INTO exercise_submissions"
+            " (user_id, chapter_slug, lesson_slug, evidence, scores, feedback, evidence_hash, xp_earned)"
+            " VALUES (:user_id, :chapter_slug, :lesson_slug, :evidence::jsonb, :scores::jsonb, :feedback, :evidence_hash, :xp_earned)"
+            " ON CONFLICT (user_id, chapter_slug, lesson_slug) DO NOTHING"
+            " RETURNING id"
+        ),
+        {
+            "user_id": user.id,
+            "chapter_slug": request.chapter_slug,
+            "lesson_slug": request.lesson_slug,
+            "evidence": _json.dumps(request.evidence.model_dump()),
+            "scores": _json.dumps(scores_dict) if scores_dict else None,
+            "feedback": request.feedback,
+            "evidence_hash": evidence_hash,
+            "xp_earned": 50,
+        },
     )
-    session.add(submission)
+    inserted_row = insert_result.first()
+    if inserted_row is None:
+        # Race condition: another request already inserted — treat as idempotent
+        await session.rollback()
+        return await _build_idempotent_response(session, user, request, today)
 
     # 7. INSERT lesson_completion (same as lesson.py step 3)
-    await session.execute(
+    lesson_insert = await session.execute(
         text(
             "INSERT INTO lesson_completions"
             " (user_id, chapter_slug, lesson_slug)"
             " VALUES (:user_id, :chapter_slug, :lesson_slug)"
             " ON CONFLICT (user_id, chapter_slug, lesson_slug) DO NOTHING"
+            " RETURNING id"
         ),
         {
             "user_id": user.id,
@@ -163,6 +151,7 @@ async def submit_exercise(
             "lesson_slug": request.lesson_slug,
         },
     )
+    lesson_was_new = lesson_insert.first() is not None
 
     # 8. UPSERT activity_day
     ref = f"{request.chapter_slug}/{request.lesson_slug}"
@@ -174,12 +163,12 @@ async def submit_exercise(
         activity_dates.append(today)
     current_streak, longest_streak = calculate_streak(activity_dates, today=today)
 
-    # 10. UPDATE user_progress
+    # 10. UPDATE user_progress (only count lesson if it wasn't already completed)
     progress = await update_user_progress(
         session,
         user.id,
         xp_delta=50,
-        lessons_delta=1,
+        lessons_delta=1 if lesson_was_new else 0,
         current_streak=current_streak,
         longest_streak=longest_streak,
         last_activity_date=today,
@@ -197,6 +186,50 @@ async def submit_exercise(
         already_submitted=False,
         xp_earned=50,
         total_xp=progress.total_xp,
+        scores=scores_response,
+        streak=StreakInfo(current=current_streak, longest=longest_streak),
+    )
+
+
+async def _build_idempotent_response(
+    session: AsyncSession,
+    user: CurrentUser,
+    request: ExerciseSubmitRequest,
+    today: date,
+) -> ExerciseSubmitResponse:
+    """Build response for already-submitted exercise (idempotent or race)."""
+    from ..models.progress import UserProgress
+
+    result = await session.execute(
+        select(ExerciseSubmission).where(
+            ExerciseSubmission.user_id == user.id,
+            ExerciseSubmission.chapter_slug == request.chapter_slug,
+            ExerciseSubmission.lesson_slug == request.lesson_slug,
+        )
+    )
+    existing = result.scalar_one_or_none()
+
+    activity_dates = await get_activity_dates(session, user.id)
+    current_streak, longest_streak = calculate_streak(activity_dates, today=today)
+
+    scores_response = None
+    if existing and existing.scores:
+        try:
+            scores_response = ScoreCard(**existing.scores)
+        except Exception as e:
+            logger.warning("Failed to parse stored scores for submission %s: %s", existing.id, e)
+
+    prog_result = await session.execute(
+        select(UserProgress).where(UserProgress.user_id == user.id)
+    )
+    progress = prog_result.scalar_one_or_none()
+    total_xp = progress.total_xp if progress else 0
+
+    return ExerciseSubmitResponse(
+        submitted=True,
+        already_submitted=True,
+        xp_earned=0,
+        total_xp=total_xp,
         scores=scores_response,
         streak=StreakInfo(current=current_streak, longest=longest_streak),
     )
