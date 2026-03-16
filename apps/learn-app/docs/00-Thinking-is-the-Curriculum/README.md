@@ -23,6 +23,8 @@ The rest of this book will make you powerful. This part determines whether you u
 
 These are not academic exercises. Every chapter builds a thinking skill that commands a premium in technology, healthcare, operations, finance, education, and leadership because when AI can generate anything, the person who can actually think becomes the scarce one.
 
+In the AI era, education must develop more than intelligence. It must also develop judgment, originality, adaptability, and agency. Students must learn not only how to think, but how to use AI wisely, build what does not yet exist, solve ambiguous real-world problems, defend their reasoning, and keep learning as the world changes.
+
 **The Unsolved Problem**
 
 Every university, every bootcamp, every corporate training program is asking the same question: *If students have access to AI, how do we know they actually learned to think?*
