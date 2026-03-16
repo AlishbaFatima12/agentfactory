@@ -209,6 +209,8 @@ At the end, calculate your average per dimension across all 40 exercises and com
 
 </details>
 
+![Thinking_Scorecard_Growth](../../static/img/thinking-scorecard-growth.png)
+
 ## Chapters
 
 | Chapter                                                                                                | Core Skill                   | What You Build                                                                                           |
