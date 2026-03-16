@@ -7,7 +7,7 @@ title: "Part 0: Thinking is the Curriculum"
 
 > _11 Chapters. 10 Skills. Every Exercise Requires You to Think Before AI Thinks for You._
 
-**AI did not create a skills crisis. It exposed one.**
+**AI did not create a thinking crisis. It exposed one.**
 
 Millions of students can now generate essays, analyses, code, and business plans in seconds. Almost none of them can tell whether what AI produced is correct. They cannot ask the question that AI never thought to ask. They cannot spot the reasoning flaw buried in a fluent paragraph. They cannot look at a system and see the second-order consequence that breaks everything. They have the most powerful cognitive tool in human history — and no idea how to think with it.
 
@@ -206,7 +206,7 @@ Instead of a peer panel questioning your work, you submit your deliverable to AI
 The solo path is not inferior to the peer path — it is different. Peers provide unpredictability, social pressure, and perspectives you cannot anticipate. AI provides consistency, tirelessness, and the ability to generate adversarial challenges on demand. If possible, combine both.
 
 <details>
-<summary>How This Scales: Assessment for Tens of Thousands of Students (Instructor Reference)</summary>
+<summary>How This Scales: Assessment for 16,000 Students (Instructor Reference)</summary>
 
 **Tier 1 — AI First-Pass (every student, every exercise):**
 Every exercise includes an exact AI check prompt. The student submits their work, receives AI-generated scores and feedback, and includes this in their portfolio. This provides immediate, personalized feedback at unlimited scale. AI scores serve as the baseline assessment.
