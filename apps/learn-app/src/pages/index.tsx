@@ -308,21 +308,17 @@ function AISpectrumSection() {
               </p>
               <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Code completion &
-                  suggestions
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet1">Code completion & suggestions</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Bug detection &
-                  debugging
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet2">Bug detection & debugging</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Documentation
-                  generation
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet3">Documentation generation</Translate>
                 </li>
               </ul>
               <div className="mt-auto pt-4 border-t text-xs text-muted-foreground">
-                <strong className="text-foreground">Example:</strong> Using
-                Copilot to build a React website faster
+                <strong className="text-foreground"><Translate id="homepage.spectrum.example1Label">Example:</Translate></strong> <Translate id="homepage.spectrum.example1">Using Copilot to build a React website faster</Translate>
               </div>
             </CardContent>
           </Card>
@@ -352,21 +348,17 @@ function AISpectrumSection() {
               </p>
               <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Code generation
-                  from specs
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet4">Code generation from specs</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Automated testing
-                  & optimization
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet5">Automated testing & optimization</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Architecture from
-                  requirements
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet6">Architecture from requirements</Translate>
                 </li>
               </ul>
               <div className="mt-auto pt-4 border-t text-xs text-muted-foreground">
-                <strong className="text-foreground">Example:</strong> Writing a
-                spec for a REST API, AI generates complete FastAPI backend
+                <strong className="text-foreground"><Translate id="homepage.spectrum.example1Label">Example:</Translate></strong> <Translate id="homepage.spectrum.example2">Writing a spec for a REST API, AI generates complete FastAPI backend</Translate>
               </div>
             </CardContent>
           </Card>
@@ -391,21 +383,17 @@ function AISpectrumSection() {
               </p>
               <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Natural language
-                  interfaces
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet7">Natural language interfaces</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Intelligent
-                  automation & reasoning
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet8">Intelligent automation & reasoning</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Agent
-                  orchestration systems
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet9">Agent orchestration systems</Translate>
                 </li>
               </ul>
               <div className="mt-auto pt-4 border-t text-xs text-muted-foreground">
-                <strong className="text-foreground">Example:</strong> Building a
-                customer support agent that autonomously resolves tickets
+                <strong className="text-foreground"><Translate id="homepage.spectrum.example1Label">Example:</Translate></strong> <Translate id="homepage.spectrum.example3">Building a customer support agent that autonomously resolves tickets</Translate>
               </div>
             </CardContent>
           </Card>
@@ -923,16 +911,15 @@ function MonetizationModels() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">
-            Monetize Your Expertise
+            <Translate id="homepage.monetize.badge">Monetize Your Expertise</Translate>
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Four Ways to Profit from AI Agents
+            <Translate id="homepage.monetize.heading">Four Ways to Profit from AI Agents</Translate>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Your domain knowledge—whether in sales, legal, finance, or any
-            field—can become a{" "}
+            <Translate id="homepage.monetize.description">Your domain knowledge—whether in sales, legal, finance, or any field—can become a</Translate> {" "}
             <span className="text-foreground font-semibold">
-              recurring revenue stream
+              <Translate id="homepage.monetize.recurringRevenue">recurring revenue stream</Translate>
             </span>
             .
           </p>
@@ -982,46 +969,39 @@ function AgentFactoryThesis() {
           <div className="text-6xl text-primary/30 mb-6">"</div>
 
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-8">
-            Build <span className="text-primary">Digital FTEs</span> that work{" "}
-            <span className="text-primary">24/7</span>. Your domain
-            expertise—whether in sales, legal, finance, or healthcare—becomes an
-            autonomous AI agent that never sleeps.
+            <Translate id="homepage.thesis.heading">Build Digital FTEs that work 24/7. Your domain expertise—whether in sales, legal, finance, or healthcare—becomes an autonomous AI agent that never sleeps.</Translate>
           </h2>
 
           <p className="text-lg text-muted-foreground mb-8">
-            Transform your knowledge into scalable digital products that
-            generate
+            <Translate id="homepage.thesis.subheading">Transform your knowledge into scalable digital products that generate</Translate>
             <span className="text-foreground font-semibold">
               {" "}
-              recurring revenue
+              <Translate id="homepage.thesis.recurringRevenue">recurring revenue</Translate>
             </span>{" "}
-            while you sleep.
+            <Translate id="homepage.thesis.subheadingEnd">while you sleep.</Translate>
           </p>
 
           {/* Three Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div className="p-6 border border-border/40 bg-background">
               <div className="text-2xl mb-3">🏭</div>
-              <h3 className="font-bold text-foreground mb-2">Manufacture</h3>
+              <h3 className="font-bold text-foreground mb-2"><Translate id="homepage.thesis.manufacture.title">Manufacture</Translate></h3>
               <p className="text-sm text-muted-foreground">
-                Use AI Coding Agents (Claude Code) to build your expertise into
-                deployable agents
+                <Translate id="homepage.thesis.manufacture.desc">Use AI Coding Agents (Claude Code) to build your expertise into deployable agents</Translate>
               </p>
             </div>
             <div className="p-6 border border-border/40 bg-background">
               <div className="text-2xl mb-3">📦</div>
-              <h3 className="font-bold text-foreground mb-2">Package</h3>
+              <h3 className="font-bold text-foreground mb-2"><Translate id="homepage.thesis.package.title">Package</Translate></h3>
               <p className="text-sm text-muted-foreground">
-                Bundle into production-ready Digital FTEs with OpenAI or
-                Anthropic Agent SDKs
+                <Translate id="homepage.thesis.package.desc">Bundle into production-ready Digital FTEs with OpenAI or Anthropic Agent SDKs</Translate>
               </p>
             </div>
             <div className="p-6 border border-border/40 bg-background">
               <div className="text-2xl mb-3">💰</div>
-              <h3 className="font-bold text-foreground mb-2">Monetize</h3>
+              <h3 className="font-bold text-foreground mb-2"><Translate id="homepage.thesis.monetize.title">Monetize</Translate></h3>
               <p className="text-sm text-muted-foreground">
-                Sell as managed subscriptions, success fees, or enterprise
-                licenses
+                <Translate id="homepage.thesis.monetize.desc">Sell as managed subscriptions, success fees, or enterprise licenses</Translate>
               </p>
             </div>
           </div>
@@ -1036,11 +1016,10 @@ function FinalCTA() {
     <section className="py-24 border-b border-border/40 bg-background">
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 text-center pt-12 pb-12 min-h-[400px] flex flex-col items-center justify-center">
         <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-          Ready to Build Your Agent Factory?
+          <Translate id="homepage.cta.heading">Ready to Build Your Agent Factory?</Translate>
         </h3>
         <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Transform your domain expertise into Digital FTEs that work 24/7 and
-          generate recurring revenue
+          <Translate id="homepage.cta.description">Transform your domain expertise into Digital FTEs that work 24/7 and generate recurring revenue</Translate>
         </p>
         <Button
           variant="outline"

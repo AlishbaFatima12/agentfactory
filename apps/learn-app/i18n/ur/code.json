@@ -856,5 +856,113 @@
   "homepage.fte.digital": {
     "message": "ڈیجیٹل FTE",
     "description": "FTE table digital header"
+  },
+  "homepage.monetize.badge": {
+    "message": "اپنی expertise سے منافع حاصل کریں",
+    "description": "Monetize section badge"
+  },
+  "homepage.monetize.heading": {
+    "message": "AI ایجنٹس سے منافع حاصل کرنے کے چار طریقے",
+    "description": "Monetize section heading"
+  },
+  "homepage.monetize.description": {
+    "message": "آپ کی ڈومین معلومات—چاہے فروخت، قانونی، مالیات، یا کسی بھی شعبے میں—بن سکتی ہے",
+    "description": "Monetize section description part 1"
+  },
+  "homepage.monetize.recurringRevenue": {
+    "message": "recurringrevenue پیاز کا بہاؤ",
+    "description": "Monetize section description recurring"
+  },
+  "homepage.thesis.heading": {
+    "message": "Digital FTEs بنائیں جو 24/7 کام کرتے ہیں۔ آپ کی ڈومین معلومات—چاہے فروخت، قانونی، مالیات، یا healthcare میں—ایک خود مختار AI ایجنٹ بن جاتی ہے جو کبھی سوتا نہیں۔",
+    "description": "Agent factory thesis main quote"
+  },
+  "homepage.thesis.subheadingEnd": {
+    "message": "جب آپ سو رہے ہوں۔",
+    "description": "Agent factory thesis subheading end"
+  },
+  "homepage.thesis.recurringRevenue": {
+    "message": "recurring revenue",
+    "description": "Agent factory thesis recurring revenue"
+  },
+  "homepage.thesis.manufacture.title": {
+    "message": "تیاری",
+    "description": "Three pillars - manufacture"
+  },
+  "homepage.thesis.manufacture.desc": {
+    "message": "اپنی expertise کو deployable ایجنٹس میں بنانے کے لیے AI Coding Agents (Claude Code) استعمال کریں",
+    "description": "Manufacture description"
+  },
+  "homepage.thesis.package.title": {
+    "message": "پیکجنگ",
+    "description": "Three pillars - package"
+  },
+  "homepage.thesis.package.desc": {
+    "message": "OpenAI یا Anthropic Agent SDKs کے ساتھ پروڈکشن-تیار ڈیجیٹل FTEs میں بنڈل کریں",
+    "description": "Package description"
+  },
+  "homepage.thesis.monetize.title": {
+    "message": "منافع کمائیں",
+    "description": "Three pillars - monetize"
+  },
+  "homepage.thesis.monetize.desc": {
+    "message": "منیجڈ سبسکرپشنز، کامیابی کی فیسوں، یا enterprise لائسنسوں کے طور پر بیچیں",
+    "description": "Monetize description"
+  },
+  "homepage.cta.heading": {
+    "message": "اپنا Agent Factory بنانے کے لیے تیار ہیں؟",
+    "description": "Final CTA heading"
+  },
+  "homepage.cta.description": {
+    "message": "اپنی ڈومین معلومات کو Digital FTEs میں تبدیل کریں جو 24/7 کام کرتے ہیں اور recurring revenue پیدا کرتے ہیں",
+    "description": "Final CTA description"
+  },
+  "homepage.spectrum.bullet1": {
+    "message": "کوڈ completion اور تجاویز",
+    "description": "AI Assisted bullets"
+  },
+  "homepage.spectrum.bullet2": {
+    "message": "بگ کی سفاری اور ڈیبگنگ",
+    "description": "AI Assisted bullets"
+  },
+  "homepage.spectrum.bullet3": {
+    "message": "دستاویز کی تیاری",
+    "description": "AI Assisted bullets"
+  },
+  "homepage.spectrum.example1Label": {
+    "message": "مثال:",
+    "description": "Example label"
+  },
+  "homepage.spectrum.bullet4": {
+    "message": "اسپیسز سے کوڈ کی تیاری",
+    "description": "AI Driven bullets"
+  },
+  "homepage.spectrum.bullet5": {
+    "message": "خودکار ٹیسٹنگ اور بہتری",
+    "description": "AI Driven bullets"
+  },
+  "homepage.spectrum.bullet6": {
+    "message": "تقاضوں سے فن تعمیر",
+    "description": "AI Driven bullets"
+  },
+  "homepage.spectrum.example2": {
+    "message": "REST API کے لیے اسپیس لکھنا، AI مکمل FastAPI backend تیار کرتا ہے",
+    "description": "AI Driven example"
+  },
+  "homepage.spectrum.bullet7": {
+    "message": "قدرتی زبان کی interfaces",
+    "description": "AI Native bullets"
+  },
+  "homepage.spectrum.bullet8": {
+    "message": "ذہین خودکاری اور استدلال",
+    "description": "AI Native bullets"
+  },
+  "homepage.spectrum.bullet9": {
+    "message": "ایجنٹ orchestration نظام",
+    "description": "AI Native bullets"
+  },
+  "homepage.spectrum.example3": {
+    "message": "کسٹمر سپورٹ ایجنٹ بنانا جو خود مختار طریقے سے ٹکٹس حل کرتا ہے",
+    "description": "AI Native example"
   }
 }
