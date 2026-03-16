@@ -3,6 +3,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import Translate from "@docusaurus/Translate";
 import Layout from "@theme/Layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -48,39 +49,37 @@ function HomepageHeader() {
             {/* Semantic Badge */}
             <div className="flex items-center gap-3 mb-8">
               <span className="font-mono text-xs font-bold tracking-widest uppercase text-muted-foreground/80 px-2 py-1 border border-border bg-muted/20">
-                AI-First Future
+                <Translate id="homepage.badge.aiFirst">AI-First Future</Translate>
               </span>
               <span className="w-12 h-[1px] bg-border"></span>
               <span className="font-mono text-xs text-muted-foreground/60 tracking-wider">
-                BUILD & MONETIZE DIGITAL FTEs
+                <Translate id="homepage.badge.buildMonetize">BUILD & MONETIZE DIGITAL FTEs</Translate>
               </span>
             </div>
 
             {/* Heading */}
             <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-foreground leading-[1.0] uppercase">
-                THE AI AGENT <br />
+                <Translate id="homepage.title">THE AI AGENT</Translate> <br />
                 <span className="text-primary block text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mt-1">
-                  FACTORY
+                  <Translate id="homepage.title.factory">FACTORY</Translate>
                 </span>
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground font-normal leading-[1.6] max-w-xl">
-                The{" "}
+                <Translate id="homepage.subtitle.start">The</Translate>{" "}
                 <span className="text-foreground font-medium">
-                  Spec-Driven Blueprint
+                  <Translate id="homepage.subtitle.specDriven">Spec-Driven Blueprint</Translate>
                 </span>{" "}
-                for Building and Monetizing Digital FTEs&mdash;
+                <Translate id="homepage.subtitle.for">for Building and Monetizing Digital FTEs—</Translate>
                 <span className="text-foreground font-medium">
-                  Reliable AI Agents
+                  <Translate id="homepage.subtitle.reliable">Reliable AI Agents</Translate>
                 </span>{" "}
-                You Can Trust, Deploy, and Scale.
+                <Translate id="homepage.subtitle.you">You Can Trust, Deploy, and Scale.</Translate>
               </p>
               <p className="text-xs sm:text-sm text-muted-foreground/70 font-normal leading-[1.5] max-w-xl -mt-1 sm:-mt-2">
-                A practical framework for engineers, domain professionals
-                (accountants, finance managers, marketing professions, etc. ),
-                enterprise leaders, startup founders, product architects, and
-                operational teams building the next generation of AI-powered
-                organizations.
+                <Translate id="homepage.description">
+                  A practical framework for engineers, domain professionals (accountants, finance managers, marketing professions, etc. ), enterprise leaders, startup founders, product architects, and operational teams building the next generation of AI-powered organizations.
+                </Translate>
               </p>
             </div>
 
@@ -96,7 +95,7 @@ function HomepageHeader() {
                     to="/docs/about"
                     className="flex items-center gap-2 sm:gap-3"
                   >
-                    START READING{" "}
+                    <Translate id="homepage.button.startReading">START READING</Translate>{" "}
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </Link>
                 </Button>
@@ -106,7 +105,9 @@ function HomepageHeader() {
                   size="lg"
                   className="h-11 sm:h-14 px-5 sm:px-8 text-sm sm:text-lg font-bold rounded-none transition-all"
                 >
-                  <Link to="https://panaversity.org/">Explore Panaversity</Link>
+                  <Link to="https://panaversity.org/">
+                    <Translate id="homepage.button.explorePanaversity">Explore Panaversity</Translate>
+                  </Link>
                 </Button>
               </div>
               {/* Social Proof - Premium Live Indicator */}
@@ -124,14 +125,14 @@ function HomepageHeader() {
                   17,035
                 </span>
                 <span className="text-sm text-muted-foreground">
-                  professionals learning
+                  <Translate id="homepage.learners">professionals learning</Translate>
                 </span>
                 <span className="w-[1px] h-4 bg-border mx-1"></span>
                 <Link
                   to="/reviews"
                   className="text-sm font-bold text-primary hover:text-primary/80 transition-colors flex items-center gap-1.5"
                 >
-                  Live AI Reviews
+                  <Translate id="homepage.liveReviews">Live AI Reviews</Translate>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
@@ -139,7 +140,7 @@ function HomepageHeader() {
               {/* Co-Authors - Premium Chip Design */}
               <div className="flex flex-col gap-3 mt-4">
                 <span className="text-[10px] font-bold tracking-widest text-muted-foreground/60 uppercase pl-1">
-                  Co-Authored by
+                  <Translate id="homepage.coAuthoredBy">Co-Authored by</Translate>
                 </span>
 
                 <div className="flex flex-wrap items-center gap-3 allow-rounded">
@@ -202,7 +203,8 @@ function HomepageHeader() {
                     className="flex items-center gap-1 ml-1 px-2 py-1 text-[10px] font-medium text-muted-foreground hover:text-primary transition-colors animate-scale-in opacity-0"
                     style={{ animationDelay: "500ms" }}
                   >
-                    & AI Agents <ArrowRight className="w-3 h-3 ml-0.5" />
+                    <Translate id="homepage.aiAgents">& AI Agents</Translate>
+                    <ArrowRight className="w-3 h-3 ml-0.5" />
                   </Link>
                 </div>
               </div>
@@ -244,8 +246,8 @@ function Feature({
   description,
   icon: Icon,
 }: {
-  title: string;
-  description: string;
+  title: ReactNode;
+  description: ReactNode;
   icon: React.ElementType;
 }) {
   return (
@@ -272,14 +274,16 @@ function AISpectrumSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">
-            Understanding AI Development
+            <Translate id="homepage.spectrum.title">Understanding AI Development</Translate>
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            The AI Development Spectrum
+            <Translate id="homepage.spectrum.heading">The AI Development Spectrum</Translate>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Three distinct approaches to AI in software development. This book
-            teaches you both AI-Driven and AI-Native development.
+            <Translate id="homepage.spectrum.description">
+              Three distinct approaches to AI in software development. This book
+              teaches you both AI-Driven and AI-Native development.
+            </Translate>
           </p>
         </div>
 
@@ -290,15 +294,17 @@ function AISpectrumSection() {
             <CardContent className="flex flex-col h-full p-6">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-foreground">
-                  AI Assisted
+                  <Translate id="homepage.spectrum.aiAssisted">AI Assisted</Translate>
                 </h3>
                 <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-                  AI as Helper
+                  <Translate id="homepage.spectrum.aiAssistedRole">AI as Helper</Translate>
                 </p>
               </div>
               <p className="text-muted-foreground mb-6 flex-grow">
-                AI improves your productivity with code completion, debugging
-                assistance, and documentation generation.
+                <Translate id="homepage.spectrum.aiAssistedDesc">
+                  AI improves your productivity with code completion, debugging
+                  assistance, and documentation generation.
+                </Translate>
               </p>
               <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
                 <li className="flex items-start">
@@ -331,12 +337,18 @@ function AISpectrumSection() {
                 Covered
               </Badge>
               <div className="mb-4">
-                <h3 className="text-xl font-bold text-foreground">AI Driven</h3>
+                <h3 className="text-xl font-bold text-foreground">
+                  <Translate id="homepage.spectrum.aiDriven">AI Driven</Translate>
+                </h3>
                 <p className="text-sm font-medium text-primary uppercase tracking-wide">
-                  AI as Co-Creator
+                  <Translate id="homepage.spectrum.aiDrivenRole">AI as Co-Creator</Translate>
                 </p>
               </div>
               <p className="text-muted-foreground mb-6 flex-grow">
+                <Translate id="homepage.spectrum.aiDrivenDesc">
+                  AI generates significant code from specifications. You act as
+                  architect, director, and reviewer.
+                </Translate>mb-6 flex-grow">
                 AI generates significant code from specifications. You act as
                 architect, director, and reviewer.
               </p>
@@ -366,14 +378,40 @@ function AISpectrumSection() {
             <CardContent className="flex flex-col h-full p-6">
               <Badge className="absolute top-4 right-4">Ultimate Goal</Badge>
               <div className="mb-4">
-                <h3 className="text-xl font-bold text-foreground">AI Native</h3>
+                <h3 className="text-xl font-bold text-foreground">
+                  <Translate id="homepage.spectrum.aiNative">AI Native</Translate>
+                </h3>
                 <p className="text-sm font-medium text-primary uppercase tracking-wide">
-                  AI IS the Software
+                  <Translate id="homepage.spectrum.aiNativeRole">AI IS the Software</Translate>
                 </p>
               </div>
               <p className="text-muted-foreground mb-6 flex-grow">
-                Applications architected around AI capabilities. LLMs and agents
-                are core functional components.
+                <Translate id="homepage.spectrum.aiNativeDesc">
+                  Applications architected around AI capabilities. LLMs and agents
+                  are core functional components.
+                </Translate>
+              </p>
+              <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
+                <li className="flex items-start">
+                  <span className="mr-2 text-primary">•</span>Natural language
+                  interfaces
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-primary">•</span>Intelligent
+                  automation & reasoning
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-primary">•</span>Agent
+                  orchestration systems
+                </li>
+              </ul>
+              <div className="mt-auto pt-4 border-t text-xs text-muted-foreground">
+                <strong className="text-foreground">Example:</strong> Building a
+                customer support agent that autonomously resolves tickets
+              </div>
+            </CardContent>
+          </Card>
+        </div>
               </p>
               <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
                 <li className="flex items-start">
@@ -401,20 +439,20 @@ function AISpectrumSection() {
         <div className="flex items-center justify-center gap-4">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-muted-foreground/30" />
-            <span className="text-sm text-muted-foreground">Helper</span>
+            <span className="text-sm text-muted-foreground"><Translate id="homepage.flow.helper">Helper</Translate></span>
           </div>
           <div className="w-12 h-px bg-border" />
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-primary" />
             <span className="text-sm font-medium text-foreground">
-              Co-Creator
+              <Translate id="homepage.flow.coCreator">Co-Creator</Translate>
             </span>
           </div>
           <div className="w-12 h-px bg-border" />
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-primary" />
             <span className="text-sm font-medium text-foreground">
-              Core System
+              <Translate id="homepage.flow.coreSystem">Core System</Translate>
             </span>
           </div>
         </div>
@@ -433,16 +471,15 @@ function FeaturesSection() {
             <div className="flex items-center gap-2 mb-4">
               <div className="w-2 h-2 bg-primary"></div>
               <span className="font-mono text-xs font-bold text-primary uppercase tracking-widest">
-                Core Pillars
+                <Translate id="homepage.features.badge">Core Pillars</Translate>
               </span>
             </div>
             <h2 className="text-4xl font-black tracking-tight text-foreground uppercase">
-              What Makes This Book Different
+              <Translate id="homepage.features.heading">What Makes This Book Different</Translate>
             </h2>
           </div>
           <p className="text-muted-foreground max-w-lg text-sm font-mono text-right md:text-right hidden md:block">
-            // A comprehensive, production-focused approach <br /> to co-learn
-            with AI in spec-driven way
+            // <Translate id="homepage.features.comment">A comprehensive, production-focused approach to co-learn with AI in spec-driven way</Translate>
           </p>
         </div>
 
@@ -450,33 +487,33 @@ function FeaturesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/40 border border-border/40">
           <Feature
             icon={Bot}
-            title="Co-Learning Philosophy"
-            description="Learn alongside AI agents. Not just using AI as a tool, but co-creating where both human and AI learn together."
+            title={<Translate id="homepage.feature.coLearning">Co-Learning Philosophy</Translate>}
+            description={<Translate id="homepage.feature.coLearningDesc">Learn alongside AI agents. Not just using AI as a tool, but co-creating where both human and AI learn together.</Translate>}
           />
           <Feature
             icon={Code}
-            title="Dual Language Mastery"
-            description="Python for reasoning & intelligence, TypeScript for interaction & UI. Master the bilingual AI-native stack."
+            title={<Translate id="homepage.feature.dualLanguage">Dual Language Mastery</Translate>}
+            description={<Translate id="homepage.feature.dualLanguageDesc">Python for reasoning & intelligence, TypeScript for interaction & UI. Master the bilingual AI-native stack.</Translate>}
           />
           <Feature
             icon={GitBranch}
-            title="Spec-Driven Development"
-            description="Write specifications that both humans and AI understand. Specs become executable blueprints for intelligent systems."
+            title={<Translate id="homepage.feature.specDriven">Spec-Driven Development</Translate>}
+            description={<Translate id="homepage.feature.specDrivenDesc">Write specifications that both humans and AI understand. Specs become executable blueprints for intelligent systems.</Translate>}
           />
           <Feature
             icon={Layers}
-            title="Agentic AI Systems"
-            description="Build with OpenAI Agents SDK and Google ADK. Create agents that reason, act, and collaborate autonomously."
+            title={<Translate id="homepage.feature.agentic">Agentic AI Systems</Translate>}
+            description={<Translate id="homepage.feature.agenticDesc">Build with OpenAI Agents SDK and Google ADK. Create agents that reason, act, and collaborate autonomously.</Translate>}
           />
           <Feature
             icon={Server}
-            title="Production-Ready Architecture"
-            description="Cloud-native deployment with Docker, Kubernetes, Dapr, and Ray. Scalable, secure, fault-tolerant systems."
+            title={<Translate id="homepage.feature.architecture">Production-Ready Architecture</Translate>}
+            description={<Translate id="homepage.feature.architectureDesc">Cloud-native deployment with Docker, Kubernetes, Dapr, and Ray. Scalable, secure, fault-tolerant systems.</Translate>}
           />
           <Feature
             icon={GraduationCap}
-            title="Complete Learning Journey"
-            description="46 comprehensive chapters from programming basics to deploying enterprise agentic AI systems in production."
+            title={<Translate id="homepage.feature.journey">Complete Learning Journey</Translate>}
+            description={<Translate id="homepage.feature.journeyDesc">46 comprehensive chapters from programming basics to deploying enterprise agentic AI systems in production.</Translate>}
           />
         </div>
       </div>
@@ -540,14 +577,16 @@ function MaturityLevelsSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">
-            Your AI Journey
+            <Translate id="homepage.maturity.badge">Your AI Journey</Translate>
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Organizational AI Maturity Levels
+            <Translate id="homepage.maturity.heading">Organizational AI Maturity Levels</Translate>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Where does your organization stand? Understanding these levels helps
-            you chart your path forward.
+            <Translate id="homepage.maturity.description">
+              Where does your organization stand? Understanding these levels helps
+              you chart your path forward.
+            </Translate>
           </p>
         </div>
 

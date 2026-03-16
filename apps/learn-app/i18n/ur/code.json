@@ -360,5 +360,201 @@
   "theme.tags.tagsPageTitle": {
     "message": "ٹیگز",
     "description": "The title of the tag list page"
+  },
+  "homepage.badge.aiFirst": {
+    "message": "AI-FIRST FUTURE",
+    "description": "Homepage badge label"
+  },
+  "homepage.badge.buildMonetize": {
+    "message": "BUILD & MONETIZE DIGITAL FTEs",
+    "description": "Homepage badge tagline"
+  },
+  "homepage.title": {
+    "message": "THE AI AGENT FACTORY",
+    "description": "Main homepage heading"
+  },
+  "homepage.subtitle": {
+    "message": "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs—Reliable AI Agents You Can Trust, Deploy, and Scale.",
+    "description": "Homepage main subtitle"
+  },
+  "homepage.description": {
+    "message": "A practical framework for engineers, domain professionals (accountants, finance managers, marketing professions, etc.), enterprise leaders, startup founders, product architects, and operational teams building the next generation of AI-powered organizations.",
+    "description": "Homepage description paragraph"
+  },
+  "homepage.button.startReading": {
+    "message": "START READING",
+    "description": "Call to action button to start reading"
+  },
+  "homepage.button.explorePanaversity": {
+    "message": "Explore Panaversity",
+    "description": "Button to explore Panaversity"
+  },
+  "homepage.learners": {
+    "message": "professionals learning",
+    "description": "Label for learner count"
+  },
+  "homepage.liveReviews": {
+    "message": "Live AI Reviews",
+    "description": "Link to AI reviews"
+  },
+  "homepage.coAuthoredBy": {
+    "message": "Co-Authored by",
+    "description": "Section label for co-authors"
+  },
+  "homepage.aiAgents": {
+    "message": "& AI Agents",
+    "description": "Label for AI agents in authors section"
+  },
+  "homepage.spectrum.title": {
+    "message": "Understanding AI Development",
+    "description": "Section title for AI development spectrum"
+  },
+  "homepage.spectrum.heading": {
+    "message": "The AI Development Spectrum",
+    "description": "Section heading for AI spectrum"
+  },
+  "homepage.spectrum.description": {
+    "message": "Three distinct approaches to AI in software development. This book teaches you both AI-Driven and AI-Native development.",
+    "description": "Description of AI development spectrum"
+  },
+  "homepage.spectrum.aiAssisted": {
+    "message": "AI Assisted",
+    "description": "AI Assisted approach title"
+  },
+  "homepage.spectrum.aiAssistedRole": {
+    "message": "AI as Helper",
+    "description": "Role description for AI Assisted"
+  },
+  "homepage.spectrum.aiAssistedDesc": {
+    "message": "AI improves your productivity with code completion, debugging assistance, and documentation generation.",
+    "description": "Description of AI Assisted approach"
+  },
+  "homepage.spectrum.aiDriven": {
+    "message": "AI Driven",
+    "description": "AI Driven approach title"
+  },
+  "homepage.spectrum.aiDrivenRole": {
+    "message": "AI as Co-Creator",
+    "description": "Role description for AI Driven"
+  },
+  "homepage.spectrum.aiDrivenDesc": {
+    "message": "AI generates significant code from specifications. You act as architect, director, and reviewer.",
+    "description": "Description of AI Driven approach"
+  },
+  "homepage.spectrum.aiNative": {
+    "message": "AI Native",
+    "description": "AI Native approach title"
+  },
+  "homepage.spectrum.aiNativeRole": {
+    "message": "AI IS the Software",
+    "description": "Role description for AI Native"
+  },
+  "homepage.spectrum.aiNativeDesc": {
+    "message": "Applications architected around AI capabilities. LLMs and agents are core functional components.",
+    "description": "Description of AI Native approach"
+  },
+  "homepage.flow.helper": {
+    "message": "Helper",
+    "description": "Flow diagram label: Helper"
+  },
+  "homepage.flow.coCreator": {
+    "message": "Co-Creator",
+    "description": "Flow diagram label: Co-Creator"
+  },
+  "homepage.flow.coreSystem": {
+    "message": "Core System",
+    "description": "Flow diagram label: Core System"
+  },
+  "homepage.features.heading": {
+    "message": "What Makes This Book Different",
+    "description": "Features section heading"
+  },
+  "homepage.features.badge": {
+    "message": "Core Pillars",
+    "description": "Features section badge"
+  },
+  "homepage.features.comment": {
+    "message": "A comprehensive, production-focused approach to co-learn with AI in spec-driven way",
+    "description": "Technical comment in features section"
+  },
+  "homepage.feature.coLearning": {
+    "message": "Co-Learning Philosophy",
+    "description": "Feature title"
+  },
+  "homepage.feature.coLearningDesc": {
+    "message": "Learn alongside AI agents. Not just using AI as a tool, but co-creating where both human and AI learn together.",
+    "description": "Feature description"
+  },
+  "homepage.feature.dualLanguage": {
+    "message": "Dual Language Mastery",
+    "description": "Feature title"
+  },
+  "homepage.feature.dualLanguageDesc": {
+    "message": "Python for reasoning & intelligence, TypeScript for interaction & UI. Master the bilingual AI-native stack.",
+    "description": "Feature description"
+  },
+  "homepage.feature.specDriven": {
+    "message": "Spec-Driven Development",
+    "description": "Feature title"
+  },
+  "homepage.feature.specDrivenDesc": {
+    "message": "Write specifications that both humans and AI understand. Specs become executable blueprints for intelligent systems.",
+    "description": "Feature description"
+  },
+  "homepage.feature.agentic": {
+    "message": "Agentic AI Systems",
+    "description": "Feature title"
+  },
+  "homepage.feature.agenticDesc": {
+    "message": "Build with OpenAI Agents SDK and Google ADK. Create agents that reason, act, and collaborate autonomously.",
+    "description": "Feature description"
+  },
+  "homepage.feature.architecture": {
+    "message": "Production-Ready Architecture",
+    "description": "Feature title"
+  },
+  "homepage.feature.architectureDesc": {
+    "message": "Cloud-native deployment with Docker, Kubernetes, Dapr, and Ray. Scalable, secure, fault-tolerant systems.",
+    "description": "Feature description"
+  },
+  "homepage.feature.journey": {
+    "message": "Complete Learning Journey",
+    "description": "Feature title"
+  },
+  "homepage.feature.journeyDesc": {
+    "message": "46 comprehensive chapters from programming basics to deploying enterprise agentic AI systems in production.",
+    "description": "Feature description"
+  },
+  "homepage.maturity.badge": {
+    "message": "Your AI Journey",
+    "description": "Maturity levels section badge"
+  },
+  "homepage.maturity.heading": {
+    "message": "Organizational AI Maturity Levels",
+    "description": "Maturity levels section heading"
+  },
+  "homepage.maturity.description": {
+    "message": "Where does your organization stand? Understanding these levels helps you chart your path forward.",
+    "description": "Maturity levels description"
+  },
+  "homepage.maturity.level1": {
+    "message": "AI Awareness",
+    "description": "Maturity level 1 title"
+  },
+  "homepage.maturity.level2": {
+    "message": "AI Adoption",
+    "description": "Maturity level 2 title"
+  },
+  "homepage.maturity.level3": {
+    "message": "AI Integration",
+    "description": "Maturity level 3 title"
+  },
+  "homepage.maturity.level4": {
+    "message": "AI-Native Products",
+    "description": "Maturity level 4 title"
+  },
+  "homepage.maturity.level5": {
+    "message": "AI-First Enterprise",
+    "description": "Maturity level 5 title"
   }
 }
