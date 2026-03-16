@@ -1,9 +1,9 @@
 ---
 sidebar_position: 0.6
-title: "Part 0: Prelude — Thinking is the Curriculum"
+title: "Part 0 Prelude: Thinking is the Curriculum"
 ---
 
-# Part 0: Prelude — Thinking is the Curriculum
+# Part 0 Prelude: Thinking is the Curriculum
 
 > _11 Chapters. 10 Skills. Every Exercise Requires You to Think Before AI Thinks for You._
 
