@@ -45,8 +45,10 @@ That is exactly who Phase 1 is designed for. Chapter 44 walks you through every 
 ```
 OLD:  Write syntax → Build things → Maybe test → Ship
 
-NEW:  Requirements → Types → Failing Tests → Generate → Verify & Iterate → Ship
+NEW:  Requirements → Types → Test Criteria & Failing Tests → Generate → Verify & Iterate → Ship
 ```
+
+This workflow is the programmer's version of the [10-80-10 rule](https://agentfactory.panaversity.org/docs/thesis#the-10-80-10-rule-the-operating-rhythm-of-the-ai-workforce) from the thesis: humans own the first 10% — defining intent, writing type contracts, and specifying correctness criteria as failing tests; AI handles the middle 80% — generating the implementation; humans own the final 10% — verifying behavior, diagnosing failures, and deciding when it ships.
 
 These six steps are not sequential phases you hand off and forget. They are a loop -- and AI is present throughout. What changes across the steps is who is driving. Here is the full loop at a glance -- if some terms are unfamiliar, the note box below the table explains each one:
 
@@ -54,12 +56,12 @@ These six steps are not sequential phases you hand off and forget. They are a lo
 | ---------------- | ---------------------------------------------------------------------------------------- | --------- | ---------------------------------------------- |
 | Requirements     | Decide what you're building -- what it does, what it accepts, what it returns            | Human     | Assists: spots gaps, challenges assumptions    |
 | Types            | Describe your data and functions precisely -- labels that tell AI the shape of your code | Human     | Assists: suggests structures, validates design |
-| Failing Tests    | Write checks that define "correct" -- they fail because nothing is built yet             | Human     | Assists: suggests cases you missed             |
+| Test Criteria & Failing Tests    | Write checks that define "correct" -- they fail because nothing is built yet             | Human     | Assists: suggests cases you missed             |
 | Generate         | AI writes the code to pass your checks                                                   | AI        | Leads: produces full implementation            |
 | Verify & Iterate | Run your checks, read failures, debug, refine, repeat until everything passes            | Human     | Assists: explains errors, refines output       |
 | Ship             | Save your work, automated pipeline verifies, deploy                                      | Human     | Assists: security review, changelog            |
 
-The key insight: you never start from a blank page, and you never accept output blindly. You start with a requirement and end with a passing test suite. Everything in between is a collaboration -- but the specification and the verification are yours.
+The key insight: you never start from a blank page, and you never accept output blindly. You start with a requirement and end with a passing test suite. Everything in between is a collaboration -- but the intent, the correctness criteria, and the final verification are yours.
 
 :::note If you're new to programming
 Some of these terms may be unfamiliar. Here is what they mean in plain English:
