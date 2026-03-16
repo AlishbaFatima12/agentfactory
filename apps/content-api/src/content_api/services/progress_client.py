@@ -97,7 +97,10 @@ class ProgressClient:
                 return response.json()
             else:
                 # Forward the upstream error status and body instead of swallowing it
-                logger.error("[Progress] Exercise submit failed: status=%d, body=%s", response.status_code, response.text)
+                logger.error(
+                    "[Progress] Exercise submit failed: status=%d, body=%s",
+                    response.status_code, response.text,
+                )
                 try:
                     error_body = response.json()
                 except Exception:

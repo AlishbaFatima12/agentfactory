@@ -149,7 +149,8 @@ async def exercise_intent(
 
     # Parse device from User-Agent
     ua = request.headers.get("user-agent", "")
-    device = "mobile" if any(k in ua.lower() for k in ("mobile", "android", "iphone", "ipad")) else "desktop"
+    mobile_keywords = ("mobile", "android", "iphone", "ipad")
+    device = "mobile" if any(k in ua.lower() for k in mobile_keywords) else "desktop"
 
     key = f"intent:{identity}:{body.chapter_slug}/{body.lesson_slug}"
     intent_data = {

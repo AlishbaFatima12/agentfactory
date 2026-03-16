@@ -23,8 +23,14 @@ Evidence = TextEvidence
 class ExerciseSubmitRequest(BaseModel):
     """Request body for POST /api/v1/exercise/submit."""
 
-    chapter_slug: str = Field(min_length=1, max_length=200, pattern=r"^[a-zA-Z0-9][a-zA-Z0-9._/-]*$")
-    lesson_slug: str = Field(min_length=1, max_length=200, pattern=r"^[a-zA-Z0-9][a-zA-Z0-9._/-]*$")
+    chapter_slug: str = Field(
+        min_length=1, max_length=200,
+        pattern=r"^[a-zA-Z0-9][a-zA-Z0-9._/-]*$",
+    )
+    lesson_slug: str = Field(
+        min_length=1, max_length=200,
+        pattern=r"^[a-zA-Z0-9][a-zA-Z0-9._/-]*$",
+    )
     evidence: Evidence
     feedback: str | None = Field(default=None, max_length=500)
 

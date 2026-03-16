@@ -35,11 +35,17 @@ def extract_scores(ai_output: str) -> dict[str, int | float] | None:
 
     Returns dict with snake_case dimension keys + average, or None if < 5 dimensions found.
     """
-    pattern = r"(Independent Thinking|Critical Evaluation|Reasoning Depth|Originality|Self-Awareness)[:\s|]+(\d+)/10"
+    pattern = (
+        r"(Independent Thinking|Critical Evaluation|Reasoning Depth"
+        r"|Originality|Self-Awareness)[:\s|]+(\d+)/10"
+    )
     matches = dict(re.findall(pattern, ai_output, re.IGNORECASE))
     if len(matches) < 5:
         return None
-    scores = {k.lower().replace(" ", "_").replace("-", "_"): max(0, min(10, int(v))) for k, v in matches.items()}
+    scores = {
+        k.lower().replace(" ", "_").replace("-", "_"): max(0, min(10, int(v)))
+        for k, v in matches.items()
+    }
     scores["average"] = round(sum(scores.values()) / len(scores), 1)
     return scores
 
@@ -116,14 +122,19 @@ async def submit_exercise(
 
     # 6. INSERT exercise_submission (ON CONFLICT DO NOTHING for race safety)
     # Two unique constraints exist:
-    #   - uq_exercise_user_chapter_lesson (user_id, chapter_slug, lesson_slug) → ON CONFLICT handles
-    #   - uq_exercise_evidence_hash (evidence_hash, chapter_slug, lesson_slug) → IntegrityError if race
+    #   - uq_exercise_user_chapter_lesson → ON CONFLICT handles
+    #   - uq_exercise_evidence_hash → IntegrityError if race
     try:
         insert_result = await session.execute(
             text(
                 "INSERT INTO exercise_submissions"
-                " (user_id, chapter_slug, lesson_slug, evidence, scores, feedback, evidence_hash, xp_earned)"
-                " VALUES (:user_id, :chapter_slug, :lesson_slug, CAST(:evidence AS jsonb), CAST(:scores AS jsonb), :feedback, :evidence_hash, :xp_earned)"
+                " (user_id, chapter_slug, lesson_slug,"
+                " evidence, scores, feedback,"
+                " evidence_hash, xp_earned)"
+                " VALUES (:user_id, :chapter_slug, :lesson_slug,"
+                " CAST(:evidence AS jsonb),"
+                " CAST(:scores AS jsonb),"
+                " :feedback, :evidence_hash, :xp_earned)"
                 " ON CONFLICT (user_id, chapter_slug, lesson_slug) DO NOTHING"
                 " RETURNING id"
             ),
