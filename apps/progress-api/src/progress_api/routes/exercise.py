@@ -2,6 +2,7 @@
 
 import json
 import logging
+import re
 import time
 
 from fastapi import APIRouter, Depends, HTTPException, Request
@@ -24,18 +25,22 @@ INTENT_TTL_SECS = 60 * 60 * 24 * 60  # 60 days
 
 
 async def _check_rate_limit(user_id: str) -> None:
-    """Simple Redis-based per-user rate limiter for exercise submissions."""
-    redis = get_redis()
-    if redis is None:
-        return  # Skip rate limiting if Redis is unavailable
+    """Redis rate limiter using pipeline to atomically INCR + EXPIRE."""
+    redis_client = get_redis()
+    if redis_client is None:
+        return
 
     key = f"rate_limit:exercise_submit:{user_id}"
     try:
-        count = await redis.incr(key)
-        if count == 1:
-            await redis.expire(key, RATE_LIMIT_WINDOW_SECS)
+        # Atomic pipeline: always set TTL alongside INCR (no orphan keys)
+        pipe = redis_client.pipeline()
+        pipe.incr(key)
+        pipe.expire(key, RATE_LIMIT_WINDOW_SECS)
+        results = await pipe.execute()
+        count = results[0]
+
         if count > RATE_LIMIT_MAX:
-            ttl = await redis.ttl(key)
+            ttl = await redis_client.ttl(key)
             raise HTTPException(
                 status_code=429,
                 detail=f"Too many submissions. Try again in {ttl} seconds.",
@@ -80,6 +85,12 @@ async def exercise_submit(
 # ── Intent Tracking ──
 
 
+# Accepts UUID v4 format or timestamp-random fallback (max 60 chars, alphanumeric + hyphens)
+_ANON_ID_RE = re.compile(r"^anon-[a-z0-9-]{8,50}$")
+MAX_INTENT_FIELDS = 10
+MAX_INTENT_FIELD_VALUE_LEN = 5000
+
+
 class ExerciseIntentRequest(BaseModel):
     """Tracks when a student clicks a provider button (mid-flow signal)."""
 
@@ -88,7 +99,7 @@ class ExerciseIntentRequest(BaseModel):
     exercise_id: str = Field(min_length=1, max_length=200)
     provider: str = Field(min_length=1, max_length=50)
     step: str = Field(default="provider_clicked", max_length=50)
-    fields: dict[str, str] = Field(default_factory=dict)
+    fields: dict[str, str] = Field(default_factory=dict, max_length=MAX_INTENT_FIELDS)
 
 
 @router.post("/exercise/intent", status_code=204)
@@ -115,10 +126,22 @@ async def exercise_intent(
         identity = user.id
         is_anon = False
     else:
-        identity = request.headers.get("X-Anon-ID")
+        identity = request.headers.get("X-Anon-ID", "")
         is_anon = True
-        if not identity:
-            return  # No identity available — skip silently
+        if not _ANON_ID_RE.match(identity):
+            return  # Invalid/missing anon ID — skip silently (prevents key injection)
+
+    # Rate limit intents: 30/min per identity (prevent Redis key flooding)
+    rl_key = f"rate_limit:intent:{identity}"
+    try:
+        pipe = redis.pipeline()
+        pipe.incr(rl_key)
+        pipe.expire(rl_key, 60)
+        rl_results = await pipe.execute()
+        if rl_results[0] > 30:
+            return  # Silently drop — don't reveal rate limit to attacker
+    except Exception:
+        pass  # Best-effort
 
     # Parse device from User-Agent
     ua = request.headers.get("user-agent", "")
@@ -131,7 +154,7 @@ async def exercise_intent(
         "step": body.step,
         "device": device,
         "timestamp": str(int(time.time())),
-        "fields": json.dumps(body.fields),
+        "fields": json.dumps({k: v[:MAX_INTENT_FIELD_VALUE_LEN] for k, v in body.fields.items()}),
         "anonymous": str(is_anon),
     }
 

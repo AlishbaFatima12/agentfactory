@@ -294,9 +294,15 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
 
   const alreadyCompleted = isLessonCompleted(chapterSlug, lessonSlug);
 
+  // Hydrate fields once — avoids double localStorage read on mount
+  const hydratedRef = useRef<Map<string, string> | null>(null);
+  if (hydratedRef.current === null) {
+    hydratedRef.current = hydrateFields(id);
+  }
+
   // ── State ──
-  const [fieldValues, setFieldValues] = useState<Map<string, string>>(() =>
-    hydrateFields(id),
+  const [fieldValues, setFieldValues] = useState<Map<string, string>>(
+    () => hydratedRef.current!,
   );
   const [selectedProvider, setSelectedProvider] = useState<string | null>(() =>
     safeGet(storageKey(id, "__provider")),
@@ -308,8 +314,8 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
     if (alreadyCompleted) return "submitted";
     const saved = safeGet(storageKey(id, "__state"));
     if (saved === "asked" || saved === "pasting") return saved;
-    // Derive from field values
-    const hasAnyContent = Array.from(hydrateFields(id).values()).some(
+    // Derive from cached hydrated fields
+    const hasAnyContent = Array.from(hydratedRef.current!.values()).some(
       (v) => v.trim().length > 0,
     );
     return hasAnyContent ? "filling" : "idle";
@@ -440,7 +446,10 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
           // Anonymous: generate a persistent browser session ID
           let anonId = safeGet("aicheck:__anon_id");
           if (!anonId) {
-            anonId = `anon-${crypto.randomUUID()}`;
+            const uuid = typeof crypto?.randomUUID === "function"
+              ? crypto.randomUUID()
+              : `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+            anonId = `anon-${uuid}`;
             safeSet("aicheck:__anon_id", anonId);
           }
           headers["X-Anon-ID"] = anonId;
@@ -483,7 +492,7 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
   );
 
   const handleSubmit = useCallback(async () => {
-    if (!canSubmit) return;
+    if (!canSubmit || !isLoggedIn) return;
     setState("submitting");
     setErrorMessage("");
 

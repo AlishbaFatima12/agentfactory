@@ -138,21 +138,22 @@ async def test_exercise_submit_idempotent(client: AsyncClient):
 
 @pytest.mark.asyncio
 async def test_exercise_submit_duplicate_evidence_rejected(client: AsyncClient):
-    """Different user with same student_input gets 409."""
+    """Different user with same student_input on same lesson gets 409."""
     shared_input = "Exact same submission text for dedup test"
+    shared_lesson = "dedup-same-lesson"
 
     # User A submits
     r1 = await client.post(
         "/api/v1/exercise/submit",
-        json=_make_payload(student_input=shared_input, lesson_slug="dedup-lesson-1"),
+        json=_make_payload(student_input=shared_input, lesson_slug=shared_lesson),
         headers={"X-User-ID": "test-dedup-user-a"},
     )
     assert r1.status_code == 200
 
-    # User B submits same input
+    # User B submits same input on SAME lesson — should be rejected
     r2 = await client.post(
         "/api/v1/exercise/submit",
-        json=_make_payload(student_input=shared_input, lesson_slug="dedup-lesson-2"),
+        json=_make_payload(student_input=shared_input, lesson_slug=shared_lesson),
         headers={"X-User-ID": "test-dedup-user-b"},
     )
     assert r2.status_code == 409
@@ -160,20 +161,42 @@ async def test_exercise_submit_duplicate_evidence_rejected(client: AsyncClient):
 
 
 @pytest.mark.asyncio
+async def test_exercise_submit_same_input_different_lesson_allowed(client: AsyncClient):
+    """Same student_input on different lessons is allowed (dedup is per-lesson)."""
+    shared_input = "Cross-lesson dedup test input"
+
+    r1 = await client.post(
+        "/api/v1/exercise/submit",
+        json=_make_payload(student_input=shared_input, lesson_slug="lesson-a"),
+        headers={"X-User-ID": "test-cross-lesson-a"},
+    )
+    assert r1.status_code == 200
+
+    r2 = await client.post(
+        "/api/v1/exercise/submit",
+        json=_make_payload(student_input=shared_input, lesson_slug="lesson-b"),
+        headers={"X-User-ID": "test-cross-lesson-b"},
+    )
+    assert r2.status_code == 200  # Different lesson — allowed
+
+
+@pytest.mark.asyncio
 async def test_exercise_submit_duplicate_case_insensitive(client: AsyncClient):
     """Dedup is case-insensitive."""
+    shared_lesson = "case-dedup-lesson"
+
     # User A: mixed case
     r1 = await client.post(
         "/api/v1/exercise/submit",
-        json=_make_payload(student_input="My Unique Answers Here", lesson_slug="case-lesson-1"),
+        json=_make_payload(student_input="My Unique Answers Here", lesson_slug=shared_lesson),
         headers={"X-User-ID": "test-case-user-a"},
     )
     assert r1.status_code == 200
 
-    # User B: lowercase
+    # User B: lowercase (same lesson — dedup catches it)
     r2 = await client.post(
         "/api/v1/exercise/submit",
-        json=_make_payload(student_input="my unique answers here", lesson_slug="case-lesson-2"),
+        json=_make_payload(student_input="my unique answers here", lesson_slug=shared_lesson),
         headers={"X-User-ID": "test-case-user-b"},
     )
     assert r2.status_code == 409
@@ -182,18 +205,20 @@ async def test_exercise_submit_duplicate_case_insensitive(client: AsyncClient):
 @pytest.mark.asyncio
 async def test_exercise_submit_duplicate_whitespace_normalized(client: AsyncClient):
     """Dedup ignores leading/trailing whitespace."""
+    shared_lesson = "ws-dedup-lesson"
+
     # User A: clean input
     r1 = await client.post(
         "/api/v1/exercise/submit",
-        json=_make_payload(student_input="Whitespace Dedup Test", lesson_slug="ws-lesson-1"),
+        json=_make_payload(student_input="Whitespace Dedup Test", lesson_slug=shared_lesson),
         headers={"X-User-ID": "test-ws-user-a"},
     )
     assert r1.status_code == 200
 
-    # User B: same input with surrounding whitespace
+    # User B: same input with surrounding whitespace (same lesson)
     r2 = await client.post(
         "/api/v1/exercise/submit",
-        json=_make_payload(student_input="  Whitespace Dedup Test  ", lesson_slug="ws-lesson-2"),
+        json=_make_payload(student_input="  Whitespace Dedup Test  ", lesson_slug=shared_lesson),
         headers={"X-User-ID": "test-ws-user-b"},
     )
     assert r2.status_code == 409

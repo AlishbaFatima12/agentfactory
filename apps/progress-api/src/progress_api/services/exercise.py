@@ -38,7 +38,7 @@ def extract_scores(ai_output: str) -> dict[str, int | float] | None:
     matches = dict(re.findall(pattern, ai_output, re.IGNORECASE))
     if len(matches) < 5:
         return None
-    scores = {k.lower().replace(" ", "_").replace("-", "_"): int(v) for k, v in matches.items()}
+    scores = {k.lower().replace(" ", "_").replace("-", "_"): max(0, min(10, int(v))) for k, v in matches.items()}
     scores["average"] = round(sum(scores.values()) / len(scores), 1)
     return scores
 
