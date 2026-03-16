@@ -17,6 +17,10 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-16
+
+- Renumber Part 4 Phase 1 chapters (30-33 → 42-45) ([#864](https://github.com/panaversity/agentfactory/pull/864))
+
 ### 2026-03-15
 - refactor: renumber Parts 1-3 chapters to continuous global numbering ([#862](https://github.com/panaversity/agentfactory/pull/862))
 
