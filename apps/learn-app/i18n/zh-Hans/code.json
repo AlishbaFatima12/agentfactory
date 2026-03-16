@@ -360,5 +360,613 @@
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"
+  },
+  "homepage.badge.aiFirst": {
+    "message": "AI优先的未来",
+    "description": "Homepage badge label"
+  },
+  "homepage.badge.buildMonetize": {
+    "message": "构建和货币化数字FTE",
+    "description": "Homepage badge label 2"
+  },
+  "homepage.title": {
+    "message": "AI代理",
+    "description": "Main homepage heading part 1"
+  },
+  "homepage.title.factory": {
+    "message": "工厂",
+    "description": "Main homepage heading part 2"
+  },
+  "homepage.subtitle.start": {
+    "message": "该",
+    "description": "Subtitle start"
+  },
+  "homepage.subtitle.specDriven": {
+    "message": "规范驱动蓝图",
+    "description": "Subtitle spec-driven"
+  },
+  "homepage.subtitle.for": {
+    "message": "用于构建和货币化数字 FTE——",
+    "description": "Subtitle for"
+  },
+  "homepage.subtitle.reliable": {
+    "message": "可靠的AI代理",
+    "description": "Subtitle reliable"
+  },
+  "homepage.subtitle.you": {
+    "message": "您可以信任、部署和扩展。",
+    "description": "Subtitle you"
+  },
+  "homepage.description": {
+    "message": "一个面向工程师、领域专业人士（会计师、财务经理、营销专业人士等）、企业领导者、初创企业创始人、产品架构师和运营团队的实用框架，这些团队正在构建下一代 AI 驱动的组织。",
+    "description": "Homepage description"
+  },
+  "homepage.button.startReading": {
+    "message": "开始阅读",
+    "description": "Call to action button"
+  },
+  "homepage.button.explorePanaversity": {
+    "message": "探索 Panaversity",
+    "description": "Explore button"
+  },
+  "homepage.learners": {
+    "message": "专业人士在学习",
+    "description": "Learners count label"
+  },
+  "homepage.liveReviews": {
+    "message": "实时AI评论",
+    "description": "Live reviews link"
+  },
+  "homepage.coAuthoredBy": {
+    "message": "共同作者",
+    "description": "Co-authored by label"
+  },
+  "homepage.aiAgents": {
+    "message": "& AI代理",
+    "description": "And AI agents"
+  },
+  "homepage.spectrum.title": {
+    "message": "理解AI开发",
+    "description": "AI Spectrum section title"
+  },
+  "homepage.spectrum.heading": {
+    "message": "AI开发频谱",
+    "description": "AI Spectrum heading"
+  },
+  "homepage.spectrum.description": {
+    "message": "软件开发中 AI 的三个不同方法。本书教授 AI 驱动和 AI 本机开发。",
+    "description": "AI spectrum description"
+  },
+  "homepage.spectrum.aiAssisted": {
+    "message": "AI辅助",
+    "description": "AI Assisted title"
+  },
+  "homepage.spectrum.aiAssistedRole": {
+    "message": "AI作为助手",
+    "description": "AI Assisted role"
+  },
+  "homepage.spectrum.aiAssistedDesc": {
+    "message": "AI 通过代码完成、调试协助和文档生成来提高您的生产力。",
+    "description": "AI Assisted description"
+  },
+  "homepage.spectrum.aiDriven": {
+    "message": "AI驱动",
+    "description": "AI Driven title"
+  },
+  "homepage.spectrum.aiDrivenRole": {
+    "message": "AI作为合作者",
+    "description": "AI Driven role"
+  },
+  "homepage.spectrum.aiDrivenDesc": {
+    "message": "AI 从规范生成重要代码。您充当架构师、导演和审查员。",
+    "description": "AI Driven description"
+  },
+  "homepage.spectrum.aiNative": {
+    "message": "AI本机",
+    "description": "AI Native title"
+  },
+  "homepage.spectrum.aiNativeRole": {
+    "message": "AI就是软件",
+    "description": "AI Native role"
+  },
+  "homepage.spectrum.aiNativeDesc": {
+    "message": "围绕 AI 功能构建的应用程序。LLM 和代理是核心功能组件。",
+    "description": "AI Native description"
+  },
+  "homepage.flow.helper": {
+    "message": "助手",
+    "description": "Flow helper"
+  },
+  "homepage.flow.coCreator": {
+    "message": "合作者",
+    "description": "Flow co-creator"
+  },
+  "homepage.flow.coreSystem": {
+    "message": "核心系统",
+    "description": "Flow core system"
+  },
+  "homepage.features.badge": {
+    "message": "核心支柱",
+    "description": "Features badge"
+  },
+  "homepage.features.heading": {
+    "message": "让这本书与众不同的地方",
+    "description": "Features heading"
+  },
+  "homepage.features.comment": {
+    "message": "以规范驱动的方式与 AI 进行共同学习的综合、以生产为重点的方法",
+    "description": "Features comment"
+  },
+  "homepage.feature.coLearning": {
+    "message": "联合学习哲学",
+    "description": "Feature 1 title"
+  },
+  "homepage.feature.coLearningDesc": {
+    "message": "与 AI 代理一起学习。不仅将 AI 作为工具使用，而是共同创建人类和 AI 一起学习的内容。",
+    "description": "Feature 1 description"
+  },
+  "homepage.feature.dualLanguage": {
+    "message": "双语掌握",
+    "description": "Feature 2 title"
+  },
+  "homepage.feature.dualLanguageDesc": {
+    "message": "Python 用于推理和智能，TypeScript 用于交互和 UI。掌握双语 AI 原生堆栈。",
+    "description": "Feature 2 description"
+  },
+  "homepage.feature.specDriven": {
+    "message": "规范驱动开发",
+    "description": "Feature 3 title"
+  },
+  "homepage.feature.specDrivenDesc": {
+    "message": "编写人类和 AI 都能理解的规范。规范成为智能系统的可执行蓝图。",
+    "description": "Feature 3 description"
+  },
+  "homepage.feature.agentic": {
+    "message": "代理AI系统",
+    "description": "Feature 4 title"
+  },
+  "homepage.feature.agenticDesc": {
+    "message": "使用 OpenAI 代理 SDK 和 Google ADK 进行构建。创建能够自主推理、行动和协作的代理。",
+    "description": "Feature 4 description"
+  },
+  "homepage.feature.architecture": {
+    "message": "生产就绪的架构",
+    "description": "Feature 5 title"
+  },
+  "homepage.feature.architectureDesc": {
+    "message": "使用 Docker、Kubernetes、Dapr 和 Ray 进行云原生部署。可扩展、安全、容错的系统。",
+    "description": "Feature 5 description"
+  },
+  "homepage.feature.journey": {
+    "message": "完整的学习之旅",
+    "description": "Feature 6 title"
+  },
+  "homepage.feature.journeyDesc": {
+    "message": "从编程基础到在生产中部署企业代理 AI 系统的 46 章全面内容。",
+    "description": "Feature 6 description"
+  },
+  "homepage.maturity.badge": {
+    "message": "您的AI之旅",
+    "description": "Maturity levels section badge"
+  },
+  "homepage.maturity.heading": {
+    "message": "组织AI成熟度级别",
+    "description": "Maturity levels section heading"
+  },
+  "homepage.maturity.description": {
+    "message": "您的组织处于什么位置？了解这些级别可以帮助您规划前进的道路。",
+    "description": "Maturity levels description"
+  },
+  "homepage.maturity.level1": {
+    "message": "AI意识",
+    "description": "Maturity level 1 title"
+  },
+  "homepage.maturity.level1.subtitle": {
+    "message": "试验",
+    "description": "Level 1 subtitle"
+  },
+  "homepage.maturity.level1.description": {
+    "message": "个人开发人员使用 AI 编码工具进行试验。AI 辅助开发的早期阶段。",
+    "description": "Level 1 description"
+  },
+  "homepage.maturity.level1.approach": {
+    "message": "AI辅助（个人）",
+    "description": "Level 1 approach"
+  },
+  "homepage.maturity.level1.impact": {
+    "message": "生产力提高10-20%",
+    "description": "Level 1 impact"
+  },
+  "homepage.maturity.level2": {
+    "message": "AI采用",
+    "description": "Maturity level 2 title"
+  },
+  "homepage.maturity.level2.subtitle": {
+    "message": "标准化",
+    "description": "Level 2 subtitle"
+  },
+  "homepage.maturity.level2.description": {
+    "message": "组织范围内的 AI 采用和治理。建立的指南和安全策略。",
+    "description": "Level 2 description"
+  },
+  "homepage.maturity.level2.approach": {
+    "message": "AI辅助（团队）",
+    "description": "Level 2 approach"
+  },
+  "homepage.maturity.level2.impact": {
+    "message": "生产力提高30-40%",
+    "description": "Level 2 impact"
+  },
+  "homepage.maturity.level3": {
+    "message": "AI整合",
+    "description": "Maturity level 3 title"
+  },
+  "homepage.maturity.level3.subtitle": {
+    "message": "转换工作流程",
+    "description": "Level 3 subtitle"
+  },
+  "homepage.maturity.level3.description": {
+    "message": "AI 驱动的开发实践。规范成为活的文档。围绕 AI 协作重新设计的工作流。",
+    "description": "Level 3 description"
+  },
+  "homepage.maturity.level3.approach": {
+    "message": "AI驱动（工作流）",
+    "description": "Level 3 approach"
+  },
+  "homepage.maturity.level3.impact": {
+    "message": "开发速度提高2-3倍",
+    "description": "Level 3 impact"
+  },
+  "homepage.maturity.level4": {
+    "message": "AI原生产品",
+    "description": "Maturity level 4 title"
+  },
+  "homepage.maturity.level4.subtitle": {
+    "message": "构建智能",
+    "description": "Level 4 subtitle"
+  },
+  "homepage.maturity.level4.description": {
+    "message": "AI/LLM 是核心组件的产品。代理编排、自然语言界面、智能系统。",
+    "description": "Level 4 description"
+  },
+  "homepage.maturity.level4.approach": {
+    "message": "AI原生（产品）",
+    "description": "Level 4 approach"
+  },
+  "homepage.maturity.level4.impact": {
+    "message": "新功能已解锁",
+    "description": "Level 4 impact"
+  },
+  "homepage.maturity.level5": {
+    "message": "AI优先型企业",
+    "description": "Maturity level 5 title"
+  },
+  "homepage.maturity.level5.subtitle": {
+    "message": "生活在未来",
+    "description": "Level 5 subtitle"
+  },
+  "homepage.maturity.level5.description": {
+    "message": "整个组织都是 AI 原生。自定义模型、自我改进系统、在每个方面嵌入 AI。",
+    "description": "Level 5 description"
+  },
+  "homepage.maturity.level5.approach": {
+    "message": "AI原生（企业）",
+    "description": "Level 5 approach"
+  },
+  "homepage.maturity.level5.impact": {
+    "message": "10倍生产力",
+    "description": "Level 5 impact"
+  },
+  "homepage.maturity.cta": {
+    "message": "本书为您准备第 3-4 级：",
+    "description": "Maturity CTA prefix"
+  },
+  "homepage.maturity.ctaDescription": {
+    "message": "掌握 AI 驱动的工作流程并构建 AI 原生产品",
+    "description": "Maturity CTA description"
+  },
+  "homepage.paradigm.badge": {
+    "message": "伟大的转变",
+    "description": "Paradigm shift badge"
+  },
+  "homepage.paradigm.title": {
+    "message": "从自动化到智能",
+    "description": "Paradigm title line 1"
+  },
+  "homepage.paradigm.subtitle": {
+    "message": "从编码到共同创造",
+    "description": "Paradigm title line 2"
+  },
+  "homepage.paradigm.description": {
+    "message": "AI 原生开发不是要替代开发人员——而是要增强智能。学会与与您一起学习的推理实体进行协作。",
+    "description": "Paradigm description"
+  },
+  "homepage.paradigm.traditional.heading": {
+    "message": "传统开发",
+    "description": "Traditional development section heading"
+  },
+  "homepage.paradigm.traditional.subtitle": {
+    "message": "自动化时代",
+    "description": "Traditional development subtitle"
+  },
+  "homepage.paradigm.aiNative.heading": {
+    "message": "AI原生方式",
+    "description": "AI Native section heading"
+  },
+  "homepage.paradigm.aiNative.subtitle": {
+    "message": "智能时代",
+    "description": "AI Native subtitle"
+  },
+  "homepage.paradigm.item1.traditional": {
+    "message": "基于指令的",
+    "description": "Item 1 traditional title"
+  },
+  "homepage.paradigm.item1.desc": {
+    "message": "使用精确语法精确告诉计算机要做什么",
+    "description": "Item 1 description"
+  },
+  "homepage.paradigm.item1.aiNative": {
+    "message": "基于意图的",
+    "description": "Item 1 AI Native title"
+  },
+  "homepage.paradigm.item1.aiNativeDesc": {
+    "message": "描述您想要什么；AI 推理如何构建它",
+    "description": "Item 1 AI Native description"
+  },
+  "homepage.paradigm.item2.traditional": {
+    "message": "单独编码",
+    "description": "Item 2 traditional title"
+  },
+  "homepage.paradigm.item2.desc": {
+    "message": "开发人员手动编写每一行",
+    "description": "Item 2 description"
+  },
+  "homepage.paradigm.item2.aiNative": {
+    "message": "联合学习伙伴关系",
+    "description": "Item 2 AI Native title"
+  },
+  "homepage.paradigm.item2.aiNativeDesc": {
+    "message": "您和 AI 通过迭代相互学习",
+    "description": "Item 2 AI Native description"
+  },
+  "homepage.paradigm.item3.traditional": {
+    "message": "文档作为事后思考",
+    "description": "Item 3 traditional title"
+  },
+  "homepage.paradigm.item3.desc": {
+    "message": "规范是事后编写的静态合约",
+    "description": "Item 3 description"
+  },
+  "homepage.paradigm.item3.aiNative": {
+    "message": "规范作为活蓝图",
+    "description": "Item 3 AI Native title"
+  },
+  "homepage.paradigm.item3.aiNativeDesc": {
+    "message": "规范驱动代码、测试和文档",
+    "description": "Item 3 AI Native description"
+  },
+  "homepage.paradigm.item4.traditional": {
+    "message": "线性学习",
+    "description": "Item 4 traditional title"
+  },
+  "homepage.paradigm.item4.desc": {
+    "message": "学习语法 → 构建简单项目 → 缓慢扩展",
+    "description": "Item 4 description"
+  },
+  "homepage.paradigm.item4.aiNative": {
+    "message": "生产优先学习",
+    "description": "Item 4 AI Native title"
+  },
+  "homepage.paradigm.item4.aiNativeDesc": {
+    "message": "从第一天开始构建真实的代理系统",
+    "description": "Item 4 AI Native description"
+  },
+  "homepage.paradigm.item5.traditional": {
+    "message": "代码优先",
+    "description": "Item 5 traditional title"
+  },
+  "homepage.paradigm.item5.desc": {
+    "message": "从第一天开始关注实施细节",
+    "description": "Item 5 description"
+  },
+  "homepage.paradigm.item5.aiNative": {
+    "message": "架构优先",
+    "description": "Item 5 AI Native title"
+  },
+  "homepage.paradigm.item5.aiNativeDesc": {
+    "message": "设计智能协作，不仅仅是代码",
+    "description": "Item 5 AI Native description"
+  },
+  "homepage.fte.badge": {
+    "message": "自主权的投资回报率",
+    "description": "FTE comparison badge"
+  },
+  "homepage.fte.heading": {
+    "message": "人工智能 FTE 与数字 FTE",
+    "description": "FTE comparison heading"
+  },
+  "homepage.fte.description": {
+    "message": "数字 FTE 每周工作 168 小时，零疲劳。就是",
+    "description": "FTE comparison description prefix"
+  },
+  "homepage.fte.output": {
+    "message": "4倍的产出",
+    "description": "FTE comparison output"
+  },
+  "homepage.fte.cost": {
+    "message": "成本的一小部分。",
+    "description": "FTE comparison cost"
+  },
+  "homepage.fte.feature": {
+    "message": "特征",
+    "description": "FTE table feature header"
+  },
+  "homepage.fte.feature2": {
+    "message": "每月成本",
+    "description": "FTE table monthly cost"
+  },
+  "homepage.fte.feature3": {
+    "message": "启动时间",
+    "description": "FTE table ramp-up time"
+  },
+  "homepage.fte.feature4": {
+    "message": "一致性",
+    "description": "FTE table consistency"
+  },
+  "homepage.fte.feature5": {
+    "message": "扩展能力",
+    "description": "FTE table scaling"
+  },
+  "homepage.fte.feature6": {
+    "message": "每项任务成本",
+    "description": "FTE table cost per task"
+  },
+  "homepage.fte.item1.digital": {
+    "message": "每周 168 小时（24/7）",
+    "description": "FTE table digital availability"
+  },
+  "homepage.fte.item2.digital": {
+    "message": "$500 – $2,000",
+    "description": "FTE table digital monthly cost"
+  },
+  "homepage.fte.item3.digital": {
+    "message": "即时部署",
+    "description": "FTE table digital ramp-up time"
+  },
+  "homepage.fte.item4.digital": {
+    "message": "可预测（99%+）",
+    "description": "FTE table digital consistency"
+  },
+  "homepage.fte.item5.digital": {
+    "message": "指数级（即时克隆）",
+    "description": "FTE table digital scaling"
+  },
+  "homepage.fte.item6.digital": {
+    "message": "$3 – $6",
+    "description": "FTE table digital cost per task"
+  },
+  "homepage.fte.human": {
+    "message": "人工智能 FTE",
+    "description": "FTE table human header"
+  },
+  "homepage.fte.digital": {
+    "message": "数字 FTE",
+    "description": "FTE table digital header"
+  },
+  "homepage.monetize.badge": {
+    "message": "从您的专业知识中获利",
+    "description": "Monetize section badge"
+  },
+  "homepage.monetize.heading": {
+    "message": "从 AI 代理中获利的四种方式",
+    "description": "Monetize section heading"
+  },
+  "homepage.monetize.description": {
+    "message": "无论您在销售、法律、财务还是任何领域的领域知识都可以成为",
+    "description": "Monetize section description part 1"
+  },
+  "homepage.monetize.recurringRevenue": {
+    "message": "经常性收入流",
+    "description": "Monetize section description recurring"
+  },
+  "homepage.thesis.heading": {
+    "message": "构建 24/7 工作的数字 FTE。您的领域专业知识——无论是销售、法律、财务还是医疗保健——都成为永不睡眠的自主 AI 代理。",
+    "description": "Agent factory thesis main quote"
+  },
+  "homepage.thesis.subheading": {
+    "message": "将您的知识转变为可扩展的数字产品",
+    "description": "Agent factory thesis subheading"
+  },
+  "homepage.thesis.subheadingEnd": {
+    "message": "当您睡眠时。",
+    "description": "Agent factory thesis subheading end"
+  },
+  "homepage.thesis.recurringRevenue": {
+    "message": "经常性收入",
+    "description": "Agent factory thesis recurring revenue"
+  },
+  "homepage.thesis.manufacture.title": {
+    "message": "制造",
+    "description": "Three pillars - manufacture"
+  },
+  "homepage.thesis.manufacture.desc": {
+    "message": "使用 AI 编码代理（Claude Code）将您的专业知识构建为可部署的代理",
+    "description": "Manufacture description"
+  },
+  "homepage.thesis.package.title": {
+    "message": "包装",
+    "description": "Three pillars - package"
+  },
+  "homepage.thesis.package.desc": {
+    "message": "使用 OpenAI 或 Anthropic 代理 SDK 捆绑到生产就绪的数字 FTE 中",
+    "description": "Package description"
+  },
+  "homepage.thesis.monetize.title": {
+    "message": "货币化",
+    "description": "Three pillars - monetize"
+  },
+  "homepage.thesis.monetize.desc": {
+    "message": "作为托管订阅、成功费或企业许可证销售",
+    "description": "Monetize description"
+  },
+  "homepage.cta.heading": {
+    "message": "准备好构建您的 Agent Factory 了吗？",
+    "description": "Final CTA heading"
+  },
+  "homepage.cta.description": {
+    "message": "将您的领域专业知识转变为 24/7 工作并产生经常性收入的数字 FTE",
+    "description": "Final CTA description"
+  },
+  "homepage.spectrum.bullet1": {
+    "message": "代码完成和建议",
+    "description": "AI Assisted bullets"
+  },
+  "homepage.spectrum.bullet2": {
+    "message": "错误检测和调试",
+    "description": "AI Assisted bullets"
+  },
+  "homepage.spectrum.bullet3": {
+    "message": "文档生成",
+    "description": "AI Assisted bullets"
+  },
+  "homepage.spectrum.example1": {
+    "message": "使用 Copilot 更快地构建 React 网站",
+    "description": "AI Assisted example"
+  },
+  "homepage.spectrum.example1Label": {
+    "message": "例子：",
+    "description": "Example label"
+  },
+  "homepage.spectrum.bullet4": {
+    "message": "从规范生成代码",
+    "description": "AI Driven bullets"
+  },
+  "homepage.spectrum.bullet5": {
+    "message": "自动化测试和优化",
+    "description": "AI Driven bullets"
+  },
+  "homepage.spectrum.bullet6": {
+    "message": "根据要求确定架构",
+    "description": "AI Driven bullets"
+  },
+  "homepage.spectrum.example2": {
+    "message": "编写 REST API 的规范，AI 生成完整的 FastAPI 后端",
+    "description": "AI Driven example"
+  },
+  "homepage.spectrum.bullet7": {
+    "message": "自然语言界面",
+    "description": "AI Native bullets"
+  },
+  "homepage.spectrum.bullet8": {
+    "message": "智能自动化和推理",
+    "description": "AI Native bullets"
+  },
+  "homepage.spectrum.bullet9": {
+    "message": "代理编排系统",
+    "description": "AI Native bullets"
+  },
+  "homepage.spectrum.example3": {
+    "message": "构建自主解决工单的客户支持代理",
+    "description": "AI Native example"
   }
 }
