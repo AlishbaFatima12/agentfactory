@@ -115,29 +115,37 @@ You are assigned a domain you have never studied: pharmacology for a developer, 
 A Learning Plan (300-400 words) containing: the domain assigned, your current knowledge level (be honest), your learning strategy (what first, what next, what skip), the resources you will use (and why these over others), your definition of "enough" (what competence looks like for this exercise), a time allocation plan for your 72 hours, and your predicted biggest challenge.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
-I am about to learn a domain I have never studied: [your assigned domain].
-Before starting, I wrote a Learning Plan. Please:
+<ExercisePrompt id="learning-plan" provider={["chatgpt", "claude", "gemini"]}>
+
+I am about to learn a domain I have never studied. Before starting, I
+wrote a Learning Plan. Please:
 
 (1) Rate my learning strategy -- is it efficient? Am I starting with the
-    right foundations or jumping to advanced material?
+right foundations or jumping to advanced material?
 (2) Are my chosen resources appropriate for a complete beginner in this
-    domain? Suggest better resources if mine are suboptimal.
+domain? Suggest better resources if mine are suboptimal.
 (3) Is my definition of "enough" appropriate -- am I aiming too high
-    (will run out of time) or too low (will not reach competence)?
+(will run out of time) or too low (will not reach competence)?
 (4) Is my time allocation realistic?
-(5) What is the most common mistake people make when learning [this
-    domain] for the first time?
+(5) What is the most common mistake people make when learning this
+domain for the first time?
 (6) Give me a recommended learning path: the 5 most important concepts
-    I should master in order, with time estimates.
+I should master in order, with time estimates.
 
-My Learning Plan: [paste].
+My Learning Plan:
+
+<PromptField
+  name="learning_plan"
+  placeholder="Paste your Learning Plan here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

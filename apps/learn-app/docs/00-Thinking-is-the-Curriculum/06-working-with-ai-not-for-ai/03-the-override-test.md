@@ -101,31 +101,60 @@ Use AI to produce a competitive analysis for a product. The instructor has desig
 The original AI-generated analysis. Your error identification with explanation of the error type, why AI made it, and its impact on the analysis. Your corrected analysis. Your redesigned prompt that would prevent the error. A brief explanation of your error-detection process -- how did you find it?
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="the-override-test" provider={["chatgpt", "claude", "gemini"]}>
+
 I was given an AI-generated competitive analysis that contains a deliberate
 subtle error. I identified the error, explained why AI made it, corrected the
 analysis, and redesigned the prompt to prevent it. Please:
 
 (1) Did I correctly identify the error? If not, give me a hint and let me
-    try again.
+try again.
 (2) Is my explanation of WHY the AI made this error accurate?
 (3) Does my corrected analysis actually fix the problem without introducing
-    new errors?
+new errors?
 (4) Would my redesigned prompt actually prevent this type of error? Test it by
-    mentally running the prompt -- would it produce a better result?
+mentally running the prompt -- would it produce a better result?
 (5) Rate my error-detection process -- was my approach systematic or did I get
-    lucky? How can I make my detection process more reliable?
+lucky? How can I make my detection process more reliable?
 
-Original analysis: [paste].
-My error identification: [paste].
-My corrected analysis: [paste].
-My redesigned prompt: [paste].
+Original analysis:
+
+<PromptField
+  name="original_analysis"
+  placeholder="Paste the original AI-generated analysis here..."
+  rows={6}
+/>
+
+My error identification:
+
+<PromptField
+  name="error_identification"
+  placeholder="Paste your error identification here..."
+  rows={4}
+/>
+
+My corrected analysis:
+
+<PromptField
+  name="corrected_analysis"
+  placeholder="Paste your corrected analysis here..."
+  rows={6}
+/>
+
+My redesigned prompt:
+
+<PromptField
+  name="redesigned_prompt"
+  placeholder="Paste your redesigned prompt here..."
+  rows={4}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

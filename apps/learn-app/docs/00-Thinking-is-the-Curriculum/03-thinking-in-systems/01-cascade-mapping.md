@@ -127,7 +127,8 @@ A cascade map (hand-drawn scan or digital document) showing: the central decisio
 
 ---
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="cascade-mapping" provider={["chatgpt", "claude", "gemini"]}>
+
 I am a student learning systems thinking. I was given this scenario:
 "A major bank decides to replace all loan officers with AI agents."
 Before using AI, I created a cascade map tracing consequences across
@@ -135,23 +136,30 @@ five domains with feedback loops.
 
 Please:
 (1) Evaluate the completeness of my map -- which important effects or
-    domains did I miss?
+domains did I miss?
 (2) Rate each of my feedback loops: are they logically sound? Would
-    they actually occur?
+they actually occur?
 (3) Identify at least 3 second or third-order effects I missed that
-    are non-obvious but important.
+are non-obvious but important.
 (4) Rate the overall sophistication of my systems thinking from
-    Beginner / Developing / Proficient / Advanced.
+Beginner / Developing / Proficient / Advanced.
 (5) Do any of my causal chains have logical errors -- effects that
-    would not actually follow from the cause I described?
+would not actually follow from the cause I described?
 
-Here is my cascade map: [paste or describe your map in detail].
+Here is my cascade map:
+
+<PromptField
+  name="cascade_map"
+  placeholder="Paste or describe your cascade map in detail here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

@@ -107,37 +107,51 @@ Write a 400-word persuasive essay arguing the opposite position. Then prompt AI:
 Your preparation notes for the opposite position (you may use AI to help prepare, but document what you used). Peer feedback scores: Argument strength (1-10), Apparent conviction (1-10), Empathy for the other side (1-10). A reflection (200 words) answering: Did arguing the other side change your view at all? What did you understand about the dilemma that you did not understand before?
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="stakeholder-swap" provider={["chatgpt", "claude", "gemini"]}>
+
 I was assigned to argue the OPPOSITE of my personal position on this
 ethical dilemma. I need to build the strongest possible case for a
 position I disagree with.
 
-The dilemma: [paste].
-My PERSONAL position is: [paste].
-The position I must argue is: [paste].
+The dilemma:
+
+<PromptField
+  name="dilemma"
+  placeholder="Paste your chosen dilemma here..."
+  rows={2}
+/>
+
+My PERSONAL position is:
+
+<PromptField
+  name="personal_position"
+  placeholder="Paste your personal position here..."
+  rows={4}
+/>
+
+The position I must argue is:
+
+<PromptField
+  name="assigned_position"
+  placeholder="Paste the assigned position you must argue here..."
+  rows={4}
+/>
 
 Please:
 (1) Give me the 5 strongest arguments for the position I must defend,
-    including evidence, examples, and moral reasoning.
+including evidence, examples, and moral reasoning.
 (2) Anticipate the 3 most likely counter-arguments my audience will raise
-    and prepare responses for each.
+and prepare responses for each.
 (3) Help me understand the perspective of someone who genuinely holds this
-    position -- what values and experiences would lead someone here?
+position -- what values and experiences would lead someone here?
 (4) After my presentation, I will share my peer feedback and reflection.
-
-[AFTER PRESENTATION]
-
-Here are my peer feedback scores and my reflection. Rate my growth in
-ethical reasoning: did arguing the other side deepen my understanding?
-
-Peer feedback: [paste].
-My reflection: [paste].
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ### What This Teaches You
 

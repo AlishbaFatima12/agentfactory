@@ -30,6 +30,7 @@ import {
   AlertCircle,
   Send,
 } from "lucide-react";
+import { useExercisePrompt } from "@/contexts/ExercisePromptContext";
 import styles from "./SubmissionDialog.module.css";
 
 const PROVIDERS: { value: string; label: string }[] = [
@@ -79,6 +80,8 @@ export default function SubmissionDialog({
   const { isLessonCompleted, refreshProgress } = useProgress();
   const alreadyCompleted = isLessonCompleted(chapterSlug, lessonSlug);
 
+  const exercisePrompt = useExercisePrompt();
+
   const [state, setState] = useState<DialogState>("idle");
   const [provider, setProvider] = useState(
     submission.default_provider || "chatgpt",
@@ -88,6 +91,8 @@ export default function SubmissionDialog({
   const [feedback, setFeedback] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [response, setResponse] = useState<ExerciseSubmitResponse | null>(null);
+  const [preFilled, setPreFilled] = useState(false);
+  const aiOutputRef = React.useRef<HTMLTextAreaElement>(null);
 
   const xp = submission.xp_bonus || 50;
   const effectiveState =
@@ -103,7 +108,14 @@ export default function SubmissionDialog({
   const handleOpen = useCallback(() => {
     setState("open");
     setErrorMessage("");
-  }, []);
+    // Auto-fill from ExercisePrompt if available and student hasn't typed yet
+    if (exercisePrompt?.composedPrompt && studentInput.trim() === "") {
+      setStudentInput(exercisePrompt.composedPrompt);
+      setPreFilled(true);
+      // Focus AI output field after dialog opens
+      setTimeout(() => aiOutputRef.current?.focus(), 100);
+    }
+  }, [exercisePrompt, studentInput]);
 
   const handleClose = useCallback(() => {
     if (state === "submitting") return;
@@ -285,12 +297,22 @@ export default function SubmissionDialog({
                 <span className={styles.stepTitle}>Your Submission</span>
               </div>
               <p className={styles.stepHint}>
-                Paste the prompt you sent and your answers
+                {preFilled
+                  ? "Pre-filled from the exercise above. Review and edit if needed."
+                  : "Paste the prompt you sent and your answers"}
               </p>
+              {preFilled && (
+                <span className={styles.preFillBadge}>
+                  Auto-filled from exercise
+                </span>
+              )}
               <Textarea
                 className={styles.textarea}
                 value={studentInput}
-                onChange={(e) => setStudentInput(e.target.value)}
+                onChange={(e) => {
+                  setStudentInput(e.target.value);
+                  if (preFilled) setPreFilled(false);
+                }}
                 placeholder="Paste your prompt + answers here..."
                 disabled={effectiveState === "submitting"}
                 maxLength={25000}
@@ -308,6 +330,7 @@ export default function SubmissionDialog({
                 Paste the AI&apos;s complete response including the Score Card
               </p>
               <Textarea
+                ref={aiOutputRef}
                 className={styles.textarea}
                 value={aiOutput}
                 onChange={(e) => setAiOutput(e.target.value)}

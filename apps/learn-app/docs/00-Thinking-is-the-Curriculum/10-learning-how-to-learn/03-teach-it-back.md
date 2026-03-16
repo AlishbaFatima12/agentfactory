@@ -105,31 +105,53 @@ Record yourself teaching the topic for 10 minutes (audio or video). Then prompt 
 Your teaching session outline or slides (may use AI to help prepare, but document what you used). Peer feedback forms rating: clarity of explanation (1-10), depth of understanding demonstrated (1-10), ability to answer unexpected questions (1-10), and engagement (1-10). A list of every question you were asked, whether you could answer it, and for unanswered questions — your honest assessment of whether you genuinely did not know or knew but could not articulate.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
-I just completed a teach-back session after learning [domain] from
+<ExercisePrompt id="teach-it-back" provider={["chatgpt", "claude", "gemini"]}>
+
+I just completed a teach-back session after learning a domain from
 scratch in 72 hours. Below are my teaching materials, the questions I was
 asked, and my peer feedback. Please:
 
 (1) Based on the questions I could not answer, what are the key gaps in
-    my understanding?
+my understanding?
 (2) For the questions I answered poorly, suggest better explanations I
-    could have given.
+could have given.
 (3) Rate my learning efficiency: given 72 hours, did I reach an
-    appropriate depth, or should I have gone deeper in fewer areas?
+appropriate depth, or should I have gone deeper in fewer areas?
 (4) Based on my peer feedback scores, what should I prioritize
-    improving -- clarity, depth, spontaneous response, or engagement?
+improving -- clarity, depth, spontaneous response, or engagement?
 (5) Create a "Next 20 Hours" learning plan for me -- if I had 20 more
-    hours, what should I study to fill my most critical gaps?
+hours, what should I study to fill my most critical gaps?
 
-Teaching materials: [paste].
-Questions and my responses: [paste].
-Peer feedback: [paste scores and comments].
+Teaching materials:
+
+<PromptField
+  name="teaching_materials"
+  placeholder="Paste your teaching materials here..."
+  rows={6}
+/>
+
+Questions and my responses:
+
+<PromptField
+  name="questions_and_responses"
+  placeholder="Paste the questions and your responses here..."
+  rows={6}
+/>
+
+Peer feedback:
+
+<PromptField
+  name="peer_feedback"
+  placeholder="Paste peer feedback scores and comments here..."
+  rows={4}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

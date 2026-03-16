@@ -151,30 +151,46 @@ Choose one. The exercises work identically regardless of which you pick. You wil
 A Decision Document containing: your recommendation (one clear sentence), your reasoning (200-300 words), your confidence level (0-100%), the three pieces of missing information that would most change your decision (ranked by impact), and a **Reversal Trigger** ("I would change my recommendation if X turns out to be true" — be specific, not vague).
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="sealed-decision" provider={["chatgpt", "claude", "gemini"]}>
+
 I made a business decision under uncertainty before consulting AI.
-The scenario: [paste scenario].
+
+The scenario:
+
+<PromptField
+  name="scenario"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
+
 Please:
 
 (1) Rate the quality of my recommendation -- is it a reasonable decision
-    given the available information?
+given the available information?
 (2) Evaluate my confidence level -- is it calibrated appropriately to the
-    uncertainty I face, or am I over/underconfident?
+uncertainty I face, or am I over/underconfident?
 (3) Rate my missing information list -- did I identify the most
-    decision-relevant gaps, or did I list generic gaps?
+decision-relevant gaps, or did I list generic gaps?
 (4) Rate my Reversal Trigger -- is it specific and testable, or is it
-    vague? ("I'd change my mind if the market shifts" is vague. "I'd change
-    my mind if their pricing is below $50/month" is specific.)
+vague? ("I'd change my mind if the market shifts" is vague. "I'd change
+my mind if their pricing is below $50/month" is specific.)
 (5) What decision would you make with the same incomplete information?
-    I will compare our reasoning.
+I will compare our reasoning.
 
-My Decision Document: [paste].
+My Decision Document:
+
+<PromptField
+  name="decision_document"
+  placeholder="Paste your Decision Document here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

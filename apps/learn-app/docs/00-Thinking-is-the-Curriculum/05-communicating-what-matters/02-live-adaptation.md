@@ -101,7 +101,8 @@ Record your 3-minute pitch (audio or video). Then prompt AI: "You are a skeptica
 Your prepared pitch (can use AI to help draft). A post-exercise report containing: the unexpected concern revealed, how you adapted in the moment, what you wish you had said differently, and peer feedback on your adaptation quality. The peer fills out an Adaptation Scorecard rating: composure under surprise (1-10), relevance of improvised response (1-10), and whether they felt heard (1-10).
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="live-adaptation" provider={["chatgpt", "claude", "gemini"]}>
+
 I just completed a live communication adaptation exercise. I prepared a pitch
 with AI help, then had to adapt in real-time when a stakeholder raised an
 unexpected concern. Below is my pitch, the unexpected concern, my adaptation,
@@ -109,24 +110,52 @@ and my peer's feedback. Please:
 
 (1) Rate my original pitch's quality and persuasiveness.
 (2) Was the way I adapted to the unexpected concern effective? What would have
-    been a better response?
+been a better response?
 (3) Based on my peer's feedback scores, what specific communication skills
-    should I develop?
+should I develop?
 (4) Give me 3 strategies for handling unexpected objections more effectively
-    in the future.
+in the future.
 (5) Role-play with me: give me another unexpected objection to this same pitch
-    and I will practice responding.
+and I will practice responding.
 
-My pitch: [paste].
-Unexpected concern: [paste].
-My adaptation: [paste].
-Peer feedback: [paste scores and comments].
+My pitch:
+
+<PromptField
+  name="pitch"
+  placeholder="Paste your prepared pitch here..."
+  rows={6}
+/>
+
+Unexpected concern:
+
+<PromptField
+  name="unexpected_concern"
+  placeholder="Paste the unexpected concern here..."
+  rows={2}
+/>
+
+My adaptation:
+
+<PromptField
+  name="adaptation"
+  placeholder="Paste your adaptation response here..."
+  rows={4}
+/>
+
+Peer feedback:
+
+<PromptField
+  name="peer_feedback"
+  placeholder="Paste your peer's scores and comments here..."
+  rows={4}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

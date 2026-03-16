@@ -97,33 +97,47 @@ Your rebuilt solution with a clear "principle audit" showing: which first princi
 
 ---
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
-I originally designed a solution using first principles for this
-problem: [paste problem]. The constraint has now changed: [paste new
-constraint]. I rebuilt my solution and documented which principles
-survived, which collapsed, and which emerged.
+<ExercisePrompt id="rebuild-under-new-constraints" provider={["chatgpt", "claude", "gemini"]}>
+
+I originally designed a solution using first principles for a problem.
+The constraint has now changed. I rebuilt my solution and documented
+which principles survived, which collapsed, and which emerged.
 
 Please:
 (1) Did I correctly identify which principles still hold vs. which
-    collapsed?
+collapsed?
 (2) Is my rebuilt solution logically consistent with the new
-    constraints?
+constraints?
 (3) Now rebuild the solution yourself under the same new constraints.
-    I will compare our approaches.
+I will compare our approaches.
 (4) Rate my adaptability -- did I genuinely rebuild from principles or
-    did I just patch my old solution superficially?
+did I just patch my old solution superficially?
 (5) Rate my overall first principles reasoning across this entire
-    chapter from Beginner / Developing / Proficient / Advanced, with
-    specific feedback on what to improve.
+chapter from Beginner / Developing / Proficient / Advanced, with
+specific feedback on what to improve.
 
-My principle audit: [paste].
-My rebuilt solution: [paste].
+My principle audit:
+
+<PromptField
+  name="principle_audit"
+  placeholder="Paste your principle audit here..."
+  rows={6}
+/>
+
+My rebuilt solution:
+
+<PromptField
+  name="rebuilt_solution"
+  placeholder="Paste your rebuilt solution here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 
@@ -149,7 +163,6 @@ A **First Principles Portfolio** containing: (1) the contrarian argument (writte
 | AI feedback integration and reflections                         |  15%   |
 
 </details>
-
 
 ## Flashcards Study Aid
 

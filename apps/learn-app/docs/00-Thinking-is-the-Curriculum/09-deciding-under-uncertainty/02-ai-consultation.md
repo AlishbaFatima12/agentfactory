@@ -105,31 +105,53 @@ Now use Claude and ChatGPT to research and analyze the scenario from Exercise 1.
 A Consultation Log documenting: every question you asked AI, every response received, and for each — whether you accepted it, what you noticed AI was fabricating or guessing, and how it changed (or did not change) your thinking. An updated Decision Document showing your revised recommendation, revised confidence level, and what specifically caused any changes. Both original and revised versions side by side.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="ai-consultation" provider={["chatgpt", "claude", "gemini"]}>
+
 I made an initial decision under uncertainty, then consulted AI to gather
 more information. Below is my original decision and my updated decision
 after AI consultation. Please:
 
 (1) Did my decision improve after AI consultation, or did AI introduce
-    confusion?
+confusion?
 (2) Review my Consultation Log -- did I correctly identify where AI was
-    fabricating or guessing?
+fabricating or guessing?
 (3) Was my confidence adjustment appropriate?
 (4) Did I update my reversal triggers based on new information? Should I
-    have?
+have?
 (5) Rate my judgment in deciding when to trust AI and when to trust my
-    own analysis: Poor / Fair / Good / Excellent.
+own analysis: Poor / Fair / Good / Excellent.
 (6) What would have been the optimal decision process for this scenario?
 
-Original decision: [paste].
-Consultation Log: [paste].
-Updated decision: [paste].
+Original decision:
+
+<PromptField
+  name="original_decision"
+  placeholder="Paste your original Decision Document here..."
+  rows={6}
+/>
+
+Consultation Log:
+
+<PromptField
+  name="consultation_log"
+  placeholder="Paste your Consultation Log here..."
+  rows={6}
+/>
+
+Updated decision:
+
+<PromptField
+  name="updated_decision"
+  placeholder="Paste your updated Decision Document here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

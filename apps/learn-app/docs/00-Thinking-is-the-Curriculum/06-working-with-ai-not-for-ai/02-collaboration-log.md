@@ -97,31 +97,46 @@ You receive a project: build a market entry strategy for an AI product in a coun
 The completed market entry strategy. The full Collaboration Log in a table format with columns: Prompt Sent | AI Response Summary | Decision (Accept/Reject/Modify) | Justification | What I Added or Changed. The log must contain at least 15 interactions. A summary (150 words) of your collaboration pattern -- what percentage did you accept, reject, modify?
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="collaboration-log" provider={["chatgpt", "claude", "gemini"]}>
+
 I completed a project using AI throughout and maintained a Collaboration Log
 documenting every interaction and decision. Please:
 
 (1) Analyze my log: what percentage of AI suggestions did I accept/reject/modify?
 (2) For each "accept" decision, was it justified or was I being passive? Flag any
-    accepts where I should have pushed back.
+accepts where I should have pushed back.
 (3) For each "reject" decision, was it justified or was I being unnecessarily
-    overriding? Flag any rejects where the AI was actually right.
+overriding? Flag any rejects where the AI was actually right.
 (4) Rate the quality of my justifications -- are they substantive reasoning or
-    vague hand-waving?
+vague hand-waving?
 (5) Rate my overall collaboration maturity from Passive (accept everything) /
-    Reactive (reject randomly) / Strategic (deliberate, justified decisions) /
-    Expert (seamless integration).
+Reactive (reject randomly) / Strategic (deliberate, justified decisions) /
+Expert (seamless integration).
 (6) Give me 3 specific recommendations for improving my AI collaboration based
-    on my patterns.
+on my patterns.
 
-My strategy: [paste].
-My Collaboration Log: [paste full log].
+My strategy:
+
+<PromptField
+  name="strategy"
+  placeholder="Paste your market entry strategy here..."
+  rows={6}
+/>
+
+My Collaboration Log:
+
+<PromptField
+  name="collaboration_log"
+  placeholder="Paste your full Collaboration Log here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

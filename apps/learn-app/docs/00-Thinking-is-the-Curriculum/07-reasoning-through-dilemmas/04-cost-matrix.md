@@ -105,7 +105,8 @@ After all three exercises, write a formal Decision Memo (500-700 words): your fi
 Draft 1 Decision Memo (before AI review). Draft 2 (after AI review). Draft 3 (final). An evolution tracker showing what changed between each draft and why. A final Confidence Statement: has your confidence increased, decreased, or stayed the same since Exercise 1, and why?
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="cost-matrix" provider={["chatgpt", "claude", "gemini"]}>
+
 I have completed an entire ethical reasoning chapter: I locked a position,
 survived three rounds of adversarial challenge, argued the opposite side,
 and now I am writing a Decision Memo. This is my Draft 1.
@@ -113,22 +114,43 @@ and now I am writing a Decision Memo. This is my Draft 1.
 Please:
 (1) Rate the overall quality of my ethical reasoning in this memo from 1-10.
 (2) Am I honestly representing the strongest arguments against my position,
-    or am I building straw men?
+or am I building straw men?
 (3) Is my stakeholder cost analysis complete and honest?
 (4) Are my reversal conditions specific and testable, or vague and evasive?
 (5) Compare this memo to my original Position Lock from Exercise 1 -- has my
-    thinking matured? In what ways?
+thinking matured? In what ways?
 (6) Give me specific revision suggestions for Draft 2.
 
-My original Position Lock: [paste].
-My three-round adversarial exchange: [paste key points].
-My Draft 1 memo: [paste].
+My original Position Lock:
+
+<PromptField
+  name="original_position_lock"
+  placeholder="Paste your original Position Lock from Exercise 1 here..."
+  rows={6}
+/>
+
+My three-round adversarial exchange:
+
+<PromptField
+  name="adversarial_exchange"
+  placeholder="Paste key points from your adversarial exchange here..."
+  rows={6}
+/>
+
+My Draft 1 memo:
+
+<PromptField
+  name="draft_1_memo"
+  placeholder="Paste your Draft 1 Decision Memo here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>

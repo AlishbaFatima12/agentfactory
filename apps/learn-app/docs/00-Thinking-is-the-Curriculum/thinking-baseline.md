@@ -101,7 +101,8 @@ Without any AI tools, write responses to the following five tasks. Spend roughly
 
 ## AI Baseline Check
 
-```text title="AI Baseline Check -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="thinking-baseline" provider={["chatgpt", "claude", "gemini"]}>
+
 I am about to begin a 10-chapter course on thinking skills. Before I start,
 I completed a baseline assessment with no AI help. Please evaluate each of
 my 5 responses and then complete the Thinking Score Card.
@@ -111,13 +112,13 @@ Rate each response individually, then provide the Score Card.
 Task-specific ratings:
 (1) Question quality -- are my 5 questions diagnostic or generic? (1-10)
 (2) Error detection -- did I find the real problems with the "15% accuracy"
-    claim? (1-10)
+claim? (1-10)
 (3) Systems thinking -- are my second-order consequences genuinely
-    non-obvious? (1-10)
+non-obvious? (1-10)
 (4) Ethical reasoning -- is my position clear, is my stakeholder analysis
-    honest? (1-10)
+honest? (1-10)
 (5) Decision confidence -- is my confidence calibrated to my
-    uncertainty? (1-10)
+uncertainty? (1-10)
 
 Then complete the THINKING SCORE CARD for my overall baseline:
 Independent Thinking (1-10), Critical Evaluation (1-10),
@@ -127,8 +128,15 @@ Calculate my Baseline Average (average of the 5 Score Card dimensions).
 
 I will repeat this exact exercise after completing all 10 chapters.
 
-Here are my responses: [paste all 5 responses].
-```
+Here are my responses:
+
+<PromptField
+  name="responses"
+  placeholder="Paste all 5 responses here..."
+  rows={6}
+/>
+
+</ExercisePrompt>
 
 ---
 

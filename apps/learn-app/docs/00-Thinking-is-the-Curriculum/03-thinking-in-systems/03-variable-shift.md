@@ -101,7 +101,8 @@ Your revised cascade map (Draft 3) with every change visually marked: new connec
 
 ---
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="variable-shift" provider={["chatgpt", "claude", "gemini"]}>
+
 I am learning to adapt systems thinking when conditions change.
 The original scenario was: "A major bank replaces all loan officers
 with AI agents." The variable shift is: "The bank is now in a country
@@ -110,34 +111,61 @@ with loan officers."
 
 I have revised my cascade map. Please:
 (1) Did I correctly identify the most important changes caused by the
-    variable shift?
+variable shift?
 (2) Are there cascading consequences of this variable shift that I
-    missed?
+missed?
 (3) Did I incorrectly keep any connections that should have changed?
 (4) Rate how well I adapted vs. how well I would need to adapt -- on
-    a percentage scale, how much of the necessary revision did I
-    capture?
+a percentage scale, how much of the necessary revision did I
+capture?
 (5) Does my change log show genuine systems thinking (understanding
-    WHY things changed) or surface-level adjustment (just swapping
-    labels)?
+WHY things changed) or surface-level adjustment (just swapping
+labels)?
 
-Original merged map: [paste].
-Variable shift: [paste].
-Revised map (Draft 3): [paste].
-Change log: [paste].
+Original merged map:
+
+<PromptField
+  name="original_merged_map"
+  placeholder="Paste your original merged map here..."
+  rows={6}
+/>
+
+Variable shift:
+
+<PromptField
+  name="variable_shift"
+  placeholder="Paste the variable shift description here..."
+  rows={2}
+/>
+
+Revised map (Draft 3):
+
+<PromptField
+  name="revised_map"
+  placeholder="Paste your revised map (Draft 3) here..."
+  rows={6}
+/>
+
+Change log:
+
+<PromptField
+  name="change_log"
+  placeholder="Paste your change log here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 
 ### What This Teaches You
 
 You learn the difference between static analysis and dynamic systems thinking. A student who derived their original map from principles can adapt when conditions change because they understand WHY each connection exists. A student who copied AI's output has to start over because they never understood the mechanisms. The variable shift makes this difference undeniable.
-
 
 ## Flashcards Study Aid
 

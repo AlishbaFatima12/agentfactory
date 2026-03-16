@@ -86,7 +86,7 @@ submission:
 
 **Layers Used:** Layer 4 (Contradiction Challenge), Layer 6 (Iterative Drafts)
 
-{/* Editorial addition: Building On not in source draft, but these cross-references from the writer brief add pedagogical value */}
+{/_ Editorial addition: Building On not in source draft, but these cross-references from the writer brief add pedagogical value _/}
 :::note Building On Previous Exercises
 This exercise tests your ability to handle contradictory input under pressure, building on the **Adversarial Defence** from [Chapter 7, Exercise 2](../07-reasoning-through-dilemmas/02-adversarial-defence.md) and **Rebuild Under New Constraints** from [Chapter 4, Exercise 4](../04-reasoning-from-first-principles/04-rebuild-under-new-constraints.md).
 :::
@@ -99,7 +99,7 @@ The instructor releases new information that directly contradicts the most popul
 You have exactly 20 minutes (timed, enforced) to revise your decision. The exercise is designed to test your reaction under realistic pressure: do you anchor to your first answer, overreact and abandon everything, or adapt proportionally?
 :::
 
-{/* Editorial addition: Solo alternative not in source draft, but necessary for self-study students who have no instructor to release information */}
+{/_ Editorial addition: Solo alternative not in source draft, but necessary for self-study students who have no instructor to release information _/}
 :::tip Solo Learner Alternative
 If you are working alone, generate your own contradictory information by prompting AI: "Given this scenario [paste], generate one piece of new information that would directly contradict the most common recommendation. Make it specific and credible." Then start your 20-minute timer.
 :::
@@ -110,34 +110,70 @@ If you are working alone, generate your own contradictory information by prompti
 Your revised Decision Document (Draft 3) showing your response to the new information. A Process Document answering: Did the new information trigger your Reversal Trigger? Did you update proportionally (not overreact)? Did you integrate the new information with your existing analysis or start from scratch? A Calibration Check comparing your original confidence level, your post-consultation confidence level, and your post-drop confidence level.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="information-drop" provider={["chatgpt", "claude", "gemini"]}>
+
 I made a decision under uncertainty, consulted AI, then received new
 contradictory information. I had 20 minutes to revise. Below is my
 complete decision trail: original -> post-consultation ->
 post-information-drop. Please:
 
 (1) Rate my adaptation: did I respond appropriately to the new
-    information?
+information?
 (2) Did I overreact (completely abandon my position), underreact (ignore
-    relevant evidence), or adapt proportionally?
+relevant evidence), or adapt proportionally?
 (3) Was my confidence calibration appropriate at each stage?
 (4) Did I anchor to my initial decision (bad) or revise based on evidence
-    (good)?
+(good)?
 (5) Rate my overall decision-making under uncertainty across all three
-    stages from Beginner / Developing / Proficient / Advanced, with
-    specific feedback.
+stages from Beginner / Developing / Proficient / Advanced, with
+specific feedback.
 
-Original decision: [paste].
-Post-consultation decision: [paste].
-New information: [paste].
-Post-drop decision: [paste].
-Process document: [paste].
+Original decision:
+
+<PromptField
+  name="original_decision"
+  placeholder="Paste your original Decision Document here..."
+  rows={6}
+/>
+
+Post-consultation decision:
+
+<PromptField
+  name="post_consultation_decision"
+  placeholder="Paste your post-consultation decision here..."
+  rows={6}
+/>
+
+New information:
+
+<PromptField
+  name="new_information"
+  placeholder="Paste the new contradictory information here..."
+  rows={4}
+/>
+
+Post-drop decision:
+
+<PromptField
+  name="post_drop_decision"
+  placeholder="Paste your post-drop revised decision here..."
+  rows={6}
+/>
+
+Process document:
+
+<PromptField
+  name="process_document"
+  placeholder="Paste your Process Document here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

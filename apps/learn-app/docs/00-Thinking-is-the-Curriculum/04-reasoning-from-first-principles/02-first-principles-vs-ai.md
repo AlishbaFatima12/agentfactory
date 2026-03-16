@@ -122,7 +122,8 @@ A First Principles Worksheet containing: (1) the base constraints you identified
 
 ---
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="first-principles-vs-ai" provider={["chatgpt", "claude", "gemini"]}>
+
 I solved a novel problem using first principles reasoning without any
 AI or internet assistance. The problem: "Design a fair system for
 distributing limited AI tutoring access across a school district of
@@ -130,25 +131,32 @@ distributing limited AI tutoring access across a school district of
 
 Below is my First Principles Worksheet. Please:
 (1) Evaluate my constraint identification -- did I find the real base
-    constraints or did I miss critical ones?
+constraints or did I miss critical ones?
 (2) Review my assumption list -- which assumptions are reasonable and
-    which are questionable? What hidden assumptions did I not list?
+which are questionable? What hidden assumptions did I not list?
 (3) Does my solution logically follow from my stated constraints, or
-    are there gaps in the derivation?
+are there gaps in the derivation?
 (4) Rate my solution's originality -- is this something you would
-    generate if prompted directly, or does it show genuine independent
-    reasoning?
+generate if prompted directly, or does it show genuine independent
+reasoning?
 (5) What is the single biggest flaw in my solution that I need to
-    address?
+address?
 (6) Now solve the same problem yourself. I will compare our approaches.
 
-My worksheet: [paste your First Principles Worksheet].
+My worksheet:
+
+<PromptField
+  name="worksheet"
+  placeholder="Paste your First Principles Worksheet here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 
@@ -179,7 +187,6 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn what it feels like to reason from nothing — no patterns to borrow, no AI to lean on. Comparing your solution to AI's reveals whether you produced genuine first-principles thinking or unconsciously borrowed familiar patterns. The constraint identification skill becomes foundational for every design and architecture decision in the rest of the book.
-
 
 ## Flashcards Study Aid
 

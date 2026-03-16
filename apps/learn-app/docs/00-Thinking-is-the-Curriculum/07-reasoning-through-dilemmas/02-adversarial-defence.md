@@ -103,14 +103,28 @@ Feed your position from Exercise 1 into Claude with a specific adversarial promp
 The complete three-round exchange: Round 1 AI attack, then your defence (written without AI), then Round 2 AI attack, then your defence, then Round 3 AI attack, then your defence. A Position Tracker showing whether your position held, shifted, or reversed, with the exact reasoning at each round. A reflection (150 words) on which counter-argument was hardest to answer and why.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="adversarial-defence" provider={["chatgpt", "claude", "gemini"]}>
+
 ROUND 1: I hold the following position on an ethical dilemma. Attack this
 position as aggressively and specifically as possible. Do not be balanced.
 Find the weakest points and exploit them. Present exactly 3 counter-arguments,
 each targeting a different vulnerability in my reasoning.
 
-Dilemma: [paste dilemma].
-My position and arguments: [paste].
+Dilemma:
+
+<PromptField
+  name="dilemma"
+  placeholder="Paste your chosen dilemma here..."
+  rows={2}
+/>
+
+My position and arguments:
+
+<PromptField
+  name="position_and_arguments"
+  placeholder="Paste your position and arguments here..."
+  rows={6}
+/>
 
 ---
 
@@ -118,7 +132,13 @@ ROUND 2 (after your written defence):
 Here is my defence against your counter-arguments. Attack my defence -- find
 the weakest points in my responses and press harder.
 
-My defence: [paste].
+My defence:
+
+<PromptField
+  name="defence_summary"
+  placeholder="Paste your defence summary here..."
+  rows={6}
+/>
 
 ---
 
@@ -128,13 +148,12 @@ final challenge and then rate my overall performance:
 Argument Strength (1-10), Intellectual Courage (1-10),
 Adaptability (1-10), Honesty (1-10).
 
-My defence: [paste].
-
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>

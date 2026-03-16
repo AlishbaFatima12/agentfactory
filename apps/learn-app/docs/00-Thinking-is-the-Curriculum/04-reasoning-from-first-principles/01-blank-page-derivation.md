@@ -129,7 +129,8 @@ A 500-word contrarian argument (written without AI) identifying at least 3 speci
 
 ---
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="blank-page-derivation" provider={["chatgpt", "claude", "gemini"]}>
+
 I wrote a contrarian argument against the common advice that "startups
 should build an MVP before investing in scale." I wrote this entirely
 without AI assistance.
@@ -137,30 +138,36 @@ without AI assistance.
 Please:
 (1) Rate my argument's logical rigor from 1-10.
 (2) Are my 3+ conditions genuinely situations where the MVP approach
-    fails, or am I stretching? For each, rate plausibility from 1-10.
+fails, or am I stretching? For each, rate plausibility from 1-10.
 (3) Did I reason from first principles (deriving from base constraints)
-    or from counter-examples (just citing cases where it did not work)?
-    These are different -- explain the difference using my work.
+or from counter-examples (just citing cases where it did not work)?
+These are different -- explain the difference using my work.
 (4) Identify the strongest point in my argument and explain why it
-    works.
+works.
 (5) Identify the weakest point and explain how to strengthen it.
 (6) Suggest 2 additional conditions I missed where the MVP approach
-    genuinely fails.
+genuinely fails.
 
-My argument: [paste your 500-word argument].
+My argument:
+
+<PromptField
+  name="argument"
+  placeholder="Paste your 500-word argument here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 
 ### What This Teaches You
 
 You learn the difference between reasoning from principles and reasoning from examples. AI feedback reveals whether your contrarian argument was genuinely derived from constraints or was just a collection of counter-examples — and teaches you why the distinction matters.
-
 
 ## Flashcards Study Aid
 

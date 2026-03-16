@@ -94,31 +94,38 @@ The time pressure simulates real-world decision-making where you must quickly as
 A table with 20 rows: the AI claim, your confidence rating (0-100%), the verified truth status (accurate / inaccurate / partially accurate), your source for verification, and whether your confidence was calibrated (correct), overconfident (high confidence + wrong), or underconfident (low confidence + right). A Confidence Calibration Chart plotting your ratings against reality. A reflection (200 words) analyzing your calibration patterns.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="confidence-calibration" provider={["chatgpt", "claude", "gemini"]}>
+
 I am a student calibrating my ability to judge AI accuracy. I rated my
 confidence on 20 AI-generated claims, then verified each one. Below is my
 complete calibration table. Please:
 
 (1) Review my verification of each claim -- did I correctly determine which
-    claims were accurate and which were not? Flag any claims I may have
-    verified incorrectly.
+claims were accurate and which were not? Flag any claims I may have
+verified incorrectly.
 (2) Calculate my calibration score: for claims I rated 80%+ confidence,
-    what percentage were actually correct? For claims I rated below 40%,
-    what percentage were actually incorrect?
+what percentage were actually correct? For claims I rated below 40%,
+what percentage were actually incorrect?
 (3) Identify my specific calibration weaknesses -- which topics or claim
-    types am I most overconfident about? Underconfident about?
+types am I most overconfident about? Underconfident about?
 (4) Give me 3 specific strategies to improve my calibration based on
-    my patterns.
+my patterns.
 (5) Rate my overall calibration from Poor / Fair / Good / Excellent.
 
-My calibration table: [paste full table with confidence ratings and
-verification results].
+My calibration table:
+
+<PromptField
+  name="calibration_table"
+  placeholder="Paste your full calibration table with confidence ratings and verification results here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

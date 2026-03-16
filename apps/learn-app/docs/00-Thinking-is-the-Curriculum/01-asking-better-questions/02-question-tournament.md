@@ -96,32 +96,61 @@ Generate your 15 questions, then prompt AI: "You are my study partner. Generate 
 Your 15 original questions (written without AI). Your partner's 15 questions with your ranking and justification for each. A comparison table showing the top 10 questions, the AI responses from both tools, and a column marking each as "useful/actionable" or "generic/filler" with explanation.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="question-tournament" provider={["chatgpt", "claude", "gemini"]}>
+
 I am learning to evaluate question quality. Below are two sets of questions
 about the same business scenario -- one set written by me and one by my
 partner. I have also included the AI responses each question generated.
 Please:
 
 (1) Evaluate which set of questions was overall more diagnostic and
-    explain why.
+explain why.
 (2) Identify the 3 strongest questions across both sets and explain what
-    makes them effective.
+makes them effective.
 (3) Identify the 3 weakest questions and explain what makes them
-    unproductive.
+unproductive.
 (4) Were there any questions that seemed good on paper but produced
-    generic AI responses? Explain why this happened.
+generic AI responses? Explain why this happened.
 (5) Give me specific feedback on how to improve my weakest questions.
 
-Scenario: [paste scenario].
-My questions: [paste].
-Partner's questions: [paste].
-AI responses: [paste comparison table].
+Scenario:
+
+<PromptField
+  name="scenario"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
+
+My questions:
+
+<PromptField
+  name="my_questions"
+  placeholder="Paste your questions here..."
+  rows={6}
+/>
+
+Partner's questions:
+
+<PromptField
+  name="partners_questions"
+  placeholder="Paste your partner's questions here..."
+  rows={6}
+/>
+
+AI responses:
+
+<PromptField
+  name="comparison_table"
+  placeholder="Paste your comparison table here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

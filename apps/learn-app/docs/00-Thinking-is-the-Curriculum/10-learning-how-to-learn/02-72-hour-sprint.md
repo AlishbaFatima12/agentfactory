@@ -120,32 +120,54 @@ A competent analysis of the assigned problem in your new domain (500-800 words).
 | Hour 3 |                |               |             |                    |                 |                                                   |
 | ...    |                |               |             |                    |                 |                                                   |
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
-I have been learning [assigned domain] for 72 hours from scratch. I
+<ExercisePrompt id="72-hour-sprint" provider={["chatgpt", "claude", "gemini"]}>
+
+I have been learning an assigned domain for 72 hours from scratch. I
 produced an analysis of a specific problem and maintained a complete
 Learning Log. Please:
 
 (1) Rate the competence of my analysis -- would a domain professional
-    consider this beginner, intermediate, or passable work? What errors
-    did I make that reveal a beginner's misunderstanding?
+consider this beginner, intermediate, or passable work? What errors
+did I make that reveal a beginner's misunderstanding?
 (2) Analyze my Learning Log: was my learning path efficient? Where did I
-    waste time? Where did I make productive pivots?
+waste time? Where did I make productive pivots?
 (3) Rate my AI usage throughout the sprint: did I use AI as a learning
-    accelerator or a crutch? Did I verify what AI taught me or blindly
-    accept it?
+accelerator or a crutch? Did I verify what AI taught me or blindly
+accept it?
 (4) Identify the 3 biggest knowledge gaps remaining in my analysis.
 (5) Based on my Learning Log, rate my meta-learning skill from
-    Beginner / Developing / Proficient / Advanced.
+Beginner / Developing / Proficient / Advanced.
 
-My analysis: [paste].
-My Learning Log: [paste].
-Mid-point reflection: [paste].
+My analysis:
+
+<PromptField
+  name="analysis"
+  placeholder="Paste your domain analysis here..."
+  rows={6}
+/>
+
+My Learning Log:
+
+<PromptField
+  name="learning_log"
+  placeholder="Paste your Learning Log here..."
+  rows={6}
+/>
+
+Mid-point reflection:
+
+<PromptField
+  name="midpoint_reflection"
+  placeholder="Paste your mid-point reflection here..."
+  rows={4}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

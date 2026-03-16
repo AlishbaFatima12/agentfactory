@@ -101,38 +101,52 @@ Your expanded assumption list (written before AI). The AI-identified assumptions
 
 ---
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="assumption-autopsy" provider={["chatgpt", "claude", "gemini"]}>
+
 I am doing an assumption autopsy on my own solution. I have listed my
 assumptions, and I also asked Claude and ChatGPT to identify
 assumptions I missed. Below is my merged assumption map.
 
 Please:
 (1) Are there STILL more hidden assumptions that none of us -- neither
-    I nor the other AI tools -- identified?
+I nor the other AI tools -- identified?
 (2) For each assumption in my map, rate the risk level (low / medium /
-    high) -- what happens to my solution if this assumption is wrong?
+high) -- what happens to my solution if this assumption is wrong?
 (3) Which of my assumptions are actually testable before implementing
-    the solution?
+the solution?
 (4) Rate my self-awareness -- what percentage of the total assumptions
-    did I find on my own before AI help?
+did I find on my own before AI help?
 (5) Give me a strategy for improving my ability to identify hidden
-    assumptions in future work.
+assumptions in future work.
 
-My solution: [paste].
-My assumption map: [paste full merged map with categories].
+My solution:
+
+<PromptField
+  name="solution"
+  placeholder="Paste your solution here..."
+  rows={6}
+/>
+
+My assumption map:
+
+<PromptField
+  name="assumption_map"
+  placeholder="Paste your full merged assumption map with categories here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 
 ### What This Teaches You
 
 You learn that every solution is built on assumptions you did not know you were making. The merger reveals a pattern: you catch assumptions about your own context (cultural, personal, professional) that AI misses, while AI catches structural assumptions you take for granted. This complementary awareness is one of the most valuable outcomes of human-AI collaboration.
-
 
 ## Flashcards Study Aid
 

@@ -96,31 +96,46 @@ If you cannot pair with a domain partner, choose two domains: one you know well 
 The AI-generated analysis of your domain with line-by-line Error Taxonomy annotations. A separate document listing: errors you caught because of your domain expertise that a non-expert would miss, and errors you suspect exist but cannot confirm without more research. Your partner's annotated output with your verification notes. A reflection (200 words) on the difference between detecting errors in your domain vs. your partner's domain.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="build-it-break-it" provider={["chatgpt", "claude", "gemini"]}>
+
 I am a student testing my error detection skills. I asked AI to analyze
-a topic I am an expert in: [your domain]. I then annotated the response
+a topic I am an expert in. I then annotated the response
 with every error I found using this taxonomy: factual error, logical gap,
 false confidence, missing context, correlation-causation confusion, outdated
 information, fabricated citation, cultural blind spot. Please:
 
 (1) For each error I identified, confirm whether it is a genuine error or
-    a false positive, and explain your reasoning.
+a false positive, and explain your reasoning.
 (2) Are there errors in the original AI analysis that I missed? List them
-    with categories.
+with categories.
 (3) Rate my overall error detection accuracy.
 (4) Which error categories am I strongest and weakest at detecting in my
-    own domain?
+own domain?
 (5) Rate the depth of my annotations -- am I just flagging errors or am I
-    explaining WHY they are errors?
+explaining WHY they are errors?
 
-AI analysis: [paste].
-My annotations: [paste].
+AI analysis:
+
+<PromptField
+  name="ai_analysis"
+  placeholder="Paste the AI analysis here..."
+  rows={6}
+/>
+
+My annotations:
+
+<PromptField
+  name="annotations"
+  placeholder="Paste your annotations here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ---
 

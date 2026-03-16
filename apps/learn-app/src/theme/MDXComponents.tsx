@@ -16,6 +16,8 @@ import {
   LinuxContent,
 } from "@/components/OSTabs";
 import ExerciseCard from "@/components/ExerciseCard";
+import ExercisePrompt from "@/components/ExercisePrompt";
+import PromptField from "@/components/ExercisePrompt/PromptField";
 import LazyFlashcards from "@/components/flashcards/LazyFlashcards";
 
 export default {
@@ -41,6 +43,9 @@ export default {
   WindowsContent,
   MacOSContent,
   LinuxContent,
+  // Interactive prompt builder for AI exercises
+  ExercisePrompt,
+  PromptField,
   // Flashcards with FSRS v6 spaced repetition
   Flashcards: LazyFlashcards,
 };

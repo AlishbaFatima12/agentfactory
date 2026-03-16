@@ -143,29 +143,45 @@ Choose one. The exercises work identically regardless of which you pick.
 A Position Lock document containing: your clear position statement (one sentence), your three strongest arguments with evidence or reasoning for each, a Stakeholder Cost Matrix listing every stakeholder group and how your decision affects them (who benefits, who is harmed, who is ignored), and a Confidence Statement rating how certain you are (0-100%) with an explanation of what would change your mind.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="position-lock" provider={["chatgpt", "claude", "gemini"]}>
+
 I took a position on an ethical dilemma before consulting AI.
-The dilemma: [paste dilemma].
+
+The dilemma:
+
+<PromptField
+  name="dilemma"
+  placeholder="Paste your chosen dilemma here..."
+  rows={2}
+/>
+
 Please:
 
 (1) Rate the logical strength of each of my three arguments from 1-10.
 (2) Evaluate my Stakeholder Cost Matrix -- did I identify all affected groups?
-    Am I honest about who bears the cost?
+Am I honest about who bears the cost?
 (3) Is my confidence level appropriate given the strength of my arguments,
-    or am I overconfident/underconfident?
+or am I overconfident/underconfident?
 (4) What is the single strongest counter-argument to my position that I need
-    to be prepared to face?
+to be prepared to face?
 (5) Are there stakeholder groups I completely missed?
 (6) Give me a preliminary grade: Position Clarity (1-10), Argument Strength
-    (1-10), Stakeholder Awareness (1-10), Intellectual Honesty (1-10).
+(1-10), Stakeholder Awareness (1-10), Intellectual Honesty (1-10).
 
-My Position Lock: [paste full document].
+My Position Lock:
+
+<PromptField
+  name="position_lock"
+  placeholder="Paste your full Position Lock document here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>

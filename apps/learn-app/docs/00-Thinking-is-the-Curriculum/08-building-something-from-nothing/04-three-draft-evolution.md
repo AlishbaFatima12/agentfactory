@@ -104,39 +104,75 @@ Produce your Draft 3 (final version) after reflecting on all AI feedback, peer d
 All three drafts clearly labeled (Draft 1: unassisted, Draft 2: AI-collaborated, Draft 3: final reflection). An Evolution Tracker showing for each transition (1 to 2 and 2 to 3): what was added, what was removed, what was changed, and the reasoning for each change. A final reflection (200 words): What did you create that AI could not have? What does that teach you about where human value lives?
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="three-draft-evolution" provider={["chatgpt", "claude", "gemini"]}>
+
 I produced three drafts of a solution: Draft 1 (entirely unassisted),
 Draft 2 (AI-collaborated), and Draft 3 (final, after reflection and
 feedback).
 
 Please:
 (1) Rate the quality improvement from Draft 1 to 2 to 3 on a scale of
-    1-10 for each transition.
+1-10 for each transition.
 (2) Was the improvement from Draft 1 to Draft 2 primarily AI-driven or
-    human-driven? Was the improvement from Draft 2 to Draft 3 primarily
-    AI-driven or human-driven?
+human-driven? Was the improvement from Draft 2 to Draft 3 primarily
+AI-driven or human-driven?
 (3) Identify the single strongest evolution in my thinking across the
-    three drafts.
+three drafts.
 (4) Is Draft 3 genuinely the best version, or did I lose something
-    valuable from an earlier draft?
+valuable from an earlier draft?
 (5) Rate my overall creative process from
-    Passive (AI did the thinking) /
-    Active (I directed, AI assisted) /
-    Generative (I created, AI refined).
+Passive (AI did the thinking) /
+Active (I directed, AI assisted) /
+Generative (I created, AI refined).
 (6) Rate my final reflection -- does it show genuine insight into my
-    creative process?
+creative process?
 
-Draft 1: [paste].
-Draft 2: [paste].
-Draft 3: [paste].
-Evolution Tracker: [paste].
-Reflection: [paste].
+Draft 1:
+
+<PromptField
+  name="draft_1"
+  placeholder="Paste your Draft 1 here..."
+  rows={6}
+/>
+
+Draft 2:
+
+<PromptField
+  name="draft_2"
+  placeholder="Paste your Draft 2 here..."
+  rows={6}
+/>
+
+Draft 3:
+
+<PromptField
+  name="draft_3"
+  placeholder="Paste your Draft 3 here..."
+  rows={6}
+/>
+
+Evolution Tracker:
+
+<PromptField
+  name="evolution_tracker"
+  placeholder="Paste your Evolution Tracker here..."
+  rows={6}
+/>
+
+Reflection:
+
+<PromptField
+  name="reflection"
+  placeholder="Paste your final reflection here..."
+  rows={4}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>

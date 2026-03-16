@@ -103,32 +103,54 @@ Using your Draft 1 as a starting point, collaborate with Claude and ChatGPT to d
 Your Draft 2 (the improved solution after AI collaboration). The full Creation Log in table format: Interaction # | My Prompt | AI Response Summary | Decision (Accept/Reject/Modify/New Idea) | Attribution (Human/AI/Synthesis) | What I Added or Changed. The log must show at least 10 interactions. A brief note (100 words) identifying the single most valuable contribution AI made and the single most valuable contribution you made.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="creation-log" provider={["chatgpt", "claude", "gemini"]}>
+
 I am comparing my original unassisted solution (Draft 1) with my
 AI-collaborated version (Draft 2). I also have a Creation Log
 documenting every interaction.
 
 Please:
 (1) Compare Draft 1 vs. Draft 2 -- is Draft 2 genuinely better or just
-    longer/more polished? Identify the specific improvements.
+longer/more polished? Identify the specific improvements.
 (2) Analyze my Creation Log: what percentage of the final solution's value
-    came from me vs. AI vs. synthesis?
+came from me vs. AI vs. synthesis?
 (3) Are there places where AI's input actually made my solution worse
-    (more generic, less original)?
+(more generic, less original)?
 (4) Identify the elements in Draft 2 that are most original -- things AI
-    would not produce if given only the original problem.
+would not produce if given only the original problem.
 (5) Rate my collaboration quality: was I leading the process or following
-    AI's lead?
+AI's lead?
 
-Draft 1: [paste].
-Draft 2: [paste].
-Creation Log: [paste].
+Draft 1:
+
+<PromptField
+  name="draft_1"
+  placeholder="Paste your Draft 1 here..."
+  rows={6}
+/>
+
+Draft 2:
+
+<PromptField
+  name="draft_2"
+  placeholder="Paste your Draft 2 here..."
+  rows={6}
+/>
+
+Creation Log:
+
+<PromptField
+  name="creation_log"
+  placeholder="Paste your Creation Log here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>

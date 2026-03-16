@@ -103,12 +103,17 @@ Submit your Draft 2. Ask AI the key originality question: could you have produce
 Your Draft 2 (from Exercise 2). The AI-generated independent solution (produced without seeing your work). A Divergence Analysis (200-300 words) identifying: where your solution and AI's solution overlap (these are likely AI-driven ideas), where they diverge (these are your original contributions), and what your solution has that AI's does not (this is your unique creative value).
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<ExercisePrompt id="the-originality-test" provider={["chatgpt", "claude", "gemini"]}>
+
 I want to test the originality of my solution. Here is the original
 problem ONLY (ignore everything I have submitted before in this
 conversation):
 
-[paste your chosen scenario]
+<PromptField
+  name="scenario"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
 
 Generate your best solution to this problem without any prior context
 from me.
@@ -116,15 +121,21 @@ from me.
 [GET RESPONSE, THEN FOLLOW UP:]
 
 Now here is my solution that I developed through a combination of
-independent thinking and AI collaboration: [paste Draft 2].
+independent thinking and AI collaboration:
+
+<PromptField
+  name="draft_2"
+  placeholder="Paste your Draft 2 here..."
+  rows={6}
+/>
 
 Please:
 (1) Calculate the divergence: what percentage of my solution overlaps
-    with yours vs. is genuinely different?
+with yours vs. is genuinely different?
 (2) Identify the 3 most original elements of my solution -- ideas you
-    would not have generated independently.
+would not have generated independently.
 (3) Identify elements of my solution that are nearly identical to your
-    independent version -- these likely came from AI, not from me.
+independent version -- these likely came from AI, not from me.
 (4) Rate the overall originality of my contribution from 1-10.
 (5) What is the single most creative idea in my solution?
 
@@ -132,7 +143,8 @@ Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</ExercisePrompt>
 
 ### What This Teaches You
 
