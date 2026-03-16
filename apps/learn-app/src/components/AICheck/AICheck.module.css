@@ -335,6 +335,14 @@
   color: var(--ifm-color-danger);
 }
 
+.charHint {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--ifm-color-emphasis-500);
+  font-style: italic;
+  margin-top: 0.15rem;
+}
+
 /* ── Submit Button ── */
 .submitBtn {
   display: inline-flex;

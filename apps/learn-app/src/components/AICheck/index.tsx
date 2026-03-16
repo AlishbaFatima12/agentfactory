@@ -769,6 +769,11 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
                 maxLength={25000}
               />
               <CharCount current={aiOutput.length} max={25000} />
+              {aiOutput.length > 0 && aiOutput.trim().length < 50 && (
+                <span className={styles.charHint}>
+                  Paste at least 50 characters to submit
+                </span>
+              )}
             </div>
 
             {isLoggedIn ? (

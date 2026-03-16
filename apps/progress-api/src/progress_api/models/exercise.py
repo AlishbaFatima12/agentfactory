@@ -11,7 +11,7 @@ class ExerciseSubmission(SQLModel, table=True):
     __tablename__ = "exercise_submissions"
     __table_args__ = (
         sa.UniqueConstraint("user_id", "chapter_slug", "lesson_slug", name="uq_exercise_user_chapter_lesson"),
-        sa.UniqueConstraint("evidence_hash", name="uq_exercise_evidence_hash"),
+        sa.UniqueConstraint("evidence_hash", "chapter_slug", "lesson_slug", name="uq_exercise_evidence_hash"),
     )
 
     id: int | None = Field(default=None, primary_key=True)

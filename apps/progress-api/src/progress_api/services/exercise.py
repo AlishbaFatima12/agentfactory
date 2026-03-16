@@ -2,6 +2,7 @@
 
 import asyncio
 import hashlib
+import json
 import logging
 import re
 from datetime import date
@@ -76,11 +77,15 @@ async def submit_exercise(
     # 2. RESOLVE chapter
     await resolve_or_create_chapter(session, request.chapter_slug)
 
-    # 3. Compute hash and check cross-student dedup
+    # 3. Compute hash and check cross-student dedup (scoped per lesson)
     evidence_hash = compute_evidence_hash(request.evidence.student_input)
 
     result = await session.execute(
-        select(ExerciseSubmission).where(ExerciseSubmission.evidence_hash == evidence_hash)
+        select(ExerciseSubmission).where(
+            ExerciseSubmission.evidence_hash == evidence_hash,
+            ExerciseSubmission.chapter_slug == request.chapter_slug,
+            ExerciseSubmission.lesson_slug == request.lesson_slug,
+        )
     )
     existing_by_hash = result.scalar_one_or_none()
 
@@ -109,8 +114,6 @@ async def submit_exercise(
     scores_response = ScoreCard(**scores_dict) if scores_dict else None
 
     # 6. INSERT exercise_submission (ON CONFLICT DO NOTHING for race safety)
-    import json as _json
-
     insert_result = await session.execute(
         text(
             "INSERT INTO exercise_submissions"
@@ -123,8 +126,8 @@ async def submit_exercise(
             "user_id": user.id,
             "chapter_slug": request.chapter_slug,
             "lesson_slug": request.lesson_slug,
-            "evidence": _json.dumps(request.evidence.model_dump()),
-            "scores": _json.dumps(scores_dict) if scores_dict else None,
+            "evidence": json.dumps(request.evidence.model_dump()),
+            "scores": json.dumps(scores_dict) if scores_dict else None,
             "feedback": request.feedback,
             "evidence_hash": evidence_hash,
             "xp_earned": 50,
@@ -132,7 +135,9 @@ async def submit_exercise(
     )
     inserted_row = insert_result.first()
     if inserted_row is None:
-        # Race condition: another request already inserted — treat as idempotent
+        # Race condition: another request inserted between our SELECT and INSERT.
+        # Rollback the failed transaction so SQLAlchemy starts a fresh implicit
+        # transaction for the idempotent response queries.
         await session.rollback()
         return await _build_idempotent_response(session, user, request, today)
 

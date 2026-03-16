@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS exercise_submissions (
     xp_earned       INTEGER NOT NULL DEFAULT 50,
     created_at      TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     CONSTRAINT uq_exercise_user_chapter_lesson UNIQUE (user_id, chapter_slug, lesson_slug),
-    CONSTRAINT uq_exercise_evidence_hash UNIQUE (evidence_hash)
+    CONSTRAINT uq_exercise_evidence_hash UNIQUE (evidence_hash, chapter_slug, lesson_slug)
 );
 
 CREATE INDEX IF NOT EXISTS ix_exercise_submissions_user
