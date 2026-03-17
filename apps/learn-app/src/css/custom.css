@@ -347,7 +347,7 @@ html[lang^="ur"] .markdown,
 html[lang^="ur"] .theme-doc-markdown {
   direction: rtl;
   text-align: right;
-  font-family: 'Noto Nastaliq Urdu', serif;
+  font-family: 'Noto Naskh Arabic', 'Noto Nastaliq Urdu', serif;
   line-height: 1.8;
 }
 
