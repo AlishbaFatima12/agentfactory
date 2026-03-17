@@ -17,6 +17,10 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-17
+
+- docs: add PRIMM-AI+ Practice sections to Chapter 44 ([#865](https://github.com/panaversity/agentfactory/pull/865))
+
 ### 2026-03-16
 - feat: Part 0 exercise submission with TDD pipeline ([#863](https://github.com/panaversity/agentfactory/pull/863))
 
