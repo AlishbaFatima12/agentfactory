@@ -124,10 +124,17 @@ A cascade map (hand-drawn scan or digital document) showing: the central decisio
 
 <AICheck id="cascade-mapping" xp={50}>
 
-I am a student learning systems thinking. I was given this scenario:
-"A major bank decides to replace all loan officers with AI agents."
-Before using AI, I created a cascade map tracing consequences across
-five domains with feedback loops.
+I am a student learning systems thinking. Before using AI, I created a
+cascade map tracing consequences of a decision across five domains with
+feedback loops.
+
+The scenario I chose:
+
+<AICheckField
+  name="scenario"
+  placeholder="Paste your chosen scenario here (e.g., 'A major bank decides to replace all loan officers with AI agents.')"
+  rows={2}
+/>
 
 Please:
 (1) Evaluate the completeness of my map -- which important effects or

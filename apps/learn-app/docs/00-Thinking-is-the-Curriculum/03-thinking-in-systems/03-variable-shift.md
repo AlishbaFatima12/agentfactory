@@ -99,12 +99,9 @@ Your revised cascade map (Draft 3) with every change visually marked: new connec
 <AICheck id="variable-shift" xp={50}>
 
 I am learning to adapt systems thinking when conditions change.
-The original scenario was: "A major bank replaces all loan officers
-with AI agents." The variable shift is: "The bank is now in a country
-where 60% of customers are unbanked and rely on personal relationships
-with loan officers."
+I have revised my cascade map after a key variable was changed.
 
-I have revised my cascade map. Please:
+Please:
 (1) Did I correctly identify the most important changes caused by the
 variable shift?
 (2) Are there cascading consequences of this variable shift that I

@@ -126,13 +126,20 @@ A 500-word contrarian argument (written without AI) identifying at least 3 speci
 
 <AICheck id="blank-page-derivation" xp={50}>
 
-I wrote a contrarian argument against the common advice that "startups
-should build an MVP before investing in scale." I wrote this entirely
-without AI assistance.
+I wrote a contrarian argument against a widely accepted best practice,
+entirely without AI assistance.
+
+The best practice I argued against:
+
+<AICheckField
+  name="best_practice"
+  placeholder="Paste your chosen best practice here (e.g., 'Startups should build an MVP before investing in scale.')"
+  rows={2}
+/>
 
 Please:
 (1) Rate my argument's logical rigor from 1-10.
-(2) Are my 3+ conditions genuinely situations where the MVP approach
+(2) Are my 3+ conditions genuinely situations where this best practice
 fails, or am I stretching? For each, rate plausibility from 1-10.
 (3) Did I reason from first principles (deriving from base constraints)
 or from counter-examples (just citing cases where it did not work)?
@@ -140,7 +147,7 @@ These are different -- explain the difference using my work.
 (4) Identify the strongest point in my argument and explain why it
 works.
 (5) Identify the weakest point and explain how to strengthen it.
-(6) Suggest 2 additional conditions I missed where the MVP approach
+(6) Suggest 2 additional conditions I missed where this best practice
 genuinely fails.
 
 My argument:

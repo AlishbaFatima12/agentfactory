@@ -120,9 +120,15 @@ A First Principles Worksheet containing: (1) the base constraints you identified
 <AICheck id="first-principles-vs-ai" xp={50}>
 
 I solved a novel problem using first principles reasoning without any
-AI or internet assistance. The problem: "Design a fair system for
-distributing limited AI tutoring access across a school district of
-200,000 students with wildly unequal resources."
+AI or internet assistance.
+
+The problem I chose:
+
+<AICheckField
+  name="problem"
+  placeholder="Paste your chosen problem here (e.g., 'Design a fair system for distributing limited AI tutoring access across a school district of 200,000 students with wildly unequal resources.')"
+  rows={2}
+/>
 
 Below is my First Principles Worksheet. Please:
 (1) Evaluate my constraint identification -- did I find the real base
