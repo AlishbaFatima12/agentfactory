@@ -8,8 +8,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Globe, ChevronDown } from "lucide-react";
+import { ChevronDown, Check } from "lucide-react";
+import ReactCountryFlag from 'react-country-flag';
 import { getLocaleUrl } from '../utils/getLocaleUrl';
+
+const LOCALE_META: Record<string, { countryCode: string; englishName: string }> = {
+  en: { countryCode: 'US', englishName: 'English' },
+  ur: { countryCode: 'PK', englishName: 'Urdu' },
+  'zh-Hans': { countryCode: 'CN', englishName: 'Simplified Chinese' },
+};
 
 export function LocaleDropdown() {
   const { siteConfig, i18n } = useDocusaurusContext();
@@ -18,7 +25,8 @@ export function LocaleDropdown() {
   const defaultLocale = i18n.defaultLocale;
   const currentLocale = i18n.currentLocale;
   const currentLocaleConfig = i18n.localeConfigs[currentLocale];
-  const currentLabel = currentLocaleConfig?.label || 'English';
+  const nativeLabel = currentLocaleConfig?.label || 'English';
+  const currentMeta = LOCALE_META[currentLocale] ?? { countryCode: 'US', englishName: 'English' };
 
   const buildLocaleUrl = (targetLocale: string): string => {
     const url = getLocaleUrl({
@@ -39,26 +47,41 @@ export function LocaleDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="gap-2 px-2 py-1 text-blue-500 hover:text-blue-600 hover:bg-blue-500/10" title="Change language">
-          <Globe className="w-4 h-4" />
-          <span className="text-sm font-medium">{currentLabel}</span>
-          <ChevronDown className="w-4 h-4" />
+        <Button variant="ghost" dir="ltr" className="gap-2 px-2.5 py-1.5 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded-md" title="Change language">
+          <ReactCountryFlag countryCode={currentMeta.countryCode} svg style={{ width: '1.25em', height: '1.25em', borderRadius: '3px' }} />
+          <span className="font-medium">
+            {currentMeta.englishName}
+            {currentMeta.englishName !== nativeLabel && (
+              <span className="text-muted-foreground font-normal"> ({nativeLabel})</span>
+            )}
+          </span>
+          <ChevronDown className="w-3.5 h-3.5 opacity-60" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48">
+      <DropdownMenuContent align="end" className="w-48 p-1">
         {i18n.locales.map((locale) => {
           const config = i18n.localeConfigs[locale];
+          const localeMeta = LOCALE_META[locale];
           const isActive = locale === currentLocale;
           const localeUrl = buildLocaleUrl(locale);
+          const nativeName = config?.label || locale;
+          const englishName = localeMeta?.englishName ?? nativeName;
+
           return (
             <DropdownMenuItem
               key={locale}
               asChild
               className={isActive ? 'bg-accent' : ''}
             >
-              <a href={localeUrl} className="flex items-center justify-between w-full cursor-pointer">
-                <span>{config?.label || locale}</span>
-                {isActive && <span>✓</span>}
+              <a href={localeUrl} className="flex items-center gap-2.5 px-2 py-2 w-full cursor-pointer rounded-sm">
+                {localeMeta && (
+                  <ReactCountryFlag countryCode={localeMeta.countryCode} svg style={{ width: '1.25em', height: '1.25em', borderRadius: '3px', flexShrink: 0 }} />
+                )}
+                <span className="flex-1 text-sm font-medium">{englishName}</span>
+                {englishName !== nativeName && (
+                  <span className="text-xs text-muted-foreground font-normal" dir={config?.direction || 'ltr'}>{nativeName}</span>
+                )}
+                {isActive && <Check className="w-3.5 h-3.5 text-primary shrink-0" />}
               </a>
             </DropdownMenuItem>
           );
