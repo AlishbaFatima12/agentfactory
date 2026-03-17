@@ -347,18 +347,26 @@ html[lang^="ur"] .markdown,
 html[lang^="ur"] .theme-doc-markdown {
   direction: rtl;
   text-align: right;
-  font-family: 'Noto Naskh Arabic', 'Noto Nastaliq Urdu', serif;
-  line-height: 1.8;
+  font-family: 'Noto Naskh Arabic', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern" 1;
 }
 
-/* Floating action bar — keep at physical bottom-right regardless of document direction */
-html[dir="rtl"] .floating-actions,
-html[lang^="ur"] .floating-actions {
-  right: 2rem !important;
-  left: auto !important;
-  direction: ltr !important;
+/* Body paragraphs — plain, no italic */
+html[lang^="ur"] .markdown p {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 2;
+  margin-bottom: 1.25rem;
 }
 
+/* Headings — bold, no italic */
 html[lang^="ur"] .markdown h1,
 html[lang^="ur"] .markdown h2,
 html[lang^="ur"] .markdown h3,
@@ -367,6 +375,33 @@ html[lang^="ur"] .markdown h5,
 html[lang^="ur"] .markdown h6 {
   direction: rtl;
   text-align: right;
+  font-family: 'Noto Naskh Arabic', serif;
+  font-style: normal;
+  line-height: 1.6;
+}
+html[lang^="ur"] .markdown h1 { font-weight: 700; font-size: 2rem; }
+html[lang^="ur"] .markdown h2 { font-weight: 700; font-size: 1.6rem; }
+html[lang^="ur"] .markdown h3 { font-weight: 700; font-size: 1.35rem; }
+html[lang^="ur"] .markdown h4,
+html[lang^="ur"] .markdown h5,
+html[lang^="ur"] .markdown h6 { font-weight: 600; }
+
+/* Strip any inherited italic from strong/em */
+html[lang^="ur"] .markdown strong {
+  font-weight: 700;
+  font-style: normal;
+}
+html[lang^="ur"] .markdown em {
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Floating action bar — keep at physical bottom-right regardless of document direction */
+html[dir="rtl"] .floating-actions,
+html[lang^="ur"] .floating-actions {
+  right: 2rem !important;
+  left: auto !important;
+  direction: ltr !important;
 }
 
 html[lang^="ur"] .markdown ul,
@@ -380,5 +415,6 @@ html[lang^="ur"] .markdown blockquote {
   border-right: 4px solid var(--ifm-color-emphasis-300);
   padding-left: 0;
   padding-right: var(--ifm-blockquote-padding-horizontal);
+  font-style: normal;
 }
 
