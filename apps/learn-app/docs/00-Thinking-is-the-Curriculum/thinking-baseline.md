@@ -102,6 +102,17 @@ I am about to begin a 10-chapter course on thinking skills. Before I start,
 I completed a baseline assessment with no AI help. Please evaluate each of
 my 5 responses and then complete the Thinking Score Card.
 
+Here is the scenario I responded to:
+
+"A mid-size hospital is considering replacing its emergency room triage nurses with an AI triage system. The AI system is faster, available 24/7, and in trials showed 15% better accuracy in severity classification. However, 40% of ER patients in this hospital are elderly, have limited language proficiency, or are experiencing mental health crises."
+
+The five tasks were:
+(1) Write the 5 most important questions you would ask before making this decision.
+(2) The scenario claims "15% better accuracy." List every reason this claim might be misleading or incomplete.
+(3) Map at least 3 second-order consequences of implementing this AI system that are not mentioned in the scenario.
+(4) Take a position: should the hospital adopt the AI triage system? Identify who benefits, who is harmed, and what you would need to see to change your mind.
+(5) Rate your confidence in your position (0-100%) and list the 3 pieces of missing information that would most change your decision.
+
 Rate each response individually, then provide the Score Card.
 
 Task-specific ratings:
