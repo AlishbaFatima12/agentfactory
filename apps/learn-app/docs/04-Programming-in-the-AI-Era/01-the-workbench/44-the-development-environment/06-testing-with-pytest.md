@@ -302,44 +302,41 @@ Show me:
 
 ### Predict [AI-FREE]
 
-Here is a function with a bug. Before writing a test, predict: what will `add(3, 4)` return? Write your answer and a **confidence score from 1-5**.
+Look at this function -- you do not need to understand every detail, just notice the comment that says "Bug":
 
 ```python static
-def add(a: int, b: int) -> int:
+def add(a, b):
     return a - b  # Bug: subtracts instead of adding
 ```
 
-Now predict: what will pytest's failure output look like when the test `assert add(3, 4) == 7` runs? What symbols will you see?
+Predict: if someone calls `add(3, 4)`, what number will it return? (Hint: the comment tells you the operation is wrong.) Now predict: when pytest runs a test expecting `7` but gets a different number, will the output show a dot (`.`) for pass or the letter `F` for fail? Write your answers and a **confidence score from 1 to 5**.
 
 ### Run
 
-Write the test in `tests/test_main.py` and run `uv run pytest`. Compare the failure output to your prediction. Record your result: predicted output, confidence, actual output. Do you see the `F` character, the `>` line (the failing assertion), and the `E` line (the explanation)? Fix the bug, run pytest again, and watch the dot appear.
+The Practical Application section above had you run `uv run pytest`. Look at the output from that step. Did you see the `F` character (failure), the `>` line (which test failed), and the `E` line (what went wrong)? After the bug was fixed, did the `F` change to a dot (`.`)? These three symbols -- `F`, `>`, `E` -- are the key to reading pytest output.
 
 ### Investigate
 
-Before asking your AI assistant, write a **line-by-line explanation** of what the full verification pipeline (`uv run ruff check . && uv run pyright && uv run pytest`) does and why the order matters. This is your trace artifact.
+Before asking your AI assistant, write in your own words: why does the pipeline run ruff first, then pyright, then pytest? What would happen if you ran pytest first and it failed -- would you have wasted time?
 
-Then run the full verification pipeline: `uv run ruff check . && uv run pyright && uv run pytest`. Ask your AI assistant:
+Then ask your AI assistant:
 
 ```
-Why does this pipeline run ruff FIRST, then pyright, then pytest?
-What goes wrong if I run pytest first? Give me a concrete example
-where the wrong order wastes time.
+Why does the verification pipeline run ruff FIRST, then pyright,
+then pytest? What goes wrong if I run them in a different order?
 ```
 
-Compare the AI's explanation to your own. Apply the **Error Taxonomy**: the bug in `add()` is a *logic error* -- the types are correct (`int` in, `int` out), but the behavior is wrong. Pyright (Rung 2) cannot catch this. Only pytest (Rung 3) can. This is why both rungs of the Verification Ladder exist.
-
-Verify: deliberately introduce a ruff violation (unused import) AND a pytest failure. Run the pipeline. Does it stop at ruff and never reach pytest? That is Axiom IX -- fast failures first.
+Compare the AI's answer to yours. Now think about the **Error Taxonomy**: the bug in the `add` function is not a *type error* -- the types are fine (numbers in, number out). It is a *logic error* -- the code does the wrong thing. Can you think of why pyright would NOT catch this bug, but pytest would? Write your answer before reading on.
 
 ### Modify
 
-Take the SmartNotes `main()` test and modify it **yourself first**. Add a second test that checks edge cases: what does `main()` return when called twice? What about a new function you have not written yet -- write the test first (the specification), then write the function to make it pass. This is TDG from Axiom VII, applied at the smallest scale.
+Try this experiment: add an unused import line (like `import os`) to the top of your `main.py`. **Before running anything**, predict: which tool in the pipeline will catch it -- ruff, pyright, or pytest? Now run the full pipeline: `uv run ruff check . && uv run pyright && uv run pytest`. Did it stop at the first tool (ruff) without reaching pytest? That is Axiom IX in action -- fast checks first, slow checks last. Remove the unused import when done.
 
-### Make [Mastery Gate: Tests First]
+### Make
 
-Write three tests for a function you plan to build in SmartNotes -- a function that does not exist yet. **Write the `assert` statements first** -- these tests are both your specification and your mastery gate; they must exist before any implementation. Then ask your AI assistant to generate the implementation that passes all three tests. Run `uv run pytest`. If the tests pass, you have just completed your first TDG cycle on a real project.
+From memory, without looking at this lesson, answer these questions: (1) What command runs the test suite? (2) What does an `F` in pytest output mean? What does a dot (`.`) mean? (3) What is the difference between a *type error* (caught by pyright) and a *logic error* (caught by pytest)? (4) Why does ruff run before pytest in the pipeline? Write your answers, then check them against the lesson. You do not need to write Python code to pass this gate -- understanding the *tools* is the goal of this chapter.
 
-**Verification Ladder checkpoint:** This exercise is Rung 3 (Tests) in action on your actual workbench. Combined with pyright (Rung 2) and ruff, you now have three automated verification layers protecting your code. The chained pipeline (`ruff check && pyright && pytest`) is Rung 4 -- coordinated verification -- which you will formalize into CI in a later chapter.
+**Verification Ladder checkpoint:** This lesson is Rung 3 (Tests) in action. Combined with pyright at Rung 2 (Types) and ruff, you now have three automated verification layers. The chained pipeline (`ruff check && pyright && pytest`) is Rung 4 (Pipeline) -- coordinated verification -- which you will formalize in Lesson 7.
 
 ---
 

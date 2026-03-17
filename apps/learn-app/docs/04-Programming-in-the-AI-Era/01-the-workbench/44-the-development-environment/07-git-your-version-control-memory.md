@@ -301,73 +301,58 @@ Also write one pytest test for this function.
 
 ### Predict [AI-FREE]
 
-You have just initialized a Git repository and made your first commit. Predict: what will `git log --oneline` show? What will `git show` display? Write down your expectations and a **confidence score from 1-5** before running either command.
+You just initialized a Git repository and made your first commit. Predict: what will `git log --oneline` show -- how many lines, and what will the message say? Write your prediction and a **confidence score from 1 to 5** before running the command.
 
 ### Run
 
-Run `git log --oneline` and `git show`. Compare the output to your predictions and record your result: prediction, confidence, actual output. Then ask your AI assistant to generate a new function:
+Run `git log --oneline` and compare to your prediction. Now ask your AI assistant to generate a small function with a test:
 
 ```
-Write a Python function called count_words that takes a string
-and returns a dictionary mapping each word to how many times
-it appears. Include type annotations for strict pyright mode.
-Also write one pytest test for this function.
+Write a simple Python function and one pytest test for it.
+Include type annotations for strict pyright mode.
 ```
 
-Do not just read the code. Run it through the full pipeline:
+You do not need to understand the generated code. Paste it into the right files, then run the full pipeline:
 
-1. Paste the function into `main.py`
-2. Paste the test into `tests/test_main.py`
-3. Run: `uv run ruff check . && uv run pyright && uv run pytest`
-4. If all three pass: `git add . && git commit -m "feat: add count_words with test"`
+1. Run: `uv run ruff check . && uv run pyright && uv run pytest`
+2. If all three pass: `git add . && git commit -m "feat: add function with test"`
 
-This is the complete PRIMM-AI+ cycle applied to professional development: AI generates, tools verify, you commit.
+This is the core workflow: AI generates code, tools verify it, you commit the verified result.
 
 ### Investigate
-
-Before asking your AI assistant, write a **"why this matters" note**: explain in your own words why History B below is better than History A and what specific information is lost in History A. This is your trace artifact.
 
 Compare these two commit histories:
 
 History A: `"wip"`, `"fix stuff"`, `"asdf"`, `"done"`
 
-History B: `"feat: add count_words function"`, `"fix: handle empty string edge case"`, `"test: add parametrized tests for word counting"`
+History B: `"feat: add greeting function"`, `"fix: handle empty name edge case"`, `"test: add tests for greeting"`
 
-Then ask your AI assistant: "Which history helps me find a bug six months from now? Why?" Compare the AI's explanation to your own note. Connect this to Axiom VIII -- version control as memory. The quality of the memory depends on the quality of the commits.
+In your own words, write why History B is better. What information is lost in History A? Then ask your AI assistant: "Which history helps me find a bug six months from now? Why?" Compare the AI's answer to yours.
 
 ### Parsons Problem: Reconstruct the Professional Workflow
 
-Here are the steps of the complete professional development cycle, in scrambled order. Reconstruct the correct sequence:
+Here are the steps of a complete development cycle, in scrambled order. Put them in the correct sequence:
 
 ```
-git add . && git commit -m "feat: add count_words with test"
+git add . && git commit -m "feat: add function with test"
 uv run pyright
 uv run pytest
-# Write a test specification (assert statements)
 uv run ruff check .
-# Ask AI to generate the implementation
-# Paste function into main.py and test into tests/test_main.py
+# Ask AI to generate the code
+# Paste code into the right files
 ```
 
-**Your task:** Arrange these steps in the correct order. Then answer: why does `ruff check` come before `pyright`? Why does `pyright` come before `pytest`? What happens if you commit before running the pipeline? Write your answers and a confidence score.
+**Your task:** Arrange these in order. Then answer: why does ruff run before pyright? Why does pyright run before pytest? What goes wrong if you commit *before* running the pipeline? Write your answers and a confidence score.
 
 ### Modify
 
-Make a deliberate change to SmartNotes -- add a second function or modify the existing one. **Attempt this yourself first.** Before committing, run the full pipeline. Write a commit message that explains *why* you made the change, not just *what* you changed. Then check: does `git log --oneline` tell a story that a stranger could follow?
+Ask your AI assistant to modify the code it generated earlier (add a small feature or change behavior). Paste the updated code and run the full pipeline again. Before committing, write a commit message that explains *why* you made the change, not just *what* changed. Check `git log --oneline` -- does the history tell a clear story?
 
-### Make [Mastery Gate: Spec First]
+### Make
 
-Complete the full professional cycle from scratch:
+From memory, answer these questions: (1) What three commands make up the verification pipeline, and in what order? (2) What does a good commit message include that "wip" and "fix stuff" do not? (3) What command shows your commit history? (4) Why should you run the pipeline *before* every commit? Write your answers, then check against the lesson.
 
-1. **Write a test specification first** -- this is your mastery gate (the Predict/spec stage)
-2. Ask your AI assistant to generate the implementation
-3. Run the full pipeline: ruff -> pyright -> pytest
-4. If it passes, commit with a descriptive message
-5. If it fails, fix and re-run -- do not commit broken code
-
-This five-step workflow -- spec, generate, verify, fix, commit -- is the PRIMM-AI+ cycle applied to production development. It is how you will work for the rest of this book and beyond.
-
-**Verification Ladder checkpoint:** This lesson completes Rung 4 of the Verification Ladder -- the chained pipeline (`ruff check && pyright && pytest`) running as coordinated infrastructure. Rung 1 was prediction (Chapter 42). Rung 2 was types (Lesson 5). Rung 3 was tests (Lesson 6). Rung 4 is the pipeline. Rung 5 (production observability) comes in a later chapter.
+**Verification Ladder checkpoint:** This lesson completes Rung 4 (Pipeline) of the Verification Ladder -- the chained pipeline (`ruff check && pyright && pytest`) running as coordinated verification. Rung 1 (Prediction) was introduced in Chapter 42. Rung 2 (Types) was pyright in Lesson 5. Rung 3 (Tests) was pytest in Lesson 6. Rung 4 (Pipeline) is the chained command in this lesson. Rung 5 (Observability) comes in a later chapter.
 
 ---
 
