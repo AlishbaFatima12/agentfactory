@@ -298,6 +298,51 @@ Show me:
 
 ---
 
+## PRIMM-AI+ Practice: Testing With pytest
+
+### Predict [AI-FREE]
+
+Here is a function with a bug. Before writing a test, predict: what will `add(3, 4)` return? Write your answer and a **confidence score from 1-5**.
+
+```python static
+def add(a: int, b: int) -> int:
+    return a - b  # Bug: subtracts instead of adding
+```
+
+Now predict: what will pytest's failure output look like when the test `assert add(3, 4) == 7` runs? What symbols will you see?
+
+### Run
+
+Write the test in `tests/test_main.py` and run `uv run pytest`. Compare the failure output to your prediction. Record your result: predicted output, confidence, actual output. Do you see the `F` character, the `>` line (the failing assertion), and the `E` line (the explanation)? Fix the bug, run pytest again, and watch the dot appear.
+
+### Investigate
+
+Before asking your AI assistant, write a **line-by-line explanation** of what the full verification pipeline (`uv run ruff check . && uv run pyright && uv run pytest`) does and why the order matters. This is your trace artifact.
+
+Then run the full verification pipeline: `uv run ruff check . && uv run pyright && uv run pytest`. Ask your AI assistant:
+
+```
+Why does this pipeline run ruff FIRST, then pyright, then pytest?
+What goes wrong if I run pytest first? Give me a concrete example
+where the wrong order wastes time.
+```
+
+Compare the AI's explanation to your own. Apply the **Error Taxonomy**: the bug in `add()` is a *logic error* -- the types are correct (`int` in, `int` out), but the behavior is wrong. Pyright (Rung 2) cannot catch this. Only pytest (Rung 3) can. This is why both rungs of the Verification Ladder exist.
+
+Verify: deliberately introduce a ruff violation (unused import) AND a pytest failure. Run the pipeline. Does it stop at ruff and never reach pytest? That is Axiom IX -- fast failures first.
+
+### Modify
+
+Take the SmartNotes `main()` test and modify it **yourself first**. Add a second test that checks edge cases: what does `main()` return when called twice? What about a new function you have not written yet -- write the test first (the specification), then write the function to make it pass. This is TDG from Axiom VII, applied at the smallest scale.
+
+### Make [Mastery Gate: Tests First]
+
+Write three tests for a function you plan to build in SmartNotes -- a function that does not exist yet. **Write the `assert` statements first** -- these tests are both your specification and your mastery gate; they must exist before any implementation. Then ask your AI assistant to generate the implementation that passes all three tests. Run `uv run pytest`. If the tests pass, you have just completed your first TDG cycle on a real project.
+
+**Verification Ladder checkpoint:** This exercise is Rung 3 (Tests) in action on your actual workbench. Combined with pyright (Rung 2) and ruff, you now have three automated verification layers protecting your code. The chained pipeline (`ruff check && pyright && pytest`) is Rung 4 -- coordinated verification -- which you will formalize into CI in a later chapter.
+
+---
+
 ## Key Takeaways
 
 1. **pytest uses plain `assert` as specifications.** `assert func(3) == 4` means: this code, given 3, must return 4. No special setup, no extra tools. The `assert` keyword is how you express what "correct" means.

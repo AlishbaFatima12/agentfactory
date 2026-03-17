@@ -297,6 +297,80 @@ Also write one pytest test for this function.
 
 ---
 
+## PRIMM-AI+ Practice: Git -- Your Version Control Memory
+
+### Predict [AI-FREE]
+
+You have just initialized a Git repository and made your first commit. Predict: what will `git log --oneline` show? What will `git show` display? Write down your expectations and a **confidence score from 1-5** before running either command.
+
+### Run
+
+Run `git log --oneline` and `git show`. Compare the output to your predictions and record your result: prediction, confidence, actual output. Then ask your AI assistant to generate a new function:
+
+```
+Write a Python function called count_words that takes a string
+and returns a dictionary mapping each word to how many times
+it appears. Include type annotations for strict pyright mode.
+Also write one pytest test for this function.
+```
+
+Do not just read the code. Run it through the full pipeline:
+
+1. Paste the function into `main.py`
+2. Paste the test into `tests/test_main.py`
+3. Run: `uv run ruff check . && uv run pyright && uv run pytest`
+4. If all three pass: `git add . && git commit -m "feat: add count_words with test"`
+
+This is the complete PRIMM-AI+ cycle applied to professional development: AI generates, tools verify, you commit.
+
+### Investigate
+
+Before asking your AI assistant, write a **"why this matters" note**: explain in your own words why History B below is better than History A and what specific information is lost in History A. This is your trace artifact.
+
+Compare these two commit histories:
+
+History A: `"wip"`, `"fix stuff"`, `"asdf"`, `"done"`
+
+History B: `"feat: add count_words function"`, `"fix: handle empty string edge case"`, `"test: add parametrized tests for word counting"`
+
+Then ask your AI assistant: "Which history helps me find a bug six months from now? Why?" Compare the AI's explanation to your own note. Connect this to Axiom VIII -- version control as memory. The quality of the memory depends on the quality of the commits.
+
+### Parsons Problem: Reconstruct the Professional Workflow
+
+Here are the steps of the complete professional development cycle, in scrambled order. Reconstruct the correct sequence:
+
+```
+git add . && git commit -m "feat: add count_words with test"
+uv run pyright
+uv run pytest
+# Write a test specification (assert statements)
+uv run ruff check .
+# Ask AI to generate the implementation
+# Paste function into main.py and test into tests/test_main.py
+```
+
+**Your task:** Arrange these steps in the correct order. Then answer: why does `ruff check` come before `pyright`? Why does `pyright` come before `pytest`? What happens if you commit before running the pipeline? Write your answers and a confidence score.
+
+### Modify
+
+Make a deliberate change to SmartNotes -- add a second function or modify the existing one. **Attempt this yourself first.** Before committing, run the full pipeline. Write a commit message that explains *why* you made the change, not just *what* you changed. Then check: does `git log --oneline` tell a story that a stranger could follow?
+
+### Make [Mastery Gate: Spec First]
+
+Complete the full professional cycle from scratch:
+
+1. **Write a test specification first** -- this is your mastery gate (the Predict/spec stage)
+2. Ask your AI assistant to generate the implementation
+3. Run the full pipeline: ruff -> pyright -> pytest
+4. If it passes, commit with a descriptive message
+5. If it fails, fix and re-run -- do not commit broken code
+
+This five-step workflow -- spec, generate, verify, fix, commit -- is the PRIMM-AI+ cycle applied to production development. It is how you will work for the rest of this book and beyond.
+
+**Verification Ladder checkpoint:** This lesson completes Rung 4 of the Verification Ladder -- the chained pipeline (`ruff check && pyright && pytest`) running as coordinated infrastructure. Rung 1 was prediction (Chapter 42). Rung 2 was types (Lesson 5). Rung 3 was tests (Lesson 6). Rung 4 is the pipeline. Rung 5 (production observability) comes in a later chapter.
+
+---
+
 ## Key Takeaways
 
 1. **Git makes every change reversible.** `git init` creates the repository. `git add .` stages files. `git commit -m "message"` records a snapshot. Every commit is a checkpoint you can return to.
@@ -349,3 +423,39 @@ uv run ruff check . && uv run pyright && uv run pytest
 Your workbench is built. uv manages your project. pyproject.toml holds your configuration. ruff checks your style. pyright checks your types. pytest checks your behavior. Git records your history. Five tools, five axioms, one unified system protecting your code from the moment you start writing it.
 
 In Chapter 45, James and Emma will start reading Python -- learning how to store values, label their types, and combine them into expressions. Every line of code will be checked by ruff, type-checked by pyright, and tested by pytest. The workbench is no longer something you are building. It is something you are using.
+
+---
+
+## Chapter-End Rubric: Self-Assessment
+
+Before proceeding to the quiz and the next chapter, score yourself honestly on the five dimensions of the PRIMM-AI+ chapter-end rubric. This rubric is not a grade -- it is a mirror. It exists so you can see where you stand and direct your practice to the dimensions that need the most work.
+
+**Prediction Accuracy:** How often were your predictions correct during this chapter? Could you predict what `uv init` would create, what ruff would flag, what pyright would catch, and what pytest output would look like -- before running the commands?
+
+| **Developing** | **Competent** | **Fluent** |
+|---|---|---|
+| Predictions were often wrong; tool behavior and output format need more practice | Predictions were mostly correct for straightforward cases; some surprises with strict mode or edge cases | Predictions were consistently accurate; could predict tool output for novel code without running it |
+
+**Trace Quality:** Were your trace artifacts -- line-by-line explanations of `pyproject.toml` sections, "why this fails" notes for tool errors, and pipeline order explanations -- accurate and complete?
+
+| **Developing** | **Competent** | **Fluent** |
+|---|---|---|
+| Trace artifacts were incomplete; needed heavy AI assistance to explain tool output | Trace artifacts were mostly accurate; occasional gaps in understanding tool error formats or rule codes | Trace artifacts were thorough; could explain ruff codes, pyright errors, and pytest output independently |
+
+**Explanation Quality:** Can you explain why each tool exists, which axiom it enforces, and what category of bugs it catches -- in your own words, without referring to the lesson?
+
+| **Developing** | **Competent** | **Fluent** |
+|---|---|---|
+| Can name the five tools but struggles to explain the axiom connection or what each catches | Can explain each tool's purpose and axiom mapping; some difficulty articulating the Verification Ladder connection | Can teach the discipline stack to someone else with examples, explaining why removing any tool leaves a gap |
+
+**Modification Quality:** Were you able to modify `pyproject.toml` configurations, ruff rules, and test specifications on your own -- without AI generating the modification? Were Parsons reconstructions correct?
+
+| **Developing** | **Competent** | **Fluent** |
+|---|---|---|
+| Needed significant AI help for configuration changes; Parsons problems required multiple attempts | Completed most modifications independently; Parsons reconstructions were mostly correct on first attempt | Modified configurations confidently; immediately understood which sections controlled which behavior |
+
+**Independent Make Quality:** Did you produce the Make challenges -- writing `pyproject.toml` from memory, writing tests before implementations, completing the full professional cycle -- without AI assistance for the first attempt?
+
+| **Developing** | **Competent** | **Fluent** |
+|---|---|---|
+| Needed AI to start most Make challenges; produced work only after seeing examples | Started Make challenges independently; needed AI review for completeness | Produced complete, accurate Make artifacts on first attempt; AI review confirmed rather than corrected |

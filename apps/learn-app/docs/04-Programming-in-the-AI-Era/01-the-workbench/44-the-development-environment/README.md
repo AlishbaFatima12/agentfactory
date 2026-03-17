@@ -72,6 +72,18 @@ Each tool in the discipline stack maps directly to an axiom you learned in Chapt
 | pytest  | VII -- Tests Are the Specification | Tests define what "correct" means -- not just that code runs                                 |
 | Git     | VIII -- Version Control is Memory  | Every change tracked, every decision reversible -- even AI-generated code you later regret   |
 
+## PRIMM-AI+ in This Chapter
+
+Every lesson in this chapter includes a **PRIMM-AI+ Practice** section that follows the five-stage learning cycle from Chapter 42. In the previous chapters, you predicted, investigated, and modified conceptual scenarios -- axioms applied to real-world analogies. In this chapter, PRIMM-AI+ becomes fully hands-on:
+
+- **Predict [AI-FREE]**: Before running each tool, you predict its output -- with a confidence score. No AI assistance at this stage.
+- **Run**: You execute the commands and compare results to your predictions, recording what surprised you.
+- **Investigate**: You write trace artifacts (line-by-line explanations, "why this fails" notes) *before* asking AI. Then you verify AI's explanations against real tool output.
+- **Modify**: You change configurations and code *yourself first* -- then use AI to review.
+- **Make**: You produce original work (configurations from memory, tests before code) at mastery gates that prove you can work independently.
+
+Selected lessons include **Parsons Problems** (reconstruct scrambled configurations or workflows), **Verification Ladder checkpoints** (connecting each tool to its rung), and **Error Taxonomy** applications (classifying bugs by type). The chapter ends with a self-assessment rubric in Lesson 7.
+
 ## Chapter Lessons
 
 | Lesson | Title                                       | What You Do                                                   |

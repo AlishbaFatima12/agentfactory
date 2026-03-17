@@ -454,6 +454,60 @@ Explain:
 
 ---
 
+## PRIMM-AI+ Practice: Pyright -- Your Type Safety Net
+
+### Predict [AI-FREE]
+
+Look at this code. Before running pyright, predict: how many type errors will strict mode find? Write your count and a **confidence score from 1-5**.
+
+```python static
+def calculate_total(items, tax_rate, discount):
+    subtotal = sum(item["price"] * item["quantity"] for item in items)
+    tax = subtotal * tax_rate
+    discounted = subtotal - discount
+    return discounted + tax
+```
+
+What type should each parameter be? What is the return type? Write your predictions.
+
+### Run
+
+Open `pyproject.toml` and temporarily change `typeCheckingMode` from `"strict"` to `"standard"`. Run `uv run pyright` and count the errors. Change it back to `"strict"` and run again. Record your result: your predicted error count, your confidence score, the actual count in standard mode, the actual count in strict mode. How many more errors does strict mode catch? This difference is the gap between "mostly checked" and "fully checked."
+
+### Investigate
+
+Before asking your AI assistant, write a **"why this fails" note**: take the first pyright error from your SmartNotes project and explain in your own words what the error means, why pyright flagged it, and what the fix should be. This is your trace artifact.
+
+Then ask your AI assistant:
+
+```
+Pyright reported: [paste the full error message]
+Explain step by step: what file, what line, what did I write
+that caused this, what data did pyright expect, what did it get,
+and how do I fix it?
+```
+
+Compare the AI's explanation to your own note. Apply the **Error Taxonomy**: pyright errors are always *type errors* -- structural mismatches that live on Rung 2 of the Verification Ladder. Note what pyright *cannot* catch: a function that accepts the right types but returns the wrong value is a *logic error*, caught only at Rung 3 (tests).
+
+Verify: make the fix, run pyright again, and confirm the error disappears. Then deliberately introduce a new type error (pass a string where an int is expected) and predict what pyright will say before running it.
+
+### Modify
+
+Take the untyped `calculate_total` function above. Add type annotations **yourself** -- do not ask your AI assistant. Then run `uv run pyright`. Did pyright accept your annotations? If not, read the error, fix the types, and re-run. After you pass, compare your annotations to what the AI would have written:
+
+```
+I added these type annotations to calculate_total: [paste yours].
+Are they correct? Would you have annotated it differently?
+```
+
+### Make [Mastery Gate: Types First]
+
+Write a new function from scratch with complete type annotations. **Write the type signatures before the implementation** -- this is your mastery gate. Include at least one parameter with a complex type (e.g., `list[dict[str, float]]`). Run pyright in strict mode. If it passes clean on the first try, you are beginning to think in types -- the skill Axiom V demands.
+
+**Verification Ladder checkpoint:** Running pyright on your code is Rung 2 of the Verification Ladder in action. You now have automated structural verification for every function you write. The gap that remains -- logic correctness -- is what pytest (Rung 3) fills in the next lesson.
+
+---
+
 ## Key Takeaways
 
 1. **A static type checker analyzes code without running it.** Pyright reads type labels, traces how data moves through your code, and reports every type mismatch before your program executes.

@@ -380,6 +380,41 @@ Use an analogy that does not involve programming.
 
 ---
 
+## PRIMM-AI+ Practice: Installing uv and Creating SmartNotes
+
+### Predict [AI-FREE]
+
+Before running `uv init smartnotes`, predict: what files will it create? Write down your guess along with a **confidence score from 1-5**. Then predict: what is the difference between `uv run main.py` and `python main.py`?
+
+### Run
+
+Run `uv init smartnotes`, then `cd smartnotes && ls -la`. Compare the files to your prediction. Record your result: predicted files, confidence score, actual files, and a note on what surprised you. Now run `uv run main.py` and observe: did two new items (`.venv/` and `uv.lock`) appear? One should be committed to Git and the other should not -- predict which before checking `.gitignore`.
+
+### Investigate
+
+Before asking your AI assistant, write a **line-by-line explanation** of what you think each file in the project directory does. This is your trace artifact -- your understanding made visible before AI assistance.
+
+Then look inside the `.venv/` directory: `ls .venv/`. You will see `bin/` (or `Scripts/` on Windows), `lib/`, and configuration files. Ask your AI assistant:
+
+```
+I ran ls .venv/ and saw: [paste what you saw].
+What is this directory? Why does uv create it automatically
+instead of making me use python -m venv?
+What does uv run do behind the scenes before executing my file?
+```
+
+Compare the AI's explanation to your own. Verify the explanation: try running `python main.py` directly (without `uv run`). Does it work? If your system Python is different from `.python-version`, it might use the wrong version -- and that is exactly what uv prevents.
+
+### Modify
+
+Change `.python-version` from `3.12` to a version you do not have installed. Run `uv run main.py` again. **Predict the outcome before running it.** Does uv install the missing version automatically, or does it report an error? This investigation reveals how `.python-version` enforcement actually works.
+
+### Make
+
+Create a second project called `practice-project` using `uv init`. Without looking at the SmartNotes lesson, set it up from memory: create it, run it, verify the file structure. If you get stuck, check the lesson -- but try from memory first. Retrieval practice is how PRIMM-AI+ builds lasting skill.
+
+---
+
 ## Key Takeaways
 
 1. **uv replaces five tools.** It handles Python version management, virtual environment creation, dependency installation, lockfile generation, and script execution — all through one interface.

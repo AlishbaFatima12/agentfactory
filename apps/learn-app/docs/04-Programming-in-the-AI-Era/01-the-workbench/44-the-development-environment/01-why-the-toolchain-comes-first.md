@@ -228,6 +228,51 @@ of how the tool enforces that axiom in daily development.
 
 ---
 
+## PRIMM-AI+ Practice: Why the Toolchain Comes First
+
+### Predict [AI-FREE]
+
+Before reading further, close this lesson and write down the five tools in the discipline stack and which axiom each one enforces. Do not look at the table. Write what you remember -- even if some are wrong or blank -- along with a **confidence score from 1-5** for how complete and correct you think your mapping is. This is PRIMM-AI+'s Predict stage applied to conceptual knowledge: commit to an answer before checking it, and measure your certainty.
+
+### Run
+
+Now open your AI assistant and check your mapping:
+
+```
+I am learning a five-tool Python discipline stack. From memory,
+here is my mapping of tools to axioms:
+[paste your handwritten list here]
+Check my mapping. For any I got wrong, explain why the correct
+connection exists. For any I got right, give me one concrete
+example of how the tool enforces that axiom in daily development.
+```
+
+Record your result: your original mapping, your confidence score, the AI's corrections, and a note on which connections stuck and which were fuzzy. If your confidence was high but your mapping had gaps, that is a calibration signal -- note it.
+
+### Investigate
+
+Before asking your AI assistant, write a **"why this fails" note** for James's scenario: in your own words, trace his failure through each missing tool. Which tool would have caught which failure? This is your trace artifact.
+
+Then take James's failure scenario from the opening: he wrote `app.py`, ran it on his machine, pushed it, and it broke on Emma's machine. Ask your AI assistant:
+
+```
+What specific problems would each of the five discipline stack tools
+have prevented in James's scenario? Trace his failure through
+each tool: uv, ruff, pyright, pytest, Git.
+```
+
+Compare the AI's answer to your trace artifact. Apply the **Error Taxonomy**: the missing dependencies are a *data/edge-case error* (the code works for one environment but breaks in another), the missing types are a *type error* waiting to happen, and the missing tests mean *specification errors* go undetected.
+
+### Modify
+
+Take the axiom-tool mapping table and modify it: add a sixth row. What tool would you need to enforce Axiom X (Observability Extends Verification)? What does that tool look like? Is it something you install in your development environment, or something that operates in production? **Attempt your answer yourself first**, then ask your AI assistant to evaluate your suggestion.
+
+### Make
+
+Write a one-paragraph explanation -- in your own words, without looking at this lesson -- of why the toolchain comes before syntax. Imagine you are explaining it to a friend who wants to start learning Python. Then show your paragraph to your AI assistant and ask: "What did I miss? What would you add?" This is the Make stage: producing original work, then using AI to review it.
+
+---
+
 ## Key Takeaways
 
 1. **Professional Python development starts with tooling, not syntax.** The five tools in the discipline stack create the infrastructure that makes reliable development possible. Writing code without them is building on sand.
