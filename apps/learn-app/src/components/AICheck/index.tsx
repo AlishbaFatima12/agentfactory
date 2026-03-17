@@ -52,7 +52,7 @@ const PROVIDER_URLS: Record<string, { base: string; query: string }> = {
 };
 
 const PROVIDERS = ["chatgpt", "claude"] as const;
-const URL_CHAR_LIMIT = 6000;
+const URL_CHAR_LIMIT = 14000;
 
 const spring = { type: "spring" as const, stiffness: 400, damping: 30 };
 
