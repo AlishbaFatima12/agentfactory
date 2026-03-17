@@ -298,6 +298,48 @@ Show me:
 
 ---
 
+## PRIMM-AI+ Practice: Testing With pytest
+
+### Predict [AI-FREE]
+
+Look at this function -- you do not need to understand every detail, just notice the comment that says "Bug":
+
+```python static
+def add(a, b):
+    return a - b  # Bug: subtracts instead of adding
+```
+
+Predict: if someone calls `add(3, 4)`, what number will it return? (Hint: the comment tells you the operation is wrong.) Now predict: when pytest runs a test expecting `7` but gets a different number, will the output show a dot (`.`) for pass or the letter `F` for fail? Write your answers and a **confidence score from 1 to 5**.
+
+### Run
+
+The Practical Application section above had you run `uv run pytest`. Look at the output from that step. Did you see the `F` character (failure), the `>` line (which test failed), and the `E` line (what went wrong)? After the bug was fixed, did the `F` change to a dot (`.`)? These three symbols -- `F`, `>`, `E` -- are the key to reading pytest output.
+
+### Investigate
+
+Before asking your AI assistant, write in your own words: why does the pipeline run ruff first, then pyright, then pytest? What would happen if you ran pytest first and it failed -- would you have wasted time?
+
+Then ask your AI assistant:
+
+```
+Why does the verification pipeline run ruff FIRST, then pyright,
+then pytest? What goes wrong if I run them in a different order?
+```
+
+Compare the AI's answer to yours. Now think about the **Error Taxonomy**: the bug in the `add` function is not a *type error* -- the types are fine (numbers in, number out). It is a *logic error* -- the code does the wrong thing. Can you think of why pyright would NOT catch this bug, but pytest would? Write your answer before reading on.
+
+### Modify
+
+Try this experiment: add an unused import line (like `import os`) to the top of your `main.py`. **Before running anything**, predict: which tool in the pipeline will catch it -- ruff, pyright, or pytest? Now run the full pipeline: `uv run ruff check . && uv run pyright && uv run pytest`. Did it stop at the first tool (ruff) without reaching pytest? That is Axiom IX in action -- fast checks first, slow checks last. Remove the unused import when done.
+
+### Make
+
+From memory, without looking at this lesson, answer these questions: (1) What command runs the test suite? (2) What does an `F` in pytest output mean? What does a dot (`.`) mean? (3) What is the difference between a *type error* (caught by pyright) and a *logic error* (caught by pytest)? (4) Why does ruff run before pytest in the pipeline? Write your answers, then check them against the lesson. You do not need to write Python code to pass this gate -- understanding the *tools* is the goal of this chapter.
+
+**Verification Ladder checkpoint:** This lesson is Rung 3 (Tests) in action. Combined with pyright at Rung 2 (Types) and ruff, you now have three automated verification layers. The chained pipeline (`ruff check && pyright && pytest`) is Rung 4 (Pipeline) -- coordinated verification -- which you will formalize in Lesson 7.
+
+---
+
 ## Key Takeaways
 
 1. **pytest uses plain `assert` as specifications.** `assert func(3) == 4` means: this code, given 3, must return 4. No special setup, no extra tools. The `assert` keyword is how you express what "correct" means.

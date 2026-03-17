@@ -403,6 +403,40 @@ None of these are serious bugs. But left unchecked across dozens of AI-generated
 
 ---
 
+## PRIMM-AI+ Practice: Ruff -- Your Code Quality Guardian
+
+### Predict [AI-FREE]
+
+You already ran ruff on the `main.py` code from the Practical Application section above. Now look at the ruff output from Step 2 again -- without scrolling back. From memory, predict: how many issues did `ruff check` find? What rule code prefix did they use (F, E, I, or something else)? How many were auto-fixable with `[*]`? Write your answers and a **confidence score from 1 to 5**, then scroll back to check.
+
+### Run
+
+Now run `ruff format --check .` on the same file (after the `--fix` step from the Practical Application). Compare the output to what `ruff check` reported earlier. Record your result: which issues did `check` find that `format` does not catch, and vice versa? The key insight: `check` finds bugs and dead code (F rules). `format` fixes spacing and style. They catch different categories of problems.
+
+### Investigate
+
+Before asking your AI assistant, write a **trace artifact**: take the ruff output from Step 2 and, for each error line, write what you think the rule code means based on the rule prefix table in this lesson. For example, if you see `F401`, look up the F prefix in the table -- what category does it belong to?
+
+Then ask your AI assistant:
+
+```
+Ruff reported: main.py:1:8: F401 [*] `os` imported but unused
+What does each part mean: file, line, column, code, [*], message?
+What is the F rule family? How is it different from E rules?
+```
+
+Compare the AI's explanation to your own notes. Now apply the **Error Taxonomy**: which of ruff's findings are structural problems (dead code that clutters the project) and which are cosmetic (style inconsistencies that do not affect behavior)? Write your classification before reading on.
+
+### Modify
+
+Go back to the "Try With AI" Prompt 3 above -- ask your AI assistant to generate a `find_duplicates` function. Paste the AI's code into `main.py` and run `uv run ruff check .` **without reading the code first**. Let the tool find the issues. Then ask the AI: "Ruff found these issues in your code: [paste output]. Why did you include these?" Compare the AI's explanation to the rule codes you learned. Fix with `uv run ruff check --fix .` then `uv run ruff format .` (run these as two separate commands -- `ruff check --fix` may report remaining unfixable issues, and you still want formatting to run). This is the core AI-era workflow: generate, verify with tools, ask AI to explain, fix.
+
+### Make
+
+You have not learned Python syntax yet, so this Make stage focuses on the tool, not the code. From memory, without looking at this lesson, write down: (1) the command to run the linter, (2) the command to auto-fix safe issues, (3) the command to format code, (4) the command to check formatting without changing files, and (5) the difference between what `check` catches and what `format` catches. Then verify your answers against the lesson. If you got all five correct, you have mastered the ruff workflow -- the code it checks will come in later chapters.
+
+---
+
 ## Key Takeaways
 
 1. **A linter finds problems that Python ignores.** Unused libraries, forgotten values, style violations, and common bugs all slip past Python silently. Ruff catches them before they accumulate.

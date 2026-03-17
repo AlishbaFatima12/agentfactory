@@ -228,6 +228,41 @@ of how the tool enforces that axiom in daily development.
 
 ---
 
+## PRIMM-AI+ Practice: Why the Toolchain Comes First
+
+### Predict [AI-FREE]
+
+Close this lesson and, from memory, write down all five tools in the discipline stack. Next to each tool, write which axiom it connects to. It is fine if some are blank or wrong -- the point is to try before checking. Give yourself a **confidence score from 1 to 5** (1 = "mostly guessing", 5 = "very sure").
+
+### Run
+
+Open your AI assistant and paste your list:
+
+```
+Here is my guess at the five-tool discipline stack and their axioms:
+[paste your list]
+Which ones did I get right? For any I got wrong, explain the
+correct connection in one sentence.
+```
+
+Compare the AI's answer to your original list. Which tools stuck in your memory and which were fuzzy?
+
+### Investigate
+
+Think about James's story from the start of this lesson -- he pushed code that worked on his machine, but it broke on Emma's. In your own words, write one sentence for each tool explaining what it would have caught. Then ask your AI assistant the same question and compare.
+
+Now try to sort the problems using the **Error Taxonomy**: was the missing dependency a *type error*, a *logic error*, or a *data/edge-case error*? Write your best guess before reading on. (Hint: code that works in one environment but breaks in another is usually a data/edge-case error.)
+
+### Modify
+
+The table in this lesson has five rows -- one per tool. Add a sixth row: what tool would you need for Axiom X (Observability)? Is it something you install on your computer, or something that runs after your code is deployed? Write your answer first, then ask your AI assistant to evaluate it.
+
+### Make
+
+Without looking at this lesson, write one paragraph explaining to a friend why you should set up tools *before* learning Python syntax. Show your paragraph to your AI assistant and ask: "What did I miss?" The goal is not perfection -- it is producing your own explanation and improving it with feedback.
+
+---
+
 ## Key Takeaways
 
 1. **Professional Python development starts with tooling, not syntax.** The five tools in the discipline stack create the infrastructure that makes reliable development possible. Writing code without them is building on sand.

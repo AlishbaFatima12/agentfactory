@@ -297,6 +297,65 @@ Also write one pytest test for this function.
 
 ---
 
+## PRIMM-AI+ Practice: Git -- Your Version Control Memory
+
+### Predict [AI-FREE]
+
+You just initialized a Git repository and made your first commit. Predict: what will `git log --oneline` show -- how many lines, and what will the message say? Write your prediction and a **confidence score from 1 to 5** before running the command.
+
+### Run
+
+Run `git log --oneline` and compare to your prediction. Now ask your AI assistant to generate a small function with a test:
+
+```
+Write a simple Python function and one pytest test for it.
+Include type annotations for strict pyright mode.
+```
+
+You do not need to understand the generated code. Paste it into the right files, then run the full pipeline:
+
+1. Run: `uv run ruff check . && uv run pyright && uv run pytest`
+2. If all three pass: `git add . && git commit -m "feat: add function with test"`
+
+This is the core workflow: AI generates code, tools verify it, you commit the verified result.
+
+### Investigate
+
+Compare these two commit histories:
+
+History A: `"wip"`, `"fix stuff"`, `"asdf"`, `"done"`
+
+History B: `"feat: add greeting function"`, `"fix: handle empty name edge case"`, `"test: add tests for greeting"`
+
+In your own words, write why History B is better. What information is lost in History A? Then ask your AI assistant: "Which history helps me find a bug six months from now? Why?" Compare the AI's answer to yours.
+
+### Parsons Problem: Reconstruct the Professional Workflow
+
+Here are the steps of a complete development cycle, in scrambled order. Put them in the correct sequence:
+
+```
+git add . && git commit -m "feat: add function with test"
+uv run pyright
+uv run pytest
+uv run ruff check .
+# Ask AI to generate the code
+# Paste code into the right files
+```
+
+**Your task:** Arrange these in order. Then answer: why does ruff run before pyright? Why does pyright run before pytest? What goes wrong if you commit *before* running the pipeline? Write your answers and a confidence score.
+
+### Modify
+
+Ask your AI assistant to modify the code it generated earlier (add a small feature or change behavior). Paste the updated code and run the full pipeline again. Before committing, write a commit message that explains *why* you made the change, not just *what* changed. Check `git log --oneline` -- does the history tell a clear story?
+
+### Make
+
+From memory, answer these questions: (1) What three commands make up the verification pipeline, and in what order? (2) What does a good commit message include that "wip" and "fix stuff" do not? (3) What command shows your commit history? (4) Why should you run the pipeline *before* every commit? Write your answers, then check against the lesson.
+
+**Verification Ladder checkpoint:** This lesson completes Rung 4 (Pipeline) of the Verification Ladder -- the chained pipeline (`ruff check && pyright && pytest`) running as coordinated verification. Rung 1 (Prediction) was introduced in Chapter 42. Rung 2 (Types) was pyright in Lesson 5. Rung 3 (Tests) was pytest in Lesson 6. Rung 4 (Pipeline) is the chained command in this lesson. Rung 5 (Observability) comes in a later chapter.
+
+---
+
 ## Key Takeaways
 
 1. **Git makes every change reversible.** `git init` creates the repository. `git add .` stages files. `git commit -m "message"` records a snapshot. Every commit is a checkpoint you can return to.
@@ -349,3 +408,39 @@ uv run ruff check . && uv run pyright && uv run pytest
 Your workbench is built. uv manages your project. pyproject.toml holds your configuration. ruff checks your style. pyright checks your types. pytest checks your behavior. Git records your history. Five tools, five axioms, one unified system protecting your code from the moment you start writing it.
 
 In Chapter 45, James and Emma will start reading Python -- learning how to store values, label their types, and combine them into expressions. Every line of code will be checked by ruff, type-checked by pyright, and tested by pytest. The workbench is no longer something you are building. It is something you are using.
+
+---
+
+## Chapter-End Rubric: Self-Assessment
+
+Before proceeding to the quiz and the next chapter, score yourself honestly on the five dimensions of the PRIMM-AI+ chapter-end rubric. This rubric is not a grade -- it is a mirror. It exists so you can see where you stand and direct your practice to the dimensions that need the most work.
+
+**Prediction Accuracy:** How often were your predictions correct during this chapter? Could you predict what `uv init` would create, what ruff would flag, what pyright would catch, and what pytest output would look like -- before running the commands?
+
+| **Developing** | **Competent** | **Fluent** |
+|---|---|---|
+| Predictions were often wrong; tool behavior and output format need more practice | Predictions were mostly correct for straightforward cases; some surprises with strict mode or edge cases | Predictions were consistently accurate; could predict tool output for novel code without running it |
+
+**Trace Quality:** Were your trace artifacts -- line-by-line explanations of `pyproject.toml` sections, "why this fails" notes for tool errors, and pipeline order explanations -- accurate and complete?
+
+| **Developing** | **Competent** | **Fluent** |
+|---|---|---|
+| Trace artifacts were incomplete; needed heavy AI assistance to explain tool output | Trace artifacts were mostly accurate; occasional gaps in understanding tool error formats or rule codes | Trace artifacts were thorough; could explain ruff codes, pyright errors, and pytest output independently |
+
+**Explanation Quality:** Can you explain why each tool exists, which axiom it enforces, and what category of bugs it catches -- in your own words, without referring to the lesson?
+
+| **Developing** | **Competent** | **Fluent** |
+|---|---|---|
+| Can name the five tools but struggles to explain the axiom connection or what each catches | Can explain each tool's purpose and axiom mapping; some difficulty articulating the Verification Ladder connection | Can teach the discipline stack to someone else with examples, explaining why removing any tool leaves a gap |
+
+**Modification Quality:** Were you able to modify `pyproject.toml` configurations, ruff rules, and test specifications on your own -- without AI generating the modification? Were Parsons reconstructions correct?
+
+| **Developing** | **Competent** | **Fluent** |
+|---|---|---|
+| Needed significant AI help for configuration changes; Parsons problems required multiple attempts | Completed most modifications independently; Parsons reconstructions were mostly correct on first attempt | Modified configurations confidently; immediately understood which sections controlled which behavior |
+
+**Independent Make Quality:** Did you produce the Make challenges -- writing `pyproject.toml` from memory, writing tests before implementations, completing the full professional cycle -- without AI assistance for the first attempt?
+
+| **Developing** | **Competent** | **Fluent** |
+|---|---|---|
+| Needed AI to start most Make challenges; produced work only after seeing examples | Started Make challenges independently; needed AI review for completeness | Produced complete, accurate Make artifacts on first attempt; AI review confirmed rather than corrected |

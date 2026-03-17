@@ -380,6 +380,37 @@ Use an analogy that does not involve programming.
 
 ---
 
+## PRIMM-AI+ Practice: Installing uv and Creating SmartNotes
+
+### Predict [AI-FREE]
+
+Before running `uv init smartnotes`, predict: how many files will it create, and can you name them? Also predict: what is the difference between `uv run main.py` and `python main.py`? Write your guesses and a **confidence score from 1 to 5**.
+
+### Run
+
+Run `uv init smartnotes`, then list the files. Compare to your prediction -- what surprised you? Now run `uv run main.py` and check: did `.venv/` and `uv.lock` appear? One of these should be committed to Git and the other should not. Predict which one, then check `.gitignore`.
+
+### Investigate
+
+For each file in the project directory, write one sentence about what you *think* it does. Then look inside `.venv/` (run `ls .venv/` on Mac/Linux or `dir .venv` on Windows). Ask your AI assistant:
+
+```
+I looked inside .venv/ and saw: [paste what you saw].
+What is this directory? Why does uv create it automatically?
+```
+
+Compare the AI's explanation to your own notes. Try running `python main.py` directly (without `uv run`) -- does it work the same way? If not, that difference is exactly what uv protects you from.
+
+### Modify
+
+Change `.python-version` to a Python version you do not have installed. **Predict what will happen** before running `uv run main.py` again. Does uv install the missing version, or does it show an error? Change it back when you are done.
+
+### Make
+
+Create a second project called `practice-project` using `uv init` -- from memory, without looking at this lesson. If you get stuck, check back, but try first. The goal is seeing how much of the workflow you remember.
+
+---
+
 ## Key Takeaways
 
 1. **uv replaces five tools.** It handles Python version management, virtual environment creation, dependency installation, lockfile generation, and script execution — all through one interface.

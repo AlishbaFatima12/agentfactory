@@ -454,6 +454,49 @@ Explain:
 
 ---
 
+## PRIMM-AI+ Practice: Pyright -- Your Type Safety Net
+
+### Predict [AI-FREE]
+
+You ran pyright on your SmartNotes project in the Practical Application above. Before scrolling back, predict from memory: how many errors did pyright report in strict mode? How many did it report in standard mode? What was the *difference* between the two counts? Write your answers and a **confidence score from 1 to 5**, then scroll back to check.
+
+### Run
+
+Now try a small experiment. Open `pyproject.toml` and temporarily change `typeCheckingMode` from `"strict"` to `"standard"`. Run `uv run pyright` and count the errors. Change it back to `"strict"` and run again. How many *more* errors does strict mode catch? This gap is the difference between "mostly checked" and "fully checked."
+
+### Investigate
+
+Your SmartNotes project should be clean (0 errors) after the Practical Application. To practice reading pyright output, ask your AI assistant to generate code that has type problems on purpose:
+
+```
+Write a short Python function (5-10 lines) with type annotations
+that contains 2-3 deliberate type errors -- for example, passing
+a string where an int is expected, or returning the wrong type.
+Do not tell me where the errors are. I want pyright to find them.
+```
+
+You do not need to understand the code's logic -- focus on the *tool*. Paste the AI's code into `main.py` and run `uv run pyright`. Look at the first error pyright reports. Before asking your AI assistant, write in your own words: what do you *think* this error means? Then ask:
+
+```
+Pyright reported this error: [paste the full error message]
+Explain in simple terms: what file, what line, what went wrong,
+and how would someone fix it?
+```
+
+Compare the AI's explanation to your own guess. Now think about the **Error Taxonomy**: pyright catches problems where the *type* of data is wrong (for example, passing text where a number is expected). These are called *type errors*. But what if the types are all correct and the code still gives the wrong answer? That is a *logic error* -- and pyright cannot catch it. Only tests (Lesson 6) can.
+
+### Modify
+
+Look at the pyright errors from the Investigate step. Pick one and try to fix it yourself based on the error message -- read what pyright says is expected versus what it found. Run pyright again after your fix. Did the error disappear? If not, ask your AI assistant for help. When done, restore your original clean `main.py`. The skill here is reading the error message, not writing Python from scratch.
+
+### Make
+
+From memory, without looking at this lesson, answer these questions: (1) What command runs pyright? (2) What is the difference between strict mode and standard mode? (3) Name one thing pyright *can* catch and one thing it *cannot* catch. (4) Where in `pyproject.toml` do you set the checking mode? Write your answers, then check them against the lesson. If you got all four right, you understand the pyright workflow -- the Python syntax it checks will come in later chapters.
+
+**Verification Ladder checkpoint:** Running pyright is Rung 2 (Types) of the Verification Ladder. It catches structural type mismatches automatically. The gap that remains -- logic correctness -- is what pytest at Rung 3 (Tests) fills in the next lesson.
+
+---
+
 ## Key Takeaways
 
 1. **A static type checker analyzes code without running it.** Pyright reads type labels, traces how data moves through your code, and reports every type mismatch before your program executes.
