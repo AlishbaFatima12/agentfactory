@@ -407,7 +407,7 @@ None of these are serious bugs. But left unchecked across dozens of AI-generated
 
 ### Predict [AI-FREE]
 
-You already ran ruff on the `main.py` code from the Practical Application section above. Now look at the ruff output from Step 2 again -- without scrolling back. From memory, predict: how many issues did `ruff check` find? What rule code prefix did they use (F, E, I, or something else)? How many were auto-fixable with `[*]`? Write your answers and a **confidence score from 1-5**, then scroll back to check.
+You already ran ruff on the `main.py` code from the Practical Application section above. Now look at the ruff output from Step 2 again -- without scrolling back. From memory, predict: how many issues did `ruff check` find? What rule code prefix did they use (F, E, I, or something else)? How many were auto-fixable with `[*]`? Write your answers and a **confidence score from 1 to 5**, then scroll back to check.
 
 ### Run
 

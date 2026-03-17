@@ -347,33 +347,28 @@ Explain each answer using my project (smartnotes) as the example.
 
 ### Predict [AI-FREE]
 
-Before opening your `pyproject.toml`, predict: after running `uv add --dev pytest pyright ruff`, what sections will appear in the file? Will the tool configurations (ruff rules, pyright mode) be added automatically, or must you write them yourself? Write your prediction and a **confidence score from 1-5**.
+Before opening your `pyproject.toml`, predict: after running `uv add --dev pytest pyright ruff`, what new sections will appear in the file? Will tool configurations (ruff rules, pyright mode) be added automatically, or do you need to write them yourself? Write your prediction and a **confidence score from 1 to 5**.
 
 ### Run
 
-Run `uv add --dev pytest pyright ruff`, then open `pyproject.toml`. Compare to your prediction and record the result: what you expected, your confidence, what actually appeared. Now open `uv.lock` -- it looks very different from `pyproject.toml`. Predict: why do you need both files? What information does the lockfile contain that `pyproject.toml` does not?
+Run `uv add --dev pytest pyright ruff`, then open `pyproject.toml`. Compare to your prediction -- what appeared and what did not? Now open `uv.lock`. It looks very different. Predict: why do you need *both* files? What does the lockfile contain that `pyproject.toml` does not?
 
 ### Investigate
 
-Before asking your AI assistant, write a **line-by-line explanation** of each section in your `pyproject.toml` -- what you think it controls and why it is there. This is your trace artifact.
-
-Then paste your complete `pyproject.toml` to your AI assistant:
+For each section in your `pyproject.toml`, write one sentence about what you think it controls. Then paste your file to your AI assistant:
 
 ```
 Here is my pyproject.toml:
 [paste it]
-Explain each section. For every section: what does it control,
-what happens if I delete it, and one thing I could change
-and what the effect would be.
+Explain each section in plain language. What does it control,
+and what happens if I delete it?
 ```
 
-Compare the AI's explanation to your own line-by-line notes. Where did your understanding match? Where were the gaps?
-
-Verify one of the AI's claims: try deleting the `[tool.ruff.lint]` section, run `uv run ruff check .`, and see which rules are now enforced (or not). Restore the section after. This is PRIMM-AI+ Investigate: test the explanation, do not just read it.
+Compare the AI's explanation to your own notes. Then test one claim: delete the `[tool.ruff.lint]` section, run `uv run ruff check .`, and see what changes. Restore the section when done. Testing the explanation is more valuable than just reading it.
 
 ### Parsons Problem: Reconstruct the pyproject.toml
 
-Before modifying the configuration, test whether you understand its structure. Here are the sections of a SmartNotes `pyproject.toml` in scrambled order. Reconstruct the correct file:
+Here are the sections of a SmartNotes `pyproject.toml` in scrambled order. Put them in the correct order:
 
 ```toml
 [tool.ruff.lint]
@@ -401,23 +396,23 @@ line-length = 88
 target-version = "py312"
 ```
 
-**Your task:** Arrange these sections in the correct order for a valid `pyproject.toml`. Then answer: which section must come first? Which sections are read by uv, and which are read only by their respective tools? If you deleted the `[tool.pyright]` section, would `uv add` still work? Write your answers and a confidence score before checking.
+**Your task:** Which section must come first? If you deleted `[tool.pyright]`, would `uv add` still work? Write your answers and a confidence score before checking.
 
 ### Modify
 
-Extend the ruff configuration **yourself first**. Add three new rule families to the `select` list in `[tool.ruff.lint]`:
+Add three new rule prefixes to the `select` list in `[tool.ruff.lint]`:
 
-| Prefix | Origin | What It Catches |
-|--------|--------|-----------------|
-| **S** | flake8-bandit | Security vulnerabilities — hardcoded passwords, unsafe `eval()`, insecure temp files |
-| **T20** | flake8-print | `print()` statements left in code — fine for learning, a code smell in production |
-| **N** | pep8-naming | Python naming convention violations — wrong casing on classes, functions, variables |
+| Prefix | What It Catches |
+|--------|-----------------|
+| **S** | Security problems -- hardcoded passwords, unsafe functions |
+| **T20** | `print()` statements left in code (fine for learning, a problem in production) |
+| **N** | Naming convention violations -- wrong casing on names |
 
-Predict: will existing code that passed before now fail with the new rules? Run `uv run ruff check .` and find out.
+Predict: will your existing code that passed before now show new warnings? Run `uv run ruff check .` and find out.
 
-### Make [Mastery Gate]
+### Make
 
-Create a `pyproject.toml` from memory for a new practice project. **Write the entire file yourself before consulting AI** -- this is your mastery gate. Include all five tool configurations: project metadata, ruff lint rules, ruff format settings, pyright strict mode, and pytest configuration. Use your AI assistant to review it only after you have written the first draft yourself.
+From memory, without looking at this lesson, write a complete `pyproject.toml` for a new practice project. Include: project metadata, ruff settings, pyright mode, and pytest configuration. After your first attempt, show it to your AI assistant and ask what you missed. The goal is not perfection -- it is testing how much you remember.
 
 ## Key Takeaways
 

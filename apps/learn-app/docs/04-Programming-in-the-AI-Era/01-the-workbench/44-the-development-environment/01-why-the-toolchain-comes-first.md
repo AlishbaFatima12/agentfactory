@@ -232,44 +232,34 @@ of how the tool enforces that axiom in daily development.
 
 ### Predict [AI-FREE]
 
-Before reading further, close this lesson and write down the five tools in the discipline stack and which axiom each one enforces. Do not look at the table. Write what you remember -- even if some are wrong or blank -- along with a **confidence score from 1-5** for how complete and correct you think your mapping is. This is PRIMM-AI+'s Predict stage applied to conceptual knowledge: commit to an answer before checking it, and measure your certainty.
+Close this lesson and, from memory, write down all five tools in the discipline stack. Next to each tool, write which axiom it connects to. It is fine if some are blank or wrong -- the point is to try before checking. Give yourself a **confidence score from 1 to 5** (1 = "mostly guessing", 5 = "very sure").
 
 ### Run
 
-Now open your AI assistant and check your mapping:
+Open your AI assistant and paste your list:
 
 ```
-I am learning a five-tool Python discipline stack. From memory,
-here is my mapping of tools to axioms:
-[paste your handwritten list here]
-Check my mapping. For any I got wrong, explain why the correct
-connection exists. For any I got right, give me one concrete
-example of how the tool enforces that axiom in daily development.
+Here is my guess at the five-tool discipline stack and their axioms:
+[paste your list]
+Which ones did I get right? For any I got wrong, explain the
+correct connection in one sentence.
 ```
 
-Record your result: your original mapping, your confidence score, the AI's corrections, and a note on which connections stuck and which were fuzzy. If your confidence was high but your mapping had gaps, that is a calibration signal -- note it.
+Compare the AI's answer to your original list. Which tools stuck in your memory and which were fuzzy?
 
 ### Investigate
 
-Before asking your AI assistant, write a **"why this fails" note** for James's scenario: in your own words, trace his failure through each missing tool. Which tool would have caught which failure? This is your trace artifact.
+Think about James's story from the start of this lesson -- he pushed code that worked on his machine, but it broke on Emma's. In your own words, write one sentence for each tool explaining what it would have caught. Then ask your AI assistant the same question and compare.
 
-Then take James's failure scenario from the opening: he wrote `app.py`, ran it on his machine, pushed it, and it broke on Emma's machine. Ask your AI assistant:
-
-```
-What specific problems would each of the five discipline stack tools
-have prevented in James's scenario? Trace his failure through
-each tool: uv, ruff, pyright, pytest, Git.
-```
-
-Compare the AI's answer to your trace artifact. Apply the **Error Taxonomy**: the missing dependencies are a *data/edge-case error* (the code works for one environment but breaks in another), the missing types are a *type error* waiting to happen, and the missing tests mean *specification errors* go undetected.
+Now try to sort the problems using the **Error Taxonomy**: was the missing dependency a *type error*, a *logic error*, or a *data/edge-case error*? Write your best guess before reading on. (Hint: code that works in one environment but breaks in another is usually a data/edge-case error.)
 
 ### Modify
 
-Take the axiom-tool mapping table and modify it: add a sixth row. What tool would you need to enforce Axiom X (Observability Extends Verification)? What does that tool look like? Is it something you install in your development environment, or something that operates in production? **Attempt your answer yourself first**, then ask your AI assistant to evaluate your suggestion.
+The table in this lesson has five rows -- one per tool. Add a sixth row: what tool would you need for Axiom X (Observability)? Is it something you install on your computer, or something that runs after your code is deployed? Write your answer first, then ask your AI assistant to evaluate it.
 
 ### Make
 
-Write a one-paragraph explanation -- in your own words, without looking at this lesson -- of why the toolchain comes before syntax. Imagine you are explaining it to a friend who wants to start learning Python. Then show your paragraph to your AI assistant and ask: "What did I miss? What would you add?" This is the Make stage: producing original work, then using AI to review it.
+Without looking at this lesson, write one paragraph explaining to a friend why you should set up tools *before* learning Python syntax. Show your paragraph to your AI assistant and ask: "What did I miss?" The goal is not perfection -- it is producing your own explanation and improving it with feedback.
 
 ---
 
