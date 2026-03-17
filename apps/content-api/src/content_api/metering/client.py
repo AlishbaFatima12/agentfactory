@@ -163,7 +163,9 @@ class MeteringClient:
                 )
             else:
                 logger.error(
-                    "[Metering] Check failed: status=%d, body=%s", response.status_code, response.text
+                    "[Metering] Check failed: status=%d, body=%s",
+                    response.status_code,
+                    response.text,
                 )
                 return CheckResult(
                     allowed=False,
@@ -226,7 +228,9 @@ class MeteringClient:
                 return MutationResult(status="ok", extra=response.json())
             else:
                 logger.error(
-                    "[Metering] Deduct failed: status=%d, body=%s", response.status_code, response.text
+                    "[Metering] Deduct failed: status=%d, body=%s",
+                    response.status_code,
+                    response.text,
                 )
                 return MutationResult(status="failed", error=response.text)
 

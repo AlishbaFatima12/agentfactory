@@ -21,6 +21,10 @@ This is not a warm-up. This is not "soft skills before the real stuff." This is 
 
 The rest of this book will make you powerful. This part determines whether you use that power well.
 
+These are not academic exercises. Every chapter builds a thinking skill that commands a premium in technology, healthcare, operations, finance, education, and leadership because when AI can generate anything, the person who can actually think becomes the scarce one.
+
+In the AI era, education must develop more than intelligence. It must also develop judgment, originality, adaptability, and agency. Students must learn not only how to think, but how to use AI wisely, build what does not yet exist, solve ambiguous real-world problems, defend their reasoning, and keep learning as the world changes.
+
 **The Unsolved Problem**
 
 Every university, every bootcamp, every corporate training program is asking the same question: *If students have access to AI, how do we know they actually learned to think?*
@@ -39,7 +43,7 @@ Eleven chapters. Ten thinking skills. Forty exercises. One rule:
 
 You will not be graded on what you produced. You will be graded on whether you can prove you thought.
 
-:::info What This Looks Like in Practice
+:::note What This Looks Like in Practice
 
 **Exercise:** Should a startup build a custom AI agent or use an off-the-shelf tool?
 
@@ -226,6 +230,47 @@ At the end, calculate your average per dimension across all 40 exercises and com
 | [9. Deciding Under Uncertainty](./09-deciding-under-uncertainty/01-sealed-decision.md)                 | Decision-Making              | A Decision-Making Portfolio with sealed decisions, reversal triggers, and decision audits                |
 | [10. Learning How to Learn](./10-learning-how-to-learn/01-learning-plan.md)                            | Meta-Learning                | A Meta-Learning Portfolio with learning plans, 72-hour sprints, and a Personal Learning Framework        |
 | [11. Thinking Portfolio](./11-thinking-portfolio/01-portfolio-assembly.md)                             | Portfolio Synthesis          | A Thinking Portfolio assembling all chapter deliverables, a post-assessment comparison, and a Growth Map |
+
+:::note Where These Skills Pay
+
+AI can generate reports, draft strategies, write code, and produce analyses that look flawless. What it cannot do is know when its own output is wrong. That single failure is now the most expensive problem in every industry.
+
+The developer who asks better questions (Chapter 1) frames the problem
+correctly before AI generates a single line of code — because the
+most expensive bug is the one that solves the wrong problem. The
+compliance officer who detects broken reasoning (Chapter 2) catches
+the hallucination before it reaches production — and before it costs
+the company a lawsuit, a product recall, or a lost customer. The
+healthcare professional who thinks in systems (Chapter 3) catches
+the second-order drug interaction that no pattern-matching model will
+ever flag. The engineer who reasons from first principles (Chapter 4)
+redesigns the process everyone else assumed was fixed — because AI
+can optimize a broken system faster than anyone, and only a human
+will ask whether the system should exist at all. The communicator who
+knows what matters (Chapter 5) walks into a room full of AI-generated
+slides and is the only person who can explain what they actually mean.
+The professional who works with AI without surrendering judgment
+(Chapter 6) gets ten times the leverage without ten times the risk.
+The one who surrenders judgment becomes a middleman between a prompt
+and a product — and middlemen get automated. The leader who reasons
+through dilemmas (Chapter 7) makes the ethical call that AI will
+never make — because AI calculates trade-offs and humans own them.
+The founder who builds from nothing (Chapter 8) creates what no
+prompt could generate — because prompts remix the past and founders
+invent the future. The executive who decides under uncertainty
+(Chapter 9) makes the call when the data is incomplete, the
+stakeholders disagree, the deadline is tomorrow, and AI has produced
+three confident, contradictory recommendations. And the person who
+has learned how to learn (Chapter 10) will still be relevant in ten
+years. Most of their peers will not. They will be fluent in tools
+that no longer exist for jobs that no longer need them.
+
+These are not ten skills for school. These are ten skills for a labor
+market that has already made its verdict:
+
+> **AI made polished output free. Clear thinking is what's expensive now.**
+
+:::
 
 ## For Solo and Online Learners
 

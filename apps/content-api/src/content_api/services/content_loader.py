@@ -6,6 +6,7 @@ from typing import Any
 
 import httpx
 import yaml
+
 from api_infra.core.redis_cache import cache_response
 
 from ..config import settings

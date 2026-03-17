@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "Human vs. AI Systems Analysis"
 description: "Compare your cascade map against AI-generated analyses, creating a merged map with honest attribution to reveal where human and AI thinking complement each other"
 keywords:
@@ -95,7 +96,8 @@ A comparison document with three columns: "Effects only I found," "Effects only 
 
 ---
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="human-vs-ai-systems-analysis" xp={50}>
+
 I am comparing my systems analysis with AI-generated analyses of the
 same scenario. I have created a merged cascade map that combines
 insights from my own thinking, Claude's analysis, and ChatGPT's
@@ -103,27 +105,62 @@ analysis, with each insight attributed to its source.
 
 Please:
 (1) Evaluate my merged map -- is it genuinely better than any single
-    source alone?
+source alone?
 (2) Are there insights I attributed to myself that are actually
-    standard AI outputs? Be honest.
+standard AI outputs? Be honest.
 (3) Are there synthesis insights (S) that are genuinely novel --
-    combinations that none of the three sources produced independently?
+combinations that none of the three sources produced independently?
 (4) Rate the quality of my attribution -- am I being honest about
-    where each idea came from?
+where each idea came from?
 (5) What important systemic effects are STILL missing from the merged
-    map?
+map?
 
-Scenario: [paste].
-My original map: [paste].
-Claude's analysis: [paste].
-ChatGPT's analysis: [paste].
-Merged map with attribution: [paste].
+Scenario:
+
+<AICheckField
+  name="scenario"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
+
+My original map:
+
+<AICheckField
+  name="original_map"
+  placeholder="Paste your original cascade map here..."
+  rows={6}
+/>
+
+Claude's analysis:
+
+<AICheckField
+  name="claude_analysis"
+  placeholder="Paste Claude's analysis here..."
+  rows={6}
+/>
+
+ChatGPT's analysis:
+
+<AICheckField
+  name="chatgpt_analysis"
+  placeholder="Paste ChatGPT's analysis here..."
+  rows={6}
+/>
+
+Merged map with attribution:
+
+<AICheckField
+  name="merged_map"
+  placeholder="Paste your merged map with attribution here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 

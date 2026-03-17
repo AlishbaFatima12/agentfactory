@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Error Prediction"
 description: "Predict where AI will fail before prompting it, then annotate AI responses line-by-line using an Error Taxonomy to build systematic error detection skill"
 keywords:
@@ -137,35 +138,54 @@ Choose one.
 Your sealed prediction document (before AI) listing expected AI strengths and weaknesses. Two annotated AI responses with every sentence labeled using the Error Taxonomy categories. A comparison table showing: your predicted errors vs. actual errors found, your predicted strengths vs. actual strengths. A count of each error type found across both tools.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="error-prediction" xp={50}>
+
 I am learning to detect errors in AI-generated analysis. I asked both Claude
-and ChatGPT: "[paste your chosen scenario question]"
-I then annotated both responses using an Error Taxonomy (factual error,
-logical gap, false confidence, missing context, correlation-causation
-confusion, outdated information, fabricated citation, cultural blind spot).
+and ChatGPT about a scenario question and then annotated both responses using
+an Error Taxonomy (factual error, logical gap, false confidence, missing
+context, correlation-causation confusion, outdated information, fabricated
+citation, cultural blind spot).
 Please:
 
 (1) Review my error annotations -- did I correctly identify each error?
-    Flag any false positives (things I marked as errors that are actually
-    correct) and false negatives (errors I missed).
+Flag any false positives (things I marked as errors that are actually
+correct) and false negatives (errors I missed).
 (2) Rate my error detection accuracy as a percentage.
 (3) For each error I missed, explain how I should have caught it.
 (4) Rate my use of the Error Taxonomy -- am I categorizing errors correctly
-    or misclassifying them?
+or misclassifying them?
 (5) What patterns do you see in my error detection -- which types am I good
-    at catching and which do I consistently miss?
+at catching and which do I consistently miss?
 
-Here are the AI responses with my annotations: [paste annotated responses].
-Here is my prediction document: [paste predictions].
+Here are the AI responses with my annotations:
+
+<AICheckField
+  name="annotated_responses"
+  placeholder="Paste your annotated responses here..."
+  rows={6}
+/>
+
+Here is my prediction document:
+
+<AICheckField
+  name="predictions"
+  placeholder="Paste your predictions here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that error detection is a trainable skill with specific categories, not just a vague feeling that something is off. By predicting AI errors before seeing them, you develop an internal model of where AI fails. The AI self-check reveals your own blind spots — the error types you consistently miss — which is exactly the information you need to improve.
+
+## Flashcards Study Aid
+
+<Flashcards />

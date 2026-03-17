@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Live Defence"
 description: "Defend your analysis under live questioning without AI access, then respond to AI-generated counter-arguments to test the depth of your understanding"
 keywords:
@@ -104,30 +105,45 @@ After the defence, feed your analysis into AI with the prompt below to generate 
 Peer feedback form filled out by your panel (each panelist writes 2 strengths and 2 weaknesses they observed in your defence). Your written response (200 words) to the strongest AI-generated counter-argument to your analysis. A final reflection (150 words) on what you would change about your question formulation process based on everything you learned in this chapter.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="live-defence" xp={50}>
+
 Below is a student's analysis of a business scenario. Please:
 
 (1) Generate the 3 strongest counter-arguments to this analysis -- attack
-    the weakest assumptions, the most questionable logic, and the most
-    unsupported claims.
+the weakest assumptions, the most questionable logic, and the most
+unsupported claims.
 (2) For each counter-argument, explain specifically what evidence or
-    reasoning would be needed to defeat it.
+reasoning would be needed to defeat it.
 (3) Identify the single biggest blind spot in this analysis -- the most
-    important thing the student failed to consider.
+important thing the student failed to consider.
 (4) Rate the overall analytical rigor from
-    Beginner / Developing / Proficient / Advanced.
+Beginner / Developing / Proficient / Advanced.
 
 The student will need to defend against your strongest counter-argument
 in writing.
 
-Scenario: [paste scenario].
-Student's analysis: [paste analysis].
+Scenario:
+
+<AICheckField
+  name="scenario"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
+
+Student's analysis:
+
+<AICheckField
+  name="analysis"
+  placeholder="Paste your analysis here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
@@ -156,3 +172,7 @@ A Question Quality Portfolio containing: (1) the sealed prediction lock document
 Note: the final answer to the business scenario is worth 0%. The thinking process is the entire grade.
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

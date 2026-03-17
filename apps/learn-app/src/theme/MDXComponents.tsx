@@ -16,6 +16,8 @@ import {
   LinuxContent,
 } from "@/components/OSTabs";
 import ExerciseCard from "@/components/ExerciseCard";
+import AICheck from "@/components/AICheck";
+import AICheckField from "@/components/AICheck/AICheckField";
 import LazyFlashcards from "@/components/flashcards/LazyFlashcards";
 
 export default {
@@ -41,6 +43,9 @@ export default {
   WindowsContent,
   MacOSContent,
   LinuxContent,
+  // Unified AI exercise check component
+  AICheck,
+  AICheckField,
   // Flashcards with FSRS v6 spaced repetition
   Flashcards: LazyFlashcards,
 };

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Blank Page Sprint"
 description: "Create an original solution to a complex problem in 60 minutes with no AI, no internet, and no notes -- establishing your raw thinking baseline before any augmentation"
 keywords:
@@ -140,32 +141,47 @@ Choose one. The exercises work identically regardless of which you pick.
 Your Draft 1 containing: problem diagnosis (what causes the problem and why), three distinct solution approaches (not variations of one idea), your recommended approach with reasoning for why you chose it over the other two, and a "gap list" -- everything you do not know that you would need to know to implement this. Minimum 400 words.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="blank-page-sprint" xp={50}>
+
 I just completed a 60-minute blank page sprint with no AI assistance.
-The problem: [paste your chosen scenario].
+
+The problem:
+
+<AICheckField
+  name="problem"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
 
 Please:
 (1) Rate my problem diagnosis -- did I identify the real root causes or
-    only symptoms?
+only symptoms?
 (2) Rate each of my three solutions for feasibility (1-10), originality
-    (1-10), and likely impact (1-10).
+(1-10), and likely impact (1-10).
 (3) Was my recommended approach the strongest of the three? If not, which
-    would you recommend and why?
+would you recommend and why?
 (4) Evaluate my gap list -- is it honest and complete? What critical gaps
-    did I miss?
+did I miss?
 (5) Rate the overall quality of my raw thinking (remember: this was written
-    with zero assistance) from 1-10.
+with zero assistance) from 1-10.
 (6) Now generate your own solution to the same problem. I will compare my
-    raw human thinking against your AI-generated solution in the next
-    exercise.
+raw human thinking against your AI-generated solution in the next
+exercise.
 
-My Draft 1: [paste].
+My Draft 1:
+
+<AICheckField
+  name="draft_1"
+  placeholder="Paste your Draft 1 here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 <details>
 <summary>Deliverable Template (click to expand)</summary>
@@ -201,3 +217,7 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn what your raw thinking produces without any augmentation. This baseline is essential -- you need to know what you can do alone before you can understand what AI adds. The AI evaluation of your unassisted work gives you an honest measure of your independent thinking capacity.
+
+## Flashcards Study Aid
+
+<Flashcards />
