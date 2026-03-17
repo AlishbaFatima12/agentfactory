@@ -343,6 +343,82 @@ Explain each answer using my project (smartnotes) as the example.
 
 **What you're learning:** You are seeing the difference between a specification and a resolution firsthand. Your `pyproject.toml` says "I need pytest 9 or higher" (the specification). Your `uv.lock` says "I am using pytest 9.0.2 specifically, with these exact transitive dependencies" (the resolution). You saw this difference in the files before asking AI to explain it -- which means the explanation will stick.
 
+## PRIMM-AI+ Practice: The pyproject.toml and the Discipline Stack
+
+### Predict [AI-FREE]
+
+Before opening your `pyproject.toml`, predict: after running `uv add --dev pytest pyright ruff`, what sections will appear in the file? Will the tool configurations (ruff rules, pyright mode) be added automatically, or must you write them yourself? Write your prediction and a **confidence score from 1-5**.
+
+### Run
+
+Run `uv add --dev pytest pyright ruff`, then open `pyproject.toml`. Compare to your prediction and record the result: what you expected, your confidence, what actually appeared. Now open `uv.lock` -- it looks very different from `pyproject.toml`. Predict: why do you need both files? What information does the lockfile contain that `pyproject.toml` does not?
+
+### Investigate
+
+Before asking your AI assistant, write a **line-by-line explanation** of each section in your `pyproject.toml` -- what you think it controls and why it is there. This is your trace artifact.
+
+Then paste your complete `pyproject.toml` to your AI assistant:
+
+```
+Here is my pyproject.toml:
+[paste it]
+Explain each section. For every section: what does it control,
+what happens if I delete it, and one thing I could change
+and what the effect would be.
+```
+
+Compare the AI's explanation to your own line-by-line notes. Where did your understanding match? Where were the gaps?
+
+Verify one of the AI's claims: try deleting the `[tool.ruff.lint]` section, run `uv run ruff check .`, and see which rules are now enforced (or not). Restore the section after. This is PRIMM-AI+ Investigate: test the explanation, do not just read it.
+
+### Parsons Problem: Reconstruct the pyproject.toml
+
+Before modifying the configuration, test whether you understand its structure. Here are the sections of a SmartNotes `pyproject.toml` in scrambled order. Reconstruct the correct file:
+
+```toml
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = ["pytest>=9.0.2", "pyright>=1.1.408", "ruff>=0.15.2"]
+
+[project]
+name = "smartnotes"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.pyright]
+typeCheckingMode = "strict"
+pythonVersion = "3.12"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+```
+
+**Your task:** Arrange these sections in the correct order for a valid `pyproject.toml`. Then answer: which section must come first? Which sections are read by uv, and which are read only by their respective tools? If you deleted the `[tool.pyright]` section, would `uv add` still work? Write your answers and a confidence score before checking.
+
+### Modify
+
+Extend the ruff configuration **yourself first**. Add three new rule families to the `select` list in `[tool.ruff.lint]`:
+
+| Prefix | Origin | What It Catches |
+|--------|--------|-----------------|
+| **S** | flake8-bandit | Security vulnerabilities — hardcoded passwords, unsafe `eval()`, insecure temp files |
+| **T20** | flake8-print | `print()` statements left in code — fine for learning, a code smell in production |
+| **N** | pep8-naming | Python naming convention violations — wrong casing on classes, functions, variables |
+
+Predict: will existing code that passed before now fail with the new rules? Run `uv run ruff check .` and find out.
+
+### Make [Mastery Gate]
+
+Create a `pyproject.toml` from memory for a new practice project. **Write the entire file yourself before consulting AI** -- this is your mastery gate. Include all five tool configurations: project metadata, ruff lint rules, ruff format settings, pyright strict mode, and pytest configuration. Use your AI assistant to review it only after you have written the first draft yourself.
+
 ## Key Takeaways
 
 1. **`pyproject.toml` is the single source of truth** for your Python project. It replaces `requirements.txt`, `setup.py`, `.flake8`, `pyrightconfig.json`, and `pytest.ini` with one file in one format.
