@@ -1,35 +1,67 @@
 deck:
   id: "ch37-11-offboarding-knowledge-transfer"
   title: "Offboarding Knowledge Transfer"
+  description: "Key concepts and review questions covering offboarding knowledge transfer."
+  tags: ["offboarding", "knowledge", "transfer", "chapter-37"]
   version: 1
 
 cards:
-  - front: "What are the four principles of good offboarding?"
+  - id: "ch37-11-offboarding-knowledge-transfer-001"
+    front: "What are the four principles of good offboarding?"
     back: "1. Protect the organisation (access removal, documentation, legal obligations). 2. Preserve institutional knowledge (structured handover). 3. Positive experience for the departing employee (alumni, not detractor). 4. Support the team (transition plan, coverage, communication)."
+    tags: ["good-offboarding", "principles"]
+    difficulty: "basic"
 
-  - front: "What are the four phases of the offboarding timeline?"
+  - id: "ch37-11-offboarding-knowledge-transfer-002"
+    front: "What are the four phases of the offboarding timeline?"
     back: "Phase 1: Departure confirmed — immediate actions (within 24 hours). Phase 2: Notice period — handover planning (complete by Week 2). Phase 3: Exit interview (Week 3 of notice). Phase 4: Last day checklist (HR, IT, Manager)."
+    tags: ["offboarding-timeline", "phases"]
+    difficulty: "basic"
 
-  - front: "Why must the handover plan be completed by Week 2 and not the last week?"
+  - id: "ch37-11-offboarding-knowledge-transfer-003"
+    front: "Why must the handover plan be completed by Week 2 and not the last week?"
     back: "A departing employee in their final week is mentally disengaged and their quality of knowledge transfer drops sharply. Week 2 is when they are still engaged and the handover plan can be thorough and honest."
+    tags: ["handover-plan", "last-week", "completed"]
+    difficulty: "intermediate"
 
-  - front: "Why must the exit interview be conducted by an HR Business Partner, not the line manager?"
+  - id: "ch37-11-offboarding-knowledge-transfer-004"
+    front: "Why must the exit interview be conducted by an HR Business Partner, not the line manager?"
     back: "Employees will not be honest with a manager they are leaving about management issues. The HRBP creates the psychological safety for candid feedback. Exit interviews with the line manager produce polished, safe responses with almost no useful signal."
+    tags: ["exit-interview", "business-partner", "conducted"]
+    difficulty: "intermediate"
 
-  - front: "When in the notice period should the exit interview be scheduled, and why?"
+  - id: "ch37-11-offboarding-knowledge-transfer-005"
+    front: "When in the notice period should the exit interview be scheduled, and why?"
     back: "Week 3. Week 1 is too early (the employee has just made an emotional decision). The last week is too rushed and the employee is mentally disengaged. Week 3 produces considered, honest, actionable feedback."
+    tags: ["notice-period", "exit-interview", "scheduled"]
+    difficulty: "intermediate"
 
-  - front: "What are the three sections of an exit interview question structure?"
+  - id: "ch37-11-offboarding-knowledge-transfer-006"
+    front: "What are the three sections of an exit interview question structure?"
     back: "Section 1: Understanding the departure (why they left, what could have been different). Section 2: Experience assessment (best parts, frustrations, support received). Section 3: Organisational learning (what to protect, what to change, advice for successor)."
+    tags: ["exit-interview", "interview-question", "sections"]
+    difficulty: "intermediate"
 
-  - front: "What five steps does the offboarding-knowledge-agent follow when triggered by a HRIS resignation?"
+  - id: "ch37-11-offboarding-knowledge-transfer-007"
+    front: "What five steps does the offboarding-knowledge-agent follow when triggered by a HRIS resignation?"
     back: "Step 1: Knowledge risk assessment. Step 2: Generate knowledge capture plan. Step 3: Schedule capture sessions. Step 4: Structure session notes into draft knowledge articles. Step 5: Completion report on last day."
+    tags: ["offboarding-knowledge-agent-follow", "hris-resignation", "steps"]
+    difficulty: "intermediate"
 
-  - front: "What must the handover plan include beyond a status update?"
+  - id: "ch37-11-offboarding-knowledge-transfer-008"
+    front: "What must the handover plan include beyond a status update?"
     back: "Recurring responsibilities (weekly/monthly/quarterly tasks), key relationships (who to call and relationship context), open issues (anything unresolved), and a 'What I wish I'd known' section (tacit knowledge that no document captures)."
+    tags: ["handover-plan", "plan-include", "beyond"]
+    difficulty: "basic"
 
-  - front: "What is the rehire decision and why must it be documented before offboarding closes?"
+  - id: "ch37-11-offboarding-knowledge-transfer-009"
+    front: "What is the rehire decision and why must it be documented before offboarding closes?"
     back: "A YES/NO/CONDITIONAL decision on whether the organisation would rehire this person. It must be documented in the personnel record to protect the organisation from future risk — if the person applies again, HR must not have to reconstruct the decision from memory."
+    tags: ["rehire-decision", "offboarding-closes", "documented"]
+    difficulty: "advanced"
 
-  - front: "What does the offboarding-knowledge-agent automate, and what does it NOT automate?"
+  - id: "ch37-11-offboarding-knowledge-transfer-010"
+    front: "What does the offboarding-knowledge-agent automate, and what does it NOT automate?"
     back: "It automates coordination: risk assessment, generating capture plans, scheduling sessions, structuring notes, and producing a completion report. It does NOT conduct the knowledge capture interviews — humans do that. The agent ensures the process happens; humans make the process work."
+    tags: ["offboarding-knowledge-agent-automate", "offboarding-knowledge-agent"]
+    difficulty: "advanced"

@@ -1,41 +1,79 @@
 deck:
   id: "ch36-04-user-research-interviews-synthesis"
   title: "User Research Interviews Synthesis"
+  description: "Key concepts and review questions covering user research interviews synthesis."
+  tags: ["user", "research", "interviews", "synthesis", "chapter-36"]
   version: 1
 
 cards:
-  - front: "What are the five behavioral interview design principles enforced by /interview?"
+  - id: "ch36-04-user-research-interviews-synthesis-001"
+    front: "What are the five behavioral interview design principles enforced by /interview?"
     back: "1. Behavior over opinion (ask what users DO, not what they think). 2. Past over hypothetical (ask about actual past experiences). 3. Problem before solution (no features or solutions in the first half). 4. Silence is data (wait at least 5 seconds after pauses). 5. Why five times (chain 'why' questions to reach root causes)."
+    tags: ["behavioral-interview", "interview-design", "principles"]
+    difficulty: "intermediate"
 
-  - front: "Why is 'Would you use feature X?' considered a bad interview question?"
+  - id: "ch36-04-user-research-interviews-synthesis-002"
+    front: "Why is 'Would you use feature X?' considered a bad interview question?"
     back: "It is a hypothetical future question. Users consistently overestimate their future usage of features they don't yet use. Stated intention is a weak predictor of actual behavior. The research is more valuable when grounded in past behavior."
+    tags: ["bad-interview", "interview-question", "feature"]
+    difficulty: "intermediate"
 
-  - front: "What is the correct structure of a 45-minute user interview guide?"
+  - id: "ch36-04-user-research-interviews-synthesis-003"
+    front: "What is the correct structure of a 45-minute user interview guide?"
     back: "Opening (5 min: rapport, expectations, consent) → Warm-up (5-10 min: understand the person's context) → Core Discovery (20-25 min: behavioral questions about the specific problem area) → Wrap-up (5 min: catch anything missed, referrals)."
+    tags: ["correct-structure", "45-minute-user", "45-minute"]
+    difficulty: "basic"
 
-  - front: "What is the handoff sequence between /interview and /synthesize-research?"
+  - id: "ch36-04-user-research-interviews-synthesis-004"
+    front: "What is the handoff sequence between /interview and /synthesize-research?"
     back: "/interview generates the structured guide → PM runs 5+ interviews using the guide and note-taking template → structured notes are fed into /synthesize-research → synthesis produces prioritised findings with evidence."
+    tags: ["handoff-sequence", "interview", "synthesize-research"]
+    difficulty: "basic"
 
-  - front: "What is the key quality check for a research synthesis output?"
+  - id: "ch36-04-user-research-interviews-synthesis-005"
+    front: "What is the key quality check for a research synthesis output?"
     back: "Does each finding describe observed behavior (what participants actually did) or summarise stated preferences (what participants said they wanted)? Behavioral findings are evidence; stated preferences are the users' proposed solutions."
+    tags: ["quality-check", "research-synthesis", "output"]
+    difficulty: "basic"
 
-  - front: "Which /synthesize-research output section is the hardest to produce and the most valuable?"
+  - id: "ch36-04-user-research-interviews-synthesis-006"
+    front: "Which /synthesize-research output section is the hardest to produce and the most valuable?"
     back: "The 'what we should NOT build' (or 'What We Heard But Should Not Build') section. It requires drawing scope conclusions that go against the literal content of user requests, and it is often missing from AI-generated syntheses."
+    tags: ["/synthesize-research-output", "output-section", "synthesize-research"]
+    difficulty: "intermediate"
 
-  - front: "What is the difference between a behavioral finding and a stated preference finding?"
+  - id: "ch36-04-user-research-interviews-synthesis-007"
+    front: "What is the difference between a behavioral finding and a stated preference finding?"
     back: "Behavioral: 'Participants spent 45-90 minutes reformatting exported data in Excel before sharing reports — all five described this as unavoidable.' Stated preference: 'Users want better export options.' The first is evidence; the second is the users' proposed solution."
+    tags: ["behavioral-finding", "stated-preference", "difference"]
+    difficulty: "intermediate"
 
-  - front: "What does the /synthesize-research command do with its research inputs?"
+  - id: "ch36-04-user-research-interviews-synthesis-008"
+    front: "What does the /synthesize-research command do with its research inputs?"
     back: "It applies thematic analysis: familiarise, code observations, develop themes, review evidence, refine and name themes, then produce a structured synthesis with key findings, evidence, frequency counts, and product recommendations."
+    tags: ["/synthesize-research-command", "research-inputs", "synthesize-research"]
+    difficulty: "intermediate"
 
-  - front: "What is the NEVER DO rule for interview questions in the /interview skill spec?"
+  - id: "ch36-04-user-research-interviews-synthesis-009"
+    front: "What is the NEVER DO rule for interview questions in the /interview skill spec?"
     back: "NEVER ask leading questions ('Would you find it useful if...'), NEVER mention your feature idea before exploring the problem space, NEVER use hypothetical questions as primary evidence, NEVER fill silence — wait at least 5 seconds, NEVER draw conclusions from fewer than 5 interviews."
+    tags: ["interview-questions", "/interview-skill", "never"]
+    difficulty: "intermediate"
 
-  - front: "Why does the exercise ask students to run /synthesize-research with notes from only 3 participants?"
+  - id: "ch36-04-user-research-interviews-synthesis-010"
+    front: "Why does the exercise ask students to run /synthesize-research with notes from only 3 participants?"
     back: "This is a practice exercise using simulated notes. In real research, 5+ interviews are required before drawing directional conclusions. The lesson explicitly notes this constraint. Three participants are sufficient to practice the synthesis evaluation skills."
+    tags: ["run-/synthesize-research", "exercise", "students"]
+    difficulty: "intermediate"
 
-  - front: "What counter-intuitive insight appears in the L04 mock interview notes that students should check the synthesis captured?"
+  - id: "ch36-04-user-research-interviews-synthesis-011"
+    front: "What counter-intuitive insight appears in the L04 mock interview notes that students should check the synthesis captured?"
     back: "Two of the three participants have InsightFlow subscriptions but do not use InsightFlow for the workflow being researched. They were never properly onboarded to connect InsightFlow to their data sources. This is a higher-priority product insight than any feature request in the notes."
+    tags: ["counter-intuitive-insight", "insight-appears", "counter-intuitive"]
+    difficulty: "advanced"
 
-  - front: "What is thematic analysis and how does /synthesize-research apply it?"
+  - id: "ch36-04-user-research-interviews-synthesis-012"
+    front: "What is thematic analysis and how does /synthesize-research apply it?"
     back: "Thematic analysis is a qualitative research methodology: familiarise with all data → code observations systematically → group codes into candidate themes → review themes against evidence → refine and name themes → write up with supporting evidence. /synthesize-research applies this process to interview notes, surveys, or support tickets."
+    tags: ["thematic-analysis", "/synthesize-research-apply", "synthesize-research"]
+    difficulty: "advanced"

@@ -3,6 +3,10 @@ slug: /Business-Domain-Agent-Workflows/intrapreneurship-innovation-agents
 sidebar_position: 40
 title: "Chapter 40: Intrapreneurship & Innovation Agents"
 description: "Build AI agents for the full innovation lifecycle — customer discovery, ideation, assumption testing, MVP design, business model canvas, financial modelling, competitive intelligence, go-to-market strategy, investor pitch, and innovation sprints powered by the DLA Stack (Design Thinking, Lean Startup, Agile)"
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-40/innovation-os.pdf"
+  title: "The Innovation OS — DLA Stack for AI-Accelerated Innovation"
+  height: 700
 chapter_number: 40
 part_number: 3
 version: 1.0

@@ -1,41 +1,79 @@
 deck:
   id: "ch38-12-persistent-agents-deployment-schedule"
   title: "Lesson 12 — Persistent Agents: Deployment and Schedule"
+  description: "Key concepts and review questions covering lesson 12 — persistent agents: deployment and schedule."
+  tags: ["persistent", "agents", "deployment", "schedule", "chapter-38"]
   version: 1
 
 cards:
-  - front: "What is the key architectural difference between the official Operations plugin and the custom Operations Intelligence plugin?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-001"
+    front: "What is the key architectural difference between the official Operations plugin and the custom Operations Intelligence plugin?"
     back: "The official plugin is command-response — you invoke tools on demand. The custom plugin adds persistent agents that run on a schedule, monitor continuously, and alert automatically. No official plugin has persistent agents."
+    tags: ["architectural-difference", "official-operations", "plugin"]
+    difficulty: "intermediate"
 
-  - front: "What is the schedule for each of the four operations agents?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-002"
+    front: "What is the schedule for each of the four operations agents?"
     back: "Vendor Watchdog: every Monday 07:00. Compliance Monitor: every Monday 08:00. Change Tracker: every Friday 16:00. Process Health Agent: first Monday of each month (monthly)."
+    tags: ["operations-agents", "schedule"]
+    difficulty: "basic"
 
-  - front: "What are the four checks run by the Vendor Watchdog each week?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-003"
+    front: "What are the four checks run by the Vendor Watchdog each week?"
     back: "1) Renewal calendar — contracts renewing within 90 days. 2) SLA performance — vendors below contracted SLA. 3) Spend vs. budget — invoices above contracted rate or cumulative spend >10% over budget. 4) Approved vendor list — payments to unapproved vendors."
+    tags: ["checks-run", "vendor-watchdog", "week"]
+    difficulty: "basic"
 
-  - front: "What is the critical rule about agent alerts and recommended actions?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-004"
+    front: "What is the critical rule about agent alerts and recommended actions?"
     back: "Every alert must include a specific recommended action — not just a status. 'Contract renewing soon' is a status. 'Begin renegotiation by [date] because notice period requires action by [date]' is an action. Alerts without actions fail the COO."
+    tags: ["critical-rule", "agent-alerts", "recommended"]
+    difficulty: "basic"
 
-  - front: "What triggers a Process Health agent alert outside its monthly schedule?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-005"
+    front: "What triggers a Process Health agent alert outside its monthly schedule?"
     back: "Three trigger conditions: (1) Change marked COMPLETE in the change log — check which SOPs reference the changed system. (2) Regulatory change detected by Compliance Monitor — check which SOPs embed affected controls. (3) SOP owner departure detected via HRIS — immediately flag as orphaned (no waiting for monthly cycle)."
+    tags: ["process-health", "health-agent", "triggers"]
+    difficulty: "intermediate"
 
-  - front: "Why does the Compliance Monitor never update obligation status automatically?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-006"
+    front: "Why does the Compliance Monitor never update obligation status automatically?"
     back: "Automated status changes on compliance obligations create audit liability. Only the named obligation owner, after confirming control effectiveness, can change a status. The agent flags and alerts; the human makes the call."
+    tags: ["compliance-monitor", "monitor-never", "update"]
+    difficulty: "intermediate"
 
-  - front: "What is the escalation path for a Vendor Watchdog SLA breach?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-007"
+    front: "What is the escalation path for a Vendor Watchdog SLA breach?"
     back: "Week 1-4: Alert to vendor relationship owner with scorecard. If breach persists >4 weeks: include in weekly COO report with escalation recommendation. Separately: calculate and submit credit claim if contract entitles the organisation to SLA credits."
+    tags: ["escalation-path", "vendor-watchdog", "breach"]
+    difficulty: "intermediate"
 
-  - front: "What is an orphaned SOP and what is the immediate response?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-008"
+    front: "What is an orphaned SOP and what is the immediate response?"
     back: "A SOP where the named owner has left the organisation or the role is vacant. Immediate response (not waiting for the monthly cycle): assign interim owner within 5 business days and schedule a knowledge capture session if the departing owner is still contactable."
+    tags: ["orphaned-sop", "immediate-response"]
+    difficulty: "intermediate"
 
-  - front: "What is the agent interaction chain when the Compliance Monitor detects a regulatory change?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-009"
+    front: "What is the agent interaction chain when the Compliance Monitor detects a regulatory change?"
     back: "Compliance Monitor detects change → sends briefing to CCO for human review → Process Health Agent checks which SOPs embed controls for the affected obligation → Process Health Agent alerts SOP owners for regulation-triggered reviews. No automatic status updates — human review required at every step."
+    tags: ["agent-interaction", "interaction-chain", "compliance"]
+    difficulty: "advanced"
 
-  - front: "What is a stale approval in the Change Tracker's monitoring?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-010"
+    front: "What is a stale approval in the Change Tracker's monitoring?"
     back: "An approved change request that has not been implemented within 4 weeks of approval. The agent flags it and asks the change owner to confirm: still proceeding, delayed, or cancelled. If no response within 5 business days: mark as LAPSED and require re-approval."
+    tags: ["stale-approval", "change-tracker", "monitoring"]
+    difficulty: "advanced"
 
-  - front: "What configuration information does the Vendor Watchdog require before its first run?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-011"
+    front: "What configuration information does the Vendor Watchdog require before its first run?"
     back: "Vendor list path or MCP source, approved vendor list, spend thresholds (e.g., contracts >£50,000 with renewal <60 days → COO alert), and escalation contacts for renewal alerts, SLA breach alerts, spend alerts, and unapproved vendor payments."
+    tags: ["configuration-information", "vendor-watchdog", "require"]
+    difficulty: "intermediate"
 
-  - front: "What is the difference between the monthly and quarterly reporting cadence across the four agents?"
+  - id: "ch38-12-persistent-agents-deployment-schedule-012"
+    front: "What is the difference between the monthly and quarterly reporting cadence across the four agents?"
     back: "Vendor Watchdog, Process Health, and Change Tracker produce monthly reports to the COO. The Compliance Monitor produces a quarterly report to the Board/Audit Committee — because board-level compliance reporting is a governance requirement, not a management reporting cycle."
+    tags: ["quarterly-reporting", "reporting-cadence", "difference"]
+    difficulty: "intermediate"

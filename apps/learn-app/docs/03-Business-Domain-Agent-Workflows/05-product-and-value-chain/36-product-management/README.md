@@ -2,6 +2,10 @@
 slug: /Business-Domain-Agent-Workflows/product-management
 sidebar_position: 36
 title: "Chapter 36: Product Management"
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-36/product-management.pdf"
+  title: "Chapter 36: Product Management"
+  height: 700
 description: "Build AI agents for the full PM workflow cycle — discovery briefs, interview guides, feature specs, PRDs, user stories, roadmap planning, backlog prioritisation, stakeholder communication, metrics review, retrospectives, and three persistent agents that keep your product intelligence layer running continuously"
 chapter_number: 36
 part_number: 3

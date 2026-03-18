@@ -1,41 +1,79 @@
 deck:
   id: "ch36-13-metrics-okrs-product-analytics"
   title: "Metrics Okrs Product Analytics"
+  description: "Key concepts and review questions covering metrics okrs product analytics."
+  tags: ["metrics", "okrs", "product", "analytics", "chapter-36"]
   version: 1
 
 cards:
-  - front: "What is InsightFlow's North Star metric, and why was it chosen over MAU?"
+  - id: "ch36-13-metrics-okrs-product-analytics-001"
+    front: "What is InsightFlow's North Star metric, and why was it chosen over MAU?"
     back: "Weekly active teams creating or editing dashboards. It was chosen because it is value-aligned (moves when users get value), leading (predicts retention), and actionable. MAU grows with any marketing spend and does not indicate whether users are getting value from the product."
+    tags: ["north-star", "star-metric", "insightflow"]
+    difficulty: "intermediate"
 
-  - front: "What are the six areas covered by L1 health indicator metrics?"
+  - id: "ch36-13-metrics-okrs-product-analytics-002"
+    front: "What are the six areas covered by L1 health indicator metrics?"
     back: "Acquisition (are new users finding the product?), Activation (are new users reaching the value moment?), Engagement (are active users getting value?), Retention (are users coming back?), Monetisation (is value translating to revenue?), Satisfaction (how do users feel?)."
+    tags: ["six-areas", "areas-covered", "health"]
+    difficulty: "basic"
 
-  - front: "What is the difference between L1 and L2 metrics?"
+  - id: "ch36-13-metrics-okrs-product-analytics-003"
+    front: "What is the difference between L1 and L2 metrics?"
     back: "L1 metrics are standing health indicators that paint a complete picture of product health — they are always monitored. L2 metrics are diagnostic — they answer 'why is an L1 metric moving?' and are used for investigation, not for a standing dashboard."
+    tags: ["difference", "metrics"]
+    difficulty: "intermediate"
 
-  - front: "What is the output KR trap, and how do you test for it?"
+  - id: "ch36-13-metrics-okrs-product-analytics-004"
+    front: "What is the output KR trap, and how do you test for it?"
     back: "Writing Key Results that measure what the team ships rather than what users do. The test: 'Could the team hit this KR without a single user benefiting?' If yes, it is an output KR and should be rewritten to measure user behaviour or business outcomes."
+    tags: ["output", "trap", "test"]
+    difficulty: "intermediate"
 
-  - front: "What is the ideal OKR completion rate for stretch OKRs?"
+  - id: "ch36-13-metrics-okrs-product-analytics-005"
+    front: "What is the ideal OKR completion rate for stretch OKRs?"
     back: "70% completion is the target. If you are confident you will hit 100%, the OKRs are not ambitious enough. They should require genuine product improvement, not just shipping what was already planned."
+    tags: ["ideal-okr", "okr-completion", "rate"]
+    difficulty: "basic"
 
-  - front: "What are the four criteria a North Star metric must meet?"
+  - id: "ch36-13-metrics-okrs-product-analytics-006"
+    front: "What are the four criteria a North Star metric must meet?"
     back: "Value-aligned (moves when users get more value), Leading (predicts long-term retention and revenue), Actionable (the product team can influence it), Understandable (everyone knows what it means and why it matters)."
+    tags: ["north-star", "star-metric", "criteria"]
+    difficulty: "basic"
 
-  - front: "What sections does /metrics-review produce?"
+  - id: "ch36-13-metrics-okrs-product-analytics-007"
+    front: "What sections does /metrics-review produce?"
     back: "Summary (2-3 sentences on overall health), metric scorecard (current/previous/change/target/status), trend analysis, bright spots, areas of concern, and recommended actions. Every recommended action should be specific — 'investigate further' is not an action."
+    tags: ["/metrics-review-produce", "sections", "metrics-review"]
+    difficulty: "basic"
 
-  - front: "What are the six dashboard anti-patterns from the /metrics-review skill?"
+  - id: "ch36-13-metrics-okrs-product-analytics-008"
+    front: "What are the six dashboard anti-patterns from the /metrics-review skill?"
     back: "1) Vanity metrics (always go up), 2) Too many metrics (no room for context), 3) No comparison (raw numbers without prior period or target), 4) Stale dashboards (not updated or reviewed), 5) Output dashboards (measuring team activity, not user outcomes), 6) One dashboard for all audiences."
+    tags: ["six-dashboard", "dashboard-anti-patterns", "anti-patterns"]
+    difficulty: "intermediate"
 
-  - front: "What is activation rate, and why is it typically the highest-leverage L1 metric?"
+  - id: "ch36-13-metrics-okrs-product-analytics-009"
+    front: "What is activation rate, and why is it typically the highest-leverage L1 metric?"
     back: "Activation rate is the percentage of new signups who reach the first meaningful value moment. Improving it has compound effects: users who activate retain better, convert to paid at higher rates, and generate better NPS scores. It is the single step that most affects the rest of the user lifecycle."
+    tags: ["activation-rate", "highest-leverage", "metric"]
+    difficulty: "advanced"
 
-  - front: "How many objectives should a team set per quarter in an OKR framework?"
+  - id: "ch36-13-metrics-okrs-product-analytics-010"
+    front: "How many objectives should a team set per quarter in an OKR framework?"
     back: "2-3 objectives maximum. More than that and nothing is truly prioritised. Each objective should have 2-4 Key Results."
+    tags: ["per-quarter", "okr-framework", "objectives"]
+    difficulty: "intermediate"
 
-  - front: "What does /metrics-review need from you if no analytics tool is connected via MCP?"
+  - id: "ch36-13-metrics-okrs-product-analytics-011"
+    front: "What does /metrics-review need from you if no analytics tool is connected via MCP?"
     back: "The metrics and their current values (pasted as a table or described), comparison data from the previous period and targets, and context on recent events — launches, incidents, campaigns, or seasonality that might explain changes."
+    tags: ["analytics-tool", "connected-via", "metrics-review"]
+    difficulty: "intermediate"
 
-  - front: "What is the NEVER DO rule for metric reviews — what must every metric have?"
+  - id: "ch36-13-metrics-okrs-product-analytics-012"
+    front: "What is the NEVER DO rule for metric reviews — what must every metric have?"
     back: "Every metric must have a comparison. A raw number without context — previous period, target, or benchmark — is not information. '521 active teams' means nothing. '521 active teams (prior: 498, target: 550, status: at risk)' is a data point."
+    tags: ["metric-reviews", "never", "rule"]
+    difficulty: "advanced"

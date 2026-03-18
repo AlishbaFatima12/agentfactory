@@ -1,35 +1,67 @@
 deck:
   id: "ch37-13-people-analytics-agent-operations"
   title: "People Analytics Agent Operations"
+  description: "Key concepts and review questions covering people analytics agent operations."
+  tags: ["people", "analytics", "agent", "operations", "chapter-37"]
   version: 1
 
 cards:
-  - front: "What are the four report types in /people-report, and what business question does each answer?"
+  - id: "ch37-13-people-analytics-agent-operations-001"
+    front: "What are the four report types in /people-report, and what business question does each answer?"
     back: "Headcount (who do we have?), Attrition (are we keeping people?), Diversity (is our pipeline representative?), Org Health (is our structure working?)."
+    tags: ["business-question", "report", "people-report"]
+    difficulty: "intermediate"
 
-  - front: "What is 'regrettable attrition' and why does it matter more than total attrition?"
+  - id: "ch37-13-people-analytics-agent-operations-002"
+    front: "What is 'regrettable attrition' and why does it matter more than total attrition?"
     back: "Regrettable attrition is the departure of employees flagged as high performers whose exit was undesired by the organisation. It is more diagnostic than total attrition because it reveals whether you are losing the people you most need to keep."
+    tags: ["regrettable-attrition", "total-attrition", "matter"]
+    difficulty: "basic"
 
-  - front: "In a recruiting pipeline, what does a high time-in-stage at the Screen stage typically signal?"
+  - id: "ch37-13-people-analytics-agent-operations-003"
+    front: "In a recruiting pipeline, what does a high time-in-stage at the Screen stage typically signal?"
     back: "The job description attracted the wrong candidates, or the screening criteria are unclear. Strong candidates are in multiple processes simultaneously — delays at screening cause drop-off among the best prospects."
+    tags: ["recruiting-pipeline", "high-time-in-stage", "time-in-stage"]
+    difficulty: "intermediate"
 
-  - front: "What is the recruiting pipeline stage where time-in-stage delay signals calibration breakdown?"
+  - id: "ch37-13-people-analytics-agent-operations-004"
+    front: "What is the recruiting pipeline stage where time-in-stage delay signals calibration breakdown?"
     back: "The Debrief stage. A long debrief means the interview panel disagrees on assessment criteria or the decision-making process is broken — not that the candidates are the problem."
+    tags: ["recruiting-pipeline", "pipeline-stage", "time-in-stage"]
+    difficulty: "basic"
 
-  - front: "What does it mean to treat persistent HR agents as 'sensors' rather than automation systems?"
+  - id: "ch37-13-people-analytics-agent-operations-005"
+    front: "What does it mean to treat persistent HR agents as 'sensors' rather than automation systems?"
     back: "Sensors produce signals about the environment. Agent reports — query volumes, escalation rates, task completion rates — tell you where the HR function is working and where it is failing, beyond just automating tasks."
+    tags: ["treat-persistent", "automation-systems", "mean"]
+    difficulty: "intermediate"
 
-  - front: "What does a spike in KB agent query volume on a specific policy topic typically signal?"
+  - id: "ch37-13-people-analytics-agent-operations-006"
+    front: "What does a spike in KB agent query volume on a specific policy topic typically signal?"
     back: "Employees cannot find or understand the answer. The policy exists but is either hard to find, written in unclear language, or has recently changed. The signal points to a documentation or communication gap, not just high employee interest."
+    tags: ["agent-query", "query-volume", "spike"]
+    difficulty: "intermediate"
 
-  - front: "What threshold in the KB agent escalation rate should prompt an HR review of the knowledge base?"
+  - id: "ch37-13-people-analytics-agent-operations-007"
+    front: "What threshold in the KB agent escalation rate should prompt an HR review of the knowledge base?"
     back: "Above 7% escalation rate — meaning more than 1 in 14 queries could not be answered by the agent and required human HR follow-up. This signals the knowledge base has significant gaps for the query types employees are asking."
+    tags: ["agent-escalation", "escalation-rate", "threshold"]
+    difficulty: "intermediate"
 
-  - front: "What does it mean when two agent reports — KB Agent (query spike) and Policy Maintenance Agent (inconsistency flagged) — both point to the same policy?"
+  - id: "ch37-13-people-analytics-agent-operations-008"
+    front: "What does it mean when two agent reports — KB Agent (query spike) and Policy Maintenance Agent (inconsistency flagged) — both point to the same policy?"
     back: "A cross-agent signal pointing to a single root cause: the policy is both internally inconsistent and confusing to employees. Fixing the policy fixes both signals. This is only visible when reading all four reports together."
+    tags: ["agent-reports", "agent-query", "mean"]
+    difficulty: "advanced"
 
-  - front: "What pre-boarding task completion rate threshold triggers HR follow-up with new joiners?"
+  - id: "ch37-13-people-analytics-agent-operations-009"
+    front: "What pre-boarding task completion rate threshold triggers HR follow-up with new joiners?"
     back: "Below 90%. New joiners arriving with incomplete pre-boarding tasks — IT access, paperwork, system setup — typically have a worse Day 1 experience and slower time-to-productivity."
+    tags: ["pre-boarding-task", "task-completion", "pre-boarding"]
+    difficulty: "intermediate"
 
-  - front: "What is the eNPS (Employee Net Promoter Score) and what does a score below zero indicate?"
+  - id: "ch37-13-people-analytics-agent-operations-010"
+    front: "What is the eNPS (Employee Net Promoter Score) and what does a score below zero indicate?"
     back: "eNPS measures whether employees would recommend the organisation as a place to work (0-10 scale, NPS methodology). Below zero means more detractors than promoters — a warning sign for culture and retention risk."
+    tags: ["enps-employee", "employee-net", "promoter"]
+    difficulty: "intermediate"

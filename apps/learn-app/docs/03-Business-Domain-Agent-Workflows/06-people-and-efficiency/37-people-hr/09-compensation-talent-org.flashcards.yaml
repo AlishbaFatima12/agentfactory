@@ -1,35 +1,67 @@
 deck:
   id: "ch37-09-compensation-talent-org"
   title: "Compensation Talent Org"
+  description: "Key concepts and review questions covering compensation talent org."
+  tags: ["compensation", "talent", "org", "chapter-37"]
   version: 1
 
 cards:
-  - front: "What four percentile bands does /comp-analysis use, and what does each signal?"
+  - id: "ch37-09-compensation-talent-org-001"
+    front: "What four percentile bands does /comp-analysis use, and what does each signal?"
     back: "25th = below market (retention risk); 50th = market median (competitive); 75th = above market (attracts strong performers); 90th = top of market (critical or scarce roles)"
+    tags: ["percentile-bands", "comp-analysis", "signal"]
+    difficulty: "intermediate"
 
-  - front: "What are the five readiness classifications in /match?"
+  - id: "ch37-09-compensation-talent-org-002"
+    front: "What are the five readiness classifications in /match?"
     back: "READY NOW, READY IN 6 MONTHS, READY IN 12 MONTHS, DEVELOPING (18-24 months), NOT A FIT"
+    tags: ["readiness-classifications", "match"]
+    difficulty: "basic"
 
-  - front: "What are the six dimensions of a /match talent assessment?"
+  - id: "ch37-09-compensation-talent-org-003"
+    front: "What are the six dimensions of a /match talent assessment?"
     back: "Critical skills, Experience, Performance trajectory, Readiness indicators, Development areas, Motivation and career intent"
+    tags: ["six-dimensions", "/match-talent", "match"]
+    difficulty: "basic"
 
-  - front: "What are the three types of development gap in /match Dimension 5, and what does each mean?"
+  - id: "ch37-09-compensation-talent-org-004"
+    front: "What are the three types of development gap in /match Dimension 5, and what does each mean?"
     back: "EXPERIENCE GAP = has aptitude, needs opportunity; SKILL GAP = needs to build a specific capability; MINDSET GAP = assumptions need to shift. Each requires a different development intervention."
+    tags: ["development-gap", "/match-dimension", "match"]
+    difficulty: "intermediate"
 
-  - front: "Why does /match prohibit basing a readiness assessment on tenure alone?"
+  - id: "ch37-09-compensation-talent-org-005"
+    front: "Why does /match prohibit basing a readiness assessment on tenure alone?"
     back: "Years in role does not equal readiness for the next role. Evidence of next-level behaviour — operating above current role, self-initiated work, peer recognition — is what predicts readiness, not time served."
+    tags: ["/match-prohibit", "prohibit-basing", "match"]
+    difficulty: "intermediate"
 
-  - front: "What is the correct language for a succession conversation, and what must never be said?"
+  - id: "ch37-09-compensation-talent-org-006"
+    front: "What is the correct language for a succession conversation, and what must never be said?"
     back: "ALWAYS SAY: 'If [conditions] continue, [pathway] becomes realistic.' NEVER SAY: 'You will definitely be promoted in [date].' Specific promises create legal and relational risk."
+    tags: ["correct-language", "succession-conversation", "never"]
+    difficulty: "intermediate"
 
-  - front: "What is the healthy span-of-control range for a manager, according to /org-planning benchmarks?"
+  - id: "ch37-09-compensation-talent-org-007"
+    front: "What is the healthy span-of-control range for a manager, according to /org-planning benchmarks?"
     back: "5–8 direct reports. Fewer than 3 is a warning sign (too narrow); more than 12 is a warning sign (too hard to manage)."
+    tags: ["healthy-span-of-control", "span-of-control-range", "span-of-control"]
+    difficulty: "intermediate"
 
-  - front: "What is the healthy IC-to-manager ratio, and what does a ratio below 4:1 indicate?"
+  - id: "ch37-09-compensation-talent-org-008"
+    front: "What is the healthy IC-to-manager ratio, and what does a ratio below 4:1 indicate?"
     back: "Healthy range: 6:1 to 10:1. Below 4:1 = top-heavy organisation — too many managers relative to individual contributors."
+    tags: ["healthy-ic-to-manager", "ic-to-manager-ratio", "ic-to-manager"]
+    difficulty: "basic"
 
-  - front: "Why must /match outputs always carry the CONFIDENTIAL label?"
+  - id: "ch37-09-compensation-talent-org-009"
+    front: "Why must /match outputs always carry the CONFIDENTIAL label?"
     back: "Talent assessments contain personal data about career readiness, development gaps, and retention risk. They must not be shared with the assessed employee without explicit HR and manager review and a decision about what to disclose."
+    tags: ["/match-outputs", "outputs-always", "match"]
+    difficulty: "advanced"
 
-  - front: "What is the internal mobility imperative, and what evidence supports it?"
+  - id: "ch37-09-compensation-talent-org-010"
+    front: "What is the internal mobility imperative, and what evidence supports it?"
     back: "Assess internal candidates before posting externally. Industry research suggests external hiring typically costs several times more than internal promotion, and new external hires often take many months to reach full productivity — versus shorter ramp-up for internal moves."
+    tags: ["internal-mobility", "mobility-imperative", "evidence"]
+    difficulty: "advanced"

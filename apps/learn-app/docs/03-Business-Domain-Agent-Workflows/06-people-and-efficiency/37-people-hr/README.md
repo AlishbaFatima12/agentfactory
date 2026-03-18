@@ -3,8 +3,8 @@ slug: /Business-Domain-Agent-Workflows/people-hr
 sidebar_position: 37
 title: "Chapter 37: People & HR"
 slides:
-  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-37/ai-native-people-operations.pdf"
-  title: "AI-Native People Operations"
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-37/hr-operations.pdf"
+  title: "HR Operations"
   height: 700
 description: "Build AI agents for HR operations — policy self-service, onboarding automation, job descriptions, performance reviews, talent matching, institutional knowledge capture, and four persistent agents that run your people operations continuously"
 chapter_number: 37

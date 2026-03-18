@@ -10,7 +10,7 @@ cards:
     front: "Why are domain agents described as 'isolated silos' without the productivity layer?"
     back: "Each domain agent operates only within its own context — the finance agent does not know what HR knows, and HR does not know what operations knows. Without context injection, cross-domain information must be manually gathered."
     tags: ["cross-domain", "integration"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-11-cross-domain-intelligence-002"
     front: "What are the five context types supported by /agentic-office:context-loader?"
@@ -22,13 +22,13 @@ cards:
     front: "What six sections appear in every cross-domain context brief output?"
     back: "Core context\nDomain 1 context\nDomain 2 context\nPeople context\nWhat to watch for\nGaps in context"
     tags: ["cross-domain", "context-loader"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-11-cross-domain-intelligence-004"
     front: "What four memory layers does /agentic-office:workplace-search scan simultaneously?"
     back: "Personal (working style, priorities)\nTeam (person entries, relationship history)\nProjects (status, decisions, milestones)\nOrganisational (terminology, meeting notes, decision log)"
     tags: ["cross-domain", "workplace-search"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-11-cross-domain-intelligence-005"
     front: "What is an integration protocol in the context of work.local.md?"
@@ -40,7 +40,7 @@ cards:
     front: "What three domain checks does the new_hire integration protocol trigger?"
     back: "Finance (headcount within approved budget? tooling needed?)\nOperations (system access timeline? affected systems?)\nHR (onboarding protocol? concurrent onboardings?)"
     tags: ["cross-domain", "integration-protocol"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-11-cross-domain-intelligence-007"
     front: "What does the 'gaps in context' section of a context brief represent?"

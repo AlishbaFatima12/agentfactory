@@ -1,38 +1,73 @@
 deck:
   id: "ch38-11-operational-metrics-designing-what-to-measure"
   title: "Operational Metrics — Designing What to Measure"
+  description: "Key concepts and review questions covering operational metrics — designing what to measure."
+  tags: ["operational", "metrics", "designing", "measure", "chapter-38"]
   version: 1
 
 cards:
-  - front: "What is the difference between a leading indicator and a lagging indicator?"
+  - id: "ch38-11-operational-metrics-designing-what-to-measure-001"
+    front: "What is the difference between a leading indicator and a lagging indicator?"
     back: "A lagging indicator tells you what already happened (e.g., incident MTTR last month: 4.2 hours). A leading indicator tells you what is about to happen — it is an early warning signal while you can still act (e.g., open SLA warnings this week: 3 vendor breaches flagged). Lagging metrics are essential for accountability; leading metrics are essential for prevention. Every major risk area needs at least one leading indicator."
+    tags: ["leading-indicator", "lagging-indicator", "difference"]
+    difficulty: "intermediate"
 
-  - front: "What are the five operational metrics design principles?"
+  - id: "ch38-11-operational-metrics-designing-what-to-measure-002"
+    front: "What are the five operational metrics design principles?"
     back: "1. Measure what matters, not what is easy — start from the question 'what do we need to know to run operations well?' 2. Leading indicators over lagging — every risk area needs at least one leading indicator. 3. Every metric has a named owner (not 'the team'). 4. Red thresholds trigger actions — a metric without a defined alarm level is a thermometer, not an alarm. 5. Fewer, better — 5-10 metrics that tell the story clearly are worth more than 30 that require interpretation."
+    tags: ["operational-metrics", "metrics-design", "principles"]
+    difficulty: "advanced"
 
-  - front: "What are the eight required fields in a metric definition?"
+  - id: "ch38-11-operational-metrics-designing-what-to-measure-003"
+    front: "What are the eight required fields in a metric definition?"
     back: "1. Metric name. 2. What it measures (one sentence). 3. Why it matters (what decision it informs). 4. Type: LEADING or LAGGING. 5. Formula (precise — same answer for any two people). 6. Data source (where the data comes from). 7. Measurement frequency. 8. Owner (named role). Plus Thresholds (green/amber/red) with red specifying escalation path, and Trend direction (higher/lower/stable is better)."
+    tags: ["eight-required", "required-fields", "metric"]
+    difficulty: "basic"
 
-  - front: "What makes a red threshold operational rather than advisory?"
+  - id: "ch38-11-operational-metrics-designing-what-to-measure-004"
+    front: "What makes a red threshold operational rather than advisory?"
     back: "An operational red threshold specifies three things: (1) the level at which it triggers, (2) who is escalated to, and (3) by when. Without these three specifications, the threshold is advisory — it shows the alarm level but does not define who acts. Example of advisory: 'RED: <80%'. Example of operational: 'RED: <80% — escalate to COO within 24 hours; initiate formal vendor performance review'."
+    tags: ["red-threshold", "threshold-operational", "makes"]
+    difficulty: "intermediate"
 
-  - front: "What is the difference between /metrics and /status-report, and when do you use each?"
+  - id: "ch38-11-operational-metrics-designing-what-to-measure-005"
+    front: "What is the difference between /metrics and /status-report, and when do you use each?"
     back: "/metrics (custom Operations Intelligence plugin) is a design tool — use it once (or when the framework needs updating) to decide what to measure, how to calculate it, and what thresholds mean. /status-report (official Operations plugin) is a reporting tool — use it every reporting period to fill in the actual values and generate the monthly report. /metrics designs the framework; /status-report populates it."
+    tags: ["difference", "metrics", "status-report"]
+    difficulty: "intermediate"
 
-  - front: "Why is the repeat incident rate described as 'the most important incident metric'?"
+  - id: "ch38-11-operational-metrics-designing-what-to-measure-006"
+    front: "Why is the repeat incident rate described as 'the most important incident metric'?"
     back: "MTTR tells you how fast incidents are resolved — that is response efficiency. The repeat incident rate tells you whether post-mortem corrective actions are actually working — that is learning effectiveness. An MTTR of 2 hours is impressive; a repeat incident rate of 40% means the systemic causes are not being addressed. Read together, these two metrics give a complete picture of incident management maturity."
+    tags: ["repeat-incident", "incident-rate", "described"]
+    difficulty: "intermediate"
 
-  - front: "Which metrics in the Standard Operations Metrics Library are leading indicators for change management?"
+  - id: "ch38-11-operational-metrics-designing-what-to-measure-007"
+    front: "Which metrics in the Standard Operations Metrics Library are leading indicators for change management?"
     back: "Two leading change management indicators: (1) Changes without impact assessment — count of MAJOR+ changes approved without a completed impact assessment (leading because it measures a process gap before incidents occur); (2) Emergency change rate — emergency changes as % of total (leading/lagging signal of change management process breakdown). The change failure rate and PIR completion rate are lagging indicators."
+    tags: ["standard-operations", "operations-metrics", "library"]
+    difficulty: "basic"
 
-  - front: "What domains does the L11 metrics framework aggregate, and which lessons do they come from?"
+  - id: "ch38-11-operational-metrics-designing-what-to-measure-008"
+    front: "What domains does the L11 metrics framework aggregate, and which lessons do they come from?"
     back: "Six domains: Vendor Management (L03), Process Operations (L05), Change Management (L06), Compliance (L07), Risk (L09), Incident (L10). The metrics framework is the aggregation layer of the entire chapter — every prior lesson's operational data becomes input to one or more metrics here. The framework is not invented; it measures what has already been built."
+    tags: ["l11-metrics", "metrics-framework", "domains"]
+    difficulty: "intermediate"
 
-  - front: "What is the format of the monthly operations report generated by /status-report?"
+  - id: "ch38-11-operational-metrics-designing-what-to-measure-009"
+    front: "What is the format of the monthly operations report generated by /status-report?"
     back: "One-page format: Headline status (🟢 STABLE / 🟡 WATCH ITEMS / 🔴 ACTION REQUIRED), metrics table (metric | status | this month | last month | trend | action), key issues (red items only — specific action + owner), watch items (amber items — what is being monitored), completed actions from last month, and upcoming priorities for next 30 days."
+    tags: ["monthly-operations", "operations-report", "format"]
+    difficulty: "basic"
 
-  - front: "Why does 'the operations team' fail as a metric owner?"
+  - id: "ch38-11-operational-metrics-designing-what-to-measure-010"
+    front: "Why does 'the operations team' fail as a metric owner?"
     back: "Shared ownership is no ownership. When a metric turns red and the owner is 'the team', nobody is individually accountable, nobody has a specific escalation obligation, and nobody faces consequences for non-action. Every metric must have one named person who is responsible for both producing the measurement and for the performance it reflects. 'Head of Operations — [Name]' is an owner. 'The operations team' is a filing cabinet."
+    tags: ["operations-team", "team-fail", "metric"]
+    difficulty: "advanced"
 
-  - front: "What happens if you define a metric by its data source rather than what it measures?"
+  - id: "ch38-11-operational-metrics-designing-what-to-measure-011"
+    front: "What happens if you define a metric by its data source rather than what it measures?"
     back: "You create a metric that describes a system rather than a question. 'Zendesk tickets' is a data source; 'unresolved customer issues rate' is a metric. The distinction matters because the same data source can answer multiple questions, and the same question can be answered from multiple data sources. Define the question first; then determine the best data source to answer it."
+    tags: ["data-source", "happens", "metric"]
+    difficulty: "intermediate"

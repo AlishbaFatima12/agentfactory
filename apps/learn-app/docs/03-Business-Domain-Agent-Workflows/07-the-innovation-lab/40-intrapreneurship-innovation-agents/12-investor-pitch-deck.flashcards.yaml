@@ -1,41 +1,79 @@
 deck:
   id: "ch40-12-investor-pitch-deck"
   title: "Investor Pitch Deck"
+  description: "Key concepts and review questions covering investor pitch deck."
+  tags: ["investor", "pitch", "deck", "chapter-40"]
   version: 1
 
 cards:
-  - front: "What is the 9-slide narrative arc for an investor pitch deck?"
+  - id: "ch40-12-investor-pitch-deck-001"
+    front: "What is the 9-slide narrative arc for an investor pitch deck?"
     back: "Hook → Problem → Solution → Market → Traction → Business Model → Team → Ask → Vision. Each slide has one job: produce a specific investor emotion that moves them toward conviction."
+    tags: ["9-slide-narrative", "narrative-arc", "9-slide"]
+    difficulty: "basic"
 
-  - front: "What is the 'emotional job' of a slide?"
+  - id: "ch40-12-investor-pitch-deck-002"
+    front: "What is the 'emotional job' of a slide?"
     back: "The specific investor emotion the slide is engineered to produce. Example: the Problem slide's emotional job is recognition and empathy with the customer. The Ask slide's emotional job is clarity — the investor knows exactly what they are buying."
+    tags: ["emotional-job", "slide"]
+    difficulty: "basic"
 
-  - front: "What is the traction hierarchy from most to least convincing?"
+  - id: "ch40-12-investor-pitch-deck-003"
+    front: "What is the traction hierarchy from most to least convincing?"
     back: "1. Revenue + growth rate; 2. Pilot results with specific metrics; 3. Letters of intent with specific terms; 4. Waitlist with conversion rate; 5. Discovery interviews with specific insights. The earlier the stage, the more team strength and insight quality must compensate for limited traction."
+    tags: ["traction-hierarchy", "least-convincing"]
+    difficulty: "intermediate"
 
-  - front: "List four banned phrases and why investors reject them."
+  - id: "ch40-12-investor-pitch-deck-004"
+    front: "List four banned phrases and why investors reject them."
     back: "1. 'Massive market opportunity' — give the number; 2. 'Conservative projections' — say base case, all projections are optimistic; 3. 'No direct competition' — if there is no competition, there is no market; 4. 'We just need 1% of the market' — this is not a strategy, it is bad arithmetic."
+    tags: ["banned-phrases", "investors-reject"]
+    difficulty: "intermediate"
 
-  - front: "Why must every claim in a pitch deck have a source?"
+  - id: "ch40-12-investor-pitch-deck-005"
+    front: "Why must every claim in a pitch deck have a source?"
     back: "Experienced investors have heard thousands of unsourced claims. Sourced claims (customer data, pilot results, your own measured metrics) signal that you know your business specifically — not just that you believe in it generally. Unsourced claims read as wishful thinking."
+    tags: ["pitch-deck", "claim", "source"]
+    difficulty: "basic"
 
-  - front: "What is the emotional job of the Hook slide?"
+  - id: "ch40-12-investor-pitch-deck-006"
+    front: "What is the emotional job of the Hook slide?"
     back: "Curiosity and urgency — the investor should want to hear more. The Hook makes the problem feel real and consequential before the Problem slide deepens it."
+    tags: ["emotional-job", "hook-slide"]
+    difficulty: "basic"
 
-  - front: "Why does the Problem slide precede the Solution slide in the narrative arc?"
+  - id: "ch40-12-investor-pitch-deck-007"
+    front: "Why does the Problem slide precede the Solution slide in the narrative arc?"
     back: "Investors who hear the solution before feeling the problem ask 'so what?' The Problem slide creates the emotional context (recognition, empathy) that makes the Solution feel like relief rather than a feature announcement."
+    tags: ["problem-slide", "slide-precede", "solution"]
+    difficulty: "intermediate"
 
-  - front: "What does the Executive Summary need to include?"
+  - id: "ch40-12-investor-pitch-deck-008"
+    front: "What does the Executive Summary need to include?"
     back: "Five elements in under 100 words: problem, solution, traction, ask, and what makes this worth the investor's time. No placeholder text. No generic phrases. Every claim specific to the venture."
+    tags: ["executive-summary", "include"]
+    difficulty: "basic"
 
-  - front: "Why should you ask an AI to generate your 15 hardest investor questions rather than generating them yourself?"
+  - id: "ch40-12-investor-pitch-deck-009"
+    front: "Why should you ask an AI to generate your 15 hardest investor questions rather than generating them yourself?"
     back: "You will unconsciously avoid the most uncomfortable questions. The AI has no stake in protecting your feelings — it will surface the questions about your weakest points, which are exactly the ones you must prepare for."
+    tags: ["hardest-investor", "investor-questions", "generate"]
+    difficulty: "intermediate"
 
-  - front: "How does the investor pitch deck translate for an intrapreneur?"
+  - id: "ch40-12-investor-pitch-deck-010"
+    front: "How does the investor pitch deck translate for an intrapreneur?"
     back: "The investor becomes the innovation committee. The Ask becomes budget and headcount request. The Market slide shows internal opportunity size. The Traction slide shows pilot results and internal champions. The Vision shows what the project enables for the organisation in 3–5 years."
+    tags: ["investor-pitch", "pitch-deck", "translate"]
+    difficulty: "advanced"
 
-  - front: "What is the Fundraising Readiness recommended threshold before starting active investor outreach?"
+  - id: "ch40-12-investor-pitch-deck-011"
+    front: "What is the Fundraising Readiness recommended threshold before starting active investor outreach?"
     back: "12 of 16 checklist items complete. Below this threshold, a warm introduction arriving finds you scrambling rather than ready — and momentum lost in fundraising is very hard to restart."
+    tags: ["fundraising-readiness", "readiness-recommended", "threshold"]
+    difficulty: "intermediate"
 
-  - front: "What makes a bottom-up market model more credible than a top-down TAM?"
+  - id: "ch40-12-investor-pitch-deck-012"
+    front: "What makes a bottom-up market model more credible than a top-down TAM?"
     back: "Bottom-up ('there are N companies, we can reach Y of them, at Z each') shows that the founder understands their actual customer. Top-down analyst estimates are public data that any company can cite — they do not demonstrate market insight."
+    tags: ["bottom-up-market", "market-model", "makes"]
+    difficulty: "advanced"

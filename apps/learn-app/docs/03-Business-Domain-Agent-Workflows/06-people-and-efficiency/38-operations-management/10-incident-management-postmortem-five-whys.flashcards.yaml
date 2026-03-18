@@ -1,41 +1,79 @@
 deck:
   id: "ch38-10-incident-management-postmortem-five-whys"
   title: "Incident Management — Post-Mortem and Five Whys"
+  description: "Key concepts and review questions covering incident management — post-mortem and five whys."
+  tags: ["incident", "management", "post-mortem", "whys", "chapter-38"]
   version: 1
 
 cards:
-  - front: "What is the difference between a proximate cause and a systemic root cause?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-001"
+    front: "What is the difference between a proximate cause and a systemic root cause?"
     back: "The proximate cause is the thing that immediately broke (e.g., database failover did not trigger). The systemic root cause is the organisational gap that allowed it to break (e.g., migration checklists were never updated for cloud-specific requirements). Fixing only the proximate cause prevents this specific incident from recurring; fixing the systemic cause prevents the entire class of related incidents."
+    tags: ["proximate-cause", "systemic-root", "difference"]
+    difficulty: "intermediate"
 
-  - front: "What are the five criteria of the corrective action quality test?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-002"
+    front: "What are the five criteria of the corrective action quality test?"
     back: "1. Specific — describes exactly what will be different when done. 2. Owned — one named person, not 'the team'. 3. Time-bound — a specific date, not 'ASAP'. 4. Root-cause-targeted — addresses WHY 4 or WHY 5, not just WHY 1. 5. Verifiable — states how we will confirm it is actually complete."
+    tags: ["corrective-action", "action-quality", "criteria"]
+    difficulty: "basic"
 
-  - front: "What does 'blameless' mean in an incident post-mortem?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-003"
+    front: "What does 'blameless' mean in an incident post-mortem?"
     back: "Every question is framed as 'what in our systems, processes, or controls allowed this to happen?' — not 'who made the mistake?'. Accountability is directed at systems and processes rather than individual errors. This is not about removing accountability; it is about directing it productively. Blame produces defensiveness and incomplete disclosure; systems thinking produces corrective actions that actually stick."
+    tags: ["blameless-mean", "incident-post-mortem", "post-mortem"]
+    difficulty: "basic"
 
-  - front: "What is MTTD and where does it appear in a post-mortem timeline?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-004"
+    front: "What is MTTD and where does it appear in a post-mortem timeline?"
     back: "MTTD = Mean Time to Detect. In the timeline, it is the gap between when the incident actually started and when the monitoring alert fired (or when the team first became aware). In the payment outage, monitoring signs were visible 23 minutes before the full outage but were not actioned — reducing MTTD would have given the team earlier intervention time."
+    tags: ["post-mortem-timeline", "mttd", "appear"]
+    difficulty: "basic"
 
-  - front: "When is a P1 post-mortem mandatory and by when must it be completed?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-005"
+    front: "When is a P1 post-mortem mandatory and by when must it be completed?"
     back: "A P1 (Critical) post-mortem is always mandatory. It must be completed within 5 business days of the incident being resolved. P2 (Major) post-mortems are also mandatory, within 10 business days. P3 (Minor) incidents require at minimum a log entry; a full post-mortem is optional."
+    tags: ["post-mortem-mandatory", "post-mortem", "completed"]
+    difficulty: "basic"
 
-  - front: "Why must a post-mortem include a 'What Went Well' section?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-006"
+    front: "Why must a post-mortem include a 'What Went Well' section?"
     back: "Every incident has things that worked and should be protected — e.g., 'P1 paging worked; engineer responded within 3 minutes.' Omitting this section produces an incomplete picture and risks undermining processes that are actually functioning well. A post-mortem is a learning document, not just a failure document. 'What went well' is also a morale consideration in high-stress incident reviews."
+    tags: ["post-mortem-include", "post-mortem", "went"]
+    difficulty: "intermediate"
 
-  - front: "What is the structural pattern shared between the payment processing outage (L10) and the change management process (L06)?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-007"
+    front: "What is the structural pattern shared between the payment processing outage (L10) and the change management process (L06)?"
     back: "The payment outage was caused by a poorly managed change: the cloud migration 4 months earlier did not require runbook validation as an acceptance criterion. This is a L06 change management failure that became a L10 incident. Had the L06 change process required the runbook to be updated and validated before the migration closed, the outage would not have occurred. The corrective action (CA-003) adds runbook validation to the change management checklist — a direct L06 fix."
+    tags: ["structural-pattern", "pattern-shared", "payment"]
+    difficulty: "advanced"
 
-  - front: "What makes 'Fix the health check threshold to 80%' an incomplete corrective action?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-008"
+    front: "What makes 'Fix the health check threshold to 80%' an incomplete corrective action?"
     back: "It targets WHY 1 (the proximate cause) only. It prevents this specific threshold from causing the same failure again, but it does not prevent the next migration from introducing a different misconfiguration. The systemic corrective action — updating the migration acceptance checklist to require environment-specific validation — targets WHY 5 and closes the class of vulnerability, not just this one instance."
+    tags: ["makes-fix", "health-check", "threshold"]
+    difficulty: "intermediate"
 
-  - front: "What is the Five Whys technique and what is its stopping condition?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-009"
+    front: "What is the Five Whys technique and what is its stopping condition?"
     back: "Start with the proximate cause and ask 'why?' five times, using factual answers. Each answer becomes the next question. Stop when you reach something that a process, governance, or system change can address — typically at WHY 4 or WHY 5. 'Five' is a heuristic; some causes emerge at WHY 3, some require WHY 7. The rule is to stop at the systemic cause, not at a specific count."
+    tags: ["whys-technique", "stopping-condition"]
+    difficulty: "intermediate"
 
-  - front: "What is the difference between a contributing factor and a root cause?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-010"
+    front: "What is the difference between a contributing factor and a root cause?"
     back: "A root cause is the systemic gap that allowed the incident to occur. A contributing factor is something that made the incident worse than it needed to be — it amplified impact or slowed resolution but is not the underlying vulnerability. In the payment outage: root cause = incomplete migration checklist (WHY 5). Contributing factors = single on-call engineer (no backup), manager unreachable for communication approval, monitoring threshold too high."
+    tags: ["contributing-factor", "root-cause", "difference"]
+    difficulty: "intermediate"
 
-  - front: "Why must the corrective action review meeting be scheduled before the post-mortem closes?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-011"
+    front: "Why must the corrective action review meeting be scheduled before the post-mortem closes?"
     back: "Corrective actions that are not followed up are not corrective actions — they are good intentions. The CA review meeting (typically 4 weeks after the post-mortem) is the mechanism that turns agreements into verified completions. Once the incident is resolved, urgency dissipates and CAs are deprioritised. The review meeting reinstates accountability. Skipping it guarantees that many CAs will never be completed."
+    tags: ["corrective-action", "action-review", "meeting"]
+    difficulty: "intermediate"
 
-  - front: "How does the /incident command support the Five Whys? What are its five task types?"
+  - id: "ch38-10-incident-management-postmortem-five-whys-012"
+    front: "How does the /incident command support the Five Whys? What are its five task types?"
     back: "The /incident command supports five task types: (1) Post-Mortem — full retrospective report, (2) Five Whys Root Cause Drill — systematic 'why?' iterations, (3) Incident Log Entry — structured register record, (4) Corrective Action Tracker — open CA tracking with owners and deadlines, (5) Lessons Learned Brief — one-page organisation-wide communication. The Five Whys can be run as part of a post-mortem or as a standalone drill on a stated proximate cause."
+    tags: ["/incident-command", "command-support", "incident"]
+    difficulty: "advanced"

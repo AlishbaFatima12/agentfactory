@@ -1,41 +1,79 @@
 deck:
   id: "ch36-09-roadmap-planning-communication"
   title: "Roadmap Planning Communication"
+  description: "Key concepts and review questions covering roadmap planning communication."
+  tags: ["roadmap", "planning", "communication", "chapter-36"]
   version: 1
 
 cards:
-  - front: "What are the four roadmap framework options and when should each be used?"
+  - id: "ch36-09-roadmap-planning-communication-001"
+    front: "What are the four roadmap framework options and when should each be used?"
     back: "Now/Next/Later: external comms and executive alignment (avoids false date precision). Quarterly Themes: planning meetings and strategy communication. OKR-Aligned: organisations that run on OKRs. Timeline/Gantt: engineering execution planning and resource conflict identification — NOT for external communication."
+    tags: ["roadmap-framework", "framework-options"]
+    difficulty: "basic"
 
-  - front: "What does each bucket mean in Now/Next/Later?"
+  - id: "ch36-09-roadmap-planning-communication-002"
+    front: "What does each bucket mean in Now/Next/Later?"
     back: "Now = commitments (current sprint/quarter, specs complete, teams assigned). Next = intentions (following quarter, problem statements ready, not fully specified). Later = signals (3-6+ months, strategic themes, user problems not solutions)."
+    tags: ["bucket-mean", "now/next/later"]
+    difficulty: "basic"
 
-  - front: "Why should customer-facing roadmaps avoid specific dates?"
+  - id: "ch36-09-roadmap-planning-communication-003"
+    front: "Why should customer-facing roadmaps avoid specific dates?"
     back: "Customers read 'Q3' as a guarantee. When a dependency slips, the PM is renegotiating a contract rather than updating a plan. Now/Next/Later communicates direction without creating date-based commitments."
+    tags: ["customer-facing-roadmaps", "roadmaps-avoid", "customer-facing"]
+    difficulty: "intermediate"
 
-  - front: "What is the 70/20/10 capacity allocation rule for product teams?"
+  - id: "ch36-09-roadmap-planning-communication-004"
+    front: "What is the 70/20/10 capacity allocation rule for product teams?"
     back: "70% planned features (roadmap items advancing strategic goals), 20% technical health (tech debt, reliability, performance), 10% unplanned buffer (urgent issues, quick wins, other-team requests). If over 70% is planned features, the team has no buffer."
+    tags: ["70/20/10-capacity", "capacity-allocation", "rule"]
+    difficulty: "intermediate"
 
-  - front: "What are the five categories of roadmap dependencies?"
+  - id: "ch36-09-roadmap-planning-communication-005"
+    front: "What are the five categories of roadmap dependencies?"
     back: "Technical (Feature B requires Feature A's infrastructure), Team (requires another team's work), External (waiting on vendor/partner), Knowledge (need research results before starting), Sequential (must ship A before B can start)."
+    tags: ["roadmap-dependencies", "categories"]
+    difficulty: "intermediate"
 
-  - front: "What must be true for every named dependency on a roadmap?"
+  - id: "ch36-09-roadmap-planning-communication-006"
+    front: "What must be true for every named dependency on a roadmap?"
     back: "Each dependency must have: a name, an owner (by name or role), and a 'need by' date. Unowned dependencies without dates do not get resolved."
+    tags: ["named-dependency", "true", "roadmap"]
+    difficulty: "basic"
 
-  - front: "What is the /roadmap-update command and which plugin provides it?"
+  - id: "ch36-09-roadmap-planning-communication-007"
+    front: "What is the /roadmap-update command and which plugin provides it?"
     back: "/roadmap-update is provided by the official product-management plugin. It creates, updates, or reprioritises product roadmaps — accepts current roadmap state or a list of initiatives and produces a structured roadmap view."
+    tags: ["/roadmap-update-command", "plugin-provides", "roadmap-update"]
+    difficulty: "intermediate"
 
-  - front: "What are the five steps for communicating a roadmap change?"
+  - id: "ch36-09-roadmap-planning-communication-008"
+    front: "What are the five steps for communicating a roadmap change?"
     back: "1. Acknowledge the change (direct, no softening). 2. Explain the reason (what new information drove it). 3. Show the tradeoff (what was deprioritised). 4. Show the new plan (updated roadmap). 5. Acknowledge impact (who was expecting the deprioritised item and needs a direct conversation)."
+    tags: ["roadmap-change", "steps", "communicating"]
+    difficulty: "advanced"
 
-  - front: "What is the difference between a roadmap change and a scope adjustment?"
+  - id: "ch36-09-roadmap-planning-communication-009"
+    front: "What is the difference between a roadmap change and a scope adjustment?"
     back: "A roadmap change is a strategic reprioritisation — what the team is no longer building, or what moved between Now/Next/Later. A scope adjustment is normal execution refinement within a sprint. Roadmap changes require stakeholder communication; scope adjustments do not."
+    tags: ["roadmap-change", "scope-adjustment", "difference"]
+    difficulty: "intermediate"
 
-  - front: "What distinguishes the engineering, executive, and customer roadmap versions?"
+  - id: "ch36-09-roadmap-planning-communication-010"
+    front: "What distinguishes the engineering, executive, and customer roadmap versions?"
     back: "Engineering: sprint-level detail, dependency owners and need-by dates, at-risk flags. Executive: commercial outcomes aligned to strategy, what is NOT being built and why, no sprint references. Customer: benefit language ('your Monday report runs automatically'), no dates, no feature-implementation language."
+    tags: ["engineering-executive", "customer-roadmap", "distinguishes"]
+    difficulty: "intermediate"
 
-  - front: "When does the Now/Next/Later format break down?"
+  - id: "ch36-09-roadmap-planning-communication-011"
+    front: "When does the Now/Next/Later format break down?"
     back: "When engineering needs sprint-level scheduling (use Timeline/Gantt internally), or when the team needs to identify resource conflicts between parallel initiatives (use Gantt for that planning exercise, then translate back to Now/Next/Later for communication)."
+    tags: ["now/next/later-format", "format-break"]
+    difficulty: "intermediate"
 
-  - front: "What is the signal that a roadmap is over-committed?"
+  - id: "ch36-09-roadmap-planning-communication-012"
+    front: "What is the signal that a roadmap is over-committed?"
     back: "More than 70% of engineering capacity is allocated to planned features, leaving no buffer for technical health or unplanned work. The fix is to cut scope from the roadmap, not to assume engineers can work faster."
+    tags: ["signal", "roadmap", "over-committed"]
+    difficulty: "advanced"

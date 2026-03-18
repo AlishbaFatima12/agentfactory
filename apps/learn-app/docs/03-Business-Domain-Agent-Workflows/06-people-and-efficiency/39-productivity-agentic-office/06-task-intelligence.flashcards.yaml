@@ -34,13 +34,13 @@ cards:
     front: "What defines a P1 task vs a P2 task vs a P3 task?"
     back: "P1 (Urgent / High Impact): hard deadline today or this week, blocking others, or P1 project with real slippage consequences. P2 (Important / This Week): matters this week but no immediate damage if it slips a day — includes P1 project tasks not yet time-critical. P3 (Standard / Backlog): important but not time-critical this week — the test is 'if I do not touch this for a week, what actually happens?'"
     tags: ["priority-levels", "classification"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-task-intelligence-006"
     front: "What is the difference between the official productivity plugin and the custom agentic-office plugin for task management?"
     back: "The official productivity plugin provides task CRUD — adding, completing, and querying tasks in TASKS.md. The custom agentic-office plugin provides task intelligence — brain dump capture, P1/P2/P3 priority classification, critical path identification. One stores tasks; the other thinks about them. You need both."
     tags: ["two-plugins", "architecture"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-task-intelligence-007"
     front: "How does the task-intelligence skill enrich raw brain dump input?"
@@ -52,7 +52,7 @@ cards:
     front: "How do you distinguish a task from a project?"
     back: "A task is completable in one session with a single clear output and 1-3 steps. A project spans days or weeks with multiple milestones and more than 3 steps. If a 'task' has more than 3 steps and spans more than one day, it is a project — create a project entry in work.local.md and break it into single-session tasks."
     tags: ["task-vs-project", "distinction"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-task-intelligence-009"
     front: "What is the difference between critical path and priority?"
@@ -64,7 +64,7 @@ cards:
     front: "In Zia's Monday brain dump, why is Project Nighthawk classified as P1 while Chapter 28 (due Thursday, P1 project) is classified as P2?"
     back: "Nighthawk is P1 because it has been stalled 10 days (overdue — criterion 1), is blocking the Q3 plan (criterion 2), and every day of delay compresses the downstream timeline. Chapter 28 has a hard deadline but it is Thursday, not today (criterion 1 partially met), and it is not yet blocking anyone (criterion 2 not met). The skill flags it as 'treat as high priority despite P2 urgency rating' — a judgment call the reader can challenge."
     tags: ["worked-example", "classification"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
 
   - id: "ch39-task-intelligence-011"
     front: "Why should you challenge at least two of the skill's priority classifications per brain dump?"

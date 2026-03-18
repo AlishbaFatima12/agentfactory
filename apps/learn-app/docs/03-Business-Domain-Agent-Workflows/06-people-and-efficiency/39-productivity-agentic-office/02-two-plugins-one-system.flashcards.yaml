@@ -22,7 +22,7 @@ cards:
     front: "What natural language triggers does the official Productivity plugin own exclusively?"
     back: "task, to-do, remember, who is, start, update, sync"
     tags: ["plugins", "trigger-overlap"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-02-two-plugins-004"
     front: "What natural language triggers does the Agentic Office plugin use instead of the official plugin's reserved words?"
@@ -40,7 +40,7 @@ cards:
     front: "What type of layer does the official Productivity plugin provide vs. the Agentic Office plugin?"
     back: "Official: storage layer (TASKS.md, CLAUDE.md, memory/, dashboard.html).\nCustom: intelligence layer (9 skills, 4 agents, work.local.md)."
     tags: ["plugins", "architecture"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-02-two-plugins-007"
     front: "Why do Chapter 39's two plugins use non-overlapping natural language triggers rather than sharing vocabulary?"

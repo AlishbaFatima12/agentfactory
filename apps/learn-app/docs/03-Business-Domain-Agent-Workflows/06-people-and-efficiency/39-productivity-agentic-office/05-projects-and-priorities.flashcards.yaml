@@ -35,13 +35,13 @@ cards:
     front: "What are the three project priority levels (P1/P2/P3) and what distinguishes P1 from P2?"
     back: "P1: Critical to strategic goals — significant problems have real consequences.\nP2: Important but not existential — a slip causes a problem, not a crisis.\nP3: Valuable but deferrable this week."
     tags: ["priority", "p1-p2-p3"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-05-projects-priorities-006"
     front: "What is the three P1 rule, and what does violating it signal?"
     back: "If more than three projects are classified P1, none effectively are. It signals the team has not prioritised — they have listed. Forced-choice between P1s is the discipline."
     tags: ["p1-rule", "priority-discipline"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-05-projects-priorities-007"
     front: "Why is forced-choice between P1 projects described as a discipline rather than a limitation?"
@@ -60,19 +60,19 @@ cards:
     front: "Project Nighthawk is the codename for the Karachi expansion. What is its P-level and current status in the case study?"
     back: "P2, AT RISK — facility agreement negotiations stalled 10+ days, blocking Q3 target."
     tags: ["project-nighthawk", "case-study"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-05-projects-priorities-010"
     front: "What command performs a cross-context search across all four layers of work.local.md simultaneously?"
     back: "/agentic-office:workplace-search"
     tags: ["workplace-search", "cross-context"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-05-projects-priorities-011"
     front: "What are the five sections of a workplace-search result output?"
     back: "Project Memory\nMeeting Notes / Decision Log\nPeople Memory\nTerminology\nTask / Delegation Log"
     tags: ["workplace-search", "output-format"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-05-projects-priorities-012"
     front: "Why is 'not in workplace memory' a useful search result rather than a failure?"
@@ -92,7 +92,7 @@ cards:
     front: "You have four projects and want to classify all four as P1. What must happen before you can add the fourth?"
     back: "One of the existing three P1 projects must be explicitly reclassified to P2. Adding a fourth P1 without demoting another is not prioritisation."
     tags: ["p1-rule", "priority-discipline"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
     why: "What criteria would you apply to decide which existing P1 to demote?"
 
   - id: "ch39-05-projects-priorities-015"
@@ -106,4 +106,4 @@ cards:
     front: "After Lessons 3, 4, and 5, what is true about the work.local.md foundation?"
     back: "All four layers are complete: personal (L3), organisational (L3), team/people (L4), and projects (L5). Every subsequent lesson builds on this foundation."
     tags: ["work-local-md", "foundation", "four-layers"]
-    difficulty: "basic"
+    difficulty: "intermediate"

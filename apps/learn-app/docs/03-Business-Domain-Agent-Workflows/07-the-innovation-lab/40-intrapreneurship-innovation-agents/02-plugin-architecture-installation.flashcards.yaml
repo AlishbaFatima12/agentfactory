@@ -1,35 +1,67 @@
 deck:
   id: "ch40-02-plugin-architecture-installation"
   title: "Plugin Architecture and Installation — Chapter 40 Lesson 2"
+  description: "Key concepts and review questions covering plugin architecture and installation."
+  tags: ["plugin", "architecture", "installation", "chapter-40"]
   version: 1
 
 cards:
-  - front: "What are the 10 commands in the innovation plugin?"
+  - id: "ch40-02-plugin-architecture-installation-001"
+    front: "What are the 10 commands in the innovation plugin?"
     back: "/idea, /discovery, /hypothesis, /validate, /canvas, /financials, /pitch, /sprint, /market, /gtm — one command per major DLA function."
+    tags: ["innovation-plugin", "commands"]
+    difficulty: "basic"
 
-  - front: "Which two commands are in the Design Thinking stage?"
+  - id: "ch40-02-plugin-architecture-installation-002"
+    front: "Which two commands are in the Design Thinking stage?"
     back: "/discovery (customer research and synthesis) and /idea (idea generation and evaluation). These operate at the problem level — understanding what is worth solving."
+    tags: ["design-thinking", "thinking-stage", "commands"]
+    difficulty: "basic"
 
-  - front: "Which two commands are in the Lean Startup stage?"
+  - id: "ch40-02-plugin-architecture-installation-003"
+    front: "Which two commands are in the Lean Startup stage?"
     back: "/hypothesis (assumption mapping and MVP scoping) and /validate (build-measure-learn analysis). These operate at the solution level — testing whether your solution works."
+    tags: ["lean-startup", "startup-stage", "commands"]
+    difficulty: "intermediate"
 
-  - front: "Which command is in the Agile stage?"
+  - id: "ch40-02-plugin-architecture-installation-004"
+    front: "Which command is in the Agile stage?"
     back: "/sprint — innovation sprint planning, backlog, and retrospective with assumption updates. This operates at the delivery level."
+    tags: ["agile-stage", "command"]
+    difficulty: "basic"
 
-  - front: "What are the four cross-cutting commands that apply at any DLA stage?"
+  - id: "ch40-02-plugin-architecture-installation-005"
+    front: "What are the four cross-cutting commands that apply at any DLA stage?"
     back: "/market (competitive intelligence + sizing), /financials (unit economics + runway), /pitch (investor deck), and /gtm (go-to-market strategy). These are most powerful after discovery and validation data exists."
+    tags: ["cross-cutting-commands", "dla-stage", "cross-cutting"]
+    difficulty: "intermediate"
 
-  - front: "What is innov.local.md?"
+  - id: "ch40-02-plugin-architecture-installation-006"
+    front: "What is innov.local.md?"
     back: "The venture context configuration file. It encodes your venture details, customer profiles, assumption stack, business model canvas, financial model, competitive landscape, and fundraising information. It makes every command output specific to your venture rather than generic."
+    tags: ["innov-local"]
+    difficulty: "advanced"
 
-  - front: "What is the difference between a blank innov.local.md and a filled one?"
+  - id: "ch40-02-plugin-architecture-installation-007"
+    front: "What is the difference between a blank innov.local.md and a filled one?"
     back: "A blank innov.local.md produces generic outputs. A filled one produces venture-specific outputs — for example, /canvas builds a canvas using your actual customers and traction data instead of a template example."
+    tags: ["blank-innov", "innov-local", "difference"]
+    difficulty: "intermediate"
 
-  - front: "What is stage-aware calibration in the innovation plugin?"
+  - id: "ch40-02-plugin-architecture-installation-008"
+    front: "What is stage-aware calibration in the innovation plugin?"
     back: "Every command checks your venture.stage and warns if you are at the wrong DLA level. For example, /financials at IDEA stage warns that numbers will be highly speculative; /idea at MVP stage asks if you are pivoting."
+    tags: ["stage-aware-calibration", "innovation-plugin", "stage-aware"]
+    difficulty: "advanced"
 
-  - front: "Which section of innov.local.md should you fill in first, and why?"
+  - id: "ch40-02-plugin-architecture-installation-009"
+    front: "Which section of innov.local.md should you fill in first, and why?"
     back: "The venture: section — name, stage, problem statement, target customer, solution hypothesis, unfair advantage. Even a rough problem statement immediately improves the specificity of every command output."
+    tags: ["innov-local", "section", "fill"]
+    difficulty: "intermediate"
 
-  - front: "Name the four validation prompts that confirm innov.local.md is working correctly."
+  - id: "ch40-02-plugin-architecture-installation-010"
+    front: "Name the four validation prompts that confirm innov.local.md is working correctly."
     back: "/idea (should produce venture-specific ideas), /canvas (should assess your actual canvas blocks), /hypothesis (should reference a specific assumption ID), /pitch (should include your actual traction numbers)."
+    tags: ["validation-prompts", "confirm-innov", "local"]
+    difficulty: "intermediate"

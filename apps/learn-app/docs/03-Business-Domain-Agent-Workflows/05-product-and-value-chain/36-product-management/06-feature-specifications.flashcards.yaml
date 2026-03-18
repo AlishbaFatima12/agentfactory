@@ -1,44 +1,85 @@
 deck:
   id: "ch36-06-feature-specifications"
   title: "Feature Specifications"
+  description: "Key concepts and review questions covering feature specifications."
+  tags: ["feature", "specifications", "chapter-36"]
   version: 1
 
 cards:
-  - front: "What are the two failure modes for feature specifications?"
+  - id: "ch36-06-feature-specifications-001"
+    front: "What are the two failure modes for feature specifications?"
     back: "The Vague Spec (under-specified — engineers make product decisions) and the Over-Specified Spec (over-specified — PM makes engineering decisions). The craft is in the middle: complete on what matters, silent on what doesn't."
+    tags: ["failure-modes", "feature-specifications"]
+    difficulty: "intermediate"
 
-  - front: "What are the five mandatory sections of a feature spec?"
+  - id: "ch36-06-feature-specifications-002"
+    front: "What are the five mandatory sections of a feature spec?"
     back: "1. The Problem (user pain with evidence), 2. The Solution (user flows + scope boundary), 3. Acceptance Criteria (numbered, testable), 4. Edge Cases and Error States (table), 5. Open Questions (with owner and due date)."
+    tags: ["mandatory-sections", "feature-spec"]
+    difficulty: "basic"
 
-  - front: "What is the scope boundary in a feature spec, and why is it required?"
+  - id: "ch36-06-feature-specifications-003"
+    front: "What is the scope boundary in a feature spec, and why is it required?"
     back: "An explicit IN/OUT OF SCOPE list in the Solution section. Every OUT OF SCOPE line prevents a scope creep conversation. Non-goals are as important as goals for keeping engineering focused."
+    tags: ["scope-boundary", "feature-spec", "required"]
+    difficulty: "basic"
 
-  - front: "What is the first of the four acceptance criteria rules?"
+  - id: "ch36-06-feature-specifications-004"
+    front: "What is the first of the four acceptance criteria rules?"
     back: "Independently testable — each AC must be verifiable on its own without another AC being true first."
+    tags: ["acceptance-criteria", "criteria-rules"]
+    difficulty: "basic"
 
-  - front: "Why is 'and' not allowed in a single acceptance criterion?"
+  - id: "ch36-06-feature-specifications-005"
+    front: "Why is 'and' not allowed in a single acceptance criterion?"
     back: "A compound AC hides two requirements as one. If only one passes in the test suite, you cannot determine whether the feature is ready to ship. Always split compound ACs."
+    tags: ["single-acceptance", "acceptance-criterion", "allowed"]
+    difficulty: "intermediate"
 
-  - front: "What is the 'behavior not implementation' AC rule?"
+  - id: "ch36-06-feature-specifications-006"
+    front: "What is the 'behavior not implementation' AC rule?"
     back: "ACs must describe what must be true from the user's perspective, not how to achieve it. 'Export completes within 10 seconds' is behavior. 'Use async job queue with Redis' is implementation — it belongs in an engineering ticket, not a spec."
+    tags: ["behavior", "implementation", "rule"]
+    difficulty: "intermediate"
 
-  - front: "What does 'measurable thresholds' mean as an AC rule?"
+  - id: "ch36-06-feature-specifications-007"
+    front: "What does 'measurable thresholds' mean as an AC rule?"
     back: "Vague quality language ('fast', 'easy', 'intuitive') must be replaced with specific, testable numbers. 'Export completes within 10 seconds for up to 10 charts' is measurable. 'Export is fast' is not."
+    tags: ["measurable-thresholds", "thresholds-mean", "rule"]
+    difficulty: "intermediate"
 
-  - front: "What are the four spec status tags and what do they mean?"
+  - id: "ch36-06-feature-specifications-008"
+    front: "What are the four spec status tags and what do they mean?"
     back: "DRAFT = working document, not ready for estimation. REVIEW = all sections complete, open questions have owners. REFINED = all questions resolved, effort estimated. SHIPPED = feature live, metrics tracked."
+    tags: ["spec-status", "status-tags", "mean"]
+    difficulty: "basic"
 
-  - front: "When is a spec over-specified?"
+  - id: "ch36-06-feature-specifications-009"
+    front: "When is a spec over-specified?"
     back: "When it tells engineers how to implement something — database schema, component names, algorithm choice. The spec should answer every product question and none of the engineering questions."
+    tags: ["spec-over-specified", "over-specified"]
+    difficulty: "basic"
 
-  - front: "How does the /write-spec command from the official product-management plugin work?"
+  - id: "ch36-06-feature-specifications-010"
+    front: "How does the /write-spec command from the official product-management plugin work?"
     back: "It accepts a feature name, problem statement, or user request. It gathers context (user problem, target users, constraints, prior art), pulls from connected tools if available, and generates a structured PRD/spec with Problem Statement, Goals, Non-Goals, User Stories, Requirements, Success Metrics, Open Questions, and Timeline Considerations."
+    tags: ["/write-spec-command", "official-product-management", "write-spec"]
+    difficulty: "advanced"
 
-  - front: "What is the relationship between L06's spec and L07's PRD?"
+  - id: "ch36-06-feature-specifications-011"
+    front: "What is the relationship between L06's spec and L07's PRD?"
     back: "The L06 feature spec describes one feature (trigger configuration) for one team. The L07 PRD wraps this spec and others into a multi-team initiative document (Workflow Builder) that covers commercial context, all features in scope, non-functional requirements, GTM plan, and dependencies."
+    tags: ["relationship", "spec"]
+    difficulty: "advanced"
 
-  - front: "What is the signal that a spec is over-specified?"
+  - id: "ch36-06-feature-specifications-012"
+    front: "What is the signal that a spec is over-specified?"
     back: "If the spec mentions database schema, API endpoints, service names, or algorithm choices in the acceptance criteria — these are implementation details that belong in engineering tickets, not the spec."
+    tags: ["signal", "spec", "over-specified"]
+    difficulty: "intermediate"
 
-  - front: "What should the Open Questions section include for every question?"
+  - id: "ch36-06-feature-specifications-013"
+    front: "What should the Open Questions section include for every question?"
     back: "A number, the question text, the owner (by role: Eng lead, PM, Design, Legal), and a due date. Undated questions without owners do not get resolved."
+    tags: ["open-questions", "questions-section", "include"]
+    difficulty: "intermediate"

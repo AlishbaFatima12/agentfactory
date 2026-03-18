@@ -16,7 +16,7 @@ cards:
     front: "What are the four Context Failure Modes that limit AI assistants in professional settings?"
     back: "1. Terminology Blindness\n2. People Anonymity\n3. Project Amnesia\n4. Priority Blindness"
     tags: ["context-problem", "failure-modes"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-01-context-problem-003"
     front: "What is Terminology Blindness in the context of AI assistants?"
@@ -28,19 +28,19 @@ cards:
     front: "What is People Anonymity as a context failure mode?"
     back: "AI has no knowledge of who stakeholders are or how to work with them."
     tags: ["failure-modes", "people-memory"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-01-context-problem-005"
     front: "What is Project Amnesia as a context failure mode?"
     back: "AI has no awareness of what is in flight, what has been decided, or what is at risk."
     tags: ["failure-modes", "project-memory"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-01-context-problem-006"
     front: "What is Priority Blindness as a context failure mode?"
     back: "AI treats all requests with equal urgency regardless of organisational priorities."
     tags: ["failure-modes", "priority"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-01-context-problem-007"
     front: "How does an experienced colleague differ from a brilliant new hire, according to Chapter 39's framing?"

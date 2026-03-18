@@ -49,7 +49,7 @@ cards:
     front: "What are the three levels of the Chief of Staff escalation protocol?"
     back: "Level 1: 🟡 digest flag.\nLevel 2: explicit message (digest not actioned 2+ days).\nLevel 3: COO/Executive prompt (flagged 14+ days unresolved)."
     tags: ["chief-of-staff", "escalation"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-l12-digital-chief-of-staff-008"
     front: "A team sets their escalation threshold to 2 days. Within a week they stop reading escalation flags. Why?"
@@ -68,13 +68,13 @@ cards:
     front: "What does the /agentic-office:schedule command do?"
     back: "Reads the chief_of_staff configuration from work.local.md and activates scheduled delivery of the digest, week-ahead brief, and week-close summary."
     tags: ["chief-of-staff", "schedule-command"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-l12-digital-chief-of-staff-011"
     front: "How does the Chief of Staff differ from the domain agents it synthesises in terms of its role?"
     back: "Domain agents do the specialised work (finance, legal, HR). The Chief of Staff does none of that work — its role is ensuring the person doing the work always knows what matters, what is at risk, and what needs attention. It synthesises, never executes."
     tags: ["chief-of-staff", "orchestration"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
     why: "Why would a Chief of Staff that also did domain work be an anti-pattern?"
 
   - id: "ch39-l12-digital-chief-of-staff-012"

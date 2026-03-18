@@ -1,41 +1,79 @@
 deck:
   id: "ch38-15-chapter-summary-quick-reference"
   title: "Chapter Summary and Quick Reference"
+  description: "Key concepts and review questions covering chapter summary and quick reference."
+  tags: ["operations-management", "ops-workflows", "compliance", "chapter-38"]
   version: 1
 
 cards:
-  - front: "What is the central insight of Chapter 38?"
+  - id: "ch38-15-chapter-summary-quick-reference-001"
+    front: "What is the central insight of Chapter 38?"
     back: "Operations is an intelligence function, not primarily an administrative one. Its job is to make the invisible visible — vendor spend nobody has totalled, processes nobody has documented, compliance obligations nobody has mapped, risks nobody has quantified."
+    tags: ["central-insight"]
+    difficulty: "intermediate"
 
-  - front: "List the six official Operations plugin commands and their primary use."
+  - id: "ch38-15-chapter-summary-quick-reference-002"
+    front: "List the six official Operations plugin commands and their primary use."
     back: "/vendor-review (vendor portfolio audit, SLA scorecards, renewal calendar), /process-doc (SOPs, RACI, flowcharts), /runbook (operational runbooks), /change-request (change impact, comms plan, rollback), /status-report (KPI reports for leadership), /capacity-plan (resource planning — not used in this chapter)."
+    tags: ["six-official", "official-operations", "plugin"]
+    difficulty: "intermediate"
 
-  - front: "List the four custom Operations Intelligence plugin commands and their primary use."
+  - id: "ch38-15-chapter-summary-quick-reference-003"
+    front: "List the four custom Operations Intelligence plugin commands and their primary use."
     back: "/audit (audit evidence packs, mock review, response framework), /contract (contract obligation extraction, risk flagging, renewal strategy), /incident (post-mortem, Five Whys RCA, corrective action tracking), /metrics (metrics framework design, dashboard structure, reporting templates)."
+    tags: ["custom-operations", "operations-intelligence", "plugin"]
+    difficulty: "intermediate"
 
-  - front: "What are the four persistent agents and their monitoring schedules?"
+  - id: "ch38-15-chapter-summary-quick-reference-004"
+    front: "What are the four persistent agents and their monitoring schedules?"
     back: "vendor-watchdog (weekly: renewals, SLA breaches, unapproved spend), process-health (monthly: SOP currency, orphaned processes), compliance-monitor (weekly: obligation review, evidence aging, regulatory alerts), change-tracker (weekly: change pipeline, PIR completion, rollback triggers)."
+    tags: ["persistent-agents", "monitoring-schedules"]
+    difficulty: "basic"
 
-  - front: "What does a High risk score (10-16) require?"
+  - id: "ch38-15-chapter-summary-quick-reference-005"
+    front: "What does a High risk score (10-16) require?"
     back: "Immediate mitigation plan, escalation to COO, and monthly review. High risk = likelihood × impact score between 10 and 16 on the 5x5 matrix."
+    tags: ["high-risk", "risk-score", "10-16"]
+    difficulty: "basic"
 
-  - front: "What are the four change classification levels and their approval authorities?"
+  - id: "ch38-15-chapter-summary-quick-reference-006"
+    front: "What are the four change classification levels and their approval authorities?"
     back: "Standard (Operations Manager, no notice), Significant (COO or delegate, 48 hours), Major (COO + CFO, 5 working days), Critical (Board sign-off, 10 working days)."
+    tags: ["change-classification", "classification-levels", "approval"]
+    difficulty: "basic"
 
-  - front: "What does the compliance status code 'Gap' mean and what action does it require?"
+  - id: "ch38-15-chapter-summary-quick-reference-007"
+    front: "What does the compliance status code 'Gap' mean and what action does it require?"
     back: "Evidence is missing or a control is inactive; the obligation is materially at risk. Required action: immediate escalation to the CCO. Distinguished from 'Partial' (some components incomplete) and 'Urgent' (Gap or Partial with an approaching regulatory deadline)."
+    tags: ["compliance-status", "status-code", "mean"]
+    difficulty: "intermediate"
 
-  - front: "What are the five criteria of the SOP Quality Standard?"
+  - id: "ch38-15-chapter-summary-quick-reference-008"
+    front: "What are the five criteria of the SOP Quality Standard?"
     back: "Specific (every step names action, actor, system, output), Owned (named role owns each step and the document), Controlled (version number, effective date, review date visible), Current (reflects today's process not the process at time of writing), Tested (at least one person not involved in writing has followed it successfully)."
+    tags: ["sop-quality", "quality-standard", "criteria"]
+    difficulty: "advanced"
 
-  - front: "What does a fit-for-purpose incident post-mortem produce?"
+  - id: "ch38-15-chapter-summary-quick-reference-009"
+    front: "What does a fit-for-purpose incident post-mortem produce?"
     back: "A complete timeline (sources cited, no unexplained gaps), at least one systemic root cause verified by Five Whys, corrective actions that are specific, time-bound, and owner-assigned, a named SOP or control that failed, and assurance that actions address root causes not just symptoms."
+    tags: ["fit-for-purpose-incident", "incident-post-mortem", "fit-for-purpose"]
+    difficulty: "intermediate"
 
-  - front: "What does 'operations intelligence' change and what does it NOT change?"
+  - id: "ch38-15-chapter-summary-quick-reference-010"
+    front: "What does 'operations intelligence' change and what does it NOT change?"
     back: "It improves the quality of information available when operational decisions are made. It does NOT make the decisions. Human judgment still determines whether to exit a vendor, how to communicate a change, whether to roll back, and which compliance risk to accept."
+    tags: ["operations-intelligence", "intelligence-change"]
+    difficulty: "intermediate"
 
-  - front: "What is the dependency chain for ops.local.md across the chapter?"
+  - id: "ch38-15-chapter-summary-quick-reference-011"
+    front: "What is the dependency chain for ops.local.md across the chapter?"
     back: "Organisation Context (L02) → Vendor Portfolio (L03) → Process Library (L05) → Change Management (L06) → Regulatory Frameworks (L07) → Risk Configuration (L09) → Operational Metrics (L11). The file is built progressively; each lesson adds the section relevant to that lesson's exercise."
+    tags: ["dependency-chain", "ops-local", "across"]
+    difficulty: "advanced"
 
-  - front: "When should you use a natural language prompt instead of a slash command?"
+  - id: "ch38-15-chapter-summary-quick-reference-012"
+    front: "When should you use a natural language prompt instead of a slash command?"
     back: "Always when triggering compliance-tracking, risk-assessment, or process-optimization. These are auto-skills activated by keyword patterns — never slash commands. For all other operations tasks, use the appropriate slash command: /vendor-review, /process-doc, /runbook, /change-request, /status-report, /audit, /contract, /incident, or /metrics."
+    tags: ["natural-language", "language-prompt", "slash"]
+    difficulty: "intermediate"

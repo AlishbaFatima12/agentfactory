@@ -29,13 +29,13 @@ cards:
     front: "Why is 'ASAP' an unacceptable delegation deadline?"
     back: "It produces the lowest-priority work on the delegatee's list — they have no anchor for when it is actually needed. A specific date and time is required to communicate urgency accurately."
     tags: ["deadline", "delegation-checklist"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-07-delegation-005"
     front: "What are the four sections of a delegation record produced by /agentic-office:delegation?"
     back: "Delegated to/by/date/due.\nDeliverable (what, format, length).\nContext (purpose, audience, key question).\nHandoff Communication + Follow-up Plan."
     tags: ["delegation-record", "output-format"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-07-delegation-006"
     front: "What four elements of a handoff message does the delegation skill calibrate from the delegatee's work.local.md person entry?"
@@ -47,7 +47,7 @@ cards:
     front: "The same analytics brief task is delegated to Omar (needs lead time, Slack, specific scope) and to Ayesha (new starter, prefers written briefs, needs context). How do the handoff messages differ?"
     back: "Omar's message: Slack DM, hyper-specific scope, lead time acknowledgement, offer to adjust, same-day confirmation request.\nAyesha's message: Written brief format, structured context about purpose, more background explanation, formal tone."
     tags: ["handoff-calibration", "calibration-comparison"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
     why: "What happens to delegation quality if the skill cannot find a person entry for the delegatee in work.local.md?"
 
   - id: "ch39-07-delegation-008"
@@ -67,13 +67,13 @@ cards:
     front: "What are the check-in cadences for delegations of different durations?"
     back: "Under 5 days: one check-in at midpoint.\n5–14 days: weekly check-in.\nOver 14 days: bi-weekly check-in."
     tags: ["check-in-cadence", "follow-up-protocol"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-07-delegation-011"
     front: "What are the three overdue handling steps for a delegation that has gone late?"
     back: "1 day: polite inquiry — any blockers?\n3 days: explicit conversation — this is affecting [downstream item].\n1 week: flag in digest; consider rerouting or taking back."
     tags: ["overdue-handling", "follow-up-protocol"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-07-delegation-012"
     front: "Why is the follow-up protocol described as early warning rather than micromanagement?"
@@ -99,7 +99,7 @@ cards:
     front: "A delegation comes back with three clarifying questions. Which checklist item does each question most likely map to?"
     back: "Questions about scope → missing specific deliverable or format.\nQuestions about urgency → missing firm deadline.\nQuestions about purpose → missing context (why this matters, who sees it)."
     tags: ["delegation-checklist", "retrospective"]
-    difficulty: "advanced"
+    difficulty: "intermediate"
     why: "How would you rewrite the original delegation brief to eliminate all three questions before sending?"
 
   - id: "ch39-07-delegation-016"
@@ -113,4 +113,4 @@ cards:
     front: "What command generates a delegation record with a calibrated handoff message in the agentic office system?"
     back: "/agentic-office:delegation"
     tags: ["delegation-command", "agentic-office"]
-    difficulty: "basic"
+    difficulty: "intermediate"

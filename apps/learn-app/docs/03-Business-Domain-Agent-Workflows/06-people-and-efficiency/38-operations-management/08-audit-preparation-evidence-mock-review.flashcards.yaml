@@ -1,38 +1,73 @@
 deck:
   id: "ch38-08-audit-preparation-evidence-mock-review"
   title: "Audit Preparation — Evidence and Mock Review"
+  description: "Key concepts and review questions covering audit preparation — evidence and mock review."
+  tags: ["audit", "preparation", "evidence", "mock", "chapter-38"]
   version: 1
 
 cards:
-  - front: "What is the core principle of audit preparation that this lesson opens with?"
+  - id: "ch38-08-audit-preparation-evidence-mock-review-001"
+    front: "What is the core principle of audit preparation that this lesson opens with?"
     back: "Evidence existence is not the same as evidence availability. Evidence that exists in a folder nobody can locate on audit day is, for practical purposes, absent. Audit preparation means confirming that evidence is locatable, current, and demonstrates what it is supposed to demonstrate."
+    tags: ["core-principle", "audit-preparation", "opens"]
+    difficulty: "basic"
 
-  - front: "What are the five audit types and which carries the highest stakes?"
+  - id: "ch38-08-audit-preparation-evidence-mock-review-002"
+    front: "What are the five audit types and which carries the highest stakes?"
     back: "Internal (own audit function), External (third-party auditor), Regulatory (FCA/ICO/HMRC), Customer (client reviewing supplier controls), Certification (BSI/ISO/SOC). Regulatory carries the highest stakes — enforcement action, fines, and licence conditions are possible outcomes."
+    tags: ["highest-stakes", "audit", "carries"]
+    difficulty: "basic"
 
-  - front: "What does the /audit command use as its primary input in this lesson?"
+  - id: "ch38-08-audit-preparation-evidence-mock-review-003"
+    front: "What does the /audit command use as its primary input in this lesson?"
     back: "The compliance obligation map from Lesson 7. The preparation plan is not built from scratch — it converts each obligation in the map from 'obligation with status' to 'evidence ready by date.' Students who skip L07 lack the foundation this lesson requires."
+    tags: ["/audit-command", "primary-input", "audit"]
+    difficulty: "basic"
 
-  - front: "What does a week-by-week audit preparation plan include?"
+  - id: "ch38-08-audit-preparation-evidence-mock-review-004"
+    front: "What does a week-by-week audit preparation plan include?"
     back: "Week-by-week actions (evidence gathering, gap remediation, mock audit, staff briefing, final checks), an evidence inventory for each focus area (obligation, evidence required, location, age, status), gap closure priorities (P1 and P2 with deadlines), and a briefing plan (who needs to be briefed, on what, by when)."
+    tags: ["week-by-week-audit", "audit-preparation", "week-by-week"]
+    difficulty: "intermediate"
 
-  - front: "What is a mock audit and why is it valuable?"
+  - id: "ch38-08-audit-preparation-evidence-mock-review-005"
+    front: "What is a mock audit and why is it valuable?"
     back: "A mock audit simulates the auditor's questions before the real review to surface the difference between knowing a control exists and being able to demonstrate it to a sceptical reviewer. Its value is only realised if the gaps it surfaces are closed before the actual audit — a mock finding not closed before the real audit is a real finding."
+    tags: ["mock-audit", "valuable"]
+    difficulty: "advanced"
 
-  - front: "What are the four finding classifications in audit response?"
+  - id: "ch38-08-audit-preparation-evidence-mock-review-006"
+    front: "What are the four finding classifications in audit response?"
     back: "CRITICAL: immediate regulatory action possible; fix within 30 days. MAJOR: significant control failure; fix within 60-90 days. MINOR: process improvement opportunity; fix within 6 months. OBSERVATION: no immediate action required; monitor."
+    tags: ["finding-classifications", "audit-response"]
+    difficulty: "basic"
 
-  - front: "What six elements must every audit response include?"
+  - id: "ch38-08-audit-preparation-evidence-mock-review-007"
+    front: "What six elements must every audit response include?"
     back: "1. Finding (exact wording from auditor). 2. Our response (acknowledge factually; do not argue). 3. Root cause (why did this gap exist?). 4. Action taken/planned (specific). 5. Owner (named person). 6. Target completion date. 7. Evidence of completion (what we will provide when done)."
+    tags: ["six-elements", "audit-response", "include"]
+    difficulty: "intermediate"
 
-  - front: "What makes a defensive audit response damaging?"
+  - id: "ch38-08-audit-preparation-evidence-mock-review-008"
+    front: "What makes a defensive audit response damaging?"
     back: "Defensive responses signal that the organisation does not accept the finding, lacks governance maturity, and may repeat the gap. Examples: 'We disagree', 'This has never caused a problem', 'We will address this in our next review cycle.' Regulators and auditors read responses as evidence of governance culture — defensiveness damages the relationship."
+    tags: ["defensive-audit", "audit-response", "makes"]
+    difficulty: "intermediate"
 
-  - front: "What makes a mature audit response effective?"
+  - id: "ch38-08-audit-preparation-evidence-mock-review-009"
+    front: "What makes a mature audit response effective?"
     back: "It acknowledges the finding without argument, identifies the specific root cause (not just 'process failure'), states corrective action already taken AND systemic prevention planned, names one owner, gives a target completion date, and describes what evidence of completion will look like. Specific + accountable + evidenced = governance maturity."
+    tags: ["mature-audit", "audit-response", "makes"]
+    difficulty: "intermediate"
 
-  - front: "Why does the SM&CR certification finding in the worked example include two actions — immediate and systemic?"
+  - id: "ch38-08-audit-preparation-evidence-mock-review-010"
+    front: "Why does the SM&CR certification finding in the worked example include two actions — immediate and systemic?"
     back: "The immediate action closes the specific gap (complete certification for this cycle). The systemic action prevents recurrence (calendar now in compliance system, not individual calendar, triggered 8 weeks before deadline). MAJOR findings require systemic corrective action, not just fixing the instance — the same gap appearing in the next audit cycle signals the organisation did not learn."
+    tags: ["certification-finding", "actions-immediate", "worked"]
+    difficulty: "advanced"
 
-  - front: "What cross-reference connects L08 back to L07?"
+  - id: "ch38-08-audit-preparation-evidence-mock-review-011"
+    front: "What cross-reference connects L08 back to L07?"
     back: "The compliance obligation map from L07 is the starting point for the L08 audit preparation plan. The preparation plan begins with the obligation map — it does not start over. This models how real audit preparation works: you build compliance intelligence (L07) and then use it operationally (L08)."
+    tags: ["cross-reference-connects", "connects-l08", "cross-reference"]
+    difficulty: "intermediate"

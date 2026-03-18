@@ -22,7 +22,7 @@ cards:
     front: "What do the A, B, and C grades mean in the smoke test evaluation framework?"
     back: "A: could forward directly.\nB: needs minor editing.\nC: needs significant work."
     tags: ["smoke-test", "grading"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-l14-complete-agentic-office-004"
     front: "Why is a C-grade smoke test output a diagnostic, not a sign of system failure?"
@@ -35,7 +35,7 @@ cards:
     front: "What are the three most common root causes of C-grade smoke test outputs?"
     back: "1. Layer 3 (projects not fully populated)\n2. chief_of_staff.feeds_from (domain agents not listed)\n3. Digest/dashboard configuration gaps"
     tags: ["smoke-test", "diagnosis"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-l14-complete-agentic-office-006"
     front: "An agentic office was configured six months ago and never maintained. What is the risk of its outputs now?"
@@ -60,14 +60,14 @@ cards:
     front: "What is a trigger event configuration in work.local.md and what does it achieve?"
     back: "A mapping from an external event (meeting ends, delegation made, new project starts) to an automatic agent action. Trigger events convert reactive monitoring into proactive coordination — agents act when the world changes, not only when prompted."
     tags: ["trigger-events", "agent-integrations"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
     why: "What is the difference between a system that responds to triggers vs one that only responds to prompts?"
 
   - id: "ch39-l14-complete-agentic-office-010"
     front: "The capstone smoke test asks /agentic-office:workplace-search 'what is at risk right now?' and Project Nighthawk does not appear. Where do you look first to fix this?"
     back: "Layer 3 (Projects section) of work.local.md — the project entry for Nighthawk is either missing, incomplete, or lacks a risk field that the search can surface. The search can only surface what the memory contains."
     tags: ["smoke-test", "diagnosis", "workplace-search"]
-    difficulty: "advanced"
+    difficulty: "intermediate"
     why: "What would you add to the Nighthawk project entry to ensure it surfaces in every at-risk query?"
 
   - id: "ch39-l14-complete-agentic-office-011"
@@ -80,5 +80,5 @@ cards:
     front: "How do you grade each smoke test output, and what does each grade tell you to do next?"
     back: "Grade A: no action needed. Grade B: identify and fix the minor gap. Grade C: map the gap to a specific work.local.md section, add the missing content, re-run the command, and regrade."
     tags: ["smoke-test", "grading"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
     why: "Why is regrading after fixing a C-output important rather than moving on to the next command?"

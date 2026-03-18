@@ -23,26 +23,26 @@ cards:
     front: "What are the four checks in the Memory Keeper's Monday 06:30 weekly maintenance run?"
     back: "1. Project status currency (>7 days stale)\n2. People entry currency (>30 days unchanged)\n3. Stale terminology (>90 days unused)\n4. Orphaned actions (>14 days in-progress)"
     tags: ["memory-keeper", "weekly-maintenance"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-l13-supporting-agents-004"
     front: "How long before a meeting does the Meeting Intelligence Agent deliver its prep brief, and within how long after does it deliver the synthesis?"
     back: "30 minutes before. Within 2 hours after."
     tags: ["meeting-intelligence", "timing"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-l13-supporting-agents-005"
     front: "A recurring meeting has produced fewer than 2 decisions across its last 4 occurrences. What does the Meeting Intelligence Agent recommend?"
     back: "Flag the meeting as a candidate for reduced frequency, replacement with an async digest, or agenda restructuring — but only after checking work.local.md culture notes, since some status meetings serve a relationship maintenance function."
     tags: ["meeting-intelligence", "recurring-meetings"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
     why: "Why would blindly flagging low-decision meetings without checking culture notes be operationally harmful?"
 
   - id: "ch39-l13-supporting-agents-006"
     front: "What happens at each of the three Work Tracker stages after a delegation is created?"
     back: "T+0: logged, confirmation window set.\nT+24hr: follow-up if no confirmation.\nT+48hr: flagged 🔴 in digest if still no confirmation."
     tags: ["work-tracker", "delegation-lifecycle"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-l13-supporting-agents-007"
     front: "What is the Work Tracker's in-progress check-in schedule based on task duration?"
@@ -61,30 +61,30 @@ cards:
     front: "What is the correct weekly agent sequence from Monday morning to Friday close?"
     back: "Mon 06:30: Memory Keeper maintenance.\nMon 06:45: Chief of Staff week-ahead brief.\nMon 07:00: daily digest.\nFri 16:00: Work Tracker delegation audit.\nFri 17:00: Meeting Intelligence weekly audit.\nFri 17:30: Chief of Staff week-close."
     tags: ["weekly-cadence", "all-agents"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-l13-supporting-agents-010"
     front: "Why does Memory Keeper maintenance run before the Chief of Staff week-ahead brief, not after?"
     back: "The week-ahead brief draws its content from work.local.md — project statuses, people priorities, and decision log. If memory maintenance has not run first, the brief is built on potentially stale context, producing outputs that reflect last week's reality, not this Monday's."
     tags: ["weekly-cadence", "dependency-order"]
-    difficulty: "advanced"
+    difficulty: "intermediate"
     why: "Design one scenario where reversing this order would cause a specific, concrete mistake in the week-ahead brief."
 
   - id: "ch39-l13-supporting-agents-011"
     front: "Chief of Staff vs supporting agents: what is the difference in how they operate?"
     back: "Chief of Staff: fixed schedule (07:00, Mon 06:45, Fri 17:30). Supporting agents: trigger-based (Memory Keeper, Work Tracker on events) or calendar-triggered (Meeting Intelligence). You interact with the Chief of Staff daily; supporting agents are invisible until they fire."
     tags: ["agents-overview", "trigger-vs-scheduled"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-l13-supporting-agents-012"
     front: "The Work Tracker surfaces that one team member is consistently late on delegations. How should this pattern be used?"
     back: "As information to improve delegation practice, not as a performance judgement. The pattern may reveal that briefs are unclear, deadlines are unrealistic, or the person is overloaded — all of which are problems the delegator can fix. Escalating it as a performance issue without explicit instruction is a relationship decision, not an agent decision."
     tags: ["work-tracker", "reliability-patterns"]
-    difficulty: "advanced"
+    difficulty: "intermediate"
     why: "At what point does a Work Tracker reliability pattern become something a manager should raise directly with a team member?"
 
   - id: "ch39-l13-supporting-agents-013"
     front: "What are the three types of updates the Meeting Intelligence Agent always proposes after every meeting?"
     back: "Project status changes, decision log additions, and delegation log entries."
     tags: ["meeting-intelligence", "post-meeting"]
-    difficulty: "basic"
+    difficulty: "intermediate"

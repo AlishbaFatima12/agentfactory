@@ -1,38 +1,73 @@
 deck:
   id: "ch40-10-competitive-intelligence-market-sizing"
   title: "Competitive Intelligence Market Sizing"
+  description: "Key concepts and review questions covering competitive intelligence market sizing."
+  tags: ["competitive", "intelligence", "market", "sizing", "chapter-40"]
   version: 1
 
 cards:
-  - front: "What is the difference between a direct competitor and an indirect alternative?"
+  - id: "ch40-10-competitive-intelligence-market-sizing-001"
+    front: "What is the difference between a direct competitor and an indirect alternative?"
     back: "A direct competitor solves the same problem for the same customer using a similar approach. An indirect alternative solves the problem differently — including doing nothing, using Excel, or using a general-purpose tool that was not designed for this problem."
+    tags: ["direct-competitor", "indirect-alternative", "difference"]
+    difficulty: "intermediate"
 
-  - front: "Why should every competitor profile include at least one genuine strength?"
+  - id: "ch40-10-competitive-intelligence-market-sizing-002"
+    front: "Why should every competitor profile include at least one genuine strength?"
     back: "If you only list competitors' weaknesses, investors will not believe your analysis — they have likely heard of your competitors. An honest strength-plus-explanation builds credibility: 'They are bigger and better-integrated; here is specifically why we still win in our target segment.'"
+    tags: ["competitor-profile", "profile-include", "least"]
+    difficulty: "intermediate"
 
-  - front: "What are the five steps of the bottom-up market sizing method?"
+  - id: "ch40-10-competitive-intelligence-market-sizing-003"
+    front: "What are the five steps of the bottom-up market sizing method?"
     back: "Step 1: Count the total organisations in target geography. Step 2: Qualify the reachable subset (SAM). Step 3: Price the opportunity (annual revenue per customer). Step 4: Calculate TAM, SAM, SOM. Step 5: Validate the value capture ratio (<10% of value delivered)."
+    tags: ["bottom-up-market", "market-sizing", "steps"]
+    difficulty: "basic"
 
-  - front: "Why is bottom-up market sizing more credible than top-down?"
+  - id: "ch40-10-competitive-intelligence-market-sizing-004"
+    front: "Why is bottom-up market sizing more credible than top-down?"
     back: "Top-down sizing (analyst TAM × assumed market share) is easy to inflate and hard to defend. Bottom-up sizing counts actual organisations and prices the opportunity from real customer data — investors can challenge each step, which is exactly what makes it credible."
+    tags: ["bottom-up-market", "market-sizing", "bottom-up"]
+    difficulty: "intermediate"
 
-  - front: "What is the difference between TAM, SAM, and SOM?"
+  - id: "ch40-10-competitive-intelligence-market-sizing-005"
+    front: "What is the difference between TAM, SAM, and SOM?"
     back: "TAM (Total Addressable Market) = all organisations globally who have this problem × annual price. SAM (Serviceable Addressable Market) = reachable organisations in your geography × annual price. SOM (Serviceable Obtainable Market) = your 3–5 year capture target × annual price, typically 1–5% of SAM."
+    tags: ["tam-sam", "difference"]
+    difficulty: "intermediate"
 
-  - front: "What is the value capture ratio and what is the guideline?"
+  - id: "ch40-10-competitive-intelligence-market-sizing-006"
+    front: "What is the value capture ratio and what is the guideline?"
     back: "Value capture ratio = your annual price ÷ value delivered per customer per year. The guideline is < 10% — if you save a customer $50,000/year, you can charge up to $5,000/year and still have a compelling ROI story. Pricing above 20% of value delivered risks customer replacement by alternatives."
+    tags: ["value-capture", "capture-ratio", "guideline"]
+    difficulty: "basic"
 
-  - front: "Name the six moat types."
+  - id: "ch40-10-competitive-intelligence-market-sizing-007"
+    front: "Name the six moat types."
     back: "Data (AI improves with more customers), Switching costs (painful to migrate; history locked in), Network effects (product more valuable as more people use it), Brand (trusted by reputation), Regulatory (certified in ways competitors are not), Distribution (exclusive channel access)."
+    tags: ["six-moat"]
+    difficulty: "basic"
 
-  - front: "Why is it dishonest to claim a data moat with 3 customers?"
+  - id: "ch40-10-competitive-intelligence-market-sizing-008"
+    front: "Why is it dishonest to claim a data moat with 3 customers?"
     back: "A data moat requires scale to be real — the AI model must have processed enough cases to outperform alternatives trained on broader but less specific data. With 3 customers, you are building a data moat, not yet possessing one. Claiming an unbuilt moat destroys investor credibility."
+    tags: ["data-moat", "dishonest", "claim"]
+    difficulty: "advanced"
 
-  - front: "What is the strategic recommendation section of a competitive landscape supposed to contain?"
+  - id: "ch40-10-competitive-intelligence-market-sizing-009"
+    front: "What is the strategic recommendation section of a competitive landscape supposed to contain?"
     back: "Three things: where to win (the specific customer or use case where you have clear advantage), where to avoid (segments where you are outgunned), and the one differentiation claim you must never let a competitor match."
+    tags: ["strategic-recommendation", "recommendation-section", "competitive"]
+    difficulty: "basic"
 
-  - front: "If there are no direct competitors in your space, what should you conclude?"
+  - id: "ch40-10-competitive-intelligence-market-sizing-010"
+    front: "If there are no direct competitors in your space, what should you conclude?"
     back: "Either there is no market (no one has this problem badly enough to pay), or you have not looked hard enough. The most dangerous competitor is often an indirect alternative — specifically the incumbent solution of 'Excel and doing nothing.'"
+    tags: ["direct-competitors", "space", "conclude"]
+    difficulty: "intermediate"
 
-  - front: "What makes a market timing analysis valuable for investors?"
+  - id: "ch40-10-competitive-intelligence-market-sizing-011"
+    front: "What makes a market timing analysis valuable for investors?"
     back: "It explains why NOW is the right moment for this solution — what has changed in technology, regulation, customer behaviour, or cost structure that makes this problem newly solvable or newly urgent. Without a 'why now,' investors wonder why the opportunity is available."
+    tags: ["market-timing", "timing-analysis", "makes"]
+    difficulty: "advanced"

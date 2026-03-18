@@ -1,89 +1,67 @@
 deck:
   id: "ch38-04-contract-analysis-obligation-extraction"
   title: "Contract Analysis — Obligation Extraction"
+  description: "Key concepts and review questions covering contract analysis — obligation extraction."
+  tags: ["contract", "analysis", "obligation", "extraction", "chapter-38"]
   version: 1
 
 cards:
-  - front: "What are the four task types the /contract command handles?"
-    back: |
-      1. Obligation extraction — structured tables of our obligations, vendor obligations, key dates, and SLAs
-      2. Risk flagging — identification of unfavourable clauses with severity and negotiation positions
-      3. Contract summary — plain-language one-pager for non-legal readers
-      4. Renewal strategy input — current terms + performance + negotiation levers
+  - id: "ch38-04-contract-analysis-obligation-extraction-001"
+    front: "What are the four task types the /contract command handles?"
+    back: "1. Obligation extraction — structured tables of our obligations, vendor obligations, key dates, and SLAs\n2. Risk flagging — identification of unfavourable clauses with severity and negotiation positions\n3. Contract summary — plain-language one-pager for non-legal readers\n4. Renewal strategy input — current terms + performance + negotiation levers\n"
+    tags: ["/contract-command", "command-handles", "task"]
+    difficulty: "basic"
 
-  - front: "What is an auto-renewal trap and why is it the highest-priority risk flag?"
-    back: |
-      An auto-renewal trap is a clause that converts inaction into a binding commitment —
-      the contract renews for another full term unless written notice is given by a specific
-      deadline (often 60–90 days before expiry).
+  - id: "ch38-04-contract-analysis-obligation-extraction-002"
+    front: "What is an auto-renewal trap and why is it the highest-priority risk flag?"
+    back: "An auto-renewal trap is a clause that converts inaction into a binding commitment —\nthe contract renews for another full term unless written notice is given by a specific\ndeadline (often 60–90 days before expiry).\n\nIt is highest-priority because missing the notice window eliminates all negotiation\nleverage: the organisation has already legally committed to another full term.\n"
+    tags: ["auto-renewal-trap", "highest-priority-risk", "auto-renewal"]
+    difficulty: "basic"
 
-      It is highest-priority because missing the notice window eliminates all negotiation
-      leverage: the organisation has already legally committed to another full term.
+  - id: "ch38-04-contract-analysis-obligation-extraction-003"
+    front: "What five components must a negotiation position include?"
+    back: "1. Issue — the specific clause and why it creates risk\n2. Our position — what we want the clause to say instead\n3. Rationale — why our position is reasonable (market standard, business logic)\n4. Accept if — minimum acceptable alternative if preferred position is declined\n5. Walk-away if — the condition under which the clause becomes a deal-breaker\n"
+    tags: ["negotiation-position", "position-include", "components"]
+    difficulty: "basic"
 
-  - front: "What five components must a negotiation position include?"
-    back: |
-      1. Issue — the specific clause and why it creates risk
-      2. Our position — what we want the clause to say instead
-      3. Rationale — why our position is reasonable (market standard, business logic)
-      4. Accept if — minimum acceptable alternative if preferred position is declined
-      5. Walk-away if — the condition under which the clause becomes a deal-breaker
+  - id: "ch38-04-contract-analysis-obligation-extraction-004"
+    front: "Name the six contract risk flag categories."
+    back: "1. Auto-renewal traps — inaction commits to another full term\n2. Liability caps — recovery may be far less than actual loss\n3. Price escalation — future cost understated at signing\n4. Unilateral change rights — vendor can alter terms without your agreement\n5. Termination for convenience — vendor can exit; you may not have this right\n6. Data ownership and return — absence of portability clause creates lock-in\n"
+    tags: ["six-contract", "contract-risk", "flag"]
+    difficulty: "basic"
 
-  - front: "Name the six contract risk flag categories."
-    back: |
-      1. Auto-renewal traps — inaction commits to another full term
-      2. Liability caps — recovery may be far less than actual loss
-      3. Price escalation — future cost understated at signing
-      4. Unilateral change rights — vendor can alter terms without your agreement
-      5. Termination for convenience — vendor can exit; you may not have this right
-      6. Data ownership and return — absence of portability clause creates lock-in
+  - id: "ch38-04-contract-analysis-obligation-extraction-005"
+    front: "Why is the Key Dates table the most operationally critical output of a contract extraction?"
+    back: "Because contracts create time-dependent obligations. The renewal date tells you\nwhen the contract expires; the notice deadline tells you the last date you can act.\nMissing a notice deadline locks the organisation into another full term regardless\nof intent, dissatisfaction, or negotiating position.\n"
+    tags: ["dates-table", "operationally-critical", "output"]
+    difficulty: "intermediate"
 
-  - front: "Why is the Key Dates table the most operationally critical output of a contract extraction?"
-    back: |
-      Because contracts create time-dependent obligations. The renewal date tells you
-      when the contract expires; the notice deadline tells you the last date you can act.
-      Missing a notice deadline locks the organisation into another full term regardless
-      of intent, dissatisfaction, or negotiating position.
+  - id: "ch38-04-contract-analysis-obligation-extraction-006"
+    front: "What is the difference between an SLA target and an SLA commitment?"
+    back: "A target is aspirational. A commitment has a defined consequence for breach.\nAn SLA that says '99.9% uptime' without specifying credits or remedies is a target —\nthe vendor has no financial or contractual incentive to meet it. A commitment\nties the metric to a consequence: credit, termination right, or service level remedy.\n"
+    tags: ["sla-target", "sla-commitment", "difference"]
+    difficulty: "intermediate"
 
-  - front: "What is the difference between an SLA target and an SLA commitment?"
-    back: |
-      A target is aspirational. A commitment has a defined consequence for breach.
-      An SLA that says '99.9% uptime' without specifying credits or remedies is a target —
-      the vendor has no financial or contractual incentive to meet it. A commitment
-      ties the metric to a consequence: credit, termination right, or service level remedy.
+  - id: "ch38-04-contract-analysis-obligation-extraction-007"
+    front: "What does a liability cap represent, and how should you assess its adequacy?"
+    back: "A liability cap limits the maximum amount you can recover from the vendor if they\ncause loss. Common caps: fees paid in prior 1–3 months.\n\nAdequacy test: compare the cap to your operational dependency on the vendor.\nIf a prolonged outage would cost £500,000 in lost revenue and the cap is £60,000\n(3 months of fees), the cap is inadequate relative to the risk.\n"
+    tags: ["liability-cap", "cap-represent", "assess"]
+    difficulty: "advanced"
 
-  - front: "What does a liability cap represent, and how should you assess its adequacy?"
-    back: |
-      A liability cap limits the maximum amount you can recover from the vendor if they
-      cause loss. Common caps: fees paid in prior 1–3 months.
+  - id: "ch38-04-contract-analysis-obligation-extraction-008"
+    front: "Why should contract analysis be conducted by operations teams, not only legal counsel?"
+    back: "Operations owns the obligation tracking and execution — they need to know what\nthe organisation must do, when, and with what consequence. Legal interprets\nand negotiates; operations manages day-to-day.\n\nObligation extraction is a structured reading task, not legal interpretation.\nWaiting for legal to extract all obligations creates a bottleneck. Operations\nproduces the extraction; legal reviews the analysis and makes decisions.\n"
+    tags: ["contract-analysis", "operations-teams", "conducted"]
+    difficulty: "intermediate"
 
-      Adequacy test: compare the cap to your operational dependency on the vendor.
-      If a prolonged outage would cost £500,000 in lost revenue and the cap is £60,000
-      (3 months of fees), the cap is inadequate relative to the risk.
+  - id: "ch38-04-contract-analysis-obligation-extraction-009"
+    front: "What is the relationship between L03 (vendor portfolio audit) and L04 (contract analysis)?"
+    back: "L03 identifies which vendors you have and when they renew — the portfolio view.\nL04 extracts what those contracts actually commit both parties to — the obligation view.\n\nThe renewal calendar from L03 tells you WHEN to act. The obligation extraction\nfrom L04 tells you WHAT you are deciding when you renew, renegotiate, or exit.\n"
+    tags: ["l03-vendor", "vendor-portfolio", "relationship"]
+    difficulty: "intermediate"
 
-  - front: "Why should contract analysis be conducted by operations teams, not only legal counsel?"
-    back: |
-      Operations owns the obligation tracking and execution — they need to know what
-      the organisation must do, when, and with what consequence. Legal interprets
-      and negotiates; operations manages day-to-day.
-
-      Obligation extraction is a structured reading task, not legal interpretation.
-      Waiting for legal to extract all obligations creates a bottleneck. Operations
-      produces the extraction; legal reviews the analysis and makes decisions.
-
-  - front: "What is the relationship between L03 (vendor portfolio audit) and L04 (contract analysis)?"
-    back: |
-      L03 identifies which vendors you have and when they renew — the portfolio view.
-      L04 extracts what those contracts actually commit both parties to — the obligation view.
-
-      The renewal calendar from L03 tells you WHEN to act. The obligation extraction
-      from L04 tells you WHAT you are deciding when you renew, renegotiate, or exit.
-
-  - front: "How do L04 contract obligations feed into L07 (Compliance Tracking)?"
-    back: |
-      Contractual obligations are a category of compliance obligation. When mapping
-      your organisation's full obligation landscape in L07, the obligations extracted
-      in L04 — payment terms, data handling requirements, security certifications,
-      usage limits — become inputs to the compliance map.
-
-      Obligations that look like 'procurement' at the contract stage become
-      'compliance requirements' when tracked against regulatory and governance frameworks.
+  - id: "ch38-04-contract-analysis-obligation-extraction-010"
+    front: "How do L04 contract obligations feed into L07 (Compliance Tracking)?"
+    back: "Contractual obligations are a category of compliance obligation. When mapping\nyour organisation's full obligation landscape in L07, the obligations extracted\nin L04 — payment terms, data handling requirements, security certifications,\nusage limits — become inputs to the compliance map.\n\nObligations that look like 'procurement' at the contract stage become\n'compliance requirements' when tracked against regulatory and governance frameworks.\n"
+    tags: ["l04-contract", "contract-obligations", "feed"]
+    difficulty: "advanced"

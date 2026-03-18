@@ -1,41 +1,79 @@
 deck:
   id: "ch36-11-sprint-planning-capacity"
   title: "Sprint Planning Capacity"
+  description: "Key concepts and review questions covering sprint planning capacity."
+  tags: ["sprint", "planning", "capacity", "chapter-36"]
   version: 1
 
 cards:
-  - front: "What is the 70-80% capacity rule in sprint planning?"
+  - id: "ch36-11-sprint-planning-capacity-001"
+    front: "What is the 70-80% capacity rule in sprint planning?"
     back: "Plan the sprint backlog to only 70-80% of the team's available capacity. The remaining 20-30% absorbs interrupts, production incidents, and context-switching that are not in the plan but always occur."
+    tags: ["70-80-capacity", "capacity-rule", "70-80"]
+    difficulty: "basic"
 
-  - front: "How do you calculate real team capacity for a sprint?"
+  - id: "ch36-11-sprint-planning-capacity-002"
+    front: "How do you calculate real team capacity for a sprint?"
     back: "Start with raw available days (sprint length × team size). Subtract PTO days, on-call overhead (1-2 days for primary, 0.5 for secondary), and recurring meetings overhead (typically 1 day per person). Multiply the result by 0.75-0.80 to get planning capacity."
+    tags: ["calculate-real", "real-team", "capacity"]
+    difficulty: "intermediate"
 
-  - front: "What makes a sprint goal good versus bad?"
+  - id: "ch36-11-sprint-planning-capacity-003"
+    front: "What makes a sprint goal good versus bad?"
     back: "A good sprint goal can be stated in one sentence and describes a single outcome. A bad sprint goal summarises every item in the sprint. The goal's purpose is to tell the team what to protect when the sprint gets difficult — everything else is negotiable."
+    tags: ["sprint-goal", "goal-good", "makes"]
+    difficulty: "intermediate"
 
-  - front: "What is P0 / P1 / P2 priority in a sprint backlog?"
+  - id: "ch36-11-sprint-planning-capacity-004"
+    front: "What is P0 / P1 / P2 priority in a sprint backlog?"
     back: "P0: Must ship — sprint fails without this. P1: Should ship — important but cuttable if capacity is pressured. P2: Stretch — pull in if sprint runs well; do not commit upfront."
+    tags: ["sprint-backlog", "priority"]
+    difficulty: "basic"
 
-  - front: "What is a carryover story, and what must you do before re-committing to one?"
+  - id: "ch36-11-sprint-planning-capacity-005"
+    front: "What is a carryover story, and what must you do before re-committing to one?"
     back: "A carryover story is an item from the previous sprint that was not completed. Before re-committing, understand WHY it carried over — was it a scope issue, a dependency, a capacity problem? Re-committing without understanding the root cause risks the same slip."
+    tags: ["carryover-story", "re-committing"]
+    difficulty: "intermediate"
 
-  - front: "What information does /sprint-planning need to produce a complete sprint plan?"
+  - id: "ch36-11-sprint-planning-capacity-006"
+    front: "What information does /sprint-planning need to produce a complete sprint plan?"
     back: "Team members and their availability (PTO, on-call, meetings), sprint length and dates, the prioritised backlog with estimates, any carryover items with context, and known dependencies or blockers."
+    tags: ["complete-sprint", "sprint-plan", "information"]
+    difficulty: "basic"
 
-  - front: "What are the five sections of a sprint plan output from /sprint-planning?"
+  - id: "ch36-11-sprint-planning-capacity-007"
+    front: "What are the five sections of a sprint plan output from /sprint-planning?"
     back: "1) Sprint goal (one sentence), 2) Capacity table (per-person availability and story points), 3) Sprint backlog (P0/P1/P2 with owners and dependencies), 4) Risks table (risk, impact, mitigation), 5) Definition of Done and key dates."
+    tags: ["sprint-plan", "plan-output", "sections"]
+    difficulty: "intermediate"
 
-  - front: "When should you flag a sprint as overloaded, and what is the first action?"
+  - id: "ch36-11-sprint-planning-capacity-008"
+    front: "When should you flag a sprint as overloaded, and what is the first action?"
     back: "Flag as overloaded when the planned load exceeds 85% of planning capacity. The first action is to cut or move-to-stretch the lowest-priority item that does not block anything else in the sprint."
+    tags: ["flag", "sprint", "overloaded"]
+    difficulty: "intermediate"
 
-  - front: "What is 'planning capacity' versus 'raw capacity'?"
+  - id: "ch36-11-sprint-planning-capacity-009"
+    front: "What is 'planning capacity' versus 'raw capacity'?"
     back: "Raw capacity is the total person-days available after subtracting PTO, on-call, and meetings. Planning capacity is raw capacity × 0.75 (or 0.80) — the amount you actually commit work against."
+    tags: ["planning-capacity", "raw-capacity"]
+    difficulty: "basic"
 
-  - front: "What is the NEVER DO rule for sprint goals from the /sprint-planning skill?"
+  - id: "ch36-11-sprint-planning-capacity-010"
+    front: "What is the NEVER DO rule for sprint goals from the /sprint-planning skill?"
     back: "Never use a sprint goal that is a list. 'Complete the workflow builder stories, fix regressions, handle the auth dependency' is not a goal — it is a task list. A goal describes ONE outcome: 'Ship the trigger config UI so design can start user testing.'"
+    tags: ["sprint-goals", "/sprint-planning-skill", "never"]
+    difficulty: "advanced"
 
-  - front: "What does the /sprint-planning command from the product-management plugin produce that differentiates it from a plain backlog list?"
+  - id: "ch36-11-sprint-planning-capacity-011"
+    front: "What does the /sprint-planning command from the product-management plugin produce that differentiates it from a plain backlog list?"
     back: "It produces a capacity-calibrated plan — the sprint load as a percentage of planning capacity, individual capacity deductions per team member, a risk table, and an explicit Definition of Done — not just a list of tickets."
+    tags: ["/sprint-planning-command", "product-management-plugin", "sprint-planning"]
+    difficulty: "advanced"
 
-  - front: "Why does on-call overhead reduce sprint capacity even when there are no incidents?"
+  - id: "ch36-11-sprint-planning-capacity-012"
+    front: "Why does on-call overhead reduce sprint capacity even when there are no incidents?"
     back: "On-call rotations require the primary to stay alert and available for escalations, which fragments deep work time even when no incidents occur. The primary typically loses 1.5-2 days of productive capacity per sprint."
+    tags: ["on-call-overhead", "overhead-reduce", "on-call"]
+    difficulty: "intermediate"

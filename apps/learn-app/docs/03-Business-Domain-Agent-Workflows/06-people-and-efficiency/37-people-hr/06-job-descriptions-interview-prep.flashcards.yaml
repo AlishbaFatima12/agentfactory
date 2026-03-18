@@ -1,35 +1,67 @@
 deck:
   id: "ch37-06-job-descriptions-interview-prep"
   title: "Job Descriptions Interview Prep"
+  description: "Key concepts and review questions covering job descriptions interview prep."
+  tags: ["job", "descriptions", "interview", "prep", "chapter-37"]
   version: 1
 
 cards:
-  - front: "What are the four JD principles in order?"
+  - id: "ch37-06-job-descriptions-interview-prep-001"
+    front: "What are the four JD principles in order?"
     back: "1. Candidate perspective first (write 'you will', not 'responsible for'). 2. Lead with the work, not the requirements. 3. Calibrate requirements ruthlessly (Essential vs Beneficial, max 5 essential). 4. Inclusive language by default (apply the check automatically)"
+    tags: ["principles", "order"]
+    difficulty: "basic"
 
-  - front: "What is the Essential vs Beneficial test for JD requirements?"
+  - id: "ch37-06-job-descriptions-interview-prep-002"
+    front: "What is the Essential vs Beneficial test for JD requirements?"
     back: "Could a highly capable candidate do this job well without this? If yes: Beneficial. If no: Essential. Most JDs list 15 'essential' requirements — most have 3-5 genuine ones."
+    tags: ["beneficial-test", "essential", "requirements"]
+    difficulty: "basic"
 
-  - front: "What four categories does the /jd inclusive language check flag?"
+  - id: "ch37-06-job-descriptions-interview-prep-003"
+    front: "What four categories does the /jd inclusive language check flag?"
     back: "Gender-coded masculine terms (rockstar, ninja, dominate), age-coded language (young and dynamic, digital native), experience specificity ('5 years of Python' instead of 'Python proficiency'), and culture-coded terms ('culture fit' without defined behaviours)"
+    tags: ["/jd-inclusive", "inclusive-language", "categories"]
+    difficulty: "basic"
 
-  - front: "Which plugin provides /jd and which provides /interview-prep?"
+  - id: "ch37-06-job-descriptions-interview-prep-004"
+    front: "Which plugin provides /jd and which provides /interview-prep?"
     back: "/jd is the custom hr-operations plugin (Panaversity). /interview-prep is the official human-resources plugin (Anthropic). They work together as a hiring workflow: /jd writes the JD, /interview-prep maps it to interview competencies."
+    tags: ["plugin-provides", "provides-/jd", "interview-prep"]
+    difficulty: "basic"
 
-  - front: "What is a structured interview, and why does it reduce bias?"
+  - id: "ch37-06-job-descriptions-interview-prep-005"
+    front: "What is a structured interview, and why does it reduce bias?"
     back: "A structured interview uses the same questions in the same order for every candidate, with scores recorded against a defined rubric before group discussion. It reduces bias by preventing different questions for different candidates and requiring evidence-based scoring rather than 'gut feeling'"
+    tags: ["structured-interview", "reduce-bias"]
+    difficulty: "intermediate"
 
-  - front: "What is competency mapping in interview preparation?"
+  - id: "ch37-06-job-descriptions-interview-prep-006"
+    front: "What is competency mapping in interview preparation?"
     back: "Linking each essential JD requirement to an assessable interview competency — ensuring the interview tests exactly what the JD promised. The cross-check: every interview question maps to a JD requirement, and every JD essential requirement has at least one interview question."
+    tags: ["competency-mapping", "interview-preparation"]
+    difficulty: "intermediate"
 
-  - front: "What does a 1-4 interview scoring rubric require at each level?"
+  - id: "ch37-06-job-descriptions-interview-prep-007"
+    front: "What does a 1-4 interview scoring rubric require at each level?"
     back: "Described observable behaviour at each score level — not just numbers. Level 4 describes what exceeds expectations looks like; Level 1 describes what below expectations looks like — both in terms of specific behaviours an interviewer can observe and record"
+    tags: ["1-4-interview", "interview-scoring", "rubric"]
+    difficulty: "intermediate"
 
-  - front: "Why is '/jd' mandatory for listing a salary range?"
+  - id: "ch37-06-job-descriptions-interview-prep-008"
+    front: "Why is '/jd' mandatory for listing a salary range?"
     back: "Listing 'competitive' instead of a range is the most effective way to deter good candidates — it signals the organisation is hiding the number, which typically means it is below market. /jd will not produce a JD with 'competitive' — a range is mandatory output."
+    tags: ["/jd-mandatory", "salary-range", "listing"]
+    difficulty: "advanced"
 
-  - front: "What debrief structure prevents anchoring in hiring decisions?"
+  - id: "ch37-06-job-descriptions-interview-prep-009"
+    front: "What debrief structure prevents anchoring in hiring decisions?"
     back: "Interviewers record their scores and supporting evidence independently before the debrief discussion. Discussing scores before independent recording causes anchoring — later scores cluster toward the first score shared, regardless of the interviewer's actual assessment."
+    tags: ["debrief-structure", "structure-prevents", "anchoring"]
+    difficulty: "intermediate"
 
-  - front: "What is the most common alignment failure between JD and interview process?"
+  - id: "ch37-06-job-descriptions-interview-prep-010"
+    front: "What is the most common alignment failure between JD and interview process?"
     back: "The interview tests competencies not mentioned in the JD, and vice versa — requirements in the JD have no corresponding interview question. This signals organisational confusion about what the role actually needs and creates an inconsistent candidate experience."
+    tags: ["alignment-failure", "interview-process"]
+    difficulty: "advanced"

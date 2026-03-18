@@ -10,7 +10,7 @@ cards:
     front: "What are the three phases of the meeting intelligence model, and when does each occur?"
     back: "Before (30 min pre-meeting): prep brief.\nDuring (real-time): D/A/F/Q/R notes.\nAfter (within 2 hours): structured synthesis."
     tags: ["meeting-intelligence", "three-phase-model"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-09-meeting-intelligence-002"
     front: "What does each letter in D/A/F/Q/R stand for?"
@@ -34,13 +34,13 @@ cards:
     front: "What are the three synthesis quality rules for action items?"
     back: "One named owner (not 'the team').\nSpecific date (not 'ASAP' or 'next week').\nSpecific output described — not just the activity."
     tags: ["meeting-intelligence", "synthesis-quality"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-09-meeting-intelligence-006"
     front: "What makes a deferred item valid in a meeting synthesis?"
     back: "It must have a specific trigger for revisit — not 'will discuss later' but a concrete condition that signals when to reopen it."
     tags: ["meeting-intelligence", "synthesis-quality", "deferred-items"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-09-meeting-intelligence-007"
     front: "What five elements does the meeting prep brief include per agenda item?"
@@ -52,7 +52,7 @@ cards:
     front: "The synthesis proposes work.local.md updates but never applies them automatically. What is the rule?"
     back: "Always propose; never apply without confirmation."
     tags: ["meeting-intelligence", "work-local-md"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-09-meeting-intelligence-009"
     front: "Why is the before phase the highest-leverage of the three meeting phases?"
@@ -72,7 +72,7 @@ cards:
     front: "An action is assigned to 'the team' with a deadline of 'ASAP'. Why does this guarantee the action will not be completed?"
     back: "Shared ownership is no ownership — without one named person accountable, everyone assumes someone else is handling it. 'ASAP' creates ambiguity about timing, so each person applies their own interpretation and no one acts urgently."
     tags: ["meeting-intelligence", "synthesis-quality"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
     why: "How would you rewrite 'the team will look into it ASAP' as a valid action item?"
 
   - id: "ch39-09-meeting-intelligence-012"
@@ -86,7 +86,7 @@ cards:
     front: "Why does the synthesis quality standard require decisions to be understandable six months later without other context?"
     back: "Decision logs are the organisation's institutional memory. A vague decision ('discussed the budget') cannot be used to resolve future disputes or understand past rationale — it requires finding the meeting recording or the people involved, both of which degrade over time."
     tags: ["meeting-intelligence", "decision-numbering", "synthesis-quality"]
-    difficulty: "advanced"
+    difficulty: "intermediate"
     why: "How does a searchable decision log change how future decisions are made?"
 
   - id: "ch39-09-meeting-intelligence-014"

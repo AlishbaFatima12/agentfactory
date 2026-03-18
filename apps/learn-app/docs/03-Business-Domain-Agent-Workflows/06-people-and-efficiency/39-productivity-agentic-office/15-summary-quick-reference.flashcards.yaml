@@ -34,26 +34,26 @@ cards:
     front: "What are the four persistent agents in the agentic-office plugin and how does each operate?"
     back: "Chief of Staff: scheduled.\nMemory Keeper: trigger-based.\nMeeting Intelligence: calendar-triggered.\nWork Tracker: daily pull + event-triggered."
     tags: ["agents", "operation-types"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-l15-summary-quick-reference-006"
     front: "Which lesson built each of the four work.local.md memory layers?"
     back: "Layer 1 Personal: L03.\nLayer 2 Team: L04.\nLayer 3 Projects: L05.\nLayer 4 Organisational: L03."
     tags: ["memory-layers", "lesson-mapping"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-l15-summary-quick-reference-007"
     front: "Why does context in work.local.md transform a domain agent from a capable specialist into a knowledgeable colleague?"
     back: "Without shared context, every domain agent starts from zero each session — it is capable but amnesiac. With complete work.local.md context, it knows the organisation's people, projects, terminology, and culture. The transformation is not in the agent; it is in the context the agent has access to."
     tags: ["central-insight", "context"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
     why: "What is the minimum context a domain agent needs before it stops being a specialist and starts behaving like a colleague?"
 
   - id: "ch39-l15-summary-quick-reference-008"
     front: "Why must the two plugins have zero trigger word overlap?"
     back: "Both plugins activate via natural language triggers. If they share trigger words, both respond to the same prompt — producing conflicting outputs or routing to the wrong skill. The official plugin owns task/memory/update; the custom plugin uses brain dump/digest/delegate/search."
     tags: ["two-plugin-architecture", "trigger-overlap"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
     why: "What would happen if a user typed 'remember this' when both plugins were active and both had 'remember' as a trigger?"
 
   - id: "ch39-l15-summary-quick-reference-009"

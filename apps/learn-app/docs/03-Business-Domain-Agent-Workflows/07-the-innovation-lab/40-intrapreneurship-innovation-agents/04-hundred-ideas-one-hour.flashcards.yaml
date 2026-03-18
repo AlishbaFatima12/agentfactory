@@ -1,41 +1,79 @@
 deck:
   id: "ch40-04-hundred-ideas-one-hour"
   title: "Hundred Ideas One Hour"
+  description: "Key concepts and review questions covering hundred ideas one hour."
+  tags: ["hundred", "ideas", "hour", "chapter-40"]
   version: 1
 
 cards:
-  - front: "Why does the 100-idea sprint require exactly 100 ideas rather than stopping at 30 or 50?"
+  - id: "ch40-04-hundred-ideas-one-hour-001"
+    front: "Why does the 100-idea sprint require exactly 100 ideas rather than stopping at 30 or 50?"
     back: "The best ideas appear in the second half. The first 50 ideas are typically the obvious ones the team was already carrying. Original thinking begins after the obvious space is exhausted — the 100-idea target forces you past the comfortable creative range."
+    tags: ["100-idea-sprint", "sprint-require", "100-idea"]
+    difficulty: "intermediate"
 
-  - front: "What are the 10 categories in the idea sprint framework?"
+  - id: "ch40-04-hundred-ideas-one-hour-002"
+    front: "What are the 10 categories in the idea sprint framework?"
     back: "Product, Business Model, Distribution, Analogy, Technology, Crazy/10x, Boring, Contrarian, Partnership, Incumbent. Each category forces a different creative lens on the same problem."
+    tags: ["idea-sprint", "sprint-framework", "categories"]
+    difficulty: "basic"
 
-  - front: "What does DVF stand for and what does each dimension measure?"
+  - id: "ch40-04-hundred-ideas-one-hour-003"
+    front: "What does DVF stand for and what does each dimension measure?"
     back: "Desirability (would customers pay for this today?), Viability (could this become a significant revenue business?), Feasibility (can a small team build an MVP in under 3 months?). An idea needs at least two GREEN scores to make the shortlist."
+    tags: ["dvf-stand", "dimension-measure"]
+    difficulty: "basic"
 
-  - front: "What is the 'Why Now?' test in idea evaluation?"
+  - id: "ch40-04-hundred-ideas-one-hour-004"
+    front: "What is the 'Why Now?' test in idea evaluation?"
     back: "A test that asks: what changed in the last 2-3 years that makes this idea possible or urgent today? Valid reasons include new technology, regulatory change, behaviour change, cost inflection, demographic shift, or a market gap. An idea without a 'Why Now?' answer has unclear timing."
+    tags: ["now-test", "idea-evaluation"]
+    difficulty: "intermediate"
 
-  - front: "What is the purpose of pressure testing a selected idea?"
+  - id: "ch40-04-hundred-ideas-one-hour-005"
+    front: "What is the purpose of pressure testing a selected idea?"
     back: "To identify the hidden assumptions inside the idea before committing resources. Each objection in the pressure test corresponds to one or more assumptions that will need to be mapped and tested in Lesson 5. Pressure testing is not pessimism — it is assumption discovery."
+    tags: ["pressure-testing", "selected-idea", "purpose"]
+    difficulty: "intermediate"
 
-  - front: "What is the structural problem with unstructured group brainstorming?"
+  - id: "ch40-04-hundred-ideas-one-hour-006"
+    front: "What is the structural problem with unstructured group brainstorming?"
     back: "Three failure mechanisms: production blocking (cannot speak while others are talking), evaluation apprehension (fear of social judgment), and social loafing (assuming others are doing the hard thinking). The result is fewer and lower-quality ideas than solo ideation followed by sharing."
+    tags: ["structural-problem", "unstructured-group", "brainstorming"]
+    difficulty: "basic"
 
-  - front: "Why is the Contrarian Ideas category (ideas 71-80) often the most valuable?"
+  - id: "ch40-04-hundred-ideas-one-hour-007"
+    front: "Why is the Contrarian Ideas category (ideas 71-80) often the most valuable?"
     back: "Contrarian ideas challenge the unstated assumptions of the industry. Asking 'what is the exact opposite of the obvious solution?' reveals that many conventional approaches are habits rather than optimal choices — and some contrarian ideas become category-defining businesses."
+    tags: ["contrarian-ideas", "ideas-category", "71-80"]
+    difficulty: "intermediate"
 
-  - front: "What makes an idea STRONG versus WEAK according to the /idea skill framework?"
+  - id: "ch40-04-hundred-ideas-one-hour-008"
+    front: "What makes an idea STRONG versus WEAK according to the /idea skill framework?"
     back: "Strong: specific customer (not 'everyone'), specific pain (not 'inefficiency'), specific mechanism (not vague 'AI-powered'), a 'Why Now?' reason, and a reason why you. Weak: generic customer, generic pain, technology-first without a job-to-be-done, no timing rationale."
+    tags: ["idea-strong", "weak-according", "makes"]
+    difficulty: "intermediate"
 
-  - front: "What does the Incumbent Ideas category (91-100) reveal for intrapreneurs specifically?"
+  - id: "ch40-04-hundred-ideas-one-hour-009"
+    front: "What does the Incumbent Ideas category (91-100) reveal for intrapreneurs specifically?"
     back: "For intrapreneurs, their own organisation is the incumbent. Generating what the company would do with this problem reveals which internal capabilities could be leveraged (distribution, relationships, data) and which internal obstacles would be faced (inertia, competing priorities)."
+    tags: ["incumbent-ideas", "ideas-category", "91-100"]
+    difficulty: "basic"
 
-  - front: "What is the relationship between the pressure test in Lesson 4 and the assumption map in Lesson 5?"
+  - id: "ch40-04-hundred-ideas-one-hour-010"
+    front: "What is the relationship between the pressure test in Lesson 4 and the assumption map in Lesson 5?"
     back: "Every objection in the pressure test is a hidden assumption. The pressure test converts the selected idea into a preliminary assumption list — which becomes the starting point for the full 20+ assumption map in Lesson 5."
+    tags: ["pressure-test", "assumption-map", "relationship"]
+    difficulty: "advanced"
 
-  - front: "Why does DVF say an idea needs two GREEN scores to shortlist, not three?"
+  - id: "ch40-04-hundred-ideas-one-hour-011"
+    front: "Why does DVF say an idea needs two GREEN scores to shortlist, not three?"
     back: "Exceptional founder-specific advantages — deep domain knowledge, customer relationships, proprietary data — can compensate for a YELLOW score on one dimension. DVF is a filter, not a formula. A YELLOW on one dimension is not automatically disqualifying."
+    tags: ["idea-needs", "green-scores", "shortlist"]
+    difficulty: "intermediate"
 
-  - front: "What is the difference between the Boring and Contrarian categories?"
+  - id: "ch40-04-hundred-ideas-one-hour-012"
+    front: "What is the difference between the Boring and Contrarian categories?"
     back: "Boring ideas (61-70) are the most obvious solution — what the incumbent would build, what anyone would think of first. Contrarian ideas (71-80) are the exact opposite of the obvious solution. Both categories are necessary: Boring anchors the baseline; Contrarian expands the solution space."
+    tags: ["contrarian-categories", "difference", "boring"]
+    difficulty: "advanced"

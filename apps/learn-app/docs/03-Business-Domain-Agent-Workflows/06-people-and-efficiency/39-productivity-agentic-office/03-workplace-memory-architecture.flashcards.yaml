@@ -34,19 +34,19 @@ cards:
     front: "What four elements must each terminology dictionary entry include?"
     back: "Definition, when to USE the term, when NOT to use it, related terms or synonyms."
     tags: ["layer-4-organisational", "terminology"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-03-workplace-memory-006"
     front: "What is the test for whether an unwritten rule belongs in work.local.md?"
     back: "\"Would an AI violating this rule in public output cause a problem?\" If yes, it belongs in the file."
     tags: ["layer-4-organisational", "unwritten-rules"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-03-workplace-memory-007"
     front: "What verification query should you run after populating Layers 1 and 4 of work.local.md?"
     back: "Ask /agentic-office:workplace-context: \"Describe our organisation using only what you know from work.local.md.\""
     tags: ["workplace-context", "verification"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-03-workplace-memory-008"
     front: "What is the recommended number of entries to target in the terminology dictionary?"
@@ -86,12 +86,12 @@ cards:
     front: "A new team member suggests that filling in work.local.md is just documentation overhead. How would you challenge this framing?"
     back: "Documentation is static reference. work.local.md is active context — it changes every AI output immediately, automatically, for every session. The investment is 2-4 hours once; the return is calibrated outputs every day."
     tags: ["work-local-md", "foundations"]
-    difficulty: "advanced"
+    difficulty: "intermediate"
     why: "What analogy would you use to explain why persistent memory changes the value equation for AI-assisted work?"
 
   - id: "ch39-03-workplace-memory-014"
     front: "Why does work.local.md persist organisational context across sessions while CLAUDE.md does not serve the same function?"
     back: "CLAUDE.md is a hot cache for recent session state — it is temporary and session-oriented. work.local.md encodes enduring organisational knowledge that does not change week to week. Different scopes require different files."
     tags: ["memory-architecture", "work-local-md"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
     why: "What type of information would be wrong to put in work.local.md because it belongs in CLAUDE.md instead?"

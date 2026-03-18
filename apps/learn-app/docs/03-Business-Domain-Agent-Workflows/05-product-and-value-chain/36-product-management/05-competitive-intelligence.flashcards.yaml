@@ -1,41 +1,79 @@
 deck:
   id: "ch36-05-competitive-intelligence"
   title: "Competitive Intelligence"
+  description: "Key concepts and review questions covering competitive intelligence."
+  tags: ["competitive", "intelligence", "chapter-36"]
   version: 1
 
 cards:
-  - front: "What are the four tiers of the competitive landscape and what does each tier mean?"
+  - id: "ch36-05-competitive-intelligence-001"
+    front: "What are the four tiers of the competitive landscape and what does each tier mean?"
     back: "Direct: same problem, same users, same approach (your comparison-set competitors). Indirect: same problem, different approach (often the most dangerous — free, already installed). Adjacent: different problem today but could expand into your space. Substitute: entirely different approach to the same underlying need."
+    tags: ["competitive-landscape", "tier-mean", "tiers"]
+    difficulty: "intermediate"
 
-  - front: "Why is Excel/Google Sheets often the most strategically important competitor for a B2B analytics tool?"
+  - id: "ch36-05-competitive-intelligence-002"
+    front: "Why is Excel/Google Sheets often the most strategically important competitor for a B2B analytics tool?"
     back: "Excel is free, already installed, already trusted, and has zero switching cost. Prospects who do not buy your product are not mostly buying a direct competitor — most are continuing to use spreadsheets. Ignoring indirect competitors misses the market reality."
+    tags: ["excel/google-sheets", "sheets-often", "strategically"]
+    difficulty: "intermediate"
 
-  - front: "What are the four ratings in the Simple scale for feature comparison matrices?"
+  - id: "ch36-05-competitive-intelligence-003"
+    front: "What are the four ratings in the Simple scale for feature comparison matrices?"
     back: "Strong (market-leading capability, deep functionality, well-executed), Adequate (functional, gets the job done, not differentiated), Weak (exists but limited, significant gaps), Absent (does not have this capability)."
+    tags: ["simple-scale", "feature-comparison", "ratings"]
+    difficulty: "basic"
 
-  - front: "What is the honesty check for a feature comparison matrix from /competitive-brief?"
+  - id: "ch36-05-competitive-intelligence-004"
+    front: "What is the honesty check for a feature comparison matrix from /competitive-brief?"
     back: "Ask: would a prospect who has evaluated both products find this matrix credible? A matrix that rates your product Strong everywhere is not credible. At least some areas where competitors are Adequate or Strong (and you are Weak or Absent) must appear — otherwise the analysis reflects bias, not reality."
+    tags: ["honesty-check", "feature-comparison", "matrix"]
+    difficulty: "intermediate"
 
-  - front: "What is the difference between 'differentiate' and 'achieve parity' as competitive stances?"
+  - id: "ch36-05-competitive-intelligence-005"
+    front: "What is the difference between 'differentiate' and 'achieve parity' as competitive stances?"
     back: "Differentiate: invest to lead in a capability area where no competitor owns the space, creating a defensible advantage. Achieve parity: close a gap where a competitor is ahead, removing a dealbreaker in the sales cycle. Parity is table-stakes; differentiation is a strategic bet."
+    tags: ["achieve-parity", "competitive-stances", "difference"]
+    difficulty: "intermediate"
 
-  - front: "What does /competitive-brief produce in its full output?"
+  - id: "ch36-05-competitive-intelligence-006"
+    front: "What does /competitive-brief produce in its full output?"
     back: "Competitor overview (company, positioning, recent momentum), feature comparison matrix (capability ratings), positioning analysis (how each competitor positions), strengths and weaknesses, opportunities and threats, and strategic implications."
+    tags: ["/competitive-brief-produce", "full-output", "competitive-brief"]
+    difficulty: "basic"
 
-  - front: "What is the positioning statement template used in competitive analysis?"
+  - id: "ch36-05-competitive-intelligence-007"
+    front: "What is the positioning statement template used in competitive analysis?"
     back: "For [target customer] who [need/problem], [Product] is a [category] that [key benefit]. Unlike [competitor/alternative], [Product] [key differentiator]."
+    tags: ["positioning-statement", "statement-template", "competitive"]
+    difficulty: "basic"
 
-  - front: "What are the four message architecture levels in positioning analysis?"
+  - id: "ch36-05-competitive-intelligence-008"
+    front: "What are the four message architecture levels in positioning analysis?"
     back: "Level 1 — Category (what category do they claim?), Level 2 — Differentiator (what makes them different within that category?), Level 3 — Value Proposition (what outcome do they promise?), Level 4 — Proof Points (what evidence do they provide?)."
+    tags: ["message-architecture", "architecture-levels", "positioning"]
+    difficulty: "basic"
 
-  - front: "What is an actionable strategic implication from a competitive brief?"
+  - id: "ch36-05-competitive-intelligence-009"
+    front: "What is an actionable strategic implication from a competitive brief?"
     back: "One that names a specific capability area, states a competitive stance (differentiate vs parity), and specifies a product decision. 'Improve our analytics' is not actionable. 'Include scheduled report delivery in the automation MVP because AutoDash is Strong and our L04 research shows this is a high-frequency pain point' is actionable."
+    tags: ["actionable-strategic", "strategic-implication", "competitive"]
+    difficulty: "intermediate"
 
-  - front: "Why are job postings underrated competitive intelligence?"
+  - id: "ch36-05-competitive-intelligence-010"
+    front: "Why are job postings underrated competitive intelligence?"
     back: "They signal strategic direction before it is visible in the product. A competitor hiring ML engineers signals an AI bet. A competitor posting 10 new enterprise sales openings signals a market expansion. Job postings reveal where the competitor is investing, typically 6-12 months before those investments appear in the product."
+    tags: ["job-postings", "postings-underrated", "competitive"]
+    difficulty: "advanced"
 
-  - front: "In the L05 worked example, what does the feature matrix reveal about the workflow automation space?"
+  - id: "ch36-05-competitive-intelligence-011"
+    front: "In the L05 worked example, what does the feature matrix reveal about the workflow automation space?"
     back: "Both InsightFlow and AutoDash are Absent for workflow automation (trigger-based automations, no-code workflow builder). WorkflowIQ has only a Weak foothold (alert rules). This means the automation space is unclaimed — InsightFlow has a strategic window to be first to own the position in this segment."
+    tags: ["l05-worked", "feature-matrix", "reveal"]
+    difficulty: "intermediate"
 
-  - front: "What is 'non-consumption' and why does it matter in competitive analysis?"
+  - id: "ch36-05-competitive-intelligence-012"
+    front: "What is 'non-consumption' and why does it matter in competitive analysis?"
     back: "Non-consumption is when users solve their need by doing nothing with software — using manual processes, spreadsheets, or workarounds instead. It is often the largest competitive segment. Understanding what the manual alternative looks like tells you what 'good enough without software' means, and sets the bar your product must clear."
+    tags: ["competitive-analysis", "non-consumption", "matter"]
+    difficulty: "advanced"

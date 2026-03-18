@@ -1,41 +1,79 @@
 deck:
   id: "ch36-12-stakeholder-communication"
   title: "Stakeholder Communication"
+  description: "Key concepts and review questions covering stakeholder communication."
+  tags: ["stakeholder", "communication", "chapter-36"]
   version: 1
 
 cards:
-  - front: "What is the ROAM framework, and what does each letter stand for?"
+  - id: "ch36-12-stakeholder-communication-001"
+    front: "What is the ROAM framework, and what does each letter stand for?"
     back: "ROAM classifies risks by what is being done about them. R = Resolved (risk is gone, document how). O = Owned (someone is actively managing it with a plan). A = Accepted (known risk, decided to proceed without mitigation). M = Mitigated (actions have reduced but not eliminated the risk)."
+    tags: ["roam-framework", "letter-stand"]
+    difficulty: "intermediate"
 
-  - front: "What is the executive stakeholder update word limit, and why?"
+  - id: "ch36-12-stakeholder-communication-002"
+    front: "What is the executive stakeholder update word limit, and why?"
     back: "Under 200-300 words. Executives want the most important thing and any actions required from them — not a comprehensive status. If they want more detail, they will ask. Compression forces you to decide what actually matters."
+    tags: ["executive-stakeholder", "stakeholder-update", "word"]
+    difficulty: "basic"
 
-  - front: "When should you move a product status from Green to Yellow?"
+  - id: "ch36-12-stakeholder-communication-003"
+    front: "When should you move a product status from Green to Yellow?"
     back: "At the FIRST sign of risk — before you are certain something will go wrong. Yellow means mitigation is underway but outcome is uncertain. Waiting until Yellow becomes Red removes leadership's ability to help early."
+    tags: ["product-status", "move", "green"]
+    difficulty: "basic"
 
-  - front: "What content belongs in an engineering update that does NOT belong in an executive update?"
+  - id: "ch36-12-stakeholder-communication-004"
+    front: "What content belongs in an engineering update that does NOT belong in an executive update?"
     back: "Ticket/PR references, ADR citations, specific blocker details and who is unblocking them, technical decisions with rationale, dependency chain details, and priority changes with technical context."
+    tags: ["content-belongs", "engineering-update", "belong"]
+    difficulty: "intermediate"
 
-  - front: "What is a stakeholder update for the customer/CS audience NOT allowed to include?"
+  - id: "ch36-12-stakeholder-communication-005"
+    front: "What is a stakeholder update for the customer/CS audience NOT allowed to include?"
     back: "No internal jargon (sprint, ticket, P0/P1, backlog), no ticket numbers, no internal team names or ADR references, no financial or strategic context. Frame everything in terms of what customers can now DO, not what you built."
+    tags: ["stakeholder-update", "customer/cs-audience", "allowed"]
+    difficulty: "basic"
 
-  - front: "What does ADR stand for, and when should you write one?"
+  - id: "ch36-12-stakeholder-communication-006"
+    front: "What does ADR stand for, and when should you write one?"
     back: "Architecture Decision Record. Write one when making a significant product or technical decision — especially ones that constrain future options, that people disagreed about, or that someone will question later. Keep them short (one page). Document context, decision, consequences, and alternatives considered."
+    tags: ["adr-stand", "write"]
+    difficulty: "intermediate"
 
-  - front: "What is the NEVER DO rule for stakeholder updates from the /stakeholder-update skill?"
+  - id: "ch36-12-stakeholder-communication-007"
+    front: "What is the NEVER DO rule for stakeholder updates from the /stakeholder-update skill?"
     back: "Never send the same version to different audiences — every audience gets a version calibrated to them. The executive version would alarm engineers with its compression; the engineering version would lose executives in technical detail."
+    tags: ["stakeholder-updates", "/stakeholder-update-skill", "never"]
+    difficulty: "intermediate"
 
-  - front: "What is the difference between a 'watch item' and a 'blocker' in stakeholder language?"
+  - id: "ch36-12-stakeholder-communication-008"
+    front: "What is the difference between a 'watch item' and a 'blocker' in stakeholder language?"
     back: "A watch item is a risk that is being monitored but has not yet affected the sprint — no action needed from leadership. A blocker is an active impediment preventing work — action is needed to resolve it, either from the PM or from leadership."
+    tags: ["watch-item", "stakeholder-language", "difference"]
+    difficulty: "intermediate"
 
-  - front: "What are the five elements of a well-structured executive update?"
+  - id: "ch36-12-stakeholder-communication-009"
+    front: "What are the five elements of a well-structured executive update?"
     back: "1) Status color (G/Y/R), 2) TL;DR sentence (the most important thing), 3) Progress bullets tied to goals or OKRs, 4) Risks with ROAM classification and mitigation, 5) Decisions needed or next milestone."
+    tags: ["well-structured-executive", "executive-update", "elements"]
+    difficulty: "intermediate"
 
-  - front: "What is the 'Red is a request for help' rule?"
+  - id: "ch36-12-stakeholder-communication-010"
+    front: "What is the 'Red is a request for help' rule?"
     back: "Use Red status when you have genuinely exhausted your own options and need external intervention — a resource addition, timeline extension, or scope cut that requires leadership decision. Do not use Red for drama. Do not wait so long that Red comes as a surprise."
+    tags: ["request", "rule"]
+    difficulty: "advanced"
 
-  - front: "What must always be documented when you change status from Green to Yellow or Yellow to Red?"
+  - id: "ch36-12-stakeholder-communication-011"
+    front: "What must always be documented when you change status from Green to Yellow or Yellow to Red?"
     back: "The reason for the status change: 'Moved to Yellow because [specific event or risk]'. This creates a timeline of risk signals for future retrospectives and prevents revisionist history about when problems were visible."
+    tags: ["change-status", "always", "documented"]
+    difficulty: "advanced"
 
-  - front: "What is the stakeholder translation problem that /stakeholder-update solves?"
+  - id: "ch36-12-stakeholder-communication-012"
+    front: "What is the stakeholder translation problem that /stakeholder-update solves?"
     back: "Every product decision needs to be communicated to multiple audiences simultaneously. Each audience has different context, priorities, and risk tolerance. The PM is the translator: the same underlying reality (status, risks, progress) becomes three different documents for three different audiences."
+    tags: ["stakeholder-translation", "translation-problem", "stakeholder-update"]
+    difficulty: "intermediate"

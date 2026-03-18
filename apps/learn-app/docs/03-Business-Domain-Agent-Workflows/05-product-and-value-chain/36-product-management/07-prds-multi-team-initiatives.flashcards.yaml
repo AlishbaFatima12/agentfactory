@@ -1,41 +1,79 @@
 deck:
   id: "ch36-07-prds-multi-team-initiatives"
   title: "Prds Multi Team Initiatives"
+  description: "Key concepts and review questions covering prds multi team initiatives."
+  tags: ["prds", "multi", "team", "initiatives", "chapter-36"]
   version: 1
 
 cards:
-  - front: "What is the decision rule for when to write a PRD vs. a feature spec?"
+  - id: "ch36-07-prds-multi-team-initiatives-001"
+    front: "What is the decision rule for when to write a PRD vs. a feature spec?"
     back: "Write a spec when the work involves one feature, one team, and 1-3 sprints. Write a PRD when the initiative involves multiple features, multiple teams, a major platform change, or requires executive sign-off."
+    tags: ["decision-rule", "feature-spec", "write"]
+    difficulty: "intermediate"
 
-  - front: "What are the 10 sections of a PRD?"
+  - id: "ch36-07-prds-multi-team-initiatives-002"
+    front: "What are the 10 sections of a PRD?"
     back: "1. Executive Summary, 2. Business Context, 3. User Requirements, 4. Functional Requirements, 5. Non-Functional Requirements, 6. Technical Architecture Notes, 7. Go-to-Market Requirements, 8. Launch Plan, 9. Dependencies and Risks, 10. Open Questions."
+    tags: ["sections"]
+    difficulty: "basic"
 
-  - front: "What is a failure threshold in a PRD, and why is it required?"
+  - id: "ch36-07-prds-multi-team-initiatives-003"
+    front: "What is a failure threshold in a PRD, and why is it required?"
     back: "A specific outcome that would cause you to change direction, defined before launch. Without it, post-launch reviews become negotiations about whether numbers are 'good enough.' With it, you have a pre-committed standard that prevents sunk-cost escalation."
+    tags: ["failure-threshold", "required"]
+    difficulty: "basic"
 
-  - front: "What is the MUST percentage rule for PRD functional requirements?"
+  - id: "ch36-07-prds-multi-team-initiatives-004"
+    front: "What is the MUST percentage rule for PRD functional requirements?"
     back: "If more than 60% of requirements are labelled MUST, the scope is too large. Challenge every MUST: 'Would we genuinely not ship without this?' If yes, it stays MUST. If you would ship without it, it is a SHOULD."
+    tags: ["percentage-rule", "prd-functional", "requirements"]
+    difficulty: "basic"
 
-  - front: "What must be true before a PRD can move to REVIEW status?"
+  - id: "ch36-07-prds-multi-team-initiatives-005"
+    front: "What must be true before a PRD can move to REVIEW status?"
     back: "All 10 sections complete, open questions have owners and due dates, and the engineering lead has confirmed the Technical Architecture Notes (Section 6)."
+    tags: ["review-status", "true", "move"]
+    difficulty: "intermediate"
 
-  - front: "What is the custom product-strategy plugin command for generating a PRD?"
+  - id: "ch36-07-prds-multi-team-initiatives-006"
+    front: "What is the custom product-strategy plugin command for generating a PRD?"
     back: "/prd — from the custom product-strategy plugin. Different from the official product-management plugin's /write-spec, which generates individual feature specs."
+    tags: ["custom-product-strategy", "product-strategy-plugin", "product-strategy"]
+    difficulty: "basic"
 
-  - front: "What makes commercial evidence in a PRD 'good enough'?"
+  - id: "ch36-07-prds-multi-team-initiatives-007"
+    front: "What makes commercial evidence in a PRD 'good enough'?"
     back: "It must be quantified with sources: '4 enterprise deals cited SSO as a blocker in Q2' is evidence. 'Customers have asked for this' is not. Each evidence item should cite how many, from what source, and in what time period."
+    tags: ["makes-commercial", "commercial-evidence", "good"]
+    difficulty: "advanced"
 
-  - front: "Why must the engineering lead sign off on Section 6 (Technical Architecture Notes)?"
+  - id: "ch36-07-prds-multi-team-initiatives-008"
+    front: "Why must the engineering lead sign off on Section 6 (Technical Architecture Notes)?"
     back: "A PRD with unconfirmed architecture notes has an unverified technical foundation. The most common cause of PRD-to-sprint failures is discovering architectural constraints after APPROVED status — when the initiative is fully committed."
+    tags: ["engineering-lead", "lead-sign", "section"]
+    difficulty: "intermediate"
 
-  - front: "What are the five PRD status gates in order?"
+  - id: "ch36-07-prds-multi-team-initiatives-009"
+    front: "What are the five PRD status gates in order?"
     back: "DRAFT (sections present, some incomplete) → REVIEW (all complete, questions have owners, Eng lead confirmed Section 6) → REFINED (all questions resolved, effort estimated, GTM confirmed) → APPROVED (CPO/CEO sign-off) → SHIPPED (live, metrics tracked)"
+    tags: ["prd-status", "status-gates", "order"]
+    difficulty: "intermediate"
 
-  - front: "How does the L07 PRD relate to the L06 feature spec?"
+  - id: "ch36-07-prds-multi-team-initiatives-010"
+    front: "How does the L07 PRD relate to the L06 feature spec?"
     back: "The L06 feature spec describes one feature (trigger configuration) for one team. The L07 PRD wraps that spec (referenced in Section 4, Feature 3) into the broader Workflow Builder initiative document that covers commercial context, all features, non-functional requirements, GTM, and launch plan."
+    tags: ["l07-prd", "prd-relate", "feature"]
+    difficulty: "advanced"
 
-  - front: "What is the NEVER DO rule about PRD success metrics?"
+  - id: "ch36-07-prds-multi-team-initiatives-011"
+    front: "What is the NEVER DO rule about PRD success metrics?"
     back: "NEVER define success metrics after launch — they must be in the PRD before the first sprint starts. Post-launch metric definition allows rationalisation of results rather than measurement against a pre-committed standard."
+    tags: ["prd-success", "success-metrics", "never"]
+    difficulty: "intermediate"
 
-  - front: "What is the test question for a MUST requirement?"
+  - id: "ch36-07-prds-multi-team-initiatives-012"
+    front: "What is the test question for a MUST requirement?"
     back: "'If this were not ready on launch day, would we delay the entire initiative?' If the answer is 'probably not,' the requirement is a SHOULD, not a MUST."
+    tags: ["test-question", "requirement"]
+    difficulty: "intermediate"

@@ -22,7 +22,7 @@ cards:
     front: "What are the seven sections of the executive dashboard?"
     back: "Headline status\nP1 projects\nP2 projects\nKey metrics (domain agents)\nOpen actions (this week)\nOpen delegations\nUpcoming decisions\nCalendar highlights"
     tags: ["executive-dashboard", "output-structure"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-10-executive-dashboard-004"
     front: "What conditions qualify a project for GREEN RAG status?"
@@ -34,13 +34,13 @@ cards:
     front: "What conditions qualify a project for AMBER RAG status?"
     back: "At least one of: a milestone at risk, a minor blocker present, or a decision needed this week."
     tags: ["executive-dashboard", "RAG-status"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-10-executive-dashboard-006"
     front: "What conditions qualify a project for RED RAG status?"
     back: "At least one of: a milestone missed, a hard blocker, or a decision overdue."
     tags: ["executive-dashboard", "RAG-status"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-10-executive-dashboard-007"
     front: "What is the RAG milestone-slip rule?"
@@ -52,7 +52,7 @@ cards:
     front: "What are the three blocker types and their definitions?"
     back: "Soft: slowing progress; workaround exists.\nHard: progress cannot continue without resolution.\nStale: open >7 days without movement."
     tags: ["executive-dashboard", "blockers"]
-    difficulty: "intermediate"
+    difficulty: "basic"
 
   - id: "ch39-10-executive-dashboard-009"
     front: "What escalation action is required for a stale blocker?"
@@ -64,7 +64,7 @@ cards:
     front: "What is the 5-minute test for the executive dashboard?"
     back: "Could a colleague tell what your week looks like from the dashboard without asking a follow-up question? If not, context is missing from work.local.md."
     tags: ["executive-dashboard", "quality"]
-    difficulty: "basic"
+    difficulty: "intermediate"
 
   - id: "ch39-10-executive-dashboard-011"
     front: "The dashboard only shows actions due this week or overdue. Why are future actions excluded?"
@@ -98,5 +98,5 @@ cards:
     front: "Why should a user configure only the domain agent metrics_sources they have actually deployed?"
     back: "An empty domain section is worse than no section — it signals a gap rather than cleanliness. The dashboard is designed to grow as agents are deployed; starting with configured domains and expanding later produces a cleaner, more credible output."
     tags: ["executive-dashboard", "configuration", "domain-agents"]
-    difficulty: "intermediate"
+    difficulty: "advanced"
     why: "In what order should a user add domain agent metrics sources as they deploy new agents?"
