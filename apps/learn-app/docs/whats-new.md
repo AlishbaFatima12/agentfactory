@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-18
+- docs: add PRIMM-AI+ to Chapter 45 Reading Python ([#867](https://github.com/panaversity/agentfactory/pull/867))
+
+### 2026-03-18
 
 - fix: improve instruction clarity in Part 0 Ch 1-2 exercises ([#866](https://github.com/panaversity/agentfactory/pull/866))
 
