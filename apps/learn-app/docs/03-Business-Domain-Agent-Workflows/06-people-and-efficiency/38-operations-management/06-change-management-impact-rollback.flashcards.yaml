@@ -5,15 +5,10 @@ deck:
 
 cards:
   - front: "What are the three causes of change failure in operations management?"
-    back: "1. Incomplete impact assessment — change assessed in isolation; downstream
-   effects on connected processes, systems, and teams not mapped
-
-2. Insufficient communication — affected people found out too late, in the
-   wrong format, or not at all; resistance grows from surprise, not the change itself
-
-3. No rollback plan — when things went wrong, nobody had a structured way to
-   revert; rollback was improvised, creating additional problems
-"
+    back: |
+      1. Incomplete impact assessment — change assessed in isolation; downstream effects on connected processes, systems, and teams not mapped
+      2. Insufficient communication — affected people found out too late, in the wrong format, or not at all; resistance grows from surprise, not the change itself
+      3. No rollback plan — when things went wrong, nobody had a structured way to revert; rollback was improvised, creating additional problems
 
   - front: "What are the four change classification levels, and what determines the classification?"
     back: "Standard: single team, limited impact, low risk → team lead approval

@@ -5,11 +5,11 @@ deck:
 
 cards:
   - front: "What are the four task types the /contract command handles?"
-    back: "1. Obligation extraction — structured tables of our obligations, vendor obligations, key dates, and SLAs
-2. Risk flagging — identification of unfavourable clauses with severity and negotiation positions
-3. Contract summary — plain-language one-pager for non-legal readers
-4. Renewal strategy input — current terms + performance + negotiation levers
-"
+    back: |
+      1. Obligation extraction — structured tables of our obligations, vendor obligations, key dates, and SLAs
+      2. Risk flagging — identification of unfavourable clauses with severity and negotiation positions
+      3. Contract summary — plain-language one-pager for non-legal readers
+      4. Renewal strategy input — current terms + performance + negotiation levers
 
   - front: "What is an auto-renewal trap and why is it the highest-priority risk flag?"
     back: "An auto-renewal trap is a clause that converts inaction into a binding commitment —

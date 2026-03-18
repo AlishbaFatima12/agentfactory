@@ -5,14 +5,11 @@ deck:
 
 cards:
   - front: "What are the three stages of the process documentation failure cycle?"
-    back: "Stage 1 — Creation: Document reflects current reality. Accurate and useful.
-Stage 2 — Divergence: Process changes; document does not. Becomes partially wrong.
-Stage 3 — Harm: Document describes a process nobody follows. Creates errors for
-new employees; produces discrepancies for auditors.
-
-The root cause is not poor writing — it is absence of document ownership.
-Document Control assigns that ownership.
-"
+    back: |
+      Stage 1 — Creation: Document reflects current reality. Accurate and useful.
+      Stage 2 — Divergence: Process changes; document does not. Becomes partially wrong.
+      Stage 3 — Harm: Document describes a process nobody follows. Creates errors for new employees; produces discrepancies for auditors.
+      The root cause is not poor writing — it is absence of document ownership. Document Control assigns that ownership.
 
   - front: "What is the fundamental difference between an SOP and a runbook?"
     back: "SOP (Standard Operating Procedure) = Governance format
