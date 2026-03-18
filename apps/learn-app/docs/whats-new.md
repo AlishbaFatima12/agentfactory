@@ -18,6 +18,9 @@ Track meaningful updates to the book. This page is automatically updated when do
 <!-- CHANGELOG_START - Do not remove this marker -->
 
 ### 2026-03-18
+- feat: Ch 35 Supply Chain design + chapter-design-pipeline skill ([#868](https://github.com/panaversity/agentfactory/pull/868))
+
+### 2026-03-18
 - docs: add PRIMM-AI+ to Chapter 45 Reading Python ([#867](https://github.com/panaversity/agentfactory/pull/867))
 
 ### 2026-03-18
