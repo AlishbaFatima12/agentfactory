@@ -83,30 +83,74 @@ You will use the **Reasoning Receipt** format from [Chapter 1, Exercise 1](../01
 
 ### What You Do
 
-Ask both Claude and ChatGPT the same nuanced question where reasonable people disagree — for example: "Is remote work better for productivity than office work?" You will receive two confident, structured, partially contradictory answers. Your job: identify exactly where the two responses diverge, determine which claims are supported by evidence vs. asserted without support, and write your own third analysis (Draft 1) that is more rigorous than either AI output. Then submit your third analysis to AI for critique, revise based on the feedback (Draft 2), and submit the final version (Draft 3).
+**Step 1 — Ask both AI tools the same question.** Choose a nuanced question where reasonable people disagree — for example: "Is remote work better for productivity than office work?" Prompt both Claude and ChatGPT with the identical question. Save both full responses.
+
+**Step 2 — Identify divergence points.** Read both responses side by side. For every point where the two tools disagree, write a divergence annotation (see example below). For each divergence, determine: which side has stronger evidence, and which is asserting without support.
+
+**Step 3 — Write your Draft 1 analysis.** Write your own third analysis (500-800 words) that is more rigorous than either AI output. Use the divergence points as your starting material — you should do better than both tools on the contested points.
+
+**Step 4 — Get AI critique.** Submit your Draft 1 to the AICheck below. The AI will critique your analysis and identify weaknesses.
+
+**Step 5 — Revise to Draft 2.** Based on the AI critique, revise your analysis. Write a brief evolution note explaining what you changed and why.
+
+**Step 6 — Final reflection to Draft 3.** Re-read your Draft 2 with fresh eyes. Make final improvements. Write a second evolution note. This is your final submission.
 
 ---
 
 :::info Your Deliverable
-The two AI responses with divergence points highlighted and annotated ("Claude claims X, ChatGPT claims Y — the evidence favors..."). Your Draft 1 third analysis (written before AI feedback). Your Draft 2 (revised after AI critique). Your Draft 3 (final, after reflection). A brief evolution note for each draft explaining what changed and why.
-:::
+
+1. The two AI responses with divergence points annotated (see example below)
+2. Your Draft 1 third analysis (before AI feedback)
+3. Your Draft 2 (revised after AI critique) + evolution note
+4. Your Draft 3 (final) + evolution note
+   :::
+
+<details>
+<summary>Divergence Annotation Example (click to expand)</summary>
+
+**How to write a divergence annotation:**
+
+> **Divergence #1: Remote work and collaboration**
+>
+> - Claude claims: Remote teams are equally productive because async communication is more efficient
+> - ChatGPT claims: In-person collaboration produces 15% more creative output due to spontaneous interactions
+> - Evidence assessment: ChatGPT cites a specific study (check if it exists). Claude makes a general assertion without evidence.
+> - **Verdict:** ChatGPT has stronger support on this point, but the cited study needs verification.
+
+Do this for every meaningful disagreement between the two responses.
+
+</details>
+
+<details>
+<summary>Evolution Note Example (click to expand)</summary>
+
+**Strong evolution note (Draft 1 → Draft 2):**
+"The AI critique pointed out that my analysis assumed all remote work is the same, ignoring the difference between fully remote and hybrid. I restructured Section 2 to separate these cases. I also removed my claim about cost savings because I had no evidence for the specific figure I used."
+
+**Weak evolution note:**
+"I fixed some wording and added more detail."
+
+Each note should point to _specific changes_ and _why_ you made them.
+
+</details>
 
 <AICheck id="contradiction-test" xp={50}>
 
 I am learning to detect contradictions between AI outputs and build a more
-rigorous analysis. I asked two AI tools the same question and received
-contradictory responses. I then wrote my own analysis attempting to be more
-rigorous than either. Please:
+rigorous analysis through iterative drafts. I asked two AI tools the same
+question and received contradictory responses. I identified divergence points,
+then wrote three progressively improved drafts of my own analysis. Please:
 
-(1) Evaluate my identification of divergence points -- did I catch all the
-meaningful contradictions between the two AI responses?
-(2) Rate my evidence assessment -- for each divergence point, did I
-correctly identify which side had stronger evidence?
-(3) Grade my third analysis on a scale of 1-10 for rigor, originality, and
+(1) Evaluate my divergence annotations -- did I catch all the meaningful
+contradictions? Did I correctly assess which side had stronger evidence?
+(2) Grade my Draft 1 on a scale of 1-10 for rigor, originality, and
 evidence quality compared to the two AI responses.
-(4) Identify the 3 weakest claims in my analysis and explain exactly what
-would make them stronger.
-(5) What did both AI tools get wrong that I also missed?
+(3) Identify the 3 weakest claims in Draft 1 and explain what would
+make them stronger. (This is your critique for me to use in Draft 2.)
+(4) Evaluate my Draft 2 and Draft 3 evolution -- did I make substantive
+improvements or just cosmetic changes? Rate the evolution quality.
+(5) Grade my final Draft 3 on a scale of 1-10. What did both AI tools
+get wrong that I also missed, even in my final draft?
 
 Question:
 
@@ -140,11 +184,27 @@ My divergence annotations:
   rows={6}
 />
 
-My analysis (Draft 1):
+My Draft 1 analysis:
 
 <AICheckField
   name="analysis_draft_1"
-  placeholder="Paste your analysis (Draft 1) here..."
+  placeholder="Paste your Draft 1 analysis here..."
+  rows={6}
+/>
+
+My Draft 2 analysis + evolution note:
+
+<AICheckField
+  name="analysis_draft_2"
+  placeholder="Paste Draft 2 and your evolution note explaining what changed and why..."
+  rows={6}
+/>
+
+My Draft 3 (final) + evolution note:
+
+<AICheckField
+  name="analysis_draft_3"
+  placeholder="Paste Draft 3 (final) and your evolution note..."
   rows={6}
 />
 

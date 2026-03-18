@@ -77,15 +77,26 @@ teaching_guide:
 
 **Layers Used:** Layer 5 (Divergence Test), Layer 2 (Reasoning Receipt)
 
+Use the same scenario you chose in [Exercise 1 (The Prediction Lock)](./01-prediction-lock.md). Every student in the class works from the same scenario with the same AI tools. The only variable is your thinking.
+
 ### What You Do
 
-The entire class receives the identical scenario and identical AI access. Each student independently develops their analysis by prompting AI with their own questions and building their own conclusions. Submit your final analysis along with your complete reasoning receipt showing every prompt and decision.
+**Step 1 — Develop your analysis using AI as a thinking partner.** Prompt AI with your own questions about the scenario. Do not just ask "analyze this scenario" — build your analysis piece by piece through focused questions. You decide what to ask, what to accept, and what to push back on.
+
+**Step 2 — Write your analysis (500-800 words).** Your analysis should include: your diagnosis of what happened, the evidence and reasoning behind it, and at least one insight or connection that you believe AI would not produce on its own.
+
+**Step 3 — Write your uniqueness statement (100 words).** Answer this question: "What specific idea, connection, or insight in my analysis would AI not have produced on its own?" If you cannot point to anything, you need to go deeper before submitting.
+
+**Step 4 — Complete your reasoning receipt.** Document every prompt you sent, every AI response you received, and your accept/reject/modify decision for each (use the same format from [Exercise 1](./01-prediction-lock.md)).
 
 ---
 
 :::info Your Deliverable
-Your final analysis of the business scenario (500-800 words) and a complete reasoning receipt documenting every prompt sent, every AI response received, and every accept/reject/modify decision with justification. Additionally, a brief "uniqueness statement" (100 words) explaining what in your analysis reflects your own thinking rather than a generic AI output.
-:::
+
+1. Your analysis of the scenario (500-800 words)
+2. Your uniqueness statement (100 words) — what you contributed beyond AI
+3. Your complete reasoning receipt showing every prompt, response, and decision
+   :::
 
 <AICheck id="divergence-test" xp={50}>
 
@@ -134,6 +145,21 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
 </AICheck>
+
+---
+
+<details>
+<summary>Uniqueness Statement Example (click to expand)</summary>
+
+**Strong uniqueness statement:**
+"My analysis connects the 20% marketing spend increase to a channel mismatch — specifically, I noticed the spend increase went to social media while the company's core demographic (45-65) primarily discovers products through email and in-store. AI suggested 'targeting issues' generically, but the demographic-channel gap was my insight from noticing the company's customer profile versus where they spent."
+
+**Weak uniqueness statement:**
+"I used AI to help me think through the problem and came up with my own analysis based on the responses."
+
+The strong version points to a _specific_ insight. The weak version says nothing concrete.
+
+</details>
 
 ---
 
