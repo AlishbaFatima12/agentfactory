@@ -1,0 +1,80 @@
+deck:
+  id: "ch35-supply-network-design-scenarios"
+  title: "Supply Network Design Scenarios"
+  description: "Recall and reasoning cards covering trigger events for network reviews, the scenario definition framework, objective functions, MCP-connected optimisation, conversational what-if iteration, and the four trade-off dimensions."
+  tags: ["supply-chain", "network-design", "scenario-analysis", "mcp-optimisation", "what-if-analysis"]
+  version: 2
+
+cards:
+  - id: "ch35-supply-network-design-scenarios-001"
+    front: "What must always be Scenario A in a network design analysis, and why?"
+    back: "The status quo (current network configuration). Without a baseline, you cannot quantify the value of an alternative — a recommendation is only meaningful as cost-saving or service-improving relative to what exists today."
+    tags: ["scenario-definition", "status-quo"]
+    difficulty: "basic"
+
+  - id: "ch35-supply-network-design-scenarios-002"
+    front: "What trigger events warrant a supply network design review?"
+    back: "Demand shifted >20% in a key region, new significant customer in a new geography, supplier base materially changed, transport cost increased >15%, new DC or facility planned, regulatory change affecting trade routes, sustainability target requiring Scope 3 reduction, or company acquisition creating overlapping networks."
+    tags: ["trigger-events"]
+    difficulty: "intermediate"
+
+  - id: "ch35-supply-network-design-scenarios-003"
+    front: "What three elements must be stated before running a /supply-network-design analysis?"
+    back: "The objective function (what you are optimising for, in rank order), the network parameters (supply nodes, demand nodes, intermediate nodes, time horizon, demand forecast), and the scenario structure (at minimum: status quo baseline + one alternative)."
+    tags: ["scenario-definition", "objective-function"]
+    difficulty: "intermediate"
+
+  - id: "ch35-supply-network-design-scenarios-004"
+    front: "What four dimensions must a network design scenario output show?"
+    back: "Total cost (£/year), average transit time (days), carbon footprint (tCO2e), and capex requirement (£). A recommendation showing only cost savings is incomplete — service level and carbon trade-offs must be visible before any decision."
+    tags: ["scenario-output", "trade-offs"]
+    difficulty: "basic"
+
+  - id: "ch35-supply-network-design-scenarios-005"
+    front: "In the Pakistan/Dubai DC example, why was Scenario B recommended over Scenario C?"
+    back: "Scenario B (Lahore serves Pakistan only) captures £430K/year saving with <10 month payback and -17% carbon reduction. Scenario C adds further India efficiency but requires modelling India import duties — a separate analysis. Scenario B is the safe inflection point; Scenario C needs more analysis first."
+    tags: ["pakistan-example", "scenario-comparison"]
+    difficulty: "intermediate"
+
+  - id: "ch35-supply-network-design-scenarios-006"
+    front: "What is the purpose of conversational what-if iteration after receiving an initial network design recommendation?"
+    back: "To test whether the recommendation is robust under plausible alternative assumptions. If the recommendation flips when demand changes 20% or fuel costs rise 15%, it is fragile — and the decision-maker needs to know that before committing capex."
+    tags: ["what-if-iteration", "sensitivity-analysis"]
+    difficulty: "intermediate"
+
+  - id: "ch35-supply-network-design-scenarios-007"
+    front: "What is the break-even analysis question in a network design context?"
+    back: "At what demand volume does the new scenario (with capex investment) equal the total cost of the status quo? Below break-even volume, the new configuration is not justified by numbers. Above it, the new scenario is more economical."
+    tags: ["break-even-analysis"]
+    difficulty: "basic"
+
+  - id: "ch35-supply-network-design-scenarios-008"
+    front: "What does the MCP architecture in /supply-network-design enable — and what does the user not need to understand?"
+    back: "Claude acts as the conversational interface; an MCP-connected optimisation microservice handles the computational backend. For the user: scenario re-runs happen in seconds rather than days. The user does not need to understand the microservice API — the teaching point is the conversational iteration capability, not the architecture."
+    tags: ["mcp-architecture", "optimisation"]
+    difficulty: "basic"
+
+  - id: "ch35-supply-network-design-scenarios-009"
+    front: "What four types of what-if questions should always be asked after receiving an initial network design output?"
+    back: "Demand sensitivity (what if volume grows/shrinks?), cost sensitivity (what if fuel costs or carrier rates change?), break-even analysis (at what volume does the new scenario pay off?), and resilience stress test (what if a key route or node is disrupted for 3 months?)."
+    tags: ["what-if-iteration", "sensitivity-analysis"]
+    difficulty: "intermediate"
+
+  - id: "ch35-supply-network-design-scenarios-010"
+    front: "What four things should never be done when presenting a network design recommendation?"
+    back: "Never present a single scenario without a status quo baseline. Never optimise for cost alone without showing service level and carbon implications. Never recommend closing a node without modelling the transition cost and period risk. Never base the analysis on demand data more than 18 months old."
+    tags: ["network-design", "recommendations"]
+    difficulty: "intermediate"
+
+  - id: "ch35-supply-network-design-scenarios-011"
+    front: "Your CFO says: reduce logistics Scope 3 emissions by 25% within 2 years. Your network is 95% road freight. How does this translate into a network design scenario?"
+    back: "Define a scenario comparison: Scenario A (status quo, road-dominant), Scenario B (mode shift on highest-emission lanes to rail), evaluate the four dimensions for each. The objective function changes — carbon becomes primary, cost secondary. Identify break-even carbon reduction per lane and the total volume that needs shifting to meet the 25% target."
+    tags: ["sustainability", "scope-3", "scenario-definition"]
+    difficulty: "advanced"
+    why: "When a sustainability target drives a network design decision, how does the objective function change — and what new constraints appear that a cost-optimisation scenario would not have?"
+
+  - id: "ch35-supply-network-design-scenarios-012"
+    front: "Why has network design traditionally required weeks of consulting engagement — and what changes with the /supply-network-design skill?"
+    back: "Traditional studies require data collection, model building, scenario coding, and iteration — each cycle taking days. With the MCP-connected skill, the agent re-runs scenarios with modified parameters in seconds, turning a periodic consulting exercise into a continuous analytical capability the decision-maker controls in real time."
+    tags: ["network-design", "mcp-architecture"]
+    difficulty: "basic"

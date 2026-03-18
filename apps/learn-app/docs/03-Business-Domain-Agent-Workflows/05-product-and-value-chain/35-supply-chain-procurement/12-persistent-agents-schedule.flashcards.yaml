@@ -1,0 +1,79 @@
+deck:
+  id: "ch35-persistent-agents-schedule"
+  title: "Persistent Agents and Schedule"
+  description: "Recall and reasoning cards covering the five persistent agents, hot alert triggers, the /schedule command, escalation design to prevent alert fatigue, and the agent-to-manual-task mapping."
+  tags: ["supply-chain", "persistent-agents", "vendor-health-monitor", "procurement-calendar", "schedule-command", "alert-escalation"]
+  version: 2
+
+cards:
+  - id: "ch35-persistent-agents-schedule-001"
+    front: "What are the five persistent supply chain intelligence agents and what does each automate?"
+    back: "Vendor Health Monitor (vendor surveillance, financial news, OTD trending). Invoice Reconciliation Agent (AP inbox automation, four-stage workflow). Procurement Calendar Agent (contract and certification deadline tracking). Logistics Intelligence Agent (carrier SLA and disruption monitoring). Spend Intelligence Agent (category analytics and commodity price triggers)."
+    tags: ["five-agents"]
+    difficulty: "basic"
+
+  - id: "ch35-persistent-agents-schedule-002"
+    front: "What triggers a Vendor Health Monitor hot alert vs. a weekly digest item?"
+    back: "Hot alerts (immediate): Strategic vendor financial distress signal, Bottleneck vendor distress with no backup supplier, vendor OTD below 75% in any single week, Tier 2 disruption that could affect Tier 1 supply within 60 days. Everything else is a weekly digest item."
+    tags: ["vendor-health-monitor", "hot-alert"]
+    difficulty: "intermediate"
+
+  - id: "ch35-persistent-agents-schedule-003"
+    front: "What does the /schedule command do — and why is it significant?"
+    back: "/schedule configures an agent to run automatically at a defined cadence (daily, weekly, monthly) with specified scope and alert recipients. It transforms a one-time manual skill invocation into a running system component — the difference between a tool and a continuous employee."
+    tags: ["schedule-command", "automation"]
+    difficulty: "basic"
+
+  - id: "ch35-persistent-agents-schedule-004"
+    front: "What does the Procurement Calendar Agent do 60 days before a contract expiry?"
+    back: "The agent calculates the exact notice deadline date from the contract register and alerts the category manager to confirm the non-renewal notice has been sent. If no decision has been made, it issues a CRITICAL escalation to the CPO — because missing the notice deadline typically extends the contract for another full term."
+    tags: ["procurement-calendar-agent", "notice-deadline"]
+    difficulty: "intermediate"
+
+  - id: "ch35-persistent-agents-schedule-005"
+    front: "What triggers the Logistics Intelligence Agent to issue an immediate alert rather than a weekly report?"
+    back: "Fuel price index movement >5% since last carrier rate review, logistics disruption news affecting active routes, carrier insolvency signal, or expedited freight spike above the configured threshold."
+    tags: ["logistics-intelligence-agent", "hot-alert"]
+    difficulty: "intermediate"
+
+  - id: "ch35-persistent-agents-schedule-006"
+    front: "What does the Spend Intelligence Agent do when a commodity price index moves more than 8% since the last contract negotiation?"
+    back: "It generates a renegotiation brief. Index down >8%: opportunity to renegotiate lower at next renewal. Index up >8%: assess whether the fixed-price contract is at risk of a vendor seeking a price increase; consider index-linking at renewal."
+    tags: ["spend-intelligence-agent", "commodity-price"]
+    difficulty: "intermediate"
+
+  - id: "ch35-persistent-agents-schedule-007"
+    front: "What escalation design principle prevents CPO alert fatigue?"
+    back: "The threshold between a hot alert and a weekly digest should be calibrated to the point of operational consequence — the event requiring the CPO to act now, not at the next review. Too sensitive creates alert fatigue (important signals get muted); too insensitive means critical signals arrive too late."
+    tags: ["alert-fatigue", "escalation-design"]
+    difficulty: "intermediate"
+
+  - id: "ch35-persistent-agents-schedule-008"
+    front: "What is the Invoice Reconciliation Agent's four-stage automated workflow?"
+    back: "Stage 1: Extract invoice data and run validation checks (Stage 1 Document Intelligence). Stage 2: Match against ERP PO and goods receipt (Three-Way Match). Stage 3: Auto-approve matched lines, route exceptions to correct owner. Stage 4: Log every decision to the exception register and run weekly pattern analysis."
+    tags: ["invoice-reconciliation-agent", "four-stages"]
+    difficulty: "basic"
+
+  - id: "ch35-persistent-agents-schedule-009"
+    front: "Why does an expedited freight spike detected by the Logistics Intelligence Agent involve other agents too?"
+    back: "Expedited freight spikes are usually caused by upstream issues — a vendor delivering late, a demand spike, or production schedule change. The Logistics Intelligence Agent flags the spike; the Vendor Health Monitor and Invoice Reconciliation Agent are needed to identify the root cause. The five agents are a system, not independent tools."
+    tags: ["agent-integration", "expedited-freight"]
+    difficulty: "intermediate"
+
+  - id: "ch35-persistent-agents-schedule-010"
+    front: "What do none of the five agents do — and what does this mean for procurement teams?"
+    back: "None of the five agents makes a final decision. They surface information that requires human judgment. The Vendor Health Monitor does not decide how to respond to a financial distress signal — it ensures the CPO has the information within two hours, not two weeks. Agents remove latency; humans make the calls."
+    tags: ["agent-limitations", "human-judgment"]
+    difficulty: "basic"
+
+  - id: "ch35-persistent-agents-schedule-011"
+    front: "Which single agent, if it fails silently, could cost an organisation 12 months of unintended contract extension?"
+    back: "The Procurement Calendar Agent. Its entire value is in preventing one class of failure: missed contract notice deadlines. A missed deadline typically auto-extends a contract for a full term. One missed deadline from a moderately large contract makes the agent's value self-evident."
+    tags: ["procurement-calendar-agent", "notice-deadline"]
+    difficulty: "intermediate"
+
+  - id: "ch35-persistent-agents-schedule-012"
+    front: "What data feeds the Vendor Health Monitor's watch list — and where does this data originate?"
+    back: "The vendor classification register built in Lesson 3 (Exercise 1). The agent monitors all Tier 1 (Strategic) and Tier 4 (Bottleneck) vendors from that register, plus any vendors on a manually added watch list. This connects the capstone classification work to the agent deployment in a direct data dependency."
+    tags: ["vendor-health-monitor", "classification-register"]
+    difficulty: "intermediate"

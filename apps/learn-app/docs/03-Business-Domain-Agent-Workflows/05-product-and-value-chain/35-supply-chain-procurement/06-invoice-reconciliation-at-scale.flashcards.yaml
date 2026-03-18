@@ -1,0 +1,80 @@
+deck:
+  id: "ch35-invoice-reconciliation-at-scale"
+  title: "Invoice Reconciliation at Scale"
+  description: "Recall and reasoning cards covering the four-stage workflow, Stage 1 fraud detection, Stage 2 exception types, partial payment logic, Stage 4 pattern monitoring, and the invoice-reconciliation-agent."
+  tags: ["supply-chain", "invoice-reconciliation", "three-way-match", "ap-automation", "fraud-detection", "exception-routing"]
+  version: 2
+
+cards:
+  - id: "ch35-invoice-reconciliation-at-scale-001"
+    front: "What are the four stages of the invoice reconciliation workflow?"
+    back: "Stage 1: Document Intelligence (extract and validate). Stage 2: Three-Way Match (compare and classify). Stage 3: Exception Routing (route each exception to the right authority). Stage 4: Audit and Pattern Monitoring (log decisions and surface systematic problems)."
+    tags: ["four-stages", "workflow"]
+    difficulty: "basic"
+
+  - id: "ch35-invoice-reconciliation-at-scale-002"
+    front: "What does Stage 1 do — and what does it NOT do?"
+    back: "Stage 1 extracts, validates, and flags issues that should stop processing. It does NOT match or classify. Matching is Stage 2's job."
+    tags: ["stage-1", "document-intelligence"]
+    difficulty: "basic"
+
+  - id: "ch35-invoice-reconciliation-at-scale-003"
+    front: "Why does a bank detail change on an invoice require immediate processing halt?"
+    back: "Bank detail substitution is the primary invoice fraud vector. Attackers intercept vendor email and substitute payment details. Verification must use a phone number from the vendor master — never from the invoice — before any payment proceeds."
+    tags: ["stage-1", "fraud-detection"]
+    difficulty: "basic"
+
+  - id: "ch35-invoice-reconciliation-at-scale-004"
+    front: "What is the partial payment principle, and why is it important?"
+    back: "Matched line items should be approved and paid immediately; only disputed or held portions are withheld. Holding an entire invoice because one line has a variance is operationally incorrect and damages vendor relationships."
+    tags: ["partial-payment", "stage-2"]
+    difficulty: "basic"
+
+  - id: "ch35-invoice-reconciliation-at-scale-005"
+    front: "In the Meridian Office Supplies example, what were the three payment outcomes and amounts?"
+    back: "£765 approved immediately (18 confirmed toner units at matched price). £255 held pending GR confirmation (6 unconfirmed units). £145 disputed — £100 for paper price variance (5.5%, outside ±3% tolerance) and £45 for unauthorised delivery charge not in the PO."
+    tags: ["meridian-example", "partial-payment"]
+    difficulty: "intermediate"
+
+  - id: "ch35-invoice-reconciliation-at-scale-006"
+    front: "What are the eight Stage 2 classification outcomes?"
+    back: "MATCHED, PRICE VARIANCE within tolerance, PRICE VARIANCE outside tolerance, QUANTITY VARIANCE over-invoiced, GR PENDING, PO NOT FOUND, DUPLICATE DETECTED, UNAUTHORISED CHARGE. Each maps to a different routing action."
+    tags: ["stage-2", "classification"]
+    difficulty: "intermediate"
+
+  - id: "ch35-invoice-reconciliation-at-scale-007"
+    front: "What are the three Stage 4 pattern types that escalate beyond routine exception handling?"
+    back: "1. Same exception type from same vendor more than 3 times in 30 days — vendor billing system problem. 2. Price variance on same line item for more than 2 consecutive invoices — contract non-compliance. 3. GR pending rate above 15% from one vendor — warehouse confirmation process gap."
+    tags: ["stage-4", "pattern-monitoring"]
+    difficulty: "intermediate"
+
+  - id: "ch35-invoice-reconciliation-at-scale-008"
+    front: "What human judgment tasks does the reconciliation agent NOT replace?"
+    back: "Commercial negotiations about pricing disputes, decisions to create retrospective POs, investigation of systematic exception patterns requiring vendor meetings, and any decision above the configured financial escalation thresholds."
+    tags: ["agent-limitations", "human-judgment"]
+    difficulty: "basic"
+
+  - id: "ch35-invoice-reconciliation-at-scale-009"
+    front: "Why must duplicate invoices be auto-rejected rather than routed for approval?"
+    back: "A duplicate is either a billing error (same invoice submitted twice) or a fraud attempt. Neither requires human approval — the legitimate invoice already exists. Auto-rejection with vendor notification resolves the error and creates an audit trail without burdening the AP team."
+    tags: ["stage-2", "duplicate-detection"]
+    difficulty: "basic"
+
+  - id: "ch35-invoice-reconciliation-at-scale-010"
+    front: "What three numbers do you need to calculate the business case for AP automation?"
+    back: "Monthly invoice volume, current exception rate, and cost per exception (£25–£80). Saving = (old exception rate − new exception rate) × volume × cost per exception."
+    tags: ["efficiency-calculation", "business-case"]
+    difficulty: "intermediate"
+
+  - id: "ch35-invoice-reconciliation-at-scale-011"
+    front: "A FastFreight invoice comes in at 8.5% above PO price. Your freight tolerance is ±10%. What are Stage 2 and Stage 4's separate responses?"
+    back: "Stage 2: classify as PRICE VARIANCE within tolerance → auto-approve with Finance flag. Stage 4: if FastFreight has shown this same variance pattern more than 3 times in 30 days, escalate as systematic issue. Each invoice individually auto-approves — but the pattern indicates a pricing model change, not routine variability."
+    tags: ["pattern-monitoring", "tolerance", "freight"]
+    difficulty: "advanced"
+    why: "What is the difference between a tolerance rule working correctly and a vendor exploiting tolerance to hide a systematic price increase?"
+
+  - id: "ch35-invoice-reconciliation-at-scale-012"
+    front: "Why does the /invoice-reconcile skill that you run manually and the invoice-reconciliation-agent perform the same steps — and what is the key difference?"
+    back: "Both run the same four-stage workflow: extraction, three-way match, exception routing, audit logging. The difference is scale and initiation — you trigger /invoice-reconcile for each invoice manually; the agent monitors the AP inbox and runs the workflow automatically for every incoming invoice."
+    tags: ["agent", "automation", "workflow"]
+    difficulty: "intermediate"

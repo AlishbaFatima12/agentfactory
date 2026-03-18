@@ -1,0 +1,80 @@
+deck:
+  id: "ch35-spend-analytics-consolidation"
+  title: "Spend Analytics and Consolidation"
+  description: "Recall and reasoning cards covering the three strategic questions, four analysis types, consolidation candidate criteria, price inconsistency quantification, savings pipeline stages, and the spend-intelligence-agent."
+  tags: ["supply-chain", "spend-analytics", "vendor-consolidation", "price-consistency", "savings-pipeline"]
+  version: 2
+
+cards:
+  - id: "ch35-spend-analytics-consolidation-001"
+    front: "What three strategic questions does spend analytics answer?"
+    back: "1. Who are we buying from? (vendor consolidation opportunity by category). 2. What are we paying? (price consistency across sites and business units). 3. What should we be paying? (market benchmark and renegotiation trigger). These cannot be answered from individual purchase records or from memory."
+    tags: ["three-questions"]
+    difficulty: "basic"
+
+  - id: "ch35-spend-analytics-consolidation-002"
+    front: "What are the four /spend-analysis analysis types?"
+    back: "1. Category spend overview (total spend, vendor count, PO compliance). 2. Vendor consolidation analysis (too many vendors for same specification). 3. Price consistency check (same item bought at different prices across sites). 4. Market benchmark (is your current price competitive with the market?)."
+    tags: ["analysis-types"]
+    difficulty: "basic"
+
+  - id: "ch35-spend-analytics-consolidation-003"
+    front: "What four criteria make a category a consolidation candidate?"
+    back: "Multiple vendors supplying the same specification, no strategic reason for multiple sources (not deliberate dual-sourcing), combined volume would be meaningful to a single preferred vendor, and a competitive market with qualified alternatives available."
+    tags: ["consolidation-candidate"]
+    difficulty: "basic"
+
+  - id: "ch35-spend-analytics-consolidation-004"
+    front: "In the corrugated cardboard example, what was the annual saving from price alignment and how was it calculated?"
+    back: "£47,000/year. The best available rate (£0.31/unit at Leeds) applied to all four sites' combined volume. The 35% price variance between worst (£0.41/unit at Bristol) and best (£0.31/unit at Leeds) for identical specification represents recoverable spend from a single group RFQ."
+    tags: ["corrugated-cardboard-example", "price-inconsistency"]
+    difficulty: "intermediate"
+
+  - id: "ch35-spend-analytics-consolidation-005"
+    front: "What three stages does the procurement savings pipeline track?"
+    back: "Identified (opportunity found, not yet actioned), Active (RFQ, negotiation, or implementation in progress), Captured (contract signed, saving locked in). Only Captured savings have been realised — Identified and Active savings are a work queue, not achievements."
+    tags: ["savings-pipeline"]
+    difficulty: "basic"
+
+  - id: "ch35-spend-analytics-consolidation-006"
+    front: "Why must a market benchmark always include a source, date, and data quality rating?"
+    back: "A benchmark without a source is not a benchmark — it is a guess. The data quality rating (HIGH for published price index, MEDIUM for survey data, LOW for estimate) tells the reader how much weight the comparison should carry. Fabricated benchmarks lead to incorrect negotiation decisions."
+    tags: ["market-benchmark", "data-quality"]
+    difficulty: "intermediate"
+
+  - id: "ch35-spend-analytics-consolidation-007"
+    front: "What is the difference between tail spend and a consolidation opportunity?"
+    back: "Tail spend: many vendors each representing <0.5% of total spend — primarily a transaction cost and compliance burden problem. Consolidation candidates: moderate vendor count but commodity specification and competitive market — the primary opportunity is price leverage through volume concentration. Different problems, different solutions."
+    tags: ["tail-spend", "consolidation"]
+    difficulty: "intermediate"
+
+  - id: "ch35-spend-analytics-consolidation-008"
+    front: "What does the spend-intelligence-agent do that running /spend-analysis periodically cannot?"
+    back: "The agent monitors spending patterns continuously, flagging new price inconsistencies as they emerge and tracking vendor count drift in categories that should be consolidating. A new non-compliant vendor in a consolidated category triggers an alert within days rather than being discovered at the next analysis cycle."
+    tags: ["spend-intelligence-agent", "continuous-monitoring"]
+    difficulty: "intermediate"
+
+  - id: "ch35-spend-analytics-consolidation-009"
+    front: "What five elements must a one-page consolidation business case contain?"
+    back: "Current state (spend, vendor count, price variance), proposed state (consolidated supply, target price, risk mitigation), saving (annual £ saving and timeline to realise), investment (time and resource for RFQ and transition), and net benefit including payback period."
+    tags: ["business-case"]
+    difficulty: "intermediate"
+
+  - id: "ch35-spend-analytics-consolidation-010"
+    front: "Why does price inconsistency across sites typically represent a procurement failure rather than legitimate site-level negotiation?"
+    back: "Price variance for the same item from equivalent vendors is almost always a sign of absent group visibility or weak buying discipline. Sites negotiating independently lose the volume leverage that a group contract would provide. The 35% cardboard variance is typical, not exceptional — it appears wherever sites buy independently without category management."
+    tags: ["price-inconsistency", "procurement-failure"]
+    difficulty: "intermediate"
+
+  - id: "ch35-spend-analytics-consolidation-011"
+    front: "How does savings pipeline tracking prevent procurement from confusing identified savings with delivered savings?"
+    back: "The pipeline explicitly tracks three stages. Identified savings in 'Draft' status for more than 60 days are either not real or not resourced — both important information for leadership. The pipeline forces the question: is this a real opportunity and do we have the resource to capture it?"
+    tags: ["savings-pipeline", "management"]
+    difficulty: "intermediate"
+
+  - id: "ch35-spend-analytics-consolidation-012"
+    front: "A category manager says 'We already have spend reports from our ERP — why do we need spend analytics?' What is the substantive difference?"
+    back: "ERP reports show what happened. Spend analytics answers why and what to do about it. A report showing 9 vendors in packaging does not reveal that 6 supply corrugated cardboard (a consolidation opportunity), or that Bristol pays 35% more than Leeds for identical specification (a price alignment opportunity). Analytics creates the strategic question; reporting creates the transaction record."
+    tags: ["analytics-vs-reporting"]
+    difficulty: "advanced"
+    why: "At what point does operational data become strategic intelligence — and what transformation is required?"
