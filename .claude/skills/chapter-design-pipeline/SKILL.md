@@ -2,356 +2,292 @@
 name: chapter-design-pipeline
 description: >
   End-to-end design pipeline for Part 3 business domain chapters. Takes a
-  governing spec/draft + supporting skill specs and produces a ready-to-paste
-  agent team prompt through 6 stages: build-or-reuse decision, parallel research,
-  diagnostic questions, design decisions with cascade analysis, resolution
-  summary, and team prompt generation. Use this skill whenever the user says
-  "design chapter X", "plan chapter X", provides a chapter spec and asks to
-  build the team, or shares a governing artifact for any Part 3 business domain
-  chapter. Also trigger when the user provides a spec path + plugin repo path
-  and asks about plugin decisions, collision analysis, or lesson planning. This
-  skill orchestrates /diagnostic-questions and /team-prompt-writer — do NOT use
-  those skills separately for chapter design work.
+  governing spec/draft and produces a ready-to-paste agent team prompt through
+  6 stages: plugin status check, research (verify don't assume), lesson design,
+  design decisions with cascade analysis, resolution, and stateful team prompt
+  generation. Use this skill whenever the user says "design chapter X",
+  "plan chapter X", provides a chapter spec and asks to build the team, or
+  shares a governing artifact for any Part 3 business domain chapter. Also
+  trigger when the user provides a spec path + plugin repo path and asks about
+  lesson planning, plugin decisions, or reader experience design. This skill
+  orchestrates /team-prompt-writer — do NOT use that skill separately for
+  chapter design work.
 license: Apache-2.0
 metadata:
   author: panaversity
-  version: "2.0"
+  version: "3.0"
 ---
 
 # Chapter Design Pipeline
 
-You are the chapter design architect. Given a governing spec and supporting
-artifacts, you orchestrate the full design-to-team-prompt pipeline for Part 3
-business domain chapters.
+You are the chapter design architect. Given a governing spec, you produce a
+team prompt that creates the best possible learning experience for readers.
 
-The pipeline exists because uncoordinated chapter writing failed 3x in Part 3.
-The root causes were: (1) writers started before collision analysis was done,
-(2) plugin architecture decisions were made mid-writing, (3) exercise-to-lesson
-mapping was implicit, and (4) fact verification was skipped. This pipeline
-front-loads every decision that would otherwise cause rework.
+**The pipeline's core value is NOT plugin architecture.** It's designing how
+each lesson teaches, how each skill/agent integrates into exercises, and how
+the reader experiences the chapter from start to finish. Plugin decisions are
+a means to that end.
 
 **Worked example**: See [references/worked-example-ch35.md](references/worked-example-ch35.md)
-for the complete Ch 35 Supply Chain design session trace — every stage, every
-correction, every cascade.
+for the Ch 35 Supply Chain design session — every stage, correction, cascade.
+
+## Critical Rule: Verify, Don't Assume
+
+The #1 failure in the Ch 35 session was assuming platform capabilities instead
+of verifying them. Three wrong assumptions (agents don't work in Cowork,
+jurisdictions are needed, router is needed) caused three rounds of rework.
+
+**When uncertain about ANY platform capability** (Does Cowork support X? Can
+agents be scheduled? Does `/schedule` exist?):
+
+1. **WebSearch first** — search for official docs
+2. **WebFetch the official page** — read the actual documentation
+3. **Ask the user** — they know the platform better than you
+
+Never reason from first principles about what a platform "probably" supports.
+Check.
 
 ## Inputs
 
-Gather these from the user. If any are missing, ask before proceeding:
+Gather from the user. Ask if missing:
 
-| Input                      | Required                  | Example                                       |
-| -------------------------- | ------------------------- | --------------------------------------------- |
-| **Governing spec**         | Yes                       | `specs/drafts/chapter-name/spec.md`           |
-| **Supporting skill specs** | If plugin                 | `specs/drafts/chapter-name/skills/`           |
-| **Plugin repo**            | If plugin                 | `/path/to/agentfactory-business-plugins`      |
-| **Knowledge-work plugins** | If collision check needed | `/path/to/knowledge-work-plugins`             |
-| **Chapter destination**    | Yes                       | `apps/learn-app/docs/03-.../section/chapter/` |
-| **Diagnostic questions**   | Optional                  | User may provide pre-researched diagnostics   |
+| Input                      | Required           | Example                                       |
+| -------------------------- | ------------------ | --------------------------------------------- |
+| **Governing spec**         | Yes                | `specs/drafts/chapter-name/spec.md`           |
+| **Supporting skill specs** | If plugin          | `specs/drafts/chapter-name/skills/`           |
+| **Plugin repo**            | If plugin          | `/path/to/agentfactory-business-plugins`      |
+| **Knowledge-work plugins** | If collision check | `/path/to/knowledge-work-plugins`             |
+| **Chapter destination**    | Yes                | `apps/learn-app/docs/03-.../section/chapter/` |
+| **User's pre-research**    | Optional           | Diagnostics, collision tables, etc.           |
 
-**If the user provides pre-researched diagnostic questions**: Do NOT regenerate
-them. Instead, use them as the starting point for Stage 2. Research (Stage 1)
-should fill gaps the user's diagnostics didn't cover, not duplicate their work.
-Validate each diagnostic against your research and either confirm, refine, or
-flag where research contradicts the user's analysis.
+If the user provides pre-researched diagnostics, validate them against your
+research — don't regenerate from scratch.
 
 ## The 6-Stage Pipeline
 
-### Stage 0: Build or Reuse?
+### Stage 0: Plugin Status Check
 
-Before any research, answer the threshold question: **does this chapter need a
-custom plugin, or can it reuse existing ones?**
+Before anything else: **is the plugin already shipped, in progress, or needed?**
 
-Check:
+```
+CHECK ORDER:
+1. ls the plugin repo — is there already a directory for this domain?
+2. If yes → plugin exists. Read it. Understand what's shipped.
+3. If no → check knowledge-work-plugins for coverage
+4. If partial coverage → decide: extend existing or build new?
+5. If no coverage → build new plugin
+```
 
-1. Do the knowledge-work-plugins already cover this domain?
-2. Does the spec describe skills that overlap significantly with existing plugins?
-3. Is the domain specialized enough that generic plugins won't serve?
+| Status                     | What Changes                                                                                                                      |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Plugin already shipped** | No plugin-builder teammate. Chapter teaches the existing plugin. Design focuses entirely on lesson quality and reader experience. |
+| **Plugin in progress**     | Coordinate with plugin work. Chapter may need to wait or adapt.                                                                   |
+| **Need to build**          | Plugin-builder teammate in team. But plugin design is a MEANS to lesson design, not the goal.                                     |
+| **No plugin needed**       | Companion repo or skills-only chapter.                                                                                            |
 
-| Finding                                    | Decision                               |
-| ------------------------------------------ | -------------------------------------- |
-| Existing plugin covers 80%+ of needs       | Reuse — teach the existing plugin      |
-| Partial overlap (30-80%)                   | Extend — build a small plugin for gaps |
-| No overlap or domain is highly specialized | Build — full custom plugin             |
+### Stage 1: Research (Verify Everything)
 
-Present your recommendation to the user before proceeding. This decision shapes
-everything downstream — a "reuse" chapter has no Stage 1 collision audit, no
-plugin builder teammate, and a fundamentally different lesson structure.
+Spawn parallel agents. The research serves Stage 2 (lesson design), not the
+other way around.
 
-### Stage 1: Parallel Research
+**Agent A — Platform Capabilities** (ALWAYS run this):
 
-Spawn 3-4 Explore agents simultaneously. Do NOT read everything yourself — delegate.
+- WebSearch and WebFetch to verify what Cowork supports today
+- Can agents be deployed via plugins? How?
+- Does `/schedule` exist? How does it work?
+- What plugin components are supported (skills, agents, commands, hooks)?
+- Fetch these 3 canonical docs:
+  - https://code.claude.com/docs/en/plugins-reference
+  - https://agentskills.io/specification
+  - https://code.claude.com/docs/en/sub-agents
 
-**Agent A — Plugin Pattern Audit** (if building a plugin):
+**Agent B — Plugin Audit** (if building a plugin):
 
 - Scan existing plugins in `agentfactory-business-plugins/`
-- Count components per plugin (skills, agents, commands, jurisdictions, evals)
-- Identify the closest structural precedent (Banking for large plugins, Legal-ops
-  for deduplication patterns, IDFA for light plugins)
-- Extract the plugin directory pattern (`.claude-plugin/`, `skills/`, `agents/`, `evals/`)
-- Note which plugins have agents (sales-revops-marketing is the precedent for plugin agents)
-
-**Agent B — Layer 1 Collision Audit** (if building a plugin):
-
-- Scan `knowledge-work-plugins/` for every skill name and command
-- Build a collision table: planned skill → potential collision → severity
-- Classify each: Name collision (same name, different domain), Semantic overlap
-  (similar concept, different scope), No collision
-- Pay special attention to generic verbs: `/reconcile`, `/communicate`, `/review`,
-  `/assess` — these almost always collide
+- Identify closest structural precedent
+- Scan `knowledge-work-plugins/` for collision candidates
+- Build collision table (planned skill → L1 candidate → severity → rename?)
 
 **Agent C — Reference Chapter Format**:
 
-- Read the reference chapter README (usually Banking ch 32 or the closest precedent)
-- Read ONE skill-based lesson for format patterns
-- Extract: YAML frontmatter template (all fields including teaching_guide),
-  section structure, Try With AI format (3 prompts: Reproduce → Adapt → Apply),
-  sidecar file patterns (.flashcards.yaml + .summary.md), exercise format (Step 1-5)
-- Note proficiency levels used (A2/B1/B2 — varies by chapter position)
+- Read reference chapter README + ONE skill-based lesson
+- Extract: YAML frontmatter, section structure, Try With AI format,
+  sidecar patterns, exercise format, proficiency levels
+- Focus on what makes the READER EXPERIENCE good, not just the format
 
-**Agent D — Spec Analysis**:
+**Agent D — Spec Deep Read**:
 
 - Read the FULL governing spec
 - Read ALL supporting skill/agent spec files
-- Extract: total components (skills vs agents vs conceptual), exercise count,
-  section structure, external references (URLs, citations), synthetic vs real data,
-  fact claims that need verification
-- Flag any component the spec calls an "agent" — classify whether it's actually a
-  plugin agent, a skill, or lesson content
+- Extract: components, exercises, sections, external refs, fact claims
+- For each exercise: what does the READER DO? What's the hands-on experience?
 
-**Stage 1 also fetches official documentation** (via WebFetch) when building a plugin:
+### Stage 2: Lesson Design (The Core Stage)
 
-- https://code.claude.com/docs/en/plugins-reference — plugin.json schema, directory structure
-- https://agentskills.io/specification — SKILL.md format (YAML frontmatter, name constraints)
-- https://code.claude.com/docs/en/sub-agents — agent.md format (frontmatter fields, background flag)
+This is where the real value is. Not "exercise-to-lesson mapping" — that's
+mechanical. This is designing how each lesson TEACHES.
 
-These 3 docs are the canonical references. Fetch them early — they inform collision
-resolution (what names are valid), agent classification (what fields exist), and
-plugin structure (what files to create).
+For each lesson, answer:
 
-### Stage 2: Diagnostic Questions
+```
+LESSON [N]: [Title]
+- WHAT the reader learns (concept, not just topic)
+- HOW they learn it (read → try → verify → extend)
+- WHICH skill/agent they use and HOW it integrates
+  - What command do they run?
+  - What input do they provide?
+  - What output do they evaluate?
+  - What does the output TEACH them?
+- EXERCISE design (if applicable):
+  - What real-world scenario?
+  - What data do they need?
+  - What's the deliverable?
+  - How do they know they succeeded?
+- READER EXPERIENCE:
+  - Does this lesson flow naturally from the previous one?
+  - Is the cognitive load appropriate (7-10 new concepts max)?
+  - Does the Try With AI section give them genuine practice?
+  - Would a procurement manager find this immediately useful?
+```
 
-After research completes, generate diagnostic questions across 7 categories.
-See [references/diagnostic-categories.md](references/diagnostic-categories.md) for
-the full template with tables and examples.
+**Design the progression**: Early lessons build foundations. Middle lessons
+use skills for real scenarios. Late lessons combine skills + agents for
+complex workflows. Capstone integrates everything.
 
-**If the user provided pre-researched diagnostics**: Map each of their questions to
-a category. For each:
+**Design the skill/agent integration**: Each skill appears in exercises with:
 
-- **Confirmed**: Your research supports their analysis. Say so briefly.
-- **Refined**: Your research adds nuance. Present the refinement.
-- **Contradicted**: Your research found something different. Present both and explain.
-- **Missing**: Categories not covered by user's diagnostics. Generate new questions.
+- Explicit command syntax
+- Realistic sample input (not toy data)
+- Output that the student must EVALUATE (not just read)
+- A "what to look for" guide so students learn to assess AI output quality
 
-**If generating from scratch**: Present all 7 categories with your opinionated
-recommendations, tradeoffs, and clear questions.
+**Design the agent deployment**: For chapters with agents:
 
-The 7 categories are:
-
-1. **Layer 1 Collision Audit** — For each planned skill: collision candidate,
-   severity, recommended pattern (coexist/rename/override). Present as a table.
-2. **Component Classification** — Skills vs agents vs lesson content. What's the
-   runtime reality in Cowork? Can agents actually be deployed and scheduled?
-3. **Jurisdiction/Overlay Decision** — Does this domain need jurisdiction overlays
-   or is `local.md` sufficient?
-4. **Exercise-to-Lesson Mapping** — How do spec exercises map to lessons? Target
-   lesson count (13-15)? Merge candidates? Cross-reference chains?
-5. **Pedagogical Approach** — "Use the plugin" vs "build the system" vs hybrid?
-   Where does this chapter sit in book progression?
-6. **Fact Verification** — Which claims are verifiable, synthetic, or suspect?
-7. **Missing Inputs** — What must the user decide before team prompt generation?
-
-**Also present Stage 0's build-or-reuse conclusion** and the router question: Does
-this plugin need a router skill? (Answer: only if 10+ skills AND ambiguous trigger
-phrases. 8 or fewer well-named skills don't need routing indirection.)
+- Which lesson introduces each agent?
+- How does the student configure it?
+- How do they use `/schedule` to automate it?
+- What does the agent's output look like in practice?
 
 ### Stage 3: Design Decisions (with Cascade Analysis)
 
-This is the most important stage. The user will:
+Present your lesson design + plugin decisions to the user. They will correct
+assumptions. The Ch 35 session had 3 major corrections — expect this.
 
-- Agree with some recommendations ("yes, go with that")
-- Correct assumptions ("actually, agents DO work in Cowork")
-- Reject options ("no need for jurisdictions")
-- Add constraints you didn't consider
-
-**The Cascade Protocol**: After EVERY user correction, immediately trace downstream
-impacts. This is not optional — it's the core value of the pipeline.
+**The Cascade Protocol**: After EVERY correction, trace downstream impacts:
 
 ```
 CORRECTION: [what the user said]
 IMMEDIATE IMPACT: [what changes directly]
 CASCADE:
-  → Lesson plan: [how lessons change]
+  → Lesson design: [how teaching changes]
   → Plugin architecture: [how components change]
   → Team prompt: [how teammates/phases change]
-  → Exercise mapping: [how exercises redistribute]
+  → Reader experience: [how the chapter feels different]
 REVISED POSITION: [updated recommendation]
 ```
 
-**Real examples from Ch 35**:
-
-Correction: "Agents work in Cowork, /schedule handles automation"
-→ L12 changes from "conceptual agent design" to "deploy and configure real agents"
-→ Plugin ships 5 agent files (not zero)
-→ Team prompt adds agent format reference docs to plugin-builder
-→ Exercises 3 and 7 now configure actual running agents
-
-Correction: "No need for jurisdictions"
-→ Plugin drops overlays directory entirely
-→ No jurisdiction-loading logic needed
-→ Universal rules go into individual skills, not a router
-→ L02 setup lesson simplifies (no overlay configuration)
-
-Correction: "Why even add a router? It has no value"
-→ Router dropped (was 1 of 14 components, now 0)
-→ Universal non-negotiable rules distribute across 8 skills
-→ Plugin inventory: 8 skills + 5 agents + local.md = 14 files (not 15)
-
-**After all corrections are resolved**, present the binding decisions:
-
-```
-BINDING DECISIONS (N total):
-1. [Decision]: [Choice] — [Rationale]
-2. [Decision]: [Choice] — [Rationale]
-...
-Corrections applied: [N]
-Cascades traced: [N]
-Open questions: 0 ← this MUST be zero before Stage 4
-```
+**Collect all corrections, then cascade once** if they arrive in a batch.
+Don't cascade after each word — wait for the user to finish their corrections.
 
 ### Stage 4: Resolution
 
-Present the complete design summary. This is the final checkpoint before team
-prompt generation. The user must approve this before Stage 5.
+Present the complete design. User must approve before Stage 5.
 
-**The resolution has 4 sections** (adapt based on chapter type):
+**Section A: Plugin** (if applicable)
 
-#### Section A: Plugin Architecture (if applicable)
+- Component inventory with command names
+- Renames to avoid collisions
+- Agent deployment model
 
-```markdown
-## Plugin: [name]
+**Section B: Lesson Plan** (the important part)
 
-**Components**: N skills + M agents (no router, no jurisdictions)
-**Repo**: [path]
+- 15 lessons with titles, skills, exercises, durations
+- For each skill-based lesson: what command, what scenario, what the student evaluates
+- Exercise cross-reference chain
+- Reader experience flow (does it build naturally?)
 
-| #   | Skill  | Command    | Renamed?            | Collision Avoided |
-| --- | ------ | ---------- | ------------------- | ----------------- |
-| 1   | [name] | /[command] | No/Yes (was /[old]) | [what it avoids]  |
+**Section C: Fact Verification**
 
-...
+- Claims flagged `[VERIFY]` with hedging instructions
 
-| #   | Agent  | Purpose   | Background? | Skills Preloaded |
-| --- | ------ | --------- | ----------- | ---------------- |
-| 1   | [name] | [purpose] | true        | [list]           |
-
-...
-
-**Config**: [local.md template description]
-**Evals**: [N routing + N negative cases]
-```
-
-#### Section B: Lesson Plan
-
-```markdown
-## 15 Lessons
-
-| Lesson | Content | Skill/Agent | Exercise | Duration |
-| ------ | ------- | ----------- | -------- | -------- |
-| L01    | [title] | —           | —        | 30 min   |
-
-...
-
-**Exercise cross-references**: Ex N references Ex M results
-**Build-first lessons**: L03, L05 (students build skills before installing plugin)
-```
-
-#### Section C: Fact Verification
-
-```markdown
-| Claim      | Source    | Verdict | Action                          |
-| ---------- | --------- | ------- | ------------------------------- |
-| [stat]     | [source]  | Suspect | [VERIFY] — use hedging language |
-| [scenario] | Synthetic | Fine    | Keep as teaching scenario       |
-```
-
-#### Section D: Team Prompt Inputs
-
-```markdown
-**Reference chapters**: [primary] + [secondary]
-**Plugin builder refs**: 3 canonical URLs
-**Fact flags**: N claims marked [VERIFY]
-**Open questions**: 0
-```
+**Section D: Reference chapters + docs**
 
 ### Stage 5: Team Prompt Generation
 
-Invoke `/team-prompt-writer` with the complete context from Stage 4:
+Invoke `/team-prompt-writer` with complete context from Stage 4.
 
-- Spec path + skills specs path
-- Plugin repo path + chapter destination
-- ALL binding design decisions from Stage 3
-- Complete lesson plan with exercise mapping from Stage 4
-- Reference chapters
-- Plugin builder reference URLs (3 canonical docs)
-- Fact verification flags
-- Any chapter-specific constraints
+**CRITICAL: The team is STATEFUL. It does NOT shut down after content writing.**
 
-The team-prompt-writer generates the phased pipeline prompt
-(architect → reference-builder → plugin-builder → writers → quality-reviewer).
+The team prompt must include these post-writing phases:
 
-**After generation**, verify the team prompt contains:
+```
+Phase 3: Writers (parallel) ← content lessons
+Phase 4: Quality Review
+Phase 5: Post-Production (SAME team, NOT shutdown)
+  - Summary Generator: .summary.md for each lesson
+  - Flashcard Generator: .flashcards.yaml for each lesson
+  - Quiz Generator: end-of-chapter quiz
+  - Slide Generator: chapter slide deck
+Phase 6: Final Verification
+  - All sidecar files present
+  - All YAML frontmatter complete
+  - All exercises have data/scenarios
+```
 
-- [ ] Zero open questions (all decisions are binding)
-- [ ] All renames reflected in plugin builder mapping table
-- [ ] All corrections from Stage 3 reflected in lesson scopes
-- [ ] Fact verification flags in writer rules
-- [ ] Plugin builder has the 3 canonical reference URLs
-- [ ] Writer scopes use spec line ranges (no writer reads the full spec)
+The team lead coordinates ALL phases. Teammates from Phase 3 can be reused
+in Phase 5 (they have context). New teammates can be spawned for specialized
+work (quiz, slides).
+
+**Team prompt args format for `/team-prompt-writer`**:
+
+```
+Chapter [N]: [Title]. Spec at [path]. Skills at [path].
+Plugin repo at [path]. Chapter destination: [path].
+DESIGN DECISIONS: [all binding decisions from Stage 3].
+LESSON DESIGN: [the Stage 2 output — how each lesson teaches].
+POST-PRODUCTION: Team is stateful — include summary, flashcard,
+quiz, and slide phases after content writing.
+Reference chapters: [primary] + [secondary].
+Plugin builder refs: [3 URLs if building plugin].
+```
 
 ## Key Principles
 
-**Front-load decisions.** Every decision that would cause rework if made mid-writing
-must be resolved in Stages 2-4. The team prompt should contain ZERO open questions.
+**Reader experience first.** Every decision serves the reader. Plugin
+architecture, collision resolution, team structure — these are means, not ends.
+Ask: "Does this make the chapter better for a procurement manager learning
+supply chain AI?"
 
-**User corrections change the model.** When the user corrects an assumption, trace
-ALL downstream impacts using the Cascade Protocol. Don't just fix the one thing —
-fix everything it touches. This is the most common failure mode: a correction gets
-applied locally but stale assumptions survive in the lesson plan or team prompt.
+**Verify, don't assume.** WebSearch/WebFetch for platform capabilities. Ask the
+user about their workflow. Never reason about what Cowork "probably" supports.
 
-**Opinionated defaults, explicit overrides.** Present your recommendation first.
-The user can override. But never present options without a recommendation — that's
-delegation, not design.
+**Corrections cascade.** When the user corrects an assumption, trace ALL
+downstream impacts. The most common failure: a correction gets applied locally
+but stale assumptions survive in the lesson plan.
 
-**Research, don't guess.** Stage 1 reads actual files and fetches actual docs. Don't
-assume plugin structures, collision patterns, runtime capabilities, or format
-requirements from memory. The filesystem and official docs are the source of truth.
+**The team is stateful.** Content writing is phase 3 of ~6. Summaries,
+flashcards, quizzes, and slides come after. The team persists through all phases.
 
-**Challenge your own assumptions.** If the user doesn't challenge them, you should.
-Before finalizing Stage 4, ask yourself: "What am I assuming about runtime
-capabilities, user workflow, or platform features that I haven't verified?"
+**Design lessons, not just structure.** "L07 = Supplier Risk" is structure.
+"L07: students configure vendor-health-monitor for their top 10 suppliers,
+run `/supplier-risk` to generate a risk matrix, then evaluate whether the
+agent's financial distress signals are actionable" — that's lesson design.
 
 ## Adaptation by Chapter Type
 
-| Chapter Type                               | Stage 0 | Stage 1 Focus                                     | Stage 2 Categories        | Plugin?      |
-| ------------------------------------------ | ------- | ------------------------------------------------- | ------------------------- | ------------ |
-| **Plugin chapter** (Banking, Supply Chain) | Build   | Plugin audit + collision + format + WebFetch docs | All 7                     | Yes          |
-| **Companion repo chapter** (CA/CPA)        | Skip    | Repo structure + format                           | 4-7 (no collision)        | No           |
-| **Reuse chapter** (using existing plugin)  | Reuse   | Format only                                       | 4-7                       | No           |
-| **Extension chapter**                      | Extend  | Gap analysis + format                             | All 7 (lighter collision) | Small plugin |
+| Type                | Stage 0              | Stage 2 Focus                       | Team Phases                                |
+| ------------------- | -------------------- | ----------------------------------- | ------------------------------------------ |
+| **Plugin shipped**  | Read existing plugin | How to teach existing skills/agents | Writers + Post-production                  |
+| **Plugin to build** | Build                | Lesson design + plugin design       | Plugin-builder + Writers + Post-production |
+| **Companion repo**  | Skip                 | Lesson design + repo structure      | Writers + Post-production                  |
+| **No plugin**       | Skip                 | Pure lesson design                  | Writers + Post-production                  |
 
-## What This Skill Does NOT Do
+## Failure Modes
 
-- Does not write lesson content (that's the team's job)
-- Does not build the plugin (plugin-builder teammate does that)
-- Does not run the team (user pastes the team prompt)
-- Does not replace `/team-prompt-writer` — it feeds it with resolved context
-
-## Failure Modes to Avoid
-
-- **Skipping Stage 0** → Building a plugin when existing one would suffice
-- **Skipping Stage 1 research** → Collision discovered mid-writing, causes rework
-- **Not fetching official docs** → Plugin builder uses wrong format, skill/agent files invalid
-- **Presenting options without recommendations** → User has to do your thinking
-- **Applying corrections without cascade analysis** → Stale decisions in team prompt
-- **Starting team prompt before all decisions are binding** → Open questions in prompt
-- **Assuming runtime capabilities** → Always verify what works in Cowork/Claude Code
-- **Generating diagnostics that duplicate user's pre-research** → Wastes time, annoys user
-- **Recommending a router for small plugin** → Router adds indirection without value for <10 well-named skills
+- **Assuming platform capabilities** → Wrong design, user has to correct you 3x
+- **Focusing on plugin architecture over lesson design** → Beautiful plugin, mediocre teaching
+- **Shutting down team after content** → Lose context for summaries/flashcards/quizzes
+- **Mapping exercises to lessons mechanically** → "L07 has Ex 3" instead of designing HOW Ex 3 teaches
+- **Not checking if plugin already exists** → Designing a plugin that's already shipped
+- **Presenting options without recommendations** → Delegation, not design
+- **Generating diagnostics that duplicate user's pre-research** → Wastes time
