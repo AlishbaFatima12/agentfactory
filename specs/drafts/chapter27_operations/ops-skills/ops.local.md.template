@@ -1,0 +1,265 @@
+# [Company Name] — Operations Configuration
+# Version: 1.0 | Last Updated: [Date] | Owner: [COO / Operations Manager]
+#
+# INSTRUCTIONS:
+# 1. Copy this file and remove ".template" from the filename → ops.local.md
+# 2. Fill in every section with your organisation's actual configuration
+# 3. Save in your Cowork skills root directory
+# 4. Test: run /vendor, /compliance, and /risk — outputs should reference
+#    your actual vendors, obligations, and thresholds (not generic examples)
+# 5. Update whenever: vendors change, regulations are updated, risk appetite
+#    is revised, or the change authority matrix is modified
+
+---
+
+## Organisation Context
+
+Company name:           [Legal entity name]
+Trading name:           [If different]
+Company size:           [Headcount]
+Industry sector:        [Sector — affects regulatory obligations]
+Primary jurisdiction:   [UK / Pakistan / UAE / US / Other]
+Secondary jurisdictions:[If operations span multiple countries]
+Financial year end:     [Month — affects change freeze periods]
+Operations contact:     [COO name + email + direct line]
+
+---
+
+## Vendor Portfolio Configuration
+
+### Vendor Categories and Spend Bands
+  [Configure categories relevant to your organisation]
+  Software / SaaS:        [Annual budget £/PKR]
+  Infrastructure / Cloud: [Annual budget]
+  Professional services:  [Annual budget]
+  Facilities / FM:        [Annual budget]
+  Logistics / Delivery:   [Annual budget]
+  [Add/remove categories as appropriate]
+
+### Procurement Approval Thresholds
+  Up to [£5,000]:     [Role] can approve — no procurement involvement
+  [£5,001–£25,000]:   [Role] + Procurement sign-off required
+  [£25,001–£100,000]: [Role] + CFO approval required
+  Over [£100,000]:    Board approval required
+
+### Critical / Sole-Source Vendors
+  [List vendors where failure would halt operations within 4 hours
+   or where no pre-qualified alternative exists]
+
+  | Vendor | Service | Annual Value | Alternative? | Exit Plan Location |
+  |---|---|---|---|---|
+  | [Name] | [Service] | [£] | [Yes/No/Partial] | [Link] |
+
+### Preferred Suppliers by Category
+  Software procurement:   [Preferred vendor(s) if any]
+  Cloud infrastructure:   [Preferred vendor(s)]
+  Legal services:         [Preferred vendor(s)]
+  [Continue by category]
+
+### Vendor Review Cadence
+  Critical vendors (>£100K or sole-source): Quarterly scorecard review
+  Major vendors (£25K–£100K):               Bi-annual review
+  Standard vendors (<£25K):                 Annual review at renewal
+
+---
+
+## Regulatory Frameworks
+
+[List all frameworks your organisation must comply with]
+
+| Framework | Regulator / Body | Obligation Count | Owner | Last Assessed | Next Assessment |
+|---|---|---|---|---|---|
+| [e.g. UK GDPR] | ICO | [N] | [DPO name] | [Date] | [Date] |
+| [e.g. FCA] | FCA | [N] | [CCO name] | [Date] | [Date] |
+| [e.g. ISO 27001] | BSI | [N] | [CISO name] | [Date] | [Date] |
+| [Add rows] | | | | | |
+
+### Compliance Evidence Repository
+  Location:      [Confluence / SharePoint / other — URL]
+  Access:        [Who has access]
+  Naming convention: [How evidence files are named]
+
+### Compliance Review Cycle
+  High-risk obligations (🔴 risk level):  Every 3 months
+  Standard obligations:                   Every 6 months
+  Low-risk obligations:                   Every 12 months
+
+### Evidence Age Thresholds
+  High-risk obligations:  Evidence must be <6 months old for CURRENT status
+  Standard obligations:   Evidence must be <12 months old for CURRENT status
+
+---
+
+## Risk Configuration
+
+### Risk Appetite Statement
+  [Write your organisation's risk appetite in plain language]
+  Example: "We have a low appetite for regulatory and compliance risk
+  (zero tolerance for regulatory breach). We have a medium appetite for
+  operational disruption (can tolerate up to [N] hours before escalation).
+  We have a medium appetite for financial risk (can absorb up to [£X] from
+  a single operational failure without board notification)."
+
+### Risk Appetite Thresholds (Residual Score)
+  Acceptable (no action):     ≤ [N] — ACCEPT
+  Monitor (quarterly review): [N+1]–[N] — ACCEPT with monitoring
+  Mitigate (action required): [N+1]–[N] — MITIGATE within [timeframe]
+  Escalate (COO-level):       [N+1]–[N] — ESCALATE within [timeframe]
+  Critical (Board-level):     >[N] — IMMEDIATE escalation
+
+### Risk Scoring Override (if different from global router defaults)
+  [Leave blank to use global router defaults; configure here to override]
+  Likelihood scale: [Configure if different]
+  Impact scale:     [Configure if different — especially financial thresholds]
+
+### Risk Register
+  Location:      [Document store URL]
+  Review cadence: Quarterly for HIGH and CRITICAL; bi-annual for MEDIUM; annual for LOW
+  Risk owner:    [Primary: COO | Risk committee if applicable]
+
+### Escalation Contacts
+  Operations Manager:  [Name] | [email] | [mobile — for urgent alerts]
+  COO:                 [Name] | [email] | [mobile]
+  Board / Risk Committee: [Contact route]
+
+---
+
+## Change Management Configuration
+
+### Change Authority Matrix
+  STANDARD changes:
+    Approval authority: [Role title] — process owner
+    No CAB required
+    Notice required: [N] business days
+
+  SIGNIFICANT changes:
+    Approval authority: [Role title] + [Function head]
+    No CAB required but recommended for high-impact
+    Notice required: [N] business days
+
+  MAJOR changes:
+    Approval authority: Change Advisory Board (CAB)
+    CAB composition: [List roles — e.g. COO, IT Director, relevant function heads]
+    Impact assessment: MANDATORY before CAB submission
+    Notice required: [N] weeks minimum
+
+  CRITICAL changes:
+    Approval authority: [Executive sponsor] + CAB + [Legal/Compliance]
+    Impact assessment: MANDATORY
+    Board notification: Required
+    Notice required: Formal programme governance
+
+  EMERGENCY changes:
+    On-call approval authority: [Role — available 24/7]
+    Retrospective review: Within [N] business days
+    Board notification: If P1 incident-driven
+
+### CAB Schedule
+  Frequency:  [Weekly / Bi-weekly / Monthly]
+  Day / Time: [e.g. Every Tuesday 10:00]
+  Chair:      [Change Manager name]
+  Submission deadline: [N] business days before CAB
+
+### Change Freeze Periods
+  [Define periods when no MAJOR or CRITICAL changes are permitted]
+  Year-end close:         [Dates — typically [month] last 2 weeks]
+  Peak operational period:[Dates if applicable]
+  Tax filing deadline:    [Dates if applicable]
+  [Add any sector-specific freeze periods]
+
+### Post-Implementation Review Requirements
+  CRITICAL changes:  PIR mandatory; within 4 weeks of go-live
+  MAJOR changes:     PIR mandatory; within 4 weeks of go-live
+  SIGNIFICANT:       PIR recommended; within 6 weeks
+  STANDARD:          PIR optional; log closure only
+
+---
+
+## Process Library
+
+### SOP Numbering Convention
+  Format: SOP-[FUNCTION]-[NNN]
+  Functions: FIN (Finance), OPS (Operations), IT, HR, SALES, MKT, LEG (Legal)
+  Example: SOP-FIN-042
+
+### SOP Repository
+  Location:       [Document store URL]
+  Access:         [All staff / function only / HR-controlled]
+  Version control:[System used — e.g. document store version history]
+
+### Critical Process Inventory (Tier 1)
+  [List all Tier 1 processes — failure halts operations or causes regulatory breach]
+
+  | SOP ID | Process Name | Owner | Last Reviewed | Review Due |
+  |---|---|---|---|---|
+  | [ID] | [Name] | [Role] | [Date] | [Date] |
+
+### SOP Review Cycle
+  Tier 1 (Critical):   Every 6 months; immediate on system/regulation change
+  Tier 2 (Important):  Every 12 months
+  Tier 3 (Standard):   Every 24 months
+
+---
+
+## Operational Metrics
+
+### KPI Framework
+  [List your 5–10 operational KPIs with targets and thresholds]
+
+  | Metric | Owner | Target (🟢) | Watch (🟡) | Action (🔴) | Frequency |
+  |---|---|---|---|---|---|
+  | Vendor SLA compliance % | [Name] | >95% | 90–95% | <90% | Monthly |
+  | SOP currency % | [Name] | >90% | 80–90% | <80% | Monthly |
+  | Change failure rate % | [Name] | <5% | 5–10% | >10% | Monthly |
+  | Compliance obligation currency % | [Name] | >95% | 90–95% | <90% | Monthly |
+  | Incident MTTR (P1, hours) | [Name] | <4hr | 4–8hr | >8hr | Per incident |
+  | [Add metrics] | | | | | |
+
+### Reporting Cadence
+  Weekly:    [Recipients — e.g. Operations Manager: vendor alerts, change status]
+  Monthly:   [Recipients — e.g. COO: full operations dashboard]
+  Quarterly: [Recipients — e.g. Board: compliance + risk dashboard]
+
+### Operational Dashboard
+  Tool:      [Power BI / Tableau / Looker / Google Data Studio / other]
+  Location:  [URL]
+  Owner:     [Name]
+  Refresh:   [Daily / Weekly / Real-time]
+
+---
+
+## Incident Management
+
+### Incident Severity Definitions
+  P1 — CRITICAL:
+    Criteria:  [Configure — e.g. service unavailable; >50% users affected;
+                revenue impact >£X; regulatory notification likely]
+    Response:  Immediate; senior management within [N] minutes
+    Post-mortem: Mandatory; within [N] business days
+
+  P2 — MAJOR:
+    Criteria:  [Configure — e.g. significant degradation; >20% affected]
+    Response:  Within [N] minutes; team lead engaged
+    Post-mortem: Mandatory; within [N] business days
+
+  P3 — MINOR:
+    Criteria:  [Configure — e.g. limited impact; workaround available]
+    Response:  Within [N] hours
+    Post-mortem: Optional; log entry required
+
+### On-Call Escalation Path
+  Primary on-call:    [Role] | [Contact method]
+  Secondary on-call:  [Role] | [Contact method]
+  Management escalation: COO — [mobile for P1 only]
+
+### Incident Log
+  Location:   [ITSM tool / document store]
+  Retention:  [Period — typically 3–5 years]
+
+---
+# End of Operations Configuration Template
+# Save as: ops.local.md (remove ".template" from filename)
+# Test: run /vendor with your top 5 vendors, /compliance with your
+# primary regulatory framework, and /risk with your highest-priority risk.
+# Expected: outputs should reference your actual thresholds, contacts,
+# and regulatory framework — not generic examples.

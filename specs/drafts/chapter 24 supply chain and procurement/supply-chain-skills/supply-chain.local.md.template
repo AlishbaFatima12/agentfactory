@@ -1,0 +1,219 @@
+# [Organisation Name] Supply Chain & Procurement Configuration
+# Version: 1.0 | Last Updated: [Date] | Owner: [CPO / Head of Procurement]
+#
+# INSTRUCTIONS: Copy this file, remove ".template" from the filename,
+# fill in your organisation's details, and save as supply-chain.local.md
+# in your Cowork skills root directory.
+#
+# Every vendor assessment, invoice reconciliation, risk brief,
+# logistics analysis, and spend report will use this configuration.
+# The more accurate and specific it is, the better every output will be.
+#
+# Start with Exercise 1 in Chapter 24 to populate this file correctly.
+
+---
+
+## Organisation Profile
+
+Company name:            [Your company]
+Primary sector:          [Manufacturing / Distribution / Services / Retail / Other]
+Annual procurement spend:£/$ [X] (indirect) | £/$ [X] (direct materials)
+ERP system:              [SAP / Oracle / Dynamics / NetSuite / Other]
+AP system:               [Same as ERP / Separate: specify]
+TMS / logistics system:  [System name or "manual/spreadsheet"]
+Procurement team size:   [N] people | CPO: [Name] | [email]
+Finance contact:         [Finance Director or AP Manager name] | [email]
+
+---
+
+## Vendor Classification Register
+
+### Strategic Vendors (Tier 1)
+# High spend + high dependency. Review: quarterly.
+
+| Vendor Name | Category | Annual Spend | Dependency | Category Manager |
+|---|---|---|---|---|
+| [Vendor] | [Category] | £[X] | Sole-source / Preferred | [Name] |
+| [Vendor] | [Category] | £[X] | Dual-source | [Name] |
+
+### Tactical Vendors (Tier 2)
+# Significant spend. Multiple alternatives. Review: bi-annual.
+
+| Vendor Name | Category | Annual Spend | Alternatives | Category Manager |
+|---|---|---|---|---|
+| [Vendor] | [Category] | £[X] | [N] alternatives | [Name] |
+
+### Commodity Vendors (Tier 3)
+# Standard goods/services. Easy to switch. Review: annual.
+# [List or reference separate register for commodity vendors]
+
+### Bottleneck Vendors (Tier 4)
+# LOW spend but HIGH dependency. No easy alternative. Review: QUARTERLY.
+# ⚠️ These are your hidden single points of failure — do not neglect them.
+
+| Vendor Name | Category | Annual Spend | Why Critical | Backup Status | Category Manager |
+|---|---|---|---|---|---|
+| [Vendor] | [Category] | £[X] | [Sole-source; critical spec] | None / In progress | [Name] |
+
+---
+
+## Invoice Reconciliation Configuration
+
+### Materiality Threshold
+Invoices below this value: two-way match acceptable (no GR required)
+Threshold: £[X] (default recommendation: £500)
+
+### Tolerance Rules by Category
+
+| Category | Price Tolerance | Quantity Tolerance | Notes |
+|---|---|---|---|
+| Direct materials | ±[X]% | ±0% | Zero quantity tolerance |
+| Indirect / MRO | ±[X]% | ±[X]% | |
+| Services | ±0% | N/A | Must match PO exactly |
+| Freight / logistics | ±[X]% | N/A | Fuel surcharge variability |
+| Utilities | ±[X]% | N/A | Tariff variability |
+| [Other category] | ±[X]% | ±[X]% | |
+
+### Auto-Approve Rules
+Auto-approve if: all lines matched within tolerance AND total < £[X]
+Auto-approve if: price variance within tolerance AND GR confirmed
+
+### Escalation Thresholds
+Price variance requiring Category Manager approval: > [X]% or > £[X]
+Price variance requiring CPO approval:             > [X]% or > £[X]
+Total disputed amount requiring Finance Director:  > £[X]
+
+### Auto-Reject Rules (no exceptions)
+- Duplicate invoice (same vendor, same amount, within [X] days)
+- Invoice > [X] days old (late submission — default: 90 days)
+- Vendor not on approved vendor list and value > £[X]
+- Bank detail change detected (→ fraud escalation; never auto-reject alone)
+
+### Exception Pattern Threshold
+Same exception type from same vendor:  > [X] times in 30 days = systematic issue
+Price variance on same item:           > [X] consecutive invoices = CAR required
+
+### Payment Terms (default by vendor tier)
+Strategic (Tier 1):  Net [X] days (default: 45)
+Tactical (Tier 2):   Net [X] days (default: 30)
+Commodity (Tier 3):  Net [X] days (default: 30)
+Early payment:       [X]% discount for payment within [X] days (if offered)
+
+---
+
+## Vendor Risk Configuration
+
+### Risk Thresholds — Strategic (Tier 1) Vendors
+
+Financial:
+  Credit rating downgrade:         IMMEDIATE CPO escalation
+  Restructuring news:              IMMEDIATE CPO brief within 48 hours
+  Revenue decline > [X]%:          Flag for category manager review
+  Accounts overdue filing:         Flag for category manager; request information
+
+Operational:
+  OTD < [X]%:    Corrective Action Request within 5 business days
+  OTD < [X]%:    Contingency plan activated (default thresholds: <90% CAR; <80% contingency)
+  Quality > [X]%: CAR within 5 days
+  Quality > [X]%: Immediate supply hold; root cause required (default: >2% CAR; >5% hold)
+
+### Risk Thresholds — Bottleneck (Tier 4) Vendors
+
+Same operational thresholds as Tier 1 PLUS:
+  Any negative financial signal:   Immediate brief — no alternative exists
+  Any Tier 2 supply chain signal:  Immediate brief — no buffer
+
+### Escalation Contacts
+
+CPO:                [Name] | [email] | [mobile for urgent alerts]
+Finance Director:   [Name] | [email] | [mobile for fraud alerts]
+Operations Manager: [Name] | [email]
+Legal:              [Name/firm] | [email] | [for contract disputes]
+Data Protection:    [DPO name] | [email] | [for GDPR/data issues]
+
+---
+
+## Logistics Configuration
+
+### Approved Carrier List
+
+| Carrier | SLA (OTD%) | Contracted Rate | Lanes | Contract Expiry |
+|---|---|---|---|---|
+| [Carrier A] | [X]% | £[X]/kg | [Lanes] | [Date] |
+| [Carrier B] | [X]% | £[X]/kg | [Lanes] | [Date] |
+| Own fleet   | [X]% | N/A | [Lanes] | N/A |
+
+### Performance Thresholds
+OTD below threshold (1 week): Flag to Logistics Manager
+OTD below threshold (2 consecutive weeks): Formal performance review
+Damage rate > [X]%: Immediate claim + performance review
+Rate creep > [X]% above contracted: Audit + dispute
+
+### Expedited Freight Threshold
+Alert if expedited freight > [X]% of weekly shipments (default: 10%)
+
+### Fuel Index Monitored
+Index name: [Specify relevant index for your carrier market]
+Renegotiation trigger: index moves > [X]% since last rate agreement
+
+---
+
+## Spend Analytics Configuration
+
+### Category Management Structure
+[List your top spend categories with category manager ownership]
+
+| Category | Annual Spend | Category Manager | Contract Status | Renewal Date |
+|---|---|---|---|---|
+| [Category] | £[X] | [Name] | [Active/Expiring] | [Date] |
+
+### Commodity Indices to Monitor
+[List the commodity price indices relevant to your spend categories]
+
+| Category | Index Name | Source | Renegotiation Trigger |
+|---|---|---|---|
+| [e.g. Packaging] | FOEX PIX corrugated | foex.fi | >8% movement |
+| [e.g. Steel] | LME steel | lme.com | >8% movement |
+| [e.g. Fuel/freight] | Brent crude | eia.gov | >5% movement |
+
+### Savings Target
+Annual savings target: £[X] (from procurement initiatives)
+YTD captured: [Updated monthly]
+
+---
+
+## Contract Register
+
+### Active Contracts
+
+| Vendor | Description | Start | End | Notice Period | Notice Deadline | Auto-renew? | Owner |
+|---|---|---|---|---|---|---|---|
+| [Vendor] | [Description] | [Date] | [Date] | [X days] | [Calculated date] | Y/N | [Name] |
+
+### Certification Register
+
+| Vendor | Certification | Expiry Date | Renewal Status | Owner |
+|---|---|---|---|---|
+| [Vendor] | ISO 9001 | [Date] | [Current/Pending] | [Name] |
+| [Vendor] | ISO 14001 | [Date] | [Current/Pending] | [Name] |
+
+---
+
+## Tier 2 Supplier Mapping
+
+### Strategic Vendor Tier 2 Maps
+# For each Strategic (Tier 1) vendor, document their critical sub-suppliers.
+
+Vendor: [Tier 1 Strategic Vendor Name]
+  Critical Tier 2 suppliers:
+  - [Tier 2 name] | [what they supply to Tier 1] | [country] | [risk assessment]
+  - [Tier 2 name] | [what they supply to Tier 1] | [country] | [risk assessment]
+  Single-source at Tier 2: [Yes/No — specify which if yes]
+  Geographic concentration: [All in same country/region? Y/N]
+  Last Tier 2 review: [Date]
+
+[Repeat for each Tier 1 Strategic vendor]
+
+---
+# End of Configuration Template
+# Save as: supply-chain.local.md (remove ".template" from filename)
