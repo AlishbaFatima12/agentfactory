@@ -79,17 +79,34 @@ teaching_guide:
 
 ### What You Do
 
-Use AI to generate a complete analysis of a topic you know well — your own field, your city, your industry. Because you have domain expertise, you can catch errors the AI makes that a non-expert would miss. Annotate the AI output line by line using the Error Taxonomy. Then pair with a student from a different domain. Exchange your annotated AI outputs. Attempt to verify your partner's annotations — can you confirm their error catches are real? Discuss in a live 10-minute session.
+**Step 1 — Choose your expert domain.** Pick a topic you genuinely know well — your profession, your academic field, your city, a hobby you've spent years on. The key is that you can spot errors a non-expert would miss. Examples: accounting standards, local transit systems, a specific programming language, your country's political history.
+
+**Step 2 — Generate an AI analysis.** Ask AI to write a detailed analysis of a specific question in your domain. Be specific enough that the AI will need to make claims you can verify — e.g., "Analyze the public transit challenges in Karachi" not "Tell me about cities."
+
+**Step 3 — Annotate line by line using the Error Taxonomy.** Go through the AI response sentence by sentence. For each claim, label it using the Error Taxonomy from Exercise 1. Pay special attention to errors that _sound correct_ but you know are wrong because of your expertise.
+
+**Step 4 — Separate your findings.** Create two lists:
+
+- **Expert-visible errors:** Errors you caught _because_ of your domain knowledge that a non-expert would accept as true
+- **Suspected errors:** Claims that feel wrong but you cannot confirm without further research
+
+**Step 5 — Cross-domain exchange.** Pair with a student from a different domain. Exchange your annotated outputs. Try to verify your partner's error annotations — can you confirm their catches are real, or do you lack the expertise to judge? Discuss in a live 10-minute session.
+
+**Step 6 — Write your reflection (200 words).** Compare your error detection experience in your domain vs. your partner's domain. What was different? What does this tell you about using AI outside your expertise?
 
 :::tip Solo Learner Alternative
-If you cannot pair with a domain partner, choose two domains: one you know well and one you know nothing about. Generate AI analyses for both. Annotate errors in your expert domain (where you catch things AI gets wrong) and then attempt to annotate errors in the unfamiliar domain. Compare your detection rate. The gap between the two reveals exactly how much domain expertise matters for error detection.
+Skip Step 5. Instead, choose a second domain you know _nothing_ about. Generate an AI analysis for that domain too, and try to annotate errors. Compare your detection rate between the two domains. The gap reveals exactly how much domain expertise matters.
 :::
 
 ---
 
 :::info Your Deliverable
-The AI-generated analysis of your domain with line-by-line Error Taxonomy annotations. A separate document listing: errors you caught because of your domain expertise that a non-expert would miss, and errors you suspect exist but cannot confirm without more research. Your partner's annotated output with your verification notes. A reflection (200 words) on the difference between detecting errors in your domain vs. your partner's domain.
-:::
+
+1. The AI-generated analysis of your domain with line-by-line Error Taxonomy annotations
+2. Your two lists: expert-visible errors + suspected errors
+3. Your partner's annotated output with your verification notes (or your second-domain annotations for solo learners)
+4. Your 200-word reflection on expert vs. non-expert error detection
+   :::
 
 <AICheck id="build-it-break-it" xp={50}>
 

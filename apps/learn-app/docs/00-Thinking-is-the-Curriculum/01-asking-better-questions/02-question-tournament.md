@@ -77,19 +77,32 @@ teaching_guide:
 
 **Layers Used:** Layer 3 (Live Defence), Layer 5 (Divergence Test)
 
+Use the same scenario you chose in [Exercise 1 (The Prediction Lock)](./01-prediction-lock.md).
+
 ### What You Do
 
-Working in pairs, each student generates 15 questions about the same scenario without AI. Swap question lists with your partner. Rank their 15 questions from most to least diagnostic and write a one-sentence justification for each ranking. Then take the top 5 from each list (10 total), feed them to both Claude and ChatGPT, and compare: which questions actually produced useful, divergent, actionable answers, and which produced generic filler?
+**Step 1 — Generate your questions (no AI).** Write 15 diagnostic questions about your scenario. Work independently, without any AI tool.
+
+**Step 2 — Swap and rank.** Exchange question lists with your partner. Rank their 15 questions from most to least diagnostic. Write a one-sentence justification for each ranking explaining why you placed it where you did.
+
+**Step 3 — Select the top 10.** Take the top 5 questions from your list and the top 5 from your partner's list — 10 questions total.
+
+**Step 4 — Test against AI.** Feed each of the 10 questions to both Claude and ChatGPT separately. Note a brief summary of each response.
+
+**Step 5 — Build the comparison table.** For each question, record the responses and judge whether they were genuinely useful or generic filler (see template below).
 
 :::tip Solo Learner Alternative
-Generate your 15 questions, then prompt AI: "You are my study partner. Generate 15 diagnostic questions for this scenario that are different from mine. Do not see my questions first." Once AI generates its 15, rank AI's questions and have AI rank yours. Then proceed with the comparison table. The dynamic is different — AI is more consistent than a human partner — but the skill of evaluating someone else's questions still develops.
+Generate your 15 questions, then prompt AI: "You are my study partner. Generate 15 diagnostic questions for this scenario that are different from mine. Do not see my questions first." Once AI generates its 15, rank AI's questions and have AI rank yours. Then proceed with Steps 3-5 using the combined lists.
 :::
 
 ---
 
 :::info Your Deliverable
-Your 15 original questions (written without AI). Your partner's 15 questions with your ranking and justification for each. A comparison table showing the top 10 questions, the AI responses from both tools, and a column marking each as "useful/actionable" or "generic/filler" with explanation.
-:::
+
+1. Your 15 original questions (written without AI)
+2. Your partner's 15 questions with your ranking and one-sentence justification for each
+3. A comparison table (see template below) showing the top 10 questions, AI responses from both tools, and your verdict on each
+   :::
 
 <AICheck id="question-tournament" xp={50}>
 
@@ -146,6 +159,31 @@ Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
 
 </AICheck>
+
+---
+
+<details>
+<summary>Comparison Table Template (click to expand)</summary>
+
+**COMPARISON TABLE**
+
+| #   | Question | Whose List? | Claude Response (summary) | ChatGPT Response (summary) | Verdict: Useful or Filler? | Why? |
+| --- | -------- | ----------- | ------------------------- | -------------------------- | -------------------------- | ---- |
+| 1   |          | Mine        |                           |                            |                            |      |
+| 2   |          | Mine        |                           |                            |                            |      |
+| 3   |          | Mine        |                           |                            |                            |      |
+| 4   |          | Mine        |                           |                            |                            |      |
+| 5   |          | Mine        |                           |                            |                            |      |
+| 6   |          | Partner's   |                           |                            |                            |      |
+| 7   |          | Partner's   |                           |                            |                            |      |
+| 8   |          | Partner's   |                           |                            |                            |      |
+| 9   |          | Partner's   |                           |                            |                            |      |
+| 10  |          | Partner's   |                           |                            |                            |      |
+
+**Useful/Actionable** = the AI gave a specific, non-obvious answer that narrows down the problem.
+**Generic/Filler** = the AI gave a broad, surface-level answer that any question would produce.
+
+</details>
 
 ---
 

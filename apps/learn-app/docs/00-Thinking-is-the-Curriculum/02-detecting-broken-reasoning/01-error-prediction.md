@@ -111,7 +111,19 @@ You used the **Prediction Lock** format in [Chapter 1, Exercise 1](../01-asking-
 
 ### What You Do
 
-You receive a complex question. Before prompting any AI, write down: (a) what you think the correct analysis involves (key factors, tradeoffs, data needed), (b) where you predict AI will be strong in its analysis, and (c) where you predict AI will make errors or miss important context. Submit this prediction. Then prompt both Claude and ChatGPT with the identical question. Annotate each response line by line using the Error Taxonomy: factual error, logical gap, false confidence, missing context, correlation-causation confusion, outdated information, fabricated citation, cultural blind spot.
+**Step 1 — Write your sealed prediction (no AI).** Before prompting any AI, write down:
+
+- What you think the correct analysis involves (key factors, tradeoffs, data needed)
+- Where you predict AI will be **strong** in its analysis
+- Where you predict AI will **make errors** or miss important context — name the specific Error Taxonomy categories you expect
+
+This is your prediction document. Write it before moving to Step 2.
+
+**Step 2 — Get two AI responses.** Choose a scenario below, then prompt both Claude and ChatGPT with the identical question. Save both full responses.
+
+**Step 3 — Annotate line by line.** Go through each AI response sentence by sentence. For every claim, label it using the Error Taxonomy above (factual error, logical gap, false confidence, etc.). If a sentence is correct, mark it as "no error detected."
+
+**Step 4 — Build your comparison table.** Compare your predictions from Step 1 against the actual errors you found in Step 3 (see template below). Count how many of each error type you found across both tools.
 
 ### Choose Your Scenario
 
@@ -135,8 +147,61 @@ Choose one.
 ---
 
 :::info Your Deliverable
-Your sealed prediction document (before AI) listing expected AI strengths and weaknesses. Two annotated AI responses with every sentence labeled using the Error Taxonomy categories. A comparison table showing: your predicted errors vs. actual errors found, your predicted strengths vs. actual strengths. A count of each error type found across both tools.
-:::
+
+1. Your sealed prediction document (written before AI) listing expected strengths and error types
+2. Two annotated AI responses with every sentence labeled using the Error Taxonomy
+3. A comparison table: predicted errors vs. actual errors found (see template below)
+4. A count of each error type found across both tools
+   :::
+
+<details>
+<summary>Prediction Document Template (click to expand)</summary>
+
+**PREDICTION DOCUMENT** (write this BEFORE prompting AI)
+
+**Scenario chosen:** \_\_\_
+
+**What the correct analysis should cover:**
+
+- Key factor 1: \_\_\_
+- Key factor 2: \_\_\_
+- Key factor 3: \_\_\_
+
+**Where I predict AI will be strong:**
+
+- ***
+
+**Where I predict AI will make errors:**
+
+| Predicted Error Type (from taxonomy) | Why I expect this error                                 |
+| ------------------------------------ | ------------------------------------------------------- |
+| e.g. Missing context                 | AI won't know about recent policy changes in [country]  |
+| e.g. Cultural blind spot             | AI will assume Western/US context for this global issue |
+|                                      |                                                         |
+
+</details>
+
+<details>
+<summary>Prediction vs. Reality Comparison Table (click to expand)</summary>
+
+| Predicted Error | Did It Happen? | Actual Error Found (if different) | Error Category |
+| --------------- | -------------- | --------------------------------- | -------------- |
+|                 | Yes / No       |                                   |                |
+
+**Error Count Summary:**
+
+| Error Category                  | Claude | ChatGPT | Total |
+| ------------------------------- | ------ | ------- | ----- |
+| Factual error                   |        |         |       |
+| Logical gap                     |        |         |       |
+| False confidence                |        |         |       |
+| Missing context                 |        |         |       |
+| Correlation-causation confusion |        |         |       |
+| Outdated information            |        |         |       |
+| Fabricated citation             |        |         |       |
+| Cultural blind spot             |        |         |       |
+
+</details>
 
 <AICheck id="error-prediction" xp={50}>
 
