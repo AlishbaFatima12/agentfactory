@@ -1,0 +1,79 @@
+deck:
+  id: "ch40-08-business-model-canvas"
+  title: "Business Model Canvas"
+  description: "Key concepts and review questions covering business model canvas."
+  tags: ["business", "model", "canvas", "chapter-40"]
+  version: 1
+
+cards:
+  - id: "ch40-08-business-model-canvas-001"
+    front: "What are the nine building blocks of the Business Model Canvas?"
+    back: "Customer Segments, Value Propositions, Channels, Customer Relationships, Revenue Streams, Key Resources, Key Activities, Key Partnerships, and Cost Structure."
+    tags: ["nine-building", "building-blocks", "business"]
+    difficulty: "basic"
+
+  - id: "ch40-08-business-model-canvas-002"
+    front: "What are the three evidence quality ratings used in a Business Model Canvas?"
+    back: "VALIDATED (customers have paid or adopted), ANECDOTAL (a few customers suggest this but sample is small), and ASSUMED (you believe it but have not tested it)."
+    tags: ["evidence-quality", "quality-ratings", "business"]
+    difficulty: "basic"
+
+  - id: "ch40-08-business-model-canvas-003"
+    front: "Why is an ASSUMED block riskier than an ANECDOTAL block?"
+    back: "An ASSUMED block has never been tested at all — there is no customer signal, positive or negative. An ANECDOTAL block has at least some real-world evidence, even if the sample size is too small to rely on."
+    tags: ["assumed-block", "block-riskier", "anecdotal"]
+    difficulty: "intermediate"
+
+  - id: "ch40-08-business-model-canvas-004"
+    front: "What does the Canvas Health Summary tell you?"
+    back: "Which blocks are validated (low risk), partially validated (medium risk), or hypothetical (high risk). It converts nine isolated blocks into a prioritised risk register showing where execution risk is concentrated."
+    tags: ["canvas-health", "health-summary"]
+    difficulty: "basic"
+
+  - id: "ch40-08-business-model-canvas-005"
+    front: "What is the quality standard for a strong Value Proposition?"
+    back: "A specific outcome for a specific customer (not a feature list), a differentiated claim (why this, not the alternative), evidence it is valued (customer said it or paid for it), and a reason the customer cannot easily get it elsewhere."
+    tags: ["quality-standard", "strong-value", "proposition"]
+    difficulty: "basic"
+
+  - id: "ch40-08-business-model-canvas-006"
+    front: "Why should you stress-test canvas blocks that are HYPOTHETICAL, not VALIDATED ones?"
+    back: "Validated blocks already have mitigation plans because you have lived through testing them. Hypothetical blocks are the assumptions you have never challenged — they carry the most unrecognised risk."
+    tags: ["stress-test-canvas", "canvas-blocks", "stress-test"]
+    difficulty: "intermediate"
+
+  - id: "ch40-08-business-model-canvas-007"
+    front: "What is the difference between a Business Model Canvas and a business plan?"
+    back: "A canvas is a living hypothesis map — every block is a current belief rated for confidence. A business plan is a static document. The canvas should be versioned and updated after every significant learning event."
+    tags: ["business-model", "model-canvas", "difference"]
+    difficulty: "intermediate"
+
+  - id: "ch40-08-business-model-canvas-008"
+    front: "Name three structural variations to explore when generating alternative business model configurations."
+    back: "Any three of: subscription vs. usage-based vs. transaction fee; selling to enterprise vs. individual professionals; direct vs. marketplace vs. platform; free + premium vs. paid only; product-led growth vs. sales-led growth; build vs. partner vs. white-label."
+    tags: ["structural-variations", "generating-alternative", "explore"]
+    difficulty: "intermediate"
+
+  - id: "ch40-08-business-model-canvas-009"
+    front: "Why should you never leave a canvas block empty?"
+    back: "An empty block is a hidden risk. An ASSUMED block at least names the assumption, making it visible and schedulable for testing. Leaving a block empty hides the gap from you and anyone else reviewing the canvas."
+    tags: ["never-leave", "canvas-block", "empty"]
+    difficulty: "advanced"
+
+  - id: "ch40-08-business-model-canvas-010"
+    front: "What does the Cost Structure block feed into in your broader financial analysis?"
+    back: "The Cost Structure block feeds directly into unit economics in Lesson 9 — specifically the monthly fixed cost total and the unit cost per customer, which together determine the breakeven customer count."
+    tags: ["cost-structure", "structure-block", "feed"]
+    difficulty: "intermediate"
+
+  - id: "ch40-08-business-model-canvas-011"
+    front: "What does VALIDATED evidence quality require?"
+    back: "Customers must have paid, adopted, or demonstrated the belief in their behaviour — not just said they agree with it. A customer saying 'that sounds useful' is ANECDOTAL, not VALIDATED."
+    tags: ["validated-evidence", "evidence-quality", "require"]
+    difficulty: "basic"
+
+  - id: "ch40-08-business-model-canvas-012"
+    front: "Why should a canvas be versioned (e.g. Version 1.2, post-MVP)?"
+    back: "Versioning signals that the canvas is a living document, not a final answer. It records what was believed at a specific stage (post-MVP, post-pivot, post-fundraise), making it possible to track how the business model evolved and where assumptions changed."
+    tags: ["canvas", "versioned", "version"]
+    difficulty: "advanced"

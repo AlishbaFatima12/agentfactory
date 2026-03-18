@@ -121,10 +121,10 @@ Which of your approved carriers is performing best right now? The carrier scorec
 
 | Metric                          | What It Measures                                                 | Threshold                        |
 | ------------------------------- | ---------------------------------------------------------------- | -------------------------------- |
-| **OTD rate**                    | % of shipments delivered on or before promised date              | OTD ≥ 95%: excellent; <90%: FLAG |
-| **Damage rate**                 | % of shipments with reported damage or claim                     | <0.2%: excellent; >0.5%: FLAG    |
+| **OTD rate**                    | % of shipments delivered on or before promised date              | OTD ≥ 95%: excellent; &lt;90%: FLAG |
+| **Damage rate**                 | % of shipments with reported damage or claim                     | &lt;0.2%: excellent; >0.5%: FLAG    |
 | **Cost per kg**                 | Normalised freight cost (not per shipment — normalises for size) | Benchmark against market rate    |
-| **Track-and-trace reliability** | % of shipments with real-time tracking events                    | ≥ 98%: excellent; <95%: FLAG     |
+| **Track-and-trace reliability** | % of shipments with real-time tracking events                    | ≥ 98%: excellent; &lt;95%: FLAG     |
 
 Carrier performance is not static. A carrier performing at 94% OTD at contract signing can deteriorate to 83% twelve months later as they over-expand their network or face operational problems. The scorecard catches this.
 

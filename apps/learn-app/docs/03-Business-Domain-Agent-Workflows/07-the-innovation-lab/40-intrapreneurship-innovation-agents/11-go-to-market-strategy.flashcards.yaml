@@ -1,0 +1,79 @@
+deck:
+  id: "ch40-11-go-to-market-strategy"
+  title: "Go To Market Strategy"
+  description: "Key concepts and review questions covering go to market strategy."
+  tags: ["market", "strategy", "chapter-40"]
+  version: 1
+
+cards:
+  - id: "ch40-11-go-to-market-strategy-001"
+    front: "What makes an ICP different from a demographic target description?"
+    back: "An ICP includes a buying trigger — the specific event that makes the prospect ready to buy RIGHT NOW. A demographic description ('CFOs at manufacturing companies') tells you who might buy someday. A trigger ('CFO who just had an audit finding') tells you who is ready to buy this week."
+    tags: ["demographic-target", "target-description", "makes"]
+    difficulty: "intermediate"
+
+  - id: "ch40-11-go-to-market-strategy-002"
+    front: "What are the five components of a complete ICP?"
+    back: "Company profile (sector, size, geography, technology, structure), Person profile (role, seniority, priorities, buying process), Buying trigger (specific event creating urgency), Signals (how to identify them in the wild), and NOT a fit (explicit exclusions with rationale)."
+    tags: ["complete-icp", "components"]
+    difficulty: "intermediate"
+
+  - id: "ch40-11-go-to-market-strategy-003"
+    front: "What is the positioning statement format?"
+    back: "For: [specific person] / Who: [problem from discovery language] / Our product: [category] / That: [primary outcome] / Unlike: [primary alternative] / We: [specific differentiating claim]."
+    tags: ["positioning-statement", "statement-format"]
+    difficulty: "basic"
+
+  - id: "ch40-11-go-to-market-strategy-004"
+    front: "What three criteria should be used to rank channels?"
+    back: "CAC efficiency (cost per acquired customer), Scalability (can it grow without the founder's time?), and Speed (how quickly does it produce results?)."
+    tags: ["rank-channels", "criteria"]
+    difficulty: "basic"
+
+  - id: "ch40-11-go-to-market-strategy-005"
+    front: "What is the rule for launching multiple channels simultaneously?"
+    back: "Start with one channel. Add the second only when the first is producing measurable results. Launching multiple channels simultaneously means none gets enough focus to optimise."
+    tags: ["launching-multiple", "multiple-channels", "rule"]
+    difficulty: "basic"
+
+  - id: "ch40-11-go-to-market-strategy-006"
+    front: "Why is founder-led outreach recommended as the first GTM channel?"
+    back: "Not because it is cheapest, but because it teaches ICP refinement — you learn who actually buys and why. It also builds the sales playbook that future hires will use. You cannot hand a playbook to an SDR if you have never run the process yourself."
+    tags: ["founder-led-outreach", "outreach-recommended", "founder-led"]
+    difficulty: "intermediate"
+
+  - id: "ch40-11-go-to-market-strategy-007"
+    front: "What is value-based pricing and what is the <10% rule?"
+    back: "Value-based pricing sets price based on the value delivered to the customer, not cost or competitor pricing. The <10% rule: your price should be less than 10% of the annual value you deliver. If you save a customer $50,000/year, you can charge up to $5,000/year and still have a strong ROI story."
+    tags: ["value-based-pricing", "value-based", "rule"]
+    difficulty: "advanced"
+
+  - id: "ch40-11-go-to-market-strategy-008"
+    front: "Why are paid trials preferred over free trials for B2B SaaS?"
+    back: "Even a nominal payment (50% of list price) filters for customers who have a problem urgent enough to pay to solve. Free trials attract browsers. Customers who pay from day one adopt more consistently and churn less than customers who entered through a free trial."
+    tags: ["paid-trials", "trials-preferred", "free"]
+    difficulty: "intermediate"
+
+  - id: "ch40-11-go-to-market-strategy-009"
+    front: "What is the discounting policy rule and why?"
+    back: "Annual prepay only (1–2 months free for annual commitment); no ad hoc discounting. Discount-seeking customers churn faster and train the market to wait for deals. Discounting before signing is a red flag that the customer does not have a trigger-level problem."
+    tags: ["discounting-policy", "policy-rule"]
+    difficulty: "intermediate"
+
+  - id: "ch40-11-go-to-market-strategy-010"
+    front: "What should happen at the Day 30 gate in a 90-day GTM calendar?"
+    back: "Assess a specific measurable metric (e.g. response rate on outreach, demos booked). If the metric is above threshold: continue and expand. If below: change the message, ICP targeting, or channel — do NOT add a second channel until the first one is working."
+    tags: ["90-day-gtm", "gtm-calendar", "happen"]
+    difficulty: "intermediate"
+
+  - id: "ch40-11-go-to-market-strategy-011"
+    front: "What is the Day 60 gate testing for?"
+    back: "Whether the venture is on track for the Day 90 customer target. If yes, activate the second channel. If no, investigate the bottleneck — is it leads (ICP targeting), conversions (message or demo), or trials (product)? Do not proceed to channel expansion while the primary channel has unresolved failure modes."
+    tags: ["gate-testing"]
+    difficulty: "advanced"
+
+  - id: "ch40-11-go-to-market-strategy-012"
+    front: "What is the seven-step sales process for a B2B SaaS?"
+    back: "1. Identify (prospect list), 2. Qualify (trigger signals), 3. Outreach (personalised message), 4. Demo (show three key things), 5. Trial offer (paid; LOI required), 6. Onboarding (daily check-in week 1; adoption metric), 7. Conversion (close at annual contract when adoption is confirmed)."
+    tags: ["seven-step-sales", "sales-process", "seven-step"]
+    difficulty: "intermediate"

@@ -1,0 +1,85 @@
+deck:
+  id: "ch40-03-customer-discovery-problem-statement"
+  title: "Customer Discovery Problem Statement"
+  description: "Key concepts and review questions covering customer discovery problem statement."
+  tags: ["customer", "discovery", "problem", "statement", "chapter-40"]
+  version: 1
+
+cards:
+  - id: "ch40-03-customer-discovery-problem-statement-001"
+    front: "What are the three categories in a Jobs-to-be-Done map?"
+    back: "Functional jobs (what the customer is literally trying to do), emotional jobs (how the customer wants to feel), and related jobs (adjacent tasks that get pulled into the primary job)."
+    tags: ["jobs-to-be-done-map", "categories", "jobs-to-be-done"]
+    difficulty: "basic"
+
+  - id: "ch40-03-customer-discovery-problem-statement-002"
+    front: "Why does discovery come before ideation in the DLA Stack?"
+    back: "You cannot generate good solutions without understanding the problem. Skipping discovery means building on assumptions rather than evidence — producing well-executed solutions to the wrong problem."
+    tags: ["dla-stack", "discovery", "ideation"]
+    difficulty: "intermediate"
+
+  - id: "ch40-03-customer-discovery-problem-statement-003"
+    front: "How is a pain ranking score calculated in customer discovery synthesis?"
+    back: "Frequency times severity. A pain mentioned by 7/10 interviewees with HIGH severity (7/10) scores 49, while a pain mentioned by 9/10 with LOW severity (2/10) scores only 18."
+    tags: ["pain-ranking", "ranking-score", "calculated"]
+    difficulty: "intermediate"
+
+  - id: "ch40-03-customer-discovery-problem-statement-004"
+    front: "What makes an insight statement 'strong' versus 'weak'?"
+    back: "A strong insight is non-obvious (you would not have guessed it before discovery), specific (names the segment and context), actionable (implies a direction), and evidence-based (references how many interviews support it). A weak insight is something anyone could have assumed without interviews."
+    tags: ["insight-statement", "statement-strong", "makes"]
+    difficulty: "basic"
+
+  - id: "ch40-03-customer-discovery-problem-statement-005"
+    front: "What does the 'How Might We' (HMW) format achieve that a feature request does not?"
+    back: "HMW frames the problem to be solved without prescribing the solution. It is specific enough to focus ideation but open enough to allow multiple solution approaches. A feature request jumps to a specific implementation."
+    tags: ["hmw-format", "format-achieve", "feature"]
+    difficulty: "intermediate"
+
+  - id: "ch40-03-customer-discovery-problem-statement-006"
+    front: "What are the five lenses for generating HMW variants?"
+    back: "Solution (what the product does), Outcome (what the customer achieves), Emotional (how the customer feels), Constraint (the workaround they already use), and Systemic (the root cause, not the symptom)."
+    tags: ["generating-hmw", "hmw-variants", "lenses"]
+    difficulty: "basic"
+
+  - id: "ch40-03-customer-discovery-problem-statement-007"
+    front: "What is the minimum number of interviews recommended for reliable pattern detection in customer discovery?"
+    back: "5 interviews is the minimum for initial pattern detection. 8-12 interviews is the recommended range for initial discovery. Synthesis from fewer than 5 should be flagged as having an insufficient sample."
+    tags: ["minimum-number", "interviews-recommended", "reliable"]
+    difficulty: "intermediate"
+
+  - id: "ch40-03-customer-discovery-problem-statement-008"
+    front: "Why should you never mention your product or solution during a problem discovery interview?"
+    back: "Problem discovery and solution validation are separate phases. Mentioning your solution introduces confirmation bias — interviewees will respond to your idea rather than describing their actual experience. The goal is to understand their world, not to pitch."
+    tags: ["never-mention", "problem-discovery", "product"]
+    difficulty: "intermediate"
+
+  - id: "ch40-03-customer-discovery-problem-statement-009"
+    front: "What is the difference between a customer acknowledging pain and validation of that pain?"
+    back: "Acknowledgement means the customer agrees the problem exists. Validation requires evidence of willingness to act — willingness to pay, change behaviour, or invest time. 'Yes, that is annoying' is acknowledgement. 'I would pay $500/month for that' is closer to validation."
+    tags: ["customer-acknowledging", "acknowledging-pain", "difference"]
+    difficulty: "intermediate"
+
+  - id: "ch40-03-customer-discovery-problem-statement-010"
+    front: "What does the /discovery skill produce when given raw interview notes?"
+    back: "A structured synthesis containing: Jobs-to-be-Done map (functional, emotional, related jobs), pain ranking matrix (frequency times severity), insight statements, vivid customer quotes, knowledge gaps, and How Might We problem statements."
+    tags: ["/discovery-skill", "skill-produce", "discovery"]
+    difficulty: "basic"
+
+  - id: "ch40-03-customer-discovery-problem-statement-011"
+    front: "Why are emotional jobs important for product design even though they are not functional requirements?"
+    back: "Products that solve functional jobs but ignore emotional jobs fail at adoption. A CFO who needs audit confidence will not be satisfied by a tool that merely processes invoices faster. Emotional jobs drive the buying decision and long-term retention."
+    tags: ["emotional-jobs", "jobs-important", "product"]
+    difficulty: "advanced"
+
+  - id: "ch40-03-customer-discovery-problem-statement-012"
+    front: "What is the most important rule for customer discovery interview questions?"
+    back: "Never ask leading or closed yes/no questions. Ask open-ended questions about what the customer does and experiences ('Walk me through how...', 'Tell me about the last time...'). Listen 80%, talk 20%."
+    tags: ["important-rule", "customer-discovery", "interview"]
+    difficulty: "basic"
+
+  - id: "ch40-03-customer-discovery-problem-statement-013"
+    front: "In the context of intrapreneurship, who are the 'customers' in customer discovery?"
+    back: "Internal users — colleagues in another department, field teams, or existing external customers. The discovery process is identical, but access is easier (they are down the hall) while bias risk is different (they may say what management wants to hear rather than what they actually experience)."
+    tags: ["customer-discovery", "context", "intrapreneurship"]
+    difficulty: "advanced"

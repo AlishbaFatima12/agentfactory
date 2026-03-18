@@ -1,0 +1,67 @@
+deck:
+  id: "ch37-15-quick-reference-central-insights"
+  title: "Quick Reference Central Insights"
+  description: "Key concepts and review questions covering quick reference central insights."
+  tags: ["central", "insights", "chapter-37"]
+  version: 1
+
+cards:
+  - id: "ch37-15-quick-reference-central-insights-001"
+    front: "What is the central insight of Chapter 37?"
+    back: "Explicit knowledge becomes findable without asking a person. Tacit knowledge gets captured before it walks out the door. HR professionals are freed for the 40% that only humans can do."
+    tags: ["central-insight"]
+    difficulty: "intermediate"
+
+  - id: "ch37-15-quick-reference-central-insights-002"
+    front: "Which command handles institutional knowledge capture?"
+    back: "/knowledge (custom hr-operations plugin, Panaversity) — sensitivity: CONFIDENTIAL"
+    tags: ["command-handles", "handles-institutional", "knowledge"]
+    difficulty: "basic"
+
+  - id: "ch37-15-quick-reference-central-insights-003"
+    front: "Which commands are ROUTINE sensitivity in the Chapter 37 stack?"
+    back: "/policy-lookup, /onboarding, /interview-prep, /jd — these four can be shared with employees in standard handling"
+    tags: ["routine-sensitivity", "commands", "stack"]
+    difficulty: "basic"
+
+  - id: "ch37-15-quick-reference-central-insights-004"
+    front: "Which command handles internal talent matching and succession planning?"
+    back: "/match (custom hr-operations plugin) — sensitivity: CONFIDENTIAL"
+    tags: ["command-handles", "handles-internal", "talent"]
+    difficulty: "basic"
+
+  - id: "ch37-15-quick-reference-central-insights-005"
+    front: "What triggers the offboarding-knowledge-agent?"
+    back: "An HRIS resignation record — the agent activates within 24 hours and begins structured knowledge capture from the departing employee"
+    tags: ["triggers", "offboarding-knowledge-agent"]
+    difficulty: "intermediate"
+
+  - id: "ch37-15-quick-reference-central-insights-006"
+    front: "What triggers the policy-maintenance-agent?"
+    back: "Monthly on the 1st Monday of each month, plus event-triggered when statutory rates change"
+    tags: ["triggers", "policy-maintenance-agent"]
+    difficulty: "basic"
+
+  - id: "ch37-15-quick-reference-central-insights-007"
+    front: "What triggers the onboarding-orchestrator?"
+    back: "An HRIS new hire record — the agent activates T-14 days before the start date and runs through Day 90"
+    tags: ["triggers", "onboarding-orchestrator"]
+    difficulty: "intermediate"
+
+  - id: "ch37-15-quick-reference-central-insights-008"
+    front: "What does the knowledge-base-agent do and when is it active?"
+    back: "Always-on 24/7 employee Q&A via Slack/Teams — answers HR questions and escalates to named contacts when queries exceed its scope"
+    tags: ["knowledge-base-agent", "active"]
+    difficulty: "intermediate"
+
+  - id: "ch37-15-quick-reference-central-insights-009"
+    front: "What is the escalation rule for SENSITIVE PERSONAL DATA queries?"
+    back: "Never auto-generate output. Always escalate with a warm handoff: 'This involves [medical/disciplinary/grievance] information. Please contact [named HR contact] at [email/phone].'"
+    tags: ["escalation-rule", "sensitive-personal", "data"]
+    difficulty: "advanced"
+
+  - id: "ch37-15-quick-reference-central-insights-010"
+    front: "How do you update hr.local.md when statutory rates change?"
+    back: "Update the Jurisdiction section with the new rate and effective date, then verify by running /policy-lookup [relevant policy] and checking the figure matches the update."
+    tags: ["statutory-rates", "rates-change", "update"]
+    difficulty: "advanced"

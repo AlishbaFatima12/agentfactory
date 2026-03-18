@@ -1,0 +1,79 @@
+deck:
+  id: "ch36-08-user-stories-story-mapping"
+  title: "User Stories Story Mapping"
+  description: "Key concepts and review questions covering user stories story mapping."
+  tags: ["user", "stories", "story", "mapping", "chapter-36"]
+  version: 1
+
+cards:
+  - id: "ch36-08-user-stories-story-mapping-001"
+    front: "What are the three parts of a user story and the format?"
+    back: "As a [SPECIFIC PERSONA — not 'user'], I want to [CAPABILITY — behaviour, not UI element], So that [USER OUTCOME — value to them, not system action]."
+    tags: ["user-story", "parts", "format"]
+    difficulty: "basic"
+
+  - id: "ch36-08-user-stories-story-mapping-002"
+    front: "What is the persona rule in the three-part quality test?"
+    back: "The persona must be a named persona from product.local.md — 'Analyst Alex' or 'VP Priya', not 'a user' or 'the customer'. 'A user' implies nothing about context, goals, or constraints that would shape the solution."
+    tags: ["persona-rule", "three-part-quality", "three-part"]
+    difficulty: "basic"
+
+  - id: "ch36-08-user-stories-story-mapping-003"
+    front: "What is the difference between a capability (valid) and a UI element (invalid) in the 'want' section?"
+    back: "'Filter by date range' is a capability — it describes what the user can do. 'Click the date picker dropdown' is a UI element — it describes a specific implementation. Stories describe need, not solution."
+    tags: ["capability-valid", "element-invalid", "difference"]
+    difficulty: "intermediate"
+
+  - id: "ch36-08-user-stories-story-mapping-004"
+    front: "What is the difference between a user outcome (valid) and a system action (invalid) in the 'so that' section?"
+    back: "'Find relevant data faster' is a user outcome — a benefit to them. 'So that the filter is applied' is a system action — describing what the system does. The outcome tests whether the story is worth building."
+    tags: ["user-outcome", "outcome-valid", "difference"]
+    difficulty: "intermediate"
+
+  - id: "ch36-08-user-stories-story-mapping-005"
+    front: "What is the additional AC rule for user stories that does not appear in feature specs?"
+    back: "Include error states — at least one AC must define what happens when the happy path fails. This is the most commonly missing AC in agent-generated stories."
+    tags: ["user-stories", "feature-specs", "additional"]
+    difficulty: "intermediate"
+
+  - id: "ch36-08-user-stories-story-mapping-006"
+    front: "What are the three levels of the epic/story/sub-task hierarchy?"
+    back: "Epic: complete user capability too large for one sprint, owned by PM. Story: a slice of the epic deliverable in one sprint, owned by PM. Sub-task: a technical task within a story, owned by engineer."
+    tags: ["epic/story/sub-task-hierarchy", "levels", "epic/story/sub-task"]
+    difficulty: "intermediate"
+
+  - id: "ch36-08-user-stories-story-mapping-007"
+    front: "Why do PMs own stories but not sub-tasks?"
+    back: "Stories define what must be true for the user — product scope. Sub-tasks define how the engineer will implement it — implementation decisions. PMs who write sub-tasks are crossing into engineering territory."
+    tags: ["pms-own", "own-stories", "sub-tasks"]
+    difficulty: "intermediate"
+
+  - id: "ch36-08-user-stories-story-mapping-008"
+    front: "What are the four story splitting triggers?"
+    back: "1. Cannot complete in one sprint. 2. More than 7 acceptance criteria. 3. Story covers multiple distinct user flows. 4. Story serves multiple personas. In each case, split into smaller stories rather than compressing the ACs."
+    tags: ["story-splitting", "splitting-triggers"]
+    difficulty: "intermediate"
+
+  - id: "ch36-08-user-stories-story-mapping-009"
+    front: "What does more than 7 ACs in a story usually indicate?"
+    back: "The story covers multiple distinct user flows and should be split. One story per flow. A story is a slice, not a summary — 9 ACs usually means two stories hiding as one."
+    tags: ["story-usually", "usually-indicate"]
+    difficulty: "intermediate"
+
+  - id: "ch36-08-user-stories-story-mapping-010"
+    front: "What is the /stories command and which plugin provides it?"
+    back: "/stories is provided by the custom product-strategy plugin. It generates user stories from a feature spec or PRD, applying the story anatomy, quality test, and sizing guidance."
+    tags: ["/stories-command", "plugin-provides", "stories"]
+    difficulty: "basic"
+
+  - id: "ch36-08-user-stories-story-mapping-011"
+    front: "What is a story's relationship to the feature spec?"
+    back: "Stories complement the spec — they decompose it. The spec defines the complete feature; stories slice it into chunks an engineer can build in 1-3 days. Stories reference the spec; they do not replace it."
+    tags: ["feature-spec", "story", "relationship"]
+    difficulty: "advanced"
+
+  - id: "ch36-08-user-stories-story-mapping-012"
+    front: "What does /stories do when it encounters an implementation detail in a spec AC?"
+    back: "It should flag it rather than include it in a story AC. Implementation details (database operations, API calls, service names) belong in engineering sub-tasks, not story acceptance criteria. If the agent includes them, move them to a sub-task note."
+    tags: ["implementation-detail", "stories", "encounters"]
+    difficulty: "advanced"

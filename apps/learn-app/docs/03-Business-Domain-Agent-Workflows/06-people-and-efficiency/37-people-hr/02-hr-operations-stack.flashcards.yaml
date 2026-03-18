@@ -1,0 +1,67 @@
+deck:
+  id: "ch37-02-hr-operations-stack"
+  title: "Hr Operations Stack"
+  description: "Key concepts and review questions covering hr operations stack."
+  tags: ["operations", "stack", "chapter-37"]
+  version: 1
+
+cards:
+  - id: "ch37-02-hr-operations-stack-001"
+    front: "How many total plugin commands are available in Chapter 37's HR stack?"
+    back: "14 — 9 from the official human-resources plugin (Anthropic) and 5 from the custom hr-operations plugin (Panaversity). Zero naming collisions."
+    tags: ["total-plugin", "plugin-commands", "available"]
+    difficulty: "intermediate"
+
+  - id: "ch37-02-hr-operations-stack-002"
+    front: "What is the install path for the official human-resources plugin?"
+    back: "Cowork → Customize → Browse plugins → search 'Human Resources' → Install"
+    tags: ["install-path", "official-human-resources", "human-resources"]
+    difficulty: "basic"
+
+  - id: "ch37-02-hr-operations-stack-003"
+    front: "What is the install path for the custom hr-operations plugin?"
+    back: "Cowork → Customize → + → Add marketplace from GitHub → panaversity/agentfactory-business-plugins → hr-operations → Install"
+    tags: ["install-path", "custom-hr-operations", "hr-operations"]
+    difficulty: "basic"
+
+  - id: "ch37-02-hr-operations-stack-004"
+    front: "What does hr.local.md control?"
+    back: "Organisation-specific configuration for all plugin outputs — jurisdiction, policy library locations, benefits, HR contacts, onboarding structure, performance review cycle, and reference letter policy. Without it, outputs use generic defaults."
+    tags: ["local", "control"]
+    difficulty: "basic"
+
+  - id: "ch37-02-hr-operations-stack-005"
+    front: "How do you verify the official plugin installed correctly?"
+    back: "Run: /policy-lookup what is annual leave — you should receive a structured response with sections for Quick Answer, Details, Exceptions, Who to Contact, and Source."
+    tags: ["official-plugin", "plugin-installed", "verify"]
+    difficulty: "intermediate"
+
+  - id: "ch37-02-hr-operations-stack-006"
+    front: "How do you verify the custom plugin installed correctly?"
+    back: "Run: /jd with a brief role description — you should receive a structured job description with an inclusive language check."
+    tags: ["custom-plugin", "plugin-installed", "verify"]
+    difficulty: "intermediate"
+
+  - id: "ch37-02-hr-operations-stack-007"
+    front: "What are the five custom skills in the hr-operations plugin?"
+    back: "/jd (job descriptions), /match (talent matching), /knowledge (knowledge capture), /reference (reference letters), /offboard (offboarding processes)"
+    tags: ["custom-skills", "hr-operations-plugin", "hr-operations"]
+    difficulty: "basic"
+
+  - id: "ch37-02-hr-operations-stack-008"
+    front: "What does the Jurisdiction section of hr.local.md control?"
+    back: "Employment rights figures and statutory references in all outputs — leave entitlement, notice periods, statutory sick pay, and which country's employment law applies."
+    tags: ["jurisdiction-section", "local", "control"]
+    difficulty: "basic"
+
+  - id: "ch37-02-hr-operations-stack-009"
+    front: "Why does the two-plugin architecture have zero naming collisions?"
+    back: "The official plugin covers nine common HR workflows. The custom plugin adds five specific capabilities the official plugin deliberately does not include. No command in one plugin duplicates a command in the other."
+    tags: ["two-plugin-architecture", "zero-naming", "two-plugin"]
+    difficulty: "advanced"
+
+  - id: "ch37-02-hr-operations-stack-010"
+    front: "What should you write in hr.local.md when a field cannot be completed?"
+    back: "Write 'Not documented' (information gap), 'See [system/person] — access needed' (access gap), or 'N/A' (not applicable). Never leave a field blank — every gap is documentation debt."
+    tags: ["field-cannot", "write", "local"]
+    difficulty: "advanced"

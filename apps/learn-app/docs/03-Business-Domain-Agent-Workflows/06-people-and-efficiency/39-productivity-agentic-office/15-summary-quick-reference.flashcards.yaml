@@ -1,0 +1,71 @@
+deck:
+  id: "ch39-l15-summary-quick-reference"
+  title: "Summary and Quick Reference"
+  description: "Flashcards for Lesson 15 — Chapter 39 command reference, agent summary, memory layers, and central insight"
+  tags: ["chapter-39", "quick-reference", "commands", "agents", "memory-layers", "plugins"]
+  version: 1
+
+cards:
+  - id: "ch39-l15-summary-quick-reference-001"
+    front: "What are the three commands of the official productivity plugin?"
+    back: "/productivity:start\n/productivity:update\n/productivity:update --comprehensive"
+    tags: ["official-plugin", "commands"]
+    difficulty: "basic"
+
+  - id: "ch39-l15-summary-quick-reference-002"
+    front: "Which plugin command would you use to search for a decision made three weeks ago across all workplace memory layers?"
+    back: "/agentic-office:workplace-search"
+    tags: ["custom-plugin", "commands"]
+    difficulty: "basic"
+
+  - id: "ch39-l15-summary-quick-reference-003"
+    front: "Which plugin command runs a brain dump and produces a P1/P2/P3 prioritised task list?"
+    back: "/agentic-office:task-intelligence"
+    tags: ["custom-plugin", "commands"]
+    difficulty: "basic"
+
+  - id: "ch39-l15-summary-quick-reference-004"
+    front: "Which plugin command produces a situation brief before a meeting or major decision?"
+    back: "/agentic-office:executive-brief"
+    tags: ["custom-plugin", "commands"]
+    difficulty: "basic"
+
+  - id: "ch39-l15-summary-quick-reference-005"
+    front: "What are the four persistent agents in the agentic-office plugin and how does each operate?"
+    back: "Chief of Staff: scheduled.\nMemory Keeper: trigger-based.\nMeeting Intelligence: calendar-triggered.\nWork Tracker: daily pull + event-triggered."
+    tags: ["agents", "operation-types"]
+    difficulty: "intermediate"
+
+  - id: "ch39-l15-summary-quick-reference-006"
+    front: "Which lesson built each of the four work.local.md memory layers?"
+    back: "Layer 1 Personal: L03.\nLayer 2 Team: L04.\nLayer 3 Projects: L05.\nLayer 4 Organisational: L03."
+    tags: ["memory-layers", "lesson-mapping"]
+    difficulty: "intermediate"
+
+  - id: "ch39-l15-summary-quick-reference-007"
+    front: "Why does context in work.local.md transform a domain agent from a capable specialist into a knowledgeable colleague?"
+    back: "Without shared context, every domain agent starts from zero each session — it is capable but amnesiac. With complete work.local.md context, it knows the organisation's people, projects, terminology, and culture. The transformation is not in the agent; it is in the context the agent has access to."
+    tags: ["central-insight", "context"]
+    difficulty: "advanced"
+    why: "What is the minimum context a domain agent needs before it stops being a specialist and starts behaving like a colleague?"
+
+  - id: "ch39-l15-summary-quick-reference-008"
+    front: "Why must the two plugins have zero trigger word overlap?"
+    back: "Both plugins activate via natural language triggers. If they share trigger words, both respond to the same prompt — producing conflicting outputs or routing to the wrong skill. The official plugin owns task/memory/update; the custom plugin uses brain dump/digest/delegate/search."
+    tags: ["two-plugin-architecture", "trigger-overlap"]
+    difficulty: "advanced"
+    why: "What would happen if a user typed 'remember this' when both plugins were active and both had 'remember' as a trigger?"
+
+  - id: "ch39-l15-summary-quick-reference-009"
+    front: "Chapter 39 summary: what did the chapter build that the previous Part 3 chapters did not?"
+    back: "The integration layer — shared context (work.local.md) and a coordination system (four agents) that connect all domain agents so they share information, track decisions, and act as an organisation rather than isolated specialists."
+    tags: ["chapter-summary", "integration-layer"]
+    difficulty: "intermediate"
+    why: "Without Chapter 39's integration layer, what specifically would be broken about deploying all the domain agents from Chapters 28-38?"
+
+  - id: "ch39-l15-summary-quick-reference-010"
+    front: "A professional completes all Chapter 39 setup exercises and considers themselves done. What are they missing?"
+    back: "The maintenance cadence. Setup creates the architecture; the four-frequency cadence (daily confirm, weekly review, monthly audit, quarterly restructure) is what keeps the system accurate and valuable over time. A configured-but-unmaintained system decays into stale context."
+    tags: ["maintenance-cadence", "setup-vs-maintenance"]
+    difficulty: "intermediate"
+    why: "After 6 months without maintenance, which of the four memory layers would decay the fastest and why?"

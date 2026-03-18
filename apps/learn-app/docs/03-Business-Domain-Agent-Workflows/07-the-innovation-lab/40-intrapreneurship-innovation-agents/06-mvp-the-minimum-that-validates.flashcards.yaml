@@ -1,0 +1,79 @@
+deck:
+  id: "ch40-06-mvp-the-minimum-that-validates"
+  title: "Mvp The Minimum That Validates"
+  description: "Key concepts and review questions covering mvp the minimum that validates."
+  tags: ["mvp", "minimum", "validates", "chapter-40"]
+  version: 1
+
+cards:
+  - id: "ch40-06-mvp-the-minimum-that-validates-001"
+    front: "What is the correct definition of MVP in the Lean Startup methodology?"
+    back: "The minimum product that tests the most critical assumptions at the lowest possible cost — not the minimum product that could be shipped or called 'version 1'. The distinction is the purpose: an MVP is a learning instrument, not a product launch."
+    tags: ["correct-definition", "lean-startup", "methodology"]
+    difficulty: "basic"
+
+  - id: "ch40-06-mvp-the-minimum-that-validates-002"
+    front: "What is the feature inclusion criterion for the MVP?"
+    back: "Every included feature must test at least one TIER 1 or TIER 2 assumption. If you cannot answer 'which specific assumption does this feature test?', the feature does not belong in the MVP. A well-executed feature that tests no critical assumption is still scope creep."
+    tags: ["feature-inclusion", "inclusion-criterion"]
+    difficulty: "basic"
+
+  - id: "ch40-06-mvp-the-minimum-that-validates-003"
+    front: "Why is the exclusion list as important as the inclusion list in MVP design?"
+    back: "The exclusion list makes the MVP design defensible — it documents why each excluded feature was intentionally left out (it tests no critical assumption at this stage). Without an explicit exclusion list, the MVP scope tends to grow as stakeholders add 'obvious' features that are actually TIER 3 assumptions."
+    tags: ["mvp-design", "exclusion", "important"]
+    difficulty: "intermediate"
+
+  - id: "ch40-06-mvp-the-minimum-that-validates-004"
+    front: "What are the two required properties of well-formed success criteria?"
+    back: "Specific (a number, not a description) and measurable (directly observable from pilot data). 'Users like it' fails both tests. '3 customers pay $500/month before we build' is specific and measurable. Each success criterion should map to at least one critical assumption."
+    tags: ["required-properties", "well-formed-success", "well-formed"]
+    difficulty: "basic"
+
+  - id: "ch40-06-mvp-the-minimum-that-validates-005"
+    front: "What is the purpose of failure criteria, and when should they be written?"
+    back: "Failure criteria are pre-agreed triggers for a pivot conversation. They should be written before the pilot begins, when the team is not yet emotionally attached to the results. Writing failure criteria during or after the pilot allows motivated reasoning to move the goalposts."
+    tags: ["failure-criteria", "purpose", "written"]
+    difficulty: "basic"
+
+  - id: "ch40-06-mvp-the-minimum-that-validates-006"
+    front: "What does 'MVP bloat' mean?"
+    back: "Adding features to the MVP that test only TIER 3 assumptions before all TIER 1 and TIER 2 assumptions are validated. MVP bloat delays learning, increases build cost, and produces a product that is no longer minimum — it is a full feature set with a Lean Startup label."
+    tags: ["mvp-bloat", "bloat-mean"]
+    difficulty: "intermediate"
+
+  - id: "ch40-06-mvp-the-minimum-that-validates-007"
+    front: "In the AP automation MVP, why was ERP integration excluded?"
+    back: "ERP integration tests A-006 (ERP dependency), which is a TIER 2 assumption. The pilot can use manual CSV export to test the core value proposition. ERP integration is not needed to learn whether CFOs will pay $500/month or whether the AI reaches 90% accuracy."
+    tags: ["automation-mvp", "erp-integration", "excluded"]
+    difficulty: "intermediate"
+
+  - id: "ch40-06-mvp-the-minimum-that-validates-008"
+    front: "What is the relationship between the MVP and the assumption map from Lesson 5?"
+    back: "The assumption map defines which assumptions are TIER 1 (existential). The MVP is scoped to test exactly those assumptions at the lowest possible cost. Every feature in the MVP maps to at least one TIER 1 or TIER 2 assumption from the map."
+    tags: ["assumption-map", "relationship"]
+    difficulty: "advanced"
+
+  - id: "ch40-06-mvp-the-minimum-that-validates-009"
+    front: "What question should you ask for every feature candidate in the MVP?"
+    back: "Three questions: (1) Which assumption does this test? (2) Is that assumption TIER 1 or TIER 2? (3) Is this the cheapest way to test that assumption? If question 2 is TIER 3 or question 3 is 'no, a conversation would suffice', the feature does not belong in the MVP."
+    tags: ["feature-candidate", "question"]
+    difficulty: "intermediate"
+
+  - id: "ch40-06-mvp-the-minimum-that-validates-010"
+    front: "How does an intrapreneur's MVP differ from a startup MVP?"
+    back: "An intrapreneur's MVP is often a pilot programme with one internal team or existing customer segment — not a deployed product. The 'build plan' may be a staffing request and timeline rather than a development sprint, and 'success criteria' may include adoption metrics and qualitative feedback rather than pricing validation."
+    tags: ["mvp-differ", "startup-mvp", "intrapreneur"]
+    difficulty: "advanced"
+
+  - id: "ch40-06-mvp-the-minimum-that-validates-011"
+    front: "Why must the build plan end at pilot onboarding rather than at 'done'?"
+    back: "The MVP exists to generate pilot data. A build plan that ends at 'done' treats the MVP as a finished product rather than a learning instrument. Ending at pilot onboarding keeps the team focused on the real goal: measuring the assumptions, not completing the feature list."
+    tags: ["build-plan", "plan-end", "pilot"]
+    difficulty: "intermediate"
+
+  - id: "ch40-06-mvp-the-minimum-that-validates-012"
+    front: "What is 'motivated reasoning' in the context of MVP success criteria?"
+    back: "Interpreting ambiguous results as success because you want the venture to succeed. Pre-agreed success criteria prevent motivated reasoning by anchoring the interpretation to numbers set before the pilot began — when objectivity was easier to maintain than after six weeks of customer relationships."
+    tags: ["motivated-reasoning", "mvp-success", "context"]
+    difficulty: "intermediate"

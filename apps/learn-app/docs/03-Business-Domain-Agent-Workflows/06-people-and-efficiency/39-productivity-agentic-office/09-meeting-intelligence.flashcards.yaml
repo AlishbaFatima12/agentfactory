@@ -1,0 +1,104 @@
+deck:
+  id: "ch39-09-meeting-intelligence"
+  title: "Meeting Intelligence"
+  description: "Key concepts from the meeting intelligence lesson — three-phase model, D/A/F/Q/R note-taking, synthesis quality standards, and decision numbering."
+  tags: ["meeting-intelligence", "meeting-prep", "synthesis", "agentic-office"]
+  version: 1
+
+cards:
+  - id: "ch39-09-meeting-intelligence-001"
+    front: "What are the three phases of the meeting intelligence model, and when does each occur?"
+    back: "Before (30 min pre-meeting): prep brief.\nDuring (real-time): D/A/F/Q/R notes.\nAfter (within 2 hours): structured synthesis."
+    tags: ["meeting-intelligence", "three-phase-model"]
+    difficulty: "intermediate"
+
+  - id: "ch39-09-meeting-intelligence-002"
+    front: "What does each letter in D/A/F/Q/R stand for?"
+    back: "D: Decision\nA: Action\nF: Fact\nQ: Question\nR: Risk"
+    tags: ["meeting-intelligence", "dafqr"]
+    difficulty: "basic"
+
+  - id: "ch39-09-meeting-intelligence-003"
+    front: "What format are decisions numbered in, and where are they stored?"
+    back: "D-YYYY-NNN format. Stored in work.local.md decision log."
+    tags: ["meeting-intelligence", "decision-numbering"]
+    difficulty: "basic"
+
+  - id: "ch39-09-meeting-intelligence-004"
+    front: "What format are actions numbered in after a meeting synthesis?"
+    back: "A-YYYY-NNN format. Stored in work.local.md action log."
+    tags: ["meeting-intelligence", "decision-numbering"]
+    difficulty: "basic"
+
+  - id: "ch39-09-meeting-intelligence-005"
+    front: "What are the three synthesis quality rules for action items?"
+    back: "One named owner (not 'the team').\nSpecific date (not 'ASAP' or 'next week').\nSpecific output described — not just the activity."
+    tags: ["meeting-intelligence", "synthesis-quality"]
+    difficulty: "basic"
+
+  - id: "ch39-09-meeting-intelligence-006"
+    front: "What makes a deferred item valid in a meeting synthesis?"
+    back: "It must have a specific trigger for revisit — not 'will discuss later' but a concrete condition that signals when to reopen it."
+    tags: ["meeting-intelligence", "synthesis-quality", "deferred-items"]
+    difficulty: "basic"
+
+  - id: "ch39-09-meeting-intelligence-007"
+    front: "What five elements does the meeting prep brief include per agenda item?"
+    back: "Context, decision needed, your position, key risk, stakeholder note."
+    tags: ["meeting-intelligence", "prep-brief"]
+    difficulty: "intermediate"
+
+  - id: "ch39-09-meeting-intelligence-008"
+    front: "The synthesis proposes work.local.md updates but never applies them automatically. What is the rule?"
+    back: "Always propose; never apply without confirmation."
+    tags: ["meeting-intelligence", "work-local-md"]
+    difficulty: "intermediate"
+
+  - id: "ch39-09-meeting-intelligence-009"
+    front: "Why is the before phase the highest-leverage of the three meeting phases?"
+    back: "Preparation changes what happens in the meeting — not just how it is recorded. A prep brief that surfaces stakeholder dynamics and required decisions changes how people participate, not just how notes are taken."
+    tags: ["meeting-intelligence", "prep-brief"]
+    difficulty: "intermediate"
+    why: "What is the difference between attending a meeting and leading one?"
+
+  - id: "ch39-09-meeting-intelligence-010"
+    front: "Why does D/A/F/Q/R coding require less cognitive effort during a meeting than unstructured notes?"
+    back: "Coding replaces organisational judgment with a classification decision — which of five types is this? This frees attention for the discussion because the structure question is answered before the meeting, not during it."
+    tags: ["meeting-intelligence", "dafqr"]
+    difficulty: "intermediate"
+    why: "What goes wrong when someone tries to organise notes in real time during a meeting?"
+
+  - id: "ch39-09-meeting-intelligence-011"
+    front: "An action is assigned to 'the team' with a deadline of 'ASAP'. Why does this guarantee the action will not be completed?"
+    back: "Shared ownership is no ownership — without one named person accountable, everyone assumes someone else is handling it. 'ASAP' creates ambiguity about timing, so each person applies their own interpretation and no one acts urgently."
+    tags: ["meeting-intelligence", "synthesis-quality"]
+    difficulty: "advanced"
+    why: "How would you rewrite 'the team will look into it ASAP' as a valid action item?"
+
+  - id: "ch39-09-meeting-intelligence-012"
+    front: "A deferred item has the trigger 'will revisit later.' Why does this guarantee it will never be revisited?"
+    back: "Without a specific condition, 'later' has no activation event. The item disappears from attention because nothing in the meeting rhythm will surface it again — it is deferred to nowhere."
+    tags: ["meeting-intelligence", "deferred-items", "synthesis-quality"]
+    difficulty: "intermediate"
+    why: "What types of conditions make reliable triggers for deferred decisions?"
+
+  - id: "ch39-09-meeting-intelligence-013"
+    front: "Why does the synthesis quality standard require decisions to be understandable six months later without other context?"
+    back: "Decision logs are the organisation's institutional memory. A vague decision ('discussed the budget') cannot be used to resolve future disputes or understand past rationale — it requires finding the meeting recording or the people involved, both of which degrade over time."
+    tags: ["meeting-intelligence", "decision-numbering", "synthesis-quality"]
+    difficulty: "intermediate"
+    why: "How does a searchable decision log change how future decisions are made?"
+
+  - id: "ch39-09-meeting-intelligence-014"
+    front: "Omar's analytics budget is 'approved in principle, subject to ROI brief by 24 March.' Which meeting synthesis element captures this correctly?"
+    back: "A decision (D-YYYY-NNN) stating the approval with its condition, plus a linked action (A-YYYY-NNN) for Omar to produce the ROI brief by the specific date."
+    tags: ["meeting-intelligence", "decision-numbering", "synthesis-quality"]
+    difficulty: "advanced"
+    why: "What happens if the condition is omitted from the decision record and the ROI brief is never produced?"
+
+  - id: "ch39-09-meeting-intelligence-015"
+    front: "The meeting prep brief includes a 'last time this group met' section. What does this prevent?"
+    back: "It prevents open actions from prior meetings from falling through — unreviewed prior actions are the single most common source of repeated meeting failures and broken commitments."
+    tags: ["meeting-intelligence", "prep-brief"]
+    difficulty: "intermediate"
+    why: "How would you track open actions from prior meetings without work.local.md?"

@@ -244,7 +244,7 @@ Every network design decision involves trade-offs across cost, service level, ca
 
 For the Pakistan example:
 
-- **Scenario B vs. A**: £430K/year saving, 1.4 day transit improvement, 17% carbon reduction, £340K capex (payback <10 months). Clear winner.
+- **Scenario B vs. A**: £430K/year saving, 1.4 day transit improvement, 17% carbon reduction, £340K capex (payback &lt;10 months). Clear winner.
 - **Scenario C vs. B**: Further efficiency on India routes, but requires India import duty modelling, adds complexity to DC operations, and captures diminishing returns relative to Scenario B's savings.
 
 The recommendation for Scenario B is not that Scenario C is wrong — it is that Scenario C's additional value requires additional analysis first. This is the kind of nuanced output that conversational iteration enables: not just "here is the best scenario" but "here is the next question you need to answer before going further."

@@ -1,0 +1,67 @@
+deck:
+  id: "ch37-10-institutional-knowledge-capture"
+  title: "Institutional Knowledge Capture"
+  description: "Key concepts and review questions covering institutional knowledge capture."
+  tags: ["institutional", "knowledge", "capture", "chapter-37"]
+  version: 1
+
+cards:
+  - id: "ch37-10-institutional-knowledge-capture-001"
+    front: "What is tacit knowledge and why is it at high risk of permanent loss?"
+    back: "Tacit knowledge is unwritten understanding accumulated through experience — how things actually work, the real decision-makers, the unwritten rules. It lives in people's heads, not documents. When the person leaves, it goes with them unless specifically captured."
+    tags: ["tacit-knowledge", "high-risk", "permanent"]
+    difficulty: "basic"
+
+  - id: "ch37-10-institutional-knowledge-capture-002"
+    front: "What are the five factors in the knowledge risk scoring model?"
+    back: "Tenure (1–3), role criticality (1–3), documentation level (1–3), successor readiness (1–3), client/revenue impact (1–3). Total score: 5–7 = LOW, 8–10 = MEDIUM, 11–15 = HIGH."
+    tags: ["knowledge-risk", "risk-scoring", "factors"]
+    difficulty: "basic"
+
+  - id: "ch37-10-institutional-knowledge-capture-003"
+    front: "What does a HIGH risk classification require in terms of capture programme?"
+    back: "Full capture programme: 3+ knowledge capture sessions, immediate escalation to leadership, structured knowledge articles after each session. HIGH means score of 11–15 on the five-factor model."
+    tags: ["high-risk", "risk-classification", "require"]
+    difficulty: "basic"
+
+  - id: "ch37-10-institutional-knowledge-capture-004"
+    front: "What is the difference between proactive and reactive knowledge capture?"
+    back: "Reactive: triggered by resignation, notice period only, employee is mentally disengaging. Proactive: annual review for high-risk holders, unlimited time, employee fully engaged — produces richer, more reliable capture."
+    tags: ["reactive-knowledge", "knowledge-capture", "difference"]
+    difficulty: "intermediate"
+
+  - id: "ch37-10-institutional-knowledge-capture-005"
+    front: "What are the three sessions in the structured knowledge interview, and what does each cover?"
+    back: "Session 1: Client/stakeholder relationships (real decision-makers, history, unwritten rules). Session 2: Methodology/process (reality vs documentation, early warning signs, escalation decisions). Session 3: Institutional context (what to tell the replacement, what not to try again, what you're most worried will go wrong)."
+    tags: ["structured-knowledge", "knowledge-interview", "sessions"]
+    difficulty: "intermediate"
+
+  - id: "ch37-10-institutional-knowledge-capture-006"
+    front: "What is a knowledge article, and what fields must it contain?"
+    back: "A knowledge article is the structured output of a capture session. Required fields: title, the knowledge (substance in plain language), when it applies, exceptions and edge cases, related contacts, related documents, and confidence level (HIGH/MEDIUM/LOW)."
+    tags: ["knowledge-article", "fields", "contain"]
+    difficulty: "intermediate"
+
+  - id: "ch37-10-institutional-knowledge-capture-007"
+    front: "What does the confidence level in a knowledge article mean?"
+    back: "HIGH: this is definitely how it works. MEDIUM: this is the expert's interpretation — verify with [name]. LOW: this may be out of date — confirm before relying. Articles remain DRAFT until reviewed by a qualified person."
+    tags: ["confidence-level", "knowledge-article", "mean"]
+    difficulty: "intermediate"
+
+  - id: "ch37-10-institutional-knowledge-capture-008"
+    front: "What is the most valuable question in a Session 3 institutional context interview?"
+    back: "'What has this organisation tried that didn't work, and why? What should we not try again?' — This captures institutional memory of failure, preventing the organisation from repeating expensive mistakes."
+    tags: ["valuable-question", "institutional-context", "session"]
+    difficulty: "basic"
+
+  - id: "ch37-10-institutional-knowledge-capture-009"
+    front: "Why should knowledge articles never be published without reviewer confirmation?"
+    back: "The departing employee's account is not treated as complete truth. It may reflect their perspective, miss documentation that contradicts it, or be out of date. A reviewer confirms accuracy before the article is relied upon."
+    tags: ["knowledge-articles", "articles-never", "published"]
+    difficulty: "advanced"
+
+  - id: "ch37-10-institutional-knowledge-capture-010"
+    front: "What is a proactive knowledge capture programme?"
+    back: "Scheduled annual knowledge capture sessions for all HIGH and MEDIUM-risk employees — regardless of departure plans. Annual cadence, manager owns the outputs, triggers immediate full capture if gaps are found. Captures knowledge while employees are fully engaged, not leaving."
+    tags: ["proactive-knowledge", "knowledge-capture", "programme"]
+    difficulty: "advanced"

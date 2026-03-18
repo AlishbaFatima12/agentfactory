@@ -1,0 +1,67 @@
+deck:
+  id: "ch37-03-policy-lookup-self-service"
+  title: "Policy Lookup Self Service"
+  description: "Key concepts and review questions covering policy lookup self service."
+  tags: ["policy", "lookup", "self", "service", "chapter-37"]
+  version: 1
+
+cards:
+  - id: "ch37-03-policy-lookup-self-service-001"
+    front: "What are the three barriers that prevent employees from finding policy information?"
+    back: "Scattered sources (policies spread across multiple systems), legal language (written for lawyers, not employees), and staleness (summaries fall out of date when underlying policies change)."
+    tags: ["prevent-employees", "finding-policy", "barriers"]
+    difficulty: "intermediate"
+
+  - id: "ch37-03-policy-lookup-self-service-002"
+    front: "What is the difference between a policy summary and the policy itself?"
+    back: "The summary is a translation aid — it makes the policy understandable. The source policy remains authoritative. Every summary must cite its source document and section so readers can trace back to the governing text."
+    tags: ["policy-summary", "policy-itself", "difference"]
+    difficulty: "intermediate"
+
+  - id: "ch37-03-policy-lookup-self-service-003"
+    front: "What five sections should a /policy-lookup output include?"
+    back: "Quick Answer (1-2 sentence direct answer), Details (policy information in plain language), Exceptions / Special Cases, Who to Contact (named person or team), and Source (document name, section, page)."
+    tags: ["/policy-lookup-output", "output-include", "sections"]
+    difficulty: "basic"
+
+  - id: "ch37-03-policy-lookup-self-service-004"
+    front: "Why is an unsourced policy summary worse than no summary at all?"
+    back: "It creates a false sense of certainty. Without a source citation, neither the employee nor their manager can verify whether the summary is accurate or current — and acting on incorrect policy information can have legal or financial consequences."
+    tags: ["unsourced-policy", "policy-summary", "worse"]
+    difficulty: "intermediate"
+
+  - id: "ch37-03-policy-lookup-self-service-005"
+    front: "What does 'plain language' mean in the context of policy synthesis?"
+    back: "The same information, written so any employee can understand it on first reading. Nothing is omitted — only reformulated. Legal precision is preserved; legal jargon is removed."
+    tags: ["plain-language", "language-mean", "context"]
+    difficulty: "basic"
+
+  - id: "ch37-03-policy-lookup-self-service-006"
+    front: "What are the two modes of /policy-lookup?"
+    back: "Standalone mode (you paste or describe the policy and the skill synthesises it) and connected mode (the skill searches your linked knowledge base and handbook documents automatically)."
+    tags: ["modes", "policy-lookup"]
+    difficulty: "basic"
+
+  - id: "ch37-03-policy-lookup-self-service-007"
+    front: "What six things should you verify in every /policy-lookup output?"
+    back: "Entitlement figures (correct amounts), notice periods, statutory rates (current for your jurisdiction), exceptions (actually offered by your policy), escalation contact (current and correct), and source citation (correct document, section, date)."
+    tags: ["six-things", "/policy-lookup-output", "verify"]
+    difficulty: "basic"
+
+  - id: "ch37-03-policy-lookup-self-service-008"
+    front: "Why must statutory rates in policy summaries be checked after every April (UK)?"
+    back: "UK statutory rates (Statutory Maternity Pay, Statutory Sick Pay, National Living Wage) change annually, typically in April. A summary generated with last year's rates will contain incorrect figures until updated."
+    tags: ["statutory-rates", "policy-summaries", "checked"]
+    difficulty: "intermediate"
+
+  - id: "ch37-03-policy-lookup-self-service-009"
+    front: "What is a policy FAQ knowledge base?"
+    back: "A structured collection of question-answer pairs where each entry contains: the question as an employee would ask it, a verified plain-language answer, the policy source citation, and an escalation contact for complex cases."
+    tags: ["policy-faq", "faq-knowledge", "base"]
+    difficulty: "advanced"
+
+  - id: "ch37-03-policy-lookup-self-service-010"
+    front: "How does the FAQ knowledge base from Lesson 3 connect to Lesson 4?"
+    back: "The 20-entry FAQ knowledge base built in this lesson becomes the knowledge source for the HR Knowledge Base Agent in Lesson 4 — the agent uses these entries to answer employee policy questions automatically."
+    tags: ["faq-knowledge", "knowledge-base", "connect"]
+    difficulty: "advanced"

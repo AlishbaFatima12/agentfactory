@@ -1,0 +1,79 @@
+deck:
+  id: "ch40-16-chapter-summary-quick-reference"
+  title: "Chapter Summary and Quick Reference — Chapter 40 Lesson 16"
+  description: "Key concepts and review questions covering chapter summary and quick reference."
+  tags: ["intrapreneurship", "innovation-agents", "lean-startup", "chapter-40"]
+  version: 1
+
+cards:
+  - id: "ch40-16-chapter-summary-quick-reference-001"
+    front: "What is the central insight of the Innovation OS?"
+    back: "Innovation is about converting uncertainty into validated opportunity faster than competitors. AI eliminates execution overhead (synthesis, drafting, modelling) without replacing the entrepreneur's judgment on which ideas are good, whether to pivot, or whether customer insight is accurate."
+    tags: ["central-insight", "innovation"]
+    difficulty: "intermediate"
+
+  - id: "ch40-16-chapter-summary-quick-reference-002"
+    front: "What does Design Thinking answer, and at what level does it operate?"
+    back: "Design Thinking answers: what is the real problem worth solving? It operates at the problem level, in conditions of high uncertainty about customer needs."
+    tags: ["design-thinking", "thinking-answer", "level"]
+    difficulty: "intermediate"
+
+  - id: "ch40-16-chapter-summary-quick-reference-003"
+    front: "What does Lean Startup answer, and at what level does it operate?"
+    back: "Lean Startup answers: is this the right solution to that problem? It operates at the solution level, in conditions of medium uncertainty."
+    tags: ["lean-startup", "startup-answer", "level"]
+    difficulty: "intermediate"
+
+  - id: "ch40-16-chapter-summary-quick-reference-004"
+    front: "What does Agile answer, and at what level does it operate?"
+    back: "Agile answers: how do we build and deliver this effectively? It operates at the delivery level, in conditions of lower uncertainty where you know what to build."
+    tags: ["agile-answer", "level", "operate"]
+    difficulty: "intermediate"
+
+  - id: "ch40-16-chapter-summary-quick-reference-005"
+    front: "Name the two Design Thinking commands."
+    back: "/discovery (customer research, JTBD synthesis, HMW problem statements) and /idea (100-idea sprint, DVF scoring, pressure testing)."
+    tags: ["design-thinking", "thinking-commands"]
+    difficulty: "basic"
+
+  - id: "ch40-16-chapter-summary-quick-reference-006"
+    front: "Name the two Lean Startup commands."
+    back: "/hypothesis (assumption mapping, MVP scoping) and /validate (build-measure-learn analysis, pivot-or-persevere)."
+    tags: ["lean-startup", "startup-commands"]
+    difficulty: "basic"
+
+  - id: "ch40-16-chapter-summary-quick-reference-007"
+    front: "Name the Agile command."
+    back: "/sprint — innovation sprint planning, assumption-linked user stories, backlog, retrospective with assumption updates."
+    tags: ["agile-command"]
+    difficulty: "basic"
+
+  - id: "ch40-16-chapter-summary-quick-reference-008"
+    front: "Name the four cross-cutting commands."
+    back: "/market (competitive intelligence + sizing), /financials (unit economics + runway), /pitch (investor deck narrative), /gtm (go-to-market strategy). These apply at any DLA stage."
+    tags: ["cross-cutting-commands", "cross-cutting"]
+    difficulty: "intermediate"
+
+  - id: "ch40-16-chapter-summary-quick-reference-009"
+    front: "Name the four innovation agents and their weekly automated task."
+    back: "Idea Generator (Monday Innovation Brief), Customer Intelligence (Customer Signal Digest), Business Model Architect (Monthly Financial Health Review), Fundraising Readiness (Investor Pipeline tracking)."
+    tags: ["innovation-agents", "weekly-automated", "task"]
+    difficulty: "intermediate"
+
+  - id: "ch40-16-chapter-summary-quick-reference-010"
+    front: "What is the intrapreneur translation for 'product-market fit'?"
+    back: "Internal adoption — the organisation's own teams or existing customers adopting the innovation at the desired scale."
+    tags: ["intrapreneur-translation", "product-market-fit", "product-market"]
+    difficulty: "intermediate"
+
+  - id: "ch40-16-chapter-summary-quick-reference-011"
+    front: "What does innov.local.md do, and which section should be filled in first?"
+    back: "innov.local.md provides venture context that makes every command output specific rather than generic. Fill in the venture: section first — even a rough problem statement and target customer immediately improves output quality."
+    tags: ["innov-local", "section", "filled"]
+    difficulty: "advanced"
+
+  - id: "ch40-16-chapter-summary-quick-reference-012"
+    front: "Name three things AI compresses in the innovation cycle."
+    back: "Any three from: interview synthesis (weeks → hours), assumption mapping (workshops → one session), business model canvas (workshop → 20 minutes), financial modelling (days → hours), pitch deck narrative (weeks → one afternoon), competitive intelligence (incomplete → real-time)."
+    tags: ["innovation-cycle", "things", "compresses"]
+    difficulty: "advanced"

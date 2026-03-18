@@ -1,0 +1,67 @@
+deck:
+  id: "ch40-01-the-innovation-os"
+  title: "The Innovation OS — Chapter 40 Lesson 1"
+  description: "Key concepts and review questions covering the innovation os."
+  tags: ["innovation", "chapter-40"]
+  version: 1
+
+cards:
+  - id: "ch40-01-the-innovation-os-001"
+    front: "What is the DLA Stack?"
+    back: "Design Thinking, Lean Startup, and Agile used together as a unified innovation methodology. Each operates at a different level of uncertainty: Design Thinking at the problem level, Lean Startup at the solution level, Agile at the delivery level."
+    tags: ["dla-stack"]
+    difficulty: "intermediate"
+
+  - id: "ch40-01-the-innovation-os-002"
+    front: "What question does Design Thinking answer?"
+    back: "What is the real problem worth solving? Design Thinking operates at the problem level, in conditions of high uncertainty about what customers actually need. It is most powerful before you have built anything."
+    tags: ["design-thinking", "thinking-answer", "question"]
+    difficulty: "basic"
+
+  - id: "ch40-01-the-innovation-os-003"
+    front: "What question does Lean Startup answer?"
+    back: "Is this solution the right answer to that problem? Lean Startup operates at the solution level, in conditions of medium uncertainty. You believe you understand the problem; now you need to validate the solution."
+    tags: ["lean-startup", "startup-answer", "question"]
+    difficulty: "basic"
+
+  - id: "ch40-01-the-innovation-os-004"
+    front: "What question does Agile answer?"
+    back: "How do we build and deliver this effectively? Agile operates at the delivery level, in conditions of lower uncertainty. You know what to build; Agile ensures you build it efficiently and adapt as you learn."
+    tags: ["agile-answer", "question"]
+    difficulty: "intermediate"
+
+  - id: "ch40-01-the-innovation-os-005"
+    front: "What failure mode results from jumping straight to Agile without Design Thinking?"
+    back: "Well-executed solution to the wrong problem — built beautifully, adopted by nobody. Teams fall in love with their solution before understanding whether it solves a real problem customers actually have."
+    tags: ["failure-mode", "mode-results", "jumping"]
+    difficulty: "advanced"
+
+  - id: "ch40-01-the-innovation-os-006"
+    front: "What does AI accelerate in the DLA Stack?"
+    back: "AI accelerates execution overhead — synthesis, structuring, and first drafts. Specifically: interview synthesis (weeks → hours), assumption mapping (facilitated workshops → one session), financial modelling (days → hours), pitch narrative (multiple drafts → one afternoon)."
+    tags: ["dla-stack", "accelerate"]
+    difficulty: "intermediate"
+
+  - id: "ch40-01-the-innovation-os-007"
+    front: "What does AI NOT do in the innovation process?"
+    back: "AI does not validate your idea, decide whether to pivot, or judge whether your customer insight is accurate. Those decisions remain the entrepreneur's or intrapreneur's responsibility. AI removes execution overhead; it does not replace judgment."
+    tags: ["innovation-process"]
+    difficulty: "intermediate"
+
+  - id: "ch40-01-the-innovation-os-008"
+    front: "What is the governing principle of the Innovation OS?"
+    back: "The goal of innovation is not to have a great idea. It is to convert uncertainty into validated opportunity faster than the competition."
+    tags: ["governing-principle", "innovation"]
+    difficulty: "advanced"
+
+  - id: "ch40-01-the-innovation-os-009"
+    front: "What is the intrapreneur equivalent of 'investors'?"
+    back: "The innovation committee or sponsoring executive — the people who approve budget and headcount, rather than writing a cheque."
+    tags: ["intrapreneur-equivalent", "investors"]
+    difficulty: "basic"
+
+  - id: "ch40-01-the-innovation-os-010"
+    front: "Name three intrapreneur translations from the entrepreneur vocabulary."
+    back: "Investors → Innovation committee. Funding → Budget and headcount approval. Product-market fit → Internal adoption. The tools are identical; the audience changes."
+    tags: ["intrapreneur-translations", "entrepreneur-vocabulary"]
+    difficulty: "intermediate"

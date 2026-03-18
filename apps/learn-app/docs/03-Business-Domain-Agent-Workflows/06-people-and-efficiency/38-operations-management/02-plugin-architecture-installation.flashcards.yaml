@@ -1,0 +1,67 @@
+deck:
+  id: "ch38-02-plugin-architecture-installation"
+  title: "Plugin Architecture and Installation"
+  description: "Key concepts and review questions covering plugin architecture and installation."
+  tags: ["plugin", "architecture", "installation", "chapter-38"]
+  version: 1
+
+cards:
+  - id: "ch38-02-plugin-architecture-installation-001"
+    front: "What are the two plugins used in Chapter 38?"
+    back: "1. Official Operations plugin (from Anthropic's knowledge-work-plugins) — 6 commands including /vendor-review, /process-doc, /change-request, /runbook, /status-report. 2. Custom Operations Intelligence plugin (from Panaversity) — 4 commands (/audit, /contract, /incident, /metrics) and 4 persistent agents."
+    tags: ["plugins"]
+    difficulty: "basic"
+
+  - id: "ch38-02-plugin-architecture-installation-002"
+    front: "What is the zero-overlap principle in the two-plugin architecture?"
+    back: "Every operational capability is covered exactly once by whichever plugin is best suited to it. There is no duplication between official and custom plugins. Official handles standard workflows; custom handles gaps (audit, contract analysis, incident management, metrics framework, persistent agents)."
+    tags: ["zero-overlap-principle", "two-plugin-architecture", "zero-overlap"]
+    difficulty: "intermediate"
+
+  - id: "ch38-02-plugin-architecture-installation-003"
+    front: "What are the six official Operations plugin commands?"
+    back: "/vendor-review (vendor portfolio audit and SLA scorecards), /process-doc (process documentation and SOPs), /runbook (operational runbooks), /change-request (change impact assessment and rollback), /status-report (KPI reports for leadership), /capacity-plan (resource planning — not used in this chapter)."
+    tags: ["six-official", "official-operations", "plugin"]
+    difficulty: "basic"
+
+  - id: "ch38-02-plugin-architecture-installation-004"
+    front: "What are the four custom Operations Intelligence plugin commands?"
+    back: "/audit (audit preparation, evidence packs, mock review), /contract (contract obligation extraction and risk flagging), /incident (post-mortem, Five Whys RCA, corrective actions), /metrics (operational metrics framework and dashboard design)."
+    tags: ["custom-operations", "operations-intelligence", "plugin"]
+    difficulty: "basic"
+
+  - id: "ch38-02-plugin-architecture-installation-005"
+    front: "What are the three official plugin auto-skills and how are they invoked?"
+    back: "compliance-tracking (triggered by: 'compliance', 'obligation', 'regulatory'), risk-assessment (triggered by: 'risk', 'risk register', 'mitigation'), process-optimization (triggered by: 'optimize', 'bottleneck', 'efficiency'). They activate from natural language keyword patterns — NEVER use as slash commands like /compliance-tracking."
+    tags: ["official-plugin", "plugin-auto-skills", "auto-skills"]
+    difficulty: "intermediate"
+
+  - id: "ch38-02-plugin-architecture-installation-006"
+    front: "What is ops.local.md and why does it matter?"
+    back: "The organisation-specific configuration file that calibrates all plugin output to your operational context. Without it, plugins produce generic best-practice output. With it, /vendor-review knows your renewal cycle, /audit knows your regulatory frameworks, and compliance-tracking knows which obligations apply to your organisation."
+    tags: ["ops-local", "matter"]
+    difficulty: "intermediate"
+
+  - id: "ch38-02-plugin-architecture-installation-007"
+    front: "What are the seven sections of ops.local.md?"
+    back: "1. Organisation Context (lesson 2), 2. Vendor Portfolio (lesson 3), 3. Regulatory Frameworks (lesson 7), 4. Risk Configuration (lesson 9), 5. Change Management (lesson 6), 6. Process Library (lesson 5), 7. Operational Metrics (lesson 11). Built progressively — Organisation Context is the minimum for lesson 2."
+    tags: ["seven-sections", "ops-local"]
+    difficulty: "advanced"
+
+  - id: "ch38-02-plugin-architecture-installation-008"
+    front: "How do you install the custom Operations Intelligence plugin?"
+    back: "Cowork sidebar → Customize → Browse plugins → Personal → + → Add marketplace from GitHub → enter https://github.com/panaversity/agentfactory-business-plugins → find Operations Intelligence → Install."
+    tags: ["custom-operations", "operations-intelligence", "install"]
+    difficulty: "intermediate"
+
+  - id: "ch38-02-plugin-architecture-installation-009"
+    front: "What are the four persistent agents in the Operations Intelligence plugin?"
+    back: "vendor-watchdog (weekly vendor monitoring: renewals, SLAs, unapproved spend), process-health (monthly SOP currency and orphaned process detection), compliance-monitor (weekly obligation review and evidence aging), change-tracker (weekly change pipeline and PIR tracking)."
+    tags: ["persistent-agents", "operations-intelligence", "plugin"]
+    difficulty: "intermediate"
+
+  - id: "ch38-02-plugin-architecture-installation-010"
+    front: "What is the verification test for the official Operations plugin?"
+    back: "Run /vendor-review with a test scenario asking for a brief vendor evaluation of a hypothetical tool. A correctly installed plugin returns a structured vendor assessment with cost, performance, and renewal sections. An error or unformatted response means the plugin is not correctly installed."
+    tags: ["verification-test", "official-operations", "plugin"]
+    difficulty: "advanced"
