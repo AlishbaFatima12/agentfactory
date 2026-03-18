@@ -50,6 +50,22 @@ Every lesson in this chapter follows the **Predict-Run-Investigate** method. You
 | 3      | Your First Code Review -- Catching a Bug        | Apply PRIMM and trace tables to find a bug in SmartNotes code        |
 | 4      | Reading a Test -- Two New Words                 | Recognize `def` and `assert` in test code, predict pass/fail         |
 
+## PRIMM-AI+ in This Chapter
+
+Every lesson in this chapter includes a **PRIMM-AI+ Practice** section where you apply the enhanced framework from Chapter 42. These exercises use real Python code — not conceptual scenarios — making this the first chapter where PRIMM-AI+ meets actual programming.
+
+Each Practice section follows the five stages:
+
+| Stage | What You Do | What It Builds |
+|-------|------------|----------------|
+| **Predict [AI-FREE]** | Read AI-generated code and predict output with a confidence score (1-5) | Calibrates your judgment — you learn to distinguish "I know this" from "I think I know this" |
+| **Run** | Execute the code and compare to your prediction | Creates the feedback loop that turns predictions into learning |
+| **Investigate** | Write a trace artifact (trace table or "why I got it wrong" note) before asking the AI | Makes your understanding visible so you can compare it to reality |
+| **Modify** | Change one thing and predict the new output | Tests whether your understanding transfers to new situations |
+| **Make [Mastery Gate]** | Complete a challenge that proves the skill is solid | Each lesson has a specific mastery gate — your checkpoint before moving on |
+
+Lessons 2 and 4 include **Parsons Problems** — scrambled code lines you reconstruct into the correct order — that test structural comprehension before you modify code freely. The **Error Taxonomy** from Chapter 43 appears throughout, helping you classify bugs by type (type error, logic error, specification error) rather than just fixing them. The **Verification Ladder** builds across the chapter: Rung 1 (prediction) in Lesson 1, Rung 2 (types) in Lesson 3, and Rung 3 (tests) in Lesson 4.
+
 ## What This Chapter Uses
 
 This chapter introduces Python through reading, not writing. Every code example uses only these concepts:
@@ -61,7 +77,7 @@ This chapter introduces Python through reading, not writing. Every code example 
 - **Boolean logic**: `and`, `or`, comparisons
 - **`print()`** for output
 
-Functions, collections, imports, and control flow appear later in Phase 2. Lesson 4 adds two vocabulary words -- `def` and `assert` -- so you can read test code before writing your first test in Chapter 34. This chapter gives you a taste of Python -- enough to practice the PRIMM method and build confidence reading code.
+Functions, collections, imports, and control flow appear later in Phase 2. Lesson 4 adds two vocabulary words -- `def` and `assert` -- so you can read test code before writing your first test in the next chapter. This chapter gives you a taste of Python -- enough to practice the PRIMM method and build confidence reading code.
 
 ## Prerequisites
 

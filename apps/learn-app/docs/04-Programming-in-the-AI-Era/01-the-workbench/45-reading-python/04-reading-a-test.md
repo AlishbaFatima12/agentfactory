@@ -60,9 +60,9 @@ differentiation:
 
 In Lesson 3, you reviewed a fifteen-line SmartNotes module and caught a bug before running the code. You built trace tables, classified bugs as type errors or logic errors, and saw how PRIMM and Pyright work together. You can read code. You can find what is wrong with it.
 
-Chapter 34 will ask you to do something different: write a test first, then let AI generate the code that makes it pass. Before you can write a test, you need to recognize what one looks like. That is all this lesson does -- it adds two vocabulary words to your reading toolkit.
+The next chapter will ask you to do something different: write a test first, then let AI generate the code that makes it pass. Before you can write a test, you need to recognize what one looks like. That is all this lesson does -- it adds two vocabulary words to your reading toolkit.
 
-Think of it the way a medical student learns anatomy. Before performing surgery, you learn to point at a bone and name it. You do not need to understand the entire skeletal system. You need to recognize the part and know what it does. In this lesson, you will point at `def` and `assert` and know what they mean. That is enough. The deeper understanding comes in Phase 2 (Chapter 37 for functions) and Phase 3 (Chapter 39 for testing).
+Think of it the way a medical student learns anatomy. Before performing surgery, you learn to point at a bone and name it. You do not need to understand the entire skeletal system. You need to recognize the part and know what it does. In this lesson, you will point at `def` and `assert` and know what they mean. That is enough. The deeper understanding comes in Phase 2 (functions) and Phase 3 (testing).
 
 ---
 
@@ -80,7 +80,7 @@ Three lines. Two new words. Everything else you already know. Let us break it do
 
 **Line 1: `def test_greeting():`**
 
-`def` means "define." It gives a name to a block of code. Think of it as a label on an envelope: "this envelope contains: a greeting check." The name `test_greeting` tells you what the check is about, and the `():` at the end is part of the label's punctuation -- you will learn why it looks that way in Chapter 37 when you study functions properly. For now, just recognize the pattern: `def test_something():` means "here is a check called something."
+`def` means "define." It gives a name to a block of code. Think of it as a label on an envelope: "this envelope contains: a greeting check." The name `test_greeting` tells you what the check is about, and the `():` at the end is part of the label's punctuation -- you will learn why it looks that way in Phase 2 when you study functions properly. For now, just recognize the pattern: `def test_something():` means "here is a check called something."
 
 **Line 2: `result: str = "Smart" + "Notes"`**
 
@@ -91,7 +91,7 @@ You know this. String concatenation from Lesson 1, Block 1. The `+` operator joi
 `assert` means "I insist this is true." It checks whether `result` equals `"SmartNotes"`. If the answer is yes, the test passes silently -- nothing happens, no output, no fanfare. If the answer is no, the test fails loudly -- Python stops and tells you exactly what went wrong.
 
 :::note If you have never written code before
-You do not need to understand everything about `def` right now. Functions are taught properly in Phase 2 (Chapter 37). For now, just recognize the pattern: `def test_something():` means "here is a check called something." The indented lines below it are the contents of that check. That is all you need for this lesson.
+You do not need to understand everything about `def` right now. Functions are taught properly in Phase 2. For now, just recognize the pattern: `def test_something():` means "here is a check called something." The indented lines below it are the contents of that check. That is all you need for this lesson.
 :::
 
 Two words. `def` labels the check. `assert` insists something is true. The code between them -- the variables, the types, the arithmetic -- is the same Python you have been reading since Lesson 1.
@@ -129,7 +129,7 @@ E       AssertionError: assert 'SmartNotes' == 'Smart Notes'
 
 The `>` arrow points to the line that failed. The `E` line shows what the test expected versus what it got. `assert` insisted that `result` equals `"Smart Notes"`, but `result` was actually `"SmartNotes"` -- no space. The test failed loudly.
 
-That is enough about running tests. You will use `uv run pytest` throughout Chapter 34. For now, the point is: you can check your predictions.
+That is enough about running tests. You will use `uv run pytest` throughout the next chapter. For now, the point is: you can check your predictions.
 
 ---
 
@@ -277,7 +277,7 @@ Do NOT reveal whether it passes -- let me predict first.
 
 Before running `uv run pytest test_practice.py -v`, read the test and predict: will it pass or fail? Evaluate the assert expression using what you know from Lessons 1-3. Then run it and compare.
 
-**What you're learning:** You are applying PRIMM to AI-generated test code -- the same workflow you will use in Chapter 34. The AI writes the test, you read it and predict the outcome, then you verify. This is the prediction loop applied to a new kind of code.
+**What you're learning:** You are applying PRIMM to AI-generated test code -- the same workflow you will use in the next chapter. The AI writes the test, you read it and predict the outcome, then you verify. This is the prediction loop applied to a new kind of code.
 
 ### Prompt 2: Generate a Failing Test
 
@@ -296,9 +296,75 @@ Read the test. Find the line where the assert expects the wrong value. Predict w
 
 ---
 
+## PRIMM-AI+ Practice: Reading Tests
+
+### Predict [AI-FREE]
+
+Ask your AI assistant to generate a test for you to evaluate:
+
+```
+Generate a simple Python test function (using def and assert)
+that tests a calculation using only variables with type annotations,
+arithmetic operators, and assert. Use only str, int, float, or bool
+types. No imports. Do NOT reveal whether it passes — let me predict first.
+```
+
+Read the test. Evaluate the assert expression. Predict: pass or fail? Write your answer and a **confidence score from 1-5** before running.
+
+### Run
+
+Run `uv run pytest test_practice.py -v`. Compare the result to your prediction and record: prediction, confidence, actual result. Did you correctly evaluate the assert expression? If the test passed, was it silent? If it failed, does the `E` line show the mismatch you predicted?
+
+### Investigate
+
+Now ask for a deliberately failing test:
+
+```
+Generate a test function with a deliberate mistake in the assert
+so the test FAILS. Do NOT tell me which line is wrong.
+```
+
+Before running, write a **"why this fails" note**: find the wrong value by reading — not by running. Predict what the correct value should be. This is your trace artifact.
+
+Then run `uv run pytest` and check: does the error output match your prediction?
+
+**Error Taxonomy**: Is the bug a *logic error* (wrong expected value in the assert) or a *specification error* (the assert checks the wrong thing entirely)? The `assert` line is the specification that defines "correct" — getting the specification wrong is a different kind of bug than getting the calculation wrong.
+
+### Parsons Problem: Reconstruct a Test Function
+
+Here are the lines of a pytest test function in scrambled order. Reconstruct the correct test:
+
+```python
+    total: float = price * quantity
+    assert total == 89.97
+    quantity: int = 3
+def test_calculate_total() -> None:
+    price: float = 29.99
+```
+
+Arrange these five lines into a valid test function with correct indentation. Then predict: will this test pass or fail? Write your answer and a confidence score.
+
+**Hint**: Think about what must exist before it can be used. A variable cannot appear in a calculation before it has a value. And remember what `def` does from earlier in this lesson.
+`
+### Modify
+
+Take the failing test from the Investigate step and fix the assert value. Before running the fixed version, predict: will it pass now? Run it. Then modify the test further — change one of the variables inside the test and update the assert to match. Predict before running each modification.
+
+### Make [Mastery Gate]
+
+Write your own test from scratch. Pick a simple calculation — any arithmetic you have learned in this chapter. Write the `def test_...():` wrapper, the variables with type annotations, the calculation, and the `assert`. Predict whether your own test passes — with a confidence score. Then run it. If it fails, you have a bug in your own specification — and finding it teaches you more about tests than any prompt can.
+
+Writing a test that passes on the first try — with a confidence score of 4 or 5 that matches reality — is your mastery gate for this lesson.
+
+:::tip Verification Ladder — Rung 3
+The `assert` line defines what "correct" means. That is **Rung 3 of the Verification Ladder** — tests as specification. Without the assert, you are hoping the code works. With the assert, you are verifying it. In the next chapter, you will write the test *first* and let AI write the code that makes it pass. The skill you just practiced — reading a test and knowing whether it specifies the right behavior — is the skill that makes Test-Driven Generation work.
+:::
+
+---
+
 ## Key Takeaways
 
-1. **`def test_something():` labels a check.** You will learn functions fully in Phase 2 (Chapter 37). For now, recognize the pattern: `def` followed by a name starting with `test_` means "here is a check."
+1. **`def test_something():` labels a check.** You will learn functions fully in Phase 2. For now, recognize the pattern: `def` followed by a name starting with `test_` means "here is a check."
 
 2. **`assert` means "I insist this is true."** Pass = silent. Fail = loud. The assert line is where you focus your prediction.
 
@@ -306,10 +372,58 @@ Read the test. Find the line where the assert expects the wrong value. Predict w
 
 4. **Reading a test is reading code.** PRIMM works on test functions the same way it works on any code block. Predict what the assert checks, evaluate the expression, decide pass or fail.
 
-5. **In Chapter 34, you flip the direction.** Instead of predicting whether someone else's test passes, you write the test -- just the assert line and a few variables -- and AI writes the code that makes it pass.
+5. **In the next chapter, you flip the direction.** Instead of predicting whether someone else's test passes, you write the test -- just the assert line and a few variables -- and AI writes the code that makes it pass.
 
 ---
 
 ## Looking Ahead
 
-You can now read tests. You know what `def` and `assert` mean. In Chapter 34, you flip the script: instead of predicting whether someone else's test passes, you write the test -- five lines at most -- and AI writes the code that makes it pass. The PRIMM method does not stop. It becomes the verification step: AI generates, you read and predict, you run and compare. Chapter 34 is where reading becomes doing.
+You can now read tests. You know what `def` and `assert` mean. In the next chapter, you flip the script: instead of predicting whether someone else's test passes, you write the test -- five lines at most -- and AI writes the code that makes it pass. The PRIMM method does not stop. It becomes the verification step: AI generates, you read and predict, you run and compare. The next chapter is where reading becomes doing.
+
+---
+
+## Chapter-End Rubric: Self-Assessment
+
+Before proceeding to the next chapter, score yourself honestly on five dimensions. This rubric is not a grade — it is a mirror. It shows you where you stand so you can direct your practice to the dimensions that need the most work.
+
+### Prediction Accuracy
+
+How often were your predictions correct during this chapter? Could you predict the output of string concatenation, floor division, f-strings, and boolean logic before running the code?
+
+| Developing | Competent | Fluent |
+|-----------|-----------|--------|
+| Predictions were often wrong; confused strings with numbers, `//` with `/`, or boolean `and` logic | Predictions were mostly correct for straightforward blocks; some errors on floor division or multi-operator expressions | Predictions were consistently accurate across all four block types; could predict output for novel combinations |
+
+### Trace Quality
+
+Were your trace tables accurate and complete? Could you track variable values through 5-7 lines of code with reassignment without losing track of updated values?
+
+| Developing | Competent | Fluent |
+|-----------|-----------|--------|
+| Trace tables had stale-value errors; used original values instead of updated ones; needed AI to find divergence | Trace tables were mostly correct; occasional stale-value error on longer blocks; caught errors with AI comparison | Trace tables were accurate for all exercises including 7-line blocks; Parsons reconstruction was correct on first attempt |
+
+### Explanation Quality
+
+Can you explain *why* each code block produces its output — not just what the output is? Can you explain in your own words what `//` does, how f-strings work, and why `False and True` is `False`?
+
+| Developing | Competent | Fluent |
+|-----------|-----------|--------|
+| Can state outputs but struggles to explain the mechanism; relies on AI for explanations | Can explain most operations in own words; some difficulty articulating the difference between `//` and `/` or string vs number `+` | Can teach each concept with examples; explains edge cases (negative floor division, floating-point precision) without prompting |
+
+### Bug-Finding Quality
+
+In the code review lesson (Lesson 3), could you find the type error in the SmartNotes statistics module by reading — without running the code?
+
+| Developing | Competent | Fluent |
+|-----------|-----------|--------|
+| Could not find the bug before running; needed the crash message or AI hint | Found the bug after building a trace table; the type mismatch became visible during tracing | Spotted the `str` + `int` type error on first read; could explain exactly which line would crash and why |
+
+### Test-Reading Quality
+
+In the test-reading lesson (Lesson 4), could you predict pass/fail for each test function? Could you reconstruct the Parsons test function correctly?
+
+| Developing | Competent | Fluent |
+|-----------|-----------|--------|
+| Predicted pass/fail incorrectly on more than one test; struggled with Parsons reconstruction | Predicted pass/fail correctly on most tests; Parsons reconstruction was correct; occasional error on edge-case tests | Predicted all four tests correctly with high confidence; Parsons reconstruction was immediate; could write own test functions |
+
+If you scored **Developing** on any dimension, go back and generate new practice exercises with your AI assistant: ask for code blocks to predict, longer code to trace, buggy code to review, or tests to evaluate — and work through the PRIMM-AI+ Practice cycle until the skill is solid. If you scored **Competent** across all five, you are ready for the next chapter, where reading becomes writing. If you scored **Fluent**, you are reading Python the way professional developers read AI-generated code — and that is exactly the skill this chapter was designed to build.
