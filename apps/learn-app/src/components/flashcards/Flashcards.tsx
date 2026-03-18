@@ -424,10 +424,7 @@ export default function Flashcards({ cards: deck }: FlashcardsProps) {
         </button>
       </div>
 
-      <div
-        className={styles.ratingSlot}
-        aria-hidden={!isFlipped}
-      >
+      <div className={styles.ratingSlot} aria-hidden={!isFlipped}>
         {isFlipped && (
           <RatingButtons
             onRate={handleRate}
@@ -468,17 +465,6 @@ export default function Flashcards({ cards: deck }: FlashcardsProps) {
       </div>
 
       <div className={styles.utilityRow}>
-        <button
-          className={styles.utilityButton}
-          onClick={(e) => {
-            e.stopPropagation();
-            setIsFullscreen((prev) => !prev);
-          }}
-          title={isFullscreen ? "Exit Full Screen" : "Full Screen"}
-          aria-label={isFullscreen ? "Exit Full Screen" : "Full Screen"}
-        >
-          {isFullscreen ? "\u21F2 Exit Fullscreen" : "\u2922 Fullscreen"}
-        </button>
         <button
           className={styles.utilityButton}
           onClick={handleShuffle}
