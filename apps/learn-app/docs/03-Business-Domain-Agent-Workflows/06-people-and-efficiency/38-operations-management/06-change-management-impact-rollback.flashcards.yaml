@@ -11,107 +11,107 @@ cards:
       3. No rollback plan — when things went wrong, nobody had a structured way to revert; rollback was improvised, creating additional problems
 
   - front: "What are the four change classification levels, and what determines the classification?"
-    back: "Standard: single team, limited impact, low risk → team lead approval
-Significant: multiple teams or systems, medium risk → department head approval
-Major: organisation-wide or multi-department, high risk → exec sponsor/COO approval
-Critical: core business systems or regulatory compliance → board/exec committee
+    back: |
+      Standard: single team, limited impact, low risk → team lead approval
+      Significant: multiple teams or systems, medium risk → department head approval
+      Major: organisation-wide or multi-department, high risk → exec sponsor/COO approval
+      Critical: core business systems or regulatory compliance → board/exec committee
 
-Classification is determined by scope (how much of the organisation is affected)
-and risk (what failure would mean for operations or compliance).
+      Classification is determined by scope (how much of the organisation is affected)
+      and risk (what failure would mean for operations or compliance).
 
-The most common error is under-classification — assessing a Significant change
-with Standard-level rigour to move faster.
-"
+      The most common error is under-classification — assessing a Significant change
+      with Standard-level rigour to move faster.
 
   - front: "What is the integration risk register, and why is it often incomplete?"
-    back: "The integration risk register is a structured map of every system connection
-that a change might disrupt — including: current state, action required to
-maintain the connection, risk level, owner, and deadline.
+    back: |
+      The integration risk register is a structured map of every system connection
+      that a change might disrupt — including: current state, action required to
+      maintain the connection, risk level, owner, and deadline.
 
-It is often incomplete because the change owner knows their own system,
-not every system that depends on it. Systems that receive data FROM the
-changed system, or send data TO it, are both dependencies — and both must
-be mapped.
-"
+      It is often incomplete because the change owner knows their own system,
+      not every system that depends on it. Systems that receive data FROM the
+      changed system, or send data TO it, are both dependencies — and both must
+      be mapped.
 
   - front: "What is the difference between a rollback plan and a rollback intention?"
-    back: "A rollback intention: 'We will revert if things go wrong.'
+    back: |
+      A rollback intention: 'We will revert if things go wrong.'
 
-A rollback plan answers three specific questions before go-live:
-1. What is 'critical failure'? Defined as observable conditions, not vague judgements.
-2. Who has authority to pull the rollback trigger?
-3. What is actually reversible at each phase — and what is not?
+      A rollback plan answers three specific questions before go-live:
+      1. What is 'critical failure'? Defined as observable conditions, not vague judgements.
+      2. Who has authority to pull the rollback trigger?
+      3. What is actually reversible at each phase — and what is not?
 
-Without pre-defined trigger criteria, the team faces the decision under pressure
-with incomplete information, defaulting to waiting and hoping rather than acting.
-"
+      Without pre-defined trigger criteria, the team faces the decision under pressure
+      with incomplete information, defaulting to waiting and hoping rather than acting.
 
   - front: "Why should rollback trigger criteria be defined as observable conditions?"
-    back: "Because under pressure, with partial information and high stakes, vague
-criteria ('if things are bad') produce disagreement, delay, and inaction.
+    back: |
+      Because under pressure, with partial information and high stakes, vague
+      criteria ('if things are bad') produce disagreement, delay, and inaction.
 
-Observable conditions ('finance month-end close cannot be completed' or
-'>30% of users cannot access core functions') have clear answers:
-either the condition is met or it is not. The decision becomes procedural
-rather than a judgment call made under stress.
-"
+      Observable conditions ('finance month-end close cannot be completed' or
+      '>30% of users cannot access core functions') have clear answers:
+      either the condition is met or it is not. The decision becomes procedural
+      rather than a judgment call made under stress.
 
   - front: "What is the change readiness assessment and why is process readiness typically the lowest dimension?"
-    back: "Change readiness has four dimensions:
-- Organisation: change fatigue, sponsor visibility, culture
-- Technology: systems and integrations tested, team has required skills
-- Process: SOPs updated to reflect post-change reality
-- Data: data quality sufficient for migration or new system requirements
+    back: |
+      Change readiness has four dimensions:
+      - Organisation: change fatigue, sponsor visibility, culture
+      - Technology: systems and integrations tested, team has required skills
+      - Process: SOPs updated to reflect post-change reality
+      - Data: data quality sufficient for migration or new system requirements
 
-Process readiness is typically lowest because SOPs are often updated
-after go-live, not before. This means users are executing the new
-process without documented procedures — a risk that is rarely planned for.
-"
+      Process readiness is typically lowest because SOPs are often updated
+      after go-live, not before. This means users are executing the new
+      process without documented procedures — a risk that is rarely planned for.
 
   - front: "What should a change communication plan include that is often omitted?"
-    back: "Most communication plans focus on what to say. The effective ones also specify:
+    back: |
+      Most communication plans focus on what to say. The effective ones also specify:
 
-1. What NOT to say — at each milestone, what overclaiming, misleading framing,
-   or missing acknowledgements would create trust deficits
-2. What is being lost — not just what is being gained. Acknowledging the
-   genuine disruption and difficulty reduces resistance more than promising benefits.
-3. Channel-by-audience matching — all-staff email is not appropriate for
-   every message to every audience
-"
+      1. What NOT to say — at each milestone, what overclaiming, misleading framing,
+         or missing acknowledgements would create trust deficits
+      2. What is being lost — not just what is being gained. Acknowledging the
+         genuine disruption and difficulty reduces resistance more than promising benefits.
+      3. Channel-by-audience matching — all-staff email is not appropriate for
+         every message to every audience
 
   - front: "How does the change log built in L06 connect to the change-tracker agent in L12?"
-    back: "The change-tracker agent monitors the change pipeline built in L06.
-It flags:
-- Stale approvals (approvals requested but not received)
-- Missing impact assessments (changes logged without assessment)
-- Overdue post-implementation reviews (PIR due date passed)
-- Changes in the pipeline without owners
+    back: |
+      The change-tracker agent monitors the change pipeline built in L06.
+      It flags:
+      - Stale approvals (approvals requested but not received)
+      - Missing impact assessments (changes logged without assessment)
+      - Overdue post-implementation reviews (PIR due date passed)
+      - Changes in the pipeline without owners
 
-The agent converts the manual change log into a continuously monitored
-operational intelligence output.
-"
+      The agent converts the manual change log into a continuously monitored
+      operational intelligence output.
 
   - front: "What is the risk of a Q3 go-live for an ERP migration at a company with December year-end?"
-    back: "Q3 (July-September) is the period immediately before December year-end.
-Finance accuracy and system stability are critical during this window —
-finance teams are preparing for year-end close, setting up reporting,
-and finalising accounts.
+    back: |
+      Q3 (July-September) is the period immediately before December year-end.
+      Finance accuracy and system stability are critical during this window —
+      finance teams are preparing for year-end close, setting up reporting,
+      and finalising accounts.
 
-A major ERP migration going live in Q3 creates compounding risk:
-the system is new and unstable precisely when finance processes are
-under the highest pressure. The standard recommendation is to move
-go-live to Q2 (before year-end pressure begins) or January
-(after year-end is complete).
-"
+      A major ERP migration going live in Q3 creates compounding risk:
+      the system is new and unstable precisely when finance processes are
+      under the highest pressure. The standard recommendation is to move
+      go-live to Q2 (before year-end pressure begins) or January
+      (after year-end is complete).
 
   - front: "How does L06 (change management) forward-connect to L10 (incident management)?"
-    back: "The incident examined in L10 was caused by a poorly managed change —
-a change that lacked a proper impact assessment and pre-defined rollback
-triggers. When problems emerged post-go-live, nobody could agree on
-what 'bad enough to roll back' meant, so the team waited while impact
-accumulated.
+    back: |
+      The incident examined in L10 was caused by a poorly managed change —
+      a change that lacked a proper impact assessment and pre-defined rollback
+      triggers. When problems emerged post-go-live, nobody could agree on
+      what 'bad enough to roll back' meant, so the team waited while impact
+      accumulated.
 
-This is the direct operational consequence of the three change failure
-causes taught in L06. L10 post-mortem analysis will trace the root cause
-back to the change management failure that created the incident.
-"
+      This is the direct operational consequence of the three change failure
+      causes taught in L06. L10 post-mortem analysis will trace the root cause
+      back to the change management failure that created the incident.

@@ -2,6 +2,10 @@
 slug: /Business-Domain-Agent-Workflows/supply-chain-procurement
 sidebar_position: 35
 title: "Chapter 35: Supply Chain & Procurement"
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-35/supply-chain-procurement-slides.pdf"
+  title: "Supply Chain & Procurement"
+  height: 700
 description: "Build AI agents for end-to-end supply chain intelligence — vendor assessment, invoice reconciliation, supplier risk monitoring, logistics optimisation, spend analytics, and five persistent agents that run your procurement operating system continuously"
 chapter_number: 35
 part_number: 3
