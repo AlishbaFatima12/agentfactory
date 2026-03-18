@@ -1,0 +1,30 @@
+cards:
+  - front: "How many total plugin commands are available in Chapter 37's HR stack?"
+    back: "14 — 9 from the official human-resources plugin (Anthropic) and 5 from the custom hr-operations plugin (Panaversity). Zero naming collisions."
+
+  - front: "What is the install path for the official human-resources plugin?"
+    back: "Cowork → Customize → Browse plugins → search 'Human Resources' → Install"
+
+  - front: "What is the install path for the custom hr-operations plugin?"
+    back: "Cowork → Customize → + → Add marketplace from GitHub → panaversity/agentfactory-business-plugins → hr-operations → Install"
+
+  - front: "What does hr.local.md control?"
+    back: "Organisation-specific configuration for all plugin outputs — jurisdiction, policy library locations, benefits, HR contacts, onboarding structure, performance review cycle, and reference letter policy. Without it, outputs use generic defaults."
+
+  - front: "How do you verify the official plugin installed correctly?"
+    back: "Run: /policy-lookup what is annual leave — you should receive a structured response with sections for Quick Answer, Details, Exceptions, Who to Contact, and Source."
+
+  - front: "How do you verify the custom plugin installed correctly?"
+    back: "Run: /jd with a brief role description — you should receive a structured job description with an inclusive language check."
+
+  - front: "What are the five custom skills in the hr-operations plugin?"
+    back: "/jd (job descriptions), /match (talent matching), /knowledge (knowledge capture), /reference (reference letters), /offboard (offboarding processes)"
+
+  - front: "What does the Jurisdiction section of hr.local.md control?"
+    back: "Employment rights figures and statutory references in all outputs — leave entitlement, notice periods, statutory sick pay, and which country's employment law applies."
+
+  - front: "Why does the two-plugin architecture have zero naming collisions?"
+    back: "The official plugin covers nine common HR workflows. The custom plugin adds five specific capabilities the official plugin deliberately does not include. No command in one plugin duplicates a command in the other."
+
+  - front: "What should you write in hr.local.md when a field cannot be completed?"
+    back: "Write 'Not documented' (information gap), 'See [system/person] — access needed' (access gap), or 'N/A' (not applicable). Never leave a field blank — every gap is documentation debt."

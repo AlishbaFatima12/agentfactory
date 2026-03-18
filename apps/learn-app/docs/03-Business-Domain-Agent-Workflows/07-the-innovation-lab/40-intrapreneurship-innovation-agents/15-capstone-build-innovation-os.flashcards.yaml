@@ -1,0 +1,36 @@
+flashcards:
+  - question: "What is innov.local.md and why does it matter?"
+    answer: "innov.local.md is the venture context configuration file that makes all 10 plugin skills and 4 agents specific to your venture. Without it, skills produce generic outputs applicable to any business. With it, outputs are calibrated to your specific customers, assumptions, financials, and stage."
+
+  - question: "What are the six sections of innov.local.md?"
+    answer: "1. venture (context, problem, target customer, solution hypothesis, unfair advantage, stage goal); 2. key_assumptions (15–20 entries with IDs, risk levels, test status); 3. customer_profiles (one per distinct persona); 4. business_model_canvas (version-controlled); 5. financial_model (unit economics + current state + milestones); 6. competitive_landscape. Plus: fundraising OR intrapreneurship section."
+
+  - question: "What are the four questions in the innov.local.md validation test?"
+    answer: "1. Today's most important task for my venture; 2. The assumption I should be testing this week (reference A-00X ID); 3. The investor question I am least prepared to answer; 4. One thing in my business model I should be more worried about. Pass criteria: each answer is specific to your venture, not generic."
+
+  - question: "What does it mean if the validation test produces a generic answer?"
+    answer: "The section of innov.local.md that feeds that question contains placeholder or vague language. Fix the section, then re-run the specific prompt that produced the generic answer. Repeat until all 4 responses reference actual venture data."
+
+  - question: "What are the four most common gaps in innov.local.md?"
+    answer: "1. customer_profiles — pains too vague (need specific evidence, not 'customers want speed'); 2. key_assumptions — too few (need 15–20; if you have fewer than 10, you are not thinking hard enough); 3. competitive_landscape — differentiation too generic ('easier to use'); 4. financial_model — all ASSUMED (fill in any number you can actually defend)."
+
+  - question: "How many assumption entries should a well-populated innov.local.md contain?"
+    answer: "15–20. Aim for entries across all three risk tiers and all assumption categories (customer, problem, solution, business model, technical). If you have fewer than 10, you have not mapped the venture's risk surface sufficiently."
+
+  - question: "What is the version number convention for innov.local.md?"
+    answer: "Version format: 1.0 (initial), 1.1 (minor update after learning), 2.0 (major pivot or canvas redesign). The version and date fields make updates traceable — you can see how the venture's understanding evolved over time."
+
+  - question: "What exercise output feeds the key_assumptions section?"
+    answer: "Exercise 3 from Lesson 5 (Assumption Stack). The A-001 through A-010+ entries from the assumption map — with risk tiers, test methods, and current test statuses — populate directly into the key_assumptions section."
+
+  - question: "What should intrapreneurs include instead of the fundraising section?"
+    answer: "The intrapreneurship section: parent organisation and sponsor, approval pathway (current stage and next gate), internal constraints (budget, headcount, timeline), internal stakeholders (CHAMPION/NEUTRAL/RESISTANT map), and a specific success definition (measurable, not 'add value')."
+
+  - question: "Why is a stale innov.local.md as bad as no innov.local.md?"
+    answer: "Skills and agents use the context to calibrate their outputs. If the canvas still shows version 1.0 while the business has evolved to version 1.4, every canvas-related output reflects a picture of the business that no longer exists. The file must be updated after every significant learning milestone."
+
+  - question: "What is the correct test for whether a customer_profiles pain point is specific enough?"
+    answer: "It must include: the frequency (how many customers report it), the severity (impact on their work), and ideally a quantified cost or a verbatim customer quote. 'Customers want a faster process' fails. '3–5 reconciliation errors per month (9/10 CFOs); one CFO estimated 40 person-hours/month on error correction' passes."
+
+  - question: "How does the 4-question validation test work as a regular practice?"
+    answer: "Run it weekly — not just at capstone. After any significant learning (new pilot data, assumption validated/invalidated, canvas update), run all 4 questions. If any answer becomes generic after an update, you removed more specificity than you added. The test is a feedback loop, not a one-time gate."

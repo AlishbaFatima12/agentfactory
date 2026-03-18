@@ -1,0 +1,30 @@
+cards:
+  - front: "What is explicit knowledge in an HR context?"
+    back: "Knowledge that exists in written documents — handbooks, policies, process guides, org charts. Theoretically findable, but often scattered across multiple systems and written in language that is hard to understand."
+
+  - front: "What is tacit knowledge in an HR context?"
+    back: "Unwritten understandings that govern how things actually work — informal practices, real decision criteria, and operational norms held in people's heads. Not in any document. Disappears when the person leaves."
+
+  - front: "What is the 'institutional memory problem' in HR?"
+    back: "The gap between knowledge that exists in principle (explicit, written) and knowledge that is accessible in practice. Also: the risk that tacit knowledge — which governs how things actually work — walks out the door with departing employees."
+
+  - front: "What are the three HR functions that AI transforms?"
+    back: "1. Information routing — answering questions that have written answers. 2. Process execution — producing repetitive HR documents. 3. Institutional knowledge capture — turning tacit knowledge into explicit documentation before it is lost."
+
+  - front: "What is information routing in HR?"
+    back: "The function of answering employee questions that already have written answers — holiday entitlement, expense processes, policy clarifications. Research suggests it consumes a significant share of HR team time despite adding little unique value."
+
+  - front: "What does process execution mean in HR?"
+    back: "The function of producing repetitive administrative documents — offer letters, onboarding schedules, job descriptions, reference letters, performance review templates. AI produces these in minutes rather than hours, at equivalent quality."
+
+  - front: "What is institutional knowledge capture?"
+    back: "The systematic process of turning tacit organisational knowledge into explicit, searchable documentation before the people who hold it leave. The /knowledge skill and offboarding-knowledge-agent handle this in Chapter 37."
+
+  - front: "What does AI change about HR — and what does it NOT change?"
+    back: "AI eliminates administrative overhead (information routing, repetitive documents, structured knowledge capture). It does NOT handle difficult conversations, grievance investigations, terminations, medical situations, or any decision requiring human judgement and presence."
+
+  - front: "What are the three sensitivity labels in Chapter 37's HR AI outputs?"
+    back: "ROUTINE (policy summaries, JDs, general queries — standard handling), CONFIDENTIAL (offer letters, salary, performance, talent — handle per data protection policy), SENSITIVE PERSONAL DATA (medical, disciplinary, grievance — never auto-generate, always escalate)."
+
+  - front: "Why is tacit knowledge more operationally dangerous than gaps in explicit knowledge?"
+    back: "Explicit knowledge gaps are visible — you know a policy is missing because you cannot find a document. Tacit knowledge gaps are invisible until the person who holds the knowledge leaves — by which point it may be too late to capture it."

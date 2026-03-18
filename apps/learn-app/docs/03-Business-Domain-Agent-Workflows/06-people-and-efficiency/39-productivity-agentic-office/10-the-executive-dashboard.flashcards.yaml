@@ -1,0 +1,102 @@
+deck:
+  id: "ch39-10-executive-dashboard"
+  title: "The Executive Dashboard"
+  description: "Key concepts from the executive dashboard lesson — two-dashboard distinction, RAG status rules, blocker classification, and weekly project status."
+  tags: ["executive-dashboard", "RAG-status", "blockers", "progress-tracker", "agentic-office"]
+  version: 1
+
+cards:
+  - id: "ch39-10-executive-dashboard-001"
+    front: "What is the official productivity plugin's dashboard.html designed for?"
+    back: "Individual task management — interactive visual board for adding, completing, and moving tasks in TASKS.md."
+    tags: ["executive-dashboard", "two-dashboards"]
+    difficulty: "basic"
+
+  - id: "ch39-10-executive-dashboard-002"
+    front: "What is the custom agentic-office executive dashboard designed for?"
+    back: "Cross-domain portfolio briefing — RAG status per project, domain metrics, delegations, decisions. Read-only; formatted to send to a manager."
+    tags: ["executive-dashboard", "two-dashboards"]
+    difficulty: "basic"
+
+  - id: "ch39-10-executive-dashboard-003"
+    front: "What are the seven sections of the executive dashboard?"
+    back: "Headline status\nP1 projects\nP2 projects\nKey metrics (domain agents)\nOpen actions (this week)\nOpen delegations\nUpcoming decisions\nCalendar highlights"
+    tags: ["executive-dashboard", "output-structure"]
+    difficulty: "intermediate"
+
+  - id: "ch39-10-executive-dashboard-004"
+    front: "What conditions qualify a project for GREEN RAG status?"
+    back: "All milestones on schedule, no blockers, and no overdue decisions."
+    tags: ["executive-dashboard", "RAG-status"]
+    difficulty: "basic"
+
+  - id: "ch39-10-executive-dashboard-005"
+    front: "What conditions qualify a project for AMBER RAG status?"
+    back: "At least one of: a milestone at risk, a minor blocker present, or a decision needed this week."
+    tags: ["executive-dashboard", "RAG-status"]
+    difficulty: "intermediate"
+
+  - id: "ch39-10-executive-dashboard-006"
+    front: "What conditions qualify a project for RED RAG status?"
+    back: "At least one of: a milestone missed, a hard blocker, or a decision overdue."
+    tags: ["executive-dashboard", "RAG-status"]
+    difficulty: "intermediate"
+
+  - id: "ch39-10-executive-dashboard-007"
+    front: "What is the RAG milestone-slip rule?"
+    back: "Never show GREEN for a project where a milestone has slipped without explicit acknowledgement — even if recovery is in progress."
+    tags: ["executive-dashboard", "RAG-status", "milestone-slip"]
+    difficulty: "intermediate"
+
+  - id: "ch39-10-executive-dashboard-008"
+    front: "What are the three blocker types and their definitions?"
+    back: "Soft: slowing progress; workaround exists.\nHard: progress cannot continue without resolution.\nStale: open >7 days without movement."
+    tags: ["executive-dashboard", "blockers"]
+    difficulty: "intermediate"
+
+  - id: "ch39-10-executive-dashboard-009"
+    front: "What escalation action is required for a stale blocker?"
+    back: "Escalate to the next level — the designated owner has failed to resolve it; a different approach is needed."
+    tags: ["executive-dashboard", "blockers", "escalation"]
+    difficulty: "intermediate"
+
+  - id: "ch39-10-executive-dashboard-010"
+    front: "What is the 5-minute test for the executive dashboard?"
+    back: "Could a colleague tell what your week looks like from the dashboard without asking a follow-up question? If not, context is missing from work.local.md."
+    tags: ["executive-dashboard", "quality"]
+    difficulty: "basic"
+
+  - id: "ch39-10-executive-dashboard-011"
+    front: "The dashboard only shows actions due this week or overdue. Why are future actions excluded?"
+    back: "The dashboard is a focus tool, not a task dump. Including all future actions dilutes the signal — it obscures what requires attention now and makes the dashboard indistinguishable from the full task list."
+    tags: ["executive-dashboard", "output-structure"]
+    difficulty: "intermediate"
+    why: "Where should future actions that are not yet due be tracked?"
+
+  - id: "ch39-10-executive-dashboard-012"
+    front: "A team recovers from a missed milestone and is back on schedule. Should the project show GREEN?"
+    back: "The status should stay AMBER (or RED) until the recovered milestone is explicitly acknowledged and the reforecast is confirmed delivered — showing GREEN before acknowledgement erodes trust in the dashboard's accuracy."
+    tags: ["executive-dashboard", "RAG-status", "milestone-slip"]
+    difficulty: "intermediate"
+    why: "Why does silently returning to GREEN after a slip undermine confidence in future dashboard outputs?"
+
+  - id: "ch39-10-executive-dashboard-013"
+    front: "Project Nighthawk's facility blocker has been open 10 days. How does its blocker type change, and why does that matter?"
+    back: "It becomes a stale blocker because it has exceeded 7 days without resolution — meaning the original escalation approach has already failed. The type change signals that a different escalation level is now required, not just more patience."
+    tags: ["executive-dashboard", "blockers", "escalation"]
+    difficulty: "advanced"
+    why: "At what point does a hard blocker become a stale blocker, and who should own the new escalation?"
+
+  - id: "ch39-10-executive-dashboard-014"
+    front: "Why are the official plugin's dashboard.html and the custom executive dashboard complementary rather than competing?"
+    back: "They answer different questions at different levels. dashboard.html answers 'What do I need to do today?' for personal task management. The executive dashboard answers 'What is the overall status?' for portfolio communication. Neither tool can serve both purposes."
+    tags: ["executive-dashboard", "two-dashboards"]
+    difficulty: "advanced"
+    why: "What would be lost if a senior executive used only dashboard.html for weekly status reporting?"
+
+  - id: "ch39-10-executive-dashboard-015"
+    front: "Why should a user configure only the domain agent metrics_sources they have actually deployed?"
+    back: "An empty domain section is worse than no section — it signals a gap rather than cleanliness. The dashboard is designed to grow as agents are deployed; starting with configured domains and expanding later produces a cleaner, more credible output."
+    tags: ["executive-dashboard", "configuration", "domain-agents"]
+    difficulty: "intermediate"
+    why: "In what order should a user add domain agent metrics sources as they deploy new agents?"

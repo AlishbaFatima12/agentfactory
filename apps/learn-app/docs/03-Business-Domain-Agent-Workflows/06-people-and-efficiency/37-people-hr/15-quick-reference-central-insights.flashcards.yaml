@@ -1,0 +1,30 @@
+cards:
+  - front: "What is the central insight of Chapter 37?"
+    back: "Explicit knowledge becomes findable without asking a person. Tacit knowledge gets captured before it walks out the door. HR professionals are freed for the 40% that only humans can do."
+
+  - front: "Which command handles institutional knowledge capture?"
+    back: "/knowledge (custom hr-operations plugin, Panaversity) — sensitivity: CONFIDENTIAL"
+
+  - front: "Which commands are ROUTINE sensitivity in the Chapter 37 stack?"
+    back: "/policy-lookup, /onboarding, /interview-prep, /jd — these four can be shared with employees in standard handling"
+
+  - front: "Which command handles internal talent matching and succession planning?"
+    back: "/match (custom hr-operations plugin) — sensitivity: CONFIDENTIAL"
+
+  - front: "What triggers the offboarding-knowledge-agent?"
+    back: "An HRIS resignation record — the agent activates within 24 hours and begins structured knowledge capture from the departing employee"
+
+  - front: "What triggers the policy-maintenance-agent?"
+    back: "Monthly on the 1st Monday of each month, plus event-triggered when statutory rates change"
+
+  - front: "What triggers the onboarding-orchestrator?"
+    back: "An HRIS new hire record — the agent activates T-14 days before the start date and runs through Day 90"
+
+  - front: "What does the knowledge-base-agent do and when is it active?"
+    back: "Always-on 24/7 employee Q&A via Slack/Teams — answers HR questions and escalates to named contacts when queries exceed its scope"
+
+  - front: "What is the escalation rule for SENSITIVE PERSONAL DATA queries?"
+    back: "Never auto-generate output. Always escalate with a warm handoff: 'This involves [medical/disciplinary/grievance] information. Please contact [named HR contact] at [email/phone].'"
+
+  - front: "How do you update hr.local.md when statutory rates change?"
+    back: "Update the Jurisdiction section with the new rate and effective date, then verify by running /policy-lookup [relevant policy] and checking the figure matches the update."

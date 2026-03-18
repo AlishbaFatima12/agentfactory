@@ -1,0 +1,36 @@
+flashcards:
+  - question: "What are the nine building blocks of the Business Model Canvas?"
+    answer: "Customer Segments, Value Propositions, Channels, Customer Relationships, Revenue Streams, Key Resources, Key Activities, Key Partnerships, and Cost Structure."
+
+  - question: "What are the three evidence quality ratings used in a Business Model Canvas?"
+    answer: "VALIDATED (customers have paid or adopted), ANECDOTAL (a few customers suggest this but sample is small), and ASSUMED (you believe it but have not tested it)."
+
+  - question: "Why is an ASSUMED block riskier than an ANECDOTAL block?"
+    answer: "An ASSUMED block has never been tested at all — there is no customer signal, positive or negative. An ANECDOTAL block has at least some real-world evidence, even if the sample size is too small to rely on."
+
+  - question: "What does the Canvas Health Summary tell you?"
+    answer: "Which blocks are validated (low risk), partially validated (medium risk), or hypothetical (high risk). It converts nine isolated blocks into a prioritised risk register showing where execution risk is concentrated."
+
+  - question: "What is the quality standard for a strong Value Proposition?"
+    answer: "A specific outcome for a specific customer (not a feature list), a differentiated claim (why this, not the alternative), evidence it is valued (customer said it or paid for it), and a reason the customer cannot easily get it elsewhere."
+
+  - question: "Why should you stress-test canvas blocks that are HYPOTHETICAL, not VALIDATED ones?"
+    answer: "Validated blocks already have mitigation plans because you have lived through testing them. Hypothetical blocks are the assumptions you have never challenged — they carry the most unrecognised risk."
+
+  - question: "What is the difference between a Business Model Canvas and a business plan?"
+    answer: "A canvas is a living hypothesis map — every block is a current belief rated for confidence. A business plan is a static document. The canvas should be versioned and updated after every significant learning event."
+
+  - question: "Name three structural variations to explore when generating alternative business model configurations."
+    answer: "Any three of: subscription vs. usage-based vs. transaction fee; selling to enterprise vs. individual professionals; direct vs. marketplace vs. platform; free + premium vs. paid only; product-led growth vs. sales-led growth; build vs. partner vs. white-label."
+
+  - question: "Why should you never leave a canvas block empty?"
+    answer: "An empty block is a hidden risk. An ASSUMED block at least names the assumption, making it visible and schedulable for testing. Leaving a block empty hides the gap from you and anyone else reviewing the canvas."
+
+  - question: "What does the Cost Structure block feed into in your broader financial analysis?"
+    answer: "The Cost Structure block feeds directly into unit economics in Lesson 9 — specifically the monthly fixed cost total and the unit cost per customer, which together determine the breakeven customer count."
+
+  - question: "What does VALIDATED evidence quality require?"
+    answer: "Customers must have paid, adopted, or demonstrated the belief in their behaviour — not just said they agree with it. A customer saying 'that sounds useful' is ANECDOTAL, not VALIDATED."
+
+  - question: "Why should a canvas be versioned (e.g. Version 1.2, post-MVP)?"
+    answer: "Versioning signals that the canvas is a living document, not a final answer. It records what was believed at a specific stage (post-MVP, post-pivot, post-fundraise), making it possible to track how the business model evolved and where assumptions changed."

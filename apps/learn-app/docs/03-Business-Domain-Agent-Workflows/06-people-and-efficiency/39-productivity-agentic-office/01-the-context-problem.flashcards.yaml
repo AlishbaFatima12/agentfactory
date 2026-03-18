@@ -1,0 +1,91 @@
+deck:
+  id: "ch39-01-context-problem"
+  title: "The Context Problem"
+  description: "The four AI context failure modes that limit every professional AI assistant, and why the gap between generic and contextual output is an information architecture problem, not an intelligence problem."
+  tags: ["context-problem", "failure-modes", "workplace-memory", "agentic-office"]
+  version: 1
+
+cards:
+  - id: "ch39-01-context-problem-001"
+    front: "What is the Context Problem in AI-assisted professional work?"
+    back: "The gap between how a sophisticated AI answers in the abstract vs. how a knowledgeable colleague answers in context."
+    tags: ["context-problem", "foundations"]
+    difficulty: "basic"
+
+  - id: "ch39-01-context-problem-002"
+    front: "What are the four Context Failure Modes that limit AI assistants in professional settings?"
+    back: "1. Terminology Blindness\n2. People Anonymity\n3. Project Amnesia\n4. Priority Blindness"
+    tags: ["context-problem", "failure-modes"]
+    difficulty: "basic"
+
+  - id: "ch39-01-context-problem-003"
+    front: "What is Terminology Blindness in the context of AI assistants?"
+    back: "AI uses generic vocabulary when the organisation has specific internal terms."
+    tags: ["failure-modes", "terminology"]
+    difficulty: "basic"
+
+  - id: "ch39-01-context-problem-004"
+    front: "What is People Anonymity as a context failure mode?"
+    back: "AI has no knowledge of who stakeholders are or how to work with them."
+    tags: ["failure-modes", "people-memory"]
+    difficulty: "basic"
+
+  - id: "ch39-01-context-problem-005"
+    front: "What is Project Amnesia as a context failure mode?"
+    back: "AI has no awareness of what is in flight, what has been decided, or what is at risk."
+    tags: ["failure-modes", "project-memory"]
+    difficulty: "basic"
+
+  - id: "ch39-01-context-problem-006"
+    front: "What is Priority Blindness as a context failure mode?"
+    back: "AI treats all requests with equal urgency regardless of organisational priorities."
+    tags: ["failure-modes", "priority"]
+    difficulty: "basic"
+
+  - id: "ch39-01-context-problem-007"
+    front: "How does an experienced colleague differ from a brilliant new hire, according to Chapter 39's framing?"
+    back: "Not in intelligence — in accumulated organisational context: who to talk to, how to frame things, what the unwritten rules are."
+    tags: ["context-problem", "foundations"]
+    difficulty: "intermediate"
+    why: "Why does this distinction matter for how we solve the Context Problem?"
+
+  - id: "ch39-01-context-problem-008"
+    front: "Why is the Context Problem described as an architecture problem rather than an intelligence problem?"
+    back: "Claude's reasoning is not the bottleneck. The bottleneck is structured context. Better intelligence without context still starts every session from zero."
+    tags: ["context-problem", "architecture"]
+    difficulty: "intermediate"
+    why: "How does framing this as an architecture problem change what the solution looks like?"
+
+  - id: "ch39-01-context-problem-009"
+    front: "Why do better prompts fail to solve the Context Problem structurally?"
+    back: "Better prompts help one-off requests but every session still starts from zero. Persistent memory is required — prompts are a workaround, not a fix."
+    tags: ["context-problem", "architecture"]
+    difficulty: "intermediate"
+    why: "What would a professional's week look like if they relied only on better prompts rather than persistent memory?"
+
+  - id: "ch39-01-context-problem-010"
+    front: "Terminology Blindness doesn't stop work from getting done. Why is it still costly?"
+    back: "It adds a translation layer to every output — continuous time spent manually editing AI vocabulary into the organisation's actual language."
+    tags: ["failure-modes", "terminology"]
+    difficulty: "intermediate"
+    why: "How would you calculate the weekly time cost of Terminology Blindness in your own work?"
+
+  - id: "ch39-01-context-problem-011"
+    front: "Why is People Anonymity described as the most operationally expensive failure mode for senior communicators?"
+    back: "Senior professionals communicate constantly on behalf of their organisation. Without stakeholder memory, every message to every person starts from scratch — at scale, this is enormous overhead."
+    tags: ["failure-modes", "people-memory"]
+    difficulty: "advanced"
+    why: "How would a Digital Chief of Staff behave differently if People Anonymity were fully closed?"
+
+  - id: "ch39-01-context-problem-012"
+    front: "What does work.local.md address, according to Chapter 39's architecture?"
+    back: "All four context failure modes: terminology, people, projects, and priority blindness."
+    tags: ["workplace-memory", "work-local-md"]
+    difficulty: "basic"
+
+  - id: "ch39-01-context-problem-013"
+    front: "Why is Priority Blindness described as the most subtle of the four failure modes?"
+    back: "It is invisible in any single output — Claude produces a response that looks fine. The failure only shows over time as P1 and P3 work receive identical effort and urgency."
+    tags: ["failure-modes", "priority"]
+    difficulty: "advanced"
+    why: "How would you test whether Priority Blindness is affecting your AI-assisted work right now?"

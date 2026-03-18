@@ -1,0 +1,39 @@
+title: "Three Operational Failure Modes"
+chapter: 38
+lesson: 1
+flashcards:
+  - front: "What is the Operations Intelligence Gap?"
+    back: "The delta between what an organisation should know about its own operations and what it actually knows. Almost every operational failure — cost overrun, process breakdown, compliance gap, change disaster — traces back to this gap."
+
+  - front: "What is Vendor Sprawl?"
+    back: "The irrational accumulation of overlapping, unused, and auto-renewing vendor contracts. Caused by decentralised purchasing decisions with no cross-departmental view of the vendor portfolio. Results in overspend, missed renewal opportunities, and unknown-usage subscriptions."
+
+  - front: "What is Process Rot?"
+    back: "The decay of documented processes until they no longer reflect operational reality. Each system change, team restructure, or tool replacement widens the gap between the SOP and what people actually do. Becomes critical when experienced staff leave and take undocumented knowledge with them."
+
+  - front: "What is Compliance Drift?"
+    back: "The gradual divergence between obligations the organisation believes it is meeting and controls that are actually current. Caused by changes in technology, staff, and process that are applied to operations but not to the compliance register. Risk: audit surprise when evidence gaps are discovered."
+
+  - front: "What are the three Operational Failure Modes?"
+    back: "1. Vendor Sprawl — invisible, accumulated vendor complexity and overspend. 2. Process Rot — documented processes that no longer match operational reality. 3. Compliance Drift — regulatory obligations that were once tracked but whose controls have since lapsed."
+
+  - front: "Why does Vendor Sprawl persist in organisations?"
+    back: "Because purchasing decisions are made departmentally without a cross-departmental view. Renewal dates are not tracked systematically. The person who requested a tool may have left. Nobody has assembled a complete, current view of the entire vendor portfolio."
+
+  - front: "Why does Process Rot occur even in well-managed organisations?"
+    back: "Because operational reality changes continuously (new systems, team restructures, regulatory updates) while documentation is only updated episodically. The gap widens with every unlogged change. Undocumented knowledge in individuals' heads is the most dangerous form."
+
+  - front: "What is the shared root cause of all three operational failure modes?"
+    back: "Invisibility. Vendor Sprawl is invisible vendor spend and overlap. Process Rot is invisible process decay. Compliance Drift is invisible obligation gaps. Making the invisible visible — the core purpose of operations intelligence — addresses all three."
+
+  - front: "What plugin command addresses Vendor Sprawl directly?"
+    back: "/vendor-review — runs vendor portfolio audits, generates SLA scorecards, identifies renewal windows and rationalisation opportunities. The vendor-watchdog agent monitors the portfolio continuously between audits."
+
+  - front: "What is the difference between compliance non-compliance and compliance drift?"
+    back: "Non-compliance means deliberately or knowingly failing to meet an obligation. Compliance drift means the organisation does not know with certainty whether all obligations are fully met — the control map is incomplete or out of date. The risk is audit surprise rather than intentional violation."
+
+  - front: "What does 'operations is an intelligence function' mean?"
+    back: "Operations' primary job is to make the invisible visible — to give leadership complete, accurate, current information about vendor spend, process health, compliance status, and operational risk. Without that intelligence, decisions are made on incomplete information."
+
+  - front: "Which lesson addresses each failure mode in Chapter 38?"
+    back: "Vendor Sprawl → L03 (vendor audit), L04 (contract obligations). Process Rot → L05 (SOPs), L06 (change impact), L10 (incident RCA). Compliance Drift → L07 (compliance map), L08 (audit readiness). All three → L09 (risk register), L11 (metrics), L12 (agents), L13 (intelligence brief)."

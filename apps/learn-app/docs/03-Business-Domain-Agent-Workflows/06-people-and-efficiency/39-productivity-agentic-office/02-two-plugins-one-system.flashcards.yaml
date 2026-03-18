@@ -1,0 +1,84 @@
+deck:
+  id: "ch39-02-two-plugins"
+  title: "Two Plugins, One System"
+  description: "The division of responsibility between Anthropic's official Productivity plugin and the Panaversity Agentic Office plugin — what each provides, why both are required, and how they work together without trigger overlap."
+  tags: ["plugins", "productivity-plugin", "agentic-office", "installation"]
+  version: 1
+
+cards:
+  - id: "ch39-02-two-plugins-001"
+    front: "What four files does /productivity:start create?"
+    back: "TASKS.md\nCLAUDE.md\nmemory/ directory\ndashboard.html"
+    tags: ["productivity-plugin", "installation"]
+    difficulty: "basic"
+
+  - id: "ch39-02-two-plugins-002"
+    front: "What does /agentic-office:setup create?"
+    back: "work.local.md — the four-layer workplace memory template."
+    tags: ["agentic-office", "installation"]
+    difficulty: "basic"
+
+  - id: "ch39-02-two-plugins-003"
+    front: "What natural language triggers does the official Productivity plugin own exclusively?"
+    back: "task, to-do, remember, who is, start, update, sync"
+    tags: ["plugins", "trigger-overlap"]
+    difficulty: "intermediate"
+
+  - id: "ch39-02-two-plugins-004"
+    front: "What natural language triggers does the Agentic Office plugin use instead of the official plugin's reserved words?"
+    back: "brain dump, prioritise, delegate, daily digest, meeting prep, workplace memory, person brief"
+    tags: ["plugins", "trigger-overlap"]
+    difficulty: "intermediate"
+
+  - id: "ch39-02-two-plugins-005"
+    front: "Which commands verify that each plugin is active after installation?"
+    back: "/productivity:update confirms the official plugin.\n/agentic-office:workplace-context confirms the custom plugin."
+    tags: ["plugins", "installation", "verification"]
+    difficulty: "basic"
+
+  - id: "ch39-02-two-plugins-006"
+    front: "What type of layer does the official Productivity plugin provide vs. the Agentic Office plugin?"
+    back: "Official: storage layer (TASKS.md, CLAUDE.md, memory/, dashboard.html).\nCustom: intelligence layer (9 skills, 4 agents, work.local.md)."
+    tags: ["plugins", "architecture"]
+    difficulty: "basic"
+
+  - id: "ch39-02-two-plugins-007"
+    front: "Why do Chapter 39's two plugins use non-overlapping natural language triggers rather than sharing vocabulary?"
+    back: "If both plugins respond to the same trigger words they compete for input, producing unpredictable routing. Separating vocabularies guarantees deterministic behaviour — each input reaches exactly one plugin."
+    tags: ["plugins", "trigger-overlap", "architecture"]
+    difficulty: "intermediate"
+    why: "What would go wrong in practice if both plugins responded to the word 'task'?"
+
+  - id: "ch39-02-two-plugins-008"
+    front: "How does CLAUDE.md differ in purpose from work.local.md?"
+    back: "CLAUDE.md is the official plugin's hot cache — recent session context for fast retrieval. work.local.md is the custom plugin's structured professional memory — enduring organisational context that persists long-term."
+    tags: ["plugins", "memory-architecture"]
+    difficulty: "intermediate"
+    why: "Why do both files need to coexist rather than one replacing the other?"
+
+  - id: "ch39-02-two-plugins-009"
+    front: "Why is skipping the context questions after /productivity:start a mistake?"
+    back: "The questions seed CLAUDE.md with your role, team, and priorities. Without them, the official plugin's hot cache starts empty — the first sessions produce generic outputs when they could be calibrated immediately."
+    tags: ["productivity-plugin", "installation"]
+    difficulty: "intermediate"
+    why: "What is the cost of starting with an empty CLAUDE.md vs. a seeded one?"
+
+  - id: "ch39-02-two-plugins-010"
+    front: "A colleague suggests they only need the Agentic Office plugin — it does more than the official one. What is wrong with this reasoning?"
+    back: "The custom plugin's intelligence layer depends on the official plugin's infrastructure. Without TASKS.md there is no task store for task-intelligence to reason about. Without CLAUDE.md, the session hot cache is absent. Both layers are required."
+    tags: ["plugins", "architecture"]
+    difficulty: "advanced"
+    why: "How would you explain the storage-intelligence dependency to someone who has only used all-in-one productivity tools?"
+
+  - id: "ch39-02-two-plugins-011"
+    front: "What is dashboard.html and what is it not?"
+    back: "A local HTML file providing a board view of tasks and memory. Not a cloud service — it reflects local state only and opens in the browser."
+    tags: ["productivity-plugin", "dashboard"]
+    difficulty: "basic"
+
+  - id: "ch39-02-two-plugins-012"
+    front: "Why does work.local.md start empty after /agentic-office:setup, and when does it become useful?"
+    back: "Setup creates the template structure, not content. It becomes useful as Layers 1-4 are populated in Lessons 3-5 — an empty template produces generic outputs; a rich one produces colleague-quality outputs."
+    tags: ["agentic-office", "work-local-md"]
+    difficulty: "intermediate"
+    why: "How would you explain to a sceptic that the 2-4 hours spent filling work.local.md is a worthwhile investment?"

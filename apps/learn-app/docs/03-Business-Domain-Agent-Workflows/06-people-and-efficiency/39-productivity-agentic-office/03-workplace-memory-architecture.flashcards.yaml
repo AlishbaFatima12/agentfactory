@@ -1,0 +1,97 @@
+deck:
+  id: "ch39-03-workplace-memory"
+  title: "Workplace Memory Architecture"
+  description: "The four-layer memory model in work.local.md — what each layer contains, which context failure mode it closes, and how to build Layers 1 (Personal) and 4 (Organisational) to produce colleague-quality AI outputs."
+  tags: ["workplace-memory", "work-local-md", "memory-architecture", "agentic-office"]
+  version: 1
+
+cards:
+  - id: "ch39-03-workplace-memory-001"
+    front: "What are the four layers of the Workplace Memory Architecture in work.local.md?"
+    back: "1. Personal\n2. Team\n3. Projects\n4. Organisational"
+    tags: ["memory-architecture", "foundations"]
+    difficulty: "basic"
+
+  - id: "ch39-03-workplace-memory-002"
+    front: "Which context failure mode does each memory layer close?"
+    back: "Layer 1 (Personal): Priority Blindness (partial)\nLayer 2 (Team): People Anonymity\nLayer 3 (Projects): Project Amnesia\nLayer 4 (Organisational): Terminology Blindness"
+    tags: ["memory-architecture", "failure-modes"]
+    difficulty: "intermediate"
+
+  - id: "ch39-03-workplace-memory-003"
+    front: "What does Layer 1 (Personal) of work.local.md contain?"
+    back: "Working style, decision-making preferences, current focus, working hours, primary tools, communication preferences."
+    tags: ["layer-1-personal", "work-local-md"]
+    difficulty: "basic"
+
+  - id: "ch39-03-workplace-memory-004"
+    front: "What does Layer 4 (Organisational) of work.local.md contain?"
+    back: "Terminology dictionary, meeting rhythm, culture values, unwritten rules."
+    tags: ["layer-4-organisational", "work-local-md"]
+    difficulty: "basic"
+
+  - id: "ch39-03-workplace-memory-005"
+    front: "What four elements must each terminology dictionary entry include?"
+    back: "Definition, when to USE the term, when NOT to use it, related terms or synonyms."
+    tags: ["layer-4-organisational", "terminology"]
+    difficulty: "intermediate"
+
+  - id: "ch39-03-workplace-memory-006"
+    front: "What is the test for whether an unwritten rule belongs in work.local.md?"
+    back: "\"Would an AI violating this rule in public output cause a problem?\" If yes, it belongs in the file."
+    tags: ["layer-4-organisational", "unwritten-rules"]
+    difficulty: "intermediate"
+
+  - id: "ch39-03-workplace-memory-007"
+    front: "What verification query should you run after populating Layers 1 and 4 of work.local.md?"
+    back: "Ask /agentic-office:workplace-context: \"Describe our organisation using only what you know from work.local.md.\""
+    tags: ["workplace-context", "verification"]
+    difficulty: "basic"
+
+  - id: "ch39-03-workplace-memory-008"
+    front: "What is the recommended number of entries to target in the terminology dictionary?"
+    back: "20-50 entries, starting with terms that would confuse an outsider."
+    tags: ["layer-4-organisational", "terminology"]
+    difficulty: "basic"
+
+  - id: "ch39-03-workplace-memory-009"
+    front: "Why is an aspirational Layer 1 useless compared to an honest one?"
+    back: "Layer 1 calibrates AI output to the person described. An aspirational entry describes someone who doesn't exist — Claude optimises for a fictional professional, producing outputs miscalibrated to how you actually work."
+    tags: ["layer-1-personal", "quality"]
+    difficulty: "intermediate"
+    why: "How would you know if your Layer 1 is aspirational rather than accurate?"
+
+  - id: "ch39-03-workplace-memory-010"
+    front: "Why is the unwritten rules section described as the highest-value, most underfilled section of work.local.md?"
+    back: "Unwritten rules are what every colleague knows but nothing documents. AI violates them without knowing. They feel too obvious to write — but obvious to insiders is invisible to AI."
+    tags: ["layer-4-organisational", "unwritten-rules"]
+    difficulty: "intermediate"
+    why: "What would be the consequence of an AI violating one of your organisation's unwritten rules in an external communication?"
+
+  - id: "ch39-03-workplace-memory-011"
+    front: "Why does the terminology dictionary's 'Not:' field matter as much as the definition itself?"
+    back: "Knowing what a term means is not enough — using an internal codename in external communications is a professional error. The 'Not:' field tells Claude where the term must never appear, preventing outputs that embarrass the sender."
+    tags: ["layer-4-organisational", "terminology"]
+    difficulty: "advanced"
+    why: "Can you think of an internal term in your organisation that would be embarrassing if it appeared in a client-facing document?"
+
+  - id: "ch39-03-workplace-memory-012"
+    front: "How do you evaluate whether your Layer 1 and 4 are working correctly after populating them?"
+    back: "Run the workplace-context query and count internal terms appearing unprompted. Check that format preferences match your actual style. Confirm the response acknowledges Layers 2 and 3 as still missing."
+    tags: ["workplace-context", "verification", "quality"]
+    difficulty: "intermediate"
+    why: "If fewer than three internal terms appear unprompted, what does this indicate about your terminology dictionary?"
+
+  - id: "ch39-03-workplace-memory-013"
+    front: "A new team member suggests that filling in work.local.md is just documentation overhead. How would you challenge this framing?"
+    back: "Documentation is static reference. work.local.md is active context — it changes every AI output immediately, automatically, for every session. The investment is 2-4 hours once; the return is calibrated outputs every day."
+    tags: ["work-local-md", "foundations"]
+    difficulty: "advanced"
+    why: "What analogy would you use to explain why persistent memory changes the value equation for AI-assisted work?"
+
+  - id: "ch39-03-workplace-memory-014"
+    front: "Why does work.local.md persist organisational context across sessions while CLAUDE.md does not serve the same function?"
+    back: "CLAUDE.md is a hot cache for recent session state — it is temporary and session-oriented. work.local.md encodes enduring organisational knowledge that does not change week to week. Different scopes require different files."
+    tags: ["memory-architecture", "work-local-md"]
+    difficulty: "intermediate"
+    why: "What type of information would be wrong to put in work.local.md because it belongs in CLAUDE.md instead?"

@@ -1,0 +1,30 @@
+cards:
+  - front: "What are the three onboarding failure modes?"
+    back: "Information Dump (too much content, too fast), Administrative Bottleneck (access/equipment not ready on Day 1), and Invisible Ramp (no defined success criteria at 30/60/90 days)"
+
+  - front: "What distinguishes a weak onboarding success criterion from a strong one?"
+    back: "Strong criteria are observable, specific to the role, and verifiable in a 30-minute conversation — the new hire can self-assess without asking their manager. Weak criteria are vague ('understands the culture') or describe tasks rather than outcomes ('completes compliance training')"
+
+  - front: "What is the Invisible Ramp failure mode?"
+    back: "A new hire has no defined success criteria at 30, 60, or 90 days — they may be productively busy but cannot tell whether they are performing against what matters. The organisation has a 30-60-90 plan but the milestones are aspirational, not measurable"
+
+  - front: "What does the pre-boarding checklist in /onboarding cover — and who owns each section?"
+    back: "Three owner groups: HR/IT (laptop, system access, HRIS record, benefits pack, security training scheduling), Manager (team intro email, first-week schedule blocked, buddy assigned, 30-60-90 plan ready, first assignment identified), and both (Day 1 logistics confirmed)"
+
+  - front: "How does the 30-day expectation differ between a Junior and a Senior hire in the same role family?"
+    back: "Junior: tool fluency and supervised tasks. Senior: first stakeholder relationships established and independent work scoping already underway. Senior hires who receive junior onboarding treatment often disengage within 60 days"
+
+  - front: "What is the self-assessment test for a strong 30-day success criterion?"
+    back: "Could the new hire assess themselves against it on Day 30 without asking their manager whether it counts? If yes, it is strong. If they need interpretation or manager confirmation, it is weak"
+
+  - front: "What is the recommended maximum number of structured context sessions for Week 1 of onboarding?"
+    back: "Three to four — enough to orient without overwhelming. More than four sessions in Week 1 is a signal the programme has fallen into the Information Dump failure mode"
+
+  - front: "What should a manager briefing from /onboarding include?"
+    back: "What the new hire brings from prior experience, what will be genuinely new to them, the single most important action the manager should take in Week 1, and the three 30-day success criteria in strong (observable, verifiable) format"
+
+  - front: "Why is the Administrative Bottleneck failure mode particularly damaging on Day 1?"
+    back: "A new hire who cannot access their tools or start their actual work on Day 1 receives the message that the organisation was not ready for them — which signals a lack of value for their time and undermines the psychological contract at the most critical moment of the employment relationship"
+
+  - front: "What does /onboarding require from the user to generate a useful, role-specific plan?"
+    back: "New hire name and role, department, start date, manager, location and working pattern, prior experience (what they know and what is new to them), and key projects or priorities for the first 90 days"

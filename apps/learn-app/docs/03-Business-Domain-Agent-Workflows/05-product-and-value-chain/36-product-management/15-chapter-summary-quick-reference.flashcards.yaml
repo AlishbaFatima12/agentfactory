@@ -1,0 +1,35 @@
+- question: "Which plugin provides /sprint-planning, /stakeholder-update, and /metrics-review?"
+  answer: "The official product-management plugin (Layer 1). These are foundational PM workflow commands maintained by Anthropic."
+
+- question: "Which plugin provides /brief, /retro, /prioritise, and /stories?"
+  answer: "The custom product-strategy plugin (Layer 2). These fill workflow gaps the official plugin does not cover — discovery, retrospectives, prioritisation, and story decomposition."
+
+- question: "What are the 7 commands in the official product-management plugin?"
+  answer: "/write-spec, /roadmap-update, /synthesize-research, /stakeholder-update, /competitive-brief, /metrics-review, /sprint-planning"
+
+- question: "What are the 6 commands in the custom product-strategy plugin?"
+  answer: "/brief, /interview, /prd, /stories, /prioritise, /retro"
+
+- question: "What is the PM workflow cycle order?"
+  answer: "Discover (/brief) → Research (/interview, /synthesize-research) → Define (/write-spec, /prd, /stories) → Plan (/roadmap-update, /prioritise) → Execute (/sprint-planning) → Communicate (/stakeholder-update) → Measure (/metrics-review) → Reflect (/retro) → feeds back to Discover"
+
+- question: "What are the three PM agents and their monitoring schedules?"
+  answer: "research-intelligence (Monday weekly digest), stakeholder-update (Friday weekly queue + triggered), roadmap-coherence (Wednesday weekly three-check report)"
+
+- question: "What does the ROAM framework stand for, and which command uses it?"
+  answer: "Resolved, Owned, Accepted, Mitigated. Used in /stakeholder-update for risk communication — every risk in a stakeholder update should be ROAM-classified to specify what is being done about it."
+
+- question: "What are the six prioritisation frameworks taught in Chapter 36?"
+  answer: "RICE (Reach × Impact × Confidence ÷ Effort), MoSCoW (Must/Should/Could/Won't), ICE (Impact × Confidence × Ease), Now/Next/Later (roadmap horizons), ROAM (risk management), 70/20/10 (roadmap theme allocation)"
+
+- question: "What is the 70/20/10 roadmap allocation rule?"
+  answer: "70% of roadmap capacity to core product improvement, 20% to expansion into adjacent use cases, 10% to exploratory bets. This prevents any single theme from consuming the full roadmap and ensures the product improves in the core while making bets on the future."
+
+- question: "What is product.local.md, and which lesson introduces it?"
+  answer: "The product context configuration file that makes every command specific to your product. It includes product identity, personas, team structure, stakeholder map, terminology glossary, and quality standards (including PM process rules accumulated from retrospectives). Introduced in L02, updated throughout the chapter."
+
+- question: "What is the central thesis of Chapter 36 about AI and PM judgment?"
+  answer: "The PM's job is judgment. AI removes the bottleneck between judgment and the documentation that expresses it. The agent writes the first draft. The PM reviews, directs, and refines. The document reflects the PM's judgment — not the agent's defaults."
+
+- question: "Which command is used to deploy persistent agents in Cowork?"
+  answer: "/schedule — used to configure and deploy each PM agent with its monitoring schedule, data source connections, and escalation thresholds."

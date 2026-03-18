@@ -1,0 +1,36 @@
+flashcards:
+  - question: "What makes an ICP different from a demographic target description?"
+    answer: "An ICP includes a buying trigger — the specific event that makes the prospect ready to buy RIGHT NOW. A demographic description ('CFOs at manufacturing companies') tells you who might buy someday. A trigger ('CFO who just had an audit finding') tells you who is ready to buy this week."
+
+  - question: "What are the five components of a complete ICP?"
+    answer: "Company profile (sector, size, geography, technology, structure), Person profile (role, seniority, priorities, buying process), Buying trigger (specific event creating urgency), Signals (how to identify them in the wild), and NOT a fit (explicit exclusions with rationale)."
+
+  - question: "What is the positioning statement format?"
+    answer: "For: [specific person] / Who: [problem from discovery language] / Our product: [category] / That: [primary outcome] / Unlike: [primary alternative] / We: [specific differentiating claim]."
+
+  - question: "What three criteria should be used to rank channels?"
+    answer: "CAC efficiency (cost per acquired customer), Scalability (can it grow without the founder's time?), and Speed (how quickly does it produce results?)."
+
+  - question: "What is the rule for launching multiple channels simultaneously?"
+    answer: "Start with one channel. Add the second only when the first is producing measurable results. Launching multiple channels simultaneously means none gets enough focus to optimise."
+
+  - question: "Why is founder-led outreach recommended as the first GTM channel?"
+    answer: "Not because it is cheapest, but because it teaches ICP refinement — you learn who actually buys and why. It also builds the sales playbook that future hires will use. You cannot hand a playbook to an SDR if you have never run the process yourself."
+
+  - question: "What is value-based pricing and what is the <10% rule?"
+    answer: "Value-based pricing sets price based on the value delivered to the customer, not cost or competitor pricing. The <10% rule: your price should be less than 10% of the annual value you deliver. If you save a customer $50,000/year, you can charge up to $5,000/year and still have a strong ROI story."
+
+  - question: "Why are paid trials preferred over free trials for B2B SaaS?"
+    answer: "Even a nominal payment (50% of list price) filters for customers who have a problem urgent enough to pay to solve. Free trials attract browsers. Customers who pay from day one adopt more consistently and churn less than customers who entered through a free trial."
+
+  - question: "What is the discounting policy rule and why?"
+    answer: "Annual prepay only (1–2 months free for annual commitment); no ad hoc discounting. Discount-seeking customers churn faster and train the market to wait for deals. Discounting before signing is a red flag that the customer does not have a trigger-level problem."
+
+  - question: "What should happen at the Day 30 gate in a 90-day GTM calendar?"
+    answer: "Assess a specific measurable metric (e.g. response rate on outreach, demos booked). If the metric is above threshold: continue and expand. If below: change the message, ICP targeting, or channel — do NOT add a second channel until the first one is working."
+
+  - question: "What is the Day 60 gate testing for?"
+    answer: "Whether the venture is on track for the Day 90 customer target. If yes, activate the second channel. If no, investigate the bottleneck — is it leads (ICP targeting), conversions (message or demo), or trials (product)? Do not proceed to channel expansion while the primary channel has unresolved failure modes."
+
+  - question: "What is the seven-step sales process for a B2B SaaS?"
+    answer: "1. Identify (prospect list), 2. Qualify (trigger signals), 3. Outreach (personalised message), 4. Demo (show three key things), 5. Trial offer (paid; LOI required), 6. Onboarding (daily check-in week 1; adoption metric), 7. Conversion (close at annual contract when adoption is confirmed)."

@@ -1,0 +1,41 @@
+- question: "What is the fundamental difference between a solution-prescriptive and a problem-focused feature request?"
+  answer: "A solution-prescriptive request names what to build ('add a dashboard'). A problem-focused request describes what is wrong ('enterprise customers cannot demonstrate ROI'). The PM's job is to convert the first into the second before committing resources."
+
+- question: "What is the core rule of a Problem Brief?"
+  answer: "A Problem Brief contains NO solution proposals. Solutions too early anchor thinking and prevent the team from exploring the full problem space. If you already have solution ideas, keep them out of the brief."
+
+- question: "What are the seven sections of a Problem Brief?"
+  answer: "THE PROBLEM, WHO IS AFFECTED, EVIDENCE, IMPACT OF NOT SOLVING, WHAT WE DO NOT KNOW YET, HYPOTHESIS (optional), and DISCOVERY QUESTIONS."
+
+- question: "Why is the WHAT WE DO NOT KNOW section the most important part of a problem brief?"
+  answer: "It makes uncertainty explicit and defines the discovery work needed before a spec can be written. A brief without this section is a solution proposal wearing a problem brief's clothing. Acknowledging uncertainty is strength, not weakness."
+
+- question: "What are the three brief types supported by the /brief command?"
+  answer: "Problem Brief (what is wrong?), Discovery Brief (how will we investigate?), and Initiative Brief (should we commit resources?). They progress sequentially from framing through research scoping to stakeholder alignment."
+
+- question: "What is the NEVER DO rule about Discovery Briefs?"
+  answer: "Never write a Discovery Brief without explicit discovery questions that have clear, answerable answers. 'Explore user needs' is too vague — each question must name what to investigate and how."
+
+- question: "How do you detect solution language disguised as problem description?"
+  answer: "Look for verbs that imply a feature: 'view', 'access', 'filter', 'configure', 'enable'. In a problem statement, the verbs should describe current pain: 'wait', 'lose', 'miss', 'cannot', 'struggle'."
+
+- question: "When is it acceptable to include a hypothesis in a Problem Brief?"
+  answer: "Only when it is clearly framed as a testable hypothesis: 'We believe that X will solve Y for Z. We will know this is true when [measurable outcome].' It must not be presented as a requirement or conclusion."
+
+- question: "What is the progression from Problem Brief to PRD?"
+  answer: "Problem Brief (what is wrong?) then Discovery Brief (how will we investigate?) then Initiative Brief (should we commit?) then PRD (what will we build?). Each document answers the question the previous one raised."
+
+- question: "What makes a discovery question specific enough to be actionable?"
+  answer: "It names the research method (interview, data pull, competitive analysis), the source (who to talk to or what data to examine), and produces an answer that is verifiable. 'How many hours per week do analysts spend resolving conflicts?' is actionable. 'Understand user needs' is not."
+
+- question: "What is the risk of skipping the problem brief and going straight to a spec?"
+  answer: "You commit to a solution before understanding the problem. Teams that skip this step typically discover the misalignment 6-8 weeks after launch when adoption data shows the feature is not solving the actual issue."
+
+- question: "What should a PM do when the AI-generated brief contains solution language in THE PROBLEM section?"
+  answer: "Identify the solution language specifically, then prompt the agent to rewrite the section describing only the observable pain and current behaviour — no feature names, no 'users need a way to...' phrasing."
+
+- question: "Which plugin provides the /brief command?"
+  answer: "The custom product-strategy plugin (Layer 2). It is not part of the official product-management plugin."
+
+- question: "Every /brief output must end with what?"
+  answer: "A clear 'decision needed' or 'next step'. A brief without an explicit next action leaves the team with a document but no direction. If the AI omits this, prompt it to add one."

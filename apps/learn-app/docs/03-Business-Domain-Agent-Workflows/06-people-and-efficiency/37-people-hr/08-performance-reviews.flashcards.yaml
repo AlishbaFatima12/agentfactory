@@ -1,0 +1,30 @@
+cards:
+  - front: "What are the four quality standards for performance reviews?"
+    back: "1. Strengths: specific and evidenced (cite observable outcomes, not impressions). 2. Development areas: behavioural, not personality. 3. Development areas: maximum 2. 4. Career development: honest and specific about conditions and timeline."
+
+  - front: "What is the vague-to-specific conversion pattern for development areas?"
+    back: "Observation (specific, observable behaviour) → Why it matters at this role level → Development suggestion (specific action with timeline). The pattern converts impressions ('not proactive') into actionable feedback ('took on assigned tasks but did not initiate; at tech lead level, initiative is required')."
+
+  - front: "What distinguishes behavioural feedback from personality feedback?"
+    back: "Behavioural feedback describes what happened (observable, verifiable, specific). Personality feedback describes who the person is (fixed, unactionable, legally risky). Test: could the employee dispute the feedback in a tribunal? Personality feedback fails this test; behavioural feedback survives it."
+
+  - front: "What are the three /performance-review modes and when is each used?"
+    back: "self-assessment (employee documents their own contributions before manager writes review), manager [name] (converts manager notes into structured review), calibration (organises team ratings with distribution and discussion points before the calibration session)"
+
+  - front: "Why is maximum 2 development areas a hard rule?"
+    back: "More than 2 development areas overwhelms the employee (cannot meaningfully develop in 6 areas simultaneously) and signals the manager has not done the prioritisation work. The manager's judgment call is: which 1-2 areas will have the highest impact on performance and career?"
+
+  - front: "What four rules govern 360-degree feedback synthesis?"
+    back: "Flag anonymity risk when pool < 5 (de-anonymisation by elimination), weight by relationship type (direct report vs peer vs cross-functional measure different things), identify frequency not just themes (one mention = data point; five mentions = signal), distinguish direction (consistent praise vs consistent concern vs mixed signals)"
+
+  - front: "What is the anonymity risk in 360° feedback for small teams?"
+    back: "In a team of 4, if all four team members submit feedback, the employee can identify each reviewer by elimination — the anonymity is illusory. Flag this risk before synthesising and sharing feedback. The synthesis itself may be shareable; individual responses should not be."
+
+  - front: "What is the calibration prep mode of /performance-review used for?"
+    back: "Generating a calibration document for the pre-calibration session: team overview table with proposed ratings, rating distribution against company target bands (e.g., ~15-20% exceeds, ~60-70% meets), discussion points for borderline cases, and promotion candidates with supporting evidence."
+
+  - front: "Why is career development honesty critical in a performance review?"
+    back: "Vague encouragement ('great potential') creates false expectations. If a promised career path does not materialise, the employee leaves — often citing the review as the point at which trust broke down. Honest, conditional career development ('achievable in 12 months if Q3 assessment is positive') sets expectations the organisation can actually deliver against."
+
+  - front: "What sensitivity label does a performance review carry, and why?"
+    back: "CONFIDENTIAL — performance reviews contain personal assessment data, compensation recommendations, and career development information. They must be handled accordingly and should not be shared outside the manager, HR, and the employee being reviewed."

@@ -1,0 +1,35 @@
+- question: "What are the four tiers of the competitive landscape and what does each tier mean?"
+  answer: "Direct: same problem, same users, same approach (your comparison-set competitors). Indirect: same problem, different approach (often the most dangerous — free, already installed). Adjacent: different problem today but could expand into your space. Substitute: entirely different approach to the same underlying need."
+
+- question: "Why is Excel/Google Sheets often the most strategically important competitor for a B2B analytics tool?"
+  answer: "Excel is free, already installed, already trusted, and has zero switching cost. Prospects who do not buy your product are not mostly buying a direct competitor — most are continuing to use spreadsheets. Ignoring indirect competitors misses the market reality."
+
+- question: "What are the four ratings in the Simple scale for feature comparison matrices?"
+  answer: "Strong (market-leading capability, deep functionality, well-executed), Adequate (functional, gets the job done, not differentiated), Weak (exists but limited, significant gaps), Absent (does not have this capability)."
+
+- question: "What is the honesty check for a feature comparison matrix from /competitive-brief?"
+  answer: "Ask: would a prospect who has evaluated both products find this matrix credible? A matrix that rates your product Strong everywhere is not credible. At least some areas where competitors are Adequate or Strong (and you are Weak or Absent) must appear — otherwise the analysis reflects bias, not reality."
+
+- question: "What is the difference between 'differentiate' and 'achieve parity' as competitive stances?"
+  answer: "Differentiate: invest to lead in a capability area where no competitor owns the space, creating a defensible advantage. Achieve parity: close a gap where a competitor is ahead, removing a dealbreaker in the sales cycle. Parity is table-stakes; differentiation is a strategic bet."
+
+- question: "What does /competitive-brief produce in its full output?"
+  answer: "Competitor overview (company, positioning, recent momentum), feature comparison matrix (capability ratings), positioning analysis (how each competitor positions), strengths and weaknesses, opportunities and threats, and strategic implications."
+
+- question: "What is the positioning statement template used in competitive analysis?"
+  answer: "For [target customer] who [need/problem], [Product] is a [category] that [key benefit]. Unlike [competitor/alternative], [Product] [key differentiator]."
+
+- question: "What are the four message architecture levels in positioning analysis?"
+  answer: "Level 1 — Category (what category do they claim?), Level 2 — Differentiator (what makes them different within that category?), Level 3 — Value Proposition (what outcome do they promise?), Level 4 — Proof Points (what evidence do they provide?)."
+
+- question: "What is an actionable strategic implication from a competitive brief?"
+  answer: "One that names a specific capability area, states a competitive stance (differentiate vs parity), and specifies a product decision. 'Improve our analytics' is not actionable. 'Include scheduled report delivery in the automation MVP because AutoDash is Strong and our L04 research shows this is a high-frequency pain point' is actionable."
+
+- question: "Why are job postings underrated competitive intelligence?"
+  answer: "They signal strategic direction before it is visible in the product. A competitor hiring ML engineers signals an AI bet. A competitor posting 10 new enterprise sales openings signals a market expansion. Job postings reveal where the competitor is investing, typically 6-12 months before those investments appear in the product."
+
+- question: "In the L05 worked example, what does the feature matrix reveal about the workflow automation space?"
+  answer: "Both InsightFlow and AutoDash are Absent for workflow automation (trigger-based automations, no-code workflow builder). WorkflowIQ has only a Weak foothold (alert rules). This means the automation space is unclaimed — InsightFlow has a strategic window to be first to own the position in this segment."
+
+- question: "What is 'non-consumption' and why does it matter in competitive analysis?"
+  answer: "Non-consumption is when users solve their need by doing nothing with software — using manual processes, spreadsheets, or workarounds instead. It is often the largest competitive segment. Understanding what the manual alternative looks like tells you what 'good enough without software' means, and sets the bar your product must clear."

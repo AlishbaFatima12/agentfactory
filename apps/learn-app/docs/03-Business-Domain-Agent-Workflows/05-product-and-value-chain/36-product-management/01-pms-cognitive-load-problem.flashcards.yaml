@@ -1,0 +1,35 @@
+- question: "What are the five simultaneous cognitive roles a product manager occupies?"
+  answer: "Researcher (synthesising user data), Writer (producing specs and PRDs), Strategist (maintaining the roadmap), Communicator (translating decisions for different audiences), and Decision-maker (prioritising the backlog under competing pressures)."
+
+- question: "What is the 'document gap' in product management?"
+  answer: "The structural mismatch between the volume of writing required to PM well and the time available to PM well. It is not a skill gap or a laziness problem — it is a capacity constraint."
+
+- question: "What is the most common failure mode caused by a rushed feature spec?"
+  answer: "Engineers build the wrong thing because the spec was ambiguous — they fill in the gaps using their own assumptions rather than the PM's intent."
+
+- question: "What is the observable difference between a high-quality acceptance criterion and a poor one?"
+  answer: "A high-quality AC is independently testable and does not contain 'and'. A poor AC describes UI appearance or uses subjective language like 'the feature should work correctly'."
+
+- question: "What does a high-quality stakeholder update do that a mediocre one does not?"
+  answer: "It is written for a specific audience's concerns, shows honest delta against the plan, names risks with impact and mitigation, and requests specific decisions with options and a recommendation."
+
+- question: "What is the central thesis of Chapter 36 about AI and PM work?"
+  answer: "The PM's job is judgment. AI agents remove the bottleneck between that judgment and the documentation that expresses it. The agent writes the first draft; the PM reviews, directs, and refines."
+
+- question: "What distinguishes a high-quality research synthesis from a mediocre one?"
+  answer: "It distinguishes behavioral observations from stated preferences, grounds each insight with source count and quotes, includes an explicit 'what NOT to build' section, and connects findings directly to roadmap decisions."
+
+- question: "What are the two plugins used in Chapter 36, and what does each cover?"
+  answer: "Layer 1 (official product-management plugin): foundational commands — write-spec, roadmap-update, synthesize-research, stakeholder-update, competitive-brief, metrics-review. Layer 2 (custom product-strategy plugin): workflow gap commands — brief, interview, prd, stories, prioritise, retro."
+
+- question: "Why are the five PM roles described as 'simultaneous' rather than 'sequential'?"
+  answer: "A PM operates in all five modes at the same time. Drafting a spec requires strategic context, an update requires knowing what researchers found, prioritisation requires understanding the roadmap. None of the roles can be paused while another is active."
+
+- question: "What is the quality signal for the 'out of scope' section of a feature spec?"
+  answer: "High quality: explicit list with reasoning for each exclusion. Mediocre: partial list or implied scope. Poor: not addressed at all."
+
+- question: "What does the custom product-strategy plugin add that the official plugin does not cover?"
+  answer: "Discovery briefs, interview guides, PRDs, user stories, backlog prioritisation, and retrospectives — plus three agents for automating recurring PM intelligence work."
+
+- question: "According to the quality signal table, what is the most common failure in a 'problem statement' for a feature spec?"
+  answer: "The problem statement describes what to build (a solution) instead of describing observable user pain with supporting evidence."

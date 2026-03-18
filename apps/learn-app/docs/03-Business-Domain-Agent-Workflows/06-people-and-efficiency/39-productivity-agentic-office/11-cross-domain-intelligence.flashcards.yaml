@@ -1,0 +1,103 @@
+deck:
+  id: "ch39-11-cross-domain-intelligence"
+  title: "Cross-Domain Intelligence"
+  description: "Key concepts from the cross-domain intelligence lesson — context injection, five context types, cross-context search, gaps in context, and integration protocols."
+  tags: ["cross-domain", "context-loader", "workplace-search", "integration", "agentic-office"]
+  version: 1
+
+cards:
+  - id: "ch39-11-cross-domain-intelligence-001"
+    front: "Why are domain agents described as 'isolated silos' without the productivity layer?"
+    back: "Each domain agent operates only within its own context — the finance agent does not know what HR knows, and HR does not know what operations knows. Without context injection, cross-domain information must be manually gathered."
+    tags: ["cross-domain", "integration"]
+    difficulty: "basic"
+
+  - id: "ch39-11-cross-domain-intelligence-002"
+    front: "What are the five context types supported by /agentic-office:context-loader?"
+    back: "Single-domain, cross-domain, person, project, decision."
+    tags: ["cross-domain", "context-loader"]
+    difficulty: "basic"
+
+  - id: "ch39-11-cross-domain-intelligence-003"
+    front: "What six sections appear in every cross-domain context brief output?"
+    back: "Core context\nDomain 1 context\nDomain 2 context\nPeople context\nWhat to watch for\nGaps in context"
+    tags: ["cross-domain", "context-loader"]
+    difficulty: "intermediate"
+
+  - id: "ch39-11-cross-domain-intelligence-004"
+    front: "What four memory layers does /agentic-office:workplace-search scan simultaneously?"
+    back: "Personal (working style, priorities)\nTeam (person entries, relationship history)\nProjects (status, decisions, milestones)\nOrganisational (terminology, meeting notes, decision log)"
+    tags: ["cross-domain", "workplace-search"]
+    difficulty: "intermediate"
+
+  - id: "ch39-11-cross-domain-intelligence-005"
+    front: "What is an integration protocol in the context of work.local.md?"
+    back: "A rule that says: when event X occurs in domain Y, automatically check domains A, B, and C for relevant context."
+    tags: ["cross-domain", "integration-protocol"]
+    difficulty: "basic"
+
+  - id: "ch39-11-cross-domain-intelligence-006"
+    front: "What three domain checks does the new_hire integration protocol trigger?"
+    back: "Finance (headcount within approved budget? tooling needed?)\nOperations (system access timeline? affected systems?)\nHR (onboarding protocol? concurrent onboardings?)"
+    tags: ["cross-domain", "integration-protocol"]
+    difficulty: "intermediate"
+
+  - id: "ch39-11-cross-domain-intelligence-007"
+    front: "What does the 'gaps in context' section of a context brief represent?"
+    back: "Information that is NOT in work.local.md but would be useful for the task — each gap is a specific addition to make to work.local.md."
+    tags: ["cross-domain", "context-loader", "gaps"]
+    difficulty: "basic"
+
+  - id: "ch39-11-cross-domain-intelligence-008"
+    front: "What does /agentic-office:workplace-search return when a query finds nothing?"
+    back: "An explicit 'Not in workplace memory' message — and an offer to add the information if the user can provide it."
+    tags: ["cross-domain", "workplace-search"]
+    difficulty: "basic"
+
+  - id: "ch39-11-cross-domain-intelligence-009"
+    front: "Context injection loads context before a task. Cross-context search retrieves information about a topic. When should you use each?"
+    back: "Use context injection when you know a task is coming and need the full picture before starting. Use cross-context search when you want to explore what is known about a topic, including decisions and history across time."
+    tags: ["cross-domain", "context-loader", "workplace-search"]
+    difficulty: "intermediate"
+
+  - id: "ch39-11-cross-domain-intelligence-010"
+    front: "Why is the 'gaps in context' section of a context brief a feature rather than a failure?"
+    back: "Knowing what you do NOT know before a conversation is as valuable as knowing what you do know. Each gap identifies missing work.local.md data — the brief becomes an improvement roadmap for the system itself."
+    tags: ["cross-domain", "gaps"]
+    difficulty: "intermediate"
+    why: "What is the risk of acting on a task without reviewing the gaps section first?"
+
+  - id: "ch39-11-cross-domain-intelligence-011"
+    front: "Dr. Sana Mirza's onboarding touches HR, Finance, and Operations. Without cross-domain context loading, which actions would Zia most likely miss?"
+    back: "System access provisioning (Operations), analytics tooling compatibility with Ayesha's workflow (Finance), and the careful mediation needed before introducing her to Omar (People context) — all exist at domain boundaries, not within any single domain."
+    tags: ["cross-domain", "integration"]
+    difficulty: "intermediate"
+    why: "Why do the most important onboarding tasks tend to live at domain boundaries rather than inside any single function?"
+
+  - id: "ch39-11-cross-domain-intelligence-012"
+    front: "Why does loading context from irrelevant domains make a cross-domain brief less useful, not more?"
+    back: "Irrelevant context creates noise — it dilutes the signal from domains that actually matter, increases reading time, and can introduce misleading parallels that steer the task in the wrong direction."
+    tags: ["cross-domain", "context-loader"]
+    difficulty: "intermediate"
+    why: "How would you determine which domains are relevant before invoking context-loader?"
+
+  - id: "ch39-11-cross-domain-intelligence-013"
+    front: "Why does the first manual cross-domain context load for a new event type reveal what the integration protocol should contain?"
+    back: "The manual load forces explicit identification of which domains are relevant and what information from each is useful. This lived experience produces better protocol design than specifying in advance — the gaps section reveals exactly what to automate."
+    tags: ["cross-domain", "integration-protocol"]
+    difficulty: "advanced"
+    why: "What is the relationship between manual context loads and the quality of integration protocols over time?"
+
+  - id: "ch39-11-cross-domain-intelligence-014"
+    front: "The Islamabad expansion search returns 'No active tasks' in the task/delegation log. Is this a useful result?"
+    back: "A useful result — the absence confirms the deferral decision (D-2026-003) is being correctly followed and no one has been improperly assigned to work on it. An absence of tasks for a deferred decision is expected and informative."
+    tags: ["cross-domain", "workplace-search"]
+    difficulty: "advanced"
+    why: "What would it mean if active tasks for Islamabad appeared in the search despite the deferral decision?"
+
+  - id: "ch39-11-cross-domain-intelligence-015"
+    front: "How do integration protocols shift the agentic organisation from reactive to proactive cross-domain coordination?"
+    back: "Individual context loads are reactive — triggered manually when a task arises. Protocols automate the trigger: when a known event type occurs, context from relevant domains is surfaced automatically, before the person has to remember to ask for it."
+    tags: ["cross-domain", "integration-protocol"]
+    difficulty: "advanced"
+    why: "What is the compounding effect on work.local.md quality as more integration protocols are configured over time?"

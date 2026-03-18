@@ -1,0 +1,30 @@
+cards:
+  - front: "What is the difference between an event-triggered agent and a scheduled agent?"
+    back: "Event-triggered: activated by a specific HRIS event (e.g., new hire record, resignation). Scheduled: activated on a fixed cadence (e.g., monthly). A hybrid agent combines both — it runs on a schedule AND responds to specific events."
+
+  - front: "What triggers the onboarding orchestrator to activate?"
+    back: "A new hire record created in the HRIS system. The orchestrator then runs its T-14 to Day 90 workflow automatically from that point."
+
+  - front: "What are the eight milestones in the onboarding orchestrator timeline?"
+    back: "T-14 (pre-boarding checklist), T-7 (Day 1 schedule sent), T-3 (critical items check), Day 1 (IT confirmed, welcome message), Day 10 (training check), Day 30 (check-in scheduled), Day 60 (feedback survey), Day 90 (90-day review + completion summary)."
+
+  - front: "What are the three alert trigger conditions for the onboarding orchestrator?"
+    back: "Alert 1: Critical pre-boarding item incomplete at T-3 (laptop, system access, schedule, manager availability). Alert 2: Mandatory compliance training incomplete at Day 10. Alert 3: Satisfaction survey score at or below the configured threshold at Day 60."
+
+  - front: "Why is the T-3 alert the highest-value single intervention in the onboarding orchestrator?"
+    back: "Three days is enough time to fix a missing laptop or system access provisioning. One hour on Day 1 is not. The T-3 alert converts a Day 1 failure into an avoidable pre-boarding correction."
+
+  - front: "What are the five monthly checks the policy maintenance agent runs?"
+    back: "1. Policy version currency (are documents referencing the current version?). 2. Statutory rate monitoring (are all rates current?). 3. Document consistency (same policy described consistently?). 4. Link validity (no broken links). 5. FAQ gap analysis (query log reveals missing FAQ entries)."
+
+  - front: "How does the policy maintenance agent respond to a statutory rate change?"
+    back: "It triggers an immediate (not monthly) alert: searches all employee-facing documents for the current rate, identifies which documents need updating, and alerts HR with a specific list of documents and the text to change — before the new rate takes effect."
+
+  - front: "What does the policy maintenance agent monitor in the UK jurisdiction?"
+    back: "National Living Wage (changes April each year), Statutory Sick Pay (changes April), Statutory Maternity/Paternity Pay (changes April). It flags changes before they take effect, giving HR time to update policies."
+
+  - front: "What is the difference between the knowledge-base-agent and the other three agents in terms of architecture?"
+    back: "The knowledge-base-agent is always-on, responding to individual employee queries in real time. The other three agents (onboarding-orchestrator, policy-maintenance-agent, offboarding-knowledge-agent) are either event-triggered or scheduled — they run at specific milestones or cadences, not continuously."
+
+  - front: "What does the Day 90 completion summary from the onboarding orchestrator contain?"
+    back: "Mandatory training completion status, all check-ins completed (Day 30, 60), satisfaction survey score and trend, and a summary sent to the manager and HR Business Partner as a pre-read for the 90-day review."

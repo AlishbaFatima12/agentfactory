@@ -1,0 +1,35 @@
+- question: "What is the decision rule for when to write a PRD vs. a feature spec?"
+  answer: "Write a spec when the work involves one feature, one team, and 1-3 sprints. Write a PRD when the initiative involves multiple features, multiple teams, a major platform change, or requires executive sign-off."
+
+- question: "What are the 10 sections of a PRD?"
+  answer: "1. Executive Summary, 2. Business Context, 3. User Requirements, 4. Functional Requirements, 5. Non-Functional Requirements, 6. Technical Architecture Notes, 7. Go-to-Market Requirements, 8. Launch Plan, 9. Dependencies and Risks, 10. Open Questions."
+
+- question: "What is a failure threshold in a PRD, and why is it required?"
+  answer: "A specific outcome that would cause you to change direction, defined before launch. Without it, post-launch reviews become negotiations about whether numbers are 'good enough.' With it, you have a pre-committed standard that prevents sunk-cost escalation."
+
+- question: "What is the MUST percentage rule for PRD functional requirements?"
+  answer: "If more than 60% of requirements are labelled MUST, the scope is too large. Challenge every MUST: 'Would we genuinely not ship without this?' If yes, it stays MUST. If you would ship without it, it is a SHOULD."
+
+- question: "What must be true before a PRD can move to REVIEW status?"
+  answer: "All 10 sections complete, open questions have owners and due dates, and the engineering lead has confirmed the Technical Architecture Notes (Section 6)."
+
+- question: "What is the custom product-strategy plugin command for generating a PRD?"
+  answer: "/prd — from the custom product-strategy plugin. Different from the official product-management plugin's /write-spec, which generates individual feature specs."
+
+- question: "What makes commercial evidence in a PRD 'good enough'?"
+  answer: "It must be quantified with sources: '4 enterprise deals cited SSO as a blocker in Q2' is evidence. 'Customers have asked for this' is not. Each evidence item should cite how many, from what source, and in what time period."
+
+- question: "Why must the engineering lead sign off on Section 6 (Technical Architecture Notes)?"
+  answer: "A PRD with unconfirmed architecture notes has an unverified technical foundation. The most common cause of PRD-to-sprint failures is discovering architectural constraints after APPROVED status — when the initiative is fully committed."
+
+- question: "What are the five PRD status gates in order?"
+  answer: "DRAFT (sections present, some incomplete) → REVIEW (all complete, questions have owners, Eng lead confirmed Section 6) → REFINED (all questions resolved, effort estimated, GTM confirmed) → APPROVED (CPO/CEO sign-off) → SHIPPED (live, metrics tracked)"
+
+- question: "How does the L07 PRD relate to the L06 feature spec?"
+  answer: "The L06 feature spec describes one feature (trigger configuration) for one team. The L07 PRD wraps that spec (referenced in Section 4, Feature 3) into the broader Workflow Builder initiative document that covers commercial context, all features, non-functional requirements, GTM, and launch plan."
+
+- question: "What is the NEVER DO rule about PRD success metrics?"
+  answer: "NEVER define success metrics after launch — they must be in the PRD before the first sprint starts. Post-launch metric definition allows rationalisation of results rather than measurement against a pre-committed standard."
+
+- question: "What is the test question for a MUST requirement?"
+  answer: "'If this were not ready on launch day, would we delay the entire initiative?' If the answer is 'probably not,' the requirement is a SHOULD, not a MUST."

@@ -1,0 +1,35 @@
+- question: "What are the five behavioral interview design principles enforced by /interview?"
+  answer: "1. Behavior over opinion (ask what users DO, not what they think). 2. Past over hypothetical (ask about actual past experiences). 3. Problem before solution (no features or solutions in the first half). 4. Silence is data (wait at least 5 seconds after pauses). 5. Why five times (chain 'why' questions to reach root causes)."
+
+- question: "Why is 'Would you use feature X?' considered a bad interview question?"
+  answer: "It is a hypothetical future question. Users consistently overestimate their future usage of features they don't yet use. Stated intention is a weak predictor of actual behavior. The research is more valuable when grounded in past behavior."
+
+- question: "What is the correct structure of a 45-minute user interview guide?"
+  answer: "Opening (5 min: rapport, expectations, consent) → Warm-up (5-10 min: understand the person's context) → Core Discovery (20-25 min: behavioral questions about the specific problem area) → Wrap-up (5 min: catch anything missed, referrals)."
+
+- question: "What is the handoff sequence between /interview and /synthesize-research?"
+  answer: "/interview generates the structured guide → PM runs 5+ interviews using the guide and note-taking template → structured notes are fed into /synthesize-research → synthesis produces prioritised findings with evidence."
+
+- question: "What is the key quality check for a research synthesis output?"
+  answer: "Does each finding describe observed behavior (what participants actually did) or summarise stated preferences (what participants said they wanted)? Behavioral findings are evidence; stated preferences are the users' proposed solutions."
+
+- question: "Which /synthesize-research output section is the hardest to produce and the most valuable?"
+  answer: "The 'what we should NOT build' (or 'What We Heard But Should Not Build') section. It requires drawing scope conclusions that go against the literal content of user requests, and it is often missing from AI-generated syntheses."
+
+- question: "What is the difference between a behavioral finding and a stated preference finding?"
+  answer: "Behavioral: 'Participants spent 45-90 minutes reformatting exported data in Excel before sharing reports — all five described this as unavoidable.' Stated preference: 'Users want better export options.' The first is evidence; the second is the users' proposed solution."
+
+- question: "What does the /synthesize-research command do with its research inputs?"
+  answer: "It applies thematic analysis: familiarise, code observations, develop themes, review evidence, refine and name themes, then produce a structured synthesis with key findings, evidence, frequency counts, and product recommendations."
+
+- question: "What is the NEVER DO rule for interview questions in the /interview skill spec?"
+  answer: "NEVER ask leading questions ('Would you find it useful if...'), NEVER mention your feature idea before exploring the problem space, NEVER use hypothetical questions as primary evidence, NEVER fill silence — wait at least 5 seconds, NEVER draw conclusions from fewer than 5 interviews."
+
+- question: "Why does the exercise ask students to run /synthesize-research with notes from only 3 participants?"
+  answer: "This is a practice exercise using simulated notes. In real research, 5+ interviews are required before drawing directional conclusions. The lesson explicitly notes this constraint. Three participants are sufficient to practice the synthesis evaluation skills."
+
+- question: "What counter-intuitive insight appears in the L04 mock interview notes that students should check the synthesis captured?"
+  answer: "Two of the three participants have InsightFlow subscriptions but do not use InsightFlow for the workflow being researched. They were never properly onboarded to connect InsightFlow to their data sources. This is a higher-priority product insight than any feature request in the notes."
+
+- question: "What is thematic analysis and how does /synthesize-research apply it?"
+  answer: "Thematic analysis is a qualitative research methodology: familiarise with all data → code observations systematically → group codes into candidate themes → review themes against evidence → refine and name themes → write up with supporting evidence. /synthesize-research applies this process to interview notes, surveys, or support tickets."

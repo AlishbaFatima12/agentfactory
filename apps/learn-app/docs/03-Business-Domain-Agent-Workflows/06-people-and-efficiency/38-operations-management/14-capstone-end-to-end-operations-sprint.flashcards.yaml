@@ -1,0 +1,32 @@
+title: "Lesson 14 — Capstone: End-to-End Operations Sprint"
+description: "Flashcards covering the sprint structure, scenario differences, quality gates, and the sprint-to-lesson map"
+flashcards:
+  - front: "What are the three capstone scenarios and what operational stress does each emphasise?"
+    back: "Scenario A (Subsidiary Acquisition): vendor management, compliance mapping, risk assessment — inheriting unknown vendor portfolio and new jurisdiction obligations. Scenario B (ERP Migration): change management, process documentation, incident readiness — largest change in the organisation's history with 47 vendor integration dependencies. Scenario C (Regulatory Change): compliance mapping, audit preparation, risk register — FCA guidance update affecting 8 obligations with 60-day compliance deadline."
+
+  - front: "What is the sequence of the nine sprint phases and their time allocations?"
+    back: "Phase 1 (15 min): Vendor audit — /vendor-review + /contract. Phase 2 (10 min): Process docs — /process-doc + /runbook. Phase 3 (10 min): Change assessment — /change-request. Phase 4 (10 min): Compliance map — natural prompt (auto-skill). Phase 5 (10 min): Audit prep — /audit. Phase 6 (10 min): Risk register — natural prompt (auto-skill). Phase 7 (10 min): Incident post-mortem — /incident. Phase 8 (10 min): Metrics — /metrics + /status-report. Phase 9 (5 min): Agent deployment."
+
+  - front: "Why do quality gates matter in a sprint workflow — not just at the end?"
+    back: "Mistakes compound in a sprint. A vendor audit that misses a key renewal creates a risk register gap in Phase 6, which creates an incomplete brief in the final synthesis. Catching problems at their phase prevents one phase's omission from cascading into every subsequent phase that depends on that data."
+
+  - front: "What is the quality criterion for the Phase 3 change assessment?"
+    back: "The impact assessment must list specific systems, specific staff groups, and specific data affected (not generic categories). The communications plan must name who receives communications. The rollback plan must describe specific steps — not 'reverse the change.' The risk classification must be correct for the change's actual impact level."
+
+  - front: "What is the quality criterion for the Phase 7 incident post-mortem?"
+    back: "The Five Whys must reach a systemic root cause — not a symptom (WHY 4 or WHY 5, not WHY 1 or WHY 2). Corrective actions must be specific and named — not 'improve the process.' The earliest prevention point in the timeline must be identified. For Scenarios A and C: a regulatory notification assessment must be included."
+
+  - front: "What two types of obligations must the Phase 4 compliance map include that many first attempts miss?"
+    back: "Contractual obligations — the SLA commitments, data handling clauses, and auto-renewal terms extracted from vendor contracts in Phase 1. And standards-based obligations — certifications like ISO 27001 or PCI DSS that the organisation has voluntarily adopted. Regulatory obligations alone are insufficient; a compliance map missing contractual and standards obligations is incomplete."
+
+  - front: "What is the sprint-to-lesson dependency chain for Phase 6 (risk register)?"
+    back: "The risk register in Phase 6 draws from: Phase 1 (vendor risks — SLA breach, unapproved vendors, contract obligations), Phase 3 (change risks — high-risk changes, migration failure), Phase 4 (compliance risks — GAP obligations, regulatory change risk), and Phase 2 (process risks — undocumented critical processes). The risk register is the most data-dependent phase in the sprint."
+
+  - front: "What is the quality criterion for the final intelligence brief?"
+    back: "The executive summary must fit on one page and be decision-ready without requiring the COO to read the full brief. The top 3 recommended actions must be specific, owned, and time-bound. The cross-phase intelligence section must surface connections across phases that individual phase outputs do not reveal. If the cross-phase section only repeats what each phase already said, no synthesis has occurred."
+
+  - front: "What auto-skills are used in Phases 4 and 6, and how are they invoked?"
+    back: "Phase 4 uses the compliance-tracking auto-skill — invoked by writing a natural language prompt containing keywords like 'compliance', 'obligations', 'regulatory'. Phase 6 uses the risk-assessment auto-skill — invoked by keywords like 'risk register', 'risk assessment', 'mitigation'. NEVER write /compliance-tracking or /risk-assessment as slash commands — they are trigger-only auto-skills."
+
+  - front: "What makes the 12-month operational roadmap (the Apply prompt) harder than the sprint itself?"
+    back: "The sprint produces a diagnosis — it identifies what is wrong. The roadmap requires moving from diagnosis to treatment plan: prioritising across competing demands, committing to a direction, specifying success metrics, and flagging the highest roadmap risk. This requires synthesising the sprint's findings and making judgment calls that the AI cannot make — about which investments the organisation can afford, which risks are most material, and which capabilities to build first."

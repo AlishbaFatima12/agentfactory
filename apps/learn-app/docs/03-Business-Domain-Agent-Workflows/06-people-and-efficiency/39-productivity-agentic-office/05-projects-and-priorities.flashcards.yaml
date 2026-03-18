@@ -1,0 +1,109 @@
+deck:
+  id: "ch39-05-projects-priorities"
+  title: "Projects and Priorities"
+  description: "Key concepts from Layer 3 of work.local.md — project entries, P1/P2/P3 priority discipline, codenames, and cross-context search using /agentic-office:workplace-search."
+  tags: ["project-memory", "layer-3", "workplace-search", "agentic-office"]
+  version: 1
+
+cards:
+  - id: "ch39-05-projects-priorities-001"
+    front: "What is project amnesia, and what does it cost a professional organisation?"
+    back: "Reconstructing project context — status, risks, decisions — from scratch at every briefing. Industry surveys suggest two to four hours per week in senior professional time."
+    tags: ["project-amnesia", "layer-3"]
+    difficulty: "basic"
+
+  - id: "ch39-05-projects-priorities-002"
+    front: "What are the 5 valid status values for a project entry in work.local.md?"
+    back: "PLANNING\nIN PROGRESS\nAT RISK\nBLOCKED\nCOMPLETE"
+    tags: ["project-entry", "status"]
+    difficulty: "basic"
+
+  - id: "ch39-05-projects-priorities-003"
+    front: "In work.local.md project entries, which two fields are most important and most commonly underspecified?"
+    back: "at_risk and decisions — at_risk captures what could derail the milestone; decisions prevents relitigating what is already settled."
+    tags: ["project-entry", "at-risk", "decisions"]
+    difficulty: "intermediate"
+
+  - id: "ch39-05-projects-priorities-004"
+    front: "Why does a vague at_risk entry like 'some scheduling challenges' fail its purpose?"
+    back: "It cannot be acted on. A risk you cannot name is a risk you will forget. The at_risk field must identify the specific stall or constraint, not acknowledge that problems exist in general."
+    tags: ["at-risk", "specificity"]
+    difficulty: "intermediate"
+    why: "What question would you ask yourself to convert a vague risk into a specific one?"
+
+  - id: "ch39-05-projects-priorities-005"
+    front: "What are the three project priority levels (P1/P2/P3) and what distinguishes P1 from P2?"
+    back: "P1: Critical to strategic goals — significant problems have real consequences.\nP2: Important but not existential — a slip causes a problem, not a crisis.\nP3: Valuable but deferrable this week."
+    tags: ["priority", "p1-p2-p3"]
+    difficulty: "basic"
+
+  - id: "ch39-05-projects-priorities-006"
+    front: "What is the three P1 rule, and what does violating it signal?"
+    back: "If more than three projects are classified P1, none effectively are. It signals the team has not prioritised — they have listed. Forced-choice between P1s is the discipline."
+    tags: ["p1-rule", "priority-discipline"]
+    difficulty: "intermediate"
+
+  - id: "ch39-05-projects-priorities-007"
+    front: "Why is forced-choice between P1 projects described as a discipline rather than a limitation?"
+    back: "When everything is critical, the word loses meaning and execution becomes unfocused. Limiting P1 forces a real judgment about what is existential versus what is merely important — the distinction that determines where effort actually goes."
+    tags: ["priority-discipline", "p1-rule"]
+    difficulty: "intermediate"
+    why: "What would you say to a colleague who insists all five of their projects genuinely require P1 classification?"
+
+  - id: "ch39-05-projects-priorities-008"
+    front: "What are the three purposes a project codename serves?"
+    back: "Privacy (safe to say in mixed company).\nEfficiency (shorter than the full name).\nIdentity (becomes a shared team reference point)."
+    tags: ["codename", "project-entry"]
+    difficulty: "basic"
+
+  - id: "ch39-05-projects-priorities-009"
+    front: "Project Nighthawk is the codename for the Karachi expansion. What is its P-level and current status in the case study?"
+    back: "P2, AT RISK — facility agreement negotiations stalled 10+ days, blocking Q3 target."
+    tags: ["project-nighthawk", "case-study"]
+    difficulty: "basic"
+
+  - id: "ch39-05-projects-priorities-010"
+    front: "What command performs a cross-context search across all four layers of work.local.md simultaneously?"
+    back: "/agentic-office:workplace-search"
+    tags: ["workplace-search", "cross-context"]
+    difficulty: "basic"
+
+  - id: "ch39-05-projects-priorities-011"
+    front: "What are the five sections of a workplace-search result output?"
+    back: "Project Memory\nMeeting Notes / Decision Log\nPeople Memory\nTerminology\nTask / Delegation Log"
+    tags: ["workplace-search", "output-format"]
+    difficulty: "intermediate"
+
+  - id: "ch39-05-projects-priorities-012"
+    front: "Why is 'not in workplace memory' a useful search result rather than a failure?"
+    back: "It makes memory gaps visible. Each gap is a prompt to add the missing information. The search cannot retrieve what was never recorded — but it tells you what to add next."
+    tags: ["workplace-search", "memory-gaps"]
+    difficulty: "intermediate"
+    why: "How would you use repeated 'not in workplace memory' results to improve your work.local.md over time?"
+
+  - id: "ch39-05-projects-priorities-013"
+    front: "A search returns results but no 'Recommended Next Step.' Why is this the most consistently useful part of the search output?"
+    back: "Search without a recommended action is information without utility. The recommended step converts retrieved context into a concrete next action — otherwise the search answers 'what do we know' but not 'what should I do.'"
+    tags: ["workplace-search", "recommended-next-step"]
+    difficulty: "advanced"
+    why: "When would you override the recommended next step rather than following it?"
+
+  - id: "ch39-05-projects-priorities-014"
+    front: "You have four projects and want to classify all four as P1. What must happen before you can add the fourth?"
+    back: "One of the existing three P1 projects must be explicitly reclassified to P2. Adding a fourth P1 without demoting another is not prioritisation."
+    tags: ["p1-rule", "priority-discipline"]
+    difficulty: "intermediate"
+    why: "What criteria would you apply to decide which existing P1 to demote?"
+
+  - id: "ch39-05-projects-priorities-015"
+    front: "Why do key decisions belong in a project entry as well as in meeting notes?"
+    back: "Meeting notes capture the full discussion. Project entries capture the decision in context — what was decided, in relation to which milestone. Without this, decisions must be retrieved from meeting archives every time, which is project amnesia in action."
+    tags: ["decisions", "project-entry", "project-amnesia"]
+    difficulty: "intermediate"
+    why: "What is the cost of relitigating a decision that was already made but not recorded in the project entry?"
+
+  - id: "ch39-05-projects-priorities-016"
+    front: "After Lessons 3, 4, and 5, what is true about the work.local.md foundation?"
+    back: "All four layers are complete: personal (L3), organisational (L3), team/people (L4), and projects (L5). Every subsequent lesson builds on this foundation."
+    tags: ["work-local-md", "foundation", "four-layers"]
+    difficulty: "basic"

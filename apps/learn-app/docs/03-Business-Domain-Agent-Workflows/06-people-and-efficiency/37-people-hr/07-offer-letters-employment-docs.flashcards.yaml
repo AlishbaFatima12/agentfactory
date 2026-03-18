@@ -1,0 +1,30 @@
+cards:
+  - front: "What are the five employment document types covered by /draft-offer?"
+    back: "Offer letter (new hire), promotion letter (internal promotion), salary change notification (annual review / market adjustment), contract amendment (role or working pattern change), and flexible working agreement (approved request)"
+
+  - front: "What UK-specific mandatory content must appear in an offer letter?"
+    back: "Right-to-work check requirement (with statement that employment is conditional on the check being completed) and P45 request from the departing employer (or Starter Checklist if P45 is unavailable). Both are legally required."
+
+  - front: "What are the three reference letter types in /reference?"
+    back: "Factual (job title, dates of employment, rehire eligibility only — default corporate policy), Professional (factual + performance assessment + recommendation — requires written consent and HR sign-off), and Employment Verification (current status, role, start date, salary only with consent — for mortgage/visa applications)"
+
+  - front: "What is the two-direction legal risk in employment references?"
+    back: "Defamation: providing false negative information that harms the employee's reputation. Misrepresentation: providing falsely positive information that a new employer relies on when hiring — if they suffer harm, the referring organisation may have liability. When in doubt: factual reference only."
+
+  - front: "Why must salary never be included in a reference without explicit written consent?"
+    back: "Salary is personal financial data. Including it without consent is both a data protection issue and a potential breach of the employee's privacy. Many organisations prohibit it entirely regardless of consent."
+
+  - front: "What does the REVIEW BEFORE SENDING warning in /draft-offer and /reference output mean?"
+    back: "It is mandatory output — not a suggestion. The AI-generated document is a complete draft; it must be reviewed by HR against the verification checklist (facts against HRIS, compensation against approved band, jurisdiction-specific content correct) before sending. The warning must be removed from the final document."
+
+  - front: "What sensitivity label do all offer letters and reference letters carry?"
+    back: "CONFIDENTIAL — both /draft-offer and /reference outputs carry the CONFIDENTIAL sensitivity label. These documents contain personal and financial data and must be handled accordingly."
+
+  - front: "What is the EOBI requirement in a Pakistan-jurisdiction offer letter?"
+    back: "EOBI stands for Employees Old-Age Benefits Institution. EOBI contributions are a statutory employer obligation in Pakistan — the offer letter must confirm the employer will make EOBI contributions. Omitting this creates payroll compliance issues from Day 1."
+
+  - front: "When is a professional reference permitted rather than a factual reference?"
+    back: "Only when: the employee has explicitly requested a professional reference, written consent from the employee is on file, the signer can truthfully recommend the employee, and the organisation's reference policy (hr.local.md) permits professional references from this role level. All four conditions must be met."
+
+  - front: "What is the time cost of employment documentation in a 100-person growing company, and how does /draft-offer change it?"
+    back: "A growing 100-person company may issue 50-80 employment documents per year at approximately 25 minutes each — more than 30 hours of HR drafting time annually. /draft-offer generates the complete draft in under 2 minutes; the HR role shifts from writer to reviewer."

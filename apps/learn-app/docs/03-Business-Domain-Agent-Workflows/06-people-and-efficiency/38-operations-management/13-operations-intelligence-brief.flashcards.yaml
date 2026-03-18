@@ -1,0 +1,32 @@
+title: "Lesson 13 — Operations Intelligence Brief"
+description: "Flashcards covering the synthesis workflow, plugin usage, brief structure, and the intelligence vs. compilation distinction"
+flashcards:
+  - front: "What is the difference between an operations intelligence brief and a compiled status report?"
+    back: "A compiled status report concatenates outputs from separate sources. An intelligence brief synthesises them — identifying cross-domain connections, surfacing patterns that individual reports cannot see, and drawing conclusions from the combination. The brief tells a story; the compilation lists facts."
+
+  - front: "What five sources feed the monthly operations intelligence brief?"
+    back: "1) Agent monthly reports (four agents from L12). 2) Operational metrics from /metrics (trend analysis and RAG table). 3) Status report backbone from /status-report (structure with KPIs, risks, actions). 4) Risk register status (outstanding risks from L09). 5) Agent alerts — monitoring signals that structured reporting cannot capture."
+
+  - front: "What does /status-report contribute to the brief that /metrics cannot provide?"
+    back: "/status-report provides structure — a consistent, navigable skeleton with executive summary, domain-by-domain status, risks, actions, and upcoming items. /metrics provides trend context (improving/deteriorating) and leading indicator assessment. The brief needs both: structure without trend is a snapshot; trend without structure is data without a home."
+
+  - front: "What is the five-step synthesis workflow for the monthly operations intelligence brief?"
+    back: "Step 1: Gather — collect all inputs (agent reports, status report, metrics, risk register). Step 2: Connect — identify cross-domain signals that are related. Step 3: Generate backbone — run /status-report with operational data. Step 4: Enrich — add trend layer from /metrics and agent intelligence. Step 5: Executive summary + top 3 recommended actions."
+
+  - front: "What is the 'leading indicator assessment' in the /metrics output?"
+    back: "An assessment of which currently deteriorating metrics suggest next-month risks — before those risks materialise. Three metrics deteriorating simultaneously may indicate a systemic issue (e.g., operations team capacity) that no single metric would reveal. Leading indicators allow proactive response rather than reactive correction."
+
+  - front: "What distinguishes a specific recommended action from a vague one in the brief?"
+    back: "Specific: 'Appoint interim DPO by [date] to complete data processor register before the 30-day GAP escalation deadline.' Vague: 'Address compliance gap.' A specific action names who owns it, what they must do, and by when. The COO should be able to delegate it without asking follow-up questions."
+
+  - front: "What is the weekly alerts cadence versus the monthly brief cadence?"
+    back: "Weekly: agent alerts only — items requiring action this week (upcoming renewals, blocked changes, overdue reviews). Audience: operational team. Purpose: decision triggers. Monthly: full intelligence brief with narrative, trends, cross-domain connections, strategic recommendations. Audience: COO. Purpose: narrative update and strategic direction."
+
+  - front: "What is a cross-domain connection in the intelligence brief?"
+    back: "A signal from one operational domain that is related to a signal from another domain — a connection that neither domain's report can surface on its own. Example: a vendor SLA breach (Vendor Watchdog) + a compliance obligation that depends on that vendor's uptime (Compliance Monitor) + an overdue change that was supposed to fix the breach (Change Tracker) = a connected risk chain requiring unified action."
+
+  - front: "Why is the executive summary the hardest section of the brief to write?"
+    back: "Because it requires judgment — deciding which of all the operational signals is most important, what connects them, and what the COO needs to know to make decisions. It cannot be generated mechanically from the data; it requires selecting, prioritising, and narrating. If the summary could be produced by listing section headings, it is not an executive summary."
+
+  - front: "What is wrong with treating the weekly alert as a mini-version of the monthly brief?"
+    back: "Weekly alerts should contain only items requiring action this week — renewals approaching, compliance reviews due, blocked changes. Including everything creates noise that desensitises recipients to real urgency. The monthly brief provides the narrative context. The weekly alert triggers specific actions. Conflating them makes both less useful."
