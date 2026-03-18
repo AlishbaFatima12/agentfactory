@@ -7,6 +7,10 @@ chapter_number: 39
 part_number: 3
 version: 1.0
 status: draft
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-39/the-agentic-office.pdf"
+  title: "Chapter 39 — Productivity & The Agentic Office"
+  height: 700
 ---
 
 # Chapter 39 — Productivity & The Agentic Office

@@ -1,67 +1,199 @@
 deck:
-  id: "ch38-05-process-documentation-sops-runbooks"
-  title: "Process Documentation — SOPs and Runbooks"
-  description: "Key concepts and review questions covering process documentation — sops and runbooks."
-  tags: ["process", "documentation", "sops", "runbooks", "chapter-38"]
+  id: ch38-05-process-documentation-sops-runbooks
+  title: Process Documentation — SOPs and Runbooks
+  description: Key concepts and review questions covering process documentation — sops and runbooks.
+  tags:
+  - process
+  - documentation
+  - sops
+  - runbooks
+  - chapter-38
   version: 1
-
 cards:
-  - id: "ch38-05-process-documentation-sops-runbooks-001"
-    front: "What are the three stages of the process documentation failure cycle?"
-    back: "Stage 1 — Creation: Document reflects current reality. Accurate and useful.\nStage 2 — Divergence: Process changes; document does not. Becomes partially wrong.\nStage 3 — Harm: Document describes a process nobody follows. Creates errors for new employees; produces discrepancies for auditors.\nThe root cause is not poor writing — it is absence of document ownership. Document Control assigns that ownership.\n"
-    tags: ["process-documentation", "documentation-failure", "stages"]
-    difficulty: "basic"
+- id: ch38-05-process-documentation-sops-runbooks-001
+  front: What are the three stages of the process documentation failure cycle?
+  back: 'Stage 1 — Creation: Document reflects current reality. Accurate and useful.
 
-  - id: "ch38-05-process-documentation-sops-runbooks-002"
-    front: "What is the fundamental difference between an SOP and a runbook?"
-    back: "SOP (Standard Operating Procedure) = Governance format\n- Audience: managers, auditors, compliance reviewers, new employees\n- Answers: who is responsible? What controls apply? What approvals are required?\n- Format emphasis: RACI, controls, Document Control\n- Created with: /process-doc\n\nRunbook = Execution format\n- Audience: the person doing the task today\n- Answers: exactly what do I do next? What if it fails?\n- Format emphasis: exact steps, expected results, failure actions\n- Created with: /runbook\n"
-    tags: ["fundamental-difference", "runbook"]
-    difficulty: "intermediate"
+    Stage 2 — Divergence: Process changes; document does not. Becomes partially wrong.
 
-  - id: "ch38-05-process-documentation-sops-runbooks-003"
-    front: "What does RACI stand for, and what disambiguation problem does it solve?"
-    back: "R — Responsible (does the work)\nA — Accountable (owns the outcome; only one person per step)\nC — Consulted (input required before the step)\nI — Informed (notified after the step)\n\nIt solves the ambiguous ownership problem: when two people think they are\nresponsible for a step, one of them is wrong. The RACI makes explicit that\nonly one role is Responsible and one role is Accountable per step.\n"
-    tags: ["raci-stand", "disambiguation-problem", "solve"]
-    difficulty: "basic"
+    Stage 3 — Harm: Document describes a process nobody follows. Creates errors for new employees; produces discrepancies for auditors.
 
-  - id: "ch38-05-process-documentation-sops-runbooks-004"
-    front: "What are the five quality standards for a trustworthy SOP?"
-    back: "1. Named roles — every step names a specific job title, not 'the team'\n2. Single action per step — each numbered step does exactly one thing\n3. Embedded controls — controls at the specific risk points, not listed generically\n4. Error handling — explicit guidance for each step that can fail\n5. Document Control — version, effective date, author, and review date\n"
-    tags: ["quality-standards", "trustworthy-sop"]
-    difficulty: "basic"
+    The root cause is not poor writing — it is absence of document ownership. Document Control assigns that ownership.
 
-  - id: "ch38-05-process-documentation-sops-runbooks-005"
-    front: "What is the engineer review test for process documentation?"
-    back: "Give the SOP or runbook to someone who understands the systems but has not\nperformed this specific process. Ask them to follow it. Note every point\nwhere they stop and ask a question.\n\nEach question is a documentation gap. Common gaps:\n- Steps that assume knowledge not in the document\n- Controls that describe intent without specifying the mechanism\n- Error handling that escalates without specifying to whom or when\n"
-    tags: ["engineer-review", "review-test", "process"]
-    difficulty: "intermediate"
+    '
+  tags:
+  - process-documentation
+  - documentation-failure
+  - stages
+  difficulty: basic
+- id: ch38-05-process-documentation-sops-runbooks-002
+  front: What is the fundamental difference between an SOP and a runbook?
+  back: 'SOP (Standard Operating Procedure) = Governance format
 
-  - id: "ch38-05-process-documentation-sops-runbooks-006"
-    front: "When does a process need BOTH an SOP and a runbook?"
-    back: "When it has both a governance dimension and an execution dimension.\n\nExample: Monthly supplier payment run\n- SOP: covers who approves, what controls exist, what the audit trail requires\n  (governance — auditors and managers reference this)\n- Runbook: covers exact SAP transactions, execution sequence, bank portal\n  procedures, and what to do if a system is unavailable\n  (execution — the AP Clerk follows this on payment day)\n"
-    tags: ["process", "runbook"]
-    difficulty: "basic"
+    - Audience: managers, auditors, compliance reviewers, new employees
 
-  - id: "ch38-05-process-documentation-sops-runbooks-007"
-    front: "What is the purpose of the Document Control section in an SOP?"
-    back: "Document Control is the maintenance contract for the SOP. It records:\n- Version number (distinguishes current from previous versions)\n- Effective date (when this version became authoritative)\n- Author (who is responsible for the document)\n- Next review date (the deadline for checking whether the document still\n  reflects reality)\n\nWithout a review date and named reviewer, the SOP has no maintenance\nprocess — only a maintenance aspiration.\n"
-    tags: ["document-control", "control-section", "purpose"]
-    difficulty: "advanced"
+    - Answers: who is responsible? What controls apply? What approvals are required?
 
-  - id: "ch38-05-process-documentation-sops-runbooks-008"
-    front: "What is the difference between a process narrative and an SOP?"
-    back: "A process narrative describes how something works. An SOP governs it.\n\nAn SOP differs from a narrative by including:\n- Named roles in every step (not just description)\n- Explicit controls (not just implied safeguards)\n- Error handling for each failure mode\n- Document Control (version history and ownership)\n\nThe difference matters when an auditor asks: who is responsible for this\ncontrol, and how do I know the document reflects current practice?\n"
-    tags: ["process-narrative", "difference"]
-    difficulty: "advanced"
+    - Format emphasis: RACI, controls, Document Control
 
-  - id: "ch38-05-process-documentation-sops-runbooks-009"
-    front: "How does L05 (process documentation) connect to L06 (change management)?"
-    back: "Change impact assessment starts with the question: which documented processes\ndoes this change affect?\n\nThe SOP library built in L05 provides the inventory of documented processes\nthat L06 change impact assessments reference. A change to the ERP affects\nthe payment run SOP, the procurement SOP, the reporting runbook. Without\nthe SOP library, change impact assessment is guesswork.\n"
-    tags: ["l05-process", "process-documentation", "connect"]
-    difficulty: "intermediate"
+    - Created with: /process-doc
 
-  - id: "ch38-05-process-documentation-sops-runbooks-010"
-    front: "What process-optimization auto-skill might activate in L05, and how should students treat it?"
-    back: "The process-optimization auto-skill may activate when students use natural\nlanguage about process improvement (keywords: 'optimize', 'improve process',\n'bottleneck', 'efficiency').\n\nStudents should treat this as useful context being added to the session —\nit enhances the response without changing the workflow. They should never\ninvoke it as /process-optimization. It activates from the keywords naturally.\n"
-    tags: ["process-optimization-auto-skill", "students-treat", "process-optimization"]
-    difficulty: "intermediate"
+
+    Runbook = Execution format
+
+    - Audience: the person doing the task today
+
+    - Answers: exactly what do I do next? What if it fails?
+
+    - Format emphasis: exact steps, expected results, failure actions
+
+    - Created with:'
+  tags:
+  - fundamental-difference
+  - runbook
+  difficulty: intermediate
+- id: ch38-05-process-documentation-sops-runbooks-003
+  front: What does RACI stand for, and what disambiguation problem does it solve?
+  back: 'R — Responsible (does the work)
+
+    A — Accountable (owns the outcome; only one person per step)
+
+    C — Consulted (input required before the step)
+
+    I — Informed (notified after the step)
+
+
+    It solves the ambiguous ownership problem: when two people think they are
+
+    responsible for a step, one of them is wrong. The RACI makes explicit that
+
+    only one role is Responsible and one role is Accountable per step.
+
+    '
+  tags:
+  - raci-stand
+  - disambiguation-problem
+  - solve
+  difficulty: basic
+- id: ch38-05-process-documentation-sops-runbooks-004
+  front: What are the five quality standards for a trustworthy SOP?
+  back: '1. Named roles — every step names a specific job title, not ''the team''
+
+    2. Single action per step — each numbered step does exactly one thing
+
+    3. Embedded controls — controls at the specific risk points, not listed generically
+
+    4. Error handling — explicit guidance for each step that can fail
+
+    5. Document Control — version, effective date, author, and review date
+
+    '
+  tags:
+  - quality-standards
+  - trustworthy-sop
+  difficulty: basic
+- id: ch38-05-process-documentation-sops-runbooks-005
+  front: What is the engineer review test for process documentation?
+  back: 'Give the SOP or runbook to someone who understands the systems but has not
+
+    performed this specific process. Ask them to follow it. Note every point
+
+    where they stop and ask a question.
+
+
+    Each question is a documentation gap. Common gaps:
+
+    - Steps that assume knowledge not in the document
+
+    - Controls that describe intent without specifying the mechanism
+
+    - Error handling that escalates without specifying to whom or when
+
+    '
+  tags:
+  - engineer-review
+  - review-test
+  - process
+  difficulty: intermediate
+- id: ch38-05-process-documentation-sops-runbooks-006
+  front: When does a process need BOTH an SOP and a runbook?
+  back: "When it has both a governance dimension and an execution dimension.\n\nExample: Monthly supplier payment run\n- SOP: covers who approves, what controls exist, what the audit trail requires\n  (governance — auditors and managers reference this)\n- Runbook: covers exact SAP transactions, execution sequence, bank portal\n  procedures, and what to do if a system is unavailable\n  (execution — the AP Clerk follows this on payment day)\n"
+  tags:
+  - process
+  - runbook
+  difficulty: basic
+- id: ch38-05-process-documentation-sops-runbooks-007
+  front: What is the purpose of the Document Control section in an SOP?
+  back: "Document Control is the maintenance contract for the SOP. It records:\n- Version number (distinguishes current from previous versions)\n- Effective date (when this version became authoritative)\n- Author (who is responsible for the document)\n- Next review date (the deadline for checking whether the document still\n  reflects reality)\n\nWithout a review date and named reviewer, the SOP has no maintenance\nprocess — only a maintenance aspiration.\n"
+  tags:
+  - document-control
+  - control-section
+  - purpose
+  difficulty: advanced
+- id: ch38-05-process-documentation-sops-runbooks-008
+  front: What is the difference between a process narrative and an SOP?
+  back: 'A process narrative describes how something works. An SOP governs it.
+
+
+    An SOP differs from a narrative by including:
+
+    - Named roles in every step (not just description)
+
+    - Explicit controls (not just implied safeguards)
+
+    - Error handling for each failure mode
+
+    - Document Control (version history and ownership)
+
+
+    The difference matters when an auditor asks: who is responsible for this
+
+    control, and how do I know the document reflects current practice?
+
+    '
+  tags:
+  - process-narrative
+  - difference
+  difficulty: advanced
+- id: ch38-05-process-documentation-sops-runbooks-009
+  front: How does L05 (process documentation) connect to L06 (change management)?
+  back: 'Change impact assessment starts with the question: which documented processes
+
+    does this change affect?
+
+
+    The SOP library built in L05 provides the inventory of documented processes
+
+    that L06 change impact assessments reference. A change to the ERP affects
+
+    the payment run SOP, the procurement SOP, the reporting runbook. Without
+
+    the SOP library, change impact assessment is guesswork.
+
+    '
+  tags:
+  - l05-process
+  - process-documentation
+  - connect
+  difficulty: intermediate
+- id: ch38-05-process-documentation-sops-runbooks-010
+  front: What process-optimization auto-skill might activate in L05, and how should students treat it?
+  back: 'The process-optimization auto-skill may activate when students use natural
+
+    language about process improvement (keywords: ''optimize'', ''improve process'',
+
+    ''bottleneck'', ''efficiency'').
+
+
+    Students should treat this as useful context being added to the session —
+
+    it enhances the response without changing the workflow. They should never
+
+    invoke it as /process-optimization. It activates from the keywords naturally.
+
+    '
+  tags:
+  - process-optimization-auto-skill
+  - students-treat
+  - process-optimization
+  difficulty: intermediate
