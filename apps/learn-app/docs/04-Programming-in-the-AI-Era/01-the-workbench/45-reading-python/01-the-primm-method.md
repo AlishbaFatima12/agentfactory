@@ -110,8 +110,8 @@ PRIMM builds exactly the skills AI cannot replace. When a beginner asks Claude C
 | **Predict** | Read the code and predict its output *before* running it | Trains your mental compiler. Without it, you cannot evaluate whether AI-generated code is correct. | Yes |
 | **Run** | Execute the code and compare the actual output to your prediction | Creates the feedback loop. The gap between your prediction and reality is where learning happens -- AI cannot experience this gap on your behalf. | Yes |
 | **Investigate** | Explore why the code behaves the way it does -- especially when your prediction was wrong | Builds diagnostic instinct. Tracing variables, testing edge cases, asking "what happens if the input changes?" -- this is the work of a developer who can partner with AI rather than depend on it. | Yes |
-| **Modify** | Change part of the code and predict what the change does | The most common real-world task in AI-assisted development. Developers spend far more time modifying AI suggestions than accepting them wholesale. | Chapter 34 |
-| **Make** | Write new code from scratch using the patterns you have learned | In the AI era, "Make" means: write the specification, prompt Claude Code, then critically evaluate what it produces. The creative act is the culmination of understanding, not the starting point. | Chapter 34 |
+| **Modify** | Change part of the code and predict what the change does | The most common real-world task in AI-assisted development. Developers spend far more time modifying AI suggestions than accepting them wholesale. | Next chapter |
+| **Make** | Write new code from scratch using the patterns you have learned | In the AI era, "Make" means: write the specification, prompt Claude Code, then critically evaluate what it produces. The creative act is the culmination of understanding, not the starting point. | Next chapter |
 
 This chapter focuses on the first three stages. They form a tight loop: predict, run, investigate. Each pass through the loop either confirms your understanding or reveals a gap. Both outcomes are useful. A correct prediction means your mental model works. A wrong prediction tells you exactly where your mental model needs updating.
 
@@ -445,13 +445,69 @@ check my answers.
 
 ---
 
+## PRIMM-AI+ Practice: Your First Predictions
+
+### Predict [AI-FREE]
+
+Ask your AI assistant to surprise you:
+
+```
+Generate a 3-line Python code block using only variables,
+arithmetic operators, and print(). Make the output surprising —
+something where the result is not what most beginners would predict.
+Do NOT reveal the output.
+```
+
+Read the generated code. Write down your prediction and a **confidence score from 1-5** (1 = total guess, 5 = completely certain). This is PRIMM-AI+ Rule 1 in action — never run code you have not predicted. The confidence score helps you track how well you know what you know.
+
+### Run
+
+Paste the code into `main.py` and run `uv run python main.py`. Compare the output to your prediction. Record your result: prediction, confidence score, actual output. Were you right? If your confidence was high but your prediction was wrong, that mismatch is a calibration signal — it means you thought you understood something you did not. Note it.
+
+### Investigate
+
+If your prediction was wrong, write a **"why I got it wrong" note** in your own words before asking the AI — this is your trace artifact, your understanding made visible before AI assistance.
+
+Then ask the AI:
+
+```
+My prediction was [your prediction]. The actual output was
+[actual output]. Explain why I got it wrong.
+```
+
+Compare the AI's explanation to your own note. But do not stop there — PRIMM-AI+ Rule 2 says *never trust an explanation you have not tested.* Verify the explanation by changing one value in the code and predicting the new output. Run it. Does the explanation hold?
+
+**Error Taxonomy**: If your prediction was wrong, classify the error. Did you confuse string concatenation with addition (type error)? Did you misunderstand how `//` works (logic error)? Did you predict the right type of operation but get the value wrong (data/edge-case error)? Naming the error makes it easier to spot next time.
+
+### Modify
+
+Take the code block the AI generated and change one variable. Before running the modified version, predict the new output. Then run it. This is the Modify stage at its simplest: one change, one prediction, one verification.
+
+### Make [Mastery Gate]
+
+Ask the AI to quiz you:
+
+```
+Give me 5 short Python code blocks (2-3 lines each) using only
+variables with type annotations, arithmetic, string operations,
+boolean logic, and print(). Do NOT show the output.
+```
+
+Predict all five — with a confidence score for each. Run all five. Score yourself: how many did you get right? Track which confidence levels matched reality: are your 4s and 5s actually correct? Are your 2s and 3s actually uncertain? That calibration is the meta-skill PRIMM-AI+ builds. Getting 4 out of 5 correct with well-calibrated confidence scores is your mastery gate for this lesson.
+
+:::tip Verification Ladder — Rung 1
+You just predicted code output before running it. That predict-then-check habit is **Rung 1 of the Verification Ladder** — the rung every other rung depends on. In later chapters, you will add types (Rung 2), tests (Rung 3), pipelines (Rung 4), and observability (Rung 5). But it all starts here, with the commitment to predict before you run.
+:::
+
+---
+
 ## Key Takeaways
 
 1. **Reading code is the primary skill in AI-driven development.** AI generates code fast. Your job is to verify it -- and verification starts with reading.
 
 2. **Active reading means predicting, tracing, and explaining.** Scanning code is not reading. If you cannot predict what a line does before running it, you do not yet understand that line.
 
-3. **PRIMM gives you a formal method: Predict, Run, Investigate.** This chapter uses the first three stages. Modify and Make come in Chapter 34 when you start writing code.
+3. **PRIMM gives you a formal method: Predict, Run, Investigate.** This chapter uses the first three stages. Modify and Make come in the next chapter when you start writing code.
 
 4. **Wrong predictions are the most valuable learning moments.** A correct prediction confirms your model. A wrong prediction reveals exactly where your understanding has a gap -- and that gap is now something you can fix.
 

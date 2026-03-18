@@ -489,6 +489,64 @@ catches and what only a human reviewer would catch.
 
 ---
 
+## PRIMM-AI+ Practice: Code Review
+
+### Predict [AI-FREE]
+
+Ask your AI assistant to generate a bug for you to find:
+
+```
+Generate a 10-line Python code block for a SmartNotes feature
+using only variables with type annotations (str, int, float, bool),
+arithmetic, and print(). Include one deliberate type mismatch bug.
+Do NOT reveal which line has the bug.
+```
+
+Build a trace table — your **mandatory trace artifact**. Predict where the crash will occur and what the error message will say, along with a **confidence score from 1-5**.
+
+**Error Taxonomy**: Before running, classify what kind of error you expect. A type mismatch (like `int + str`) is a *type error*. Apply this classification before you see the result — it trains you to name bugs by category, not just by symptom.
+
+### Run
+
+Run `uv run pyright main.py` on the code first. Does Pyright catch the type bug? It should — this is your type checker working as designed. Then run `uv run python main.py`. Record your result: predicted crash location, confidence, actual crash location. Compare Pyright's error to the runtime crash — both point to the same line, but Pyright caught it *before* running.
+
+### Investigate
+
+Now ask for a harder challenge — a logic bug that passes all automated checks:
+
+```
+Generate a 10-line Python block that calculates note statistics.
+All types must be correct — Pyright should show 0 errors.
+But include one logic error (wrong division order, missing variable,
+off-by-one). Do NOT reveal which line has the bug.
+```
+
+Build the trace table. Find the line where the calculation produces a wrong result.
+
+**Error Taxonomy**: This is a *logic error* — the types are correct but the behavior is wrong. Pyright says "0 errors" for this code. Your trace table finds what Pyright cannot. That is why trace artifacts are mandatory — they are the tool that catches what automated tools miss.
+
+### Modify
+
+Take the bug you found and fix it. But before running the fixed version, predict its output. Then run it. Does the fix produce the correct result? This double verification — predict the fix, then verify the fix — is PRIMM-AI+'s full cycle applied to bug fixing.
+
+### Make [Mastery Gate]
+
+Ask your AI assistant:
+
+```
+Show me a 10-line Python block. Run Pyright on it and tell me
+what Pyright reports. Then tell me: are there any logic bugs
+that Pyright missed?
+```
+
+Before reading the AI's analysis, do your own review. Find the logic bugs yourself. Then compare your findings to the AI's. Where you agree, your review skills match the AI's. Where you disagree, investigate: who is right? Finding at least one logic bug that Pyright missed — and correctly explaining why it is wrong — is your mastery gate for this lesson.
+
+:::tip Verification Ladder — Rung 2
+In the Predict step, you caught a type error by reading type annotations. That is **Rung 2 of the Verification Ladder** — types catch structural errors before anything runs. Pyright automates Rung 2, but your trace table caught what Pyright could not (the logic bug). Human reading and automated tools together cover more ground than either alone.
+:::
+
+---
+
 ## Key Takeaways
 
 1. **A code review means reading code to find problems -- not just understanding.** The shift from "what does this do?" to "what does this do wrong?" is the reviewer's mindset.
@@ -505,4 +563,4 @@ catches and what only a human reviewer would catch.
 
 ## Looking Ahead
 
-You can read Python. You can predict what code does line by line, trace variable changes through reassignment, and catch bugs -- both the type mismatches that crash programs and the logic errors that produce wrong answers silently. But Chapter 34 will ask you to write a test -- and a test uses two words you have not seen yet: `def` and `assert`. In Lesson 4, you will learn to read test code by recognizing those two vocabulary words. You will not write tests yet. You will read them and predict whether they pass or fail -- applying the same PRIMM method you already know to a new kind of code.
+You can read Python. You can predict what code does line by line, trace variable changes through reassignment, and catch bugs -- both the type mismatches that crash programs and the logic errors that produce wrong answers silently. But the next chapter will ask you to write a test -- and a test uses two words you have not seen yet: `def` and `assert`. In Lesson 4, you will learn to read test code by recognizing those two vocabulary words. You will not write tests yet. You will read them and predict whether they pass or fail -- applying the same PRIMM method you already know to a new kind of code.

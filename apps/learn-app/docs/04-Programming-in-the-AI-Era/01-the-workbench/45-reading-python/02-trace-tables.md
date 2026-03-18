@@ -508,6 +508,75 @@ reassignment. Do NOT show the output.
 
 ---
 
+## PRIMM-AI+ Practice: Trace Tables
+
+### Predict [AI-FREE]
+
+Ask your AI assistant to generate a trace challenge:
+
+```
+Generate a 5-line Python code block using only variables with
+type annotations (int, float, str), arithmetic operators,
+and print(). Include at least one variable reassignment where
+the variable's new value depends on its old value.
+Do NOT show the output.
+```
+
+Build a trace table on paper or in a text file — this is your **mandatory trace artifact** for this exercise. Predict the output from your completed table and record a **confidence score from 1-5**.
+
+### Run
+
+Paste the code into `main.py` and run `uv run python main.py`. Compare to your trace table prediction and record the result: prediction, confidence, actual output. If they match, your tracing is accurate. If not, the next step tells you exactly where you went wrong.
+
+### Investigate
+
+Paste your trace table to the AI and ask for a row-by-row check:
+
+```
+Here is my trace table: [paste it]
+My prediction was [your prediction]. The actual output was [actual].
+Check my trace table row by row and tell me where I went wrong.
+```
+
+The AI will identify the exact row where your trace diverged from reality. That row is where the stale-value shortcut caught you. Note that the trace table itself — the artifact you produced before asking the AI — is what makes this investigation possible. Without it, you would have nothing to compare against.
+
+**Error Taxonomy**: If your trace was wrong, classify the error. Did you use the original value instead of the updated one (stale-value error — a type of logic error)? Did you confuse which variable was being reassigned (orchestration error)? Naming it makes the pattern visible.
+
+### Parsons Problem: Reconstruct the Execution Order
+
+Here are the lines of a Python code block in scrambled order. Reconstruct the correct sequence so that `print(total)` outputs `25`:
+
+```python
+total: int = count + bonus
+count = count + bonus
+bonus = bonus * 2
+print(total)
+bonus: int = 5
+count: int = 10
+```
+
+Arrange these six lines in the correct order. Then build a trace table for your reconstructed code and predict the output. Write your answer and a confidence score before checking.
+
+**Hint**: Variables must be created before they can be used. And remember — when a variable is reassigned, later lines see the new value, not the old one. Build a trace table for your arrangement to verify it produces `25`.
+
+### Modify
+
+Take the code block the AI generated in the Predict step and add one more reassignment. Before running, extend your trace table with the new rows. Predict the output. Run and compare. Each modification makes the trace longer and tests whether your method scales.
+
+### Make [Mastery Gate]
+
+Ask the AI for progressive difficulty:
+
+```
+Give me 3 Python code blocks to trace, each getting progressively
+harder: 3 lines, 5 lines, 7 lines. Each must have at least one
+variable reassignment. Do NOT show the output.
+```
+
+Build trace tables for all three — with confidence scores. Run all three. The 7-line block will test whether your trace table method holds under real complexity — the same complexity you will encounter when reviewing AI-generated code in future chapters. Getting all three trace tables correct is your mastery gate for this lesson. Track your confidence calibration: are your scores getting more accurate as you practice?
+
+---
+
 ## Key Takeaways
 
 1. **Your brain takes shortcuts with longer code** -- it uses the first value it saw for a variable instead of tracking updates. This is normal, not a failure of intelligence.
