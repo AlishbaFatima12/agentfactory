@@ -218,25 +218,95 @@ Invoke `/team-prompt-writer` with complete context from Stage 4.
 
 **CRITICAL: The team is STATEFUL. It does NOT shut down after content writing.**
 
-The team prompt must include these post-writing phases:
+The team prompt must include ALL of these phases:
 
 ```
 Phase 3: Writers (parallel) ← content lessons
 Phase 4: Quality Review
 Phase 5: Post-Production (SAME team, NOT shutdown)
-  - Summary Generator: .summary.md for each lesson
-  - Flashcard Generator: .flashcards.yaml for each lesson
-  - Quiz Generator: end-of-chapter quiz
-  - Slide Generator: chapter slide deck
 Phase 6: Final Verification
-  - All sidecar files present
-  - All YAML frontmatter complete
-  - All exercises have data/scenarios
 ```
 
-The team lead coordinates ALL phases. Teammates from Phase 3 can be reused
-in Phase 5 (they have context). New teammates can be spawned for specialized
-work (quiz, slides).
+#### Phase 5: Post-Production (detailed)
+
+Each post-production task uses a SPECIFIC skill. The team prompt must include
+exact invocation instructions for each:
+
+**5A — Summaries** (per lesson):
+
+- Skill: `/summary-generator`
+- Input: each lesson `.md` file
+- Output: `NN-lesson-name.summary.md` sidecar file adjacent to the lesson
+- Teammate: reuse a writer teammate (they have lesson context)
+- Run: parallel across all 15 lessons
+
+**5B — Flashcards** (per lesson):
+
+- Skill: `/generate-flashcards`
+- Input: each lesson `.md` file
+- Output: `NN-lesson-name.flashcards.yaml` sidecar file adjacent to the lesson
+- Teammate: reuse a writer teammate or spawn dedicated flashcard teammate
+- Run: parallel across all 15 lessons
+- Note: flashcards are YAML sidecar files, NOT React component imports
+
+**5C — Chapter Quiz** (one per chapter):
+
+- Skill: `/quiz-generator`
+- Input: all lesson files in the chapter
+- Output: standalone quiz file (typically `16-quiz.md` or appended to summary lesson)
+- Teammate: spawn a new quiz teammate (needs full chapter context)
+- Run: after all lessons + summaries are complete (quiz references lesson content)
+- Target: 50 questions, randomized batching of 15-20 per session
+
+**5D — Slides** (one per chapter):
+
+- Skill: `/notebooklm-slides` to generate slide content
+- Then: `/upload-chapter-slides` to upload PDF to CDN and update README frontmatter
+- Input: all lesson files + chapter README
+- Output: PDF slide deck + README `slides:` frontmatter update
+- Teammate: spawn dedicated slides teammate
+- Run: after all lessons are complete
+
+#### Phase 5 for Plugin Chapters (additional):
+
+**5E — Plugin Validation** (if plugin was built):
+
+- Skill: `/skill-validator` on each SKILL.md in the plugin
+- Run evals: `python evals/run.py --list` then `python evals/run.py` (all cases)
+- Verify: plugin.json valid, all skill names match directories, agent frontmatter
+  has required fields (`name`, `description`, `tools`, `background: true`)
+- Verify: `local.md.template` exists with all configurable fields documented
+- Teammate: the plugin-builder teammate (they wrote the files, they validate them)
+
+#### Phase 6: Final Verification
+
+The team lead (not a teammate) runs these checks:
+
+```bash
+# File inventory
+ls <chapter-dir>/*.md | wc -l              # 15+ lesson files + README
+ls <chapter-dir>/*.summary.md | wc -l      # 15 summary sidecars
+ls <chapter-dir>/*.flashcards.yaml | wc -l # 15 flashcard sidecars
+ls <chapter-dir>/*quiz* | wc -l            # 1 quiz file
+
+# No phantom imports
+grep -r "import.*@site/src/components" <chapter-dir>  # must return nothing
+
+# YAML frontmatter spot-check (3 random lessons)
+head -50 <chapter-dir>/03-*.md  # verify all required fields
+head -50 <chapter-dir>/08-*.md
+head -50 <chapter-dir>/12-*.md
+
+# Plugin checks (if applicable)
+ls <plugin-dir>/skills/*/SKILL.md | wc -l  # N skill files
+ls <plugin-dir>/agents/*.md | wc -l        # M agent files
+python <plugin-dir>/evals/run.py --list    # evals exist and run
+
+# README slides frontmatter
+grep "slides:" <chapter-dir>/README.md     # slides metadata present
+```
+
+Only after ALL checks pass: shut down teammates, delete the team, report to user.
 
 **Team prompt args format for `/team-prompt-writer`**:
 
@@ -245,8 +315,13 @@ Chapter [N]: [Title]. Spec at [path]. Skills at [path].
 Plugin repo at [path]. Chapter destination: [path].
 DESIGN DECISIONS: [all binding decisions from Stage 3].
 LESSON DESIGN: [the Stage 2 output — how each lesson teaches].
-POST-PRODUCTION: Team is stateful — include summary, flashcard,
-quiz, and slide phases after content writing.
+POST-PRODUCTION: Team is stateful. After content + quality review:
+  Phase 5A: /summary-generator on each lesson → .summary.md sidecars
+  Phase 5B: /generate-flashcards on each lesson → .flashcards.yaml sidecars
+  Phase 5C: /quiz-generator on full chapter → 50-question quiz file
+  Phase 5D: /notebooklm-slides + /upload-chapter-slides → PDF + README update
+  Phase 5E (if plugin): /skill-validator on each SKILL.md + run evals
+  Phase 6: Lead runs verification checks, then shuts down team.
 Reference chapters: [primary] + [secondary].
 Plugin builder refs: [3 URLs if building plugin].
 ```
