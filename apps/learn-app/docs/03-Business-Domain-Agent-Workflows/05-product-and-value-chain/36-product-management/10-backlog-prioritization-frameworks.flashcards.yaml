@@ -1,35 +1,41 @@
-- question: "What is the RICE formula?"
-  answer: "RICE Score = (Reach × Impact × Confidence) ÷ Effort. Reach = % of active accounts likely to use within 90 days. Impact = 1 (minimal), 2 (moderate), 3 (significant). Confidence = % based on evidence quality. Effort = person-sprints."
+deck:
+  id: "ch36-10-backlog-prioritization-frameworks"
+  title: "Backlog Prioritization Frameworks"
+  version: 1
 
-- question: "What is the critical difference between scoring confidence correctly vs. incorrectly?"
-  answer: "Confidence should reflect evidence quality, not optimism. 90% = multiple data sources. 70-80% = one strong source. 50-60% = single source or anecdotal. 25-40% = hypothesis without evidence. Scoring optimism instead of evidence creates false precision."
+cards:
+  - front: "What is the RICE formula?"
+    back: "RICE Score = (Reach × Impact × Confidence) ÷ Effort. Reach = % of active accounts likely to use within 90 days. Impact = 1 (minimal), 2 (moderate), 3 (significant). Confidence = % based on evidence quality. Effort = person-sprints."
 
-- question: "When should you use RICE vs. Value vs. Effort?"
-  answer: "Use RICE when you have 15+ features and need a quantitative, defensible ranking. Use Value vs. Effort for quick visual prioritisation in team sessions or when you have 5-7 items and need fast alignment without complex scoring."
+  - front: "What is the critical difference between scoring confidence correctly vs. incorrectly?"
+    back: "Confidence should reflect evidence quality, not optimism. 90% = multiple data sources. 70-80% = one strong source. 50-60% = single source or anecdotal. 25-40% = hypothesis without evidence. Scoring optimism instead of evidence creates false precision."
 
-- question: "What is the Strategic Override Test?"
-  answer: "Ask: is there any item that scored low that you would build anyway? If yes, write the override reason explicitly — CEO commitment, competitive necessity, technical prerequisite, or enterprise deal dependency. Document overrides as overrides, not as inflated scores."
+  - front: "When should you use RICE vs. Value vs. Effort?"
+    back: "Use RICE when you have 15+ features and need a quantitative, defensible ranking. Use Value vs. Effort for quick visual prioritisation in team sessions or when you have 5-7 items and need fast alignment without complex scoring."
 
-- question: "What is the Data Gap Test?"
-  answer: "For each item with confidence below 50%, ask: what would it take to raise confidence above 70%? Can a 2-week discovery spike provide that? Low-confidence, high-effort items should almost always have a discovery spike before entering a sprint."
+  - front: "What is the Strategic Override Test?"
+    back: "Ask: is there any item that scored low that you would build anyway? If yes, write the override reason explicitly — CEO commitment, competitive necessity, technical prerequisite, or enterprise deal dependency. Document overrides as overrides, not as inflated scores."
 
-- question: "What is the 'What Would We Regret?' Test?"
-  answer: "Ignore all scores. Ask: which item, if we shipped nothing else this quarter, would our best customers be most grateful for? If this differs from the RICE #1, investigate the gap — it is either a data quality issue (fix the score) or a strategic weight RICE cannot capture (document as override)."
+  - front: "What is the Data Gap Test?"
+    back: "For each item with confidence below 50%, ask: what would it take to raise confidence above 70%? Can a 2-week discovery spike provide that? Low-confidence, high-effort items should almost always have a discovery spike before entering a sprint."
 
-- question: "Why is a RICE score from bad data worse than no score?"
-  answer: "Bad data RICE creates false precision that makes bad decisions look defensible. A ranking that appears quantitative but is built on inflated confidence or guessed reach is more dangerous than an honest 'we don't have enough data to score this yet.'"
+  - front: "What is the 'What Would We Regret?' Test?"
+    back: "Ignore all scores. Ask: which item, if we shipped nothing else this quarter, would our best customers be most grateful for? If this differs from the RICE #1, investigate the gap — it is either a data quality issue (fix the score) or a strategic weight RICE cannot capture (document as override)."
 
-- question: "What must the quarterly priority decision include beyond just P1 and P2?"
-  answer: "P1 (must ship), P2 (ships if P1 is on track), Stretch (if capacity allows), EXPLICITLY NOT BUILDING THIS QUARTER (with rationale), Strategic Overrides Documented, and Discovery Spikes Recommended. The Not Building list is as important as the build list."
+  - front: "Why is a RICE score from bad data worse than no score?"
+    back: "Bad data RICE creates false precision that makes bad decisions look defensible. A ranking that appears quantitative but is built on inflated confidence or guessed reach is more dangerous than an honest 'we don't have enough data to score this yet.'"
 
-- question: "What is the /prioritise command and which plugin provides it?"
-  answer: "/prioritise is provided by the custom product-strategy plugin. It applies prioritisation frameworks (RICE, ICE, MoSCoW, Value vs. Effort, Kano) to a backlog, shows scoring assumptions, and runs the three mandatory challenges to produce a quarterly priority decision."
+  - front: "What must the quarterly priority decision include beyond just P1 and P2?"
+    back: "P1 (must ship), P2 (ships if P1 is on track), Stretch (if capacity allows), EXPLICITLY NOT BUILDING THIS QUARTER (with rationale), Strategic Overrides Documented, and Discovery Spikes Recommended. The Not Building list is as important as the build list."
 
-- question: "When should a low-confidence, high-effort item have a discovery spike?"
-  answer: "Almost always. If confidence is below 50% and effort is above 3 sprints, a 2-week discovery spike is far cheaper than discovering the assumption was wrong 4 sprints into the build. Discovery spikes are not delays — they are risk reduction."
+  - front: "What is the /prioritise command and which plugin provides it?"
+    back: "/prioritise is provided by the custom product-strategy plugin. It applies prioritisation frameworks (RICE, ICE, MoSCoW, Value vs. Effort, Kano) to a backlog, shows scoring assumptions, and runs the three mandatory challenges to produce a quarterly priority decision."
 
-- question: "What does Kano model distinguish between?"
-  answer: "Basic needs (table-stakes — users churn without them), performance needs (more is better — users reward you proportionally), and delighters (unexpected value — users love them but didn't ask for them). Useful for understanding customer demand structure, not for ranking features against each other."
+  - front: "When should a low-confidence, high-effort item have a discovery spike?"
+    back: "Almost always. If confidence is below 50% and effort is above 3 sprints, a 2-week discovery spike is far cheaper than discovering the assumption was wrong 4 sprints into the build. Discovery spikes are not delays — they are risk reduction."
 
-- question: "What is the most important section of the quarterly priority decision that PMs most often omit?"
-  answer: "'Explicitly Not Building This Quarter' — with one-sentence rationale for each rejected item. Without it, rejected ideas resurface in every planning meeting because they were never formally closed."
+  - front: "What does Kano model distinguish between?"
+    back: "Basic needs (table-stakes — users churn without them), performance needs (more is better — users reward you proportionally), and delighters (unexpected value — users love them but didn't ask for them). Useful for understanding customer demand structure, not for ranking features against each other."
+
+  - front: "What is the most important section of the quarterly priority decision that PMs most often omit?"
+    back: "'Explicitly Not Building This Quarter' — with one-sentence rationale for each rejected item. Without it, rejected ideas resurface in every planning meeting because they were never formally closed."

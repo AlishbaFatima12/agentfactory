@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-04-hr-knowledge-base-agent"
+  title: "Hr Knowledge Base Agent"
+  version: 1
+
 cards:
   - front: "What is a Type 1 HR query?"
     back: "A query that has a written, policy-governed answer — for example, 'How many days of annual leave do I have?' The knowledge-base-agent answers these directly, cites the policy source, and provides an escalation contact."

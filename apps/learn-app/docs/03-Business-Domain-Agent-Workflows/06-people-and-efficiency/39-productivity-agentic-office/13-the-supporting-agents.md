@@ -279,7 +279,7 @@ The tone is always: "can you confirm?" Not: "why haven't you responded?" The mes
 
 | Task Duration | Check-in Schedule |
 | ------------- | ----------------- |
-| <5 days       | Once, at midpoint |
+| &lt;5 days       | Once, at midpoint |
 | 5–14 days     | Weekly            |
 | >14 days      | Bi-weekly         |
 

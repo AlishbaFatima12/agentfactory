@@ -1,7 +1,9 @@
-title: "Operational Risk Register That Works"
-chapter: 38
-lesson: 9
-flashcards:
+deck:
+  id: "ch38-09-operational-risk-register-that-works"
+  title: "Operational Risk Register That Works"
+  version: 1
+
+cards:
   - front: "What are the five failure modes of risk registers?"
     back: "1. Static, not live — scores never update when circumstances change. 2. Residual scores not credible — inherent 15, residual 3, control: 'verbal knowledge.' 3. No escalation path — nobody knows when to act. 4. Missing uncomfortable risks — key-person, regulatory gaps, customer concentration absent. 5. Vague mitigation plans — 'improve vendor management' with no owner, date, or target score."
 

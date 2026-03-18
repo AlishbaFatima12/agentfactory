@@ -1,6 +1,9 @@
-title: "Lesson 13 — Operations Intelligence Brief"
-description: "Flashcards covering the synthesis workflow, plugin usage, brief structure, and the intelligence vs. compilation distinction"
-flashcards:
+deck:
+  id: "ch38-13-operations-intelligence-brief"
+  title: "Lesson 13 — Operations Intelligence Brief"
+  version: 1
+
+cards:
   - front: "What is the difference between an operations intelligence brief and a compiled status report?"
     back: "A compiled status report concatenates outputs from separate sources. An intelligence brief synthesises them — identifying cross-domain connections, surfacing patterns that individual reports cannot see, and drawing conclusions from the combination. The brief tells a story; the compilation lists facts."
 

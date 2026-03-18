@@ -1,39 +1,44 @@
-flashcards:
-  - question: "What are the three stages of the Build-Measure-Learn loop?"
-    answer: "Build (the minimum product that tests critical assumptions), Measure (specific metrics against pre-agreed success criteria), Learn (classified outputs: validated assumptions, invalidated assumptions, and unexpected learnings). The loop feeds back to a new Build iteration."
+deck:
+  id: "ch40-07-build-measure-learn"
+  title: "Build Measure Learn"
+  version: 1
 
-  - question: "What does VALIDATED mean in the evidence quality standard?"
-    answer: "Customers paid for it OR used it repeatedly without prompting. Enthusiasm, interest, 'they said they would use it', and NPS scores are not VALIDATED — they are ANECDOTAL at best. VALIDATED requires revealed preference through behaviour, not stated preference through opinion."
+cards:
+  - front: "What are the three stages of the Build-Measure-Learn loop?"
+    back: "Build (the minimum product that tests critical assumptions), Measure (specific metrics against pre-agreed success criteria), Learn (classified outputs: validated assumptions, invalidated assumptions, and unexpected learnings). The loop feeds back to a new Build iteration."
 
-  - question: "What are the seven levels of the evidence quality hierarchy from most to least reliable?"
-    answer: "1. Paid AND renewed. 2. Paid once. 3. Signed LOI with specific terms. 4. Used product N times without prompting. 5. Said they would pay a specific amount in an interview. 6. Said the problem is real and painful. 7. Multiple people described the same problem."
+  - front: "What does VALIDATED mean in the evidence quality standard?"
+    back: "Customers paid for it OR used it repeatedly without prompting. Enthusiasm, interest, 'they said they would use it', and NPS scores are not VALIDATED — they are ANECDOTAL at best. VALIDATED requires revealed preference through behaviour, not stated preference through opinion."
 
-  - question: "What does INCONCLUSIVE mean as an assumption status, and what should you do?"
-    answer: "The test was run but no clear conclusion can be drawn — the sample was too small, the context was confounding, or the measurement did not capture the relevant behaviour. The correct action is to redesign the test, not to treat INCONCLUSIVE as VALIDATED."
+  - front: "What are the seven levels of the evidence quality hierarchy from most to least reliable?"
+    back: "1. Paid AND renewed. 2. Paid once. 3. Signed LOI with specific terms. 4. Used product N times without prompting. 5. Said they would pay a specific amount in an interview. 6. Said the problem is real and painful. 7. Multiple people described the same problem."
 
-  - question: "What are the three outputs of unexpected learnings in a BML analysis?"
-    answer: "Things you discovered that you were not looking for, new assumptions revealed by the pilot that were not in the original assumption map, and customer behaviour that surprised you. Each unexpected learning has an implication — what it means for the product or business direction."
+  - front: "What does INCONCLUSIVE mean as an assumption status, and what should you do?"
+    back: "The test was run but no clear conclusion can be drawn — the sample was too small, the context was confounding, or the measurement did not capture the relevant behaviour. The correct action is to redesign the test, not to treat INCONCLUSIVE as VALIDATED."
 
-  - question: "What is a Zoom-In Pivot and when is it appropriate?"
-    answer: "One feature of the product becomes the whole product. Appropriate when one aspect of the MVP is getting disproportionate engagement while the rest is ignored — the signal is that the product is too broad and one element is carrying the value."
+  - front: "What are the three outputs of unexpected learnings in a BML analysis?"
+    back: "Things you discovered that you were not looking for, new assumptions revealed by the pilot that were not in the original assumption map, and customer behaviour that surprised you. Each unexpected learning has an implication — what it means for the product or business direction."
 
-  - question: "What is a Customer Segment Pivot and when is it appropriate?"
-    answer: "Same product; different customer. Appropriate when the product works but for a different customer than the one you targeted. Indicator: a non-target customer is using the product enthusiastically while the target customer has low adoption."
+  - front: "What is a Zoom-In Pivot and when is it appropriate?"
+    back: "One feature of the product becomes the whole product. Appropriate when one aspect of the MVP is getting disproportionate engagement while the rest is ignored — the signal is that the product is too broad and one element is carrying the value."
 
-  - question: "What is a Technology Pivot and when is it appropriate?"
-    answer: "Same positioning; different technology. Appropriate when the current technology cannot achieve the required accuracy, scale, or cost. In the AP context: if AI matching could not reach 90% accuracy, pivoting to rule-based matching + human review would be a technology pivot."
+  - front: "What is a Customer Segment Pivot and when is it appropriate?"
+    back: "Same product; different customer. Appropriate when the product works but for a different customer than the one you targeted. Indicator: a non-target customer is using the product enthusiastically while the target customer has low adoption."
 
-  - question: "What are the four conditions in the Pivot Decision Checklist?"
-    answer: "1. At least 2 iterations of the current approach (one test is not enough). 2. Invalidation based on behaviour, not opinion. 3. Team is emotionally ready for a pivot. 4. What is still true — what learning is preserved into the pivot (a good pivot does not discard validated learning)."
+  - front: "What is a Technology Pivot and when is it appropriate?"
+    back: "Same positioning; different technology. Appropriate when the current technology cannot achieve the required accuracy, scale, or cost. In the AP context: if AI matching could not reach 90% accuracy, pivoting to rule-based matching + human review would be a technology pivot."
 
-  - question: "What is the AP pilot's most significant unexpected learning and why does it matter?"
-    answer: "Handwritten invoices were approximately 30% of volume — triple the assumed 10-15%. This elevates handwritten OCR accuracy from a V2 feature to a V1 requirement, changes the accuracy target for the AI component, and may affect pricing (higher complexity = potentially higher cost)."
+  - front: "What are the four conditions in the Pivot Decision Checklist?"
+    back: "1. At least 2 iterations of the current approach (one test is not enough). 2. Invalidation based on behaviour, not opinion. 3. Team is emotionally ready for a pivot. 4. What is still true — what learning is preserved into the pivot (a good pivot does not discard validated learning)."
 
-  - question: "Why does the pivot decision checklist include 'team emotional readiness'?"
-    answer: "A pivot decided under stress often targets the wrong dimension. Teams that are frustrated or anxious may pivot on pricing when the real problem is the channel, or pivot the customer segment when the real problem is the problem framing. Emotional readiness ensures the pivot is data-driven, not stress-driven."
+  - front: "What is the AP pilot's most significant unexpected learning and why does it matter?"
+    back: "Handwritten invoices were approximately 30% of volume — triple the assumed 10-15%. This elevates handwritten OCR accuracy from a V2 feature to a V1 requirement, changes the accuracy target for the AI component, and may affect pricing (higher complexity = potentially higher cost)."
 
-  - question: "What is a Business Architecture Pivot?"
-    answer: "Changing from high-margin, low-volume to low-margin, high-volume (or the reverse). Appropriate when unit economics only work at a scale that cannot be reached with the current go-to-market. Example: $500/month subscription cannot scale fast enough → $50/month with volume."
+  - front: "Why does the pivot decision checklist include 'team emotional readiness'?"
+    back: "A pivot decided under stress often targets the wrong dimension. Teams that are frustrated or anxious may pivot on pricing when the real problem is the channel, or pivot the customer segment when the real problem is the problem framing. Emotional readiness ensures the pivot is data-driven, not stress-driven."
 
-  - question: "What does 'a good pivot preserves validated learning' mean?"
-    answer: "A pivot should change only the dimension that is broken — not everything. If the customer segment was right but the pricing was wrong, the pivot changes pricing, not the customer segment. Discarding validated learning in a pivot wastes the evidence gathered from the MVP and resets learning unnecessarily."
+  - front: "What is a Business Architecture Pivot?"
+    back: "Changing from high-margin, low-volume to low-margin, high-volume (or the reverse). Appropriate when unit economics only work at a scale that cannot be reached with the current go-to-market. Example: $500/month subscription cannot scale fast enough → $50/month with volume."
+
+  - front: "What does 'a good pivot preserves validated learning' mean?"
+    back: "A pivot should change only the dimension that is broken — not everything. If the customer segment was right but the pricing was wrong, the pivot changes pricing, not the customer segment. Discarding validated learning in a pivot wastes the evidence gathered from the MVP and resets learning unnecessarily."

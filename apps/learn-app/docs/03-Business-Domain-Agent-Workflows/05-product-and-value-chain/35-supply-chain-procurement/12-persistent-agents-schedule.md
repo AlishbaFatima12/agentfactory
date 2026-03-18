@@ -301,12 +301,12 @@ Review the following metric table. Adjust the thresholds to match your organisat
 | Metric                          | Owner       | Source            | Threshold        |
 | ------------------------------- | ----------- | ----------------- | ---------------- |
 | Vendor OTD (Tier 1 average)     | Procurement | ERP               | >92%             |
-| Invoice exception rate          | Finance     | AP system         | <12%             |
-| Invoice processing days         | Finance     | AP system         | <5 days          |
+| Invoice exception rate          | Finance     | AP system         | &lt;12%             |
+| Invoice processing days         | Finance     | AP system         | &lt;5 days          |
 | Open disputes (£ value)         | Finance     | AP system         | <£50K            |
 | Logistics OTD (carrier average) | Logistics   | TMS               | >93%             |
 | Cost per kg shipped             | Logistics   | TMS               | vs. prior month  |
-| Expedited freight %             | Logistics   | TMS               | <8% of total     |
+| Expedited freight %             | Logistics   | TMS               | &lt;8% of total     |
 | Active vendor risk alerts       | Procurement | Risk agent        | Count + severity |
 | Contract renewals in 90 days    | Procurement | Contract register | Count            |
 | Identified savings pipeline     | Procurement | Analytics         | £ total          |

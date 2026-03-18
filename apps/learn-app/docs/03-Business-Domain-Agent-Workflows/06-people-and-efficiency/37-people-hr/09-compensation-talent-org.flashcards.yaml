@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-09-compensation-talent-org"
+  title: "Compensation Talent Org"
+  version: 1
+
 cards:
   - front: "What four percentile bands does /comp-analysis use, and what does each signal?"
     back: "25th = below market (retention risk); 50th = market median (competitive); 75th = above market (attracts strong performers); 90th = top of market (critical or scarce roles)"

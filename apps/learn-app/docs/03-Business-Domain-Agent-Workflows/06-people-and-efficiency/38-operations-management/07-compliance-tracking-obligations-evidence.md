@@ -130,7 +130,7 @@ Every obligation in the compliance map carries one of five statuses. The five-st
 
 | Status              | Colour | Criteria                                                                                         | Action Required                               |
 | ------------------- | ------ | ------------------------------------------------------------------------------------------------ | --------------------------------------------- |
-| **CURRENT**         | 🟢     | Control effective and tested; evidence current (<12 months); no known gaps                      | Schedule next review date                     |
+| **CURRENT**         | 🟢     | Control effective and tested; evidence current (&lt;12 months); no known gaps                      | Schedule next review date                     |
 | **REVIEW NEEDED**   | 🟡     | Evidence >12 months old; control not tested since last regulatory change; review date passed     | Review and reassess within 30 days            |
 | **PARTIAL**         | 🟡     | Control exists but does not fully address obligation; evidence has identifiable gaps             | Close gaps; do not assert full compliance     |
 | **GAP**             | 🔴     | No effective control; evidence absent or cannot be located; known control failure               | Remediate before next regulatory touchpoint   |
@@ -345,7 +345,7 @@ You are the Operations Manager at a 200-person UK professional services firm. Th
 - **UK GDPR** (DPA 2018) — data protection obligations for client and employee data
 - **AML regulations** (MLR 2017) — if financial services; or substitute sector-relevant AML equivalent
 - **ISO 27001** — the firm holds certification; surveillance audit is due in 3 months
-- **Client SLAs** — 99.5% uptime, <4hr P1 incident notification, quarterly reporting
+- **Client SLAs** — 99.5% uptime, &lt;4hr P1 incident notification, quarterly reporting
 
 Before prompting, assess your known gaps honestly. For this exercise, assume:
 

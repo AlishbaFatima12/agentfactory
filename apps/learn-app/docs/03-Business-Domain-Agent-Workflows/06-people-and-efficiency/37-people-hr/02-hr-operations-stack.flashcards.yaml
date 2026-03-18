@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-02-hr-operations-stack"
+  title: "Hr Operations Stack"
+  version: 1
+
 cards:
   - front: "How many total plugin commands are available in Chapter 37's HR stack?"
     back: "14 — 9 from the official human-resources plugin (Anthropic) and 5 from the custom hr-operations plugin (Panaversity). Zero naming collisions."

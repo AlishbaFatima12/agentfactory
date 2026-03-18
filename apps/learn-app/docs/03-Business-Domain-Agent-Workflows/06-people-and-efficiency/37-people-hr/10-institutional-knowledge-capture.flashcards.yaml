@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-10-institutional-knowledge-capture"
+  title: "Institutional Knowledge Capture"
+  version: 1
+
 cards:
   - front: "What is tacit knowledge and why is it at high risk of permanent loss?"
     back: "Tacit knowledge is unwritten understanding accumulated through experience — how things actually work, the real decision-makers, the unwritten rules. It lives in people's heads, not documents. When the person leaves, it goes with them unless specifically captured."

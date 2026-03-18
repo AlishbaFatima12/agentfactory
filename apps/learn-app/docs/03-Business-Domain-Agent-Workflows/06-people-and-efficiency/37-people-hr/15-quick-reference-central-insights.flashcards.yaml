@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-15-quick-reference-central-insights"
+  title: "Quick Reference Central Insights"
+  version: 1
+
 cards:
   - front: "What is the central insight of Chapter 37?"
     back: "Explicit knowledge becomes findable without asking a person. Tacit knowledge gets captured before it walks out the door. HR professionals are freed for the 40% that only humans can do."

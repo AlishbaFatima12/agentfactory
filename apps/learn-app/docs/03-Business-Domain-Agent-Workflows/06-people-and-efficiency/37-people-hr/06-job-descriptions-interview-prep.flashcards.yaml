@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-06-job-descriptions-interview-prep"
+  title: "Job Descriptions Interview Prep"
+  version: 1
+
 cards:
   - front: "What are the four JD principles in order?"
     back: "1. Candidate perspective first (write 'you will', not 'responsible for'). 2. Lead with the work, not the requirements. 3. Calibrate requirements ruthlessly (Essential vs Beneficial, max 5 essential). 4. Inclusive language by default (apply the check automatically)"

@@ -1,31 +1,35 @@
-title: "The Innovation OS — Chapter 40 Lesson 1"
+deck:
+  id: "ch40-01-the-innovation-os"
+  title: "The Innovation OS — Chapter 40 Lesson 1"
+  version: 1
+
 cards:
-  - question: "What is the DLA Stack?"
-    answer: "Design Thinking, Lean Startup, and Agile used together as a unified innovation methodology. Each operates at a different level of uncertainty: Design Thinking at the problem level, Lean Startup at the solution level, Agile at the delivery level."
+  - front: "What is the DLA Stack?"
+    back: "Design Thinking, Lean Startup, and Agile used together as a unified innovation methodology. Each operates at a different level of uncertainty: Design Thinking at the problem level, Lean Startup at the solution level, Agile at the delivery level."
 
-  - question: "What question does Design Thinking answer?"
-    answer: "What is the real problem worth solving? Design Thinking operates at the problem level, in conditions of high uncertainty about what customers actually need. It is most powerful before you have built anything."
+  - front: "What question does Design Thinking answer?"
+    back: "What is the real problem worth solving? Design Thinking operates at the problem level, in conditions of high uncertainty about what customers actually need. It is most powerful before you have built anything."
 
-  - question: "What question does Lean Startup answer?"
-    answer: "Is this solution the right answer to that problem? Lean Startup operates at the solution level, in conditions of medium uncertainty. You believe you understand the problem; now you need to validate the solution."
+  - front: "What question does Lean Startup answer?"
+    back: "Is this solution the right answer to that problem? Lean Startup operates at the solution level, in conditions of medium uncertainty. You believe you understand the problem; now you need to validate the solution."
 
-  - question: "What question does Agile answer?"
-    answer: "How do we build and deliver this effectively? Agile operates at the delivery level, in conditions of lower uncertainty. You know what to build; Agile ensures you build it efficiently and adapt as you learn."
+  - front: "What question does Agile answer?"
+    back: "How do we build and deliver this effectively? Agile operates at the delivery level, in conditions of lower uncertainty. You know what to build; Agile ensures you build it efficiently and adapt as you learn."
 
-  - question: "What failure mode results from jumping straight to Agile without Design Thinking?"
-    answer: "Well-executed solution to the wrong problem — built beautifully, adopted by nobody. Teams fall in love with their solution before understanding whether it solves a real problem customers actually have."
+  - front: "What failure mode results from jumping straight to Agile without Design Thinking?"
+    back: "Well-executed solution to the wrong problem — built beautifully, adopted by nobody. Teams fall in love with their solution before understanding whether it solves a real problem customers actually have."
 
-  - question: "What does AI accelerate in the DLA Stack?"
-    answer: "AI accelerates execution overhead — synthesis, structuring, and first drafts. Specifically: interview synthesis (weeks → hours), assumption mapping (facilitated workshops → one session), financial modelling (days → hours), pitch narrative (multiple drafts → one afternoon)."
+  - front: "What does AI accelerate in the DLA Stack?"
+    back: "AI accelerates execution overhead — synthesis, structuring, and first drafts. Specifically: interview synthesis (weeks → hours), assumption mapping (facilitated workshops → one session), financial modelling (days → hours), pitch narrative (multiple drafts → one afternoon)."
 
-  - question: "What does AI NOT do in the innovation process?"
-    answer: "AI does not validate your idea, decide whether to pivot, or judge whether your customer insight is accurate. Those decisions remain the entrepreneur's or intrapreneur's responsibility. AI removes execution overhead; it does not replace judgment."
+  - front: "What does AI NOT do in the innovation process?"
+    back: "AI does not validate your idea, decide whether to pivot, or judge whether your customer insight is accurate. Those decisions remain the entrepreneur's or intrapreneur's responsibility. AI removes execution overhead; it does not replace judgment."
 
-  - question: "What is the governing principle of the Innovation OS?"
-    answer: "The goal of innovation is not to have a great idea. It is to convert uncertainty into validated opportunity faster than the competition."
+  - front: "What is the governing principle of the Innovation OS?"
+    back: "The goal of innovation is not to have a great idea. It is to convert uncertainty into validated opportunity faster than the competition."
 
-  - question: "What is the intrapreneur equivalent of 'investors'?"
-    answer: "The innovation committee or sponsoring executive — the people who approve budget and headcount, rather than writing a cheque."
+  - front: "What is the intrapreneur equivalent of 'investors'?"
+    back: "The innovation committee or sponsoring executive — the people who approve budget and headcount, rather than writing a cheque."
 
-  - question: "Name three intrapreneur translations from the entrepreneur vocabulary."
-    answer: "Investors → Innovation committee. Funding → Budget and headcount approval. Product-market fit → Internal adoption. The tools are identical; the audience changes."
+  - front: "Name three intrapreneur translations from the entrepreneur vocabulary."
+    back: "Investors → Innovation committee. Funding → Budget and headcount approval. Product-market fit → Internal adoption. The tools are identical; the audience changes."

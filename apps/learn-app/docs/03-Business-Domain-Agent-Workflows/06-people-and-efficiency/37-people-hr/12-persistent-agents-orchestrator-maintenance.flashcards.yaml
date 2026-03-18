@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-12-persistent-agents-orchestrator-maintenance"
+  title: "Persistent Agents Orchestrator Maintenance"
+  version: 1
+
 cards:
   - front: "What is the difference between an event-triggered agent and a scheduled agent?"
     back: "Event-triggered: activated by a specific HRIS event (e.g., new hire record, resignation). Scheduled: activated on a fixed cadence (e.g., monthly). A hybrid agent combines both — it runs on a schedule AND responds to specific events."

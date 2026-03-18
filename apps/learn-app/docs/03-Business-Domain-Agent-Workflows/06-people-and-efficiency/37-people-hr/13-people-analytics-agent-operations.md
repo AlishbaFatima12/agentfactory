@@ -132,7 +132,7 @@ This lesson covers two official plugin skills — `/people-report` for workforce
 | Regrettable attrition              | Are we losing the right people or the wrong ones? | Any regrettable attrition >5% warrants investigation |
 | Average tenure at exit             | Is the problem early-tenure or late-tenure?       | Patterns shift interpretation completely             |
 | eNPS (Employee Net Promoter Score) | Employee sentiment and advocacy                   | Below 0 is a warning sign                            |
-| Span of control                    | Management structure health                       | <3 or >12 direct reports flags structural issues     |
+| Span of control                    | Management structure health                       | &lt;3 or >12 direct reports flags structural issues     |
 | Time to productivity (new hires)   | Onboarding effectiveness                          | Benchmark against your org's historical baseline     |
 
 ### Worked Example: Quarterly People Report
@@ -325,7 +325,7 @@ The orchestrator runs the onboarding workflow automatically (T-14 to Day 90). It
 
 | Signal                                           | What It Means                                              | Action                                                       |
 | ------------------------------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------ |
-| Pre-boarding task completion <90%                | New joiners are arriving unprepared on Day 1               | Follow up with specific incomplete tasks; review task design |
+| Pre-boarding task completion &lt;90%                | New joiners are arriving unprepared on Day 1               | Follow up with specific incomplete tasks; review task design |
 | 30-day survey scores trending down               | Onboarding experience is deteriorating                     | Investigate — new manager? changed programme?                |
 | IT access delays flagged                         | IT provisioning is a consistent friction point             | Fix the process upstream with IT                             |
 | One new joiner consistently behind on milestones | Potential early warning of poor fit or manager support gap | HR check-in call                                             |
@@ -346,7 +346,7 @@ The offboarding agent triggers when a resignation record appears in the HRIS and
 
 | Signal                                 | What It Means                                               | Action                                                   |
 | -------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------- |
-| Knowledge capture completion rate <80% | Employees are leaving without full knowledge transfer       | Investigate whether the process is starting early enough |
+| Knowledge capture completion rate &lt;80% | Employees are leaving without full knowledge transfer       | Investigate whether the process is starting early enough |
 | High-risk departure flagged            | A departing employee holds critical, undocumented knowledge | HR to ensure a structured knowledge interview (see L10)  |
 | Handover plan not confirmed            | Manager has not signed off on handover                      | Follow up immediately                                    |
 
@@ -360,10 +360,10 @@ A conceptual HR intelligence dashboard might look like this:
 | ----------------------------------- | --------------------------- | --------------- | ----------------------------------------- |
 | Top query categories + volume delta | KB Agent weekly report      | Weekly          | >50% spike in any category → investigate  |
 | Escalation rate                     | KB Agent weekly report      | Weekly          | >7% → review KB knowledge base            |
-| Pre-boarding task completion        | Onboarding Orchestrator     | Per cohort      | <90% → follow up with new joiners         |
+| Pre-boarding task completion        | Onboarding Orchestrator     | Per cohort      | &lt;90% → follow up with new joiners         |
 | 30-day survey score                 | Onboarding Orchestrator     | Monthly         | Below org baseline → manager conversation |
 | Statutory rate changes pending      | Policy Maintenance Agent    | Monthly         | Any → schedule HR review                  |
-| Knowledge capture completion        | Offboarding Knowledge Agent | Per departure   | <80% → HR intervention                    |
+| Knowledge capture completion        | Offboarding Knowledge Agent | Per departure   | &lt;80% → HR intervention                    |
 | Voluntary attrition rate            | `/people-report`            | Quarterly       | Trend increase >2pp → investigation       |
 | Time-in-stage (screening)           | `/recruiting-pipeline`      | Per active role | >7 days → audit screening process         |
 

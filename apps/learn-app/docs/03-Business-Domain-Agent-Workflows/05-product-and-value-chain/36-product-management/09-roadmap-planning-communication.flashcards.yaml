@@ -1,35 +1,41 @@
-- question: "What are the four roadmap framework options and when should each be used?"
-  answer: "Now/Next/Later: external comms and executive alignment (avoids false date precision). Quarterly Themes: planning meetings and strategy communication. OKR-Aligned: organisations that run on OKRs. Timeline/Gantt: engineering execution planning and resource conflict identification — NOT for external communication."
+deck:
+  id: "ch36-09-roadmap-planning-communication"
+  title: "Roadmap Planning Communication"
+  version: 1
 
-- question: "What does each bucket mean in Now/Next/Later?"
-  answer: "Now = commitments (current sprint/quarter, specs complete, teams assigned). Next = intentions (following quarter, problem statements ready, not fully specified). Later = signals (3-6+ months, strategic themes, user problems not solutions)."
+cards:
+  - front: "What are the four roadmap framework options and when should each be used?"
+    back: "Now/Next/Later: external comms and executive alignment (avoids false date precision). Quarterly Themes: planning meetings and strategy communication. OKR-Aligned: organisations that run on OKRs. Timeline/Gantt: engineering execution planning and resource conflict identification — NOT for external communication."
 
-- question: "Why should customer-facing roadmaps avoid specific dates?"
-  answer: "Customers read 'Q3' as a guarantee. When a dependency slips, the PM is renegotiating a contract rather than updating a plan. Now/Next/Later communicates direction without creating date-based commitments."
+  - front: "What does each bucket mean in Now/Next/Later?"
+    back: "Now = commitments (current sprint/quarter, specs complete, teams assigned). Next = intentions (following quarter, problem statements ready, not fully specified). Later = signals (3-6+ months, strategic themes, user problems not solutions)."
 
-- question: "What is the 70/20/10 capacity allocation rule for product teams?"
-  answer: "70% planned features (roadmap items advancing strategic goals), 20% technical health (tech debt, reliability, performance), 10% unplanned buffer (urgent issues, quick wins, other-team requests). If over 70% is planned features, the team has no buffer."
+  - front: "Why should customer-facing roadmaps avoid specific dates?"
+    back: "Customers read 'Q3' as a guarantee. When a dependency slips, the PM is renegotiating a contract rather than updating a plan. Now/Next/Later communicates direction without creating date-based commitments."
 
-- question: "What are the five categories of roadmap dependencies?"
-  answer: "Technical (Feature B requires Feature A's infrastructure), Team (requires another team's work), External (waiting on vendor/partner), Knowledge (need research results before starting), Sequential (must ship A before B can start)."
+  - front: "What is the 70/20/10 capacity allocation rule for product teams?"
+    back: "70% planned features (roadmap items advancing strategic goals), 20% technical health (tech debt, reliability, performance), 10% unplanned buffer (urgent issues, quick wins, other-team requests). If over 70% is planned features, the team has no buffer."
 
-- question: "What must be true for every named dependency on a roadmap?"
-  answer: "Each dependency must have: a name, an owner (by name or role), and a 'need by' date. Unowned dependencies without dates do not get resolved."
+  - front: "What are the five categories of roadmap dependencies?"
+    back: "Technical (Feature B requires Feature A's infrastructure), Team (requires another team's work), External (waiting on vendor/partner), Knowledge (need research results before starting), Sequential (must ship A before B can start)."
 
-- question: "What is the /roadmap-update command and which plugin provides it?"
-  answer: "/roadmap-update is provided by the official product-management plugin. It creates, updates, or reprioritises product roadmaps — accepts current roadmap state or a list of initiatives and produces a structured roadmap view."
+  - front: "What must be true for every named dependency on a roadmap?"
+    back: "Each dependency must have: a name, an owner (by name or role), and a 'need by' date. Unowned dependencies without dates do not get resolved."
 
-- question: "What are the five steps for communicating a roadmap change?"
-  answer: "1. Acknowledge the change (direct, no softening). 2. Explain the reason (what new information drove it). 3. Show the tradeoff (what was deprioritised). 4. Show the new plan (updated roadmap). 5. Acknowledge impact (who was expecting the deprioritised item and needs a direct conversation)."
+  - front: "What is the /roadmap-update command and which plugin provides it?"
+    back: "/roadmap-update is provided by the official product-management plugin. It creates, updates, or reprioritises product roadmaps — accepts current roadmap state or a list of initiatives and produces a structured roadmap view."
 
-- question: "What is the difference between a roadmap change and a scope adjustment?"
-  answer: "A roadmap change is a strategic reprioritisation — what the team is no longer building, or what moved between Now/Next/Later. A scope adjustment is normal execution refinement within a sprint. Roadmap changes require stakeholder communication; scope adjustments do not."
+  - front: "What are the five steps for communicating a roadmap change?"
+    back: "1. Acknowledge the change (direct, no softening). 2. Explain the reason (what new information drove it). 3. Show the tradeoff (what was deprioritised). 4. Show the new plan (updated roadmap). 5. Acknowledge impact (who was expecting the deprioritised item and needs a direct conversation)."
 
-- question: "What distinguishes the engineering, executive, and customer roadmap versions?"
-  answer: "Engineering: sprint-level detail, dependency owners and need-by dates, at-risk flags. Executive: commercial outcomes aligned to strategy, what is NOT being built and why, no sprint references. Customer: benefit language ('your Monday report runs automatically'), no dates, no feature-implementation language."
+  - front: "What is the difference between a roadmap change and a scope adjustment?"
+    back: "A roadmap change is a strategic reprioritisation — what the team is no longer building, or what moved between Now/Next/Later. A scope adjustment is normal execution refinement within a sprint. Roadmap changes require stakeholder communication; scope adjustments do not."
 
-- question: "When does the Now/Next/Later format break down?"
-  answer: "When engineering needs sprint-level scheduling (use Timeline/Gantt internally), or when the team needs to identify resource conflicts between parallel initiatives (use Gantt for that planning exercise, then translate back to Now/Next/Later for communication)."
+  - front: "What distinguishes the engineering, executive, and customer roadmap versions?"
+    back: "Engineering: sprint-level detail, dependency owners and need-by dates, at-risk flags. Executive: commercial outcomes aligned to strategy, what is NOT being built and why, no sprint references. Customer: benefit language ('your Monday report runs automatically'), no dates, no feature-implementation language."
 
-- question: "What is the signal that a roadmap is over-committed?"
-  answer: "More than 70% of engineering capacity is allocated to planned features, leaving no buffer for technical health or unplanned work. The fix is to cut scope from the roadmap, not to assume engineers can work faster."
+  - front: "When does the Now/Next/Later format break down?"
+    back: "When engineering needs sprint-level scheduling (use Timeline/Gantt internally), or when the team needs to identify resource conflicts between parallel initiatives (use Gantt for that planning exercise, then translate back to Now/Next/Later for communication)."
+
+  - front: "What is the signal that a roadmap is over-committed?"
+    back: "More than 70% of engineering capacity is allocated to planned features, leaving no buffer for technical health or unplanned work. The fix is to cut scope from the roadmap, not to assume engineers can work faster."

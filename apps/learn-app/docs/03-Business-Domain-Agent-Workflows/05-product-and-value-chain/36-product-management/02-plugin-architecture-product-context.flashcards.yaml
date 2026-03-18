@@ -1,35 +1,41 @@
-- question: "Which commands come from the official product-management plugin?"
-  answer: "/write-spec, /roadmap-update, /synthesize-research, /stakeholder-update, /competitive-brief, /metrics-review"
+deck:
+  id: "ch36-02-plugin-architecture-product-context"
+  title: "Plugin Architecture Product Context"
+  version: 1
 
-- question: "Which commands come from the custom product-strategy plugin?"
-  answer: "/brief, /interview, /prd, /stories, /prioritise, /retro"
+cards:
+  - front: "Which commands come from the official product-management plugin?"
+    back: "/write-spec, /roadmap-update, /synthesize-research, /stakeholder-update, /competitive-brief, /metrics-review"
 
-- question: "What is product.local.md and why does it matter?"
-  answer: "product.local.md is the context configuration file that calibrates every plugin command to your specific product. Without it, commands produce generic artifacts. With a well-filled configuration, outputs reflect the specific personas, constraints, and priorities of your product."
+  - front: "Which commands come from the custom product-strategy plugin?"
+    back: "/brief, /interview, /prd, /stories, /prioritise, /retro"
 
-- question: "Which section of product.local.md typically has the highest leverage on output quality?"
-  answer: "The Personas section — specifically the primary persona's goal, frustration, and '10/10 week' description. A precisely described persona changes AI command output more than any other single configuration section."
+  - front: "What is product.local.md and why does it matter?"
+    back: "product.local.md is the context configuration file that calibrates every plugin command to your specific product. Without it, commands produce generic artifacts. With a well-filled configuration, outputs reflect the specific personas, constraints, and priorities of your product."
 
-- question: "What is the difference between Layer 1 and Layer 2 in the two-plugin architecture?"
-  answer: "Layer 1 (official plugin) covers universal, high-frequency PM tasks efficiently. Layer 2 (custom plugin) fills workflow gaps the official plugin does not cover and enforces craft principles as structural rules."
+  - front: "Which section of product.local.md typically has the highest leverage on output quality?"
+    back: "The Personas section — specifically the primary persona's goal, frustration, and '10/10 week' description. A precisely described persona changes AI command output more than any other single configuration section."
 
-- question: "How do you install the custom product-strategy plugin in Cowork?"
-  answer: "Cowork sidebar → Customize → Browse plugins → Personal → + → Add marketplace from GitHub → enter the agentfactory-business-plugins repo URL → find Product Strategy → Install."
+  - front: "What is the difference between Layer 1 and Layer 2 in the two-plugin architecture?"
+    back: "Layer 1 (official plugin) covers universal, high-frequency PM tasks efficiently. Layer 2 (custom plugin) fills workflow gaps the official plugin does not cover and enforces craft principles as structural rules."
 
-- question: "What is the '10/10 week' field in the Personas section for?"
-  answer: "It describes what a perfect week using the product looks like for that persona. It forces specificity about behavioral goals that a generic role description misses — and significantly improves the relevance of command outputs."
+  - front: "How do you install the custom product-strategy plugin in Cowork?"
+    back: "Cowork sidebar → Customize → Browse plugins → Personal → + → Add marketplace from GitHub → enter the agentfactory-business-plugins repo URL → find Product Strategy → Install."
 
-- question: "After filling product.local.md, how do you verify the configuration is working?"
-  answer: "Run /brief with a simple InsightFlow problem statement and check that the output names InsightFlow, references the correct primary persona, and reflects at least one current roadmap theme."
+  - front: "What is the '10/10 week' field in the Personas section for?"
+    back: "It describes what a perfect week using the product looks like for that persona. It forces specificity about behavioral goals that a generic role description misses — and significantly improves the relevance of command outputs."
 
-- question: "What does the Engineering Team section of product.local.md affect?"
-  answer: "Sprint planning commands, story decomposition granularity, and acceptance criteria quality — all calibrated by team size, sprint length, velocity, and working agreements."
+  - front: "After filling product.local.md, how do you verify the configuration is working?"
+    back: "Run /brief with a simple InsightFlow problem statement and check that the output names InsightFlow, references the correct primary persona, and reflects at least one current roadmap theme."
 
-- question: "Why does the custom plugin enforce 'never propose solutions in a problem brief' as a structural rule rather than just a suggestion?"
-  answer: "Craft principles are easy to ignore under time pressure. Encoding them as structural rules means the AI enforces them even when the PM is working fast. The rule is not stylistic — premature solution anchoring in a brief leads teams to validate the wrong hypothesis."
+  - front: "What does the Engineering Team section of product.local.md affect?"
+    back: "Sprint planning commands, story decomposition granularity, and acceptance criteria quality — all calibrated by team size, sprint length, velocity, and working agreements."
 
-- question: "Where should product.local.md be saved for it to be available to plugin commands?"
-  answer: "In the Cowork skills root directory. Every command that runs in that Cowork session automatically has access to it."
+  - front: "Why does the custom plugin enforce 'never propose solutions in a problem brief' as a structural rule rather than just a suggestion?"
+    back: "Craft principles are easy to ignore under time pressure. Encoding them as structural rules means the AI enforces them even when the PM is working fast. The rule is not stylistic — premature solution anchoring in a brief leads teams to validate the wrong hypothesis."
 
-- question: "What is the command workflow sequence that shows how the two plugins complement each other?"
-  answer: "Custom /brief → Custom /interview → Official /synthesize-research → Official /write-spec → Custom /prd → Custom /stories → Custom /prioritise → Official /roadmap-update → Official /sprint-planning → Official /stakeholder-update → Official /metrics-review → Custom /retro"
+  - front: "Where should product.local.md be saved for it to be available to plugin commands?"
+    back: "In the Cowork skills root directory. Every command that runs in that Cowork session automatically has access to it."
+
+  - front: "What is the command workflow sequence that shows how the two plugins complement each other?"
+    back: "Custom /brief → Custom /interview → Official /synthesize-research → Official /write-spec → Custom /prd → Custom /stories → Custom /prioritise → Official /roadmap-update → Official /sprint-planning → Official /stakeholder-update → Official /metrics-review → Custom /retro"

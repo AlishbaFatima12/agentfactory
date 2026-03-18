@@ -1,35 +1,41 @@
-- question: "What are the four questions the /retro command answers?"
-  answer: "Q1: Did it solve the problem? (Were we right about the user need?) Q2: Did we build it as intended? (Was the spec good enough? Did we deliver on time?) Q3: Were the metrics right? (Did we measure the right things?) Q4: What would we do differently? (Specific process change, not vague intention)"
+deck:
+  id: "ch36-14-continuous-intelligence-agents-retrospectives"
+  title: "Continuous Intelligence Agents Retrospectives"
+  version: 1
 
-- question: "What data must you collect before running /retro?"
-  answer: "Outcome data (adoption rate, engagement, support ticket change, NPS impact, business metric movement), delivery data (on time or late, scope changes, spec ambiguity flags), and optionally team data (engineering/design/CS post-launch observations). A retro without outcome data produces blame, not learning."
+cards:
+  - front: "What are the four questions the /retro command answers?"
+    back: "Q1: Did it solve the problem? (Were we right about the user need?) Q2: Did we build it as intended? (Was the spec good enough? Did we deliver on time?) Q3: Were the metrics right? (Did we measure the right things?) Q4: What would we do differently? (Specific process change, not vague intention)"
 
-- question: "What is the STRONG vs. WEAK rule for retro process improvements?"
-  answer: "WEAK: 'Write better specs'. STRONG: 'Every AC must be independently testable. If an AC contains AND, split it before REVIEW status.' The test: can you tell someone exactly what action to take, at what step, before they would otherwise have proceeded? If yes, it is strong."
+  - front: "What data must you collect before running /retro?"
+    back: "Outcome data (adoption rate, engagement, support ticket change, NPS impact, business metric movement), delivery data (on time or late, scope changes, spec ambiguity flags), and optionally team data (engineering/design/CS post-launch observations). A retro without outcome data produces blame, not learning."
 
-- question: "What are the NEVER DO rules for the /retro skill?"
-  answer: "1) Never run a retro without outcome data. 2) Never produce a retro that only documents what went wrong (protect what works). 3) Never produce vague process improvements ('communicate better'). 4) Never skip the metrics quality section. 5) Never close without at least one product.local.md update."
+  - front: "What is the STRONG vs. WEAK rule for retro process improvements?"
+    back: "WEAK: 'Write better specs'. STRONG: 'Every AC must be independently testable. If an AC contains AND, split it before REVIEW status.' The test: can you tell someone exactly what action to take, at what step, before they would otherwise have proceeded? If yes, it is strong."
 
-- question: "What are the three persistent PM agents and their weekly schedules?"
-  answer: "Research Intelligence Agent (Monday morning: weekly user signal digest), Stakeholder Update Agent (Friday: three-version update queue for PM review + triggered updates), Roadmap Coherence Agent (Wednesday: three coherence checks — orphan detection, coverage, sprint alignment)."
+  - front: "What are the NEVER DO rules for the /retro skill?"
+    back: "1) Never run a retro without outcome data. 2) Never produce a retro that only documents what went wrong (protect what works). 3) Never produce vague process improvements ('communicate better'). 4) Never skip the metrics quality section. 5) Never close without at least one product.local.md update."
 
-- question: "What is the Research Intelligence Agent's cross-channel escalation rule?"
-  answer: "Any problem appearing in support tickets AND NPS verbatim AND feature requests simultaneously = systemic issue, escalate immediately regardless of raw volume. Cross-channel signal means the problem is broad and real, not a single noisy channel."
+  - front: "What are the three persistent PM agents and their weekly schedules?"
+    back: "Research Intelligence Agent (Monday morning: weekly user signal digest), Stakeholder Update Agent (Friday: three-version update queue for PM review + triggered updates), Roadmap Coherence Agent (Wednesday: three coherence checks — orphan detection, coverage, sprint alignment)."
 
-- question: "Why is the Stakeholder Update Agent's PM review gate not optional?"
-  answer: "The agent generates drafts, not approved communications. The PM reviews for accuracy, adjusts tone, and approves before distribution. Auto-sending without review would destroy stakeholder trust in a single incident. The agent removes the mechanical work; the PM removes errors and approves."
+  - front: "What is the Research Intelligence Agent's cross-channel escalation rule?"
+    back: "Any problem appearing in support tickets AND NPS verbatim AND feature requests simultaneously = systemic issue, escalate immediately regardless of raw volume. Cross-channel signal means the problem is broad and real, not a single noisy channel."
 
-- question: "What are the three checks the Roadmap Coherence Agent runs weekly?"
-  answer: "Check 1: Backlog orphan detection (any new item without a roadmap theme tag). Check 2: Roadmap coverage (any NOW item without a spec in REVIEW/REFINED status). Check 3: Sprint alignment (any sprint with >30% of points from off-roadmap work)."
+  - front: "Why is the Stakeholder Update Agent's PM review gate not optional?"
+    back: "The agent generates drafts, not approved communications. The PM reviews for accuracy, adjusts tone, and approves before distribution. Auto-sending without review would destroy stakeholder trust in a single incident. The agent removes the mechanical work; the PM removes errors and approves."
 
-- question: "What sprint off-roadmap percentage triggers a Roadmap Coherence Agent alert?"
-  answer: ">30% off-roadmap work triggers an alert to PM and EM. >50% is urgent — roadmap is effectively paused. The threshold is NOT 0% — some sprint flexibility is healthy. Maintenance and bug fixes are tracked separately and are not 'off-roadmap'."
+  - front: "What are the three checks the Roadmap Coherence Agent runs weekly?"
+    back: "Check 1: Backlog orphan detection (any new item without a roadmap theme tag). Check 2: Roadmap coverage (any NOW item without a spec in REVIEW/REFINED status). Check 3: Sprint alignment (any sprint with >30% of points from off-roadmap work)."
 
-- question: "What is the metric quality rating scale in /retro's Q3 section?"
-  answer: "HIGH: the metric was measurable, sensitive to the feature, the right thing to measure, and had a failure threshold defined. MEDIUM: partially — e.g., measurable but no pre-launch baseline, or the metric was a proxy that could be improved. LOW: the metric could not be measured, was not sensitive, or measured the wrong thing."
+  - front: "What sprint off-roadmap percentage triggers a Roadmap Coherence Agent alert?"
+    back: ">30% off-roadmap work triggers an alert to PM and EM. >50% is urgent — roadmap is effectively paused. The threshold is NOT 0% — some sprint flexibility is healthy. Maintenance and bug fixes are tracked separately and are not 'off-roadmap'."
 
-- question: "What must always be in the product.local.md updates section of a retro?"
-  answer: "At least one specific quality rule derived from a retro finding. If nothing changes in product.local.md, the retro was a review exercise, not a learning exercise. The rules should be specific enough to change behaviour on the next feature — not reminders or aspirations."
+  - front: "What is the metric quality rating scale in /retro's Q3 section?"
+    back: "HIGH: the metric was measurable, sensitive to the feature, the right thing to measure, and had a failure threshold defined. MEDIUM: partially — e.g., measurable but no pre-launch baseline, or the metric was a proxy that could be improved. LOW: the metric could not be measured, was not sensitive, or measured the wrong thing."
 
-- question: "What is /schedule used for in Cowork, and how does it relate to the three PM agents?"
-  answer: "/schedule deploys an agent as a persistent, scheduled component that runs automatically on its configured schedule and deposits output in a PM review queue. The three PM agents are deployed with /schedule — each receives a schedule, data source configuration, and escalation thresholds."
+  - front: "What must always be in the product.local.md updates section of a retro?"
+    back: "At least one specific quality rule derived from a retro finding. If nothing changes in product.local.md, the retro was a review exercise, not a learning exercise. The rules should be specific enough to change behaviour on the next feature — not reminders or aspirations."
+
+  - front: "What is /schedule used for in Cowork, and how does it relate to the three PM agents?"
+    back: "/schedule deploys an agent as a persistent, scheduled component that runs automatically on its configured schedule and deposits output in a PM review queue. The three PM agents are deployed with /schedule — each receives a schedule, data source configuration, and escalation thresholds."

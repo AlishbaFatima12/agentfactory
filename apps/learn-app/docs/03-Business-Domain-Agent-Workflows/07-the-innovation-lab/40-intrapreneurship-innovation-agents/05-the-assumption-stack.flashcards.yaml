@@ -1,36 +1,41 @@
-flashcards:
-  - question: "What is an assumption map and why does it exist?"
-    answer: "A structured list of every unproven belief embedded in a venture, organised by risk tier. It exists to make implicit bets explicit so they can be tested cheaply before the venture commits significant resources to building on potentially wrong foundations."
+deck:
+  id: "ch40-05-the-assumption-stack"
+  title: "The Assumption Stack"
+  version: 1
 
-  - question: "What are the five assumption categories used to ensure completeness?"
-    answer: "Customer (who they are and what they want), Problem (is it real and severe enough), Solution (does it work and will they adopt it), Business Model (pricing, CAC, churn), Technical (can it be built as designed). Using all five prevents teams from mapping only the obvious product assumptions."
+cards:
+  - front: "What is an assumption map and why does it exist?"
+    back: "A structured list of every unproven belief embedded in a venture, organised by risk tier. It exists to make implicit bets explicit so they can be tested cheaply before the venture commits significant resources to building on potentially wrong foundations."
 
-  - question: "What is the three-tier risk system and how do you assign tier levels?"
-    answer: "TIER 1 (Existential): if wrong, pivot required. TIER 2 (Serious): if wrong, product changes significantly. TIER 3 (Important): if wrong, optimisation required. Assign using the direction-change question: 'If I discovered this was wrong tomorrow, would I change direction?' YES = TIER 1."
+  - front: "What are the five assumption categories used to ensure completeness?"
+    back: "Customer (who they are and what they want), Problem (is it real and severe enough), Solution (does it work and will they adopt it), Business Model (pricing, CAC, churn), Technical (can it be built as designed). Using all five prevents teams from mapping only the obvious product assumptions."
 
-  - question: "What are the three evidence quality levels and what distinguishes them?"
-    answer: "ASSUMED: no external evidence, based on reasoning or intuition. ANECDOTAL: some external evidence (customer conversations, industry reports) but not systematic. VALIDATED: behavioural evidence — customers paid for it or used it repeatedly without prompting. Stated intent is ANECDOTAL, not VALIDATED."
+  - front: "What is the three-tier risk system and how do you assign tier levels?"
+    back: "TIER 1 (Existential): if wrong, pivot required. TIER 2 (Serious): if wrong, product changes significantly. TIER 3 (Important): if wrong, optimisation required. Assign using the direction-change question: 'If I discovered this was wrong tomorrow, would I change direction?' YES = TIER 1."
 
-  - question: "What is the Minimum Viable Test (MVT) hierarchy?"
-    answer: "Level 1: Conversation (30 min, $0). Level 2: Landing page/waitlist (1 day). Level 3: Concierge MVP (do the job manually). Level 4: Wizard of Oz (customer-facing front; manual back-end). Level 5: Functional MVP (full build). Rule: go to Level 5 only if Levels 1-4 cannot test the assumption."
+  - front: "What are the three evidence quality levels and what distinguishes them?"
+    back: "ASSUMED: no external evidence, based on reasoning or intuition. ANECDOTAL: some external evidence (customer conversations, industry reports) but not systematic. VALIDATED: behavioural evidence — customers paid for it or used it repeatedly without prompting. Stated intent is ANECDOTAL, not VALIDATED."
 
-  - question: "Why should TIER 1 assumptions be tested before building the MVP?"
-    answer: "Because if a TIER 1 assumption is wrong, the entire product direction changes. Building the MVP first means you may invest months of development on a direction that a 30-minute conversation would have proven wrong. The test priority is: cheapest tests first, TIER 1 first."
+  - front: "What is the Minimum Viable Test (MVT) hierarchy?"
+    back: "Level 1: Conversation (30 min, $0). Level 2: Landing page/waitlist (1 day). Level 3: Concierge MVP (do the job manually). Level 4: Wizard of Oz (customer-facing front; manual back-end). Level 5: Functional MVP (full build). Rule: go to Level 5 only if Levels 1-4 cannot test the assumption."
 
-  - question: "What is the 'evidence quality gap' and why is it significant?"
-    answer: "The gap between confidence and evidence quality. Most teams feel highly confident about their most critical assumptions — but those assumptions are ASSUMED (no external evidence). The assumption map makes this gap visible by requiring teams to state both their confidence and their evidence quality separately."
+  - front: "Why should TIER 1 assumptions be tested before building the MVP?"
+    back: "Because if a TIER 1 assumption is wrong, the entire product direction changes. Building the MVP first means you may invest months of development on a direction that a 30-minute conversation would have proven wrong. The test priority is: cheapest tests first, TIER 1 first."
 
-  - question: "How many assumptions should a complete assumption map contain, and what does a low count indicate?"
-    answer: "20-30 assumptions. Fewer than 15 means the team is not thinking hard enough — they are likely missing business model or customer assumptions and focusing only on product assumptions. The target is to surface all bets, not just the comfortable ones."
+  - front: "What is the 'evidence quality gap' and why is it significant?"
+    back: "The gap between confidence and evidence quality. Most teams feel highly confident about their most critical assumptions — but those assumptions are ASSUMED (no external evidence). The assumption map makes this gap visible by requiring teams to state both their confidence and their evidence quality separately."
 
-  - question: "What makes an assumption test 'cheap' versus 'expensive'?"
-    answer: "MVT Level 1 (conversation) costs 30 minutes and nothing. Level 5 (functional MVP) costs months of development. Cheapness is defined by: time to get the answer, cash required, and reversibility of the investment. A conversation is always cheaper than code."
+  - front: "How many assumptions should a complete assumption map contain, and what does a low count indicate?"
+    back: "20-30 assumptions. Fewer than 15 means the team is not thinking hard enough — they are likely missing business model or customer assumptions and focusing only on product assumptions. The target is to surface all bets, not just the comfortable ones."
 
-  - question: "For intrapreneurs, what shape do TIER 1 assumptions often take?"
-    answer: "Organisational assumptions: 'the innovation committee will approve a pilot' (authority), 'IT will allow this integration' (technical gatekeeping), 'internal users will adopt this rather than continuing the current process' (change management). These must be tested in stakeholder conversations before building."
+  - front: "What makes an assumption test 'cheap' versus 'expensive'?"
+    back: "MVT Level 1 (conversation) costs 30 minutes and nothing. Level 5 (functional MVP) costs months of development. Cheapness is defined by: time to get the answer, cash required, and reversibility of the investment. A conversation is always cheaper than code."
 
-  - question: "What is the risk scoring rule for assigning HIGH risk to an assumption?"
-    answer: "Assign HIGH risk when being wrong means: (a) no revenue, (b) cannot build the product as designed, or (c) cannot acquire customers at a viable cost. The practical test: 'If I discovered this was wrong tomorrow, would I change direction?' If YES → HIGH → TIER 1."
+  - front: "For intrapreneurs, what shape do TIER 1 assumptions often take?"
+    back: "Organisational assumptions: 'the innovation committee will approve a pilot' (authority), 'IT will allow this integration' (technical gatekeeping), 'internal users will adopt this rather than continuing the current process' (change management). These must be tested in stakeholder conversations before building."
 
-  - question: "Why is the assumption map described as a 'living document' rather than a completed checklist?"
-    answer: "New assumptions emerge from pilot results, customer conversations, and unexpected learnings. The map captures the assumptions visible at a point in time, not every assumption that exists. Post-pilot BML analysis will add new assumptions (like A-011 in the AP example: handwritten OCR accuracy) that were not visible pre-build."
+  - front: "What is the risk scoring rule for assigning HIGH risk to an assumption?"
+    back: "Assign HIGH risk when being wrong means: (a) no revenue, (b) cannot build the product as designed, or (c) cannot acquire customers at a viable cost. The practical test: 'If I discovered this was wrong tomorrow, would I change direction?' If YES → HIGH → TIER 1."
+
+  - front: "Why is the assumption map described as a 'living document' rather than a completed checklist?"
+    back: "New assumptions emerge from pilot results, customer conversations, and unexpected learnings. The map captures the assumptions visible at a point in time, not every assumption that exists. Post-pilot BML analysis will add new assumptions (like A-011 in the AP example: handwritten OCR accuracy) that were not visible pre-build."

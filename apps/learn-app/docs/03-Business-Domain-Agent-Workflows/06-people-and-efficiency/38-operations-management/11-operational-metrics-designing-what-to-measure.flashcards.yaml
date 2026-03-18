@@ -1,7 +1,9 @@
-title: "Operational Metrics — Designing What to Measure"
-chapter: 38
-lesson: 11
-flashcards:
+deck:
+  id: "ch38-11-operational-metrics-designing-what-to-measure"
+  title: "Operational Metrics — Designing What to Measure"
+  version: 1
+
+cards:
   - front: "What is the difference between a leading indicator and a lagging indicator?"
     back: "A lagging indicator tells you what already happened (e.g., incident MTTR last month: 4.2 hours). A leading indicator tells you what is about to happen — it is an early warning signal while you can still act (e.g., open SLA warnings this week: 3 vendor breaches flagged). Lagging metrics are essential for accountability; leading metrics are essential for prevention. Every major risk area needs at least one leading indicator."
 

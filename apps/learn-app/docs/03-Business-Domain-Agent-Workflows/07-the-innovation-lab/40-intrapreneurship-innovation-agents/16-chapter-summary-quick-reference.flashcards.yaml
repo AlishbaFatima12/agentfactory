@@ -1,37 +1,41 @@
-title: "Chapter Summary and Quick Reference — Chapter 40 Lesson 16"
+deck:
+  id: "ch40-16-chapter-summary-quick-reference"
+  title: "Chapter Summary and Quick Reference — Chapter 40 Lesson 16"
+  version: 1
+
 cards:
-  - question: "What is the central insight of the Innovation OS?"
-    answer: "Innovation is about converting uncertainty into validated opportunity faster than competitors. AI eliminates execution overhead (synthesis, drafting, modelling) without replacing the entrepreneur's judgment on which ideas are good, whether to pivot, or whether customer insight is accurate."
+  - front: "What is the central insight of the Innovation OS?"
+    back: "Innovation is about converting uncertainty into validated opportunity faster than competitors. AI eliminates execution overhead (synthesis, drafting, modelling) without replacing the entrepreneur's judgment on which ideas are good, whether to pivot, or whether customer insight is accurate."
 
-  - question: "What does Design Thinking answer, and at what level does it operate?"
-    answer: "Design Thinking answers: what is the real problem worth solving? It operates at the problem level, in conditions of high uncertainty about customer needs."
+  - front: "What does Design Thinking answer, and at what level does it operate?"
+    back: "Design Thinking answers: what is the real problem worth solving? It operates at the problem level, in conditions of high uncertainty about customer needs."
 
-  - question: "What does Lean Startup answer, and at what level does it operate?"
-    answer: "Lean Startup answers: is this the right solution to that problem? It operates at the solution level, in conditions of medium uncertainty."
+  - front: "What does Lean Startup answer, and at what level does it operate?"
+    back: "Lean Startup answers: is this the right solution to that problem? It operates at the solution level, in conditions of medium uncertainty."
 
-  - question: "What does Agile answer, and at what level does it operate?"
-    answer: "Agile answers: how do we build and deliver this effectively? It operates at the delivery level, in conditions of lower uncertainty where you know what to build."
+  - front: "What does Agile answer, and at what level does it operate?"
+    back: "Agile answers: how do we build and deliver this effectively? It operates at the delivery level, in conditions of lower uncertainty where you know what to build."
 
-  - question: "Name the two Design Thinking commands."
-    answer: "/discovery (customer research, JTBD synthesis, HMW problem statements) and /idea (100-idea sprint, DVF scoring, pressure testing)."
+  - front: "Name the two Design Thinking commands."
+    back: "/discovery (customer research, JTBD synthesis, HMW problem statements) and /idea (100-idea sprint, DVF scoring, pressure testing)."
 
-  - question: "Name the two Lean Startup commands."
-    answer: "/hypothesis (assumption mapping, MVP scoping) and /validate (build-measure-learn analysis, pivot-or-persevere)."
+  - front: "Name the two Lean Startup commands."
+    back: "/hypothesis (assumption mapping, MVP scoping) and /validate (build-measure-learn analysis, pivot-or-persevere)."
 
-  - question: "Name the Agile command."
-    answer: "/sprint — innovation sprint planning, assumption-linked user stories, backlog, retrospective with assumption updates."
+  - front: "Name the Agile command."
+    back: "/sprint — innovation sprint planning, assumption-linked user stories, backlog, retrospective with assumption updates."
 
-  - question: "Name the four cross-cutting commands."
-    answer: "/market (competitive intelligence + sizing), /financials (unit economics + runway), /pitch (investor deck narrative), /gtm (go-to-market strategy). These apply at any DLA stage."
+  - front: "Name the four cross-cutting commands."
+    back: "/market (competitive intelligence + sizing), /financials (unit economics + runway), /pitch (investor deck narrative), /gtm (go-to-market strategy). These apply at any DLA stage."
 
-  - question: "Name the four innovation agents and their weekly automated task."
-    answer: "Idea Generator (Monday Innovation Brief), Customer Intelligence (Customer Signal Digest), Business Model Architect (Monthly Financial Health Review), Fundraising Readiness (Investor Pipeline tracking)."
+  - front: "Name the four innovation agents and their weekly automated task."
+    back: "Idea Generator (Monday Innovation Brief), Customer Intelligence (Customer Signal Digest), Business Model Architect (Monthly Financial Health Review), Fundraising Readiness (Investor Pipeline tracking)."
 
-  - question: "What is the intrapreneur translation for 'product-market fit'?"
-    answer: "Internal adoption — the organisation's own teams or existing customers adopting the innovation at the desired scale."
+  - front: "What is the intrapreneur translation for 'product-market fit'?"
+    back: "Internal adoption — the organisation's own teams or existing customers adopting the innovation at the desired scale."
 
-  - question: "What does innov.local.md do, and which section should be filled in first?"
-    answer: "innov.local.md provides venture context that makes every command output specific rather than generic. Fill in the venture: section first — even a rough problem statement and target customer immediately improves output quality."
+  - front: "What does innov.local.md do, and which section should be filled in first?"
+    back: "innov.local.md provides venture context that makes every command output specific rather than generic. Fill in the venture: section first — even a rough problem statement and target customer immediately improves output quality."
 
-  - question: "Name three things AI compresses in the innovation cycle."
-    answer: "Any three from: interview synthesis (weeks → hours), assumption mapping (workshops → one session), business model canvas (workshop → 20 minutes), financial modelling (days → hours), pitch deck narrative (weeks → one afternoon), competitive intelligence (incomplete → real-time)."
+  - front: "Name three things AI compresses in the innovation cycle."
+    back: "Any three from: interview synthesis (weeks → hours), assumption mapping (workshops → one session), business model canvas (workshop → 20 minutes), financial modelling (days → hours), pitch deck narrative (weeks → one afternoon), competitive intelligence (incomplete → real-time)."

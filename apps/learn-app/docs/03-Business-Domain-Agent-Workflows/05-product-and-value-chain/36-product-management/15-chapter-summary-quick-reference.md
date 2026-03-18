@@ -114,7 +114,7 @@ The cycle feeds back: `/retro` findings update `product.local.md`, which improve
 | ----------------------- | ---------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | `research-intelligence` | product-strategy | Monday 8 AM (weekly)             | Monitor user signals (support, NPS, feature requests), synthesise weekly digest, surface emerging problems | Any theme in support + NPS + feature requests simultaneously → escalate immediately        |
 | `stakeholder-update`    | product-strategy | Friday 2 PM (weekly) + triggered | Generate three-version update queue for PM review: executive, engineering, customer-facing                 | Any customer-committed feature status change → immediate draft, queue for PM               |
-| `roadmap-coherence`     | product-strategy | Wednesday 9 AM (weekly)          | Three coherence checks: backlog orphan detection, roadmap coverage, sprint alignment                       | Sprint >30% off-roadmap → alert PM + EM; NOW item no spec <3 sprints to target → immediate |
+| `roadmap-coherence`     | product-strategy | Wednesday 9 AM (weekly)          | Three coherence checks: backlog orphan detection, roadmap coverage, sprint alignment                       | Sprint >30% off-roadmap → alert PM + EM; NOW item no spec &lt;3 sprints to target → immediate |
 
 **Deploying agents:** Use `/schedule` in Cowork to configure each agent's schedule, data sources, and escalation thresholds.
 

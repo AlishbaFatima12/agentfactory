@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-07-offer-letters-employment-docs"
+  title: "Offer Letters Employment Docs"
+  version: 1
+
 cards:
   - front: "What are the five employment document types covered by /draft-offer?"
     back: "Offer letter (new hire), promotion letter (internal promotion), salary change notification (annual review / market adjustment), contract amendment (role or working pattern change), and flexible working agreement (approved request)"

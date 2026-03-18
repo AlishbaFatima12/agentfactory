@@ -1,6 +1,9 @@
-title: "Lesson 12 — Persistent Agents: Deployment and Schedule"
-description: "Flashcards covering the four operations agents, their schedules, alert formats, and interdependencies"
-flashcards:
+deck:
+  id: "ch38-12-persistent-agents-deployment-schedule"
+  title: "Lesson 12 — Persistent Agents: Deployment and Schedule"
+  version: 1
+
+cards:
   - front: "What is the key architectural difference between the official Operations plugin and the custom Operations Intelligence plugin?"
     back: "The official plugin is command-response — you invoke tools on demand. The custom plugin adds persistent agents that run on a schedule, monitor continuously, and alert automatically. No official plugin has persistent agents."
 

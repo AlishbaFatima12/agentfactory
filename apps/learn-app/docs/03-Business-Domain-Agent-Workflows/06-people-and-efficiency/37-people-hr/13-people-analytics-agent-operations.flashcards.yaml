@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-13-people-analytics-agent-operations"
+  title: "People Analytics Agent Operations"
+  version: 1
+
 cards:
   - front: "What are the four report types in /people-report, and what business question does each answer?"
     back: "Headcount (who do we have?), Attrition (are we keeping people?), Diversity (is our pipeline representative?), Org Health (is our structure working?)."

@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-01-institutional-memory-problem"
+  title: "Institutional Memory Problem"
+  version: 1
+
 cards:
   - front: "What is explicit knowledge in an HR context?"
     back: "Knowledge that exists in written documents — handbooks, policies, process guides, org charts. Theoretically findable, but often scattered across multiple systems and written in language that is hard to understand."

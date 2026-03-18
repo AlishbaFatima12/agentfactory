@@ -1,7 +1,9 @@
-title: "Incident Management — Post-Mortem and Five Whys"
-chapter: 38
-lesson: 10
-flashcards:
+deck:
+  id: "ch38-10-incident-management-postmortem-five-whys"
+  title: "Incident Management — Post-Mortem and Five Whys"
+  version: 1
+
+cards:
   - front: "What is the difference between a proximate cause and a systemic root cause?"
     back: "The proximate cause is the thing that immediately broke (e.g., database failover did not trigger). The systemic root cause is the organisational gap that allowed it to break (e.g., migration checklists were never updated for cloud-specific requirements). Fixing only the proximate cause prevents this specific incident from recurring; fixing the systemic cause prevents the entire class of related incidents."
 

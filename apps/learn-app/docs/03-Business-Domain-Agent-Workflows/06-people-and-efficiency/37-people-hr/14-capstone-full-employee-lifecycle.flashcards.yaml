@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-14-capstone-full-employee-lifecycle"
+  title: "Capstone Full Employee Lifecycle"
+  version: 1
+
 cards:
   - front: "What are the six stages of the employee lifecycle in Chapter 37?"
     back: "Stage 1: HIRE, Stage 2: ONBOARD, Stage 3: DEVELOP, Stage 4: RETAIN/PROMOTE, Stage 5: OFFBOARD, Stage 6: CONTINUOUS"

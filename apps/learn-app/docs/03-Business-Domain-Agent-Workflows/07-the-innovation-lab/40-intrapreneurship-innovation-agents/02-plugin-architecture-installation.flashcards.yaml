@@ -1,31 +1,35 @@
-title: "Plugin Architecture and Installation — Chapter 40 Lesson 2"
+deck:
+  id: "ch40-02-plugin-architecture-installation"
+  title: "Plugin Architecture and Installation — Chapter 40 Lesson 2"
+  version: 1
+
 cards:
-  - question: "What are the 10 commands in the innovation plugin?"
-    answer: "/idea, /discovery, /hypothesis, /validate, /canvas, /financials, /pitch, /sprint, /market, /gtm — one command per major DLA function."
+  - front: "What are the 10 commands in the innovation plugin?"
+    back: "/idea, /discovery, /hypothesis, /validate, /canvas, /financials, /pitch, /sprint, /market, /gtm — one command per major DLA function."
 
-  - question: "Which two commands are in the Design Thinking stage?"
-    answer: "/discovery (customer research and synthesis) and /idea (idea generation and evaluation). These operate at the problem level — understanding what is worth solving."
+  - front: "Which two commands are in the Design Thinking stage?"
+    back: "/discovery (customer research and synthesis) and /idea (idea generation and evaluation). These operate at the problem level — understanding what is worth solving."
 
-  - question: "Which two commands are in the Lean Startup stage?"
-    answer: "/hypothesis (assumption mapping and MVP scoping) and /validate (build-measure-learn analysis). These operate at the solution level — testing whether your solution works."
+  - front: "Which two commands are in the Lean Startup stage?"
+    back: "/hypothesis (assumption mapping and MVP scoping) and /validate (build-measure-learn analysis). These operate at the solution level — testing whether your solution works."
 
-  - question: "Which command is in the Agile stage?"
-    answer: "/sprint — innovation sprint planning, backlog, and retrospective with assumption updates. This operates at the delivery level."
+  - front: "Which command is in the Agile stage?"
+    back: "/sprint — innovation sprint planning, backlog, and retrospective with assumption updates. This operates at the delivery level."
 
-  - question: "What are the four cross-cutting commands that apply at any DLA stage?"
-    answer: "/market (competitive intelligence + sizing), /financials (unit economics + runway), /pitch (investor deck), and /gtm (go-to-market strategy). These are most powerful after discovery and validation data exists."
+  - front: "What are the four cross-cutting commands that apply at any DLA stage?"
+    back: "/market (competitive intelligence + sizing), /financials (unit economics + runway), /pitch (investor deck), and /gtm (go-to-market strategy). These are most powerful after discovery and validation data exists."
 
-  - question: "What is innov.local.md?"
-    answer: "The venture context configuration file. It encodes your venture details, customer profiles, assumption stack, business model canvas, financial model, competitive landscape, and fundraising information. It makes every command output specific to your venture rather than generic."
+  - front: "What is innov.local.md?"
+    back: "The venture context configuration file. It encodes your venture details, customer profiles, assumption stack, business model canvas, financial model, competitive landscape, and fundraising information. It makes every command output specific to your venture rather than generic."
 
-  - question: "What is the difference between a blank innov.local.md and a filled one?"
-    answer: "A blank innov.local.md produces generic outputs. A filled one produces venture-specific outputs — for example, /canvas builds a canvas using your actual customers and traction data instead of a template example."
+  - front: "What is the difference between a blank innov.local.md and a filled one?"
+    back: "A blank innov.local.md produces generic outputs. A filled one produces venture-specific outputs — for example, /canvas builds a canvas using your actual customers and traction data instead of a template example."
 
-  - question: "What is stage-aware calibration in the innovation plugin?"
-    answer: "Every command checks your venture.stage and warns if you are at the wrong DLA level. For example, /financials at IDEA stage warns that numbers will be highly speculative; /idea at MVP stage asks if you are pivoting."
+  - front: "What is stage-aware calibration in the innovation plugin?"
+    back: "Every command checks your venture.stage and warns if you are at the wrong DLA level. For example, /financials at IDEA stage warns that numbers will be highly speculative; /idea at MVP stage asks if you are pivoting."
 
-  - question: "Which section of innov.local.md should you fill in first, and why?"
-    answer: "The venture: section — name, stage, problem statement, target customer, solution hypothesis, unfair advantage. Even a rough problem statement immediately improves the specificity of every command output."
+  - front: "Which section of innov.local.md should you fill in first, and why?"
+    back: "The venture: section — name, stage, problem statement, target customer, solution hypothesis, unfair advantage. Even a rough problem statement immediately improves the specificity of every command output."
 
-  - question: "Name the four validation prompts that confirm innov.local.md is working correctly."
-    answer: "/idea (should produce venture-specific ideas), /canvas (should assess your actual canvas blocks), /hypothesis (should reference a specific assumption ID), /pitch (should include your actual traction numbers)."
+  - front: "Name the four validation prompts that confirm innov.local.md is working correctly."
+    back: "/idea (should produce venture-specific ideas), /canvas (should assess your actual canvas blocks), /hypothesis (should reference a specific assumption ID), /pitch (should include your actual traction numbers)."

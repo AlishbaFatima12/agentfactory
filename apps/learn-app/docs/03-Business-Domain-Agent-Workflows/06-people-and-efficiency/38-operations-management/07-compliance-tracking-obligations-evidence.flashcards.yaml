@@ -1,7 +1,9 @@
-title: "Compliance Tracking — Obligations and Evidence"
-chapter: 38
-lesson: 7
-flashcards:
+deck:
+  id: "ch38-07-compliance-tracking-obligations-evidence"
+  title: "Compliance Tracking — Obligations and Evidence"
+  version: 1
+
+cards:
   - front: "What is compliance drift?"
     back: "The silent process by which compliant controls become non-compliant — typically triggered by personnel change (knowledge leaves), regulatory change (control not updated), or system change (control removed from workflow). The organisation believes it is still compliant because it was compliant at the last audit."
 

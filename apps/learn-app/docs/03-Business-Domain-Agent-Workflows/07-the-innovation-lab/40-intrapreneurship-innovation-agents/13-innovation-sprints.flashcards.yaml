@@ -1,36 +1,41 @@
-flashcards:
-  - question: "What is the defining difference between an innovation sprint and a product sprint?"
-    answer: "An innovation sprint has two goals: a learning goal (which assumption are we testing?) and a delivery goal (what do we build that enables the test?). A product sprint has only a delivery goal. Without the learning goal, you are running a product sprint regardless of context."
+deck:
+  id: "ch40-13-innovation-sprints"
+  title: "Innovation Sprints"
+  version: 1
 
-  - question: "When should you use an innovation sprint vs. a product sprint?"
-    answer: "Use the Innovation Sprint format at DISCOVERY, VALIDATION, and MVP stages — when critical assumptions remain unvalidated. Switch to the Product Sprint format at GROWTH stage when product-market fit is validated and you are scaling a known solution."
+cards:
+  - front: "What is the defining difference between an innovation sprint and a product sprint?"
+    back: "An innovation sprint has two goals: a learning goal (which assumption are we testing?) and a delivery goal (what do we build that enables the test?). A product sprint has only a delivery goal. Without the learning goal, you are running a product sprint regardless of context."
 
-  - question: "What is the learning goal in an innovation sprint?"
-    answer: "A specific, testable statement of which assumption the sprint will validate or invalidate — referencing an assumption ID from the assumption map. Example: 'Determine whether WhatsApp approval workflow improves invoice adoption by ≥20 percentage points. Tests assumption A-004.'"
+  - front: "When should you use an innovation sprint vs. a product sprint?"
+    back: "Use the Innovation Sprint format at DISCOVERY, VALIDATION, and MVP stages — when critical assumptions remain unvalidated. Switch to the Product Sprint format at GROWTH stage when product-market fit is validated and you are scaling a known solution."
 
-  - question: "What are the three dimensions of an innovation sprint's Definition of Done?"
-    answer: "Code (deployed to production and tested with real users/data), Learning (measured for a specific period with a specific metric), and Documentation (sprint learnings and assumption status updates written to innov.local.md)."
+  - front: "What is the learning goal in an innovation sprint?"
+    back: "A specific, testable statement of which assumption the sprint will validate or invalidate — referencing an assumption ID from the assumption map. Example: 'Determine whether WhatsApp approval workflow improves invoice adoption by ≥20 percentage points. Tests assumption A-004.'"
 
-  - question: "What is the priority scoring formula for innovation sprint backlog items?"
-    answer: "Priority Score = Assumption Risk Score (1–3) × Delivery Value Score (1–3). Maximum score is 9. Build the sprint from highest-scoring items down. Items scoring ≤2 should be deferred to the backlog unless they are quick wins under 2 hours."
+  - front: "What are the three dimensions of an innovation sprint's Definition of Done?"
+    back: "Code (deployed to production and tested with real users/data), Learning (measured for a specific period with a specific metric), and Documentation (sprint learnings and assumption status updates written to innov.local.md)."
 
-  - question: "What does an Assumption Risk Score of 3 mean in backlog prioritisation?"
-    answer: "The backlog item tests a Tier 1 (existential) assumption — if this assumption is wrong, the venture must pivot. These stories have the highest priority regardless of delivery complexity."
+  - front: "What is the priority scoring formula for innovation sprint backlog items?"
+    back: "Priority Score = Assumption Risk Score (1–3) × Delivery Value Score (1–3). Maximum score is 9. Build the sprint from highest-scoring items down. Items scoring ≤2 should be deferred to the backlog unless they are quick wins under 2 hours."
 
-  - question: "What are the four characteristics of a strong user story in an innovation sprint?"
-    answer: "1. Names a specific role (not 'user'); 2. States the action precisely (not 'get notified'); 3. States the outcome the user cares about; 4. Has acceptance criteria that are binary (pass/fail, measurable); PLUS an explicit assumption ID reference."
+  - front: "What does an Assumption Risk Score of 3 mean in backlog prioritisation?"
+    back: "The backlog item tests a Tier 1 (existential) assumption — if this assumption is wrong, the venture must pivot. These stories have the highest priority regardless of delivery complexity."
 
-  - question: "What is the primary purpose of the sprint retrospective in an innovation sprint?"
-    answer: "To update assumption statuses in innov.local.md with evidence from the sprint. This is the most important retrospective output — it is what keeps the assumption map current and the team aligned on what has and has not been validated. Team process is secondary."
+  - front: "What are the four characteristics of a strong user story in an innovation sprint?"
+    back: "1. Names a specific role (not 'user'); 2. States the action precisely (not 'get notified'); 3. States the outcome the user cares about; 4. Has acceptance criteria that are binary (pass/fail, measurable); PLUS an explicit assumption ID reference."
 
-  - question: "What happens at the mid-sprint check (Day 7 of a 14-day sprint)?"
-    answer: "Review whether the critical user story (the one testing the learning goal) is on track. Check for any early signal on the learning goal measurement. Identify any story at risk of not completing. Adjust scope now — not on the last day."
+  - front: "What is the primary purpose of the sprint retrospective in an innovation sprint?"
+    back: "To update assumption statuses in innov.local.md with evidence from the sprint. This is the most important retrospective output — it is what keeps the assumption map current and the team aligned on what has and has not been validated. Team process is secondary."
 
-  - question: "Why should you never plan an innovation sprint without a learning goal?"
-    answer: "A sprint with only a delivery goal is a product sprint — it executes but does not reduce uncertainty. At DISCOVERY, VALIDATION, and MVP stages, reducing uncertainty is more valuable than shipping features. The learning goal is what makes the sprint an investment in knowledge, not just velocity."
+  - front: "What happens at the mid-sprint check (Day 7 of a 14-day sprint)?"
+    back: "Review whether the critical user story (the one testing the learning goal) is on track. Check for any early signal on the learning goal measurement. Identify any story at risk of not completing. Adjust scope now — not on the last day."
 
-  - question: "What should the sprint review demonstrate beyond what was built?"
-    answer: "Data from the learning goal — even if partial or early. The sprint review must show whether the target assumption was confirmed, invalidated, or left inconclusive. Without this, the review is just a demo, not a validation report."
+  - front: "Why should you never plan an innovation sprint without a learning goal?"
+    back: "A sprint with only a delivery goal is a product sprint — it executes but does not reduce uncertainty. At DISCOVERY, VALIDATION, and MVP stages, reducing uncertainty is more valuable than shipping features. The learning goal is what makes the sprint an investment in knowledge, not just velocity."
 
-  - question: "What is the retrospective assumption update format?"
-    answer: "For each assumption tested this sprint: reference the assumption ID, state the new status (VALIDATED / INVALIDATED / INCONCLUSIVE), and provide the specific evidence from the sprint that supports this status change."
+  - front: "What should the sprint review demonstrate beyond what was built?"
+    back: "Data from the learning goal — even if partial or early. The sprint review must show whether the target assumption was confirmed, invalidated, or left inconclusive. Without this, the review is just a demo, not a validation report."
+
+  - front: "What is the retrospective assumption update format?"
+    back: "For each assumption tested this sprint: reference the assumption ID, state the new status (VALIDATED / INVALIDATED / INCONCLUSIVE), and provide the specific evidence from the sprint that supports this status change."

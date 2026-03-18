@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-08-performance-reviews"
+  title: "Performance Reviews"
+  version: 1
+
 cards:
   - front: "What are the four quality standards for performance reviews?"
     back: "1. Strengths: specific and evidenced (cite observable outcomes, not impressions). 2. Development areas: behavioural, not personality. 3. Development areas: maximum 2. 4. Career development: honest and specific about conditions and timeline."

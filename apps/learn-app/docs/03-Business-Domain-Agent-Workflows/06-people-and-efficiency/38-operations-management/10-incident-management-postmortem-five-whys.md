@@ -294,7 +294,7 @@ The `/incident` command applies severity classifications configured in `ops.loca
 | ----------- | ------------------------------------------------------------------------------------------ | ------------------------------------ |
 | **P1 — Critical** | Service unavailable; >50% of users/transactions affected; revenue impact >threshold; regulatory notification likely | Mandatory; within 5 business days   |
 | **P2 — Major**    | Significant degradation; >20% affected; customer-visible; no regulatory notification      | Mandatory; within 10 business days  |
-| **P3 — Minor**    | Limited impact; <20% affected; no revenue impact; workaround available                    | Optional; log entry required         |
+| **P3 — Minor**    | Limited impact; &lt;20% affected; no revenue impact; workaround available                    | Optional; log entry required         |
 
 The payment processing outage is unambiguously P1: 2,400 declined transactions, £140,000 revenue impact, customer-visible. The post-mortem is mandatory and should be distributed to leadership, IT, operations, and communications.
 

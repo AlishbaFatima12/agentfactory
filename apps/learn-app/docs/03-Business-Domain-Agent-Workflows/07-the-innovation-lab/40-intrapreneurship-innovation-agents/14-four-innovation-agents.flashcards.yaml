@@ -1,36 +1,41 @@
-flashcards:
-  - question: "What is the fundamental difference between a skill (command) and a persistent agent?"
-    answer: "A skill is reactive — you invoke it when you need it; it responds once. A persistent agent is proactive — it runs on a schedule or trigger, reads innov.local.md automatically, and surfaces decisions before you ask."
+deck:
+  id: "ch40-14-four-innovation-agents"
+  title: "Four Innovation Agents"
+  version: 1
 
-  - question: "What does the Idea Generator agent deliver every Monday?"
-    answer: "The Monday Innovation Brief: 3 unsolicited ideas (each with what, why now, effort to test, and assumption reference), 1 market signal relevant to the venture's problem space, and 1 uncomfortable question the team should sit with — not a task, a provocation."
+cards:
+  - front: "What is the fundamental difference between a skill (command) and a persistent agent?"
+    back: "A skill is reactive — you invoke it when you need it; it responds once. A persistent agent is proactive — it runs on a schedule or trigger, reads innov.local.md automatically, and surfaces decisions before you ask."
 
-  - question: "What is the Customer Signal Digest and when is it delivered?"
-    answer: "A weekly synthesis of all customer signals (NPS, support tickets, usage data, interview notes, churn events) from the past week, delivered every Monday. It includes: customer health snapshot, top 3 feedback themes, assumption updates, customers at risk, and one new customer insight."
+  - front: "What does the Idea Generator agent deliver every Monday?"
+    back: "The Monday Innovation Brief: 3 unsolicited ideas (each with what, why now, effort to test, and assumption reference), 1 market signal relevant to the venture's problem space, and 1 uncomfortable question the team should sit with — not a task, a provocation."
 
-  - question: "What triggers the Business Model Architect agent to activate?"
-    answer: "New validation data arrives in innov.local.md — from a pilot result, pricing test, churn observation, or cost change. The agent activates and proposes specific canvas block updates using a versioned format (VERSION 1.4 UPDATE PROPOSAL), with evidence cited. It proposes; it does not apply without confirmation."
+  - front: "What is the Customer Signal Digest and when is it delivered?"
+    back: "A weekly synthesis of all customer signals (NPS, support tickets, usage data, interview notes, churn events) from the past week, delivered every Monday. It includes: customer health snapshot, top 3 feedback themes, assumption updates, customers at risk, and one new customer insight."
 
-  - question: "What does the Business Model Architect's Monthly Financial Health Review contain?"
-    answer: "A RAG (green/amber/red) status on unit economics (CAC, LTV, LTV:CAC, payback, churn), a current state snapshot (MRR, ARR, customers, burn, cash, runway), a runway alert with fundraising trigger date, canvas health assessment (most/least validated blocks), and recommended actions."
+  - front: "What triggers the Business Model Architect agent to activate?"
+    back: "New validation data arrives in innov.local.md — from a pilot result, pricing test, churn observation, or cost change. The agent activates and proposes specific canvas block updates using a versioned format (VERSION 1.4 UPDATE PROPOSAL), with evidence cited. It proposes; it does not apply without confirmation."
 
-  - question: "What is the Fundraising Readiness Score and when does it apply?"
-    answer: "A 16-item checklist across data room readiness (7 items), narrative readiness (4 items), and investor pipeline (3 items). It applies when fundraising.current_round is populated in innov.local.md. Minimum threshold to start active fundraising: 12/16 complete."
+  - front: "What does the Business Model Architect's Monthly Financial Health Review contain?"
+    back: "A RAG (green/amber/red) status on unit economics (CAC, LTV, LTV:CAC, payback, churn), a current state snapshot (MRR, ARR, customers, burn, cash, runway), a runway alert with fundraising trigger date, canvas health assessment (most/least validated blocks), and recommended actions."
 
-  - question: "What is the Fundraising Readiness Agent's pre-pitch ritual?"
-    answer: "48 hours before any investor meeting, the agent generates a personalised investor brief: their portfolio, known investment thesis, past questions from public sources, and the 5 most likely hard questions for this specific investor. This prevents the avoidable mistake of pitching without knowing the investor's portfolio conflicts."
+  - front: "What is the Fundraising Readiness Score and when does it apply?"
+    back: "A 16-item checklist across data room readiness (7 items), narrative readiness (4 items), and investor pipeline (3 items). It applies when fundraising.current_round is populated in innov.local.md. Minimum threshold to start active fundraising: 12/16 complete."
 
-  - question: "How does the Fundraising Readiness Agent translate for intrapreneurs?"
-    answer: "It becomes the Business Case Readiness Agent. The investor pipeline becomes a stakeholder alignment tracker (CHAMPION/NEUTRAL/RESISTANT). The pitch deck becomes the business case document. The data room becomes an evidence pack. The 16-item checklist maps to internal approval gates."
+  - front: "What is the Fundraising Readiness Agent's pre-pitch ritual?"
+    back: "48 hours before any investor meeting, the agent generates a personalised investor brief: their portfolio, known investment thesis, past questions from public sources, and the 5 most likely hard questions for this specific investor. This prevents the avoidable mistake of pitching without knowing the investor's portfolio conflicts."
 
-  - question: "Why does the Customer Intelligence Agent distinguish between what customers say and what their behaviour shows?"
-    answer: "Behaviour is more reliable than stated preference. A customer who says 'we love the product' but whose usage data shows declining adoption is at risk, not healthy. Conflating stated sentiment with behaviour produces false confidence."
+  - front: "How does the Fundraising Readiness Agent translate for intrapreneurs?"
+    back: "It becomes the Business Case Readiness Agent. The investor pipeline becomes a stakeholder alignment tracker (CHAMPION/NEUTRAL/RESISTANT). The pitch deck becomes the business case document. The data room becomes an evidence pack. The 16-item checklist maps to internal approval gates."
 
-  - question: "What is the Monday Innovation Brief's Uncomfortable Question?"
-    answer: "A question the team should sit with that week — something that challenges a current assumption or direction. It is not a task; it is a provocation. Its job is to prevent the team from becoming too comfortable with their current strategy."
+  - front: "Why does the Customer Intelligence Agent distinguish between what customers say and what their behaviour shows?"
+    back: "Behaviour is more reliable than stated preference. A customer who says 'we love the product' but whose usage data shows declining adoption is at risk, not healthy. Conflating stated sentiment with behaviour produces false confidence."
 
-  - question: "What does the Business Model Architect Agent do when burn rate changes?"
-    answer: "It recalculates runway immediately. If new runway drops below 6 months, it flags the situation in the next digest. It then proposes specific cost reduction or revenue acceleration actions to restore runway. It does not wait for the monthly review to surface a runway emergency."
+  - front: "What is the Monday Innovation Brief's Uncomfortable Question?"
+    back: "A question the team should sit with that week — something that challenges a current assumption or direction. It is not a task; it is a provocation. Its job is to prevent the team from becoming too comfortable with their current strategy."
 
-  - question: "Why do all 4 agents read from innov.local.md automatically?"
-    answer: "Without venture context, agent outputs are generic — advice that could apply to any business. With a populated innov.local.md, outputs are calibrated to the venture's specific customers, open assumptions, financial model, and stage. The context file is what transforms a general-purpose AI tool into a venture-specific intelligence system."
+  - front: "What does the Business Model Architect Agent do when burn rate changes?"
+    back: "It recalculates runway immediately. If new runway drops below 6 months, it flags the situation in the next digest. It then proposes specific cost reduction or revenue acceleration actions to restore runway. It does not wait for the monthly review to surface a runway emergency."
+
+  - front: "Why do all 4 agents read from innov.local.md automatically?"
+    back: "Without venture context, agent outputs are generic — advice that could apply to any business. With a populated innov.local.md, outputs are calibrated to the venture's specific customers, open assumptions, financial model, and stage. The context file is what transforms a general-purpose AI tool into a venture-specific intelligence system."

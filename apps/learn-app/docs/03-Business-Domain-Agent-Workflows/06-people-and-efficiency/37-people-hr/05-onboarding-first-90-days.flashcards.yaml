@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-05-onboarding-first-90-days"
+  title: "Onboarding First 90 Days"
+  version: 1
+
 cards:
   - front: "What are the three onboarding failure modes?"
     back: "Information Dump (too much content, too fast), Administrative Bottleneck (access/equipment not ready on Day 1), and Invisible Ramp (no defined success criteria at 30/60/90 days)"

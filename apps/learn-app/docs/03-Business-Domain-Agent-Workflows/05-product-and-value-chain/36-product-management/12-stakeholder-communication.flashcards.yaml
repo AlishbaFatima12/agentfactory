@@ -1,35 +1,41 @@
-- question: "What is the ROAM framework, and what does each letter stand for?"
-  answer: "ROAM classifies risks by what is being done about them. R = Resolved (risk is gone, document how). O = Owned (someone is actively managing it with a plan). A = Accepted (known risk, decided to proceed without mitigation). M = Mitigated (actions have reduced but not eliminated the risk)."
+deck:
+  id: "ch36-12-stakeholder-communication"
+  title: "Stakeholder Communication"
+  version: 1
 
-- question: "What is the executive stakeholder update word limit, and why?"
-  answer: "Under 200-300 words. Executives want the most important thing and any actions required from them — not a comprehensive status. If they want more detail, they will ask. Compression forces you to decide what actually matters."
+cards:
+  - front: "What is the ROAM framework, and what does each letter stand for?"
+    back: "ROAM classifies risks by what is being done about them. R = Resolved (risk is gone, document how). O = Owned (someone is actively managing it with a plan). A = Accepted (known risk, decided to proceed without mitigation). M = Mitigated (actions have reduced but not eliminated the risk)."
 
-- question: "When should you move a product status from Green to Yellow?"
-  answer: "At the FIRST sign of risk — before you are certain something will go wrong. Yellow means mitigation is underway but outcome is uncertain. Waiting until Yellow becomes Red removes leadership's ability to help early."
+  - front: "What is the executive stakeholder update word limit, and why?"
+    back: "Under 200-300 words. Executives want the most important thing and any actions required from them — not a comprehensive status. If they want more detail, they will ask. Compression forces you to decide what actually matters."
 
-- question: "What content belongs in an engineering update that does NOT belong in an executive update?"
-  answer: "Ticket/PR references, ADR citations, specific blocker details and who is unblocking them, technical decisions with rationale, dependency chain details, and priority changes with technical context."
+  - front: "When should you move a product status from Green to Yellow?"
+    back: "At the FIRST sign of risk — before you are certain something will go wrong. Yellow means mitigation is underway but outcome is uncertain. Waiting until Yellow becomes Red removes leadership's ability to help early."
 
-- question: "What is a stakeholder update for the customer/CS audience NOT allowed to include?"
-  answer: "No internal jargon (sprint, ticket, P0/P1, backlog), no ticket numbers, no internal team names or ADR references, no financial or strategic context. Frame everything in terms of what customers can now DO, not what you built."
+  - front: "What content belongs in an engineering update that does NOT belong in an executive update?"
+    back: "Ticket/PR references, ADR citations, specific blocker details and who is unblocking them, technical decisions with rationale, dependency chain details, and priority changes with technical context."
 
-- question: "What does ADR stand for, and when should you write one?"
-  answer: "Architecture Decision Record. Write one when making a significant product or technical decision — especially ones that constrain future options, that people disagreed about, or that someone will question later. Keep them short (one page). Document context, decision, consequences, and alternatives considered."
+  - front: "What is a stakeholder update for the customer/CS audience NOT allowed to include?"
+    back: "No internal jargon (sprint, ticket, P0/P1, backlog), no ticket numbers, no internal team names or ADR references, no financial or strategic context. Frame everything in terms of what customers can now DO, not what you built."
 
-- question: "What is the NEVER DO rule for stakeholder updates from the /stakeholder-update skill?"
-  answer: "Never send the same version to different audiences — every audience gets a version calibrated to them. The executive version would alarm engineers with its compression; the engineering version would lose executives in technical detail."
+  - front: "What does ADR stand for, and when should you write one?"
+    back: "Architecture Decision Record. Write one when making a significant product or technical decision — especially ones that constrain future options, that people disagreed about, or that someone will question later. Keep them short (one page). Document context, decision, consequences, and alternatives considered."
 
-- question: "What is the difference between a 'watch item' and a 'blocker' in stakeholder language?"
-  answer: "A watch item is a risk that is being monitored but has not yet affected the sprint — no action needed from leadership. A blocker is an active impediment preventing work — action is needed to resolve it, either from the PM or from leadership."
+  - front: "What is the NEVER DO rule for stakeholder updates from the /stakeholder-update skill?"
+    back: "Never send the same version to different audiences — every audience gets a version calibrated to them. The executive version would alarm engineers with its compression; the engineering version would lose executives in technical detail."
 
-- question: "What are the five elements of a well-structured executive update?"
-  answer: "1) Status color (G/Y/R), 2) TL;DR sentence (the most important thing), 3) Progress bullets tied to goals or OKRs, 4) Risks with ROAM classification and mitigation, 5) Decisions needed or next milestone."
+  - front: "What is the difference between a 'watch item' and a 'blocker' in stakeholder language?"
+    back: "A watch item is a risk that is being monitored but has not yet affected the sprint — no action needed from leadership. A blocker is an active impediment preventing work — action is needed to resolve it, either from the PM or from leadership."
 
-- question: "What is the 'Red is a request for help' rule?"
-  answer: "Use Red status when you have genuinely exhausted your own options and need external intervention — a resource addition, timeline extension, or scope cut that requires leadership decision. Do not use Red for drama. Do not wait so long that Red comes as a surprise."
+  - front: "What are the five elements of a well-structured executive update?"
+    back: "1) Status color (G/Y/R), 2) TL;DR sentence (the most important thing), 3) Progress bullets tied to goals or OKRs, 4) Risks with ROAM classification and mitigation, 5) Decisions needed or next milestone."
 
-- question: "What must always be documented when you change status from Green to Yellow or Yellow to Red?"
-  answer: "The reason for the status change: 'Moved to Yellow because [specific event or risk]'. This creates a timeline of risk signals for future retrospectives and prevents revisionist history about when problems were visible."
+  - front: "What is the 'Red is a request for help' rule?"
+    back: "Use Red status when you have genuinely exhausted your own options and need external intervention — a resource addition, timeline extension, or scope cut that requires leadership decision. Do not use Red for drama. Do not wait so long that Red comes as a surprise."
 
-- question: "What is the stakeholder translation problem that /stakeholder-update solves?"
-  answer: "Every product decision needs to be communicated to multiple audiences simultaneously. Each audience has different context, priorities, and risk tolerance. The PM is the translator: the same underlying reality (status, risks, progress) becomes three different documents for three different audiences."
+  - front: "What must always be documented when you change status from Green to Yellow or Yellow to Red?"
+    back: "The reason for the status change: 'Moved to Yellow because [specific event or risk]'. This creates a timeline of risk signals for future retrospectives and prevents revisionist history about when problems were visible."
+
+  - front: "What is the stakeholder translation problem that /stakeholder-update solves?"
+    back: "Every product decision needs to be communicated to multiple audiences simultaneously. Each audience has different context, priorities, and risk tolerance. The PM is the translator: the same underlying reality (status, risks, progress) becomes three different documents for three different audiences."

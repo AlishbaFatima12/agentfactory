@@ -1,7 +1,9 @@
-title: "Plugin Architecture and Installation"
-chapter: 38
-lesson: 2
-flashcards:
+deck:
+  id: "ch38-02-plugin-architecture-installation"
+  title: "Plugin Architecture and Installation"
+  version: 1
+
+cards:
   - front: "What are the two plugins used in Chapter 38?"
     back: "1. Official Operations plugin (from Anthropic's knowledge-work-plugins) — 6 commands including /vendor-review, /process-doc, /change-request, /runbook, /status-report. 2. Custom Operations Intelligence plugin (from Panaversity) — 4 commands (/audit, /contract, /incident, /metrics) and 4 persistent agents."
 

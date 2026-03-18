@@ -1,6 +1,9 @@
-title: "Lesson 14 — Capstone: End-to-End Operations Sprint"
-description: "Flashcards covering the sprint structure, scenario differences, quality gates, and the sprint-to-lesson map"
-flashcards:
+deck:
+  id: "ch38-14-capstone-end-to-end-operations-sprint"
+  title: "Lesson 14 — Capstone: End-to-End Operations Sprint"
+  version: 1
+
+cards:
   - front: "What are the three capstone scenarios and what operational stress does each emphasise?"
     back: "Scenario A (Subsidiary Acquisition): vendor management, compliance mapping, risk assessment — inheriting unknown vendor portfolio and new jurisdiction obligations. Scenario B (ERP Migration): change management, process documentation, incident readiness — largest change in the organisation's history with 47 vendor integration dependencies. Scenario C (Regulatory Change): compliance mapping, audit preparation, risk register — FCA guidance update affecting 8 obligations with 60-day compliance deadline."
 

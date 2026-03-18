@@ -1,7 +1,9 @@
-title: "Chapter Summary and Quick Reference"
-chapter: 38
-lesson: 15
-flashcards:
+deck:
+  id: "ch38-15-chapter-summary-quick-reference"
+  title: "Chapter Summary and Quick Reference"
+  version: 1
+
+cards:
   - front: "What is the central insight of Chapter 38?"
     back: "Operations is an intelligence function, not primarily an administrative one. Its job is to make the invisible visible — vendor spend nobody has totalled, processes nobody has documented, compliance obligations nobody has mapped, risks nobody has quantified."
 

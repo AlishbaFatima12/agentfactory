@@ -1,36 +1,41 @@
-flashcards:
-  - question: "What is the difference between founder-led CAC and sustainable CAC?"
-    answer: "Founder-led CAC uses the founder's deferred (below-market) hourly rate and produces an artificially low number. Sustainable CAC uses the market-rate cost of the founder's time and is the only number valid for planning — it represents what customer acquisition will cost once the founder is paid market rate."
+deck:
+  id: "ch40-09-unit-economics-financial-modelling"
+  title: "Unit Economics Financial Modelling"
+  version: 1
 
-  - question: "What is the LTV formula for a SaaS product?"
-    answer: "LTV = MRR × 12 × (1 / annual churn rate) × gross margin. The churn rate is the most sensitive variable — a small change produces a large change in LTV."
+cards:
+  - front: "What is the difference between founder-led CAC and sustainable CAC?"
+    back: "Founder-led CAC uses the founder's deferred (below-market) hourly rate and produces an artificially low number. Sustainable CAC uses the market-rate cost of the founder's time and is the only number valid for planning — it represents what customer acquisition will cost once the founder is paid market rate."
 
-  - question: "A 4× difference in churn produces what difference in LTV?"
-    answer: "A 4× difference. For example: 10% annual churn gives 10-year lifetime; 40% annual churn gives 2.5-year lifetime. If LTV at 10% churn is $54,000, LTV at 40% churn is $13,500."
+  - front: "What is the LTV formula for a SaaS product?"
+    back: "LTV = MRR × 12 × (1 / annual churn rate) × gross margin. The churn rate is the most sensitive variable — a small change produces a large change in LTV."
 
-  - question: "What does the churn warning standard require when churn is assumed (not measured)?"
-    answer: "Flag the model as HIGH UNCERTAINTY with the specific assumed rate and a note to validate at Month 12. Do not present the financial model to investors without this flag if churn has not been measured."
+  - front: "A 4× difference in churn produces what difference in LTV?"
+    back: "A 4× difference. For example: 10% annual churn gives 10-year lifetime; 40% annual churn gives 2.5-year lifetime. If LTV at 10% churn is $54,000, LTV at 40% churn is $13,500."
 
-  - question: "What is the LTV:CAC ratio assessment scale?"
-    answer: "< 3:1 is poor (business likely not viable); 3–5:1 is acceptable (marginal); > 5:1 is strong; > 10:1 is exceptional — but also a signal to scrutinise the churn assumption, as very high ratios often reflect overoptimistic churn inputs."
+  - front: "What does the churn warning standard require when churn is assumed (not measured)?"
+    back: "Flag the model as HIGH UNCERTAINTY with the specific assumed rate and a note to validate at Month 12. Do not present the financial model to investors without this flag if churn has not been measured."
 
-  - question: "How do you calculate the breakeven customer count?"
-    answer: "Monthly fixed costs ÷ contribution margin per customer. Contribution margin per customer = monthly revenue per customer × gross margin percentage."
+  - front: "What is the LTV:CAC ratio assessment scale?"
+    back: "< 3:1 is poor (business likely not viable); 3–5:1 is acceptable (marginal); > 5:1 is strong; > 10:1 is exceptional — but also a signal to scrutinise the churn assumption, as very high ratios often reflect overoptimistic churn inputs."
 
-  - question: "What are the three scenarios in a three-scenario financial model?"
-    answer: "Base (realistic expectation), Conservative (half the growth; 1.5× the churn; 20% higher CAC), and Optimistic (1.5× the growth; half the churn; 20% lower CAC)."
+  - front: "How do you calculate the breakeven customer count?"
+    back: "Monthly fixed costs ÷ contribution margin per customer. Contribution margin per customer = monthly revenue per customer × gross margin percentage."
 
-  - question: "When should the fundraising trigger be set relative to projected cash-out?"
-    answer: "At least 6 months before cash runs out — because a fundraising process typically takes 3–6 months from first outreach to cash in the bank. A model showing fundraising at Month 10 when cash runs out at Month 12 means you must start raising at Month 4."
+  - front: "What are the three scenarios in a three-scenario financial model?"
+    back: "Base (realistic expectation), Conservative (half the growth; 1.5× the churn; 20% higher CAC), and Optimistic (1.5× the growth; half the churn; 20% lower CAC)."
 
-  - question: "What marks the breakeven date in a financial model?"
-    answer: "The month when MRR contribution (revenue × gross margin) equals or exceeds the monthly burn rate (fixed costs + variable costs). At this point the business is cash-flow neutral — not yet profitable in accounting terms, but no longer consuming net cash."
+  - front: "When should the fundraising trigger be set relative to projected cash-out?"
+    back: "At least 6 months before cash runs out — because a fundraising process typically takes 3–6 months from first outreach to cash in the bank. A model showing fundraising at Month 10 when cash runs out at Month 12 means you must start raising at Month 4."
 
-  - question: "What is the Series A readiness minimum for ARR in B2B SaaS?"
-    answer: "Approximately $1M–$3M ARR (local equivalent), with > 100% year-over-year growth, < 10% annual churn, > 3× LTV:CAC, and 3–5 reference customers willing to take investor calls. These benchmarks vary by sector and investor — always research specific investors for their actual criteria."
+  - front: "What marks the breakeven date in a financial model?"
+    back: "The month when MRR contribution (revenue × gross margin) equals or exceeds the monthly burn rate (fixed costs + variable costs). At this point the business is cash-flow neutral — not yet profitable in accounting terms, but no longer consuming net cash."
 
-  - question: "Why should a financial model never present only the base case?"
-    answer: "Investors always ask: 'What if growth is half of your base case?' A model with only one scenario implies overconfidence. The conservative scenario is what investors use to stress-test whether the business can survive adversity — and it is also the scenario the founding team must plan to be able to survive."
+  - front: "What is the Series A readiness minimum for ARR in B2B SaaS?"
+    back: "Approximately $1M–$3M ARR (local equivalent), with > 100% year-over-year growth, < 10% annual churn, > 3× LTV:CAC, and 3–5 reference customers willing to take investor calls. These benchmarks vary by sector and investor — always research specific investors for their actual criteria."
 
-  - question: "What does CAC payback period tell you?"
-    answer: "How many months it takes for the monthly contribution from one customer to recover the cost of acquiring that customer. Formula: CAC ÷ monthly contribution margin. A payback under 12 months is considered capital-efficient for SaaS."
+  - front: "Why should a financial model never present only the base case?"
+    back: "Investors always ask: 'What if growth is half of your base case?' A model with only one scenario implies overconfidence. The conservative scenario is what investors use to stress-test whether the business can survive adversity — and it is also the scenario the founding team must plan to be able to survive."
+
+  - front: "What does CAC payback period tell you?"
+    back: "How many months it takes for the monthly contribution from one customer to recover the cost of acquiring that customer. Formula: CAC ÷ monthly contribution margin. A payback under 12 months is considered capital-efficient for SaaS."

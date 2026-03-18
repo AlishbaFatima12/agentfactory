@@ -1,7 +1,9 @@
-title: "Audit Preparation — Evidence and Mock Review"
-chapter: 38
-lesson: 8
-flashcards:
+deck:
+  id: "ch38-08-audit-preparation-evidence-mock-review"
+  title: "Audit Preparation — Evidence and Mock Review"
+  version: 1
+
+cards:
   - front: "What is the core principle of audit preparation that this lesson opens with?"
     back: "Evidence existence is not the same as evidence availability. Evidence that exists in a folder nobody can locate on audit day is, for practical purposes, absent. Audit preparation means confirming that evidence is locatable, current, and demonstrates what it is supposed to demonstrate."
 

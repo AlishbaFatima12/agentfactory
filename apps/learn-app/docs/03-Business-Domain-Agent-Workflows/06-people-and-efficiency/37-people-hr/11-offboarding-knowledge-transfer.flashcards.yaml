@@ -1,3 +1,8 @@
+deck:
+  id: "ch37-11-offboarding-knowledge-transfer"
+  title: "Offboarding Knowledge Transfer"
+  version: 1
+
 cards:
   - front: "What are the four principles of good offboarding?"
     back: "1. Protect the organisation (access removal, documentation, legal obligations). 2. Preserve institutional knowledge (structured handover). 3. Positive experience for the departing employee (alumni, not detractor). 4. Support the team (transition plan, coverage, communication)."

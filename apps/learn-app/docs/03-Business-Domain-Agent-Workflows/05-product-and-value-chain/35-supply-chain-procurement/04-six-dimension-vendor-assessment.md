@@ -146,7 +146,7 @@ Data sources: Your ERP (goods receipt dates vs. PO delivery dates), your QMS (qu
 | On-time delivery (12M avg) | 84%        | >90%      | ❌ Below threshold |
 | Average lead time          | 17 days    | ≤21 days  | ✅ Within range    |
 | Lead time variance         | ±6 days    | ±3 days   | ⚠️ High variance   |
-| Quality rejection rate     | 2.3%       | <1.5%     | ⚠️ Elevated        |
+| Quality rejection rate     | 2.3%       | &lt;1.5%     | ⚠️ Elevated        |
 
 An OTD of 84% means roughly one in six deliveries is late. For a sole-source supplier of production-critical fasteners, this is not a mild concern — it is a production disruption risk that occurs approximately every six weeks. The 2.3% quality rejection rate adds further pressure: industry standard for fasteners is below 1.5%.
 
@@ -335,7 +335,7 @@ Before running assessments, configure your organisation's thresholds in `supply-
 The skill will walk you through a configuration interview covering:
 
 - OTD thresholds by vendor tier (e.g., >95% for Strategic, >90% for Tactical/Bottleneck, >85% for Commodity)
-- Quality rejection limits by category (e.g., <1% for direct materials, <3% for indirect)
+- Quality rejection limits by category (e.g., &lt;1% for direct materials, &lt;3% for indirect)
 - Financial visibility requirements (which tiers require audited accounts)
 - Escalation contacts and authority levels for each risk flag
 - Contract notice period requirements by tier

@@ -1,35 +1,41 @@
-- question: "What is InsightFlow's North Star metric, and why was it chosen over MAU?"
-  answer: "Weekly active teams creating or editing dashboards. It was chosen because it is value-aligned (moves when users get value), leading (predicts retention), and actionable. MAU grows with any marketing spend and does not indicate whether users are getting value from the product."
+deck:
+  id: "ch36-13-metrics-okrs-product-analytics"
+  title: "Metrics Okrs Product Analytics"
+  version: 1
 
-- question: "What are the six areas covered by L1 health indicator metrics?"
-  answer: "Acquisition (are new users finding the product?), Activation (are new users reaching the value moment?), Engagement (are active users getting value?), Retention (are users coming back?), Monetisation (is value translating to revenue?), Satisfaction (how do users feel?)."
+cards:
+  - front: "What is InsightFlow's North Star metric, and why was it chosen over MAU?"
+    back: "Weekly active teams creating or editing dashboards. It was chosen because it is value-aligned (moves when users get value), leading (predicts retention), and actionable. MAU grows with any marketing spend and does not indicate whether users are getting value from the product."
 
-- question: "What is the difference between L1 and L2 metrics?"
-  answer: "L1 metrics are standing health indicators that paint a complete picture of product health — they are always monitored. L2 metrics are diagnostic — they answer 'why is an L1 metric moving?' and are used for investigation, not for a standing dashboard."
+  - front: "What are the six areas covered by L1 health indicator metrics?"
+    back: "Acquisition (are new users finding the product?), Activation (are new users reaching the value moment?), Engagement (are active users getting value?), Retention (are users coming back?), Monetisation (is value translating to revenue?), Satisfaction (how do users feel?)."
 
-- question: "What is the output KR trap, and how do you test for it?"
-  answer: "Writing Key Results that measure what the team ships rather than what users do. The test: 'Could the team hit this KR without a single user benefiting?' If yes, it is an output KR and should be rewritten to measure user behaviour or business outcomes."
+  - front: "What is the difference between L1 and L2 metrics?"
+    back: "L1 metrics are standing health indicators that paint a complete picture of product health — they are always monitored. L2 metrics are diagnostic — they answer 'why is an L1 metric moving?' and are used for investigation, not for a standing dashboard."
 
-- question: "What is the ideal OKR completion rate for stretch OKRs?"
-  answer: "70% completion is the target. If you are confident you will hit 100%, the OKRs are not ambitious enough. They should require genuine product improvement, not just shipping what was already planned."
+  - front: "What is the output KR trap, and how do you test for it?"
+    back: "Writing Key Results that measure what the team ships rather than what users do. The test: 'Could the team hit this KR without a single user benefiting?' If yes, it is an output KR and should be rewritten to measure user behaviour or business outcomes."
 
-- question: "What are the four criteria a North Star metric must meet?"
-  answer: "Value-aligned (moves when users get more value), Leading (predicts long-term retention and revenue), Actionable (the product team can influence it), Understandable (everyone knows what it means and why it matters)."
+  - front: "What is the ideal OKR completion rate for stretch OKRs?"
+    back: "70% completion is the target. If you are confident you will hit 100%, the OKRs are not ambitious enough. They should require genuine product improvement, not just shipping what was already planned."
 
-- question: "What sections does /metrics-review produce?"
-  answer: "Summary (2-3 sentences on overall health), metric scorecard (current/previous/change/target/status), trend analysis, bright spots, areas of concern, and recommended actions. Every recommended action should be specific — 'investigate further' is not an action."
+  - front: "What are the four criteria a North Star metric must meet?"
+    back: "Value-aligned (moves when users get more value), Leading (predicts long-term retention and revenue), Actionable (the product team can influence it), Understandable (everyone knows what it means and why it matters)."
 
-- question: "What are the six dashboard anti-patterns from the /metrics-review skill?"
-  answer: "1) Vanity metrics (always go up), 2) Too many metrics (no room for context), 3) No comparison (raw numbers without prior period or target), 4) Stale dashboards (not updated or reviewed), 5) Output dashboards (measuring team activity, not user outcomes), 6) One dashboard for all audiences."
+  - front: "What sections does /metrics-review produce?"
+    back: "Summary (2-3 sentences on overall health), metric scorecard (current/previous/change/target/status), trend analysis, bright spots, areas of concern, and recommended actions. Every recommended action should be specific — 'investigate further' is not an action."
 
-- question: "What is activation rate, and why is it typically the highest-leverage L1 metric?"
-  answer: "Activation rate is the percentage of new signups who reach the first meaningful value moment. Improving it has compound effects: users who activate retain better, convert to paid at higher rates, and generate better NPS scores. It is the single step that most affects the rest of the user lifecycle."
+  - front: "What are the six dashboard anti-patterns from the /metrics-review skill?"
+    back: "1) Vanity metrics (always go up), 2) Too many metrics (no room for context), 3) No comparison (raw numbers without prior period or target), 4) Stale dashboards (not updated or reviewed), 5) Output dashboards (measuring team activity, not user outcomes), 6) One dashboard for all audiences."
 
-- question: "How many objectives should a team set per quarter in an OKR framework?"
-  answer: "2-3 objectives maximum. More than that and nothing is truly prioritised. Each objective should have 2-4 Key Results."
+  - front: "What is activation rate, and why is it typically the highest-leverage L1 metric?"
+    back: "Activation rate is the percentage of new signups who reach the first meaningful value moment. Improving it has compound effects: users who activate retain better, convert to paid at higher rates, and generate better NPS scores. It is the single step that most affects the rest of the user lifecycle."
 
-- question: "What does /metrics-review need from you if no analytics tool is connected via MCP?"
-  answer: "The metrics and their current values (pasted as a table or described), comparison data from the previous period and targets, and context on recent events — launches, incidents, campaigns, or seasonality that might explain changes."
+  - front: "How many objectives should a team set per quarter in an OKR framework?"
+    back: "2-3 objectives maximum. More than that and nothing is truly prioritised. Each objective should have 2-4 Key Results."
 
-- question: "What is the NEVER DO rule for metric reviews — what must every metric have?"
-  answer: "Every metric must have a comparison. A raw number without context — previous period, target, or benchmark — is not information. '521 active teams' means nothing. '521 active teams (prior: 498, target: 550, status: at risk)' is a data point."
+  - front: "What does /metrics-review need from you if no analytics tool is connected via MCP?"
+    back: "The metrics and their current values (pasted as a table or described), comparison data from the previous period and targets, and context on recent events — launches, incidents, campaigns, or seasonality that might explain changes."
+
+  - front: "What is the NEVER DO rule for metric reviews — what must every metric have?"
+    back: "Every metric must have a comparison. A raw number without context — previous period, target, or benchmark — is not information. '521 active teams' means nothing. '521 active teams (prior: 498, target: 550, status: at risk)' is a data point."

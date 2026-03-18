@@ -1,7 +1,9 @@
-title: "Three Operational Failure Modes"
-chapter: 38
-lesson: 1
-flashcards:
+deck:
+  id: "ch38-01-three-operational-failure-modes"
+  title: "Three Operational Failure Modes"
+  version: 1
+
+cards:
   - front: "What is the Operations Intelligence Gap?"
     back: "The delta between what an organisation should know about its own operations and what it actually knows. Almost every operational failure — cost overrun, process breakdown, compliance gap, change disaster — traces back to this gap."
 
