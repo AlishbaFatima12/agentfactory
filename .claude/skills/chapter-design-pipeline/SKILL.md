@@ -271,12 +271,31 @@ exact invocation instructions for each:
 
 **5E — Plugin Validation** (if plugin was built):
 
-- Skill: `/skill-validator` on each SKILL.md in the plugin
+The plugin-builder teammate MUST validate every file against the full checklist
+at [references/plugin-validation-checklist.md](references/plugin-validation-checklist.md).
+This checklist is derived from the 3 canonical specs and must be included in
+the plugin-builder's teammate prompt so it runs validation AFTER writing each file.
+
+Validation steps (inline in plugin-builder's prompt):
+
+- After each SKILL.md: validate `name` (1-64 chars, lowercase+hyphens, matches
+  directory, no consecutive hyphens), `description` (1-1024 chars, includes
+  trigger phrases), body under 500 lines
+- After each agent.md: validate `name`, `description`, `tools` list, `background: true`
+  for monitoring agents, `skills` list references skills that actually exist
+- After plugin.json: validate JSON structure, `name` matches directory, semver version
+- After all files: cross-file consistency (skill dirs match names, agent skills
+  references resolve, README tables match actual contents, no router references,
+  command renames consistent everywhere)
 - Run evals: `python evals/run.py --list` then `python evals/run.py` (all cases)
-- Verify: plugin.json valid, all skill names match directories, agent frontmatter
-  has required fields (`name`, `description`, `tools`, `background: true`)
+- Run `/skill-validator` on each SKILL.md for quality scoring
 - Verify: `local.md.template` exists with all configurable fields documented
 - Teammate: the plugin-builder teammate (they wrote the files, they validate them)
+
+The team prompt args must include: "Plugin-builder teammate MUST read
+references/plugin-validation-checklist.md and validate every file against it
+after writing. The checklist has per-skill, per-agent, plugin.json, and
+cross-file consistency checks derived from the official specifications."
 
 #### Phase 6: Final Verification
 
