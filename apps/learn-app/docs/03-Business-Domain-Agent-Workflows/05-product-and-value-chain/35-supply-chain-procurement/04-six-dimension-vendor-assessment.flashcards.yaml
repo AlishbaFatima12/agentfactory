@@ -1,0 +1,88 @@
+deck:
+  id: "ch35-six-dimension-vendor-assessment"
+  title: "Six-Dimension Vendor Assessment"
+  description: "Recall and reasoning cards covering the Commercial, Operational, Financial, Compliance, Strategic, and Geopolitical/Sustainability dimensions and the /vendor-assess workflow."
+  tags: ["supply-chain", "vendor-assessment", "six-dimensions", "compliance", "financial-risk"]
+  version: 2
+
+cards:
+  - id: "ch35-six-dimension-vendor-assessment-001"
+    front: "Name the six dimensions of the vendor assessment framework."
+    back: "1. Commercial\n2. Operational\n3. Financial\n4. Compliance\n5. Strategic\n6. Geopolitical / Sustainability"
+    tags: ["six-dimensions", "vendor-assessment"]
+    difficulty: "basic"
+
+  - id: "ch35-six-dimension-vendor-assessment-002"
+    front: "What does the Commercial dimension assess?"
+    back: "Contract status, expiry date, pricing model (fixed/index-linked), payment terms, volume commitments, and IP ownership."
+    tags: ["commercial-dimension"]
+    difficulty: "basic"
+
+  - id: "ch35-six-dimension-vendor-assessment-003"
+    front: "What does the Operational dimension track, and what are the KIFTL thresholds?"
+    back: "OTD rate (threshold >90%), average lead time (≤21 days), lead time variance (±3 days), and quality rejection rate (<1.5%)."
+    tags: ["operational-dimension", "kiftl-example"]
+    difficulty: "intermediate"
+
+  - id: "ch35-six-dimension-vendor-assessment-004"
+    front: "Why does a vendor at 91% OTD (above threshold) still merit a risk flag?"
+    back: "Trajectory matters. A vendor declining from 96% to 91% over 18 months predicts a future breach. The /vendor-assess skill flags declining trends even when current numbers are within tolerance."
+    tags: ["operational-dimension", "trending"]
+    difficulty: "intermediate"
+    why: "At what OTD trajectory rate should procurement initiate a corrective action conversation?"
+
+  - id: "ch35-six-dimension-vendor-assessment-005"
+    front: "What is the correct action when /vendor-assess returns a sanctions match?"
+    back: "Stop all processing immediately. Do not pay invoices or proceed with orders. Escalate to Finance Director and Legal. Criminal liability applies regardless of whether the sanctions status was known."
+    tags: ["compliance-dimension", "sanctions"]
+    difficulty: "basic"
+
+  - id: "ch35-six-dimension-vendor-assessment-006"
+    front: "Why is 'zero financial visibility' on a sole-source vendor flagged as critical — even if nothing is wrong?"
+    back: "Not knowing is itself the risk. If the vendor fails unexpectedly, there is no early warning and no time to qualify alternatives. For a sole-source supplier, 'I don't know' on financial health = critical risk."
+    tags: ["financial-dimension", "visibility"]
+    difficulty: "intermediate"
+    why: "What is the minimum financial data that makes a sole-source vendor's position assessable?"
+
+  - id: "ch35-six-dimension-vendor-assessment-007"
+    front: "What does the Strategic dimension measure that the other five dimensions do not?"
+    back: "The cost of exit — switching timeline, switching cost, relationship investment, and future optionality. The other dimensions assess current performance; Strategic assesses how trapped you are."
+    tags: ["strategic-dimension", "switching-cost"]
+    difficulty: "intermediate"
+
+  - id: "ch35-six-dimension-vendor-assessment-008"
+    front: "What financial signals indicate medium-risk on the Financial dimension?"
+    back: "Revenue decline >15% year-on-year, EBIT margin below 3%, or a credit rating downgraded by one notch."
+    tags: ["financial-dimension", "risk-signals"]
+    difficulty: "intermediate"
+
+  - id: "ch35-six-dimension-vendor-assessment-009"
+    front: "Why is late filing of statutory accounts itself a financial distress signal?"
+    back: "Companies in difficulty frequently delay accounts to avoid disclosing deteriorating numbers. Overdue accounts from a strategic supplier warrant immediate escalation."
+    tags: ["financial-dimension", "statutory-accounts"]
+    difficulty: "intermediate"
+
+  - id: "ch35-six-dimension-vendor-assessment-010"
+    front: "Why is Tier 2 visibility part of the Geopolitical/Sustainability dimension?"
+    back: "Export restrictions or financial distress at a Tier 2 supplier can cascade to your Tier 1 supply without early warning. Strategic vendors require mapping of their critical sub-suppliers to detect upstream risks."
+    tags: ["geopolitical-dimension", "tier-2"]
+    difficulty: "intermediate"
+
+  - id: "ch35-six-dimension-vendor-assessment-011"
+    front: "Why is the /vendor-assess output a work plan rather than a final verdict?"
+    back: "The output is only as good as the data provided. It flags gaps where data is missing and recommends actions. If critical data (financial accounts, Tier 2 map) is absent, the output identifies that absence as a risk — it does not assume all is well."
+    tags: ["vendor-assess", "output-interpretation"]
+    difficulty: "basic"
+
+  - id: "ch35-six-dimension-vendor-assessment-012"
+    front: "A vendor has 97% OTD but its only manufacturing facility is in a country facing export restrictions. How many dimensions show risk?"
+    back: "At least two: Operational is green (97% OTD), but Geopolitical is red (export restriction risk). A six-dimension framework exposes what a single OTD metric hides."
+    tags: ["six-dimensions", "multi-dimension-risk"]
+    difficulty: "advanced"
+    why: "What would prompt you to check Geopolitical risk on a vendor that has excellent operational performance?"
+
+  - id: "ch35-six-dimension-vendor-assessment-013"
+    front: "When ranking actions from a /vendor-assess output, what two factors determine priority order?"
+    back: "Risk severity first (Critical before High, High before Medium), then feasibility within each level — quick wins rank above structural changes requiring long timelines."
+    tags: ["vendor-assess", "action-ranking"]
+    difficulty: "intermediate"

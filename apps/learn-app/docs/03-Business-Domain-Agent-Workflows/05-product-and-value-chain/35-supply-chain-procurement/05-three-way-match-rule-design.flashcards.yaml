@@ -1,0 +1,80 @@
+deck:
+  id: "ch35-three-way-match-rule-design"
+  title: "Three-Way Match Rule Design"
+  description: "Recall and reasoning cards covering tolerance rules by category, auto-approve/escalation/rejection routing, straight-through processing rate, and exception pattern monitoring."
+  tags: ["supply-chain", "three-way-match", "invoice-tolerance", "ap-automation", "exception-routing"]
+  version: 2
+
+cards:
+  - id: "ch35-three-way-match-rule-design-001"
+    front: "What three documents does a three-way match compare?"
+    back: "Invoice, Purchase Order, and Goods Receipt (or Service Confirmation)."
+    tags: ["three-way-match", "documents"]
+    difficulty: "basic"
+
+  - id: "ch35-three-way-match-rule-design-002"
+    front: "What is the central principle for setting invoice tolerance percentages by category?"
+    back: "Tolerance reflects the pricing model of the category — fixed-price categories warrant tight tolerances; market-linked categories (freight, utilities) warrant wider tolerances to accommodate legitimate variability."
+    tags: ["tolerance-design", "pricing-model"]
+    difficulty: "basic"
+
+  - id: "ch35-three-way-match-rule-design-003"
+    front: "What are the default price and quantity tolerances for direct materials?"
+    back: "Price ±2%, quantity ±0% (zero tolerance — pay only for confirmed goods receipt quantities)."
+    tags: ["direct-materials", "tolerance"]
+    difficulty: "basic"
+
+  - id: "ch35-three-way-match-rule-design-004"
+    front: "What is the default price tolerance for freight and logistics invoices, and why?"
+    back: "±10%, to accommodate fuel surcharge variability that is contractually acknowledged in most freight agreements."
+    tags: ["freight", "tolerance"]
+    difficulty: "basic"
+
+  - id: "ch35-three-way-match-rule-design-005"
+    front: "Why do services invoices carry ±0% price tolerance?"
+    back: "Services are contracted at a fixed price with no partial delivery concept and no market-rate variability. Any price deviation is either a billing error or an unauthorised scope change — both require human review."
+    tags: ["services", "tolerance"]
+    difficulty: "intermediate"
+
+  - id: "ch35-three-way-match-rule-design-006"
+    front: "What are the three routing outcomes in the tolerance framework?"
+    back: "Auto-Approve (no human review, pay at recommended amount), Escalation (route to authority for approval, invoice held), Automatic Rejection (vendor notified, resubmission required)."
+    tags: ["exception-routing", "tolerance-framework"]
+    difficulty: "basic"
+
+  - id: "ch35-three-way-match-rule-design-007"
+    front: "What is the straight-through processing rate?"
+    back: "The percentage of invoices that auto-approve without human review under the configured tolerance rules."
+    tags: ["straight-through-processing", "efficiency"]
+    difficulty: "basic"
+
+  - id: "ch35-three-way-match-rule-design-008"
+    front: "What pattern triggers the systematic issue flag in exception monitoring?"
+    back: "The same exception type from the same vendor more than 3 times in 30 days — indicating a vendor billing system problem, not isolated incidents."
+    tags: ["pattern-monitoring", "systematic-issue"]
+    difficulty: "intermediate"
+
+  - id: "ch35-three-way-match-rule-design-009"
+    front: "What does a price variance on the same PO line item for more than 2 consecutive invoices indicate?"
+    back: "Contract non-compliance — the vendor is repeatedly billing at a price differing from the agreed contract. The correct response is a commercial review, not continued tolerance-based approval."
+    tags: ["pattern-monitoring", "contract-non-compliance"]
+    difficulty: "intermediate"
+
+  - id: "ch35-three-way-match-rule-design-010"
+    front: "What three numbers do you need to calculate the monthly cost saving from a new tolerance rule set?"
+    back: "Monthly invoice volume, current exception rate, and cost per exception. Saving = (old exception rate − new exception rate) × volume × cost per exception."
+    tags: ["efficiency-calculation", "business-case"]
+    difficulty: "intermediate"
+
+  - id: "ch35-three-way-match-rule-design-011"
+    front: "Why should a late invoice submission policy be communicated to vendors before it is activated?"
+    back: "Rejecting legitimate invoices because a vendor was not informed of a new policy creates payment disputes and relationship damage. Written notice with a transition period is required before automatic rejections apply."
+    tags: ["late-submission", "vendor-communication"]
+    difficulty: "intermediate"
+
+  - id: "ch35-three-way-match-rule-design-012"
+    front: "A freight carrier consistently invoices at 8-9% above PO price for six consecutive months — within your ±10% tolerance. Should this auto-approve continue?"
+    back: "Auto-approval should stop. The pattern — same vendor, same direction, six months — is contract non-compliance evidence. The tolerance accommodates legitimate variability, not a systematic price increase. A commercial review is required even though each invoice individually auto-approves."
+    tags: ["pattern-monitoring", "freight", "tolerance"]
+    difficulty: "advanced"
+    why: "What is the difference between a tolerance rule working correctly and a vendor exploiting tolerance to hide a pricing change?"

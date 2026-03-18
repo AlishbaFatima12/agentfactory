@@ -1,35 +1,81 @@
-- front: "What are the two axes of the Kraljic matrix used to classify vendors?"
-  back: "Supply risk (how difficult it is to replace the vendor) and profit impact (how much the vendor affects your financial performance). Together they produce four quadrants: Strategic, Tactical, Commodity, and Bottleneck."
+deck:
+  id: "ch35-vendor-classification-kraljic"
+  title: "Vendor Classification — The Kraljic Matrix"
+  description: "Recall and reasoning cards covering the two-axis Kraljic framework, four vendor tiers, KIFTL worked example, and the bottleneck trap."
+  tags: ["supply-chain", "kraljic", "vendor-classification", "bottleneck", "strategic-vendor"]
+  version: 2
 
-- front: "What defines a Strategic vendor (Tier 1) in the Kraljic framework?"
-  back: "High supply risk and high profit impact. These are your most important and hardest-to-replace suppliers — typically single-source or near-sole-source with deep technical integration, requiring quarterly reviews and partnership-level management."
+cards:
+  - id: "ch35-vendor-classification-kraljic-001"
+    front: "What are the two axes of the Kraljic matrix?"
+    back: "Supply risk (how difficult it is to replace this vendor) and profit impact (how much this vendor affects your financial performance)."
+    tags: ["kraljic", "classification"]
+    difficulty: "basic"
 
-- front: "What defines a Tactical vendor (Tier 2) in the Kraljic framework?"
-  back: "Low supply risk and high profit impact. Significant spend, but multiple qualified alternatives exist. Management approach is competitive leverage — rebidding each contract cycle and benchmarking against alternatives."
+  - id: "ch35-vendor-classification-kraljic-002"
+    front: "Who introduced the Kraljic framework and when?"
+    back: "Peter Kraljic, in 1983 in the Harvard Business Review."
+    tags: ["kraljic", "attribution"]
+    difficulty: "basic"
 
-- front: "What defines a Commodity vendor (Tier 3) in the Kraljic framework?"
-  back: "Low supply risk and low profit impact. Standard goods or services available from many providers. Management goal is efficiency — minimise transaction costs, automate ordering, review annually."
+  - id: "ch35-vendor-classification-kraljic-003"
+    front: "Match each Kraljic tier to its management model."
+    back: "Tier 1 Strategic → Partnership\nTier 2 Tactical → Leverage\nTier 3 Commodity → Efficiency\nTier 4 Bottleneck → Risk mitigation"
+    tags: ["kraljic", "tiers"]
+    difficulty: "basic"
 
-- front: "Why are Bottleneck vendors (Tier 4) considered the most dangerous quadrant?"
-  back: "They have high supply risk but low profit impact, which means procurement teams overlook them because spend is small. Yet their failure can halt production because no qualified alternative exists. They require quarterly reviews despite low spend."
+  - id: "ch35-vendor-classification-kraljic-004"
+    front: "What is the defining characteristic of a Bottleneck vendor (Tier 4)?"
+    back: "High supply risk combined with low profit impact — low spend, but sole-source or near-sole-source dependency with no qualified alternatives."
+    tags: ["bottleneck", "tier-4"]
+    difficulty: "basic"
 
-- front: "How does vendor classification determine assessment depth and review frequency?"
-  back: "Strategic and Bottleneck vendors get quarterly reviews with full six-dimension assessments. Tactical vendors get bi-annual reviews. Commodity vendors get annual reviews. Classification drives the depth of due diligence, not just timing."
+  - id: "ch35-vendor-classification-kraljic-005"
+    front: "Why are Bottleneck vendors (Tier 4) reviewed quarterly despite their low spend?"
+    back: "Because supply risk, not spend, drives review frequency. A sole-source Bottleneck vendor whose failure halts production is more operationally dangerous than a high-spend Tactical vendor with multiple alternatives."
+    tags: ["bottleneck", "review-frequency"]
+    difficulty: "intermediate"
 
-- front: "What is the correct classification for a $30,000/year sole-source vendor that is production-critical with no qualified alternative?"
-  back: "Tier 4 — Bottleneck. Despite the low spend, the sole-source dependency and production criticality create high supply risk. Low spend does not mean low risk."
+  - id: "ch35-vendor-classification-kraljic-006"
+    front: "KIFTL supplies $30,000/year of production-critical fasteners with no qualified alternative. What is its Kraljic classification and why?"
+    back: "Tier 4 — Bottleneck. Low spend = low profit impact. Sole-source dependency = high supply risk. Spend does not determine risk."
+    tags: ["bottleneck", "kiftl-example"]
+    difficulty: "basic"
 
-- front: "When should a vendor's Kraljic classification be updated?"
-  back: "At least annually, and always after a significant supply market change — such as a competitor exiting the market, a new alternative being qualified, or a shift in your own strategic priorities. Classification is not permanent."
+  - id: "ch35-vendor-classification-kraljic-007"
+    front: "How long does qualifying an alternative supplier for complex or technical goods typically take?"
+    back: "60–120 days (or longer for technically complex items like KIFTL's fasteners: 90+ days minimum)."
+    tags: ["bottleneck", "qualification-timeline"]
+    difficulty: "intermediate"
 
-- front: "What immediate action does the Kraljic framework recommend for a Bottleneck vendor?"
-  back: "Qualify at least one alternative supplier (typically targeting 90 days), build safety stock to bridge a supply disruption, and request financial visibility (audited accounts) to assess vendor viability."
+  - id: "ch35-vendor-classification-kraljic-008"
+    front: "A high-spend vendor with many alternatives: Strategic or Tactical?"
+    back: "Tactical (Tier 2). High profit impact but low supply risk. The key differentiator is alternatives, not spend."
+    tags: ["tactical", "tier-2", "discrimination"]
+    difficulty: "basic"
 
-- front: "How does the /vendor-assess skill use the Kraljic framework?"
-  back: "It classifies the vendor into a Kraljic tier as Phase 1 of the assessment workflow, using the vendor details you provide (spend, dependency, alternatives). The classification then determines the depth and scope of the six-dimension assessment in Phase 2."
+  - id: "ch35-vendor-classification-kraljic-009"
+    front: "When should a vendor's Kraljic classification be updated?"
+    back: "At least annually, and always after a significant supply market change — new alternatives qualify or existing ones exit, strategic priorities shift, or supply risk changes."
+    tags: ["classification", "dynamic"]
+    difficulty: "basic"
 
-- front: "What causes a vendor to migrate from Tactical to Strategic in the Kraljic framework?"
-  back: "An increase in supply risk — for example, if competitors exit the market, reducing the number of qualified alternatives. The vendor's profit impact was already high (Tactical); now supply risk has risen too, making them Strategic."
+  - id: "ch35-vendor-classification-kraljic-010"
+    front: "How does vendor classification determine assessment depth in /vendor-assess?"
+    back: "Strategic and Bottleneck vendors receive full six-dimension assessment at maximum depth. Tactical vendors receive Commercial, Operational, and Financial at standard depth. Commodity vendors receive Commercial and Operational only."
+    tags: ["classification", "vendor-assess"]
+    difficulty: "intermediate"
 
-- front: "Why does the Kraljic framework use supply risk rather than spend as the primary risk indicator?"
-  back: "Spend measures financial exposure, but supply risk measures operational vulnerability. A low-spend sole-source vendor whose failure stops production is more dangerous than a high-spend vendor with multiple alternatives. The framework corrects the common bias of equating spend with risk."
+  - id: "ch35-vendor-classification-kraljic-011"
+    front: "A Tactical vendor's two largest competitors merge, leaving only one market alternative with capacity constraints. What is the new classification?"
+    back: "Strategic (Tier 1). Profit impact was already high; now supply risk has risen because alternatives have collapsed. Both axes are now high."
+    tags: ["tactical", "strategic", "reclassification"]
+    difficulty: "advanced"
+    why: "What immediate actions should procurement take when reclassifying a vendor from Tactical to Strategic?"
+
+  - id: "ch35-vendor-classification-kraljic-012"
+    front: "Why does using spend alone as a risk proxy create a systematic blind spot for Bottleneck vendors?"
+    back: "Spend measures financial exposure, not operational vulnerability. Low-spend sole-source vendors are overlooked because the spend signal gives no warning — but their failure halts production, making them more dangerous than high-spend vendors with multiple alternatives."
+    tags: ["bottleneck", "spend-vs-risk"]
+    difficulty: "advanced"
+    why: "What question better captures operational risk than 'how much do we spend with this vendor'?"

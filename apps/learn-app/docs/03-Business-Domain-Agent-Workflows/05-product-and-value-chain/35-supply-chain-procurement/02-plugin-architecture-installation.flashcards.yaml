@@ -1,0 +1,81 @@
+deck:
+  id: "ch35-plugin-architecture-installation"
+  title: "Plugin Architecture and Installation"
+  description: "Recall and reasoning cards covering the supply-chain plugin structure, 8 skills, 5 agents, supply-chain.local.md configuration, and MCP integration points."
+  tags: ["supply-chain", "plugin", "installation", "mcp", "local-config"]
+  version: 2
+
+cards:
+  - id: "ch35-plugin-architecture-installation-001"
+    front: "How many specialist skills does the supply-chain plugin contain?"
+    back: "8 skills. Each is directly addressable — there is no router skill."
+    tags: ["plugin", "skills"]
+    difficulty: "basic"
+
+  - id: "ch35-plugin-architecture-installation-002"
+    front: "Which 3 supply-chain plugin commands were renamed from their original spec names, and why?"
+    back: "/reconcile → /invoice-reconcile\n/communicate → /vendor-communicate\n/network-design → /supply-network-design\nAll renamed to avoid collision with Anthropic-owned command surfaces."
+    tags: ["plugin", "command-naming"]
+    difficulty: "intermediate"
+
+  - id: "ch35-plugin-architecture-installation-003"
+    front: "What is supply-chain.local.md and what does it store?"
+    back: "The organisational policy layer for the plugin. Stores currency, vendor tier counts, invoice tolerance thresholds, risk review frequencies, and MCP connection status."
+    tags: ["local-config", "plugin"]
+    difficulty: "basic"
+
+  - id: "ch35-plugin-architecture-installation-004"
+    front: "What happens if you type /reconcile instead of /invoice-reconcile in Cowork?"
+    back: "You may get unexpected behaviour — /reconcile is not the plugin command. Always use /invoice-reconcile."
+    tags: ["plugin", "command-naming"]
+    difficulty: "basic"
+
+  - id: "ch35-plugin-architecture-installation-005"
+    front: "Name the 5 persistent agents in the supply-chain plugin."
+    back: "1. vendor-health-monitor\n2. invoice-reconciliation-agent\n3. spend-intelligence-agent\n4. procurement-calendar-agent\n5. logistics-intelligence-agent"
+    tags: ["agents", "plugin"]
+    difficulty: "basic"
+
+  - id: "ch35-plugin-architecture-installation-006"
+    front: "What are the default schedules for the vendor-health-monitor and procurement-calendar-agent?"
+    back: "Both run daily. The vendor-health-monitor scans financial news and operational data daily; the procurement-calendar-agent checks contract and certification deadlines daily."
+    tags: ["agents", "scheduling"]
+    difficulty: "intermediate"
+
+  - id: "ch35-plugin-architecture-installation-007"
+    front: "What are the 5 key MCP integration points for the supply-chain plugin?"
+    back: "1. ERP (POs, goods receipts, vendor master)\n2. Accounts Payable (invoices, payment status)\n3. Logistics/TMS (shipment records, carrier performance)\n4. Supplier portal (delivery confirmations, quality certificates)\n5. Financial databases (credit ratings, health data)"
+    tags: ["mcp", "integration"]
+    difficulty: "intermediate"
+
+  - id: "ch35-plugin-architecture-installation-008"
+    front: "Do you need MCP configured to complete Chapter 35 exercises?"
+    back: "MCP is not required for exercises. Lessons 3–13 provide sample data in prompts. MCP is needed only for real operational deployment where skills pull live data automatically."
+    tags: ["mcp", "exercises"]
+    difficulty: "basic"
+
+  - id: "ch35-plugin-architecture-installation-009"
+    front: "Which plugin skill addresses all three structural failures simultaneously?"
+    back: "/supply-chain-brief — the weekly executive intelligence dashboard integrates vendor health, invoice, logistics, and spend signals."
+    tags: ["plugin", "structural-failures"]
+    difficulty: "intermediate"
+
+  - id: "ch35-plugin-architecture-installation-010"
+    front: "Why does the supply-chain plugin have no router skill, unlike other chapter plugins?"
+    back: "Each of the 8 skills is directly addressable by name — supply chain workflows are distinct enough that users invoke the relevant skill directly rather than routing through a dispatcher."
+    tags: ["plugin", "architecture"]
+    difficulty: "intermediate"
+
+  - id: "ch35-plugin-architecture-installation-011"
+    front: "Why is supply-chain.local.md more important than default plugin settings for most organisations?"
+    back: "The plugin ships with generic defaults. Local configuration encodes your organisation's policies — thresholds, currencies, tier counts, tolerances — making every skill behave correctly for your context rather than a hypothetical baseline."
+    tags: ["local-config", "plugin"]
+    difficulty: "intermediate"
+    why: "What is the risk of deploying the plugin with defaults rather than completing the local configuration?"
+
+  - id: "ch35-plugin-architecture-installation-012"
+    front: "A CPO wants to deploy the plugin globally with 3 regional teams using different currencies and ERP instances. Why does supply-chain.local.md create a configuration challenge?"
+    back: "A single local file assumes one organisational context. Multi-region deployments need region-specific thresholds, currencies, and ERP endpoints — the plugin architecture must be extended or each region must maintain its own configuration instance."
+    tags: ["local-config", "multi-region"]
+    difficulty: "advanced"
+    why: "Which plugin commands would benefit most from regional configuration vs. global defaults?"

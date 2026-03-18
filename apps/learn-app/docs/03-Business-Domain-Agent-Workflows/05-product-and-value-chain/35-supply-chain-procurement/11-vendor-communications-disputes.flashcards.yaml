@@ -1,0 +1,80 @@
+deck:
+  id: "ch35-vendor-communications-disputes"
+  title: "Vendor Communications and Disputes"
+  description: "Recall and reasoning cards covering the five communication types, required elements, authority levels, tone calibration, the CAR legal document distinction, and the bank detail change fraud alert."
+  tags: ["supply-chain", "vendor-communication", "dispute-notice", "corrective-action-request", "procurement-communications"]
+  version: 2
+
+cards:
+  - id: "ch35-vendor-communications-disputes-001"
+    front: "What are the five communication types in the /vendor-communicate skill?"
+    back: "1. Invoice Dispute Notice. 2. Corrective Action Request (CAR). 3. Contract Non-Renewal Notice. 4. Emergency Supply Assurance Request. 5. Vendor Exit Notice (Planned Transition)."
+    tags: ["five-types"]
+    difficulty: "basic"
+
+  - id: "ch35-vendor-communications-disputes-002"
+    front: "What is the core communication principle that applies to all five vendor communication types?"
+    back: "State facts, never blame. Reference specific data (PO numbers, dates, quantities, thresholds). State the required action explicitly. State the deadline. Professional procurement communications are factual documents, not complaints — emotional or assertive language gives the vendor grounds to dispute the process rather than the substance."
+    tags: ["communication-principle"]
+    difficulty: "basic"
+
+  - id: "ch35-vendor-communications-disputes-003"
+    front: "What seven elements must an Invoice Dispute Notice contain?"
+    back: "Invoice number and date, PO reference number, specific discrepancy with figures, contractual or PO basis for the disputed amount, required action (credit note or revised invoice), deadline (typically 5 business days), and confirmation that the undisputed amount will be processed on standard terms."
+    tags: ["dispute-notice", "required-elements"]
+    difficulty: "intermediate"
+
+  - id: "ch35-vendor-communications-disputes-004"
+    front: "Why is a Corrective Action Request (CAR) different from an informal warning email?"
+    back: "A CAR is a formal legal notice issued under the supply agreement — it starts a documented clock. If the vendor fails to respond or implement the plan, you have documented grounds for contract termination or compensation. An informal email creates no contractual obligation and produces no legal record."
+    tags: ["car", "legal-document"]
+    difficulty: "basic"
+
+  - id: "ch35-vendor-communications-disputes-005"
+    front: "What authority level is required to send a Corrective Action Request — and why?"
+    back: "CPO sign-off. A CAR is a formal legal notice under the supply agreement — it has contractual and potential legal consequences. It must be authorised at CPO level before sending, not sent unilaterally by a category manager."
+    tags: ["car", "authority-level"]
+    difficulty: "basic"
+
+  - id: "ch35-vendor-communications-disputes-006"
+    front: "What four items must a vendor's Corrective Action Plan address in response to a CAR?"
+    back: "1. Root cause analysis of the performance shortfall. 2. Immediate containment actions already taken. 3. Corrective actions with specific target dates. 4. How ongoing compliance with the SLA will be monitored and reported."
+    tags: ["car", "corrective-action-plan"]
+    difficulty: "intermediate"
+
+  - id: "ch35-vendor-communications-disputes-007"
+    front: "What happens if a contract non-renewal notice is sent after the contractual notice deadline?"
+    back: "Missing the notice deadline typically extends the contract for a further full term — often 12 months — against the organisation's wishes. Legal advice is required if the deadline has passed. The Procurement Calendar Agent exists specifically to prevent this from happening."
+    tags: ["non-renewal-notice", "notice-deadline"]
+    difficulty: "intermediate"
+
+  - id: "ch35-vendor-communications-disputes-008"
+    front: "When should an Emergency Supply Assurance Request be sent — before or after a confirmed supply problem?"
+    back: "Before. When you have received a risk signal (financial news, restructuring announcement, Tier 2 disruption) that could potentially affect the vendor's supply capability. It is a pre-emptive risk tool — the purpose is to obtain written confirmation of supply capacity on the record before any failure occurs."
+    tags: ["emergency-supply-assurance", "timing"]
+    difficulty: "intermediate"
+
+  - id: "ch35-vendor-communications-disputes-009"
+    front: "What must be confirmed before sending a Vendor Exit Notice?"
+    back: "All company-owned assets in the vendor's possession — tooling, moulds, specifications, intellectual property, quality records. The exit notice must include explicit requirements for their return or transfer by specific dates. Failing to address this before exit creates legal disputes that can outlast the commercial relationship by years."
+    tags: ["exit-notice", "tooling-ip-recovery"]
+    difficulty: "intermediate"
+
+  - id: "ch35-vendor-communications-disputes-010"
+    front: "Why does the /vendor-communicate skill flag bank detail change requests as a NEVER DO without phone verification?"
+    back: "Bank detail changes via email are the most common procurement fraud vector. The correct response: always call the vendor on a number from your established vendor master (not from the invoice or the request email) to verify. Never update payment details based on an email or PDF alone."
+    tags: ["bank-detail-fraud", "fraud-vector"]
+    difficulty: "basic"
+
+  - id: "ch35-vendor-communications-disputes-011"
+    front: "What is the correct language for a CAR performance statement — and why does the wrong version fail?"
+    back: "Wrong: 'We are disappointed with your continued failure to meet delivery targets.' Correct: 'OTD against the 92% contractual SLA averaged 71% during the 8-week period to 10 March 2026.' The wrong version gives the vendor grounds to dispute tone or process. The correct version leaves only one option: address the specific data."
+    tags: ["tone-calibration", "car"]
+    difficulty: "intermediate"
+
+  - id: "ch35-vendor-communications-disputes-012"
+    front: "A vendor calls to say their bank details have changed and emails you a PDF invoice with new details. Your AP inbox also has this PDF. What is the correct procurement response?"
+    back: "Stop all processing immediately. Do not update payment details based on the email or PDF. Call the vendor on a phone number from your established vendor master (not from the invoice or email). Verify the change is genuine. Escalate to Finance Director. Only proceed after verification. This is mandate fraud — one of the most common and costly AP fraud vectors."
+    tags: ["bank-detail-fraud", "fraud-vector"]
+    difficulty: "advanced"
+    why: "Why does verifying by phone specifically require using a number from the vendor master rather than a number provided in the request itself?"
