@@ -1,0 +1,7 @@
+# Vendor Classification — The Kraljic Matrix -- Summary
+
+This lesson introduces the Kraljic framework for vendor classification — the foundational step that must happen before any vendor assessment, risk monitoring, or exit planning. The framework classifies every vendor along two axes: supply risk (how difficult the vendor is to replace) and profit impact (how much the vendor affects financial performance). These axes produce four tiers: Strategic (high risk, high impact), Tactical (low risk, high impact), Commodity (low risk, low impact), and Bottleneck (high risk, low impact).
+
+The Bottleneck quadrant is the most counterintuitive and most dangerous. Low-spend vendors with no qualified alternatives fly under the radar because procurement teams naturally focus on high-spend relationships. Yet a sole-source vendor's failure can halt production regardless of contract value. The lesson uses Karachi Industrial Fasteners Ltd (KIFTL) — a $30,000/year vendor with sole-source dependency — to demonstrate how the framework catches this blind spot. The `/vendor-assess` skill automates this classification as the first phase of the six-dimension assessment workflow.
+
+The exercise builds a five-vendor classification register spanning all four tiers, establishing the foundation that Lesson 4 extends with full six-dimension assessments and that Lesson 13 references for vendor exit scenarios. Classification is not permanent — markets change, alternatives emerge or disappear, and vendors migrate between tiers. Annual review of classifications is the minimum standard.
