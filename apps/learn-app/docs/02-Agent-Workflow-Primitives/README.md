@@ -5,7 +5,7 @@ title: "Part 2: Agent Workflow Primitives"
 
 # Part 2: Agent Workflow Primitives
 
-You understand the paradigm. You know the Seven Principles. You've seen what an AI Employee can do (Chapter 18).
+You understand the paradigm. You know the Seven Principles. You've seen what an AI Employee can do (Chapter 56).
 
 **Now it's time to build the skills to create your own.**
 

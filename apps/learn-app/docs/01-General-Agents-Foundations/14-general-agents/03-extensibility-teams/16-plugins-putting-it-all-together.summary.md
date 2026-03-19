@@ -26,4 +26,4 @@ Plugins are bundled packages that combine multiple Claude Code capabilities—sk
 ### Connections
 
 - **Builds on**: All Claude Code features (CLAUDE.md, MCP, subagents, skills, hooks, settings) from Lessons 01-15
-- **Leads to**: Custom plugin creation and distribution strategies (Part 5+)
+- **Leads to**: Custom plugin creation and distribution strategies (Part 6+)

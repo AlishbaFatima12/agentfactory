@@ -589,7 +589,7 @@ Track validation results:
 - Automated grep-based checks
 - Two-pass workflow integration
 
-**Next Update**: After validating Part 5+ content, refine heuristics.
+**Next Update**: After validating Part 6+ content, refine heuristics.
 
 ---
 

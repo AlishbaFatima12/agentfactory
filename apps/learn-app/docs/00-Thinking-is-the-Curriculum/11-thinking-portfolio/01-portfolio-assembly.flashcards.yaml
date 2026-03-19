@@ -36,7 +36,7 @@ cards:
     back: "Every skill documented in the portfolio -- prediction locks, reasoning receipts, cascade maps, reversal triggers -- is called upon by name in Parts 1-10 when building AI agents and making technical decisions."
     tags: ["portfolio", "forward-value"]
     difficulty: "intermediate"
-    why: "How would a student without a portfolio approach Part 5 differently than one with a complete portfolio?"
+    why: "How would a student without a portfolio approach Part 6 differently than one with a complete portfolio?"
 
   - id: "p0-portfolio-assembly-006"
     front: "What makes the AI evaluation trajectory across 40 exercises harder to fake than a single assessment?"
