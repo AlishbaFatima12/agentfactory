@@ -11,28 +11,27 @@ Test your understanding of the Agentic Office — from the Context Problem and f
 
 <Quiz
   title="Chapter 39: Productivity & The Agentic Office"
-  questions={[
-    {
+  questions={[    {
       question: "A professional asks Claude to draft a project update for 'the Boulders review' and Claude responds with clarifying questions about what 'Boulders' means. Which context failure mode does this illustrate?",
       options: [
         "Project Amnesia — no project history",
-        "Terminology Blindness — unknown internal vocabulary",
         "Priority Blindness — equal urgency applied",
+        "Terminology Blindness — unknown internal vocabulary",
         "People Anonymity — unknown stakeholders"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "Terminology Blindness occurs when an AI uses generic vocabulary because it lacks the organisation's specific internal terms — here, 'Boulders' meaning quarterly strategic priorities. The AI is not failing due to lack of intelligence; it simply lacks the vocabulary context that any experienced colleague would possess. Project Amnesia involves missing project history and decisions. Priority Blindness means treating all requests as equally urgent. People Anonymity means not knowing who stakeholders are or how to work with them. The fix — encoding 'Boulders' in Layer 4 of work.local.md — eliminates this failure without changing Claude's reasoning capability.",
       source: "Lesson 1: The Context Problem"
     },
     {
       question: "Zia asks Claude to help draft a message to a stakeholder and has to spend four minutes re-explaining that person's communication preferences. Which failure mode is this costing him?",
       options: [
-        "Terminology Blindness — wrong vocabulary used",
-        "Project Amnesia — decisions forgotten",
         "People Anonymity — no stakeholder profiles",
+        "Project Amnesia — decisions forgotten",
+        "Terminology Blindness — wrong vocabulary used",
         "Priority Blindness — urgency misjudged"
       ],
-      correctOption: 2,
+      correctOption: 0,
       explanation: "People Anonymity is the failure mode where the AI has no knowledge of who stakeholders are, how they communicate, or what they prioritise. Without a Layer 2 person entry for this stakeholder, every session starts from scratch — requiring re-briefing on communication style, channel preferences, and sensitivities. This is described as the most operationally expensive failure mode for anyone who communicates frequently on behalf of their organisation. Terminology Blindness relates to vocabulary, not people knowledge. Project Amnesia is about project history and status. Priority Blindness affects task urgency judgment.",
       source: "Lesson 1: The Context Problem"
     },
@@ -40,11 +39,11 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "The lesson states that the Context Problem is 'an information architecture problem, not an intelligence problem.' What is the practical implication of this framing?",
       options: [
         "Claude needs more training data before it works well",
-        "Providing structured context closes the performance gap",
+        "The problem requires better prompt engineering alone",
         "Users must switch to a smarter AI model instead",
-        "The problem requires better prompt engineering alone"
+        "Providing structured context closes the performance gap"
       ],
-      correctOption: 1,
+      correctOption: 3,
       explanation: "Framing the Context Problem as architectural rather than intellectual shifts the solution from waiting for a smarter model to actively building structured context. Claude's reasoning capability is not the constraint — the absence of organisational context is. When work.local.md provides that context, Claude produces colleague-quality outputs because the information gap is closed. Switching models does not solve the problem; the issue is missing context, not insufficient reasoning. Better prompts help for one-off requests but do not solve the structural re-briefing problem — persistent memory (work.local.md) is required. This architectural framing motivates the investment in Lessons 3–5.",
       source: "Lesson 1: The Context Problem"
     },
@@ -64,23 +63,23 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "The official Productivity plugin and the custom Agentic Office plugin are described as having 'zero trigger overlap.' Why is this design principle important?",
       options: [
         "It prevents both plugins from charging credits simultaneously",
-        "It ensures each plugin activates only on its intended inputs",
         "It forces users to remember which plugin handles each task",
+        "It ensures each plugin activates only on its intended inputs",
         "It reduces the total number of skills available in the session"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "Zero trigger overlap ensures that when a user says 'add a task,' only the official plugin's task-management skill activates, and when a user says 'brain dump,' only the custom plugin's task-intelligence skill activates. Without this separation, both plugins might compete to handle the same input, producing conflicting or redundant outputs. The design is intentional — official plugin owns 'task,' 'remember,' 'start,' 'update,' 'sync'; custom plugin owns 'brain dump,' 'prioritise,' 'delegate,' 'daily digest,' 'meeting prep.' This is not about billing, user memorisation, or reducing skill count — it is about clean responsibility boundaries that make the system predictable.",
       source: "Lesson 2: Two Plugins, One System"
     },
     {
       question: "After running /productivity:start, a user finds TASKS.md, CLAUDE.md, memory/, and dashboard.html have been created. Which plugin created these files, and what is their primary purpose?",
       options: [
-        "Custom plugin — professional intelligence layer",
         "Official plugin — task and memory infrastructure",
+        "Custom plugin — professional intelligence layer",
         "Both plugins jointly — shared storage system",
         "Custom plugin — agent orchestration scaffolding"
       ],
-      correctOption: 1,
+      correctOption: 0,
       explanation: "The official Productivity plugin (Anthropic's) creates these four infrastructure files when /productivity:start is run. TASKS.md is the task list storage; CLAUDE.md is the hot cache for recent session context; memory/ is deep storage for longer-form reference; dashboard.html is the visual task board. The custom Agentic Office plugin creates work.local.md and provides nine skills and four agents — the professional intelligence layer. This distinction matters: the official plugin is infrastructure (storage, CRUD), the custom plugin is intelligence (prioritisation, delegation, digests, agents). Neither plugin creates all files, and they are not a joint or shared system.",
       source: "Lesson 2: Two Plugins, One System"
     },
@@ -112,23 +111,23 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "How does work.local.md differ functionally from the CLAUDE.md file created by the official Productivity plugin?",
       options: [
         "work.local.md stores tasks; CLAUDE.md stores project memory",
-        "work.local.md is enduring professional context; CLAUDE.md is recent session cache",
         "work.local.md is temporary per session; CLAUDE.md is permanent",
+        "work.local.md is enduring professional context; CLAUDE.md is recent session cache",
         "work.local.md handles terminology; CLAUDE.md handles people entries"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "CLAUDE.md is the official plugin's hot cache — optimised for fast retrieval of what happened in recent sessions, recent task updates, temporary working state. work.local.md is the structured professional memory layer — the enduring organisational context that does not change session-to-session: terminology, stakeholder profiles, project priorities, cultural norms. The chapter uses this distinction: 'CLAUDE.md: Hot cache — recent session context, temporary state. work.local.md: Professional memory — enduring organisational context.' Neither file stores tasks exclusively (that is TASKS.md), and neither is limited to terminology or people alone — both serve broader purposes in their respective domains.",
       source: "Lesson 3: Workplace Memory Architecture"
     },
     {
       question: "The terminology dictionary in Layer 4 requires four pieces of information for each entry. Which element is most critical for preventing AI outputs from embarrassing the sender in external communications?",
       options: [
-        "The internal definition of the term in plain language",
-        "The related terms or historical synonyms used",
         "The 'when NOT to use it' guidance for each term",
+        "The related terms or historical synonyms used",
+        "The internal definition of the term in plain language",
         "The team or initiative that originated the term"
       ],
-      correctOption: 2,
+      correctOption: 0,
       explanation: "The 'when NOT to use it' guidance prevents internal vocabulary from appearing in external-facing communications where it would confuse or reveal sensitive information. For example, 'Project Nighthawk' carries 'Not: any external communication; do not use externally under any circumstances.' Without this field, Claude might use an internal codename in a client email or board document. The internal definition is necessary but not sufficient — knowing what a term means does not prevent misuse in wrong contexts. Related terms help with search but do not prevent external leakage. The originating team adds context but does not constrain output scope.",
       source: "Lesson 3: Workplace Memory Architecture"
     },
@@ -149,22 +148,22 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       options: [
         "In group meeting prep briefs for meetings the person attends",
         "In delegation handoff messages sent to the person",
-        "In one-to-one preparation for a private management conversation",
-        "In the daily digest when that person is mentioned"
+        "In the daily digest when that person is mentioned",
+        "In one-to-one preparation for a private management conversation"
       ],
-      correctOption: 2,
+      correctOption: 3,
       explanation: "RESTRICTED entries are applied only when directly relevant to a one-to-one task where the subject of the entry is not the audience — for example, Zia preparing for a private conversation with a person's manager about that person's succession. The rule explicitly states: 'They are never surfaced in people briefs shared with a group, delegation messages, meeting prep documents where the subject is an attendee, or any output that could be seen by the person the entry concerns.' The sensitivity flag controls when information surfaces, not whether it is stored — it has value in appropriate private contexts.",
       source: "Lesson 4: Building Your People Memory"
     },
     {
       question: "The people brief sample shows the skill surfacing 'Today's context' and 'Current mood' for a stakeholder even though these are not explicit fields in the person entry format. How is this possible?",
       options: [
-        "The skill invents plausible information to fill gaps automatically",
         "The skill synthesises person entries with delegation logs and project context",
+        "The skill invents plausible information to fill gaps automatically",
         "The skill accesses external CRM data connected via MCP",
         "The skill generates probabilistic personality profiles from prior sessions"
       ],
-      correctOption: 1,
+      correctOption: 0,
       explanation: "The skill synthesises data from multiple layers — the person entry in Layer 2, open delegation records (is a task awaiting confirmation from this person?), project context from Layer 3 (what is in flight that involves this person?), and meeting notes. 'The analytics brief request was delegated yesterday; has not confirmed receipt' comes from the delegation log, not the person entry itself. This cross-layer synthesis is what makes the people brief more useful than a raw memory lookup. The skill does not invent information, access external CRMs unprompted, or generate personality profiles — it surfaces structured data you have provided across multiple layers.",
       source: "Lesson 4: Building Your People Memory"
     },
@@ -172,11 +171,11 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "Layer 3's at_risk field for Project Nighthawk reads: 'Facility agreement negotiations stalled — 10+ days with no update, blocking Q3 target.' Why is this entry more useful than 'Some scheduling challenges'?",
       options: [
         "It uses more technical vocabulary that the skill understands better",
-        "It names the specific constraint, duration, and downstream impact",
         "It is shorter and therefore faster for the skill to retrieve and process",
+        "It names the specific constraint, duration, and downstream impact",
         "It references a named layer that the search command can index directly"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "A useful at_risk entry names the specific risk (facility agreement stalled), quantifies its duration (10+ days), and identifies the downstream consequence (blocking Q3 target). This specificity enables the skill to surface an actionable picture: not just 'there is some risk' but 'this specific thing has been stuck for this long and it is causing this downstream problem.' Generic entries like 'some scheduling challenges' tell neither the skill nor the reader what to do. Technical vocabulary, entry length, and indexing efficiency are not what differentiates useful from useless risk entries — specificity is the differentiator.",
       source: "Lesson 5: Projects and Priorities"
     },
@@ -197,10 +196,10 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       options: [
         "The decision log feature is not yet available in this plugin version",
         "The search encountered an error and should be retried with different phrasing",
-        "The information was not recorded and should be added to work.local.md",
-        "The information exists but is marked RESTRICTED and therefore hidden"
+        "The information exists but is marked RESTRICTED and therefore hidden",
+        "The information was not recorded and should be added to work.local.md"
       ],
-      correctOption: 2,
+      correctOption: 3,
       explanation: "The lesson describes 'not in workplace memory' as 'a valid and useful answer' — it tells you one of three things: the event has not happened yet, the information exists but was not recorded (a gap to fill), or the information lives elsewhere (Notion, email, Slack) and needs to be added. The search makes memory gaps visible, which is a feature not a failure. There is no indication this is a plugin version limitation. The search command is designed to handle gaps gracefully, not require rephrasing. RESTRICTED entries are not hidden entirely — they are surfaced only in appropriate one-to-one contexts, not returned as 'not in memory.'",
       source: "Lesson 5: Projects and Priorities"
     },
@@ -208,11 +207,11 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "The task-intelligence skill classifies a task as P2 despite it belonging to a P1 project. What is the most likely explanation for this classification?",
       options: [
         "The skill cannot read project priority from work.local.md correctly",
-        "The task has no hard deadline today and is not currently blocking anyone",
         "The skill defaults all new tasks to P2 until manually overridden",
+        "The task has no hard deadline today and is not currently blocking anyone",
         "The P1 project has not yet been confirmed as active by the user"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "The five priority sorting criteria are applied in order: hard deadline, blocking someone, P1 project, consequence of slipping, urgency vs importance. A task on a P1 project (criterion 3) is likely P1 — but only if it also has urgency characteristics. In the lesson's worked example, Chapter 28 draft is classified P2 despite being part of P1 AgentFactory because the deadline is Thursday (not today) and it is not currently blocking anyone. The skill correctly flags it: 'treat as high priority despite P2 urgency rating.' The skill reads project priority correctly; classification depends on the full five-criterion evaluation, not just project affiliation.",
       source: "Lesson 6: Task Intelligence"
     },
@@ -244,23 +243,23 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "A delegation reads: 'Can you handle the analytics thing?' According to the delegation quality checklist, which is the single most critical missing element?",
       options: [
         "The delegatee's communication style preference",
-        "A specific, measurable deliverable description",
+        "The formal delegation record entry in work.local.md",
         "The follow-up mechanism and confirmation window",
-        "The formal delegation record entry in work.local.md"
+        "A specific, measurable deliverable description"
       ],
-      correctOption: 1,
+      correctOption: 3,
       explanation: "The lesson's first checklist item is a specific deliverable — not an activity ('work on the analysis') but an output ('2-page investor-facing analytics summary, slides-ready format'). Without a specific deliverable, the delegatee cannot know what they are producing, in what format, to what length, or for what audience. Every other checklist item (named person, deadline, context, format, calibrated message, follow-up) depends on first knowing what is being delegated. While communication style, follow-up mechanisms, and formal records are all required checklist items, the fundamental ambiguity of 'the analytics thing' makes the deliverable the most critical gap — everything else collapses without it.",
       source: "Lesson 7: Delegation as a Discipline"
     },
     {
       question: "The same analytics brief task is delegated to Omar Farooq and then hypothetically to Ayesha Raza. Which element of the delegation record would differ most between the two?",
       options: [
-        "The deliverable specification (what, format, length)",
-        "The deadline and due date for the output",
         "The handoff communication message and channel",
+        "The deadline and due date for the output",
+        "The deliverable specification (what, format, length)",
         "The context section (purpose and audience)"
       ],
-      correctOption: 2,
+      correctOption: 0,
       explanation: "The task (analytics brief), deadline (22 March), format (slides-ready, charts), and context (investor deck, sophisticated investors) are identical regardless of delegatee — these are determined by the task and its purpose, not the person. What changes is the handoff communication: Omar gets a Slack DM with hyper-specific scope, lead time acknowledgment, and a confirmation request — because his profile shows he dislikes last-minute asks and pushes back on scope creep. Ayesha gets more background context, a more structured written brief, and more explicit audience framing — because she is new, prefers detail, and is still building mental models of the organisation. The calibration changes the wrapper, not the task.",
       source: "Lesson 7: Delegation as a Discipline"
     },
@@ -268,23 +267,23 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "A delegation has been in PENDING CONFIRMATION status for 36 hours with no response. What does the follow-up protocol prescribe at this point?",
       options: [
         "Flag it RED in the digest and wait for the user to decide next steps",
-        "Send a polite follow-up and escalate to RED if still unconfirmed at 48 hours",
         "Mark it OVERDUE and begin the three-day late overdue protocol",
+        "Send a polite follow-up and escalate to RED if still unconfirmed at 48 hours",
         "Re-delegate to an alternative person from Layer 2"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "The confirmation window for same-week tasks is 24 hours. At 36 hours, the first follow-up should have already been sent (at the 24-hour mark). The prescription at this stage is: if no confirmation after the second contact (around 48 hours), flag it RED in the digest and prompt the user to decide. Between 24 and 48 hours, the correct action is a single gentle follow-up. The task is still PENDING CONFIRMATION, not OVERDUE (that status applies to the deliverable deadline, not the confirmation window). Re-delegating is not an automatic protocol step — that is a user decision prompted only after RED flagging.",
       source: "Lesson 7: Delegation as a Discipline"
     },
     {
       question: "The daily digest has a non-negotiable constraint: it must fit on one page. What happens to items that exceed this limit?",
       options: [
-        "They are automatically moved to the executive dashboard or full task list",
+        "They trigger a secondary digest sent later in the day",
         "They are dropped entirely from the current day's output",
         "They are consolidated into a single 'overflow' section at the bottom",
-        "They trigger a secondary digest sent later in the day"
+        "They are automatically moved to the executive dashboard or full task list"
       ],
-      correctOption: 0,
+      correctOption: 3,
       explanation: "The lesson states: 'if it exceeds this, items are being included that do not belong in the morning brief. They belong in the dashboard (for weekly review) or the task list (for full inventory).' The digest is a selection tool, not a comprehensive catalogue. Items beyond its scope move to the appropriate containing system — the executive dashboard for project status items, TASKS.md for full task inventory. Items are not dropped (they exist elsewhere), consolidated into overflow (which defeats the purpose), or deferred to a second digest (which defeats the 5-minute read constraint). The one-page rule is about discipline of omission, not compression.",
       source: "Lesson 8: The Daily Digest"
     },
@@ -292,23 +291,23 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "The digest rule distinguishes 'briefing voice' from 'system voice.' Which example demonstrates correct briefing voice?",
       options: [
         "Project Nighthawk status: no update for 10 days. Action: escalate.",
-        "Nighthawk facility update: requires review. Assignee: Zia. Due: today.",
         "Nighthawk has been quiet for 10 days — escalation today, not tomorrow.",
+        "Nighthawk facility update: requires review. Assignee: Zia. Due: today.",
         "Nighthawk stall duration: 10 days. Risk level: HIGH. Next step: TBD."
       ],
-      correctOption: 2,
+      correctOption: 1,
       explanation: "Briefing voice delivers the interpretation ready to act on — it sounds like a knowledgeable colleague who understands context and urgency, not a system generating a status report. 'Nighthawk has been quiet for 10 days — escalation today, not tomorrow' combines the fact (10 days), the implication (it is already overdue), and the action ('today, not tomorrow') in natural language. The other options are system voice: they label statuses, assign codes (HIGH, TBD), use colon-separated fields, or reduce human judgment to database fields. Briefing voice reduces cognitive load because it tells the reader what to do, not just what the system knows.",
       source: "Lesson 8: The Daily Digest"
     },
     {
       question: "The Monday digest variant adds two sections not present in the standard Tuesday-Thursday digest. What are these sections, and why are they structurally different from the daily critical path?",
       options: [
-        "Week-ahead milestones and delegation audit — replacing the flagged items section",
         "This Week's Critical Path and Open from Last Week — framing the full week, not today",
+        "Week-ahead milestones and delegation audit — replacing the flagged items section",
         "Weekly priorities reminder and domain agent metrics — adding external data sources",
         "Decision log review and meeting efficiency audit — drawn from Friday's close output"
       ],
-      correctOption: 1,
+      correctOption: 0,
       explanation: "The Monday variant adds 'This Week's Critical Path' (the 3-5 things that, if done this week, make it a success — a week-level frame, not a day-level sequence) and 'Open from Last Week' (what carried over from Friday and why, provided as context not judgment). The daily critical path is the sequence for today; the weekly critical path is the frame for the full week — a different planning horizon. Monday is planning mode, not execution mode, which justifies the structural expansion. The other options describe content from other lessons (domain agent metrics, delegation audits, decision log reviews) but are not the two sections added specifically for the Monday variant.",
       source: "Lesson 8: The Daily Digest"
     },
@@ -316,11 +315,11 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "The three-phase meeting model assigns the highest leverage to the preparation phase. What specific capability does the prep brief provide that generic agenda review does not?",
       options: [
         "A full transcript of the previous meeting's discussion to review",
-        "Stakeholder notes showing how each attendee will likely respond to each agenda item",
         "A pre-generated set of minutes ready to distribute after the meeting",
+        "Stakeholder notes showing how each attendee will likely respond to each agenda item",
         "An automated summary of decisions made in prior meetings on the same topic"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "The prep brief's highest-value element is stakeholder notes: per-person guidance on how each attendee is likely to receive each agenda item, based on their Layer 2 person entry. 'Omar will have data; do not pre-empt it. Let him present, then ask one clarifying question about ERP compatibility' is an example — this changes how Zia participates in the meeting in ways that a simple agenda review cannot. The prep brief does not provide full transcripts of prior meetings (it provides summaries of key decisions). Minutes are produced in the after phase, not prepared before. Decision summaries appear in the 'Last Time This Group Met' section but are not the primary differentiator.",
       source: "Lesson 9: Meeting Intelligence"
     },
@@ -351,24 +350,24 @@ Test your understanding of the Agentic Office — from the Context Problem and f
     {
       question: "The D-YYYY-NNN decision numbering convention serves three purposes. Which purpose is most directly relevant to preventing organisational decisions from being relitigated?",
       options: [
-        "It makes decisions searchable by date and number across all sessions",
-        "It creates a numbered chain linking each action to its originating decision",
         "It enables pattern analysis of how many decisions were reversed quarterly",
+        "It creates a numbered chain linking each action to its originating decision",
+        "It makes decisions searchable by date and number across all sessions",
         "It triggers automatic work.local.md updates after each meeting synthesis"
       ],
-      correctOption: 0,
+      correctOption: 2,
       explanation: "The searchability purpose is most directly relevant to preventing reli­tigation: 'When did we decide X?' returns D-2026-003 and its context from the Executive Weekly. Without the numbered, searchable decision log, answering this question requires hunting through meeting notes — assuming anyone kept them. When D-2026-003 clearly records 'Islamabad expansion DEFERRED; trigger: Nighthawk resolved,' the decision cannot be revisited without consciously acknowledging it was previously made. The action-to-decision chain (A links to D) is a related purpose but not the primary one for preventing relitigation. Pattern analysis is a third purpose (long-term governance). Work.local.md updates are proposed by the synthesis skill, not automatically triggered by numbering.",
       source: "Lesson 9: Meeting Intelligence"
     },
     {
       question: "Project Nighthawk is RED on the executive dashboard. AgentFactory is AMBER. BankersAI is GREEN. What is the correct headline status for the executive dashboard?",
       options: [
-        "AMBER — because the majority of projects are not red",
         "RED — because the worst-case RAG status across all projects is red",
+        "AMBER — because the majority of projects are not red",
         "AMBER — because only one of three projects is in a critical state",
         "GREEN — because BankersAI is on track and highest-priority"
       ],
-      correctOption: 1,
+      correctOption: 0,
       explanation: "The executive dashboard headline aggregates the worst-case RAG status across all tracked projects: 'If any project is RED, the headline is RED.' Project Nighthawk's hard blocker (facility stall, stale 10+ days) drives the headline to RED regardless of AgentFactory's AMBER or BankersAI's GREEN status. This design ensures that executives cannot overlook a critical item because it is numerically outnumbered by lower-severity projects. The headline does not average, vote, or weight by project priority — it surfaces the floor. One RED project always produces a RED headline, forcing attention to the most critical situation in the portfolio.",
       source: "Lesson 10: The Executive Dashboard"
     },
@@ -377,10 +376,10 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       options: [
         "AMBER — because it is a P2 project and not existentially critical",
         "GREEN — because the team is working on a facility letter as a recovery plan",
-        "RED — because a hard blocker exists and progress cannot continue without resolution",
-        "AMBER — because the milestone has not yet officially missed its deadline"
+        "AMBER — because the milestone has not yet officially missed its deadline",
+        "RED — because a hard blocker exists and progress cannot continue without resolution"
       ],
-      correctOption: 2,
+      correctOption: 3,
       explanation: "Nighthawk's facility agreement stall is explicitly classified as a hard blocker — progress cannot continue on Q3 planning without the facility agreement. RED status applies when 'at least one of: a milestone missed, a hard blocker, or a decision overdue' is present. The project priority (P2) does not prevent RED status — RAG rules are about current state, not strategic importance. Showing GREEN because a recovery plan (the formal letter) is in progress violates the milestone-slip rule: 'Never show GREEN for a project where a milestone has slipped without explicit acknowledgement, even if the team is working on a fix.' The Q3 commitment has slipped its implicit deadline.",
       source: "Lesson 10: The Executive Dashboard"
     },
@@ -400,23 +399,23 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "The executive dashboard passes the '5-minute test' when a colleague can understand the week's overall picture without follow-up questions. What most directly determines whether this test passes?",
       options: [
         "The number of domain agent feeds connected to the dashboard",
-        "The specificity and currency of the underlying work.local.md content",
         "The RAG threshold values configured in the dashboard section",
+        "The specificity and currency of the underlying work.local.md content",
         "Whether the official plugin's dashboard.html is also open simultaneously"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "The 5-minute test asks: could a colleague tell from this dashboard what the week looks like without asking a follow-up question? The answer depends on whether work.local.md has specific, current information about each project's status, risks, and actions. The lesson states: 'The quality of the brief is a direct function of the quality of the entries' — and the same principle applies to the dashboard. More domain agent feeds add breadth but do not compensate for vague or stale project entries. RAG thresholds affect when projects change colour but not the richness of the contextual narrative. The official plugin's dashboard.html is a separate individual task tool and is irrelevant to the executive dashboard's 5-minute test.",
       source: "Lesson 10: The Executive Dashboard"
     },
     {
       question: "The context-loader command supports five context types. When preparing for a new hire's first week, which type should be used, and why?",
       options: [
-        "Single-domain — HR owns onboarding and all relevant context lives there",
-        "Person — the new hire's profile contains all cross-functional needs",
         "Cross-domain — onboarding genuinely touches HR, Finance, and Operations simultaneously",
+        "Person — the new hire's profile contains all cross-functional needs",
+        "Single-domain — HR owns onboarding and all relevant context lives there",
         "Project — the onboarding should be tracked as a project with milestones"
       ],
-      correctOption: 2,
+      correctOption: 0,
       explanation: "The Dr. Sana Mirza onboarding scenario illustrates precisely why cross-domain is the correct type: 'Her onboarding is not a single-domain task — it genuinely touches HR (onboarding protocol), Finance (headcount budget), and Operations (system access).' Using single-domain HR would miss Operations system access timelines and Finance tooling implications. Person context loads what is known about the individual but not the functional cross-domain dependencies. Project type is for working on a project (like Nighthawk) not preparing for a new hire. Only cross-domain type correctly loads the integrated picture across all three relevant functions simultaneously.",
       source: "Lesson 11: Cross-Domain Intelligence"
     },
@@ -436,23 +435,23 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "The /agentic-office:workplace-search result for 'Islamabad expansion' returns 'No active tasks related to Islamabad expansion.' The chapter describes this as 'as informative as a positive result.' Why?",
       options: [
         "It confirms the search engine is functioning correctly with no false negatives",
-        "It confirms the deferral decision was correctly implemented with no action taken",
+        "It reveals that all Islamabad work was archived rather than completed",
         "It indicates the Islamabad project should be promoted to P2 status immediately",
-        "It reveals that all Islamabad work was archived rather than completed"
+        "It confirms the deferral decision was correctly implemented with no action taken"
       ],
-      correctOption: 1,
+      correctOption: 3,
       explanation: "D-2026-003 deferred the Islamabad expansion with a trigger (Nighthawk facility resolved) and no timeline — meaning no one should have been assigned to Islamabad work. 'No active tasks' in the task/delegation log confirms exactly this: 'This is correct, as D-2026-003 set no timeline.' An absence of tasks is informative because it validates that the deferral decision was honoured. The search is not testing itself — it is surfacing a meaningful data point about organisational follow-through. No promotion to P2 is implied — the decision to defer stands until the trigger fires. No archiving has occurred; the project simply has no active tasks because the decision said there should not be.",
       source: "Lesson 11: Cross-Domain Intelligence"
     },
     {
       question: "An integration protocol triggers on 'new hire approved' and checks Finance, Operations, and HR. What transformation does this protocol represent relative to manual cross-domain context loading?",
       options: [
-        "It replaces manual loading entirely, eliminating the need for work.local.md updates",
         "It shifts the system from reactive (I need context now) to proactive (surface it automatically)",
+        "It replaces manual loading entirely, eliminating the need for work.local.md updates",
         "It enables the context-loader to access live HR systems without MCP configuration",
         "It converts integration from a plugin feature to a standalone workflow"
       ],
-      correctOption: 1,
+      correctOption: 0,
       explanation: "The lesson describes integration protocols as the evolution 'from manual cross-domain context loading (this lesson) to automated integration protocols (ongoing configuration) to a system that proactively surfaces cross-domain context before you need to ask for it.' When a new hire is approved, the protocol automatically checks Finance (budget impact?), Operations (system access?), and HR (onboarding protocol?) — without the user having to think to run context-loader first. This is the shift from reactive to proactive. Integration protocols do not replace work.local.md updates — they trigger them. They do not bypass MCP configuration. They are a feature of the agentic-office plugin, not a standalone workflow.",
       source: "Lesson 11: Cross-Domain Intelligence"
     },
@@ -471,11 +470,11 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "The Chief of Staff's real-time intelligence operates on the rule: 'answer as a knowledgeable colleague would, not as a system returning a database query.' What distinguishes the colleague-quality answer from the database query answer?",
       options: [
         "The colleague answer is shorter because it omits supporting data",
-        "The colleague answer includes organisational context, implications, and recommended action",
+        "The colleague answer summarises the decision log entries verbatim",
         "The colleague answer always defers to the user rather than making recommendations",
-        "The colleague answer summarises the decision log entries verbatim"
+        "The colleague answer includes organisational context, implications, and recommended action"
       ],
-      correctOption: 1,
+      correctOption: 3,
       explanation: "A database query answers: 'What is Project Nighthawk's current status?' A knowledgeable colleague answers: 'Nighthawk is ten days stalled on the facility agreement. Omar is not directly involved, but the Q3 plan depends on this resolving before end of month. You may need to escalate directly to the COO.' The colleague answer adds who is involved, what depends on what, what the cultural norms are around escalation, and what action to consider — all drawn from work.local.md context. The colleague answer is typically longer and richer, not shorter. It makes recommendations, not deferrals. It synthesises context, not verbatim retrieval.",
       source: "Lesson 12: The Digital Chief of Staff"
     },
@@ -495,23 +494,23 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "Project Nighthawk has triggered a Level 1 digest flag (yellow, 7+ days stalled) two days ago and has not been actioned. According to the three-level escalation protocol, what happens next?",
       options: [
         "The item remains at Level 1 until the user explicitly dismisses it",
-        "The Chief of Staff sends a direct explicit message via the configured channel",
         "The item automatically escalates to COO-level notification",
+        "The Chief of Staff sends a direct explicit message via the configured channel",
         "The Work Tracker takes ownership and contacts the facility liaison directly"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "The three-level protocol: Level 1 (digest flag, yellow) → if not actioned within 2 days → Level 2 (explicit message via configured channel, e.g. Slack DM or email). Level 2 is a direct, specific notification: 'Project Nighthawk has been blocked/unactioned for 10 days. This is affecting the Q3 facility plan. Recommended action: send formal escalation letter by Wednesday.' Level 3 (COO-level) only triggers if a Level 2 item remains unresolved for 14 total days. Items do not self-dismiss or stay permanently at Level 1. The agents do not take action on behalf of the user (like contacting external parties) — they surface situations and offer to prepare materials.",
       source: "Lesson 12: The Digital Chief of Staff"
     },
     {
       question: "The chief_of_staff configuration block uses an escalation_threshold_days value of 7. A team working in government on multi-month projects considers reducing this to 3. According to the lesson, what risk does this create?",
       options: [
-        "The digest will exceed its one-page constraint from excessive alert volume",
-        "The Memory Keeper will trigger too frequently and degrade work.local.md accuracy",
         "Alerts will fire on normal operational pauses, causing users to ignore them",
+        "The Memory Keeper will trigger too frequently and degrade work.local.md accuracy",
+        "The digest will exceed its one-page constraint from excessive alert volume",
         "The official plugin's task-management skill will conflict with the escalation logic"
       ],
-      correctOption: 2,
+      correctOption: 0,
       explanation: "The lesson warns: 'thresholds too low create noise — every normal pause generates an alert, causing the user to ignore them. Thresholds too high let real problems fester.' In a government or large enterprise context where turnarounds legitimately take longer, a 3-day threshold would generate alerts for items that are simply in normal processing cycles — not stalled. Once users learn that alerts fire constantly on non-issues, they stop responding to them, defeating the entire purpose of threshold monitoring. The Memory Keeper operates on separate triggers. The one-page constraint applies to the digest content, not alert volume per se. Plugin conflicts are not part of the threshold calibration discussion.",
       source: "Lesson 12: The Digital Chief of Staff"
     },
@@ -520,10 +519,10 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       options: [
         "Automatic updates would exceed the plugin's file write permissions",
         "The skill cannot determine which memory layer the person belongs in",
-        "Wrong context produces wrong outputs from every downstream agent — confirmation is the quality gate",
-        "Automatic updates would conflict with the official plugin's CLAUDE.md management"
+        "Automatic updates would conflict with the official plugin's CLAUDE.md management",
+        "Wrong context produces wrong outputs from every downstream agent — confirmation is the quality gate"
       ],
-      correctOption: 2,
+      correctOption: 3,
       explanation: "The lesson states: 'The Memory Keeper NEVER applies updates to work.local.md without user confirmation. This rule is absolute. An agent that modifies organisational memory autonomously is a liability — wrong context produces wrong outputs from every downstream agent.' If the Memory Keeper incorrectly captures a person's role, communication style, or relationship sensitivity, every subsequent output from every skill that reads Layer 2 will be miscalibrated. The confirmation step lets the user verify accuracy before it propagates. This is not a file permission limitation (the agent has write access; the rule is by design). The skill knows which layer — people go in Layer 2. Plugin conflict is not the rationale.",
       source: "Lesson 13: The Supporting Agents"
     },
@@ -542,12 +541,12 @@ Test your understanding of the Agentic Office — from the Context Problem and f
     {
       question: "The weekly delegation audit shows: 'Omar Farooq — 3 delegations this quarter — 2/3 on time. Pattern: confirms quickly, delivers slightly late when scope is unclear.' What is the prescribed use of this information?",
       options: [
-        "Initiate a formal performance discussion with Omar about delivery reliability",
         "Inform better delegation briefs by clarifying scope upfront before sending",
+        "Initiate a formal performance discussion with Omar about delivery reliability",
         "Reduce the number of delegations sent to Omar this quarter to improve statistics",
         "Update Omar's person entry with a RESTRICTED reliability flag"
       ],
-      correctOption: 1,
+      correctOption: 0,
       explanation: "The lesson is explicit: 'The Work Tracker surfaces reliability patterns that inform better delegation practice — not individual performance assessments.' Omar's pattern ('delivery lateness correlates with scope ambiguity, not capacity or reliability') points directly to a specific fix: write clearer scope in the delegation brief before sending. This is actionable information about the delegation process, not about Omar's performance. A performance discussion would misuse operational data as a management instrument. Reducing delegations punishes the delegator, not addresses the root cause. The person entry should not receive a reliability flag — that misuses the sensitivity mechanism for behavioural observations.",
       source: "Lesson 13: The Supporting Agents"
     },
@@ -555,11 +554,11 @@ Test your understanding of the Agentic Office — from the Context Problem and f
       question: "The Meeting Intelligence Agent's weekly audit flagged a recurring meeting as potentially replaceable with an async digest. What specific pattern triggers this recommendation?",
       options: [
         "The meeting has more than eight attendees regularly and runs over time",
-        "Fewer than two decisions were made in the last four occurrences",
         "The meeting prep brief is longer than the actual meeting duration",
+        "Fewer than two decisions were made in the last four occurrences",
         "Two or more attendees have RESTRICTED sensitivity entries in Layer 2"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "The lesson states: 'The Meeting Intelligence Agent flags any recurring meeting where fewer than 2 decisions were made in the last 4 occurrences, or where the meeting primarily delivers status updates.' The BankersAI workshop prep call was recommended for replacement with a written brief because 'no decisions made in last 4 occurrences — primarily status updates.' Status-only meetings that produce no decisions are candidates for async replacement. Attendee count, prep brief length, and participant sensitivity entries are not the criteria — the decision-to-meeting ratio is the diagnostic signal. The lesson also notes this is a recommendation, not a directive — relationship maintenance value must be considered.",
       source: "Lesson 13: The Supporting Agents"
     },
@@ -590,24 +589,24 @@ Test your understanding of the Agentic Office — from the Context Problem and f
     {
       question: "During the Lesson 14 smoke test, the executive dashboard output is graded C (needs significant work). What is the most likely source of this gap?",
       options: [
-        "The /agentic-office:schedule command has not been activated in this session",
         "Layer 3 (projects) has vague or incomplete status entries",
+        "The /agentic-office:schedule command has not been activated in this session",
         "The official plugin's dashboard.html is out of sync with TASKS.md",
         "The digest configuration section is missing from work.local.md"
       ],
-      correctOption: 1,
+      correctOption: 0,
       explanation: "The lesson identifies the most common C-grade sources for the executive dashboard: 'Layer 3 (projects not fully populated), agent_integrations.chief_of_staff.feeds_from (domain agents not listed), or digest/dashboard configuration (incomplete threshold or section settings).' A C-grade executive dashboard most directly traces to incomplete project entries — vague at_risk fields, missing milestone dates, unspecified RAG status rationale. The schedule command affects timing of automatic delivery, not the content quality of a manually triggered test. The official plugin's dashboard.html is a separate tool that does not feed the executive dashboard. The digest configuration affects digest output, not the progress-tracker dashboard.",
       source: "Lesson 14: The Complete Agentic Office"
     },
     {
       question: "The Lesson 14 completeness checklist requires at least 15 terminology entries in Layer 4. Why is this threshold higher than the 10-entry minimum recommended in Lesson 3?",
       options: [
-        "Lesson 14 is a capstone exercise requiring higher standard for full integration testing",
-        "The smoke test commands require 15 entries to function without error",
         "The Chief of Staff's digest assembly fails below 15 terminology entries",
+        "The smoke test commands require 15 entries to function without error",
+        "Lesson 14 is a capstone exercise requiring higher standard for full integration testing",
         "The workplace-search command only indexes terminology sections with 15+ entries"
       ],
-      correctOption: 0,
+      correctOption: 2,
       explanation: "Lesson 3 recommends 'at least 10 entries to start' because it is the initial build lesson — enough to demonstrate the before/after improvement in output quality. Lesson 14 sets 15 as the completeness bar because it is the capstone integration exercise designed to test whether the full system works at a professional standard. By Chapter 39 Lesson 14, the user has had lessons 3-13 to accumulate terminology, and a well-configured agentic office should have substantially more than the initial minimum. The smoke test commands do not have technical minimums — they work on whatever is present. The Chief of Staff and workplace-search do not have entry count requirements; their output quality scales with content richness.",
       source: "Lesson 14: The Complete Agentic Office"
     },
