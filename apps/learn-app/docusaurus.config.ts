@@ -80,7 +80,7 @@ const config: Config = {
       swcHtmlMinimizer: true, // Use SWC to minify HTML
       lightningCssMinimizer: true, // Use Lightning CSS instead of cssnano
       mdxCrossCompilerCache: true, // Compile MDX once instead of twice
-      // rspackBundler: false,  // Skip Rspack - use webpack (more stable with memory)
+      rspackBundler: true, // Rspack replaces webpack — 5-10x faster bundling
     },
   },
 

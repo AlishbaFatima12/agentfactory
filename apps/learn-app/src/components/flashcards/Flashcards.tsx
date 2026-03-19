@@ -21,7 +21,6 @@ export default function Flashcards({ cards: deck }: FlashcardsProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [showToast, setShowToast] = useState(false);
-  const [ankiUrl, setAnkiUrl] = useState<string | null>(null);
   const [showDownloadMenu, setShowDownloadMenu] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [ratedCards, setRatedCards] = useState<Map<string, "missed" | "gotit">>(
@@ -80,24 +79,6 @@ export default function Flashcards({ cards: deck }: FlashcardsProps) {
       return () => clearTimeout(timer);
     }
   }, [wasReset]);
-
-  // Fetch Anki manifest
-  useEffect(() => {
-    if (!deck) return;
-    fetch("/flashcards/manifest.json")
-      .then((res) => (res.ok ? res.json() : null))
-      .then((manifest) => {
-        if (manifest?.decks?.[deck.deck.id]?.apkgPath) {
-          setAnkiUrl(manifest.decks[deck.deck.id].apkgPath);
-        }
-      })
-      .catch((err) => {
-        console.warn(
-          `[flashcards] Failed to fetch Anki manifest for deck "${deck.deck.id}":`,
-          err,
-        );
-      });
-  }, [deck]);
 
   // Close download menu on outside click
   useEffect(() => {
@@ -500,16 +481,6 @@ export default function Flashcards({ cards: deck }: FlashcardsProps) {
               >
                 Download CSV
               </button>
-              {ankiUrl && (
-                <a
-                  className={styles.downloadOption}
-                  href={ankiUrl}
-                  download
-                  onClick={() => setShowDownloadMenu(false)}
-                >
-                  Anki Deck (.apkg)
-                </a>
-              )}
             </div>
           )}
         </div>
