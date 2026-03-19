@@ -1,0 +1,840 @@
+{
+  "exit_reason": "max_iterations (3)",
+  "original_description": "Activate a session guardrail that blocks file edits outside apps/learn-app/docs/. Use this skill when starting a focused content editing session to prevent accidental changes to platform code, configs, or other non-content files. Invoke with \"/content-lock\" when you want to protect the codebase during content-only work. Also useful when multiple agents are working and you want to scope one to content only.",
+  "best_description": "Activate a session guardrail that blocks file edits outside apps/learn-app/docs/. Use this skill when starting a focused content editing session to prevent accidental changes to platform code, configs, or other non-content files. Invoke with \"/content-lock\" when you want to protect the codebase during content-only work. Also useful when multiple agents are working and you want to scope one to content only.",
+  "best_score": "4/8",
+  "best_train_score": "6/12",
+  "best_test_score": "4/8",
+  "final_description": "Invoke this skill \u2014 do NOT just promise to be careful \u2014 when the user asks you to only edit docs, stay in the docs folder, restrict edits to lesson/content files, lock the session to apps/learn-app/docs/, or avoid touching platform/config/infrastructure code. Users often phrase this as safety (\"don't accidentally edit anything else\") or scope (\"scope to content only\", \"can only edit docs/\"). This skill installs an actual enforcement hook that blocks Edit/Write outside apps/learn-app/docs/. Self-enforcement is unreliable; this hook is the correct mechanism. Skip for: normal content editing without restriction requests, branch protection, API rate limits, or sessions needing both content and code changes.",
+  "iterations_run": 3,
+  "holdout": 0.4,
+  "train_size": 12,
+  "test_size": 8,
+  "history": [
+    {
+      "iteration": 1,
+      "description": "Activate a session guardrail that blocks file edits outside apps/learn-app/docs/. Use this skill when starting a focused content editing session to prevent accidental changes to platform code, configs, or other non-content files. Invoke with \"/content-lock\" when you want to protect the codebase during content-only work. Also useful when multiple agents are working and you want to scope one to content only.",
+      "train_passed": 6,
+      "train_failed": 6,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "im gonna be editing a bunch of lessons today, can you make sure we stay in the docs folder and dont touch anything else? i broke something last time",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "scope this session to content only \u2014 no platform changes, no config edits, just lesson files",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "hey i need to review and fix frontmatter across 40 lesson files. lock this session to docs/ only so I don't accidentally edit anything outside",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "restrict file edits to apps/learn-app/docs only for this session",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok starting lesson rewrites for part 3. make sure i can only edit docs/ and nothing else",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to do a big content editing session across chapters 25-30, lock down everything else so I don't accidentally touch platform code",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the content-lock skill and tell me if the hook script has any bugs in the bash pattern matching",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "set up a read-only mode for the documentation site so students can't accidentally submit forms during maintenance",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "can you protect the main branch from force pushes? I want to add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "edit the lesson file at apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/01-what-is-agent-factory.md and fix the typo in paragraph 3",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to update both the lesson content in chapter 30 AND the SSO auth code to fix the device flow bug in this session",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "restrict the API rate limits for the content endpoint to 100 requests per minute per user in the express middleware",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 4,
+      "test_failed": 4,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "activate the content guardrail so we can safely edit chapters without risk to the codebase",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before we start \u2014 freeze everything except the book content. last time an agent edited settings.json by accident",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "/content-lock",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I've got 3 agents working on different chapters right now. Can you scope this session to only touch learn-app docs? I don't want any of them messing with the SSO code",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "lock down the API endpoints in apps/sso/src/lib/auth.ts so only authenticated users with valid JWTs can access the content-api",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I want to prevent commits to main branch without review. Can you set up a pre-commit hook that runs the linter?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "make sure the learn-app build doesn't break after my changes \u2014 run pnpm nx build learn-app and show me any errors",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "add a new lesson to chapter 22 about file permission boundaries in Linux, after the existing lesson on reading agent logs",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 6,
+      "failed": 6,
+      "total": 12,
+      "results": [
+        {
+          "query": "im gonna be editing a bunch of lessons today, can you make sure we stay in the docs folder and dont touch anything else? i broke something last time",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "scope this session to content only \u2014 no platform changes, no config edits, just lesson files",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "hey i need to review and fix frontmatter across 40 lesson files. lock this session to docs/ only so I don't accidentally edit anything outside",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "restrict file edits to apps/learn-app/docs only for this session",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok starting lesson rewrites for part 3. make sure i can only edit docs/ and nothing else",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to do a big content editing session across chapters 25-30, lock down everything else so I don't accidentally touch platform code",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the content-lock skill and tell me if the hook script has any bugs in the bash pattern matching",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "set up a read-only mode for the documentation site so students can't accidentally submit forms during maintenance",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "can you protect the main branch from force pushes? I want to add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "edit the lesson file at apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/01-what-is-agent-factory.md and fix the typo in paragraph 3",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to update both the lesson content in chapter 30 AND the SSO auth code to fix the device flow bug in this session",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "restrict the API rate limits for the content endpoint to 100 requests per minute per user in the express middleware",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "description": "Use this skill whenever the user wants to lock down, restrict, or scope file edits to content files only (apps/learn-app/docs/). Trigger phrases include: \"stay in docs\", \"only edit docs\", \"restrict edits to docs\", \"lock to content only\", \"don't touch platform code\", \"scope to content\", \"lock down everything else\", or any request to prevent editing files outside the docs directory during a session. This installs a session guardrail hook that blocks Edit and Write operations on any file outside apps/learn-app/docs/. Do NOT trigger for: normal content editing without restriction requests, branch protection, API rate limits, read-only modes for end users, or sessions that need both content and platform code changes.",
+      "train_passed": 6,
+      "train_failed": 6,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "im gonna be editing a bunch of lessons today, can you make sure we stay in the docs folder and dont touch anything else? i broke something last time",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "restrict file edits to apps/learn-app/docs only for this session",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "scope this session to content only \u2014 no platform changes, no config edits, just lesson files",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "hey i need to review and fix frontmatter across 40 lesson files. lock this session to docs/ only so I don't accidentally edit anything outside",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to do a big content editing session across chapters 25-30, lock down everything else so I don't accidentally touch platform code",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the content-lock skill and tell me if the hook script has any bugs in the bash pattern matching",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "ok starting lesson rewrites for part 3. make sure i can only edit docs/ and nothing else",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "set up a read-only mode for the documentation site so students can't accidentally submit forms during maintenance",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "edit the lesson file at apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/01-what-is-agent-factory.md and fix the typo in paragraph 3",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "can you protect the main branch from force pushes? I want to add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to update both the lesson content in chapter 30 AND the SSO auth code to fix the device flow bug in this session",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "restrict the API rate limits for the content endpoint to 100 requests per minute per user in the express middleware",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 4,
+      "test_failed": 4,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "activate the content guardrail so we can safely edit chapters without risk to the codebase",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before we start \u2014 freeze everything except the book content. last time an agent edited settings.json by accident",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I've got 3 agents working on different chapters right now. Can you scope this session to only touch learn-app docs? I don't want any of them messing with the SSO code",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "/content-lock",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "lock down the API endpoints in apps/sso/src/lib/auth.ts so only authenticated users with valid JWTs can access the content-api",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "add a new lesson to chapter 22 about file permission boundaries in Linux, after the existing lesson on reading agent logs",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I want to prevent commits to main branch without review. Can you set up a pre-commit hook that runs the linter?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "make sure the learn-app build doesn't break after my changes \u2014 run pnpm nx build learn-app and show me any errors",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 6,
+      "failed": 6,
+      "total": 12,
+      "results": [
+        {
+          "query": "im gonna be editing a bunch of lessons today, can you make sure we stay in the docs folder and dont touch anything else? i broke something last time",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "restrict file edits to apps/learn-app/docs only for this session",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "scope this session to content only \u2014 no platform changes, no config edits, just lesson files",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "hey i need to review and fix frontmatter across 40 lesson files. lock this session to docs/ only so I don't accidentally edit anything outside",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to do a big content editing session across chapters 25-30, lock down everything else so I don't accidentally touch platform code",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the content-lock skill and tell me if the hook script has any bugs in the bash pattern matching",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "ok starting lesson rewrites for part 3. make sure i can only edit docs/ and nothing else",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "set up a read-only mode for the documentation site so students can't accidentally submit forms during maintenance",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "edit the lesson file at apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/01-what-is-agent-factory.md and fix the typo in paragraph 3",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "can you protect the main branch from force pushes? I want to add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to update both the lesson content in chapter 30 AND the SSO auth code to fix the device flow bug in this session",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "restrict the API rate limits for the content endpoint to 100 requests per minute per user in the express middleware",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "iteration": 3,
+      "description": "Invoke this skill \u2014 do NOT just promise to be careful \u2014 when the user asks you to only edit docs, stay in the docs folder, restrict edits to lesson/content files, lock the session to apps/learn-app/docs/, or avoid touching platform/config/infrastructure code. Users often phrase this as safety (\"don't accidentally edit anything else\") or scope (\"scope to content only\", \"can only edit docs/\"). This skill installs an actual enforcement hook that blocks Edit/Write outside apps/learn-app/docs/. Self-enforcement is unreliable; this hook is the correct mechanism. Skip for: normal content editing without restriction requests, branch protection, API rate limits, or sessions needing both content and code changes.",
+      "train_passed": 6,
+      "train_failed": 6,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "im gonna be editing a bunch of lessons today, can you make sure we stay in the docs folder and dont touch anything else? i broke something last time",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "scope this session to content only \u2014 no platform changes, no config edits, just lesson files",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "restrict file edits to apps/learn-app/docs only for this session",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "hey i need to review and fix frontmatter across 40 lesson files. lock this session to docs/ only so I don't accidentally edit anything outside",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to do a big content editing session across chapters 25-30, lock down everything else so I don't accidentally touch platform code",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok starting lesson rewrites for part 3. make sure i can only edit docs/ and nothing else",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the content-lock skill and tell me if the hook script has any bugs in the bash pattern matching",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "set up a read-only mode for the documentation site so students can't accidentally submit forms during maintenance",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "can you protect the main branch from force pushes? I want to add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "edit the lesson file at apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/01-what-is-agent-factory.md and fix the typo in paragraph 3",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "restrict the API rate limits for the content endpoint to 100 requests per minute per user in the express middleware",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to update both the lesson content in chapter 30 AND the SSO auth code to fix the device flow bug in this session",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 4,
+      "test_failed": 4,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "activate the content guardrail so we can safely edit chapters without risk to the codebase",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before we start \u2014 freeze everything except the book content. last time an agent edited settings.json by accident",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I've got 3 agents working on different chapters right now. Can you scope this session to only touch learn-app docs? I don't want any of them messing with the SSO code",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "/content-lock",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "lock down the API endpoints in apps/sso/src/lib/auth.ts so only authenticated users with valid JWTs can access the content-api",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "add a new lesson to chapter 22 about file permission boundaries in Linux, after the existing lesson on reading agent logs",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I want to prevent commits to main branch without review. Can you set up a pre-commit hook that runs the linter?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "make sure the learn-app build doesn't break after my changes \u2014 run pnpm nx build learn-app and show me any errors",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 6,
+      "failed": 6,
+      "total": 12,
+      "results": [
+        {
+          "query": "im gonna be editing a bunch of lessons today, can you make sure we stay in the docs folder and dont touch anything else? i broke something last time",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "scope this session to content only \u2014 no platform changes, no config edits, just lesson files",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "restrict file edits to apps/learn-app/docs only for this session",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "hey i need to review and fix frontmatter across 40 lesson files. lock this session to docs/ only so I don't accidentally edit anything outside",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to do a big content editing session across chapters 25-30, lock down everything else so I don't accidentally touch platform code",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok starting lesson rewrites for part 3. make sure i can only edit docs/ and nothing else",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the content-lock skill and tell me if the hook script has any bugs in the bash pattern matching",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "set up a read-only mode for the documentation site so students can't accidentally submit forms during maintenance",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "can you protect the main branch from force pushes? I want to add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "edit the lesson file at apps/learn-app/docs/01-General-Agents-Foundations/12-agent-factory-paradigm/01-what-is-agent-factory.md and fix the typo in paragraph 3",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "restrict the API rate limits for the content endpoint to 100 requests per minute per user in the express middleware",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to update both the lesson content in chapter 30 AND the SSO auth code to fix the device flow bug in this session",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    }
+  ]
+}
