@@ -10,469 +10,798 @@ Test your understanding of the PM cognitive load problem, the two-plugin archite
 
 <Quiz
 title="Chapter 36: Product Management Assessment"
-questions={[
-{
-question: "A PM at InsightFlow receives this Slack message from the Head of Sales: 'We need to add a Slack integration by Q3 — three enterprise prospects asked for it.' The PM wants to write a problem brief using /brief. Which of the following correctly describes the purpose of the problem brief at this stage?",
-options: ["Document the Slack integration's technical specifications and timeline for engineering", "Reframe the feature request into a structured problem statement without proposing a solution", "Confirm the Slack integration as the Q3 roadmap commitment for leadership sign-off", "Evaluate whether Slack integration is technically feasible given current architecture"],
-correctOption: 1,
-explanation: "A problem brief reframes a solution-prescriptive feature request ('add Slack integration') into a problem-focused document that describes what is wrong, who is affected, and what must be learned before committing to a solution. It explicitly prohibits solution proposals in the PROBLEM section. Technical specifications belong in a feature spec written later. Roadmap commitments happen after the discovery work the brief scopes. Technical feasibility is an engineering question, not the brief's purpose. Real-world connection: most feature requests arrive as solutions; the PM's job is to pause and understand the problem before committing engineering resources.",
-source: "Lesson 3: Discovery Briefs — Framing the Right Problem"
-},
-{
-question: "Analyst Alex builds dashboards at a 200-person SaaS company. She runs /interview to create a guide for understanding her reporting workflow. The Core Discovery segment includes: 'Would you use a template library if InsightFlow built one?' Which interview design principle does this question violate?",
-options: ["Behavior over opinion — the question asks about a UI element not a user action", "Silence is data — the question does not leave room for the participant to pause", "Problem before solution — the question mentions a specific InsightFlow feature", "Past over hypothetical — the question asks about future hypothetical behaviour"],
-correctOption: 3,
-explanation: "The question 'Would you use a template library if InsightFlow built one?' violates the past over hypothetical principle. Users are consistently optimistic about their future behaviour — they say yes to features they will never use. The research literature is clear: stated intention is a weak predictor of actual behaviour. The correct approach is to ask about a specific past experience: 'Walk me through the last time you built a dashboard from scratch.' Silence is data refers to letting participants pause. Problem before solution is about not mentioning features in the first half of the interview — this question appears in Core Discovery, not wrap-up. Behavior over opinion is related but the primary violation here is the future tense.",
-source: "Lesson 4: User Research — Interviews & Synthesis"
-},
-{
-question: "An InsightFlow PM runs /competitive-brief for AutoDash and receives a feature comparison matrix rating InsightFlow as 'Strong' in every capability area. The PM is about to present this to the CPO. What should the PM do before the presentation?",
-options: ["Add the CPO as co-author to the brief to align on ratings before the meeting", "Challenge the matrix for honesty — no product is Strong everywhere, and the brief is likely not credible", "Verify the competitive data by running a second /competitive-brief with a different competitor", "Present the matrix as-is since the /competitive-brief command produces objective ratings"],
-correctOption: 1,
-explanation: "A feature comparison matrix that rates InsightFlow Strong in every category is not credible — it reflects analyst bias, not reality. The most valuable competitive brief honestly identifies where competitors have genuine advantages, because those gaps become product roadmap inputs. If the CPO were presented with this matrix, the likely objection is that it looks like marketing, not analysis. The /competitive-brief command produces structured output, but its quality depends on honest inputs and evaluation. Running a second brief against a different competitor does not fix the rating inflation in the first one. Adding the CPO as co-author does not address the honesty problem. Real-world connection: PMs who accept flattering competitive analyses make under-investments in genuine capability gaps that competitors expose during sales cycles.",
-source: "Lesson 5: Competitive Intelligence"
-},
-{
-question: "InsightFlow's PM writes this acceptance criterion for the trigger configuration feature: 'The schedule trigger activates the workflow and sends a confirmation notification.' The engineering lead asks the PM to revise it. Which AC quality rule does this criterion violate?",
-options: ["Behavior not implementation — the criterion specifies an internal service behaviour", "Independently testable — the criterion cannot be verified without the workflow running", "No 'and' — the criterion combines two distinct requirements into one", "Measurable thresholds — the criterion lacks a specific timing or performance standard"],
-correctOption: 2,
-explanation: "The acceptance criterion 'activates the workflow and sends a confirmation notification' violates the no 'and' rule. A single AC with 'and' contains two requirements. If only one passes in the test suite, you cannot tell whether the feature is ready to ship. The correct fix is to split into two ACs: AC1 = trigger activates the workflow; AC2 = user receives a confirmation notification. Behavior not implementation applies when ACs mention database operations or service names. Independently testable applies when one AC depends on another being true first. Measurable thresholds applies when quality language like 'fast' or 'user-friendly' appears. The 'and' rule is not pedantry — it is how you prevent 'it mostly works' from becoming the standard for shipping.",
-source: "Lesson 6: Feature Specifications"
-},
-{
-question: "A PM is writing the Section 4 Functional Requirements of InsightFlow's Workflow Builder PRD. After listing eight features, the PM counts that seven are labelled MUST. According to the /prd skill's quality rules, what should the PM do?",
-options: ["Proceed — seven out of eight MUST requirements is within normal parameters for a major initiative", "Convert all SHOULDs to COULDs to create room for the MUSTs at 87%", "Challenge each MUST by asking 'Would we genuinely not launch without this?' and downgrade any that are actually SHOULDs", "Remove two features entirely from the PRD scope to bring the MUST count below five"],
-correctOption: 2,
-explanation: "The /prd skill enforces a specific constraint: if more than 60% of requirements are labelled MUST, the scope is too large. Seven of eight is 87% — well above the threshold. The correct action is to challenge each MUST with the test question: 'If this were not ready on launch day, would we delay the entire initiative?' If any MUST would not actually block the launch, it is a SHOULD. MUSTs that are actually SHOULDs inflate scope, slow down the first launch, and defer the learning you could get from shipping smaller. Converting SHOULDs to COULDs does not address the MUST inflation. Removing features is a more drastic action than the rule requires. The 60% rule is a forcing function, not a guideline — when everything is MUST, nothing is MUST.",
-source: "Lesson 7: PRDs for Multi-Team Initiatives"
-},
-{
-question: "After generating stories from the Workflow Builder PRD using /stories, the PM reviews this story: 'As a user, I want to click the trigger button and select a schedule, so that the system processes my trigger configuration.' How many violations of the three-part quality test does this story contain?",
-options: ["One — the 'so that' describes a system action rather than a user outcome", "Two — the persona is generic and the 'want' describes a UI element not a capability", "Three — the persona, the 'want', and the 'so that' all violate their respective quality rules", "Zero — the story correctly follows the As a / I want / So that format"],
-correctOption: 2,
-explanation: "This story contains three violations: (1) Persona violation: 'a user' tells engineers nothing about context, goals, or constraints — the correct persona would be 'Analyst Alex', which implies SQL-free, time-constrained, and report-focused context. (2) Capability violation: 'click the trigger button and select a schedule' describes UI elements the user clicks, not a capability they gain. The want should be 'configure a weekly schedule trigger for my workflow.' (3) Outcome violation: 'so that the system processes my trigger configuration' is a system action, not a user benefit. The outcome should be 'so that my Monday morning dashboard refresh happens automatically without me logging in.' Real-world connection: stories with all three violations create ambiguity at the sprint boundary about who the feature serves and why it matters.",
-source: "Lesson 8: User Stories & Story Mapping"
-},
-{
-question: "InsightFlow's PM receives a request from the CEO for 'the Q3 roadmap' in three versions for three audiences. When generating the customer-facing version using /roadmap-update, the PM includes specific delivery dates. What problem does this create?",
-options: ["Customers will use the dates to negotiate contract terms with the Head of Sales", "Date precision trains customers to treat the roadmap as a contract, converting updates into re-negotiations when dependencies slip", "The engineering team will see the dates and commit to them without capacity checks", "Legal will require the dates to be reviewed before any customer-facing document is released"],
-correctOption: 1,
-explanation: "A customer-facing roadmap that includes specific delivery dates creates contract expectations. Customers read 'Q3' as a guarantee. When a dependency slips — and dependencies always slip — the PM is now renegotiating a contract rather than updating a plan. Now/Next/Later avoids this by communicating timeframe buckets, not calendar commitments. Customers read 'Next' as a direction, not a date. The engineering commitment problem is real but separate from the contract-expectations problem with customers. Legal review is not the primary concern here. Real-world connection: PMs who use dates on customer roadmaps frequently spend time in reactive conversations about 'when exactly' rather than proactive conversations about product direction.",
-source: "Lesson 9: Roadmap Planning & Communication"
-},
-{
-question: "A PM applies RICE scoring to InsightFlow's Q3 backlog. The Mobile App (iOS) scores a RICE of 3 — the lowest item. The CEO immediately says it is the most strategically important Q3 investment. Which of the three mandatory challenges is most relevant to this situation?",
-options: ["The Data Gap Test — Mobile App's confidence of 25% means a discovery spike is needed before any build commitment", "The 'What Would We Regret?' Test — the CEO's intuition represents what customers would be most grateful for", "The Strategic Override Test — if the CEO would build it regardless of score, the override reason must be documented", "None — the RICE score of 3 is objective evidence that Mobile App should not be built this quarter"],
-correctOption: 2,
-explanation: "The Strategic Override Test asks: 'Is there any item that scored low that you would build anyway?' The CEO saying it is the most important investment is a potential override scenario. If the decision is made to build it despite the low RICE score, the override reason must be documented explicitly — not buried in score inflation. The Data Gap Test applies when confidence is below 50% and a discovery spike could raise it, but the primary issue here is an override, not a data gap. The Regret Test is useful for sanity-checking the top RICE scorer, not for reconciling a CEO mandate. RICE scores are not objective — they are relative rankings built on explicit assumptions, and they have known blind spots including strategic necessity. Real-world connection: RICE scores are inputs to a decision, not decisions themselves.",
-source: "Lesson 10: Backlog Prioritization Frameworks"
-},
-{
-question: "InsightFlow's Sprint 1 team has five engineers with a combined raw capacity of 40 story days. Sasha is on-call primary (subtract 1.5 days), Leo has 3 days PTO, and all engineers have 1 day of meetings overhead each. Using the 70-80% planning capacity rule, approximately how many story points should the sprint be committed to?",
-options: ["40 story points — full raw capacity to maximise delivery in the sprint", "30 story points — 75% of the 40 raw story days after overhead deductions", "28 story points — 70% of 40 raw days before accounting for individual overhead", "33 story points — raw capacity minus PTO and on-call only, without the buffer"],
-correctOption: 1,
-explanation: "The calculation follows three steps: (1) Start with 40 raw available days across five engineers. (2) Subtract Sasha's 1.5 on-call days, Leo's 3 PTO days, and 5 total days of meeting overhead = 40 - 1.5 - 3 - 5 = 30.5 real available days. (3) Apply the 70-80% rule at approximately 75%: 30.5 × 0.75 ≈ 23 points — but using the raw days first and then deducting: 40 × 0.75 = 30 points as the planning target. The lesson uses 30 points as the planning capacity for exactly this team configuration. Planning to 100% (40 points) guarantees missed commitments because interrupts always occur. 28 points skips the overhead deductions. 33 points omits the buffer multiplier. Real-world connection: teams that plan to 80% and deliver reliably build stakeholder trust faster than teams that plan to 100% and miss.",
-source: "Lesson 11: Sprint Planning & Capacity"
-},
-{
-question: "A PM at InsightFlow discovers midweek that the auth service review meeting has not been scheduled, potentially delaying WF-003 trigger UI start by 2-3 days. The PM is writing the weekly stakeholder update to the CEO. Which G/Y/R status and communication approach is correct?",
-options: ["Green — 2-3 days is minor and within normal sprint variability, so no status change is needed", "Yellow — flag the watch item proactively now that the risk is materialising, even though no help is needed yet", "Red — the PM needs the CEO to intervene and schedule the meeting immediately", "Yellow — wait until the meeting is definitely not scheduled before changing from Green to Yellow"],
-correctOption: 1,
-explanation: "Yellow status should be applied at the FIRST sign of risk materialising — before the PM is certain something will go wrong. The rule is: move to Yellow when you have a concern and mitigation in place but the outcome is uncertain. The missing meeting scheduling is exactly this scenario. A PM who never reports Yellow is either managing a perfect product or hiding problems. Green would be accurate only if there were no risks requiring monitoring. Red is for situations where the PM has exhausted options and needs external help — scheduling follow-up is still within the PM's scope. Waiting until the risk is certain defeats the purpose of Yellow, which is early warning. Real-world connection: stakeholders given Yellow early have more options to help than stakeholders first hearing about a risk when it becomes Red.",
-source: "Lesson 12: Stakeholder Communication"
-},
-{
-question: "InsightFlow's monthly metrics review shows: New signups up 9.7%, but activation rate (signups who create first dashboard within 7 days) dropped from 37% to 34%. The self-serve onboarding redesign launched three weeks ago. A PM using /metrics-review should classify the activation drop as which of the following?",
-options: ["A confirmed causal relationship — the onboarding redesign caused the activation drop, requiring immediate rollback", "A correlation that warrants investigation — the timing is suggestive but funnel data must confirm the cause", "A vanity metric movement — activation rate is not part of InsightFlow's North Star and should be deprioritised", "A positive signal — 34% activation means 34% of new signups are creating dashboards within 7 days"],
-correctOption: 1,
-explanation: "The /metrics-review skill is explicit: never attribute a metric change as certain — correlation is not causation. The timing between the onboarding redesign launch and the activation drop is suggestive but not proof. The correct action is to investigate with L2 diagnostic metrics — specifically funnel drop-off data for the new onboarding flow — to identify where users are leaving. Calling it a confirmed causal relationship without funnel data is premature and could lead to rolling back a design that was not the culprit. Activation rate is a high-leverage L1 health indicator, not a vanity metric — it predicts retention, LTV, and NPS simultaneously. 34% activation being 'positive' ignores the downward trend from 37% and the target of 40%. Real-world connection: the fastest path from a metric anomaly to the right fix is identifying the exact funnel step that changed.",
-source: "Lesson 13: Metrics, OKRs & Product Analytics"
-},
-{
-question: "InsightFlow's Sprint 1 retrospective process improvement reads: 'We need to communicate better with the engineering team about specifications.' According to the /retro skill's STRONG vs. WEAK rule format, why is this a weak process improvement, and what would a strong version look like?",
-options: ["It is weak because it does not name who is responsible; a strong version assigns an owner and a deadline", "It is weak because it is vague — it does not specify what action to take at what step; a strong version would be: 'Engineering lead must confirm architecture notes in the PRD before REVIEW status'", "It is weak because communication is a soft skill, not a process; a strong version would focus only on documentation artefacts", "It is weak because it focuses on one sprint; a strong version would address the systematic problem across all future sprints"],
-correctOption: 1,
-explanation: "The STRONG vs. WEAK rule test is: 'Can you tell someone exactly what action to take, at what step in the workflow, before they would otherwise have proceeded?' 'Communicate better' fails this test because it gives nobody an action. A strong version names a specific rule: 'Engineering lead must confirm architecture notes in the PRD Section 6 before the PRD moves to REVIEW status.' This is testable — at the REVIEW gate, you can verify whether confirmation happened. Assigning an owner and deadline is one ingredient of a strong improvement but not sufficient without the specific action. Communication not being a process is incorrect — communication has specific steps that can be encoded as rules. The scope (one sprint vs. all sprints) is not the primary distinction between weak and strong.",
-source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
-},
-{
-question: "A new PM joining InsightFlow asks: 'Which plugin do I use to create a problem brief before we start discovery on a new feature?' According to the Chapter 36 two-plugin architecture, what is the correct answer?",
-options: ["The official product-management plugin, using the /write-spec command in problem-framing mode", "The custom product-strategy plugin, using the /brief command", "Either plugin — both contain /brief as a shared command for discovery work", "The official product-management plugin, using /competitive-brief to understand the market context first"],
-correctOption: 1,
-explanation: "The /brief command belongs exclusively to the custom product-strategy plugin (Layer 2), which fills the workflow gaps the official plugin does not cover. The custom plugin enforces specific craft principles — like 'never propose a solution in a problem brief' — as structural rules. /write-spec (official plugin) is for writing feature specifications after discovery, not for framing problems before it. There is no shared /brief command — command ownership is clearly split between the two plugins. /competitive-brief (official plugin) is used for analysing competitors, not for initial problem framing. Real-world connection: understanding which commands come from which plugin helps PMs select the right tool for each phase of the PM workflow cycle without trial and error.",
-source: "Lesson 15: Chapter Summary & Quick Reference"
-},
-{
-question: "A PM describes InsightFlow's primary cognitive load problem as: 'PMs don't know how to write good specs.' What is the lesson's correction to this framing, and what does it imply for how AI agents should be positioned?",
-options: ["The correction is correct — PM training gaps are the root cause and AI agents should compensate for skill deficits", "The real problem is structural: volume of writing required to PM well exceeds available time; AI agents address the constraint, not the skill gap", "The framing is partially right — AI agents should be used to teach PMs spec-writing through guided exercises", "The correction is that engineers, not PMs, should write specs; AI agents help engineers translate requirements autonomously"],
-correctOption: 1,
-explanation: "Lesson 1 is explicit: the document gap is not laziness and not a skills problem. Most PMs know how to write a good spec — they just cannot write it at the quality it deserves AND do everything else simultaneously. The PM's cognitive load problem is structural: the volume of writing required to PM well exceeds the time available. An experienced PM who can write a brilliant feature spec in two hours typically does not have two uninterrupted hours. AI agents address this structural constraint: the agent writes the first draft, the PM reviews and directs. This positions AI as removing the bottleneck between PM judgment and the documentation that expresses it. Positioning AI as a training tool or skill compensator misrepresents the problem and the value. Real-world connection: the framing determines how an organisation adopts AI PM tools — correctly framed, adoption is about quality at speed, not automation of incompetence.",
-source: "Lesson 1: The PM's Cognitive Load Problem"
-},
-{
-question: "A PM configures product.local.md for InsightFlow with the primary persona described as: 'Users who need analytics.' After running /brief on a feature request, the output sounds generic and does not mention InsightFlow's specific users. What is the root cause?",
-options: ["The /brief command requires a separate context file — product.local.md is only used by /write-spec and /roadmap-update", "The Personas section is under-specified — a persona must describe behaviour, goals, and frustrations to change AI output meaningfully", "The Product Identity section is missing — /brief reads only the product name and description, not the persona", "The plugin needs to be reinstalled with a custom persona configuration before /brief uses product.local.md data"],
-correctOption: 1,
-explanation: "The Personas section is the highest-leverage section of product.local.md. 'Users who need analytics' implies nothing about context, goals, or constraints. Compare this to: 'Analyst Alex — data analyst at 100-500 person company, builds dashboards without SQL, biggest frustration is report requests taking 3+ days, 10/10 week is building three dashboards without receiving any 'when will this be ready?' messages.' That description changes the tone, specificity, and focus of nearly every command output. product.local.md is read by all commands in a Cowork session — it is not command-specific. The Product Identity section helps but the Personas section is the primary driver of specificity. No reinstallation is needed — the file is read at session load. Real-world connection: sparse personas produce generic outputs regardless of prompt quality.",
-source: "Lesson 2: Plugin Architecture & Your Product Context"
-},
-{
-question: "A research synthesis from /synthesize-research includes this finding: 'Users want better export options.' A senior PM reviewing the output flags this as a weak finding. What category of finding is this, and what would a strong version look like?",
-options: ["It is a behavioral finding — strong, but needs a source count to be complete", "It is a stated preference finding — weak; a strong version describes observable behaviour like 'Participants spent 40-60 minutes reformatting exported data in Excel before sharing reports'", "It is a theme-level finding — acceptable at this stage; L2 diagnostics would add specificity later", "It is a valid insight — user preferences are valid research findings when they appear in multiple interviews"],
-correctOption: 1,
-explanation: "Lesson 4 draws a sharp distinction between behavioral findings and stated preference findings. 'Users want better export options' is a stated preference — it reports what users said, not what they did. Stated preferences are the users' proposed solutions to a problem they experienced. A behavioral finding describes what was observed: 'Participants spent an average of 40-60 minutes reformatting exported data in Excel before sharing reports — a step all five participants described as unavoidable.' That is evidence. Behavioral findings come from observing what users do; stated preference findings come from what they say. The synthesis should distinguish between them because they support different product decisions. 'Behavioral finding needing source count' is incorrect — it is not a behavioral finding at all. Theme-level findings still need to be behavioral, not preference-based. Real-world connection: product teams that act on stated preferences build features for hypothetical future behaviour.",
-source: "Lesson 4: User Research — Interviews & Synthesis"
-},
-{
-question: "InsightFlow's /competitive-brief output rates AutoDash as 'Absent' for trigger-based automations — the same rating as InsightFlow. An engineer suggests InsightFlow should deprioritise automation since 'no one has it.' What is the correct strategic interpretation of both competitors being 'Absent'?",
-options: ["The engineer is right — market data shows automation is not yet valued by buyers in this segment", "Both being Absent means the market is not ready for automation; InsightFlow should focus on analytics parity first", "This is InsightFlow's strategic window to own the automation positioning before a competitor establishes a foothold", "InsightFlow should partner with AutoDash to co-develop automation rather than competing in an undeveloped space"],
-correctOption: 2,
-explanation: "When both competitors are Absent in a capability area, it represents an unclaimed strategic position — not evidence that the market does not want it. The competitive brief's strategic implication is precisely this: 'If InsightFlow ships workflow automation before AutoDash iterates on their weak alert/notification entry, InsightFlow can own the automation positioning in this segment.' The window is temporary — if AutoDash invests here, the opportunity closes. The engineer's interpretation confuses no current offering with no market demand. The L04 research synthesis already showed 8/12 users cited manual workflows as their primary pain point, establishing demand. Partnership with a competitor at the exact moment you could differentiate is the wrong strategic call. Real-world connection: the differentiate vs. parity framework helps PMs distinguish where to lead from where to catch up.",
-source: "Lesson 5: Competitive Intelligence"
-},
-{
-question: "An InsightFlow PM writes this acceptance criterion for a dashboard export feature: 'Export completes quickly for large dashboard selections.' The engineering lead says this criterion is not sprint-ready. Which rule does it violate, and what is the corrected version?",
-options: ["It violates 'independently testable' — it depends on whether the dashboard is loaded first; split into two criteria", "It violates 'measurable thresholds' — 'quickly' is unmeasurable; a corrected version would be 'Export completes within 10 seconds for selections of up to 10 charts'", "It violates 'behavior not implementation' — 'completes' implies an async job queue; rewrite to describe the user experience", "It violates 'no and' — exporting and being quick are two requirements; split into separate acceptance criteria"],
-correctOption: 1,
-explanation: "The criterion 'export completes quickly' violates the measurable thresholds rule because 'quickly' is vague quality language that no test suite can evaluate objectively. 'Quickly' to the PM might mean 5 seconds; to the engineer it might mean 30 seconds; to the user it might mean 2 seconds. A corrected version specifies a threshold: 'Export completes within 10 seconds for selections of up to 10 charts.' The four AC quality rules are independently testable, no 'and', behavior not implementation, and measurable thresholds. 'Independently testable' applies when one AC depends on another being true first. 'Behavior not implementation' applies when the AC mentions database operations or service names. 'No and' applies when two requirements are joined. Real-world connection: vague ACs are the most common source of feature rework — 'it mostly works' becomes the de facto definition of done.",
-source: "Lesson 6: Feature Specifications"
-},
-{
-question: "InsightFlow's PRD for Workflow Builder defines success as 'workflow automation adoption will improve.' The CPO rejects the success metric as insufficient. What specific element is missing, and what format would a strong success metric include?",
-options: ["The metric is missing executive sponsorship — the CPO must approve success definitions before the PRD reaches REVIEW status", "The metric lacks specificity — a strong version names a specific metric, a baseline, a target, and a timeframe, such as '20%+ of Pro accounts activate one automated workflow within 90 days of GA'", "The metric is missing competitive benchmarks — what automation adoption looks like at competitor products must be included", "The metric is vague because it says 'adoption' rather than specifying the user persona — add 'Analyst Alex adoption' to the definition"],
-correctOption: 1,
-explanation: "The PRD's success metric 'will improve' fails the specificity test. A strong success metric includes: (1) a specific metric (automated workflow activation rate), (2) a baseline if known, (3) a quantified target (20%+ of Pro and Business accounts), and (4) a timeframe (within 90 days of GA). The lesson also requires a failure threshold — the specific outcome that would cause a change in direction before it becomes sunk-cost escalation. Without a failure threshold, the post-launch review becomes a negotiation about whether numbers are 'good enough.' Executive sponsorship is a process step, not a metric ingredient. Competitive benchmarks are useful context but not required in the metric definition. Specifying the persona in a metric is unusual — metrics measure outcomes across users, not per-persona targets.",
-source: "Lesson 7: PRDs for Multi-Team Initiatives"
-},
-{
-question: "A PM generates stories from the Workflow Builder PRD and receives a story with 9 acceptance criteria. The engineering lead says it is an epic, not a story. Which of the four splitting triggers applies, and how should the PM split it?",
-options: ["The 'cannot complete in one sprint' trigger — split by delivery phase (design phase vs. implementation phase)", "The 'more than 7 ACs' trigger — identify the distinct user flows within the story and create one story per flow", "The 'multiple personas' trigger — separate stories for Analyst Alex and VP Priya who both use trigger configuration", "The 'multiple user flows' trigger only applies to stories covering setup and editing — 9 ACs alone is not a trigger"],
-correctOption: 1,
-explanation: "When a story exceeds 7 acceptance criteria, the PM has usually combined two or more user flows into one story. The correct fix is not to condense the ACs — it is to identify the distinct flows and create one story per flow. For example, if a trigger configuration story covers both 'initial setup flow' and 'editing an existing trigger flow', that is two stories. A story is a slice, not a summary. The 'cannot complete in one sprint' trigger applies when the estimate exceeds sprint capacity, not merely because AC count is high. The 'multiple personas' trigger applies when the story serves two fundamentally different user types — 9 ACs from a single persona's interactions is not this. The claim that 9 ACs alone is not a trigger is incorrect — the lesson is explicit that 7+ ACs is a splitting signal. Real-world connection: PMs who split stories before sprint planning prevent mid-sprint scope surprises.",
-source: "Lesson 8: User Stories & Story Mapping"
-},
-{
-question: "An enterprise customer contacts InsightFlow's Head of Customer Success asking: 'Your roadmap says data threshold triggers are coming in Q3 — can we count on that for our contract renewal?' The PM used the Now/Next/Later format but included a specific Q3 label for threshold triggers. What is the root cause of this expectation problem?",
-options: ["The customer misread 'Next' as 'Now' because the roadmap did not clearly define the bucket meanings", "Specific time references like 'Q3' on customer-facing roadmaps create contract expectations — Now/Next/Later avoids this by communicating direction without dates", "The Head of Customer Success should not have shared the roadmap without PM approval first", "The customer's expectation is legitimate — if the PM committed Q3 in writing, that is a valid contract obligation"],
-correctOption: 1,
-explanation: "The lesson is explicit: customer-facing roadmaps that include specific time references (Q3, specific months) create contract expectations. Customers read 'Q3' as a guarantee. When a dependency slips, the PM is now renegotiating a contract rather than updating a plan. The Now/Next/Later format is deliberately time-ambiguous: 'Next' communicates direction without creating a commitment the engineering team cannot guarantee. The customer did not misread the format — the format itself caused the problem by using Q3 as a label. CS sharing the roadmap is not the issue; the roadmap format is. The customer's expectation is understandable but not the PM's intent — the lesson's prescription is to prevent this situation by using benefit language without dates. Real-world connection: the most common customer-facing roadmap mistake is conflating internal planning precision with external communication.",
-source: "Lesson 9: Roadmap Planning & Communication"
-},
-{
-question: "InsightFlow's PM runs /prioritise with RICE scoring. The Cohort Analysis feature scores a RICE of 3 due to 30% confidence and 4 sprints of effort. The quarterly priority decision marks it as 'Not Building.' A stakeholder asks why it is not being built. What is the correct PM response, and what action should follow?",
-options: ["Explain that cohort analysis is low-priority because user demand is weak based on single-source feedback", "Explain that the low confidence score means a 2-week discovery spike should run first to determine if cohort analysis addresses a genuine unmet need before committing 4 sprints", "Explain that the RICE score of 3 is the objective evidence that the feature should not be built this quarter", "Explain that the feature will be re-evaluated next quarter when confidence data improves naturally through customer requests"],
-correctOption: 1,
-explanation: "The Data Gap Test asks: for items with confidence below 50%, what would it take to raise confidence above 70%, and can that happen in a 2-week discovery spike? Cohort analysis at 30% confidence with 4 sprints of effort is a prime discovery spike candidate. Investing 2 weeks in research to validate whether the feature addresses a genuine workflow analytics need (vs. what standard BI tools already do) is far cheaper than discovering 2 sprints in that the assumption was wrong. Saying demand is 'weak' misrepresents the situation — demand may be real but evidence is insufficient. RICE scores are relative inputs to decisions, not objective evidence. Waiting for confidence to 'improve naturally' without a structured spike is passive and inefficient. Real-world connection: the cost of a discovery spike is 2 weeks; the cost of building the wrong high-effort feature is an entire quarter.",
-source: "Lesson 10: Backlog Prioritization Frameworks"
-},
-{
-question: "InsightFlow's Sprint 1 plan is loaded at 97% of planning capacity. The PM presents three options to the engineering lead: (A) cut WF-006 dashboard load optimisation (3 pts, P1), (B) move WF-005 error handling (5 pts, P1) to stretch, or (C) accept 97% and flag it. What does the agent's output correctly tell the PM about option C?",
-options: ["Option C is recommended — 97% is within the acceptable margin for a high-priority sprint", "Option C is only defensible if Leo returns from PTO before WF-005 is scoped — the decision depends on context the agent does not have", "Option C is incorrect — the agent should automatically remove the lowest-priority item to bring load under 85%", "Option C should never be accepted — any sprint over 80% capacity must have items cut before planning proceeds"],
-correctOption: 1,
-explanation: "The lesson explicitly states that accepting 97% 'is only defensible if Leo is back from PTO before WF-005 is scoped' and that 'the right answer depends on context the agent does not have. This is where your judgment comes in. The agent surfaces the problem. You make the call.' The sprint planning command surfaces the overload problem — the PM resolves it. The agent correctly flags the 97% load and presents options, but cannot know whether Leo's early return changes the risk calculus. The agent should not automatically remove items — that would remove PM judgment from a scope decision. 97% is above the 70-80% recommendation but the lesson does not say it can never be accepted in context. Real-world connection: sprint planning tools that auto-cut items remove PM judgment from decisions that depend on team-specific context.",
-source: "Lesson 11: Sprint Planning & Capacity"
-},
-{
-question: "A PM writes a stakeholder update for the engineering team and includes: 'The sprint is progressing well.' An engineering lead responds: 'This tells me nothing about what I need to do this week.' Which content element is missing from the engineering version?",
-options: ["The sprint's G/Y/R status — engineers need the traffic light signal, not prose", "Specific blockers, priority decisions, and what changes in the coming week — the engineering update contains decisions and actions, not status summaries", "The failure threshold — engineers need to know when the sprint would be considered unsuccessful", "The capacity table — engineers need to see how many points are remaining for the sprint"],
-correctOption: 1,
-explanation: "The engineering stakeholder update serves a fundamentally different purpose from the executive update. Engineers need: specific ticket status (WF-001, WF-002), decisions made with ADR references, blockers and who is unblocking them, and priority actions for the coming week. 'The sprint is progressing well' contains none of this. The engineering version is not a compressed version of the executive update — it contains entirely different content targeted at engineers' actual information needs. G/Y/R status is one element but insufficient alone. A failure threshold is a PRD concept, not a sprint update element. The capacity table belongs in the sprint plan, not the weekly update. Real-world connection: PMs who send the same update to all audiences waste engineers' time and lose executive attention simultaneously.",
-source: "Lesson 12: Stakeholder Communication"
-},
-{
-question: "InsightFlow's CPO asks the PM to add 'number of features shipped per sprint' as a Key Result for the Q2 OKRs. The PM pushes back. What is the PM's strongest argument?",
-options: ["Features shipped per sprint is a velocity metric, not an outcome metric — it belongs in the engineering dashboard, not OKRs", "The team could hit this KR without a single user benefiting — it measures team output, not user behaviour outcomes", "Features shipped per sprint is not measurable at the quarterly level — sprint velocity varies too much to be a reliable KR", "The CPO should not be involved in setting Key Results — that is the PM's responsibility under OKR governance"],
-correctOption: 1,
-explanation: "The output KR trap test is explicit: 'Could your team hit this KR without a single user benefiting?' Features shipped per sprint fails this test completely — a team could ship ten features that nobody uses and still hit the KR. OKR Key Results must measure user and business outcomes (activation rate, retention, NPS) not team activity (features shipped, tickets closed, interviews completed). The team influences outcomes but does not control them — that is the disciplinary value of outcome KRs. Velocity is a useful engineering metric but not an OKR. Quarterly measurability of sprint velocity is a minor concern compared to the core output vs. outcome distinction. CPO involvement in KRs is appropriate — the objection is about content, not governance. Real-world connection: OKRs that measure output create incentives to ship rather than to deliver value.",
-source: "Lesson 13: Metrics, OKRs & Product Analytics"
-},
-{
-question: "The Research Intelligence Agent flags this signal during its Monday digest: a single support ticket this week about dashboard load time. How should the agent classify this signal, and why?",
-options: ["🔴 ESCALATE — any support complaint about performance requires immediate PM attention", "🟡 MONITOR — one ticket is suggestive but not yet a pattern requiring action", "🟢 NOTED — one complaint is noise; the agent's own NEVER DO rule is 'never surface a single user complaint as a signal'", "The agent should generate a /brief immediately because performance issues can compound quickly"],
-correctOption: 2,
-explanation: "The Research Intelligence Agent's NEVER DO rules are explicit: 'Never surface a single user complaint as a signal — one complaint is noise; three is a pattern; five is a signal.' A single ticket about dashboard load time does not meet the threshold for even Monitor status. It should be logged as NOTED and tracked across future weeks to see if it becomes a pattern. Escalating immediately would create alarm without evidence. Monitor implies the signal warrants ongoing attention — one ticket does not. Generating a /brief problem brief requires a pattern across multiple data sources or repeated occurrences. Real-world connection: agents that escalate every individual complaint create alert fatigue and train PMs to ignore the inbox, defeating the purpose of continuous monitoring.",
-source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
-},
-{
-question: "Which of the following correctly describes the relationship between the custom /brief command and the official /write-spec command in the PM workflow cycle?",
-options: ["/brief and /write-spec are interchangeable — both create structured requirement documents for engineering teams", "/brief frames the problem and defines what to investigate; /write-spec documents what to build after discovery is complete", "/write-spec wraps the output of /brief into a five-section spec automatically when run in sequence", "/brief is used by the PM while /write-spec is used by engineering leads to define technical implementation details"],
-correctOption: 1,
-explanation: "The PM workflow cycle shows /brief at the DISCOVER phase and /write-spec at the DEFINE phase — separated by research (/interview and /synthesize-research) and competitive analysis (/competitive-brief). A problem brief contains no solution proposals; it defines the problem and the discovery questions that must be answered before building. A feature spec describes what to build after that discovery is complete. They are not interchangeable — conflating them leads to committing to solutions before understanding problems. /write-spec does not automatically process /brief output — the PM synthesises discovery findings and makes a judgment call about what to build before invoking /write-spec. Both commands are PM tools, not separated by role. Real-world connection: PMs who skip the brief and jump to the spec often discover post-launch that they built the technically correct solution to the wrong problem.",
-source: "Lesson 15: Chapter Summary & Quick Reference"
-},
-{
-question: "A PM at a startup is producing PM artifacts for a feature from ideation to launch. Which PM role produces the retrospective document, and what is the most common quality failure when retrospectives are written under time pressure?",
-options: ["Researcher role — retrospectives analyse user feedback; the quality failure is insufficient interview sample size", "Decision-maker role — retrospectives evaluate sprint decisions; the quality failure is missing owner assignments for action items", "Communicator role — retrospectives are stakeholder documents; the quality failure is sending the wrong version to engineers", "Writer role — retrospectives are documentation artifacts; the most common quality failure is not writing the retrospective at all"],
-correctOption: 3,
-explanation: "Lesson 1 maps the decision-maker role to prioritisation docs, sprint briefs, and retrospectives — but the most common quality failure the lesson describes is that retrospectives are skipped entirely because there is no time. The document gap applies not just to specs and PRDs but to all PM artifacts, including retrospectives. 'Teams who repeated the same mistakes because the retrospective was never written' is listed as one of the four key failure modes from skipped artifacts. The researcher role covers discovery notes and research syntheses. The decision-maker role does produce retrospectives (not the communicator or writer), but the failure mode the lesson names is not missing action items — it is the retrospective not being produced at all. Real-world connection: teams that skip retrospectives lose the compounding learning that would improve every subsequent sprint.",
-source: "Lesson 1: The PM's Cognitive Load Problem"
-},
-{
-question: "The InsightFlow PM is setting up product.local.md and writes this Personas section: 'Primary persona: software users who want to see data.' The Teaching Guide for L02 warns this will produce poor output. What specific field most dramatically changes /brief output quality when described with precision?",
-options: ["The product's pricing tier — commands calibrate tone and formality based on whether the product is Free vs. Enterprise", "The persona's '10/10 week' description — it forces specificity about what a perfect week looks like, which grounds every command's output in concrete user reality", "The persona's company size — commands use this to determine whether to apply SMB or enterprise product patterns", "The Engineering Team section — commands read team size to calibrate how technical the output should be"],
-correctOption: 1,
-explanation: "Lesson 2's Teaching Guide identifies the Personas section as the highest-leverage section and specifically flags the '10/10 week' field: 'it forces specificity that generic persona descriptions avoid.' For Analyst Alex, a 10/10 week is: 'builds three new dashboards for different teams, receives no 'when will this be ready?' Slack messages, and sees two dashboards get referenced in a team meeting without anyone asking who built them.' This vivid description changes what 'success' means for every command run in the session. The product's pricing tier affects some commands but is not the single highest-leverage field. Company size provides context but is far less impactful than a behavioural persona description. Engineering Team section is important for sprint planning but does not affect discovery-phase commands like /brief. Real-world connection: the single best investment in product.local.md quality is time spent writing the '10/10 week' for the primary persona.",
-source: "Lesson 2: Plugin Architecture & Your Product Context"
-},
-{
-question: "A PM runs /brief and receives a problem brief for the real-time collaboration feature request. The WHAT WE DO NOT KNOW YET section says 'N/A.' According to the /brief skill spec, what does this indicate, and what should the PM do?",
-options: ["N/A is acceptable when the problem is well understood — skip to the discovery brief type instead", "The brief fails a mandatory quality check — the WHAT WE DO NOT KNOW section must always be present and substantive; prompt the agent to add specific unknowns", "N/A indicates the discovery work is complete and the PM can proceed directly to /write-spec", "The agent encountered an ambiguity in the problem context — restart /brief with additional context about the feature request"],
-correctOption: 1,
-explanation: "Lesson 3 is explicit: 'If your brief does not have this section — or if the section says N/A — it is not a problem brief. It is a solution proposal wearing a problem brief's clothing. Acknowledging uncertainty is strength, not weakness.' The WHAT WE DO NOT KNOW section is what separates a genuine problem brief from a stakeholder request in a template. The correct action is to prompt the agent: 'The WHAT WE DO NOT KNOW section is missing. Add at least three specific unknowns about this problem.' N/A is never acceptable — even for well-understood problems there are unknowns worth surfacing. N/A does not mean discovery is complete; it means the brief was generated without the discipline the skill is designed to enforce. Real-world connection: a brief without acknowledged unknowns is the first step toward building the wrong thing with high confidence.",
-source: "Lesson 3: Discovery Briefs — Framing the Right Problem"
-},
-{
-question: "Three interview participants in InsightFlow's user research each independently mentioned wanting a 'bulk export feature.' A junior PM summarises this as 'Evidence: Three users want bulk export.' A senior PM revises the finding. What does the senior PM write instead?",
-options: ["'Evidence: Three users requested bulk export — this qualifies as a behavioral pattern meeting the minimum threshold for feature prioritisation'", "'Evidence: Users are spending 40-60 minutes reformatting individual exports in Excel — three participants described this as unavoidable; bulk export is their proposed solution'", "'Evidence: N=3 users mentioned bulk export, representing 60% of our interview sample — statistically significant for a product of InsightFlow's size'", "'Evidence: Bulk export appeared in three of five interviews, ranking it as the second most-requested feature behind template library'"],
-correctOption: 1,
-explanation: "Lesson 4 is explicit that stated feature requests are not evidence — they are users' proposed solutions to a problem. The behavioral evidence is what users are doing that makes them ask for bulk export: the 40-60 minutes reformatting individual exports, the unavoidable workaround, the observable behaviour. 'Three users want bulk export' is a stated preference; 'participants spent 40-60 minutes reformatting exported data' is behavioral evidence. The senior PM should capture the behavior, then note that bulk export is the users' proposed solution to that behavior. The 60% statistical framing misrepresents qualitative research. Ranking by mention frequency treats feature request volume as evidence, which the lesson explicitly corrects. Real-world connection: product teams that build features from stated preferences frequently discover the feature does not solve the underlying problem the users were experiencing.",
-source: "Lesson 4: User Research — Interviews & Synthesis"
-},
-{
-question: "InsightFlow's /competitive-brief categorises Excel and Google Sheets as which competitive tier, and why is this tier considered more strategically important than the direct competitor tier?",
-options: ["Adjacent tier — because Excel could add analytics features and compete directly if Microsoft chose to expand", "Direct tier — because Excel users and InsightFlow users have the same workflow needs, just with different tools", "Substitute tier — because Excel is an entirely different approach to the same underlying data management need", "Indirect tier — because Excel addresses the same problem (data analysis without SQL) through a different approach, and it is already installed, trusted, and costs nothing extra"],
-correctOption: 3,
-explanation: "Excel and Google Sheets are the indirect competitors: same problem (data analysis and reporting), different approach (manual spreadsheet work vs. a purpose-built analytics platform). The lesson explicitly states: 'Excel is InsightFlow's most dangerous competitor — not because it is a better analytics platform, but because it is already installed, already trusted, and costs nothing extra.' This makes the indirect tier often more strategically important than direct competitors: prospects who don't buy InsightFlow are mostly not going to AutoDash — most are continuing to use spreadsheets. Adjacent competitors (like WorkflowIQ) are different problems that could expand. Substitute competitors are entirely different approaches to the underlying need (e.g., hiring a data analyst). Direct competitors offer the same solution. Real-world connection: competitive analyses that focus only on direct competitors miss the largest at-risk segment of the addressable market.",
-source: "Lesson 5: Competitive Intelligence"
-},
-{
-question: "The InsightFlow PM writes a feature spec for the custom metric alerts feature. The spec currently has no OUT OF SCOPE list. The teaching guide warns about a specific failure mode when this section is missing. What is it?",
-options: ["The spec cannot progress to REVIEW status — the status gate system blocks advancement without an OUT OF SCOPE list", "Engineering will design a more expansive implementation than intended, since there is no written boundary preventing it", "The acceptance criteria become invalid without a scope boundary to define what 'done' means for the feature", "The CPO will reject the spec at review because the out of scope section is required for PRD reference"],
-correctOption: 1,
-explanation: "Lesson 6 states: 'The OUT OF SCOPE list in the Solution section deserves special attention. Every line you add to OUT OF SCOPE is a scope creep conversation you will never have to have.' Without this section, engineers make reasonable assumptions about adjacent capabilities — reasonable because the spec gave them no boundary. An engineer building custom metric alerts without an OUT OF SCOPE list might reasonably add a notification centre, mobile push notifications, and Slack integration because those feel natural. The explicit list prevents those conversations by making non-goals as clear as goals. The REVIEW status gate checks whether sections are complete, not specifically whether OUT OF SCOPE exists. Acceptance criteria can still exist without the OUT OF SCOPE list. CPO rejection is a possible outcome but not the primary failure mode the lesson identifies. Real-world connection: the single most effective tool against scope creep is explicit non-goals.",
-source: "Lesson 6: Feature Specifications"
-},
-{
-question: "An engineering lead signs off on the InsightFlow Workflow Builder PRD without reviewing Section 6 (Technical Architecture Notes). The PRD moves to APPROVED status. Two weeks into Sprint 1, an undiscovered architecture dependency surfaces, adding 3 sprints to the estimate. Which PRD quality rule was violated?",
-options: ["The MUST vs SHOULD rule — too many requirements were labelled MUST, making scope estimation unreliable", "The engineering lead sign-off on Section 6 is non-negotiable before REVIEW status — skipping this gate is the primary source of PRD-to-sprint failures", "The failure threshold definition — without a defined failure threshold, the team had no trigger to reassess architecture before sprint start", "The success metrics specificity rule — imprecise success metrics led to imprecise scoping in Section 6"],
-correctOption: 1,
-explanation: "Lesson 7 is explicit: 'The engineering lead sign-off on Section 6 is non-negotiable for REVIEW status. A PRD that goes to APPROVED without CTO confirmation of architecture notes has an unverified technical foundation — the most common source of PRD-to-sprint failures.' The lesson's PRD status gates state that REVIEW requires engineering lead confirmation of Section 6. The pattern described in the scenario — undiscovered architecture dependencies adding sprints — is exactly what this gate prevents. The MUST vs SHOULD rule is about scope prioritisation, not architecture estimation. The failure threshold defines the post-launch change trigger, not pre-sprint architecture. Success metrics specificity is about measuring outcomes, not scoping work. Real-world connection: architecture sign-off gates exist precisely because PMs cannot evaluate technical feasibility without engineering input.",
-source: "Lesson 7: PRDs for Multi-Team Initiatives"
-},
-{
-question: "A PM generates stories from InsightFlow's Workflow Builder PRD and receives this story: 'As VP Priya, I want to receive automated weekly reports in my inbox, so that the reporting service delivers scheduled outputs.' What violation does the 'so that' clause contain?",
-options: ["The 'so that' describes a future system state rather than a current user goal — rewrite using present tense", "The 'so that' is a system action ('the reporting service delivers') rather than a user outcome — rewrite as the benefit to VP Priya", "The 'so that' does not specify the report format — PDF vs. email summary must be defined at this level", "The 'so that' is acceptable — 'the reporting service delivers' describes the technical mechanism that serves VP Priya's goal"],
-correctOption: 1,
-explanation: "The three-part quality test for user stories requires the 'so that' to be a user outcome — the benefit to the specific user — not a system action. 'The reporting service delivers scheduled outputs' describes what the system does, not the value VP Priya receives. A strong 'so that' would be: 'so that I have team metrics before my Monday standup without asking Alex for them.' That describes VP Priya's outcome: awareness without dependency on another person. System actions ('so that the system processes', 'so that the trigger saves') fail the quality test because they do not test whether the story is worth building — you could achieve the system action without the user ever benefiting. Present vs. future tense is not the issue. Report format belongs in the acceptance criteria, not the story body. Real-world connection: user outcomes in 'so that' clauses test whether a story is worth building at all.",
-source: "Lesson 8: User Stories & Story Mapping"
-},
-{
-question: "InsightFlow's PM builds a Q3 roadmap and places 'Advanced trigger conditions (AND/OR logic)' in the Now bucket with 3 sprints committed. After sprint planning, the engineering lead says this item has no spec written. According to the Roadmap Coherence Agent's weekly checks, how would this situation be classified?",
-options: ["Sprint Alignment issue — the item is in the sprint without a roadmap tag and should be flagged as off-roadmap work", "Backlog Orphan — the item was added to the backlog without a roadmap theme tag", "Roadmap Coverage failure — a NOW item with no spec is an immediate flag; it cannot enter sprint planning in this state", "Capacity Allocation issue — the item consuming 3 sprints exceeds the 70% feature budget threshold"],
-correctOption: 2,
-explanation: "The Roadmap Coherence Agent's Check 2 (Roadmap Coverage) specifically monitors: 'Every NOW (current quarter) roadmap item is checked for spec status: REFINED spec ✅ — ready for sprint; DRAFT spec ⚠️ — not sprint-ready; NO SPEC ❌ — cannot enter sprint planning, immediate flag.' Advanced trigger conditions in the Now bucket with no spec at all is an immediate flag. The lesson states this situation requires immediate action, not just a weekly report note. Sprint Alignment (Check 3) monitors whether sprint items are tagged to the roadmap — this item is roadmap-tagged but lacks a spec. Backlog Orphan (Check 1) monitors items without roadmap theme tags. Capacity allocation is a planning rule, not a coherence check. Real-world connection: the coherence agent exists precisely to catch this gap before engineering commits to work without a spec.",
-source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
-},
-{
-question: "InsightFlow's PM is generating the quarterly priority decision using /prioritise. After RICE scoring, the PM produces this output: 'P1: Workflow Builder UI, P1: Schedule Trigger, P2: Bulk Export, Not Building: [list].' Which element required by the /prioritise skill is missing from this decision?",
-options: ["The RICE scores table — the quarterly decision must include the raw scores for transparency", "The strategic overrides and discovery spikes sections — the decision must document what is not building AND WHY, plus recommended spikes for low-confidence items", "The MoSCoW equivalent section — RICE decisions require a parallel MoSCoW classification for stakeholder communication", "The capacity allocation — the decision must show how the P1 and P2 items map to the 70/20/10 rule"],
-correctOption: 1,
-explanation: "The /prioritise worked example shows that a complete quarterly priority decision requires: P1, P2, Stretch, Explicitly Not Building (with rationale), Strategic Overrides Documented, and Discovery Spikes Recommended. The lesson emphasises that the 'Explicitly Not Building' list 'is as important as the build list — it prevents good ideas from re-entering the backlog discussion every planning meeting.' It also requires discovery spike recommendations for low-confidence, high-effort items. The list without rationale and the missing overrides/spikes sections are the gaps. The RICE table is supporting material, not the decision itself. No MoSCoW equivalent is required in the RICE decision format. Capacity allocation is validated during the exercise but is not a section of the quarterly priority decision output. Real-world connection: documenting what you are NOT building closes recurring backlog discussions more effectively than any prioritisation score.",
-source: "Lesson 10: Backlog Prioritization Frameworks"
-},
-{
-question: "InsightFlow's PM is preparing the executive stakeholder update for week 2 of Sprint 1. The sprint goal was 'ship the trigger config UI so design can start user testing by sprint end.' WF-001 is complete. WF-002 is in progress. WF-003 has not started and is blocked on WF-002 completion. The sprint is 1 week in. What should appear in the executive update that should NOT appear in the engineering update?",
-options: ["The ROAM classification of the auth meeting risk — executives need the technical risk framework, engineers need the prose summary", "The next milestone date — executives care about delivery commitments, while engineers focus on daily task completion", "Nothing — both audiences receive the same underlying facts; the difference is length, not content", "No ticket numbers or technical implementation detail — executive updates must use outcome language; engineering updates contain specific item references"],
-correctOption: 3,
-explanation: "The lesson's comparison table is explicit: the executive version contains NO ticket references (no WF-001, WF-002, WF-003), NO technical dependency chain details, NO ADR references, and uses outcome language ('trigger config UI ready for design testing') rather than technical language ('WF-002 trigger data model in progress, blocking WF-003'). The engineering update contains all of this. Both updates reference the same sprint reality — the content differs fundamentally by audience need, not just by length. ROAM classification appears in both versions — executives get the outcome-framed ROAM; engineers get the action-oriented ROAM. Milestone dates appear in both but framed differently. Content exclusion (ticket numbers, implementation details) is what most distinguishes the executive version from the engineering version.",
-source: "Lesson 12: Stakeholder Communication"
-},
-{
-question: "InsightFlow's North Star metric is 'weekly active teams creating or editing dashboards.' The PM proposes replacing it with Monthly Active Users (MAU) because MAU is easier to grow through marketing. What is the strongest argument against MAU as a North Star for InsightFlow?",
-options: ["MAU is a lagging indicator — it measures what happened last month, not what is happening now in the product", "MAU always grows with marketing spend and does not tell you whether users are getting value — only that they logged in", "MAU counts individuals, not teams — InsightFlow is a team product and team-level metrics are more representative", "MAU is a marketing metric, not a product metric, and therefore belongs in a different dashboard than the PM's review"],
-correctOption: 1,
-explanation: "Lesson 13 is explicit: 'Monthly Active Users always grows with marketing spend. It does not tell you whether users are getting value — only that they logged in. A team could grow MAU while the core product experience deteriorates.' A North Star must be value-aligned: it should move when users genuinely benefit from the product. The North Star criteria are: value-aligned (moves when users get more value), leading (predicts retention), actionable (product team can influence it), and understandable. MAU fails the value-aligned criterion. Revenue being a lagging indicator is a separate point the lesson makes but is not the strongest argument against MAU specifically. Individual vs. team counting is a secondary concern. The marketing vs. product distinction is real but not the primary reason — product metrics can include acquisition metrics. Real-world connection: products that optimise for MAU can grow users while the core value proposition weakens.",
-source: "Lesson 13: Metrics, OKRs & Product Analytics"
-},
-{
-question: "A PM is using /retro to retrospect on Sprint 1. The retro produces this Q1 verdict: 'The trigger configuration feature is working well and users are happy with it.' According to the /retro NEVER DO rules, what is wrong with this verdict?",
-options: ["The verdict violates 'never close without a product.local.md update' — every retro must end with written process changes", "The verdict violates 'never run a retro without outcome data' — 'users are happy' is not data; the verdict must cite specific metrics and evidence", "The verdict is only for Q1 — each of the four retro questions needs a separate section, and Q1 must be labelled 'Did it solve the problem?'", "The verdict violates 'never produce only what went wrong' — retros must also document what succeeded for future protection"],
-correctOption: 1,
-explanation: "The /retro skill requires the Q1 verdict ('Did it solve the problem?') to be supported by specific outcome data, not subjective assessment. 'Users are happy' is an opinion; '71% of beta users completed trigger configuration within 18 minutes, and automation support tickets reduced 39%' is data. The retro template shows: 'VERDICT: PARTIALLY SOLVED — Evidence: ✅ Support ticket reduction -39%, ⚠️ completion rate 71% vs 80% target.' The NEVER DO rule 'never run a retro without outcome data' applies here — the verdict must reference specific metrics from the metrics review. The product.local.md update is required at the end but is not what is wrong with the verdict itself. The four-question labelling is a format issue, not the primary problem. Documenting successes is important but is also not the primary issue with this verdict. Real-world connection: retros without data produce retrospectives that feel good but do not change anything.",
-source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
-},
-{
-question: "InsightFlow's PM needs to run sprint planning. The sprint goal is 'Ship the trigger config UI so design can start user testing by sprint end.' The engineering lead says this is not a valid sprint goal because it mentions a specific ticket. Who is correct, and why?",
-options: ["The engineering lead is correct — sprint goals must describe business outcomes, not engineering deliverables", "The PM is correct — 'trigger config UI ready for design testing' is a measurable outcome that defines what success looks like in one sentence", "The engineering lead is correct — sprint goals must be stated in user-facing language that non-technical stakeholders can understand", "Neither is correct — sprint goals should be set collaboratively and this dispute indicates the sprint planning process is broken"],
-correctOption: 1,
-explanation: "Lesson 11 provides the correct sprint goal format: 'Ship the trigger configuration UI so that design can begin user testing by sprint end.' This meets the sprint goal test: 'What is the ONE outcome that defines sprint success?' It is a single clear sentence that tells the team what to protect when something unexpected consumes capacity mid-sprint. The engineering lead's objection that it 'mentions a specific ticket' misunderstands the lesson's guidance — a sprint goal describes the engineering deliverable in context. Business outcome language ('drive retention') without specificity does not help engineers make trade-off decisions when the sprint gets difficult. The wrong sprint goal example from the lesson is: 'Complete the workflow builder stories, fix the regression from last sprint, handle the auth dependency' — that lists everything rather than naming one outcome. Real-world connection: sprint goals that cannot be stated in one sentence indicate an unfocused sprint.",
-source: "Lesson 11: Sprint Planning & Capacity"
-},
-{
-question: "An InsightFlow PM asks: 'When should I use the /prd command instead of /write-spec?' Which decision rule from Lesson 7 is most directly applicable?",
-options: ["Use /prd when the feature requires more than 10 acceptance criteria; use /write-spec for simpler features with fewer requirements", "Use /prd when the initiative involves multiple features, multiple teams, or requires executive sign-off; use /write-spec for one feature, one team, 1-3 sprints", "Use /prd for customer-facing features; use /write-spec for internal platform work without direct user impact", "Use /prd at the start of the quarter for planning purposes; use /write-spec when implementation is imminent"],
-correctOption: 1,
-explanation: "Lesson 7's decision rule is explicit: 'Write a spec when the work involves one feature, one team, and 1-3 sprints. Write a PRD when the initiative involves multiple features, multiple teams, or requires executive sign-off.' The distinction is scope, audience, and the question being answered: specs answer 'how do we build this feature correctly?'; PRDs answer 'should we make this bet, and what does winning look like?' Workflow Builder involved engineering, platform, design, and data teams — clearly PRD territory. Acceptance criteria count is not the distinguishing factor. Customer-facing vs. internal is not the decision rule. Timing (planning vs. implementation) is not the decision rule. Real-world connection: PMs who write PRDs for single-team features create overhead; PMs who write specs for multi-team initiatives create alignment gaps.",
-source: "Lesson 7: PRDs for Multi-Team Initiatives"
-},
-{
-question: "After RICE scoring InsightFlow's backlog, the PM runs the Regret Test and discovers that the item their best customers would be most grateful for this quarter does not match the RICE #1 scorer. According to the mandatory challenge framework, what are the two possible explanations for this gap?",
-options: ["The RICE model is broken and should be replaced with a different framework for this team's context", "Either a data quality issue in the scoring (fix the score) or a strategic weight RICE cannot capture (document as an override)", "The Regret Test reflects sales priorities rather than PM priorities, so the gap indicates a misalignment between sales and product", "The items that score highest in RICE are always tactical quick wins — the Regret Test is for identifying long-term strategic bets"],
-correctOption: 1,
-explanation: "Lesson 10 states explicitly: 'The gap is usually one of two things: (1) a data quality issue in the scoring — fix the score, or (2) a strategic weight that RICE cannot capture — document it as an override.' RICE has known blind spots including strategic necessity and user love. If the gap is because the Regret Test item has low confidence (because it is a newer, less-researched feature), that is a data quality issue — improve the confidence score. If the gap is because the item is a CEO commitment or competitive necessity that RICE's reach/confidence math cannot capture, document it as a strategic override. The Regret Test is not broken if it diverges from RICE — the divergence is information. It reflects what customers care most about, which is a product priority, not just a sales priority. Real-world connection: the Regret Test / RICE comparison reveals where data quality and strategic judgment diverge.",
-source: "Lesson 10: Backlog Prioritization Frameworks"
-},
-{
-question: "A PM at InsightFlow is running /synthesize-research with five participant notes from user interviews. The output's WHAT WE HEARD BUT SHOULD NOT BUILD section is missing. Why is this section specifically difficult for AI to generate, and what prompt should the PM use to add it?",
-options: ["It is difficult because the AI cannot access the product roadmap to know what is already planned — provide roadmap context in the prompt", "It is difficult because drawing a scope-limiting conclusion from user data goes against the literal content of what users said — prompt: 'Add a section on what this research suggests we should NOT build in the short term and why'", "It is difficult because AI lacks business judgment about development costs — provide effort estimates for each mentioned feature in the prompt", "It is difficult because users rarely say what they do not want — design a separate interview question specifically asking users what features to avoid"],
-correctOption: 1,
-explanation: "Lesson 4 explains: 'This is the hardest section for AI to produce well — it requires drawing a conclusion about scope that goes against the literal content of what users said.' Users say 'I want X' and 'I need Y'. The synthesis should also conclude 'we should not build Z right now' based on the evidence — a conclusion that runs counter to what participants literally requested. The correct prompt is given explicitly in the lesson: 'Add a section on what this research suggests we should NOT build in the short term and why.' Roadmap context is not the issue — the AI can generate scope-limiting conclusions without it. Development costs are not what makes this section difficult. A separate interview question asking users what to avoid is a valid research technique but is not the fix for a missing synthesis section. Real-world connection: research that does not explicitly deprioritise anything leaves the PM with a list of opportunities and no criteria for choosing.",
-source: "Lesson 4: User Research — Interviews & Synthesis"
-},
-{
-question: "InsightFlow's Q3 roadmap is shared with enterprise customers as a Now/Next/Later document. The Head of Sales asks the PM to add estimated delivery months to the Now bucket for three enterprise prospects. What is the PM's strongest reason to decline this request?",
-options: ["Month-level estimates violate the spirit of Now/Next/Later and undermine the format's internal consistency", "Adding dates to the customer roadmap converts direction-setting into contract-making, creating mis-expectation when any dependency slips", "The PM does not have month-level estimates yet — sprint planning has not been completed for the Later items", "Date-specific commitments require CPO approval before appearing in any customer-facing document"],
-correctOption: 1,
-explanation: "Lesson 9 explains that 'Now/Next/Later avoids false date precision — the most common cause of roadmap-as-contract expectations from stakeholders.' Adding delivery months to Now items on a customer-facing roadmap creates contract expectations for those enterprise prospects. When a dependency slips (and dependencies always slip), the PM is renegotiating a contract rather than updating a plan. Sales wants dates because prospects ask for them — but the lesson's prescription is to use Now/Next/Later precisely to avoid that expectation. Format consistency is a real concern but secondary. The PM likely does have approximate estimates — that is not the primary reason to decline. CPO approval is a process consideration but not the strongest argument. Real-world connection: enterprise sales cycles often include roadmap commitments that become legal obligations — PMs who decline to add dates protect the organisation from those obligations.",
-source: "Lesson 9: Roadmap Planning & Communication"
-},
-{
-question: "During InsightFlow's Sprint 1 planning, the PM writes a sprint goal: 'Complete the trigger configuration stories, fix the regression from last sprint, handle the auth service dependency, and improve dashboard load time.' The engineering lead says this is not a sprint goal. What is the lesson's specific criterion for a valid sprint goal, and why does this fail it?",
-options: ["A sprint goal must be approved by the CPO — this fails because it was written without leadership sign-off", "A sprint goal must be a single sentence describing the ONE outcome that defines sprint success — this fails because it lists multiple items rather than naming one outcome", "A sprint goal must use customer-facing language — this fails because it contains technical terms like 'auth service dependency'", "A sprint goal must be written before capacity planning — this fails because capacity calculations preceded the goal definition"],
-correctOption: 1,
-explanation: "Lesson 11 provides the exact contrast: Wrong — 'Complete the workflow builder stories, fix the regression from last sprint, handle the auth dependency, and improve dashboard load time.' Right — 'Ship the trigger configuration UI so that design can begin user testing by sprint end.' The wrong version describes everything the team might do. The right version describes the ONE outcome that defines success. The sprint goal's purpose is to tell the team what to protect when something unexpected consumes capacity mid-sprint — everything else is negotiable. If you cannot state the sprint goal in one sentence, the sprint is unfocused. CPO approval is not a sprint goal requirement. Technical language is fine in sprint goals intended for the engineering team. Timing of goal-writing relative to capacity is a process preference, not the sprint goal criterion. Real-world connection: sprint goals that list everything give teams no guidance on what to cut when the sprint gets hard.",
-source: "Lesson 11: Sprint Planning & Capacity"
-},
-{
-question: "InsightFlow's Stakeholder Update Agent generates the Friday update and is about to auto-send all three versions to their respective audiences. What should the PM do, and why does the lesson describe the PM review gate as 'not optional'?",
-options: ["Allow auto-send — the agent was configured with the correct audience distribution, so manual review duplicates effort", "Intervene immediately — the NEVER DO rule for the Stakeholder Update Agent prohibits auto-sending without PM review; the PM must approve all three versions before distribution", "Allow auto-send for the engineering version but manually review the executive and customer versions", "Contact the IT administrator — auto-sending without a review gate indicates a configuration error in the agent deployment"],
-correctOption: 1,
-explanation: "Lesson 14 is explicit: 'The PM review gate is not optional. Every version waits for PM approval before distribution. The agent removes the mechanical work of generating three versions. The PM removes errors, adjusts tone, and approves distribution. This division preserves stakeholder trust while saving the PM's time.' The NEVER DO rules for this agent include: 'Never auto-send any communication without PM review and approval.' A single auto-sent message with an error (wrong status, wrong audience language, incorrect information) can destroy stakeholder trust permanently. The agent is configured to queue for PM review, not to auto-send — if it is auto-sending, that is either a configuration error or a violation of the design. There is no distinction between engineering and executive versions for this rule — all versions require review. Real-world connection: PM automation that bypasses human judgment creates trust failures that take months to rebuild.",
-source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
-},
-{
-question: "InsightFlow's PM writes an OKR Key Result: 'Launch Workflow Builder to 50% of Pro accounts by end of Q3.' A senior PM flags this as an output KR. What is the corrected outcome KR that addresses the same goal?",
-options: ["'Ship all five Workflow Builder features by Sprint 8 to meet the Q3 milestone commitment'", "'50 Pro account teams activate at least one automated workflow within 60 days of Workflow Builder GA'", "'Complete Workflow Builder development on schedule with zero P0 bugs at launch'", "'Increase Pro plan accounts from 120 to 180 through Workflow Builder as a conversion driver'"],
-correctOption: 1,
-explanation: "The output KR test is: 'Could the team hit this KR without a single user benefiting?' 'Launch to 50% of Pro accounts' describes a rollout action — the team could roll out to 50% of accounts and have nobody use the feature. That is an output. A corrected outcome KR measures user behaviour: '50 Pro account teams activate at least one automated workflow within 60 days of GA' requires actual usage, not just availability. Shipping all five features on schedule is an output (delivery of work). Zero P0 bugs at launch is a quality metric for the delivery process, not user outcomes. Increasing Pro account count is a monetisation metric that may be worth tracking, but it is driven by many factors beyond Workflow Builder and is not as directly connected to Workflow Builder adoption. Real-world connection: outcome KRs create pressure to understand whether the feature actually works for users, not just whether it shipped.",
-source: "Lesson 13: Metrics, OKRs & Product Analytics"
-},
-{
-question: "A PM receives a feature request: 'We need a mobile app.' She runs /brief and receives a problem brief where the EVIDENCE section has one line: 'Multiple stakeholders have requested a mobile app.' The WHAT WE DO NOT KNOW section is the longest section. Is this brief quality high or low, and why?",
-options: ["Quality is low — the evidence section should be much longer before writing a brief; gather more evidence first then re-run /brief", "Quality is high — when evidence is thin, the WHAT WE DO NOT KNOW section being the longest section is correct; it surfaces how little is known before committing resources", "Quality is medium — the brief should propose a hypothesis about which mobile users need this feature to be actionable", "Quality is low — the brief should not have been written without first running /interview to understand the mobile use case"],
-correctOption: 1,
-explanation: "Lesson 3 contains this exact scenario: 'This request is maximally vague. The resulting problem brief should surface how little you actually know — the WHAT WE DO NOT KNOW section should be the longest section in the brief. If the agent produces a brief where the problem and evidence sections are longer than the unknowns, something is wrong.' When evidence is thin, a brief with a long WHAT WE DO NOT KNOW section is working correctly — it makes the evidence gap explicit before the team commits engineering resources. The lesson's purpose is to surface uncertainty, not to generate false confidence from sparse data. Gathering more evidence first is backward — the brief helps scope what evidence is needed. A hypothesis is optional (not required) and should be framed as testable assumption, not prescriptive. Interview design comes after the brief identifies the discovery questions. Real-world connection: a brief that surfaces 'we know almost nothing' prevents an 8-sprint commitment based on stakeholder requests.",
-source: "Lesson 3: Discovery Briefs — Framing the Right Problem"
-},
-{
-question: "An InsightFlow engineer asks the PM: 'Should I create the sub-tasks for the trigger configuration story, or is that your job?' How does Lesson 8 define the PM-engineer boundary for the epic/story/sub-task hierarchy?",
-options: ["PMs create sub-tasks for clarity; engineers refine them during sprint planning when actual implementation choices are made", "PMs own epics and stories; engineers own sub-tasks — sub-tasks are technical implementation decisions that belong to the engineer", "Sub-tasks are collaborative — PM creates the list and engineer validates against technical feasibility before sprint start", "The engineering lead owns all levels of the hierarchy; the PM's role ends when stories are handed off"],
-correctOption: 1,
-explanation: "Lesson 8 is explicit: 'PMs own epics and stories. Engineers own sub-tasks. A PM who writes sub-tasks is making engineering implementation decisions. An engineer who writes stories is making product scope decisions. Both are problems.' Sub-tasks are technical tasks within a story — 'write trigger evaluation service schema migration' is engineering territory. Stories are product scope decisions — 'As Analyst Alex, I want to configure a schedule trigger, so that my Monday refresh runs automatically' is PM territory. The boundary is not about review or collaboration — it is about ownership. The PM creates the sub-tasks is incorrect. Collaborative creation of sub-tasks blurs the boundary the lesson draws. The engineering lead does not own stories — that would transfer product scope decisions to engineering. Real-world connection: the PM-engineer boundary in story/sub-task ownership prevents the two most common planning failures: PMs over-specifying implementation and engineers under-defining scope.",
-source: "Lesson 8: User Stories & Story Mapping"
-},
-{
-question: "The Roadmap Coherence Agent's Sprint Alignment check finds that InsightFlow Sprint 2 has 35% of story points tagged to items not on the current quarter roadmap (bug fixes from CS escalations and an unplanned integration). What action does the agent take, and at what threshold does the action change?",
-options: ["At 35%, the agent notes the items in the weekly report for PM triage; at 50%, it becomes urgent and pauses the roadmap", "At 35%, the agent alerts the PM and engineering manager; at 50% the alert is classified as urgent — roadmap is effectively paused", "At 35%, the agent recommends removing the off-roadmap items from the sprint; at 50%, it blocks the sprint plan from proceeding", "At 35%, the agent reclassifies the items as maintenance and tracks them separately without PM notification"],
-correctOption: 1,
-explanation: "Lesson 14 defines two thresholds: 'Sprint >30% off-roadmap → immediate alert to PM + EM; Sprint >50% off-roadmap → urgent — roadmap is effectively paused.' At 35%, the alert to PM and engineering manager goes out immediately (it exceeds the 30% threshold). At 50%, the classification escalates to urgent because at that level, the team is spending more time on unplanned work than roadmap work, and the quarterly commitments are at risk. The agent does not remove items — it alerts the humans who make that decision. It does not block the sprint plan — alerting is the mechanism, not blocking. Bug fixes and CS escalations should not be automatically reclassified to maintenance without PM review — some may be legitimate off-roadmap work. Real-world connection: 30%+ off-roadmap sprint composition, if unchecked for multiple sprints, means quarterly goals slip without anyone noticing until the QBR.",
-source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
-},
-{
-question: "A PM evaluates the difference between how InsightFlow's direct competitor AutoDash and indirect competitor Excel/Google Sheets should be treated in the competitive strategy. Which strategic principle from Lesson 5 explains why the indirect competitor often requires more strategic attention than the direct one?",
-options: ["AutoDash is strategically safer to ignore because InsightFlow already competes with it and understands its weaknesses", "Excel is often more dangerous than AutoDash because it is already installed, trusted, costs nothing extra, and has zero switching cost — most prospects who don't buy InsightFlow continue using spreadsheets, not AutoDash", "The substitute competitor (hiring a data analyst) is actually the highest priority since it reflects the 'good enough without software' baseline", "Direct competitors always require more strategic attention because they are the comparison set prospects evaluate side by side"],
-correctOption: 1,
-explanation: "Lesson 5 states explicitly: 'Excel is InsightFlow's most dangerous competitor — not because it is a better analytics platform, but because it is already installed, already trusted, and costs nothing extra.' Furthermore: 'Prospects who do not buy your product are not mostly buying AutoDash — most of them are continuing to use spreadsheets.' This means the bulk of the market opportunity lost is to indirect competition, not direct. AutoDash is the comparison-set competitor in demo evaluations, but Excel is the status quo most prospects return to. The substitute competitor (hiring an analyst) establishes what 'good enough without software' looks like, which is useful framing, but does not receive more strategic attention than indirect. Direct competitors receive attention for sales cycle positioning but are not where most opportunity is lost. Real-world connection: competitive strategies that focus only on direct competitors leave the largest segment of the addressable market uncontested.",
-source: "Lesson 5: Competitive Intelligence"
-},
-{
-question: "InsightFlow's PM uses /metrics-review for a monthly review and the output shows: 'WAT dashboard creation: 521 teams (prior: 498).' The CPO asks 'Is this good or bad?' What metric quality rule from Lesson 13 does the PM need to apply before answering?",
-options: ["The PM needs to segment by persona to determine if Analyst Alex accounts are growing or just VP Priya accounts", "Every metric must be presented with a comparison — a raw number without a target, prior period change, and status is not information", "The metric needs a satisfaction qualifier — NPS should accompany every North Star metric reading to interpret whether users are happy with the growth", "The PM should first check whether the metric is value-aligned before reporting it to the CPO"],
-correctOption: 1,
-explanation: "Lesson 13's /metrics-review quality check states: 'Every metric in a review should come with a comparison — a raw number without context (previous period, target, benchmark) is not information.' The CPO cannot determine whether 521 teams is good or bad without knowing: the prior period (498 — so +4.6%), the target (550 by end of Q1), and the status (At risk — 5% below target). The scorecard format is: current | prior | change | target | status for every metric. Persona segmentation is valuable L2 diagnostic work but is not the missing quality element. NPS is a separate L1 metric, not a required companion to the North Star. Value-alignment is an evaluation done when selecting the North Star metric, not at each review cycle. Real-world connection: dashboards that show raw numbers without targets create confusion rather than clarity in executive meetings.",
-source: "Lesson 13: Metrics, OKRs & Product Analytics"
-},
-{
-question: "Which of the following correctly identifies a command that belongs to the custom product-strategy plugin rather than the official product-management plugin?",
-options: ["/competitive-brief — used to generate competitive intelligence briefs for positioning analysis", "/stakeholder-update — used to draft audience-calibrated communications for executives, engineering, and customers", "/retro — used to structure product retrospectives with four questions and specific process improvements", "/metrics-review — used to analyse product metrics with trend analysis and recommended actions"],
-correctOption: 2,
-explanation: "The custom product-strategy plugin contains six commands: /brief, /interview, /prd, /stories, /prioritise, and /retro. The official product-management plugin contains seven commands: /write-spec, /roadmap-update, /synthesize-research, /stakeholder-update, /competitive-brief, /metrics-review, and /sprint-planning. /retro is the only command among the four options that belongs to the custom plugin. /competitive-brief (official) generates competitive intelligence. /stakeholder-update (official) handles audience-calibrated communications. /metrics-review (official) handles metrics analysis. The division of commands follows the principle: official plugin for foundational PM workflows, custom plugin for discovery, strategy, and craft-enforcement workflows. Real-world connection: knowing which plugin contains which command is essential when configuring a new Cowork session or troubleshooting a missing command.",
-source: "Lesson 15: Chapter Summary & Quick Reference"
-},
-{
-question: "InsightFlow's PM writes this feature spec acceptance criterion for the data threshold trigger: 'When the metric crosses the configured threshold, the trigger evaluation service checks the condition and initiates the workflow run via the async job queue.' Which AC quality rule does this violate?",
-options: ["Independently testable — the criterion depends on the job queue being available to test", "No 'and' — the criterion combines threshold crossing and job queue initiation into one requirement", "Behavior not implementation — the criterion describes internal service operations rather than user-visible behaviour", "Measurable thresholds — the criterion does not specify a time window for when the trigger fires"],
-correctOption: 2,
-explanation: "This acceptance criterion says 'the trigger evaluation service checks the condition and initiates the workflow run via the async job queue' — naming the evaluation service and the async job queue. These are internal implementation details: how the engineering team builds the trigger, not what the user observes. A behavior-not-implementation AC would say: 'A data threshold trigger activates the workflow within 15 minutes of the threshold condition being met' — describing the user-visible outcome (the workflow starts within 15 minutes) without specifying the internal mechanism. If an engineer wrote 'via the async job queue', that belongs in a technical design document, not a spec AC. Independently testable would apply if one AC depended on another. No 'and' would apply if two user-visible requirements were combined. Measurable thresholds would apply if 'quickly' replaced a time-specific value. Real-world connection: ACs that specify implementation lock engineers into a technical approach before they have evaluated alternatives.",
-source: "Lesson 6: Feature Specifications"
-},
-{
-question: "InsightFlow's PM is choosing a roadmap format for a team planning meeting where the engineering team needs to see parallelism, dependencies, and start/end dates. Which format should the PM use, and what risk does the lesson warn against when using this format externally?",
-options: ["Now/Next/Later — the PM should adapt this format with a sprint overlay for the engineering audience without using it externally", "OKR-Aligned — maps team work to objectives; risk is that external stakeholders conflate OKR attainment with delivery commitments", "Timeline/Gantt — appropriate for engineering execution planning; risk is that external use creates false precision and date expectations", "Quarterly Themes — appropriate for all planning meetings; risk is that themes lack specificity for engineering capacity planning"],
-correctOption: 2,
-explanation: "Lesson 9's four roadmap frameworks table is explicit: Timeline/Gantt is 'Best For: Engineering execution planning, resource conflict identification' and 'Avoid When: External communication (creates false precision and date expectations).' Engineering needs to see parallelism (what can run concurrently), dependencies (what blocks what), and start/end dates for resource planning. These requirements match Timeline/Gantt precisely. The risk is using this format externally — when stakeholders or customers see specific calendar dates, they read them as guaranteed delivery commitments. Now/Next/Later does not have date precision and does not show parallelism. OKR-Aligned requires mature OKR processes and does not show dependency chains. Quarterly Themes is a theme-level view that does not provide the granularity engineering execution planning requires. Real-world connection: the safest approach is Timeline/Gantt for internal engineering planning and Now/Next/Later for all external communication.",
-source: "Lesson 9: Roadmap Planning & Communication"
-},
-{
-question: "A PM observes that InsightFlow's activation rate (signups creating their first dashboard within 7 days) dropped from 37% to 34% after a new onboarding redesign. The PM wants to investigate using L2 diagnostic metrics. Which of the following is an appropriate L2 diagnostic metric for this situation?",
-options: ["Monthly Active Users (MAU) segmented by acquisition channel to identify which channel has lower activation", "Funnel conversion rate at each step in the new onboarding flow to identify where users are dropping off", "D30 retention rate segmented by user cohort to understand long-term activation effects", "NPS scores from the week after the onboarding redesign launched to capture immediate satisfaction impact"],
-correctOption: 1,
-explanation: "L2 diagnostic metrics answer 'why is an L1 metric moving?' For an activation rate drop, the right L2 is funnel conversion at each onboarding step — this identifies the specific step where the new cohort drops below the prior cohort. If onboarding has five steps, funnel data shows whether the drop happens at step 2 (account setup), step 3 (data connection), or step 4 (first dashboard creation). This localises the problem for the fix. MAU segmented by channel is an acquisition-level metric that does not explain the activation gap. D30 retention shows longer-term effects but does not identify where in the activation funnel the problem occurs. NPS timing may capture overall satisfaction but not the specific onboarding friction point. Real-world connection: L2 diagnostics exist specifically for investigation, not for standing dashboards — they are pulled when a specific L1 metric changes.",
-source: "Lesson 13: Metrics, OKRs & Product Analytics"
-},
-{
-question: "InsightFlow's PM uses the ROAM framework for the auth review meeting risk in the stakeholder update. The PM has sent an email to the platform team requesting the meeting and is waiting for a response. Which ROAM classification is correct?",
-options: ["Resolved — the PM has taken action and the risk has been addressed", "Mitigated — the PM's email has reduced the risk of delay by initiating scheduling", "Accepted — the team has decided to proceed without scheduling a meeting this sprint", "Owned — someone is actively managing the risk with a plan; the PM is following up with the platform team to schedule by a specific date"],
-correctOption: 3,
-explanation: "ROAM state 'Owned' means 'someone is actively managing it with a plan.' The lesson gives this exact example: 'Review meeting scheduling: Owned by [PM]. Following up with platform team to schedule by [date].' An action has been taken (email sent), there is a plan (follow up until scheduled), there is an owner (the PM), and there is a due date. Resolved would mean the risk is gone — the meeting is scheduled. Resolved requires completion, not action in progress. Mitigated means actions have reduced but not eliminated the risk — appropriate if partial scheduling occurred (e.g., meeting is confirmed but later than needed). Accepted means a conscious decision to proceed without mitigation — the PM is not proceeding without mitigation; they are actively pursuing scheduling. Real-world connection: ROAM forces specificity about what is actually being done, preventing the vague 'we are working on it' that gives stakeholders no usable information.",
-source: "Lesson 12: Stakeholder Communication"
-},
-{
-question: "InsightFlow is expanding from analytics into workflow automation. The PM runs /competitive-brief and identifies that InsightFlow should 'achieve parity' with AutoDash in scheduled report delivery, while 'differentiating' in workflow automation. What distinguishes a 'parity' investment from a 'differentiation' investment in competitive strategy?",
-options: ["Parity investments are customer-requested; differentiation investments are PM-initiated based on vision", "Parity closes a genuine gap where a competitor is ahead and the market considers it table-stakes; differentiation invests in an area where no competitor owns the space and InsightFlow can lead", "Parity investments are lower risk because the solution is proven; differentiation investments carry higher technical risk", "Parity is achieved through buying third-party components; differentiation requires internal engineering resources"],
-correctOption: 1,
-explanation: "Lesson 5's differentiate vs. achieve parity framework is explicit: 'Achieve parity' means closing a gap where a competitor is ahead and prospects consider the capability table-stakes (something they expect all products to have). 'Differentiate' means investing in an area where no competitor credibly owns the space and InsightFlow can establish a distinctive position. AutoDash is Strong in scheduled reports; InsightFlow is Weak — parity is required for sales credibility. In workflow automation, both are Absent — differentiation is possible because no one owns it yet. The distinction is not about who requested it (customer vs. PM). Risk profile is a secondary consideration, not the defining criterion. Build vs. buy is an implementation decision, not a strategic framework distinction. Real-world connection: PMs who cannot distinguish parity requirements from differentiation opportunities misallocate engineering resources between catching up and leading.",
-source: "Lesson 5: Competitive Intelligence"
-},
-{
-question: "A PM writes the failure threshold for InsightFlow's Workflow Builder PRD as: 'If adoption is low, we will reassess.' The CPO asks for a revision. What does the lesson identify as the specific problem with this failure threshold, and what would a strong version look like?",
-options: ["'We will reassess' is too vague for governance — the CPO wants a specific committee or process named for the reassessment decision", "The threshold is weak because it does not specify a number, a timeframe, or a named action — a strong version would be: 'If automated workflow activation is below 10% of eligible accounts at 60 days post-GA, we will pause further investment and run a 2-week qualitative research sprint to identify the adoption barrier'", "Failure thresholds should describe technical failure (bugs, downtime), not adoption outcomes — rewrite around system availability metrics", "The threshold is written for the wrong audience — failure thresholds belong in the engineering spec, not the PRD's business context section"],
-correctOption: 1,
-explanation: "Lesson 7 contrasts weak and strong failure thresholds explicitly. Weak: 'If adoption is low, we will reassess.' Strong: 'If workflow automation feature adoption is below 15% of Pro and Business accounts within 60 days of GA, we will run a 2-week qualitative research sprint to understand the barrier before investing further in the initiative.' The strong version has: (1) a specific metric (activation rate), (2) a specific threshold (below X%), (3) a specific timeframe (within N days of GA), and (4) a specific named action (research sprint, not just 'reassess'). Without specificity, the 30-day post-launch review becomes a negotiation about what 'low' means. The governance committee is not the lesson's prescription. Failure thresholds address business outcomes, not just technical failures. They belong in PRD Section 2 (Business Context), not the engineering spec. Real-world connection: pre-committed failure thresholds prevent sunk-cost escalation when a feature struggles post-launch.",
-source: "Lesson 7: PRDs for Multi-Team Initiatives"
-},
-{
-question: "The InsightFlow chapter contract includes five focus questions. Which of the following is one of those five questions, and which lesson most directly answers it?",
-options: ["'How do AI agents reduce the need for user research?' — answered in Lesson 4 through the /interview automation workflow", "'What are the five sections every feature spec must contain, and why is the scope boundary as important as the solution description?' — answered in Lesson 6 through the /write-spec five-section anatomy", "'When should a PM replace the official plugin with the custom plugin for core workflows?' — answered in Lesson 2's plugin decision guide", "'How does RICE scoring replace PM judgment in backlog prioritisation?' — answered in Lesson 10 through the three mandatory challenge tests"],
-correctOption: 1,
-explanation: "The Chapter 36 contract lists five specific questions. One of them is: 'What are the five sections every feature spec must contain, and why is the scope boundary (what is NOT included) as important as the solution description?' Lesson 6 answers this directly through the five-section spec anatomy: Problem, Solution (with explicit OUT OF SCOPE list), Acceptance Criteria, Edge Cases and Error States, and Open Questions. The lesson explains why the OUT OF SCOPE list matters: 'Every line you add to OUT OF SCOPE is a scope creep conversation you will never have to have.' AI agents do not reduce the need for user research — they make it faster and more structured. The plugins are complementary, not substitutes for each other. RICE scoring does not replace PM judgment — the three mandatory challenges exist precisely because RICE has blind spots. Real-world connection: the chapter contract questions provide the PM perspective on what the chapter is actually teaching, distinct from the lesson-by-lesson content.",
-source: "Lesson 15: Chapter Summary & Quick Reference"
-},
-{
-question: "InsightFlow's PM is reviewing a /competitive-brief output and finds the strategic implication: 'InsightFlow should improve its analytics features.' The teaching guide for L05 flags this as a weak strategic implication. What makes a strong strategic implication, and what is a corrected version?",
-options: ["A strong implication names a specific capability area, a competitive stance (differentiate vs. parity), and a specific product decision — e.g., 'In scheduled report delivery, InsightFlow should achieve parity with AutoDash before Q3 because two lost enterprise deals cited this as a deciding factor'", "A strong implication includes a timeline with specific sprint delivery targets, matching the roadmap format", "A strong implication quantifies the revenue opportunity of closing the gap, expressed in ARR terms", "A strong implication names which engineering team is responsible for closing the capability gap"],
-correctOption: 0,
-explanation: "Lesson 5 states: 'Strategic implications need to be actionable. 'Improve our analytics features' is not an implication — it is a vague intention. 'Invest in automation parity with WorkflowIQ before Q3 because two of our three lost enterprise deals cited automation as the deciding factor' is an implication.' A strong strategic implication specifies: (1) the capability area ('scheduled report delivery'), (2) the competitive stance ('achieve parity'), and (3) a specific product decision ('before Q3') grounded in evidence ('two lost enterprise deals cited this'). Sprint delivery targets are a roadmap detail, not a strategic implication. Revenue quantification is useful context but not the defining ingredient of a strong implication. Engineering team assignment is an implementation decision, not a strategic stance. Real-world connection: vague strategic implications produce no change in roadmap priorities because they give nobody a specific decision to make.",
-source: "Lesson 5: Competitive Intelligence"
-},
-{
-question: "A PM wants to use the /brief command to write an Initiative Brief for InsightFlow's Workflow Builder expansion. The Teaching Guide notes that Initiative Briefs have a specific rule about content. What is that rule, and how does it differ from the Problem Brief rule?",
-options: ["Initiative Briefs require a competitive analysis section; Problem Briefs do not reference the competitive landscape", "Initiative Briefs must include 'the bet', rough effort, and the decision needed — whereas Problem Briefs must contain no solution proposals at all", "Initiative Briefs are written by the CPO; Problem Briefs are written by the PM as part of discovery work", "Initiative Briefs replace the PRD for smaller initiatives; Problem Briefs must always precede an Initiative Brief in sequence"],
-correctOption: 1,
-explanation: "Lesson 3's brief types table shows: Problem Brief key rule = 'No solution proposals'; Discovery Brief key rule = 'Must include ranked questions with explicit success criteria'; Initiative Brief key rule = 'Must include 'the bet,' rough effort, and decision needed.' The Initiative Brief is a one-page framing document for executive sign-off before writing a PRD — it is appropriate when you need stakeholder alignment on whether to commit resources to a major bet. The Problem Brief is specifically prohibited from including any solution proposals. The Initiative Brief is further along in the discovery cycle and explicitly includes the proposed bet. Initiative Briefs are not restricted by author role — PMs write all three types. Initiative Briefs and PRDs serve different purposes — a PRD is more detailed and comes after the Initiative Brief, not instead of it. Real-world connection: the three brief types represent progressive stages of certainty: unknown problem → understood problem → commitment to investigate → readiness to build.",
-source: "Lesson 3: Discovery Briefs — Framing the Right Problem"
-},
-{
-question: "InsightFlow's PM has generated a story with 5 acceptance criteria, all passing the quality test. The PM then adds three more ACs covering edge cases from the L06 feature spec. The story now has 8 ACs. According to the /stories skill, what should the PM do?",
-options: ["Keep all 8 ACs — the /stories skill allows up to 10 ACs before a split is required, and 8 is within acceptable range", "Review the 8 ACs to check whether they represent one distinct user flow or multiple flows — if multiple flows, split into one story per flow", "Remove the three edge case ACs — edge cases belong in the spec's Edge Cases and Error States section, not in story ACs", "Move the story to epic status and create two new stories under it — 8 ACs always triggers the epic reclassification rule"],
-correctOption: 1,
-explanation: "Lesson 8 states: 'When a story exceeds 7 acceptance criteria, the PM has usually combined two or more user flows into one story. The fix is not to condense the ACs — it is to identify the distinct flows and create one story per flow.' The story at 8 ACs may still be valid as one story if all 8 ACs describe a single distinct user flow (e.g., the schedule trigger setup flow). The PM should review whether the ACs span multiple distinct flows. If they do, split. If they all describe one flow, 8 ACs may be appropriate. The lesson does not set a hard maximum of 10 — it says 7+ is a signal to investigate, not an automatic trigger. Edge case ACs are valid story ACs — error states are part of the story's quality requirements. Moving to epic status requires that the story cannot complete in one sprint — AC count alone is not sufficient for reclassification. Real-world connection: the AC count is a signal for investigation, not a mechanical rule.",
-source: "Lesson 8: User Stories & Story Mapping"
-},
-{
-question: "InsightFlow's 70/20/10 capacity allocation shows that the Workflow Builder initiative is consuming 75% of Q3 engineering capacity for features. SOC 2 compliance consumes another 12%. How does this compare to the 70/20/10 rule, and what is at risk?",
-options: ["Both initiatives together consume 87% for planned features — exceeding the 70% feature budget by 17pp, leaving only 13% for technical health and unplanned work combined", "This is acceptable — the 70/20/10 rule applies to individual sprints but not to quarterly planning, which can accommodate higher feature concentration", "The 12% for SOC 2 counts as technical health, not features — so the combined feature budget is 75%, which is within the 70% guideline", "This requires immediate scope reduction — both initiatives must be cut to bring feature work below 50% of quarterly capacity"],
-correctOption: 0,
-explanation: "The 70/20/10 rule allocates: 70% of engineering capacity to planned features, 20% to technical health (tech debt, reliability, DX), and 10% to unplanned work (urgent issues, quick wins). InsightFlow's combined 87% for planned features (75% Workflow Builder + 12% SOC 2) exceeds the 70% feature budget by 17 percentage points. This leaves only 13% for both technical health AND unplanned work — well below the intended 30%. If a production incident occurs (consuming part of the unplanned budget), technical health drops to near zero. The 70/20/10 rule applies at the sprint level in the worked example and as a quarterly planning guideline — it is not sprint-only. SOC 2 compliance involves feature delivery (audit log implementation, security features) — it belongs in the feature budget, not technical health. No target requires cutting to 50%; the lesson does not prescribe that level. Real-world connection: sprints planned without technical health budget accumulate debt that slows future sprints.",
-source: "Lesson 9: Roadmap Planning & Communication"
-},
-{
-question: "After completing Chapter 36's full PM workflow from L03 to L14, the central thesis of the chapter is stated in both the README and the chapter summary. Which of the following most accurately captures that thesis?",
-options: ["AI agents replace PM judgment by generating specifications, roadmaps, and stakeholder updates autonomously without PM review", "AI removes the bottleneck between PM judgment and the documentation that expresses it — agents write first drafts, PMs review and direct, and outputs reflect PM judgment at quality that would have required hours to produce alone", "The two-plugin architecture makes every PM equally effective by standardising the quality of PM artifacts across experience levels", "AI agents are most valuable for PMs who lack spec-writing skills, allowing them to produce professional-quality documents despite limited experience"],
-correctOption: 1,
-explanation: "The chapter thesis appears in both the README and the chapter summary: 'The PM's job is judgment. AI removes the bottleneck between that judgment and the documentation that expresses it. The agent writes the first draft. You review, direct, and refine. The document reflects your judgment at the quality it deserves — in a fraction of the time.' This is the consistent framing across all 15 lessons. AI does not replace judgment — it removes the time constraint that prevented high-quality documentation. AI does not replace PM review — the review gate is emphasised throughout (especially in the Stakeholder Update Agent's NEVER DO rules). The two-plugin architecture does not make all PMs equally effective — it amplifies the PM's existing judgment. The chapter explicitly corrects the misconception that AI compensates for skill deficits in Lesson 1: 'the document gap is not a skills problem.' Real-world connection: the thesis determines how an organisation should position AI PM tools — as judgment amplifiers, not judgment replacements.",
-source: "Lesson 15: Chapter Summary & Quick Reference"
-}
-]}
+  questions={[    {
+      question: "A PM at InsightFlow receives this Slack message from the Head of Sales: 'We need to add a Slack integration by Q3 — three enterprise prospects asked for it.' The PM wants to write a problem brief using /brief. Which of the following correctly describes the purpose of the problem brief at this stage?",
+      options: [
+        "Document the Slack integration's technical specifications and timeline for engineering",
+        "Evaluate whether Slack integration is technically feasible given current architecture",
+        "Confirm the Slack integration as the Q3 roadmap commitment for leadership sign-off",
+        "Reframe the feature request into a structured problem statement without proposing a solution"
+      ],
+      correctOption: 3,
+      explanation: "A problem brief reframes a solution-prescriptive feature request ('add Slack integration') into a problem-focused document that describes what is wrong, who is affected, and what must be learned before committing to a solution. It explicitly prohibits solution proposals in the PROBLEM section. Technical specifications belong in a feature spec written later. Roadmap commitments happen after the discovery work the brief scopes. Technical feasibility is an engineering question, not the brief's purpose. Real-world connection: most feature requests arrive as solutions; the PM's job is to pause and understand the problem before committing engineering resources.",
+      source: "Lesson 3: Discovery Briefs — Framing the Right Problem"
+    },
+    {
+      question: "Analyst Alex builds dashboards at a 200-person SaaS company. She runs /interview to create a guide for understanding her reporting workflow. The Core Discovery segment includes: 'Would you use a template library if InsightFlow built one?' Which interview design principle does this question violate?",
+      options: [
+        "Past over hypothetical — the question asks about future hypothetical behaviour",
+        "Silence is data — the question does not leave room for the participant to pause",
+        "Problem before solution — the question mentions a specific InsightFlow feature",
+        "Behavior over opinion — the question asks about a UI element not a user action"
+      ],
+      correctOption: 0,
+      explanation: "The question 'Would you use a template library if InsightFlow built one?' violates the past over hypothetical principle. Users are consistently optimistic about their future behaviour — they say yes to features they will never use. The research literature is clear: stated intention is a weak predictor of actual behaviour. The correct approach is to ask about a specific past experience: 'Walk me through the last time you built a dashboard from scratch.' Silence is data refers to letting participants pause. Problem before solution is about not mentioning features in the first half of the interview — this question appears in Core Discovery, not wrap-up. Behavior over opinion is related but the primary violation here is the future tense.",
+      source: "Lesson 4: User Research — Interviews & Synthesis"
+    },
+    {
+      question: "An InsightFlow PM runs /competitive-brief for AutoDash and receives a feature comparison matrix rating InsightFlow as 'Strong' in every capability area. The PM is about to present this to the CPO. What should the PM do before the presentation?",
+      options: [
+        "Add the CPO as co-author to the brief to align on ratings before the meeting",
+        "Challenge the matrix for honesty — no product is Strong everywhere, and the brief is likely not credible",
+        "Verify the competitive data by running a second /competitive-brief with a different competitor",
+        "Present the matrix as-is since the /competitive-brief command produces objective ratings"
+      ],
+      correctOption: 1,
+      explanation: "A feature comparison matrix that rates InsightFlow Strong in every category is not credible — it reflects analyst bias, not reality. The most valuable competitive brief honestly identifies where competitors have genuine advantages, because those gaps become product roadmap inputs. If the CPO were presented with this matrix, the likely objection is that it looks like marketing, not analysis. The /competitive-brief command produces structured output, but its quality depends on honest inputs and evaluation. Running a second brief against a different competitor does not fix the rating inflation in the first one. Adding the CPO as co-author does not address the honesty problem. Real-world connection: PMs who accept flattering competitive analyses make under-investments in genuine capability gaps that competitors expose during sales cycles.",
+      source: "Lesson 5: Competitive Intelligence"
+    },
+    {
+      question: "InsightFlow's PM writes this acceptance criterion for the trigger configuration feature: 'The schedule trigger activates the workflow and sends a confirmation notification.' The engineering lead asks the PM to revise it. Which AC quality rule does this criterion violate?",
+      options: [
+        "Behavior not implementation — the criterion specifies an internal service behaviour",
+        "Independently testable — the criterion cannot be verified without the workflow running",
+        "No 'and' — the criterion combines two distinct requirements into one",
+        "Measurable thresholds — the criterion lacks a specific timing or performance standard"
+      ],
+      correctOption: 2,
+      explanation: "The acceptance criterion 'activates the workflow and sends a confirmation notification' violates the no 'and' rule. A single AC with 'and' contains two requirements. If only one passes in the test suite, you cannot tell whether the feature is ready to ship. The correct fix is to split into two ACs: AC1 = trigger activates the workflow; AC2 = user receives a confirmation notification. Behavior not implementation applies when ACs mention database operations or service names. Independently testable applies when one AC depends on another being true first. Measurable thresholds applies when quality language like 'fast' or 'user-friendly' appears. The 'and' rule is not pedantry — it is how you prevent 'it mostly works' from becoming the standard for shipping.",
+      source: "Lesson 6: Feature Specifications"
+    },
+    {
+      question: "A PM is writing the Section 4 Functional Requirements of InsightFlow's Workflow Builder PRD. After listing eight features, the PM counts that seven are labelled MUST. According to the /prd skill's quality rules, what should the PM do?",
+      options: [
+        "Proceed — seven out of eight MUST requirements is within normal parameters for a major initiative",
+        "Convert all SHOULDs to COULDs to create room for the MUSTs at 87%",
+        "Remove two features entirely from the PRD scope to bring the MUST count below five",
+        "Challenge each MUST by asking 'Would we genuinely not launch without this?' and downgrade any that are actually SHOULDs"
+      ],
+      correctOption: 3,
+      explanation: "The /prd skill enforces a specific constraint: if more than 60% of requirements are labelled MUST, the scope is too large. Seven of eight is 87% — well above the threshold. The correct action is to challenge each MUST with the test question: 'If this were not ready on launch day, would we delay the entire initiative?' If any MUST would not actually block the launch, it is a SHOULD. MUSTs that are actually SHOULDs inflate scope, slow down the first launch, and defer the learning you could get from shipping smaller. Converting SHOULDs to COULDs does not address the MUST inflation. Removing features is a more drastic action than the rule requires. The 60% rule is a forcing function, not a guideline — when everything is MUST, nothing is MUST.",
+      source: "Lesson 7: PRDs for Multi-Team Initiatives"
+    },
+    {
+      question: "After generating stories from the Workflow Builder PRD using /stories, the PM reviews this story: 'As a user, I want to click the trigger button and select a schedule, so that the system processes my trigger configuration.' How many violations of the three-part quality test does this story contain?",
+      options: [
+        "Three — the persona, the 'want', and the 'so that' all violate their respective quality rules",
+        "Two — the persona is generic and the 'want' describes a UI element not a capability",
+        "One — the 'so that' describes a system action rather than a user outcome",
+        "Zero — the story correctly follows the As a / I want / So that format"
+      ],
+      correctOption: 0,
+      explanation: "This story contains three violations: (1) Persona violation: 'a user' tells engineers nothing about context, goals, or constraints — the correct persona would be 'Analyst Alex', which implies SQL-free, time-constrained, and report-focused context. (2) Capability violation: 'click the trigger button and select a schedule' describes UI elements the user clicks, not a capability they gain. The want should be 'configure a weekly schedule trigger for my workflow.' (3) Outcome violation: 'so that the system processes my trigger configuration' is a system action, not a user benefit. The outcome should be 'so that my Monday morning dashboard refresh happens automatically without me logging in.' Real-world connection: stories with all three violations create ambiguity at the sprint boundary about who the feature serves and why it matters.",
+      source: "Lesson 8: User Stories & Story Mapping"
+    },
+    {
+      question: "InsightFlow's PM receives a request from the CEO for 'the Q3 roadmap' in three versions for three audiences. When generating the customer-facing version using /roadmap-update, the PM includes specific delivery dates. What problem does this create?",
+      options: [
+        "Customers will use the dates to negotiate contract terms with the Head of Sales",
+        "Date precision trains customers to treat the roadmap as a contract, converting updates into re-negotiations when dependencies slip",
+        "The engineering team will see the dates and commit to them without capacity checks",
+        "Legal will require the dates to be reviewed before any customer-facing document is released"
+      ],
+      correctOption: 1,
+      explanation: "A customer-facing roadmap that includes specific delivery dates creates contract expectations. Customers read 'Q3' as a guarantee. When a dependency slips — and dependencies always slip — the PM is now renegotiating a contract rather than updating a plan. Now/Next/Later avoids this by communicating timeframe buckets, not calendar commitments. Customers read 'Next' as a direction, not a date. The engineering commitment problem is real but separate from the contract-expectations problem with customers. Legal review is not the primary concern here. Real-world connection: PMs who use dates on customer roadmaps frequently spend time in reactive conversations about 'when exactly' rather than proactive conversations about product direction.",
+      source: "Lesson 9: Roadmap Planning & Communication"
+    },
+    {
+      question: "A PM applies RICE scoring to InsightFlow's Q3 backlog. The Mobile App (iOS) scores a RICE of 3 — the lowest item. The CEO immediately says it is the most strategically important Q3 investment. Which of the three mandatory challenges is most relevant to this situation?",
+      options: [
+        "The Data Gap Test — Mobile App's confidence of 25% means a discovery spike is needed before any build commitment",
+        "The 'What Would We Regret?' Test — the CEO's intuition represents what customers would be most grateful for",
+        "The Strategic Override Test — if the CEO would build it regardless of score, the override reason must be documented",
+        "None — the RICE score of 3 is objective evidence that Mobile App should not be built this quarter"
+      ],
+      correctOption: 2,
+      explanation: "The Strategic Override Test asks: 'Is there any item that scored low that you would build anyway?' The CEO saying it is the most important investment is a potential override scenario. If the decision is made to build it despite the low RICE score, the override reason must be documented explicitly — not buried in score inflation. The Data Gap Test applies when confidence is below 50% and a discovery spike could raise it, but the primary issue here is an override, not a data gap. The Regret Test is useful for sanity-checking the top RICE scorer, not for reconciling a CEO mandate. RICE scores are not objective — they are relative rankings built on explicit assumptions, and they have known blind spots including strategic necessity. Real-world connection: RICE scores are inputs to a decision, not decisions themselves.",
+      source: "Lesson 10: Backlog Prioritization Frameworks"
+    },
+    {
+      question: "InsightFlow's Sprint 1 team has five engineers with a combined raw capacity of 40 story days. Sasha is on-call primary (subtract 1.5 days), Leo has 3 days PTO, and all engineers have 1 day of meetings overhead each. Using the 70-80% planning capacity rule, approximately how many story points should the sprint be committed to?",
+      options: [
+        "30 story points — 75% of the 40 raw story days after overhead deductions",
+        "40 story points — full raw capacity to maximise delivery in the sprint",
+        "28 story points — 70% of 40 raw days before accounting for individual overhead",
+        "33 story points — raw capacity minus PTO and on-call only, without the buffer"
+      ],
+      correctOption: 0,
+      explanation: "The calculation follows three steps: (1) Start with 40 raw available days across five engineers. (2) Subtract Sasha's 1.5 on-call days, Leo's 3 PTO days, and 5 total days of meeting overhead = 40 - 1.5 - 3 - 5 = 30.5 real available days. (3) Apply the 70-80% rule at approximately 75%: 30.5 × 0.75 ≈ 23 points — but using the raw days first and then deducting: 40 × 0.75 = 30 points as the planning target. The lesson uses 30 points as the planning capacity for exactly this team configuration. Planning to 100% (40 points) guarantees missed commitments because interrupts always occur. 28 points skips the overhead deductions. 33 points omits the buffer multiplier. Real-world connection: teams that plan to 80% and deliver reliably build stakeholder trust faster than teams that plan to 100% and miss.",
+      source: "Lesson 11: Sprint Planning & Capacity"
+    },
+    {
+      question: "A PM at InsightFlow discovers midweek that the auth service review meeting has not been scheduled, potentially delaying WF-003 trigger UI start by 2-3 days. The PM is writing the weekly stakeholder update to the CEO. Which G/Y/R status and communication approach is correct?",
+      options: [
+        "Green — 2-3 days is minor and within normal sprint variability, so no status change is needed",
+        "Yellow — wait until the meeting is definitely not scheduled before changing from Green to Yellow",
+        "Red — the PM needs the CEO to intervene and schedule the meeting immediately",
+        "Yellow — flag the watch item proactively now that the risk is materialising, even though no help is needed yet"
+      ],
+      correctOption: 3,
+      explanation: "Yellow status should be applied at the FIRST sign of risk materialising — before the PM is certain something will go wrong. The rule is: move to Yellow when you have a concern and mitigation in place but the outcome is uncertain. The missing meeting scheduling is exactly this scenario. A PM who never reports Yellow is either managing a perfect product or hiding problems. Green would be accurate only if there were no risks requiring monitoring. Red is for situations where the PM has exhausted options and needs external help — scheduling follow-up is still within the PM's scope. Waiting until the risk is certain defeats the purpose of Yellow, which is early warning. Real-world connection: stakeholders given Yellow early have more options to help than stakeholders first hearing about a risk when it becomes Red.",
+      source: "Lesson 12: Stakeholder Communication"
+    },
+    {
+      question: "InsightFlow's monthly metrics review shows: New signups up 9.7%, but activation rate (signups who create first dashboard within 7 days) dropped from 37% to 34%. The self-serve onboarding redesign launched three weeks ago. A PM using /metrics-review should classify the activation drop as which of the following?",
+      options: [
+        "A confirmed causal relationship — the onboarding redesign caused the activation drop, requiring immediate rollback",
+        "A vanity metric movement — activation rate is not part of InsightFlow's North Star and should be deprioritised",
+        "A correlation that warrants investigation — the timing is suggestive but funnel data must confirm the cause",
+        "A positive signal — 34% activation means 34% of new signups are creating dashboards within 7 days"
+      ],
+      correctOption: 2,
+      explanation: "The /metrics-review skill is explicit: never attribute a metric change as certain — correlation is not causation. The timing between the onboarding redesign launch and the activation drop is suggestive but not proof. The correct action is to investigate with L2 diagnostic metrics — specifically funnel drop-off data for the new onboarding flow — to identify where users are leaving. Calling it a confirmed causal relationship without funnel data is premature and could lead to rolling back a design that was not the culprit. Activation rate is a high-leverage L1 health indicator, not a vanity metric — it predicts retention, LTV, and NPS simultaneously. 34% activation being 'positive' ignores the downward trend from 37% and the target of 40%. Real-world connection: the fastest path from a metric anomaly to the right fix is identifying the exact funnel step that changed.",
+      source: "Lesson 13: Metrics, OKRs & Product Analytics"
+    },
+    {
+      question: "InsightFlow's Sprint 1 retrospective process improvement reads: 'We need to communicate better with the engineering team about specifications.' According to the /retro skill's STRONG vs. WEAK rule format, why is this a weak process improvement, and what would a strong version look like?",
+      options: [
+        "It is weak because it does not name who is responsible; a strong version assigns an owner and a deadline",
+        "It is weak because it is vague — it does not specify what action to take at what step; a strong version would be: 'Engineering lead must confirm architecture notes in the PRD before REVIEW status'",
+        "It is weak because communication is a soft skill, not a process; a strong version would focus only on documentation artefacts",
+        "It is weak because it focuses on one sprint; a strong version would address the systematic problem across all future sprints"
+      ],
+      correctOption: 1,
+      explanation: "The STRONG vs. WEAK rule test is: 'Can you tell someone exactly what action to take, at what step in the workflow, before they would otherwise have proceeded?' 'Communicate better' fails this test because it gives nobody an action. A strong version names a specific rule: 'Engineering lead must confirm architecture notes in the PRD Section 6 before the PRD moves to REVIEW status.' This is testable — at the REVIEW gate, you can verify whether confirmation happened. Assigning an owner and deadline is one ingredient of a strong improvement but not sufficient without the specific action. Communication not being a process is incorrect — communication has specific steps that can be encoded as rules. The scope (one sprint vs. all sprints) is not the primary distinction between weak and strong.",
+      source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
+    },
+    {
+      question: "A new PM joining InsightFlow asks: 'Which plugin do I use to create a problem brief before we start discovery on a new feature?' According to the Chapter 36 two-plugin architecture, what is the correct answer?",
+      options: [
+        "The official product-management plugin, using the /write-spec command in problem-framing mode",
+        "The official product-management plugin, using /competitive-brief to understand the market context first",
+        "Either plugin — both contain /brief as a shared command for discovery work",
+        "The custom product-strategy plugin, using the /brief command"
+      ],
+      correctOption: 3,
+      explanation: "The /brief command belongs exclusively to the custom product-strategy plugin (Layer 2), which fills the workflow gaps the official plugin does not cover. The custom plugin enforces specific craft principles — like 'never propose a solution in a problem brief' — as structural rules. /write-spec (official plugin) is for writing feature specifications after discovery, not for framing problems before it. There is no shared /brief command — command ownership is clearly split between the two plugins. /competitive-brief (official plugin) is used for analysing competitors, not for initial problem framing. Real-world connection: understanding which commands come from which plugin helps PMs select the right tool for each phase of the PM workflow cycle without trial and error.",
+      source: "Lesson 15: Chapter Summary & Quick Reference"
+    },
+    {
+      question: "A PM describes InsightFlow's primary cognitive load problem as: 'PMs don't know how to write good specs.' What is the lesson's correction to this framing, and what does it imply for how AI agents should be positioned?",
+      options: [
+        "The real problem is structural: volume of writing required to PM well exceeds available time; AI agents address the constraint, not the skill gap",
+        "The correction is correct — PM training gaps are the root cause and AI agents should compensate for skill deficits",
+        "The framing is partially right — AI agents should be used to teach PMs spec-writing through guided exercises",
+        "The correction is that engineers, not PMs, should write specs; AI agents help engineers translate requirements autonomously"
+      ],
+      correctOption: 0,
+      explanation: "Lesson 1 is explicit: the document gap is not laziness and not a skills problem. Most PMs know how to write a good spec — they just cannot write it at the quality it deserves AND do everything else simultaneously. The PM's cognitive load problem is structural: the volume of writing required to PM well exceeds the time available. An experienced PM who can write a brilliant feature spec in two hours typically does not have two uninterrupted hours. AI agents address this structural constraint: the agent writes the first draft, the PM reviews and directs. This positions AI as removing the bottleneck between PM judgment and the documentation that expresses it. Positioning AI as a training tool or skill compensator misrepresents the problem and the value. Real-world connection: the framing determines how an organisation adopts AI PM tools — correctly framed, adoption is about quality at speed, not automation of incompetence.",
+      source: "Lesson 1: The PM's Cognitive Load Problem"
+    },
+    {
+      question: "A PM configures product.local.md for InsightFlow with the primary persona described as: 'Users who need analytics.' After running /brief on a feature request, the output sounds generic and does not mention InsightFlow's specific users. What is the root cause?",
+      options: [
+        "The /brief command requires a separate context file — product.local.md is only used by /write-spec and /roadmap-update",
+        "The Product Identity section is missing — /brief reads only the product name and description, not the persona",
+        "The Personas section is under-specified — a persona must describe behaviour, goals, and frustrations to change AI output meaningfully",
+        "The plugin needs to be reinstalled with a custom persona configuration before /brief uses product.local.md data"
+      ],
+      correctOption: 2,
+      explanation: "The Personas section is the highest-leverage section of product.local.md. 'Users who need analytics' implies nothing about context, goals, or constraints. Compare this to: 'Analyst Alex — data analyst at 100-500 person company, builds dashboards without SQL, biggest frustration is report requests taking 3+ days, 10/10 week is building three dashboards without receiving any 'when will this be ready?' messages.' That description changes the tone, specificity, and focus of nearly every command output. product.local.md is read by all commands in a Cowork session — it is not command-specific. The Product Identity section helps but the Personas section is the primary driver of specificity. No reinstallation is needed — the file is read at session load. Real-world connection: sparse personas produce generic outputs regardless of prompt quality.",
+      source: "Lesson 2: Plugin Architecture & Your Product Context"
+    },
+    {
+      question: "A research synthesis from /synthesize-research includes this finding: 'Users want better export options.' A senior PM reviewing the output flags this as a weak finding. What category of finding is this, and what would a strong version look like?",
+      options: [
+        "It is a behavioral finding — strong, but needs a source count to be complete",
+        "It is a stated preference finding — weak; a strong version describes observable behaviour like 'Participants spent 40-60 minutes reformatting exported data in Excel before sharing reports'",
+        "It is a theme-level finding — acceptable at this stage; L2 diagnostics would add specificity later",
+        "It is a valid insight — user preferences are valid research findings when they appear in multiple interviews"
+      ],
+      correctOption: 1,
+      explanation: "Lesson 4 draws a sharp distinction between behavioral findings and stated preference findings. 'Users want better export options' is a stated preference — it reports what users said, not what they did. Stated preferences are the users' proposed solutions to a problem they experienced. A behavioral finding describes what was observed: 'Participants spent an average of 40-60 minutes reformatting exported data in Excel before sharing reports — a step all five participants described as unavoidable.' That is evidence. Behavioral findings come from observing what users do; stated preference findings come from what they say. The synthesis should distinguish between them because they support different product decisions. 'Behavioral finding needing source count' is incorrect — it is not a behavioral finding at all. Theme-level findings still need to be behavioral, not preference-based. Real-world connection: product teams that act on stated preferences build features for hypothetical future behaviour.",
+      source: "Lesson 4: User Research — Interviews & Synthesis"
+    },
+    {
+      question: "InsightFlow's /competitive-brief output rates AutoDash as 'Absent' for trigger-based automations — the same rating as InsightFlow. An engineer suggests InsightFlow should deprioritise automation since 'no one has it.' What is the correct strategic interpretation of both competitors being 'Absent'?",
+      options: [
+        "The engineer is right — market data shows automation is not yet valued by buyers in this segment",
+        "Both being Absent means the market is not ready for automation; InsightFlow should focus on analytics parity first",
+        "InsightFlow should partner with AutoDash to co-develop automation rather than competing in an undeveloped space",
+        "This is InsightFlow's strategic window to own the automation positioning before a competitor establishes a foothold"
+      ],
+      correctOption: 3,
+      explanation: "When both competitors are Absent in a capability area, it represents an unclaimed strategic position — not evidence that the market does not want it. The competitive brief's strategic implication is precisely this: 'If InsightFlow ships workflow automation before AutoDash iterates on their weak alert/notification entry, InsightFlow can own the automation positioning in this segment.' The window is temporary — if AutoDash invests here, the opportunity closes. The engineer's interpretation confuses no current offering with no market demand. The L04 research synthesis already showed 8/12 users cited manual workflows as their primary pain point, establishing demand. Partnership with a competitor at the exact moment you could differentiate is the wrong strategic call. Real-world connection: the differentiate vs. parity framework helps PMs distinguish where to lead from where to catch up.",
+      source: "Lesson 5: Competitive Intelligence"
+    },
+    {
+      question: "An InsightFlow PM writes this acceptance criterion for a dashboard export feature: 'Export completes quickly for large dashboard selections.' The engineering lead says this criterion is not sprint-ready. Which rule does it violate, and what is the corrected version?",
+      options: [
+        "It violates 'measurable thresholds' — 'quickly' is unmeasurable; a corrected version would be 'Export completes within 10 seconds for selections of up to 10 charts'",
+        "It violates 'independently testable' — it depends on whether the dashboard is loaded first; split into two criteria",
+        "It violates 'behavior not implementation' — 'completes' implies an async job queue; rewrite to describe the user experience",
+        "It violates 'no and' — exporting and being quick are two requirements; split into separate acceptance criteria"
+      ],
+      correctOption: 0,
+      explanation: "The criterion 'export completes quickly' violates the measurable thresholds rule because 'quickly' is vague quality language that no test suite can evaluate objectively. 'Quickly' to the PM might mean 5 seconds; to the engineer it might mean 30 seconds; to the user it might mean 2 seconds. A corrected version specifies a threshold: 'Export completes within 10 seconds for selections of up to 10 charts.' The four AC quality rules are independently testable, no 'and', behavior not implementation, and measurable thresholds. 'Independently testable' applies when one AC depends on another being true first. 'Behavior not implementation' applies when the AC mentions database operations or service names. 'No and' applies when two requirements are joined. Real-world connection: vague ACs are the most common source of feature rework — 'it mostly works' becomes the de facto definition of done.",
+      source: "Lesson 6: Feature Specifications"
+    },
+    {
+      question: "InsightFlow's PRD for Workflow Builder defines success as 'workflow automation adoption will improve.' The CPO rejects the success metric as insufficient. What specific element is missing, and what format would a strong success metric include?",
+      options: [
+        "The metric is missing executive sponsorship — the CPO must approve success definitions before the PRD reaches REVIEW status",
+        "The metric lacks specificity — a strong version names a specific metric, a baseline, a target, and a timeframe, such as '20%+ of Pro accounts activate one automated workflow within 90 days of GA'",
+        "The metric is missing competitive benchmarks — what automation adoption looks like at competitor products must be included",
+        "The metric is vague because it says 'adoption' rather than specifying the user persona — add 'Analyst Alex adoption' to the definition"
+      ],
+      correctOption: 1,
+      explanation: "The PRD's success metric 'will improve' fails the specificity test. A strong success metric includes: (1) a specific metric (automated workflow activation rate), (2) a baseline if known, (3) a quantified target (20%+ of Pro and Business accounts), and (4) a timeframe (within 90 days of GA). The lesson also requires a failure threshold — the specific outcome that would cause a change in direction before it becomes sunk-cost escalation. Without a failure threshold, the post-launch review becomes a negotiation about whether numbers are 'good enough.' Executive sponsorship is a process step, not a metric ingredient. Competitive benchmarks are useful context but not required in the metric definition. Specifying the persona in a metric is unusual — metrics measure outcomes across users, not per-persona targets.",
+      source: "Lesson 7: PRDs for Multi-Team Initiatives"
+    },
+    {
+      question: "A PM generates stories from the Workflow Builder PRD and receives a story with 9 acceptance criteria. The engineering lead says it is an epic, not a story. Which of the four splitting triggers applies, and how should the PM split it?",
+      options: [
+        "The 'cannot complete in one sprint' trigger — split by delivery phase (design phase vs. implementation phase)",
+        "The 'multiple personas' trigger — separate stories for Analyst Alex and VP Priya who both use trigger configuration",
+        "The 'more than 7 ACs' trigger — identify the distinct user flows within the story and create one story per flow",
+        "The 'multiple user flows' trigger only applies to stories covering setup and editing — 9 ACs alone is not a trigger"
+      ],
+      correctOption: 2,
+      explanation: "When a story exceeds 7 acceptance criteria, the PM has usually combined two or more user flows into one story. The correct fix is not to condense the ACs — it is to identify the distinct flows and create one story per flow. For example, if a trigger configuration story covers both 'initial setup flow' and 'editing an existing trigger flow', that is two stories. A story is a slice, not a summary. The 'cannot complete in one sprint' trigger applies when the estimate exceeds sprint capacity, not merely because AC count is high. The 'multiple personas' trigger applies when the story serves two fundamentally different user types — 9 ACs from a single persona's interactions is not this. The claim that 9 ACs alone is not a trigger is incorrect — the lesson is explicit that 7+ ACs is a splitting signal. Real-world connection: PMs who split stories before sprint planning prevent mid-sprint scope surprises.",
+      source: "Lesson 8: User Stories & Story Mapping"
+    },
+    {
+      question: "An enterprise customer contacts InsightFlow's Head of Customer Success asking: 'Your roadmap says data threshold triggers are coming in Q3 — can we count on that for our contract renewal?' The PM used the Now/Next/Later format but included a specific Q3 label for threshold triggers. What is the root cause of this expectation problem?",
+      options: [
+        "The customer misread 'Next' as 'Now' because the roadmap did not clearly define the bucket meanings",
+        "The customer's expectation is legitimate — if the PM committed Q3 in writing, that is a valid contract obligation",
+        "The Head of Customer Success should not have shared the roadmap without PM approval first",
+        "Specific time references like 'Q3' on customer-facing roadmaps create contract expectations — Now/Next/Later avoids this by communicating direction without dates"
+      ],
+      correctOption: 3,
+      explanation: "The lesson is explicit: customer-facing roadmaps that include specific time references (Q3, specific months) create contract expectations. Customers read 'Q3' as a guarantee. When a dependency slips, the PM is now renegotiating a contract rather than updating a plan. The Now/Next/Later format is deliberately time-ambiguous: 'Next' communicates direction without creating a commitment the engineering team cannot guarantee. The customer did not misread the format — the format itself caused the problem by using Q3 as a label. CS sharing the roadmap is not the issue; the roadmap format is. The customer's expectation is understandable but not the PM's intent — the lesson's prescription is to prevent this situation by using benefit language without dates. Real-world connection: the most common customer-facing roadmap mistake is conflating internal planning precision with external communication.",
+      source: "Lesson 9: Roadmap Planning & Communication"
+    },
+    {
+      question: "InsightFlow's PM runs /prioritise with RICE scoring. The Cohort Analysis feature scores a RICE of 3 due to 30% confidence and 4 sprints of effort. The quarterly priority decision marks it as 'Not Building.' A stakeholder asks why it is not being built. What is the correct PM response, and what action should follow?",
+      options: [
+        "Explain that the low confidence score means a 2-week discovery spike should run first to determine if cohort analysis addresses a genuine unmet need before committing 4 sprints",
+        "Explain that cohort analysis is low-priority because user demand is weak based on single-source feedback",
+        "Explain that the RICE score of 3 is the objective evidence that the feature should not be built this quarter",
+        "Explain that the feature will be re-evaluated next quarter when confidence data improves naturally through customer requests"
+      ],
+      correctOption: 0,
+      explanation: "The Data Gap Test asks: for items with confidence below 50%, what would it take to raise confidence above 70%, and can that happen in a 2-week discovery spike? Cohort analysis at 30% confidence with 4 sprints of effort is a prime discovery spike candidate. Investing 2 weeks in research to validate whether the feature addresses a genuine workflow analytics need (vs. what standard BI tools already do) is far cheaper than discovering 2 sprints in that the assumption was wrong. Saying demand is 'weak' misrepresents the situation — demand may be real but evidence is insufficient. RICE scores are relative inputs to decisions, not objective evidence. Waiting for confidence to 'improve naturally' without a structured spike is passive and inefficient. Real-world connection: the cost of a discovery spike is 2 weeks; the cost of building the wrong high-effort feature is an entire quarter.",
+      source: "Lesson 10: Backlog Prioritization Frameworks"
+    },
+    {
+      question: "InsightFlow's Sprint 1 plan is loaded at 97% of planning capacity. The PM presents three options to the engineering lead: (A) cut WF-006 dashboard load optimisation (3 pts, P1), (B) move WF-005 error handling (5 pts, P1) to stretch, or (C) accept 97% and flag it. What does the agent's output correctly tell the PM about option C?",
+      options: [
+        "Option C is recommended — 97% is within the acceptable margin for a high-priority sprint",
+        "Option C is incorrect — the agent should automatically remove the lowest-priority item to bring load under 85%",
+        "Option C is only defensible if Leo returns from PTO before WF-005 is scoped — the decision depends on context the agent does not have",
+        "Option C should never be accepted — any sprint over 80% capacity must have items cut before planning proceeds"
+      ],
+      correctOption: 2,
+      explanation: "The lesson explicitly states that accepting 97% 'is only defensible if Leo is back from PTO before WF-005 is scoped' and that 'the right answer depends on context the agent does not have. This is where your judgment comes in. The agent surfaces the problem. You make the call.' The sprint planning command surfaces the overload problem — the PM resolves it. The agent correctly flags the 97% load and presents options, but cannot know whether Leo's early return changes the risk calculus. The agent should not automatically remove items — that would remove PM judgment from a scope decision. 97% is above the 70-80% recommendation but the lesson does not say it can never be accepted in context. Real-world connection: sprint planning tools that auto-cut items remove PM judgment from decisions that depend on team-specific context.",
+      source: "Lesson 11: Sprint Planning & Capacity"
+    },
+    {
+      question: "A PM writes a stakeholder update for the engineering team and includes: 'The sprint is progressing well.' An engineering lead responds: 'This tells me nothing about what I need to do this week.' Which content element is missing from the engineering version?",
+      options: [
+        "The sprint's G/Y/R status — engineers need the traffic light signal, not prose",
+        "Specific blockers, priority decisions, and what changes in the coming week — the engineering update contains decisions and actions, not status summaries",
+        "The failure threshold — engineers need to know when the sprint would be considered unsuccessful",
+        "The capacity table — engineers need to see how many points are remaining for the sprint"
+      ],
+      correctOption: 1,
+      explanation: "The engineering stakeholder update serves a fundamentally different purpose from the executive update. Engineers need: specific ticket status (WF-001, WF-002), decisions made with ADR references, blockers and who is unblocking them, and priority actions for the coming week. 'The sprint is progressing well' contains none of this. The engineering version is not a compressed version of the executive update — it contains entirely different content targeted at engineers' actual information needs. G/Y/R status is one element but insufficient alone. A failure threshold is a PRD concept, not a sprint update element. The capacity table belongs in the sprint plan, not the weekly update. Real-world connection: PMs who send the same update to all audiences waste engineers' time and lose executive attention simultaneously.",
+      source: "Lesson 12: Stakeholder Communication"
+    },
+    {
+      question: "InsightFlow's CPO asks the PM to add 'number of features shipped per sprint' as a Key Result for the Q2 OKRs. The PM pushes back. What is the PM's strongest argument?",
+      options: [
+        "The team could hit this KR without a single user benefiting — it measures team output, not user behaviour outcomes",
+        "Features shipped per sprint is a velocity metric, not an outcome metric — it belongs in the engineering dashboard, not OKRs",
+        "Features shipped per sprint is not measurable at the quarterly level — sprint velocity varies too much to be a reliable KR",
+        "The CPO should not be involved in setting Key Results — that is the PM's responsibility under OKR governance"
+      ],
+      correctOption: 0,
+      explanation: "The output KR trap test is explicit: 'Could your team hit this KR without a single user benefiting?' Features shipped per sprint fails this test completely — a team could ship ten features that nobody uses and still hit the KR. OKR Key Results must measure user and business outcomes (activation rate, retention, NPS) not team activity (features shipped, tickets closed, interviews completed). The team influences outcomes but does not control them — that is the disciplinary value of outcome KRs. Velocity is a useful engineering metric but not an OKR. Quarterly measurability of sprint velocity is a minor concern compared to the core output vs. outcome distinction. CPO involvement in KRs is appropriate — the objection is about content, not governance. Real-world connection: OKRs that measure output create incentives to ship rather than to deliver value.",
+      source: "Lesson 13: Metrics, OKRs & Product Analytics"
+    },
+    {
+      question: "The Research Intelligence Agent flags this signal during its Monday digest: a single support ticket this week about dashboard load time. How should the agent classify this signal, and why?",
+      options: [
+        "🔴 ESCALATE — any support complaint about performance requires immediate PM attention",
+        "🟡 MONITOR — one ticket is suggestive but not yet a pattern requiring action",
+        "The agent should generate a /brief immediately because performance issues can compound quickly",
+        "🟢 NOTED — one complaint is noise; the agent's own NEVER DO rule is 'never surface a single user complaint as a signal'"
+      ],
+      correctOption: 3,
+      explanation: "The Research Intelligence Agent's NEVER DO rules are explicit: 'Never surface a single user complaint as a signal — one complaint is noise; three is a pattern; five is a signal.' A single ticket about dashboard load time does not meet the threshold for even Monitor status. It should be logged as NOTED and tracked across future weeks to see if it becomes a pattern. Escalating immediately would create alarm without evidence. Monitor implies the signal warrants ongoing attention — one ticket does not. Generating a /brief problem brief requires a pattern across multiple data sources or repeated occurrences. Real-world connection: agents that escalate every individual complaint create alert fatigue and train PMs to ignore the inbox, defeating the purpose of continuous monitoring.",
+      source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
+    },
+    {
+      question: "Which of the following correctly describes the relationship between the custom /brief command and the official /write-spec command in the PM workflow cycle?",
+      options: [
+        "/brief and /write-spec are interchangeable — both create structured requirement documents for engineering teams",
+        "/write-spec wraps the output of /brief into a five-section spec automatically when run in sequence",
+        "/brief frames the problem and defines what to investigate; /write-spec documents what to build after discovery is complete",
+        "/brief is used by the PM while /write-spec is used by engineering leads to define technical implementation details"
+      ],
+      correctOption: 2,
+      explanation: "The PM workflow cycle shows /brief at the DISCOVER phase and /write-spec at the DEFINE phase — separated by research (/interview and /synthesize-research) and competitive analysis (/competitive-brief). A problem brief contains no solution proposals; it defines the problem and the discovery questions that must be answered before building. A feature spec describes what to build after that discovery is complete. They are not interchangeable — conflating them leads to committing to solutions before understanding problems. /write-spec does not automatically process /brief output — the PM synthesises discovery findings and makes a judgment call about what to build before invoking /write-spec. Both commands are PM tools, not separated by role. Real-world connection: PMs who skip the brief and jump to the spec often discover post-launch that they built the technically correct solution to the wrong problem.",
+      source: "Lesson 15: Chapter Summary & Quick Reference"
+    },
+    {
+      question: "A PM at a startup is producing PM artifacts for a feature from ideation to launch. Which PM role produces the retrospective document, and what is the most common quality failure when retrospectives are written under time pressure?",
+      options: [
+        "Researcher role — retrospectives analyse user feedback; the quality failure is insufficient interview sample size",
+        "Writer role — retrospectives are documentation artifacts; the most common quality failure is not writing the retrospective at all",
+        "Communicator role — retrospectives are stakeholder documents; the quality failure is sending the wrong version to engineers",
+        "Decision-maker role — retrospectives evaluate sprint decisions; the quality failure is missing owner assignments for action items"
+      ],
+      correctOption: 1,
+      explanation: "Lesson 1 maps the decision-maker role to prioritisation docs, sprint briefs, and retrospectives — but the most common quality failure the lesson describes is that retrospectives are skipped entirely because there is no time. The document gap applies not just to specs and PRDs but to all PM artifacts, including retrospectives. 'Teams who repeated the same mistakes because the retrospective was never written' is listed as one of the four key failure modes from skipped artifacts. The researcher role covers discovery notes and research syntheses. The decision-maker role does produce retrospectives (not the communicator or writer), but the failure mode the lesson names is not missing action items — it is the retrospective not being produced at all. Real-world connection: teams that skip retrospectives lose the compounding learning that would improve every subsequent sprint.",
+      source: "Lesson 1: The PM's Cognitive Load Problem"
+    },
+    {
+      question: "The InsightFlow PM is setting up product.local.md and writes this Personas section: 'Primary persona: software users who want to see data.' The Teaching Guide for L02 warns this will produce poor output. What specific field most dramatically changes /brief output quality when described with precision?",
+      options: [
+        "The product's pricing tier — commands calibrate tone and formality based on whether the product is Free vs. Enterprise",
+        "The Engineering Team section — commands read team size to calibrate how technical the output should be",
+        "The persona's company size — commands use this to determine whether to apply SMB or enterprise product patterns",
+        "The persona's '10/10 week' description — it forces specificity about what a perfect week looks like, which grounds every command's output in concrete user reality"
+      ],
+      correctOption: 3,
+      explanation: "Lesson 2's Teaching Guide identifies the Personas section as the highest-leverage section and specifically flags the '10/10 week' field: 'it forces specificity that generic persona descriptions avoid.' For Analyst Alex, a 10/10 week is: 'builds three new dashboards for different teams, receives no 'when will this be ready?' Slack messages, and sees two dashboards get referenced in a team meeting without anyone asking who built them.' This vivid description changes what 'success' means for every command run in the session. The product's pricing tier affects some commands but is not the single highest-leverage field. Company size provides context but is far less impactful than a behavioural persona description. Engineering Team section is important for sprint planning but does not affect discovery-phase commands like /brief. Real-world connection: the single best investment in product.local.md quality is time spent writing the '10/10 week' for the primary persona.",
+      source: "Lesson 2: Plugin Architecture & Your Product Context"
+    },
+    {
+      question: "A PM runs /brief and receives a problem brief for the real-time collaboration feature request. The WHAT WE DO NOT KNOW YET section says 'N/A.' According to the /brief skill spec, what does this indicate, and what should the PM do?",
+      options: [
+        "The brief fails a mandatory quality check — the WHAT WE DO NOT KNOW section must always be present and substantive; prompt the agent to add specific unknowns",
+        "N/A is acceptable when the problem is well understood — skip to the discovery brief type instead",
+        "N/A indicates the discovery work is complete and the PM can proceed directly to /write-spec",
+        "The agent encountered an ambiguity in the problem context — restart /brief with additional context about the feature request"
+      ],
+      correctOption: 0,
+      explanation: "Lesson 3 is explicit: 'If your brief does not have this section — or if the section says N/A — it is not a problem brief. It is a solution proposal wearing a problem brief's clothing. Acknowledging uncertainty is strength, not weakness.' The WHAT WE DO NOT KNOW section is what separates a genuine problem brief from a stakeholder request in a template. The correct action is to prompt the agent: 'The WHAT WE DO NOT KNOW section is missing. Add at least three specific unknowns about this problem.' N/A is never acceptable — even for well-understood problems there are unknowns worth surfacing. N/A does not mean discovery is complete; it means the brief was generated without the discipline the skill is designed to enforce. Real-world connection: a brief without acknowledged unknowns is the first step toward building the wrong thing with high confidence.",
+      source: "Lesson 3: Discovery Briefs — Framing the Right Problem"
+    },
+    {
+      question: "Three interview participants in InsightFlow's user research each independently mentioned wanting a 'bulk export feature.' A junior PM summarises this as 'Evidence: Three users want bulk export.' A senior PM revises the finding. What does the senior PM write instead?",
+      options: [
+        "'Evidence: Three users requested bulk export — this qualifies as a behavioral pattern meeting the minimum threshold for feature prioritisation'",
+        "'Evidence: Users are spending 40-60 minutes reformatting individual exports in Excel — three participants described this as unavoidable; bulk export is their proposed solution'",
+        "'Evidence: N=3 users mentioned bulk export, representing 60% of our interview sample — statistically significant for a product of InsightFlow's size'",
+        "'Evidence: Bulk export appeared in three of five interviews, ranking it as the second most-requested feature behind template library'"
+      ],
+      correctOption: 1,
+      explanation: "Lesson 4 is explicit that stated feature requests are not evidence — they are users' proposed solutions to a problem. The behavioral evidence is what users are doing that makes them ask for bulk export: the 40-60 minutes reformatting individual exports, the unavoidable workaround, the observable behaviour. 'Three users want bulk export' is a stated preference; 'participants spent 40-60 minutes reformatting exported data' is behavioral evidence. The senior PM should capture the behavior, then note that bulk export is the users' proposed solution to that behavior. The 60% statistical framing misrepresents qualitative research. Ranking by mention frequency treats feature request volume as evidence, which the lesson explicitly corrects. Real-world connection: product teams that build features from stated preferences frequently discover the feature does not solve the underlying problem the users were experiencing.",
+      source: "Lesson 4: User Research — Interviews & Synthesis"
+    },
+    {
+      question: "InsightFlow's /competitive-brief categorises Excel and Google Sheets as which competitive tier, and why is this tier considered more strategically important than the direct competitor tier?",
+      options: [
+        "Adjacent tier — because Excel could add analytics features and compete directly if Microsoft chose to expand",
+        "Direct tier — because Excel users and InsightFlow users have the same workflow needs, just with different tools",
+        "Indirect tier — because Excel addresses the same problem (data analysis without SQL) through a different approach, and it is already installed, trusted, and costs nothing extra",
+        "Substitute tier — because Excel is an entirely different approach to the same underlying data management need"
+      ],
+      correctOption: 2,
+      explanation: "Excel and Google Sheets are the indirect competitors: same problem (data analysis and reporting), different approach (manual spreadsheet work vs. a purpose-built analytics platform). The lesson explicitly states: 'Excel is InsightFlow's most dangerous competitor — not because it is a better analytics platform, but because it is already installed, already trusted, and costs nothing extra.' This makes the indirect tier often more strategically important than direct competitors: prospects who don't buy InsightFlow are mostly not going to AutoDash — most are continuing to use spreadsheets. Adjacent competitors (like WorkflowIQ) are different problems that could expand. Substitute competitors are entirely different approaches to the underlying need (e.g., hiring a data analyst). Direct competitors offer the same solution. Real-world connection: competitive analyses that focus only on direct competitors miss the largest at-risk segment of the addressable market.",
+      source: "Lesson 5: Competitive Intelligence"
+    },
+    {
+      question: "The InsightFlow PM writes a feature spec for the custom metric alerts feature. The spec currently has no OUT OF SCOPE list. The teaching guide warns about a specific failure mode when this section is missing. What is it?",
+      options: [
+        "Engineering will design a more expansive implementation than intended, since there is no written boundary preventing it",
+        "The spec cannot progress to REVIEW status — the status gate system blocks advancement without an OUT OF SCOPE list",
+        "The acceptance criteria become invalid without a scope boundary to define what 'done' means for the feature",
+        "The CPO will reject the spec at review because the out of scope section is required for PRD reference"
+      ],
+      correctOption: 0,
+      explanation: "Lesson 6 states: 'The OUT OF SCOPE list in the Solution section deserves special attention. Every line you add to OUT OF SCOPE is a scope creep conversation you will never have to have.' Without this section, engineers make reasonable assumptions about adjacent capabilities — reasonable because the spec gave them no boundary. An engineer building custom metric alerts without an OUT OF SCOPE list might reasonably add a notification centre, mobile push notifications, and Slack integration because those feel natural. The explicit list prevents those conversations by making non-goals as clear as goals. The REVIEW status gate checks whether sections are complete, not specifically whether OUT OF SCOPE exists. Acceptance criteria can still exist without the OUT OF SCOPE list. CPO rejection is a possible outcome but not the primary failure mode the lesson identifies. Real-world connection: the single most effective tool against scope creep is explicit non-goals.",
+      source: "Lesson 6: Feature Specifications"
+    },
+    {
+      question: "An engineering lead signs off on the InsightFlow Workflow Builder PRD without reviewing Section 6 (Technical Architecture Notes). The PRD moves to APPROVED status. Two weeks into Sprint 1, an undiscovered architecture dependency surfaces, adding 3 sprints to the estimate. Which PRD quality rule was violated?",
+      options: [
+        "The MUST vs SHOULD rule — too many requirements were labelled MUST, making scope estimation unreliable",
+        "The success metrics specificity rule — imprecise success metrics led to imprecise scoping in Section 6",
+        "The failure threshold definition — without a defined failure threshold, the team had no trigger to reassess architecture before sprint start",
+        "The engineering lead sign-off on Section 6 is non-negotiable before REVIEW status — skipping this gate is the primary source of PRD-to-sprint failures"
+      ],
+      correctOption: 3,
+      explanation: "Lesson 7 is explicit: 'The engineering lead sign-off on Section 6 is non-negotiable for REVIEW status. A PRD that goes to APPROVED without CTO confirmation of architecture notes has an unverified technical foundation — the most common source of PRD-to-sprint failures.' The lesson's PRD status gates state that REVIEW requires engineering lead confirmation of Section 6. The pattern described in the scenario — undiscovered architecture dependencies adding sprints — is exactly what this gate prevents. The MUST vs SHOULD rule is about scope prioritisation, not architecture estimation. The failure threshold defines the post-launch change trigger, not pre-sprint architecture. Success metrics specificity is about measuring outcomes, not scoping work. Real-world connection: architecture sign-off gates exist precisely because PMs cannot evaluate technical feasibility without engineering input.",
+      source: "Lesson 7: PRDs for Multi-Team Initiatives"
+    },
+    {
+      question: "A PM generates stories from InsightFlow's Workflow Builder PRD and receives this story: 'As VP Priya, I want to receive automated weekly reports in my inbox, so that the reporting service delivers scheduled outputs.' What violation does the 'so that' clause contain?",
+      options: [
+        "The 'so that' describes a future system state rather than a current user goal — rewrite using present tense",
+        "The 'so that' is a system action ('the reporting service delivers') rather than a user outcome — rewrite as the benefit to VP Priya",
+        "The 'so that' does not specify the report format — PDF vs. email summary must be defined at this level",
+        "The 'so that' is acceptable — 'the reporting service delivers' describes the technical mechanism that serves VP Priya's goal"
+      ],
+      correctOption: 1,
+      explanation: "The three-part quality test for user stories requires the 'so that' to be a user outcome — the benefit to the specific user — not a system action. 'The reporting service delivers scheduled outputs' describes what the system does, not the value VP Priya receives. A strong 'so that' would be: 'so that I have team metrics before my Monday standup without asking Alex for them.' That describes VP Priya's outcome: awareness without dependency on another person. System actions ('so that the system processes', 'so that the trigger saves') fail the quality test because they do not test whether the story is worth building — you could achieve the system action without the user ever benefiting. Present vs. future tense is not the issue. Report format belongs in the acceptance criteria, not the story body. Real-world connection: user outcomes in 'so that' clauses test whether a story is worth building at all.",
+      source: "Lesson 8: User Stories & Story Mapping"
+    },
+    {
+      question: "InsightFlow's PM builds a Q3 roadmap and places 'Advanced trigger conditions (AND/OR logic)' in the Now bucket with 3 sprints committed. After sprint planning, the engineering lead says this item has no spec written. According to the Roadmap Coherence Agent's weekly checks, how would this situation be classified?",
+      options: [
+        "Sprint Alignment issue — the item is in the sprint without a roadmap tag and should be flagged as off-roadmap work",
+        "Backlog Orphan — the item was added to the backlog without a roadmap theme tag",
+        "Roadmap Coverage failure — a NOW item with no spec is an immediate flag; it cannot enter sprint planning in this state",
+        "Capacity Allocation issue — the item consuming 3 sprints exceeds the 70% feature budget threshold"
+      ],
+      correctOption: 2,
+      explanation: "The Roadmap Coherence Agent's Check 2 (Roadmap Coverage) specifically monitors: 'Every NOW (current quarter) roadmap item is checked for spec status: REFINED spec ✅ — ready for sprint; DRAFT spec ⚠️ — not sprint-ready; NO SPEC ❌ — cannot enter sprint planning, immediate flag.' Advanced trigger conditions in the Now bucket with no spec at all is an immediate flag. The lesson states this situation requires immediate action, not just a weekly report note. Sprint Alignment (Check 3) monitors whether sprint items are tagged to the roadmap — this item is roadmap-tagged but lacks a spec. Backlog Orphan (Check 1) monitors items without roadmap theme tags. Capacity allocation is a planning rule, not a coherence check. Real-world connection: the coherence agent exists precisely to catch this gap before engineering commits to work without a spec.",
+      source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
+    },
+    {
+      question: "InsightFlow's PM is generating the quarterly priority decision using /prioritise. After RICE scoring, the PM produces this output: 'P1: Workflow Builder UI, P1: Schedule Trigger, P2: Bulk Export, Not Building: [list].' Which element required by the /prioritise skill is missing from this decision?",
+      options: [
+        "The RICE scores table — the quarterly decision must include the raw scores for transparency",
+        "The capacity allocation — the decision must show how the P1 and P2 items map to the 70/20/10 rule",
+        "The MoSCoW equivalent section — RICE decisions require a parallel MoSCoW classification for stakeholder communication",
+        "The strategic overrides and discovery spikes sections — the decision must document what is not building AND WHY, plus recommended spikes for low-confidence items"
+      ],
+      correctOption: 3,
+      explanation: "The /prioritise worked example shows that a complete quarterly priority decision requires: P1, P2, Stretch, Explicitly Not Building (with rationale), Strategic Overrides Documented, and Discovery Spikes Recommended. The lesson emphasises that the 'Explicitly Not Building' list 'is as important as the build list — it prevents good ideas from re-entering the backlog discussion every planning meeting.' It also requires discovery spike recommendations for low-confidence, high-effort items. The list without rationale and the missing overrides/spikes sections are the gaps. The RICE table is supporting material, not the decision itself. No MoSCoW equivalent is required in the RICE decision format. Capacity allocation is validated during the exercise but is not a section of the quarterly priority decision output. Real-world connection: documenting what you are NOT building closes recurring backlog discussions more effectively than any prioritisation score.",
+      source: "Lesson 10: Backlog Prioritization Frameworks"
+    },
+    {
+      question: "InsightFlow's PM is preparing the executive stakeholder update for week 2 of Sprint 1. The sprint goal was 'ship the trigger config UI so design can start user testing by sprint end.' WF-001 is complete. WF-002 is in progress. WF-003 has not started and is blocked on WF-002 completion. The sprint is 1 week in. What should appear in the executive update that should NOT appear in the engineering update?",
+      options: [
+        "No ticket numbers or technical implementation detail — executive updates must use outcome language; engineering updates contain specific item references",
+        "The next milestone date — executives care about delivery commitments, while engineers focus on daily task completion",
+        "Nothing — both audiences receive the same underlying facts; the difference is length, not content",
+        "The ROAM classification of the auth meeting risk — executives need the technical risk framework, engineers need the prose summary"
+      ],
+      correctOption: 0,
+      explanation: "The lesson's comparison table is explicit: the executive version contains NO ticket references (no WF-001, WF-002, WF-003), NO technical dependency chain details, NO ADR references, and uses outcome language ('trigger config UI ready for design testing') rather than technical language ('WF-002 trigger data model in progress, blocking WF-003'). The engineering update contains all of this. Both updates reference the same sprint reality — the content differs fundamentally by audience need, not just by length. ROAM classification appears in both versions — executives get the outcome-framed ROAM; engineers get the action-oriented ROAM. Milestone dates appear in both but framed differently. Content exclusion (ticket numbers, implementation details) is what most distinguishes the executive version from the engineering version.",
+      source: "Lesson 12: Stakeholder Communication"
+    },
+    {
+      question: "InsightFlow's North Star metric is 'weekly active teams creating or editing dashboards.' The PM proposes replacing it with Monthly Active Users (MAU) because MAU is easier to grow through marketing. What is the strongest argument against MAU as a North Star for InsightFlow?",
+      options: [
+        "MAU is a lagging indicator — it measures what happened last month, not what is happening now in the product",
+        "MAU counts individuals, not teams — InsightFlow is a team product and team-level metrics are more representative",
+        "MAU always grows with marketing spend and does not tell you whether users are getting value — only that they logged in",
+        "MAU is a marketing metric, not a product metric, and therefore belongs in a different dashboard than the PM's review"
+      ],
+      correctOption: 2,
+      explanation: "Lesson 13 is explicit: 'Monthly Active Users always grows with marketing spend. It does not tell you whether users are getting value — only that they logged in. A team could grow MAU while the core product experience deteriorates.' A North Star must be value-aligned: it should move when users genuinely benefit from the product. The North Star criteria are: value-aligned (moves when users get more value), leading (predicts retention), actionable (product team can influence it), and understandable. MAU fails the value-aligned criterion. Revenue being a lagging indicator is a separate point the lesson makes but is not the strongest argument against MAU specifically. Individual vs. team counting is a secondary concern. The marketing vs. product distinction is real but not the primary reason — product metrics can include acquisition metrics. Real-world connection: products that optimise for MAU can grow users while the core value proposition weakens.",
+      source: "Lesson 13: Metrics, OKRs & Product Analytics"
+    },
+    {
+      question: "A PM is using /retro to retrospect on Sprint 1. The retro produces this Q1 verdict: 'The trigger configuration feature is working well and users are happy with it.' According to the /retro NEVER DO rules, what is wrong with this verdict?",
+      options: [
+        "The verdict violates 'never close without a product.local.md update' — every retro must end with written process changes",
+        "The verdict violates 'never run a retro without outcome data' — 'users are happy' is not data; the verdict must cite specific metrics and evidence",
+        "The verdict is only for Q1 — each of the four retro questions needs a separate section, and Q1 must be labelled 'Did it solve the problem?'",
+        "The verdict violates 'never produce only what went wrong' — retros must also document what succeeded for future protection"
+      ],
+      correctOption: 1,
+      explanation: "The /retro skill requires the Q1 verdict ('Did it solve the problem?') to be supported by specific outcome data, not subjective assessment. 'Users are happy' is an opinion; '71% of beta users completed trigger configuration within 18 minutes, and automation support tickets reduced 39%' is data. The retro template shows: 'VERDICT: PARTIALLY SOLVED — Evidence: ✅ Support ticket reduction -39%, ⚠️ completion rate 71% vs 80% target.' The NEVER DO rule 'never run a retro without outcome data' applies here — the verdict must reference specific metrics from the metrics review. The product.local.md update is required at the end but is not what is wrong with the verdict itself. The four-question labelling is a format issue, not the primary problem. Documenting successes is important but is also not the primary issue with this verdict. Real-world connection: retros without data produce retrospectives that feel good but do not change anything.",
+      source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
+    },
+    {
+      question: "InsightFlow's PM needs to run sprint planning. The sprint goal is 'Ship the trigger config UI so design can start user testing by sprint end.' The engineering lead says this is not a valid sprint goal because it mentions a specific ticket. Who is correct, and why?",
+      options: [
+        "The PM is correct — 'trigger config UI ready for design testing' is a measurable outcome that defines what success looks like in one sentence",
+        "The engineering lead is correct — sprint goals must describe business outcomes, not engineering deliverables",
+        "The engineering lead is correct — sprint goals must be stated in user-facing language that non-technical stakeholders can understand",
+        "Neither is correct — sprint goals should be set collaboratively and this dispute indicates the sprint planning process is broken"
+      ],
+      correctOption: 0,
+      explanation: "Lesson 11 provides the correct sprint goal format: 'Ship the trigger configuration UI so that design can begin user testing by sprint end.' This meets the sprint goal test: 'What is the ONE outcome that defines sprint success?' It is a single clear sentence that tells the team what to protect when something unexpected consumes capacity mid-sprint. The engineering lead's objection that it 'mentions a specific ticket' misunderstands the lesson's guidance — a sprint goal describes the engineering deliverable in context. Business outcome language ('drive retention') without specificity does not help engineers make trade-off decisions when the sprint gets difficult. The wrong sprint goal example from the lesson is: 'Complete the workflow builder stories, fix the regression from last sprint, handle the auth dependency' — that lists everything rather than naming one outcome. Real-world connection: sprint goals that cannot be stated in one sentence indicate an unfocused sprint.",
+      source: "Lesson 11: Sprint Planning & Capacity"
+    },
+    {
+      question: "An InsightFlow PM asks: 'When should I use the /prd command instead of /write-spec?' Which decision rule from Lesson 7 is most directly applicable?",
+      options: [
+        "Use /prd when the feature requires more than 10 acceptance criteria; use /write-spec for simpler features with fewer requirements",
+        "Use /prd at the start of the quarter for planning purposes; use /write-spec when implementation is imminent",
+        "Use /prd for customer-facing features; use /write-spec for internal platform work without direct user impact",
+        "Use /prd when the initiative involves multiple features, multiple teams, or requires executive sign-off; use /write-spec for one feature, one team, 1-3 sprints"
+      ],
+      correctOption: 3,
+      explanation: "Lesson 7's decision rule is explicit: 'Write a spec when the work involves one feature, one team, and 1-3 sprints. Write a PRD when the initiative involves multiple features, multiple teams, or requires executive sign-off.' The distinction is scope, audience, and the question being answered: specs answer 'how do we build this feature correctly?'; PRDs answer 'should we make this bet, and what does winning look like?' Workflow Builder involved engineering, platform, design, and data teams — clearly PRD territory. Acceptance criteria count is not the distinguishing factor. Customer-facing vs. internal is not the decision rule. Timing (planning vs. implementation) is not the decision rule. Real-world connection: PMs who write PRDs for single-team features create overhead; PMs who write specs for multi-team initiatives create alignment gaps.",
+      source: "Lesson 7: PRDs for Multi-Team Initiatives"
+    },
+    {
+      question: "After RICE scoring InsightFlow's backlog, the PM runs the Regret Test and discovers that the item their best customers would be most grateful for this quarter does not match the RICE #1 scorer. According to the mandatory challenge framework, what are the two possible explanations for this gap?",
+      options: [
+        "The RICE model is broken and should be replaced with a different framework for this team's context",
+        "Either a data quality issue in the scoring (fix the score) or a strategic weight RICE cannot capture (document as an override)",
+        "The Regret Test reflects sales priorities rather than PM priorities, so the gap indicates a misalignment between sales and product",
+        "The items that score highest in RICE are always tactical quick wins — the Regret Test is for identifying long-term strategic bets"
+      ],
+      correctOption: 1,
+      explanation: "Lesson 10 states explicitly: 'The gap is usually one of two things: (1) a data quality issue in the scoring — fix the score, or (2) a strategic weight that RICE cannot capture — document it as an override.' RICE has known blind spots including strategic necessity and user love. If the gap is because the Regret Test item has low confidence (because it is a newer, less-researched feature), that is a data quality issue — improve the confidence score. If the gap is because the item is a CEO commitment or competitive necessity that RICE's reach/confidence math cannot capture, document it as a strategic override. The Regret Test is not broken if it diverges from RICE — the divergence is information. It reflects what customers care most about, which is a product priority, not just a sales priority. Real-world connection: the Regret Test / RICE comparison reveals where data quality and strategic judgment diverge.",
+      source: "Lesson 10: Backlog Prioritization Frameworks"
+    },
+    {
+      question: "A PM at InsightFlow is running /synthesize-research with five participant notes from user interviews. The output's WHAT WE HEARD BUT SHOULD NOT BUILD section is missing. Why is this section specifically difficult for AI to generate, and what prompt should the PM use to add it?",
+      options: [
+        "It is difficult because the AI cannot access the product roadmap to know what is already planned — provide roadmap context in the prompt",
+        "It is difficult because AI lacks business judgment about development costs — provide effort estimates for each mentioned feature in the prompt",
+        "It is difficult because drawing a scope-limiting conclusion from user data goes against the literal content of what users said — prompt: 'Add a section on what this research suggests we should NOT build in the short term and why'",
+        "It is difficult because users rarely say what they do not want — design a separate interview question specifically asking users what features to avoid"
+      ],
+      correctOption: 2,
+      explanation: "Lesson 4 explains: 'This is the hardest section for AI to produce well — it requires drawing a conclusion about scope that goes against the literal content of what users said.' Users say 'I want X' and 'I need Y'. The synthesis should also conclude 'we should not build Z right now' based on the evidence — a conclusion that runs counter to what participants literally requested. The correct prompt is given explicitly in the lesson: 'Add a section on what this research suggests we should NOT build in the short term and why.' Roadmap context is not the issue — the AI can generate scope-limiting conclusions without it. Development costs are not what makes this section difficult. A separate interview question asking users what to avoid is a valid research technique but is not the fix for a missing synthesis section. Real-world connection: research that does not explicitly deprioritise anything leaves the PM with a list of opportunities and no criteria for choosing.",
+      source: "Lesson 4: User Research — Interviews & Synthesis"
+    },
+    {
+      question: "InsightFlow's Q3 roadmap is shared with enterprise customers as a Now/Next/Later document. The Head of Sales asks the PM to add estimated delivery months to the Now bucket for three enterprise prospects. What is the PM's strongest reason to decline this request?",
+      options: [
+        "Month-level estimates violate the spirit of Now/Next/Later and undermine the format's internal consistency",
+        "Date-specific commitments require CPO approval before appearing in any customer-facing document",
+        "The PM does not have month-level estimates yet — sprint planning has not been completed for the Later items",
+        "Adding dates to the customer roadmap converts direction-setting into contract-making, creating mis-expectation when any dependency slips"
+      ],
+      correctOption: 3,
+      explanation: "Lesson 9 explains that 'Now/Next/Later avoids false date precision — the most common cause of roadmap-as-contract expectations from stakeholders.' Adding delivery months to Now items on a customer-facing roadmap creates contract expectations for those enterprise prospects. When a dependency slips (and dependencies always slip), the PM is renegotiating a contract rather than updating a plan. Sales wants dates because prospects ask for them — but the lesson's prescription is to use Now/Next/Later precisely to avoid that expectation. Format consistency is a real concern but secondary. The PM likely does have approximate estimates — that is not the primary reason to decline. CPO approval is a process consideration but not the strongest argument. Real-world connection: enterprise sales cycles often include roadmap commitments that become legal obligations — PMs who decline to add dates protect the organisation from those obligations.",
+      source: "Lesson 9: Roadmap Planning & Communication"
+    },
+    {
+      question: "During InsightFlow's Sprint 1 planning, the PM writes a sprint goal: 'Complete the trigger configuration stories, fix the regression from last sprint, handle the auth service dependency, and improve dashboard load time.' The engineering lead says this is not a sprint goal. What is the lesson's specific criterion for a valid sprint goal, and why does this fail it?",
+      options: [
+        "A sprint goal must be a single sentence describing the ONE outcome that defines sprint success — this fails because it lists multiple items rather than naming one outcome",
+        "A sprint goal must be approved by the CPO — this fails because it was written without leadership sign-off",
+        "A sprint goal must use customer-facing language — this fails because it contains technical terms like 'auth service dependency'",
+        "A sprint goal must be written before capacity planning — this fails because capacity calculations preceded the goal definition"
+      ],
+      correctOption: 0,
+      explanation: "Lesson 11 provides the exact contrast: Wrong — 'Complete the workflow builder stories, fix the regression from last sprint, handle the auth dependency, and improve dashboard load time.' Right — 'Ship the trigger configuration UI so that design can begin user testing by sprint end.' The wrong version describes everything the team might do. The right version describes the ONE outcome that defines success. The sprint goal's purpose is to tell the team what to protect when something unexpected consumes capacity mid-sprint — everything else is negotiable. If you cannot state the sprint goal in one sentence, the sprint is unfocused. CPO approval is not a sprint goal requirement. Technical language is fine in sprint goals intended for the engineering team. Timing of goal-writing relative to capacity is a process preference, not the sprint goal criterion. Real-world connection: sprint goals that list everything give teams no guidance on what to cut when the sprint gets hard.",
+      source: "Lesson 11: Sprint Planning & Capacity"
+    },
+    {
+      question: "InsightFlow's Stakeholder Update Agent generates the Friday update and is about to auto-send all three versions to their respective audiences. What should the PM do, and why does the lesson describe the PM review gate as 'not optional'?",
+      options: [
+        "Allow auto-send — the agent was configured with the correct audience distribution, so manual review duplicates effort",
+        "Allow auto-send for the engineering version but manually review the executive and customer versions",
+        "Intervene immediately — the NEVER DO rule for the Stakeholder Update Agent prohibits auto-sending without PM review; the PM must approve all three versions before distribution",
+        "Contact the IT administrator — auto-sending without a review gate indicates a configuration error in the agent deployment"
+      ],
+      correctOption: 2,
+      explanation: "Lesson 14 is explicit: 'The PM review gate is not optional. Every version waits for PM approval before distribution. The agent removes the mechanical work of generating three versions. The PM removes errors, adjusts tone, and approves distribution. This division preserves stakeholder trust while saving the PM's time.' The NEVER DO rules for this agent include: 'Never auto-send any communication without PM review and approval.' A single auto-sent message with an error (wrong status, wrong audience language, incorrect information) can destroy stakeholder trust permanently. The agent is configured to queue for PM review, not to auto-send — if it is auto-sending, that is either a configuration error or a violation of the design. There is no distinction between engineering and executive versions for this rule — all versions require review. Real-world connection: PM automation that bypasses human judgment creates trust failures that take months to rebuild.",
+      source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
+    },
+    {
+      question: "InsightFlow's PM writes an OKR Key Result: 'Launch Workflow Builder to 50% of Pro accounts by end of Q3.' A senior PM flags this as an output KR. What is the corrected outcome KR that addresses the same goal?",
+      options: [
+        "'Ship all five Workflow Builder features by Sprint 8 to meet the Q3 milestone commitment'",
+        "'50 Pro account teams activate at least one automated workflow within 60 days of Workflow Builder GA'",
+        "'Complete Workflow Builder development on schedule with zero P0 bugs at launch'",
+        "'Increase Pro plan accounts from 120 to 180 through Workflow Builder as a conversion driver'"
+      ],
+      correctOption: 1,
+      explanation: "The output KR test is: 'Could the team hit this KR without a single user benefiting?' 'Launch to 50% of Pro accounts' describes a rollout action — the team could roll out to 50% of accounts and have nobody use the feature. That is an output. A corrected outcome KR measures user behaviour: '50 Pro account teams activate at least one automated workflow within 60 days of GA' requires actual usage, not just availability. Shipping all five features on schedule is an output (delivery of work). Zero P0 bugs at launch is a quality metric for the delivery process, not user outcomes. Increasing Pro account count is a monetisation metric that may be worth tracking, but it is driven by many factors beyond Workflow Builder and is not as directly connected to Workflow Builder adoption. Real-world connection: outcome KRs create pressure to understand whether the feature actually works for users, not just whether it shipped.",
+      source: "Lesson 13: Metrics, OKRs & Product Analytics"
+    },
+    {
+      question: "A PM receives a feature request: 'We need a mobile app.' She runs /brief and receives a problem brief where the EVIDENCE section has one line: 'Multiple stakeholders have requested a mobile app.' The WHAT WE DO NOT KNOW section is the longest section. Is this brief quality high or low, and why?",
+      options: [
+        "Quality is low — the evidence section should be much longer before writing a brief; gather more evidence first then re-run /brief",
+        "Quality is low — the brief should not have been written without first running /interview to understand the mobile use case",
+        "Quality is medium — the brief should propose a hypothesis about which mobile users need this feature to be actionable",
+        "Quality is high — when evidence is thin, the WHAT WE DO NOT KNOW section being the longest section is correct; it surfaces how little is known before committing resources"
+      ],
+      correctOption: 3,
+      explanation: "Lesson 3 contains this exact scenario: 'This request is maximally vague. The resulting problem brief should surface how little you actually know — the WHAT WE DO NOT KNOW section should be the longest section in the brief. If the agent produces a brief where the problem and evidence sections are longer than the unknowns, something is wrong.' When evidence is thin, a brief with a long WHAT WE DO NOT KNOW section is working correctly — it makes the evidence gap explicit before the team commits engineering resources. The lesson's purpose is to surface uncertainty, not to generate false confidence from sparse data. Gathering more evidence first is backward — the brief helps scope what evidence is needed. A hypothesis is optional (not required) and should be framed as testable assumption, not prescriptive. Interview design comes after the brief identifies the discovery questions. Real-world connection: a brief that surfaces 'we know almost nothing' prevents an 8-sprint commitment based on stakeholder requests.",
+      source: "Lesson 3: Discovery Briefs — Framing the Right Problem"
+    },
+    {
+      question: "An InsightFlow engineer asks the PM: 'Should I create the sub-tasks for the trigger configuration story, or is that your job?' How does Lesson 8 define the PM-engineer boundary for the epic/story/sub-task hierarchy?",
+      options: [
+        "PMs own epics and stories; engineers own sub-tasks — sub-tasks are technical implementation decisions that belong to the engineer",
+        "PMs create sub-tasks for clarity; engineers refine them during sprint planning when actual implementation choices are made",
+        "Sub-tasks are collaborative — PM creates the list and engineer validates against technical feasibility before sprint start",
+        "The engineering lead owns all levels of the hierarchy; the PM's role ends when stories are handed off"
+      ],
+      correctOption: 0,
+      explanation: "Lesson 8 is explicit: 'PMs own epics and stories. Engineers own sub-tasks. A PM who writes sub-tasks is making engineering implementation decisions. An engineer who writes stories is making product scope decisions. Both are problems.' Sub-tasks are technical tasks within a story — 'write trigger evaluation service schema migration' is engineering territory. Stories are product scope decisions — 'As Analyst Alex, I want to configure a schedule trigger, so that my Monday refresh runs automatically' is PM territory. The boundary is not about review or collaboration — it is about ownership. The PM creates the sub-tasks is incorrect. Collaborative creation of sub-tasks blurs the boundary the lesson draws. The engineering lead does not own stories — that would transfer product scope decisions to engineering. Real-world connection: the PM-engineer boundary in story/sub-task ownership prevents the two most common planning failures: PMs over-specifying implementation and engineers under-defining scope.",
+      source: "Lesson 8: User Stories & Story Mapping"
+    },
+    {
+      question: "The Roadmap Coherence Agent's Sprint Alignment check finds that InsightFlow Sprint 2 has 35% of story points tagged to items not on the current quarter roadmap (bug fixes from CS escalations and an unplanned integration). What action does the agent take, and at what threshold does the action change?",
+      options: [
+        "At 35%, the agent notes the items in the weekly report for PM triage; at 50%, it becomes urgent and pauses the roadmap",
+        "At 35%, the agent alerts the PM and engineering manager; at 50% the alert is classified as urgent — roadmap is effectively paused",
+        "At 35%, the agent recommends removing the off-roadmap items from the sprint; at 50%, it blocks the sprint plan from proceeding",
+        "At 35%, the agent reclassifies the items as maintenance and tracks them separately without PM notification"
+      ],
+      correctOption: 1,
+      explanation: "Lesson 14 defines two thresholds: 'Sprint >30% off-roadmap → immediate alert to PM + EM; Sprint >50% off-roadmap → urgent — roadmap is effectively paused.' At 35%, the alert to PM and engineering manager goes out immediately (it exceeds the 30% threshold). At 50%, the classification escalates to urgent because at that level, the team is spending more time on unplanned work than roadmap work, and the quarterly commitments are at risk. The agent does not remove items — it alerts the humans who make that decision. It does not block the sprint plan — alerting is the mechanism, not blocking. Bug fixes and CS escalations should not be automatically reclassified to maintenance without PM review — some may be legitimate off-roadmap work. Real-world connection: 30%+ off-roadmap sprint composition, if unchecked for multiple sprints, means quarterly goals slip without anyone noticing until the QBR.",
+      source: "Lesson 14: Continuous Intelligence — Agents & Retrospectives"
+    },
+    {
+      question: "A PM evaluates the difference between how InsightFlow's direct competitor AutoDash and indirect competitor Excel/Google Sheets should be treated in the competitive strategy. Which strategic principle from Lesson 5 explains why the indirect competitor often requires more strategic attention than the direct one?",
+      options: [
+        "AutoDash is strategically safer to ignore because InsightFlow already competes with it and understands its weaknesses",
+        "Excel is often more dangerous than AutoDash because it is already installed, trusted, costs nothing extra, and has zero switching cost — most prospects who don't buy InsightFlow continue using spreadsheets, not AutoDash",
+        "The substitute competitor (hiring a data analyst) is actually the highest priority since it reflects the 'good enough without software' baseline",
+        "Direct competitors always require more strategic attention because they are the comparison set prospects evaluate side by side"
+      ],
+      correctOption: 1,
+      explanation: "Lesson 5 states explicitly: 'Excel is InsightFlow's most dangerous competitor — not because it is a better analytics platform, but because it is already installed, already trusted, and costs nothing extra.' Furthermore: 'Prospects who do not buy your product are not mostly buying AutoDash — most of them are continuing to use spreadsheets.' This means the bulk of the market opportunity lost is to indirect competition, not direct. AutoDash is the comparison-set competitor in demo evaluations, but Excel is the status quo most prospects return to. The substitute competitor (hiring an analyst) establishes what 'good enough without software' looks like, which is useful framing, but does not receive more strategic attention than indirect. Direct competitors receive attention for sales cycle positioning but are not where most opportunity is lost. Real-world connection: competitive strategies that focus only on direct competitors leave the largest segment of the addressable market uncontested.",
+      source: "Lesson 5: Competitive Intelligence"
+    },
+    {
+      question: "InsightFlow's PM uses /metrics-review for a monthly review and the output shows: 'WAT dashboard creation: 521 teams (prior: 498).' The CPO asks 'Is this good or bad?' What metric quality rule from Lesson 13 does the PM need to apply before answering?",
+      options: [
+        "The PM needs to segment by persona to determine if Analyst Alex accounts are growing or just VP Priya accounts",
+        "Every metric must be presented with a comparison — a raw number without a target, prior period change, and status is not information",
+        "The metric needs a satisfaction qualifier — NPS should accompany every North Star metric reading to interpret whether users are happy with the growth",
+        "The PM should first check whether the metric is value-aligned before reporting it to the CPO"
+      ],
+      correctOption: 1,
+      explanation: "Lesson 13's /metrics-review quality check states: 'Every metric in a review should come with a comparison — a raw number without context (previous period, target, benchmark) is not information.' The CPO cannot determine whether 521 teams is good or bad without knowing: the prior period (498 — so +4.6%), the target (550 by end of Q1), and the status (At risk — 5% below target). The scorecard format is: current | prior | change | target | status for every metric. Persona segmentation is valuable L2 diagnostic work but is not the missing quality element. NPS is a separate L1 metric, not a required companion to the North Star. Value-alignment is an evaluation done when selecting the North Star metric, not at each review cycle. Real-world connection: dashboards that show raw numbers without targets create confusion rather than clarity in executive meetings.",
+      source: "Lesson 13: Metrics, OKRs & Product Analytics"
+    },
+    {
+      question: "Which of the following correctly identifies a command that belongs to the custom product-strategy plugin rather than the official product-management plugin?",
+      options: [
+        "/competitive-brief — used to generate competitive intelligence briefs for positioning analysis",
+        "/stakeholder-update — used to draft audience-calibrated communications for executives, engineering, and customers",
+        "/retro — used to structure product retrospectives with four questions and specific process improvements",
+        "/metrics-review — used to analyse product metrics with trend analysis and recommended actions"
+      ],
+      correctOption: 2,
+      explanation: "The custom product-strategy plugin contains six commands: /brief, /interview, /prd, /stories, /prioritise, and /retro. The official product-management plugin contains seven commands: /write-spec, /roadmap-update, /synthesize-research, /stakeholder-update, /competitive-brief, /metrics-review, and /sprint-planning. /retro is the only command among the four options that belongs to the custom plugin. /competitive-brief (official) generates competitive intelligence. /stakeholder-update (official) handles audience-calibrated communications. /metrics-review (official) handles metrics analysis. The division of commands follows the principle: official plugin for foundational PM workflows, custom plugin for discovery, strategy, and craft-enforcement workflows. Real-world connection: knowing which plugin contains which command is essential when configuring a new Cowork session or troubleshooting a missing command.",
+      source: "Lesson 15: Chapter Summary & Quick Reference"
+    },
+    {
+      question: "InsightFlow's PM writes this feature spec acceptance criterion for the data threshold trigger: 'When the metric crosses the configured threshold, the trigger evaluation service checks the condition and initiates the workflow run via the async job queue.' Which AC quality rule does this violate?",
+      options: [
+        "Independently testable — the criterion depends on the job queue being available to test",
+        "No 'and' — the criterion combines threshold crossing and job queue initiation into one requirement",
+        "Behavior not implementation — the criterion describes internal service operations rather than user-visible behaviour",
+        "Measurable thresholds — the criterion does not specify a time window for when the trigger fires"
+      ],
+      correctOption: 2,
+      explanation: "This acceptance criterion says 'the trigger evaluation service checks the condition and initiates the workflow run via the async job queue' — naming the evaluation service and the async job queue. These are internal implementation details: how the engineering team builds the trigger, not what the user observes. A behavior-not-implementation AC would say: 'A data threshold trigger activates the workflow within 15 minutes of the threshold condition being met' — describing the user-visible outcome (the workflow starts within 15 minutes) without specifying the internal mechanism. If an engineer wrote 'via the async job queue', that belongs in a technical design document, not a spec AC. Independently testable would apply if one AC depended on another. No 'and' would apply if two user-visible requirements were combined. Measurable thresholds would apply if 'quickly' replaced a time-specific value. Real-world connection: ACs that specify implementation lock engineers into a technical approach before they have evaluated alternatives.",
+      source: "Lesson 6: Feature Specifications"
+    },
+    {
+      question: "InsightFlow's PM is choosing a roadmap format for a team planning meeting where the engineering team needs to see parallelism, dependencies, and start/end dates. Which format should the PM use, and what risk does the lesson warn against when using this format externally?",
+      options: [
+        "Now/Next/Later — the PM should adapt this format with a sprint overlay for the engineering audience without using it externally",
+        "OKR-Aligned — maps team work to objectives; risk is that external stakeholders conflate OKR attainment with delivery commitments",
+        "Timeline/Gantt — appropriate for engineering execution planning; risk is that external use creates false precision and date expectations",
+        "Quarterly Themes — appropriate for all planning meetings; risk is that themes lack specificity for engineering capacity planning"
+      ],
+      correctOption: 2,
+      explanation: "Lesson 9's four roadmap frameworks table is explicit: Timeline/Gantt is 'Best For: Engineering execution planning, resource conflict identification' and 'Avoid When: External communication (creates false precision and date expectations).' Engineering needs to see parallelism (what can run concurrently), dependencies (what blocks what), and start/end dates for resource planning. These requirements match Timeline/Gantt precisely. The risk is using this format externally — when stakeholders or customers see specific calendar dates, they read them as guaranteed delivery commitments. Now/Next/Later does not have date precision and does not show parallelism. OKR-Aligned requires mature OKR processes and does not show dependency chains. Quarterly Themes is a theme-level view that does not provide the granularity engineering execution planning requires. Real-world connection: the safest approach is Timeline/Gantt for internal engineering planning and Now/Next/Later for all external communication.",
+      source: "Lesson 9: Roadmap Planning & Communication"
+    },
+    {
+      question: "A PM observes that InsightFlow's activation rate (signups creating their first dashboard within 7 days) dropped from 37% to 34% after a new onboarding redesign. The PM wants to investigate using L2 diagnostic metrics. Which of the following is an appropriate L2 diagnostic metric for this situation?",
+      options: [
+        "Monthly Active Users (MAU) segmented by acquisition channel to identify which channel has lower activation",
+        "Funnel conversion rate at each step in the new onboarding flow to identify where users are dropping off",
+        "D30 retention rate segmented by user cohort to understand long-term activation effects",
+        "NPS scores from the week after the onboarding redesign launched to capture immediate satisfaction impact"
+      ],
+      correctOption: 1,
+      explanation: "L2 diagnostic metrics answer 'why is an L1 metric moving?' For an activation rate drop, the right L2 is funnel conversion at each onboarding step — this identifies the specific step where the new cohort drops below the prior cohort. If onboarding has five steps, funnel data shows whether the drop happens at step 2 (account setup), step 3 (data connection), or step 4 (first dashboard creation). This localises the problem for the fix. MAU segmented by channel is an acquisition-level metric that does not explain the activation gap. D30 retention shows longer-term effects but does not identify where in the activation funnel the problem occurs. NPS timing may capture overall satisfaction but not the specific onboarding friction point. Real-world connection: L2 diagnostics exist specifically for investigation, not for standing dashboards — they are pulled when a specific L1 metric changes.",
+      source: "Lesson 13: Metrics, OKRs & Product Analytics"
+    },
+    {
+      question: "InsightFlow's PM uses the ROAM framework for the auth review meeting risk in the stakeholder update. The PM has sent an email to the platform team requesting the meeting and is waiting for a response. Which ROAM classification is correct?",
+      options: [
+        "Resolved — the PM has taken action and the risk has been addressed",
+        "Mitigated — the PM's email has reduced the risk of delay by initiating scheduling",
+        "Accepted — the team has decided to proceed without scheduling a meeting this sprint",
+        "Owned — someone is actively managing the risk with a plan; the PM is following up with the platform team to schedule by a specific date"
+      ],
+      correctOption: 3,
+      explanation: "ROAM state 'Owned' means 'someone is actively managing it with a plan.' The lesson gives this exact example: 'Review meeting scheduling: Owned by [PM]. Following up with platform team to schedule by [date].' An action has been taken (email sent), there is a plan (follow up until scheduled), there is an owner (the PM), and there is a due date. Resolved would mean the risk is gone — the meeting is scheduled. Resolved requires completion, not action in progress. Mitigated means actions have reduced but not eliminated the risk — appropriate if partial scheduling occurred (e.g., meeting is confirmed but later than needed). Accepted means a conscious decision to proceed without mitigation — the PM is not proceeding without mitigation; they are actively pursuing scheduling. Real-world connection: ROAM forces specificity about what is actually being done, preventing the vague 'we are working on it' that gives stakeholders no usable information.",
+      source: "Lesson 12: Stakeholder Communication"
+    },
+    {
+      question: "InsightFlow is expanding from analytics into workflow automation. The PM runs /competitive-brief and identifies that InsightFlow should 'achieve parity' with AutoDash in scheduled report delivery, while 'differentiating' in workflow automation. What distinguishes a 'parity' investment from a 'differentiation' investment in competitive strategy?",
+      options: [
+        "Parity investments are customer-requested; differentiation investments are PM-initiated based on vision",
+        "Parity closes a genuine gap where a competitor is ahead and the market considers it table-stakes; differentiation invests in an area where no competitor owns the space and InsightFlow can lead",
+        "Parity investments are lower risk because the solution is proven; differentiation investments carry higher technical risk",
+        "Parity is achieved through buying third-party components; differentiation requires internal engineering resources"
+      ],
+      correctOption: 1,
+      explanation: "Lesson 5's differentiate vs. achieve parity framework is explicit: 'Achieve parity' means closing a gap where a competitor is ahead and prospects consider the capability table-stakes (something they expect all products to have). 'Differentiate' means investing in an area where no competitor credibly owns the space and InsightFlow can establish a distinctive position. AutoDash is Strong in scheduled reports; InsightFlow is Weak — parity is required for sales credibility. In workflow automation, both are Absent — differentiation is possible because no one owns it yet. The distinction is not about who requested it (customer vs. PM). Risk profile is a secondary consideration, not the defining criterion. Build vs. buy is an implementation decision, not a strategic framework distinction. Real-world connection: PMs who cannot distinguish parity requirements from differentiation opportunities misallocate engineering resources between catching up and leading.",
+      source: "Lesson 5: Competitive Intelligence"
+    },
+    {
+      question: "A PM writes the failure threshold for InsightFlow's Workflow Builder PRD as: 'If adoption is low, we will reassess.' The CPO asks for a revision. What does the lesson identify as the specific problem with this failure threshold, and what would a strong version look like?",
+      options: [
+        "'We will reassess' is too vague for governance — the CPO wants a specific committee or process named for the reassessment decision",
+        "The threshold is weak because it does not specify a number, a timeframe, or a named action — a strong version would be: 'If automated workflow activation is below 10% of eligible accounts at 60 days post-GA, we will pause further investment and run a 2-week qualitative research sprint to identify the adoption barrier'",
+        "Failure thresholds should describe technical failure (bugs, downtime), not adoption outcomes — rewrite around system availability metrics",
+        "The threshold is written for the wrong audience — failure thresholds belong in the engineering spec, not the PRD's business context section"
+      ],
+      correctOption: 1,
+      explanation: "Lesson 7 contrasts weak and strong failure thresholds explicitly. Weak: 'If adoption is low, we will reassess.' Strong: 'If workflow automation feature adoption is below 15% of Pro and Business accounts within 60 days of GA, we will run a 2-week qualitative research sprint to understand the barrier before investing further in the initiative.' The strong version has: (1) a specific metric (activation rate), (2) a specific threshold (below X%), (3) a specific timeframe (within N days of GA), and (4) a specific named action (research sprint, not just 'reassess'). Without specificity, the 30-day post-launch review becomes a negotiation about what 'low' means. The governance committee is not the lesson's prescription. Failure thresholds address business outcomes, not just technical failures. They belong in PRD Section 2 (Business Context), not the engineering spec. Real-world connection: pre-committed failure thresholds prevent sunk-cost escalation when a feature struggles post-launch.",
+      source: "Lesson 7: PRDs for Multi-Team Initiatives"
+    },
+    {
+      question: "The InsightFlow chapter contract includes five focus questions. Which of the following is one of those five questions, and which lesson most directly answers it?",
+      options: [
+        "'How do AI agents reduce the need for user research?' — answered in Lesson 4 through the /interview automation workflow",
+        "'What are the five sections every feature spec must contain, and why is the scope boundary as important as the solution description?' — answered in Lesson 6 through the /write-spec five-section anatomy",
+        "'When should a PM replace the official plugin with the custom plugin for core workflows?' — answered in Lesson 2's plugin decision guide",
+        "'How does RICE scoring replace PM judgment in backlog prioritisation?' — answered in Lesson 10 through the three mandatory challenge tests"
+      ],
+      correctOption: 1,
+      explanation: "The Chapter 36 contract lists five specific questions. One of them is: 'What are the five sections every feature spec must contain, and why is the scope boundary (what is NOT included) as important as the solution description?' Lesson 6 answers this directly through the five-section spec anatomy: Problem, Solution (with explicit OUT OF SCOPE list), Acceptance Criteria, Edge Cases and Error States, and Open Questions. The lesson explains why the OUT OF SCOPE list matters: 'Every line you add to OUT OF SCOPE is a scope creep conversation you will never have to have.' AI agents do not reduce the need for user research — they make it faster and more structured. The plugins are complementary, not substitutes for each other. RICE scoring does not replace PM judgment — the three mandatory challenges exist precisely because RICE has blind spots. Real-world connection: the chapter contract questions provide the PM perspective on what the chapter is actually teaching, distinct from the lesson-by-lesson content.",
+      source: "Lesson 15: Chapter Summary & Quick Reference"
+    },
+    {
+      question: "InsightFlow's PM is reviewing a /competitive-brief output and finds the strategic implication: 'InsightFlow should improve its analytics features.' The teaching guide for L05 flags this as a weak strategic implication. What makes a strong strategic implication, and what is a corrected version?",
+      options: [
+        "A strong implication names a specific capability area, a competitive stance (differentiate vs. parity), and a specific product decision — e.g., 'In scheduled report delivery, InsightFlow should achieve parity with AutoDash before Q3 because two lost enterprise deals cited this as a deciding factor'",
+        "A strong implication includes a timeline with specific sprint delivery targets, matching the roadmap format",
+        "A strong implication quantifies the revenue opportunity of closing the gap, expressed in ARR terms",
+        "A strong implication names which engineering team is responsible for closing the capability gap"
+      ],
+      correctOption: 0,
+      explanation: "Lesson 5 states: 'Strategic implications need to be actionable. 'Improve our analytics features' is not an implication — it is a vague intention. 'Invest in automation parity with WorkflowIQ before Q3 because two of our three lost enterprise deals cited automation as the deciding factor' is an implication.' A strong strategic implication specifies: (1) the capability area ('scheduled report delivery'), (2) the competitive stance ('achieve parity'), and (3) a specific product decision ('before Q3') grounded in evidence ('two lost enterprise deals cited this'). Sprint delivery targets are a roadmap detail, not a strategic implication. Revenue quantification is useful context but not the defining ingredient of a strong implication. Engineering team assignment is an implementation decision, not a strategic stance. Real-world connection: vague strategic implications produce no change in roadmap priorities because they give nobody a specific decision to make.",
+      source: "Lesson 5: Competitive Intelligence"
+    },
+    {
+      question: "A PM wants to use the /brief command to write an Initiative Brief for InsightFlow's Workflow Builder expansion. The Teaching Guide notes that Initiative Briefs have a specific rule about content. What is that rule, and how does it differ from the Problem Brief rule?",
+      options: [
+        "Initiative Briefs require a competitive analysis section; Problem Briefs do not reference the competitive landscape",
+        "Initiative Briefs must include 'the bet', rough effort, and the decision needed — whereas Problem Briefs must contain no solution proposals at all",
+        "Initiative Briefs are written by the CPO; Problem Briefs are written by the PM as part of discovery work",
+        "Initiative Briefs replace the PRD for smaller initiatives; Problem Briefs must always precede an Initiative Brief in sequence"
+      ],
+      correctOption: 1,
+      explanation: "Lesson 3's brief types table shows: Problem Brief key rule = 'No solution proposals'; Discovery Brief key rule = 'Must include ranked questions with explicit success criteria'; Initiative Brief key rule = 'Must include 'the bet,' rough effort, and decision needed.' The Initiative Brief is a one-page framing document for executive sign-off before writing a PRD — it is appropriate when you need stakeholder alignment on whether to commit resources to a major bet. The Problem Brief is specifically prohibited from including any solution proposals. The Initiative Brief is further along in the discovery cycle and explicitly includes the proposed bet. Initiative Briefs are not restricted by author role — PMs write all three types. Initiative Briefs and PRDs serve different purposes — a PRD is more detailed and comes after the Initiative Brief, not instead of it. Real-world connection: the three brief types represent progressive stages of certainty: unknown problem → understood problem → commitment to investigate → readiness to build.",
+      source: "Lesson 3: Discovery Briefs — Framing the Right Problem"
+    },
+    {
+      question: "InsightFlow's PM has generated a story with 5 acceptance criteria, all passing the quality test. The PM then adds three more ACs covering edge cases from the L06 feature spec. The story now has 8 ACs. According to the /stories skill, what should the PM do?",
+      options: [
+        "Keep all 8 ACs — the /stories skill allows up to 10 ACs before a split is required, and 8 is within acceptable range",
+        "Review the 8 ACs to check whether they represent one distinct user flow or multiple flows — if multiple flows, split into one story per flow",
+        "Remove the three edge case ACs — edge cases belong in the spec's Edge Cases and Error States section, not in story ACs",
+        "Move the story to epic status and create two new stories under it — 8 ACs always triggers the epic reclassification rule"
+      ],
+      correctOption: 1,
+      explanation: "Lesson 8 states: 'When a story exceeds 7 acceptance criteria, the PM has usually combined two or more user flows into one story. The fix is not to condense the ACs — it is to identify the distinct flows and create one story per flow.' The story at 8 ACs may still be valid as one story if all 8 ACs describe a single distinct user flow (e.g., the schedule trigger setup flow). The PM should review whether the ACs span multiple distinct flows. If they do, split. If they all describe one flow, 8 ACs may be appropriate. The lesson does not set a hard maximum of 10 — it says 7+ is a signal to investigate, not an automatic trigger. Edge case ACs are valid story ACs — error states are part of the story's quality requirements. Moving to epic status requires that the story cannot complete in one sprint — AC count alone is not sufficient for reclassification. Real-world connection: the AC count is a signal for investigation, not a mechanical rule.",
+      source: "Lesson 8: User Stories & Story Mapping"
+    },
+    {
+      question: "InsightFlow's 70/20/10 capacity allocation shows that the Workflow Builder initiative is consuming 75% of Q3 engineering capacity for features. SOC 2 compliance consumes another 12%. How does this compare to the 70/20/10 rule, and what is at risk?",
+      options: [
+        "Both initiatives together consume 87% for planned features — exceeding the 70% feature budget by 17pp, leaving only 13% for technical health and unplanned work combined",
+        "This is acceptable — the 70/20/10 rule applies to individual sprints but not to quarterly planning, which can accommodate higher feature concentration",
+        "The 12% for SOC 2 counts as technical health, not features — so the combined feature budget is 75%, which is within the 70% guideline",
+        "This requires immediate scope reduction — both initiatives must be cut to bring feature work below 50% of quarterly capacity"
+      ],
+      correctOption: 0,
+      explanation: "The 70/20/10 rule allocates: 70% of engineering capacity to planned features, 20% to technical health (tech debt, reliability, DX), and 10% to unplanned work (urgent issues, quick wins). InsightFlow's combined 87% for planned features (75% Workflow Builder + 12% SOC 2) exceeds the 70% feature budget by 17 percentage points. This leaves only 13% for both technical health AND unplanned work — well below the intended 30%. If a production incident occurs (consuming part of the unplanned budget), technical health drops to near zero. The 70/20/10 rule applies at the sprint level in the worked example and as a quarterly planning guideline — it is not sprint-only. SOC 2 compliance involves feature delivery (audit log implementation, security features) — it belongs in the feature budget, not technical health. No target requires cutting to 50%; the lesson does not prescribe that level. Real-world connection: sprints planned without technical health budget accumulate debt that slows future sprints.",
+      source: "Lesson 9: Roadmap Planning & Communication"
+    },
+    {
+      question: "After completing Chapter 36's full PM workflow from L03 to L14, the central thesis of the chapter is stated in both the README and the chapter summary. Which of the following most accurately captures that thesis?",
+      options: [
+        "AI agents replace PM judgment by generating specifications, roadmaps, and stakeholder updates autonomously without PM review",
+        "AI removes the bottleneck between PM judgment and the documentation that expresses it — agents write first drafts, PMs review and direct, and outputs reflect PM judgment at quality that would have required hours to produce alone",
+        "The two-plugin architecture makes every PM equally effective by standardising the quality of PM artifacts across experience levels",
+        "AI agents are most valuable for PMs who lack spec-writing skills, allowing them to produce professional-quality documents despite limited experience"
+      ],
+      correctOption: 1,
+      explanation: "The chapter thesis appears in both the README and the chapter summary: 'The PM's job is judgment. AI removes the bottleneck between that judgment and the documentation that expresses it. The agent writes the first draft. You review, direct, and refine. The document reflects your judgment at the quality it deserves — in a fraction of the time.' This is the consistent framing across all 15 lessons. AI does not replace judgment — it removes the time constraint that prevented high-quality documentation. AI does not replace PM review — the review gate is emphasised throughout (especially in the Stakeholder Update Agent's NEVER DO rules). The two-plugin architecture does not make all PMs equally effective — it amplifies the PM's existing judgment. The chapter explicitly corrects the misconception that AI compensates for skill deficits in Lesson 1: 'the document gap is not a skills problem.' Real-world connection: the thesis determines how an organisation should position AI PM tools — as judgment amplifiers, not judgment replacements.",
+      source: "Lesson 15: Chapter Summary & Quick Reference"
+    }
+  ]}
 questionsPerBatch={18}
 />
