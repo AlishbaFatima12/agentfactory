@@ -80,10 +80,7 @@ const config: Config = {
       swcHtmlMinimizer: true, // Use SWC to minify HTML
       lightningCssMinimizer: true, // Use Lightning CSS instead of cssnano
       mdxCrossCompilerCache: true, // Compile MDX once instead of twice
-      // rspackBundler incompatible with @easyops-cn/docusaurus-search-local
-      // (BannerPlugin passes function, Rspack expects string). Re-enable after
-      // migrating to Algolia DocSearch or a Rspack-compatible search plugin.
-      // rspackBundler: true,
+      rspackBundler: true, // Enabled — Orama search plugin is Rspack-compatible
     },
   },
 
@@ -320,34 +317,12 @@ const config: Config = {
     ],
   ],
 
-  themes: [
-    // Local search plugin - generates search index at build time
-    // We use our custom SearchBar UI, so disable the plugin's auto-injected search bar
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      {
-        hashed: true,
-        language: ["en"],
-        indexDocs: true,
-        indexBlog: false,
-        indexPages: false,
-        docsRouteBasePath: "/docs",
-        highlightSearchTermsOnTargetPage: true,
-        searchResultLimits: 8,
-        searchResultContextMaxLength: 50,
-        explicitSearchResultPath: true,
-        // Exclude non-lesson content from search index to reduce build memory.
-        // Summaries (~724 files) and quizzes (~52 files) aren't useful search targets.
-        ignoreFiles: [
-          /\.summary$/, // .summary.md routes
-          /_chapter_\d+_quiz$/, // quiz page routes (e.g. 05_chapter_02_quiz)
-        ],
-        // Disable the plugin's auto-injected search bar - we use custom-searchBar instead
-        searchBarShortcutHint: false,
-      },
-    ],
-  ],
+  themes: [],
   plugins: [
+    // Orama search — generates gzipped search index at build time.
+    // Replaces @easyops-cn/docusaurus-search-local (which blocked Rspack).
+    // Our custom SearchBar component loads the index via search-utils.ts.
+    ["@orama/plugin-docusaurus-v3", {}],
     "../../libs/docusaurus/plugin-og-image",
     "../../libs/docusaurus/plugin-structured-data",
     // Summaries Plugin - Makes .summary.md content available via useGlobalData()
