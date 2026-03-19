@@ -287,6 +287,143 @@ function SpeakerFloatingButton() {
 }
 
 /**
+ * Collapsible floating action menu (speed-dial pattern).
+ * Single toggle button expands to reveal all action buttons.
+ */
+function FloatingActions({
+  zenMode,
+  setZenMode,
+  isLoggedIn,
+  openPanel,
+  openPanelInAskMode,
+  handleLoginRedirect,
+}: {
+  zenMode: boolean;
+  setZenMode: React.Dispatch<React.SetStateAction<boolean>>;
+  isLoggedIn: boolean;
+  openPanel: () => void;
+  openPanelInAskMode: () => void;
+  handleLoginRedirect: () => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  // Close on click outside
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node))
+        setOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [open]);
+
+  // Close on Escape
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", handler);
+    return () => document.removeEventListener("keydown", handler);
+  }, [open]);
+
+  return (
+    <div
+      ref={ref}
+      className={`floating-actions${open ? " floating-actions--open" : ""}`}
+    >
+      <div
+        className={`floating-action-items${open ? " floating-action-items--visible" : ""}`}
+      >
+        <BackToTopButton />
+        <SpeakerFloatingButton />
+        <TeachMeFloatingButton
+          isLoggedIn={isLoggedIn}
+          openPanel={openPanel}
+          handleLoginRedirect={handleLoginRedirect}
+        />
+        <AskFloatingButton
+          isLoggedIn={isLoggedIn}
+          openPanelInAskMode={openPanelInAskMode}
+          handleLoginRedirect={handleLoginRedirect}
+        />
+        <button
+          onClick={() => setZenMode(!zenMode)}
+          className="zen-mode-toggle"
+          title={zenMode ? "Exit Focus Mode" : "Focus Mode"}
+          aria-label={zenMode ? "Exit Focus Mode" : "Enter Focus Mode"}
+        >
+          {zenMode ? (
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+          ) : (
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M3 12h4m10 0h4M12 3v4m0 10v4"></path>
+            </svg>
+          )}
+        </button>
+      </div>
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="floating-actions-toggle"
+        title={open ? "Close" : "Tools"}
+        aria-label={open ? "Close tools menu" : "Open tools menu"}
+        aria-expanded={open}
+      >
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {open ? (
+            <>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </>
+          ) : (
+            <>
+              <circle cx="12" cy="5" r="1.5" fill="currentColor" />
+              <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+              <circle cx="12" cy="19" r="1.5" fill="currentColor" />
+            </>
+          )}
+        </svg>
+      </button>
+    </div>
+  );
+}
+
+/**
  * PracticeOverlay — Fixed overlay on right side of viewport.
  * Contains resize handle + terminal. The lesson content stays in the
  * normal document flow on the left (CSS constrains its width).
@@ -773,60 +910,14 @@ export default function ContentWrapper(props: Props): React.ReactElement {
         )}
         {/* Floating action buttons - hidden when study mode panel is open */}
         {!isStudyModeOpen && (
-          <div className="floating-actions">
-            <BackToTopButton />
-            <SpeakerFloatingButton />
-            <TeachMeFloatingButton
-              isLoggedIn={isLoggedIn}
-              openPanel={openPanel}
-              handleLoginRedirect={handleLoginRedirect}
-            />
-            <AskFloatingButton
-              isLoggedIn={isLoggedIn}
-              openPanelInAskMode={openPanelInAskMode}
-              handleLoginRedirect={handleLoginRedirect}
-            />
-            <button
-              onClick={() => setZenMode(!zenMode)}
-              className="zen-mode-toggle"
-              title={zenMode ? "Exit Focus Mode" : "Focus Mode"}
-              aria-label={zenMode ? "Exit Focus Mode" : "Enter Focus Mode"}
-            >
-              {zenMode ? (
-                // Exit: Grid/sidebar icon
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="3" y="3" width="7" height="7"></rect>
-                  <rect x="14" y="3" width="7" height="7"></rect>
-                  <rect x="14" y="14" width="7" height="7"></rect>
-                  <rect x="3" y="14" width="7" height="7"></rect>
-                </svg>
-              ) : (
-                // Enter: Focus/center icon
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="3"></circle>
-                  <path d="M3 12h4m10 0h4M12 3v4m0 10v4"></path>
-                </svg>
-              )}
-            </button>
-          </div>
+          <FloatingActions
+            zenMode={zenMode}
+            setZenMode={setZenMode}
+            isLoggedIn={isLoggedIn}
+            openPanel={openPanel}
+            openPanelInAskMode={openPanelInAskMode}
+            handleLoginRedirect={handleLoginRedirect}
+          />
         )}
         {isLoggedIn && <CompletenessBanner hideDuringOnboarding />}
         <Content {...props} />
@@ -901,60 +992,14 @@ export default function ContentWrapper(props: Props): React.ReactElement {
       )}
       {/* Floating action buttons - hidden when study mode panel is open */}
       {!isStudyModeOpen && (
-        <div className="floating-actions">
-          <BackToTopButton />
-          <SpeakerFloatingButton />
-          <TeachMeFloatingButton
-            isLoggedIn={isLoggedIn}
-            openPanel={openPanel}
-            handleLoginRedirect={handleLoginRedirect}
-          />
-          <AskFloatingButton
-            isLoggedIn={isLoggedIn}
-            openPanelInAskMode={openPanelInAskMode}
-            handleLoginRedirect={handleLoginRedirect}
-          />
-          <button
-            onClick={() => setZenMode(!zenMode)}
-            className="zen-mode-toggle"
-            title={zenMode ? "Exit Focus Mode" : "Focus Mode"}
-            aria-label={zenMode ? "Exit Focus Mode" : "Enter Focus Mode"}
-          >
-            {zenMode ? (
-              // Exit: Grid/sidebar icon
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect x="3" y="3" width="7" height="7"></rect>
-                <rect x="14" y="3" width="7" height="7"></rect>
-                <rect x="14" y="14" width="7" height="7"></rect>
-                <rect x="3" y="14" width="7" height="7"></rect>
-              </svg>
-            ) : (
-              // Enter: Focus/center icon
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx="12" cy="12" r="3"></circle>
-                <path d="M3 12h4m10 0h4M12 3v4m0 10v4"></path>
-              </svg>
-            )}
-          </button>
-        </div>
+        <FloatingActions
+          zenMode={zenMode}
+          setZenMode={setZenMode}
+          isLoggedIn={isLoggedIn}
+          openPanel={openPanel}
+          openPanelInAskMode={openPanelInAskMode}
+          handleLoginRedirect={handleLoginRedirect}
+        />
       )}
       <LessonContent summaryElement={summaryElement}>
         <Content {...props} />

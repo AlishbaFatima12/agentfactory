@@ -64,8 +64,8 @@ cards:
     difficulty: "intermediate"
 
   - id: "p0-ch02-error-prediction-010"
-    front: "Why does the exercise require annotating AI output line by line rather than giving an overall assessment?"
-    back: "Because line-by-line annotation forces precise identification of where errors occur and what type each one is. Overall assessments like 'mostly accurate' hide specific failures that only granular analysis reveals."
+    front: "Why does the exercise require annotating specific AI claims rather than giving an overall assessment?"
+    back: "Because claim-by-claim annotation forces precise identification of where errors occur and what type each one is. Overall assessments like 'mostly accurate' hide specific failures that only focused analysis reveals."
     tags: ["annotation", "error-detection"]
     difficulty: "advanced"
     why: "What would an instructor learn from a student's line-by-line annotations that a summary assessment would hide?"

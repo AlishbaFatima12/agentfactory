@@ -38,4 +38,4 @@ Ralph Wiggum Loop is a Claude Code plugin that enables autonomous iteration—Cl
 ### Connections
 
 - **Builds on**: Hooks (Lesson 15) for Stop hook mechanics, Plugins (Lesson 16) for marketplace installation
-- **Leads to**: Digital FTE autonomous execution patterns (Part 6-7), advanced custom hook creation (Part 5)
+- **Leads to**: Digital FTE autonomous execution patterns (Part 7-8), advanced custom hook creation (Part 6)

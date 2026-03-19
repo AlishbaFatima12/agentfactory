@@ -68,7 +68,7 @@ teaching_guide:
     - "What percentage of your original principles survived the constraint change? Does this surprise you — were your principles more robust or more fragile than you expected?"
     - "What is the difference between a principle and a pattern? This exercise was designed to make that distinction visible — can you now articulate it?"
   teaching_tips:
-    - "The specific constraint change ('unlimited capacity but limited internet — only 2 hours per day') fundamentally shifts the problem from supply allocation to access optimization"
+    - "Each scenario's constraint change fundamentally shifts the problem — Education moves from supply allocation to access optimization, Technical moves from capacity limits to cooperation dynamics, Community moves from supply scarcity to logistics bottlenecks"
     - "Have students share their principle audits before their rebuilt solutions — the quality of the audit predicts the quality of the rebuild"
     - "The chapter-level AI feedback (Beginner/Developing/Proficient/Advanced) gives students a cumulative rating across all 4 exercises — emphasize growth trajectory over absolute score"
   assessment_quick_check:
@@ -76,13 +76,35 @@ teaching_guide:
     - "Ask students: What is the most important thing this chapter taught you about the difference between reasoning from principles and reasoning from patterns?"
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Rebuild Under New Constraints
 
 **Layers Used:** Layer 4 (Contradiction Challenge), Layer 6 (Iterative Drafts)
 
 ### What You Do
 
-The instructor removes or changes one foundational constraint: "Now assume the AI tutoring system has unlimited capacity but students have limited internet access — only 2 hours per day." Rebuild your solution. You cannot start from scratch — trace which of your first principles still hold and which collapsed. Then ask AI to rebuild under the same new constraints and compare adaptation strategies.
+The instructor removes or changes one foundational constraint from the scenario you chose in Lesson 2. Use the matching constraint change below:
+
+<Tabs>
+  <TabItem value="education" label="Education" default>
+    **Scenario A (Education):** "Now assume the AI tutoring system has unlimited
+    capacity but students have limited internet access — only 2 hours per day."
+  </TabItem>
+  <TabItem value="technical" label="Technical">
+    **Scenario B (Technical):** "Now assume your GPU cluster has doubled in size
+    but every research team must share their compute allocation with at least one
+    other team — no team gets exclusive access."
+  </TabItem>
+  <TabItem value="community" label="Community">
+    **Scenario C (Community):** "Now assume disaster relief supplies are
+    unlimited but only 3 of the 50 neighborhoods have functioning roads —
+    all other deliveries must go through those 3 access points."
+  </TabItem>
+</Tabs>
+
+Rebuild your solution. You cannot start from scratch — trace which of your first principles still hold and which collapsed. Then ask AI to rebuild under the same new constraints and compare adaptation strategies.
 
 ---
 

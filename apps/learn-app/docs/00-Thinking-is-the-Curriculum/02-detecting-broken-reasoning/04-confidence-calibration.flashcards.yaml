@@ -8,13 +8,13 @@ deck:
 cards:
   - id: "p0-ch02-confidence-calibration-001"
     front: "How many AI-generated claims does the Confidence Calibration exercise present?"
-    back: "20 claims across different topics (science, history, current events, technology, geography, law)."
+    back: "10 claims across different topics (science, history, current events, technology, geography, law)."
     tags: ["confidence-calibration", "exercise-format"]
     difficulty: "basic"
 
   - id: "p0-ch02-confidence-calibration-002"
     front: "How much time does a student have to assess each AI claim in the Confidence Calibration exercise?"
-    back: "90 seconds per claim."
+    back: "2 minutes per claim."
     tags: ["confidence-calibration", "time-pressure"]
     difficulty: "basic"
 

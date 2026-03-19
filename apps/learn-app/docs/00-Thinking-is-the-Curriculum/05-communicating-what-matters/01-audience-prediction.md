@@ -132,8 +132,8 @@ Three audience profiles (written without AI) each containing: the stakeholder's 
 I predicted three audience profiles for a technical decision, then had AI
 generate persuasive briefs for each. Please:
 
-(1) Rate my audience profiles -- did I correctly identify what each stakeholder
-(skeptical CTO, cost-conscious CFO, non-technical CEO) cares about?
+(1) Rate my audience profiles -- did I correctly identify what each of the three
+stakeholders from my chosen scenario cares about?
 (2) Rate my predicted objections -- are these realistic? Did I miss any likely
 objections?
 (3) Compare my persuasion strategy vs. the AI-generated brief for each

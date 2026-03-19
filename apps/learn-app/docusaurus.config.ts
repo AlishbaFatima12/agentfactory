@@ -321,28 +321,12 @@ const config: Config = {
     ],
   ],
 
-  themes: [
-    // Local search plugin - generates search index at build time
-    // We use our custom SearchBar UI, so disable the plugin's auto-injected search bar
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      {
-        hashed: true,
-        language: ["en"],
-        indexDocs: true,
-        indexBlog: false,
-        indexPages: false,
-        docsRouteBasePath: "/docs",
-        highlightSearchTermsOnTargetPage: true,
-        searchResultLimits: 8,
-        searchResultContextMaxLength: 50,
-        explicitSearchResultPath: true,
-        // Disable the plugin's auto-injected search bar - we use custom-searchBar instead
-        searchBarShortcutHint: false,
-      },
-    ],
-  ],
+  themes: [],
   plugins: [
+    // Orama search — generates gzipped search index at build time.
+    // Replaces @easyops-cn/docusaurus-search-local (which blocked Rspack).
+    // Our custom SearchBar component loads the index via search-utils.ts.
+    ["@orama/plugin-docusaurus-v3", {}],
     "../../libs/docusaurus/plugin-og-image",
     "../../libs/docusaurus/plugin-structured-data",
     // Summaries Plugin - Makes .summary.md content available via useGlobalData()

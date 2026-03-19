@@ -1024,6 +1024,262 @@ FILES["src-main"] = {
   ],
 };
 
+// ─── GUIDED TOUR ───────────────────────────────────────────────
+// Each step auto-navigates to a file and explains what to notice.
+// This array is the ONLY thing a new explorer needs to provide
+// alongside its own TREE/FILES/CMDS to get guided learning.
+var GUIDE = [
+  // ── Welcome ──────────────────────────────────────────────────
+  {
+    title: "Welcome to the Agent Factory",
+    desc: "You're inside a real Claude Code project — a Financial Analyst that a company built to handle variance analysis, CFO briefings, and regulatory compliance.\n\nThis isn't a demo. Every file you'll see is a real artifact, annotated to show you exactly how it works and why it's built that way.\n\nWe'll walk through 9 components. By the end, you'll understand how professionals build AI agents that actually work.",
+    file: null,
+    terminal: null,
+  },
+
+  // ── 1. CLAUDE.md ─────────────────────────────────────────────
+  {
+    title: "CLAUDE.md — The Agent's Persistent Memory",
+    file: "claude-md",
+    terminal: "/thesis",
+    spotlight: "CLAUDE.md",
+    desc: "This file is loaded at the start of every session. It's the only thing your agent remembers between conversations.",
+    sections: [
+      {
+        label: "What it is",
+        text: "A Markdown file at the project root. Claude reads it automatically — no configuration needed. Think of it as the agent's job description.",
+      },
+      {
+        label: "How it's built",
+        text: "Three sections: Identity (who am I), Key Commands (what can I run), and Constraints (what I must never do). The constraints are the most important part.",
+      },
+      {
+        label: "Why it matters",
+        text: "Without CLAUDE.md, your agent starts every session with amnesia. It doesn't know your project, your rules, or your domain. This file is the difference between a generic AI and YOUR AI.",
+      },
+    ],
+    hint: "Line 14: 'NEVER make final investment recommendations'. This constraint is load-bearing — remove it and the agent starts giving financial advice it has no authority to give.",
+  },
+
+  // ── 2. Settings ──────────────────────────────────────────────
+  {
+    title: "Settings — Permissions & Safety Model",
+    file: "settings",
+    terminal: "/doctor",
+    spotlight: "settings.json",
+    desc: "If CLAUDE.md is the job description, settings.json is the security policy. It controls what tools the agent can touch.",
+    sections: [
+      {
+        label: "What it is",
+        text: "A JSON file in .claude/ that defines permissions (allow/deny), hooks (automated scripts), and environment variables. Committed to git — the whole team shares the same rules.",
+      },
+      {
+        label: "How it's built",
+        text: "Permissions use glob patterns: Read(specs/*) allows reading specs. Write(.claude/*) is denied — the agent can't modify its own config. This is the principle of least privilege.",
+      },
+      {
+        label: "The key insight",
+        text: "The deny list is more important than the allow list. What you prevent matters more than what you permit. This agent can write reports but cannot delete files, push to git, or change its own rules.",
+      },
+    ],
+    hint: "Line 11: Write(.claude/*) is denied. If the agent could edit its own settings, it could remove its own safety constraints. This is privilege escalation prevention.",
+  },
+
+  // ── 3. Hooks ─────────────────────────────────────────────────
+  {
+    title: "Hooks — Automated Guardrails That Never Sleep",
+    file: "settings",
+    terminal: null,
+    spotlight: "Hooks",
+    desc: "Scroll down in settings.json to the hooks section. These are scripts that run automatically before or after every tool call.",
+    sections: [
+      {
+        label: "How they work",
+        text: "PreToolUse hooks intercept actions BEFORE they happen. Exit code 0 = allow, exit code 2 = block. The agent never gets to execute the blocked action.",
+      },
+      {
+        label: "Three hook types here",
+        text: "1) A PreToolUse Bash hook that blocks rm -rf commands. 2) A PostToolUse Edit|Write hook that auto-formats files after changes. 3) A SessionStart hook that injects git status into context.",
+      },
+      {
+        label: "Why professionals love this",
+        text: "Hooks are guardrails that work even when you're not watching. You don't have to review every command — the hook catches dangerous ones automatically. This is how you trust an agent with real work.",
+      },
+    ],
+    hint: "The SessionStart hook runs 'git status && cat TODO.md' — so the agent starts every session knowing what changed and what's pending. Zero manual context-setting.",
+  },
+
+  // ── 4. Skills ────────────────────────────────────────────────
+  {
+    title: "Skills — Domain Expertise in a File",
+    file: "skill-finance",
+    terminal: "/seven",
+    spotlight: "SKILL.md",
+    desc: "This is the heart of the Agent Factory. A skill turns a generic AI into a domain specialist.",
+    sections: [
+      {
+        label: "The structure",
+        text: "YAML frontmatter (name + description) at the top tells Claude WHEN to load this skill. The Markdown body below tells it HOW to do the work. Two parts, one file.",
+      },
+      {
+        label: "How auto-loading works",
+        text: "Claude reads the description field. When your prompt matches — 'analyze Q3 variance' — it loads the full skill automatically. A vague description means the skill never activates.",
+      },
+      {
+        label: "The methodology pattern",
+        text: "Step 1: Decompose (break it down). Step 2: Classify (what's controllable). Step 3: Imply (what does this mean for the year). This isn't random — it's how real financial analysts think.",
+      },
+      {
+        label: "The escalation pattern",
+        text: "Every skill MUST define when to stop and hand off to a human. Variance >15%? Flag for CFO. Restatement risk? STOP immediately. This is the line between useful automation and dangerous autonomy.",
+      },
+    ],
+    hint: "The description says 'Perform financial variance analysis decomposing P&L variances into volume, price, and mix components.' That specificity is what triggers auto-loading — not 'help with finance'.",
+  },
+
+  // ── 5. Multiple Skills ───────────────────────────────────────
+  {
+    title: "Skill Library — One Agent, Many Domains",
+    file: "skill-islamic",
+    terminal: null,
+    spotlight: "Skills Directory",
+    desc: "This project has 5 skills. Each is a separate specialist that activates when needed.",
+    sections: [
+      {
+        label: "The five skills",
+        text: "Finance (variance analysis), Legal (contract review), Islamic Finance (Shariah compliance), Banking (IFRS 9, Basel III), CA/CPA Practice (audit & tax). One agent, five domains.",
+      },
+      {
+        label: "How they coexist",
+        text: "Skills don't conflict — Claude loads the right one based on your prompt. Ask about Sukuk? Islamic finance activates. Ask about credit loss? Banking activates. The description field is the routing mechanism.",
+      },
+      {
+        label: "Each has its own escalation",
+        text: "Finance: variance >15% → CFO. Islamic Finance: novel structures → Shariah board. Legal: ambiguous clauses → attorney. Banking: SAR filing → compliance officer. Each domain has different danger zones.",
+      },
+    ],
+    hint: "Open skill-banking next (in the tree on the left). Notice it covers 7 jurisdictions — US, UK, EU, Pakistan, UAE, Saudi, Bahrain. Jurisdiction-specific knowledge is the competitive moat.",
+  },
+
+  // ── 6. Subagents ─────────────────────────────────────────────
+  {
+    title: "Subagents — Delegation at Scale",
+    file: "agent-researcher",
+    terminal: "/agents",
+    spotlight: "Subagent .md files",
+    desc: "When one agent isn't enough, you delegate. Subagents are specialists with their own tools, models, and memory.",
+    sections: [
+      {
+        label: "The anatomy",
+        text: "Same as skills: YAML frontmatter for config, Markdown body for the system prompt. But subagents get their OWN context window — they run in parallel, independently.",
+      },
+      {
+        label: "Three agents here",
+        text: "Researcher (gathers data, uses Haiku for speed), Auditor (verifies outputs, read-only tools, maxTurns: 20), Code Reviewer (checks quality, uses Sonnet for smarts).",
+      },
+      {
+        label: "The design principles",
+        text: "1) Least privilege: the auditor can only Read, Grep, Glob — no Write. 2) Bounded execution: maxTurns prevents runaway loops. 3) Cost optimization: cheap tasks go to Haiku, important ones to Sonnet.",
+      },
+      {
+        label: "How they connect",
+        text: "The parent agent delegates tasks. Subagents work independently and return results. It's like a manager with three direct reports — each expert in their lane.",
+      },
+    ],
+    hint: "Look at permissionMode: dontAsk on the auditor. This means it auto-denies any confirmation prompts. An auditor that can be talked into exceptions isn't much of an auditor.",
+  },
+
+  // ── 7. MCP ───────────────────────────────────────────────────
+  {
+    title: "MCP — Connecting to the Outside World",
+    file: "mcp-json",
+    terminal: "/mcp",
+    spotlight: ".mcp.json",
+    desc: "Your agent is smart but isolated. MCP (Model Context Protocol) connects it to external data, tools, and services.",
+    sections: [
+      {
+        label: "What MCP solves",
+        text: "Without MCP: agent needs custom code for every API. With MCP: one protocol, many servers. Connect to financial data, Google Sheets, Slack, internal docs — all through the same interface.",
+      },
+      {
+        label: "How servers work",
+        text: "Each MCP server is an npm package that runs locally. The agent calls tools through MCP, the server handles the API details. You configure once in .mcp.json, use everywhere.",
+      },
+      {
+        label: "Security model",
+        text: "API keys are NEVER in the config file. They come from environment variables (like ${FINANCIAL_DATA_KEY}), resolved from settings.local.json which is gitignored. Secrets stay local.",
+      },
+    ],
+    hint: "Four servers configured: financial-data (market data), google-sheets (spreadsheets), slack (messaging), company-docs (RAG search over internal documents). That's a fully-connected FTE.",
+  },
+
+  // ── 8. Plugins ───────────────────────────────────────────────
+  {
+    title: "Plugins — Package, Ship, Install",
+    file: "plugin-json",
+    terminal: null,
+    spotlight: ".claude-plugin/",
+    desc: "You've built an amazing FTE. Now you want other teams to use it. Plugins package everything into one installable unit.",
+    sections: [
+      {
+        label: "What's inside",
+        text: "plugin.json lists all components: 5 skills, 2 agents, hooks config, and MCP servers. One manifest file declares the entire package.",
+      },
+      {
+        label: "Install and go",
+        text: "Other teams run: claude plugin install agentfactory-finance@marketplace. The skills, agents, hooks, and MCP servers all configure automatically. Zero manual setup.",
+      },
+      {
+        label: "The marketplace",
+        text: "marketplace.json is a catalog. Organizations publish plugins, teams browse and install. This is how domain expertise scales across a company — or across the world.",
+      },
+    ],
+    hint: "The MCP server in plugin.json auto-configures on install. The team that installs this plugin gets financial data access without knowing anything about the API.",
+  },
+
+  // ── 9. Specs & Evals ────────────────────────────────────────
+  {
+    title: "Specs & Evals — Measure Everything",
+    file: "spec-fte",
+    terminal: "/eval",
+    spotlight: "specs/ + evals/",
+    desc: "How do you know your FTE actually works? Specs define the contract. Evals enforce it.",
+    sections: [
+      {
+        label: "The spec contract",
+        text: "Input: AnalysisRequest (period, department, detail_level). Output: AnalysisReport (summary, variances, requires_human_review). Typed interfaces — no ambiguity about what goes in or comes out.",
+      },
+      {
+        label: "Acceptance criteria → eval suite",
+        text: "'Calculations match +/- 0.01%', 'Sources cited with timestamps', 'Report in <60 seconds'. Each criterion becomes a test case. Write the spec, get the evals for free.",
+      },
+      {
+        label: "LLM-as-judge",
+        text: "One model grades another. The eval suite runs test cases, scores outputs 1-5, and blocks deployment if score <3. This is quality control for AI — automated and repeatable.",
+      },
+    ],
+    hint: "requires_human_review: boolean in the output contract. The spec FORCES the agent to declare when it needs human oversight. If the agent omits this field, the eval fails.",
+  },
+
+  // ── Completion ───────────────────────────────────────────────
+  {
+    title: "You've Seen the Full Stack",
+    file: null,
+    terminal: "/help",
+    desc: "Nine components. One Digital FTE.\n\nYou now understand the anatomy of a professional AI agent project — from persistent memory to quality gates. This is the Agent Factory methodology.",
+    sections: [
+      {
+        label: "The architecture",
+        text: "CLAUDE.md (identity) → Settings (safety) → Skills (expertise) → Subagents (delegation) → MCP (connectivity) → Plugins (distribution) → Specs + Evals (quality)",
+      },
+      {
+        label: "What's next",
+        text: "Explore freely — click any file in the tree on the left, or type commands in the terminal. Try /deploy to see the full deployment flow, or /agent-teams to learn about multi-agent coordination.",
+      },
+    ],
+  },
+];
+
 var CMDS = {
   "/help":
     "  BOOK COMMANDS\n  /thesis  /sdd   /mcp    /fte\n  /seven   /stack  /parts\n  /deploy  /eval   /doctor\n\n  CLAUDE CODE FEATURES\n  /agents  /fork    /loop\n  /remote-control   /tasks\n  /agent-teams",
@@ -1465,6 +1721,316 @@ function FileView(p) {
   );
 }
 
+// ─── GUIDED TOUR PANEL ─────────────────────────────────────────
+// Generic: takes any GUIDE array. Any explorer can reuse this.
+function GuidedTourPanel(p) {
+  var step = p.guide[p.step];
+  var isFirst = p.step === 0;
+  var isLast = p.step === p.guide.length - 1;
+  var progress = ((p.step + 1) / p.guide.length) * 100;
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+        fontFamily: "'DM Sans',system-ui",
+        background: "#0c0a06",
+      }}
+    >
+      {/* Header */}
+      <div
+        style={{
+          padding: "12px 16px 10px",
+          borderBottom: "1px solid #1e1a14",
+          flexShrink: 0,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginBottom: 10,
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <div
+              style={{
+                width: 8,
+                height: 8,
+                borderRadius: "50%",
+                background: "#c47a50",
+                animation: "pulse 2s infinite",
+              }}
+            />
+            <span
+              style={{
+                fontSize: 11,
+                color: "#c47a50",
+                letterSpacing: 1.5,
+                textTransform: "uppercase",
+                fontWeight: 600,
+              }}
+            >
+              Guided Tour
+            </span>
+          </div>
+          <button
+            onClick={p.onSwitchToTerminal}
+            style={{
+              background: "none",
+              border: "1px solid #2a2218",
+              borderRadius: 4,
+              padding: "3px 10px",
+              fontSize: 10,
+              color: "#908878",
+              cursor: "pointer",
+              fontFamily: "'JetBrains Mono',monospace",
+            }}
+            title="Switch to terminal"
+          >
+            Terminal
+          </button>
+        </div>
+        {/* Progress bar */}
+        <div
+          style={{
+            height: 3,
+            background: "#1a1814",
+            borderRadius: 2,
+            overflow: "hidden",
+          }}
+        >
+          <div
+            style={{
+              width: progress + "%",
+              height: "100%",
+              background: "#c47a50",
+              borderRadius: 2,
+              transition: "width 0.3s ease",
+            }}
+          />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: 4,
+            fontSize: 10,
+            color: "#776655",
+          }}
+        >
+          <span>
+            {p.step + 1} of {p.guide.length}
+          </span>
+          <span>{Math.round(progress)}%</span>
+        </div>
+      </div>
+
+      {/* Step content */}
+      <div
+        style={{
+          flex: 1,
+          overflowY: "auto",
+          padding: "16px",
+        }}
+      >
+        {/* Spotlight badge */}
+        {step.spotlight && (
+          <div
+            style={{
+              display: "inline-block",
+              padding: "3px 10px",
+              background: "#c47a5018",
+              border: "1px solid #c47a5030",
+              borderRadius: 4,
+              fontSize: 10,
+              fontFamily: "'JetBrains Mono',monospace",
+              color: "#c47a50",
+              fontWeight: 600,
+              letterSpacing: 0.5,
+              marginBottom: 8,
+            }}
+          >
+            {step.spotlight}
+          </div>
+        )}
+
+        <h3
+          style={{
+            fontSize: 15,
+            color: "#f0e6d6",
+            fontWeight: 700,
+            margin: "0 0 10px",
+            lineHeight: 1.3,
+          }}
+        >
+          {step.title}
+        </h3>
+        <div
+          style={{
+            fontSize: 13,
+            color: "#d4c8b8",
+            lineHeight: 1.7,
+            whiteSpace: "pre-line",
+            marginBottom: step.sections ? 12 : 0,
+          }}
+        >
+          {step.desc}
+        </div>
+
+        {/* Rich sections */}
+        {step.sections &&
+          step.sections.map(function (sec, i) {
+            return (
+              <div
+                key={i}
+                style={{
+                  marginBottom: 10,
+                  padding: "8px 10px",
+                  background: i % 2 === 0 ? "#ffffff03" : "transparent",
+                  borderRadius: 6,
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: 10,
+                    fontWeight: 700,
+                    color: "#c47a50",
+                    textTransform: "uppercase",
+                    letterSpacing: 1,
+                    marginBottom: 4,
+                  }}
+                >
+                  {sec.label}
+                </div>
+                <div
+                  style={{
+                    fontSize: 12.5,
+                    color: "#d4c8b8",
+                    lineHeight: 1.65,
+                  }}
+                >
+                  {sec.text}
+                </div>
+              </div>
+            );
+          })}
+
+        {/* Hint callout */}
+        {step.hint && (
+          <div
+            style={{
+              marginTop: 10,
+              padding: "10px 12px",
+              background: "#c47a5008",
+              borderLeft: "3px solid #c47a50",
+              borderRadius: "0 6px 6px 0",
+              fontSize: 12,
+              color: "#e8d0b0",
+              lineHeight: 1.6,
+            }}
+          >
+            <span
+              style={{
+                color: "#c47a50",
+                fontWeight: 700,
+                fontSize: 10,
+                textTransform: "uppercase",
+                letterSpacing: 1,
+              }}
+            >
+              Pro tip
+            </span>
+            <br />
+            {step.hint}
+          </div>
+        )}
+
+        {/* Terminal suggestion */}
+        {step.terminal && (
+          <div
+            style={{
+              marginTop: 10,
+              padding: "8px 12px",
+              background: "#1a1814",
+              borderRadius: 6,
+              fontSize: 12,
+              fontFamily: "'JetBrains Mono',monospace",
+            }}
+          >
+            <span style={{ color: "#776655", fontSize: 10 }}>
+              Try in terminal:
+            </span>
+            <div style={{ color: "#c47a50", marginTop: 4 }}>
+              {step.terminal}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Navigation */}
+      <div
+        style={{
+          display: "flex",
+          gap: 8,
+          padding: "12px 16px",
+          borderTop: "1px solid #1e1a14",
+          flexShrink: 0,
+        }}
+      >
+        <button
+          onClick={function () {
+            if (!isFirst) p.onStep(p.step - 1);
+          }}
+          disabled={isFirst}
+          style={{
+            flex: 1,
+            background: "none",
+            border: "1px solid " + (isFirst ? "#1a1814" : "#2a2218"),
+            borderRadius: 6,
+            padding: "8px 0",
+            fontSize: 12,
+            fontWeight: 600,
+            color: isFirst ? "#555" : "#d4c8b8",
+            cursor: isFirst ? "default" : "pointer",
+            fontFamily: "inherit",
+          }}
+        >
+          Back
+        </button>
+        <button
+          onClick={function () {
+            if (!isLast) p.onStep(p.step + 1);
+            else p.onSwitchToTerminal();
+          }}
+          style={{
+            flex: 1,
+            background: isLast ? "#c47a50" : "#c47a5020",
+            border: "1px solid #c47a50",
+            borderRadius: 6,
+            padding: "8px 0",
+            fontSize: 12,
+            fontWeight: 600,
+            color: isLast ? "#0e0c08" : "#c47a50",
+            cursor: "pointer",
+            fontFamily: "inherit",
+          }}
+        >
+          {isLast ? "Explore Freely" : "Next"}
+        </button>
+      </div>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: "@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }",
+        }}
+      />
+    </div>
+  );
+}
+
 function TerminalPanel() {
   var sh = useState([]);
   var h = sh[0];
@@ -1709,6 +2275,51 @@ function TerminalPanel() {
   );
 }
 
+// Wraps TerminalPanel with a "Guide" toggle button in the header
+function TerminalPanelWithGuideToggle(p) {
+  return (
+    <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
+      {/* Inject guide toggle into terminal header area */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-end",
+          padding: "6px 12px",
+          background: "#0c0a06",
+          borderBottom: "1px solid #1e1a14",
+          flexShrink: 0,
+        }}
+      >
+        <button
+          onClick={p.onSwitchToGuide}
+          style={{
+            background: "#c47a5018",
+            border: "1px solid #c47a5040",
+            borderRadius: 4,
+            padding: "4px 12px",
+            fontSize: 10,
+            fontWeight: 600,
+            color: "#c47a50",
+            cursor: "pointer",
+            fontFamily: "'JetBrains Mono',monospace",
+            letterSpacing: 0.5,
+            display: "flex",
+            alignItems: "center",
+            gap: 5,
+          }}
+          title="Return to guided tour"
+        >
+          <span style={{ fontSize: 12 }}>{"◀"}</span> Guided Tour
+        </button>
+      </div>
+      <div style={{ flex: 1, minHeight: 0 }}>
+        <TerminalPanel />
+      </div>
+    </div>
+  );
+}
+
 export default function AgentFactoryExplorer() {
   var s1 = useState(null);
   var sel = s1[0];
@@ -1716,6 +2327,15 @@ export default function AgentFactoryExplorer() {
   var s2 = useState({ "claude-dir": true, "skills-dir": true });
   var exp = s2[0];
   var setExp = s2[1];
+
+  // Guided tour state
+  var gs = useState(true); // start in guided mode
+  var guideActive = gs[0];
+  var setGuideActive = gs[1];
+  var gStep = useState(0);
+  var guideStep = gStep[0];
+  var setGuideStep = gStep[1];
+
   var tog = function (id) {
     setExp(function (p) {
       var n = Object.assign({}, p);
@@ -1746,6 +2366,17 @@ export default function AgentFactoryExplorer() {
       return false;
     };
     up(TREE, []);
+  };
+
+  // Auto-navigate when guide step changes
+  var onGuideStep = function (step) {
+    setGuideStep(step);
+    var s = GUIDE[step];
+    if (s && s.file) {
+      nav(s.file);
+    } else if (s && !s.file) {
+      setSel(null); // go to welcome page
+    }
   };
   return (
     <div
@@ -1966,7 +2597,22 @@ export default function AgentFactoryExplorer() {
             overflow: "hidden",
           }}
         >
-          <TerminalPanel />
+          {guideActive ? (
+            <GuidedTourPanel
+              guide={GUIDE}
+              step={guideStep}
+              onStep={onGuideStep}
+              onSwitchToTerminal={function () {
+                setGuideActive(false);
+              }}
+            />
+          ) : (
+            <TerminalPanelWithGuideToggle
+              onSwitchToGuide={function () {
+                setGuideActive(true);
+              }}
+            />
+          )}
         </div>
       </div>
     </div>
