@@ -64,7 +64,7 @@ Check the chapter's pedagogical layer and target reader:
 | ------------------------------------- | ----------------------- | ------------------------------------------------------ |
 | Part 1-2, "no prior coding" in README | **Beginner / Business** | Business scenarios, professional domains, zero code    |
 | Part 3-4, tools/methodology chapters  | **Practitioner**        | Tool workflows, configuration, methodology application |
-| Part 5-6, advanced engineering        | **Developer**           | Code projects, debugging, architecture                 |
+| Part 6-7, advanced engineering        | **Developer**           | Code projects, debugging, architecture                 |
 
 **The audience determines everything**: scenario language, starter file types, rubric criteria, and which exercise pattern to use. Getting this wrong produces exercises students cannot relate to.
 
