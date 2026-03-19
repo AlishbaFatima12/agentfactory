@@ -123,7 +123,7 @@ James studies the table. He traces his finger across the rows. Five axioms, five
 
 "You lost a customer's order because of a JSON key," Emma says. "Did you not understand relational data when you built that dashboard?"
 
-James opens his mouth, then closes it. He had understood the principle. He had known, in the abstract, that data should be connected. He just had not thought about it at the moment he was building the dashboard. He had been tired, and the deadline was close, and the JSON structure had looked fine.
+James stops mid-sentence. He had understood the principle. He had known, in the abstract, that data should be connected. He just had not thought about it at the moment he was building the dashboard. He had been tired, and the deadline was close, and the JSON structure had looked fine.
 
 "I understood it," James says slowly. "I just did not apply it when it mattered."
 

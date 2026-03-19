@@ -179,7 +179,7 @@ James got the output right. "I predicted it correctly — I understand this. Let
 
 "What happens if the name is empty?"
 
-James opens his mouth, then closes it. He hadn't considered that. "The `+` would still join everything together, so... you'd get the greeting with a comma and exclamation mark but no name in between." He frowns. "Okay, I got the *output* right, but I was treating the code like a black box. Getting the answer right isn't the same as understanding the machinery."
+James hesitates. He hadn't considered that. "The `+` would still join everything together, so... you'd get the greeting with a comma and exclamation mark but no name in between." He frowns. "Okay, I got the *output* right, but I was treating the code like a black box. Getting the answer right isn't the same as understanding the machinery."
 
 "That's what Investigation is for — digging into the mechanics."
 

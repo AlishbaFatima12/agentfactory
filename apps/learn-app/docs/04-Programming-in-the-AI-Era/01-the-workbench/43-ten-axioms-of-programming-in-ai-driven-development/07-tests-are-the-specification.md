@@ -90,7 +90,7 @@ It was not. The function returned 0.15 instead of 0.85 — it subtracted the dis
 
 "What did you verify it _against_?" Emma asked.
 
-James opened his mouth, then closed it. He had verified that the code _looked_ correct. He had not verified that it _was_ correct. He had no reference point — no expected output for a known input. He had read `price * discount_rate` and his brain had filled in "of course that gives the discounted price." But 100 times 0.15 is 15, not 85. The multiplication was right there in the code. He had looked directly at the bug and seen what he expected to see instead of what was actually written.
+The objection died before he could form it. He had verified that the code _looked_ correct. He had not verified that it _was_ correct. He had no reference point — no expected output for a known input. He had read `price * discount_rate` and his brain had filled in "of course that gives the discounted price." But 100 times 0.15 is 15, not 85. The multiplication was right there in the code. He had looked directly at the bug and seen what he expected to see instead of what was actually written.
 
 "I verified the structure," James said slowly. "Not the result."
 
