@@ -83,17 +83,17 @@ You will use the **Reasoning Receipt** format from [Chapter 1, Exercise 1](../01
 
 ### What You Do
 
-**Step 1 — Ask both AI tools the same question.** Choose a nuanced question where reasonable people disagree — for example: "Is remote work better for productivity than office work?" Prompt both Claude and ChatGPT with the identical question. Save both full responses.
+**Step 1 — Ask both AI tools the same question (~5 min).** Choose a nuanced question where reasonable people disagree — for example: "Is remote work better for productivity than office work?" Prompt both Claude and ChatGPT with the identical question. Save both full responses.
 
-**Step 2 — Identify divergence points.** Read both responses side by side. For every point where the two tools disagree, write a divergence annotation (see example below). For each divergence, determine: which side has stronger evidence, and which is asserting without support.
+**Step 2 — Identify divergence points (~15 min).** Read both responses side by side. For every point where the two tools disagree, write a divergence annotation (see example below). For each divergence, determine: which side has stronger evidence, and which is asserting without support.
 
-**Step 3 — Write your Draft 1 analysis.** Write your own third analysis (500-800 words) that is more rigorous than either AI output. Use the divergence points as your starting material — you should do better than both tools on the contested points.
+**Step 3 — Write your Draft 1 analysis (~20 min).** Write your own third analysis (500-800 words) that is more rigorous than either AI output. Use the divergence points as your starting material — you should do better than both tools on the contested points.
 
-**Step 4 — Get AI critique.** Submit your Draft 1 to the AICheck below. The AI will critique your analysis and identify weaknesses.
+**Step 4 — Get AI critique (~5 min).** Submit your Draft 1 to the AICheck below. The AI will critique your analysis and identify weaknesses.
 
-**Step 5 — Revise to Draft 2.** Based on the AI critique, revise your analysis. Write a brief evolution note explaining what you changed and why.
+**Step 5 — Revise to Draft 2 (~15 min).** This is your first multi-draft exercise — each draft should be genuinely better, not just edited for grammar. Based on the AI critique, focus on your weakest claims: strengthen the evidence, remove unsupported assertions, or acknowledge uncertainty. Write an evolution note explaining what you changed and why.
 
-**Step 6 — Final reflection to Draft 3.** Re-read your Draft 2 with fresh eyes. Make final improvements. Write a second evolution note. This is your final submission.
+**Step 6 — Final reflection to Draft 3 (~15 min).** Re-read your Draft 2 with fresh eyes. Ask yourself: where am I still asserting without evidence? What would someone who disagrees attack first? Revise those sections. Write a second evolution note. This is your final submission.
 
 ---
 

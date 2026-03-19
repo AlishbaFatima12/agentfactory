@@ -11,7 +11,7 @@ Error detection is a trainable skill with specific categories, not just vague sk
 ### Critical Patterns
 
 - Write a sealed prediction document before prompting AI: expected strengths, expected weaknesses, expected error types
-- Annotate AI responses line by line using the 8 Error Taxonomy categories
+- Annotate the 10 key claims in AI responses using the Error Taxonomy categories
 - Build a comparison table: predicted errors vs. actual errors found
 - Count each error type across both AI tools to identify patterns
 
