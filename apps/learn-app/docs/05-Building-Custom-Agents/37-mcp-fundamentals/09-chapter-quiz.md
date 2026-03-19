@@ -12,8 +12,7 @@ Test your understanding of MCP concepts and architecture across all lessons. Eac
 
 <Quiz
   title="Chapter 37: Model Context Protocol Fundamentals"
-  questions={[
-    {
+  questions={[    {
       question: "What problem does MCP fundamentally solve? (Lesson 1)",
       options: [
         "Making AI models run faster and cheaper",
@@ -40,12 +39,12 @@ Test your understanding of MCP concepts and architecture across all lessons. Eac
     {
       question: "When would you choose stdio transport over HTTP transport for MCP? (Lesson 2)",
       options: [
-        "Always use HTTP—it's more robust and modern",
         "Local development environments where the server runs as a subprocess on your machine",
+        "Always use HTTP—it's more robust and modern",
         "Only when your MCP server has no network capability",
         "HTTP is for testing; stdio is for production"
       ],
-      correctOption: 1,
+      correctOption: 0,
       explanation: "stdio transport is ideal for local, single-client scenarios like development environments. When your MCP server is a local subprocess (like the GitHub MCP server running on your machine), stdio provides efficient subprocess communication. HTTP/SSE is reserved for remote servers and multi-client production scenarios.",
       source: "Lesson 2: Transport Layers"
     },
@@ -53,11 +52,11 @@ Test your understanding of MCP concepts and architecture across all lessons. Eac
       question: "Why must log messages go to stderr rather than stdout in an MCP server using stdio transport? (Lesson 2)",
       options: [
         "It's a convention with no technical reason",
-        "To prevent log output from interfering with JSON-RPC messages that use stdout",
         "stderr is always written to terminal while stdout is buffered",
+        "To prevent log output from interfering with JSON-RPC messages that use stdout",
         "To make debugging easier for developers"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "In stdio transport, JSON-RPC messages flow exclusively through stdout, and the MCP client reads from that stream. If your server writes logs to stdout, they'll be interpreted as part of the message stream, breaking the protocol. Logs must go to stderr (which isn't read by the client) to keep the stdout channel pure for protocol messages.",
       source: "Lesson 2: Transport Layers"
     },
@@ -78,22 +77,22 @@ Test your understanding of MCP concepts and architecture across all lessons. Eac
       options: [
         "Tools (model-controlled)",
         "Prompts (user-controlled)",
-        "Resources (app-controlled)",
-        "All three use app-controlled exposure"
+        "All three use app-controlled exposure",
+        "Resources (app-controlled)"
       ],
-      correctOption: 2,
+      correctOption: 3,
       explanation: "Resources are app-controlled. The application decides when to expose data to the model. Tools are model-controlled (AI decides when to use them), and prompts are user-controlled (the human decides when to apply them). This distinction is crucial: resources let applications protect sensitive data by controlling exposure timing.",
       source: "Lesson 4: Resources—The App-Controlled Primitive"
     },
     {
       question: "When the application needs to control when data is accessed, which MCP primitive should you use? (Lesson 4)",
       options: [
-        "Tools—because they are the most flexible primitive",
         "Resources—because they are app-controlled and let the application decide when to expose data",
+        "Tools—because they are the most flexible primitive",
         "Prompts—because they are designed for data access patterns",
         "Any of the above work equally well for app-controlled access"
       ],
-      correctOption: 1,
+      correctOption: 0,
       explanation: "Resources are the correct primitive when the application needs to control data access. Tools are model-controlled (the AI decides when to use them), while Resources are app-controlled (the application decides when to expose data). This distinction matters for security—Resources let you protect sensitive data by controlling exposure timing.",
       source: "Lesson 4: Resources—The App-Controlled Primitive"
     },
@@ -101,11 +100,11 @@ Test your understanding of MCP concepts and architecture across all lessons. Eac
       question: "What makes MCP prompts fundamentally different from Tool definitions? (Lesson 5)",
       options: [
         "Prompts are just rebranded tools with different naming",
-        "Prompts encode domain expertise into reusable instruction templates that USERS select; tools are actions that MODELS autonomously invoke",
         "Prompts run faster than tools",
+        "Prompts encode domain expertise into reusable instruction templates that USERS select; tools are actions that MODELS autonomously invoke",
         "Prompts can only be used in ChatGPT; tools are for all platforms"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "Prompts are expert-crafted instruction templates that users select when needed. They capture tacit knowledge about problem-solving (like 'code review' or 'legal contract analysis'). Tools are different: they're capabilities the model autonomously invokes. This three-way split (tools=model-controlled, resources=app-controlled, prompts=user-controlled) represents MCP's architectural elegance.",
       source: "Lesson 5: Prompts—The User-Controlled Primitive"
     },
@@ -114,10 +113,10 @@ Test your understanding of MCP concepts and architecture across all lessons. Eac
       options: [
         "In the root directory of your project",
         "Always in a single global ~/.config directory regardless of use case",
-        "In ~/.config/claude (for Claude Code) or ~/user/Library/Application Support (for Cursor on macOS)",
-        "Configuration files aren't necessary for basic MCP usage"
+        "Configuration files aren't necessary for basic MCP usage",
+        "In ~/.config/claude (for Claude Code) or ~/user/Library/Application Support (for Cursor on macOS)"
       ],
-      correctOption: 2,
+      correctOption: 3,
       explanation: "MCP client configuration goes in client-specific locations: Claude Code uses ~/.config/claude on Unix/Linux or ~/Library/Application Support/Claude on macOS; Cursor uses similar paths in its config directory. The location depends on the client application, not on your project structure.",
       source: "Lesson 6: Configuring MCP Clients"
     },
@@ -125,23 +124,23 @@ Test your understanding of MCP concepts and architecture across all lessons. Eac
       question: "What is the correct syntax for environment variable substitution in MCP configuration? (Lesson 6)",
       options: [
         "$VARIABLE_NAME",
-        "%VARIABLE_NAME%",
         "${VARIABLE_NAME}",
+        "%VARIABLE_NAME%",
         "env.VARIABLE_NAME"
       ],
-      correctOption: 2,
+      correctOption: 1,
       explanation: "MCP configuration uses ${VARIABLE_NAME} syntax for environment variable substitution. This allows configuration files to reference secrets and deployment-specific values without hardcoding them, supporting ${HOME}, ${MCP_SERVER_KEY}, and other environment variables.",
       source: "Lesson 6: Configuring MCP Clients"
     },
     {
       question: "How should you evaluate an MCP server from the community before using it? (Lesson 7)",
       options: [
-        "If it exists, it's automatically safe and high-quality",
         "Check source code quality, maintenance status, permissions requested, security audit status, and community adoption",
+        "If it exists, it's automatically safe and high-quality",
         "Use whichever server has the most GitHub stars",
         "Evaluation isn't necessary—MCP servers can't access sensitive data"
       ],
-      correctOption: 1,
+      correctOption: 0,
       explanation: "Community MCP servers vary significantly in quality and safety. You should evaluate: source code transparency and quality, maintenance activity (recent commits), permissions requested (what access does it need?), any security audits performed, and adoption by trusted organizations. A well-maintained server from Anthropic or popular open-source projects is more trustworthy than an unmaintained server with unknown authors.",
       source: "Lesson 7: Using Community MCP Servers"
     },
@@ -162,22 +161,22 @@ Test your understanding of MCP concepts and architecture across all lessons. Eac
       options: [
         "It's a linting tool to check MCP server code quality",
         "It validates MCP server implementations against the specification",
-        "It's a debugging tool for tracing message flow between client and server, inspecting tool schemas, and testing tool invocations",
-        "It encrypts MCP communications for security"
+        "It encrypts MCP communications for security",
+        "It's a debugging tool for tracing message flow between client and server, inspecting tool schemas, and testing tool invocations"
       ],
-      correctOption: 2,
+      correctOption: 3,
       explanation: "MCP Inspector is a diagnostic tool for debugging MCP connections. It lets you trace JSON-RPC messages as they flow between client and server, inspect tool/resource/prompt schemas before execution, test tool invocations with custom parameters, and identify where communication breaks down. Essential for troubleshooting MCP setup.",
       source: "Lesson 8: Debugging & Troubleshooting"
     },
     {
       question: "Select ALL that are common MCP error patterns: (Lesson 8)",
       options: [
-        "Log messages mixed into stdout breaking the JSON-RPC stream (stdio transport)",
         "Environment variables not resolved in configuration (${VARIABLE_NAME} stays literal)",
+        "Log messages mixed into stdout breaking the JSON-RPC stream (stdio transport)",
         "Server process crashes silently because stderr isn't monitored during setup",
         "The MCP protocol itself has critical security flaws requiring patches"
       ],
-      correctOption: [0, 1, 2],
+      correctOption: 1,
       explanation: "The first three are common debugging scenarios: (1) logs to stdout corrupting the message stream is a frequent stdio transport mistake, (2) environment variable substitution failures when config references variables that aren't set, (3) server crashes going unnoticed because developers don't monitor server process health. The protocol itself is sound—setup and configuration errors are the most frequent causes of failures.",
       source: "Lesson 8: Debugging & Troubleshooting"
     },
@@ -185,11 +184,11 @@ Test your understanding of MCP concepts and architecture across all lessons. Eac
       question: "According to the chapter, when was MCP released and what milestone demonstrates its adoption? (Lesson 1)",
       options: [
         "Released in January 2024; still waiting for major platform adoption",
-        "Released November 2024 by Anthropic; adopted by OpenAI in March 2025, becoming de facto standard",
         "Released in 2023; adoption remains experimental",
+        "Released November 2024 by Anthropic; adopted by OpenAI in March 2025, becoming de facto standard",
         "No specific release date mentioned; adoption varies by region"
       ],
-      correctOption: 1,
+      correctOption: 2,
       explanation: "MCP was released by Anthropic in November 2024 and rapidly adopted by OpenAI (March 2025). This timeline demonstrates remarkable ecosystem convergence—competing LLM companies standardizing on a single protocol within months. By 2025, MCP is the de facto standard for agent-tool integration.",
       source: "Lesson 1: MCP Architecture Overview"
     }
