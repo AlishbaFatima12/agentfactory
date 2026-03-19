@@ -1,9 +1,9 @@
 # Chapter Writing Methodology: Python for the New AI Era
 
-**Version:** 3.0
-**Date:** 2026-03-15
+**Version:** 3.1
+**Date:** 2026-03-19
 **Purpose:** Comprehensive reference for how every chapter in the Python course is written — from research to publication.
-**Companion to:** `python-new-era-plan.md` (v2.16)
+**Companion to:** `python-new-era-plan.md` (v2.17)
 
 ---
 
@@ -29,8 +29,10 @@ This methodology document uses the **book chapter numbers** (as they appear in `
 |---|---|---|
 | Chapter 42 | PRIMM-AI+ Framework | `42-the-primm-ai-framework/` |
 | Chapter 43 | Ten Axioms of Programming | `43-ten-axioms-of-programming-in-ai-driven-development/` |
+| Chapter 44 | The Development Environment | `44-development-environment/` |
+| Chapter 45 | Reading Python | `45-reading-python/` |
 | Chapter 6 | Seven Principles | `06-seven-principles/` |
-| Chapter 45+ | Python programming chapters | Future chapters |
+| Chapter 46+ | Python programming chapters (Phase 2+) | To be created |
 
 **Rule**: Always verify chapter numbers against the filesystem using `ls -d apps/learn-app/docs/*/NN-*/` before referencing them. Never guess.
 
@@ -108,7 +110,7 @@ The critical distinction learned from Chapter 43 (v2 rewrite after PR #853 failu
 | **Investigate stage** | Trace tables, variable tracking | Written explanation, Error Taxonomy classification |
 | **Modify stage** | Change code, observe behavior change | Change scenario, reason about what breaks |
 | **Make stage** | Write new code from spec | Write structured plan, checklist, or document |
-| **Chapters** | Chapter 45+ (Python programming) | Chapters 42-43 (conceptual foundations) |
+| **Chapters** | Chapters 44+ (Dev Environment onward) | Chapters 42-43 (conceptual foundations) |
 
 **The PR #853 Lesson**: The first attempt at Chapter 43 PRIMM-AI+ used Track A exercises (Makefiles, pytest, SQL, Docker, git commands) for students who didn't know those tools yet. Every exercise was inaccessible. The v2 rewrite switched to Track B — all exercises use real-world scenarios and plain-English reasoning, not code. **Always match the track to what students actually know at that point in the book.**
 
@@ -236,7 +238,7 @@ This book is designed for solo mode. Every technique works with just the student
 
 ### Chapter 43's Established Pattern
 
-Chapter 43 (Ten Axioms of Programming in AI-Driven Development) is the bridge chapter that students complete right before entering the Python course. It establishes:
+Chapter 43 (Ten Axioms of Programming in AI-Driven Development) is the second chapter in Phase 1 of the Python course. It establishes professional principles before students install tools or read code:
 
 **Characters:**
 - **James** — The learner. Enthusiastic, sometimes rushes ahead, makes the mistakes students will make. He represents the student's journey.
@@ -269,11 +271,11 @@ Every axiom lesson in Chapter 43 connects back to Chapter 6 (Seven Principles) w
 
 **Chapter reference accuracy rule**: Always verify chapter numbers against the filesystem before referencing them. The Seven Principles are in Chapter 6, not Chapter 4 or 7. Run `ls -d apps/learn-app/docs/*/06-*/` to confirm.
 
-### The Bridge from Chapter 43 to Python Chapters
+### The Bridge from Chapter 43 to Chapter 44 (Conceptual → Hands-On)
 
 Chapter 43 ends with students understanding the TEN AXIOMS — the principles that govern how you work with AI-generated code. They know the WHY. But they haven't done anything yet. Their laptop is still unconfigured.
 
-**The first Python chapter is where theory becomes reality.**
+**Chapter 44 (The Development Environment) is where theory becomes reality.**
 
 The narrative bridge should feel like this progression:
 
@@ -282,13 +284,13 @@ Ch 43 (final words): "You now have ten axioms — a complete engineering system.
                        But axioms on paper don't ship software.
                        It's time to build the workbench."
 
-Python L1 (opening):  James opens his laptop. Empty terminal. No Python tools.
+Ch 44 L1 (opening):  James opens his laptop. Empty terminal. No Python tools.
                        Emma: "Every craftsperson starts by setting up their bench.
                        Let's install each tool — and I'll show you which axiom
                        it enforces."
 ```
 
-**The key insight**: The first Python chapter is NOT a generic "install Python" tutorial. It is the PHYSICAL MANIFESTATION of the axioms. Every tool installed ties back to a specific axiom:
+**The key insight**: Chapter 44 is NOT a generic "install Python" tutorial. It is the PHYSICAL MANIFESTATION of the axioms. Every tool installed ties back to a specific axiom:
 
 | Tool Being Installed | Axiom It Enforces | Connection |
 |---------------------|-------------------|------------|
@@ -498,7 +500,7 @@ Looking Ahead (1-2 paragraphs)
 └── Bridge to next lesson
 ```
 
-**Note**: Not every lesson includes all sections. Conceptual lessons (like Ch 42 L1-L3) may focus on specific stages. Programming lessons (Ch 45+) include the full five-step code cycle.
+**Note**: Not every lesson includes all sections. Conceptual lessons (like Ch 42 L1-L3) may focus on specific stages. Programming lessons (Ch 44+) include the full five-step code cycle.
 
 ---
 
@@ -661,7 +663,7 @@ L4 (Spec-Driven): Student drives full spec → implement → verify cycle
 
 ### Conceptual Chapters (Ch 43, Ch 42) = Pre-L1
 
-Chapters 30-31 are **conceptual foundations** before any programming:
+Chapters 42-43 are **conceptual foundations** before any programming:
 - Students READ and REASON, they don't write code
 - PRIMM-AI+ Track B: plain-English exercises with real-world scenarios
 - Exercises are classification, structured writing, and reasoning — not coding
@@ -819,7 +821,7 @@ Structured Writing     — 20% (ADRs, plans, checklists, specifications)
 Scenario Reasoning     — 15% (what breaks if you change X?)
 ```
 
-### Track A Exercises (Programming Chapters — Ch 45+)
+### Track A Exercises (Programming Chapters — Ch 44+)
 
 ```
 Type 1: Read & Predict     — 60% of exercises (PRIMARY)
@@ -945,6 +947,7 @@ Every lesson uses inline bold text to create a "concept runway" — reading all 
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 3.1 | 2026-03-19 | Aligned with plan v2.17: updated companion reference, expanded chapter numbering table to include Ch 44 (Dev Env) and Ch 45 (Reading Python), updated Ch 43 from "bridge chapter" to "second chapter in Phase 1", fixed stale "Chapters 30-31" → "Chapters 42-43", updated Track A boundary from Ch 45+ to Ch 44+ (Dev Env has Track A exercises), updated narrative bridge section to reference Ch 44 specifically. |
 | 3.0 | 2026-03-15 | Major update based on Chapter 43 v2 refinement: Added Track A/B distinction (Section 3), answer key pattern with `<details>`, Error Taxonomy and Verification Ladder as standard tools, beginner accessibility rules (Section 5), iterative evaluation pattern (Section 6), Gate 5 (beginner accessibility), "From Principle to Axiom" cross-reference pattern, chapter numbering clarification table, 4 new key rules (#15-#18), updated all "Chapter 14" references to "Chapter 43", updated per-lesson structure template with PRIMM-AI+ Practice section details |
 | 2.0 | 2026-03-08 | Added Section 3 (PRIMM-AI+ lesson and chapter architecture from Ch 42 L3), Section 15 (bold highlighting pattern from Part 1), added Parsons Problems to exercise design, aligned per-lesson structure with five-step PRIMM-AI+ cycle, added four embedded teaching methods, added classroom/solo mode distinction, added 4 new key rules (#7 no cold Make, #8 follow five-step architecture, #13 bold key insights, #14 include Parsons problems), renumbered all sections |
 | 1.0 | 2026-02-20 | Initial methodology document covering MCP grounding, narrative continuity, writing pipeline, quality gates, exercise design, and platform handling |
