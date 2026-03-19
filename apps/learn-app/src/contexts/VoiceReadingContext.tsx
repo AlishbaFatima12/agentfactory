@@ -6,7 +6,7 @@
  * Supports pause/resume and real-time volume/speed changes that continue from current word.
  */
 
-import React, { createContext, useContext, useState, useCallback, useRef, useEffect } from "react";
+import React, { createContext, useContext, useState, useCallback, useRef, useEffect, useMemo } from "react";
 
 interface VoiceReadingContextType {
     // Playback state
@@ -59,7 +59,21 @@ interface TextBlock {
     wordBoundaries: WordBoundary[];
 }
 
-export function VoiceReadingProvider({ children }: { children: React.ReactNode }) {
+/** Map site locale to BCP-47 language prefix for voice selection */
+const LOCALE_LANG_MAP: Record<string, string> = {
+    en: "en",
+    ur: "ur",
+    "zh-Hans": "zh",
+};
+
+/** Preferred default voices per locale (first match wins) */
+const PREFERRED_VOICES: Record<string, string[]> = {
+    en: ["Google US English", "Microsoft David", "Alex"],
+    ur: ["Microsoft Asad", "Google اردو"],
+    "zh-Hans": ["Google 普通话", "Microsoft Huihui"],
+};
+
+export function VoiceReadingProvider({ children, locale = "en" }: { children: React.ReactNode; locale?: string }) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isPaused, setIsPaused] = useState(false);
     const [activeBlockIndex, setActiveBlockIndex] = useState(-1);
@@ -120,12 +134,24 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
             const voices = window.speechSynthesis.getVoices();
             if (voices.length > 0) {
                 setAvailableVoices(voices);
-                const defaultIndex = voices.findIndex(v =>
-                    v.name.includes("Google US English") ||
-                    v.name.includes("Microsoft David") ||
-                    v.name.includes("Alex")
+
+                // Pick best default voice for the current locale
+                const langPrefix = LOCALE_LANG_MAP[locale] || "en";
+                const preferred = PREFERRED_VOICES[locale] || PREFERRED_VOICES.en;
+
+                // 1. Try preferred voices for this locale
+                let idx = voices.findIndex(v =>
+                    preferred.some(name => v.name.includes(name))
                 );
-                const idx = defaultIndex >= 0 ? defaultIndex : 0;
+
+                // 2. Fallback: first voice matching locale language
+                if (idx < 0) {
+                    idx = voices.findIndex(v => v.lang.startsWith(langPrefix));
+                }
+
+                // 3. Ultimate fallback: first voice
+                if (idx < 0) idx = 0;
+
                 setSelectedVoiceIndex(idx);
                 selectedVoiceRef.current = voices[idx];
             }
@@ -140,7 +166,7 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
             // Clear all timers on unmount
             clearFallbackTimers();
         };
-    }, [clearFallbackTimers]);
+    }, [clearFallbackTimers, locale]);
 
     const selectedVoice = availableVoices[selectedVoiceIndex] || null;
 

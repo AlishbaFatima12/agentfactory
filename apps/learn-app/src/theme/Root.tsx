@@ -25,9 +25,10 @@ import { VoiceReadingProvider } from '@/contexts/VoiceReadingContext';
 import { ProgressProvider } from '@/contexts/ProgressContext';
 
 export default function Root({ children }: { children: React.ReactNode }) {
-  const { siteConfig } = useDocusaurusContext();
+  const { siteConfig, i18n } = useDocusaurusContext();
   const authUrl = (siteConfig.customFields?.authUrl as string) || 'http://localhost:3001';
   const oauthClientId = (siteConfig.customFields?.oauthClientId as string) || 'agent-factory-public-client';
+  const currentLocale = i18n.currentLocale || 'en';
 
   return (
     <AuthProvider authUrl={authUrl} oauthClientId={oauthClientId}>
@@ -37,7 +38,7 @@ export default function Root({ children }: { children: React.ReactNode }) {
             <ProgressProvider>
               <PyodideProvider>
                 <StudyModeProvider>
-                  <VoiceReadingProvider>
+                  <VoiceReadingProvider locale={currentLocale}>
                     <AnalyticsTracker>
                       {children}
                       <Toaster />
