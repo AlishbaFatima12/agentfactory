@@ -95,7 +95,11 @@ You are currently at Step 1 -- predicting and running. Steps 2 through 5 will be
 
 James predicts the output of a program and rates himself a 5 — certain. He runs the code. The output is completely different from his prediction.
 
-"That's the most dangerous state," Emma says. "Being wrong isn't the problem. Being *confident and wrong* is the problem." She is quiet for a moment. "I shipped a production bug last year because of exactly this. I reviewed a function an AI had generated, thought 'this looks right,' and merged it. I was confident — 4 out of 5. The function handled nine cases correctly and silently dropped the tenth. I didn't predict the output for that tenth case because I was sure I understood the code." She looks at James. "Confidence without prediction is just optimism. The score forces you to be honest about how sure you actually are."
+"That's the most dangerous state," Emma says. "Being wrong isn't the problem. Being *confident and wrong* is the problem." She is quiet for a moment. "I shipped a production bug last year because of exactly this. I reviewed a function an AI had generated, thought 'this looks right,' and merged it. I was confident — 4 out of 5."
+
+"The function still failed?" James asks.
+
+"It handled nine cases correctly and silently dropped the tenth. I didn't predict the output for that tenth case because I was sure I understood the code." She looks at James. "Confidence without prediction is just optimism. The score forces you to be honest about how sure you actually are."
 
 In Lesson 1, you saw the 1-5 confidence scale during the Predict stage. Here it is again for reference — and here is how to use it systematically throughout Parts 4 and 5.
 

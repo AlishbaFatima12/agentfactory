@@ -79,7 +79,11 @@ James reviewed it, liked what he saw, and merged it. The endpoint crashed in sta
 
 James did. Plain dictionaries — `{"total_amount": 42.50}` — not objects with `.total_amount` attributes. The variable names had made the code *look* correct. The code was not correct. And James had reviewed it line by line and missed the mismatch, because readable code and correct code are not the same thing.
 
-Emma pulled up the diff. "Your composed functions from last week had typed interfaces — `ValidatedOrder`, `PricedOrder`, `PaidOrder`. The type checker would have caught any mismatch. This new code has no types at all. You gave the AI a blank canvas and hoped it would guess your data model."
+Emma pulled up the diff. "Your composed functions from last week had typed interfaces — `ValidatedOrder`, `PricedOrder`, `PaidOrder`. The type checker would have caught any mismatch."
+
+"So the types would have flagged this before staging?" James asked.
+
+"Yes. But this new code has no types at all. You gave the AI a blank canvas and hoped it would guess your data model."
 
 "I thought I could verify it by reading it," James said. "But I can't read every assumption the AI makes about data shapes. That's what the types do — they make the assumptions explicit so a machine can check them."
 
