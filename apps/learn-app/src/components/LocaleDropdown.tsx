@@ -1,5 +1,6 @@
-import React from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React from "react";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { useLocation } from "@docusaurus/router";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -7,50 +8,93 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Globe } from "lucide-react";
-import { getLocaleUrl } from "@/utils/getLocaleUrl";
+import { ChevronDown, Check, Languages } from "lucide-react";
+import { getLocaleUrl } from "../utils/getLocaleUrl";
+
+const englishNames = new Intl.DisplayNames(["en"], { type: "language" });
 
 export function LocaleDropdown() {
-  const {i18n} = useDocusaurusContext();
+  const { siteConfig, i18n } = useDocusaurusContext();
+  const location = useLocation();
 
+  const defaultLocale = i18n.defaultLocale;
   const currentLocale = i18n.currentLocale;
-
-  const handleLocaleChange = (locale: string) => {
-    const newPath = getLocaleUrl({
-      pathname: window.location.pathname,
-      currentLocale,
-      targetLocale: locale,
-      defaultLocale: i18n.defaultLocale,
-      localeConfigs: i18n.localeConfigs,
-    });
-    window.location.href = newPath + window.location.search + window.location.hash;
-  };
-
   const currentLocaleConfig = i18n.localeConfigs[currentLocale];
-  const currentLabel = currentLocaleConfig?.label || 'English';
+  const nativeLabel = currentLocaleConfig?.label || "English";
+  const currentEnglishName = englishNames.of(currentLocale) || "English";
+
+  const buildLocaleUrl = (targetLocale: string): string => {
+    const url = getLocaleUrl({
+      pathname: location.pathname,
+      currentLocale,
+      targetLocale,
+      defaultLocale,
+      localeConfigs: i18n.localeConfigs,
+      baseUrl: siteConfig.baseUrl,
+    });
+
+    // search/hash are only available client-side
+    const search = typeof window !== "undefined" ? window.location.search : "";
+    const hash = typeof window !== "undefined" ? window.location.hash : "";
+    return url + search + hash;
+  };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" title="Change language">
-          <Globe className="w-5 h-5" />
-          <span className="sr-only">Language: {currentLabel}</span>
+        <Button
+          variant="ghost"
+          dir="ltr"
+          className="gap-2 px-2.5 py-1.5 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded-md"
+          title="Change language"
+          aria-label="Change language"
+        >
+          <Languages className="w-4 h-4 opacity-70" />
+          <span className="font-medium">
+            {currentEnglishName}
+            {currentEnglishName !== nativeLabel && (
+              <span className="text-muted-foreground font-normal">
+                {" "}
+                ({nativeLabel})
+              </span>
+            )}
+          </span>
+          <ChevronDown className="w-3.5 h-3.5 opacity-60" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48">
+      <DropdownMenuContent align="end" className="w-48 p-1">
         {i18n.locales.map((locale) => {
           const config = i18n.localeConfigs[locale];
           const isActive = locale === currentLocale;
+          const localeUrl = buildLocaleUrl(locale);
+          const nativeName = config?.label || locale;
+          const englishName = englishNames.of(locale) || nativeName;
+
           return (
             <DropdownMenuItem
               key={locale}
-              onClick={() => handleLocaleChange(locale)}
-              className={isActive ? 'bg-accent' : ''}
+              asChild
+              className={isActive ? "bg-accent" : ""}
             >
-              <div className="flex items-center justify-between w-full">
-                <span>{config?.label || locale}</span>
-                {isActive && <span>✓</span>}
-              </div>
+              <a
+                href={localeUrl}
+                className="flex items-center gap-2.5 px-2 py-2 w-full cursor-pointer rounded-sm"
+              >
+                <span className="flex-1 text-sm font-medium">
+                  {englishName}
+                </span>
+                {englishName !== nativeName && (
+                  <span
+                    className="text-xs text-muted-foreground font-normal"
+                    dir={config?.direction || "ltr"}
+                  >
+                    {nativeName}
+                  </span>
+                )}
+                {isActive && (
+                  <Check className="w-3.5 h-3.5 text-primary shrink-0" />
+                )}
+              </a>
             </DropdownMenuItem>
           );
         })}

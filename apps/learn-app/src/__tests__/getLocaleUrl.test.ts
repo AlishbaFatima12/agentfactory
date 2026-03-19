@@ -101,7 +101,7 @@ describe('getLocaleUrl', () => {
     ).toBe('/ur/docs/intro');
   });
 
-  it('uses localeConfigs.path when available', () => {
+  it('uses localeConfigs.path when available (alias path)', () => {
     const customConfigs = {
       en: { path: 'en' },
       ur: { path: 'urdu' },

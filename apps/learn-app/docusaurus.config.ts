@@ -80,7 +80,10 @@ const config: Config = {
       swcHtmlMinimizer: true, // Use SWC to minify HTML
       lightningCssMinimizer: true, // Use Lightning CSS instead of cssnano
       mdxCrossCompilerCache: true, // Compile MDX once instead of twice
-      rspackBundler: true, // Enabled — Orama search plugin is Rspack-compatible
+      // rspackBundler blocked by Docusaurus core's BannerPlugin (webpack internal,
+      // not any third-party plugin). Rspack's getPath expects String but BannerPlugin
+      // passes a function. Waiting for Rspack/Docusaurus fix upstream.
+      // rspackBundler: true,
     },
   },
 
@@ -126,6 +129,15 @@ const config: Config = {
         rel: "apple-touch-icon",
         sizes: "180x180",
         href: "/apple-touch-icon.png",
+      },
+    },
+    // Prevent browser auto-translate popup (Chrome, Edge, etc.)
+    // The site has its own translation system — browser translation causes layout issues.
+    {
+      tagName: "meta",
+      attributes: {
+        name: "google",
+        content: "notranslate",
       },
     },
     // Font Awesome - non-render-blocking load with preload
@@ -186,7 +198,7 @@ const config: Config = {
         async: "true",
       },
     },
-    // Google Fonts: Inter (UI/Body), JetBrains Mono (Code)
+    // Google Fonts: Inter (UI/Body), JetBrains Mono (Code), Noto Nastaliq Urdu (RTL)
     {
       tagName: "link",
       attributes: {
@@ -208,7 +220,7 @@ const config: Config = {
       attributes: {
         rel: "preload",
         as: "style",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Gulzar&family=Noto+Nastaliq+Urdu&display=swap",
         crossorigin: "anonymous",
       },
     },
@@ -216,7 +228,7 @@ const config: Config = {
       tagName: "link",
       attributes: {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Gulzar&family=Noto+Nastaliq+Urdu&display=swap",
         media: "print",
         onload: "this.media='all'",
       },
@@ -226,25 +238,17 @@ const config: Config = {
       tagName: "noscript",
       attributes: {},
       innerHTML:
-        '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">',
+        '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Gulzar&family=Noto+Nastaliq+Urdu&display=swap">',
     },
   ],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
-    localeConfigs: {
-      en: {
-        label: "English",
-        direction: "ltr",
-        htmlLang: "en-US",
-        calendar: "gregory",
-      },
-    },
-  },
+  // i18n config loaded from i18n-config.json — single source of truth
+  // for both docusaurus.config.ts and scripts/build.sh
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  i18n: require("./i18n-config.json"),
 
   presets: [
     [
@@ -255,7 +259,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // editUrl removed — repo is now private
           editUrl: undefined,
-          showLastUpdateTime: true,
+          showLastUpdateTime: !process.env.VERCEL,
           showLastUpdateAuthor: false,
           // Exclude .summary.md files from being rendered as pages
           // They are injected into lesson frontmatter by the summary injector plugin
