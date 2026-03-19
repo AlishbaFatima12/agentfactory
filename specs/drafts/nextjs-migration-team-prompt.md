@@ -157,14 +157,14 @@ DELIVERABLES (write ALL to `specs/nextjs-migration/architect/`):
    - API client files to create/copy
    - Exit criteria (the E2E flow)
 
-8. `verifier-brief.md` — Verification scope:
+9. `verifier-brief.md` — Verification scope:
    - Full 14-flow verification matrix from spec
    - Testing commands
    - Pass/fail criteria per flow
 
 Execute autonomously without asking for confirmation.
 
-When finished, message the team lead: 'ARCHITECT DONE — specs/nextjs-migration/architect/ contains 8 deliverables'"
+When finished, message the team lead: 'ARCHITECT DONE — specs/nextjs-migration/architect/ contains 9 deliverables'"
 ```
 
 **Lead action after architect completes**:
@@ -180,6 +180,7 @@ When finished, message the team lead: 'ARCHITECT DONE — specs/nextjs-migration
 
 **Task**: "Phase 2: Reference-Builder — migrate one complete lesson page"
 **Model**: opus
+**Effort**: max
 **Depends on**: Phase 1 (architect) complete
 
 Spawn with this prompt:
@@ -250,8 +251,9 @@ Spawn ALL 3 writer teammates SIMULTANEOUSLY after Phase 2 passes.
 
 ### WRITER-A: Framework & Layout
 
-**Task**: "Phase 3a: Writer-A — Framework scaffold, layouts, navigation, search"
+**Task**: "Phase 3a: Writer-A — Framework scaffold, layouts, navigation, search, i18n"
 **Model**: opus
+**Effort**: max
 
 Spawn with this prompt:
 
@@ -269,7 +271,11 @@ READ IN ORDER:
 6. `apps/learn-next/next.config.ts` — Reference config (extend it)
 7. `apps/learn-app/src/theme/` — Read ALL 7 swizzled components (this is what you're replacing)
 8. `apps/learn-app/sidebars.ts` — Current sidebar config
-9. Read `node_modules/next/dist/docs/` for App Router layout patterns
+9. `apps/learn-app/i18n-config.json` — Locale configuration (3 locales)
+10. `apps/learn-app/src/components/LocaleDropdown.tsx` — Current locale switcher
+11. `apps/learn-app/src/utils/getLocaleUrl.ts` — Current locale URL utility
+12. `specs/nextjs-migration/architect/i18n-strategy.md` — Architect's i18n plan
+13. Read `node_modules/next/dist/docs/` for App Router layout and i18n patterns
 
 RULES:
 - Match the reference-builder's patterns and conventions exactly
@@ -295,18 +301,33 @@ YOUR SCOPE (zero overlap with Writer-B and Writer-C):
    - `src/components/Breadcrumbs/` — Breadcrumb navigation
    - `src/components/PrevNext/` — Previous/Next lesson navigation
 
-3. **Search Integration**:
+3. **i18n / Translations** (CRITICAL — this solves the build problem):
+   - `src/middleware.ts` — Locale detection middleware (en, ur, zh-Hans)
+   - `src/app/[locale]/` — Locale-prefixed route structure
+   - `src/components/LocaleDropdown/` — Locale switcher (migrate from Docusaurus version)
+   - `src/lib/i18n.ts` — Translation loading utility
+   - `src/messages/` — UI string translations (migrate from i18n/*/code.json, footer.json, navbar.json)
+   - Translated MDX content routing (12 files from apps/learn-app/i18n/ur/ and i18n/zh-Hans/)
+   - Follow architect's `i18n-strategy.md` for approach
+   - ISR with i18n = only changed locale pages rebuild (verify this works)
+
+4. **Search Integration**:
    - Pagefind standalone integration OR Next.js search solution
    - `src/components/Search/` — Search UI component
 
-4. **Nx Integration**:
+5. **Nx Integration**:
    - `apps/learn-next/project.json` — Nx project config (serve, build, test targets)
    - Ensure `pnpm nx serve learn-next` works
 
-5. **Homepage**:
+6. **Homepage**:
    - `src/app/page.tsx` — Landing page (migrate from Docusaurus homepage)
 
-EXIT CRITERIA: `pnpm nx serve learn-next` starts without errors AND renders homepage + at least one lesson page with sidebar navigation working.
+7. **Content Integration** (how 1,824 MDX files load):
+   - Implement the content loading strategy from architect's directory skeleton
+   - Either symlink `apps/learn-app/docs/` or copy content into Next.js app
+   - Verify dynamic `[...slug]` route resolves all 1,824 lesson paths
+
+EXIT CRITERIA: `pnpm nx serve learn-next` starts without errors AND renders homepage + at least one lesson page with sidebar navigation AND locale switching (en → ur → zh-Hans) works.
 
 When finished, message the team lead: 'WRITER-A FRAMEWORK DONE — [list of files created]'"
 ```
@@ -315,6 +336,7 @@ When finished, message the team lead: 'WRITER-A FRAMEWORK DONE — [list of file
 
 **Task**: "Phase 3b: Writer-B — Remark plugins, OG images, structured data, build-time generation"
 **Model**: opus
+**Effort**: max
 
 Spawn with this prompt:
 
@@ -388,6 +410,7 @@ When finished, message the team lead: 'WRITER-B PLUGINS DONE — [list of files 
 
 **Task**: "Phase 3c: Writer-C — OAuth2 PKCE, context providers, API clients, E2E integration"
 **Model**: opus
+**Effort**: max
 
 Spawn with this prompt:
 
@@ -469,6 +492,7 @@ When finished, message the team lead: 'WRITER-C INTEGRATIONS DONE — [list of f
 
 **Task**: "Phase 4: Verifier — run verification matrix and content routing check"
 **Model**: opus
+**Effort**: max
 **Depends on**: ALL Phase 3 writers complete
 
 Spawn with this prompt:
@@ -525,6 +549,9 @@ Step 4 — Verification Matrix (14 flows):
 | 12 | OG images | Fetch /api/og?title=test | Valid image returned |
 | 13 | SEO | Check page source for JSON-LD | Valid structured data present |
 | 14 | Search | Search for a term | Results returned |
+| 15 | Locale switching | Switch en → ur → zh-Hans via LocaleDropdown | Correct locale content renders, URL updates |
+| 16 | Translated content | Navigate to /ur/docs/thesis | Urdu MDX renders correctly |
+| 17 | ISR per-locale | Change one MDX file, rebuild | Only that page rebuilds, not full site |
 
 For each flow: record PASS/FAIL + evidence (screenshot path, console output, or API response).
 
@@ -549,7 +576,7 @@ DELIVERABLE: Write `specs/nextjs-migration/verification-report.md`:
 
 Execute autonomously without asking for confirmation.
 
-When finished, message the team lead: 'VERIFIER DONE — specs/nextjs-migration/verification-report.md written. Overall: [PASS/FAIL]. [N]/14 flows passed.'"
+When finished, message the team lead: 'VERIFIER DONE — specs/nextjs-migration/verification-report.md written. Overall: [PASS/FAIL]. [N]/17 flows passed.'"
 ```
 
 ---
@@ -580,14 +607,14 @@ When finished, message the team lead: 'VERIFIER DONE — specs/nextjs-migration/
 
 ## MODEL PREFERENCES
 
-| Teammate              | Model | Rationale                               |
-| --------------------- | ----- | --------------------------------------- |
-| Architect             | opus  | Critical path — must get mapping right  |
-| Reference-Builder     | opus  | Sets quality bar for all writers        |
-| Writer-A Framework    | opus  | Complex App Router layout architecture  |
-| Writer-B Plugins      | opus  | Plugin migration requires precision     |
-| Writer-C Integrations | opus  | Auth/API integration is highest risk    |
-| Verifier              | opus  | Must catch regressions across all flows |
+| Teammate              | Model | Effort | Rationale                              |
+| --------------------- | ----- | ------ | -------------------------------------- |
+| Architect             | opus  | max    | Critical path — must get mapping right |
+| Reference-Builder     | opus  | max    | Sets quality bar for all writers       |
+| Writer-A Framework    | opus  | max    | Complex App Router + i18n architecture |
+| Writer-B Plugins      | opus  | max    | Plugin migration requires precision    |
+| Writer-C Integrations | opus  | max    | Auth/API integration is highest risk   |
+| Verifier              | opus  | max    | Must catch regressions across 17 flows |
 
 ## ANTI-PATTERNS TO AVOID
 
