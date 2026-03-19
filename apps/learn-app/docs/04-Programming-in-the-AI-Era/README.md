@@ -155,17 +155,17 @@ Part 4 is organized into nine phases. Each phase gives you a new capability, and
 Each phase takes roughly 1-2 weeks at a few hours per day. The full Part 4 is designed for 3-5 months of steady practice. Some phases (1 and 4) are shorter; others (5 and 6) are longer because they cover more ground. Go at your own pace -- building a strong foundation matters more than speed.
 :::
 
-| Phase | Title                                              | Your Role         | Chapters |
-| ----- | -------------------------------------------------- | ----------------- | -------- |
-| 1     | [The Workbench](the-workbench)                     | Reader            | Ch 42-45 |
-| 2     | [Specify with Types](specify-with-types)           | Specifier         | Ch 34-37 |
-| 3     | [Tests as Specification](tests-as-specification)   | Verifier          | Ch 38-41 |
-| 4     | [Debug & Master](debug-and-master)                 | Debugger          | Ch 42-43 |
-| 5     | [The Python Object Model](the-python-object-model) | Modeler           | Ch 44-47 |
-| 6     | [Real-World Python](real-world-python)             | Practitioner      | Ch 48-50 |
-| 7     | [CLI & Concurrency](cli-and-concurrency)           | Tool Builder      | Ch 51-52 |
-| 8     | [Production Systems](production-systems)           | Shipping Engineer | Ch 53-54 |
-| 9     | [Capstone](capstone)                               | Architect         | Ch 55-56 |
+| Phase | Title                                              | Your Role         | Chapters  |
+| ----- | -------------------------------------------------- | ----------------- | --------- |
+| 1     | [The Workbench](the-workbench)                     | Reader            | Ch 42-46  |
+| 2     | [Specify with Types](specify-with-types)           | Specifier         | Ch 47-50  |
+| 3     | [Tests as Specification](tests-as-specification)   | Verifier          | Ch 51-54  |
+| 4     | [Debug & Master](debug-and-master)                 | Debugger          | Ch 55-56  |
+| 5     | [The Python Object Model](the-python-object-model) | Modeler           | Ch 57-60  |
+| 6     | [Real-World Python](real-world-python)             | Practitioner      | Ch 61-63  |
+| 7     | [CLI & Concurrency](cli-and-concurrency)           | Tool Builder      | Ch 64-65  |
+| 8     | [Production Systems](production-systems)           | Shipping Engineer | Ch 66-67  |
+| 9     | [Capstone](capstone)                               | Architect         | Ch 68-69  |
 
 **Deliverables**: SDD specification documents, type definitions, object model diagram, passing test suites, AI-generated and human-verified implementation, security audit, green CI pipeline, and a deployed QuizForge application with CLI, API, and AI features. You finish Part 4 with two portfolio-grade projects -- SmartNotes (guided) and QuizForge (independent) -- proving you can drive the complete TDG cycle at production scale.
 
