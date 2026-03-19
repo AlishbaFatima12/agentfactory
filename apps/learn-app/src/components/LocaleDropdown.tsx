@@ -11,11 +11,7 @@ import {
 import { ChevronDown, Check, Languages } from "lucide-react";
 import { getLocaleUrl } from "../utils/getLocaleUrl";
 
-const LOCALE_META: Record<string, { englishName: string }> = {
-  en: { englishName: "English" },
-  ur: { englishName: "Urdu" },
-  "zh-Hans": { englishName: "Simplified Chinese" },
-};
+const englishNames = new Intl.DisplayNames(["en"], { type: "language" });
 
 export function LocaleDropdown() {
   const { siteConfig, i18n } = useDocusaurusContext();
@@ -25,7 +21,7 @@ export function LocaleDropdown() {
   const currentLocale = i18n.currentLocale;
   const currentLocaleConfig = i18n.localeConfigs[currentLocale];
   const nativeLabel = currentLocaleConfig?.label || "English";
-  const currentMeta = LOCALE_META[currentLocale] ?? { englishName: "English" };
+  const currentEnglishName = englishNames.of(currentLocale) || "English";
 
   const buildLocaleUrl = (targetLocale: string): string => {
     const url = getLocaleUrl({
@@ -55,8 +51,8 @@ export function LocaleDropdown() {
         >
           <Languages className="w-4 h-4 opacity-70" />
           <span className="font-medium">
-            {currentMeta.englishName}
-            {currentMeta.englishName !== nativeLabel && (
+            {currentEnglishName}
+            {currentEnglishName !== nativeLabel && (
               <span className="text-muted-foreground font-normal">
                 {" "}
                 ({nativeLabel})
@@ -69,11 +65,10 @@ export function LocaleDropdown() {
       <DropdownMenuContent align="end" className="w-48 p-1">
         {i18n.locales.map((locale) => {
           const config = i18n.localeConfigs[locale];
-          const localeMeta = LOCALE_META[locale];
           const isActive = locale === currentLocale;
           const localeUrl = buildLocaleUrl(locale);
           const nativeName = config?.label || locale;
-          const englishName = localeMeta?.englishName ?? nativeName;
+          const englishName = englishNames.of(locale) || nativeName;
 
           return (
             <DropdownMenuItem
