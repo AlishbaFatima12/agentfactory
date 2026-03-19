@@ -1,6 +1,6 @@
 # Python for the New AI Era: Course Architecture Plan
 
-**Version:** 2.17
+**Version:** 2.18
 **Status:** Draft
 **Date:** 2026-03-19
 **Branch:** `learn-python`
@@ -1292,7 +1292,7 @@ Ch 24 (Phase 7): FastAPI dependency injection → OOP applied to async services 
 4. **Real-world context** — features introduced because a real task demands them, never in isolation
 5. **TDG exercises** — at least one spec → test → generate → verify cycle per chapter
 6. **Dual-track callouts** — "If you're new" and "If you've coded before" notes
-7. **Syntax Card** — half-page reference at the end of every chapter (see Section 14)
+7. **Syntax Card** — half-page reference at the end of every chapter (see Section 15)
 
 ### Beginner Accessibility Rules
 
@@ -1326,7 +1326,156 @@ This pattern is documented in `chapter-writing-methodology.md` (Section 6) and s
 
 ---
 
-## 11. Reference Materials
+## 11. The James & Emma Narrative System
+
+### Purpose and Research Grounding
+
+Part 4 uses two recurring characters — **James** (learner) and **Emma** (mentor) — as a narrative vehicle for teaching programming concepts. This is not a stylistic choice; it is grounded in learning science.
+
+**Full research document:** `research-james-emma-narrative-system.md` (same directory as this plan). Contains citations from Bruner (dual cognition), Paivio (dual coding), Tulving (episodic memory), Collins/Brown/Newman (cognitive apprenticeship), Lave & Wenger (legitimate peripheral participation), Green & Brock (narrative transportation), Kalyuga (expertise reversal), and comparative analysis of 7 technical books.
+
+**Why characters work:** They activate both paradigmatic and narrative cognition simultaneously (Bruner 1985), create durable episodic memory traces for technical concepts (Tulving 1972), make expert thinking visible through dialogue (Collins et al. 1989), and build parasocial bonds that increase persistence (Horton & Wohl 1956).
+
+**Why characters must be carefully managed:** Narrative adds cognitive load (Sweller 1988). Seductive details harm learning when content is already complex (Rey 2012 meta-analysis). Scaffolding that helps beginners actively harms experts — the Expertise Reversal Effect (Kalyuga 2003). Characters must fade as reader competence grows.
+
+### Character Profiles
+
+**James** — Non-technical career background, company shifting to AI-driven workflows. Skeptical but willing. Not a prodigy. Reaches for analogies from his non-tech background. Speech pattern: informal, contractions, incomplete thoughts, "wait, so basically..."
+
+**Emma** — Senior engineer, backend systems expertise. Thinks visually, draws diagrams. Precise and concise. Asks more questions than she gives answers. Occasionally admits uncertainty, learns from James's fresh perspective. Not an oracle — a human expert.
+
+**Both must sound different from each other.** A reader should identify who is speaking without dialogue tags.
+
+### The Three Narrative Modes
+
+Each chapter type uses a different narrative mode:
+
+| Mode | When Used | How It Works | Example |
+|------|-----------|-------------|---------|
+| **Dialogue-Driven Discovery** | Framework/methodology chapters (Ch 42) | Extended back-and-forth conversation. Dialogue IS the lesson. James voices objections; Emma resolves with framework logic. | "A framework from 2017?" → "Built for how brains learn. That hasn't changed." |
+| **Failure-Opens-the-Door** | Principle/axiom chapters (Ch 43) | Each principle opens with James making a consequential mistake. Emma shows the correct pattern after the failure. Story is a hook; technical content follows. | James's 400-line script breaks at 2:14 AM → Shell as Orchestrator axiom |
+| **Operational Companion** | Tool/setup chapters (Ch 44) | James runs commands, hits errors, gets confused. Emma explains what happened. Narrative is thinner — more doing than discussing. | "But it runs." → "Running is not the same as working." |
+
+### The Narrative Density Curve (Whole Book)
+
+Narrative density is **inversely proportional to content complexity**. This is mandated by the Expertise Reversal Effect (Kalyuga 2003) and Cognitive Load Theory (Sweller 1988): scaffolding that helps beginners actively harms experts.
+
+| Phase | Chapters (plan-local) | Content Complexity | Narrative Density | How Characters Appear |
+|-------|----------------------|-------------------|-------------------|----------------------|
+| **Phase 1** | Ch 1-5 (The Workbench) | Low | **Very High** (80%) | Characters drive every lesson. Dialogue IS the curriculum. Reader needs emotional buy-in and method internalization. |
+| **Phase 2** | Ch 6-9 (Specify with Types) | Low-Medium | **High** (65%) | Characters frame each chapter, appear in exercises. James attempts specifications; Emma coaches. |
+| **Phase 3** | Ch 10-13 (Tests as Spec) | Medium | **Medium** (45%) | Characters open and close chapters. Middle sections are direct instruction with occasional Socratic dialogue inserts (2-3 per chapter). |
+| **Phase 4** | Ch 14-15 (Debug & Master) | Medium-High | **Medium-Low** (35%) | James drives debugging independently. Emma appears as consultant, called in for hard problems. |
+| **Phase 5** | Ch 16-19 (Object Model) | High | **Low** (25%) | "Bookend" pattern: 2-3 paragraph narrative opening (why this matters) + brief narrative close (reflection). Technical content stands alone. |
+| **Phase 6** | Ch 20-22 (Real-World) | High | **Low** (15%) | Brief scenario framing only. James works autonomously. Emma referenced occasionally. |
+| **Phase 7-8** | Ch 23-26 (Deploy & Harden) | High | **Minimal** (10%) | Opening hook paragraph only. Reader has internalized both roles. |
+| **Phase 9** | Ch 27-28 (Capstone) | High | **Minimal** (5%) | James reflects on journey in chapter opener. Emma appears in closing — peer acknowledgment. |
+
+**Chapter author directive:** Before writing any chapter, check the narrative density for that phase. If you are in Phase 5+, do NOT write extended James-Emma dialogue through the middle of lessons. Use the "bookend" pattern: narrative opens and closes the chapter; technical content in the middle stands on its own.
+
+### The Mentor-Learner Relationship Evolution
+
+The relationship must evolve across the book. A static mentor-learner dynamic across 28 chapters becomes dead. (Research: Gradual Release of Responsibility, Pearson & Gallagher 1983; Legitimate Peripheral Participation, Lave & Wenger 1991)
+
+| Phase | Emma's Role | James's Dialogue Pattern | Signal to Reader |
+|-------|-------------|-------------------------|-----------------|
+| **Phase 1** (Authority) | Expert guide. Demonstrates, assigns, enforces gates. | 80% questions, 20% observations | "Emma explains..." |
+| **Phase 2** (Coach) | Asks guiding questions. Provides hints, not answers. | 60% questions, 40% attempts | "Emma asks..." |
+| **Phase 3** (Collaborator) | Working partner. Admits own gaps. Learns alongside. | 40% questions, 60% proposals | "They discuss..." |
+| **Phase 4** (Consultant) | Called in for hard problems. James drives. | 20% questions, 80% analysis | "James considers... then asks Emma..." |
+| **Phase 5-9** (Peer) | Sounding board. Proud observer. Rarely present. | 10% questions, 90% autonomous work | "James explains to Emma..." / Emma absent |
+
+**Pivot moment:** Around Phase 3-4, James teaches Emma something. He comes from a non-technical domain — he sees business problems Emma doesn't. "You know, I never thought about it that way" from Emma signals the relationship shift and validates the reader's growing competence.
+
+### The Jonah Rhythm (Mentor Presence Pattern)
+
+Named after Jonah in Goldratt's "The Goal" — the gold standard for mentor-learner technical narratives. Emma should NOT hover over every section.
+
+```
+Emma catalyzes  → poses a question or challenge
+Emma exits      → James struggles (reader struggles alongside him)
+James discovers → partially, imperfectly
+Emma returns    → briefly validates, corrects, poses next question
+```
+
+**Ratio:** Emma speaks in 20-30% of narrative sections. James works in 70-80%. The reader needs to experience productive struggle alongside James, not watch Emma resolve every confusion immediately.
+
+### Emma's Fallibility (Non-Negotiable)
+
+Emma must NOT be an oracle. The Phoenix Project's #1 criticism: "All characters are one-dimensional and predictable. Like NPC characters in old RPG games." The mentor who always has the right answer becomes a vending machine.
+
+**At least once per chapter (in narrative-dense phases), Emma must:**
+- Express uncertainty: "I'm not sure about that — let me think"
+- Be surprised by James: "Huh, I hadn't considered it from that angle"
+- Admit a past mistake: "I made this exact error in production once"
+- Learn from James's perspective (his non-tech background gives him fresh eyes)
+
+### Dialogue Quality Rules
+
+**Research grounding:** "As You Know, Bob" syndrome (Kristen Lamb); six Socratic question types (UConn CETL); info-dumping through dialogue (MasterClass).
+
+1. **Emma's longest uninterrupted speech: 3-4 sentences max.** Then James reacts.
+2. **James should regularly paraphrase, get it slightly wrong, and be corrected.** This models real learning.
+3. **Use all six Socratic question types**, not just clarification:
+   - Clarification: "What do you mean by that?"
+   - Probing assumptions: "What are you assuming here?"
+   - Probing evidence: "How do you know that's true?"
+   - Exploring viewpoints: "What would someone who disagrees say?"
+   - Probing implications: "If that's true, what follows?"
+   - Meta-questions: "Why is this question important?"
+4. **Let James interrupt.** Real learners don't wait politely for a lecture to finish.
+5. **Let disagreement last more than one exchange.** James pushes back → Emma pushes back → James tries his way → it fails → now the lesson lands.
+6. **Let James occasionally ask the wrong question** (premature, off-topic) — Emma redirects: "Good question, but we need X first."
+
+### Rotating Secondary Characters
+
+A single learner character eventually becomes boring or implausible. Secondary characters bring perspectives the core pair cannot provide.
+
+| Phase | Secondary Character | Why They Exist |
+|-------|-------------------|---------------|
+| Phase 1 | None | Establish core James-Emma dynamic without distraction |
+| Phase 2-3 | A peer learner (different approach) | Shows alternative paths, prevents "one right way" thinking |
+| Phase 4 | A skeptical colleague | Voices "is AI really better?" doubts that James has moved past |
+| Phase 5-9 | A junior developer James mentors | James becomes the teacher — the ultimate proof of mastery |
+
+**Constraints:**
+- Maximum one new secondary character per phase
+- Retire characters when their narrative purpose is complete
+- Secondary characters appear in opening/closing narrative, not in technical instruction sections
+
+### Concept Naming Independence
+
+**Research:** The Pragmatic Programmer's lasting legacy is names like "DRY" and "rubber duck debugging" that outlive any character. If readers can only remember a concept by recalling what James said, the naming has failed.
+
+**Rule:** Every concept James and Emma discuss must have a standalone name that persists after the dialogue is forgotten. The characters amplify concept retention; they don't replace it. Name the concept independently of the character interaction.
+
+### The Competence Tracking Rule
+
+**Problem:** If James learned loops in Chapter 10, he must use loops correctly forever after. A character who regresses skills the reader witnessed being learned destroys reader trust.
+
+**Rules:**
+1. **Never regress skills the reader witnessed being learned.** If James mastered something, it stays mastered.
+2. **Use "new domain" resets instead of "forgotten skill" resets.** "I know Python, but financial models are new to me" is credible. "Wait, what's a for loop?" is not.
+3. **Show growth via callbacks.** "This is the same pattern we used in Chapter 12, except now we're applying it to legal documents."
+4. **Track competencies.** Before writing any chapter, check what James knows. Maintain a running competence list. No chapter should require James to be ignorant of a previously learned skill.
+
+### Emotional Design at High-Dropout Points
+
+**Research:** Emotional design has "a minor impact on learning outcomes but a larger impact on learners' intrinsic motivation, including the motivation to continue working with the material" (Springer 2024). Characters keep the reader in the chair. Narrative transportation increases self-efficacy by 28% (Journal of Agricultural Education).
+
+**Place the strongest character moments at predicted dropout points:**
+
+| Dropout Risk Point | Character Beat |
+|-------------------|----------------|
+| After first hard chapter (Ch 6-7) | Shared frustration: "This is genuinely hard. I struggled with this too." |
+| Theory-to-practice transition (Ch 10) | Callback to progress: "Remember when you couldn't even read terminal output?" |
+| Midpoint slump (Ch 14-15) | Mentor vulnerability: "I made this exact mistake in production once. Cost us two days." |
+| OOP complexity spike (Ch 16-17) | James teaches Emma something from his domain — role reversal validates reader |
+| Pre-capstone fatigue (Ch 27) | James reflects: "I'm someone who can do this now." Identity shift moment. |
+
+---
+
+## 12. Reference Materials
 
 | Resource | Purpose |
 |---|---|
@@ -1341,7 +1490,7 @@ This pattern is documented in `chapter-writing-methodology.md` (Section 6) and s
 
 ---
 
-## 12. Complete Lutz Coverage Map
+## 13. Complete Lutz Coverage Map
 
 For tracking that all essential Learning Python content is covered:
 
@@ -1358,7 +1507,7 @@ For tracking that all essential Learning Python content is covered:
 
 ---
 
-## 13. Exercise Strategy
+## 14. Exercise Strategy
 
 ### The 5 Exercise Types
 
@@ -1506,7 +1655,7 @@ This creates a **running project thread** that students evolve across the course
 
 ---
 
-## 14. Syntax Card Strategy
+## 15. Syntax Card Strategy
 
 ### The Problem
 
@@ -1613,7 +1762,7 @@ Students get:
 
 ---
 
-## 15. The SmartNotes Project — One Running Project Across All Phases
+## 16. The SmartNotes Project — One Running Project Across All Phases
 
 ### Why One Project, Not Nine
 
@@ -1822,16 +1971,16 @@ quizforge/
 
 ---
 
-## 16. Open Questions
+## 17. Open Questions
 
 - [x] ~~Python Crash Course Bridge chapter?~~ → Resolved: No. Dual-track callouts within chapters are sufficient. No extra chapter needed.
 - [x] ~~Integration with the broader Agent Factory curriculum (Parts 1-6)?~~ → Resolved: Ch 43 (Ten Axioms) bridges Part 3 into this Python course; course output (typed Python + testing + OOP) feeds directly into Part 5 (building agents). No extra integration chapter needed.
 - [x] ~~Should metaclasses get a dedicated advanced appendix?~~ → Resolved: No. Reference-only coverage in Ch 19 is sufficient. Metaclasses are for framework authors, not our audience.
-- [x] ~~Specific project designs for each phase (Section 15)?~~ → Resolved: "SmartNotes" Personal AI Knowledge Base — one running project across all 9 phases
+- [x] ~~Specific project designs for each phase (Section 16)?~~ → Resolved: "SmartNotes" Personal AI Knowledge Base — one running project across all 9 phases
 - [x] ~~Concurrency chapter?~~ → Resolved: Yes, Ch 24 (async/await + threading + FastAPI intro)
-- [x] ~~Exercises format: inline vs separate exercise packs?~~ → Resolved: inline + end-of-chapter (Section 13)
-- [x] ~~Python Quick Reference appendix?~~ → Resolved: per-chapter Syntax Cards + combined PDF (Section 14)
-- [x] ~~Capstone for beginners vs experienced?~~ → Resolved: no beginners by capstone; per-phase projects instead (Section 15)
+- [x] ~~Exercises format: inline vs separate exercise packs?~~ → Resolved: inline + end-of-chapter (Section 14)
+- [x] ~~Python Quick Reference appendix?~~ → Resolved: per-chapter Syntax Cards + combined PDF (Section 15)
+- [x] ~~Capstone for beginners vs experienced?~~ → Resolved: no beginners by capstone; per-phase projects instead (Section 16)
 - [x] ~~Debugging checkpoint between testing and OOP?~~ → Resolved: Yes, Phase 4 (Ch 14-15) — Debugging + TDG Mastery
 - [x] ~~Security chapter for AI-generated code?~~ → Resolved: Yes, Ch 26. OWASP-focused review of AI output, security testing, `bandit` tooling.
 - [x] ~~"When Not to Use AI" chapter?~~ → Resolved: Yes, Ch 27. Judgment about AI assistance spectrum, preventing AI dependency.
@@ -1865,3 +2014,4 @@ quizforge/
 | 2.15 | 2026-03-09 | L3 lesson architecture corrected from 6 steps to 5 steps (one per PRIMM stage). Parsons Problems folded into Investigate step with a blockquote callout explaining placement. Replaced regional names (Amara→Sarah, Karachi→London) across Ch 42 for international accessibility. Added bold highlighting of key insight sentences across all 3 lessons. |
 | 2.16 | 2026-03-15 | Aligned with chapter-writing-methodology v3.0. Added PRIMM-AI+ Track A/B distinction (Section 3): Track B (conceptual reasoning) for pre-coding chapters (Ch 43, Ch 42), Track A (code exercises) for Ch 45+. Added PRIMM-AI+ Structural Requirements (Section 3): mandatory answer keys, Error Taxonomy classification, mastery gates, confidence scoring, selective Verification Ladder. Added Beginner Accessibility Rules (Section 10): match examples to student knowledge, ground exercises in narrative, never leave predictions unresolved, avoid run-on analogies, add :::tip for unfamiliar syntax, "From Principle to Axiom" cross-reference pattern. Added Iterative Evaluation Pattern (Section 10): evaluate → fix → re-evaluate cycle targeting 8.5/10. Updated Reference Materials (Section 11): Chapter 43 entry expanded with PRIMM-AI+ Track B details, added chapter-writing-methodology v3.0 as reference. Resolved open questions: Track B for pre-coding chapters, mandatory answer keys. |
 | 2.17 | 2026-03-19 | Included Ten Axioms as Chapter 2 in Phase 1 (28 total chapters, up from 27). Added global chapter number mapping table (Ch 42-69). Renumbered all plan-local chapters +1 (old Ch 2-27 → Ch 3-28). Phase 1 now has 5 chapters: PRIMM-AI+, Ten Axioms, Dev Environment, Reading Python, First TDG Cycle. Added Lesson 4 (Reading a Test) to Reading Python chapter description. Updated Specification Sophistication Gradient, Student Journey Summary, OOP Progression, Lutz Coverage Map, Exercise Quantity table, SmartNotes phase references, and QuizForge component table. Fixed Part 4 README phase table with correct global chapter numbers (Ch 42-69). |
+| 2.18 | 2026-03-19 | Added Section 11: The James & Emma Narrative System — comprehensive narrative strategy grounded in learning science (Bruner, Paivio, Tulving, Collins/Brown/Newman, Kalyuga, Green & Brock). Defines: character profiles with minimum viable personality, three narrative modes (Dialogue-Driven Discovery, Failure-Opens-the-Door, Operational Companion), narrative density curve across all 9 phases (80% in Phase 1 → 5% in Phase 9), five-phase mentor-learner relationship evolution (Authority → Coach → Collaborator → Consultant → Peer), the Jonah Rhythm for mentor presence, Emma's fallibility requirements, six dialogue quality rules, rotating secondary characters per phase, concept naming independence, competence tracking rule, and emotional design at high-dropout points. Renumbered Sections 11-16 → 12-17. Updated all live cross-references (Section 14→15, 13→14, 15→16). Full research grounding in `research-james-emma-narrative-system.md`. |
