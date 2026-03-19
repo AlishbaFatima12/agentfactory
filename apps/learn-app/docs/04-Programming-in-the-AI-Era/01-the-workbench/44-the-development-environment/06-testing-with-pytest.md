@@ -51,7 +51,23 @@ Code that passes linting and type checking can still do the wrong thing. A funct
 
 James is working on a piece of SmartNotes code called `format_title` that capitalizes the first letter of each word in a note title. He typed it carefully, checked the output by eye, watched it produce the right result. "Looks good," he says, and moves on. But "looks good" is not a specification. What if the function breaks on edge cases he did not think to try? What if someone changes it next week and the old behavior disappears without anyone noticing? James is trusting his eyes and his memory -- the same two things that ruff and pyright were designed to replace. This becomes even more dangerous when working with AI-generated code: an AI can produce a function that looks correct and runs without errors, but silently handles edge cases wrong. Only a test can prove the code does what you specified.
 
-Emma watches him test by reading terminal output. "You have seen what ruff catches and what pyright catches. Now let me show you what neither of them can see."
+Emma watches him test by reading terminal output. "I already tested it," James says, before Emma can speak. "I ran the function, I read the output, I checked it against what I expected. That is testing."
+
+"What did you test it with?" Emma asks.
+
+"A normal title. 'hello world.' It came back 'Hello World.' Correct."
+
+"Test it with an empty string," Emma says.
+
+James runs it. Empty string returns empty string. "Works."
+
+"Now an already-capitalized title. Then one with extra spaces. Then a single character."
+
+James runs each one by hand — typing the input, running the file, reading the output, comparing it to what he expected. The extra-spaces case surprises him. The function does not strip them.
+
+"I have been doing this for five minutes and I have five cases," James says. "Every time someone changes this function, I would have to run all five again by hand."
+
+"That," Emma says, "is what neither ruff nor pyright can see."
 
 ---
 

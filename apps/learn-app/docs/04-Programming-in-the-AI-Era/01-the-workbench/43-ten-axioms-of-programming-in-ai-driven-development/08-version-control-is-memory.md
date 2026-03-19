@@ -93,7 +93,19 @@ commit c3d4e5f
 
 Three commits from that week. No messages explaining what changed or why. No record of the original buggy implementation. No trace of which test caught the error. No documentation of the decision to switch from manual review to TDG. James had the right code now, but no memory of how he got there.
 
-"You lost the story," Emma told him after the meeting. She pulled up her own project's history:
+"I commit constantly," James said after the meeting, defensive. "Three commits that week. I'm already writing tests, types, and documentation — you want me to spend five minutes crafting a paragraph for every commit too?"
+
+"Pull up your three commits," Emma said.
+
+James did: `wip`, `updates`, `fix stuff`. He stared at them. "Okay, the messages are bad. But the code is _in_ there. I could diff each one and figure out what changed."
+
+"Your team lead just asked you to do exactly that," Emma said. "How long would it take?"
+
+James imagined opening each diff — 47 files changed across the three commits, some containing multiple unrelated changes. He would have to reconstruct the timeline, figure out which lines were the discount fix versus the shipping update versus the test additions. It would take an hour of archaeology. A single sentence per commit — _why_ the change was made — would have answered the question in seconds.
+
+"The code records _what_ changed," James said. "But nobody — including me in three weeks — can tell _why_."
+
+Emma pulled up her own project's history:
 
 ```
 commit d4e5f6g

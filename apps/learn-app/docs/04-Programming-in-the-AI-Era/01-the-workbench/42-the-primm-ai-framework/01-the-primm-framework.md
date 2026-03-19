@@ -75,9 +75,19 @@ This lesson introduces the framework that solves this problem: **PRIMM** -- Pred
 
 ## Where Does PRIMM Come From?
 
-James is skeptical. "A framework from 2017? Won't AI have made that obsolete by now?"
+James is skeptical. "A framework from 2017? Why not just ask AI to explain any code I don't understand? That seems faster than working through five stages."
 
-Emma shakes her head. "PRIMM wasn't built for a specific technology. It was built for how brains learn. That hasn't changed."
+"Try it," Emma says. "Ask your AI assistant to explain line twelve from the program we just looked at."
+
+James types the prompt. The AI responds with a detailed paragraph about list comprehensions, filtering, and conditional expressions. He reads it twice. "That was fast. I understand it — list comprehension, filtering, conditional expression. Done."
+
+"Then predict," Emma says. "If I change the condition from `> 1000` to `<= 1000`, what happens to the output?"
+
+James looks at the AI explanation again. It described the filtering logic in general terms, but it never said which specific items would pass and which would fail. He is not sure whether the output list would get longer, shorter, or stay the same. "I think... the opposite items would show up?" He pauses. "I am not actually sure."
+
+"You read a correct explanation," Emma says. "You still cannot predict the behavior."
+
+"So I need a way to build the understanding myself," James says. "Not just receive explanations I can't check. What's this framework?"
 
 PRIMM was created by computing education researchers **Sue Sentance** and **Jane Waite** in 2017. They tested it with **493 students across 13 schools in England**. The result: **students who learned with PRIMM outperformed students who learned without it** -- especially in classes where students had different skill levels.
 
@@ -107,7 +117,7 @@ PRIMM inverts this. It starts at the beginning -- **reading** -- and works towar
 
 Emma pulls up a short Python program on her screen. "Let me show you what this looks like in practice. I'll walk you through all five stages with one program — and you'll do the thinking, not me."
 
-James leans in. "What if I don't know Python yet?"
+James leans in. "Okay, but — I don't know Python yet. Are we jumping ahead?"
 
 "That's the point," Emma says. "You're learning the *process*, not the syntax. Ready?"
 
@@ -169,9 +179,13 @@ Compare your prediction to the actual result. Three outcomes are possible:
 
 ### Stage 3: Investigate
 
-James got the output right. "Great, I understand it. Next stage?"
+James got the output right. "I predicted it correctly — I understand this. Let's move on."
 
-"Not so fast," Emma says. "You got the *what* right. But do you understand *how*? What happens if the name is empty? What if you swap greeting and name in the message line? That's what Investigation is for — digging into the mechanics."
+"What happens if the name is empty?"
+
+James hesitates. He hadn't considered that. "The `+` would still join everything together, so... you'd get the greeting with a comma and exclamation mark but no name in between." He frowns. "Okay, I got the *output* right, but I was treating the code like a black box. Getting the answer right isn't the same as understanding the machinery."
+
+"That's what Investigation is for — digging into the mechanics."
 
 Investigation means probing the code to build deeper understanding. Here are the kinds of questions you ask:
 
@@ -240,9 +254,11 @@ The Make stage completes the cycle. **You started by reading someone else's code
 
 James just completed his first full PRIMM cycle — predict, run, investigate, modify, make — on a four-line program. It took twenty minutes. He could have asked AI to write the same program in ten seconds. "Is this really worth the time?" he asks.
 
-Emma points back at the fifty lines of AI-generated code from the beginning of the lesson. "Can you explain line twelve yet?"
+Emma says nothing. She scrolls back to the fifty lines of AI-generated code from the beginning of the lesson.
 
-James pauses. He still cannot. But the greeting program? **He understands every line — because he traced it, changed it, and built something new from it.**
+James looks at line twelve. He still cannot explain it. Then he looks at the greeting program — four lines he traced, modified, and rebuilt from scratch. He knows every line. He knows what happens when the name is empty. He knows why `+` joins text in order and does not "know" what makes sense.
+
+"Twenty minutes on four lines, and I actually understand them," he says. "Ten seconds on fifty lines, and I understand nothing." He sits back. "Yeah. It's worth the time."
 
 PRIMM was created in 2017 for secondary school classrooms. Why does it matter *more* in the AI era than it did when it was invented?
 

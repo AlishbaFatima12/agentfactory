@@ -63,9 +63,15 @@ James opens his terminal, ready to install Python. Every tutorial he has ever re
 
 "There is a faster way," she says. "One tool handles Python installation, virtual environments, and packages. It is called uv."
 
-James is skeptical. He has heard of pip, conda, poetry, pipenv. Each promised to simplify things. Each added complexity. "Why should I trust another tool?"
+James is skeptical. He has heard of pip, conda, poetry, pipenv. Each promised to simplify things. Each added complexity. "Why should I trust another tool? The python.org installer is the official way. It is maintained by the Python team itself."
 
-Emma does not argue. She opens her own terminal, types one command, and waits three seconds. "Done. Python installed, virtual environment ready, project scaffolded. One tool. One command." James stares at the screen. "That is... it?" Emma nods. "That is it."
+Emma does not argue. She opens her own terminal, types one command, and waits three seconds. "Done. Python installed, virtual environment ready, project scaffolded. One tool. One command."
+
+James crosses his arms. "That is a demo. Show me what happens when I need a specific Python version for one project and a different version for another. Show me what happens when two projects need different versions of the same library."
+
+Emma types two more commands. Two projects, two different Python versions, two isolated sets of dependencies. No conflicts. No PATH manipulation. No activation scripts.
+
+James is quiet for a moment. "The python.org installer is the official way," he says again, but slower this time. "It just does not handle any of those problems."
 
 ---
 

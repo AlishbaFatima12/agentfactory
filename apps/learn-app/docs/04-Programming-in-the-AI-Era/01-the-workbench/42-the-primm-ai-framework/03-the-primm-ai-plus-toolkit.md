@@ -95,7 +95,11 @@ You are currently at Step 1 -- predicting and running. Steps 2 through 5 will be
 
 James predicts the output of a program and rates himself a 5 — certain. He runs the code. The output is completely different from his prediction.
 
-"That's the most dangerous state," Emma says. "Being wrong isn't the problem. Being *confident and wrong* is the problem. In the real world, that's how bugs get shipped — someone looks at AI-generated code, thinks 'looks right,' and moves on without checking."
+"That's the most dangerous state," Emma says. "Being wrong isn't the problem. Being *confident and wrong* is the problem." She is quiet for a moment. "I shipped a production bug last year because of exactly this. I reviewed a function an AI had generated, thought 'this looks right,' and merged it. I was confident — 4 out of 5."
+
+"The function still failed?" James asks.
+
+"It handled nine cases correctly and silently dropped the tenth. I didn't predict the output for that tenth case because I was sure I understood the code." She looks at James. "Confidence without prediction is just optimism. The score forces you to be honest about how sure you actually are."
 
 In Lesson 1, you saw the 1-5 confidence scale during the Predict stage. Here it is again for reference — and here is how to use it systematically throughout Parts 4 and 5.
 
@@ -122,13 +126,19 @@ Over the course of Parts 4 and 5, your calibration should improve. Early on, you
 
 ## Five Kinds of Bugs — A Preview
 
-James runs his modified program and gets an error. "It's broken. I'll ask AI to fix it."
+James runs his modified program and gets an error. "It's broken. I'll just ask AI to fix it — that's what it's there for, right? Get me unblocked so I can keep moving."
 
-"Wait," Emma says. "Before you ask for a fix, can you tell me what *kind* of problem this is? Did you give the wrong type of data? Did you get the logic backward? Did you build the wrong thing entirely?"
+"Before you do — what kind of problem is it?"
 
-James stares at the error. "I... don't know how to tell."
+"Does it matter? AI will fix it either way."
 
-"That's what this table is for."
+"Ask AI to fix it, then. But before you accept the fix, try to predict what AI will change."
+
+James asks AI to fix the error. The fix appears — a single character change. He stares at it. "It added `str()` around the number. That's... a type problem. The `+` couldn't join text with a number." He looks at the error message again. "The error message literally says `TypeError`. I could have found that myself."
+
+"Now you know what to look for next time. If you'd just accepted the fix, you'd make the same mistake tomorrow."
+
+Knowing the *kind* of problem narrows your search before you ask for help. Here is a table you will use throughout the book:
 
 When your code does not work, the first question is: *what kind of problem is this?* Not all bugs are the same. Knowing which kind you are looking at tells you where to search. You do not need to memorize this table now -- just know it exists. You will practice finding each kind starting in Chapter 45.
 
@@ -146,9 +156,15 @@ When something goes wrong during Investigate or Modify, glance at this table. Ev
 
 ## From Learning to Professional Practice
 
-"Will I still be doing this at work?" James asks. "Predicting output, tracing variables, writing things down before running them?"
+"Will I still be doing this at work?" James asks. "Predicting output, tracing variables, writing things down? This feels like an exercise, not a professional skill."
 
-"Every day," Emma says. "You'll just call it something different. Predict becomes code review. Investigate becomes debugging. Make becomes shipping a feature. The habit is the same — the stakes just get bigger."
+Emma pulls up a code review from one of her projects. "What am I doing here?"
+
+James reads through it. She is studying someone else's code, predicting whether it handles edge cases correctly, leaving comments about potential logic errors — all before the code reaches production. "Okay, wait," he says. "You are reading code you didn't write, predicting whether it works, flagging problems before production. That is Predict and Investigate." He pauses. "I used to do something similar reviewing supplier proposals — predict where the hidden costs were before anyone signed."
+
+"And when I suggest a change?"
+
+"That's Modify." He pauses. "So the habit doesn't change. The stakes just get bigger."
 
 The habits you build with PRIMM-AI+ do not disappear when you finish this book. They are the same habits professional developers use every day -- just applied at a larger scale. Here is what each habit looks like when you are learning versus when you are working professionally:
 

@@ -80,7 +80,13 @@ James opened the file. The function was 1,400 lines long. It validated the order
 
 James's task was simple: add a discount code feature. After two days of tracing dependencies through 1,400 lines, he made a change on line 712 and ran the tests. The discount worked. But the tax calculation now produced wrong numbers for Canadian orders — because his change moved a variable assignment that the tax logic read three hundred lines below. He fixed the tax issue. The receipt PDF broke. He fixed the receipt. The loyalty points doubled.
 
-"Now you understand why I warned you," Emma said. "That function is not code. It is a trap. Every change touches everything because nothing is separate."
+"The function is buggy," James said. "My discount logic works — I scoped it, I tested it. The tax calculation must have already been broken. In my old job, when something failed after a change, you checked who touched it last. I did not touch the tax section."
+
+"Check the git log for tax changes," Emma said.
+
+James searched. No changes to the tax section in four months. The tax logic was correct — until his discount change moved a variable assignment on line 712 that the tax logic read on line 1,040. The bug was not in the tax code or the discount code. The bug was in the entanglement.
+
+"My change was isolated," he said slowly. "But the function isn't. Line 712 and line 1,040 are three hundred lines apart, doing completely different things, but they share a variable. I can't change one without breaking the other. That function is not code. It's a trap."
 
 Emma spent the following weekend showing James a different way to build the same logic — not as one massive function, but as small, focused units that connected through clear interfaces. Each unit did one thing. Each could be tested alone. Each could be changed without breaking the others. The discount feature, in the composed version, was a single new function inserted into a pipeline. Nothing else changed. Nothing else could break.
 

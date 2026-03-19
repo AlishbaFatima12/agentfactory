@@ -75,9 +75,23 @@ His data lived in a JSON file: `orders.json`. Each order was a dictionary with a
 
 Then the product team changed a customer's name from "Acme Corp" to "Acme Corporation." James updated the customer record. He forgot to update the 47 orders that referenced the old name. Now the dashboard showed two customers — "Acme Corp" with 47 historical orders and "Acme Corporation" with zero. The data was inconsistent, and the JSON file had no way to tell him.
 
-"Your data has relationships," Emma told him. "Customers _have_ orders. Orders _contain_ products. Products _belong to_ categories. You are storing relational data in a format that does not understand relationships. That is like writing typed code without a type checker — the structure is there, but nothing enforces it."
+"It's a data format problem," James said before Emma could finish examining the dashboard. "I'll switch to YAML, or maybe use separate JSON files for customers and orders. Cleaner structure, same flexibility."
 
-She opened a terminal and typed twelve lines of SQL. The same dashboard query that took eleven seconds and forty lines of Python returned in three milliseconds. The customer name lived in one place. The relationships were enforced by the database. The data could not become inconsistent because the system would not allow it.
+"Build it," Emma said. "Separate files. Show me how you would fix the Acme Corp problem."
+
+James sketched it out. A `customers.yaml` with IDs and names. An `orders.yaml` with customer ID references instead of names. "Change the name in the customers file, orders still point to the right ID. Problem solved."
+
+"Delete customer number 7," Emma said.
+
+James paused. The orders referencing customer 7 would still exist — pointing to a customer that was gone. Nothing in the YAML file would stop him. Nothing would warn him that twenty orders now referenced a ghost. "I would have to write code to enforce that myself."
+
+"And the original problem — what if someone types 'Acme Corp' in one order file and 'Acme Corporation' in another?"
+
+"The YAML file would accept both," James said slowly. He stared at the dashboard showing two "Acme" customers. "The format was never the issue. YAML would have the same problem. CSV would have the same problem. I need something that enforces the connections — that rejects bad data before it gets in. Like a spreadsheet where instead of typing a customer name in every order row, you have a separate customers sheet and each order just points to a row number. Change the name in the customers sheet, and every order still points to the right place."
+
+Emma paused. "That is actually a better analogy than the one I usually use. I have been explaining normalization with entity-relationship diagrams for years. The spreadsheet version is clearer."
+
+Emma opened a terminal and typed twelve lines of SQL. The same dashboard query that took eleven seconds and forty lines of Python returned in three milliseconds. The customer name lived in one place. The relationships were enforced by the database. The data could not become inconsistent because the system would not allow it.
 
 The difference between JSON-as-database and a relational database is Axiom VI.
 

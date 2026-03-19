@@ -74,7 +74,15 @@ Hello, 42
 
 Python runs it without complaint. The code received a number where a name should go, produced nonsense output, and nobody was notified. James shrugs. "It ran fine."
 
-Emma opens the second file. Same code, but with type annotations — labels that tell Python what kind of data each piece expects:
+"Python does not require types," he adds, sensing where Emma is going. "That is one of the reasons people choose Python over Java or C++. Dynamic typing is a feature, not a flaw. It makes code shorter and faster to write."
+
+"What happens when someone calls `greet` with a user ID instead of a user name?" Emma asks.
+
+James looks at the output again. `Hello, 42`. A greeting addressed to a number. In a real application, that would be a nonsensical message displayed to an actual user -- or worse, a corrupted database record, a broken export, a silent error that compounds every time the function runs.
+
+"Dynamic typing did not catch that," James says. "But neither did I, by reading the code."
+
+James opens the second file. Same code, but with type annotations — labels that tell Python what kind of data each piece expects:
 
 ```python
 def greet(name: str) -> str:

@@ -175,7 +175,15 @@ for f in os.listdir(folder):
 
 Twelve lines. No error handling. No way to preview changes. No protection against overwriting existing files. Hardcoded paths. When it hits a Unicode character it cannot process, it crashes mid-operation and leaves the folder half-renamed. This is the code that ruined a client team's weekend.
 
-After the incident, Emma sat down with James and walked through the transformation. The program version is longer — necessarily so — but every additional line exists to prevent a specific category of failure:
+After the incident, James pushed back. "The script worked perfectly for three months. The problem was one edge case — a Unicode character. I'll add a try/except and it'll be fine."
+
+"Fix the Unicode crash," Emma said. "Then tell me what happens when someone runs it on a folder where a target filename already exists."
+
+James thought about it. The script would silently overwrite the file. He had no way to know it happened, because there was no logging. And no way to preview what would happen, because there was no dry-run flag. And no way to test for these cases, because there were no tests. The Unicode character was not the problem. The problem was that fifteen lines of code had zero protection against any of the hundred things that could go wrong.
+
+"It's not one bug," James said. "The script has no discipline. One bug surfaced, but the lack of error handling, logging, preview, and tests means the *next* bug is already waiting."
+
+Emma sat down with James and walked through the transformation. The program version is longer — necessarily so — but every additional line exists to prevent a specific category of failure:
 
 ```python static
 # src/image_renamer/cli.py (PROGRAM version)
