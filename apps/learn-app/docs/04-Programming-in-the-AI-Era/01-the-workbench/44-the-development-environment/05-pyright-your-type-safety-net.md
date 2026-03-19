@@ -82,7 +82,7 @@ James looks at the output again. `Hello, 42`. A greeting addressed to a number. 
 
 "Dynamic typing did not catch that," James says. "But neither did I, by reading the code."
 
-Emma opens the second file. Same code, but with type annotations — labels that tell Python what kind of data each piece expects:
+James opens the second file. Same code, but with type annotations — labels that tell Python what kind of data each piece expects:
 
 ```python
 def greet(name: str) -> str:

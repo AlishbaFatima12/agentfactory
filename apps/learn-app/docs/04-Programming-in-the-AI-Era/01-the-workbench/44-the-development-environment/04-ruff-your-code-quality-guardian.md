@@ -52,21 +52,19 @@ differentiation:
 
 In Lesson 3, James installed the discipline stack and configured every tool inside `pyproject.toml`. SmartNotes now has pytest, pyright, and ruff listed as dev dependencies, each with its own configuration section. But none of the tools have actually run yet. The configuration is in place. The verification has not started.
 
-Emma decides to test whether James understands the difference. She gives James a small block of Python code and asks him to type it into `main.py`. James types exactly what she says -- including a line that loads a library he never uses, a line that stores a value he never looks at again, and messy spacing that changes from line to line. He runs the file: `uv run main.py`. It prints the expected output. James leans back. "Works fine."
+Emma gives James a small block of Python code. "Type this into `main.py`. Run it. Then run your linter. Tell me what you find." She walks away.
 
-Emma types one command into his terminal: `uv run ruff check .`. The screen fills with warnings. Five lines, each pointing to a specific problem that Python's interpreter silently ignored. James stares at the output. "But... it ran."
+James types exactly what she gave him -- including a line that loads a library he never uses, a line that stores a value he never looks at again, and messy spacing that changes from line to line. He runs the file: `uv run main.py`. It prints the expected output. He leans back. "Works fine."
 
-"It ran," Emma agrees.
+Then he remembers: run the linter. He types `uv run ruff check .`. The screen fills with warnings. Five lines, each pointing to a specific problem that Python's interpreter silently ignored. He stares at the output. "But... it ran."
 
-"So what is the problem?" James says. "An unused import is not a bug. The code produces the right output. The customer does not care whether I imported `os` and never used it. That is cosmetic."
+His first reaction: an unused import is not a bug. The code produces the right output. The customer does not care whether he imported `os` and never used it. That is cosmetic.
 
-"Which of those warnings is cosmetic?" Emma asks.
+But the fourth warning is different. `F841: Local variable temp_result is assigned to but never used`. He wrote that line to store a calculation. He thought he used it later in the code. He did not.
 
-James looks at the output again. Three unused imports -- those are clutter, not bugs. But the fourth warning says `F841: Local variable temp_result is assigned to but never used`. He wrote that line to store a calculation. He thought he used it later in the code. He did not.
+"That one is not cosmetic," James says quietly when Emma comes back. "I thought I was using that value. I was not. The result of that entire calculation is going nowhere."
 
-"That one is not cosmetic," James says quietly. "I thought I was using that value. I was not. The result of that entire calculation is going nowhere."
-
-"Ruff caught a bug you did not know you had," Emma says. "The unused imports were the price of admission. The real catch was line four."
+"The unused imports were the price of admission," Emma says. "The real catch was line four."
 
 ---
 

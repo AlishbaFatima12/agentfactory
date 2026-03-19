@@ -67,7 +67,7 @@ James thinks about it. Cloud sync saves versions by timestamp. It does not say w
 
 "Cloud sync saves files," James says. "It does not save the story of what happened to them."
 
-Emma sits down. "Let me show you the last tool in the discipline stack."
+"There is one more tool in the discipline stack," Emma says. "It exists for exactly this problem."
 
 ---
 
