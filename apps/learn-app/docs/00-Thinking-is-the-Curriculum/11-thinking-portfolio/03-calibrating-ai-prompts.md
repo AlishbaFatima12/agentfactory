@@ -125,3 +125,7 @@ The goal of calibration is not perfect AI scoring -- that is impossible. The goa
 > _The Thinking Score Card dimensions (Independent Thinking, Critical Evaluation, Reasoning Depth, Originality, Self-Awareness) are permanent. The prompts that measure them are tunable. Calibrate the instrument; do not change what it measures._
 
 > _Knowledge is the foundation. Thinking is the building. This part teaches you to build._
+
+## Flashcards Study Aid
+
+<Flashcards />

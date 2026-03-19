@@ -1,0 +1,67 @@
+deck:
+  id: "ch37-04-hr-knowledge-base-agent"
+  title: "Hr Knowledge Base Agent"
+  description: "Key concepts and review questions covering hr knowledge base agent."
+  tags: ["knowledge", "base", "agent", "chapter-37"]
+  version: 1
+
+cards:
+  - id: "ch37-04-hr-knowledge-base-agent-001"
+    front: "What is a Type 1 HR query?"
+    back: "A query that has a written, policy-governed answer — for example, 'How many days of annual leave do I have?' The knowledge-base-agent answers these directly, cites the policy source, and provides an escalation contact."
+    tags: ["query"]
+    difficulty: "basic"
+
+  - id: "ch37-04-hr-knowledge-base-agent-002"
+    front: "What is a Type 2 HR query?"
+    back: "A query that involves a specific employee's individual circumstances and requires HR judgment — for example, 'My manager has asked me to do something I'm uncomfortable with.' The agent never adjudicates these; it always escalates to a named HR contact."
+    tags: ["query"]
+    difficulty: "intermediate"
+
+  - id: "ch37-04-hr-knowledge-base-agent-003"
+    front: "What is a warm handoff in the context of an HR knowledge base agent?"
+    back: "A warm handoff is an escalation response that is empathetic, names a specific HR contact (not just 'contact HR'), provides contact details, and encourages the employee to reach out — rather than a generic deflection."
+    tags: ["warm-handoff", "knowledge-base", "context"]
+    difficulty: "intermediate"
+
+  - id: "ch37-04-hr-knowledge-base-agent-004"
+    front: "What is the most important design decision for an HR knowledge base agent?"
+    back: "What the agent REFUSES to answer — not what it answers. Every individual situation must escalate to a named HR contact, every time, without exception."
+    tags: ["important-design", "design-decision", "knowledge"]
+    difficulty: "basic"
+
+  - id: "ch37-04-hr-knowledge-base-agent-005"
+    front: "What triggers an EAP referral in a knowledge base agent response?"
+    back: "A distress signal in the employee's query — language indicating mental health difficulty, fear, or emotional distress. The agent provides both the HR contact and the Employee Assistance Programme (EAP) details."
+    tags: ["eap-referral", "knowledge-base", "triggers"]
+    difficulty: "basic"
+
+  - id: "ch37-04-hr-knowledge-base-agent-006"
+    front: "What does the weekly knowledge base agent report tell HR?"
+    back: "Query volume (Type 1 answered, Type 2 escalated, unanswered), top query categories with trend direction, escalation breakdown by reason, knowledge gaps (queries the agent could not answer well), and recommended actions."
+    tags: ["weekly-knowledge", "knowledge-base", "agent"]
+    difficulty: "intermediate"
+
+  - id: "ch37-04-hr-knowledge-base-agent-007"
+    front: "Why does a growing query category in the weekly report signal a problem?"
+    back: "A spike in queries on a particular topic usually means the policy is unclear, the FAQ entry is missing or insufficient, or a process has changed without the knowledge base being updated."
+    tags: ["growing-query", "query-category", "weekly"]
+    difficulty: "intermediate"
+
+  - id: "ch37-04-hr-knowledge-base-agent-008"
+    front: "What is the relationship between the FAQ knowledge base (Lesson 3) and the knowledge-base-agent (Lesson 4)?"
+    back: "The FAQ knowledge base built in Lesson 3 is the knowledge source that powers the knowledge-base-agent. The agent can only answer what the FAQ contains — quality and accuracy of the FAQ directly determines the agent's reliability."
+    tags: ["faq-knowledge", "knowledge-base", "relationship"]
+    difficulty: "advanced"
+
+  - id: "ch37-04-hr-knowledge-base-agent-009"
+    front: "Why must every Type 2 response name a specific HR contact?"
+    back: "Generic deflections ('contact HR for help') have low follow-through — employees do not know who to contact, so they do not. A named person with direct contact details dramatically increases the likelihood the employee reaches the right support."
+    tags: ["response", "contact"]
+    difficulty: "advanced"
+
+  - id: "ch37-04-hr-knowledge-base-agent-010"
+    front: "What are the four dimensions of quality for a knowledge base agent response?"
+    back: "Accuracy (figures match the policy), tone (warm and practical, not legalistic), citation (source document for Type 1; named contact for Type 2), and escalation clarity (employee knows exactly who to contact and how)."
+    tags: ["knowledge-base", "base-agent", "dimensions"]
+    difficulty: "intermediate"

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "The Hard Conversation"
 description: "Deliver difficult news in a live role-play with no preparation and no AI, building the leadership communication skill that only develops through practice"
 keywords:
@@ -95,32 +96,54 @@ Prompt AI: "You are playing [vendor/employee/client role]. I need to deliver dif
 Peer feedback form rating: empathy (1-10), clarity of the message (1-10), honesty (1-10), relationship preservation (1-10), and overall effectiveness (1-10) with written comments. Your post-exercise reflection (200 words) on what you did well, what you would change, and what was hardest.
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="communication-retrospective" xp={50}>
+
 I just completed a hard conversation role-play exercise. I had to deliver
 difficult news with only 60 seconds of preparation and no AI access. Below is
 the scenario, my peer's feedback scores and comments, and my own reflection.
 Please:
 
 (1) Based on my peer's feedback, what are my communication strengths and
-    weaknesses in high-pressure situations?
+weaknesses in high-pressure situations?
 (2) For my lowest-rated area, give me a specific strategy and example script
-    for improvement.
+for improvement.
 (3) Give me 3 principles for delivering difficult news effectively that I
-    should internalize.
+should internalize.
 (4) Role-play with me: present a new hard conversation scenario and I will
-    practice my approach. I want to improve my weakest area.
+practice my approach. I want to improve my weakest area.
 (5) Rate my self-awareness: does my reflection accurately match what my peer
-    observed, or am I blind to certain weaknesses?
+observed, or am I blind to certain weaknesses?
 
-Scenario: [paste].
-Peer feedback: [paste scores and comments].
-My reflection: [paste].
+Scenario:
+
+<AICheckField
+  name="scenario"
+  placeholder="Paste the scenario here..."
+  rows={2}
+/>
+
+Peer feedback:
+
+<AICheckField
+  name="peer_feedback"
+  placeholder="Paste your peer's scores and comments here..."
+  rows={4}
+/>
+
+My reflection:
+
+<AICheckField
+  name="reflection"
+  placeholder="Paste your reflection here..."
+  rows={4}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
@@ -144,3 +167,7 @@ A Communication Portfolio containing: (1) three audience profiles with AI compar
 | AI feedback integration and reflections                |  15%   | Quality of reflection on AI feedback; specific plans for improvement                |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

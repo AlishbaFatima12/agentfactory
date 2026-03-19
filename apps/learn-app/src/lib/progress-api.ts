@@ -7,6 +7,8 @@ import type {
   MilestoneCompleteResponse,
   FlashcardCompleteRequest,
   FlashcardCompleteResponse,
+  ExerciseSubmitRequest,
+  ExerciseSubmitResponse,
   ProgressResponse,
   LeaderboardResponse,
 } from "./progress-types";
@@ -46,6 +48,48 @@ export async function completeLesson(
     throw new Error(`Lesson complete failed: ${response.status}`);
   }
   return response.json();
+}
+
+export async function submitExercise(
+  baseUrl: string,
+  data: ExerciseSubmitRequest,
+): Promise<ExerciseSubmitResponse> {
+  const response = await fetch(`${baseUrl}/api/v1/exercise/submit`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthHeaders(),
+    },
+    body: JSON.stringify(data),
+  });
+  if (response.status === 409) {
+    const body = await response.json();
+    throw new ExerciseSubmitError(
+      body.message ||
+        "This submission was already submitted by another student.",
+      409,
+      "DUPLICATE_EVIDENCE",
+    );
+  }
+  if (!response.ok) {
+    throw new ExerciseSubmitError(
+      `Exercise submit failed: ${response.status}`,
+      response.status,
+      "SUBMIT_FAILED",
+    );
+  }
+  return response.json();
+}
+
+export class ExerciseSubmitError extends Error {
+  constructor(
+    message: string,
+    public status: number,
+    public code: string,
+  ) {
+    super(message);
+    this.name = "ExerciseSubmitError";
+  }
 }
 
 export async function completeMilestone(

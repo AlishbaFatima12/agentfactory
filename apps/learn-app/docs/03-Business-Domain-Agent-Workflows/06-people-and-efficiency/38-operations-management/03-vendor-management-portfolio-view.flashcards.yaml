@@ -1,0 +1,79 @@
+deck:
+  id: "ch38-03-vendor-management-portfolio-view"
+  title: "Vendor Management Portfolio View"
+  description: "Key concepts and review questions covering vendor management portfolio view."
+  tags: ["vendor", "management", "portfolio", "view", "chapter-38"]
+  version: 1
+
+cards:
+  - id: "ch38-03-vendor-management-portfolio-view-001"
+    front: "What is the 'invisible vendor portfolio' problem?"
+    back: "Most organisations have no single, current, accurate view of all vendor relationships, costs, and contract dates. Vendor data is scattered across spreadsheets, finance systems, email threads, and departmental budgets — making the true portfolio invisible to leadership."
+    tags: ["invisible-vendor", "vendor-portfolio", "problem"]
+    difficulty: "basic"
+
+  - id: "ch38-03-vendor-management-portfolio-view-002"
+    front: "What are the four failure modes caused by an invisible vendor portfolio?"
+    back: "1. Auto-renewal without review (no one tracks renewal dates). 2. Overlapping capabilities (no cross-departmental view). 3. Unknown usage (subscriptions renew after the user has left). 4. Underperformance without evidence (no structured SLA tracking)."
+    tags: ["failure-modes", "modes-caused", "invisible"]
+    difficulty: "intermediate"
+
+  - id: "ch38-03-vendor-management-portfolio-view-003"
+    front: "What does the /vendor-review command do when given a full vendor list?"
+    back: "It produces a portfolio audit with four sections: spend by category, immediate attention items (upcoming renewals and unknown-usage vendors), rationalisation opportunities (overlapping categories with estimated savings), and a quarterly renewal calendar."
+    tags: ["/vendor-review-command", "full-vendor", "vendor-review"]
+    difficulty: "basic"
+
+  - id: "ch38-03-vendor-management-portfolio-view-004"
+    front: "What is a rationalisation opportunity in a vendor portfolio?"
+    back: "Overlapping vendor capabilities that consolidation can eliminate — for example, three teams paying for three different project management tools when one or two would serve the entire organisation. Estimated savings come from eliminating redundant subscriptions."
+    tags: ["rationalisation-opportunity", "vendor-portfolio"]
+    difficulty: "basic"
+
+  - id: "ch38-03-vendor-management-portfolio-view-005"
+    front: "Why is 'data completeness' flagged in a portfolio audit output?"
+    back: "Vendors with unknown usage status cannot be evaluated for cancellation. The addressable savings figure is conditional on confirming actual usage. Low data completeness means the savings estimate is a ceiling, not a commitment."
+    tags: ["data-completeness", "completeness-flagged", "portfolio"]
+    difficulty: "intermediate"
+
+  - id: "ch38-03-vendor-management-portfolio-view-006"
+    front: "What is a vendor renewal calendar and why does it matter operationally?"
+    back: "A time-sequenced view of all contract expiry dates organised by quarter. It matters because you cannot negotiate once a contract has auto-renewed — the calendar gives you the negotiation runway (typically 90+ days) needed to renegotiate before the deadline passes."
+    tags: ["vendor-renewal", "renewal-calendar", "matter"]
+    difficulty: "intermediate"
+
+  - id: "ch38-03-vendor-management-portfolio-view-007"
+    front: "What is an SLA scorecard?"
+    back: "A structured comparison of contracted SLA commitments (e.g., 99.9% uptime, <4hr P1 response) against actual vendor performance data. It produces a MET/BREACH status for each metric and generates evidence-based negotiation points for renewal discussions."
+    tags: ["sla-scorecard"]
+    difficulty: "intermediate"
+
+  - id: "ch38-03-vendor-management-portfolio-view-008"
+    front: "Why should you not trust the /vendor-review savings estimate uncritically?"
+    back: "The AI estimates savings based on assumptions about renegotiation outcomes, consolidation feasibility, and cancellation candidates. It does not know switching costs, contractual exit terms, user disruption, or which vendor relationships are strategic. Always decompose the number into components."
+    tags: ["/vendor-review-savings", "savings-estimate", "trust"]
+    difficulty: "intermediate"
+
+  - id: "ch38-03-vendor-management-portfolio-view-009"
+    front: "What is the typical negotiation threshold flagged in a portfolio audit?"
+    back: "Contracts above £50,000 per year are flagged for pre-renewal negotiation. These represent enough annual value that even a 15-30% improvement in terms justifies the negotiation effort."
+    tags: ["typical-negotiation", "negotiation-threshold", "flagged"]
+    difficulty: "basic"
+
+  - id: "ch38-03-vendor-management-portfolio-view-010"
+    front: "What should you evaluate first when reviewing a /vendor-review portfolio audit?"
+    back: "Category accuracy (are vendors correctly categorised?), vendor count (did all vendors from your input appear?), renewal date correctness, rationalisation feasibility (do savings account for switching costs?), and whether the savings figure is decomposed or a single unsupported number."
+    tags: ["/vendor-review-portfolio", "portfolio-audit", "evaluate"]
+    difficulty: "advanced"
+
+  - id: "ch38-03-vendor-management-portfolio-view-011"
+    front: "How does a portfolio audit connect to contract analysis in Lesson 4?"
+    back: "The portfolio audit identifies which vendors warrant deeper investigation. Lesson 4 uses the /contract command to extract obligations, SLAs, and key dates from those high-priority vendor contracts — adding depth to the portfolio-level view."
+    tags: ["portfolio-audit", "audit-connect", "contract"]
+    difficulty: "intermediate"
+
+  - id: "ch38-03-vendor-management-portfolio-view-012"
+    front: "What is the difference between 'addressable savings' and 'realised savings'?"
+    back: "Addressable savings is the theoretical maximum identified by the audit (consolidation + cancellation + renegotiation). Realised savings is what you actually capture after accounting for switching costs, migration timelines, contractual exit terms, and negotiation outcomes. Addressable is always higher."
+    tags: ["addressable-savings", "realised-savings", "difference"]
+    difficulty: "advanced"

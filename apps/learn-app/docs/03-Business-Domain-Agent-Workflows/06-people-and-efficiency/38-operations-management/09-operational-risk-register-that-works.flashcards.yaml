@@ -1,0 +1,73 @@
+deck:
+  id: "ch38-09-operational-risk-register-that-works"
+  title: "Operational Risk Register That Works"
+  description: "Key concepts and review questions covering operational risk register that works."
+  tags: ["operational", "risk", "register", "works", "chapter-38"]
+  version: 1
+
+cards:
+  - id: "ch38-09-operational-risk-register-that-works-001"
+    front: "What are the five failure modes of risk registers?"
+    back: "1. Static, not live — scores never update when circumstances change. 2. Residual scores not credible — inherent 15, residual 3, control: 'verbal knowledge.' 3. No escalation path — nobody knows when to act. 4. Missing uncomfortable risks — key-person, regulatory gaps, customer concentration absent. 5. Vague mitigation plans — 'improve vendor management' with no owner, date, or target score."
+    tags: ["failure-modes", "risk-registers"]
+    difficulty: "intermediate"
+
+  - id: "ch38-09-operational-risk-register-that-works-002"
+    front: "What is inherent risk and how does it differ from residual risk?"
+    back: "Inherent risk is scored as if no controls exist — the raw exposure if nothing is being done. Residual risk is scored after controls are applied. The gap between inherent and residual represents the risk reduction that controls are achieving. Both must always be in the register — inherent risk alone produces a list of fears, not a management tool."
+    tags: ["inherent-risk", "residual-risk", "differ"]
+    difficulty: "basic"
+
+  - id: "ch38-09-operational-risk-register-that-works-003"
+    front: "What are the four score bands in the 5x5 risk scoring matrix?"
+    back: "LOW: 1–4 (ACCEPT, monitor only). MEDIUM: 5–9 (ACCEPT or MITIGATE depending on appetite). HIGH: 10–16 (MITIGATE — plan required). CRITICAL: 17–25 (ESCALATE + MITIGATE — immediate action). Score = Likelihood (1–5) × Impact (1–5)."
+    tags: ["score-bands", "5x5-risk", "scoring"]
+    difficulty: "basic"
+
+  - id: "ch38-09-operational-risk-register-that-works-004"
+    front: "What is the untested control rule?"
+    back: "An untested control is, at best, MODERATE effectiveness. Residual risk can only be lower than inherent when a control is STRONG — reliably tested with evidence available. A control that 'exists on paper' but has never been tested is WEAK for scoring purposes. An untested backup vendor agreement does not reduce single-source vendor risk; it reduces the documentation of it."
+    tags: ["untested-control", "control-rule"]
+    difficulty: "advanced"
+
+  - id: "ch38-09-operational-risk-register-that-works-005"
+    front: "What are the four control effectiveness ratings and what distinguishes WEAK from ABSENT?"
+    back: "STRONG: reliably prevents or reduces risk; tested; evidence available. MODERATE: partially addresses risk; some gaps; not fully tested. WEAK: exists on paper but effectiveness unconfirmed; rarely tested. ABSENT: no effective control; inherent = residual. WEAK has a control document that is not effective. ABSENT has nothing."
+    tags: ["control-effectiveness", "effectiveness-ratings", "distinguishes"]
+    difficulty: "intermediate"
+
+  - id: "ch38-09-operational-risk-register-that-works-006"
+    front: "How does the risk-assessment auto-skill activate?"
+    back: "It activates automatically from keywords in natural-language prompts: 'risk', 'risk register', 'risk assessment', 'mitigation', 'inherent risk'. Students should NEVER type /risk-assessment — they describe the risk landscape they want to map in natural language."
+    tags: ["risk-assessment-auto-skill", "auto-skill-activate", "risk-assessment"]
+    difficulty: "intermediate"
+
+  - id: "ch38-09-operational-risk-register-that-works-007"
+    front: "What five elements must a strong mitigation plan include?"
+    back: "1. Specific action (not vague — what exactly changes). 2. Whether it reduces likelihood, impact, or both (quantified). 3. Target residual score after mitigation. 4. One named owner (not 'the team'). 5. Target completion date. Without all five, the mitigation cannot be held accountable."
+    tags: ["strong-mitigation", "mitigation-plan", "elements"]
+    difficulty: "intermediate"
+
+  - id: "ch38-09-operational-risk-register-that-works-008"
+    front: "What is risk appetite and why must it be defined before building the register?"
+    back: "Risk appetite defines what disruption the organisation can tolerate, what it cannot tolerate, and what threshold triggers escalation. Without defining it first, the register cannot determine which risks are within or above appetite — making the 'within appetite' field meaningless. It also sets the escalation thresholds for the escalation matrix."
+    tags: ["risk-appetite", "defined", "building"]
+    difficulty: "basic"
+
+  - id: "ch38-09-operational-risk-register-that-works-009"
+    front: "What does an escalation matrix define?"
+    back: "Score-based triggers for three escalation levels: Operations Manager (new risk inherent ≥10; score increase 3+), COO (residual above appetite >30 days; any CRITICAL; mitigation deadline missed), Board (CRITICAL >60 days; materialised risk with significant impact; any regulatory breach). Criteria must be score-based, not vague ('if serious')."
+    tags: ["escalation-matrix"]
+    difficulty: "basic"
+
+  - id: "ch38-09-operational-risk-register-that-works-010"
+    front: "Why is OPS-004 (AML regulatory breach) rated CRITICAL at inherent scoring?"
+    back: "The PEP screening provider contract lapsed 4 months ago, manual screening is unvalidated, and an FCA supervisory visit is imminent. Likelihood 4 × Impact 5 = 20 (CRITICAL). The controls (manual screening WEAK, MLRO oversight MODERATE) reduce residual to 15 (HIGH) but cannot remove CRITICAL inherent risk while the gap remains active."
+    tags: ["ops-004-aml", "aml-regulatory", "ops-004"]
+    difficulty: "advanced"
+
+  - id: "ch38-09-operational-risk-register-that-works-011"
+    front: "What two lessons does the risk register connect to as a forward reference?"
+    back: "Lesson 11 (Operational Metrics) draws risk metrics from this register — tracking risks above appetite, mitigation action completion rates, and risk profile trends. Lesson 12 (Persistent Agents) deploys the compliance-monitor agent, which monitors the regulatory compliance risks in this register and alerts when review dates pass."
+    tags: ["risk-register", "register-connect", "lessons"]
+    difficulty: "intermediate"

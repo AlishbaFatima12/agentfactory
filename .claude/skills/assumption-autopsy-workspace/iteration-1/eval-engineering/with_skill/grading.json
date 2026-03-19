@@ -1,0 +1,54 @@
+{
+  "eval_id": "engineering",
+  "condition": "with_skill",
+  "expectations": [
+    {
+      "id": "E1",
+      "text": "Output produces a 4-category assumption matrix with sections for (a) Human Only, (b) AI Only, (c) Both, and (d) Emerged During Merge",
+      "passed": true,
+      "evidence": "Output has all 4 sections with properly formatted tables: (a) 3 items, (b) 8 items, (c) 2 items, (d) 3 items. Each section includes a pattern commentary note."
+    },
+    {
+      "id": "E2",
+      "text": "Output categorizes at least 3 assumptions the user missed (category b items) covering structural/technical dimensions",
+      "passed": true,
+      "evidence": "Category (b) contains 8 structural assumptions: write throughput at scale, row-vs-columnar architecture fit, scale ceiling at 500M+ rows, schema flexibility, real-time definition ambiguity, connection pooling contention, index maintenance overhead, and query planner bottlenecks. All are technical and structural."
+    },
+    {
+      "id": "E3",
+      "text": "Output assigns risk levels (reasonable, risky, or needs testing) to each assumption",
+      "passed": true,
+      "evidence": "Every assumption across all 4 categories has a Risk Level assigned. Category (a): Reasonable/Risky/Needs Testing. Category (b): mix of Needs Testing and Risky. Category (c): both Reasonable. Category (d): Risky/Needs Testing/Risky."
+    },
+    {
+      "id": "E4",
+      "text": "Output identifies at least 2 testable assumptions with concrete test methods such as benchmarks, load tests, or prototypes",
+      "passed": true,
+      "evidence": "Recommended Test Sequence lists 5 tests with specific methods and timelines. Examples: 'Benchmark same queries on PostgreSQL vs. ClickHouse/DuckDB with 10M rows' (3 days), 'Simulate 115 writes/sec + 10 concurrent analytics queries, measure P99 latency' (3 days), 'Define real-time latency SLA with stakeholders' (1 day). Test methods include benchmarks, load tests, stakeholder conversations, and scale projections."
+    },
+    {
+      "id": "E5",
+      "text": "Output distinguishes between contextual assumptions (team skills, organizational) and structural assumptions (performance, scalability, data model)",
+      "passed": true,
+      "evidence": "Explicit 'Contextual vs. Structural Pattern' section. Human assumptions described as 'contextual -- driven by team familiarity, past experience, and the desire to minimize tooling complexity'. AI assumptions described as 'structural -- they concern performance boundaries, architectural mismatch (row vs. columnar for analytics), scale ceilings, requirement ambiguity, and infrastructure contention'."
+    },
+    {
+      "id": "E6",
+      "text": "Category (d) contains at least 1 genuine emergent assumption not restated from other categories",
+      "passed": true,
+      "evidence": "Category (d) has 3 emergent items. Most notable: 'The decision to use PostgreSQL implicitly assumes that the ingestion path and the query path can share the same database instance -- but high-write ingestion and complex analytical reads create I/O contention' -- this genuinely emerges from combining (a2) 'good enough' heuristic with (b1) write throughput and (b6) connection pooling. Neither source assumption alone surfaces this."
+    },
+    {
+      "id": "E7",
+      "text": "Output identifies critical path assumptions -- which assumptions, if wrong, would invalidate the architecture choice",
+      "passed": true,
+      "evidence": "Dedicated 'Critical Path Assumptions' section with 4 items: row-store fitness, real-time latency definition, I/O contention between ingestion and analytics, and volume growth trajectory. Each explains why it is plan-killing."
+    }
+  ],
+  "summary": {
+    "pass_rate": "7/7 (100%)",
+    "total_expectations": 7,
+    "passed": 7,
+    "failed": 0
+  }
+}

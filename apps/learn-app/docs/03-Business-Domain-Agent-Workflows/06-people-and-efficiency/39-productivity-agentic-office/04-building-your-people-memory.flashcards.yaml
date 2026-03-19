@@ -1,0 +1,112 @@
+deck:
+  id: "ch39-04-people-memory"
+  title: "Building Your People Memory"
+  description: "Key concepts from Layer 2 of work.local.md — person entries, communication profiles, sensitivity handling, and calibrated person briefs."
+  tags: ["people-memory", "workplace-context", "layer-2", "agentic-office"]
+  version: 1
+
+cards:
+  - id: "ch39-04-people-memory-001"
+    front: "In work.local.md, what does Layer 2 store?"
+    back: "Team memory — roles, communication styles, current focus, sensitivities, and relationship notes for key stakeholders."
+    tags: ["layer-2", "workplace-memory"]
+    difficulty: "basic"
+
+  - id: "ch39-04-people-memory-002"
+    front: "Why does a vague person entry produce generic AI outputs even when the underlying skill is sophisticated?"
+    back: "The skill calibrates to what it is given. A communication field that says 'prefers clear communication' contains no actionable signal — the skill outputs the same generic professional tone it would without any entry at all."
+    tags: ["entry-quality", "calibration"]
+    difficulty: "intermediate"
+    why: "How would you test whether a person entry is specific enough before using it in a delegation?"
+
+  - id: "ch39-04-people-memory-003"
+    front: "What are the 7 fields in a work.local.md person entry?"
+    back: "name\nrole\nreports_to\ncommunication\ncurrent_focus\npriorities\nnote\n(sensitivity — optional)"
+    tags: ["person-entry", "format"]
+    difficulty: "basic"
+
+  - id: "ch39-04-people-memory-004"
+    front: "In a person entry, which field most directly determines the quality of delegation messages and meeting briefs?"
+    back: "The communication field — it describes how the person receives information, which channel they prefer, and what behaviours affect the working relationship."
+    tags: ["communication-field", "calibration"]
+    difficulty: "intermediate"
+
+  - id: "ch39-04-people-memory-005"
+    front: "What is the 80% specificity test for a person entry's communication field?"
+    back: "Ask: would this describe 80% of professionals? If yes, it is too generic and must be rewritten with specific behavioural observations."
+    tags: ["specificity", "person-entry"]
+    difficulty: "basic"
+
+  - id: "ch39-04-people-memory-006"
+    front: "Why should a person entry describe how someone actually communicates rather than how you wish they did?"
+    back: "The skill calibrates outputs to the person's profile, not yours. An entry written for your preferences produces briefs calibrated to you — the wrong target — and the guidance will not match the recipient's actual behaviour."
+    tags: ["calibration", "person-entry"]
+    difficulty: "intermediate"
+    why: "What signal in a person brief output tells you the underlying entry was written from your own perspective rather than theirs?"
+
+  - id: "ch39-04-people-memory-007"
+    front: "What does the sensitivity field's RESTRICTED flag do in work.local.md?"
+    back: "Controls when the information surfaces — applied only in one-to-one contexts, never in group outputs or shared briefings where the subject might see it."
+    tags: ["sensitivity", "restricted-flag"]
+    difficulty: "basic"
+
+  - id: "ch39-04-people-memory-008"
+    front: "Why is the RESTRICTED sensitivity flag described as context control rather than secrecy?"
+    back: "The information is stored and usable — it is not hidden. RESTRICTED means it surfaces only when appropriate: one-to-one tasks where the subject is not a recipient. Information you cannot access when needed is useless."
+    tags: ["sensitivity", "restricted-flag"]
+    difficulty: "intermediate"
+    why: "Name two specific output types where a RESTRICTED entry must never appear."
+
+  - id: "ch39-04-people-memory-009"
+    front: "Name three types of information that warrant a RESTRICTED sensitivity flag in a person entry."
+    back: "Succession planning\nPerformance concerns\nPersonal circumstances\n(also: commercial sensitivities)"
+    tags: ["sensitivity", "restricted-flag"]
+    difficulty: "basic"
+
+  - id: "ch39-04-people-memory-010"
+    front: "What command generates a person brief for multiple stakeholders using work.local.md Layer 2?"
+    back: "/agentic-office:workplace-context with 'Give me a brief on [names]'"
+    tags: ["workplace-context", "person-brief"]
+    difficulty: "intermediate"
+
+  - id: "ch39-04-people-memory-011"
+    front: "A person brief output reads as generic — 'data-focused, good communicator.' What does this diagnose about the underlying person entry?"
+    back: "The communication field is under-specified. Generic brief output is a direct signal to return to the entry and replace vague descriptions with specific behavioural observations."
+    tags: ["person-brief", "diagnostic"]
+    difficulty: "intermediate"
+    why: "What specific question would you ask yourself to identify which field needs improvement?"
+
+  - id: "ch39-04-people-memory-012"
+    front: "Omar Farooq's person entry notes he 'dislikes last-minute asks.' How does this change a delegation message to him versus a generic one?"
+    back: "The message explicitly acknowledges the timeline, offers to adjust scope if needed, and requests same-day confirmation — rather than just stating the task and deadline."
+    tags: ["calibration", "delegation", "omar-farooq"]
+    difficulty: "advanced"
+    why: "Which other entry field for Omar would change the channel the message is sent through?"
+
+  - id: "ch39-04-people-memory-013"
+    front: "How does the person brief function as a calibration feedback loop?"
+    back: "Brief quality directly reflects entry quality. When brief guidance is generic, the entry is under-specified. When brief guidance would change your approach, the entry is working. Reading the brief is how you test whether your entries are specific enough."
+    tags: ["person-brief", "feedback-loop", "calibration"]
+    difficulty: "intermediate"
+    why: "How often should you review and update person entries, and what event should trigger a review?"
+
+  - id: "ch39-04-people-memory-014"
+    front: "Dr. Sana Mirza joins as Head of Curriculum. What two relationship dynamics does her person entry flag for careful management?"
+    back: "Formal ownership of the PHM framework (give it, do not just notify her).\nRelationship with Omar Farooq — different working styles on data; needs mediation early."
+    tags: ["person-entry", "dr-sana-mirza", "relationship-management"]
+    difficulty: "intermediate"
+    why: "Why would making informal curriculum decisions before Dr. Sana is settled damage the working relationship?"
+
+  - id: "ch39-04-people-memory-015"
+    front: "Ayesha Raza is a new starter in her onboarding window. What specific behaviour does her person entry flag as a priority for Zia?"
+    back: "Timely feedback — review her submitted work within the same day or next day. A week's delay in the onboarding window sends the wrong signal about whether her work is seen."
+    tags: ["person-entry", "ayesha-raza", "onboarding"]
+    difficulty: "advanced"
+    why: "Why does feedback timing matter more in a 30-day onboarding window than it would six months into the role?"
+
+  - id: "ch39-04-people-memory-016"
+    front: "A colleague's communication style has changed since you wrote their person entry. How does the degraded entry reveal itself?"
+    back: "The person brief produces guidance that no longer matches the colleague's actual behaviour — the approach advice leads to friction rather than smooth interaction."
+    tags: ["person-entry", "maintenance", "calibration"]
+    difficulty: "intermediate"
+    why: "What cadence or trigger would ensure person entries remain accurate over time?"

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Three-Path Comparison"
 description: "Solve the same complex problem three ways -- solo, pure AI, and genuine collaboration -- to discover through direct comparison what AI adds and what you add"
 keywords:
@@ -136,37 +137,77 @@ Choose one. The exercises work identically regardless of which you pick.
 Three separate solutions clearly labeled: Solo (no AI), Pure AI (no overrides), and Collaboration (full iteration). A comparison analysis (300-400 words) answering: Where was the solo version stronger? Where did pure AI fail? Where did collaboration outperform both? What specific value did your human judgment add in the collaboration version that was absent from the pure AI version?
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="three-path-comparison" xp={50}>
+
 I solved the same business problem three ways: solo (no AI), pure AI (accepted
 everything), and collaboration (prompted, evaluated, overrode, iterated).
 Please:
 
 (1) Rate each solution on a scale of 1-10 for strategic quality, originality,
-    and feasibility.
+and feasibility.
 (2) Identify the specific elements in the collaboration version that are better
-    than what I would get from pure AI -- these are the points where my human
-    judgment added value.
+than what I would get from pure AI -- these are the points where my human
+judgment added value.
 (3) Identify any elements where the pure AI version was actually better than my
-    collaboration version -- where my intervention made things worse.
+collaboration version -- where my intervention made things worse.
 (4) Rate my comparison analysis -- is my self-assessment accurate, or am I
-    overvaluing or undervaluing my own contributions?
+overvaluing or undervaluing my own contributions?
 (5) Based on this exercise, what is my specific collaboration style? Am I too
-    deferential to AI, too overriding, or well-balanced?
+deferential to AI, too overriding, or well-balanced?
 
-Problem: [paste].
-Solo solution: [paste].
-Pure AI solution: [paste].
-Collaboration solution: [paste].
-My comparison: [paste].
+Problem:
+
+<AICheckField
+  name="problem"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
+
+Solo solution:
+
+<AICheckField
+  name="solo_solution"
+  placeholder="Paste your solo solution here..."
+  rows={6}
+/>
+
+Pure AI solution:
+
+<AICheckField
+  name="pure_ai_solution"
+  placeholder="Paste your pure AI solution here..."
+  rows={6}
+/>
+
+Collaboration solution:
+
+<AICheckField
+  name="collaboration_solution"
+  placeholder="Paste your collaboration solution here..."
+  rows={6}
+/>
+
+My comparison:
+
+<AICheckField
+  name="comparison"
+  placeholder="Paste your comparison analysis here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn through direct comparison what AI adds and what you add. Most students discover that pure AI output is competent but generic, solo output is original but incomplete, and genuine collaboration produces the best results -- but only when the human applies real judgment. The AI self-check tells you honestly whether your collaboration actually improved things.
+
+## Flashcards Study Aid
+
+<Flashcards />

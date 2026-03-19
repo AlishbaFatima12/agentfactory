@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Peer Cross-Examination"
 description: "Defend your cascade map in a live peer cross-examination, testing whether you understand your systems analysis deeply enough to explain and justify every connection"
 keywords:
@@ -95,7 +96,8 @@ Your written preparation notes identifying gaps and challenges in your partner's
 
 ---
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="system-defence" xp={50}>
+
 I just completed a peer cross-examination of my systems thinking
 cascade map. My partner identified gaps and challenged my feedback
 loops. Below is my final cascade map, my partner's critique, and my
@@ -103,25 +105,46 @@ reflection.
 
 Please:
 (1) Evaluate the gaps my partner identified -- are they genuine gaps
-    or were my original connections actually sufficient?
+or were my original connections actually sufficient?
 (2) Was my partner's challenge to my feedback loop valid?
 (3) Based on all the feedback (from AI in previous exercises and from
-    my partner), what are the top 3 improvements I should make to my
-    systems thinking approach?
+my partner), what are the top 3 improvements I should make to my
+systems thinking approach?
 (4) Rate my overall systems thinking development across this entire
-    chapter from Beginner / Developing / Proficient / Advanced.
+chapter from Beginner / Developing / Proficient / Advanced.
 (5) Give me a personalized practice recommendation for improving my
-    weakest area.
+weakest area.
 
-My final map: [paste].
-Partner's critique: [paste].
-My reflection: [paste].
+My final map:
+
+<AICheckField
+  name="final_map"
+  placeholder="Paste your final cascade map here..."
+  rows={6}
+/>
+
+Partner's critique:
+
+<AICheckField
+  name="partners_critique"
+  placeholder="Paste your partner's critique here..."
+  rows={4}
+/>
+
+My reflection:
+
+<AICheckField
+  name="reflection"
+  placeholder="Paste your reflection here..."
+  rows={4}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 

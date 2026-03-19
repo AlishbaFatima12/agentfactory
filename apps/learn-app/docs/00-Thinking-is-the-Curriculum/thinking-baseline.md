@@ -1,5 +1,6 @@
 ---
 sidebar_position: -1
+aicheck: true
 title: "Thinking Baseline"
 description: "A 30-minute ungraded pre-assessment using a hospital AI triage scenario to snapshot your thinking skills before any training begins"
 keywords:
@@ -95,23 +96,35 @@ Without any AI tools, write responses to the following five tasks. Spend roughly
 
 ## AI Baseline Check
 
-```text title="AI Baseline Check -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="thinking-baseline" xp={50}>
+
 I am about to begin a 10-chapter course on thinking skills. Before I start,
 I completed a baseline assessment with no AI help. Please evaluate each of
 my 5 responses and then complete the Thinking Score Card.
+
+Here is the scenario I responded to:
+
+"A mid-size hospital is considering replacing its emergency room triage nurses with an AI triage system. The AI system is faster, available 24/7, and in trials showed 15% better accuracy in severity classification. However, 40% of ER patients in this hospital are elderly, have limited language proficiency, or are experiencing mental health crises."
+
+The five tasks were:
+(1) Write the 5 most important questions you would ask before making this decision.
+(2) The scenario claims "15% better accuracy." List every reason this claim might be misleading or incomplete.
+(3) Map at least 3 second-order consequences of implementing this AI system that are not mentioned in the scenario.
+(4) Take a position: should the hospital adopt the AI triage system? Identify who benefits, who is harmed, and what you would need to see to change your mind.
+(5) Rate your confidence in your position (0-100%) and list the 3 pieces of missing information that would most change your decision.
 
 Rate each response individually, then provide the Score Card.
 
 Task-specific ratings:
 (1) Question quality -- are my 5 questions diagnostic or generic? (1-10)
 (2) Error detection -- did I find the real problems with the "15% accuracy"
-    claim? (1-10)
+claim? (1-10)
 (3) Systems thinking -- are my second-order consequences genuinely
-    non-obvious? (1-10)
+non-obvious? (1-10)
 (4) Ethical reasoning -- is my position clear, is my stakeholder analysis
-    honest? (1-10)
+honest? (1-10)
 (5) Decision confidence -- is my confidence calibrated to my
-    uncertainty? (1-10)
+uncertainty? (1-10)
 
 Then complete the THINKING SCORE CARD for my overall baseline:
 Independent Thinking (1-10), Critical Evaluation (1-10),
@@ -121,8 +134,15 @@ Calculate my Baseline Average (average of the 5 Score Card dimensions).
 
 I will repeat this exact exercise after completing all 10 chapters.
 
-Here are my responses: [paste all 5 responses].
-```
+Here are my responses:
+
+<AICheckField
+  name="responses"
+  placeholder="Paste all 5 responses here..."
+  rows={6}
+/>
+
+</AICheck>
 
 ---
 
@@ -131,3 +151,7 @@ Here are my responses: [paste all 5 responses].
 Save your baseline responses and your AI Baseline Score. You will need both after Chapter 10.
 
 > _Do not try to perform well on this baseline. The worse your honest starting point, the more dramatic your measurable growth will be. This is a mirror, not a test._
+
+## Flashcards Study Aid
+
+<Flashcards />

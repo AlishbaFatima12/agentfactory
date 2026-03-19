@@ -1,0 +1,91 @@
+deck:
+  id: "ch39-l12-digital-chief-of-staff"
+  title: "The Digital Chief of Staff"
+  description: "Flashcards for Lesson 12 — orchestration agent, scheduled tasks, escalation protocol, and configuration"
+  tags: ["chapter-39", "chief-of-staff", "orchestration-agent", "escalation", "agentic-office"]
+  version: 1
+
+cards:
+  - id: "ch39-l12-digital-chief-of-staff-001"
+    front: "What are the three daily task categories of the Digital Chief of Staff?"
+    back: "1. Digest delivery (07:00)\n2. Real-time intelligence (on demand)\n3. Threshold monitoring (continuous)"
+    tags: ["chief-of-staff", "daily-tasks"]
+    difficulty: "basic"
+
+  - id: "ch39-l12-digital-chief-of-staff-002"
+    front: "Why is threshold monitoring the most underappreciated function of the Chief of Staff?"
+    back: "The digest is visible — you see it every morning. Threshold monitoring is invisible; it fires when the system detects you should know something you have not noticed, preventing problems from festering undetected."
+    tags: ["chief-of-staff", "threshold-monitoring"]
+    difficulty: "intermediate"
+    why: "What is the cost of discovering a threshold breach at day 14 vs day 7?"
+
+  - id: "ch39-l12-digital-chief-of-staff-003"
+    front: "What are the five required sections of the Monday week-ahead brief?"
+    back: "1. This Week's Boulders/Priorities\n2. Critical Milestones\n3. Decisions Needed\n4. Delegation Checks Due\n5. What Would Make This Week a Success"
+    tags: ["chief-of-staff", "week-ahead-brief"]
+    difficulty: "basic"
+
+  - id: "ch39-l12-digital-chief-of-staff-004"
+    front: "Why must the Monday week-ahead brief be delivered before 08:00?"
+    back: "Its value is setting the day's frame before incoming work sets it for you. Delivered after the day starts, it becomes a catch-up document, not a decision-making frame — the same information, but at the wrong moment."
+    tags: ["chief-of-staff", "week-ahead-brief"]
+    difficulty: "intermediate"
+    why: "How does receiving the brief at 08:30 instead of 06:45 change how a professional starts their Monday?"
+
+  - id: "ch39-l12-digital-chief-of-staff-005"
+    front: "What are the four sections of the Friday week-close summary?"
+    back: "1. Completed\n2. Carries Forward\n3. What to Set Up for Monday\n4. Next Week Preview"
+    tags: ["chief-of-staff", "week-close"]
+    difficulty: "basic"
+
+  - id: "ch39-l12-digital-chief-of-staff-006"
+    front: "Why must the Friday week-close summary never evaluate or judge the week's performance?"
+    back: "Its purpose is information and preparation, not assessment. A week-close that sounds like a performance review discourages honest carries-forward reporting and shifts the reader's focus from planning Monday to defending Friday."
+    tags: ["chief-of-staff", "week-close"]
+    difficulty: "intermediate"
+    why: "What would a Chief of Staff that editorialises on carries-forward actually be doing to the professional relationship?"
+
+  - id: "ch39-l12-digital-chief-of-staff-007"
+    front: "What are the three levels of the Chief of Staff escalation protocol?"
+    back: "Level 1: 🟡 digest flag.\nLevel 2: explicit message (digest not actioned 2+ days).\nLevel 3: COO/Executive prompt (flagged 14+ days unresolved)."
+    tags: ["chief-of-staff", "escalation"]
+    difficulty: "intermediate"
+
+  - id: "ch39-l12-digital-chief-of-staff-008"
+    front: "A team sets their escalation threshold to 2 days. Within a week they stop reading escalation flags. Why?"
+    back: "Thresholds too low create noise — every normal pause generates an alert. When alerts are too frequent, users habituate and ignore them, defeating the entire monitoring function. The threshold must match the actual pace of work."
+    tags: ["chief-of-staff", "threshold-monitoring", "escalation"]
+    difficulty: "intermediate"
+    why: "How would you calibrate the right threshold for a government agency vs a startup?"
+
+  - id: "ch39-l12-digital-chief-of-staff-009"
+    front: "What are the six fields in the chief_of_staff configuration block in work.local.md?"
+    back: "digest_time, weekly_brief, weekly_close, escalation_threshold_days, dashboard_refresh, and delivery channel."
+    tags: ["chief-of-staff", "configuration", "work-local-md"]
+    difficulty: "basic"
+
+  - id: "ch39-l12-digital-chief-of-staff-010"
+    front: "What does the /agentic-office:schedule command do?"
+    back: "Reads the chief_of_staff configuration from work.local.md and activates scheduled delivery of the digest, week-ahead brief, and week-close summary."
+    tags: ["chief-of-staff", "schedule-command"]
+    difficulty: "intermediate"
+
+  - id: "ch39-l12-digital-chief-of-staff-011"
+    front: "How does the Chief of Staff differ from the domain agents it synthesises in terms of its role?"
+    back: "Domain agents do the specialised work (finance, legal, HR). The Chief of Staff does none of that work — its role is ensuring the person doing the work always knows what matters, what is at risk, and what needs attention. It synthesises, never executes."
+    tags: ["chief-of-staff", "orchestration"]
+    difficulty: "advanced"
+    why: "Why would a Chief of Staff that also did domain work be an anti-pattern?"
+
+  - id: "ch39-l12-digital-chief-of-staff-012"
+    front: "What format does the Chief of Staff use for a Level 2 escalation message?"
+    back: "\"ESCALATION: [Item] has been [blocked/unactioned/overdue] for [N days]. This is affecting [downstream impact]. Recommended action: [specific]. Would you like me to [draft message / schedule conversation]?\""
+    tags: ["chief-of-staff", "escalation"]
+    difficulty: "intermediate"
+
+  - id: "ch39-l12-digital-chief-of-staff-013"
+    front: "A professional asks the Chief of Staff: 'What is Project Nighthawk's status?' How should it respond — as a database query or as a colleague?"
+    back: "As a colleague: not just the raw status, but why it matters now, who is involved, what depends on it, and what the cultural norm is around escalation — all drawn from work.local.md context, not generic AI knowledge."
+    tags: ["chief-of-staff", "real-time-intelligence"]
+    difficulty: "advanced"
+    why: "What is missing from work.local.md if the Chief of Staff can only return the raw status, not the contextual interpretation?"

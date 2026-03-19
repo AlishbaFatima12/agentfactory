@@ -18,7 +18,7 @@ Part 3 used Claude Cowork to deploy agents without writing code. Part 4 switches
 - **INPUT: You write specifications** -- descriptions of what the code should do, using type labels and checks (tests). Then you prompt Claude Code to generate the implementation.
 - **OUTPUT: You verify the result** -- you run automated tools to prove the generated code is correct. You never accept output on faith.
 
-This workflow -- specify first, generate second, verify third -- is called **Test-Driven Generation (TDG)**, the Python-specific form of SDD.
+This workflow -- specify first, generate second, verify third -- is called **Test-Driven Generation (TDG)**, the Python-specific form of Spec Driven Development (SDD).
 
 :::info The research behind this shift
 GitClear's 2025 analysis of 211 million lines of code from Google, Microsoft, Meta, and enterprise repositories found that code duplication quadrupled after widespread AI adoption, while refactoring dropped from 25% to under 10% of changes. Code generated fast, but revised just as fast -- 7.9% of newly added lines required changes within two weeks, up from 5.5% before AI tools. Separately, Qodo's State of AI Code Quality report found that 76% of developers using AI assistants fall into what researchers call the "red zone" -- frequent hallucinations paired with low confidence in shipping. The teams that escaped this pattern shared one trait: they used AI for testing and review, not just generation, and their confidence in code quality jumped from 27% to 61%. Speed without verification produces churn. Speed with verification produces software.
@@ -32,12 +32,12 @@ Part 4 assumes no programming experience -- you do not need to have written code
 
 - **Using a terminal** -- opening a terminal, navigating directories, running commands → [Part 2, Chapter 22](/docs/Agent-Workflow-Primitives/linux-mastery)
 - **Driving Claude Code** -- writing clear prompts, evaluating responses, iterating → practiced throughout Parts 1 and 2
-- **Spec-Driven Development** -- writing specifications before code, the four-phase SDD workflow → [Chapter 16](/docs/General-Agents-Foundations/spec-driven-development) (required prerequisite)
+- **Spec-Driven Development (SDD)** -- writing specifications before code, the four-phase SDD workflow → [Chapter 16](/docs/General-Agents-Foundations/spec-driven-development) (required prerequisite)
 - **Version control basics** -- `git add`, `git commit`, `git push` → [Chapter 23](/docs/Agent-Workflow-Primitives/version-control)
 - **Building something with Claude Code** -- directing Claude Code to create a working project → Part 2 projects
 
 :::note If you've never written a line of code
-That is exactly who Phase 1 is designed for. Chapter 31 walks you through every installation step with exact commands and expected output. Chapter 32 teaches you to read Python from scratch -- no prior syntax knowledge required. You will not be asked to write code until you can read it confidently. The course meets you where you are.
+That is exactly who Phase 1 is designed for. Chapter 44 walks you through every installation step with exact commands and expected output. Chapter 45 teaches you to read Python from scratch -- no prior syntax knowledge required. You will not be asked to write code until you can read it confidently. The course meets you where you are.
 :::
 
 ## The New Workflow
@@ -45,8 +45,10 @@ That is exactly who Phase 1 is designed for. Chapter 31 walks you through every 
 ```
 OLD:  Write syntax → Build things → Maybe test → Ship
 
-NEW:  Requirements → Types → Failing Tests → Generate → Verify & Iterate → Ship
+NEW:  Requirements → Types → Test Criteria & Failing Tests → Generate → Verify & Iterate → Ship
 ```
+
+This workflow is the programmer's version of the [10-80-10 rule](https://agentfactory.panaversity.org/docs/thesis#the-10-80-10-rule-the-operating-rhythm-of-the-ai-workforce) from the thesis: humans own the first 10% — defining intent, writing type contracts, and specifying correctness criteria as failing tests; AI handles the middle 80% — generating the implementation; humans own the final 10% — verifying behavior, diagnosing failures, and deciding when it ships.
 
 These six steps are not sequential phases you hand off and forget. They are a loop -- and AI is present throughout. What changes across the steps is who is driving. Here is the full loop at a glance -- if some terms are unfamiliar, the note box below the table explains each one:
 
@@ -54,17 +56,20 @@ These six steps are not sequential phases you hand off and forget. They are a lo
 | ---------------- | ---------------------------------------------------------------------------------------- | --------- | ---------------------------------------------- |
 | Requirements     | Decide what you're building -- what it does, what it accepts, what it returns            | Human     | Assists: spots gaps, challenges assumptions    |
 | Types            | Describe your data and functions precisely -- labels that tell AI the shape of your code | Human     | Assists: suggests structures, validates design |
-| Failing Tests    | Write checks that define "correct" -- they fail because nothing is built yet             | Human     | Assists: suggests cases you missed             |
+| Test Criteria & Failing Tests    | Write checks that define "correct" -- they fail because nothing is built yet             | Human     | Assists: suggests cases you missed             |
 | Generate         | AI writes the code to pass your checks                                                   | AI        | Leads: produces full implementation            |
 | Verify & Iterate | Run your checks, read failures, debug, refine, repeat until everything passes            | Human     | Assists: explains errors, refines output       |
 | Ship             | Save your work, automated pipeline verifies, deploy                                      | Human     | Assists: security review, changelog            |
 
-The key insight: you never start from a blank page, and you never accept output blindly. You start with a requirement and end with a passing test suite. Everything in between is a collaboration -- but the specification and the verification are yours.
+The key insight: you never start from a blank page, and you never accept output blindly. You start with a requirement and end with a passing test suite. Everything in between is a collaboration -- but the intent, the correctness criteria, and the final verification are yours.
+
+### Why do humans write the tests?
+In TDG, tests are not verification — they are specification. When you write assert total_with_tax(100.0, 0.15) == 115.0, you are not checking code that already exists. You are declaring what correct means before any implementation exists. That declaration is the requirement. If you delegate it to AI, you have delegated the requirement — and you are now verifying AI-generated code against AI-generated expectations. You have no independent signal. The test must come from a human mind that understands the domain, because the test is the only artifact in the entire cycle that defines ground truth. AI can suggest edge cases you missed. AI can help you write the test syntax. But the decision about what correct looks like is yours — that is the 10% that makes the other 90% trustworthy.
 
 :::note If you're new to programming
 Some of these terms may be unfamiliar. Here is what they mean in plain English:
 
-- **Types** are labels that describe what kind of data something is -- text, a whole number, a decimal, true/false. You will learn these in Chapter 32.
+- **Types** are labels that describe what kind of data something is -- text, a whole number, a decimal, true/false. You will learn these in Chapter 45.
 - **A test** is a short piece of code that checks whether another piece of code does what you expect. Think of it as a checklist: "If I give it 100 and 15%, I should get 115."
 - **A failing test** is a test you write _before_ the code exists. It fails because there is nothing to check yet. Then AI writes the code to make it pass. That is the core idea of TDG.
 - **pytest** is the tool that runs your tests automatically and tells you which passed and which failed.
@@ -91,7 +96,7 @@ This is Test-Driven Generation (TDG) -- the method that defines programming in t
 3. You ask AI to write the actual calculation.
 4. You run your checks. If they pass, the calculation is correct. If they fail, you debug and iterate.
 
-That is all TDG is -- describe what you want, write checks, let AI do the math, verify the answer. You will learn the syntax piece by piece starting in Chapter 32. By the time you reach Chapter 33 (Your First TDG Cycle), you will see this cycle in real Python code and every line will make sense.
+That is all TDG is -- describe what you want, write checks, let AI do the math, verify the answer. You will learn the syntax piece by piece starting in Chapter 45. By the time you reach Your First TDG Cycle, you will see this cycle in real Python code and every line will make sense.
 
 &nbsp;
 
@@ -150,17 +155,17 @@ Part 4 is organized into nine phases. Each phase gives you a new capability, and
 Each phase takes roughly 1-2 weeks at a few hours per day. The full Part 4 is designed for 3-5 months of steady practice. Some phases (1 and 4) are shorter; others (5 and 6) are longer because they cover more ground. Go at your own pace -- building a strong foundation matters more than speed.
 :::
 
-| Phase | Title                                              | Your Role         | Chapters |
-| ----- | -------------------------------------------------- | ----------------- | -------- |
-| 1     | [The Workbench](the-workbench)                     | Reader            | Ch 30-33 |
-| 2     | [Specify with Types](specify-with-types)           | Specifier         | Ch 34-37 |
-| 3     | [Tests as Specification](tests-as-specification)   | Verifier          | Ch 38-41 |
-| 4     | [Debug & Master](debug-and-master)                 | Debugger          | Ch 42-43 |
-| 5     | [The Python Object Model](the-python-object-model) | Modeler           | Ch 44-47 |
-| 6     | [Real-World Python](real-world-python)             | Practitioner      | Ch 48-50 |
-| 7     | [CLI & Concurrency](cli-and-concurrency)           | Tool Builder      | Ch 51-52 |
-| 8     | [Production Systems](production-systems)           | Shipping Engineer | Ch 53-54 |
-| 9     | [Capstone](capstone)                               | Architect         | Ch 55-56 |
+| Phase | Title                                              | Your Role         | Chapters  |
+| ----- | -------------------------------------------------- | ----------------- | --------- |
+| 1     | [The Workbench](the-workbench)                     | Reader            | Ch 42-46  |
+| 2     | [Specify with Types](specify-with-types)           | Specifier         | Ch 47-50  |
+| 3     | [Tests as Specification](tests-as-specification)   | Verifier          | Ch 51-54  |
+| 4     | [Debug & Master](debug-and-master)                 | Debugger          | Ch 55-56  |
+| 5     | [The Python Object Model](the-python-object-model) | Modeler           | Ch 57-60  |
+| 6     | [Real-World Python](real-world-python)             | Practitioner      | Ch 61-63  |
+| 7     | [CLI & Concurrency](cli-and-concurrency)           | Tool Builder      | Ch 64-65  |
+| 8     | [Production Systems](production-systems)           | Shipping Engineer | Ch 66-67  |
+| 9     | [Capstone](capstone)                               | Architect         | Ch 68-69  |
 
 **Deliverables**: SDD specification documents, type definitions, object model diagram, passing test suites, AI-generated and human-verified implementation, security audit, green CI pipeline, and a deployed QuizForge application with CLI, API, and AI features. You finish Part 4 with two portfolio-grade projects -- SmartNotes (guided) and QuizForge (independent) -- proving you can drive the complete TDG cycle at production scale.
 

@@ -1,0 +1,101 @@
+deck:
+  id: "ch39-08-daily-digest"
+  title: "The Daily Digest"
+  description: "Key concepts from the daily digest lesson — assembly sources, output structure, length and tone rules, and Monday/Friday variants."
+  tags: ["daily-digest", "morning-briefing", "agentic-office", "productivity"]
+  version: 1
+
+cards:
+  - id: "ch39-08-daily-digest-001"
+    front: "What problem does the daily digest solve for senior professionals?"
+    back: "Compresses 30-60 min of manual morning information gathering into a 5-minute read."
+    tags: ["daily-digest", "productivity"]
+    difficulty: "intermediate"
+
+  - id: "ch39-08-daily-digest-002"
+    front: "In the digest assembly source stack, which source is always available without MCP?"
+    back: "work.local.md — projects, priorities, open delegations, people context."
+    tags: ["daily-digest", "work-local-md"]
+    difficulty: "intermediate"
+
+  - id: "ch39-08-daily-digest-003"
+    front: "What are the six digest assembly sources in priority order?"
+    back: "1. work.local.md\n2. Google Calendar (MCP)\n3. Task management (MCP)\n4. Gmail (MCP)\n5. Slack (MCP)\n6. Domain agent feeds"
+    tags: ["daily-digest", "assembly-sources"]
+    difficulty: "basic"
+
+  - id: "ch39-08-daily-digest-004"
+    front: "What is the non-negotiable length constraint for a daily digest?"
+    back: "Maximum one page — items beyond one page belong in the dashboard or task list."
+    tags: ["daily-digest", "length-rules"]
+    difficulty: "basic"
+
+  - id: "ch39-08-daily-digest-005"
+    front: "How many items maximum appear in the digest's critical path section?"
+    back: "Five items maximum."
+    tags: ["daily-digest", "critical-path"]
+    difficulty: "intermediate"
+
+  - id: "ch39-08-daily-digest-006"
+    front: "What is the difference between digest briefing voice and system voice?"
+    back: "Briefing voice delivers interpretation ready to act on. System voice lists status and action codes that the reader must decode and interpret themselves."
+    tags: ["daily-digest", "tone"]
+    difficulty: "intermediate"
+
+  - id: "ch39-08-daily-digest-007"
+    front: "What are the eight sections of a well-designed daily digest?"
+    back: "Headline status\nToday's critical path\nToday's calendar\nOpen delegations status\nFlagged from yesterday\nThis week at a glance\nUpcoming deadlines\nWeekly priorities reminder"
+    tags: ["daily-digest", "output-structure"]
+    difficulty: "basic"
+
+  - id: "ch39-08-daily-digest-008"
+    front: "What date window does the upcoming deadlines section cover?"
+    back: "Next 7-14 days only — not the full calendar horizon."
+    tags: ["daily-digest", "output-structure"]
+    difficulty: "basic"
+
+  - id: "ch39-08-daily-digest-009"
+    front: "What two sections does the Monday digest variant add that a standard digest does not have?"
+    back: "This Week's Critical Path and Open from Last Week."
+    tags: ["daily-digest", "monday-variant"]
+    difficulty: "intermediate"
+
+  - id: "ch39-08-daily-digest-010"
+    front: "What does the Friday digest variant replace, and with what?"
+    back: "Replaces This Week at a Glance with Week Close: completed, carries forward, set up for Monday."
+    tags: ["daily-digest", "friday-variant"]
+    difficulty: "basic"
+
+  - id: "ch39-08-daily-digest-011"
+    front: "What does an escalation_threshold setting control in the digest configuration?"
+    back: "The number of days a delegation or item can be stalled before it is flagged as critical in the digest."
+    tags: ["daily-digest", "work-local-md", "configuration"]
+    difficulty: "basic"
+
+  - id: "ch39-08-daily-digest-012"
+    front: "Why does the digest include a weekly priorities reminder every single day?"
+    back: "Daily urgency reliably hijacks weekly importance. Without the reminder, high-urgency low-importance items crowd out the week's actual priorities — the reminder re-anchors each morning to what matters at the weekly level."
+    tags: ["daily-digest", "priorities", "cognitive-load"]
+    difficulty: "intermediate"
+    why: "What would a digest look like after one month without the weekly priorities reminder?"
+
+  - id: "ch39-08-daily-digest-013"
+    front: "Why is a longer digest a failure mode rather than a sign of thoroughness?"
+    back: "A digest that exceeds one page will not be read consistently. Items beyond one page belong in the dashboard (weekly review) or task list (full inventory) — the digest is a selection tool, not a coverage tool."
+    tags: ["daily-digest", "length-rules"]
+    difficulty: "advanced"
+    why: "Where should items that exceed the digest page limit actually live in the system?"
+
+  - id: "ch39-08-daily-digest-014"
+    front: "Monday is planning mode; Friday is closing mode. Why do different cognitive states require different digest structures?"
+    back: "Monday needs a forward frame (what does the week look like?) to anchor planning decisions. Friday needs a closing frame (what was accomplished, what carries forward?) to prevent context loss over the weekend — using the same structure for both means one day's format serves the wrong cognitive need."
+    tags: ["daily-digest", "monday-variant", "friday-variant"]
+    difficulty: "advanced"
+    why: "What would a professional lose over the weekend if they skipped the Friday week-close digest?"
+
+  - id: "ch39-08-daily-digest-015"
+    front: "The digest works with work.local.md alone when MCP sources are not configured. What does the reader lose, and what remains?"
+    back: "Loses the calendar, email, and Slack layers. Retains projects, priorities, open delegations, and people context — enough for a useful brief focused on project memory and delegation tracking."
+    tags: ["daily-digest", "assembly-sources", "mcp"]
+    difficulty: "advanced"
+    why: "In what order should a new user add MCP sources to the digest configuration?"

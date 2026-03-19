@@ -1,0 +1,22 @@
+[
+  {"query": "We're planning to launch in Japan next quarter. What assumptions are we making that we haven't examined?", "should_trigger": true},
+  {"query": "Our migration plan assumes zero downtime. What am I not seeing?", "should_trigger": true},
+  {"query": "I wrote this business plan for a food delivery startup. Check my assumptions", "should_trigger": true},
+  {"query": "Before we commit to this architecture, what blind spots might we have?", "should_trigger": true},
+  {"query": "We're assuming our users will pay $50/month. What if that's wrong? What else are we assuming?", "should_trigger": true},
+  {"query": "This project plan looks solid but I'm nervous. Help me find what I'm taking for granted", "should_trigger": true},
+  {"query": "Our sales team assumes enterprise deals close in 90 days. What other assumptions are baked into our forecast?", "should_trigger": true},
+  {"query": "I'm about to propose this technical design to the CTO. What assumptions should I surface first?", "should_trigger": true},
+  {"query": "We're betting the company on this pivot. What could I be missing?", "should_trigger": true},
+  {"query": "My startup pitch assumes TAM of $5B. What other assumptions am I making without realizing it?", "should_trigger": true},
+  {"query": "Write me a risk assessment template for SOC 2 compliance", "should_trigger": false},
+  {"query": "Help me create a SWOT analysis for our product", "should_trigger": false},
+  {"query": "Debug this SQL query — it's returning wrong results for aggregated sales data", "should_trigger": false},
+  {"query": "What's the best way to structure a Next.js app with authentication?", "should_trigger": false},
+  {"query": "Review this code for security vulnerabilities", "should_trigger": false},
+  {"query": "I need a competitive analysis of Notion vs Confluence vs Coda", "should_trigger": false},
+  {"query": "Write a test plan for our checkout flow", "should_trigger": false},
+  {"query": "Help me set up monitoring and alerting for our Kubernetes cluster", "should_trigger": false},
+  {"query": "Create a decision matrix for choosing between AWS, GCP, and Azure", "should_trigger": false},
+  {"query": "What are the pros and cons of microservices vs monolith?", "should_trigger": false}
+]

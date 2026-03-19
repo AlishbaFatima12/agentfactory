@@ -1,0 +1,54 @@
+{
+  "eval_id": "business",
+  "condition": "without_skill",
+  "expectations": [
+    {
+      "id": "E1",
+      "text": "Output produces a 4-category assumption matrix with sections for (a) Human Only, (b) AI Only, (c) Both, and (d) Emerged During Merge",
+      "passed": false,
+      "evidence": "Output uses an unstructured format: 'What You Listed' and 'Additional Assumptions to Consider'. No 4-category matrix. No (a)/(b)/(c)/(d) categorization. Assumptions are listed as a flat numbered list without source attribution."
+    },
+    {
+      "id": "E2",
+      "text": "Output categorizes at least 3 assumptions the user missed (category b items) that are substantive, not trivial",
+      "passed": true,
+      "evidence": "Output identifies 8 additional assumptions (data security, competitive landscape, price signaling, sales cycle, market size, technical adoption, compliance, churn). These are substantive. However, they are not categorized by source -- just listed as 'additional assumptions'."
+    },
+    {
+      "id": "E3",
+      "text": "Output assigns risk levels (reasonable, risky, or needs testing) to each assumption",
+      "passed": false,
+      "evidence": "No risk levels assigned to any assumption. The output describes concerns but does not classify them as reasonable, risky, or needs testing."
+    },
+    {
+      "id": "E4",
+      "text": "Output identifies at least 2 testable assumptions with concrete test methods, timelines, or decision thresholds",
+      "passed": false,
+      "evidence": "Recommendations section suggests 'Talk to 20-30 small law firm owners' and 'Research Clio's pricing' but these are generic suggestions, not tied to specific assumptions. No timelines. No decision thresholds. No test sequencing."
+    },
+    {
+      "id": "E5",
+      "text": "Output distinguishes between contextual assumptions (market, cultural) and structural assumptions (technical, systemic, scale)",
+      "passed": false,
+      "evidence": "No distinction between contextual and structural assumptions. All assumptions listed in a single flat list without type classification."
+    },
+    {
+      "id": "E6",
+      "text": "Category (d) contains at least 1 genuine emergent assumption that is not a restatement of items from other categories",
+      "passed": false,
+      "evidence": "No category (d) exists. No concept of 'emerged during merge' assumptions. The output does not attempt synthesis between human and AI perspectives."
+    },
+    {
+      "id": "E7",
+      "text": "Output identifies critical path assumptions -- which assumptions, if wrong, would invalidate the entire plan",
+      "passed": false,
+      "evidence": "The last line ('The pricing model and sales cycle mismatch is probably the most critical risk') gestures at critical path analysis but does not systematically identify which assumptions are plan-killing vs. merely inconvenient."
+    }
+  ],
+  "summary": {
+    "pass_rate": "1/7 (14%)",
+    "total_expectations": 7,
+    "passed": 1,
+    "failed": 6
+  }
+}

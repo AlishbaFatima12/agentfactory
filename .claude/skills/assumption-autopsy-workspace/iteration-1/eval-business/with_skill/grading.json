@@ -1,0 +1,54 @@
+{
+  "eval_id": "business",
+  "condition": "with_skill",
+  "expectations": [
+    {
+      "id": "E1",
+      "text": "Output produces a 4-category assumption matrix with sections for (a) Human Only, (b) AI Only, (c) Both, and (d) Emerged During Merge",
+      "passed": true,
+      "evidence": "Output has clearly labeled sections: '### (a) Found by Human Only', '### (b) Found by AI Only', '### (c) Found by Both', '### (d) Emerged During Merge' -- each with a properly formatted table."
+    },
+    {
+      "id": "E2",
+      "text": "Output categorizes at least 3 assumptions the user missed (category b items) that are substantive, not trivial",
+      "passed": true,
+      "evidence": "Category (b) contains 8 substantive assumptions: regulatory compliance, competitive landscape, unit economics, LinkedIn decision-maker presence, segment heterogeneity, domain expertise, churn rate, and technical infrastructure. All are non-trivial and actionable."
+    },
+    {
+      "id": "E3",
+      "text": "Output assigns risk levels (reasonable, risky, or needs testing) to each assumption",
+      "passed": true,
+      "evidence": "Every assumption in all 4 categories has a 'Risk Level' column with values of Reasonable, Risky, or Needs Testing. No assumption is left unrated."
+    },
+    {
+      "id": "E4",
+      "text": "Output identifies at least 2 testable assumptions with concrete test methods, timelines, or decision thresholds",
+      "passed": true,
+      "evidence": "Risk Assessment table provides test methods for 8 assumptions. Recommended Test Sequence provides 4 tests with specific timelines (1 week, 2 weeks, 4 weeks) and sequencing logic. Examples: 'Check bar association cloud storage rules in top 5 target states' (1 week), 'Run LinkedIn ads to landing page with demo booking, measure click-through, demo requests, and close time' (4 weeks)."
+    },
+    {
+      "id": "E5",
+      "text": "Output distinguishes between contextual assumptions (market, cultural) and structural assumptions (technical, systemic, scale)",
+      "passed": true,
+      "evidence": "Explicit 'Contextual vs. Structural Pattern' section at the bottom. Human assumptions described as 'market/behavioral -- focused on do customers want this and can we reach them'. AI assumptions described as 'structural assumptions covering legal compliance, competitive dynamics, unit economics'. Pattern commentary included in each category section."
+    },
+    {
+      "id": "E6",
+      "text": "Category (d) contains at least 1 genuine emergent assumption that is not a restatement of items from other categories",
+      "passed": true,
+      "evidence": "Category (d) has 3 emergent items. Most notable: 'The sales cycle for law firm software is short enough to sustain a low-touch $99/month acquisition model' -- this is genuinely emergent, surfacing from the tension between (a3) LinkedIn ads and (b4) unit economics. It is not a restatement of either source assumption."
+    },
+    {
+      "id": "E7",
+      "text": "Output identifies critical path assumptions -- which assumptions, if wrong, would invalidate the entire plan",
+      "passed": true,
+      "evidence": "Dedicated 'Critical Path Assumptions' section listing 3 plan-killing assumptions: regulatory compliance, sales cycle/pricing model mismatch, and competitive differentiation."
+    }
+  ],
+  "summary": {
+    "pass_rate": "7/7 (100%)",
+    "total_expectations": 7,
+    "passed": 7,
+    "failed": 0
+  }
+}

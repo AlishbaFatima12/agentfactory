@@ -1,0 +1,84 @@
+deck:
+  id: "ch39-l14-complete-agentic-office"
+  title: "The Complete Agentic Office"
+  description: "Flashcards for Lesson 14 — capstone integration, smoke test, maintenance cadence, trigger events, and escalation thresholds"
+  tags: ["chapter-39", "capstone", "smoke-test", "maintenance-cadence", "work-local-md", "agent-integrations"]
+  version: 1
+
+cards:
+  - id: "ch39-l14-complete-agentic-office-001"
+    front: "What are the seven sections of the work.local.md completeness checklist?"
+    back: "1. Personal\n2. Team\n3. Projects\n4. Organisational\n5. Digest configuration\n6. Dashboard configuration\n7. Agent integrations"
+    tags: ["work-local-md", "completeness"]
+    difficulty: "basic"
+
+  - id: "ch39-l14-complete-agentic-office-002"
+    front: "What are the three commands in the integration smoke test, run in order?"
+    back: "1. /agentic-office:progress-tracker\n2. /agentic-office:digest\n3. /agentic-office:workplace-search"
+    tags: ["smoke-test", "commands"]
+    difficulty: "basic"
+
+  - id: "ch39-l14-complete-agentic-office-003"
+    front: "What do the A, B, and C grades mean in the smoke test evaluation framework?"
+    back: "A: could forward directly.\nB: needs minor editing.\nC: needs significant work."
+    tags: ["smoke-test", "grading"]
+    difficulty: "intermediate"
+
+  - id: "ch39-l14-complete-agentic-office-004"
+    front: "Why is a C-grade smoke test output a diagnostic, not a sign of system failure?"
+    back: "The agents are working correctly — they are surfacing what work.local.md does not know. Each C-grade maps precisely to a gap in a specific memory section. The system cannot produce what it was not configured with; the grade is an instruction, not a verdict."
+    tags: ["smoke-test", "grading"]
+    difficulty: "intermediate"
+    why: "What is the danger of interpreting a C-grade as 'the agents are not working' rather than 'my memory file has gaps'?"
+
+  - id: "ch39-l14-complete-agentic-office-005"
+    front: "What are the three most common root causes of C-grade smoke test outputs?"
+    back: "1. Layer 3 (projects not fully populated)\n2. chief_of_staff.feeds_from (domain agents not listed)\n3. Digest/dashboard configuration gaps"
+    tags: ["smoke-test", "diagnosis"]
+    difficulty: "basic"
+
+  - id: "ch39-l14-complete-agentic-office-006"
+    front: "An agentic office was configured six months ago and never maintained. What is the risk of its outputs now?"
+    back: "Stale context produces confidently wrong outputs — project statuses, people priorities, and terminology that reflect the past, not the present. A confidently wrong output is worse than no output because it misleads rather than surfacing a gap."
+    tags: ["maintenance-cadence", "context-decay"]
+    difficulty: "intermediate"
+    why: "Why is a confidently wrong output more dangerous than an empty output?"
+
+  - id: "ch39-l14-complete-agentic-office-007"
+    front: "What are the four frequencies of the maintenance cadence and what role does the user play at each?"
+    back: "Daily: confirm Memory Keeper proposals, act on digest flags (automatic).\nWeekly: 20-30 min to review audits and update project statuses.\nMonthly: audit terminology, people, and project list.\nQuarterly: restructure priorities, thresholds, and org structure."
+    tags: ["maintenance-cadence"]
+    difficulty: "intermediate"
+
+  - id: "ch39-l14-complete-agentic-office-008"
+    front: "What are the four escalation threshold item types defined in Lesson 14 and their default thresholds?"
+    back: "Delegation unconfirmed: 24 hours.\nProject status stale: 7 days.\nCompliance obligation: 3 days before due.\nVendor renewal: 90 days before renewal."
+    tags: ["escalation-thresholds"]
+    difficulty: "intermediate"
+
+  - id: "ch39-l14-complete-agentic-office-009"
+    front: "What is a trigger event configuration in work.local.md and what does it achieve?"
+    back: "A mapping from an external event (meeting ends, delegation made, new project starts) to an automatic agent action. Trigger events convert reactive monitoring into proactive coordination — agents act when the world changes, not only when prompted."
+    tags: ["trigger-events", "agent-integrations"]
+    difficulty: "advanced"
+    why: "What is the difference between a system that responds to triggers vs one that only responds to prompts?"
+
+  - id: "ch39-l14-complete-agentic-office-010"
+    front: "The capstone smoke test asks /agentic-office:workplace-search 'what is at risk right now?' and Project Nighthawk does not appear. Where do you look first to fix this?"
+    back: "Layer 3 (Projects section) of work.local.md — the project entry for Nighthawk is either missing, incomplete, or lacks a risk field that the search can surface. The search can only surface what the memory contains."
+    tags: ["smoke-test", "diagnosis", "workplace-search"]
+    difficulty: "intermediate"
+    why: "What would you add to the Nighthawk project entry to ensure it surfaces in every at-risk query?"
+
+  - id: "ch39-l14-complete-agentic-office-011"
+    front: "Which section of work.local.md must be populated for the Chief of Staff to pull data from domain agents like the finance or HR agent?"
+    back: "The chief_of_staff.feeds_from list inside the agent_integrations section."
+    tags: ["agent-integrations", "chief-of-staff"]
+    difficulty: "basic"
+
+  - id: "ch39-l14-complete-agentic-office-012"
+    front: "How do you grade each smoke test output, and what does each grade tell you to do next?"
+    back: "Grade A: no action needed. Grade B: identify and fix the minor gap. Grade C: map the gap to a specific work.local.md section, add the missing content, re-run the command, and regrade."
+    tags: ["smoke-test", "grading"]
+    difficulty: "advanced"
+    why: "Why is regrading after fixing a C-output important rather than moving on to the next command?"

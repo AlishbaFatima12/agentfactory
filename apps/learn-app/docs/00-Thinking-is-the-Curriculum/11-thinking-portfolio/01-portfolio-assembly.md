@@ -149,3 +149,7 @@ BASELINE RESPONSES: [paste].
 BASELINE THINKING SCORE CARD: [paste your 5 baseline scores].
 POST-ASSESSMENT RESPONSES: [paste].
 ```
+
+## Flashcards Study Aid
+
+<Flashcards />

@@ -1,0 +1,1390 @@
+{
+  "exit_reason": "max_iterations (5)",
+  "original_description": "Maps rippling effects of decisions across domains by tracing first, second, and third-order consequences and identifying feedback loops. Use this skill whenever the user needs impact analysis, wants to understand consequences of a decision, says \"what are the effects of\", \"how will this ripple\", \"impact analysis\", \"second-order effects\", \"cascade effects\", \"what could go wrong\", or needs to evaluate a decision across multiple stakeholder domains. Also trigger for architecture decisions, product launches, policy changes, organizational restructuring, technology migrations, or process changes where effects cross boundaries.",
+  "best_description": "Maps rippling effects of decisions across domains by tracing first, second, and third-order consequences and identifying feedback loops. Use this skill whenever the user needs impact analysis, wants to understand consequences of a decision, says \"what are the effects of\", \"how will this ripple\", \"impact analysis\", \"second-order effects\", \"cascade effects\", \"what could go wrong\", or needs to evaluate a decision across multiple stakeholder domains. Also trigger for architecture decisions, product launches, policy changes, organizational restructuring, technology migrations, or process changes where effects cross boundaries.",
+  "best_score": "4/8",
+  "best_train_score": "6/12",
+  "best_test_score": "4/8",
+  "final_description": "Invoke this skill \u2014 do not answer freestyle \u2014 whenever someone presents a decision or change and asks about its broader consequences across multiple areas. This skill's structured cascade mapping methodology produces superior analysis to ad-hoc reasoning. Trigger for: budget cuts, tech migrations, reorgs, policy changes, pricing shifts, open-sourcing, competitive responses, RTO mandates, SDK deprecations, vendor switches, or ANY scenario where someone asks \"what happens if we...\", \"what breaks downstream\", \"map the effects across\", \"ripple effects\", or \"what does this mean for [multiple teams/areas]\". Not for writing code, PR reviews, documentation, or infrastructure setup.",
+  "iterations_run": 5,
+  "holdout": 0.4,
+  "train_size": 12,
+  "test_size": 8,
+  "history": [
+    {
+      "iteration": 1,
+      "description": "Maps rippling effects of decisions across domains by tracing first, second, and third-order consequences and identifying feedback loops. Use this skill whenever the user needs impact analysis, wants to understand consequences of a decision, says \"what are the effects of\", \"how will this ripple\", \"impact analysis\", \"second-order effects\", \"cascade effects\", \"what could go wrong\", or needs to evaluate a decision across multiple stakeholder domains. Also trigger for architecture decisions, product launches, policy changes, organizational restructuring, technology migrations, or process changes where effects cross boundaries.",
+      "train_passed": 6,
+      "train_failed": 6,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "The board wants to cut R&D budget by 30%. Help me think through what breaks downstream",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What happens if we open-source our core product? I need to understand effects across business, legal, community",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our main competitor just dropped prices 40%. Map what this ripples through our org",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're deprecating our Python SDK and going Rust-only. Map the impact across our developer ecosystem",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're moving our data center from AWS to GCP. What are all the ripple effects across teams?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our CEO just announced mandatory RTO 3 days/week. Help me map what this means for engineering, recruiting, and culture",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Write a bash script that monitors our deployment pipeline for failures",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I set up Terraform for multi-region AWS deployment?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Review my resume and suggest improvements",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you review this pull request for me? It changes the cascade delete behavior in our ORM",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Write unit tests for our user authentication module",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a technical design doc for our new caching layer",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 4,
+      "test_failed": 4,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "We're switching from Slack to Microsoft Teams company-wide. What are the knock-on effects?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "If we acquire this 50-person startup, what cascades through HR, engineering, legal, and product?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to understand the cascade effects of adopting AI code review for all PRs",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm proposing we switch from REST to GraphQL across all microservices. What are the second-order effects?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What's the best database for a real-time analytics pipeline processing 10M events/day?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Create a project timeline for our Q3 product launch",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a pros/cons list for switching to TypeScript",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to debug this memory leak in our Node.js service",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 6,
+      "failed": 6,
+      "total": 12,
+      "results": [
+        {
+          "query": "The board wants to cut R&D budget by 30%. Help me think through what breaks downstream",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What happens if we open-source our core product? I need to understand effects across business, legal, community",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our main competitor just dropped prices 40%. Map what this ripples through our org",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're deprecating our Python SDK and going Rust-only. Map the impact across our developer ecosystem",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're moving our data center from AWS to GCP. What are all the ripple effects across teams?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our CEO just announced mandatory RTO 3 days/week. Help me map what this means for engineering, recruiting, and culture",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Write a bash script that monitors our deployment pipeline for failures",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I set up Terraform for multi-region AWS deployment?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Review my resume and suggest improvements",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you review this pull request for me? It changes the cascade delete behavior in our ORM",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Write unit tests for our user authentication module",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a technical design doc for our new caching layer",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "description": "Use this skill when someone describes a decision, change, or event and wants to understand what happens next across multiple areas. Trigger when the user asks to think through downstream consequences, map effects across teams or domains, understand what breaks or changes as a result of a decision, or trace how a change ripples through an organization or ecosystem. Common patterns: \"what happens if we [do X]\", \"help me think through what breaks\", \"map the impact across\", \"what does this mean for [A, B, and C]\", \"how will this affect\", or any request to systematically trace consequences of budget cuts, policy changes, technology migrations, org restructuring, pricing changes, product decisions, or strategic shifts beyond their immediate first-order effects.",
+      "train_passed": 6,
+      "train_failed": 6,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "The board wants to cut R&D budget by 30%. Help me think through what breaks downstream",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What happens if we open-source our core product? I need to understand effects across business, legal, community",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our main competitor just dropped prices 40%. Map what this ripples through our org",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're deprecating our Python SDK and going Rust-only. Map the impact across our developer ecosystem",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our CEO just announced mandatory RTO 3 days/week. Help me map what this means for engineering, recruiting, and culture",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're moving our data center from AWS to GCP. What are all the ripple effects across teams?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Write a bash script that monitors our deployment pipeline for failures",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Review my resume and suggest improvements",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you review this pull request for me? It changes the cascade delete behavior in our ORM",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I set up Terraform for multi-region AWS deployment?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Write unit tests for our user authentication module",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a technical design doc for our new caching layer",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 4,
+      "test_failed": 4,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "We're switching from Slack to Microsoft Teams company-wide. What are the knock-on effects?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "If we acquire this 50-person startup, what cascades through HR, engineering, legal, and product?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm proposing we switch from REST to GraphQL across all microservices. What are the second-order effects?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to understand the cascade effects of adopting AI code review for all PRs",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What's the best database for a real-time analytics pipeline processing 10M events/day?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Create a project timeline for our Q3 product launch",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a pros/cons list for switching to TypeScript",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to debug this memory leak in our Node.js service",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 6,
+      "failed": 6,
+      "total": 12,
+      "results": [
+        {
+          "query": "The board wants to cut R&D budget by 30%. Help me think through what breaks downstream",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What happens if we open-source our core product? I need to understand effects across business, legal, community",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our main competitor just dropped prices 40%. Map what this ripples through our org",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're deprecating our Python SDK and going Rust-only. Map the impact across our developer ecosystem",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our CEO just announced mandatory RTO 3 days/week. Help me map what this means for engineering, recruiting, and culture",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're moving our data center from AWS to GCP. What are all the ripple effects across teams?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Write a bash script that monitors our deployment pipeline for failures",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Review my resume and suggest improvements",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you review this pull request for me? It changes the cascade delete behavior in our ORM",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I set up Terraform for multi-region AWS deployment?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Write unit tests for our user authentication module",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a technical design doc for our new caching layer",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "iteration": 3,
+      "description": "Use this skill any time someone presents a specific decision or change and asks you to trace its consequences, downstream effects, or cross-domain impact. The user has made (or is considering) a concrete action \u2014 budget cuts, technology migrations, policy changes, org restructuring, pricing shifts, product pivots \u2014 and wants to systematically understand what happens next across multiple teams, functions, or stakeholder groups. Invoke this skill when the request goes beyond \"help me decide\" into \"help me see all the ways this plays out.\" Key signals: the user names a decision AND asks about effects on multiple areas, mentions ripple effects, downstream consequences, what breaks, or cross-team impact. Do NOT use for implementation tasks like writing code, reviewing PRs, creating docs, or setting up infrastructure \u2014 even if the word \"cascade\" appears.",
+      "train_passed": 6,
+      "train_failed": 6,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "What happens if we open-source our core product? I need to understand effects across business, legal, community",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "The board wants to cut R&D budget by 30%. Help me think through what breaks downstream",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're deprecating our Python SDK and going Rust-only. Map the impact across our developer ecosystem",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our main competitor just dropped prices 40%. Map what this ripples through our org",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're moving our data center from AWS to GCP. What are all the ripple effects across teams?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Write a bash script that monitors our deployment pipeline for failures",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Our CEO just announced mandatory RTO 3 days/week. Help me map what this means for engineering, recruiting, and culture",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Review my resume and suggest improvements",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you review this pull request for me? It changes the cascade delete behavior in our ORM",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I set up Terraform for multi-region AWS deployment?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Write unit tests for our user authentication module",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a technical design doc for our new caching layer",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 4,
+      "test_failed": 4,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "We're switching from Slack to Microsoft Teams company-wide. What are the knock-on effects?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "If we acquire this 50-person startup, what cascades through HR, engineering, legal, and product?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm proposing we switch from REST to GraphQL across all microservices. What are the second-order effects?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to understand the cascade effects of adopting AI code review for all PRs",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What's the best database for a real-time analytics pipeline processing 10M events/day?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Create a project timeline for our Q3 product launch",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a pros/cons list for switching to TypeScript",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to debug this memory leak in our Node.js service",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 6,
+      "failed": 6,
+      "total": 12,
+      "results": [
+        {
+          "query": "What happens if we open-source our core product? I need to understand effects across business, legal, community",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "The board wants to cut R&D budget by 30%. Help me think through what breaks downstream",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're deprecating our Python SDK and going Rust-only. Map the impact across our developer ecosystem",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our main competitor just dropped prices 40%. Map what this ripples through our org",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're moving our data center from AWS to GCP. What are all the ripple effects across teams?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Write a bash script that monitors our deployment pipeline for failures",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Our CEO just announced mandatory RTO 3 days/week. Help me map what this means for engineering, recruiting, and culture",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Review my resume and suggest improvements",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you review this pull request for me? It changes the cascade delete behavior in our ORM",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I set up Terraform for multi-region AWS deployment?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Write unit tests for our user authentication module",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a technical design doc for our new caching layer",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "iteration": 4,
+      "description": "Trigger when someone says: \"what happens if we...\", \"map the impact of...\", \"what breaks downstream\", \"ripple effects across...\", \"help me think through the consequences\", or \"what does [change] mean for [multiple areas]\". This skill creates structured cascade maps tracing first, second, and third-order effects of decisions across domains. Use for any strategic decision impact analysis: budget changes, tech migrations, policy shifts, reorgs, pricing moves, product pivots, competitive responses. Do NOT use for writing code, reviewing PRs, creating docs, or infrastructure setup.",
+      "train_passed": 6,
+      "train_failed": 6,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "The board wants to cut R&D budget by 30%. Help me think through what breaks downstream",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What happens if we open-source our core product? I need to understand effects across business, legal, community",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our main competitor just dropped prices 40%. Map what this ripples through our org",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're deprecating our Python SDK and going Rust-only. Map the impact across our developer ecosystem",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're moving our data center from AWS to GCP. What are all the ripple effects across teams?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Write a bash script that monitors our deployment pipeline for failures",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Our CEO just announced mandatory RTO 3 days/week. Help me map what this means for engineering, recruiting, and culture",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Review my resume and suggest improvements",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I set up Terraform for multi-region AWS deployment?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you review this pull request for me? It changes the cascade delete behavior in our ORM",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Write unit tests for our user authentication module",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a technical design doc for our new caching layer",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 4,
+      "test_failed": 4,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "We're switching from Slack to Microsoft Teams company-wide. What are the knock-on effects?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "If we acquire this 50-person startup, what cascades through HR, engineering, legal, and product?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm proposing we switch from REST to GraphQL across all microservices. What are the second-order effects?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to understand the cascade effects of adopting AI code review for all PRs",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What's the best database for a real-time analytics pipeline processing 10M events/day?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Create a project timeline for our Q3 product launch",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a pros/cons list for switching to TypeScript",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to debug this memory leak in our Node.js service",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 6,
+      "failed": 6,
+      "total": 12,
+      "results": [
+        {
+          "query": "The board wants to cut R&D budget by 30%. Help me think through what breaks downstream",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What happens if we open-source our core product? I need to understand effects across business, legal, community",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our main competitor just dropped prices 40%. Map what this ripples through our org",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're deprecating our Python SDK and going Rust-only. Map the impact across our developer ecosystem",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're moving our data center from AWS to GCP. What are all the ripple effects across teams?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Write a bash script that monitors our deployment pipeline for failures",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Our CEO just announced mandatory RTO 3 days/week. Help me map what this means for engineering, recruiting, and culture",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Review my resume and suggest improvements",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I set up Terraform for multi-region AWS deployment?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you review this pull request for me? It changes the cascade delete behavior in our ORM",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Write unit tests for our user authentication module",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a technical design doc for our new caching layer",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "iteration": 5,
+      "description": "Invoke this skill \u2014 do not answer freestyle \u2014 whenever someone presents a decision or change and asks about its broader consequences across multiple areas. This skill's structured cascade mapping methodology produces superior analysis to ad-hoc reasoning. Trigger for: budget cuts, tech migrations, reorgs, policy changes, pricing shifts, open-sourcing, competitive responses, RTO mandates, SDK deprecations, vendor switches, or ANY scenario where someone asks \"what happens if we...\", \"what breaks downstream\", \"map the effects across\", \"ripple effects\", or \"what does this mean for [multiple teams/areas]\". Not for writing code, PR reviews, documentation, or infrastructure setup.",
+      "train_passed": 6,
+      "train_failed": 6,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "The board wants to cut R&D budget by 30%. Help me think through what breaks downstream",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What happens if we open-source our core product? I need to understand effects across business, legal, community",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our main competitor just dropped prices 40%. Map what this ripples through our org",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're deprecating our Python SDK and going Rust-only. Map the impact across our developer ecosystem",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're moving our data center from AWS to GCP. What are all the ripple effects across teams?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our CEO just announced mandatory RTO 3 days/week. Help me map what this means for engineering, recruiting, and culture",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Write a bash script that monitors our deployment pipeline for failures",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Review my resume and suggest improvements",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I set up Terraform for multi-region AWS deployment?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you review this pull request for me? It changes the cascade delete behavior in our ORM",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Write unit tests for our user authentication module",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a technical design doc for our new caching layer",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 4,
+      "test_failed": 4,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "We're switching from Slack to Microsoft Teams company-wide. What are the knock-on effects?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "If we acquire this 50-person startup, what cascades through HR, engineering, legal, and product?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm proposing we switch from REST to GraphQL across all microservices. What are the second-order effects?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I want to understand the cascade effects of adopting AI code review for all PRs",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What's the best database for a real-time analytics pipeline processing 10M events/day?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Create a project timeline for our Q3 product launch",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a pros/cons list for switching to TypeScript",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to debug this memory leak in our Node.js service",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 6,
+      "failed": 6,
+      "total": 12,
+      "results": [
+        {
+          "query": "The board wants to cut R&D budget by 30%. Help me think through what breaks downstream",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "What happens if we open-source our core product? I need to understand effects across business, legal, community",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our main competitor just dropped prices 40%. Map what this ripples through our org",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're deprecating our Python SDK and going Rust-only. Map the impact across our developer ecosystem",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "We're moving our data center from AWS to GCP. What are all the ripple effects across teams?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Our CEO just announced mandatory RTO 3 days/week. Help me map what this means for engineering, recruiting, and culture",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "Write a bash script that monitors our deployment pipeline for failures",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Review my resume and suggest improvements",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "How do I set up Terraform for multi-region AWS deployment?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Can you review this pull request for me? It changes the cascade delete behavior in our ORM",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Write unit tests for our user authentication module",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "Help me write a technical design doc for our new caching layer",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    }
+  ]
+}

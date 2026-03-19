@@ -1,0 +1,67 @@
+deck:
+  id: "ch37-14-capstone-full-employee-lifecycle"
+  title: "Capstone Full Employee Lifecycle"
+  description: "Key concepts and review questions covering capstone full employee lifecycle."
+  tags: ["capstone", "full", "employee", "lifecycle", "chapter-37"]
+  version: 1
+
+cards:
+  - id: "ch37-14-capstone-full-employee-lifecycle-001"
+    front: "What are the six stages of the employee lifecycle in Chapter 37?"
+    back: "Stage 1: HIRE, Stage 2: ONBOARD, Stage 3: DEVELOP, Stage 4: RETAIN/PROMOTE, Stage 5: OFFBOARD, Stage 6: CONTINUOUS"
+    tags: ["six-stages", "employee-lifecycle"]
+    difficulty: "basic"
+
+  - id: "ch37-14-capstone-full-employee-lifecycle-002"
+    front: "Which skills are used in the HIRE stage of the lifecycle?"
+    back: "/jd (custom), /interview-prep (official), /comp-analysis (official), /draft-offer (official). The onboarding-orchestrator triggers automatically when the new hire record appears in the HRIS."
+    tags: ["hire-stage", "skills", "lifecycle"]
+    difficulty: "basic"
+
+  - id: "ch37-14-capstone-full-employee-lifecycle-003"
+    front: "What sensitivity label applies to a job description, and what label applies to an offer letter?"
+    back: "Job description = ROUTINE. Offer letter = CONFIDENTIAL (contains personal data: name, salary, terms)."
+    tags: ["sensitivity-label", "label-applies", "description"]
+    difficulty: "intermediate"
+
+  - id: "ch37-14-capstone-full-employee-lifecycle-004"
+    front: "What is the primary human judgment moment in the DEVELOP stage?"
+    back: "The performance rating and the specific narrative about what the employee did well and what needs to change. The AI produces the structure and a competent draft — but the rating and the specific evidence are the manager's judgment, not the tool's."
+    tags: ["primary-human", "human-judgment", "moment"]
+    difficulty: "basic"
+
+  - id: "ch37-14-capstone-full-employee-lifecycle-005"
+    front: "How many official plugin skills and how many custom plugin skills does Chapter 37 cover in total?"
+    back: "9 official plugin skills (from Anthropic human-resources plugin) + 5 custom skills (from Panaversity hr-operations plugin) + 4 persistent agents."
+    tags: ["official-plugin", "plugin-skills", "custom"]
+    difficulty: "intermediate"
+
+  - id: "ch37-14-capstone-full-employee-lifecycle-006"
+    front: "What does hr.local.md do, and why does the capstone reflection include a section on what you would add to it?"
+    back: "hr.local.md is the organisation-specific configuration file that makes the plugin stack jurisdiction-aware (statutory rates, notice periods, benefits, escalation contacts). The reflection section reveals gaps: places where skill outputs used generic defaults instead of your specific requirements — each gap is a missing hr.local.md entry."
+    tags: ["capstone-reflection", "reflection-include", "local"]
+    difficulty: "advanced"
+
+  - id: "ch37-14-capstone-full-employee-lifecycle-007"
+    front: "What three documents does the OFFBOARD stage produce in the lifecycle sprint?"
+    back: "An offboarding plan (/offboard), a knowledge capture interview guide (/knowledge), and the offboarding-knowledge-agent generates its own handover task checklist automatically on HRIS resignation trigger."
+    tags: ["offboard-stage", "stage-produce", "documents"]
+    difficulty: "intermediate"
+
+  - id: "ch37-14-capstone-full-employee-lifecycle-008"
+    front: "What is the 'human judgment reflection' table for, and what is the most important question in it?"
+    back: "It systematically captures what the AI contributed and where human judgment was required at each lifecycle stage. The most important question is 'where did it need human judgment?' — this is what a CHRO needs to know before deploying the stack in a real organisation."
+    tags: ["human-judgment", "judgment-reflection", "table"]
+    difficulty: "intermediate"
+
+  - id: "ch37-14-capstone-full-employee-lifecycle-009"
+    front: "Which lifecycle stages involve CONFIDENTIAL-labelled outputs?"
+    back: "Stage 1 (comp analysis, offer letter), Stage 3 (performance review), Stage 4 (talent assessment), Stage 5 (offboarding plan, knowledge capture guide). ROUTINE outputs include the JD, interview plan, onboarding plan, and structural org models."
+    tags: ["lifecycle-stages", "stages-involve", "confidential-labelled"]
+    difficulty: "basic"
+
+  - id: "ch37-14-capstone-full-employee-lifecycle-010"
+    front: "What is lifecycle orchestration, and how does it differ from using individual skills in isolation?"
+    back: "Orchestration means selecting the correct skill for each lifecycle stage, sequencing them so the output of each stage informs the next, and applying judgment at each handoff. Isolation means using a single tool for a single task without the context of what came before or what comes after."
+    tags: ["lifecycle-orchestration", "individual-skills", "differ"]
+    difficulty: "intermediate"

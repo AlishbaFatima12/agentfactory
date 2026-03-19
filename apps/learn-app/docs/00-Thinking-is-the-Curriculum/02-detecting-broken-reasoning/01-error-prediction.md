@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Error Prediction"
 description: "Predict where AI will fail before prompting it, then annotate AI responses line-by-line using an Error Taxonomy to build systematic error detection skill"
 keywords:
@@ -110,7 +111,19 @@ You used the **Prediction Lock** format in [Chapter 1, Exercise 1](../01-asking-
 
 ### What You Do
 
-You receive a complex question. Before prompting any AI, write down: (a) what you think the correct analysis involves (key factors, tradeoffs, data needed), (b) where you predict AI will be strong in its analysis, and (c) where you predict AI will make errors or miss important context. Submit this prediction. Then prompt both Claude and ChatGPT with the identical question. Annotate each response line by line using the Error Taxonomy: factual error, logical gap, false confidence, missing context, correlation-causation confusion, outdated information, fabricated citation, cultural blind spot.
+**Step 1 — Write your sealed prediction (no AI).** Before prompting any AI, write down:
+
+- What you think the correct analysis involves (key factors, tradeoffs, data needed)
+- Where you predict AI will be **strong** in its analysis
+- Where you predict AI will **make errors** or miss important context — name the specific Error Taxonomy categories you expect
+
+This is your prediction document. Write it before moving to Step 2.
+
+**Step 2 — Get two AI responses.** Choose a scenario below, then prompt both Claude and ChatGPT with the identical question. Save both full responses.
+
+**Step 3 — Annotate line by line.** Go through each AI response sentence by sentence. For every claim, label it using the Error Taxonomy above (factual error, logical gap, false confidence, etc.). If a sentence is correct, mark it as "no error detected."
+
+**Step 4 — Build your comparison table.** Compare your predictions from Step 1 against the actual errors you found in Step 3 (see template below). Count how many of each error type you found across both tools.
 
 ### Choose Your Scenario
 
@@ -134,38 +147,110 @@ Choose one.
 ---
 
 :::info Your Deliverable
-Your sealed prediction document (before AI) listing expected AI strengths and weaknesses. Two annotated AI responses with every sentence labeled using the Error Taxonomy categories. A comparison table showing: your predicted errors vs. actual errors found, your predicted strengths vs. actual strengths. A count of each error type found across both tools.
-:::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+1. Your sealed prediction document (written before AI) listing expected strengths and error types
+2. Two annotated AI responses with every sentence labeled using the Error Taxonomy
+3. A comparison table: predicted errors vs. actual errors found (see template below)
+4. A count of each error type found across both tools
+   :::
+
+<details>
+<summary>Prediction Document Template (click to expand)</summary>
+
+**PREDICTION DOCUMENT** (write this BEFORE prompting AI)
+
+**Scenario chosen:** \_\_\_
+
+**What the correct analysis should cover:**
+
+- Key factor 1: \_\_\_
+- Key factor 2: \_\_\_
+- Key factor 3: \_\_\_
+
+**Where I predict AI will be strong:**
+
+- ***
+
+**Where I predict AI will make errors:**
+
+| Predicted Error Type (from taxonomy) | Why I expect this error                                 |
+| ------------------------------------ | ------------------------------------------------------- |
+| e.g. Missing context                 | AI won't know about recent policy changes in [country]  |
+| e.g. Cultural blind spot             | AI will assume Western/US context for this global issue |
+|                                      |                                                         |
+
+</details>
+
+<details>
+<summary>Prediction vs. Reality Comparison Table (click to expand)</summary>
+
+| Predicted Error | Did It Happen? | Actual Error Found (if different) | Error Category |
+| --------------- | -------------- | --------------------------------- | -------------- |
+|                 | Yes / No       |                                   |                |
+
+**Error Count Summary:**
+
+| Error Category                  | Claude | ChatGPT | Total |
+| ------------------------------- | ------ | ------- | ----- |
+| Factual error                   |        |         |       |
+| Logical gap                     |        |         |       |
+| False confidence                |        |         |       |
+| Missing context                 |        |         |       |
+| Correlation-causation confusion |        |         |       |
+| Outdated information            |        |         |       |
+| Fabricated citation             |        |         |       |
+| Cultural blind spot             |        |         |       |
+
+</details>
+
+<AICheck id="error-prediction" xp={50}>
+
 I am learning to detect errors in AI-generated analysis. I asked both Claude
-and ChatGPT: "[paste your chosen scenario question]"
-I then annotated both responses using an Error Taxonomy (factual error,
-logical gap, false confidence, missing context, correlation-causation
-confusion, outdated information, fabricated citation, cultural blind spot).
+and ChatGPT about a scenario question and then annotated both responses using
+an Error Taxonomy (factual error, logical gap, false confidence, missing
+context, correlation-causation confusion, outdated information, fabricated
+citation, cultural blind spot).
 Please:
 
 (1) Review my error annotations -- did I correctly identify each error?
-    Flag any false positives (things I marked as errors that are actually
-    correct) and false negatives (errors I missed).
+Flag any false positives (things I marked as errors that are actually
+correct) and false negatives (errors I missed).
 (2) Rate my error detection accuracy as a percentage.
 (3) For each error I missed, explain how I should have caught it.
 (4) Rate my use of the Error Taxonomy -- am I categorizing errors correctly
-    or misclassifying them?
+or misclassifying them?
 (5) What patterns do you see in my error detection -- which types am I good
-    at catching and which do I consistently miss?
+at catching and which do I consistently miss?
 
-Here are the AI responses with my annotations: [paste annotated responses].
-Here is my prediction document: [paste predictions].
+Here are the AI responses with my annotations:
+
+<AICheckField
+  name="annotated_responses"
+  placeholder="Paste your annotated responses here..."
+  rows={6}
+/>
+
+Here is my prediction document:
+
+<AICheckField
+  name="predictions"
+  placeholder="Paste your predictions here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
 ### What This Teaches You
 
 You learn that error detection is a trainable skill with specific categories, not just a vague feeling that something is off. By predicting AI errors before seeing them, you develop an internal model of where AI fails. The AI self-check reveals your own blind spots — the error types you consistently miss — which is exactly the information you need to improve.
+
+## Flashcards Study Aid
+
+<Flashcards />

@@ -1,0 +1,79 @@
+deck:
+  id: "ch38-01-three-operational-failure-modes"
+  title: "Three Operational Failure Modes"
+  description: "Key concepts and review questions covering three operational failure modes."
+  tags: ["operational", "failure", "modes", "chapter-38"]
+  version: 1
+
+cards:
+  - id: "ch38-01-three-operational-failure-modes-001"
+    front: "What is the Operations Intelligence Gap?"
+    back: "The delta between what an organisation should know about its own operations and what it actually knows. Almost every operational failure — cost overrun, process breakdown, compliance gap, change disaster — traces back to this gap."
+    tags: ["operations-intelligence", "intelligence-gap"]
+    difficulty: "basic"
+
+  - id: "ch38-01-three-operational-failure-modes-002"
+    front: "What is Vendor Sprawl?"
+    back: "The irrational accumulation of overlapping, unused, and auto-renewing vendor contracts. Caused by decentralised purchasing decisions with no cross-departmental view of the vendor portfolio. Results in overspend, missed renewal opportunities, and unknown-usage subscriptions."
+    tags: ["vendor-sprawl"]
+    difficulty: "basic"
+
+  - id: "ch38-01-three-operational-failure-modes-003"
+    front: "What is Process Rot?"
+    back: "The decay of documented processes until they no longer reflect operational reality. Each system change, team restructure, or tool replacement widens the gap between the SOP and what people actually do. Becomes critical when experienced staff leave and take undocumented knowledge with them."
+    tags: ["process-rot"]
+    difficulty: "basic"
+
+  - id: "ch38-01-three-operational-failure-modes-004"
+    front: "What is Compliance Drift?"
+    back: "The gradual divergence between obligations the organisation believes it is meeting and controls that are actually current. Caused by changes in technology, staff, and process that are applied to operations but not to the compliance register. Risk: audit surprise when evidence gaps are discovered."
+    tags: ["compliance-drift"]
+    difficulty: "basic"
+
+  - id: "ch38-01-three-operational-failure-modes-005"
+    front: "What are the three Operational Failure Modes?"
+    back: "1. Vendor Sprawl — invisible, accumulated vendor complexity and overspend. 2. Process Rot — documented processes that no longer match operational reality. 3. Compliance Drift — regulatory obligations that were once tracked but whose controls have since lapsed."
+    tags: ["operational-failure", "failure-modes"]
+    difficulty: "intermediate"
+
+  - id: "ch38-01-three-operational-failure-modes-006"
+    front: "Why does Vendor Sprawl persist in organisations?"
+    back: "Because purchasing decisions are made departmentally without a cross-departmental view. Renewal dates are not tracked systematically. The person who requested a tool may have left. Nobody has assembled a complete, current view of the entire vendor portfolio."
+    tags: ["vendor-sprawl", "sprawl-persist", "organisations"]
+    difficulty: "intermediate"
+
+  - id: "ch38-01-three-operational-failure-modes-007"
+    front: "Why does Process Rot occur even in well-managed organisations?"
+    back: "Because operational reality changes continuously (new systems, team restructures, regulatory updates) while documentation is only updated episodically. The gap widens with every unlogged change. Undocumented knowledge in individuals' heads is the most dangerous form."
+    tags: ["process-rot", "rot-occur", "well-managed"]
+    difficulty: "intermediate"
+
+  - id: "ch38-01-three-operational-failure-modes-008"
+    front: "What is the shared root cause of all three operational failure modes?"
+    back: "Invisibility. Vendor Sprawl is invisible vendor spend and overlap. Process Rot is invisible process decay. Compliance Drift is invisible obligation gaps. Making the invisible visible — the core purpose of operations intelligence — addresses all three."
+    tags: ["shared-root", "root-cause", "operational"]
+    difficulty: "intermediate"
+
+  - id: "ch38-01-three-operational-failure-modes-009"
+    front: "What plugin command addresses Vendor Sprawl directly?"
+    back: "/vendor-review — runs vendor portfolio audits, generates SLA scorecards, identifies renewal windows and rationalisation opportunities. The vendor-watchdog agent monitors the portfolio continuously between audits."
+    tags: ["plugin-command", "command-addresses", "vendor"]
+    difficulty: "basic"
+
+  - id: "ch38-01-three-operational-failure-modes-010"
+    front: "What is the difference between compliance non-compliance and compliance drift?"
+    back: "Non-compliance means deliberately or knowingly failing to meet an obligation. Compliance drift means the organisation does not know with certainty whether all obligations are fully met — the control map is incomplete or out of date. The risk is audit surprise rather than intentional violation."
+    tags: ["compliance-non-compliance", "compliance-drift", "difference"]
+    difficulty: "advanced"
+
+  - id: "ch38-01-three-operational-failure-modes-011"
+    front: "What does 'operations is an intelligence function' mean?"
+    back: "Operations' primary job is to make the invisible visible — to give leadership complete, accurate, current information about vendor spend, process health, compliance status, and operational risk. Without that intelligence, decisions are made on incomplete information."
+    tags: ["intelligence-function", "function-mean", "operations"]
+    difficulty: "intermediate"
+
+  - id: "ch38-01-three-operational-failure-modes-012"
+    front: "Which lesson addresses each failure mode in Chapter 38?"
+    back: "Vendor Sprawl → L03 (vendor audit), L04 (contract obligations). Process Rot → L05 (SOPs), L06 (change impact), L10 (incident RCA). Compliance Drift → L07 (compliance map), L08 (audit readiness). All three → L09 (risk register), L11 (metrics), L12 (agents), L13 (intelligence brief)."
+    tags: ["failure-mode", "addresses"]
+    difficulty: "advanced"

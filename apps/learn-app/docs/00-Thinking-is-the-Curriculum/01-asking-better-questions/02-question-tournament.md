@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+aicheck: true
 title: "The Question Tournament"
 description: "Compete with a partner to generate and rank diagnostic questions, then use AI to reveal which questions actually produce useful answers"
 keywords:
@@ -76,49 +77,120 @@ teaching_guide:
 
 **Layers Used:** Layer 3 (Live Defence), Layer 5 (Divergence Test)
 
+Use the same scenario you chose in [Exercise 1 (The Prediction Lock)](./01-prediction-lock.md).
+
 ### What You Do
 
-Working in pairs, each student generates 15 questions about the same scenario without AI. Swap question lists with your partner. Rank their 15 questions from most to least diagnostic and write a one-sentence justification for each ranking. Then take the top 5 from each list (10 total), feed them to both Claude and ChatGPT, and compare: which questions actually produced useful, divergent, actionable answers, and which produced generic filler?
+**Step 1 — Generate your questions (no AI).** Write 15 diagnostic questions about your scenario. Work independently, without any AI tool.
+
+**Step 2 — Swap and rank.** Exchange question lists with your partner. Rank their 15 questions from most to least diagnostic. Write a one-sentence justification for each ranking explaining why you placed it where you did.
+
+**Step 3 — Select the top 10.** Take the top 5 questions from your list and the top 5 from your partner's list — 10 questions total.
+
+**Step 4 — Test against AI.** Feed each of the 10 questions to both Claude and ChatGPT separately. Note a brief summary of each response.
+
+**Step 5 — Build the comparison table.** For each question, record the responses and judge whether they were genuinely useful or generic filler (see template below).
 
 :::tip Solo Learner Alternative
-Generate your 15 questions, then prompt AI: "You are my study partner. Generate 15 diagnostic questions for this scenario that are different from mine. Do not see my questions first." Once AI generates its 15, rank AI's questions and have AI rank yours. Then proceed with the comparison table. The dynamic is different — AI is more consistent than a human partner — but the skill of evaluating someone else's questions still develops.
+Generate your 15 questions, then prompt AI: "You are my study partner. Generate 15 diagnostic questions for this scenario that are different from mine. Do not see my questions first." Once AI generates its 15, rank AI's questions and have AI rank yours. Then proceed with Steps 3-5 using the combined lists.
 :::
 
 ---
 
 :::info Your Deliverable
-Your 15 original questions (written without AI). Your partner's 15 questions with your ranking and justification for each. A comparison table showing the top 10 questions, the AI responses from both tools, and a column marking each as "useful/actionable" or "generic/filler" with explanation.
-:::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+1. Your 15 original questions (written without AI)
+2. Your partner's 15 questions with your ranking and one-sentence justification for each
+3. A comparison table (see template below) showing the top 10 questions, AI responses from both tools, and your verdict on each
+   :::
+
+<AICheck id="question-tournament" xp={50}>
+
 I am learning to evaluate question quality. Below are two sets of questions
 about the same business scenario -- one set written by me and one by my
 partner. I have also included the AI responses each question generated.
 Please:
 
 (1) Evaluate which set of questions was overall more diagnostic and
-    explain why.
+explain why.
 (2) Identify the 3 strongest questions across both sets and explain what
-    makes them effective.
+makes them effective.
 (3) Identify the 3 weakest questions and explain what makes them
-    unproductive.
+unproductive.
 (4) Were there any questions that seemed good on paper but produced
-    generic AI responses? Explain why this happened.
+generic AI responses? Explain why this happened.
 (5) Give me specific feedback on how to improve my weakest questions.
 
-Scenario: [paste scenario].
-My questions: [paste].
-Partner's questions: [paste].
-AI responses: [paste comparison table].
+Scenario:
+
+<AICheckField
+  name="scenario"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
+
+My questions:
+
+<AICheckField
+  name="my_questions"
+  placeholder="Paste your questions here..."
+  rows={6}
+/>
+
+Partner's questions:
+
+<AICheckField
+  name="partners_questions"
+  placeholder="Paste your partner's questions here..."
+  rows={6}
+/>
+
+AI responses:
+
+<AICheckField
+  name="comparison_table"
+  placeholder="Paste your comparison table here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
+
+---
+
+<details>
+<summary>Comparison Table Template (click to expand)</summary>
+
+**COMPARISON TABLE**
+
+| #   | Question | Whose List? | Claude Response (summary) | ChatGPT Response (summary) | Verdict: Useful or Filler? | Why? |
+| --- | -------- | ----------- | ------------------------- | -------------------------- | -------------------------- | ---- |
+| 1   |          | Mine        |                           |                            |                            |      |
+| 2   |          | Mine        |                           |                            |                            |      |
+| 3   |          | Mine        |                           |                            |                            |      |
+| 4   |          | Mine        |                           |                            |                            |      |
+| 5   |          | Mine        |                           |                            |                            |      |
+| 6   |          | Partner's   |                           |                            |                            |      |
+| 7   |          | Partner's   |                           |                            |                            |      |
+| 8   |          | Partner's   |                           |                            |                            |      |
+| 9   |          | Partner's   |                           |                            |                            |      |
+| 10  |          | Partner's   |                           |                            |                            |      |
+
+**Useful/Actionable** = the AI gave a specific, non-obvious answer that narrows down the problem.
+**Generic/Filler** = the AI gave a broad, surface-level answer that any question would produce.
+
+</details>
 
 ---
 
 ### What This Teaches You
 
 You learn that question quality is a skill you can evaluate and improve, not an innate talent. By seeing your partner's questions and having AI compare both sets, you discover questioning patterns you would never notice in your own work. The tournament format makes the difference between a good question and a great question viscerally clear.
+
+## Flashcards Study Aid
+
+<Flashcards />

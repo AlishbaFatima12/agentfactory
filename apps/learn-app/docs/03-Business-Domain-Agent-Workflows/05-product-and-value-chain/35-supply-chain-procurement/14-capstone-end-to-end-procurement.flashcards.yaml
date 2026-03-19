@@ -1,0 +1,80 @@
+deck:
+  id: "ch35-capstone-end-to-end-procurement"
+  title: "Capstone — End-to-End Procurement"
+  description: "Recall and reasoning cards covering the seven capstone phases, cross-phase data dependencies, why tier classification must come first, executive brief requirements, and what the completed capstone deliverable represents."
+  tags: ["supply-chain", "capstone", "procurement-operating-system", "phase-dependencies", "executive-brief"]
+  version: 2
+
+cards:
+  - id: "ch35-capstone-end-to-end-procurement-001"
+    front: "What are the seven phases of the capstone procurement cycle, in order?"
+    back: "Phase 1: Vendor Classification. Phase 2: Vendor Assessment. Phase 3: Reconciliation Rules Configuration. Phase 4: Supplier Risk Dashboard. Phase 5: Logistics and Spend Analysis. Phase 6: Deploy All Five Agents. Phase 7: First Weekly Executive Brief."
+    tags: ["seven-phases"]
+    difficulty: "basic"
+
+  - id: "ch35-capstone-end-to-end-procurement-002"
+    front: "Why must vendor classification (Phase 1) happen before any other phase in the capstone?"
+    back: "Classification determines everything downstream: assessment depth in Phase 2 (Tier 1/4 get full six-dimension assessments, Tier 2/3 get lighter treatment), risk thresholds in Phase 4, and the agent watch list in Phase 6. Without tier assignments, none of the downstream calibration is possible."
+    tags: ["phase-1", "classification-first"]
+    difficulty: "basic"
+
+  - id: "ch35-capstone-end-to-end-procurement-003"
+    front: "How does the six-dimension assessment output from Phase 2 feed Phase 4?"
+    back: "The six-dimension assessment scores (financial, operational, compliance, relationship, strategic fit, market position) map directly to the five risk dimensions in the supplier risk dashboard. Financial score informs financial risk; operational score maps to performance risk; market position informs concentration risk."
+    tags: ["phase-2", "phase-4", "cross-phase-dependency"]
+    difficulty: "intermediate"
+
+  - id: "ch35-capstone-end-to-end-procurement-004"
+    front: "Why are Tier 4 (Bottleneck) vendors configured with the same tight tolerance rules as Tier 1 (Strategic) in Phase 3?"
+    back: "Bottleneck vendors warrant careful invoice review for the same reason they warrant quarterly assessment: sole-source dependency means any pricing or invoicing error has disproportionate impact, and relationship deterioration can accelerate supply risk. Tight tolerances apply where risk is highest, regardless of spend tier."
+    tags: ["phase-3", "bottleneck-tolerance"]
+    difficulty: "intermediate"
+
+  - id: "ch35-capstone-end-to-end-procurement-005"
+    front: "What does Phase 5 (logistics and spend analysis) contribute to Phase 6 (agent deployment)?"
+    back: "Phase 5 provides the baselines that configure the agents: carrier OTD baselines and SLA targets for the Logistics Intelligence Agent, category spend totals and commodity index benchmarks for the Spend Intelligence Agent. Agents without baselines cannot detect meaningful changes."
+    tags: ["phase-5", "phase-6", "agent-baselines"]
+    difficulty: "intermediate"
+
+  - id: "ch35-capstone-end-to-end-procurement-006"
+    front: "What is the relationship between the risk alert thresholds in Phase 4 and the Vendor Health Monitor configured in Phase 6?"
+    back: "The alert thresholds from Phase 4's risk dashboard (specific OTD levels, score changes, financial risk triggers per vendor) load directly into the Vendor Health Monitor. The agent applies vendor-specific, risk-informed thresholds — not generic defaults. This is what makes the monitoring intelligence rather than noise."
+    tags: ["phase-4", "phase-6", "vendor-health-monitor"]
+    difficulty: "intermediate"
+
+  - id: "ch35-capstone-end-to-end-procurement-007"
+    front: "What six elements must a CPO/COO executive brief contain to be considered decision-ready?"
+    back: "RAG status for each key metric, single most-important issue this week, recommended action with owner and deadline, savings pipeline total (£ value), vendor risk summary (any alerts since last brief), and contract calendar noting any critical deadlines."
+    tags: ["executive-brief", "phase-7"]
+    difficulty: "intermediate"
+
+  - id: "ch35-capstone-end-to-end-procurement-008"
+    front: "Which earlier exercise does the capstone directly connect to as its starting foundation?"
+    back: "Exercise 1 (Lesson 3) — the vendor classification register. The capstone Phase 1 extends or uses the classification register from Exercise 1. The exit protocol in Exercise 8 (Lesson 13) also selects the highest-risk Bottleneck vendor from Exercise 1's register. The classification register is the foundation thread connecting the entire chapter."
+    tags: ["exercise-dependency", "classification-register"]
+    difficulty: "basic"
+
+  - id: "ch35-capstone-end-to-end-procurement-009"
+    front: "What does the completed capstone deliverable represent for a procurement organisation?"
+    back: "A deployable procurement operating system for one spend category: vendors classified and assessed, invoices processing automatically with tier-calibrated tolerance rules, five agents running continuously to monitor vendors, contracts, logistics, and spend — feeding a weekly CPO brief without manual effort."
+    tags: ["deliverable", "procurement-operating-system"]
+    difficulty: "basic"
+
+  - id: "ch35-capstone-end-to-end-procurement-010"
+    front: "Why does the capstone lesson not include a separate Try With AI section?"
+    back: "The entire lesson is hands-on prompting through seven sequential phases. Each phase contains the prompt structure to use. There is no conceptual content to practice separately — the capstone is the practice."
+    tags: ["capstone-design"]
+    difficulty: "basic"
+
+  - id: "ch35-capstone-end-to-end-procurement-011"
+    front: "A student skips Phase 1 (classification) to save time and starts with Phase 2 (assessment). What downstream problems will appear?"
+    back: "Phase 2 assessment depth cannot be calibrated without tier — all vendors get assessed at the same depth (wasting time on Tier 3 vendors that need only Commercial and Operational). Phase 4 risk thresholds cannot be set per-tier. Phase 6 agent watch list cannot be populated correctly. The entire system calibration depends on tier data from Phase 1."
+    tags: ["phase-1", "cross-phase-dependency"]
+    difficulty: "advanced"
+    why: "Why does skipping Phase 1 not just slow you down — but actually produce a structurally wrong system?"
+
+  - id: "ch35-capstone-end-to-end-procurement-012"
+    front: "What distinguishes a procurement operating system from a collection of independent point tools?"
+    back: "A system uses each phase's output as the input to the next: classification informs assessment depth, assessment scores inform risk thresholds, thresholds inform agent parameters, agents feed the executive brief, which drives the actions that prevent the exit scenarios. A collection of tools produces outputs that do not connect."
+    tags: ["systems-integration", "procurement-operating-system"]
+    difficulty: "intermediate"

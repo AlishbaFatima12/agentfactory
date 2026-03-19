@@ -1,0 +1,79 @@
+deck:
+  id: "ch36-15-chapter-summary-quick-reference"
+  title: "Chapter Summary Quick Reference"
+  description: "Comprehensive review of key concepts, commands, and patterns from the product management chapter."
+  tags: ["product-management", "pm-workflows", "product-strategy", "chapter-36"]
+  version: 1
+
+cards:
+  - id: "ch36-15-chapter-summary-quick-reference-001"
+    front: "Which plugin provides /sprint-planning, /stakeholder-update, and /metrics-review?"
+    back: "The official product-management plugin (Layer 1). These are foundational PM workflow commands maintained by Anthropic."
+    tags: ["plugin-provides", "provides-/sprint-planning", "sprint-planning"]
+    difficulty: "basic"
+
+  - id: "ch36-15-chapter-summary-quick-reference-002"
+    front: "Which plugin provides /brief, /retro, /prioritise, and /stories?"
+    back: "The custom product-strategy plugin (Layer 2). These fill workflow gaps the official plugin does not cover — discovery, retrospectives, prioritisation, and story decomposition."
+    tags: ["plugin-provides", "provides-/brief", "brief"]
+    difficulty: "intermediate"
+
+  - id: "ch36-15-chapter-summary-quick-reference-003"
+    front: "What are the 7 commands in the official product-management plugin?"
+    back: "/write-spec, /roadmap-update, /synthesize-research, /stakeholder-update, /competitive-brief, /metrics-review, /sprint-planning"
+    tags: ["official-product-management", "product-management-plugin", "commands"]
+    difficulty: "basic"
+
+  - id: "ch36-15-chapter-summary-quick-reference-004"
+    front: "What are the 6 commands in the custom product-strategy plugin?"
+    back: "/brief, /interview, /prd, /stories, /prioritise, /retro"
+    tags: ["custom-product-strategy", "product-strategy-plugin", "commands"]
+    difficulty: "basic"
+
+  - id: "ch36-15-chapter-summary-quick-reference-005"
+    front: "What is the PM workflow cycle order?"
+    back: "Discover (/brief) → Research (/interview, /synthesize-research) → Define (/write-spec, /prd, /stories) → Plan (/roadmap-update, /prioritise) → Execute (/sprint-planning) → Communicate (/stakeholder-update) → Measure (/metrics-review) → Reflect (/retro) → feeds back to Discover"
+    tags: ["workflow-cycle", "cycle-order"]
+    difficulty: "intermediate"
+
+  - id: "ch36-15-chapter-summary-quick-reference-006"
+    front: "What are the three PM agents and their monitoring schedules?"
+    back: "research-intelligence (Monday weekly digest), stakeholder-update (Friday weekly queue + triggered), roadmap-coherence (Wednesday weekly three-check report)"
+    tags: ["monitoring-schedules", "agents"]
+    difficulty: "intermediate"
+
+  - id: "ch36-15-chapter-summary-quick-reference-007"
+    front: "What does the ROAM framework stand for, and which command uses it?"
+    back: "Resolved, Owned, Accepted, Mitigated. Used in /stakeholder-update for risk communication — every risk in a stakeholder update should be ROAM-classified to specify what is being done about it."
+    tags: ["roam-framework", "framework-stand", "command"]
+    difficulty: "intermediate"
+
+  - id: "ch36-15-chapter-summary-quick-reference-008"
+    front: "What are the six prioritisation frameworks taught in Chapter 36?"
+    back: "RICE (Reach × Impact × Confidence ÷ Effort), MoSCoW (Must/Should/Could/Won't), ICE (Impact × Confidence × Ease), Now/Next/Later (roadmap horizons), ROAM (risk management), 70/20/10 (roadmap theme allocation)"
+    tags: ["six-prioritisation", "prioritisation-frameworks", "taught"]
+    difficulty: "intermediate"
+
+  - id: "ch36-15-chapter-summary-quick-reference-009"
+    front: "What is the 70/20/10 roadmap allocation rule?"
+    back: "70% of roadmap capacity to core product improvement, 20% to expansion into adjacent use cases, 10% to exploratory bets. This prevents any single theme from consuming the full roadmap and ensures the product improves in the core while making bets on the future."
+    tags: ["70/20/10-roadmap", "roadmap-allocation", "rule"]
+    difficulty: "advanced"
+
+  - id: "ch36-15-chapter-summary-quick-reference-010"
+    front: "What is product.local.md, and which lesson introduces it?"
+    back: "The product context configuration file that makes every command specific to your product. It includes product identity, personas, team structure, stakeholder map, terminology glossary, and quality standards (including PM process rules accumulated from retrospectives). Introduced in L02, updated throughout the chapter."
+    tags: ["product-local", "introduces"]
+    difficulty: "intermediate"
+
+  - id: "ch36-15-chapter-summary-quick-reference-011"
+    front: "What is the central thesis of Chapter 36 about AI and PM judgment?"
+    back: "The PM's job is judgment. AI removes the bottleneck between judgment and the documentation that expresses it. The agent writes the first draft. The PM reviews, directs, and refines. The document reflects the PM's judgment — not the agent's defaults."
+    tags: ["central-thesis", "judgment"]
+    difficulty: "advanced"
+
+  - id: "ch36-15-chapter-summary-quick-reference-012"
+    front: "Which command is used to deploy persistent agents in Cowork?"
+    back: "/schedule — used to configure and deploy each PM agent with its monitoring schedule, data source connections, and escalation thresholds."
+    tags: ["deploy-persistent", "persistent-agents", "command"]
+    difficulty: "intermediate"

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+aicheck: true
 title: "The Incomplete Brief"
 description: "Make a high-stakes decision with incomplete information, commit your confidence level and reversal triggers before consulting AI, then evaluate your decision-making under uncertainty"
 keywords:
@@ -145,30 +146,46 @@ Choose one. The exercises work identically regardless of which you pick. You wil
 A Decision Document containing: your recommendation (one clear sentence), your reasoning (200-300 words), your confidence level (0-100%), the three pieces of missing information that would most change your decision (ranked by impact), and a **Reversal Trigger** ("I would change my recommendation if X turns out to be true" — be specific, not vague).
 :::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+<AICheck id="sealed-decision" xp={50}>
+
 I made a business decision under uncertainty before consulting AI.
-The scenario: [paste scenario].
+
+The scenario:
+
+<AICheckField
+  name="scenario"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
+
 Please:
 
 (1) Rate the quality of my recommendation -- is it a reasonable decision
-    given the available information?
+given the available information?
 (2) Evaluate my confidence level -- is it calibrated appropriately to the
-    uncertainty I face, or am I over/underconfident?
+uncertainty I face, or am I over/underconfident?
 (3) Rate my missing information list -- did I identify the most
-    decision-relevant gaps, or did I list generic gaps?
+decision-relevant gaps, or did I list generic gaps?
 (4) Rate my Reversal Trigger -- is it specific and testable, or is it
-    vague? ("I'd change my mind if the market shifts" is vague. "I'd change
-    my mind if their pricing is below $50/month" is specific.)
+vague? ("I'd change my mind if the market shifts" is vague. "I'd change
+my mind if their pricing is below $50/month" is specific.)
 (5) What decision would you make with the same incomplete information?
-    I will compare our reasoning.
+I will compare our reasoning.
 
-My Decision Document: [paste].
+My Decision Document:
+
+<AICheckField
+  name="decision_document"
+  placeholder="Paste your Decision Document here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
@@ -196,3 +213,7 @@ For each score, give a one-sentence justification.
 ### What This Teaches You
 
 You learn that deciding under uncertainty is itself a skill. The AI check reveals whether your confidence is calibrated, whether your reversal triggers are actionable, and whether your reasoning is sound given what you know. The **Reversal Trigger** becomes a decision-making framework you use for the rest of the book and your career — every major decision should include one.
+
+## Flashcards Study Aid
+
+<Flashcards />

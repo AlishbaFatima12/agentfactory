@@ -17,11 +17,32 @@ Track meaningful updates to the book. This page is automatically updated when do
 
 <!-- CHANGELOG_START - Do not remove this marker -->
 
+### 2026-03-18
+- feat: Ch 35 Supply Chain design + chapter-design-pipeline skill ([#868](https://github.com/panaversity/agentfactory/pull/868))
+
+### 2026-03-18
+- docs: add PRIMM-AI+ to Chapter 45 Reading Python ([#867](https://github.com/panaversity/agentfactory/pull/867))
+
+### 2026-03-18
+
+- fix: improve instruction clarity in Part 0 Ch 1-2 exercises ([#866](https://github.com/panaversity/agentfactory/pull/866))
+
+### 2026-03-17
+
+- docs: add PRIMM-AI+ Practice sections to Chapter 44 ([#865](https://github.com/panaversity/agentfactory/pull/865))
+
+### 2026-03-16
+- feat: Part 0 exercise submission with TDD pipeline ([#863](https://github.com/panaversity/agentfactory/pull/863))
+
+### 2026-03-16
+
+- Renumber Part 4 Phase 1 chapters (30-33 → 42-45) ([#864](https://github.com/panaversity/agentfactory/pull/864))
+
 ### 2026-03-15
 - refactor: renumber Parts 1-3 chapters to continuous global numbering ([#862](https://github.com/panaversity/agentfactory/pull/862))
 
 ### 2026-03-15
-- docs: add PRIMM-AI+ integration to Chapter 31 (Ten Axioms) ([#860](https://github.com/panaversity/agentfactory/pull/860))
+- docs: add PRIMM-AI+ integration to Chapter 43 (Ten Axioms) ([#860](https://github.com/panaversity/agentfactory/pull/860))
 
 ### 2026-03-15
 

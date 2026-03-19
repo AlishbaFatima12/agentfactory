@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Confidence Calibration"
 description: "Rate your confidence in 20 AI-generated claims under time pressure, then measure your calibration accuracy to reveal systematic overconfidence and underconfidence patterns"
 keywords:
@@ -78,41 +79,85 @@ teaching_guide:
 
 ### What You Do
 
-This exercise uses a different format: rapid-fire timed rounds. You receive 20 AI-generated claims across different topics — science, history, current events, technology, geography, law. You have 90 seconds per claim. For each: read the claim, rate your confidence (0-100%) that it is accurate, write a one-sentence justification for your rating, and flag any red flags you notice. After all 20, verify each claim using AI and web research.
+This exercise uses a different format: rapid-fire timed rounds.
 
-The time pressure simulates real-world decision-making where you must quickly assess AI output without unlimited time to verify.
+**Step 1 — Generate the 20 claims.** Prompt AI with: _"Generate 20 specific factual claims across these topics: science, history, current events, technology, geography, and law. Mix accurate claims with inaccurate ones. Do not tell me which are which. Number them 1-20."_ Save the list.
+
+**Step 2 — Rate each claim under time pressure (90 seconds each).** Set a timer. For each of the 20 claims, you have 90 seconds to:
+
+- Read the claim carefully
+- Rate your confidence (0-100%) that it is accurate
+- Write a one-sentence justification for your rating
+- Flag any red flags you notice (e.g., suspiciously precise numbers, vague sourcing)
+
+Do NOT look anything up during this phase. The time pressure simulates real-world conditions where you must quickly assess AI output.
+
+**Step 3 — Verify each claim.** After rating all 20, go back and verify each claim using web search. For each, record: accurate, inaccurate, or partially accurate, and note your source.
+
+**Step 4 — Build your calibration table.** Fill in the template below. For each claim, determine whether you were calibrated (correct), overconfident (high confidence + wrong), or underconfident (low confidence + right).
+
+**Step 5 — Write your reflection (200 words).** Analyze your calibration patterns: Which topics were you most overconfident about? Underconfident? What red flags did you miss?
 
 ---
 
 :::info Your Deliverable
-A table with 20 rows: the AI claim, your confidence rating (0-100%), the verified truth status (accurate / inaccurate / partially accurate), your source for verification, and whether your confidence was calibrated (correct), overconfident (high confidence + wrong), or underconfident (low confidence + right). A Confidence Calibration Chart plotting your ratings against reality. A reflection (200 words) analyzing your calibration patterns.
-:::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+1. Your calibration table with all 20 claims (see template below)
+2. A summary of your calibration score (e.g., "Of claims I rated 80%+, X% were actually correct")
+3. Your 200-word reflection analyzing your calibration patterns
+   :::
+
+<details>
+<summary>Calibration Table Template (click to expand)</summary>
+
+| #   | AI Claim | Topic | My Confidence (0-100%) | My Justification (1 sentence) | Red Flags? | Verified Status                 | Source | Calibration                                 |
+| --- | -------- | ----- | ---------------------- | ----------------------------- | ---------- | ------------------------------- | ------ | ------------------------------------------- |
+| 1   |          |       |                        |                               |            | Accurate / Inaccurate / Partial |        | Calibrated / Overconfident / Underconfident |
+| 2   |          |       |                        |                               |            |                                 |        |                                             |
+| ... | ...      | ...   | ...                    | ...                           | ...        | ...                             | ...    | ...                                         |
+| 20  |          |       |                        |                               |            |                                 |        |                                             |
+
+**Calibration Summary:**
+
+- Claims rated 80%+ confidence: **_ total → _**% were actually accurate
+- Claims rated below 40% confidence: **_ total → _**% were actually inaccurate
+- Overconfident on: \_\_\_ claims (high confidence + wrong)
+- Underconfident on: \_\_\_ claims (low confidence + right)
+
+</details>
+
+<AICheck id="confidence-calibration" xp={50}>
+
 I am a student calibrating my ability to judge AI accuracy. I rated my
 confidence on 20 AI-generated claims, then verified each one. Below is my
 complete calibration table. Please:
 
 (1) Review my verification of each claim -- did I correctly determine which
-    claims were accurate and which were not? Flag any claims I may have
-    verified incorrectly.
+claims were accurate and which were not? Flag any claims I may have
+verified incorrectly.
 (2) Calculate my calibration score: for claims I rated 80%+ confidence,
-    what percentage were actually correct? For claims I rated below 40%,
-    what percentage were actually incorrect?
+what percentage were actually correct? For claims I rated below 40%,
+what percentage were actually incorrect?
 (3) Identify my specific calibration weaknesses -- which topics or claim
-    types am I most overconfident about? Underconfident about?
+types am I most overconfident about? Underconfident about?
 (4) Give me 3 specific strategies to improve my calibration based on
-    my patterns.
+my patterns.
 (5) Rate my overall calibration from Poor / Fair / Good / Excellent.
 
-My calibration table: [paste full table with confidence ratings and
-verification results].
+My calibration table:
+
+<AICheckField
+  name="calibration_table"
+  placeholder="Paste your full calibration table with confidence ratings and verification results here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
 
 ---
 
@@ -122,9 +167,14 @@ You learn that most people — especially smart people — are systematically ov
 
 ---
 
-:::info Chapter Deliverable
-An Error Detection Portfolio containing: (1) the sealed error prediction document, (2) two annotated AI responses with full Error Taxonomy markup, (3) the three-draft contradiction analysis with evolution notes, (4) the domain expertise annotation with partner verification, (5) the 20-claim Confidence Calibration Chart with analysis, and (6) all AI feedback responses with your reflections on each.
-:::
+:::info Chapter Deliverable — Error Detection Portfolio
+
+1. Your sealed error prediction document + two annotated AI responses with full Error Taxonomy markup (Exercise 1)
+2. Your three-draft contradiction analysis with divergence annotations and evolution notes (Exercise 2)
+3. Your domain expertise annotation with partner verification notes + expert-visible errors list (Exercise 3)
+4. Your 20-claim Confidence Calibration Table with calibration summary (Exercise 4)
+5. All AI feedback responses with your reflections on each
+   :::
 
 <details>
 <summary>Grading Criteria</summary>
@@ -139,3 +189,7 @@ An Error Detection Portfolio containing: (1) the sealed error prediction documen
 | Reflection quality across all exercises                                              |  10%   | All exercises     |
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />

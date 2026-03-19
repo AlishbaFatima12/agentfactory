@@ -1,0 +1,80 @@
+deck:
+  id: "ch39-task-intelligence"
+  title: "Task Intelligence"
+  description: "Recall and reasoning cards covering the brain dump pattern, P1/P2/P3 priority classification, the five sorting criteria, task vs project distinction, critical path identification, and the two-plugin architecture for task management vs task intelligence."
+  tags: ["productivity", "task-intelligence", "brain-dump", "priority-classification", "critical-path", "agentic-office"]
+  version: 2
+
+cards:
+  - id: "ch39-task-intelligence-001"
+    front: "What are the three levels of task management, and what does each add?"
+    back: "Task list: records items. Task system: adds structure — owners, deadlines, status. Task intelligence: prioritises tasks against each other, surfaces risk, identifies delegation candidates, and finds the critical path."
+    tags: ["three-levels", "concept"]
+    difficulty: "basic"
+
+  - id: "ch39-task-intelligence-002"
+    front: "What is the brain dump pattern, and why does it separate capture from classification?"
+    back: "The brain dump pattern has three steps: (1) dump everything without filtering, (2) the skill structures and enriches with project context, (3) you review and challenge. Capture and classification use different cognitive modes — capture requires openness, classification requires judgment. Doing both simultaneously causes tasks to be forgotten or misclassified."
+    tags: ["brain-dump", "pattern"]
+    difficulty: "basic"
+
+  - id: "ch39-task-intelligence-003"
+    front: "What are the five P1/P2/P3 priority sorting criteria, applied in order?"
+    back: "(1) Hard deadline — is there a date-certain that cannot move? (2) Blocking someone else — is another person waiting? (3) P1 project — does this task belong to a P1-classified project? (4) Consequence of slipping — what actually happens if it slips one week? (5) Urgency vs importance — is the urgency feeling real or habitual?"
+    tags: ["five-criteria", "priority"]
+    difficulty: "basic"
+
+  - id: "ch39-task-intelligence-004"
+    front: "What is the maximum number of P1 items allowed, and why?"
+    back: "Maximum five. More than five P1 items means everything is urgent, which means nothing is prioritised. The five-item rule forces genuine classification rather than panicking."
+    tags: ["p1-rule", "priority"]
+    difficulty: "basic"
+
+  - id: "ch39-task-intelligence-005"
+    front: "What defines a P1 task vs a P2 task vs a P3 task?"
+    back: "P1 (Urgent / High Impact): hard deadline today or this week, blocking others, or P1 project with real slippage consequences. P2 (Important / This Week): matters this week but no immediate damage if it slips a day — includes P1 project tasks not yet time-critical. P3 (Standard / Backlog): important but not time-critical this week — the test is 'if I do not touch this for a week, what actually happens?'"
+    tags: ["priority-levels", "classification"]
+    difficulty: "intermediate"
+
+  - id: "ch39-task-intelligence-006"
+    front: "What is the difference between the official productivity plugin and the custom agentic-office plugin for task management?"
+    back: "The official productivity plugin provides task CRUD — adding, completing, and querying tasks in TASKS.md. The custom agentic-office plugin provides task intelligence — brain dump capture, P1/P2/P3 priority classification, critical path identification. One stores tasks; the other thinks about them. You need both."
+    tags: ["two-plugins", "architecture"]
+    difficulty: "intermediate"
+
+  - id: "ch39-task-intelligence-007"
+    front: "How does the task-intelligence skill enrich raw brain dump input?"
+    back: "The skill does four things: (1) extracts every distinct task, even vague ones, (2) enriches each with project context from work.local.md — connecting to known projects, people, and deadlines, (3) identifies dependencies between tasks, (4) flags items that should be delegated or dropped."
+    tags: ["brain-dump", "enrichment"]
+    difficulty: "intermediate"
+
+  - id: "ch39-task-intelligence-008"
+    front: "How do you distinguish a task from a project?"
+    back: "A task is completable in one session with a single clear output and 1-3 steps. A project spans days or weeks with multiple milestones and more than 3 steps. If a 'task' has more than 3 steps and spans more than one day, it is a project — create a project entry in work.local.md and break it into single-session tasks."
+    tags: ["task-vs-project", "distinction"]
+    difficulty: "intermediate"
+
+  - id: "ch39-task-intelligence-009"
+    front: "What is the difference between critical path and priority?"
+    back: "Priority is about importance and urgency — which tasks matter most. Critical path is about sequence and dependencies — which tasks must happen in what order because a slip on one delays everything downstream. A P2 task can be on the critical path if it blocks a P1 task later. A P1 task might not be on today's critical path if it is due Friday with no dependencies."
+    tags: ["critical-path", "priority"]
+    difficulty: "intermediate"
+
+  - id: "ch39-task-intelligence-010"
+    front: "In Zia's Monday brain dump, why is Project Nighthawk classified as P1 while Chapter 28 (due Thursday, P1 project) is classified as P2?"
+    back: "Nighthawk is P1 because it has been stalled 10 days (overdue — criterion 1), is blocking the Q3 plan (criterion 2), and every day of delay compresses the downstream timeline. Chapter 28 has a hard deadline but it is Thursday, not today (criterion 1 partially met), and it is not yet blocking anyone (criterion 2 not met). The skill flags it as 'treat as high priority despite P2 urgency rating' — a judgment call the reader can challenge."
+    tags: ["worked-example", "classification"]
+    difficulty: "advanced"
+
+  - id: "ch39-task-intelligence-011"
+    front: "Why should you challenge at least two of the skill's priority classifications per brain dump?"
+    back: "The skill's classification is a starting point, not a verdict. It cannot know political sensitivity, relationship dynamics, or unwritten priorities. Challenging the classification — applying the five criteria yourself and explaining why you disagree — develops your prioritisation judgment, which is more valuable than any single correct classification."
+    tags: ["challenge", "human-judgment"]
+    difficulty: "intermediate"
+
+  - id: "ch39-task-intelligence-012"
+    front: "A colleague marks all 12 of their weekly tasks as P1. Using the five sorting criteria, what would you tell them?"
+    back: "Apply the criteria in order for each task: How many have hard immovable deadlines this week? How many are actually blocking someone else right now? Of the remainder, how many belong to P1 projects with real slippage consequences? For the rest, what actually happens if they slip one week? Most 'urgent' items fail criteria 1-2 and are P2 at most. The five-item P1 maximum forces genuine prioritisation — if everything is P1, nothing is prioritised."
+    tags: ["five-criteria", "coaching", "misconception"]
+    difficulty: "advanced"
+    why: "What is the practical difference between urgency as a feeling and priority as a judgment?"

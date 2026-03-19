@@ -1,0 +1,22 @@
+{
+  "skill_name": "chapter-design-pipeline",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design chapter 36: HR & Workforce Operations. Spec at specs/drafts/ch36-hr-workforce/spec.md with 6 skills (talent-acquisition, performance-review, onboarding-workflow, workforce-planning, compliance-tracker, engagement-survey). Plugin repo at /Users/mjs/Documents/code/panaversity-official/agentfactory-business-plugins. I already checked — there's no HR plugin shipped yet. Chapter destination: apps/learn-app/docs/03-Business-Domain-Agent-Workflows/05-product-and-value-chain/36-hr-workforce-operations/",
+      "expected_output": "Should: (1) Stage 0: verify user's claim by ls-ing plugin repo, confirm no HR directory, (2) Stage 1: Agent A MUST WebSearch/WebFetch Cowork capabilities instead of assuming — test for the 'verify don't assume' fix, (3) Stage 2: Design how each lesson TEACHES not just what it covers — per-lesson template with reader experience, skill integration, what students evaluate, (4) Stage 5: Team prompt must include post-production phases (summaries, flashcards, quizzes) — team does NOT shut down after content writing",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I need to plan chapter 37 about Product Design & Innovation. Spec at specs/drafts/ch37-product-design/spec.md. The knowledge-work-plugins already have operations/brainstorm, operations/research-brief, and operations/feedback-analysis which probably cover 70% of what the spec needs. Plugin repo at /Users/mjs/Documents/code/panaversity-official/agentfactory-business-plugins, knowledge-work at /Users/mjs/Documents/code/panaversity-official/knowledge-work-plugins. Chapter destination: apps/learn-app/docs/03-Business-Domain-Agent-Workflows/05-product-and-value-chain/37-product-design-innovation/",
+      "expected_output": "Should: (1) Stage 0: Actually scan knowledge-work-plugins to verify the 70% coverage claim — don't take user's word for it, (2) Recommend 'extend' not 'build' since partial coverage, (3) Stage 2 focuses on READER EXPERIENCE with existing tools not building new ones, (4) No plugin-builder teammate if reusing, (5) Lesson design shows HOW students use existing operations/brainstorm etc in exercises",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Design chapter 38: Real Estate & Property Management. Spec at specs/drafts/ch38-real-estate/spec.md with 12 skills and 3 agents. Plugin repo same as usual. This chapter's plugin is already partially built — there should be a real-estate directory in the plugin repo with 5 skills shipped. I've pre-written all my diagnostic questions covering collision analysis, agent deployment via /schedule, lesson design for 14 lessons with 9 exercises. Skip the diagnostics and go straight to refining my lesson design and generating the team prompt.",
+      "expected_output": "Should: (1) Stage 0: ls the plugin repo to VERIFY the 5-shipped-skills claim, (2) Respect user's pre-research — don't regenerate diagnostics, (3) Focus on lesson design quality — refine the user's 14-lesson plan by asking HOW each lesson teaches, (4) Stage 5: stateful team with post-production, (5) Fast-track since user wants speed, but still verify claims"
+    }
+  ]
+}

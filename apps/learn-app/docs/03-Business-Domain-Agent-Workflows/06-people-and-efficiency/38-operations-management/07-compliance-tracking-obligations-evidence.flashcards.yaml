@@ -1,0 +1,73 @@
+deck:
+  id: "ch38-07-compliance-tracking-obligations-evidence"
+  title: "Compliance Tracking — Obligations and Evidence"
+  description: "Key concepts and review questions covering compliance tracking — obligations and evidence."
+  tags: ["compliance", "tracking", "obligations", "evidence", "chapter-38"]
+  version: 1
+
+cards:
+  - id: "ch38-07-compliance-tracking-obligations-evidence-001"
+    front: "What is compliance drift?"
+    back: "The silent process by which compliant controls become non-compliant — typically triggered by personnel change (knowledge leaves), regulatory change (control not updated), or system change (control removed from workflow). The organisation believes it is still compliant because it was compliant at the last audit."
+    tags: ["compliance-drift"]
+    difficulty: "basic"
+
+  - id: "ch38-07-compliance-tracking-obligations-evidence-002"
+    front: "What are the three layers of compliance obligations every organisation carries?"
+    back: "1. Regulatory — UK GDPR, FCA, AML, Companies Act, sector-specific rules. 2. Contractual — client SLA obligations, data handling clauses, insurance conditions. 3. Standards/Internal — ISO certification requirements, board governance commitments, internal policies."
+    tags: ["compliance-obligations", "organisation-carries", "layers"]
+    difficulty: "basic"
+
+  - id: "ch38-07-compliance-tracking-obligations-evidence-003"
+    front: "What are the five compliance statuses and what distinguishes PARTIAL from GAP?"
+    back: "CURRENT (🟢), REVIEW NEEDED (🟡), PARTIAL (🟡), GAP (🔴), URGENT (🔴). PARTIAL: a control exists but does not fully address the obligation; evidence has identifiable gaps. GAP: no effective control exists, or evidence is absent or cannot be located."
+    tags: ["compliance-statuses", "distinguishes-partial"]
+    difficulty: "intermediate"
+
+  - id: "ch38-07-compliance-tracking-obligations-evidence-004"
+    front: "What is the evidence standard for CURRENT status?"
+    back: "CURRENT requires cited, locatable evidence — not an assertion. 'We comply with UK GDPR' is an assertion. 'Privacy notice v3 updated [date], ROPA at [SharePoint location], last reviewed [date] by DPO' is evidence. Any obligation where evidence cannot be located must be PARTIAL at best."
+    tags: ["evidence-standard", "current-status"]
+    difficulty: "basic"
+
+  - id: "ch38-07-compliance-tracking-obligations-evidence-005"
+    front: "When does an obligation become URGENT rather than GAP?"
+    back: "URGENT applies when: active breach is likely or confirmed; a regulatory deadline is within 30 days and a gap exists; or the regulator has signalled they will review this specific area. The AML PEP screening scenario escalates from GAP to URGENT because the FCA visit is imminent and the screening has been unvalidated for 4 months."
+    tags: ["obligation-become", "become-urgent"]
+    difficulty: "advanced"
+
+  - id: "ch38-07-compliance-tracking-obligations-evidence-006"
+    front: "How does the compliance-tracking auto-skill activate?"
+    back: "It activates automatically from keywords in natural-language prompts: 'compliance', 'obligations', 'regulatory', 'control', 'GDPR'. Students should NEVER type /compliance-tracking as a slash command — they describe what they need in natural language."
+    tags: ["compliance-tracking-auto-skill", "auto-skill-activate", "compliance-tracking"]
+    difficulty: "intermediate"
+
+  - id: "ch38-07-compliance-tracking-obligations-evidence-007"
+    front: "What four things must every evidence inventory entry confirm?"
+    back: "1. Document name and version. 2. Storage location (must be accessible on audit day). 3. Date last updated. 4. Whether the named reviewer is still in the organisation. Red flags: evidence >12 months old, stored on 'someone's local drive', or reviewer has left."
+    tags: ["evidence-inventory", "inventory-entry", "things"]
+    difficulty: "basic"
+
+  - id: "ch38-07-compliance-tracking-obligations-evidence-008"
+    front: "What is the prioritisation framework for compliance remediation?"
+    back: "P1: Active breach risk + regulatory enforcement consequence (e.g., AML URGENT). P2: Regulatory deadline approaching + significant gap (e.g., SM&CR certification due in 30 days). P3: Audit approaching + evidence pack incomplete (e.g., ISO 27001 audit in 3 months). P4: Partial controls + evidence gaps + no immediate deadline."
+    tags: ["prioritisation-framework", "compliance-remediation"]
+    difficulty: "intermediate"
+
+  - id: "ch38-07-compliance-tracking-obligations-evidence-009"
+    front: "What does the compliance dashboard tell you that the obligation list alone does not?"
+    back: "The dashboard gives leadership a RAG summary they can act on: total obligations tracked, percentage CURRENT vs REVIEW/PARTIAL vs GAP/URGENT, and a prioritised action list. A list of 24 obligations requires reading; a dashboard showing '2 obligations at 🔴 URGENT' triggers immediate action."
+    tags: ["compliance-dashboard", "obligation", "alone"]
+    difficulty: "intermediate"
+
+  - id: "ch38-07-compliance-tracking-obligations-evidence-010"
+    front: "Why must compliance maps include contractual and standards obligations, not just regulatory ones?"
+    back: "Regulatory obligations have named compliance owners and periodic reviews. Contractual obligations (client SLAs, insurance conditions) are often signed by commercial teams and never tracked centrally. Standards obligations (ISO requirements) drift between certification cycles. These layers drift silently and often produce the surprises at audit."
+    tags: ["compliance-maps", "maps-include", "contractual"]
+    difficulty: "intermediate"
+
+  - id: "ch38-07-compliance-tracking-obligations-evidence-011"
+    front: "What three cross-references connect the compliance map to other lessons?"
+    back: "1. L04 (Contract Analysis) — contractual obligations extracted from vendor contracts feed the contractual layer. 2. L08 (Audit Preparation) — the compliance map is the starting point for the audit evidence inventory. 3. L12 (Persistent Agents) — the compliance-monitor agent tracks the obligation map continuously, alerting when review dates pass and evidence ages."
+    tags: ["cross-references-connect", "compliance-map", "cross-references"]
+    difficulty: "advanced"

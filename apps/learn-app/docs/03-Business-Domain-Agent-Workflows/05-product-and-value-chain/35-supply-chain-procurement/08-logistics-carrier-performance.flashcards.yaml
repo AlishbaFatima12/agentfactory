@@ -1,0 +1,80 @@
+deck:
+  id: "ch35-logistics-carrier-performance"
+  title: "Logistics and Carrier Performance"
+  description: "Recall and reasoning cards covering the four logistics dimensions, carrier scorecard metrics, expedited freight root cause classification, mode shift carbon impact, and the logistics-intelligence-agent."
+  tags: ["supply-chain", "logistics", "carrier-performance", "expedited-freight", "carbon-emissions", "logistics-brief"]
+  version: 2
+
+cards:
+  - id: "ch35-logistics-carrier-performance-001"
+    front: "What are the four dimensions of logistics optimisation in the /logistics-brief framework?"
+    back: "Route efficiency (cost/time/carbon profile per origin-destination pair), carrier performance (scorecard: OTD, damage, cost per kg, track-and-trace), network design (DC and warehouse placement relative to demand), and sustainability (Scope 3 carbon footprint and mode-shift analysis)."
+    tags: ["four-dimensions"]
+    difficulty: "basic"
+
+  - id: "ch35-logistics-carrier-performance-002"
+    front: "What four metrics make up the carrier performance scorecard?"
+    back: "On-time delivery rate (OTD%), damage rate (%), cost per kg (normalised for shipment size), and track-and-trace reliability (% of shipments with real-time tracking)."
+    tags: ["carrier-scorecard", "metrics"]
+    difficulty: "basic"
+
+  - id: "ch35-logistics-carrier-performance-003"
+    front: "Why is cost per kg a more reliable metric than cost per shipment when comparing carriers?"
+    back: "Different carriers handle different shipment sizes. Cost per shipment is misleading because a carrier moving heavy pallets shows a higher number than one moving small parcels, even if their per-kg rate is better. Cost per kg normalises for weight differences."
+    tags: ["cost-per-kg", "metrics"]
+    difficulty: "basic"
+
+  - id: "ch35-logistics-carrier-performance-004"
+    front: "What OTD rate triggers a FLAG classification in the carrier scorecard?"
+    back: "OTD below 90% is flagged. Bands: ≥ 95% = excellent, 93-95% = good, 90-93% = compliant, < 90% = FLAG requiring immediate action."
+    tags: ["carrier-scorecard", "otd-threshold"]
+    difficulty: "basic"
+
+  - id: "ch35-logistics-carrier-performance-005"
+    front: "What does it mean when expedited freight exceeds 10% of total logistics spend?"
+    back: "It signals an upstream supply chain problem, not a logistics problem. The correct response is to diagnose the root cause — late supplier delivery, demand forecast error, inventory positioning, customer emergency, or production planning error — then address it upstream, not by sourcing more premium freight capacity."
+    tags: ["expedited-freight", "10-percent-rule"]
+    difficulty: "intermediate"
+
+  - id: "ch35-logistics-carrier-performance-006"
+    front: "What are the five root cause categories for expedited freight?"
+    back: "Late supplier delivery (procurement problem), demand forecast error (planning problem), inventory positioning error (supply chain design), customer emergency (valid commercial reason), production planning error (operations problem). Each requires a different intervention."
+    tags: ["expedited-freight", "root-cause"]
+    difficulty: "intermediate"
+
+  - id: "ch35-logistics-carrier-performance-007"
+    front: "In the UK carrier example, why was Evri's low cost per kg (£1.45) not sufficient reason to keep B2B shipments on them?"
+    back: "Evri's OTD rate fell to 83.4% (below the 90% threshold) and their damage rate doubled to 0.8%. The downstream cost of 17% late B2B deliveries — customer service escalations, compensation, redelivery, reputational damage — exceeds the £0.39/kg saving over DPD."
+    tags: ["carrier-scorecard", "evri-example"]
+    difficulty: "intermediate"
+
+  - id: "ch35-logistics-carrier-performance-008"
+    front: "What are the approximate carbon emissions per tonne-km for road freight vs. rail freight?"
+    back: "Road (HGV): 60–80 gCO2e per tonne-km. Rail (electric): 20–30 gCO2e per tonne-km. Mode shift from road to rail reduces emissions roughly 60–75% per tonne-km on suitable routes."
+    tags: ["sustainability", "carbon-emissions", "mode-shift"]
+    difficulty: "basic"
+
+  - id: "ch35-logistics-carrier-performance-009"
+    front: "What does the logistics-intelligence-agent do that /logistics-brief alone cannot?"
+    back: "The agent monitors carrier performance continuously against configured thresholds and generates alerts when performance deteriorates between review cycles — catching issues like a carrier's OTD decline at the 2-point mark rather than discovering it at the quarterly review after customer impact has accumulated."
+    tags: ["logistics-intelligence-agent", "continuous-monitoring"]
+    difficulty: "basic"
+
+  - id: "ch35-logistics-carrier-performance-010"
+    front: "What does network design (Dimension 3) answer that carrier performance (Dimension 2) cannot?"
+    back: "Network design asks whether your warehouse, DC, and cross-dock locations are optimally positioned relative to current demand patterns. Carrier performance assesses how well your current routes are executed. They are different questions — a perfect carrier on a sub-optimal route is still a sub-optimal network."
+    tags: ["network-design", "four-dimensions"]
+    difficulty: "intermediate"
+
+  - id: "ch35-logistics-carrier-performance-011"
+    front: "Your finance director asks the logistics team to source more premium freight capacity because expedited spend is rising. What question must be asked first?"
+    back: "Why is expedited freight rising? Before buying more premium capacity, diagnose the root cause across the five categories. If 73% of expedited orders trace to one business unit's inventory positioning failure (as in the lesson example), more premium capacity solves nothing and costs £24,000+ per year. Fix the inventory positioning instead."
+    tags: ["expedited-freight", "root-cause"]
+    difficulty: "advanced"
+    why: "When does solving a logistics cost symptom mask an upstream process failure — and what are the stakes of not finding the root cause?"
+
+  - id: "ch35-logistics-carrier-performance-012"
+    front: "Why is Scope 3 logistics emissions reporting increasingly a compliance requirement rather than just a sustainability aspiration?"
+    back: "Scope 3 reporting mandates are expanding across jurisdictions, and major customers are requesting logistics carbon data as part of their own supply chain due diligence. Organisations that cannot report accurately face both regulatory exposure and customer relationship risk."
+    tags: ["sustainability", "scope-3", "compliance"]
+    difficulty: "intermediate"

@@ -1,5 +1,6 @@
 ---
 sidebar_position: 4
+aicheck: true
 title: "Live Defence"
 description: "Defend your analysis under live questioning without AI access, then respond to AI-generated counter-arguments to test the depth of your understanding"
 keywords:
@@ -88,46 +89,99 @@ teaching_guide:
 
 **Layers Used:** Layer 3 (Live Defence), Layer 4 (Contradiction Challenge)
 
+This exercise uses the analysis you wrote in [Exercise 3 (The Divergence Test)](./03-divergence-test.md). You will defend it under questioning, then stress-test it against AI counter-arguments.
+
 ### What You Do
 
-Present your analysis to a peer panel (3-4 students). They have 10 minutes to question you: Why did you ask this question and not that one? What would change your diagnosis? Where did AI help and where did it mislead you? You have no AI access during the defence.
+#### Phase 1 — Live Defence (no AI access)
+
+**Step 1 — Present to your peer panel.** Form a panel of 3-4 students. Present your analysis from Exercise 3. The panel has 10 minutes to question you: Why did you ask this question and not that one? What would change your diagnosis? Where did AI help and where did it mislead you? You may not use any AI tools during this phase.
+
+**Step 2 — Collect peer feedback.** Each panelist fills out a feedback form noting 2 strengths and 2 weaknesses they observed in your defence.
 
 :::tip Solo Learner Alternative
-Submit your analysis to AI with this prompt: "You are a tough but fair examiner. Ask me 5 challenging questions about my analysis, one at a time. Wait for my response before asking the next question. Challenge weak answers. Do not let me off easy." Conduct the full Q&A exchange in a single multi-turn conversation. Submit the complete transcript as your defence record. Then proceed with the AI counter-argument exercise as written.
+Submit your analysis to AI with this prompt: "You are a tough but fair examiner. Ask me 5 challenging questions about my analysis, one at a time. Wait for my response before asking the next question. Challenge weak answers. Do not let me off easy." Conduct the full Q&A exchange in a single conversation. Submit the complete transcript as your defence record in place of the peer feedback form. Then proceed with Phase 2.
 :::
 
-After the defence, feed your analysis into AI with the prompt below to generate counter-arguments, then write a 200-word response to the strongest counter-argument.
+#### Phase 2 — AI Counter-Arguments
+
+**Step 3 — Generate counter-arguments.** Paste your analysis into the AICheck below. The AI will generate the 3 strongest counter-arguments to your work and identify your biggest blind spot.
+
+**Step 4 — Respond to the strongest attack (200 words).** Read all 3 counter-arguments. Pick the strongest one — the one that genuinely threatens your analysis — and write a 200-word response defending your position with specific evidence and reasoning. Do not deflect to a different point; address the attack directly.
+
+#### Phase 3 — Chapter Reflection
+
+**Step 5 — Write your final reflection (150 words).** Looking back across all four exercises in this chapter, answer: What would you change about your question formulation process? What did you learn about your own thinking habits?
 
 ---
 
 :::info Your Deliverable
-Peer feedback form filled out by your panel (each panelist writes 2 strengths and 2 weaknesses they observed in your defence). Your written response (200 words) to the strongest AI-generated counter-argument to your analysis. A final reflection (150 words) on what you would change about your question formulation process based on everything you learned in this chapter.
-:::
 
-```text title="AI Check Prompt -- Copy and paste into claude.ai or chatgpt.com"
+1. Peer feedback form (each panelist: 2 strengths + 2 weaknesses) — or solo learner Q&A transcript
+2. Your 200-word response to the strongest AI counter-argument
+3. Your 150-word chapter reflection on question formulation growth
+   :::
+
+<AICheck id="live-defence" xp={50}>
+
 Below is a student's analysis of a business scenario. Please:
 
 (1) Generate the 3 strongest counter-arguments to this analysis -- attack
-    the weakest assumptions, the most questionable logic, and the most
-    unsupported claims.
+the weakest assumptions, the most questionable logic, and the most
+unsupported claims.
 (2) For each counter-argument, explain specifically what evidence or
-    reasoning would be needed to defeat it.
+reasoning would be needed to defeat it.
 (3) Identify the single biggest blind spot in this analysis -- the most
-    important thing the student failed to consider.
+important thing the student failed to consider.
 (4) Rate the overall analytical rigor from
-    Beginner / Developing / Proficient / Advanced.
+Beginner / Developing / Proficient / Advanced.
 
 The student will need to defend against your strongest counter-argument
 in writing.
 
-Scenario: [paste scenario].
-Student's analysis: [paste analysis].
+Scenario:
+
+<AICheckField
+  name="scenario"
+  placeholder="Paste your chosen scenario here..."
+  rows={2}
+/>
+
+Student's analysis:
+
+<AICheckField
+  name="analysis"
+  placeholder="Paste your analysis here..."
+  rows={6}
+/>
 
 Finally, complete the Thinking Score Card for this exercise:
 Independent Thinking (1-10), Critical Evaluation (1-10),
 Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
 For each score, give a one-sentence justification.
-```
+
+</AICheck>
+
+---
+
+<details>
+<summary>Peer Feedback Form Template (click to expand)</summary>
+
+**PEER FEEDBACK FORM**
+
+- **Presenter:** \_\_\_
+- **Panelist:** \_\_\_
+
+|                | Description |
+| -------------- | ----------- |
+| **Strength 1** | \_\_\_      |
+| **Strength 2** | \_\_\_      |
+| **Weakness 1** | \_\_\_      |
+| **Weakness 2** | \_\_\_      |
+
+**Overall:** Could the presenter explain their reasoning without AI, or did they struggle to justify claims they submitted? (1 sentence)
+
+</details>
 
 ---
 
@@ -156,3 +210,7 @@ A Question Quality Portfolio containing: (1) the sealed prediction lock document
 Note: the final answer to the business scenario is worth 0%. The thinking process is the entire grade.
 
 </details>
+
+## Flashcards Study Aid
+
+<Flashcards />
