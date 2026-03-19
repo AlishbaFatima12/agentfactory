@@ -56,102 +56,103 @@ Chapters 25-40 within sections. No renumbering needed.
 
 Local numbering 01-09. Left as-is. Conceptually Ch 41-55 but we don't assign.
 
-### Part 5: Building OpenClaw Apps (Ch 56-58) — NEW
+### Part 5: Building OpenClaw Apps (Ch 56-60) — NEW
 
-| Position | New #  | Folder Name                      | Source                                                             |
-| -------- | ------ | -------------------------------- | ------------------------------------------------------------------ |
-| 1        | **56** | `56-meet-your-first-ai-employee` | Moved from Part 1 (old Ch 18)                                      |
-| 2        | **57** | `57-building-openclaw-apps`      | NEW: TutorClaw architecture + economics + decisions (deep chapter) |
-| 3        | **58** | `58-nemoclaw`                    | NEW: Maybe (placeholder, confirm later)                            |
+| Position | New #  | Folder Name                      | Source                                              |
+| -------- | ------ | -------------------------------- | --------------------------------------------------- |
+| 1        | **56** | `56-meet-your-first-ai-employee` | Moved from Part 1 (old Ch 18)                       |
+| 2        | **57** | `57-building-openclaw-apps`      | NEW: TutorClaw MCP-first architecture (placeholder) |
 
-### Part 6: Building Agent Factories (Ch 59-78) — Old Part 5 RENAMED + RENUMBERED
+Chapters 58-60 are reserved slots for future Part 5 content. No folders created for reserved slots.
+
+### Part 6: Building Agent Factories (Ch 61-78) — Old Part 5 RENAMED + RENUMBERED
 
 | Position | Old # | New #  | Folder Name                           | Notes                                    |
 | -------- | ----- | ------ | ------------------------------------- | ---------------------------------------- |
-| 1        | 33    | **59** | `59-introduction-to-ai-agents`        | Renumbered                               |
-| 2        | 34    | **60** | `60-openai-agents-sdk`                | Renumbered                               |
-| 3        | 35    | **61** | `61-google-adk-reliable-agents`       | Renumbered                               |
-| 4        | —     | **62** | **`62-claude-api-agentic-loops`**     | **NEW: Cert Chapter B**                  |
-| 5        | 36    | **63** | `63-anthropic-agents-kit-development` | Renumbered + Chapter C lessons folded in |
-| 6        | 37    | **64** | `64-mcp-fundamentals`                 | Renumbered                               |
-| 7        | 38    | **65** | `65-custom-mcp-servers`               | Renumbered                               |
-| 8        | 39    | **66** | `66-agent-skills-mcp-code-execution`  | Renumbered                               |
-| 9        | —     | **67** | **`67-multi-agent-reliability`**      | **NEW: Cert Chapter D**                  |
-| 10       | 40    | **68** | `68-fastapi-for-agents`               | Renumbered                               |
-| 11       | 41    | **69** | `69-chatkit-server`                   | Renumbered                               |
-| 12       | 42    | **70** | `70-openai-apps-sdk`                  | Renumbered                               |
-| 13       | 43    | **71** | `71-vector-databases-rag-langchain`   | Renumbered                               |
-| 14       | 44    | **72** | `72-relational-databases-sqlmodel`    | Renumbered                               |
-| 15       | 45    | **73** | `73-augmented-memory`                 | Renumbered                               |
-| 16       | 46    | **74** | `74-tdd-for-agents`                   | Renumbered                               |
-| 17       | 47    | **75** | `75-evals-agent-performance`          | Renumbered                               |
-| 18       | 48    | **76** | `76-knowledge-graphs-graphrag`        | Renumbered                               |
+| 1        | 33    | **61** | `61-introduction-to-ai-agents`        | Renumbered                               |
+| 2        | 34    | **62** | `62-openai-agents-sdk`                | Renumbered                               |
+| 3        | 35    | **63** | `63-google-adk-reliable-agents`       | Renumbered                               |
+| 4        | —     | **64** | **`64-claude-api-agentic-loops`**     | **NEW: Cert Chapter B**                  |
+| 5        | 36    | **65** | `65-anthropic-agents-kit-development` | Renumbered + Chapter C lessons folded in |
+| 6        | 37    | **66** | `66-mcp-fundamentals`                 | Renumbered                               |
+| 7        | 38    | **67** | `67-custom-mcp-servers`               | Renumbered                               |
+| 8        | 39    | **68** | `68-agent-skills-mcp-code-execution`  | Renumbered                               |
+| 9        | —     | **69** | **`69-multi-agent-reliability`**      | **NEW: Cert Chapter D**                  |
+| 10       | 40    | **70** | `70-fastapi-for-agents`               | Renumbered                               |
+| 11       | 41    | **71** | `71-chatkit-server`                   | Renumbered                               |
+| 12       | 42    | **72** | `72-openai-apps-sdk`                  | Renumbered                               |
+| 13       | 43    | **73** | `73-vector-databases-rag-langchain`   | Renumbered                               |
+| 14       | 44    | **74** | `74-relational-databases-sqlmodel`    | Renumbered                               |
+| 15       | 45    | **75** | `75-augmented-memory`                 | Renumbered                               |
+| 16       | 46    | **76** | `76-tdd-for-agents`                   | Renumbered                               |
+| 17       | 47    | **77** | `77-evals-agent-performance`          | Renumbered                               |
+| 18       | 48    | **78** | `78-knowledge-graphs-graphrag`        | Renumbered                               |
 
-### Part 7: Deploying Agent Factories in the Cloud (Ch 77-88) — Old Part 6 RENAMED + RENUMBERED
+### Part 7: Deploying Agent Factories in the Cloud (Ch 79-90) — Old Part 6 RENAMED + RENUMBERED
 
 | Position | Old # | New #  | Folder Name                         |
 | -------- | ----- | ------ | ----------------------------------- |
-| 1        | 49    | **77** | `77-docker-for-ai-services`         |
-| 2        | 50    | **78** | `78-kubernetes-for-ai-services`     |
-| 3        | 51    | **79** | `79-helm-charts`                    |
-| 4        | 52    | **80** | `80-event-driven-kafka`             |
-| 5        | 53    | **81** | `81-dapr-core`                      |
-| 6        | 54    | **82** | `82-cicd-gitops-argocd`             |
-| 7        | 55    | **83** | `83-observability-cost-engineering` |
-| 8        | 56    | **84** | `84-traffic-engineering`            |
-| 9        | 57    | **85** | `85-dapr-actors-workflows`          |
-| 10       | 58    | **86** | `86-production-security`            |
-| 11       | 59    | **87** | `87-cost-disaster-recovery`         |
-| 12       | 60    | **88** | `88-real-cloud-deployment`          |
+| 1        | 49    | **79** | `79-docker-for-ai-services`         |
+| 2        | 50    | **80** | `80-kubernetes-for-ai-services`     |
+| 3        | 51    | **81** | `81-helm-charts`                    |
+| 4        | 52    | **82** | `82-event-driven-kafka`             |
+| 5        | 53    | **83** | `83-dapr-core`                      |
+| 6        | 54    | **84** | `84-cicd-gitops-argocd`             |
+| 7        | 55    | **85** | `85-observability-cost-engineering` |
+| 8        | 56    | **86** | `86-traffic-engineering`            |
+| 9        | 57    | **87** | `87-dapr-actors-workflows`          |
+| 10       | 58    | **88** | `88-production-security`            |
+| 11       | 59    | **89** | `89-cost-disaster-recovery`         |
+| 12       | 60    | **90** | `90-real-cloud-deployment`          |
 
-### Part 8: Turing LLMOps (Ch 89-100) — Old Part 7 RENUMBERED
+### Part 8: Turing LLMOps (Ch 91-102) — Old Part 7 RENUMBERED
 
 | Position | Old # | New #   | Folder Name                       |
 | -------- | ----- | ------- | --------------------------------- |
-| 1        | 61    | **89**  | `89-introduction-to-llmops`       |
-| 2        | 62    | **90**  | `90-llm-architecture-compute`     |
-| 3        | 63    | **91**  | `91-data-engineering-fine-tuning` |
-| 4        | 64    | **92**  | `92-supervised-fine-tuning`       |
-| 5        | 65    | **93**  | `93-identity-persona-tuning`      |
-| 6        | 66    | **94**  | `94-agentic-function-calling`     |
-| 7        | 67    | **95**  | `95-model-merging-optimization`   |
-| 8        | 68    | **96**  | `96-alignment-safety`             |
-| 9        | 69    | **97**  | `97-evaluation-quality-gates`     |
-| 10       | 70    | **98**  | `98-deployment-serving`           |
-| 11       | 71    | **99**  | `99-agent-framework-integration`  |
-| 12       | 72    | **100** | `100-capstone-end-to-end-llmops`  |
+| 1        | 61    | **91**  | `91-introduction-to-llmops`       |
+| 2        | 62    | **92**  | `92-llm-architecture-compute`     |
+| 3        | 63    | **93**  | `93-data-engineering-fine-tuning` |
+| 4        | 64    | **94**  | `94-supervised-fine-tuning`       |
+| 5        | 65    | **95**  | `95-identity-persona-tuning`      |
+| 6        | 66    | **96**  | `96-agentic-function-calling`     |
+| 7        | 67    | **97**  | `97-model-merging-optimization`   |
+| 8        | 68    | **98**  | `98-alignment-safety`             |
+| 9        | 69    | **99**  | `99-evaluation-quality-gates`     |
+| 10       | 70    | **100** | `100-deployment-serving`          |
+| 11       | 71    | **101** | `101-agent-framework-integration` |
+| 12       | 72    | **102** | `102-capstone-end-to-end-llmops`  |
 
-### Part 9: TypeScript & Realtime Interaction (Ch 101-106) — Old Part 8 RENUMBERED
+### Part 9: TypeScript & Realtime Interaction (Ch 103-108) — Old Part 8 RENUMBERED
 
 | Position | Old # | New #   | Folder Name                          |
 | -------- | ----- | ------- | ------------------------------------ |
-| 1        | 73    | **101** | `101-typescript-fundamentals`        |
-| 2        | 74    | **102** | `102-async-patterns-streaming`       |
-| 3        | 75    | **103** | `103-runtime-environments-http`      |
-| 4        | 76    | **104** | `104-building-type-safe-sdks`        |
-| 5        | 77    | **105** | `105-testing-typescript-ai`          |
-| 6        | 78    | **106** | `106-cli-tools-developer-experience` |
+| 1        | 73    | **103** | `103-typescript-fundamentals`        |
+| 2        | 74    | **104** | `104-async-patterns-streaming`       |
+| 3        | 75    | **105** | `105-runtime-environments-http`      |
+| 4        | 76    | **106** | `106-building-type-safe-sdks`        |
+| 5        | 77    | **107** | `107-testing-typescript-ai`          |
+| 6        | 78    | **108** | `108-cli-tools-developer-experience` |
 
-### Part 10: Building Realtime Voice Agents (Ch 107-113) — Old Part 9 RENUMBERED
+### Part 10: Building Realtime Voice Agents (Ch 109-115) — Old Part 9 RENUMBERED
 
 | Position | Old # | New #   | Folder Name                           |
 | -------- | ----- | ------- | ------------------------------------- |
-| 1        | 79    | **107** | `107-voice-ai-fundamentals`           |
-| 2        | 80    | **108** | `108-livekit-agents`                  |
-| 3        | 81    | **109** | `109-pipecat`                         |
-| 4        | 82    | **110** | `110-openai-realtime-api`             |
-| 5        | 83    | **111** | `111-gemini-live-api`                 |
-| 6        | 84    | **112** | `112-phone-browser-integration`       |
-| 7        | 85    | **113** | `113-capstone-production-voice-agent` |
+| 1        | 79    | **109** | `109-voice-ai-fundamentals`           |
+| 2        | 80    | **110** | `110-livekit-agents`                  |
+| 3        | 81    | **111** | `111-pipecat`                         |
+| 4        | 82    | **112** | `112-openai-realtime-api`             |
+| 5        | 83    | **113** | `113-gemini-live-api`                 |
+| 6        | 84    | **114** | `114-phone-browser-integration`       |
+| 7        | 85    | **115** | `115-capstone-production-voice-agent` |
 
 ## Summary Counts
 
 - **Total parts**: 11 (0-10)
-- **Total chapters**: ~113
-- **Chapters renumbered**: 53 (old Ch 33-85 → new Ch 59-113)
+- **Total chapters**: ~115 (with 3 reserved slots in Part 5)
+- **Chapters renumbered**: 53 (old Ch 33-85 → new Ch 61-115)
 - **Chapters moved**: 1 (old Ch 18 → Ch 56)
-- **New chapters added**: 4 (Ch 18 placeholder, Ch 57, Ch 62, Ch 67)
-- **Placeholder chapters**: 1 (Ch 58 NemoClaw, confirm later)
+- **New chapters added**: 3 (Ch 18 placeholder, Ch 57 placeholder, Ch 64 Cert B, Ch 69 Cert D)
+- **Reserved slots**: Ch 58-60 (Part 5 future expansion)
 - **Part folders renamed**: 5 (old 05→06, 06→07, 07→08, 08→09, 09→10)
 - **Part folders created**: 1 (new 05-Building-OpenClaw-Apps)
 
@@ -182,6 +183,7 @@ Local numbering 01-09. Left as-is. Conceptually Ch 41-55 but we don't assign.
 - Part 4 local numbering is NOT touched
 - Part 0-3 chapter numbers (1-40) are NOT touched
 - Old Ch 18 content moves intact (all lessons, flashcards, summaries)
-- Chapter C content is NOT a new chapter — it gets folded into Ch 63 (old 36) as new lessons
+- Chapter C content is NOT a new chapter — it gets folded into Ch 63 (old 36) as new lessons. DEFERRED to a separate content-writing session. This structural operation does NOT add Chapter C lessons.
 - NemoClaw (Ch 58) is a PLACEHOLDER — may or may not be created
-- No content writing in this operation — only structural changes
+- No content writing in this operation — only structural changes (folder renames, frontmatter updates, cross-reference fixes)
+- Chapters 33-40 references are AMBIGUOUS (exist in both Part 3 and old Part 5). Only auto-update chapters 41-85. Manually inspect 33-40 references in context.
