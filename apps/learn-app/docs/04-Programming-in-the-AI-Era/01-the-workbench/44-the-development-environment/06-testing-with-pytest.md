@@ -57,11 +57,15 @@ Emma watches him test by reading terminal output. "I already tested it," James s
 
 "A normal title. 'hello world.' It came back 'Hello World.' Correct."
 
-"What about an empty string? A title with extra spaces? A title that is already capitalized?"
+"Test it with an empty string," Emma says.
 
-James pauses. He tested one case. The one he thought of. The function might handle all of those correctly -- or it might not. He does not know, because he only checked the scenario that came to mind first.
+James runs it. Empty string returns empty string. "Works."
 
-"I tested one path," James says. "I do not know what happens on the others."
+"Now an already-capitalized title. Then one with extra spaces. Then a single character."
+
+James runs each one by hand — typing the input, running the file, reading the output, comparing it to what he expected. The extra-spaces case surprises him. The function does not strip them.
+
+"I have been doing this for five minutes and I have five cases," James says. "Every time someone changes this function, I would have to run all five again by hand."
 
 "That," Emma says, "is what neither ruff nor pyright can see."
 

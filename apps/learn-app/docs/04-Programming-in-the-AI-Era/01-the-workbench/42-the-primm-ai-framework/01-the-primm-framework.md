@@ -79,9 +79,13 @@ James is skeptical. "A framework from 2017? Why not just ask AI to explain any c
 
 "Try it," Emma says. "Ask your AI assistant to explain line twelve from the program we just looked at."
 
-James types the prompt. The AI responds with a detailed paragraph about list comprehensions, filtering, and conditional expressions. He reads it twice. "I can read the words," he says slowly, "but I have no way to know if this explanation is *correct*. I'm trusting the AI to explain code that I can't verify — which is the same problem, just one step removed."
+James types the prompt. The AI responds with a detailed paragraph about list comprehensions, filtering, and conditional expressions. He reads it twice. "That was fast. I understand it — list comprehension, filtering, conditional expression. Done."
 
-Emma waits.
+"Then predict," Emma says. "If I change the condition from `> 1000` to `<= 1000`, what happens to the output?"
+
+James looks at the AI explanation again. It described the filtering logic in general terms, but it never said which specific items would pass and which would fail. He is not sure whether the output list would get longer, shorter, or stay the same. "I think... the opposite items would show up?" He pauses. "I am not actually sure."
+
+"You read a correct explanation," Emma says. "You still cannot predict the behavior."
 
 "So I need a way to build the understanding myself," James says. "Not just receive explanations I can't check. What's this framework?"
 

@@ -77,13 +77,17 @@ Then the product team changed a customer's name from "Acme Corp" to "Acme Corpor
 
 "It's a data format problem," James said before Emma could finish examining the dashboard. "I'll switch to YAML, or maybe use separate JSON files for customers and orders. Cleaner structure, same flexibility."
 
-"How would you connect an order to its customer?" Emma asked.
+"Build it," Emma said. "Separate files. Show me how you would fix the Acme Corp problem."
 
-James thought about it. "Store the customer name in each order. Or... a customer ID field that matches—" He stopped. "But that's what I already have. The customer name _is_ the link. That's why it broke when the name changed."
+James sketched it out. A `customers.yaml` with IDs and names. An `orders.yaml` with customer ID references instead of names. "Change the name in the customers file, orders still point to the right ID. Problem solved."
 
-"You are storing relational data," Emma said, "in a format that does not understand relationships."
+"Delete customer number 7," Emma said.
 
-James stared at the dashboard showing two "Acme" customers. The problem was not the file format. YAML would have the same problem. CSV would have the same problem. Any format that _copied_ the customer name into every order instead of _referencing_ it by a stable ID would have the same problem. "The format was never the issue," he said. "I need something that enforces the connection — so changing a name in one place changes it everywhere. Like a spreadsheet where instead of typing a customer name in every order row, you have a separate customers sheet and each order just points to a row number. Change the name in the customers sheet, and every order still points to the right place."
+James paused. The orders referencing customer 7 would still exist — pointing to a customer that was gone. Nothing in the YAML file would stop him. Nothing would warn him that twenty orders now referenced a ghost. "I would have to write code to enforce that myself."
+
+"And the original problem — what if someone types 'Acme Corp' in one order file and 'Acme Corporation' in another?"
+
+"The YAML file would accept both," James said slowly. He stared at the dashboard showing two "Acme" customers. "The format was never the issue. YAML would have the same problem. CSV would have the same problem. I need something that enforces the connections — that rejects bad data before it gets in. Like a spreadsheet where instead of typing a customer name in every order row, you have a separate customers sheet and each order just points to a row number. Change the name in the customers sheet, and every order still points to the right place."
 
 Emma paused. "That is actually a better analogy than the one I usually use. I have been explaining normalization with entity-relationship diagrams for years. The spreadsheet version is clearer."
 
