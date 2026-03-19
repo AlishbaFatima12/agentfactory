@@ -36,7 +36,7 @@ This chapter trains you to become a systematic error detector. Not vague skeptic
 | 1 | [The Error Prediction](./01-error-prediction.md) | Layer 1, Layer 2 | Error prediction document + annotated AI responses |
 | 2 | [The Contradiction Test](./02-contradiction-test.md) | Layer 4, Layer 6 | Three-draft analysis with evolution notes |
 | 3 | [Build It, Then Break It](./03-build-it-break-it.md) | Layer 5, Layer 3 | Domain expertise annotations + cross-domain verification |
-| 4 | [Confidence Calibration](./04-confidence-calibration.md) | Layer 1, Layer 6 | 20-claim Confidence Calibration Chart |
+| 4 | [Confidence Calibration](./04-confidence-calibration.md) | Layer 1, Layer 6 | 10-claim Confidence Calibration Chart |
 
 ## Chapter Deliverable
 

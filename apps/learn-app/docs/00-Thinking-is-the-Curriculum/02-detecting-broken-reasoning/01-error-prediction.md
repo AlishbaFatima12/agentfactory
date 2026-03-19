@@ -111,19 +111,19 @@ You used the **Prediction Lock** format in [Chapter 1, Exercise 1](../01-asking-
 
 ### What You Do
 
-**Step 1 — Write your sealed prediction (no AI).** Before prompting any AI, write down:
+**Step 1 — Write your sealed prediction (~15 min, no AI).** Before prompting any AI, write down:
 
 - What you think the correct analysis involves (key factors, tradeoffs, data needed)
 - Where you predict AI will be **strong** in its analysis
-- Where you predict AI will **make errors** or miss important context — name the specific Error Taxonomy categories you expect
+- Where you predict AI will **make errors** or miss important context — focus on three categories to start: **factual error**, **false confidence**, and **missing context**. The remaining five categories are in the table above for reference, but these three are the easiest to spot
 
 This is your prediction document. Write it before moving to Step 2.
 
-**Step 2 — Get two AI responses.** Choose a scenario below, then prompt both Claude and ChatGPT with the identical question. Save both full responses.
+**Step 2 — Get two AI responses (~10 min).** Choose a scenario below, then prompt both Claude and ChatGPT with the identical question. Save both full responses.
 
-**Step 3 — Annotate line by line.** Go through each AI response sentence by sentence. For every claim, label it using the Error Taxonomy above (factual error, logical gap, false confidence, etc.). If a sentence is correct, mark it as "no error detected."
+**Step 3 — Annotate the key claims (~20 min).** Read through each AI response. Pick the 5 strongest claims and the 5 most suspicious claims — 10 total across both responses. For each, label it using the Error Taxonomy above. If a claim is correct, mark it "no error detected."
 
-**Step 4 — Build your comparison table.** Compare your predictions from Step 1 against the actual errors you found in Step 3 (see template below). Count how many of each error type you found across both tools.
+**Step 4 — Build your comparison table (~10 min).** Compare your predictions from Step 1 against the actual errors you found in Step 3 (see template below). Count how many of each error type you found across both tools.
 
 ### Choose Your Scenario
 
@@ -149,7 +149,7 @@ Choose one.
 :::info Your Deliverable
 
 1. Your sealed prediction document (written before AI) listing expected strengths and error types
-2. Two annotated AI responses with every sentence labeled using the Error Taxonomy
+2. Two AI responses with your 10 key claims annotated using the Error Taxonomy
 3. A comparison table: predicted errors vs. actual errors found (see template below)
 4. A count of each error type found across both tools
    :::

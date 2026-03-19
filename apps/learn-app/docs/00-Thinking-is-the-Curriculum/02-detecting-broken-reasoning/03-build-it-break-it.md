@@ -83,7 +83,7 @@ teaching_guide:
 
 **Step 2 — Generate an AI analysis.** Ask AI to write a detailed analysis of a specific question in your domain. Be specific enough that the AI will need to make claims you can verify — e.g., "Analyze the public transit challenges in Karachi" not "Tell me about cities."
 
-**Step 3 — Annotate line by line using the Error Taxonomy.** Go through the AI response sentence by sentence. For each claim, label it using the Error Taxonomy from Exercise 1. Pay special attention to errors that _sound correct_ but you know are wrong because of your expertise.
+**Step 3 — Annotate the most confident-sounding claims.** Pick the 10 most authoritative-sounding claims in the AI response — the ones that sound most certain. Label each using the Error Taxonomy from Exercise 1. Pay special attention to errors that _sound correct_ but you know are wrong because of your expertise.
 
 **Step 4 — Separate your findings.** Create two lists:
 
@@ -95,7 +95,7 @@ teaching_guide:
 **Step 6 — Write your reflection (200 words).** Compare your error detection experience in your domain vs. your partner's domain. What was different? What does this tell you about using AI outside your expertise?
 
 :::tip Solo Learner Alternative
-Skip Step 5. Instead, choose a second domain you know _nothing_ about. Generate an AI analysis for that domain too, and try to annotate errors. Compare your detection rate between the two domains. The gap reveals exactly how much domain expertise matters.
+Instead of Step 5, run your own cross-domain test: choose a second topic you know _nothing_ about, generate an AI analysis for it, and try to annotate errors using the same approach. Compare your detection rate between the two domains — the gap reveals exactly how much domain expertise matters.
 :::
 
 ---

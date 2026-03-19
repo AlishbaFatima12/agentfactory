@@ -202,7 +202,7 @@ title="Chapter 2: Detecting Broken Reasoning Assessment"
       source: "Exercise 4: Confidence Calibration"
     },
     {
-      question: "Why does the Confidence Calibration exercise use a 90-second time limit per claim?",
+      question: "Why does the Confidence Calibration exercise use a 2-minute time limit per claim?",
       options: [
         "To keep the total exercise time under 30 minutes for scheduling purposes",
         "To simulate real-world conditions where you must assess AI output quickly without full verification",
@@ -210,7 +210,7 @@ title="Chapter 2: Detecting Broken Reasoning Assessment"
         "To increase the difficulty level and separate advanced students from beginners"
       ],
       correctOption: 1,
-      explanation: "The 90-second constraint simulates actual decision-making — in real life, you cannot verify every AI claim exhaustively. You must develop rapid, calibrated judgment about when to trust, when to doubt, and when to verify. Unlimited time would train a different (and less useful) skill.",
+      explanation: "The 2-minute constraint simulates actual decision-making — in real life, you cannot verify every AI claim exhaustively. You must develop rapid, calibrated judgment about when to trust, when to doubt, and when to verify. Unlimited time would train a different (and less useful) skill.",
       source: "Exercise 4: Confidence Calibration"
     },
     {
