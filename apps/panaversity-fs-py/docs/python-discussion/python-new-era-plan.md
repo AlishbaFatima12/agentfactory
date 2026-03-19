@@ -143,7 +143,7 @@ PRIMM-AI+ exercises come in two tracks, determined by what students know at that
 | Track | When Used | Exercise Style | Example Chapters |
 |-------|-----------|---------------|-----------------|
 | **Track B: Conceptual Reasoning** | Before students know programming tools | Plain-English scenarios, real-world analogies, no code | Ch 42 (PRIMM-AI+), Ch 43 (Ten Axioms) |
-| **Track A: Code Exercises** | After students have the discipline stack | Typed Python, pytest, pyright, actual code artifacts | Ch 45+ (all Python programming chapters) |
+| **Track A: Code Exercises** | After students have the discipline stack | Typed Python, pytest, pyright, actual code artifacts | Ch 44+ (Dev Environment onward) |
 
 **Why this matters**: Chapter 43's PRIMM-AI+ exercises use school plays, birthday parties, cake orders, and form fields — NOT Makefiles, pytest, SQL, or Docker. Students don't have those tools yet. Track B builds conceptual understanding of each axiom; Track A applies them to real code starting when students have the tools. An earlier attempt to add code-based PRIMM-AI+ to Chapter 43 (PR #853) failed precisely because it used Track A exercises before students had the prerequisite knowledge.
 
@@ -1837,7 +1837,7 @@ quizforge/
 - [x] ~~"When Not to Use AI" chapter?~~ → Resolved: Yes, Ch 27. Judgment about AI assistance spectrum, preventing AI dependency.
 - [x] ~~Split Production Systems phase?~~ → Resolved: Yes. Phase 7 (CLI + Concurrency) and Phase 8 (CI/CD + Security) — separate building from shipping.
 - [x] ~~Axioms at start vs end?~~ → Resolved: Keep near start. Chapter 43 (Ten Axioms) already exists and serves as the bridge from Part 3 into Part 4 (after PRIMM-AI+). No duplicate needed.
-- [x] ~~PRIMM-AI+ exercise style for pre-coding chapters?~~ → Resolved: Track B (conceptual reasoning with plain-English scenarios). Track A (code exercises) starts when students have the discipline stack (Ch 45+). PR #853 proved that code-based exercises in Chapter 43 fail because students don't know the tools yet.
+- [x] ~~PRIMM-AI+ exercise style for pre-coding chapters?~~ → Resolved: Track B (conceptual reasoning with plain-English scenarios). Track A (code exercises) starts when students have the discipline stack (Ch 44+). PR #853 proved that code-based exercises in Chapter 43 fail because students don't know the tools yet.
 - [x] ~~Answer keys in PRIMM-AI+ exercises?~~ → Resolved: Mandatory. Every Predict section gets a collapsible `<details>` answer key. Students must never be left guessing whether their prediction was correct.
 
 ---
