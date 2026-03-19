@@ -9,6 +9,58 @@
 | **[TL]** | Fully translate to Urdu |
 | **First use** | اردو اصطلاح کو بطورِ پیش فرض استعمال کریں۔ `(English term)` صرف اسی وقت پہلی بار شامل کریں جب وضاحت، تلاش پذیری، یا repo convention اس کا تقاضا کرے۔ |
 
+## Urdu Typography Rules (CRITICAL)
+
+Urdu script (Naskh/Nastaliq) has fundamentally different typography from Latin. These rules override Rule 21 for Urdu:
+
+### 1. NO ITALIC — Ever
+Urdu/Naskh script has NO italic variant. The `*italic*` marker must be **removed entirely** in Urdu translation. Do NOT preserve `*single asterisk*` emphasis.
+
+| Source (English) | Bad (Urdu) | Good (Urdu) |
+|-----------------|------------|-------------|
+| `*emphasis here*` | `*زور یہاں*` | `زور یہاں` |
+| `_also italic_` | `_بھی ترچھا_` | `بھی ترچھا` |
+
+**What to do with English italic text:**
+- If the italic conveys **emphasis**: Remove markers, the sentence context carries the emphasis naturally in Urdu
+- If the italic marks a **term/definition**: Use `**bold**` instead (one level up)
+- If the italic marks a **book title or foreign word**: Keep plain — Urdu readers don't need italic for this
+
+### 2. Bold — Use Sparingly
+Bold (`**text**`) works in Naskh but should be used **less** than in English:
+- Keep bold for **key terms on first introduction** only
+- Keep bold for **headings** (these are already bold via heading level)
+- **Remove bold** from phrases that are bold in English just for visual emphasis — Urdu achieves emphasis through word choice and sentence structure
+- **Never double-emphasize**: If English has `***bold italic***`, use just `**bold**` in Urdu
+
+| Source (English) | Bad (Urdu) | Good (Urdu) |
+|-----------------|------------|-------------|
+| `**very important** point` | `**بہت اہم** نکتہ` | `بہت اہم نکتہ` (plain — emphasis is in the words) |
+| `***bold and italic***` | `***موٹا اور ترچھا***` | `**موٹا**` (bold only, no italic) |
+| `**Digital FTE** (first use)` | `**ڈیجیٹل ایف ٹی ای**` | `**ڈیجیٹل ایف ٹی ای**` (keep — first use of key term) |
+
+### 3. Inline HTML styles
+When translating JSX/HTML with inline `fontStyle: 'italic'`, change to `fontStyle: 'normal'` for Urdu. Urdu fonts render italic as broken/slanted which looks wrong.
+
+### 4. Lists — Plain Style
+Urdu list items should be plain text. Don't carry over bold from English list items unless the bold marks a key term definition.
+
+| Source (English) | Bad (Urdu) | Good (Urdu) |
+|-----------------|------------|-------------|
+| `- **Step 1**: Do X` | `- **مرحلہ 1**: یہ کریں` | `- مرحلہ 1: یہ کریں` |
+| `- **Key concept**: Agent` | `- **کلیدی تصور**: ایجنٹ` | `- **کلیدی تصور**: ایجنٹ` (keep — defines term) |
+
+### 5. Blockquotes — Remove Extra Bold
+English blockquotes often use bold for the entire content. In Urdu, blockquotes should have plain body text with only key terms bolded.
+
+### 6. Emphasis Hierarchy in Urdu
+Instead of bold/italic, Urdu uses these for emphasis:
+1. **Word choice** — stronger words convey emphasis naturally
+2. **Bold** — only for key technical terms on first introduction
+3. **Heading level** — structural emphasis via h1-h6
+4. **Quotation marks** — for terms being defined: «اصطلاح»
+5. Plain text for everything else — Urdu prose is meant to flow clean
+
 ## BiDi (Bidirectional) Text Conventions
 
 Urdu is RTL. English terms embedded in Urdu text trigger BiDi rendering issues. Follow these conventions strictly:

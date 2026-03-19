@@ -96,7 +96,8 @@ rg -n '<span dir="ltr">' i18n/{lang-code} -g '*.md' -g '*.mdx'
 1. **Read the entire file** — understand context, tone, subject matter
 2. **Identify file type** — `.md` (pure Markdown) or `.mdx` (Markdown + JSX)
 3. **Load glossary** — Read `references/glossary-{lang}.md` if it exists
-4. **Map protected zones** — segments that must NOT be translated:
+4. **Load script-specific typography rules** — For Urdu/Arabic/Persian, read the "Typography Rules" section in the glossary. These override Rule 21 (emphasis preservation) and define how bold/italic/lists should be handled for that script. Key: Urdu has NO italic — strip all `*italic*` markers.
+5. **Map protected zones** — segments that must NOT be translated:
    - YAML frontmatter keys (translate values only)
    - Code blocks — fenced (``` ), indented, AND nested (quadruple-backtick wrapping triple-backtick)
    - Inline code (backtick-wrapped)

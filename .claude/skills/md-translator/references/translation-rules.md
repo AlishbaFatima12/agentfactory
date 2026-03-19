@@ -64,8 +64,10 @@ Keep paragraph breaks, lists, headings, and indentation intact.
 **Rule 20: Maintain Numbering Consistency**
 Preserve ordered and unordered list structure.
 
-**Rule 21: Preserve Emphasis**
-Maintain bold, italic, and underline formatting exactly as in source.
+**Rule 21: Preserve Emphasis (with script-specific overrides)**
+Maintain bold, italic, and underline formatting exactly as in source — UNLESS the target script has no equivalent:
+- **Urdu/Arabic/Persian**: Remove ALL italic (`*text*`, `_text_`) — these scripts have no italic variant. Convert meaning-carrying italic to bold only if it marks a key term definition; otherwise drop the markers entirely. See `glossary-ur.md` → "Urdu Typography Rules" for full guidance.
+- **All other languages**: Preserve emphasis markers exactly as in source.
 
 ## Section 3: Markdown Translation Rules (Rules 22-28)
 

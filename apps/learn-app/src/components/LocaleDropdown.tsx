@@ -8,14 +8,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown, Check } from "lucide-react";
-import ReactCountryFlag from 'react-country-flag';
+import { ChevronDown, Check, Languages } from "lucide-react";
 import { getLocaleUrl } from '../utils/getLocaleUrl';
 
-const LOCALE_META: Record<string, { countryCode: string; englishName: string }> = {
-  en: { countryCode: 'US', englishName: 'English' },
-  ur: { countryCode: 'PK', englishName: 'Urdu' },
-  'zh-Hans': { countryCode: 'CN', englishName: 'Simplified Chinese' },
+const LOCALE_META: Record<string, { englishName: string }> = {
+  en: { englishName: 'English' },
+  ur: { englishName: 'Urdu' },
+  'zh-Hans': { englishName: 'Simplified Chinese' },
 };
 
 export function LocaleDropdown() {
@@ -26,7 +25,7 @@ export function LocaleDropdown() {
   const currentLocale = i18n.currentLocale;
   const currentLocaleConfig = i18n.localeConfigs[currentLocale];
   const nativeLabel = currentLocaleConfig?.label || 'English';
-  const currentMeta = LOCALE_META[currentLocale] ?? { countryCode: 'US', englishName: 'English' };
+  const currentMeta = LOCALE_META[currentLocale] ?? { englishName: 'English' };
 
   const buildLocaleUrl = (targetLocale: string): string => {
     const url = getLocaleUrl({
@@ -48,7 +47,7 @@ export function LocaleDropdown() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" dir="ltr" className="gap-2 px-2.5 py-1.5 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded-md" title="Change language">
-          <ReactCountryFlag countryCode={currentMeta.countryCode} svg style={{ width: '1.25em', height: '1.25em', borderRadius: '3px' }} />
+          <Languages className="w-4 h-4 opacity-70" />
           <span className="font-medium">
             {currentMeta.englishName}
             {currentMeta.englishName !== nativeLabel && (
@@ -74,9 +73,6 @@ export function LocaleDropdown() {
               className={isActive ? 'bg-accent' : ''}
             >
               <a href={localeUrl} className="flex items-center gap-2.5 px-2 py-2 w-full cursor-pointer rounded-sm">
-                {localeMeta && (
-                  <ReactCountryFlag countryCode={localeMeta.countryCode} svg style={{ width: '1.25em', height: '1.25em', borderRadius: '3px', flexShrink: 0 }} />
-                )}
                 <span className="flex-1 text-sm font-medium">{englishName}</span>
                 {englishName !== nativeName && (
                   <span className="text-xs text-muted-foreground font-normal" dir={config?.direction || 'ltr'}>{nativeName}</span>

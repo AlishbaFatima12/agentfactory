@@ -29,7 +29,7 @@ sidebar_position: 0
 
 ### اپنی اے آئی افرادی قوت بنائیں
 
-_یہ ایک آسان اور قابلِ رسائی تعارف ہے۔ اس میں دستی کام سے <span dir="ltr">Digital FTEs</span> تک منتقلی، یہ وضاحت کہ اب کوڈنگ کیوں لازمی نہیں رہی، اور یہ بات شامل ہے کہ کاروباری مالکان، مارکیٹرز، اکاؤنٹنٹس، اساتذہ اور دیگر لوگ قدرتی زبان کے ذریعے اے آئی ملازمین کیسے بنا سکتے ہیں۔_
+یہ ایک آسان اور قابلِ رسائی تعارف ہے۔ اس میں دستی کام سے <span dir="ltr">Digital FTEs</span> تک منتقلی، یہ وضاحت کہ اب کوڈنگ کیوں لازمی نہیں رہی، اور یہ بات شامل ہے کہ کاروباری مالکان، مارکیٹرز، اکاؤنٹنٹس، اساتذہ اور دیگر لوگ قدرتی زبان کے ذریعے اے آئی ملازمین کیسے بنا سکتے ہیں۔
 
 :::tip مکمل سلائیڈ شو کھولیں
 **[مکمل پریزنٹیشن دیکھیں](https://docs.google.com/presentation/d/1nfCEKI4P3rzvtw1BvI8PmpP8nMXAROvpJ7Pyh9xzpj0/edit?usp=sharing)** — اپنی اے آئی افرادی قوت بنائیں
@@ -49,7 +49,7 @@ _یہ ایک آسان اور قابلِ رسائی تعارف ہے۔ اس میں
 
 ### ڈیجیٹل ایف ٹی ایز کی تعمیر: <span dir="ltr">Agent Factory</span>
 
-_یہ ایک جامع گہرا جائزہ ہے۔ اس میں <span dir="ltr">Agent Factory</span> کا بنیادی نظریہ، <span dir="ltr">Agent Triangle</span> (عام ایجنٹس، حسبِ ضرورت بنائے گئے اے آئی ملازمین، اور پہلے سے تیار شدہ اے آئی ملازمین)، تعمیر بمقابلہ خرید کا فیصلہ جاتی فریم ورک، کوڈ بطور عالمگیر انٹرفیس، <span dir="ltr">MCP</span> اور ایجنٹ مہارتیں، کمائی کے ماڈلز، مطالعاتی مثالیں، سیکیورٹی، اور پہلی تفصیل سے پہلی آمدنی تک کا مکمل نقشہ شامل ہے۔_
+یہ ایک جامع گہرا جائزہ ہے۔ اس میں <span dir="ltr">Agent Factory</span> کا بنیادی نظریہ، <span dir="ltr">Agent Triangle</span> (عام ایجنٹس، حسبِ ضرورت بنائے گئے اے آئی ملازمین، اور پہلے سے تیار شدہ اے آئی ملازمین)، تعمیر بمقابلہ خرید کا فیصلہ جاتی فریم ورک، کوڈ بطور عالمگیر انٹرفیس، <span dir="ltr">MCP</span> اور ایجنٹ مہارتیں، کمائی کے ماڈلز، مطالعاتی مثالیں، سیکیورٹی، اور پہلی تفصیل سے پہلی آمدنی تک کا مکمل نقشہ شامل ہے۔
 
 :::tip مکمل سلائیڈ شو کھولیں
 **[مکمل پریزنٹیشن دیکھیں](https://docs.google.com/presentation/d/1UGvCUk1-O8m5i-aTWQNxzg8EXoKzPa8fgcwfNh8vRjQ/edit?usp=sharing)** — <span dir="ltr">Agent Factory</span>: <span dir="ltr">Digital FTEs</span> کی تعمیر
@@ -69,7 +69,7 @@ _یہ ایک جامع گہرا جائزہ ہے۔ اس میں <span dir="ltr">Age
 
 ### کنسلٹنٹس بمقابلہ اے آئی ملازمین: <span dir="ltr">Agent Triangle</span>
 
-_یہ تازہ ترین درجہ بندی کا فریم ورک ہے۔ اس میں ایجنٹک اے آئی خودکاری کے تین راستے شامل ہیں: عام ایجنٹس (کنسلٹنٹس)، حسبِ ضرورت بنائے گئے اے آئی ملازمین (تعمیر)، اور پہلے سے تیار شدہ اے آئی ملازمین (خرید)؛ اس کے ساتھ <span dir="ltr">OpenClaw</span> کا گہرا جائزہ، فیصلہ جاتی فریم ورک، اور <span dir="ltr">Digital FTE</span> کے طیف کی بحث بھی شامل ہے۔_
+یہ تازہ ترین درجہ بندی کا فریم ورک ہے۔ اس میں ایجنٹک اے آئی خودکاری کے تین راستے شامل ہیں: عام ایجنٹس (کنسلٹنٹس)، حسبِ ضرورت بنائے گئے اے آئی ملازمین (تعمیر)، اور پہلے سے تیار شدہ اے آئی ملازمین (خرید)؛ اس کے ساتھ <span dir="ltr">OpenClaw</span> کا گہرا جائزہ، فیصلہ جاتی فریم ورک، اور <span dir="ltr">Digital FTE</span> کے طیف کی بحث بھی شامل ہے۔
 
 :::tip مکمل سلائیڈ شو کھولیں
 **[مکمل پریزنٹیشن دیکھیں](https://docs.google.com/presentation/d/1YMMOvWjSvEWl9tuNiLShNjruyzjlJydBHUc8j_y0gAI/edit?usp=sharing)** — <span dir="ltr">Agent Triangle Classification</span>
@@ -105,9 +105,9 @@ _یہ تازہ ترین درجہ بندی کا فریم ورک ہے۔ اس می�
 
 ![Anthropic Hit List — فروری 2026](/img/anthropic-hit-list-feb-2026.png)
 
-**پھر صورتحال مزید خراب ہوئی۔** تین ہفتے بعد، 24 فروری کو <span dir="ltr">Citrini Research</span> کی [7,000 الفاظ پر مشتمل ایک فرضی تحریر](https://www.citriniresearch.com/p/2028gic) وائرل ہو گئی — اور [<span dir="ltr">Dow</span> ایک ہی سیشن میں 800 <span dir="ltr">points</span> گر گیا](https://www.wsj.com/finance/stocks/stock-market-citrini-research-ai-downturn-f5c1ca20)۔ وہ رپورٹ کوئی پیش گوئی نہیں تھی۔ وہ جون 2028 کی تاریخ کے ساتھ ایک ایسا <span dir="ltr">scenario</span> تھا جس میں یہ دیکھا گیا تھا کہ جب اے آئی ایجنٹس بڑے پیمانے پر سفید پوش علمی کارکنوں کی جگہ لینا شروع کریں تو کیا ہو سکتا ہے: بڑے پیمانے کی بے روزگاری، سافٹ ویئر سے جڑے قرضوں میں ناکامی، اور مالی سرایت۔ مارکیٹ نے اس _<span dir="ltr">thought experiment</span>_ کو <span dir="ltr">trading signal</span> کے طور پر لیا۔ سافٹ ویئر کمپنیاں <span dir="ltr">Datadog</span>، <span dir="ltr">CrowdStrike</span>، اور <span dir="ltr">Zscaler</span> [9% سے زیادہ گر گئیں](https://finance.yahoo.com/news/software-payments-shares-tumble-citrini-162303649.html)۔ [<span dir="ltr">IBM</span> 13% نیچے آ گیا](https://www.bloomberg.com/news/articles/2026-02-23/software-payments-shares-tumble-after-citrini-post-on-ai-risks) — 2000 کے بعد اس کی بدترین <span dir="ltr">single-day performance</span>۔ <span dir="ltr">American Express</span>، <span dir="ltr">KKR</span>، اور <span dir="ltr">Blackstone</span> — جن کا رپورٹ میں نام لیا گیا تھا — بھی گر گئے۔
+**پھر صورتحال مزید خراب ہوئی۔** تین ہفتے بعد، 24 فروری کو <span dir="ltr">Citrini Research</span> کی [7,000 الفاظ پر مشتمل ایک فرضی تحریر](https://www.citriniresearch.com/p/2028gic) وائرل ہو گئی — اور [<span dir="ltr">Dow</span> ایک ہی سیشن میں 800 <span dir="ltr">points</span> گر گیا](https://www.wsj.com/finance/stocks/stock-market-citrini-research-ai-downturn-f5c1ca20)۔ وہ رپورٹ کوئی پیش گوئی نہیں تھی۔ وہ جون 2028 کی تاریخ کے ساتھ ایک ایسا <span dir="ltr">scenario</span> تھا جس میں یہ دیکھا گیا تھا کہ جب اے آئی ایجنٹس بڑے پیمانے پر سفید پوش علمی کارکنوں کی جگہ لینا شروع کریں تو کیا ہو سکتا ہے: بڑے پیمانے کی بے روزگاری، سافٹ ویئر سے جڑے قرضوں میں ناکامی، اور مالی سرایت۔ مارکیٹ نے اس <span dir="ltr">thought experiment</span> کو <span dir="ltr">trading signal</span> کے طور پر لیا۔ سافٹ ویئر کمپنیاں <span dir="ltr">Datadog</span>، <span dir="ltr">CrowdStrike</span>، اور <span dir="ltr">Zscaler</span> [9% سے زیادہ گر گئیں](https://finance.yahoo.com/news/software-payments-shares-tumble-citrini-162303649.html)۔ [<span dir="ltr">IBM</span> 13% نیچے آ گیا](https://www.bloomberg.com/news/articles/2026-02-23/software-payments-shares-tumble-after-citrini-post-on-ai-risks) — 2000 کے بعد اس کی بدترین <span dir="ltr">single-day performance</span>۔ <span dir="ltr">American Express</span>، <span dir="ltr">KKR</span>، اور <span dir="ltr">Blackstone</span> — جن کا رپورٹ میں نام لیا گیا تھا — بھی گر گئے۔
 
-ایک سطر میں <span dir="ltr">Citrini thesis</span>: _"جدید معاشی تاریخ کے پورے دور میں انسانی ذہانت کمیاب <span dir="ltr">input</span> رہی ہے۔ اب ہم اسی <span dir="ltr">premium</span> کے خاتمے کے مرحلے میں داخل ہو رہے ہیں۔"_
+ایک سطر میں <span dir="ltr">Citrini thesis</span>: "جدید معاشی تاریخ کے پورے دور میں انسانی ذہانت کمیاب <span dir="ltr">input</span> رہی ہے۔ اب ہم اسی <span dir="ltr">premium</span> کے خاتمے کے مرحلے میں داخل ہو رہے ہیں۔"
 
 <span dir="ltr">SaaSpocalypse</span> نے ثابت کیا کہ سافٹ ویئر کمپنیاں خود بگاڑ کا شکار ہیں۔ <span dir="ltr">Citrini selloff</span> نے اس سے بھی بڑی بات واضح کی: **مارکیٹ سمجھتی ہے کہ یہ بگاڑ تمام <span dir="ltr">knowledge work</span> تک پھیل سکتا ہے۔** یہی وہ موقع ہے جس کے لیے یہ کتاب آپ کو تیار کرتی ہے — صرف اس تبدیلی سے بچنے کے لیے نہیں، بلکہ اُن ایجنٹس کو بنانے کے لیے جو اسے آگے بڑھائیں گے۔
 
@@ -160,7 +160,7 @@ _یہ تازہ ترین درجہ بندی کا فریم ورک ہے۔ اس می�
 
 آپ یا تو اُن کمپنیوں میں شامل ہوں گے جو گرتے ہوئے سافٹ ویئر پلیٹ فارمز کے لیے ادائیگی کرتی رہیں، یا اُن میں جو یہی خرچ ملکیتی <span dir="ltr">Digital FTEs</span> میں بدل کر طویل المدتی حکمتِ عملیاتی قدر پیدا کریں۔
 
-_<span dir="ltr">The Agent Factory</span> آپ کو یہی کرنا سکھاتی ہے۔_
+<span dir="ltr">The Agent Factory</span> آپ کو یہی کرنا سکھاتی ہے۔
 
 ---
 
