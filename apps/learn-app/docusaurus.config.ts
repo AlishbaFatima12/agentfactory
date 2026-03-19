@@ -80,7 +80,10 @@ const config: Config = {
       swcHtmlMinimizer: true, // Use SWC to minify HTML
       lightningCssMinimizer: true, // Use Lightning CSS instead of cssnano
       mdxCrossCompilerCache: true, // Compile MDX once instead of twice
-      rspackBundler: true, // Rspack replaces webpack — 5-10x faster bundling
+      // rspackBundler incompatible with @easyops-cn/docusaurus-search-local
+      // (BannerPlugin passes function, Rspack expects string). Re-enable after
+      // migrating to Algolia DocSearch or a Rspack-compatible search plugin.
+      // rspackBundler: true,
     },
   },
 
