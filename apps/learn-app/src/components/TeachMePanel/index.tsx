@@ -12,7 +12,7 @@
  * Reference: https://github.com/openai/openai-chatkit-starter-app
  */
 
-import React, { useState, useMemo, useCallback, useEffect } from "react";
+import React, { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { ChatKit, useChatKit } from "@openai/chatkit-react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useStudyMode } from "../../contexts/StudyModeContext";
@@ -229,10 +229,21 @@ function ChatKitWrapper({
     }
   }, [onSendMessage, sendUserMessage]);
 
+  // Ref to prevent duplicate initial message sends (React StrictMode protection)
+  // Uses a string to track WHICH message was sent, not just boolean
+  const initialMessageSentRef = useRef<string | null>(null);
+
   // Send initial message if provided (for Ask feature or auto-start teach mode)
   // Calls onInitialMessageSent callback to clear the message after sending
+  // Uses ref to prevent duplicate sends which causes duplicate threads
   useEffect(() => {
-    if (initialMessage && sendUserMessage) {
+    // Only send if we have a message AND it's not the same one we already sent
+    if (
+      initialMessage &&
+      sendUserMessage &&
+      initialMessageSentRef.current !== initialMessage
+    ) {
+      initialMessageSentRef.current = initialMessage;
       sendUserMessage({ text: initialMessage, newThread: true }).then(() => {
         if (onInitialMessageSent) {
           onInitialMessageSent();
@@ -240,6 +251,13 @@ function ChatKitWrapper({
       });
     }
   }, [initialMessage, sendUserMessage, onInitialMessageSent]);
+
+  // Reset the ref when initial message is cleared (new chat starting)
+  useEffect(() => {
+    if (!initialMessage) {
+      initialMessageSentRef.current = null;
+    }
+  }, [initialMessage]);
 
   // Users type "A" or "B" to answer - this is handled by the chat input
 
@@ -325,10 +343,11 @@ export function TeachMePanel({ lessonPath }: TeachMePanelProps) {
     }
   }, [isOpen, mode, initialMessage, hasAutoStarted]);
 
-  // Reset auto-start flag when chat key changes (new chat) or mode changes
+  // Reset auto-start flag when chat key changes (new chat)
+  // Also reset when mode changes to "ask" and back to "teach"
   useEffect(() => {
     setHasAutoStarted(false);
-  }, [chatKey]);
+  }, [chatKey, mode]);
 
   // Handle text selection for Ask feature
   const handleSelection = useCallback(() => {
