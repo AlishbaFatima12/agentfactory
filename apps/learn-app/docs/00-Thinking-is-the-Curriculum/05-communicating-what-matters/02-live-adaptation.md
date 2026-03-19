@@ -84,7 +84,7 @@ teaching_guide:
 
 ### What You Do
 
-Prepare a 3-minute pitch for the migration decision using any AI tools you want. Deliver it live to a peer playing a stakeholder role. Halfway through, the stakeholder reveals a concern you did not anticipate (the peer receives this concern from the instructor in advance). You must adapt in real-time with no AI access. After the exercise, document what happened.
+Prepare a 3-minute pitch for the decision you analyzed in Exercise 1 using any AI tools you want. Deliver it live to a peer playing a stakeholder role. Halfway through, the stakeholder reveals a concern you did not anticipate (the peer receives this concern from the instructor in advance). You must adapt in real-time with no AI access. After the exercise, document what happened.
 
 :::tip Solo Learner Alternative
 Record your 3-minute pitch (audio or video). Then prompt AI: "You are a skeptical stakeholder. I am going to present a pitch to you. Halfway through my presentation, reveal this unexpected concern: [instructor provides concern]. I will adapt my response in writing under a 10-minute timer." Submit: your prepared pitch, the AI-revealed concern, and your timed written adaptation.

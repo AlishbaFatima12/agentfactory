@@ -104,6 +104,10 @@ Your learning plan is a **Prediction Lock** — a prediction about your own lear
 
 You are assigned a domain you have never studied: pharmacology for a developer, supply chain logistics for an accountant, constitutional law for a designer. Before learning anything, write a Learning Plan: how will you approach this? What will you learn first? What resources will you prioritize? How will you know when you know enough? What will you explicitly skip?
 
+:::tip Solo Learner Alternative
+If no domain is assigned by an instructor, choose a field you have never studied but find genuinely interesting. Good choices: a discipline far from your own (e.g., if you are in tech, try marine biology or urban planning; if you are in business, try astrophysics or linguistics). The less you know, the better this exercise works.
+:::
+
 ---
 
 :::info Your Deliverable
