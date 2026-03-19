@@ -80,7 +80,10 @@ const config: Config = {
       swcHtmlMinimizer: true, // Use SWC to minify HTML
       lightningCssMinimizer: true, // Use Lightning CSS instead of cssnano
       mdxCrossCompilerCache: true, // Compile MDX once instead of twice
-      // rspackBundler: false,  // Skip Rspack - use webpack (more stable with memory)
+      // rspackBundler blocked by Docusaurus core's BannerPlugin (webpack internal,
+      // not any third-party plugin). Rspack's getPath expects String but BannerPlugin
+      // passes a function. Waiting for Rspack/Docusaurus fix upstream.
+      // rspackBundler: true,
     },
   },
 
