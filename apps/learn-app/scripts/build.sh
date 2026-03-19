@@ -8,8 +8,8 @@ set -euo pipefail
 # https://github.com/facebook/docusaurus/issues/10944
 #
 # Strategy: Build each locale in a SEPARATE Node process so leaked memory is
-# reclaimed by the OS between builds. This keeps peak usage under 4 GB,
-# fitting comfortably on Vercel's standard 8 GB build machines.
+# reclaimed by the OS between builds. Heap is set to 7 GB to use most of
+# Vercel's standard 8 GB build machines (leaving ~1 GB for OS + tooling).
 #
 # @docusaurus/faster flags (SWC + Lightning CSS) are enabled for speed.
 # rspackBundler is intentionally DISABLED — it leaks more memory per locale.
@@ -22,8 +22,8 @@ cd "$(dirname "$0")/.."
 
 NODE_VERSION=$(node -v | cut -d'.' -f1 | sed 's/v//')
 
-# 4 GB heap per locale — each build runs in its own process
-HEAP_SIZE="--max-old-space-size=4096"
+# 7 GB heap — with 1,824 docs + search index + OG images, 4 GB is insufficient
+HEAP_SIZE="--max-old-space-size=7168"
 
 # Node.js 25+ requires --localstorage-file flag
 EXTRA_FLAGS=""

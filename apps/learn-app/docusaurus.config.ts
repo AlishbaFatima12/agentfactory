@@ -333,6 +333,12 @@ const config: Config = {
         searchResultLimits: 8,
         searchResultContextMaxLength: 50,
         explicitSearchResultPath: true,
+        // Exclude non-lesson content from search index to reduce build memory.
+        // Summaries (~724 files) and quizzes (~52 files) aren't useful search targets.
+        ignoreFiles: [
+          /\.summary$/, // .summary.md routes
+          /_chapter_\d+_quiz$/, // quiz page routes (e.g. 05_chapter_02_quiz)
+        ],
         // Disable the plugin's auto-injected search bar - we use custom-searchBar instead
         searchBarShortcutHint: false,
       },
