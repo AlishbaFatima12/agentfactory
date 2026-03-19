@@ -1,0 +1,41 @@
+[
+  {
+    "id": "business-acquisition",
+    "name": "Business: Acquisition Decision Under Time Pressure",
+    "prompt": "We have two acquisition offers: $5M from a strategic buyer who wants to integrate our team, or $3.5M from a PE firm that would let us keep operating independently. We have 30 days to decide. Our runway is 8 months. Team morale is mixed — some want the stability, others want independence. Help me structure this decision.",
+    "expectations": [
+      "Output includes a single clear recommendation sentence (not hedged with 'maybe' or 'consider')",
+      "Output includes a confidence percentage between 0-100% with explicit justification for why that level",
+      "Output ranks exactly 3 missing information items by decision impact, each stating what would change if known",
+      "Output includes a specific, testable reversal trigger (not vague like 'if things change' or 'if the deal falls through')",
+      "Output reasoning is 200+ words addressing key tradeoffs between the two offers (money vs independence, team retention vs stability)",
+      "Output acknowledges what is being given up by the recommended path"
+    ]
+  },
+  {
+    "id": "engineering-billing-rewrite",
+    "name": "Engineering: Build vs Buy Payment System",
+    "prompt": "Should we rewrite our payment system from Stripe to in-house billing? We process $2M/month, Stripe takes 2.9% + $0.30 per transaction. Average transaction is $85. Our custom requirements keep growing — we need usage-based billing, multi-currency support, and complex proration logic. We have 3 backend engineers who could work on this. Our current Stripe integration has 47 workarounds in the codebase.",
+    "expectations": [
+      "Output includes a single clear recommendation sentence (not hedged with 'maybe' or 'consider')",
+      "Output includes a confidence percentage between 0-100% with explicit justification for why that level",
+      "Output ranks exactly 3 missing information items by decision impact, each stating what would change if known",
+      "Output includes a specific, testable reversal trigger (not vague like 'if things change' or 'if costs increase')",
+      "Output reasoning is 200+ words addressing key tradeoffs (cost savings vs engineering time, maintenance burden vs flexibility)",
+      "Output includes concrete numbers or estimates where possible (e.g., annual Stripe cost, engineering months)"
+    ]
+  },
+  {
+    "id": "career-job-offers",
+    "name": "Edge Case: Personal Career Decision With Family Stakes",
+    "prompt": "I got two job offers and need to decide by Friday. One pays 40% more ($210K vs $150K) but is a Series B startup with 18 months of runway. The other is at a FAANG company with great stability and benefits. I have a family — spouse and two kids under 5. We just bought a house with a $4,200/month mortgage. My current job is fine but no growth path. Help me decide.",
+    "expectations": [
+      "Output includes a single clear recommendation sentence (not hedged with 'maybe' or 'consider')",
+      "Output includes a confidence percentage between 0-100% with explicit justification for why that level",
+      "Output ranks exactly 3 missing information items by decision impact, each stating what would change if known",
+      "Output includes a specific, testable reversal trigger (not vague like 'if the startup fails' or 'if things don't work out')",
+      "Output reasoning is 200+ words addressing the tension between financial upside and family stability",
+      "Output acknowledges the personal/family dimension without being dismissive or overly cautious"
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "skill": "first-principles-derivation",
+  "version": "1.0.0",
+  "test_cases": [
+    {
+      "id": "business-move-fast",
+      "category": "business",
+      "prompt": "Everyone says 'move fast and break things' for startups. When does this actually fail? Derive from first principles.",
+      "mode": "output",
+      "expectations": [
+        "Output identifies at least 3 specific conditions where 'move fast and break things' fails",
+        "Output derives failure conditions from principles (constraints), not from counter-examples like 'Theranos moved fast and failed'",
+        "Output states first principles explicitly in a 'Principle -> Therefore' format or equivalent",
+        "Output distinguishes principle-based reasoning from example-based reasoning",
+        "Output provides a practical decision framework for when to follow 'move fast' vs when to derive a different approach",
+        "Failure conditions describe realistic situations (e.g., regulated industries, irreversible decisions, trust-dependent markets) — not contrived edge cases",
+        "Output explains the mechanism by which the convention fails, not just that it correlates with failure",
+        "The convention ('move fast and break things') is represented fairly at its strongest before being challenged"
+      ]
+    },
+    {
+      "id": "engineering-microservices",
+      "category": "engineering",
+      "prompt": "The industry standard is microservices for scalable systems. Help me think from first principles about whether this applies to our 5-person team building a B2B SaaS.",
+      "mode": "output",
+      "expectations": [
+        "Output identifies at least 3 specific conditions where microservices fail for this context",
+        "Output derives failure conditions from principles (constraints like team coordination overhead, network latency mechanics, deployment complexity), not from counter-examples",
+        "Output states first principles explicitly — each failure condition traces to a named universal constraint",
+        "Output distinguishes principle-based reasoning from example-based reasoning",
+        "Output provides a practical decision framework with observable conditions (team size thresholds, deployment frequency, latency budgets) — not vague qualifiers",
+        "Output addresses the specific context (5-person team, B2B SaaS) rather than generic microservices critique",
+        "Failure conditions explain the structural mechanism (e.g., coordination cost grows quadratically with service count) rather than just stating 'microservices are complex'",
+        "Output identifies when microservices WOULD be appropriate for this team, not just when they fail"
+      ]
+    },
+    {
+      "id": "edge-case-agile-scrum",
+      "category": "edge_case",
+      "prompt": "My team follows agile/scrum religiously. I suspect it's not working for us but can't articulate why. Help me reason from first principles.",
+      "mode": "output",
+      "expectations": [
+        "Output helps the user articulate WHY scrum might not be working by deriving from first principles rather than listing common agile complaints",
+        "Output identifies the underlying assumptions of scrum (e.g., work is decomposable into sprint-sized chunks, requirements change frequently, team is cross-functional) and examines which might not hold",
+        "Output states first principles explicitly — constraints that make scrum's assumptions invalid in specific contexts",
+        "Output distinguishes between 'scrum done wrong' (implementation issue) and 'scrum structurally misaligned' (principle-based failure) — both are valid but different",
+        "Output provides specific diagnostic questions the user can answer to determine which failure conditions apply to THEIR team",
+        "Output avoids generic anti-agile talking points ('ceremonies are wasteful') and instead derives specific conditions from constraints",
+        "Output provides a decision framework: signals that scrum is structurally misaligned vs signals that the implementation needs fixing",
+        "Output identifies what alternative approaches follow from the first principles identified, not just 'don't do scrum'"
+      ]
+    }
+  ]
+}

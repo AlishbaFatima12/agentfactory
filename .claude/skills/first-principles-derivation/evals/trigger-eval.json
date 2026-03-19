@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Everyone says we need microservices but I'm not sure it applies to us. Help me think from first principles",
+    "should_trigger": true
+  },
+  {
+    "query": "Why do we do code reviews? Derive whether they actually make sense for a 3-person team",
+    "should_trigger": true
+  },
+  {
+    "query": "Challenge the assumption that we need a database for this. What if we rethink from scratch?",
+    "should_trigger": true
+  },
+  {
+    "query": "The industry standard is Scrum but something feels wrong for our team. Help me reason from basics",
+    "should_trigger": true
+  },
+  {
+    "query": "Instead of copying how Netflix does deployment, help me derive what actually fits our constraints",
+    "should_trigger": true
+  },
+  {
+    "query": "I want to question whether TDD is actually the right approach for our AI-generated code workflow",
+    "should_trigger": true
+  },
+  {
+    "query": "Everyone says 'always use TypeScript' but I want to understand from first principles when that's wrong",
+    "should_trigger": true
+  },
+  {
+    "query": "Rethink our hiring process from scratch — don't just copy FAANG interview patterns",
+    "should_trigger": true
+  },
+  {
+    "query": "Why does everyone use REST? Derive from first principles what API pattern actually fits our use case",
+    "should_trigger": true
+  },
+  {
+    "query": "Our team follows conventional git flow. Help me question whether this actually serves us",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a TypeScript function to merge two sorted arrays",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me set up a CI/CD pipeline for a Python monorepo",
+    "should_trigger": false
+  },
+  {
+    "query": "What's the best way to handle file uploads in Express.js?",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a database migration to add a new table",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me write integration tests for our payment module",
+    "should_trigger": false
+  },
+  {
+    "query": "What monitoring dashboards should we set up for production?",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this Terraform configuration for best practices",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me optimize this slow SQL query with multiple JOINs",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a technical RFC for adding WebSocket support",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me create an incident response playbook",
+    "should_trigger": false
+  }
+]

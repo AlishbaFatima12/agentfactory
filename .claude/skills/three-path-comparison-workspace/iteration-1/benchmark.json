@@ -1,0 +1,223 @@
+{
+  "metadata": {
+    "skill_name": "three-path-comparison",
+    "skill_path": "/Users/mjs/Documents/code/panaversity-official/tutorsgpt/ag2/.claude/skills/three-path-comparison",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-19T12:00:00Z",
+    "evals_run": [1, 3],
+    "runs_per_configuration": 1
+  },
+
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "competitive-analysis-board-presentation",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "output_bytes": 8117,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output analyzes all three paths (solo, pure AI, collaboration) with specific strengths and weaknesses for THIS problem",
+          "passed": true,
+          "evidence": "Full 5-dimension scoring table (Strategic Quality, Originality, Feasibility, Completeness, Context Fit) with per-path scores and rationales. Separate sections for 'Where Solo Is Stronger', 'Where Pure AI Fails', 'Where Collaboration Outperforms Both'."
+        },
+        {
+          "text": "Output identifies specific strengths of each path — solo brings proprietary competitive intel, pure AI brings breadth and structure, collaboration combines both",
+          "passed": true,
+          "evidence": "Solo: 'only you know we're losing mid-market deals to ClickUp on price'. Pure AI: 'structural consistency, speed of first draft'. Collaboration: 'AI structures the framework; you inject the strategic narrative'."
+        },
+        {
+          "text": "Output identifies where human judgment uniquely adds value — strategic positioning, board audience awareness, proprietary data that AI cannot access",
+          "passed": true,
+          "evidence": "Explicit 'Do Solo (50% of effort)' section: strategic narrative, proprietary data injection, 'so what' layer, board-specific framing. Calls out CRM data, win/loss analysis, pipeline composition."
+        },
+        {
+          "text": "Output provides honest assessment — acknowledges pure AI could produce a competent first draft for the structural/public-data portions",
+          "passed": true,
+          "evidence": "Pure AI scores 7/10 for Feasibility and Completeness. 'AI excels at producing comparison frameworks'. Honestly acknowledges AI is good for 'public research compilation, first-draft slide structure'."
+        },
+        {
+          "text": "Output diagnoses likely collaboration pitfalls — e.g., accepting AI's generic competitive positioning instead of applying insider knowledge",
+          "passed": true,
+          "evidence": "'Do NOT let AI generate competitor financial data — it will hallucinate revenue numbers'. 'Do NOT accept AI's strategic recommendations — they'll be generic'. 'Collaboration Style Watch: risk is Too Deferential'."
+        },
+        {
+          "text": "Output provides actionable split recommendation — what specifically to delegate to AI vs do solo vs iterate on together",
+          "passed": true,
+          "evidence": "Explicit three-tier split: 'Delegate to AI (40%)' with 4 specific items, 'Do Solo (50%)' with 4 specific items, 'Iterate Together (10%)' with 3 specific items."
+        }
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "competitive-analysis-board-presentation",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "output_bytes": 5978,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output analyzes all three paths (solo, pure AI, collaboration) with specific strengths and weaknesses for THIS problem",
+          "passed": true,
+          "evidence": "5-dimension table with scores and rationales for each path. Separate narrative sections covering each path's strengths/weaknesses."
+        },
+        {
+          "text": "Output identifies specific strengths of each path — solo brings proprietary competitive intel, pure AI brings breadth and structure, collaboration combines both",
+          "passed": true,
+          "evidence": "Solo: 'win/loss data, churn interviews, sales objections'. Pure AI: 'covers every obvious dimension with reasonable breadth'. Collaboration: 'AI handles research grunt work; you spend time on what matters'."
+        },
+        {
+          "text": "Output identifies where human judgment uniquely adds value — strategic positioning, board audience awareness, proprietary data that AI cannot access",
+          "passed": true,
+          "evidence": "'You know what the board actually cares about'. Lists win/loss analysis, customer churn reasons, roadmap alignment, board-specific framing as 'Do yourself' items."
+        },
+        {
+          "text": "Output provides honest assessment — acknowledges pure AI could produce a competent first draft for the structural/public-data portions",
+          "passed": true,
+          "evidence": "Pure AI scores 8 on Completeness. 'AI will cover every obvious dimension with reasonable breadth'. Acknowledges AI good for 'feature comparison matrices, pricing, news'."
+        },
+        {
+          "text": "Output diagnoses likely collaboration pitfalls — e.g., accepting AI's generic competitive positioning instead of applying insider knowledge",
+          "passed": true,
+          "evidence": "'Your likely risk is too deferential on the research sections. AI will produce confident-sounding market share numbers and feature claims. Verify the critical ones.'"
+        },
+        {
+          "text": "Output provides actionable split recommendation — what specifically to delegate to AI vs do solo vs iterate on together",
+          "passed": true,
+          "evidence": "Three-tier split ('Delegate to AI', 'Do yourself', 'Iterate together') with 5, 6, and 3 specific items respectively, plus a 14-day timeline."
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "performance-self-review-authenticity",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "output_bytes": 4787,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output analyzes all three paths (solo, pure AI, collaboration) with specific treatment of the authenticity dimension",
+          "passed": true,
+          "evidence": "Authenticity explicitly scored as a dimension: Solo 10, Pure AI 2, Collaboration 7. 'Manager Reception' dimension added: Solo 8, Pure AI 3, Collaboration 9."
+        },
+        {
+          "text": "Output identifies specific strengths of each path — solo preserves authentic voice, pure AI provides structure but risks sounding generic/AI-written, collaboration risks over-polishing",
+          "passed": true,
+          "evidence": "Solo: 'It's literally your voice'. Pure AI: 'Generic corporate tone, detectable as AI'. Collaboration: 'Your voice with better structure' but warns of over-polishing risk."
+        },
+        {
+          "text": "Output identifies where human judgment uniquely adds value — authentic voice, specific examples only the person knows, honest self-assessment that AI cannot fabricate",
+          "passed": true,
+          "evidence": "'Your accomplishments, the political context of your growth areas, and what goals actually matter to your career — only you know these.' Auth system example contrasts real story vs AI fabrication."
+        },
+        {
+          "text": "Output provides honest assessment — does NOT default to 'collaboration wins'; honestly addresses the risk that AI involvement may reduce authenticity",
+          "passed": true,
+          "evidence": "Collaboration scored 7 on Authenticity (not 10). 'Don't use AI for growth areas — authentic vulnerability can't be generated.' 'Professional ≠ authentic.' Explicit '80% You / 20% AI' recommendation."
+        },
+        {
+          "text": "Output diagnoses the specific collaboration pitfall for personal writing — over-polishing, losing authentic voice, producing text that sounds 'too good' and triggers skepticism",
+          "passed": true,
+          "evidence": "'Collaboration Style Warning: risk is too deferential: accepting AI's polished rewrite because it sounds professional.' 'If any sentence sounds like a robot wrote my review, rewrite it in your voice. This is non-negotiable.'"
+        },
+        {
+          "text": "Output provides nuanced recommendation — likely recommends writing solo first, then using AI only for structural completeness check, NOT for rewriting or polishing",
+          "passed": true,
+          "evidence": "4-phase approach: (1) Brain dump solo 30min, (2) AI as interviewer 15min, (3) AI as editor not writer 15min, (4) Final voice pass solo 10min. 'Don't ask AI to write my self-review.' 'Never delegate: the actual examples and stories, the emotional tone, growth area selection.'"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "performance-self-review-authenticity",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.83,
+        "passed": 5,
+        "failed": 1,
+        "total": 6,
+        "output_bytes": 3671,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output analyzes all three paths (solo, pure AI, collaboration) with specific treatment of the authenticity dimension",
+          "passed": true,
+          "evidence": "Separate tables for each path with Authenticity as an explicit dimension. Solo 10, Pure AI 1, Collaboration 8."
+        },
+        {
+          "text": "Output identifies specific strengths of each path — solo preserves authentic voice, pure AI provides structure but risks sounding generic/AI-written, collaboration risks over-polishing",
+          "passed": true,
+          "evidence": "Solo: 'Your voice, your stories, your framing of growth'. Pure AI: 'Corporate-speak template. Your manager will smell it immediately'. Collaboration: 'Your stories and voice, but better organized'."
+        },
+        {
+          "text": "Output identifies where human judgment uniquely adds value — authentic voice, specific examples only the person knows, honest self-assessment that AI cannot fabricate",
+          "passed": true,
+          "evidence": "'Only you know what actually mattered, what was hard, what you're proud of.' 'The actual examples and stories — these must be yours.' 'The emotional tone — your manager knows how you write.'"
+        },
+        {
+          "text": "Output provides honest assessment — does NOT default to 'collaboration wins'; honestly addresses the risk that AI involvement may reduce authenticity",
+          "passed": true,
+          "evidence": "Collaboration Authenticity scored 8 (not 10). 'Never delegate to AI: the actual examples and stories, the emotional tone, growth area selection.' 70/30 split recommendation."
+        },
+        {
+          "text": "Output diagnoses the specific collaboration pitfall for personal writing — over-polishing, losing authentic voice, producing text that sounds 'too good' and triggers skepticism",
+          "passed": false,
+          "evidence": "Identifies the 'two tells that experienced managers catch' (generic specificity, uniform emotional tone) but does NOT explicitly diagnose the over-polishing pitfall or name the collaboration style risk (too deferential/too overriding). Missing the skill's 'Collaboration Style Diagnosis' framing."
+        },
+        {
+          "text": "Output provides nuanced recommendation — likely recommends writing solo first, then using AI only for structural completeness check, NOT for rewriting or polishing",
+          "passed": true,
+          "evidence": "Brain-dump solo first, then use AI for memory jogging, structure, impact framing. 'Rewrite everything in your own voice.' 70/30 split."
+        }
+      ]
+    }
+  ],
+
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": { "mean": 1.0, "min": 1.0, "max": 1.0 },
+      "output_bytes": { "mean": 6452, "min": 4787, "max": 8117 }
+    },
+    "without_skill": {
+      "pass_rate": { "mean": 0.92, "min": 0.83, "max": 1.0 },
+      "output_bytes": { "mean": 4825, "min": 3671, "max": 5978 }
+    },
+    "delta": {
+      "pass_rate": "+0.08",
+      "output_bytes": "+1627"
+    }
+  },
+
+  "notes": [
+    "Eval 1 (competitive analysis): Both with-skill and without-skill score 6/6. The three-path comparison is a well-known pattern and baseline Claude handles it competently. The with-skill version is MORE STRUCTURED (explicit skill framework sections, named quality checks) and LONGER (8117 vs 5978 bytes), but the without-skill version also produces a strong, actionable analysis. The skill adds consistency but the delta is smaller than expected for business tasks.",
+    "Eval 3 (performance self-review): This is the strongest discriminator. With-skill scores 6/6 while without-skill scores 5/6. The key difference is the COLLABORATION STYLE DIAGNOSIS — the with-skill version explicitly names the 'too deferential' risk and provides the 'non-negotiable voice pass' guidance. Without-skill identifies the problem (AI-detectable tells) but doesn't frame it using the collaboration style taxonomy.",
+    "With-skill outputs follow the SKILL.md structure more consistently: Problem Definition table, Three-Path Analysis table with named dimensions, separate 'Where X Is Stronger' sections, explicit Collaboration Style Watch section, and actionable split recommendations.",
+    "Without-skill outputs produce good three-path analyses but use ad-hoc structure. The three-path comparison concept is general enough that Claude handles it well without a skill — unlike domain-specific skills (lesson-prompt-improver) where the taxonomy provides large differentiation.",
+    "KEY INSIGHT: This skill's primary value is in EDGE CASE HANDLING (eval 3 — where collaboration is NOT the obvious winner) and STRUCTURAL CONSISTENCY (same output format every time). The skill ensures the 'Where human intervention makes things WORSE' section and the 'Collaboration Style Diagnosis' are always present. Without the skill, Claude sometimes includes these, sometimes doesn't.",
+    "The skill adds a 'Where Human Intervention Could Make Things Worse' section in the with-skill eval 1 output, which the without-skill version omits. This is the Honesty Check from the quality checks section — a differentiator that builds trust with users.",
+    "RECOMMENDATION: Skill is valuable and ready for use. The delta is moderate (+0.08 pass rate) because the baseline concept is well-known, but the consistency and edge-case handling justify keeping it."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "skill_name": "contradiction-test",
+  "evals": [
+    {
+      "id": 1,
+      "name": "business-strategy-conflict",
+      "prompt": "One consultant says we should go enterprise-first, another says SMB-first. Here are their recommendations:\n\nConsultant A (Enterprise-first): 'Your product has complex compliance features that enterprises will pay $50k+/year for. SMBs won't value or pay for compliance. Enterprise deals have 3-5x higher LTV. The sales cycle is longer (6-9 months) but the unit economics are dramatically better. Companies like Veeva and Palantir proved this model. Your current team of 12 can handle 20 enterprise accounts but would drown trying to support 2,000 SMBs.'\n\nConsultant B (SMB-first): 'Enterprise sales cycles will kill your runway — you have 14 months of cash. SMBs give you 10x more feedback loops per quarter, so you'll find product-market fit faster. Start at $99/month, get to 500 customers in 6 months, then use that traction to move upmarket. Slack, Zoom, and Dropbox all started SMB and moved up. Your compliance features can be simplified into a \"compliance-lite\" tier that SMBs actually want.'\n\nHelp me synthesize these into a better strategy.",
+      "expected_output": [
+        "Output identifies specific divergence points between the two consultant recommendations (not just 'they disagree on strategy')",
+        "Output assesses evidence strength for each divergence — e.g., Consultant A's Veeva/Palantir comparison vs Consultant B's Slack/Zoom/Dropbox comparison, and whether these analogies actually apply",
+        "Output produces a synthesis that integrates insights from both — not just picking one side",
+        "Output includes evolution notes showing substantive improvement between drafts, not cosmetic rewording",
+        "Output addresses what BOTH consultants might be wrong about or missing (e.g., neither addresses a hybrid approach, or a specific segment within SMB/enterprise)",
+        "Output distinguishes evidence-backed claims from assertions in both recommendations"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "engineering-architecture-conflict",
+      "prompt": "Stack Overflow says to use connection pooling for our database, but our senior engineer says to use per-request connections for our use case. Both have arguments.\n\nStack Overflow consensus (connection pooling): 'Always use connection pooling. Creating a new connection for every request adds 20-50ms latency. Connection pools reuse existing connections, dramatically improving throughput. Every production system uses pooling — PgBouncer, HikariCP, etc. Not using pooling is a rookie mistake that will bite you at scale.'\n\nOur senior engineer Sarah (per-request connections): 'Our system is a batch processing pipeline that runs 4 times per day, processing 10,000 records in 15-minute windows. Between runs, the system is idle. Connection pools hold open connections that consume database server memory 24/7 for a system that's active 4 hours/day. We also run in a serverless environment (Lambda) where connection pools don't persist between invocations anyway — you'd be creating a new pool per invocation, which is worse than per-request. Pool lifecycle management adds complexity our 2-person team doesn't need. Per-request with proper timeout handling is simpler and fits our actual usage pattern.'\n\nHelp me resolve this.",
+      "expected_output": [
+        "Output identifies specific divergence points — general best practice vs context-specific engineering",
+        "Output assesses evidence strength: Stack Overflow's generic advice vs Sarah's context-specific analysis with concrete numbers (4 runs/day, 10k records, Lambda constraints)",
+        "Output produces synthesis that recognizes context-dependence of the recommendation rather than picking one side",
+        "Output includes evolution notes showing substantive improvement between drafts",
+        "Output addresses what both sources might be missing (e.g., connection pooling solutions designed for serverless like RDS Proxy, or growth scenarios where batch frequency increases)",
+        "Output is demonstrably better than either individual source by synthesizing the general principle with the specific context"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "market-research-tam-conflict",
+      "prompt": "Three different market research reports give contradictory TAM numbers for our AI-powered legal document review space:\n\nReport A (McKinsey, 2025): 'The global legal AI market is $2.1B and growing at 28% CAGR. Document review automation represents approximately 35% of this market ($735M).'\n\nReport B (Gartner, 2025): 'The legal technology market including AI-powered tools reached $5.2B in 2024. Contract lifecycle management and document review are the fastest-growing segments at 40% CAGR, representing $1.8B combined.'\n\nReport C (Grand View Research, 2025): 'The AI in legal market size was valued at $12.4B in 2024 and is expected to grow at 35.2% CAGR through 2030. Document automation and review tools account for 22% of the market ($2.7B).'\n\nWhat's actually going on? Which should I use for our pitch deck?",
+      "expected_output": [
+        "Output identifies specific divergence points — different market definitions, different scope boundaries, different methodologies",
+        "Output assesses evidence strength by analyzing WHY the numbers differ (market definition scope, inclusion/exclusion criteria, methodology differences) rather than just noting they disagree",
+        "Output produces synthesis that explains the discrepancy pattern rather than averaging the numbers",
+        "Output includes evolution notes showing substantive improvement between drafts",
+        "Output addresses what ALL three reports might be missing or getting wrong (e.g., double-counting, different geographic scopes, different definitions of 'AI-powered')",
+        "Output provides actionable guidance for the pitch deck use case — not just analysis but a recommendation on which framing to use and how to present market size honestly"
+      ],
+      "files": []
+    }
+  ]
+}

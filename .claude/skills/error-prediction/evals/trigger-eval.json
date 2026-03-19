@@ -1,0 +1,22 @@
+[
+  {"query": "Claude just wrote this market analysis for me. Can you check if it's accurate?", "should_trigger": true},
+  {"query": "I got this AI-generated security audit. What errors should I watch for?", "should_trigger": true},
+  {"query": "ChatGPT gave me this competitive analysis. Is any of it wrong?", "should_trigger": true},
+  {"query": "Here's an AI-generated financial projection. Audit it for errors", "should_trigger": true},
+  {"query": "I need to fact-check this AI research summary before sending to my manager", "should_trigger": true},
+  {"query": "This vendor sent us an AI-assisted due diligence report. What did the AI get wrong?", "should_trigger": true},
+  {"query": "My intern used Claude to write this technical specification. Review it for accuracy", "should_trigger": true},
+  {"query": "I'm skeptical of this AI-generated legal analysis. Help me find the errors", "should_trigger": true},
+  {"query": "Can you evaluate this AI output for hallucinations and false confidence?", "should_trigger": true},
+  {"query": "Before I publish this AI-assisted blog post, check it for factual errors and logical gaps", "should_trigger": true},
+  {"query": "Write a Python function to validate email addresses", "should_trigger": false},
+  {"query": "Help me set up ESLint for my TypeScript project", "should_trigger": false},
+  {"query": "What's the difference between REST and GraphQL?", "should_trigger": false},
+  {"query": "Create a database schema for an e-commerce platform", "should_trigger": false},
+  {"query": "Help me write error handling for my API endpoints", "should_trigger": false},
+  {"query": "I need to predict customer churn using our sales data", "should_trigger": false},
+  {"query": "Build a React component for a file upload widget", "should_trigger": false},
+  {"query": "What are common security vulnerabilities in web applications?", "should_trigger": false},
+  {"query": "Help me write a technical blog post about Rust", "should_trigger": false},
+  {"query": "Generate test data for my user management system", "should_trigger": false}
+]

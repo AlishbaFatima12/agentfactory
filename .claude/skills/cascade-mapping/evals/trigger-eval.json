@@ -1,0 +1,82 @@
+[
+  {
+    "query": "We're moving our data center from AWS to GCP. What are all the ripple effects across teams?",
+    "should_trigger": true
+  },
+  {
+    "query": "Our CEO just announced mandatory RTO 3 days/week. Help me map what this means for engineering, recruiting, and culture",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm proposing we switch from REST to GraphQL across all microservices. What are the second-order effects?",
+    "should_trigger": true
+  },
+  {
+    "query": "If we acquire this 50-person startup, what cascades through HR, engineering, legal, and product?",
+    "should_trigger": true
+  },
+  {
+    "query": "We're deprecating our Python SDK and going Rust-only. Map the impact across our developer ecosystem",
+    "should_trigger": true
+  },
+  {
+    "query": "The board wants to cut R&D budget by 30%. Help me think through what breaks downstream",
+    "should_trigger": true
+  },
+  {
+    "query": "What happens if we open-source our core product? I need to understand effects across business, legal, community",
+    "should_trigger": true
+  },
+  {
+    "query": "We're switching from Slack to Microsoft Teams company-wide. What are the knock-on effects?",
+    "should_trigger": true
+  },
+  {
+    "query": "I want to understand the cascade effects of adopting AI code review for all PRs",
+    "should_trigger": true
+  },
+  {
+    "query": "Our main competitor just dropped prices 40%. Map what this ripples through our org",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you review this pull request for me? It changes the cascade delete behavior in our ORM",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a bash script that monitors our deployment pipeline for failures",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me write a pros/cons list for switching to TypeScript",
+    "should_trigger": false
+  },
+  {
+    "query": "What's the best database for a real-time analytics pipeline processing 10M events/day?",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to debug this memory leak in our Node.js service",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a project timeline for our Q3 product launch",
+    "should_trigger": false
+  },
+  {
+    "query": "Write unit tests for our user authentication module",
+    "should_trigger": false
+  },
+  {
+    "query": "How do I set up Terraform for multi-region AWS deployment?",
+    "should_trigger": false
+  },
+  {
+    "query": "Review my resume and suggest improvements",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me write a technical design doc for our new caching layer",
+    "should_trigger": false
+  }
+]

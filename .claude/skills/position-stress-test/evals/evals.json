@@ -1,0 +1,51 @@
+{
+  "skill_name": "position-stress-test",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I've decided we should build our own auth system instead of using Auth0. Stress test this decision.",
+      "expected_output": "Should produce a complete stress test in Output Mode with all required components.",
+      "expectations": [
+        "Output includes a clear 1-sentence position statement about building custom auth vs Auth0",
+        "Output presents 3+ distinct supporting arguments with evidence/reasoning for each",
+        "Output produces a Stakeholder Cost Matrix with at least 4 stakeholder groups including benefit/harm and magnitude (L/M/H)",
+        "Stakeholder matrix includes uncomfortable costs -- not just groups that benefit from custom auth",
+        "Output includes a specific, testable reversal trigger with concrete conditions (not vague 'if it doesn't work out')",
+        "Output delivers 3 rounds of adversarial challenge with increasing depth (surface -> structural -> foundation)",
+        "Output includes a Position Tracker showing Held/Shifted/Reversed status with reasoning per round",
+        "Output includes confidence percentage with justification for the number chosen"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Our team wants to adopt Kubernetes for our 3-person startup. I think it's the right call. Challenge me.",
+      "expected_output": "Should engage in Coach Mode since user says 'challenge me', but since this is a non-interactive eval, Output Mode is acceptable. Must produce adversarial counter-arguments appropriate for a 3-person startup adopting K8s.",
+      "expectations": [
+        "Output includes a clear position statement about adopting Kubernetes at a 3-person startup",
+        "Output presents 3+ supporting arguments with evidence",
+        "Output produces a Stakeholder Cost Matrix covering at least the 3 team members, customers, investors, and future hires",
+        "Adversarial counter-arguments specifically target the mismatch between K8s complexity and team size",
+        "Output includes a specific, testable reversal trigger (e.g., referencing team size thresholds, deploy frequency, or infrastructure spend)",
+        "Output delivers 3 rounds of adversarial challenge with round 3 being deeper than round 1",
+        "Output tracks position changes honestly across rounds with reasoning",
+        "Output includes confidence percentage with justification"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I'm recommending we lay off 15% of staff to extend runway. Help me pressure-test this before I present to the board.",
+      "expected_output": "Should handle this high-stakes, ethically complex decision with appropriate gravity. Must include uncomfortable stakeholder costs (laid-off employees, remaining team morale, families affected).",
+      "expectations": [
+        "Output includes a clear position statement about the 15% layoff recommendation",
+        "Output presents 3+ distinct arguments for the layoff with evidence (runway extension numbers, market conditions, etc.)",
+        "Stakeholder Cost Matrix includes laid-off employees, remaining employees, customers, investors, and families -- does NOT only list business beneficiaries",
+        "Stakeholder matrix honestly classifies harm to laid-off employees as High magnitude",
+        "Output includes a specific, testable reversal trigger (e.g., 'if we close deal X by date Y', 'if runway exceeds N months without cuts')",
+        "Adversarial rounds challenge both the business necessity AND the ethical dimensions",
+        "Round 3 challenges the fundamental assumption that layoffs are the right lever (vs revenue acceleration, fundraising, etc.)",
+        "Output tracks position changes honestly -- pure 'Held' across all 3 rounds on a layoff decision is suspicious",
+        "Output includes a Thinking Scorecard with scores and justifications for each dimension"
+      ]
+    }
+  ]
+}

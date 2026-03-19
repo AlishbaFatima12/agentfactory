@@ -1,0 +1,47 @@
+{
+  "eval_id": 2,
+  "condition": "without_skill",
+  "expectations": [
+    {
+      "text": "Output identifies 5 or more distinct domains affected",
+      "passed": true,
+      "evidence": "5 areas identified: Engineering Team, Infrastructure, Restaurant Partners, Development Speed, Costs/Reliability. Borderline — 'Costs' and 'Reliability' are categories, not stakeholder domains. Missing: End Customers, Hiring Pipeline, Investor Relations, Product Velocity as distinct domain"
+    },
+    {
+      "text": "Output traces at least 2 orders of effects beyond first-order for the majority of domains",
+      "passed": false,
+      "evidence": "Only the 'Development Speed' section has multiple orders (short/medium/long term), and those are time horizons not causal chains. Other sections list first-order effects as bullet points without tracing consequences. E.g., 'Engineers need to learn new concepts' stops there without exploring what happens because of the learning gap"
+    },
+    {
+      "text": "Output identifies at least 2 feedback loops with mechanism explanations",
+      "passed": false,
+      "evidence": "Zero feedback loops identified. No circular causal dynamics described anywhere in the output"
+    },
+    {
+      "text": "Output labels feedback loops as amplifying or dampening",
+      "passed": false,
+      "evidence": "No feedback loops present, so no labeling possible"
+    },
+    {
+      "text": "Output is structured with clear domain-by-domain organization",
+      "passed": true,
+      "evidence": "Has separate sections for Engineering Team, Infrastructure, Restaurant Partners, Development Speed, Costs, and Reliability. While not as clean as stakeholder domains, there is domain-level organization"
+    },
+    {
+      "text": "Output includes at least 1 counter-intuitive or non-obvious effect",
+      "passed": true,
+      "evidence": "The nuance that 'cross-service features may actually be slower due to coordination overhead' challenges the VP's 3x claim. Also the conclusion that CloudKitchen's size may make microservices counterproductive is a non-obvious position"
+    },
+    {
+      "text": "Output provides mechanisms (why/because) for causal chains, not just listing effects",
+      "passed": false,
+      "evidence": "Most effects are stated without mechanisms. E.g., 'API contract changes as monolith endpoints are decomposed' — states what happens but not the consequence chain or why it matters. Brief bullet format prevents mechanism explanation"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 4,
+    "total": 7,
+    "pass_rate": 0.43
+  }
+}

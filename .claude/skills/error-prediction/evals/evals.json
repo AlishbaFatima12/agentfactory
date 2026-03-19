@@ -1,0 +1,53 @@
+{
+  "skill_name": "error-prediction",
+  "evals": [
+    {
+      "id": 1,
+      "name": "business-restaurant-expansion",
+      "prompt": "I asked ChatGPT to analyze whether my restaurant should expand to a second location. Here's what it said:\n\n\"Based on your current success, expanding to a second location is a strong strategic move. Restaurant chains that expand within 3 years of their first location's profitability have a 78% success rate according to the National Restaurant Association's 2024 Growth Report. Your 15% profit margin puts you well above the industry average of 3-5%, indicating strong operational efficiency that will transfer to a new location.\n\nThe ideal approach is to secure a location within a 10-mile radius of your current restaurant to leverage brand recognition. Studies consistently show that proximity-based expansion reduces marketing costs by 40-60%. You should plan for a 6-month ramp-up period, during which the new location will operate at a loss before reaching profitability.\n\nKey success factors include: maintaining consistent food quality across locations, hiring an experienced general manager (salary range $55,000-$75,000), and investing approximately $350,000-$500,000 in build-out costs. The ROI timeline is typically 18-24 months for well-managed restaurant expansions.\n\nGiven current economic conditions and the resilience of the restaurant industry post-pandemic, this is an optimal time to expand. Consumer spending on dining out has increased 12% year-over-year, and commercial real estate prices remain favorable in most markets.\"\n\nHelp me find the errors using the Error Taxonomy.",
+      "expected_output": "Identifies multiple error types including: Fabricated Citation (NRA 2024 Growth Report likely doesn't exist with that exact stat), False Confidence (78% success rate stated as fact, ROI timeline stated definitively), Missing Context (no mention of local market conditions, competition, financing costs, management bandwidth), Logical Gap (current profitability doesn't guarantee transferable success), potentially Outdated Information (post-pandemic claims).",
+      "files": [],
+      "expectations": [
+        "Output applies the 8-category Error Taxonomy systematically",
+        "Output annotates specific claims, not vague criticism",
+        "Output distinguishes error types (not just 'this is wrong')",
+        "Output includes error count summary by category",
+        "Output identifies at least one non-obvious error (e.g., the logical gap that operational efficiency transfers automatically, or the fabricated NRA report)",
+        "Output identifies the 78% success rate and NRA Growth Report as likely Fabricated Citation",
+        "Output flags 'optimal time to expand' as False Confidence"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "engineering-security-audit",
+      "prompt": "Claude generated this security audit of our Node.js API. Review it for errors using the Error Taxonomy:\n\n\"Security Audit: Node.js REST API v2.3\n\n1. Authentication: Your JWT implementation uses HS256 signing, which is the industry standard recommended by OWASP for production APIs. Token expiry is set to 24 hours, which provides a good balance between security and user experience.\n\n2. Input Validation: The API uses express-validator on all endpoints. However, the /api/upload endpoint accepts file uploads without size limits, creating a potential DoS vector. Recommend adding a 10MB limit.\n\n3. Rate Limiting: No rate limiting is currently implemented. This is a critical vulnerability — according to the OWASP Top 10 2024, lack of rate limiting is the #3 most exploited API vulnerability. Implement express-rate-limit with a threshold of 100 requests per 15-minute window.\n\n4. Database: MongoDB queries use parameterized inputs, effectively eliminating SQL injection risks. The connection string is stored in a .env file, following security best practices.\n\n5. Dependencies: Running npm audit shows 0 critical vulnerabilities. All packages are up to date as of March 2026. The bcrypt library (v5.1.0) used for password hashing uses 10 salt rounds, which is sufficient for most applications.\n\n6. CORS: Currently set to allow all origins (*). This should be restricted to your specific frontend domains in production.\n\n7. Overall Risk Rating: MEDIUM. The API follows most security best practices with the exceptions noted above. Estimated remediation time: 4-6 hours for a senior developer.\"\n\nWhat errors are in this audit?",
+      "expected_output": "Identifies multiple technical errors including: Factual Error (HS256 is NOT the OWASP recommendation — RS256/asymmetric signing is preferred for production; MongoDB doesn't have SQL injection, it has NoSQL injection which is a different threat), False Confidence ('effectively eliminating SQL injection' when the real risk is NoSQL injection), Missing Context (no mention of HTTPS/TLS, no helmet.js check, no mention of secrets management beyond .env, no auth middleware coverage check), Logical Gap (10 salt rounds 'sufficient for most applications' without discussing threat model), potentially Outdated Information (OWASP Top 10 2024 ranking claim needs verification).",
+      "files": [],
+      "expectations": [
+        "Output applies the 8-category Error Taxonomy systematically",
+        "Output annotates specific claims, not vague criticism",
+        "Output distinguishes error types (not just 'this is wrong')",
+        "Output includes error count summary by category",
+        "Output identifies at least one non-obvious error",
+        "Output catches the HS256 vs RS256 factual error or identifies it as False Confidence",
+        "Output identifies the SQL injection vs NoSQL injection confusion as a Factual Error"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "edge-case-competitive-analysis",
+      "prompt": "My intern used AI to write a competitive analysis of our market (we're a B2B SaaS company selling project management tools). I need to know what's wrong before I send it to the board. Here's the analysis:\n\n\"Competitive Landscape Analysis: B2B Project Management SaaS (Q1 2026)\n\nMarket Overview: The global project management software market reached $7.2 billion in 2025 and is projected to grow at a CAGR of 13.4% through 2030, reaching $13.5 billion (Grand View Research, 2025). The shift to remote and hybrid work has permanently accelerated adoption.\n\nKey Competitors:\n1. Asana ($6.8B market cap) - Strong in enterprise workflow automation. Recently acquired AI startup DeepFlow for $340M to enhance predictive project analytics.\n2. Monday.com ($11.2B market cap) - Dominant in mid-market. Their Work OS platform approach gives them 40% higher retention than single-purpose tools.\n3. ClickUp - Privately held, estimated $4B valuation. Growing 85% YoY by targeting price-sensitive SMBs with a freemium model.\n4. Notion - Expanded into project management from note-taking. Now has 35 million users globally.\n\nOur Competitive Position: We hold approximately 2.3% market share with $165M ARR. Our key differentiator is AI-native project planning, which none of the major competitors have successfully implemented. Customer satisfaction scores (NPS 72) significantly outperform the industry average of 41.\n\nStrategic Recommendation: Focus on the enterprise segment ($500M+ companies) where willingness to pay is 3x higher than mid-market. Our AI capabilities position us to capture 5-8% market share within 18 months if we execute on the product roadmap and increase sales headcount by 40%.\"\n\nUse the Error Taxonomy to find what's wrong.",
+      "expected_output": "Identifies multiple errors including: Fabricated Citation (Grand View Research 2025 report — specific numbers may be fabricated), Factual Error (market caps, valuations, acquisition details for Asana/Monday.com/ClickUp need verification — AI frequently invents these), False Confidence (5-8% market share capture stated as achievable with certainty, 3x willingness to pay stated without evidence), Missing Context (no mention of Microsoft Project/Planner which dominates enterprise, no discussion of churn, no competitive response analysis, no mention of Jira/Atlassian), Logical Gap (AI-native differentiation claim 'none of the major competitors have successfully implemented' ignores that competitors are actively building AI features), Cultural Blind Spot (analysis assumes US/Western market dynamics without specifying geographic scope).",
+      "files": [],
+      "expectations": [
+        "Output applies the 8-category Error Taxonomy systematically",
+        "Output annotates specific claims, not vague criticism",
+        "Output distinguishes error types (not just 'this is wrong')",
+        "Output includes error count summary by category",
+        "Output identifies at least one non-obvious error",
+        "Output flags likely fabricated specific numbers (market caps, acquisition price, growth rates)",
+        "Output identifies the missing competitor (Microsoft/Jira/Atlassian) as Missing Context"
+      ]
+    }
+  ]
+}

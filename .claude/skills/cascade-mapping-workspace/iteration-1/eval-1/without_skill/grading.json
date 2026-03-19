@@ -1,0 +1,47 @@
+{
+  "eval_id": 1,
+  "condition": "without_skill",
+  "expectations": [
+    {
+      "text": "Output identifies 5 or more distinct domains affected",
+      "passed": false,
+      "evidence": "4 loosely-defined areas identified: Performance, Code Quality, Learning Curve/Hiring, Ecosystem/Migration. These are not structured as distinct stakeholder domains. Missing: Customers, Regulators, Internal Knowledge, Product Velocity, Competitive Position"
+    },
+    {
+      "text": "Output traces at least 2 orders of effects beyond first-order for the majority of domains",
+      "passed": false,
+      "evidence": "All effects are first-order only. No explicit second or third-order effects traced. Bullet points list direct consequences without exploring causal chains (e.g., 'hiring challenges' is stated but not traced to what happens BECAUSE of hiring challenges)"
+    },
+    {
+      "text": "Output identifies at least 2 feedback loops with mechanism explanations",
+      "passed": false,
+      "evidence": "Zero feedback loops identified. No circular causal dynamics described. All effects are presented as linear, independent consequences"
+    },
+    {
+      "text": "Output labels feedback loops as amplifying or dampening",
+      "passed": false,
+      "evidence": "No feedback loops present, so no labeling possible"
+    },
+    {
+      "text": "Output is structured with clear domain-by-domain organization",
+      "passed": false,
+      "evidence": "Organized by positive/negative effects and cost considerations, not by stakeholder domain. This groups effects by valence (good/bad) rather than by who is affected"
+    },
+    {
+      "text": "Output includes at least 1 counter-intuitive or non-obvious effect",
+      "passed": false,
+      "evidence": "All effects listed are conventional/obvious (learning curve, hiring difficulty, ecosystem maturity, migration risk). No surprising or non-obvious dynamics identified"
+    },
+    {
+      "text": "Output provides mechanisms (why/because) for causal chains, not just listing effects",
+      "passed": false,
+      "evidence": "Effects are stated without mechanisms. E.g., 'Rust developers are much harder to find than Java developers' — no explanation of what happens because of this or why the market is structured this way"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 7,
+    "total": 7,
+    "pass_rate": 0.0
+  }
+}

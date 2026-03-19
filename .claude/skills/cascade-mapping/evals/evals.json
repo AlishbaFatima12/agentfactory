@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "prompt": "We're considering switching our 200-person engineering team from Java to Rust at Meridian Financial Systems, a mid-size fintech company processing 2M transactions/day. The CTO believes Rust's memory safety and performance will reduce our production incidents by 60%. Map the cascade effects across all affected domains.",
+    "expected_output": "A cascade map covering 5+ domains with 1st/2nd/3rd order effects and feedback loops",
+    "expectations": [
+      "Output identifies 5 or more distinct domains affected (e.g., engineering team, hiring/talent, customers, product velocity, vendor/tooling ecosystem, finance/budget)",
+      "Output traces at least 2 orders of effects beyond first-order for the majority of domains",
+      "Output identifies at least 2 feedback loops with mechanism explanations",
+      "Output labels feedback loops as amplifying or dampening",
+      "Output is structured with clear domain-by-domain organization",
+      "Output includes at least 1 counter-intuitive or non-obvious effect",
+      "Output provides mechanisms (why/because) for causal chains, not just listing effects"
+    ]
+  },
+  {
+    "id": 2,
+    "prompt": "Our startup CloudKitchen (Series B, 85 employees) is replacing our monolithic Django app with microservices. We currently serve 3,000 restaurant partners and process 50K orders/day. The VP of Engineering says this will let us ship features 3x faster. What are the ripple effects?",
+    "expected_output": "A cascade map covering 5+ domains with 1st/2nd/3rd order effects and feedback loops",
+    "expectations": [
+      "Output identifies 5 or more distinct domains affected (e.g., engineering team, DevOps/infrastructure, restaurant partners, end customers, hiring, costs/budget)",
+      "Output traces at least 2 orders of effects beyond first-order for the majority of domains",
+      "Output identifies at least 2 feedback loops with mechanism explanations",
+      "Output labels feedback loops as amplifying or dampening",
+      "Output is structured with clear domain-by-domain organization",
+      "Output includes at least 1 counter-intuitive or non-obvious effect",
+      "Output provides mechanisms (why/because) for causal chains, not just listing effects"
+    ]
+  },
+  {
+    "id": 3,
+    "prompt": "My manager at Nexus Analytics wants to mandate daily standup meetings for all 12 remote teams across 4 time zones (US Pacific, US Eastern, London, Bangalore). Currently teams do async updates in Slack. She believes standups will 'increase accountability and team cohesion.' Help me think through the effects.",
+    "expected_output": "A cascade map covering 5+ domains with 1st/2nd/3rd order effects and feedback loops",
+    "expectations": [
+      "Output identifies 5 or more distinct domains affected (e.g., team productivity, employee wellbeing/morale, cross-timezone collaboration, hiring/retention, meeting culture, management visibility)",
+      "Output traces at least 2 orders of effects beyond first-order for the majority of domains",
+      "Output identifies at least 2 feedback loops with mechanism explanations",
+      "Output labels feedback loops as amplifying or dampening",
+      "Output is structured with clear domain-by-domain organization",
+      "Output includes at least 1 counter-intuitive or non-obvious effect (e.g., standups reducing rather than increasing accountability)",
+      "Output provides mechanisms (why/because) for causal chains, not just listing effects"
+    ]
+  }
+]
