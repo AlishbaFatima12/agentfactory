@@ -80,7 +80,7 @@ James opened the file. The function was 1,400 lines long. It validated the order
 
 James's task was simple: add a discount code feature. After two days of tracing dependencies through 1,400 lines, he made a change on line 712 and ran the tests. The discount worked. But the tax calculation now produced wrong numbers for Canadian orders — because his change moved a variable assignment that the tax logic read three hundred lines below. He fixed the tax issue. The receipt PDF broke. He fixed the receipt. The loyalty points doubled.
 
-"The function is buggy," James said. "My discount logic works. The tax calculation must have already been broken."
+"The function is buggy," James said. "My discount logic works — I scoped it, I tested it. The tax calculation must have already been broken. In my old job, when something failed after a change, you checked who touched it last. I did not touch the tax section."
 
 "Check the git log for tax changes," Emma said.
 

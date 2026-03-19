@@ -113,7 +113,7 @@ PRIMM inverts this. It starts at the beginning -- **reading** -- and works towar
 
 Emma pulls up a short Python program on her screen. "Let me show you what this looks like in practice. I'll walk you through all five stages with one program — and you'll do the thinking, not me."
 
-James leans in. "What if I don't know Python yet?"
+James leans in. "Okay, but — I don't know Python yet. Are we jumping ahead?"
 
 "That's the point," Emma says. "You're learning the *process*, not the syntax. Ready?"
 

@@ -126,7 +126,7 @@ Over the course of Parts 4 and 5, your calibration should improve. Early on, you
 
 ## Five Kinds of Bugs — A Preview
 
-James runs his modified program and gets an error. "It's broken. I'll ask AI to fix it."
+James runs his modified program and gets an error. "It's broken. I'll just ask AI to fix it — that's what it's there for, right? Get me unblocked so I can keep moving."
 
 "Before you do — what kind of problem is it?"
 
@@ -160,7 +160,7 @@ When something goes wrong during Investigate or Modify, glance at this table. Ev
 
 Emma pulls up a code review from one of her projects. "What am I doing here?"
 
-James reads through it. She is studying someone else's code, predicting whether it handles edge cases correctly, leaving comments about potential logic errors — all before the code reaches production. "You're... doing the same thing," he says slowly. "Reading code you didn't write, predicting what it does, checking whether it's correct. That's Predict and Investigate."
+James reads through it. She is studying someone else's code, predicting whether it handles edge cases correctly, leaving comments about potential logic errors — all before the code reaches production. "Okay, wait," he says. "You are reading code you didn't write, predicting whether it works, flagging problems before production. That is Predict and Investigate." He pauses. "I used to do something similar reviewing supplier proposals — predict where the hidden costs were before anyone signed."
 
 "And when I suggest a change?"
 

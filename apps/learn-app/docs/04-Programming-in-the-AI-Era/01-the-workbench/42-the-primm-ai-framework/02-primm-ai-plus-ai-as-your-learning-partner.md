@@ -104,7 +104,7 @@ James opens his AI coding assistant and types: "Explain this Python program to m
 
 Emma stops him. "What did you just learn?"
 
-James thinks. "I learned... what the program does?"
+James thinks. "I learned... what the program does? It's like getting a briefing — someone read the report so I don't have to."
 
 "No. You learned what the AI _says_ the program does. You skipped Predict entirely. Your brain did zero work." She closes his AI assistant. "Let's talk about when you're allowed to open this."
 
