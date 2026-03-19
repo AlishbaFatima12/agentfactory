@@ -6,7 +6,7 @@
  * Supports pause/resume and real-time volume/speed changes that continue from current word.
  */
 
-import React, { createContext, useContext, useState, useCallback, useRef, useEffect, useMemo } from "react";
+import React, { createContext, useContext, useState, useCallback, useRef, useEffect } from "react";
 
 interface VoiceReadingContextType {
     // Playback state
@@ -21,6 +21,9 @@ interface VoiceReadingContextType {
     playbackRate: number;
     volume: number;
 
+    // Navigation
+    totalBlocks: number;
+
     // Methods
     toggleSpeech: () => void;
     pauseSpeech: () => void;
@@ -29,6 +32,8 @@ interface VoiceReadingContextType {
     setVoice: (index: number) => void;
     setVolume: (vol: number) => void;
     stopSpeech: () => void;
+    skipForward: () => void;
+    skipBackward: () => void;
 }
 
 const VoiceReadingContext = createContext<VoiceReadingContextType | null>(null);
@@ -166,7 +171,8 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             // Clear all timers on unmount
             clearFallbackTimers();
         };
-    }, [clearFallbackTimers, locale]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- locale is stable per page load
+    }, [clearFallbackTimers]);
 
     const selectedVoice = availableVoices[selectedVoiceIndex] || null;
 
@@ -199,14 +205,22 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         const article = document.querySelector("article");
         if (!article) return [];
 
+        // Target only the main markdown content area, skip breadcrumbs/nav/header chrome
+        const contentArea = article.querySelector(".markdown, [class*='mdxPageWrapper'], [class*='docItemContent']") || article;
+
         const blockSelectors = "p, h1, h2, h3, h4, h5, h6, li, blockquote > p, blockquote";
-        const elements = article.querySelectorAll(blockSelectors);
+        const elements = contentArea.querySelectorAll(blockSelectors);
 
         const blocks: TextBlock[] = [];
 
         elements.forEach((element) => {
             const text = element.textContent?.trim() || "";
             if (!text) return;
+
+            // Skip elements inside nav, breadcrumbs, table of contents, or other UI chrome
+            if (element.closest("nav, [class*='breadcrumb'], [class*='Breadcrumb'], [class*='tableOfContents'], [class*='tocCollapsible'], header, footer")) {
+                return;
+            }
 
             if (element.tagName === "P" && element.parentElement?.tagName === "BLOCKQUOTE") {
                 return;
@@ -275,6 +289,12 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             } else {
                 el.classList.add("voice-block--inactive");
                 el.classList.remove("voice-block--active");
+                // Clear word highlights in completed/inactive blocks —
+                // mark all words as "read" so no word keeps the current highlight
+                el.querySelectorAll(".voice-word").forEach(wordEl => {
+                    wordEl.classList.remove("voice-word--current", "voice-word--pending");
+                    wordEl.classList.add("voice-word--read");
+                });
             }
         });
 
@@ -669,11 +689,58 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         }
     }, [isPlaying, isPaused, restartFromCurrentWord]);
 
+    /** Skip to the next block (paragraph/heading/list item) */
+    const skipForward = useCallback(() => {
+        if (!isPlaying) return;
+        const nextBlock = activeBlockIndexRef.current + 1;
+        if (nextBlock >= blocksRef.current.length) return;
+
+        clearFallbackTimers();
+        currentUtteranceIdRef.current = ++utteranceIdRef.current;
+        window.speechSynthesis.cancel();
+
+        // If paused, stay paused but move position
+        if (isPaused) {
+            setActiveBlockIndex(nextBlock);
+            activeBlockIndexRef.current = nextBlock;
+            setCurrentWordIndex(0);
+            currentWordIndexRef.current = 0;
+            updateWordStyles(nextBlock, 0);
+            blocksRef.current[nextBlock]?.element.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+            setTimeout(() => playBlockFromWord(nextBlock, 0), 50);
+        }
+    }, [isPlaying, isPaused, playBlockFromWord, updateWordStyles, clearFallbackTimers]);
+
+    /** Skip to the previous block (or restart current block) */
+    const skipBackward = useCallback(() => {
+        if (!isPlaying) return;
+        const current = activeBlockIndexRef.current;
+        // If we're past the first word, restart current block; otherwise go to previous
+        const targetBlock = currentWordIndexRef.current > 2 ? current : Math.max(0, current - 1);
+
+        clearFallbackTimers();
+        currentUtteranceIdRef.current = ++utteranceIdRef.current;
+        window.speechSynthesis.cancel();
+
+        if (isPaused) {
+            setActiveBlockIndex(targetBlock);
+            activeBlockIndexRef.current = targetBlock;
+            setCurrentWordIndex(0);
+            currentWordIndexRef.current = 0;
+            updateWordStyles(targetBlock, 0);
+            blocksRef.current[targetBlock]?.element.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+            setTimeout(() => playBlockFromWord(targetBlock, 0), 50);
+        }
+    }, [isPlaying, isPaused, playBlockFromWord, updateWordStyles, clearFallbackTimers]);
+
     const value: VoiceReadingContextType = {
         isPlaying,
         isPaused,
         activeBlockIndex,
         currentWordIndex,
+        totalBlocks: blocksRef.current.length,
         availableVoices,
         selectedVoiceIndex,
         playbackRate,
@@ -685,6 +752,8 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         setVoice,
         setVolume,
         stopSpeech,
+        skipForward,
+        skipBackward,
     };
 
     return (

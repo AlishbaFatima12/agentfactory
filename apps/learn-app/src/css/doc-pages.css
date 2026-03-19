@@ -1315,101 +1315,48 @@ article {
    ============================================================================ */
 
 /* Base word span style */
+/* Word-level styles for voice reading — all text stays readable */
 .voice-word {
   display: inline;
-  transition: all 200ms ease-out;
+  transition: color 150ms ease, background 150ms ease;
   position: relative;
 }
 
-/* Read words - already spoken (blue color, fully visible) */
+/* Read words — already spoken (subtle color change) */
 .voice-word--read {
-  color: #2563eb;
-  opacity: 1;
-  filter: blur(0);
+  color: var(--muted-foreground);
 }
 
-[data-theme='dark'] .voice-word--read {
-  color: #60a5fa;
-}
-
-/* Current word - being spoken (highlighted, scaled, bold) */
+/* Current word — being spoken (highlighted background) */
 .voice-word--current {
-  color: #1d4ed8;
-  font-weight: 700;
-  transform: scale(1.1);
-  display: inline-block;
-  position: relative;
-  z-index: 10;
-  filter: blur(0);
-  opacity: 1;
+  color: var(--primary-foreground);
+  background: var(--primary);
+  padding: 0 2px;
+  display: inline;
 }
 
-[data-theme='dark'] .voice-word--current {
-  color: #93c5fd;
-  text-shadow: 0 0 8px rgba(147, 197, 253, 0.5);
-}
-
-/* Pending words - not yet spoken (blurred, faded, grayscale) */
+/* Pending words — not yet spoken (normal text, fully readable) */
 .voice-word--pending {
-  filter: blur(3px);
-  opacity: 0.3;
   color: inherit;
 }
 
 /* Block-level styles for reading focus */
 [data-voice-block] {
-  transition: all 500ms ease-in-out;
-  border-radius: 0.75rem;
-  padding: 0.5rem;
-  margin: -0.5rem;
+  transition: background 300ms ease, border-color 300ms ease;
+  padding: 0.375rem 0.5rem;
+  margin: -0.375rem -0.5rem;
+  border-left: 3px solid transparent;
 }
 
-/* Active block - currently being read */
+/* Active block — currently being read (left accent border) */
 .voice-block--active {
-  opacity: 1;
-  filter: blur(0);
-  transform: scale(1.02);
-  background: rgba(37, 99, 235, 0.05);
-  box-shadow:
-    0 4px 20px rgba(37, 99, 235, 0.1),
-    inset 0 0 0 1px rgba(37, 99, 235, 0.1);
-  z-index: 10;
-  position: relative;
+  border-left-color: var(--primary);
+  background: var(--accent);
 }
 
-[data-theme='dark'] .voice-block--active {
-  background: rgba(96, 165, 250, 0.1);
-  box-shadow:
-    0 4px 20px rgba(96, 165, 250, 0.15),
-    inset 0 0 0 1px rgba(96, 165, 250, 0.15);
-}
-
-/* Inactive blocks - not being read (dimmed, slight blur) */
+/* Inactive blocks — fully readable, just slightly dimmed */
 .voice-block--inactive {
-  opacity: 0.25;
-  filter: blur(2px);
-  transform: scale(0.98);
-}
-
-/* Reading mode styles for overall article during playback */
-article.voice-reading-active {
-  position: relative;
-}
-
-article.voice-reading-active::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.02);
-  pointer-events: none;
-  z-index: -1;
-}
-
-[data-theme='dark'] article.voice-reading-active::before {
-  background: rgba(0, 0, 0, 0.1);
+  opacity: 0.55;
 }
 
 /* ============================================================================
@@ -1770,6 +1717,139 @@ article.voice-reading-active::before {
   color: white;
 }
 
+/* Skip Forward/Backward Buttons */
+.voice-skip-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  border-radius: 0 !important;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+.voice-skip-btn:hover:not(:disabled) {
+  color: var(--foreground);
+  background: var(--accent);
+}
+
+.voice-skip-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+/* Block position indicator */
+.voice-position {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  font-family: var(--font-mono, monospace);
+  white-space: nowrap;
+  padding: 0 0.25rem;
+}
+
+/* No-language warning button in dock */
+.voice-no-lang-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  border-radius: 0 !important;
+  color: var(--warning, #f59e0b);
+  cursor: pointer;
+  transition: all 120ms ease;
+  flex-shrink: 0;
+}
+
+.voice-no-lang-btn:hover {
+  background: var(--accent);
+}
+
+/* Install hint banner */
+.voice-install-hint {
+  position: fixed;
+  bottom: 4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 201;
+  max-width: 420px;
+  width: calc(100% - 2rem);
+  animation: voiceDropdownIn 0.2s ease-out;
+}
+
+.voice-install-hint-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--warning, #f59e0b);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='dark'] .voice-install-hint-content {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.voice-install-hint-content > svg {
+  flex-shrink: 0;
+  color: var(--warning, #f59e0b);
+  margin-top: 1px;
+}
+
+.voice-install-hint-content strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+}
+
+.voice-install-hint-content p {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.voice-install-hint-content a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.voice-install-hint-content a:hover {
+  opacity: 0.8;
+}
+
+.voice-install-hint-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  border-radius: 0 !important;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.voice-install-hint-close:hover {
+  color: var(--foreground);
+}
+
 /* Menu backdrop */
 .voice-menu-backdrop {
   position: fixed;
@@ -1837,6 +1917,16 @@ article.voice-reading-active::before {
     height: 26px;
   }
 
+  .voice-skip-btn {
+    width: 26px;
+    height: 26px;
+  }
+
+  .voice-skip-btn svg {
+    width: 12px;
+    height: 12px;
+  }
+
   .voice-pause-btn svg {
     width: 14px;
     height: 14px;
@@ -1845,6 +1935,10 @@ article.voice-reading-active::before {
   .voice-stop-btn svg {
     width: 10px;
     height: 10px;
+  }
+
+  .voice-position {
+    display: none;
   }
 
   .voice-control-divider {

@@ -21,6 +21,8 @@ export function VoiceControlDock() {
     const {
         isPlaying,
         isPaused,
+        activeBlockIndex,
+        totalBlocks,
         availableVoices,
         selectedVoiceIndex,
         playbackRate,
@@ -31,6 +33,8 @@ export function VoiceControlDock() {
         setVoice,
         setVolume,
         stopSpeech,
+        skipForward,
+        skipBackward,
     } = useVoiceReading();
 
     const { i18n } = useDocusaurusContext();
@@ -39,9 +43,11 @@ export function VoiceControlDock() {
     const [isVoiceMenuOpen, setIsVoiceMenuOpen] = useState(false);
     const selectedVoice = availableVoices[selectedVoiceIndex] || null;
 
+    const [showInstallHint, setShowInstallHint] = useState(false);
+
     // Filter voices to match the current site locale
+    const langPrefix = LOCALE_TO_LANG_PREFIX[currentLocale] || "en";
     const filteredVoices = useMemo(() => {
-        const langPrefix = LOCALE_TO_LANG_PREFIX[currentLocale] || "en";
         const matched = availableVoices
             .map((voice, originalIndex) => ({ voice, originalIndex }))
             .filter(({ voice }) => voice.lang.startsWith(langPrefix));
@@ -50,7 +56,21 @@ export function VoiceControlDock() {
             return availableVoices.map((voice, originalIndex) => ({ voice, originalIndex }));
         }
         return matched;
-    }, [availableVoices, currentLocale]);
+    }, [availableVoices, currentLocale, langPrefix]);
+
+    // Check if native voices exist for the current locale
+    const hasNativeVoices = useMemo(() => {
+        return availableVoices.some(v => v.lang.startsWith(langPrefix));
+    }, [availableVoices, langPrefix]);
+
+    const noVoicesAtAll = availableVoices.length === 0;
+
+    // Locale display names for the hint
+    const localeNames: Record<string, string> = {
+        en: "English",
+        ur: "Urdu (اردو)",
+        "zh-Hans": "Chinese (中文)",
+    };
 
     // Don't render if not playing
     if (!isPlaying) return null;
@@ -68,7 +88,59 @@ export function VoiceControlDock() {
 
     return (
         <>
+            {/* Install hint — shown when no voices for current locale or no voices at all */}
+            {(showInstallHint || noVoicesAtAll) && (
+                <div className="voice-install-hint">
+                    <div className="voice-install-hint-content">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                        <div>
+                            <strong>
+                                {noVoicesAtAll
+                                    ? "No text-to-speech voices found"
+                                    : `No ${localeNames[currentLocale] || currentLocale} voices found`}
+                            </strong>
+                            <p>
+                                Install the <a
+                                    href="https://chromewebstore.google.com/detail/voice-out-text-to-speech/jmodgcjbfcmningbahdmedofbabejbba"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >Voice Out</a> extension for additional language support.
+                            </p>
+                        </div>
+                        <button
+                            className="voice-install-hint-close"
+                            onClick={() => setShowInstallHint(false)}
+                            title="Dismiss"
+                        >
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <line x1="18" y1="6" x2="6" y2="18" />
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            )}
+
             <div className="voice-control-dock">
+                {/* No-voice warning icon in the dock */}
+                {!hasNativeVoices && !noVoicesAtAll && !showInstallHint && (
+                    <button
+                        className="voice-no-lang-btn"
+                        onClick={() => setShowInstallHint(true)}
+                        title={`No ${localeNames[currentLocale] || currentLocale} voices — click for help`}
+                    >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                    </button>
+                )}
+
                 {/* Voice Selector */}
                 <div className="voice-control-section">
                     <button
@@ -193,6 +265,20 @@ export function VoiceControlDock() {
 
                 {/* Playback Controls */}
                 <div className="voice-playback-controls">
+                    {/* Skip Backward */}
+                    <button
+                        className="voice-skip-btn"
+                        onClick={skipBackward}
+                        disabled={activeBlockIndex <= 0}
+                        title="Previous paragraph"
+                    >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="11 19 2 12 11 5 11 19" />
+                            <polygon points="22 19 13 12 22 5 22 19" />
+                        </svg>
+                    </button>
+
+                    {/* Pause / Resume */}
                     <button
                         className="voice-pause-btn"
                         onClick={handlePauseResume}
@@ -210,6 +296,20 @@ export function VoiceControlDock() {
                         )}
                     </button>
 
+                    {/* Skip Forward */}
+                    <button
+                        className="voice-skip-btn"
+                        onClick={skipForward}
+                        disabled={activeBlockIndex >= totalBlocks - 1}
+                        title="Next paragraph"
+                    >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="13 19 22 12 13 5 13 19" />
+                            <polygon points="2 19 11 12 2 5 2 19" />
+                        </svg>
+                    </button>
+
+                    {/* Stop */}
                     <button
                         className="voice-stop-btn"
                         onClick={stopSpeech}
@@ -220,6 +320,13 @@ export function VoiceControlDock() {
                         </svg>
                     </button>
                 </div>
+
+                {/* Block position indicator */}
+                {totalBlocks > 0 && (
+                    <span className="voice-position">
+                        {activeBlockIndex + 1}/{totalBlocks}
+                    </span>
+                )}
             </div>
 
             {/* Backdrop to close voice menu */}
