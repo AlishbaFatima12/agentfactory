@@ -83,7 +83,9 @@ James thought about it. "Store the customer name in each order. Or... a customer
 
 "You are storing relational data," Emma said, "in a format that does not understand relationships."
 
-James stared at the dashboard showing two "Acme" customers. The problem was not the file format. YAML would have the same problem. CSV would have the same problem. Any format that _copied_ the customer name into every order instead of _referencing_ it by a stable ID would have the same problem. "The format was never the issue," he said. "I need something that enforces the connection — so changing a name in one place changes it everywhere."
+James stared at the dashboard showing two "Acme" customers. The problem was not the file format. YAML would have the same problem. CSV would have the same problem. Any format that _copied_ the customer name into every order instead of _referencing_ it by a stable ID would have the same problem. "The format was never the issue," he said. "I need something that enforces the connection — so changing a name in one place changes it everywhere. Like a spreadsheet where instead of typing a customer name in every order row, you have a separate customers sheet and each order just points to a row number. Change the name in the customers sheet, and every order still points to the right place."
+
+Emma paused. "That is actually a better analogy than the one I usually use. I have been explaining normalization with entity-relationship diagrams for years. The spreadsheet version is clearer."
 
 Emma opened a terminal and typed twelve lines of SQL. The same dashboard query that took eleven seconds and forty lines of Python returned in three milliseconds. The customer name lived in one place. The relationships were enforced by the database. The data could not become inconsistent because the system would not allow it.
 

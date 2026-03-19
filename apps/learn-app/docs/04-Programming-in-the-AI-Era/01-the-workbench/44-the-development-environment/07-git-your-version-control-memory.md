@@ -232,6 +232,14 @@ That is the complete cycle: write code, verify it with the pipeline, commit the 
 
 ### Commit Granularity When Working With AI
 
+James has a question. "How often should I commit? After every function? Every file? Every feature?"
+
+Emma considers it. "Honestly, I do not have a clean rule for that. I have seen teams that commit every twenty minutes and teams that commit once a day, and both shipped good software. It depends on the project and the team."
+
+"That is the first time you have not had a definitive answer," James says.
+
+"Because there is not one," Emma says. "What I can tell you is what happens at the extremes — and you need to watch for one extreme in particular."
+
 When James writes code himself, he adds features gradually -- a few lines at a time. A commit naturally captures one small change. But when James asks Claude Code to implement a feature, the AI may produce thirty files and four hundred lines in a single response. If James runs the pipeline, everything passes, and he makes one giant commit called "Add user authentication," he has lost something important: the ability to understand or reverse parts of what the AI built.
 
 The professional habit is to break AI-generated work into logical commits even when the AI delivered it all at once. Review the output, identify the natural seams -- data models, API routes, tests, configuration -- and commit each piece separately with a descriptive message. This means `git log` still tells a story a month from now. It means if the authentication logic needs to be replaced, James can do it without disturbing the test infrastructure the AI also built. Small commits are not just good hygiene -- they are the mechanism that keeps you in control of a codebase that AI is helping you build faster than any one person could review at once.
