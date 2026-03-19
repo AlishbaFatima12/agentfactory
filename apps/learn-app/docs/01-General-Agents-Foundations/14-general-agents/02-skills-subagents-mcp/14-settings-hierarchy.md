@@ -68,7 +68,7 @@ teaching_guide:
     - "The three-level hierarchy (user/project/local) maps to personal/team/experiment scopes — not just technical layers"
     - "Precedence order local > project > user means a forgotten settings.local.json can silently override team standards"
     - "Project settings belong in version control; local settings belong in .gitignore — mixing these up breaks team consistency"
-    - "Students do NOT configure settings in this lesson — they only learn the hierarchy exists, with hands-on deferred to Part 5"
+    - "Students do NOT configure settings in this lesson — they only learn the hierarchy exists, with hands-on deferred to Part 6"
   misconceptions:
     - "Students assume project settings always win because they sound more important — actually local always overrides project"
     - "Students confuse .claude/settings.json (project, shared) with .claude/settings.local.json (personal, gitignored) and may commit local overrides"
@@ -406,7 +406,7 @@ The `.claude/` directory is how Claude Code stores project customization. Deleti
 
 ---
 
-## Not Configuring Yet—This Is Part 5 Content
+## Not Configuring Yet—This Is Part 6 Content
 
 This lesson teaches you that **settings exist and how the hierarchy works**. You don't need to configure them yet. Basic Claude Code usage works perfectly fine with defaults.
 
@@ -444,10 +444,9 @@ Let's understand how Claude Code's three-level settings hierarchy enables both t
 
 **🚀 Plan for Team Workflows:**
 
-> "When I learn team workflows in Part 5, help me understand which settings level to use for different scenarios: personal preferences (my editor style, my default verbosity), team standards (shared coding conventions, security policies), and temporary experiments (testing new configurations). Explain the decision framework for choosing the right level."
+> "When I learn team workflows in Part 6, help me understand which settings level to use for different scenarios: personal preferences (my editor style, my default verbosity), team standards (shared coding conventions, security policies), and temporary experiments (testing new configurations). Explain the decision framework for choosing the right level."
 
 **What you're learning:** Configuration strategy—deciding where settings belong before creating them. Planning prevents the mess of scattered configurations.
-
 
 ## Flashcards Study Aid
 

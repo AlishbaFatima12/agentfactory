@@ -2,7 +2,18 @@
 sidebar_position: 7
 title: "Git -- Your Version Control Memory"
 description: "Initialize a Git repository, make your first commit, and run the complete verification pipeline that chains ruff, pyright, and pytest into a single command."
-keywords: ["git", "version control", "git init", "git add", "git commit", "verification pipeline", "discipline stack", "SmartNotes", "git log"]
+keywords:
+  [
+    "git",
+    "version control",
+    "git init",
+    "git add",
+    "git commit",
+    "verification pipeline",
+    "discipline stack",
+    "SmartNotes",
+    "git log",
+  ]
 chapter: 44
 lesson: 7
 duration_minutes: 20
@@ -75,12 +86,12 @@ James thinks about it. Cloud sync saves versions by timestamp. It does not say w
 
 James's tests can prove his code is correct. Ruff can prove his code is clean. Pyright can prove his types are right. But none of these tools can answer a simple question: what did the code look like yesterday?
 
-| Scenario | What Happens Without Version Control |
-|---|---|
-| James deletes working code and rewrites | The original is gone permanently -- no undo, no recovery |
-| James edits a function and introduces a bug | He cannot compare to the previous version to see what changed |
-| The laptop crashes mid-session | Unsaved work is lost; even saved work has no history |
-| James wants to try a risky approach | He cannot "bookmark" the current state and return to it if the experiment fails |
+| Scenario                                    | What Happens Without Version Control                                            |
+| ------------------------------------------- | ------------------------------------------------------------------------------- |
+| James deletes working code and rewrites     | The original is gone permanently -- no undo, no recovery                        |
+| James edits a function and introduces a bug | He cannot compare to the previous version to see what changed                   |
+| The laptop crashes mid-session              | Unsaved work is lost; even saved work has no history                            |
+| James wants to try a risky approach         | He cannot "bookmark" the current state and return to it if the experiment fails |
 
 The common thread: every change is permanent. There is no undo beyond the editor's buffer. There is no way to see what the project looked like an hour ago, a day ago, or before a specific change. Code that passes all three tools today can be destroyed by a single bad edit tomorrow -- and without version control, the verified version is gone.
 
@@ -90,13 +101,13 @@ The common thread: every change is permanent. There is no undo beyond the editor
 
 > **Git** is a version control system that records every change you make to your project. Each `git commit` is a snapshot -- a checkpoint you can return to at any time. Git does not prevent mistakes. It makes them reversible.
 
-| Aspect | Detail |
-|--------|--------|
-| **What it records** | Every file in your project, at the moment you commit |
-| **Smallest unit** | A single commit (one snapshot of the entire project) |
-| **How you create a snapshot** | `git add .` then `git commit -m "description"` |
-| **How you view history** | `git log --oneline` |
-| **How you compare versions** | `git diff` (shows what changed since last commit) |
+| Aspect                        | Detail                                               |
+| ----------------------------- | ---------------------------------------------------- |
+| **What it records**           | Every file in your project, at the moment you commit |
+| **Smallest unit**             | A single commit (one snapshot of the entire project) |
+| **How you create a snapshot** | `git add .` then `git commit -m "description"`       |
+| **How you view history**      | `git log --oneline`                                  |
+| **How you compare versions**  | `git diff` (shows what changed since last commit)    |
 
 ---
 
@@ -116,7 +127,7 @@ If James had committed his working `format_title` code before rewriting it, reco
 
 ### Step 1: Initialize Git
 
-Your SmartNotes project already has a `.gitignore` file -- `uv init` created it in Lesson 2. That file tells Git to ignore the `.venv/` directory and `__pycache__/` folders, which should never be committed. The lockfile `uv.lock`, however, *should* be committed -- it ensures every developer and every CI server gets exactly the same dependency versions.
+Your SmartNotes project already has a `.gitignore` file -- `uv init` created it in Lesson 2. That file tells Git to ignore the `.venv/` directory and `__pycache__/` folders, which should never be committed. The lockfile `uv.lock`, however, _should_ be committed -- it ensures every developer and every CI server gets exactly the same dependency versions.
 
 Initialize the repository:
 
@@ -134,7 +145,7 @@ Git is now tracking the SmartNotes directory. But it has not recorded anything y
 
 ### Step 2: Stage and Commit
 
-Git uses a two-step process: *stage* the files you want to record, then *commit* them as a snapshot.
+Git uses a two-step process: _stage_ the files you want to record, then _commit_ them as a snapshot.
 
 ```bash
 git add .
@@ -180,6 +191,7 @@ a1b2c3d Initial SmartNotes project with discipline stack
 One commit. One checkpoint. The project's memory has begun.
 
 :::info Checkpoint: Your SmartNotes project should now look like this
+
 ```
 smartnotes/
 ├── .git/               ← created by git init
@@ -193,6 +205,7 @@ smartnotes/
 │   └── test_main.py    ← one passing test
 └── uv.lock
 ```
+
 Run `git log --oneline` -- you should see one commit. Run `uv run pytest` -- you should see one passing test. If both are true, you are ready for the final step.
 :::
 
@@ -218,7 +231,7 @@ You might notice that `ruff format` is not in the pipeline. The pipeline checks 
 
 This is Axiom IX in its purest form: verification as a pipeline, not a checklist you remember to run. The command runs the same way every time, regardless of whether you are tired, distracted, or in a rush.
 
-This is also the same pipeline that runs automatically on every pull request in production Python projects. In Part 6, when you deploy SmartNotes as a Digital FTE, a CI server will execute this exact command chain on every code change. The difference between your laptop and production is not the tools -- it is where they run. You are already practicing production habits.
+This is also the same pipeline that runs automatically on every pull request in production Python projects. In Part 7, when you deploy SmartNotes as a Digital FTE, a CI server will execute this exact command chain on every code change. The difference between your laptop and production is not the tools -- it is where they run. You are already practicing production habits.
 
 **Read and Predict**: Imagine James introduces a type error in `main.py` -- he changes the return type label from `str` to `int` but keeps the function returning text. He runs the full pipeline command. Which tool stops the pipeline? Does pytest ever run? What would James see in the terminal?
 
@@ -250,10 +263,10 @@ The professional habit is to break AI-generated work into logical commits even w
 
 James now understands both Git and the pipeline. Here are the patterns Emma warned him to avoid:
 
-| Anti-Pattern | The Mistake | The Cost | The Fix |
-|---|---|---|---|
-| **"Not committing early"** | James works for three hours without a single commit. The code is half-finished. | The laptop's battery dies, a forced restart clears unsaved changes, or he takes a wrong turn and cannot remember what the project looked like when it worked. Three hours of progress exist only in memory. | Commit after every meaningful change -- small commits are better than large ones. |
-| **"Skipping the pipeline"** | James runs pytest but not ruff, or runs ruff but not pyright. | The tools catch different categories of problems. A codebase that passes tests but fails type checking has undiscovered bugs hiding in type mismatches. | Always run the full pipeline: `uv run ruff check . && uv run pyright && uv run pytest` |
+| Anti-Pattern                | The Mistake                                                                     | The Cost                                                                                                                                                                                                    | The Fix                                                                                |
+| --------------------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **"Not committing early"**  | James works for three hours without a single commit. The code is half-finished. | The laptop's battery dies, a forced restart clears unsaved changes, or he takes a wrong turn and cannot remember what the project looked like when it worked. Three hours of progress exist only in memory. | Commit after every meaningful change -- small commits are better than large ones.      |
+| **"Skipping the pipeline"** | James runs pytest but not ruff, or runs ruff but not pyright.                   | The tools catch different categories of problems. A codebase that passes tests but fails type checking has undiscovered bugs hiding in type mismatches.                                                     | Always run the full pipeline: `uv run ruff check . && uv run pyright && uv run pytest` |
 
 ---
 
@@ -364,15 +377,15 @@ uv run ruff check .
 # Paste code into the right files
 ```
 
-**Your task:** Arrange these in order. Then answer: why does ruff run before pyright? Why does pyright run before pytest? What goes wrong if you commit *before* running the pipeline? Write your answers and a confidence score.
+**Your task:** Arrange these in order. Then answer: why does ruff run before pyright? Why does pyright run before pytest? What goes wrong if you commit _before_ running the pipeline? Write your answers and a confidence score.
 
 ### Modify
 
-Ask your AI assistant to modify the code it generated earlier (add a small feature or change behavior). Paste the updated code and run the full pipeline again. Before committing, write a commit message that explains *why* you made the change, not just *what* changed. Check `git log --oneline` -- does the history tell a clear story?
+Ask your AI assistant to modify the code it generated earlier (add a small feature or change behavior). Paste the updated code and run the full pipeline again. Before committing, write a commit message that explains _why_ you made the change, not just _what_ changed. Check `git log --oneline` -- does the history tell a clear story?
 
 ### Make
 
-From memory, answer these questions: (1) What three commands make up the verification pipeline, and in what order? (2) What does a good commit message include that "wip" and "fix stuff" do not? (3) What command shows your commit history? (4) Why should you run the pipeline *before* every commit? Write your answers, then check against the lesson.
+From memory, answer these questions: (1) What three commands make up the verification pipeline, and in what order? (2) What does a good commit message include that "wip" and "fix stuff" do not? (3) What command shows your commit history? (4) Why should you run the pipeline _before_ every commit? Write your answers, then check against the lesson.
 
 **Verification Ladder checkpoint:** This lesson completes Rung 4 (Pipeline) of the Verification Ladder -- the chained pipeline (`ruff check && pyright && pytest`) running as coordinated verification. Rung 1 (Prediction) was introduced in Chapter 42. Rung 2 (Types) was pyright in Lesson 5. Rung 3 (Tests) was pytest in Lesson 6. Rung 4 (Pipeline) is the chained command in this lesson. Rung 5 (Observability) comes in a later chapter.
 
@@ -439,30 +452,30 @@ Before proceeding to the quiz and the next chapter, score yourself honestly on t
 
 **Prediction Accuracy:** How often were your predictions correct during this chapter? Could you predict what `uv init` would create, what ruff would flag, what pyright would catch, and what pytest output would look like -- before running the commands?
 
-| **Developing** | **Competent** | **Fluent** |
-|---|---|---|
+| **Developing**                                                                   | **Competent**                                                                                            | **Fluent**                                                                                          |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | Predictions were often wrong; tool behavior and output format need more practice | Predictions were mostly correct for straightforward cases; some surprises with strict mode or edge cases | Predictions were consistently accurate; could predict tool output for novel code without running it |
 
 **Trace Quality:** Were your trace artifacts -- line-by-line explanations of `pyproject.toml` sections, "why this fails" notes for tool errors, and pipeline order explanations -- accurate and complete?
 
-| **Developing** | **Competent** | **Fluent** |
-|---|---|---|
+| **Developing**                                                                     | **Competent**                                                                                           | **Fluent**                                                                                               |
+| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | Trace artifacts were incomplete; needed heavy AI assistance to explain tool output | Trace artifacts were mostly accurate; occasional gaps in understanding tool error formats or rule codes | Trace artifacts were thorough; could explain ruff codes, pyright errors, and pytest output independently |
 
 **Explanation Quality:** Can you explain why each tool exists, which axiom it enforces, and what category of bugs it catches -- in your own words, without referring to the lesson?
 
-| **Developing** | **Competent** | **Fluent** |
-|---|---|---|
+| **Developing**                                                                             | **Competent**                                                                                                      | **Fluent**                                                                                                  |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
 | Can name the five tools but struggles to explain the axiom connection or what each catches | Can explain each tool's purpose and axiom mapping; some difficulty articulating the Verification Ladder connection | Can teach the discipline stack to someone else with examples, explaining why removing any tool leaves a gap |
 
 **Modification Quality:** Were you able to modify `pyproject.toml` configurations, ruff rules, and test specifications on your own -- without AI generating the modification? Were Parsons reconstructions correct?
 
-| **Developing** | **Competent** | **Fluent** |
-|---|---|---|
+| **Developing**                                                                                    | **Competent**                                                                                            | **Fluent**                                                                                           |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | Needed significant AI help for configuration changes; Parsons problems required multiple attempts | Completed most modifications independently; Parsons reconstructions were mostly correct on first attempt | Modified configurations confidently; immediately understood which sections controlled which behavior |
 
 **Independent Make Quality:** Did you produce the Make challenges -- writing `pyproject.toml` from memory, writing tests before implementations, completing the full professional cycle -- without AI assistance for the first attempt?
 
-| **Developing** | **Competent** | **Fluent** |
-|---|---|---|
+| **Developing**                                                                    | **Competent**                                                            | **Fluent**                                                                                             |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | Needed AI to start most Make challenges; produced work only after seeing examples | Started Make challenges independently; needed AI review for completeness | Produced complete, accurate Make artifacts on first attempt; AI review confirmed rather than corrected |

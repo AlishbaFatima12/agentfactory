@@ -21,7 +21,7 @@ apps/learn-app/docs/
 ├── 01-General-Agents-Foundations/              ← Part 1
 │   ├── 12-agent-factory-paradigm/             ← Chapter 12
 │   ├── 13-markdown-writing-instructions/      ← Chapter 13
-│   └── ...up to 18-meet-your-first-ai-employee/ ← Chapter 18
+│   └── ...up to 18-claude-code-teams-cicd/    ← Chapter 18
 ├── 02-Agent-Workflow-Primitives/               ← Part 2
 │   ├── 19-file-processing/                    ← Chapter 19
 │   └── ...up to 24-build-first-ai-employee/   ← Chapter 24
@@ -37,8 +37,26 @@ apps/learn-app/docs/
 │   └── 04-the-growth-engine/                  ← Section
 │       └── 34-sales-revops-marketing/         ← Chapter 34
 ├── 04-Programming-in-the-AI-Era/              ← Part 4
-│   └── ...
-└── ...
+│   └── ... (local numbering 01-09 / Ch 42-55)
+├── 05-Building-OpenClaw-Apps/                 ← Part 5 (NEW)
+│   ├── 56-meet-your-first-ai-employee/        ← Chapter 56 (moved from Part 1)
+│   └── 57-building-openclaw-apps/             ← Chapter 57
+├── 06-Building-Agent-Factories/               ← Part 6 (was Part 5)
+│   ├── 61-introduction-to-ai-agents/          ← Chapter 61
+│   ├── 62-openai-agents-sdk/                  ← Chapter 62
+│   └── ...up to 78-knowledge-graphs-graphrag/ ← Chapter 78
+├── 07-Deploying-Agent-Factories-in-the-Cloud/ ← Part 7 (was Part 6)
+│   ├── 79-docker-for-ai-services/             ← Chapter 79
+│   └── ...up to 90-real-cloud-deployment/     ← Chapter 90
+├── 08-Turing-LLMOps-Proprietary-Intelligence/ ← Part 8 (was Part 7)
+│   ├── 91-introduction-to-llmops/             ← Chapter 91
+│   └── ...up to 102-capstone-end-to-end-llmops/ ← Chapter 102
+├── 09-TypeScript-Language-Realtime-Interaction/ ← Part 9 (was Part 8)
+│   ├── 103-typescript-fundamentals/           ← Chapter 103
+│   └── ...up to 108-cli-tools-developer-experience/ ← Chapter 108
+└── 10-Building-Realtime-Voice-Agents/         ← Part 10 (was Part 9)
+    ├── 109-voice-ai-fundamentals/             ← Chapter 109
+    └── ...up to 115-capstone-production-voice-agent/ ← Chapter 115
 ```
 
 **Structure**: Parts are top-level folders (`NN-*`), chapters are inside them (`NN-*/`).
@@ -54,9 +72,9 @@ apps/learn-app/docs/
 ls -d apps/learn-app/docs/*/22-*/
 # Returns: apps/learn-app/docs/02-Agent-Workflow-Primitives/22-linux-mastery/
 
-# For "part 4" / "p4" → Find part folder:
-ls -d apps/learn-app/docs/04-*/
-# Returns: apps/learn-app/docs/04-Programming-in-the-AI-Era/
+# For "part 7" / "p7" → Find part folder:
+ls -d apps/learn-app/docs/07-*/
+# Returns: apps/learn-app/docs/07-Deploying-Agent-Factories-in-the-Cloud/
 
 # For bare "5" → AMBIGUOUS, ask user first!
 ```
@@ -68,7 +86,7 @@ ls -d apps/learn-app/docs/04-*/
 ls apps/learn-app/docs/02-Agent-Workflow-Primitives/22-linux-mastery/*.md | wc -l
 
 # Count chapters in a part:
-ls -d apps/learn-app/docs/04-Programming-in-the-AI-Era/*/ | wc -l
+ls -d apps/learn-app/docs/07-Deploying-Agent-Factories-in-the-Cloud/*/ | wc -l
 ```
 
 ```bash
@@ -92,9 +110,9 @@ Is this correct?"
 Chapter numbers are **global across the book**, not local to parts.
 
 - `ch 22` → Chapter 22 (lives in Part 2, folder `22-*`)
-- `part 4` → Part 4 (folder `04-Programming-in-the-AI-Era/`)
+- `part 7` → Part 7 (folder `07-Deploying-Agent-Factories-in-the-Cloud/`)
 
-**`ch 4` ≠ `part 4`** — completely different locations!
+**`ch 7` ≠ `part 7`** — completely different locations!
 
 ## Failure Modes
 

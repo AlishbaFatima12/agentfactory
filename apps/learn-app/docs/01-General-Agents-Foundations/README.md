@@ -79,9 +79,11 @@ Chapter 17 synthesizes learnings from Chapters 12-16 into actionable problem-sol
 
 **Integration (Lesson 8)**: You'll discover the Meta-Principle underlying all seven (general agents leverage computing fundamentals), see how principles combine in real-world workflows, and learn a decision framework for choosing between Code and Cowork based on task characteristics.
 
-### Chapter 18: Meet Your First AI Employee
+### Chapter 18: Claude Code for Teams, CI/CD & Advanced Configuration
 
-Before you build domain skills, experience what you're building toward. Chapter 18 introduces OpenClaw — the fastest-growing AI Employee project with 209,000+ GitHub stars. You'll install it, delegate real tasks via WhatsApp or Telegram, explore its architecture (six universal agent patterns), and understand the security implications. This isn't a demo — it's a working system that validates everything you learned in Chapters 12-17.
+Chapter 18 covers advanced Claude Code configuration for team workflows, CI/CD integration, and production deployment patterns. This chapter bridges the gap between individual Claude Code mastery (Chapters 14-17) and the agent-building work that follows.
+
+> **Note:** The original Chapter 18 content — "Meet Your First AI Employee" (OpenClaw) — has moved to [Chapter 56 in Part 5: Building OpenClaw Apps](../05-Building-OpenClaw-Apps/56-meet-your-first-ai-employee/README.md).
 
 ## The Agent Factory Paradigm
 

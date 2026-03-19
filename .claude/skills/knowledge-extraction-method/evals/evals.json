@@ -1,0 +1,75 @@
+{
+  "skill_name": "knowledge-extraction-method",
+  "evals": [
+    {
+      "id": 1,
+      "name": "full-extraction-clinical-nurse",
+      "prompt": "I'm a clinical nurse specialist with 15 years of experience in wound care management. I want to build an AI agent that can help triage wound care cases the way I would — not just textbook wound classification, but the judgment calls about when a wound needs specialist referral vs standard protocol, how to read between the lines of patient history, and when something that looks routine is actually concerning. The knowledge is mostly in my head from years of cases. I also have our hospital's wound care protocol manual (about 80 pages) and the NHS wound management guidelines. Help me build a SKILL.md that captures my expertise.",
+      "expected_output": "Classify as A+B, guide through Method A (5 questions) + Method B (3 passes), reconciliation, SKILL.md structure, validation scenarios",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "validate-existing-skillmd",
+      "prompt": "I wrote a SKILL.md for a contract review agent at our law firm. Here's a sample of the Principles section:\n\n1. 'Be thorough in reviewing contracts'\n2. 'Flag any risky clauses'\n3. 'When an indemnity clause exceeds $5M, escalate to the partner'\n4. 'Use professional judgment for complex situations'\n5. 'Follow all applicable regulations'\n\nThe agent works OK for simple reviews but keeps missing subtle issues — like when a limitation of liability clause interacts badly with an indemnity clause elsewhere in the same contract, or when a governing law clause means the indemnity thresholds are actually different than they appear. My senior partner says it's 'doing junior associate work, not senior associate work.' Help me fix this.",
+      "expected_output": "Diagnose testability failures, trace to tacit knowledge gap, recommend Method A interview, provide testable rewrites, structured methodology",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "document-extraction-hr-policy",
+      "prompt": "I'm the HR director at a 500-person tech company. We're building an agent to help employees navigate our HR policies. I have our employee handbook (200 pages), our benefits guide, our PTO policy, our remote work policy, and our performance review guidelines. The problem is that some of these documents were written at different times by different people and I know there are contradictions — like the handbook says 15 days PTO but the benefits guide says 20, and the remote work policy from 2023 conflicts with the return-to-office update from 2025. Help me extract from these documents properly so the agent doesn't give employees wrong answers.",
+      "expected_output": "Classify as Method B-primary, three-pass extraction, contradiction classification (temporal), gap identification, focused interview, SKILL.md principles for contradiction handling",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "finance-portfolio-manager",
+      "prompt": "I'm a portfolio manager at a mid-size asset management firm with 20 years experience. I want to build an agent that helps with investment research the way I think about it — not just pulling data, but the instinct for when a company's reported numbers don't match reality, when sector rotation is about to happen before the consensus sees it, and when to hold vs cut a position that's underwater. I have our firm's investment policy statement, our risk management framework, and SEC compliance guidelines. Where do I start?",
+      "expected_output": "Classify as Method A-primary (finance), guide through 5 interview questions adapted to investment management, targeted Pass One against documented standards, reconciliation (SEC compliance as boundary, investment judgment within it)",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "software-architect-code-review",
+      "prompt": "I'm a principal software architect at a fintech company. I've been doing code reviews for 12 years and I want to capture my review methodology into a skill that can help junior engineers self-review before submitting PRs. The knowledge isn't really in documents — we have coding standards and a style guide, but the real value is knowing which patterns lead to production incidents, when a design that looks clean actually won't scale, and the security anti-patterns specific to financial software. How do I extract this into a SKILL.md?",
+      "expected_output": "Classify as Method A-primary, guide through 5 interview questions adapted to code review (recent good catch, review that missed a prod incident, junior vs senior reviewer gap, one-page review checklist, what should never be auto-approved), mention targeted Pass One against coding standards",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "chartered-accountant-audit",
+      "prompt": "I'm a chartered accountant (CA) with 18 years in external audit at a Big 4 firm, now running my own practice. I want to build an agent that assists with audit planning and risk assessment the way I would approach it — identifying material misstatement risks that the standard audit programmes miss, knowing when client management's explanations don't add up, and recognising the patterns in financial statements that suggest fraud rather than error. I have the ISA standards (International Standards on Auditing), our firm's audit methodology manual, and the ICAP Code of Ethics. The problem is that my junior staff follow the audit programme mechanically but miss the judgment calls.",
+      "expected_output": "Classify as A+B domain, Method A for audit judgment (pattern recognition, fraud indicators, management credibility assessment), Method B for ISA standards + audit methodology (three-pass extraction), reconciliation principle (ISA standards set boundaries, professional judgment operates within them)",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "sales-director-deal-qualification",
+      "prompt": "I run a B2B enterprise sales team selling infrastructure software. My top reps close 3x what the average rep does, and it's not because they work harder — it's because they qualify differently. They know within the first two meetings whether a deal is real or a waste of time, they can read buying committee dynamics that the CRM doesn't capture, and they know when to walk away. I want to capture this 'deal sense' into a skill. We have our MEDDPICC qualification framework documented but the magic is how our best reps interpret it, not the framework itself.",
+      "expected_output": "Classify as Method A-primary (sales), the documented MEDDPICC is scaffolding not substance, 5 questions adapted to sales deal qualification, Method B only targeted against documented framework, no reconciliation needed (no regulatory compliance layer)",
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "adversarial-vague-domain",
+      "prompt": "I want to make my AI assistant better at helping me with stuff at work. Can you help me build a skill for it?",
+      "expected_output": "Should NOT dump the full methodology. Should ask clarifying questions: What domain? What specific work? Where does the knowledge live (heads vs documents)? What does the agent currently do poorly? Should detect this is too vague for extraction and guide the user toward specificity before starting.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "name": "adversarial-skip-to-writing",
+      "prompt": "I need to write a SKILL.md for a property valuation agent right now. I don't have time for interviews or document extraction — just give me a template I can fill in. I know my domain, I've been doing valuations for 15 years, I can just write it.",
+      "expected_output": "Should respectfully push back on skipping extraction while being pragmatic. Should explain the articulation gap — why 'I know my domain' produces generic output. Should offer a compromise: self-interview variant (the 5 questions applied to yourself) as a minimum viable extraction. Should NOT just hand over a blank template.",
+      "files": []
+    },
+    {
+      "id": 10,
+      "name": "edge-partial-validation-failure",
+      "prompt": "I've built a SKILL.md for a clinical trial protocol review agent. I ran 20 validation scenarios and got 90% pass rate — 18 out of 20 passed. The two failures were:\n- S07 (standard): The agent produced a generic protocol summary instead of identifying the specific statistical design flaw I'd flagged in the Principles\n- H02 (high-stakes): The agent didn't escalate when the trial involved a vulnerable population (pediatric oncology) even though I have an escalation rule for vulnerable populations\n\nIs this good enough for shadow mode?",
+      "expected_output": "Should say NO — 90% is below 95% threshold AND there is a high-stakes failure (H02) which is an absolute blocker regardless of overall score. Should diagnose failure patterns: S07 failure in standard case points to Persona/Principles gap, H02 high-stakes failure points to escalation conditions not specific enough. Should recommend targeted rewrite of the 2 weakest instructions, not a full SKILL.md rewrite.",
+      "files": []
+    }
+  ]
+}

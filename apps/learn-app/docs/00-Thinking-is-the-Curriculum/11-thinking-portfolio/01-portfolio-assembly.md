@@ -67,7 +67,7 @@ teaching_guide:
   discussion_prompts:
     - "Looking at your portfolio, which chapter's deliverable are you most proud of? Which one would you redo if you could?"
     - "What is the difference between a portfolio that proves you completed assignments and a portfolio that proves you grew as a thinker?"
-    - "Which of the ten chapter skills do you think will be most useful when you start building AI agents in Part 5?"
+    - "Which of the ten chapter skills do you think will be most useful when you start building AI agents in Part 6?"
   teaching_tips:
     - "Have students complete the post-assessment in exam conditions -- timed, no AI, no notes from the baseline. This must feel as formal as the original baseline"
     - "The AI Post-Assessment Check is long and detailed (7 evaluation steps). Give students 10-15 minutes to read and reflect before moving to the Growth Map"

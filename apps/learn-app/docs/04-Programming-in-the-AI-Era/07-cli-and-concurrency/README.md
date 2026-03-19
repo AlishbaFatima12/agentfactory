@@ -9,7 +9,7 @@ sidebar_position: 0
 
 > Your role: **Tool Builder** — "I can build and ship production tools and async APIs"
 
-Phase 7 crosses the line from working code to real software that other people use. You build a professional command-line tool (`smartnotes`) and a FastAPI web API, learning how to handle concurrent operations (doing multiple things at once) along the way. These async patterns matter because agent SDKs, APIs, and everything you build in Part 5 depend on the fluency you develop here.
+Phase 7 crosses the line from working code to real software that other people use. You build a professional command-line tool (`smartnotes`) and a FastAPI web API, learning how to handle concurrent operations (doing multiple things at once) along the way. These async patterns matter because agent SDKs, APIs, and everything you build in Part 6 depend on the fluency you develop here.
 
 | #  | Chapter | Key Focus |
 |----|---------|-----------|
