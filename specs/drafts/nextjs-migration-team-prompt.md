@@ -17,7 +17,24 @@ IMPORTANT: This MUST be an agent team (https://code.claude.com/docs/en/agent-tea
 **Content type**: Migration/Rewrite — same content, new framework
 **Microservices**: UNCHANGED — SSO (:3001), content-api (:8003), progress-api (:8002), study-mode-api (:8000), token-metering (:8001), learner-profile
 
-This is a frontend framework rewrite. Content (1,824 MDX files, 671 flashcard YAMLs) copies directly. The work is: framework infrastructure, plugin migration, auth/API integration rewiring, and verification.
+This is a frontend framework rewrite. Content (1,824 MDX files, 671 flashcard YAMLs) copies directly. The work is: framework infrastructure, plugin migration, auth/API integration rewiring, i18n (3 locales: en, ur, zh-Hans), and verification.
+
+## Success Definition (NON-NEGOTIABLE)
+
+**The migrated app must be IDENTICAL to the current app from the user's perspective.** Zero UX changes. Zero feature regressions. Every button, every page, every flow works exactly as before. The ONLY differences should be:
+
+1. Faster builds (ISR — under 4 GB memory vs current 7 GB)
+2. Better agent tooling (AGENTS.md, next-devtools-mcp)
+3. Server runtime available (Route Handlers, Server Actions)
+
+**If a single feature breaks, the migration is NOT done.** The verifier runs 17 flows — ALL must pass.
+
+## Key Resources for ALL Teammates
+
+- **Full spec**: `specs/nextjs-migration/spec.md` (verification matrix, constraints, success criteria)
+- **Tooling research**: `specs/nextjs-migration/research/tooling-evaluation.md`
+- **AGENTS.md** in `apps/learn-next/` → `node_modules/next/dist/docs/` (ALWAYS read Next.js docs from here, not training data)
+- **GitHub Issue**: https://github.com/panaversity/agentfactory/issues/880
 
 ---
 
