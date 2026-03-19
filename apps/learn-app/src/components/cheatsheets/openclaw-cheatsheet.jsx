@@ -451,7 +451,7 @@ openclaw onboard --flow manual      # full control`}</Code>
             ))}
             <Code>{`# 3. Chat via TUI or one-shot
 openclaw tui
-openclaw agent --message "Hello"
+openclaw agent --message "Hello" --agent main
 
 # Remote onboarding
 openclaw onboard --mode remote \\
