@@ -5,11 +5,7 @@ title: "Part 3: Business Domain Agent Workflows — Building for the Enterprise"
 
 # Part 3: Business Domain Agent Workflows — Building for the Enterprise
 
-## Introduction & Overview
-
----
-
-### A New Focus: Enterprise Workflows
+## A New Focus: Enterprise Workflows
 
 The first two parts of this book built the Agent Factory: the paradigm shift from writing software to manufacturing AI employees, the technical architecture of agent systems, the spec-driven development methodology, and the Cowork plugin platform that makes deployment possible without writing code.
 
@@ -173,6 +169,8 @@ Extends the foundational finance agent into a methodology for building AI system
 
 #### Chapter 30: AI Transformation of CA/CPA Practice Areas ✅
 
+**[→ Read Chapter 30](/docs/Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice)**
+
 Deploys AI across the full range of CA/CPA practice areas: audit, tax, advisory, and client service. Covers the governance principle that is absolute in this domain — the closing opinion always requires a licensed professional — and builds the SKILL.md library that makes the agent genuinely useful up to that boundary.
 
 **Key topics:** Audit workpaper automation and analytical procedures at scale · Tax provision computation and disclosure drafting · Client onboarding, engagement letter, and KYC workflows · Continuous accounting — real-time close instead of month-end batch · Practice management — WIP tracking, billing, capacity planning
@@ -181,7 +179,9 @@ Deploys AI across the full range of CA/CPA practice areas: audit, tax, advisory,
 
 ---
 
-#### Chapter 31: Islamic Finance Domain Agents — A Global Practice Guide ✅
+#### Chapter 31: Islamic Finance Domain Agents — A Global Practice Guide 📝 _First Draft_
+
+**[→ Read Chapter 31](/docs/Business-Domain-Agent-Workflows/islamic-finance-domain-agents)**
 
 The most comprehensive treatment of Islamic finance AI in any curriculum. 16,421 words, 26 SKILL.md files, 7 jurisdiction overlays (Bahrain, Qatar, Malaysia, Saudi Arabia, UAE, UK, Pakistan), and 14 exercises including a full Shariah audit trail and IFRS/FAS 9 interaction analysis. Downloadable Islamic Finance Cowork Skills Library included.
 
@@ -191,7 +191,9 @@ The most comprehensive treatment of Islamic finance AI in any curriculum. 16,421
 
 ---
 
-#### Chapter 32: Banking-Specific AI — IFRS 9 ECL, Basel III/IV, and AML/KYC 🔄 _In Progress_
+#### Chapter 32: Banking-Specific AI — IFRS 9 ECL, Basel III/IV, and AML/KYC 📝 _First Draft_
+
+**[→ Read Chapter 32](/docs/Business-Domain-Agent-Workflows/banking-domain-agents)**
 
 Full-treatment banking AI across the three regulatory pillars that determine whether a bank is safe, accurate, and clean: IFRS 9 Expected Credit Loss (accounting accuracy), Basel III/IV capital adequacy (solvency), and AML/KYC financial crime prevention. Includes a dedicated section on bank reconciliation — nostro reconciliation, the IFRS 9 four-way provision tie-out, and suspense account control. 14 exercises and a downloadable 23-file Banking Cowork Skills Library across 7 jurisdictions.
 
@@ -216,7 +218,9 @@ Chapter 33 gives significant treatment to **Legal Operations Agents** — the em
 
 ---
 
-#### Chapter 33: Legal Operations and Compliance 📋 _Planned_
+#### Chapter 33: Legal Operations and Compliance 📝 _First Draft_
+
+**[→ Read Chapter 33](/docs/Business-Domain-Agent-Workflows/legal-operations-and-compliance)**
 
 Builds AI agents that transform the legal function — from contract lifecycle management through IP protection to regulatory compliance monitoring. The governance principle in this chapter is non-negotiable: certain decisions must always involve a qualified attorney regardless of how accurate an agent becomes.
 
@@ -236,7 +240,9 @@ The central insight of this section is a reframing: AI does not replace salespeo
 
 ---
 
-#### Chapter 34: Sales & Revenue Operations (RevOps) and Marketing 📋 _Planned_
+#### Chapter 34: Sales & Revenue Operations (RevOps) and Marketing ✅
+
+**[→ Read Chapter 34](/docs/Business-Domain-Agent-Workflows/the-growth-engine/sales-revops-marketing)**
 
 Builds AI agents that scale the judgment of top performers across the entire sales and marketing organisation — from prospecting through pipeline management to campaign optimisation.
 
@@ -254,7 +260,9 @@ Section V covers the two domains that connect customer demand to product deliver
 
 ---
 
-#### Chapter 35: Supply Chain & Procurement 📋 _Planned_
+#### Chapter 35: Supply Chain & Procurement 📝 _First Draft_
+
+**[→ Read Chapter 35](/docs/Business-Domain-Agent-Workflows/supply-chain-procurement)**
 
 Deploys AI agents across the end-to-end supply chain — from vendor selection and purchase order management to invoice reconciliation and logistics optimisation.
 
@@ -264,7 +272,9 @@ Deploys AI agents across the end-to-end supply chain — from vendor selection a
 
 ---
 
-#### Chapter 36: Product Management 📋 _Planned_
+#### Chapter 36: Product Management 📝 _First Draft_
+
+**[→ Read Chapter 36](/docs/Business-Domain-Agent-Workflows/product-management)**
 
 Builds AI agents that transform product management from a reactive coordination function into a proactive strategic capability — from discovery through to stakeholder communication.
 
@@ -282,7 +292,9 @@ Section VI addresses the infrastructure that determines whether an organisation 
 
 ---
 
-#### Chapter 37: People & Organisational Operations (HR) 📋 _Planned_
+#### Chapter 37: People & Organisational Operations (HR) 📝 _First Draft_
+
+**[→ Read Chapter 37](/docs/Business-Domain-Agent-Workflows/people-hr)**
 
 Builds AI agents that preserve institutional memory, accelerate onboarding, and automate the administrative overhead of human resource management — without losing the human dimension of people operations.
 
@@ -292,7 +304,9 @@ Builds AI agents that preserve institutional memory, accelerate onboarding, and 
 
 ---
 
-#### Chapter 38: Operations 📋 _Planned_
+#### Chapter 38: Operations 📝 _First Draft_
+
+**[→ Read Chapter 38](/docs/Business-Domain-Agent-Workflows/operations-management)**
 
 Builds AI agents that make operational processes visible, documented, optimised, and compliant — transforming operations from a reactive function into a continuous improvement engine.
 
@@ -302,7 +316,9 @@ Builds AI agents that make operational processes visible, documented, optimised,
 
 ---
 
-#### Chapter 39: Productivity & The Agentic Office 📋 _Planned_
+#### Chapter 39: Productivity & The Agentic Office 📝 _First Draft_
+
+**[→ Read Chapter 39](/docs/Business-Domain-Agent-Workflows/productivity-agentic-office)**
 
 The integration chapter. Builds the workplace AI layer that knows your organisation's people, projects, terminology, and priorities — and connects all the domain agents from Chapters 28–38 into a coherent agentic office environment. This is the chapter where the domain agents stop being point solutions and start working as a system.
 
@@ -320,7 +336,9 @@ Section VII is the culmination of Part 3. The student who has completed Chapters
 
 ---
 
-#### Chapter 40: The Intrapreneurship Agent: Lean Methodology for Enterprise Innovation 📋 _Planned_
+#### Chapter 40: The Intrapreneurship Agent: Lean Methodology for Enterprise Innovation 📝 _First Draft_
+
+**[→ Read Chapter 40](/docs/Business-Domain-Agent-Workflows/intrapreneurship-innovation-agents)**
 
 Combines Lean Startup, Design Thinking, and Agile with AI-accelerated execution — for both the intrapreneur within a large enterprise and the founder building from scratch.
 
@@ -332,24 +350,26 @@ Combines Lean Startup, Design Thinking, and Agile with AI-accelerated execution 
 
 ## Chapter Map at a Glance
 
+> **All 16 chapters are now published.** Chapters marked 📝 _First Draft_ are live but have not yet been tested in Cowork — exercises and plugin integrations will be refined in a future pass.
+
 | #   | Title                                      | Section                   | Status         |
 | --- | ------------------------------------------ | ------------------------- | -------------- |
-| 25  | The Enterprise Agentic Landscape           | I — Foundations           | ✅ Complete    |
-| 26  | The Enterprise Agent Blueprint             | I — Foundations           | ✅ Complete    |
-| 27  | The Knowledge Extraction Method            | I — Foundations           | ✅ Complete    |
-| 28  | Finance Domain Agents                      | II — Office of the CFO    | ✅ Complete    |
-| 29  | Intent-Driven Financial Architecture       | II — Office of the CFO    | ✅ Complete    |
-| 30  | AI Transformation of CA/CPA Practice Areas | II — Office of the CFO    | ✅ Complete    |
-| 31  | Islamic Finance Domain Agents              | II — Office of the CFO    | ✅ Complete    |
-| 32  | Banking-Specific AI                        | II — Office of the CFO    | 🔄 In Progress |
-| 33  | Legal Operations and Compliance            | III — Legal & Compliance  | 📋 Planned     |
-| 34  | Sales, RevOps & Marketing                  | IV — The Growth Engine    | 📋 Planned     |
-| 35  | Supply Chain & Procurement                 | V — Product & Value Chain | 📋 Planned     |
-| 36  | Product Management                         | V — Product & Value Chain | 📋 Planned     |
-| 37  | People & Organisational Operations (HR)    | VI — People & Efficiency  | 📋 Planned     |
-| 38  | Operations                                 | VI — People & Efficiency  | 📋 Planned     |
-| 39  | Productivity & The Agentic Office          | VI — People & Efficiency  | 📋 Planned     |
-| 40  | The Intrapreneurship Agent                 | VII — Innovation Lab      | 📋 Planned     |
+| 25  | The Enterprise Agentic Landscape           | I — Foundations           | ✅ Published   |
+| 26  | The Enterprise Agent Blueprint             | I — Foundations           | ✅ Published   |
+| 27  | The Knowledge Extraction Method            | I — Foundations           | ✅ Published   |
+| 28  | Finance Domain Agents                      | II — Office of the CFO    | ✅ Published   |
+| 29  | Intent-Driven Financial Architecture       | II — Office of the CFO    | ✅ Published   |
+| 30  | AI Transformation of CA/CPA Practice Areas | II — Office of the CFO    | ✅ Published   |
+| 31  | Islamic Finance Domain Agents              | II — Office of the CFO    | 📝 First Draft |
+| 32  | Banking-Specific AI                        | II — Office of the CFO    | 📝 First Draft |
+| 33  | Legal Operations and Compliance            | III — Legal & Compliance  | 📝 First Draft |
+| 34  | Sales, RevOps & Marketing                  | IV — The Growth Engine    | ✅ Published   |
+| 35  | Supply Chain & Procurement                 | V — Product & Value Chain | 📝 First Draft |
+| 36  | Product Management                         | V — Product & Value Chain | 📝 First Draft |
+| 37  | People & Organisational Operations (HR)    | VI — People & Efficiency  | 📝 First Draft |
+| 38  | Operations                                 | VI — People & Efficiency  | 📝 First Draft |
+| 39  | Productivity & The Agentic Office          | VI — People & Efficiency  | 📝 First Draft |
+| 40  | The Intrapreneurship Agent                 | VII — Innovation Lab      | 📝 First Draft |
 
 ---
 
