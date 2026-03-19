@@ -96,7 +96,13 @@ Processing order...
 
 `print("Processing order...")` — scattered through the code from his earliest development days. No timestamps. No request IDs. No indication of _which_ order failed, _why_ it failed, or _how many_ orders were affected. He had no metrics to show whether the error rate was 0.1% or 50%. He had no traces to show where the request spent its time. His comprehensive test suite, his type system, his CI pipeline — none of them could tell him what was happening right now, in production, to real users.
 
-"Your tests verify that the code is correct," Emma told him the next morning. "But correct code can still fail in production. Load causes timeouts. Network hiccups drop connections. Memory fills up under traffic patterns your tests never simulated. You need a different kind of verification — one that watches the system while it runs."
+"The pipeline passed," James said the next morning, pulling up the green CI badge. "Every check — formatting, linting, types, all fifty-three tests, security audit. All green. If the pipeline is the gatekeeper, how did this get through?"
+
+He pulled up the test results himself. `test_international_surcharge`: passed. `test_international_no_free_shipping`: passed. Every international shipping test — passed. With one request at a time, on a clean test machine, with no other load. The tests verified the _logic_. They could not verify what happens when fifty concurrent requests compete for the same database connection pool at 2:47 AM.
+
+"The pipeline proved the code is correct," James said slowly. "It didn't prove the code survives the real world."
+
+"You need a different kind of verification," Emma said. "One that watches the system while it runs."
 
 This is Axiom X.
 

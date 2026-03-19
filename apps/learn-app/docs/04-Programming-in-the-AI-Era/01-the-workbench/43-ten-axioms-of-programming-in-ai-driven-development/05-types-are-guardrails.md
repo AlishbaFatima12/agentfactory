@@ -73,11 +73,17 @@ The team needed a new endpoint — fetch a customer's order history and return a
 
 James reviewed it, liked what he saw, and merged it. The endpoint crashed in staging twenty minutes later. `AttributeError: 'dict' object has no attribute 'total_amount'`. The AI had generated code that treated the API response as objects with attributes, but the actual response was a list of plain dictionaries. The code _looked_ correct. The variable names _suggested_ correctness. But nothing in the codebase had told the AI — or James — what shape the data actually was.
 
+"The AI wrote bad code," James said. "The variable names made sense — `customer`, `orders`, `total_amount`. I read every line. It looked right."
+
+"Pull up the actual API response," Emma said.
+
+James did. Plain dictionaries — `{"total_amount": 42.50}` — not objects with `.total_amount` attributes. The variable names had made the code *look* correct. The code was not correct. And James had reviewed it line by line and missed the mismatch, because readable code and correct code are not the same thing.
+
 Emma pulled up the diff. "Your composed functions from last week had typed interfaces — `ValidatedOrder`, `PricedOrder`, `PaidOrder`. The type checker would have caught any mismatch. This new code has no types at all. You gave the AI a blank canvas and hoped it would guess your data model."
 
-She added a `CustomerOrder` dataclass with typed fields, annotated the function's return type, and ran Pyright. Three errors appeared instantly — the same errors that had crashed staging. Fixed in five minutes. The types had turned a runtime mystery into a development-time checklist.
+"I thought I could verify it by reading it," James said. "But I can't read every assumption the AI makes about data shapes. That's what the types do — they make the assumptions explicit so a machine can check them."
 
-"Composition gives AI the right _scope_," Emma said. "Types give AI the right _shape_. Without both, you are reviewing code by reading it — and you will miss what the machine would catch."
+She added a `CustomerOrder` dataclass with typed fields, annotated the function's return type, and ran Pyright. Three errors appeared instantly — the same errors that had crashed staging. Fixed in five minutes. The types had turned a runtime mystery into a development-time checklist.
 
 ## The Problem Without This Axiom
 

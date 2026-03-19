@@ -163,7 +163,15 @@ The principle gave you access. The axiom gives you discipline. Chapter 17 showed
 
 ### Composition Primitives
 
-When James asked Emma how the 12-line Makefile could replace 400 lines of bash, Emma's answer was almost embarrassingly simple: "I didn't write anything. I just connected programs that already existed." The Makefile used no framework, no libraries, no custom tooling. It used three primitives that the shell has shipped since 1973.
+When Emma showed James the 12-line replacement, he was not convinced. "Twelve lines can't be reliable. We should rewrite the whole thing properly — in Python, with error handling, with tests."
+
+"What would the Python version do?" Emma asked.
+
+James thought about it. "It would... call pytest. Then call Docker. Then call kubectl." He paused. "That's what the Makefile does. I'd just be wrapping the same tool calls in Python syntax."
+
+"And now you have a Python program to maintain instead of twelve lines that call the tools directly."
+
+James looked at the Makefile again. It used no framework, no libraries, no custom tooling. It used three primitives that the shell has shipped since 1973.
 
 :::tip Reading for the Pattern, Not the Commands
 The bash commands below demonstrate three shell primitives: pipes, exit codes, and redirection. You do not need to memorize them — focus on the _pattern_ each one illustrates: connecting programs, checking results, and routing data. You will use these commands hands-on in later chapters.

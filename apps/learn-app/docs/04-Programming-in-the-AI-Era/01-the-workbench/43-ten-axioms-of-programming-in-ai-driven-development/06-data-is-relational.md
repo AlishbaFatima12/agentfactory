@@ -75,9 +75,17 @@ His data lived in a JSON file: `orders.json`. Each order was a dictionary with a
 
 Then the product team changed a customer's name from "Acme Corp" to "Acme Corporation." James updated the customer record. He forgot to update the 47 orders that referenced the old name. Now the dashboard showed two customers — "Acme Corp" with 47 historical orders and "Acme Corporation" with zero. The data was inconsistent, and the JSON file had no way to tell him.
 
-"Your data has relationships," Emma told him. "Customers _have_ orders. Orders _contain_ products. Products _belong to_ categories. You are storing relational data in a format that does not understand relationships. That is like writing typed code without a type checker — the structure is there, but nothing enforces it."
+"It's a data format problem," James said before Emma could finish examining the dashboard. "I'll switch to YAML, or maybe use separate JSON files for customers and orders. Cleaner structure, same flexibility."
 
-She opened a terminal and typed twelve lines of SQL. The same dashboard query that took eleven seconds and forty lines of Python returned in three milliseconds. The customer name lived in one place. The relationships were enforced by the database. The data could not become inconsistent because the system would not allow it.
+"How would you connect an order to its customer?" Emma asked.
+
+James thought about it. "Store the customer name in each order. Or... a customer ID field that matches—" He stopped. "But that's what I already have. The customer name _is_ the link. That's why it broke when the name changed."
+
+"You are storing relational data," Emma said, "in a format that does not understand relationships."
+
+James stared at the dashboard showing two "Acme" customers. The problem was not the file format. YAML would have the same problem. CSV would have the same problem. Any format that _copied_ the customer name into every order instead of _referencing_ it by a stable ID would have the same problem. "The format was never the issue," he said. "I need something that enforces the connection — so changing a name in one place changes it everywhere."
+
+Emma opened a terminal and typed twelve lines of SQL. The same dashboard query that took eleven seconds and forty lines of Python returned in three milliseconds. The customer name lived in one place. The relationships were enforced by the database. The data could not become inconsistent because the system would not allow it.
 
 The difference between JSON-as-database and a relational database is Axiom VI.
 

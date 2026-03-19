@@ -86,7 +86,15 @@ Then he shipped `apply_discount()` — a function that accepted a `PricedOrder` 
 
 It was not. The function returned 0.15 instead of 0.85 — it subtracted the discount _from_ 1.0 in the wrong order, giving customers an 85% discount instead of a 15% discount. The company lost $12,000 in a single weekend before anyone noticed.
 
-"Types catch structural errors," Emma reminded him on Monday morning. "But types cannot tell you that 0.15 is wrong and 0.85 is right. Only one thing can: a test that says `assert apply_discount(order, 0.15) == expected_price`. If that test existed before the AI generated the function, the error would have been caught before it left your machine."
+"I _did_ verify it," James said on Monday morning, before Emma could start. "I read the code. I saw the multiplication. The variable names made sense. The types were correct. I verified."
+
+"What did you verify it _against_?" Emma asked.
+
+James opened his mouth, then closed it. He had verified that the code _looked_ correct. He had not verified that it _was_ correct. He had no reference point — no expected output for a known input. He had read `price * discount_rate` and his brain had filled in "of course that gives the discounted price." But 100 times 0.15 is 15, not 85. The multiplication was right there in the code. He had looked directly at the bug and seen what he expected to see instead of what was actually written.
+
+"I verified the structure," James said slowly. "Not the result."
+
+"Types catch structural errors," Emma said. "But types cannot tell you that 0.15 is wrong and 0.85 is right. Only one thing can: a test that says `assert apply_discount(order, 0.15) == expected_price`."
 
 Emma showed James a different workflow. Instead of asking the AI to "write a discount function" and reviewing the output by reading it, she wrote five tests first. One asserted a 10% discount on a $100 order produced $90. Another asserted a 0% discount returned the original price. A third tested the boundary where the discount equals the order total. A fourth tested invalid discount values. A fifth tested that the return type was `DiscountedOrder`, not a raw float. Then she handed the tests to the AI: "Write the implementation that passes all five."
 

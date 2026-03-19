@@ -63,7 +63,15 @@ James opens his terminal inside the `smartnotes` directory. His instinct says `p
 
 "You already have uv," she says. "Use it."
 
-James replaces the command: `uv add --dev pytest pyright ruff`. Three tools, one command, under a second. He opens `pyproject.toml` and sees all three listed in a new section called `[dependency-groups]`. Then Emma shows him something he did not expect. She adds configuration sections for each tool -- pyright strictness, ruff rules, pytest test paths -- all inside the same file. James stares at it. "Everything I need to know about SmartNotes is right here?" Emma nods. "One file. Every dependency, every tool setting, every project detail. That is what a central configuration gives you."
+"What is the difference?" James asks. "pip install pytest, uv add pytest -- either way, I get pytest. The package ends up in my environment. The tool works the same."
+
+"Run `pip install pytest`," Emma says. "Then open `pyproject.toml` and show me where pip recorded that dependency."
+
+James thinks about it. pip would install the package into the virtual environment, but it would not touch `pyproject.toml`. He would have to update the file by hand -- or run `pip freeze > requirements.txt` to capture the state. And the requirements file would not distinguish between tools he installed deliberately and packages that came along as transitive dependencies.
+
+"uv add does the install and the bookkeeping," James says. "pip just does the install."
+
+He types `uv add --dev pytest pyright ruff`. Three tools, one command, under a second. He opens `pyproject.toml` and sees all three listed in a new section called `[dependency-groups]`. Then Emma shows him something he did not expect. She adds configuration sections for each tool -- pyright strictness, ruff rules, pytest test paths -- all inside the same file. James stares at it. "Everything I need to know about SmartNotes is right here?" Emma nods. "One file. Every dependency, every tool setting, every project detail. That is what a central configuration gives you."
 
 ## The Problem Without a Central Config
 

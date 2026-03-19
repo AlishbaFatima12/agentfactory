@@ -172,9 +172,13 @@ When you catch yourself about to use a prompt from the Wrong column, pause and r
 
 ## AI-Free Checkpoints
 
-"Close my AI assistant?" James looks alarmed. "But what if I get stuck?"
+"Close my AI assistant?" James looks alarmed. "That makes no sense. The whole point of the previous section was learning to use AI *correctly* at each stage. Now you're telling me to turn it off?"
 
-"Getting stuck is the point," Emma says. "If you can't do it without AI, you haven't learned it yet. The checkpoint shows you where you actually are — not where you think you are."
+"Try predicting the next program with your AI assistant open," Emma says.
+
+James opens his assistant, looks at the code — and catches himself glancing at the chat window before committing to a prediction. He hasn't typed anything yet, but the temptation to ask is already pulling his attention away from the code.
+
+"I wasn't going to ask," he says. But he knows he was about to. "Okay. I see it. The checkpoint isn't punishing me for using AI. It's showing me whether I actually internalized the concept — or whether I just *think* I did because AI was always there to catch me."
 
 Throughout Parts 4 and 5, you will occasionally see **[AI-FREE]** marked in the margin of lessons. When you see this marker, close your AI assistant. Minimize the window, switch to a different tab, put it away. These moments are diagnostic -- they reveal whether you have actually internalized the concept or whether you have been leaning on AI without realizing it.
 
@@ -217,9 +221,15 @@ These gates feel unnecessary when a lesson is going well. They prove their value
 
 "Show me," Emma replies. "Write it down. A trace table, an explanation in your own words, or even a note saying where you got confused. Something I can look at."
 
-"Why can't I just tell you?"
+"Why can't I just tell you? Writing it all down takes longer."
 
-"Because 'I think I understand' and 'I can prove I understand' are very different things. Your brain is good at feeling confident. Paper is good at exposing the gaps."
+"Try it. Explain how the result variable gets built — out loud, right now."
+
+James starts. "It takes the name and the score and..." He pauses. He knows what the output looks like. But reconstructing the steps — which pieces connect, why `str()` is needed, what order the `+` operators join things — it blurs when he tries to say it without the code in front of him.
+
+"Now write a trace table," Emma says. "One line at a time."
+
+Halfway through writing, James finds an assumption he did not know he was making about when `str()` converts the number. "Writing it down is slower," he admits. "But I just caught something I would have missed if I'd only said 'yeah, I get it.'"
 
 Every Investigate stage must produce something visible. A vague sense of "I think I understand it" is not investigation -- it is wishful thinking. PRIMM-AI+ requires you to create at least one of these artifacts before moving to Modify:
 

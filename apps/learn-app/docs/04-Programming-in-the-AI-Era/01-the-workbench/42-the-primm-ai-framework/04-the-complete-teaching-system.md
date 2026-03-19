@@ -90,9 +90,15 @@ PRIMM-AI+ provides the sequence and the safeguards. **These four methods are the
 
 James opens a new chapter and sees a complete Python program at the top. He did not write it. His AI assistant did not write it. It is just there — ready to study.
 
-"Why don't I write it myself?" he asks.
+"Why don't I write it myself?" he asks. "Wouldn't I learn more by struggling through it from scratch?"
 
-"Because you'd be solving two problems at once — figuring out _what_ to write and figuring out _how_ to write it," Emma explains. "The worked example separates those. Someone else handled the _what_. You focus entirely on the _how_."
+"Try it," Emma says. "Write a program that formats a temperature reading with a city name and a unit label."
+
+James stares at the blank screen. He needs a city variable, a temperature variable, a unit... how does he format them? What order? Does he need `str()`? Where do the spaces go? He is juggling six decisions at once and making progress on none of them.
+
+Emma shows him the worked example: four clean lines that do exactly what he was struggling to start. He reads them and immediately understands the structure — the same structure he could not invent from nothing.
+
+"I see," James says. "Starting from a blank screen, I was solving *what to write* and *how to write it* at the same time. The example takes care of the first problem so I can focus on the second."
 
 Every code block in this book is a worked example -- a complete, functioning program you study before writing your own. Instead of starting with a blank screen, you inspect a finished program, predict its output, run it, and analyze its structure. **Worked examples are easier on your brain because you do not have to invent everything at once.** You focus on understanding how the code works, not on producing it.
 
@@ -155,9 +161,13 @@ Where it fits: **All stages.** In classroom mode, it happens naturally through p
 
 ## Classroom Mode vs. Solo Mode
 
-"I'm studying alone," James says. "No teacher, no classmates. Is PRIMM-AI+ still going to work for me?"
+"I'm studying alone," James says. "No teacher, no classmates. Isn't PRIMM designed for classrooms? I'll miss the peer instruction, the group discussions — that was half the method."
 
-"That's exactly why we built the solo mode safeguards," Emma says. "The checkpoints, the confidence scoring, the mastery gates — they replace the teacher who would normally catch you skipping steps. When you're on your own, those structures are your accountability partner."
+He has a point. PRIMM was tested in classrooms with human teachers guiding the process. But James thinks about what he has learned over the last three lessons — the AI-free checkpoints that force honest self-assessment, the confidence scoring that makes self-deception visible, the mastery gates that prevent skipping ahead, the mandatory trace artifacts that prove understanding.
+
+"Actually," he says, "the checkpoints and gates do what a teacher would do — they catch me skipping steps. The confidence scoring does what a classmate would do — it challenges my assumptions. I'm not missing the structure. I'm replacing the *people* who enforce it with *systems* that enforce it."
+
+"That's exactly why we built the solo mode safeguards," Emma says.
 
 **Classroom mode.** The teacher orchestrates the process. Predictions are shared in pairs or small groups before anyone runs the code. Investigation questions are discussed as a class before consulting AI. Modification approaches are compared across teams. The teacher controls AI permissions and uses mastery gates as checkpoints for the whole class.
 

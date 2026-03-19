@@ -131,7 +131,17 @@ The markdown repository is the only library where every reader — human develop
 
 ## Why Markdown?
 
-After the incident, Emma told James: "We need to write down every decision." James agreed — but the question was not whether to write things down. It was _how_. If the team had written `docs/adr/007-event-driven-messaging.md` on the day they made the decision, James would have found his answer in thirty seconds. But why markdown specifically? Why not a JSON file, a YAML config, or a well-organized text file?
+After the incident, Emma told James: "We need to write down every decision."
+
+"We *did* write it down," James said. "It was in a Google Doc. With comments. And a Confluence page. And three Slack threads. The problem wasn't that we didn't document — it was that we documented in too many places."
+
+"And what happened when you needed to find it?"
+
+James thought about it. He had searched the repository first — nothing. He had asked his AI assistant to check the codebase — nothing, because the AI could not read Google Docs or archived Slack threads. He had eventually found the Confluence page, but it referenced a Slack thread behind the archive wall.
+
+"The format was the problem," he said slowly. "The decision existed. It just didn't exist anywhere a developer — or an AI — would naturally look."
+
+If the team had written `docs/adr/007-event-driven-messaging.md` on the day they made the decision, James would have found his answer in thirty seconds. But why markdown specifically? Why not a JSON file, a YAML config, or a well-organized text file?
 
 Markdown wins not because it is the most powerful format, but because it satisfies all four requirements simultaneously. No other format does.
 

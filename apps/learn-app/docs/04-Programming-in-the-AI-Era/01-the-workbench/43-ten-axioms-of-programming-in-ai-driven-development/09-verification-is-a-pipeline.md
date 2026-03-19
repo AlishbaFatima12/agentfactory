@@ -83,7 +83,19 @@ The formatter caught inconsistent indentation the AI had introduced in `shipping
 
 None of these failures were exotic. They were routine — the kind of mistakes that slip through when the only verification is "I ran pytest on my machine and it passed." James had done everything right _within each axiom_. But he had never run all the checks _together_, in order, automatically.
 
-"Your tests verify logic," Emma told him when he messaged her, frustrated. "But tests do not check formatting. Tests do not check types. Tests do not audit dependencies. You need a pipeline — a sequence of checks that runs _every_ check, _every_ time, automatically. If the pipeline fails, the code does not ship. No exceptions."
+"I ran pytest before every push," James messaged Emma, frustrated. "All fifty-three tests passed. How is this a failure on my part?"
+
+"What else did you run?" Emma asked.
+
+"Pytest. I just said—"
+
+"What about the formatter? The linter? The type checker? The security auditor?"
+
+James went quiet. He had run pytest. He had not run `ruff format --check`. He had not run `ruff check`. He had not run `pyright`. He had not run `pip-audit`. He had treated "tests pass" as "everything works" — but tests only catch one category of error. The tabs-versus-spaces, the unused import, the `Optional[float]` mismatch, the vulnerable dependency — four different tools would have caught four different problems. He had run one tool and assumed the other four agreed.
+
+"I was verifying," James said. "But only one dimension."
+
+"You need a pipeline," Emma told him. "A sequence that runs _every_ check, _every_ time, automatically. If the pipeline fails, the code does not ship. No exceptions."
 
 This is Axiom IX.
 

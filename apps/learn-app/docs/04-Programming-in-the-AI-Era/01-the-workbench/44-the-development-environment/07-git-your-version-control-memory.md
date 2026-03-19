@@ -53,7 +53,21 @@ James is still working on `format_title`, a piece of code that capitalizes the f
 
 James stares at an empty file. He cannot remember the exact logic. He has a test that documents what the code is supposed to do -- `assert format_title("hello world") == "Hello World"` -- but the implementation that passed that test no longer exists anywhere. The test tells him what "correct" means. It cannot tell him what the code looked like.
 
-Emma finds him rewriting code he already wrote. "How long have you been doing this?" James sighs. "Twenty minutes. And I am not sure this version is as good as the one I deleted." Emma sits down. "Let me show you the last tool in the discipline stack. After today, this never happens again."
+Emma finds him rewriting code he already wrote. "How long have you been doing this?"
+
+James sighs. "Twenty minutes. And I am not sure this version is as good as the one I deleted."
+
+"Have you considered version control?"
+
+"I will just be more careful next time," James says. "I will copy the file before I start rewriting. Or I will use cloud sync -- OneDrive, Google Drive, whatever. The file gets backed up automatically."
+
+"What does cloud sync tell you about why you changed the file?" Emma asks. "If you have three copies from three different hours, which one has the working `format_title`? Which one broke it? What changed between them?"
+
+James thinks about it. Cloud sync saves versions by timestamp. It does not say what changed in each version, or why, or which version passed the tests. Finding the right one means opening each copy and reading through the code until he recognizes the version he wants.
+
+"Cloud sync saves files," James says. "It does not save the story of what happened to them."
+
+Emma sits down. "Let me show you the last tool in the discipline stack."
 
 ---
 

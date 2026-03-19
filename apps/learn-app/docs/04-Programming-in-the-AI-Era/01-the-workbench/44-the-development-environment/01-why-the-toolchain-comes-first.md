@@ -117,11 +117,17 @@ Each tool in the discipline stack is the physical implementation of an axiom fro
 | **Git** | **VIII -- Version Control is Memory** | Every `git commit` is a checkpoint you can return to. Without Git, one bad change destroys everything with no way back. With Git, every state of the project is preserved permanently. |
 | **ruff** | **IX -- Verification is a Pipeline** | Axiom IX says verification should be automated infrastructure, not a checklist you remember to follow. Ruff is the first stage in that pipeline -- it catches style issues and bugs before pyright checks types and pytest checks behavior. Together, the three tools chain into a single command (`ruff check && pyright && pytest`) that enforces quality automatically. |
 
-James studies the table. He traces his finger across the rows. Five axioms, five tools.
+James studies the table. He traces his finger across the rows. Five axioms, five tools. But something nags at him.
 
-"So the tools are not separate things I install one by one," James says. "They are the axioms turned into software."
+"I already know the axioms," James says. "I understand why types matter. I understand why tests matter. Why do I need tools to enforce things I already understand? That is like putting guardrails on a staircase I have climbed a hundred times."
 
-Emma nods. "The axioms tell you what matters. The tools make sure you cannot forget. You do not need willpower to remember type annotations -- pyright refuses to let you skip them. You do not need to remember style rules -- ruff enforces them. You do not need to remember to test -- pytest tells you when something breaks. The discipline stack replaces good intentions with automated enforcement."
+"You lost a customer's order because of a JSON key," Emma says. "Did you not understand relational data when you built that dashboard?"
+
+James opens his mouth, then closes it. He had understood the principle. He had known, in the abstract, that data should be connected. He just had not thought about it at the moment he was building the dashboard. He had been tired, and the deadline was close, and the JSON structure had looked fine.
+
+"I understood it," James says slowly. "I just did not apply it when it mattered."
+
+"The tools do not teach you the axioms," Emma says. "They make sure you cannot skip them when you are tired, rushed, or confident."
 
 This is the central insight of this chapter: **the tools are not overhead added on top of coding. They are the environment in which coding happens.** A project without them is not simpler -- it is unprotected.
 
