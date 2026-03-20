@@ -18,6 +18,19 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+# Prevent concurrent runs (cron + manual overlap)
+LOCKFILE="/tmp/sso-sync.lock"
+if [ -f "$LOCKFILE" ]; then
+  # Stale lock check (older than 10 min = dead process)
+  if [ "$(find "$LOCKFILE" -mmin +10 2>/dev/null)" ]; then
+    rm -f "$LOCKFILE"
+  else
+    exit 0
+  fi
+fi
+trap "rm -f $LOCKFILE" EXIT
+echo $$ > "$LOCKFILE"
 MIRROR_REPO="panaversity-global/sso-mirror-mono"
 LOG_FILE="${LOG_FILE:-/tmp/sso-sync.log}"
 
