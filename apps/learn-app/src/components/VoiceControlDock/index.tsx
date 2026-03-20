@@ -48,14 +48,9 @@ export function VoiceControlDock() {
     // Filter voices to match the current site locale
     const langPrefix = LOCALE_TO_LANG_PREFIX[currentLocale] || "en";
     const filteredVoices = useMemo(() => {
-        const matched = availableVoices
+        return availableVoices
             .map((voice, originalIndex) => ({ voice, originalIndex }))
             .filter(({ voice }) => voice.lang.startsWith(langPrefix));
-        // Fallback to all voices if no match found for this locale
-        if (matched.length === 0) {
-            return availableVoices.map((voice, originalIndex) => ({ voice, originalIndex }));
-        }
-        return matched;
     }, [availableVoices, currentLocale, langPrefix]);
 
     // Check if native voices exist for the current locale
@@ -67,10 +62,10 @@ export function VoiceControlDock() {
 
     // Auto-show install hint when playing starts and no native voices exist
     useEffect(() => {
-        if (isPlaying && !hasNativeVoices && !noVoicesAtAll) {
+        if (isPlaying && !hasNativeVoices) {
             setShowInstallHint(true);
         }
-    }, [isPlaying, hasNativeVoices, noVoicesAtAll]);
+    }, [isPlaying, hasNativeVoices]);
 
     // Locale display names for the hint
     const localeNames: Record<string, string> = {

@@ -6,7 +6,7 @@
  * Supports pause/resume and real-time volume/speed changes that continue from current word.
  */
 
-import React, { createContext, useContext, useState, useCallback, useRef, useEffect } from "react";
+import React, { createContext, useContext, useState, useCallback, useRef, useEffect, useMemo } from "react";
 
 interface VoiceReadingContextType {
     // Playback state
@@ -23,6 +23,9 @@ interface VoiceReadingContextType {
 
     // Navigation
     totalBlocks: number;
+
+    // Locale voice availability
+    hasLocaleVoices: boolean;
 
     // Methods
     toggleSpeech: () => void;
@@ -570,6 +573,12 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         playBlockFromWord(blockIndex, 0);
     }, [playBlockFromWord]);
 
+    // Whether voices exist for the current locale
+    const langPrefix = LOCALE_LANG_MAP[locale] || "en";
+    const hasLocaleVoices = useMemo(() => {
+        return availableVoices.some(v => v.lang.startsWith(langPrefix));
+    }, [availableVoices, langPrefix]);
+
     const toggleSpeech = useCallback(() => {
         if (typeof window === "undefined" || !window.speechSynthesis) return;
 
@@ -589,6 +598,14 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             return;
         }
 
+        // Block playback if no voices available for the current locale
+        // Set isPlaying briefly so the dock renders with the warning, then stop
+        if (!hasLocaleVoices) {
+            setIsPlaying(true);
+            setIsPaused(true);
+            return;
+        }
+
         const blocks = parseArticleContent();
         if (blocks.length === 0) return;
 
@@ -598,7 +615,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         setIsPlaying(true);
         setIsPaused(false);
         playBlock(0);
-    }, [isPlaying, parseArticleContent, wrapWordsInBlock, playBlock, unwrapWords, clearFallbackTimers]);
+    }, [isPlaying, hasLocaleVoices, parseArticleContent, wrapWordsInBlock, playBlock, unwrapWords, clearFallbackTimers]);
 
     const pauseSpeech = useCallback(() => {
         if (typeof window === "undefined" || !window.speechSynthesis) return;
@@ -792,6 +809,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         selectedVoiceIndex,
         playbackRate,
         volume,
+        hasLocaleVoices,
         toggleSpeech,
         pauseSpeech,
         resumeSpeech,
