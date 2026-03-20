@@ -132,6 +132,8 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
     const [showNoVoicesWarning, setShowNoVoicesWarning] = useState(false);
 
     const blocksRef = useRef<TextBlock[]>([]);
+    // Cache key: article textContent hash to skip re-parsing when content hasn't changed
+    const cachedContentHashRef = useRef<string>("");
 
     // Use refs for current settings
     const playbackRateRef = useRef(1.0);
@@ -555,8 +557,12 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         };
 
         utterance.onerror = (e) => {
-            // Clear fallback timers
+            // Clear fallback timers and Chrome keepalive
             clearFallbackTimers();
+            if (chromeKeepAliveRef.current) {
+                clearInterval(chromeKeepAliveRef.current);
+                chromeKeepAliveRef.current = null;
+            }
             if (e.error === 'interrupted' || e.error === 'canceled') {
                 return;
             }
@@ -641,11 +647,19 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             return;
         }
 
-        const blocks = parseArticleContent();
-        if (blocks.length === 0) return;
-
-        blocksRef.current = blocks;
-        setTotalBlocks(blocks.length);
+        // Cache: skip re-parsing if article content hasn't changed since last play
+        const article = document.querySelector("article");
+        const contentHash = article?.textContent?.length.toString() || "";
+        let blocks: TextBlock[];
+        if (contentHash === cachedContentHashRef.current && blocksRef.current.length > 0) {
+            blocks = blocksRef.current;
+        } else {
+            blocks = parseArticleContent();
+            if (blocks.length === 0) return;
+            blocksRef.current = blocks;
+            cachedContentHashRef.current = contentHash;
+            setTotalBlocks(blocks.length);
+        }
         blocks.forEach((block, idx) => wrapWordsInBlock(block, idx));
 
         setIsPlaying(true);
