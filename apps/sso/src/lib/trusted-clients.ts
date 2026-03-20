@@ -134,9 +134,9 @@ export const TRUSTED_CLIENTS = [
     name: "Panaversity Admin Dashboard",
     type: "public" as const,
     redirectUrls: getRedirectUrls([
-      "http://localhost:3000/auth/callback",
-      "https://admin.panaversity.org/auth/callback",
-      "https://admin-panaversity.vercel.app/auth/callback",
+      "http://localhost:3000/api/auth/callback",
+      "https://admin.panaversity.org/api/auth/callback",
+      "https://admin-panaversity.vercel.app/api/auth/callback",
     ]),
     disabled: false,
     skipConsent: true,
