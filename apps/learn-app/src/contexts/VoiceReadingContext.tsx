@@ -761,6 +761,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             updateWordStyles(nextBlock, 0);
             blocksRef.current[nextBlock]?.element.scrollIntoView({ behavior: "smooth", block: "center" });
         } else {
+            // 50ms delay: Web Speech API requires a tick after cancel() before new speak()
             setTimeout(() => playBlockFromWord(nextBlock, 0), 50);
         }
     }, [isPlaying, isPaused, playBlockFromWord, updateWordStyles, clearFallbackTimers]);
@@ -784,6 +785,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             updateWordStyles(targetBlock, 0);
             blocksRef.current[targetBlock]?.element.scrollIntoView({ behavior: "smooth", block: "center" });
         } else {
+            // 50ms delay: Web Speech API requires a tick after cancel() before new speak()
             setTimeout(() => playBlockFromWord(targetBlock, 0), 50);
         }
     }, [isPlaying, isPaused, playBlockFromWord, updateWordStyles, clearFallbackTimers]);
