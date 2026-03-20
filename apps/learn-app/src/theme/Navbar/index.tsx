@@ -100,8 +100,10 @@ export default function Navbar() {
             {/* Theme Toggle - Already uses Button variant="ghost" size="icon" */}
             <ModeToggle />
 
-            {/* Language Dropdown */}
-            <LocaleDropdown />
+            {/* Language Dropdown — desktop only; mobile shows in Sheet */}
+            <div className="hidden docs:block">
+              <LocaleDropdown />
+            </div>
 
             {/* Auth - Already uses Button variants */}
             <NavbarAuth />

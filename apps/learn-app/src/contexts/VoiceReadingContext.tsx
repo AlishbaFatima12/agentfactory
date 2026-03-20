@@ -6,7 +6,7 @@
  * Supports pause/resume and real-time volume/speed changes that continue from current word.
  */
 
-import React, { createContext, useContext, useState, useCallback, useRef, useEffect } from "react";
+import React, { createContext, useContext, useState, useCallback, useRef, useEffect, useMemo } from "react";
 
 interface VoiceReadingContextType {
     // Playback state
@@ -21,6 +21,15 @@ interface VoiceReadingContextType {
     playbackRate: number;
     volume: number;
 
+    // Navigation
+    totalBlocks: number;
+
+    // Locale voice availability
+    hasLocaleVoices: boolean;
+    noVoicesAtAll: boolean;
+    showNoVoicesWarning: boolean;
+    dismissNoVoicesWarning: () => void;
+
     // Methods
     toggleSpeech: () => void;
     pauseSpeech: () => void;
@@ -29,6 +38,8 @@ interface VoiceReadingContextType {
     setVoice: (index: number) => void;
     setVolume: (vol: number) => void;
     stopSpeech: () => void;
+    skipForward: () => void;
+    skipBackward: () => void;
 }
 
 const VoiceReadingContext = createContext<VoiceReadingContextType | null>(null);
@@ -59,7 +70,55 @@ interface TextBlock {
     wordBoundaries: WordBoundary[];
 }
 
-export function VoiceReadingProvider({ children }: { children: React.ReactNode }) {
+import { LOCALE_LANG_MAP, PREFERRED_VOICES } from "@/utils/voiceLocaleConfig";
+
+/**
+ * Tokenize text into "words" for highlighting.
+ * - For Latin/space-separated scripts: splits on whitespace (like before)
+ * - For CJK (Chinese/Japanese/Korean): each character is a separate token
+ * - Mixed text handles both (e.g., "构建 Digital FTE" → ["构", "建", "Digital", "FTE"])
+ *
+ * Returns array of { word, start, end } with character offsets into the source text.
+ */
+export function tokenizeText(text: string): { word: string; start: number; end: number }[] {
+    // CJK Unified Ideographs + Extensions + CJK Compatibility + Kana + Hangul
+    const CJK_REGEX = /[\u2E80-\u9FFF\uF900-\uFAFF\u3040-\u30FF\u31F0-\u31FF\uAC00-\uD7AF]/;
+    const tokens: { word: string; start: number; end: number }[] = [];
+    // Match: CJK individual chars OR non-space sequences (words)
+    const regex = /([\u2E80-\u9FFF\uF900-\uFAFF\u3040-\u30FF\u31F0-\u31FF\uAC00-\uD7AF]|\S+)/g;
+    let match;
+    while ((match = regex.exec(text)) !== null) {
+        const token = match[0];
+        // If a non-CJK "word" contains embedded CJK, split further
+        if (token.length > 1 && CJK_REGEX.test(token)) {
+            // Split mixed token char-by-char for CJK, group non-CJK
+            let i = 0;
+            let pos = match.index;
+            while (i < token.length) {
+                if (CJK_REGEX.test(token[i])) {
+                    tokens.push({ word: token[i], start: pos, end: pos + 1 });
+                    i++;
+                    pos++;
+                } else {
+                    // Accumulate non-CJK chars
+                    let run = "";
+                    const runStart = pos;
+                    while (i < token.length && !CJK_REGEX.test(token[i])) {
+                        run += token[i];
+                        i++;
+                        pos++;
+                    }
+                    if (run) tokens.push({ word: run, start: runStart, end: pos });
+                }
+            }
+        } else {
+            tokens.push({ word: token, start: match.index, end: match.index + token.length });
+        }
+    }
+    return tokens;
+}
+
+export function VoiceReadingProvider({ children, locale = "en" }: { children: React.ReactNode; locale?: string }) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isPaused, setIsPaused] = useState(false);
     const [activeBlockIndex, setActiveBlockIndex] = useState(-1);
@@ -69,8 +128,12 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
     const [selectedVoiceIndex, setSelectedVoiceIndex] = useState(0);
     const [playbackRate, setPlaybackRateState] = useState(1.0);
     const [volume, setVolumeState] = useState(1.0);
+    const [totalBlocks, setTotalBlocks] = useState(0);
+    const [showNoVoicesWarning, setShowNoVoicesWarning] = useState(false);
 
     const blocksRef = useRef<TextBlock[]>([]);
+    // Cache key: article textContent hash to skip re-parsing when content hasn't changed
+    const cachedContentHashRef = useRef<string>("");
 
     // Use refs for current settings
     const playbackRateRef = useRef(1.0);
@@ -90,6 +153,9 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
     // Unique ID for each utterance to prevent stale callbacks
     const utteranceIdRef = useRef(0);
     const currentUtteranceIdRef = useRef(0);
+
+    // Guard against rapid skip clicks queuing multiple utterances
+    const skipInProgressRef = useRef(false);
 
     // Timer-based fallback for browsers that don't fire onboundary (Safari, iOS, etc.)
     const fallbackTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -120,12 +186,24 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
             const voices = window.speechSynthesis.getVoices();
             if (voices.length > 0) {
                 setAvailableVoices(voices);
-                const defaultIndex = voices.findIndex(v =>
-                    v.name.includes("Google US English") ||
-                    v.name.includes("Microsoft David") ||
-                    v.name.includes("Alex")
+
+                // Pick best default voice for the current locale
+                const langPrefix = LOCALE_LANG_MAP[locale] || "en";
+                const preferred = PREFERRED_VOICES[locale] || PREFERRED_VOICES.en;
+
+                // 1. Try preferred voices for this locale
+                let idx = voices.findIndex(v =>
+                    preferred.some(name => v.name.includes(name))
                 );
-                const idx = defaultIndex >= 0 ? defaultIndex : 0;
+
+                // 2. Fallback: first voice matching locale language
+                if (idx < 0) {
+                    idx = voices.findIndex(v => v.lang.startsWith(langPrefix));
+                }
+
+                // 3. Ultimate fallback: first voice
+                if (idx < 0) idx = 0;
+
                 setSelectedVoiceIndex(idx);
                 selectedVoiceRef.current = voices[idx];
             }
@@ -139,8 +217,12 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
             setIsPlaying(false);
             // Clear all timers on unmount
             clearFallbackTimers();
+            if (chromeKeepAliveRef.current) {
+                clearInterval(chromeKeepAliveRef.current);
+                chromeKeepAliveRef.current = null;
+            }
         };
-    }, [clearFallbackTimers]);
+    }, [locale, clearFallbackTimers]);
 
     const selectedVoice = availableVoices[selectedVoiceIndex] || null;
 
@@ -173,8 +255,11 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
         const article = document.querySelector("article");
         if (!article) return [];
 
+        // Target only the main markdown content area, skip breadcrumbs/nav/header chrome
+        const contentArea = article.querySelector(".markdown, [class*='mdxPageWrapper'], [class*='docItemContent']") || article;
+
         const blockSelectors = "p, h1, h2, h3, h4, h5, h6, li, blockquote > p, blockquote";
-        const elements = article.querySelectorAll(blockSelectors);
+        const elements = contentArea.querySelectorAll(blockSelectors);
 
         const blocks: TextBlock[] = [];
 
@@ -182,22 +267,31 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
             const text = element.textContent?.trim() || "";
             if (!text) return;
 
+            // Skip elements inside nav, breadcrumbs, table of contents, or other UI chrome
+            if (element.closest("nav, [class*='breadcrumb'], [class*='Breadcrumb'], [class*='tableOfContents'], [class*='tocCollapsible'], header, footer")) {
+                return;
+            }
+
             if (element.tagName === "P" && element.parentElement?.tagName === "BLOCKQUOTE") {
                 return;
             }
 
-            const wordBoundaries: WordBoundary[] = [];
-            const regex = /\S+/g;
-            let match;
-            let wordIdx = 0;
-            while ((match = regex.exec(text)) !== null) {
-                wordBoundaries.push({
-                    index: wordIdx++,
-                    start: match.index,
-                    end: match.index + match[0].length,
-                    word: match[0]
-                });
+            // Skip <p> nested inside <p> (MDX hydration bug) to prevent double-read.
+            // Only targets the specific <p>-in-<p> case — <p> inside <li> is valid HTML.
+            if (element.tagName === "P" && element.parentElement?.tagName === "P") {
+                return;
             }
+
+            const wordBoundaries: WordBoundary[] = [];
+            const tokens = tokenizeText(text);
+            tokens.forEach((token, wordIdx) => {
+                wordBoundaries.push({
+                    index: wordIdx,
+                    start: token.start,
+                    end: token.end,
+                    word: token.word
+                });
+            });
 
             if (wordBoundaries.length > 0) {
                 element.setAttribute("data-voice-block", String(blocks.length));
@@ -209,16 +303,19 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
     }, []);
 
     const wrapWordsInBlock = useCallback((block: TextBlock, blockIndex: number) => {
-        const { element, text } = block;
-        const words = text.match(/\S+/g) || [];
+        const { element } = block;
+        const tokens = block.wordBoundaries;
         const fragment = document.createDocumentFragment();
 
-        words.forEach((word, idx) => {
+        tokens.forEach((wb, idx) => {
             const span = document.createElement("span");
             span.className = "voice-word";
             span.setAttribute("data-word-index", String(idx));
             span.setAttribute("data-block-index", String(blockIndex));
-            span.textContent = word + " ";
+            // For CJK characters, no trailing space; for space-separated words, add space
+            const nextToken = tokens[idx + 1];
+            const needsSpace = nextToken ? (nextToken.start > wb.end) : false;
+            span.textContent = wb.word + (needsSpace ? " " : "");
             fragment.appendChild(span);
         });
 
@@ -249,6 +346,12 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
             } else {
                 el.classList.add("voice-block--inactive");
                 el.classList.remove("voice-block--active");
+                // Clear word highlights in completed/inactive blocks —
+                // mark all words as "read" so no word keeps the current highlight
+                el.querySelectorAll(".voice-word").forEach(wordEl => {
+                    wordEl.classList.remove("voice-word--current", "voice-word--pending");
+                    wordEl.classList.add("voice-word--read");
+                });
             }
         });
 
@@ -275,7 +378,16 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
     const playBlockFromWord = useCallback((blockIndex: number, startWordIndex: number) => {
         const blocks = blocksRef.current;
 
+        // NOTE: Do NOT call cancel() here. Chrome/Firefox wipe out speak() calls
+        // that follow directly after cancel() (needs ~500ms gap). The utterance ID
+        // guard in onend is sufficient to prevent stale callbacks from re-entering.
+        // See: https://bugzilla.mozilla.org/show_bug.cgi?id=1522074
+
         if (blockIndex >= blocks.length) {
+            if (chromeKeepAliveRef.current) {
+                clearInterval(chromeKeepAliveRef.current);
+                chromeKeepAliveRef.current = null;
+            }
             setIsPlaying(false);
             setIsPaused(false);
             setActiveBlockIndex(-1);
@@ -452,8 +564,12 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
         };
 
         utterance.onerror = (e) => {
-            // Clear fallback timers
+            // Clear fallback timers and Chrome keepalive
             clearFallbackTimers();
+            if (chromeKeepAliveRef.current) {
+                clearInterval(chromeKeepAliveRef.current);
+                chromeKeepAliveRef.current = null;
+            }
             if (e.error === 'interrupted' || e.error === 'canceled') {
                 return;
             }
@@ -470,6 +586,32 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
             unwrapWords();
         };
 
+        // Chrome keepalive: Chrome pauses speech after ~15 seconds and onend
+        // never fires. Re-calling pause()/resume() every 10s prevents this.
+        // See: https://bugs.chromium.org/p/chromium/issues/detail?id=335907
+        if (chromeKeepAliveRef.current) {
+            clearInterval(chromeKeepAliveRef.current);
+        }
+        chromeKeepAliveRef.current = setInterval(() => {
+            if (currentUtteranceIdRef.current !== thisUtteranceId) {
+                if (chromeKeepAliveRef.current) {
+                    clearInterval(chromeKeepAliveRef.current);
+                    chromeKeepAliveRef.current = null;
+                }
+                return;
+            }
+            if (!isPausedRef.current) {
+                // Chrome auto-pauses after ~15s: paused=true, speaking=false.
+                // Also handle the case where speaking is still true but about to stall.
+                if (window.speechSynthesis.paused) {
+                    window.speechSynthesis.resume();
+                } else if (window.speechSynthesis.speaking) {
+                    window.speechSynthesis.pause();
+                    window.speechSynthesis.resume();
+                }
+            }
+        }, 10000);
+
         window.speechSynthesis.speak(utterance);
     }, [updateWordStyles, unwrapWords, clearFallbackTimers]);
 
@@ -477,11 +619,21 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
         playBlockFromWord(blockIndex, 0);
     }, [playBlockFromWord]);
 
+    // Whether voices exist for the current locale
+    const langPrefix = LOCALE_LANG_MAP[locale] || "en";
+    const hasLocaleVoices = useMemo(() => {
+        return availableVoices.some(v => v.lang.startsWith(langPrefix));
+    }, [availableVoices, langPrefix]);
+
     const toggleSpeech = useCallback(() => {
         if (typeof window === "undefined" || !window.speechSynthesis) return;
 
         if (isPlaying) {
-            // Clear fallback timers
+            // Clear Chrome keepalive and fallback timers
+            if (chromeKeepAliveRef.current) {
+                clearInterval(chromeKeepAliveRef.current);
+                chromeKeepAliveRef.current = null;
+            }
             clearFallbackTimers();
             // Increment utterance ID to invalidate any pending callbacks
             currentUtteranceIdRef.current = ++utteranceIdRef.current;
@@ -496,16 +648,33 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
             return;
         }
 
-        const blocks = parseArticleContent();
-        if (blocks.length === 0) return;
+        // Block playback if no voices available for the current locale
+        if (!hasLocaleVoices) {
+            setShowNoVoicesWarning(true);
+            return;
+        }
 
-        blocksRef.current = blocks;
+        // Cache: skip re-parsing if article content hasn't changed since last play.
+        // Use prefix + length as fingerprint to avoid false-matches on SPA navigation.
+        const article = document.querySelector("article");
+        const text = article?.textContent || "";
+        const contentHash = window.location.pathname + "|" + text.slice(0, 200) + "|" + text.length;
+        let blocks: TextBlock[];
+        if (contentHash === cachedContentHashRef.current && blocksRef.current.length > 0) {
+            blocks = blocksRef.current;
+        } else {
+            blocks = parseArticleContent();
+            if (blocks.length === 0) return;
+            blocksRef.current = blocks;
+            cachedContentHashRef.current = contentHash;
+            setTotalBlocks(blocks.length);
+        }
         blocks.forEach((block, idx) => wrapWordsInBlock(block, idx));
 
         setIsPlaying(true);
         setIsPaused(false);
         playBlock(0);
-    }, [isPlaying, parseArticleContent, wrapWordsInBlock, playBlock, unwrapWords, clearFallbackTimers]);
+    }, [isPlaying, hasLocaleVoices, parseArticleContent, wrapWordsInBlock, playBlock, unwrapWords, clearFallbackTimers]);
 
     const pauseSpeech = useCallback(() => {
         if (typeof window === "undefined" || !window.speechSynthesis) return;
@@ -580,7 +749,11 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
     const stopSpeech = useCallback(() => {
         if (typeof window === "undefined" || !window.speechSynthesis) return;
 
-        // Clear fallback timers
+        // Clear Chrome keepalive and fallback timers
+        if (chromeKeepAliveRef.current) {
+            clearInterval(chromeKeepAliveRef.current);
+            chromeKeepAliveRef.current = null;
+        }
         clearFallbackTimers();
         // Increment utterance ID to invalidate any pending callbacks
         currentUtteranceIdRef.current = ++utteranceIdRef.current;
@@ -593,6 +766,10 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
         currentWordIndexRef.current = -1;
         unwrapWords();
     }, [unwrapWords, clearFallbackTimers]);
+
+    const dismissNoVoicesWarning = useCallback(() => {
+        setShowNoVoicesWarning(false);
+    }, []);
 
     /**
      * Restart from current word with new settings
@@ -609,7 +786,7 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
         currentUtteranceIdRef.current = ++utteranceIdRef.current;
         window.speechSynthesis.cancel();
 
-        // Small delay then restart from current word
+        // 50ms delay: Web Speech API requires a tick after cancel() before new speak()
         setTimeout(() => {
             playBlockFromWord(currentBlock, Math.max(0, currentWord));
         }, 50);
@@ -643,15 +820,80 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
         }
     }, [isPlaying, isPaused, restartFromCurrentWord]);
 
-    const value: VoiceReadingContextType = {
+    /** Skip to the next block (paragraph/heading/list item) */
+    const skipForward = useCallback(() => {
+        if (!isPlaying || skipInProgressRef.current) return;
+        const nextBlock = activeBlockIndexRef.current + 1;
+        if (nextBlock >= blocksRef.current.length) return;
+
+        skipInProgressRef.current = true;
+        clearFallbackTimers();
+        currentUtteranceIdRef.current = ++utteranceIdRef.current;
+        window.speechSynthesis.cancel();
+
+        // If paused, stay paused but move position
+        if (isPaused) {
+            setActiveBlockIndex(nextBlock);
+            activeBlockIndexRef.current = nextBlock;
+            setCurrentWordIndex(0);
+            currentWordIndexRef.current = 0;
+            updateWordStyles(nextBlock, 0);
+            blocksRef.current[nextBlock]?.element.scrollIntoView({ behavior: "smooth", block: "center" });
+            skipInProgressRef.current = false;
+        } else {
+            // 50ms delay: Web Speech API requires a tick after cancel() before new speak()
+            setTimeout(() => {
+                playBlockFromWord(nextBlock, 0);
+                skipInProgressRef.current = false;
+            }, 50);
+        }
+    }, [isPlaying, isPaused, playBlockFromWord, updateWordStyles, clearFallbackTimers]);
+
+    /** Skip to the previous block (or restart current block) */
+    const skipBackward = useCallback(() => {
+        if (!isPlaying || skipInProgressRef.current) return;
+        const current = activeBlockIndexRef.current;
+        // If we're past the first word, restart current block; otherwise go to previous
+        const targetBlock = currentWordIndexRef.current > 2 ? current : Math.max(0, current - 1);
+
+        skipInProgressRef.current = true;
+        clearFallbackTimers();
+        currentUtteranceIdRef.current = ++utteranceIdRef.current;
+        window.speechSynthesis.cancel();
+
+        if (isPaused) {
+            setActiveBlockIndex(targetBlock);
+            activeBlockIndexRef.current = targetBlock;
+            setCurrentWordIndex(0);
+            currentWordIndexRef.current = 0;
+            updateWordStyles(targetBlock, 0);
+            blocksRef.current[targetBlock]?.element.scrollIntoView({ behavior: "smooth", block: "center" });
+            skipInProgressRef.current = false;
+        } else {
+            // 50ms delay: Web Speech API requires a tick after cancel() before new speak()
+            setTimeout(() => {
+                playBlockFromWord(targetBlock, 0);
+                skipInProgressRef.current = false;
+            }, 50);
+        }
+    }, [isPlaying, isPaused, playBlockFromWord, updateWordStyles, clearFallbackTimers]);
+
+    const noVoicesAtAll = availableVoices.length === 0;
+
+    const value: VoiceReadingContextType = useMemo(() => ({
         isPlaying,
         isPaused,
         activeBlockIndex,
         currentWordIndex,
+        totalBlocks,
         availableVoices,
         selectedVoiceIndex,
         playbackRate,
         volume,
+        hasLocaleVoices,
+        noVoicesAtAll,
+        showNoVoicesWarning,
+        dismissNoVoicesWarning,
         toggleSpeech,
         pauseSpeech,
         resumeSpeech,
@@ -659,7 +901,15 @@ export function VoiceReadingProvider({ children }: { children: React.ReactNode }
         setVoice,
         setVolume,
         stopSpeech,
-    };
+        skipForward,
+        skipBackward,
+    }), [
+        isPlaying, isPaused, activeBlockIndex, currentWordIndex, totalBlocks,
+        availableVoices, selectedVoiceIndex, playbackRate, volume,
+        hasLocaleVoices, noVoicesAtAll, showNoVoicesWarning, dismissNoVoicesWarning,
+        toggleSpeech, pauseSpeech, resumeSpeech, setPlaybackRate, setVoice, setVolume,
+        stopSpeech, skipForward, skipBackward,
+    ]);
 
     return (
         <VoiceReadingContext.Provider value={value}>
