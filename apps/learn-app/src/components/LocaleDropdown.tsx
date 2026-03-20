@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDown, Check, Languages } from "lucide-react";
+import { ChevronDown, Check, Globe } from "lucide-react";
 import { getLocaleUrl } from "../utils/getLocaleUrl";
 
 const englishNames = new Intl.DisplayNames(["en"], { type: "language" });
@@ -45,12 +45,12 @@ export function LocaleDropdown() {
         <Button
           variant="ghost"
           dir="ltr"
-          className="gap-2 px-2.5 py-1.5 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded-md"
+          className="gap-1.5 px-2.5 py-1.5 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded-md max-w-[200px]"
           title="Change language"
           aria-label="Change language"
         >
-          <Languages className="w-4 h-4 opacity-70" />
-          <span className="font-medium">
+          <Globe className="w-4 h-4 text-primary shrink-0" />
+          <span className="font-medium truncate">
             {currentEnglishName}
             {currentEnglishName !== nativeLabel && (
               <span className="text-muted-foreground font-normal">
@@ -59,10 +59,10 @@ export function LocaleDropdown() {
               </span>
             )}
           </span>
-          <ChevronDown className="w-3.5 h-3.5 opacity-60" />
+          <ChevronDown className="w-3.5 h-3.5 opacity-60 shrink-0" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48 p-1">
+      <DropdownMenuContent align="end" className="w-56 p-1">
         {i18n.locales.map((locale) => {
           const config = i18n.localeConfigs[locale];
           const isActive = locale === currentLocale;
