@@ -6,7 +6,7 @@
  * Includes: Voice selector, playback speed, volume, pause/resume, and stop.
  */
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useVoiceReading } from "@/contexts/VoiceReadingContext";
 
@@ -64,6 +64,13 @@ export function VoiceControlDock() {
     }, [availableVoices, langPrefix]);
 
     const noVoicesAtAll = availableVoices.length === 0;
+
+    // Auto-show install hint when playing starts and no native voices exist
+    useEffect(() => {
+        if (isPlaying && !hasNativeVoices && !noVoicesAtAll) {
+            setShowInstallHint(true);
+        }
+    }, [isPlaying, hasNativeVoices, noVoicesAtAll]);
 
     // Locale display names for the hint
     const localeNames: Record<string, string> = {
@@ -174,9 +181,12 @@ export function VoiceControlDock() {
                     {isVoiceMenuOpen && (
                         <div className="voice-dropdown">
                             <div className="voice-dropdown-header">
-                                {currentLocale === "en" ? "English Voices" :
-                                    currentLocale === "ur" ? "اردو آوازیں" :
-                                        currentLocale === "zh-Hans" ? "中文语音" : "Voices"}
+                                {hasNativeVoices
+                                    ? (currentLocale === "en" ? "English Voices" :
+                                        currentLocale === "ur" ? "اردو آوازیں" :
+                                            currentLocale === "zh-Hans" ? "中文语音" : "Voices")
+                                    : "Available Voices"
+                                }
                             </div>
                             {filteredVoices.map(({ voice, originalIndex }) => (
                                 <button

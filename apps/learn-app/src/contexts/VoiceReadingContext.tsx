@@ -78,6 +78,52 @@ const PREFERRED_VOICES: Record<string, string[]> = {
     "zh-Hans": ["Google 普通话", "Microsoft Huihui"],
 };
 
+/**
+ * Tokenize text into "words" for highlighting.
+ * - For Latin/space-separated scripts: splits on whitespace (like before)
+ * - For CJK (Chinese/Japanese/Korean): each character is a separate token
+ * - Mixed text handles both (e.g., "构建 Digital FTE" → ["构", "建", "Digital", "FTE"])
+ *
+ * Returns array of { word, start, end } with character offsets into the source text.
+ */
+function tokenizeText(text: string): { word: string; start: number; end: number }[] {
+    // CJK Unified Ideographs + Extensions + CJK Compatibility + Kana + Hangul
+    const CJK_REGEX = /[\u2E80-\u9FFF\uF900-\uFAFF\u3040-\u30FF\u31F0-\u31FF\uAC00-\uD7AF]/;
+    const tokens: { word: string; start: number; end: number }[] = [];
+    // Match: CJK individual chars OR non-space sequences (words)
+    const regex = /([\u2E80-\u9FFF\uF900-\uFAFF\u3040-\u30FF\u31F0-\u31FF\uAC00-\uD7AF]|\S+)/g;
+    let match;
+    while ((match = regex.exec(text)) !== null) {
+        const token = match[0];
+        // If a non-CJK "word" contains embedded CJK, split further
+        if (token.length > 1 && CJK_REGEX.test(token)) {
+            // Split mixed token char-by-char for CJK, group non-CJK
+            let i = 0;
+            let pos = match.index;
+            while (i < token.length) {
+                if (CJK_REGEX.test(token[i])) {
+                    tokens.push({ word: token[i], start: pos, end: pos + 1 });
+                    i++;
+                    pos++;
+                } else {
+                    // Accumulate non-CJK chars
+                    let run = "";
+                    const runStart = pos;
+                    while (i < token.length && !CJK_REGEX.test(token[i])) {
+                        run += token[i];
+                        i++;
+                        pos++;
+                    }
+                    if (run) tokens.push({ word: run, start: runStart, end: pos });
+                }
+            }
+        } else {
+            tokens.push({ word: token, start: match.index, end: match.index + token.length });
+        }
+    }
+    return tokens;
+}
+
 export function VoiceReadingProvider({ children, locale = "en" }: { children: React.ReactNode; locale?: string }) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isPaused, setIsPaused] = useState(false);
@@ -227,17 +273,15 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             }
 
             const wordBoundaries: WordBoundary[] = [];
-            const regex = /\S+/g;
-            let match;
-            let wordIdx = 0;
-            while ((match = regex.exec(text)) !== null) {
+            const tokens = tokenizeText(text);
+            tokens.forEach((token, wordIdx) => {
                 wordBoundaries.push({
-                    index: wordIdx++,
-                    start: match.index,
-                    end: match.index + match[0].length,
-                    word: match[0]
+                    index: wordIdx,
+                    start: token.start,
+                    end: token.end,
+                    word: token.word
                 });
-            }
+            });
 
             if (wordBoundaries.length > 0) {
                 element.setAttribute("data-voice-block", String(blocks.length));
@@ -249,16 +293,19 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
     }, []);
 
     const wrapWordsInBlock = useCallback((block: TextBlock, blockIndex: number) => {
-        const { element, text } = block;
-        const words = text.match(/\S+/g) || [];
+        const { element } = block;
+        const tokens = block.wordBoundaries;
         const fragment = document.createDocumentFragment();
 
-        words.forEach((word, idx) => {
+        tokens.forEach((wb, idx) => {
             const span = document.createElement("span");
             span.className = "voice-word";
             span.setAttribute("data-word-index", String(idx));
             span.setAttribute("data-block-index", String(blockIndex));
-            span.textContent = word + " ";
+            // For CJK characters, no trailing space; for space-separated words, add space
+            const nextToken = tokens[idx + 1];
+            const needsSpace = nextToken ? (nextToken.start > wb.end) : false;
+            span.textContent = wb.word + (needsSpace ? " " : "");
             fragment.appendChild(span);
         });
 
