@@ -130,6 +130,19 @@ export const TRUSTED_CLIENTS = [
     metadata: {},
   },
   {
+    clientId: "panaversity-admin-client",
+    name: "Panaversity Admin Dashboard",
+    type: "public" as const,
+    redirectUrls: getRedirectUrls([
+      "http://localhost:3000/auth/callback",
+      "https://admin.panaversity.org/auth/callback",
+      "https://admin-panaversity.vercel.app/auth/callback",
+    ]),
+    disabled: false,
+    skipConsent: true,
+    metadata: {},
+  },
+  {
     clientId: "learn-skill-cli-client",
     name: "Learn Skill CLI",
     type: "public" as const,
@@ -179,6 +192,11 @@ export const CLIENT_DESCRIPTIONS = {
   "assessment-public-client": {
     purpose: "Panaversity Assessment Platform",
     audience: "Students taking assessments and quizzes",
+    security: "Public client with PKCE, no client secret",
+  },
+  "panaversity-admin-client": {
+    purpose: "Panaversity Admin Dashboard",
+    audience: "Platform administrators managing users, content, and settings",
     security: "Public client with PKCE, no client secret",
   },
   "learn-skill-cli-client": {
