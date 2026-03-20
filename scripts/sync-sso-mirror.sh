@@ -21,7 +21,8 @@ REPO_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 MIRROR_REPO="panaversity-global/sso-mirror-mono"
 LOG_FILE="${LOG_FILE:-/tmp/sso-sync.log}"
 
-log() { echo "$(date -u '+%Y-%m-%d %H:%M:%S UTC') $1" | tee -a "$LOG_FILE"; }
+# Log to file only (no tee) — cron redirects stdout to same file, tee would double-write
+log() { echo "$(date -u '+%Y-%m-%d %H:%M:%S UTC') $1" >> "$LOG_FILE"; }
 
 # Load PAT from .env
 if [[ ! -f "$REPO_DIR/.env" ]]; then
@@ -40,11 +41,16 @@ cd "$REPO_DIR"
 git fetch origin --quiet
 ORIGIN_SHA=$(git rev-parse origin/main)
 
-# --check mode: only sync if mirror is behind
+# --check mode: only sync if mirror is behind (fail-closed: API error = skip, not sync)
 if [[ "${1:-}" == "--check" ]]; then
   MIRROR_MSG=$(curl -sf -H "Authorization: token ${SSO_SYNC_PAT}" \
     "https://api.github.com/repos/${MIRROR_REPO}/commits/main" | \
-    python3 -c "import sys,json; print(json.load(sys.stdin)['commit']['message'])" 2>/dev/null || echo "")
+    python3 -c "import sys,json; print(json.load(sys.stdin)['commit']['message'])" 2>/dev/null) || true
+
+  if [[ -z "$MIRROR_MSG" ]]; then
+    log "SKIP: could not reach mirror API (network error or rate limit)"
+    exit 0
+  fi
 
   if echo "$MIRROR_MSG" | grep -q "$ORIGIN_SHA"; then
     log "IN SYNC at ${ORIGIN_SHA:0:8}"
@@ -60,8 +66,11 @@ log "SYNCING origin/main (${ORIGIN_SHA:0:8}) to ${MIRROR_REPO}..."
 TMPDIR=$(mktemp -d)
 trap "rm -rf $TMPDIR" EXIT
 
-# Clone mirror (shallow)
-git clone --depth 1 "$MIRROR_URL" "$TMPDIR" --quiet 2>/dev/null
+# Clone mirror (shallow) — suppress stderr to avoid leaking PAT in error messages
+git clone --depth 1 "$MIRROR_URL" "$TMPDIR" --quiet 2>/dev/null || {
+  log "ERROR: failed to clone mirror (check PAT validity)"
+  exit 1
+}
 
 # Fetch source content into the mirror clone
 cd "$TMPDIR"
