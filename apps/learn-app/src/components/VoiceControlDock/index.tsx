@@ -6,16 +6,13 @@
  * Includes: Voice selector, playback speed, volume, pause/resume, and stop.
  */
 
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useVoiceReading } from "@/contexts/VoiceReadingContext";
+import { LOCALE_LANG_MAP, LOCALE_DISPLAY_NAMES } from "@/utils/voiceLocaleConfig";
 
-/** Map Docusaurus locale to BCP-47 language prefix for voice filtering */
-const LOCALE_TO_LANG_PREFIX: Record<string, string> = {
-    en: "en",
-    ur: "ur",
-    "zh-Hans": "zh",
-};
+/** Session key to remember if user dismissed the install hint */
+const HINT_DISMISSED_KEY = "voice-install-hint-dismissed";
 
 export function VoiceControlDock() {
     const {
@@ -27,6 +24,7 @@ export function VoiceControlDock() {
         selectedVoiceIndex,
         playbackRate,
         volume,
+        hasLocaleVoices,
         pauseSpeech,
         resumeSpeech,
         setPlaybackRate,
@@ -43,35 +41,44 @@ export function VoiceControlDock() {
     const [isVoiceMenuOpen, setIsVoiceMenuOpen] = useState(false);
     const selectedVoice = availableVoices[selectedVoiceIndex] || null;
 
+    // Persist dismissal in sessionStorage so hint doesn't re-show on every play press
+    const hintDismissedRef = useRef(false);
     const [showInstallHint, setShowInstallHint] = useState(false);
 
-    // Filter voices to match the current site locale
-    const langPrefix = LOCALE_TO_LANG_PREFIX[currentLocale] || "en";
+    // Filter voices to match the current site locale (use context's hasLocaleVoices for the check)
+    const langPrefix = LOCALE_LANG_MAP[currentLocale] || "en";
     const filteredVoices = useMemo(() => {
         return availableVoices
             .map((voice, originalIndex) => ({ voice, originalIndex }))
             .filter(({ voice }) => voice.lang.startsWith(langPrefix));
-    }, [availableVoices, currentLocale, langPrefix]);
-
-    // Check if native voices exist for the current locale
-    const hasNativeVoices = useMemo(() => {
-        return availableVoices.some(v => v.lang.startsWith(langPrefix));
     }, [availableVoices, langPrefix]);
 
     const noVoicesAtAll = availableVoices.length === 0;
 
-    // Auto-show install hint when playing starts and no native voices exist
+    // Restore dismissal state from sessionStorage on mount
     useEffect(() => {
-        if (isPlaying && !hasNativeVoices) {
+        try {
+            const dismissed = sessionStorage.getItem(HINT_DISMISSED_KEY);
+            if (dismissed === currentLocale) {
+                hintDismissedRef.current = true;
+            }
+        } catch { /* sessionStorage unavailable (SSR, private browsing) */ }
+    }, [currentLocale]);
+
+    // Auto-show install hint when playing starts and no native voices exist
+    // but only if user hasn't dismissed it this session
+    useEffect(() => {
+        if (isPlaying && !hasLocaleVoices && !hintDismissedRef.current) {
             setShowInstallHint(true);
         }
-    }, [isPlaying, hasNativeVoices]);
+    }, [isPlaying, hasLocaleVoices]);
 
-    // Locale display names for the hint
-    const localeNames: Record<string, string> = {
-        en: "English",
-        ur: "Urdu (اردو)",
-        "zh-Hans": "Chinese (中文)",
+    const dismissHint = () => {
+        setShowInstallHint(false);
+        hintDismissedRef.current = true;
+        try {
+            sessionStorage.setItem(HINT_DISMISSED_KEY, currentLocale);
+        } catch { /* sessionStorage unavailable */ }
     };
 
     // Don't render if not playing
@@ -88,6 +95,13 @@ export function VoiceControlDock() {
     // Speed preset buttons
     const speedPresets = [0.75, 1.0, 1.25, 1.5, 2.0];
 
+    // Localized dropdown headers
+    const dropdownHeaders: Record<string, string> = {
+        en: "English Voices",
+        ur: "اردو آوازیں",
+        "zh-Hans": "中文语音",
+    };
+
     return (
         <>
             {/* Install hint — shown when no voices for current locale or no voices at all */}
@@ -103,19 +117,21 @@ export function VoiceControlDock() {
                             <strong>
                                 {noVoicesAtAll
                                     ? "No text-to-speech voices found"
-                                    : `No ${localeNames[currentLocale] || currentLocale} voices found`}
+                                    : `No ${LOCALE_DISPLAY_NAMES[currentLocale] || currentLocale} voices found`}
                             </strong>
                             <p>
-                                Install the <a
-                                    href="https://chromewebstore.google.com/detail/voice-out-text-to-speech/jmodgcjbfcmningbahdmedofbabejbba"
+                                Install a text-to-speech extension like{" "}
+                                <a
+                                    href="https://chromewebstore.google.com/detail/read-aloud-a-text-to-spee/hdhinadidafjejdhmfkjgnolgimiaplp"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                >Voice Out</a> extension for additional language support.
+                                >Read Aloud</a>
+                                {" "}(Chrome) or check your OS language settings for additional voice support.
                             </p>
                         </div>
                         <button
                             className="voice-install-hint-close"
-                            onClick={() => setShowInstallHint(false)}
+                            onClick={dismissHint}
                             title="Dismiss"
                         >
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -129,11 +145,11 @@ export function VoiceControlDock() {
 
             <div className="voice-control-dock">
                 {/* No-voice warning icon in the dock */}
-                {!hasNativeVoices && !noVoicesAtAll && !showInstallHint && (
+                {!hasLocaleVoices && !noVoicesAtAll && !showInstallHint && (
                     <button
                         className="voice-no-lang-btn"
                         onClick={() => setShowInstallHint(true)}
-                        title={`No ${localeNames[currentLocale] || currentLocale} voices — click for help`}
+                        title={`No ${LOCALE_DISPLAY_NAMES[currentLocale] || currentLocale} voices — click for help`}
                     >
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
@@ -143,67 +159,64 @@ export function VoiceControlDock() {
                     </button>
                 )}
 
-                {/* Voice Selector */}
-                <div className="voice-control-section">
-                    <button
-                        className="voice-selector-btn"
-                        onClick={() => setIsVoiceMenuOpen(!isVoiceMenuOpen)}
-                        title="Select Voice"
-                    >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
-                            <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-                            <line x1="12" y1="19" x2="12" y2="23" />
-                            <line x1="8" y1="23" x2="16" y2="23" />
-                        </svg>
-                        <span className="voice-selector-label">
-                            {selectedVoice?.name.split(" ").slice(0, 2).join(" ") || "Voice"}
-                        </span>
-                        <svg
-                            width="12"
-                            height="12"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            className={`voice-selector-chevron ${isVoiceMenuOpen ? "voice-selector-chevron--open" : ""}`}
+                {/* Voice Selector — hidden when no locale voices (empty dropdown is dead UI) */}
+                {filteredVoices.length > 0 && (
+                    <div className="voice-control-section">
+                        <button
+                            className="voice-selector-btn"
+                            onClick={() => setIsVoiceMenuOpen(!isVoiceMenuOpen)}
+                            title="Select Voice"
                         >
-                            <polyline points="6 9 12 15 18 9" />
-                        </svg>
-                    </button>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                                <line x1="12" y1="19" x2="12" y2="23" />
+                                <line x1="8" y1="23" x2="16" y2="23" />
+                            </svg>
+                            <span className="voice-selector-label">
+                                {selectedVoice?.name.split(" ").slice(0, 2).join(" ") || "Voice"}
+                            </span>
+                            <svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                className={`voice-selector-chevron ${isVoiceMenuOpen ? "voice-selector-chevron--open" : ""}`}
+                            >
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </button>
 
-                    {/* Voice Dropdown — filtered by locale */}
-                    {isVoiceMenuOpen && (
-                        <div className="voice-dropdown">
-                            <div className="voice-dropdown-header">
-                                {hasNativeVoices
-                                    ? (currentLocale === "en" ? "English Voices" :
-                                        currentLocale === "ur" ? "اردو آوازیں" :
-                                            currentLocale === "zh-Hans" ? "中文语音" : "Voices")
-                                    : "Available Voices"
-                                }
+                        {/* Voice Dropdown — filtered by locale */}
+                        {isVoiceMenuOpen && (
+                            <div className="voice-dropdown">
+                                <div className="voice-dropdown-header">
+                                    {dropdownHeaders[currentLocale] || "Voices"}
+                                </div>
+                                {filteredVoices.map(({ voice, originalIndex }) => (
+                                    <button
+                                        key={originalIndex}
+                                        onClick={() => {
+                                            setVoice(originalIndex);
+                                            setIsVoiceMenuOpen(false);
+                                        }}
+                                        className={`voice-option ${originalIndex === selectedVoiceIndex ? "voice-option--active" : ""}`}
+                                    >
+                                        <div className="voice-option-name">{voice.name}</div>
+                                        <div className="voice-option-lang">{voice.lang}</div>
+                                        {originalIndex === selectedVoiceIndex && (
+                                            <svg className="voice-option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                                                <polyline points="20 6 9 17 4 12" />
+                                            </svg>
+                                        )}
+                                    </button>
+                                ))}
                             </div>
-                            {filteredVoices.map(({ voice, originalIndex }) => (
-                                <button
-                                    key={originalIndex}
-                                    onClick={() => {
-                                        setVoice(originalIndex);
-                                        setIsVoiceMenuOpen(false);
-                                    }}
-                                    className={`voice-option ${originalIndex === selectedVoiceIndex ? "voice-option--active" : ""}`}
-                                >
-                                    <div className="voice-option-name">{voice.name}</div>
-                                    <div className="voice-option-lang">{voice.lang}</div>
-                                    {originalIndex === selectedVoiceIndex && (
-                                        <svg className="voice-option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                                            <polyline points="20 6 9 17 4 12" />
-                                        </svg>
-                                    )}
-                                </button>
-                            ))}
-                        </div>
-                    )}
-                </div>
+                        )}
+                    </div>
+                )}
 
                 <div className="voice-control-divider" />
 

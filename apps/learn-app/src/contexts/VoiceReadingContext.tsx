@@ -67,19 +67,7 @@ interface TextBlock {
     wordBoundaries: WordBoundary[];
 }
 
-/** Map site locale to BCP-47 language prefix for voice selection */
-const LOCALE_LANG_MAP: Record<string, string> = {
-    en: "en",
-    ur: "ur",
-    "zh-Hans": "zh",
-};
-
-/** Preferred default voices per locale (first match wins) */
-const PREFERRED_VOICES: Record<string, string[]> = {
-    en: ["Google US English", "Microsoft David", "Alex"],
-    ur: ["Microsoft Asad", "Google اردو"],
-    "zh-Hans": ["Google 普通话", "Microsoft Huihui"],
-};
+import { LOCALE_LANG_MAP, PREFERRED_VOICES } from "@/utils/voiceLocaleConfig";
 
 /**
  * Tokenize text into "words" for highlighting.
@@ -137,6 +125,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
     const [selectedVoiceIndex, setSelectedVoiceIndex] = useState(0);
     const [playbackRate, setPlaybackRateState] = useState(1.0);
     const [volume, setVolumeState] = useState(1.0);
+    const [totalBlocks, setTotalBlocks] = useState(0);
 
     const blocksRef = useRef<TextBlock[]>([]);
 
@@ -220,8 +209,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             // Clear all timers on unmount
             clearFallbackTimers();
         };
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- locale is stable per page load
-    }, [clearFallbackTimers]);
+    }, [locale, clearFallbackTimers]);
 
     const selectedVoice = availableVoices[selectedVoiceIndex] || null;
 
@@ -610,6 +598,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         if (blocks.length === 0) return;
 
         blocksRef.current = blocks;
+        setTotalBlocks(blocks.length);
         blocks.forEach((block, idx) => wrapWordsInBlock(block, idx));
 
         setIsPlaying(true);
@@ -719,7 +708,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         currentUtteranceIdRef.current = ++utteranceIdRef.current;
         window.speechSynthesis.cancel();
 
-        // Small delay then restart from current word
+        // 50ms delay: Web Speech API requires a tick after cancel() before new speak()
         setTimeout(() => {
             playBlockFromWord(currentBlock, Math.max(0, currentWord));
         }, 50);
@@ -804,7 +793,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         isPaused,
         activeBlockIndex,
         currentWordIndex,
-        totalBlocks: blocksRef.current.length,
+        totalBlocks,
         availableVoices,
         selectedVoiceIndex,
         playbackRate,

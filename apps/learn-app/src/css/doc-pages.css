@@ -1480,12 +1480,16 @@ article {
 }
 
 /* ============================================================================
-   VOICE CONTROL DOCK - Floating control panel for voice reading
-   ============================================================================ */
-
-/* ============================================================================
    VOICE CONTROL DOCK — Theme-Matched Floating Player
    ============================================================================ */
+
+/* Sharp corners on all voice dock elements (design-system choice) */
+.voice-control-dock,
+.voice-control-dock *,
+.voice-install-hint-content,
+.voice-install-hint-close {
+  border-radius: 0 !important;
+}
 
 .voice-control-dock {
   position: fixed;
@@ -1499,7 +1503,6 @@ article {
   padding: 0.4rem 0.6rem;
   background: var(--background);
   backdrop-filter: blur(20px);
-  border-radius: 0 !important;
   border: 1px solid var(--border);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
   animation: voiceDockSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1539,7 +1542,6 @@ article {
   padding: 0.35rem 0.6rem;
   background: var(--muted);
   border: 1px solid var(--border);
-  border-radius: 0 !important;
   color: var(--foreground);
   font-size: 0.75rem;
   font-weight: 500;
@@ -1588,7 +1590,6 @@ article {
   max-height: 320px;
   overflow-y: auto;
   background: var(--background);
-  border-radius: 0 !important;
   border: 1px solid var(--border);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   padding: 0.375rem;
@@ -1605,7 +1606,6 @@ article {
 
 .voice-dropdown::-webkit-scrollbar-thumb {
   background: var(--muted-foreground);
-  border-radius: 0 !important;
 }
 
 @keyframes voiceDropdownIn {
@@ -1639,7 +1639,6 @@ article {
   padding: 0.5rem 0.75rem;
   background: transparent;
   border: none;
-  border-radius: 0 !important;
   text-align: left;
   cursor: pointer;
   transition: all 120ms ease;
@@ -1704,7 +1703,6 @@ article {
   padding: 0.25rem 0.45rem;
   background: transparent;
   border: none;
-  border-radius: 0 !important;
   color: var(--muted-foreground);
   font-size: 0.65rem;
   font-weight: 600;
@@ -1738,7 +1736,6 @@ article {
   height: 28px;
   background: transparent;
   border: none;
-  border-radius: 0 !important;
   color: var(--muted-foreground);
   cursor: pointer;
   transition: all 120ms ease;
@@ -1755,7 +1752,6 @@ article {
   height: 3px;
   appearance: none;
   background: var(--border);
-  border-radius: 0 !important;
   cursor: pointer;
   outline: none;
 }
@@ -1806,7 +1802,6 @@ article {
   height: 36px;
   background: var(--primary);
   border: none;
-  border-radius: 0 !important;
   color: var(--primary-foreground);
   cursor: pointer;
   transition: all 150ms ease;
@@ -1825,7 +1820,6 @@ article {
   height: 30px;
   background: var(--muted);
   border: 1px solid var(--border);
-  border-radius: 0 !important;
   color: var(--muted-foreground);
   cursor: pointer;
   transition: all 150ms ease;
@@ -1846,7 +1840,6 @@ article {
   height: 30px;
   background: transparent;
   border: none;
-  border-radius: 0 !important;
   color: var(--muted-foreground);
   cursor: pointer;
   transition: all 120ms ease;
@@ -1881,7 +1874,6 @@ article {
   height: 28px;
   background: transparent;
   border: none;
-  border-radius: 0 !important;
   color: var(--warning, #f59e0b);
   cursor: pointer;
   transition: all 120ms ease;
@@ -1959,7 +1951,6 @@ article {
   height: 24px;
   background: transparent;
   border: none;
-  border-radius: 0 !important;
   color: var(--muted-foreground);
   cursor: pointer;
   flex-shrink: 0;
