@@ -13,25 +13,24 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Sync to SSO mirror with deploy trigger
+      - name: Sync to SSO mirror (single push)
         env:
           SSO_PAT: ${{ secrets.SSO_PAT }}
-          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
           MIRROR_URL="https://x-access-token:${SSO_PAT}@github.com/panaversity-global/sso-mirror-mono.git"
-
-          # Force push source to mirror
-          git push "${MIRROR_URL}" HEAD:main --force
+          SOURCE_SHA="${{ github.sha }}"
 
           # Configure git as panaversity-global (the Vercel-authorized user)
           git config user.name "panaversity-global"
           git config user.email "panaversity-global@users.noreply.github.com"
 
-          # Update CHANGELOG with sync timestamp to trigger Vercel deployment
+          # Add deploy-trigger CHANGELOG on top of current commit
           echo "Synced from panaversity/agentfactory at $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > CHANGELOG.md
-          echo "Source commit: ${{ github.sha }}" >> CHANGELOG.md
-          echo "Message: ${COMMIT_MESSAGE}" >> CHANGELOG.md
+          echo "Source commit: ${SOURCE_SHA}" >> CHANGELOG.md
+          echo "Message: ${{ github.event.head_commit.message }}" >> CHANGELOG.md
 
           git add CHANGELOG.md
-          git commit -m "sync: trigger deploy from ${{ github.sha }}"
-          git push "${MIRROR_URL}" HEAD:main
+          git commit -m "sync: trigger deploy from ${SOURCE_SHA}"
+
+          # Single force push — one push, one Vercel build
+          git push "${MIRROR_URL}" HEAD:main --force

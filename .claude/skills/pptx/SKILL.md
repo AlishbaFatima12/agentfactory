@@ -685,7 +685,7 @@ workspace/
    ls -d apps/learn-app/docs/*/05-*/   # Chapter 5
 
    # For part:
-   ls -d apps/learn-app/docs/05-*/     # Part 5
+   ls -d apps/learn-app/docs/05-*/     # Part 5 (Building OpenClaw Apps)
    ```
 3. **Count content**:
    ```bash

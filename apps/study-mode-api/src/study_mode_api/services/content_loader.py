@@ -118,9 +118,15 @@ async def load_lesson_content(lesson_path: str) -> dict:
             "cached": False,  # Will be True on subsequent cached requests
         }
 
+    # Create a readable title from the lesson path
+    # e.g., "thesis" -> "Thesis", "ai-agents-intro" -> "AI Agents Intro"
+    readable_title = lesson_path.split("/")[-1]  # Get last part of path
+    readable_title = readable_title.replace("-", " ").replace("_", " ")
+    readable_title = readable_title.title()  # Capitalize each word
+
     return {
         "content": "",
-        "title": f"Page: {lesson_path}",
+        "title": readable_title,
         "cached": False,
     }
 
@@ -136,9 +142,10 @@ async def get_cached_content(lesson_path: str) -> dict | None:
 
     if cached_data:
         import json
+        from typing import Any
 
         try:
-            result = json.loads(cached_data)
+            result: dict[str, Any] = json.loads(cached_data)
             result["cached"] = True
             return result
         except Exception:

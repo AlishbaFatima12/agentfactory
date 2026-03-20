@@ -169,7 +169,11 @@ class TestLoadLessonContent:
 
     @pytest.mark.asyncio
     async def test_load_lesson_content_not_found(self):
-        """Test handling of content not found."""
+        """Test handling of content not found.
+
+        When content is not found, creates a readable title from the last
+        path segment (e.g., "nonexistent/path" -> "Path").
+        """
         with patch(
             "study_mode_api.services.content_loader.fetch_from_github",
             return_value=("", False),
@@ -178,7 +182,8 @@ class TestLoadLessonContent:
                 result = await load_lesson_content("nonexistent/path")
 
         assert result["content"] == ""
-        assert "nonexistent/path" in result["title"]
+        # Title is generated from last path segment, converted to title case
+        assert result["title"] == "Path"
 
     @pytest.mark.asyncio
     async def test_load_lesson_content_cached_fast(self):

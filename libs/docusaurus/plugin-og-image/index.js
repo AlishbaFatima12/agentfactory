@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 const sharp = require("sharp");
 
 // Satori is ESM-only, we'll use dynamic import
@@ -96,7 +97,7 @@ const loadFontsOnce = () => {
 
   if (!cachedFonts.length) {
     throw new Error(
-      "No fonts found. Bundled Inter fonts missing and no system fonts available."
+      "No fonts found. Bundled Inter fonts missing and no system fonts available.",
     );
   }
 
@@ -107,7 +108,6 @@ const loadFontsOnce = () => {
  * Docusaurus plugin to automatically generate Open Graph images for each page
  */
 module.exports = function (context, options) {
-
   return {
     name: "docusaurus-plugin-og-image-generator",
 
@@ -134,7 +134,7 @@ module.exports = function (context, options) {
       await generateOGImage({
         title: siteConfig.title,
         description: siteConfig.tagline,
-        slug: 'home',
+        slug: "home",
         ogDir: ogOutDir,
         siteConfig,
       });
@@ -146,7 +146,9 @@ module.exports = function (context, options) {
       // Inject OG image meta tags into built HTML files
       await injectOGImagesIntoHTML(outDir, siteConfig, context.siteDir);
 
-      console.log("\n✅ Open Graph images generated and injected successfully!\n");
+      console.log(
+        "\n✅ Open Graph images generated and injected successfully!\n",
+      );
     },
   };
 };
@@ -175,14 +177,34 @@ function collectMarkdownFiles(dir, docsRoot, files = []) {
 }
 
 /**
- * Process markdown files in batches to prevent memory exhaustion
+ * Process markdown files in batches, skipping unchanged files via content hash.
+ *
+ * A `.og-cache.json` file in ogDir maps slug → md5(title|description).
+ * If the hash matches AND the PNG already exists, we skip regeneration.
+ * This reduces a typical incremental build from ~1,800 images to only the
+ * handful of files whose title or description actually changed.
  */
 async function generateImagesFromDirectory(dir, ogDir, siteConfig, docsRoot) {
   const files = collectMarkdownFiles(dir, docsRoot);
-  const BATCH_SIZE = 20; // Process 20 files at a time
+  const BATCH_SIZE = 20;
   let processed = 0;
+  let skipped = 0;
 
   console.log(`  Found ${files.length} markdown files to process\n`);
+
+  // Load content-hash cache from previous build (Vercel preserves build output cache)
+  const cachePath = path.join(ogDir, ".og-cache.json");
+  let cache = {};
+  try {
+    if (fs.existsSync(cachePath)) {
+      cache = JSON.parse(fs.readFileSync(cachePath, "utf-8"));
+    }
+  } catch {
+    // Corrupted cache — regenerate everything
+    cache = {};
+  }
+
+  const newCache = {};
 
   for (let i = 0; i < files.length; i += BATCH_SIZE) {
     const batch = files.slice(i, i + BATCH_SIZE);
@@ -194,6 +216,23 @@ async function generateImagesFromDirectory(dir, ogDir, siteConfig, docsRoot) {
       if (metadata.title) {
         const relativePath = path.relative(docsRoot, fullPath);
         const slug = relativePath.replace(/\\/g, "/").replace(/\.mdx?$/, "");
+        const filename = slug.replace(/\//g, "-") + ".png";
+        const imagePath = path.join(ogDir, filename);
+
+        // Hash title + description to detect content changes
+        const hash = crypto
+          .createHash("md5")
+          .update(metadata.title + "|" + (metadata.description || ""))
+          .digest("hex");
+
+        newCache[slug] = hash;
+
+        // Skip if hash matches previous build AND image file exists
+        if (cache[slug] === hash && fs.existsSync(imagePath)) {
+          skipped++;
+          processed++;
+          continue;
+        }
 
         await generateOGImage({
           title: metadata.title,
@@ -216,6 +255,14 @@ async function generateImagesFromDirectory(dir, ogDir, siteConfig, docsRoot) {
       console.log(`  Progress: ${processed}/${files.length} docs processed`);
     }
   }
+
+  // Persist cache for next build
+  fs.writeFileSync(cachePath, JSON.stringify(newCache), "utf-8");
+
+  const generated = processed - skipped;
+  console.log(
+    `  Cache: ${skipped} unchanged (skipped), ${generated} generated`,
+  );
 }
 
 /**
@@ -261,7 +308,7 @@ async function injectOGImagesIntoHTML(outDir, siteConfig, siteDir) {
       const fullPath = path.join(dir, entry.name);
       if (entry.isDirectory()) {
         findHTMLFiles(fullPath);
-      } else if (entry.isFile() && entry.name.endsWith('.html')) {
+      } else if (entry.isFile() && entry.name.endsWith(".html")) {
         htmlFiles.push(fullPath);
       }
     }
@@ -272,10 +319,11 @@ async function injectOGImagesIntoHTML(outDir, siteConfig, siteDir) {
   console.log(`  Found ${htmlFiles.length} HTML files to process\n`);
 
   // Look for generated images inside the built output directory
-  const ogImagesDir = path.join(outDir, 'img', 'og');
+  const ogImagesDir = path.join(outDir, "img", "og");
 
   // Stable version token per build, overridable from env/CI
-  const buildVersion = process.env.BUILD_VERSION || String(Math.floor(Date.now() / 1000));
+  const buildVersion =
+    process.env.BUILD_VERSION || String(Math.floor(Date.now() / 1000));
 
   let processed = 0;
   const BATCH_SIZE = 50;
@@ -283,51 +331,64 @@ async function injectOGImagesIntoHTML(outDir, siteConfig, siteDir) {
   for (const htmlFile of htmlFiles) {
     processed++;
     try {
-      let html = fs.readFileSync(htmlFile, 'utf-8');
-      
+      let html = fs.readFileSync(htmlFile, "utf-8");
+
       // Extract the path from the HTML file location
       const relativePath = path.relative(outDir, htmlFile);
-      
+
       // Convert HTML path to slug (similar to how we generate images)
       let slug = relativePath
-        .replace(/\\/g, '/')
-        .replace(/\.html$/, '')
-        .replace(/\/index$/, ''); // Remove trailing /index
-      
+        .replace(/\\/g, "/")
+        .replace(/\.html$/, "")
+        .replace(/\/index$/, ""); // Remove trailing /index
+
       // Handle special cases
-      if (slug === 'index' || slug === '') {
-        slug = 'home';
+      if (slug === "index" || slug === "") {
+        slug = "home";
       }
-      
+
       // For docs pages, remove the "docs/" prefix to match generated image names
-      if (slug.startsWith('docs/')) {
-        slug = slug.replace(/^docs\//, '');
+      if (slug.startsWith("docs/")) {
+        slug = slug.replace(/^docs\//, "");
       }
-      
+
       // Convert to OG image filename
-      const imageFilename = slug.replace(/\//g, '-') + '.png';
+      const imageFilename = slug.replace(/\//g, "-") + ".png";
       const ogImagePath = path.join(ogImagesDir, imageFilename);
 
       // Homepage: use a static book cover image for previews
-      if (slug === 'home') {
-        const srcPng = path.join(siteDir, 'static', 'img', 'book-cover-page.png');
-        const destJpg = path.join(outDir, 'img', 'book-cover-social.jpg');
+      if (slug === "home") {
+        const srcPng = path.join(
+          siteDir,
+          "static",
+          "img",
+          "book-cover-page.png",
+        );
+        const destJpg = path.join(outDir, "img", "book-cover-social.jpg");
         let homepageImageUrl;
 
         // Try to create optimized JPEG from source PNG
         try {
           if (fs.existsSync(srcPng)) {
             await sharp(srcPng)
-              .resize(1200, 630, { fit: 'cover' })
-              .jpeg({ quality: 80, progressive: true, chromaSubsampling: '4:2:0' })
+              .resize(1200, 630, { fit: "cover" })
+              .jpeg({
+                quality: 80,
+                progressive: true,
+                chromaSubsampling: "4:2:0",
+              })
               .toFile(destJpg);
             homepageImageUrl = `${siteConfig.url}/img/book-cover-social.jpg?v=${buildVersion}`;
-            console.log(`  ✓ Generated homepage social image: book-cover-social.jpg`);
+            console.log(
+              `  ✓ Generated homepage social image: book-cover-social.jpg`,
+            );
           } else {
             console.log(`  ⚠ Homepage source image not found: ${srcPng}`);
           }
         } catch (err) {
-          console.log(`  ⚠ Failed to generate homepage social image: ${err.message}`);
+          console.log(
+            `  ⚠ Failed to generate homepage social image: ${err.message}`,
+          );
         }
 
         // Fallback to the original PNG if JPEG conversion failed
@@ -341,14 +402,16 @@ async function injectOGImagesIntoHTML(outDir, siteConfig, siteDir) {
               await generateOGImage({
                 title: siteConfig.title,
                 description: siteConfig.tagline,
-                slug: 'home',
-                ogDir: path.join(outDir, 'img', 'og'),
+                slug: "home",
+                ogDir: path.join(outDir, "img", "og"),
                 siteConfig,
               });
               homepageImageUrl = `${siteConfig.url}/img/og/home.png?v=${buildVersion}`;
               console.log(`  ✓ Generated fallback OG image: home.png`);
             } catch (genErr) {
-              console.log(`  ✗ Failed to generate homepage OG image: ${genErr.message}`);
+              console.log(
+                `  ✗ Failed to generate homepage OG image: ${genErr.message}`,
+              );
             }
           }
         }
@@ -358,64 +421,71 @@ async function injectOGImagesIntoHTML(outDir, siteConfig, siteDir) {
           const pageUrl = siteConfig.url;
 
           // Remove existing image/url tags
-          html = html.replace(/<meta[^>]*property=\"og:image\"[^>]*>/gi, '');
-          html = html.replace(/<meta[^>]*name=\"twitter:image\"[^>]*>/gi, '');
-          html = html.replace(/<meta[^>]*property=\"og:url\"[^>]*>/gi, '');
+          html = html.replace(/<meta[^>]*property=\"og:image\"[^>]*>/gi, "");
+          html = html.replace(/<meta[^>]*name=\"twitter:image\"[^>]*>/gi, "");
+          html = html.replace(/<meta[^>]*property=\"og:url\"[^>]*>/gi, "");
 
           const ogTags = `
   <meta property=\"og:image\" content=\"${homepageImageUrl}\">\n  <meta property=\"og:image:width\" content=\"1200\">\n  <meta property=\"og:image:height\" content=\"630\">\n  <meta property=\"og:image:secure_url\" content=\"${homepageImageUrl}\">\n  <meta property=\"og:site_name\" content=\"${siteConfig.title}\">\n  <meta property=\"og:url\" content=\"${pageUrl}\">\n  <meta name=\"twitter:image\" content=\"${homepageImageUrl}\">\n</head>`;
 
           html = html.replace(/<\/head>/i, ogTags);
-          fs.writeFileSync(htmlFile, html, 'utf-8');
+          fs.writeFileSync(htmlFile, html, "utf-8");
         }
         continue;
       }
-      
-      
 
       // Ensure OG image exists for this page (generate on demand if missing)
       if (!fs.existsSync(ogImagePath)) {
         // Try to derive title/description from existing meta tags
-        const titleMatch = html.match(/<meta[^>]*property="og:title"[^>]*content="([^"]+)"[^>]*>/i) ||
-                           html.match(/<title[^>]*>([^<]+)<\/title>/i);
-        const descMatch = html.match(/<meta[^>]*name="description"[^>]*content="([^"]+)"[^>]*>/i) ||
-                          html.match(/<meta[^>]*property="og:description"[^>]*content="([^"]+)"[^>]*>/i);
+        const titleMatch =
+          html.match(
+            /<meta[^>]*property="og:title"[^>]*content="([^"]+)"[^>]*>/i,
+          ) || html.match(/<title[^>]*>([^<]+)<\/title>/i);
+        const descMatch =
+          html.match(
+            /<meta[^>]*name="description"[^>]*content="([^"]+)"[^>]*>/i,
+          ) ||
+          html.match(
+            /<meta[^>]*property="og:description"[^>]*content="([^"]+)"[^>]*>/i,
+          );
 
-        const title = titleMatch ? (titleMatch[1] || '').trim() : '';
-        const description = descMatch ? (descMatch[1] || '').trim() : '';
+        const title = titleMatch ? (titleMatch[1] || "").trim() : "";
+        const description = descMatch ? (descMatch[1] || "").trim() : "";
 
         try {
           await generateOGImage({
             title: title || siteConfig.title,
-            description: description || siteConfig.tagline || '',
+            description: description || siteConfig.tagline || "",
             slug,
             ogDir: ogImagesDir,
             siteConfig,
           });
         } catch (err) {
-          console.log(`  ⚠ Failed to generate OG image for ${slug}: ${err.message}`);
+          console.log(
+            `  ⚠ Failed to generate OG image for ${slug}: ${err.message}`,
+          );
         }
       }
 
       if (fs.existsSync(ogImagePath)) {
         const imageUrl = `${siteConfig.url}/img/og/${imageFilename}?v=${buildVersion}`;
         // Build canonical page URL for better social parsing
-        let pagePath = '';
-        if (slug === 'home') {
-          pagePath = '/';
-        } else if (relativePath.startsWith('docs/')) {
+        let pagePath = "";
+        if (slug === "home") {
+          pagePath = "/";
+        } else if (relativePath.startsWith("docs/")) {
           pagePath = `/docs/${slug}`;
         } else {
           pagePath = `/${slug}`;
         }
         const pageUrl = `${siteConfig.url}${pagePath}`;
-        
+
         // Replace or add OG image meta tags
         // Remove existing og:image, twitter:image, and og:url tags
-        html = html.replace(/<meta[^>]*property="og:image"[^>]*>/gi, '');
-        html = html.replace(/<meta[^>]*name="twitter:image"[^>]*>/gi, '');
-        html = html.replace(/<meta[^>]*property="og:url"[^>]*>/gi, '');
-        
+        html = html.replace(/<meta[^>]*property="og:image"[^>]*>/gi, "");
+        html = html.replace(/<meta[^>]*name="twitter:image"[^>]*>/gi, "");
+        html = html.replace(/<meta[^>]*property="og:url"[^>]*>/gi, "");
+
         // Add new OG image tags before </head>
         const ogTags = `
   <meta property="og:image" content="${imageUrl}">
@@ -426,26 +496,32 @@ async function injectOGImagesIntoHTML(outDir, siteConfig, siteDir) {
   <meta property="og:url" content="${pageUrl}">
   <meta name="twitter:image" content="${imageUrl}">
 </head>`;
-        
+
         html = html.replace(/<\/head>/i, ogTags);
-        
+
         // Write back
-        fs.writeFileSync(htmlFile, html, 'utf-8');
+        fs.writeFileSync(htmlFile, html, "utf-8");
         console.log(`  ✓ Injected OG image: ${imageFilename}`);
       }
     } catch (error) {
-      console.log(`  ⊘ Error processing ${path.basename(htmlFile)}: ${error.message}`);
+      console.log(
+        `  ⊘ Error processing ${path.basename(htmlFile)}: ${error.message}`,
+      );
     }
 
     // Progress update and GC hint every batch
     if (processed % BATCH_SIZE === 0) {
-      console.log(`  Progress: ${processed}/${htmlFiles.length} HTML files injected`);
+      console.log(
+        `  Progress: ${processed}/${htmlFiles.length} HTML files injected`,
+      );
       if (global.gc) global.gc();
     }
   }
 
   // Final progress update
-  console.log(`  Progress: ${processed}/${htmlFiles.length} HTML files injected`);
+  console.log(
+    `  Progress: ${processed}/${htmlFiles.length} HTML files injected`,
+  );
 }
 
 /**
@@ -615,7 +691,7 @@ async function generateOGImage({
         width,
         height,
         fonts: resolvedFonts,
-      }
+      },
     );
 
     // Convert SVG to PNG using Sharp
@@ -631,7 +707,7 @@ async function generateOGImage({
   } catch (error) {
     console.error(
       `  ✗ Failed to generate image for "${title}":`,
-      error.message
+      error.message,
     );
     return null;
   }

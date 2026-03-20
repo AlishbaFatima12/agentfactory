@@ -880,23 +880,16 @@ article {
   left: auto !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 1rem !important;
+  align-items: flex-end !important;
+  gap: 0 !important;
   z-index: 100 !important;
 }
 
-/* Floating actions container - Bottom-inline (Mobile) */
+/* Floating actions container - Compact on mobile */
 @media screen and (max-width: 768px) {
   .floating-actions {
-    position: static !important;
-    /* Disables floating entirely */
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    gap: 0.75rem !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin-top: 2rem !important;
-    margin-bottom: 0.5rem !important;
-    width: 100% !important;
+    bottom: 1rem !important;
+    right: 1rem !important;
   }
 }
 
@@ -905,9 +898,10 @@ article {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 44px !important;
-  height: 44px !important;
+  width: 38px !important;
+  height: 38px !important;
   border: 1px solid oklch(0.9 0 0) !important;
+  border-radius: 10px !important;
   background: oklch(0.98 0 0) !important;
   color: oklch(0.5 0 0) !important;
   cursor: pointer !important;
@@ -917,9 +911,8 @@ article {
 
 @media screen and (max-width: 768px) {
   .floating-actions button {
-    /* Since we are an inline row, not a pill, we keep shadows and size */
-    width: 36px !important;
-    height: 36px !important;
+    width: 32px !important;
+    height: 32px !important;
   }
 
   .floating-actions button svg {
@@ -951,9 +944,136 @@ article {
 
 /* Back to top button - slightly smaller */
 .back-to-top-button {
-  width: 40px !important;
-  height: 40px !important;
+  width: 34px !important;
+  height: 34px !important;
 }
+
+/* ============================================================================
+   FAB SPEED-DIAL: Toggle + Action Items Container
+   ============================================================================ */
+
+/* FAB toggle button — always visible */
+.floating-actions .floating-actions-toggle {
+  background: var(--primary) !important;
+  border: 1px solid var(--primary) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  width: 38px !important;
+  height: 38px !important;
+  box-shadow: 0 4px 14px oklch(0 0 0 / 0.2) !important;
+}
+
+.floating-actions .floating-actions-toggle:hover {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 18px oklch(0 0 0 / 0.25) !important;
+}
+
+/* Tooltip for toggle button */
+.floating-actions .floating-actions-toggle {
+  position: relative;
+}
+
+.floating-actions .floating-actions-toggle::after {
+  content: "Tools";
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  pointer-events: none;
+  box-shadow: 0 2px 8px oklch(0 0 0 / 0.15);
+}
+
+.floating-actions--open .floating-actions-toggle::after {
+  content: "Close";
+}
+
+.floating-actions .floating-actions-toggle:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .floating-actions .floating-actions-toggle::after {
+    display: none !important;
+  }
+}
+
+.floating-actions .floating-actions-toggle svg {
+  transition: transform 150ms ease !important;
+}
+
+[data-theme='dark'] .floating-actions .floating-actions-toggle {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+}
+
+[data-theme='dark'] .floating-actions .floating-actions-toggle:hover {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: white !important;
+}
+
+/* Action items container — hidden by default, revealed on FAB open */
+.floating-action-items {
+  display: none;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.floating-action-items--visible {
+  display: flex;
+  animation: fabReveal 200ms ease forwards;
+}
+
+@keyframes fabReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive FAB toggle sizing */
+@media screen and (max-width: 996px) {
+  .floating-actions .floating-actions-toggle {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .floating-actions .floating-actions-toggle {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .floating-actions .floating-actions-toggle svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+
+/* ============================================================================
+   INDIVIDUAL ACTION BUTTON STYLES
+   ============================================================================ */
 
 /* Teach Me floating button - shiny dark blue with book theme */
 .study-mode-float {
@@ -2061,8 +2181,8 @@ body.zen-mode .floating-actions {
   }
 
   .floating-actions button {
-    width: 40px !important;
-    height: 40px !important;
+    width: 36px !important;
+    height: 36px !important;
   }
 }
 

@@ -44,7 +44,7 @@ differentiation:
 
 ## Chapter Creation Protocol (Technical Chapters)
 
-**For new technical chapters (Part 5-6), use `/sp.chapter`:**
+**For new technical chapters (Part 6-7), use `/sp.chapter`:**
 
 ### Two-Phase Approach
 
