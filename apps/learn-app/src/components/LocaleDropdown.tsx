@@ -45,17 +45,16 @@ export function LocaleDropdown() {
         <Button
           variant="ghost"
           dir="ltr"
-          className="gap-1.5 px-2.5 py-1.5 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded-md max-w-[200px]"
+          className="gap-1.5 px-2 py-1.5 text-sm font-medium hover:bg-accent hover:text-accent-foreground rounded-md h-auto"
           title="Change language"
           aria-label="Change language"
         >
           <Globe className="w-4 h-4 text-primary shrink-0" />
-          <span className="font-medium truncate">
+          <span className="font-medium text-left leading-tight">
             {currentEnglishName}
             {currentEnglishName !== nativeLabel && (
-              <span className="text-muted-foreground font-normal">
-                {" "}
-                ({nativeLabel})
+              <span className="text-muted-foreground font-normal text-xs block">
+                {nativeLabel}
               </span>
             )}
           </span>
