@@ -1483,9 +1483,19 @@ article {
    VOICE CONTROL DOCK — Theme-Matched Floating Player
    ============================================================================ */
 
-/* Sharp corners on all voice dock elements (design-system choice) */
+/* Sharp corners on voice dock elements (design-system choice).
+   Targets specific classes instead of * to avoid breaking child components. */
 .voice-control-dock,
-.voice-control-dock *,
+.voice-selector-btn,
+.voice-dropdown,
+.voice-option,
+.voice-speed-chip,
+.voice-volume-icon,
+.voice-slider,
+.voice-pause-btn,
+.voice-stop-btn,
+.voice-skip-btn,
+.voice-no-lang-btn,
 .voice-install-hint-content,
 .voice-install-hint-close {
   border-radius: 0 !important;

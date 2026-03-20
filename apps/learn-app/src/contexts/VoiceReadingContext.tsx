@@ -26,6 +26,8 @@ interface VoiceReadingContextType {
 
     // Locale voice availability
     hasLocaleVoices: boolean;
+    showNoVoicesWarning: boolean;
+    dismissNoVoicesWarning: () => void;
 
     // Methods
     toggleSpeech: () => void;
@@ -77,7 +79,7 @@ import { LOCALE_LANG_MAP, PREFERRED_VOICES } from "@/utils/voiceLocaleConfig";
  *
  * Returns array of { word, start, end } with character offsets into the source text.
  */
-function tokenizeText(text: string): { word: string; start: number; end: number }[] {
+export function tokenizeText(text: string): { word: string; start: number; end: number }[] {
     // CJK Unified Ideographs + Extensions + CJK Compatibility + Kana + Hangul
     const CJK_REGEX = /[\u2E80-\u9FFF\uF900-\uFAFF\u3040-\u30FF\u31F0-\u31FF\uAC00-\uD7AF]/;
     const tokens: { word: string; start: number; end: number }[] = [];
@@ -126,6 +128,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
     const [playbackRate, setPlaybackRateState] = useState(1.0);
     const [volume, setVolumeState] = useState(1.0);
     const [totalBlocks, setTotalBlocks] = useState(0);
+    const [showNoVoicesWarning, setShowNoVoicesWarning] = useState(false);
 
     const blocksRef = useRef<TextBlock[]>([]);
 
@@ -587,10 +590,8 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         }
 
         // Block playback if no voices available for the current locale
-        // Set isPlaying briefly so the dock renders with the warning, then stop
         if (!hasLocaleVoices) {
-            setIsPlaying(true);
-            setIsPaused(true);
+            setShowNoVoicesWarning(true);
             return;
         }
 
@@ -692,6 +693,10 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         currentWordIndexRef.current = -1;
         unwrapWords();
     }, [unwrapWords, clearFallbackTimers]);
+
+    const dismissNoVoicesWarning = useCallback(() => {
+        setShowNoVoicesWarning(false);
+    }, []);
 
     /**
      * Restart from current word with new settings
@@ -801,6 +806,8 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         playbackRate,
         volume,
         hasLocaleVoices,
+        showNoVoicesWarning,
+        dismissNoVoicesWarning,
         toggleSpeech,
         pauseSpeech,
         resumeSpeech,
