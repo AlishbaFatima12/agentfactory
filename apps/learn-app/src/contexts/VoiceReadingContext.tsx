@@ -26,6 +26,7 @@ interface VoiceReadingContextType {
 
     // Locale voice availability
     hasLocaleVoices: boolean;
+    noVoicesAtAll: boolean;
     showNoVoicesWarning: boolean;
     dismissNoVoicesWarning: () => void;
 
@@ -361,6 +362,10 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
      */
     const playBlockFromWord = useCallback((blockIndex: number, startWordIndex: number) => {
         const blocks = blocksRef.current;
+
+        // Cancel any queued/active speech to prevent Chrome from double-playing.
+        // The utterance ID guard in onend prevents stale callbacks from re-entering.
+        window.speechSynthesis.cancel();
 
         if (blockIndex >= blocks.length) {
             setIsPlaying(false);
@@ -806,6 +811,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         playbackRate,
         volume,
         hasLocaleVoices,
+        noVoicesAtAll: availableVoices.length === 0,
         showNoVoicesWarning,
         dismissNoVoicesWarning,
         toggleSpeech,

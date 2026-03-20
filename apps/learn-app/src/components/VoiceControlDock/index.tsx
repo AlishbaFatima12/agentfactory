@@ -12,7 +12,7 @@ import { useVoiceReading } from "@/contexts/VoiceReadingContext";
 import { LOCALE_LANG_MAP, LOCALE_DISPLAY_NAMES } from "@/utils/voiceLocaleConfig";
 import {
     Info, X, Mic, ChevronDown, Volume2, VolumeX, Volume1,
-    Play, Pause, Square, SkipBack, SkipForward, AlertTriangle,
+    Play, Pause, Square, SkipBack, SkipForward, AlertTriangle, Check,
 } from "lucide-react";
 
 /** Session key to remember if user dismissed the install hint */
@@ -39,6 +39,7 @@ export function VoiceControlDock() {
         playbackRate,
         volume,
         hasLocaleVoices,
+        noVoicesAtAll,
         showNoVoicesWarning,
         dismissNoVoicesWarning,
         pauseSpeech,
@@ -68,8 +69,6 @@ export function VoiceControlDock() {
             .map((voice, originalIndex) => ({ voice, originalIndex }))
             .filter(({ voice }) => voice.lang.startsWith(langPrefix));
     }, [availableVoices, langPrefix]);
-
-    const noVoicesAtAll = availableVoices.length === 0;
 
     // Restore dismissal state from sessionStorage on mount
     useEffect(() => {
@@ -114,7 +113,7 @@ export function VoiceControlDock() {
             {(showInstallHint || noVoicesAtAll) && (
                 <div className="voice-install-hint">
                     <div className="voice-install-hint-content">
-                        <Info size={18} className="voice-hint-icon" />
+                        <Info size={18} />
                         <div>
                             <strong>
                                 {noVoicesAtAll
@@ -190,9 +189,7 @@ export function VoiceControlDock() {
                                         <div className="voice-option-name">{voice.name}</div>
                                         <div className="voice-option-lang">{voice.lang}</div>
                                         {originalIndex === selectedVoiceIndex && (
-                                            <svg className="voice-option-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                                                <polyline points="20 6 9 17 4 12" />
-                                            </svg>
+                                            <Check size={14} className="voice-option-check" strokeWidth={3} />
                                         )}
                                     </button>
                                 ))}

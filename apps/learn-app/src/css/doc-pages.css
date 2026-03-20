@@ -1474,9 +1474,9 @@ article {
   background: var(--accent);
 }
 
-/* Inactive blocks — fully readable, just slightly dimmed */
+/* Inactive blocks — fully readable, subtle dim to focus on active block */
 .voice-block--inactive {
-  opacity: 0.55;
+  opacity: 0.75;
 }
 
 /* ============================================================================
