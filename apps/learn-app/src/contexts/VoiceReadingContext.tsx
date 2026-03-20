@@ -267,6 +267,12 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
                 return;
             }
 
+            // Skip nested block elements (e.g. <p> inside <p> from MDX hydration bugs)
+            // to prevent the same text being read twice
+            if (element.parentElement?.closest("p, li, h1, h2, h3, h4, h5, h6")) {
+                return;
+            }
+
             const wordBoundaries: WordBoundary[] = [];
             const tokens = tokenizeText(text);
             tokens.forEach((token, wordIdx) => {
@@ -363,11 +369,16 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
     const playBlockFromWord = useCallback((blockIndex: number, startWordIndex: number) => {
         const blocks = blocksRef.current;
 
-        // Cancel any queued/active speech to prevent Chrome from double-playing.
-        // The utterance ID guard in onend prevents stale callbacks from re-entering.
-        window.speechSynthesis.cancel();
+        // NOTE: Do NOT call cancel() here. Chrome/Firefox wipe out speak() calls
+        // that follow directly after cancel() (needs ~500ms gap). The utterance ID
+        // guard in onend is sufficient to prevent stale callbacks from re-entering.
+        // See: https://bugzilla.mozilla.org/show_bug.cgi?id=1522074
 
         if (blockIndex >= blocks.length) {
+            if (chromeKeepAliveRef.current) {
+                clearInterval(chromeKeepAliveRef.current);
+                chromeKeepAliveRef.current = null;
+            }
             setIsPlaying(false);
             setIsPaused(false);
             setActiveBlockIndex(-1);
@@ -562,6 +573,32 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             unwrapWords();
         };
 
+        // Chrome keepalive: Chrome pauses speech after ~15 seconds and onend
+        // never fires. Re-calling pause()/resume() every 10s prevents this.
+        // See: https://bugs.chromium.org/p/chromium/issues/detail?id=335907
+        if (chromeKeepAliveRef.current) {
+            clearInterval(chromeKeepAliveRef.current);
+        }
+        chromeKeepAliveRef.current = setInterval(() => {
+            if (currentUtteranceIdRef.current !== thisUtteranceId) {
+                if (chromeKeepAliveRef.current) {
+                    clearInterval(chromeKeepAliveRef.current);
+                    chromeKeepAliveRef.current = null;
+                }
+                return;
+            }
+            if (!isPausedRef.current) {
+                // Chrome auto-pauses after ~15s: paused=true, speaking=false.
+                // Also handle the case where speaking is still true but about to stall.
+                if (window.speechSynthesis.paused) {
+                    window.speechSynthesis.resume();
+                } else if (window.speechSynthesis.speaking) {
+                    window.speechSynthesis.pause();
+                    window.speechSynthesis.resume();
+                }
+            }
+        }, 10000);
+
         window.speechSynthesis.speak(utterance);
     }, [updateWordStyles, unwrapWords, clearFallbackTimers]);
 
@@ -579,7 +616,11 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         if (typeof window === "undefined" || !window.speechSynthesis) return;
 
         if (isPlaying) {
-            // Clear fallback timers
+            // Clear Chrome keepalive and fallback timers
+            if (chromeKeepAliveRef.current) {
+                clearInterval(chromeKeepAliveRef.current);
+                chromeKeepAliveRef.current = null;
+            }
             clearFallbackTimers();
             // Increment utterance ID to invalidate any pending callbacks
             currentUtteranceIdRef.current = ++utteranceIdRef.current;
@@ -685,7 +726,11 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
     const stopSpeech = useCallback(() => {
         if (typeof window === "undefined" || !window.speechSynthesis) return;
 
-        // Clear fallback timers
+        // Clear Chrome keepalive and fallback timers
+        if (chromeKeepAliveRef.current) {
+            clearInterval(chromeKeepAliveRef.current);
+            chromeKeepAliveRef.current = null;
+        }
         clearFallbackTimers();
         // Increment utterance ID to invalidate any pending callbacks
         currentUtteranceIdRef.current = ++utteranceIdRef.current;
