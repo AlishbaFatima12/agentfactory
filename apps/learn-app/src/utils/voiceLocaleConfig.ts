@@ -1,6 +1,9 @@
 /**
  * Shared locale configuration for voice reading features.
  * Single source of truth for locale-to-language mapping and display names.
+ *
+ * MAINTENANCE: When adding a new locale to docusaurus.config.ts i18n.locales,
+ * update all maps below AND DROPDOWN_HEADERS in VoiceControlDock/index.tsx.
  */
 
 /** Map Docusaurus locale codes to BCP-47 language prefixes for voice filtering */

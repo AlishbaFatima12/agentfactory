@@ -18,7 +18,7 @@ import {
 /** Session key to remember if user dismissed the install hint */
 const HINT_DISMISSED_KEY = "voice-install-hint-dismissed";
 
-/** Localized dropdown headers — module scope to avoid re-creation */
+/** Localized dropdown headers — see voiceLocaleConfig.ts MAINTENANCE note when adding locales */
 const DROPDOWN_HEADERS: Record<string, string> = {
     en: "English Voices",
     ur: "اردو آوازیں",
@@ -206,7 +206,7 @@ export function VoiceControlDock() {
                         {SPEED_PRESETS.map((speed) => (
                             <button
                                 key={speed}
-                                className={`voice-speed-chip ${Math.abs(playbackRate - speed) < 0.05 ? "voice-speed-chip--active" : ""}`}
+                                className={`voice-speed-chip ${playbackRate === speed ? "voice-speed-chip--active" : ""}`}
                                 onClick={() => setPlaybackRate(speed)}
                                 title={`${speed}x speed`}
                             >

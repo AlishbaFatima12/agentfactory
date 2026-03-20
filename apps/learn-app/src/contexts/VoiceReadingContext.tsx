@@ -154,6 +154,9 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
     const utteranceIdRef = useRef(0);
     const currentUtteranceIdRef = useRef(0);
 
+    // Guard against rapid skip clicks queuing multiple utterances
+    const skipInProgressRef = useRef(false);
+
     // Timer-based fallback for browsers that don't fire onboundary (Safari, iOS, etc.)
     const fallbackTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
     const fallbackDelayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -214,6 +217,10 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             setIsPlaying(false);
             // Clear all timers on unmount
             clearFallbackTimers();
+            if (chromeKeepAliveRef.current) {
+                clearInterval(chromeKeepAliveRef.current);
+                chromeKeepAliveRef.current = null;
+            }
         };
     }, [locale, clearFallbackTimers]);
 
@@ -269,9 +276,9 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
                 return;
             }
 
-            // Skip nested block elements (e.g. <p> inside <p> from MDX hydration bugs)
-            // to prevent the same text being read twice
-            if (element.parentElement?.closest("p, li, h1, h2, h3, h4, h5, h6")) {
+            // Skip <p> nested inside <p> (MDX hydration bug) to prevent double-read.
+            // Only targets the specific <p>-in-<p> case — <p> inside <li> is valid HTML.
+            if (element.tagName === "P" && element.parentElement?.tagName === "P") {
                 return;
             }
 
@@ -647,9 +654,11 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             return;
         }
 
-        // Cache: skip re-parsing if article content hasn't changed since last play
+        // Cache: skip re-parsing if article content hasn't changed since last play.
+        // Use prefix + length as fingerprint to avoid false-matches on SPA navigation.
         const article = document.querySelector("article");
-        const contentHash = article?.textContent?.length.toString() || "";
+        const text = article?.textContent || "";
+        const contentHash = text.slice(0, 200) + "|" + text.length;
         let blocks: TextBlock[];
         if (contentHash === cachedContentHashRef.current && blocksRef.current.length > 0) {
             blocks = blocksRef.current;
@@ -813,10 +822,11 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
 
     /** Skip to the next block (paragraph/heading/list item) */
     const skipForward = useCallback(() => {
-        if (!isPlaying) return;
+        if (!isPlaying || skipInProgressRef.current) return;
         const nextBlock = activeBlockIndexRef.current + 1;
         if (nextBlock >= blocksRef.current.length) return;
 
+        skipInProgressRef.current = true;
         clearFallbackTimers();
         currentUtteranceIdRef.current = ++utteranceIdRef.current;
         window.speechSynthesis.cancel();
@@ -829,19 +839,24 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             currentWordIndexRef.current = 0;
             updateWordStyles(nextBlock, 0);
             blocksRef.current[nextBlock]?.element.scrollIntoView({ behavior: "smooth", block: "center" });
+            skipInProgressRef.current = false;
         } else {
             // 50ms delay: Web Speech API requires a tick after cancel() before new speak()
-            setTimeout(() => playBlockFromWord(nextBlock, 0), 50);
+            setTimeout(() => {
+                playBlockFromWord(nextBlock, 0);
+                skipInProgressRef.current = false;
+            }, 50);
         }
     }, [isPlaying, isPaused, playBlockFromWord, updateWordStyles, clearFallbackTimers]);
 
     /** Skip to the previous block (or restart current block) */
     const skipBackward = useCallback(() => {
-        if (!isPlaying) return;
+        if (!isPlaying || skipInProgressRef.current) return;
         const current = activeBlockIndexRef.current;
         // If we're past the first word, restart current block; otherwise go to previous
         const targetBlock = currentWordIndexRef.current > 2 ? current : Math.max(0, current - 1);
 
+        skipInProgressRef.current = true;
         clearFallbackTimers();
         currentUtteranceIdRef.current = ++utteranceIdRef.current;
         window.speechSynthesis.cancel();
@@ -853,13 +868,19 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
             currentWordIndexRef.current = 0;
             updateWordStyles(targetBlock, 0);
             blocksRef.current[targetBlock]?.element.scrollIntoView({ behavior: "smooth", block: "center" });
+            skipInProgressRef.current = false;
         } else {
             // 50ms delay: Web Speech API requires a tick after cancel() before new speak()
-            setTimeout(() => playBlockFromWord(targetBlock, 0), 50);
+            setTimeout(() => {
+                playBlockFromWord(targetBlock, 0);
+                skipInProgressRef.current = false;
+            }, 50);
         }
     }, [isPlaying, isPaused, playBlockFromWord, updateWordStyles, clearFallbackTimers]);
 
-    const value: VoiceReadingContextType = {
+    const noVoicesAtAll = availableVoices.length === 0;
+
+    const value: VoiceReadingContextType = useMemo(() => ({
         isPlaying,
         isPaused,
         activeBlockIndex,
@@ -870,7 +891,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         playbackRate,
         volume,
         hasLocaleVoices,
-        noVoicesAtAll: availableVoices.length === 0,
+        noVoicesAtAll,
         showNoVoicesWarning,
         dismissNoVoicesWarning,
         toggleSpeech,
@@ -882,7 +903,13 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         stopSpeech,
         skipForward,
         skipBackward,
-    };
+    }), [
+        isPlaying, isPaused, activeBlockIndex, currentWordIndex, totalBlocks,
+        availableVoices, selectedVoiceIndex, playbackRate, volume,
+        hasLocaleVoices, noVoicesAtAll, showNoVoicesWarning, dismissNoVoicesWarning,
+        toggleSpeech, pauseSpeech, resumeSpeech, setPlaybackRate, setVoice, setVolume,
+        stopSpeech, skipForward, skipBackward,
+    ]);
 
     return (
         <VoiceReadingContext.Provider value={value}>
