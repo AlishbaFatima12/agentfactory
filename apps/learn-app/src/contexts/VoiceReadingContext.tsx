@@ -658,7 +658,7 @@ export function VoiceReadingProvider({ children, locale = "en" }: { children: Re
         // Use prefix + length as fingerprint to avoid false-matches on SPA navigation.
         const article = document.querySelector("article");
         const text = article?.textContent || "";
-        const contentHash = text.slice(0, 200) + "|" + text.length;
+        const contentHash = window.location.pathname + "|" + text.slice(0, 200) + "|" + text.length;
         let blocks: TextBlock[];
         if (contentHash === cachedContentHashRef.current && blocksRef.current.length > 0) {
             blocks = blocksRef.current;

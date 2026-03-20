@@ -9,7 +9,7 @@
 import React, { useState, useMemo, useEffect, useRef } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { useVoiceReading } from "@/contexts/VoiceReadingContext";
-import { LOCALE_LANG_MAP, LOCALE_DISPLAY_NAMES } from "@/utils/voiceLocaleConfig";
+import { LOCALE_LANG_MAP, LOCALE_DISPLAY_NAMES, DROPDOWN_HEADERS } from "@/utils/voiceLocaleConfig";
 import {
     Info, X, Mic, ChevronDown, Volume2, VolumeX, Volume1,
     Play, Pause, Square, SkipBack, SkipForward, AlertTriangle, Check,
@@ -17,13 +17,6 @@ import {
 
 /** Session key to remember if user dismissed the install hint */
 const HINT_DISMISSED_KEY = "voice-install-hint-dismissed";
-
-/** Localized dropdown headers — see voiceLocaleConfig.ts MAINTENANCE note when adding locales */
-const DROPDOWN_HEADERS: Record<string, string> = {
-    en: "English Voices",
-    ur: "اردو آوازیں",
-    "zh-Hans": "中文语音",
-};
 
 /** Speed presets for playback rate chips */
 const SPEED_PRESETS = [0.75, 1.0, 1.25, 1.5, 2.0];
