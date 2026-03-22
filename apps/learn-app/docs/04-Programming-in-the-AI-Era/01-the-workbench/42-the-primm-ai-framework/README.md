@@ -33,8 +33,6 @@ This matters even more in the context of this book. You are learning to build AI
 
 This chapter introduces **PRIMM-AI+** — the learning operating system that governs every programming chapter in this book. Not a suggestion. Not a study tip. An operating system: a comprehension-first, scaffold-rich, verification-driven curriculum that determines what you do, in what order, with what tools, at every stage of learning. 
 
-![five_stages](../../../../static/img/primm-five-stages.png)
-
 The full name unpacks to Predict, Run, Investigate, Modify, Make _with AI_ — enhanced with AI-free checkpoints, mastery gates, confidence scoring, and a verification ladder. Every programming chapter from Chapter 45 onward runs on this system.
 
 Built on research-tested methods from computing education (493 students, 13 schools), PRIMM-AI+ teaches you to read and understand code before you ever try to write it — and integrates AI coding assistants as learning partners at every stage with clear boundaries. Here is what the process looks like in practice: you see a complete program, predict what it will do before running it, run it and compare the output to your prediction, investigate how it works by tracing variables and asking questions, modify it to change its behavior, and finally build something new from a specification you write. **The rhythm is always the same. The concepts change. The method never does.**
@@ -55,12 +53,6 @@ Before you dive into the lessons, here is the complete picture. You do not need 
 
 
 **The progression is deliberate:** you understand before you change, and you change before you create. Every programming chapter from Chapter 45 onward follows this same rhythm.
-
-![inversion](../../../../static/img/primm-inversion.png)
-
-![gap](../../../../static/img/prediction-reality-gap.png)
-
-
 
 ---
 

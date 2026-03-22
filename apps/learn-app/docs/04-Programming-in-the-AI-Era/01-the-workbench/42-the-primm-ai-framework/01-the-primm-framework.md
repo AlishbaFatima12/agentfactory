@@ -109,7 +109,11 @@ PRIMM inverts this. It starts at the beginning -- **reading** -- and works towar
 4. **Modify** -- Change the code to alter its behavior in targeted ways
 5. **Make** -- Write a new program that applies what you learned
 
+![five_stages](../../../../static/img/primm-five-stages.png)
+
 **Four of the five stages build understanding. Only the last one involves writing from scratch.** This is not an accident. It reflects what the research showed: comprehension is the foundation that makes production possible.
+
+![inversion](../../../../static/img/primm-inversion.png)
 
 ---
 
@@ -175,7 +179,11 @@ Compare your prediction to the actual result. Three outcomes are possible:
 - **Close but not exact.** Perhaps you predicted the right content but missed the comma or the exclamation mark. The gap reveals what your mental model missed.
 - **Significantly wrong.** This is not failure -- it is the most valuable outcome. The gap between your prediction and reality is exactly where learning happens. **Every wrong prediction exposes an assumption you did not know you were making.**
 
-**The prediction-reality gap is the engine of PRIMM.** Without the prediction step, running code teaches you nothing -- you see output and think "okay." With the prediction step, you have a hypothesis to test. That transforms passive observation into active learning.
+**The prediction-reality gap is the engine of PRIMM.** 
+
+![gap](../../../../static/img/prediction-reality-gap.png)
+
+Without the prediction step, running code teaches you nothing -- you see output and think "okay." With the prediction step, you have a hypothesis to test. That transforms passive observation into active learning.
 
 ### Stage 3: Investigate
 
