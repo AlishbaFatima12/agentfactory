@@ -47,6 +47,7 @@ OLD:  Write syntax → Build things → Maybe test → Ship
 
 NEW:  Requirements → Types → Test Criteria & Failing Tests → Generate → Verify & Iterate → Ship
 ```
+![old_vs_new](../../static/img/old-vs-new.png)
 
 This workflow is the programmer's version of the [10-80-10 rule](https://agentfactory.panaversity.org/docs/thesis#the-10-80-10-rule-the-operating-rhythm-of-the-ai-workforce) from the thesis: humans own the first 10% — defining intent, writing type contracts, and specifying correctness criteria as failing tests; AI handles the middle 80% — generating the implementation; humans own the final 10% — verifying behavior, diagnosing failures, and deciding when it ships.
 
@@ -60,6 +61,8 @@ These six steps are not sequential phases you hand off and forget. They are a lo
 | Generate                      | AI writes the code to pass your checks                                                   | AI        | Leads: produces full implementation            |
 | Verify & Iterate              | Run your checks, read failures, debug, refine, repeat until everything passes            | Human     | Assists: explains errors, refines output       |
 | Ship                          | Save your work, automated pipeline verifies, deploy                                      | Human     | Assists: security review, changelog            |
+
+![tdg_cycle](../../static/img/tdg-cycle.png)
 
 The key insight: you never start from a blank page, and you never accept output blindly. You start with a requirement and end with a passing test suite. Everything in between is a collaboration -- but the intent, the correctness criteria, and the final verification are yours.
 
@@ -149,6 +152,8 @@ You do not build nine throwaway exercises. You build SmartNotes once and grow it
 Each phase produces a working version of SmartNotes. By the end of Phase 8, you have a polished, portfolio-grade project that demonstrates every skill you have learned. Then Phase 9 proves you can do it again -- on a brand-new project, from scratch, without guidance.
 
 ## The Nine Phases
+
+![nine_phases](../../static/img/nine-phases.png)
 
 Part 4 is organized into nine phases. Each phase gives you a new capability, and your role evolves from passive reader to full system architect. The TDG cycle runs through every phase -- what changes is how much of it you own and how deeply you can specify.
 
