@@ -9,7 +9,7 @@ sidebar_position: 0
 
 > Your role: **Reader** — "I can understand what AI generates"
 
-Before you can specify, you must be able to read. Phase 1 begins with the PRIMM-AI learning framework — the method you will use throughout every lesson in Parts 4 and 5. It then presents the Ten Axioms of AI-Driven Development, installs your development tools (a package manager, a type checker, a code formatter, a test runner, and Git — each explained when you first use it), introduces **SmartNotes**, and teaches you to read Python from scratch using the Predict-Run-Investigate method. You finish by performing your first code review on a real SmartNotes module and running your first TDG cycle: define a requirement, write a test, prompt AI to implement, verify it passes.
+Before you can specify, you must be able to read. Phase 1 begins with the PRIMM-AI+ learning framework — the method you will use throughout every lesson in Parts 4 and 6. It then presents the Ten Axioms of AI-Driven Development, installs your development tools (a package manager, a type checker, a code formatter, a test runner, and Git — each explained when you first use it), introduces **SmartNotes**, and teaches you to read Python from scratch using the Predict-Run-Investigate method. You finish by performing your first code review on a real SmartNotes module and running your first TDG cycle: define a requirement, write a test, prompt AI to implement, verify it passes.
 
 | #  | Chapter | Key Focus |
 |----|---------|-----------|
