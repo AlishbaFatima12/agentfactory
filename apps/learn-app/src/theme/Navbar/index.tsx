@@ -165,9 +165,10 @@ export default function Navbar() {
                   <SearchBar enableShortcut={false} />
                 </div>
 
-                {/* Mobile Language Dropdown */}
-                <div className="px-4 py-3 border-b border-border shrink-0">
+                {/* Mobile Language Dropdown + Theme Toggle */}
+                <div className="px-4 py-3 border-b border-border shrink-0 flex items-center gap-2">
                   <LocaleDropdown />
+                  <ModeToggle />
                 </div>
 
                 {/* Mobile Listen Button */}
