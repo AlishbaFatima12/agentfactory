@@ -107,8 +107,10 @@ export default function Navbar() {
 
           {/* RIGHT: Actions */}
           <div className="flex items-center gap-2">
-            {/* Theme Toggle - Already uses Button variant="ghost" size="icon" */}
-            <ModeToggle />
+            {/* Theme Toggle — desktop only; mobile shows in Sheet */}
+            <div className="hidden docs:block">
+              <ModeToggle />
+            </div>
 
             {/* Listen button — doc pages only */}
             {voiceCtx && isDocPage && (
