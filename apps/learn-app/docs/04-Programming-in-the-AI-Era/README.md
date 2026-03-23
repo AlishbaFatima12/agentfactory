@@ -5,6 +5,8 @@ title: "Part 4: Programming in the AI Era"
 
 # Part 4: Programming in the AI Era
 
+![why_learn_programming](../../static/img/why-learn-programing.png)
+
 If AI can write code, why should you learn programming?
 
 It is the most common question in 2026. And the answer is counterintuitive: programming has become **more important, not less** -- but what programming means has fundamentally changed.
