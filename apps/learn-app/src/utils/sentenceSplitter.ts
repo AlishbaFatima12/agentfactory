@@ -24,17 +24,14 @@ const ABBREVIATIONS = new Set([
   "prof",
   "sr",
   "jr",
-  "st",
   "vs",
   "etc",
   "approx",
   "dept",
-  "est",
   "govt",
   "inc",
   "corp",
   "ltd",
-  "co",
   "jan",
   "feb",
   "mar",
@@ -47,12 +44,7 @@ const ABBREVIATIONS = new Set([
   "nov",
   "dec",
   "fig",
-  "eq",
-  "no",
   "vol",
-  "ch",
-  "sec",
-  "pt",
 ]);
 
 /** Patterns like U.S., A.I., e.g., i.e. — letters with dots between them */
@@ -171,12 +163,10 @@ export function createSentenceRange(
     currentOffset = nodeEnd;
   }
 
-  // If we set start but ran out of nodes before end, extend to last node
-  if (startSet) {
-    const lastNode = walker.currentNode || element.lastChild;
-    if (lastNode && lastNode.nodeType === Node.TEXT_NODE) {
-      range.setEnd(lastNode, (lastNode as Text).length);
-    }
+  // If we set start but ran out of nodes before end, extend to the last
+  // text node we actually visited (node is the last one from the loop).
+  if (startSet && node) {
+    range.setEnd(node, node.length);
     return range;
   }
 

@@ -147,20 +147,39 @@ export function VoiceControlDock() {
             <Info size={18} />
             <div>
               <strong>
-                Listen in {LOCALE_DISPLAY_NAMES[currentLocale] || currentLocale}
+                {noVoicesAtAll
+                  ? "No text-to-speech voices found"
+                  : `Listen in ${LOCALE_DISPLAY_NAMES[currentLocale] || currentLocale}`}
               </strong>
               <p>
-                Use the free{" "}
-                <a
-                  href="https://chromewebstore.google.com/detail/voice-out-text-to-speech/jmodgcjbfcmningbahdmedofbabejbba"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Voice Out
-                </a>{" "}
-                extension to read this page aloud. Already installed? Click the{" "}
-                <strong>Voice Out icon</strong> near the address bar or press{" "}
-                <kbd>Option+P</kbd>.
+                {noVoicesAtAll ? (
+                  <>
+                    Check your OS language settings to enable text-to-speech
+                    voices, or use the free{" "}
+                    <a
+                      href="https://chromewebstore.google.com/detail/voice-out-text-to-speech/jmodgcjbfcmningbahdmedofbabejbba"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Voice Out
+                    </a>{" "}
+                    extension.
+                  </>
+                ) : (
+                  <>
+                    Use the free{" "}
+                    <a
+                      href="https://chromewebstore.google.com/detail/voice-out-text-to-speech/jmodgcjbfcmningbahdmedofbabejbba"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Voice Out
+                    </a>{" "}
+                    extension to read this page aloud. Already installed? Click
+                    the <strong>Voice Out icon</strong> near the address bar or
+                    press <kbd>Option+P</kbd>.
+                  </>
+                )}
               </p>
             </div>
             <button

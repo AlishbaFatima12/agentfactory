@@ -1462,6 +1462,11 @@ article {
   color: #1e293b;
 }
 
+[data-theme="dark"] ::highlight(voice-sentence) {
+  background-color: #1e3a5f;
+  color: #e2e8f0;
+}
+
 /* ============================================================================
    VOICE CONTROL DOCK — Theme-Matched Floating Player
    ============================================================================ */
