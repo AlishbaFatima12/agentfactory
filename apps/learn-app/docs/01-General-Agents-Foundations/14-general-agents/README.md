@@ -17,6 +17,31 @@ What's a General Agent? An AI that observes, orients, decides, and acts—the OO
 
 The goal is **not to build a supercomputer**, but to establish Claude as your **collaborative thinking partner** for everything—and to build Skills that can become products.
 
+## The Claude Platform at a Glance
+
+Before we dive into Claude Code and Cowork, take a moment to see the full landscape.
+
+Claude in 2026 is not a single tool. It is **eight integrated modes**, each designed for a different kind of work. Most people only ever use Chat. This book focuses on the modes that build Digital FTEs: **Cowork, Skills, Plugins, and Connectors**, the professional-grade tools that turn domain expertise into deployable AI employees.
+
+![How to Use Claude AI — The Eight Modes](/img/ch14-how-to-use-claude-ai.png)
+
+*Figure 14.1 — How to Use Claude AI: The Eight Modes*
+
+| Mode | What It Does | Where You'll Learn It |
+|------|-------------|----------------------|
+| **Chat** | Conversational Q&A — where most people start and stay | Prerequisite |
+| **Cowork** | AI coworker that works on your actual files on your machine | **Section D** |
+| **Projects** | Save prompts, files, and context in one persistent workspace | Chapter 15 |
+| **Artifacts** | Interactive apps, dashboards, and tools built inside the chat | Part 2 exercises |
+| **Excel** | Claude inside your spreadsheets — reads data, writes formulas, builds charts | Part 3 |
+| **Connectors** | Link Claude to Gmail, Drive, Slack, Notion, Figma, and 50+ more | **Section B** (MCP) |
+| **Plugins** | Pre-built agent packs for specific roles — sales, marketing, legal, finance | **Section C** + Part 3 |
+| **Skills** | Reusable task templates that give Claude specialist knowledge | **Section B** |
+
+**Why this matters:** When you build a Digital FTE in this book, you are not building a chatbot. You are composing Skills, wiring Connectors, packaging Plugins, and deploying through Cowork or Claude Code. The infographic above is your map. Return to it whenever you need to remember where a capability lives.
+
+**What this chapter covers:** Sections A through C teach Claude Code (the developer's terminal), Section D teaches Cowork (the knowledge worker's desktop), and Section E ties it to business strategy. By the end, you will have used at least 5 of these 8 modes hands-on.
+
 ## 📚 Teaching Aid
 
 ## What You'll Learn
