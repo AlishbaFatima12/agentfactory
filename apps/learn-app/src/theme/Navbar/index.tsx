@@ -110,8 +110,8 @@ export default function Navbar() {
             {/* Theme Toggle - Already uses Button variant="ghost" size="icon" */}
             <ModeToggle />
 
-            {/* Listen button — doc pages only, hidden when voice context unavailable */}
-            {voiceCtx && (
+            {/* Listen button — doc pages only */}
+            {voiceCtx && isDocPage && (
               <Button
                 variant="ghost"
                 size="icon"

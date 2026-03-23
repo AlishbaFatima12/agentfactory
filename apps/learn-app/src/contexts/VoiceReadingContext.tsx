@@ -203,6 +203,7 @@ export function VoiceReadingProvider({
     }
     currentUtteranceIdRef.current = ++utteranceIdRef.current;
     window.speechSynthesis.cancel();
+    window.speechSynthesis.cancel();
     clearHighlights();
     setIsPlaying(false);
     setIsPaused(false);
@@ -593,7 +594,7 @@ export function VoiceReadingProvider({
 
     if (currentBlock < 0) return;
 
-    // Increment utterance ID to invalidate the current utterance's callbacks
+    // Increment utterance ID FIRST to invalidate all pending callbacks
     currentUtteranceIdRef.current = ++utteranceIdRef.current;
 
     if (chromeKeepAliveRef.current) {
@@ -601,14 +602,20 @@ export function VoiceReadingProvider({
       chromeKeepAliveRef.current = null;
     }
 
+    // Double cancel: Chrome sometimes needs two cancel() calls to fully
+    // stop speech when changing voice. First cancel triggers onend/onerror
+    // (which are guarded by utteranceId), second ensures queue is empty.
+    window.speechSynthesis.cancel();
     window.speechSynthesis.cancel();
 
-    // 200ms delay: Chrome/Firefox can wipe out speak() calls that follow
-    // directly after cancel(). 50ms was too short and caused overlapping
-    // utterances on voice change.
+    // 250ms delay: Chrome/Firefox can wipe out speak() calls that follow
+    // directly after cancel().
     setTimeout(() => {
+      // Re-check utterance ID — if another restart happened during the delay,
+      // this one is stale and should not proceed
+      if (currentUtteranceIdRef.current !== utteranceIdRef.current) return;
       playSentence(currentBlock, Math.max(0, currentSentence));
-    }, 200);
+    }, 250);
   }, [isPlaying, isPaused, playSentence]);
 
   const setPlaybackRate = useCallback(
