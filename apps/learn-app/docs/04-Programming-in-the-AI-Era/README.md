@@ -137,7 +137,7 @@ Steps 1--3 build your reading fluency. Steps 4--5 are the TDG cycle. By the end 
 Notice that you _see_ and _read_ before you are asked to _do_ anything. This is deliberate. You will not be thrown into writing tests or specifying types without first understanding what they look like and how they work. Every new concept is shown to you, explained, and practiced through prediction exercises before you use it yourself.
 :::
 
-## The SmartNotes Project
+## Your SmartNotes Project For Part 4
 
 **SmartNotes is a Personal AI Knowledge Base** -- your own note-taking tool that understands what you wrote. You save notes, tag and categorize them, search by meaning (not just keywords), and ask AI to summarize or connect ideas across notes. By the end of Phase 8, SmartNotes is a complete application with a command-line tool, a web API, a database, AI-powered search, and an automated pipeline that verifies every change -- a portfolio-grade project you built yourself.
 
