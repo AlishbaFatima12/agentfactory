@@ -31,7 +31,7 @@ export default function Navbar() {
   const { siteConfig } = useDocusaurusContext();
   const location = useLocation();
   const secondaryMenu = useNavbarSecondaryMenu();
-  const isDocPage = location.pathname.startsWith("/docs");
+  const isDocPage = /^(\/[a-z]{2}(-[A-Za-z]+)?)?\/docs/.test(location.pathname);
   const isHomepage = location.pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
