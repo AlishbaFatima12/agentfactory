@@ -60,25 +60,26 @@ const ACRONYM_PATTERN = /^[a-zA-Z]\.([a-zA-Z]\.)+$/;
  * - Abbreviations (Mr., Dr., U.S., etc.) do NOT trigger splits
  * - If no sentence boundaries found, returns the full text as one sentence
  */
+/** Sentence-ending punctuation (module-level to avoid recompilation per call) */
+const SENTENCE_END_RE = /([。！？۔؟])|([.!?]+)(?:\s+|$)/g;
+
 export function splitIntoSentences(text: string): Sentence[] {
   if (!text || !text.trim()) return [];
 
   const sentences: Sentence[] = [];
   let sentenceStart = 0;
 
-  // Regex for sentence-ending punctuation:
-  // Group 1: CJK/Urdu terminators (no whitespace required)
-  // Group 2: Western terminators (. ! ?) followed by whitespace or end
-  const SENTENCE_END = /([。！？۔؟])|([.!?]+)(?:\s+|$)/g;
+  // Reset lastIndex since the regex has the global flag
+  SENTENCE_END_RE.lastIndex = 0;
 
   let match;
-  while ((match = SENTENCE_END.exec(text)) !== null) {
+  while ((match = SENTENCE_END_RE.exec(text)) !== null) {
     const matchEnd = match.index + match[0].length;
 
     // For western periods, check if it's an abbreviation
     if (match[2] && match[2] === ".") {
       const beforePeriod = text.slice(sentenceStart, match.index);
-      const lastWord = beforePeriod.split(/\s+/).pop() || "";
+      const lastWord = beforePeriod.match(/\S+$/)?.[0] || "";
 
       // Skip abbreviations: "Dr.", "Mr.", etc.
       if (ABBREVIATIONS.has(lastWord.toLowerCase())) continue;
