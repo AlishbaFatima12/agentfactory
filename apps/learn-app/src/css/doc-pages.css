@@ -1438,7 +1438,7 @@ article {
 /* Word-level styles for voice reading — all text stays readable */
 .voice-word {
   display: inline;
-  transition: color 150ms ease, background 150ms ease;
+  transition: color 60ms ease, background 60ms ease;
   position: relative;
 }
 
@@ -1468,15 +1468,16 @@ article {
   border-left: 3px solid transparent;
 }
 
-/* Active block — currently being read (left accent border) */
+/* Active block — currently being read (accent border + background) */
 .voice-block--active {
   border-left-color: var(--primary);
   background: var(--accent);
+  border-radius: 4px;
 }
 
-/* Inactive blocks — fully readable, subtle dim to focus on active block */
+/* Inactive blocks — subtle dim to focus attention on active block */
 .voice-block--inactive {
-  opacity: 0.75;
+  opacity: 0.6;
 }
 
 /* ============================================================================
@@ -3569,4 +3570,18 @@ body.practice-split-active article {
   .practice-resize-handle {
     display: none;
   }
+}
+
+/* ============================================================================
+   NAVBAR LISTEN BUTTON — active state
+   ============================================================================ */
+
+.navbar-listen-active {
+  color: #3b82f6 !important;
+  background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+[data-theme='dark'] .navbar-listen-active {
+  color: #60a5fa !important;
+  background-color: rgba(96, 165, 250, 0.15) !important;
 }
