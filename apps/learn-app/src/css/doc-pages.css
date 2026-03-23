@@ -1431,34 +1431,8 @@ article {
 }
 
 /* ============================================================================
-   VOICE READING - Word-by-word highlighting animation
+   VOICE READING - Sentence-level highlighting via CSS Custom Highlight API
    ============================================================================ */
-
-/* Base word span style */
-/* Word-level styles for voice reading — all text stays readable */
-.voice-word {
-  display: inline;
-  transition: color 60ms ease, background 60ms ease;
-  position: relative;
-}
-
-/* Read words — already spoken (subtle color change) */
-.voice-word--read {
-  color: var(--muted-foreground);
-}
-
-/* Current word — being spoken (highlighted background) */
-.voice-word--current {
-  color: var(--primary-foreground);
-  background: var(--primary);
-  padding: 0 2px;
-  display: inline;
-}
-
-/* Pending words — not yet spoken (normal text, fully readable) */
-.voice-word--pending {
-  color: inherit;
-}
 
 /* Block-level styles for reading focus */
 [data-voice-block] {
@@ -1468,16 +1442,24 @@ article {
   border-left: 3px solid transparent;
 }
 
-/* Active block — currently being read (accent border + background) */
+/* Active block — currently being read (accent border) */
 .voice-block--active {
   border-left-color: var(--primary);
-  background: var(--accent);
   border-radius: 4px;
 }
 
 /* Inactive blocks — subtle dim to focus attention on active block */
 .voice-block--inactive {
   opacity: 0.6;
+}
+
+/* Sentence-level highlighting via CSS Custom Highlight API.
+   Applied to the currently spoken sentence within the active block.
+   No DOM mutation — uses Range objects + CSS.highlights.
+   Note: ::highlight only supports color, background-color, text-decoration, text-shadow */
+::highlight(voice-sentence) {
+  background-color: #bfdbfe;
+  color: #1e293b;
 }
 
 /* ============================================================================

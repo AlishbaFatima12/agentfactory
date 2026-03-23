@@ -1,9 +1,9 @@
 /**
  * VoiceReadingContext
  *
- * Provides word-by-word reading with speech synthesis and word highlighting.
- * Tracks the currently spoken word and provides methods to control playback.
- * Supports pause/resume and real-time volume/speed changes that continue from current word.
+ * Provides sentence-level reading with speech synthesis and CSS Highlight API highlighting.
+ * Each sentence is spoken as a separate utterance, eliminating word-level sync drift.
+ * Supports pause/resume and real-time volume/speed changes that continue from current sentence.
  */
 
 import React, {
@@ -21,7 +21,7 @@ interface VoiceReadingContextType {
   isPlaying: boolean;
   isPaused: boolean;
   activeBlockIndex: number;
-  currentWordIndex: number;
+  currentSentenceIndex: number;
 
   // Voice settings
   availableVoices: SpeechSynthesisVoice[];
@@ -64,21 +64,17 @@ export function useVoiceReadingOptional() {
   return useContext(VoiceReadingContext);
 }
 
-interface WordBoundary {
-  index: number;
-  start: number;
-  end: number;
-  word: string;
-}
-
 interface TextBlock {
   element: Element;
   text: string;
-  originalHtml: string;
-  wordBoundaries: WordBoundary[];
+  sentences: import("@/utils/sentenceSplitter").Sentence[];
 }
 
 import { LOCALE_LANG_MAP, PREFERRED_VOICES } from "@/utils/voiceLocaleConfig";
+import {
+  splitIntoSentences,
+  createSentenceRange,
+} from "@/utils/sentenceSplitter";
 
 /**
  * Tokenize text into "words" for highlighting.
@@ -144,7 +140,7 @@ export function VoiceReadingProvider({
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [activeBlockIndex, setActiveBlockIndex] = useState(-1);
-  const [currentWordIndex, setCurrentWordIndex] = useState(-1);
+  const [currentSentenceIndex, setCurrentSentenceIndex] = useState(-1);
 
   const [availableVoices, setAvailableVoices] = useState<
     SpeechSynthesisVoice[]
@@ -166,9 +162,9 @@ export function VoiceReadingProvider({
 
   // Track current position with refs
   const activeBlockIndexRef = useRef(-1);
-  const currentWordIndexRef = useRef(-1);
+  const currentSentenceIndexRef = useRef(-1);
 
-  // Synchronous pause guard — checked in onboundary and fallback to skip updates while paused
+  // Synchronous pause guard — checked in callbacks to skip updates while paused
   const isPausedRef = useRef(false);
 
   // Chrome keepalive: re-calls pause() every 10s to prevent 15-second auto-resume
@@ -183,30 +179,54 @@ export function VoiceReadingProvider({
   // Guard against rapid skip clicks queuing multiple utterances
   const skipInProgressRef = useRef(false);
 
-  // Timer-based fallback for browsers that don't fire onboundary (Safari, iOS, etc.)
-  const fallbackTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const fallbackDelayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(
-    null,
-  );
-  const boundaryFiredRef = useRef(false);
-
-  // Polling interval for extension-injected voices (Task 3)
+  // Polling interval for extension-injected voices
   const voicePollRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  /**
-   * Clear all fallback timers to prevent memory leaks and orphaned timeouts.
-   * Centralized cleanup function used across all handlers.
-   * Empty dependency array is safe: only accesses stable refs, not state or props.
-   */
-  const clearFallbackTimers = useCallback(() => {
-    if (fallbackTimerRef.current) {
-      clearTimeout(fallbackTimerRef.current);
-      fallbackTimerRef.current = null;
+  // CSS Custom Highlight API support detection
+  const supportsHighlightAPI = useRef(
+    typeof window !== "undefined" &&
+      typeof CSS !== "undefined" &&
+      "highlights" in CSS,
+  );
+
+  /** Clear CSS Highlight API highlights */
+  const clearHighlights = useCallback(() => {
+    if (typeof CSS !== "undefined" && "highlights" in CSS) {
+      CSS.highlights.delete("voice-sentence");
     }
-    if (fallbackDelayTimerRef.current) {
-      clearTimeout(fallbackDelayTimerRef.current);
-      fallbackDelayTimerRef.current = null;
-    }
+  }, []);
+
+  /** Highlight a sentence within a block element using CSS Custom Highlight API */
+  const updateSentenceHighlight = useCallback(
+    (
+      element: Element,
+      sentence: { startOffset: number; endOffset: number },
+    ) => {
+      if (!supportsHighlightAPI.current) return;
+      const range = createSentenceRange(
+        element,
+        sentence.startOffset,
+        sentence.endOffset,
+      );
+      if (!range) return;
+      const highlight = new Highlight(range);
+      CSS.highlights.set("voice-sentence", highlight);
+    },
+    [],
+  );
+
+  /** Update block-level active/inactive styling */
+  const updateBlockStyles = useCallback((blockIdx: number) => {
+    document.querySelectorAll("[data-voice-block]").forEach((el) => {
+      const idx = parseInt(el.getAttribute("data-voice-block") || "-1", 10);
+      if (idx === blockIdx) {
+        el.classList.add("voice-block--active");
+        el.classList.remove("voice-block--inactive");
+      } else {
+        el.classList.remove("voice-block--active");
+        el.classList.add("voice-block--inactive");
+      }
+    });
   }, []);
 
   // Load voices on mount, with polling fallback for extension-injected voices
@@ -286,8 +306,7 @@ export function VoiceReadingProvider({
     return () => {
       window.speechSynthesis.cancel();
       setIsPlaying(false);
-      // Clear all timers on unmount
-      clearFallbackTimers();
+      clearHighlights();
       if (chromeKeepAliveRef.current) {
         clearInterval(chromeKeepAliveRef.current);
         chromeKeepAliveRef.current = null;
@@ -297,7 +316,7 @@ export function VoiceReadingProvider({
         voicePollRef.current = null;
       }
     };
-  }, [locale, clearFallbackTimers]);
+  }, [locale, clearHighlights]);
 
   const selectedVoice = availableVoices[selectedVoiceIndex] || null;
 
@@ -319,8 +338,8 @@ export function VoiceReadingProvider({
   }, [activeBlockIndex]);
 
   useEffect(() => {
-    currentWordIndexRef.current = currentWordIndex;
-  }, [currentWordIndex]);
+    currentSentenceIndexRef.current = currentSentenceIndex;
+  }, [currentSentenceIndex]);
 
   useEffect(() => {
     isPausedRef.current = isPaused;
@@ -368,24 +387,13 @@ export function VoiceReadingProvider({
         return;
       }
 
-      const wordBoundaries: WordBoundary[] = [];
-      const tokens = tokenizeText(text);
-      tokens.forEach((token, wordIdx) => {
-        wordBoundaries.push({
-          index: wordIdx,
-          start: token.start,
-          end: token.end,
-          word: token.word,
-        });
-      });
-
-      if (wordBoundaries.length > 0) {
+      const sentences = splitIntoSentences(text);
+      if (sentences.length > 0) {
         element.setAttribute("data-voice-block", String(blocks.length));
         blocks.push({
           element,
           text,
-          originalHtml: element.innerHTML,
-          wordBoundaries,
+          sentences,
         });
       }
     });
@@ -393,132 +401,54 @@ export function VoiceReadingProvider({
     return blocks;
   }, []);
 
-  const wrapWordsInBlock = useCallback(
-    (block: TextBlock, blockIndex: number) => {
-      const { element } = block;
-      const tokens = block.wordBoundaries;
-      const fragment = document.createDocumentFragment();
-
-      tokens.forEach((wb, idx) => {
-        const span = document.createElement("span");
-        span.className = "voice-word";
-        span.setAttribute("data-word-index", String(idx));
-        span.setAttribute("data-block-index", String(blockIndex));
-        // For CJK characters, no trailing space; for space-separated words, add space
-        const nextToken = tokens[idx + 1];
-        const needsSpace = nextToken ? nextToken.start > wb.end : false;
-        span.textContent = wb.word + (needsSpace ? " " : "");
-        fragment.appendChild(span);
-      });
-
-      element.innerHTML = "";
-      element.appendChild(fragment);
-    },
-    [],
-  );
-
-  const unwrapWords = useCallback(() => {
-    const wrappedBlocks = document.querySelectorAll("[data-voice-block]");
-    wrappedBlocks.forEach((block) => {
-      const stored = blocksRef.current.find(
-        (_, idx) => block.getAttribute("data-voice-block") === String(idx),
-      );
-
-      if (stored) {
-        block.innerHTML = stored.originalHtml;
-      }
-      block.removeAttribute("data-voice-block");
-      block.classList.remove("voice-block--active", "voice-block--inactive");
-    });
-  }, []);
-
-  const updateWordStyles = useCallback((blockIdx: number, wordIdx: number) => {
-    document.querySelectorAll("[data-voice-block]").forEach((el, idx) => {
-      if (idx === blockIdx) {
-        el.classList.add("voice-block--active");
-        el.classList.remove("voice-block--inactive");
-      } else {
-        el.classList.add("voice-block--inactive");
-        el.classList.remove("voice-block--active");
-        // Clear word highlights in completed/inactive blocks —
-        // mark all words as "read" so no word keeps the current highlight
-        el.querySelectorAll(".voice-word").forEach((wordEl) => {
-          wordEl.classList.remove("voice-word--current", "voice-word--pending");
-          wordEl.classList.add("voice-word--read");
-        });
-      }
-    });
-
-    const activeBlock = document.querySelector(
-      `[data-voice-block="${blockIdx}"]`,
-    );
-    if (!activeBlock) return;
-
-    activeBlock.querySelectorAll(".voice-word").forEach((wordEl) => {
-      const wIdx = parseInt(wordEl.getAttribute("data-word-index") || "-1", 10);
-      wordEl.classList.remove(
-        "voice-word--read",
-        "voice-word--current",
-        "voice-word--pending",
-      );
-
-      if (wIdx < wordIdx) {
-        wordEl.classList.add("voice-word--read");
-      } else if (wIdx === wordIdx) {
-        wordEl.classList.add("voice-word--current");
-      } else {
-        wordEl.classList.add("voice-word--pending");
-      }
-    });
-  }, []);
-
   /**
-   * Play speech for a specific block starting from a specific word
+   * Play one sentence at a time. When a sentence finishes, advance to the next.
+   * When all sentences in a block are done, advance to the next block.
    */
-  const playBlockFromWord = useCallback(
-    (blockIndex: number, startWordIndex: number) => {
+  const playSentence = useCallback(
+    (blockIndex: number, sentenceIndex: number) => {
       const blocks = blocksRef.current;
 
-      // NOTE: Do NOT call cancel() here. Chrome/Firefox wipe out speak() calls
-      // that follow directly after cancel() (needs ~500ms gap). The utterance ID
-      // guard in onend is sufficient to prevent stale callbacks from re-entering.
-      // See: https://bugzilla.mozilla.org/show_bug.cgi?id=1522074
-
       if (blockIndex >= blocks.length) {
+        // Playback complete
         if (chromeKeepAliveRef.current) {
           clearInterval(chromeKeepAliveRef.current);
           chromeKeepAliveRef.current = null;
         }
+        clearHighlights();
         setIsPlaying(false);
         setIsPaused(false);
         setActiveBlockIndex(-1);
         activeBlockIndexRef.current = -1;
-        setCurrentWordIndex(-1);
-        currentWordIndexRef.current = -1;
-        unwrapWords();
+        setCurrentSentenceIndex(-1);
+        currentSentenceIndexRef.current = -1;
+        // Remove block styling
+        document.querySelectorAll("[data-voice-block]").forEach((el) => {
+          el.classList.remove("voice-block--active", "voice-block--inactive");
+        });
         return;
       }
 
       const block = blocks[blockIndex];
 
-      const remainingBoundaries = block.wordBoundaries.filter(
-        (wb) => wb.index >= startWordIndex,
-      );
-      if (remainingBoundaries.length === 0) {
-        playBlockFromWord(blockIndex + 1, 0);
+      if (sentenceIndex >= block.sentences.length) {
+        // All sentences in this block done — advance to next block
+        playSentence(blockIndex + 1, 0);
         return;
       }
 
-      const firstWordStart = remainingBoundaries[0].start;
-      const remainingText = block.text.substring(firstWordStart);
+      const sentence = block.sentences[sentenceIndex];
 
+      // Update state
       setActiveBlockIndex(blockIndex);
       activeBlockIndexRef.current = blockIndex;
-      setCurrentWordIndex(startWordIndex);
-      currentWordIndexRef.current = startWordIndex;
-      updateWordStyles(blockIndex, startWordIndex);
+      setCurrentSentenceIndex(sentenceIndex);
+      currentSentenceIndexRef.current = sentenceIndex;
+      updateBlockStyles(blockIndex);
+      updateSentenceHighlight(block.element, sentence);
 
-      if (startWordIndex === 0) {
+      // Scroll first sentence of each block into view
+      if (sentenceIndex === 0) {
         block.element.scrollIntoView({ behavior: "smooth", block: "center" });
       }
 
@@ -526,191 +456,29 @@ export function VoiceReadingProvider({
       const thisUtteranceId = ++utteranceIdRef.current;
       currentUtteranceIdRef.current = thisUtteranceId;
 
-      const utterance = new SpeechSynthesisUtterance(remainingText);
+      const utterance = new SpeechSynthesisUtterance(sentence.text);
 
       if (selectedVoiceRef.current) {
         utterance.voice = selectedVoiceRef.current;
       }
-
       utterance.rate = playbackRateRef.current;
       utterance.pitch = 1.0;
       utterance.volume = volumeRef.current;
 
-      const adjustedBoundaries = remainingBoundaries.map((wb) => ({
-        ...wb,
-        start: wb.start - firstWordStart,
-        end: wb.end - firstWordStart,
-      }));
-
-      // Reset boundary fired flag for this utterance
-      boundaryFiredRef.current = false;
-
-      // Clear any existing fallback timer
-      if (fallbackTimerRef.current) {
-        clearTimeout(fallbackTimerRef.current);
-        fallbackTimerRef.current = null;
-      }
-
-      // ==========================================
-      // TIMER-BASED FALLBACK FOR SAFARI/iOS/MOBILE
-      // ==========================================
-      // Character-weighted duration: ~80ms per char, minimum 250ms for short words.
-      // Tuned to match typical TTS speed (~130-150 wpm = ~400ms avg per word).
-      // Uses chained setTimeout so each word gets its own duration.
-      const safePlaybackRate =
-        playbackRateRef.current > 0 ? playbackRateRef.current : 1;
-      let fallbackWordIndex = startWordIndex;
-
-      const getWordDuration = (word: string) =>
-        Math.max(250, word.length * 80) / safePlaybackRate;
-
-      // Start the fallback timer using chained setTimeout
-      const scheduleNextWord = () => {
-        // Guard: stop if utterance changed, boundary events took over
-        if (currentUtteranceIdRef.current !== thisUtteranceId) {
-          fallbackTimerRef.current = null;
-          return;
-        }
-        if (boundaryFiredRef.current) {
-          fallbackTimerRef.current = null;
-          return;
-        }
-        if (isPausedRef.current) {
-          // Re-check after a short delay while paused
-          fallbackTimerRef.current = setTimeout(scheduleNextWord, 100);
-          return;
-        }
-
-        // Advance to next word
-        fallbackWordIndex++;
-        if (fallbackWordIndex < block.wordBoundaries.length) {
-          setCurrentWordIndex(fallbackWordIndex);
-          currentWordIndexRef.current = fallbackWordIndex;
-          updateWordStyles(blockIndex, fallbackWordIndex);
-
-          const nextWord = block.wordBoundaries[fallbackWordIndex].word;
-          fallbackTimerRef.current = setTimeout(
-            scheduleNextWord,
-            getWordDuration(nextWord),
-          );
-        } else {
-          fallbackTimerRef.current = null;
-        }
-      };
-
-      const startFallbackTimer = () => {
-        // Clear any existing timer first
-        if (fallbackTimerRef.current) {
-          clearTimeout(fallbackTimerRef.current);
-        }
-
-        // Schedule first advance based on current word's duration
-        const currentWord = block.wordBoundaries[fallbackWordIndex]?.word || "";
-        fallbackTimerRef.current = setTimeout(
-          scheduleNextWord,
-          getWordDuration(currentWord),
-        );
-      };
-
-      // Start fallback timer shortly after speak(). The timer provides the
-      // visual pacing. When onboundary fires, it recalibrates the timer
-      // position (but does NOT kill it) to prevent cumulative drift.
-      //
-      // Why not wait for onstart: Chrome buffers audio ahead of playback,
-      // so onboundary events fire BEFORE the audio plays. Starting the
-      // timer early compensates for this buffer lag.
-      if (fallbackDelayTimerRef.current) {
-        clearTimeout(fallbackDelayTimerRef.current);
-      }
-      fallbackDelayTimerRef.current = setTimeout(() => {
-        fallbackDelayTimerRef.current = null;
-        if (currentUtteranceIdRef.current === thisUtteranceId) {
-          startFallbackTimer();
-        }
-      }, 150);
-
-      utterance.onboundary = (event) => {
-        // Only process if this is still the current utterance
-        if (currentUtteranceIdRef.current !== thisUtteranceId) return;
-
-        // Only perform word-level handling (including disabling the fallback)
-        // when we get word boundaries. Some browsers/voices fire "sentence"
-        // but not "word"; in those cases we keep the fallback timer running.
-        if (event.name === "word") {
-          // Word boundaries detected. Instead of killing the fallback timer,
-          // recalibrate its position. The timer provides the visual pacing;
-          // boundary events keep it aligned. This prevents the growing lag
-          // caused by Chrome's audio buffer (boundary fires early, audio late).
-          boundaryFiredRef.current = true;
-
-          const charIndex = event.charIndex;
-          const foundWord = adjustedBoundaries.find(
-            (wb) => charIndex >= wb.start && charIndex < wb.end,
-          );
-
-          if (!foundWord && adjustedBoundaries.length > 0) {
-            const closest = adjustedBoundaries.reduce(
-              (prev, curr) =>
-                Math.abs(curr.start - charIndex) <
-                Math.abs(prev.start - charIndex)
-                  ? curr
-                  : prev,
-              adjustedBoundaries[0],
-            );
-
-            if (closest && Math.abs(closest.start - charIndex) < 10) {
-              setCurrentWordIndex(closest.index);
-              currentWordIndexRef.current = closest.index;
-              updateWordStyles(blockIndex, closest.index);
-              return;
-            }
-          }
-
-          if (foundWord) {
-            setCurrentWordIndex(foundWord.index);
-            currentWordIndexRef.current = foundWord.index;
-            updateWordStyles(blockIndex, foundWord.index);
-          }
-        }
-      };
-
       utterance.onend = () => {
-        // Clear fallback timers
-        clearFallbackTimers();
-        // CRITICAL: Only advance if this is still the current utterance
-        // This prevents stale callbacks from triggering double playback
-        if (currentUtteranceIdRef.current !== thisUtteranceId) {
-          return;
-        }
-        // Move to next block starting from word 0
-        playBlockFromWord(blockIndex + 1, 0);
+        if (currentUtteranceIdRef.current !== thisUtteranceId) return;
+        playSentence(blockIndex, sentenceIndex + 1);
       };
 
       utterance.onerror = (e) => {
-        // Clear fallback timers and Chrome keepalive
-        clearFallbackTimers();
-        if (chromeKeepAliveRef.current) {
-          clearInterval(chromeKeepAliveRef.current);
-          chromeKeepAliveRef.current = null;
-        }
-        if (e.error === "interrupted" || e.error === "canceled") {
-          return;
-        }
-        if (currentUtteranceIdRef.current !== thisUtteranceId) {
-          return;
-        }
-        console.error("Speech error", e);
-        setIsPlaying(false);
-        setIsPaused(false);
-        setActiveBlockIndex(-1);
-        activeBlockIndexRef.current = -1;
-        setCurrentWordIndex(-1);
-        currentWordIndexRef.current = -1;
-        unwrapWords();
+        if (currentUtteranceIdRef.current !== thisUtteranceId) return;
+        if (e.error === "interrupted" || e.error === "canceled") return;
+        console.error("Speech error:", e.error);
+        // Try to continue with next sentence
+        playSentence(blockIndex, sentenceIndex + 1);
       };
 
-      // Chrome keepalive: Chrome pauses speech after ~15 seconds and onend
-      // never fires. Re-calling pause()/resume() every 10s prevents this.
+      // Chrome keepalive: pause/resume every 10s to prevent stall
       // See: https://bugs.chromium.org/p/chromium/issues/detail?id=335907
       if (chromeKeepAliveRef.current) {
         clearInterval(chromeKeepAliveRef.current);
@@ -723,28 +491,22 @@ export function VoiceReadingProvider({
           }
           return;
         }
-        if (!isPausedRef.current) {
-          // Chrome auto-pauses after ~15s: paused=true, speaking=false.
-          // Also handle the case where speaking is still true but about to stall.
-          if (window.speechSynthesis.paused) {
-            window.speechSynthesis.resume();
-          } else if (window.speechSynthesis.speaking) {
-            window.speechSynthesis.pause();
-            window.speechSynthesis.resume();
-          }
+        if (!isPausedRef.current && window.speechSynthesis.speaking) {
+          window.speechSynthesis.pause();
+          window.speechSynthesis.resume();
         }
       }, 10000);
 
       window.speechSynthesis.speak(utterance);
     },
-    [updateWordStyles, unwrapWords, clearFallbackTimers],
+    [clearHighlights, updateBlockStyles, updateSentenceHighlight],
   );
 
   const playBlock = useCallback(
     (blockIndex: number) => {
-      playBlockFromWord(blockIndex, 0);
+      playSentence(blockIndex, 0);
     },
-    [playBlockFromWord],
+    [playSentence],
   );
 
   // Whether voices exist for the current locale
@@ -757,22 +519,24 @@ export function VoiceReadingProvider({
     if (typeof window === "undefined" || !window.speechSynthesis) return;
 
     if (isPlaying) {
-      // Clear Chrome keepalive and fallback timers
+      // Stop playback
       if (chromeKeepAliveRef.current) {
         clearInterval(chromeKeepAliveRef.current);
         chromeKeepAliveRef.current = null;
       }
-      clearFallbackTimers();
       // Increment utterance ID to invalidate any pending callbacks
       currentUtteranceIdRef.current = ++utteranceIdRef.current;
       window.speechSynthesis.cancel();
+      clearHighlights();
       setIsPlaying(false);
       setIsPaused(false);
       setActiveBlockIndex(-1);
       activeBlockIndexRef.current = -1;
-      setCurrentWordIndex(-1);
-      currentWordIndexRef.current = -1;
-      unwrapWords();
+      setCurrentSentenceIndex(-1);
+      currentSentenceIndexRef.current = -1;
+      document.querySelectorAll("[data-voice-block]").forEach((el) => {
+        el.classList.remove("voice-block--active", "voice-block--inactive");
+      });
       return;
     }
 
@@ -801,9 +565,7 @@ export function VoiceReadingProvider({
       cachedContentHashRef.current = contentHash;
       setTotalBlocks(blocks.length);
     }
-    // Sentence-level highlighting: mark blocks for styling but don't wrap
-    // individual words. This avoids word-level sync drift caused by Chrome's
-    // audio buffer lag. Block-level highlighting is what Speechify/Pocket use.
+    // Mark blocks for styling
     blocks.forEach((block, idx) => {
       block.element.setAttribute("data-voice-block", String(idx));
     });
@@ -815,28 +577,23 @@ export function VoiceReadingProvider({
     isPlaying,
     hasLocaleVoices,
     parseArticleContent,
-    wrapWordsInBlock,
     playBlock,
-    unwrapWords,
-    clearFallbackTimers,
+    clearHighlights,
   ]);
 
   const pauseSpeech = useCallback(() => {
     if (typeof window === "undefined" || !window.speechSynthesis) return;
     if (!isPlaying || isPaused) return;
 
-    // Bug 1 fix: Clear fallback timer on pause to prevent desync
-    clearFallbackTimers();
-
     window.speechSynthesis.pause();
     setIsPaused(true);
-  }, [isPlaying, isPaused, clearFallbackTimers]);
+  }, [isPlaying, isPaused]);
 
   const resumeSpeech = useCallback(() => {
     if (typeof window === "undefined" || !window.speechSynthesis) return;
     if (!isPlaying || !isPaused) return;
 
-    // Clear Chrome keepalive before resuming
+    // Clear Chrome keepalive before resuming — it will be re-created by the active sentence
     if (chromeKeepAliveRef.current) {
       clearInterval(chromeKeepAliveRef.current);
       chromeKeepAliveRef.current = null;
@@ -844,96 +601,51 @@ export function VoiceReadingProvider({
 
     // Set synchronous ref BEFORE resume() so handlers see it immediately
     isPausedRef.current = false;
-
-    window.speechSynthesis.resume();
     setIsPaused(false);
-
-    // Bug 1 fix: Restart fallback timer on resume if onboundary never fired
-    if (!boundaryFiredRef.current && activeBlockIndexRef.current >= 0) {
-      const block = blocksRef.current[activeBlockIndexRef.current];
-      if (block) {
-        // Clear any existing timers first to prevent orphaned timeouts on double-click
-        clearFallbackTimers();
-        const safePlaybackRate =
-          playbackRateRef.current > 0 ? playbackRateRef.current : 1;
-        let fallbackWordIndex = currentWordIndexRef.current;
-        // Capture utterance ID to detect stale timeouts after speed/voice/volume changes
-        const resumeUtteranceId = currentUtteranceIdRef.current;
-
-        const scheduleNext = () => {
-          if (currentUtteranceIdRef.current !== resumeUtteranceId) {
-            fallbackTimerRef.current = null;
-            return;
-          }
-          if (boundaryFiredRef.current) {
-            fallbackTimerRef.current = null;
-            return;
-          }
-          fallbackWordIndex++;
-          if (fallbackWordIndex < block.wordBoundaries.length) {
-            setCurrentWordIndex(fallbackWordIndex);
-            currentWordIndexRef.current = fallbackWordIndex;
-            updateWordStyles(activeBlockIndexRef.current, fallbackWordIndex);
-
-            const nextWord = block.wordBoundaries[fallbackWordIndex].word;
-            const duration =
-              Math.max(150, nextWord.length * 60) / safePlaybackRate;
-            fallbackTimerRef.current = setTimeout(scheduleNext, duration);
-          } else {
-            fallbackTimerRef.current = null;
-          }
-        };
-
-        const currentWord = block.wordBoundaries[fallbackWordIndex]?.word || "";
-        const duration =
-          Math.max(150, currentWord.length * 60) / safePlaybackRate;
-        fallbackTimerRef.current = setTimeout(scheduleNext, duration);
-      }
-    }
-  }, [isPlaying, isPaused, updateWordStyles, clearFallbackTimers]);
+    window.speechSynthesis.resume();
+  }, [isPlaying, isPaused]);
 
   const stopSpeech = useCallback(() => {
     if (typeof window === "undefined" || !window.speechSynthesis) return;
 
-    // Clear Chrome keepalive and fallback timers
+    // Clear Chrome keepalive
     if (chromeKeepAliveRef.current) {
       clearInterval(chromeKeepAliveRef.current);
       chromeKeepAliveRef.current = null;
     }
-    clearFallbackTimers();
     // Increment utterance ID to invalidate any pending callbacks
     currentUtteranceIdRef.current = ++utteranceIdRef.current;
     window.speechSynthesis.cancel();
+    clearHighlights();
     setIsPlaying(false);
     setIsPaused(false);
     setActiveBlockIndex(-1);
     activeBlockIndexRef.current = -1;
-    setCurrentWordIndex(-1);
-    currentWordIndexRef.current = -1;
-    unwrapWords();
-  }, [unwrapWords, clearFallbackTimers]);
+    setCurrentSentenceIndex(-1);
+    currentSentenceIndexRef.current = -1;
+    document.querySelectorAll("[data-voice-block]").forEach((el) => {
+      el.classList.remove("voice-block--active", "voice-block--inactive");
+    });
+  }, [clearHighlights]);
 
   const dismissNoVoicesWarning = useCallback(() => {
     setShowNoVoicesWarning(false);
   }, []);
 
   /**
-   * Restart from current word with new settings
+   * Restart from current sentence with new settings (voice/rate/volume change)
    */
-  const restartFromCurrentWord = useCallback(() => {
+  const restartFromCurrentSentence = useCallback(() => {
     if (!isPlaying || isPaused) return;
 
     const currentBlock = activeBlockIndexRef.current;
-    const currentWord = currentWordIndexRef.current;
+    const currentSentence = currentSentenceIndexRef.current;
 
     if (currentBlock < 0) return;
 
     // Increment utterance ID to invalidate the current utterance's callbacks
     currentUtteranceIdRef.current = ++utteranceIdRef.current;
 
-    // Clear all running timers BEFORE cancel to prevent orphaned timers
-    // from advancing highlights or keeping the old utterance alive
-    clearFallbackTimers();
     if (chromeKeepAliveRef.current) {
       clearInterval(chromeKeepAliveRef.current);
       chromeKeepAliveRef.current = null;
@@ -942,12 +654,12 @@ export function VoiceReadingProvider({
     window.speechSynthesis.cancel();
 
     // 200ms delay: Chrome/Firefox can wipe out speak() calls that follow
-    // directly after cancel() (see comment at playBlockFromWord). 50ms was
-    // too short and caused overlapping utterances on voice change.
+    // directly after cancel(). 50ms was too short and caused overlapping
+    // utterances on voice change.
     setTimeout(() => {
-      playBlockFromWord(currentBlock, Math.max(0, currentWord));
+      playSentence(currentBlock, Math.max(0, currentSentence));
     }, 200);
-  }, [isPlaying, isPaused, playBlockFromWord, clearFallbackTimers]);
+  }, [isPlaying, isPaused, playSentence]);
 
   const setPlaybackRate = useCallback(
     (rate: number) => {
@@ -955,10 +667,10 @@ export function VoiceReadingProvider({
       playbackRateRef.current = rate;
 
       if (isPlaying && !isPaused && activeBlockIndexRef.current >= 0) {
-        restartFromCurrentWord();
+        restartFromCurrentSentence();
       }
     },
-    [isPlaying, isPaused, restartFromCurrentWord],
+    [isPlaying, isPaused, restartFromCurrentSentence],
   );
 
   const setVoice = useCallback(
@@ -967,10 +679,10 @@ export function VoiceReadingProvider({
       selectedVoiceRef.current = availableVoices[index] || null;
 
       if (isPlaying && !isPaused && activeBlockIndexRef.current >= 0) {
-        restartFromCurrentWord();
+        restartFromCurrentSentence();
       }
     },
-    [availableVoices, isPlaying, isPaused, restartFromCurrentWord],
+    [availableVoices, isPlaying, isPaused, restartFromCurrentSentence],
   );
 
   const setVolume = useCallback(
@@ -980,10 +692,10 @@ export function VoiceReadingProvider({
       volumeRef.current = clampedVol;
 
       if (isPlaying && !isPaused && activeBlockIndexRef.current >= 0) {
-        restartFromCurrentWord();
+        restartFromCurrentSentence();
       }
     },
-    [isPlaying, isPaused, restartFromCurrentWord],
+    [isPlaying, isPaused, restartFromCurrentSentence],
   );
 
   /** Skip to the next block (paragraph/heading/list item) */
@@ -993,7 +705,6 @@ export function VoiceReadingProvider({
     if (nextBlock >= blocksRef.current.length) return;
 
     skipInProgressRef.current = true;
-    clearFallbackTimers();
     currentUtteranceIdRef.current = ++utteranceIdRef.current;
     window.speechSynthesis.cancel();
 
@@ -1001,9 +712,10 @@ export function VoiceReadingProvider({
     if (isPaused) {
       setActiveBlockIndex(nextBlock);
       activeBlockIndexRef.current = nextBlock;
-      setCurrentWordIndex(0);
-      currentWordIndexRef.current = 0;
-      updateWordStyles(nextBlock, 0);
+      setCurrentSentenceIndex(0);
+      currentSentenceIndexRef.current = 0;
+      updateBlockStyles(nextBlock);
+      clearHighlights();
       blocksRef.current[nextBlock]?.element.scrollIntoView({
         behavior: "smooth",
         block: "center",
@@ -1012,37 +724,36 @@ export function VoiceReadingProvider({
     } else {
       // 50ms delay: Web Speech API requires a tick after cancel() before new speak()
       setTimeout(() => {
-        playBlockFromWord(nextBlock, 0);
+        playSentence(nextBlock, 0);
         skipInProgressRef.current = false;
       }, 50);
     }
-  }, [
-    isPlaying,
-    isPaused,
-    playBlockFromWord,
-    updateWordStyles,
-    clearFallbackTimers,
-  ]);
+  }, [isPlaying, isPaused, playSentence, updateBlockStyles, clearHighlights]);
 
   /** Skip to the previous block (or restart current block) */
   const skipBackward = useCallback(() => {
     if (!isPlaying || skipInProgressRef.current) return;
-    const current = activeBlockIndexRef.current;
-    // If we're past the first word, restart current block; otherwise go to previous
-    const targetBlock =
-      currentWordIndexRef.current > 2 ? current : Math.max(0, current - 1);
 
     skipInProgressRef.current = true;
-    clearFallbackTimers();
     currentUtteranceIdRef.current = ++utteranceIdRef.current;
     window.speechSynthesis.cancel();
+
+    // If mid-block (sentence > 0), restart current block at sentence 0.
+    // If at sentence 0, go to previous block.
+    let targetBlock: number;
+    if (currentSentenceIndexRef.current > 0) {
+      targetBlock = activeBlockIndexRef.current;
+    } else {
+      targetBlock = Math.max(0, activeBlockIndexRef.current - 1);
+    }
 
     if (isPaused) {
       setActiveBlockIndex(targetBlock);
       activeBlockIndexRef.current = targetBlock;
-      setCurrentWordIndex(0);
-      currentWordIndexRef.current = 0;
-      updateWordStyles(targetBlock, 0);
+      setCurrentSentenceIndex(0);
+      currentSentenceIndexRef.current = 0;
+      updateBlockStyles(targetBlock);
+      clearHighlights();
       blocksRef.current[targetBlock]?.element.scrollIntoView({
         behavior: "smooth",
         block: "center",
@@ -1051,17 +762,11 @@ export function VoiceReadingProvider({
     } else {
       // 50ms delay: Web Speech API requires a tick after cancel() before new speak()
       setTimeout(() => {
-        playBlockFromWord(targetBlock, 0);
+        playSentence(targetBlock, 0);
         skipInProgressRef.current = false;
       }, 50);
     }
-  }, [
-    isPlaying,
-    isPaused,
-    playBlockFromWord,
-    updateWordStyles,
-    clearFallbackTimers,
-  ]);
+  }, [isPlaying, isPaused, playSentence, updateBlockStyles, clearHighlights]);
 
   const noVoicesAtAll = availableVoices.length === 0;
 
@@ -1070,7 +775,7 @@ export function VoiceReadingProvider({
       isPlaying,
       isPaused,
       activeBlockIndex,
-      currentWordIndex,
+      currentSentenceIndex,
       totalBlocks,
       availableVoices,
       selectedVoiceIndex,
@@ -1094,7 +799,7 @@ export function VoiceReadingProvider({
       isPlaying,
       isPaused,
       activeBlockIndex,
-      currentWordIndex,
+      currentSentenceIndex,
       totalBlocks,
       availableVoices,
       selectedVoiceIndex,
