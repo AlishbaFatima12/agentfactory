@@ -70,19 +70,19 @@ He types the prompt. Claude Code generates one line. He stares at it. `return ce
 
 Green. Both tests pass. James sits back. Five lines of specification. One line of implementation. And it works.
 
-When Emma comes back, James shows her the terminal. "Green," he says.
+When Emma comes back, James shows her the terminal. "Green," he says. "Both tests pass. We are done, right?"
 
-"Good. Now -- what does the generated code do?"
+"What does the generated code do?"
 
-"It converts Celsius to Fahrenheit."
+"It converts Celsius to Fahrenheit. The tests prove it."
 
-"How?"
+"The tests prove it returns the right number for zero and a hundred. What about every other number?"
 
-James looks at the line again. "It multiplies celsius by 9, divides by 5, adds 32."
+James hesitates. "Okay, let me look at the actual line." He reads it again. "It multiplies celsius by 9, divides by 5, adds 32. That is the formula."
 
-Emma nods. "And if I give it minus forty?"
+"And if I give it minus forty?"
 
-James does the math in his head. Minus forty times nine is minus three sixty. Divided by five is minus seventy-two. Plus thirty-two is... minus forty. "Minus forty. The same number."
+James does the math in his head. Minus forty times nine is minus three sixty. Divided by five is minus seventy-two. Plus thirty-two is... minus forty. "Minus forty. The same number. That is weird."
 
 "That is the crossover point. Celsius and Fahrenheit meet at minus forty." She glances at the green test output. "The tests do not check that. Should they?"
 
@@ -355,3 +355,11 @@ Complete one full TDG cycle for a function you choose -- from stub to GREEN to r
 ## Looking Ahead
 
 You have seen GREEN. The tests pass. The code works. But what happens when AI gets it wrong? In Lesson 4, you will encounter a function where AI's first attempt does not pass your tests. You will read the failure, classify the error, and re-prompt. The TDG loop has a built-in mechanism for this: the tests catch the mistake, and you use them to guide AI toward the correct implementation. Failure is not a dead end -- it is a step in the loop.
+
+---
+
+James commits the green tests. Two functions. Two TDG cycles. Both green.
+
+He catches himself thinking about what function to specify next -- not what formula to write, but what specification to design. The shift happened somewhere between the first stub and the second green bar.
+
+He mentions it to Emma later. She says something he does not expect: "The loop is a circle -- specify, check, generate, verify, read. When it works, you stop seeing the circle. You just see the function."

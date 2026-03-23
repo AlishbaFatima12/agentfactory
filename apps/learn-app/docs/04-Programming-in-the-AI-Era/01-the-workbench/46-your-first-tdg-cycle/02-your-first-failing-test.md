@@ -73,19 +73,31 @@ differentiation:
 
 James opens his editor. He knows what TDG looks like from Lesson 1 -- he read the worked example, predicted the output, traced the loop. Now he wants to try it himself. He starts typing the function body.
 
-Emma glances at his screen. "Stop. What are you doing?"
+Emma glances at his screen. "What are you writing?"
 
-"Writing the function. You said celsius_to_fahrenheit, right? I know the formula --"
+"The function. celsius_to_fahrenheit. I know the formula -- multiply by nine-fifths, add thirty-two."
 
-"You write the promise," Emma says. "Not the answer. The stub and the tests. That is your job. The implementation is AI's job."
+"So you are skipping the specification."
 
-James pauses. "But I *know* the answer. Why would I make AI write something I already know?"
+"Why would I specify something I already know? That is like writing a purchase order for a pen that is already on my desk." He keeps typing.
 
-"Because you are practicing the loop. The function is simple on purpose. When the function is hard -- when it is fifty lines of code you do not know how to write -- you will already know the method. You will not be learning the method and the code at the same time."
+Emma does not stop him. "Try it. Run pyright when you are done."
 
-James looks at the empty file. He deletes the formula he started typing. "Okay. Stub and tests. Nothing else."
+James writes the body, saves the file, and runs pyright. Zero errors. He grins. Then he tries pytest. There are no tests. Pytest has nothing to run.
 
-"Nothing else."
+"Green bar," Emma says. "Except there is no bar. How do you know the formula is correct?"
+
+James pauses. "Because I know the formula."
+
+"You know *a* formula. Is it `celsius * 9 / 5 + 32` or `celsius * 9/5 + 32` or `(celsius * 9) / 5 + 32`? They look the same. Are they?"
+
+James stares at the three versions. Operator precedence. He is not actually sure they all produce the same result. "Okay, let me think... actually, I think they do in Python because multiplication and division have the same precedence and go left to right. But I am not a hundred percent sure."
+
+"And that is why you write the tests first. The tests do not care about your confidence. They check the number."
+
+James deletes the function body. Types the three dots. Opens the test file. "Stub and tests. Then I let the tests prove it."
+
+"Now you are writing the specification, not the implementation."
 
 ---
 
@@ -458,3 +470,11 @@ If all four conditions are met, you have written a complete TDG specification. Y
 ## Looking Ahead
 
 You have your first RED test. Pyright passes. Pytest fails. The specification is complete. In Lesson 3, you prompt Claude Code to replace the `...` with a real implementation. You will see GREEN for the first time -- and then you will read the generated code with PRIMM to make sure you understand *how* it works, not just that it passes.
+
+---
+
+James stares at the two red failures on his screen. The stub. The tests. The intentionally empty body. He had wanted to write the formula himself ten minutes ago. Now the red feels like progress.
+
+"It is strange," he says. "The failing tests feel like I accomplished something."
+
+Emma's voice comes from across the room. "That is because you did. You wrote a contract that a machine can verify. That is harder than writing the formula."

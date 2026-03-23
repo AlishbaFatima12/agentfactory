@@ -69,17 +69,25 @@ Then he writes a specification for `reading_time_minutes` -- a SmartNotes functi
 
 He stares at the screen. One passed. One failed. The function is not wrong for everything -- it is wrong for one specific case.
 
-He walks over to Emma's desk. "It failed."
+He walks over to Emma's desk. "It failed. I think the loop is broken."
 
 Emma does not look up from her screen. "Good."
 
-"Good?"
+"Good? One of my tests is red."
 
-"I shipped a bug like this once," she says. She turns to face him. "A billing function. Integer division instead of float division. Rounded every invoice down. Nobody noticed for three weeks because the amounts were close enough. When we found it, there were four hundred incorrect invoices." She pauses. "Your tests just found it in three seconds instead of three weeks."
+"I shipped a bug like this once," she says, turning to face him. "A billing function. Integer division instead of float division. Rounded every invoice down."
 
-"So what do I do?"
+"How long before someone noticed?"
 
-"Read the failure. It tells you exactly what went wrong."
+"Three weeks. Four hundred incorrect invoices." She pauses. "Your tests found it in three seconds."
+
+James looks back at his terminal. "Okay, but I do not even know what went wrong yet. I just see the red."
+
+"What do the two lines after the `>` say?"
+
+He reads them. "It says the function returned 1 instead of 1.666... Oh. It dropped the decimal part. That is floor division -- I remember that from Chapter 45."
+
+Emma almost smiles. "You just diagnosed a bug faster than my entire team did in 2019."
 
 ---
 
@@ -451,3 +459,15 @@ If you scored **Fluent**, you are doing what professional developers do with AI 
 You have completed your first TDG cycles. You can specify a function, prompt AI to implement it, verify the result, and iterate when it fails. The method stays the same from here forward. Every chapter in Part 4 applies this loop to new domains -- strings, collections, control flow, classes. The functions get more complex. The tests get more interesting. The AI-generated code gets longer. But the loop never changes: Specify. Check types. Generate. Verify. Read.
 
 The method stays the same. The problems get bigger. And you are ready.
+
+---
+
+James closes his laptop. Four TDG cycles today. Three green on the first prompt, one that needed a re-prompt. He caught the bug himself -- read the failure, named the problem, told AI what to fix.
+
+He thinks about what Emma said. Four hundred invoices. Three weeks. His test caught it in three seconds.
+
+He is not writing code yet. He is writing specifications that catch bugs before they ship. Somehow, without noticing, he started thinking like the person who prevents the four-hundred-invoice disaster -- not the person who discovers it three weeks late.
+
+When he gets home, his partner asks how the course is going. James surprises himself: "I wrote five lines of Python today and caught a bug that a professional team missed for three weeks."
+
+It is not the whole story. But it is the part that matters.

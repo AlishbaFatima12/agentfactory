@@ -60,17 +60,21 @@ differentiation:
 
 James stares at the five lines of Python on Emma's screen. A function name. A type annotation. Three dots where the body should be. Two assertions underneath.
 
-"That is the specification?" he says.
+"Wait, that is the whole specification?" he says. "At my old job, our project specs were thirty-page documents that nobody read."
 
-Emma nods. "Five lines. The function name says what it does. The type annotation says what it accepts and what it returns. The dots mean the body is empty -- intentionally. The assertions say what the answers must be."
+Emma almost smiles. "How many of those specs got implemented exactly as written?"
 
-"And then what?"
+"...Maybe none."
 
-"You tell Claude Code to fill in the dots. It reads your specification -- the types, the tests -- and writes the implementation. Then you run the tests to verify it got the answer right." She pauses. "Sound familiar?"
+"Five lines. What do you think each one does?"
 
-James thinks for a moment. "That is SDD. Specification, implementation, verification. But the specification is Python instead of English."
+James leans forward. "Okay, let me work through this. The function name says what it does. The types say what goes in and comes out. The three dots mean the body is empty. And the two assertions say what the answers should be."
 
-"Exactly."
+"And then?"
+
+"Hang on. If the body is empty, you tell Claude Code to fill it in. It reads the types and the tests and writes the implementation." He pauses. "That is SDD. But the specification is Python instead of English."
+
+"You already knew that. You just needed to see it."
 
 ---
 
@@ -380,3 +384,11 @@ Without looking back at this lesson, explain the five steps of the TDG loop in y
 ## Looking Ahead
 
 You understand the loop. You have seen a complete worked example. In Lesson 2, you learn three new Python words -- `return`, `-> float`, and `...` -- and write your first real specification. The function: `celsius_to_fahrenheit`. The test: two assertions. The result: your first RED test -- failing on purpose, because the body is still empty. That is where the loop begins.
+
+---
+
+James looks at his notes. Five steps. He has not written a single line of code yet, but the method already makes sense. Five lines of specification. One loop. Every time.
+
+"It is smaller than I expected," he says.
+
+Emma, halfway out the door, turns back. "The best specifications always are."
