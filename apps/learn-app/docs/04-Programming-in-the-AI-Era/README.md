@@ -26,6 +26,9 @@ GitClear's 2025 analysis of 211 million lines of code from Google, Microsoft, Me
 
 This part inverts the traditional order. You learn to read before you write. You learn types before syntax. You learn testing before building. And you learn it all through a single method that defines programming in the AI era: **Test-Driven Generation (TDG)**.
 
+![programming_in_ai_era](../../static/img/programming-in-ai-era.png)
+
+
 ## Before You Begin
 
 Part 4 assumes no programming experience -- you do not need to have written code before. But it does build on skills from earlier parts of the book. If any of these are new to you, don't worry -- here's where to go first:
