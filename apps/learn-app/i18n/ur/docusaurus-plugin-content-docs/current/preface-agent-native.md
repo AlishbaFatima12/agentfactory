@@ -1,6 +1,6 @@
 ---
-title: "تمہید: اے آئی ایجنٹ فیکٹری"
-description: "ڈیجیٹل ایف ٹی ایز کی تعمیر اور ان سے آمدن پیدا کرنے کے لیے ایک <span dir=\"ltr\">Spec-Driven</span> رہنما خاکہ"
+title: "تمہید: AI ایجنٹ فیکٹری"
+description: "Digital FTEs کی تعمیر اور ان سے آمدن پیدا کرنے کے لیے ایک <span dir=\"ltr\">Spec-Driven</span> رہنما خاکہ"
 authors: ["Panaversity Team"]
 date: "2026-02-07"
 status: "published"
@@ -9,7 +9,7 @@ next: "/docs/part-1/chapter-1"
 sidebar_position: 0
 ---
 
-# تمہید: اے آئی <span dir="ltr">Agent Factory</span>
+# تمہید: AI <span dir="ltr">Agent Factory</span>
 
 ## وہ دن جب مارکیٹ نے ہمارے نظریے کو ثابت کر دیا
 
@@ -27,12 +27,12 @@ sidebar_position: 0
 
 یہ تین پریزنٹیشنز اس کتاب میں آنے والی ہر چیز کی حکمتِ عملی اور عملی بنیاد فراہم کرتی ہیں۔ آگے پڑھنے سے پہلے انہیں ضرور دیکھیں۔
 
-### اپنی اے آئی افرادی قوت بنائیں
+### اپنی AI افرادی قوت بنائیں
 
-یہ ایک آسان اور قابلِ رسائی تعارف ہے۔ اس میں دستی کام سے <span dir="ltr">Digital FTEs</span> تک منتقلی، یہ وضاحت کہ اب کوڈنگ کیوں لازمی نہیں رہی، اور یہ بات شامل ہے کہ کاروباری مالکان، مارکیٹرز، اکاؤنٹنٹس، اساتذہ اور دیگر لوگ قدرتی زبان کے ذریعے اے آئی ملازمین کیسے بنا سکتے ہیں۔
+یہ ایک آسان اور قابلِ رسائی تعارف ہے۔ اس میں دستی کام سے <span dir="ltr">Digital FTEs</span> تک منتقلی، یہ وضاحت کہ اب کوڈنگ کیوں لازمی نہیں رہی، اور یہ بات شامل ہے کہ کاروباری مالکان، مارکیٹرز، اکاؤنٹنٹس، اساتذہ اور دیگر لوگ قدرتی زبان کے ذریعے AI ملازمین کیسے بنا سکتے ہیں۔
 
 :::tip مکمل سلائیڈ شو کھولیں
-**[مکمل پریزنٹیشن دیکھیں](https://docs.google.com/presentation/d/1nfCEKI4P3rzvtw1BvI8PmpP8nMXAROvpJ7Pyh9xzpj0/edit?usp=sharing)** — اپنی اے آئی افرادی قوت بنائیں
+**[مکمل پریزنٹیشن دیکھیں](https://docs.google.com/presentation/d/1nfCEKI4P3rzvtw1BvI8PmpP8nMXAROvpJ7Pyh9xzpj0/edit?usp=sharing)** — اپنی AI افرادی قوت بنائیں
 :::
 
 <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', marginBottom: '2rem', border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)'}}>
@@ -43,13 +43,13 @@ sidebar_position: 0
     allowfullscreen="true"
     mozallowfullscreen="true"
     webkitallowfullscreen="true"
-    title="اپنی اے آئی افرادی قوت بنائیں">
+    title="اپنی AI افرادی قوت بنائیں">
   </iframe>
 </div>
 
-### ڈیجیٹل ایف ٹی ایز کی تعمیر: <span dir="ltr">Agent Factory</span>
+### Digital FTEs کی تعمیر: <span dir="ltr">Agent Factory</span>
 
-یہ ایک جامع گہرا جائزہ ہے۔ اس میں <span dir="ltr">Agent Factory</span> کا بنیادی نظریہ، <span dir="ltr">Agent Triangle</span> (عام ایجنٹس، حسبِ ضرورت بنائے گئے اے آئی ملازمین، اور پہلے سے تیار شدہ اے آئی ملازمین)، تعمیر بمقابلہ خرید کا فیصلہ جاتی فریم ورک، کوڈ بطور عالمگیر انٹرفیس، <span dir="ltr">MCP</span> اور ایجنٹ مہارتیں، کمائی کے ماڈلز، مطالعاتی مثالیں، سیکیورٹی، اور پہلی تفصیل سے پہلی آمدنی تک کا مکمل نقشہ شامل ہے۔
+یہ ایک جامع گہرا جائزہ ہے۔ اس میں <span dir="ltr">Agent Factory</span> کا بنیادی نظریہ، <span dir="ltr">Agent Triangle</span> (عام ایجنٹس، حسبِ ضرورت بنائے گئے AI ملازمین، اور پہلے سے تیار شدہ AI ملازمین)، تعمیر بمقابلہ خرید کا فیصلہ جاتی فریم ورک، کوڈ بطور عالمگیر انٹرفیس، <span dir="ltr">MCP</span> اور ایجنٹ مہارتیں، کمائی کے ماڈلز، مطالعاتی مثالیں، سیکیورٹی، اور پہلی تفصیل سے پہلی آمدنی تک کا مکمل نقشہ شامل ہے۔
 
 :::tip مکمل سلائیڈ شو کھولیں
 **[مکمل پریزنٹیشن دیکھیں](https://docs.google.com/presentation/d/1UGvCUk1-O8m5i-aTWQNxzg8EXoKzPa8fgcwfNh8vRjQ/edit?usp=sharing)** — <span dir="ltr">Agent Factory</span>: <span dir="ltr">Digital FTEs</span> کی تعمیر
@@ -67,9 +67,9 @@ sidebar_position: 0
   </iframe>
 </div>
 
-### کنسلٹنٹس بمقابلہ اے آئی ملازمین: <span dir="ltr">Agent Triangle</span>
+### کنسلٹنٹس بمقابلہ AI ملازمین: <span dir="ltr">Agent Triangle</span>
 
-یہ تازہ ترین درجہ بندی کا فریم ورک ہے۔ اس میں ایجنٹک اے آئی خودکاری کے تین راستے شامل ہیں: عام ایجنٹس (کنسلٹنٹس)، حسبِ ضرورت بنائے گئے اے آئی ملازمین (تعمیر)، اور پہلے سے تیار شدہ اے آئی ملازمین (خرید)؛ اس کے ساتھ <span dir="ltr">OpenClaw</span> کا گہرا جائزہ، فیصلہ جاتی فریم ورک، اور <span dir="ltr">Digital FTE</span> کے طیف کی بحث بھی شامل ہے۔
+یہ تازہ ترین درجہ بندی کا فریم ورک ہے۔ اس میں ایجنٹک AI خودکاری کے تین راستے شامل ہیں: عام ایجنٹس (کنسلٹنٹس)، حسبِ ضرورت بنائے گئے AI ملازمین (تعمیر)، اور پہلے سے تیار شدہ AI ملازمین (خرید)؛ اس کے ساتھ <span dir="ltr">OpenClaw</span> کا گہرا جائزہ، فیصلہ جاتی فریم ورک، اور <span dir="ltr">Digital FTE</span> کے طیف کی بحث بھی شامل ہے۔
 
 :::tip مکمل سلائیڈ شو کھولیں
 **[مکمل پریزنٹیشن دیکھیں](https://docs.google.com/presentation/d/1YMMOvWjSvEWl9tuNiLShNjruyzjlJydBHUc8j_y0gAI/edit?usp=sharing)** — <span dir="ltr">Agent Triangle Classification</span>
@@ -83,7 +83,7 @@ sidebar_position: 0
     allowfullscreen="true"
     mozallowfullscreen="true"
     webkitallowfullscreen="true"
-    title="Agent Triangle: مشیر بمقابلہ اے آئی ملازمین">
+    title="Agent Triangle: مشیر بمقابلہ AI ملازمین">
   </iframe>
 </div>
 
@@ -91,7 +91,7 @@ sidebar_position: 0
 
 ## بیداری کی گھنٹی: <span dir="ltr">Anthropic</span>
 
-فروری 2026 کوئی عام بازاری اتار چڑھاؤ نہیں تھا۔ یہ **پوری سافٹ ویئر صنعت کی نئی قیمت بندی** تھی، جو ایک ہی ادراک پر مبنی تھی: ایجنٹک اے آئی نے نشست-محور <span dir="ltr">SaaS</span> کو متروک بنا دیا ہے۔
+فروری 2026 کوئی عام بازاری اتار چڑھاؤ نہیں تھا۔ یہ **پوری سافٹ ویئر صنعت کی نئی قیمت بندی** تھی، جو ایک ہی ادراک پر مبنی تھی: ایجنٹک AI نے نشست-محور <span dir="ltr">SaaS</span> کو متروک بنا دیا ہے۔
 
 مارچ تک فیصلہ سرکاری طور پر واضح ہو چکا تھا۔ میگزین <span dir="ltr">Time</span> نے <span dir="ltr">Anthropic</span> کو "[دنیا کی سب سے زیادہ بگاڑ پیدا کرنے والی کمپنی](https://time.com/article/2026/03/11/anthropic-claude-disruptive-company-pentagon/)" قرار دیا — ایسی کمپنی جس کے ٹولز "اتنے اچھے ہیں کہ ہر نئی ریلیز اسٹاک مارکیٹ میں جھٹکے پیدا کر دیتی ہے، کیونکہ سرمایہ کار سمجھنے لگتے ہیں کہ یہ پیش رفت قانون سے لے کر سافٹ ویئر ڈویلپمنٹ تک پوری پوری صنعتوں کو الٹ سکتی ہے۔" اعداد و شمار نے بھی اس سرخی کی تصدیق کی: تین ماہ سے کم عرصے میں آمدن تقریباً دوگنی ہو کر 20 ارب ڈالر کی <span dir="ltr">run rate</span> تک پہنچ گئی؛ جن امریکی کمپنیوں نے <span dir="ltr">Claude</span> کے ٹولز کے لیے ادائیگی کی، ان کا حصہ جنوری میں 20 فیصد تک پہنچ گیا، جو ایک سال پہلے 4 فیصد تھا۔ یہ کوئی <span dir="ltr">product launch</span> نہیں تھا۔ یہ پوری مارکیٹ کی ازسرِ نو درجہ بندی تھی۔
 
@@ -105,7 +105,7 @@ sidebar_position: 0
 
 ![Anthropic Hit List — فروری 2026](/img/anthropic-hit-list-feb-2026.png)
 
-**پھر صورتحال مزید خراب ہوئی۔** تین ہفتے بعد، 24 فروری کو <span dir="ltr">Citrini Research</span> کی [7,000 الفاظ پر مشتمل ایک فرضی تحریر](https://www.citriniresearch.com/p/2028gic) وائرل ہو گئی — اور [<span dir="ltr">Dow</span> ایک ہی سیشن میں 800 <span dir="ltr">points</span> گر گیا](https://www.wsj.com/finance/stocks/stock-market-citrini-research-ai-downturn-f5c1ca20)۔ وہ رپورٹ کوئی پیش گوئی نہیں تھی۔ وہ جون 2028 کی تاریخ کے ساتھ ایک ایسا <span dir="ltr">scenario</span> تھا جس میں یہ دیکھا گیا تھا کہ جب اے آئی ایجنٹس بڑے پیمانے پر سفید پوش علمی کارکنوں کی جگہ لینا شروع کریں تو کیا ہو سکتا ہے: بڑے پیمانے کی بے روزگاری، سافٹ ویئر سے جڑے قرضوں میں ناکامی، اور مالی سرایت۔ مارکیٹ نے اس <span dir="ltr">thought experiment</span> کو <span dir="ltr">trading signal</span> کے طور پر لیا۔ سافٹ ویئر کمپنیاں <span dir="ltr">Datadog</span>، <span dir="ltr">CrowdStrike</span>، اور <span dir="ltr">Zscaler</span> [9% سے زیادہ گر گئیں](https://finance.yahoo.com/news/software-payments-shares-tumble-citrini-162303649.html)۔ [<span dir="ltr">IBM</span> 13% نیچے آ گیا](https://www.bloomberg.com/news/articles/2026-02-23/software-payments-shares-tumble-after-citrini-post-on-ai-risks) — 2000 کے بعد اس کی بدترین <span dir="ltr">single-day performance</span>۔ <span dir="ltr">American Express</span>، <span dir="ltr">KKR</span>، اور <span dir="ltr">Blackstone</span> — جن کا رپورٹ میں نام لیا گیا تھا — بھی گر گئے۔
+**پھر صورتحال مزید خراب ہوئی۔** تین ہفتے بعد، 24 فروری کو <span dir="ltr">Citrini Research</span> کی [7,000 الفاظ پر مشتمل ایک فرضی تحریر](https://www.citriniresearch.com/p/2028gic) وائرل ہو گئی — اور [<span dir="ltr">Dow</span> ایک ہی سیشن میں 800 <span dir="ltr">points</span> گر گیا](https://www.wsj.com/finance/stocks/stock-market-citrini-research-ai-downturn-f5c1ca20)۔ وہ رپورٹ کوئی پیش گوئی نہیں تھی۔ وہ جون 2028 کی تاریخ کے ساتھ ایک ایسا <span dir="ltr">scenario</span> تھا جس میں یہ دیکھا گیا تھا کہ جب AI ایجنٹس بڑے پیمانے پر سفید پوش علمی کارکنوں کی جگہ لینا شروع کریں تو کیا ہو سکتا ہے: بڑے پیمانے کی بے روزگاری، سافٹ ویئر سے جڑے قرضوں میں ناکامی، اور مالی سرایت۔ مارکیٹ نے اس <span dir="ltr">thought experiment</span> کو <span dir="ltr">trading signal</span> کے طور پر لیا۔ سافٹ ویئر کمپنیاں <span dir="ltr">Datadog</span>، <span dir="ltr">CrowdStrike</span>، اور <span dir="ltr">Zscaler</span> [9% سے زیادہ گر گئیں](https://finance.yahoo.com/news/software-payments-shares-tumble-citrini-162303649.html)۔ [<span dir="ltr">IBM</span> 13% نیچے آ گیا](https://www.bloomberg.com/news/articles/2026-02-23/software-payments-shares-tumble-after-citrini-post-on-ai-risks) — 2000 کے بعد اس کی بدترین <span dir="ltr">single-day performance</span>۔ <span dir="ltr">American Express</span>، <span dir="ltr">KKR</span>، اور <span dir="ltr">Blackstone</span> — جن کا رپورٹ میں نام لیا گیا تھا — بھی گر گئے۔
 
 ایک سطر میں <span dir="ltr">Citrini thesis</span>: "جدید معاشی تاریخ کے پورے دور میں انسانی ذہانت کمیاب <span dir="ltr">input</span> رہی ہے۔ اب ہم اسی <span dir="ltr">premium</span> کے خاتمے کے مرحلے میں داخل ہو رہے ہیں۔"
 
@@ -136,7 +136,7 @@ sidebar_position: 0
 
 ### حکمتِ عملی کا نتیجہ
 
-ہم صرف اے آئی نہیں بنا رہے۔ ہم **زیادہ لاگت والی، سست سافٹ ویئر انحصاریوں** کو **تیز رفتار، کم لاگت <span dir="ltr">Vertical Intelligence</span>** سے بدل رہے ہیں۔ جو کمپنیاں یہ منتقلی کر لیں گی، وہ وہی قدر حاصل کریں گی جو <span dir="ltr">legacy SaaS firms</span> کھو رہی ہیں۔
+ہم صرف AI نہیں بنا رہے۔ ہم **زیادہ لاگت والی، سست سافٹ ویئر انحصاریوں** کو **تیز رفتار، کم لاگت <span dir="ltr">Vertical Intelligence</span>** سے بدل رہے ہیں۔ جو کمپنیاں یہ منتقلی کر لیں گی، وہ وہی قدر حاصل کریں گی جو <span dir="ltr">legacy SaaS firms</span> کھو رہی ہیں۔
 
 ---
 
@@ -178,7 +178,7 @@ sidebar_position: 0
 | **سیکھنا** | سیکھنے میں مہینے، مہارت میں سال | بیان کرنے میں منٹ، بنانے میں فوری |
 | **Tool** | <span dir="ltr">IDE + compiler + documentation</span> | <span dir="ltr">Claude Code</span> — سادہ زبان میں بتائیں کہ آپ کیا چاہتے ہیں |
 
-اس کا مطلب یہ ہے کہ **وہ شعبہ جاتی ماہرین بھی جن کا روایتی پروگرامنگ پس منظر نہیں** اب اے آئی ملازمین بنا سکتے ہیں:
+اس کا مطلب یہ ہے کہ **وہ شعبہ جاتی ماہرین بھی جن کا روایتی پروگرامنگ پس منظر نہیں** اب AI ملازمین بنا سکتے ہیں:
 
 | شعبہ جاتی ماہر | وہ کیا بنا سکتے ہیں |
 | --- | --- |
@@ -189,7 +189,7 @@ sidebar_position: 0
 | **اکاؤنٹنٹس** | لین دین کی مطابقت اور آڈٹ ایجنٹس |
 | **انجینئرز** | <span dir="ltr">code reviews</span> اور <span dir="ltr">testing</span> |
 
-**اگر آپ کسی کام کی واضح وضاحت کر سکتے ہیں، تو آپ ایک ایسا اے آئی ملازم بھی بنا سکتے ہیں جو وہ کام انجام دے۔**
+**اگر آپ کسی کام کی واضح وضاحت کر سکتے ہیں، تو آپ ایک ایسا AI ملازم بھی بنا سکتے ہیں جو وہ کام انجام دے۔**
 
 ---
 
@@ -197,9 +197,9 @@ sidebar_position: 0
 
 یہ صرف تدریجی بہتری نہیں۔ یہ اس بات میں ساختی تبدیلی ہے کہ کام اب کیسے انجام پائے گا۔
 
-**پرانا تصور:** ہر کام کے لیے انسان بھرتی کریں، مہینوں تربیت دیں، امید کریں کہ وہ ساتھ رہیں، اور اے آئی کو دور سے صنعتیں بدلتے دیکھتے رہیں۔
+**پرانا تصور:** ہر کام کے لیے انسان بھرتی کریں، مہینوں تربیت دیں، امید کریں کہ وہ ساتھ رہیں، اور AI کو دور سے صنعتیں بدلتے دیکھتے رہیں۔
 
-**نئی حقیقت:** چند گھنٹوں میں اے آئی ملازمین بنائیں۔ وہ 24/7 کام کریں۔ آپ تبدیلی کے تماشائی نہیں بلکہ اس کی قیادت کرنے والے بنیں۔
+**نئی حقیقت:** چند گھنٹوں میں AI ملازمین بنائیں۔ وہ 24/7 کام کریں۔ آپ تبدیلی کے تماشائی نہیں بلکہ اس کی قیادت کرنے والے بنیں۔
 
 ### مستقبل کا کام: ایک شراکت داری
 
@@ -219,11 +219,11 @@ sidebar_position: 0
 
 <span dir="ltr">SaaSpocalypse</span> سے پہلے بھی اشارے موجود تھے۔
 
-2023 میں <span dir="ltr">Casetext</span> نامی <span dir="ltr">startup</span> کو [<span dir="ltr">Thomson Reuters</span> نے 650 ملین ڈالر نقد میں خریدا](https://techcrunch.com/2023/06/26/thomson-reuters-buys-casetext-an-ai-legal-tech-startup-for-650m-in-cash/)۔ ان کی <span dir="ltr">product</span> کیا تھی؟ **<span dir="ltr">CoCounsel</span>** — ایک اے آئی قانونی معاون جو دستاویزات کا جائزہ لے سکتی تھی، <span dir="ltr">case law</span> کی تحقیق کر سکتی تھی، اور یادداشتیں تیار کر سکتی تھی۔ اس نے پیچیدہ قانونی جانچ میں 97% کامیابی کی شرح حاصل کی۔
+2023 میں <span dir="ltr">Casetext</span> نامی <span dir="ltr">startup</span> کو [<span dir="ltr">Thomson Reuters</span> نے 650 ملین ڈالر نقد میں خریدا](https://techcrunch.com/2023/06/26/thomson-reuters-buys-casetext-an-ai-legal-tech-startup-for-650m-in-cash/)۔ ان کی <span dir="ltr">product</span> کیا تھی؟ **<span dir="ltr">CoCounsel</span>** — ایک AI قانونی معاون جو دستاویزات کا جائزہ لے سکتی تھی، <span dir="ltr">case law</span> کی تحقیق کر سکتی تھی، اور یادداشتیں تیار کر سکتی تھی۔ اس نے پیچیدہ قانونی جانچ میں 97% کامیابی کی شرح حاصل کی۔
 
 <span dir="ltr">Thomson Reuters</span> نے 650 ملین ڈالر محض <span dir="ltr">technology</span> کے لیے نہیں دیے۔ انہوں نے **<span dir="ltr">encoded legal expertise</span>** کے لیے ادائیگی کی — یعنی ایسا حقیقی قانونی کام انجام دینے کی صلاحیت، جس کے لیے پہلے مہنگے انسانی ماہرین درکار ہوتے تھے۔
 
-اس <span dir="ltr">acquisition</span> نے اُس حقیقت کی طرف اشارہ کیا جسے فروری 2026 میں مارکیٹ نے کھلے طور پر تسلیم کیا: جب شعبہ جاتی مہارت اے آئی ایجنٹس میں محفوظ ہو جائے تو وہ غیر معمولی حد تک قیمتی اثاثہ بن جاتی ہے۔ <span dir="ltr">CoCounsel</span> ایک ابتدائی ثبوت تھا۔ <span dir="ltr">SaaSpocalypse</span> پورے بازار کی <span dir="ltr">validation</span> تھی۔
+اس <span dir="ltr">acquisition</span> نے اُس حقیقت کی طرف اشارہ کیا جسے فروری 2026 میں مارکیٹ نے کھلے طور پر تسلیم کیا: جب شعبہ جاتی مہارت AI ایجنٹس میں محفوظ ہو جائے تو وہ غیر معمولی حد تک قیمتی اثاثہ بن جاتی ہے۔ <span dir="ltr">CoCounsel</span> ایک ابتدائی ثبوت تھا۔ <span dir="ltr">SaaSpocalypse</span> پورے بازار کی <span dir="ltr">validation</span> تھی۔
 
 یہی محفوظ شدہ شعبہ جاتی مہارت کی حقیقی قدر ہے۔
 
@@ -292,7 +292,7 @@ sidebar_position: 0
 
 ### حقیقت کی جانچ
 
-یہ ایک **خاکہ** ہے، کوئی جلد امیر بنا دینے والی اسکیم نہیں۔ قابلِ فروخت <span dir="ltr">Digital FTEs</span> بنانے کے لیے حقیقی مہارت درکار ہے — <span dir="ltr">specification writing</span>، اے آئی کے ساتھ تعاون، جانچ، اور تعیناتی۔ یہ کتاب آپ کو یہی مہارتیں ایک منظم انداز میں سکھاتی ہے۔
+یہ ایک **خاکہ** ہے، کوئی جلد امیر بنا دینے والی اسکیم نہیں۔ قابلِ فروخت <span dir="ltr">Digital FTEs</span> بنانے کے لیے حقیقی مہارت درکار ہے — <span dir="ltr">specification writing</span>، AI کے ساتھ تعاون، جانچ، اور تعیناتی۔ یہ کتاب آپ کو یہی مہارتیں ایک منظم انداز میں سکھاتی ہے۔
 
 <span dir="ltr">CoCounsel</span> کی ٹیم نے 650 ملین ڈالر کی <span dir="ltr">product</span> راتوں رات نہیں بنائی تھی۔ انہوں نے گہری قانونی مہارت کو سخت <span dir="ltr">AI development practices</span> کے ساتھ جوڑا تھا۔ آپ کو بھی اپنے شعبے میں یہی کرنا ہوگا۔
 
@@ -300,11 +300,11 @@ sidebar_position: 0
 
 ## ایجنٹس کا منظرنامہ: نشوونما اور تعیناتی
 
-اے آئی پر مبنی افرادی قوت بنانے کے لیے دو باہم جڑے سوالوں کے جواب درکار ہیں: **ایجنٹس کیسے تیار کیے جائیں** (<span dir="ltr">maturity model</span>)، اور **کیا تعینات کیا جائے** (<span dir="ltr">Agent Triangle</span>)؟ یہ ایک دوسرے کے مخالف <span dir="ltr">frameworks</span> نہیں، بلکہ ایک ہی حکمتِ عملی کے دو رُخ ہیں۔
+AI پر مبنی افرادی قوت بنانے کے لیے دو باہم جڑے سوالوں کے جواب درکار ہیں: **ایجنٹس کیسے تیار کیے جائیں** (<span dir="ltr">maturity model</span>)، اور **کیا تعینات کیا جائے** (<span dir="ltr">Agent Triangle</span>)؟ یہ ایک دوسرے کے مخالف <span dir="ltr">frameworks</span> نہیں، بلکہ ایک ہی حکمتِ عملی کے دو رُخ ہیں۔
 
 ### دو سوال، ایک حکمتِ عملی
 
-**<span dir="ltr">Agent Maturity Model</span>** یہ بتاتا ہے کہ اے آئی مصنوعات کیسے پختہ ہوتی ہیں: آپ <span dir="ltr">General Agents</span> کی مدد سے امکانات دریافت کرتے ہیں، پھر جب نمونے مستحکم ہو جائیں تو <span dir="ltr">specialists</span> تیار کرتے ہیں۔ **<span dir="ltr">Agent Triangle</span>** یہ بتاتا ہے کہ آپ تعینات کیا کرتے ہیں: <span dir="ltr">General Agent</span> سے مشورہ لیں، <span dir="ltr">Custom Agent</span> بنائیں، یا <span dir="ltr">Pre-Built Agent</span> خریدیں۔ ہر ادارہ بیک وقت دونوں سمتوں میں سفر کرتا ہے۔
+**<span dir="ltr">Agent Maturity Model</span>** یہ بتاتا ہے کہ AI مصنوعات کیسے پختہ ہوتی ہیں: آپ <span dir="ltr">General Agents</span> کی مدد سے امکانات دریافت کرتے ہیں، پھر جب نمونے مستحکم ہو جائیں تو <span dir="ltr">specialists</span> تیار کرتے ہیں۔ **<span dir="ltr">Agent Triangle</span>** یہ بتاتا ہے کہ آپ تعینات کیا کرتے ہیں: <span dir="ltr">General Agent</span> سے مشورہ لیں، <span dir="ltr">Custom Agent</span> بنائیں، یا <span dir="ltr">Pre-Built Agent</span> خریدیں۔ ہر ادارہ بیک وقت دونوں سمتوں میں سفر کرتا ہے۔
 
 ### ارتقائی راستہ: <span dir="ltr">Incubator → Specialist</span>
 
@@ -325,7 +325,7 @@ sidebar_position: 0
 | **آپ کا کردار** | ایسا رہنما جو نیت واضح کرتا ہے |
 | **بہترین استعمال** | نئے مسائل، غیر واضح تقاضے، <span dir="ltr">Custom Agents</span> بنانا |
 
-#### اے آئی کا "<span dir="ltr">Trojan Horse</span>"
+#### AI کا "<span dir="ltr">Trojan Horse</span>"
 
 "<span dir="ltr">Claude Code</span>" نام سے دھوکا نہ کھائیں۔ اسے محض "<span dir="ltr">Coding Agent</span>" کہنا ایسا ہی ہے جیسے کسی <span dir="ltr">CEO</span> کو صرف "<span dir="ltr">Email Writer</span>" کہنا، صرف اس لیے کہ وہ <span dir="ltr">email</span> استعمال کرتا ہے۔ <span dir="ltr">Code</span> تو محض وہ آلہ ہے جس سے یہ مسائل حل کرتی ہے۔
 
@@ -375,11 +375,11 @@ sidebar_position: 0
 
 #### تعمیر بمقابلہ خرید: فیصلہ
 
-**<span dir="ltr">BUILD (Option B)</span>:** آپ معمار ہوتے ہیں۔ آپ ہر <span dir="ltr">guardrail</span>، <span dir="ltr">hand-off</span>، اور <span dir="ltr">orchestration step</span> طے کرتے ہیں۔ اے آئی آپ کے لکھے ہوئے نقشے پر عمل کرتی ہے۔ گویا آپ <span dir="ltr">job description</span>، <span dir="ltr">SOPs</span>، اور <span dir="ltr">training manual</span> لکھتے ہیں — اور پھر ایک روبوٹ بھرتی کرتے ہیں جو اسے مکمل درستگی سے انجام دے۔
+**<span dir="ltr">BUILD (Option B)</span>:** آپ معمار ہوتے ہیں۔ آپ ہر <span dir="ltr">guardrail</span>، <span dir="ltr">hand-off</span>، اور <span dir="ltr">orchestration step</span> طے کرتے ہیں۔ AI آپ کے لکھے ہوئے نقشے پر عمل کرتی ہے۔ گویا آپ <span dir="ltr">job description</span>، <span dir="ltr">SOPs</span>، اور <span dir="ltr">training manual</span> لکھتے ہیں — اور پھر ایک روبوٹ بھرتی کرتے ہیں جو اسے مکمل درستگی سے انجام دے۔
 
 **<span dir="ltr">BUY (Option C)</span>:** آپ منتظم ہوتے ہیں۔ یہ صلاحیتیں پہلے سے سیکھ کر آتی ہیں۔ آپ انہیں اپنے نظاموں میں <span dir="ltr">onboard</span> کرتے ہیں، <span dir="ltr">access</span> دیتے ہیں، اور توقعات طے کرتے ہیں۔ گویا آپ ایسے ہنرمند ملازم کو بھرتی کرتے ہیں جو اپنا فن پہلے سے جانتا ہو — آپ صرف اسے دفتر کا راستہ دکھاتے ہیں۔
 
-#### پہلے سے تیار شدہ اے آئی ملازمین: ایک نئی قسم
+#### پہلے سے تیار شدہ AI ملازمین: ایک نئی قسم
 
 <span dir="ltr">Pre-Built AI Employees</span> کی آمد — جس کی نمایاں مثال [<span dir="ltr">OpenClaw</span>](https://github.com/openclaw/openclaw) ہے، جو تین ماہ سے کم مدت میں 209,000+ <span dir="ltr">GitHub stars</span> حاصل کر چکا — یہ اشارہ دیتی ہے کہ "<span dir="ltr">buy</span>" کا راستہ اب شروع سے <span dir="ltr">build</span> کرنے کے ایک قابلِ اعتماد متبادل کے طور پر پختہ ہو چکا ہے۔
 
@@ -424,7 +424,7 @@ sidebar_position: 0
 
 ایک روایتی ملازم ہفتے میں 40 گھنٹے کام کرتا ہے۔ ایک <span dir="ltr">Digital FTE</span>، 168 گھنٹے — یعنی 24/7، بغیر وقفے، بغیر چھٹی — کام کر سکتی ہے۔ یہی ایک نئی <span dir="ltr">product category</span> پیدا کرتا ہے: **<span dir="ltr">Digital Full-Time Equivalent</span>**۔
 
-روایتی کاروبار میں <span dir="ltr">FTE (Full-Time Equivalent)</span> ایک ایسا پیمانہ ہے جو ایک مکمل وقتی ملازم کے <span dir="ltr">workload</span> کو ظاہر کرتا ہے۔ <span dir="ltr">Digital FTE</span> ایک ایسا اے آئی ایجنٹ ہے جسے اس طرح بنایا، "بھرتی" کیا، اور قیمت دی جاتی ہے جیسے وہ ایک انسانی ملازم ہو۔
+روایتی کاروبار میں <span dir="ltr">FTE (Full-Time Equivalent)</span> ایک ایسا پیمانہ ہے جو ایک مکمل وقتی ملازم کے <span dir="ltr">workload</span> کو ظاہر کرتا ہے۔ <span dir="ltr">Digital FTE</span> ایک ایسا AI ایجنٹ ہے جسے اس طرح بنایا، "بھرتی" کیا، اور قیمت دی جاتی ہے جیسے وہ ایک انسانی ملازم ہو۔
 
 | <span dir="ltr">Metric</span> | <span dir="ltr">Human FTE</span> | <span dir="ltr">Digital FTE</span> |
 | --- | --- | --- |
@@ -444,7 +444,7 @@ sidebar_position: 0
 
 ### قیمت کی نفسیات
 
-"<span dir="ltr">Digital FTE</span>" کہنا ایک طاقتور کاروباری چال اس لیے ہے کہ یہ **طے کر دیتا ہے کہ اے آئی کی ادائیگی کون کرے گا**۔
+"<span dir="ltr">Digital FTE</span>" کہنا ایک طاقتور کاروباری چال اس لیے ہے کہ یہ **طے کر دیتا ہے کہ AI کی ادائیگی کون کرے گا**۔
 
 <span dir="ltr">IT budgets</span> یعنی سافٹ ویئر کے بجٹ اکثر محدود اور سخت ہوتے ہیں۔ <span dir="ltr">HR</span> اور محکمانہ بجٹ، یعنی تنخواہوں کے بجٹ، کہیں زیادہ بڑے ہوتے ہیں — بعض اوقات 10 گنا تک۔ جب آپ اپنے ایجنٹ کو "<span dir="ltr">Digital FTE</span>" کے طور پر پیش کرتے ہیں، تو اس کا موازنہ **50,000 ڈالر کی تنخواہ** سے ہوتا ہے، نہ کہ **50 ڈالر کے سافٹ ویئر سبسکرپشن** سے۔ کسی <span dir="ltr">CEO</span> کو اس سے فرق نہیں پڑتا کہ ایجنٹ نے کتنے "<span dir="ltr">tokens</span>" استعمال کیے؛ انہیں اس سے فرق پڑتا ہے کہ کام ہوا یا نہیں۔
 
@@ -483,7 +483,7 @@ sidebar_position: 0
 روایتی ادارہ جاتی فروخت میں 6 ماہ اور 500 افراد کی <span dir="ltr">sales team</span> لگ سکتی ہے۔ <span dir="ltr">OpenAI Apps marketplace</span> یہ کھیل بدل دیتی ہے:
 
 - **<span dir="ltr">800+ million users</span>** پہلے سے <span dir="ltr">platform</span> پر موجود ہیں
-- **<span dir="ltr">1+ million businesses</span>** اے آئی حل تلاش کر رہی ہیں
+- **<span dir="ltr">1+ million businesses</span>** AI حل تلاش کر رہی ہیں
 - **<span dir="ltr">Single-click adoption</span>** — نہ <span dir="ltr">procurement</span>، نہ <span dir="ltr">IT integration meetings</span>
 
 جس طرح <span dir="ltr">App Store</span> نے <span dir="ltr">Mobile Economy</span> پیدا کی تھی، اسی طرح <span dir="ltr">OpenAI Apps</span> <span dir="ltr">Agent Economy</span> پیدا کر رہی ہے۔ آپ کو بڑی <span dir="ltr">sales team</span> نہیں چاہیے۔ آپ کو ایک بہترین <span dir="ltr">Digital FTE</span> اور درست <span dir="ltr">positioning</span> چاہیے۔ باقی <span dir="ltr">distribution platform</span> خود فراہم کر دیتی ہے۔
@@ -511,7 +511,7 @@ sidebar_position: 0
 - **<span dir="ltr">Audit Logging</span>۔** <span dir="ltr">immutable logs</span>، 7 سالہ تحفظ، <span dir="ltr">real-time anomaly detection</span>
 - **<span dir="ltr">Input Validation</span>۔** <span dir="ltr">prompt injection prevention</span>، <span dir="ltr">content filtering</span>، <span dir="ltr">rate limiting</span>
 
-### کب اے آئی ایجنٹس استعمال نہیں کرنے چاہییں
+### کب AI ایجنٹس استعمال نہیں کرنے چاہییں
 
 جتنی اہم جرات مندانہ اختیار کاری ہے، اتنی ہی اہم حکمتِ عملیاتی احتیاط بھی ہے:
 
@@ -524,12 +524,12 @@ sidebar_position: 0
 
 ### عام لغزشیں
 
-اے آئی ایجنٹس کی 80% ناکامیاں تکنیکی نہیں بلکہ تنظیمی مسائل سے جڑی ہوتی ہیں:
+AI ایجنٹس کی 80% ناکامیاں تکنیکی نہیں بلکہ تنظیمی مسائل سے جڑی ہوتی ہیں:
 
 1. **بہت تیزی سے حد سے زیادہ خودکاری کرنا۔** 1-2 کم خطرے والے <span dir="ltr">processes</span> سے آغاز کریں۔ <span dir="ltr">scale</span> سے پہلے قدر ثابت کریں۔
 2. **<span dir="ltr">Edge cases</span> کو نظر انداز کرنا۔** <span dir="ltr">exceptions</span> پہلے سے دستاویز کریں۔ ہر <span dir="ltr">decision branch</span> کے لیے <span dir="ltr">escalation path</span> بنائیں۔
 3. **نگرانی کا نہ ہونا۔** پہلے دن سے <span dir="ltr">observability</span> نافذ کریں۔ <span dir="ltr">accuracy</span>، <span dir="ltr">latency</span>، اور <span dir="ltr">cost per task</span> کو <span dir="ltr">track</span> کریں۔
-4. **<span dir="ltr">Change management</span> کو کم سمجھنا۔** متاثرہ <span dir="ltr">teams</span> کو جلد شامل کریں۔ اے آئی کو متبادل نہیں بلکہ تقویت کے طور پر پیش کریں۔
+4. **<span dir="ltr">Change management</span> کو کم سمجھنا۔** متاثرہ <span dir="ltr">teams</span> کو جلد شامل کریں۔ AI کو متبادل نہیں بلکہ تقویت کے طور پر پیش کریں۔
 5. **کامیابی کے پیمانے طے نہ کرنا۔** <span dir="ltr">build</span> سے پہلے <span dir="ltr">KPIs</span> طے کریں: بچایا گیا وقت، غلطی کی شرح، لاگت، اطمینان۔
 
 ---
@@ -540,8 +540,8 @@ sidebar_position: 0
 
 | <span dir="ltr">Skill</span> | یہ کیوں ضروری ہے |
 | --- | --- |
-| **<span dir="ltr">Specification Writing</span>** | اے آئی ایجنٹس مبہم خیالات نہیں بلکہ واضح <span dir="ltr">specs</span> پر عمل کرتی ہیں۔ غیر واضح تقاضے = لامتناہی دہرائی |
-| **<span dir="ltr">AI Collaboration</span>** | آپ کو <span dir="ltr">Teacher/Student/Co-Worker</span> تعلق کے ذریعے اے آئی کو اپنی شعبہ جاتی مہارت سکھانی ہوتی ہے، اور اسے `SKILL.md` فائلوں میں محفوظ کرنا ہوتا ہے تاکہ وہ ایک قابلِ منتقلی اور قابلِ فروخت اثاثہ بن سکے |
+| **<span dir="ltr">Specification Writing</span>** | AI ایجنٹس مبہم خیالات نہیں بلکہ واضح <span dir="ltr">specs</span> پر عمل کرتی ہیں۔ غیر واضح تقاضے = لامتناہی دہرائی |
+| **<span dir="ltr">AI Collaboration</span>** | آپ کو <span dir="ltr">Teacher/Student/Co-Worker</span> تعلق کے ذریعے AI کو اپنی شعبہ جاتی مہارت سکھانی ہوتی ہے، اور اسے `SKILL.md` فائلوں میں محفوظ کرنا ہوتا ہے تاکہ وہ ایک قابلِ منتقلی اور قابلِ فروخت اثاثہ بن سکے |
 | **<span dir="ltr">MCP Integration</span>** | <span dir="ltr">Model Context Protocol</span> — ایجنٹس کو حقیقی کاروباری <span dir="ltr">data</span> جیسے <span dir="ltr">CRM</span>، <span dir="ltr">databases</span>، اور <span dir="ltr">APIs</span> سے جوڑنے کا آفاقی معیار |
 | **<span dir="ltr">Testing & Evaluation</span>** | ادارے <span dir="ltr">accuracy guarantees</span> مانگتے ہیں — 50+ حقیقی منظرناموں پر مشتمل <span dir="ltr">Golden Dataset</span> جس پر آپ کے ایجنٹ کو <span dir="ltr">deployment</span> سے پہلے 97%+ درستگی حاصل کرنا ضروری ہے |
 | **<span dir="ltr">Cloud Deployment</span>** | ہزاروں صارفین تک <span dir="ltr">scale</span> کریں، بغیر ایک بڑی عملیاتی ٹیم بھرتی کیے |
@@ -555,23 +555,23 @@ sidebar_position: 0
 
 روایتی <span dir="ltr">development</span> میں آپ <span dir="ltr">code</span> کی ہر سطر خود لکھتے ہیں۔ ہر تفصیل آپ کے قبضے میں ہوتی ہے۔ آپ ایک ٹائپسٹ ہوتے ہیں۔
 
-**<span dir="ltr">Agent Factory development</span>** میں آپ ایک <span dir="ltr">conductor</span> ہوتے ہیں۔ اے آئی ایجنٹس آپ کا <span dir="ltr">orchestra</span> ہیں۔ آپ موسیقی یعنی تقاضے لکھتے ہیں؛ وہ ساز یعنی عملدرآمد بجاتی ہیں۔
+**<span dir="ltr">Agent Factory development</span>** میں آپ ایک <span dir="ltr">conductor</span> ہوتے ہیں۔ AI ایجنٹس آپ کا <span dir="ltr">orchestra</span> ہیں۔ آپ موسیقی یعنی تقاضے لکھتے ہیں؛ وہ ساز یعنی عملدرآمد بجاتی ہیں۔
 
-یہ سستی یا "اے آئی سے کام کروانے" کے بارے میں نہیں۔ یہ **<span dir="ltr">leverage</span>** کے بارے میں ہے — اپنی مہارت کو بلند سطح پر استعمال کرنا، جبکہ اے آئی میکانی عملدرآمد سنبھالتی ہے۔
+یہ سستی یا "AI سے کام کروانے" کے بارے میں نہیں۔ یہ **<span dir="ltr">leverage</span>** کے بارے میں ہے — اپنی مہارت کو بلند سطح پر استعمال کرنا، جبکہ AI میکانی عملدرآمد سنبھالتی ہے۔
 
 ### تین کرداروں کی شراکت
 
-<span dir="ltr">Agent Factory</span> میں انسان اور اے آئی دونوں تین تین کردار ادا کرتے ہیں:
+<span dir="ltr">Agent Factory</span> میں انسان اور AI دونوں تین تین کردار ادا کرتے ہیں:
 
-**اے آئی کے کردار:** **<span dir="ltr">Teacher</span>** (نمونے تجویز کرتی ہے، <span dir="ltr">tradeoffs</span> سمجھاتی ہے) · **<span dir="ltr">Student</span>** (آپ کا شعبہ سیکھتی ہے، ترجیحات کے مطابق ڈھلتی ہے) · **<span dir="ltr">Co-Worker</span>** (عملدرآمد دن رات سنبھالتی ہے)
+**AI کے کردار:** **<span dir="ltr">Teacher</span>** (نمونے تجویز کرتی ہے، <span dir="ltr">tradeoffs</span> سمجھاتی ہے) · **<span dir="ltr">Student</span>** (آپ کا شعبہ سیکھتی ہے، ترجیحات کے مطابق ڈھلتی ہے) · **<span dir="ltr">Co-Worker</span>** (عملدرآمد دن رات سنبھالتی ہے)
 
-**آپ کے کردار:** **<span dir="ltr">Teacher</span>** (واضح <span dir="ltr">specs</span> کے ذریعے اے آئی کی رہنمائی کرتے ہیں) · **<span dir="ltr">Student</span>** (اے آئی کی تجاویز سے نئے نمونے سیکھتے ہیں) · **<span dir="ltr">Orchestrator</span>** (طے کرتے ہیں کہ انسان اور ایجنٹس کیسے باہم تعاون کریں)
+**آپ کے کردار:** **<span dir="ltr">Teacher</span>** (واضح <span dir="ltr">specs</span> کے ذریعے AI کی رہنمائی کرتے ہیں) · **<span dir="ltr">Student</span>** (AI کی تجاویز سے نئے نمونے سیکھتے ہیں) · **<span dir="ltr">Orchestrator</span>** (طے کرتے ہیں کہ انسان اور ایجنٹس کیسے باہم تعاون کریں)
 
-یہ تین طرفہ شراکت ایسے نتائج پیدا کرتی ہے جو **اکیلا انسان یا اکیلی اے آئی دونوں سے بہتر** ہوتے ہیں۔
+یہ تین طرفہ شراکت ایسے نتائج پیدا کرتی ہے جو **اکیلا انسان یا اکیلی AI دونوں سے بہتر** ہوتے ہیں۔
 
 ### زندہ معاہدوں کے طور پر تفصیلات
 
-اب <span dir="ltr">specification</span> جامد دستاویز نہیں رہی۔ یہ آپ اور آپ کے اے آئی معاون کے درمیان ایک **زندہ معاہدہ** ہے۔ جب آپ <span dir="ltr">spec</span> لکھتے ہیں تو اے آئی عملدرآمد تیار کرتی ہے، <span dir="ltr">tests</span> قبولیت کے معیارات سے نکلتے ہیں، دستاویزات ہم آہنگ رہتی ہیں، اور تبدیلیاں مسلسل آگے پھیلتی رہتی ہیں۔
+اب <span dir="ltr">specification</span> جامد دستاویز نہیں رہی۔ یہ آپ اور آپ کے AI معاون کے درمیان ایک **زندہ معاہدہ** ہے۔ جب آپ <span dir="ltr">spec</span> لکھتے ہیں تو AI عملدرآمد تیار کرتی ہے، <span dir="ltr">tests</span> قبولیت کے معیارات سے نکلتے ہیں، دستاویزات ہم آہنگ رہتی ہیں، اور تبدیلیاں مسلسل آگے پھیلتی رہتی ہیں۔
 
 **اصل بصیرت:** آپ کی کامیابی اس بات پر منحصر ہے کہ آپ مسائل، حدود، اور مقاصد کو ذہین نظاموں کے لیے کتنی اچھی طرح بیان کر سکتے ہیں۔
 
@@ -587,7 +587,7 @@ sidebar_position: 0
 - **<span dir="ltr">Distribute</span>** کریں <span dir="ltr">marketplaces</span> کے ذریعے جن تک لاکھوں صارفین کی رسائی ہو
 - **<span dir="ltr">Monetize</span>** کریں <span dir="ltr">subscriptions</span>، <span dir="ltr">licenses</span>، اور <span dir="ltr">success fees</span> کے ذریعے
 
-اصل سنہری اصول یہ ہے: **ایجنٹس کے دور میں آپ کی <span dir="ltr">Spec</span> ہی آپ کا <span dir="ltr">Source Code</span> ہے۔** اگر آپ اس معیار کی وضاحت کر سکتے ہیں جو آپ چاہتے ہیں، تو اے آئی وہ ایجنٹ، <span dir="ltr">skills</span>، اور <span dir="ltr">MCP</span> بنا سکتی ہے جو کسی بھی شعبے میں وہ نتیجہ فراہم کر دیں۔
+اصل سنہری اصول یہ ہے: **ایجنٹس کے دور میں آپ کی <span dir="ltr">Spec</span> ہی آپ کا <span dir="ltr">Source Code</span> ہے۔** اگر آپ اس معیار کی وضاحت کر سکتے ہیں جو آپ چاہتے ہیں، تو AI وہ ایجنٹ، <span dir="ltr">skills</span>، اور <span dir="ltr">MCP</span> بنا سکتی ہے جو کسی بھی شعبے میں وہ نتیجہ فراہم کر دیں۔
 
 مہارتیں جمع ہوتی ہیں۔ آمدن بار بار آتی ہے۔ موقع ابھی ہے۔
 
@@ -602,7 +602,7 @@ sidebar_position: 0
 ## اپنی سمجھ آزمائیں
 
 <Quiz
-title="تمہید: اے آئی ایجنٹ فیکٹری کا جائزہ"
+title="تمہید: AI ایجنٹ فیکٹری کا جائزہ"
 questionsPerBatch={30}
 questions={[
 {
@@ -633,7 +633,7 @@ source: "حصہ: Anthropic کی بیدار کرنے والی گھنٹی"
 question: "تمہید SaaSpocalypse کو محض بازاری اتار چڑھاؤ نہیں مانتی۔ اسے کس طور پر بیان کیا گیا ہے؟",
 options: [
 "پوری سافٹ ویئر صنعت کی نئی قیمت بندی، جو اس احساس پر مبنی تھی کہ agentic AI نے نشست-محور SaaS کو متروک بنا دیا ہے",
-"ایک عارضی خوف، جو جلد ختم ہو جانا تھا کیونکہ اے آئی ایجنٹس ابھی enterprise استعمال کے لیے کافی قابلِ اعتماد نہیں تھیں",
+"ایک عارضی خوف، جو جلد ختم ہو جانا تھا کیونکہ AI ایجنٹس ابھی enterprise استعمال کے لیے کافی قابلِ اعتماد نہیں تھیں",
 "dot-com crash جیسی ببل اصلاح، جس میں حد سے زیادہ قیمتی ٹیک کمپنیاں منصفانہ قدر پر واپس آ گئیں",
 "hedge funds کی ایک منظم short-selling مہم جس نے legacy software کمپنیوں کو نشانہ بنایا"
 ],
@@ -645,7 +645,7 @@ source: "حصہ: Anthropic کی بیدار کرنے والی گھنٹی"
 question: "SaaSpocalypse کے دوران سرمایہ کار کس سمت منتقل ہوئے؟",
 options: [
 "ایسی کمپنیوں کی طرف جو Digital FTEs یعنی خودمختار ایجنٹس تعینات کرتی ہیں اور براہِ راست کام انجام دیتی ہیں",
-"ایسی کمپنیوں کی طرف جو بہتر قدرتی زبان سمجھنے والی روایتی اے آئی چیٹ باٹس بنا رہی تھیں",
+"ایسی کمپنیوں کی طرف جو بہتر قدرتی زبان سمجھنے والی روایتی AI چیٹ باٹس بنا رہی تھیں",
 "ایسے ہارڈویئر بنانے والوں کی طرف جو بڑے لسانی ماڈلز کے لیے چپس تیار کرتے ہیں",
 "ایسے cloud providers کی طرف جو enterprise صارفین کے لیے SaaS ایپلی کیشنز میزبانی کرتے ہیں"
 ],
@@ -657,7 +657,7 @@ source: "حصہ: Anthropic کی بیدار کرنے والی گھنٹی"
 question: "پرانے نشست-محور SaaS ماڈل اور نئے Digital FTE ماڈل میں آمدن کے پھیلاؤ کا بنیادی فرق کیا ہے؟",
 options: [
 "پرانا ماڈل انسانی تعداد کے ساتھ بڑھتا ہے؛ نیا ماڈل مکمل شدہ کاموں کے ساتھ، نہ کہ بھرتی کیے گئے انسانوں کے ساتھ",
-"پرانا ماڈل خصوصیات کی تعداد کے ساتھ بڑھتا ہے؛ نیا ماڈل اے آئی compute کے ساتھ",
+"پرانا ماڈل خصوصیات کی تعداد کے ساتھ بڑھتا ہے؛ نیا ماڈل AI compute کے ساتھ",
 "پرانا ماڈل استعمال سے آزاد یکساں آمدن دیتا ہے؛ نیا ماڈل ایجنٹس کی تعداد کے ساتھ خطی انداز میں بڑھتا ہے",
 "پرانا ماڈل ایک بار کے لائسنس پر مبنی ہے؛ نیا ماڈل ماہانہ cloud سبسکرپشنز پر"
 ],
@@ -693,8 +693,8 @@ source: "حصہ: Disruption Alpha کو پکڑنا"
 question: "Disruption Alpha حاصل کرنے کے لیے تمہید کون سے تین اقدامات دیتی ہے؟",
 options: [
 "Seats خریدنا بند کریں، Skills بنائیں، Digital FTEs تعینات کریں",
-"اے آئی developers بھرتی کریں، marketplace پلیٹ فارم بنائیں، legacy SaaS کمپنیوں کو رعایت پر خریدیں",
-"اے آئی vendors کا جائزہ لیں، enterprise licenses پر بات چیت کریں، اور workflows کو آہستہ آہستہ منتقل کریں",
+"AI developers بھرتی کریں، marketplace پلیٹ فارم بنائیں، legacy SaaS کمپنیوں کو رعایت پر خریدیں",
+"AI vendors کا جائزہ لیں، enterprise licenses پر بات چیت کریں، اور workflows کو آہستہ آہستہ منتقل کریں",
 "غیر فنی عملہ ہٹا دیں، تمام processes کو agents سے بدل دیں، پھر یہی نظام حریفوں کو بیچیں"
 ],
 correctOption: 0,
@@ -714,7 +714,7 @@ explanation: "تمہید کے مطابق بنیادی interface اب natural lan
 source: "حصہ: Coding کی رکاوٹ ختم ہو چکی ہے"
 },
 {
-question: "درج ذیل میں کون سا شعبہ جاتی ماہر اور اس کے بنائے جانے والے اے آئی ملازم کا درست جوڑا ہے؟",
+question: "درج ذیل میں کون سا شعبہ جاتی ماہر اور اس کے بنائے جانے والے AI ملازم کا درست جوڑا ہے؟",
 options: [
 "Healthcare Pros scheduling اور documentation agents بناتے ہیں؛ Accountants transaction reconciliation اور audit agents",
 "Healthcare Pros ایسی diagnostic AI بناتے ہیں جو doctors کی جگہ لے لیتی ہے؛ Accountants autonomous tax filing agents",
@@ -722,7 +722,7 @@ options: [
 "Healthcare Pros insurance claims agents بناتے ہیں؛ Accountants HR replacement payroll systems"
 ],
 correctOption: 0,
-explanation: "تمہید واضح طور پر بتاتی ہے کہ Healthcare Pros scheduling اور documentation agents بنا سکتے ہیں، جبکہ Accountants transaction reconciliation اور audit agents۔ اصل نکتہ یہ ہے کہ روایتی coding پس منظر کے بغیر بھی شعبہ جاتی ماہرین اے آئی ملازمین بنا سکتے ہیں۔",
+explanation: "تمہید واضح طور پر بتاتی ہے کہ Healthcare Pros scheduling اور documentation agents بنا سکتے ہیں، جبکہ Accountants transaction reconciliation اور audit agents۔ اصل نکتہ یہ ہے کہ روایتی coding پس منظر کے بغیر بھی شعبہ جاتی ماہرین AI ملازمین بنا سکتے ہیں۔",
 source: "حصہ: Coding کی رکاوٹ ختم ہو چکی ہے"
 },
 {
@@ -738,7 +738,7 @@ explanation: "تمہید تین قوتیں بیان کرتی ہے: People، Agen
 source: "حصہ: افرادی قوت کا انقلاب"
 },
 {
-question: "اے آئی کے دور میں افرادی قوت کی سب سے تیزی سے بڑھتی ہوئی ضرورت کیا ہے؟",
+question: "AI کے دور میں افرادی قوت کی سب سے تیزی سے بڑھتی ہوئی ضرورت کیا ہے؟",
 options: [
 "AI fluency، یعنی AI systems کے ساتھ مؤثر انداز میں کام کرنے اور انہیں سمت دینے کی صلاحیت",
 "Python اور JavaScript میں روایتی programming skills",
@@ -945,7 +945,7 @@ options: [
 "کیونکہ اس سے procurement bypass ہو جاتا ہے"
 ],
 correctOption: 0,
-explanation: "قیمت کی نفسیات کا مرکزی insight یہی ہے کہ IT budgets عموماً محدود ہوتی ہیں، جبکہ salary budgets کہیں بڑی ہوتی ہیں۔ 'Digital FTE' کی framing اے آئی کو expense نہیں بلکہ workforce capability بنا دیتی ہے۔",
+explanation: "قیمت کی نفسیات کا مرکزی insight یہی ہے کہ IT budgets عموماً محدود ہوتی ہیں، جبکہ salary budgets کہیں بڑی ہوتی ہیں۔ 'Digital FTE' کی framing AI کو expense نہیں بلکہ workforce capability بنا دیتی ہے۔",
 source: "حصہ: Digital FTE کی value proposition"
 },
 {
