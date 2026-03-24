@@ -82,31 +82,31 @@ teaching_guide:
   session_title: "Real Data and Permanent Tools"
   key_points:
     - "The CSV quoting trap (commas inside quoted fields breaking awk) is the canonical example of 'clean test data behaves, real data cheats'"
-    - "The collaboration pattern is the lesson's real teaching: student discovers the failure (awk on AMAZON, INC.), agent provides the solution (csv module) — neither could solve it alone"
+    - "The collaboration pattern is the lesson's real teaching: student discovers the failure (awk on AMAZON, INC.), agent provides the solution (csv module): neither could solve it alone"
     - "Mentioning the edge case in your prompt ('some merchant names have commas') steers the agent to robust solutions instead of naive ones"
     - "The awk-vs-csv decision table is a practical tool: if data comes from outside your control, always use a proper CSV parser"
   misconceptions:
-    - "Students think awk is always wrong for CSV — it works fine for tab-separated data and CSVs you control, only failing on external data with quoted fields"
-    - "Students may not realize the bug is intermittent — awk works on rows without commas in fields and fails silently on rows with them, making it the worst kind of bug"
-    - "Students assume Python's csv module is overkill for simple data — but the edge cases it handles (escaped quotes, different line endings) justify it for any external CSV"
+    - "Students think awk is always wrong for CSV: it works fine for tab-separated data and CSVs you control, only failing on external data with quoted fields"
+    - "Students may not realize the bug is intermittent: awk works on rows without commas in fields and fails silently on rows with them, making it the worst kind of bug"
+    - "Students assume Python's csv module is overkill for simple data, but the edge cases it handles (escaped quotes, different line endings) justify it for any external CSV"
   discussion_prompts:
     - "The awk command returned 'INC.' instead of an error. Why is a wrong value more dangerous than a crash for financial data?"
     - "You discovered the awk failure before asking the agent. How did bringing a specific failure example change the quality of the agent's response?"
     - "The lesson says 'if the CSV came from outside your control, use a proper CSV parser.' Why does the source of the data matter more than its apparent simplicity?"
   teaching_tips:
-    - "Have students run the awk command on the AMAZON, INC. line themselves — seeing 'INC.' appear instead of '-89.50' is the lesson's central shock moment"
-    - "Walk through the awk field-splitting diagram (4 fields instead of 3) on the board — visual learners need to see how the comma inside quotes creates a phantom field"
-    - "The privacy note about bank CSVs is important — remind students they can remove account numbers before processing, or use the provided test data"
+    - "Have students run the awk command on the AMAZON, INC. line themselves: seeing 'INC.' appear instead of '-89.50' is the lesson's central shock moment"
+    - "Walk through the awk field-splitting diagram (4 fields instead of 3) on the board: visual learners need to see how the comma inside quotes creates a phantom field"
+    - "The privacy note about bank CSVs is important: remind students they can remove account numbers before processing, or use the provided test data"
     - "Connect to Lesson 2's zero-trust philosophy: even this csv-module script should be verified with known-answer test data before running on real bank statements"
   assessment_quick_check:
     - 'Give students the line ''2024-01-07,"AMAZON, INC.",-89.50'' and ask: what does ''awk -F, "{print $3}"'' return and why?'
-    - "Ask: 'When should you use awk and when should you use Python csv module?' — tests understanding of the decision table"
+    - "Ask: 'When should you use awk and when should you use Python csv module?': tests understanding of the decision table"
     - "Ask students to write a prompt that would steer the agent toward a robust CSV solution instead of a naive awk approach"
 ---
 
 # Parsing Real Data
 
-:::warning Try This First — 10 Seconds
+:::warning Try This First: 10 Seconds
 Run this in your terminal before reading on:
 
 ```bash
@@ -116,7 +116,7 @@ echo '2024-01-07,"AMAZON, INC.",-89.50' | awk -F',' '{print $3}'
 What did you expect to see? What did you actually get?
 :::
 
-Your first Python command handled clean numbers. Real data fights back. You download your bank statement, point your tool at it, and get a number that looks reasonable — until you notice that $89.50 Amazon order is missing from the total. The culprit: `"AMAZON, INC."` — a comma hiding inside quotes. Your script split that merchant name in half and summed the wrong column. No error. No warning. Just a wrong total.
+Your first Python command handled clean numbers. Real data fights back. You download your bank statement, point your tool at it, and get a number that looks reasonable: until you notice that $89.50 Amazon order is missing from the total. The culprit: `"AMAZON, INC."`: a comma hiding inside quotes. Your script split that merchant name in half and summed the wrong column. No error. No warning. Just a wrong total.
 
 This is the same lesson from the File Processing chapter in a different domain: real folders had hidden files and spaces in filenames. Real CSVs have commas inside quoted fields.
 
@@ -143,7 +143,7 @@ You need to sum the Amount column. Simple, right? Let's ask Claude Code.
 
 ## The First Attempt
 
-Ask Claude Code to sum the Amount column. It reaches for awk — fast and reasonable:
+Ask Claude Code to sum the Amount column. It reaches for awk: fast and reasonable:
 
 ```
 Claude Code: I'll extract and sum the third column.
@@ -153,13 +153,13 @@ Claude Code: I'll extract and sum the third column.
 -133.43
 ```
 
-The number looks plausible. But that Amazon order was $89.50 — shouldn't the total be higher? Check the problem row:
+The number looks plausible. But that Amazon order was $89.50: shouldn't the total be higher? Check the problem row:
 
 ```bash
 echo '2024-01-07,"AMAZON, INC.",-89.50' | awk -F',' '{print $3}'
 ```
 
-**Output:** ` INC."` — garbage. awk split on the comma inside `"AMAZON, INC."`, saw four fields instead of three, and silently treated ` INC."` as zero. Some rows work, some silently fail. The trap only triggers on quoted fields — the worst kind of bug.
+**Output:** ` INC."`: garbage. awk split on the comma inside `"AMAZON, INC."`, saw four fields instead of three, and silently treated ` INC."` as zero. Some rows work, some silently fail. The trap only triggers on quoted fields: the worst kind of bug.
 
 The agent gave you a working command that exited cleanly. But it was wrong. The agent doesn't know your data has commas inside quoted fields unless you tell it. This is where your verification catches what the agent missed.
 
@@ -183,10 +183,10 @@ for row in reader:
     amount = float(row[2])          # Amount is 3rd column (index 2)
 ```
 
-The agent tests it on the problem data and gets the correct total. The full script is in your working directory — the important thing is what just happened: the agent's first instinct (awk) was reasonable but wrong for your data. You caught the error through verification, told the agent *exactly what went wrong*, and it switched to the right tool. The agent knew about `csv` module. You knew about your data. Neither could have solved this alone.
+The agent tests it on the problem data and gets the correct total. The full script is in your working directory: the important thing is what just happened: the agent's first instinct (awk) was reasonable but wrong for your data. You caught the error through verification, told the agent *exactly what went wrong*, and it switched to the right tool. The agent knew about `csv` module. You knew about your data. Neither could have solved this alone.
 
 :::tip Why Filter for Negatives?
-Notice the script checks `if amount < 0` before summing. Bank CSVs use negative numbers for debits (money out) and positive numbers for credits (refunds, deposits). Without this filter, a $500 refund would be counted as a $500 expense — silently inflating your total. This is the kind of bug that passes every test with expense-only data and breaks the moment real data includes a refund. If your bank uses a different convention (separate Debit/Credit columns, all positive amounts), tell Claude Code about your format and it will adapt the filter.
+Notice the script checks `if amount < 0` before summing. Bank CSVs use negative numbers for debits (money out) and positive numbers for credits (refunds, deposits). Without this filter, a $500 refund would be counted as a $500 expense: silently inflating your total. This is the kind of bug that passes every test with expense-only data and breaks the moment real data includes a refund. If your bank uses a different convention (separate Debit/Credit columns, all positive amounts), tell Claude Code about your format and it will adapt the filter.
 :::
 
 **Python's csv module understands quoting rules.** It knows that commas inside quotes don't count as separators. The module handles:
@@ -265,11 +265,11 @@ The agent organized your script into `~/tools`, made it executable, checked your
 2. Open a brand new terminal
 3. Navigate to your home directory: `cd ~`
 4. Type: `sum-expenses`
-5. If you see usage info or an error about missing input — your command is installed
-6. If you see "command not found" — check your alias in `~/.zshrc` (or `~/.bashrc` if you use bash)
+5. If you see usage info or an error about missing input: your command is installed
+6. If you see "command not found": check your alias in `~/.zshrc` (or `~/.bashrc` if you use bash)
 :::
 
-You've just installed your second Unix-style command. The first (`sum.py`) handles numbers. This one handles structured data. The pattern is the same: stdin in, result out, pipes connect everything. But one tool isn't a toolkit — and the next lesson shows why that matters.
+You've just installed your second Unix-style command. The first (`sum.py`) handles numbers. This one handles structured data. The pattern is the same: stdin in, result out, pipes connect everything. But one tool isn't a toolkit, and the next lesson shows why that matters.
 
 ## Flashcards Study Aid
 
@@ -286,7 +286,7 @@ Show me what happens when I try to parse "AMAZON, INC.",-89.50 with awk.
 Why does it give the wrong result? What does Python's csv module do differently?
 ```
 
-**What you're learning:** How bringing a specific failure changes what the agent can give you. "Parse this CSV" produces a generic answer. "Parse this CSV — here's the line that breaks it" produces a targeted solution. The failure you discovered through verification is the input that directs the agent to the right tool. Your observation was the work; the agent's knowledge of csv module was the mechanism.
+**What you're learning:** How bringing a specific failure changes what the agent can give you. "Parse this CSV" produces a generic answer. "Parse this CSV: here's the line that breaks it" produces a targeted solution. The failure you discovered through verification is the input that directs the agent to the right tool. Your observation was the work; the agent's knowledge of csv module was the mechanism.
 
 ### Prompt 2: Extend the Parser
 
@@ -310,4 +310,4 @@ column is called 'Debit' instead of 'Amount' and there's a separate
 bank format?
 ```
 
-**What you're learning:** The most common director move in data work — you specify your data's actual schema (column name: 'Debit', not 'Amount'; separate credits column), the agent adapts the implementation. You don't need to know how csv.DictReader works. You need to know what your data looks like. That knowledge is yours; the implementation is the agent's.
+**What you're learning:** The most common director move in data work: you specify your data's actual schema (column name: 'Debit', not 'Amount'; separate credits column), the agent adapts the implementation. You don't need to know how csv.DictReader works. You need to know what your data looks like. That knowledge is yours; the implementation is the agent's.

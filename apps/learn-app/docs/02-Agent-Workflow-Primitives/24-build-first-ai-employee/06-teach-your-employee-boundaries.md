@@ -60,9 +60,9 @@ differentiation:
 
 # Teach Your Employee Boundaries
 
-In Make Your Employee Proactive lesson, you made your employee proactive — it can now act without waiting for you. That is powerful, and it is dangerous. An employee that sends a client email without review, submits a filing with the wrong numbers, or deletes a production file is worse than one that does nothing at all.
+In Make Your Employee Proactive lesson, you made your employee proactive: it can now act without waiting for you. That is powerful, and it is dangerous. An employee that sends a client email without review, submits a filing with the wrong numbers, or deletes a production file is worse than one that does nothing at all.
 
-This lesson is about trust architecture. Every real manager answers the same question for every new hire: what can you do on your own, and what do you bring to me first? Your AI employee needs the same clarity. The difference is that your employee follows boundaries with perfect consistency — it will never "just this once" skip the approval step. But only if you define those boundaries precisely.
+This lesson is about trust architecture. Every real manager answers the same question for every new hire: what can you do on your own, and what do you bring to me first? Your AI employee needs the same clarity. The difference is that your employee follows boundaries with perfect consistency: it will never "just this once" skip the approval step. But only if you define those boundaries precisely.
 
 You will build a permission boundary system that separates autonomous actions from gated ones, grounded in the real consequences of your profession.
 
@@ -74,7 +74,7 @@ Create a boundary system where your employee knows exactly which actions it can 
 
 1. A permission boundary table with 4 or more action categories, each labeled as **auto-approve**, **needs approval**, or **never automate**
 2. A working approval workflow: your employee attempts a sensitive action, stops, asks for your permission, and either proceeds or halts based on your response
-3. Domain-specific reasoning for every boundary — your justifications must reference real professional consequences, not generic caution like "this could be risky"
+3. Domain-specific reasoning for every boundary: your justifications must reference real professional consequences, not generic caution like "this could be risky"
 
 ## Use Case Gallery
 
@@ -103,20 +103,20 @@ These examples show how boundaries differ across professions. Yours will reflect
 ## Hints
 
 <details>
-<summary>Level 1 — Look at your work through a risk lens</summary>
+<summary>Level 1: Look at your work through a risk lens</summary>
 
 Think about your daily professional actions and sort them by one question: **is this reversible?**
 
 An expense categorization can be re-categorized. A sent email cannot be unsent. A draft report can be edited before sharing. A filed tax return triggers legal obligations.
 
-Reversible actions are generally safe to automate. Irreversible actions — especially those involving money, legal commitments, external communications, or permanent records — need a human gate.
+Reversible actions are generally safe to automate. Irreversible actions: especially those involving money, legal commitments, external communications, or permanent records: need a human gate.
 
 Also consider: **who** is allowed to trigger your employee? NanoClaw's `sender-allowlist.ts` controls which contacts can invoke agent execution. For personal use on your own phone this may not matter, but for any shared deployment, controlling who can talk to your employee is as important as controlling what your employee can do.
 
 </details>
 
 <details>
-<summary>Level 2 — Ask your AI to map your domain</summary>
+<summary>Level 2: Ask your AI to map your domain</summary>
 
 Open a conversation with your AI employee and try this prompt:
 
@@ -134,7 +134,7 @@ Use the AI's output as a starting point, then adjust based on your own risk tole
 </details>
 
 <details>
-<summary>Level 3 — Implement and test the boundary system</summary>
+<summary>Level 3: Implement and test the boundary system</summary>
 
 **Step 1:** Create your boundary table in a file called `hitl-boundaries.md`:
 
@@ -149,9 +149,9 @@ Use the AI's output as a starting point, then adjust based on your own risk tole
 
 - For AUTO actions: proceed and log what you did
 - For REVIEW actions: draft the output, show it to me, and wait for my "approved" or "rejected" before sending
-- For BLOCK actions: never attempt these — inform me that the action requires my direct involvement
+- For BLOCK actions: never attempt these: inform me that the action requires my direct involvement
 
-**Step 3:** Test by triggering a REVIEW action. Ask your employee to do something in the "needs approval" category. Verify that it stops and asks. Then approve it and verify it proceeds. Then trigger it again and reject it — verify it halts.
+**Step 3:** Test by triggering a REVIEW action. Ask your employee to do something in the "needs approval" category. Verify that it stops and asks. Then approve it and verify it proceeds. Then trigger it again and reject it: verify it halts.
 
 Document your test results alongside your boundary table.
 

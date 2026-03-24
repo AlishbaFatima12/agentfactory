@@ -39,22 +39,22 @@ teaching_guide:
   session_group: 1
   session_title: "From Scripts to Databases"
   key_points:
-    - "Persistence means data outlives the process — closing the terminal should not mean losing your data"
+    - "Persistence means data outlives the process: closing the terminal should not mean losing your data"
     - "The two-script proof (write_once.py + read_later.py) is the minimal test that separates a calculator from a system"
-    - "Pattern capture in SKILL.md must include decision logic and guardrails, not just definitions — notes are ignored under pressure"
-    - "The skill scaffold grows across the chapter — this lesson plants the seed that later lessons extend"
+    - "Pattern capture in SKILL.md must include decision logic and guardrails, not just definitions: notes are ignored under pressure"
+    - "The skill scaffold grows across the chapter: this lesson plants the seed that later lessons extend"
   misconceptions:
-    - "Students want to jump straight to Neon cloud setup — they must prove local persistence first or they will debug cloud config when the real issue is understanding"
-    - "Students confuse in-memory data (Python dict) with on-disk persistence (SQLite file) — the process boundary test makes this visceral"
-    - "Students try to write the persistence proof script themselves — they should tell the agent what to build and read the output"
+    - "Students want to jump straight to Neon cloud setup: they must prove local persistence first or they will debug cloud config when the real issue is understanding"
+    - "Students confuse in-memory data (Python dict) with on-disk persistence (SQLite file): the process boundary test makes this visceral"
+    - "Students try to write the persistence proof script themselves: they should tell the agent what to build and read the output"
   discussion_prompts:
     - "What happens to a Python dictionary when you press Ctrl+C? How is that different from what happens to the SQLite .db file?"
     - "Why is capturing a skill scaffold now more valuable than waiting until you are an expert? Think about what you forget between projects."
   teaching_tips:
-    - "Have students actually run both scripts in separate terminal sessions — the visceral experience of data surviving across processes is the lesson"
-    - "The process boundary diagram is the key visual — draw it on the whiteboard showing two separate boxes sharing one disk file"
+    - "Have students actually run both scripts in separate terminal sessions: the visceral experience of data surviving across processes is the lesson"
+    - "The process boundary diagram is the key visual: draw it on the whiteboard showing two separate boxes sharing one disk file"
     - "When students hit the 'When the Proof Fails' section, let them deliberately break it (skip commit, use wrong path) to build debugging instincts"
-    - "The skill scaffold appendix is a template, not a finished product — emphasize it will grow across the chapter"
+    - "The skill scaffold appendix is a template, not a finished product: emphasize it will grow across the chapter"
   assessment_quick_check:
     - "What output would prove that data survived a process restart?"
     - "What should you do if the agent's read script returns an empty list?"

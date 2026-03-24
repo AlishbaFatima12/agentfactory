@@ -76,27 +76,27 @@ teaching_guide:
   session_group: 2
   session_title: "Batch Operations and Error Recovery"
   key_points:
-    - "The shift from 'solve the problem' to 'solve the category of problems' via script generation is the central concept — one-time commands vs reusable automation"
+    - "The shift from 'solve the problem' to 'solve the category of problems' via script generation is the central concept: one-time commands vs reusable automation"
     - "Preview-before-action is distinct from the dry-run in Lesson 3: here you see the actual rename mapping (old name → new name) before committing"
-    - "'Fix the rule, not the file' is the batch operations mindset — every edge case fixed in the script is an edge case that never recurs"
-    - "Scripts serve double duty as automation AND documentation — the naming logic is preserved in code, not just memory"
+    - "'Fix the rule, not the file' is the batch operations mindset: every edge case fixed in the script is an edge case that never recurs"
+    - "Scripts serve double duty as automation AND documentation: the naming logic is preserved in code, not just memory"
   misconceptions:
-    - "Students think the preview step is optional overhead — the date-stripping mistake (losing when screenshots were taken) shows that preview caught a design error, not just a technical one"
-    - "Students may think naming collisions are rare edge cases — files from different folders with identical timestamps are surprisingly common when merging sources"
-    - "Students confuse 'the agent created a script' with 'I know how to write scripts' — the skill here is directing the agent to produce reusable automation, not scripting itself"
+    - "Students think the preview step is optional overhead: the date-stripping mistake (losing when screenshots were taken) shows that preview caught a design error, not just a technical one"
+    - "Students may think naming collisions are rare edge cases: files from different folders with identical timestamps are surprisingly common when merging sources"
+    - "Students confuse 'the agent created a script' with 'I know how to write scripts': the skill here is directing the agent to produce reusable automation, not scripting itself"
   discussion_prompts:
     - "The agent's first naming pattern (screenshot-001.png) threw away the dates. Why is 'losing information during renaming' a common pitfall, and how does the preview step prevent it?"
     - "When a batch rename fails on 7 of 87 files, why is it better to fix the script and rerun than to rename those 7 files manually?"
     - "What other repetitive tasks in your daily work could become reusable scripts if you asked an agent to create them?"
   teaching_tips:
-    - "Start by asking students how long it would take to rename 87 files manually — the 43 minutes vs 30 seconds comparison makes the value of batch operations visceral"
-    - "The progressive pattern table (Lessons 1-4) on the board shows how each lesson adds a new capability — have students trace the progression"
-    - "Demonstrate the naming collision scenario live if possible — it surprises students how easily data loss happens with batch renames"
-    - "Emphasize that 'Create a script I can reuse' is a phrase students should memorize — it transforms any one-time agent task into permanent automation"
+    - "Start by asking students how long it would take to rename 87 files manually: the 43 minutes vs 30 seconds comparison makes the value of batch operations visceral"
+    - "The progressive pattern table (Lessons 1-4) on the board shows how each lesson adds a new capability: have students trace the progression"
+    - "Demonstrate the naming collision scenario live if possible: it surprises students how easily data loss happens with batch renames"
+    - "Emphasize that 'Create a script I can reuse' is a phrase students should memorize: it transforms any one-time agent task into permanent automation"
   assessment_quick_check:
     - "Ask students to state the two key requests from this lesson: 'Show me what you'll do before doing it' and 'Create a script I can reuse'"
     - "Present a batch rename scenario where 3 files would collide. Ask: what should the agent do before proceeding?"
-    - "Ask: 'Why is a script more valuable than the renamed files?' — tests understanding that automation outlasts any single operation"
+    - "Ask: 'Why is a script more valuable than the renamed files?': tests understanding that automation outlasts any single operation"
 ---
 
 # Batch Operations Workflow
@@ -105,9 +105,9 @@ You've got 87 screenshots. Renaming them one by one would take 43 minutes. Renam
 
 But the real difference isn't speed.
 
-You asked the agent to rename your screenshots. It gave you renamed screenshots AND a script called `rename-screenshots.sh`. You didn't ask for the script. The agent anticipated that you'd need to do this again next month and solved beyond your request. That's the pattern this lesson teaches: don't just solve the problem — solve the _category_ of problems.
+You asked the agent to rename your screenshots. It gave you renamed screenshots AND a script called `rename-screenshots.sh`. You didn't ask for the script. The agent anticipated that you'd need to do this again next month and solved beyond your request. That's the pattern this lesson teaches: don't just solve the problem: solve the _category_ of problems.
 
-Your screenshots are named things like `Screenshot 2024-01-15 at 10.23.45.png`. The auto-generated names made sense to your operating system. They make no sense to you. Let's fix that — and make sure the fix is permanent.
+Your screenshots are named things like `Screenshot 2024-01-15 at 10.23.45.png`. The auto-generated names made sense to your operating system. They make no sense to you. Let's fix that, and make sure the fix is permanent.
 
 ---
 
@@ -147,7 +147,7 @@ Should I proceed with this plan, or would you like a different
 naming pattern?
 ```
 
-You look at the preview. Something's wrong. The agent threw away useful information — the dates. `screenshot-001.png` tells you nothing about _when_ the screenshot was taken. Six months from now, you'll have no idea what `screenshot-047.png` contains or why you took it.
+You look at the preview. Something's wrong. The agent threw away useful information: the dates. `screenshot-001.png` tells you nothing about _when_ the screenshot was taken. Six months from now, you'll have no idea what `screenshot-047.png` contains or why you took it.
 
 ```
 You: Actually, include the date. Make it 'screenshot-2024-01-15-001.png'
@@ -257,11 +257,11 @@ What you should do: Don't panic. The agent left failed files untouched (the orig
 
 This is why the preview step matters. If you'd caught the question-mark filenames in the preview, you could have handled them before the batch run.
 
-### Don't Fix the File — Fix the Rule
+### Don't Fix the File: Fix the Rule
 
 This is the central lesson of batch operations. When something goes wrong, resist the urge to fix the affected files and move on. Fix the _rule_ that caused the error.
 
-The rename script choked on filenames with question marks? Don't rename those 7 files manually — update `rename-screenshots.sh` to handle special characters, then rerun it on the failed files. The naming collision? Don't move two files by hand — update the script to detect same-second conflicts.
+The rename script choked on filenames with question marks? Don't rename those 7 files manually: update `rename-screenshots.sh` to handle special characters, then rerun it on the failed files. The naming collision? Don't move two files by hand: update the script to detect same-second conflicts.
 
 Every edge case you fix in the script is an edge case that never bites you again. Every error makes the system smarter. This is how one-time solutions evolve into robust automation.
 

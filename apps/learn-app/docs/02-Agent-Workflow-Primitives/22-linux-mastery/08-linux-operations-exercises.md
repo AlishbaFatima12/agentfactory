@@ -57,7 +57,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 skill areas (navigation, operations, diagnosis) — reinforces existing L01-L07 knowledge through applied practice"
+  assessment: "3 skill areas (navigation, operations, diagnosis): reinforces existing L01-L07 knowledge through applied practice"
 
 differentiation:
   extension_for_advanced: "Complete all Diagnosis exercises without hints; attempt to write a deployment spec that covers both Build and Debug scenarios"
@@ -68,22 +68,22 @@ teaching_guide:
   session_group: 3
   session_title: "Practice and Mastery"
   key_points:
-    - "Every exercise tests DIRECTING Claude Code, not memorizing commands — the student's job is to give clear instructions and interpret what comes back"
-    - "Build + Debug pairing develops complementary skills — building teaches creation, debugging teaches diagnostic reading of system output"
+    - "Every exercise tests DIRECTING Claude Code, not memorizing commands: the student's job is to give clear instructions and interpret what comes back"
+    - "Build + Debug pairing develops complementary skills: building teaches creation, debugging teaches diagnostic reading of system output"
     - "The LNPS method (Logs-Network-Process-System) should become instinctive through the Diagnosis exercises"
-    - "Ali's story provides realistic context — these are real deployment problems, not abstract Linux trivia"
+    - "Ali's story provides realistic context: these are real deployment problems, not abstract Linux trivia"
   misconceptions:
-    - "Students think they need to memorize Linux commands — the exercises test whether they can direct Claude Code effectively, not whether they can type commands from memory"
-    - "Students skip Debug exercises thinking Build is enough — diagnosing broken state develops reading and reasoning skills that building alone does not"
-    - "Students restart services immediately when something breaks — the Diagnosis exercises train the habit of investigating BEFORE restarting"
-    - "Students think security exercises are optional extras — in production, a misconfigured server is a liability, not a working deployment"
+    - "Students think they need to memorize Linux commands: the exercises test whether they can direct Claude Code effectively, not whether they can type commands from memory"
+    - "Students skip Debug exercises thinking Build is enough: diagnosing broken state develops reading and reasoning skills that building alone does not"
+    - "Students restart services immediately when something breaks: the Diagnosis exercises train the habit of investigating BEFORE restarting"
+    - "Students think security exercises are optional extras: in production, a misconfigured server is a liability, not a working deployment"
   discussion_prompts:
     - "Which exercise felt closest to a real deployment problem you might face? What made it realistic?"
     - "Did the Debug exercises change how you think about giving instructions to Claude Code? What would you do differently?"
   teaching_tips:
-    - "Have students work through one tier at a time — Foundation before Operations, Operations before Diagnosis"
-    - "For Debug exercises, encourage students to ask Claude Code for diagnostic output BEFORE attempting any fix — the reading step is the most important"
-    - "The reflection questions are where real learning happens — encourage students to write their answers, not just think them"
+    - "Have students work through one tier at a time: Foundation before Operations, Operations before Diagnosis"
+    - "For Debug exercises, encourage students to ask Claude Code for diagnostic output BEFORE attempting any fix: the reading step is the most important"
+    - "The reflection questions are where real learning happens: encourage students to write their answers, not just think them"
     - "If a student is stuck, ask them: What would Ali do? The story context often helps frame the right approach"
   assessment_quick_check:
     - "Name the four steps of LNPS in order and explain what each checks"

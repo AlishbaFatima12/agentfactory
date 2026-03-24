@@ -39,23 +39,23 @@ teaching_guide:
   session_group: 3
   session_title: "Cloud Deployment and Verification"
   key_points:
-    - "Only the connection string changes when moving from SQLite to Neon — models, CRUD, and transactions stay identical thanks to the ORM layer"
+    - "Only the connection string changes when moving from SQLite to Neon: models, CRUD, and transactions stay identical thanks to the ORM layer"
     - "The four-step secret management baseline (.env, .gitignore, dotenv, os.getenv) is non-negotiable for any cloud deployment"
-    - "pool_pre_ping catches silently dead connections before your query fails — cloud connections die without warning"
+    - "pool_pre_ping catches silently dead connections before your query fails: cloud connections die without warning"
     - "Deterministic error triage means checking one cause at a time in order, not changing three settings at once and hoping"
   misconceptions:
-    - "Students think cloud deployment requires rewriting their database code — only the connection string changes"
-    - "Students paste DATABASE_URL directly in code thinking they will move it to .env later — credential scanners exploit exposed secrets within minutes"
-    - "Students assume connection pool defaults are fine for everyone — free-tier Neon has connection limits that require starting with pool_size=3"
+    - "Students think cloud deployment requires rewriting their database code: only the connection string changes"
+    - "Students paste DATABASE_URL directly in code thinking they will move it to .env later: credential scanners exploit exposed secrets within minutes"
+    - "Students assume connection pool defaults are fine for everyone: free-tier Neon has connection limits that require starting with pool_size=3"
     - "Students skip the process restart test (step 5 of deployment sanity) and assume local memory is cloud persistence"
   discussion_prompts:
     - "What happens if you accidentally push your .env file to a public GitHub repo? How fast do you think automated scanners would find your password?"
     - "Why does pool_pre_ping exist? What would happen to your app if 2 of 5 pooled connections silently died?"
   teaching_tips:
-    - "Have students actually create a Neon account during the lesson — the 2-minute signup makes cloud databases feel accessible, not intimidating"
-    - "The connection pool architecture diagram is whiteboard-worthy — draw the pool with pre-ping arrows and explain each parameter"
-    - "Walk through the error triage table as a decision tree, not a reference — ask 'what would you check first if you saw this error?'"
-    - "Emphasize the deployment sanity sequence, especially step 5 (restart and re-read) — it catches the 'data was only in local memory' illusion"
+    - "Have students actually create a Neon account during the lesson: the 2-minute signup makes cloud databases feel accessible, not intimidating"
+    - "The connection pool architecture diagram is whiteboard-worthy: draw the pool with pre-ping arrows and explain each parameter"
+    - "Walk through the error triage table as a decision tree, not a reference: ask 'what would you check first if you saw this error?'"
+    - "Emphasize the deployment sanity sequence, especially step 5 (restart and re-read): it catches the 'data was only in local memory' illusion"
   assessment_quick_check:
     - "List the four-step secret management checklist from memory"
     - "What does pool_pre_ping=True do and why is it essential for cloud databases?"
@@ -70,9 +70,9 @@ Your SQLAlchemy models are ready. Your CRUD operations work. Your transactions r
 
 :::info[Key Terms for This Lesson]
 
-- **Connection pool**: A set of pre-opened database connections that your app reuses — instead of opening a new connection for every query (slow), you grab one from the pool and return it when done (fast)
-- **pool_pre_ping**: A health check that tests each connection before using it — catches "stale" connections that died while sitting in the pool
-- **DATABASE_URL**: The connection string that contains everything needed to reach your database — driver, username, password, host, port, and database name, all in one line
+- **Connection pool**: A set of pre-opened database connections that your app reuses: instead of opening a new connection for every query (slow), you grab one from the pool and return it when done (fast)
+- **pool_pre_ping**: A health check that tests each connection before using it: catches "stale" connections that died while sitting in the pool
+- **DATABASE_URL**: The connection string that contains everything needed to reach your database: driver, username, password, host, port, and database name, all in one line
   :::
 
 ## Why Cloud Changes the Game
@@ -175,7 +175,7 @@ Here is how you direct your agent to set up that architecture:
 Connect to my Neon PostgreSQL database using the DATABASE_URL from my .env file.
 Use a connection pool with a health check that tests connections before using them
 and replaces any connection older than one hour.
-Start with a small pool (3 connections) — I am on the free tier.
+Start with a small pool (3 connections): I am on the free tier.
 Give me a health check command I can run to confirm the connection works.
 :::
 
@@ -197,7 +197,7 @@ If you see that output, your app is talking to Neon through a healthy, pooled co
 :::
 
 :::tip[Pause and Reflect]
-Your data just moved from a file on your laptop to a server in the cloud. What changed about your database code? Nothing. Only the connection string changed. The agent's models, CRUD operations, and transactions are identical — they work with the local database and with Neon without modification.
+Your data just moved from a file on your laptop to a server in the cloud. What changed about your database code? Nothing. Only the connection string changed. The agent's models, CRUD operations, and transactions are identical; they work with the local database and with Neon without modification.
 :::
 
 ## Deterministic Error Triage
@@ -225,11 +225,11 @@ That sequence prevents guess storms -- the pattern where you change three settin
 
 Before you trust your connection in any real workload, run these five steps in order:
 
-1. Run the health check script (the agent's `verify_neon.py` — confirms `SELECT 1` passes).
+1. Run the health check script (the agent's `verify_neon.py`: confirms `SELECT 1` passes).
 2. Direct the agent to create the schema on Neon.
 3. Verify tables exist in the Neon SQL editor (log into neon.tech, open Tables view).
 4. Direct the agent to store one row and read it back.
-5. Restart your terminal and repeat the read — this confirms data is in the cloud, not just in local memory.
+5. Restart your terminal and repeat the read: this confirms data is in the cloud, not just in local memory.
 
 Step 5 is the one people skip. It confirms persistence -- that your data survived a process restart and is actually stored in the cloud, not just in local memory.
 

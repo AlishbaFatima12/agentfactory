@@ -51,7 +51,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (tool building, script debugging, pipeline orchestration) — within A2 limit. Exercises reinforce existing L01-L06 knowledge."
+  assessment: "3 concepts (tool building, script debugging, pipeline orchestration), within A2 limit. Exercises reinforce existing L01-L06 knowledge."
 
 differentiation:
   extension_for_advanced: "Complete all 3 capstone projects; use Python's Decimal module for financial precision; add error handling to pipeline scripts"
@@ -65,33 +65,33 @@ teaching_guide:
     - "Build + Debug pairing develops two distinct skills: creating working tools (Build) vs finding logic bugs that hide behind exit code 0 (Debug)"
     - "The seven-step Data Processing Framework (Understand, Build, Test, Verify, Edge Cases, Pipeline, Permanent) is the transferable takeaway that applies to any data domain"
     - "Scaffolding removal across modules is deliberate: Modules 1-2 have starter prompts, Modules 3-5 remove them, Capstones provide no guidance at all"
-    - "Capstone C (Your Own Financial Data) has real financial consequences — the verification skills from Module 2 become essential rather than optional when there is no answer key"
+    - "Capstone C (Your Own Financial Data) has real financial consequences: the verification skills from Module 2 become essential rather than optional when there is no answer key"
   misconceptions:
-    - "Students think Debug exercises are simpler than Build — finding 3 silent logic bugs in broken-calc.py that produce plausible output is harder than writing a new script from scratch"
-    - "Students may skip Module 2 (Testing) because they verified scripts in the chapter lessons — these exercises specifically test adversarial inputs that the chapter examples did not cover"
-    - "Students assume pipeline bugs are inside the scripts — Exercise 5.2 shows that the most dangerous bugs live at the interfaces between steps (step 1 outputs '$' prefix that step 2 cannot parse)"
+    - "Students think Debug exercises are simpler than Build, but finding 3 silent logic bugs in broken-calc.py that produce plausible output is harder than writing a new script from scratch"
+    - "Students may skip Module 2 (Testing) because they verified scripts in the chapter lessons, but these exercises specifically test adversarial inputs that the chapter examples did not cover"
+    - "Students assume pipeline bugs are inside the scripts, but Exercise 5.2 shows that the most dangerous bugs live at the interfaces between steps (step 1 outputs '$' prefix that step 2 cannot parse)"
   discussion_prompts:
     - "Exercise 1.2 has a rounding bug that causes a $12.47 error across 500 transactions. At what scale would you notice this error? What if it were $0.47 across 50 transactions?"
     - "Exercise 5.2 shows a pipeline where each step works perfectly in isolation but the full pipeline silently drops every row. How do you prevent this class of bug when designing pipelines?"
     - "Capstone C uses your real bank data. How did having no expected-output.txt change your approach to verification?"
   teaching_tips:
-    - "Assign Module 1 as pre-work and start the workshop with Module 2 (Testing) — verification skills are the foundation for everything else"
+    - "Assign Module 1 as pre-work and start the workshop with Module 2 (Testing): verification skills are the foundation for everything else"
     - "For classroom settings, have students swap Debug exercises: one student's Build output becomes another's Debug input. This creates organic test data that is harder than curated exercises"
-    - "The assessment rubric works as a self-evaluation tool — have students rate themselves before and after completing exercises to track growth across all five criteria"
-    - "Capstone C requires real bank data with real privacy implications — remind students to redact account numbers and sensitive details before processing"
+    - "The assessment rubric works as a self-evaluation tool: have students rate themselves before and after completing exercises to track growth across all five criteria"
+    - "Capstone C requires real bank data with real privacy implications, so remind students to redact account numbers and sensitive details before processing"
   assessment_quick_check:
-    - "Ask students to recite the seven-step Data Processing Framework — it synthesizes individual lesson skills into a reusable process and is the chapter's core deliverable"
+    - "Ask students to recite the seven-step Data Processing Framework, which synthesizes individual lesson skills into a reusable process and is the chapter's core deliverable"
     - "Present a broken pipeline scenario and ask students where they would look first: inside the scripts or at the interfaces between them"
     - "Ask: 'What is the difference between a Build exercise and a Debug exercise? Which develops a more transferable skill, and why?'"
 ---
 
 # Practice: Computation & Data Extraction Exercises
 
-You can build Python utilities that handle decimal math, parse messy CSV files, categorize transactions with regex, and orchestrate multi-step data pipelines. You've directed Claude Code to create scripts that read from stdin and compose with pipes. That's a powerful toolkit — but the gap between building one script in a guided lesson and solving a messy real-world data problem from scratch is where most people discover what they actually know.
+You can build Python utilities that handle decimal math, parse messy CSV files, categorize transactions with regex, and orchestrate multi-step data pipelines. You've directed Claude Code to create scripts that read from stdin and compose with pipes. That's a powerful toolkit, but the gap between building one script in a guided lesson and solving a messy real-world data problem from scratch is where most people discover what they actually know.
 
 These 13 exercises close that gap. Each module gives you two exercises: a **Build** exercise where you create a working utility from realistic data, and a **Debug** exercise where you find and fix bugs in broken scripts. Three skills run through every exercise: **data processing tool building** (creating stdin/stdout utilities that handle real-world messiness), **script debugging and verification** (finding logic bugs that hide behind exit code 0), and **pipeline orchestration** (connecting verified tools into multi-step workflows).
 
-Every exercise uses real financial data — bank transactions, payroll records, expense reports — with the edge cases that break naive processing: quoted fields with commas, floating-point rounding errors, false positive pattern matches, and silent data loss between pipeline steps. By the end, you'll have debugged more broken scripts than most people encounter in a year.
+Every exercise uses real financial data (bank transactions, payroll records, expense reports) with the edge cases that break naive processing: quoted fields with commas, floating-point rounding errors, false positive pattern matches, and silent data loss between pipeline steps. By the end, you'll have debugged more broken scripts than most people encounter in a year.
 
 :::info Download Exercise Files
 **[Download Computation Exercises (ZIP)](https://github.com/panaversity/claude-code-computation-exercises/releases/latest/download/computation-exercises.zip)**
@@ -108,11 +108,11 @@ If the download link doesn't work, visit the [repository releases page](https://
 The workflow for every exercise is the same:
 
 1. **Open the exercise folder** from the `claude-code-computation-exercises/` directory
-2. **Read the INSTRUCTIONS.md** inside the folder — it describes the data files and your task
+2. **Read the INSTRUCTIONS.md** inside the folder, which describes the data files and your task
 3. **Read the walkthrough below** for context on what you're practicing and why
 4. **Start Claude Code** and point it at the exercise folder
-5. **Work through the exercise** — for Build exercises, describe what you need; for Debug exercises, investigate the broken code
-6. **Reflect** using the questions provided — this is where the real learning happens
+5. **Work through the exercise**: for Build exercises, describe what you need; for Debug exercises, investigate the broken code
+6. **Reflect** using the questions provided. This is where the real learning happens
 
 You don't need to complete all 13 in one sitting. Work through one module at a time. Each module builds on the workflows from specific chapter lessons.
 
@@ -120,9 +120,9 @@ You don't need to complete all 13 in one sitting. Work through one module at a t
 
 ## Tool Guide
 
-- **Claude Code** — Required for all exercises. Every exercise involves writing or debugging Python scripts in the terminal. You'll use pipes, CSV processing, and script execution.
+- **Claude Code**: Required for all exercises. Every exercise involves writing or debugging Python scripts in the terminal. You'll use pipes, CSV processing, and script execution.
 - **Python 3.x** must be installed. Verify with: `python3 --version`
-- **A text editor** is helpful for examining data files before processing, but not required — Claude Code can read and display file contents directly.
+- **A text editor** is helpful for examining data files before processing, but not required, since Claude Code can read and display file contents directly.
 
 ---
 
@@ -131,8 +131,8 @@ You don't need to complete all 13 in one sitting. Work through one module at a t
 In Lessons 1-6, you learned each workflow in isolation with guided walkthroughs. These exercises are different in three ways:
 
 - **No step-by-step instructions.** The exercises describe the scenario, the data, and the goal. You decide the approach, write the prompts, and handle edge cases yourself.
-- **Build + Debug pairing.** Every module has a Build exercise (create a working utility) and a Debug exercise (find and fix bugs in broken code). Debugging someone else's script develops different skills than writing your own — you learn to read code critically, compare output against expected values, and trace logic errors that don't produce exceptions.
-- **Increasing independence.** Modules 1-2 provide starter prompts to scaffold your learning. Modules 3-5 remove the scaffolding. Capstones remove everything — you design the entire approach.
+- **Build + Debug pairing.** Every module has a Build exercise (create a working utility) and a Debug exercise (find and fix bugs in broken code). Debugging someone else's script develops different skills than writing your own: you learn to read code critically, compare output against expected values, and trace logic errors that don't produce exceptions.
+- **Increasing independence.** Modules 1-2 provide starter prompts to scaffold your learning. Modules 3-5 remove the scaffolding. Capstones remove everything: you design the entire approach.
 
 By Module 5, you should be able to face a new data processing problem and instinctively reach for the right pattern without needing to review the chapter lessons.
 
@@ -142,15 +142,15 @@ By Module 5, you should be able to face a new data processing problem and instin
 
 Lessons 1-6 taught these steps individually -- building tools, testing with known answers, handling edge cases, composing pipelines, making scripts permanent. This framework assembles those skills into a single reusable process. Use it for every exercise:
 
-1. **Understand the Data** — What format? What columns? What edge cases exist? What does "correct" output look like?
-2. **Build the Tool** — Write a Python script that reads stdin and produces stdout
-3. **Create Test Data** — Make small datasets (5-10 rows) with manually calculated correct answers
-4. **Verify** — Run on test data and compare against expected results line by line
-5. **Handle Edge Cases** — Quoted fields, missing values, mixed formats, encoding issues
-6. **Pipeline** — Connect tools with pipes for multi-step processing
-7. **Make Permanent** — Save scripts, create aliases, document usage for future runs
+1. **Understand the Data**: What format? What columns? What edge cases exist? What does "correct" output look like?
+2. **Build the Tool**: Write a Python script that reads stdin and produces stdout
+3. **Create Test Data**: Make small datasets (5-10 rows) with manually calculated correct answers
+4. **Verify**: Run on test data and compare against expected results line by line
+5. **Handle Edge Cases**: Quoted fields, missing values, mixed formats, encoding issues
+6. **Pipeline**: Connect tools with pipes for multi-step processing
+7. **Make Permanent**: Save scripts, create aliases, document usage for future runs
 
-This framework applies to any domain where data needs processing: log analysis, invoice processing, inventory management, or any workflow where structured data needs cleaning, transforming, or summarizing. Notice that steps 1-4 happen before you handle edge cases or build pipelines. That's intentional — most data processing bugs come from skipping verification on simple cases before tackling complex ones.
+This framework applies to any domain where data needs processing: log analysis, invoice processing, inventory management, or any workflow where structured data needs cleaning, transforming, or summarizing. Notice that steps 1-4 happen before you handle edge cases or build pipelines. That's intentional: most data processing bugs come from skipping verification on simple cases before tackling complex ones.
 
 ---
 
@@ -176,17 +176,17 @@ For each exercise, evaluate yourself on:
 
 <ExerciseCard id="1.1" title="The Expense Splitter" />
 
-### Exercise 1.1 — The Expense Splitter (Build)
+### Exercise 1.1: The Expense Splitter (Build)
 
 **The Problem:**
-Open the `module-1-arithmetic-and-stdin/exercise-1.1-expense-splitter/` folder. You'll find 5 dinner receipt files — each containing a list of items with prices, a tax rate, and a tip percentage. The amounts include decimals that Bash arithmetic can't handle. One receipt has 12 people splitting unevenly (some ordered drinks, some didn't). Another has a flat service charge instead of percentage tip. A third uses different tax rates for food vs. alcohol.
+Open the `module-1-arithmetic-and-stdin/exercise-1.1-expense-splitter/` folder. You'll find 5 dinner receipt files, each containing a list of items with prices, a tax rate, and a tip percentage. The amounts include decimals that Bash arithmetic can't handle. One receipt has 12 people splitting unevenly (some ordered drinks, some didn't). Another has a flat service charge instead of percentage tip. A third uses different tax rates for food vs. alcohol.
 
 **Your Task:**
 Build a Python utility that reads a receipt from stdin and calculates per-person splits. The script should handle tax applied before tip, different tip calculation methods (percentage vs. flat), and uneven splits where people pay different base amounts. Run it on all 5 receipts and verify each total matches the receipt's bottom line.
 
 **What You'll Learn:**
 
-- How floating-point arithmetic introduces rounding errors that accumulate across many line items — and why financial calculations need explicit rounding strategy
+- How floating-point arithmetic introduces rounding errors that accumulate across many line items, and why financial calculations need explicit rounding strategy
 - The stdin/stdout pattern that makes your script composable: `cat receipt.txt | python3 split.py` works with ANY receipt in the same format
 - That "splitting the bill" has more edge cases than you'd expect: tax-on-subtotal vs. tax-on-total, tip-on-pretax vs. tip-on-posttax, penny allocation for uneven splits
 
@@ -200,7 +200,7 @@ After examining the receipt format with `cat receipt-01.txt`: "Build a Python sc
 
 **Reflection Questions:**
 
-1. Did the individual splits sum exactly to the total on any receipt? If not, where did the pennies go — and how did you handle the remainder?
+1. Did the individual splits sum exactly to the total on any receipt? If not, where did the pennies go, and how did you handle the remainder?
 2. Which receipt was hardest to process? What made its format different from the others?
 3. Could your script handle a receipt format it hasn't seen before, or is it tightly coupled to the specific format in these files?
 
@@ -208,19 +208,19 @@ After examining the receipt format with `cat receipt-01.txt`: "Build a Python sc
 
 <ExerciseCard id="1.2" title="The Rounding Trap" />
 
-### Exercise 1.2 — The Rounding Trap (Debug)
+### Exercise 1.2: The Rounding Trap (Debug)
 
 **The Problem:**
-Open the `module-1-arithmetic-and-stdin/exercise-1.2-rounding-trap/` folder. You'll find `buggy-sum.py` — a script that sums a column of transaction amounts from a CSV file — and `transactions-500.csv` — a file with 500+ transactions. The script runs without errors and produces a total, but it's $12.47 off from the known correct total provided in `expected-total.txt`. The bug isn't a crash — it's a silent arithmetic error.
+Open the `module-1-arithmetic-and-stdin/exercise-1.2-rounding-trap/` folder. You'll find `buggy-sum.py` (a script that sums a column of transaction amounts from a CSV file) and `transactions-500.csv` (a file with 500+ transactions). The script runs without errors and produces a total, but it's $12.47 off from the known correct total provided in `expected-total.txt`. The bug isn't a crash; it's a silent arithmetic error.
 
 **Your Task:**
-Find the bug. The script rounds each intermediate sum to 2 decimal places during accumulation instead of rounding only the final result. Trace the error by running the script on smaller subsets — 10, 50, 100 transactions — and watching how the error grows. Fix the bug and verify your corrected script matches the expected total exactly.
+Find the bug. The script rounds each intermediate sum to 2 decimal places during accumulation instead of rounding only the final result. Trace the error by running the script on smaller subsets (10, 50, 100 transactions) and watching how the error grows. Fix the bug and verify your corrected script matches the expected total exactly.
 
 **What You'll Learn:**
 
-- That rounding during accumulation and rounding after accumulation produce different results — and the difference grows with data size
+- That rounding during accumulation and rounding after accumulation produce different results, and the difference grows with data size
 - How to bisect a data problem: test on small subsets to isolate where errors appear, then trace the logic
-- Why "the script runs without errors" is not the same as "the script produces correct results" — exit code 0 tells you nothing about output correctness
+- Why "the script runs without errors" is not the same as "the script produces correct results." Exit code 0 tells you nothing about output correctness
 
 **Starter Prompt (Intentionally Vague):**
 
@@ -232,7 +232,7 @@ After comparing `python3 buggy-sum.py < transactions-500.csv` against the expect
 
 **Reflection Questions:**
 
-1. How did the error scale — was it roughly proportional to the number of transactions, or did it grow unpredictably?
+1. How did the error scale: was it roughly proportional to the number of transactions, or did it grow unpredictably?
 2. At what data size did the error become noticeable? If this script processed 10 transactions instead of 500, would anyone have caught the bug?
 3. What other accumulation patterns might have this same class of bug? (Hint: think about averaging, running balances, percentage calculations.)
 
@@ -240,25 +240,25 @@ After comparing `python3 buggy-sum.py < transactions-500.csv` against the expect
 
 ## Module 2: Testing & Verification
 
-> **Core Skill:** Zero-trust verification — proving correctness with test data (Lesson 2)
+> **Core Skill:** Zero-trust verification: proving correctness with test data (Lesson 2)
 >
-> Lesson 2 introduced the testing loop: create test data with known answers, run your script, compare output to expected results. These exercises take that skill further — you'll design adversarial test cases and diagnose scripts that produce plausible but wrong output.
+> Lesson 2 introduced the testing loop: create test data with known answers, run your script, compare output to expected results. These exercises take that skill further: you'll design adversarial test cases and diagnose scripts that produce plausible but wrong output.
 
 <ExerciseCard id="2.1" title="The Bulletproof Calculator" />
 
-### Exercise 2.1 — The Bulletproof Calculator (Build)
+### Exercise 2.1: The Bulletproof Calculator (Build)
 
 **The Problem:**
-Open the `module-2-testing-and-verification/exercise-2.1-bulletproof-calculator/` folder. You'll find `sum-expenses.py` — a working expense summation script — and `sample-expenses.csv` — a small CSV file it processes correctly. The script looks solid. It handles basic CSV, sums a column, and produces the right answer on the sample data. But "works on the sample" doesn't mean "works on everything."
+Open the `module-2-testing-and-verification/exercise-2.1-bulletproof-calculator/` folder. You'll find `sum-expenses.py` (a working expense summation script) and `sample-expenses.csv` (a small CSV file it processes correctly). The script looks solid. It handles basic CSV, sums a column, and produces the right answer on the sample data. But "works on the sample" doesn't mean "works on everything."
 
 **Your Task:**
-Design a test suite that breaks this script. Create test CSV files that probe every assumption the script makes: What happens with negative amounts (refunds)? Empty rows? Non-numeric values in the amount column? Amounts with currency symbols ($, EUR)? Files with Windows line endings? CSV files with a BOM (byte order mark)? Your goal is to find the script's silent weaknesses — inputs it processes without error but produces wrong results for.
+Design a test suite that breaks this script. Create test CSV files that probe every assumption the script makes: What happens with negative amounts (refunds)? Empty rows? Non-numeric values in the amount column? Amounts with currency symbols ($, EUR)? Files with Windows line endings? CSV files with a BOM (byte order mark)? Your goal is to find the script's silent weaknesses: inputs it processes without error but produces wrong results for.
 
 **What You'll Learn:**
 
-- That designing adversarial test data is a skill distinct from writing code — you're thinking about what could go wrong, not what should go right
+- That designing adversarial test data is a skill distinct from writing code: you're thinking about what could go wrong, not what should go right
 - The difference between crashes (the script tells you something is wrong) and silent failures (the script happily produces garbage)
-- How "works on the sample" creates false confidence — the sample was designed by the same person who wrote the script, so it avoids their blind spots
+- How "works on the sample" creates false confidence, because the sample was designed by the same person who wrote the script, so it avoids their blind spots
 
 **Starter Prompt (Intentionally Vague):**
 
@@ -278,10 +278,10 @@ After reading sum-expenses.py to understand its parsing logic: "Create a test su
 
 <ExerciseCard id="2.2" title="The Green Light Lie" />
 
-### Exercise 2.2 — The Green Light Lie (Debug)
+### Exercise 2.2: The Green Light Lie (Debug)
 
 **The Problem:**
-Open the `module-2-testing-and-verification/exercise-2.2-green-light-lie/` folder. You'll find `broken-calc.py` — a script that processes an expense report and outputs a summary — and `test-data.csv` with known correct output in `expected-output.txt`. The script exits with code 0 and produces output that looks reasonable. But it has 3 logic bugs hidden in the code: it silently skips rows with negative amounts (treating refunds as non-data), it counts rows off-by-one (includes the header in the count), and it uses `abs()` on the total which masks a negative balance.
+Open the `module-2-testing-and-verification/exercise-2.2-green-light-lie/` folder. You'll find `broken-calc.py` (a script that processes an expense report and outputs a summary) and `test-data.csv` with known correct output in `expected-output.txt`. The script exits with code 0 and produces output that looks reasonable. But it has 3 logic bugs hidden in the code: it silently skips rows with negative amounts (treating refunds as non-data), it counts rows off-by-one (includes the header in the count), and it uses `abs()` on the total which masks a negative balance.
 
 **Your Task:**
 Find all 3 bugs without being told what they are beyond "the output is wrong in 3 ways." Compare the script's output against `expected-output.txt` line by line. For each discrepancy, trace through the code to find the responsible line. Fix all 3 and verify your corrected output matches expected exactly.
@@ -290,7 +290,7 @@ Find all 3 bugs without being told what they are beyond "the output is wrong in 
 
 - That scripts with multiple bugs interact: fixing one bug changes the output, which can make other bugs harder or easier to spot
 - How to systematically compare expected vs. actual output to isolate which specific values are wrong
-- The pattern of "looks close enough" masking real errors — an off-by-one count or a missing negative sign is easy to overlook when the rest of the output seems right
+- The pattern of "looks close enough" masking real errors: an off-by-one count or a missing negative sign is easy to overlook when the rest of the output seems right
 
 **Starter Prompt (Intentionally Vague):**
 
@@ -316,13 +316,13 @@ After running `python3 broken-calc.py < test-data.csv` and `diff <(python3 broke
 
 <ExerciseCard id="3.1" title="The Messy Payroll" />
 
-### Exercise 3.1 — The Messy Payroll (Build)
+### Exercise 3.1: The Messy Payroll (Build)
 
 **The Problem:**
-Open the `module-3-csv-processing/exercise-3.1-messy-payroll/` folder. You'll find `payroll-raw.csv` — an 80+ row payroll export from an accounting system. This isn't clean data. Employee names contain commas ("Smith, John"), salary fields have currency symbols and thousand separators ("$4,250.00"), date formats are mixed (MM/DD/YYYY and YYYY-MM-DD in the same file), some rows have empty fields, and there's a trailing comma on every line that creates a phantom empty column.
+Open the `module-3-csv-processing/exercise-3.1-messy-payroll/` folder. You'll find `payroll-raw.csv`, an 80+ row payroll export from an accounting system. This isn't clean data. Employee names contain commas ("Smith, John"), salary fields have currency symbols and thousand separators ("$4,250.00"), date formats are mixed (MM/DD/YYYY and YYYY-MM-DD in the same file), some rows have empty fields, and there's a trailing comma on every line that creates a phantom empty column.
 
 **Your Task:**
-Build a Python script that reads this CSV from stdin and outputs a clean, standardized version: names unquoted and normalized, salaries as plain numbers, dates in ISO format (YYYY-MM-DD), empty fields replaced with "N/A", and no phantom columns. The cleaned output should be valid CSV that any tool can process without special handling. Verify by spot-checking 5 rows across the file — the messiest ones you can find.
+Build a Python script that reads this CSV from stdin and outputs a clean, standardized version: names unquoted and normalized, salaries as plain numbers, dates in ISO format (YYYY-MM-DD), empty fields replaced with "N/A", and no phantom columns. The cleaned output should be valid CSV that any tool can process without special handling. Verify by spot-checking 5 rows across the file, choosing the messiest ones you can find.
 
 **Key Edge Cases to Watch For:**
 
@@ -336,7 +336,7 @@ Build a Python script that reads this CSV from stdin and outputs a clean, standa
 
 - Why Python's `csv` module exists: splitting on commas breaks on `"Smith, John"`, and every hand-rolled parser eventually encounters this
 - That real-world CSV files violate the spec in predictable ways: mixed date formats, currency symbols, trailing delimiters, inconsistent quoting
-- The pattern of "clean once, use everywhere" — investing 20 minutes in a proper cleaning script saves hours of debugging downstream tools that choke on messy input
+- The pattern of "clean once, use everywhere": investing 20 minutes in a proper cleaning script saves hours of debugging downstream tools that choke on messy input
 
 **Reflection Questions:**
 
@@ -348,21 +348,21 @@ Build a Python script that reads this CSV from stdin and outputs a clean, standa
 
 <ExerciseCard id="3.2" title="The Awk Disaster" />
 
-### Exercise 3.2 — The Awk Disaster (Debug)
+### Exercise 3.2: The Awk Disaster (Debug)
 
 **The Problem:**
-Open the `module-3-csv-processing/exercise-3.2-awk-disaster/` folder. You'll find `process.awk` — an awk script that extracts and sums transaction amounts from `bank-export.csv` (200 rows). The awk script produces a total that's wildly wrong — not just off by a few cents, but off by thousands. It processed only 160 of the 200 rows correctly. The other 40 rows either produced wrong values or were silently skipped.
+Open the `module-3-csv-processing/exercise-3.2-awk-disaster/` folder. You'll find `process.awk` (an awk script that extracts and sums transaction amounts from `bank-export.csv`, 200 rows). The awk script produces a total that's wildly wrong: not just off by a few cents, but off by thousands. It processed only 160 of the 200 rows correctly. The other 40 rows either produced wrong values or were silently skipped.
 
 **Your Task:**
 Identify which 40 rows the awk script mishandled and determine why. The causes are the usual suspects: quoted fields containing commas shifted column alignment, currency symbols made amounts non-numeric, and negative amounts in parentheses (the accounting notation `(500.00)` meaning -$500) were treated as zero. Document each failure category with example rows.
 
 **What You'll Learn:**
 
-- Why awk's field splitting on commas fails on real CSV data — and why this is the single most common data processing bug in shell scripts
+- Why awk's field splitting on commas fails on real CSV data, and why this is the single most common data processing bug in shell scripts
 - How to identify which rows in a dataset are problematic by comparing per-row output against expected values
 - That the gap between "works on clean data" and "works on exported data" is where most data processing projects fail
 
-**The Challenge:** After finding all 40 broken rows, write a Python replacement that handles every edge case the awk script missed. Process all 200 rows correctly and verify your total against `expected-total.txt`. Compare the line count of your Python solution against the awk script — sometimes the "simple" tool produces more complex code than using the right tool from the start.
+**The Challenge:** After finding all 40 broken rows, write a Python replacement that handles every edge case the awk script missed. Process all 200 rows correctly and verify your total against `expected-total.txt`. Compare the line count of your Python solution against the awk script; sometimes the "simple" tool produces more complex code than using the right tool from the start.
 
 **Reflection Questions:**
 
@@ -380,10 +380,10 @@ Identify which 40 rows the awk script mishandled and determine why. The causes a
 
 <ExerciseCard id="4.1" title="The Expense Report Builder" />
 
-### Exercise 4.1 — The Expense Report Builder (Build)
+### Exercise 4.1: The Expense Report Builder (Build)
 
 **The Problem:**
-Open the `module-4-categorization/exercise-4.1-expense-report-builder/` folder. You'll find `corporate-expenses.csv` — 150+ corporate credit card transactions that need to be categorized for accounting. The target categories are: Travel, Meals, Software, Office Supplies, and Uncategorized. The data includes merchant names, amounts, and dates. Some merchants are obvious ("UNITED AIRLINES" = Travel), but the data is full of traps: "DELTA FAUCETS" is not Delta Airlines, "SUBWAY" could be food or transit, and "APPLE STORE" could be technology or the fruit stand on 5th Avenue.
+Open the `module-4-categorization/exercise-4.1-expense-report-builder/` folder. You'll find `corporate-expenses.csv`, containing 150+ corporate credit card transactions that need to be categorized for accounting. The target categories are: Travel, Meals, Software, Office Supplies, and Uncategorized. The data includes merchant names, amounts, and dates. Some merchants are obvious ("UNITED AIRLINES" = Travel), but the data is full of traps: "DELTA FAUCETS" is not Delta Airlines, "SUBWAY" could be food or transit, and "APPLE STORE" could be technology or the fruit stand on 5th Avenue.
 
 **Key False Positive Traps:**
 
@@ -397,7 +397,7 @@ Build a Python categorization script that reads transactions from stdin and outp
 
 **What You'll Learn:**
 
-- That naive keyword matching produces unacceptable false positive rates — "DELTA" matching both airlines and faucets is a business-critical error
+- That naive keyword matching produces unacceptable false positive rates: "DELTA" matching both airlines and faucets is a business-critical error
 - How word boundaries (`\b`), negative lookaheads, and categorization hierarchies reduce false positives from pattern matching
 - The testing workflow for categorizers: run on full dataset, compare against expected output, fix every mismatch, and re-run until zero discrepancies
 
@@ -411,19 +411,19 @@ Build a Python categorization script that reads transactions from stdin and outp
 
 <ExerciseCard id="4.2" title="The Over-Eager Matcher" />
 
-### Exercise 4.2 — The Over-Eager Matcher (Debug)
+### Exercise 4.2: The Over-Eager Matcher (Debug)
 
 **The Problem:**
-Open the `module-4-categorization/exercise-4.2-over-eager-matcher/` folder. You'll find `categorizer.py` — a transaction categorization script — and `transactions.csv` — a dataset it processes. The categorizer runs and produces output, but it has 8 specific false positives: DR PEPPER is categorized as Medical, RED LOBSTER as Charitable Donations, SHELL GAS as Technology (matching "shell"), AMAZON FRESH as Books, OFFICE DEPOT as Government (matching "office" in a government pattern), BEST BUY as Travel (matching "buy" in a flight booking pattern), SUBWAY SANDWICH as Transportation, and COACH OUTLET as Sports.
+Open the `module-4-categorization/exercise-4.2-over-eager-matcher/` folder. You'll find `categorizer.py` (a transaction categorization script) and `transactions.csv` (a dataset it processes). The categorizer runs and produces output, but it has 8 specific false positives: DR PEPPER is categorized as Medical, RED LOBSTER as Charitable Donations, SHELL GAS as Technology (matching "shell"), AMAZON FRESH as Books, OFFICE DEPOT as Government (matching "office" in a government pattern), BEST BUY as Travel (matching "buy" in a flight booking pattern), SUBWAY SANDWICH as Transportation, and COACH OUTLET as Sports.
 
 **Your Task:**
 Find and fix all 8 false positives in the categorizer's regex patterns. For each one, identify which pattern matched incorrectly and why. Fix the pattern to exclude the false positive without breaking correct matches. Verify that all 8 are resolved and no new false positives were introduced.
 
 **What You'll Learn:**
 
-- That regex patterns which look reasonable in isolation produce absurd results on real merchant names — and this is the normal state of naive pattern matching
+- That regex patterns which look reasonable in isolation produce absurd results on real merchant names, and this is the normal state of naive pattern matching
 - The specific techniques for fixing false positives: anchoring patterns, adding exclusion terms, using word boundaries, and ordering patterns from specific to general
-- That fixing one false positive can create another if patterns overlap — verification after every fix is mandatory
+- That fixing one false positive can create another if patterns overlap, so verification after every fix is mandatory
 
 **The Twist:** After fixing all 8 false positives, have Claude Code generate 5 new merchant names that would fool your corrected categorizer. Fix those too. This reveals whether your fixes were surgical patches or genuine improvements to the categorization logic.
 
@@ -443,7 +443,7 @@ Find and fix all 8 false positives in the categorizer's regex patterns. For each
 
 <ExerciseCard id="5.1" title="The Quarterly Report" />
 
-### Exercise 5.1 — The Quarterly Report (Build)
+### Exercise 5.1: The Quarterly Report (Build)
 
 **The Problem:**
 Open the `module-5-pipeline-orchestration/exercise-5.1-quarterly-report/` folder. You'll find three monthly transaction files: `january.csv`, `february.csv`, and `march.csv`. Each has slightly different column ordering and date formats (January uses MM/DD/YYYY, February uses DD-MM-YYYY, March uses YYYY-MM-DD). Column headers also differ slightly: January uses "Amount", February uses "Transaction Amount", March uses "Amt". Your task is to produce a quarterly summary report showing total spending by category, monthly trends, and the top 10 largest transactions.
@@ -467,21 +467,21 @@ Build a multi-step pipeline: (1) a cleaning script that normalizes each month's 
 
 <ExerciseCard id="5.2" title="The Broken Pipeline" />
 
-### Exercise 5.2 — The Broken Pipeline (Debug)
+### Exercise 5.2: The Broken Pipeline (Debug)
 
 **The Problem:**
-Open the `module-5-pipeline-orchestration/exercise-5.2-broken-pipeline/` folder. You'll find a 3-step pipeline: `step1-clean.py`, `step2-categorize.py`, `step3-report.py`, along with `input.csv` and `expected-report.txt`. Running the full pipeline (`cat input.csv | python3 step1-clean.py | python3 step2-categorize.py | python3 step3-report.py`) produces a report, but the numbers don't match the expected output. Each individual script works correctly on its own test data — `step1-clean.py` produces clean output, `step2-categorize.py` categorizes correctly when given plain numbers, `step3-report.py` summarizes correctly when given categorized data. The bug is in the interfaces: step 1 outputs amounts with a "$" prefix (which is valid, clean output for display purposes), and step 2's parser silently drops any row where the amount field doesn't convert to a float — so every row is silently lost between steps 1 and 2.
+Open the `module-5-pipeline-orchestration/exercise-5.2-broken-pipeline/` folder. You'll find a 3-step pipeline: `step1-clean.py`, `step2-categorize.py`, `step3-report.py`, along with `input.csv` and `expected-report.txt`. Running the full pipeline (`cat input.csv | python3 step1-clean.py | python3 step2-categorize.py | python3 step3-report.py`) produces a report, but the numbers don't match the expected output. Each individual script works correctly on its own test data: `step1-clean.py` produces clean output, `step2-categorize.py` categorizes correctly when given plain numbers, `step3-report.py` summarizes correctly when given categorized data. The bug is in the interfaces: step 1 outputs amounts with a "$" prefix (which is valid, clean output for display purposes), and step 2's parser silently drops any row where the amount field doesn't convert to a float, so every row is silently lost between steps 1 and 2.
 
 **Your Task:**
 Diagnose the pipeline failure by examining the output of each step independently. Capture intermediate output: `cat input.csv | python3 step1-clean.py > step1-output.csv`, then inspect it. Feed that to step 2 and capture its output. Find where rows are being lost and why. Fix the interface mismatch and verify the full pipeline produces the expected report.
 
 **What You'll Learn:**
 
-- That pipeline bugs almost always live at the interfaces between steps, not inside the steps themselves — each step works in isolation but fails when connected
+- That pipeline bugs almost always live at the interfaces between steps, not inside the steps themselves. Each step works in isolation but fails when connected
 - The debugging technique of capturing intermediate output: redirect each step to a file and inspect before piping forward
-- Why "silently drops rows" is the most dangerous class of pipeline bug — the pipeline produces output that looks plausible but is missing data
+- Why "silently drops rows" is the most dangerous class of pipeline bug: the pipeline produces output that looks plausible but is missing data
 
-**The Extension:** After fixing the interface bug, add verification checks between each pipeline step that flag data loss. For example: step 1 outputs a row count in a comment line (`# ROWS: 200`), step 2 reads that comment, counts incoming rows, and exits with an error if they don't match. Apply this pattern to every interface in the pipeline. This transforms silent data loss into a loud, immediate error — the pipeline stops and tells you exactly where data disappeared.
+**The Extension:** After fixing the interface bug, add verification checks between each pipeline step that flag data loss. For example: step 1 outputs a row count in a comment line (`# ROWS: 200`), step 2 reads that comment, counts incoming rows, and exits with an error if they don't match. Apply this pattern to every interface in the pipeline. This transforms silent data loss into a loud, immediate error: the pipeline stops and tells you exactly where data disappeared.
 
 **Reflection Questions:**
 
@@ -493,36 +493,36 @@ Diagnose the pipeline failure by examining the output of each step independently
 
 ## Module 6: Capstone Projects
 
-> **Choose one (or more). Build a real tool you'll actually use — no starter prompts provided.**
+> **Choose one (or more). Build a real tool you'll actually use. No starter prompts provided.**
 
-Capstones are different from the exercises above. There are no guided prompts — you design the entire approach yourself. Each project requires applying all the skills from Modules 1-5 together to solve a realistic problem. Where module exercises test individual skills, capstones test your ability to orchestrate those skills into a coherent pipeline. The quality of your verification matters as much as the result — anyone reviewing your work should trust the numbers because you proved them.
+Capstones are different from the exercises above. There are no guided prompts; you design the entire approach yourself. Each project requires applying all the skills from Modules 1-5 together to solve a realistic problem. Where module exercises test individual skills, capstones test your ability to orchestrate those skills into a coherent pipeline. The quality of your verification matters as much as the result: anyone reviewing your work should trust the numbers because you proved them.
 
-The progression across capstones is intentional: Capstone A uses curated data with known correct answers so you can verify your pipeline end-to-end. Capstone B uses a larger dataset where you must define "correct" yourself (what counts as a subscription? what counts as a price change?). Capstone C uses your own data where there's no answer key at all — you're the domain expert who decides if the output makes sense. Each capstone demands more judgment and less scaffolding than the last.
+The progression across capstones is intentional: Capstone A uses curated data with known correct answers so you can verify your pipeline end-to-end. Capstone B uses a larger dataset where you must define "correct" yourself (what counts as a subscription? what counts as a price change?). Capstone C uses your own data where there's no answer key at all. You're the domain expert who decides if the output makes sense. Each capstone demands more judgment and less scaffolding than the last.
 
 <ExerciseCard id="A" title="The Freelancer's Tax Prep" />
 
-### Capstone A — The Freelancer's Tax Prep
+### Capstone A: The Freelancer's Tax Prep
 
 Open the `module-6-capstone/capstone-A-freelancer-tax-prep/` folder. You'll find 6 months of bank transaction data across separate CSV files (one per month), each with slightly different export formats. The data contains income (client payments), business expenses (software, equipment, meals with clients), personal transactions (groceries, entertainment), and transfers between accounts that should be excluded from both income and expenses. Some transactions are ambiguous: is that $200 "AMAZON" purchase a business expense (office supplies) or personal (kitchen gadgets)?
 
 Take this data through the complete Data Processing Framework:
 
-1. **Understand** — Survey the 6 files: how many transactions total, what formats, what categories appear, what's the date range
-2. **Build** — Create scripts for each processing step: cleaning, combining, categorizing
-3. **Test** — Verify each script on a small subset with manually calculated expected results
-4. **Verify** — Run on full dataset and spot-check categories against raw transaction descriptions
-5. **Handle Edge Cases** — Account transfers (not income or expense), refunds that offset expenses, split transactions, foreign currency conversions
-6. **Pipeline** — Connect all scripts into a single pipeline that produces a tax-ready report with category totals
-7. **Make Permanent** — Save the pipeline as a documented, reusable tool that works on next quarter's data
+1. **Understand**: Survey the 6 files: how many transactions total, what formats, what categories appear, what's the date range
+2. **Build**: Create scripts for each processing step: cleaning, combining, categorizing
+3. **Test**: Verify each script on a small subset with manually calculated expected results
+4. **Verify**: Run on full dataset and spot-check categories against raw transaction descriptions
+5. **Handle Edge Cases**: Account transfers (not income or expense), refunds that offset expenses, split transactions, foreign currency conversions
+6. **Pipeline**: Connect all scripts into a single pipeline that produces a tax-ready report with category totals
+7. **Make Permanent**: Save the pipeline as a documented, reusable tool that works on next quarter's data
 
 **Deliverables:**
 
-- `clean.py` — Normalizes all 6 monthly CSVs to a common format
-- `categorize.py` — Assigns tax categories (Income, Business Expense, Personal, Transfer)
-- `ambiguous.py` — Flags transactions that need human review
-- `report.py` — Produces final tax summary with totals per category
-- `TAX-SUMMARY.md` — The actual report: income total, deductible expenses, flagged items
-- `VERIFICATION.md` — How you verified correctness: test cases, spot checks, row counts
+- `clean.py`: Normalizes all 6 monthly CSVs to a common format
+- `categorize.py`: Assigns tax categories (Income, Business Expense, Personal, Transfer)
+- `ambiguous.py`: Flags transactions that need human review
+- `report.py`: Produces final tax summary with totals per category
+- `TAX-SUMMARY.md`: The actual report: income total, deductible expenses, flagged items
+- `VERIFICATION.md`: How you verified correctness: test cases, spot checks, row counts
 
 **Reflection Questions:**
 
@@ -534,71 +534,71 @@ Take this data through the complete Data Processing Framework:
 
 <ExerciseCard id="B" title="The Subscription Auditor" />
 
-### Capstone B — The Subscription Auditor
+### Capstone B: The Subscription Auditor
 
-Open the `module-6-capstone/capstone-B-subscription-auditor/` folder. You'll find 12 months of credit card transactions (800+ rows total) in a single large CSV. Hidden in the data are recurring subscription charges — some monthly, some annual, some that changed price midway through the year. The challenge isn't processing the data (you have those skills from Modules 1-4) — it's defining what counts as a "subscription" when merchant names vary slightly between charges ("NETFLIX.COM", "NETFLIX INC", "NETFLIX STREAMING") and amounts fluctuate due to tax changes or plan upgrades.
+Open the `module-6-capstone/capstone-B-subscription-auditor/` folder. You'll find 12 months of credit card transactions (800+ rows total) in a single large CSV. Hidden in the data are recurring subscription charges (some monthly, some annual, some that changed price midway through the year). The challenge isn't processing the data (you have those skills from Modules 1-4); it's defining what counts as a "subscription" when merchant names vary slightly between charges ("NETFLIX.COM", "NETFLIX INC", "NETFLIX STREAMING") and amounts fluctuate due to tax changes or plan upgrades.
 
 Build a pipeline that:
 
-1. **Identifies recurring charges** — Find merchants that appear in 3+ months with similar amounts
-2. **Detects price changes** — Flag any subscription where the amount changed between months
-3. **Finds duplicates** — Identify months where the same subscription was charged twice
-4. **Calculates annual cost** — Total yearly spending per subscription
-5. **Generates audit report** — A summary showing every subscription, its frequency, any price changes, any duplicate charges, and total annual cost
+1. **Identifies recurring charges**: Find merchants that appear in 3+ months with similar amounts
+2. **Detects price changes**: Flag any subscription where the amount changed between months
+3. **Finds duplicates**: Identify months where the same subscription was charged twice
+4. **Calculates annual cost**: Total yearly spending per subscription
+5. **Generates audit report**: A summary showing every subscription, its frequency, any price changes, any duplicate charges, and total annual cost
 
 **Deliverables:**
 
-- `find-recurring.py` — Identifies recurring merchant patterns
-- `detect-changes.py` — Flags price changes and duplicates
-- `audit-report.py` — Generates the final audit summary
-- `SUBSCRIPTION-AUDIT.md` — The actual report with findings
-- `VERIFICATION.md` — How you verified each finding is correct
+- `find-recurring.py`: Identifies recurring merchant patterns
+- `detect-changes.py`: Flags price changes and duplicates
+- `audit-report.py`: Generates the final audit summary
+- `SUBSCRIPTION-AUDIT.md`: The actual report with findings
+- `VERIFICATION.md`: How you verified each finding is correct
 
 **Reflection Questions:**
 
-1. How many subscriptions did your auditor find? Were any surprising — charges you wouldn't notice on a month-by-month review?
-2. How did you define "similar amounts" for detecting recurring charges? A subscription might be $9.99 one month and $10.49 the next — is that the same subscription with a price change, or two different charges?
+1. How many subscriptions did your auditor find? Were any surprising, charges you wouldn't notice on a month-by-month review?
+2. How did you define "similar amounts" for detecting recurring charges? A subscription might be $9.99 one month and $10.49 the next: is that the same subscription with a price change, or two different charges?
 3. What's the total annual cost of all detected subscriptions? If someone wanted to cut their subscriptions by 30%, which ones would you recommend cutting and why?
 
 ---
 
 <ExerciseCard id="C" title="Your Own Financial Data" />
 
-### Capstone C — Your Own Financial Data
+### Capstone C: Your Own Financial Data
 
-Open the `module-6-capstone/capstone-C-your-own-data/` folder for a self-assessment template. Then close it — this capstone uses YOUR actual bank data.
+Open the `module-6-capstone/capstone-C-your-own-data/` folder for a self-assessment template. Then close it; this capstone uses YOUR actual bank data.
 
-Export your own bank transactions as CSV (most banks offer this in their online banking — look for "Download" or "Export" in your transaction history). Build a custom pipeline tailored to your actual spending categories and financial questions:
+Export your own bank transactions as CSV (most banks offer this in their online banking; look for "Download" or "Export" in your transaction history). Build a custom pipeline tailored to your actual spending categories and financial questions:
 
 1. **Clean** your bank's specific export format
 2. **Categorize** based on your actual spending patterns (not generic categories)
 3. **Answer a question** you have about your finances: "Where does my money go?" or "How much do I spend eating out?" or "Have my utilities gone up this year?"
-4. **Build it to reuse** — Make the pipeline work on next month's export with zero changes
+4. **Build it to reuse**: Make the pipeline work on next month's export with zero changes
 
 **What Makes This Special:**
-Unlike Capstones A and B, this one uses real data with real stakes. The categories matter because they're YOUR categories. The edge cases are genuine because they came from YOUR bank. The verification matters because wrong numbers affect real financial decisions. And there's no expected output file to compare against — you are the only person who can verify the results are correct, which means your verification skills from Module 2 become essential rather than optional.
+Unlike Capstones A and B, this one uses real data with real stakes. The categories matter because they're YOUR categories. The edge cases are genuine because they came from YOUR bank. The verification matters because wrong numbers affect real financial decisions. And there's no expected output file to compare against. You are the only person who can verify the results are correct, which means your verification skills from Module 2 become essential rather than optional.
 
 **Important:** Before processing your own data, remove or redact any information you're not comfortable having in a local file. Your bank CSV may contain account numbers or other sensitive details that should not appear in script output files.
 
 **Deliverables:**
 
 - Your cleaning, categorizing, and reporting scripts
-- `MY-SPENDING-REPORT.md` — Answers to your financial questions with supporting data
-- `PIPELINE-README.md` — Instructions for running the pipeline on next month's export
-- `WHAT-I-LEARNED.md` — What surprised you about your spending, and what you'd do differently in the pipeline
+- `MY-SPENDING-REPORT.md`: Answers to your financial questions with supporting data
+- `PIPELINE-README.md`: Instructions for running the pipeline on next month's export
+- `WHAT-I-LEARNED.md`: What surprised you about your spending, and what you'd do differently in the pipeline
 
 **Reflection Questions:**
 
 1. Was your bank's CSV format cleaner or messier than the exercise data? What edge cases were unique to your bank's export?
 2. Did the spending analysis reveal anything you didn't expect? Would you have discovered it by scanning your bank statement manually?
-3. Will you actually run this pipeline next month? What would make it easier to reuse — and what would make you abandon it?
+3. Will you actually run this pipeline next month? What would make it easier to reuse, and what would make you abandon it?
 
 ---
 
 ## What's Next
 
-You've built, debugged, and orchestrated data processing tools across 13 exercises — from simple decimal calculators to multi-step pipelines handling hundreds of real transactions. The Data Processing Framework (Understand, Build, Test, Verify, Edge Cases, Pipeline, Permanent) applies to any domain where data needs processing: log analysis, invoice processing, inventory management, or any workflow where "if it's math, it belongs in a script."
+You've built, debugged, and orchestrated data processing tools across 13 exercises, from simple decimal calculators to multi-step pipelines handling hundreds of real transactions. The Data Processing Framework (Understand, Build, Test, Verify, Edge Cases, Pipeline, Permanent) applies to any domain where data needs processing: log analysis, invoice processing, inventory management, or any workflow where "if it's math, it belongs in a script."
 
-The three skills you practiced — building composable tools, verifying output against known answers, and connecting tools into pipelines — are the exact skills that separate someone who can follow a tutorial from someone who can solve new problems.
+The three skills you practiced (building composable tools, verifying output against known answers, and connecting tools into pipelines) are the exact skills that separate someone who can follow a tutorial from someone who can solve new problems.
 
-These verified, composable tools are the building blocks for the automated workflows you'll build in later chapters, where the manual prompting you practiced here evolves into autonomous agent behavior. The scripts you wrote, the verification habits you built, and the pipeline patterns you internalized are exactly what AI Employees need to operate independently — they just need those patterns encoded as instructions rather than typed as prompts.
+These verified, composable tools are the building blocks for the automated workflows you'll build in later chapters, where the manual prompting you practiced here evolves into autonomous agent behavior. The scripts you wrote, the verification habits you built, and the pipeline patterns you internalized are exactly what AI Employees need to operate independently; they just need those patterns encoded as instructions rather than typed as prompts.

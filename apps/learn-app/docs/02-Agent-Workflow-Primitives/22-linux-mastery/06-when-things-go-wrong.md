@@ -5,7 +5,7 @@ chapter: 22
 lesson: 6
 layer: L2
 duration_minutes: 35
-description: "Learn a systematic four-step method for diagnosing agent failures — because restarting is not debugging"
+description: "Learn a systematic four-step method for diagnosing agent failures: because restarting is not debugging"
 keywords:
   [
     "debugging",
@@ -63,7 +63,7 @@ cognitive_load:
     - "LNPS triage method (systematic diagnosis order)"
     - "journalctl filtering (finding the needle in the haystack)"
     - "Network diagnosis basics (is the service reachable?)"
-  assessment: "3 concepts at B1 level — builds on L2 output reading and L4 systemd knowledge"
+  assessment: "3 concepts at B1 level: builds on L2 output reading and L4 systemd knowledge"
 
 differentiation:
   extension_for_advanced: "Explore structured logging (JSON logs) and how they make automated analysis possible. Set up a log rotation policy to prevent /var/log from filling the disk."
@@ -74,20 +74,20 @@ teaching_guide:
   session_group: 3
   session_title: "Diagnosis and Troubleshooting"
   key_points:
-    - "The LNPS method gives students a repeatable framework — without it, debugging becomes random restarting"
-    - "The 'restarting is not debugging' mantra should be internalized — it's the lesson's thesis"
+    - "The LNPS method gives students a repeatable framework: without it, debugging becomes random restarting"
+    - "The 'restarting is not debugging' mantra should be internalized; it's the lesson's thesis"
     - "The mystery scenario (empty report) creates genuine tension that the method resolves"
     - "journalctl filtering is the most immediately useful technical skill in this lesson"
   misconceptions:
-    - "Students think restarting fixes things — it sometimes masks symptoms while the root cause persists"
-    - "Students think logs are for developers only — logs are the primary diagnostic tool for anyone managing a service"
-    - "Students skip straight to 'the code must be broken' — the LNPS method catches infrastructure failures before blaming code"
+    - "Students think restarting fixes things: it sometimes masks symptoms while the root cause persists"
+    - "Students think logs are for developers only: logs are the primary diagnostic tool for anyone managing a service"
+    - "Students skip straight to 'the code must be broken': the LNPS method catches infrastructure failures before blaming code"
   discussion_prompts:
     - "Have you ever 'fixed' a computer problem by restarting, only for it to come back? What was the real cause?"
     - "Why does the LNPS method check logs first instead of jumping straight to the code?"
   teaching_tips:
-    - "Walk through the mystery scenario live — show the empty report, then follow LNPS step by step"
-    - "The reveal (database not enabled at boot) is satisfying because it's NOT a code bug — infrastructure failures are common and non-obvious"
+    - "Walk through the mystery scenario live: show the empty report, then follow LNPS step by step"
+    - "The reveal (database not enabled at boot) is satisfying because it's NOT a code bug: infrastructure failures are common and non-obvious"
     - "Have students practice journalctl filtering on their own services"
   assessment_quick_check:
     - "What are the four steps of LNPS and why are they in that order?"
@@ -101,7 +101,7 @@ version: "1.0.0"
 
 # When Things Go Wrong
 
-Sunday night. Agent deployed, unkillable, locked down. Ali checks the dashboard. The latest pricing report is empty. Not an error message — just empty. The agent ran on schedule, connected to the database, generated a report, and saved it. The report contains nothing.
+Sunday night. Agent deployed, unkillable, locked down. Ali checks the dashboard. The latest pricing report is empty. Not an error message, just empty. The agent ran on schedule, connected to the database, generated a report, and saved it. The report contains nothing.
 
 Board meeting at 9 AM. Twelve hours.
 
@@ -109,7 +109,7 @@ Ali's first instinct: restart everything. The agent. The database. Maybe the who
 
 > **"Every bad debugger has one move: restart. Every good debugger has a system."**
 
-Restarting might fix the symptom. But if the root cause is still there, the problem comes back — probably at 3 AM before the next board meeting. Ali needs to find the cause, not mask it.
+Restarting might fix the symptom. But if the root cause is still there, the problem comes back: probably at 3 AM before the next board meeting. Ali needs to find the cause, not mask it.
 
 ---
 
@@ -119,12 +119,12 @@ When an agent fails, resist the urge to restart. Instead, follow four steps in o
 
 | Step | Check | What You're Asking | Tools |
 |------|-------|--------------------|-------|
-| **L** — Logs | Service logs | "What did the agent say happened?" | `journalctl -u service` |
-| **N** — Network | Connectivity | "Can the agent reach what it needs?" | `curl`, `ping`, `ss` |
-| **P** — Process | Process state | "Is the agent actually running? Is it stuck?" | `systemctl status`, `ps` |
-| **S** — System | Server resources | "Does the server have enough memory, disk, CPU?" | `df -h`, `free -h`, `top` |
+| **L**: Logs | Service logs | "What did the agent say happened?" | `journalctl -u service` |
+| **N**: Network | Connectivity | "Can the agent reach what it needs?" | `curl`, `ping`, `ss` |
+| **P**: Process | Process state | "Is the agent actually running? Is it stuck?" | `systemctl status`, `ps` |
+| **S**: System | Server resources | "Does the server have enough memory, disk, CPU?" | `df -h`, `free -h`, `top` |
 
-The order matters. Logs are the fastest path to the answer — the agent often tells you what went wrong. Network is next because connectivity failures are common and non-obvious. Process checks catch zombie or stuck services. System resources catch exhaustion problems.
+The order matters. Logs are the fastest path to the answer: the agent often tells you what went wrong. Network is next because connectivity failures are common and non-obvious. Process checks catch zombie or stuck services. System resources catch exhaustion problems.
 
 ---
 
@@ -149,7 +149,7 @@ Feb 28 02:15:35 server competitor-tracker[4821]: Report generated: 0 entries
 Feb 28 02:15:35 server competitor-tracker[4821]: Report saved to /opt/agents/competitor-tracker/data/report.csv
 ```
 
-No crashes. No errors. The agent connected, queried the database, got zero rows, and dutifully saved an empty report. The agent did exactly what it was told. The problem isn't the agent — the problem is upstream.
+No crashes. No errors. The agent connected, queried the database, got zero rows, and dutifully saved an empty report. The agent did exactly what it was told. The problem isn't the agent: the problem is upstream.
 
 **What you tell Claude Code**: "The agent got zero rows from the database. Check if the database service is running and if it has data."
 
@@ -166,7 +166,7 @@ systemctl status postgresql
      Active: inactive (dead)
 ```
 
-The database is not running. The agent connected (it's configured to retry), eventually got an empty result set, and reported it faithfully. The mystery is solved — but why is the database down?
+The database is not running. The agent connected (it's configured to retry), eventually got an empty result set, and reported it faithfully. The mystery is solved, but why is the database down?
 
 ```bash
 journalctl -u postgresql --since "12 hours ago" | tail -20
@@ -189,7 +189,7 @@ sudo systemctl start postgresql
 
 Pause.
 
-The root cause wasn't a code bug. It wasn't a network problem. It wasn't a crashed agent. It was an infrastructure oversight — the database wasn't configured to start on boot. Restarting the agent would have changed nothing. Reading the logs found the answer in under two minutes.
+The root cause wasn't a code bug. It wasn't a network problem. It wasn't a crashed agent. It was an infrastructure oversight: the database wasn't configured to start on boot. Restarting the agent would have changed nothing. Reading the logs found the answer in under two minutes.
 
 ---
 
@@ -226,7 +226,7 @@ To check if the server can reach the internet generally:
 ping -c 3 8.8.8.8
 ```
 
-If ping works but curl doesn't, the problem is specific to that service or port. If ping also fails, the server has no internet connectivity — check DNS and network configuration.
+If ping works but curl doesn't, the problem is specific to that service or port. If ping also fails, the server has no internet connectivity: check DNS and network configuration.
 
 ---
 
@@ -250,7 +250,7 @@ ps aux | grep competitor-tracker
 | Status: `active (running)` but CPU is 100% | Agent stuck in infinite loop |
 | Status: `active (running)` but CPU is 0% | Agent waiting/sleeping (might be normal) |
 | Status: `activating (auto-restart)` | Agent crashing and restarting repeatedly |
-| Status: `failed` | Agent crashed and didn't restart — check `Restart=` policy |
+| Status: `failed` | Agent crashed and didn't restart: check `Restart=` policy |
 
 ---
 
@@ -318,7 +318,7 @@ DO NOT RESTART UNTIL YOU KNOW THE CAUSE.
 
 Ali followed the LNPS method. Logs revealed the database returned zero rows. Checking the database process showed it was inactive. The database journal showed it wasn't enabled at boot.
 
-Two commands fixed it: `enable` and `start`. The database came back. The agent's next scheduled run produced a full pricing report. Ali reviewed the data, formatted the summary, and sent it to his client at 7 AM — two hours before the board meeting.
+Two commands fixed it: `enable` and `start`. The database came back. The agent's next scheduled run produced a full pricing report. Ali reviewed the data, formatted the summary, and sent it to his client at 7 AM: two hours before the board meeting.
 
 The client never knew it was a close call.
 
@@ -326,7 +326,7 @@ The client never knew it was a close call.
 
 Monday morning. The board meeting goes well. Ali's competitor-tracker runs on Dev's server. It survives reboots, restarts after crashes, runs under a dedicated user with locked-down permissions, and Ali knows how to diagnose it when things go wrong.
 
-He thinks: "What if I could do this from zero? Not three days of figuring things out — just sit down and deploy, following a checklist?"
+He thinks: "What if I could do this from zero? Not three days of figuring things out, just sit down and deploy, following a checklist?"
 
 ---
 

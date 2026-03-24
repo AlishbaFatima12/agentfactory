@@ -68,26 +68,26 @@ teaching_guide:
   session_group: 3
   session_title: "Data Wrangling and Capstone"
   key_points:
-    - "The verification-first orchestration pattern (test data → verify → real data) is the capstone's central contribution — it combines every lesson into one disciplined workflow"
-    - "All Seven Principles appeared naturally in a single workflow — presented as a brief callback to the Seven Principles chapter rather than a full exercise, since students already did the mapping in Seven Principles Lesson 9"
+    - "The verification-first orchestration pattern (test data → verify → real data) is the capstone's central contribution: it combines every lesson into one disciplined workflow"
+    - "All Seven Principles appeared naturally in a single workflow: presented as a brief callback to the Seven Principles chapter rather than a full exercise, since students already did the mapping in Seven Principles Lesson 9"
     - "The 'NEEDS REVIEW' section demonstrates that good automation flags ambiguity for human judgment rather than making silent decisions"
-    - "The CSV merging technique (head -1 for header + tail -n +2 -q for data rows) is introduced here where it is needed — processing a full year of monthly files at scale"
+    - "The CSV merging technique (head -1 for header + tail -n +2 -q for data rows) is introduced here where it is needed: processing a full year of monthly files at scale"
   misconceptions:
-    - "Students think the capstone requires new skills — it actually requires orchestrating Lessons 1-6 in sequence, which is a different and harder challenge than learning each individually"
-    - "Students may skip the verification step because they trust the categorizer from Lesson 5 — the capstone insists on verification with test data even for tools that worked before, because data changes"
-    - "Students assume 'accountant-ready report' means perfect categorization — the NEEDS REVIEW section shows that flagging ambiguity is more professional than guessing"
+    - "Students think the capstone requires new skills: it actually requires orchestrating Lessons 1-6 in sequence, which is a different and harder challenge than learning each individually"
+    - "Students may skip the verification step because they trust the categorizer from Lesson 5: the capstone insists on verification with test data even for tools that worked before, because data changes"
+    - "Students assume 'accountant-ready report' means perfect categorization: the NEEDS REVIEW section shows that flagging ambiguity is more professional than guessing"
   discussion_prompts:
     - "Why does the capstone insist on verification EVEN for the categorizer you already tested in Lesson 5? What could be different about the real data?"
     - "The report includes a NEEDS REVIEW section with 23 items. Is that a failure of the categorizer or a feature? Why?"
     - "Look at the before/after comparison table. Which capability do you think has the most impact outside of tax preparation?"
   teaching_tips:
-    - "Let students attempt the capstone independently for 15-20 minutes before showing the reference implementation — struggling builds deeper understanding than following instructions"
-    - "The Seven Principles mapping table is the chapter's culmination — walk through it and ask students to point to the specific moment in the workflow where each principle appeared"
-    - "The reflection table (what it looked like vs what you actually learned) is a powerful closing tool — have students add their own row for what THEY learned that is not in the table"
-    - "End by asking students to name one domain outside tax prep where the verification-first orchestration pattern would apply — this ensures transfer learning"
+    - "Let students attempt the capstone independently for 15-20 minutes before showing the reference implementation: struggling builds deeper understanding than following instructions"
+    - "The Seven Principles mapping table is the chapter's culmination: walk through it and ask students to point to the specific moment in the workflow where each principle appeared"
+    - "The reflection table (what it looked like vs what you actually learned) is a powerful closing tool: have students add their own row for what THEY learned that is not in the table"
+    - "End by asking students to name one domain outside tax prep where the verification-first orchestration pattern would apply: this ensures transfer learning"
   assessment_quick_check:
     - "Ask students to describe the capstone workflow steps from memory: test data, build categorizer, verify, combine multi-file CSVs, process real files, flag ambiguous"
-    - "Ask: 'Why does the workflow insist on verification BEFORE processing real files?' — tests understanding of verification-first as a principle, not just a step"
+    - "Ask: 'Why does the workflow insist on verification BEFORE processing real files?': tests understanding of verification-first as a principle, not just a step"
     - "Have students map at least 5 of the 7 principles to specific capstone steps from memory"
 ---
 
@@ -248,12 +248,12 @@ DR PEPPER SNAPPLE and CVSMITH CONSULTING are absent. The totals match your hand 
 3. Navigate to any folder: `cd ~/Desktop`
 4. Run: `cat ~/finances/test-2025.csv | tax-prep`
 
-If you see the report — your command is installed. If you see "command not found" — check your `~/.zshrc` alias.
+If you see the report (your command is installed. If you see "command not found") check your `~/.zshrc` alias.
 :::
 
 ## Step 4: Process a Full Year
 
-Your bank exports one CSV per month. By year's end, you'll have twelve files. If you `cat *.csv` to combine them, every file's header row — `Date,Description,Amount` — ends up mixed into the data. Your script sees the header eleven times where it expects numbers.
+Your bank exports one CSV per month. By year's end, you'll have twelve files. If you `cat *.csv` to combine them, every file's header row: `Date,Description,Amount`: ends up mixed into the data. Your script sees the header eleven times where it expects numbers.
 
 The fix uses two commands you already know from the File Processing chapter:
 
@@ -272,7 +272,7 @@ cat ~/finances/combined-2025.csv | tax-prep
 |---------|-------------|
 | `head -1` | First line only (the header row) |
 | `tail -n +2` | Everything from line 2 onward (skips header) |
-| `-q` | Quiet mode — no filename prefixes in output |
+| `-q` | Quiet mode: no filename prefixes in output |
 | `>>` | Append (don't overwrite) |
 
 Result: one file, one header row, all data rows.
@@ -300,19 +300,19 @@ The command from the README works exactly as promised.
 
 ## What Just Happened?
 
-Remember the Seven Principles from the Seven Principles chapter? You just used all of them in one workflow — without a checklist, without thinking about it. That is the point. Principles are not rules you consult. They are habits you act on.
+Remember the Seven Principles from the Seven Principles chapter? You just used all of them in one workflow, without a checklist, without thinking about it. That is the point. Principles are not rules you consult. They are habits you act on.
 
 | Principle | Where It Appeared |
 |-----------|------------------|
 | **Bash is the Key** | `cat`, `head`, `tail`, pipes orchestrated all data flow |
-| **Code as Universal Interface** | Python scripts executed computation — no hallucinated math |
+| **Code as Universal Interface** | Python scripts executed computation: no hallucinated math |
 | **Verification as Core Step** | Test data with hand-calculated totals BEFORE real files |
 | **Small, Reversible Decomposition** | Composable single-purpose tools (L4), each testable independently |
 | **Persisting State in Files** | Scripts in `~/tools`, report saved to a file |
 | **Constraints and Safety** | False positive guards prevented miscategorized deductions |
 | **Observability** | Every transaction printed before the totals section |
 
-:::tip When Things Break — Quick Diagnostic Chain
+:::tip When Things Break: Quick Diagnostic Chain
 Six months from now, something will stop working. Maybe you updated your shell, maybe Python changed versions, maybe you moved to a new machine. Here's what to check:
 
 ```bash
@@ -332,11 +332,11 @@ python3 ~/tools/tax-categorize.py <<< "Date,Description,Amount"
 | Symptom | Check | Fix |
 |---------|-------|-----|
 | "command not found" | `alias tax-prep` | Re-add alias to shell config, then `source` |
-| "No such file" | `ls ~/tools/tax-categorize.py` | Script was moved — update the alias path |
+| "No such file" | `ls ~/tools/tax-categorize.py` | Script was moved: update the alias path |
 | "Permission denied" | `ls -la ~/tools/tax-categorize.py` | Re-run `chmod +x ~/tools/tax-categorize.py` |
-| Script errors on run | `python3 --version` | Python version changed — check shebang line |
+| Script errors on run | `python3 --version` | Python version changed: check shebang line |
 
-Setup is the agent's job. Diagnosis is yours — because when it breaks at 11pm before a deadline, you need to know the three places to look.
+Setup is the agent's job. Diagnosis is yours: because when it breaks at 11pm before a deadline, you need to know the three places to look.
 :::
 
 ---
@@ -347,7 +347,7 @@ Before this chapter, Bash couldn't add decimals and you had no way to catch sile
 
 ## Challenge: Prove It Transfers (30 Minutes)
 
-You've run the tax prep workflow on financial data. Lesson 5 proved it works on server logs. Now prove you can do it from scratch on a domain neither lesson covered — no walkthrough, just the goal.
+You've run the tax prep workflow on financial data. Lesson 5 proved it works on server logs. Now prove you can do it from scratch on a domain neither lesson covered: no walkthrough, just the goal.
 
 Save this as `~/grades/midterm-2025.csv`:
 
@@ -370,7 +370,7 @@ DR CHARLES,Quiz 1,20,20,quiz
 **Your task:**
 
 1. Calculate each student's weighted average (homework 30%, quizzes 20%, exams 50%)
-2. Handle the edge cases: DR CHARLES is a student named Charles, not a "DR" prefix to filter. EXTRA CREDIT has Max_Points=0 — division by zero trap. Charlie has a 0/100 homework
+2. Handle the edge cases: DR CHARLES is a student named Charles, not a "DR" prefix to filter. EXTRA CREDIT has Max_Points=0: division by zero trap. Charlie has a 0/100 homework
 3. Flag students with any single score below 60%
 4. Produce a grade report with per-student averages and an AT-RISK section
 
@@ -381,9 +381,9 @@ DR CHARLES,Quiz 1,20,20,quiz
 | Alice | 85% | 90% | 78% | 82.5% |
 | Bob | 92% | 75% | 88% | 86.6% |
 | Charlie | 0% | 95% | 72% | 55.0% |
-| DR CHARLES | 95% | 100% | — | (no exam) |
+| DR CHARLES | 95% | 100% |: | (no exam) |
 
-**Edge cases to handle:** Charlie has a 0/100 homework — that's your at-risk flag. EXTRA CREDIT has Max_Points=0 — your script crashes or silently produces infinity unless you handle it. DR CHARLES is a student named Charles, not a "DR" prefix to filter.
+**Edge cases to handle:** Charlie has a 0/100 homework (that's your at-risk flag. EXTRA CREDIT has Max_Points=0) your script crashes or silently produces infinity unless you handle it. DR CHARLES is a student named Charles, not a "DR" prefix to filter.
 
 If your report handles all three edge cases, the pattern transferred. You didn't need bank statements or server logs. You needed the workflow.
 
@@ -394,11 +394,11 @@ The agent wrote all the code. You made all the decisions that mattered.
 | What It Looked Like | What You Actually Learned |
 |---------------------|--------------------------|
 | Building sum.py and decomposing into tools | Designing Unix-style architectures where each piece is independently testable |
-| Testing with known data, spotting Dr. Pepper | Trusting nothing until you've verified it — and finding bugs in output that looks correct |
-| CSV parsing, redirecting the agent from awk | Redirecting an agent when its first approach fails — your domain knowledge steers the fix |
-| Writing the prompts | Specifying outcomes and interfaces — the one contribution the agent cannot make for itself |
+| Testing with known data, spotting Dr. Pepper | Trusting nothing until you've verified it, and finding bugs in output that looks correct |
+| CSV parsing, redirecting the agent from awk | Redirecting an agent when its first approach fails: your domain knowledge steers the fix |
+| Writing the prompts | Specifying outcomes and interfaces: the one contribution the agent cannot make for itself |
 
-The specific tools (Python, regex, find/xargs) will change. The patterns — verify first, compose through pipes, guard against false positives — will not.
+The specific tools (Python, regex, find/xargs) will change. The patterns: verify first, compose through pipes, guard against false positives: will not.
 
 ## Flashcards Study Aid
 
@@ -418,7 +418,7 @@ Modify it to print a NEEDS REVIEW section at the end listing all
 uncategorized transactions with amounts, so I can review them manually.
 ```
 
-**What you're learning:** A director decision disguised as a feature request. You're telling the agent the tool must make its own uncertainty visible rather than silently ignore it. "Print what you couldn't categorize" is not an implementation detail — it's a design principle you imposed. The agent wired the NEEDS REVIEW output; you decided that discarding uncategorized data silently was unacceptable. That call was yours.
+**What you're learning:** A director decision disguised as a feature request. You're telling the agent the tool must make its own uncertainty visible rather than silently ignore it. "Print what you couldn't categorize" is not an implementation detail; it's a design principle you imposed. The agent wired the NEEDS REVIEW output; you decided that discarding uncategorized data silently was unacceptable. That call was yours.
 
 ### Prompt 2: Add Date Filtering
 
@@ -432,7 +432,7 @@ Add date filtering. Keep the stdin reading pattern so it still works
 with pipes and cat.
 ```
 
-**What you're learning:** Interface-first directing. Notice the prompt specifies exactly what the command should look like from the outside (`tax-prep --start 2025-01-01 --end 2025-03-31`) before mentioning implementation. You designed the interface; the agent wired argparse to match it. This is the same move as "reads from stdin and prints the total" in Lesson 1 — you specify the contract, the agent writes the code that fulfills it.
+**What you're learning:** Interface-first directing. Notice the prompt specifies exactly what the command should look like from the outside (`tax-prep --start 2025-01-01 --end 2025-03-31`) before mentioning implementation. You designed the interface; the agent wired argparse to match it. This is the same move as "reads from stdin and prints the total" in Lesson 1: you specify the contract, the agent writes the code that fulfills it.
 
 ### Prompt 3: Transfer to Your Domain
 

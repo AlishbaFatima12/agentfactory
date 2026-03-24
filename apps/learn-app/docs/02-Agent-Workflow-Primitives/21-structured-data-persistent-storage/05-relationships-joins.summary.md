@@ -1,5 +1,5 @@
 ### Core Concept
-Relationships define how rows connect across tables. Correct joins and loading strategy prevent believable but wrong analytics — and the N+1 trap silently tanks performance.
+Relationships define how rows connect across tables. Correct joins and loading strategy prevent believable but wrong analytics, and the N+1 trap silently tanks performance.
 
 ### Continuity Bridge
 From single-table CRUD (L3) to multi-table queries where related data lives in separate tables connected by foreign keys.
@@ -8,7 +8,7 @@ From single-table CRUD (L3) to multi-table queries where related data lives in s
 - `relationship()` + `back_populates` = bidirectional navigation between parent and child.
 - Explicit joins for cross-table filtering and aggregation.
 - N+1 detection: 1 parent query + N child queries = silent performance disaster.
-- Section A (relationships) before Section B (joins + loading) — scaffolded progression.
+- Section A (relationships) before Section B (joins + loading): scaffolded progression.
 
 ### Critical Patterns
 - Bidirectional `back_populates` on both sides of the relationship.

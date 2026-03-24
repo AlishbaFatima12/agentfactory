@@ -10,13 +10,13 @@ slides:
 
 # Chapter 20: Computation & Data Extraction Workflow
 
-> "You already command files with Bash. Now command computation with Python — same pipes, same principles, zero syntax memorization."
+> "You already command files with Bash. Now command computation with Python: same pipes, same principles, zero syntax memorization."
 
-The file processing chapter gave you power over files: finding them, organizing them, renaming hundreds in one command. You directed an agent through Bash — `ls`, `find`, `mv`, `cp` — and it handled the tedious work while you made the decisions.
+The file processing chapter gave you power over files: finding them, organizing them, renaming hundreds in one command. You directed an agent through Bash: `ls`, `find`, `mv`, `cp`, and it handled the tedious work while you made the decisions.
 
-Now try adding up the dollar amounts in a bank statement. `echo $((14.50 + 23.75))` throws a syntax error. Bash — the tool that moved a thousand files without breaking a sweat — can't add two prices. The foundation has a hard wall: **decimal math**.
+Now try adding up the dollar amounts in a bank statement. `echo $((14.50 + 23.75))` throws a syntax error. Bash: the tool that moved a thousand files without breaking a sweat: can't add two prices. The foundation has a hard wall: **decimal math**.
 
-This chapter breaks through that wall. You'll build Python scripts that slot into your Unix toolkit exactly where Bash falls short — reading from stdin, writing to stdout, chaining through pipes. The agent writes the code. You make the decisions. The language changes; the workflow doesn't.
+This chapter breaks through that wall. You'll build Python scripts that slot into your Unix toolkit exactly where Bash falls short: reading from stdin, writing to stdout, chaining through pipes. The agent writes the code. You make the decisions. The language changes; the workflow doesn't.
 
 ## 📚 Teaching Aid
 
@@ -53,7 +53,7 @@ By the end: `cat ~/finances/2025/*.csv | tax-prep` produces a categorized report
 - Unix-like terminal (macOS, Linux, or WSL on Windows)
 - Access to Claude Code or similar AI assistant
 
-**Python Setup** — verify Python is installed before starting Lesson 1:
+**Python Setup**: verify Python is installed before starting Lesson 1:
 
 ```bash
 python3 --version
@@ -62,7 +62,7 @@ python3 --version
 If you see a version number (3.x), you're ready. If not, install Python from [python.org](https://www.python.org/downloads/) or use your system's package manager (`brew install python` on macOS, `sudo apt install python3` on Ubuntu).
 
 :::note About the Claude Code Conversations
-The conversations shown in this chapter are **illustrative** — they show the flow of interaction and the kind of output you should expect. Your actual Claude Code sessions will look different. Focus on the **pattern** (what you asked for and why), not the exact words the agent used.
+The conversations shown in this chapter are **illustrative**: they show the flow of interaction and the kind of output you should expect. Your actual Claude Code sessions will look different. Focus on the **pattern** (what you asked for and why), not the exact words the agent used.
 :::
 
 ## Sample Data

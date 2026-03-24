@@ -72,32 +72,32 @@ teaching_guide:
   session_title: "Batch Operations and Error Recovery"
   key_points:
     - "The fire drill metaphor is the lesson's thesis: practicing recovery when stakes are low builds muscle memory so real mistakes produce workflow, not panic"
-    - "'The agent is ephemeral, code is eternal' (Principle 2) is the key insight — asking the agent to write restore.sh is fundamentally different from asking it to restore files"
-    - "State comparison (current vs backup) is the most powerful diagnostic tool — when you do not know what went wrong, systematic comparison reveals exactly what changed"
-    - "Recovery is messy in practice (permission errors on 3 files) — the lesson deliberately shows non-clean recovery to set realistic expectations"
+    - "'The agent is ephemeral, code is eternal' (Principle 2) is the key insight: asking the agent to write restore.sh is fundamentally different from asking it to restore files"
+    - "State comparison (current vs backup) is the most powerful diagnostic tool: when you do not know what went wrong, systematic comparison reveals exactly what changed"
+    - "Recovery is messy in practice (permission errors on 3 files): the lesson deliberately shows non-clean recovery to set realistic expectations"
   misconceptions:
-    - "Students think recovery means 'undo' — it actually means re-applying rules.md to the current state, not reverting to a snapshot"
-    - "Students may resist the deliberate destruction step because it feels wasteful — emphasize that the backup from Lesson 2 makes this completely safe and the learning is irreplaceable"
-    - "Students assume the agent will recover identically each time — the ephemeral vs eternal distinction shows why scripts produce consistent results but agents may interpret differently each session"
+    - "Students think recovery means 'undo': it actually means re-applying rules.md to the current state, not reverting to a snapshot"
+    - "Students may resist the deliberate destruction step because it feels wasteful: emphasize that the backup from Lesson 2 makes this completely safe and the learning is irreplaceable"
+    - "Students assume the agent will recover identically each time: the ephemeral vs eternal distinction shows why scripts produce consistent results but agents may interpret differently each session"
   discussion_prompts:
     - "Have you ever frozen when something went wrong with your files? What would change if you had practiced recovery beforehand?"
     - "The lesson says 'fix the process, not the file' (from Lesson 4) and 'the agent is ephemeral, code is eternal.' How do these two ideas connect?"
     - "When would you choose selective recovery (restore just one category) over full recovery? What makes that decision?"
   teaching_tips:
-    - "This lesson must be done hands-on — reading about recovery does not build the muscle memory the lesson is designed to create"
-    - "The emotional arc matters: students should feel the anxiety of destroying their organized folders, then the relief of successful recovery — that emotional imprint is the learning"
+    - "This lesson must be done hands-on: reading about recovery does not build the muscle memory the lesson is designed to create"
+    - "The emotional arc matters: students should feel the anxiety of destroying their organized folders, then the relief of successful recovery: that emotional imprint is the learning"
     - "Connect this back to Lesson 2's safety-first pattern: the backup created there pays off here, closing the loop across three lessons"
-    - "The session management note is important for workshops — five lessons of accumulated context is the point where a fresh session becomes valuable"
+    - "The session management note is important for workshops: five lessons of accumulated context is the point where a fresh session becomes valuable"
   assessment_quick_check:
-    - "Ask students: 'Your organized folder looks wrong but you are not sure what happened. What is your first prompt to the agent?' — answer should involve state comparison against backup"
-    - "Ask: 'Why should you create restore.sh instead of just asking the agent to restore your files next time?' — tests the ephemeral vs eternal distinction"
+    - "Ask students: 'Your organized folder looks wrong but you are not sure what happened. What is your first prompt to the agent?': answer should involve state comparison against backup"
+    - "Ask: 'Why should you create restore.sh instead of just asking the agent to restore your files next time?': tests the ephemeral vs eternal distinction"
 ---
 
 # Error Recovery & Resilience
 
 We're about to do something most tutorials would never let you do. You're going to deliberately destroy the organization you just built. On purpose. With your real files.
 
-Look at your `organized/` folder. That structure took you the last three lessons to build — survey, backup, categorization rules, batch moves. You're about to flatten it back to chaos in 5 seconds.
+Look at your `organized/` folder. That structure took you the last three lessons to build: survey, backup, categorization rules, batch moves. You're about to flatten it back to chaos in 5 seconds.
 
 The goal isn't to get good at fixing mistakes. The goal is to stop being afraid of making them. Fire drills don't teach you to fight fires. They teach you to stop freezing when the alarm goes off. By the end of this lesson, the word "oops" will be followed by a recovery workflow, not a panic response.
 
@@ -193,7 +193,7 @@ Your rules.md still describes the categories, but the folders
 that implemented those categories no longer exist.
 ```
 
-The "mistake" here is real — you lost the entire organization from Lesson 3. In real workflows, this kind of destructive flatten could also overwrite files with the same name across categories, break relative paths, or mix incompatible file types.
+The "mistake" here is real: you lost the entire organization from Lesson 3. In real workflows, this kind of destructive flatten could also overwrite files with the same name across categories, break relative paths, or mix incompatible file types.
 
 ### Step 5: Recover from Backup
 
@@ -228,7 +228,7 @@ Restored. organized/ now has 5 category folders matching rules.md.
 Verified against backup — no files missing.
 ```
 
-Notice the recovery wasn't clean. Permission errors on 3 files. The agent adjusted and retried. Real recovery is like this — messy, iterative, but it gets there. The point isn't perfection on the first try. The point is having a process that converges on the right answer.
+Notice the recovery wasn't clean. Permission errors on 3 files. The agent adjusted and retried. Real recovery is like this: messy, iterative, but it gets there. The point isn't perfection on the first try. The point is having a process that converges on the right answer.
 
 You're back to where you started. The careless flatten is undone. No data lost.
 
@@ -269,7 +269,7 @@ Compare the current state against the backup and show me what's missing
 or different.
 ```
 
-That last pattern — comparing current state against backup — is the most powerful recovery tool. When you're not sure what went wrong, a systematic comparison reveals exactly what changed.
+That last pattern (comparing current state against backup) is the most powerful recovery tool. When you're not sure what went wrong, a systematic comparison reveals exactly what changed.
 
 ---
 
@@ -291,14 +291,14 @@ Here's how to build recovery thinking into every workflow:
 
 Notice something about this lesson. Every time you needed recovery, you typed a prompt and the agent ran commands. That works. But what happens next month when you need to recover again? You'll describe the same thing from scratch. The agent might interpret your request slightly differently. It might use different flags, skip the verification step, or restore to the wrong location.
 
-Now look at Try With AI Prompt 3 below — it asks you to create `restore.sh`. That script is fundamentally different from asking the agent to "restore my files." Here's why:
+Now look at Try With AI Prompt 3 below: it asks you to create `restore.sh`. That script is fundamentally different from asking the agent to "restore my files." Here's why:
 
 | Approach          | Today                                                    | Next Month                                                                          |
 | ----------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | **Ask the agent** | Agent interprets your request, picks commands, runs them | Agent may interpret differently, pick different commands, produce different results |
 | **Run a script**  | Script executes the exact same steps every time          | Script executes the exact same steps every time                                     |
 
-This is **Principle 2: Code as the Universal Interface** in action. When you ask the agent to _do_ something, you get a one-time result that depends on the agent's interpretation in that moment. When you ask the agent to _write code_ that does something, you get a deterministic tool that works the same way every time — even without the agent.
+This is **Principle 2: Code as the Universal Interface** in action. When you ask the agent to _do_ something, you get a one-time result that depends on the agent's interpretation in that moment. When you ask the agent to _write code_ that does something, you get a deterministic tool that works the same way every time, even without the agent.
 
 The agent is ephemeral. Your conversation ends, context resets, and the next session starts fresh. But a script saved to disk? That persists. It captures the exact recovery workflow you verified today and makes it repeatable forever.
 
@@ -318,17 +318,17 @@ Stop reading. Open Claude Code and run the recovery exercise.
 
 This should take less than 5 minutes. But the muscle memory you build will save you hours when a real mistake happens.
 
-You can now break things and fix them. That's a superpower most people never develop. But there's one category of file problem where backups and recovery aren't enough — when you can't find the file in the first place. You know it exists. You downloaded it months ago. The filename is something your bank auto-generated. Where is it?
+You can now break things and fix them. That's a superpower most people never develop. But there's one category of file problem where backups and recovery aren't enough: when you can't find the file in the first place. You know it exists. You downloaded it months ago. The filename is something your bank auto-generated. Where is it?
 
 ---
 
 ## 🔄 Session Management Note
 
-You've now completed five lessons of file processing work. If your Claude Code context is getting long — or if responses feel slower or less focused — this is a natural point to start fresh.
+You've now completed five lessons of file processing work. If your Claude Code context is getting long, or if responses feel slower or less focused: this is a natural point to start fresh.
 
 **Why now:** Recovery exercises generate a lot of back-and-forth. Combined with Lessons 1-4, your context may be carrying exploration, organization, batch operations, and recovery all at once. That's the Kitchen Sink pattern from the Seven Principles chapter.
 
-**How to reset:** Commit your work, then start a new session for Lesson 6. Your `rules.md`, `FILE-INVENTORY.md`, backups, and scripts are all saved in files — your progress carries forward across sessions.
+**How to reset:** Commit your work, then start a new session for Lesson 6. Your `rules.md`, `FILE-INVENTORY.md`, backups, and scripts are all saved in files: your progress carries forward across sessions.
 
 ---
 
@@ -342,7 +342,7 @@ was wrong. Help me restore JUST the spreadsheet files from backup
 without undoing the rest of the organization.
 ```
 
-**What you're practicing:** Surgical recovery. Sometimes you don't want to undo everything — just fix the part that went wrong.
+**What you're practicing:** Surgical recovery. Sometimes you don't want to undo everything, just fix the part that went wrong.
 
 **Prompt 2: Recovery Audit**
 

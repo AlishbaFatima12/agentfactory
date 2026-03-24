@@ -32,30 +32,30 @@ cognitive_load:
   new_concepts: 4
   assessment: "4 concepts (required vs optional, exact decimal vs approximate, foreign key references, unique constraints) within A2 limit"
 differentiation:
-  extension_for_advanced: "Describe a project management schema (User, Project, Task, TimeEntry) to the agent. After it builds the schema, compare the result with a classmate's description — did different wording produce different schemas?"
+  extension_for_advanced: "Describe a project management schema (User, Project, Task, TimeEntry) to the agent. After it builds the schema, compare the result with a classmate's description: did different wording produce different schemas?"
   remedial_for_struggling: "Focus on describing just one entity (User) first. Add one constraint at a time ('email is required', 'email must be unique') and verify each. Only describe Category and Expense after User works."
 teaching_guide:
   lesson_type: "core"
   session_group: 1
   session_title: "From Scripts to Databases"
   key_points:
-    - "Approximate numbers drift — 0.1 + 0.2 is not 0.3 in a computer, and that drift compounds across millions of transactions"
-    - "A schema is an enforced contract, not documentation — the database rejects bad data automatically"
-    - "'Required' means the database refuses empty values — it is the bouncer at the door, not a polite suggestion"
-    - "Foreign keys store references, not copies — if Alice changes her email, you update one row instead of 500 expense rows"
+    - "Approximate numbers drift: 0.1 + 0.2 is not 0.3 in a computer, and that drift compounds across millions of transactions"
+    - "A schema is an enforced contract, not documentation: the database rejects bad data automatically"
+    - "'Required' means the database refuses empty values: it is the bouncer at the door, not a polite suggestion"
+    - "Foreign keys store references, not copies: if Alice changes her email, you update one row instead of 500 expense rows"
   misconceptions:
-    - "Students edit code instead of describing requirements — if a student is editing Python, they have left the director role"
-    - "Students think rounding fixes the money problem — it shifts responsibility to the developer for every calculation, which is error-prone at scale"
-    - "Students want to store user names directly in expense rows instead of using references — leads to update anomalies"
-    - "Students assume optional is a safe default — it allows empty required fields that cause downstream bugs"
+    - "Students edit code instead of describing requirements: if a student is editing Python, they have left the director role"
+    - "Students think rounding fixes the money problem: it shifts responsibility to the developer for every calculation, which is error-prone at scale"
+    - "Students want to store user names directly in expense rows instead of using references: leads to update anomalies"
+    - "Students assume optional is a safe default: it allows empty required fields that cause downstream bugs"
   discussion_prompts:
     - "If approximate numbers drift by a tiny amount on every transaction, what happens when you sum a million transactions? At what scale does this matter?"
     - "Why does the Expense entity reference users by ID instead of storing Alice's name directly? What breaks when Alice changes her email?"
     - "When would you intentionally make a field optional? Can you think of a field where 'no value' is meaningful, not just lazy?"
   teaching_tips:
-    - "The floating-point surprise is visceral — describe it as 'the computer says 0.1 + 0.2 is not 0.3' and watch students react"
-    - "The ER diagram is whiteboard-worthy — draw it and have students identify which lines are references and why"
-    - "Walk through the vocabulary guide as a conversation, not a table — ask students how they would describe fields from their own domains"
+    - "The floating-point surprise is visceral: describe it as 'the computer says 0.1 + 0.2 is not 0.3' and watch students react"
+    - "The ER diagram is whiteboard-worthy: draw it and have students identify which lines are references and why"
+    - "Walk through the vocabulary guide as a conversation, not a table: ask students how they would describe fields from their own domains"
   assessment_quick_check:
     - "How would you describe a 'required' field to an agent?"
     - "Why does money need exact decimal storage?"

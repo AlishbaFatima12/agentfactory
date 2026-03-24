@@ -148,7 +148,7 @@ By chapter end, you should be able to answer these five questions:
 - Computation & Data Extraction chapter complete
 - Terminal access
 - Neon free account
-- No Python or SQL knowledge required — your agent writes all the code
+- No Python or SQL knowledge required: your agent writes all the code
 
 ## No-Regression Rules
 

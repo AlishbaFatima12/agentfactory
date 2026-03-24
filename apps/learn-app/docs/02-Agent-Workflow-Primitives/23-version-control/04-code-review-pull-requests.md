@@ -94,30 +94,30 @@ cognitive_load:
     - "Diff review (reading what changed)"
     - "Noting AI assistance in PR descriptions"
     - "Three reusable patterns (synthesis of L01-L03, zero new commands)"
-  assessment: "4 concepts (within A2 limit) — patterns section introduces no new Git commands, only names for what students already do ✓"
+  assessment: "4 concepts (within A2 limit): patterns section introduces no new Git commands, only names for what students already do ✓"
 
 differentiation:
-  extension_for_advanced: "Create a PR with intentional issues, then review your own PR using the diff to catch them — practice the reviewer mindset before asking others for reviews"
-  remedial_for_struggling: "Focus on the Commit-Before-Experiment pattern first — practice making a safety commit before any risky change. Add Branch-Test-Merge and Push-for-Backup only after the first pattern is automatic"
+  extension_for_advanced: "Create a PR with intentional issues, then review your own PR using the diff to catch them: practice the reviewer mindset before asking others for reviews"
+  remedial_for_struggling: "Focus on the Commit-Before-Experiment pattern first: practice making a safety commit before any risky change. Add Branch-Test-Merge and Push-for-Backup only after the first pattern is automatic"
 
 teaching_guide:
   lesson_type: "core"
   session_group: 2
   session_title: "GitHub and Collaboration"
   key_points:
-    - "Pull requests add a forced pause between 'I made changes' and 'changes are live' — this pause prevents mistakes"
-    - "The diff review is where you catch problems — read it like checking your work before turning in an exam"
+    - "Pull requests add a forced pause between 'I made changes' and 'changes are live': this pause prevents mistakes"
+    - "The diff review is where you catch problems: read it like checking your work before turning in an exam"
     - "Noting which parts AI helped with is professional practice, not a confession"
     - "Even solo developers benefit from the review habit"
   misconceptions:
-    - "Students think PRs are only for teams — solo developers benefit from the review pause"
-    - "Students want to hide AI assistance — transparency is a professional strength"
-    - "Students think they can skip review if tests pass — tests catch correctness, not intent mismatches"
+    - "Students think PRs are only for teams: solo developers benefit from the review pause"
+    - "Students want to hide AI assistance: transparency is a professional strength"
+    - "Students think they can skip review if tests pass: tests catch correctness, not intent mismatches"
   discussion_prompts:
     - "If an employer reads your PR description, what impression do they get about how you work with AI?"
     - "You see a function in the diff you don't understand. What should you do before clicking merge?"
   teaching_tips:
-    - "Have students create an actual PR during the lesson — the GitHub interface makes it concrete"
+    - "Have students create an actual PR during the lesson: the GitHub interface makes it concrete"
     - "Walk through reading a diff aloud, modeling the internal review dialogue"
   assessment_quick_check:
     - "What three things should a PR description include?"
@@ -134,17 +134,17 @@ version: "2.0.0"
 
 Maya spent the weekend updating the volunteer list while Sarah redesigned the budget. Now they need to combine their work. But Maya renamed some columns, and Sarah moved some rows. If they just copy-paste, they'll lose each other's changes.
 
-Sarah already made that mistake once — she merged a branch without looking at the changes and accidentally overwrote Maya's formatting. "I assumed it was fine," she told Maya. "I wrote it, so why would I need to check?"
+Sarah already made that mistake once: she merged a branch without looking at the changes and accidentally overwrote Maya's formatting. "I assumed it was fine," she told Maya. "I wrote it, so why would I need to check?"
 
-That instinct — _I wrote it, so it must be fine_ — causes expensive failures. The 2012 Knight Capital incident is a famous example of unreviewed deployment changes causing massive losses. One review pause can prevent this class of mistake. ([Source](https://www.henricodolfing.ch/en/case-study-4-the-440-million-software-error-at-knight-capital/))
+That instinct (_I wrote it, so it must be fine_) causes expensive failures. The 2012 Knight Capital incident is a famous example of unreviewed deployment changes causing massive losses. One review pause can prevent this class of mistake. ([Source](https://www.henricodolfing.ch/en/case-study-4-the-440-million-software-error-at-knight-capital/))
 
-> **"Never merge what you don't understand — even if you wrote it yesterday."**
+> **"Never merge what you don't understand, even if you wrote it yesterday."**
 
 ---
 
 ## From Solo to Review
 
-So far, everything you've done has been solo — just you and your agent. Pull requests add one more step: a pause to review before changes become permanent. Think of it as an "are you sure?" dialog for your entire project.
+So far, everything you've done has been solo, just you and your agent. Pull requests add one more step: a pause to review before changes become permanent. Think of it as an "are you sure?" dialog for your entire project.
 
 Even if you're working alone, this habit matters. You'll catch mistakes. You'll write better descriptions of your work. And when you start collaborating with others, you'll already know the workflow.
 
@@ -158,7 +158,7 @@ The workflow:
 
 1. You push a feature branch to GitHub
 2. You create a PR on GitHub (comparing feature branch to main)
-3. GitHub shows a **diff** — what changed
+3. GitHub shows a **diff**: what changed
 4. You review the changes
 5. You merge when satisfied
 
@@ -201,9 +201,9 @@ Now create the PR on GitHub:
 
 A good PR description answers three questions:
 
-1. **What changed?** — A brief summary
-2. **How was it tested?** — What you verified
-3. **What role did AI play?** — Which parts your agent helped with
+1. **What changed?**: A brief summary
+2. **How was it tested?**: What you verified
+3. **What role did AI play?**: Which parts your agent helped with
 
 Here's what a professional PR description looks like:
 
@@ -242,11 +242,11 @@ Before merging, read the diff. On the GitHub PR page, click "Files changed."
 
 Red lines show what was removed. Green lines show what was added. Ask yourself:
 
-1. **Does it match my intent?** — "I wanted to add Alex... yes, I see Alex added."
-2. **Is anything unexpected?** — "No other files changed. Good."
-3. **Do I understand every change?** — "Yes, it's one line."
+1. **Does it match my intent?**: "I wanted to add Alex... yes, I see Alex added."
+2. **Is anything unexpected?**: "No other files changed. Good."
+3. **Do I understand every change?**: "Yes, it's one line."
 
-If you see something you don't understand — especially AI-generated code — don't merge. Ask your agent to explain it first.
+If you see something you don't understand (especially AI-generated code) don't merge. Ask your agent to explain it first.
 
 Can you read it? Do you understand what changed? If yes, merge. If not, ask questions first.
 
@@ -285,7 +285,7 @@ Use this checklist every time you review a PR, whether it's yours or someone els
 
 ## Three Patterns for the Rest of Your Career
 
-You've now learned every Git concept in this chapter. Here's the thing — you've been following three patterns without realizing it. Professionals don't memorize Git commands. They follow these three patterns and let their agent handle the syntax.
+You've now learned every Git concept in this chapter. Here's the thing: you've been following three patterns without realizing it. Professionals don't memorize Git commands. They follow these three patterns and let their agent handle the syntax.
 
 ### Pattern 1: Commit Before Experimenting
 
@@ -301,7 +301,7 @@ git add <specific-files>
 git commit -m "Before refactoring: working state"
 ```
 
-If the experiment fails, you can get back to this exact state. Without this snapshot, there's nothing to go back to. Sarah learned this in Lesson 1 — she lost her volunteer list because she hadn't committed it.
+If the experiment fails, you can get back to this exact state. Without this snapshot, there's nothing to go back to. Sarah learned this in Lesson 1: she lost her volunteer list because she hadn't committed it.
 
 ### Pattern 2: Branch-Test-Merge
 
@@ -359,7 +359,7 @@ A typical work session:
 
 ## The Bigger Picture
 
-These patterns aren't just Git habits. They're the [Seven Principles of General Agent Problem Solving](/docs/General-Agents-Foundations/seven-principles) applied to version control — you've been practicing them all chapter without labeling them.
+These patterns aren't just Git habits. They're the [Seven Principles of General Agent Problem Solving](/docs/General-Agents-Foundations/seven-principles) applied to version control: you've been practicing them all chapter without labeling them.
 
 | Git Pattern                               | Principle It Applies            | What You Did                                                       |
 | ----------------------------------------- | ------------------------------- | ------------------------------------------------------------------ |
@@ -369,11 +369,11 @@ These patterns aren't just Git habits. They're the [Seven Principles of General 
 | `git status` before every action          | Verification as Core Step       | Checked the current state before making changes                    |
 | Clear commit messages and PR descriptions | Observability                   | Made your history readable so anyone can see what happened and why |
 
-Five of seven principles, embedded in your daily workflow. You didn't memorize them as theory — you practiced them as habits.
+Five of seven principles, embedded in your daily workflow. You didn't memorize them as theory: you practiced them as habits.
 
 ---
 
-You started this chapter pressing Ctrl+Z and hoping. You're ending it with a system that professionals use to protect million-dollar projects. The same system your AI agent uses every time you ask it to help. Now you understand what it's doing — and why.
+You started this chapter pressing Ctrl+Z and hoping. You're ending it with a system that professionals use to protect million-dollar projects. The same system your AI agent uses every time you ask it to help. Now you understand what it's doing, and why.
 
 ---
 

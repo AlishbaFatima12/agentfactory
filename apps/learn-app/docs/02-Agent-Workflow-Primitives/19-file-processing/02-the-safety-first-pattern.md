@@ -72,43 +72,43 @@ teaching_guide:
   session_title: "First Agent Workflow and Safety"
   key_points:
     - "The three-step safety cycle (backup → verify → proceed) is the foundation for EVERY destructive operation in the rest of this chapter and the book"
-    - "The paradox that safety enables action, not limits it, is the core mindset shift — students who internalize this experiment more freely"
+    - "The paradox that safety enables action, not limits it, is the core mindset shift: students who internalize this experiment more freely"
     - "Agent clarification behavior (asking 'what counts as important?') demonstrates why good agents ask before acting on ambiguous instructions"
-    - "Verification is non-negotiable — a silent backup failure creates false confidence that is worse than no backup at all"
+    - "Verification is non-negotiable: a silent backup failure creates false confidence that is worse than no backup at all"
   misconceptions:
-    - "Students think backups are optional overhead — the opening scenario (misplaced 1099 forms) shows how a 2-minute backup prevents a 30-minute recovery"
-    - "Students assume 'backup complete' means everything worked — the permissions error and disk space scenarios show why verification must follow every backup"
-    - "Students confuse the agent asking questions with the agent being uncertain — clarification before action is a safety feature, not a weakness"
+    - "Students think backups are optional overhead: the opening scenario (misplaced 1099 forms) shows how a 2-minute backup prevents a 30-minute recovery"
+    - "Students assume 'backup complete' means everything worked: the permissions error and disk space scenarios show why verification must follow every backup"
+    - "Students confuse the agent asking questions with the agent being uncertain: clarification before action is a safety feature, not a weakness"
   discussion_prompts:
     - "Have you ever lost a file because a move or rename went wrong? What would the safety-first pattern have changed about that experience?"
     - "The lesson says 'the 2 minutes on backup save 20 minutes of anxiety.' Can you think of other areas in your work where a small upfront cost eliminates ongoing stress?"
     - "Why is a 'mostly complete' backup (134 of 136 files) potentially more dangerous than no backup at all?"
   teaching_tips:
-    - "Start with the opening disaster scenario (misplaced tax documents) — it is visceral and every student has experienced a version of this"
-    - "The domain extension table (files, code, databases, system config) is a strong whiteboard moment — have students add their own domain examples"
-    - "Make sure students actually complete the checkpoint before moving on — Lesson 5 deliberately uses the backup created here for recovery practice"
-    - "Emphasize that the agent ASKED what 'important' meant rather than assuming — this is a safety behavior students should expect and encourage"
+    - "Start with the opening disaster scenario (misplaced tax documents): it is visceral and every student has experienced a version of this"
+    - "The domain extension table (files, code, databases, system config) is a strong whiteboard moment: have students add their own domain examples"
+    - "Make sure students actually complete the checkpoint before moving on: Lesson 5 deliberately uses the backup created here for recovery practice"
+    - "Emphasize that the agent ASKED what 'important' meant rather than assuming: this is a safety behavior students should expect and encourage"
   assessment_quick_check:
     - "Ask students to recite the three-step safety cycle from memory: backup, verify, then proceed"
     - "Present a scenario: 'You want to reorganize 500 photos.' Ask students what their first prompt to the agent should be"
-    - "Ask: 'Why should you verify a backup even if the agent says it succeeded?' — tests understanding of silent failures"
+    - "Ask: 'Why should you verify a backup even if the agent says it succeeded?': tests understanding of silent failures"
 ---
 
 # The Safety-First Pattern
 
 Here's what happens when you skip the backup.
 
-You ask the agent to organize your Downloads folder. It moves 400 files into categories. Clean, fast, satisfying. Then you notice: your tax documents aren't in the `documents/` folder. They're not in `spreadsheets/` either. You check `misc/`. Not there. You check the original Downloads folder. It's empty — the agent moved everything out.
+You ask the agent to organize your Downloads folder. It moves 400 files into categories. Clean, fast, satisfying. Then you notice: your tax documents aren't in the `documents/` folder. They're not in `spreadsheets/` either. You check `misc/`. Not there. You check the original Downloads folder. It's empty: the agent moved everything out.
 
-Your 1099 forms are gone. Not deleted — _misplaced_. They're sitting in a folder called `archives/` because the agent categorized `.pdf` files older than a year as "archival." You didn't know that rule existed. You didn't ask. And now you're spending 30 minutes hunting through subfolders for documents your accountant needs by Friday.
+Your 1099 forms are gone. Not deleted: _misplaced_. They're sitting in a folder called `archives/` because the agent categorized `.pdf` files older than a year as "archival." You didn't know that rule existed. You didn't ask. And now you're spending 30 minutes hunting through subfolders for documents your accountant needs by Friday.
 
-That's the _good_ outcome. The bad outcome is a naming collision: two files called `report.pdf` from different folders, and the agent overwrites one with the other. The bad outcome is a permissions error halfway through a batch move that leaves 200 files in limbo — half moved, half not, and you can't remember which were where.
+That's the _good_ outcome. The bad outcome is a naming collision: two files called `report.pdf` from different folders, and the agent overwrites one with the other. The bad outcome is a permissions error halfway through a batch move that leaves 200 files in limbo: half moved, half not, and you can't remember which were where.
 
 This lesson exists because of that gap between "the agent did what I asked" and "the agent did what I _meant_."
 
 > **The paradox:** The backup constraint doesn't limit you. It frees you. Every safety rule you think slows you down actually speeds you up. Without a safety net, you hesitate at every step. With one, you experiment without fear. The 2 minutes you spend on backup save the 20 minutes of anxiety that would otherwise paralyze every decision.
 
-In the next 20 minutes, you'll direct Claude Code to create a backup, verify it's complete, and only then proceed. This pattern applies far beyond files — code changes, data transformations, system configurations — any workflow where mistakes have consequences.
+In the next 20 minutes, you'll direct Claude Code to create a backup, verify it's complete, and only then proceed. This pattern applies far beyond files (code changes, data transformations, system configurations) any workflow where mistakes have consequences.
 
 ---
 
@@ -130,7 +130,7 @@ You're ready to organize your Downloads folder, but you're nervous about losing 
 >
 > - **All files** (complete safety, largest backup)
 > - **Files modified in the last N days** (recent work you're actively using)
-> - **Specific file types** (PDFs, documents, spreadsheets — common important formats)
+> - **Specific file types** (PDFs, documents, spreadsheets: common important formats)
 > - **A custom selection** (you tell me exactly what matters)
 >
 > Which approach works best for you?
@@ -191,9 +191,9 @@ Notice what just happened. The agent didn't assume what you wanted. It asked. Th
 
 ## Three Things to Notice
 
-**1. The agent asked what "important" meant.** You said "backup important files." A dangerous agent would have assumed "everything" and started copying 12 GB. This agent asked: "What counts as important?" That single question — clarifying before acting — is the difference between a helpful tool and a dangerous one. The agent ASKED before acting. A dangerous agent would have assumed.
+**1. The agent asked what "important" meant.** You said "backup important files." A dangerous agent would have assumed "everything" and started copying 12 GB. This agent asked: "What counts as important?" That single question (clarifying before acting) is the difference between a helpful tool and a dangerous one. The agent ASKED before acting. A dangerous agent would have assumed.
 
-**2. You verified, not just trusted.** The agent could have said "Done!" after copying. Instead, you directed it to compare counts: 47 PDFs in source, 47 in backup. Numbers match. Backup complete. Trust, but verify — always.
+**2. You verified, not just trusted.** The agent could have said "Done!" after copying. Instead, you directed it to compare counts: 47 PDFs in source, 47 in backup. Numbers match. Backup complete. Trust, but verify: always.
 
 **3. The order was the whole point.** Backup → Verify → Then make changes. Not the other way around. The backup _enables_ the changes that follow.
 
@@ -389,4 +389,4 @@ from my backup. Show me the commands but don't actually run them yet.
 
 <Flashcards />
 
-Your files are backed up. You can experiment without fear. But here's the question that matters now: which files should live together? A PDF named "Q4-Budget-Draft.pdf" — is that a financial document or a Q4 project file? Your backup makes the answer cheap to get wrong. So how do you design rules that handle ambiguity?
+Your files are backed up. You can experiment without fear. But here's the question that matters now: which files should live together? A PDF named "Q4-Budget-Draft.pdf": is that a financial document or a Q4 project file? Your backup makes the answer cheap to get wrong. So how do you design rules that handle ambiguity?
